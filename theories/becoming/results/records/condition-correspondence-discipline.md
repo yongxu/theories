@@ -22,7 +22,7 @@ Canonical source: [Correspondence.lean](../../../../experiments/integrated-corre
 ## Hypotheses and correspondence
 
 - The web and the stepwise reading are those of becoming-stepwise-reading; draws carries no amount; like co-participation, interaction does not order the two events in time, and it does not ask whether the drawing changes the level (Later, Pinned.drawing_interacts).
-- The connection result needs a condition on which every living event bears, with a living drawer and a living dependent; the characterization also needs some living event; the transmission result needs N_rel, whose normative standing this result does not prove.
+- The connection result needs a condition on which every living event bears, with a living drawer and a living dependent; the characterization also needs some living event; the transmission result needs relational neutrality, whose normative standing this result does not prove.
 
 The discipline is a disclosed correspondence choice, not a consequence of the unfolding. Interaction is a structural coincidence: one draws on, and the other depends at a positive level on, one condition that can fail it, at any steps. It is not yet one formation's drawing bearing on another's support; that needs an ordered, effect-sensitive version, which is open. Co-dependence, two formations depending on one condition, is a relation the discipline omits (co-constitution through a common condition), not an absence of relation; Shared exhibits the cost of omitting it, and an application that counts it must write it out. The discipline excludes conditions that structurally cannot carry interaction, not false claims of drawing or dependence: a renewed condition on which every formation depends at a positive level, used once by a living event, is indistinguishable on the web from a genuine common condition (say, the air everyone breathes), and the connection it gives is a factual claim that application must check. The co-participation choice and its consequence (Q4) remain on the core; on Ren's delegation interaction is kept (D10).
 
@@ -55,7 +55,7 @@ Stated for the stepwise reading only; with fixed dependences it applies through 
 **Preserved conditions:** No added conditions. [Metaethics.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean)
 
 
-**Output:** G0's characterization on a connected whole.
+**Output:** The characterization of living significance on a connected whole.
 
 **Input:** Connection under interaction.
 
@@ -118,4 +118,5 @@ Aliases: `Becoming.Web.Interacts`, `Becoming.Web.Idle.not_interacts`, `Becoming.
 - 19 October 2026, R22 (the names of the nineteenth review): BECOMING-UNIFICATION-PLAN.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: BECOMING-UNIFICATION-PLAN.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Metaethics.lean, G0 is LivingSignificance, g0_* livingSignificance_*, Valuation.SelfGood Valuation.SelfSignificance, SecuresPositiveGround SecuresNewContent, the binder positive relevance; the module header is structural; statements unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Dependence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired labels N_rel and G0 in a hypothesis and a dependency interface read relational neutrality and living significance; the claim is unchanged.
 - 4 rebinding entries (2026-10-09 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](condition-correspondence-discipline.json).

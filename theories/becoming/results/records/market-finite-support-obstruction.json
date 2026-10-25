@@ -8,7 +8,11 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T14:42:20+00:00",
+  "statement": {
+    "en": "For every family of levels the steps drain, from a start below level n no admissible history satisfies the guard at every step through n; in the market, for every rational C₀ ≥ 5 and integer N > C₀ − 5, every seed 0 < x₀ ≤ (2/3)^N/6 of quality in [0, 1] fails by step N on every admissible schedule.",
+    "zh": "对诸步所耗竭的每个层族，从低于第 n 层的起点，没有可容许历史在直到 n 的每一步都满足守卫；在市场中，对每个有理 C₀ ≥ 5 与整数 N > C₀ − 5，每个品质在 [0, 1] 之内的正种子 0 < x₀ ≤ (2/3)^N/6 在每个可容许日程下至迟在第 N 步失败。"
+  },
   "claim": {
     "zh": "对每条带可容许扰动的变化之律，以及被其步耗竭的每个层族（守卫给出第0级；守卫之内的构型经一个可容许步到第k级，则原在第k+1级），低于第n级的起点在每段可容许历史上n步内离开守卫；处于第n级并不足够。量在每个可容许步上的增长受单调映射约束时，它停在该映射的轨道之下；若量的轨道在第k+1步不超过阈值时，每个可容许步使层级降一，则轨道在第n步不超过阈值、且不在第n级的起点，在每段可容许历史上n步内离开守卫。市场是实例（旧定理由此律证明）：份额每步至多乘3/2，份额轨道不超过1/6时每步使存量在底线5之上少一单位。所以对每个有理C₀≥5及整数N>C₀−5，正维护区间0<x₀≤(2/3)^N/6在任意时变β／责任误差及非负支持冲击下均至迟在N失效。同一正初态在β=0、最佳初始责任和无误差／耗用下，运行投影有限恢复而完整守卫历史终止。",
     "en": "For every law of change with admissible disturbances and every family of levels its steps drain (within the guard is level 0, and a configuration within the guard that one admissible step takes to level k was at level k+1), a start below level n leaves the guard within n steps on every admissible history; being at level n does not suffice. A quantity whose growth on each admissible step is bounded by a monotone map stays below the map's orbit; where each admissible step lowers the level by one while the quantity's orbit k+1 steps on is at or below a threshold, every start whose orbit at step n is at or below the threshold and which is not at level n leaves the guard within n steps on every admissible history. The market is an instance, the old theorem being proved from the law, the share growing at most by 3/2 a step and each step taking one unit of the stock above the floor 5 while the share's orbit stays at or below 1/6: for every rational C0>=5 and integer N>C0-5, all positive seeds 0<x0<=(2/3)^N/6 fail by N under every time-varying beta/quality-error sequence and nonnegative support shock. The same positive state with beta=0, best initial quality and no error/extra consumption has projected finite recovery but full guarded termination."
@@ -379,6 +383,10 @@
     {
       "en": "2026-10-20: 23 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/a4730fcd61874780/market-finite-support-obstruction.json and in git.",
       "zh": "2026-10-20：23 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/a4730fcd61874780/market-finite-support-obstruction.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them, with the premise that the initial quality is in [0, 1] (the claim is unchanged).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述，并含初始品质在 [0, 1] 之内这一前提（主张不变）。"
     }
   ]
 }

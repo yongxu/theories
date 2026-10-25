@@ -8,7 +8,7 @@
   "kind": "target",
   "status": "open",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "en": "Target: the deductive necessity of Becoming as a whole, with no added substantive axiom: formally, every central law over every law of exchange; philosophically, its determinations as moments of one unfolding; generation, persistence, degeneration, dissolution, life, evolution, evaluation within it.",
     "zh": "目标：无需附加实质公理，建立Becoming整体的演绎必然性（形式上，每条中心规律都对每个交换之律陈述；哲学上，其诸规定是同一展开中内在相关的环节），生成、维持、转化、退化、消解、生命、演化与评价皆在其中。"
@@ -96,8 +96,8 @@
     {
       "id": "continuation-condition-yields-living-significance",
       "detail": {
-        "zh": "在“一切皆有意义”的条件之下 G0 得出；理论不断言这一条件。",
-        "en": "Under the condition that everything is significant, G0 follows; the theory does not assert the condition."
+        "zh": "在“一切皆有意义”的条件之下生生之意义得出；理论不断言这一条件。",
+        "en": "Under the condition that everything is significant, living significance follows; the theory does not assert the condition."
       }
     },
     {
@@ -198,8 +198,8 @@
       "source": "theories/becoming/history/BECOMING-FOUNDATION.md#5-completion-audit-and-next-central-inference"
     },
     {
-      "zh": "生生之意义不是采用的公理：在无公理的理论中，它是用到它的规律的条件，其定义与刻画保留；正面相关的读法是开放的读法。",
-      "en": "Living significance is no adopted axiom: in the theory without axiom it is a condition of the laws that use it, with its definition and characterizations kept; the reading of positive relevance is an open reading.",
+      "zh": "生生之意义不是采用的公理：在不带延续条件的理论中，它是用到它的规律的条件，其定义与刻画保留；正面相关的读法是开放的读法。",
+      "en": "Living significance is no adopted axiom: in the theory without the condition it is a condition of the laws that use it, with its definition and characterizations kept; the reading of positive relevance is an open reading.",
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#67-折叠-g0p51"
     },
     {
@@ -352,6 +352,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): conditional-foundation-assessment, which this record supersedes, moves from dependencies to related.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：本记录取代的 conditional-foundation-assessment 从依赖移到相关。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0 in a related detail reads living significance, and 'the theory without axiom' (the retired Part I) in a progress line reads 'the theory without the condition'; the target is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条相关说明中的退役标签 G0 改为生生之意义，一条进展中的“无公理的理论”（已退役的第一部分）改为“不带延续条件的理论”；目标不变。"
     }
   ],
   "text_versions": [

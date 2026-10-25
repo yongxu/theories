@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T04:06:08+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
-    "en": "For every carrier and relation, continuation is 缘 met with a class; its positions depend on the class, a class constant under 缘 never lets a continuation end, a line's own regularity is the class's core, and the old base's arising, ceasing, lineage and passing are its instances.",
-    "zh": "对每个载体与关系，续是缘与类之合；其诸位依于类，对缘有常之类其续永不终了，一条线之理是其类之核；旧基底之生起、终止、世系与传是其实例。"
+    "en": "For every carrier and relation, continuation is 缘 met with a class; its positions depend on the class, a class constant under 缘 never lets a continuation end, a line's own regularity is the class's core, and the World model's arising, ceasing, lineage and passing are its instances.",
+    "zh": "对每个载体与关系，续是缘与类之合；其诸位依于类，对缘有常之类其续永不终了，一条线之理是其类之核；World 模型之生起、终止、世系与传是其实例。"
   },
   "laws": [
     {
@@ -120,8 +120,8 @@
       ]
     },
     {
-      "en": "Boundaries in the grammar itself: that every occurrence, in every model, either begins or has a predecessor is exactly excluded middle; under fission, sameness read along lines either way is not transitive; every single 缘 is a continuation under some class, and two alike conditions of one occurrence make a merge; reach is an order of precedence only where nothing reaches itself.",
-      "zh": "文法自身的边界：“每一事或生或有前，对一切模型”恰是排中律；有分叉时，沿线双向所读之同不传递；每一条缘在某个类下都是续，一事的两个相同之缘成合；可及只在无物可及自身时才是先后之序。",
+      "en": "Boundaries in the grammar itself: that every occurrence, in every model, either begins or has a predecessor is exactly excluded middle; under fission, sameness read along lines either way is not transitive; every single 缘 is a continuation under some class, and two conditions of one occurrence, each alike to it, make a merge: it continues both; reach is an order of precedence only where nothing reaches itself.",
+      "zh": "文法自身的边界：“每一事或生或有前，对一切模型”恰是排中律；有分叉时，沿线双向所读之同不传递；每一条缘在某个类下都是续，一事的两个缘，各与此事相同，成合：此事续二者；可及只在无物可及自身时才是先后之序。",
       "declarations": [
         "Becoming.«四相之定当且仅当排中»",
         "Becoming.«分叉»",
@@ -189,8 +189,8 @@
       ]
     },
     {
-      "en": "The old base's arising and ceasing along one relatum are beginning and ending under 'alike in activity', occurrences being pairs of a step and a relatum; ceasing to be is an ending and coming to be a beginning; the finite-world law of arising and ceasing is exactly the decidability of the positions.",
-      "zh": "旧基底在同一关系项上的生起与终止，是“活动相同”之类下的生与亡（事为步与关系项之对）；不再是为亡，成为为生；有穷世界的生灭之律恰是诸位之可判定。",
+      "en": "The World model's arising and ceasing along one relatum are beginning and ending under 'alike in activity', occurrences being pairs of a step and a relatum; ceasing to be is an ending and coming to be a beginning; the finite-world law of arising and ceasing is exactly the decidability of the positions.",
+      "zh": "World 模型在同一关系项上的生起与终止，是“活动相同”之类下的生与亡（事为步与关系项之对）；不再是为亡，成为为生；有穷世界的生灭之律恰是诸位之可判定。",
       "declarations": [
         "Becoming.Web.arises_iff_sheng",
         "Becoming.Web.unceasing_iff_late_beginnings",
@@ -210,8 +210,8 @@
       ]
     },
     {
-      "en": "Relative to a continuation of the old base, arising and ceasing are its beginning and ending; a split is fission and a merge the candles' merge; lineages, continuing, links and holding are lines, unchanged by re-identification.",
-      "zh": "相对于旧基底的一个延续，生起与终止是其生与亡；分裂是分叉，合并是蜡烛之合；世系、延续、联系与持有都是线，不因重新认定而变。",
+      "en": "Relative to a continuation of the World model, arising and ceasing are its beginning and ending; a split is fission and a merge the candles' merge; lineages, continuing, links and holding are lines, unchanged by re-identification.",
+      "zh": "相对于 World 模型的一个延续，生起与终止是其生与亡；分裂是分叉，合并是蜡烛之合；世系、延续、联系与持有都是线，不因重新认定而变。",
       "declarations": [
         "Becoming.Web.continuationStep",
         "Becoming.Web.arisesFrom_iff_sheng",
@@ -262,8 +262,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That continuation contained in 缘 tells a fire passed on from one fire ending and another starting: every single 缘 is a continuation under some class, and two alike conditions make a merge.",
-      "zh": "续含于缘，能分开火之传与一火灭、一火生：每一条缘在某个类下都是续，两个相同之缘成合。",
+      "en": "That continuation contained in 缘 tells a fire passed on from one fire ending and another starting: every single 缘 is a continuation under some class, and two conditions each alike to their common outcome make a merge.",
+      "zh": "续含于缘，能分开火之传与一火灭、一火生：每一条缘在某个类下都是续，两个各与其共同之果相同的缘成合。",
       "kind": "non-implication",
       "witness": "Becoming.«任一缘可为续»"
     },
@@ -278,8 +278,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the old base's counting, amounts, recurrence and renaming laws are instances: the grammar states no counting and no map of carriers, so only their premises are connected.",
-      "zh": "旧基底的计数、量、复现与改名之律是实例：文法不陈述计数，也无载者之映射，故只连其前提。",
+      "en": "That the World model's counting, amounts, recurrence and renaming laws are instances: the grammar states no counting and no map of carriers, so only their premises are connected.",
+      "zh": "World 模型的计数、量、复现与改名之律是实例：文法不陈述计数，也无载者之映射，故只连其前提。",
       "kind": "scope"
     }
   ],
@@ -463,8 +463,8 @@
     {
       "id": "classes-along-a-continuation",
       "detail": {
-        "en": "There formation classes are read along a given continuation of the old base, with splits and merges; here continuation itself is 缘 met with a class, for every carrier and relation.",
-        "zh": "那里在旧基底的给定延续上读形成之类，含分与合；这里续本身是缘与类之合，对每个载体与关系。"
+        "en": "There formation classes are read along a given continuation of the World model, with splits and merges; here continuation itself is 缘 met with a class, for every carrier and relation.",
+        "zh": "那里在 World 模型的给定延续上读形成之类，含分与合；这里续本身是缘与类之合，对每个载体与关系。"
       }
     },
     {
@@ -694,7 +694,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "0362e707d7ec1f584c895a74718635b56d1da92aec8feecdbd66d9c1f99020a3",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
       "declarations": [
         "Becoming.World.law_iff_grammar_positions",
         "Becoming.World.law_iff_positions"
@@ -709,6 +709,12 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
       "role": "receipt",
       "sha256": "e68755a739bf1219288f3192f7a182617c75421baf4458633ef2f17ce3d61318",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
       "declarations": []
     }
   ],
@@ -764,7 +770,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -782,6 +788,10 @@
     {
       "en": "25 October 2026, board item OU6 (corrections to the grammar from the review of its sources, study section 400): the theorem on the two-way core renamed «位同则生亡同», since it shows only that beginning and ending carry over; the flame witness restated as mutual need through the core («火薪相须»), with the theorem that it picks no class and a two-flame model in which the fuel left is singled out against sameness of flame; ceasing defined positively, inductively, on renewing into («复生至»): what does not itself renew ceases («自不复生则息»), and the old reading implies the new («不复生则息»); the law on ending under a coarser class narrowed to what its theorem shows (not ending), and the law on the two-way core stated for a class, with abiding carried over too («位同则住同»). The claim is narrowed where a name or a reading said more than the Lean, and the new theorems are added; no other law changes.",
       "zh": "2026年10月25日，工作板条目 OU6（据对文法与其来源之审所作之更正，研究第 400 节）：双向之核之定理改名为 «位同则生亡同»，因其只示生与亡相传；火之见证改述为以核相须（«火薪相须»），并证此见证不择类，又立两火之模型，其中余薪同相对于同火而被挑出；息改为正面、以归纳在复生至上定义（«复生至»）：自身不复生者息（«自不复生则息»），旧读蕴含之（«不复生则息»）；粗类下之亡一律收窄为其定理所示（不亡），双向之核一律对一个类而说，住亦相传（«位同则住同»）。凡名或读法说过了 Lean 者，论断收窄；新定理增入；其余之律不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired 'old base' named in current vocabulary, the World model, in the statement, two laws, a boundary and a related detail; the merge worded as the Lean states it, each of two conditions alike to the occurrence they condition (not to each other), in the ninth law and a boundary. No law changed in content.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役的“旧基底”按现行词汇称为 World 模型（陈述、两条规律、一条界限与一条相关说明）；合按 Lean 的陈述改写：两个缘各与其所缘之事相同（而非彼此相同），见第九条规律与一条界限。规律内容未变。"
     }
   ]
 }

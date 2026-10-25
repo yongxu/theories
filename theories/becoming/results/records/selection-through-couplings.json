@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
+  "reviewed_at_utc": "2026-10-25T14:44:50+00:00",
   "statement": {
     "zh": "两段历史被每个经选择者之耦合的选择选得相同，恰当它们经这些耦合无别。其余交换固定时选择在耦合闭包之外不见；所及闭包之内、耦合闭包之外的终结不被选出，合起来的耦合选出它；伸出而抬高耦合入者的流被选中。",
     "en": "Every selection through a selector's couplings selects histories alike exactly when they are alike through them. With the rest fixed, selection is blind beyond the coupling closure; pooled couplings select an ending beyond it within reach, and a flow raising what couples in from beyond is selected."
@@ -180,8 +180,8 @@
       "kind": "scope"
     },
     {
-      "zh": "主定律近乎定义，不见是 testing-within-registration 中定理的一行推论；增量是概念上的。",
-      "en": "The main law is near-definitional and the blindness a one-line corollary of the theorems of testing-within-registration; the contribution is conceptual.",
+      "zh": "主定律近乎定义，不见是 testing-within-couplings 中定理的一行推论；增量是概念上的。",
+      "en": "The main law is near-definitional and the blindness a one-line corollary of the theorems of testing-within-couplings; the contribution is conceptual.",
       "kind": "scope"
     },
     {
@@ -812,6 +812,10 @@
     {
       "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosure, ClosedUnder to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：WithinClosure, ClosedUnder to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the third boundary cited testing-within-registration, a former id; it now cites testing-within-couplings.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第三条边界原引已改名之记录 testing-within-registration；今引 testing-within-couplings。"
     }
   ],
   "text_versions": [

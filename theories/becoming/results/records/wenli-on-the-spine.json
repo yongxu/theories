@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T06:36:45+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "en": "文 names a run's states read through a map step by step (Parting.course), 文同 two states whose courses agree (Law.SameFuture); the epistemology of 文 (laws read off the unfolding, 读书百遍其义自见, 理 and the 文) is tied to checked laws, each with its scope; 文理生生 is compared character by character.",
     "zh": "以文名一历之状经一象逐步之值，文同即二状之文逐步皆同（Law.SameFuture）；文之认识论（律读自展开、读书百遍其义自见、理与文）逐环对到已检之律，各写其域；文理生生逐字对照名表。"
@@ -31,11 +31,6 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the coarsest value-keeping law-carrying class merges exactly the states with the same 文 as one theorem: it follows from four checked laws together.",
-      "zh": "守值载法之最粗之类恰并文同之状为一条定理：它由四条已检之律合起来得出。",
-      "kind": "scope"
-    },
-    {
       "en": "New mathematics beyond unification: most of the laws were proved before WL, and they have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument). WL names their common object and joins them into one epistemology; WL2 states as theorems what had been joint consequences.",
       "zh": "统一之外之新数学：诸律多在 WL 之前已证，且有已知之源（Fine–Wilf 与 Moore 之界，Myhill–Nerode 与 Moore 机最小化之同未来等价，Gold 一脉之极限学习与对角论证）。WL 为其共同对象立名并串成一条认识论；WL2 把诸律之合陈述为定理。",
       "kind": "scope"
@@ -54,8 +49,8 @@
     "zh": "verify_zh.py 通过：1342 句引文在其冻结原文中，5479 处所引之 Lean 名皆为回执 20261022T070506.681048Z 中之名或所列外围之声明，709 个记录链接，名表（449 个名）与三章之生成表；import_wenli.py --check 绑定 98 个文件。中心一节逐条对照所引 Lean 声明检查；本章、所改之條与落地之文经四轮独立视角审读（落地之文在后三轮），每一发现各有一个质疑者。读者都是 AI。"
   },
   "next_delta": {
-    "en": "The H2 reading test (experiments/wenli-reading-transfer; the fidelity count is run, fidelity-of-the-classical-statements); in Lean, the coarsest value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, each claimed on the board first; 文理生生's G1 as a query layer of the spine.",
-    "zh": "H2 阅读试验（忠实之测已运行，fidelity-of-the-classical-statements）；Lean 中：守值载法之最粗之类作一条定理，文之律接到 Web.AlikeThroughUpTo 与 CrossSituational，各先在看板认领；文理生生之 G1 作脊柱之查询层。"
+    "en": "The H2 reading test (experiments/wenli-reading-transfer; the fidelity count is run, fidelity-of-the-classical-statements); 文理生生's G1 as a query layer of the spine.",
+    "zh": "H2 阅读试验（忠实之测已运行，fidelity-of-the-classical-statements）；文理生生之 G1 作脊柱之查询层。"
   },
   "correspondence": {
     "en": "Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式” (provenance, not warrant). The chapter names 文, ties the epistemology of 文 to the laws, and compares 文理生生 with the 中华本. Reading (the AI's, D63): the line of 文 in the classical texts and characters is a fitting expression of the core's language and epistemology, each link with a corresponding checked law and its scope; whether it is closer than other expressions is untested.",
@@ -243,6 +238,10 @@
     {
       "en": "23 October 2026, ZE: the controlled English control run; the chapter's testing section, head and open item 6 state its result.",
       "zh": "2026年10月23日，ZE：受控英文之对照已运行；本章「怎样检验」、章首与未立者第 6 项写其结果。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the scope item saying the coarsest value-keeping, law-carrying class is not one theorem removed, and the Lean part of the next step with it: the coarsest class is stated as one theorem and the laws of 文 are joined to Web.AlikeThroughUpTo and CrossSituational (WL2); the remaining next step is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：删去“守值载法之最粗之类不是一条定理”之范围项，并删去下一步中的 Lean 部分：最粗之类已作一条定理陈述，文之律已接到 Web.AlikeThroughUpTo 与 CrossSituational（WL2）；其余下一步不变。"
     }
   ]
 }

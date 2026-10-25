@@ -1,0 +1,153 @@
+{
+ "changed": [
+  {
+   "target": "row 0 (01, Runs.lean module docstring)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Runs.lean lines 12-15: 'The one root is the run…' became 'The run, what the unfolding is at each step and how it goes on to the next, is the World package's formal root (D43) and one model of the grammar (`Becoming.Grammar`), which is the root. For the world, being a run holds by definition…'. I wrote this rather than the triage's version, which made the colon gloss describe the grammar. Line 59: 'The run is the package's formal root because every other reading is one…'. Line 66: Ren's words removed as the reason; it now reads 'The law is read off the unfolding, the identifications above being exact.' This matches 01 §9.3."
+  },
+  {
+   "target": "row 1 (D45 item 3, DELEGATED-CHOICES.md)",
+   "change": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md line 626: the sentence is kept and an OB1 note is appended. I checked it against LevelCoupling.lean (carried_iff_rising :904, Complement.carry :1005, supply_not_carried :1046, supply_carried_by_complement :1060). The triage said 'Settled' and 'fails without one'. I wrote 'Answered at the step of the exchange', because the conjecture is answered partly yes and partly no. The note says a non-rising response is carried by no such family over the levels within the bound, and lists what stays open, as the record's does_not_show does: earlier steps, a complement whose total is not fixed, several levels at once. No new D entry."
+  },
+  {
+   "target": "row 2 (goal next_step)",
+   "change": "_process/goals/theory-of-becoming.json line 66 (en) and 67 (zh): 'Five of the eight … readings' now reads 'Four of the eight `World` premises hold by the reading of one exchange, with the rest counted; the census holds, the formations taking part listed once, where a named family closes each step and in every finite world (`World.withRest_counted`, `World.Finite.withRest_counted`); three are states of the law'. The zh line says the same. I moved 'listed once' so it governs both census laws: in ExchangePremises.lean:263/272 both need Distinct present, while the triage text attached it to the finite case only."
+  },
+  {
+   "target": "row 3 (Space.lean)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean lines 1119-1122: the garbled docstring is replaced. It now says the same law, asked of every finite world, is equivalent to every occurrence, for every carrier and every two relations R and E on it, either beginning or having a predecessor, both being excluded middle (World.law_iff_em, «四相之定当且仅当排中»). The triage said 'class', but E ranges over all relations, not only classes."
+  },
+  {
+   "target": "row 4 (02-MAP line 114)",
+   "change": "theories/becoming/chapters/02-MAP.md line 114: [03](03-KNOWING.md) now links to 03-KNOWING.md#r-a-history-read-off-its-finite-stretches. The anchor exists at 03:147."
+  },
+  {
+   "target": "row 5 (SPINE.md §4.3 item 3)",
+   "change": "_process/research/2026-10-05-repository-reconciliation/architecture/SPINE.md line 102: the Hennessy–Milner converse is now attached to «可分则不在核». It says the converse is not stated for 层; with stages of inquiry 诘, which no theorem yet relates to 层, it fails without a premise («致诘不尽») and holds where the class is symmetric and being told apart at no stage is constant («不可致诘而有常则混而为一»). «恒温与平衡» keeps only 'a wider net tells apart…'. Checked against GrammarTesting.lean:11-16 and GrammarCandidates.lean:568/644."
+  },
+  {
+   "target": "rows 6, 7, 9 (base only), 10 (base only), 11, 12, 13, 8 (base only): regions.json",
+   "change": "theories/becoming/results/data/regions.json, written back in its own layout (indent 1, ensure_ascii false, trailing newline; the round trip is byte-identical). formed-goal-revision-continuation: general → periphery, note 'GoalFormationRevision, MachineInstances: two-practice construction'. projection-carrying-a-law: general → frame (carries_law_iff is on Process). learned-procedure-transmission: general → periphery. learnable-through-a-map: frame → general. what-an-extrapolation-given-nothing-fixes: old-base → general. what-finitely-many-labels-fix: old-base → general (no World is used; the LearnableRuns laws are correspondences). finite-fallible-inquiry-necessity: general → periphery (FallibleInquiry.lean imports the periphery ScientificInquiryNecessity). binding-preserving-substitution: general → periphery. Each base was checked against the Lean sources and the chapter labels."
+  },
+  {
+   "target": "row 14 (SelectionLevels.lean)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean. Lines 90-92 (header): each unit gives b to every OTHER member and costs the keeper c (equivalently, gives b to every member, own included, and takes b + c), which is what the hypothesis w p + (b+c)·a p = B + b·total g a says. Lines 97-98: 'where the groups differ' added before the among-groups verdict (among_for_iff has the spread on both sides). Lines 854-856: within_returns docstring corrected the same way. I also fixed two witness docstrings with the same wrong reading at lines 1113 and 1183 (their returns hypotheses use (2+1) and (3+2))."
+  },
+  {
+   "target": "row 15 (RO kit: zuo-xuan12 reading, gap.nearest renames)",
+   "change": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/build_passages.py: added a FIXES entry for zuo-xuan12-zhi-ge-wei-wu (reading_sub 'Widening 证明：' → 'LoopReturn 证明：'). The R22/R30 rename table now applies to gap.nearest lists, and the rename comment says so. Rebuilt passages.json: 248 passages, the same ids and order. The rename also corrected gap.nearest in lao-42 and lao-77 (Widening → LoopReturn) and in shuowen-wu-zhi-ge-gloss (R30: ResponseLearning.every_generation_holds → every_cohort_holds, distinction_lost_every_generation → distinction_lost_every_cohort; both exist in ResponseLearning.lean), with RENAMED_WHY appended to its corrected note. passages.json sha256 changed from db2bda38… to 9cecef27e5954e8f791e4c4eab4eb8f7e4203b96b2521d7d36950d174e29e5bf."
+  },
+  {
+   "target": "row 16 (06 §7.2 quotations)",
+   "change": "verify_zh.py does not cover 06, so I checked every 「…」 in §7.2 myself against the frozen texts in sources/civilization-thought-v1.0. Each was matched to the source_id of the 脉络 gap entry quoting it (76 gap entries in zhonghua/passages.json), using verify_zh's punctuation-insensitive rule. Five fragments were not verbatim and are corrected in theories/becoming/chapters/06-CLASSICAL-TEXTS.md: line 422 「不息则久」→「不息則久」 (RU1-S-ZY); line 425 「殷因于夏礼，所损益可知也」→「殷因於夏禮，所損益可知也」 (RU1-S-LY); line 427 「不使群臣相为语」→「不使羣臣相爲語」 (FA1-S-H09, entry hanfei-bu-shi-xiang-yu); line 430 「知幾其神乎」→「知几其神乎」 (DS03 繫辭下, entry xici-zhi-ji-qi-shen; the 幾 form appears only in 伊川易傳) and 「其势险，其节短」→「其勢險，其節短」 (BI1-S-SZ). All other quotations are verbatim. 「去却椽即無舍」 is in FO2-FQ, the source of gap entry huayan-liu-xiang. 「二柄者，刑德也」 is in FA1-S-H07."
+  },
+  {
+   "target": "row 17 (OrganizationCorrespondence.lean)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean lines 21-22: 'the bridge states the theorem itself (`Becoming.Judgment.required_of_bettered`)' now reads 'the core states the theorem itself (`Becoming.Requirement.required_of_bettered`, in `Becoming.Frontier`)'. Frontier.lean:141, namespace Requirement."
+  },
+  {
+   "target": "row 18 (Exclusion.lean)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean: 'at each of' → 'at every one of' over the ¬∀ statements, in header lines 36-41 (three uses, reflowed) and in the docstrings of continuing_excludes (246), continuing_excludes_active (259) and alongside_not_all (287-288). The positive uses (lines 20, 136, 170, 212, 230-231) are unchanged."
+  },
+  {
+   "target": "row 19 (HexagramSequences.lean)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean lines 17-19: 'and only of a table' → 'and every such law is the order read as a table but at 未濟' (runsOrder_agrees). Line 37: 'or keeps any symmetry of the configurations' → 'or commutes with 錯, 綜 or both' (runsOrder_not_commutes over Symmetry keep/change/turn/both)."
+  },
+  {
+   "target": "row 20 (RO kit locators)",
+   "change": "build_passages.py FIXES: tanjing-zi-xing locator → '行由品；懺悔品'; weishi-xun-xi locator → '卷二熏习；卷九、卷十转依' (the entry's simplified script kept). I checked offsets in the preserved texts first. HS08: fragments at 6434-6495 in 行由第一 (4040-8222), 16244 in 懺悔第六 (14487-17068). R5BU001: 14865/14885 in 卷第二, 83009 in 卷第九 (77676-87852), 88955 in 卷第十 (87859-96783). The history file's bytes are untouched."
+  },
+  {
+   "target": "row 21 (Growth.lean, OwnWidening.lean docstrings)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean line 196: '**What widening on the old formations does not register.**' → '**A widening the old formations alone do not show.**'. experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean line 36: 'registers a change' → 'shows a change'. The name grow_widens_unregistered is not changed."
+  },
+  {
+   "target": "row 22 (EdgeClosure.lean)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean lines 14-19 now say the bridge modules have been kept in lean/history/becoming/ since 19 October 2026 (the F3 sweep date in the history MANIFEST). Those modules proved that the periphery's closures are this closure (Becoming.Bridge: reached_iff_closure, cutReach_iff_closure) and stated their laws for processes (Becoming.SeedReachProcesses). In the core, reach from a seed is this closure under the moves (fromSeed_iff_closure, Becoming.SeedReach). I added that last sentence, which the triage dropped."
+  },
+  {
+   "target": "row 23 (08 §5 calibration table)",
+   "change": "theories/becoming/chapters/08-METHOD.md line 326: added '; on frames `FrontierFrames.choice_exists_iff_weakly` ([07](07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance))'. Line 327: '`refutable_holds_iff` ([03](03-KNOWING.md#r-a-history-read-off-its-finite-stretches)), `fromSeed_of_not_separated_iff_dne` (`Becoming.SeedReach`)'. The declarations were checked at FrontierFrames:477, Decidedness:905, HistoryIdeals:159 and SeedReach:177, and their records carry them."
+  },
+  {
+   "target": "row 24 (Weightings.lean)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean line 6267: heading → '**A threshold of sufficiency weighs alike above it.**'; the body is kept, since it describes SufficientAt exactly. Lines 317-318: 'moves one step of continuation from a formation to one at least two levels below it, the higher within the bound' (prior_transfer: levels a and a+d+2, a+d+2 ≤ n). Line 384: 'is read as a denial of scope above it'."
+  },
+  {
+   "target": "row 25 (Retaining.lean)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean lines 202-203 (loses_iff_beyond_margin_at) and 248-249 (Balances.loses_iff_beyond_margin): 'the part's net draw on some condition it requires exceeds the margin' → 'not every condition it requires keeps its need, with the part's net draw, within the margin', matching the ¬∀ statement."
+  },
+  {
+   "target": "row 26 (Direction.lean)",
+   "change": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean line 20 (header bullet, reflowed 20-26) and line 96 (chosen_keeps_basic docstring, reflowed 96-98): 'A chosen move keeps basic admissions' → 'A kept basic admission is not refuted at a chosen option', matching the ¬¬ conclusion. The triage wrote 'kept for every move', which misstates the hypothesis (u keeps every basic admission any move admits), so I used this wording, which parallels kept_required's heading."
+  },
+  {
+   "target": "row 27 (02-MAP lines 123, 278, optional links)",
+   "change": "theories/becoming/chapters/02-MAP.md line 123: `RenewingFormation` now links to ../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean. Line 278: `GrownFragmentation` now links to …/lean/universal-ethics/GrownFragmentation.lean. Both paths were checked."
+  }
+ ],
+ "not_applied": [
+  {
+   "row": "row 4, 02-MAP line 105",
+   "why": "The fix links to 07-SIGNIFICANCE.md#r-significance-through-a-common-condition 'once that record exists'. It does not exist yet: there is no records/significance-through-a-common-condition.json and no anchor in 07. I left line 105 unchanged; it should be linked when the becoming-renewal-reading split lands (07 is outside my scope)."
+  },
+  {
+   "row": "row 8, learned-procedure-transmission record hypotheses",
+   "why": "Record JSON is not mine to edit. The proposed append understates the axioms. The receipt transmission-correspondence-verification.json reports propext, Classical.choice and Quot.sound for every declaration of laws 8-10 (lineage_released_iff, reconstruction_builds_longest_lineage, material_balanced, support_balanced, course_conserves, faithful_selects, history_selects), not 'some'. The module also imports Becoming.Reordering and the periphery LearnedProcedureTransmission. Suggested EN: 'Laws 8-10 are proved in the periphery instance module TransmissionCorrespondence, from the core's Copying, Stock, Evolution and Reordering modules and the periphery LearnedProcedureTransmission; each of their theorems uses propext, Classical.choice and Quot.sound, as its receipt reports.' ZH to match. The base is already changed in regions.json."
+  },
+  {
+   "row": "row 9, learnable-through-a-map statement",
+   "why": "Record JSON is not mine to edit. I checked the triage's statement against Learnable.lean (prefixes_same :96 needs no DecidableEq; learnable_iff :242 and still_learnable_iff_lumped :288 take the world listed, with DecidableEq R) and it is accurate. The record owner should apply it."
+  },
+  {
+   "row": "row 10, what-an-extrapolation-given-nothing-fixes statement",
+   "why": "Record JSON is not mine to edit. The triage statement is close but needs two precisions from Unrolling.lean. ahead_fixes (:120) needs only the orbit held by a list, so 'where a list holds the orbit' fits better than 'in every world a list holds'. learnable_iff_reading (:270) takes the whole world listed and a feature value v₀, which 03:191 labels 'a feature value supplied'; the 'exactly a reading' clause should name that supplied value."
+  },
+  {
+   "row": "rows 0, 3, 14, 18, 19, 22, 24, 25, 26 (core Lean docstrings)",
+   "why": "I ran no recheck. check_becoming.py (cached) needs a new core receipt, and records bound to Runs, Space, SelectionLevels, Exclusion, HexagramSequences, EdgeClosure, Weightings, Retaining, Direction, Growth and OwnWidening need re-pointing through the record workflow by their owners."
+  },
+  {
+   "row": "row 17, OrganizationCorrespondence",
+   "why": "check_organization_correspondence.py was not run. Re-pointing the binding of record organizational-formation-from-generative-comparison is a record change for its owner."
+  },
+  {
+   "row": "row 15 and row 20, record re-point",
+   "why": "Record chinese-sources-on-the-spine cites passages.json with sha256 db2bda38897f5ee972a44f786f4c5ed119b1e288587faff0d605aa7dcac49947. It needs re-pointing to 9cecef27e5954e8f791e4c4eab4eb8f7e4203b96b2521d7d36950d174e29e5bf, with a history note (the corrected passages are zuo-xuan12-zhi-ge-wei-wu, tanjing-zi-xing, weishi-xun-xi, plus gap.nearest in lao-42, lao-77 and shuowen-wu-zhi-ge-gloss). That is not mine to edit. Its frozen statement file theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md now differs from the build in the 文字 and 佛教 tables, as it must, since its bytes stay frozen."
+  },
+  {
+   "row": "row 2, generated pages",
+   "why": "GOALS.md and README.md are generated from the goal JSON and need `make research-render`. I did not run it, because other agents are editing this worktree and the render regenerates shared pages. The THEORY-GRAPH page and data/theory-graph.json, generated from regions.json, also need that render."
+  },
+  {
+   "row": "row 21, the name grow_widens_unregistered",
+   "why": "Names may not be changed in this task. The proposal for the module's owner on the board: rename it to Web.grow_widens_old_unchanged, with a rename-table entry and a core recheck; or keep it and list it in 08 §10."
+  },
+  {
+   "row": "row 1, Chinese edition",
+   "why": "DELEGATED-CHOICES.zh.md was not in my scope. It may want the same OB1 append to D45 (3)."
+  },
+  {
+   "row": "row 23, optional record for the reach calibration",
+   "why": "No record was created; that is not in my scope. fromSeed_of_not_separated_iff_dne stays a lemma of reach unless a record is wanted."
+  },
+  {
+   "row": "row 27, record fixes",
+   "why": "The record statement and laws fixes for the digest-row records are record JSON, owned by others."
+  }
+ ],
+ "checker": "verify_ro.py (python3 -B, RO kit), after the rebuild:\n- Default chapter path: FAIL no chapter at theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md. This was already failing before my changes, because the chapter now lives frozen at theories/becoming/history/.\n- With --chapter theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md: '248 passages (91 agreement, 98 scope, 59 divergence), 486 fragments, 604 declarations, 527 atlas ids; receipt 20261025T080929.528151Z; excerpt rebuilt from the packages and agrees; passages.json is the build'. Every fragment is verbatim, every declaration is in the receipt and every record exists. It still reports FAIL for the 文字 and 佛教 tables against the frozen file.\n- Those table diffs are exactly the three corrected rows (zuo-xuan12 reading, tanjing and weishi locators). With the old passages.json the frozen tables matched. This is expected, since the history file keeps its bytes.\n\nbuild_passages.py --check: passes ('passages.json is the build').\n\n06 §7.2 quotations: no repository checker covers 06, so I checked them myself (script at /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/check06.py, using verify_zh's matching rule). After the five corrections, every quotation is verbatim in the frozen text its gap entry cites, or for the two with no gap-entry fragment, in the named work's frozen text.\n\nLean edits: a script compared every changed .lean file against HEAD with comments and docstrings removed. All 12 are identical in code (/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/strip_check.py), so the changes are docstrings and comments only. No Lean build or check_becoming.py was run.\n\nresearch.py links: 0 broken links in the files I edited. The 3 broken repository-wide are in iv3-dependence and ue1-fep-bridge, which I did not touch.",
+ "lean_files_changed": [
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Runs.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean"
+ ]
+}

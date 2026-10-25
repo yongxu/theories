@@ -76,6 +76,7 @@ The first open target of chapter §8.1, the deductive necessity of the whole, ha
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `requirement over open exchanges`, `开放交换上的要求`, `Becoming.ExchangeRelation.readWeb_dependent`, `Becoming.ExchangeRelation.free_unsupported`, `Becoming.ExchangeLaw.relation_responds_iff`
 

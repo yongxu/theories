@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
     "zh": "交换的历史不加前提从不缩减；无损交换可不息而复返；平衡与第一律之下，箭头使有限家族的变化不复现；在守恒量中逐次记录交换，恰好分解最小损失。",
     "en": "Premise-free, the history of exchanges is monotone; lossless exchange can continue and return; under balance and the first law an arrow leaves a finite family no change at arbitrarily late steps; and recording each exchange within the conserved amount decomposes the least loss exactly."
@@ -222,8 +222,8 @@
       "en": "Counting the record as a condition is a reading, following Ren on 11 October 2026: ‘I know what \"Every exchange loses at least one smallest amount\" is now, it is entropy’ and ‘pure thermodynamics, at atomic level, each exchange between objects holds the conservation of energy, but entropy still rise. zero premises.’"
     },
     {
-      "zh": "作者的读法（AI，依 Ren 的交托采用）：记录是在精确守恒之下仍增加的量。定理对是否这样读都成立：Flow.balances_withRecord 是恒等，不算入记录的规律也一并陈述。",
-      "en": "The author's reading (AI, adopted on Ren's delegation): the record is what rises while every exchange conserves exactly. The theorems hold under either reading: Flow.balances_withRecord is an identity, and the laws without the record are stated too."
+      "zh": "读法（AI 的，依 Ren 的交托采用）：记录是在精确守恒之下仍增加的量。定理对是否这样读都成立：Flow.balances_withRecord 是恒等，不算入记录的规律也一并陈述。",
+      "en": "A reading (the AI's, adopted on Ren's delegation): the record is what rises while every exchange conserves exactly. The theorems hold under either reading: Flow.balances_withRecord is an identity, and the laws without the record are stated too."
     }
   ],
   "does_not_show": [
@@ -778,7 +778,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "0362e707d7ec1f584c895a74718635b56d1da92aec8feecdbd66d9c1f99020a3",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
       "declarations": [
         "Becoming.World.ArisingRecurs",
         "Becoming.World.CeasingRecurs"
@@ -935,6 +935,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -982,7 +988,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1109,6 +1115,10 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite, World.Embodied, World.Balanced, World.Dissipative to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Finite, World.Embodied, World.Balanced, World.Dissipative to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in a premise \"the author's reading\" now reads \"a reading (the AI's)\", keeping its AI label; the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条前提中的“作者的读法”改为“读法（AI 的）”，保留其 AI 标签；规律不变。"
     }
   ],
   "text_versions": [

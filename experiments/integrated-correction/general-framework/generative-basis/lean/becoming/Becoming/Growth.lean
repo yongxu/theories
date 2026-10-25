@@ -193,7 +193,7 @@ theorem grow_widensAlong_iff_new (keep : ∀ t c, l' t (.inl c) = l t c) :
     | .inr added => added,
    fun added => grow_widensAlong_iff.mpr ⟨forth, .inr added⟩⟩
 
-/-- **What widening on the old formations does not register.** Where a growth leaves the old
+/-- **A widening the old formations alone do not show.** Where a growth leaves the old
 levels as they were and admits a new formation at some step, the grown web widens the old along
 the inclusion, while on the old formations the levels neither widen nor narrow. -/
 theorem grow_widens_unregistered (keep : ∀ t c, l' t (.inl c) = l t c)

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "整体可容许时，延续条件恰是每个立场上次真且对边界不变的预设。不变恰是从预设到该立场上延续条件的条件句，承载延续条件在预设之外的全部内容；有了处处的预设与覆盖，它就是对立场不变，即立场中立的规则。",
     "en": "Where the whole is admissible, the continuation condition is exactly the presupposition sub-true and boundary-invariant at every standpoint. Invariance is the conditional from presupposition to condition, carrying all it adds; with presupposition and covering everywhere, it is standpoint neutrality."
@@ -181,8 +181,8 @@
     "en": "Whether to hold the step of invariance; the philosophical warrant of the presupposition, covering and invariance."
   },
   "correspondence": {
-    "zh": "Ren 在《Truth exist》中写道：“There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” 此前写道，自身是 “a cognitive model which can not justify itself without some sort of \"belief\"”，“we”是 “the universe/ecosystem that realizes its own existence”。AI 提出公理可能由它从 Ren 的话中读出的三个主张推出，只差一步（见来源）；经审查，结果是公理的分解，不是化约。作者的读法（AI 论证，依 Ren 的交托采用，DELEGATED-CHOICES D21；不变之步作为根据的问题保持开放，见理论 §6.5 与 §8.5，不是待 Ren 的问题，D45）：预设读 Ren 所说自身不能没有的 belief，把它用作前提是 AI 的一步；沿一个关系覆盖由构造成立，“we”支持把整体作为一种划法，“There is no absolute self”本身不给出覆盖；“for all beings”最直接地读作对立场不变，即 N_std 的规则，把“universal invariations”推广到意义是 AI 的读法；Ren 的层级读作预设的三种读法：超真、沿影响次真、沿空关系次真。超真、次真之名取自超赋值（Fine 1975）与次赋值（Hyde 1997），依据先前知识；其余名称是 AI 的。G0 本身已不是公理：对其各处用法的审计干净之后，Ren 把它折叠。",
-    "en": "In “Truth exist” Ren wrote: “There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” Earlier Ren wrote that the self is “a cognitive model which can not justify itself without some sort of \"belief\"”, and that “we” are “the universe/ecosystem that realizes its own existence”. The AI proposed that the axiom may follow from three claims it read from Ren's words, one step short (in the source); on review, the result is a decomposition of the axiom, not a reduction. The author's reading (an AI argument, adopted on Ren's delegation, DELEGATED-CHOICES D21; the step of invariance stays open as a question of warrant, chapter sections 6.5 and 8.5, not as one pending Ren, D45): the presupposition reads the “belief” without which, Ren wrote, the self cannot justify itself, and using it as a premise is the AI's step; along a relation covering holds by construction, Ren's “we” supports the whole as one drawing, and “There is no absolute self” does not by itself give covering; “for all beings” reads most directly as standpoint-invariance, the rule of N_std, and extending “universal invariations” to significance is the AI's reading; Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation. Super-truth and sub-truth are named from supervaluation (Fine 1975) and subvaluation (Hyde 1997), from prior knowledge; the other names are the AI's. G0 itself is no longer an axiom: Ren folded it after the audit of its uses came out clean."
+    "zh": "Ren 在《Truth exist》中写道：“There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” 此前写道，自身是 “a cognitive model which can not justify itself without some sort of \"belief\"”，“we”是 “the universe/ecosystem that realizes its own existence”。AI 提出延续条件可能由它从 Ren 的话中读出的三个主张推出，只差一步（见来源）；经审查，结果是延续条件的分解，不是化约。读法（AI 论证，DELEGATED-CHOICES D21；不变之步作为根据的问题保持开放，见理论 §6.5 与 §8.5，不是待 Ren 的问题，D45）：预设读 Ren 所说自身不能没有的 belief，把它用作前提是 AI 的一步；沿一个关系覆盖由构造成立，“we”支持把整体作为一种划法，“There is no absolute self”本身不给出覆盖；“for all beings”最直接地读作对立场不变，即立场中立的规则，把“universal invariations”推广到意义是 AI 的读法；Ren 的层级读作预设的三种读法：超真、沿影响次真、沿空关系次真。超真、次真之名取自超赋值（Fine 1975）与次赋值（Hyde 1997），依据先前知识；其余名称是 AI 的。生生之意义本身已不是公理：对其各处用法的审计干净之后，Ren 把它改述为条件。",
+    "en": "In “Truth exist” Ren wrote: “There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” Earlier Ren wrote that the self is “a cognitive model which can not justify itself without some sort of \"belief\"”, and that “we” are “the universe/ecosystem that realizes its own existence”. The AI proposed that the continuation condition may follow from three claims it read from Ren's words, one step short (in the source); on review, the result is a decomposition of the continuation condition, not a reduction. The reading (an AI argument, DELEGATED-CHOICES D21; the step of invariance stays open as a question of warrant, chapter sections 6.5 and 8.5, not as one pending Ren, D45): the presupposition reads the “belief” without which, Ren wrote, the self cannot justify itself, and using it as a premise is the AI's step; along a relation covering holds by construction, Ren's “we” supports the whole as one drawing, and “There is no absolute self” does not by itself give covering; “for all beings” reads most directly as standpoint-invariance, the rule of standpoint neutrality, and extending “universal invariations” to significance is the AI's reading; Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation. Super-truth and sub-truth are named from supervaluation (Fine 1975) and subvaluation (Hyde 1997), from prior knowledge; the other names are the AI's. Living significance itself is no longer an axiom: Ren restated it as a condition after the audit of its uses came out clean."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
   "aliases": [
@@ -222,8 +222,8 @@
           "en": "Boundary, SuperTrue, SubTrue, BoundaryInvariant, SignificantWithin and their characterizations."
         },
         "input": {
-          "zh": "公理恰是次真且不变的预设。",
-          "en": "The axiom is exactly the presupposition sub-true and invariant."
+          "zh": "延续条件恰是次真且不变的预设。",
+          "en": "The continuation condition is exactly the presupposition sub-true and invariant."
         },
         "conditions": {
           "zh": "无。",
@@ -236,13 +236,13 @@
       "id": "continuation-condition-yields-living-significance",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用 Unrestricted 与 Valuation.premises_of_unrestricted；P39 把公理读作边界中立，这一步在一个立场上就是边界中立。",
-        "en": "Reuses Unrestricted and Valuation.premises_of_unrestricted; P39 reads the axiom as boundary neutrality, and at one standpoint the step is boundary neutrality."
+        "zh": "复用 Unrestricted 与 Valuation.premises_of_unrestricted；P39 把延续条件读作边界中立，这一步在一个立场上就是边界中立。",
+        "en": "Reuses Unrestricted and Valuation.premises_of_unrestricted; P39 reads the continuation condition as boundary neutrality, and at one standpoint the step is boundary neutrality."
       },
       "interface": {
         "output": {
-          "zh": "公理及其在主张层面给出的 G0。",
-          "en": "The axiom and the G0 it gives at the level of claims."
+          "zh": "延续条件及其在主张层面给出的生生之意义。",
+          "en": "The continuation condition and the living significance it gives at the level of claims."
         },
         "input": {
           "zh": "Valuation.significant_of_presupposed。",
@@ -259,13 +259,13 @@
       "id": "significance-retained-within-margin",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用 Web.retains_agree：公理之下各立场的保留一致。",
-        "en": "Reuses Web.retains_agree: under the axiom standpoints retain alike."
+        "zh": "复用 Web.retains_agree：延续条件之下各立场的保留一致。",
+        "en": "Reuses Web.retains_agree: under the continuation condition standpoints retain alike."
       },
       "interface": {
         "output": {
-          "zh": "公理之下保留与立场无关。",
-          "en": "Under the axiom retaining does not depend on the standpoint."
+          "zh": "延续条件之下保留与立场无关。",
+          "en": "Under the continuation condition retaining does not depend on the standpoint."
         },
         "input": {
           "zh": "retains_agree_of_presupposed。",
@@ -328,17 +328,17 @@
       "id": "metaethical-core-characterization",
       "relation": "interpretive",
       "detail": {
-        "zh": "并行：Valuation.significant_iff 把 G0 分解为种子、N_rel 与连通整体上的 N_std；这里的前提把同类分解带到延续的意义上，没有形式复用。",
-        "en": "Parallel: Valuation.significant_iff decomposes G0 into a seed, N_rel and N_std on a connected whole; the premises here carry that kind of decomposition to the significance of continuation, with no formal reuse."
+        "zh": "并行：Valuation.significant_iff 把生生之意义分解为种子、关系中立与连通整体上的立场中立；这里的前提把同类分解带到延续的意义上，没有形式复用。",
+        "en": "Parallel: Valuation.significant_iff decomposes living significance into a seed, relational and standpoint neutrality on a connected whole; the premises here carry that kind of decomposition to the significance of continuation, with no formal reuse."
       },
       "interface": {
         "output": {
-          "zh": "G0 的刻画。",
-          "en": "G0's characterization."
+          "zh": "生生之意义的刻画。",
+          "en": "The characterization of living significance."
         },
         "input": {
-          "zh": "对立场不变读作 N_std 的规则。",
-          "en": "Standpoint-invariance read as the rule of N_std."
+          "zh": "对立场不变读作立场中立的规则。",
+          "en": "Standpoint-invariance read as the rule of standpoint neutrality."
         },
         "conditions": {
           "zh": "无。",
@@ -351,13 +351,13 @@
       "id": "living-significance-on-held-lives",
       "relation": "interpretive",
       "detail": {
-        "zh": "并行：Valuation.significant_iff_held 把 G0 分解为处处 S0 加 N_std；预设读作 S0 的延续形式（AI 的读法，依 Ren 的交托采用，DELEGATED-CHOICES D21），没有形式复用。",
-        "en": "Parallel: Valuation.significant_iff_held decomposes G0 into S0 at every standpoint with N_std; the presupposition reads as the continuation form of S0 (the AI's reading, adopted on Ren's delegation, DELEGATED-CHOICES D21), with no formal reuse."
+        "zh": "并行：Valuation.significant_iff_held 把生生之意义分解为处处自身意义加立场中立；预设读作自身意义的延续形式（AI 的读法，DELEGATED-CHOICES D21），没有形式复用。",
+        "en": "Parallel: Valuation.significant_iff_held decomposes living significance into self-significance at every standpoint with standpoint neutrality; the presupposition reads as the continuation form of self-significance (the AI's reading, DELEGATED-CHOICES D21), with no formal reuse."
       },
       "interface": {
         "output": {
-          "zh": "被持有的生命之下 G0 的刻画。",
-          "en": "G0's characterization where lives are held."
+          "zh": "被持有的生命之下生生之意义的刻画。",
+          "en": "The characterization of living significance where lives are held."
         },
         "input": {
           "zh": "预设与对立场不变的分解。",
@@ -375,8 +375,8 @@
     {
       "id": "own-good-to-reachable-living-significance",
       "detail": {
-        "zh": "评价者路线以容差连同 Chain 承载 G0 超出 S0 的全部内容；这里对边界不变的一步同样承载公理在预设之外的全部内容，只是一步，所以不继承连锁悖论的反驳（评价者路线的审查 P3）。",
-        "en": "The evaluator route's tolerance with Chain carries all of G0's content beyond S0; here the step of boundary-invariance likewise carries all of the axiom's content beyond the presupposition, in one step, so it does not inherit the sorites objection (the evaluator-route review, P3)."
+        "zh": "评价者路线以容差连同 Chain 承载生生之意义超出自身意义的全部内容；这里对边界不变的一步同样承载延续条件在预设之外的全部内容，只是一步，所以不继承连锁悖论的反驳（评价者路线的审查 P3）。",
+        "en": "The evaluator route's tolerance with Chain carries all of living significance's content beyond self-significance; here the step of boundary-invariance likewise carries all of the continuation condition's content beyond the presupposition, in one step, so it does not inherit the sorites objection (the evaluator-route review, P3)."
       }
     }
   ],
@@ -464,7 +464,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.bounded"
       ]
@@ -668,6 +668,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -722,7 +728,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -823,6 +829,10 @@
     {
       "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosure to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：WithinClosure to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: 'the axiom' in the dependency interfaces, related details and correspondence reads 'the continuation condition', and readings are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim; and G0, S0, N_rel and N_std in the correspondence, the dependency details and interfaces and the related detail read living significance, self-significance and relational and standpoint neutrality, 'folded' reading 'restated as a condition'. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：依赖接口、相关说明与对应中的“公理”改为“延续条件”，读法标为 AI 的读法，不再写“依 Ren 的交托采用”，引语原样保留；对应、依赖说明与接口及相关说明中的 G0、S0、N_rel、N_std 改为生生之意义、自身意义、关系中立与立场中立，“折叠”改为“改述为条件”。规律未变。"
     }
   ],
   "text_versions": [

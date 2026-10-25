@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-21T08:07:58+00:00",
+  "reviewed_at_utc": "2026-10-25T14:28:37+00:00",
   "statement": {
     "en": "The far-sighted weighted optimum laws hold over any law of what stands; where others first draw from what an optimizer leaves at least what the remainder renews, every optimum of an order whose weighting falls at every step ends the base at once.",
     "zh": "远见加权最优之律对任一“所立之律”成立；他者先从优化者所留中抽取不少于剩余之更新时，权重每步下降之序的每个最优都立即终结基础。"
@@ -124,8 +124,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That the others' rule is a best response where capacities limit a draw, with more than two drawers or drawing at once: for two drawers in turn without a limit it is (drawers-in-turn-draw-everything); nor how optimizers come to one.",
-      "zh": "他者的规则在容量限制抽取、多于两个抽取者或同时抽取时是最优回应：两个轮流且无限制时它是（drawers-in-turn-draw-everything）；也不是优化者如何达到它。",
+      "en": "That the others' rule is a best response outside drawers-in-turn's cases: in turn where two drawers have no floor, and at once with no floor where each portion returns less than one for one; nor how optimizers reach one but by revision.",
+      "zh": "他者的规则在 drawers-in-turn 的情形之外是最优回应：轮流时两个抽取者无下限，同时抽取时无下限而每份所回少于一对一；也不是优化者除修订外如何达到它。",
       "kind": "scope"
     },
     {
@@ -302,10 +302,10 @@
       }
     },
     {
-      "id": "drawers-in-turn-draw-everything",
+      "id": "drawers-in-turn",
       "detail": {
-        "en": "With two drawers in turn, each ranking courses, every perfect profile draws everything, the base standing from the first step at what stands at nothing.",
-        "zh": "两个抽取者轮流、各自按过程排序时，每个完美组合都全部抽取，自第一步起基础立于零处所立者。"
+        "en": "Drawers in turn on one law of best response: where two drawers have no floor, every perfect profile is the floor profile and every sequence of revisions reaches it, which with no floor anywhere draws everything.",
+        "zh": "轮流的抽取者依一条最优回应之律：两个抽取者无下限时，每个完美组合都是下限组合，每个修订序列都达到它；处处无下限时即全部抽取。"
       }
     },
     {
@@ -685,6 +685,10 @@
     {
       "en": "23 October 2026, EC6 (study section 375): Optimum.Next.drawable_le_of_gains is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
       "zh": "2026年10月23日，EC6（研究第 375 节）：Optimum.Next.drawable_le_of_gains 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the superseded record drawers-in-turn-draw-everything replaced by drawers-in-turn in the first boundary and the related results; the boundary now says what that record derives (in turn where two drawers have no floor, at once with no floor where each portion returns less than one for one) instead of two drawers only.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条边界与相关结果中，已被取代的记录 drawers-in-turn-draw-everything 换为 drawers-in-turn；该边界今说明该记录所导出者（轮流时两个抽取者无下限，同时抽取时无下限而每份所回少于一对一），不再只说两个抽取者。"
     }
   ]
 }

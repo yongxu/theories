@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T13:17:43+00:00",
+  "reviewed_at_utc": "2026-10-25T14:48:32+00:00",
   "statement": {
     "en": "248 passages of nine parts of Chinese thought, quoted verbatim, are tied to the spine as agreement, exact scope or divergence. The relational start holds across the lines; their universal forms mostly need a scope; four non-relational overlays recur, each answered inside its tradition.",
     "zh": "中国思想九个部分的 248 段文字，从所存文本逐字引出，逐段以相合、定域或相分对应到脊柱。关系性的起点贯穿诸线；其全称形式大多需要定域；四种非关系之层反复出现，各在本传统内部得到回应。"
@@ -54,8 +54,8 @@
     "zh": "verify_ro.py 通过：248 段（相合 91、定域 98、相分 59），每段原文逐字见于所存文本（93 个文件以 SHA-256 绑定），604 个声明在现行回执中，122 份记录，图谱编号在由两个存档重建的摘录中，以及章节之表。五个映射者起草；整合者核对每条引文、声明与记录，通读每条读法，改正六处（研究第 207 节）。未经独立审查；未与刻本对校。四段相合依 D62 改为定域（看板项 ZHK）。"
   },
   "next_delta": {
-    "en": "Three gaps, each to be claimed before it is written: a graded order by closure level; division across several conditions; tolerance compared across laws.",
-    "zh": "三项缺口，各先认领再写：以闭包层级分等的次序；跨多个条件的分；跨律比较容忍。"
+    "en": "The Hall-type existence condition for division across several conditions; whether a graded order by closure level can be a law, and which part of graded concern it would keep.",
+    "zh": "跨多个条件之分的霍尔型存在条件；以闭包层级分等的次序能否成律，若成律，它保留差等的哪一部分。"
   },
   "correspondence": {
     "en": "Ren, 19 October 2026, after sharing the 易道体系图 v1.3.0: “整个中国思想的源头，道家，易经，以及整个文字符号系统，包括武（止戈 ），和一些其他的理论体系中，例如儒家，也延续了这一套“relational ontology”，因此，我希望你好好阅读，把两者之间的关系map出来，可以用sub agents，然后再体系性的整合进我们的理论” (provenance, not warrant). The chapter maps 248 passages of the 易传 beyond Y1–Y4, the 老子 with three commentaries and the excavated witnesses, the 儒家 line, the script with 止戈, 庄子 and 玄学, 墨辩 and 名家, 兵家, 法家, 管子 and 纵横, the Buddhist lines received in China, and others. Reading (the AI's, D54): the thesis holds for what the lines start from and observe, its universal forms mostly need a scope, and four non-relational overlays recur, each answered inside its tradition.",
@@ -141,7 +141,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
       "role": "integration",
-      "sha256": "db2bda38897f5ee972a44f786f4c5ed119b1e288587faff0d605aa7dcac49947"
+      "sha256": "7e307adaebc2d236b921edf79d940568410c20cea9ab4ea7cf7d77495f50d177"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py",
@@ -185,6 +185,31 @@
       "en": "The first gap closed: a level held from both sides settles exactly where it does not overshoot, and read late it needs a band growing with the lateness (two-sided-regulation-and-late-reading).",
       "zh": "第一项缺口补上：两侧保持的水平恰在不越过处定下，迟读时所需之带随迟而增（two-sided-regulation-and-late-reading）。",
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#214-a-level-held-from-both-sides-and-a-level-read-late-rg"
+    },
+    {
+      "en": "The second gap closed: codes formed between formations (a-code-formed-between-formations).",
+      "zh": "第二项缺口补上：在形成之间形成的编码（a-code-formed-between-formations）。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#210-a-code-formed-between-formations-sc"
+    },
+    {
+      "en": "The third gap closed: capture through the rule (capture-through-the-rule).",
+      "zh": "第三项缺口补上：经由规则的捕获（capture-through-the-rule）。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#213-capture-through-the-rule-rc"
+    },
+    {
+      "en": "The seventh gap closed: what of the arrangements of the 傳 is a law (hexagram-arrangements-and-laws).",
+      "zh": "第七项缺口补上：传中诸排列何者是律（hexagram-arrangements-and-laws）。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#209-what-of-the-arrangements-of-the-傳-is-a-law-y5"
+    },
+    {
+      "en": "Tolerance across laws: more tolerance gives no less at every step (tolerance-monotone-across-laws); from total withholding, giving needs a formation tolerating no fewer than it waits on (restoring-giving-from-the-worst-start).",
+      "zh": "跨律容忍：容忍不少则每步给予不少（tolerance-monotone-across-laws）；自全面扣留起，给予须有一形成容忍不少于所待（restoring-giving-from-the-worst-start）。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#338-short-laws-the-classical-texts-ask-for-zg1"
+    },
+    {
+      "en": "Division across several conditions: a sufficient condition, division by exclusive footprints (division-by-exclusive-footprints).",
+      "zh": "跨多个条件之分：一个充分条件，按排他之足迹分（division-by-exclusive-footprints）。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#342-junctures-within-the-count-reading-through-a-pool-division-by-exclusive-footprints-support-passed-on-zg5"
     }
   ],
   "history": [
@@ -211,6 +236,10 @@
     {
       "en": "22 October 2026, ZHK (the five kinds the 脉络 map decided, decision D62): four passages read again by the 脉络 map as the same structure, and judged exact scope there, changed from agreement to exact scope through build_passages.py FIXES, each reading rewritten from the 脉络 entries to say where the claim holds: 荀子「有化而无别，谓之一实」 (identity across a step is fixed by conservation exactly where nothing else stands at the relatum's level after it; elsewhere a continuation must be chosen, World.balanced_reidentify_iff_alike added), 孙子 吴越同舟 (the common dependence agrees; the general who makes them act as one is a single centre; Flow.mutuallyDependent_of_common and mutual-dependence-and-its-pace added), 杂阿含「此有故彼有」 (the sufficient direction the spine does not give) and 老子「柔弱者生之徒」 (from total withholding, giving needs a formation sparing all it waits on; Tolerance.gives_needs_sparing and Tolerance.total_stays added). Counts 95/94/59 become 91/98/59; passages.json rebuilt, CHINESE-SOURCES-AND-BECOMING.md tables spliced and its counts, the 兵家 and 佛教 paragraphs and section 10 follow; validation scope updated. The claim is unchanged; four readings narrow to their scope.",
       "zh": "2026年10月22日，ZHK（《中华思想脉络》之图所判定的五处类别，决定 D62）：脉络之图读同一结构而判为定域的四段，经 build_passages.py 的 FIXES 由相合改为定域，各段读法依脉络条目改写为说出此句在何处成立：荀子「有化而无别，谓之一实」（跨步之同一，守恒恰在步后没有别的关系项与它水平相同之处定下，别处要选一个延续；加 World.balanced_reidentify_iff_alike）、孙子吴越同舟（共同依存相合；使之如一的将帅是单一中心；加 Flow.mutuallyDependent_of_common 与 mutual-dependence-and-its-pace）、杂阿含「此有故彼有」（充分方向脊柱不给）、老子「柔弱者生之徒」（自全面扣留起，给予须有一形成全容；加 Tolerance.gives_needs_sparing 与 Tolerance.total_stays）。计数由 95/94/59 变为 91/98/59；passages.json 重建，CHINESE-SOURCES-AND-BECOMING.md 之表重新拼入，其计数、兵家与佛教两段及第 10 节随之；验证范围更新。论断不变；四条读法收窄至其范围。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): next step and progress brought to the gaps' status: the second, third and seventh gaps closed, tolerance across laws proved on both proposed sides, and a sufficient condition for division across several conditions; what remains is the Hall-type existence condition and whether the graded order by closure level can be a law.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：下一步与进展依缺口之现状更新：第二、三、七项缺口补上，跨律之容忍所拟两面皆已证，跨多个条件之分有一个充分条件；所余为霍尔型存在条件，以及以闭包层级分等的次序能否成律。"
     }
   ],
   "text_versions": [

@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
-    "zh": "插入或移除空步不改变一步的规律、段上的总量与计数以及复现；每步所计的（速率、储备承载多久）相对于读法的单位。",
-    "en": "Inserting or removing idle steps leaves the laws of one step, the totals and counts over a stretch, and recurrence unchanged; what is counted per step, rates and how long a reserve carries, is relative to the unit of the reading."
+    "zh": "插入空步时，关系项之相等可判定、每一步每个关系项各列一次，前提、复现以及段上的总量与计数不变；在移动之步给定时移除空步，不需这两个条件即保持前提、总量与计数；生起与止息之计数需活动已判定；速率与储备承载多久相对于读法的单位。",
+    "en": "Inserting idle steps, relata compared decidedly and listed once at each step, keeps premises, recurrence, totals and counts over a stretch; removing them, moving steps given, keeps premises, totals and counts with neither; counts of arising or ceasing take activity decided; rates depend on the unit."
   },
   "claim": {
     "zh": "一个停顿（Stutter ρ）指 ρ 0 = 0，每步或空（ρ (n+1) = ρ n）或前进一步，且每步都被到达；经 ρ 读用 Sampling 的 sample。空步上没有参与：平衡、耗散与封闭在每个家族上成立，存量耗减在持有所立者的家族上成立（Flow.sample_idle_balancesOn 等）；前进步上各自恰在所读之步上成立时成立（Flow.sample_moves_balancesOn_iff 等）。所以经停顿读的世界恰在原世界满足前提时满足它们（World.stutter_premises_iff）：平衡（每步每个关系项列出一次）、耗散、只有活跃者给予、只有活跃者取用、活动需要支持、体现与有界的传递；与较粗的读法不同，不需要关于活动如何保持的条件。任何段上的总量就是所读之段的总量（stutter_total；Flow.stutter_taken、Flow.stutter_given、stutter_risen、stutter_fallen、stutter_rise_count、stutter_fall_count，以及在已定之处的 stutter_comings、stutter_ceasings）；生起、止息与立的变化恰在原来复现时复现（World.stutter_arisingRecurs_iff、World.stutter_ceasingRecurs_iff、World.stutter_change_recurs_iff）；普查经停顿保留（World.sample_counted），给出每个原步的读法之步时返回（World.stutter_counted_of_section）。停顿改变的是每步所计的：空步出现得任意晚时，没有流无终地更多（Flow.sample_not_more）；扩张无终地更多，每步读两次则不然（Expansion.more_step_relative）；由一份储备承载的世界在每步读两次时需要至少两份（Lapse.reserve_step_relative）。移除空步是一个构造：给出读每个原步的移动之步（Stutter.Moves；每个都存在，Stutter.crosses，且唯一，Stutter.moving_unique），且世界的空步中无参与者、无变动（World.IdleAt），去掉它们的世界（World.withoutIdle）恰在原世界满足每个前提处满足它（World.withoutIdle_premises、World.withoutIdle_transmits），不需要关于列出的条件，因为每步保留自己的交换；恰在原世界有普查处有普查（World.withoutIdle_counted）；在任一段上有相同的所取与所给总量、家族所立的升降及其计数（World.withoutIdle_totals），活动可判定时有相同的生起与止息计数（World.withoutIdle_counts）。不加前提。",
@@ -449,6 +449,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Stuttering.lean to Prelude.lean, total_steps_add. Proof bindings (Prelude.lean, Sampling.lean, Stuttering.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged; Sampling.lean, Stuttering.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Stuttering.lean 到 Prelude.lean：total_steps_add。证明绑定（Prelude.lean、Sampling.lean、Stuttering.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变；Sampling.lean、Stuttering.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement names the conditions the Lean takes, which it omitted (for inserting idle steps, relata compared decidedly and listed once at each step; for removing them, the moving steps supplied and neither of those; activity decided for counts of arising and ceasing), and no longer says that removal keeps recurrence, which is proved for insertion only; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明 Lean 所需、此前遗漏的条件（插入空步时关系项之相等可判定且每步各列一次；移除空步时移动之步给定，不需这两个条件；生起与止息之计数需活动已判定），并不再说移除空步保持复现（复现只对插入得证）；主张不变。"
     }
   ],
   "former_ids": [

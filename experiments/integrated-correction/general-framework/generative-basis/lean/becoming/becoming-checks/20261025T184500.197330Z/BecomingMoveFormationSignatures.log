@@ -1,0 +1,211 @@
+@Becoming.Run.part_act_eq_rest_act : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) (n : Nat),
+  r.part.act n = r.rest.act n
+@Becoming.closedBy_formed : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A}
+  {r : Becoming.Run (Becoming.closedBy (Generative.productProcess P Q) form)},
+  (r.state 0).snd = form (r.state 0).fst → ∀ (n : Nat), (r.state n).snd = form (r.state n).fst
+@Becoming.Run.ofClosedBy_toClosedBy : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) (n : Nat),
+  (r.toClosedBy.ofClosedBy ⋯).state n = r.state n
+@Becoming.coupled_determined : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A},
+  Becoming.Determined P → Becoming.Determined Q → Becoming.Determined (Becoming.coupled P Q form)
+@Becoming.lumped_id : ∀ {X : Type u_1} {A : Type u_2} (form : X → A), Becoming.Learning.Lumped id form
+@Becoming.lumped_of_finer : ∀ {X : Type u_1} {K : Type u_2} {K' : Type u_4} {A : Type u_3} {form : X → A} {π : X → K}
+  {π' : X → K'},
+  Becoming.Learning.Lumped π form → (∀ (x x' : X), π' x = π' x' → π x = π x') → Becoming.Learning.Lumped π' form
+@Becoming.lumped_const_iff : ∀ {X : Type u_1} {K : Type u_2} {A : Type u_3} {form : X → A} (k : K),
+  Becoming.Learning.Lumped (fun x => k) form ↔ ∀ (x x' : X), form x = form x'
+@Becoming.partForms_iff : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {form : S × E → A} (e₀ : E),
+  Becoming.PartForms form ↔ ∀ (x : S × E), form x = form (x.fst, e₀)
+@Becoming.restForms_iff : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {form : S × E → A} (s₀ : S),
+  Becoming.RestForms form ↔ ∀ (x : S × E), form x = form (s₀, x.snd)
+@Becoming.partForms_and_restForms_iff : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {form : S × E → A},
+  Becoming.PartForms form ∧ Becoming.RestForms form ↔ ∀ (x x' : S × E), form x = form x'
+@Becoming.PartForms.goAlike : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A},
+  Becoming.Determined P → Becoming.PartForms form → Becoming.GoAlike (Becoming.coupled P Q form) Prod.fst
+@Becoming.PartForms.parts_agree : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A},
+  Becoming.Determined P →
+    Becoming.PartForms form →
+      ∀ (r r' : Becoming.Run (Becoming.coupled P Q form)),
+        (r.state 0).fst = (r'.state 0).fst → ∀ (n : Nat), (r.state n).fst = (r'.state n).fst
+@Becoming.Run.part_trajectory : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {F : S → A → S},
+  (∀ (s : S) (a : A) (s' : S), P.step s a s' → s' = F s a) →
+    ∀ (n : Nat),
+      (r.state n).fst =
+        Becoming.trajectory (fun s a x => F s a) (r.state 0).fst (fun n => form (r.state n)) (fun x => ()) n
+@Becoming.Run.rest_trajectory : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {G : E → A → E},
+  (∀ (e : E) (a : A) (e' : E), Q.step e a e' → e' = G e a) →
+    ∀ (n : Nat),
+      (r.state n).snd =
+        Becoming.trajectory (fun e a x => G e a) (r.state 0).snd (fun n => form (r.state n)) (fun x => ()) n
+@Becoming.Run.part_orbit : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {F : S → A → S},
+  (∀ (s : S) (a : A) (s' : S), P.step s a s' → s' = F s a) →
+    ∀ {policy : S → A},
+      (∀ (x : S × E), form x = policy x.fst) →
+        ∀ (n : Nat), (r.state n).fst = Becoming.Law.orbit (fun s => F s (policy s)) (r.state 0).fst n
+@Becoming.Run.rest_orbit : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {G : E → A → E},
+  (∀ (e : E) (a : A) (e' : E), Q.step e a e' → e' = G e a) →
+    ∀ {input : E → A},
+      (∀ (x : S × E), form x = input x.snd) →
+        ∀ (n : Nat), (r.state n).snd = Becoming.Law.orbit (fun e => G e (input e)) (r.state 0).snd n
+@Becoming.Run.rest_driven_by_part : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {G : E → A → E},
+  (∀ (e : E) (a : A) (e' : E), Q.step e a e' → e' = G e a) →
+    ∀ {policy : S → A},
+      (∀ (x : S × E), form x = policy x.fst) →
+        ∀ (n : Nat),
+          (r.state n).snd =
+            Becoming.trajectory (fun e a x => G e a) (r.state 0).snd (fun n => policy (r.state n).fst) (fun x => ()) n
+@Becoming.Run.whole_orbit : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {F : S → A → S}
+  {G : E → A → E},
+  (∀ (s : S) (a : A) (s' : S), P.step s a s' → s' = F s a) →
+    (∀ (e : E) (a : A) (e' : E), Q.step e a e' → e' = G e a) →
+      ∀ (n : Nat), r.state n = Becoming.Law.orbit (Becoming.wholeNext F G form) (r.state 0) n
+@Becoming.clock_determined : ∀ {A : Type u_1}, Becoming.Determined (Becoming.clock A)
+@Becoming.Run.withClock_part : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (n : Nat), r.withClock.part.state n = r.state n ∧ r.withClock.part.act n = r.act n
+@Becoming.Run.withClock_restForms : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P),
+  Becoming.RestForms fun x => r.act x.snd
+@Becoming.Run.moves_lasso_of_rest_held : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {G : E → A → E},
+  (∀ (e : E) (a : A) (e' : E), Q.step e a e' → e' = G e a) →
+    ∀ {input : E → A},
+      (∀ (x : S × E), form x = input x.snd) →
+        ∀ {l : List E},
+          (∀ (n : Nat), (r.state n).snd ∈ l) →
+            ∃ i q, i + q + 1 ≤ l.length ∧ Becoming.Learning.Lasso (fun n => form (r.state n)) i q
+@Becoming.Run.moves_lasso_of_part_held : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {F : S → A → S},
+  (∀ (s : S) (a : A) (s' : S), P.step s a s' → s' = F s a) →
+    ∀ {policy : S → A},
+      (∀ (x : S × E), form x = policy x.fst) →
+        ∀ {l : List S},
+          (∀ (n : Nat), (r.state n).fst ∈ l) →
+            ∃ i q, i + q + 1 ≤ l.length ∧ Becoming.Learning.Lasso (fun n => form (r.state n)) i q
+@Becoming.Run.moves_lasso_of_whole_held : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {F : S → A → S}
+  {G : E → A → E},
+  (∀ (s : S) (a : A) (s' : S), P.step s a s' → s' = F s a) →
+    (∀ (e : E) (a : A) (e' : E), Q.step e a e' → e' = G e a) →
+      ∀ {l : List (S × E)},
+        (∀ (n : Nat), r.state n ∈ l) →
+          ∃ i q, i + q + 1 ≤ l.length ∧ Becoming.Learning.Lasso (fun n => form (r.state n)) i q
+@Becoming.Run.whole_unheld_of_never_cycles : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {F : S → A → S}
+  {G : E → A → E},
+  (∀ (s : S) (a : A) (s' : S), P.step s a s' → s' = F s a) →
+    (∀ (e : E) (a : A) (e' : E), Q.step e a e' → e' = G e a) →
+      (∀ (i q : Nat), ¬Becoming.Learning.Lasso (fun n => form (r.state n)) i q) →
+        ∀ (l : List (S × E)), ¬∀ (n : Nat), r.state n ∈ l
+@Becoming.Run.rest_unheld_of_never_cycles : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {G : E → A → E},
+  (∀ (e : E) (a : A) (e' : E), Q.step e a e' → e' = G e a) →
+    ∀ {input : E → A},
+      (∀ (x : S × E), form x = input x.snd) →
+        (∀ (i q : Nat), ¬Becoming.Learning.Lasso (fun n => form (r.state n)) i q) →
+          ∀ (l : List E), ¬∀ (n : Nat), (r.state n).snd ∈ l
+@Becoming.Run.part_unheld_of_never_cycles : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {F : S → A → S},
+  (∀ (s : S) (a : A) (s' : S), P.step s a s' → s' = F s a) →
+    ∀ {policy : S → A},
+      (∀ (x : S × E), form x = policy x.fst) →
+        (∀ (i q : Nat), ¬Becoming.Learning.Lasso (fun n => form (r.state n)) i q) →
+          ∀ (l : List S), ¬∀ (n : Nat), (r.state n).fst ∈ l
+@Becoming.Run.withLasso_held : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {i q : Nat} (lasso : Becoming.Learning.Lasso r.act i q) (n : Nat),
+  ((r.withLasso lasso).state n).snd ∈ Becoming.downFrom (i + q)
+@Becoming.Run.withLasso_part : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {i q : Nat} (lasso : Becoming.Learning.Lasso r.act i q) (n : Nat),
+  ((r.withLasso lasso).state n).fst = r.state n ∧ (fun x => r.act x.snd) ((r.withLasso lasso).state n) = r.act n
+@Becoming.lumped_of_new : ∀ {I : Type u_2} {K : Type u_1} {A : Type u_3} {g : I → K},
+  (∀ (i j : I), g i = g j → i = j) → ∀ (m : I → A), Becoming.Learning.Lumped g m
+@Becoming.not_lumped_of_varied : ∀ {I : Type u_2} {K : Type u_1} {A : Type u_3} {g : I → K} {m : I → A} {i j : I},
+  g i = g j → m i ≠ m j → ¬Becoming.Learning.Lumped g m
+@Becoming.lumped_iff_singleValued : ∀ {I : Type u_2} {K : Type u_1} {A : Type u_3} {g : I → K} {m : I → A},
+  Becoming.Learning.Lumped g m ↔ ∃ R, Becoming.Readout.SingleValued R ∧ ∀ (i : I), R (g i) (m i)
+@Becoming.reading_le : ∀ {I : Type u_2} {K : Type u_1} {A : Type u_3} {g : I → K} {m : I → A} {R : K → A → Prop},
+  (∀ (i : I), R (g i) (m i)) → ∀ {k : K} {a : A}, Becoming.Readout.Reading g m k a → R k a
+@Becoming.policyUpto_agrees : ∀ {K : Type u_1} {A : Type u_2} [inst : DecidableEq K] {g : Nat → K} {m : Nat → A} (d : A)
+  (N : Nat),
+  (∀ (i j : Nat), i < N → j < N → g i = g j → m i = m j) → ∀ (n : Nat), n < N → m n = Becoming.policyUpto g m d N (g n)
+@Becoming.lumped_upto_iff : ∀ {K : Type u_1} {A : Type u_2} [DecidableEq K] {g : Nat → K} {m : Nat → A} (N : Nat),
+  (∀ (i j : Nat), i < N → j < N → g i = g j → m i = m j) ↔ ∃ policy, ∀ (n : Nat), n < N → m n = policy (g n)
+Becoming.throughout_or_fails : ∀ (p : Nat → Prop) [(n : Nat) → Decidable (p n)] (N : Nat),
+  (∀ (n : Nat), n < N → p n) ∨ ∃ n, n < N ∧ ¬p n
+@Becoming.policyUpto_taken : ∀ {K : Type u_1} {A : Type u_2} [inst : DecidableEq K] {g : Nat → K} {m : Nat → A} (d : A)
+  (N n : Nat), n < N → ∃ j, j < N ∧ g j = g n ∧ Becoming.policyUpto g m d N (g n) = m j
+@Becoming.no_policy_upto_iff : ∀ {K : Type u_1} {A : Type u_2} [DecidableEq K] [DecidableEq A] {g : Nat → K}
+  {m : Nat → A} (N : Nat),
+  (¬∃ policy, ∀ (n : Nat), n < N → m n = policy (g n)) ↔ ∃ i j, i < N ∧ j < N ∧ g i = g j ∧ m i ≠ m j
+@Becoming.rest_differs_of_varied : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {form : S × E → A} {p : Nat → S}
+  {e : Nat → E} {m : Nat → A}, (∀ (n : Nat), m n = form (p n, e n)) → ∀ {i j : Nat}, p i = p j → m i ≠ m j → e i ≠ e j
+@Becoming.Run.keepHistory_formed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run (Becoming.keepHistory P)), ∃ policy, Becoming.Readout.Decodes r.state r.act policy
+@Becoming.ExchangeLaw.ofMoves_lumped_stage : ∀ {F C : Type} (u : Nat → F → C → Nat × Nat),
+  Becoming.Learning.Lumped Prod.fst (Becoming.ExchangeLaw.ofMoves u).policy
+Becoming.MoveFormation.alt_ne : ∀ (n : Nat), Becoming.MoveFormation.alt n ≠ Becoming.MoveFormation.alt (n + 1)
+Becoming.TwoClocks.one_course_two_laws : (∀ (n : Nat),
+    (Becoming.TwoClocks.together Becoming.TwoClocks.byPart).state n =
+      (Becoming.TwoClocks.together Becoming.TwoClocks.byRest).state n) ∧
+  (∀ (n : Nat),
+      Becoming.TwoClocks.byPart ((Becoming.TwoClocks.together Becoming.TwoClocks.byPart).state n) =
+        Becoming.TwoClocks.byRest ((Becoming.TwoClocks.together Becoming.TwoClocks.byRest).state n)) ∧
+    Becoming.PartForms Becoming.TwoClocks.byPart ∧
+      ¬Becoming.RestForms Becoming.TwoClocks.byPart ∧
+        Becoming.RestForms Becoming.TwoClocks.byRest ∧
+          ¬Becoming.PartForms Becoming.TwoClocks.byRest ∧
+            Becoming.TwoClocks.byPart (0, 1) ≠ Becoming.TwoClocks.byRest (0, 1)
+Becoming.TwoClocks.closed_not_own : Becoming.GoAlike
+    (Becoming.coupled (Becoming.clock Bool) (Becoming.clock Bool) Becoming.TwoClocks.byRest) Prod.fst ∧
+  ¬Becoming.PartForms Becoming.TwoClocks.byRest
+Becoming.Still.driven : ¬Becoming.Learning.Lumped (fun x => ()) Becoming.MoveFormation.alt ∧
+  Becoming.Learning.Lumped (fun n => n) Becoming.MoveFormation.alt
+Becoming.Parity.neither_alone : ¬Becoming.Learning.Lumped Becoming.Parity.partCourse Becoming.Parity.move ∧
+  ¬Becoming.Learning.Lumped Becoming.Parity.restCourse Becoming.Parity.move ∧
+    Becoming.Learning.Lumped (fun n => (Becoming.Parity.partCourse n, Becoming.Parity.restCourse n))
+        Becoming.Parity.move ∧
+      ¬Becoming.PartForms Becoming.Parity.form ∧ ¬Becoming.RestForms Becoming.Parity.form
+@Becoming.MoveRuns.coupled_formed : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)),
+  Becoming.Learning.Lumped r.state r.part.act
+@Becoming.MoveRuns.part_policy : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A},
+  Becoming.PartForms form →
+    ∀ (e₀ : E) (r : Becoming.Run (Becoming.coupled P Q form)) (n : Nat), r.part.act n = form (r.part.state n, e₀)
+@Becoming.MoveRuns.rest_policy : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A},
+  Becoming.RestForms form →
+    ∀ (s₀ : S) (r : Becoming.Run (Becoming.coupled P Q form)) (n : Nat), r.rest.act n = form (s₀, r.rest.state n)
+@Becoming.MoveRuns.both_one_move : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A},
+  Becoming.PartForms form ∧ Becoming.RestForms form →
+    ∀ (r r' : Becoming.Run (Becoming.coupled P Q form)) (i j : Nat), r.part.act i = r'.part.act j
+@Becoming.MoveRuns.rest_differs : ∀ {S : Type u_1} {E : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {Q : Generative.Process E A} {form : S × E → A} (r : Becoming.Run (Becoming.coupled P Q form)) {i j : Nat},
+  r.part.state i = r.part.state j → r.part.act i ≠ r.part.act j → r.rest.state i ≠ r.rest.state j
+@Becoming.MoveRuns.formed_of_finer : ∀ {S : Type u_1} {A : Type u_3} {K : Type u_2} {K' : Type u_4}
+  {P : Generative.Process S A} (r : Becoming.Run P) {π : S → K} {π' : S → K'},
+  Becoming.Learning.Lumped (fun n => π (r.state n)) r.act →
+    (∀ (x x' : S), π' x = π' x' → π x = π x') → Becoming.Learning.Lumped (fun n => π' (r.state n)) r.act
+@Becoming.MoveRuns.ofMoves_formed_stage : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {part : F → Bool} {u : Nat → F → C → Nat × Nat}
+  (r :
+    Becoming.Run
+      (Becoming.closedBy (Becoming.inputs (law.stepBy present part)) (Becoming.ExchangeLaw.ofMoves u).policy)),
+  Becoming.Learning.Lumped (fun n => (r.state (n + 1)).fst.fst) fun n => (r.state (n + 1)).snd
+Becoming.MoveRuns.still_driven : ¬Becoming.Learning.Lumped (fun n => (Becoming.MoveRuns.stillRun.state n).fst)
+      Becoming.MoveRuns.stillRun.act ∧
+  Becoming.Learning.Lumped (fun n => (Becoming.MoveRuns.stillRun.state n).snd) Becoming.MoveRuns.stillRun.act
+Becoming.MoveRuns.parity_neither_alone : ¬Becoming.Learning.Lumped (fun n => (Becoming.MoveRuns.parityRun.state n).fst)
+      Becoming.MoveRuns.parityRun.act ∧
+  ¬Becoming.Learning.Lumped (fun n => (Becoming.MoveRuns.parityRun.state n).snd) Becoming.MoveRuns.parityRun.act ∧
+    Becoming.Learning.Lumped Becoming.MoveRuns.parityRun.state Becoming.MoveRuns.parityRun.act

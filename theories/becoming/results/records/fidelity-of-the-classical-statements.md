@@ -5,12 +5,12 @@
 
 `fidelity-of-the-classical-statements` · **reviewed-scoped** · assessment · F01 · [record](fidelity-of-the-classical-statements.json) · [register](../../../../RESULTS.md)
 
-> Over 270 條, the 中华本's 經 introduce fewer referents the Lean statement lacks than the canonical chapter's English clauses (0.09 against 0.81 per pair, CI [-0.92, -0.54]) and fewer agents, and leave out fewer binders; LLM-coded, provisional.
+> Over 270 條, the 中华本's 經 introduce fewer referents the Lean statement lacks than the canonical chapter's English clauses (means per 條 0.09 against 0.81; difference CI [-0.92, -0.54]) and fewer agents, and leave out fewer binders; LLM-coded, provisional.
 
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Codebook v1.1 (FIDELITY.md §3 with two logged clarifications from calibration); the Lean statements of receipt 20261022T110022.458880Z with one level of unfolding; the alignment of 經 clauses to declarations by two coders and an adjudicator; one coder (Claude) on both sides of the main set.
+- Codebook v1.1 (FIDELITY.md §3 with two logged clarifications from calibration); the Lean statements of receipt 20261022T110022.458880Z with one level of unfolding; the alignment of 經 clauses to declarations by two coders and an adjudicator; one coder, of the family of the model that wrote the 經, on both sides of the main set.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -18,7 +18,7 @@
 - That classical Chinese is the best expression of the core: one English text is compared, in another register.
 - That the result survives a human audit or a second coder on the main-set 經: neither was run, and the coder of the main-set 經 wrote them.
 - Anything about readers (H2): the reading test is not run.
-- That the gain belongs to classical Chinese rather than to the name table's discipline: the control run afterwards (ZE, record fidelity-under-one-discipline) finds it does not survive against a controlled English under the same discipline for the Claude coder, and a residual for the GPT coder on 60 pairs.
+- That the gain belongs to classical Chinese, not the name table's discipline: controlled English in that discipline does as well for the authors' family's coder; another family's finds a residual on 60 pairs (fidelity-under-one-discipline).
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -77,7 +77,8 @@ Aliases: `the fidelity count`, `忠实之测`, `FC1`, `excess referents`
 - 23 October 2026: the confound of language with the name table's discipline and its control (a controlled English edition) added to the scope and next step; the authoring coder's blind spot recorded as an open observation in the results.
 - 23 October 2026: the calibration observation tested on English statements (SC1, record fidelity-coders-on-own-and-other-texts): no author-specific deficit, the coders differ as coders; the next step narrowed to the 經 under the name table.
 - 23 October 2026: the controlled English control run (ZE, record fidelity-under-one-discipline, study section 377); the scope item on language and discipline and the next step updated.
+- 25 October 2026, board item DF (study section 418): the unit of the means corrected to per 條, the interval being the difference's; the coders named by model family (the authors' and another) rather than by product in the premise and the boundary on language and discipline (that boundary also shortened), the identities staying in the evidence.
 
 </details>
 
-Documentary review UTC: `2026-10-23T06:36:45+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:25:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

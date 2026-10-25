@@ -29,7 +29,8 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- A coupling added step by step, which gives a course breaking late part of the coupling; the tie at exactly the amount forgone, where both kinds of optimum stand.
+- A coupling added step by step, which gives a course breaking late part of the coupling.
+- Which optima stand at the tie w + q n = r n + m, or between the thresholds where the ends e reached widen the gap: neither threshold law applies there.
 - An order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses.
 - That the dependence ought to be kept or a coupling set: no evaluation enters; the laws say which optima a coupling leaves.
 
@@ -121,7 +122,8 @@ Aliases: `keeping forgoes the renewal at the need`, `what keeping a dependence f
 - 21 October 2026, SG7: a coupling added for each step the dependence is kept keeps it at every horizon where it covers the renewal forgone a step and exceeds the end (record a-step-coupling-keeps-at-every-horizon, study section 294); keeps_or_drops is now the case of keeps_or_falls; this record's laws and their statements are unchanged.
 - 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
 - 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
+- 25 October 2026, board item DF (study section 418): the scope item no longer says both kinds of optimum stand at the tie: both threshold laws are strict, so the tie and the gap the reached ends leave between the thresholds are stated as not shown; no law changes.
 
 </details>
 
-Documentary review UTC: `2026-10-21T05:33:35+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

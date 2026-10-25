@@ -8,15 +8,15 @@
   "kind": "argument",
   "status": "reviewed-scoped",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-19T13:38:06+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "生生之意义加公开的实践承诺与实际对应，形成保留、转化、实际交接、有限结束及有界责任的一般候选。",
     "en": "Living significance with the explicit practical commitments and actual correspondence supplies a general candidate for preservation, transformation, actual transfer, finite ending and bounded responsibility."
   },
   "hypotheses": [
     {
-      "zh": "G0 的正面意义条件接口；按当前统一结构，它已折入意义，不另增一条公理。J1–J4 比较、基本条件优先、责任及正当选择承诺均公开而非由形式定义证明。",
-      "en": "The G0 positive-significance interface, folded into significance in the current unified structure rather than added as another axiom. J1–J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and are not warranted by formal definitions."
+      "zh": "生生之意义是前提，即陈述而不断言的条件；在延续条件之下它是定理，不在该条件之外另增前提。J1–J4 比较、基本条件优先、责任及正当选择承诺均公开而非由形式定义证明。",
+      "en": "Living significance is a premise, a condition stated and not asserted; under the continuation condition it is a theorem, adding no premise beyond that condition. J1–J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and are not warranted by formal definitions."
     },
     {
       "zh": "实际分类、有效承担、可行范围与权限的对应 E。",
@@ -533,6 +533,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and PracticalJudgment) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Decidedness, Becoming.Frontier, Becoming.FrontierFrames, Becoming.FrontierWorlds, Becoming.Inquiry and Becoming.Lexical). The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and PracticalJudgment）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Decidedness, Becoming.Frontier, Becoming.FrontierFrames, Becoming.FrontierWorlds, Becoming.Inquiry and Becoming.Lexical）。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the first hypothesis names living significance in current terms as a premise, a condition stated and not asserted, which under the continuation condition is a theorem adding no premise beyond that condition, instead of the retired G0 interface and 'another axiom'; the alias for the retired label is kept for search. The claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条假设按现行术语称生生之意义为前提，即陈述而不断言的条件，在延续条件之下是定理，不在该条件之外另增前提，不再用退役的 G0 接口与“另一条公理”；退役标签的别名保留以便检索。主张不变。"
     }
   ],
   "text_versions": [

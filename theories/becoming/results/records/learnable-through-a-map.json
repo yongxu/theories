@@ -10,8 +10,8 @@
   "family": "F11",
   "reviewed_at_utc": "2026-10-16T00:00:00+00:00",
   "statement": {
-    "zh": "经映射的未来相同的配置给每个外推同样的前段。被列表所持的世界中，某个外推在每个配置上于特征停息，恰当这样的配置其特征从某步起一致；律使每个配置不变时，恰当特征经映射之归并同去。",
-    "en": "Configurations with one future through the map give every extrapolation the same prefix. In a listed world, some extrapolation rests on a feature everywhere exactly where such configurations have features eventually agreeing; under a still law, exactly where the feature respects the lumping."
+    "zh": "确定之律下，经映射的未来相同的配置给每个外推同样的前段。被列表所持的世界中、经映射之值可判定时，某个外推在每个配置上于特征停息，恰当这样的配置其特征从某步起一致；律使每个配置不变时，恰当特征经映射之归并同去。",
+    "en": "Under a determined law, configurations with one future through the map give each extrapolation one prefix; with the world listed and the map's values decided, a feature is learnable exactly where such pairs' features agree eventually, under a still law exactly where it keeps the lumping."
   },
   "laws": [
     {
@@ -625,6 +625,10 @@
     {
       "en": "2026-10-20: 37 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/1567b3ed7125c018/learnable-through-registration.json and in git.",
       "zh": "2026-10-20：37 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/1567b3ed7125c018/learnable-through-registration.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement names the determined law and the decided values through the map that the laws take (the chapter labels them); no law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写出诸规律所取的确定之律与经映射之值的可判定（章中所标）；规律未改。"
     }
   ],
   "text_versions": [

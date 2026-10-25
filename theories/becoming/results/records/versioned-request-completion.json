@@ -5,10 +5,14 @@
     "zh": "保留路线的在途请求完成",
     "en": "Completion of an in-flight request along its retained route"
   },
+  "statement": {
+    "en": "A partial law doing one unit of a pending task's work a tick, and finishing when none is left, finishes it in exactly that work plus one tick, shorter runs leaving it pending; with fuel, exactly when the fuel covers them. Under the bank and queue invariant the versioned queue's head is such a task.",
+    "zh": "一个部分律在任务待办时每个时刻做一个单位的工作、无剩余时完成，它恰在该工作加一个时刻时完成任务，更短的运行使任务仍待办；计入燃料时，恰当燃料覆盖这些时刻。在库与队列不变式下，版本化队列之首就是这样的任务。"
+  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F03",
-  "reviewed_at_utc": "2026-10-14T04:30:00+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
     "zh": "对每条部分律：任务待完成时每次做一单位剩余工作、无剩余时完成，则任务恰在剩余工作加一次中完成，每段更短的运行使它仍待完成、工作减去所走次数；计入燃料时，work + 1 次完成恰当燃料够用。版本化队列的队首就是这样的任务：在库与队列不变量之下每次走其剩余路径的一跳，所以队首在剩余路径长度加一次连续 tick 后完成，发出所请求的值，不改变其余队列、库与当前路线；更短的运行都不交付。",
     "en": "For every partial law that, while a task is pending, does one unit of its remaining work per tick and finishes when none is left, the task finishes in exactly its remaining work plus one tick, and every shorter run leaves it pending with the work lowered by the ticks taken; with fuel counted, work + 1 ticks finish exactly when the fuel covers them. The versioned queue's head is such a task: under the bank/queue invariant each tick does one hop of its remaining path, so the head completes after its remaining path length plus one consecutive tick, emits its requested value and leaves the remaining queue, banks and active route unchanged, and no shorter drain delivers it."
@@ -273,6 +277,10 @@
     {
       "en": "2026-10-20: 21 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/2e28c3d1c24dfd37/versioned-request-completion.json and in git.",
       "zh": "2026-10-20：21 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/2e28c3d1c24dfd37/versioned-request-completion.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added, from the claim: the general law of work done one unit a tick and its fuelled form, with the versioned queue's head as the periphery instance under the bank and queue invariant. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，取自主张：每个时刻做一单位工作的一般规律及其计入燃料的形式，以库与队列不变式下的版本化队列之首为外围实例。规律未变。"
     }
   ]
 }

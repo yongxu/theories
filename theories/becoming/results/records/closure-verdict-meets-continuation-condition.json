@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-14T15:05:38+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "以整体为界的意义就是延续条件。另一条路径接纳的每个形成都在区域之内或被第一条接纳之处，以区域为界的判断就是延续条件的判断，所以供给闭包是整体时总是；在清除者的网中两者分开。",
     "en": "Significance bounded by the whole is the continuation condition. Wherever every formation the other path admits lies in the region or is admitted by the first, the verdict bounded by the region is the condition's, so always where the feeding closure is the whole; in the clearer's web the two part."
@@ -57,8 +57,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "公理：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是比较定理的假设，不被证明；把它读作 Ren 的公理是 AI 的读法，依 Ren 的交托采用。",
-      "en": "The axiom: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the comparison theorems and is not proved; reading it as Ren's axiom is the AI's reading, adopted on Ren's delegation."
+      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是比较定理的假设，陈述而不断言，也不被证明；把“for anything, its continuation into the future has significance”读作 Unrestricted 是 AI 的读法（D16）。",
+      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the comparison theorems, stated and not asserted, and is not proved; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16)."
     },
     {
       "zh": "覆盖条件（covers）：另一条路径接纳的每个形成都在区域之内或被第一条接纳；供给闭包是整体时它总成立。",
@@ -120,16 +120,16 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261013T094743.528770Z）：Becoming.Interdependence 的定理公理报告为空，公理 Unrestricted 是比较定理的假设，不是 Lean 公理；检查器并核对核心纯净。作者反审见整合文档；尚未经独立审查。",
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Interdependence have empty axiom reports, the axiom Unrestricted being a hypothesis of the comparison theorems, not a Lean axiom; core purity verified. Author counterreview in the integration note; not yet independently reviewed."
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261013T094743.528770Z）：Becoming.Interdependence 的定理公理报告为空，延续条件 Unrestricted 是比较定理的假设，不是 Lean 公理；检查器并核对核心纯净。作者反审见整合文档；尚未经独立审查。",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Interdependence have empty axiom reports, the continuation condition Unrestricted being a hypothesis of the comparison theorems, not a Lean axiom; core purity verified. Author counterreview in the integration note; not yet independently reviewed."
   },
   "next_delta": {
     "zh": "给出按步的闭包。",
     "en": "Give the closures step by step."
   },
   "correspondence": {
-    "zh": "路线 (b) 是 AI 的表述，Ren 引用了它：“No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren 选定：“let's aim for a first, then try to archive b”。作者的读法（AI 论证，依 Ren 的交托采用）：供给闭包读“what it actually depends on”。它也曾被读作 Ren 的“the system that one is in”，作为从一个中心沿依存到达的系统；这一读法已撤回：供给闭包在影响闭包之内，影响闭包与所及闭包都在系统之内，为那一层级提供的是所及闭包（见 levels-of-closure，AI 的读法，依 Ren 的交托采用）。名称（FedClosed、WithinFeeding、Overshoot 等）是 AI 按 Ren 的命名准则所选。Ren 对层级写道：“i think it should be the whole, and a weaker version is within the system that one is in, then the self”；又写道：“there could be the whole realizes itself(like us, we recognize that \"we\" are the universe/ecosystem that realizes its own existence), understanding itself, and updates itself, this is also under the selection rules and constraints in theory, but in practice, how this happens, needs more thoughts”。作者的读法（AI 论证，依 Ren 的交托采用）：路线 (b) 到达自身及其所依存的（更正自“自身与所在的系统”），只在整体是一个供给闭包时到达整体，那时它的判断就是公理的判断；公理所加的，是那些损失返回不到任何人的延续的意义；以整体为所表示边界的中心，持有的就是公理的意义（bounded_whole）。",
-    "en": "Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren chose: “let's aim for a first, then try to archive b”. The author's reading (an AI argument, adopted on Ren's delegation): the feeding closure reads “what it actually depends on”. It was also read as Ren's “the system that one is in”, the system reached from a center along dependence; that reading is withdrawn: the feeding closure lies within the influence closure, the influence and reach closures lie within the system, and the reach closure is offered for that level (see levels-of-closure; the AI's reading, adopted on Ren's delegation). The names (FedClosed, WithinFeeding, Overshoot and others) are the AI's, chosen by Ren's naming standard. Of the levels Ren wrote: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”; and: “there could be the whole realizes itself(like us, we recognize that \"we\" are the universe/ecosystem that realizes its own existence), understanding itself, and updates itself, this is also under the selection rules and constraints in theory, but in practice, how this happens, needs more thoughts”. The author's reading (an AI argument, adopted on Ren's delegation): route (b) reaches the self and what it depends on (corrected from “the self and the system one is in”), and the whole only where the whole is one feeding closure, where its verdict is the axiom's; what the axiom adds is significance for continuations whose loss returns to no one; a center whose represented boundary is the whole holds the axiom's significance (bounded_whole)."
+    "zh": "路线 (b) 是 AI 的表述，Ren 引用了它：“No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren 选定：“let's aim for a first, then try to archive b”。读法（AI 论证）：供给闭包读“what it actually depends on”。它也曾被读作 Ren 的“the system that one is in”，作为从一个中心沿依存到达的系统；这一读法已撤回：供给闭包在影响闭包之内，影响闭包与所及闭包都在系统之内，为那一层级提供的是所及闭包（见 levels-of-closure，AI 的读法）。名称（FedClosed、WithinFeeding、Overshoot 等）是 AI 按 Ren 的命名准则所选。Ren 对层级写道：“i think it should be the whole, and a weaker version is within the system that one is in, then the self”；又写道：“there could be the whole realizes itself(like us, we recognize that \"we\" are the universe/ecosystem that realizes its own existence), understanding itself, and updates itself, this is also under the selection rules and constraints in theory, but in practice, how this happens, needs more thoughts”。读法（AI 论证）：路线 (b) 到达自身及其所依存的（更正自“自身与所在的系统”），只在整体是一个供给闭包时到达整体，那时它的判断就是延续条件的判断；延续条件所加的，是那些损失返回不到任何人的延续的意义；以整体为所表示边界的中心，持有的就是延续条件的意义（bounded_whole）。",
+    "en": "Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren chose: “let's aim for a first, then try to archive b”. The reading (an AI argument): the feeding closure reads “what it actually depends on”. It was also read as Ren's “the system that one is in”, the system reached from a center along dependence; that reading is withdrawn: the feeding closure lies within the influence closure, the influence and reach closures lie within the system, and the reach closure is offered for that level (see levels-of-closure; an AI reading). The names (FedClosed, WithinFeeding, Overshoot and others) are the AI's, chosen by Ren's naming standard. Of the levels Ren wrote: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”; and: “there could be the whole realizes itself(like us, we recognize that \"we\" are the universe/ecosystem that realizes its own existence), understanding itself, and updates itself, this is also under the selection rules and constraints in theory, but in practice, how this happens, needs more thoughts”. The reading (an AI argument): route (b) reaches the self and what it depends on (corrected from “the self and the system one is in”), and the whole only where the whole is one feeding closure, where its verdict is the continuation condition's; what the continuation condition adds is significance for continuations whose loss returns to no one; a center whose represented boundary is the whole holds the continuation condition's significance (bounded_whole)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean",
   "aliases": [
@@ -145,17 +145,17 @@
       "id": "continuation-condition-yields-living-significance",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用公理 Unrestricted 与以区域为界的意义 bounded。",
-        "en": "Reuses the axiom Unrestricted and significance bounded by regions, bounded."
+        "zh": "复用延续条件 Unrestricted 与以区域为界的意义 bounded。",
+        "en": "Reuses the continuation condition Unrestricted and significance bounded by regions, bounded."
       },
       "interface": {
         "output": {
-          "zh": "公理与以区域为界的意义。",
-          "en": "The axiom and significance bounded by regions."
+          "zh": "延续条件与以区域为界的意义。",
+          "en": "The continuation condition and significance bounded by regions."
         },
         "input": {
-          "zh": "以整体为界的意义就是公理；两个判断一致之处。",
-          "en": "Significance bounded by the whole is the axiom; where the two verdicts agree."
+          "zh": "以整体为界的意义就是延续条件；两个判断一致之处。",
+          "en": "Significance bounded by the whole is the continuation condition; where the two verdicts agree."
         },
         "conditions": {
           "zh": "无。",
@@ -173,16 +173,16 @@
       },
       "interface": {
         "output": {
-          "zh": "公理之下保留就是包含。",
-          "en": "Under the axiom retaining is inclusion."
+          "zh": "延续条件之下保留就是包含。",
+          "en": "Under the continuation condition retaining is inclusion."
         },
         "input": {
           "zh": "以区域为界的判断在覆盖条件下也是包含。",
           "en": "The verdict bounded by a region is inclusion too, under covering."
         },
         "conditions": {
-          "zh": "公理。",
-          "en": "The axiom."
+          "zh": "延续条件。",
+          "en": "The continuation condition."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean"
       }
@@ -191,21 +191,21 @@
       "id": "whole-first-and-bounded-centers",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用 Web.retains_bounded_iff 与 Clearing.clearer_loses_dweller；那里公理的判断总决定每个区域内的判断（Web.Retains.within），这里给出反过来也成立之处。",
-        "en": "Reuses Web.retains_bounded_iff and Clearing.clearer_loses_dweller; there the axiom's verdict always decides the verdict within every region (Web.Retains.within), here where the converse holds is given."
+        "zh": "复用 Web.retains_bounded_iff 与 Clearing.clearer_loses_dweller；那里延续条件的判断总决定每个区域内的判断（Web.Retains.within），这里给出反过来也成立之处。",
+        "en": "Reuses Web.retains_bounded_iff and Clearing.clearer_loses_dweller; there the continuation condition's verdict always decides the verdict within every region (Web.Retains.within), here where the converse holds is given."
       },
       "interface": {
         "output": {
-          "zh": "以区域为界的保留；搭便车者的部分在公理之下失去栖居者。",
-          "en": "Retaining bounded by regions; under the axiom the free rider's part loses the dweller."
+          "zh": "以区域为界的保留；搭便车者的部分在延续条件之下失去栖居者。",
+          "en": "Retaining bounded by regions; under the continuation condition the free rider's part loses the dweller."
         },
         "input": {
-          "zh": "闭包内的判断与公理的判断一致或分开之处。",
-          "en": "Where the verdict within the closure agrees with the axiom's or parts from it."
+          "zh": "闭包内的判断与延续条件的判断一致或分开之处。",
+          "en": "Where the verdict within the closure agrees with the continuation condition's or parts from it."
         },
         "conditions": {
-          "zh": "公理；扣留后的水平。",
-          "en": "The axiom; the withheld levels."
+          "zh": "延续条件；扣留后的水平。",
+          "en": "The continuation condition; the withheld levels."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean"
       }
@@ -246,8 +246,8 @@
           "en": "The feeding closure of either is the whole."
         },
         "input": {
-          "zh": "Overshoot 中闭包内的判断就是公理的判断。",
-          "en": "In Overshoot the verdict within the closure is the axiom's."
+          "zh": "Overshoot 中闭包内的判断就是延续条件的判断。",
+          "en": "In Overshoot the verdict within the closure is the continuation condition's."
         },
         "conditions": {
           "zh": "无。",
@@ -307,22 +307,22 @@
     {
       "id": "derived-extent-limits",
       "detail": {
-        "zh": "那里沿依存时中心不由动力学推出；这里不用公理时，以供给闭包为界的判断在闭包是整体时就是公理的判断，在清除者的网中不是。",
-        "en": "There the center along dependence is not derived from the dynamics; here, without the axiom, the verdict bounded by the feeding closure is the axiom's where the closure is the whole, and not in the clearer's web."
+        "zh": "那里沿依存时中心不由动力学推出；这里不用延续条件时，以供给闭包为界的判断在闭包是整体时就是延续条件的判断，在清除者的网中不是。",
+        "en": "There the center along dependence is not derived from the dynamics; here, without the continuation condition, the verdict bounded by the feeding closure is the continuation condition's where the closure is the whole, and not in the clearer's web."
       }
     },
     {
       "id": "comparison-within-reach",
       "detail": {
-        "zh": "推进本结果：对覆盖部分在每步之前已到达者的任何意义，有与无部分的比较就是公理的比较（Flow.Balances.comparison_within_reach），所以 Web.retains_bounded_iff_includes 的覆盖条件由动力学推出。",
-        "en": "Advances this result: for any significance covering what a part has reached before each step, the comparison with and without the part is the axiom's (Flow.Balances.comparison_within_reach), so the covering condition of Web.retains_bounded_iff_includes follows from the dynamics."
+        "zh": "推进本结果：对覆盖部分在每步之前已到达者的任何意义，有与无部分的比较就是延续条件的比较（Flow.Balances.comparison_within_reach），所以 Web.retains_bounded_iff_includes 的覆盖条件由动力学推出。",
+        "en": "Advances this result: for any significance covering what a part has reached before each step, the comparison with and without the part is the continuation condition's (Flow.Balances.comparison_within_reach), so the covering condition of Web.retains_bounded_iff_includes follows from the dynamics."
       }
     },
     {
       "id": "presupposition-scopes",
       "detail": {
-        "zh": "以各中心闭包为界的意义是使每个预设次真的最小意义；路线 (b) 与公理是同一预设的窄辖域与宽辖域（presupposition_scopes）。",
-        "en": "Significance bounded by each center's closure is the least making every presupposition sub-true; route (b) and the axiom are one presupposition at narrow and at wide scope (presupposition_scopes)."
+        "zh": "以各中心闭包为界的意义是使每个预设次真的最小意义；路线 (b) 与延续条件是同一预设的窄辖域与宽辖域（presupposition_scopes）。",
+        "en": "Significance bounded by each center's closure is the least making every presupposition sub-true; route (b) and the continuation condition are one presupposition at narrow and at wide scope (presupposition_scopes)."
       }
     }
   ],
@@ -364,7 +364,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.bounded",
         "Becoming.Web.Retains",
@@ -524,6 +524,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -571,7 +577,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -657,6 +663,10 @@
     {
       "en": "2026-10-20: 65 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/e81dfb90e26d1275/closure-verdict-meets-axiom.json and in git.",
       "zh": "2026-10-20：65 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/e81dfb90e26d1275/closure-verdict-meets-axiom.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: the first hypothesis names the continuation condition, stated and not asserted, its reading an AI reading (D16), with no person as its standing; 'the axiom' in the dependency interfaces, related details, validation scope and the AI readings of the correspondence reads 'the continuation condition', the quoted words kept verbatim and the readings labelled as AI readings instead of 'adopted on Ren's delegation'. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：第一条假设改称延续条件，陈述而不断言，其读法是 AI 的读法（D16），不以任何人为其地位；依赖接口、相关说明、验证范围与对应中 AI 读法里的“公理”改为“延续条件”，引语原样保留，读法标为 AI 的读法，不再写“依 Ren 的交托采用”。规律未变。"
     }
   ],
   "text_versions": [

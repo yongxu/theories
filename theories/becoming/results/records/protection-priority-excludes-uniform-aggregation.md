@@ -9,7 +9,7 @@
 
 Editable record: [protection-priority-excludes-uniform-aggregation.json](protection-priority-excludes-uniform-aggregation.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-08T18:56:05.941008+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
@@ -22,7 +22,7 @@ Canonical source: [ScoreRepresentation.lean](../../../../experiments/integrated-
 ## Hypotheses and correspondence
 
 - A single situation: option 0 retains the basic condition with no gain; option k>0 loses it and realizes k generative gains. The basic condition is not counted as new generative content.
-- C is GenerativeComparison.ComparisonPrinciple; J2 is PracticalJudgment.Better; G0 is used only to recognize gains as positively relevant. That J2 does not follow from C instances the existing result that C is silent on trade-offs (tradeoff_has_opposite_strict_appraisals, loss_sensitivity_alone_supplies_no_cutoff).
+- C is GenerativeComparison.ComparisonPrinciple; J2 is PracticalJudgment.Better; living significance (GenerativeComparison.G0) is used only to recognize gains as positively relevant. That J2 does not follow from C instances the existing result that C is silent on trade-offs (tradeoff_has_opposite_strict_appraisals, loss_sensitivity_alone_supplies_no_cutoff).
 
 That the protected condition is basic and each gain is generative content realized in the same history requires correspondence E and a classification argument; options are continuations of one history, not holdings of independent owners.
 
@@ -42,7 +42,7 @@ Checks one constructed situation; what it excludes is natural-number (unit-step)
 No dependency on another migrated record is asserted; source imports and supplied premises remain in scope.
 
 - Related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). Reuses its Better and no_protection_trade_by_count, adding J2's independence from C, the excluded natural-number score class and a bounded score agreeing with J2. Its proof is unchanged.
-- Related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Turns the alignment direction's §3 statement that J2 is not implied by G0 and rejects some aggregate compensation into a checked claim.
+- Related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Turns the alignment direction's §3 statement that J2 is not implied by living significance and rejects some aggregate compensation into a checked claim.
 - Related, not a proved adapter: [relational-generative-comparison](relational-generative-comparison.md). Uses the same ComparisonPrinciple (C); that result's C-dependent strict comparison keeps its scope.
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
@@ -99,4 +99,5 @@ Aliases: `ProtectionPriorityRival.priority_satisfies_comparison`, `ProtectionPri
 - 18 October 2026, F3J, the port of the judgment and comparison family into the core (Ren: "work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification"): the core counterparts of the cited periphery and bridge declarations are cited (4 in Becoming.Lexical; 3 in Becoming.Metaethics; 11 in Becoming.ScoreRepresentation), graded in development/bridge-fold/port-j.md; the periphery stays cited until the sweep retires it. Canonical source moved from ProtectionPriorityRival.lean to ScoreRepresentation.lean. A port restates; the claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: G0 (now LivingSignificance); ScoreRepresentation.g0_leaves_ordering_open (now ScoreRepresentation.livingSignificance_leaves_ordering_open); ScoreRepresentation.g0_recognizes_gains (now ScoreRepresentation.livingSignificance_recognizes_gains); g0_leaves_ordering_open (now livingSignificance_leaves_ordering_open). Proof bindings (ScoreRepresentation.lean, ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: ScoreRepresentation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; G0-WARRANT.md, names follow the R30 rename table. The claim is unchanged.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, GenerativeComparison, PracticalJudgment and ProtectionPriorityRival) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Extension, Becoming.Lexical, Becoming.ScoreRepresentation and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives, Becoming.Frontier and Becoming.Metaethics, which this record does not cite with declarations. 1 aliases naming retired declarations are marked "(retired module)". The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired label G0 replaced by living significance in the premises and a related note (its Chinese, a paraphrase of §3, no longer in quotation marks), the periphery name GenerativeComparison.G0 kept where it names the Lean; the claim is unchanged.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](protection-priority-excludes-uniform-aggregation.json).

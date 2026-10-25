@@ -5,7 +5,7 @@
 
 `what-a-method-comes-to-say-in-the-limit` · **recorded-checked** · theorem · F01 · [record](what-a-method-comes-to-say-in-the-limit.json) · [register](../../../../RESULTS.md)
 
-> A method fixed by the record verifies in the limit unions of closed readings and refutes meets of open ones. Settling is verified in the limit, at no finite stretch; recurrence is refuted in the limit and, under Markov's principle, verified there by no method.
+> A reading verified in the limit by a method fixed by the record is a union of closed readings; one refuted, a meet of open ones. With configurations told apart settling is verified in the limit; recurrence of Boolean moves is refuted there and, under Markov's principle, verified by no such method.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -102,6 +102,7 @@ Aliases: `what a method comes to say in the limit`, `方法在极限中所能说
 - 19 October 2026: added (O2), the next step of what-a-finite-stretch-verifies (readings verifiable or refutable in the limit, joined to the laws of settling and learning); study section 206.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Learnable.Rests (now Learnable.Predicts). Re-pointed after reading the change: Horizon.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Verification.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: Limit.Free.toggle_true (now ListTests.not_ne_self). Removed, with the statement kept under one name: Limit.not_eq_true_of_false (now ListTests.not_eq_true_of_false). Proof bindings (LimitVerification.lean, Prelude.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Enough.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; LimitVerification.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept; Verification.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the statement gives the direction the Lean proves (a reading verified in the limit is a union of closed readings, one refuted a meet of open ones; the converse is a scope item), names the told-apart configurations settling takes, and confines recurrence to Boolean moves; the laws are unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](what-a-method-comes-to-say-in-the-limit.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -111,4 +112,4 @@ Aliases: `what a method comes to say in the limit`, `方法在极限中所能说
 
 </details>
 
-Documentary review UTC: `2026-10-19T13:11:06+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

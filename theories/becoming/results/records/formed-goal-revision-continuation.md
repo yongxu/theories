@@ -7,7 +7,7 @@
 
 Editable record: [formed-goal-revision-continuation.json](formed-goal-revision-continuation.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-14T09:00:00+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T14:45:06+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
@@ -19,7 +19,7 @@ Canonical source: [GoalFormationRevision.lean](../../../../experiments/integrate
 <a id="前提与对应-hypotheses-and-correspondence"></a>
 ## Hypotheses and correspondence
 
-- Two practices, feedback/calibration laws, G0/J interpretation, responsiveness and authority, initial work/reserve and the scheduled sequence.
+- Two practices, feedback/calibration laws, interpretation under living significance and the practical commitments (J), responsiveness and authority, initial work/reserve and the scheduled sequence.
 
 Distinguishes goal formation, changed attainment criteria and action; the two-practice local choice is not open discovery of arbitrary ends.
 
@@ -70,4 +70,5 @@ Aliases: `GoalFormationRevision.joined_revision_has_warrant_and_actual_continuat
 - 14 October 2026, open-issues plan (study section 117): the claim now adds the law of the warrant for revision: better_iff and completed_iff_better in the periphery MachineInstances, for every condition of the construction the comparison warrants learning over attendance exactly under access loss with kept transition maintenance, and revision completes exactly there; the comparison's definitions belong to the construction. In the claim, “account” now reads “work, reserve and used units”, meaning unchanged. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the proof binding to MachineInstances still names the earlier run and is repointed at landing. The original theorems and counterexamples are unchanged.
 - 18 October 2026, the N1 renaming (Ren: "Renames, full scope"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired label G0 in the premise replaced by the current term: the interpretation is under living significance and the practical commitments (J).
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](formed-goal-revision-continuation.json).

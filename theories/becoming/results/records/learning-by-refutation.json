@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-14T00:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "每个外推都有一个开放的历程，使它提出的每个值都不合；无前段固定下一个值。被列表所持的世界中不合有界、停息不能被否证且只在那里停息，何时停息不显出；对类的学习是同一学习。",
     "en": "Every extrapolation has an open course on which each value it proposes misses; no prefix fixes the next value. In a world held by a list the misses are bounded, coming to rest is unrefuted and happens only there, and when does not show; learning over classes is the same learning."
@@ -412,8 +412,8 @@
     }
   ],
   "next_delta": {
-    "zh": "经映射的值本身不被分辨时的学习（映射不分辨配置时的可学性见 learnable-through-registration）；概率的读法；与 registration-within-what-it-registers（在所读之中的读法族在每一步不完备）的连接。",
-    "en": "Learning where the values through the map themselves are not told apart (learnability where the map does not tell configurations apart is in learnable-through-registration); a probabilistic reading; the connection with registration-within-what-it-registers (a family of readings within what it reads, incomplete at every step)."
+    "zh": "经映射的值本身不被分辨时的学习（映射不分辨配置时的可学性见 learnable-through-a-map）；概率的读法；与 readings-within-what-they-read（在所读之中的读法族在每一步不完备）的连接。",
+    "en": "Learning where the values through the map themselves are not told apart (learnability where the map does not tell configurations apart is in learnable-through-a-map); a probabilistic reading; the connection with readings-within-what-they-read (a family of readings within what it reads, incomplete at every step)."
   },
   "history": [
     {
@@ -488,6 +488,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): Learning.back (now Copying.nth); Learning.mem_upto (now mem_downFrom); Learning.upto (now downFrom). Proof bindings (Learning.lean, Testing.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Learning.lean, Testing.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：Learning.back（现为 Copying.nth）；Learning.mem_upto（现为 mem_downFrom）；Learning.upto（现为 downFrom）。证明绑定（Learning.lean、Testing.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Learning.lean、Testing.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the next step names the records by their current ids, learnable-through-a-map and readings-within-what-they-read, for their former ids; nothing else changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：下一步以现行编号 learnable-through-a-map 与 readings-within-what-they-read 称这些记录，取代其旧编号；别无改变。"
     }
   ]
 }

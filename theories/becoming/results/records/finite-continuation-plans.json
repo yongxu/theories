@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-08T13:02:25.936140+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
-    "zh": "给定转移、观察、目标与许可时，n 步 viable 等价于存在一个依观察分支且 works 的 n 步方案。",
-    "en": "For supplied transitions, observations, target and admissibility, n-step viable is equivalent to an observation-branching n-step plan satisfying works."
+    "zh": "给定转移、观察、目标与许可，观察只取有限多个值（Fin k）时，n 步 viable 等价于存在一个依观察分支且 works 的 n 步方案（不加前提）；观察为任意类型时，在其上有到方案的选择即成立（外围的形式由经典选择取得），对每个过程提问时恰是这一选择。一阶可共同采取的行动不保证第二步。",
+    "en": "For supplied transitions, observations, target and admissibility, where observations take finitely many values (Fin k), being viable for n steps is having an n-step plan branching on observations that works, with no premise; for observations of any type this holds given a choice over them into plans, which the periphery's form takes from classical choice, and asked of every process it is exactly that choice. A common first response need not support the second step."
   },
   "hypotheses": [
     {
-      "zh": "有限步数与现有 viable、Plan、works；观察分支的选择使用所列既有逻辑依赖。",
-      "en": "Finite horizon and the existing viable, Plan and works; branch selection retains the recorded logical dependencies."
+      "zh": "有限步数；核心规律取 Fin k 中的观察，一般规律以观察上的选择为具名假设（ChoiceOver）；外围 ContinuationAdequacy 保留其回执所列的逻辑依赖。",
+      "en": "Finite horizon; the core law takes observations in Fin k, the general law a choice over the observations as a named hypothesis (ChoiceOver); the periphery ContinuationAdequacy keeps its receipt's logical dependencies."
     }
   ],
   "correspondence": {
@@ -199,6 +199,10 @@
     {
       "en": "2026-10-20: 1 bookkeeping note condensed of 15 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/f40bca569ace6298/finite-continuation-plans.json and in git.",
       "zh": "2026-10-20：1 条记账性说明合并（15 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/f40bca569ace6298/finite-continuation-plans.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the claim states the conditions the Lean carries: with finitely many observation values the equivalence of viability and a working branching plan needs no premise; for observations of any type it needs a choice over them into plans, which the periphery takes from classical choice, and asked of every process it is exactly that choice; the first hypothesis names these premises. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张写明 Lean 所带的条件：观察只取有限多个值时，viable 与一个 works 的分支方案等价不加前提；观察为任意类型时需要其上到方案的选择，外围由经典选择取得，对每个过程提问时恰是这一选择；第一条假设写明这些前提。规律未变。"
     }
   ]
 }

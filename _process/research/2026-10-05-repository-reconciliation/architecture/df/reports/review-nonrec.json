@@ -1,0 +1,92 @@
+{
+ "findings": [
+  {
+   "target": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean (module docstring, lines 14-18)",
+   "quote": "The bridge modules kept in `lean/history/becoming/`\nsince 19 October 2026 proved that the periphery's closures of seeds under edges are this closure\n(`Becoming.Bridge`: `reached_iff_closure`, `cutReach_iff_closure`) and stated their laws for any\nprocess whose moves are the edges (`Becoming.SeedReachProcesses`)",
+   "problem": "The docstring puts `reached_iff_closure` and `cutReach_iff_closure` in `Becoming.Bridge`. They are not in Bridge. They are `Becoming.reached_iff_closure` and `Becoming.cutReach_iff_closure`, proved in the retired module `Becoming.SeedReachProcesses` from `SeedReachProcesses.reached_iff` and `cutReach_iff` at the edge process. Bridge itself says the seed–edge closures are reachability 'by `Becoming.SeedReachProcesses`'; Bridge's own law here is `chain_iff_reach`. The old text already misattributed them, and the new parenthesis makes the wrong module explicit. The triage's wording avoided naming the module.",
+   "evidence": "lean/history/becoming/Becoming/SeedReachProcesses.lean:296-308 (both theorems, after `end SeedReachProcesses`, in namespace Becoming); lean/history/becoming/Becoming/Bridge.lean:42-44 and :164-166 (Bridge has only `chain_iff_reach` here; grep finds no `reached_iff_closure` in Bridge.lean)",
+   "fix": "Replace with: 'The bridge modules kept in `lean/history/becoming/` since 19 October 2026 proved that finite chains are reach on the process whose steps are the edges (`Becoming.Bridge`, `chain_iff_reach`), and that the periphery's closures of seeds under edges are this closure, stating their laws for any process whose moves are the edges (`Becoming.SeedReachProcesses`: `reached_iff_closure`, `cutReach_iff_closure`); in the core, what a process reaches from a seed is this closure under its moves (`fromSeed_iff_closure`, `Becoming.SeedReach`).' Docstring only.",
+   "severity": "error"
+  },
+  {
+   "target": "_process/goals/theory-of-becoming.json /overview/next_step/en (line 66) and /zh (line 67)",
+   "quote": "Four of the eight `World` premises hold by the reading of one exchange, with the rest counted;",
+   "problem": "In this sentence 'with the rest counted' reads most naturally as 'the remaining premises counted'. What is meant is the rest of the whole counted as one relatum (`World.withRest`). The zh line says this (其余算入为一个关系项), so the two languages do not quite agree. The bare zh '其余' is also ambiguous right after '八个前提中四个'. 08's premise card and 01 §8.3 spell it out.",
+   "evidence": "theories/becoming/chapters/08-METHOD.md:206 ('Read off one exchange with the rest counted as one relatum (`World.withRest`)'); theories/becoming/chapters/01-ROOT.md:207 ('the rest of the whole counted as one more relatum'); ExchangePremises.lean:7-8",
+   "fix": "en: 'Four of the eight `World` premises hold by the reading of one exchange, with the rest of the whole counted as one relatum;' zh: '八个 `World` 前提中四个由同一交换的读法成立（整体的其余部分算作一个关系项）'.",
+   "severity": "imprecise"
+  },
+  {
+   "target": "GOALS.md:248, README.md:132 (generated from the goal record)",
+   "quote": "Five of the eight `World` premises are readings of one exchange and three are states of the law (`Becoming.ExchangePremises`)",
+   "problem": "Row 2 said to run `make research-render` after editing the goal. That has not been done. The generated public pages still show the old overclaim that the census holds unconditionally.",
+   "evidence": "GOALS.md:248 and README.md:132 still contain 'Five of the eight'; git status shows neither file modified",
+   "fix": "Run `make research-render` (then research-check and research-links) once the record edits in this worktree are in. Do not hand-edit the generated pages.",
+   "severity": "imprecise"
+  },
+  {
+   "target": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ExchangePremises.lean:69-71 (module 'Readings' paragraph)",
+   "quote": "Of the eight premises, five are readings of one exchange: the four tying\npremises, and the census wherever a step's exchange lies within finitely many relata",
+   "problem": "This is the source of the goal's 'five' wording, and row 2 did not cover it. Both census laws require the formations taking part to be listed once (`distinct : ∀ t, Distinct (w.flow.present t)`) as well as a named family closing each step, or a finite world. The reading drops the listed-once premise. The module header (lines 19-22) keeps it.",
+   "evidence": "ExchangePremises.lean:263-265 (`withRest_counted (distinct …) (family …) (closed …)`), :272 (`Finite.withRest_counted (finite) (distinct …)`); header :19-22",
+   "fix": "Docstring: 'Of the eight premises, five are readings of one exchange: the four tying premises, and the census wherever a named family closes each step's exchange (so in every finite world) and the formations taking part are listed once, a census never failing where it does not'. Then a cached core re-check.",
+   "severity": "imprecise"
+  },
+  {
+   "target": "Docstring-edited Lean modules (Direction, EdgeClosure, Exclusion, Growth, HexagramSequences, OwnWidening, Retaining, Runs, SelectionLevels, Space, Weightings; periphery OrganizationCorrespondence)",
+   "quote": "Docstring-only; the source hash changes, so rerun check_becoming.py (cached steps reused) for a new core receipt and let the records bound to Becoming.Runs re-point",
+   "problem": "Each row asked for a re-check after the docstring edits. No new receipt exists in the worktree, so every record bound to these modules now points at a stale source hash. For example, worlds-are-runs binds Becoming.Runs to receipt 20261019T231053.882924Z with sha 8717bfb5…, and the file's hash is now 70d1e8e7…. research-check will fail until `check_becoming.py` (cached) and `check_organization_correspondence.py` run and the bindings are re-pointed.",
+   "evidence": "lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json /source_sha256/Becoming.Runs = 8717bfb5eb65…; sha256(Becoming/Runs.lean) = 70d1e8e7d363…; latest receipt dir 20261025T080929.528151Z predates the edits; git status shows no new check output",
+   "fix": "Run check_becoming.py (cached; no BECOMING_FRESH) and check_organization_correspondence.py. Read each change, then re-point the proof_bindings of the records citing these modules through the usual workflow.",
+   "severity": "imprecise"
+  },
+  {
+   "target": "theories/becoming/results/data/regions.json modules['Becoming.FallibleInquiry'] (line 2551)",
+   "quote": "\"Becoming.FallibleInquiry\": {'region': 'knowing', 'base': 'frame', ...}",
+   "problem": "The record finite-fallible-inquiry-necessity was moved to base 'periphery' because Becoming.FallibleInquiry imports the periphery module ScientificInquiryNecessity and is not in the core receipt. The module entry still says 'frame'. Record and module now disagree on the same ground.",
+   "evidence": "lean/becoming/Becoming/FallibleInquiry.lean:4 (import ScientificInquiryNecessity); lean/becoming/Becoming.lean has no FallibleInquiry import; check_fallible_inquiry.py checks it separately; 03-KNOWING.md:323 labels it periphery",
+   "fix": "modules['Becoming.FallibleInquiry'].base: 'frame' → 'periphery'. Keep the note and write the file back in its own layout.",
+   "severity": "imprecise"
+  },
+  {
+   "target": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json:3614 (lao-77-tian-zhi-dao, gap.why_it_matters); build_passages.py FIXES['lao-77-tian-zhi-dao'] (line 406)",
+   "quote": "it also connects the Widening loop law to levels",
+   "problem": "Row 15 corrected the module's old name in zuo-xuan12's reading and in the gap.nearest lists. This gap prose still names `Widening`, which no longer exists (R22: Widening → LoopReturn; the core has LoopReturn.lean and no Widening.lean). FIXES has no key that substitutes inside a gap's why_it_matters, so the rebuild could not fix it.",
+   "evidence": "passages.json:3614; lean/becoming/Becoming/LoopReturn.lean exists and there is no Widening.lean; development/r22-names/RENAME-TABLE.json maps Becoming.Widening.* to Becoming.LoopReturn.*",
+   "fix": "Add a gap-text substitution to the lao-77-tian-zhi-dao FIXES entry, for example 'gap_sub': [('why_it_matters', 'the Widening loop law', 'the LoopReturn loop law')], applied the way reading_sub is (record a problem if it does not apply). Then rebuild, run verify_ro.py, and re-point chinese-sources-on-the-spine's passages.json reference.",
+   "severity": "imprecise"
+  },
+  {
+   "target": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean:93-94 (header, the bullet rewritten for row 14) and the spread_levels docstring (~line 840)",
+   "quote": "The spread of the amount over the whole is `k`\n  times the groups' own spreads with the spread among them (`spread_levels`).",
+   "problem": "The editor did not introduce this; it sits in the bullet they rewrote. `k` is bound in neither `spread_levels` nor the bullet. The theorem multiplies by the number of groups, `gs.length`, not by any `k`, and `k` is used elsewhere in the module for the reading's cost coefficient.",
+   "evidence": "SelectionLevels.lean spread_levels: `concord (whole gs) a a = gs.length * concordWithin gs a a + concordAmong gs a a`",
+   "fix": "Header and spread_levels docstring: 'The spread of the amount over the whole is the number of groups times the groups' own spreads with the spread among them (`spread_levels`).' Docstring only.",
+   "severity": "imprecise"
+  },
+  {
+   "target": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md:626 (appended OB1 note)",
+   "quote": "(Answered at the step of the exchange on 20 October 2026 by OB1,",
+   "problem": "The record dates OB1 to 21 October ('21 October 2026: added (OB1)'), and it landed in commit c441c2200 on 2026-10-21 +0700. 20 October is only the UTC date of the receipt, so the note disagrees with the record it links.",
+   "evidence": "theories/becoming/results/records/what-dependence-alone-carries-of-a-level.json history[0]; git log c441c2200 2026-10-21 04:18:51 +0700",
+   "fix": "'(Answered at the step of the exchange on 21 October 2026 by OB1, …' or drop the date.",
+   "severity": "style"
+  },
+  {
+   "target": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean:35-36 (header) and :245-246 (continuing_excludes)",
+   "quote": "leaves no other formation taking from it at every one of the `W.level T c + 1` steps",
+   "problem": "Where the subject is 'no other formation', 'at every one of' can still be read as '∀ steps, no other takes'. The statement is only `¬ ∀ j < level + 1, g present ∧ 0 < take` for each g ≠ f. The phrasing is better for the 'is not active / does not take all' clauses, but not here.",
+   "evidence": "Exclusion.lean:247-252 (continuing_excludes conclusion `¬ ∀ j, j < W.level T c + 1 → g ∈ L.present (T + j) ∧ 0 < L.take (T + j) g c`)",
+   "fix": "Header: 'does not leave another formation taking from it at every one of the `W.level T c + 1` steps from any `T`'; continuing_excludes: 'no other formation takes from `c` at all of the `W.level T c + 1` steps from any `T`: each fails to at every one of them' or 'it is not the case that another formation takes from `c` at every one of the … steps'.",
+   "severity": "style"
+  },
+  {
+   "target": "Growth.lean `Web.grow_widens_unregistered` (row 21, name part)",
+   "quote": "propose Web.grow_widens_old_unchanged (or keep it and list it beside the market words in 08 §10) to the module's owner on the board",
+   "problem": "The docstrings were corrected, but the row's other step was not done. Nobody proposed a rename of the name, which uses the retired registration vocabulary, and it is not listed in 08 §10. Neither the board nor 08 mentions it.",
+   "evidence": "grep finds no grow_widens_unregistered or grow_widens_old_unchanged in _process/BECOMING-WORKBOARD.md or theories/becoming/chapters/08-METHOD.md; Growth.lean:33, :199 keep the name",
+   "fix": "Add a board note to Growth's owner proposing `Web.grow_widens_old_unchanged`, with a rename-table entry and a core re-check, or list the name in 08 §10 beside the kept market words.",
+   "severity": "style"
+  }
+ ]
+}

@@ -1,0 +1,164 @@
+{
+ "changed": [
+  {
+   "target": "fidelity-of-the-classical-statements",
+   "change": "Statement now gives the means per 條 (0.09 against 0.81), with the CI as the difference's, in en and zh. Coders are named by model family in hypotheses[0] and does_not_show[3] ('the coder of the authors' model family' / 'a coder of another family'; zh 与作者同族之编码者 / 另一族之编码者). does_not_show[3] was tightened from 305 to 297 en chars and still cites fidelity-under-one-discipline. History note added and reviewed_at_utc refreshed."
+  },
+  {
+   "target": "fidelity-under-one-discipline",
+   "change": "Statement en: the coders are named by family. I wrote 'full English statements' instead of the triage's text, which dropped the 'full statements' register; 295 chars. Statement zh and does_not_show[0] use the family names. History note added."
+  },
+  {
+   "target": "fidelity-coders-on-own-and-other-texts",
+   "change": "Statement replaced: 'no negative combined author-coder interaction was detected for referents planted in the coder's own text (+0.02, CI [-0.05, +0.08])'. The two families are not named, matching 08 §11; the triage's text named Claude and GPT, against its own coder-names row. To stay within 300 chars, the +0.16 figure keeps no CI. does_not_show[1] now reads 'which coder is miscalibrated on unplanted excess', with no model names. History note added."
+  },
+  {
+   "target": "metaethical-core-characterization",
+   "change": "Claim en and zh replaced and checked against ValuationFrames/Metaethics: Connected links the living claims; the theorem needs some living claim and some standpoint; relational neutrality passes significance to living claims; D follows from A with significance read from every standpoint; rivals are 'a framing of these countermodels and no theorem about all rivals'. I added 'on such a whole' to the universal-reason sentence, because universal_reason takes `connected` and the triage's text left it out. hypotheses[0] is restated without G0 / Part I/II / the one axiom; it says the theorem holds under the continuation condition 'on readings where a claim's significance is a formation's continuation', which is the scope of the cited record. In correspondence, 'Ren's G0' became living significance (+32 en). History note added."
+  },
+  {
+   "target": "classification-robust-generative-comparison",
+   "change": "Claim now carries the decision hypotheses of classified_robust_iff_of_decided (the forward direction needs no decision), the two-extremes law under the same decisions, and the excluded-middle calibration. I left the Lean names in the triage's text out of the claim (a public field). Three core Lexical laws added to aliases. In hypotheses[0], limitations and dependencies[0].interface.conditions, G0 became living significance. validation_scope now names the core Becoming.Lexical with empty reports, which I checked in receipt 20261022T064310, in place of the superseded periphery audit. History note added."
+  },
+  {
+   "target": "others-drawing-first-end-the-base",
+   "change": "does_not_show[0] rewritten. The triage's text ('for two drawers in turn without a floor it is', keeping 'more than two drawers or drawing at once' as not shown) is less than drawers-in-turn proves (k drawers in turn where two have no floor; drawing at once with no floor where each portion returns less than one for one). The item now says the rule is not shown to be a best response outside those cases. In related, drawers-in-turn-draw-everything became drawers-in-turn. I corrected its detail too: every perfect profile is the floor profile and every sequence of revisions reaches it, which with no floor anywhere draws everything. The triage's 'every revision draws everything' is not what InTurn.revisions_reach_floors states. History note added."
+  },
+  {
+   "target": "several-optimizers-drain-by-their-joint-capacity",
+   "change": "'registers' became 'couples into' in does_not_show[1] and in correspondence (en and zh). In related, drawers-in-turn-draw-everything became drawers-in-turn, with the corrected detail. History note added."
+  },
+  {
+   "target": "joint-decomposition-lifting",
+   "change": "Schema 1, so no laws. Added a statement (300 chars) and rewrote the claim with the content of the triage's three laws, without Lean names. hypotheses now include TestsStable. Aliases replaced by 8 core theorems; the retired and periphery aliases are listed in the history note. The Composition and JointCorrespondence reference declarations were extended, all checked as elaborated in the bound receipt. next_delta points to joint-code-plan-lifting without a Lean name."
+  },
+  {
+   "target": "finite-joining-tree-lifting",
+   "change": "Schema 1, so no laws. Added a statement and rewrote the claim from the triage's laws 1–3, checked against Joining.lean and JoiningCodes.lean. hypotheses replaced; they name excluded middle as a hypothesis and FiniteOutcomes. Aliases are now lifts_iff, tree_lifts and FiniteOutcomes.lifts_of_exact; the old ones are recorded in history. Joining.lean reference declarations extended. The dependency interface no longer names the retired operation_lifts. History note added."
+  },
+  {
+   "target": "multivalued-joining-common-structure",
+   "change": "Aliases operation_lifts_iff and common_multivalued_structure_of_em are marked '(retired module)'. History note added."
+  },
+  {
+   "target": "exclusive-footprint-support",
+   "change": "Schema 1, so no laws. Added a statement and rewrote the claim from the triage's law. hypotheses now use the core names PartsWithin, PartsApart and Supports. Retired aliases dropped (recorded in history); within_of_realizes and nodup_of_realizes added. JointPlans.lean reference declarations extended."
+  },
+  {
+   "target": "more-needs-renewers",
+   "change": "The premise 'argued, not formalized' is replaced by the checked dyadic counterexample (Halving.takes_halve) and the least-take law in any amounts (Amounts.replenishment_unbounded). It is split into its own hypotheses item to stay within caps. laws[3] declarations gain Amounts.replenishment_unbounded, Halving.takes_within_one and Halving.takes_halve, which are also added to aliases. New references: Amounts.lean and LeastLoss.lean (role proof, current sha256) and receipts 20261023T055339 and 20261021T165640. Proof bindings follow least-loss-rest's; the hashes match the receipts. History note added."
+  },
+  {
+   "target": "control-coherence-loss",
+   "change": "Schema 1, so no laws. Added a statement. The claim adds the along-runs law (not_lossless, no_restore_along), and both were added to the Dephasing reference. The '(retired module)' aliases are dropped (listed in history) and the 8 core Dephasing laws added as aliases."
+  },
+  {
+   "target": "growth-constrained-fragmentation",
+   "change": "Schema 1, so no laws. Added a statement and rewrote the claim exactly from GrownFragmentation.lean: counts (8,0,2,7) and (4,4,7,7), exact certificates, the (3,4) and (0,1) halves, the mean return 3× under a uniform choice of edge, the oldest cut at 0 against 6/35, no summary predictor, the retaining edge, and the core law via which-links-a-closure-needs. 'spends' became 'uses up'. GrownFragmentation reference declarations extended and Cuts.lean gains Flow.GrownBy.condition_needed; 7 periphery theorems added as aliases. validation_scope names the periphery axioms with +40 en / +18 zh chars, within the growth ratchet. It says 'most … propext and Quot.sound, five also Classical.choice', from the receipt; 'most' because three are empty."
+  },
+  {
+   "target": "recoverable-mediated-change",
+   "change": "Schema 1, so no laws. Added a statement (298 chars) taken from the existing claim, which already states the core laws and the device instance exactly."
+  },
+  {
+   "target": "market-protected-continuation, market-partial-correction-boundary, market-supported-finite-transition, market-finite-support-obstruction",
+   "change": "Schema 1, so no laws. Each gets a statement giving the 05 row's core law plus its market instance; all declarations were already referenced and aliased. The partial-correction statement says 'error-free' and 'all positive states land exactly when β ≤ 5/12' (the universal form of lands_iff_margin). The finite-support statement keeps the negative form, because Lasting.Drains.leaves is ¬∀ k ≤ n, guard. One history note each."
+  },
+  {
+   "target": "census-read-off-the-exchange",
+   "change": "The statement now leads with 'participants listed once at each step', which Finite.withRest_counted and not_not_listed_at require, and says the failure is refuted, replacing 'no census fails'; 300 chars. In law 2 (laws[1]), 'every finite world does' became 'so does every finite world whose formations taking part are listed once' (en and zh). History note added."
+  },
+  {
+   "target": "whole-law-of-counting, counting-under-enclosure, counting-standing-and-dependence",
+   "change": "'selection' became 'choice' in every live field except history, together with the verb forms (selects → chooses, selected → chosen). In zh, 选择 became 取舍 and 选中/不选/所选 became 纳入/不纳入/所纳入; I used 纳入 rather than the triage's bare 取 to avoid confusion with 取用. 25, 43 and 39 replacements, with no residuals and no Lean names touched. One history note each; the claims are unchanged."
+  },
+  {
+   "target": "selection-through-couplings",
+   "change": "In does_not_show[2], testing-within-registration became testing-within-couplings (en and zh). History note added."
+  },
+  {
+   "target": "formed-goal-revision-continuation",
+   "change": "hypotheses[0]: 'G0/J interpretation' became 'interpretation under living significance and the practical commitments (J)' (zh 生生之意义与实践承诺（J）下的解释). History note added."
+  },
+  {
+   "target": "where-a-formations-acts-return",
+   "change": "Title is now 'Where a formation's acts return' (zh 形成之行动回返之处). The history note keeps the old title."
+  },
+  {
+   "target": "enacted-scene-binding",
+   "change": "Claim: 'every type of meanings compared decidedly' (zh 每类相等可判定的意义), per the [DecidableEq M] in CrossSituational.resolves_iff. History note added."
+  },
+  {
+   "target": "testing-within-couplings",
+   "change": "laws[3] (the fourth law) is restated with decided conditions, for every level history and step, at any formation under any coupling by level. Declarations unchanged. History note added."
+  },
+  {
+   "target": "a-pattern-lasts-through-passing",
+   "change": "Two laws added instead of the triage's one, to stay within the 420/190 cap. The first covers the passing premise as a continuation and a predecessor, 生/亡 under the carrier class, and pattern-end implying carrier-ceasing. The second covers 异 and passing, 相续, the second law's statements derived from grammar laws, and 火传. The triage's Lean names begins_passed/passes_within are left out of the law text. All 18 declarations, checked in receipt 20261023T035943, were added to the PatternPassing reference. Fourteen were added to aliases; four already belong to continuation-relative-to-a-class. History note added."
+  },
+  {
+   "target": "draws-on-a-shared-stock",
+   "change": "canonical_source is now Becoming/Weighted.lean, an existing hashed reference. Added a statement that says 'every combination' rather than 'selection', to avoid the word reserved for couplings. History note added."
+  },
+  {
+   "target": "chinese-sources-on-the-spine",
+   "change": "next_delta is now the Hall-type existence condition plus whether a graded order by closure level can be a law. Five progress lines added, each anchor checked to exist in BECOMING-RENEWAL-READING.md. The gap numbering follows study §207, which differs from the chapter table. History note added."
+  },
+  {
+   "target": "hexagram-arrangements-and-laws",
+   "change": "The statement now says the law is its table except at 未濟 (runsOrder_agrees) and commutes with none of 錯, 綜 or both (runsOrder_not_commutes). In laws[10] and counterexamples[0], 'symmetry' became 錯, 綜 or both (zagua_not_commutes). History note added."
+  },
+  {
+   "target": "positive-ground-open-futures",
+   "change": "hypotheses[0] restated with living significance and the admitted continuations, per contingent_newContent. In related[0], related[4] and overview.summary, G0 became living significance. History note added."
+  },
+  {
+   "target": "finite-aggregation-within-restorable-basic-losses",
+   "change": "hypotheses[0] restated without G0, Part I or 'second axiom'. History note added."
+  },
+  {
+   "target": "own-widening-within-the-margin",
+   "change": "laws[4]: 'registers a change' became 'shows a change … at some step the levels without the part do not admit within the own region what the levels with it admit there' (Balances.widens_yet_own_changed). History note added."
+  },
+  {
+   "target": "own-good-to-reachable-living-significance",
+   "change": "The statement names supervenience on profiles, tolerance and the step chain, and no longer claims unrestricted monotonicity. In hypotheses[3], G0 became living significance. The history note keeps the old statement."
+  },
+  {
+   "target": "the-run-classes-and-widening",
+   "change": "The statement now says 'if only active ones give too, a part inactive at the start that never arises changes nothing'. I kept 'conditions the run renews', which the triage's text dropped; 300 chars. History note added."
+  }
+ ],
+ "not_applied": [
+  {
+   "row": "Laws for the schema-1 records: joint-decomposition-lifting, finite-joining-tree-lifting, exclusive-footprint-support, control-coherence-loss, growth-constrained-fragmentation, recoverable-mediated-change, the four market records, draws-on-a-shared-stock",
+   "why": "The validator rejects `laws` on schema 1. Migrating to schema 2 needs a `research.py snapshot` file under _process/architecture/history, which is outside the files I may edit. Each law's content went into the statement and claim instead, and its declarations into references and aliases. Adding them as laws needs a schema-2 migration at landing."
+  },
+  {
+   "row": "several-optimizers row: the same sweep in horizon-optima-hold-the-greatest-renewal and what-a-rise-draws-from-beyond",
+   "why": "Those records are not in my group."
+  },
+  {
+   "row": "formed-goal-revision row: wisdom-root-without-axiom.related[1], life-as-condition-of-life.dependencies[3], living-on-and-descent.dependencies[3]",
+   "why": "Those records are not in my group."
+  },
+  {
+   "row": "a-pattern-lasts-through-passing: the 04-LIFE.md:50 chapter sentence",
+   "why": "I may edit only record JSON."
+  },
+  {
+   "row": "a-pattern-lasts-through-passing: aliases for Web.byPassing_iff_hasPred, Web.carrierClass, Web.passing_fire, PatternRelay.fire_shape",
+   "why": "They are already aliases of continuation-relative-to-a-class, and aliases must be unique. They stay in the law and reference declarations."
+  },
+  {
+   "row": "multivalued-joining-common-structure: optional alias Becoming.Joining.FiniteOutcomes.lifts_of_exact",
+   "why": "finite-joining-tree-lifting now holds it, as its row requires, and aliases must be unique."
+  },
+  {
+   "row": "metaethical-core / others-drawing-first / fidelity-coders / classification-robust: the triage's wording where it differed from the Lean or the rules",
+   "why": "I wrote the right text instead. The universal reason also needs connection. drawers-in-turn shows more than two drawers in turn without a floor, and revisions reach the floor profile rather than every revision drawing everything. The coders are not named by product. Lean names stay out of the claim. The 'changed' entries above give the details."
+  }
+ ],
+ "checker": "Last runs of `research.py check --ids <37 ids>` and `lint --ids <37 ids>`: check exit 1, lint exit 0. Check gives no schema, limit, declaration, reference, alias, binding or anchor error for my records. Its non-view errors are 36 'generated view differs' (ignored as instructed) and 'Research inputs changed during this operation', caused by other agents editing the worktree concurrently; it came back on two reruns. Check also reports source drift on Lean or data files that other agents changed during the session, none of which I touched: Space.lean (whole-law-of-counting, counting-under-enclosure), HexagramSequences.lean, passages.json (hexagram, chinese-sources), OwnWidening.lean and Retaining.lean (own-widening, the-run-classes). I verified the theorems I cited against the current bytes and refreshed no hashes. Lint: 44 warnings in 19 records (33 length, 5 negation-lead, 3 section-reference, 2 status-restatement, 1 stock-boundary), almost all from text I did not change; no errors.",
+ "lean_files_changed": []
+}

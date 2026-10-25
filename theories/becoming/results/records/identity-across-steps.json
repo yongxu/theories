@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T00:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
-    "zh": "标签不承载任何东西：每一步与每个条件只由关系确定，追随形成的读法依赖谁延续谁。单向的连续留下接续，双向的连续仍留下跨过休眠的接续；在普查之下，更多在每种没有分裂的延续下迫使生起，跨一步恰当没有分裂。",
-    "en": "Labels carry nothing: relations fix steps and conditions, and readings tracking a formation depend on who continues whom. One-way continuity leaves succession, two-way leaves it across dormancy; under a census more forces arising under every continuation without splits, across one step exactly then."
+    "zh": "标签不承载任何东西：每一步与每个条件只由关系确定，追随形成依赖谁延续谁。单向的连续留下接续，双向的连续仍留下跨过休眠的接续；在普查之下，任何没有分裂的延续都不使一步之后的每个形成都得到延续，恰当普查跨此步增长。",
+    "en": "Labels carry nothing: relations fix steps and conditions; following a formation depends on who continues whom. One-way continuity leaves succession, two-way across dormancy; under a census, no split-free continuation continues all formations after a step exactly where the census grows across it."
   },
   "laws": [
     {
@@ -200,8 +200,8 @@
       ]
     },
     {
-      "zh": "在每个没有分裂的延续下迫使生起，恰当步后多于步前：不多时按次序配对，给出一个没有分裂、步后每个形成都延续某个形成的延续。",
-      "en": "Arising is forced under every continuation without splits exactly when more formations are listed after the step than before: with no more, pairing in order gives a continuation without splits continuing every formation after the step.",
+      "zh": "一步前后的形成各列一次时：在每个没有形成延续为二的延续下，步后所列形成并非每个都延续步前所列的某个形成，恰当步后多于步前；不多时按次序配对，给出一个没有分裂、步后每个形成都延续某个形成的延续。结论是一个否证，不是指出某个生起的形成。",
+      "en": "With the formations before and after a step each listed once: under every continuation in which no formation continues as two, not every formation listed after the step continues one listed before it, exactly when more are listed after than before; with no more, pairing in order gives a continuation without splits continuing every formation after the step. The conclusion is a refutation, naming no arising formation.",
       "declarations": [
         "Becoming.forced_iff_more",
         "Becoming.paired",
@@ -289,8 +289,8 @@
       ]
     },
     {
-      "zh": "在每步都有普查之下，整段上精确：每个没有分裂的延续关系在任意晚的步上留下一步之后不延续任何之前形成的形成，恰当任意晚的步上一步之后活跃者多于之前；在没有更多的各步按次序配对，没有分裂地延续之后的每个形成。从某步起没有分裂的延续关系就足够。",
-      "en": "Over a run, under a census at every step, the condition is exact on the counts: every continuation without a split leaves, at arbitrarily late steps, some formation after a step continuing none before it exactly when more are active after a step than before at arbitrarily late steps; at steps with no more, pairing the lists in order continues every formation after the step with no split. A continuation without a split from some step on suffices.",
+      "zh": "在每步都有普查之下，整段上精确：在每个没有分裂的延续关系下，任意晚的步上并非一步之后每个活跃形成都延续之前某个活跃形成，恰当任意晚的步上一步之后活跃者多于之前；在没有更多的各步按次序配对，没有分裂地延续之后的每个形成。从某步起没有分裂的延续关系就足够。",
+      "en": "Over a run, with a census at every step: under every continuation without a split, at arbitrarily late steps not every formation active after a step continues one active before, exactly when more are active after a step than before at arbitrarily late steps; at steps with no more, pairing the lists in order continues every formation after the step with no split. One without a split from some step on suffices.",
       "declarations": [
         "Becoming.ListedWebs.forcedAlong_iff_more",
         "Becoming.ListedWebs.forcedAlong_of_eventually_noSplit"
@@ -311,8 +311,8 @@
       "en": "A re-identification is one to one at each step. Splits and merges, in which one formation continues as several or several as one, are not re-identifications: they change the continuation relation, not the number of formations at any step; continuation relations (Continues) represent them."
     },
     {
-      "zh": "连续读作：跨一步持续活动的形成保持名字（KeepsActive），跨一步持续依存于某条件的形成保持名字（KeepsTenure）。以旧命名为参照是单向的读法；另以新命名为参照（Reidentify.back）是双向的读法。两者都是作者的读法，不是同一的定义。",
-      "en": "Continuity is read as: formations active across a step keep their names (KeepsActive), and formations whose dependence on a condition continues across a step keep their names (KeepsTenure). Read against the old naming, it is one-way; read also against the new naming (Reidentify.back), it is two-way. Both are the author's readings, not a definition of identity."
+      "zh": "连续读作：跨一步持续活动的形成保持名字（KeepsActive），跨一步持续依存于某条件的形成保持名字（KeepsTenure）。以旧命名为参照是单向的读法；另以新命名为参照（Reidentify.back）是双向的读法。两者都是读法（AI 的），不是同一的定义。",
+      "en": "Continuity is read as: formations active across a step keep their names (KeepsActive), and formations whose dependence on a condition continues across a step keep their names (KeepsTenure). Read against the old naming, it is one-way; read also against the new naming (Reidentify.back), it is two-way. Both are readings (the AI's), not a definition of identity."
     },
     {
       "zh": "流的改认按每步一一对应改写 present；present 每步只列每个参与的形成一次仍是对应前提。",
@@ -476,8 +476,8 @@
     "en": "Choosing h; mixed activity/holding census conditions; a whole's dependence and undermining from its parts'; for one fixed continuation, an exact run condition (splits at only finitely many steps is sufficient); undermining under conservation; identity from informational or organizational continuity."
   },
   "correspondence": {
-    "zh": "开放纲领与 becoming-dependence-dynamics 的下一步把形成的个体化列为待做：终止与转化之分依赖外给的同一。本结果陈述这一外给的同一在哪些读法中起作用：每一步与每个条件的读法不依赖它，追随形成的读法依赖它；单向的连续排除制造生起与去掉侵蚀，接续仍由读法决定；双向的连续恰保持生起与侵蚀，却仍不约束形成在整段上的类。名字跨步的模式承载同一：这是表示给出的对应前提，Turnover 表明它是实质的；方法要求“不能以分别命名偷渡独立本体”在这里的检查是这一披露，不是改名不变，因为改名按构造保持这一模式。谱系与成员是同一展开的两个层次：作为整体的谱系持续，正由成员不息地生起而成（Layered）；单一命名层次只能表示其一，部分与整体的关系是这一表示所省略的关系；whole-persists-through-generation 陈述这一关系，在成员不长久的前提下，谱系的持续蕴含成员不息地生起。依 Ren 的交托，“生生不息”读在整体的层次，谱系与成员是其中读延续的层次：不息是经更新而复现的生起，生生不息是生生继续而仍有更多能形成，回返不足以是生生不息（DELEGATED-CHOICES D5，经修订由 Ren 2026-10-18 取）；只读作谱系的持续，与 Ren 原话中的“不断创造”有张力（作者的说明）；成员不长久时，这一张力由上述蕴含消除。依同一决定，后继者恰在接续保持任期之处继承前任者的损失：此后在其下的汲取在工作读法下侵蚀（Succession.readings），依存中断之处重新开始（Gap.lapse_starts_afresh）。 P87 的 h、活动或依存作为 Holds，以及把所立之量守恒读作延续，均是公开的读法；不声称它们穷尽现实的物质、信息或组织连续。",
-    "en": "The open programme and the next step of becoming-dependence-dynamics list the individuation of formations: the distinction between ending and transformation depends on a supplied identity. This result states in which readings that supplied identity matters: readings of each step and each condition do not depend on it, readings that follow a formation do; continuity read one way rules out making arising and removing undermining, and succession remains a reading; read both ways it preserves arising and undermining exactly, and still does not constrain a formation's class over the run. The pattern of names across steps carries identity: this is a correspondence premise the representation supplies, and Turnover shows it is substantive; the check of the method requirement that separate naming must not smuggle in independent entities is this disclosure, not invariance under renaming, since a renaming keeps the pattern by construction. A lineage and its members are two levels of one unfolding: the lineage as a whole continues precisely as its members arise without end (Layered); a single level of naming represents only one of them, and the part–whole relation is what this representation omits; whole-persists-through-generation states that relation, and where members do not last the lineage's persistence entails that its members arise without end. On Ren's delegation 生生不息 is read at the level of the whole, lineages and members being levels within it at which continuation is read: 不息 as arising that recurs through renewal, and 生生不息 as 生生 going on with more still able to form, so return falls short (DELEGATED-CHOICES D5, revised and taken by Ren on 18 October 2026); reading it only as the lineage's continuation is in tension with the “不断创造” of Ren's words (the author's note); where members do not last, the entailment above removes that tension. By the same decision, a successor inherits a predecessor's loss exactly where the succession keeps the tenure: later drawing below it undermines on the working reading (Succession.readings), and where the dependence lapses the reading starts afresh (Gap.lapse_starts_afresh). P87 supplies h and offers activity-or-dependence as Holds and conservation of standing as a continuation reading; these do not exhaust actual material, informational or organizational continuity."
+    "zh": "开放纲领与 becoming-dependence-dynamics 的下一步把形成的个体化列为待做：终止与转化之分依赖外给的同一。本结果陈述这一外给的同一在哪些读法中起作用：每一步与每个条件的读法不依赖它，追随形成的读法依赖它；单向的连续排除制造生起与去掉侵蚀，接续仍由读法决定；双向的连续恰保持生起与侵蚀，却仍不约束形成在整段上的类。名字跨步的模式承载同一：这是表示给出的对应前提，Turnover 表明它是实质的；方法要求“不能以分别命名偷渡独立本体”在这里的检查是这一披露，不是改名不变，因为改名按构造保持这一模式。谱系与成员是同一展开的两个层次：作为整体的谱系持续，正由成员不息地生起而成（Layered）；单一命名层次只能表示其一，部分与整体的关系是这一表示所省略的关系；whole-persists-through-generation 陈述这一关系，在成员不长久的前提下，谱系的持续蕴含成员不息地生起。“生生不息”读在整体的层次（AI 的读法），谱系与成员是其中读延续的层次：不息是经更新而复现的生起，生生不息是生生继续而仍有更多能形成，回返不足以是生生不息（DELEGATED-CHOICES D5）；只读作谱系的持续，与 Ren 原话中的“不断创造”有张力（AI 的说明）；成员不长久时，这一张力由上述蕴含消除。依同一决定，后继者恰在接续保持任期之处继承前任者的损失：此后在其下的汲取在工作读法下侵蚀（Succession.readings），依存中断之处重新开始（Gap.lapse_starts_afresh）。 P87 的 h、活动或依存作为 Holds，以及把所立之量守恒读作延续，均是公开的读法；不声称它们穷尽现实的物质、信息或组织连续。",
+    "en": "The open programme and the next step of becoming-dependence-dynamics list the individuation of formations: the distinction between ending and transformation depends on a supplied identity. This result states in which readings that supplied identity matters: readings of each step and each condition do not depend on it, readings that follow a formation do; continuity read one way rules out making arising and removing undermining, and succession remains a reading; read both ways it preserves arising and undermining exactly, and still does not constrain a formation's class over the run. The pattern of names across steps carries identity: this is a correspondence premise the representation supplies, and Turnover shows it is substantive; the check of the method requirement that separate naming must not smuggle in independent entities is this disclosure, not invariance under renaming, since a renaming keeps the pattern by construction. A lineage and its members are two levels of one unfolding: the lineage as a whole continues precisely as its members arise without end (Layered); a single level of naming represents only one of them, and the part–whole relation is what this representation omits; whole-persists-through-generation states that relation, and where members do not last the lineage's persistence entails that its members arise without end. 生生不息 is read (an AI reading) at the level of the whole, lineages and members being levels within it at which continuation is read: 不息 as arising that recurs through renewal, and 生生不息 as 生生 going on with more still able to form, so return falls short (DELEGATED-CHOICES D5); reading it only as the lineage's continuation is in tension with the “不断创造” of Ren's words (an AI note); where members do not last, the entailment above removes that tension. By the same decision, a successor inherits a predecessor's loss exactly where the succession keeps the tenure: later drawing below it undermines on the working reading (Succession.readings), and where the dependence lapses the reading starts afresh (Gap.lapse_starts_afresh). P87 supplies h and offers activity-or-dependence as Holds and conservation of standing as a continuation reading; these do not exhaust actual material, informational or organizational continuity."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
   "aliases": [
@@ -1338,6 +1338,10 @@
     {
       "en": "20 October 2026, R50 (study section 269): law 32 added, identity where standings coincide (World.continues_as_alike); does_not_show item 5 and next_delta narrowed.",
       "zh": "2026 年 10 月 20 日，R50（研究第 269 节）：加第 32 条，所立重合处的同一（World.continues_as_alike）；第五个未表明项与 next_delta 收窄。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement and two laws (one step, and over a run) worded as the Lean states them: under every continuation without splits, not every formation after a step continues one before it, a refutation rather than a named arising formation, exactly where more are listed after than before (the Chinese statement had read the condition as 'no split'); the identity hypothesis and the correspondence label their readings as the AI's instead of the author's or 'on Ren's delegation'. No law changed in content.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述与两条规律（一步的与整段的）按 Lean 的陈述改写：在每个没有分裂的延续下，并非步后每个形成都延续步前某个形成，这是否证而不是指出某个生起的形成，恰当步后所列多于步前（中文陈述原把条件误读为“没有分裂”）；同一假设与对应把读法标为 AI 的，不再写“作者的”或“依 Ren 的交托”。规律内容未变。"
     }
   ],
   "text_versions": [

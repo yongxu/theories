@@ -1,0 +1,564 @@
+@Becoming.add_left_cancel_of_eq : ∀ {a x y : Nat}, a + x = a + y → x = y
+@Becoming.ne_succ_of_ne : ∀ {n t : Nat}, n ≠ t → n + 1 ≠ t + 1
+@Becoming.ne_first : ∀ {t : Nat}, t ≠ t + 1
+@Becoming.ne_last : ∀ {t : Nat}, t + 2 ≠ t + 1
+@Becoming.Moved.at_first : ∀ {α : Type} {q q' : Nat → α} {t : Nat}, Becoming.Moved q q' t → q' t = q t
+@Becoming.Moved.at_last : ∀ {α : Type} {q q' : Nat → α} {t : Nat}, Becoming.Moved q q' t → q' (t + 2) = q (t + 2)
+@Becoming.Moved.symm : ∀ {α : Type} {q q' : Nat → α} {t : Nat}, Becoming.Moved q q' t → Becoming.Moved q' q t
+@Becoming.Moved.comesToBe_first : ∀ {t : Nat} {p p' : Nat → Prop},
+  Becoming.Moved p p' t → (Becoming.ComesToBe p' t ↔ Becoming.ComesToBe p (t + 1))
+@Becoming.Moved.ceasesToBe_first : ∀ {t : Nat} {p p' : Nat → Prop},
+  Becoming.Moved p p' t → (Becoming.CeasesToBe p' t ↔ Becoming.CeasesToBe p (t + 1))
+@Becoming.Moved.comesToBe_second : ∀ {t : Nat} {p p' : Nat → Prop},
+  Becoming.Moved p p' t → (Becoming.ComesToBe p' (t + 1) ↔ Becoming.ComesToBe p t)
+@Becoming.Moved.ceasesToBe_second : ∀ {t : Nat} {p p' : Nat → Prop},
+  Becoming.Moved p p' t → (Becoming.CeasesToBe p' (t + 1) ↔ Becoming.CeasesToBe p t)
+@Becoming.Moved.away : ∀ {α : Type} {q q' : Nat → α} {t : Nat},
+  Becoming.Moved q q' t → ∀ {n : Nat}, n ≠ t → n ≠ t + 1 → q' n = q n ∧ q' (n + 1) = q (n + 1)
+@Becoming.Moved.comesToBe_away : ∀ {t : Nat} {p p' : Nat → Prop},
+  Becoming.Moved p p' t → ∀ {n : Nat}, n ≠ t → n ≠ t + 1 → (Becoming.ComesToBe p' n ↔ Becoming.ComesToBe p n)
+@Becoming.Moved.ceasesToBe_away : ∀ {t : Nat} {p p' : Nat → Prop},
+  Becoming.Moved p p' t → ∀ {n : Nat}, n ≠ t → n ≠ t + 1 → (Becoming.CeasesToBe p' n ↔ Becoming.CeasesToBe p n)
+@Becoming.Moved.exchanged : ∀ {t : Nat} {q q' : Nat → Nat}, Becoming.Moved q q' t → Becoming.Exchanged q q' t
+@Becoming.Exchanged.sum : ∀ {t : Nat} {β : Type} {as : List β} {q q' : β → Nat → Nat},
+  (∀ (a : β), a ∈ as → Becoming.Exchanged (q a) (q' a) t) →
+    Becoming.Exchanged (fun n => Becoming.total as fun a => q a n) (fun n => Becoming.total as fun a => q' a n) t
+@Becoming.Exchanged.rise_first : ∀ {t : Nat} {q q' : Nat → Nat},
+  Becoming.Exchanged q q' t → Becoming.rise q' t = Becoming.rise q (t + 1)
+@Becoming.Exchanged.rise_second : ∀ {t : Nat} {q q' : Nat → Nat},
+  Becoming.Exchanged q q' t → Becoming.rise q' (t + 1) = Becoming.rise q t
+@Becoming.Exchanged.fall_first : ∀ {t : Nat} {q q' : Nat → Nat},
+  Becoming.Exchanged q q' t → Becoming.fall q' t = Becoming.fall q (t + 1)
+@Becoming.Exchanged.fall_second : ∀ {t : Nat} {q q' : Nat → Nat},
+  Becoming.Exchanged q q' t → Becoming.fall q' (t + 1) = Becoming.fall q t
+@Becoming.Exchanged.rise_away : ∀ {t : Nat} {q q' : Nat → Nat},
+  Becoming.Exchanged q q' t → ∀ {n : Nat}, n ≠ t → n ≠ t + 1 → Becoming.rise q' n = Becoming.rise q n
+@Becoming.Exchanged.fall_away : ∀ {t : Nat} {q q' : Nat → Nat},
+  Becoming.Exchanged q q' t → ∀ {n : Nat}, n ≠ t → n ≠ t + 1 → Becoming.fall q' n = Becoming.fall q n
+@Becoming.eq_iff_of_sides : ∀ {a b a' b' : Nat}, a = a' → b = b' → (a = b ↔ a' = b')
+@Becoming.balance_iff_change : ∀ {q : Nat → Nat} {n T G : Nat},
+  q (n + 1) + T = q n + G ↔ Becoming.rise q n + T = Becoming.fall q n + G
+@Becoming.Exchanged.balance_first : ∀ {t : Nat} {q q' : Nat → Nat},
+  Becoming.Exchanged q q' t →
+    ∀ {T G T' G' : Nat}, T' = T → G' = G → (q' (t + 1) + T' = q' t + G' ↔ q (t + 1 + 1) + T = q (t + 1) + G)
+@Becoming.Exchanged.balance_second : ∀ {t : Nat} {q q' : Nat → Nat},
+  Becoming.Exchanged q q' t →
+    ∀ {T G T' G' : Nat}, T' = T → G' = G → (q' (t + 1 + 1) + T' = q' (t + 1) + G' ↔ q (t + 1) + T = q t + G)
+@Becoming.total_swapped : ∀ {g g' : Nat → Nat} {t : Nat},
+  g' t = g (t + 1) →
+    g' (t + 1) = g t →
+      (∀ (n : Nat), n ≠ t → n ≠ t + 1 → g' n = g n) →
+        ∀ {S m : Nat},
+          S ≤ t → t + 2 ≤ S + m → Becoming.total (Becoming.steps S m) g' = Becoming.total (Becoming.steps S m) g
+@Becoming.Exchanged.risen : ∀ {q q' : Nat → Nat} {t : Nat},
+  Becoming.Exchanged q q' t →
+    ∀ {S m : Nat},
+      S ≤ t →
+        t + 2 ≤ S + m →
+          Becoming.total (Becoming.steps S m) (Becoming.rise q') = Becoming.total (Becoming.steps S m) (Becoming.rise q)
+@Becoming.Exchanged.fallen : ∀ {q q' : Nat → Nat} {t : Nat},
+  Becoming.Exchanged q q' t →
+    ∀ {S m : Nat},
+      S ≤ t →
+        t + 2 ≤ S + m →
+          Becoming.total (Becoming.steps S m) (Becoming.fall q') = Becoming.total (Becoming.steps S m) (Becoming.fall q)
+@Becoming.Exchanged.fall_count : ∀ {q q' : Nat → Nat} {t : Nat},
+  Becoming.Exchanged q q' t →
+    ∀ {S m : Nat},
+      S ≤ t →
+        t + 2 ≤ S + m →
+          Becoming.count (Becoming.steps S m) (Becoming.fall q') = Becoming.count (Becoming.steps S m) (Becoming.fall q)
+@Becoming.Exchanged.rise_count : ∀ {q q' : Nat → Nat} {t : Nat},
+  Becoming.Exchanged q q' t →
+    ∀ {S m : Nat},
+      S ≤ t →
+        t + 2 ≤ S + m →
+          Becoming.count (Becoming.steps S m) (Becoming.rise q') = Becoming.count (Becoming.steps S m) (Becoming.rise q)
+@Becoming.comings_moved : ∀ {α : Type} {as : List α} {p p' : α → Nat → Prop}
+  [inst : (a : α) → (n : Nat) → Decidable (p a n)] [inst_1 : (a : α) → (n : Nat) → Decidable (p' a n)] {t : Nat},
+  (∀ (a : α), a ∈ as → Becoming.Moved (p a) (p' a) t) →
+    ∀ {S m : Nat},
+      S ≤ t →
+        t + 2 ≤ S + m →
+          Becoming.total (Becoming.steps S m) (Becoming.comings as p') =
+            Becoming.total (Becoming.steps S m) (Becoming.comings as p)
+@Becoming.ceasings_moved : ∀ {α : Type} {as : List α} {p p' : α → Nat → Prop}
+  [inst : (a : α) → (n : Nat) → Decidable (p a n)] [inst_1 : (a : α) → (n : Nat) → Decidable (p' a n)] {t : Nat},
+  (∀ (a : α), a ∈ as → Becoming.Moved (p a) (p' a) t) →
+    ∀ {S m : Nat},
+      S ≤ t →
+        t + 2 ≤ S + m →
+          Becoming.total (Becoming.steps S m) (Becoming.ceasings as p') =
+            Becoming.total (Becoming.steps S m) (Becoming.ceasings as p)
+@Becoming.Flow.SameExchange.symm : ∀ {F C : Type} {L L' : Becoming.Flow F C} {n m : Nat},
+  L.SameExchange n L' m → L'.SameExchange m L n
+@Becoming.Flow.Commuted.symm : ∀ {F C : Type} {L L' : Becoming.Flow F C} {t : Nat}, L.Commuted L' t → L'.Commuted L t
+@Becoming.Flow.SameExchange.mem : ∀ {F C : Type} {L L' : Becoming.Flow F C} {n m : Nat},
+  L.SameExchange n L' m → ∀ {f : F}, f ∈ L'.present m ↔ f ∈ L.present n
+@Becoming.Flow.SameExchange.taken : ∀ {F C : Type} {L L' : Becoming.Flow F C} {n m : Nat},
+  L.SameExchange n L' m → ∀ (c : C), L'.taken m c = L.taken n c
+@Becoming.Flow.SameExchange.given : ∀ {F C : Type} {L L' : Becoming.Flow F C} {n m : Nat},
+  L.SameExchange n L' m → ∀ (c : C), L'.given m c = L.given n c
+@Becoming.Flow.SameExchange.takers : ∀ {F C : Type} {L L' : Becoming.Flow F C} {n m : Nat},
+  L.SameExchange n L' m → ∀ (cs : List C), L'.takers cs m = L.takers cs n
+@Becoming.Flow.SameExchange.dissipatesOn_iff : ∀ {F C : Type} {L L' : Becoming.Flow F C} {n m : Nat},
+  L.SameExchange n L' m → ∀ {cs : List C}, L'.DissipatesOn cs m ↔ L.DissipatesOn cs n
+@Becoming.Flow.SameExchange.closedAt_iff : ∀ {F C : Type} {L L' : Becoming.Flow F C} {n m : Nat},
+  L.SameExchange n L' m → ∀ {cs : List C}, L'.ClosedAt cs m ↔ L.ClosedAt cs n
+@Becoming.Web.Commuted.symm : ∀ {F C : Type} {W W' : Becoming.Web F C} {t : Nat}, W.Commuted W' t → W'.Commuted W t
+@Becoming.Web.Commuted.stock : ∀ {F C : Type} {W W' : Becoming.Web F C} {t : Nat},
+  W.Commuted W' t → ∀ (cs : List C), Becoming.Exchanged (W.stock cs) (W'.stock cs) t
+@Becoming.Web.Commuted.stands_between : ∀ {F C : Type} {W W' : Becoming.Web F C} {t : Nat},
+  W.Commuted W' t → ∀ {c : C}, 0 < W'.level (t + 1) c → 0 < W.level t c ∨ 0 < W.level (t + 2) c
+@Becoming.Web.Commuted.changes_first : ∀ {F C : Type} {W W' : Becoming.Web F C} {t : Nat},
+  W.Commuted W' t → ((∃ c, W'.Rises t c ∨ W'.Falls t c) ↔ ∃ c, W.Rises (t + 1) c ∨ W.Falls (t + 1) c)
+@Becoming.Web.Commuted.changes_second : ∀ {F C : Type} {W W' : Becoming.Web F C} {t : Nat},
+  W.Commuted W' t → ((∃ c, W'.Rises (t + 1) c ∨ W'.Falls (t + 1) c) ↔ ∃ c, W.Rises t c ∨ W.Falls t c)
+@Becoming.Web.Commuted.embodied : ∀ {t : Nat} {X : Type} {W W' : Becoming.Web X X},
+  W.Commuted W' t → ∀ {x : X}, W.Embodied x → W'.Embodied x
+@Becoming.Flow.Commuted.balancesOn_first : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {t : Nat}, L.Commuted L' t → W.Commuted W' t → ∀ {cs : List C}, L'.BalancesOn W' cs t ↔ L.BalancesOn W cs (t + 1)
+@Becoming.Flow.Commuted.balancesOn_second : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {t : Nat}, L.Commuted L' t → W.Commuted W' t → ∀ {cs : List C}, L'.BalancesOn W' cs (t + 1) ↔ L.BalancesOn W cs t
+@Becoming.Flow.Commuted.balancesOn_away : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {t : Nat},
+  L.Commuted L' t →
+    W.Commuted W' t → ∀ {cs : List C} {n : Nat}, n ≠ t → n ≠ t + 1 → (L'.BalancesOn W' cs n ↔ L.BalancesOn W cs n)
+@Becoming.Flow.Commuted.balances_iff : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {t : Nat},
+  L.Commuted L' t → W.Commuted W' t → (L'.Balances W' ↔ L.Balances W)
+@Becoming.Flow.Commuted.dissipative_iff : ∀ {F C : Type} {L L' : Becoming.Flow F C} {t : Nat},
+  L.Commuted L' t → (L'.Dissipative ↔ L.Dissipative)
+@Becoming.Flow.Commuted.runsDownOn_first : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {t : Nat},
+  L.Commuted L' t →
+    W.Commuted W' t →
+      ∀ {es : List C},
+        Becoming.Distinct es →
+          (∀ (c : C), 0 < W.level t c → c ∈ es) →
+            (∀ (c : C), 0 < W.level (t + 1) c → c ∈ es) →
+              (∀ (c : C), 0 < W.level (t + 2) c → c ∈ es) → (L'.RunsDownOn W' es t ↔ L.RunsDownOn W es (t + 1))
+@Becoming.Flow.Commuted.runsDownOn_second : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {t : Nat},
+  L.Commuted L' t →
+    W.Commuted W' t →
+      ∀ {es : List C},
+        Becoming.Distinct es →
+          (∀ (c : C), 0 < W.level t c → c ∈ es) →
+            (∀ (c : C), 0 < W.level (t + 1) c → c ∈ es) →
+              (∀ (c : C), 0 < W.level (t + 2) c → c ∈ es) → (L'.RunsDownOn W' es (t + 1) ↔ L.RunsDownOn W es t)
+@Becoming.Flow.Commuted.acting : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {t : Nat},
+  L.Commuted L' t →
+    W.Commuted W' t →
+      L.Acting W →
+        (∀ (f : F) (c : C), f ∈ L.present (t + 1) → 0 < L.give (t + 1) f c → W.active (t + 1) f → W.active t f) →
+          (∀ (f : F) (c : C), f ∈ L.present t → 0 < L.give t f c → W.active (t + 1) f → W.active (t + 2) f) →
+            L'.Acting W'
+Becoming.swapAt_first : ∀ (t : Nat), Becoming.swapAt t t = t + 1
+Becoming.swapAt_second : ∀ (t : Nat), Becoming.swapAt t (t + 1) = t
+@Becoming.swapAt_away : ∀ {t n : Nat}, n ≠ t → n ≠ t + 1 → Becoming.swapAt t n = n
+@Becoming.cond_of_true : ∀ {α : Type} {b : Bool} {x y : α}, b = true → (bif b then x else y) = x
+@Becoming.cond_of_false : ∀ {α : Type} {b : Bool} {x y : α}, b = false → (bif b then x else y) = y
+@Becoming.moved_of_side : ∀ {α : Type} {q : Nat → α} {t : Nat} {b : Bool},
+  (b = true → q (t + 1) = q (t + 2)) →
+    (b = false → q t = q (t + 1)) →
+      Becoming.Moved q (fun n => if n = t + 1 then bif b then q t else q (t + 2) else q n) t
+@Becoming.Flow.swap_commuted : ∀ {F C : Type} (L : Becoming.Flow F C) (t : Nat), L.Commuted (L.swap t) t
+@Becoming.Web.commute_level_true : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {sideF : F → Bool} {sideC : C → Bool}
+  {c : C}, sideC c = true → (W.commute t sideF sideC).level (t + 1) c = W.level t c
+@Becoming.Web.commute_level_false : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {sideF : F → Bool}
+  {sideC : C → Bool} {c : C}, sideC c = false → (W.commute t sideF sideC).level (t + 1) c = W.level (t + 2) c
+@Becoming.Web.commute_active_true : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {sideF : F → Bool}
+  {sideC : C → Bool} {f : F}, sideF f = true → (W.commute t sideF sideC).active (t + 1) f = W.active t f
+@Becoming.Web.commute_requires_true : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {sideF : F → Bool}
+  {sideC : C → Bool} {f : F} {c : C}, sideF f = true → (W.commute t sideF sideC).requires (t + 1) f c = W.requires t f c
+@Becoming.Web.commute_active_away : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {sideF : F → Bool}
+  {sideC : C → Bool} {n : Nat} {f : F}, n ≠ t + 1 → (W.commute t sideF sideC).active n f = W.active n f
+@Becoming.Web.commute_commuted : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {sideF : F → Bool} {sideC : C → Bool},
+  W.Split t sideF sideC → W.Commuted (W.commute t sideF sideC) t
+@Becoming.Web.commute_dependent : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {sideF : F → Bool} {sideC : C → Bool},
+  W.Dependent →
+    (∀ (f : F) (c : C), W.requires t f c ∨ W.requires (t + 2) f c → sideF f = sideC c) →
+      (W.commute t sideF sideC).Dependent
+@Becoming.World.commute_laws : ∀ {w : Becoming.World} {t : Nat} {side : w.Relatum → Bool},
+  w.web.Split t side side →
+    ((w.commute t side).Balanced ↔ w.Balanced) ∧
+      ((w.commute t side).Dissipative ↔ w.Dissipative) ∧
+        ((w.commute t side).Embodied ↔ w.Embodied) ∧
+          (w.Dependent →
+              (∀ (f c : w.Relatum), w.web.requires t f c ∨ w.web.requires (t + 2) f c → side f = side c) →
+                (w.commute t side).Dependent) ∧
+            (w.Acting →
+              (∀ (f c : w.Relatum),
+                  f ∈ w.flow.present (t + 1) →
+                    0 < w.flow.give (t + 1) f c → w.web.active (t + 1) f → w.web.active t f) →
+                (∀ (f c : w.Relatum),
+                    f ∈ w.flow.present t → 0 < w.flow.give t f c → w.web.active (t + 1) f → w.web.active (t + 2) f) →
+                  (w.commute t side).Acting)
+@Becoming.World.commute_counts : ∀ {w : Becoming.World} {t : Nat} {side : w.Relatum → Bool},
+  w.web.Split t side side →
+    ∀ [inst : (n : Nat) → (x : w.Relatum) → Decidable (w.web.active n x)]
+      [inst_1 : (n : Nat) → (x : (w.commute t side).Relatum) → Decidable ((w.commute t side).web.active n x)]
+      (xs cs : List w.Relatum) {S m : Nat},
+      S ≤ t →
+        t + 2 ≤ S + m →
+          Becoming.total (Becoming.steps S m) (Becoming.comings xs fun x n => (w.commute t side).web.active n x) =
+              Becoming.total (Becoming.steps S m) (Becoming.comings xs fun x n => w.web.active n x) ∧
+            Becoming.total (Becoming.steps S m) (Becoming.ceasings xs fun x n => (w.commute t side).web.active n x) =
+                Becoming.total (Becoming.steps S m) (Becoming.ceasings xs fun x n => w.web.active n x) ∧
+              Becoming.total (Becoming.steps S m) (Becoming.rise ((w.commute t side).web.stock cs)) =
+                  Becoming.total (Becoming.steps S m) (Becoming.rise (w.web.stock cs)) ∧
+                Becoming.total (Becoming.steps S m) (Becoming.fall ((w.commute t side).web.stock cs)) =
+                    Becoming.total (Becoming.steps S m) (Becoming.fall (w.web.stock cs)) ∧
+                  Becoming.count (Becoming.steps S m) (Becoming.fall ((w.commute t side).web.stock cs)) =
+                    Becoming.count (Becoming.steps S m) (Becoming.fall (w.web.stock cs))
+@Becoming.Reorders.laws : ∀ {X : Type} {within : Nat → Prop} {L L' : Becoming.Flow X X} {W W' : Becoming.Web X X},
+  Becoming.Reorders within L W L' W' →
+    ((Becoming.World.of X L' W').Balanced ↔ (Becoming.World.of X L W).Balanced) ∧
+      ((Becoming.World.of X L' W').Dissipative ↔ (Becoming.World.of X L W).Dissipative) ∧
+        ((Becoming.World.of X L' W').Embodied ↔ (Becoming.World.of X L W).Embodied)
+@Becoming.Reorders.totals : ∀ {X : Type} {S m : Nat} {L L' : Becoming.Flow X X} {W W' : Becoming.Web X X} (cs : List X),
+  Becoming.Reorders (fun t => S ≤ t ∧ t + 2 ≤ S + m) L W L' W' →
+    Becoming.total (Becoming.steps S m) (Becoming.rise (W'.stock cs)) =
+        Becoming.total (Becoming.steps S m) (Becoming.rise (W.stock cs)) ∧
+      Becoming.total (Becoming.steps S m) (Becoming.fall (W'.stock cs)) =
+          Becoming.total (Becoming.steps S m) (Becoming.fall (W.stock cs)) ∧
+        Becoming.count (Becoming.steps S m) (Becoming.fall (W'.stock cs)) =
+          Becoming.count (Becoming.steps S m) (Becoming.fall (W.stock cs))
+Becoming.Order.Crossing.balances : Becoming.Order.Crossing.flow.Balances Becoming.Order.Crossing.web
+Becoming.Order.Crossing.dependent : Becoming.Order.Crossing.web.Dependent
+Becoming.Order.Crossing.split : Becoming.Order.Crossing.web.Split 0 Becoming.firstSide Becoming.firstSide
+Becoming.Order.Crossing.order_registers : Becoming.Order.Crossing.world.Balanced ∧
+  Becoming.Order.Crossing.world.Dependent ∧
+    Becoming.Order.Crossing.world.web.Split 0 Becoming.firstSide Becoming.firstSide ∧
+      (Becoming.Order.Crossing.world.commute 0 Becoming.firstSide).Balanced ∧
+        ¬(Becoming.Order.Crossing.world.commute 0 Becoming.firstSide).Dependent
+Becoming.Order.Arising.balances : Becoming.Order.Arising.flow.Balances Becoming.Order.Arising.web
+Becoming.Order.Arising.acting : Becoming.Order.Arising.flow.Acting Becoming.Order.Arising.web
+Becoming.Order.Arising.split : Becoming.Order.Arising.web.Split 0 Becoming.firstSide Becoming.firstSide
+Becoming.Order.Arising.order_registers : Becoming.Order.Arising.world.Balanced ∧
+  Becoming.Order.Arising.world.Acting ∧
+    Becoming.Order.Arising.world.web.Split 0 Becoming.firstSide Becoming.firstSide ∧
+      (Becoming.Order.Arising.world.commute 0 Becoming.firstSide).Balanced ∧
+        ¬(Becoming.Order.Arising.world.commute 0 Becoming.firstSide).Acting
+@Becoming.lt_of_le_ne : ∀ {a b : Nat}, a ≤ b → a ≠ b → a < b
+@Becoming.swapAt_of_lt : ∀ {t n : Nat}, n < t → Becoming.swapAt t n = n
+@Becoming.swapAt_of_gt : ∀ {t n : Nat}, t + 1 < n → Becoming.swapAt t n = n
+Becoming.swapAt_swapAt : ∀ (t n : Nat), Becoming.swapAt t (Becoming.swapAt t n) = n
+@Becoming.swapAt_lt : ∀ {t i j : Nat}, i < j → (i = t → j ≠ t + 1) → Becoming.swapAt t i < Becoming.swapAt t j
+@Becoming.Web.SameAt.refl : ∀ {X : Type} (W : Becoming.Web X X) (k : Nat) (x : X), W.SameAt k W k x
+@Becoming.Web.SameAt.symm : ∀ {X : Type} {W W' : Becoming.Web X X} {k k' : Nat} {x : X},
+  W.SameAt k W' k' x → W'.SameAt k' W k x
+@Becoming.Web.SameAt.trans : ∀ {X : Type} {W W' W'' : Becoming.Web X X} {k k' k'' : Nat} {x : X},
+  W.SameAt k W' k' x → W'.SameAt k' W'' k'' x → W.SameAt k W'' k'' x
+@Becoming.Web.commute_sameAt_away : ∀ {X : Type} {W : Becoming.Web X X} {k t : Nat} {side : X → Bool},
+  k ≠ t + 1 → ∀ (x : X), W.SameAt k (W.commute t side side) k x
+@Becoming.Web.commute_sameAt_true : ∀ {X : Type} {W : Becoming.Web X X} {x : X} {t : Nat} {side : X → Bool},
+  side x = true → W.SameAt t (W.commute t side side) (t + 1) x
+@Becoming.Web.commute_sameAt_false : ∀ {X : Type} {W : Becoming.Web X X} {x : X} {t : Nat} {side : X → Bool},
+  side x = false → W.SameAt (t + 2) (W.commute t side side) (t + 1) x
+@Becoming.Web.dependent_of_sameAt : ∀ {X : Type} {W W' : Becoming.Web X X},
+  (∀ (k : Nat) (x : X), W.SameAt k W' k x) → W.Dependent → W'.Dependent
+@Becoming.Footprinted.Joined.symm : ∀ {X : Type} {r : Becoming.Footprinted X} {i j : Nat}, r.Joined i j → r.Joined j i
+@Becoming.Footprinted.Precedes.lt : ∀ {X : Type} {r : Becoming.Footprinted X} {i j : Nat}, r.Precedes i j → i < j
+@Becoming.Footprinted.Precedes.irrefl : ∀ {X : Type} {r : Becoming.Footprinted X} {i : Nat}, ¬r.Precedes i i
+@Becoming.Footprinted.Precedes.asymm : ∀ {X : Type} {r : Becoming.Footprinted X} {i j : Nat},
+  r.Precedes i j → ¬r.Precedes j i
+@Becoming.Footprinted.disjoint : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  ¬r.Joined t (t + 1) → ∀ {x : X}, r.touch t x = true → r.touch (t + 1) x = false
+@Becoming.Footprinted.commute_shows_first : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains →
+    ¬r.Joined t (t + 1) →
+      ∀ {x : X},
+        r.touch (t + 1) x = true →
+          r.web.SameAt (t + 1) (r.commute t).web t x ∧ r.web.SameAt (t + 1 + 1) (r.commute t).web (t + 1) x
+@Becoming.Footprinted.commute_shows_second : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains →
+    ¬r.Joined t (t + 1) →
+      ∀ {x : X},
+        r.touch t x = true →
+          r.web.SameAt t (r.commute t).web (t + 1) x ∧ r.web.SameAt (t + 1) (r.commute t).web (t + 1 + 1) x
+@Becoming.Footprinted.commute_shows : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains →
+    ¬r.Joined t (t + 1) →
+      ∀ {m : Nat} {x : X},
+        r.touch (Becoming.swapAt t m) x = true →
+          r.web.SameAt (Becoming.swapAt t m) (r.commute t).web m x ∧
+            r.web.SameAt (Becoming.swapAt t m + 1) (r.commute t).web (m + 1) x
+@Becoming.Footprinted.commute_contains : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains → (r.commute t).Contains
+@Becoming.Footprinted.commute_joined : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains →
+    ¬r.Joined t (t + 1) → ∀ {a b : Nat}, (r.commute t).Joined a b ↔ r.Joined (Becoming.swapAt t a) (Becoming.swapAt t b)
+@Becoming.Footprinted.commute_apart : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains → ¬r.Joined t (t + 1) → ¬(r.commute t).Joined t (t + 1)
+@Becoming.Footprinted.commute_precedes_of : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains →
+    ¬r.Joined t (t + 1) →
+      ∀ {i j : Nat}, r.Precedes i j → (r.commute t).Precedes (Becoming.swapAt t i) (Becoming.swapAt t j)
+@Becoming.Footprinted.precedes_of_commute : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains →
+    ¬r.Joined t (t + 1) →
+      ∀ {a b : Nat}, (r.commute t).Precedes a b → r.Precedes (Becoming.swapAt t a) (Becoming.swapAt t b)
+@Becoming.Footprinted.commute_precedes : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains →
+    ¬r.Joined t (t + 1) →
+      ∀ {a b : Nat}, (r.commute t).Precedes a b ↔ r.Precedes (Becoming.swapAt t a) (Becoming.swapAt t b)
+@Becoming.Footprinted.split : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains → ¬r.Joined t (t + 1) → r.web.Split t (r.touch t) (r.touch t)
+Becoming.origin_place : ∀ (ts : List Nat) (n : Nat), Becoming.origin ts (Becoming.place ts n) = n
+Becoming.place_origin : ∀ (ts : List Nat) (m : Nat), Becoming.place ts (Becoming.origin ts m) = m
+Becoming.place_append : ∀ (ts us : List Nat) (n : Nat),
+  Becoming.place (ts ++ us) n = Becoming.place us (Becoming.place ts n)
+@Becoming.EachStep.mono : ∀ {p q : Nat → Prop},
+  (∀ (t : Nat), p t → q t) → ∀ {ts : List Nat}, Becoming.EachStep p ts → Becoming.EachStep q ts
+@Becoming.EachStep.append : ∀ {p : Nat → Prop} {ts us : List Nat},
+  Becoming.EachStep p ts → Becoming.EachStep p us → Becoming.EachStep p (ts ++ us)
+Becoming.EachStep.always : ∀ (ts : List Nat), Becoming.EachStep (fun x => True) ts
+@Becoming.place_fixed : ∀ {p : Nat → Prop} {n : Nat},
+  (∀ (t : Nat), p t → n ≠ t ∧ n ≠ t + 1) → ∀ {ts : List Nat}, Becoming.EachStep p ts → Becoming.place ts n = n
+@Becoming.Flow.SameExchange.trans : ∀ {F C : Type} {L L' L'' : Becoming.Flow F C} {n m k : Nat},
+  L.SameExchange n L' m → L'.SameExchange m L'' k → L.SameExchange n L'' k
+@Becoming.Footprinted.reorder_append : ∀ {X : Type} (r : Becoming.Footprinted X) (ts us : List Nat),
+  r.reorder (ts ++ us) = (r.reorder ts).reorder us
+@Becoming.Footprinted.Independent.append : ∀ {X : Type} {r : Becoming.Footprinted X} {ts us : List Nat},
+  r.Independent ts → (r.reorder ts).Independent us → r.Independent (ts ++ us)
+@Becoming.Footprinted.reorder_touch : ∀ {X : Type} (r : Becoming.Footprinted X) (ts : List Nat) (m : Nat) (x : X),
+  (r.reorder ts).touch m x = r.touch (Becoming.origin ts m) x
+@Becoming.Footprinted.reorder_exchange : ∀ {X : Type} (r : Becoming.Footprinted X) (ts : List Nat) (m : Nat),
+  r.flow.SameExchange (Becoming.origin ts m) (r.reorder ts).flow m
+@Becoming.Footprinted.reorder_contains : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains → r.Independent ts → (r.reorder ts).Contains
+@Becoming.Footprinted.reorder_shows : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains →
+    r.Independent ts →
+      ∀ {m : Nat} {x : X},
+        r.touch (Becoming.origin ts m) x = true →
+          r.web.SameAt (Becoming.origin ts m) (r.reorder ts).web m x ∧
+            r.web.SameAt (Becoming.origin ts m + 1) (r.reorder ts).web (m + 1) x
+@Becoming.Footprinted.reorder_joined : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains →
+    r.Independent ts → ∀ {a b : Nat}, (r.reorder ts).Joined a b ↔ r.Joined (Becoming.origin ts a) (Becoming.origin ts b)
+@Becoming.Footprinted.reorder_precedes : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains →
+    r.Independent ts →
+      ∀ {a b : Nat}, (r.reorder ts).Precedes a b ↔ r.Precedes (Becoming.origin ts a) (Becoming.origin ts b)
+@Becoming.Footprinted.precedes_place : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains →
+    r.Independent ts →
+      ∀ {i j : Nat}, r.Precedes i j ↔ (r.reorder ts).Precedes (Becoming.place ts i) (Becoming.place ts j)
+@Becoming.Footprinted.Independent.keeps : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains → r.Independent ts → ∀ {i j : Nat}, i < j → r.Joined i j → Becoming.place ts i < Becoming.place ts j
+@Becoming.Footprinted.reorder_reorders : ∀ {X : Type} {within : Nat → Prop} {r : Becoming.Footprinted X}
+  {ts : List Nat},
+  r.Contains →
+    r.Independent ts →
+      Becoming.EachStep within ts → Becoming.Reorders within r.flow r.web (r.reorder ts).flow (r.reorder ts).web
+@Becoming.Footprinted.touched_of_mem : ∀ {X : Type} {r : Becoming.Footprinted X},
+  r.Contains → ∀ {m : Nat} {x : X}, x ∈ r.flow.present m → r.touch m x = true
+@Becoming.Footprinted.acting_of_shows : ∀ {X : Type} {r r' : Becoming.Footprinted X} (back : Nat → Nat),
+  r'.Contains →
+    (∀ (m : Nat), r.flow.SameExchange (back m) r'.flow m) →
+      (∀ (m : Nat) (x : X),
+          r'.touch m x = true → r.web.SameAt (back m) r'.web m x ∧ r.web.SameAt (back m + 1) r'.web (m + 1) x) →
+        r.flow.Acting r.web → r'.flow.Acting r'.web
+@Becoming.Footprinted.taking_of_shows : ∀ {X : Type} {r r' : Becoming.Footprinted X} (back : Nat → Nat),
+  r'.Contains →
+    (∀ (m : Nat), r.flow.SameExchange (back m) r'.flow m) →
+      (∀ (m : Nat) (x : X),
+          r'.touch m x = true → r.web.SameAt (back m) r'.web m x ∧ r.web.SameAt (back m + 1) r'.web (m + 1) x) →
+        r.flow.Taking r.web → r'.flow.Taking r'.web
+@Becoming.Footprinted.transmits_of_shows : ∀ {X : Type} {r r' : Becoming.Footprinted X} (back : Nat → Nat),
+  r'.Contains →
+    (∀ (m : Nat), r.flow.SameExchange (back m) r'.flow m) →
+      (∀ (m : Nat) (x : X),
+          r'.touch m x = true → r.web.SameAt (back m) r'.web m x ∧ r.web.SameAt (back m + 1) r'.web (m + 1) x) →
+        ∀ {c : X} {δ : Nat}, r.flow.TransmitsWithin r.web c δ → r'.flow.TransmitsWithin r'.web c δ
+@Becoming.Footprinted.commute_flows : ∀ {X : Type} {r : Becoming.Footprinted X} (t m : Nat),
+  r.flow.SameExchange (Becoming.swapAt t m) (r.commute t).flow m
+@Becoming.Footprinted.commute_back_flows : ∀ {X : Type} {r : Becoming.Footprinted X} (t m : Nat),
+  (r.commute t).flow.SameExchange (Becoming.swapAt t m) r.flow m
+@Becoming.Footprinted.commute_back_shows : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains →
+    ¬r.Joined t (t + 1) →
+      ∀ {m : Nat} {x : X},
+        r.touch m x = true →
+          (r.commute t).web.SameAt (Becoming.swapAt t m) r.web m x ∧
+            (r.commute t).web.SameAt (Becoming.swapAt t m + 1) r.web (m + 1) x
+@Becoming.Footprinted.commute_acting_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains → ¬r.Joined t (t + 1) → ((r.commute t).flow.Acting (r.commute t).web ↔ r.flow.Acting r.web)
+@Becoming.Footprinted.commute_taking_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains → ¬r.Joined t (t + 1) → ((r.commute t).flow.Taking (r.commute t).web ↔ r.flow.Taking r.web)
+@Becoming.Footprinted.commute_transmits_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains →
+    ¬r.Joined t (t + 1) →
+      ∀ {c : X} {δ : Nat}, (r.commute t).flow.TransmitsWithin (r.commute t).web c δ ↔ r.flow.TransmitsWithin r.web c δ
+@Becoming.Footprinted.commute_dependent : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains → ¬r.Joined t (t + 1) → r.web.Dependent → (r.commute t).web.Dependent
+@Becoming.Footprinted.commute_twice : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains → ¬r.Joined t (t + 1) → ∀ (k : Nat) (x : X), r.web.SameAt k ((r.commute t).commute t).web k x
+@Becoming.Footprinted.commute_dependent_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {t : Nat},
+  r.Contains → ¬r.Joined t (t + 1) → ((r.commute t).web.Dependent ↔ r.web.Dependent)
+@Becoming.Footprinted.reorder_acting_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains → r.Independent ts → ((r.reorder ts).flow.Acting (r.reorder ts).web ↔ r.flow.Acting r.web)
+@Becoming.Footprinted.reorder_taking_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains → r.Independent ts → ((r.reorder ts).flow.Taking (r.reorder ts).web ↔ r.flow.Taking r.web)
+@Becoming.Footprinted.reorder_transmits_iff : ∀ {X : Type} {c : X} {δ : Nat} {r : Becoming.Footprinted X}
+  {ts : List Nat},
+  r.Contains →
+    r.Independent ts → ((r.reorder ts).flow.TransmitsWithin (r.reorder ts).web c δ ↔ r.flow.TransmitsWithin r.web c δ)
+@Becoming.Footprinted.reorder_dependent_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains → r.Independent ts → ((r.reorder ts).web.Dependent ↔ r.web.Dependent)
+@Becoming.Footprinted.reorder_premises : ∀ {X : Type} {r : Becoming.Footprinted X} {ts : List Nat},
+  r.Contains →
+    r.Independent ts →
+      ((r.reorder ts).world.Balanced ↔ r.world.Balanced) ∧
+        ((r.reorder ts).world.Dissipative ↔ r.world.Dissipative) ∧
+          ((r.reorder ts).world.Acting ↔ r.world.Acting) ∧
+            ((r.reorder ts).world.Taking ↔ r.world.Taking) ∧
+              ((r.reorder ts).world.Dependent ↔ r.world.Dependent) ∧
+                ((r.reorder ts).world.Embodied ↔ r.world.Embodied) ∧
+                  ((r.reorder ts).world.Transmitting ↔ r.world.Transmitting)
+@Becoming.comings_of_iff : ∀ {α : Type} {as : List α} {p q : α → Nat → Prop}
+  [inst : (a : α) → (n : Nat) → Decidable (p a n)] [inst_1 : (a : α) → (n : Nat) → Decidable (q a n)],
+  (∀ (a : α) (n : Nat), p a n ↔ q a n) → ∀ (t : Nat), Becoming.comings as p t = Becoming.comings as q t
+@Becoming.ceasings_of_iff : ∀ {α : Type} {as : List α} {p q : α → Nat → Prop}
+  [inst : (a : α) → (n : Nat) → Decidable (p a n)] [inst_1 : (a : α) → (n : Nat) → Decidable (q a n)],
+  (∀ (a : α) (n : Nat), p a n ↔ q a n) → ∀ (t : Nat), Becoming.ceasings as p t = Becoming.ceasings as q t
+@Becoming.Reorders.counts : ∀ {X : Type} {S m : Nat} (xs : List X) {L L' : Becoming.Flow X X} {W W' : Becoming.Web X X}
+  [inst : (n : Nat) → (x : X) → Decidable (W.active n x)] [inst_1 : (n : Nat) → (x : X) → Decidable (W'.active n x)],
+  Becoming.Reorders (fun t => S ≤ t ∧ t + 2 ≤ S + m) L W L' W' →
+    Becoming.total (Becoming.steps S m) (Becoming.comings xs fun x n => W'.active n x) =
+        Becoming.total (Becoming.steps S m) (Becoming.comings xs fun x n => W.active n x) ∧
+      Becoming.total (Becoming.steps S m) (Becoming.ceasings xs fun x n => W'.active n x) =
+        Becoming.total (Becoming.steps S m) (Becoming.ceasings xs fun x n => W.active n x)
+Becoming.Order.Crossing.joined : ∀ (touch : Nat → Nat → Bool),
+  { flow := Becoming.Order.Crossing.flow, web := Becoming.Order.Crossing.web, touch := touch }.Contains →
+    { flow := Becoming.Order.Crossing.flow, web := Becoming.Order.Crossing.web, touch := touch }.Joined 0 1
+Becoming.Order.Crossing.reorders_joined : Becoming.Reorders (fun x => True) Becoming.Order.Crossing.flow
+    Becoming.Order.Crossing.web (Becoming.Order.Crossing.flow.swap 0)
+    (Becoming.Order.Crossing.web.commute 0 Becoming.firstSide Becoming.firstSide) ∧
+  (∀ (touch : Nat → Nat → Bool),
+      { flow := Becoming.Order.Crossing.flow, web := Becoming.Order.Crossing.web, touch := touch }.Contains →
+        { flow := Becoming.Order.Crossing.flow, web := Becoming.Order.Crossing.web, touch := touch }.Joined 0 1) ∧
+    Becoming.Order.Crossing.web.Dependent ∧
+      ¬(Becoming.Order.Crossing.web.commute 0 Becoming.firstSide Becoming.firstSide).Dependent
+Becoming.Order.Arising.joined : ∀ (touch : Nat → Nat → Bool),
+  { flow := Becoming.Order.Arising.flow, web := Becoming.Order.Arising.web, touch := touch }.Contains →
+    { flow := Becoming.Order.Arising.flow, web := Becoming.Order.Arising.web, touch := touch }.Joined 0 1
+Becoming.Order.Arising.reorders_joined : Becoming.Reorders (fun x => True) Becoming.Order.Arising.flow
+    Becoming.Order.Arising.web (Becoming.Order.Arising.flow.swap 0)
+    (Becoming.Order.Arising.web.commute 0 Becoming.firstSide Becoming.firstSide) ∧
+  (∀ (touch : Nat → Nat → Bool),
+      { flow := Becoming.Order.Arising.flow, web := Becoming.Order.Arising.web, touch := touch }.Contains →
+        { flow := Becoming.Order.Arising.flow, web := Becoming.Order.Arising.web, touch := touch }.Joined 0 1) ∧
+    Becoming.Order.Arising.flow.Acting Becoming.Order.Arising.web ∧
+      ¬(Becoming.Order.Arising.flow.swap 0).Acting
+          (Becoming.Order.Arising.web.commute 0 Becoming.firstSide Becoming.firstSide)
+Becoming.place_lowering_top : ∀ (S d : Nat), Becoming.place (Becoming.lowering S d) (S + d) = S
+Becoming.place_lowering_outside : ∀ (S d : Nat) {n : Nat},
+  n < S ∨ S + d < n → Becoming.place (Becoming.lowering S d) n = n
+Becoming.place_lowering_below : ∀ (S d : Nat) {n : Nat},
+  S ≤ n → n < S + d → Becoming.place (Becoming.lowering S d) n = n + 1
+Becoming.lowering_within : ∀ (S M d : Nat),
+  d < M → Becoming.EachStep (fun t => S ≤ t ∧ t + 2 ≤ S + M) (Becoming.lowering S d)
+@Becoming.Footprinted.lowering_independent : ∀ {X : Type} {S d : Nat} {r : Becoming.Footprinted X},
+  r.Contains → (∀ (p : Nat), S ≤ p → p < S + d → ¬r.Joined p (S + d)) → r.Independent (Becoming.lowering S d)
+@Becoming.Footprinted.first_free : ∀ {X : Type} {r : Becoming.Footprinted X} {S m : Nat} {π σ : Nat → Nat},
+  Becoming.Reindexes S (m + 1) π σ → r.Keeps S (m + 1) π → ∀ {p : Nat}, S ≤ p → p < σ S → ¬r.Joined p (σ S)
+@Becoming.Footprinted.lowered_place : ∀ {S m d : Nat},
+  d ≤ m →
+    ∀ {n : Nat},
+      S ≤ n →
+        n < S + (m + 1) →
+          n ≠ S + d →
+            S + 1 ≤ Becoming.place (Becoming.lowering S d) n ∧ Becoming.place (Becoming.lowering S d) n < S + 1 + m
+@Becoming.Footprinted.lowered_origin : ∀ {S m d : Nat},
+  d ≤ m →
+    ∀ {a : Nat},
+      S + 1 ≤ a →
+        a < S + 1 + m →
+          S ≤ Becoming.origin (Becoming.lowering S d) a ∧
+            Becoming.origin (Becoming.lowering S d) a < S + (m + 1) ∧ Becoming.origin (Becoming.lowering S d) a ≠ S + d
+@Becoming.Footprinted.lowered_reindexes : ∀ {S m d : Nat} {π σ : Nat → Nat},
+  Becoming.Reindexes S (m + 1) π σ →
+    σ S = S + d →
+      d ≤ m →
+        Becoming.Reindexes (S + 1) m (fun a => π (Becoming.origin (Becoming.lowering S d) a)) fun b =>
+          Becoming.place (Becoming.lowering S d) (σ b)
+@Becoming.Footprinted.lowered_keeps : ∀ {X : Type} {S m d : Nat} {r : Becoming.Footprinted X} {π : Nat → Nat},
+  r.Contains →
+    r.Independent (Becoming.lowering S d) →
+      r.Keeps S (m + 1) π →
+        d ≤ m →
+          (r.reorder (Becoming.lowering S d)).Keeps (S + 1) m fun a => π (Becoming.origin (Becoming.lowering S d) a)
+@Becoming.Footprinted.sorts_step : ∀ {X : Type} {m S d : Nat} {r : Becoming.Footprinted X} {π σ : Nat → Nat},
+  r.Contains →
+    Becoming.Reindexes S (m + 1) π σ →
+      r.Keeps S (m + 1) π →
+        σ S = S + d →
+          (∀ {r' : Becoming.Footprinted X} {π' σ' : Nat → Nat},
+              r'.Contains →
+                Becoming.Reindexes (S + 1) m π' σ' →
+                  r'.Keeps (S + 1) m π' →
+                    ∃ ts,
+                      Becoming.EachStep (fun t => S + 1 ≤ t ∧ t + 2 ≤ S + 1 + m) ts ∧
+                        r'.Independent ts ∧ ∀ (i : Nat), S + 1 ≤ i → i < S + 1 + m → Becoming.place ts i = π' i) →
+            ∃ ts,
+              Becoming.EachStep (fun t => S ≤ t ∧ t + 2 ≤ S + (m + 1)) ts ∧
+                r.Independent ts ∧ ∀ (i : Nat), S ≤ i → i < S + (m + 1) → Becoming.place ts i = π i
+@Becoming.Footprinted.sorts : ∀ {X : Type} (m S : Nat) {r : Becoming.Footprinted X} {π σ : Nat → Nat},
+  r.Contains →
+    Becoming.Reindexes S m π σ →
+      r.Keeps S m π →
+        ∃ ts,
+          Becoming.EachStep (fun t => S ≤ t ∧ t + 2 ≤ S + m) ts ∧
+            r.Independent ts ∧ ∀ (i : Nat), S ≤ i → i < S + m → Becoming.place ts i = π i
+@Becoming.Footprinted.sorts_iff : ∀ {X : Type} {S m : Nat} {r : Becoming.Footprinted X} {π σ : Nat → Nat},
+  r.Contains →
+    Becoming.Reindexes S m π σ →
+      ((∃ ts,
+          Becoming.EachStep (fun t => S ≤ t ∧ t + 2 ≤ S + m) ts ∧
+            r.Independent ts ∧ ∀ (i : Nat), S ≤ i → i < S + m → Becoming.place ts i = π i) ↔
+        r.Keeps S m π)
+@Becoming.Footprinted.reorder_before : ∀ {X : Type} {S M : Nat} {r : Becoming.Footprinted X} {ts : List Nat},
+  Becoming.EachStep (fun t => S ≤ t ∧ t + 2 ≤ S + M) ts →
+    ∀ {k : Nat} (x : X), k ≤ S → r.web.SameAt k (r.reorder ts).web k x
+@Becoming.Footprinted.converse_webs : ∀ {X : Type} {S m : Nat} {r r₂ : Becoming.Footprinted X} {π σ : Nat → Nat}
+  {ts : List Nat},
+  r.Contains →
+    r₂.Contains →
+      r.Independent ts →
+        Becoming.EachStep (fun t => S ≤ t ∧ t + 2 ≤ S + m) ts →
+          Becoming.Reindexes S m π σ →
+            (∀ (a : Nat), S ≤ a → a < S + m → Becoming.origin ts a = σ a) →
+              (∀ (i : Nat) (x : X), S ≤ i → i < S + m → r₂.touch (π i) x = r.touch i x) →
+                (∀ (i : Nat) (x : X),
+                    S ≤ i → i < S + m → r.touch i x = true → r.web.SameAt (i + 1) r₂.web (π i + 1) x) →
+                  (∀ (x : X), r.web.SameAt S r₂.web S x) →
+                    ∀ (e : Nat), e ≤ m → ∀ (x : X), (r.reorder ts).web.SameAt (S + e) r₂.web (S + e) x
+@Becoming.Footprinted.converse : ∀ {X : Type} {S m : Nat} {r r₂ : Becoming.Footprinted X} {π σ : Nat → Nat},
+  r.Contains →
+    r₂.Contains →
+      Becoming.Reindexes S m π σ →
+        r.Keeps S m π →
+          (∀ (i : Nat), S ≤ i → i < S + m → r.flow.SameExchange i r₂.flow (π i)) →
+            (∀ (i : Nat) (x : X), S ≤ i → i < S + m → r₂.touch (π i) x = r.touch i x) →
+              (∀ (i : Nat) (x : X), S ≤ i → i < S + m → r.touch i x = true → r.web.SameAt (i + 1) r₂.web (π i + 1) x) →
+                (∀ (x : X), r.web.SameAt S r₂.web S x) →
+                  ∃ ts,
+                    Becoming.EachStep (fun t => S ≤ t ∧ t + 2 ≤ S + m) ts ∧
+                      r.Independent ts ∧
+                        (∀ (i : Nat), S ≤ i → i < S + m → Becoming.place ts i = π i) ∧
+                          (∀ (a : Nat), S ≤ a → a < S + m → (r.reorder ts).flow.SameExchange a r₂.flow a) ∧
+                            ∀ (k : Nat) (x : X), S ≤ k → k ≤ S + m → (r.reorder ts).web.SameAt k r₂.web k x
+@Becoming.Footprinted.Joined.mono : ∀ {X : Type} {r : Becoming.Footprinted X} {touch : Nat → X → Bool},
+  (∀ (n : Nat) (x : X), r.touch n x = true → touch n x = true) →
+    ∀ {i j : Nat}, r.Joined i j → { flow := r.flow, web := r.web, touch := touch }.Joined i j
+@Becoming.Footprinted.Precedes.mono : ∀ {X : Type} {r : Becoming.Footprinted X} {touch : Nat → X → Bool},
+  (∀ (n : Nat) (x : X), r.touch n x = true → touch n x = true) →
+    ∀ {i j : Nat}, r.Precedes i j → { flow := r.flow, web := r.web, touch := touch }.Precedes i j
+@Becoming.Footprinted.Contains.mono : ∀ {X : Type} {r : Becoming.Footprinted X} {touch : Nat → X → Bool},
+  r.Contains →
+    (∀ (n : Nat) (x : X), r.touch n x = true → touch n x = true) →
+      { flow := r.flow, web := r.web, touch := touch }.Contains
+@Becoming.Footprinted.contains_everything : ∀ {X : Type} (L : Becoming.Flow X X) (W : Becoming.Web X X),
+  { flow := L, web := W, touch := fun x x_1 => true }.Contains

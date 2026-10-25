@@ -8,15 +8,19 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-08T13:02:25.936140+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "zh": "凡一个描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读出，一个有限计划在一个描述处被实现，恰当它在如此被描述的每个构形处被实现；计划经描述提升，恰当该描述匹配部分。",
+    "en": "Where configurations a description identifies match parts into ones it identifies and leaves are read correctly through it, a finite plan is realized at a description exactly where it is realized at each configuration so described; plans lift through a description exactly where it matches parts."
+  },
   "claim": {
-    "zh": "同一准确约简表示及正确叶项解释下，代码整体实现有限嵌套共同方案，当且仅当原生整体实现该方案。",
-    "en": "With one exact reduced presentation and correct leaf interpretation, the coded whole realizes a finite nested joint plan iff the native whole realizes it."
+    "zh": "描述形式：凡一个描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读出，一个有限嵌套共同计划在一个构形的描述处被实现，恰当它在该构形处被实现；叶为描述的计划经描述提升，恰当该描述所认同的构形匹配部分。编码形式：经精确读出共同检验、并给通过相同检验之构形同一编码的编码，叶被正确读出、部分之对紧致且检验稳定时，编码整体实现一个有限嵌套共同计划，恰当原生整体实现它。",
+    "en": "Description form: where configurations a description identifies match parts into configurations it identifies and the leaves are read correctly through it, a finite nested joint plan is realized at the description of a configuration exactly where it is realized at that configuration; plans whose leaves are descriptions lift through a description exactly where configurations it identifies match parts. Code form: through a code reading the joint tests exactly and giving configurations passing the same tests one code, with the leaves read correctly, the pairs of parts compact and the tests stable, the coded whole realizes a finite nested joint plan exactly where the native whole realizes it."
   },
   "hypotheses": [
     {
-      "zh": "JointCompact、Exact、Reduced、逐叶项正确性及有限 Plan。",
-      "en": "JointCompact, Exact, Reduced, pointwise leaf correctness and a finite Plan."
+      "zh": "描述形式：经描述的 MatchesParts 与逐叶的正确读出。编码形式：JointCompact、TestsStable、Exact、Reduced 与逐叶的正确读出。计划是有限二叉嵌套。",
+      "en": "Description form: MatchesParts through the description and pointwise leaf correctness. Code form: JointCompact, TestsStable, Exact, Reduced and pointwise leaf correctness. Plans are finite binary nestings."
     }
   ],
   "correspondence": {
@@ -224,6 +228,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 2 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Generative.ExplanatoryJointness.joint_plan_lifts (periphery module); Becoming.joint_plan_lifts_of_stable (retired module). The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；2 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Generative.ExplanatoryJointness.joint_plan_lifts (periphery module)；Becoming.joint_plan_lifts_of_stable (retired module)。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added; the claim states the description form (matching parts and leaves read correctly; plans lift exactly where the description matches parts) and the code form with the stability of the tests it takes, which the earlier claim and premises omitted; no Lean changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述；主张写出描述形式（部分匹配、叶被正确读出；计划恰在描述匹配部分处提升）与编码形式及其所需的检验稳定，此前的主张与前提遗漏了后者；Lean 未改。"
     }
   ]
 }

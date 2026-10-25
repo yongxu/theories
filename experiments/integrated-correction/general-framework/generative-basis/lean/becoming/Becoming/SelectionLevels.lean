@@ -87,14 +87,15 @@ of equal sizes.
   (`rises_iff_reading`): read over the rationals, where `b` times the regression of the reading on
   the amount exceeds `k`. No regression coefficient is formed.
 * **Returns to groupmates; groups founded mixed.** List the family as groups of `m` members each,
-  and let each unit a member keeps give `b` to every member of its group, its own included, and
-  take `c` from the keeper: a member's offspring number with `b + c` per unit of its own amount is
-  a base with `b` per unit of its group's total. The spread of the amount over the whole is `k`
-  times the groups' own spreads with the spread among them (`spread_levels`). Within each group
+  and let each unit a member keeps give `b` to every other member of its group and cost the keeper
+  `c` (equivalently, give `b` to every member, its own included, and take `b + c` from the
+  keeper): a member's offspring number with `b + c` per unit of its own amount is
+  a base with `b` per unit of its group's total. The spread of the amount over the whole is the
+  number of groups times the groups' own spreads with the spread among them (`spread_levels`). Within each group
   the offspring number goes against the amount by `b + c` times the group's spread
-  (`within_returns`), so selection within goes against keeping wherever a group varies in it
-  (`within_against`); among the groups, read by their totals, it goes for keeping exactly where
-  `b + c` falls short of `m` times `b` (`among_returns`, `among_for_iff`). The whole selects for
+  (`within_returns`), so where `b + c` is positive selection within goes against keeping wherever
+  a group varies in it (`within_against`); among the groups, read by their totals, where the groups differ, it goes for
+  keeping exactly where `b + c` falls short of `m` times `b` (`among_returns`, `among_for_iff`). The whole selects for
   keeping exactly where `b + c` times the whole's spread falls short of `m` times `b` times the
   spread among groups (`rises_iff_returns`): with the share of the spread among groups `ρ` (the
   assortment), exactly where `m b ρ` exceeds `b + c`, Hamilton's rule with relatedness
@@ -837,8 +838,8 @@ theorem rises_iff_reading (ps : List α) (w a o : α → Nat) {B b k : Nat}
       k * concord ps a a + b * discord ps o a < b * concord ps o a :=
   lt_iff_of_balance ((Nat.add_assoc _ _ _).symm.trans (returns_balance ps w a o returns))
 
-/-- The spread of an amount over a family listed as groups of equal size is `k` times the
-groups' own spreads with the spread among them. -/
+/-- The spread of an amount over a family listed as groups of equal size is the number of
+groups times the groups' own spreads with the spread among them. -/
 theorem spread_levels (gs : List (List α)) (a : α → Nat) {m : Nat}
     (equal : ∀ g, g ∈ gs → g.length = m) :
     concord (whole gs) a a = gs.length * concordWithin gs a a + concordAmong gs a a := by
@@ -850,8 +851,9 @@ theorem spread_levels (gs : List (List α)) (a : α → Nat) {m : Nat}
     Nat.zero_add] at h
   exact h
 
-/-- Within a group where each unit a member keeps gives `b` to every member, own included, and
-takes `c` from the keeper: selection within goes against the amount by
+/-- Within a group where each unit a member keeps gives `b` to every other member and costs the
+keeper `c` (equivalently, gives `b` to every member, own included, and takes `b + c` from the
+keeper): selection within goes against the amount by
 `b + c` times the group's spread. Summed over the groups: the groups' own discordance is their
 concordance with `b + c` times their own spreads. -/
 theorem within_returns {gs : List (List α)} {w a : α → Nat} {B b c : Nat}
@@ -1108,8 +1110,8 @@ theorem mixed_equal : ∀ g, g ∈ mixed → g.length = 2
   | _, .tail _ (.head _) => rfl
   | _, .tail _ (.tail _ mem) => nomatch mem
 
-/-- Each unit kept gives two to every member of its group and takes one from its keeper; the base
-is one. With the keepers together, each leaves two offspring and the others one. -/
+/-- Each unit kept gives two to every other member of its group and takes one from its keeper; the
+base is one. With the keepers together, each leaves two offspring and the others one. -/
 def assortedOffspring : Member → Nat
   | held => 2
   | mate => 2
@@ -1178,8 +1180,8 @@ theorem equal : ∀ g, g ∈ groups → g.length = 2
   | _, .tail _ (.tail _ (.head _)) => rfl
   | _, .tail _ (.tail _ (.tail _ mem)) => nomatch mem
 
-/-- Each unit kept gives three to every member of its group and takes two from its keeper; the
-base is two. -/
+/-- Each unit kept gives three to every other member of its group and takes two from its keeper;
+the base is two. -/
 def offspring : Nat → Nat
   | 0 => 3
   | 1 => 3

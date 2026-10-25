@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F09",
-  "reviewed_at_utc": "2026-10-14T09:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:45:37+00:00",
   "claim": {
-    "zh": "跨情境读出：对每类记录与意义，在不重复的候选范围中，形式解析为某意义，恰当每个关涉该形式的记录都提供它，且其他每个意义都缺于某个关涉的记录。对行动形成的场景：从每个转移记录对二词编码成组、候选范围不重复的处境出发，经每段移动与命名的历史，每个有限编码序列的解释是其原子的组合，恰当对每个词，先前记录与沿途所闻的命名（各提供学习者所在处可及者）分离其原子。协调的历史（coordinated 37）是实例；在一处命名（stationary 37）缺分离，从原子不可及处命名（mistimed 37）缺覆盖。指定空间关系与有支持的移动／命名史产生已有绑定构造的精确解释输入；另外有实际响应及访问、保留、时序失败见证。",
-    "en": "Cross-situational resolution: for every type of records and meanings, a form resolves to a meaning of a repertoire without repeats exactly when every record bearing on the form offers it and every other meaning is missing from some bearing record. For enacted scenes: from every situation whose transition record groups the two-word encoding and whose repertoire has no repeats, after every history of moves and namings, every finite encoded sequence is interpreted as the assembly of its atoms exactly when, for each word, the earlier records and the namings heard along the history, each offering what was accessible where the learner stood, separate its atom. The coordinated history (coordinated 37) is an instance; naming from one place (stationary 37) fails separation, and naming a site from where its atom is not accessible (mistimed 37) fails coverage. The specified spatial arrangement and supported movement/naming history produce the previous binding construction’s exact interpretation inputs; separate witnesses cover actual response and access, retention and timing failures."
+    "zh": "跨情境读出：对每类记录与每类相等可判定的意义，在不重复的候选范围中，形式解析为某意义，恰当每个关涉该形式的记录都提供它，且其他每个意义都缺于某个关涉的记录。对行动形成的场景：从每个转移记录对二词编码成组、候选范围不重复的处境出发，经每段移动与命名的历史，每个有限编码序列的解释是其原子的组合，恰当对每个词，先前记录与沿途所闻的命名（各提供学习者所在处可及者）分离其原子。协调的历史（coordinated 37）是实例；在一处命名（stationary 37）缺分离，从原子不可及处命名（mistimed 37）缺覆盖。指定空间关系与有支持的移动／命名史产生已有绑定构造的精确解释输入；另外有实际响应及访问、保留、时序失败见证。",
+    "en": "Cross-situational resolution: for every type of records and every type of meanings compared decidedly, a form resolves to a meaning of a repertoire without repeats exactly when every record bearing on the form offers it and every other meaning is missing from some bearing record. For enacted scenes: from every situation whose transition record groups the two-word encoding and whose repertoire has no repeats, after every history of moves and namings, every finite encoded sequence is interpreted as the assembly of its atoms exactly when, for each word, the earlier records and the namings heard along the history, each offering what was accessible where the learner stood, separate its atom. The coordinated history (coordinated 37) is an instance; naming from one place (stationary 37) fails separation, and naming a site from where its atom is not accessible (mistimed 37) fails coverage. The specified spatial arrangement and supported movement/naming history produce the previous binding construction’s exact interpretation inputs; separate witnesses cover actual response and access, retention and timing failures."
   },
   "hypotheses": [
     {
@@ -331,6 +331,10 @@
     {
       "en": "2026-10-20: 22 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/8c876dc8a2741c5b/enacted-scene-binding.json and in git.",
       "zh": "2026-10-20：22 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/8c876dc8a2741c5b/enacted-scene-binding.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): claim made exact to the Lean: the cross-situational law takes meanings compared decidedly (decidable equality of meanings) besides a repertoire without repeats.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张依 Lean 改精确：跨情境之律除不重复的候选范围外，还取意义之相等可判定。"
     }
   ]
 }

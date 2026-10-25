@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-21T05:33:35+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "en": "Keeping a dependence at its need over a horizon forgoes exactly the renewal given up each step and the need left at the end; a coupling below that leaves only optima breaking it, one beyond it only optima keeping it; the amount grows with the horizon where the need lies above the greatest renewal.",
     "zh": "在视野上，把依存保持在其所需处恰放弃那里每步放弃的更新与终了所留的所需；低于此量的耦合只留下打破它的最优，高于此量的只留下保持它的最优；所需高于最大更新的水平时此量随视野增长。"
@@ -130,8 +130,13 @@
   ],
   "does_not_show": [
     {
-      "en": "A coupling added step by step, which gives a course breaking late part of the coupling; the tie at exactly the amount forgone, where both kinds of optimum stand.",
-      "zh": "按步加入的耦合（它给迟些打破的过程部分的值）；恰在所放弃之量处两种最优并存的情形。",
+      "en": "A coupling added step by step, which gives a course breaking late part of the coupling.",
+      "zh": "按步加入的耦合（它给迟些打破的过程部分的值）。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which optima stand at the tie w + q n = r n + m, or between the thresholds where the ends e reached widen the gap: neither threshold law applies there.",
+      "zh": "在持平处 w + q n = r n + m，或所及之终 e 使两阈值间留有间隙之处，哪些最优成立：两条阈值律在那里都不适用。",
       "kind": "scope"
     },
     {
@@ -626,6 +631,10 @@
     {
       "en": "22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.",
       "zh": "2026年10月22日，SG12：最多所留能一步再生时，对所留以一比一之外的价值计值已回答（记录 valuing-what-is-left-at-any-worth，研究第 322 节）；开放项改为其余情形。其规律不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the scope item no longer says both kinds of optimum stand at the tie: both threshold laws are strict, so the tie and the gap the reached ends leave between the thresholds are stated as not shown; no law changes.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：范围项不再说持平处两种最优并存：两条阈值律都是严格的，所以持平处以及所及之终在两阈值间留下的间隙被列为未表明；定律不变。"
     }
   ]
 }

@@ -17,7 +17,6 @@
 
 - That any actual book or reader meets the conditions of the laws: the correspondence is not a theorem, and agreement is not confirmation.
 - That 文理生生 or classical Chinese is the best expression of the core: untested; the reading test designed here (after 文理生生's H2) compares only the codes it runs, and is not run. The fidelity count's control (fidelity-under-one-discipline) finds its measured gain mostly or wholly in the name table's discipline, not the language.
-- That the coarsest value-keeping law-carrying class merges exactly the states with the same 文 as one theorem: it follows from four checked laws together.
 - New mathematics beyond unification: most of the laws were proved before WL, and they have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument). WL names their common object and joins them into one epistemology; WL2 states as theorems what had been joint consequences.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account. · The nondual method is a requirement of method, not a proof of ontology or ethical necessity.
@@ -38,7 +37,7 @@ Canonical source: [WENLI-AND-BECOMING.md](../../history/WENLI-AND-BECOMING.md)
 <a id="next--下一步"></a>
 ## Next
 
-The H2 reading test (experiments/wenli-reading-transfer; the fidelity count is run, fidelity-of-the-classical-statements); in Lean, the coarsest value-keeping law-carrying class as one theorem and the laws of 文 joined to Web.AlikeThroughUpTo and CrossSituational, each claimed on the board first; 文理生生's G1 as a query layer of the spine.
+The H2 reading test (experiments/wenli-reading-transfer; the fidelity count is run, fidelity-of-the-classical-statements); 文理生生's G1 as a query layer of the spine.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -91,7 +90,8 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 - 23 October 2026: the contribution stated as unification, with the laws' known mathematical sources; the chapter notes the confound of language with the name table's discipline.
 - 23 October 2026, WL3: the 文 line joined to the one-unfolding root (record wen-in-the-grammar, study section 374); the chapter gained a paragraph in §一 and a bullet in its head.
 - 23 October 2026, ZE: the controlled English control run; the chapter's testing section, head and open item 6 state its result.
+- 25 October 2026, board item DF (study section 418): the scope item saying the coarsest value-keeping, law-carrying class is not one theorem removed, and the Lean part of the next step with it: the coarsest class is stated as one theorem and the laws of 文 are joined to Web.AlikeThroughUpTo and CrossSituational (WL2); the remaining next step is unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-23T06:36:45+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

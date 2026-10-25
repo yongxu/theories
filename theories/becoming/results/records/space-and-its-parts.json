@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T08:07:06+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "zh": "不加前提的规律对每个世界成立，前提划出部分：活动可判定的有限世界中生起复现恰当止息复现，活跨越生起与止息，耗散之下有限世界归于停息不能被否证。",
     "en": "Premise-free laws hold of every world and premises carve parts: in a finite world whose activity is decided arising recurs exactly when ceasing does, living crosses arising and ceasing, and under dissipation a finite world cannot be refuted to come to rest."
@@ -265,8 +265,8 @@
     "en": "A map of further parts (more, the rise of possibility and diversity) and of combinations of premises; the law for finite worlds without decidable activity is stated in the pure core with excluded middle as a hypothesis (law_of_em)."
   },
   "correspondence": {
-    "zh": "Ren 的原话（2026-10-08-theory-of-becoming-priority）：“when we add axiom, we can define what is good, which is a part of the whole space generative model projects / but, if we count all space, generative, degenerative, we get The theory of evolution, or the theory of becoming/life, which doesn't even require axiom, i think can be done with 0”。计划 P22 把这读作：规律对整个空间成立，前提划出部分。作者的读法（AI 论证）：本结果给出这一提议的一种结构。整体是每个世界；不加关于展开的前提的规律（变化的规律、算术恒等式，以及活动可判定的有限世界中生起与止息的同时复现）对整体成立；各定理的前提每一个都划出真部分，不是隐藏的规律。Ren 在 2026-10-09 说：“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”（2026-10-09-renewing-consuming-without-axioms）。所以本结果不把生起复现与止息复现称为生成的与退化的部分：二者在有限世界中重合；作为关系，更新的形成与消耗的形成不重叠（Web.renewing_not_consuming），同一事件可以参与二者。依 Ren 的交托，提议中的“生成的、退化的”读作对能形成者的扩大与缩小，在形成的层次上是更新与消耗，不取活动的读法（第九次独立审查 M1；DELEGATED-CHOICES D2）。Ren 说加上公理可以定义好，“好”是整个空间的一部分；这里的 Living 是逐步读法中“每个事件都活”的结构条件，是 G0 所计的 living 的一个部分，它跨越生起与止息，不与其中任何一个重合：生起不是活的同义词，止息也不是不活。这不证明整个生成之论不需要任何公理：它显示哪些陈述不需要前提、哪些前提划出哪些部分；“不加实质公理的整体演绎必然性”仍是开放的首要目标。“世界”“生起复现”“止息复现”是 AI 的表述，按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。英文名称 arising/ceasing 经 Ren 确认（2026-10-09-arising-ceasing-names；中文 生起／止息 是 AI 的译名）。",
-    "en": "Ren's words (2026-10-08-theory-of-becoming-priority): ‘when we add axiom, we can define what is good, which is a part of the whole space generative model projects / but, if we count all space, generative, degenerative, we get The theory of evolution, or the theory of becoming/life, which doesn't even require axiom, i think can be done with 0’. Plan P22 reads this as: the laws hold of the whole space, and premises carve parts. The author's reading (an AI argument): this result gives one structure for that proposal. The whole is every world; the laws with no premise about the unfolding (the laws of change, the arithmetic identity, and arising and ceasing recurring together in finite worlds whose activity is decided) hold of the whole; each premise of the theorems carves a proper part and is not a hidden law. On 9 October Ren said: ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’ (2026-10-09-renewing-consuming-without-axioms). So this result does not call arising recurring and ceasing recurring the generative and degenerative parts: they coincide in finite worlds, while read as relations renewing and consuming formations do not overlap (Web.renewing_not_consuming), though one event can take part in both. On Ren's delegation the proposal's ‘generative, degenerative’ reads as widening and narrowing what can form, renewing and consuming at the level of formations, not as the activity reading (ninth independent review, M1; DELEGATED-CHOICES D2). Ren says that with an axiom we can define the good as a part of the whole space; Living here is the structural condition that every event is living in the stepwise reading, one part of what G0 counts as living, and it crosses arising and ceasing without coinciding with either: arising is not a synonym for living, and ceasing is not not-living. This does not prove that the theory of becoming needs no axiom at all: it shows which statements need no premise and which premises carve which parts; the deductive necessity of the whole without added substantive axioms remains the open first priority. ‘World’, ‘arising recurring’ and ‘ceasing recurring’ are the AI's formulations, adopted under Ren's naming rule (DELEGATED-CHOICES D36). Ren confirmed the English names arising and ceasing (2026-10-09-arising-ceasing-names)."
+    "zh": "Ren 的原话（2026-10-08-theory-of-becoming-priority）：“when we add axiom, we can define what is good, which is a part of the whole space generative model projects / but, if we count all space, generative, degenerative, we get The theory of evolution, or the theory of becoming/life, which doesn't even require axiom, i think can be done with 0”。计划 P22 把这读作：规律对整个空间成立，前提划出部分。读法（AI 的）：本结果给出这一提议的一种结构。整体是每个世界；不加关于展开的前提的规律（变化的规律、算术恒等式，以及活动可判定的有限世界中生起与止息的同时复现）对整体成立；各定理的前提每一个都划出真部分，不是隐藏的规律。Ren 在 2026-10-09 说：“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”（2026-10-09-renewing-consuming-without-axioms）。所以本结果不把生起复现与止息复现称为生成的与退化的部分：二者在有限世界中重合；作为关系，更新的形成与消耗的形成不重叠（Web.renewing_not_consuming），同一事件可以参与二者。依 Ren 的交托，提议中的“生成的、退化的”读作对能形成者的扩大与缩小，在形成的层次上是更新与消耗，不取活动的读法（第九次独立审查 M1；DELEGATED-CHOICES D2）。Ren 说加上公理可以定义好，“好”是整个空间的一部分；这里的 Living 是逐步读法中“每个事件都活”的结构条件，是生生之意义所计的 living 的一个部分，它跨越生起与止息，不与其中任何一个重合：生起不是活的同义词，止息也不是不活。这不证明整个生成之论不需要任何公理：它显示哪些陈述不需要前提、哪些前提划出哪些部分；“不加实质公理的整体演绎必然性”仍是开放的首要目标。“世界”“生起复现”“止息复现”是 AI 的表述，按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。英文名称 arising/ceasing 经 Ren 确认（2026-10-09-arising-ceasing-names；中文 生起／止息 是 AI 的译名）。",
+    "en": "Ren's words (2026-10-08-theory-of-becoming-priority): ‘when we add axiom, we can define what is good, which is a part of the whole space generative model projects / but, if we count all space, generative, degenerative, we get The theory of evolution, or the theory of becoming/life, which doesn't even require axiom, i think can be done with 0’. Plan P22 reads this as: the laws hold of the whole space, and premises carve parts. A reading (the AI's): this result gives one structure for that proposal. The whole is every world; the laws with no premise about the unfolding (the laws of change, the arithmetic identity, and arising and ceasing recurring together in finite worlds whose activity is decided) hold of the whole; each premise of the theorems carves a proper part and is not a hidden law. On 9 October Ren said: ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’ (2026-10-09-renewing-consuming-without-axioms). So this result does not call arising recurring and ceasing recurring the generative and degenerative parts: they coincide in finite worlds, while read as relations renewing and consuming formations do not overlap (Web.renewing_not_consuming), though one event can take part in both. On Ren's delegation the proposal's ‘generative, degenerative’ reads as widening and narrowing what can form, renewing and consuming at the level of formations, not as the activity reading (ninth independent review, M1; DELEGATED-CHOICES D2). Ren says that with an axiom we can define the good as a part of the whole space; Living here is the structural condition that every event is living in the stepwise reading, one part of what living significance counts as living, and it crosses arising and ceasing without coinciding with either: arising is not a synonym for living, and ceasing is not not-living. This does not prove that the theory of becoming needs no axiom at all: it shows which statements need no premise and which premises carve which parts; the deductive necessity of the whole without added substantive axioms remains the open first priority. ‘World’, ‘arising recurring’ and ‘ceasing recurring’ are the AI's formulations, adopted under Ren's naming rule (DELEGATED-CHOICES D36). Ren confirmed the English names arising and ceasing (2026-10-09-arising-ceasing-names)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
   "aliases": [
@@ -516,7 +516,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "0362e707d7ec1f584c895a74718635b56d1da92aec8feecdbd66d9c1f99020a3",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
       "declarations": [
         "Becoming.Flow.still",
         "Becoming.Flow.still_dissipative",
@@ -845,12 +845,18 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1001,6 +1007,10 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite, World.Balanced, World.Dissipative, World.Embodied, World.ArisingEmbodied, World.rests_unrefuted, World.RestsFrom, World.rests_unrefuted_iff, World.arising_unrefuted_covering to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Finite, World.Balanced, World.Dissipative, World.Embodied, World.ArisingEmbodied, World.rests_unrefuted, World.RestsFrom, World.rests_unrefuted_iff, World.arising_unrefuted_covering to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in the correspondence the retired label G0 reads living significance and 'the author's reading' reads 'a reading (the AI's)'; Ren's quoted words are kept verbatim and the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的退役标签 G0 改为生生之意义，“作者的读法”改为“读法（AI 的）”；Ren 的引语原样保留，定律不变。"
     }
   ],
   "text_versions": [

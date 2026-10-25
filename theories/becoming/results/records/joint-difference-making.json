@@ -231,8 +231,8 @@
     "en": "Add finer attribution as another reading and compare it with the relational reading; explain how, under overdetermination, the judgment that a joint activity consumes reaches each participant."
   },
   "correspondence": {
-    "zh": "but-for 检验与关系读法回答不同的问题：前者问扣除一方的部分是否改变结果，后者问一方实际参与了什么及该条件的去向。多重决定的情形正是“我的一份无关紧要”这一推理的形式。两者都不是因果理论，也不推出责任或义务。关于集体伤害与过度决定的哲学讨论（如 Parfit、Kagan，作者据先前知识，本次未新读）是对照。“but-for 不能代替参与”只对单一部分的、整段层面的检验证明；步层面的检验挑出断裂事件，NESS 一类检验是另外的对手。",
-    "en": "The but-for test and the relational reading answer different questions: whether withholding a party's part changes the outcome, and what a party actually took part in and where the condition went. The overdetermined case is the form of “my share makes no difference”. Neither is a causal theory, and neither yields responsibility or duty. Philosophical work on collective harm and overdetermination (for example Parfit and Kagan, from the author's prior knowledge, not newly read) is the comparison. That “but-for cannot replace participation” is shown only for the single-part, run-level test; the step-level test picks out the breaking event, and NESS-type tests are further rivals."
+    "zh": "but-for 检验与关系读法回答不同的问题：前者问扣除一方的部分是否改变结果，后者问一方实际参与了什么及该条件的去向。多重决定的情形正是“我的一份无关紧要”这一推理的形式。两者都不是因果理论，也不推出责任或义务。关于集体伤害与过度决定的哲学讨论（如 Parfit、Kagan，AI 据先前知识，本次未新读）是对照。“but-for 不能代替参与”只对单一部分的、整段层面的检验证明；步层面的检验挑出断裂事件，NESS 一类检验是另外的对手。",
+    "en": "The but-for test and the relational reading answer different questions: whether withholding a party's part changes the outcome, and what a party actually took part in and where the condition went. The overdetermined case is the form of “my share makes no difference”. Neither is a causal theory, and neither yields responsibility or duty. Philosophical work on collective harm and overdetermination (for example Parfit and Kagan, from the AI's prior knowledge, not newly read) is the comparison. That “but-for cannot replace participation” is shown only for the single-part, run-level test; the step-level test picks out the breaking event, and NESS-type tests are further rivals."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean",
   "aliases": [
@@ -637,6 +637,10 @@
     {
       "en": "2026-10-20: 95 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/9a2446804d8fd5a4/joint-difference-making.json and in git.",
       "zh": "2026-10-20：95 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/9a2446804d8fd5a4/joint-difference-making.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): 'the author's prior knowledge' in the correspondence reads 'the AI's', the claim from prior knowledge keeping its AI label. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中“作者据先前知识”改为“AI 据先前知识”，依先前知识之说保留其 AI 标签。规律未变。"
     }
   ],
   "text_versions": [

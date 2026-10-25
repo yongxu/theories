@@ -5,7 +5,7 @@
 
 `which-links-a-closure-needs` · **recorded-checked** · theorem · F01 · [record](which-links-a-closure-needs.json) · [register](../../../../RESULTS.md)
 
-> A cut leaves every closure as it was exactly where each removed link is bypassed, and a join adds exactly what passes through it. In a world grown by attachment every condition is needed; one added condition frees exactly the grown ones it crosses.
+> A cut leaves every closure as it was exactly where each removed link is bypassed, and a join adds exactly what passes through it. In a world grown by attachment every condition a formation takes part in is needed; one added condition frees exactly the grown ones it crosses.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -94,6 +94,7 @@ Aliases: `which links a closure needs`, `闭包需要哪些联系`, `cut changes
 - 19 October 2026, K3 (Ren: "please finish it"): Cuts.lean re-pointed after reading the change: Flow.GrownBy.cond_ne now reaches its same-orientation case through Cuts.Attaches.listed_once, so no theorem of Becoming.Cuts stands apart; no statement changed. Core receipt 20261019T055924.801141Z; study section 191 (addendum) and the chapter's sections 8.2 and 9 re-pointed with it. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 21 October 2026, EC1 (study section 307): declarations moved with their full names: ClosedUnder, WithinClosure to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the statement names the conditions the law covers, every condition a formation takes part in, as the Lean states, instead of every condition. No law changed.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](which-links-a-closure-needs.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -103,4 +104,4 @@ Aliases: `which links a closure needs`, `闭包需要哪些联系`, `cut changes
 
 </details>
 
-Documentary review UTC: `2026-10-19T06:01:48+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

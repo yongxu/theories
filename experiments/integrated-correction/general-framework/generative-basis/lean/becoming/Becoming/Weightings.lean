@@ -314,8 +314,8 @@ order every standpoint shares when each weighs what can form in its own way.
   many of its listed items the course admits (`Weighting.level`). A sum of a strictly increasing
   transform of levels ranks every widening higher (`Weighting.prior_lt_of_widens`). A transform
   strictly concave up to a bound (`Weighting.ConcaveTo`; none is strictly concave on all whole
-  numbers) ranks higher a course that moves one step of continuation from a formation at a higher
-  level to one at a lower, a comparison C leaves mixed (`Weighting.prior_transfer`; in
+  numbers) ranks higher a course that moves one step of continuation from a formation to one at
+  least two levels below it, the higher within the bound, a comparison C leaves mixed (`Weighting.prior_transfer`; in
   `LevelTransfer` the sum of levels ties the two courses and a convex transform ranks them the
   other way). A transform that rises no further from a threshold weighs alike two courses whose
   levels differ only at or above it (`Weighting.sufficient_ties`).
@@ -381,7 +381,7 @@ Read a grade's positivity as standing (whether a formation counts) and the grade
 much): the step, applied to two-valued significance, makes standing invariant and leaves status
 to each standpoint; status invariant is a further premise. Read a formation's level as how long
 its continuation is admitted: priority to the worse off agrees with C wherever C ranks and
-decides transfers C leaves mixed; a threshold of sufficiency is a denial of scope above it.
+decides transfers C leaves mixed; a threshold of sufficiency is read as a denial of scope above it.
 
 What is not derived: whether the self's presupposition is held de se; that a standpoint's order
 is increasing in admission (monotonicity, and that it counts every item, are supplied; additivity
@@ -6318,7 +6318,7 @@ theorem prior_transfer {n : Nat} {f : Nat → Nat} (concave : ConcaveTo n f) {g 
 def SufficientAt (θ : Nat) (f : Nat → Nat) : Prop :=
   ∀ k, θ ≤ k → f k = f θ
 
-/-- **A threshold of sufficiency denies scope above it.** Where every listed formation's level is
+/-- **A threshold of sufficiency weighs alike above it.** Where every listed formation's level is
 the same in two courses or at least `θ` in both, a transform sufficient at `θ` weighs them alike:
 continuation beyond enough is not counted. -/
 theorem sufficient_ties {θ : Nat} {f : Nat → Nat} (sufficient : SufficientAt θ f) {gs : List F}

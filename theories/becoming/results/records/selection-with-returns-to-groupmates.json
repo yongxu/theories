@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T12:36:50+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
-    "en": "Where each unit kept gives b to every member of the keeper's group and takes c from the keeper, the whole selects for keeping exactly where b + c times the spread falls short of m b times the spread among groups: Hamilton's rule, with the assortment that share.",
-    "zh": "每保留一单位给保留者之组每个成员 b、从保留者取走 c 时，整体恰在 b + c 乘离散小于 m b 乘组间离散时选择保留：即以该份额为同类聚合的 Hamilton 规则。"
+    "en": "Where each unit kept gives b to every other member of the keeper's group and takes c from the keeper, in groups of m members, the whole selects for keeping exactly where b + c times the whole's spread falls short of m b times the spread among groups: Hamilton's rule, with the assortment that share.",
+    "zh": "每保留一单位给保留者之组每个其他成员 b、从保留者取走 c 时，在 m 个成员的等大之组中，整体恰在 b + c 乘整体离散小于 m b 乘组间离散时选择保留：即以该份额为同类聚合的 Hamilton 规则。"
   },
   "laws": [
     {
@@ -27,8 +27,8 @@
       ]
     },
     {
-      "en": "Within groups where each unit a member keeps gives b to every member of its group, own included, and takes c from the keeper, the offspring number goes against the amount by b + c times the groups' own spreads, so selection within goes against keeping wherever a group varies in it; the whole's spread is k times the groups' own spreads with the spread among them.",
-      "zh": "成员每保留一单位给其组每个成员（含自身）b、从保留者取走 c 时，组内后代数以 b + c 乘各组自身离散不利于该量，故凡组内有差异处组内选择不利于保留；整体离散为 k 乘各组自身离散加组间离散。",
+      "en": "Within groups where each unit a member keeps gives b to every other member of its group and takes c from the keeper, the offspring number goes against the amount by b + c times the groups' own spreads, so selection within goes against keeping wherever a group varies in it and b + c is positive; the whole's spread is the number of groups times the groups' own spreads with the spread among them.",
+      "zh": "成员每保留一单位给其组每个其他成员 b、从保留者取走 c 时，组内后代数以 b + c 乘各组自身离散不利于该量，故凡组内有差异且 b + c 为正处组内选择不利于保留；整体离散为组数乘各组自身离散加组间离散。",
       "declarations": [
         "Becoming.SelectionLevels.spread_levels",
         "Becoming.SelectionLevels.within_returns",
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "en": "Among the groups, read by their totals, selection goes for keeping exactly where b + c falls short of m times b times the spread among them.",
+      "en": "Among the groups, read by their totals, selection goes for keeping exactly where b + c times the spread among them falls short of m times b times it.",
       "zh": "组间按总量读时，选择恰在 b + c 乘组间离散小于 m 乘 b 乘它时有利于保留。",
       "declarations": [
         "Becoming.SelectionLevels.among_returns",
@@ -44,8 +44,8 @@
       ]
     },
     {
-      "en": "The whole selects for keeping exactly where b + c times its spread falls short of m b times the spread among groups: with the assortment the share of the spread among groups, Hamilton's rule. Groups uniform in the amount select for it exactly where b (m - 1) exceeds c; groups alike in total never do; over generations with exact transmission the mean rises across a step exactly so.",
-      "zh": "整体恰在 b + c 乘其离散小于 m b 乘组间离散时选择保留：以组间离散所占份额为同类聚合，即 Hamilton 规则。在该量上均匀之组恰在 b (m - 1) 超过 c 时选择它；总量相同之组从不选择它；传递精确时，均值跨一步恰如此上升。",
+      "en": "The whole selects for keeping exactly where b + c times its spread falls short of m b times the spread among groups: with the assortment the share of the spread among groups, Hamilton's rule. Groups uniform in the amount and differing in it select for it exactly where b (m - 1) exceeds c; groups alike in total never do; over generations with exact transmission the mean rises across a step exactly so.",
+      "zh": "整体恰在 b + c 乘其离散小于 m b 乘组间离散时选择保留：以组间离散所占份额为同类聚合，即 Hamilton 规则。在该量上均匀而彼此不同之组恰在 b (m - 1) 超过 c 时选择它；总量相同之组从不选择它；传递精确时，均值跨一步恰如此上升。",
       "declarations": [
         "Becoming.SelectionLevels.rises_iff_returns",
         "Becoming.SelectionLevels.rises_iff_returns_of_uniform",
@@ -72,8 +72,8 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Offspring numbers depend on own and groupmates' amounts additively, each unit kept giving b to every member of the keeper's group, own included, and taking c from the keeper; groups of equal size; for the step law, exact transmission.",
-      "zh": "不加公理。后代数可加地依赖自身与组员之量：每保留一单位给保留者之组每个成员（含自身）b、从保留者取走 c；各组大小相等；跨一步的定律需传递精确。"
+      "en": "No axiom. Offspring numbers depend on own and groupmates' amounts additively, each unit kept giving b to every other member of the keeper's group and taking c from the keeper; groups of equal size; for the step law, exact transmission.",
+      "zh": "不加公理。后代数可加地依赖自身与组员之量：每保留一单位给保留者之组每个其他成员 b、从保留者取走 c；各组大小相等；跨一步的定律需传递精确。"
     }
   ],
   "does_not_show": [
@@ -340,7 +340,7 @@
         "Becoming.SelectionLevels.within_none_of_uniform",
         "Becoming.SelectionLevels.within_returns"
       ],
-      "sha256": "f6cb9359ec15d601e97d1e4768fa197293d3092581c5202207eadcadc74baa55"
+      "sha256": "0ecc85e079993dbe5dd62c459262a0e9ddea52cff1467e3191cf152f80a93687"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -389,12 +389,18 @@
       "role": "receipt",
       "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -418,6 +424,10 @@
     {
       "en": "22 October 2026: added (EV12), selection with returns to groupmates: within against keeping, among for it exactly where b + c falls short of m b, the whole by Hamilton's rule with the assortment the share of the spread among groups; study section 353.",
       "zh": "2026年10月22日：新增（EV12），组员间回报下的选择：组内不利于保留，组间恰在 b + c 小于 m b 时有利于它，整体按以组间离散份额为同类聚合的 Hamilton 规则；研究第 353 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the returns stated as the Lean states them, each unit kept giving b to every other member of the group and taking c from the keeper, in the statement, the second law and the hypothesis, where they had read b to every member, own included, with c from the keeper; the third law keeps the spread on its left side; the uniform case needs the groups to differ; within-group selection needs b + c positive; the number of groups named for k. No law changed in its declarations.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：回报按 Lean 的陈述改写：每保留一单位给组内每个其他成员 b、从保留者取走 c，陈述、第二条规律与假设同改，原文误作给每个成员含自身 b、从保留者取走 c；第三条规律左边保留离散；均匀情形需各组彼此不同；组内选择需 b + c 为正；k 写明为组数。规律的声明未变。"
     }
   ]
 }

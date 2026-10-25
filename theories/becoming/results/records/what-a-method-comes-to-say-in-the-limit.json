@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T13:11:06+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
-    "en": "A method fixed by the record verifies in the limit unions of closed readings and refutes meets of open ones. Settling is verified in the limit, at no finite stretch; recurrence is refuted in the limit and, under Markov's principle, verified there by no method.",
-    "zh": "由记录确定的方法在极限中证实闭读法之并、否证开读法之交。止定在极限中被证实，而不在任何有限片段；复现在极限中被否证，在马尔可夫原则下没有方法在极限中证实它。"
+    "en": "A reading verified in the limit by a method fixed by the record is a union of closed readings; one refuted, a meet of open ones. With configurations told apart settling is verified in the limit; recurrence of Boolean moves is refuted there and, under Markov's principle, verified by no such method.",
+    "zh": "由记录确定的方法在极限中证实的读法是闭读法之并，在极限中否证的读法是开读法之交。构型可区分时，止定在极限中被证实；布尔动作的复现在极限中被否证，在马尔可夫原则下没有这样的方法在极限中证实它。"
   },
   "laws": [
     {
@@ -486,6 +486,10 @@
     {
       "en": "2026-10-20: 13 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/50a755cdaf9d8aba/what-a-method-comes-to-say-in-the-limit.json and in git.",
       "zh": "2026-10-20：13 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/50a755cdaf9d8aba/what-a-method-comes-to-say-in-the-limit.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement gives the direction the Lean proves (a reading verified in the limit is a union of closed readings, one refuted a meet of open ones; the converse is a scope item), names the told-apart configurations settling takes, and confines recurrence to Boolean moves; the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述给出 Lean 所证的方向（在极限中被证实的读法是闭读法之并，被否证者是开读法之交；其逆属范围项），写明止定所需的构型可区分，并把复现限于布尔动作；定律不变。"
     }
   ],
   "text_versions": [

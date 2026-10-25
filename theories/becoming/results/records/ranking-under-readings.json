@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-14T03:30:00+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
     "zh": "对每个继续族，一条定律恰好说明更新每个条件的继续在两种 living 读法下何时扩展另一个。逐步读法下 C 保持共享优于以消耗取胜、节制优于过度汲取，而过度汲取者在损失前有被记入的事件时，不再保持其不在场更好；可能性读法三者都保持。",
     "en": "For every family of courses, a law says exactly when a renewing course extends another under either living reading. Stepwise C keeps sharing above winning by consumption and restraint above overdraw, not the absence of an overdrawer included before the loss; the possibility reading keeps all three."
@@ -255,8 +255,8 @@
       "en": "The restraint conclusion is proved only in the two-part family (the focal and the sustaining formation) and for a stopping law that meets every need at every step; with one more formation sharing the condition it can fail (ThirdParty)."
     },
     {
-      "zh": "可能性读法与可能性优先是定义；possible_extends_iff 以公理 Unrestricted 为假设，可能性读法的其余结论不用它；可能性读法只在同一定律的两个继续上与保留、增加等同。",
-      "en": "The possibility reading and possibilities first are definitions; possible_extends_iff takes the axiom Unrestricted as a hypothesis, and the other conclusions of the possibility reading do not use it; the possibility reading coincides with retaining and adding only for two courses of one law."
+      "zh": "可能性读法与可能性优先是定义；possible_extends_iff 以延续条件 Unrestricted 为假设，可能性读法的其余结论不用它；可能性读法只在同一定律的两个继续上与保留、增加等同。",
+      "en": "The possibility reading and possibilities first are definitions; possible_extends_iff takes the continuation condition Unrestricted as a hypothesis, and the other conclusions of the possibility reading do not use it; the possibility reading coincides with retaining and adding only for two courses of one law."
     }
   ],
   "does_not_show": [
@@ -347,8 +347,8 @@
     "zh": "条件之下 L 的形式；独立审查。"
   },
   "correspondence": {
-    "zh": "两个排序在逐步读法下分道。若 G0 与 C 共用逐步读法，C 仍把共享排在以消耗取胜之上，却不再把没有恶性增殖的继续排得更高；整段读法两者都保持，但不满足独立审查的判据 (b) 与 (c)。若 G0 的记入取逐步读法而 C 取整段读法，两者都保持，但 G0 与 C 不再共用一种 living 读法：形式上两者各以读法为参数，前提卡上 C 所说的“活的内容”却是 G0 的 living，分开取须公开。生生读作生成者生成新的生成，其方向以能形成者的扩大比较（DELEGATED-CHOICES D1，经修订由 Ren 2026-10-18 取）。可能性读法的解读（AI 论证，依 Ren 的交托采用）：它读“有意义的，就是能形成的”与 Ren 的“more possibilities of becoming”；它计能形成的，不计形成了的。在公理之下 C 以可能性读，排序来自部分失去的，而不是不计形成本身；Ren 2026-10-11 把比较的方式交 AI 决定（“Comparing courses - you decide”）：继续之间以可能性比较，理由见章节 §6.5。",
-    "en": "The two rankings part ways under the stepwise reading. If G0 and C share the stepwise reading, C still ranks sharing above winning by consumption but no longer ranks the continuation without malignant growth higher; the whole-run reading keeps both but does not meet the independent review's criteria (b) and (c). If G0 takes the stepwise reading and C the whole-run reading, both are kept, but G0 and C no longer share one reading of living: formally each takes its reading as a parameter, while the premise card reads C's “living content” as G0's living, so a split must be disclosed. 生生 reads as generation generating generation, its direction compared by widening what can form (DELEGATED-CHOICES D1, revised and taken by Ren on 18 October 2026). The interpretation of the possibility reading (an AI argument, adopted on Ren's delegation): it reads “what has significance is what can form” and Ren's “more possibilities of becoming”; it counts what can form, not what does. Under the axiom C is read on possibilities, and the ranking comes from what the part loses, not from discounting the formation itself; Ren left the comparison of courses to the AI on 11 October 2026 (“Comparing courses - you decide”): courses are compared on possibilities, for the reasons in chapter section 6.5."
+    "zh": "两个排序在逐步读法下分道。若生生之意义与 C 共用逐步读法，C 仍把共享排在以消耗取胜之上，却不再把没有恶性增殖的继续排得更高；整段读法两者都保持，但不满足独立审查的判据 (b) 与 (c)。若生生之意义的记入取逐步读法而 C 取整段读法，两者都保持，但生生之意义与 C 不再共用一种 living 读法：形式上两者各以读法为参数，前提卡上 C 所说的“活的内容”却是生生之意义的 living，分开取须公开。生生读作生成者生成新的生成，其方向以能形成者的扩大比较（DELEGATED-CHOICES D1，经修订由 Ren 2026-10-18 取）。可能性读法的解读（AI 论证）：它读“有意义的，就是能形成的”与 Ren 的“more possibilities of becoming”；它计能形成的，不计形成了的。在延续条件之下 C 以可能性读，排序来自部分失去的，而不是不计形成本身；Ren 2026-10-11 把比较的方式交 AI 决定（“Comparing courses - you decide”）：继续之间以可能性比较，理由见章节 §6.5。",
+    "en": "The two rankings part ways under the stepwise reading. If living significance and C share the stepwise reading, C still ranks sharing above winning by consumption but no longer ranks the continuation without malignant growth higher; the whole-run reading keeps both but does not meet the independent review's criteria (b) and (c). If living significance takes the stepwise reading and C the whole-run reading, both are kept, but living significance and C no longer share one reading of living: formally each takes its reading as a parameter, while the premise card reads C's “living content” as the living of living significance, so a split must be disclosed. 生生 reads as generation generating generation, its direction compared by widening what can form (DELEGATED-CHOICES D1, revised and taken by Ren on 18 October 2026). The interpretation of the possibility reading (an AI argument): it reads “what has significance is what can form” and Ren's “more possibilities of becoming”; it counts what can form, not what does. Under the continuation condition C is read on possibilities, and the ranking comes from what the part loses, not from discounting the formation itself; Ren left the comparison of courses to the AI on 11 October 2026 (“Comparing courses - you decide”): courses are compared on possibilities, for the reasons in chapter section 6.5."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
   "aliases": [
@@ -474,21 +474,21 @@
       "id": "continuation-condition-yields-living-significance",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "possible_extends_iff 以公理 Unrestricted 为假设。",
-        "en": "possible_extends_iff takes the axiom Unrestricted as a hypothesis."
+        "zh": "possible_extends_iff 以延续条件 Unrestricted 为假设。",
+        "en": "possible_extends_iff takes the continuation condition Unrestricted as a hypothesis."
       },
       "interface": {
         "output": {
-          "zh": "公理。",
-          "en": "The axiom."
+          "zh": "延续条件。",
+          "en": "The continuation condition."
         },
         "input": {
-          "zh": "在公理之下按可能性读法的扩展就是保留且增加。",
-          "en": "Under the axiom, extension under the possibility reading is retaining and adding."
+          "zh": "在延续条件之下按可能性读法的扩展就是保留且增加。",
+          "en": "Under the continuation condition, extension under the possibility reading is retaining and adding."
         },
         "conditions": {
-          "zh": "公理 Unrestricted；同一定律的两个继续。",
-          "en": "The axiom Unrestricted; two courses of one law."
+          "zh": "延续条件 Unrestricted；同一定律的两个继续。",
+          "en": "The continuation condition Unrestricted; two courses of one law."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean"
       }
@@ -721,7 +721,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.Web.Retains",
         "Becoming.Web.Adds",
@@ -935,6 +935,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -982,7 +988,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1101,6 +1107,10 @@
     {
       "en": "21 October 2026, J1S: whether J1 yields \"better without malignant growth\" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.",
       "zh": "2026年10月21日，J1S：J1 能否逐步给出“没有恶性增殖更好”已回答（记录 basic-priority-step-by-step，研究第 320 节）；下一步如此说明。其规律不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: 'the axiom' in the hypotheses, dependency interfaces and correspondence reads 'the continuation condition', and readings are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim; then the retired label G0 in the correspondence (the two readings of living and C, and the premise card's living content) replaced by living significance; the name J1, of one practical commitment, kept as the chapters use it. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：假设、依赖接口与对应中的“公理”改为“延续条件”，读法标为 AI 的读法，不再写“依 Ren 的交托采用”，引语原样保留；随后对应中已退役的标签 G0（living 与 C 的两种读法、前提卡上的活的内容）改为生生之意义；指单个实践承诺的名称 J1 依章节用法保留。规律未变。"
     }
   ],
   "text_versions": [

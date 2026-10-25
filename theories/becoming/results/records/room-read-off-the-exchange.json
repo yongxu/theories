@@ -165,8 +165,8 @@
     "zh": "一个过程上的最优：优化者每步重新选择，其余者回应，之外更新；由构成之律得出容量；独立审查。"
   },
   "correspondence": {
-    "en": "Zhuang and Hadfield-Menell (NeurIPS 2020) assume, for their Theorem 1, a resource constraint strictly increasing in each attribute: room, supplied. Here it is read off conservation per member with capacity, the rest exchanging as it does. Saturation at an optimum is the saturated cut of a maximum flow (Ford and Fulkerson 1956) and the binding constraints of a corner solution. Reading (the AI's): at an optimum the drain at a condition beyond is the part's capacity there or all that stands, whichever is less; what the order registers of the beyond does not enter, what the part can take does.",
-    "zh": "Zhuang 与 Hadfield-Menell（NeurIPS 2020）的定理 1 假设资源约束在每个属性上严格递增：即给定的余地。此处它从每个成员的守恒与容量读出，其余者照常交换。最优处的饱和即最大流的饱和割（Ford 与 Fulkerson 1956）与角点解的紧约束。读法（AI 的）：最优处之外某条件的抽干，是部分在那里的容量与那里所有者中较小者；序对之外记录什么不进入，部分能取什么进入。"
+    "en": "Zhuang and Hadfield-Menell (NeurIPS 2020) assume, for their Theorem 1, a resource constraint strictly increasing in each attribute: room, supplied. Here it is read off conservation per member with capacity, the rest exchanging as it does. Saturation at an optimum is the saturated cut of a maximum flow (Ford and Fulkerson 1956) and the binding constraints of a corner solution. Reading (the AI's): at an optimum the drain at a condition beyond is the part's capacity there or all that stands, whichever is less; what of the beyond couples into the order does not enter, what the part can take does.",
+    "zh": "Zhuang 与 Hadfield-Menell（NeurIPS 2020）的定理 1 假设资源约束在每个属性上严格递增：即给定的余地。此处它从每个成员的守恒与容量读出，其余者照常交换。最优处的饱和即最大流的饱和割（Ford 与 Fulkerson 1956）与角点解的紧约束。读法（AI 的）：最优处之外某条件的抽干，是部分在那里的容量与那里所有者中较小者；之外何者耦合入序不进入，部分能取什么进入。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
   "aliases": [
@@ -669,6 +669,10 @@
     {
       "en": "25 October 2026, UE1b (board rule 9): Optimum.Above.full, Optimum.Above.floor_or_full and Optimum.optimum_beyond are now corollaries of Optimum.Above.full_of_ranked, Optimum.Above.floor_or_full_of_ranked and Optimum.beyond_of_ranked, which take as hypothesis that the order ranks above the optimum the outcome with one unit moved from the condition beyond into the family, in place of the rising order; the three are added to the fourth law and its references; statements and this record's laws unchanged. Optimum.lean rebound to core receipt 20261025T173410.671057Z after reading the change (record what-a-set-point-optimum-does-beyond, study section 415).",
       "zh": "2026年10月25日，UE1b（看板规则 9）：Optimum.Above.full、Optimum.Above.floor_or_full 与 Optimum.optimum_beyond 现为 Optimum.Above.full_of_ranked、Optimum.Above.floor_or_full_of_ranked 与 Optimum.beyond_of_ranked 的推论；后三者以其序把自之外该条件移入族一单位的结果排在最优之上为假设，代替升高的序；三者加入第四条定律及其引用；陈述与本记录的定律不变。读过改动后 Optimum.lean 改绑核心回执 20261025T173410.671057Z（记录 what-a-set-point-optimum-does-beyond，研究第 415 节）。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired registration word in the correspondence's reading ('what the order registers of the beyond') reads in the coupling vocabulary ('what of the beyond couples into the order'); the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应之读法中退役的登记用语（“序对之外记录什么”）改用耦合之词（“之外何者耦合入序”）；定律不变。"
     }
   ]
 }

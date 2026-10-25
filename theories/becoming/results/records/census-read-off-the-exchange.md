@@ -5,13 +5,13 @@
 
 `census-read-off-the-exchange` · **recorded-checked** · theorem · F01 · [record](census-read-off-the-exchange.json) · [register](../../../../RESULTS.md)
 
-> Read off the exchange, the relata that exchange are listed with no decision procedure wherever a named family closes each step; every finite world has a census with its rest counted. No census fails at any step, and asking one at every step of every flow over Nat is LPO.
+> Where participants are listed once at each step, the exchanging relata are listed with no decision procedure wherever a named family closes each step, and every finite world has a census with its rest counted; a census missing at a step is refuted, and one at each step of every flow over Nat is LPO.
 
 <a id="laws--规律"></a>
 ## Laws
 
 1. Whether a formation exchanges with some member of a list is decided by going through the list; where a family closes a step, a formation exchanges exactly where it takes part and exchanges within the family, so the formations taking part, listed once, are kept to those that exchange: a census read off the exchange, with no decision procedure supplied. (`Becoming.Flow.ExchangesWithin`, `Becoming.Flow.exchangesWithin_decided`, `Becoming.of_not_not`, `Becoming.Flow.exchanging_iff_within`, `Becoming.Flow.listed_at_of_closed`, `Becoming.Flow.listed_at_of_enclosed`, `Becoming.Flow.readOff_census_of_closed`)
-2. With the rest counted, every world whose formations taking part are listed once and whose steps a named family closes has a census; every finite world does, where World.Finite.counted needed activity decided. (`Becoming.World.withRest_counted`, `Becoming.World.Finite.withRest_counted`)
+2. With the rest counted, every world whose formations taking part are listed once and whose steps a named family closes has a census; so does every finite world whose formations taking part are listed once, where World.Finite.counted needed activity decided. (`Becoming.World.withRest_counted`, `Becoming.World.Finite.withRest_counted`)
 3. Without enclosure, that a world read off an exchange fails a census at a step is refuted: of a list without repetition, the members meeting any property cannot fail to be listable. (`Becoming.listed_of_em`, `Becoming.not_not_listed`, `Becoming.Flow.not_not_listed_at`)
 4. A census at every step of every flow over Nat with its formations listed once is exactly LPO: under marking s a formation exchanges exactly where s marks something. (`Becoming.Flow.marking`, `Becoming.Flow.cond_pos`, `Becoming.Flow.marking_exchanging`, `Becoming.Flow.memDecided`, `Becoming.Flow.listed_iff_lpo`)
 5. Enclosure is not read off: read off the spreading law, which gives every relatum a unit, the rest is idle and no step is enclosed, and the world has a census all the same. (`Becoming.ExchangeLaw.spreading`, `Becoming.ExchangeLaw.spreadingWorld`, `Becoming.ExchangeLaw.spreading_closed`, `Becoming.ExchangeLaw.origin`, `Becoming.ExchangeLaw.optionIndex`, `Becoming.ExchangeLaw.spreading_not_enclosed`, `Becoming.ExchangeLaw.spreading_counted`)
@@ -84,6 +84,7 @@ The first open target of chapter §8.1, the deductive necessity of the whole, ha
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `census read off the exchange`, `从交换读出的普查`, `Becoming.Flow.readOff_census_of_closed`, `Becoming.World.Finite.withRest_counted`, `Becoming.Flow.listed_iff_lpo`
 
@@ -94,6 +95,7 @@ Aliases: `census read off the exchange`, `从交换读出的普查`, `Becoming.F
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: Premises.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (ExchangePremises.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Change.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; ExchangePremises.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Reading.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the statement and the second law said every finite world has a census with its rest counted; the Lean takes the formations taking part listed once at each step, and the statement now leads with that condition, which also bears on the refuted failure of a census; the failure is stated as refuted rather than as no census failing.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](census-read-off-the-exchange.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -103,4 +105,4 @@ Aliases: `census read off the exchange`, `从交换读出的普查`, `Becoming.F
 
 </details>
 
-Documentary review UTC: `2026-10-19T10:06:36+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:43:25+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

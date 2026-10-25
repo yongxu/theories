@@ -9,7 +9,7 @@
 
 Editable record: [separation-loses-the-relation.json](separation-loses-the-relation.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-20T07:47:06+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
@@ -25,7 +25,7 @@ Canonical source: [Description.lean](../../../../experiments/integrated-correcti
 - relation_persists needs f and g to merge nothing that occurs (a local condition, written into the theorem).
 - For the witnesses: parity, copying and couple are on Bool.
 
-The first part of P70 (work board), following Ren's “push the frontier, as far as possible” of 12 October 2026, answering Ren's “the framing may lose something” and “what makes a pair, a pair?”: what describing the parts separately deducts is exactly the relation; “what can go together” is the record at a moment of “how they go on”. Readings (the AI's, adopted on Ren's delegation; Ren agreed with the reply containing them): a correlation is the memory of a meeting; 三生万物 read as three being the least number at which a whole holds a relation no part holds. The other way parts fail a whole (parts allowing what no whole has) is no_whole of contextual-registration, on the same three pairs. See §94 of the integration note.
+The first part of P70 (work board), following Ren's “push the frontier, as far as possible” of 12 October 2026, answering Ren's “the framing may lose something” and “what makes a pair, a pair?”: what describing the parts separately deducts is exactly the relation; “what can go together” is the record at a moment of “how they go on”. Readings (the AI's, adopted on Ren's delegation; Ren agreed with the reply containing them): a correlation is the memory of a meeting; 三生万物 read as three being the least number at which a whole holds a relation no part holds. The other way parts fail a whole (parts allowing what no whole has) is no_whole of claims-shown-in-context, on the same three pairs. See §94 of the integration note.
 
 <a id="检验与边界-validation-and-boundaries"></a>
 ## Validation and boundaries
@@ -103,4 +103,5 @@ Aliases: `Becoming.Rectangular`, `Becoming.Separated`, `Becoming.separation_fait
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Courses.lean, Description.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Courses.lean, takes as its final sections RetrodictionRuns, CandidateRuns, ReducedRuns, the modules reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Description.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one limitations clause rewritten within the growth ratchet (this record is not in SA1's table; the match is LK1's judgment). The claim and its premises are unchanged.
+- 25 October 2026, board item DF (study section 418): the correspondence names the record by its current id, claims-shown-in-context, for its former id; nothing else changed.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](separation-loses-the-relation.json).

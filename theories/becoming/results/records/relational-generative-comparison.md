@@ -7,7 +7,7 @@
 
 Editable record: [relational-generative-comparison.json](relational-generative-comparison.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-08T12:45:14.926134+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T17:02:48+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
@@ -31,7 +31,7 @@ Retention and release concern a coupling within one unfolding; left and right ar
 
 Credits this round's successful Lean 4.29.1 receipt: 6 new theorems/12 declaration audits, all new dependencies empty; 16 inherited theorems/48 audits are separate, and 3 application controls are not recounted. Independent review matched 3 sources, 2 checker helpers and 23 artifacts without a second compiler run. Registration does not recompile.
 
-Excludes only strict comparison through the declared summary, not all scalar evaluation or relationally adequate local analysis. It proves neither preservation of every coupling, premise-free C/G0 nor completed universal ethics, and imposes no gate of complete decidable identification or universal recognition.
+Excludes only strict comparison through the declared summary, not all scalar evaluation or relationally adequate local analysis. It proves neither preservation of every coupling, premise-free C or living significance nor completed universal ethics, and imposes no gate of complete decidable identification or universal recognition.
 
 - retainedLeft is an admissible left-only history under the same law; joint possibility does not force actual joint realization. [RelationalGrounding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalGrounding.lean)
 - Preserving the existence of all bundles does not guarantee unchanged probability, reliability, burdens or past losses; arbitrary joint-realizability structure does not directly determine complete generative ethical quality. [RELATIONAL-GROUNDING-INTEGRATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RELATIONAL-GROUNDING-INTEGRATION.md)
@@ -41,7 +41,7 @@ Excludes only strict comparison through the declared summary, not all scalar eva
 
 No dependency on another migrated record is asserted; source imports and supplied premises remain in scope.
 
-- Related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). Interpretive connection: the established explicit G0/J route explains C's practical role; this record is not a direct Lean input to the composition.
+- Related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). Interpretive connection: the established conditional alignment route explains C's practical role; this record is not a direct Lean input to the composition.
 - Related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Interpretive connection: the cross-intelligence direction likewise must retain actual relations and losses; deployment reliability and behavioral convergence are not proved here.
 
 **Used by:** [classification-robust-generative-comparison](classification-robust-generative-comparison.md) · [wisdom-root](wisdom-root.md) (interpretive)
@@ -93,4 +93,5 @@ Aliases: `RelationalGrounding.released_profiles_are_carried`, `RelationalGroundi
 - 18 October 2026, F3J, the port of the judgment and comparison family into the core (Ren: "work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification"): the core counterparts of the cited periphery and bridge declarations are cited (8 in Becoming.Bundles; 2 in Becoming.Metaethics), graded in development/bridge-fold/port-j.md; the periphery stays cited until the sweep retires it. Canonical source moved from RelationalGrounding.lean to Bundles.lean. A port restates; the claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Bundles.lean, ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Bundles.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, GenerativeComparison, JointContinuationClassification and RelationalGrounding) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Bundles, Becoming.Extension and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives and Becoming.Metaethics, which this record does not cite with declarations. 1 aliases naming retired declarations are marked "(retired module)". The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired labels named in current terms: the G0/J route in a related detail as the conditional alignment route, and G0 in the limitations as living significance; the claim is unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](relational-generative-comparison.json).

@@ -2640,7 +2640,7 @@
     "nearest": [
      "Becoming.Flow.restores",
      "Becoming.Flow.excess_lowers",
-     "Becoming.Widening.closes_within"
+     "Becoming.LoopReturn.closes_within"
     ],
     "why_it_matters": "It would give 冲气以为和 a checked reading as regulation by opposed couplings, without reading 和 as a property of the whole unfolding.",
     "closed": "RG (Becoming.Regulation, record two-sided-regulation-and-late-reading), as stated for one condition, with the bound read as no overshoot: the exchange is within the gap to m on both sides exactly where the next level lies between m and the level (Flow.withinGap_iff_between); with it and opposing on both sides the level is m from T plus its gap at T on (Flow.regulates, Flow.settles); (iii) is not needed, since at m the bound itself keeps the level at m (Flow.withinGap_iff_of_at). Both failures are exact: beyond the bound an opposing exchange crosses m and a witness alternates without end (Flow.crosses_of_above, Regulation.Overshooting.oscillates); with one side only the premise of Flow.restores holds and the level stays above m (Regulation.OneSided.above)."
@@ -3608,13 +3608,13 @@
      "Becoming.Flow.restores",
      "Becoming.Flow.excess_lowers",
      "Becoming.Flow.net_give_raises_at",
-     "Becoming.Widening.closes_within",
-     "Becoming.Widening.closing_needs_less"
+     "Becoming.LoopReturn.closes_within",
+     "Becoming.LoopReturn.closing_needs_less"
     ],
-    "why_it_matters": "It gives 损有馀而补不足, 张弓 (77) and 冲气以为和 (42) a checked form as the property of a coupling that reads the level on both sides with bounded correction, with exactly where it fails (one side only, overcorrection), instead of a law of the whole; it also connects the Widening loop law to levels, and is likely shared with the Ru slice's 中和.",
+    "why_it_matters": "It gives 损有馀而补不足, 张弓 (77) and 冲气以为和 (42) a checked form as the property of a coupling that reads the level on both sides with bounded correction, with exactly where it fails (one side only, overcorrection), instead of a law of the whole; it also connects the LoopReturn loop law to levels, and is likely shared with the Ru slice's 中和.",
     "closed": "RG (Becoming.Regulation, record two-sided-regulation-and-late-reading), as stated for one condition, with the bound read as no overshoot: the exchange is within the gap to m on both sides exactly where the next level lies between m and the level (Flow.withinGap_iff_between); with it and opposing on both sides the level is m from T plus its gap at T on (Flow.regulates, Flow.settles); (iii) is not needed, since at m the bound itself keeps the level at m (Flow.withinGap_iff_of_at). Both failures are exact: beyond the bound an opposing exchange crosses m and a witness alternates without end (Flow.crosses_of_above, Regulation.Overshooting.oscillates); with one side only the premise of Flow.restores holds and the level stays above m (Regulation.OneSided.above)."
    },
-   "corrected": "RG proved the two-sided law the reading named as a gap, with both of its failures; names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged"
+   "corrected": "RG proved the two-sided law the reading named as a gap, with both of its failures; DF (DEFECTS-FOUND, 06): the gap named the loop law's module by its name before R22 (Widening, now LoopReturn); names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged"
   },
   {
    "id": "lao-77-ren-zhi-dao",
@@ -6803,10 +6803,10 @@
    ],
    "atlas_ids": [],
    "relational": "The worth of force is read through what it does to the loop of force between parties: 武 is named by the stopping of 戈 passed back and forth, an act judged by the relation it ends, not by the strength of the actor. The reading is a speaker's normative gloss on a graph, made at the moment of declining to build a 京觀.",
-   "reading": "AI 读法：把“止戈”读作一环往复传递的差（兵来兵往）怎样才停。Widening 证明：环中至少有一环“回给的少于所受”，差才会关闭（closing_needs_less）；每一环都至少照原样传下去，则任何一轮都不关闭（never_closes_of_no_less）；一环全不回传是“截断”，当即关闭（cut_closes），但截断之后的环节仍可把差重新打开（cut_reopened）；回传映射处处小于所受时，差在有限轮内关闭（closes_within）。所以“止戈”在确切范围内成立：力量止住力量，只有当它成为回给更少的一环，并且此后各环不再放大。一次战胜只是截断，是否“止”取决于后续各环。没有断言：左传此句是楚庄王借字形说理，不是字源；律也不推出任何具体用兵是否正当。",
+   "reading": "AI 读法：把“止戈”读作一环往复传递的差（兵来兵往）怎样才停。LoopReturn 证明：环中至少有一环“回给的少于所受”，差才会关闭（closing_needs_less）；每一环都至少照原样传下去，则任何一轮都不关闭（never_closes_of_no_less）；一环全不回传是“截断”，当即关闭（cut_closes），但截断之后的环节仍可把差重新打开（cut_reopened）；回传映射处处小于所受时，差在有限轮内关闭（closes_within）。所以“止戈”在确切范围内成立：力量止住力量，只有当它成为回给更少的一环，并且此后各环不再放大。一次战胜只是截断，是否“止”取决于后续各环。没有断言：左传此句是楚庄王借字形说理，不是字源；律也不推出任何具体用兵是否正当。",
    "reading_en": "The spine gives the exact range of 止戈: a loop of force closes only through a link that returns less than it received, a cut closes at once but can be reopened by what follows, and where every link passes on at least what it got nothing closes; so a victory is a cut, not yet a stopping. The sentence is a speaker's gloss, not an etymology.",
    "mapper": "wen",
-   "corrected": "names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged"
+   "corrected": "DF (DEFECTS-FOUND, 06): the reading named the module of its laws by its name before R22 (Widening, now LoopReturn); the declarations already follow the rename; names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged"
   },
   {
    "id": "zuo-xuan12-qi-de-guards",
@@ -7082,14 +7082,14 @@
      "Becoming.CrossSituational.candidates_append",
      "Becoming.CrossSituational.narrows",
      "Becoming.CrossSituational.Omitted.wrong_unique",
-     "Becoming.ResponseLearning.every_generation_holds",
-     "Becoming.ResponseLearning.distinction_lost_every_generation",
+     "Becoming.ResponseLearning.every_cohort_holds",
+     "Becoming.ResponseLearning.distinction_lost_every_cohort",
      "Becoming.Confound.confounded"
     ],
     "why_it_matters": "The 止戈 reading shows a reading that writes the records later readers learn from: once taken up it confirms itself, and only records kept from before the uptake separate it from the graph's history. The spine has static records (CrossSituational), a fixed hidden variable (Confound) and faithful teaching (ResponseLearning), but no law of a resolution that produces its own evidence. Honest weight: much of it follows by composing those laws, so it is ranked below the two other gaps.",
     "closed": "SC (Becoming.SharedCodes, record a-code-formed-between-formations, study section 210); the statement above is kept as proposed, and where the laws differ from it the record and the study section say so (the coupling-closure form proposed for 名无固宜 is false, Path.never_agree)."
    },
-   "corrected": "the page quotes with “ ” (the mapper gave 「」); SC: Becoming.SharedCodes proved the code formed between formations the reading named as a gap; its laws and record added and the sentence that named the gap replaced (both languages); record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "the page quotes with “ ” (the mapper gave 「」); SC: Becoming.SharedCodes proved the code formed between formations the reading named as a gap; its laws and record added and the sentence that named the gap replaced (both languages); names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged; record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "shuowen-zhi-wei-zu-composite",
@@ -10029,7 +10029,7 @@
    "tradition": "佛教",
    "work": "六祖坛经（宗宝本，晚出层）",
    "source": "atlas-v9.1/evidence/texts/HS08.txt",
-   "locator": "行由品；般若品",
+   "locator": "行由品；懺悔品",
    "fragments": [
     "何期自性，本自清淨；何期自性，本不生滅；",
     "自性，能生萬法。",
@@ -10058,7 +10058,8 @@
    "relational": "All dharmas are placed in a 自性 that is originally pure, unborn and unceasing and that generates them; delusion covers it like cloud over the sun. The relation runs from a prior ground to what it produces.",
    "reading": "AI 读法：这一组句子立一个本来清净、不生不灭、本无动摇而能生万法的自性，万法不离之，妄念如浮云盖覆之。这是先于关系的根据（本体）加上\"遮盖/显露\"的模型。脊柱上：持续的整体只通过部分不断生起而持续（Whole.needs_arising），且只通过不断出现的新部分（Whole.needs_new）；多于现在只能由变化满足（more_not_at_rest），一个\"本不生灭、本无动摇\"者不产生什么；同一性是对关系一致的描述（identifiesAlike_iff），逐步重新命名不改变依赖与不断生成（rename_unceasing），没有在关系之外的自性。这与中论\"若法有性相，则不待众缘而有\"的批评同向，也与坛经自身\"无住为本\"\"於相而离相\"有张力。分歧：本净能生的自性作为先在根据。若把自性读作空性而非实体，分歧减弱；但\"能生万法\"\"盖覆\"的文字支持本体读法。",
    "reading_en": "These lines set a 自性 originally pure, unborn and unceasing, unmoving yet generating all dharmas, covered by deluded thought like cloud: a prior ground with a covering model. On the spine a lasting whole persists only through arising and ever new parts (Whole.needs_arising, needs_new), more than now is met only by change (more_not_at_rest), and identity is a description of how things relate (identifiesAlike_iff), not an own-nature. It diverges, and it is in tension with 中论 and with the 坛经's own 无住.",
-   "mapper": "other"
+   "mapper": "other",
+   "corrected": "DF (DEFECTS-FOUND, review packet): in the preserved HS08.txt the first three fragments lie in 行由第一 and 「被妄念浮雲蓋覆自性，不得明朗」 in 懺悔第六; none lies in 般若第二"
   },
   {
    "id": "zhonglun-yin-yuan-jia-ming",
@@ -10110,7 +10111,7 @@
    "tradition": "佛教",
    "work": "成唯识论（玄奘糅译）",
    "source": "atlas-v9.1/evidence/texts/R5BU001.txt",
-   "locator": "卷二熏习；卷九转依",
+   "locator": "卷二熏习；卷九、卷十转依",
    "fragments": [
     "三法展轉因果同時，如炷生焰、焰生焦炷，亦如蘆束更互相依，因果俱時，理不傾動。",
     "能熏識等，從種生時，即能為因，復熏成種",
@@ -10156,7 +10157,7 @@
    "reading": "AI 读法：\"从种生时即能为因，复熏成种\"：环经闭合形成（onLoop_succ_iff, forms_by_closing），一个交换开始回应自己所给的水平即成单环（responds_to_own_level）；\"数数现行熏习\"对应环节加倍时差异失控（runs_away）。\"损染种势力，益净种功能\"：关闭一个差异需某一环节给回少于所收（closing_needs_less），低于所收者在有限圈内关闭（closes_within）。\"转舍转得\"是转变而不是断灭。剩余：论中\"种现俱时\"（俱有因）与\"种种前后\"（同类因）分开（KR9456）；\"芦束互依，因果俱时\"是同一时刻的互依，脊柱以离散步为建模选择，在这里把它读作逐步的环，不是同一步的互依。",
    "reading_en": "Seed and manifest producing each other is a loop formed by closing (onLoop_succ_iff, responds_to_own_level); repeated perfuming strengthens it (runs_away), and transforming it needs links that give back less (closing_needs_less). The text's simultaneous mutual support (reeds leaning on each other) is read here stepwise, a modelling choice of the spine.",
    "mapper": "other",
-   "corrected": "names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged"
+   "corrected": "DF (DEFECTS-FOUND, review packet): in the preserved R5BU001.txt 「轉謂二分，轉捨、轉得。」 lies in 卷第九 and 「損本識中染種勢力，益本識內淨種功能」 in 卷第十; names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged"
   },
   {
    "id": "weishi-wei-shi-wu-jing",

@@ -20,7 +20,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- C (ComparisonPrinciple) is a hypothesis of the ranking theorems, so the comparisons use C, not G0; G0 appears only in the interface theorem g0_relational. Both are imported unchanged from GenerativeComparison.
+- C (Ranking.ComparisonUnder in the core, GenerativeComparison.ComparisonPrinciple in the periphery) is a hypothesis of the ranking theorems, so the comparisons use C, not living significance; living significance (LivingSignificance; GenerativeComparison.G0 in the periphery) appears only in the interface theorems ActiveReading.livingSignificance_wholeRun_iff and g0_relational.
 - Relational reading: a claim is a formation event (formation, step); in a continuation it is a ground when the formation is active then and is not ConsumingIn that continuation. The classification is over the whole continuation.
 - The comparison course without the focal formation keeps the law's start, renewal and support level, with no focal activity and no drawing; the support of the sustaining formation holds at the start (needG ≤ start), and needF ≤ needG, 0 < needG and overdraw from some step T0 are as in relational-renewal-classification.
 
@@ -45,14 +45,14 @@ Canonical source: [ActiveReading.lean](../../../../experiments/integrated-correc
 <a id="next--下一步"></a>
 ## Next
 
-Several conditions with substitution (substitution preserves consumption, see substitution-preserves-consumption); which mixed cases a stronger comparison or J commitment ranks, and with what premise.
+Several conditions with substitution (substitution preserves consumption, see substitution-preserves-consumption); which mixed cases a stronger comparison or a practical commitment ranks, and with what premise.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Reading G0's 'generation' relationally follows Ren's G0, whose object is 生生 ('整体中的生及其继续生成'), and Ren's follow-up that generation and degeneration do not overlap; that reading and C's defense as an articulation of 'a whole direction of ever more 生' are philosophical, not established by the audit. The comparison course is the same unfolding without the focal formation, not a feasible alternative; feasibility and selection belong to P/N and the situation.
+Reading the 'generation' of living significance relationally follows Ren's statement of it, whose object is 生生 ('整体中的生及其继续生成'), and Ren's follow-up that generation and degeneration do not overlap; that reading and C's defense as an articulation of 'a whole direction of ever more 生' are philosophical, not established by the audit. The comparison course is the same unfolding without the focal formation, not a feasible alternative; feasibility and selection belong to P/N and the situation.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -61,10 +61,10 @@ Reading G0's 'generation' relationally follows Ren's G0, whose object is 生生 
   - Output: overdraw_consuming: the focal formation is ConsumingIn, and from some step T the sustaining formation is never active.
   - Input: overdraw_relational_extension excludes the focal events from the grounds and takes the sustaining event at T as the extension's new ground.
   - Preserved conditions: Same Law, 0 < needG, needF ≤ needG, overdraw from T0; additionally needG ≤ start for the course without the focal formation. [RenewalComparison.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RenewalComparison.lean)
-- related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). Interpretive: C is the explicit comparison premise of the G0/J route; this result shows what C decides once G0's generation is read relationally. No Lean input from that record.
-- related, not a proved adapter: [renewing-consuming-formation](renewing-consuming-formation.md). Its event_reading_recognizes_both and comparison_does_not_apply give the broad event reading under G0 and C for a wear law: G0 includes both continuations and C does not apply between them, agreeing with overdraw_broad_incomparable here. This record adds that the relational reading lets C rank the overdraw below its absence. No import either way.
+- related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). Interpretive: C is the explicit comparison premise of the conditional alignment route; this result shows what C decides once the generation in living significance is read relationally. No Lean input from that record.
+- related, not a proved adapter: [renewing-consuming-formation](renewing-consuming-formation.md). Its event_reading_recognizes_both and comparison_does_not_apply give the broad event reading under living significance and C for a wear law: living significance includes both continuations and C does not apply between them, agreeing with overdraw_broad_incomparable here. This record adds that the relational reading lets C rank the overdraw below its absence. No import either way.
 - related, not a proved adapter: [relational-generative-comparison](relational-generative-comparison.md). Same pattern: a structural description fed into C decides a case that a coarser description cannot. Different structure (joint bundles there, consumption here); no formal composition.
-- related, not a proved adapter: [positive-ground-open-futures](positive-ground-open-futures.md). Interpretive: uses the same G0 predicate; here its inventory is read relationally.
+- related, not a proved adapter: [positive-ground-open-futures](positive-ground-open-futures.md). Interpretive: uses the same predicate of living significance (the periphery's G0); here its inventory is read relationally.
 - related, not a proved adapter: [becoming-stepwise-reading](becoming-stepwise-reading.md). That result gives the stepwise and relation-level readings; ranking-under-readings proves what becomes of this record's rankings under the stepwise reading.
 - related, not a proved adapter: [ranking-under-readings](ranking-under-readings.md). That result restates this record's whole-run ranking on the core and proves that under the stepwise reading the ranking of absence is lost and that of sharing is kept.
 
@@ -122,6 +122,7 @@ Aliases: `RenewalComparison.g0_relational`, `RenewalComparison.overdraw_relation
 - 18 October 2026, F3J, the port of the judgment and comparison family into the core (Ren: "work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification"): the core counterparts of the cited periphery and bridge declarations are cited (3 in Becoming.Metaethics), graded in development/bridge-fold/port-j.md; the periphery stays cited until the sweep retires it. A port restates; the claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: ActiveReading.g0_wholeRun_iff (now ActiveReading.livingSignificance_wholeRun_iff); G0 (now LivingSignificance). Proof bindings (ActiveReading.lean, ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: ActiveReading.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (GenerativeComparison, RenewalBridge and RenewalComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.ActiveReading, Becoming.Extension, Becoming.Ranking and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives and Becoming.Metaethics, which this record does not cite with declarations. 2 aliases naming retired declarations are marked "(retired module)". The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the premise on C names the core form beside the periphery one and says living significance where it said the retired label G0, the periphery name kept where it names the Lean; then the remaining retired labels in the correspondence, the related notes and the next step replaced: G0 by living significance (Ren's G0 by Ren's statement of it; the periphery's G0 named where the Lean predicate is meant), the G0/J route by the conditional alignment route, a J commitment by a practical commitment; Ren's quoted words kept; the laws are unchanged.
 - 3 rebinding entries (2026-10-14 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](relational-reading-comparison.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -132,4 +133,4 @@ Aliases: `RenewalComparison.g0_relational`, `RenewalComparison.overdraw_relation
 
 </details>
 
-Documentary review UTC: `2026-10-14T03:30:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T17:03:04+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

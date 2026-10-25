@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-08T18:34:30.569633+00:00",
+  "reviewed_at_utc": "2026-10-25T14:26:58+00:00",
   "claim": {
-    "zh": "固定新内容的实际含义与正面解释时，既有两层比较在所有新内容分类下严格支持 A 胜于 B，恰当且仅当 A 保留 B 的全部新内容、且全列一般增益时 A 仍严格更好。等价地，两端点分类的同向严格比较覆盖所有混合分类。此输出接成每种分类下的组织形成要求，但不保证同一方案在所有分类下未被击败。",
-    "en": "For fixed meanings and positive interpretation of fresh contents, the existing two-tier comparator strictly prefers A to B under every fresh classification exactly when A retains all fresh contents of B and is better with all fresh contents secondary. Equivalently, strict agreement at both extreme assignments covers every mixed assignment. This supplies required formation under each classification, without ensuring a common undefeated implementation."
+    "zh": "固定新内容的实际含义与正面解释时，在 B 是否实现每个新内容、以及在每种分类下 B 是否实现 A 中被分为基本的每个新内容都已判定之处，既有两层比较在所有新内容分类下严格支持 A 胜于 B，恰当且仅当 A 保留 B 的全部新内容、且全列一般增益时 A 仍严格更好；正方向不需判定。同样的判定下，两端点分类的同向严格比较覆盖所有混合分类。校准：这一判据对一切类型与分类成立，恰是排中律；比较须判定的是 B 是否实现该新内容。此输出接成每种分类下的组织形成要求，但不保证同一方案在所有分类下未被击败。",
+    "en": "For fixed meanings and positive interpretation of fresh contents, the existing two-tier comparator strictly prefers A to B under every fresh classification exactly when A retains all fresh contents of B and is better with all fresh contents secondary, where it is decided whether B realizes each fresh content and, at each classification, whether B realizes every fresh content of A classified basic; the forward direction needs no decision. Under the same decisions, strict agreement at both extreme assignments covers every mixed assignment. Calibration: that the criterion holds over every type and classification is exactly excluded middle; what the comparison must decide is whether B realizes the fresh content. This supplies required formation under each classification, without ensuring a common undefeated implementation."
   },
   "hypotheses": [
     {
-      "zh": "同一展开中的旧、新内容、其实际实现与损失有稳定对应；新内容的生成意义已依 G0 说明，仅优先层次未定。",
-      "en": "Old and fresh contents, their realization and losses have stable correspondence within one unfolding. Fresh generative significance has its G0 interpretation; only priority tier varies."
+      "zh": "同一展开中的旧、新内容、其实际实现与损失有稳定对应；新内容的意义依生生之意义读出，仅优先层次未定。",
+      "en": "Old and fresh contents, their realization and losses have stable correspondence within one unfolding. Fresh content's significance is read through living significance; only its priority tier varies."
     },
     {
       "zh": "比较明确采用既有 J1/J2 的基本保护严格包含，或基本相同而一般增益严格包含；旧分类固定，一次比较中同一新内容的分类一致。",
@@ -53,7 +53,10 @@
     "Becoming.classification_robust_iff_of_em",
     "Becoming.classification_robust_iff_iff_em",
     "Becoming.extension_classification_robust_iff",
-    "Becoming.frame_classification_robust_iff_of_em"
+    "Becoming.frame_classification_robust_iff_of_em",
+    "Becoming.Lexical.classified_robust_iff_of_decided",
+    "Becoming.Lexical.classified_extremes_iff_of_decided",
+    "Becoming.Lexical.classified_robust_iff_iff_em"
   ],
   "dependencies": [
     {
@@ -73,8 +76,8 @@
           "en": "Comparison in classification_robust_iff and strict-order inputs to formation_required_without_fixed_classification."
         },
         "conditions": {
-          "zh": "G0/J 与实际对应仍须有根据；不是逻辑公理审计所取得。",
-          "en": "G0/J and actual correspondence retain their substantive warrant, not supplied by logical axiom auditing."
+          "zh": "生生之意义、J 与实际对应仍须有根据；不是逻辑公理审计所取得。",
+          "en": "Living significance, J and actual correspondence retain their substantive warrant, not supplied by logical axiom auditing."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean"
       }
@@ -145,12 +148,12 @@
     }
   ],
   "limitations": {
-    "zh": "只检验已辨明正面内容的优先分类；不是新生活的一般基本地位识别、现实统一最佳方案、G0/J 无前提证明或必然服从。稳健严格比较为充分根据，不是一切合理行动的必要条件；三路反例不证明完整生活关系允许任意分类。",
-    "en": "Tests priority classification of positively understood contents, not universal basic-status recognition, a real common best plan, premise-free G0/J or inevitable compliance. Robust strictness is sufficient, not necessary for every justified action; the three-route example does not show that full living relations allow arbitrary classifications."
+    "zh": "只检验已辨明正面内容的优先分类；不是新生活的一般基本地位识别、现实统一最佳方案、生生之意义或 J 的无前提证明或必然服从。稳健严格比较为充分根据，不是一切合理行动的必要条件；三路反例不证明完整生活关系允许任意分类。",
+    "en": "Tests priority classification of positively understood contents, not universal basic-status recognition, a real common best plan, premise-free living significance or J or inevitable compliance. Robust strictness is sufficient, not necessary for every justified action; the three-route example does not show that full living relations allow arbitrary classifications."
   },
   "validation_scope": {
-    "zh": "Lean 4.29.1 实查13项新定理声明／25项审计，73项继承定理／144项审计分列；新增15项空依赖、2项 propext/Quot.sound、8项另含 Classical.choice，无自定义公理。作者反审；无新经验验证或独立 agent 验收。",
-    "en": "Lean 4.29.1 checked 13 new theorem declarations/25 audits; 73 inherited theorems/144 audits are separate. New audits: 15 empty, 2 propext/Quot.sound, 8 also Classical.choice; no custom axioms. Author counterreview, with no new empirical validation or independent-agent acceptance."
+    "zh": "外围实查（13项新定理／25项审计：15项空依赖、2项 propext/Quot.sound、8项另含 Classical.choice）已被取代：核心 Becoming.Lexical 陈述该判据及其校准，公理报告全空。作者反审；无新经验验证或独立 agent 验收。",
+    "en": "The periphery check (13 new theorems/25 audits: 15 empty, 2 propext/Quot.sound, 8 also Classical.choice) is superseded: the core Becoming.Lexical states the criterion and its calibration with every axiom report empty. Author counterreview, with no new empirical validation or independent-agent acceptance."
   },
   "references": [
     {
@@ -685,6 +688,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, ClassificationRobustJudgment, ConcernExtension, CoursesBridge, GenerativeComparison, JointContinuationClassification, PracticalJudgment, RelationalGrounding and RelationalOrganization) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Alternatives, Becoming.Bundles, Becoming.Extension, Becoming.Frontier, Becoming.FrontierFrames, Becoming.Inquiry, Becoming.Lexical and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Metaethics, which this record does not cite with declarations. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, ClassificationRobustJudgment, ConcernExtension, CoursesBridge, GenerativeComparison, JointContinuationClassification, PracticalJudgment, RelationalGrounding and RelationalOrganization）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Alternatives, Becoming.Bundles, Becoming.Extension, Becoming.Frontier, Becoming.FrontierFrames, Becoming.Inquiry, Becoming.Lexical and Becoming.ValuationFrames）。退役模块的内容也陈述于 Becoming.Metaethics，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): claim made exact to the core criterion: the equivalence holds where it is decided whether B realizes each fresh content and, at each classification, whether B realizes every fresh content of A classified basic (the forward direction needs no decision), the two extremes suffice under the same decisions, and that the criterion holds over every type is exactly excluded middle; the three core laws added as aliases; the evidence names the core statement with empty axiom reports in place of the superseded periphery audit; G0 replaced by living significance in the premise, limitation and dependency condition.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张依核心判据改精确：等价在 B 是否实现每个新内容、以及在每种分类下 B 是否实现 A 中被分为基本的每个新内容都已判定之处成立（正方向不需判定），同样判定下两端点足矣，而判据对一切类型成立恰是排中律；三条核心定律加为别名；证据以公理报告全空的核心陈述代替已被取代的外围审计；前提、限度与依存条件中的 G0 改为生生之意义。"
     }
   ]
 }

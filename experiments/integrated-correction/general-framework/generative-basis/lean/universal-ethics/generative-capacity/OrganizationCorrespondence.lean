@@ -18,8 +18,8 @@ theorem on the core's laws of undominated members of a listed menu.
   (`coordination_is_required_by_core`).
 
 The core law asks the comparison only to be weakly decided and the relation to be decided; where
-these hold with no classical reasoning, the bridge states the theorem itself
-(`Becoming.Judgment.required_of_bettered`). The comparison, eligibility and the constructed
+these hold with no classical reasoning, the core states the theorem itself
+(`Becoming.Requirement.required_of_bettered`, in `Becoming.Frontier`). The comparison, eligibility and the constructed
 history keep the periphery's scope. The core does not import this module.
 -/
 

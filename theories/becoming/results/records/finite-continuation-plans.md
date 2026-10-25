@@ -7,19 +7,19 @@
 
 Editable record: [finite-continuation-plans.json](finite-continuation-plans.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-08T13:02:25.936140+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
 
-For supplied transitions, observations, target and admissibility, n-step viable is equivalent to an observation-branching n-step plan satisfying works.
+For supplied transitions, observations, target and admissibility, where observations take finitely many values (Fin k), being viable for n steps is having an n-step plan branching on observations that works, with no premise; for observations of any type this holds given a choice over them into plans, which the periphery's form takes from classical choice, and asked of every process it is exactly that choice. A common first response need not support the second step.
 
 Canonical source: [ContinuationAdequacy.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationAdequacy.lean)
 
 <a id="前提与对应-hypotheses-and-correspondence"></a>
 ## Hypotheses and correspondence
 
-- Finite horizon and the existing viable, Plan and works; branch selection retains the recorded logical dependencies.
+- Finite horizon; the core law takes observations in Fin k, the general law a choice over the observations as a named hypothesis (ChoiceOver); the periphery ContinuationAdequacy keeps its receipt's logical dependencies.
 
 Model admissibility is not automatically ethical permission; effect coverage and observation calibration require warrant.
 
@@ -73,4 +73,5 @@ Aliases: `ContinuationAdequacy.viable_iff_plan`, `Becoming.Viability.keptFor_iff
 - 2026-10-08: migrated existing result identity and scope; no new theorem or relocated source.
 - 18 October 2026, the N1 renaming (Ren: "Renames, full scope"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: Keeping.lean. Rebound to core receipt 20261018T062828.251326Z after reading the change. The claim is unchanged.
 - 18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. Changed by the pass, in docstrings or prose only: Keeping.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the claim states the conditions the Lean carries: with finitely many observation values the equivalence of viability and a working branching plan needs no premise; for observations of any type it needs a choice over them into plans, which the periphery takes from classical choice, and asked of every process it is exactly that choice; the first hypothesis names these premises. No law changed.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](finite-continuation-plans.json).

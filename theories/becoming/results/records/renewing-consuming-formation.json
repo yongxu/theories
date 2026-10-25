@@ -8,7 +8,11 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-08T18:56:05.941008+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "statement": {
+    "zh": "更新率只保持或下降，在压力不超过它时保持、在压力超过时（若为正）下降，则在其内的形成每一步都有所形成并保持容量；持续超出当前更新率的形成，连同共享其条件者，总量有界并至一定时刻止息。",
+    "en": "Where the renewal rate only holds or falls, holding under pressure within it and falling (if positive) past it, formation within it forms each step, keeping its capacity; formation persistently beyond the current rate, with all sharing its conditions, forms a bounded total and ends by a fixed time."
+  },
   "claim": {
     "zh": "在一个明确的不可恢复磨损规律下，同一展开中的形成若在更新速率之内，便每步都有进一步形成，更新能力保持不变；若压力持续超出当前更新速率，整个展开的累计形成以所持条件加三角更新量为界，并自该时刻起停止，更新能力自第一步超出起永久下降。共享这些条件的形成，无论怎样分配，都随之停止；两个部分各自都在更新之内、只是合起来超出时也是如此。消耗型形成起初可以形成得更多，一步计数把它排在前面；此界之后，每一种更新内的接续都超过每一种超出型接续。以每个形成事件为生成内容的宽读法下，形式生生之意义同时承认两者，无损比较 C 在两者之间不适用。两种形式读法 Ceaseless 与 KeepsCapacity 都把它们分开，且彼此不同。这些区分不含规范谓词，对符号中立；把它们认作生生，是读法与对应。",
     "en": "Under an explicit no-recovery wear law, formation within the renewal rate continues at every step and keeps its renewal capacity. Formation whose pressure persistently exceeds the current renewal rate has a whole-unfolding total bounded by held conditions plus a triangular renewal bound, ceases from that time, and permanently loses capacity from its first excess. Formation sharing those conditions, under any allocation, ceases with it, including when two parts are each within renewal and only jointly exceed it. Consuming formation can form more at first, so a one-step count ranks it first; beyond that bound, every within-renewal continuation exceeds every beyond-current one. Under the broad reading that counts every formation event as generative, formal living significance recognizes both and the no-loss comparison C does not apply between them. The formal readings Ceaseless and KeepsCapacity each separate them and differ from each other. These distinctions contain no normative predicate and are sign-neutral; identifying them with 生生 is a reading and correspondence question."
@@ -23,8 +27,8 @@
       "en": "Beyond means each step's pressure exceeds the then-current rate (BeyondCurrent); BeyondRenewal, relative to the initial rate, is stronger and its results are kept as corollaries. Within renewal means each step's pressure lies between 1 and the initial rate; the KeepsCapacity characterization allows zero pressure."
     },
     {
-      "zh": "B 部分明示使用 GenerativeComparison 的 G0 与 C，采用把每个已实现形成事件都算作生成内容的宽读法，以表明这种读法分不开两者；它是 AI 的形式化，不是 Ren 的 G0，后者的对象是生生。Ceaseless 与 KeepsCapacity 是 AI 的形式读法。",
-      "en": "Part B explicitly uses G0 and C from GenerativeComparison with the broad reading that counts every realized formation event as generative, to show what that reading cannot separate; it is the AI's formalization, not Ren's G0, whose object is 生生. Ceaseless and KeepsCapacity are the AI's formal readings."
+      "zh": "B 部分明示使用 GenerativeComparison 的 G0 与 C，采用把每个已实现形成事件都算作生成内容的宽读法，以表明这种读法分不开两者；它是 AI 对这一宽读法的形式化，不是理论的生生。Ceaseless 与 KeepsCapacity 是 AI 的形式读法。",
+      "en": "Part B explicitly uses G0 and C from GenerativeComparison with the broad reading that counts every realized formation event as generative, to show what that reading cannot separate; it is the AI's formalization of that broad reading, not the theory's 生生. Ceaseless and KeepsCapacity are the AI's formal readings."
     }
   ],
   "correspondence": {
@@ -90,8 +94,8 @@
     {
       "id": "relational-renewal-classification",
       "detail": {
-        "en": "General classification proved independently the same day: renewing or consuming as a relation to the conditions of participated relations, over arbitrary unfoldings, with irreversibility derived from the renewer's dependence and externalizing consumption covered. This record's wear-law bound and G0 interface are not part of it. No import either way.",
-        "zh": "同日独立证明的一般分类：按形成与所参与关系条件的关系区分更新与消耗，适用于任意展开；不可逆由更新者的依存推出，并覆盖外部化消耗。本记录的磨损规律界与 G0 接口不在其中。互不导入。"
+        "en": "General classification proved independently the same day: renewing or consuming as a relation to the conditions of participated relations, over arbitrary unfoldings, with irreversibility derived from the renewer's dependence and externalizing consumption covered. This record's wear-law bound and its interface with living significance are not part of it. No import either way.",
+        "zh": "同日独立证明的一般分类：按形成与所参与关系条件的关系区分更新与消耗，适用于任意展开；不可逆由更新者的依存推出，并覆盖外部化消耗。本记录的磨损规律界及其与生生之意义的接口不在其中。互不导入。"
       }
     },
     {
@@ -133,8 +137,8 @@
     }
   ],
   "limitations": {
-    "zh": "完成的是一个不可恢复磨损规律类中的描述性区分及其与 G0、C 的接口；该类只有一个共享条件，消耗者依存于它。区分是所给规律的推论。不覆盖外部化的消耗；不表示恢复、增长或“更多”；不证明形式读法就是生生、真实过程满足该规律、消耗更坏、停止有伦理缺陷，也没有形式化任何优化器。",
-    "en": "Completes a descriptive distinction within one no-recovery wear-law class, with one shared condition on which the consumer depends, and its interface with G0 and C; the distinction follows from the supplied law. It does not cover externalizing consumption, does not represent recovery, growth or 更多, and does not show that the formal readings are 生生, that real processes satisfy the law, that consuming is worse, or that ceasing is defective; no optimizer is formalized."
+    "zh": "完成的是一个不可恢复磨损规律类中的描述性区分及其与生生之意义、C 的接口；该类只有一个共享条件，消耗者依存于它。区分是所给规律的推论。不覆盖外部化的消耗；不表示恢复、增长或“更多”；不证明形式读法就是生生、真实过程满足该规律、消耗更坏、停止有伦理缺陷，也没有形式化任何优化器。",
+    "en": "Completes a descriptive distinction within one no-recovery wear-law class, with one shared condition on which the consumer depends, and its interface with living significance and C; the distinction follows from the supplied law. It does not cover externalizing consumption, does not represent recovery, growth or 更多, and does not show that the formal readings are 生生, that real processes satisfy the law, that consuming is worse, or that ceasing is defective; no optimizer is formalized."
   },
   "validation_scope": {
     "zh": "Lean 4.29.1 检查通过（运行 20261008T192627.406862Z）：RenewingFormation 42项定理／60项声明审计（22项无依赖；1项 propext；25项 propext 与 Quot.sound；12项另含 Classical.choice）；无自定义公理、sorry 或 native_decide；同次编译 GenerativeComparison、PracticalJudgment、ProtectionPriorityRival 与4个控制例。定理数含辅助引理与推论。2026-10-09 独立审查附更正后接受了首版（21项定理），更正已依审查完成并经 Lean 检查，审查者未复审更正版；见 GENERATIVE-DISCRIMINATION-REVIEW。",
@@ -429,6 +433,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (GenerativeComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Extension, Becoming.Stock, Becoming.ValuationFrames, RenewingCorrespondence and RenewingFormation). The retired modules' content is also stated in Becoming.Alternatives and Becoming.Metaethics, which this record does not cite with declarations. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（GenerativeComparison）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Extension, Becoming.Stock, Becoming.ValuationFrames, RenewingCorrespondence and RenewingFormation）。退役模块的内容也陈述于 Becoming.Alternatives and Becoming.Metaethics，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added (where the renewal rate only holds or falls, holding under pressure within it and falling (if positive) past it, formation within it forms at every step and keeps its capacity; formation persistently beyond the current rate, with what shares its conditions, forms a bounded total and ends by a fixed time); the premise on the broad event reading no longer names a person; then the retired label G0 in the limitations and a related note replaced by living significance (G0 and C from GenerativeComparison, the periphery's names, kept in the premise); the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（更新率只保持或下降，在压力不超过它时保持、在压力超过时（若为正）下降，则其内的形成每步都有所形成并保持容量；持续超出当前更新率的形成连同共享其条件者总量有界、至一定时刻止息）；关于宽事件读法的前提不再提及个人；随后局限与一条相关说明中已退役的标签 G0 改为生生之意义（前提中 GenerativeComparison 的 G0 与 C 是外围名称，保留）；主张不变。"
     }
   ]
 }

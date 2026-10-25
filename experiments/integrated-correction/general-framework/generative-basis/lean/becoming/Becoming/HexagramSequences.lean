@@ -14,8 +14,9 @@ checks the pairing of the received order (`order_paired`) and leaves the arrange
 aside. This module asks of each what a law can carry of it, with no premise, and states each law
 along runs.
 
-* **The received order is the run of a law, and only of a table.** A law runs the received order
-  where its run from 乾 holds the sixty-four in that order (`RunsOrder`, `runsOrder_iff`). One does
+* **The received order is the run of a law, and every such law is the order read as a table but
+  at 未濟.** A law runs the received order where its run from 乾 holds the sixty-four in that order
+  (`RunsOrder`, `runsOrder_iff`). One does
   (`orderNext`, `orderNext_runsOrder`), and every law that does agrees with it everywhere but at
   未濟 (`runsOrder_agrees`); of these exactly the one taking 未濟 back to 乾 merges nothing
   (`runsOrder_lossless_iff`), and it has one orbit of sixty-four (`orderNext_one_orbit`). But every
@@ -33,7 +34,7 @@ along runs.
   (`rearrange_not_runsOrder`); and a law running it goes alike neither across the pairs nor across
   the parity of the count (`runsOrder_not_lumped`), the lumpings waxing and waning goes alike
   across. So the order is not the orbit of any law that reads less than the whole configuration
-  or keeps any symmetry of the configurations; the 序卦 gives its reasons in words, not in a law.
+  or commutes with 錯, 綜 or both; the 序卦 gives its reasons in words, not in a law.
 * **卦變: the exchange of two lines.** Exchanging the lines at two places keeps the count of
   unbroken lines (`swap`, `yang_swap`). An exchange of a line of the lower trigram with one of the
   upper is a step of the law of exchange between the two trigrams, its move one unbroken line

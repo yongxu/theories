@@ -9,9 +9,10 @@ The spine states its laws on several readings of one unfolding: the runs of a pr
 (`Generative.Process`, `Becoming.Run`), a world's flow and web (`Becoming.World`), the course a law
 of exchange generates (`ExchangeLaw`), the orbit of a determined law (`Law.orbit`), and the amounts
 that coupling strengths carry (`carried`). They were joined by correspondence theorems in both
-directions, each reading some of the data. The one root is the run: what the unfolding is at each
-step and how it goes on to the next. For the world this holds by definition: a world's history is a
-run of the process that admits every step (`World.history`, `Becoming.World`), so the World family is
+directions, each reading some of the data. The run, what the unfolding is at each step and how it
+goes on to the next, is the World package's formal root (D43) and one model of the grammar
+(`Becoming.Grammar`), which is the root. For the world, being a run holds by definition: a world's
+history is a run of the process that admits every step (`World.history`, `Becoming.World`), so the World family is
 the standing-and-exchange reading of a run. This module states that each of the other readings is a
 run too, exactly, with nothing read away. No premise enters beyond what each theorem names.
 
@@ -55,14 +56,14 @@ run too, exactly, with nothing read away. No premise enters beyond what each the
   (`Contextual.world`, `Becoming.Readings`). They are cited here, not restated.
 
 **Readings (the AI's, D43).**
-- The root is the run because every other reading is one, and not conversely as stated: a world is
-  a run by its type and a run of the law it shows (P69's `Shown`), a balanced world is a run of the
+- The run is the package's formal root because every other reading is one, and not conversely as
+  stated: a world is a run by its type and a run of the law it shows (P69's `Shown`), a balanced world is a run of the
   law of exchange, a course and the amount it carries are runs, an orbit is one. This does not
   make the run a ground beneath the world: a run is the unfolding read step by step, what it is at
   each step and how it goes on, and the world is the same unfolding read as relata of one kind
   exchanging. The
   identification is exact, so the two are one reading of one unfolding, not two things joined.
-- The law is read off the unfolding (Ren, 12 October 2026: "there are no two realities"). What a
+- The law is read off the unfolding, the identifications above being exact. What a
   world adds to its run is nothing; what the law of exchange adds is the relation of standing and
   exchange that balance states, as a law of the run's steps.
 

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-20T11:24:56+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "en": "Widening compares two webs along a reading of one's formations in the other's, and is widening along the identity; a grown world widens the old exactly where the old admissions are kept and either an old formation gains admission or a new one is admitted.",
     "zh": "沿一个网的形成在另一个网中的读法比较两个网的扩大，沿恒等读法即扩大；长成的世界扩大旧世界，恰在旧的接纳保持、且或有旧形成得到接纳、或有新形成被接纳之处。"
@@ -42,8 +42,8 @@
       ]
     },
     {
-      "en": "With the old levels kept, a growth widens exactly where a new formation is admitted at some step, while on the old formations the levels neither widen nor narrow: what widening on one type of formations does not register. Attaching one formation by one new condition widens exactly where that condition meets the new formation's need at some step.",
-      "zh": "旧水平保持时，生长恰在某步接纳一个新形成之处扩大，而在旧形成上水平既不扩大也不缩小：这是一种形成类型上的扩大所不计入的。以一个新条件附着一个形成，恰在该条件某步满足新形成之需之处扩大。",
+      "en": "With the old levels kept, a growth widens exactly where a new formation is admitted at some step, while on the old formations the levels neither widen nor narrow: widening read on the old formations alone does not show it. Attaching one formation by one new condition widens exactly where that condition meets the new formation's need at some step.",
+      "zh": "旧水平保持时，生长恰在某步接纳一个新形成之处扩大，而在旧形成上水平既不扩大也不缩小：只在旧形成上读扩大，显示不出它。以一个新条件附着一个形成，恰在该条件某步满足新形成之需之处扩大。",
       "declarations": [
         "Becoming.Web.grow_widensAlong_iff_new",
         "Becoming.Web.grow_widens_unregistered",
@@ -172,7 +172,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean",
       "role": "proof",
-      "sha256": "e2e90c0be96a3e0dca9019c0c6e081cb545c4d9e31b565ab5ffa3f0fe9ce47f5",
+      "sha256": "af11278905eaca12cf1a71655a237caf46b4d2a3fe48115d5014766e6b098b87",
       "declarations": [
         "Becoming.Web.IncludesAlong",
         "Becoming.Web.ExceedsAlong",
@@ -250,12 +250,18 @@
       "role": "receipt",
       "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T112227.536269Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Growth",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -288,6 +294,10 @@
     {
       "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the third law's English says the widening is not shown when read on the old formations alone, instead of the retired word 'register'. No law changed. The Chinese of law 3 no longer uses the registration rendering 计入; it says, as the English, that widening read on the old formations alone does not show it.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第三条规律的英文改为：只在旧形成上读时，这一扩大显示不出来，不再用退役词“register”。规律未变。规律三的中文不再用登记义的“计入”，与英文同：只在旧形成上读扩大，显示不出它。"
     }
   ]
 }

@@ -8,7 +8,11 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-08T19:22:44.046898+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "statement": {
+    "zh": "一程携带共同实现一束的每个界，计入它自身的动作。在激活律中，一个预备步改变当前容量，释放失去本来终可到达者，已预备的构形仍可单边终止。",
+    "en": "A course carries every bound on realizing a bundle together, its own moves counted. In the activation law one preparation step changes the current capacity, the release loses what was eventually reachable, and a prepared configuration can still end one-sided."
+  },
   "claim": {
     "zh": "在固定关系法则与实现含义下，实际前缀后的 n 步共同实现，可沿同一中间配置接成前缀长度加 n 步的共同实现。旧共同激活规律给出一步准备改变当前一步能力、解除共同条件后任何有限步均不能共同实现，以及能力未被实际使用的路径。无界可达的回溯复用已有推论，不另计成果。",
     "en": "Under a fixed relational law and realization interpretation, joint realization within n steps after an actual prefix is reachable through the same intermediate configuration within prefix length plus n steps. The existing joint-activation law supplies changed one-step capacity after preparation, loss of joint realization at every finite horizon after release, and a path leaving available joint capacity unused. Unbounded backward reachability repeats the established inference and is not counted as another result."
@@ -27,8 +31,8 @@
       "en": "The application reuses JointContinuationClassification’s supplied coupling, event law and terminal configurations without claiming the coupling’s causal origin."
     },
     {
-      "zh": "逻辑、关系表示和可能性解释明示；无概率、最优策略、无限接续或 G0/J 输入。",
-      "en": "Logic, representation and the existential interpretation remain explicit; no probability, optimal policy, infinite continuation or G0/J input is supplied."
+      "zh": "逻辑、关系表示和可能性解释明示；无概率、最优策略、无限接续或生生之意义与实践承诺的输入。",
+      "en": "Logic, representation and the existential interpretation remain explicit; no probability, optimal policy, infinite continuation or input from living significance and the practical commitments is supplied."
     }
   ],
   "correspondence": {
@@ -42,8 +46,7 @@
     "RelationalBecoming.released_cannot_reach_joint",
     "RelationalBecoming.actual_release_loses_eventual_joint",
     "RelationalBecoming.prepared_capacity_can_end_without_joint_realization",
-    "Becoming.WithinMoves.after_course",
-    "Becoming.within_after_prefix_by_core (retired module)"
+    "Becoming.WithinMoves.after_course"
   ],
   "dependencies": [],
   "related": [
@@ -310,6 +313,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, JointContinuationClassification and RelationalBecoming) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.ActivationCapacity, Becoming.Bundles, Becoming.Labelled and GenerativeCore). 1 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, JointContinuationClassification and RelationalBecoming）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.ActivationCapacity, Becoming.Bundles, Becoming.Labelled and GenerativeCore）。1 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added (a course carries every bound on joint realization, its moves counted; in the activation law preparation changes the current capacity, the release loses what was eventually reachable, and a prepared configuration can end one-sided); the retired module name dropped from the aliases, kept in its provenance reference; then the retired label G0/J in a premise replaced by living significance and the practical commitments; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（一程携带共同实现的每个界，计入其动作；在激活律中预备改变当前容量，释放失去本来终可到达者，已预备的构形可单边终止）；已退役模块之名从别名中移除，保留在其来历引用中；随后一条前提中已退役的标签 G0/J 改为生生之意义与实践承诺；主张不变。"
     }
   ]
 }

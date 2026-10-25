@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-22T14:40:29+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "en": "Invariant grades give invariant standing, not conversely. On levels of continuation, a strictly increasing transform ranks every widening higher, one strictly concave up to a bound decides transfers C leaves mixed, and a threshold of sufficiency ties above it.",
     "zh": "等级不变则“是否算数”不变，反之不然。在延续的层级上，严格递增的变换把每个扩大排得更高，直到某界严格凹的变换决定 C 留为混合的转移，充足的阈值在其之上持平。"
@@ -47,8 +47,8 @@
       ]
     },
     {
-      "en": "A transform strictly concave up to a bound ranks higher a course that moves one step of continuation from a formation at a higher level to one at a lower, every other level the same; no whole-number transform is strictly concave everywhere.",
-      "zh": "直到某个界都严格凹的变换，把从较高层级的构成向较低层级的构成移动一步延续、其余层级不变的进程排得更高；没有整数变换在全域严格凹。",
+      "en": "A transform strictly concave up to a bound ranks higher a course that moves one step of continuation from a formation to one at least two levels below it, the higher level within the bound and every other level the same; no whole-number transform is strictly concave everywhere.",
+      "zh": "直到某个界都严格凹的变换，把从一个构成向低它至少两个层级的构成移动一步延续、较高层级在界内且其余层级不变的进程排得更高；没有整数变换在全域严格凹。",
       "declarations": [
         "Becoming.Weighting.ConcaveTo",
         "Becoming.Weighting.concave_gap",
@@ -132,7 +132,7 @@
     "分级的意义与优先",
     "standing and status",
     "prioritarianism on levels",
-    "sufficiency as a scope denial",
+    "sufficiency read as a scope denial",
     "Becoming.Weighting.prior_transfer",
     "Becoming.Weighting.prior_lt_of_widens",
     "Becoming.Weighting.ranks_alike_of_gradeInvariant"
@@ -279,7 +279,7 @@
         "Becoming.unrestricted_atCenters_iff",
         "Becoming.withinSome"
       ],
-      "sha256": "fe507d9adf7ac5a5e1f8a6d959368ecccfc60e7db7773798f10a3f6de8fcfdfe"
+      "sha256": "74d266546171417e4f28365a50c8e9f11b71e3b10c2cd2025681349e653a32ea"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T120729.506720Z/verification.json",
@@ -405,12 +405,18 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -424,6 +430,10 @@
     {
       "en": "22 October 2026, VT1: Becoming.Weightings grew (net weightings, rankings of presentations, weights within a ratio); the five declarations that went (outweighing and its four lemmas) leave the reference list; this record's laws are unchanged; study section 367.",
       "zh": "2026年10月22日，VT1：Becoming.Weightings 扩充（净加权、对表述的排序、比值之内的权重）；被去掉的五项声明（outweighing 及其四条引理）移出引用列表；本记录的规律不变；研究第 367 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the law on transfers names the gap of at least two levels and the bound on the higher level that it takes; the alias on sufficiency says it is a reading; the declarations are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：关于移转的定律写明其所需的至少两个层级之差与较高层级之界；关于足够的别名写明它是一种读法；声明不变。"
     }
   ]
 }

@@ -5,14 +5,14 @@
 
 `mutation-and-the-balance-it-sets` · **recorded-checked** · theorem · F01 · [record](mutation-and-the-balance-it-sets.json) · [register](../../../../RESULTS.md)
 
-> Carriers losing m offspring to mutation hold their share exactly where their advantage s balances the loss, at s / (s + m), approached from below without overshoot; with no advantage they decline whatever their share. It is the balance of Price's equation, selection against transmission.
+> Present carriers losing m offspring to mutation keep their share exactly at s / (s + m), advantage s balancing the loss, the balance of Price's equation. A run at or below it stays there, its share never falling, one at or above stays so; with no advantage the share never rises, and with loss falls.
 
 <a id="laws--规律"></a>
 ## Laws
 
 1. Carriers leaving k carrying offspring and m not, others w: the carriers' share rises exactly where d k exceeds c m + d w, is kept where they are equal and falls where d k falls short. (`Becoming.Reproduction.Mutation.step_balance`, `Becoming.Reproduction.Mutation.rises_iff`, `Becoming.Reproduction.Mutation.kept_iff`, `Becoming.Reproduction.Mutation.falls_iff`)
 2. Where k <= w the share never rises and with any loss falls at every step, whatever it is: the error threshold. (`Becoming.Reproduction.Mutation.never_rises`, `Becoming.Reproduction.Mutation.falls_of_outrun`)
-3. Where k = w + s the share is kept exactly at s / (s + m); a run at or below that balance stays at or below it, its share never falling, and one above stays above. (`Becoming.Reproduction.Mutation.kept_share`, `Becoming.Reproduction.Mutation.below_stays`, `Becoming.Reproduction.Mutation.above_stays`, `Becoming.Reproduction.Mutation.run`, `Becoming.Reproduction.Mutation.below_always`, `Becoming.Reproduction.Mutation.not_falls_below`, `Becoming.Reproduction.Mutation.above_always`)
+3. Where k = w + s the share is kept exactly at s / (s + m); a run at or below that balance stays at or below it, its share never falling, and one at or above stays at or above. (`Becoming.Reproduction.Mutation.kept_share`, `Becoming.Reproduction.Mutation.below_stays`, `Becoming.Reproduction.Mutation.above_stays`, `Becoming.Reproduction.Mutation.run`, `Becoming.Reproduction.Mutation.below_always`, `Becoming.Reproduction.Mutation.not_falls_below`, `Becoming.Reproduction.Mutation.above_always`)
 4. Read as generations of descent, transmission lowers the amount by c m and raises nothing, and the step is balanced exactly where the count balance holds: mutation-selection balance is the balance of Price's equation. (`Becoming.Reproduction.Mutation.holds`, `Becoming.Reproduction.Mutation.offspring`, `Becoming.Reproduction.Mutation.generations`, `Becoming.Reproduction.Mutation.total_replicate`, `Becoming.Reproduction.Mutation.total_kinds`, `Becoming.Reproduction.Mutation.lowered_count`, `Becoming.Reproduction.Mutation.size_first`, `Becoming.Reproduction.Mutation.sum_first`, `Becoming.Reproduction.Mutation.size_next`, `Becoming.Reproduction.Mutation.sum_next`, `Becoming.Reproduction.Mutation.balanced_iff`)
 5. Witness: one carrier and one other, at the threshold falling from a half to two of five, and a half kept at the balance. (`Becoming.Reproduction.Threshold.at_threshold`)
 
@@ -78,7 +78,8 @@ Aliases: `mutation`, `mutation-selection balance`, `error threshold`, `突变`, 
 ### History
 
 - 22 October 2026: added (EV14), mutation, transmission that is not exact, and the balance it sets; study section 368.
+- 25 October 2026, board item DF (study section 418): the statement no longer says the balance is approached from below (no convergence is proved): a run at or below it stays there with its share never falling, one at or above stays at or above; the carriers' presence the balance and the fall take is named; the law of the balance said that a run above stays above and now says at or above, as proved; the other laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-22T14:52:46+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

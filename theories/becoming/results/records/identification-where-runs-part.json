@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "凡一个过程的运行经映射是同一历程之处，配置数为 N 时，前段从 2N − 1 起确定它，与确定的律一样。在分开之处，没有外推，无论被给予什么（过程在内），在两个运行上都对；列出、可判定的过程中，依过程所建的外推恰在不分开之处都对。",
     "en": "Wherever a process's runs have one course through the map, a prefix fixes it from 2N − 1 on with N configurations. At a parting no extrapolation, whatever it is given, is right on both runs; for listed, decided processes the one built from the process is right exactly where none part."
@@ -64,8 +64,8 @@
       ]
     },
     {
-      "zh": "自由分支下每个历程都是一个运行的历程；每个前段之后，两个有这一前段的运行分开，每个外推在其中一个上于下一步不对，且有一个运行使它每步都不对。",
-      "en": "Under free branching every course is a run's course; after every prefix two runs with that prefix part, every extrapolation is not right at the next step on one of them, and one run makes it wrong at every step.",
+      "zh": "自由分支下每个历程都是一个运行的历程；有两个不同的值时，每个前段之后，两个有这一前段的运行分开，值可判定时，每个外推在某个有这一前段的运行上于下一步不对；在两个值上，每个外推都有一个运行，使它每步都不对。",
+      "en": "Under free branching every course is a run's course; with two distinct values, after every prefix two runs with that prefix part and, values decided, every extrapolation is not right at the next step on some run with that prefix; on two values every extrapolation has a run on which it is right at no step.",
       "declarations": [
         "Becoming.Parting.free",
         "Becoming.Parting.freeRun",
@@ -854,6 +854,10 @@
     {
       "en": "2026-10-20: 33 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/bedccea98ecd5163/identification-where-runs-part.json and in git.",
       "zh": "2026-10-20：33 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/bedccea98ecd5163/identification-where-runs-part.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the law on free branching names the two distinct values and the decided values its parts take, and says an extrapolation has a run on which it is right at no step (silence counting as not right), not one on which it is wrong at every step; the declarations are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：关于自由分支的定律写明其各部分所需的两个不同的值与值之可判定，并说外推有一个运行使它每步都不对（沉默算作不对），而不是每步都错；声明不变。"
     }
   ],
   "text_versions": [

@@ -8,15 +8,19 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F03",
-  "reviewed_at_utc": "2026-10-14T09:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "zh": "对每个存量，一串汲取可执行，恰当每次汲取都在当时所立的存量之内。审查汲取一个工作单位、行动两个时，端点恰当其报告排除相关风险且至少有三个单位时完成二者；报告未排除风险的审查保持损失计数。",
+    "en": "A course of draws on a stock is executable exactly when each draw is within the stock then standing. Review drawing one unit of work and action two, an endpoint completes both exactly when its report clears the relevant risk and it holds at least three units; reviews not cleared keep the loss count."
+  },
   "claim": {
     "zh": "对每个存量，一段取用进程可执行，恰当每次取用都在当时的存量之内。审查取一单位工作、行动取两单位，所以审查与行动的进程恰从三单位当前工作起被覆盖；端点完成审查与行动，恰当报告排除相关风险且其工作覆盖该进程；拒绝或耗尽保留未完成任务及已用的工作。经审查的损失：对每个条件、报告与待完成端点，审查增加一次损失，恰当报告排除相关风险、工作覆盖该进程，而所交付实践的相关风险（其作用规律的损失条件）实际成立；报告未排除相关风险的每次审查都保持损失计数（门控改变之律的实例），由这样的审查组成的每段进程亦然。所以覆盖效果时刻条件的报告防止所表示做法的新增损失。取用一单位工作的相关条件审查消耗实际交付的修订。协议自身给出两条作用规律，因而给出哪种风险相关。学习分支允许另两个情境字段改变；行动保护不蕴含持续的比较根据。",
     "en": "For every stock, a course of draws is executable exactly when each draw is within the stock then standing. Review draws one unit of work and action two, so the review-and-action course is covered exactly from three current units, and an endpoint completes its review and action exactly when the report clears the relevant risk and its work covers that course; refusal or exhaustion retains the unfinished task and the work already used. Loss through review: for every condition, report and pending endpoint, a review adds one loss exactly when the report clears the relevant risk, the work covers that course and the delivered practice’s relevant risk, its outcome law’s loss condition, actually holds; every review whose report does not clear the relevant risk keeps the loss count (an instance of the gated-change law), and so does every course of such reviews. So a covered report, one covering effect-time conditions, prevents added represented practice loss. Relevant-condition review, using one unit of work, consumes the actually delivered revision. The protocol itself supplies the two outcome laws and so which risk is relevant. The learning branch admits changes to the other two context fields; action protection does not imply continued comparative warrant."
   },
   "hypotheses": [
     {
-      "zh": "继承两实践作用规律、实际取得的目的状态、版本化路线与同步授权改写；G0/J 及报告的实际对应公开。",
-      "en": "Inherited two-practice outcome law, acquired goal state, versioned route and synchronized authorized rewrite; G0/J and report correspondence remain explicit."
+      "zh": "继承两实践作用规律、实际取得的目的状态、版本化路线与同步授权改写；生生之意义、实践承诺 J 及报告的实际对应公开。",
+      "en": "Inherited two-practice outcome law, acquired goal state, versioned route and synchronized authorized rewrite; living significance, the practical commitments J and the report correspondence remain explicit."
     },
     {
       "zh": "复查消耗一单位工作，行动开始需要两单位；报告覆盖实际作用时的相关条件。复查／行动为局部抽象步骤，未实现物理隔离或感测器。",
@@ -243,6 +247,10 @@
     {
       "en": "2026-10-20: 19 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/9b2503fd29568a3e/pending-task-context-applicability.json and in git.",
       "zh": "2026-10-20：19 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/9b2503fd29568a3e/pending-task-context-applicability.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added (a course of draws is executable exactly where each draw is within the standing stock; with review drawing one unit and action two, an endpoint completes both exactly where its report clears the relevant risk and it holds three units; uncleared reviews keep the loss count); the retired label G0/J in the premises replaced by living significance and the practical commitments; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（一串汲取恰在每次汲取都在当时存量之内时可执行；审查汲取一单位、行动两单位时，端点恰在报告排除相关风险且有三个单位时完成二者；未排除风险的审查保持损失计数）；前提中已退役的标签 G0/J 改为生生之意义与实践承诺；主张不变。"
     }
   ],
   "next_delta": {

@@ -5,10 +5,14 @@
     "zh": "局部状态不变的关系转化与充分约化",
     "en": "Relational transformation with unchanged local states and a sufficient reduction"
   },
+  "statement": {
+    "en": "A determined law on reduced values carries each step exactly where moves keep merged configurations merged. In a two-qubit fragment a phase step keeping both local densities changes a later controlled X's response: the local pair carries no law, a summary with the joint cross term does.",
+    "zh": "约化值上有确定的律承载每一步，恰当动作使被合并的构形仍被合并。在两量子位片段中，保持两个局部密度的相位步改变其后受控 X 的回应：局部之对不承载规律，带共同交叉项的摘要承载规律。"
+  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T05:50:00+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
     "zh": "对每条带动作的变化之律与每个约化：约化值上有一条确定的律承载每一步，当且仅当约化合并的构型被每个动作带到它合并的构型；与每个动作交换的约化律与每段动作序列交换。在明示两量子位实振幅片段中，实际相位操作保留双方完整局部密度与联合基底分布，而同一后续受控 X 操作产生不同控制响应；所以局部密度对不承载规律，不能统一给出下一控制状态。保留相应共同交叉项的四整数摘要承载规律，对指定交互与相位操作的任意有限序列给出精确控制密度和响应：两者都是实例。",
     "en": "For every law of change with moves and every reduction: some determined law on the reduced values carries every step exactly when configurations the reduction merges are taken by each move to configurations it merges; a reduced law that commutes with every move commutes with every course of moves. In the specified two-qubit real-amplitude fragment, an actual phase operation preserves both complete local densities and the joint basis distribution, while the same subsequent controlled-X gives different control responses; so the local density pair carries no law and cannot uniformly determine the next control state. A four-integer summary retaining the relevant joint cross contribution carries one, giving exact control densities and responses for every finite word of the supplied interaction and phase operations: both are instances."
@@ -42,11 +46,11 @@
     "Generative.RelationalReduction.summary_omits_other_relations",
     "Becoming.Readout.law_through_iff",
     "Becoming.Readout.foldl_semiconj",
-    "Becoming.Instances.local_pair_no_update",
-    "Becoming.Instances.local_pair_carries_no_law",
-    "Becoming.Instances.evolve_eq_foldl",
     "Becoming.MachineInstances.summary_carries_law",
-    "Becoming.MachineInstances.summary_every_word"
+    "Becoming.MachineInstances.summary_every_word",
+    "Becoming.JointPhase.no_local_pair_update",
+    "Becoming.JointPhase.local_pair_carries_no_law",
+    "Becoming.JointPhase.every_finite_word_exact"
   ],
   "dependencies": [],
   "related": [
@@ -74,7 +78,7 @@
   ],
   "counterexamples": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalReduction.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPhase.lean",
       "detail": {
         "zh": "no_local_pair_update保留双方完整局部状态却反驳统一下一步更新；summary_omits_other_relations显示正面摘要仍省略寄存器关系，扩充操作范围需重新验证。",
         "en": "no_local_pair_update preserves both full local states but refutes a uniform next-step update; summary_omits_other_relations shows the sufficient summary still omits register relations, so enlarged operation scope requires renewed validation."
@@ -149,7 +153,12 @@
         "Becoming.JointPhase.summary_update_exact",
         "Becoming.JointPhase.every_finite_control_response_exact",
         "Becoming.JointPhase.summary_omits_other_relations",
-        "Becoming.JointPhase.local_pair_carries_no_law"
+        "Becoming.JointPhase.local_pair_carries_no_law",
+        "Becoming.JointPhase.retained_cross_distinguishes_change",
+        "Becoming.JointPhase.summarize",
+        "Becoming.JointPhase.summary_recovers_control",
+        "Becoming.JointPhase.every_finite_word_exact",
+        "Becoming.JointPhase.summary_response"
       ]
     },
     {
@@ -320,6 +329,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Instances, OperativeCoherence, RelationalReduction and SystemsOrganization) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.JointPhase, Becoming.Readout, GenerativeCore and MachineInstances). The retired modules' content is also stated in Becoming.Dephasing and Becoming.ProjectedLaws, which this record does not cite with declarations. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Instances, OperativeCoherence, RelationalReduction and SystemsOrganization）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.JointPhase, Becoming.Readout, GenerativeCore and MachineInstances）。退役模块的内容也陈述于 Becoming.Dephasing and Becoming.ProjectedLaws，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added, from the claim and the core laws; the core declarations of the summary (the retained cross contribution, recovery of the control, exactness along every finite word, the response at the end of every trace) added to the references, and core names to the aliases; the three aliases naming the retired Instances module (local_pair_no_update, local_pair_carries_no_law, evolve_eq_foldl) dropped, the file staying a provenance reference; the local-reduction counterexample re-pointed from the periphery file to the core. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，取自主张与核心规律；摘要的核心声明（保留的交叉贡献、恢复控制位、沿每个有限词精确、每条迹末端的回应）加入引用，核心名称加入别名；删去三个指向已退役 Instances 模块的别名（local_pair_no_update、local_pair_carries_no_law、evolve_eq_foldl），该文件仍为来源引用；局部约化的反例由外围文件改指核心。规律未变。"
     }
   ]
 }

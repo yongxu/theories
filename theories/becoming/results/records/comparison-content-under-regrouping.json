@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "claim": {
     "zh": "同一 Frame 的过程不变，只对主张作多对一分组。逐项恢复原实现恰当同组主张在当前配置中同样成立；两处保真时，既有 Extension 比较保持不变。Web.paths 的同样依存与阈值供给该条件；依存可判定时，在所有水平路径上保真恰当同组形成每一步的最低所需逐项相同。不依存的条件所需为零。继承 Transfer 的搬运／保留两条路径现在由同一初态、同一其余交换律生成，均可行且平衡；它们有真实混合得失，合并两个不同依存的形成却使分组描述相同。",
     "en": "On one Frame with its process unchanged, claims are regrouped many-to-one. Recovering each original realization is exactly constancy within each group at that configuration; fidelity at both configurations preserves the existing Extension comparison. Equal Web requirements and thresholds supply fidelity; with decidable requirements, fidelity on all level paths holds iff group members have equal pointwise minimum requirements at every step, zero on unrequired conditions. The inherited Transfer moving/withholding paths are generated from one start and one rest-law, both feasible and balanced; real mixed gains and losses remain although merging differently dependent formations makes the grouped readings identical."
@@ -151,8 +151,8 @@
     {
       "id": "classification-robust-generative-comparison",
       "detail": {
-        "zh": "旧结果处理固定内容的优先分类，本结果处理内容读法的粒度；不重开已成 G0/J 推论。",
-        "en": "The earlier result varies priority classification of fixed contents; this addresses descriptive granularity without reopening completed G0/J inferences."
+        "zh": "旧结果处理固定内容的优先分类，本结果处理内容读法的粒度；不重开条件对齐路线上已成的推论。",
+        "en": "The earlier result varies priority classification of fixed contents; this addresses descriptive granularity without reopening completed inferences of the conditional alignment route."
       }
     }
   ],
@@ -457,6 +457,10 @@
     {
       "en": "2026-10-20: 31 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/6d920962b63373b1/comparison-content-under-regrouping.json and in git.",
       "zh": "2026-10-20：31 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/6d920962b63373b1/comparison-content-under-regrouping.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0/J in a related note replaced by the conditional alignment route; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条相关说明中已退役的标签 G0/J 改为条件对齐路线；主张不变。"
     }
   ]
 }

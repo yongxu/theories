@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of existing studies (elective concern, relation and reason, the noninstrumental root, relational goodness, whole-process realization, the constitutive audit, ethical learning) and of the capture, registration and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance.
+Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of existing studies (elective concern, relation and reason, the noninstrumental root, relational goodness, whole-process realization, the constitutive audit, ethical learning) and of the capture, coupling and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance.
 
 Canonical source: [ZERO-AXIOM-PRACTICAL-JUDGMENT.md](../../history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md)
 
@@ -60,9 +60,9 @@ Begin with formation, obstruction, sensing, response and transformation; explain
 ### Dependencies
 
 - none
-- related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). The explicit-axiom route is an established result with a different completion standard.
+- related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). The conditional alignment route is an established result with a different completion standard.
 - related, not a proved adapter: [own-good-to-reachable-living-significance](own-good-to-reachable-living-significance.md). Reuses the corrected evaluator route: selfhood, continuity and tolerance do not independently establish universal significance.
-- related, not a proved adapter: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). Credits the current significance/reason distinction; deriving G0 does not discharge A’s normative work.
+- related, not a proved adapter: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). Credits the current significance/reason distinction; deriving living significance does not discharge A’s normative work.
 - related, not a proved adapter: [open-form-realization-under-revision](open-form-realization-under-revision.md). P89 bounded realization and formal connection are complete, not reopened as a missing mechanism for this target.
 - related, not a proved adapter: [target-capture](target-capture.md). Reuses conditional differential persistence, transmission and rule-bound reabsorption as explanatory inputs, not new proofs.
 - related, not a proved adapter: [selection-under-registration-revision](selection-under-registration-revision.md). Reuses lumping change and expressible-choice scope within one activity, without inferring ethics from preserved discrimination.
@@ -99,6 +99,7 @@ Aliases: —
 - 17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), item bilingual-16: the Chinese title's 普遍实践权威 (authority) becomes 普遍实践根据 (warrant), matching the English warrant and the Chinese statement's 根据 (AGENTS.md keeps warrant and authority distinct). Earlier text in text_versions.
 - 17 October 2026, wording: authority phrasing removed from public fields, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged.
 - 18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired labels in two related notes replaced (the explicit-axiom route by the conditional alignment route, G0 by living significance), and the registration records named by the current word, coupling; the target is unchanged.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](universal-practical-warrant.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -110,4 +111,4 @@ Aliases: —
 
 </details>
 
-Documentary review UTC: `2026-10-16T18:25:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T17:03:04+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

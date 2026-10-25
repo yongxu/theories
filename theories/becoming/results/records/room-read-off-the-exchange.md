@@ -51,7 +51,7 @@ Optima over a course of steps, the optimizer choosing again at each, with the re
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Zhuang and Hadfield-Menell (NeurIPS 2020) assume, for their Theorem 1, a resource constraint strictly increasing in each attribute: room, supplied. Here it is read off conservation per member with capacity, the rest exchanging as it does. Saturation at an optimum is the saturated cut of a maximum flow (Ford and Fulkerson 1956) and the binding constraints of a corner solution. Reading (the AI's): at an optimum the drain at a condition beyond is the part's capacity there or all that stands, whichever is less; what the order registers of the beyond does not enter, what the part can take does.
+Zhuang and Hadfield-Menell (NeurIPS 2020) assume, for their Theorem 1, a resource constraint strictly increasing in each attribute: room, supplied. Here it is read off conservation per member with capacity, the rest exchanging as it does. Saturation at an optimum is the saturated cut of a maximum flow (Ford and Fulkerson 1956) and the binding constraints of a corner solution. Reading (the AI's): at an optimum the drain at a condition beyond is the part's capacity there or all that stands, whichever is less; what of the beyond couples into the order does not enter, what the part can take does.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -125,6 +125,7 @@ Aliases: `room read off the exchange`, `room from conservation with capacity`, `
 - 21 October 2026, SG3: several optimizers at a mutual best response, each a part alone (record several-optimizers-drain-by-their-joint-capacity, study section 290); this record's laws and their statements are unchanged.
 - 21 October 2026, SG4: a course of re-optimizing steps against a renewal, each step read off by this record's law (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.
 - 25 October 2026, UE1b (board rule 9): Optimum.Above.full, Optimum.Above.floor_or_full and Optimum.optimum_beyond are now corollaries of Optimum.Above.full_of_ranked, Optimum.Above.floor_or_full_of_ranked and Optimum.beyond_of_ranked, which take as hypothesis that the order ranks above the optimum the outcome with one unit moved from the condition beyond into the family, in place of the rising order; the three are added to the fourth law and its references; statements and this record's laws unchanged. Optimum.lean rebound to core receipt 20261025T173410.671057Z after reading the change (record what-a-set-point-optimum-does-beyond, study section 415).
+- 25 October 2026, board item DF (study section 418): the retired registration word in the correspondence's reading ('what the order registers of the beyond') reads in the coupling vocabulary ('what of the beyond couples into the order'); the laws are unchanged.
 
 </details>
 

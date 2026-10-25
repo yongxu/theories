@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "分别描述各部分恰在整体为矩形处给回整体；关系只由共同作用形成，在各自无损的律下持续，只由失去或共同作用结束；奇偶是诸对不给回的整体。",
     "en": "Describing the parts separately gives back the whole exactly where it is rectangular; a relation forms only by joint action, lasts under separate laws that lose nothing, and ends only by loss or joint action; parity is a whole its pairs do not give back."
@@ -32,8 +32,8 @@
     }
   ],
   "correspondence": {
-    "zh": "P70 的第一部分（工作板），按 Ren 2026-10-12 的“push the frontier, as far as possible”，回答 Ren 的“the framing may lose something”与“what makes a pair, a pair?”：分别描述各部分扣除的恰是关系；关系的“能一起是什么”是“怎样一起继续”在一刻的记录。读法（AI 的，依 Ren 的交托采用；Ren 同意了包含它们的回答）：相关是一次相遇的记忆；三生万物读作三是整体能持有任何部分都不持有的关系的最小数目。部分失去整体的另一种方式（部分允许没有整体有的）是 contextual-registration 的 no_whole，在同样的三对上。见整合文档 §94。",
-    "en": "The first part of P70 (work board), following Ren's “push the frontier, as far as possible” of 12 October 2026, answering Ren's “the framing may lose something” and “what makes a pair, a pair?”: what describing the parts separately deducts is exactly the relation; “what can go together” is the record at a moment of “how they go on”. Readings (the AI's, adopted on Ren's delegation; Ren agreed with the reply containing them): a correlation is the memory of a meeting; 三生万物 read as three being the least number at which a whole holds a relation no part holds. The other way parts fail a whole (parts allowing what no whole has) is no_whole of contextual-registration, on the same three pairs. See §94 of the integration note."
+    "zh": "P70 的第一部分（工作板），按 Ren 2026-10-12 的“push the frontier, as far as possible”，回答 Ren 的“the framing may lose something”与“what makes a pair, a pair?”：分别描述各部分扣除的恰是关系；关系的“能一起是什么”是“怎样一起继续”在一刻的记录。读法（AI 的，依 Ren 的交托采用；Ren 同意了包含它们的回答）：相关是一次相遇的记忆；三生万物读作三是整体能持有任何部分都不持有的关系的最小数目。部分失去整体的另一种方式（部分允许没有整体有的）是 claims-shown-in-context 的 no_whole，在同样的三对上。见整合文档 §94。",
+    "en": "The first part of P70 (work board), following Ren's “push the frontier, as far as possible” of 12 October 2026, answering Ren's “the framing may lose something” and “what makes a pair, a pair?”: what describing the parts separately deducts is exactly the relation; “what can go together” is the record at a moment of “how they go on”. Readings (the AI's, adopted on Ren's delegation; Ren agreed with the reply containing them): a correlation is the memory of a meeting; 三生万物 read as three being the least number at which a whole holds a relation no part holds. The other way parts fail a whole (parts allowing what no whole has) is no_whole of claims-shown-in-context, on the same three pairs. See §94 of the integration note."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Description.lean",
   "aliases": [
@@ -398,6 +398,10 @@
     {
       "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one limitations clause rewritten within the growth ratchet (this record is not in SA1's table; the match is LK1's judgment). The claim and its premises are unchanged.",
       "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；在增长限制之内改写 limitations 的一句（本记录不在 SA1 的表中；这一对应是 LK1 的判断）。主张与其前提不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the correspondence names the record by its current id, claims-shown-in-context, for its former id; nothing else changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应以现行编号 claims-shown-in-context 称该记录，取代其旧编号；别无改变。"
     }
   ]
 }

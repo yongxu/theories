@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "条件编号时，最小的耦合的反例，如每个整体而无部分之律，恰在一个规则判定每个布尔序列是否处处为假之处存在：弱有限全知原则作为规则。消失之判定恰是有限全知原则作为规则。",
     "en": "With numbered conditions, a counterexample to the least coupling, like every law of the whole and no part, exists exactly where a rule decides of every Boolean sequence whether it is false throughout: WLPO as a rule. The decision of vanishing is exactly LPO as a rule."
@@ -42,7 +42,7 @@
     },
     {
       "zh": "沿一个布尔序列混合两段历史，再比较两个数；比较是判定的，所以混合给出一个规则，对每个布尔序列判定它是否处处为假。在某步不敏感于每个条件而仍有差别的律，与最小的耦合的每个反例，各给出这样的规则；规则给出弱有限全知原则。",
-      "en": "Mixing two histories along a Boolean sequence ends by comparing two numbers, which is decided, so the mix gives a rule deciding, of every Boolean sequence, whether it is false throughout. A law insensitive at a step to every condition that still differs there, and every counterexample to the least registration, each give such a rule; the rule gives the weak limited principle of omniscience.",
+      "en": "Mixing two histories along a Boolean sequence ends by comparing two numbers, which is decided, so the mix gives a rule deciding, of every Boolean sequence, whether it is false throughout. A law insensitive at a step to every condition that still differs there, and every counterexample to the least coupling, each give such a rule; the rule gives the weak limited principle of omniscience.",
       "declarations": [
         "Becoming.mixedDecision",
         "Becoming.insensitiveDiffersDecision",
@@ -163,8 +163,8 @@
     "en": "Whether the weak rule gives the rule of the limited principle (whether the tail law takes strictly more); what a counterexample gives with conditions not numbered; sensitivity in temporal order; an independent review."
   },
   "correspondence": {
-    "zh": "Ren 2026-10-12 的目标：“move towards 100%, you can spawn a few agents for help, pick the \"What would move it most next\" first, and don't stop until we are 100%”。本结果回答 sensitivity-is-the-least-registration 的 next_delta 首项：反例之存在的确切强度。读法（AI 的，Ren 2026-10-18 取，DELEGATED-CHOICES D43）：依存于整体而不依存于其任何部分者，恰在能对每个无尽的是非序列判定它是否全是否之处给出；条件编号时，最小的耦合恰在这一全知处不成立，不需要更多，核心不假定它。读作水平永不消失，这一类整体只需要弱的规则；读作终将消失，一个相关的整体（经典地是其补，在核心中是另一个律）需要有限全知原则的规则。数学是标准的：构造性反推数学中的弱有限全知原则（Bridges 与 Richman 1987；有限全知原则出自 Bishop 1967），这里以规则陈述。",
-    "en": "Ren, 12 October 2026, the goal: “move towards 100%, you can spawn a few agents for help, pick the \"What would move it most next\" first, and don't stop until we are 100%”. This result answers the first item of the next_delta of sensitivity-is-the-least-registration: the exact strength of a counterexample's existence. Readings (the AI's, taken by Ren on 18 October 2026, DELEGATED-CHOICES D43): what depends on the whole and on no part of it is given exactly where it can be decided, of every unending sequence of yes and no, whether it says no throughout; with the conditions numbered, the least coupling fails exactly at this omniscience and needs no more of it, and the core does not assume it. Read as whether levels never vanish, a whole of this kind takes only the weak rule; read as whether they vanish eventually, a related whole, classically its complement but in the core another law, takes the rule of the limited principle. The mathematics is standard: the weak limited principle of omniscience of constructive reverse mathematics (Bridges and Richman 1987; the limited principle is Bishop's, 1967), stated here as a rule."
+    "zh": "Ren 2026-10-12 的目标：“move towards 100%, you can spawn a few agents for help, pick the \"What would move it most next\" first, and don't stop until we are 100%”。本结果回答 sensitivity-is-the-least-coupling 的 next_delta 首项：反例之存在的确切强度。读法（AI 的，Ren 2026-10-18 取，DELEGATED-CHOICES D43）：依存于整体而不依存于其任何部分者，恰在能对每个无尽的是非序列判定它是否全是否之处给出；条件编号时，最小的耦合恰在这一全知处不成立，不需要更多，核心不假定它。读作水平永不消失，这一类整体只需要弱的规则；读作终将消失，一个相关的整体（经典地是其补，在核心中是另一个律）需要有限全知原则的规则。数学是标准的：构造性反推数学中的弱有限全知原则（Bridges 与 Richman 1987；有限全知原则出自 Bishop 1967），这里以规则陈述。",
+    "en": "Ren, 12 October 2026, the goal: “move towards 100%, you can spawn a few agents for help, pick the \"What would move it most next\" first, and don't stop until we are 100%”. This result answers the first item of the next_delta of sensitivity-is-the-least-coupling: the exact strength of a counterexample's existence. Readings (the AI's, taken by Ren on 18 October 2026, DELEGATED-CHOICES D43): what depends on the whole and on no part of it is given exactly where it can be decided, of every unending sequence of yes and no, whether it says no throughout; with the conditions numbered, the least coupling fails exactly at this omniscience and needs no more of it, and the core does not assume it. Read as whether levels never vanish, a whole of this kind takes only the weak rule; read as whether they vanish eventually, a related whole, classically its complement but in the core another law, takes the rule of the limited principle. The mathematics is standard: the weak limited principle of omniscience of constructive reverse mathematics (Bridges and Richman 1987; the limited principle is Bishop's, 1967), stated here as a rule."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tail.lean",
   "aliases": [
@@ -629,6 +629,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): Tail.nonzero (now nonzero). Proof bindings (Change.lean, Prelude.lean, Tail.lean, Testing.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Change.lean, Tail.lean, Testing.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：Tail.nonzero（现为 nonzero）。证明绑定（Change.lean、Prelude.lean、Tail.lean、Testing.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Change.lean、Tail.lean、Testing.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the third law says the least coupling, as the title, statement, the fourth law and the Chinese do, where it said the least registration; the correspondence names the record by its current id, sensitivity-is-the-least-coupling; the declarations are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第三条定律的英文改称最小的耦合，与标题、陈述、第四条定律及中文一致；对应以现行编号 sensitivity-is-the-least-coupling 称该记录；声明不变。"
     }
   ],
   "text_versions": [

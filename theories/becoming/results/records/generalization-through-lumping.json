@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-14T14:40:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
-    "zh": "归并恰在它归并之处推广，正确恰在世界经归并同去之处；结构与变化是同一个归并。训练经数据选择，拟合在数据之外正确恰当类在那里决定；习得链与连接主义模型是其实例。",
-    "en": "A lumping generalizes exactly where it lumps and is right exactly where the world goes alike across it; structure and change are one lumping. Training selects through data; a fit is right beyond it exactly where the class determines it; the acquisition chain and connectionist models are instances."
+    "zh": "在经归并同去的函数中，与某观察输入归并之输入处的值由数据决定，有两个值、数据为列表且归并之值可判定相等时只在此处；拟合在那里正确，恰当世界在那里重复所观察之值。结构与变化是同一个归并；训练经数据选择。",
+    "en": "For functions alike across a lumping, data fix the value at an input lumped with an observed one, only there given two values, listed data and decided lumps; a fit is right at it exactly where the world repeats the observed value. Structure and change are one lumping; training selects through data."
   },
   "laws": [
     {
@@ -198,8 +198,8 @@
     "en": "Periphery instances of the lumping an actual architecture imposes (sharing across positions, invariance); generalization over undetermined processes; instance theorems with Alike of Becoming.Unfolding and the account in Becoming.Description of what a description keeps and loses."
   },
   "correspondence": {
-    "zh": "Ren 2026-10-12：“我觉得理更像是对结构和变化的规律的建模”。依 Ren 的读法，理是对结构与变化之规律的建模；AI 把对结构的建模读作一个归并（Lumped），把对变化的建模读作步骤经它同去的归并（GoAlike），goAlike_iff_lumped 说两者是同一个概念。它取代 AI 在 testing-within-registration 中的读法“对识负责的模型”；按 Ren 的读法，模型仍只经耦合入者被检验。读法（AI 的，依 Ren 的交托采用）：关于何者无关的模型何时正确，就是世界何时经它所归并者同去；自然的一致性不是前提而是这一局部条件；古德曼的新谜是选哪个归并；every_determines_nothing 是“no free lunch”的有限、确定性形式；对受训网络，类是训练所能达到的，推广来自结构、起点与更新所施加的归并（位置间共享、不变性、组合），不来自损失。",
-    "en": "Ren, 12 October 2026: “我觉得理更像是对结构和变化的规律的建模”. On Ren's reading 理 is the modeling of the laws of structure and of change; the AI reads a model of structure as a lumping (Lumped) and a model of change as a lumping the step goes alike across (GoAlike), and goAlike_iff_lumped says the two are one notion. This replaces the AI's reading in testing-within-registration, “a model answerable to registration”; on Ren's reading a model is still tested only through what couples in. Readings (the AI's, adopted on Ren's delegation): when a model of what is irrelevant is right is when the world goes alike across what it lumps; the uniformity of nature is not a premise but that local condition; Goodman's new riddle is which lumping; every_determines_nothing is a finite, determined form of “no free lunch”; for a trained network the class is what training can reach, and generalization comes from the lumping that architecture, starting points and updates impose (sharing across positions, invariance, composition), not from the loss."
+    "zh": "Ren 2026-10-12：“我觉得理更像是对结构和变化的规律的建模”。依 Ren 的读法，理是对结构与变化之规律的建模；AI 把对结构的建模读作一个归并（Lumped），把对变化的建模读作步骤经它同去的归并（GoAlike），goAlike_iff_lumped 说两者是同一个概念。它取代 AI 在 testing-within-couplings 中的读法“对识负责的模型”；按 Ren 的读法，模型仍只经耦合入者被检验。读法（AI 的，依 Ren 的交托采用）：关于何者无关的模型何时正确，就是世界何时经它所归并者同去；自然的一致性不是前提而是这一局部条件；古德曼的新谜是选哪个归并；every_determines_nothing 是“no free lunch”的有限、确定性形式；对受训网络，类是训练所能达到的，推广来自结构、起点与更新所施加的归并（位置间共享、不变性、组合），不来自损失。",
+    "en": "Ren, 12 October 2026: “我觉得理更像是对结构和变化的规律的建模”. On Ren's reading 理 is the modeling of the laws of structure and of change; the AI reads a model of structure as a lumping (Lumped) and a model of change as a lumping the step goes alike across (GoAlike), and goAlike_iff_lumped says the two are one notion. This replaces the AI's reading in testing-within-couplings, “a model answerable to registration”; on Ren's reading a model is still tested only through what couples in. Readings (the AI's, adopted on Ren's delegation): when a model of what is irrelevant is right is when the world goes alike across what it lumps; the uniformity of nature is not a premise but that local condition; Goodman's new riddle is which lumping; every_determines_nothing is a finite, determined form of “no free lunch”; for a trained network the class is what training can reach, and generalization comes from the lumping that architecture, starting points and updates impose (sharing across positions, invariance, composition), not from the loss."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
   "aliases": [
@@ -705,6 +705,10 @@
     {
       "en": "20 October 2026, PE1: propext is stated through Lumped in Becoming.PropositionIdentity (record proposition-identity, study section 258). The claim is unchanged.",
       "zh": "2026年10月20日，PE1：propext 经 Lumped 陈述于 Becoming.PropositionIdentity（记录 proposition-identity，研究第 258 节）。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement no longer claims more than the Lean: the data fix the value where an input is lumped with an observed one, and only there given two values, listed data and lumps compared decidedly; a fit is right there exactly where the world takes the observed value (pointwise, not only where the world goes alike across the lumping); a former record id updated; the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述不再多于 Lean 所证：输入与观察输入归并处值由数据决定，有两个值、数据为列表、归并之值可判定相等时只在此处；拟合在那里正确，恰当世界在那里取所观察之值（逐点，而非只在世界经归并同去时）；更新一个旧记录编号；定律不变。"
     }
   ],
   "text_versions": [

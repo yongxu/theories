@@ -37,7 +37,7 @@ No protected runtime, physical fault recovery or ethical legitimacy proof; the 2
 
 No dependency on another migrated record is asserted; source imports and supplied premises remain in scope.
 
-- Related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Interpretive connection: reuses the completed G0/J direction; implementation conditions do not independently justify permissions or ends.
+- Related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Interpretive connection: reuses the completed direction of the conditional alignment route; implementation conditions do not independently justify permissions or ends.
 
 **Used by:** [recoverable-mediated-change](recoverable-mediated-change.md)
 
@@ -77,4 +77,5 @@ Aliases: `MediatedControl.executed_writes_fit_derived_effect`, `MediatedControl.
 - 2026-10-14: under the general-law audit of older records, the claim now states the law first. New core module Becoming.Countdown: admitted courses keep a property exactly when every admitted step does; the periphery ProtocolInstances shows that mediated histories are reachability under admitted steps, and mediated_history_preserves_coverage is an instance. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the landing run binds the receipts. The original theorems, receipts and counterexamples are unchanged.
 - 18 October 2026, the N1 renaming (Ren: "Renames, full scope"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Countdown.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Countdown.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired label G0/J in a related detail reads the conditional alignment route; the claim is unchanged.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](mediated-evidence-transport.json).

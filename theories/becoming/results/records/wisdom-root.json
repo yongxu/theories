@@ -8,7 +8,7 @@
   "kind": "target",
   "status": "open",
   "family": "F08",
-  "reviewed_at_utc": "2026-10-13T22:45:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "en": "Target: establish that the core’s common relations are indispensable across all wisdom under discussion, and thereby the foundational status of the whole core.",
     "zh": "目标：证明 core 的共同关系对所讨论的全部智慧不可省略，从而确立整个 core 的根基地位。"
@@ -19,13 +19,13 @@
       "en": "Retain both authorized components, necessary relations and generative explanation; local success conditions cannot simply be renamed full wisdom."
     },
     {
-      "zh": "按 Ren 的纠正，以道德评价 becoming、普遍生成原则支撑具体判断为正面路线，不以对手认可为门槛。当前以 Unrestricted 为条件推出 G0（章节 §6.4，理论不断言这一条件）；相应 A、L、J／C、实践解释及真实对应 E 明示，不把它们作为裸动力学的结论。",
-      "en": "Following Ren’s correction, pursue morality as appraisal of becoming through universal generative principles, without requiring a rival’s assent. G0 now follows with Unrestricted as a condition (chapter section 6.4; the theory does not assert the condition); the applicable A, L, J/C, practical articulation and actual correspondence E remain explicit, not conclusions of bare dynamics."
+      "zh": "以道德评价 becoming、普遍生成原则支撑具体判断为正面路线，不以对手认可为门槛。以延续条件 Unrestricted 为条件推出生生之意义（理论不断言这一条件）；相应 A、L、实践承诺 J 与比较 C、实践解释及真实对应 E 明示，不把它们作为裸动力学的结论。",
+      "en": "Pursue morality as appraisal of becoming through universal generative principles, without requiring a rival’s assent. Living significance follows with the continuation condition Unrestricted as a condition (the theory does not assert it); the applicable A, L, the practical commitments J and the comparison C, practical articulation and actual correspondence E remain explicit, not conclusions of bare dynamics."
     }
   ],
   "correspondence": {
-    "en": "Each connection of independently specified wisdom content to the core’s formal conditions is listed under Progress with its boundary. Need, actual continuation, fulfillment and discharge cannot be erased. The timed branch excludes differently informative initial states; theoretical or contemplative content without this discrimination commitment keeps its own constitutive burden, and the abstract bound and native physical conditions stay separate. General-Frame G0 and relevance_least already accommodate present realization; the possibility, presence and rest boundaries prevent replacing that content with future feasibility or activity counts. Multivalued recovery keeps richer questions and finiteness. Constitutive binding, acquired content and continuing support keep separate roles; wisdom correspondence across different instances is interpretive, not a formal state composition. Binding, actual history and normative arguments supply the real content of the claims; the formal interfaces are no longer missing mechanisms. Knowledge, reasonable acceptance, practical permission and subsequent responsibility remain distinct; final truth does not replace historical warrant.",
-    "zh": "独立说明的智慧内容与 core 形式条件的每项接通，连同其边界，列于“已接通”。原需要、实际接续、完成与解除不能被删去。及时分支不覆盖不同信息初态；不含此辨别承诺的理论理解与观照内容仍须其自身构成论证，原抽象界与原生物理实现条件分开。一般 Frame 的 G0 及 relevance_least 已容纳当下实现；原可能性／在场／休息边界防止用未来可行性或活动数量替换这些内容。多结果恢复保留更丰富问题与有限性。构成性绑定、习得内容与持续支承按其关系分工；不同实例间的智慧对应为解释性复用，不伪称状态已形式接合。原绑定、实际历史与规范论证负责所用主张的真实内容；纯形式接口不再作为缺失机制。知识、合理接受、实践许可与后续责任分别说明，不以终点真假替代历史根据。"
+    "en": "Each connection of independently specified wisdom content to the core’s formal conditions is listed under Progress with its boundary. Need, actual continuation, fulfillment and discharge cannot be erased. The timed branch excludes differently informative initial states; theoretical or contemplative content without this discrimination commitment keeps its own constitutive burden, and the abstract bound and native physical conditions stay separate. Living significance on a general Frame and relevance_least accommodate present realization; the possibility, presence and rest boundaries prevent replacing that content with future feasibility or activity counts. Multivalued recovery keeps richer questions and finiteness. Constitutive binding, acquired content and continuing support keep separate roles; wisdom correspondence across different instances is interpretive, not a formal state composition. Binding, actual history and normative arguments supply the real content of the claims; the formal interfaces are no longer missing mechanisms. Knowledge, reasonable acceptance, practical permission and subsequent responsibility remain distinct; final truth does not replace historical warrant.",
+    "zh": "独立说明的智慧内容与 core 形式条件的每项接通，连同其边界，列于“已接通”。原需要、实际接续、完成与解除不能被删去。及时分支不覆盖不同信息初态；不含此辨别承诺的理论理解与观照内容仍须其自身构成论证，原抽象界与原生物理实现条件分开。一般 Frame 上的生生之意义及 relevance_least 已容纳当下实现；原可能性／在场／休息边界防止用未来可行性或活动数量替换这些内容。多结果恢复保留更丰富问题与有限性。构成性绑定、习得内容与持续支承按其关系分工；不同实例间的智慧对应为解释性复用，不伪称状态已形式接合。原绑定、实际历史与规范论证负责所用主张的真实内容；纯形式接口不再作为缺失机制。知识、合理接受、实践许可与后续责任分别说明，不以终点真假替代历史根据。"
   },
   "canonical_source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md",
   "aliases": [],
@@ -34,8 +34,8 @@
       "id": "practical-judgment-under-living-significance",
       "relation": "interpretive",
       "detail": {
-        "zh": "既有G0/J普遍原则解释保留、转化、交接和结束的共同根据；第14节作哲学复用，不新增规范公理或Lean连接。 §31保持认识许可与实践许可的区别，以及错误后的残余责任；不以有限接受自动解除J4要求。",
-        "en": "Existing G0/J principles explain the common grounds of preservation, transformation, transfer and ending; section 14 reuses them philosophically without a new normative axiom or Lean adapter. Section 31 preserves the distinction between epistemic and practical permission and residual responsibility after error; fallible acceptance does not automatically discharge J4."
+        "zh": "既有的生生之意义与实践承诺之普遍原则解释保留、转化、交接和结束的共同根据；第14节作哲学复用，不新增规范公理或Lean连接。 §31保持认识许可与实践许可的区别，以及错误后的残余责任；不以有限接受自动解除J4要求。",
+        "en": "The existing principles of living significance and the practical commitments explain the common grounds of preservation, transformation, transfer and ending; section 14 reuses them philosophically without a new normative axiom or Lean adapter. Section 31 preserves the distinction between epistemic and practical permission and residual responsibility after error; fallible acceptance does not automatically discharge J4."
       }
     },
     {
@@ -50,8 +50,8 @@
       "id": "positive-ground-open-futures",
       "relation": "interpretive",
       "detail": {
-        "zh": "既有G0下的正面未来根据表明，生成形态开放与有根据的评价可以并存；不把正面方面升级为最终许可。",
-        "en": "The existing G0-based positive-future ground supports appraisal with open generative form; a positive aspect is not upgraded to final permission."
+        "zh": "既有的生生之意义下的正面未来根据表明，生成形态开放与有根据的评价可以并存；不把正面方面升级为最终许可。",
+        "en": "The existing positive-future ground under living significance supports appraisal with open generative form; a positive aspect is not upgraded to final permission."
       }
     },
     {
@@ -266,8 +266,8 @@
       },
       "interface": {
         "output": {
-          "zh": "一般Frame在Unrestricted下的G0及最小正面相关，精确包括已实现的living内容。",
-          "en": "General-Frame G0 under Unrestricted and its least positive relevance, exactly including realized living content."
+          "zh": "一般 Frame 上在 Unrestricted 下的生生之意义及最小正面相关，精确包括已实现的living内容。",
+          "en": "Living significance on a general Frame under Unrestricted and its least positive relevance, exactly including realized living content."
         },
         "input": {
           "zh": "领会、观照与合宜结束的实际内容及其意义，不附加未来产出条件。",
@@ -458,8 +458,8 @@
           "en": "Supply the continuation content compared in moral appraisal of becoming, without freely supplying a second flow."
         },
         "conditions": {
-          "zh": "原非预知、平衡、可行、共同初态与在场条件；比较保留经耦合及意义覆盖；实际对应与G0/A/L/J/E另明示。",
-          "en": "Original nonanticipation, balance, feasibility, common start and presence; comparison retains coupling and significance coverage; actual correspondence and G0/A/L/J/E remain explicit."
+          "zh": "原非预知、平衡、可行、共同初态与在场条件；比较保留经耦合及意义覆盖；实际对应与生生之意义、A、L、J、E 另明示。",
+          "en": "Original nonanticipation, balance, feasibility, common start and presence; comparison retains coupling and significance coverage; actual correspondence and living significance, A, L, J and E remain explicit."
         },
         "evidence": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md"
       }
@@ -517,8 +517,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Reused conditional results and the formal laws of wisdom-root-part-one do not by themselves prove wisdom coverage or complete the root; formal adequacy certifies no wisdom reading or actual acquisition history.",
-      "zh": "所复用的已完成条件成果及 wisdom-root-part-one 的形式规律，本身不证明智慧覆盖，也不完成慧根；形式完备性不认证智慧读法或实际获得历史。",
+      "en": "Reused conditional results and the formal laws of wisdom-root-without-axiom do not by themselves prove wisdom coverage or complete the root; formal adequacy certifies no wisdom reading or actual acquisition history.",
+      "zh": "所复用的已完成条件成果及 wisdom-root-without-axiom 的形式规律，本身不证明智慧覆盖，也不完成慧根；形式完备性不认证智慧读法或实际获得历史。",
       "kind": "non-implication"
     },
     {
@@ -868,7 +868,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "0362e707d7ec1f584c895a74718635b56d1da92aec8feecdbd66d9c1f99020a3",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
       "declarations": [
         "Becoming.World.ofRoles",
         "Becoming.World.ceasingRecurs_ofRoles"
@@ -1465,6 +1465,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1512,7 +1518,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1852,6 +1858,10 @@
     {
       "en": "20 October 2026, R36 (the chapter, once): the canonical chapter was restructured, its 20 October edition frozen in theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md; this record's citations of the old section numbering re-pointed by content (section 6.15 to 6.4). The claim is unchanged.",
       "zh": "2026年10月20日，R36（本章只陈述一次）：规范章节重排，10月20日版冻结于 theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md；本记录对旧节号的引用按内容重指（§6.15 改为 §6.4）。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0 replaced by living significance in the premises, correspondence and dependency notes (G0/J by living significance and the practical commitments), the premise on the positive route giving its argument without naming whose correction it was or citing the retired chapter section, the comparison C named beside J; a former record id updated; the scope is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提、对应与依赖说明中已退役的标签 G0 改为生生之意义（G0/J 改为生生之意义与实践承诺），正面路线之前提给出其论证而不再写由谁纠正、不再引用已退役章节之节号，比较 C 与 J 并列写明；更新一个旧记录编号；范围不变。"
     }
   ],
   "text_versions": [

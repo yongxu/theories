@@ -188,8 +188,8 @@
       "kind": "scope"
     },
     {
-      "zh": "与热寂的比较是作者的类比。",
-      "en": "The comparison with heat death is the author's analogy.",
+      "zh": "与热寂的比较是 AI 的类比。",
+      "en": "The comparison with heat death is the AI's analogy.",
       "kind": "correspondence"
     }
   ],
@@ -271,8 +271,8 @@
     "en": "Relate dissipation to possibility, diversity and complexity; give a version with rational amounts; settle whether arising that is not embodied has its own form of dissipation (embodied arising is in generation-is-replenishment); find the empirical correspondence of dissipation and openness in actual unfoldings."
   },
   "correspondence": {
-    "zh": "第四次独立审查指出，“任何有限部分都不能独自不息”与“没有一个有限的部分独自承担”需要耗散前提。本结果陈述这一前提，并在流中的取用上证明它。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。作者把结果读作原话中“整体”的一种形式内容：在耗散之下，复现的取用，无论来自不止的更多、生成还是维持（Lone），使它复现的有限条件家族不从任何一步起一直封闭，家族被围住时也不从任何一步起一直向内（taking_draws_in）（作者的诠释）；它不替代 Ren 的原话，也不推出它是好的。用自由能读耗散：物质可以在有限家族中循环（Cycle），驱动循环的来源须越出每个有限家族（AI 论证）。实际的量是否耗散、实际的展开是否在这一意义上有限，是经验问题。新名称按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
-    "en": "The fourth independent review found that “no finite part is unceasing on its own” and “no finite part bears it alone” need a dissipation premise. This result states that premise and proves the claim for taking in flows. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). The author reads the result as one formal content of “whole” in those words: under dissipation, recurring taking, whether of more, of generation or of maintenance (Lone), leaves the finite family of conditions on which it recurs closed from no step on, and a family enclosed around inward from no step on (taking_draws_in) (the author's interpretation); it does not replace Ren's words and does not show that it is good. Reading dissipation on free energy, matter can cycle within a finite family (Cycle) while the source driving the cycling must reach beyond every finite family (an AI argument). Whether actual quantities dissipate, and whether actual unfoldings are finite in this sense, are empirical questions. The new names are adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
+    "zh": "第四次独立审查指出，“任何有限部分都不能独自不息”与“没有一个有限的部分独自承担”需要耗散前提。本结果陈述这一前提，并在流中的取用上证明它。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。AI 把结果读作原话中“整体”的一种形式内容：在耗散之下，复现的取用，无论来自不止的更多、生成还是维持（Lone），使它复现的有限条件家族不从任何一步起一直封闭，家族被围住时也不从任何一步起一直向内（taking_draws_in）（AI 的诠释）；它不替代 Ren 的原话，也不推出它是好的。用自由能读耗散：物质可以在有限家族中循环（Cycle），驱动循环的来源须越出每个有限家族（AI 论证）。实际的量是否耗散、实际的展开是否在这一意义上有限，是经验问题。新名称按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
+    "en": "The fourth independent review found that “no finite part is unceasing on its own” and “no finite part bears it alone” need a dissipation premise. This result states that premise and proves the claim for taking in flows. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). The AI reads the result as one formal content of “whole” in those words: under dissipation, recurring taking, whether of more, of generation or of maintenance (Lone), leaves the finite family of conditions on which it recurs closed from no step on, and a family enclosed around inward from no step on (taking_draws_in) (the AI's interpretation); it does not replace Ren's words and does not show that it is good. Reading dissipation on free energy, matter can cycle within a finite family (Cycle) while the source driving the cycling must reach beyond every finite family (an AI argument). Whether actual quantities dissipate, and whether actual unfoldings are finite in this sense, are empirical questions. The new names are adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
   "aliases": [
@@ -354,8 +354,8 @@
     {
       "id": "unceasing-generation-needs-renewal",
       "detail": {
-        "zh": "该结果的 dissipation_arising_not_recurring 在依存网上陈述耗散；本结果在流上陈述，并把作者论证“任何有限部分都不能独自不息”在取用上变为定理。",
-        "en": "That result's dissipation_arising_not_recurring states dissipation on webs; this result states it on flows and turns the author's argument that no finite part is unceasing on its own into a theorem for taking."
+        "zh": "该结果的 dissipation_arising_not_recurring 在依存网上陈述耗散；本结果在流上陈述，并把 AI 的论证“任何有限部分都不能独自不息”在取用上变为定理。",
+        "en": "That result's dissipation_arising_not_recurring states dissipation on webs; this result states it on flows and turns the AI's argument that no finite part is unceasing on its own into a theorem for taking."
       }
     },
     {
@@ -797,6 +797,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Flow.lean to Prelude.lean, steps; from Population.lean to Prelude.lean, Distinct; from World.lean to Prelude.lean, total. Proof bindings (Dependence.lean, Prelude.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Arising.lean, Dependence.lean, Flow.lean, Population.lean, Roles.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Flow.lean 到 Prelude.lean：steps；从 Population.lean 到 Prelude.lean：Distinct；从 World.lean 到 Prelude.lean：total。证明绑定（Dependence.lean、Prelude.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Arising.lean、Dependence.lean、Flow.lean、Population.lean、Roles.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): 'the author' of the analogy, the argument, the reading and the interpretation in a boundary, a related detail and the correspondence reads 'the AI', so each keeps its AI label. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条边界、一条相关说明与对应中类比、论证、读法与诠释的“作者”改为 AI，使其各保留 AI 标签。规律未变。"
     }
   ],
   "text_versions": [

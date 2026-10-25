@@ -124,8 +124,8 @@
       "en": "`living` is “active and not undermining” (or its relation-level counterpart) and `related` is participation in a common condition at the events' steps; both are disclosed reading choices, not proved correspondences."
     },
     {
-      "zh": "连通的结论需要一个所有活的事件都参与的共同条件，并依赖条件与参与的对应纪律；传递结论需要 N_rel，其规范地位不由本结果证明。",
-      "en": "The connection result needs a condition in which every living event participates and depends on a correspondence discipline for conditions and participation; the transmission result needs N_rel, whose normative standing this result does not prove."
+      "zh": "连通的结论需要一个所有活的事件都参与的共同条件，并依赖条件与参与的对应纪律；传递结论需要关系中立，其规范地位不由本结果证明。",
+      "en": "The connection result needs a condition in which every living event participates and depends on a correspondence discipline for conditions and participation; the transmission result needs relational neutrality, whose normative standing this result does not prove."
     },
     {
       "zh": "依存的一段须不间断：依存中断一步再形成，即开始新的一段，此前的满足不再计入（Gap.lapse_starts_afresh）。休眠、迁出或季节性使用是否表示为持续的依存，是应用义务。",
@@ -134,8 +134,8 @@
   ],
   "does_not_show": [
     {
-      "zh": "不证明自身意义、N、A、C、L 或 J，不约束拒绝它们的立场。",
-      "en": "Proves none of self-significance, N, A, C, L or J and binds no position rejecting them.",
+      "zh": "不证明自身意义、两种中立、A、C、L 或实践承诺，不约束拒绝它们的立场。",
+      "en": "Proves none of self-significance, the two neutralities, A, C, L or the practical commitments and binds no position rejecting them.",
       "kind": "non-implication"
     },
     {
@@ -335,13 +335,13 @@
       "id": "metaethical-core-characterization",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "Web.significant_iff_of_common 以 Web.connected_of_common 满足 significant_iff 的连通前提；Web.valuing_breaking_reaches 使用 N_rel 的规则 transmits。",
-        "en": "Web.significant_iff_of_common discharges significant_iff's connection premise by Web.connected_of_common; Web.valuing_breaking_reaches uses N_rel's rule transmits."
+        "zh": "Web.significant_iff_of_common 以 Web.connected_of_common 满足 significant_iff 的连通前提；Web.valuing_breaking_reaches 使用关系中立的规则 transmits。",
+        "en": "Web.significant_iff_of_common discharges significant_iff's connection premise by Web.connected_of_common; Web.valuing_breaking_reaches uses the rule of relational neutrality, transmits."
       },
       "interface": {
         "output": {
-          "zh": "连通整体上 G0 ⇔ 种子 ∧ N_rel ∧ N_std；N_rel 的传递规则。",
-          "en": "On a connected whole, G0 ⇔ seed ∧ N_rel ∧ N_std; N_rel's transmission rule."
+          "zh": "连通整体上生生之意义 ⇔ 种子 ∧ 关系中立 ∧ 立场中立；关系中立的传递规则。",
+          "en": "On a connected whole, living significance ⇔ seed ∧ relational neutrality ∧ standpoint neutrality; the transmission rule of relational neutrality."
         },
         "input": {
           "zh": "逐步读法给出的 Valuation 及其连通。",
@@ -771,6 +771,10 @@
     {
       "en": "2026-10-20: 98 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/0a594a27c79ad139/becoming-stepwise-reading.json and in git.",
       "zh": "2026-10-20：98 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/0a594a27c79ad139/becoming-stepwise-reading.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels in a hypothesis, a boundary and a dependency named in current terms: N_rel and N_std as relational and standpoint neutrality, G0 as living significance, and N and J as the two neutralities and the practical commitments; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：假设、一条边界与一条依赖中的退役标签按现行术语称之：N_rel、N_std 为关系中立、立场中立，G0 为生生之意义，N 与 J 为两种中立与实践承诺；主张不变。"
     }
   ],
   "text_versions": [

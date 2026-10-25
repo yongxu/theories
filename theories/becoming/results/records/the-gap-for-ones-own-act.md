@@ -18,7 +18,7 @@
 ## Conditions
 
 - That the rest follows a law of exchange reading through coupling (ExchangeLaw.Through) is a supplied condition written into each theorem; balance (or feasibility), the same formations present and the same start are written in too. No axiom.
-- That a selection goes through a formation's coupling (Web.SelectsThrough) is a condition, as in selection-through-registration.
+- That a selection goes through a formation's coupling (Web.SelectsThrough) is a condition, as in selection-through-couplings.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -97,6 +97,7 @@ Aliases: `gap for one's own act`, `自身动作的缺口`, `act unselected`, `�
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Counterfactual.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Counterfactual.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the premise names the record by its current id, selection-through-couplings, for its former id; nothing else changed.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-gap-for-ones-own-act.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -106,4 +107,4 @@ Aliases: `gap for one's own act`, `自身动作的缺口`, `act unselected`, `�
 
 </details>
 
-Documentary review UTC: `2026-10-18T08:19:07+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -150,8 +150,8 @@
     "en": "Beyond the cycle-level renewal, substitution between conditions and difference-making within joint consumption taken up by becoming-return-grades, substitution-preserves-consumption and joint-difference-making: chains of substitution and their losses across several conditions; finer attribution; empirical correspondence for particular cases."
   },
   "correspondence": {
-    "zh": "形成、条件与依存是同一展开中分化的方面，不是交换资源的所有者。把规律族读作恶性增长、升级竞赛或以消耗取胜属于解释；实际案例须为其依存、支持水平与速率取得证据。`formed` 计数新组织单位，不是复杂度量。其伦理意义不是 G0 之外另欠的工作：G0 的对象是生生，本分类描述的正是生生（这是 Ren 的更正，此处为 AI 的转述；Ren 问：“为什么？我G0是什么？generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，见所引来源）；消耗与其不发生在 C 下的比较，见另一记录 relational-reading-comparison。",
-    "en": "Formations, conditions and dependence are differentiated aspects of one unfolding, not owners exchanging resources. Readings of the law family as malignant growth, escalation or winning by consumption are interpretations; actual cases require evidence for their dependence, support levels and rates. `formed` counts units of new organization and is not a complexity measure. Its ethical significance is not an addition owed beyond G0: G0's object is 生生, which this classification describes (Ren's correction, here in the AI's words; Ren asked “为什么？我G0是什么？generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”, in the referenced source); the comparison of consumption with its absence under C is the separate record relational-reading-comparison."
+    "zh": "形成、条件与依存是同一展开中分化的方面，不是交换资源的所有者。把规律族读作恶性增长、升级竞赛或以消耗取胜属于解释；实际案例须为其依存、支持水平与速率取得证据。`formed` 计数新组织单位，不是复杂度量。其伦理意义不是生生之意义之外另欠的工作：生生之意义的对象是生生，本分类描述的正是生生（这是 Ren 的更正，此处为 AI 的转述；Ren 问：“为什么？我G0是什么？generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，见所引来源）；消耗与其不发生在 C 下的比较，见另一记录 relational-reading-comparison。",
+    "en": "Formations, conditions and dependence are differentiated aspects of one unfolding, not owners exchanging resources. Readings of the law family as malignant growth, escalation or winning by consumption are interpretations; actual cases require evidence for their dependence, support levels and rates. `formed` counts units of new organization and is not a complexity measure. Its ethical significance is not an addition owed beyond living significance: the object of living significance is 生生, which this classification describes (Ren's correction, here in the AI's words; Ren asked “为什么？我G0是什么？generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”, in the referenced source); the comparison of consumption with its absence under C is the separate record relational-reading-comparison."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
   "aliases": [
@@ -177,15 +177,15 @@
     {
       "id": "renewing-consuming-formation",
       "detail": {
-        "en": "Narrower law-class result proved independently the same day: under a supplied wear law it bounds total formation by stock plus a triangular renewal bound, shows the local first-step reversal and gives a G0 event-reading interface. Here irreversibility is derived from the renewer's dependence rather than assumed, the classification is general, and externalizing consumption is covered. No import either way.",
-        "zh": "同日独立证明的较窄规律类结果：在给定磨损规律下以所持条件加三角更新量界定总形成量，给出第一步局部反转及 G0 逐事件接口。本结果的不可逆由更新者的依存推出而非假定，分类是一般的，并覆盖外部化消耗。互不导入。"
+        "en": "Narrower law-class result proved independently the same day: under a supplied wear law it bounds total formation by stock plus a triangular renewal bound, shows the local first-step reversal and gives an event-reading interface for living significance (the periphery's G0). Here irreversibility is derived from the renewer's dependence rather than assumed, the classification is general, and externalizing consumption is covered. No import either way.",
+        "zh": "同日独立证明的较窄规律类结果：在给定磨损规律下以所持条件加三角更新量界定总形成量，给出第一步局部反转及生生之意义（外围的 G0）的逐事件接口。本结果的不可逆由更新者的依存推出而非假定，分类是一般的，并覆盖外部化消耗。互不导入。"
       }
     },
     {
       "id": "positive-ground-open-futures",
       "detail": {
-        "en": "Interpretive: read with 生生 as its object, G0's positive ground does not attach to consuming formation; this result supplies that object descriptively, without an evaluative filter. Its proof is unchanged.",
-        "zh": "解释关联：以生生为对象时，G0 的正面根据不附于消耗型形成；本结果以描述方式给出这一对象，不作价值筛选。其证明不变。"
+        "en": "Interpretive: read with 生生 as its object, the positive ground of living significance does not attach to consuming formation; this result supplies that object descriptively, without an evaluative filter. Its proof is unchanged.",
+        "zh": "解释关联：以生生为对象时，生生之意义的正面根据不附于消耗型形成；本结果以描述方式给出这一对象，不作价值筛选。其证明不变。"
       }
     },
     {
@@ -205,8 +205,8 @@
     {
       "id": "relational-reading-comparison",
       "detail": {
-        "en": "Consumer of this classification: imports RelationalRenewal and feeds overdraw_consuming into GenerativeComparison's C under the relational reading of G0's generation. This record's own claims and proofs are unchanged.",
-        "zh": "本分类的使用者：导入 RelationalRenewal，在对 G0 之生成的关系读法下把 overdraw_consuming 送入 GenerativeComparison 的 C。本记录自身的主张与证明不变。"
+        "en": "Consumer of this classification: imports RelationalRenewal and feeds overdraw_consuming into GenerativeComparison's C under the relational reading of the generation living significance concerns. This record's own claims and proofs are unchanged.",
+        "zh": "本分类的使用者：导入 RelationalRenewal，在对生生之意义所涉之生成的关系读法下把 overdraw_consuming 送入 GenerativeComparison 的 C。本记录自身的主张与证明不变。"
       }
     },
     {
@@ -415,6 +415,10 @@
     {
       "en": "2026-10-20: 9 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/1f3e61265bc9e495/relational-renewal-classification.json and in git.",
       "zh": "2026-10-20：9 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/1f3e61265bc9e495/relational-renewal-classification.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0 in the correspondence (AI text only: Ren's quoted question keeps his words) and in three related details reads living significance, written as the periphery's G0 where the Lean is meant; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应（仅 AI 文字，Ren 所问原话保留）与三条关联说明中的退役标签 G0 改为生生之意义，指 Lean 处写作外围的 G0；主张不变。"
     }
   ],
   "text_versions": [

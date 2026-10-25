@@ -8,7 +8,7 @@
   "kind": "target",
   "status": "open",
   "family": "F08",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
     "en": "Target: universal practical warrant with zero substantive axioms, developed as one account of ends, selection, knowing, normativity and revision within becoming.",
     "zh": "目标：取得零实质公理的普遍实践根据，并在同一生成活动中统一解释目的、选择、认识、规范及修订。"
@@ -30,8 +30,8 @@
     {
       "id": "practical-judgment-under-living-significance",
       "detail": {
-        "zh": "显式公理路线是已有成果；两者的完成标准不同。",
-        "en": "The explicit-axiom route is an established result with a different completion standard."
+        "zh": "条件对齐路线是已有成果；两者的完成标准不同。",
+        "en": "The conditional alignment route is an established result with a different completion standard."
       }
     },
     {
@@ -44,8 +44,8 @@
     {
       "id": "continuation-condition-yields-living-significance",
       "detail": {
-        "zh": "信用当前意义／理由分工；G0的正式取得没有解除A的规范工作。",
-        "en": "Credits the current significance/reason distinction; deriving G0 does not discharge A’s normative work."
+        "zh": "信用当前意义／理由分工；生生之意义的正式取得没有解除A的规范工作。",
+        "en": "Credits the current significance/reason distinction; deriving living significance does not discharge A’s normative work."
       }
     },
     {
@@ -170,8 +170,8 @@
     }
   ],
   "validation_scope": {
-    "en": "Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of existing studies (elective concern, relation and reason, the noninstrumental root, relational goodness, whole-process realization, the constitutive audit, ethical learning) and of the capture, registration and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance.",
-    "zh": "哲学论证、实质作者反审及五项概念压力检验；完整或定向重读既有研究（选择关切、关系与理由、非工具性根基、关系善、整体实现、构成审计、伦理学习）及捕获、登记与计划修订记录；有限复读已用原典的指定段落。复用既有评价者独立审查及条件证明，各按原范围。无新数学命题、形式组合、Lean运行、经验结果或独立验收。"
+    "en": "Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of existing studies (elective concern, relation and reason, the noninstrumental root, relational goodness, whole-process realization, the constitutive audit, ethical learning) and of the capture, coupling and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance.",
+    "zh": "哲学论证、实质作者反审及五项概念压力检验；完整或定向重读既有研究（选择关切、关系与理由、非工具性根基、关系善、整体实现、构成审计、伦理学习）及捕获、耦合与计划修订记录；有限复读已用原典的指定段落。复用既有评价者独立审查及条件证明，各按原范围。无新数学命题、形式组合、Lean运行、经验结果或独立验收。"
   },
   "references": [
     {
@@ -275,6 +275,10 @@
     {
       "en": "2026-10-20: 2 bookkeeping notes condensed of 17 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4338855735cfa81a/universal-practical-warrant.json and in git.",
       "zh": "2026-10-20：2 条记账性说明合并（17 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4338855735cfa81a/universal-practical-warrant.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels in two related notes replaced (the explicit-axiom route by the conditional alignment route, G0 by living significance), and the registration records named by the current word, coupling; the target is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：两条相关说明中已退役的标签改为现行术语（显式公理路线改为条件对齐路线，G0 改为生生之意义），登记记录以现行词称为耦合记录；目标不变。"
     }
   ],
   "text_versions": [

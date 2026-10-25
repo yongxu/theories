@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T08:07:06+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "延续者不能从某步起都不从其外得到供给，这是汲入律的输送形式。在可判定相等之下，从其外得到供给恰是该步不内向；必要的是得到供给，不必有哪个来源条件复现。",
     "en": "A continuing family cannot from any step on be fed from nothing beyond it, the conveyance form of the draw-in laws. With equality decided, being fed from beyond is exactly a step that is not inward; being fed is needed, and no source condition need recur."
@@ -76,8 +76,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "平衡（Flow.Balances）与耗散（Flow.Dissipative）：同 no-finite-part-bears-taking，是表示中的物理前提，各有满足与不满足它的世界。耗散在每个取用的步至少失去一个整单位；量取实数时损失可以几何地缩小，结论不成立，第二定律也不给每步的最小损失。",
-      "en": "Balance (Flow.Balances) and dissipation (Flow.Dissipative): as in no-finite-part-bears-taking, physical premises of the representation, each met by some worlds and not by others. Dissipation loses at least one whole unit per taking step; with real-valued amounts losses can shrink geometrically and the conclusion fails, and the second law gives no least loss per step."
+      "zh": "平衡（Flow.Balances）与耗散（Flow.Dissipative）：同 no-finite-part-bears-taking，是表示中的物理前提，各有满足与不满足它的世界。耗散在每个取用的步至少失去一个整单位；损失可以几何地缩小时这一论证不适用，如每步减半的二进存量每步都下降而从不停息（Halving.never_rests）；第二定律也不给每步的最小损失。",
+      "en": "Balance (Flow.Balances) and dissipation (Flow.Dissipative): as in no-finite-part-bears-taking, physical premises of the representation, met by some worlds and not by others. Dissipation loses at least one whole unit per taking step; where losses can shrink geometrically the argument does not apply: a dyadic stock halving at every step never rests (Halving.never_rests); the second law gives no least loss per step."
     },
     {
       "zh": "家族不重复（Distinct），从某步起被围住（Around）；取用复现、成员上升复现或体现成员生起复现，三者各为一条定理的假设。",
@@ -138,16 +138,16 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器实查（Continuation 绑定回执 20261014T141427.442103Z；Dissipation、Roles、Flow 与 Succession 绑定 20261013T094743.528770Z）：Becoming.Continuation 的定理（含局部形式）公理报告为空；检查器并核对核心纯净。作者反审见整合文档；独立审查接受其 Lean，其更正在整合文档中处理。",
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261014T141427.442103Z for Becoming.Continuation; Dissipation, Roles, Flow and Succession bound to 20261013T094743.528770Z): the theorems of Becoming.Continuation, the local forms included, have empty axiom reports; core purity verified. Author counterreview in the integration note; the independent review accepts its Lean, and its corrections are handled in the integration note."
+    "zh": "Lean 4.29.1 合并检查器实查（Continuation 绑定回执 20261014T141427.442103Z；Dissipation、Roles、Flow 与 Succession 绑定 20261013T094743.528770Z）：Becoming.Continuation 的定理（含局部形式）公理报告为空；检查器并核对核心纯净；减半见证绑定 20261025T080929.528151Z，公理报告为空。作者反审见整合文档；独立审查接受其 Lean，其更正在整合文档中处理。",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261014T141427.442103Z for Becoming.Continuation; Dissipation, Roles, Flow and Succession bound to 20261013T094743.528770Z): the theorems of Becoming.Continuation, the local forms included, have empty axiom reports; core purity verified; the halving witness (Becoming.LeastLoss) is bound to 20261025T080929.528151Z, its axiom report empty. Author counterreview in the integration note; the independent review accepts its Lean, and its corrections are handled in the integration note."
   },
   "next_delta": {
     "zh": "给出输送来自活着的来源时的读法；可移除的形式，即同一世界去掉一个来源形成后仍每步得到供给（去掉形成会改变水平，所以那是另一个流，以世界为单位的形式是它的位置）；整段与以世界为单位的形式。",
     "en": "Read the case where what is conveyed comes from a living source; give the removable form, the same world still fed at every step with one source formation taken away (that is another flow, since taking a formation away changes the levels; the world-level form is its place); give whole-run and world-level forms."
   },
   "correspondence": {
-    "zh": "Ren 的提议说：“the pure \"self\" is an illusion, where only when outside exists, there is the system, if the system depends on external resources”。汲入律（no-finite-part-bears-taking、generation-is-replenishment）已说：被围住时，有形成向家族给予并从其外取用。本结果把同一规律陈述为从外输送入家族，并在可判定相等之下证明两种形式等价：输送的形式只加可判定相等，不丢失内容。作者的读法（AI 论证）：延续的自我与其外之物一起延续；边界是形成的、实在的，而在其内延续的东西跨边界得到供给。这是动力学，不是伦理：它说一个延续者必须计入什么，不说它应当计入。Lone 说明必要的是得到供给，不必有哪个来源条件复现；它没有说明不需要特定的来源形成：输送的始终是同一个源。",
-    "en": "Ren's proposal says: “the pure \"self\" is an illusion, where only when outside exists, there is the system, if the system depends on external resources”. The draw-in laws (no-finite-part-bears-taking, generation-is-replenishment) said that, enclosed around, some formation gives to the family and takes from beyond it. This result states the same law as conveyance into the family from beyond and shows the two forms equivalent with equality decided: the conveyance form adds only decided equality and loses nothing. The author's reading (an AI argument): a self that continues does so together with what lies beyond it; the boundary is formed and real, while what continues within it is fed across it. This is dynamics, not ethics: it says what a continuing formation must count, not that it ought to count it. Lone shows that being fed is needed and no source condition need recur; it does not show that no particular source formation is needed, since the one source does all the conveying."
+    "zh": "Ren 的提议说：“the pure \"self\" is an illusion, where only when outside exists, there is the system, if the system depends on external resources”。汲入律（no-finite-part-bears-taking、generation-is-replenishment）已说：被围住时，有形成向家族给予并从其外取用。本结果把同一规律陈述为从外输送入家族，并在可判定相等之下证明两种形式等价：输送的形式只加可判定相等，不丢失内容。读法（AI 论证）：延续的自我与其外之物一起延续；边界是形成的、实在的，而在其内延续的东西跨边界得到供给。这是动力学，不是伦理：它说一个延续者必须计入什么，不说它应当计入。Lone 说明必要的是得到供给，不必有哪个来源条件复现；它没有说明不需要特定的来源形成：输送的始终是同一个源。",
+    "en": "Ren's proposal says: “the pure \"self\" is an illusion, where only when outside exists, there is the system, if the system depends on external resources”. The draw-in laws (no-finite-part-bears-taking, generation-is-replenishment) said that, enclosed around, some formation gives to the family and takes from beyond it. This result states the same law as conveyance into the family from beyond and shows the two forms equivalent with equality decided: the conveyance form adds only decided equality and loses nothing. The reading (an AI argument): a self that continues does so together with what lies beyond it; the boundary is formed and real, while what continues within it is fed across it. This is dynamics, not ethics: it says what a continuing formation must count, not that it ought to count it. Lone shows that being fed is needed and no source condition need recur; it does not show that no particular source formation is needed, since the one source does all the conveying."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
   "aliases": [
@@ -246,6 +246,13 @@
       "detail": {
         "zh": "以输送为 related 时，延续家族的区域不是关系的切口。",
         "en": "With conveyance read as related, a continuing family's region is no cut in the relations."
+      }
+    },
+    {
+      "id": "rest-from-a-finite-reading",
+      "detail": {
+        "zh": "在任何量上，读自列表所容纳之构形的量从某步起不上升时，其严格下降不复现；从不停息的减半存量，其值没有列表能容纳。本结果的规律只对整数流陈述。",
+        "en": "Over any amounts, where an amount read off configurations a list holds does not rise from some step on, its strict falls do not recur; no list holds the values of the halving stock, which never rests. This result's laws are stated over whole-number flows."
       }
     }
   ],
@@ -430,6 +437,20 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
+      "role": "proof",
+      "sha256": "d6ad7f2598fcaa3a77da932a52952ba5c2753d18ddef0b8ade69dd8c2c40ae4c",
+      "declarations": [
+        "Becoming.Halving.never_rests"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
+      "role": "receipt",
+      "sha256": "f399061e1e9af72fb012a69861653f1a5496c6907982a2723399bcee788614ae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -465,6 +486,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Succession.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Succession",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -524,6 +552,10 @@
     {
       "en": "2026-10-20: 61 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/f365a8f85951eec6/continuing-self-fed-from-beyond.json and in git.",
       "zh": "2026-10-20：61 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/f365a8f85951eec6/continuing-self-fed-from-beyond.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the dissipation hypothesis no longer says the conclusion fails with real-valued amounts, which no theorem shows (the laws are stated over whole-number flows): it says the argument does not apply where losses can shrink geometrically, with the halving stock that never rests as the witness of shrinking losses, now in the references (Becoming.Halving.never_rests, an alias of least-loss-rest, bound to a receipt in which its axiom report is empty); the rest that still holds over any amounts, for an amount read off configurations a list holds, is linked in related; the correspondence labels its reading as the AI's instead of the author's. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：耗散假设不再说量取实数时结论不成立（没有定理表明这一点，规律只对整数流陈述）：改为损失可以几何地缩小时这一论证不适用，以从不停息的减半存量为损失缩小的见证，并加入引用（Becoming.Halving.never_rests，为 least-loss-rest 的别名，绑定的回执中其公理报告为空）；在任何量上、读自列表所容纳之构形者仍有的停息，列于相关；对应把读法标为 AI 的，不再写“作者的”。规律未变。"
     }
   ],
   "text_versions": [

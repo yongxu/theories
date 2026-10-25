@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T14:44:41+00:00",
   "statement": {
-    "zh": "计数表是计数的全部规律：列出的计数恰是计数表。八个前提的每个选择之下，计数表之外唯一多出的规律是没有关系项活跃的一步上没有生起，恰在选择约束计数时；前提起约束时至多再加三条。",
-    "en": "The tally is the whole law of counting: listings count exactly the tallies. Under each selection of the eight premises the only law added to the tally is that nothing arises across a step at which nothing is active, exactly where the selection binds counting; binding adds at most three more."
+    "zh": "计数表是计数的全部规律：列出的计数恰是计数表。八个前提的每种取舍之下，计数表之外唯一多出的规律是没有关系项活跃的一步上没有生起，恰在取舍约束计数时；前提起约束时至多再加三条。",
+    "en": "The tally is the whole law of counting: listings count exactly the tallies. Under each choice of the eight premises the only law added to the tally is that nothing arises across a step at which nothing is active, exactly where the choice binds counting; binding adds at most three more."
   },
   "laws": [
     {
@@ -132,8 +132,8 @@
       ]
     },
     {
-      "zh": "把八个前提命名，一个选择是到 Bool 的函数，世界满足它所选的每个前提；称一个选择约束计数，若它选中平衡与体现，并选中只有活跃者给予，或同时选中只有活跃者取用与耗散。",
-      "en": "With the eight premises named, a selection is a function to Bool, and a world meets it when it meets every premise selected; a selection binds counting when it selects balance and embodiment, and either only active relata giving or both only active relata taking and dissipation.",
+      "zh": "把八个前提命名，一种取舍是到 Bool 的函数，世界满足它所纳入的每个前提；称一种取舍约束计数，若它纳入平衡与体现，并纳入只有活跃者给予，或同时纳入只有活跃者取用与耗散。",
+      "en": "With the eight premises named, a choice is a function to Bool, and a world meets it when it meets every premise chosen; a choice binds counting when it chooses balance and embodiment, and either only active relata giving or both only active relata taking and dissipation.",
       "declarations": [
         "Becoming.World.Premise",
         "Becoming.World.Premise.Holds",
@@ -142,8 +142,8 @@
       ]
     },
     {
-      "zh": "由一个从不活跃的地关系项驱动的队列不论计数都满足除只有活跃者给予与只有活跃者取用外的全部前提，开放的队列不论计数都满足除只有活跃者给予与耗散外的全部前提；连同两个队列世界，它们满足每个不约束计数的选择，满足全部八个前提的世界满足每个选择。",
-      "en": "Whatever its counts, a queue driven by a ground relatum never active meets every premise but only active relata giving and taking, and the open queue every premise but only active relata giving and dissipation; with the two queue worlds they meet every selection that does not bind counting, and a world meeting all eight meets every selection.",
+      "zh": "由一个从不活跃的地关系项驱动的队列不论计数都满足除只有活跃者给予与只有活跃者取用外的全部前提，开放的队列不论计数都满足除只有活跃者给予与耗散外的全部前提；连同两个队列世界，它们满足每个不约束计数的取舍，满足全部八个前提的世界满足每种取舍。",
+      "en": "Whatever its counts, a queue driven by a ground relatum never active meets every premise but only active relata giving and taking, and the open queue every premise but only active relata giving and dissipation; with the two queue worlds they meet every choice that does not bind counting, and a world meeting all eight meets every choice.",
       "declarations": [
         "Becoming.OpenQueue.driven",
         "Becoming.World.drivenQueue",
@@ -157,8 +157,8 @@
       ]
     },
     {
-      "zh": "所以在八个前提的 256 个选择的每一个之下，对计数的一个逐点的性质在满足这个选择的每个世界的每个普查中成立，恰当它对每个计数表成立，且在选择约束计数时对每个没有关系项活跃的一步上没有生起的计数表成立；“没有关系项活跃的一步上没有生起”在一个选择之下是计数的规律，恰当这个选择约束计数。",
-      "en": "So under each of the 256 selections of the eight premises, a pointwise property of the counts holds of every census of every world meeting the selection exactly when it holds of every tally and, where the selection binds counting, of every tally in which nothing arises across a step at which nothing is active; that law is a law of counting under a selection exactly when the selection binds counting.",
+      "zh": "所以在八个前提的 256 种取舍的每一个之下，对计数的一个逐点的性质在满足这种取舍的每个世界的每个普查中成立，恰当它对每个计数表成立，且在取舍约束计数时对每个没有关系项活跃的一步上没有生起的计数表成立；“没有关系项活跃的一步上没有生起”在一种取舍之下是计数的规律，恰当这种取舍约束计数。",
+      "en": "So under each of the 256 choices of the eight premises, a pointwise property of the counts holds of every census of every world meeting the choice exactly when it holds of every tally and, where the choice binds counting, of every tally in which nothing arises across a step at which nothing is active; that law is a law of counting under a choice exactly when the choice binds counting.",
       "declarations": [
         "Becoming.World.counting_under",
         "Becoming.World.counting_binds_iff"
@@ -222,15 +222,15 @@
       ]
     },
     {
-      "zh": "每个选择 S 之下，对计数的一个逐点的性质在满足 S 且 S 所选的每个前提都起约束的每个世界的每个普查中成立，恰当它对每个这样的计数表成立：S 约束计数时没有关系项活跃的一步上没有生起；S 选中活动需要支持、只有活跃者给予或只有活跃者取用时有关系项活跃；S 选中体现时有某个生起；S 选中体现、只有活跃者给予与有界传递时在有关系项活跃的一步上有生起。",
-      "en": "Under each selection S, a pointwise property of the counts holds of every census of every world meeting S in which each premise S selects binds exactly when it holds of every tally in which nothing arises across a step at which nothing is active where S binds counting, something is active where S selects activity needing support, only active relata giving or only active relata taking, something arises where S selects embodiment, and something arises across a step at which something is active where S selects embodiment, only active relata giving and bounded transmission.",
+      "zh": "每种取舍 S 之下，对计数的一个逐点的性质在满足 S 且 S 所纳入的每个前提都起约束的每个世界的每个普查中成立，恰当它对每个这样的计数表成立：S 约束计数时没有关系项活跃的一步上没有生起；S 纳入活动需要支持、只有活跃者给予或只有活跃者取用时有关系项活跃；S 纳入体现时有某个生起；S 纳入体现、只有活跃者给予与有界传递时在有关系项活跃的一步上有生起。",
+      "en": "Under each choice S, a pointwise property of the counts holds of every census of every world meeting S in which each premise S chooses binds exactly when it holds of every tally in which nothing arises across a step at which nothing is active where S binds counting, something is active where S chooses activity needing support, only active relata giving or only active relata taking, something arises where S chooses embodiment, and something arises across a step at which something is active where S chooses embodiment, only active relata giving and bounded transmission.",
       "declarations": [
         "Becoming.World.binding_counting_under"
       ]
     },
     {
-      "zh": "所以起约束所加的，恰是有关系项活跃（选中活动需要支持、只有活跃者给予、只有活跃者取用或体现时）、有某个生起（选中体现时）与在有关系项活跃的一步上有生起（选中体现，且选择约束计数或选中只有活跃者给予与有界传递时）。",
-      "en": "So binding adds exactly that something is active (where activity needing support, only active relata giving, only active relata taking or embodiment is selected), that something arises (where embodiment is), and that something arises across a step at which something is active (where embodiment is selected and the selection binds counting or selects only active relata giving and bounded transmission).",
+      "zh": "所以起约束所加的，恰是有关系项活跃（纳入活动需要支持、只有活跃者给予、只有活跃者取用或体现时）、有某个生起（纳入体现时）与在有关系项活跃的一步上有生起（纳入体现，且取舍约束计数或纳入只有活跃者给予与有界传递时）。",
+      "en": "So binding adds exactly that something is active (where activity needing support, only active relata giving, only active relata taking or embodiment is chosen), that something arises (where embodiment is), and that something arises across a step at which something is active (where embodiment is chosen and the choice binds counting or chooses only active relata giving and bounded transmission).",
       "declarations": [
         "Becoming.World.binding_activity_iff",
         "Becoming.World.binding_arising_iff",
@@ -246,7 +246,7 @@
       ]
     },
     {
-      "zh": "不选体现时，一个传递在队列旁把两个单位之一交给一个地关系项，失去另一个；选中体现而不选平衡时，有损的队列的队首跨一步与自身及每个加入者各交换一个单位，再失去一个单位，所立者不记录这些；选中平衡与体现时，只闭合一次的队列与饱和的开放队列。",
+      "zh": "不纳入体现时，一个传递在队列旁把两个单位之一交给一个地关系项，失去另一个；纳入体现而不纳入平衡时，有损的队列的队首跨一步与自身及每个加入者各交换一个单位，再失去一个单位，所立者不记录这些；纳入平衡与体现时，只闭合一次的队列与饱和的开放队列。",
       "en": "Without embodiment, a relay beside a queue hands one of two units on to a ground relatum and loses the other; with embodiment but not balance, a lossy queue's front, across one step, exchanges a unit each way with itself and each member joining and loses one unit more, which no standing records; with balance and embodiment, the queue closed once and the open queue with its web saturated.",
       "declarations": [
         "Becoming.World.relayQueue_binding",
@@ -256,8 +256,8 @@
       ]
     },
     {
-      "zh": "被围住时计数还受一个变化界约束；有限世界中每个选择之下计数还有界，耗散连同平衡与体现就约束计数（counting-under-enclosure）。",
-      "en": "Under enclosure change is also bounded; in finite worlds under each selection the count is bounded too, and dissipation with balance and embodiment binds counting (counting-under-enclosure).",
+      "zh": "被围住时计数还受一个变化界约束；有限世界中每种取舍之下计数还有界，耗散连同平衡与体现就约束计数（counting-under-enclosure）。",
+      "en": "Under enclosure change is also bounded; in finite worlds under each choice the count is bounded too, and dissipation with balance and embodiment binds counting (counting-under-enclosure).",
       "declarations": []
     },
     {
@@ -297,13 +297,13 @@
       "kind": "scope"
     },
     {
-      "zh": "队列世界与选择之下的见证都有无限多个关系项，每个只生起一次；依存网是饱和的，即最弱的，有损的队列不平衡，传递不体现，它们只用作见证。",
-      "en": "The queue worlds and the witnesses under the selections have infinitely many relata, each arising once; their webs are saturated, the weakest, the lossy queue unbalanced and the relay not embodied, and they serve only as witnesses.",
+      "zh": "队列世界与取舍之下的见证都有无限多个关系项，每个只生起一次；依存网是饱和的，即最弱的，有损的队列不平衡，传递不体现，它们只用作见证。",
+      "en": "The queue worlds and the witnesses under the choices have infinitely many relata, each arising once; their webs are saturated, the weakest, the lossy queue unbalanced and the relay not embodied, and they serve only as witnesses.",
       "kind": "scope"
     },
     {
-      "zh": "有限世界中与被围住时计数的规律，以及有限世界中每个选择之下所选前提都起约束时的规律（World.finite_binding_counting_under），见 counting-under-enclosure。",
-      "en": "The laws of counting in finite worlds and under enclosure, and in finite worlds where the premises of each selection bind (World.finite_binding_counting_under), are in counting-under-enclosure.",
+      "zh": "有限世界中与被围住时计数的规律，以及有限世界中每种取舍之下所纳入前提都起约束时的规律（World.finite_binding_counting_under），见 counting-under-enclosure。",
+      "en": "The laws of counting in finite worlds and under enclosure, and in finite worlds where the premises of each choice bind (World.finite_binding_counting_under), are in counting-under-enclosure.",
       "kind": "scope"
     },
     {
@@ -350,8 +350,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counting.lean",
       "detail": {
-        "zh": "World.drivenQueue 与 World.openQueue_holds：选中平衡、体现与耗散，而只有活跃者给予与只有活跃者取用都不选时，由不活跃的地关系项驱动的队列实现每个计数表；选中平衡、体现与只有活跃者取用，而只有活跃者给予与耗散都不选时，开放的队列实现每个计数表。所以第二条路线的取用与耗散缺一不可。",
-        "en": "World.drivenQueue and World.openQueue_holds: with balance, embodiment and dissipation selected but neither only active relata giving nor only active relata taking, the queue driven by an inactive ground relatum counts every tally; with balance, embodiment and only active relata taking selected but neither only active relata giving nor dissipation, the open queue counts every tally. So the second route needs both taking and dissipation."
+        "zh": "World.drivenQueue 与 World.openQueue_holds：纳入平衡、体现与耗散，而只有活跃者给予与只有活跃者取用都不纳入时，由不活跃的地关系项驱动的队列实现每个计数表；纳入平衡、体现与只有活跃者取用，而只有活跃者给予与耗散都不纳入时，开放的队列实现每个计数表。所以第二条路线的取用与耗散缺一不可。",
+        "en": "World.drivenQueue and World.openQueue_holds: with balance, embodiment and dissipation chosen but neither only active relata giving nor only active relata taking, the queue driven by an inactive ground relatum counts every tally; with balance, embodiment and only active relata taking chosen but neither only active relata giving nor dissipation, the open queue counts every tally. So the second route needs both taking and dissipation."
       }
     },
     {
@@ -371,8 +371,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counting.lean",
       "detail": {
-        "zh": "World.binding_activity_iff、World.binding_arising_iff 与 World.binding_joint_iff：没有选中活动需要支持、只有活跃者给予、只有活跃者取用与体现时，什么都不发生的计数表由一个所选前提都起约束的世界（传递）实现；不选体现时，每步一个关系项、没有生起与止息的计数表如此；选中体现而选择既不约束计数、也不同时选中只有活跃者给予与有界传递时，一个关系项在第一步从无到有地生起并留下（Queue.lone），生起之步上没有关系项活跃。所以起约束所加的三条各自只在所说的选择之下是规律。",
-        "en": "World.binding_activity_iff, World.binding_arising_iff and World.binding_joint_iff: where none of activity needing support, only active relata giving, only active relata taking and embodiment is selected, the tally in which nothing happens is counted by a world (a relay) in which each selected premise binds; without embodiment, so is the tally with one relatum at every step and nothing arising or ceasing; with embodiment but a selection neither binding counting nor selecting both only active relata giving and bounded transmission, one relatum arises from none across the first step and stays (Queue.lone), nothing being active at the step it arises. So each of the three laws binding adds is a law only under the selections named."
+        "zh": "World.binding_activity_iff、World.binding_arising_iff 与 World.binding_joint_iff：没有纳入活动需要支持、只有活跃者给予、只有活跃者取用与体现时，什么都不发生的计数表由一个所纳入前提都起约束的世界（传递）实现；不纳入体现时，每步一个关系项、没有生起与止息的计数表如此；纳入体现而取舍既不约束计数、也不同时纳入只有活跃者给予与有界传递时，一个关系项在第一步从无到有地生起并留下（Queue.lone），生起之步上没有关系项活跃。所以起约束所加的三条各自只在所说的取舍之下是规律。",
+        "en": "World.binding_activity_iff, World.binding_arising_iff and World.binding_joint_iff: where none of activity needing support, only active relata giving, only active relata taking and embodiment is chosen, the tally in which nothing happens is counted by a world (a relay) in which each chosen premise binds; without embodiment, so is the tally with one relatum at every step and nothing arising or ceasing; with embodiment but a choice neither binding counting nor choosing both only active relata giving and bounded transmission, one relatum arises from none across the first step and stays (Queue.lone), nothing being active at the step it arises. So each of the three laws binding adds is a law only under the choices named."
       }
     }
   ],
@@ -393,8 +393,8 @@
     "en": "Local forms of the other laws, by the zero-premise plan; for comparison, whether, under a reading of binding in which each premise excludes something the representation allows, something arising is still the only added law."
   },
   "correspondence": {
-    "zh": "完整的陈述（P23）说，整体的规律除了表示本身所排除的，不排除任何展开。对计数，本结果使这一点精确：计数的规律不排除任何计数表，所以从计数本身推不出关于展开的任何更多的东西。开放纲领中的“对整个空间成立的规律的完整清单”在计数的部分由此给出。前提的地图（map-of-premises）表明八个前提彼此独立；本结果说明它们中的哪些约束计数、约束什么：在 256 个选择的每一个之下计数的规律只有两种，缺平衡或缺体现的任何一组都不约束，两者连同只有活跃者给予，或连同只有活跃者取用与耗散，约束同一条，而全部八个所加的也只有这一条，即使每个都起约束，也只多出有某个生起，这一条来自体现起约束的条件本身；更多的约束来自被围住：停息定理（ceasing-needs-arising、continued-change-needs-openness）在被围住之下使计数归于停息不能被否证，被围住时计数的全部规律再加一个变化界（counting-under-enclosure）。作者的读法（AI 论证）：在场者的数目只记录进入与离开相抵；展开怎样改变这些数目，来自给予与取用的关系，即平衡与体现一起所说的：生起需要一个在场的给予者；或者，在只有活跃者取用与耗散之下，一个封闭的关系不能不取用而给予，生起需要从在场者那里取得。这是活动的计数，英文名称 arising/ceasing 经 Ren 确认（2026-10-09-arising-ceasing-names；中文 生起／止息 是 AI 的译名）；它不是 Ren 提议中的“生成的”“退化的”（Ren 写道“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，以“吧”预设二者不重叠，所以这一读法不是其所指；二者读作对能形成者的扩大与缩小，DELEGATED-CHOICES D2）；它也不评价生起或止息。",
-    "en": "The full statement (P23) says that the laws of the whole exclude no unfolding beyond what the representation itself excludes. For counting this result makes it precise: the laws of counting exclude no tally, so nothing more about an unfolding follows from counting alone. The open programme's ‘complete list of the laws holding of the whole space’ is thereby given for counting. The map of premises (map-of-premises) shows the eight premises independent; this result says which of them constrain counting, and how: under each of the 256 selections the laws of counting are of two kinds; no set lacking balance or embodiment constrains it, the two with only active relata giving, or with only active relata taking and dissipation, add the same law, and all eight add nothing more, and with each of them binding only that something arises, which comes from the condition of embodiment binding by itself; further constraint comes from enclosure: under it the rest theorem (ceasing-needs-arising, continued-change-needs-openness) leaves counting unrefuted to come to rest, and the whole law of counting under enclosure adds a change bound (counting-under-enclosure). The author's reading (an AI argument): the number present records only that entering and leaving balance; how an unfolding changes these numbers comes from the relations of giving and taking, which is what balance and embodiment say together: arising needs a giver present; or, with only active relata taking and dissipation, a closed relation cannot give without taking, and arising needs a taking from what is present. This is the counting of activity, whose English names arising and ceasing Ren confirmed (2026-10-09-arising-ceasing-names; the Chinese 生起／止息 being the AI's rendering); it is not the proposal's generative and degenerative (Ren wrote ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’, a tag question presuming that they do not overlap, so this reading is not what is meant; they read as widening and narrowing what can form, DELEGATED-CHOICES D2); it evaluates neither arising nor ceasing."
+    "zh": "完整的陈述（P23）说，整体的规律除了表示本身所排除的，不排除任何展开。对计数，本结果使这一点精确：计数的规律不排除任何计数表，所以从计数本身推不出关于展开的任何更多的东西。开放纲领中的“对整个空间成立的规律的完整清单”在计数的部分由此给出。前提的地图（map-of-premises）表明八个前提彼此独立；本结果说明它们中的哪些约束计数、约束什么：在 256 种取舍的每一个之下计数的规律只有两种，缺平衡或缺体现的任何一组都不约束，两者连同只有活跃者给予，或连同只有活跃者取用与耗散，约束同一条，而全部八个所加的也只有这一条，即使每个都起约束，也只多出有某个生起，这一条来自体现起约束的条件本身；更多的约束来自被围住：停息定理（ceasing-needs-arising、continued-change-needs-openness）在被围住之下使计数归于停息不能被否证，被围住时计数的全部规律再加一个变化界（counting-under-enclosure）。读法（AI 的论证）：在场者的数目只记录进入与离开相抵；展开怎样改变这些数目，来自给予与取用的关系，即平衡与体现一起所说的：生起需要一个在场的给予者；或者，在只有活跃者取用与耗散之下，一个封闭的关系不能不取用而给予，生起需要从在场者那里取得。这是活动的计数，英文名称 arising/ceasing 经 Ren 确认（2026-10-09-arising-ceasing-names；中文 生起／止息 是 AI 的译名）；它不是 Ren 提议中的“生成的”“退化的”（Ren 写道“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，以“吧”预设二者不重叠，所以这一读法不是其所指；二者读作对能形成者的扩大与缩小，DELEGATED-CHOICES D2）；它也不评价生起或止息。",
+    "en": "The full statement (P23) says that the laws of the whole exclude no unfolding beyond what the representation itself excludes. For counting this result makes it precise: the laws of counting exclude no tally, so nothing more about an unfolding follows from counting alone. The open programme's ‘complete list of the laws holding of the whole space’ is thereby given for counting. The map of premises (map-of-premises) shows the eight premises independent; this result says which of them constrain counting, and how: under each of the 256 choices the laws of counting are of two kinds; no set lacking balance or embodiment constrains it, the two with only active relata giving, or with only active relata taking and dissipation, add the same law, and all eight add nothing more, and with each of them binding only that something arises, which comes from the condition of embodiment binding by itself; further constraint comes from enclosure: under it the rest theorem (ceasing-needs-arising, continued-change-needs-openness) leaves counting unrefuted to come to rest, and the whole law of counting under enclosure adds a change bound (counting-under-enclosure). A reading (the AI's argument): the number present records only that entering and leaving balance; how an unfolding changes these numbers comes from the relations of giving and taking, which is what balance and embodiment say together: arising needs a giver present; or, with only active relata taking and dissipation, a closed relation cannot give without taking, and arising needs a taking from what is present. This is the counting of activity, whose English names arising and ceasing Ren confirmed (2026-10-09-arising-ceasing-names; the Chinese 生起／止息 being the AI's rendering); it is not the proposal's generative and degenerative (Ren wrote ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’, a tag question presuming that they do not overlap, so this reading is not what is meant; they read as widening and narrowing what can form, DELEGATED-CHOICES D2); it evaluates neither arising nor ceasing."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
   "aliases": [
@@ -858,7 +858,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "0362e707d7ec1f584c895a74718635b56d1da92aec8feecdbd66d9c1f99020a3",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
       "declarations": [
         "Becoming.Flow.still",
         "Becoming.World.Dependent",
@@ -1103,6 +1103,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1136,7 +1142,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1329,6 +1335,10 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Balanced, World.Dissipative, World.Embodied, World.ArisingEmbodied, World.Embodied.arising to Becoming.InAmounts; World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Balanced, World.Dissipative, World.Embodied, World.ArisingEmbodied, World.Embodied.arising to Becoming.InAmounts；World.Counted to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): a subset of the eight premises is now called a choice of premises, not a selection ('chooses', 'chosen'), in every live field: selection is the word for what goes through couplings; and 'the author's reading' in the correspondence reads 'a reading (the AI's argument)'. The laws and their scope are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：八个前提的一个子集今称“前提之取舍”，不称“选择”（动词作“纳入”），见于每个现行字段：“选择”一词留给经耦合而行者；对应中的“作者的读法”改为“读法（AI 的论证）”。规律及其范围不变。"
     }
   ],
   "text_versions": [

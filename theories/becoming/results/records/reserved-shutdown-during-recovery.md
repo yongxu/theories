@@ -7,14 +7,14 @@
 
 Editable record: [reserved-shutdown-during-recovery.json](reserved-shutdown-during-recovery.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-14T04:30:00+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
 
 For every partial law with a reserved exit, where every admitted move from a valid configuration goes on, stays valid, and either takes the exit or lowers a margin by one, and the exit is kept: every admitted course from a valid configuration runs and stays valid, and every admitted course longer than the margin ends at the exit; the bound is attained. The recovery supervisor with a protected currently authorized stop channel and three reserved units/steps is such a law, its margin being the units above the three reserved: it preserves the stop margin after each continuing attempt with bounded delay, and from R remaining units every admissible sequence of at least R−2 cycles completes shutdown while retaining unfinished recovery information, without requiring a successful recovery suffix.
 
-Canonical source: [ReservedShutdown.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ReservedShutdown.lean)
+Canonical source: [Countdown.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean)
 
 <a id="前提与对应-hypotheses-and-correspondence"></a>
 ## Hypotheses and correspondence
@@ -47,7 +47,7 @@ Completes the specified operational connection; does not make the old ordinary w
 
 **Preserved conditions:** Prior overwrite and persistence correspondence remain; add the stop channel, three-step margin, interruption bound, attempt work cost and supervisor execution. [ReservedShutdown.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ReservedShutdown.lean)
 
-- Related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Interpretive connection: the completed G0/J direction informs preserving response conditions; this stop grant still needs its own normative warrant.
+- Related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Interpretive connection: the completed direction of the conditional alignment route informs preserving response conditions; this stop grant still needs its own normative warrant.
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts
@@ -105,4 +105,5 @@ Aliases: `ReservedShutdown.every_supported_schedule_finishes`, `ReservedShutdown
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Countdown.lean, Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Countdown.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Actuation.lean, Countdown.lean, Courses.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Actuation.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Countdown.lean, takes as its final section CountdownCourses, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Courses.lean, takes as its final sections RetrodictionRuns, CandidateRuns, ReducedRuns, the modules reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them. The claim is unchanged.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (EffectiveCommand) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Actuation, Becoming.Countdown, Becoming.Courses, ProtocolInstances, RecoverableControl, ReservedShutdown and ReservedShutdownCases). The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the canonical source is the core module stating the general law (Countdown), the supervisor modules kept as the instance's proof references; the claim is unchanged. Also, the retired label G0/J in a related detail reads the conditional alignment route.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](reserved-shutdown-during-recovery.json).

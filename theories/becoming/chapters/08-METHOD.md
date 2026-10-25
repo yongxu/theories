@@ -323,8 +323,8 @@ The losses of reading a law as a sum over courses (truncation, cancellation, wei
 | LLPO | choosing a side of a fork that finite stages cannot settle | [the run construction](#r-lifting-where-branching-is-finite) |
 | WLPO | a law of the whole and no part | [the tail](#r-what-a-law-of-the-whole-and-no-part-takes) |
 | LPO | telling whether a history ends, which is deciding whether it changes again | [settling](#r-the-last-change-of-a-run); naming the step a finite world rests from |
-| Weak excluded middle | where it is open whether one move betters another, no move need be known to be chosen | `exists_undominated_iff_weakly` |
-| Double-negation elimination | a refutable reading holding where it is adhered to; reach without a path | `refutable_holds_iff`, `fromSeed_of_not_separated_iff_dne` |
+| Weak excluded middle | where it is open whether one move betters another, no move need be known to be chosen | `exists_undominated_iff_weakly`; on frames `FrontierFrames.choice_exists_iff_weakly` ([07](07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance)) |
+| Double-negation elimination | a refutable reading holding where it is adhered to; reach without a path | `refutable_holds_iff` ([03](03-KNOWING.md#r-a-history-read-off-its-finite-stretches)), `fromSeed_of_not_separated_iff_dne` (`Becoming.SeedReach`) |
 | Excluded middle | names carry one decided identity more than relations ([relata through relations](#r-relata-counted-up-to-indiscernibility)); deciding the four marks on every line, whose boundary is where going on is not decided ([01](01-ROOT.md)) | the arising–ceasing law over every finite world (`World.law_iff_em`) is a lemma of that law, not a calibration: the need comes from activity being an arbitrary proposition, not from change |
 | Dependent choice | an infinite course choosing each next step | `runs_iff_dependentChoice`; none is needed within finitely many configurations |
 

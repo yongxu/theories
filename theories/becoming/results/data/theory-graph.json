@@ -868,7 +868,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "knowing",
-   "base": "general",
+   "base": "periphery",
    "page": "theories/becoming/results/records/binding-preserving-substitution.md"
   },
   {
@@ -2020,7 +2020,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "knowing",
-   "base": "general",
+   "base": "periphery",
    "page": "theories/becoming/results/records/finite-fallible-inquiry-necessity.md"
   },
   {
@@ -2112,7 +2112,7 @@
    "type": "result",
    "record": "formed-copying-registration",
    "title": "Formed contacts change copying fidelity",
-   "title_zh": "形成的配准关系改变复制保真度",
+   "title_zh": "形成的接触改变复制保真度",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "life",
@@ -2128,7 +2128,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "knowing",
-   "base": "general",
+   "base": "periphery",
    "page": "theories/becoming/results/records/formed-goal-revision-continuation.md"
   },
   {
@@ -2716,7 +2716,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "knowing",
-   "base": "frame",
+   "base": "general",
    "page": "theories/becoming/results/records/learnable-through-a-map.md"
   },
   {
@@ -2728,7 +2728,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "life",
-   "base": "general",
+   "base": "periphery",
    "page": "theories/becoming/results/records/learned-procedure-transmission.md"
   },
   {
@@ -3299,8 +3299,8 @@
    "id": "record:organizational-formation-from-generative-comparison",
    "type": "result",
    "record": "organizational-formation-from-generative-comparison",
-   "title": "Required organization under whole generative comparison",
-   "title_zh": "完整生成比较下的组织形成要求",
+   "title": "Required organization under the comparison C",
+   "title_zh": "比较 C 下所要求的组织",
    "status": "reviewed-scoped",
    "kind": "argument",
    "region": "collective",
@@ -3520,7 +3520,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "knowing",
-   "base": "general",
+   "base": "frame",
    "page": "theories/becoming/results/records/projection-carrying-a-law.md"
   },
   {
@@ -5212,7 +5212,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "knowing",
-   "base": "old-base",
+   "base": "general",
    "page": "theories/becoming/results/records/what-an-extrapolation-given-nothing-fixes.md"
   },
   {
@@ -5272,7 +5272,7 @@
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "knowing",
-   "base": "old-base",
+   "base": "general",
    "page": "theories/becoming/results/records/what-finitely-many-labels-fix.md"
   },
   {
@@ -5399,8 +5399,8 @@
    "id": "record:where-a-formations-acts-return",
    "type": "result",
    "record": "where-a-formations-acts-return",
-   "title": "How a center forms: where a formation's acts return",
-   "title_zh": "中心之形成：形成之行动回返之处",
+   "title": "Where a formation's acts return",
+   "title_zh": "形成之行动回返之处",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "knowing",
@@ -5603,8 +5603,8 @@
    "id": "record:wisdom-root-without-axiom",
    "type": "result",
    "record": "wisdom-root-without-axiom",
-   "title": "The root of wisdom in the theory without axiom",
-   "title_zh": "智慧之根在无公理的理论中",
+   "title": "The root of wisdom in the theory without the condition",
+   "title_zh": "智慧之根在不含条件的理论中",
    "status": "reviewed-scoped",
    "kind": "argument",
    "region": "knowing",
@@ -36570,6 +36570,11 @@
   },
   {
    "from": "record:continued-change-needs-openness",
+   "to": "record:rest-theorem-in-any-amounts",
+   "type": "related"
+  },
+  {
+   "from": "record:continued-change-needs-openness",
    "to": "record:rising-and-falling-in-one-exchange",
    "type": "formal-reuse"
   },
@@ -36610,6 +36615,11 @@
   },
   {
    "from": "record:continuing-self-fed-from-beyond",
+   "to": "module:Becoming.LeastLoss",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:continuing-self-fed-from-beyond",
    "to": "module:Becoming.Roles",
    "type": "proved-in"
   },
@@ -36642,6 +36652,11 @@
    "from": "record:continuing-self-fed-from-beyond",
    "to": "record:no-finite-part-bears-taking",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:continuing-self-fed-from-beyond",
+   "to": "record:rest-from-a-finite-reading",
+   "type": "related"
   },
   {
    "from": "record:continuous-time-as-tower",
@@ -37382,6 +37397,11 @@
    "from": "record:derived-extent-limits",
    "to": "record:where-a-rising-take-ends",
    "type": "related"
+  },
+  {
+   "from": "record:derived-history-law-exactness",
+   "to": "module:Becoming.HistoryLanguages",
+   "type": "proved-in"
   },
   {
    "from": "record:derived-history-law-exactness",
@@ -42765,6 +42785,11 @@
   },
   {
    "from": "record:more-needs-renewers",
+   "to": "module:Becoming.Amounts",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:more-needs-renewers",
    "to": "module:Becoming.Arising",
    "type": "proved-in"
   },
@@ -42776,6 +42801,11 @@
   {
    "from": "record:more-needs-renewers",
    "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:more-needs-renewers",
+   "to": "module:Becoming.LeastLoss",
    "type": "proved-in"
   },
   {
@@ -43745,7 +43775,7 @@
   },
   {
    "from": "record:others-drawing-first-end-the-base",
-   "to": "record:drawers-in-turn-draw-everything",
+   "to": "record:drawers-in-turn",
    "type": "related"
   },
   {
@@ -47745,7 +47775,7 @@
   },
   {
    "from": "record:several-optimizers-drain-by-their-joint-capacity",
-   "to": "record:drawers-in-turn-draw-everything",
+   "to": "record:drawers-in-turn",
    "type": "related"
   },
   {
@@ -50702,6 +50732,11 @@
    "from": "record:what-an-optimum-does-beyond-what-couples-in",
    "to": "module:Becoming.Optimum",
    "type": "proved-in"
+  },
+  {
+   "from": "record:what-an-optimum-does-beyond-what-couples-in",
+   "to": "record:alignment-direction-under-widening",
+   "type": "related"
   },
   {
    "from": "record:what-an-optimum-does-beyond-what-couples-in",

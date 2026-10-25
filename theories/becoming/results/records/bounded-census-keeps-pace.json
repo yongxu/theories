@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T11:40:00+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "zh": "列表在任意晚的步回到某数以内时，开始成立与不再成立同步；界无界地增长时，不论多慢，都可以只生不灭。",
     "en": "Where the list returns within some number at arbitrarily late steps, coming to be and ceasing to be keep pace; under a bound growing without end, however slowly, arising can go on without ceasing."
@@ -193,8 +193,8 @@
     "en": "Versions with frequencies or proportions; readings not across discrete steps."
   },
   "correspondence": {
-    "zh": "有限家族的定律（coming-and-ceasing-keep-pace：coming_recurs_iff、Web.unceasing_iff）要求一个固定的有限家族包含所有成员；这里只要求每步的列表有界，成员总共可以无限多。所以有限世界的规律（space-and-its-parts：活动可判定的有限世界中生起复现与止息复现是同一部分）所需要的是计数的界，不是有限。与普查定律合起来，生起与止息的关系按计数分为三层：每步的活跃者有限、且在任意晚的步回到某数以内时，两者同步；每步有限而最终超过每个数时，止息需要生起，反之不然，不论计数增长多慢（accretion、slow）；每步不再有限时，止息可以独自不息（attrition 没有普查）。作者的读法（AI 论证）：在活跃者不超过一个界的展开中，持续的生起与持续的止息是同一个持续变化的两面，正如有限世界中那样，但不需要成员总共有限；更新的世代可以无穷，只要同时在场的有界；界也不必一直成立：同时在场的只需不断回到某个数以内；无界地增长时，不论多慢，就不必同步。这是活动与水平的读法，英文名称 arising/ceasing 经 Ren 确认（2026-10-09-arising-ceasing-names；中文 生起／止息 是 AI 的译名）；它不是 Ren 提议中的“生成的”“退化的”（Ren 写道“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，以“吧”预设二者不重叠，所以这一读法不是其所指；二者读作对能形成者的扩大与缩小，DELEGATED-CHOICES D2）。",
-    "en": "The law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, Web.unceasing_iff) needs one fixed finite family holding every member; here only the list at each step needs a bound, and the members may be infinitely many in all. So what the law of finite worlds needs (space-and-its-parts: in a finite world whose activity is decided arising recurring and ceasing recurring are one part) is a bound on the count, not finiteness. With the census law, the relation of arising and ceasing falls into three tiers by counting: with the active at each step finite and returning within some number at arbitrarily late steps, the two recur together; finite at each step and eventually beyond every number, ceasing needs arising and not conversely, however slowly the count grows (accretion, slow); no longer finite at each step, ceasing can recur alone (attrition has no census). The author's reading (an AI argument): in an unfolding whose active members never exceed a bound, lasting arising and lasting ceasing are two sides of one lasting change, as in a finite world, without the members being finitely many in all; renewed generations can be endless while those present together are bounded; nor need the bound always hold: those present together need only keep returning within some number, and growing without end, however slowly, they need not keep pace. This is a reading of activity and standing, arising and ceasing being names Ren confirmed (2026-10-09-arising-ceasing-names); it is not the proposal's generative and degenerative (Ren wrote ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’, a tag question presuming that they do not overlap, so this reading is not what is meant; they read as widening and narrowing what can form, DELEGATED-CHOICES D2)."
+    "zh": "有限家族的定律（coming-and-ceasing-keep-pace：coming_recurs_iff、Web.unceasing_iff）要求一个固定的有限家族包含所有成员；这里只要求每步的列表有界，成员总共可以无限多。所以有限世界的规律（space-and-its-parts：活动可判定的有限世界中生起复现与止息复现是同一部分）所需要的是计数的界，不是有限。与普查定律合起来，生起与止息的关系按计数分为三层：每步的活跃者有限、且在任意晚的步回到某数以内时，两者同步；每步有限而最终超过每个数时，止息需要生起，反之不然，不论计数增长多慢（accretion、slow）；每步不再有限时，止息可以独自不息（attrition 没有普查）。读法（AI 的）：在活跃者不超过一个界的展开中，持续的生起与持续的止息是同一个持续变化的两面，正如有限世界中那样，但不需要成员总共有限；更新的世代可以无穷，只要同时在场的有界；界也不必一直成立：同时在场的只需不断回到某个数以内；无界地增长时，不论多慢，就不必同步。这是活动与水平的读法，英文名称 arising/ceasing 经 Ren 确认（2026-10-09-arising-ceasing-names；中文 生起／止息 是 AI 的译名）；它不是 Ren 提议中的“生成的”“退化的”（Ren 写道“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，以“吧”预设二者不重叠，所以这一读法不是其所指；二者读作对能形成者的扩大与缩小，DELEGATED-CHOICES D2）。",
+    "en": "The law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, Web.unceasing_iff) needs one fixed finite family holding every member; here only the list at each step needs a bound, and the members may be infinitely many in all. So what the law of finite worlds needs (space-and-its-parts: in a finite world whose activity is decided arising recurring and ceasing recurring are one part) is a bound on the count, not finiteness. With the census law, the relation of arising and ceasing falls into three tiers by counting: with the active at each step finite and returning within some number at arbitrarily late steps, the two recur together; finite at each step and eventually beyond every number, ceasing needs arising and not conversely, however slowly the count grows (accretion, slow); no longer finite at each step, ceasing can recur alone (attrition has no census). A reading (the AI's): in an unfolding whose active members never exceed a bound, lasting arising and lasting ceasing are two sides of one lasting change, as in a finite world, without the members being finitely many in all; renewed generations can be endless while those present together are bounded; nor need the bound always hold: those present together need only keep returning within some number, and growing without end, however slowly, they need not keep pace. This is a reading of activity and standing, arising and ceasing being names Ren confirmed (2026-10-09-arising-ceasing-names); it is not the proposal's generative and degenerative (Ren wrote ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’, a tag question presuming that they do not overlap, so this reading is not what is meant; they read as widening and narrowing what can form, DELEGATED-CHOICES D2)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
   "aliases": [
@@ -488,7 +488,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "0362e707d7ec1f584c895a74718635b56d1da92aec8feecdbd66d9c1f99020a3",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
       "declarations": [
         "Becoming.Flow.still",
         "Becoming.World.ArisingRecurs",
@@ -649,6 +649,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -696,7 +702,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -805,6 +811,10 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite to Becoming.InAmounts; World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Finite to Becoming.InAmounts；World.Counted to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument)' reads 'a reading (the AI's)'; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证）”改为“读法（AI 的）”；主张不变。"
     }
   ],
   "text_versions": [

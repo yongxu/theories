@@ -5,7 +5,7 @@
 
 `one-reader-several-conditions` · **recorded-checked** · theorem · F01 · [record](one-reader-several-conditions.json) · [register](../../../../RESULTS.md)
 
-> A schedule keeps a condition within its margin exactly where it reads it within its window; one reader carries windows whose reciprocals sum to at most one; below one need not suffice (windows 2, 3, M); one half suffices, by a dyadic code.
+> A schedule keeps a condition within its margin exactly where it reads it within its window; one reader's windows for conditions distinct by name have reciprocals summing to at most one; below one need not suffice (windows 2, 3, M); one half suffices where whole weights certify it, by a binary code.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -14,7 +14,7 @@
 2. In a given balanced flow, a stretch of k steps left unread lets a drawer giving nothing take (k + 1 + l) d, and a formation needing more than the level without it then holds is lost. (`Becoming.Flow.Balances.loses_of_unread`)
 3. Counting: a schedule reading conditions distinct by name within windows a c gives counts q c with q c a c <= P totalling at most P; readers naming k a step carry P k. In rates, the windows' reciprocals sum to at most one (k for a pool). (`Becoming.ReadingSchedule.PoolWithin`, `Becoming.ReadingSchedule.pool_density`, `Becoming.ReadingSchedule.density`, `Becoming.ReadingSchedule.Within.pool`, `Becoming.ReadingSchedule.keeps_density`)
 4. Spare capacity is not enough: no schedule reads three conditions within every 2, 3 and M steps, for any M, though for M >= 7 the counts over 6 M steps total 5 M + 6, the reader idle a share 1/6 - 1/M. (`Becoming.ReadingSchedule.no_two_three`, `Becoming.ReadingSchedule.two_three_room`, `Becoming.ReadingSchedule.spare_not_enough`)
-5. Half a reader suffices: two schedules interleaved read within twice their windows; a binary code reads a condition at depth k within 2^k; under Kraft's inequality one code reads every item; so windows with reciprocals summing to at most one half are read by one schedule and kept. (`Becoming.ReadingSchedule.weave`, `Becoming.ReadingSchedule.weave_left`, `Becoming.ReadingSchedule.weave_right`, `Becoming.ReadingSchedule.Code.At.reads`, `Becoming.ReadingSchedule.build_length`, `Becoming.ReadingSchedule.build_holds`, `Becoming.ReadingSchedule.kraft_reads`, `Becoming.ReadingSchedule.lg_spec`, `Becoming.ReadingSchedule.half_suffices`, `Becoming.ReadingSchedule.keeps_of_half`)
+5. Half a reader suffices: two schedules interleaved read within twice their windows; a binary code reads a condition at depth k within 2^k; under Kraft's inequality one code reads every item; so positive windows with whole weights q, 2^(D+1) <= q a each and totalling at most 2^D (reciprocals at most one half), fitting their margins, are read by one schedule and kept. (`Becoming.ReadingSchedule.weave`, `Becoming.ReadingSchedule.weave_left`, `Becoming.ReadingSchedule.weave_right`, `Becoming.ReadingSchedule.Code.At.reads`, `Becoming.ReadingSchedule.build_length`, `Becoming.ReadingSchedule.build_holds`, `Becoming.ReadingSchedule.kraft_reads`, `Becoming.ReadingSchedule.lg_spec`, `Becoming.ReadingSchedule.half_suffices`, `Becoming.ReadingSchedule.keeps_of_half`)
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -84,7 +84,8 @@ Aliases: `one reader, several conditions`, `一个读者，多个条件`, `pinwh
 ### History
 
 - 21 October 2026: added (RS1), after the oversight check left the reader's capacity open: keeping is reading within the window, and what one reader can keep; study section 310.
+- 25 October 2026, board item DF (study section 418): the statement and the half law say what the Lean proves: one half suffices where whole weights certify it (positive windows, weights q with 2^(D+1) <= q a, totalling at most 2^D, margins fitting), which need not exist for every list of windows with reciprocals at most one half; the statement also names the conditions distinct by name. No law changed in its declarations.
 
 </details>
 
-Documentary review UTC: `2026-10-21T13:11:37+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

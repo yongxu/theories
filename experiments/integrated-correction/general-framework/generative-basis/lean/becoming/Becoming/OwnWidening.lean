@@ -33,7 +33,7 @@ asks when that widening is the whole's.
 * **What a measure over the own region reads.** Where own widening widens the whole, the levels
   without the part admit within the own region less than the levels with it at some step
   (`Flow.Balances.widens_yet_own_changed`): a comparison that reads only the own region, in both
-  directions, registers a change even where nothing is closed.
+  directions, shows a change even where nothing is closed.
 * **Any reachable set as an admitted set.** A decided set of formations at each step is what the
   web reading each formation as its own condition, at need one, admits (`Web.admits_reachWeb_iff`).
   No amount is conserved there: balance has content only where reaching an outcome is a threshold

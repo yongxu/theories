@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-14T03:30:00+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
     "zh": "以关系读生成时，没有超额取用者的接续更新每个条件并扩展有它的接续，这是对每个继续族成立的比较之律的实例，所以比较原则 C 把前者严格排在上面；逐事件读取时 C 不作此裁决。",
     "en": "Read relationally, the course from which an overdrawing formation is absent renews every condition and extends the course with it, an instance of a law of comparison for every family of courses, so comparison principle C ranks it strictly higher; read event by event, C does not decide."
@@ -75,8 +75,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "C（ComparisonPrinciple）是排序定理的假设，所以比较使用 C 而非 G0；G0 只出现在接口定理 g0_relational 中。二者原样导入自 GenerativeComparison。",
-      "en": "C (ComparisonPrinciple) is a hypothesis of the ranking theorems, so the comparisons use C, not G0; G0 appears only in the interface theorem g0_relational. Both are imported unchanged from GenerativeComparison."
+      "zh": "C（核心中为 ComparisonUnder，外围中为 ComparisonPrinciple）是排序定理的假设，故比较用 C 而非生生之意义；生生之意义（外围中为 G0）只出现在接口定理 livingSignificance_wholeRun_iff 与 g0_relational 中。",
+      "en": "C (Ranking.ComparisonUnder in the core, GenerativeComparison.ComparisonPrinciple in the periphery) is a hypothesis of the ranking theorems, so the comparisons use C, not living significance; living significance (LivingSignificance; GenerativeComparison.G0 in the periphery) appears only in the interface theorems ActiveReading.livingSignificance_wholeRun_iff and g0_relational."
     },
     {
       "en": "Relational reading: a claim is a formation event (formation, step); in a continuation it is a ground when the formation is active then and is not ConsumingIn that continuation. The classification is over the whole continuation.",
@@ -136,12 +136,12 @@
     "en": "Lean 4.29.1 check passed in the shared relational-renewal receipt: RenewalComparison 15 theorems / 24 declaration audits, every axiom set empty; GenerativeComparison compiled unchanged as a hashed dependency (audited by its own checker); 4 further compiled application examples. The law of comparison with a renewing course (Becoming.Ranking) and the instance theorems in the bridge module Becoming.RenewalBridge are checked in consolidated receipt 20261013T221720.428753Z with empty axiom reports. Author counterreview; no independent-agent review."
   },
   "next_delta": {
-    "zh": "多条件及条件间替代（替代保持消耗见 substitution-preserves-consumption）；确定哪些混合情形可由更强比较或 J 层承诺排序，以及需要什么前提。",
-    "en": "Several conditions with substitution (substitution preserves consumption, see substitution-preserves-consumption); which mixed cases a stronger comparison or J commitment ranks, and with what premise."
+    "zh": "多条件及条件间替代（替代保持消耗见 substitution-preserves-consumption）；确定哪些混合情形可由更强比较或实践承诺排序，以及需要什么前提。",
+    "en": "Several conditions with substitution (substitution preserves consumption, see substitution-preserves-consumption); which mixed cases a stronger comparison or a practical commitment ranks, and with what premise."
   },
   "correspondence": {
-    "en": "Reading G0's 'generation' relationally follows Ren's G0, whose object is 生生 ('整体中的生及其继续生成'), and Ren's follow-up that generation and degeneration do not overlap; that reading and C's defense as an articulation of 'a whole direction of ever more 生' are philosophical, not established by the audit. The comparison course is the same unfolding without the focal formation, not a feasible alternative; feasibility and selection belong to P/N and the situation.",
-    "zh": "以关系读 G0 的“生成”，依据的是 Ren 的 G0——对象为生生（“整体中的生及其继续生成”）——及其追问“generative 和 degenerate 不 overlap”；这一读法以及把 C 作为“整体的，不断创造更多生的方向”之比较表述的辩护，属于哲学论证，审计不确立。对照接续是同一展开中没有该形成的情形，不是可行选项；可行与选择属于 P/N 与情境。"
+    "en": "Reading the 'generation' of living significance relationally follows Ren's statement of it, whose object is 生生 ('整体中的生及其继续生成'), and Ren's follow-up that generation and degeneration do not overlap; that reading and C's defense as an articulation of 'a whole direction of ever more 生' are philosophical, not established by the audit. The comparison course is the same unfolding without the focal formation, not a feasible alternative; feasibility and selection belong to P/N and the situation.",
+    "zh": "以关系读生生之意义的“生成”，依据的是 Ren 对它的表述——对象为生生（“整体中的生及其继续生成”）——及其追问“generative 和 degenerate 不 overlap”；这一读法以及把 C 作为“整体的，不断创造更多生的方向”之比较表述的辩护，属于哲学论证，审计不确立。对照接续是同一展开中没有该形成的情形，不是可行选项；可行与选择属于 P/N 与情境。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveReading.lean",
   "aliases": [
@@ -184,15 +184,15 @@
     {
       "id": "practical-judgment-under-living-significance",
       "detail": {
-        "en": "Interpretive: C is the explicit comparison premise of the G0/J route; this result shows what C decides once G0's generation is read relationally. No Lean input from that record.",
-        "zh": "解释关联：C 是 G0/J 路线中公开的比较前提；本结果说明以关系读 G0 的生成后，C 能裁决什么。未以该记录作 Lean 输入。"
+        "en": "Interpretive: C is the explicit comparison premise of the conditional alignment route; this result shows what C decides once the generation in living significance is read relationally. No Lean input from that record.",
+        "zh": "解释关联：C 是条件对齐路线中公开的比较前提；本结果说明以关系读生生之意义的生成后，C 能裁决什么。未以该记录作 Lean 输入。"
       }
     },
     {
       "id": "renewing-consuming-formation",
       "detail": {
-        "en": "Its event_reading_recognizes_both and comparison_does_not_apply give the broad event reading under G0 and C for a wear law: G0 includes both continuations and C does not apply between them, agreeing with overdraw_broad_incomparable here. This record adds that the relational reading lets C rank the overdraw below its absence. No import either way.",
-        "zh": "其 event_reading_recognizes_both 与 comparison_does_not_apply 给出磨损规律下 G0 与 C 的逐事件广义读法：G0 肯定两条接续，C 在二者之间不适用，与此处 overdraw_broad_incomparable 一致。本记录补充的是：关系读法使 C 能把超额取用排在其不发生之下。互不导入。"
+        "en": "Its event_reading_recognizes_both and comparison_does_not_apply give the broad event reading under living significance and C for a wear law: living significance includes both continuations and C does not apply between them, agreeing with overdraw_broad_incomparable here. This record adds that the relational reading lets C rank the overdraw below its absence. No import either way.",
+        "zh": "其 event_reading_recognizes_both 与 comparison_does_not_apply 给出磨损规律下生生之意义与 C 的逐事件广义读法：生生之意义肯定两条接续，C 在二者之间不适用，与此处 overdraw_broad_incomparable 一致。本记录补充的是：关系读法使 C 能把超额取用排在其不发生之下。互不导入。"
       }
     },
     {
@@ -205,8 +205,8 @@
     {
       "id": "positive-ground-open-futures",
       "detail": {
-        "en": "Interpretive: uses the same G0 predicate; here its inventory is read relationally.",
-        "zh": "解释关联：使用同一 G0 谓词；此处其库存按关系读取。"
+        "en": "Interpretive: uses the same predicate of living significance (the periphery's G0); here its inventory is read relationally.",
+        "zh": "解释关联：使用同一生生之意义谓词（外围的 G0）；此处其库存按关系读取。"
       }
     },
     {
@@ -522,6 +522,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (GenerativeComparison, RenewalBridge and RenewalComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.ActiveReading, Becoming.Extension, Becoming.Ranking and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives and Becoming.Metaethics, which this record does not cite with declarations. 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（GenerativeComparison, RenewalBridge and RenewalComparison）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.ActiveReading, Becoming.Extension, Becoming.Ranking and Becoming.ValuationFrames）。退役模块的内容也陈述于 Becoming.Alternatives and Becoming.Metaethics，本记录未以声明引用它们。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the premise on C names the core form beside the periphery one and says living significance where it said the retired label G0, the periphery name kept where it names the Lean; then the remaining retired labels in the correspondence, the related notes and the next step replaced: G0 by living significance (Ren's G0 by Ren's statement of it; the periphery's G0 named where the Lean predicate is meant), the G0/J route by the conditional alignment route, a J commitment by a practical commitment; Ren's quoted words kept; the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：关于 C 的前提在外围形式旁写出核心形式，并把已退役的标签 G0 改为生生之意义，在指 Lean 处保留外围名；随后对应、相关说明与下一步中其余已退役的标签改为现行术语：G0 改为生生之意义（Ren 的 G0 改为 Ren 对它的表述；指 Lean 谓词处写明外围的 G0），G0/J 路线改为条件对齐路线，J 层承诺改为实践承诺；Ren 的原话保留；定律不变。"
     }
   ],
   "text_versions": [

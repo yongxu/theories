@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
     "zh": "各自在所给之内取用的形成，合起来可以超出；在自然数的量中，联合超出持续不过原有的。更新者依存于所更新者时，它终结更新与以其所需依存者，取用者以这样的需要依存时也在内。",
     "en": "Formations each taking within what is given can together exceed it; with natural-number amounts, joint excess cannot outlast what was held. Where renewers depend on what they renew, it ends the renewal and those depending at such a need, a taker among them where it so depends."
@@ -174,8 +174,8 @@
     "en": "An instance theorem to the periphery's wear law; the joint-excess split on a support-gated family that represents each drawer's share (RenewalBridge gives the loss for good, not this split); joint excess under reserves and delayed renewal; shares and attribution (responsibility does not follow)."
   },
   "correspondence": {
-    "zh": "Ren 的提议说，自我可以变得僵硬，“has to count the dynamics that happens beyond what the \"self\" sees”。外围的磨损定律已有同一现象：两个部分各在更新之内、只合起来超出时，共享的形成随之终止（renewing-consuming-formation 中的 jointly_exceeding_parts_end_shared_formation）。本结果把它陈述在脊柱上，以支持门控的网的形式，不用磨损定律：更新者依存于所更新者，联合超出使水平低于其需要，更新停止，以其所需依存者终结，取用者以这样的需要依存时也在内。作者的读法（AI 论证）：元吸引子选出取用更多的形成，它们起初形成更多，每步的计数偏好它们；各自只计自身的取用，合起来超出更新，共享的条件终结，以其所需依存于它的随之终结，胜者如此依存时也在内。想要的延续比共享条件所存更长远时，它必须计入对其所依存者的联合取用；n 步联合超出只需要 n 的水平，视界较短的想要可以在联合超出中被全部满足（Mortal，见 derived-extent-limits）。这是想要所要求的，不是对它的判决。",
-    "en": "Ren's proposal says that the self can become rigid and “has to count the dynamics that happens beyond what the \"self\" sees”. The periphery's wear law has the same phenomenon: where two parts are each within renewal and only jointly exceed it, the shared formation ceases with them (jointly_exceeding_parts_end_shared_formation in renewing-consuming-formation). This result states it on the spine, as a support-gated web and without the wear law: renewers depend on what they renew, joint excess brings the level below their need, renewal stops and those depending at such a need end, a taker among them where it so depends. The author's reading (an AI argument): the meta-attractor selects formations that take more; they form more at first and a count over a step prefers them; each counts its own draw, together they exceed renewal, the shared condition ends, and with it what depends on it at such a need, the winners among them where they so depend. A formation that wants its continuation beyond what the shared condition holds must count the joint draw on what it depends on; n steps of joint excess need only a level of n, so a want with a shorter horizon can be fully met amid joint excess (Mortal, see derived-extent-limits). This is what the want requires, not a verdict passed on it."
+    "zh": "Ren 的提议说，自我可以变得僵硬，“has to count the dynamics that happens beyond what the \"self\" sees”。外围的磨损定律已有同一现象：两个部分各在更新之内、只合起来超出时，共享的形成随之终止（renewing-consuming-formation 中的 jointly_exceeding_parts_end_shared_formation）。本结果把它陈述在脊柱上，以支持门控的网的形式，不用磨损定律：更新者依存于所更新者，联合超出使水平低于其需要，更新停止，以其所需依存者终结，取用者以这样的需要依存时也在内。读法（AI 的论证）：元吸引子选出取用更多的形成，它们起初形成更多，每步的计数偏好它们；各自只计自身的取用，合起来超出更新，共享的条件终结，以其所需依存于它的随之终结，胜者如此依存时也在内。想要的延续比共享条件所存更长远时，它必须计入对其所依存者的联合取用；n 步联合超出只需要 n 的水平，视界较短的想要可以在联合超出中被全部满足（Mortal，见 derived-extent-limits）。这是想要所要求的，不是对它的判决。",
+    "en": "Ren's proposal says that the self can become rigid and “has to count the dynamics that happens beyond what the \"self\" sees”. The periphery's wear law has the same phenomenon: where two parts are each within renewal and only jointly exceed it, the shared formation ceases with them (jointly_exceeding_parts_end_shared_formation in renewing-consuming-formation). This result states it on the spine, as a support-gated web and without the wear law: renewers depend on what they renew, joint excess brings the level below their need, renewal stops and those depending at such a need end, a taker among them where it so depends. A reading (the AI's argument): the meta-attractor selects formations that take more; they form more at first and a count over a step prefers them; each counts its own draw, together they exceed renewal, the shared condition ends, and with it what depends on it at such a need, the winners among them where they so depend. A formation that wants its continuation beyond what the shared condition holds must count the joint draw on what it depends on; n steps of joint excess need only a level of n, so a want with a shorter horizon can be fully met amid joint excess (Mortal, see derived-extent-limits). This is what the want requires, not a verdict passed on it."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
   "aliases": [
@@ -533,6 +533,10 @@
     {
       "en": "21 October 2026, SG4: the joint excess these laws take as given, derived for optimizers re-optimizing along a course, the loss exactly where the draw exceeds the renewal and, for a draw the same at every step, without the premise that renewal stops below the need (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG4：这些律所给定的联合超出，对沿过程重新优化的优化者导出，恰在汲取超出更新时丧失，每步汲取相同时不需要更新在需要之下停止这一前提（记录 re-optimizing-above-a-renewal-ends-it，研究第 291 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in the correspondence \"the author's reading (an AI argument)\" now reads \"a reading (the AI's argument)\", keeping its AI label; the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证）”改为“读法（AI 的论证）”，保留其 AI 标签；规律不变。"
     }
   ],
   "text_versions": [

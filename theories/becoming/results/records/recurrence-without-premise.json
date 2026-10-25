@@ -72,8 +72,8 @@
     {
       "id": "theory-of-becoming-foundation",
       "detail": {
-        "zh": "统一计划 R6：第一部分零前提一线中“对每个变化之律成立的”；这不是无公理的整体演绎。",
-        "en": "Unification plan R6: ‘what holds of every law of change’ in Part I's zero-premise line; this is not the deduction of the whole without axioms."
+        "zh": "统一计划 R6：不含条件的理论的零前提一线中“对每个变化之律成立的”；这不是无公理的整体演绎。",
+        "en": "Unification plan R6: ‘what holds of every law of change’ in the zero-premise line of the theory without the condition; this is not the deduction of the whole without axioms."
       }
     },
     {
@@ -433,6 +433,10 @@
     {
       "en": "2026-10-20: 83 bookkeeping notes condensed from 2026-10-11 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/3cd9380cd931b42e/recurrence-without-premise.json and in git.",
       "zh": "2026-10-20：83 条记账性说明合并（2026-10-11 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/3cd9380cd931b42e/recurrence-without-premise.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label Part I in a related detail replaced by the theory without the condition. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条相关说明中的退役标签“第一部分”改为不含条件的理论。规律未变。"
     }
   ]
 }

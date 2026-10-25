@@ -141,8 +141,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
       "detail": {
-        "en": "gated_alike: under a gate renewing one unit at every level from one, holding the source at the dweller's need and holding it below are both optima and take the same, one keeping the dweller to the horizon and the other breaking it at the first step; so where some level of greatest renewal meets a need and some do not, the order by the draw registers nothing of the dependence (Optimum.Holding.gated_alike).",
-        "zh": "gated_alike：在每个不低于一的水平更新一个单位的闸门下，把源保持在居者的需要处与保持在其下都是最优且所取相同，一个保持居者到视野之末，另一个在第一步打破它；故当有的最大更新水平满足需要、有的不满足时，按汲取之序对该依存毫无记录（Optimum.Holding.gated_alike）。"
+        "en": "gated_alike: under a gate renewing one unit at every level from one, holding the source at the dweller's need and holding it below are both optima and take the same, one keeping the dweller to the horizon and the other breaking it at the first step; so where some level of greatest renewal meets a need and some do not, the order by the draw takes in nothing of the dependence (Optimum.Holding.gated_alike).",
+        "zh": "gated_alike：在每个不低于一的水平更新一个单位的闸门下，把源保持在居者的需要处与保持在其下都是最优且所取相同，一个保持居者到视野之末，另一个在第一步打破它；故当有的最大更新水平满足需要、有的不满足时，该依存丝毫不耦合入按汲取之序（Optimum.Holding.gated_alike）。"
       }
     }
   ],
@@ -163,8 +163,8 @@
     "zh": "带最多所留不能一步再生的终值或折现的序；自下重建的最优；多个对过程排序的优化者；相互最优回应的存在；独立审查。"
   },
   "correspondence": {
-    "en": "The maximum sustainable yield at the level of greatest renewal, half of room in the logistic law (Schaefer 1954); the sole owner ranking the whole course keeps the stock (Scott 1955); a finite horizon with no value on what is left ends in depletion (Clark, Mathematical Bioeconomics, 1976); single-species management of a forage stock for its own yield leaves its predators' needs uncounted (Pikitch and others 2012); instrumental convergence, that a long-horizon agent keeps its resources (Omohundro 2008; Turner and others 2021). On the spine the identity is conservation over the horizon, for every course and every renewal bounded by r, and the optimum covers every order rising with the draw. Reading (the AI's): what a course draws registers its levels only through what is renewed there; keeping one's resource base is real, and it is not alignment with what else depends on the condition.",
-    "zh": "最大可持续产量在最大更新的水平，逻辑斯谛律中为余地之半（Schaefer 1954）；对整个过程排序的唯一所有者保住存量（Scott 1955）；对所留不赋值的有限视野以耗竭告终（Clark，《数理生物经济学》，1976）；为饵料种群自身产量的单物种管理不计其捕食者的需要（Pikitch 等 2012）；工具性趋同，长视野的主体保住其资源（Omohundro 2008；Turner 等 2021）。在脊柱上，恒等式是视野上的守恒，对每个过程与每个以 r 为界的更新成立，最优覆盖每个随汲取升高之序。读法（AI 的）：过程所汲取只通过在某水平被更新者记录该水平；保住自己的资源基础是真实的，但不是与依存于该条件的其他者对齐。"
+    "en": "The maximum sustainable yield at the level of greatest renewal, half of room in the logistic law (Schaefer 1954); the sole owner ranking the whole course keeps the stock (Scott 1955); a finite horizon with no value on what is left ends in depletion (Clark, Mathematical Bioeconomics, 1976); single-species management of a forage stock for its own yield leaves its predators' needs uncounted (Pikitch and others 2012); instrumental convergence, that a long-horizon agent keeps its resources (Omohundro 2008; Turner and others 2021). On the spine the identity is conservation over the horizon, for every course and every renewal bounded by r, and the optimum covers every order rising with the draw. Reading (the AI's): what a course draws takes in its levels only through what is renewed there; keeping one's resource base is real, and it is not alignment with what else depends on the condition.",
+    "zh": "最大可持续产量在最大更新的水平，逻辑斯谛律中为余地之半（Schaefer 1954）；对整个过程排序的唯一所有者保住存量（Scott 1955）；对所留不赋值的有限视野以耗竭告终（Clark，《数理生物经济学》，1976）；为饵料种群自身产量的单物种管理不计其捕食者的需要（Pikitch 等 2012）；工具性趋同，长视野的主体保住其资源（Omohundro 2008；Turner 等 2021）。在脊柱上，恒等式是视野上的守恒，对每个过程与每个以 r 为界的更新成立，最优覆盖每个随汲取升高之序。读法（AI 的）：一个水平只经在该水平被更新者耦合入过程所汲取；保住自己的资源基础是真实的，但不是与依存于该条件的其他者对齐。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
   "aliases": [
@@ -628,6 +628,10 @@
     {
       "en": "22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.",
       "zh": "2026年10月22日，SG12：最多所留能一步再生时，对所留以一比一之外的价值计值已回答（记录 valuing-what-is-left-at-any-worth，研究第 322 节）；开放项改为其余情形。其规律不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): 'registers' in the counterexample and the correspondence replaced by 'takes in' (zh 耦合入), the glossary's word for what reaches through couplings. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：反例与对应中“记录”（registers）改为“耦合入”（takes in），即术语表中经耦合而及者之词。规律未变。"
     }
   ]
 }

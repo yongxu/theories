@@ -8,15 +8,19 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-08T13:02:25.936140+00:00",
+  "reviewed_at_utc": "2026-10-25T14:30:08+00:00",
+  "statement": {
+    "en": "The parts a description reads together lift from every configuration it describes exactly where configurations it identifies match parts into ones it identifies, with no premise; through a code reading the joint tests exactly and reducedly they lift where pairs of parts are compact and tests stable.",
+    "zh": "一个描述合读的诸部分，从它所描述的每个构形提升，恰当它所认同的构形把部分匹配到它所认同的构形，不加前提；经由精确且约化地读出共同检验的编码，在部分之对紧致且检验稳定之处它们提升。"
+  },
   "claim": {
-    "zh": "在共同纤维紧致、表示准确且约简时，整体代码的共同分解可从该整体的任一给定原生代表提升。",
-    "en": "Under joint-fiber compactness and an exact reduced presentation, a code-level joint decomposition lifts from any given native representative of the whole code."
+    "zh": "一个描述把共同关系读作描述之间的关系：凡有如此被描述的构形把如此被描述的部分合在一起。它在一个描述处所读的部分，从它所描述的每个构形、以它同样描述的部分提升，恰当它所认同的构形把部分匹配到它所认同的构形；它所认同的恰是某关系所关联的构形时，恰当该关系匹配部分。不加前提。所以，经由恰认同共同相似构形的描述，诸部分提升，不加前提；经由恰认同通过相同共同检验之构形的描述，在部分之对紧致且检验稳定之处提升；经由精确读出共同检验、并给通过相同检验之构形同一编码的编码，在同样两条下提升，得同一编码的构形于是匹配部分。稳定性正是排中律会给出的：排中律使每个共同检验稳定；而在每个部分之对紧致的框中“通过相同共同检验即匹配部分”恰在排中律下成立。",
+    "en": "A description reads the joint relation among descriptions where some configuration so described holds together parts so described. The parts it reads at a description lift from every configuration it describes, with parts it describes alike, exactly where configurations it identifies match parts into configurations it identifies; where it identifies exactly the configurations some relation relates, exactly where that relation matches parts. No premise. So the parts lift through a description identifying exactly the jointly alike configurations, with no premise; through one identifying exactly the configurations passing the same joint tests, where the pairs of parts are compact and the tests stable; and through a code reading the joint tests exactly and giving configurations passing the same tests one code, under the same two conditions, configurations given one code then matching parts. Stability is what excluded middle would give: excluded middle makes every joint test stable, and that passing the same joint tests matches parts in every frame whose pairs of parts are compact holds exactly under excluded middle."
   },
   "hypotheses": [
     {
-      "zh": "JointCompact、Exact、Reduced；codeJoint 使用同一模型的原生 joint 关系。",
-      "en": "JointCompact, Exact and Reduced; codeJoint uses the same model’s native joint relation."
+      "zh": "liftsFromEach_iff 与 IdentifiesJointAlike.lifts 不加前提。经共同检验与经编码的形式取 JointCompact（每个构形合持的部分之对对共同检验之对紧致）与 TestsStable（每个共同检验在不可能不成立处成立）；编码形式另取 Exact 与 Reduced。",
+      "en": "No premise for liftsFromEach_iff and IdentifiesJointAlike.lifts. The forms through the joint tests and through a code take JointCompact (the pairs of parts each configuration holds together are compact for pairs of joint tests) and TestsStable (every joint test holds wherever it cannot fail); the code forms also take Exact and Reduced."
     }
   ],
   "correspondence": {
@@ -25,9 +29,14 @@
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointCorrespondence.lean",
   "aliases": [
-    "Generative.ExplanatoryJointness.code_joint_lifts_from_whole (periphery module)",
-    "Becoming.code_joint_lifts_from_whole_of_stable (retired module)",
-    "Becoming.liftsFromEach_iff"
+    "Becoming.liftsFromEach_iff",
+    "Becoming.liftsFromEach_iff_of_kernel",
+    "Becoming.IdentifiesJointAlike.lifts",
+    "Becoming.liftsFromEach_of_sameJointTests",
+    "Becoming.liftsFromEach_of_exact",
+    "Becoming.matchesParts_of_exact",
+    "Becoming.JointFrame.TestsStable.of_em",
+    "Becoming.matchesParts_of_compact_iff_em"
   ],
   "dependencies": [],
   "related": [],
@@ -62,7 +71,8 @@
       "role": "proof",
       "sha256": "17e241e3301af75312e9e921205a9905e85af5e2ba29bf9d38b1a0d523e694a7",
       "declarations": [
-        "Becoming.liftsFromEach_of_exact"
+        "Becoming.liftsFromEach_of_exact",
+        "Becoming.matchesParts_of_exact"
       ]
     },
     {
@@ -82,8 +92,16 @@
       "role": "proof",
       "sha256": "08ae38e607c91b205c8b99bbcb49c0678e39f36d89b6cfb9af49bbc602ba4a49",
       "declarations": [
+        "Becoming.jointImage",
+        "Becoming.LiftsFromEach",
         "Becoming.liftsFromEach_iff",
+        "Becoming.liftsFromEach_iff_of_kernel",
+        "Becoming.IdentifiesJointAlike",
+        "Becoming.IdentifiesJointAlike.lifts",
+        "Becoming.JointFrame.JointCompact",
+        "Becoming.JointFrame.TestsStable",
         "Becoming.liftsFromEach_of_sameJointTests",
+        "Becoming.JointFrame.TestsStable.of_em",
         "Becoming.matchesParts_of_compact_iff_em"
       ]
     },
@@ -155,8 +173,8 @@
     }
   ],
   "next_delta": {
-    "zh": "复用 code_joint_lifts_from_whole 作为递归计划的每节点接口。",
-    "en": "Reuse code_joint_lifts_from_whole as the per-node interface for recursive plans."
+    "zh": "以经描述实现计划（joint-code-plan-lifting）为递归计划的每节点接口。",
+    "en": "Reuse the realization of plans through a description (joint-code-plan-lifting) as the per-node interface for recursive plans."
   },
   "history": [
     {
@@ -178,6 +196,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 2 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Generative.ExplanatoryJointness.code_joint_lifts_from_whole (periphery module); Becoming.code_joint_lifts_from_whole_of_stable (retired module). The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；2 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Generative.ExplanatoryJointness.code_joint_lifts_from_whole (periphery module)；Becoming.code_joint_lifts_from_whole_of_stable (retired module)。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws: lifting through a description exactly where configurations it identifies match parts, with no premise; through the joint tests and through a code where the pairs of parts are compact and the tests stable (stability was missing from the premises; without it excluded middle is exactly what is needed). Aliases now the core names; the earlier aliases Generative.ExplanatoryJointness.code_joint_lifts_from_whole (periphery module) and Becoming.code_joint_lifts_from_whole_of_stable (retired module) are recorded here (their declarations stay in the provenance references). The next step names the plan lifting.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，主张依核心定律重述：经描述提升恰当它所认同的构形匹配部分，不加前提；经共同检验与经编码，在部分之对紧致且检验稳定之处提升（前提原缺稳定性；无之则恰需排中律）。别名改为核心之名；原别名 Generative.ExplanatoryJointness.code_joint_lifts_from_whole (periphery module) 与 Becoming.code_joint_lifts_from_whole_of_stable (retired module) 记于此（其声明仍在来历引用中）。下一步指向计划之提升。"
     }
   ]
 }

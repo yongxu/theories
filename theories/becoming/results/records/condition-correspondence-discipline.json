@@ -23,8 +23,8 @@
       "en": "The web and the stepwise reading are those of becoming-stepwise-reading; draws carries no amount; like co-participation, interaction does not order the two events in time, and it does not ask whether the drawing changes the level (Later, Pinned.drawing_interacts)."
     },
     {
-      "zh": "连通的结论需要一个每个活的事件都承担于其上的条件，并有活的汲取者与活的依存者；刻画结论还需要至少一个活的事件；传递结论需要 N_rel，其规范地位不由本结果证明。",
-      "en": "The connection result needs a condition on which every living event bears, with a living drawer and a living dependent; the characterization also needs some living event; the transmission result needs N_rel, whose normative standing this result does not prove."
+      "zh": "连通的结论需要一个每个活的事件都承担于其上的条件，并有活的汲取者与活的依存者；刻画结论还需要至少一个活的事件；传递结论需要关系中立，其规范地位不由本结果证明。",
+      "en": "The connection result needs a condition on which every living event bears, with a living drawer and a living dependent; the characterization also needs some living event; the transmission result needs relational neutrality, whose normative standing this result does not prove."
     }
   ],
   "correspondence": {
@@ -82,8 +82,8 @@
       },
       "interface": {
         "output": {
-          "zh": "连通整体上 G0 的刻画。",
-          "en": "G0's characterization on a connected whole."
+          "zh": "连通整体上生生之意义的刻画。",
+          "en": "The characterization of living significance on a connected whole."
         },
         "input": {
           "zh": "交互之下的连通。",
@@ -443,6 +443,10 @@
     {
       "en": "2026-10-20: 94 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/f3af37610a537239/condition-correspondence-discipline.json and in git.",
       "zh": "2026-10-20：94 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/f3af37610a537239/condition-correspondence-discipline.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels N_rel and G0 in a hypothesis and a dependency interface read relational neutrality and living significance; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：假设与一条依赖接口中的退役标签 N_rel、G0 改为关系中立、生生之意义；主张不变。"
     }
   ]
 }

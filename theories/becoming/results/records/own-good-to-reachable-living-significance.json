@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-08T18:58:39.641466+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
-    "zh": "立场自身之善（自身意义）加不受限单调性与容差，推出立场索引的可及生生之意义实例。",
-    "en": "A standpoint's own good (self-significance), with unrestricted monotonicity and tolerance, gives a standpoint-indexed instance of living significance on reachable generation."
+    "zh": "立场的自身意义，加上其意义随附于剖面（不受限单调性的形式部分）、沿小步的容差、以及每个可及的活的发生都由这样的小步连到自身的一个，推出立场索引、在其所及者上的生生之意义。",
+    "en": "A standpoint's self-significance, with its significance supervening on profiles (the formal part of unrestricted monotonicity), tolerance along small steps, and each reachable living occurrence linked by them to an own one, gives standpoint-indexed living significance on what it reaches."
   },
   "claim": {
     "zh": "对持自身意义（自身的生及继续生成对自己有提供理由的正面意义）的评价位置：其一，自身意义加上不受限（跨越自他）的单调性（等价于随附性、剖面单调估值与 BI），使任何至少同样相连于某一被珍视的自身继续生成的他者生命具有正面意义；承认“连接程度就是完整根据”的只承认“我的”的对手，一旦自身继续生成分化出这样的他者，就严格不一致。其二，再加容差与分级连通，正面意义及于此位置活动所能及的全部生命与继续生成；所得是生生之意义谓词在此立场、单一历史、可及库存上的实例。超出自身意义的全部内容由容差承担；所采用的不带索引、跨接续的生生之意义，仍需从立场相对意义到规范意义的桥接。",
@@ -19,8 +19,8 @@
   },
   "hypotheses": [
     {
-      "zh": "S0 与容差都是实质规范前提；S0 第一人称。“继续生成”包括自身的学习与转化；由此活动形成的他者不在 S0 的内容之内。",
-      "en": "S0 and tolerance are both substantive normative premises; S0 is first-personal. Further generation includes the evaluator's own learning and transformation; others formed by its activity are not part of S0's content."
+      "zh": "自身意义与容差都是实质规范前提；自身意义是第一人称的。“继续生成”包括自身的学习与转化；由此活动形成的他者不在自身意义的内容之内。",
+      "en": "Self-significance and tolerance are both substantive normative premises; self-significance is first-personal. Further generation includes the evaluator's own learning and transformation; others formed by its activity are not part of the content of self-significance."
     },
     {
       "zh": "不受限单调性与随附性是规范的结构前提，并非由“无原始所有者”蕴涵；不受限单调性等价于随附性、剖面单调估值与 BI（自我之善的根据剖面不含自身区域坐标），BI 有争议。对手自己的近远原则只限自身发生。",
@@ -31,8 +31,8 @@
       "en": "Step two adds tolerance and graded connection; tolerance constrains only the positive-to-none flip, not weights. Two-valued universal tolerance on a connected profile space makes positive significance constant and carries “none” backward as readily."
     },
     {
-      "zh": "不使用 G0、D 或 J1–J4 作为前提；“提供理由”是 S0 的内容，Lean 只传递该谓词。",
-      "en": "G0, D and J1–J4 are not premises; reason-giving is the content of S0, and Lean only transports the predicate."
+      "zh": "不使用生生之意义、D 或实践承诺作为前提；“提供理由”是自身意义的内容，Lean 只传递该谓词。",
+      "en": "Living significance, D and the practical commitments are not premises; reason-giving is the content of self-significance, and Lean only transports the predicate."
     }
   ],
   "correspondence": {
@@ -60,17 +60,17 @@
       "id": "positive-ground-open-futures",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "reach_is_livingSignificance 与 selfSignificance_derives_reachable_livingSignificance 的结论使用同一 GenerativeComparison.G0 谓词；本结果为该谓词在可及库存上的成立提供由 S0 出发的推导，不改变原结果的证明与范围。",
-        "en": "reach_is_livingSignificance and selfSignificance_derives_reachable_livingSignificance conclude the same GenerativeComparison.G0 predicate; this result supplies a derivation from S0 of that predicate on the reachable inventory, without changing the earlier proof or scope."
+        "zh": "reach_is_livingSignificance 与 selfSignificance_derives_reachable_livingSignificance 的结论使用同一 GenerativeComparison.G0 谓词；本结果为该谓词在可及库存上的成立提供由自身意义出发的推导，不改变原结果的证明与范围。",
+        "en": "reach_is_livingSignificance and selfSignificance_derives_reachable_livingSignificance conclude the same GenerativeComparison.G0 predicate; this result supplies a derivation from self-significance of that predicate on the reachable inventory, without changing the earlier proof or scope."
       },
       "interface": {
         "output": {
-          "zh": "对持 S0 的位置，可及库存上 G0 成立，以其意义为正面相关性。",
-          "en": "For an S0-holding position, G0 holds on the reachable inventory with its significance as positive relevance."
+          "zh": "对持自身意义的位置，可及库存上生生之意义成立，以其意义为正面相关性。",
+          "en": "For a position holding self-significance, living significance holds on the reachable inventory with its significance as positive relevance."
         },
         "input": {
-          "zh": "contingent_generation_has_positive_ground 的 G0 前提。",
-          "en": "The G0 hypothesis of contingent_generation_has_positive_ground."
+          "zh": "contingent_generation_has_positive_ground 的生生之意义前提（外围的 G0）。",
+          "en": "The living-significance hypothesis (the periphery's G0) of contingent_generation_has_positive_ground."
         },
         "conditions": {
           "zh": "库存限于此位置可及的生命内容，且只有单一历史（Unit），开放未来的多分支结构未被表示；正面相关性取此位置的意义；容差与分级连通成立。",
@@ -84,15 +84,15 @@
     {
       "id": "positioned-positive-reason",
       "detail": {
-        "zh": "该结果证明认同无关性来自 D。本路线用对 S0、容差（及 BI）的认同代替 D，并没有获得与认同无关的约束力：只要一个位置认同 S0、容差（及 BI），它就承诺了此实例。普遍元伦理核心把认同无关性定位在外在论表述 A。",
-        "en": "That result shows endorsement independence comes from D. This route replaces D with endorsement of S0, tolerance (and BI), so it does not obtain endorsement-independent force: a position is committed to this instance only if it accepts S0, tolerance (and BI). The Universal Metaethical Core locates endorsement independence in the externalist articulation A."
+        "zh": "该结果证明认同无关性来自 D。本路线用对自身意义、容差（及 BI）的认同代替 D，并没有获得与认同无关的约束力：只要一个位置认同自身意义、容差（及 BI），它就承诺了此实例。意义、比较与实践判断的说明把认同无关性定位在外在论表述 A。",
+        "en": "That result shows endorsement independence comes from D. This route replaces D with endorsement of self-significance, tolerance (and BI), so it does not obtain endorsement-independent force: a position is committed to this instance only if it accepts self-significance, tolerance (and BI). The account of significance, comparison and practical judgment locates endorsement independence in the externalist articulation A."
       }
     },
     {
       "id": "universal-practical-warrant",
       "detail": {
-        "zh": "推进但未完成：普遍性限于持 S0 的评价者，第二步依赖容差；纯现时目的的评价者不受约束。",
-        "en": "Advances without completing it: universality is limited to S0-holding evaluators, and step two relies on tolerance; present-aim evaluators are not bound."
+        "zh": "推进但未完成：普遍性限于持自身意义的评价者，第二步依赖容差；纯现时目的的评价者不受约束。",
+        "en": "Advances without completing it: universality is limited to evaluators holding self-significance, and step two relies on tolerance; present-aim evaluators are not bound."
       }
     },
     {
@@ -105,8 +105,8 @@
     {
       "id": "metaethical-core-characterization",
       "detail": {
-        "zh": "审查要求的 P+ 版第二步由该结果的 N_rel 承担：沿非零已形成关系传递，取在实际关系上而非可能剖面上；BI 是 N_rel 的实例，立场到规范的桥是 N_std。本结果作为种子的第一人称来源。未建立两模块间的形式转换。",
-        "en": "The P+ version of step two that the review requested is that result's N_rel: transmission along nonzero formed relations, over actual relations rather than possible profiles; BI is an instance of N_rel and the standpoint-to-normative bridge is N_std. This result is the first-personal source of the seed. No formal adapter between the modules is established."
+        "zh": "审查要求的 P+ 版第二步由该结果的关系中立承担：沿非零已形成关系传递，取在实际关系上而非可能剖面上；BI 是关系中立的实例，立场到规范的桥是立场中立。本结果作为种子的第一人称来源。未建立两模块间的形式转换。",
+        "en": "The P+ version of step two that the review requested is that result's relational neutrality: transmission along nonzero formed relations, over actual relations rather than possible profiles; BI is an instance of relational neutrality and the standpoint-to-normative bridge is standpoint neutrality. This result is the first-personal source of the seed. No formal adapter between the modules is established."
       }
     }
   ],
@@ -162,8 +162,8 @@
     }
   ],
   "limitations": {
-    "zh": "所得是正面意义，不是权重、许可、义务或排序，也不预测认识或遵循。普遍性限于持 S0 并接受不受限单调性（含 BI）与容差的评价者；S0 本身不能对每一可能评价者推出；容差对闭合坐标对手与归零权重对手没有得到辩护。内容范围限于 S0 所及的那类生命，不推出一切组织形成的正面意义，也不处理使新生命存在的价值。",
-    "en": "Yields positive significance, not weight, permission, duty or ranking, and predicts no recognition or compliance. Universality is limited to evaluators holding S0 and accepting unrestricted monotonicity (with BI) and tolerance; S0 cannot be derived for every possible evaluator; tolerance is not defended against the closure-coordinate and zero-reaching-weight rivals. Content scope is the kind of living S0 attaches to; positive significance of all organization formation and the value of bringing new lives into existence are not derived."
+    "zh": "所得是正面意义，不是权重、许可、义务或排序，也不预测认识或遵循。普遍性限于持自身意义并接受不受限单调性（含 BI）与容差的评价者；自身意义本身不能对每一可能评价者推出；容差对闭合坐标对手与归零权重对手没有得到辩护。内容范围限于自身意义所及的那类生命，不推出一切组织形成的正面意义，也不处理使新生命存在的价值。",
+    "en": "Yields positive significance, not weight, permission, duty or ranking, and predicts no recognition or compliance. Universality is limited to evaluators holding self-significance, accepting unrestricted monotonicity (with BI) and tolerance; self-significance is not derivable for every possible evaluator; tolerance is undefended against the closure-coordinate and zero-reaching-weight rivals. Content scope is the kind of living self-significance attaches to; positive significance of all organization formation and the value of bringing new lives into existence are not derived."
   },
   "validation_scope": {
     "zh": "Lean 4.29.1 成功实查12项新定理／29项声明审计：19项空依赖、8项 propext、2项 propext 与 Quot.sound；无 Classical.choice 或自定义公理；一般定理均为空依赖。3项应用例不计入。独立审查已完成（EVALUATOR-GROUNDING-REVIEW.md）：推论与复核接受，第一步收窄，容差的辩护不被接受；15 项更正已执行，Lean 说明更正后重跑检查器。",
@@ -458,6 +458,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, EvaluatorGrounding and GenerativeComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Extension, Becoming.Metaethics, Becoming.ProfileReach and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives, which this record does not cite with declarations. 1 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, EvaluatorGrounding and GenerativeComparison）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Extension, Becoming.Metaethics, Becoming.ProfileReach and Becoming.ValuationFrames）。退役模块的内容也陈述于 Becoming.Alternatives，本记录未以声明引用它们。1 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement said unrestricted monotonicity is used; the Lean takes supervenience on profiles (its formal part), tolerance and a chain of small steps from each reachable living occurrence to an own one, and the statement now names exactly these (it read: \"A standpoint's own good (self-significance), with unrestricted monotonicity and tolerance, gives a standpoint-indexed instance of living significance on reachable generation.\"); G0 in the fourth premise replaced by living significance; then the retired labels S0, N_rel, N_std, J1–J4, the Universal Metaethical Core and G0 (where not the periphery's name) replaced in the premises, the dependency, the related notes and the limitations by self-significance, relational and standpoint neutrality, the practical commitments, the account of significance, comparison and practical judgment and living significance, the limitations' sentence tightened to keep its length (\"and accepting\" now \", accepting\", \"is not defended\" now \"is undefended\", \"cannot be derived\" now \"is not derivable\"); the Lean names (GenerativeComparison.G0, reach_is_g0) kept.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述原说用到不受限单调性；Lean 所取为随附于剖面（其形式部分）、容差，以及每个可及的活的发生连到自身之一的小步之链，陈述今恰列这些；第四条前提中的 G0 改为生生之意义；随后已退役的标签 S0、N_rel、N_std、J1–J4、普遍元伦理核心与 G0（非外围名称处）在前提、依赖、相关说明与局限中改为自身意义、关系中立与立场中立、实践承诺、意义、比较与实践判断的说明及生生之意义，英文局限的句子相应收紧以保持其长度；Lean 名称（GenerativeComparison.G0、reach_is_g0）保留。"
     }
   ],
   "former_ids": [

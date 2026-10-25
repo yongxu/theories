@@ -1116,7 +1116,10 @@ theorem World.law_iff_positions :
         «有前» Steps.next (Steps.alike p) t :=
   World.law_iff_em.trans positions_iff_em.symm
 
-/-- And so, by the grammar's own calibration, to the grammar's own calibration over every carrier and relation. -/
+/-- **And so to the grammar's positions.** The same law, asked of every finite world, is
+equivalent to every occurrence, for every carrier and every two relations `R` and `E` on it, either
+beginning or having a predecessor: both are excluded middle (`World.law_iff_em`,
+`«四相之定当且仅当排中»`). -/
 theorem World.law_iff_grammar_positions :
     (∀ w : World, w.Finite → (w.ArisingRecurs ↔ w.CeasingRecurs)) ↔
       ∀ (α : Type) (R E : «际» α) (x : α), «生» R E x ∨ «有前» R E x :=

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
     "zh": "以之为生与世系使关系项直接相关：它们是只有一类读法才提供的两种 related，在依存网的逐步读法上各自加在交互之上，living（活跃且不侵蚀）保持不变。",
     "en": "Living on and descent relate relata directly: they are two readings of related that only the one-kind reading supplies, each added to interaction on the stepwise reading of a web, with living (active and not undermining) kept."
@@ -102,8 +102,8 @@
       "en": "The one-kind reading: conditions and formations share an index, and which condition is which relatum is supplied by the shared index (relabel, see life-as-condition-of-life). Neither definition mentions embodiment: what enters the valuation is this identification, not embodiment, which enters only the conclusions of Embodied.descends and arisen_reached."
     },
     {
-      "zh": "sustenance 与 descent 是 related 的两种读法，是对应前提：依 Ren 的交托决定，在用到该补全时它们算作 N_rel 所传递的形成关系，不作为直接的估值。N_rel 本身仍是前提（metaethical-core-characterization），在到达之律中是前件；本记录不用伦理前提，也不用 Lean 公理。",
-      "en": "sustenance and descent are two readings of related, correspondence premises: decided on Ren's delegation, they count as formed relations along which N_rel transmits where that completion is used, not as direct valuations. N_rel itself remains a premise (metaethical-core-characterization), an antecedent of the reaching laws; the record uses no ethical premise and no Lean axiom."
+      "zh": "sustenance 与 descent 是 related 的两种读法，是对应前提：依 Ren 的交托决定，在用到该补全时它们算作关系中立所传递的形成关系，不作为直接的估值。关系中立本身仍是前提（metaethical-core-characterization），在到达之律中是前件；本记录不用伦理前提，也不用 Lean 公理。",
+      "en": "sustenance and descent are two readings of related, correspondence premises: decided on Ren's delegation, they count as formed relations along which relational neutrality transmits where that completion is used, not as direct valuations. Relational neutrality itself remains a premise (metaethical-core-characterization), an antecedent of the reaching laws; the record uses no ethical premise and no Lean axiom."
     },
     {
       "zh": "Embodied.descends 与 arisen_reached 需要流平衡依存网、只有活跃形成给予（Acting），以及生起的关系项体现。",
@@ -202,8 +202,8 @@
     "en": "An ordered, effect-sensitive living on; the transitive closure of descent (ancestry) and descent within finitely many steps; the same relations for the whole-run reading; connecting to universal_reason's ‘new living content’."
   },
   "correspondence": {
-    "zh": "Becoming.Metaethics 把 related 读作形成的关系，列出条件、依存、世系与合作；此前的读法只经由共同的条件相关，life-as-condition-of-life 记下“直接读出体现的估值”为下一步，Mutualism.apart 是其反例：蜂与花都体现、互相依存，却不相关。本结果在一类读法中给出两种直接的关系：以之为生对应条件化与依存，世系对应世系。以之为生要求正需要的依存，沿用交互的纪律（连通由活的使用造成）；世系要求参与该步的形成正的给予与开始作为条件而在。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。在把体现的关系项读作“生”这一读法下（整合文档 §23 K6；依 Ren 的交托采用，DELEGATED-CHOICES D4），作者把世系读作原话中两个“生”之间关系的一种形式内容：生起者由给予它的展开而来，并经由世系与整体相关（AI 论证）；这不替代原话；以之为生与世系依 Ren 的交托采用，作为延续的已形成关系，不作为直接的估值（DELEGATED-CHOICES D9）。",
-    "en": "Becoming.Metaethics reads related as formed relation: conditioning, dependence, descent and cooperation; the earlier readings relate only through a shared condition, life-as-condition-of-life records ‘a valuation reading embodiment directly’ as a next step, and Mutualism.apart is its counterexample: a bee and a flower, both embodied and depending on each other, are unrelated. This result gives two direct relations in the one-kind reading: living on corresponds to conditioning and dependence, descent to descent. Living on requires dependence at a positive need, keeping interaction's discipline that connection is made by living use; descent requires a positive gift from a formation taking part in the step and coming to stand. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). Taking embodied relata as 生, a reading adopted on Ren's delegation (integration note §23, K6; DELEGATED-CHOICES D4), the author reads descent as one formal content of the relation between the two 生 in those words: what arises comes from the unfolding that gives it, and is related to the whole through descent (an AI argument); it does not replace Ren's words; living on and descent are adopted on Ren's delegation as formed relations of continuation, not as direct valuations (DELEGATED-CHOICES D9)."
+    "zh": "Becoming.Metaethics 把 related 读作形成的关系，列出条件、依存、世系与合作；此前的读法只经由共同的条件相关，life-as-condition-of-life 记下“直接读出体现的估值”为下一步，Mutualism.apart 是其反例：蜂与花都体现、互相依存，却不相关。本结果在一类读法中给出两种直接的关系：以之为生对应条件化与依存，世系对应世系。以之为生要求正需要的依存，沿用交互的纪律（连通由活的使用造成）；世系要求参与该步的形成正的给予与开始作为条件而在。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。在把体现的关系项读作“生”这一读法下（整合文档 §23 K6；依 Ren 的交托采用，DELEGATED-CHOICES D4），AI 把世系读作原话中两个“生”之间关系的一种形式内容：生起者由给予它的展开而来，并经由世系与整体相关（AI 论证）；这不替代原话；以之为生与世系依 Ren 的交托采用，作为延续的已形成关系，不作为直接的估值（DELEGATED-CHOICES D9）。",
+    "en": "Becoming.Metaethics reads related as formed relation: conditioning, dependence, descent and cooperation; the earlier readings relate only through a shared condition, life-as-condition-of-life records ‘a valuation reading embodiment directly’ as a next step, and Mutualism.apart is its counterexample: a bee and a flower, both embodied and depending on each other, are unrelated. This result gives two direct relations in the one-kind reading: living on corresponds to conditioning and dependence, descent to descent. Living on requires dependence at a positive need, keeping interaction's discipline that connection is made by living use; descent requires a positive gift from a formation taking part in the step and coming to stand. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). Taking embodied relata as 生, a reading adopted on Ren's delegation (integration note §23, K6; DELEGATED-CHOICES D4), the AI reads descent as one formal content of the relation between the two 生 in those words: what arises comes from the unfolding that gives it, and is related to the whole through descent (an AI argument); it does not replace Ren's words; living on and descent are adopted on Ren's delegation as formed relations of continuation, not as direct valuations (DELEGATED-CHOICES D9)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Descent.lean",
   "aliases": [
@@ -296,13 +296,13 @@
       "id": "metaethical-core-characterization",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用 Valuation、N_rel（transmits）与 significant_iff：连通的整体上 G0 恰等于种子加两种中立。",
-        "en": "Reuses Valuation, N_rel (transmits) and significant_iff: on a connected whole G0 is exactly a seed with both neutralities."
+        "zh": "复用 Valuation、关系中立（transmits）与 significant_iff：连通的整体上生生之意义恰等于种子加两种中立。",
+        "en": "Reuses Valuation, relational neutrality (transmits) and significant_iff: on a connected whole living significance is exactly a seed with both neutralities."
       },
       "interface": {
         "output": {
-          "zh": "连通的整体上 G0 的刻画。",
-          "en": "G0's characterization on a connected whole."
+          "zh": "连通的整体上生生之意义的刻画。",
+          "en": "The characterization of living significance on a connected whole."
         },
         "input": {
           "zh": "世系使世代连通，于是刻画适用。",
@@ -327,8 +327,8 @@
     {
       "id": "ranking-under-readings",
       "detail": {
-        "zh": "C 的排序随读法而变；这里只改变 related，不改变 living，所以 C 的比较不变，变的是 N_rel 传递到哪里。",
-        "en": "C's ranking varies with the reading; here only related changes, not living, so C's comparisons are unchanged and what changes is where N_rel transmits."
+        "zh": "C 的排序随读法而变；这里只改变 related，不改变 living，所以 C 的比较不变，变的是关系中立传递到哪里。",
+        "en": "C's ranking varies with the reading; here only related changes, not living, so C's comparisons are unchanged and what changes is where relational neutrality transmits."
       }
     }
   ],
@@ -658,6 +658,10 @@
     {
       "en": "2026-10-20: 82 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/6b3820f3dbbf8520/living-on-and-descent.json and in git.",
       "zh": "2026-10-20：82 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/6b3820f3dbbf8520/living-on-and-descent.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels N_rel and G0 in a premise, a dependency and a related note replaced by relational neutrality and living significance (the Lean name transmits kept), and in the correspondence the author's reading is labelled as the AI's (\"the author reads\" now \"the AI reads\"); the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提、一项依赖与一条相关说明中已退役的标签 N_rel 与 G0 改为关系中立与生生之意义（Lean 名称 transmits 保留）；对应中“作者”的读法标为 AI 的（“作者把世系读作”改为“AI 把世系读作”）；规律不变。"
     }
   ],
   "text_versions": [

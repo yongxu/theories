@@ -5,13 +5,17 @@
     "zh": "保步映射传递有限历史",
     "en": "Step-preserving maps transport finite traces"
   },
+  "statement": {
+    "en": "A map preserving each step of one process into another sends every finite course to a course with the same moves; the converse, endpoints included, holds exactly where every step from an image lifts from each configuration with that image.",
+    "zh": "把一个过程的每一步保持到另一个过程的映射，把每个有限程送到动作相同之程；带端点的逆恰在像上出发的每一步都能从具此像的每个构形提升时成立。"
+  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-08T13:02:25.936140+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
-    "zh": "若映射 f 保持每一步关系，则它把每条给定有限历史送到具有相同动作串的目标历史。",
-    "en": "If f preserves each step relation, it sends every finite trace to a target trace with the same action word."
+    "en": "Where a map f takes every step of P to a step of Q with the same move, every finite trace of P from s to t is a trace of Q from f s to f t with the same moves. Through a map q, the traces of Q from q s are exactly the images of the traces of P from s, endpoints included, for every s, exactly where q preserves every step and every step of Q from q s lifts to a step of P from s by the same move into the fiber of its target.",
+    "zh": "映射 f 把 P 的每一步取为 Q 中同一动作之步时，P 从 s 到 t 的每个有限迹都是 Q 从 f s 到 f t、动作相同之迹。经映射 q，对每个 s，Q 从 q s 出发之迹恰是 P 从 s 出发之迹的像（含端点），恰当 q 保持每一步，并且 Q 从 q s 出发的每一步都以同一动作提升为 P 从 s 出发、到其终点纤维中的一步。"
   },
   "hypotheses": [
     {
@@ -25,7 +29,8 @@
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
   "aliases": [
-    "Generative.trace_map"
+    "Generative.trace_map",
+    "Generative.projection_exact_iff"
   ],
   "dependencies": [],
   "related": [
@@ -60,7 +65,9 @@
       "role": "proof",
       "sha256": "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8",
       "declarations": [
-        "Generative.trace_map"
+        "Generative.trace_map",
+        "Generative.trace_lift",
+        "Generative.projection_exact_iff"
       ]
     },
     {
@@ -109,6 +116,10 @@
     {
       "zh": "2026-10-14，整合 I1：GenerativeCore 是 Becoming 核心所依的基础，与核心一同只从 Lean 内置前导编译；脊柱运行 20261014T100026.593496Z 绑定其当前字节，trace_map 公理报告为空。脊柱用它传递可达（Frame.lean 的 Reach.map）与共同接续束（Becoming.Bridge 的 Frame.map_preserves_bundles）。无新定理。",
       "en": "14 October 2026, integration I1: GenerativeCore is the foundation the Becoming core builds on and compiles with it from Lean's prelude alone; the spine run 20261014T100026.593496Z binds its current bytes and reports trace_map with an empty axiom report. The spine uses it for reach (Reach.map in Frame.lean) and for joint-continuation bundles (Frame.map_preserves_bundles in Becoming.Bridge). No new theorem."
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim extended to the converse already proved beside the transport: the traces through a map are exactly the images of the traces, endpoints included, exactly where the map preserves every step and every step from an image lifts, from each configuration with that image, into the fiber of its target; that declaration added to the references and aliases. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张补入与传递并列、已经证明的逆：经映射之迹恰是迹的像（含端点），恰当映射保持每一步且像上出发的每一步都能从具此像的每个构形提升到其终点纤维中；该声明加入引用与别名。规律未变。"
     }
   ]
 }

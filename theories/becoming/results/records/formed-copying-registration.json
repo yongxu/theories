@@ -2,15 +2,15 @@
   "schema_version": 1,
   "id": "formed-copying-registration",
   "title": {
-    "zh": "形成的配准关系改变复制保真度",
+    "zh": "形成的接触改变复制保真度",
     "en": "Formed contacts change copying fidelity"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-14T08:40:00+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
-    "zh": "对每个字母表与汲取律：在每一位接合配准所读之物的复制产生某词，当且仅当每一位读出该词的记号、池供给该词且支持覆盖其汲取，其产物只增长；对每个过程，每步延长输出当且仅当每段进程延长输出，每个非门控步保持的量沿每段非门控进程保持。配准机中，对每个状态，与词长相同数目的复制步把产物延长为该词，当且仅当每一位经实际连接读出其记号、池供给该词且支持覆盖其汲取；完整稳定配准恢复既有复制是其实例；每段进程使产物的边为其记号上的路径，所以完整配准复制模板（含边）当且仅当模板的边是该路径。缺接、错位与重接通过改变各位所读而改变后继；只有复制步改变产物，故连接变化不改写产物，每个允许的有限历史保留已成前缀及连接件、材料与支持的总量。消耗连接件和支持形成的配准接入材料复制。",
+    "zh": "对每个字母表与汲取律：在每一位接合其接触所读之物的复制产生某词，当且仅当每一位读出该词的记号、池供给该词且支持覆盖其汲取，其产物只增长；对每个过程，每步延长输出当且仅当每段进程延长输出，每个非门控步保持的量沿每段非门控进程保持。接触机中，对每个状态，与词长相同数目的复制步把产物延长为该词，当且仅当每一位经实际连接读出其记号、池供给该词且支持覆盖其汲取；完整稳定的接触恢复既有复制是其实例；每段进程使产物的边为其记号上的路径，所以完整接触复制模板（含边）当且仅当模板的边是该路径。缺接、错位与重接通过改变各位所读而改变后继；只有复制步改变产物，故连接变化不改写产物，每个允许的有限历史保留已成前缀及连接件、材料与支持的总量。消耗连接件和支持而形成的接触接入材料复制。",
     "en": "For every alphabet and law of draws: a copy attaching at each site what its contacts read there produces a word exactly when every site reads the word's token, the pool supplies the word and the support covers what it draws, and its product only grows; for every process an output is extended along every course exactly when every step extends it, and a quantity kept by every ungated step is kept along every ungated course. In the contact machine, for every state, as many copy moves as a word has tokens extend the product by that word exactly when each site reads its token through the actual contacts, the pool supplies it and the support covers what it draws; complete stable contacts recovering prior copying are the instance; every course keeps the product's bonds the path on its tokens, so complete contacts copy the template, bonds included, exactly when its bonds are that path. Loss, displacement and rebinding change the successor by changing what sites read; only copy moves change the product, so contact changes never rewrite it, and every admitted finite history keeps its built prefix and its totals of connectors, material and support. Contact formation consuming connectors and support enters material copying."
   },
   "hypotheses": [
@@ -19,12 +19,12 @@
       "en": "Indexed sites, selective docking, reliable transduction, local attachment costs and event occurrence are supplied; there is no excision or replacement of built material."
     },
     {
-      "zh": "一般继承组合要求完整值配准、模板与前缀／剩余序列一致，且保留原定理的路径及材料／支持前提（非空前提不需要）。",
+      "zh": "一般继承组合要求每个值经完整接触读出、模板与前缀／剩余序列一致，且保留原定理的路径及材料／支持前提（非空前提不需要）。",
       "en": "The general inheritance composition requires every value read through complete contacts and template/prefix/suffix consistency, retaining the prior path and material/support premises (the nonempty premise is not needed)."
     }
   ],
   "correspondence": {
-    "zh": "角色由共同活动中的对接、取值、移入与保留关系分化；配准为实际位置对，并非成功标签。局部辨别规律仍在等索引对接条件中给定。",
+    "zh": "角色由共同活动中的对接、取值、移入与保留关系分化；经接触所读由实际位置对构成，并非成功标签。局部辨别规律仍在等索引对接条件中给定。",
     "en": "Roles differentiate through docking, reading, transfers and retention in common activity; reading through contacts consists of actual position pairs, not a success flag. Local discrimination remains supplied by the equal-index docking guard."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingRegistration.lean",
@@ -42,7 +42,7 @@
       "id": "inherited-structural-copying",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "registered_operation_refines 将注册后的运行对应到旧步骤；registered_inheritance 实际调用 copied_structure_inherits。",
+        "zh": "registered_operation_refines 将经接触的运行对应到旧步骤；registered_inheritance 实际调用 copied_structure_inherits。",
         "en": "registered_operation_refines relates execution through contacts to the old steps; registered_inheritance directly uses copied_structure_inherits."
       },
       "interface": {
@@ -51,7 +51,7 @@
           "en": "The old tokenwise copying process forms an identical daughter under its nonempty-path and declared-supply conditions."
         },
         "input": {
-          "zh": "新过程的工作投影经完整配准及顺序一致性对应到旧复制。",
+          "zh": "新过程的工作投影经完整接触及顺序一致性对应到旧复制。",
           "en": "The new work projection refines the old copying process under complete contacts and order consistency."
         },
         "conditions": {
@@ -312,6 +312,10 @@
     {
       "en": "2026-10-20: 22 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/531ee55962abe394/formed-copying-registration.json and in git.",
       "zh": "2026-10-20：22 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/531ee55962abe394/formed-copying-registration.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the Chinese title, claim, hypothesis, correspondence and dependency interface use 接触 (contact), as the English and the record's own limitations do, in place of the retired 配准 (registration); the id keeps the old word until it is renamed. The claim is unchanged. The Chinese of a dependency no longer uses the registration word (经接触的运行, as the English reads).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：中文标题、主张、假设、对应与依赖接口改用“接触”，与英文及本记录的局限一致，不再用退役的“配准”；id 在改名之前仍保留旧词。主张不变。一条依存的中文不再用登记一词（改为“经接触的运行”，与英文一致）。"
     }
   ]
 }

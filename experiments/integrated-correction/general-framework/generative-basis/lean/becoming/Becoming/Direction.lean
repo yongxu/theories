@@ -17,12 +17,13 @@ with the moves as its steps, so the options at any configuration are the moves' 
 
 * **C read as widening on the moves.** One move's outcome extends another's, with every admission
   counted, exactly where it widens it (`Direction.extension_iff_widens`).
-* **A chosen move keeps basic admissions.** Under J1/J2 on the moves' frame (`Priority`: the basic
-  admissions first, then the admissions counted as living), where one move keeps every basic
-  admission any move's outcome admits, no chosen move's outcome refutes a basic admission it makes
-  (`Direction.chosen_keeps_basic`, from `Priority.kept_unrefuted`), and where the moves are listed,
-  the comparison weakly decided and the admission decided on them, that admission is required of
-  the choice (J3/J4, `Direction.kept_required`, from `Priority.kept_required`).
+* **A kept basic admission is not refuted at a chosen option.** Under J1/J2 on the moves' frame
+  (`Priority`: the basic admissions first, then the admissions counted as living), where one move
+  keeps every basic admission any move's outcome admits, no chosen move's outcome refutes a basic
+  admission it makes (`Direction.chosen_keeps_basic`, from `Priority.kept_unrefuted`), and where
+  the moves are listed, the comparison weakly decided and the admission decided on them, that
+  admission is required of the choice (J3/J4, `Direction.kept_required`, from
+  `Priority.kept_required`).
 * **A narrowed move is not chosen.** Under J1/J2, a move whose outcome another move's outcome
   widens is not chosen, wherever it is decided whether the widening adds a basic admission
   (`Direction.narrowed_not_chosen`); with no decision, the widening move is never refuted to be
@@ -92,9 +93,9 @@ theorem extension_iff_widens {l l' : Nat → C → Nat} :
 
 variable {basic : F × Nat → Prop} {better : (Nat → C → Nat) → (Nat → C → Nat) → Prop}
 
-/-- **A chosen move keeps basic admissions.** Under J1/J2 on the moves' frame, where move `u`'s
-outcome admits every basic admission any move's outcome admits, a basic admission it makes is not
-refuted at any chosen option. No decision is used. -/
+/-- **A kept basic admission is not refuted at a chosen option.** Under J1/J2 on the moves'
+frame, where move `u`'s outcome admits every basic admission any move's outcome admits, a basic
+admission it makes is not refuted at any chosen option. No decision is used. -/
 theorem chosen_keeps_basic (priority : Priority (frame W outcome) basic (fun _ => True) better)
     {s : Nat → C → Nat} {u : A}
     (keeps : ∀ a e, basic e → W.Admits (outcome a e.2) e.2 e.1 → W.Admits (outcome u e.2) e.2 e.1)

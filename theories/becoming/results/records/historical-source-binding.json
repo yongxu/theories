@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F09",
-  "reviewed_at_utc": "2026-10-14T04:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "claim": {
-    "zh": "对每类历史、日期、关系、探测与报告：实际历史总符合其日期化记录，一历史符合这些记录当且仅当它给出相同记录；以符合记录的族内历史与被允许来源对旧报告包的每个解释都给出实际内容，当且仅当每个以另一内容给出同一报告包的族内对手都被某一日期化控制区分；族含实际历史时，一致读数即实际读数。在日期上，关系取两值时，区间两端读数相同的控制确定其间每个日期，当且仅当至多允许一次变化或其间无日期；两端所见的变化不被定位。四时刻来源史是实例：在实际历史与扰动覆盖下，各旧记录日期的路径候选接通唯一绑定正确性，不需全程路径不变；一次变化范围内，一致的先前与随后控制确定命名时刻，故后来退化与改善都读对；仅有晚期控制、只有前后控制及遗漏的暂时变化（族外读错，两次变化族内未定）是该律不成立的一侧。",
-    "en": "For every type of histories, dates, relations, probes and reports: the actual history always fits its dated records, and a history fits them exactly when it gives the same records; every explanation of an earlier packet by a family history fitting the records and an admitted source gives the actual content exactly when every family rival giving the same packet with another content is told apart by some dated control; where the family holds the actual history, an agreed reading is the actual one. Over dates, where the relation takes two values, controls at both ends of a span that read the same settle every date between exactly when at most one change is admitted or no date lies strictly between, and a change seen at both ends is not located. The four-moment source histories are instances: under actual-history and disturbance coverage, route candidates at each retained packet's date supply unique-binding correctness without global route stability; in the one-change envelope, agreeing prior and following controls settle naming, so later deterioration and improvement are read right, while a late control alone, controls only before and after, and an omitted temporary change (read wrongly outside the family, left open inside the two-change family) are the law's failing side."
+    "zh": "对每类历史、日期、关系、探测与报告：实际历史总符合其日期化记录，一历史符合这些记录当且仅当它给出相同记录；报告与内容可判定地比较时，以符合记录的族内历史与被允许来源对旧报告包的每个解释都给出实际内容，当且仅当每个以另一内容给出同一报告包的族内对手都被某一日期化控制区分；族含实际历史时，一致读数即实际读数。在日期上，关系之值可判定地比较且含两个不同的值时，区间两端读数相同的控制确定其间每个日期，当且仅当至多允许一次变化或其间无日期；两端所见的变化不被定位。四时刻来源史是实例：在实际历史与扰动覆盖下，各旧记录日期的路径候选接通唯一绑定正确性，不需全程路径不变；一次变化范围内，一致的先前与随后控制确定命名时刻，故后来退化与改善都读对；仅有晚期控制、只有前后控制及遗漏的暂时变化（族外读错，两次变化族内未定）是该律不成立的一侧。",
+    "en": "For every type of histories, dates, relations, probes and reports: the actual history always fits its dated records, and a history fits them exactly when it gives the same records; with reports and contents compared decidedly, every explanation of an earlier packet by a family history fitting the records and an admitted source gives the actual content exactly when every family rival giving the same packet with another content is told apart by some dated control; where the family holds the actual history, an agreed reading is the actual one. Over dates, where the relation's values are compared decidedly and include two distinct ones, controls at both ends of a span that read the same settle every date between exactly when at most one change is admitted or no date lies strictly between, and a change seen at both ends is not located. The four-moment source histories are instances: under actual-history and disturbance coverage, route candidates at each retained packet's date supply unique-binding correctness without global route stability; in the one-change envelope, agreeing prior and following controls settle naming, so later deterioration and improvement are read right, while a late control alone, controls only before and after, and an omitted temporary change (read wrongly outside the family, left open inside the two-change family) are the law's failing side."
   },
   "hypotheses": [
     {
@@ -378,6 +378,10 @@
     {
       "en": "2026-10-20: 21 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/724d5d66dcdfab01/historical-source-binding.json and in git.",
       "zh": "2026-10-20：21 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/724d5d66dcdfab01/historical-source-binding.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the claim names the decidability its laws take (reports and contents compared decidedly for reading an earlier packet right; the relation's values compared decidedly for counting changes) and says the span law needs two distinct values of the relation, not a relation taking only two; the Lean is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张写明其定律所需的可判定性（读对旧报告包需报告与内容可判定地比较；计数变化需关系之值可判定地比较），并说区间律需要关系之值含两个不同的值，而非关系只取两值；Lean 不变。"
     }
   ]
 }

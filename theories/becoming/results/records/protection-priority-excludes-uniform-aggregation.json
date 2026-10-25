@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-08T18:56:05.941008+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "基本条件优先独立于 C，排除每个自然数评分，但可由有界评分表示。",
     "en": "Basic-condition priority is independent of C, excludes every natural-number score, and is representable by a bounded score."
@@ -23,8 +23,8 @@
       "en": "A single situation: option 0 retains the basic condition with no gain; option k>0 loses it and realizes k generative gains. The basic condition is not counted as new generative content."
     },
     {
-      "zh": "C 取自 GenerativeComparison.ComparisonPrinciple；J2 取自 PracticalJudgment.Better；G0 只用于承认增益的正面意义。“J2 不由 C 推出”是 C 对取舍不置可否这一既有结果（tradeoff_has_opposite_strict_appraisals、loss_sensitivity_alone_supplies_no_cutoff）在此情境的实例。",
-      "en": "C is GenerativeComparison.ComparisonPrinciple; J2 is PracticalJudgment.Better; G0 is used only to recognize gains as positively relevant. That J2 does not follow from C instances the existing result that C is silent on trade-offs (tradeoff_has_opposite_strict_appraisals, loss_sensitivity_alone_supplies_no_cutoff)."
+      "zh": "C 取自 GenerativeComparison.ComparisonPrinciple；J2 取自 PracticalJudgment.Better；生生之意义（GenerativeComparison.G0）只用于承认增益的正面意义。“J2 不由 C 推出”是 C 对取舍不置可否这一既有结果（tradeoff_has_opposite_strict_appraisals、loss_sensitivity_alone_supplies_no_cutoff）在此情境的实例。",
+      "en": "C is GenerativeComparison.ComparisonPrinciple; J2 is PracticalJudgment.Better; living significance (GenerativeComparison.G0) is used only to recognize gains as positively relevant. That J2 does not follow from C instances the existing result that C is silent on trade-offs (tradeoff_has_opposite_strict_appraisals, loss_sensitivity_alone_supplies_no_cutoff)."
     }
   ],
   "correspondence": {
@@ -57,8 +57,8 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "zh": "把对齐方向 §3 中“J2 不由 G0 推出、代价是拒绝某些聚合补偿”变为检查过的命题。",
-        "en": "Turns the alignment direction's §3 statement that J2 is not implied by G0 and rejects some aggregate compensation into a checked claim."
+        "zh": "把对齐方向 §3 中 J2 不由生生之意义推出、代价是拒绝某些聚合补偿之说变为检查过的命题。",
+        "en": "Turns the alignment direction's §3 statement that J2 is not implied by living significance and rejects some aggregate compensation into a checked claim."
       }
     },
     {
@@ -377,6 +377,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, GenerativeComparison, PracticalJudgment and ProtectionPriorityRival) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Extension, Becoming.Lexical, Becoming.ScoreRepresentation and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives, Becoming.Frontier and Becoming.Metaethics, which this record does not cite with declarations. 1 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, GenerativeComparison, PracticalJudgment and ProtectionPriorityRival）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Extension, Becoming.Lexical, Becoming.ScoreRepresentation and Becoming.ValuationFrames）。退役模块的内容也陈述于 Becoming.Alternatives, Becoming.Frontier and Becoming.Metaethics，本记录未以声明引用它们。1 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0 replaced by living significance in the premises and a related note (its Chinese, a paraphrase of §3, no longer in quotation marks), the periphery name GenerativeComparison.G0 kept where it names the Lean; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提与一条关联说明中已退役的标签 G0 改为生生之意义（该说明的中文转述 §3，不再加引号），在指 Lean 处保留外围名 GenerativeComparison.G0；主张不变。"
     }
   ]
 }

@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-19T06:01:48+00:00",
+  "reviewed_at_utc": "2026-10-25T14:38:14+00:00",
   "claim": {
-    "zh": "实际生长得到的两种同组成连接图限制一边断裂后的后继；精确连通证书和共同准备计算保留断裂规律改变造成的排序反转。",
-    "en": "Two actually grown graphs with matched composition constrain successors after one-edge removal; exact connectivity certificates and common-preparation calculations retain a cut-law ranking reversal."
+    "zh": "由同一起点的合法分裂历史，链与分支树各长到八个成员，成员、前体、可用与已用物料之数相同（8, 0, 2, 7），亲代摘要相同（4, 4, 7, 7），只在种类与键上不同。切断证书是精确的：证书成立处，去掉一条边后算出的两个分量恰是两端各自连通者，并把成员分开；两树的每个树切断都被证书化，只有链中的 (3,4) 与分支树中的 (0,1) 切成各四的两半。对边作均匀选择时，链的平均切断回报是分支树的三倍，后者为正；最老的切断在链中回报 0，在分支树中回报 6/35，颠倒排序；亲代摘要的任何函数都不能同时给出两个平均回报。一次实际的聚合给链加一条保留边；切断 (3,4) 后加固的链仍是八个成员的一个分量，故证书不成立、切断无回报，切断耗用物料而不碎裂。一般规律在 World 模型上：在依附式生长的世界中，每个接上了一个形成的条件都被需要（which-links-a-closure-needs）。",
+    "en": "By legal division histories from one start the chain and the branched tree each grow to eight members with the same counts of members, precursor, available and used material (8, 0, 2, 7) and the same parent summary (4, 4, 7, 7), differing in kinds and bonds. A cut certificate is exact: where it holds, the two components computed after removing an edge are exactly what each end is connected to, and they split the members; every tree cut of both trees is certified, and only (3,4) in the chain and (0,1) in the branched tree cut into halves of four. Under a uniform choice of edge the chain's mean cut return is three times the branched tree's, which is positive; the oldest cut returns 0 in the chain and 6/35 in the branched tree, reversing the ranking; no function of the parent summary gives both mean returns. An actual aggregation adds a retaining edge to the chain; after cutting (3,4) the reinforced chain stays one component of all eight, so the certificate fails and the cut returns nothing, and the cut uses up material without fragmenting. The general law is on the World model: in a world grown by attachment every condition that attached a formation is needed (which-links-a-closure-needs)."
   },
   "hypotheses": [
     {
@@ -29,7 +29,14 @@
     "Becoming.closure_iff_certified",
     "Becoming.not_within_of_closed",
     "Becoming.PreparationCorrespondence.bond_cut_separates",
-    "Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff"
+    "Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff",
+    "GrownFragmentation.every_tree_cut_certified",
+    "GrownFragmentation.only_equal_tree_cuts",
+    "GrownFragmentation.fragmentation_changes_prepared_return",
+    "GrownFragmentation.oldest_cut_reverses_ranking",
+    "GrownFragmentation.no_parent_summary_predictor",
+    "GrownFragmentation.bypass_survives_cut",
+    "GrownFragmentation.cut_spends_without_fragmenting"
   ],
   "dependencies": [
     {
@@ -64,8 +71,8 @@
     "en": "An additional retention edge can prevent fragmentation; the old preparation output did not rebuild its developmental graph and cannot by itself be iterated as a growth rate."
   },
   "validation_scope": {
-    "zh": "所列 Lean 回执绑定实际源码；推论有效性与生物对应分列。",
-    "en": "The cited Lean receipt binds the actual source; inference validity and biological correspondence remain distinct."
+    "zh": "回执绑定源码；外围多用 propext、Quot.sound，五条另加选择公理；推论与生物对应分列。",
+    "en": "Bound Lean receipts; most periphery laws use propext and Quot.sound, five also Classical.choice; inference validity and biological correspondence differ."
   },
   "references": [
     {
@@ -84,10 +91,20 @@
       "role": "proof",
       "sha256": "d251c7a1f956b3bedd28d28703118e7e57ddfd091ac8dbe756f17b04c747f8ca",
       "declarations": [
+        "GrownFragmentation.histories_legal",
+        "GrownFragmentation.grown_observations",
+        "GrownFragmentation.matched_parent_summaries",
         "GrownFragmentation.certificate_exact_split",
+        "GrownFragmentation.every_tree_cut_certified",
         "GrownFragmentation.central_cut_pools",
+        "GrownFragmentation.only_equal_tree_cuts",
+        "GrownFragmentation.fragmentation_changes_prepared_return",
         "GrownFragmentation.oldest_cut_reverses_ranking",
-        "GrownFragmentation.bypass_survives_cut"
+        "GrownFragmentation.no_parent_summary_predictor",
+        "GrownFragmentation.reinforcement_is_actual",
+        "GrownFragmentation.bypass_survives_cut",
+        "GrownFragmentation.bypass_really_connects",
+        "GrownFragmentation.cut_spends_without_fragmenting"
       ]
     },
     {
@@ -206,7 +223,8 @@
       "sha256": "3468e1797fb310a4e1fd2d086955d4c6c563ef6d171b5154107b4776b74f4b83",
       "declarations": [
         "Becoming.Cuts.attached_link_separates",
-        "Becoming.Cuts.joined_cut_unchanged_iff"
+        "Becoming.Cuts.joined_cut_unchanged_iff",
+        "Becoming.Flow.GrownBy.condition_needed"
       ]
     },
     {
@@ -377,6 +395,14 @@
     {
       "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: ClosedUnder, WithinClosure, closure_iff_certified, not_within_of_closed to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：ClosedUnder, WithinClosure, closure_iff_certified, not_within_of_closed to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated exactly from the periphery Lean: the two grown trees' matched counts and parent summaries, exact cut certificates and the only halving cuts, the chain's mean cut return three times the branched tree's and its reversal at the oldest cut, no predictor from the parent summary, and the retaining edge that stops fragmentation, with the core law on the World (which-links-a-closure-needs); the cited periphery declarations added to the reference and aliases; the evidence names the periphery axioms.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，主张依外围 Lean 精确重述：两棵生长树相同之计数与亲代摘要、精确之切断证书与唯一的对半切断、链的平均切断回报为分支树三倍及其在最老切断处之颠倒、亲代摘要无预测、以及防止碎裂之保留边，并及 World 上之核心规律（which-links-a-closure-needs）；所引外围声明加入引用与别名；证据注明外围之公理。"
     }
-  ]
+  ],
+  "statement": {
+    "en": "Two grown eight-member trees, matched in composition and parent summary, differ in what their single-edge cuts return: the chain's mean return is three times the branched tree's, the oldest cut reverses that, no function of the summary predicts it, and a retaining edge stops fragmentation.",
+    "zh": "两棵组成与亲代摘要相同、各八个成员的生长树，其单边切断的回报不同：链的平均切断回报是分支树的三倍，最老的切断颠倒这一排序，摘要的任何函数都不能预测它，而一条保留边防止碎裂。"
+  }
 }

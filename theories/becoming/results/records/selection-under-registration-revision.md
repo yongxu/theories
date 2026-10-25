@@ -38,10 +38,10 @@ The exact criterion preserves all old choices, stronger than preserving one usef
 ## Dependencies and related results
 
 - **formal-reuse**: [selection-through-couplings](selection-through-couplings.md). web_keeps_iff directly adapts existing SelectsThrough
-- **formal-reuse**: [generalization-through-lumping](generalization-through-lumping.md). Proves the exact registration-change criterion on the same Through definition
+- **formal-reuse**: [generalization-through-lumping](generalization-through-lumping.md). Proves the exact lumping-change criterion on the same Through definition
 - **formal-reuse**: [process-and-frame-as-readings](process-and-frame-as-readings.md). trace_keeps, run_keeps and controlled reuse actual intermediate configurations
 
-**Output:** Web registration-based selection and equivalence
+**Output:** Web selection through coupling and lumping equivalence
 
 **Input:** web_keeps_iff directly adapts existing SelectsThrough
 
@@ -50,7 +50,7 @@ The exact criterion preserves all old choices, stronger than preserving one usef
 
 **Output:** Learning.Training.Through
 
-**Input:** Proves the exact registration-change criterion on the same Through definition
+**Input:** Proves the exact lumping-change criterion on the same Through definition
 
 **Preserved conditions:** Old relation is an equivalence; no reproof of generalization or learning [Revision.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean)
 
@@ -111,4 +111,5 @@ Aliases: `Becoming.Learning.Training.keeps_through_iff`, `Becoming.Learning.Trai
 - 18 October 2026, the N1 renaming (Ren: "Renames, full scope"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: Revision.lean. Rebound to core receipt 20261018T062828.251326Z after reading the change. The claim is unchanged.
 - 18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. Changed by the pass, in docstrings or prose only: Revision.lean, Stock.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Registration.History (now Registration.AlikeUpTo); Registration.history_keeps (now Registration.alikeUpTo_keeps); Registration.through_history_later (now Registration.through_alikeUpTo_later). Proof bindings (Revision.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Revision.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): The retired registration wording in the dependencies replaced by coupling and lumping, as the Chinese already read.
 - 3 rebinding entries (2026-10-14 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](selection-under-registration-revision.json).

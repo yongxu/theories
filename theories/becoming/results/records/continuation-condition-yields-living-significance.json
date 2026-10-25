@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-19T08:07:06+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "“从每个立场看，任何东西的延续都有意义”这一延续条件，在主张的意义即某形成之延续的意义的每种读法上推出生生之意义、每个立场的自身意义、两种中立与种子，在水平路径上推出 C，并解除生生之意义的每处用法。",
     "en": "The continuation condition yields living significance, self-significance at every standpoint, both neutralities and a seed on every reading where a claim's significance is a formation's continuation, C on level paths, and discharges every use of living significance."
@@ -141,8 +141,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "公理：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是定理的假设，不被证明；把它读作 Ren 的公理是 AI 的读法，依 Ren 的交托采用。",
-      "en": "The axiom: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems and is not proved; reading it as Ren's axiom is the AI's reading, adopted on Ren's delegation."
+      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是定理的假设，陈述而不断言，也不被证明；把“for anything, its continuation into the future has significance”读作 Unrestricted 是 AI 的读法（D16）。",
+      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems, stated and not asserted, and is not proved; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16)."
     },
     {
       "zh": "对应：主张的意义读作某形成在某步之延续的意义（formation、step 与 reads）；不满足它的读法上，定理不说什么。",
@@ -157,12 +157,12 @@
       "en": "Discrete steps, counted from step zero; natural-number levels, needs and amounts; a part is a decided family (part : F → Bool)."
     },
     {
-      "zh": "从意义读出的正面相关（Frame.relevance）与读在活的内容上的 A（articulatesLiving）是定义；A 仍是前提，只换了读法。审计的完整性来自对 G0 全部出现的逐处阅读，不是 Lean 定理；Lean 给出解除引理，以及桥接已导入的三项外围定理的转移。",
-      "en": "Positive relevance read from significance (Frame.relevance) and A read on living content (articulatesLiving) are definitions; A remains a premise, only its reading changes. The audit's completeness comes from reading every occurrence of G0, not from a Lean theorem; Lean gives the discharging lemmas and the transfer of the three periphery theorems the bridge imports."
+      "zh": "从意义读出的正面相关（Frame.relevance）与读在活的内容上的 A（articulatesLiving）是定义；A 仍是前提，只换了读法。审计的完整性来自对生生之意义全部出现的逐处阅读，不是 Lean 定理；Lean 给出解除引理，以及桥接已导入的三项外围定理的转移。",
+      "en": "Positive relevance read from significance (Frame.relevance) and A read on living content (articulatesLiving) are definitions; A remains a premise, only its reading changes. The audit's completeness comes from reading every occurrence of living significance, not from a Lean theorem; Lean gives the discharging lemmas and the transfer of the three periphery theorems the bridge imports."
     },
     {
-      "zh": "G0 已由 Ren 2026-10-11 折叠，不再是公理；同日 Ren 把正面相关折叠进意义，折叠用从意义读出的正面相关。A 读在活的内容上是读法，依 Ren 的交托采用。",
-      "en": "G0 was folded by Ren on 11 October 2026 and is no longer an axiom; positive relevance was folded into significance by Ren the same day, and the fold uses positive relevance read from significance. Reading A on living content is a reading, adopted on Ren's delegation."
+      "zh": "生生之意义作为条件陈述，在延续条件之下作为定理推出；正面相关从意义读出（Frame.relevance），把 A 读在活的内容上是 AI 的读法（D16）。",
+      "en": "Living significance is stated as a condition and follows as a theorem under the continuation condition; positive relevance is read from significance (Frame.relevance), and reading A on living content is an AI reading (D16)."
     }
   ],
   "does_not_show": [
@@ -237,15 +237,15 @@
   ],
   "validation_scope": {
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261013T204910.042715Z，外围回执 20261013T095049.338744Z）：Significance、Relevance 中属本结果者与桥接 Discharge 一节的定理公理报告为空；不用 Lean 公理，Unrestricted 是定理的假设。桥接绑定回执 20261013T102207.009826Z，其中新增的四项适配（不另计成果）公理报告也为空。作者反审见整合文档 §53 与 §64；无独立审查。",
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T204910.042715Z; periphery receipt 20261013T095049.338744Z): the theorems of Significance, those of Relevance belonging to this result and the bridge's Discharge section have empty axiom reports; no Lean axiom is used, the axiom Unrestricted being a hypothesis of the theorems. The bridge is bound to receipt 20261013T102207.009826Z, whose four added adapters, not separate results, also have empty reports. Author counterreviews in §53 and §64 of the integration note; no independent review."
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T204910.042715Z; periphery receipt 20261013T095049.338744Z): the theorems of Significance, those of Relevance belonging to this result and the bridge's Discharge section have empty axiom reports; no Lean axiom is used, the continuation condition Unrestricted being a hypothesis of the theorems. The bridge is bound to receipt 20261013T102207.009826Z, whose four added adapters, not separate results, also have empty reports. Author counterreviews in §53 and §64 of the integration note; no independent review."
   },
   "next_delta": {
     "zh": "L 在延续条件之下的形式；陈述从路线 (b) 的窄范围到延续条件的宽范围的那一步不变（presupposition-scopes 表明二者是同一预设的两种范围）。",
     "en": "The form of L under the continuation condition; stating the step of invariance from route (b)'s narrow scope to the continuation condition's wide scope (presupposition-scopes shows them one presupposition at two scopes)."
   },
   "correspondence": {
-    "zh": "Ren 的公理是“for anything, its continuation into the future has significance(doesn't have to be positive, we could argue as long as not harm), or continuation into the future needs to create more significance(being generative)”。Ren 又写道，中心及其边界只存在于认知的结构与动力学中，“so there isn't really who's continuation matters, which requires axiom”，并说“not harm”是“a phase transition with a clear boundary”。作者的读法（AI 论证，依 Ren 的交托采用）：形成的索引读“anything”，形成在一步的延续读“its continuation into the future”，立场的索引读“has significance”不加限定、没有哪个中心特殊；保留读“as long as not harm”，增加读“create more significance”。名称（Unrestricted、Retains、Adds、Preemption 等）是 AI 按 Ren 的命名准则所选。P44 的读法（AI 论证，依 Ren 的交托采用）：正面相关读作已实现的活的内容的意义，读 Ren 的“doesn't have to be positive”：意义不是正面相关，正面的是活的，即生生；一切都有意义时，正面相关须读在活的内容上，否则 A 给不活的新内容以理由。",
-    "en": "Ren's axiom is “for anything, its continuation into the future has significance(doesn't have to be positive, we could argue as long as not harm), or continuation into the future needs to create more significance(being generative)”. Ren also wrote that a center and its boundary exist only within cognitive structure and dynamics, “so there isn't really who's continuation matters, which requires axiom”, and that “not harm” is “a phase transition with a clear boundary”. The author's reading (an AI argument, adopted on Ren's delegation): the formation index reads “anything”, a formation's continuation at a step reads “its continuation into the future”, and the standpoint index reads “has significance” unqualified, with no center privileged; retaining reads “as long as not harm”, and adding reads “create more significance”. The names (Unrestricted, Retains, Adds, Preemption and others) are the AI's, chosen by Ren's naming standard. P44's reading (an AI argument, adopted on Ren's delegation): positive relevance is read as the significance of realized living content, reading Ren's “doesn't have to be positive”: significance is not positive relevance, and what is positive is the living, 生生; where everything has significance, positive relevance must be read on living content, or A gives a reason for new content that is not living."
+    "zh": "条件的来源是 Ren 的句子“for anything, its continuation into the future has significance(doesn't have to be positive, we could argue as long as not harm), or continuation into the future needs to create more significance(being generative)”。Ren 又写道，中心及其边界只存在于认知的结构与动力学中，“so there isn't really who's continuation matters, which requires axiom”，并说“not harm”是“a phase transition with a clear boundary”。读法（AI 论证，D16）：形成的索引读“anything”，形成在一步的延续读“its continuation into the future”，立场的索引读“has significance”不加限定、没有哪个中心特殊；保留读“as long as not harm”，增加读“create more significance”。名称（Unrestricted、Retains、Adds、Preemption 等）是 AI 按 Ren 的命名准则所选。P44 的读法（AI 论证，D16）：正面相关读作已实现的活的内容的意义，读 Ren 的“doesn't have to be positive”：意义不是正面相关，正面的是活的，即生生；一切都有意义时，正面相关须读在活的内容上，否则 A 给不活的新内容以理由。",
+    "en": "The condition's source is Ren's sentence “for anything, its continuation into the future has significance(doesn't have to be positive, we could argue as long as not harm), or continuation into the future needs to create more significance(being generative)”. Ren also wrote that a center and its boundary exist only within cognitive structure and dynamics, “so there isn't really who's continuation matters, which requires axiom”, and that “not harm” is “a phase transition with a clear boundary”. The reading (an AI argument, D16): the formation index reads “anything”, a formation's continuation at a step reads “its continuation into the future”, and the standpoint index reads “has significance” unqualified, with no center privileged; retaining reads “as long as not harm”, and adding reads “create more significance”. The names (Unrestricted, Retains, Adds, Preemption and others) are the AI's, chosen by Ren's naming standard. P44's reading (an AI argument, D16): positive relevance is read as the significance of realized living content, reading Ren's “doesn't have to be positive”: significance is not positive relevance, and what is positive is the living, 生生; where everything has significance, positive relevance must be read on living content, or A gives a reason for new content that is not living."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
   "aliases": [
@@ -286,21 +286,21 @@
       "id": "metaethical-core-characterization",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用 Valuation、Significant、SelfSignificance、Seed、transmits、shares、Neutral、Within、G0、Extension 与 Comparison；原刻画保持其范围。P44 另复用 SecuresNewContent、articulates、PositionedArticulation 与 universal_reason 的论证，给出读在活的内容上的 A 与不用连通的普遍理由。",
-        "en": "Reuses Valuation, Significant, SelfSignificance, Seed, transmits, shares, Neutral, Within, G0, Extension and Comparison; the earlier characterization keeps its scope. P44 also reuses SecuresNewContent, articulates, PositionedArticulation and the argument of universal_reason, giving A read on living content and the universal reason with no connection."
+        "zh": "复用 Valuation、Significant、SelfSignificance、Seed、transmits、shares、Neutral、Within、LivingSignificance、Extension 与 Comparison；原刻画保持其范围。P44 另复用 SecuresNewContent、articulates、PositionedArticulation 与 universal_reason 的论证，给出读在活的内容上的 A 与不用连通的普遍理由。",
+        "en": "Reuses Valuation, Significant, SelfSignificance, Seed, transmits, shares, Neutral, Within, LivingSignificance, Extension and Comparison; the earlier characterization keeps its scope. P44 also reuses SecuresNewContent, articulates, PositionedArticulation and the argument of universal_reason, giving A read on living content and the universal reason with no connection."
       },
       "interface": {
         "output": {
-          "zh": "估值、S0、两条中立、种子、G0 与 C 的定义。",
-          "en": "The valuation, S0, the two neutralities, the seed, G0 and C."
+          "zh": "估值、自身意义、两条中立、种子、生生之意义与 C 的定义。",
+          "en": "The valuation, self-significance, the two neutralities, the seed, living significance and C."
         },
         "input": {
-          "zh": "在主张的意义即延续之意义的读法上，由公理推出 G0、S0、两条中立与种子；在水平路径上推出 C。",
-          "en": "On readings where a claim's significance is that of a continuation, G0, S0, both neutralities and a seed are derived from the axiom; on level paths, C."
+          "zh": "在主张的意义即延续之意义的读法上，由延续条件推出生生之意义、自身意义、两条中立与种子；在水平路径上推出 C。",
+          "en": "On readings where a claim's significance is that of a continuation, living significance, self-significance, both neutralities and a seed are derived from the continuation condition; on level paths, C."
         },
         "conditions": {
-          "zh": "公理 Unrestricted；对应 reads。",
-          "en": "The axiom Unrestricted; the correspondence reads."
+          "zh": "延续条件 Unrestricted；对应 reads。",
+          "en": "The continuation condition Unrestricted; the correspondence reads."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean"
       }
@@ -309,21 +309,21 @@
       "id": "living-significance-on-held-lives",
       "relation": "interpretive",
       "detail": {
-        "zh": "那里 G0 在被持有的生命上恰等于处处 S0 加 N_std（§6.2 的读法：S0 为想要，N_std 为公理）；这里公理更强，给出处处 S0 与 N_std，所以那一读法在这里是推论。",
-        "en": "There G0 on held lives is exactly S0 at every standpoint with N_std (the reading of section 6.2: S0 as wanting, N_std as the axiom); here the axiom is stronger and gives S0 at every standpoint and N_std, so that reading is here a consequence."
+        "zh": "那里生生之意义在被持有的生命上恰等于处处自身意义加立场中立（§6.2 的读法：自身意义为想要，立场中立为前提）；这里延续条件更强，给出处处自身意义与立场中立，所以那一读法在这里是推论。",
+        "en": "There living significance on held lives is exactly self-significance at every standpoint with standpoint neutrality (the reading of section 6.2: self-significance as wanting, standpoint neutrality as the premise); here the continuation condition is stronger and gives self-significance at every standpoint and standpoint neutrality, so that reading is here a consequence."
       },
       "interface": {
         "output": {
-          "zh": "G0 与处处 S0 加 N_std 的等价。",
-          "en": "The equivalence of G0 with S0 at every standpoint and N_std."
+          "zh": "生生之意义与处处自身意义加立场中立的等价。",
+          "en": "The equivalence of living significance with self-significance at every standpoint and standpoint neutrality."
         },
         "input": {
-          "zh": "公理之下等价的两边都成立。",
-          "en": "Under the axiom both sides of the equivalence hold."
+          "zh": "延续条件之下等价的两边都成立。",
+          "en": "Under the continuation condition both sides of the equivalence hold."
         },
         "conditions": {
-          "zh": "持有；第 6.2 节的读法是 AI 的，依 Ren 的交托采用（DELEGATED-CHOICES D11）。",
-          "en": "Holding; the reading of section 6.2 is the AI's, adopted on Ren's delegation (DELEGATED-CHOICES D11)."
+          "zh": "持有；第 6.2 节的读法是 AI 的读法（D11）。",
+          "en": "Holding; the reading of section 6.2 is an AI reading (D11)."
         },
         "evidence": "theories/becoming/history/THE-THEORY-OF-BECOMING.md"
       }
@@ -332,8 +332,8 @@
       "id": "becoming-stepwise-reading",
       "relation": "application",
       "detail": {
-        "zh": "逐步读法（Web.valuation：活跃且不侵蚀的事件为活的）是公理推出 G0 的一种读法；significance_undetermined 在其上陈述。",
-        "en": "The stepwise reading (Web.valuation: an event active and not undermining is living) is one reading on which the axiom yields G0; significance_undetermined is stated on it."
+        "zh": "逐步读法（Web.valuation：活跃且不侵蚀的事件为活的）是延续条件推出生生之意义的一种读法；significance_undetermined 在其上陈述。",
+        "en": "The stepwise reading (Web.valuation: an event active and not undermining is living) is one reading on which the continuation condition yields living significance; significance_undetermined is stated on it."
       },
       "interface": {
         "output": {
@@ -341,8 +341,8 @@
           "en": "The stepwise valuation."
         },
         "input": {
-          "zh": "公理之下其上 G0 成立；没有意义时不成立。",
-          "en": "Under the axiom G0 holds on it; without significance it fails."
+          "zh": "延续条件之下其上生生之意义成立；没有意义时不成立。",
+          "en": "Under the continuation condition living significance holds on it; without significance it fails."
         },
         "conditions": {
           "zh": "活的事件：活跃且不侵蚀（UnderminingAt）。",
@@ -355,8 +355,8 @@
       "id": "becoming-renewal-reading",
       "relation": "application",
       "detail": {
-        "zh": "整段读法（Conditions.valuation）是公理推出 G0 的另一种读法。",
-        "en": "The whole-run reading (Conditions.valuation) is another reading on which the axiom yields G0."
+        "zh": "整段读法（Conditions.valuation）是延续条件推出生生之意义的另一种读法。",
+        "en": "The whole-run reading (Conditions.valuation) is another reading on which the continuation condition yields living significance."
       },
       "interface": {
         "output": {
@@ -364,8 +364,8 @@
           "en": "The whole-run valuation."
         },
         "input": {
-          "zh": "公理之下其上 G0 成立。",
-          "en": "Under the axiom G0 holds on it."
+          "zh": "延续条件之下其上生生之意义成立。",
+          "en": "Under the continuation condition living significance holds on it."
         },
         "conditions": {
           "zh": "一个运行。",
@@ -401,8 +401,8 @@
       "id": "becoming-spine-instances",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "桥接的 Discharge 一节复用外围接口的实例（Frame.inventory、g0_iff）：公理之下外围的 G0 对每个清单成立。",
-        "en": "The bridge's Discharge section reuses the instances of the periphery's interface (Frame.inventory, g0_iff): under the axiom the periphery's G0 holds for every inventory."
+        "zh": "桥接的 Discharge 一节复用外围接口的实例（Frame.inventory、g0_iff）：延续条件之下外围的 G0 对每个清单成立。",
+        "en": "The bridge's Discharge section reuses the instances of the periphery's interface (Frame.inventory, g0_iff): under the continuation condition the periphery's G0 holds for every inventory."
       },
       "interface": {
         "output": {
@@ -410,12 +410,12 @@
           "en": "The correspondence of the periphery's interface with the core's definitions."
         },
         "input": {
-          "zh": "外围以 G0 为假设的定理由公理推出。",
-          "en": "The periphery's theorems taking G0 as a hypothesis follow from the axiom."
+          "zh": "外围以生生之意义（即其 G0）为假设的定理由延续条件推出。",
+          "en": "The periphery's theorems taking living significance (its G0) as a hypothesis follow from the continuation condition."
         },
         "conditions": {
-          "zh": "公理 Unrestricted；formation 与 step。",
-          "en": "The axiom Unrestricted; formation and step."
+          "zh": "延续条件 Unrestricted；formation 与 step。",
+          "en": "The continuation condition Unrestricted; formation and step."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean"
       }
@@ -429,16 +429,16 @@
       },
       "interface": {
         "output": {
-          "zh": "以 G0 为假设：生成扩展的新实现有正面相关。",
-          "en": "Taking G0 as a hypothesis: a new realization of a generative extension has positive relevance."
+          "zh": "以生生之意义（外围的 G0）为假设：生成扩展的新实现有正面相关。",
+          "en": "Taking living significance (the periphery's G0) as a hypothesis: a new realization of a generative extension has positive relevance."
         },
         "input": {
-          "zh": "由公理推出。",
-          "en": "Derived from the axiom."
+          "zh": "由延续条件推出。",
+          "en": "Derived from the continuation condition."
         },
         "conditions": {
-          "zh": "公理 Unrestricted；生成扩展。",
-          "en": "The axiom Unrestricted; a generative extension."
+          "zh": "延续条件 Unrestricted；生成扩展。",
+          "en": "The continuation condition Unrestricted; a generative extension."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GenerativeComparison.lean"
       }
@@ -452,16 +452,16 @@
       },
       "interface": {
         "output": {
-          "zh": "以 G0 为假设：偶然的生成确保正面根据。",
-          "en": "Taking G0 as a hypothesis: contingent generation secures positive ground."
+          "zh": "以生生之意义（外围的 G0）为假设：偶然的生成确保正面根据。",
+          "en": "Taking living significance (the periphery's G0) as a hypothesis: contingent generation secures positive ground."
         },
         "input": {
-          "zh": "由公理推出。",
-          "en": "Derived from the axiom."
+          "zh": "由延续条件推出。",
+          "en": "Derived from the continuation condition."
         },
         "conditions": {
-          "zh": "公理 Unrestricted；每个被容许的历史都形成新的生成内容。",
-          "en": "The axiom Unrestricted; every admitted history forms new generative content."
+          "zh": "延续条件 Unrestricted；每个被容许的历史都形成新的生成内容。",
+          "en": "The continuation condition Unrestricted; every admitted history forms new generative content."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositiveGroundUncertainty.lean"
       }
@@ -475,16 +475,16 @@
       },
       "interface": {
         "output": {
-          "zh": "以 G0 与 D 为假设：定位表达普遍指向每个有通达的立场。",
-          "en": "Taking G0 and D as hypotheses: positioned articulation addresses every position with access."
+          "zh": "以生生之意义（外围的 G0）与 D 为假设：定位表达普遍指向每个有通达的立场。",
+          "en": "Taking living significance (the periphery's G0) and D as hypotheses: positioned articulation addresses every position with access."
         },
         "input": {
-          "zh": "由公理与读在从意义读出的正面相关上的 D 推出。",
-          "en": "Derived from the axiom with D read on positive relevance read from significance."
+          "zh": "由延续条件与读在从意义读出的正面相关上的 D 推出。",
+          "en": "Derived from the continuation condition with D read on positive relevance read from significance."
         },
         "conditions": {
-          "zh": "公理 Unrestricted；D；每个被容许的历史都形成新的生成内容。",
-          "en": "The axiom Unrestricted; D; every admitted history forms new generative content."
+          "zh": "延续条件 Unrestricted；D；每个被容许的历史都形成新的生成内容。",
+          "en": "The continuation condition Unrestricted; D; every admitted history forms new generative content."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean"
       }
@@ -508,15 +508,15 @@
     {
       "id": "ranking-under-readings",
       "detail": {
-        "zh": "P44 在那里给出 C 的可能性读法：在公理之下，按它的扩展就是这里的保留且增加。",
-        "en": "P44 gives C's possibility reading there: under the axiom, extension under it is retaining and adding here."
+        "zh": "P44 在那里给出 C 的可能性读法：在延续条件之下，按它的扩展就是这里的保留且增加。",
+        "en": "P44 gives C's possibility reading there: under the continuation condition, extension under it is retaining and adding here."
       }
     },
     {
       "id": "protection-priority-excludes-uniform-aggregation",
       "detail": {
-        "zh": "那里的 g0_recognizes_traded_gains 以 G0 为假设，由同一实例化解除（未写成 Lean，模块不在桥接的导入之内）；livingSignificance_leaves_ordering_open 的模型中取处处成立的意义，公理成立，公理同样不约束次序。",
-        "en": "Its g0_recognizes_traded_gains takes G0 as a hypothesis and is discharged by the same instantiation (not written in Lean, the module being outside the bridge's imports); in the model of livingSignificance_leaves_ordering_open significance everywhere satisfies the axiom, which leaves the ordering open as well."
+        "zh": "那里的 g0_recognizes_traded_gains 以生生之意义（外围的 G0）为假设，由同一实例化解除（未写成 Lean，模块不在桥接的导入之内）；livingSignificance_leaves_ordering_open 的模型中取处处成立的意义，延续条件成立，它同样不约束次序。",
+        "en": "Its g0_recognizes_traded_gains takes living significance (the periphery's G0) as a hypothesis and is discharged by the same instantiation (not written in Lean, the module being outside the bridge's imports); in the model of livingSignificance_leaves_ordering_open significance everywhere satisfies the continuation condition, which leaves the ordering open as well."
       }
     },
     {
@@ -529,22 +529,22 @@
     {
       "id": "renewing-consuming-formation",
       "detail": {
-        "zh": "那里的 event_reading_recognizes_both 在宽清单上以 G0 为假设，由同一实例化解除；公理同样给两个继续的事件以意义，区分要靠比较（见 ranking-under-readings）。",
-        "en": "Its event_reading_recognizes_both takes G0 as a hypothesis on a broad inventory and is discharged by the same instantiation; the axiom too gives the events of both continuations significance, and telling them apart takes the comparison (see ranking-under-readings)."
+        "zh": "那里的 event_reading_recognizes_both 在宽清单上以生生之意义（外围的 G0）为假设，由同一实例化解除；延续条件同样给两个继续的事件以意义，区分要靠比较（见 ranking-under-readings）。",
+        "en": "Its event_reading_recognizes_both takes living significance (the periphery's G0) as a hypothesis on a broad inventory and is discharged by the same instantiation; the continuation condition too gives the events of both continuations significance, and telling them apart takes the comparison (see ranking-under-readings)."
       }
     },
     {
       "id": "presupposition-scopes",
       "detail": {
-        "zh": "不用公理的路线 (b) 与公理是同一预设的窄、宽两种范围；二者之间只差不变的一步。",
-        "en": "Route (b), without the axiom, and the axiom are one presupposition at narrow and wide scope; they differ only by the step of invariance."
+        "zh": "不用延续条件的路线 (b) 与延续条件是同一预设的窄、宽两种范围；二者之间只差不变的一步。",
+        "en": "Route (b), without the continuation condition, and the condition are one presupposition at narrow and wide scope; they differ only by the step of invariance."
       }
     },
     {
       "id": "feeding-closure",
       "detail": {
-        "zh": "路线 (b) 不用公理到达延续所依存的供给闭包。",
-        "en": "Route (b) reaches, with no axiom, the feeding closure a continuation depends on."
+        "zh": "路线 (b) 不用延续条件到达延续所依存的供给闭包。",
+        "en": "Route (b) reaches, without the continuation condition, the feeding closure a continuation depends on."
       }
     }
   ],
@@ -564,7 +564,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.bounded",
         "Becoming.Web.Retains",
@@ -905,6 +905,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -980,7 +986,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1110,6 +1116,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 5 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Becoming.inventory_g0_of_unrestricted (retired module); Becoming.relevance_inventory_iff (retired module); Becoming.new_realization_of_unrestricted (retired module); Becoming.contingent_generation_of_unrestricted (retired module); Becoming.every_situated_position_has_reason_of_unrestricted (retired module). The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；5 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Becoming.inventory_g0_of_unrestricted (retired module)；Becoming.relevance_inventory_iff (retired module)；Becoming.new_realization_of_unrestricted (retired module)；Becoming.contingent_generation_of_unrestricted (retired module)；Becoming.every_situated_position_has_reason_of_unrestricted (retired module)。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: the first hypothesis now names the continuation condition, stated and not asserted, its reading an AI reading (D16), with no person as its standing; the fold hypothesis restated in current terms and the audit hypothesis naming living significance; 'the axiom' in the dependency details and interfaces, related details and validation scope reads 'the continuation condition'; the correspondence keeps Ren's quoted words, calls his sentence the condition's source and labels its readings as AI readings (D16) instead of 'adopted on Ren's delegation', and a dependency interface labels its reading likewise (D11). No law changed. The labels G0, S0 and N_std left in the dependency details and interfaces and in two related details now read living significance, self-significance and standpoint neutrality, the periphery's G0 kept as its Lean name and the core's G0 in a list of reused declarations given its current name, LivingSignificance; the old reading of section 6.2 that took standpoint neutrality as 'the axiom' takes it as the premise.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：第一条假设改称延续条件，陈述而不断言，其读法是 AI 的读法（D16），不以任何人为其地位；折叠一条按现行术语重述，审计一条改称生生之意义；依赖说明与接口、相关说明与验证范围中的“公理”改为“延续条件”；对应保留 Ren 的原话，称其句为条件的来源，把其中的读法标为 AI 的读法（D16），不再写“依 Ren 的交托采用”，一个依赖接口的读法同样标注（D11）。规律未变。依赖说明与接口及两条关联说明中余下的标签 G0、S0、N_std 改为生生之意义、自身意义、立场中立，外围的 G0 作为其 Lean 名保留，复用声明列表中核心的 G0 改用现名 LivingSignificance；§6.2 旧读法中立场中立“为公理”改为“为前提”。"
     }
   ],
   "text_versions": [

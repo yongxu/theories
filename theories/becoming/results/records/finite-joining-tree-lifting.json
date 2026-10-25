@@ -8,23 +8,19 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F22",
-  "reviewed_at_utc": "2026-10-08T13:52:31.763955+00:00",
+  "reviewed_at_utc": "2026-10-25T14:32:06+00:00",
+  "statement": {
+    "en": "A description lifts a joining exactly where having one code is a bisimulation of its frame, with no premise, and then every finite joining tree lifts with its own leaves; with excluded middle as a hypothesis, a code reading the branching tests exactly and reducedly lifts one with listed outcomes.",
+    "zh": "一个描述提升一个接合，恰当具有同一编码是该接合之框的互模拟，不加前提；凡它提升之处，每个有限接合树以其自身的叶提升。以排中律为假设，精确且约化地读出分支检验的编码，提升每对都接合为列出片段的接合。"
+  },
   "claim": {
-    "zh": "编码后的任意有限二叉接合树得到代码 c，当且仅当原来指定叶子的同一树可在 J 中实现并得到编码为 c 的结果。",
-    "en": "An encoded finite binary joining tree realizes code c exactly when the same tree with its originally specified leaves has a J realization whose result encodes to c."
+    "zh": "经描述读出，凡有具这些编码的片段接合为具该编码者，诸编码即接合。描述提升接合（两片段之编码的每个接合都来自片段自身的接合），恰当具同一编码是接合之框的互模拟；不加前提。凡它提升之处，编码之接合恰是具这些编码的任何片段之接合的编码，且每个有限二叉接合树皆提升：叶经描述读出的树接合为一个编码，恰当以自身之叶的树接合为具该编码的片段；叶始终是所给的片段。编码即通过相同分支检验时，描述提升接合，恰当通过相同分支检验是其框的互模拟；以排中律为假设，凡每对都接合为列出的片段，精确且约化地读出分支检验的呈现提升该接合。",
+    "en": "Read through a description, codes join where fragments with those codes join into one with that code. The description lifts the joining, every joining of the codes of two fragments coming from a joining of the fragments themselves, exactly where having one code is a bisimulation of the joining's frame; no premise. Where it lifts, a joining of codes is exactly the code of a joining of any fragments having them, and every finite binary tree of joinings lifts: the tree with its leaves read through the description joins into a code exactly where the tree with its own leaves joins into a fragment with that code; the leaves stay the given fragments. Where codes are passing the same branching tests, the description lifts the joining exactly where passing the same branching tests is a bisimulation of its frame; with excluded middle as a hypothesis, where each pair joins into listed fragments, a presentation reading the branching tests exactly and reducedly lifts the joining."
   },
   "hypotheses": [
     {
-      "zh": "同一部分接合 J；每对输入具有有限结果集合。",
-      "en": "One partial joining relation J; each input pair has a finite outcome set."
-    },
-    {
-      "zh": "目标含全部有限否定、合取、左右接合后继问题，无独立原子谓词。",
-      "en": "The target contains all finite negation, conjunction and left/right joining-successor questions, with no independent atomic predicates."
-    },
-    {
-      "zh": "Exact 给出完整精确答案；Reduced 仅用于最小代码与输出代码的提升。",
-      "en": "Exact supplies complete truthful answers; Reduced is used for minimal codes and lifting output codes."
+      "zh": "lifts_iff 与 tree_lifts 不加前提。FiniteOutcomes.lifts_of_exact 以排中律为具名假设（不是公理），每对接合为列出的片段（FiniteOutcomes），以及接合之框的分支检验（否定、合取、左右接合之动，无原子主张）的一个 Exact 且 Reduced 的呈现。",
+      "en": "No premise for lifts_iff and tree_lifts. FiniteOutcomes.lifts_of_exact takes excluded middle as a named hypothesis (not an axiom), each pair joining into listed fragments (FiniteOutcomes), and a presentation of the branching tests of the joining's frame (negation, conjunction and the left and right joining moves, no atomic claims) that is Exact and Reduced."
     }
   ],
   "correspondence": {
@@ -33,9 +29,9 @@
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean",
   "aliases": [
-    "Generative.ExplanatoryJoiningBranches.tree_lifts (retired module)",
-    "Becoming.Joining.tree_lifts_of_em (retired module)",
-    "Becoming.Joining.tree_lifts"
+    "Becoming.Joining.lifts_iff",
+    "Becoming.Joining.tree_lifts",
+    "Becoming.Joining.FiniteOutcomes.lifts_of_exact"
   ],
   "dependencies": [
     {
@@ -51,8 +47,8 @@
           "en": "Every code outcome is realizable by the specified input pair."
         },
         "input": {
-          "zh": "tree_lifts 在每个内部节点消费 operation_lifts；叶子固定。",
-          "en": "tree_lifts consumes operation_lifts at every internal node, keeping leaves fixed."
+          "zh": "tree_lifts 在每个内部节点消费接合之提升；叶子固定。",
+          "en": "tree_lifts consumes the joining's lifting at every internal node, keeping leaves fixed."
         },
         "conditions": {
           "zh": "同一 J、编码、有限纤维、Exact、Reduced 完整保留。",
@@ -150,8 +146,17 @@
       "role": "proof",
       "sha256": "21ba2468426712d6c8410ad2d7960675a6e561cfa07d43ab6782cf9ffc2b10a6",
       "declarations": [
+        "Becoming.Joining.image",
+        "Becoming.Joining.Lifts",
         "Becoming.Joining.lifts_iff",
-        "Becoming.Joining.tree_lifts"
+        "Becoming.Joining.image_iff",
+        "Becoming.Joining.lifts_of_identifiesAlike",
+        "Becoming.Joining.Tree",
+        "Becoming.Joining.Tree.map",
+        "Becoming.Joining.Tree.Realizes",
+        "Becoming.Joining.tree_lifts",
+        "Becoming.Joining.lifts_iff_sameBranchingTests",
+        "Becoming.Joining.FiniteOutcomes"
       ]
     },
     {
@@ -254,6 +259,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryJoiningBranches and JoiningBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Joining and Becoming.JoiningCodes). The retired modules' content is also stated in Becoming.BranchingCorrespondence, Becoming.Likeness and Becoming.Presentations, which this record does not cite with declarations. 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryJoiningBranches and JoiningBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Joining and Becoming.JoiningCodes）。退役模块的内容也陈述于 Becoming.BranchingCorrespondence, Becoming.Likeness and Becoming.Presentations，本记录未以声明引用它们。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws: a description lifts a joining exactly where having one code is a bisimulation of its frame, with no premise, and every finite tree then lifts; with excluded middle as a named hypothesis, an exact reduced presentation of the branching tests lifts a joining with listed outcomes. The premises restated accordingly (they named the periphery target of finite negation, conjunction and joining-successor questions; earlier: One partial joining relation J; each input pair has a finite outcome set. | The target contains all finite negation, conjunction and left/right joining-successor questions, with no independent atomic predicates. | Exact supplies complete truthful answers; Reduced is used for minimal codes and lifting output codes.). Aliases now the core names; the earlier ones Generative.ExplanatoryJoiningBranches.tree_lifts (retired module) and Becoming.Joining.tree_lifts_of_em (retired module) are recorded here (their declarations stay in the provenance references); the retired operation_lifts no longer named in the dependency interface.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，主张依核心定律重述：描述提升接合恰当具同一编码是其框的互模拟，不加前提，此时每个有限树皆提升；以排中律为具名假设，分支检验的精确约化呈现提升有列出结果的接合。前提随之重述（原列外围之目标：有限否定、合取与接合后继问题）。别名改为核心之名；原别名 Generative.ExplanatoryJoiningBranches.tree_lifts (retired module) 与 Becoming.Joining.tree_lifts_of_em (retired module) 记于此（其声明仍在来历引用中）；依存接口不再称已退休的 operation_lifts。"
     }
   ]
 }

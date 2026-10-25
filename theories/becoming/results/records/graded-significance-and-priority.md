@@ -13,7 +13,7 @@
 1. A graded significance gives each listed item a natural grade from each standpoint; its standing is whether the grade is positive. Invariant grades give invariant standing and rank alike from every standpoint. (`Becoming.Weighting.GradeInvariant`, `Becoming.Weighting.StandingInvariant`, `Becoming.Weighting.standingInvariant_of_gradeInvariant`, `Becoming.Weighting.weighed_eq_of_gradeInvariant`, `Becoming.Weighting.ranks_alike_of_gradeInvariant`)
 2. Witness: two standpoints grading their own formation two and the other one. Standing is invariant, grades are not, and the two standpoints rank a mixed comparison opposite ways. (`Becoming.Partial.grade`, `Becoming.Partial.standing`, `Becoming.Partial.not_gradeInvariant`, `Becoming.Partial.ranks_differ`)
 3. A formation's level in a course is how many of its listed items the course admits. Inclusion never lowers a level, and a sum of a strictly increasing transform of the listed formations' levels ranks every widening higher where every item belongs to a listed formation. (`Becoming.Weighting.level`, `Becoming.Weighting.level_le_of_includes`, `Becoming.Weighting.level_lt_of_includes_at`, `Becoming.Weighting.prior`, `Becoming.Weighting.prior_lt_of_widens`)
-4. A transform strictly concave up to a bound ranks higher a course that moves one step of continuation from a formation at a higher level to one at a lower, every other level the same; no whole-number transform is strictly concave everywhere. (`Becoming.Weighting.ConcaveTo`, `Becoming.Weighting.concave_gap`, `Becoming.Weighting.prior_transfer`)
+4. A transform strictly concave up to a bound ranks higher a course that moves one step of continuation from a formation to one at least two levels below it, the higher level within the bound and every other level the same; no whole-number transform is strictly concave everywhere. (`Becoming.Weighting.ConcaveTo`, `Becoming.Weighting.concave_gap`, `Becoming.Weighting.prior_transfer`)
 5. A transform that rises no further from a threshold weighs alike two courses whose levels differ only at or above it. (`Becoming.Weighting.SufficientAt`, `Becoming.Weighting.sufficient_ties`)
 6. Witness: two formations over three steps, continuing two and two in one course and three and one in the other. The comparison is mixed; a concave transform ranks the even course higher, through the general law as well; the sum of levels ties them; a convex transform ranks the uneven course higher. (`Becoming.LevelTransfer.mixed`, `Becoming.LevelTransfer.concave_to`, `Becoming.LevelTransfer.by_law`, `Becoming.LevelTransfer.decided`)
 
@@ -89,15 +89,17 @@ Standing and status are Kagan's and Sebo's distinction (How to Count Animals, mo
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
-Aliases: `graded significance and priority`, `分级的意义与优先`, `standing and status`, `prioritarianism on levels`, `sufficiency as a scope denial`, `Becoming.Weighting.prior_transfer`, `Becoming.Weighting.prior_lt_of_widens`, `Becoming.Weighting.ranks_alike_of_gradeInvariant`
+Aliases: `graded significance and priority`, `分级的意义与优先`, `standing and status`, `prioritarianism on levels`, `sufficiency read as a scope denial`, `Becoming.Weighting.prior_transfer`, `Becoming.Weighting.prior_lt_of_widens`, `Becoming.Weighting.ranks_alike_of_gradeInvariant`
 
 <a id="history--沿革"></a>
 ### History
 
 - 20 October 2026: added (IV2), graded significance, standing against status, and priority and sufficiency on levels of continuation, after a literature check (significance review, section "the de se question and graded significance"); readings D60; study section 260.
 - 22 October 2026, VT1: Becoming.Weightings grew (net weightings, rankings of presentations, weights within a ratio); the five declarations that went (outweighing and its four lemmas) leave the reference list; this record's laws are unchanged; study section 367.
+- 25 October 2026, board item DF (study section 418): the law on transfers names the gap of at least two levels and the bound on the higher level that it takes; the alias on sufficiency says it is a reading; the declarations are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-22T14:40:29+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

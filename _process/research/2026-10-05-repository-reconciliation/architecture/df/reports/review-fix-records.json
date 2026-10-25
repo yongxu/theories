@@ -1,0 +1,608 @@
+[
+ {
+  "group": 0,
+  "done": null,
+  "findings": [
+   {
+    "target": "renewing-consuming-formation (statement.en, statement.zh; also the parenthesis in its DF history note)",
+    "quote": "Where the renewal rate holds under pressure within it and only falls under excess, formation within it forms each step, keeping its capacity; formation persistently beyond the current rate, with all sharing its conditions, forms a bounded total and ends by a fixed time. / 更新率在压力不超过它时保持、只在压力超过时下降，则……总量有界并至一定时刻止息。",
+    "problem": "The statement writes out the wear law's premise but leaves out its strict-wear clause. 'Only falls under excess' (只在压力超过时下降) says the rate falls only when pressure exceeds it, never that it does fall then. The bounded total and the ceasing need WearLaw.wear: under excess, a positive rate strictly drops. A rate that never moves meets the condition as written, and under it formation beyond the rate is unbounded. So the statement drops a hypothesis its conclusion needs. The editor's report says the lead was meant to name the strict wear, but it does not.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean:58-62 (WearLaw: keep, wear `r < d → 0 < r → degrade r d < r`, bounded); :206 (beyond_current_invariant uses law.wear); :237 beyond_current_bounded, :257 beyond_current_ceases; theories/becoming/results/records/renewing-consuming-formation.json:13-14; hypotheses[0] of the same record states the strict lowering.",
+    "fix": "statement.en → \"Where the renewal rate holds under pressure within it, falls (if positive) under any excess and never rises, formation within it forms each step, keeping its capacity; formation persistently beyond the current rate, with all sharing its conditions, forms a bounded total and ends by a fixed time.\" (296 chars). statement.zh → \"更新率在压力不超过它时保持、在压力超过时（若为正）下降、从不上升，则在其内的形成每一步都有所形成并保持容量；持续超出当前更新率的形成，连同共享其条件者，总量有界并至一定时刻止息。\" (89 chars). In the DF note, en: replace 'and only falls under excess' with ', falls (if positive) under any excess and never rises'. zh: replace '只在压力超过时下降' with '在压力超过时（若为正）下降、从不上升'.",
+    "severity": "error"
+   },
+   {
+    "target": "only-the-order-of-change-shows (statement.en, statement.zh)",
+    "quote": "With relata compared decidedly and listed once at each step, inserting idle steps, or removing them given the moving steps, leaves the premises, totals and counts over a stretch (counts with activity decided) and recurrence unchanged",
+    "problem": "The opening conditions are scoped over removal too, but the removal theorems need neither decided equality of relata nor listing once. The record's own hypotheses[1] says so ('the withoutIdle removal totals require no such condition'). The sentence also says removal keeps recurrence unchanged, but IdleRemoval proves only premises, transmission, census, totals and counts; no recurrence theorem exists for removal.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdleRemoval.lean:114-116 (section variables: stutter, moves, idle only; no DecidableEq, no Once), :132-136 (withoutIdle_premises: 'no condition on listing is needed'), theorems at :120-247 (none on recurrence); Stuttering.lean:666-672 (stutter_premises_iff takes [DecidableEq w.Relatum] and once); theories/becoming/results/records/only-the-order-of-change-shows.json:14.",
+    "fix": "statement.en → \"With relata compared decidedly and listed once at each step, inserting idle steps keeps the premises, totals and counts over a stretch (counts, activity decided) and recurrence; removing them, the moving steps given, keeps premises, totals and counts with no listing needed; rates depend on the unit.\" (300 chars). statement.zh → \"关系项之相等可判定、每一步每个关系项各列一次时，插入空步不改变前提、段上的总量与计数（计数需活动已判定）以及复现；在移动之步给定时移除空步，不需列出之条件即保持前提、总量与计数；速率与储备承载多久相对于读法的单位。\" (107 chars).",
+    "severity": "imprecise"
+   },
+   {
+    "target": "learning-through-a-map-is-tracking-in-the-limit (statement.en, statement.zh)",
+    "quote": "In a world a list holds, map values decided, a feature the law keeps is learnable exactly where a guess fixed through the map identifies its start in the limit; where the law changes it, they can part.",
+    "problem": "The opening 'In a world a list holds' now reads as covering the closing clause too. That makes it claim learnability and identification can part in a listed world. The only witness, Merge, has configurations Nat, which no list holds, and Lean shows parting nowhere else. The zh has the same scope ('在被列表所持的世界中…；律改变特征时，二者可以分开').",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnableRuns.lean:292 (learnable_iff_identifies takes `world : ∀ s, s ∈ l`), :317 (Merge.next : Nat → Nat), :350 (Merge.learnable_not_identifies, no list); theories/becoming/results/records/learning-through-a-map-is-tracking-in-the-limit.json:13.",
+    "fix": "statement.en → \"An extrapolation predicts a feature on every run exactly where its guess tracks it in the limit. A feature the law keeps is learnable, in a world a list holds, map values decided, exactly where a guess fixed through the map identifies its start in the limit; where the law changes it, they can part.\" (299 chars). statement.zh → \"外推沿每个运行预测一个特征，恰当它的猜测在极限中跟随该特征。律所保持的特征，在被列表所持、映射之值可判定的世界中可学，恰当某个经映射所定的猜测在极限中辨识其起始之值；律改变特征时，二者可以分开。\"",
+    "severity": "imprecise"
+   },
+   {
+    "target": "mutation-and-the-balance-it-sets (statement.en, statement.zh)",
+    "quote": "A run at or below it stays there, its share never falling, one above stays above / 在其上者留在其上",
+    "problem": "Lean proves only that a run started at or above the balance stays at or above it. It does not prove that a run strictly above stays strictly above. The new statement copies this overclaim from the unchanged law at :36.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean:791 (above_stays: d*k ≤ c*m + d*w → … ≤), :817 (above_always: 'Started at or above the balance, every generation is at or above it'); theories/becoming/results/records/mutation-and-the-balance-it-sets.json:13, :36.",
+    "fix": "statement.en: replace 'one above stays above' with 'one at or above stays so' (the statement then has 300 chars). statement.zh: replace '在其上者留在其上' with '在其处或其上者留在其处或其上'. The same change is due in the law at :36 (en 'and one above stays above' → 'and one at or above stays at or above'; zh '在其上者保持在其上' → '在其处或其上开始者保持在其处或其上').",
+    "severity": "imprecise"
+   },
+   {
+    "target": "organizational-formation-from-generative-comparison (laws[2].en, laws[2].zh)",
+    "quote": "In the periphery Lean's classical excluded middle supplies both decisions, so on any exactly listed nonempty range the required organization holds with no decision hypothesis, and in the constructed history coordination is required; these report propext, Classical.choice and Quot.sound.",
+    "problem": "Read on its own, the law says the requirement holds on any listed nonempty range with no premise at all. formation_required_by_core still takes irreflexivity, transitivity and the improvement witnesses; only the decisions are dropped. Also, 'these report' sits beside a declaration list that includes OrganizationCorrespondence.frontier_iff_undominated, whose axiom report is empty.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean:41-49 (irreflexive, transitive, construction hypotheses); organization-correspondence-checks/20261020T162002.464258Z/verification.json modules[0].axiom_dependencies (frontier_iff_undominated: [], the other two: propext, Classical.choice, Quot.sound); theories/becoming/results/records/organizational-formation-from-generative-comparison.json:39.",
+    "fix": "laws[2].en → \"In the periphery Lean's classical excluded middle supplies both decisions, so on any exactly listed nonempty range, under the other premises above, the required organization holds with no decision hypothesis, and in the constructed history coordination is required; these two report propext, Classical.choice and Quot.sound.\" laws[2].zh → \"外围以 Lean 之经典排中律供给两项判定，故在任何确切列出的非空范围上，在上述其余前提下，所要求之组织不需判定之假设而成立，在所构造的历史中协调被要求；这两条报告 propext、Classical.choice 与 Quot.sound。\"",
+    "severity": "imprecise"
+   },
+   {
+    "target": "laws-of-one-step (hypotheses[2].en, hypotheses[2].zh; the same phrase in its DF history note)",
+    "quote": "(the sign term: a formation that takes loses at least one unit) / （sign 项：从家族取用的形成至少失去一个单位）",
+    "problem": "In DissipatesOn, a formation taking part gives the family at least one unit less than it takes from it. So the family loses the unit, not the formation, which gains net. The wording, especially the zh ('the taking formation loses at least one unit'), names the wrong side.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean:238-242 (DissipatesOn: total cs (give) + sign (total cs (take)) ≤ total cs (take)); theories/becoming/results/records/laws-of-one-step.json:158.",
+    "fix": "hypotheses[2].en: replace '(the sign term: a formation that takes loses at least one unit)' with '(the sign term: a formation that takes gives back less)' (the field becomes 410 chars). hypotheses[2].zh: replace '（sign 项：从家族取用的形成至少失去一个单位）' with '（sign 项：从家族取用的形成归还给家族的少于所取）'. In the DF note: en '(a formation that takes from the family loses at least one unit)' → '(a formation that takes from the family gives back less than it takes)'; zh '（从家族取用的形成至少失去一个单位）' → '（从家族取用的形成归还给家族的少于所取）'.",
+    "severity": "imprecise"
+   },
+   {
+    "target": "gluing-under-parity (statement.en, statement.zh)",
+    "quote": "where m contexts contradict, mixtures meet at most m − 1 on average, readings in context, each within its own, all m. / m 个语境矛盾时，混合平均至多满足其中 m − 1 个",
+    "problem": "The bound holds only for mixtures of context-free assignments; a mixture of in-context readings meets all m. The rewrite dropped 'of context-free readings', so the qualifier is gone from both languages. 'Each within its own' does not say within its own what: the assignment lies within that context's possibilities.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gluing.lean:416-424 (mixture_le over a list of context-free assignments `mix : List (C → Bool)`), :427-431 (indexed_met: `each : ∀ k ∈ ks, S.support k (choose k)`); theories/becoming/results/records/gluing-under-parity.json:14; 03-KNOWING.md:217.",
+    "fix": "statement.en → \"Where each context requires a parity, claims listed once and compared decidedly and contexts listed, a context-free reading exists exactly where no selection of contexts contradicts; where m do, context-free mixtures meet at most m − 1 on average, readings within each context's possibilities all m.\" (299 chars). statement.zh: replace '混合平均至多满足其中 m − 1 个' with '不依语境之读法的混合平均至多满足其中 m − 1 个' (118 chars).",
+    "severity": "imprecise"
+   },
+   {
+    "target": "continued-change-needs-openness (related[3].detail, the added link to rest-theorem-in-any-amounts)",
+    "quote": "Over any amounts, rest is unrefuted where the total is read off configurations a list holds; it fails only along a reading no list holds (rest-from-a-finite-reading).",
+    "problem": "This drops the rest theorem's premises. In amounts, rest is unrefuted only with a census of the active relata, embodiment, balance, dissipation and enclosure from T on, as well as the listed reading. The new does_not_show[4] in the same record states it correctly ('the rest theorem's premises give it unrefuted').",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean:890-893 (rests_unrefuted_enclosed: census, embodied, balanced, dissipative, enclosed, held, reads); theories/becoming/results/records/rest-theorem-in-any-amounts.json law 3; theories/becoming/results/records/continued-change-needs-openness.json:579-583.",
+    "fix": "related[3].detail.en → \"Over any amounts, under the rest theorem's premises, rest is unrefuted where the total is read off configurations a list holds; it fails only along a reading no list holds (rest-from-a-finite-reading).\" related[3].detail.zh → \"在任何量上，在停息定理的前提下，凡总量读自列表所容纳的构形，停息不被否定；停息只沿无列表能容纳的读法不成立（rest-from-a-finite-reading）。\"",
+    "severity": "imprecise"
+   },
+   {
+    "target": "organizational-formation-from-generative-comparison (laws[0].declarations)",
+    "quote": "\"Becoming.exists_undominated\"",
+    "problem": "The brief's rule asks that every declaration of a law be in the record's aliases. Becoming.exists_undominated cannot be, because its alias belongs to practical-judgment-under-living-significance and aliases must be unique; the editor recorded this. The law's non-emptiness is already carried by Becoming.Requirement.frontier_exists, which is listed and aliased, so this entry is redundant.",
+    "evidence": "theories/becoming/results/records/organizational-formation-from-generative-comparison.json:24 (laws[0].declarations) vs aliases; theories/becoming/results/records/practical-judgment-under-living-significance.json:35 (alias); experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean:95-104 (frontier_exists uses exists_undominated).",
+    "fix": "Remove \"Becoming.exists_undominated\" from laws[0].declarations; keep it in the Decidedness.lean reference entry.",
+    "severity": "style"
+   }
+  ],
+  "fixed": {
+   "applied": [
+    "renewing-consuming-formation (statement, DF note): applied, with a different wording. The finding holds: the statement left out the wear law's strict-wear clause, and RenewingFormation.lean beyond_current_invariant/bounded/ceases need WearLaw.wear (a positive rate drops strictly under excess). The reviewer's wording ('... and never rises') sets off the negation-lead lint warning, so I wrote it as a positive with the same content. en: 'Where the renewal rate only holds or falls, holding under pressure within it and falling (if positive) past it, formation within it forms each step, keeping its capacity; ...' (299 chars). zh: '更新率只保持或下降，在压力不超过它时保持、在压力超过时（若为正）下降，则...' (91 chars). 'Only holds or falls' is the bounded clause, 'falling (if positive) past it' is wear, 'holding ... within it' is keep. I changed the parenthesis in the DF note the same way.",
+    "only-the-order-of-change-shows (statement, DF note): applied, restructured. In IdleRemoval.lean the Removal section takes only stutter, moves and idle: no DecidableEq and no Once. No withoutIdle theorem covers recurrence. In Stuttering.lean, World.stutter_premises_iff takes DecidableEq and once. en is now: 'Inserting idle steps, relata compared decidedly and listed once at each step, keeps premises, recurrence, totals and counts over a stretch; removing them, moving steps given, keeps premises, totals and counts with neither; counts of arising or ceasing take activity decided; rates depend on the unit.' (300). The zh matches (112). This form puts the condition on deciding activity on both insertion and removal, because withoutIdle_counts also takes it. The reviewer's fix wrongly let the opening conditions cover removal. The DF note now says removal takes neither condition and that the statement no longer claims removal keeps recurrence.",
+    "learning-through-a-map-is-tracking-in-the-limit (statement): applied the reviewer's fix. The listed-world scope now covers only the clause where the law keeps the feature: learnable_iff_identifies takes `world : ∀ s, s ∈ l`, and the only witness of parting, Merge, is on Nat. I put the zh scope phrase in a slightly better place: '在被列表所持的世界中、映射之值可判定时可学'. The DF note still describes the change correctly, so it stays as it is.",
+    "mutation-and-the-balance-it-sets (statement, laws[2], DF note): applied. Reproduction.lean above_stays and above_always prove only 'at or above stays at or above'. Statement en: 'one at or above stays so' (300 chars). zh: '在其处或其上者留在其处或其上'. laws[2] en: 'and one at or above stays at or above'. laws[2] zh: '在其处或其上开始者保持在其处或其上'. I amended the DF note: it said 'the laws are unchanged', and it now records the correction to the balance law.",
+    "organizational-formation-from-generative-comparison laws[2]: applied, with a better fix. The law now names the premises that formation_required_by_core still takes: an irreflexive, transitive comparison and every eligible continuation lacking the relation bettered. It says that only the two by_core theorems report axioms, and that frontier_iff_undominated reports none (receipt 20261020T162002.464258Z). I also replaced the Lean axiom names (propext, Classical.choice, Quot.sound) with \"Lean's three standard axioms, choice among them\", because Lean names do not belong in public fields. en 416 chars, zh 135.",
+    "organizational-formation-from-generative-comparison laws[0].declarations: applied. I removed Becoming.exists_undominated. It cannot be an alias here, since practical-judgment-under-living-significance holds that alias, and Becoming.Requirement.frontier_exists already carries the non-emptiness. The Decidedness.lean reference entry keeps it. The DF note's description ('three laws added') still holds, so it is unchanged.",
+    "laws-of-one-step hypotheses[2] and DF note: applied. DissipatesOn is `total cs (give) + sign (total cs (take)) ≤ total cs (take)`: the family loses the unit, not the formation. en: '(the sign term: a formation that takes gives back less)' (field 411 chars). A longer 'than it takes' would go past the 420 limit. zh: '（sign 项：从家族取用的形成归还给家族的少于所取）'. DF note en: '(a formation that takes from the family gives back less than it takes)', with the zh to match.",
+    "gluing-under-parity (statement): applied. mixture_le is over context-free assignments only, and indexed_met takes one assignment per context, each within that context's possibilities. en: '... where m do, context-free mixtures meet at most m − 1 on average, a reading per context within its possibilities all m.' (298 chars). I did not use the reviewer's 'readings within each context's possibilities': it could be read as one global reading. In zh I put back '不依语境之读法的混合' (118 chars). The DF note still holds, so it is unchanged.",
+    "continued-change-needs-openness related[3].detail: applied the reviewer's fix (en and zh). It adds 'under the rest theorem's premises', since InAmounts.rests_unrefuted_enclosed takes census, embodied, balanced, dissipative and enclosed besides held and reads. The DF note already says only that the record is linked, so it is unchanged."
+   ],
+   "rejected": [],
+   "checker": "Last run, `research.py check --ids` on the 8 changed records (renewing-consuming-formation, only-the-order-of-change-shows, learning-through-a-map-is-tracking-in-the-limit, mutation-and-the-balance-it-sets, organizational-formation-from-generative-comparison, laws-of-one-step, gluing-under-parity, continued-change-needs-openness): exit 1. All 10 errors are 'generated view differs' (README, RESULTS, GOALS, theory-graph.json/.md and five record .md views), which the brief says to ignore. The source drift on these records is only in files I did not touch: Space.lean, DELEGATED-CHOICES.md, and OrganizationCorrespondence.lean, where only the docstring changed. Every record file still serializes as json.dumps(indent=2, ensure_ascii=False) plus a newline, and each keeps exactly one DF history note. `research.py lint --ids` on the same 8: exit 0, 'errors': []. The remaining warnings are older length and section-marker warnings in fields I did not edit (claim, validation_scope, correspondence, progress, limitations/next_delta §6). Rephrasing the renewing-consuming-formation statement removed the negation-lead warning a 'never rises' wording would have raised."
+  }
+ },
+ {
+  "group": 1,
+  "done": {
+   "changed": [
+    {
+     "target": "acquired-revision-of-pending-task",
+     "change": "Row 24 was already applied: 'G0/J' in hypotheses[1] and in dependencies[1].interface.conditions now reads 'living significance and the practical commitments' (en and zh). One DF note. No change this pass."
+    },
+    {
+     "target": "becoming-context-coherence",
+     "change": "Row 0 was already applied (schema 1, so there are no laws): a statement was added and the claim restated on the core laws of ContextArrivalTraces (pooledLaw_exact_iff_joinClosed with a seed, retainedLaw_realizes_inOne, erasedLaw_exact_iff_lifts, arrives_snoc and the witnesses). The aliases are now core names and the Generative.BecomingCompatibility.* and Bridge names were dropped. The counterexample was re-pointed to ContextArrivalTraces.lean and the reference declarations were completed. The GenerativeCore binding moved to core receipt 20261019T213206. The validation scope says the ending is in the core (Becoming.ChangingContext.ends in Context.lean, which the record cites), so the row's line 'not restated in the core' would have been wrong. This pass: removed the Lean module name '(Becoming.Context)' from counterexamples[0].detail (en and zh), because that is a public field."
+    },
+    {
+     "target": "becoming-spine-instances",
+     "change": "Row 35 was already applied. The validation scope (en and zh) now says Bridge has been in lean/history/becoming/ since 19 October 2026, was last checked at 20261018T235724.886433Z, and that current runs check the core restatements; the sentence saying the record binds Bridge was dropped, and one-axiom-yields-g0 is now continuation-condition-yields-living-significance. Aliases were re-pointed: Frame.map_preserves, Frame.lift_reflects, Alternatives.articulation_iff_lifted, Narrowing.after_observe_iff, Narrowing.revise_is_after. The 12 bridge-only aliases are marked '(retired module)'. 'the axiom' in related[7] now reads 'the continuation condition'. No change this pass."
+    },
+    {
+     "target": "closure-verdict-meets-continuation-condition",
+     "change": "Rows 4 and 5 were already applied: hypotheses[0] is the continuation-condition text ('a hypothesis of the comparison theorems', D16). 'The axiom' became 'the continuation condition' in the dependency interfaces, related details and validation scope. The correspondence readings now say 'AI reading' instead of 'adopted on Ren's delegation', with quotes kept verbatim. No change this pass."
+    },
+    {
+     "target": "code-plan-global-support",
+     "change": "Row 15 (this record's part) was already applied. The statement was added (JointPlan.supports_of_image), and the claim was restated so that only matching through the description, PartsWithin, PartsApart and correct leaves are required; for codes, compact joints, stable tests and an exact reduced presentation (JointPlan.supports_of_code). The hypothesis lists exactly those premises. The retired bridge alias was replaced by Becoming.JointPlan.supports_of_code. Checked against Composition.lean:706 and JointCorrespondence.lean:178. No change this pass."
+    },
+    {
+     "target": "comparison-where-the-rest-responds",
+     "change": "Row 5 was already applied: 'the axiom' became 'the continuation condition' in hypotheses[8] and dependencies[1].interface.output, and the delegation label in the correspondence became an AI label. No change this pass."
+    },
+    {
+     "target": "comparison-within-reach",
+     "change": "Rows 4 and 5 were already applied. hypotheses[2] uses the row's text (the general theorems do not use the continuation condition; Unrestricted appears only in three witnesses; D16). 'With no axiom' in laws[3] became 'Without the continuation condition'. The interfaces, related details and validation scope were also changed, and the delegation labels became AI labels. No change this pass."
+    },
+    {
+     "target": "continuation-condition-decomposition",
+     "change": "Row 5 was already applied: 'the axiom' became 'the continuation condition' in the dependency interfaces, related[0] and correspondence, and the delegation labels became AI labels. No change this pass."
+    },
+    {
+     "target": "continuation-condition-yields-living-significance",
+     "change": "Rows 4 and 5 were already applied. hypotheses[0] is the continuation-condition text (D16). hypotheses[4] now reads 'every occurrence of living significance (G0 in the periphery)'. hypotheses[5] is the row's text. 'the axiom' became 'the continuation condition' in every dependency interface, related detail and the validation scope (en). The correspondence names the condition's source as Ren's sentence and labels the readings as AI readings (D16, D11). No change this pass."
+    },
+    {
+     "target": "continuation-relative-to-a-class",
+     "change": "Row 20 was already applied. 'the old base' became 'the World model' in the statement, laws[12], laws[13] and does_not_show[4]. The merge in laws[8] and does_not_show[1] now says each condition is alike to the occurrence, not to each other, which matches «蜡烛之合». This pass: the same 'old base' wording was left in related[0].detail (en and zh), so I replaced it with 'World model', and the DF note now also mentions the related detail."
+    },
+    {
+     "target": "continuing-self-fed-from-beyond",
+     "change": "Row 16 was already applied, partly. hypotheses[0] no longer says the conclusion fails with real-valued amounts. It now says the argument does not apply where losses can shrink geometrically, with Halving.never_rests (LeastLoss.lean) as the witness. The correspondence label 'author's' became AI. No change this pass."
+    },
+    {
+     "target": "derived-history-law-exactness",
+     "change": "Row 1 was already applied (schema 1). The statement was added and the claim restated on Readout.futures_through_iff, with HistoryLanguages.law/trace_iff and the admitted-history instance described as not a single core declaration. A SummaryFutures.endpoint_moved counterexample was added and the merge witness is labelled periphery. The hypotheses were generalised, the HistoryLanguages reference and binding (receipt 20261025T080929) were added, and the Bridge alias was replaced by core names. This pass: the row says to replace both retired aliases, so I dropped the leftover alias 'Generative.DerivedHistoryLaw.exact_iff_fiber_future (retired module)'. The periphery file stays a provenance reference, and the DF note says so."
+    },
+    {
+     "target": "endpoint-loss-and-return",
+     "change": "Row 17 was already applied. The statement was added and the claim restated on keeps_reach_iff_returns, same_reach_iff_returns, not_returns_iff_loses and the Irreversibility witnesses. The counterexample was re-pointed to Irreversibility.lean. The two '(retired module)' aliases were replaced by core names; the BecomingReversibility periphery aliases were kept because they are not retired. DeadEnd.law and Irreversibility.flip were added to the references. No change this pass."
+    },
+    {
+     "target": "finite-continuation-plans",
+     "change": "Row 26 was already applied. The claim now separates the Fin k case (no premise, keptFor_iff_plan), choice over observations (keptFor_iff_plan_of_choice) and plans_iff_choice. It says the periphery's form takes classical choice, which is verified: viable_iff_plan reports Classical.choice and propext. hypotheses[0] is the row's text. No change this pass."
+    },
+    {
+     "target": "finite-trace-transport",
+     "change": "Row 3 was already applied (schema 1). The statement was added, and the claim covers trace_map and the converse with endpoints, Generative.projection_exact_iff (lifting into the fiber of the target). That declaration and trace_lift were added to the references, and projection_exact_iff to the aliases. No change this pass."
+    },
+    {
+     "target": "formed-copying-registration",
+     "change": "Row 25 was already applied except the id rename. 配准 became 接触 in the zh title, claim, hypotheses[1], correspondence and dependency interface, as the row proposed. No change this pass."
+    },
+    {
+     "target": "identity-across-steps",
+     "change": "Rows 8 and 9 were already applied. The statement (en and zh, including the misread zh condition) and laws[20] and laws[30] are now worded as refutations, matching forced_iff_more and ListedWebs.forcedAlong_iff_more. hypotheses[1] now reads 'readings (the AI's)'. The correspondence's 'author's' and delegation labels became AI labels. This pass: shortened laws[30].en from 447 to 412 characters to fit the 420 limit ('with a census at every step:' and 'One without a split ... suffices'). The content is unchanged."
+    },
+    {
+     "target": "joint-correlation-reduced-dynamics",
+     "change": "Row 14 was already applied, partly. The statement was added (Readout.law_through_iff plus the JointPhase fragment). The three Becoming.Instances.* aliases were dropped and JointPhase core aliases added. The summary declarations (retained_cross_distinguishes_change, summarize, summary_recovers_control, every_finite_word_exact, summary_response) were added to the JointPhase reference, and the counterexample was re-pointed to JointPhase.lean. No change this pass."
+    },
+    {
+     "target": "joint-plan-composition",
+     "change": "Row 29 was already applied (schema 1, not migrated). canonical_source is now becoming/Becoming/Keeping.lean. The statement was added and the claim restated on Plan.zip_keeps and compatible_of_zip_keeps (guards kept at every stage), with the periphery witnesses in the claim. JointContinuation.sufficient_stock_repairs was added to the reference. A hypothesis was added on the witnesses' reported axioms; I checked it against the receipt: propext and Quot.sound, with Classical.choice also for serialization. No change this pass."
+    },
+    {
+     "target": "levels-of-closure",
+     "change": "Row 5 was already applied: 'the axiom' became 'the continuation condition' in laws[10], the dependency interfaces and related details, and the delegation labels became AI labels. This pass: removed the module name 'Becoming.Interdependence' from laws[10] (en and zh, a public field), so it now reads 'the route without the continuation condition'. The DF note was amended."
+    },
+    {
+     "target": "one-reader-several-conditions",
+     "change": "Row 27 was already applied, partly. The statement (299/93 characters) now says the windows are for conditions distinct by name and that one half suffices where whole weights certify it. laws[4] states the certificate as in keeps_of_half (positive windows, 2^(D+1) <= q a, total at most 2^D, fitting margins). No change this pass."
+    },
+    {
+     "target": "open-form-realization-under-revision",
+     "change": "Row 19 was already applied. The statement was added and the claim restated on Handoff.Run.novel_by_handoff, Run.relevance_by_handoff_of_unrestricted and the witnesses. hypotheses[1] now names the continuation condition. The four retired aliases were replaced by core Handoff names, both counterexamples were re-pointed to Handoff.lean, and fails_forever and resets_remaining were added to the references. This pass: the statement dropped a hypothesis of the Lean, decided completion ('decision : ∀ n, Decidable (completed n)'). I rewrote it to 296 characters: 'Where completion is decided, each unfinished step lowers the current rule's certificate, handoffs do not raise it, and completions realize new living content, a run first certified within B realizes such content by step B + 1; ...'. The zh now starts '凡完成可判定、...'. The DF note was amended."
+    },
+    {
+     "target": "positioned-positive-reason",
+     "change": "Row 32 was already applied. hypotheses[0] says living significance (LivingSignificance) is a hypothesis and an explicit normative premise, with E as SecuredContent.lean:163 states it. 'G0' became living significance in the limitations, and related[2] now names the continuation condition. The four core SecuredContent declarations were added as aliases. No change this pass."
+    },
+    {
+     "target": "practical-judgment-under-living-significance",
+     "change": "Row 33 was already applied: hypotheses[0] is the row's text. The search alias 'Practical judgment G0/J1–J4' was kept, as the row allows. No change this pass."
+    },
+    {
+     "target": "presupposition-scopes",
+     "change": "Rows 5 and 6 were already applied. hypotheses[4] ('G0 was folded by Ren ...') was deleted (en and zh). 'the axiom' became 'the continuation condition' in the interfaces, related details and correspondence, and the delegation labels became AI labels. No change this pass."
+    },
+    {
+     "target": "ranking-under-readings",
+     "change": "Row 5 was already applied: 'the axiom' became 'the continuation condition' in hypotheses[3], dependencies[3] and the correspondence, and the delegation label became an AI label. No change this pass."
+    },
+    {
+     "target": "re-optimizing-above-a-renewal-ends-it",
+     "change": "Row 30 (the record part) was already applied: does_not_show[1] now reads '(Scott's sole owner, in the fisheries literature)', with the zh to match. No change this pass."
+    },
+    {
+     "target": "selection-under-registration-revision",
+     "change": "Unchanged. Its only row (23) is the id rename. The title is already current, and no other field needs a change for that row."
+    },
+    {
+     "target": "selection-with-returns-to-groupmates",
+     "change": "Row 28 was already applied. The statement, laws[1] and hypotheses[0] now say b goes to every other member and c is taken from the keeper, which matches within_returns: w + (b + c) a = B + b·total. laws[2] keeps the spread on its left side. laws[3] adds 'and differing in it', laws[1] adds 'b + c is positive', and 'k' became 'the number of groups'. Checked against SelectionLevels.lean:843–945. No change this pass."
+    },
+    {
+     "target": "significance-retained-within-margin",
+     "change": "Rows 4, 5 and 7 were already applied. The claim and statement state loses_iff_beyond_margin as a negated universal. hypotheses[0] is the continuation-condition text. 'the axiom' became 'the continuation condition' in the interfaces and validation scope; the scope grew 17 en and 2 zh characters, within the schema-1 tolerance of 40/20. The limitations and correspondence labels became AI labels. No change this pass."
+    },
+    {
+     "target": "tests-fix-likeness-where-determined",
+     "change": "Row 22 was already applied. laws[9] was replaced in place by the core em form; its declarations are alike_of_sameBranchingTests_of_em and alike_iff_sameBranchingTests_of_em (Likeness.lean:1991, 2018), added to the references and aliases, and its text has no Lean names or dates. The correspondence names the core form and has no 'Ren agreed'. The two retired aliases are suffixed '(retired module)'. No change this pass."
+    },
+    {
+     "target": "trace-law-equivalence",
+     "change": "Row 2 was already applied. The statement was added and the claim restated on same_steps_iff_traces and the Carriers static/toggle witnesses. The aliases were reduced to Becoming.same_steps_iff_traces. The counterexample path was set to Carriers.lean, the interface evidence to Labelled.lean, and the reference declarations were completed. No change this pass."
+    },
+    {
+     "target": "versioned-request-completion",
+     "change": "Row 18 was already applied (schema 1, so there are no laws): a statement was added, consistent with Countdown.Advances.completes, completes_iff and the claim. No change this pass."
+    },
+    {
+     "target": "what-an-optimum-does-beyond-what-couples-in",
+     "change": "Rows 10 and 11 (the record parts) were already applied. does_not_show[2] cites alignment-direction-under-widening instead of 'chapter 7.5'. related[1] now reads 'draws from beyond; with room, ... the least level any eligible outcome reaches'. A related entry for alignment-direction-under-widening was added. No change this pass."
+    },
+    {
+     "target": "what-taking-all-excludes",
+     "change": "Row 31 was already applied: laws[1].en and the statement (en and zh) put the negation outside the window of level + 1 steps, as in Exclusion.lean:247–297. No change this pass."
+    },
+    {
+     "target": "which-links-a-closure-needs",
+     "change": "Row 21 was already applied: the statement now reads 'every condition a formation takes part in is needed' (GrownBy.every_condition_needed). No change this pass."
+    },
+    {
+     "target": "whole-first-and-bounded-centers",
+     "change": "Rows 12 and 13 were already applied. hypotheses[0] is the continuation-condition text. The correspondence drops 'which Ren then called an axiom' and the delegation labels, keeping quotes and using D16/D43. The related details were changed the same way. does_not_show[5] now links closure-verdict-meets-continuation-condition. No change this pass."
+    },
+    {
+     "target": "widening-along-a-reading",
+     "change": "Row 34 was already applied: laws[2].en now reads 'widening read on the old formations alone does not show it'. No change this pass."
+    },
+    {
+     "target": "widening-as-what-every-weighting-ranks",
+     "change": "Row 36 was already applied: next_delta now reads '(thresholds, read as denying scope)', with the zh '读作否认范围'. No change this pass."
+    }
+   ],
+   "not_applied": [
+    {
+     "row": "23: selection-under-registration-revision id rename to selection-when-the-lumping-changes",
+     "why": "rename_ids.py rewrites regions.json, the 03-KNOWING anchor, inbound references in other records and the generated pages. Those are outside my brief, which allows only the group's record JSON files. The title is already current, so the record needs no other change."
+    },
+    {
+     "row": "25: formed-copying-registration id rename to formed-contacts-change-copying-fidelity",
+     "why": "Same reason: it touches regions.json, the 04-LIFE anchor, other records and generated pages. The zh vocabulary part of the row is applied."
+    },
+    {
+     "row": "14: drop aliases Becoming.MachineInstances.summary_carries_law and summary_every_word",
+     "why": "The triage was wrong about these two. Both are declarations in the periphery module universal-ethics/generative-capacity/MachineInstances.lean (lines 365 and 373), audited in receipt machine-instances-checks/20261020T161859.257200Z, and the record cites that file as proof. They stay. The three Becoming.Instances names were dropped."
+    },
+    {
+     "row": "16: clause 'over any amounts, falls of an amount read off configurations a list holds still stop (rest-from-a-finite-reading)'",
+     "why": "hypotheses[0] is already at 416/186 characters against the 420/190 limit. 'Still stop' would also overstate Amounts.rests_of_finite_reading, which only refutes that strict falls recur."
+    },
+    {
+     "row": "0, 1, 2, 3, 14, 15, 17, 18, 19: the proposed laws arrays and their declarations",
+     "why": "These records are schema 1, which accepts a statement but not laws. The law texts went into the claim and the declarations into references and aliases. Migrating to schema 2 needs a snapshot and its own board claim."
+    },
+    {
+     "row": "29: schema-2 laws L1–L3",
+     "why": "The row makes them conditional on migrating to schema 2, which was not done. Their content is in the claim and the new hypothesis."
+    },
+    {
+     "row": "0: validation_scope text 'the periphery's terminating coherent history ... is not restated in the core'",
+     "why": "That is false of the current core: Becoming.ChangingContext.ends (Context.lean:417) restates the ending, and the record cites it. The scope says the ending is in the core with an empty axiom report."
+    },
+    {
+     "row": "27: margin inequality (a + l) d ≤ m < (a + 1 + l) d written into the statement",
+     "why": "The statement is at 299 of its 300-character cap (an error-level limit). laws[0] states the inequality exactly."
+    },
+    {
+     "row": "28: law 2 parenthetical '(equivalently, b to every member, own included, and b + c from the keeper)'",
+     "why": "The law already states the exact form, b to every other member and c from the keeper. The parenthetical adds nothing and has no slack to spend."
+    },
+    {
+     "row": "15: statements and laws for least-footprint-where-idleness-decided and normal-forms-need-decided-apartness",
+     "why": "These records are not in my group."
+    },
+    {
+     "row": "8: same sweep in more-needs-renewers hypotheses[2]",
+     "why": "This record is not in my group."
+    },
+    {
+     "row": "3, 11, 30: chapter text (01 line 358 citing projection_exact_iff; 07 line 474 'wherever there is room'; optional 05 §7(b) wording and Optimum.lean docstrings)",
+     "why": "These are chapters and Lean files, not record JSON in my group. They are for those files' owners."
+    }
+   ],
+   "checker": "The checks for my group's records pass apart from errors I was told to ignore. `python3 -B tools/research/research.py check --ids <38 changed ids>` exits 1 with 27 errors, and every one is 'generated view differs; reconcile and run make research-render' (README.md, RESULTS.md, GOALS.md, theory-graph.json, THEORY-GRAPH.md and 22 record .md pages). There are no record, schema, reference, hash or binding errors. source_drift lists 17 entries for these records, all in Lean files I did not touch (EdgeClosure, Exclusion, Growth, Retaining, SelectionLevels, Space, Weightings). I reread the cited theorems in their current files, and the record text matches them. `lint --ids <same>` exits 0 with 80 warnings and no errors (81 before this pass; the warning on identity-across-steps laws[30] is gone). The remaining warnings are on fields over their caps, the three validation scopes, statement negation-lead and stock-boundary items. Among fields the DF edits changed, only two validation scopes are over cap: becoming-spine-instances (shrank, 2307 to 2247 en) and significance-retained-within-margin (grew +17 en / +2 zh, within the schema-1 tolerance of 40/20). Every changed record carries exactly one DF note with the required en/zh prefix, as its last history entry. The layout is json.dumps(indent=2, ensure_ascii=False) plus a newline, with key order kept. A scan of the changed public fields finds no new Lean names, dates or receipts. Scratch helpers: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/g1tools/fielddiff.py and /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/g1tools/pubscan.py. Last outputs: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/g1check2.txt and /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/g1lint2.txt."
+  },
+  "findings": [
+   {
+    "target": "becoming-context-coherence (statement.en)",
+    "quote": "and forgetting a context that changes with the step is exact where every context can follow each forgotten step.",
+    "problem": "The Lean is an iff: forgetting is exact from every context exactly where every context can follow each forgotten step. The en reads as a sufficient condition only. The zh says it exactly (恰在…时精确), so en and zh disagree.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContextArrivalTraces.lean:161-165 (erasedLaw_exact_iff_lifts: (∀ i s a t, …) ↔ ∀ i s word t, …); theories/becoming/results/records/becoming-context-coherence.json:9",
+    "fix": "Replace 'is exact where every context can follow each forgotten step.' with 'is exact precisely where every context can follow each forgotten step.' (299 characters in all).",
+    "severity": "imprecise"
+   },
+   {
+    "target": "significance-retained-within-margin (statement.en)",
+    "quote": "Retaining significance is a preorder and adding an excess on admission; under the continuation condition, inclusion and exceeding. A part loses a significant continuation exactly where its net draw is not within the margin on all it requires, and adds one exactly where its net exchange admits it.",
+    "problem": "Rewording the loss clause dropped 'from every standpoint', which was in the HEAD en. That damages unchanged text, and en and zh now disagree, since the zh keeps 从每个立场都一样 (retains_agree). The en also changed 'Retaining and adding significance are' to a form the zh does not follow.",
+    "evidence": "git show HEAD:theories/becoming/results/records/significance-retained-within-margin.json (statement.en ends its first sentence 'inclusion and exceeding from every standpoint'); theories/becoming/results/records/significance-retained-within-margin.json:13-14; Retaining.lean:250-256 (Balances.loses_iff_beyond_margin, ¬ ∀ c …); 07-SIGNIFICANCE.md:46-49",
+    "fix": "en: 'Retaining and adding significance are a preorder and an excess on admission; under the continuation condition, inclusion and exceeding at each standpoint. A part loses a significant continuation exactly where not all its net draws fit the margin and adds one exactly where its net exchange admits it.' (300 characters; the zh is unchanged)",
+    "severity": "imprecise"
+   },
+   {
+    "target": "practical-judgment-under-living-significance (hypotheses[0].en/zh)",
+    "quote": "Living significance, a condition stated and not asserted (a theorem under the continuation condition), adds no further premise.",
+    "problem": "The result is conditional on living significance, which chapter 7 labels its premise. Saying it 'adds no further premise' reads as if the result had no premise. Only relative to the continuation condition is it no further premise. positioned-positive-reason calls the same item 'a hypothesis and an explicit normative premise'.",
+    "evidence": "theories/becoming/chapters/07-SIGNIFICANCE.md:402 ('**Conditional** (living significance, J1–J4, correspondence E …)'); theories/becoming/results/records/practical-judgment-under-living-significance.json:19",
+    "fix": "en: 'Living significance is a premise, a condition stated and not asserted; under the continuation condition it is a theorem, adding no premise beyond that condition. J1–J4 …' (the rest unchanged). zh: '生生之意义是前提，即陈述而不断言的条件；在延续条件之下它是定理，不在该条件之外另增前提。…'",
+    "severity": "imprecise"
+   },
+   {
+    "target": "continuing-self-fed-from-beyond (hypotheses[0])",
+    "quote": "where losses can shrink geometrically the argument does not apply: a dyadic stock halving at every step never rests (Halving.never_rests); the second law gives no least loss per step.",
+    "problem": "Row 16 asked for a second clause: over any amounts, a non-rising amount read off configurations a list holds still stops falling (rest-from-a-finite-reading). It is missing in en and zh, so the hypothesis still suggests that rest depends on whole-number losses. The field is at 416/186 against caps of 420/190, so the clause cannot simply be appended. The DF history note does not mention it either.",
+    "evidence": "_process scratch rows: ROW 16 [fix] ('over any amounts, falls of an amount read off configurations a list holds still stop (rest-from-a-finite-reading)'); theories/becoming/results/records/continuing-self-fed-from-beyond.json:79-80; theories/becoming/results/records/rest-from-a-finite-reading.json (statement); 02-MAP.md:183",
+    "fix": "Keep hypotheses[0] as it is. Add a related entry: {\"id\": \"rest-from-a-finite-reading\", \"detail\": {\"en\": \"Over any amounts, a non-rising amount read off configurations a list holds still stops falling; a stock that never rests, like the halving one, takes configurations no list holds.\", \"zh\": \"在任何量上，读自列表所容纳之构形、不上升的量仍会停止下降；永不停息的存量（如每步减半者）取没有列表容纳的构形。\"}}. Then append to the DF note: en '; the rest that still holds over any amounts for a reading a list holds is linked in related', zh '；在任何量上、读自列表所容者仍有的停息，列于相关'.",
+    "severity": "imprecise"
+   },
+   {
+    "target": "least-footprint-where-idleness-decided",
+    "quote": "\"schema_version\": 1 … (no \"statement\" field)",
+    "problem": "Row 15 asked for a statement and a law for this record. Neither was added, and the record has no DF note. It still has no statement, although chapter 01 states the result.",
+    "evidence": "_process scratch rows: ROW 15 [fix] ('Also give least-footprint-where-idleness-decided and normal-forms-need-decided-apartness a statement and law'); theories/becoming/results/records/least-footprint-where-idleness-decided.json:2; theories/becoming/chapters/01-ROOT.md:413",
+    "fix": "Add statement en 'Where idleness is decided at every step and relatum, the least footprint touches exactly what is not idle and lies in every containing footprint; with equality of relata decided, a least footprint exists exactly where idleness is decided.' zh '每步每个关系项的闲置可判定时，最小足迹恰触及非闲置者，且在每个包含足迹之内；关系项相等可判定时，最小足迹恰在闲置可判定时存在。' A law needs schema 2: migrate the record, citing Footprinted.least_exists_iff in aliases and references. Then add one DF note saying so.",
+    "severity": "imprecise"
+   },
+   {
+    "target": "normal-forms-need-decided-apartness",
+    "quote": "\"schema_version\": 1 … (no \"statement\" field)",
+    "problem": "Row 15 asked for a statement and a law for this record too. Neither was added, and the record has no DF note.",
+    "evidence": "_process scratch rows: ROW 15 [fix]; theories/becoming/results/records/normal-forms-need-decided-apartness.json:2; theories/becoming/chapters/01-ROOT.md:414; experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean:967 (complete_iff)",
+    "fix": "Add statement en 'With joining symmetric, two arrangements of a finite stretch are connected by commuting unjoined neighbours exactly where they order joined pairs alike; a complete invariant on the stretch exists exactly where apartness of distinct exchanges is decided, the normal form giving one.' zh '相连对称时，有限段的两个安排经相邻不相连交换互达，恰当它们对相连之对给出同样先后；段上的完整不变量恰在不同交换的不相连可判定时存在，正规形给出一个。' For the law, migrate to schema 2 with rearranges_iff and complete_iff in aliases and references. Add one DF note.",
+    "severity": "imprecise"
+   },
+   {
+    "target": "finite-trace-transport (statement.en/zh)",
+    "quote": "the converse, endpoints included, holds exactly where every step from an image lifts.",
+    "problem": "'lifts' does not say from where. The Lean requires every step of Q from q s to lift to a step of P from s, for every s, that is, from each configuration with that image. Lifting from some preimage is weaker and does not give the converse. The zh 像上出发的每一步都能提升 has the same gap.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean:229-232 (projection_exact_iff: ∀ s a r, Q.step (q s) a r → ∃ t, P.step s a t ∧ q t = r); theories/becoming/results/records/finite-trace-transport.json:9",
+    "fix": "en: '…; the converse, endpoints included, holds exactly where every step from an image lifts from each configuration with that image.' (239 characters) zh: '…；带端点的逆恰在像上出发的每一步都能从具此像的每个构形提升时成立。' (68 characters)",
+    "severity": "imprecise"
+   },
+   {
+    "target": "comparison-where-the-rest-responds (history, DF note)",
+    "quote": "'the axiom' in the hypotheses, dependency interfaces and correspondence reads 'the continuation condition', and readings are labelled as AI readings instead of 'adopted on Ren's delegation'",
+    "problem": "The note does not say truly what changed. In the correspondence only the delegation label changed; no 'the axiom' was replaced there.",
+    "evidence": "git diff HEAD -- theories/becoming/results/records/comparison-where-the-rest-responds.json (correspondence: label change only); theories/becoming/results/records/comparison-where-the-rest-responds.json:827",
+    "fix": "en: \"… 'the axiom' in the hypotheses and dependency interfaces reads 'the continuation condition', and the correspondence's readings are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim. No law changed.\" Change the zh to match.",
+    "severity": "imprecise"
+   },
+   {
+    "target": "levels-of-closure (history, DF note)",
+    "quote": "'the axiom' in the dependency interfaces, related details, the eleventh law and correspondence reads 'the continuation condition' (the eleventh law also without a module name), and readings are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim. No law changed.",
+    "problem": "The note does not match the diff. 'the axiom' changed in one dependency's detail and interface and in the eleventh law. The related detail and the correspondence changed only their reading labels. 'No law changed' contradicts the rewording of the eleventh law the note itself reports.",
+    "evidence": "git diff HEAD -- theories/becoming/results/records/levels-of-closure.json; theories/becoming/results/records/levels-of-closure.json:821",
+    "fix": "en: \"… 'the axiom' in a dependency's detail and interface and in the eleventh law reads 'the continuation condition' (the eleventh law also without a module name), and the readings in a related detail and the correspondence are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim. No law changed in content.\" Change the zh to match.",
+    "severity": "imprecise"
+   },
+   {
+    "target": "continuing-self-fed-from-beyond (references/aliases)",
+    "quote": "(Halving.never_rests)",
+    "problem": "The edit names the declaration Becoming.Halving.never_rests as the witness, but no references entry or alias carries it, so the citation cannot be audited from the record.",
+    "evidence": "theories/becoming/results/records/continuing-self-fed-from-beyond.json:79-80; experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean:257 (sha256 d6ad7f2598fcaa3a77da932a52952ba5c2753d18ddef0b8ade69dd8c2c40ae4c, empty in receipt 20261025T080929.528151Z)",
+    "fix": "Add a references entry {\"path\": \"experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean\", \"role\": \"proof\", \"sha256\": \"d6ad7f2598fcaa3a77da932a52952ba5c2753d18ddef0b8ade69dd8c2c40ae4c\", \"declarations\": [\"Becoming.Halving.never_rests\"]}, add the alias \"Becoming.Halving.never_rests\", and mention it in the DF note.",
+    "severity": "style"
+   },
+   {
+    "target": "continuation-condition-yields-living-significance (history, DF note)",
+    "quote": "the correspondence keeps Ren's quoted words and labels its readings as AI readings (D16, D11)",
+    "problem": "The note attributes D11 to the correspondence, but the correspondence cites D16 only. D11 appears in dependencies[1].interface.conditions.",
+    "evidence": "theories/becoming/results/records/continuation-condition-yields-living-significance.json:1109; the correspondence field of the same record (D16 only)",
+    "fix": "en: '… labels its readings as AI readings (D16) instead of …; a dependency interface labels its reading (D11)'. Change the zh to match, or drop D11 from the parenthesis.",
+    "severity": "style"
+   },
+   {
+    "target": "selection-under-registration-revision",
+    "quote": "selection-under-registration-revision",
+    "problem": "Row 23 asked to rename the id to selection-when-the-lumping-changes. The record is unchanged (empty git diff), so the retired word stays in the id and there is no DF note.",
+    "evidence": "_process scratch rows: ROW 23 [fix]; theories/becoming/chapters/03-KNOWING.md:281; theories/becoming/results/data/regions.json",
+    "fix": "Rename with tools/research/rename_ids.py to selection-when-the-lumping-changes (former_ids keeps the old id, a redirect stub, the regions.json key, the 03-KNOWING.md:281 anchor with the old id kept as a second <a id>, inbound records repointed), keep the alias 'registration revision' / '登记关系修订', and add one DF note. Then run research-render, research-check and research-links.",
+    "severity": "style"
+   },
+   {
+    "target": "formed-copying-registration",
+    "quote": "the id keeps the old word until it is renamed",
+    "problem": "The row asked for the id rename to formed-contacts-change-copying-fidelity. The rename was not done, and the note defers it.",
+    "evidence": "theories/becoming/results/records/formed-copying-registration.json (history DF note); theories/becoming/chapters/04-LIFE.md:90",
+    "fix": "Rename with tools/research/rename_ids.py to formed-contacts-change-copying-fidelity (former_ids, a redirect stub, the regions.json key, the 04-LIFE.md:90 anchor with the old id kept as a second <a id>, inbound records repointed), then drop 'the id keeps the old word until it is renamed' from the DF note.",
+    "severity": "style"
+   }
+  ],
+  "fixed": {
+   "applied": [
+    "becoming-context-coherence statement.en: the reviewer's fix applied ('is exact precisely where every context can follow each forgotten step'). The forgetting clause now reads as the iff that ContextArrivalTraces.lean:161-165 erasedLaw_exact_iff_lifts proves, and en agrees with zh. 299 chars. The DF note already covers it.",
+    "significance-retained-within-margin statement.en: applied with a different fix from the reviewer's. 'from every standpoint' is back (Significance.lean retains_iff_includes / retains_agree hold for every p), so en agrees with the unchanged zh. The loss clause keeps the exact negated universal of Balances.loses_iff_beyond_margin ('its net draw is not within the margin on all it requires'). I did not use the reviewer's 'not all its net draws fit the margin', because it does not limit the universal to the conditions the formation requires. To fit 300 chars, the first sentence reads 'Retaining and adding significant continuations are a preorder and an excess', and the loss clause uses 'one'. Final text: 'Retaining and adding significant continuations are a preorder and an excess; under the continuation condition, inclusion and exceeding from every standpoint. A part loses one exactly where its net draw is not within the margin on all it requires and adds one exactly where its net exchange admits it.' (300). The DF note was amended to say the English statement was shortened with 'from every standpoint' kept.",
+    "practical-judgment-under-living-significance hypotheses[0]: the reviewer's fix applied in en and zh. Living significance is called a premise, a condition stated and not asserted, and under the continuation condition a theorem adding no premise beyond that condition. This agrees with 07 line 402 ('Conditional (living significance, ...)'). The DF note was amended to match.",
+    "continuing-self-fed-from-beyond related: added an entry for rest-from-a-finite-reading. I used my own wording, set at what Amounts.rests_of_finite_reading and Halving.stock_unlisted prove: an amount read off configurations a list holds that does not rise from some step on has strict falls that do not recur; no list holds the halving stock's values; this result's laws are stated over whole-number flows. hypotheses[0] is unchanged (416/186). The DF note was amended to mention the link.",
+    "continuing-self-fed-from-beyond references/proof_bindings: a proof reference for Becoming/LeastLoss.lean was added (sha256 d6ad7f25..., declarations [Becoming.Halving.never_rests]). Also added: the receipt reference 20261025T080929.528151Z (sha256 f399061e...) and a proof binding of LeastLoss.lean to that receipt. The receipt binds that sha, reports passed, and gives Halving.never_rests an empty axiom report. validation_scope en/zh now name the binding (zh 249/260). The alias was NOT added: the checker rejects it as a duplicate, since Becoming.Halving.never_rests is already an alias of least-loss-rest. The declaration is named in a hypothesis, not a law, so the law/alias rule does not require it. The DF note says all this.",
+    "finite-trace-transport statement en/zh: the reviewer's fix applied ('lifts from each configuration with that image' / '从具此像的每个构形提升'). This matches projection_exact_iff's lifting clause (forall s a r, Q.step (q s) a r -> exists t, P.step s a t and q t = r). en 239, zh 68. The claim was already exact. The DF note's lifting clause was amended the same way.",
+    "comparison-where-the-rest-responds DF note: corrected to match the diff, which I checked field by field. 'the axiom' changed in one hypothesis (hypotheses[8]) and one dependency interface (dependencies[1].interface.output). The correspondence changed only its delegation label. en and zh both changed.",
+    "levels-of-closure DF note: corrected to match the diff. 'the axiom' changed in dependencies[2].detail and its interface. The eleventh law's 'route without axiom' of a named module now reads 'the route without the continuation condition', with no module name. related[0] and the correspondence changed only their reading labels. 'No law changed' became 'No law changed in content'. en and zh both changed.",
+    "continuation-condition-yields-living-significance DF note: D11 is now attributed to the dependency interface (dependencies[1].interface.conditions) and the correspondence cites only D16. While checking the diff I found two more changes the note did not describe, and the corrected note now covers them: the audit hypothesis (hypotheses[4]) now names living significance (G0 in the periphery), and the dependency details as well as the interfaces were reworded. The note also says the correspondence now calls Ren's sentence the condition's source."
+   ],
+   "rejected": [
+    {
+     "finding": "least-footprint-where-idleness-decided: add a statement and a law, migrating to schema 2",
+     "why": "My group file does not list this record, and the brief says to edit only the records it lists. Its schema-2 migration also needs a snapshot under _process/architecture/history, which is another file outside my scope. The finding stands: the record has no statement, and 01-ROOT.md:413 states the result. It should go to the integrator or whichever group owns the record."
+    },
+    {
+     "finding": "normal-forms-need-decided-apartness: add a statement and laws (rearranges_iff, complete_iff), migrating to schema 2",
+     "why": "Same reason: the record is not in my group's list, and migrating it needs a snapshot file outside my scope. The gap is real and should be assigned to an owner."
+    },
+    {
+     "finding": "selection-under-registration-revision: rename the id to selection-when-the-lumping-changes with rename_ids.py",
+     "why": "A rename writes far beyond this group's record files: a redirect stub, the regions.json key, the 03-KNOWING.md:281 anchor, inbound records owned by other groups, and the generated pages. The brief forbids touching any file it does not name, and other agents are editing this worktree at the same time. So the rename belongs to the lander or integrator after the record edits land. The record is unchanged, so it has no DF note to amend."
+    },
+    {
+     "finding": "formed-copying-registration: rename the id to formed-contacts-change-copying-fidelity and drop 'the id keeps the old word until it is renamed' from the DF note",
+     "why": "Same reason: the rename touches regions.json, the 04-LIFE.md:90 anchor, inbound records in other groups, a stub and the generated pages, none of which this brief names. Until the rename happens, the DF note's 'the id keeps the old word until it is renamed' is true and stays."
+    }
+   ],
+   "checker": "check --ids (the 8 changed records: becoming-context-coherence, significance-retained-within-margin, practical-judgment-under-living-significance, continuing-self-fed-from-beyond, finite-trace-transport, comparison-where-the-rest-responds, levels-of-closure, continuation-condition-yields-living-significance) exits 1. All 10 remaining errors are 'generated view differs; reconcile and run make research-render', which the brief says to ignore (README.md, RESULTS.md, GOALS.md, theory-graph.json, THEORY-GRAPH.md, and the .md views of becoming-context-coherence, comparison-where-the-rest-responds, continuing-self-fed-from-beyond, finite-trace-transport and practical-judgment-under-living-significance). The only source drift on these records is in Lean files I did not touch: Retaining.lean (continuation-condition-yields-living-significance, levels-of-closure, significance-retained-within-margin) and EdgeClosure.lean (levels-of-closure). Two errors from my first pass were fixed: continuing-self-fed-from-beyond validation_scope zh was 269 > 260 (now 249), and the duplicate alias Becoming.Halving.never_rests (owned by least-loss-rest) was removed. lint --ids (same 8 ids) exits 0 with 0 errors and 19 warnings. None of the warnings is in a field this pass edited: they are length warnings on correspondence, claim, validation_scope, progress and some laws/does_not_show, the stock-boundary warning on becoming-context-coherence's limitations, and the negation-lead warning on continuing-self-fed-from-beyond's statement. Every changed record round-trips as json.dumps(indent=2, ensure_ascii=False)+newline and carries exactly one DF note. Edit scripts: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/dfg1r2/apply.py and /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/dfg1r2/fix2.py. Checker output: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/dfg1r2/check.out and /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/dfg1r2/lint.out."
+  }
+ },
+ {
+  "group": 2,
+  "done": null,
+  "findings": [
+   {
+    "target": "market-protected-continuation: statement (en and zh), theories/becoming/results/records/market-protected-continuation.json:12",
+    "quote": "For a law driven by admissible disturbances, no history from a start leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance",
+    "problem": "The new statement drops a hypothesis. The equivalence holds only when at least one admissible disturbance exists (h₀ : adm a₀). With no admissible disturbance, the closed-set side can fail while no history leaves the guard, so the 'exactly when' as written is unproved and false in general. The chapter row keeps the hypothesis ('given one').",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean:213-219 (never_leaves_iff_certificate takes {a₀ : A} (h₀ : adm a₀)); theories/becoming/chapters/05-COLLECTIVES.md:284",
+    "fix": "en: \"For a law driven by admissible disturbances, given one, no history from a start leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance; in the market the safe rectangle is such a set under a valid protection certificate.\" zh: \"对由可容许扰动驱动的律（给定一个可容许扰动），从某起点出发的历史都不离开守卫，恰当有包含该起点、在守卫之内、对每个可容许扰动封闭的集合；在市场模型中，有效保护证书之下的安全矩形就是这样的集合。\"",
+    "severity": "error"
+   },
+   {
+    "target": "market-partial-correction-boundary: statement (en and zh), theories/becoming/results/records/market-partial-correction-boundary.json:12",
+    "quote": "all positive states land exactly when β ≤ 5/12",
+    "problem": "Overclaim in scope. The Lean quantifies only over physical states (RegimeAttraction.physical s) with positive first coordinate, not over all positive states. The zh text '一切正状态皆着陆' has the same omission. The chapter row says 'physical rational states'.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/market-generativity/formal/MarketInstances.lean:375-377 (lands_iff_margin: ∀ s, RegimeAttraction.physical s → 0 < s.1 → ∃ n, Landing …); theories/becoming/chapters/05-COLLECTIVES.md:285",
+    "fix": "en: replace \"all positive states land exactly when β ≤ 5/12\" with \"all physical positive states land exactly when β ≤ 5/12\". zh: replace \"一切正状态皆着陆\" with \"一切物理正状态皆着陆\".",
+    "severity": "imprecise"
+   },
+   {
+    "target": "market-finite-support-obstruction: statement (en and zh), theories/becoming/results/records/market-finite-support-obstruction.json:12",
+    "quote": "every positive seed 0 < x₀ ≤ (2/3)^N/6 fails",
+    "problem": "Drops a hypothesis. The market instance requires the initial pair to be physical (PairPhysical initial: 0 ≤ x ≤ 1 and quality 0 ≤ q ≤ 1), so the quality bound is a premise the statement leaves out. The chapter row states 'initial share and quality in [0, 1]'.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/market-generativity/formal/MarketInstances.lean:201-202 (forces_failure_instance … (hi : FiniteSupportObstruction.PairPhysical initial)); FiniteSupportObstruction.lean:23-24 (PairPhysical s := 0 ≤ s.x ∧ s.x ≤ 1 ∧ 0 ≤ s.q ∧ s.q ≤ 1); theories/becoming/chapters/05-COLLECTIVES.md:287",
+    "fix": "en: \"… every seed 0 < x₀ ≤ (2/3)^N/6 with quality in [0, 1] fails by step N under every admissible schedule.\" zh: \"……每个品质在 [0, 1] 之内的正种子 0 < x₀ ≤ (2/3)^N/6 在每个可容许日程下至迟在第 N 步失败。\"",
+    "severity": "imprecise"
+   },
+   {
+    "target": "recoverable-mediated-change: statement (en), theories/becoming/results/records/recoverable-mediated-change.json:81",
+    "quote": "A property holds along admitted courses exactly when its admitted steps keep it",
+    "problem": "Misstates the theorem. admitted_invariant_iff is an invariance equivalence: every admitted step keeps I if and only if I is kept along every admitted reach, from every start where it holds. It does not say I 'holds along' courses unconditionally. As written, the sentence reads as I holding everywhere along a course whether or not it held at the start. The chapter text says 'from every start where it holds'.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean:59-63 (admitted_invariant_iff : (∀ s a t, allow s a → f s a = some t → I s → I t) ↔ ∀ s t, Reach (admitted f allow) s t → I s → I t); theories/becoming/chapters/07-SIGNIFICANCE.md:546",
+    "fix": "Replace the opening clause with: \"A property is kept along admitted courses exactly when each admitted step keeps it\" (zh to match: \"一性质沿被容许的进程得以保持，恰当每个被容许的步骤都保持它\").",
+    "severity": "imprecise"
+   },
+   {
+    "target": "a-pattern-lasts-through-passing: laws[3] (en and zh), theories/becoming/results/records/a-pattern-lasts-through-passing.json:51",
+    "quote": "an occurrence nothing continues under the pattern's class ends under the carrier class",
+    "problem": "Drops the hypothesis that the occurrence is carrying (active). ceases_of_pattern_ends takes (carrying : V.active t b). For an inactive occurrence the law is not proved. The zh text '在样式之类下无所接续的出现，在承载者之类下亡' has the same omission.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean:465 (theorem ceases_of_pattern_ends {t : Nat} {b : F} (carrying : V.active t b) (ends : …) : V.Ceases t b)",
+    "fix": "en: \"a carrying occurrence nothing continues under the pattern's class ends under the carrier class\". zh: \"在样式之类下无所接续的承载出现，在承载者之类下亡\".",
+    "severity": "imprecise"
+   },
+   {
+    "target": "growth-constrained-fragmentation: validation_scope.zh, theories/becoming/results/records/growth-constrained-fragmentation.json:78",
+    "quote": "外围之律多用 Lean 之标准公理",
+    "problem": "en and zh disagree. The en text names the axioms (most periphery laws use propext and Quot.sound, and five also use Classical.choice). The zh text says only 'Lean's standard axioms', which loses the count and the choice-axiom distinction the receipt shows.",
+    "evidence": "universal-ethics/grown-fragmentation-verification/verification.json (of 14 cited declarations: 3 empty reports, 11 propext+Quot.sound, 5 of them also Classical.choice); validation_scope.en in the same record",
+    "fix": "zh: \"回执绑定源码；外围多用 propext、Quot.sound，五条另加选择公理；推论与生物对应分列。\" (within the +20 zh growth ratchet)",
+    "severity": "imprecise"
+   },
+   {
+    "target": "fidelity-of-the-classical-statements: history DF note (en and zh), theories/becoming/results/records/fidelity-of-the-classical-statements.json:154",
+    "quote": "the coders named by model family … in the statement, hypotheses and boundaries",
+    "problem": "The note is not truthful about where the change landed. The diff shows the coders renamed by model family in the hypotheses and does_not_show only, not in the statement, which names no coder before or after the edit.",
+    "evidence": "git diff -- theories/becoming/results/records/fidelity-of-the-classical-statements.json (statement field has no coder mention); theories/becoming/results/records/fidelity-of-the-classical-statements.json:154",
+    "fix": "en: replace \"in the statement, hypotheses and boundaries\" with \"in the premise and the boundary\"; zh: change the matching phrase to \"前提与边界中\".",
+    "severity": "imprecise"
+   },
+   {
+    "target": "fidelity-of-the-classical-statements: does_not_show[3].en, theories/becoming/results/records/fidelity-of-the-classical-statements.json:39",
+    "quote": "That the gain belongs to classical Chinese, not the name table's discipline:",
+    "problem": "The rewritten item is 297 characters, over the 240 limit for does_not_show.en.",
+    "evidence": "theories/becoming/results/records/fidelity-of-the-classical-statements.json:39 (len 297 > 240)",
+    "fix": "\"That the gain belongs to classical Chinese, not the name table's discipline: with that discipline controlled English matches it for the authors' family's coder; another family's finds a residual on 60 pairs (fidelity-under-one-discipline).\"",
+    "severity": "style"
+   },
+   {
+    "target": "metaethical-core-characterization: hypotheses[0].en, theories/becoming/results/records/metaethical-core-characterization.json:19",
+    "quote": "The seed, relational and standpoint",
+    "problem": "The edited hypothesis is 474 characters, over the 420 limit for hypotheses.en.",
+    "evidence": "theories/becoming/results/records/metaethical-core-characterization.json:19 (len 474 > 420)",
+    "fix": "\"The seed, both neutralities and A are normative premises, not proved here. The result characterizes living significance without asserting it; under the continuation condition, where a claim's significance is its formation's continuation, it is a theorem (continuation-condition-yields-living-significance). Living significance gives the premises nearly at once; the content lies in the converse and in minimality.\"",
+    "severity": "style"
+   },
+   {
+    "target": "own-good-to-reachable-living-significance: statement key order, theories/becoming/results/records/own-good-to-reachable-living-significance.json:12",
+    "quote": "\"statement\": { \"zh\": …, \"en\": … }",
+    "problem": "The edit reordered the statement object's keys from en, zh to zh, en. That breaks the record's key order, gives a spurious diff, and differs from every other bilingual field.",
+    "evidence": "git diff -- theories/becoming/results/records/own-good-to-reachable-living-significance.json (statement keys swapped); theories/becoming/results/records/own-good-to-reachable-living-significance.json:12",
+    "fix": "Restore key order {\"en\": …, \"zh\": …} in statement, keeping the new text, and re-serialize with json.dumps(indent=2, ensure_ascii=False) plus a trailing newline.",
+    "severity": "style"
+   },
+   {
+    "target": "a-pattern-lasts-through-passing: laws[4] (en and zh), theories/becoming/results/records/a-pattern-lasts-through-passing.json:67",
+    "quote": "PatternRelay's shifts",
+    "problem": "A Lean declaration name appears in a public field (laws). Lean names belong in aliases and references, not in public prose.",
+    "evidence": "theories/becoming/results/records/a-pattern-lasts-through-passing.json:67",
+    "fix": "en: \"the relay witness's shifts\"; zh: replace \"PatternRelay\" wording with \"接力见证的移位\".",
+    "severity": "style"
+   },
+   {
+    "target": "chinese-sources-on-the-spine: history DF note (en), theories/becoming/results/records/chinese-sources-on-the-spine.json:241",
+    "quote": "tolerance across laws proved on both sides proposed",
+    "problem": "Garbled word order, so the phrase misreads as 'both sides proposed'.",
+    "evidence": "theories/becoming/results/records/chinese-sources-on-the-spine.json:241",
+    "fix": "\"tolerance across laws proved on both proposed sides\"",
+    "severity": "style"
+   },
+   {
+    "target": "fidelity-coders-on-own-and-other-texts: does_not_show[1].en, theories/becoming/results/records/fidelity-coders-on-own-and-other-texts.json:29",
+    "quote": "Which coder is miscalibrated",
+    "problem": "The rewritten sentence is awkward and hard to parse about which coder lists more, and that the numeral explanation came after the fact.",
+    "evidence": "theories/becoming/results/records/fidelity-coders-on-own-and-other-texts.json:29",
+    "fix": "\"Which coder is miscalibrated on unplanted excess: the faithful texts carry no ground truth; about half of the unplanted excess the coder listing more counts is numerals the codebook matches, described after the fact.\"",
+    "severity": "style"
+   },
+   {
+    "target": "more-needs-renewers: history DF note (en), theories/becoming/results/records/more-needs-renewers.json",
+    "quote": "the first premise … now states the checked counterexample",
+    "problem": "The note misplaces the change. The diff shows the checked counterexample moved into a new hypotheses[1]. The first premise was shortened; it does not now state the counterexample.",
+    "evidence": "git diff -- theories/becoming/results/records/more-needs-renewers.json (new hypotheses[1] carries the counterexample; hypotheses[0] shortened)",
+    "fix": "Reword to: \"the first premise's last sentence replaced by a new second premise stating the checked counterexample\" (zh to match).",
+    "severity": "style"
+   },
+   {
+    "target": "draws-on-a-shared-stock: claim (en and zh), theories/becoming/results/records/draws-on-a-shared-stock.json:18",
+    "quote": "every selection fits",
+    "problem": "The new statement says 'every combination' after the DF vocabulary fix ('selection' is reserved for couplings), but the unchanged claim still says 'every selection' / '每一种选取'. So the record's two fields use different words for the same thing, and the reserved word stays in a public field.",
+    "evidence": "theories/becoming/results/records/draws-on-a-shared-stock.json:18 (claim) vs the record's statement",
+    "fix": "en: \"every combination fits\"; zh: \"每一种组合\" in place of \"每一种选取\".",
+    "severity": "style"
+   },
+   {
+    "target": "counting-under-enclosure: laws[30].zh, theories/becoming/results/records/counting-under-enclosure.json:279",
+    "quote": "在不纳入普查的每种取舍",
+    "problem": "The edit lengthened this law's zh text from 223 to 225 characters. It was already over the 190 limit for laws.zh, and the edit took it further over instead of bringing it in.",
+    "evidence": "theories/becoming/results/records/counting-under-enclosure.json:279 (len 225 > 190; HEAD 223)",
+    "fix": "Shorten the zh text to at most 190 characters, or at least to no longer than its HEAD length (223), for example by dropping a redundant 之/的 clause around \"在不纳入普查的每种取舍\".",
+    "severity": "style"
+   }
+  ],
+  "fixed": {
+   "applied": [
+    "market-protected-continuation statement: added the hypothesis that one admissible disturbance exists, which never_leaves_iff_certificate takes as (h0 : adm a0) and needs_admissible shows is required. en now reads '…admissible disturbances, given one, no history…'; 'in the market model' became 'in the market' so the text stays at 296 of 300 characters. zh: '（给定一个可容许扰动）'. The DF note already says the statement follows the claim, which carries 'given one', so the note is unchanged.",
+    "market-partial-correction-boundary statement: lands_iff_margin quantifies over physical states with 0 < s.1, so 'all positive states' became 'all physical positive states' and zh '一切正状态' became '一切物理正状态'. Adding 'physical' took en to 309 characters, so the rest was tightened ('on every admissible disturbance', 'for a determined law never does exactly when a closed set off the target holds it', 'in the error-free market with 0 ≤ β ≤ 3/4'). It is now exactly 300 with the same content.",
+    "market-finite-support-obstruction statement: forces_failure_instance and every_finite_stock_has_obstructed_positive_seeds both take PairPhysical, so quality in [0, 1] is a premise. en: '…every seed 0 < x₀ ≤ (2/3)^N/6 of quality in [0, 1] fails by step N on every admissible schedule' (299 characters). zh: '每个品质在 [0, 1] 之内的正种子…'. The single DF note was amended to say the statement includes the initial-quality premise.",
+    "recoverable-mediated-change statement: admitted_invariant_iff is an invariance equivalence, so the opening clause became 'Admitted courses keep a property exactly when each admitted step does'. This is shorter than the reviewer's wording, which would have gone over 300 characters. zh: '被允许的进程保持一个性质，恰当每个被允许的步都保持它'. The note is unchanged and still accurate.",
+    "a-pattern-lasts-through-passing laws[3]: ceases_of_pattern_ends needs (carrying : V.active t b), so the law now reads 'a carrying occurrence nothing continues…' and zh '…无所接续的承载出现…'. en is 417 characters.",
+    "a-pattern-lasts-through-passing laws[4]: the Lean name was removed from the public field. 'in PatternRelay's shifts' became 'in the relay witness's shifts'. In zh, '在 PatternRelay 的移位中' became '在接力见证的轮班中', using 轮班, which whole-persists-through-generation already uses for these shifts. The zh DF note was changed to match ('轮班中的火传'). en is 416 characters.",
+    "growth-constrained-fragmentation validation_scope.zh: the receipt confirms the counts for the 14 cited GrownFragmentation declarations. 3 have empty axiom reports and 11 use propext and Quot.sound, 5 of which also use Classical.choice. zh now reads '回执绑定源码；外围多用 propext、Quot.sound，五条另加选择公理；推论与生物对应分列。' It grew from 30 to 50 characters, within the +20 schema-1 ratchet (warning only).",
+    "fidelity-of-the-classical-statements DF note: the statement names no coder, before or after the edit, so the note's 'in the statement, hypotheses and boundaries' was corrected to 'in the premise and the boundary on language and discipline (that boundary also shortened)'. zh: '前提与语言纪律之边界中…（该边界亦缩短）'.",
+    "fidelity-of-the-classical-statements does_not_show[3].en was shortened from 297 to 239 characters: 'That the gain belongs to classical Chinese, not the name table's discipline: controlled English in that discipline does as well for the authors' family's coder; another family's finds a residual on 60 pairs (fidelity-under-one-discipline).' I used 'does as well' rather than 'matches' because it states what the other record shows: no more referents the Lean lacks than the 經.",
+    "metaethical-core-characterization hypotheses[0].en was shortened from 474 to 417 characters. It keeps 'explicit', to match zh 公开的, and keeps the reading condition in the form the continuation-condition record uses ('where a claim's significance is a formation's continuation', not 'its formation's'). The DF note is unchanged and still accurate.",
+    "own-good-to-reachable-living-significance statement key order: the diagnosis is real but its direction was reversed. At HEAD the statement was {zh, en}, like every other bilingual field in this record, and the DF edit changed it to {en, zh}. I restored {zh, en} with the new text and re-serialized; the diff now shows only the text change.",
+    "chinese-sources-on-the-spine DF note.en: 'proved on both sides proposed' became 'proved on both proposed sides', which matches zh '所拟两面皆已证'.",
+    "fidelity-coders-on-own-and-other-texts does_not_show[1].en reworded: 'Which coder is miscalibrated on unplanted excess: the faithful texts carry no ground truth, and about half the unplanted count of the coder that lists more is numerals the codebook matches, a description made after the fact.' (224 characters; zh unchanged)",
+    "more-needs-renewers DF note: corrected to say that the first premise's last sentence is replaced by a new second premise stating the checked counterexample, and the any-amounts law. zh: '该末句今由新增之第二条前提代替，后者陈述…'.",
+    "draws-on-a-shared-stock claim: the glossary reserves 'selection' for what goes through couplings, and the statement already says 'combination'. en 'every selection fits' became 'every combination fits', and zh '每一种选取' became '每一种组合'. The single DF note was amended to record this change.",
+    "counting-under-enclosure laws[30].zh was shortened from 225 to 190 characters, within the limit. The content is unchanged and was checked against finite_binding_counting_under_counted, including the last clause ∃ t, 0 < n t ∧ 0 < a t, written as '某步有活跃者且有生起'. The single DF note now also says one law's Chinese text is shortened to its limit."
+   ],
+   "rejected": [
+    {
+     "finding": "own-good-to-reachable-living-significance: the proposed fix to restore the statement keys to {en, zh}",
+     "why": "That order is the edited state, not the original. HEAD had {zh, en}, as every other bilingual field in this record does. Keeping the record's key order means restoring {zh, en}, which is what I did (listed under applied)."
+    }
+   ],
+   "checker": "The check (`python3 -B tools/research/research.py check --ids` with the 14 changed records) exits 1. Its 17 errors are all 'generated view differs', which the brief says to ignore. The only source drift on my records is in files I did not touch: ro-relational-sources/passages.json for chinese-sources-on-the-spine and Becoming/Space.lean for counting-under-enclosure. The lint (`lint --ids`, same 14 records) exits 0 with errors: [] and 21 warnings: length on fields I did not edit, three negation-lead warnings on statements whose wording I kept because it matches the Lean, one status-restatement and two section references. All of these were there before my edits. A check with `--changed-since HEAD` gives only v1-growth warnings and no ratchet failure: growth-constrained-fragmentation validation_scope en 113 to 153 and zh 30 to 50, and metaethical-core-characterization correspondence en 729 to 761. Edited records: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df/theories/becoming/results/records/{market-protected-continuation,market-partial-correction-boundary,market-finite-support-obstruction,recoverable-mediated-change,a-pattern-lasts-through-passing,growth-constrained-fragmentation,fidelity-of-the-classical-statements,metaethical-core-characterization,own-good-to-reachable-living-significance,chinese-sources-on-the-spine,fidelity-coders-on-own-and-other-texts,more-needs-renewers,draws-on-a-shared-stock,counting-under-enclosure}.json. Each was re-serialized with json.dumps(indent=2, ensure_ascii=False) plus a newline and keeps exactly one DF note."
+  }
+ }
+]

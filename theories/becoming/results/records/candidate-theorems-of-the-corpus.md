@@ -5,7 +5,7 @@
 
 `candidate-theorems-of-the-corpus` · **recorded-checked** · theorem · F01 · [record](candidate-theorems-of-the-corpus.json) · [register](../../../../RESULTS.md)
 
-> Of the first batch's 59 candidate theorems of the grammar, 38 hold for every carrier and relation, 15 hold only under a premise, 3 fail; the premises most often needed are double-negation stability and that nothing is its own condition.
+> Of the first batch's 59 candidate theorems of the grammar, 38 hold for every carrier and relation, 15 hold only under a premise, 3 fail, 2 were misclassified and 1 is not expressible; the premises most often needed are double-negation stability and that nothing is its own condition.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -14,7 +14,7 @@
 2. A mark gives its complement a mark; that the complement gives the mark back, for every carrier, is exactly double-negation stability, and holds for a decided two-valued reading. (`Becoming.«有相则非亦有相»`, `Becoming.«相待之还当且仅当双非可还»`, `Becoming.«二值之相待»`)
 3. An occurrence begins under some class and not under another exactly where it is not-not conditioned and is not its own condition; its own condition abides under every class; everything ends under identity exactly where nothing is its own condition. (`Becoming.«定性之判»`, `Becoming.«自缘则常»`, `Becoming.«念念灭当且仅当无自缘»`)
 4. Every condition strictly precedes its result exactly where the net has no cycle, and a cycle of 缘 is one co-present cluster. (`Becoming.«缘先果后当且仅当无环»`, `Becoming.«俱有»`)
-5. The core is never separated at a finite stage; the converse fails in an infinitely branching net, and holds where the relation of no separating stage is itself constant. (`Becoming.«核则不可致诘»`, `Becoming.«致诘不尽»`, `Becoming.«不可致诘而有常则混而为一»`)
+5. The core is never separated at a finite stage; the converse fails in an infinitely branching net, and holds where the class read is symmetric and the relation of no separating stage is itself constant. (`Becoming.«核则不可致诘»`, `Becoming.«致诘不尽»`, `Becoming.«不可致诘而有常则混而为一»`)
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -72,7 +72,8 @@ Aliases: `Becoming.«三法相因待»`, `Becoming.«不可致诘而有常则混
 ### History
 
 - 23 October 2026, board item OU2c (study section 381): the first batch's class-乙 units tested in Lean.
+- 25 October 2026, board item DF (study section 418): the statement gives all five outcomes of the batch (2 misclassified and 1 not expressible added); the fifth law names the symmetry of the class read that its converse takes; the Lean is unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-23T07:22:20+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -25,7 +25,7 @@
 ## Does not show
 
 - That a mutual best response exists in general: the witness has one; where the outcomes open to each depend on the others, a step may have none.
-- A condition within some optimizer's family, where its order registers the condition and the classical commons with a share borne lies; a course of steps and how learners come near a mutual best response.
+- A condition within some optimizer's family, where the condition couples into its order and the classical commons with a share borne lies; a course of steps and how learners come near a mutual best response.
 - That the drain is a harm, or that coupling or a lower capacity is better: no evaluation enters.
 - **Counterexample:** restrained: the first taker takes nothing and the second draws, leaving a unit at the source; it is no mutual best response, whatever the listings (Optimum.TwoTakers.restrained_not_mutual). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 
@@ -48,7 +48,7 @@ Conditions within some optimizer's family, where each bears a share; existence o
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where no optimizer registers the condition: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use.
+The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where the condition couples into no optimizer: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -64,7 +64,7 @@ The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the over
 - related, not a proved adapter: [room-read-off-the-exchange](room-read-off-the-exchange.md). Room read off one step for one optimizing part; this record states several at once.
 - related, not a proved adapter: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). Which dependence a joint draw breaks, with the flows supplied; here the draws of optimizers at a mutual best response are derived.
 - related, not a proved adapter: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). Mutual best responses at every step of a course against a renewal.
-- related, not a proved adapter: [drawers-in-turn-draw-everything](drawers-in-turn-draw-everything.md). With two drawers in turn, each ranking courses, every perfect profile draws everything, the base standing from the first step at what stands at nothing.
+- related, not a proved adapter: [drawers-in-turn](drawers-in-turn.md). Drawers in turn on one law of best response: where two drawers have no floor, every perfect profile is the floor profile and every sequence of revisions reaches it, which with no floor anywhere draws everything.
 
 **Used by:** [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md)
 
@@ -119,7 +119,8 @@ Aliases: `several optimizers drain by their joint capacity`, `a mutual best resp
 - 21 October 2026: added (SG3), several optimizers at a mutual best response: a condition beyond every family falls by their joint capacity, as under one optimizer of that capacity, and restraint is no mutual best response; study section 290.
 - 21 October 2026, SG4: mutual best responses at every step of a course: jointly above the renewal, the optimizers lose it (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.
 - 22 October 2026, SG14: with two drawers in turn, each ranking courses, every perfect profile draws everything (record drawers-in-turn-draw-everything, study section 324). Its laws are unchanged.
+- 25 October 2026, board item DF (study section 418): 'registers' replaced by 'couples into' in the boundary and the correspondence (the glossary's word); the superseded record drawers-in-turn-draw-everything replaced by drawers-in-turn among the related results.
 
 </details>
 
-Documentary review UTC: `2026-10-20T22:59:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:28:37+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

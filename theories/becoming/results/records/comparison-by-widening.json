@@ -14,8 +14,8 @@
     "en": "On level paths, an extension in which every claim counts as living is exactly a widening of what can form, by unfolding Extension there into Widens; with “better” read as widening, C holds for every reading of living, with no axiom; that widening is better is an open warrant."
   },
   "claim": {
-    "zh": "在依存网的水平路径框架（Web.paths）上，主张是（形成，步），一条水平路径实现它恰当在该步接纳该形成。以每个主张都算作活，水平路径 l 对 l′ 的扩展（Extension：实现 l′ 实现的每个主张，并多实现一个）恰是 l 扩大 l′，即包含且超出它（Web.paths_extension_iff_widens）。对 living 的任何读法，扩展都是以每个主张为活的扩展，所以以“更好”读作扩大，C（每个扩展都更好）成立（Web.paths_comparison_widens），不用公理。在延续条件之下，扩大就是保留且增加有意义者（Web.widens_iff_retains_adds，见 significance-retained-within-margin），所以水平路径上由延续条件推出的 C（Web.paths_livingSignificance_comparison，见 one-axiom-yields-g0）是它在意义上的读法。三者是同一个对象，即接纳（Web.paths_one_object）：延续条件是水平路径上以每个主张为活、以从每个立场的意义为相关的生命意义；C 在那里计入每个主张的延伸就是扩大；在条件之下，扩大就是从任一立场保留并增加有意义者。条件定哪些接纳计入；读作扩大的 C 为它们定次序。",
-    "en": "On the frame of a web's level paths (Web.paths), claims are pairs of a formation and a step, and a level path realizes one exactly when it admits the formation at that step. With every claim counting as living, an extension of l′ by l (Extension: realizing every claim l′ realizes, and one more) is exactly l widening l′, including and exceeding it (Web.paths_extension_iff_widens). For any reading of living, an extension is an extension with every claim living, so with “better” read as widening, C, that every extension is better, holds (Web.paths_comparison_widens), with no axiom. Under the continuation condition, widening is retaining and adding what has significance (Web.widens_iff_retains_adds, see significance-retained-within-margin), so the C the continuation condition gives on level paths (Web.paths_livingSignificance_comparison, see one-axiom-yields-g0) is its reading in significance. The three are one object, admission (Web.paths_one_object): the continuation condition is living significance on level paths with every claim living and significance from every standpoint as the relevance, C's extension there with every claim counted is widening, and under the condition widening is retaining and adding what has significance from any standpoint. The condition fixes which admissions count; C read as widening orders them."
+    "zh": "在依存网的水平路径框架（Web.paths）上，主张是（形成，步），一条水平路径实现它恰当在该步接纳该形成。以每个主张都算作活，水平路径 l 对 l′ 的扩展（Extension：实现 l′ 实现的每个主张，并多实现一个）恰是 l 扩大 l′，即包含且超出它（Web.paths_extension_iff_widens）。对 living 的任何读法，扩展都是以每个主张为活的扩展，所以以“更好”读作扩大，C（每个扩展都更好）成立（Web.paths_comparison_widens），不用公理。在延续条件之下，扩大就是保留且增加有意义者（Web.widens_iff_retains_adds，见 significance-retained-within-margin），所以水平路径上由延续条件推出的 C（Web.paths_livingSignificance_comparison，见 continuation-condition-yields-living-significance）是它在意义上的读法。三者是同一个对象，即接纳（Web.paths_one_object）：延续条件是水平路径上以每个主张为活、以从每个立场的意义为相关的生命意义；C 在那里计入每个主张的延伸就是扩大；在条件之下，扩大就是从任一立场保留并增加有意义者。条件定哪些接纳计入；读作扩大的 C 为它们定次序。",
+    "en": "On the frame of a web's level paths (Web.paths), claims are pairs of a formation and a step, and a level path realizes one exactly when it admits the formation at that step. With every claim counting as living, an extension of l′ by l (Extension: realizing every claim l′ realizes, and one more) is exactly l widening l′, including and exceeding it (Web.paths_extension_iff_widens). For any reading of living, an extension is an extension with every claim living, so with “better” read as widening, C, that every extension is better, holds (Web.paths_comparison_widens), with no axiom. Under the continuation condition, widening is retaining and adding what has significance (Web.widens_iff_retains_adds, see significance-retained-within-margin), so the C the continuation condition gives on level paths (Web.paths_livingSignificance_comparison, see continuation-condition-yields-living-significance) is its reading in significance. The three are one object, admission (Web.paths_one_object): the continuation condition is living significance on level paths with every claim living and significance from every standpoint as the relevance, C's extension there with every claim counted is widening, and under the condition widening is retaining and adding what has significance from any standpoint. The condition fixes which admissions count; C read as widening orders them."
   },
   "hypotheses": [
     {
@@ -93,8 +93,8 @@
     {
       "id": "continuation-condition-yields-living-significance",
       "detail": {
-        "zh": "那里以公理为条件，在水平路径上 C 以保留且增加有意义者为“更好”成立（Web.paths_livingSignificance_comparison）；这里不用公理，以扩大为“更好”，公理之下二者相同。",
-        "en": "There, with the axiom as a condition, C holds on level paths with retaining and adding what has significance as “better” (Web.paths_livingSignificance_comparison); here, with no axiom, with widening as “better”, the two being the same under the axiom."
+        "zh": "那里在延续条件之下，在水平路径上 C 以保留且增加有意义者为“更好”成立（Web.paths_livingSignificance_comparison）；这里不用该条件，以扩大为“更好”，在该条件之下二者相同。",
+        "en": "There, under the continuation condition, C holds on level paths with retaining and adding what has significance as “better” (Web.paths_livingSignificance_comparison); here, without the condition, with widening as “better”, the two being the same under it."
       }
     },
     {
@@ -122,8 +122,8 @@
     }
   ],
   "limitations": {
-    "zh": "C 在这里按定义在水平路径框架上成立，“更好”读作扩大；在一般的框架上，或“更好”另作他读时，C 仍是前提。扩大是偏序，混合的部分不被定序，定序需要度量。把扩大称作“更好”的规范根据开放（章节 §8）：还原之后，公理的不变之步成为称生成的空间为好的内容。把扩大读作 Ren 的“更多的未来”与生生是 AI 的读法，依 Ren 的交托采用。不含伦理谓词。",
-    "en": "C holds here by definition on the frame of level paths, with “better” read as widening; on a general frame, or with “better” read otherwise, C remains a premise. Widening is a partial order: mixed parts are not ordered, and ordering them needs a measure. The normative warrant for calling widening “better” is open (chapter section 8): after the reduction, the axiom's step of invariance becomes the content of calling the generative space good. Reading widening as Ren's “more futures” and as 生生 is the AI's reading, adopted on Ren's delegation. No ethical predicate occurs."
+    "zh": "C 在这里按定义在水平路径框架上成立，“更好”读作扩大；在一般的框架上，或“更好”另作他读时，C 仍是前提。扩大是偏序，混合的部分不被定序，定序需要度量。把扩大称作“更好”的规范根据开放（章节 §8）：还原之后，延续条件的不变之步成为称生成的空间为好的内容。把扩大读作 Ren 的“更多的未来”与生生是 AI 的读法，依 Ren 的交托采用。不含伦理谓词。",
+    "en": "C holds here by definition on the frame of level paths, with “better” read as widening; on a general frame, or with “better” read otherwise, C remains a premise. Widening is a partial order: mixed parts are not ordered, and ordering them needs a measure. The normative warrant for calling widening “better” is open (chapter section 8): after the reduction, the continuation condition's step of invariance becomes the content of calling the generative space good. Reading widening as Ren's “more futures” and as 生生 is the AI's reading, adopted on Ren's delegation. No ethical predicate occurs."
   },
   "validation_scope": {
     "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Significance 的 37 项定理、Becoming.Regions 的 26 项定理与 Becoming.Metaethics 的 35 项定理全部空依赖；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §78；尚未经独立审查。",
@@ -439,6 +439,10 @@
     {
       "en": "20 October 2026, R36 (the chapter, once): the canonical chapter was restructured, its 20 October edition frozen in theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md; this record's citations of the old section numbering re-pointed by content (section 6.12 to 6.5). The claim is unchanged.",
       "zh": "2026年10月20日，R36（本章只陈述一次）：规范章节重排，10月20日版冻结于 theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md；本记录对旧节号的引用按内容重指（§6.12 改为 §6.5）。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): The retired 'the axiom' and the former id one-axiom-yields-g0 replaced by the continuation condition and the current id.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役的“公理”与旧编号 one-axiom-yields-g0 改为延续条件与现行编号。"
     }
   ]
 }

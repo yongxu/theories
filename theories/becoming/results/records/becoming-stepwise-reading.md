@@ -25,13 +25,13 @@
 
 - The observables of the web are those of becoming-dependence-dynamics; draws carries no amount.
 - `living` is “active and not undermining” (or its relation-level counterpart) and `related` is participation in a common condition at the events' steps; both are disclosed reading choices, not proved correspondences.
-- The connection result needs a condition in which every living event participates and depends on a correspondence discipline for conditions and participation; the transmission result needs N_rel, whose normative standing this result does not prove.
+- The connection result needs a condition in which every living event participates and depends on a correspondence discipline for conditions and participation; the transmission result needs relational neutrality, whose normative standing this result does not prove.
 - A tenure of dependence must be unbroken: a dependence that lapses for a step and re-forms starts a new tenure, and earlier satisfaction no longer counts (Gap.lapse_starts_afresh). Whether dormancy, absence or seasonal use is represented as continuing dependence is an application duty.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Proves none of self-significance, N, A, C, L or J and binds no position rejecting them.
+- Proves none of self-significance, the two neutralities, A, C, L or the practical commitments and binds no position rejecting them.
 - The whole-run, stepwise and relation-level readings are disclosed reading choices; none is proved to be the right reading of 生生.
 - The readings are relative to a run and include no component of further generation.
 - Tenure, undermining and the stepwise living depend on identity across steps (identity-across-steps): a naming that keeps continuing dependences removes no undermining, and succession can add undermining.
@@ -78,8 +78,8 @@ The stepwise reading reads the relations an event stands in, not its causal cont
   - Output: Webs, keeping and breaking across a step and their exclusivity, static recovery.
   - Input: The definition and comparison of the stepwise reading.
   - Preserved conditions: No added conditions. [Dependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean)
-- **formal-reuse**: [metaethical-core-characterization](metaethical-core-characterization.md). Web.significant_iff_of_common discharges significant_iff's connection premise by Web.connected_of_common; Web.valuing_breaking_reaches uses N_rel's rule transmits.
-  - Output: On a connected whole, G0 ⇔ seed ∧ N_rel ∧ N_std; N_rel's transmission rule.
+- **formal-reuse**: [metaethical-core-characterization](metaethical-core-characterization.md). Web.significant_iff_of_common discharges significant_iff's connection premise by Web.connected_of_common; Web.valuing_breaking_reaches uses the rule of relational neutrality, transmits.
+  - Output: On a connected whole, living significance ⇔ seed ∧ relational neutrality ∧ standpoint neutrality; the transmission rule of relational neutrality.
   - Input: The Valuation given by the stepwise reading, with its connection.
   - Preserved conditions: Standpoints, regions and significance remain supplied; some living event is needed. [Metaethics.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean)
 - **formal-reuse**: [becoming-renewal-reading](becoming-renewal-reading.md). Conditions.stepwise_related proves that with constant dependence the stepwise reading's `related` is that result's Conditions.valuation `related`; Renewable.readings_differ compares with its `living`.
@@ -156,6 +156,7 @@ Aliases: `Becoming.Web.renewing_at_active`, `Becoming.Web.not_renewing_at_of_bro
 - 19 October 2026, R22 (the names of the nineteenth review): BECOMING-UNIFICATION-PLAN.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: BECOMING-UNIFICATION-PLAN.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Labelled.lean, Metaethics.lean, ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Joint.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Labelled.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Metaethics.lean, G0 is LivingSignificance, g0_* livingSignificance_*, Valuation.SelfGood Valuation.SelfSignificance, SecuresPositiveGround SecuresNewContent, the binder positive relevance; the module header is structural; statements unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Dependence.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Dependence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired labels in a hypothesis, a boundary and a dependency named in current terms: N_rel and N_std as relational and standpoint neutrality, G0 as living significance, and N and J as the two neutralities and the practical commitments; the claim is unchanged.
 - 2 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](becoming-stepwise-reading.json).
 
 <a id="earlier-text--早期文本"></a>

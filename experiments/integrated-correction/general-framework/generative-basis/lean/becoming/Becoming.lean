@@ -2417,7 +2417,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   continuation (`«以核为判据则火无续»`). For a class, constancy is exactly closure of the coarse
   net (`«闭合当且仅当有常»`); that every occurrence either begins or has a predecessor is exactly
   excluded middle (`«四相之定当且仅当排中»`). Below every model since board item OU3b:
-  `Becoming.GrammarLaws` imports it, and `Becoming.Frame` imports that.
+  `Becoming.GrammarLaws` imports it, and `Becoming.Frame` imports that. The continuation family
+  imports it directly, read as its instances (`Becoming.Arising`, `Becoming.Change`,
+  `Becoming.Identity`, `Becoming.Persistence`, `Becoming.ContinuedClasses`,
+  `Becoming.PatternPassing`), as do `Becoming.GrammarReadings`, `Becoming.GrammarMap`,
+  `Becoming.GrammarPath` and `Becoming.GrammarTesting`.
 * `Becoming.GrammarReadings` (L0): the corpus's definitions in the grammar. The 墨经's and the
   荀子's 化 are one form, alteration (`«化之二说同形»`), and 化 is the 金师子章's 成坏 along 缘
   (`«化为有缘之成坏»`); the 墨经's 同 is a class where each belongs to one and one only (sufficient,
@@ -2427,7 +2431,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   where a class is constant both ways (`«两向有常则通»`), and constancy one way is not enough
   (`«有常而不通»`); in a net without self-conditioning,
   continuation is neither identity nor mere difference (`«非一非异»`), and the 中论's 「因即為斷滅」
-  holds under identity while the line continues under a coarser class (`«因灭而续»`). A leaf.
+  holds under identity while the line continues under a coarser class (`«因灭而续»`). Imported by
+  `Becoming.GrammarCandidates`.
 * `Becoming.GrammarMap` (L0): the map of generation, keeping and degeneration, read at two
   grains, a fine class of parts and a coarse class of the pattern they make up, and on branches.
   A carrying renewal (`«传»`) continues the pattern while a part begins, an alteration (`«传则异»`,

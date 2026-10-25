@@ -5,7 +5,7 @@
 
 `the-run-classes-and-widening` · **recorded-checked** · theorem · F01 · [record](the-run-classes-and-widening.json) · [register](../../../../RESULTS.md)
 
-> Where only active formations take, a part drawing only on conditions renewed over the run does not narrow, and a consumed dependence met without a part makes a part opening nothing narrow; a part that never arises changes nothing. No class decides alone.
+> Where only active formations take, a part drawing only on conditions the run renews does not narrow, and a consumed dependence met without a part makes a part opening nothing narrow; if only active ones give too, a part inactive at the start that never arises changes nothing. No class decides alone.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -82,6 +82,7 @@ The twentieth review's D2 and F13 asked how a part's class over a run relates to
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [BECOMING-TWENTIETH-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTIETH-REVIEW.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `the run classes and widening`, `整段的类与扩大`, `Becoming.Flow.Balances.not_narrows_of_renewed`, `Becoming.Flow.Balances.narrows_of_consumed`, `Becoming.Flow.Balances.keeps_of_not_arising`
 
@@ -90,6 +91,7 @@ Aliases: `the run classes and widening`, `整段的类与扩大`, `Becoming.Flow
 
 - 20 October 2026: added (R34, D2 and F13 of the twentieth review): the run classes related to widening under named premises, with Preemption and Untaken as boundaries; study section 225.
 - 20 October 2026, R45 (study section 246): two laws added, the class of arising over a run (no member active at the start and none arising: nothing that can form changes; Flow.Balances.keeps_of_not_arising) and its boundary (ArisingDrawer, ArisingGiver: arising decides nothing); the does_not_show item on arising replaced and next updated. Receipt 20261020T093308.742793Z.
+- 25 October 2026, board item DF (study section 418): the statement said a part that never arises changes nothing; the Lean also takes that only active formations give and that the part is inactive at the start, as the law states, and the statement now says so.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-run-classes-and-widening.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -99,4 +101,4 @@ Aliases: `the run classes and widening`, `整段的类与扩大`, `Becoming.Flow
 
 </details>
 
-Documentary review UTC: `2026-10-20T01:01:20+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:52:56+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

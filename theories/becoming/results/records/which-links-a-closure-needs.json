@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T06:01:48+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
-    "en": "A cut leaves every closure as it was exactly where each removed link is bypassed, and a join adds exactly what passes through it. In a world grown by attachment every condition is needed; one added condition frees exactly the grown ones it crosses.",
-    "zh": "切断使每个闭包保持原样，恰当每条被去掉的联系被绕过；连上一条联系，恰好添上经它通过的。在依附式生长的世界中，每个条件都被需要；多一个条件，恰使它跨过的生长出的条件不再被需要。"
+    "en": "A cut leaves every closure as it was exactly where each removed link is bypassed, and a join adds exactly what passes through it. In a world grown by attachment every condition a formation takes part in is needed; one added condition frees exactly the grown ones it crosses.",
+    "zh": "切断使每个闭包保持原样，恰当每条被去掉的联系被绕过；连上一条联系，恰好添上经它通过的。在依附式生长的世界中，每个有形成参与的条件都被需要；多一个条件，恰使它跨过的生长出的条件不再被需要。"
   },
   "laws": [
     {
@@ -426,6 +426,10 @@
     {
       "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: ClosedUnder, WithinClosure to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：ClosedUnder, WithinClosure to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement names the conditions the law covers, every condition a formation takes part in, as the Lean states, instead of every condition. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明规律所及的条件，即每个有形成参与的条件，按 Lean 的陈述，不再写作每个条件。规律未变。"
     }
   ],
   "text_versions": [

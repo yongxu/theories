@@ -8,10 +8,10 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T06:36:45+00:00",
+  "reviewed_at_utc": "2026-10-25T14:25:00+00:00",
   "statement": {
-    "en": "Under the Claude coder, English written as full statements in the 中华本's name-table discipline introduces no more referents the Lean lacks than the 經 (經 − CE +0.023, CI [-0.010, +0.055]); the GPT coder on 60 pairs leaves a residual for the 經 (-0.27); LLM-coded, provisional.",
-    "zh": "在 FC1 之 270 條、672 对上，以中华本之纪律（每名之所取、所不带、同样之锚）写成之完整英文陈述，依 Claude 编码者，所引入之 Lean 所无之所指不多于经（差 +0.023）；GPT 编码者于 60 对上仍见经略少（−0.27），而二者于此不一致；大模型编码，暂定。"
+    "en": "Under the coder of the authors' model family, full English statements in the 中华本's name-table discipline introduce no more referents the Lean lacks than the 經 (經 − CE +0.023, CI [-0.010, +0.055]); a coder of another family on 60 pairs leaves a residual for the 經 (-0.27); LLM-coded, provisional.",
+    "zh": "在 FC1 之 270 條、672 对上，以中华本之纪律（每名之所取、所不带、同样之锚）写成之完整英文陈述，依与作者同族之编码者，所引入之 Lean 所无之所指不多于经（差 +0.023）；另一族之编码者于 60 对上仍见经略少（−0.27），而二者于此不一致；大模型编码，暂定。"
   },
   "hypotheses": [
     {
@@ -21,8 +21,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That classical Chinese adds nothing beyond the discipline: the GPT coder leaves a residual for the 經, and the two coders do not agree on X where both coded.",
-      "zh": "古汉语于纪律之外无所加：GPT 编码者仍见经略少，二编码者于共编之处在 X 上不一致。",
+      "en": "That classical Chinese adds nothing beyond the discipline: a coder of another model family leaves a residual for the 經, and the two coders do not agree on X where both coded.",
+      "zh": "古汉语于纪律之外无所加：另一族之编码者仍见经略少，二编码者于共编之处在 X 上不一致。",
       "kind": "scope"
     },
     {
@@ -145,6 +145,10 @@
     {
       "en": "23 October 2026: added (ZE); study section 377.",
       "zh": "2026年10月23日：新增（ZE）；研究第 377 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the coders named by model family (the authors' and another) rather than by product in the statement and boundaries, the identities staying in the evidence.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述与边界中之编码者以模型族（作者之族与另一族）称之，不以产品名称之，其身份仍在证据中。"
     }
   ]
 }

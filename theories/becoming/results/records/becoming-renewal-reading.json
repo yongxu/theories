@@ -27,8 +27,8 @@
       "en": "`living` is the whole-run relational reading (active and not consuming) and `related` is participation in a common condition; both are disclosed reading choices, not proved correspondences."
     },
     {
-      "zh": "连通的结论需要一个所有活的形成都参与的共同条件，并依赖关于什么算条件、什么算参与的对应纪律；传递结论需要 N_rel，其规范地位不由本结果证明。",
-      "en": "The connection result needs a condition in which every living formation participates, and depends on a correspondence discipline for what counts as a condition and as participation; the transmission result needs N_rel, whose normative standing this result does not prove."
+      "zh": "连通的结论需要一个所有活的形成都参与的共同条件，并依赖关于什么算条件、什么算参与的对应纪律；传递结论需要关系中立，其规范地位不由本结果证明。",
+      "en": "The connection result needs a condition in which every living formation participates, and depends on a correspondence discipline for what counts as a condition and as participation; the transmission result needs relational neutrality, whose normative standing this result does not prove."
     }
   ],
   "correspondence": {
@@ -102,13 +102,13 @@
       "id": "metaethical-core-characterization",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "significant_iff_of_common 以 connected_of_common 满足 significant_iff 的连通前提；valuing_consumption_reaches 使用 N_rel 的规则 transmits。",
-        "en": "significant_iff_of_common discharges significant_iff's connection premise by connected_of_common; valuing_consumption_reaches uses N_rel's rule transmits."
+        "zh": "significant_iff_of_common 以 connected_of_common 满足 significant_iff 的连通前提；valuing_consumption_reaches 使用关系中立的规则 transmits。",
+        "en": "significant_iff_of_common discharges significant_iff's connection premise by connected_of_common; valuing_consumption_reaches uses relational neutrality's rule transmits."
       },
       "interface": {
         "output": {
-          "zh": "连通整体上 G0 ⇔ 种子 ∧ N_rel ∧ N_std；N_rel 的传递规则。",
-          "en": "On a connected whole, G0 ⇔ seed ∧ N_rel ∧ N_std; N_rel's transmission rule."
+          "zh": "连通整体上生生之意义 ⇔ 种子 ∧ 关系中立 ∧ 立场中立；关系中立的传递规则。",
+          "en": "On a connected whole, living significance ⇔ seed ∧ relational neutrality ∧ standpoint neutrality; relational neutrality's transmission rule."
         },
         "input": {
           "zh": "由运行的关系读法给出的 Valuation 及其连通。",
@@ -133,8 +133,8 @@
     {
       "id": "renewing-consuming-formation",
       "detail": {
-        "zh": "该结果的窄定律类与 G0 接口独立于本读法；本结果不建立二者间的转换。",
-        "en": "That result's narrower law class and G0 interface are independent of this reading; no conversion between them is established."
+        "zh": "该结果的窄定律类与生生之意义接口独立于本读法；本结果不建立二者间的转换。",
+        "en": "That result's narrower law class and living-significance interface are independent of this reading; no conversion between them is established."
       }
     },
     {
@@ -183,8 +183,8 @@
     }
   ],
   "limitations": {
-    "zh": "不证明 S0、N、A、C、L 或 J，不约束拒绝它们的立场。界的统一是组织性的，不是新数学；ContinuationRenewal 的良基形式不由该原则导出。关系读法与共同参与关系是公开的读法选择；它们是否为生生的正确读法、共同条件的经验对应，都不在本结果内。条件的对应纪律只对逐步读法陈述（condition-correspondence-discipline）；读法相对于一次运行，不含继续生成的成分。形成的类（RenewingIn、ConsumingIn）依赖跨步的同一，条件的类不依赖（identity-across-steps）。",
-    "en": "Proves none of S0, N, A, C, L or J and binds no position rejecting them. The unification of bounds is organizational, not new mathematics; ContinuationRenewal's well-founded form is not derived from the principle. The relational reading and the common-participation relation are disclosed reading choices; whether they are the right reading of 生生, and the empirical correspondence of common conditions, lie outside this result. The correspondence discipline for conditions is stated for the stepwise reading only (condition-correspondence-discipline); the reading is relative to a run and includes no component of further generation. A formation's class (RenewingIn, ConsumingIn) depends on identity across steps, while a condition's class does not (identity-across-steps)."
+    "zh": "不证明自身意义、关系与立场中立、A、C、L 或 J1–J4，不约束拒绝它们的立场。界的统一是组织性的，不是新数学；ContinuationRenewal 的良基形式不由该原则导出。关系读法与共同参与关系是公开的读法选择；它们是否为生生的正确读法、共同条件的经验对应，都不在本结果内。条件的对应纪律只对逐步读法陈述（condition-correspondence-discipline）；读法相对于一次运行，不含继续生成的成分。形成的类（RenewingIn、ConsumingIn）依赖跨步的同一，条件的类不依赖（identity-across-steps）。",
+    "en": "Proves none of self-significance, both neutralities, A, C, L or J1–J4; binds none rejecting them. The unification of bounds is organizational, not new mathematics; ContinuationRenewal's well-founded form is not derived from the principle. The relational reading and the common-participation relation are disclosed reading choices; whether they are the right reading of 生生, and the empirical correspondence of common conditions, lie outside this result. The correspondence discipline for conditions is stated for the stepwise reading only (condition-correspondence-discipline); the reading is relative to a run and includes no component of further generation. A formation's class (RenewingIn, ConsumingIn) depends on identity across steps, while a condition's class does not (identity-across-steps)."
   },
   "validation_scope": {
     "zh": "2026-10-14：Becoming.Bridge 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Renewal 6 项定理与 Becoming.Metaethics 读法一节 6 项定理及桥接层的 living_iff_relational 全部空依赖。控制例“有共同条件的运行在关系读法下连通”不计为新定理；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致。作者反审见整合文档 §4、§6；另一 agent（Claude Opus 5.5，未参与撰写）作了独立审查（BECOMING-RENEWAL-READING-REVIEW.md），其更正在整合文档 §7 处理；第四次独立审查（BECOMING-P9B-P10-P11-REVIEW.md）更正对应中的一句，见 §15；第五次独立审查（BECOMING-P11B-P12-REVIEW.md）要求注明形成的类对跨步同一的依赖，见 §19；第六次独立审查（BECOMING-P13-P14-P12B-REVIEW.md）接受这一注明，见 §22。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。 P89（2026-10-13）：Bridge 的旧声明保持，四项新增适配已实查且公理报告为空；本记录的 Bridge 绑定转到本次冻结回执，其余既有证明保留各自原回执，不将适配另计为独立成果。",
@@ -578,6 +578,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and RenewalComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Frame, Becoming.Labelled, Becoming.Metaethics, Becoming.Ranking, Becoming.Renewal, Becoming.ValuationFrames and RelationalRenewal). The retired modules' content is also stated in Becoming.ActiveReading, which this record does not cite with declarations. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and RenewalComparison）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Frame, Becoming.Labelled, Becoming.Metaethics, Becoming.Ranking, Becoming.Renewal, Becoming.ValuationFrames and RelationalRenewal）。退役模块的内容也陈述于 Becoming.ActiveReading，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels replaced by the current terms in a hypothesis, a dependency, a related detail and the limitations: G0, S0, N_rel and N_std by living significance, self-significance and relational and standpoint neutrality, and in the limitations S0, N and J by self-significance, both neutralities and J1–J4, its clause on rejecting positions reworded to keep the field within its cap. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条前提、一项依赖、一条相关说明与局限中的退役标签改为现行术语：G0、S0、N_rel、N_std 改为生生之意义、自身意义、关系中立与立场中立；局限中 S0、N、J 改为自身意义、关系与立场中立、J1–J4。规律未变。"
     }
   ]
 }

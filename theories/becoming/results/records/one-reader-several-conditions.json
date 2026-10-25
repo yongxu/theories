@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T13:11:37+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
-    "en": "A schedule keeps a condition within its margin exactly where it reads it within its window; one reader carries windows whose reciprocals sum to at most one; below one need not suffice (windows 2, 3, M); one half suffices, by a dyadic code.",
-    "zh": "日程恰在窗口内读到一个条件时才使它保持在余量之内；一个读者承载的窗口倒数之和至多为一；低于一未必足够（窗口 2、3、M）；二分之一足够，由二进码构成。"
+    "en": "A schedule keeps a condition within its margin exactly where it reads it within its window; one reader's windows for conditions distinct by name have reciprocals summing to at most one; below one need not suffice (windows 2, 3, M); one half suffices where whole weights certify it, by a binary code.",
+    "zh": "日程恰在窗口内读到一个条件时才使它保持在余量之内；一个读者承载的、按名相异之诸条件的窗口倒数之和至多为一；低于一未必足够（窗口 2、3、M）；有整数权重为证时二分之一足够，由二进码构成。"
   },
   "laws": [
     {
@@ -56,8 +56,8 @@
       ]
     },
     {
-      "en": "Half a reader suffices: two schedules interleaved read within twice their windows; a binary code reads a condition at depth k within 2^k; under Kraft's inequality one code reads every item; so windows with reciprocals summing to at most one half are read by one schedule and kept.",
-      "zh": "半个读者即足够：两个交织的日程在两倍窗口内读到；二进码在 2^k 步内读到深度 k 的条件；满足 Kraft 不等式时一个码读到每一项；所以窗口倒数之和至多为二分之一时，一个日程读到并保持全部。",
+      "en": "Half a reader suffices: two schedules interleaved read within twice their windows; a binary code reads a condition at depth k within 2^k; under Kraft's inequality one code reads every item; so positive windows with whole weights q, 2^(D+1) <= q a each and totalling at most 2^D (reciprocals at most one half), fitting their margins, are read by one schedule and kept.",
+      "zh": "半个读者即足够：两个交织的日程在两倍窗口内读到；二进码在 2^k 步内读到深度 k 的条件；满足 Kraft 不等式时一个码读到每一项；所以窗口为正、有整数权重 q 各满足 2^(D+1) <= q a 且其和至多为 2^D（倒数至多为二分之一）、并合于余量时，一个日程读到并保持全部。",
       "declarations": [
         "Becoming.ReadingSchedule.weave",
         "Becoming.ReadingSchedule.weave_left",
@@ -301,7 +301,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b"
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
@@ -342,6 +342,10 @@
     {
       "en": "21 October 2026: added (RS1), after the oversight check left the reader's capacity open: keeping is reading within the window, and what one reader can keep; study section 310.",
       "zh": "2026年10月21日：新增（RS1），监督检查留下读者容量的问题之后：保持即在窗口内读到，以及一个读者能保持什么；研究第 310 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement and the half law say what the Lean proves: one half suffices where whole weights certify it (positive windows, weights q with 2^(D+1) <= q a, totalling at most 2^D, margins fitting), which need not exist for every list of windows with reciprocals at most one half; the statement also names the conditions distinct by name. No law changed in its declarations.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述与半数规律只说 Lean 所证：有整数权重为证时二分之一足够（窗口为正、权重 q 满足 2^(D+1) <= q a、其和至多为 2^D、合于余量），而窗口倒数之和至多为二分之一的每个列表未必有这样的权重；陈述也写明诸条件按名相异。规律的声明未变。"
     }
   ]
 }

@@ -5,7 +5,7 @@
 
 `fidelity-coders-on-own-and-other-texts` · **reviewed-scoped** · assessment · F01 · [record](fidelity-coders-on-own-and-other-texts.json) · [register](../../../../RESULTS.md)
 
-> On 240 English statements written and blind-coded by Claude and GPT, neither coder under-detects referents planted in its own text (interaction +0.02, CI [-0.05, +0.08]); GPT lists more excess in faithful texts (+0.16, CI [+0.08, +0.24]); LLM-coded, provisional.
+> On 240 English statements written and blind-coded by two model families, no negative combined author-coder interaction was detected for referents planted in the coder's own text (+0.02, CI [-0.05, +0.08]); one family's coder lists more excess in faithful texts (+0.16); LLM-coded, provisional.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -16,7 +16,7 @@
 ## Does not show
 
 - That the authoring model has no blind spot for its own controlled classical code: the texts are English under no name table, and the 經 case is untested.
-- That the GPT coder over-reads rather than the Claude coder under-detecting unplanted excess: the faithful texts carry no ground truth; about half of GPT's unplanted count is numerals the codebook matches, described after the fact.
+- Which coder is miscalibrated on unplanted excess: the faithful texts carry no ground truth, and about half the unplanted count of the coder that lists more is numerals the codebook matches, a description made after the fact.
 - Each coder's self effect apart: two families identify only their sum, and a knowing plant is not an unnoticed slip.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -70,7 +70,8 @@ Aliases: `SC1`, `source check`, `self-detection of excess referents`, `作者盲
 ### History
 
 - 23 October 2026: added (SC1); study section 376.
+- 25 October 2026, board item DF (study section 418): the statement said neither coder under-detects its own plants; it now says what the test shows, that no negative combined author-coder interaction was detected (the two families identify only the sum of their self effects); the coders named by model family rather than by product in the statement and boundaries, the identities staying in the evidence.
 
 </details>
 
-Documentary review UTC: `2026-10-23T06:07:54+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:25:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

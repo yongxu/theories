@@ -8,7 +8,11 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-14T09:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "en": "A practice round of attempt, response, revision and tested retry completes exactly when the worker is present and so is a rostered reviewer, not the worker, whose recorded method answers as the context does; it then only records the review, installs that method in the worker and completes the trial.",
+    "zh": "尝试、回应、修订与经检验之重试的一轮实践完成，恰当工作者在场、另一在场之在册审查者所记之做法应答当前处境；完成后记下审查、把该做法装入工作者、完成试验，别无改变。"
+  },
   "claim": {
     "zh": "实践机器是一条部分律：它的轨迹恰是其完成的运行。门控改变之律的实例：只有修订改变记录的做法，只有组织采纳改变规则，所以每段不含它们的进程保持两者。一轮实践，对每个状态：审查者与工作者的一轮（尝试、回应、修订、经检验的重试）完成，恰当工作者在场、审查者是在场的在册者且不是工作者、审查者所记的做法应答当前处境；完成后记下审查、把处境的做法装入工作者、完成试验，别无改变。所以工作者此后已受训，受训的审查者无需再检，受训沿每段不含修订、回到原处境的进程保持。完整历史的三轮是实例；步定义是该机器自身的，其间的接纳与交接在该历史上检查。在明示二方法任务中，实际尝试与回应形成做法修订；成功重试产生既有程序所需审查关系，授权接纳后的参与者可回应下一次实践，并在最初回应者离开后继续形成新的参与关系。",
     "en": "The practice machine is a partial law: its traces are exactly its completed runs. Instances of the gated-change law: only revision changes the recorded methods and only an organizational adoption changes the rule, so every course without them keeps both. A practice round, for every state: the round of attempt, response, revision and tested retry by a reviewer and a worker completes exactly when the worker is present and the reviewer is a present roster member other than the worker whose recorded method answers as the current context does; it then records the review, installs the context’s method in the worker, completes the trial and changes nothing else. So the worker is then trained, a trained reviewer needs no further check, and training is kept along every course without revision that returns to the context. The three rounds of the complete history are instances; the step definitions are the machine’s own, and the enrollments and handoff between the rounds are checked on that history. Within the declared two-method task, actual attempts and responses form a revised procedure. A successful retry produces the review relation consumed by the existing admission process; admitted participation enables later response and formation of further participation after the initial reviewer leaves."
@@ -27,7 +31,7 @@
     "zh": "同一状态历史中的尝试、回应、修订、检验及认可关系分化；配置是局部可执行做法，不能当成人类理解的完整模型。原始群体学习与换人研究仅为有限经验根据，并非该历史的实证复现。 修订同时读取先前实际结果和回应，核对后保留或改变做法；二方法内的等价性已查。",
     "en": "Attempt, response, revision, testing and recognition differentiate within one state history. Configuration is a local executable procedure, not a full model of human understanding. Primary group-learning and turnover studies provide bounded empirical motivation, not reproduction of this exact history. Revision reads the earlier actual result together with the response, retaining or changing the procedure after comparison; equivalence within the two-method family is checked."
   },
-  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointPracticeContinuation.lean",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
   "aliases": [
     "JointPracticeContinuation.complete_history_is_one_trace",
     "JointPracticeContinuation.retry_produces_existing_review",
@@ -213,6 +217,10 @@
     {
       "en": "2026-10-20: 20 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/11f32a1cb81d7291/joint-practice-forms-continuation.json and in git.",
       "zh": "2026-10-20：20 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/11f32a1cb81d7291/joint-practice-forms-continuation.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added (a practice round completes exactly where the worker is present and so is a rostered reviewer, not the worker, whose recorded method answers as the context does, and then changes only the review, the worker's method and the trial); the canonical source is the module holding the round law, the earlier module kept as a proof reference; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（一轮实践恰在工作者在场、另一在场之在册审查者所记之做法应答当前处境时完成，此后只改变审查、工作者之做法与试验）；规范来源改为持有该轮实践律的模块，原模块保留为证明引用；主张不变。"
     }
   ]
 }

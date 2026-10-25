@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T15:11:57+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
     "zh": "在嵌套的形成区域上比较，区域越小其外越多，整体之外什么都没有。清除者每步活跃且被支持，在它与供给其资源的来源之内不关闭任何东西，从第二步起在其外关闭栖居者。",
     "en": "Compared over nested regions of formations, the smaller the region the more lies beyond it, and nothing lies beyond the whole. The clearer, active and supported at every step, closes nothing within itself and the source feeding its resource, and from step two on closes the dweller beyond them."
@@ -140,8 +140,8 @@
     "en": "Compare regions with dependence step by step and in temporal order; model how a center forms and represents a region."
   },
   "correspondence": {
-    "zh": "Ren 关于层级写道：“i think it should be the whole, and a weaker version is within the system that one is in, then the self. not saying this is what life does, but what's good for being generative, and the self is a cognitive model which can not justify itself without some sort of \"belief\"”。作者先前说只有不退化的动力学能无限延续，并在对话中更正：这对整体与形成自身的条件成立，对每个部分不成立，搭便车者是反例。Clearing.loses_beyond 就是这个反例的形式：清除者在其依存之内一直延续，在其外关闭栖居者。作者的读法（AI 论证，依 Ren 的交托采用）：形成的区域读作自身、所在的系统与整体；区域越小其外越多，给出 Ren 的次序——整体、系统、自身——按判据的强弱排列，不加公理；整体之外什么都没有，所以对整体，延续与不退化重合。这里的整体是一个网中全部形成的区域；按 Ren 确认的第二项读法，实际的整体从不是任何中心对它的模型，从不被完全表示。读法与名称是 AI 的。",
-    "en": "Of levels Ren wrote: “i think it should be the whole, and a weaker version is within the system that one is in, then the self. not saying this is what life does, but what's good for being generative, and the self is a cognitive model which can not justify itself without some sort of \"belief\"”. The author had said that only dynamics that do not degenerate can continue indefinitely, and corrected this in the conversation: it holds for the whole and for a formation's own conditions, not for every part, with a free rider as the counterexample. Clearing.loses_beyond is that counterexample in form: the clearer continues within its dependence and closes the dweller beyond it. The author's reading (an AI argument, adopted on Ren's delegation): regions of formations read as the self, the system one is in and the whole; that the smaller the region, the more lies beyond it gives Ren's order, whole, system, self, as an order of the criteria by strength, with no axiom; nothing lies beyond the whole, so for the whole continuing and not degenerating coincide. The whole here is the region of all formations of a web; by Ren's second confirmed reading the actual whole is never any center's model of it and is never fully represented. The reading and the names are the AI's."
+    "zh": "Ren 关于层级写道：“i think it should be the whole, and a weaker version is within the system that one is in, then the self. not saying this is what life does, but what's good for being generative, and the self is a cognitive model which can not justify itself without some sort of \"belief\"”。AI 先前说只有不退化的动力学能无限延续，并在对话中更正：这对整体与形成自身的条件成立，对每个部分不成立，搭便车者是反例。Clearing.loses_beyond 就是这个反例的形式：清除者在其依存之内一直延续，在其外关闭栖居者。读法（AI 的论证，依 Ren 的交托采用）：形成的区域读作自身、所在的系统与整体；区域越小其外越多，给出 Ren 的次序——整体、系统、自身——按判据的强弱排列，不加公理；整体之外什么都没有，所以对整体，延续与不退化重合。这里的整体是一个网中全部形成的区域；按 Ren 确认的第二项读法，实际的整体从不是任何中心对它的模型，从不被完全表示。读法与名称是 AI 的。",
+    "en": "Of levels Ren wrote: “i think it should be the whole, and a weaker version is within the system that one is in, then the self. not saying this is what life does, but what's good for being generative, and the self is a cognitive model which can not justify itself without some sort of \"belief\"”. The AI had said that only dynamics that do not degenerate can continue indefinitely, and corrected this in the conversation: it holds for the whole and for a formation's own conditions, not for every part, with a free rider as the counterexample. Clearing.loses_beyond is that counterexample in form: the clearer continues within its dependence and closes the dweller beyond it. A reading (the AI's argument, adopted on Ren's delegation): regions of formations read as the self, the system one is in and the whole; that the smaller the region, the more lies beyond it gives Ren's order, whole, system, self, as an order of the criteria by strength, with no axiom; nothing lies beyond the whole, so for the whole continuing and not degenerating coincide. The whole here is the region of all formations of a web; by Ren's second confirmed reading the actual whole is never any center's model of it and is never fully represented. The reading and the names are the AI's."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
   "aliases": [
@@ -502,6 +502,10 @@
     {
       "en": "2026-10-20: 71 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/76ddb99da5d6935a/loss-beyond-a-region.json and in git.",
       "zh": "2026-10-20：71 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/76ddb99da5d6935a/loss-beyond-a-region.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in the correspondence \"the author's reading (an AI argument …)\" now reads \"a reading (the AI's argument …)\", and \"the author had said\" (the AI) now \"the AI had said\", keeping the AI label; Ren's quoted words and the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证……）”改为“读法（AI 的论证……）”，“作者先前说”（指 AI）改为“AI 先前说”，保留 AI 标签；Ren 的原话与规律不变。"
     }
   ],
   "text_versions": [

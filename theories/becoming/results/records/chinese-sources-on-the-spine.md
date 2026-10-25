@@ -27,6 +27,11 @@
 
 1. What the map found, the six corrections and the seven gaps. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#207-the-chinese-sources-on-the-spine-ro)
 2. The first gap closed: a level held from both sides settles exactly where it does not overshoot, and read late it needs a band growing with the lateness (two-sided-regulation-and-late-reading). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#214-a-level-held-from-both-sides-and-a-level-read-late-rg)
+3. The second gap closed: codes formed between formations (a-code-formed-between-formations). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#210-a-code-formed-between-formations-sc)
+4. The third gap closed: capture through the rule (capture-through-the-rule). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#213-capture-through-the-rule-rc)
+5. The seventh gap closed: what of the arrangements of the 傳 is a law (hexagram-arrangements-and-laws). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#209-what-of-the-arrangements-of-the-傳-is-a-law-y5)
+6. Tolerance across laws: more tolerance gives no less at every step (tolerance-monotone-across-laws); from total withholding, giving needs a formation tolerating no fewer than it waits on (restoring-giving-from-the-worst-start). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#338-short-laws-the-classical-texts-ask-for-zg1)
+7. Division across several conditions: a sufficient condition, division by exclusive footprints (division-by-exclusive-footprints). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#342-junctures-within-the-count-reading-through-a-pool-division-by-exclusive-footprints-support-passed-on-zg5)
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -38,7 +43,7 @@ Canonical source: [CHINESE-SOURCES-AND-BECOMING.md](../../history/CHINESE-SOURCE
 <a id="next--下一步"></a>
 ## Next
 
-Three gaps, each to be claimed before it is written: a graded order by closure level; division across several conditions; tolerance compared across laws.
+The Hall-type existence condition for division across several conditions; whether a graded order by closure level can be a law, and which part of graded concern it would keep.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -85,6 +90,7 @@ Aliases: `the Chinese sources on the spine`, `中国思想诸传统在脊柱上`
 - 19 October 2026, R22 (the names of the nineteenth review): CHINESE-SOURCES-AND-BECOMING.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: CHINESE-SOURCES-AND-BECOMING.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: passages.json, rebuilt: the declarations and the names in the readings follow the R30 table, each so corrected passage marked; CHINESE-SOURCES-AND-BECOMING.md, names follow the R30 rename table; the passage tables are the rebuilt map. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 22 October 2026, ZHK (the five kinds the 脉络 map decided, decision D62): four passages read again by the 脉络 map as the same structure, and judged exact scope there, changed from agreement to exact scope through build_passages.py FIXES, each reading rewritten from the 脉络 entries to say where the claim holds: 荀子「有化而无别，谓之一实」 (identity across a step is fixed by conservation exactly where nothing else stands at the relatum's level after it; elsewhere a continuation must be chosen, World.balanced_reidentify_iff_alike added), 孙子 吴越同舟 (the common dependence agrees; the general who makes them act as one is a single centre; Flow.mutuallyDependent_of_common and mutual-dependence-and-its-pace added), 杂阿含「此有故彼有」 (the sufficient direction the spine does not give) and 老子「柔弱者生之徒」 (from total withholding, giving needs a formation sparing all it waits on; Tolerance.gives_needs_sparing and Tolerance.total_stays added). Counts 95/94/59 become 91/98/59; passages.json rebuilt, CHINESE-SOURCES-AND-BECOMING.md tables spliced and its counts, the 兵家 and 佛教 paragraphs and section 10 follow; validation scope updated. The claim is unchanged; four readings narrow to their scope.
+- 25 October 2026, board item DF (study section 418): next step and progress brought to the gaps' status: the second, third and seventh gaps closed, tolerance across laws proved on both proposed sides, and a sufficient condition for division across several conditions; what remains is the Hall-type existence condition and whether the graded order by closure level can be a law.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](chinese-sources-on-the-spine.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -94,4 +100,4 @@ Aliases: `the Chinese sources on the spine`, `中国思想诸传统在脊柱上`
 
 </details>
 
-Documentary review UTC: `2026-10-19T13:17:43+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:48:32+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

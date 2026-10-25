@@ -1,0 +1,37 @@
+@Becoming.FinerTraces.of_mem_joinMap : ∀ {α : Type u_1} {β : Type u_2} {g : α → List β} {b : β} {l : List α},
+  b ∈ Becoming.joinMap g l → ∃ a, a ∈ l ∧ b ∈ g a
+@Becoming.FinerTraces.lt_of_mem_upto : ∀ {n k : Nat}, k ∈ Becoming.Undecided.upto n → k < n
+@Becoming.FinerTraces.of_mem_openSteps : ∀ {S : Type u_1} {A : Type u_2} {moves : List A} {all : List S} {p : A × S},
+  p ∈ Becoming.openSteps moves all → p.fst ∈ moves ∧ p.snd ∈ all
+@Becoming.FinerTraces.of_mem_finerSteps : ∀ {S : Type u_1} {A : Type u_2} {weight : S → A → S → Nat} {moves : List A}
+  {all : List S} {s : S} {x : A × S × Nat},
+  x ∈ Becoming.Situations.finerSteps weight moves all s →
+    (x.fst ∈ moves ∧ x.snd.fst ∈ all) ∧ x.snd.snd < weight s x.fst x.snd.fst
+@Becoming.FinerTraces.mem_finerSteps : ∀ {S : Type u_1} {A : Type u_2} {weight : S → A → S → Nat} {moves : List A}
+  {all : List S} {s : S} {x : A × S × Nat},
+  x.fst ∈ moves →
+    x.snd.fst ∈ all → x.snd.snd < weight s x.fst x.snd.fst → x ∈ Becoming.Situations.finerSteps weight moves all s
+@Becoming.FinerTraces.mem_finer_iff : ∀ {S : Type u_1} {A : Type u_2} (weight : S → A → S → Nat) (moves : List A)
+  (all : List S) (n : Nat) (s : S) (h : List (A × S × Nat)),
+  h ∈ Becoming.Situations.finer weight moves all n s ↔
+    h.length = n ∧
+      (∃ t, Generative.Trace (Becoming.Situations.finerLaw weight) s h t) ∧
+        ∀ (x : A × S × Nat), x ∈ h → x.fst ∈ moves ∧ x.snd.fst ∈ all
+@Becoming.FinerTraces.trace_forget : ∀ {S : Type u_1} {A : Type u_2} (weight : S → A → S → Nat) {s t : S}
+  {h : List (A × S × Nat)},
+  Generative.Trace (Becoming.Situations.finerLaw weight) s h t →
+    Generative.Trace (Becoming.FinerTraces.supportLaw weight) s (List.map Prod.fst h) t
+@Becoming.FinerTraces.trace_lift : ∀ {S : Type u_1} {A : Type u_2} (weight : S → A → S → Nat) {s t : S} {as : List A},
+  Generative.Trace (Becoming.FinerTraces.supportLaw weight) s as t →
+    ∃ h, List.map Prod.fst h = as ∧ Generative.Trace (Becoming.Situations.finerLaw weight) s h t
+Becoming.FinerTraces.nonzero_iff : ∀ (k : Nat), Becoming.nonzero k = true ↔ 0 < k
+@Becoming.FinerTraces.finer_exists_iff : ∀ {S : Type u_1} {A : Type u_2} (weight : S → A → S → Nat) {moves : List A}
+  {all : List S},
+  (∀ (a : A), a ∈ moves) →
+    (∀ (s : S), s ∈ all) →
+      ∀ (n : Nat) (s : S),
+        Becoming.nonzero (Becoming.Situations.finer weight moves all n s).length = true ↔
+          ∃ as t, as.length = n ∧ Generative.Trace (Becoming.FinerTraces.supportLaw weight) s as t
+Becoming.FinerTraces.two_values_mem_iff : ∀ (p q n : Nat) (s : Bool) (h : List (Unit × Bool × Nat)),
+  h ∈ Becoming.Situations.finer (Becoming.Typicality.stepWeight p q) [()] [true, false] n s ↔
+    h.length = n ∧ ∃ t, Generative.Trace (Becoming.Situations.finerLaw (Becoming.Typicality.stepWeight p q)) s h t

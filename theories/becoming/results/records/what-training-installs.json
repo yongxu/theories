@@ -463,7 +463,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
       "role": "proof",
-      "sha256": "fa25d3cfc8c2439f369d24149f6d003a7419a52179fefafecb7ed4fc84907952"
+      "sha256": "ef82273d1887b8557387c6056390326f952be0a7d7dd1a29cd4863a80663dff8"
     },
     {
       "path": "experiments/commons-outrun/README.md",

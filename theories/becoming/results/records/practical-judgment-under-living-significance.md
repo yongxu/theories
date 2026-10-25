@@ -20,7 +20,7 @@ Living significance with the explicit practical commitments supports preservatio
 <a id="conditions--条件"></a>
 ## Conditions
 
-- The G0 positive-significance interface, folded into significance in the current unified structure rather than added as another axiom. J1–J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and are not warranted by formal definitions.
+- Living significance is a premise, a condition stated and not asserted; under the continuation condition it is a theorem, adding no premise beyond that condition. J1–J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and are not warranted by formal definitions.
 - Correspondence E for actual classifications, valid undertakings, feasibility and authority.
 
 <a id="does-not-show--未表明"></a>
@@ -134,6 +134,7 @@ Aliases: `Practical judgment G0/J1–J4`, `Becoming.Judgment.better_iff_betterAt
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Return.lean (now Restoration.lean). Re-pointed after reading the change: Restoration.lean, the module Return renamed Restoration; Web.Returns and Web.ReturnsWithin are Web.Restored and Web.RestoredWithin; statements unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: FrontierFrames.excluded (now Requirement.Frontier.excluded); FrontierFrames.means (now Requirement.Required.means); FrontierFrames.performed (now Requirement.Required.performed). Proof bindings (Decidedness.lean, Frontier.lean, FrontierFrames.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Decidedness.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Frontier.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; FrontierFrames.lean, takes as its final section AcceptanceFrames, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them. The claim is unchanged.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and PracticalJudgment) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Decidedness, Becoming.Frontier, Becoming.FrontierFrames, Becoming.FrontierWorlds, Becoming.Inquiry and Becoming.Lexical). The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the first hypothesis names living significance in current terms as a premise, a condition stated and not asserted, which under the continuation condition is a theorem adding no premise beyond that condition, instead of the retired G0 interface and 'another axiom'; the alias for the retired label is kept for search. The claim is unchanged.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](practical-judgment-under-living-significance.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -144,4 +145,4 @@ Aliases: `Practical judgment G0/J1–J4`, `Becoming.Judgment.better_iff_betterAt
 
 </details>
 
-Documentary review UTC: `2026-10-19T13:38:06+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -33,12 +33,12 @@ another serves.
   (`Flow.outrun_reading_alike`): a member's restraint is invisible to a reading after the rest's
   end, and its own take is then the only difference such a score can reward.
 * **Competitive exclusion.** A full taker that continues, depending on the condition at such a
-  need, leaves no other formation taking from it at each of the `W.level T c + 1` steps from any
-  `T` (`Flow.continuing_excludes`). A formation active only while it takes from the condition is
-  then not active at each of them (`Flow.continuing_excludes_active`); where its activity does not
-  resume once it stops, it is inactive from `T + W.level T c` on (`Flow.continuing_ends_taker`).
-  A formation that continues alongside another taker does not take all that is given at each of
-  them (`Flow.alongside_not_all`).
+  need, leaves no other formation that takes from it throughout the `W.level T c + 1` steps from
+  any `T` (`Flow.continuing_excludes`). A formation active only while it takes from the condition
+  is then not active at every one of them (`Flow.continuing_excludes_active`); where its activity
+  does not resume once it stops, it is inactive from `T + W.level T c` on
+  (`Flow.continuing_ends_taker`). A formation that continues alongside another taker does not take
+  all that is given at every one of them (`Flow.alongside_not_all`).
 * **The joint course keeps the level.** Taking jointly within what is given at every step, the
   level never falls below where it started (`Flow.level_kept`); where the formations depend on
   that condition alone, at needs it met at the start, every formation is supported at every step
@@ -243,7 +243,7 @@ theorem full_taking_ends (balances : L.Balances W) (acting : L.Acting W) (depend
 /-- **Competitive exclusion: a full taker that continues leaves no other taking alongside it.**
 Where renewal depends on what it renews and `f` takes all that is given to `c` at every step,
 depends on it at a need of at least `m` and is active at every step, no other formation takes
-from `c` at each of the `W.level T c + 1` steps from any `T`. -/
+from `c` throughout the `W.level T c + 1` steps from any `T`. -/
 theorem continuing_excludes (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
     {c : C} {m : Nat}
     (gated : ∀ t e, e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c)
@@ -256,7 +256,7 @@ theorem continuing_excludes (balances : L.Balances W) (acting : L.Acting W) (dep
 
 /-- **A formation living by taking does not stay active alongside a full taker that continues.**
 Under the premises of `continuing_excludes`, a formation active only while it takes from `c` is
-not active at each of the `W.level T c + 1` steps from any `T`. -/
+not active at every one of the `W.level T c + 1` steps from any `T`. -/
 theorem continuing_excludes_active (balances : L.Balances W) (acting : L.Acting W)
     (dependent : W.Dependent) {c : C} {m : Nat}
     (gated : ∀ t e, e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c)
@@ -284,8 +284,8 @@ theorem continuing_ends_taker (balances : L.Balances W) (acting : L.Acting W)
 
 /-- **Continuing alongside another taker is not taking all that is given.** Where renewal depends
 on what it renews and another formation takes from `c` at every step, a formation depending on
-`c` at a need of at least `m` and active at every step does not take all that is given at each
-of the `W.level T c + 1` steps from any `T`. -/
+`c` at a need of at least `m` and active at every step does not take all that is given at every
+one of the `W.level T c + 1` steps from any `T`. -/
 theorem alongside_not_all (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
     {c : C} {m : Nat}
     (gated : ∀ t e, e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c)

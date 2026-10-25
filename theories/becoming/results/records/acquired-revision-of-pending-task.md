@@ -7,7 +7,7 @@
 
 Editable record: [acquired-revision-of-pending-task.json](acquired-revision-of-pending-task.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-14T09:00:00+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
@@ -20,7 +20,7 @@ Canonical source: [CommonTaskRevision.lean](../../../../experiments/market-gener
 ## Hypotheses and correspondence
 
 - Binary reversible translation, a valid queue and protected synchronous head rewrite; no unmodeled irreversible effects before endpoint enactment. Consecutive ticks provide completion.
-- Reuse acquired two-practice evidence, changed purpose and selector reform; G0/J, correspondence, authority and responsiveness are explicit. The branch consumes one rewrite work unit; route-maintenance cost is not modeled.
+- Reuse acquired two-practice evidence, changed purpose and selector reform; living significance and the practical commitments, correspondence, authority and responsiveness are explicit. The branch consumes one rewrite work unit; route-maintenance cost is not modeled.
 
 Learning, instruction and effect are differentiated relations in one activity, not opposing players. The goal encoding covers only the two declared practices, with actual relevant conditions required to match.
 
@@ -50,7 +50,7 @@ Boundary source: [CommonTaskRevision.lean](../../../../experiments/market-genera
 
 **Input:** paidRetarget reads that state’s goal and consumes one work unit; the delivered value determines endpoint practice.
 
-**Preserved conditions:** Retains the same harmful conditions, practice interpretation, G0/J, earlier losses and finite resources, without inferring arbitrary shared motivation. [CommonTaskRevision.lean](../../../../experiments/market-generativity/meta-attractor/CommonTaskRevision.lean)
+**Preserved conditions:** Retains the same harmful conditions, practice interpretation, living significance and the practical commitments, earlier losses and finite resources, without inferring arbitrary shared motivation. [CommonTaskRevision.lean](../../../../experiments/market-generativity/meta-attractor/CommonTaskRevision.lean)
 
 
 **Used by:** [pending-task-context-applicability](pending-task-context-applicability.md)
@@ -93,4 +93,5 @@ Aliases: `CommonTaskRevision.warranted_revision_and_pending_delivery`, `CommonTa
 - 14 October 2026, seventeenth independent review ([BECOMING-GENERAL-LAWS-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-GENERAL-LAWS-REVIEW.md)), finding G5: "no shorter run delivers it" follows from `pending_before` only where pending and delivered are exclusive (`not_done_before`); here they are exclusive by construction. The claim now says so, and the `Countdown` docstrings were corrected.
 - 18 October 2026, the N1 renaming (Ren: "Renames, full scope"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Countdown.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Countdown.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired label G0/J in a hypothesis and a dependency's conditions named in current terms, living significance and the practical commitments. The claim is unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](acquired-revision-of-pending-task.json).

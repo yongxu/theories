@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-08T18:51:23.185277+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
     "zh": "在明示生生之意义、形成对应 E 与位置化直接实践解释 D 下，凡对某回应有实际通达的位置，都具有支持该回应的一项理由，不论其是否认同、属于何种载体或带有何种身份标签。D 所给出的最小理由只由通达关系与正面根据决定，因此通达相同的位置具有相同的这一理由；无通达的位置不从这条路线获得理由。认同无关性是 D 的内容，而非生生之意义与 E 的推论：以认同为条件的实践解释与同一生生之意义及形成事实相容，却不给有通达、不认同的位置这项理由。",
     "en": "Under explicit living significance, formation correspondence E and a positioned direct articulation D, every position with actual access to a response has a contributory reason for it, whatever its endorsement, substrate or identity labels. The least reason satisfying D is fixed by access and positive ground alone, so positions alike in access are alike in this reason; a position without access receives no reason from this route. Endorsement independence is the content of D, not a consequence of living significance and E: an endorsement-conditional articulation is compatible with the same living significance and formation facts yet withholds the reason from a non-endorsing position with access."
   },
   "hypotheses": [
     {
-      "zh": "G0 不变，仍为明确采用的正面规范前提；E 要求回应在每段当前有根据的接续中实现某种新生成内容。",
-      "en": "G0 is unchanged and remains an explicit normative premise; E requires the response to realize some new generative content in every presently grounded continuation."
+      "zh": "生生之意义（LivingSignificance）是假设，也是明确采用的规范前提；E 要求回应在每段被接纳的接续中实现此前没有的活的内容。",
+      "en": "Living significance (LivingSignificance) is a hypothesis and an explicit normative premise; E requires the response to realize, in every admitted continuation, living content absent before."
     },
     {
       "zh": "D 是公开提出的位置化实践解释：通达加上每段接续中的正面根据给出一项支持理由。D 不提及认同、文化、身份或载体；这一点是前提的内容，由边界定理标明。",
@@ -42,7 +42,11 @@
     "PositionedPositiveReason.respond_formation",
     "PositionedPositiveReason.nonendorsing_position_with_access_has_reason",
     "PositionedPositiveReason.endorsement_without_access_gets_no_route_reason",
-    "PositionedPositiveReason.endorsement_independence_is_supplied_by_articulation"
+    "PositionedPositiveReason.endorsement_independence_is_supplied_by_articulation",
+    "Becoming.SecuredContent.every_situated_position_has_reason",
+    "Becoming.SecuredContent.route_reason_is_least",
+    "Becoming.SecuredContent.route_reason_depends_only_on_access",
+    "Becoming.SecuredContent.endorsement_independence_is_supplied_by_articulation"
   ],
   "dependencies": [
     {
@@ -62,8 +66,8 @@
           "en": "D's antecedent SecuresNewContent: the response secures positive new content in every visible continuation."
         },
         "conditions": {
-          "zh": "同一 G0、同一库存与先前内容；所见范围按回应索引；不加入 C、整体无损或 Better。",
-          "en": "Same G0, inventory and prior content; visible scope indexed by response; no C, global no-loss or Better."
+          "zh": "同一生生之意义（外围的 `G0`）、同一库存与先前内容；所见范围按回应索引；不加入 C、整体无损或 Better。",
+          "en": "Same living significance (the periphery's `G0`), inventory and prior content; visible scope indexed by response; no C, global no-loss or Better."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean"
       }
@@ -87,8 +91,8 @@
     {
       "id": "continuation-condition-yields-living-significance",
       "detail": {
-        "zh": "G0 由 Becoming.Significance 的公理给出时，以意义读出正面相关，本结果的主定理成立（every_situated_position_has_reason_of_unrestricted）。",
-        "en": "With G0 from the axiom of Becoming.Significance, this result's main theorem holds with positive relevance read from significance (every_situated_position_has_reason_of_unrestricted)."
+        "zh": "生生之意义由延续条件（Becoming.Significance）给出时，以意义读出正面相关，本结果的主定理成立（every_situated_position_has_reason_of_unrestricted）。",
+        "en": "With living significance from the continuation condition (Becoming.Significance), this result's main theorem holds with positive relevance read from significance (every_situated_position_has_reason_of_unrestricted)."
       }
     },
     {
@@ -116,8 +120,8 @@
     }
   ],
   "limitations": {
-    "zh": "一项支持理由不是许可、义务、整体排序或唯一最优动作，也不预测任何位置会认识或遵循它。普遍性以 D 为前提；不从行动者自身立场推出 G0 或 D，也不完成 universal-practical-warrant。",
-    "en": "A contributory reason is not permission, duty, an overall ranking or a uniquely optimal action, and predicts no recognition or compliance. Universality rests on D; neither G0 nor D is derived from an agent's own standpoint, and universal-practical-warrant is not completed."
+    "zh": "一项支持理由不是许可、义务、整体排序或唯一最优动作，也不预测任何位置会认识或遵循它。普遍性以 D 为前提；不从行动者自身立场推出生生之意义或 D，也不完成 universal-practical-warrant。",
+    "en": "A contributory reason is not permission, duty, an overall ranking or a uniquely optimal action, and predicts no recognition or compliance. Universality rests on D; neither living significance nor D is derived from an agent's own standpoint, and universal-practical-warrant is not completed."
   },
   "validation_scope": {
     "zh": "Lean 4.29.1 成功实查 10 项新定理／25 项声明审计，全部空依赖；检查器要求本模块无任何公理依赖。继承模块的 propext、Quot.sound 及 Classical.choice 依赖另列，未迁移；2 项应用例不计为新定理。首次运行（8 项定理，3 项依赖 propext 与 Quot.sound）的回执保留于其运行目录。尚无独立反审。",
@@ -376,6 +380,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, GenerativeComparison, PositionedPositiveReason and PositiveGroundUncertainty) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Extension, Becoming.Metaethics, Becoming.SecuredContent and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives and Becoming.PositiveGround, which this record does not cite with declarations. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, GenerativeComparison, PositionedPositiveReason and PositiveGroundUncertainty）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Extension, Becoming.Metaethics, Becoming.SecuredContent and Becoming.ValuationFrames）。退役模块的内容也陈述于 Becoming.Alternatives and Becoming.PositiveGround，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0 replaced by living significance, a hypothesis and an explicit normative premise, with E stated as the core theorem takes it (in every admitted continuation, living content absent before); the limitation and the related detail likewise, the latter naming the continuation condition for 'the axiom'; the core declaration names added as aliases beside the periphery's; and G0 in the dependency's conditions reads living significance, with the periphery's `G0` named. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签 G0 改为生生之意义，即假设与明确采用的规范前提，E 按核心定理所取陈述（在每段被接纳的接续中，此前没有的活的内容）；局限与相关说明同改，后者把“公理”改称延续条件；核心声明名称加入别名，与外围名称并列；依赖条件中的 G0 改为生生之意义，注明外围的 `G0`。规律未变。"
     }
   ]
 }

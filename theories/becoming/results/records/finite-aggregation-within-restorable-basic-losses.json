@@ -8,7 +8,7 @@
   "kind": "argument",
   "status": "reviewed-scoped",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-14T03:10:21.287278+00:00",
+  "reviewed_at_utc": "2026-10-25T14:50:22+00:00",
   "statement": {
     "en": "FR proposes: among independently specified same-kind recoverable basic losses, where support, burdens and history persist with scale, a finite scale of joint lesser protection should acquire sufficient grounds for choice over a fixed graver loss; strict loss matching laws give its formal content.",
     "zh": "FR 提议：在独立说明的同类可恢复基本损失中，若支持、负担与历史条件在规模扩展中保持，某个有限的较轻共同保护规模应能取得胜过固定较重损失的充分选择根据；严格损失匹配的规律给出其形式内容。"
@@ -126,8 +126,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "沿用当前意义结构中的 G0 条件接口及 J 的实践范围；FR 是额外、可修订的比较承诺，不新增第一部分定理或第二条基础公理。",
-      "en": "Reuses G0’s interface in the current significance structure and J’s practical scope; FR is an additional revisable comparison commitment, not a new Part I theorem or second fundamental axiom."
+      "zh": "沿用作为条件陈述的生生之意义及 J 的实践范围；FR 是额外、可修订的比较承诺，不是不含条件的理论的定理，也不是另一条基础前提。",
+      "en": "Reuses living significance as a stated condition and J’s practical scope; FR is an additional revisable comparison commitment, not a theorem of the theory without the condition or a further fundamental premise."
     },
     {
       "zh": "H 与固定 L 都是完整、实际的基本损失，属于独立说明的同类阻断；恢复可达及时、过渡支持真实；不遗漏终末毁损、不可重复参与、共同崩塌、不同强迫或承担。",
@@ -707,6 +707,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (GenerativeLossComparison and RepairComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Frame, Becoming.LossMatching, Becoming.MatchedCourses and Becoming.StrictTransport). The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（GenerativeLossComparison and RepairComparison）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Frame, Becoming.LossMatching, Becoming.MatchedCourses and Becoming.StrictTransport）。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the first premise restated in the current terms (living significance as a stated condition; the theory without the condition) in place of the retired labels G0, Part I and the second axiom. The Chinese of a hypothesis no longer uses the retired Part I rendering (不含条件的理论, as the English reads).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条前提以现行之词重述（作为条件陈述的生生之意义；无条件部分），代替已退休之标签 G0、第一部分与第二条公理。一条假设的中文不再用退役的“第一部分”说法（改为“不含条件的理论”，与英文一致）。"
     }
   ],
   "text_versions": [

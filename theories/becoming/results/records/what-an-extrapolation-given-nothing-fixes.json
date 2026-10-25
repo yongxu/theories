@@ -10,13 +10,13 @@
   "family": "F11",
   "reviewed_at_utc": "2026-10-18T07:16:24+00:00",
   "statement": {
-    "en": "Given nothing, a prefix fixes the whole future through the map in every world a list holds; what a learnable feature adds to it is exactly a reading of that future, so no extrapolation given nothing learns every learnable feature.",
-    "zh": "不被给予任何东西，在每个由一个列表容纳的世界中，一个前缀确定经映射的整个未来；一个可学特征对它所加的，恰是对那个未来的一个读法，所以没有不被给予任何东西的外推学得每个可学特征。"
+    "en": "Under a determined law with its orbit listed, elimination given nothing proposes the whole future through the map past the identification bound. With the world listed, a feature is learnable exactly where it is eventually a reading of that future; given nothing, an extrapolation need not learn all.",
+    "zh": "确定之律的轨道被一个列表所持时，不被给予任何东西的逐除外推，从辨识之界起提出经映射的整个未来。世界被列表所持时，特征恰在从某步起是那个未来的一个读法时可学；不被给予任何东西，一个外推未必学得每个可学特征。"
   },
   "laws": [
     {
-      "en": "Unrolled on its own proposals, an extrapolation that proposes the course's value at every step from some step on proposes the course at every step ahead; in every world a list holds, from the identification bound on, the extrapolation by elimination over the lasso candidates, given nothing, so proposes the value through the map at every step ahead, along orbits and along runs.",
-      "zh": "在自身的提议上展开，自某步起每步都提议路程之值的外推，对前方每一步都提议路程；在每个由一个列表容纳的世界中，自辨识之界起，不被给予任何东西、对套索候选逐一排除的外推，由此对前方每一步提议经映射之值，沿轨道亦沿运行。",
+      "en": "Unrolled on its own proposals, an extrapolation that proposes the course's value at every step from some step on proposes the course at every step ahead; wherever a list holds the orbit (or the run), from the identification bound on, the extrapolation by elimination over the lasso candidates, given nothing, so proposes the value through the map at every step ahead, along orbits and along runs.",
+      "zh": "在自身的提议上展开，自某步起每步都提议路程之值的外推，对前方每一步都提议路程；在一个列表容纳轨道（或运行）之处，自辨识之界起，不被给予任何东西、对套索候选逐一排除的外推，由此对前方每一步提议经映射之值，沿轨道亦沿运行。",
       "declarations": [
         "Becoming.Learning.extendBy",
         "Becoming.Learning.extendBy_of",
@@ -257,6 +257,10 @@
     {
       "en": "2026-10-20: 14 bookkeeping notes condensed from 18 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/22394a3ae03c79ba/what-an-extrapolation-given-nothing-fixes.json and in git.",
       "zh": "2026-10-20：14 条记账性说明合并（18 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/22394a3ae03c79ba/what-an-extrapolation-given-nothing-fixes.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement says what the Lean gives: from the identification bound on the extrapolation by elimination proposes the future where a list holds the orbit; the exact theorem needs the world listed; the last clause says what its one-configuration witness shows (no extrapolation given nothing learns both constant features there), not that none ever does. Law 1 asks only the orbit or run held, as its theorems do.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述照 Lean 所给：轨道被列表所持时，逐除外推从辨识之界起提出未来；精确定理需世界被列出；末句只说其单一构形之见证所示（那里没有不被给予任何东西的外推同时学得两个常值特征），不是说从无外推能做到。规律一只要求轨道或运行被持，如其定理。"
     }
   ],
   "text_versions": [

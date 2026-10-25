@@ -218,7 +218,7 @@
   },
   "binding-preserving-substitution": {
    "region": "knowing",
-   "base": "general",
+   "base": "periphery",
    "note": "InferentialSubstitution: exact position criterion"
   },
   "bounded-census-keeps-pace": {
@@ -698,7 +698,7 @@
   },
   "finite-fallible-inquiry-necessity": {
    "region": "knowing",
-   "base": "general",
+   "base": "periphery",
    "note": "FallibleInquiry: necessary info conditions"
   },
   "finite-granularity-question-recovery": {
@@ -743,8 +743,8 @@
   },
   "formed-goal-revision-continuation": {
    "region": "knowing",
-   "base": "general",
-   "note": "GoalFormationRevision: two-practice construction"
+   "base": "periphery",
+   "note": "GoalFormationRevision, MachineInstances: two-practice construction"
   },
   "formed-software-continuation": {
    "region": "collective",
@@ -988,12 +988,12 @@
   },
   "learnable-through-a-map": {
    "region": "knowing",
-   "base": "frame",
+   "base": "general",
    "note": "P106 Learnable: extrapolation through a map"
   },
   "learned-procedure-transmission": {
    "region": "life",
-   "base": "general",
+   "base": "periphery",
    "note": "LearnedProcedureTransmission: reconstruction"
   },
   "learning-by-refutation": {
@@ -1323,7 +1323,7 @@
   },
   "projection-carrying-a-law": {
    "region": "knowing",
-   "base": "general",
+   "base": "frame",
    "note": "lumping carries law"
   },
   "proposition-identity": {
@@ -2028,7 +2028,7 @@
   },
   "what-an-extrapolation-given-nothing-fixes": {
    "region": "knowing",
-   "base": "old-base",
+   "base": "general",
    "note": "L1 Unrolling"
   },
   "what-an-optimum-does-beyond-what-couples-in": {
@@ -2053,7 +2053,7 @@
   },
   "what-finitely-many-labels-fix": {
    "region": "knowing",
-   "base": "old-base",
+   "base": "general",
    "note": "Labels"
   },
   "what-leaves-a-class-follows-its-line": {
@@ -2625,7 +2625,7 @@
   },
   "Becoming.FallibleInquiry": {
    "region": "knowing",
-   "base": "frame",
+   "base": "periphery",
    "note": "fallible inquiry: belief revised by what tests show (assigned by hand; not in the inventory index)"
   },
   "Becoming.FaultEnvelopes": {

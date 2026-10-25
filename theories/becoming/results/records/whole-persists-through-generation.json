@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "zh": "部分短暂，或部分终结且同时活跃的部分有限时，持续的整体需要部分不断生起。",
     "en": "Where parts are brief, or end with finitely many active at once, a persisting whole needs its parts to keep arising."
@@ -32,8 +32,8 @@
     }
   ],
   "correspondence": {
-    "zh": "第五次独立审查（I10）指出，谱系与成员是同一展开的两个层次，部分与整体的关系是单一命名层次所省略的关系，并在其 §4 第 7 项写道：一个含形成之间部分与整体关系的表示，会使它成为定理。本结果给出这一表示与定理。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。在部分短暂，或部分终结且同时活跃的部分有限的前提下，读到整体（谱系）层次的持续，需要成员层次的不息生成：两个层次不是二选一，整体的“不息”经由部分的“生生”（作者的诠释，AI 论证；第七次独立审查 K3 更正了此前“就是”与“构成”的说法：Whole 只是活动的重合）。在 Brief 之下，这只要求同样的成员反复生起（Layered）；在 Ends 与 Listed 之下，要求不断新的成员（needs_new）；两者都不要求数目增长，原话中的“不断创造更多”没有由此推出；它不替代 Ren 的原话，不推出它是好的，也不决定“生生不息”读到哪个层次；依 Ren 的交托，它读在整体的层次（D5）。",
-    "en": "The fifth independent review (I10) found that a lineage and its members are two levels of one unfolding, with the part–whole relation the one a single level of naming omits, and wrote in its §4 item 7 that a representation with a part–whole relation among formations would make it a theorem. This result gives that representation and theorem. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). Where parts are brief, or end with finitely many active at once, persistence read at the level of the whole (the lineage) needs unceasing generation at the level of its members: the two levels are not alternatives, and the whole's 不息 goes through its parts' 生生 (the author's interpretation, an AI argument; K3 of the seventh independent review corrected the earlier “is” and “made of”: Whole is only coincidence of activity). Under Brief this needs only the same members arising again (Layered); under Ends and Listed it needs ever new members (needs_new); neither needs their number to grow, so “unceasingly creating more” in Ren's words does not follow from it; it does not replace Ren's words, does not show that it is good, and does not decide at which level 生生不息 is read; on Ren's delegation, at the whole's level (D5)."
+    "zh": "第五次独立审查（I10）指出，谱系与成员是同一展开的两个层次，部分与整体的关系是单一命名层次所省略的关系，并在其 §4 第 7 项写道：一个含形成之间部分与整体关系的表示，会使它成为定理。本结果给出这一表示与定理。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。在部分短暂，或部分终结且同时活跃的部分有限的前提下，读到整体（谱系）层次的持续，需要成员层次的不息生成：两个层次不是二选一，整体的“不息”经由部分的“生生”（AI 的诠释与论证；第七次独立审查 K3 更正了此前“就是”与“构成”的说法：Whole 只是活动的重合）。在 Brief 之下，这只要求同样的成员反复生起（Layered）；在 Ends 与 Listed 之下，要求不断新的成员（needs_new）；两者都不要求数目增长，原话中的“不断创造更多”没有由此推出；它不替代 Ren 的原话，不推出它是好的，也不决定“生生不息”读到哪个层次；依 Ren 的交托，它读在整体的层次（D5）。",
+    "en": "The fifth independent review (I10) found that a lineage and its members are two levels of one unfolding, with the part–whole relation the one a single level of naming omits, and wrote in its §4 item 7 that a representation with a part–whole relation among formations would make it a theorem. This result gives that representation and theorem. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). Where parts are brief, or end with finitely many active at once, persistence read at the level of the whole (the lineage) needs unceasing generation at the level of its members: the two levels are not alternatives, and the whole's 不息 goes through its parts' 生生 (the AI's interpretation and argument; K3 of the seventh independent review corrected the earlier “is” and “made of”: Whole is only coincidence of activity). Under Brief this needs only the same members arising again (Layered); under Ends and Listed it needs ever new members (needs_new); neither needs their number to grow, so “unceasingly creating more” in Ren's words does not follow from it; it does not replace Ren's words, does not show that it is good, and does not decide at which level 生生不息 is read; on Ren's delegation, at the whole's level (D5)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
   "aliases": [
@@ -494,6 +494,10 @@
     {
       "en": "22 October 2026: related to a-whole-of-every-part (study section 333); its statements are unchanged.",
       "zh": "2026年10月22日：与 a-whole-of-every-part 相关（研究第 333 节）；其陈述不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in the correspondence 'the author's interpretation' reads 'the AI's interpretation', keeping the reading's AI label; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的诠释”改为“AI 的诠释”，读法保留其 AI 标签；主张不变。"
     }
   ]
 }

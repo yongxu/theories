@@ -8,19 +8,19 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-08T18:20:30.740385+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
-    "zh": "给定前缀封闭历史族L和摘要q，从所有已接纳单步延伸构造的局部规律，在每个已接纳历史处精确保留全部有限接续，当且仅当同码历史具有相同接续剖面。",
-    "en": "For a prefix-closed language L and summary q, the local law constructed from admitted one-step extensions preserves all finite continuations at every admitted history exactly iff histories sharing a code have identical continuation profiles."
+    "en": "The law read through a summary takes a step from one summary value to another where some configuration with the first takes it to one with the second. From the value of each configuration it takes exactly the words the configuration can take, for every configuration, exactly when the configurations the summary merges can take the same words: the nondeterministic counterpart of a determined law carried through a reduction. For histories, the law extending an admitted history by one move takes, from an admitted history of a prefix-closed language, exactly the courses whose extension is admitted; with the admitted histories as the configurations, the law derived from a summary keeps every finite continuation at every admitted history exactly where admitted histories sharing a code admit the same continuations (proved on the periphery's own definitions; in the core an instance of the first law, not one declaration). Carrying the futures is not carrying the endpoints: the process extending a history by one entry takes every word from every history, so read through any summary it carries the futures; read through the summary marking only [false], one step under false goes from the empty history's code to false, though the empty history extended by false has the code true.",
+    "zh": "经摘要读出的律从一个摘要值取一步到另一个，凡有具前者的构形取此步到具后者的构形。它从每个构形的值恰取该构形所能取之词，对每个构形，恰当摘要所合并的构形能取相同之词：这是确定律经约化承载的非确定对应。对历史：把被接纳的历史延长一步的律，从前缀封闭语言的被接纳历史，恰取其延长被接纳之程；以被接纳的历史为构形，由摘要导出的律在每个被接纳历史处保留每个有限接续，恰当共享编码的被接纳历史接纳相同接续（外围在其自身定义上证明；核心中是第一条规律的实例，不是单一声明）。携带未来不是携带端点：把历史延长一项的过程从每个历史取每个词，故经任何摘要读出都携带未来；经只标出 [false] 的摘要读出，false 下的一步从空历史的编码到 false，而空历史延长 false 后的编码是 true。"
   },
   "hypotheses": [
     {
-      "zh": "任意事件类型、摘要类型、历史族L及前缀封闭；q为全定义摘要。无需有限性、可判定性或L接受空词。",
-      "en": "Arbitrary event and summary types, a prefix-closed language L, and a total summary q. No finiteness, decidability or empty-word membership is required."
+      "en": "Arbitrary configurations, moves and summary type, a process and a total summary; for histories, a prefix-closed language L. No finiteness, decidability or empty-word membership is required.",
+      "zh": "任意构形、动作与摘要类型，一个过程及全定义摘要；对历史，前缀封闭语言L。无需有限性、可判定性或L接受空词。"
     },
     {
-      "zh": "充要条件量化每个已接纳历史；不把只从一个初始代码精确当作同一条件。",
-      "en": "The equivalence quantifies every admitted history; exactness from only one initial code is a different contract."
+      "en": "The equivalence quantifies every configuration (for histories, every admitted history); exactness from only one initial value is a different contract.",
+      "zh": "充要条件量化每个构形（对历史，每个已接纳历史）；不把只从一个初始值精确当作同一条件。"
     }
   ],
   "correspondence": {
@@ -29,8 +29,8 @@
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean",
   "aliases": [
-    "Generative.DerivedHistoryLaw.exact_iff_fiber_future (retired module)",
-    "Becoming.exact_iff_fiber_future_by_core (retired module)"
+    "Becoming.Readout.futures_through_iff",
+    "Becoming.SummaryFutures.endpoint_moved"
   ],
   "dependencies": [
     {
@@ -60,10 +60,17 @@
   "related": [],
   "counterexamples": [
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SummaryFutures.lean",
+      "detail": {
+        "en": "Every word from every history, read through the summary marking only [false]: all continuations are carried, yet one step under false ends at false while the extended history's code is true.",
+        "zh": "从每个历史取每个词、只把[false]编码为true时，经此摘要读出接续全被携带，而false下的一步止于false，延长后历史的编码却是true。"
+      }
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/DerivedHistoryLaw.lean",
       "detail": {
-        "zh": "全部布尔词均接纳、只把[false]编码为true时，接续仍精确而编码端点可以错误；错误合并不同剖面则产生具体虚假接续。",
-        "en": "Admitting all Boolean words and coding only [false] as true preserves all continuations but can misrepresent encoded endpoints; merging distinct profiles produces a witnessed false continuation."
+        "en": "Periphery (superseded module): merging histories with distinct continuation profiles produces a witnessed false continuation.",
+        "zh": "外围（已被取代的模块）：错误合并不同接续剖面的历史产生具体虚假接续。"
       }
     }
   ],
@@ -113,6 +120,8 @@
       "sha256": "c6a85943044e2fce083a947495cc825a42a381fa7f44e1c1f30c8a3ba33c3843",
       "declarations": [
         "Becoming.Readout.SameFutures",
+        "Becoming.Readout.image_feasible",
+        "Becoming.Readout.feasible_of_image",
         "Becoming.Readout.futures_through_iff"
       ]
     },
@@ -129,8 +138,10 @@
       "role": "proof",
       "sha256": "edb4e30a64dca65321e0d2d88a661d97545cc363428e9a05b730fea7367b6905",
       "declarations": [
+        "Becoming.SummaryFutures.extend",
         "Becoming.SummaryFutures.every_word",
         "Becoming.SummaryFutures.futures_through",
+        "Becoming.SummaryFutures.code",
         "Becoming.SummaryFutures.endpoint_moved"
       ]
     },
@@ -198,6 +209,22 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryLanguages.lean",
+      "role": "proof",
+      "sha256": "3187b29c6d22fc9483fc3ae9fa6beaea3354f178ba07cb1f20dee36860323b53",
+      "declarations": [
+        "Becoming.HistoryLanguages.PrefixClosed",
+        "Becoming.HistoryLanguages.law",
+        "Becoming.HistoryLanguages.trace_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
+      "role": "receipt",
+      "sha256": "f399061e1e9af72fb012a69861653f1a5496c6907982a2723399bcee788614ae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -219,6 +246,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Mechanism",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryLanguages.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.HistoryLanguages",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -255,6 +289,14 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and DerivedHistoryLaw) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Mechanism, Becoming.Readout and Becoming.SummaryFutures). 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and DerivedHistoryLaw）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Mechanism, Becoming.Readout and Becoming.SummaryFutures）。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core law (a summary carries the futures exactly where it merges only configurations with the same futures), with the history-language law and the admitted-history form as its instance (proved in the periphery, not one core declaration) and the endpoint witness; history-language declarations referenced and bound to the latest core receipt; the endpoint counterexample re-pointed to the core, the merge witness kept as the periphery's; aliases now the core names, the retired Bridge name and the superseded periphery name Generative.DerivedHistoryLaw.exact_iff_fiber_future dropped (its file stays a provenance reference). No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述（摘要只合并有相同未来的构形时恰携带未来），历史语言之律与被接纳历史的形式作为其实例（外围证明，非单一核心声明），并列端点见证；历史语言声明加入引用并绑定最新核心回执；端点反例改指核心，合并见证保留为外围的；别名改为核心名称，删去退役的 Bridge 名称与已被取代的外围名称 Generative.DerivedHistoryLaw.exact_iff_fiber_future（其文件仍为来源引用）。规律未变。"
     }
-  ]
+  ],
+  "statement": {
+    "en": "Read through a summary, a law takes from each configuration's summary exactly the words that configuration can take, for every configuration, exactly where the configurations the summary merges have the same futures; carrying the futures is not carrying the endpoints.",
+    "zh": "经一个摘要读出，一个律从每个构形的摘要恰取该构形所能取之词，对每个构形，恰当摘要所合并的构形有相同的未来；携带未来不是携带端点。"
+  }
 }

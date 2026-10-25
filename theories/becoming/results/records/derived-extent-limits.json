@@ -194,8 +194,8 @@
     "zh": "伤害的层级（个体、谱系、整体）在见证上的形式；跨世代的想要是否越过想要的视界；取尽所给如何以上升的取用以外的方式形成（元吸引子的更强情形）；这些见证中强制形式的终结（对 active 量化）；同一世界去掉一个来源形成后仍每步得到供给的见证；整段读法上的同一界限。"
   },
   "correspondence": {
-    "zh": "Ren 的提议说：“all above does not require any axiom”，又说那条公理“closes the whole”。AI 的分析（Ren 答“exactly”）说：推出的范围单向地到达自身所依存的，以条件而不是以想要的存在者到达他者，而谨慎的总体化者（其见证现名 `Clearing`）满足它的全部；所以动力学定出系统的范围，定不出中心。本结果给出这四个界限的见证。作为检验（若推出的要求迫使立场中立，中心就会由动力学推出），最初的见证不可能失败：Flow 与 Web 的谓词从不约束意义，其传递合取由 S0 推出，如独立审查所指出；“见证造出来了”作为检验通过的说法撤回，现在的见证含沿依存的封闭。在依存使每两个生命都相连的整体中，S0 加沿依存的 N_rel 给出 G0（held-lives-g0-is-centering 的 significant_of_transmits）。清除者是元吸引子所选出的自我的一种形式（AI 的读法）：它不是不计入其外，而是只计入它自己的延续所需的那部分。",
-    "en": "Ren's proposal says “all above does not require any axiom” and that the one axiom “closes the whole”. The AI analysis, which Ren answered “exactly”, said the derived extent runs one way, to what the self depends on, reaches others as conditions rather than as beings that want, and is all satisfied by a careful totalizer (the witness now named `Clearing`); so the dynamics fixes a system's extent, not its center. This result gives witnesses of these four limits. Taken as a test (had the derived requirements forced standpoint neutrality, the center would follow from the dynamics), the first witness could not fail: flow and web predicates never constrain significance, and its transmission conjunct follows from S0, as the independent review found; ‘the witness exists’ as a passed test is withdrawn, and the present witness includes closure along dependence. In a whole where dependence links every two lives, S0 with N_rel along dependence gives G0 (significant_of_transmits in held-lives-g0-is-centering). The clearer is one form of the self the meta-attractor selects (an AI reading): it does not fail to count what lies beyond it, it counts only what its own continuation needs."
+    "zh": "Ren 的提议说：“all above does not require any axiom”，又说延续条件（当时作为公理提出）“closes the whole”。AI 的分析（Ren 答“exactly”）说：推出的范围单向地到达自身所依存的，以条件而不是以想要的存在者到达他者，而谨慎的总体化者（其见证现名 `Clearing`）满足它的全部；所以动力学定出系统的范围，定不出中心。本结果给出这四个界限的见证。作为检验（若推出的要求迫使立场中立，中心就会由动力学推出），最初的见证不可能失败：Flow 与 Web 的谓词从不约束意义，其传递合取由自身意义推出，如独立审查所指出；“见证造出来了”作为检验通过的说法撤回，现在的见证含沿依存的封闭。在依存使每两个生命都相连的整体中，自身意义加沿依存的关系中立给出生生之意义（living-significance-on-held-lives 的 significant_of_transmits）。清除者是元吸引子所选出的自我的一种形式（AI 的读法）：它不是不计入其外，而是只计入它自己的延续所需的那部分。",
+    "en": "Ren's proposal says “all above does not require any axiom” and that the continuation condition, proposed then as an axiom, “closes the whole”. The AI analysis, which Ren answered “exactly”, said the derived extent runs one way, to what the self depends on, reaches others as conditions rather than as beings that want, and is all satisfied by a careful totalizer (the witness now named `Clearing`); so the dynamics fixes a system's extent, not its center. This result gives witnesses of these four limits. Taken as a test (had the derived requirements forced standpoint neutrality, the center would follow from the dynamics), the first witness could not fail: flow and web predicates never constrain significance, and its transmission conjunct follows from self-significance, as the independent review found; ‘the witness exists’ as a passed test is withdrawn, and the present witness includes closure along dependence. In a whole where dependence links every two lives, self-significance with relational neutrality along dependence gives living significance (significant_of_transmits in living-significance-on-held-lives). The clearer is one form of the self the meta-attractor selects (an AI reading): it does not fail to count what lies beyond it, it counts only what its own continuation needs."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
   "aliases": [
@@ -264,12 +264,12 @@
       },
       "interface": {
         "output": {
-          "zh": "逐步读、每个形成以自身事件为自身区域时每个活的事件都被持有；被持有的生命上 G0 恰等于处处 S0 加 N_std。",
-          "en": "Read stepwise with each formation's own events its own region, every living event is held; on held lives G0 is exactly S0 everywhere with N_std."
+          "zh": "逐步读、每个形成以自身事件为自身区域时每个活的事件都被持有；被持有的生命上生生之意义恰等于处处自身意义加立场中立。",
+          "en": "Read stepwise with each formation's own events its own region, every living event is held; on held lives living significance is exactly self-significance everywhere with standpoint neutrality."
         },
         "input": {
-          "zh": "沿依存推出的范围不迫使 N_std。",
-          "en": "The extent derived along dependence does not force N_std."
+          "zh": "沿依存推出的范围不迫使立场中立。",
+          "en": "The extent derived along dependence does not force standpoint neutrality."
         },
         "conditions": {
           "zh": "每个形成以自身事件为自身区域；推出的范围沿依存。",
@@ -612,6 +612,10 @@
     {
       "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one does_not_show item added. The claim and its premises are unchanged.",
       "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；增加一条 does_not_show。主张与其前提不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels replaced by the current terms in the correspondence and a dependency interface: S0, N_rel, N_std and G0 by self-significance, relational and standpoint neutrality and living significance, 'the one axiom' by the continuation condition (proposed then as an axiom), and the former record id held-lives-g0-is-centering by its current id; quoted words kept verbatim. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应与一个依赖接口中的退役标签改为现行术语：S0、N_rel、N_std、G0 改为自身意义、关系中立、立场中立、生生之意义，“那条公理”改为延续条件（当时作为公理提出），旧记录编号 held-lives-g0-is-centering 改为现行编号；引语原样保留。规律未变。"
     }
   ],
   "text_versions": [

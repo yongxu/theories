@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T07:15:58+00:00",
+  "reviewed_at_utc": "2026-10-25T14:47:02+00:00",
   "statement": {
     "en": "A pattern present from T on whose carriers are brief for d lets no d consecutive steps pass without a carrier beginning (in double-negation form); under the passing premise it is passed across one of every d steps, one empty step ends it, and if passing stops it ends within d steps.",
     "zh": "从 T 起存在、其承载者对 d 短暂的样式，不会连续 d 步都没有承载者开始（双重否定的形式）；在传递前提下，它在每 d 步中的一步被传递，一步无承载者即结束，传递停止则在 d 步之内结束。"
@@ -45,6 +45,36 @@
         "Becoming.Web.ByPassing.ends_within",
         "Becoming.PatternRelay.relay",
         "Becoming.PatternRelay.stopped_relay"
+      ]
+    },
+    {
+      "en": "On the grammar the passing premise says exactly that every occurrence carrying the pattern after a step continues, under the passing continuation, one carrying it before: it has a predecessor (有前) under the pattern's class. A carrier begins (生) and ends (亡) under the carrier class exactly where it arises and ceases, and a carrying occurrence nothing continues under the pattern's class ends under the carrier class.",
+      "zh": "在文法上，传递前提恰是说：一步之后承载样式的每个出现，都在传递之续下接续一个此前承载它的出现，即在样式之类下有前。承载者在承载者之类下生与亡，恰在它出现与停止之处；在样式之类下无所接续的承载出现，在承载者之类下亡。",
+      "declarations": [
+        "Becoming.Web.passingContinuation",
+        "Becoming.Web.sameFormation",
+        "Becoming.Web.carrierClass",
+        "Becoming.Web.carrierClass_class",
+        "Becoming.Web.carrierClass_finer",
+        "Becoming.Web.byPassing_iff_continues",
+        "Becoming.Web.byPassing_iff_hasPred",
+        "Becoming.Web.arises_iff_sheng_carrier",
+        "Becoming.Web.ceases_iff_wang_carrier",
+        "Becoming.Web.ceases_of_pattern_ends"
+      ]
+    },
+    {
+      "en": "An alteration (异) of a carrying occurrence is a passing, and a passing to another formation is an alteration, not conversely: passing the pattern to itself alters nothing. Under the passing premise every carrying occurrence lies on a line (相续) under the pattern's class from one at each earlier step, and both statements of the second law follow from grammar laws; in the relay witness's shifts every odd step is 火传.",
+      "zh": "承载出现的异是一次传递，传给另一形成的传递是异；逆不成立：形成把样式传给自身不改变什么。在传递前提下，每个承载出现都在样式之类下与任何较早一步的某个出现相续，第二条律的两个陈述都由文法规律导出；在接力见证的轮班中每个奇数步都是火传。",
+      "declarations": [
+        "Becoming.Web.passesAt_of_alters",
+        "Becoming.Web.alters_of_passes",
+        "Becoming.Web.passing_fire",
+        "Becoming.Web.ByPassing.line_back",
+        "Becoming.Web.ByPassing.passes_within_by_line",
+        "Becoming.Web.ByPassing.begins_passed_by_grammar",
+        "Becoming.PatternRelay.shifted_fire",
+        "Becoming.PatternRelay.fire_shape"
       ]
     }
   ],
@@ -93,7 +123,21 @@
     "样式经传递而持续",
     "one empty step ends it",
     "Becoming.Web.ByPassing.ends_within",
-    "forming the next members (reading)"
+    "forming the next members (reading)",
+    "Becoming.Web.passingContinuation",
+    "Becoming.Web.sameFormation",
+    "Becoming.Web.carrierClass_class",
+    "Becoming.Web.carrierClass_finer",
+    "Becoming.Web.byPassing_iff_continues",
+    "Becoming.Web.arises_iff_sheng_carrier",
+    "Becoming.Web.ceases_iff_wang_carrier",
+    "Becoming.Web.ceases_of_pattern_ends",
+    "Becoming.Web.passesAt_of_alters",
+    "Becoming.Web.alters_of_passes",
+    "Becoming.Web.ByPassing.line_back",
+    "Becoming.Web.ByPassing.passes_within_by_line",
+    "Becoming.Web.ByPassing.begins_passed_by_grammar",
+    "Becoming.PatternRelay.shifted_fire"
   ],
   "dependencies": [
     {
@@ -135,12 +179,14 @@
       "role": "proof",
       "declarations": [
         "Becoming.PatternRelay.brief",
+        "Becoming.PatternRelay.fire_shape",
         "Becoming.PatternRelay.half_odd",
         "Becoming.PatternRelay.passes",
         "Becoming.PatternRelay.passesOdd",
         "Becoming.PatternRelay.passesUntil",
         "Becoming.PatternRelay.relay",
         "Becoming.PatternRelay.shifted",
+        "Becoming.PatternRelay.shifted_fire",
         "Becoming.PatternRelay.shifts",
         "Becoming.PatternRelay.stopped",
         "Becoming.PatternRelay.stopped_brief",
@@ -150,19 +196,35 @@
         "Becoming.PatternRelay.web",
         "Becoming.Web.ByPassing",
         "Becoming.Web.ByPassing.begins_passed",
+        "Becoming.Web.ByPassing.begins_passed_by_grammar",
         "Becoming.Web.ByPassing.empty_stays",
         "Becoming.Web.ByPassing.ends_within",
+        "Becoming.Web.ByPassing.line_back",
         "Becoming.Web.ByPassing.passes_within",
+        "Becoming.Web.ByPassing.passes_within_by_line",
         "Becoming.Web.ByPassing.present_back",
         "Becoming.Web.ByPassing.present_earlier",
         "Becoming.Web.ByPassing.present_of_le",
         "Becoming.Web.ByPassing.trace",
         "Becoming.Web.PassesAt",
         "Becoming.Web.Present",
+        "Becoming.Web.alters_of_passes",
+        "Becoming.Web.arises_iff_sheng_carrier",
         "Becoming.Web.begins_within",
+        "Becoming.Web.byPassing_iff_continues",
+        "Becoming.Web.byPassing_iff_hasPred",
+        "Becoming.Web.carrierClass",
+        "Becoming.Web.carrierClass_class",
+        "Becoming.Web.carrierClass_finer",
         "Becoming.Web.carrying",
         "Becoming.Web.carrying_active",
-        "Becoming.Web.carrying_iff"
+        "Becoming.Web.carrying_iff",
+        "Becoming.Web.ceases_iff_wang_carrier",
+        "Becoming.Web.ceases_of_pattern_ends",
+        "Becoming.Web.passesAt_of_alters",
+        "Becoming.Web.passingContinuation",
+        "Becoming.Web.passing_fire",
+        "Becoming.Web.sameFormation"
       ],
       "sha256": "32cf59f492d1b2a90d1331b966bc3028836bd1050082d8ddcb93dd63b036bfcf"
     },
@@ -246,6 +308,10 @@
     {
       "en": "20 October 2026, MA1 (the meta-attractor's loop closed on the spine): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed in section 4 only by MA1's additions: a sentence in 4.1, the law cell of row 6 of 4.3's table, and in 4.5 a sentence of \"In words\", a bullet for Becoming.ClosedCapture, a reading of the meta-attractor and the record list; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月20日，MA1（元吸引子的回路在主干上闭合）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，第 4 节所引文字只因 MA1 的增补而改动：4.1 的一句，4.3 表第 6 行的定律格，4.5 的“要点”一句、Becoming.ClosedCapture 的一条、元吸引子的读法与记录列表；以及第 9 节的回执与计数。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): two laws added stating PatternPassing's readings on the grammar: the passing premise as a continuation and a predecessor under the pattern's class, beginning and ending under the carrier class, alteration and passing, the pattern's line, the derivations of the second law's statements from grammar laws and 火传 in the shifts; their declarations added to the module's reference and, where no other record holds them, to the aliases (four are aliases of continuation-relative-to-a-class).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增两条律，陈述 PatternPassing 在文法上的读法：传递前提即接续、即在样式之类下有前，承载者之类下的生与亡，异与传递，样式之相续，第二条律两个陈述由文法规律之导出，以及轮班中的火传；其声明加入该模块之引用，并在无他记录持有处加入别名（四个是 continuation-relative-to-a-class 的别名）。"
     }
   ],
   "text_versions": [

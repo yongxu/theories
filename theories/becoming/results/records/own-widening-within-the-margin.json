@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T09:01:52+00:00",
+  "reviewed_at_utc": "2026-10-25T14:50:56+00:00",
   "statement": {
     "en": "Where a part's activity widens what can form within its own region, the whole widens exactly when its net draw stays within the margins of what the others need, and is mixed exactly beyond; with no slack, any net draw on a needed condition makes it mixed.",
     "zh": "部分的活动在其自身区域内扩大所能形成者时，整体恰在其净汲取不超出他者所需的余量时扩大，超出时恰为混合；没有余量时，在被需要的条件上任何净汲取都使之混合。"
@@ -47,8 +47,8 @@
       ]
     },
     {
-      "en": "Where the part's net draw is nothing on every condition required by a formation outside the own region that the levels without it admit, own widening widens the whole, whatever the levels; a comparison reading only the own region, both ways, then registers a change where nothing is closed.",
-      "zh": "部分在区域之外、无它的水平所接纳的构成所需的每个条件上净汲取为零时，自身的扩大即扩大整体，不论水平如何；只读自身区域、两个方向的比较，此时在无所关闭之处记下变化。",
+      "en": "Where the part's net draw is nothing on every condition required by a formation outside the own region that the levels without it admit, own widening widens the whole, whatever the levels; a comparison reading only the own region, both ways, then shows a change where nothing is closed: at some step the levels without the part do not admit within the own region what the levels with it admit there.",
+      "zh": "部分在区域之外、无它的水平所接纳的构成所需的每个条件上净汲取为零时，自身的扩大即扩大整体，不论水平如何；只读自身区域、两个方向的比较，此时在无所关闭之处也显出变化：在某步，无该部分的水平在自身区域之内不接纳有它的水平在那里所接纳者。",
       "declarations": [
         "Becoming.Flow.Balances.widens_of_untaken_beyond",
         "Becoming.Flow.Balances.widens_yet_own_changed"
@@ -215,12 +215,12 @@
         "Becoming.Web.admits_reachWeb_iff",
         "Becoming.Web.reachWeb"
       ],
-      "sha256": "01f7116b710c8185119f36679ad50c9a29e1d8fa85d45d87d17592e415cd230b"
+      "sha256": "d39a19bf73eee466c2d2222399fa36cb7d668511b477968d775799963c668700"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b"
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
@@ -246,12 +246,18 @@
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T085940.676690Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.OwnWidening",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -261,6 +267,10 @@
     {
       "en": "20 October 2026: added (OW1), the margin law read for a part's own region and joined to the formal results on power-seeking and impact measures, after a literature check (significance review, section \"option-keeping and the margin\"); study section 243.",
       "zh": "2026年10月20日：新增（OW1），把余量之律读到部分自身的区域，并与关于寻求权力和影响度量的形式结果相接，此前做了文献核查（显著性审查“保留选项与余量”一节）；研究第 243 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the fifth law said the own-region comparison 'registers' a change (a retired word); it now says what the Lean concludes: at some step the levels without the part do not admit within the own region what the levels with it admit there.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第五条律原说只读自身区域的比较“记下”变化（已退休之词）；今说 Lean 所得：在某步，无该部分的水平在自身区域之内不接纳有它的水平在那里所接纳者。"
     }
   ]
 }

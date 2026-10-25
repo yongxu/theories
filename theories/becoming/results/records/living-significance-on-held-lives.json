@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-14T16:30:00+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "zh": "每个活的主张都被某个立场持有时，生生之意义恰等于每个立场的自身意义加立场中立，不需要连通与关系中立；在连通、每个立场都持有活主张的整体上，自身意义加关系中立是另一种补全。",
     "en": "Where every living claim is held, living significance is exactly self-significance everywhere with standpoint neutrality, without connection or relational neutrality; on a connected whole where each standpoint holds a living claim, self-significance with relational neutrality suffices too."
@@ -104,8 +104,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "持有：每个活的主张在某个立场的自身区域中；这是对应的前提。把 Ren 提议中的“想要自身延续者”读作持有、把 S0 读作想要，是 AI 提出的读法，依 Ren 的交托采用。",
-      "en": "Holding: every living claim lies in some standpoint's own region, a correspondence premise. Reading ‘anything that wants its continuation’ as holding and S0 as wanting is the AI's proposed reading, adopted on Ren's delegation."
+      "zh": "持有：每个活的主张在某个立场的自身区域中；这是对应的前提。把“想要自身延续者”读作持有、把自身意义读作想要，是 AI 的读法（D11）。",
+      "en": "Holding: every living claim lies in some standpoint's own region, a correspondence premise. Reading ‘anything that wants its continuation’ as holding and self-significance as wanting is an AI reading (D11)."
     },
     {
       "zh": "significant_iff_reached 需要持有可判定，是表示的逻辑承诺，同可判定相等。",
@@ -116,12 +116,12 @@
       "en": "significant_of_transmits needs connection and every standpoint holding some living claim."
     },
     {
-      "zh": "S0、N_std 与 N_rel 都是假设，不是证明了的前提；本结果说 G0 在被持有的生命上恰等于哪些前提，不证明它们。",
-      "en": "S0, N_std and N_rel are hypotheses, not proved premises; the result says exactly which premises G0 amounts to on held lives and proves none of them."
+      "zh": "自身意义、立场中立与关系中立都是假设，不是证明了的前提；本结果说生生之意义在被持有的生命上恰等于哪些前提，不证明它们。",
+      "en": "Self-significance, standpoint neutrality and relational neutrality are hypotheses, not proved premises; the result says exactly which premises living significance amounts to on held lives and proves none of them."
     },
     {
-      "zh": "G0 已由 Ren 2026-10-11 折叠，不再是公理：在被持有的生命上，这一刻画是第一部分把 G0 作为条件陈述的一种；重述的读法依 Ren 的交托决定。",
-      "en": "G0 was folded by Ren on 11 October 2026 and is no longer an axiom: on held lives, this characterization is one of the ways Part I states G0 as a condition; the readings of the restatement are decided on Ren's delegation."
+      "zh": "生生之意义是理论陈述而不断言的条件；在被持有的生命上，这一刻画是陈述它的一种方式，在延续条件之下，于主张之意义即某形成之延续之意义的读法上，它成立（continuation-condition-yields-living-significance）。",
+      "en": "Living significance is a condition the theory states and does not assert; on held lives this characterization is one way of stating it, and under the continuation condition, where a claim's significance is a formation's continuation, it follows (continuation-condition-yields-living-significance)."
     },
     {
       "en": "Standpoints as formations: the laws on valuations hold for any type of standpoints, and this is the instance Pos := F; which relation a center's region is drawn along is supplied, read off the unfolding, not derived.",
@@ -181,16 +181,16 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261013T094743.528770Z）：Becoming.Standpoints 的定理公理报告为空，并核对核心纯净；不用伦理公理，也不用 Lean 公理，S0、N_std 与 N_rel 是定理的假设。Metaethics 的绑定为 20261014T091930.724493Z。作者反审见整合文档 §47；独立审查接受其 Lean，所提更正在整合文档中处理。",
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Standpoints have empty axiom reports, and the checker verifies core purity; no ethical axiom and no Lean axiom is used, S0, N_std and N_rel being hypotheses of the theorems. Metaethics is bound by 20261014T091930.724493Z. Author counterreview in §47 of the integration note; the independent review accepts its Lean, and its corrections are handled in the integration note."
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261013T094743.528770Z）：Becoming.Standpoints 的定理公理报告为空，并核对核心纯净；不用伦理公理，也不用 Lean 公理，自身意义、立场中立与关系中立是定理的假设。Metaethics 的绑定为 20261014T091930.724493Z。作者反审见整合文档 §47；独立审查接受其 Lean，所提更正在整合文档中处理。",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Standpoints have empty axiom reports, and the checker verifies core purity; no ethical axiom and no Lean axiom is used, self-significance, standpoint neutrality and relational neutrality being hypotheses of the theorems. Metaethics is bound by 20261014T091930.724493Z. Author counterreview in §47 of the integration note; the independent review accepts its Lean, and its corrections are handled in the integration note."
   },
   "next_delta": {
     "zh": "区分工具性与最终意义的表示；立场中立的哲学根据；整段读法与关系层上的同一形式；与 universal_reason 的接通。",
     "en": "A representation separating instrumental from final significance; the philosophical ground of standpoint neutrality; the same form on the whole-run reading and at the level of relations; connecting to universal_reason."
   },
   "correspondence": {
-    "zh": "Ren 的提议说：“it can be anything that want's its continuation to have significance”，又说：“if we want to add one axiom, that is for anything, its continuation into the future has significance”。AI 把它分为两半，Ren 答“exactly”：动力学定出想要延续者必须计入的范围，定不出中心；那条公理的唯一作用是让每一点都是中心。本结果给出中心一半的形式内容。形式上，“每个想要之点都是中心”落在 S0 上，S0 是每个想要之点上的种子；在被持有的生命上，G0 超出 S0 的可以集中在 N_std 上：从任一中心有意义的，从每个立场都有意义，没有哪个中心特殊。把 S0 读作想要、把 N_std 读作那条公理，是 AI 对提议的读法，依 Ren 的交托采用（DELEGATED-CHOICES D11）。N_std 不是唯一的补全：在连通、每个立场都持有活主张的整体上，N_rel 也补全 S0；把关系读作依存时，N_rel 正是“计入自身延续所依存的”的评价形式，所以在依存使每两个生命都相连的整体中，推出的范围加 S0 就到达每个生命。选 N_std 是因为它不需要连通，不是因为它是唯一的补全。与 metaethical-core-characterization 的关系：那里从一个种子出发，需要连通与 N_rel；这里在每个想要的点都有种子，在被持有的生命上只需要 N_std。在连通、有活的主张且每个生命都被持有的整体上，二者都等价于 G0；一般地互不蕴涵，原刻画保持其范围。self-good-reachable-g0 留下了从立场相对的意义到规范意义的桥；AI 的读法把这座桥命名为唯一公理。对手的形状不变：主要的对手接受处处 S0，把意义限在各自的立场之内（Apart，两种中立都不成立），这正是那条公理所否认的边界。",
-    "en": "Ren's proposal says “it can be anything that want's its continuation to have significance” and “if we want to add one axiom, that is for anything, its continuation into the future has significance”. The AI analysis, which Ren answered “exactly”, splits it in two halves: the dynamics fixes the extent of what a wanting formation must count, not its center; the axiom's one job is to put a center at every point. This result gives the formal content of the center. Formally, a center at every wanting point is S0, the seed at each; on held lives, what G0 adds beyond S0 can be concentrated in N_std: what has significance from any center has it from every standpoint, and no center is privileged. Reading S0 as wanting and N_std as the axiom is the AI's reading of the proposal, adopted on Ren's delegation (DELEGATED-CHOICES D11). N_std is not the only completion: on a connected whole where every standpoint holds a living claim, N_rel also completes S0; with the relations read as dependence, N_rel is the valuation form of counting what one's continuation depends on, so in a whole where dependence links every two lives the derived extent with S0 reaches every life. N_std is chosen because it needs no connection, not because it is the only completion. Relation to metaethical-core-characterization: that route starts from one seed and needs connection and N_rel; this one seeds every wanting point and, on held lives, needs only N_std. Where the whole is connected, some claim is living and every life is held, both are equivalent to G0; in general neither implies the other, and the earlier characterization keeps its scope. self-good-reachable-g0 left a bridge from standpoint-relative to normative significance; the AI's reading names that bridge as the one axiom. The shape of rivals persists: the principal rival accepts S0 everywhere and keeps significance within each standpoint (Apart, where neither neutrality holds), the boundary the axiom denies."
+    "zh": "Ren 的提议说：“it can be anything that want's its continuation to have significance”，又说：“if we want to add one axiom, that is for anything, its continuation into the future has significance”。AI 把它分为两半，Ren 答“exactly”：动力学定出想要延续者必须计入的范围，定不出中心；延续条件的唯一作用是让每一点都是中心。本结果给出中心一半的形式内容。形式上，“每个想要之点都是中心”落在自身意义上，自身意义是每个想要之点上的种子；在被持有的生命上，生生之意义超出自身意义的可以集中在立场中立上：从任一中心有意义的，从每个立场都有意义，没有哪个中心特殊。把自身意义读作想要、把立场中立读作延续条件，是 AI 对提议的读法，依 Ren 的交托采用（DELEGATED-CHOICES D11）。立场中立不是唯一的补全：在连通、每个立场都持有活主张的整体上，关系中立也补全自身意义；把关系读作依存时，关系中立正是“计入自身延续所依存的”的评价形式，所以在依存使每两个生命都相连的整体中，推出的范围加自身意义就到达每个生命。选立场中立是因为它不需要连通，不是因为它是唯一的补全。与 metaethical-core-characterization 的关系：那里从一个种子出发，需要连通与关系中立；这里在每个想要的点都有种子，在被持有的生命上只需要立场中立。在连通、有活的主张且每个生命都被持有的整体上，二者都等价于生生之意义；一般地互不蕴涵，原刻画保持其范围。own-good-to-reachable-living-significance 留下了从立场相对的意义到规范意义的桥；AI 的读法把这座桥命名为延续条件。对手的形状不变：主要的对手接受处处自身意义，把意义限在各自的立场之内（Apart，两种中立都不成立），这正是延续条件所否认的边界。",
+    "en": "Ren's proposal says “it can be anything that want's its continuation to have significance” and “if we want to add one axiom, that is for anything, its continuation into the future has significance”. The AI analysis, which Ren answered “exactly”, splits it in two halves: the dynamics fixes the extent of what a wanting formation must count, not its center; the continuation condition's one job is to put a center at every point. This result gives the formal content of the center. Formally, a center at every wanting point is self-significance, the seed at each; on held lives, what living significance adds beyond self-significance can be concentrated in standpoint neutrality: what has significance from any center has it from every standpoint, and no center is privileged. Reading self-significance as wanting and standpoint neutrality as the continuation condition is the AI's reading of the proposal, adopted on Ren's delegation (DELEGATED-CHOICES D11). Standpoint neutrality is not the only completion: on a connected whole where every standpoint holds a living claim, relational neutrality also completes self-significance; with the relations read as dependence, relational neutrality is the valuation form of counting what one's continuation depends on, so in a whole where dependence links every two lives the derived extent with self-significance reaches every life. Standpoint neutrality is chosen because it needs no connection, not because it is the only completion. Relation to metaethical-core-characterization: that route starts from one seed and needs connection and relational neutrality; this one seeds every wanting point and, on held lives, needs only standpoint neutrality. Where the whole is connected, some claim is living and every life is held, both are equivalent to living significance; in general neither implies the other, and the earlier characterization keeps its scope. own-good-to-reachable-living-significance left a bridge from standpoint-relative to normative significance; the AI's reading names that bridge as the continuation condition. The shape of rivals persists: the principal rival accepts self-significance everywhere and keeps significance within each standpoint (Apart, where neither neutrality holds), the boundary the continuation condition denies."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean",
   "aliases": [
@@ -216,12 +216,12 @@
       },
       "interface": {
         "output": {
-          "zh": "估值、S0、两条中立、连通与 G0 的定义；沿关系的不变量。",
-          "en": "The valuation, S0, the two neutralities, connection and G0; invariants along relations."
+          "zh": "估值、自身意义、两条中立、连通与生生之意义的定义；沿关系的不变量。",
+          "en": "The valuation, self-significance, the two neutralities, connection and living significance; invariants along relations."
         },
         "input": {
-          "zh": "被持有的生命上 G0 恰等于处处 S0 加 N_std；连通时 S0 加 N_rel 也给出 G0。",
-          "en": "On held lives G0 is exactly S0 everywhere with N_std; on a connected whole S0 with N_rel also gives G0."
+          "zh": "被持有的生命上生生之意义恰等于处处自身意义加立场中立；连通时自身意义加关系中立也给出生生之意义。",
+          "en": "On held lives living significance is exactly self-significance everywhere with standpoint neutrality; on a connected whole self-significance with relational neutrality also gives living significance."
         },
         "conditions": {
           "zh": "持有；significant_iff_reached 另需持有可判定与到达；significant_of_transmits 需要连通与每个立场持有活的主张。",
@@ -257,8 +257,8 @@
       "id": "own-good-to-reachable-living-significance",
       "relation": "interpretive",
       "detail": {
-        "zh": "那里留下了从立场相对的意义到规范意义的桥；这里说明在被持有的生命上，G0 超出 S0 的可以集中在 N_std 上。",
-        "en": "It left a bridge from standpoint-relative to normative significance; here, on held lives, what G0 adds beyond S0 can be concentrated in N_std."
+        "zh": "那里留下了从立场相对的意义到规范意义的桥；这里说明在被持有的生命上，生生之意义超出自身意义的可以集中在立场中立上。",
+        "en": "It left a bridge from standpoint-relative to normative significance; here, on held lives, what living significance adds beyond self-significance can be concentrated in standpoint neutrality."
       }
     }
   ],
@@ -273,8 +273,8 @@
     {
       "id": "living-on-and-descent",
       "detail": {
-        "zh": "连通与 N_rel 的读法给出另一种补全，并对无人持有的生命仍有作用。",
-        "en": "Readings of connection and N_rel give the other completion and keep a role for lives no standpoint holds."
+        "zh": "连通与关系中立的读法给出另一种补全，并对无人持有的生命仍有作用。",
+        "en": "Readings of connection and relational neutrality give the other completion and keep a role for lives no standpoint holds."
       }
     }
   ],
@@ -516,6 +516,10 @@
     {
       "en": "2026-10-20: 60 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/62322fd3c7b41f5a/held-lives-g0-is-centering.json and in git.",
       "zh": "2026-10-20：60 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/62322fd3c7b41f5a/held-lives-g0-is-centering.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): premises in the current vocabulary: living significance for G0, self-significance, standpoint neutrality and relational neutrality for S0, N_std and N_rel, the condition the theory states for the retired account of G0 folded as an axiom of Part I, and, for its clause that the restatement's readings were decided on Ren's delegation, what the continuation condition yields there on a reading where a claim's significance is a formation's continuation; the holding reading labelled as an AI reading (D11) without naming whose delegation adopted it; a former record id updated; the same labels in the correspondence, the validation scope, a dependency detail, a dependency's interface and a related detail, and 'the axiom' and 'the one axiom' in the correspondence, read as the current terms (the continuation condition for the axiom), Ren's quoted words kept verbatim; the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提用现行词汇：G0 改为生生之意义，S0、N_std、N_rel 改为自身意义、立场中立、关系中立，以理论所陈述的条件取代已退役的“G0 作为第一部分之公理被折叠”之说，并以延续条件在主张之意义即某形成之延续之意义的读法上所推出者取代“重述的读法依 Ren 的交托决定”一句；持有之读法标为 AI 的读法（D11），不再写依谁的交托采用；更新一个旧记录编号；对应、验证范围、一条依存说明、一条依存的接口及一条相关说明中的同样标签，以及对应中的“那条公理”“唯一公理”，改为现行术语（公理改为延续条件），Ren 的引语原样保留；定律不变。"
     }
   ],
   "text_versions": [

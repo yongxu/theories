@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T07:22:19+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "en": "Read at a fine and a coarse class and on branches, the pattern goes on along some branch or ends on every branch; generation and keeping exclude degeneration and can share a point; renewal does not decide the region, and telling going on from ending is exactly excluded middle.",
     "zh": "以细类与粗类、按分支同读：样式或沿某支而延，或诸支皆尽；生成与守皆斥退化，而可共于一点；复生不定其域；分辨延与尽恰是排中律。"
@@ -107,8 +107,8 @@
       ]
     },
     {
-      "en": "On the old base (occurrences: a step and a formation): carrying renewal steps into a formation that did not carry on as itself; under passing, generation makes carriers arise arbitrarily late; by names nothing generates; consumption held, a family drawn beyond renewal and stopped passing refute going on every branch; the relay renews and ends.",
-      "zh": "在旧基底的延续关系上（事为步与形成之对）：传是步入一个其形成未以自身延续之事；在传递之下，生成使载者迟迟生起；只按名读则无生成；所耗仍持、家族超出更新、传之止皆否诸支之不穷；中继复生而终。",
+      "en": "On the World model (occurrences: a step and a formation): carrying renewal steps into a formation that did not carry on as itself; under passing, generation makes carriers arise arbitrarily late; by names nothing generates; consumption held, a family drawn beyond renewal and stopped passing refute going on every branch; the relay renews and ends.",
+      "zh": "在 World 模型的延续关系上（事为步与形成之对）：传是步入一个其形成未以自身延续之事；在传递之下，生成使载者迟迟生起；只按名读则无生成；所耗仍持、家族超出更新、传之止皆否诸支之不穷；中继复生而终。",
       "declarations": [
         "Becoming.Web.carries_iff",
         "Becoming.Web.passing_carries_iff",
@@ -431,6 +431,10 @@
     {
       "en": "25 October 2026, board item OU6 (corrections to the grammar from the review of its sources, study section 400): the excluded-middle theorem renamed «不穷有终之定当且仅当排中», since it is about a line that never ends against one that ends, and the theorem for the three regions added («全三域之定当且仅当排中»); the higher orders said to assume no order between the classes; renewal without end and ceasing joined to 延 and 尽; the every-branch forms restated as strong forms with their quantifiers, as DEFECTS-FOUND asked from chapter 02. The claim is narrowed where a name or a reading said more than the Lean, and the new theorems are added; no other law changes.",
       "zh": "2026年10月25日，工作板条目 OU6（据对文法与其来源之审所作之更正，研究第 400 节）：排中之定理改名为 «不穷有终之定当且仅当排中»，因其所论是不穷之线与有终之线；增三域之定理（«全三域之定当且仅当排中»）；阶之诸类不设其间之序；生生与息接于延与尽；诸支皆然之形依缺陷录（第二章）改述为强形，并写出其量词。凡名或读法说过了 Lean 者，论断收窄；新定理增入；其余之律不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the law on the World model names its base in the current vocabulary (the World model, not the old base); the law and its declarations are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：World 模型上的定律用现行词汇称其基底（World 模型，而非旧基底）；定律及其声明不变。"
     }
   ]
 }

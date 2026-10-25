@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "zh": "在条件区域上的更新，只在区域覆盖其参与时是该步的更新。覆盖其所需且要求不收紧时保住自身支持，仍可侵蚀他者；遗漏其所需时，可以经自身的汲取失去自身支持。",
     "en": "Renewal over a region of conditions is renewal at the step where the region covers what the formation takes part in. Covering what it requires, with requirements not tightening, it keeps its own support yet can undermine another; omitting what it requires, its own draw can lose its own support."
@@ -36,8 +36,8 @@
     }
   ],
   "correspondence": {
-    "zh": "Ren 写道：“recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”，又写道自我的“imagined boundary”“it is also cognitive construct that's materialistic”。作者的读法（AI 论证，依 Ren 的交托采用）：一个条件区域读作一个中心所表示的边界，形成实际参与与所需的条件读作它的实际依存。一个中心的边界可以覆盖其所需而不覆盖其参与，于是保住自身而侵蚀他者；也可以遗漏其所需，于是经自身的汲取失去自身支持；只有覆盖其参与的边界给出该步的更新。这里没有模型中心怎样形成或表示边界，区域在展开之外没有地位。这为路线 (b)（P40）准备了比较：“应当”是中心在其所表示的边界与其实际依存一致时所做的；那条路线尚未开始。读法与名称是 AI 的。",
-    "en": "Ren wrote that “recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”, and of the self's “imagined boundary” that “it is also cognitive construct that's materialistic”. The author's reading (an AI argument, adopted on Ren's delegation): a region of conditions reads as the boundary a center represents, and the conditions a formation actually takes part in and requires as its actual dependence. A center's boundary can cover what it requires and not what it takes part in, so it keeps itself and undermines another; or it can omit what it requires, so its own draw loses its own support; only a boundary covering what it takes part in gives renewal at the step. Nothing here models how a center forms or represents a boundary, and the region has no status outside the unfolding. This prepares a comparison for route (b) (P40), on which “should” is what a center does once its represented boundary matches what it actually depends on; that route has not begun. The reading and the names are the AI's."
+    "zh": "Ren 写道：“recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”，又写道自我的“imagined boundary”“it is also cognitive construct that's materialistic”。读法（AI 的）：一个条件区域读作一个中心所表示的边界，形成实际参与与所需的条件读作它的实际依存。一个中心的边界可以覆盖其所需而不覆盖其参与，于是保住自身而侵蚀他者；也可以遗漏其所需，于是经自身的汲取失去自身支持；只有覆盖其参与的边界给出该步的更新。这里没有模型中心怎样形成或表示边界，区域在展开之外没有地位。这为路线 (b)（P40）准备了比较：“应当”是中心在其所表示的边界与其实际依存一致时所做的；那条路线尚未开始。读法与名称是 AI 的。",
+    "en": "Ren wrote that “recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”, and of the self's “imagined boundary” that “it is also cognitive construct that's materialistic”. A reading (the AI's): a region of conditions reads as the boundary a center represents, and the conditions a formation actually takes part in and requires as its actual dependence. A center's boundary can cover what it requires and not what it takes part in, so it keeps itself and undermines another; or it can omit what it requires, so its own draw loses its own support; only a boundary covering what it takes part in gives renewal at the step. Nothing here models how a center forms or represents a boundary, and the region has no status outside the unfolding. This prepares a comparison for route (b) (P40), on which “should” is what a center does once its represented boundary matches what it actually depends on; that route has not begun. The reading and the names are the AI's."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
   "aliases": [
@@ -496,6 +496,10 @@
     {
       "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument, adopted on Ren's delegation)' reads 'a reading (the AI's)', Ren's quoted words kept verbatim; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证，依 Ren 的交托采用）”改为“读法（AI 的）”，Ren 的引语原样保留；主张不变。"
     }
   ]
 }

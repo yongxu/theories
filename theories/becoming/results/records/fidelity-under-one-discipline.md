@@ -5,7 +5,7 @@
 
 `fidelity-under-one-discipline` · **reviewed-scoped** · assessment · F01 · [record](fidelity-under-one-discipline.json) · [register](../../../../RESULTS.md)
 
-> Under the Claude coder, English written as full statements in the 中华本's name-table discipline introduces no more referents the Lean lacks than the 經 (經 − CE +0.023, CI [-0.010, +0.055]); the GPT coder on 60 pairs leaves a residual for the 經 (-0.27); LLM-coded, provisional.
+> Under the coder of the authors' model family, full English statements in the 中华本's name-table discipline introduce no more referents the Lean lacks than the 經 (經 − CE +0.023, CI [-0.010, +0.055]); a coder of another family on 60 pairs leaves a residual for the 經 (-0.27); LLM-coded, provisional.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -15,7 +15,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That classical Chinese adds nothing beyond the discipline: the GPT coder leaves a residual for the 經, and the two coders do not agree on X where both coded.
+- That classical Chinese adds nothing beyond the discipline: a coder of another model family leaves a residual for the 經, and the two coders do not agree on X where both coded.
 - That discipline rather than register does it: CE matches the 經 in both, and the genre-matched comparison (F3) was not run.
 - That an English text written directly from the Lean in the same table would score the same: CE was translated from the 經.
 - Anything about readers (H2) or about which code is best.
@@ -73,7 +73,8 @@ Aliases: `ZE`, `controlled English edition`, `English name table`, `受控英文
 ### History
 
 - 23 October 2026: added (ZE); study section 377.
+- 25 October 2026, board item DF (study section 418): the coders named by model family (the authors' and another) rather than by product in the statement and boundaries, the identities staying in the evidence.
 
 </details>
 
-Documentary review UTC: `2026-10-23T06:36:45+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:25:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

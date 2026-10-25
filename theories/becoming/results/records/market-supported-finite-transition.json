@@ -8,7 +8,11 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-14T08:40:00+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
+  "statement": {
+    "en": "A start lasts n steps exactly when some ladder holds it at level n; the market's support cover is such a ladder for the essential floor, exact at the worst share, so initial support at least K_N carries every positive state through a finite correction into the original protection.",
+    "zh": "一个起点持续 n 步，恰当有某个阶梯在第 n 层容纳它；市场的支持覆盖是必要底线的这样一个阶梯，在最坏份额下恰好，故初始支持至少 K_N 使每个正状态经有限纠正进入原有保护。"
+  },
   "claim": {
     "zh": "对每条带可容许扰动与守卫的变化之律：起点持续n步，恰当某个梯级族（守卫之内的层，每个可容许步从第k+1级落到第k级）在第n级含有它，也恰当每个必要族在第n级含有它；兼为二者的族恰是持续。市场的支持覆盖K₀=5、K(n+1)=(10/9)(K(n)+1+κ)在每个纠正日程与每个不超过κ的冲击下，是必要底线的梯级族；在最坏份额下它恰好：存量单独在5之上持续n步，恰当它至少为K_n。所以原有理市场模型中每个正维护份额的物理状态都有有限的β=0校正期N（到达律的实例，即着陆一侧β=0的情形）；初始支持高于K_N（含每步额外耗用）使每个脉冲步可执行，撤出后实际到达状态满足原β=1/2的永久保护证书。",
     "en": "For every law of change with admissible disturbances and a guard, a start lasts n steps exactly when some ladder holds it at level n (levels within the guard, every admissible step from level k+1 landing at level k), and exactly when every necessary family holds it there; a family that is both is exactly lasting. The market's support cover K0=5, K(n+1)=(10/9)(K(n)+1+kappa) is a ladder for the essential floor under every correction schedule and every shock at most kappa, and at the worst share it is exact: the stock alone lasts n steps at or above 5 exactly when it is at least K_n. So every physical state of the original rational market model with positive renewal share has a finite beta=0 correction horizon N (an instance of the reaching law, the case beta=0 of the landing side); initial support above K_N, including extra per-step consumption, makes every pulse step executable and lets the actual arrived state satisfy the original beta=1/2 perpetual protection certificate after withdrawal."
@@ -69,8 +73,8 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "zh": "机制结果供既有 G0/J 判断使用；稳定性不提供规范起点或覆盖全部现实损失。",
-        "en": "The mechanism informs existing G0/J judgment; stability neither supplies normative grounds nor covers all real losses."
+        "zh": "机制结果供既有的、生生之意义与实践承诺之下的判断使用；稳定性不提供规范起点或覆盖全部现实损失。",
+        "en": "The mechanism informs existing judgment under living significance and the practical commitments; stability neither supplies normative grounds nor covers all real losses."
       }
     },
     {
@@ -342,6 +346,10 @@
     {
       "en": "2026-10-20: 25 bookkeeping notes condensed from 2026-10-08 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/6eb39a520b68465b/market-supported-finite-transition.json and in git.",
       "zh": "2026-10-20：25 条记账性说明合并（2026-10-08 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/6eb39a520b68465b/market-supported-finite-transition.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them (the claim is unchanged); the retired label G0/J in a related detail reads living significance and the practical commitments.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述（主张不变）；一条相关说明中的退役标签 G0/J 改为生生之意义与实践承诺。"
     }
   ]
 }

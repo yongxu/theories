@@ -116,6 +116,7 @@ Closure is the reflexive-transitive closure of a relation read as the least clos
 | review | [REVIEW-ASTRA-A.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md) | — |
 | review | [REVIEW-ASTRA-3.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-3.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `The master laws on the grammar`, `文法上的主律`, `master laws on the grammar`, `the five master laws on the grammar`, `Becoming.«所闭当且仅当同一或及»`, `Becoming.«守数当且仅当可对»`, `Becoming.«尽则不或屡»`, `Becoming.«像定后当且仅当同行»`, `Becoming.«广之传递»`
 

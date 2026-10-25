@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F22",
-  "reviewed_at_utc": "2026-10-08T13:52:31.763955+00:00",
+  "reviewed_at_utc": "2026-10-25T14:32:50+00:00",
   "claim": {
     "zh": "有限结果接合的两份精确约简分支说明具有唯一的已用代码对齐，保持所有可能输出类；代码结果可从任意原来指定的同码输入对提升。",
     "en": "Two exact reduced branch accounts of finite-outcome joining have a unique alignment on used codes preserving all possible outcome classes; each code outcome lifts from any originally specified input pair with those codes."
@@ -34,9 +34,9 @@
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
   "aliases": [
     "Generative.ExplanatoryJoiningBranches.common_multivalued_structure",
-    "Becoming.Joining.common_multivalued_structure_of_em",
+    "Becoming.Joining.common_multivalued_structure_of_em (retired module)",
     "Becoming.Joining.common_structure",
-    "Becoming.Joining.operation_lifts_iff"
+    "Becoming.Joining.operation_lifts_iff (retired module)"
   ],
   "dependencies": [
     {
@@ -348,6 +348,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryBranching, ExplanatoryJoiningBranches and JoiningBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.BranchingCorrespondence, Becoming.Joining, Becoming.JoiningCodes, Becoming.Presentations and ExplanatoryJoiningBranchWitnesses). The retired modules' content is also stated in Becoming.Granularity, Becoming.Labelled and Becoming.Likeness, which this record does not cite with declarations. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryBranching, ExplanatoryJoiningBranches and JoiningBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.BranchingCorrespondence, Becoming.Joining, Becoming.JoiningCodes, Becoming.Presentations and ExplanatoryJoiningBranchWitnesses）。退役模块的内容也陈述于 Becoming.Granularity, Becoming.Labelled and Becoming.Likeness，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the aliases Becoming.Joining.operation_lifts_iff and Becoming.Joining.common_multivalued_structure_of_em marked as of a retired module: they are declared only in the history copy of JoiningBridge, which the record cites as provenance; the current proof is Becoming.Joining.common_structure. The claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：别名 Becoming.Joining.operation_lifts_iff 与 Becoming.Joining.common_multivalued_structure_of_em 标为已退休模块之名：它们只在 JoiningBridge 的历史副本中声明，本记录以之为来历；当前证明是 Becoming.Joining.common_structure。主张不变。"
     }
   ]
 }

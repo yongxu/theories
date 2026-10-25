@@ -2,13 +2,13 @@
   "schema_version": 2,
   "id": "where-a-formations-acts-return",
   "title": {
-    "en": "How a center forms: where a formation's acts return",
-    "zh": "中心之形成：形成之行动回返之处"
+    "en": "Where a formation's acts return",
+    "zh": "形成之行动回返之处"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-22T13:22:29+00:00",
+  "reviewed_at_utc": "2026-10-25T14:45:15+00:00",
   "statement": {
     "en": "Two formations lie in one loop where each can affect the other. A formation's acts return, all it acts on lying within what it can represent, exactly where its loop is closed under affecting; loops form as links close them, and over finitely many formations every reach holds one.",
     "zh": "两形成能互相影响则同在一环。一形成之行动回返，其所作用者皆在其能表示者之内，恰当其环于影响下封闭；诸环随链接闭合而成，有限多形成时每一所及中皆有之。"
@@ -214,6 +214,10 @@
     {
       "en": "22 October 2026: added (CK2), for chapter §8.1 item 3; study section 360.",
       "zh": "2026年10月22日：新增（CK2），为章 §8.1 第 3 项；研究第 360 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): title shortened to what the statement says, from \"How a center forms: where a formation's acts return\" (\"中心之形成：形成之行动回返之处\"): the laws speak of loops and returning acts, and the old title gave 'center' a second sense.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：标题缩为陈述所说者，原为“中心之形成：形成之行动回返之处”（\"How a center forms: where a formation's acts return\"）：诸律只说回路与回返之行动，旧标题给“中心”第二种意义。"
     }
   ]
 }

@@ -1,0 +1,750 @@
+@Becoming.Flow.balancesAt_one : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.BalancesAt (fun x => 1) W ↔ L.Balances W
+@Becoming.Flow.BalancesAt.over : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ (cs : List C) (t : Nat), W.stock cs (t + 1) + L.uptake cs t = r t * W.stock cs t + L.replenishment cs t
+@Becoming.Flow.BalancesAt.lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {cs : List C} {t : Nat}, L.DissipatesOn cs t → W.stock cs (t + 1) + L.takers cs t ≤ r t * W.stock cs t
+@Becoming.units_pos : ∀ {r R : Nat → Nat} {T : Nat},
+  R T = 1 → (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) → (∀ (t : Nat), T ≤ t → 0 < r t) → ∀ {t : Nat}, T ≤ t → 0 < R t
+@Becoming.losses_invariant : ∀ {r R s k : Nat → Nat} {q T : Nat},
+  R T = 1 →
+    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+      (∀ (t : Nat), T ≤ t → q * s (t + 1) + k t * R (t + 1) ≤ q * (r t * s t)) →
+        ∀ (n : Nat), q * s (T + n) + Becoming.total (Becoming.steps T n) k * R (T + n) ≤ q * s T * R (T + n)
+@Becoming.losses_bound : ∀ {r R s k : Nat → Nat} {q T : Nat},
+  R T = 1 →
+    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+      (∀ (t : Nat), T ≤ t → 0 < r t) →
+        (∀ (t : Nat), T ≤ t → q * s (t + 1) + k t * R (t + 1) ≤ q * (r t * s t)) →
+          ∀ (n : Nat), Becoming.total (Becoming.steps T n) k ≤ q * s T
+@Becoming.unbounded_of_recurring : ∀ {k : Nat → Nat} {T : Nat},
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < k t) → ∀ (m : Nat), ∃ n, m ≤ Becoming.total (Becoming.steps T n) k
+@Becoming.bounded_not_recurring : ∀ {k : Nat → Nat} {T B : Nat},
+  (∀ (n : Nat), Becoming.total (Becoming.steps T n) k ≤ B) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < k t
+@Becoming.quantum_step : ∀ {r R s : Nat → Nat} {q t : Nat},
+  s (t + 1) ≤ r t * s t → q * s (t + 1) + Becoming.mark (Becoming.LosesQuantum r R s q t) * R (t + 1) ≤ q * (r t * s t)
+@Becoming.quantum_bound : ∀ {r R s : Nat → Nat} {q T : Nat},
+  R T = 1 →
+    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+      (∀ (t : Nat), T ≤ t → 0 < r t) →
+        (∀ (t : Nat), T ≤ t → s (t + 1) ≤ r t * s t) →
+          ∀ (n : Nat),
+            (Becoming.total (Becoming.steps T n) fun u => Becoming.mark (Becoming.LosesQuantum r R s q u)) ≤ q * s T
+@Becoming.quantum_not_recurring : ∀ {r R s : Nat → Nat} {q T : Nat},
+  R T = 1 →
+    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+      (∀ (t : Nat), T ≤ t → 0 < r t) →
+        (∀ (t : Nat), T ≤ t → s (t + 1) ≤ r t * s t) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ Becoming.LosesQuantum r R s q t
+@Becoming.refinedSum_invariant : ∀ {r R s ℓ : Nat → Nat} {c T : Nat},
+  R T = 1 →
+    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+      (∀ (t : Nat), T ≤ t → c * s (t + 1) + ℓ t ≤ c * (r t * s t)) →
+        ∀ (n : Nat), c * s (T + n) + Becoming.refinedSum r ℓ T n ≤ c * s T * R (T + n)
+@Becoming.refinedSum_mono : ∀ {r a b : Nat → Nat} {T : Nat},
+  (∀ (t : Nat), T ≤ t → a t ≤ b t) → ∀ (n : Nat), Becoming.refinedSum r a T n ≤ Becoming.refinedSum r b T n
+Becoming.refinedSum_mul : ∀ (r ℓ : Nat → Nat) (p T n : Nat),
+  Becoming.refinedSum r (fun t => p * ℓ t) T n = p * Becoming.refinedSum r ℓ T n
+@Becoming.refinedSum_marks : ∀ {r R k : Nat → Nat} {T : Nat},
+  (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+    ∀ (n : Nat),
+      Becoming.refinedSum r (fun t => k t * R (t + 1)) T n = Becoming.total (Becoming.steps T n) k * R (T + n)
+@Becoming.counts_of_amounts : ∀ {r R k ℓ : Nat → Nat} {p B T : Nat},
+  R T = 1 →
+    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+      (∀ (t : Nat), T ≤ t → 0 < r t) →
+        (∀ (t : Nat), T ≤ t → k t * R (t + 1) ≤ p * ℓ t) →
+          (∀ (n : Nat), Becoming.refinedSum r ℓ T n ≤ B * R (T + n)) →
+            ∀ (n : Nat), Becoming.total (Becoming.steps T n) k ≤ p * B
+@Becoming.Flow.quantum_bound : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r R : Nat → Nat},
+  L.BalancesAt r W →
+    L.Dissipative →
+      ∀ {cs : List C},
+        Becoming.Distinct cs →
+          ∀ {T : Nat},
+            (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+              R T = 1 →
+                (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                  (∀ (t : Nat), T ≤ t → 0 < r t) →
+                    ∀ (q n : Nat),
+                      (Becoming.total (Becoming.steps T n) fun u =>
+                          Becoming.mark (Becoming.LosesQuantum r R (W.stock cs) q u)) ≤
+                        q * W.stock cs T
+@Becoming.Flow.quantum_not_recurring : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r R : Nat → Nat},
+  L.BalancesAt r W →
+    L.Dissipative →
+      ∀ {cs : List C},
+        Becoming.Distinct cs →
+          ∀ {T : Nat},
+            (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+              R T = 1 →
+                (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                  (∀ (t : Nat), T ≤ t → 0 < r t) →
+                    ∀ (q : Nat), ¬∀ (N : Nat), ∃ t, N ≤ t ∧ Becoming.LosesQuantum r R (W.stock cs) q t
+@Becoming.Flow.takes_loses : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {cs : List C} {t : Nat},
+      L.DissipatesOn cs t → 0 < L.takers cs t → Becoming.LosesQuantum r (fun x => 1) (W.stock cs) 1 t
+@Becoming.Flow.taking_not_recurring : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    L.Dissipative →
+      ∀ {cs : List C},
+        Becoming.Distinct cs →
+          ∀ {T : Nat},
+            (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+              (∀ (t : Nat), T ≤ t → r t = 1) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.total_map_some : ∀ {α : Type} (q : Option α → Nat) (l : List α),
+  Becoming.total (List.map some l) q = Becoming.total l fun a => q (some a)
+@Becoming.mem_map_some : ∀ {α : Type} {a : α} {l : List α}, a ∈ l → some a ∈ List.map some l
+@Becoming.of_mem_map_some : ∀ {α : Type} {l : List α} {f : Option α}, f ∈ List.map some l → ∃ a, a ∈ l ∧ some a = f
+Becoming.refine_eq : ∀ (s l g : Nat), (s + 1) * l + g = l + (s * l + g)
+@Becoming.Flow.withRefinement_taken : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (split : Nat → Nat)
+  (t : Nat) (c : C), (L.withRefinement W split).taken t c = L.taken t c
+@Becoming.Flow.withRefinement_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (split : Nat → Nat)
+  (t : Nat) (c : C), (L.withRefinement W split).given t c = split t * W.level t c + L.given t c
+@Becoming.Flow.balancesAt_iff_withRefinement : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {split : Nat → Nat}, L.BalancesAt (fun t => split t + 1) W ↔ (L.withRefinement W split).Balances W.withRefinement
+@Becoming.Flow.withRefinement_dissipatesOn_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {split : Nat → Nat} {cs : List C} {t : Nat},
+  (L.withRefinement W split).DissipatesOn cs t ↔ L.DissipatesOn cs t ∧ split t * W.stock cs t = 0
+@Becoming.Flow.ClosedAt.of_withRefinement : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {split : Nat → Nat} {cs : List C} {t : Nat}, (L.withRefinement W split).ClosedAt cs t → L.ClosedAt cs t
+@Becoming.Flow.ClosedAt.withRefinement : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {split : Nat → Nat} {cs : List C} {t : Nat},
+  L.ClosedAt cs t → (∀ (c : C), split t * W.level t c = 0) → (L.withRefinement W split).ClosedAt cs t
+@Becoming.Flow.Enclosed.of_withRefinement : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {split : Nat → Nat} {t : Nat}, (L.withRefinement W split).Enclosed t → L.Enclosed t
+@Becoming.Flow.refinement_gives_nothing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {split : Nat → Nat} {t : Nat},
+  (L.withRefinement W split).Enclosed t →
+    (∀ (cs : List C),
+        Becoming.Distinct cs →
+          (L.withRefinement W split).ClosedAt cs t → (L.withRefinement W split).DissipatesOn cs t) →
+      ∀ (c : C), split t * W.level t c = 0
+@Becoming.Flow.taking_needs_refinement : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {split : Nat → Nat},
+  L.BalancesAt (fun t => split t + 1) W →
+    L.Dissipative →
+      ∀ {cs : List C},
+        Becoming.Distinct cs →
+          ∀ {T : Nat},
+            (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+              (∀ (t : Nat), T ≤ t → split t * W.stock cs t = 0) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.World.after_counted : ∀ {w : Becoming.World}, w.Counted → ∀ (T : Nat), (w.after T).Counted
+@Becoming.World.after_embodied : ∀ {w : Becoming.World}, w.Embodied → ∀ (T : Nat), (w.after T).Embodied
+@Becoming.World.after_balanced : ∀ {w : Becoming.World} {split : Nat → Nat},
+  w.flow.BalancesAt (fun t => split t + 1) w.web →
+    ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → ∀ (x : w.Relatum), split t * w.web.level t x = 0) → (w.after T).Balanced
+@Becoming.World.after_dissipative : ∀ {w : Becoming.World} {T : Nat},
+  (∀ (t : Nat),
+      T ≤ t → ∀ (cs : List w.Relatum), Becoming.Distinct cs → w.flow.ClosedAt cs t → w.flow.DissipatesOn cs t) →
+    (w.after T).Dissipative
+@Becoming.World.after_enclosed : ∀ {w : Becoming.World} {T : Nat},
+  (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) → ∀ (t : Nat), 0 ≤ t → (w.after T).flow.Enclosed t
+@Becoming.World.after_recurs : ∀ {w : Becoming.World} {T : Nat} {p : Nat → w.Relatum → Prop},
+  (∀ (N : Nat), ∃ t x, N ≤ t ∧ p t x) → ∀ (N : Nat), ∃ t x, N ≤ t ∧ p (T + t) x
+@Becoming.World.restsFrom_of_after : ∀ {w : Becoming.World} {T N : Nat}, (w.after T).RestsFrom N → w.RestsFrom (T + N)
+@Becoming.World.rests_unrefuted_of_after : ∀ {w : Becoming.World} {T : Nat},
+  (¬¬∃ N, (w.after T).RestsFrom N) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.rests_unrefuted_without_refinement : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      ∀ {split : Nat → Nat},
+        w.flow.BalancesAt (fun t => split t + 1) w.web →
+          w.Dissipative →
+            ∀ {T : Nat},
+              (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                (∀ (t : Nat), T ≤ t → ∀ (x : w.Relatum), split t * w.web.level t x = 0) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.rests_unrefuted_refinement_counted : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      ∀ {split : Nat → Nat},
+        w.flow.BalancesAt (fun t => split t + 1) w.web →
+          (w.flow.withRefinement w.web split).Dissipative →
+            ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → (w.flow.withRefinement w.web split).Enclosed t) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.arising_opens_refinement_counted : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      ∀ {split : Nat → Nat},
+        w.flow.BalancesAt (fun t => split t + 1) w.web →
+          (w.flow.withRefinement w.web split).Dissipative →
+            w.ArisingRecurs → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → (w.flow.withRefinement w.web split).Enclosed t
+@Becoming.World.arising_needs_refinement : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      ∀ {split : Nat → Nat},
+        w.flow.BalancesAt (fun t => split t + 1) w.web →
+          w.Dissipative →
+            w.ArisingRecurs →
+              ∀ (T : Nat),
+                ¬((∀ (t : Nat), T ≤ t → w.flow.Enclosed t) ∧
+                    ∀ (t : Nat), T ≤ t → ∀ (x : w.Relatum), split t * w.web.level t x = 0)
+@Becoming.Flow.DissipatesBy.of_each : ∀ {F C : Type} {L : Becoming.Flow F C} {q : Nat} {cs : List C} {t : Nat},
+  (∀ (f : F), f ∈ L.present t → (q + 1) * Becoming.total cs (L.give t f) ≤ q * Becoming.total cs (L.take t f)) →
+    Becoming.Flow.DissipatesBy q cs t
+@Becoming.Flow.DissipatesBy.replenishment_le : ∀ {F C : Type} {L : Becoming.Flow F C} {q : Nat} {cs : List C} {t : Nat},
+  Becoming.Flow.DissipatesBy q cs t → L.replenishment cs t ≤ L.uptake cs t
+@Becoming.Flow.BalancesAt.nonrisingBy : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {q : Nat} {cs : List C} {t : Nat}, Becoming.Flow.DissipatesBy q cs t → W.stock cs (t + 1) ≤ r t * W.stock cs t
+@Becoming.Flow.BalancesAt.lowersBy : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {q : Nat} {cs : List C} {t : Nat},
+      Becoming.Flow.DissipatesBy q cs t → q * W.stock cs (t + 1) + L.replenishment cs t ≤ q * (r t * W.stock cs t)
+@Becoming.Flow.BalancesAt.gain_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W → ∀ {R : Nat → Nat} {p t : Nat} {c : C}, W.Gains r R p t c → R (t + 1) ≤ p * L.given t c
+@Becoming.Flow.total_mul_right : ∀ {α : Type} (q : α → Nat) (g : Nat) (as : List α),
+  Becoming.total as q * g = Becoming.total as fun a => q a * g
+@Becoming.Flow.BalancesAt.gainers_lose : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {R : Nat → Nat} {p q : Nat} {cs gs : List C} {t : Nat},
+      Becoming.Flow.DissipatesBy q cs t →
+        Becoming.Distinct gs →
+          (∀ (c : C), c ∈ gs → c ∈ cs) →
+            p * q * W.stock cs (t + 1) + W.gainers r R p t gs * R (t + 1) ≤ p * q * (r t * W.stock cs t)
+@Becoming.Flow.BalancesAt.gainers_le : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ (R : Nat → Nat) (p t : Nat) (gs : List C), W.gainers r R p t gs * R (t + 1) ≤ p * L.replenishment gs t
+@Becoming.Flow.BalancesAt.lowersTaking : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {q : Nat} {cs : List C} {t : Nat},
+      Becoming.Flow.DissipatesBy q cs t → (q + 1) * W.stock cs (t + 1) + L.uptake cs t ≤ (q + 1) * (r t * W.stock cs t)
+@Becoming.Flow.uptake_bound : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {q : Nat},
+      Becoming.Flow.DissipativeBy q →
+        ∀ {cs : List C},
+          Becoming.Distinct cs →
+            ∀ {T : Nat},
+              (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+                ∀ {R : Nat → Nat},
+                  R T = 1 →
+                    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                      ∀ (n : Nat), Becoming.refinedSum r (L.uptake cs) T n ≤ (q + 1) * W.stock cs T * R (T + n)
+@Becoming.Flow.replenishment_bound : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {q : Nat},
+      Becoming.Flow.DissipativeBy q →
+        ∀ {cs : List C},
+          Becoming.Distinct cs →
+            ∀ {T : Nat},
+              (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+                ∀ {R : Nat → Nat},
+                  R T = 1 →
+                    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                      ∀ (n : Nat), Becoming.refinedSum r (L.replenishment cs) T n ≤ q * W.stock cs T * R (T + n)
+@Becoming.Flow.takersAbove_le : ∀ {F C : Type} {L : Becoming.Flow F C} (R : Nat → Nat) (p : Nat) (cs : List C)
+  (t : Nat), Becoming.Flow.takersAbove R p cs t * R (t + 1) ≤ p * L.uptake cs t
+@Becoming.Flow.BalancesAt.takers_lose : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {R : Nat → Nat} {p q : Nat} {cs : List C} {t : Nat},
+      Becoming.Flow.DissipatesBy q cs t →
+        p * (q + 1) * W.stock cs (t + 1) + Becoming.Flow.takersAbove R p cs t * R (t + 1) ≤
+          p * (q + 1) * (r t * W.stock cs t)
+@Becoming.Flow.exchange_bound : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {q : Nat},
+      Becoming.Flow.DissipativeBy q →
+        ∀ {cs : List C},
+          Becoming.Distinct cs →
+            ∀ {T : Nat},
+              (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+                ∀ {R : Nat → Nat},
+                  R T = 1 →
+                    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                      (∀ (t : Nat), T ≤ t → 0 < r t) →
+                        ∀ (p n : Nat),
+                          Becoming.total (Becoming.steps T n) (Becoming.Flow.takersAbove R p cs) ≤
+                            p * (q + 1) * W.stock cs T
+@Becoming.Flow.exchange_not_recurring : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {q : Nat},
+      Becoming.Flow.DissipativeBy q →
+        ∀ {cs : List C},
+          Becoming.Distinct cs →
+            ∀ {T : Nat},
+              (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+                ∀ {R : Nat → Nat},
+                  R T = 1 →
+                    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                      (∀ (t : Nat), T ≤ t → 0 < r t) →
+                        ∀ (p : Nat),
+                          ¬∀ (N : Nat), ∃ t f, N ≤ t ∧ f ∈ L.present t ∧ R (t + 1) ≤ p * Becoming.total cs (L.take t f)
+@Becoming.Flow.DissipatesOn.give_le : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t → ∀ {f : F}, f ∈ L.present t → Becoming.total cs (L.give t f) ≤ Becoming.total cs (L.take t f)
+@Becoming.Flow.LosesAtSize.over : ∀ {F C : Type} {L : Becoming.Flow F C} {R : Nat → Nat} {p m : Nat} {cs : List C}
+  {t : Nat},
+  L.DissipatesOn cs t →
+    Becoming.Flow.LosesAtSize R p m cs t →
+      m * L.replenishment cs t + Becoming.Flow.takersAbove R p cs t * R (t + 1) ≤ m * L.uptake cs t
+@Becoming.Flow.BalancesAt.takers_lose_least : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {R : Nat → Nat} {p m : Nat} {cs : List C} {t : Nat},
+      L.DissipatesOn cs t →
+        Becoming.Flow.LosesAtSize R p m cs t →
+          m * W.stock cs (t + 1) + Becoming.Flow.takersAbove R p cs t * R (t + 1) ≤ m * (r t * W.stock cs t)
+@Becoming.Flow.exchange_bound_of_least_loss : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat},
+  L.BalancesAt r W →
+    L.Dissipative →
+      ∀ {R : Nat → Nat} {p m : Nat},
+        (∀ (cs : List C) (t : Nat), Becoming.Distinct cs → L.ClosedAt cs t → Becoming.Flow.LosesAtSize R p m cs t) →
+          ∀ {cs : List C},
+            Becoming.Distinct cs →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+                  R T = 1 →
+                    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                      (∀ (t : Nat), T ≤ t → 0 < r t) →
+                        ∀ (n : Nat),
+                          Becoming.total (Becoming.steps T n) (Becoming.Flow.takersAbove R p cs) ≤ m * W.stock cs T
+@Becoming.Flow.exchange_not_recurring_of_least_loss : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat},
+  L.BalancesAt r W →
+    L.Dissipative →
+      ∀ {R : Nat → Nat} {p m : Nat},
+        (∀ (cs : List C) (t : Nat), Becoming.Distinct cs → L.ClosedAt cs t → Becoming.Flow.LosesAtSize R p m cs t) →
+          ∀ {cs : List C},
+            Becoming.Distinct cs →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+                  R T = 1 →
+                    (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                      (∀ (t : Nat), T ≤ t → 0 < r t) →
+                        ¬∀ (N : Nat), ∃ t f, N ≤ t ∧ f ∈ L.present t ∧ R (t + 1) ≤ p * Becoming.total cs (L.take t f)
+@Becoming.Flow.losesAtSize_of_each : ∀ {F C : Type} {L : Becoming.Flow F C} {q : Nat} {cs : List C} {t : Nat},
+  (∀ (f : F), f ∈ L.present t → (q + 1) * Becoming.total cs (L.give t f) ≤ q * Becoming.total cs (L.take t f)) →
+    ∀ (R : Nat → Nat) (p : Nat), Becoming.Flow.LosesAtSize R p (p * (q + 1)) cs t
+@Becoming.Flow.BalancesAt.loss_taken : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W → ∀ {R : Nat → Nat} {p t : Nat} {c : C}, W.Loses r R p t c → R (t + 1) ≤ p * L.taken t c
+@Becoming.Flow.BalancesAt.losers_lose : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W →
+    ∀ {R : Nat → Nat} {p q : Nat} {cs ls : List C} {t : Nat},
+      Becoming.Flow.DissipatesBy q cs t →
+        Becoming.Distinct ls →
+          (∀ (c : C), c ∈ ls → c ∈ cs) →
+            p * (q + 1) * W.stock cs (t + 1) + W.losers r R p t ls * R (t + 1) ≤ p * (q + 1) * (r t * W.stock cs t)
+@Becoming.Flow.BalancesAt.losers_le : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {r : Nat → Nat},
+  L.BalancesAt r W → ∀ (R : Nat → Nat) (p t : Nat) (ls : List C), W.losers r R p t ls * R (t + 1) ≤ p * L.uptake ls t
+@Becoming.World.taken_bound : ∀ {w : Becoming.World} {alive : Nat → List w.Relatum},
+  w.web.Census alive →
+    w.Embodied →
+      ∀ {r : Nat → Nat},
+        w.flow.BalancesAt r w.web →
+          ∀ {q : Nat},
+            Becoming.Flow.DissipativeBy q →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                  ∀ {R : Nat → Nat},
+                    R T = 1 →
+                      (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                        ∀ (n : Nat),
+                          Becoming.refinedSum r (fun t => w.flow.uptake (alive t) t) T n ≤
+                            (q + 1) * w.web.stock (alive T) T * R (T + n)
+@Becoming.World.given_bound : ∀ {w : Becoming.World} {alive : Nat → List w.Relatum},
+  w.web.Census alive →
+    w.Embodied →
+      ∀ {r : Nat → Nat},
+        w.flow.BalancesAt r w.web →
+          ∀ {q : Nat},
+            Becoming.Flow.DissipativeBy q →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                  ∀ {R : Nat → Nat},
+                    R T = 1 →
+                      (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                        ∀ (n : Nat),
+                          Becoming.refinedSum r (fun t => w.flow.replenishment (alive (t + 1)) t) T n ≤
+                            q * w.web.stock (alive T) T * R (T + n)
+@Becoming.World.growth_bound : ∀ {w : Becoming.World} {alive : Nat → List w.Relatum},
+  w.web.Census alive →
+    w.Embodied →
+      ∀ {r : Nat → Nat},
+        w.flow.BalancesAt r w.web →
+          ∀ {q : Nat},
+            Becoming.Flow.DissipativeBy q →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                  ∀ {R : Nat → Nat},
+                    R T = 1 →
+                      (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                        (∀ (t : Nat), T ≤ t → 0 < r t) →
+                          ∀ (p n : Nat),
+                            (Becoming.total (Becoming.steps T n) fun t => w.web.gainers r R p t (alive (t + 1))) ≤
+                              p * q * w.web.stock (alive T) T
+@Becoming.World.growth_not_recurring : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      ∀ {r : Nat → Nat},
+        w.flow.BalancesAt r w.web →
+          ∀ {q : Nat},
+            Becoming.Flow.DissipativeBy q →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                  ∀ {R : Nat → Nat},
+                    R T = 1 →
+                      (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                        (∀ (t : Nat), T ≤ t → 0 < r t) → ∀ (p : Nat), ¬∀ (N : Nat), ∃ t x, N ≤ t ∧ w.web.Gains r R p t x
+@Becoming.World.arising_not_recurring : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      ∀ {r : Nat → Nat},
+        w.flow.BalancesAt r w.web →
+          ∀ {q : Nat},
+            Becoming.Flow.DissipativeBy q →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                  ∀ {R : Nat → Nat},
+                    R T = 1 →
+                      (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                        (∀ (t : Nat), T ≤ t → 0 < r t) →
+                          ∀ (p : Nat),
+                            ¬∀ (N : Nat), ∃ t x, N ≤ t ∧ w.web.Arises t x ∧ R (t + 1) ≤ p * w.web.level (t + 1) x
+@Becoming.World.fall_bound : ∀ {w : Becoming.World} {alive : Nat → List w.Relatum},
+  w.web.Census alive →
+    w.Embodied →
+      ∀ {r : Nat → Nat},
+        w.flow.BalancesAt r w.web →
+          ∀ {q : Nat},
+            Becoming.Flow.DissipativeBy q →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                  ∀ {R : Nat → Nat},
+                    R T = 1 →
+                      (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                        (∀ (t : Nat), T ≤ t → 0 < r t) →
+                          ∀ (p n : Nat),
+                            (Becoming.total (Becoming.steps T n) fun t => w.web.losers r R p t (alive t)) ≤
+                              p * (q + 1) * w.web.stock (alive T) T
+@Becoming.World.fall_not_recurring : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      ∀ {r : Nat → Nat},
+        w.flow.BalancesAt r w.web →
+          ∀ {q : Nat},
+            Becoming.Flow.DissipativeBy q →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                  ∀ {R : Nat → Nat},
+                    R T = 1 →
+                      (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                        (∀ (t : Nat), T ≤ t → 0 < r t) → ∀ (p : Nat), ¬∀ (N : Nat), ∃ t x, N ≤ t ∧ w.web.Loses r R p t x
+@Becoming.World.ceasing_not_recurring : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      ∀ {r : Nat → Nat},
+        w.flow.BalancesAt r w.web →
+          ∀ {q : Nat},
+            Becoming.Flow.DissipativeBy q →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                  ∀ {R : Nat → Nat},
+                    R T = 1 →
+                      (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                        (∀ (t : Nat), T ≤ t → 0 < r t) →
+                          ∀ (p : Nat),
+                            ¬∀ (N : Nat), ∃ t x, N ≤ t ∧ w.web.Ceases t x ∧ R (t + 1) ≤ p * (r t * w.web.level t x)
+@Becoming.World.not_recurring_at_resolution : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      ∀ {r : Nat → Nat},
+        w.flow.BalancesAt r w.web →
+          ∀ {q : Nat},
+            Becoming.Flow.DissipativeBy q →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+                  ∀ {R : Nat → Nat},
+                    R T = 1 →
+                      (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+                        (∀ (t : Nat), T ≤ t → 0 < r t) →
+                          ∀ (p : Nat),
+                            (¬∀ (N : Nat), ∃ t x, N ≤ t ∧ w.web.Arises t x ∧ R (t + 1) ≤ p * w.web.level (t + 1) x) ∧
+                              ¬∀ (N : Nat), ∃ t x, N ≤ t ∧ w.web.Ceases t x ∧ R (t + 1) ≤ p * (r t * w.web.level t x)
+@Becoming.Web.Carries.carriesAt : ∀ {F C : Type} {W : Becoming.Web F C} {a : Nat → F → Nat},
+  W.Carries a → W.CarriesAt (fun x => 1) (fun x => 1) 1 a
+@Becoming.Web.carriesIn_one : ∀ {F C : Type} {W : Becoming.Web F C} {a : Nat → F → Nat},
+  W.CarriesIn (fun x => 1) a ↔ W.Carries a
+@Becoming.Web.CarriesAt.lasts : ∀ {F C : Type} {W : Becoming.Web F C} {r R : Nat → Nat} {p : Nat} {a : Nat → F → Nat},
+  W.CarriesAt r R p a →
+    ∀ {f : F} [inst : (t : Nat) → Decidable (W.active t f)] {T : Nat},
+      R T = 1 →
+        (∀ (t : Nat), T ≤ t → R (t + 1) = r t * R t) →
+          (∀ (t : Nat), T ≤ t → 0 < r t) →
+            (∀ (t : Nat), T ≤ t → ¬W.Supported t f) →
+              ∀ (n : Nat), (Becoming.total (Becoming.steps T n) fun t => Becoming.mark (W.active t f)) ≤ p * a T f
+@Becoming.Web.CarriesIn.lasts_unrefined : ∀ {F C : Type} {W : Becoming.Web F C} {split : Nat → Nat} {a : Nat → F → Nat},
+  W.CarriesIn (fun t => split t + 1) a →
+    ∀ {f : F} [inst : (t : Nat) → Decidable (W.active t f)] {T : Nat},
+      (∀ (t : Nat), T ≤ t → ¬W.Supported t f) →
+        (∀ (t : Nat), T ≤ t → split t * a t f = 0) →
+          ∀ (n : Nat), (Becoming.total (Becoming.steps T n) fun t => Becoming.mark (W.active t f)) ≤ 1 * a T f
+Becoming.quarter_eq : ∀ (t : Nat), Becoming.quarter t = Becoming.halving t * Becoming.halving t
+Becoming.halving_pos : ∀ (t : Nat), 0 < Becoming.halving t
+Becoming.quarter_pos : ∀ (t : Nat), 0 < Becoming.quarter t
+@Becoming.powers_pos : ∀ {b : Nat}, 0 < b → ∀ (t : Nat), 0 < Becoming.powers b t
+Becoming.bernoulli_powers : ∀ (q n : Nat), (q + n) * Becoming.powers q n ≤ q * Becoming.powers (q + 1) n
+Becoming.powers_outgrow : ∀ (q m : Nat), ∃ n, m * Becoming.powers q n < Becoming.powers (q + 1) n
+Becoming.Asymptote.balances : ∀ (split : Nat → Nat),
+  (Becoming.Asymptote.flow split).BalancesAt (Becoming.Asymptote.refinement split) (Becoming.Asymptote.web split)
+Becoming.Asymptote.closed : ∀ (split : Nat → Nat) (t : Nat), (Becoming.Asymptote.flow split).ClosedAt [()] t
+Becoming.Asymptote.distinct : Becoming.Distinct [()]
+Becoming.Asymptote.dissipative : ∀ (split : Nat → Nat), (Becoming.Asymptote.flow split).Dissipative
+Becoming.Asymptote.dissipativeBy : ∀ (split : Nat → Nat) (q : Nat), Becoming.Flow.DissipativeBy q
+Becoming.Asymptote.dependent : ∀ (split : Nat → Nat), (Becoming.Asymptote.web split).Dependent
+Becoming.Asymptote.above_need : ∀ (split : Nat → Nat) (t : Nat),
+  (Becoming.Asymptote.web split).need t () () < (Becoming.Asymptote.web split).level t ()
+Becoming.Asymptote.taking : ∀ (split : Nat → Nat), (Becoming.Asymptote.flow split).Taking (Becoming.Asymptote.web split)
+Becoming.Asymptote.acting : ∀ (split : Nat → Nat), (Becoming.Asymptote.flow split).Acting (Becoming.Asymptote.web split)
+Becoming.Asymptote.falls : ∀ (split : Nat → Nat) {t : Nat},
+  0 < split t →
+    (Becoming.Asymptote.web split).level (t + 1) () <
+      Becoming.Asymptote.refinement split t * (Becoming.Asymptote.web split).level t ()
+Becoming.Asymptote.exchange_recurs_iff : ∀ (split : Nat → Nat),
+  (Becoming.Asymptote.flow split).ExchangeRecurs ↔ ∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < split t
+Becoming.Asymptote.taking_recurs : ∀ (split : Nat → Nat),
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < split t) → ∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < (Becoming.Asymptote.flow split).takers [()] t
+Becoming.Asymptote.not_balanced : ∀ (split : Nat → Nat),
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < split t) → ¬(Becoming.Asymptote.flow split).Balances (Becoming.Asymptote.web split)
+Becoming.Geometric.balances : ∀ (q s : Nat),
+  (Becoming.Geometric.flow q s).BalancesAt (fun x => q + 1) (Becoming.Geometric.web q s)
+Becoming.Geometric.closed : ∀ (q s t : Nat), (Becoming.Geometric.flow q s).ClosedAt [()] t
+Becoming.Geometric.dissipativeBy : ∀ (q s : Nat), Becoming.Flow.DissipativeBy q
+Becoming.Geometric.uptake : ∀ (q s t : Nat),
+  (Becoming.Geometric.flow q s).uptake [()] t = (q + 1) * (s * Becoming.powers q t)
+Becoming.Geometric.exact : ∀ (q s T n : Nat),
+  (q + 1) * (s * Becoming.powers q (T + n)) +
+      Becoming.refinedSum (fun x => q + 1) (fun t => (q + 1) * (s * Becoming.powers q t)) T n =
+    (q + 1) * (s * Becoming.powers q T) * Becoming.powers (q + 1) n
+Becoming.Circulation.balances : Becoming.Circulation.flow.BalancesAt (fun x => 2) Becoming.Circulation.web
+Becoming.Circulation.closed : ∀ (t : Nat), Becoming.Circulation.flow.ClosedAt [()] t
+Becoming.Circulation.dissipative : Becoming.Circulation.flow.Dissipative
+Becoming.Circulation.dependent : Becoming.Circulation.web.Dependent
+Becoming.Circulation.takes_a_unit : ∀ (t : Nat),
+  Becoming.Circulation.flow.take t () () = Becoming.Circulation.units (t + 1)
+Becoming.Circulation.loses_one : ∀ (t : Nat),
+  Becoming.Circulation.flow.give t () () + 1 = Becoming.Circulation.flow.take t () ()
+Becoming.Circulation.units_eq : ∀ (t : Nat), Becoming.Circulation.units t = Becoming.halving t
+Becoming.Circulation.takes_whole : ∀ (t : Nat), Becoming.Circulation.flow.take t () () = Becoming.halving (t + 1)
+Becoming.Circulation.not_dissipativeBy : ∀ (q : Nat), ¬Becoming.Flow.DissipativeBy q
+Becoming.Circulation.standing : Becoming.Circulation.web.StandingCensus fun x => [()]
+Becoming.Circulation.around : ∀ (t : Nat), Becoming.Circulation.flow.AroundStanding (fun x => [()]) t
+Becoming.Circulation.exchange_recurs : Becoming.Circulation.flow.ExchangeRecurs
+@Becoming.Emission.bud_before : ∀ {s t : Nat}, t ≤ s → Becoming.Emission.bud s t = 0
+Becoming.Emission.bud_after : ∀ (s : Nat), Becoming.Emission.bud s (s + 1) = 1
+@Becoming.Emission.bud_pos : ∀ {s t : Nat}, s + 1 ≤ t → 0 < Becoming.Emission.bud s t
+@Becoming.Emission.active_bud : ∀ {s t : Nat}, Becoming.Emission.web.active t (some s) ↔ s < t
+Becoming.Emission.none_not_mem : ∀ (l : List Nat), ¬none ∈ List.map some l
+Becoming.Emission.some_inj : ∀ (a b : Nat), some a = some b → a = b
+Becoming.Emission.census : Becoming.Emission.web.Census Becoming.Emission.alive
+Becoming.Emission.counted : Becoming.Emission.world.Counted
+Becoming.Emission.embodied : Becoming.Emission.world.Embodied
+Becoming.Emission.balances : Becoming.Emission.flow.BalancesAt (fun x => 2) Becoming.Emission.web
+@Becoming.Emission.emitted_absent : ∀ {t : Nat} {cs : List (Option Nat)},
+  ¬some t ∈ cs → Becoming.total cs (Becoming.Emission.emitted t) = 0
+@Becoming.Emission.emitted_le_one : ∀ {t : Nat} {cs : List (Option Nat)},
+  Becoming.Distinct cs → Becoming.total cs (Becoming.Emission.emitted t) ≤ 1
+@Becoming.Emission.pool_mem : ∀ {cs : List (Option Nat)} {t : Nat}, Becoming.Emission.flow.ClosedAt cs t → none ∈ cs
+Becoming.Emission.dissipative : Becoming.Emission.flow.Dissipative
+Becoming.Emission.enclosed : ∀ (t : Nat), Becoming.Emission.flow.Enclosed t
+Becoming.Emission.arises : ∀ (t : Nat), Becoming.Emission.web.Arises t (some t)
+Becoming.Emission.arising_recurs : Becoming.Emission.world.ArisingRecurs
+Becoming.Emission.acting : Becoming.Emission.flow.Acting Becoming.Emission.web
+Becoming.Emission.taking : Becoming.Emission.flow.Taking Becoming.Emission.web
+Becoming.Emission.dissipativeBy : Becoming.Flow.DissipativeBy 1
+Becoming.Emission.arises_small : ∀ (t : Nat), Becoming.Emission.web.level (t + 1) (some t) = 1
+Becoming.Emission.not_balanced : ¬Becoming.Emission.world.Balanced
+Becoming.Alternation.balances : Becoming.Alternation.flow.BalancesAt (fun x => 2) Becoming.Alternation.web
+Becoming.Alternation.stands_sum : ∀ (t : Nat), Becoming.Shuttle.stands true t + Becoming.Shuttle.stands false t = 1
+@Becoming.Alternation.stands_one : ∀ {x : Bool} {t : Nat},
+  0 < Becoming.Shuttle.stands x t → Becoming.Shuttle.stands x t = 1
+@Becoming.Alternation.active_iff : ∀ {t : Nat} {x : Bool},
+  Becoming.Alternation.web.active t x ↔ 0 < Becoming.Shuttle.stands x t
+Becoming.Alternation.census : Becoming.Alternation.web.Census fun t => [Becoming.Shuttle.holder t]
+Becoming.Alternation.counted : Becoming.Alternation.world.Counted
+Becoming.Alternation.embodied : Becoming.Alternation.world.Embodied
+Becoming.Alternation.enclosed : ∀ (t : Nat), Becoming.Alternation.flow.Enclosed t
+Becoming.Alternation.holder_takes : ∀ (t : Nat),
+  2 * Becoming.halving t + 2 = Becoming.Shuttle.stands (Becoming.Shuttle.holder t) t * (2 * Becoming.halving t + 2)
+@Becoming.Alternation.holder_mem : ∀ {es : List Bool} {t : Nat},
+  Becoming.Alternation.flow.ClosedAt es t → Becoming.Shuttle.holder t ∈ es
+@Becoming.Alternation.given_total : ∀ {es : List Bool},
+  Becoming.Distinct es →
+    ∀ (t : Nat) (f : Bool), Becoming.total es (Becoming.Alternation.flow.give t f) ≤ 2 * Becoming.halving t + 1
+Becoming.Alternation.dissipative : Becoming.Alternation.flow.Dissipative
+Becoming.Alternation.arising_whole : ∀ (N : Nat),
+  ∃ t x,
+    N ≤ t ∧
+      Becoming.Alternation.web.Arises t x ∧ Becoming.halving (t + 1) ≤ 1 * Becoming.Alternation.web.level (t + 1) x
+Becoming.Alternation.arising_recurs : Becoming.Alternation.world.ArisingRecurs
+Becoming.Alternation.not_dissipativeBy : ∀ (q : Nat), ¬Becoming.Flow.DissipativeBy q
+Becoming.Alternation.not_balanced : ¬Becoming.Alternation.world.Balanced
+Becoming.Dwindle.unsupported : ∀ (t : Nat), ¬Becoming.Dwindle.web.Supported t ()
+Becoming.Dwindle.carriesIn : Becoming.Dwindle.web.CarriesIn (fun x => 2) Becoming.Dwindle.reserve
+Becoming.Dwindle.not_carriesAt : ∀ (p : Nat),
+  ¬Becoming.Dwindle.web.CarriesAt (fun x => 2) Becoming.halving p Becoming.Dwindle.reserve
+Becoming.Trickle.conduits_length : ∀ (n : Nat), (Becoming.Trickle.conduits n).length = n
+Becoming.Trickle.taken : ∀ (t : Nat) (c : Becoming.Trickle.Relatum),
+  Becoming.Trickle.flow.taken t c = Becoming.halving t * (Becoming.Trickle.side t c * (4 * (Becoming.halving t + 1)))
+Becoming.Trickle.given : ∀ (t : Nat) (c : Becoming.Trickle.Relatum),
+  Becoming.Trickle.flow.given t c =
+    Becoming.halving t * (Becoming.Trickle.side (t + 1) c * (2 * (2 * Becoming.halving t + 1)))
+Becoming.Trickle.parts_taken : ∀ (t : Nat),
+  Becoming.halving t * (4 * (Becoming.halving t + 1)) = 4 * (Becoming.quarter t + Becoming.halving t)
+Becoming.Trickle.parts_given : ∀ (t : Nat),
+  Becoming.halving t * (2 * (2 * Becoming.halving t + 1)) = Becoming.quarter (t + 1) + Becoming.halving (t + 1)
+Becoming.Trickle.balances : Becoming.Trickle.flow.BalancesAt (fun x => 4) Becoming.Trickle.web
+@Becoming.Trickle.active_iff : ∀ {t : Nat} {c : Becoming.Trickle.Relatum},
+  Becoming.Trickle.web.active t c ↔ 0 < Becoming.Trickle.side t c
+@Becoming.Trickle.side_pos_iff : ∀ {t : Nat} {c : Becoming.Trickle.Relatum},
+  0 < Becoming.Trickle.side t c ↔ c = Sum.inl (Becoming.Shuttle.holder t)
+Becoming.Trickle.census : Becoming.Trickle.web.Census fun t => [Sum.inl (Becoming.Shuttle.holder t)]
+Becoming.Trickle.counted : Becoming.Trickle.world.Counted
+Becoming.Trickle.embodied : Becoming.Trickle.world.Embodied
+Becoming.Trickle.sides_distinct : Becoming.Distinct Becoming.Trickle.sides
+@Becoming.Trickle.side_mem : ∀ {t : Nat} {c : Becoming.Trickle.Relatum},
+  0 < Becoming.Trickle.side t c → c ∈ Becoming.Trickle.sides
+@Becoming.Trickle.off_sides : ∀ {t : Nat} {c : Becoming.Trickle.Relatum},
+  ¬c ∈ Becoming.Trickle.sides → Becoming.Trickle.side t c = 0
+Becoming.Trickle.sides_total : ∀ (t k : Nat),
+  (Becoming.total Becoming.Trickle.sides fun c => Becoming.Trickle.side t c * k) = k
+Becoming.Trickle.holder_takes : ∀ (t : Nat) (f : Becoming.Trickle.Relatum),
+  Becoming.Trickle.flow.take t f (Sum.inl (Becoming.Shuttle.holder t)) = 4 * (Becoming.halving t + 1)
+@Becoming.Trickle.conduit_mem : ∀ {n : Nat}, 0 < n → Sum.inr (n - 1) ∈ Becoming.Trickle.conduits n
+Becoming.Trickle.first_conduit : ∀ (t : Nat), Sum.inr (Becoming.halving t - 1) ∈ Becoming.Trickle.flow.present t
+@Becoming.Trickle.holder_mem : ∀ {es : List Becoming.Trickle.Relatum} {t : Nat},
+  Becoming.Trickle.flow.ClosedAt es t → Sum.inl (Becoming.Shuttle.holder t) ∈ es
+@Becoming.Trickle.given_total : ∀ {es : List Becoming.Trickle.Relatum},
+  Becoming.Distinct es →
+    ∀ (t : Nat) (f : Becoming.Trickle.Relatum),
+      Becoming.total es (Becoming.Trickle.flow.give t f) ≤ 2 * (2 * Becoming.halving t + 1)
+@Becoming.Trickle.taken_le : ∀ {es : List Becoming.Trickle.Relatum},
+  Becoming.Distinct es →
+    ∀ (t : Nat) (f : Becoming.Trickle.Relatum),
+      Becoming.total es (Becoming.Trickle.flow.take t f) ≤ 4 * (Becoming.halving t + 1)
+@Becoming.Trickle.taken_total : ∀ {es : List Becoming.Trickle.Relatum} {t : Nat},
+  Becoming.Trickle.flow.ClosedAt es t →
+    ∀ (f : Becoming.Trickle.Relatum), 4 * (Becoming.halving t + 1) ≤ Becoming.total es (Becoming.Trickle.flow.take t f)
+Becoming.Trickle.part_loss : ∀ (h : Nat), 2 * (2 * h + 1) + 2 = 4 * (h + 1)
+@Becoming.Trickle.loses_two : ∀ {es : List Becoming.Trickle.Relatum},
+  Becoming.Distinct es →
+    ∀ {t : Nat},
+      Becoming.Trickle.flow.ClosedAt es t →
+        ∀ (f : Becoming.Trickle.Relatum),
+          Becoming.total es (Becoming.Trickle.flow.give t f) + 2 ≤ Becoming.total es (Becoming.Trickle.flow.take t f)
+Becoming.Trickle.dissipative : Becoming.Trickle.flow.Dissipative
+Becoming.Trickle.double : ∀ (h : Nat), h + h = 2 * h
+@Becoming.Trickle.large_early : ∀ {t p : Nat},
+  Becoming.quarter (t + 1) ≤ p * (4 * (Becoming.halving t + 1)) → Becoming.halving t ≤ 2 * p
+Becoming.Trickle.losesAtEverySize : Becoming.Flow.LosesAtEverySize Becoming.quarter
+Becoming.Trickle.sides_closed : ∀ (t : Nat), Becoming.Trickle.flow.ClosedAt Becoming.Trickle.sides t
+Becoming.Trickle.enclosed : ∀ (t : Nat), Becoming.Trickle.flow.Enclosed t
+Becoming.Trickle.exchange_not_recurring : ∀ (p : Nat),
+  ¬∀ (N : Nat),
+      ∃ t f,
+        N ≤ t ∧
+          f ∈ Becoming.Trickle.flow.present t ∧
+            Becoming.quarter (t + 1) ≤ p * Becoming.total Becoming.Trickle.sides (Becoming.Trickle.flow.take t f)
+Becoming.Trickle.arising_whole : ∀ (N : Nat),
+  ∃ t c, N ≤ t ∧ Becoming.Trickle.web.Arises t c ∧ Becoming.quarter (t + 1) ≤ 1 * Becoming.Trickle.web.level (t + 1) c
+Becoming.Trickle.not_dissipativeBy : ∀ (q : Nat), ¬Becoming.Flow.DissipativeBy q
+Becoming.Trickle.uptake : ∀ (t : Nat),
+  Becoming.Trickle.flow.uptake Becoming.Trickle.sides t = 4 * (Becoming.quarter t + Becoming.halving t)
+Becoming.Trickle.throughput_unbounded : ∀ (B : Nat),
+  ∃ n,
+    B * Becoming.quarter n < Becoming.refinedSum (fun x => 4) (Becoming.Trickle.flow.uptake Becoming.Trickle.sides) 0 n
+Becoming.arising_needs_quantum : Becoming.Emission.world.Counted ∧
+  Becoming.Emission.world.Embodied ∧
+    Becoming.Emission.flow.BalancesAt (fun x => 2) Becoming.Emission.web ∧
+      Becoming.Emission.world.Dissipative ∧
+        Becoming.Flow.DissipativeBy 1 ∧
+          (∀ (t : Nat), Becoming.Emission.world.flow.Enclosed t) ∧
+            Becoming.Emission.world.ArisingRecurs ∧ ¬Becoming.Emission.world.Balanced
+Becoming.arising_needs_proportion : Becoming.Alternation.world.Counted ∧
+  Becoming.Alternation.world.Embodied ∧
+    Becoming.Alternation.flow.BalancesAt (fun x => 2) Becoming.Alternation.web ∧
+      Becoming.Alternation.world.Dissipative ∧
+        (∀ (t : Nat), Becoming.Alternation.world.flow.Enclosed t) ∧
+          (∀ (N : Nat),
+              ∃ t x,
+                N ≤ t ∧
+                  Becoming.Alternation.web.Arises t x ∧
+                    Becoming.halving (t + 1) ≤ 1 * Becoming.Alternation.web.level (t + 1) x) ∧
+            ∀ (q : Nat), ¬Becoming.Flow.DissipativeBy q
+Becoming.exchange_needs_quantum : (Becoming.Circulation.web.StandingCensus fun x => [()]) ∧
+  Becoming.Circulation.flow.BalancesAt (fun x => 2) Becoming.Circulation.web ∧
+    Becoming.Circulation.flow.Dissipative ∧
+      (∀ (t : Nat), Becoming.Circulation.flow.AroundStanding (fun x => [()]) t) ∧
+        (∀ (t : Nat), Becoming.Circulation.flow.take t () () = Becoming.halving (t + 1)) ∧
+          Becoming.Circulation.flow.ExchangeRecurs ∧ ∀ (q : Nat), ¬Becoming.Flow.DissipativeBy q
+Becoming.rest_needs_quantum : ∀ (split : Nat → Nat),
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < split t) →
+    (Becoming.Asymptote.flow split).BalancesAt (Becoming.Asymptote.refinement split) (Becoming.Asymptote.web split) ∧
+      (Becoming.Asymptote.flow split).Dissipative ∧
+        (∀ (q : Nat), Becoming.Flow.DissipativeBy q) ∧
+          (Becoming.Asymptote.web split).Dependent ∧
+            (∀ (t : Nat), (Becoming.Asymptote.flow split).ClosedAt [()] t) ∧
+              (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < (Becoming.Asymptote.flow split).takers [()] t) ∧
+                ¬(Becoming.Asymptote.flow split).Balances (Becoming.Asymptote.web split)
+Becoming.reserve_needs_quantum : (∀ (t : Nat), ¬Becoming.Dwindle.web.Supported t ()) ∧
+  Becoming.Dwindle.web.CarriesIn (fun x => 2) Becoming.Dwindle.reserve ∧
+    (∀ (t : Nat), Becoming.Dwindle.web.active t ()) ∧
+      ∀ (p : Nat), ¬Becoming.Dwindle.web.CarriesAt (fun x => 2) Becoming.halving p Becoming.Dwindle.reserve
+Becoming.growth_needs_proportion : Becoming.Trickle.world.Counted ∧
+  Becoming.Trickle.world.Embodied ∧
+    Becoming.Trickle.flow.BalancesAt (fun x => 4) Becoming.Trickle.web ∧
+      Becoming.Trickle.world.Dissipative ∧
+        (∀ (t : Nat), Becoming.Trickle.world.flow.Enclosed t) ∧
+          Becoming.Flow.LosesAtEverySize Becoming.quarter ∧
+            (∀ (p : Nat),
+                ¬∀ (N : Nat),
+                    ∃ t f,
+                      N ≤ t ∧
+                        f ∈ Becoming.Trickle.flow.present t ∧
+                          Becoming.quarter (t + 1) ≤
+                            p * Becoming.total Becoming.Trickle.sides (Becoming.Trickle.flow.take t f)) ∧
+              (∀ (N : Nat),
+                  ∃ t x,
+                    N ≤ t ∧
+                      Becoming.Trickle.web.Arises t x ∧
+                        Becoming.quarter (t + 1) ≤ 1 * Becoming.Trickle.web.level (t + 1) x) ∧
+                ∀ (q : Nat), ¬Becoming.Flow.DissipativeBy q
+Becoming.amount_sharp : ∀ (q s : Nat),
+  (Becoming.Geometric.flow q s).BalancesAt (fun x => q + 1) (Becoming.Geometric.web q s) ∧
+    Becoming.Flow.DissipativeBy q ∧
+      (∀ (t : Nat), (Becoming.Geometric.flow q s).ClosedAt [()] t) ∧
+        (Becoming.Geometric.web q s).stock [()] 0 = s * 1 + 0 ∧
+          ∀ (m : Nat),
+            ∃ n,
+              m * ((q + 1) * s * Becoming.powers (q + 1) n) ≤
+                m * Becoming.refinedSum (fun x => q + 1) ((Becoming.Geometric.flow q s).uptake [()]) 0 n +
+                  (q + 1) * s * Becoming.powers (q + 1) n
+Becoming.throughput_needs_proportion : Becoming.Trickle.flow.BalancesAt (fun x => 4) Becoming.Trickle.web ∧
+  Becoming.Trickle.flow.Dissipative ∧
+    (∀ (t : Nat), Becoming.Trickle.flow.ClosedAt Becoming.Trickle.sides t) ∧
+      Becoming.Flow.LosesAtEverySize Becoming.quarter ∧
+        ∀ (B : Nat),
+          ∃ n,
+            B * Becoming.quarter n <
+              Becoming.refinedSum (fun x => 4) (Becoming.Trickle.flow.uptake Becoming.Trickle.sides) 0 n
+Becoming.refinement_feeds_witnesses : ∀ (split : Nat → Nat),
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < split t) →
+    ∀ (T : Nat),
+      (¬∀ (t : Nat),
+            T ≤ t →
+              ∀ (x : Option Nat),
+                (Becoming.Emission.flow.withRefinement Becoming.Emission.web fun x => 1).give t none x = 0) ∧
+        (¬∀ (t : Nat),
+              T ≤ t →
+                ∀ (x : Bool),
+                  (Becoming.Alternation.flow.withRefinement Becoming.Alternation.web fun x => 1).give t none x = 0) ∧
+          (¬∀ (t : Nat),
+                T ≤ t →
+                  (Becoming.Circulation.flow.withRefinement Becoming.Circulation.web fun x => 1).give t none () = 0) ∧
+            (¬∀ (t : Nat),
+                  T ≤ t →
+                    ((Becoming.Asymptote.flow split).withRefinement (Becoming.Asymptote.web split) split).give t none
+                        () =
+                      0) ∧
+              ¬∀ (t : Nat), T ≤ t → 1 * Becoming.Dwindle.reserve t () = 0

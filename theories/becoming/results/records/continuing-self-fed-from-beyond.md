@@ -20,7 +20,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Balance (Flow.Balances) and dissipation (Flow.Dissipative): as in no-finite-part-bears-taking, physical premises of the representation, each met by some worlds and not by others. Dissipation loses at least one whole unit per taking step; with real-valued amounts losses can shrink geometrically and the conclusion fails, and the second law gives no least loss per step.
+- Balance (Flow.Balances) and dissipation (Flow.Dissipative): as in no-finite-part-bears-taking, physical premises of the representation, met by some worlds and not by others. Dissipation loses at least one whole unit per taking step; where losses can shrink geometrically the argument does not apply: a dyadic stock halving at every step never rests (Halving.never_rests); the second law gives no least loss per step.
 - The family is without repetition (Distinct) and enclosed around from some step on (Around); recurring taking, recurring rising and recurring embodied arising are each the hypothesis of one theorem.
 - Decided equality: inward_of_not_fed and the theorems drawn from it need it, a logical commitment of the representation, as in Flow.Enclosed.around.
 - The constructive form: the conclusion is that the family cannot from any step on be fed from nothing beyond it; it exhibits no step at which it is fed, and reading it as ‘fed at arbitrarily late steps’ needs omniscience.
@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261014T141427.442103Z for Becoming.Continuation; Dissipation, Roles, Flow and Succession bound to 20261013T094743.528770Z): the theorems of Becoming.Continuation, the local forms included, have empty axiom reports; core purity verified. Author counterreview in the integration note; the independent review accepts its Lean, and its corrections are handled in the integration note.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261014T141427.442103Z for Becoming.Continuation; Dissipation, Roles, Flow and Succession bound to 20261013T094743.528770Z): the theorems of Becoming.Continuation, the local forms included, have empty axiom reports; core purity verified; the halving witness (Becoming.LeastLoss) is bound to 20261025T080929.528151Z, its axiom report empty. Author counterreview in the integration note; the independent review accepts its Lean, and its corrections are handled in the integration note.
 
 Canonical source: [Continuation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean)
 
@@ -54,7 +54,7 @@ Read the case where what is conveyed comes from a living source; give the remova
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Ren's proposal says: “the pure "self" is an illusion, where only when outside exists, there is the system, if the system depends on external resources”. The draw-in laws (no-finite-part-bears-taking, generation-is-replenishment) said that, enclosed around, some formation gives to the family and takes from beyond it. This result states the same law as conveyance into the family from beyond and shows the two forms equivalent with equality decided: the conveyance form adds only decided equality and loses nothing. The author's reading (an AI argument): a self that continues does so together with what lies beyond it; the boundary is formed and real, while what continues within it is fed across it. This is dynamics, not ethics: it says what a continuing formation must count, not that it ought to count it. Lone shows that being fed is needed and no source condition need recur; it does not show that no particular source formation is needed, since the one source does all the conveying.
+Ren's proposal says: “the pure "self" is an illusion, where only when outside exists, there is the system, if the system depends on external resources”. The draw-in laws (no-finite-part-bears-taking, generation-is-replenishment) said that, enclosed around, some formation gives to the family and takes from beyond it. This result states the same law as conveyance into the family from beyond and shows the two forms equivalent with equality decided: the conveyance form adds only decided equality and loses nothing. The reading (an AI argument): a self that continues does so together with what lies beyond it; the boundary is formed and real, while what continues within it is fed across it. This is dynamics, not ethics: it says what a continuing formation must count, not that it ought to count it. Lone shows that being fed is needed and no source condition need recur; it does not show that no particular source formation is needed, since the one source does all the conveying.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -73,6 +73,7 @@ Ren's proposal says: “the pure "self" is an illusion, where only when outside 
   - Preserved conditions: None. [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean)
 - related, not a proved adapter: [continued-change-needs-openness](continued-change-needs-openness.md). Enclosed around what stands, exchange comes to rest; this result says that, enclosed around a family, continuation needs conveyance from beyond it.
 - related, not a proved adapter: [conveyance-crosses-the-boundary](conveyance-crosses-the-boundary.md). With conveyance read as related, a continuing family's region is no cut in the relations.
+- related, not a proved adapter: [rest-from-a-finite-reading](rest-from-a-finite-reading.md). Over any amounts, where an amount read off configurations a list holds does not rise from some step on, its strict falls do not recur; no list holds the values of the halving stock, which never rests. This result's laws are stated over whole-number flows.
 
 **Used by:** [conveyance-crosses-the-boundary](conveyance-crosses-the-boundary.md) · [derived-extent-limits](derived-extent-limits.md)
 
@@ -106,6 +107,8 @@ Ren's proposal says: “the pure "self" is an illusion, where only when outside 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| proof | [LeastLoss.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean) | `Becoming.Halving.never_rests` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.Conveys`, `Becoming.Flow.FedFromBeyond`, `Becoming.Flow.inward_iff_not_fed`, `Becoming.Flow.fed_of_not_inward`, `Becoming.Flow.fed_from_beyond`, `Becoming.Flow.rising_fed_from_beyond`, `Becoming.Web.embodiedArising_fed_from_beyond`, `Becoming.Lone.fed_not_recurring`, `Becoming.Successive.relay`, `Becoming.Successive.takes_part_once`
 
@@ -124,6 +127,7 @@ Aliases: `Becoming.Flow.Conveys`, `Becoming.Flow.FedFromBeyond`, `Becoming.Flow.
 - 19 October 2026, A4 (Ren 19 October: "integrate all, the theory is a whole, not stitched pieces, go ahead"): The rest family's Chinese term in the live Chinese fields is now 停息 (1 uses), as in the chapter (DELEGATED-CHOICES D45 (4)); the English is unchanged. The claim is unchanged.
 - 19 October 2026, R20(b) (chapter and Lean wording say exactly what the Lean shows): the dissipation hypothesis now names the whole unit lost per taking step on which the law depends. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Web.generation_draws_in (now Web.embodiedArising_draws_in); Web.generation_fed_from_beyond (now Web.embodiedArising_fed_from_beyond). Proof bindings (Continuation.lean, Dissipation.lean, Flow.lean, Roles.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Continuation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Dissipation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Flow.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Roles.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the dissipation hypothesis no longer says the conclusion fails with real-valued amounts, which no theorem shows (the laws are stated over whole-number flows): it says the argument does not apply where losses can shrink geometrically, with the halving stock that never rests as the witness of shrinking losses, now in the references (Becoming.Halving.never_rests, an alias of least-loss-rest, bound to a receipt in which its axiom report is empty); the rest that still holds over any amounts, for an amount read off configurations a list holds, is linked in related; the correspondence labels its reading as the AI's instead of the author's. No law changed.
 - 2 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](continuing-self-fed-from-beyond.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -135,4 +139,4 @@ Aliases: `Becoming.Flow.Conveys`, `Becoming.Flow.FedFromBeyond`, `Becoming.Flow.
 
 </details>
 
-Documentary review UTC: `2026-10-19T08:07:06+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

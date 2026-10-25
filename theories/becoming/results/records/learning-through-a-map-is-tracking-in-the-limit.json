@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-20T00:09:49+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
-    "en": "An extrapolation predicts a feature along every run exactly where its guess, fixed by the record through the map, tracks the feature in the limit. Where the law leaves the feature unchanged this is identification in the limit; where the law changes it, it need not be.",
-    "zh": "外推沿每个运行预测一个特征，恰当它经映射由记录所定的猜测在极限中跟随该特征。律使特征不变时，这就是极限中的辨识；律改变特征时，未必如此。"
+    "en": "An extrapolation predicts a feature on every run exactly where its guess tracks it in the limit. A feature the law keeps is learnable, in a world a list holds, map values decided, exactly where a guess fixed through the map identifies its start in the limit; where the law changes it, they can part.",
+    "zh": "外推沿每个运行预测一个特征，恰当它的猜测在极限中跟随该特征。律所保持的特征，在被列表所持的世界中、映射之值可判定时可学，恰当某个经映射所定的猜测在极限中辨识其起始之值；律改变特征时，二者可以分开。"
   },
   "laws": [
     {
@@ -259,6 +259,10 @@
     {
       "en": "2026-10-20: 1 bookkeeping note condensed of 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/fca4cec915f1ff85/learning-through-a-map-is-tracking-in-the-limit.json and in git.",
       "zh": "2026-10-20：1 条记账性说明合并（20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/fca4cec915f1ff85/learning-through-a-map-is-tracking-in-the-limit.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement names what identification in the limit takes (a world a list holds and the map's values decided, besides the law keeping the feature) and says that where the law changes the feature, learnability and identification can part; the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明极限辨识所需（被列表所持的世界、映射之值可判定，以及律保持特征），并说律改变特征时可学与辨识可以分开；定律不变。"
     }
   ],
   "text_versions": [

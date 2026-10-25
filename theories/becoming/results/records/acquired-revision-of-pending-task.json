@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F03",
-  "reviewed_at_utc": "2026-10-14T09:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
     "zh": "对每条带计数工作的部分律，待完成任务恰在剩余工作加一次中完成，更短的运行都使它仍待完成；待完成与已交付互斥，所以更短的运行都不交付。在既有版本化交付不变量下，改写队首包的剩余编码保持其已捕获路线、进度与其余工作，所以修订后的队首对新请求仍是这样的任务，剩余工作相同、完成次数相同。对每个条件与每个有队首待完成的有效装置，取得的修订恰在有根据处进入在途任务：取得、修订、改革、改写与交付恰在访问有损而转变维护保留时运行，这正是比较认可学习优于参与的条件；端点随后执行新做法，保留历史上的一次损失、不再增加，并使用实际工作支持，终于三条记录与工作、储备、已用单位 (2, 6, 10)。先前的组合是其在 harmful 条件下的实例；协议自身给出两条作用规律、目的编码与工作单位。",
     "en": "For every partial law with counted work, a pending task finishes in exactly its remaining work plus one tick, every shorter run leaves it pending, and, pending and delivered being exclusive, no shorter run delivers it. Under the existing versioned-delivery invariant, rewriting the head packet's remaining encoding preserves its captured route, progress and other work, so the revised head is again such a task for the new request, with the same remaining work and the same number of ticks. For every condition and every valid installation with a pending head, acquired revision reaches the pending task exactly where it is warranted: acquisition, revision, reform, the rewrite and its delivery run exactly under access loss with kept transition maintenance, the condition under which the comparison warrants learning over attendance; the endpoint then enacts the new practice, retains the one historical loss, adds none and uses actual work support, ending with three records and the work, reserve and used units (2, 6, 10). The earlier composition is its instance at the harmful conditions; the protocol itself supplies the two outcome laws, the goal encoding and the work units."
@@ -19,8 +19,8 @@
       "en": "Binary reversible translation, a valid queue and protected synchronous head rewrite; no unmodeled irreversible effects before endpoint enactment. Consecutive ticks provide completion."
     },
     {
-      "zh": "复用已取得的两实践证据、目的改变及选择改革；G0/J、实际对应、权限与响应明示。新分支消耗一单位改写工作；传递维护成本没有建模。",
-      "en": "Reuse acquired two-practice evidence, changed purpose and selector reform; G0/J, correspondence, authority and responsiveness are explicit. The branch consumes one rewrite work unit; route-maintenance cost is not modeled."
+      "zh": "复用已取得的两实践证据、目的改变及选择改革；生生之意义与实践承诺、实际对应、权限与响应明示。新分支消耗一单位改写工作；传递维护成本没有建模。",
+      "en": "Reuse acquired two-practice evidence, changed purpose and selector reform; living significance and the practical commitments, correspondence, authority and responsiveness are explicit. The branch consumes one rewrite work unit; route-maintenance cost is not modeled."
     }
   ],
   "correspondence": {
@@ -76,8 +76,8 @@
           "en": "paidRetarget reads that state’s goal and consumes one work unit; the delivered value determines endpoint practice."
         },
         "conditions": {
-          "zh": "保留同一 harmful 条件、实践解释、G0/J、先前损失和有限资源，不推断任意共享动机。",
-          "en": "Retains the same harmful conditions, practice interpretation, G0/J, earlier losses and finite resources, without inferring arbitrary shared motivation."
+          "zh": "保留同一 harmful 条件、实践解释、生生之意义与实践承诺、先前损失和有限资源，不推断任意共享动机。",
+          "en": "Retains the same harmful conditions, practice interpretation, living significance and the practical commitments, earlier losses and finite resources, without inferring arbitrary shared motivation."
         },
         "evidence": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean"
       }
@@ -260,6 +260,10 @@
     {
       "en": "2026-10-20: 19 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/384523f1e5ec0477/acquired-revision-of-pending-task.json and in git.",
       "zh": "2026-10-20：19 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/384523f1e5ec0477/acquired-revision-of-pending-task.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0/J in a hypothesis and a dependency's conditions named in current terms, living significance and the practical commitments. The claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：假设与一条依赖条件中的退役标签 G0/J 按现行术语称为生生之意义与实践承诺。主张不变。"
     }
   ]
 }

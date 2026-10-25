@@ -154,8 +154,8 @@
     "en": "State the margin where the rest adjust (the others' taking responding to the levels without the part): comparison-where-the-rest-responds states where the difference can go when the rest responds through its couplings, not the exact margin under such a response. Compare reachability over several steps; link the comparison formally to the but-for test of Becoming.Joint."
   },
   "correspondence": {
-    "zh": "Ren 确认的第一项读法：可能性是从现有者接下来能形成什么；一个形成的贡献是有它的将来减去没有它的将来。这里“接下来能形成什么”读作每步被水平接纳的形成，“没有它”读作扣留它而其余交换不变；读法经 Ren 确认，这一形式化是 AI 的，依 Ren 的交托采用。Ren 说“not harm”是“a phase transition with a clear boundary, not some \"outside will or belief\"”。作者的读法（AI 论证）：关闭与不关闭之间的界由部分自身在所需条件上的净交换决定，到某步为止给回不少于所取者在该步不关闭任何东西，不需要动力学之外的意志或信念。读法与接纳、扣留、净汲取等名称是 AI 的；读法依 Ren 的交托采用，名称按 Ren 的命名规则采用（DELEGATED-CHOICES D35、D36）。",
-    "en": "Ren's first confirmed reading: possibilities are what can form next from what exists, and a formation's contribution is the future with it minus the future without it. Here what can form next is read as the formations the levels admit at each step, and without it as the part withheld with the rest of the exchange unchanged; Ren confirmed the reading, and this formalization is the AI's, adopted on Ren's delegation. Ren said that “not harm” is “a phase transition with a clear boundary, not some \"outside will or belief\"”. The author's reading (an AI argument): the boundary between closing and not closing is fixed by the part's own net exchange on required conditions, and a part that has given back at least what it took up to a step closes nothing at that step, with no will or belief from outside the dynamics. The reading and the names, such as admission, withholding and net draw, are the AI's; the reading is adopted on Ren's delegation, and the names are adopted under Ren's naming rule (DELEGATED-CHOICES D35, D36)."
+    "zh": "Ren 确认的第一项读法：可能性是从现有者接下来能形成什么；一个形成的贡献是有它的将来减去没有它的将来。这里“接下来能形成什么”读作每步被水平接纳的形成，“没有它”读作扣留它而其余交换不变；读法经 Ren 确认，这一形式化是 AI 的，依 Ren 的交托采用。Ren 说“not harm”是“a phase transition with a clear boundary, not some \"outside will or belief\"”。读法（AI 论证）：关闭与不关闭之间的界由部分自身在所需条件上的净交换决定，到某步为止给回不少于所取者在该步不关闭任何东西，不需要动力学之外的意志或信念。读法与接纳、扣留、净汲取等名称是 AI 的；读法依 Ren 的交托采用，名称按 Ren 的命名规则采用（DELEGATED-CHOICES D35、D36）。",
+    "en": "Ren's first confirmed reading: possibilities are what can form next from what exists, and a formation's contribution is the future with it minus the future without it. Here what can form next is read as the formations the levels admit at each step, and without it as the part withheld with the rest of the exchange unchanged; Ren confirmed the reading, and this formalization is the AI's, adopted on Ren's delegation. Ren said that “not harm” is “a phase transition with a clear boundary, not some \"outside will or belief\"”. A reading (an AI argument): the boundary between closing and not closing is fixed by the part's own net exchange on required conditions, and a part that has given back at least what it took up to a step closes nothing at that step, with no will or belief from outside the dynamics. The reading and the names, such as admission, withholding and net draw, are the AI's; the reading is adopted on Ren's delegation, and the names are adopted under Ren's naming rule (DELEGATED-CHOICES D35, D36)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
   "aliases": [
@@ -545,6 +545,10 @@
     {
       "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one does_not_show item added. The claim and its premises are unchanged.",
       "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；增加一条 does_not_show。主张与其前提不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): 'the author's reading', the author being the AI, reads 'a reading (an AI argument)'; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：“作者的读法”中的作者是 AI，改为“读法（AI 论证）”；主张不变。"
     }
   ],
   "text_versions": [

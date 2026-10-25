@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T00:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:44:41+00:00",
   "statement": {
-    "zh": "在前提的每个选择之下，所立者服从活动的计数规律；被围住时，平衡与耗散单独为所立者的变化定界，不需要体现；前提不给依存的计数加任何规律。",
-    "en": "Under each selection of the premises, what stands obeys the laws of counting what is active; under enclosure, balance and dissipation alone bound the change of what stands, with no embodiment; and the premises add no law to counting dependences."
+    "zh": "在前提的每种取舍之下，所立者服从活动的计数规律；被围住时，平衡与耗散单独为所立者的变化定界，不需要体现；前提不给依存的计数加任何规律。",
+    "en": "Under each choice of the premises, what stands obeys the laws of counting what is active; under enclosure, balance and dissipation alone bound the change of what stands, with no embodiment; and the premises add no law to counting dependences."
   },
   "laws": [
     {
@@ -30,8 +30,8 @@
       ]
     },
     {
-      "zh": "不选体现时，由源供给的队列满足其余全部前提，不论计数：驱动者是一个地关系项，始终活跃而立在零，成员恰在队中时立着而从不活跃；只有源给予与取用，它与每个地关系项各交换一个单位，所以没有家族跨过任何一步封闭，队列平衡且耗散。",
-      "en": "Where embodiment is not selected, a queue fed from a source meets every other premise whatever its counts: its driver, a ground relatum, is active throughout and stands at nothing, its members stand while in the queue and are never active; only the source gives and takes, and as it exchanges a unit each way with every ground relatum, no family is closed across any step, so the queue balances and dissipates.",
+      "zh": "不纳入体现时，由源供给的队列满足其余全部前提，不论计数：驱动者是一个地关系项，始终活跃而立在零，成员恰在队中时立着而从不活跃；只有源给予与取用，它与每个地关系项各交换一个单位，所以没有家族跨过任何一步封闭，队列平衡且耗散。",
+      "en": "Where embodiment is not chosen, a queue fed from a source meets every other premise whatever its counts: its driver, a ground relatum, is active throughout and stands at nothing, its members stand while in the queue and are never active; only the source gives and takes, and as it exchanges a unit each way with every ground relatum, no family is closed across any step, so the queue balances and dissipates.",
       "declarations": [
         "Becoming.World.sourcedQueue",
         "Becoming.World.sourcedQueue_holds",
@@ -39,8 +39,8 @@
       ]
     },
     {
-      "zh": "它的所立者的普查计到队列所计的；所以在 256 个选择的每一个之下，所立者的计数规律就是活动的计数规律：计数表，以及恰在选择约束计数时，没有关系项立着的一步上没有关系项开始立着。",
-      "en": "Its census of what stands counts what the queue counts; so under each of the 256 selections the laws of counting what stands are those of counting what is active: the tally and, exactly where the selection binds counting, nothing coming to stand across a step at which nothing stands.",
+      "zh": "它的所立者的普查计到队列所计的；所以在 256 种取舍的每一个之下，所立者的计数规律就是活动的计数规律：计数表，以及恰在取舍约束计数时，没有关系项立着的一步上没有关系项开始立着。",
+      "en": "Its census of what stands counts what the queue counts; so under each of the 256 choices the laws of counting what stands are those of counting what is active: the tally and, exactly where the choice binds counting, nothing coming to stand across a step at which nothing stands.",
       "declarations": [
         "Becoming.World.sourcedQueue_standing",
         "Becoming.World.sourcedQueue_counts",
@@ -59,30 +59,30 @@
       ]
     },
     {
-      "zh": "选择选中平衡与耗散时，称它为所立者定界。",
-      "en": "A selection bounds what stands where it selects balance and dissipation.",
+      "zh": "取舍纳入平衡与耗散时，称它为所立者定界。",
+      "en": "A choice bounds what stands where it chooses balance and dissipation.",
       "declarations": [
         "Becoming.World.BoundsStanding"
       ]
     },
     {
-      "zh": "从某步起每步被围住时，计数的一个性质在满足选择的每个这样的世界的所立者普查中成立，恰当它对每个这样的计数表成立：选择约束计数时，没有关系项立着的一步上没有关系项开始立着；选择为所立者定界时，从某步 T 起变化在一个界之内，此后没有关系项立着的一步上没有关系项开始立着。",
-      "en": "With all steps from some step on enclosed, a property of counts holds of each census of what stands in each such world meeting a selection exactly when it holds of every tally in which, where it binds counting, nothing comes to stand across a step at which nothing stands, and, where it bounds what stands, from some step T on change stays within a bound and nothing comes to stand across a step at which nothing stands.",
+      "zh": "从某步起每步被围住时，计数的一个性质在满足取舍的每个这样的世界的所立者普查中成立，恰当它对每个这样的计数表成立：取舍约束计数时，没有关系项立着的一步上没有关系项开始立着；取舍为所立者定界时，从某步 T 起变化在一个界之内，此后没有关系项立着的一步上没有关系项开始立着。",
+      "en": "With all steps from some step on enclosed, a property of counts holds of each census of what stands in each such world meeting a choice exactly when it holds of every tally in which, where it binds counting, nothing comes to stand across a step at which nothing stands, and, where it bounds what stands, from some step T on change stays within a bound and nothing comes to stand across a step at which nothing stands.",
       "declarations": [
         "Becoming.World.enclosed_standing_counting_under"
       ]
     },
     {
-      "zh": "那里变化界恰在选中平衡与耗散时是规律，而对活动还需要体现。",
-      "en": "There a change bound is a law exactly where balance and dissipation are selected, while for activity embodiment is needed as well.",
+      "zh": "那里变化界恰在纳入平衡与耗散时是规律，而对活动还需要体现。",
+      "en": "There a change bound is a law exactly where balance and dissipation are chosen, while for activity embodiment is needed as well.",
       "declarations": [
         "Becoming.World.enclosed_standing_bound_iff",
         "Becoming.World.enclosed_change_bound_iff"
       ]
     },
     {
-      "zh": "选中平衡而不选体现时，见证是等待的队列：闭合的队列，其下一个加入者在开始立着之前就活跃，所以队首每步都活跃，队空时也是。",
-      "en": "Where balance is selected without embodiment the witnesses are waiting queues: closing queues whose next to join is active before it comes to stand, so that the front is active at every step, even with the queue empty.",
+      "zh": "纳入平衡而不纳入体现时，见证是等待的队列：闭合的队列，其下一个加入者在开始立着之前就活跃，所以队首每步都活跃，队空时也是。",
+      "en": "Where balance is chosen without embodiment the witnesses are waiting queues: closing queues whose next to join is active before it comes to stand, so that the front is active at every step, even with the queue empty.",
       "declarations": [
         "Becoming.EnclosedQueue.waiting",
         "Becoming.World.waitingQueue",
@@ -98,8 +98,8 @@
       ]
     },
     {
-      "zh": "有限世界的每一步都被围住，所以在每个选择之下，有限世界中所立者的计数规律是每步至多有某数立着的计数表；选择约束计数或为所立者定界时再加没有关系项立着的一步上没有关系项开始立着，为所立者定界时再加从第 0 步起的变化界。",
-      "en": "Every step of a finite world is enclosed, so under each selection the laws of counting what stands in finite worlds are those of a tally with at most some number standing at each step, with nothing coming to stand across a step at which nothing stands where the selection binds counting or bounds what stands, and a change bound from the first step where it bounds what stands.",
+      "zh": "有限世界的每一步都被围住，所以在每种取舍之下，有限世界中所立者的计数规律是每步至多有某数立着的计数表；取舍约束计数或为所立者定界时再加没有关系项立着的一步上没有关系项开始立着，为所立者定界时再加从第 0 步起的变化界。",
+      "en": "Every step of a finite world is enclosed, so under each choice the laws of counting what stands in finite worlds are those of a tally with at most some number standing at each step, with nothing coming to stand across a step at which nothing stands where the choice binds counting or bounds what stands, and a change bound from the first step where it bounds what stands.",
       "declarations": [
         "Becoming.World.finite_standing_counting_under",
         "Becoming.World.finite_standing_binds_iff",
@@ -115,8 +115,8 @@
       ]
     },
     {
-      "zh": "读于依存：要求可判定时，前提不给依存的计数加任何规律：在每个选择之下，在每个世界中、从某步起每步被围住时，以及每步至多有某数依存时在有限世界中，计数的一个性质在依存的每个普查中成立，恰当它对每个计数表成立。",
-      "en": "Read of dependence: with requiring decided, the premises add nothing to the law of counting dependences: under each selection, in every world, with every step from some step on enclosed and, with at most some number holding at each step, in finite worlds, a property of the counts of a census of dependences holds exactly when it holds of every tally.",
+      "zh": "读于依存：要求可判定时，前提不给依存的计数加任何规律：在每种取舍之下，在每个世界中、从某步起每步被围住时，以及每步至多有某数依存时在有限世界中，计数的一个性质在依存的每个普查中成立，恰当它对每个计数表成立。",
+      "en": "Read of dependence: with requiring decided, the premises add nothing to the law of counting dependences: under each choice, in every world, with every step from some step on enclosed and, with at most some number holding at each step, in finite worlds, a property of the counts of a census of dependences holds exactly when it holds of every tally.",
       "declarations": [
         "Becoming.Web.DependenceCensus",
         "Becoming.World.DependsObey",
@@ -159,8 +159,8 @@
   ],
   "does_not_show": [
     {
-      "zh": "所选前提都起约束时所立者与依存的计数规律没有陈述；对活动见 whole-law-of-counting 与 counting-under-enclosure。",
-      "en": "The laws of counting what stands and what depends where each selected premise binds are not stated; for activity, see whole-law-of-counting and counting-under-enclosure.",
+      "zh": "所纳入前提都起约束时所立者与依存的计数规律没有陈述；对活动见 whole-law-of-counting 与 counting-under-enclosure。",
+      "en": "The laws of counting what stands and what depends where each chosen premise binds are not stated; for activity, see whole-law-of-counting and counting-under-enclosure.",
       "kind": "scope"
     },
     {
@@ -178,15 +178,15 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean",
       "detail": {
-        "zh": "World.sourcedQueue：不选体现时，所立者与活动分开，一个关系项可以从无到有地开始立着而在那一步没有关系项立着，由满足其余全部前提的世界实现；所以没有关系项立着的一步上没有关系项开始立着只在选择约束计数时是规律。",
-        "en": "World.sourcedQueue: without embodiment what stands and what is active part, and a relatum can come to stand from nothing across a step at which nothing stands in a world meeting every other premise; so nothing coming to stand across a step at which nothing stands is a law only where the selection binds counting."
+        "zh": "World.sourcedQueue：不纳入体现时，所立者与活动分开，一个关系项可以从无到有地开始立着而在那一步没有关系项立着，由满足其余全部前提的世界实现；所以没有关系项立着的一步上没有关系项开始立着只在取舍约束计数时是规律。",
+        "en": "World.sourcedQueue: without embodiment what stands and what is active part, and a relatum can come to stand from nothing across a step at which nothing stands in a world meeting every other premise; so nothing coming to stand across a step at which nothing stands is a law only where the choice binds counting."
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean",
       "detail": {
-        "zh": "World.waitingQueue 与 World.enclosed_standing_counting_under：选中平衡与耗散而不选体现时，被围住之前所立者的变化不受约束，在第 T 步闭合的等待的队列中 T 之前可以有成员加入空队；不选耗散时，在第 0 步闭合的等待的队列实现每个计数表，被围住不给所立者加任何规律。",
-        "en": "World.waitingQueue and World.enclosed_standing_counting_under: with balance and dissipation selected but not embodiment, the change of what stands before enclosure is unconstrained, members joining an empty queue before step T in a waiting queue closing at T; without dissipation a waiting queue closing at the first step counts every tally, and enclosure adds no law of what stands."
+        "zh": "World.waitingQueue 与 World.enclosed_standing_counting_under：纳入平衡与耗散而不纳入体现时，被围住之前所立者的变化不受约束，在第 T 步闭合的等待的队列中 T 之前可以有成员加入空队；不纳入耗散时，在第 0 步闭合的等待的队列实现每个计数表，被围住不给所立者加任何规律。",
+        "en": "World.waitingQueue and World.enclosed_standing_counting_under: with balance and dissipation chosen but not embodiment, the change of what stands before enclosure is unconstrained, members joining an empty queue before step T in a waiting queue closing at T; without dissipation a waiting queue closing at the first step counts every tally, and enclosure adds no law of what stands."
       }
     },
     {
@@ -214,8 +214,8 @@
     "en": "Restate locally, following the zero-premise plan, the laws of dependence and the other laws of what stands."
   },
   "correspondence": {
-    "zh": "活动的计数规律（whole-law-of-counting、counting-under-enclosure）读的是什么活跃；本结果读同一个展开中什么立着、什么依存。不被围住时，所立者与活跃者服从相同的计数规律：体现使两者相同，不选体现时两者都只受计数表约束。被围住时两者分开：流所取用与给予的是水平，所以平衡与耗散单独就为所立者定下变化界，体现所做的是把这个界从所立者带到活跃者。依存的计数不受前提约束，因为前提只在依存与活动、水平与世系一起时约束它：活动需要支持只要求活跃者所依存的支持它，有界传递只要求后代开始立着时所依存的，其亲代也依存，所需在一个界之内。作者的读法（AI 论证）：被围住的展开所耗去的是立着的东西，活动只在体现时随之受约束；这是第一部分不加公理的计数规律在三个读法上的完整陈述，其中什么起约束（所选前提都起约束时）只对活动陈述。它不评价立起、不再立着、形成或消解。",
-    "en": "The laws of counting activity (whole-law-of-counting, counting-under-enclosure) read what is active; this result reads what stands and what depends in the same unfolding. Where nothing is enclosed what stands and what is active obey the same laws of counting: embodiment makes them one, and without it both are bound by the tally alone. Under enclosure they part: what the flow takes and gives is standing, so balance and dissipation alone bound the change of what stands, and what embodiment does is carry that bound from what stands to what is active. The counts of dependence are not bound by the premises, since the premises bear on dependence only together with activity, standing and descent: activity needing support asks only that what an active relatum depends on supports it, and bounded transmission only that what a descendant depends on as it comes to stand its parent depended on, within a bound. The author's reading (AI argument): what an enclosed unfolding spends is what stands, activity being bound with it only where embodied; this completes the statement of Part I's laws of counting, with no axiom, in the three readings, where binding (each selected premise binding) is stated for activity only. It does not evaluate coming to stand, ceasing to stand, forming or dissolving."
+    "zh": "活动的计数规律（whole-law-of-counting、counting-under-enclosure）读的是什么活跃；本结果读同一个展开中什么立着、什么依存。不被围住时，所立者与活跃者服从相同的计数规律：体现使两者相同，不纳入体现时两者都只受计数表约束。被围住时两者分开：流所取用与给予的是水平，所以平衡与耗散单独就为所立者定下变化界，体现所做的是把这个界从所立者带到活跃者。依存的计数不受前提约束，因为前提只在依存与活动、水平与世系一起时约束它：活动需要支持只要求活跃者所依存的支持它，有界传递只要求后代开始立着时所依存的，其亲代也依存，所需在一个界之内。读法（AI 论证）：被围住的展开所耗去的是立着的东西，活动只在体现时随之受约束；这是不用条件的理论中不加公理的计数规律在三个读法上的完整陈述，其中什么起约束（所纳入前提都起约束时）只对活动陈述。它不评价立起、不再立着、形成或消解。",
+    "en": "The laws of counting activity (whole-law-of-counting, counting-under-enclosure) read what is active; this result reads what stands and what depends in the same unfolding. Where nothing is enclosed what stands and what is active obey the same laws of counting: embodiment makes them one, and without it both are bound by the tally alone. Under enclosure they part: what the flow takes and gives is standing, so balance and dissipation alone bound the change of what stands, and what embodiment does is carry that bound from what stands to what is active. The counts of dependence are not bound by the premises, since the premises bear on dependence only together with activity, standing and descent: activity needing support asks only that what an active relatum depends on supports it, and bounded transmission only that what a descendant depends on as it comes to stand its parent depended on, within a bound. A reading (an AI argument): what an enclosed unfolding spends is what stands, activity being bound with it only where embodied; this completes the statement of the laws of counting of the theory without the condition, with no axiom, in the three readings, where binding (each chosen premise binding) is stated for activity only. It does not evaluate coming to stand, ceasing to stand, forming or dissolving."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean",
   "aliases": [
@@ -251,11 +251,11 @@
       },
       "interface": {
         "output": {
-          "zh": "每个选择之下活动的计数规律是计数表，约束计数时再加没有关系项活跃的一步上没有生起。",
-          "en": "Under each selection the laws of counting activity are the tally, and where it binds counting, nothing arising across a step at which nothing is active."
+          "zh": "每种取舍之下活动的计数规律是计数表，约束计数时再加没有关系项活跃的一步上没有生起。",
+          "en": "Under each choice the laws of counting activity are the tally, and where it binds counting, nothing arising across a step at which nothing is active."
         },
         "input": {
-          "zh": "体现时所立者就是活跃者，所以所立者的计数规律相同；不选体现时由源供给的队列实现每个计数表。",
+          "zh": "体现时所立者就是活跃者，所以所立者的计数规律相同；不纳入体现时由源供给的队列实现每个计数表。",
           "en": "With embodiment what stands is what is active, so the laws of counting what stands are the same; without it a queue fed from a source counts every tally."
         },
         "conditions": {
@@ -269,17 +269,17 @@
       "id": "counting-under-enclosure",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用被围住时与有限世界中每个选择之下的规律（World.enclosed_counting_under、World.enclosed_change_bound_iff、World.finite_counting_under）、闭合的队列（EnclosedQueue.closing、World.closingQueue_balanced、World.closingQueue_enclosed、World.closingQueue_dissipative）、环（Ring.census、Ring.counts、World.embodiedRing_meets）与有限的队列（World.finiteQueue_premised、World.finiteQueue_census、World.finiteQueue_counts）。",
-        "en": "Reuses the laws under each selection with enclosure and in finite worlds (World.enclosed_counting_under, World.enclosed_change_bound_iff, World.finite_counting_under), the closing queue (EnclosedQueue.closing, World.closingQueue_balanced, World.closingQueue_enclosed, World.closingQueue_dissipative), rings (Ring.census, Ring.counts, World.embodiedRing_meets) and the finite queue (World.finiteQueue_premised, World.finiteQueue_census, World.finiteQueue_counts)."
+        "zh": "复用被围住时与有限世界中每种取舍之下的规律（World.enclosed_counting_under、World.enclosed_change_bound_iff、World.finite_counting_under）、闭合的队列（EnclosedQueue.closing、World.closingQueue_balanced、World.closingQueue_enclosed、World.closingQueue_dissipative）、环（Ring.census、Ring.counts、World.embodiedRing_meets）与有限的队列（World.finiteQueue_premised、World.finiteQueue_census、World.finiteQueue_counts）。",
+        "en": "Reuses the laws under each choice with enclosure and in finite worlds (World.enclosed_counting_under, World.enclosed_change_bound_iff, World.finite_counting_under), the closing queue (EnclosedQueue.closing, World.closingQueue_balanced, World.closingQueue_enclosed, World.closingQueue_dissipative), rings (Ring.census, Ring.counts, World.embodiedRing_meets) and the finite queue (World.finiteQueue_premised, World.finiteQueue_census, World.finiteQueue_counts)."
       },
       "interface": {
         "output": {
-          "zh": "被围住时与有限世界中，每个选择之下活动的计数规律；选中平衡、体现与耗散时再加变化界。",
-          "en": "The laws of counting activity under each selection with enclosure and in finite worlds; a change bound where balance, embodiment and dissipation are selected."
+          "zh": "被围住时与有限世界中，每种取舍之下活动的计数规律；纳入平衡、体现与耗散时再加变化界。",
+          "en": "The laws of counting activity under each choice with enclosure and in finite worlds; a change bound where balance, embodiment and dissipation are chosen."
         },
         "input": {
-          "zh": "所立者的规律在选中平衡与耗散时就加变化界，不需要体现。",
-          "en": "The laws of what stands add the change bound where balance and dissipation are selected, with no embodiment."
+          "zh": "所立者的规律在纳入平衡与耗散时就加变化界，不需要体现。",
+          "en": "The laws of what stands add the change bound where balance and dissipation are chosen, with no embodiment."
         },
         "conditions": {
           "zh": "列出；可判定；逐点；被围住或有限。",
@@ -315,13 +315,13 @@
       "id": "map-of-premises",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用八个前提与其选择（World.Premised.of、World.Premised.meets、World.Meets）、没有什么流动时四个关于流的前提空成立（World.still_vacuous）与有限世界每步被围住（World.Finite.enclosed）。",
-        "en": "Reuses the eight premises and their selections (World.Premised.of, World.Premised.meets, World.Meets), that the four premises about the flow hold vacuously where nothing flows (World.still_vacuous), and that every step of a finite world is enclosed (World.Finite.enclosed)."
+        "zh": "复用八个前提与其取舍（World.Premised.of、World.Premised.meets、World.Meets）、没有什么流动时四个关于流的前提空成立（World.still_vacuous）与有限世界每步被围住（World.Finite.enclosed）。",
+        "en": "Reuses the eight premises and their choices (World.Premised.of, World.Premised.meets, World.Meets), that the four premises about the flow hold vacuously where nothing flows (World.still_vacuous), and that every step of a finite world is enclosed (World.Finite.enclosed)."
       },
       "interface": {
         "output": {
-          "zh": "八个前提与其选择；有限世界每步被围住。",
-          "en": "The eight premises and their selections; every step of a finite world enclosed."
+          "zh": "八个前提与其取舍；有限世界每步被围住。",
+          "en": "The eight premises and their choices; every step of a finite world enclosed."
         },
         "input": {
           "zh": "依存的队列与环满足全部八个前提。",
@@ -362,8 +362,8 @@
     {
       "id": "theory-of-becoming-foundation",
       "detail": {
-        "zh": "计划 P47：第一部分计数规律的其余两个读法；这不是无公理的整体演绎。",
-        "en": "Plan P47: the two other readings of Part I's laws of counting; this is not the deduction of the whole without axioms."
+        "zh": "计划 P47：不用条件的理论中计数规律的其余两个读法；这不是无公理的整体演绎。",
+        "en": "Plan P47: the two other readings of the laws of counting of the theory without the condition; this is not the deduction of the whole without axioms."
       }
     }
   ],
@@ -800,6 +800,10 @@
     {
       "en": "20 October 2026, R37b (B11 of the twentieth review: one census table for any listing, the laws of counting what is active, what stands and what depends its instances, the counted and decided forms from one soundness and one witness): Moved with their full names: from Counting.lean to CensusTable.lean, World.CountsObey, ceasesToBe_congr, comesToBe_congr; from Standing.lean to CensusTable.lean, ceasings_congr, comings_congr. Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/r37b/RENAME-TABLE.json): World.Embodied.tally_of_stands (now World.Embodied.standsObey_iff); World.embodiedQueue_stands (now World.enclosed_standing_counting_under_witnessed). Proof bindings (Counting.lean, Standing.lean) rebound to core receipt 20261020T060542.295041Z. Re-pointed after reading the change: Counting.lean: each law of counting a census table, from a counted soundness and a witness lemma; the counted binding steps moved here from CensusCounts and CensusBinding; statements unchanged; Standing.lean: what stands and what depends as census tables of their listings, with counted soundness and witness lemmas; ceasings_congr and comings_congr moved to CensusTable; helpers left unused removed; kept statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37b（第二十次评审的 B11：任一列举的一个普查表，计数所活动、所立与所依的规律为其实例，计数式与判定式由一个可靠性与一个见证给出）：连同完整名称移动：从 Counting.lean 到 CensusTable.lean：World.CountsObey、ceasesToBe_congr、comesToBe_congr；从 Standing.lean 到 CensusTable.lean：ceasings_congr、comings_congr。以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/r37b/RENAME-TABLE.json）：World.Embodied.tally_of_stands（现为 World.Embodied.standsObey_iff）；World.embodiedQueue_stands（现为 World.enclosed_standing_counting_under_witnessed）。证明绑定（Counting.lean、Standing.lean）改到核心回执 20261020T060542.295041Z。读过改动后重新指向：Counting.lean：每条计数规律为一个普查表，由计数式的可靠性与见证引理给出；计数式的约束步骤从 CensusCounts 与 CensusBinding 移入；陈述不变；Standing.lean：所立与所依作为其列举的普查表，附计数式的可靠性与见证引理；ceasings_congr 与 comings_congr 移至 CensusTable；不再使用的辅助引理删去；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): a subset of the eight premises is now called a choice of premises, not a selection ('chooses', 'chosen'), in every live field: selection is the word for what goes through couplings. The laws and their scope are unchanged. Also, 'the author's reading (AI argument)' reads 'a reading (an AI argument)', and the retired label Part I in the correspondence and a related detail reads the theory without the condition.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：八个前提的一个子集今称“前提之取舍”，不称“选择”（动词作“纳入”），见于每个现行字段：“选择”一词留给经耦合而行者。规律及其范围不变。另，“作者的读法（AI 论证）”改为“读法（AI 论证）”，对应与一条关联说明中的退役标签“第一部分”改为“不用条件的理论”。"
     }
   ],
   "text_versions": [

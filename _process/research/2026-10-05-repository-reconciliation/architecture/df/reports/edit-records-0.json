@@ -1,0 +1,192 @@
+{
+ "changed": [
+  {
+   "target": "alignment-direction-under-widening",
+   "change": "laws[1] en/zh: chosen_keeps_basic stated as the Lean gives it: under the keeps-every-basic-admission premise, a basic admission is not refuted at any chosen option (a double negation, no decision used); with outcomes listed, the comparison weakly decided and the admission decided, it is required of the choice. Declarations unchanged."
+  },
+  {
+   "target": "candidate-theorems-of-the-corpus",
+   "change": "statement gives all five outcomes (38/15/3, plus 2 misclassified and 1 not expressible; checked against outcomes.tsv). laws[4] names the symmetric class E that «不可致诘而有常则混而为一» takes (hE)."
+  },
+  {
+   "target": "continued-change-needs-openness",
+   "change": "does_not_show[4] rewritten: in finer amounts rest can fail only along a reading no list holds; read off listed configurations, the rest theorem's premises give rest unrefuted in any amounts, with no least loss. No Lean names in the field. The second-law remark is now its own correspondence item. Added a related link to rest-theorem-in-any-amounts."
+  },
+  {
+   "target": "continuous-time-as-tower",
+   "change": "statement names the census of what stands that changes_within takes (shortened to fit the 300-character cap). hypotheses[1] en/zh no longer names Ren's decision; the decision stays in the correspondence as provenance."
+  },
+  {
+   "target": "differences-below-threshold",
+   "change": "limitations en/zh: runaway-distance-unregistered changed to runaway-distance-uncoupled."
+  },
+  {
+   "target": "effective-capacity-and-eventual-reachability",
+   "change": "statement added (after_course; preparation_changes_capacity, release_loses_joint, prepared_can_end_one_sided). Retired alias 'Becoming.within_after_prefix_by_core (retired module)' removed; it stays in its provenance reference."
+  },
+  {
+   "target": "experiment-needs-return, generalization-through-lumping, runaway-distance-uncoupled",
+   "change": "correspondence en/zh: testing-within-registration changed to testing-within-couplings."
+  },
+  {
+   "target": "generalization-through-lumping",
+   "change": "statement rewritten to match the Lean, within 300/150 characters. 'Exactly' now carries the conditions: two values, listed data and decided lumps. Rightness is pointwise (lumped_right_iff: the world takes the observed value). Structure/change is one lumping, and training selects through the data."
+  },
+  {
+   "target": "gluing-under-parity, separation-loses-the-relation",
+   "change": "correspondence: contextual-registration changed to claims-shown-in-context. gluing statement now names the exact law's conditions (claims listed once and compared decidedly, contexts listed) and says the in-context reading takes a supplied assignment within each context; shortened to the cap."
+  },
+  {
+   "target": "generation-and-degeneration-at-two-grains",
+   "change": "laws[6] (LAW7) en/zh: 'old base' changed to 'World model'."
+  },
+  {
+   "target": "graded-significance-and-priority",
+   "change": "laws[3] names the gap of at least two levels and the bound on the higher level that prior_transfer takes. Alias 'sufficiency as a scope denial' changed to 'sufficiency read as a scope denial'."
+  },
+  {
+   "target": "historical-source-binding",
+   "change": "claim en/zh: reports and contents compared decidedly, placed on the reading_right law only. The span law now reads 'the relation's values are compared decidedly and include two distinct ones'. I added the decided comparison myself: section Changes takes [DecidableEq R] for counting changes, which the triage missed."
+  },
+  {
+   "target": "how-a-carried-difference-grows",
+   "change": "correspondence en/zh: runaway-distance-unregistered changed to runaway-distance-uncoupled."
+  },
+  {
+   "target": "identification-where-runs-part",
+   "change": "laws[5] (law 6) en/zh: two distinct values for parting, values decided for free_open, and 'right at no step' on two values (free_never_right) instead of 'wrong at every step'."
+  },
+  {
+   "target": "joint-code-plan-lifting",
+   "change": "Statement added for the description form. The claim now states both forms: realizes_image_iff/plans_lift_iff, and the code form realizes_code_iff with JointCompact and TestsStable. Hypotheses replaced as proposed."
+  },
+  {
+   "target": "joint-practice-forms-continuation",
+   "change": "Statement added from MachineInstances.round_iff. canonical_source changed to universal-ethics/generative-capacity/MachineInstances.lean, which is already a referenced and bound proof source."
+  },
+  {
+   "target": "keeping-forgoes-the-renewal-at-the-need",
+   "change": "does_not_show[0] split in two. (1) A coupling added step by step. (2) Which optima stand at the tie w + q n = r n + m, or in the gap the reached ends leave between the thresholds: neither strict threshold law applies there."
+  },
+  {
+   "target": "laws-of-one-step",
+   "change": "hypotheses[2] says what the sign term does ('a formation that takes loses at least one unit'), without naming Ren and within 420 characters. does_not_show[5] no longer attributes the phrase 'closure bounds change'. Provenance (D45 (5)) is recorded in the history note only."
+  },
+  {
+   "target": "laws-of-one-step-complete",
+   "change": "statement and claim en/zh use 'hypothesis' where they meant the local premises on the family, in all four claim places. 'What the step from t shows of a condition' is kept."
+  },
+  {
+   "target": "learning-by-refutation",
+   "change": "next_delta en/zh: former ids changed to learnable-through-a-map and readings-within-what-they-read."
+  },
+  {
+   "target": "learning-through-a-map-is-tracking-in-the-limit",
+   "change": "statement names what learnable_iff_identifies takes: a world a list holds and the map's values decided. It says learnability and identification can part where the law changes the feature. The Lean name Merge is left out of the public field."
+  },
+  {
+   "target": "living-significance-on-held-lives",
+   "change": "hypotheses[0], [3] and [4] rewritten in the current vocabulary. The holding reading is labelled an AI reading (D11). hypotheses[4] points to continuation-condition-yields-living-significance. In the correspondence, the former id self-good-reachable-g0 changed to own-good-to-reachable-living-significance."
+  },
+  {
+   "target": "mutation-and-the-balance-it-sets",
+   "change": "statement drops 'approached from below' and states the Lean: below_always and not_falls_below at or below the balance, above_always above it, never_rises, and falls_of_outrun with carriers present. Fits the cap."
+  },
+  {
+   "target": "only-the-order-of-change-shows",
+   "change": "statement names the conditions: relata compared decidedly, listed once at each step, moving steps supplied for removal, activity decided for the counts."
+  },
+  {
+   "target": "organizational-formation-from-generative-comparison",
+   "change": "Title en/zh changed to 'Required organization under the comparison C'. hypotheses[0] names the continuation condition through living significance for scope and C for order with J1-J4 (zh corrected to 生生之意义). hypotheses[1] names the exact listing and both decisions, supplied classically in the periphery. Three laws added: L1 Requirement.required_of_bettered and others; L2 Undominated.not_not_has plus undominated_has_iff_em; L3 OrganizationCorrespondence.*. All law declarations were already referenced and were added to aliases, except Becoming.exists_undominated."
+  },
+  {
+   "target": "pending-task-context-applicability",
+   "change": "Statement added (feasible_iff_covered, review_completes_iff, losses_kept/losses_kept_along). In hypotheses[0], 'G0/J' changed to 'living significance, the practical commitments J'."
+  },
+  {
+   "target": "protection-priority-excludes-uniform-aggregation",
+   "change": "hypotheses[1] and related[1] en/zh: G0 changed to living significance; the periphery name GenerativeComparison.G0 is kept where it names the Lean."
+  },
+  {
+   "target": "relational-reading-comparison",
+   "change": "hypotheses[0] names C as Ranking.ComparisonUnder in the core and ComparisonPrinciple in the periphery. Living significance (G0 in the periphery) appears only in livingSignificance_wholeRun_iff and g0_relational. zh shortened to 145 characters."
+  },
+  {
+   "target": "renewing-consuming-formation",
+   "change": "Statement added. Its lead names the wear law's keep and wear properties (rate holds under pressure within it and only falls under excess). It avoids the market word 'budget' and the negation lead. hypotheses[2]: 'not Ren's G0' changed to 'the AI's formalization of that broad reading, not the theory's 生生'."
+  },
+  {
+   "target": "reserved-shutdown-during-recovery",
+   "change": "canonical_source changed to becoming/Becoming/Countdown.lean, already a referenced proof source."
+  },
+  {
+   "target": "the-gap-for-ones-own-act, what-pooled-coupling-reaches",
+   "change": "hypotheses[1] en/zh: selection-through-registration changed to selection-through-couplings."
+  },
+  {
+   "target": "wenli-on-the-spine",
+   "change": "does_not_show[2] deleted: Law.coarsest_iff states the class as one theorem. The Lean clause removed from next_delta: the joins exist (Web.alikeThroughUpTo_iff_prefix, SharedCodes.course_read/code_read_every)."
+  },
+  {
+   "target": "what-a-law-of-the-whole-and-no-part-takes",
+   "change": "laws[2].en: 'least registration' changed to 'least coupling'. Correspondence en/zh: sensitivity-is-the-least-registration changed to sensitivity-is-the-least-coupling."
+  },
+  {
+   "target": "what-a-method-comes-to-say-in-the-limit",
+   "change": "statement now gives the forward direction only (verified implies union of closed readings; refuted implies meet of open ones). It names the told-apart configurations that settling takes, and confines recurrence to Boolean moves under Markov's principle. Shortened to the cap."
+  },
+  {
+   "target": "wisdom-root",
+   "change": "G0 replaced by living significance in hypotheses[1], the correspondence, dependencies[0] and [2] detail, dependencies[19] interface output and dependencies[27] interface conditions. hypotheses[1] no longer says 'Following Ren's correction' or cites chapter section 6.4, and names C beside J. In does_not_show[0], wisdom-root-part-one changed to wisdom-root-without-axiom. Correspondence kept within 1200 characters."
+  },
+  {
+   "target": "all 38 records",
+   "change": "One DF history note (en/zh, literal DF_N) appended to each. reviewed_at_utc refreshed to 2026-10-25T14:49:05+00:00, as RESULT-WORKFLOW requires for content changes. Records saved with json.dumps(indent=2, ensure_ascii=False) plus newline; key order kept."
+  }
+ ],
+ "not_applied": [
+  {
+   "row": "10 (organizational-formation hypotheses[0], 04-LIFE)",
+   "why": "Superseded by row 11 on the same field, which I applied instead because it matches 05 §11 and the two-premise rule."
+  },
+  {
+   "row": "Laws proposed for schema-1 records (rows 9 optional, 15, 17, 18, 19, 21)",
+   "why": "Schema 1 rejects a 'laws' field (registry: 'schema-2 fields need schema_version 2'), and the brief says to keep the schema. I added statements instead. Row 15's law content went into the claim. For rows 9, 17, 18, 19 and 21 the existing claims already state those laws. Stock.process, MatchesParts, Web.StandingCensus and Becoming.ActivationCapacity.joint_iff were therefore not added to references."
+  },
+  {
+   "row": "Triage statement texts (rows 3, 4, 15, 17, 18, 19, 21, 23, 25, 26)",
+   "why": "Most proposed texts exceed the statement cap of 300 en / 150 zh, which is a checker error, and some contain Lean names (Merge) or non-implications already present in does_not_show. I wrote shorter statements that say exactly what the current Lean proves."
+  },
+  {
+   "row": "18 (renewing statement content)",
+   "why": "The proposed 'beyond renewal' comparison clause was dropped from the statement for length; the claim already carries it. I also changed the lead: a statement that said only 'no-recovery' or 'keeps or lowers' would omit the strict wear property the bounded-total law needs."
+  },
+  {
+   "row": "19 (pending-task hypotheses wording)",
+   "why": "The proposal 'the comparison and practical premises' misreads G0. Per 08's retired labels G0 is living significance, so I wrote 'living significance, the practical commitments J and the report correspondence'."
+  },
+  {
+   "row": "11 L2 wording 'only under double negation'",
+   "why": "Replaced by the exact calibration the Lean proves: asked of every relation, possession without the double negation is exactly excluded middle (undominated_has_iff_em)."
+  },
+  {
+   "row": "11 alias for Becoming.exists_undominated",
+   "why": "Not added to aliases: the alias is already owned by practical-judgment-under-living-significance, and aliases must be unique. It remains in L1's declarations and references."
+  },
+  {
+   "row": "31 (wenli next_delta new clause 'its two sides shown equal under a decision')",
+   "why": "Not verified against any source, so I only removed the Lean part. The fidelity parenthetical is kept unchanged."
+  },
+  {
+   "row": "14 optional (laws-of-one-step correspondence) and 32 optional (living-significance correspondence 'the axiom' wording)",
+   "why": "Marked optional, and the correspondence mixes Ren's quoted words with AI text. Left for a separate pass. Noticed but out of these rows: laws-of-one-step correspondence still says 'laws of Part I' (retired label); living-significance correspondence still uses G0/S0/N_std; effective-capacity hypotheses[3] still says 'G0/J input'."
+  },
+  {
+   "row": "20 (other 'old base' wording in generation-and-degeneration next_delta and correspondence)",
+   "why": "The row fixes LAW7 only. The correspondence's 'old base' refers to the process-level LastChange.lpo_iff_settles, so 'World model' would be wrong there. Left unchanged."
+  }
+ ],
+ "checker": "Last runs on all 38 records. `python3 -B tools/research/research.py check --ids <38 ids>` exits 1, and every error in the list is 'generated view differs' (README.md, RESULTS.md, GOALS.md, theory-graph, record .md pages); there are no schema, limit, declaration, alias or reference errors. A separate notice 'Research inputs changed during this operation' appeared on earlier runs, caused by concurrent edits, and was absent from the final run. Source drift is reported only for files I did not touch, all edited concurrently by other agents, which is why it is ignored as instructed. In Direction.lean, Weightings.lean, Space.lean and OrganizationCorrespondence.lean the changes are docstrings only, which I checked by diff; DELEGATED-CHOICES.md also drifts (§13). `python3 -B tools/research/research.py lint --ids <same>` exits 0 with errors: []. Compared with HEAD, my edits add no new lint findings, except that wenli does_not_show[2] warnings belong to the former item [3], which moved up one index; two correspondence fields already over the cap grew by a few characters from the id replacement. No Lean files were changed.",
+ "lean_files_changed": []
+}

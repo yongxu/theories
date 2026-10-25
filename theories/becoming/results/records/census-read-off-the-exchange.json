@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T10:06:36+00:00",
+  "reviewed_at_utc": "2026-10-25T14:43:25+00:00",
   "statement": {
-    "en": "Read off the exchange, the relata that exchange are listed with no decision procedure wherever a named family closes each step; every finite world has a census with its rest counted. No census fails at any step, and asking one at every step of every flow over Nat is LPO.",
-    "zh": "从交换读出，凡有一个具名的家族围住每一步，交换者就被列出，不需判定程序；每个有限世界算入其余都有普查。没有普查在任何一步失败，而对 Nat 上每个流的每一步要求普查是有限全知原则。"
+    "en": "Where participants are listed once at each step, the exchanging relata are listed with no decision procedure wherever a named family closes each step, and every finite world has a census with its rest counted; a census missing at a step is refuted, and one at each step of every flow over Nat is LPO.",
+    "zh": "参与者每步各列一次时，凡有一个具名的家族围住每一步，交换者就被列出，不需判定程序，每个有限世界算入其余都有普查；在某一步缺普查被否证，而对 Nat 上每个流的每一步要求普查是有限全知原则。"
   },
   "laws": [
     {
@@ -28,8 +28,8 @@
       ]
     },
     {
-      "en": "With the rest counted, every world whose formations taking part are listed once and whose steps a named family closes has a census; every finite world does, where World.Finite.counted needed activity decided.",
-      "zh": "算入其余，参与形成各列一次、每一步由一个具名家族围住的每个世界都有普查；每个有限世界都有，而 World.Finite.counted 需要活跃可判定。",
+      "en": "With the rest counted, every world whose formations taking part are listed once and whose steps a named family closes has a census; so does every finite world whose formations taking part are listed once, where World.Finite.counted needed activity decided.",
+      "zh": "算入其余，参与形成各列一次、每一步由一个具名家族围住的每个世界都有普查；参与形成各列一次的每个有限世界也都有，而 World.Finite.counted 需要活跃可判定。",
       "declarations": [
         "Becoming.World.withRest_counted",
         "Becoming.World.Finite.withRest_counted"
@@ -293,7 +293,7 @@
         "Becoming.not_not_listed",
         "Becoming.of_not_not"
       ],
-      "sha256": "e0acae7f7a2010316afdc30e920c4b939d44e71874e0d40bd1aa53605ddd12a0"
+      "sha256": "226efe6b90919f7e41ab41924a8a35329c4c40e3851a4f9d3c548c0fe68ed849"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
@@ -356,12 +356,18 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ExchangePremises.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ExchangePremises",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -394,6 +400,10 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Counted to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement and the second law said every finite world has a census with its rest counted; the Lean takes the formations taking part listed once at each step, and the statement now leads with that condition, which also bears on the refuted failure of a census; the failure is stated as refuted rather than as no census failing.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述与第二条律原说每个有限世界算入其余都有普查；Lean 取每一步参与形成各列一次，陈述今以此条件为先，它也关乎缺普查之被否证；缺普查改说为被否证，不说没有普查失败。"
     }
   ],
   "text_versions": [

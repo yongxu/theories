@@ -5,7 +5,7 @@
 
 `what-an-optimum-does-beyond-what-couples-in` · **recorded-checked** · theorem · F04 · [record](what-an-optimum-does-beyond-what-couples-in.json) · [register](../../../../RESULTS.md)
 
-> Every order rising with what couples in has its optima at the least level beyond exactly where lowering it leaves room; an optimum breaks exactly the dependences beyond some outcome breaks; raising the family is lowering the beyond with the loss; keeping each dependence takes the slack.
+> Every order rising with what couples in has its optima least beyond exactly where no eligible outcome above another beyond is unbeaten on it; an optimum breaks exactly the dependences beyond some outcome breaks; raising the family is lowering the beyond with the loss; keeping each takes the slack.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -29,7 +29,7 @@
 
 - Room derived from a law of exchange: which outcomes an actor's takes and gives make eligible, with the rest responding, is not stated here; room is a hypothesis (derived for one step in room-read-off-the-exchange, SG2).
 - Zhuang and Hadfield-Menell's continuous setting, their compactness characterization of guaranteed overoptimization, and their improvement by a proxy updated over time are not reached.
-- That the beyond's fall is a harm, or that keeping is better: no evaluation enters; that a widening move is chosen is the direction's (chapter 7.5), under C and the continuation condition.
+- That the beyond's fall is a harm, or that keeping is better: no evaluation enters; that a widening move is chosen is the conditional direction's (alignment-direction-under-widening), under C and the continuation condition.
 - Without room the drive fails: keeping can be an optimum (Optimum.Drain.room_needed); and an order rising only to a target need not drive or keep (Optimum.Drain.satisficing_either).
 - **Counterexample:** Spilling: two outcomes, the source kept or spilled with the store empty in both; under the store's order keeping is an optimum and is not at the least level beyond (Optimum.Drain.room_needed). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 
@@ -66,8 +66,9 @@ Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that re
   - Input: That no member couples into what the optimum breaks.
   - Preserved conditions: Every condition a member couples into in the family; the beyond apart. [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 - related, not a proved adapter: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). What a rise draws from beyond; this record states what an optimum does there.
-- related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Raising what couples in is paid from beyond; an optimum takes the beyond to the least level where that leaves room.
+- related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Raising what couples in draws from beyond; with room, an optimum takes the beyond to the least level any eligible outcome reaches.
 - related, not a proved adapter: [room-read-off-the-exchange](room-read-off-the-exchange.md). Derives the room this record supplies, for one step of exchange.
+- related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Which widening move is chosen, under C and the continuation condition.
 
 **Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md) · [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md) · [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md) · [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md) · [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md) · [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md) · [room-read-off-the-exchange](room-read-off-the-exchange.md) · [what-a-set-point-optimum-does-beyond](what-a-set-point-optimum-does-beyond.md)
 
@@ -115,7 +116,8 @@ Aliases: `what an optimum does beyond what couples in`, `the drive to the least 
 
 - 21 October 2026: added (SG1), what an optimum does beyond what couples in: the drive to the least level exactly where there is room, the breaks exactly those some outcome makes, the conservation identity and the slack under keeping; study section 283.
 - 21 October 2026, SG2: room derived for one step of exchange (record room-read-off-the-exchange, study section 288); the scope note and the next delta say so; this record's laws and their statements are unchanged.
+- 25 October 2026, board item DF (study section 418): a boundary cites the conditional direction by its record instead of a retired chapter section, and the record is linked as related; the related detail on raising what couples in says what the Lean gives, with room the least level any eligible outcome reaches beyond, instead of 'where that leaves room'. No law changed. The statement no longer says the optima are least exactly where there is room: least_iff's condition is that no eligible outcome above another beyond is unbeaten on the family (a double negation), which room implies and does not equal.
 
 </details>
 
-Documentary review UTC: `2026-10-20T20:02:53+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -199,8 +199,8 @@ theorem retains_iff_within_margin_at {l : Nat → C → Nat} (without : L.Withhe
         (within t f significant admits)⟩
 
 /-- From standpoint `p`, with balance as in `retains_iff_within_margin_at`: a part loses a
-continuation with significance exactly where the levels without it admit the formation and the
-part's net draw on some condition it requires exceeds the margin. -/
+continuation with significance exactly where the levels without it admit the formation and not
+every condition it requires keeps its need, with the part's net draw, within the margin. -/
 theorem loses_iff_beyond_margin_at {l : Nat → C → Nat} (without : L.WithheldLevels part W l)
     {sig : Pos → Nat → F → Prop} {p : Pos}
     (balances : ∀ t f, sig p t f → W.Admits (l t) t f → ∀ c, W.requires t f c → ∀ s, s < t →
@@ -245,8 +245,8 @@ theorem Balances.retains_iff_within_margin (balances : L.Balances W) {l : Nat �
   retains_iff_within_margin_at without fun _ _ _ _ c _ s _ => balances.on [c] s
 
 /-- From standpoint `p`, a part loses a continuation with significance exactly where the levels
-without it admit the formation and the part's net draw on some condition it requires exceeds the
-margin. -/
+without it admit the formation and not every condition it requires keeps its need, with the
+part's net draw, within the margin. -/
 theorem Balances.loses_iff_beyond_margin (balances : L.Balances W) {l : Nat → C → Nat}
     (without : L.WithheldLevels part W l) {sig : Pos → Nat → F → Prop} {p : Pos} :
     W.Adds sig p l W.level ↔ ∃ t f, sig p t f ∧ W.Admits (l t) t f ∧ ¬ ∀ c, W.requires t f c →

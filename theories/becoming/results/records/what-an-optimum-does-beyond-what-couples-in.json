@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-20T20:02:53+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
-    "en": "Every order rising with what couples in has its optima at the least level beyond exactly where lowering it leaves room; an optimum breaks exactly the dependences beyond some outcome breaks; raising the family is lowering the beyond with the loss; keeping each dependence takes the slack.",
-    "zh": "每个随耦合入者升高的序，其最优恰在降低之外留有余地时处于之外最低水平；最优恰好打断某个结果所打断的之外依存；升高族即降低之外加损失；保持每个依存恰取余量。"
+    "en": "Every order rising with what couples in has its optima least beyond exactly where no eligible outcome above another beyond is unbeaten on it; an optimum breaks exactly the dependences beyond some outcome breaks; raising the family is lowering the beyond with the loss; keeping each takes the slack.",
+    "zh": "每个随耦合入者升高的序，其最优恰在没有一个于之外高于另一者的合格结果在耦合入者上不被超过时处于之外最低水平（有余地即如此）；最优恰好打断某个结果所打断的之外依存；升高族即降低之外加损失；保持每个依存恰取余量。"
   },
   "laws": [
     {
@@ -118,8 +118,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; that a widening move is chosen is the direction's (chapter 7.5), under C and the continuation condition.",
-      "zh": "之外的降低是伤害、保持更好：没有评价进入；选择扩大的动作属于方向（第 7.5 节），在 C 与延续条件之下。",
+      "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; that a widening move is chosen is the conditional direction's (alignment-direction-under-widening), under C and the continuation condition.",
+      "zh": "之外的降低是伤害、保持更好：没有评价进入；选择扩大的动作属于有条件之方向（alignment-direction-under-widening），在 C 与延续条件之下。",
       "kind": "non-implication"
     },
     {
@@ -226,8 +226,8 @@
     {
       "id": "raising-what-couples-in-draws-from-beyond",
       "detail": {
-        "en": "Raising what couples in is paid from beyond; an optimum takes the beyond to the least level where that leaves room.",
-        "zh": "升高耦合入者由之外支付；最优在留有余地时把之外压到最低水平。"
+        "en": "Raising what couples in draws from beyond; with room, an optimum takes the beyond to the least level any eligible outcome reaches.",
+        "zh": "升高耦合入者从之外汲取；有余地时，最优把之外压到任一合格结果所及之最低水平。"
       }
     },
     {
@@ -235,6 +235,13 @@
       "detail": {
         "en": "Derives the room this record supplies, for one step of exchange.",
         "zh": "对一步交换导出本记录所给定的余地。"
+      }
+    },
+    {
+      "id": "alignment-direction-under-widening",
+      "detail": {
+        "en": "Which widening move is chosen, under C and the continuation condition.",
+        "zh": "在 C 与延续条件之下选择哪一扩大之动作。"
       }
     }
   ],
@@ -507,6 +514,10 @@
     {
       "en": "21 October 2026, SG2: room derived for one step of exchange (record room-read-off-the-exchange, study section 288); the scope note and the next delta say so; this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG2：对一步交换导出余地（记录 room-read-off-the-exchange，研究第 288 节）；范围说明与下一步注明此事；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): a boundary cites the conditional direction by its record instead of a retired chapter section, and the record is linked as related; the related detail on raising what couples in says what the Lean gives, with room the least level any eligible outcome reaches beyond, instead of 'where that leaves room'. No law changed. The statement no longer says the optima are least exactly where there is room: least_iff's condition is that no eligible outcome above another beyond is unbeaten on the family (a double negation), which room implies and does not equal.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条界限以记录引用有条件之方向，不再引用退役章节，并把该记录列为相关；关于升高耦合入者的相关说明只说 Lean 所给：有余地时，之外压到任一合格结果所及之最低水平，不再写“在留有余地时”。规律未变。陈述不再说最优恰在有余地时最低：least_iff 的条件是没有一个于之外高于另一者的合格结果在族上不被超过（双重否定），有余地蕴含它而不等于它。"
     }
   ]
 }

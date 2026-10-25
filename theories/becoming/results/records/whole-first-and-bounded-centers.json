@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-14T15:45:00+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "有意义者越少保留越多；延续条件之下在整体中保留的在每个区域内保留，反过来不成立。让每个形成的意义止于其依存时，清除者的部分从清除者的立场保留一切，从栖居者的立场失去栖居者；延续条件之下它从每个立场失去栖居者。",
     "en": "Fewer significant continuations retain more; under the continuation condition what retains in the whole retains in every region, not conversely. Bounded by dependence, the clearer's part retains all for the clearer, loses the dweller for the dweller, and under the condition for every standpoint."
@@ -74,8 +74,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是定理的假设，不被证明；把它读作 Ren 所陈述的条件（Ren 当时称之为公理）是 AI 的读法，依 Ren 的交托采用。",
-      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems and is not proved; reading it as the condition Ren stated, which Ren then called an axiom, is the AI's reading, adopted on Ren's delegation."
+      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是定理的假设，陈述而不断言，也不被证明；把“for anything, its continuation into the future has significance”读作 Unrestricted 是 AI 的读法（D16）。",
+      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems, stated and not asserted, and is not proved; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16)."
     },
     {
       "zh": "区域是陈述的参数；以依存为界的区域（dependenceRegion）是一个选择。",
@@ -113,8 +113,8 @@
       "kind": "correspondence"
     },
     {
-      "zh": "路线 (b) 须面对以依存为界的中心容许搭便车者：不用延续条件时，这一损失只在依存到达所关闭者时才计入（见 closure-verdict-meets-axiom）。",
-      "en": "Route (b) must face that centers bounded by their dependence license the free rider: without the continuation condition, this loss counts only where the dependence reaches what is closed (see closure-verdict-meets-axiom).",
+      "zh": "路线 (b) 须面对以依存为界的中心容许搭便车者：不用延续条件时，这一损失只在依存到达所关闭者时才计入（见 closure-verdict-meets-continuation-condition）。",
+      "en": "Route (b) must face that centers bounded by their dependence license the free rider: without the continuation condition, this loss counts only where the dependence reaches what is closed (see closure-verdict-meets-continuation-condition).",
       "kind": "non-implication"
     }
   ],
@@ -147,8 +147,8 @@
     "en": "A model of how a center forms and represents its boundary."
   },
   "correspondence": {
-    "zh": "Ren 对延续条件的表述（Ren 当时称之为公理）是“for anything, its continuation into the future has significance(doesn't have to be positive, we could argue as long as not harm), or continuation into the future needs to create more significance(being generative)”。Ren 又写道，中心及其边界只存在于认知的结构与动力学中，“so there isn't really who's continuation matters, which requires axiom”，并说“not harm”是“a phase transition with a clear boundary”。作者的读法（AI 论证，依 Ren 的交托采用）：形成的索引读“anything”，形成在一步的延续读“its continuation into the future”，立场的索引读“has significance”不加限定、没有哪个中心特殊；保留读“as long as not harm”，增加读“create more significance”。名称（Unrestricted、Retains、Adds、Preemption 等）是 AI 按 Ren 的命名准则所选。Ren 写道：“i think it should be the whole, and a weaker version is within the system that one is in, then the self. not saying this is what life does, but what's good for being generative, and the self is a cognitive model which can not justify itself without some sort of \"belief\"”。作者的读法（AI 论证，依 Ren 的交托采用，Ren 2026-10-18 取，DELEGATED-CHOICES D43）：Retains.within 给出这个次序，作为判断完整性的次序，不是生命实际做什么；以自身为界的意义也是被给出的（bounded_rival），读作 Ren 所说的“belief”。",
-    "en": "Ren's statement of the continuation condition, which Ren then called an axiom, is “for anything, its continuation into the future has significance(doesn't have to be positive, we could argue as long as not harm), or continuation into the future needs to create more significance(being generative)”. Ren also wrote that a center and its boundary exist only within cognitive structure and dynamics, “so there isn't really who's continuation matters, which requires axiom”, and that “not harm” is “a phase transition with a clear boundary”. The author's reading (an AI argument, adopted on Ren's delegation): the formation index reads “anything”, a formation's continuation at a step reads “its continuation into the future”, and the standpoint index reads “has significance” unqualified, with no center privileged; retaining reads “as long as not harm”, and adding reads “create more significance”. The names (Unrestricted, Retains, Adds, Preemption and others) are the AI's, chosen by Ren's naming standard. Ren wrote: “i think it should be the whole, and a weaker version is within the system that one is in, then the self. not saying this is what life does, but what's good for being generative, and the self is a cognitive model which can not justify itself without some sort of \"belief\"”. The author's reading (an AI argument, adopted on Ren's delegation and taken by Ren on 18 October 2026, DELEGATED-CHOICES D43): Retains.within gives this order as an order of how complete a judgment is, not as what life does; a significance bounded by the self is supplied too (bounded_rival), read as the “belief” Ren names."
+    "zh": "Ren 对延续条件的表述是“for anything, its continuation into the future has significance(doesn't have to be positive, we could argue as long as not harm), or continuation into the future needs to create more significance(being generative)”。Ren 又写道，中心及其边界只存在于认知的结构与动力学中，“so there isn't really who's continuation matters, which requires axiom”，并说“not harm”是“a phase transition with a clear boundary”。读法（AI 论证，D16）：形成的索引读“anything”，形成在一步的延续读“its continuation into the future”，立场的索引读“has significance”不加限定、没有哪个中心特殊；保留读“as long as not harm”，增加读“create more significance”。名称（Unrestricted、Retains、Adds、Preemption 等）是 AI 按 Ren 的命名准则所选。Ren 写道：“i think it should be the whole, and a weaker version is within the system that one is in, then the self. not saying this is what life does, but what's good for being generative, and the self is a cognitive model which can not justify itself without some sort of \"belief\"”。读法（AI 论证，DELEGATED-CHOICES D43）：Retains.within 给出这个次序，作为判断完整性的次序，不是生命实际做什么；以自身为界的意义也是被给出的（bounded_rival），读作 Ren 所说的“belief”。",
+    "en": "Ren's statement of the continuation condition is “for anything, its continuation into the future has significance(doesn't have to be positive, we could argue as long as not harm), or continuation into the future needs to create more significance(being generative)”. Ren also wrote that a center and its boundary exist only within cognitive structure and dynamics, “so there isn't really who's continuation matters, which requires axiom”, and that “not harm” is “a phase transition with a clear boundary”. The reading (an AI argument, D16): the formation index reads “anything”, a formation's continuation at a step reads “its continuation into the future”, and the standpoint index reads “has significance” unqualified, with no center privileged; retaining reads “as long as not harm”, and adding reads “create more significance”. The names (Unrestricted, Retains, Adds, Preemption and others) are the AI's, chosen by Ren's naming standard. Ren wrote: “i think it should be the whole, and a weaker version is within the system that one is in, then the self. not saying this is what life does, but what's good for being generative, and the self is a cognitive model which can not justify itself without some sort of \"belief\"”. The reading (an AI argument, DELEGATED-CHOICES D43): Retains.within gives this order as an order of how complete a judgment is, not as what life does; a significance bounded by the self is supplied too (bounded_rival), read as the “belief” Ren names."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
   "aliases": [
@@ -279,15 +279,15 @@
     {
       "id": "presupposition-scopes",
       "detail": {
-        "zh": "Retains.within 的次序读作预设的三种读法：超真；沿影响次真，在所及闭包处；沿空关系次真，在自身处（Flow.presupposition_order；AI 的读法，依 Ren 的交托采用）。",
-        "en": "The order of Retains.within reads as three readings of the presupposition: super-true; sub-true along affecting, at the reach closure; sub-true along the empty relation, at the self (Flow.presupposition_order; the AI's reading, adopted on Ren's delegation)."
+        "zh": "Retains.within 的次序读作预设的三种读法：超真；沿影响次真，在所及闭包处；沿空关系次真，在自身处（Flow.presupposition_order；AI 的读法）。",
+        "en": "The order of Retains.within reads as three readings of the presupposition: super-true; sub-true along affecting, at the reach closure; sub-true along the empty relation, at the self (Flow.presupposition_order; the AI's reading)."
       }
     },
     {
       "id": "levels-of-closure",
       "detail": {
-        "zh": "读出 Ren 的中间层级“the system that one is in”的是所及闭包，不是系统（依 Ren 的交托采用）：一个共同条件就使系统成为整体。",
-        "en": "The reach closure, not the system, reads Ren's middle level “the system that one is in” (adopted on Ren's delegation): one common condition makes the system the whole."
+        "zh": "读出 Ren 的中间层级“the system that one is in”的是所及闭包，不是系统（AI 的读法）：一个共同条件就使系统成为整体。",
+        "en": "The reach closure, not the system, reads Ren's middle level “the system that one is in” (an AI reading): one common condition makes the system the whole."
       }
     }
   ],
@@ -326,7 +326,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.bounded",
         "Becoming.Web.Retains",
@@ -476,6 +476,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -509,7 +515,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -591,6 +597,10 @@
     {
       "en": "2026-10-20: 78 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/c31d02776fce6f49/whole-first-and-bounded-centers.json and in git.",
       "zh": "2026-10-20：78 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/c31d02776fce6f49/whole-first-and-bounded-centers.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the first hypothesis names the continuation condition, stated and not asserted, its reading an AI reading (D16), with no person's words or delegation as its standing; the correspondence keeps Ren's quoted words, drops 'which Ren then called an axiom', and labels its readings as AI readings (D16, D43) instead of 'adopted on Ren's delegation'; the related details likewise; a boundary's link updated from the former id closure-verdict-meets-axiom to closure-verdict-meets-continuation-condition. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条假设改称延续条件，陈述而不断言，其读法是 AI 的读法（D16），不以任何人的话或交托为其地位；对应保留 Ren 的原话，删去“Ren 当时称之为公理”，读法标为 AI 的读法（D16、D43），不再写“依 Ren 的交托采用”；相关说明同此；一条界限的链接由旧 id closure-verdict-meets-axiom 改为 closure-verdict-meets-continuation-condition。规律未变。"
     }
   ],
   "text_versions": [

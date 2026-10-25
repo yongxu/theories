@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T14:45:55+00:00",
   "statement": {
     "zh": "主张只经耦合入者的差别被排除，相对于模型的排除是对模型与主张一起的排除。成员只经自己的耦合回应时，耦合闭包之外的不在其中显出；检验是关系的。",
     "en": "A claim is excluded only through a difference in what couples in, and exclusion relative to a model excludes the model and the claim together. Where members respond only through their own couplings, nothing beyond the coupling closure shows within it; testing is relational."
@@ -44,8 +44,8 @@
       ]
     },
     {
-      "zh": "没有模型时，对任何有限的前段，“某条件将归于无”与“它此后一直在无之上”都不被排除。",
-      "en": "Without a model, for any finite prefix, neither the claim that a condition comes to nothing nor the claim that it stays above nothing afterwards is excluded.",
+      "zh": "条件之相等可判定、没有模型时，对每段水平历史与每一步，“某条件在某步归于无”与“它在此步之后一直在无之上”都不在此步被排除，无论哪个形成、经何种经水平的耦合。",
+      "en": "With equality of conditions decided and without a model, for every level history and step, neither the claim that a condition stands at nothing at some step nor the claim that it stays above nothing after the step is excluded at that step, at any formation under any coupling by level.",
       "declarations": [
         "Becoming.Web.tail_unexcluded"
       ]
@@ -216,8 +216,8 @@
     "en": "The multi-step Scope bridge: a policy sensing only through its couplings has the same visible scope on flows alike through them; where a model comes from (see projection-carrying-a-law, generalization-through-lumping); responses given by the dynamics, not supplied; calibration; learning below threshold."
   },
   "correspondence": {
-    "zh": "Ren 的提议：“can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”，“I think all the wisdoms about wisdoms, how to think, learn, update, are all explained within what we have, if not not proved yet”。AI 的回答提出反馈的三种不见、失控是在其一之中运行的回路、跨过它们的方式、可否证性是被展开纠正的条件，以及 理 的读法；Ren 答：“agree with you, great job, start now. for 4, you can explore which option is better, then make decision”。独立审查收窄了这些读法：三种不见各有其范围（见“未表明”）；失控的读法是启发，不是陈述；理 原由 AI 读作对识负责的模型，现依 Ren 2026-10-12 的读法，为对结构与变化之规律的建模；模型仍只经耦合入者被检验（generalization-through-lumping）。所以记录中的读法是 AI 收窄之后的，依 Ren 的交托采用（DELEGATED-CHOICES D26），不是 Ren 所接受的原文。",
-    "en": "Ren's proposal: “can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”, and “I think all the wisdoms about wisdoms, how to think, learn, update, are all explained within what we have, if not not proved yet”. The AI's answer proposed three blindnesses of feedback, a runaway as a loop running inside one of them, the ways across them, falsifiability as the condition of being corrected by the unfolding, and a reading of 理; Ren answered “agree with you, great job, start now. for 4, you can explore which option is better, then make decision”. The independent review narrowed the readings: each blindness has its scope (a does-not-show item states it); the runaway reading is a heuristic, not a statement; and 理, read by the AI as a model answerable to registration, is now read as Ren read it on 12 October 2026, the modeling of the laws of structure and of change; a model is still tested only through what couples in (generalization-through-lumping). So the readings here are the AI's narrowed ones, adopted on Ren's delegation (DELEGATED-CHOICES D26), not the wording Ren accepted."
+    "zh": "Ren 的提议：“can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”，“I think all the wisdoms about wisdoms, how to think, learn, update, are all explained within what we have, if not not proved yet”。AI 的回答提出反馈的三种不见、失控是在其一之中运行的回路、跨过它们的方式、可否证性是被展开纠正的条件，以及 理 的读法；Ren 答：“agree with you, great job, start now. for 4, you can explore which option is better, then make decision”。独立审查收窄了这些读法：三种不见各有其范围（见“未表明”）；失控的读法是启发，不是陈述；理 原由 AI 读作“对识负责的模型”，现依 Ren 2026-10-12 的读法，为对结构与变化之规律的建模；模型仍只经耦合入者被检验（generalization-through-lumping）。所以记录中的读法是 AI 收窄之后的（DELEGATED-CHOICES D26），不是 Ren 所接受的原文。",
+    "en": "Ren's proposal: “can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”, and “I think all the wisdoms about wisdoms, how to think, learn, update, are all explained within what we have, if not not proved yet”. The AI's answer proposed three blindnesses of feedback, a runaway as a loop running inside one of them, the ways across them, falsifiability as the condition of being corrected by the unfolding, and a reading of 理; Ren answered “agree with you, great job, start now. for 4, you can explore which option is better, then make decision”. The independent review narrowed the readings: each blindness has its scope (a does-not-show item states it); the runaway reading is a heuristic, not a statement; and 理, read by the AI as “a model answerable to registration”, is now read as Ren read it on 12 October 2026, the modeling of the laws of structure and of change; a model is still tested only through what couples in (generalization-through-lumping). So the readings here are the AI's narrowed ones (DELEGATED-CHOICES D26), not the wording Ren accepted."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
   "aliases": [
@@ -888,6 +888,10 @@
     {
       "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosure, ClosedUnder, closedUnder_withinClosure to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：WithinClosure, ClosedUnder, closedUnder_withinClosure to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the fourth law made exact to the Lean: it takes equality of conditions decided and holds for every level history and step, at any formation under any coupling by level; and the superseded reading of 理, “a model answerable to registration”, is quoted as that former wording, as generalization-through-lumping cites it; and the readings in the correspondence are the AI's without 'adopted on Ren's delegation'.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第四条律依 Lean 改精确：它取条件之相等可判定，对每段水平历史与每一步、任何形成与任何经水平的耦合成立；已被取代的理之读法“对识负责的模型”作为当时措辞加引号，与 generalization-through-lumping 的引用一致；对应中的读法标为 AI 的，不再写“依 Ren 的交托采用”。"
     }
   ],
   "text_versions": [

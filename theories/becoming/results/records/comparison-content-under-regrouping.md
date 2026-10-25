@@ -7,7 +7,7 @@
 
 Editable record: [comparison-content-under-regrouping.json](comparison-content-under-regrouping.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-13T12:27:01.789893+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T17:03:04+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
@@ -64,7 +64,7 @@ Equal minimum requirements fix admission only; distinct lives, histories and exp
 
 - Related, not a proved adapter: [configurations-alike-by-relation](configurations-alike-by-relation.md). The older result compares configurations by bisimulation with a fixed claim domain; this changes claim grouping while retaining the process.
 - Related, not a proved adapter: [identity-across-steps](identity-across-steps.md). Bijective reidentification and continuity retain their scope; many-to-one description here does not make lives interchangeable.
-- Related, not a proved adapter: [classification-robust-generative-comparison](classification-robust-generative-comparison.md). The earlier result varies priority classification of fixed contents; this addresses descriptive granularity without reopening completed G0/J inferences.
+- Related, not a proved adapter: [classification-robust-generative-comparison](classification-robust-generative-comparison.md). The earlier result varies priority classification of fixed contents; this addresses descriptive granularity without reopening completed inferences of the conditional alignment route.
 
 **Used by:** [finite-aggregation-within-restorable-basic-losses](finite-aggregation-within-restorable-basic-losses.md) (interpretive) · [wisdom-root](wisdom-root.md)
 
@@ -120,4 +120,5 @@ Aliases: `Becoming.Frame.respectsAt_iff`, `Becoming.Frame.regroup_retains`, `Bec
 - 20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Counterfactual.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Counterfactual.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Counterfactual.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Counterfactual.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired label G0/J in a related note replaced by the conditional alignment route; the claim is unchanged.
 - 3 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](comparison-content-under-regrouping.json).

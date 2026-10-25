@@ -5,21 +5,21 @@
 
 `selection-with-returns-to-groupmates` · **recorded-checked** · theorem · F01 · [record](selection-with-returns-to-groupmates.json) · [register](../../../../RESULTS.md)
 
-> Where each unit kept gives b to every member of the keeper's group and takes c from the keeper, the whole selects for keeping exactly where b + c times the spread falls short of m b times the spread among groups: Hamilton's rule, with the assortment that share.
+> Where each unit kept gives b to every other member of the keeper's group and takes c from the keeper, in groups of m members, the whole selects for keeping exactly where b + c times the whole's spread falls short of m b times the spread among groups: Hamilton's rule, with the assortment that share.
 
 <a id="laws--规律"></a>
 ## Laws
 
 1. Returns to a reading: where each member's weight with k per unit of its own amount is a base with b per unit of a reading, the weight's concordance with the amount, with k times its spread and b times the reading's discordance with it, is the weight's discordance with b times the reading's concordance: the whole selects for the amount where b times their covariation exceeds k times the spread. (`Becoming.SelectionLevels.balance_add`, `Becoming.SelectionLevels.balance_mul`, `Becoming.SelectionLevels.returns_total`, `Becoming.SelectionLevels.returns_weighted`, `Becoming.SelectionLevels.returns_balance`, `Becoming.SelectionLevels.rises_iff_reading`)
-2. Within groups where each unit a member keeps gives b to every member of its group, own included, and takes c from the keeper, the offspring number goes against the amount by b + c times the groups' own spreads, so selection within goes against keeping wherever a group varies in it; the whole's spread is k times the groups' own spreads with the spread among them. (`Becoming.SelectionLevels.spread_levels`, `Becoming.SelectionLevels.within_returns`, `Becoming.SelectionLevels.within_against`)
-3. Among the groups, read by their totals, selection goes for keeping exactly where b + c falls short of m times b times the spread among them. (`Becoming.SelectionLevels.among_returns`, `Becoming.SelectionLevels.among_for_iff`)
-4. The whole selects for keeping exactly where b + c times its spread falls short of m b times the spread among groups: with the assortment the share of the spread among groups, Hamilton's rule. Groups uniform in the amount select for it exactly where b (m - 1) exceeds c; groups alike in total never do; over generations with exact transmission the mean rises across a step exactly so. (`Becoming.SelectionLevels.rises_iff_returns`, `Becoming.SelectionLevels.rises_iff_returns_of_uniform`, `Becoming.SelectionLevels.not_rises_of_alike`, `Becoming.SelectionLevels.rises_exact_iff_returns`)
+2. Within groups where each unit a member keeps gives b to every other member of its group and takes c from the keeper, the offspring number goes against the amount by b + c times the groups' own spreads, so selection within goes against keeping wherever a group varies in it and b + c is positive; the whole's spread is the number of groups times the groups' own spreads with the spread among them. (`Becoming.SelectionLevels.spread_levels`, `Becoming.SelectionLevels.within_returns`, `Becoming.SelectionLevels.within_against`)
+3. Among the groups, read by their totals, selection goes for keeping exactly where b + c times the spread among them falls short of m times b times it. (`Becoming.SelectionLevels.among_returns`, `Becoming.SelectionLevels.among_for_iff`)
+4. The whole selects for keeping exactly where b + c times its spread falls short of m b times the spread among groups: with the assortment the share of the spread among groups, Hamilton's rule. Groups uniform in the amount and differing in it select for it exactly where b (m - 1) exceeds c; groups alike in total never do; over generations with exact transmission the mean rises across a step exactly so. (`Becoming.SelectionLevels.rises_iff_returns`, `Becoming.SelectionLevels.rises_iff_returns_of_uniform`, `Becoming.SelectionLevels.not_rises_of_alike`, `Becoming.SelectionLevels.rises_exact_iff_returns`)
 5. Witnesses: with the same returns, keepers together are selected for and keepers apart against; with two thirds of the spread among pairs, returns meeting the rule at assortment one still lose. (`Becoming.SelectionLevels.Founding.keeps`, `Becoming.SelectionLevels.Founding.assorted`, `Becoming.SelectionLevels.Founding.mixed`, `Becoming.SelectionLevels.Founding.assorted_returns`, `Becoming.SelectionLevels.Founding.mixed_returns`, `Becoming.SelectionLevels.Founding.either_verdict`, `Becoming.SelectionLevels.Partly.groups`, `Becoming.SelectionLevels.Partly.offspring`, `Becoming.SelectionLevels.Partly.returns`, `Becoming.SelectionLevels.Partly.below_one`)
 
 <a id="conditions--条件"></a>
 ## Conditions
 
-- No axiom. Offspring numbers depend on own and groupmates' amounts additively, each unit kept giving b to every member of the keeper's group, own included, and taking c from the keeper; groups of equal size; for the step law, exact transmission.
+- No axiom. Offspring numbers depend on own and groupmates' amounts additively, each unit kept giving b to every other member of the keeper's group and taking c from the keeper; groups of equal size; for the step law, exact transmission.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -82,6 +82,7 @@ Hamilton (1964) for kin and Hamilton (1975) reading the Price equation's among-g
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../history/THE-THEORY-OF-EVOLUTION.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `returns to groupmates`, `Hamilton's rule`, `assortment below one`, `groups founded mixed`, `组员间回报`, `Hamilton 规则`, `Becoming.SelectionLevels.rises_iff_returns`, `Becoming.SelectionLevels.returns_balance`
 
@@ -89,7 +90,8 @@ Aliases: `returns to groupmates`, `Hamilton's rule`, `assortment below one`, `gr
 ### History
 
 - 22 October 2026: added (EV12), selection with returns to groupmates: within against keeping, among for it exactly where b + c falls short of m b, the whole by Hamilton's rule with the assortment the share of the spread among groups; study section 353.
+- 25 October 2026, board item DF (study section 418): the returns stated as the Lean states them, each unit kept giving b to every other member of the group and taking c from the keeper, in the statement, the second law and the hypothesis, where they had read b to every member, own included, with c from the keeper; the third law keeps the spread on its left side; the uniform case needs the groups to differ; within-group selection needs b + c positive; the number of groups named for k. No law changed in its declarations.
 
 </details>
 
-Documentary review UTC: `2026-10-22T12:36:50+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

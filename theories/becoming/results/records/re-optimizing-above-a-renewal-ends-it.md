@@ -31,7 +31,7 @@
 ## Does not show
 
 - A renewal varying with the level at or above the need (logistic growth, with an interior sustained yield): the renewal here is exactly r there.
-- An optimizer ranking courses rather than steps (a sole owner), an equilibrium of the course rather than mutual best responses step by step, and how optimizers come to them.
+- An optimizer ranking courses rather than steps (Scott's sole owner, in the fisheries literature), an equilibrium of the course rather than mutual best responses step by step, and how optimizers come to them.
 - A witness course of the ungated draw: its laws are general, the witness is gated.
 - That the loss is a harm, or that a capacity within the renewal or a coupling is better: no evaluation enters; less in the store is by the optimizer's own order.
 - **Counterexample:** restrainedCourse: one taker draws a unit a step and the other nothing, the source kept at its start; no step of it is a mutual best response (Optimum.Renewing.restrained_course_not_best), and after a long course it holds more in the store (Optimum.Renewing.restraint_holds_more). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
@@ -131,7 +131,8 @@ Aliases: `re-optimizing above a renewal ends it`, `a course of re-optimizing ste
 - 21 October 2026: added (SG4), a course of re-optimizing steps against a renewal: a dependence beyond is lost exactly where the draw exceeds the renewal, for good, and kept within it, with no gate; the renewal below the need decides only the drawers' take, bounded where it stops and at least the renewal a step where it does not; several optimizers jointly above it lose it; study section 291.
 - 21 October 2026, SG5: an optimizer ranking courses over a horizon, against a renewal given by a law of the level, holds a level of greatest renewal and leaves nothing at the horizon; level_add_drawn is now the case of level_add_drawn_of_within (record horizon-optima-hold-the-greatest-renewal, study section 292); this record's laws and their statements are unchanged.
 - 23 October 2026, EC6 (study section 375): Optimum.ends_within is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
+- 25 October 2026, board item DF (study section 418): a boundary names the source of the term 'sole owner' (Scott, in the fisheries literature) instead of using it as the theory's own word for an optimizer ranking courses. No law changed.
 
 </details>
 
-Documentary review UTC: `2026-10-21T00:10:59+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

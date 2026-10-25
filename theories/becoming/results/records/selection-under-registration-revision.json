@@ -52,7 +52,7 @@
       "interface": {
         "output": {
           "zh": "Web 的经耦合选择及归并等价关系",
-          "en": "Web registration-based selection and equivalence"
+          "en": "Web selection through coupling and lumping equivalence"
         },
         "input": {
           "zh": "web_keeps_iff 直接适配旧的 SelectsThrough",
@@ -70,7 +70,7 @@
       "relation": "formal-reuse",
       "detail": {
         "zh": "在同一 Through 定义上证明归并改变的精确条件",
-        "en": "Proves the exact registration-change criterion on the same Through definition"
+        "en": "Proves the exact lumping-change criterion on the same Through definition"
       },
       "interface": {
         "output": {
@@ -79,7 +79,7 @@
         },
         "input": {
           "zh": "在同一 Through 定义上证明归并改变的精确条件",
-          "en": "Proves the exact registration-change criterion on the same Through definition"
+          "en": "Proves the exact lumping-change criterion on the same Through definition"
         },
         "conditions": {
           "zh": "旧关系等价；未重证推广或学习",
@@ -376,6 +376,10 @@
     {
       "en": "2026-10-20: 10 bookkeeping notes condensed from 13 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/94f64dec79f3acc7/selection-under-registration-revision.json and in git.",
       "zh": "2026-10-20：10 条记账性说明合并（13 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/94f64dec79f3acc7/selection-under-registration-revision.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): The retired registration wording in the dependencies replaced by coupling and lumping, as the Chinese already read.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：依存中退役的登记用语改为耦合与归并，与中文一致。"
     }
   ]
 }

@@ -8,10 +8,10 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T06:07:54+00:00",
+  "reviewed_at_utc": "2026-10-25T14:25:00+00:00",
   "statement": {
-    "en": "On 240 English statements written and blind-coded by Claude and GPT, neither coder under-detects referents planted in its own text (interaction +0.02, CI [-0.05, +0.08]); GPT lists more excess in faithful texts (+0.16, CI [+0.08, +0.24]); LLM-coded, provisional.",
-    "zh": "Claude 与 GPT 各写各盲编 240 句英文陈述：二编码者于己文之植入皆不少检（交互 +0.02）；GPT 于忠实之句列多余所指更多（+0.16）；大模型编码，暂定。"
+    "en": "On 240 English statements written and blind-coded by two model families, no negative combined author-coder interaction was detected for referents planted in the coder's own text (+0.02, CI [-0.05, +0.08]); one family's coder lists more excess in faithful texts (+0.16); LLM-coded, provisional.",
+    "zh": "两个模型族各写各盲编 240 句英文陈述，各编己文与他文：于编码者己文之植入，未检出作者与编码者之负向合并交互（+0.02，区间 −0.05 至 +0.08）；一族之编码者于忠实之句列多余所指更多（+0.16）；大模型编码，暂定。"
   },
   "hypotheses": [
     {
@@ -26,8 +26,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the GPT coder over-reads rather than the Claude coder under-detecting unplanted excess: the faithful texts carry no ground truth; about half of GPT's unplanted count is numerals the codebook matches, described after the fact.",
-      "zh": "是 GPT 编码者过读而非 Claude 编码者漏检未植入之多余：忠实之句无真值；GPT 未植入之计数约半为编码本所配之数词，系事后描述。",
+      "en": "Which coder is miscalibrated on unplanted excess: the faithful texts carry no ground truth, and about half the unplanted count of the coder that lists more is numerals the codebook matches, a description made after the fact.",
+      "zh": "哪一编码者于未植入之多余失准：忠实之句无真值；列多者之未植入计数约半为编码本所配之数词，系事后描述。",
       "kind": "non-implication"
     },
     {
@@ -117,6 +117,10 @@
     {
       "en": "23 October 2026: added (SC1); study section 376.",
       "zh": "2026年10月23日：新增（SC1）；研究第 376 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement said neither coder under-detects its own plants; it now says what the test shows, that no negative combined author-coder interaction was detected (the two families identify only the sum of their self effects); the coders named by model family rather than by product in the statement and boundaries, the identities staying in the evidence.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述原说二编码者于己文之植入皆不少检；今只说试验所示：未检出作者与编码者之负向合并交互（二族只能识其自效应之和）；陈述与边界中之编码者以模型族称之，不以产品名称之，其身份仍在证据中。"
     }
   ]
 }

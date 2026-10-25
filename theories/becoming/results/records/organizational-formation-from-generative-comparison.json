@@ -2,25 +2,55 @@
   "schema_version": 2,
   "id": "organizational-formation-from-generative-comparison",
   "title": {
-    "zh": "完整生成比较下的组织形成要求",
-    "en": "Required organization under whole generative comparison"
+    "zh": "比较 C 下所要求的组织",
+    "en": "Required organization under the comparison C"
   },
   "kind": "argument",
   "status": "reviewed-scoped",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-13T22:45:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "在有限非空的合格接续中，若每种缺少某项组织关系的接续都有充分更好的合格构造，则所有未被击败的选择都包含该关系；这可支持建设或增强共同能力而不预定唯一承载。",
     "en": "In a finite nonempty eligible range, if every continuation lacking an organizational relation has a strictly better eligible construction, every undefeated choice includes that relation. This can warrant building or strengthening shared capacity without fixing one carrier."
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "G0、明确 J1–J4 与完整关系对应；不是从一元本体单独推出伦理。",
-      "en": "G0, explicit J1–J4 and complete relational correspondence; ethics is not deduced from monism alone."
+      "zh": "在确切列出的非空合格范围上，比较反自反、传递且弱可判定，该关系可判定，若每个缺少该关系的合格接续都有严格更好的合格者，则未被击败的选择非空，且每个都包含该关系。",
+      "en": "On an exactly listed nonempty eligible range with an irreflexive, transitive comparison, weakly decided, and the relation decided, where every eligible continuation lacking the relation has a strictly better eligible one, the undefeated choices are not empty and each includes the relation.",
+      "declarations": [
+        "Becoming.Requirement.required_of_bettered",
+        "Becoming.Requirement.frontier_exists",
+        "Becoming.Requirement.frontier_iff_undominated",
+        "Becoming.undominated_has"
+      ]
     },
     {
-      "zh": "有限非空的合格范围、严格传递比较、每个缺失情形的实际改善见证；规范资格与基本分类仍须辩护。",
-      "en": "A finite nonempty eligible range, irreflexive transitive comparison and actual improvement witnesses for every deficient case; normative eligibility and basic classifications require substantive warrant."
+      "zh": "不用可判定性，在同样的改善见证下，未被支配者不缺该关系（双重否定）；对每个关系都要求不经双重否定的具有，恰是排中律。",
+      "en": "With no decidedness, under the same improvement witnesses, an undominated member does not lack the relation, a double negation; asked of every relation, possession without the double negation is exactly excluded middle.",
+      "declarations": [
+        "Becoming.Undominated",
+        "Becoming.Undominated.not_not_has",
+        "Becoming.undominated_has_iff_em"
+      ]
+    },
+    {
+      "zh": "外围以经典排中律供给两项判定，故在任何确切列出的非空范围上，比较反自反且传递、每个缺少该关系的合格接续都有更好的合格者时，所要求之组织不需判定之假设而成立，在所构造的历史中协调被要求；这两条报告 Lean 的三条标准公理（含选择公理），把前沿读作未被支配者则不报告公理。",
+      "en": "In the periphery classical excluded middle supplies both decisions, so on any exactly listed nonempty range, the comparison irreflexive and transitive and each eligible one lacking the relation bettered, the required organization holds with no decision hypothesis, and in the constructed history coordination is required; these two report Lean's three standard axioms, choice among them, the frontier's reading none.",
+      "declarations": [
+        "Becoming.OrganizationCorrespondence.frontier_iff_undominated",
+        "Becoming.OrganizationCorrespondence.formation_required_by_core",
+        "Becoming.OrganizationCorrespondence.coordination_is_required_by_core"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "zh": "延续条件经由生生之意义（定范围），比较 C（定次序）及实践承诺 J1–J4，与完整的关系对应；伦理不单由一元本体推出。",
+      "en": "The continuation condition through living significance (for scope), the comparison C (for order) with the practical commitments J1–J4, and complete relational correspondence; ethics is not deduced from monism alone."
+    },
+    {
+      "zh": "确切列出的非空合格范围，其上弱可判定、反自反且传递的比较，其上可判定的该关系（外围以经典逻辑供给这两项判定），以及每个缺失情形的实际改善见证；规范资格与基本分类仍须实质辩护。",
+      "en": "An exactly listed nonempty eligible range, an irreflexive, transitive comparison weakly decided on it, the relation decided on it (both decisions supplied by classical logic in the periphery), and actual improvement witnesses for every deficient case; normative eligibility and basic classifications require substantive warrant."
     }
   ],
   "correspondence": {
@@ -31,7 +61,17 @@
   "aliases": [
     "Becoming.undominated_has_iff",
     "Becoming.Judgment.required_of_bettered (retired module)",
-    "Becoming.Courses.extension_frontier_exists"
+    "Becoming.Courses.extension_frontier_exists",
+    "Becoming.Requirement.required_of_bettered",
+    "Becoming.Requirement.frontier_exists",
+    "Becoming.Requirement.frontier_iff_undominated",
+    "Becoming.undominated_has",
+    "Becoming.Undominated",
+    "Becoming.Undominated.not_not_has",
+    "Becoming.undominated_has_iff_em",
+    "Becoming.OrganizationCorrespondence.frontier_iff_undominated",
+    "Becoming.OrganizationCorrespondence.formation_required_by_core",
+    "Becoming.OrganizationCorrespondence.coordination_is_required_by_core"
   ],
   "dependencies": [
     {
@@ -187,7 +227,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean",
       "role": "proof",
-      "sha256": "ae4e273947ed19b773c148bb2b44cfaa80c1890f9f77a7c04c118a9a6336838a",
+      "sha256": "8d6f205744693453acc3f1ecf3b1b3b4bff949b3cdf63e1481c32b85c3297818",
       "declarations": [
         "Becoming.OrganizationCorrespondence.frontier_iff_undominated",
         "Becoming.OrganizationCorrespondence.formation_required_by_core",
@@ -316,6 +356,12 @@
       "role": "receipt",
       "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261025T185035.252368Z/verification.json",
+      "role": "receipt",
+      "sha256": "5f034cfb1e484013d73e2642b50a20d24e5fc9b55fad09693b810b44fc8c6dcf",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -328,7 +374,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261020T162002.464258Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261025T185035.252368Z/verification.json",
       "sha256_pointer": "/source_sha256/OrganizationCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -409,6 +455,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and RelationalOrganization) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Courses, Becoming.Decidedness, Becoming.Frontier and OrganizationCorrespondence). 1 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and RelationalOrganization）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Courses, Becoming.Decidedness, Becoming.Frontier and OrganizationCorrespondence）。1 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): title and premises in the current vocabulary (the comparison C for order, the continuation condition through living significance for scope); the decidedness the core law takes named; three laws added from the core and periphery declarations already referenced; the statement and scope are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：标题与前提用现行词汇（比较 C 定次序，延续条件经由生生之意义定范围）；写明核心定律所需的可判定性；依已引用的核心与外围声明增加三条定律；陈述与范围不变。"
     }
   ],
   "text_versions": [

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "每条规律对每个世界成立，证明所用的条件写在规律之内，是该世界在所用步与关系项上的事实：一步上的平衡定下开始立着与不再立着，下降定下并约束变化，覆盖成立者的列表把不再成立连到开始成立。",
     "en": "Each law holds of every world, with the condition its proof uses stated inside it as a fact about that world at the steps and relata used: balance at a step fixes coming to stand and ceasing to stand, running down fixes and bounds change, and a list covering what holds ties ceasing to arising."
@@ -125,8 +125,8 @@
       ]
     },
     {
-      "zh": "推论：对每一步都选的前提使各条件处处成立，所以选择结果随之成立，陈述不变，证明改经这些规律：开放模块的停息定理（条件由前提给出）、世界与立者普查上不再成立需要生起、体现关系项的活跃给予者，以及计数与立着的封闭与约束定律。",
-      "en": "Corollaries: a premise selected for every step makes each condition hold everywhere, so the selection results follow, their statements unchanged and their proofs through these laws: the openness module's rest theorems, the premises supplying the condition, ceasing needing arising for worlds and standing censuses, the active giver of an embodied relatum, and the enclosure and binding laws of counting and standing.",
+      "zh": "推论：对每一步都纳入的前提使各条件处处成立，所以各取舍下的结果随之成立，陈述不变，证明改经这些规律：开放模块的停息定理（条件由前提给出）、世界与立者普查上不再成立需要生起、体现关系项的活跃给予者，以及计数与立着的封闭与约束定律。",
+      "en": "Corollaries: a premise chosen for every step makes each condition hold everywhere, so the results for each choice follow, their statements unchanged and their proofs through these laws: the openness module's rest theorems, the premises supplying the condition, ceasing needing arising for worlds and standing censuses, the active giver of an embodied relatum, and the enclosure and binding laws of counting and standing.",
       "declarations": [
         "Becoming.Flow.change_stops_unrefuted_around",
         "Becoming.Flow.exchange_not_recurring_around",
@@ -154,8 +154,8 @@
       "en": "A census of what stands: the recurrence laws and running down bounding change use it, only to make the total standing a number at each step; it is a local condition at the steps of a tail, not a global premise. The laws of one step need no census."
     },
     {
-      "zh": "表示：离散的步与自然数的量；耗散中的最小差异（sign 项，Ren 选定的 A），持续变化的复现与变化的界用它；不再存在需要生起的确切计数用标记（判定成立），它的不复现形式不用判定。这些是表示的承诺，不是世界的前提。",
-      "en": "Representation: discrete steps and natural-number amounts; the least difference in dissipation (the sign term, Ren's option A), which the recurrence of continued change and the bounds on change use; the exact count of ceasing needing arising uses marks (deciding what holds), its form that ceasing does not recur none. These are commitments of the representation, not premises on worlds."
+      "zh": "表示：离散的步与自然数的量；耗散中的最小差异（sign 项：从家族取用的形成归还给家族的少于所取），持续变化的复现与变化的界用它；不再存在需要生起的确切计数用标记（判定成立），它的不复现形式不用判定。这些是表示的承诺，不是世界的前提。",
+      "en": "Representation: discrete steps and natural-number amounts; the least difference in dissipation (the sign term: a formation that takes gives back less), which the recurrence of continued change and the bounds on change use; the exact count of ceasing needing arising uses marks (deciding what holds), its form that ceasing does not recur none. These are commitments of the representation, not premises on worlds."
     }
   ],
   "does_not_show": [
@@ -185,8 +185,8 @@
       "kind": "scope"
     },
     {
-      "zh": "约束变化的不是封闭：证明表明是下降，封闭是前提给出下降的方式；“封闭约束变化”的名称是 Ren 的。",
-      "en": "Closure is not what bounds change: the proof shows that running down does, closure being how the premises supply it; the name ‘closure bounds change’ is Ren's.",
+      "zh": "约束变化的不是封闭：证明表明是下降；“封闭约束变化”之名所指的封闭，是前提给出下降的方式。",
+      "en": "Closure is not what bounds change: the proof shows that running down does, and closure, which the name ‘closure bounds change’ names, is how the premises supply it.",
       "kind": "non-implication"
     }
   ],
@@ -221,8 +221,8 @@
     "en": "Restate the remaining localizable laws (dependence, reserve and support) locally; real-valued time; the representation decisions of class (b) and the names."
   },
   "correspondence": {
-    "zh": "选择定理问的是：在八个前提的某个选择之下，计数服从哪些规律。按 Ren 的转向，本结果改问：每条规律在世界的哪些步与关系项上需要什么。证明表明所需的条件都是局部的：一步的规律只用该步、该条件上的平衡；停息只用跨过那些步、包含所立者的家族的下降，不需要封闭；下降约束变化对所立者不需要体现；不再存在需要生起只用覆盖成立者的列表，不需要普查。前提对每一步成立时，这些条件在每一步成立，选择结果因此是推论。读法（AI，依 Ren 的交托采用）：前提约束的第一部分规律，是每一步及其关系项的规律；前提是使它们的条件处处成立的一种方式。",
-    "en": "The selection theorems ask which laws the counts obey under a selection of the eight premises. Following Ren's redirect, this result asks instead what each law needs, at which steps and relata of the world. The proofs show the conditions are local: the laws of one step use balance only at that step and condition; rest uses only a family holding what stands running down across those steps, with no closure; running down bounds the change of what stands with no embodiment; ceasing needs arising uses only a list covering what holds, with no census. Where the premises hold at every step, these conditions hold at every step, so the selection results are corollaries. Reading (AI, adopted on Ren's delegation): the laws of Part I that the premises bound are laws of each step and its relata, and the premises are one way of making their conditions hold everywhere."
+    "zh": "各取舍下的定理问的是：在八个前提的某种取舍之下，计数服从哪些规律。按 Ren 的转向，本结果改问：每条规律在世界的哪些步与关系项上需要什么。证明表明所需的条件都是局部的：一步的规律只用该步、该条件上的平衡；停息只用跨过那些步、包含所立者的家族的下降，不需要封闭；下降约束变化对所立者不需要体现；不再存在需要生起只用覆盖成立者的列表，不需要普查。前提对每一步成立时，这些条件在每一步成立，各取舍下的结果因此是推论。读法（AI，依 Ren 的交托采用）：不用条件的理论中前提约束的规律，是每一步及其关系项的规律；前提是使它们的条件处处成立的一种方式。",
+    "en": "The theorems on choices of premises ask which laws the counts obey under a choice of the eight premises. Following Ren's redirect, this result asks instead what each law needs, at which steps and relata of the world. The proofs show the conditions are local: the laws of one step use balance only at that step and condition; rest uses only a family holding what stands running down across those steps, with no closure; running down bounds the change of what stands with no embodiment; ceasing needs arising uses only a list covering what holds, with no census. Where the premises hold at every step, these conditions hold at every step, so the results for each choice are corollaries. Reading (AI, adopted on Ren's delegation): the laws that the premises bound in the theory without the condition are laws of each step and its relata, and the premises are one way of making their conditions hold everywhere."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
   "aliases": [
@@ -857,6 +857,10 @@
     {
       "en": "2026-10-20: 120 bookkeeping notes condensed from 2026-10-11 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/b8e5b15685dad731/laws-of-one-step.json and in git.",
       "zh": "2026-10-20：120 条记账性说明合并（2026-10-11 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/b8e5b15685dad731/laws-of-one-step.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the representation premise states what the sign term does (a formation that takes from the family gives back less than it takes) instead of naming who chose it; the scope item on closure no longer attributes the phrase ‘closure bounds change’, whose provenance is kept in the decision record (D45 (5)); the laws are unchanged. Also, the retired label Part I in the correspondence (AI text) reads the theory without the condition, and in a law and the correspondence a subset of the premises is called a choice, not a selection: selection is the word for what goes through couplings.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：表示前提写明 sign 项所作（从家族取用的形成归还给家族的少于所取），不再写选定者；关于封闭的范围项不再标注“封闭约束变化”一语之归属，其来历留在决定记录中（D45 (5)）；规律不变。另，对应中（AI 文字）的退役标签“第一部分”改为“不用条件的理论”；一条规律与对应中前提之子集称取舍，不称选择：“选择”一词留给经耦合而行者。"
     }
   ],
   "text_versions": [

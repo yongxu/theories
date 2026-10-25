@@ -27,6 +27,7 @@
 - Initial hardware, two updating procedures, three-coordinate tanh response and selected-update laws, affine channels and task encounters are supplied.
 - One finite source opportunity per task converts to available support exactly on actual success. Reconstruction consumes thirteen precursor and twenty support units, including the ten-unit apparatus build; these are local recipes, not universal physical requirements or source replenishment.
 - Exact real-valued matrix copying, source-associated reconstruction, freshly acquired calibration and homogeneous families with separate matched stocks remain idealized premises. The reconstruction recipe itself does not evolve here.
+- Laws 8-10 are proved in the periphery instance module TransmissionCorrespondence, from the core's Copying, Stock, Evolution and Reordering modules and the periphery LearnedProcedureTransmission; each of their theorems uses propext, Classical.choice and Quot.sound, as its receipt reports.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -106,6 +107,7 @@ Aliases: `LearnedProcedureTransmission.complete_formation_transmission_use`, `Le
 - Open-issues plan item 17: market words replaced by structural ones (cost, price, budget, fund, credit in the sense of standing); the meaning is unchanged.
 - 18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Copying.lean, Stock.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Copying.lean, Stock.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Copying.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Stock.lean, takes as its final section StockTraces, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): a hypothesis says where laws 8-10 are proved and what their axiom reports show (each uses propext, Classical.choice and Quot.sound), which the record did not say; the base is periphery in the regions.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](learned-procedure-transmission.json).
 
 <a id="earlier-text--早期文本"></a>

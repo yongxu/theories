@@ -108,6 +108,10 @@
     {
       "zh": "实数矩阵精确复制、与来源保持关联的重构、新取得校准及分开匹配存量的同质群体均为明示理想条件；重构配方自身在本模块不演化。",
       "en": "Exact real-valued matrix copying, source-associated reconstruction, freshly acquired calibration and homogeneous families with separate matched stocks remain idealized premises. The reconstruction recipe itself does not evolve here."
+    },
+    {
+      "zh": "规律 8–10 在外围实例模块 TransmissionCorrespondence 中证明，取自核心的 Copying、Stock、Evolution 与 Reordering 模块及外围的 LearnedProcedureTransmission；其每条定理都用 propext、Classical.choice 与 Quot.sound，如其回执所报。",
+      "en": "Laws 8-10 are proved in the periphery instance module TransmissionCorrespondence, from the core's Copying, Stock, Evolution and Reordering modules and the periphery LearnedProcedureTransmission; each of their theorems uses propext, Classical.choice and Quot.sound, as its receipt reports."
     }
   ],
   "does_not_show": [
@@ -467,6 +471,10 @@
     {
       "en": "2026-10-20: 6 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/3f5342a2bd84d405/learned-procedure-transmission.json and in git.",
       "zh": "2026-10-20：6 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/3f5342a2bd84d405/learned-procedure-transmission.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): a hypothesis says where laws 8-10 are proved and what their axiom reports show (each uses propext, Classical.choice and Quot.sound), which the record did not say; the base is periphery in the regions.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增一条假设，说规律 8–10 在何处证明、其公理报告所示（每条都用 propext、Classical.choice 与 Quot.sound），记录先前未说；区域中基底为外围。"
     }
   ],
   "text_versions": [

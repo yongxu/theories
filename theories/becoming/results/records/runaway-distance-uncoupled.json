@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "每个经耦合、其余交换固定的策略保持支持就永不动用只经阈耦合入它的较多储量；对这样的储量，断裂之前，断裂还有多远不耦合入。",
     "en": "Every policy through the couplings, with the rest of the exchange fixed, that keeps its support leaves unused any larger stock coupled into it by threshold only; for such a stock, how far off the break is does not couple in before the break."
@@ -144,8 +144,8 @@
     "en": "The policy form where others respond to the stock; measurement with error."
   },
   "correspondence": {
-    "zh": "Ren 的“wisdoms to avoid run away feedbacks”；testing-within-registration 把失控读作在一种不见之中运行的回路，并标为启发；experiment-needs-return 之后 AI 提议在策略的层面陈述，Ren 答“no extra review needed, merge, then continue”。读法（AI 的，依 Ren 的交托采用）：失控是这样的回路：断裂之前，经它自身的耦合，世界与储量多出任意多的世界无别；它的策略不能用上只经阈耦合入它的余量；要避免它而又不放弃所有的，需要量度、模型（理）或另一形成的耦合；合于 Ren 10 月 4 日“理须调节心，使其正反馈循环不失控”。",
-    "en": "Ren's “wisdoms to avoid run away feedbacks”; testing-within-registration read a runaway as a loop running inside a blindness and marked it a heuristic; after experiment-needs-return the AI proposed stating it at the level of policies, and Ren answered “no extra review needed, merge, then continue”. Readings (the AI's, adopted on Ren's delegation): a runaway is a loop through whose own couplings, before the break, the world is alike with a world with as much more stock as one likes; its policy cannot use a margin coupled into it by threshold only; avoiding it without forgoing what is there needs measurement, a model (理) or another formation's couplings; this reads Ren's words of 4 October that reason must regulate the heart so that its positive feedback loop does not run out of control."
+    "zh": "Ren 的“wisdoms to avoid run away feedbacks”；testing-within-couplings 把失控读作在一种不见之中运行的回路，并标为启发；experiment-needs-return 之后 AI 提议在策略的层面陈述，Ren 答“no extra review needed, merge, then continue”。读法（AI 的，依 Ren 的交托采用）：失控是这样的回路：断裂之前，经它自身的耦合，世界与储量多出任意多的世界无别；它的策略不能用上只经阈耦合入它的余量；要避免它而又不放弃所有的，需要量度、模型（理）或另一形成的耦合；合于 Ren 10 月 4 日“理须调节心，使其正反馈循环不失控”。",
+    "en": "Ren's “wisdoms to avoid run away feedbacks”; testing-within-couplings read a runaway as a loop running inside a blindness and marked it a heuristic; after experiment-needs-return the AI proposed stating it at the level of policies, and Ren answered “no extra review needed, merge, then continue”. Readings (the AI's, adopted on Ren's delegation): a runaway is a loop through whose own couplings, before the break, the world is alike with a world with as much more stock as one likes; its policy cannot use a margin coupled into it by threshold only; avoiding it without forgoing what is there needs measurement, a model (理) or another formation's couplings; this reads Ren's words of 4 October that reason must regulate the heart so that its positive feedback loop does not run out of control."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Runaway.lean",
   "aliases": [
@@ -588,6 +588,10 @@
     {
       "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; the statement now carries the hypothesis that the stock couples in by threshold only, and two does_not_show items are added (near-definitional; early-warning signals where the stock is observed). The claim and its premises are unchanged.",
       "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；陈述现在带上存量只经阈耦合入的假设，并增加两条 does_not_show（近乎定义；存量被观察处的早期预警信号）。主张与其前提不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the correspondence names the record by its current id, testing-within-couplings, for its former id; nothing else changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应以现行编号 testing-within-couplings 称该记录，取代其旧编号；别无改变。"
     }
   ],
   "text_versions": [

@@ -5,13 +5,17 @@
     "en": "Endpoint opportunity loss and return",
     "zh": "端点可能性丧失与返回"
   },
+  "statement": {
+    "en": "What can be had from a configuration is kept from another exactly where the other leads back to it; failing to return loses a possibility, the start itself a witness; and return belongs to the law, not to the change, which a reading that omits the configuration reached can hide.",
+    "zh": "从一个构形可得者，从另一构形保有，恰当后者能回到前者；不能回返即失去一个可能，起点本身即为见证；回返属于律而非变化，省略所到构形的读法可以把它遮住。"
+  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-08T18:18:08.110836+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
-    "en": "Along an actual finite trace under a fixed relational law, all existential endpoint possibilities are preserved exactly when a return path exists. Failure to return has a constructive lost endpoint witness; incomplete questions can hide this loss.",
-    "zh": "沿固定关系规律中的实际有限历史，全部存在性端点可能保留当且仅当存在返回路径。无法返回具有构造性的丧失端点见证；不完整问题集合可以遮蔽此损失。"
+    "en": "Every configuration reachable from s is reachable from t exactly when t leads back to s; along a path from s to t, the configurations reachable from both are the same exactly when t leads back to s. t does not lead back to s exactly when some configuration reachable from s is not reachable from t; s itself is one. Witnesses: the dead end and the flip both take false to true; the flip returns from true to false and the dead end does not; read through the constant summary, every question about what the dead end reaches has the same answer from false and from true, though it cannot return.",
+    "zh": "从 s 可达的每个构形从 t 都可达，恰当 t 能回到 s；沿从 s 到 t 之路，二者可达的构形相同，恰当 t 能回到 s。t 不能回到 s，恰当有从 s 可达而从 t 不可达的构形；s 本身即是。见证：死路与翻转都把 false 取为 true；翻转从 true 回到 false，死路不能；经常数摘要读出，关于死路可达什么的每个问题从 false 与从 true 答案相同，它却不能回返。"
   },
   "hypotheses": [
     {
@@ -31,8 +35,8 @@
   "aliases": [
     "BecomingReversibility.same_endpoint_possibilities_iff_return",
     "BecomingReversibility.irreversible_iff_endpoint_loss",
-    "Becoming.same_endpoint_possibilities_iff_return_by_core (retired module)",
-    "Becoming.irreversible_iff_endpoint_loss_by_core (retired module)"
+    "Becoming.same_reach_iff_returns",
+    "Becoming.not_returns_iff_loses"
   ],
   "dependencies": [],
   "related": [
@@ -46,7 +50,7 @@
   ],
   "counterexamples": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/BecomingReversibility.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Irreversibility.lean",
       "detail": {
         "en": "One occurring step admits both reversible and non-returning declared laws; a constant observation hides non-return. These are weak-description controls, not refutations of a fully specified constitutive account.",
         "zh": "同一发生步骤容许返回及无返回两种给定规律；常量观察遮蔽无返回。这是弱描述的控制，不反驳完整构成性论述。"
@@ -94,7 +98,8 @@
       "declarations": [
         "Becoming.keeps_reach_iff_returns",
         "Becoming.same_reach_iff_returns",
-        "Becoming.not_returns_iff_loses"
+        "Becoming.not_returns_iff_loses",
+        "Becoming.DeadEnd.law"
       ]
     },
     {
@@ -104,7 +109,8 @@
       "declarations": [
         "Becoming.Irreversibility.deadEnd_no_return",
         "Becoming.Irreversibility.same_change_different_return",
-        "Becoming.Irreversibility.constant_reading_hides_loss"
+        "Becoming.Irreversibility.constant_reading_hides_loss",
+        "Becoming.Irreversibility.flip"
       ]
     },
     {
@@ -224,6 +230,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 2 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Becoming.same_endpoint_possibilities_iff_return_by_core (retired module); Becoming.irreversible_iff_endpoint_loss_by_core (retired module). The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；2 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Becoming.same_endpoint_possibilities_iff_return_by_core (retired module)；Becoming.irreversible_iff_endpoint_loss_by_core (retired module)。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws (what can be had is kept exactly where the other leads back; not returning loses a possibility, the start a witness; the same change with different returns, hidden by the constant reading); the counterexample re-pointed from the periphery file to the core witnesses; the two retired Bridge aliases replaced by the core names. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述（可得者恰在另一构形能回到它时保有；不能回返即失去可能，起点为见证；同一变化而回返不同，常数读法遮住此点）；反例由外围文件改指核心见证；两个退役的 Bridge 别名改为核心名称。规律未变。"
     }
   ]
 }

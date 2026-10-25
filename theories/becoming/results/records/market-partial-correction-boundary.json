@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-14T08:40:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:42:20+00:00",
   "claim": {
     "zh": "对每条带可容许扰动的变化之律与目标：起点在每个可容许扰动下n步内到达目标，恰当某个漏斗族（第0级在目标内；第k+1级在目标内或每个可容许步落到第k级）在第n级含有它，也恰当每个汇聚族在第n级含有它；到达可复合。对确定的律，轨道n步内遇到目标恰当某个漏斗族含起点，目标可判定时也恰当有起点处至多为n、目标外每步下降的数值变式；轨道永不到达目标，恰当某个含起点、避开目标且对律封闭的集合存在，这即目标补集的生存核，目标之外的不动构型就是这样的集合。在原有理市场族中，0≤β≤3/4且无额外责任误差时，每个物理正维护状态在有限时间到达原保护区域，恰当β≤5/12：市场的增益估计（依次为份额、影响、质量）给出通向着陆的漏斗族，这是实例的内容；β>5/12时不动构型是避开着陆的封闭集。等价地，质量3/8、最坏影响1处的余量非负，也恰当没有避开着陆的封闭集含正状态。这包括等号情形，并在继承的初始存量覆盖K_N下执行，撤出后把实际到达状态交给原保护。",
     "en": "For every law of change with admissible disturbances and every target, a start reaches the target within n steps on every admissible disturbance exactly when some funnel holds it at level n (level 0 in the target; level k+1 in the target or sent by every admissible step to level k), and exactly when every basin does; reaching composes. For a determined law the orbit meets the target within n steps exactly when some funnel holds the start, and, the target decided, exactly when some numeric variant at most n at the start is lowered by every step outside the target; it never reaches the target exactly when some set containing the start avoids the target and is closed under the law, the viability kernel of the target's complement, and a fixed configuration outside the target is such a set. In the original rational market family with 0<=beta<=3/4 and zero extra quality error, every physical positive renewal state reaches the original protection region in finite time exactly when beta<=5/12: the market's gain estimates (share, then influence, then quality) supply the funnels into landing, the instance's content, and above 5/12 the fixed configuration is a closed set avoiding landing. Equivalently, the quality margin at 3/8 under the worst influence 1 is nonnegative, and no closed set avoiding landing contains a positive state. This includes equality and executes under the inherited initial stock cover K_N, handing the actual arrived state to original protection after withdrawal."
@@ -436,6 +436,14 @@
     {
       "en": "2026-10-20: 24 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/d806134e99e7584a/market-partial-correction-boundary.json and in git.",
       "zh": "2026-10-20：24 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/d806134e99e7584a/market-partial-correction-boundary.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them (the claim is unchanged).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述（主张不变）。"
     }
-  ]
+  ],
+  "statement": {
+    "en": "A start reaches a target within n steps on every admissible disturbance exactly when a funnel holds it at level n, and for a determined law never does exactly when a closed set off the target holds it; in the error-free market with 0 ≤ β ≤ 3/4 all physical positive states land exactly when β ≤ 5/12.",
+    "zh": "一个起点在每个可容许扰动下 n 步之内到达目标，恰当有某个漏斗在第 n 层容纳它；对确定的律，它永不到达目标，恰当有包含它、避开目标的封闭集合。在无误差的市场中，对 0 ≤ β ≤ 3/4，一切物理正状态皆着陆恰当 β ≤ 5/12。"
+  }
 }

@@ -67,8 +67,9 @@ requirement as response over a law that leaves several exchanges open.
   (`ExchangeLaw.relation_readWeb_requires`, `ExchangeLaw.relation_readWeb_may`).
 
 **Readings (the AI's).** Of the eight premises, five are readings of one exchange: the four tying
-premises, and the census wherever a step's exchange lies within finitely many relata, a census never
-failing where it does not (enclosure, like closure, is a state of the law, not a reading). Three are
+premises, and the census wherever the formations taking part are listed once and a named family
+closes each step's exchange (so in every finite world whose formations are listed once), a census
+never failing where no family does (enclosure, like closure, is a state of the law, not a reading). Three are
 states of the law that holds: dissipation (loss), embodiment (no relatum standing while it does not
 exchange) and bounded transmission (what descends responds as what gave did). Each is met by some
 laws and failed by others, with the four tying premises holding and the rest idle; together with

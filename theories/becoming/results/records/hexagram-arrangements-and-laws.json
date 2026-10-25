@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T14:06:12+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:31+00:00",
   "statement": {
-    "en": "A law runs the received order only as a table: it reads every line for every line and keeps no symmetry. 卦變 is a step of the law of exchange between the trigrams; the parity of the count, not the count, is a lumping the laws go alike across; the 雜卦 keeps the pairs; waxing and waning never rests.",
-    "zh": "所传卦序是律的运行，但运行它的律只是一张表：每一爻皆读每一爻，不保持任何对称。卦变是上下两卦之间交换律的一步；阳爻之数的奇偶（而非其数）是诸律同行的归并；杂卦保留同样的对；消息之律无止。"
+    "en": "Every law running the received order is its table but at 未濟, reads every line for every line and commutes with none of 錯, 綜 or both. 卦變 is a step of exchange between the trigrams; the count's parity is a lumping the laws go alike across; the 雜卦 keeps the pairs; waxing and waning never rests.",
+    "zh": "运行所传卦序之律，除未濟一处外即卦序之表，每一爻皆读每一爻，不与錯、綜或二者交换。卦变是上下两卦之间交换之一步；阳爻之数的奇偶是诸律同行的归并；杂卦保留同样的对；消息之律无止。"
   },
   "laws": [
     {
@@ -197,8 +197,8 @@
       ]
     },
     {
-      "en": "The 雜卦 lists each configuration once; a configuration's partner is it turned over, or changed in every line where turning keeps it; the received order and the 雜卦's first fifty-six set each beside its partner, its last eight interleave four pairs, and no law commuting with a symmetry runs it.",
-      "zh": "杂卦每卦恰列一次；一卦之配是其倒转，倒转不变者则六爻皆变；所传卦序与杂卦之前五十六卦都把每卦置于其配之旁，杂卦之末八卦交错四对，与任一对称交换之律都不运行它。",
+      "en": "The 雜卦 lists each configuration once; a configuration's partner is it turned over, or changed in every line where turning keeps it; the received order and the 雜卦's first fifty-six set each beside its partner, its last eight interleave four pairs, and no law commuting with 錯, 綜 or both runs it.",
+      "zh": "杂卦每卦恰列一次；一卦之配是其倒转，倒转不变者则六爻皆变；所传卦序与杂卦之前五十六卦都把每卦置于其配之旁，杂卦之末八卦交错四对，与錯、綜或二者交换之律都不运行它。",
       "declarations": [
         "Becoming.Hexagram.zaguaNumbers",
         "Becoming.Hexagram.zagua",
@@ -217,7 +217,7 @@
     },
     {
       "en": "No configuration is a rest of waxing and waning, so no run of it rests at any step or comes to rest from any step on, 既濟 included; no course of changes rests at any step.",
-      "zh": "没有构形是消息之律的静止之处，所以其运行在任一步都不静止，也不从某步起归于静止，既濟亦然；一爻之变的历程在任一步都不静止。",
+      "zh": "没有构形是消息之律的静止之处，所以其运行在任一步都不静止，也不从某步起停息，既濟亦然；一爻之变的历程在任一步都不静止。",
       "declarations": [
         "Becoming.Hexagram.waxWane_moves",
         "Becoming.Hexagram.run_never_rests",
@@ -294,8 +294,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean",
       "detail": {
-        "en": "The claim that the received order is not the orbit of any law (in the open items of the chapter on the 易传 before this record) is false as stated: the law taking each to the next runs it, with one orbit of sixty-four (orderNext_runsOrder, orderNext_one_orbit). What holds is that no law reading less than the whole configuration, or keeping a symmetry, runs it.",
-        "zh": "“卦序不是任何律的轨道”（本记录之前易传章未做之事中的说法）如此表述不确：取每卦至其下一卦之律运行卦序，六十四卦成一轨（orderNext_runsOrder、orderNext_one_orbit）。成立的是：没有只读构形之一部分、或保持某一对称之律运行它。"
+        "en": "The claim that the received order is not the orbit of any law (in the open items of the chapter on the 易传 before this record) is false as stated: the law taking each to the next runs it, with one orbit of sixty-four (orderNext_runsOrder, orderNext_one_orbit). What holds is that no law reading less than the whole configuration, or commuting with 錯, 綜 or both, runs it.",
+        "zh": "“卦序不是任何律的轨道”（本记录之前易传章未做之事中的说法）如此表述不确：取每卦至其下一卦之律运行卦序，六十四卦成一轨（orderNext_runsOrder、orderNext_one_orbit）。成立的是：没有只读构形之一部分、或与錯、綜或二者交换之律运行它。"
       }
     }
   ],
@@ -738,7 +738,7 @@
         "Becoming.Hexagram.zagua_not_commutes",
         "Becoming.Hexagram.zagua_partners"
       ],
-      "sha256": "bf1e4e2da26e0eab3fb74b2ab60390702f7380c62f3a86a25429a703b4bdb57d"
+      "sha256": "6d6c8e5796b92ab507381ea0a937deb60f76a00c82b641ec932d5ab0a341b33f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -948,7 +948,7 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
       "role": "integration",
       "declarations": [],
-      "sha256": "db2bda38897f5ee972a44f786f4c5ed119b1e288587faff0d605aa7dcac49947"
+      "sha256": "7e307adaebc2d236b921edf79d940568410c20cea9ab4ea7cf7d77495f50d177"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py",
@@ -1105,12 +1105,18 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.HexagramSequences",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1263,6 +1269,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): Hexagram.memberAt (now Law.memberAt). Proof bindings (Arising.lean, Flow.lean, HexagramPlaces.lean, HexagramSequences.lean, Labelled.lean, Learning.lean, Prelude.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Arising.lean, Flow.lean, HexagramPlaces.lean, HexagramSequences.lean, Labelled.lean, Learning.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：Hexagram.memberAt（现为 Law.memberAt）。证明绑定（Arising.lean、Flow.lean、HexagramPlaces.lean、HexagramSequences.lean、Labelled.lean、Learning.lean、Prelude.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Arising.lean、Flow.lean、HexagramPlaces.lean、HexagramSequences.lean、Labelled.lean、Learning.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): symmetry narrowed to 錯, 綜 and both, as the Lean states (no law running the received order, nor the 雜卦, commutes with them), in the statement, the 雜卦 law and the first counterexample; the table stated as the agreement of every law running the order with it everywhere but at 未濟. The retired 归于静止 replaced by 停息 (coming to rest).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对称收窄为錯、綜及二者，如 Lean 所述（运行所传卦序之律与杂卦之律都不与之交换），见于陈述、杂卦之律与第一条反例；“表”说为运行卦序之律除未濟外处处与之相同。退役的“归于静止”改为“停息”。"
     }
   ],
   "text_versions": [

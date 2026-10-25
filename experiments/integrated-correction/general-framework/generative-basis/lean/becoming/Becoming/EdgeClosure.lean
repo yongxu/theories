@@ -11,10 +11,13 @@ and carried along the edges (`Closure.base`, `Closure.step`, `Closure.induction`
 The core's closure under a relation (`WithinClosure`, `Becoming.Frame`), what lies in every
 region closed under it that holds a formation, is the seed–edge closure from that formation alone
 (`withinClosure_iff_closure`), since a process's reach is the closure of its steps
-(`reach_iff_withinClosure`, `Becoming.Frame`). `Becoming.Bridge` proves that the periphery's closures of seeds
-under edges are this closure (`reached_iff_closure`, `cutReach_iff_closure`), and
-`Becoming.SeedReachProcesses` states their laws for any process whose moves are the edges. Every
-declaration has an empty axiom report.
+(`reach_iff_withinClosure`, `Becoming.Frame`). The bridge modules kept in `lean/history/becoming/`
+since 19 October 2026 proved that finite chains are reach on the process whose steps are the edges
+(`Becoming.Bridge`: `chain_iff_reach`) and that the periphery's closures of seeds under edges are
+this closure, stating their laws for any process whose moves are the edges
+(`Becoming.SeedReachProcesses`: `reached_iff_closure`, `cutReach_iff_closure`); in the core, what a process
+reaches from a seed is this closure under its moves (`fromSeed_iff_closure`, `Becoming.SeedReach`).
+Every declaration has an empty axiom report.
 -/
 
 namespace Becoming

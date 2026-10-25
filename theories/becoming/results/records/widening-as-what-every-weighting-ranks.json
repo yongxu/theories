@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-22T14:40:29+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "en": "Over a finite listing, one course widens another exactly when every order ranking each widening higher ranks it higher, additive or not, as every positive weighting does; a mixed comparison is decided both ways; a zero weight ties; one weight for all ranks by number.",
     "zh": "在有限列举上，一条进程扩大另一条，恰当每个把每个扩大排得更高的序都把它排得更高，可加与否皆然，每个正的加权亦然；混合的比较两个方向都能决定；零权持平；一律同权即按数目排。"
@@ -141,8 +141,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T120729.506720Z）：Becoming.Weightings 的 100 项声明（69 项定理）公理报告为空；检查器并核对核心纯净。动手写 Lean 之前的文献核查是显著性审查中的两节；论证见章节 THE-STEP-OF-INVARIANCE。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 256 与 260 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Graded significance and weights beyond naturals; orders that do not rank every widening higher (thresholds, which deny scope) and where they part from the shared order; a base reading of a standpoint's weighting from what its activity keeps; an independent review.",
-    "zh": "分级的意义与自然数之外的权重；不把每个扩大排得更高的序（阈值式，即否认范围）及其与共有之序分开之处；从立场的活动所维持者读出其加权的基底读法；独立审查。"
+    "en": "Graded significance and weights beyond naturals; orders that do not rank every widening higher (thresholds, read as denying scope) and where they part from the shared order; a base reading of a standpoint's weighting from what its activity keeps; an independent review.",
+    "zh": "分级的意义与自然数之外的权重；不把每个扩大排得更高的序（阈值式，读作否认范围）及其与共有之序分开之处；从立场的活动所维持者读出其加权的基底读法；独立审查。"
   },
   "correspondence": {
     "en": "Sen's intersection approach (Collective Choice and Social Welfare, 1970; \"On Weights and Measures\", 1977): the judgments every weighting in a set shares form a quasi-ordering; any quasi-ordering is an intersection of orderings (Donaldson and Weymark 1998). In multi-objective optimization, dominance in every coordinate is ranking by every positive weighted sum, here the finite 0/1 case. The inclusion order with strict monotonicity on opportunity sets is Pattanaik and Xu (1990). The reading places Scheffler's agent-centred prerogative (1982) and Williams's partiality (1976) in exactly the mixed comparisons, and Taurek's question (1977) at the equal weighting.",
@@ -331,7 +331,7 @@
         "Becoming.unrestricted_atCenters_iff",
         "Becoming.withinSome"
       ],
-      "sha256": "fe507d9adf7ac5a5e1f8a6d959368ecccfc60e7db7773798f10a3f6de8fcfdfe"
+      "sha256": "74d266546171417e4f28365a50c8e9f11b71e3b10c2cd2025681349e653a32ea"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
@@ -450,12 +450,18 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -481,6 +487,10 @@
     {
       "en": "22 October 2026, VT1: the widening law, outweighs and neutral_ranks_by_number keep their statements and are derived from the net weightings and the weights within a ratio (records a-narrowing-above-its-widening and weights-within-a-ratio-agree-past-it); the witness outweighing gave way to the tilted weighting, and the second law and the counterexample name it; study section 367.",
       "zh": "2026年10月22日，VT1：扩大之律、outweighs 与 neutral_ranks_by_number 陈述不变，由净加权与比值之内的权重导出（记录 a-narrowing-above-its-widening 与 weights-within-a-ratio-agree-past-it）；见证 outweighing 让位于偏向的加权，第二条定律与反例改称之；研究第 367 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the next step says thresholds are read as denying scope, a reading, as the chapter states; the Lean has no significance there. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：下一步写明阈值式是读作否认范围，这是读法，与本章一致；Lean 在那里没有意义。规律未变。"
     }
   ]
 }

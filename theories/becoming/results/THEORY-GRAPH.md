@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2963 nodes, 5187 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2963 nodes, 5194 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -266,7 +266,6 @@ Results (79):
 - [Finite continuation adequacy and branching plans](records/finite-continuation-plans.md) (recorded-checked)
 - [Finite reached-condition branching and question recovery](records/guarded-program-question-recovery.md) (recorded-checked)
 - [Generalization through a lumping](records/generalization-through-lumping.md) (recorded-checked)
-- [How a center forms: where a formation's acts return](records/where-a-formations-acts-return.md) (recorded-checked)
 - [Identification where bounded](records/identification-where-bounded.md) (recorded-checked)
 - [Identification where runs part](records/identification-where-runs-part.md) (recorded-checked)
 - [Incidence questions yield a common relational refinement](records/incidence-common-refinement.md) (recorded-checked)
@@ -299,7 +298,7 @@ Results (79):
 - [Tests that fix likeness](records/tests-fix-likeness-where-determined.md) (recorded-checked)
 - [The boundary of enough under undetermined laws](records/the-boundary-of-enough-under-undetermined-laws.md) (recorded-checked)
 - [The least coupling with any number of conditions](records/sensitivity-is-the-least-coupling.md) (recorded-checked)
-- [The root of wisdom in the theory without axiom](records/wisdom-root-without-axiom.md) (reviewed-scoped)
+- [The root of wisdom in the theory without the condition](records/wisdom-root-without-axiom.md) (reviewed-scoped)
 - [The split that makes sense, and states read off a history](records/the-split-that-makes-sense.md) (recorded-checked)
 - [Transition grouping recovers encoded word sequences](records/transition-grouping-word-partition.md) (recorded-checked)
 - [Typicality by counting](records/typicality-by-counting.md) (recorded-checked)
@@ -312,6 +311,7 @@ Results (79):
 - [What an extrapolation given nothing fixes](records/what-an-extrapolation-given-nothing-fixes.md) (recorded-checked)
 - [What finitely many labels fix](records/what-finitely-many-labels-fix.md) (recorded-checked)
 - [When readings in context glue, for parity](records/gluing-under-parity.md) (recorded-checked)
+- [Where a formation's acts return](records/where-a-formations-acts-return.md) (recorded-checked)
 - [Where seeking rests: more than now never does, above all others never for two](records/seeking-boundary.md) (recorded-checked)
 - [Which selections survive and remain executable when the lumping changes](records/selection-under-registration-revision.md) (recorded-checked)
 - [文 in the grammar of continuation](records/wen-in-the-grammar.md) (recorded-checked)
@@ -400,7 +400,7 @@ Results (54):
 - [Reading another's couplings is pooling with it](records/reading-anothers-couplings-is-pooling.md) (recorded-checked)
 - [Reading through a pool](records/reading-through-a-pool.md) (recorded-checked)
 - [Relative position is zero-sum; a race ends those ahead only through their dependence](records/relative-position-is-zero-sum.md) (recorded-checked)
-- [Required organization under whole generative comparison](records/organizational-formation-from-generative-comparison.md) (reviewed-scoped)
+- [Required organization under the comparison C](records/organizational-formation-from-generative-comparison.md) (reviewed-scoped)
 - [Restoring giving from the worst start](records/restoring-giving-from-the-worst-start.md) (recorded-checked)
 - [Room read off the exchange](records/room-read-off-the-exchange.md) (recorded-checked)
 - [Several optimizers drain by their joint capacity](records/several-optimizers-drain-by-their-joint-capacity.md) (recorded-checked)

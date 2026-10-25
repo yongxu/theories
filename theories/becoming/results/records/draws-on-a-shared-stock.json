@@ -8,10 +8,14 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
+  "reviewed_at_utc": "2026-10-25T14:47:38+00:00",
+  "statement": {
+    "en": "Draws on one listed domain fit within a bound in every combination exactly when their total does; each draw fitting alone does not make them fit together.",
+    "zh": "一个列出之域上的汲取，每种组合都在界内，恰当其总和在界内；每项单独在内不使它们共同在内。"
+  },
   "claim": {
-    "zh": "前 n 项以自然数给出的汲取中，每一种选取都在存量之内，当且仅当它们的总和在存量之内。",
-    "en": "Of the first n draws, given as natural numbers, every selection fits within the stock exactly when their total does."
+    "zh": "前 n 项以自然数给出的汲取中，每一种组合都在存量之内，当且仅当它们的总和在存量之内。",
+    "en": "Of the first n draws, given as natural numbers, every combination fits within the stock exactly when their total does."
   },
   "hypotheses": [
     {
@@ -23,7 +27,7 @@
     "zh": "在源模型中，每项汲取是一项活动无过渡损失地停止所需的工作，存量是为此留出的部分。这些数不是一般的价值度量；与实际活动和存量的对应需另行核实。",
     "en": "In the source model, each draw is the work an activity needs to stop without its transition loss, and the stock is what is set aside for that work. The numbers are not a general measure of value; their correspondence to actual activities and stocks needs separate evidence."
   },
-  "canonical_source": "experiments/market-generativity/meta-attractor/CorrectionDependence.lean",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
   "aliases": [
     "CorrectionDependence.every_selection_within_iff_total_within",
     "aggregate-exit-funding",
@@ -278,6 +282,10 @@
     {
       "en": "2026-10-20: 7 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/47dc93ea7d0babcc/draws-on-a-shared-stock.json and in git.",
       "zh": "2026-10-20：7 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/47dc93ea7d0babcc/draws-on-a-shared-stock.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): canonical source moved from the periphery module (experiments/market-generativity/meta-attractor/CorrectionDependence.lean) to the core law in Becoming.Weighted, which states it for every event of a listed domain; statement added; in the claim \"every selection\" became \"every combination\", as in the statement, selection being the word for what goes through couplings.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：规范来源由外围模块移至 Becoming.Weighted 中的核心规律，后者对列出之域的每个事件陈述它；新增陈述；主张中“每一种选取”改为“每一种组合”，与陈述一致，“选择”一词留给经耦合而行者。"
     }
   ]
 }

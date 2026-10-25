@@ -5,18 +5,22 @@
     "zh": "代码共同方案的全局支持",
     "en": "Global support of coded joint plans"
   },
+  "statement": {
+    "en": "A plan realized at a description is supported at every configuration it describes where configurations the description identifies match parts into configurations it identifies, the leaves are read correctly through it, and footprints are within and apart.",
+    "zh": "凡描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读出、足迹在内且相离，一个在描述处被实现的计划在它所描述的每个构形处被支持。"
+  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-08T13:02:25.936140+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
-    "zh": "代码方案经原生提升后，在 Within 与 Separate 下，其全部叶项请求受原生整体覆盖且无重复。",
-    "en": "After native lifting, a coded joint plan’s combined leaf requests are covered by the native whole without duplication under Within and Separate."
+    "en": "Where configurations a description identifies match parts into configurations it identifies, the leaves are read correctly through it as support, and the parts' footprints lie within the whole's and apart, a plan realized at the description has what its leaves draw on supported, without repetition, by the footprint of every configuration it describes. For a code, the matching follows from compact joints, stable tests and an exact reduced presentation, as in the code form of joint plan lifting.",
+    "zh": "凡描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读作支持、部分的足迹在整体之内且彼此相离，一个在描述处被实现的计划，其叶所汲取者在它所描述的每个构形处由该构形的足迹无重复地支持。对编码，匹配由紧致的接合、稳定的检验与精确且约化的呈现得出，同联合计划提升的编码形式。"
   },
   "hypotheses": [
     {
-      "zh": "joint_plan_lifts 的全部前提，以及支持 F 的包含、排他和叶项正确性。",
-      "en": "All joint_plan_lifts premises plus footprint containment, exclusivity and leaf correctness."
+      "en": "Matching of parts through the description (MatchesParts), footprints of parts within the whole's (PartsWithin) and apart (PartsApart), and leaves read correctly as support (Supports); for codes, the matching follows from the premises of joint-code-plan-lifting's code form.",
+      "zh": "经描述的部分匹配（MatchesParts）、部分足迹在整体之内（PartsWithin）且相离（PartsApart），叶被正确读作支持（Supports）；对编码，匹配由 joint-code-plan-lifting 编码形式的前提得出。"
     }
   ],
   "correspondence": {
@@ -26,8 +30,8 @@
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointCorrespondence.lean",
   "aliases": [
     "Generative.ExplanatoryFootprints.code_plan_has_global_support (periphery module)",
-    "Becoming.code_plan_has_global_support_of_stable (retired module)",
-    "Becoming.JointPlan.supports_of_image"
+    "Becoming.JointPlan.supports_of_image",
+    "Becoming.JointPlan.supports_of_code"
   ],
   "dependencies": [
     {
@@ -227,6 +231,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 2 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Generative.ExplanatoryFootprints.code_plan_has_global_support (periphery module); Becoming.code_plan_has_global_support_of_stable (retired module). The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；2 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Generative.ExplanatoryFootprints.code_plan_has_global_support (periphery module)；Becoming.code_plan_has_global_support_of_stable (retired module)。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core law: support of a plan realized at a description needs only matching through the description, footprints within and apart, and leaves read correctly, not every premise of the joint-plan lifting; for codes the matching follows from the code form's premises. The hypothesis lists exactly these premises; the retired bridge alias replaced by the core code form. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述：在描述处被实现之计划的支持只需经描述的匹配、足迹在内且相离以及叶被正确读出，不需联合计划提升的全部前提；对编码，匹配由编码形式的前提得出。假设恰列这些前提；退役的桥接别名改为核心的编码形式。规律未变。"
     }
   ]
 }

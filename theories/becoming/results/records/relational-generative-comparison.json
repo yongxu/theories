@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-08T12:45:14.926134+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "claim": {
     "zh": "同一事件法则中的保留／解除耦合描述具有相同单项可能性，但前者保留全部所表示共同组合并新增完整共同组合。该结构输出接入明确比较原则 C 后，任何完全由这些单项可能性决定的摘要上的非自反比较都无法实现 C；共同组合描述能区分此例，丰富可能性仍不强迫实际共同实现。",
     "en": "Under one event law, retaining and releasing a coupling have identical marginal possibilities, while retention preserves every represented joint bundle and adds the full bundle. Feeding this structural output into explicit comparison principle C excludes any irreflexive comparator over a summary fully determined by those marginals. A joint-bundle description distinguishes the case; richer possibility still does not force joint actualization."
@@ -50,8 +50,8 @@
     {
       "id": "practical-judgment-under-living-significance",
       "detail": {
-        "zh": "解释关联：沿既有公开 G0/J 公理路线说明 C 的实践地位；本组合没有以该记录作为直接 Lean 输入。",
-        "en": "Interpretive connection: the established explicit G0/J route explains C's practical role; this record is not a direct Lean input to the composition."
+        "zh": "解释关联：沿既有的条件对齐路线说明 C 的实践地位；本组合没有以该记录作为直接 Lean 输入。",
+        "en": "Interpretive connection: the established conditional alignment route explains C's practical role; this record is not a direct Lean input to the composition."
       }
     },
     {
@@ -79,8 +79,8 @@
     }
   ],
   "limitations": {
-    "zh": "仅排除所声明输入摘要的严格比较；不排除所有标量评价或保留关系的局部分析，不证明所有耦合应保留、C/G0 无前提成立或普遍伦理完成。也不要求完备可判定识别算法或所有智能已经认可规范。",
-    "en": "Excludes only strict comparison through the declared summary, not all scalar evaluation or relationally adequate local analysis. It proves neither preservation of every coupling, premise-free C/G0 nor completed universal ethics, and imposes no gate of complete decidable identification or universal recognition."
+    "zh": "仅排除所声明输入摘要的严格比较；不排除所有标量评价或保留关系的局部分析，不证明所有耦合应保留、C 或生生之意义无前提成立或普遍伦理完成。也不要求完备可判定识别算法或所有智能已经认可规范。",
+    "en": "Excludes only strict comparison through the declared summary, not all scalar evaluation or relationally adequate local analysis. It proves neither preservation of every coupling, premise-free C or living significance nor completed universal ethics, and imposes no gate of complete decidable identification or universal recognition."
   },
   "validation_scope": {
     "zh": "复用本轮成功 Lean 4.29.1 回执：6项新定理／12项声明审计，新增依赖全空；16项既有定理／48项审计另列，3项应用控制例不重复计数。独立反审核对3份源码、2份检查辅助及23份工件，未第二次编译；本次登记不重新编译。",
@@ -314,6 +314,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, GenerativeComparison, JointContinuationClassification and RelationalGrounding) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Bundles, Becoming.Extension and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives and Becoming.Metaethics, which this record does not cite with declarations. 1 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, GenerativeComparison, JointContinuationClassification and RelationalGrounding）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Bundles, Becoming.Extension and Becoming.ValuationFrames）。退役模块的内容也陈述于 Becoming.Alternatives and Becoming.Metaethics，本记录未以声明引用它们。1 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels named in current terms: the G0/J route in a related detail as the conditional alignment route, and G0 in the limitations as living significance; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签按现行术语称：一条相关说明中的 G0/J 路线改为条件对齐路线，限度中的 G0 改为生生之意义；主张不变。"
     }
   ]
 }

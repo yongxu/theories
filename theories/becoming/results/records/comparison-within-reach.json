@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "比较在部分所及之内决定：覆盖部分在每步之前已到达者的任何意义，对有与无部分的水平作延续条件的比较；任意两个流的比较在其差别所及之内决定。",
     "en": "The comparison is decided within what the part reaches: any significance covering what the part has reached before each step compares the levels with and without it as the continuation condition does, and the comparison of any two flows is decided within what their difference reaches."
@@ -46,8 +46,8 @@
       ]
     },
     {
-      "zh": "不用公理，以对影响封闭、含部分成员的区域为界的意义，对这个部分作包含那样的比较；所及闭包是含中心的最小这样的区域，系统也是一个。",
-      "en": "With no axiom, significance bounded by a region closed under affecting that holds the members of a part compares the part as inclusion does; the reach closure is the least such region holding a center, and the system is one.",
+      "zh": "不用延续条件，以对影响封闭、含部分成员的区域为界的意义，对这个部分作包含那样的比较；所及闭包是含中心的最小这样的区域，系统也是一个。",
+      "en": "Without the continuation condition, significance bounded by a region closed under affecting that holds the members of a part compares the part as inclusion does; the reach closure is the least such region holding a center, and the system is one.",
       "declarations": [
         "Becoming.Flow.Balances.closed_comparison",
         "Becoming.bounded",
@@ -131,8 +131,8 @@
       "en": "Comparisons with and without a part use withheld levels (Flow.WithheldLevels): the levels with the part withheld and the rest of the exchange unchanged, a choice of the representation; a comparison of two flows is given the second flow."
     },
     {
-      "zh": "一般定理不用公理；公理 Unrestricted 只作为三个见证的假设出现（Trophic.mediated_uncoupled、responsive_mixed、mixed_part）；把它读作 Ren 的公理是 AI 的读法，依 Ren 的交托采用。",
-      "en": "The general theorems use no axiom; the axiom Unrestricted appears only as a hypothesis of three witnesses (Trophic.mediated_uncoupled, responsive_mixed, mixed_part); reading it as Ren's axiom is the AI's reading, adopted on Ren's delegation."
+      "zh": "一般定理不用延续条件；Unrestricted 只作为三个见证的假设出现（Trophic.mediated_uncoupled、responsive_mixed、mixed_part）；其读法是 AI 的读法（D16）。",
+      "en": "The general theorems do not use the continuation condition; Unrestricted appears only as a hypothesis of three witnesses (Trophic.mediated_uncoupled, responsive_mixed, mixed_part); its reading is an AI reading (D16)."
     },
     {
       "zh": "Trophic、Clearing 与 Margin 的结论：见证的流、网与部分（Trophic.wolvesPart、Trophic.withoutWolves、Trophic.farWolvesPart、Clearing.sourcePart、Margin.flow、Margin.web、Margin.takerPart）。",
@@ -181,16 +181,16 @@
     "significance-related-not-asserted"
   ],
   "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261013T094743.528770Z）：Becoming.Feedback 的定理公理报告为空，公理 Unrestricted 只作为假设出现，不是 Lean 公理；检查器并核对核心纯净。作者反审见整合文档；整合之前经第十六次独立审查，其处理之后的文本尚未经独立审查。",
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Feedback have empty axiom reports, the axiom Unrestricted entering only as a hypothesis, not as a Lean axiom; core purity verified. Author counterreview in the integration note; the sixteenth independent review read it before integration, and the text after its treatment is not yet independently reviewed."
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261013T094743.528770Z）：Becoming.Feedback 的定理公理报告为空，延续条件 Unrestricted 只作为假设出现，不是 Lean 公理；检查器并核对核心纯净。作者反审见整合文档；整合之前经第十六次独立审查，其处理之后的文本尚未经独立审查。",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Feedback have empty axiom reports, the continuation condition Unrestricted entering only as a hypothesis, not as a Lean axiom; core purity verified. Author counterreview in the integration note; the sixteenth independent review read it before integration, and the text after its treatment is not yet independently reviewed."
   },
   "next_delta": {
     "zh": "给出不另给“其余只经其耦合回应”这一前提、由动力学给出回应的比较（在该前提下，comparison-where-the-rest-responds 把比较定在回应所及之内）；给出中心怎样表示其所及。",
     "en": "Give a comparison whose responses the dynamics give without supplying that the rest responds only through its couplings (under that premise comparison-where-the-rest-responds decides it within the responsive reach); model how a center represents what it reaches."
   },
   "correspondence": {
-    "zh": "Ren 的长远目标：“I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”；Ren 要求“pursue the strongest claims and complete proof”。Ren 的层级：“i think it should be the whole, and a weaker version is within the system that one is in, then the self”。作者的读法（AI 论证，依 Ren 的交托采用）：影响闭包读一个形成自身的反馈在效果经他者的支持与活动传递时所能承载的；所及闭包读 Ren 中间的“the system that one is in”（供给闭包曾被读作所在系统，这一读法已撤回）；系统（对共享条件的闭包）界定每个效果，却不读那一层级：一个共同条件就使它成为整体，系统划分形成，没有嵌套与中心；“situational awareness”读作中心知道其部分在反馈之外所到达的。名称（ClosedUnder、WithinClosure、AffectedBy、WithinInfluence、Affects、WithinReach、TakesPart、Shares、WithinSystem、Reaches、ReachesBefore、DiffersBefore、Trophic 等）是 AI 按 Ren 的命名准则所选；营养级联是生态学用语。",
-    "en": "Ren's long-term objectives: “I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”; Ren asked to “pursue the strongest claims and complete proof”. Ren's levels: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”. The author's reading (an AI argument, adopted on Ren's delegation): the influence closure reads what a formation's own feedback can carry once effects pass through the support and activity of others; the reach closure reads Ren's intermediate “the system that one is in” (the feeding closure was earlier read as the system one is in; that reading is withdrawn); the system, the closure under sharing a condition, bounds every effect but does not read that level: one common condition makes it the whole, and systems partition the formations, with no nesting and no center; “situational awareness” reads as a center knowing what its part reaches beyond its feedback. The names (ClosedUnder, WithinClosure, AffectedBy, WithinInfluence, Affects, WithinReach, TakesPart, Shares, WithinSystem, Reaches, ReachesBefore, DiffersBefore, Trophic and others) are the AI's, chosen by Ren's naming standard; trophic cascade is the ecological term."
+    "zh": "Ren 的长远目标：“I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”；Ren 要求“pursue the strongest claims and complete proof”。Ren 的层级：“i think it should be the whole, and a weaker version is within the system that one is in, then the self”。读法（AI 论证）：影响闭包读一个形成自身的反馈在效果经他者的支持与活动传递时所能承载的；所及闭包读 Ren 中间的“the system that one is in”（供给闭包曾被读作所在系统，这一读法已撤回）；系统（对共享条件的闭包）界定每个效果，却不读那一层级：一个共同条件就使它成为整体，系统划分形成，没有嵌套与中心；“situational awareness”读作中心知道其部分在反馈之外所到达的。名称（ClosedUnder、WithinClosure、AffectedBy、WithinInfluence、Affects、WithinReach、TakesPart、Shares、WithinSystem、Reaches、ReachesBefore、DiffersBefore、Trophic 等）是 AI 按 Ren 的命名准则所选；营养级联是生态学用语。",
+    "en": "Ren's long-term objectives: “I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”; Ren asked to “pursue the strongest claims and complete proof”. Ren's levels: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”. The reading (an AI argument): the influence closure reads what a formation's own feedback can carry once effects pass through the support and activity of others; the reach closure reads Ren's intermediate “the system that one is in” (the feeding closure was earlier read as the system one is in; that reading is withdrawn); the system, the closure under sharing a condition, bounds every effect but does not read that level: one common condition makes it the whole, and systems partition the formations, with no nesting and no center; “situational awareness” reads as a center knowing what its part reaches beyond its feedback. The names (ClosedUnder, WithinClosure, AffectedBy, WithinInfluence, Affects, WithinReach, TakesPart, Shares, WithinSystem, Reaches, ReachesBefore, DiffersBefore, Trophic and others) are the AI's, chosen by Ren's naming standard; trophic cascade is the ecological term."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
   "aliases": [
@@ -230,8 +230,8 @@
           "en": "Reach ordered in time, and admission alike."
         },
         "input": {
-          "zh": "比较的局部性与覆盖所及的意义给出的公理比较。",
-          "en": "Locality of the comparison, and the axiom's comparison by a significance covering what is reached."
+          "zh": "比较的局部性与覆盖所及的意义给出的延续条件比较。",
+          "en": "Locality of the comparison, and the continuation condition's comparison by a significance covering what is reached."
         },
         "conditions": {
           "zh": "平衡；扣留水平。",
@@ -244,13 +244,13 @@
       "id": "significance-retained-within-margin",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用 Web.Retains、Web.Adds、Web.retains_iff_includes 与 Web.adds_iff_exceeds：公理之下的比较。",
-        "en": "Reuses Web.Retains, Web.Adds, Web.retains_iff_includes and Web.adds_iff_exceeds: the comparisons under the axiom."
+        "zh": "复用 Web.Retains、Web.Adds、Web.retains_iff_includes 与 Web.adds_iff_exceeds：延续条件之下的比较。",
+        "en": "Reuses Web.Retains, Web.Adds, Web.retains_iff_includes and Web.adds_iff_exceeds: the comparisons under the continuation condition."
       },
       "interface": {
         "output": {
-          "zh": "保留与增加；公理之下保留即包含、增加即超出。",
-          "en": "Retaining and adding; under the axiom retaining is including and adding is exceeding."
+          "zh": "保留与增加；延续条件之下保留即包含、增加即超出。",
+          "en": "Retaining and adding; under the continuation condition retaining is including and adding is exceeding."
         },
         "input": {
           "zh": "覆盖部分所及的意义给出同样的比较。",
@@ -313,13 +313,13 @@
       "id": "continuation-condition-yields-living-significance",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用 Unrestricted 与 bounded；公理只作为三个见证的假设。",
-        "en": "Reuses Unrestricted and bounded; the axiom only as a hypothesis of three witnesses."
+        "zh": "复用 Unrestricted 与 bounded；延续条件只作为三个见证的假设。",
+        "en": "Reuses Unrestricted and bounded; the continuation condition only as a hypothesis of three witnesses."
       },
       "interface": {
         "output": {
-          "zh": "公理与有界的意义。",
-          "en": "The axiom and bounded significance."
+          "zh": "延续条件与有界的意义。",
+          "en": "The continuation condition and bounded significance."
         },
         "input": {
           "zh": "Trophic.mediated_uncoupled、responsive_mixed、mixed_part 与 closed_comparison。",
@@ -367,8 +367,8 @@
     {
       "id": "whole-first-and-bounded-centers",
       "detail": {
-        "zh": "Ren 的较弱版本读作：覆盖中心所及的意义，对所及之内、无它的水平存在的每个部分，在其余交换固定时给出公理的比较（AI 的读法，依 Ren 的交托采用）。",
-        "en": "Ren's weaker version reads: significance covering what a center reaches gives the axiom's comparison on every part within that reach whose levels without it exist, with the rest of the exchange fixed (the AI's reading, adopted on Ren's delegation)."
+        "zh": "Ren 的较弱版本读作：覆盖中心所及的意义，对所及之内、无它的水平存在的每个部分，在其余交换固定时给出延续条件的比较（AI 的读法）。",
+        "en": "Ren's weaker version reads: significance covering what a center reaches gives the continuation condition's comparison on every part within that reach whose levels without it exist, with the rest of the exchange fixed (an AI reading)."
       }
     }
   ],
@@ -440,7 +440,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.Web.Retains",
         "Becoming.Web.Adds",
@@ -627,6 +627,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -674,7 +680,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -771,6 +777,10 @@
     {
       "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: closedUnder_withinClosure to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：closedUnder_withinClosure to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: the hypothesis on the witnesses says the general theorems do not use the continuation condition, Unrestricted entering only three witnesses, its reading an AI reading (D16), with no person as its standing; the fourth law says 'without the continuation condition' for 'with no axiom'; 'the axiom' in the dependency interfaces, related details and validation scope reads 'the continuation condition'; readings in the related details and correspondence labelled as AI readings instead of 'adopted on Ren's delegation', Ren's quoted words kept. No law changed in content.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：关于见证的假设改为一般定理不用延续条件，Unrestricted 只进入三个见证，其读法是 AI 的读法（D16），不以任何人为其地位；第四条规律的“不用公理”改为“不用延续条件”；依赖接口、相关说明与验证范围中的“公理”改为“延续条件”；相关说明与对应中的读法标为 AI 的读法，不再写“依 Ren 的交托采用”，Ren 的原话保留。规律内容未变。"
     }
   ],
   "text_versions": [

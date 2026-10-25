@@ -8,7 +8,11 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-14T04:30:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:42:20+00:00",
+  "statement": {
+    "en": "For a law driven by admissible disturbances, given one, no history from a start leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance; in the market the safe rectangle is such a set under a valid protection certificate.",
+    "zh": "对由可容许扰动驱动的律（给定一个可容许扰动），从某起点出发的历史都不离开守卫，恰当有包含该起点、在守卫之内、对每个可容许扰动封闭的集合；在市场模型中，有效保护证书之下的安全矩形就是这样的集合。"
+  },
   "claim": {
     "zh": "对每个过程与守卫：从某构型出发没有进程离开守卫，恰当某个证书含有它；证书是守卫之内、每一步都保持的集合，生存核是最大的证书。对由可容许扰动驱动的变化之律，给定一个可容许扰动，没有历史离开守卫，恰当某个含起点的集合在守卫之内且对每个可容许扰动封闭。市场律对每组参数、界与起点都是实例：没有可容许守卫历史违反必要底线，恰当这样的状态集存在。有效保护证书之下安全矩形就是这样的集，所以从安全初态出发、每步扰动可容许时，守卫历史在每个自然时刻与运行历史一致，没有支持失效。",
     "en": "For every process and guard, no course from a configuration leaves the guard exactly when some certificate contains it: a set within the guard that every step keeps; the viability kernel is the largest certificate. For a law of change driven by admissible disturbances, given one admissible disturbance, no history ever leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance. The market law is an instance for every parameter set, bound set and start: no admissible guarded history fails the essential floors exactly when such a set of states exists. Under a valid protection certificate the safe rectangle is one, so from a safe initial state with admissible disturbances at every step, the guarded history agrees with the operating history at every natural time without support failure."
@@ -217,6 +221,10 @@
     {
       "en": "2026-10-20: 20 bookkeeping notes condensed from 2026-10-08 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/a67e2a7ff5606344/market-protected-continuation.json and in git.",
       "zh": "2026-10-20：20 条记账性说明合并（2026-10-08 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/a67e2a7ff5606344/market-protected-continuation.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them (the claim is unchanged).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述（主张不变）。"
     }
   ]
 }

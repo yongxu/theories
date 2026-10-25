@@ -45,7 +45,7 @@ Canonical source: [Weightings.lean](../../../../experiments/integrated-correctio
 <a id="next--下一步"></a>
 ## Next
 
-Graded significance and weights beyond naturals; orders that do not rank every widening higher (thresholds, which deny scope) and where they part from the shared order; a base reading of a standpoint's weighting from what its activity keeps; an independent review.
+Graded significance and weights beyond naturals; orders that do not rank every widening higher (thresholds, read as denying scope) and where they part from the shared order; a base reading of a standpoint's weighting from what its activity keeps; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -95,6 +95,7 @@ Sen's intersection approach (Collective Choice and Social Welfare, 1970; "On Wei
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排者`, `C as the order every weighting shares`, `partiality decides the mixed comparisons`, `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.mixed_either_way`, `Becoming.Web.widens_iff_every_weighting`
 
@@ -106,7 +107,8 @@ Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排�
 - 21 October 2026, AP1: the class laws, so the shared order does not depend on the additive representation (study section 282); statement, the first hypothesis, the first does-not-show item and the next delta revised to match; the earlier laws are unchanged.
 - 21 October 2026, AP2: lexical priority within the classes whose shared order is widening (study section 305); one law added; the statement and the earlier laws are unchanged.
 - 22 October 2026, VT1: the widening law, outweighs and neutral_ranks_by_number keep their statements and are derived from the net weightings and the weights within a ratio (records a-narrowing-above-its-widening and weights-within-a-ratio-agree-past-it); the witness outweighing gave way to the tilted weighting, and the second law and the counterexample name it; study section 367.
+- 25 October 2026, board item DF (study section 418): the next step says thresholds are read as denying scope, a reading, as the chapter states; the Lean has no significance there. No law changed.
 
 </details>
 
-Documentary review UTC: `2026-10-22T14:40:29+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

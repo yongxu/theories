@@ -18750,3 +18750,45 @@ Output→input: continuation-relative-to-a-class, generation-and-degeneration-at
 **The reviews.** Three independent read-only AI reviews, none by a person: GPT astra twice ([A](development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md), [3](development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-3.md)) and Opus once ([OU3b-2](development/ou3b-master-laws-on-the-grammar/REVIEW-OU3b2.md)). None found an incorrect Lean proposition. Of 27 findings, the one error was in prose: the converse of rest had been said to wait only on dependent choice, and it fails even classically for arbitrary steps, so no converse is claimed. The overclaims were on rest and balance: rest's anchor had been left unrepresented and 08 §7's clause that rest is a case of being drawn is false on the grammar (now two witnesses and the corrected clause); balance had been read as conservation along continuation, where it is a cardinality representation with the pairing supplied. The imprecisions led to local forms of the global laws, `Weighting.WidensOn` represented, the stretch and family forms of balance, and the routing reason above. Every finding was taken before landing.
 
 **Readings** [AI reading, D45]. On the grammar the five laws read as one relational calculus at work: closure is reach, finite runs are the finite-state facts of reach, lumping is a quotient that is again a law, and order is inclusion of what is admitted. Balance is the exception, and it stays one: a level's change by what is given and taken is an equation in numbers, which the grammar represents by pairing units and does not derive. A derivation would begin where a model's balance is read under a relation other than the one, pairings composing along a supplied conditioning ([balance from conservation along a relation](../../../../theories/becoming/chapters/01-ROOT.md#r-balance-from-conservation-along-a-relation)).
+
+## 418. The record corrections of DEFECTS-FOUND, first part (DF1)
+
+Board item DF, under RA. The drafters of the eight chapters listed what they found wrong in records, regions, docstrings and chapter lines ([DEFECTS-FOUND](../../2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md), 23 and 25 October). DF1 checks each of its 174 entries against the repository as it now is and corrects what is still wrong; DF2 makes the records still missing. The work is the AI's ([kit](../../2026-10-05-repository-reconciliation/architecture/df/README.md)).
+
+```text
+Result(s): no new result; existing records, regions, docstrings and chapter lines corrected.
+Delta: (1) 168 records corrected, each with one history note: statements, laws, hypotheses and limits brought to
+       what the cited Lean states (missing hypotheses named, a characterization stated as an implication only
+       where only that is proved, a witness no longer read as a general law); retired labels (G0, the one axiom,
+       Part I/II, the registration vocabulary, J1-J4) replaced by the current terms in live fields; former ids and
+       modules renamed since; the ten pre-spine records without a statement given one on the core laws;
+       (2) regions.json: eight result bases where the record's Lean lies (four to the periphery, two from the old
+       base and one from the frame to general, one from general to the frame) and one module
+       (Becoming.FallibleInquiry, periphery, since it imports the periphery's ScientificInquiryNecessity); the
+       goal's next step; D45's OB1 note in the decision register, dated by its landing and bounded by a positive
+       level, in both editions; SPINE and six chapters' lines (five quotations of 06 as the texts read);
+       (3) docstrings of the root module, 12 core modules and one periphery module, comments only (the code
+       with comments removed is unchanged in all 14 files): Becoming.Grammar's importers in the root's module
+       list, after OU3b's line that it lies below every model, and Becoming.GrammarReadings imported by
+       GrammarCandidates; theorems attributed to the modules that hold them; readings of ¬∃, bounds and sums as
+       the statements have them;
+       (4) the RO kit: a correction of gap text (gap_sub) beside the corrections of readings, applied with a
+       problem reported where it does not apply; one gap no longer names Widening; passages.json rebuilt;
+       (5) every entry of DEFECTS-FOUND ends with what became of it: fixed in DF1 58, partly 2, already fixed
+       before DF 56, not a defect 40, mixed 10, left for DF2 6, for an owner on the board 2.
+Premises: none added.
+Evidence: each of 288 triage rows checked against the records, chapters and Lean at 0e368fbf2; one editor, one
+       skeptical reviewer and one fixer per group of records and for the other files (49 findings, 45 taken),
+       a cross-model review of the non-record changes (3 findings, all taken), a sweep of retired labels in four
+       groups and the chapters with a reviewer each (32 findings, 29 taken) and a completeness critic over all
+       430 records and the chapters (22 more, all taken), two checks of the statuses; research check and lint
+       pass on every changed record; core receipt `20261025T184500.197330Z` (empty axiom reports); organization
+       correspondence `20261025T185035.252368Z`.
+Boundary: DF2 (LEFT.md): 33 records still missing, two records without a statement, schema-2 migrations with laws
+       arrays, two ids that state the retired registration sense, a decision entry for the grammar's readings.
+       Owners: likeness as «核» of realizing the same claims (OU3b), the grammar map's witness OnceThenStill, a
+       docstring of SelectionPool (UE1b), a Growth theorem named in the retired vocabulary, the 中华本 lifted onto
+       the grammar (RA). No Lean name changed.
+Output → input: records that say what their Lean says, for DF2's new records, the readers of the chapters and the
+       review packet.
+```

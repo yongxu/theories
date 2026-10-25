@@ -8,15 +8,15 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T06:36:45+00:00",
+  "reviewed_at_utc": "2026-10-25T14:25:00+00:00",
   "statement": {
-    "en": "Over 270 條, the 中华本's 經 introduce fewer referents the Lean statement lacks than the canonical chapter's English clauses (0.09 against 0.81 per pair, CI [-0.92, -0.54]) and fewer agents, and leave out fewer binders; LLM-coded, provisional.",
-    "zh": "在 270 條上，中华本之经引入 Lean 陈述所没有之所指少于英文本之句（每对 0.09 对 0.81），施动者亦少，所漏变元亦少；大模型编码，暂定。"
+    "en": "Over 270 條, the 中华本's 經 introduce fewer referents the Lean statement lacks than the canonical chapter's English clauses (means per 條 0.09 against 0.81; difference CI [-0.92, -0.54]) and fewer agents, and leave out fewer binders; LLM-coded, provisional.",
+    "zh": "在 270 條上，中华本之经引入 Lean 陈述所没有之所指少于英文本之句（以條计之均值 0.09 对 0.81），施动者亦少，所漏变元亦少；大模型编码，暂定。"
   },
   "hypotheses": [
     {
-      "en": "Codebook v1.1 (FIDELITY.md §3 with two logged clarifications from calibration); the Lean statements of receipt 20261022T110022.458880Z with one level of unfolding; the alignment of 經 clauses to declarations by two coders and an adjudicator; one coder (Claude) on both sides of the main set.",
-      "zh": "编码本 v1.1（FIDELITY.md §3，加校准中记录之两条澄清）；回执 20261022T110022.458880Z 之 Lean 陈述，展开一层；经之子句与声明之对齐由二编码者与一裁定者定；主集两边皆由一编码者（Claude）编。"
+      "en": "Codebook v1.1 (FIDELITY.md §3 with two logged clarifications from calibration); the Lean statements of receipt 20261022T110022.458880Z with one level of unfolding; the alignment of 經 clauses to declarations by two coders and an adjudicator; one coder, of the family of the model that wrote the 經, on both sides of the main set.",
+      "zh": "编码本 v1.1（FIDELITY.md §3，加校准中记录之两条澄清）；回执 20261022T110022.458880Z 之 Lean 陈述，展开一层；经之子句与声明之对齐由二编码者与一裁定者定；主集两边皆由一编码者（与经之作者同族）编。"
     }
   ],
   "does_not_show": [
@@ -36,8 +36,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the gain belongs to classical Chinese rather than to the name table's discipline: the control run afterwards (ZE, record fidelity-under-one-discipline) finds it does not survive against a controlled English under the same discipline for the Claude coder, and a residual for the GPT coder on 60 pairs.",
-      "zh": "所得属于古汉语而非名表之纪律：其后之对照（ZE，记录 fidelity-under-one-discipline）见：依 Claude 编码者，对同样纪律下之受控英文本，所得不复存在；GPT 编码者于 60 对上仍见少许。",
+      "en": "That the gain belongs to classical Chinese, not the name table's discipline: controlled English in that discipline does as well for the authors' family's coder; another family's finds a residual on 60 pairs (fidelity-under-one-discipline).",
+      "zh": "所得属于古汉语而非名表之纪律：对同样纪律下之受控英文本，依与作者同族之编码者，所得不复存在；另一族之编码者于 60 对上仍见少许（fidelity-under-one-discipline）。",
       "kind": "scope"
     }
   ],
@@ -149,6 +149,10 @@
     {
       "en": "23 October 2026: the controlled English control run (ZE, record fidelity-under-one-discipline, study section 377); the scope item on language and discipline and the next step updated.",
       "zh": "2026年10月23日：受控英文之对照已运行（ZE，记录 fidelity-under-one-discipline，研究第 377 节）；语言与纪律之范围项与下一步随之更新。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the unit of the means corrected to per 條, the interval being the difference's; the coders named by model family (the authors' and another) rather than by product in the premise and the boundary on language and discipline (that boundary also shortened), the identities staying in the evidence.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：均值之单位改为以條计，区间为差之区间；前提与语言纪律之边界中之编码者以模型族（作者之族与另一族）称之，不以产品名称之（该边界亦缩短），其身份仍在证据中。"
     }
   ]
 }

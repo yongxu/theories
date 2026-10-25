@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F03",
-  "reviewed_at_utc": "2026-10-14T09:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:45:06+00:00",
   "claim": {
     "zh": "在给定的二实践教育构造中，对每组工作、储备与已用单位、选择器与操作次数：一种实践从 ⟨w,q,z⟩ 运行 n 个周期，当且仅当 n = 0，或 2 ≤ w 且工作覆盖储备不支持的周期（受支持周期在选择器反馈该实践时为 q/2，否则为 0）；学习目的的每次操作消耗该目的、保持选择器、加上转变损失（若有）并追加一条记录。对构造的每个条件，比较恰在访问有损而转变维护保留时认可学习优于参与，修订恰在此处完成，即恰在有根据处；对每个这样的条件，修订与改革之后 n 次操作运行当且仅当 n ≤ 5（不改革选择器时 n ≤ 2），每次操作使用新目的，先前一次损失保留。比较的定义属该构造。harmful 的标题结论是实例：取得的原目标为参与计数，既有比较支持学习实践，五次实际操作使用新目的并保留先前一次损失。",
     "en": "In the supplied two-practice educational construction, for all work, reserve and used units, selector and number of operations: a practice runs n cycles from ⟨w,q,z⟩ exactly when n = 0, or 2 ≤ w and the work covers the cycles the reserve does not support (q/2 supported cycles where the selector feeds the practice back, none otherwise); every operation of the learning goal consumes it, keeps the selector, adds the transition loss if any and appends one record. For every condition of the construction, the comparison warrants learning over attendance exactly under access loss with kept transition maintenance, and revision completes exactly there, that is exactly where it is warranted; for every such condition, after revision and reform n operations run exactly when n ≤ 5 (n ≤ 2 without reforming the selector), each consuming the new goal, and the earlier loss is retained. The comparison's definitions belong to the construction. The harmful headline is an instance: acquisition forms the attendance goal, the existing comparison supports learning, and five actual operations consume the new goal while retaining the earlier loss."
   },
   "hypotheses": [
     {
-      "zh": "两实践、反馈与校准规律、G0/J 解释、响应与权限、初始工作和储备以及给定执行顺序。",
-      "en": "Two practices, feedback/calibration laws, G0/J interpretation, responsiveness and authority, initial work/reserve and the scheduled sequence."
+      "zh": "两实践、反馈与校准规律、生生之意义与实践承诺（J）下的解释、响应与权限、初始工作和储备以及给定执行顺序。",
+      "en": "Two practices, feedback/calibration laws, interpretation under living significance and the practical commitments (J), responsiveness and authority, initial work/reserve and the scheduled sequence."
     }
   ],
   "correspondence": {
@@ -159,6 +159,10 @@
     {
       "en": "2026-10-20: 21 bookkeeping notes condensed from 2026-10-14 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/018bef596f97ea93/formed-goal-revision-continuation.json and in git.",
       "zh": "2026-10-20：21 条记账性说明合并（2026-10-14 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/018bef596f97ea93/formed-goal-revision-continuation.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0 in the premise replaced by the current term: the interpretation is under living significance and the practical commitments (J).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提中已退休之标签 G0 改为现行之词：解释在生生之意义与实践承诺（J）之下。"
     }
   ]
 }

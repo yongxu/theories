@@ -13,7 +13,7 @@
 1. Let the flow balance and l be the levels with a part withheld. Two significances that agree, from standpoint p, at each step on what the part has reached before it make the same four comparisons of the levels with and without the part: retaining and not adding carry over from one to another that has no more significance where the part has reached. (`Becoming.Flow.ReachesBefore`, `Becoming.Web.Retains`, `Becoming.Web.Adds`, `Becoming.Flow.Balances.retains_transfer`, `Becoming.Flow.Balances.not_adds_transfer`, `Becoming.Flow.Balances.comparison_local`)
 2. For any significance covering what the part has reached before each step, the levels with the part retain what has significance along those without it exactly when they include them, and the reverse, and neither adds a continuation with significance exactly when neither exceeds the other: the comparisons under the continuation condition. (`Becoming.Web.Includes`, `Becoming.Web.Exceeds`, `Becoming.Flow.Balances.comparison_within_reach`, `Becoming.Web.retains_iff_includes`, `Becoming.Web.adds_iff_exceeds`)
 3. For such a covering significance, adding is exceeding where the significance is decidable; for every covering significance, exceeding gives adding up to double negation. (`Becoming.Flow.Balances.adds_iff_exceeds_of_decidable`, `Becoming.Flow.Balances.not_not_adds_of_exceeds`)
-4. With no axiom, significance bounded by a region closed under affecting that holds the members of a part compares the part as inclusion does; the reach closure is the least such region holding a center, and the system is one. (`Becoming.Flow.Balances.closed_comparison`, `Becoming.bounded`, `Becoming.Flow.WithinReach`, `Becoming.closedUnder_withinClosure`, `Becoming.Flow.withinSystem_closed`)
+4. Without the continuation condition, significance bounded by a region closed under affecting that holds the members of a part compares the part as inclusion does; the reach closure is the least such region holding a center, and the system is one. (`Becoming.Flow.Balances.closed_comparison`, `Becoming.bounded`, `Becoming.Flow.WithinReach`, `Becoming.closedUnder_withinClosure`, `Becoming.Flow.withinSystem_closed`)
 5. Where the levels of two balanced flows from one start differ at a step, their taking from or giving to that condition differed at an earlier step; any significance covering what the difference has reached before each step compares the two flows as the continuation condition does. (`Becoming.Flow.DiffersBefore`, `Becoming.Flow.Balances.differs_before`, `Becoming.Flow.Balances.comparison_within_difference`)
 6. In Clearing, from the clearer's standpoint, significance bounded by each system judges the clearer's part to lose a continuation with significance (the dweller's) and bounded by each influence closure to retain; significance bounded by each reach closure is not the continuation condition, yet judges the part as the continuation condition does, retaining exactly where inclusion holds, so losing it too. (`Becoming.Clearing.clearerPart`, `Becoming.Clearing.system_counts_dweller`, `Becoming.Clearing.reach_counts_dweller`)
 7. In Clearing the source gives what the clearer takes, and with the rest of the exchange fixed no levels balance the flow without the source's part, so that comparison does not exist. (`Becoming.Clearing.sourcePart`, `Becoming.Clearing.no_levels_without_source`)
@@ -27,7 +27,7 @@
 
 - The general theorems assume only balance (Flow.Balances); a part is a decided family of formations.
 - Comparisons with and without a part use withheld levels (Flow.WithheldLevels): the levels with the part withheld and the rest of the exchange unchanged, a choice of the representation; a comparison of two flows is given the second flow.
-- The general theorems use no axiom; the axiom Unrestricted appears only as a hypothesis of three witnesses (Trophic.mediated_uncoupled, responsive_mixed, mixed_part); reading it as Ren's axiom is the AI's reading, adopted on Ren's delegation.
+- The general theorems do not use the continuation condition; Unrestricted appears only as a hypothesis of three witnesses (Trophic.mediated_uncoupled, responsive_mixed, mixed_part); its reading is an AI reading (D16).
 - For the Trophic, Clearing and Margin results: the witnesses' flows, webs and parts (Trophic.wolvesPart, Trophic.withoutWolves, Trophic.farWolvesPart, Clearing.sourcePart, Margin.flow, Margin.web, Margin.takerPart).
 - Discrete steps, counted from step 0; natural-number levels, needs and amounts.
 
@@ -45,7 +45,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Feedback have empty axiom reports, the axiom Unrestricted entering only as a hypothesis, not as a Lean axiom; core purity verified. Author counterreview in the integration note; the sixteenth independent review read it before integration, and the text after its treatment is not yet independently reviewed.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Feedback have empty axiom reports, the continuation condition Unrestricted entering only as a hypothesis, not as a Lean axiom; core purity verified. Author counterreview in the integration note; the sixteenth independent review read it before integration, and the text after its treatment is not yet independently reviewed.
 
 Canonical source: [Feedback.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean)
 
@@ -59,17 +59,17 @@ Give a comparison whose responses the dynamics give without supplying that the r
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Ren's long-term objectives: “I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”; Ren asked to “pursue the strongest claims and complete proof”. Ren's levels: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”. The author's reading (an AI argument, adopted on Ren's delegation): the influence closure reads what a formation's own feedback can carry once effects pass through the support and activity of others; the reach closure reads Ren's intermediate “the system that one is in” (the feeding closure was earlier read as the system one is in; that reading is withdrawn); the system, the closure under sharing a condition, bounds every effect but does not read that level: one common condition makes it the whole, and systems partition the formations, with no nesting and no center; “situational awareness” reads as a center knowing what its part reaches beyond its feedback. The names (ClosedUnder, WithinClosure, AffectedBy, WithinInfluence, Affects, WithinReach, TakesPart, Shares, WithinSystem, Reaches, ReachesBefore, DiffersBefore, Trophic and others) are the AI's, chosen by Ren's naming standard; trophic cascade is the ecological term.
+Ren's long-term objectives: “I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”; Ren asked to “pursue the strongest claims and complete proof”. Ren's levels: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”. The reading (an AI argument): the influence closure reads what a formation's own feedback can carry once effects pass through the support and activity of others; the reach closure reads Ren's intermediate “the system that one is in” (the feeding closure was earlier read as the system one is in; that reading is withdrawn); the system, the closure under sharing a condition, bounds every effect but does not read that level: one common condition makes it the whole, and systems partition the formations, with no nesting and no center; “situational awareness” reads as a center knowing what its part reaches beyond its feedback. The names (ClosedUnder, WithinClosure, AffectedBy, WithinInfluence, Affects, WithinReach, TakesPart, Shares, WithinSystem, Reaches, ReachesBefore, DiffersBefore, Trophic and others) are the AI's, chosen by Ren's naming standard; trophic cascade is the ecological term.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
 - **formal-reuse**: [feedback-and-reach](feedback-and-reach.md). Reuses Flow.ReachesBefore and Flow.Balances.admits_unreached_before: what is not reached before a step is admitted alike.
   - Output: Reach ordered in time, and admission alike.
-  - Input: Locality of the comparison, and the axiom's comparison by a significance covering what is reached.
+  - Input: Locality of the comparison, and the continuation condition's comparison by a significance covering what is reached.
   - Preserved conditions: Balance; withheld levels. [Feedback.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean)
-- **formal-reuse**: [significance-retained-within-margin](significance-retained-within-margin.md). Reuses Web.Retains, Web.Adds, Web.retains_iff_includes and Web.adds_iff_exceeds: the comparisons under the axiom.
-  - Output: Retaining and adding; under the axiom retaining is including and adding is exceeding.
+- **formal-reuse**: [significance-retained-within-margin](significance-retained-within-margin.md). Reuses Web.Retains, Web.Adds, Web.retains_iff_includes and Web.adds_iff_exceeds: the comparisons under the continuation condition.
+  - Output: Retaining and adding; under the continuation condition retaining is including and adding is exceeding.
   - Input: A significance covering what the part reaches gives the same comparisons.
   - Preserved conditions: None. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
 - **formal-reuse**: [four-cases-of-a-part](four-cases-of-a-part.md). Reuses Web.Includes and Web.Exceeds.
@@ -80,8 +80,8 @@ Ren's long-term objectives: “I want to push the frontier as strong as possible
   - Output: Flow.WithinReach, closedUnder_withinClosure, Flow.withinSystem_closed.
   - Input: The comparison bounded by a region closed under affecting.
   - Preserved conditions: None. [Feedback.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean)
-- **formal-reuse**: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). Reuses Unrestricted and bounded; the axiom only as a hypothesis of three witnesses.
-  - Output: The axiom and bounded significance.
+- **formal-reuse**: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). Reuses Unrestricted and bounded; the continuation condition only as a hypothesis of three witnesses.
+  - Output: The continuation condition and bounded significance.
   - Input: Trophic.mediated_uncoupled, responsive_mixed, mixed_part and closed_comparison.
   - Preserved conditions: None. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
 - **formal-reuse**: [loss-beyond-a-region](loss-beyond-a-region.md). Reuses Clearing.loses_beyond: the clearer's part loses the dweller beyond the region.
@@ -89,7 +89,7 @@ Ren's long-term objectives: “I want to push the frontier as strong as possible
   - Input: Clearing.system_counts_dweller and reach_counts_dweller.
   - Preserved conditions: None. [Regions.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean)
 - related, not a proved adapter: [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md). Advances it: there the comparison bounded by a region needs every formation the other path admits to lie in the region or be admitted by the first (Web.retains_bounded_iff_includes); here that condition follows from the dynamics wherever significance covers what the part has reached before each step.
-- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Ren's weaker version reads: significance covering what a center reaches gives the axiom's comparison on every part within that reach whose levels without it exist, with the rest of the exchange fixed (the AI's reading, adopted on Ren's delegation).
+- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Ren's weaker version reads: significance covering what a center reaches gives the continuation condition's comparison on every part within that reach whose levels without it exist, with the rest of the exchange fixed (an AI reading).
 
 **Used by:** [comparison-where-the-rest-responds](comparison-where-the-rest-responds.md) · [presupposition-scopes](presupposition-scopes.md)
 
@@ -133,6 +133,7 @@ Ren's long-term objectives: “I want to push the frontier as strong as possible
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.Balances.retains_transfer`, `Becoming.Flow.Balances.not_adds_transfer`, `Becoming.Flow.Balances.comparison_local`, `Becoming.Flow.Balances.comparison_within_reach`, `Becoming.Flow.Balances.adds_iff_exceeds_of_decidable`, `Becoming.Flow.Balances.not_not_adds_of_exceeds`, `Becoming.Flow.Balances.closed_comparison`, `Becoming.Flow.DiffersBefore`, `Becoming.Flow.Balances.differs_before`, `Becoming.Flow.Balances.comparison_within_difference`, `Becoming.Clearing.system_counts_dweller`, `Becoming.Clearing.reach_counts_dweller`, `Becoming.Clearing.no_levels_without_source`, `Becoming.Margin.reach_without_misjudgment`, `Becoming.Trophic.wolves_unreached`, `Becoming.Trophic.deer_without_wolves`, `Becoming.Trophic.mediated_uncoupled`, `Becoming.Trophic.responsive_mixed`, `Becoming.Trophic.difference_reaches_forest`, `Becoming.Trophic.far_system`, `Becoming.Trophic.mixed_part`
 
@@ -153,6 +154,7 @@ Aliases: `Becoming.Flow.Balances.retains_transfer`, `Becoming.Flow.Balances.not_
 - 18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. Changed by the pass, in docstrings or prose only: Feedback.lean, THE-THEORY-OF-BECOMING.md. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Significance.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Significance.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 21 October 2026, EC1 (study section 307): declarations moved with their full names: closedUnder_withinClosure to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired label replaced by the current term: the hypothesis on the witnesses says the general theorems do not use the continuation condition, Unrestricted entering only three witnesses, its reading an AI reading (D16), with no person as its standing; the fourth law says 'without the continuation condition' for 'with no axiom'; 'the axiom' in the dependency interfaces, related details and validation scope reads 'the continuation condition'; readings in the related details and correspondence labelled as AI readings instead of 'adopted on Ren's delegation', Ren's quoted words kept. No law changed in content.
 - 8 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](comparison-within-reach.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -164,4 +166,4 @@ Aliases: `Becoming.Flow.Balances.retains_transfer`, `Becoming.Flow.Balances.not_
 
 </details>
 
-Documentary review UTC: `2026-10-16T18:25:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -19,8 +19,8 @@
   },
   "hypotheses": [
     {
-      "zh": "输送作为 related 是对应前提：依 Ren 的交托决定，它算作 N_rel 沿之传递的已形成关系，同交互、以之为生与世系。",
-      "en": "Conveyance as related is a correspondence premise: decided on Ren's delegation, it counts as a formed relation along which N_rel transmits, as interaction, living on and descent do."
+      "zh": "输送作为 related 是对应前提：由 AI 决定，它算作关系中立沿之传递的已形成关系，同交互、以之为生与世系。",
+      "en": "Conveyance as related is a correspondence premise: decided by the AI, it counts as a formed relation along which relational neutrality transmits, as interaction, living on and descent do."
     },
     {
       "zh": "一类读法：条件与形成共享索引，哪个条件是哪个关系项由共享的索引给出（见 life-as-condition-of-life）。",
@@ -32,8 +32,8 @@
     }
   ],
   "correspondence": {
-    "zh": "Ren 的提议说，整体依视角而定：“how much does one consider something to be a part of its system dynamics”。continuing-self-fed-from-beyond 说，延续的家族从其外得到供给；本结果把这一输送读作关系：以输送为 related 时，延续家族的边界是形成的、实在的，却不是关系的切口。相比交互（一方汲取、另一方依存）、以之为生（汲取并依存）与世系（给予使其开始作为条件而在），输送关联的是一个形成所携带的两端：它取用的与它给予的。作者的读法（AI 论证）：一个系统的边界由它所依存者的流穿越，所以以输送为关系时，珍视自身的延续就到达向它输送的来源（在 N_rel 下）。这是关系的读法，不是公理；它不使无人持有的来源被持有。",
-    "en": "Ren's proposal says that the whole is perspective-dependent: “how much does one consider something to be a part of its system dynamics”. continuing-self-fed-from-beyond says that a continuing family is fed from beyond; this result reads that conveyance as a relation: with conveyance as related, a continuing family's boundary is formed and real but no cut in the relations. Unlike interaction (one draws, the other depends), living on (drawing and depending) and descent (giving as something comes to stand), conveyance relates the two ends a formation carries between: what it takes from and what it gives to. The author's reading (an AI argument): a system's boundary is crossed by the flow of what it depends on, so with conveyance as a relation, valuing one's own continuation reaches the source conveyed into it (under N_rel). This is a reading of relations, not an axiom; it does not make an unheld source held."
+    "zh": "Ren 的提议说，整体依视角而定：“how much does one consider something to be a part of its system dynamics”。continuing-self-fed-from-beyond 说，延续的家族从其外得到供给；本结果把这一输送读作关系：以输送为 related 时，延续家族的边界是形成的、实在的，却不是关系的切口。相比交互（一方汲取、另一方依存）、以之为生（汲取并依存）与世系（给予使其开始作为条件而在），输送关联的是一个形成所携带的两端：它取用的与它给予的。读法（AI 的论证）：一个系统的边界由它所依存者的流穿越，所以以输送为关系时，珍视自身的延续就到达向它输送的来源（在关系中立下）。这是关系的读法，不是公理；它不使无人持有的来源被持有。",
+    "en": "Ren's proposal says that the whole is perspective-dependent: “how much does one consider something to be a part of its system dynamics”. continuing-self-fed-from-beyond says that a continuing family is fed from beyond; this result reads that conveyance as a relation: with conveyance as related, a continuing family's boundary is formed and real but no cut in the relations. Unlike interaction (one draws, the other depends), living on (drawing and depending) and descent (giving as something comes to stand), conveyance relates the two ends a formation carries between: what it takes from and what it gives to. A reading (the AI's argument): a system's boundary is crossed by the flow of what it depends on, so with conveyance as a relation, valuing one's own continuation reaches the source conveyed into it (under relational neutrality). This is a reading of relations, not an axiom; it does not make an unheld source held."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean",
   "aliases": [
@@ -148,15 +148,15 @@
     {
       "id": "living-significance-on-held-lives",
       "detail": {
-        "zh": "连通与 N_rel 给出另一种补全，并对无人持有的生命仍有作用；输送是一种候选关系。",
-        "en": "Connection and N_rel give another completion and keep a role for unheld lives; conveyance is one candidate relation."
+        "zh": "连通与关系中立给出另一种补全，并对无人持有的生命仍有作用；输送是一种候选关系。",
+        "en": "Connection and relational neutrality give another completion and keep a role for unheld lives; conveyance is one candidate relation."
       }
     },
     {
       "id": "metaethical-core-characterization",
       "detail": {
-        "zh": "N_rel（transmits）与 Neutral 的定义。",
-        "en": "The definitions of N_rel (transmits) and Neutral."
+        "zh": "关系中立（transmits）与 Neutral 的定义。",
+        "en": "The definitions of relational neutrality (transmits) and Neutral."
       }
     }
   ],
@@ -177,8 +177,8 @@
     }
   ],
   "limitations": {
-    "zh": "输送只关联同一步的事件，不排定时间，也不问所输送的东西是否维持了接受者；它不区分来源是否活着、是否被持有；依 Ren 的交托采用；在 N_rel 下的到达是公理的关系一半，不是想要所要求的；只对逐步读法陈述；名称是 AI 的表述，按 Ren 的命名规则采用（conveyance、Cut 等）。",
-    "en": "Conveyance relates events at a common step only, orders no steps, and does not ask whether what is conveyed sustains the receiver; it does not distinguish a living or held source from another; it is adopted on Ren's delegation; reaching under N_rel is the relational half of the axiom, not what the want requires; stated for the stepwise reading only; the names are the AI's wording, adopted under Ren's naming rule (conveyance, Cut and others)."
+    "zh": "输送只关联同一步的事件，不排定时间，也不问所输送的东西是否维持了接受者；它不区分来源是否活着、是否被持有；是 AI 的决定；在关系中立下的到达是延续条件的关系一半，不是想要所要求的；只对逐步读法陈述；名称是 AI 的表述，按 Ren 的命名规则采用（conveyance、Cut 等）。",
+    "en": "Conveyance relates events at a common step only, orders no steps, and does not ask whether what is conveyed sustains the receiver; it does not distinguish a living or held source from another; it is the AI's decision; reaching under relational neutrality is the relational half of the continuation condition, not what the want requires; stated for the stepwise reading only; the names are the AI's wording, adopted under Ren's naming rule (conveyance, Cut and others)."
   },
   "validation_scope": {
     "zh": "Lean 4.29.1 合并检查器成功实查（20261013T221720.428753Z）：Becoming.Standpoints 的 22 项定理全部空依赖；同一回执覆盖包内 91 个模块（含只作导入的根模块与四个桥接模块），共 4983 项定理／7020 项声明审计，39 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。作者反审见整合文档 §47；独立审查（CONTINUATION-GROUNDING-REVIEW.md）接受其 Lean，所提更正在整合文档 §47.1–47.4 处理。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 90 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。",
@@ -439,6 +439,10 @@
     {
       "en": "2026-10-20: 60 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4724d1df32589e4c/conveyance-crosses-the-boundary.json and in git.",
       "zh": "2026-10-20：60 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4724d1df32589e4c/conveyance-crosses-the-boundary.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels replaced by the current terms in a hypothesis, the correspondence, two related details and the limitations: N_rel by relational neutrality and 'the axiom' by the continuation condition; 'the author's reading' labelled as the AI's; and in the hypothesis and the limitations conveyance as a relation is the AI's decision instead of 'decided on' or 'adopted on Ren's delegation'. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条前提、对应、两条相关说明与局限中的退役标签改为现行术语：N_rel 改为关系中立，“公理”改为延续条件；“作者的读法”标为 AI 的读法；前提与局限中以输送为关系是 AI 的决定，不再写“依 Ren 的交托决定”或“依 Ren 的交托采用”。规律未变。"
     }
   ]
 }

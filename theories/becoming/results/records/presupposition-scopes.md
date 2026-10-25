@@ -28,7 +28,6 @@
 - The general theorems assume only balance (Flow.Balances); a part is a decided family of formations.
 - Comparisons with and without a part use withheld levels (Flow.WithheldLevels): the levels with the part withheld and the rest of the exchange unchanged, a choice of the representation; a comparison of two flows is given the second flow.
 - Discrete steps, counted from step 0; natural-number levels, needs and amounts.
-- G0 was folded by Ren on 11 October 2026 and is no longer an axiom.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -58,7 +57,7 @@ A self individuated by lineage (Ren's “the continuation goes beyond one’s cy
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-In “Truth exist” Ren wrote: “There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” Earlier Ren wrote that the self is “a cognitive model which can not justify itself without some sort of "belief"”, and that “we” are “the universe/ecosystem that realizes its own existence”. The AI proposed that the axiom may follow from three claims it read from Ren's words, one step short (the AI's words, in the source); the sixteenth review corrected this: the result is a decomposition of the axiom, not a reduction. The author's reading (an AI argument, adopted on Ren's delegation): the presupposition reads the “belief” without which, Ren wrote, the self cannot justify itself, and using it as a premise is the AI's step; along a relation covering holds by construction, Ren's “we” supports the whole as one drawing, and “There is no absolute self” does not by itself give covering; “for all beings” reads most directly as standpoint-invariance, the rule of N_std, and extending “universal invariations” to significance is the AI's reading; Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation. Super-truth and sub-truth are named from supervaluation (Fine 1975) and subvaluation (Hyde 1997), from prior knowledge; the other names (Boundary, SignificantWithin, BoundaryInvariant, StandpointInvariant, OneCounts) are the AI's, chosen by Ren's naming standard.
+In “Truth exist” Ren wrote: “There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” Earlier Ren wrote that the self is “a cognitive model which can not justify itself without some sort of "belief"”, and that “we” are “the universe/ecosystem that realizes its own existence”. The AI proposed that the continuation condition may follow from three claims it read from Ren's words, one step short (the AI's words, in the source); the sixteenth review corrected this: the result is a decomposition of the continuation condition, not a reduction. The reading (an AI argument): the presupposition reads the “belief” without which, Ren wrote, the self cannot justify itself, and using it as a premise is the AI's step; along a relation covering holds by construction, Ren's “we” supports the whole as one drawing, and “There is no absolute self” does not by itself give covering; “for all beings” reads most directly as standpoint-invariance, the rule of standpoint neutrality, and extending “universal invariations” to significance is the AI's reading; Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation. Super-truth and sub-truth are named from supervaluation (Fine 1975) and subvaluation (Hyde 1997), from prior knowledge; the other names (Boundary, SignificantWithin, BoundaryInvariant, StandpointInvariant, OneCounts) are the AI's, chosen by Ren's naming standard.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -72,12 +71,12 @@ In “Truth exist” Ren wrote: “There is a set of universal invariations, tha
   - Input: Clearing.levels_differ and own_presupposition.
   - Preserved conditions: None. [Interdependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean)
 - **formal-reuse**: [comparison-within-reach](comparison-within-reach.md). Flow.Balances.presupposed_comparison and presupposed_reach_comparison are corollaries of comparison_within_reach.
-  - Output: Significance covering what is reached gives the axiom's comparison.
+  - Output: Significance covering what is reached gives the continuation condition's comparison.
   - Input: The presupposition sub-true along a relation holding affecting covers what a part within the closure reaches.
   - Preserved conditions: Balance; withheld levels. [Feedback.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean)
 - **formal-reuse**: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). Reuses Unrestricted and bounded.
-  - Output: The axiom and bounded significance.
-  - Input: The presupposition super-true is exactly the axiom; route (b) is the least sub-true significance.
+  - Output: The continuation condition and bounded significance.
+  - Input: The presupposition super-true is exactly the continuation condition; route (b) is the least sub-true significance.
   - Preserved conditions: None. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
 - **formal-reuse**: [four-cases-of-a-part](four-cases-of-a-part.md). Reuses Clearing.clearerPart, admitted_without, unsupported_with.
   - Output: The clearer's part closes the dweller.
@@ -91,8 +90,8 @@ In “Truth exist” Ren wrote: “There is a set of universal invariations, tha
   - Output: Retaining carries over to fewer significances.
   - Input: The part retaining when drawn at the feeding closure in Clearing.own_presupposition.
   - Preserved conditions: None. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
-- related, not a proved adapter: [continuation-condition-decomposition](continuation-condition-decomposition.md). The presupposition at wide scope is given by covering, sub-truth and boundary-invariance; invariance carries all of the axiom's content beyond the presupposition.
-- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation (the AI's reading, adopted on Ren's delegation); significance bounded by the self (bounded_rival, read as Ren's belief) is the presupposition sub-true along the empty relation.
+- related, not a proved adapter: [continuation-condition-decomposition](continuation-condition-decomposition.md). The presupposition at wide scope is given by covering, sub-truth and boundary-invariance; invariance carries all of the continuation condition's content beyond the presupposition.
+- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation (an AI reading); significance bounded by the self (bounded_rival, read as Ren's belief) is the presupposition sub-true along the empty relation.
 
 **Used by:** [continuation-condition-decomposition](continuation-condition-decomposition.md) · [what-the-step-across-standpoints-reaches](what-the-step-across-standpoints-reaches.md)
 
@@ -137,6 +136,7 @@ In “Truth exist” Ren wrote: “There is a set of universal invariations, tha
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `Becoming.Boundary`, `Becoming.Boundary.closure`, `Becoming.Boundary.whole`, `Becoming.Boundary.holds`, `Becoming.Boundary.of_larger`, `Becoming.Boundary.only_whole`, `Becoming.SuperTrue`, `Becoming.SubTrue`, `Becoming.BoundaryInvariant`, `Becoming.superTrue_iff`, `Becoming.boundaryInvariant_iff_determinate`, `Becoming.superTrue_member_iff`, `Becoming.subTrue_member`, `Becoming.superTrue_all_iff`, `Becoming.subTrue_all_iff`, `Becoming.SignificantWithin`, `Becoming.superTrue_significantWithin_iff_union`, `Becoming.superTrue_significantWithin_iff`, `Becoming.subTrue_significantWithin_iff`, `Becoming.subTrue_of_larger`, `Becoming.subTrue_total_iff`, `Becoming.subTrue_empty_iff`, `Becoming.unrestricted_iff_superTrue`, `Becoming.superTrue_level_free`, `Becoming.bounded_closure_iff`, `Becoming.bounded_closure_least`, `Becoming.presupposition_scopes`, `Becoming.Flow.presupposition_order`, `Becoming.Flow.Balances.presupposed_comparison`, `Becoming.Flow.Balances.presupposed_reach_comparison`, `Becoming.Clearing.levels_differ`, `Becoming.Clearing.own_presupposition`
 
@@ -155,6 +155,7 @@ Aliases: `Becoming.Boundary`, `Becoming.Boundary.closure`, `Becoming.Boundary.wh
 - 18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Boundaries.lean, Feedback.lean, THE-THEORY-OF-BECOMING.md. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Boundaries.lean, Interdependence.lean, Significance.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Boundaries.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Interdependence.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Significance.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 21 October 2026, EC1 (study section 307): declarations moved with their full names: ClosedUnder, WithinClosure, closedUnder_withinClosure to Becoming.Frame; Flow.FedFrom to Becoming.Interdependence. The cited Lean source and its proof binding follow them; the claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired label replaced by the current term: 'the axiom' in the dependency interfaces, related details and correspondence reads 'the continuation condition', and readings are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim. The hypothesis recording the fold of G0, a premise of none of the laws, is removed; the retired label is explained once in the method chapter; N_std in the correspondence reads standpoint neutrality. No law changed.
 - 8 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](presupposition-scopes.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -165,4 +166,4 @@ Aliases: `Becoming.Boundary`, `Becoming.Boundary.closure`, `Becoming.Boundary.wh
 
 </details>
 
-Documentary review UTC: `2026-10-14T16:15:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T17:02:48+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

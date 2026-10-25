@@ -5,7 +5,7 @@
 
 `learning-through-a-map-is-tracking-in-the-limit` · **recorded-checked** · theorem · F11 · [record](learning-through-a-map-is-tracking-in-the-limit.json) · [register](../../../../RESULTS.md)
 
-> An extrapolation predicts a feature along every run exactly where its guess, fixed by the record through the map, tracks the feature in the limit. Where the law leaves the feature unchanged this is identification in the limit; where the law changes it, it need not be.
+> An extrapolation predicts a feature on every run exactly where its guess tracks it in the limit. A feature the law keeps is learnable, in a world a list holds, map values decided, exactly where a guess fixed through the map identifies its start in the limit; where the law changes it, they can part.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -80,6 +80,7 @@ Aliases: `learning is tracking in the limit`, `学习是极限中的跟随`, `tr
 ### History
 
 - 20 October 2026: added (R33, G5 of the twentieth review, learning in the limit joined): Limit.Tracks and the bridge from learning through a map to tracking and identification in the limit, with Merge; study section 224.
+- 25 October 2026, board item DF (study section 418): the statement names what identification in the limit takes (a world a list holds and the map's values decided, besides the law keeping the feature) and says that where the law changes the feature, learnability and identification can part; the laws are unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](learning-through-a-map-is-tracking-in-the-limit.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -89,4 +90,4 @@ Aliases: `learning is tracking in the limit`, `学习是极限中的跟随`, `tr
 
 </details>
 
-Documentary review UTC: `2026-10-20T00:09:49+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

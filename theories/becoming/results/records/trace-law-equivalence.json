@@ -5,13 +5,17 @@
     "zh": "逐步规律与端点历史等价",
     "en": "Step laws and endpoint traces"
   },
+  "statement": {
+    "en": "Two processes on the same configurations and moves take the same steps exactly when they have the same finite traces with both endpoints kept; traces of one move suffice. Feasible words alone lose the law.",
+    "zh": "同一构形与动作上的两个过程取相同之步，恰当它们有两端都保留的相同有限迹；一个动作的迹即足够。只看可行之词会失去规律。"
+  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
-    "zh": "两个同型过程逐步允许关系一致，当且仅当它们对每条有限动作串及起终点的历史一致。",
-    "en": "Two processes on the same state/action types agree pointwise on steps iff they agree on all finite labelled traces with both endpoints retained."
+    "en": "A law is fixed by its traces: two processes on the same configurations and moves take the same steps exactly when they have the same finite traces with both endpoints kept, traces of one move sufficing. Forgetting endpoints loses the law: the process that stays put and the one that flips a bit take the same words from every configuration and end differently after one move, so they do not take the same steps.",
+    "zh": "规律由其迹确定：同一构形与动作上的两个过程取相同之步，恰当它们有两端都保留的相同有限迹，一个动作的迹即足够。忘掉端点就失去规律：静止的过程与翻转一位的过程从每个构形取相同之词，一个动作后终点不同，故不取相同之步。"
   },
   "hypotheses": [
     {
@@ -25,9 +29,6 @@
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
   "aliases": [
-    "Generative.Deeper.same_steps_iff_endpoint_traces (periphery module)",
-    "Generative.Model.laws_iff_endpoint_histories (retired module)",
-    "Becoming.same_steps_iff_endpoint_traces_by_core (retired module)",
     "Becoming.same_steps_iff_traces"
   ],
   "dependencies": [
@@ -51,14 +52,14 @@
           "zh": "同一状态、动作类型和原端点；没有物理规律识别。",
           "en": "Same state/action types and endpoints; no physical law identification."
         },
-        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/DynamicConsequences.lean"
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
       }
     }
   ],
   "related": [],
   "counterexamples": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/DynamicConsequences.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Carriers.lean",
       "detail": {
         "zh": "只保留可行动作串会丢失规律；静止和翻转过程给出反例。",
         "en": "Word feasibility alone loses law information; static and toggle processes supply the counterexample."
@@ -88,7 +89,10 @@
       "role": "proof",
       "sha256": "b7838837e6f9b18add59168d211337fcd303b73427d0283947495c2f272c7a4c",
       "declarations": [
-        "Becoming.Carriers.word_feasibility_does_not_determine_endpoints"
+        "Becoming.Carriers.word_feasibility_does_not_determine_endpoints",
+        "Becoming.Carriers.static",
+        "Becoming.Carriers.toggle",
+        "Becoming.Carriers.static_toggle_not_same_steps"
       ]
     },
     {
@@ -278,6 +282,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 2 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Generative.Deeper.same_steps_iff_endpoint_traces (periphery module); Becoming.same_steps_iff_endpoint_traces_by_core (retired module). The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；2 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Generative.Deeper.same_steps_iff_endpoint_traces (periphery module)；Becoming.same_steps_iff_endpoint_traces_by_core (retired module)。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws (a law fixed by its traces, traces of one move sufficing; the same words with different ends); the counterexample and the trace-transport interface re-pointed from the periphery file to the core (Carriers, Labelled); aliases reduced to the core name, the retired Generative.Model.laws_iff_endpoint_histories and Bridge name and the periphery Generative.Deeper.same_steps_iff_endpoint_traces dropped (their files stay referenced). No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述（规律由其迹确定、一个动作的迹即足够；相同之词而终点不同）；反例与迹传递接口由外围文件改指核心（Carriers、Labelled）；别名只留核心名称，删去退役的 Generative.Model.laws_iff_endpoint_histories 与 Bridge 名称及外围的 Generative.Deeper.same_steps_iff_endpoint_traces（其文件仍被引用）。规律未变。"
     }
   ]
 }

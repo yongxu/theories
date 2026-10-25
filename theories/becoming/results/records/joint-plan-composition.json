@@ -5,25 +5,33 @@
     "zh": "局部方案的共同接续",
     "en": "Joint continuation of local plans"
   },
+  "statement": {
+    "en": "Two parts' plans run together as one plan of pairs keep both guards where every joint step projects onto a step of each part, the joint class lies over classes the plans keep, and each pair of moves is usable at every branch; every joint plan keeping a guard has its moves usable.",
+    "zh": "两部分之方案并为一个成对之方案，若每一共同之步投影为各部分之一步、共同之类在各方案所保持之类之上、每一分支上每对动作皆可用，则保持两项守护；每个保持守护之共同方案，其动作皆可用。"
+  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "claim": {
-    "zh": "真实共同作用可投影到局部作用、初始证据覆盖、各局部方案成功且递推共同可实施时，配对方案保持两项终点要求。",
-    "en": "When joint effects project to local effects, initial evidence covers projections, both local plans work and recursive joint executability holds, the zipped plan achieves both endpoint requirements."
+    "en": "Two plans of one length run together as one plan of pairs, each part continuing by the value its own step keeps. Where every joint step projects onto a step of each part, the joint class lies over classes the parts' plans keep, and the plans are compatible (each pair of moves usable from the joint class it is made from, at every branch), the joint plan keeps both guards at every stage; every joint plan that keeps a guard is compatible. On the periphery's observation plans, the zipped plan so achieves both endpoint requirements; two locally successful two-step plans on one two-unit reserve fail at the second joint step, a reserve of four repairs them, and four single-unit spends in sequence from two, without renewal, fail.",
+    "zh": "同长之二方案并为一个成对之方案，各部分按其自身之步所保持之值继续。若每一共同之步投影为各部分之一步，共同之类在各部分方案所保持之类之上，且二方案相容（每一分支上，每对动作自其所出之共同之类皆可用），则共同方案在每一阶段保持两项守护；每个保持守护之共同方案皆相容。在外围依观察的方案上，配对方案由此达到两项终点要求；同一二单位储备上两份局部成功之两步方案，在共同之第二步失败，储备为四则修复，无更新而自二起依次四次各耗一单位亦失败。"
   },
   "hypotheses": [
     {
       "zh": "共同历史 X 的两个投影、同一有限步数；project、初始覆盖、两份 works 及 compatible。",
       "en": "Two projections of one history X, a common finite horizon, project, initial coverage, both local works hypotheses and compatible."
+    },
+    {
+      "en": "The witnesses are the periphery's: the second-step failure and the repair report propext and Quot.sound, the serialization failure also Classical.choice.",
+      "zh": "见证属外围：第二步失败与修复报告 propext 与 Quot.sound，依次消耗的失败另报告 Classical.choice。"
     }
   ],
   "correspondence": {
     "zh": "共同活动造成的实际作用必须仍在局部规律中；每个后续记录分支都需可执行。",
     "en": "Actual joint effects must remain covered by local laws; every subsequent observation branch must be executable."
   },
-  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/JointContinuation.lean",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
   "aliases": [
     "JointContinuation.joint_plan_composition",
     "Becoming.Viability.Plan.zip_keeps",
@@ -80,7 +88,8 @@
       "declarations": [
         "JointContinuation.joint_plan_composition",
         "JointContinuation.joint_second_step_fails",
-        "JointContinuation.serialization_without_renewal_fails"
+        "JointContinuation.serialization_without_renewal_fails",
+        "JointContinuation.sufficient_stock_repairs"
       ]
     },
     {
@@ -205,6 +214,10 @@
     {
       "en": "2026-10-20: 1 bookkeeping note condensed of 15 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/1e9de9f9cd792eb5/joint-plan-composition.json and in git.",
       "zh": "2026-10-20：1 条记账性说明合并（15 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/1e9de9f9cd792eb5/joint-plan-composition.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): canonical source moved to the core law (Keeping), statement added and the claim restated on it: the joint plan keeps both guards at every stage under projection, a joint class over kept classes and compatibility, and keeping a guard needs compatibility; the periphery's endpoint form and witnesses kept, the repair by a reserve of four added to its references, and the witnesses' reported axioms stated as a hypothesis. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：权威来源改为核心规律（Keeping），增加陈述并按其重述主张：在投影、共同之类在所保持之类之上与相容之下，共同方案在每一阶段保持两项守护，保持守护需要相容；外围的终点形式与见证保留，储备为四的修复加入引用，见证所报告的公理写为假设。规律未变。"
     }
   ]
 }

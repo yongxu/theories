@@ -8,8 +8,8 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F05",
-  "reviewed_at_utc": "2026-10-14T04:30:00+00:00",
-  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ReservedShutdown.lean",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean",
   "aliases": [
     "ReservedShutdown.every_supported_schedule_finishes",
     "ReservedShutdown.cycle_keeps_access_or_stops",
@@ -119,14 +119,18 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (EffectiveCommand) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Actuation, Becoming.Countdown, Becoming.Courses, ProtocolInstances, RecoverableControl, ReservedShutdown and ReservedShutdownCases). The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（EffectiveCommand）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Actuation, Becoming.Countdown, Becoming.Courses, ProtocolInstances, RecoverableControl, ReservedShutdown and ReservedShutdownCases）。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the canonical source is the core module stating the general law (Countdown), the supervisor modules kept as the instance's proof references; the claim is unchanged. Also, the retired label G0/J in a related detail reads the conditional alignment route.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：规范来源改为陈述一般定律的核心模块（Countdown），监督者模块保留为实例的证明引用；主张不变。另，一条关联说明中的退役标签 G0/J 改为条件对齐路线。"
     }
   ],
   "related": [
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "zh": "解释关联：已完成 G0/J 方向说明为何回应条件应被保留；当前停止授权的正当性仍需单独根据。",
-        "en": "Interpretive connection: the completed G0/J direction informs preserving response conditions; this stop grant still needs its own normative warrant."
+        "zh": "解释关联：条件对齐路线上已完成的方向说明为何回应条件应被保留；当前停止授权的正当性仍需单独根据。",
+        "en": "Interpretive connection: the completed direction of the conditional alignment route informs preserving response conditions; this stop grant still needs its own normative warrant."
       }
     }
   ],

@@ -162,8 +162,8 @@
     "en": "A one-step form for when a fall is a ceasing to stand (the level reaching zero); a version with rational amounts; whether arising that is not embodied has its own form of the one exchange; the empirical correspondence of dissipation and accompaniment in actual unfoldings."
   },
   "correspondence": {
-    "zh": "Ren 的提议要求解释“生成、维持、转化、退化与消失”在同一展开中（2026-10-08-theory-of-becoming-priority）。coming-and-ceasing-keep-pace 不加前提地证明，有限家族中开始成立与不再成立在长程上同步；本结果证明，在平衡与耗散之下，一次上升在它自己的那一步上就伴随另一个成员的下降。作者把这读作该范围在一步之内的一种形式内容（AI 论证）：在被耗散的家族中，生起不是可以单独发生的事件，它与另一个成员的下降是同一次交换的两面。在流的读法中，Becoming.Arising 的两个对应前提（RenewedBy、Depletes）化归为平衡、只有活跃者给予、耗散与事件之步上的取用；实际展开是否满足这些是经验问题。“上升”“下降”“同一交换”是 AI 的用语，按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
-    "en": "Ren's proposal asks to explain formation, persistence, transformation, degeneration and dissolution within one unfolding (2026-10-08-theory-of-becoming-priority). coming-and-ceasing-keep-pace proves, with no premise, that in a finite family coming to be and ceasing to be keep pace in the long run; this result proves that under balance and dissipation a rise is accompanied at its own step by another member's fall. The author reads this as one formal content of that scope within a single step (an AI argument): in a family dissipated on, arising is not an event that can happen alone; it and another member's fall are two sides of one exchange. Read through flows, the two correspondence premises of Becoming.Arising (RenewedBy, Depletes) reduce to balance, only active formations giving, dissipation and taking at the event's steps; whether actual unfoldings meet them is an empirical question. ‘Rising’, ‘falling’ and ‘one exchange’ are the AI's terms, adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
+    "zh": "Ren 的提议要求解释“生成、维持、转化、退化与消失”在同一展开中（2026-10-08-theory-of-becoming-priority）。coming-and-ceasing-keep-pace 不加前提地证明，有限家族中开始成立与不再成立在长程上同步；本结果证明，在平衡与耗散之下，一次上升在它自己的那一步上就伴随另一个成员的下降。AI 把这读作该范围在一步之内的一种形式内容（AI 论证）：在被耗散的家族中，生起不是可以单独发生的事件，它与另一个成员的下降是同一次交换的两面。在流的读法中，Becoming.Arising 的两个对应前提（RenewedBy、Depletes）化归为平衡、只有活跃者给予、耗散与事件之步上的取用；实际展开是否满足这些是经验问题。“上升”“下降”“同一交换”是 AI 的用语，按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
+    "en": "Ren's proposal asks to explain formation, persistence, transformation, degeneration and dissolution within one unfolding (2026-10-08-theory-of-becoming-priority). coming-and-ceasing-keep-pace proves, with no premise, that in a finite family coming to be and ceasing to be keep pace in the long run; this result proves that under balance and dissipation a rise is accompanied at its own step by another member's fall. The AI reads this as one formal content of that scope within a single step: in a family dissipated on, arising is not an event that can happen alone; it and another member's fall are two sides of one exchange. Read through flows, the two correspondence premises of Becoming.Arising (RenewedBy, Depletes) reduce to balance, only active formations giving, dissipation and taking at the event's steps; whether actual unfoldings meet them is an empirical question. ‘Rising’, ‘falling’ and ‘one exchange’ are the AI's terms, adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
   "aliases": [
@@ -618,6 +618,10 @@
     {
       "en": "2026-10-20: 77 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/d3be01d53ff21aa0/rising-and-falling-in-one-exchange.json and in git.",
       "zh": "2026-10-20：77 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/d3be01d53ff21aa0/rising-and-falling-in-one-exchange.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): 'The author' in the correspondence, meaning the AI, now says so.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中意指 AI 的“作者”改为 AI。"
     }
   ],
   "text_versions": [

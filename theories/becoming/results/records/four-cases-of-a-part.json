@@ -190,8 +190,8 @@
     "en": "The premises a measure for mixed parts would need (a premise beyond the continuation condition, under which every narrowing loses something with significance, so mixed parts still need a measure), without hiding it in inclusion; a witness for keeping the same; comparisons of renewal capacity and richness of relations."
   },
   "correspondence": {
-    "zh": "Ren 写道，生成的是“its existence creates more possibilities of becoming - more future, not less”，并说可以辨认三种动力学（“degenerative/neutral/generative”）。Ren 确认：一个将来保留另一个所有的并有所增加时更多；整体从不是任何中心对它的模型，以包含比较不许可强加的终结，许可它需要权衡的度量，那是另一个前提。作者的读法（AI 论证，依 Ren 的交托采用）：扩大读作生成的，缩小读作退化的，保持不变读作中性的；混合的部分说明这三种在包含之下不穷尽，这与 Ren 确认的第二项读法一致：给混合定序需要度量。比较的是哪些形成被接纳；Ren 也提到的更新能力与关系的丰富没有比较。读法与名称是 AI 的。",
-    "en": "Ren wrote that being generative is that “its existence creates more possibilities of becoming - more future, not less”, and that degenerative, neutral and generative dynamics can be identified (“degenerative/neutral/generative”). Ren confirmed that one future has more than another when it keeps everything the other has and adds some, and that the whole is never any center's model of it, so comparison by inclusion licenses no imposed ending; licensing one needs a measure that trades possibilities, a further premise. The author's reading (an AI argument, adopted on Ren's delegation): widening reads as generative, narrowing as degenerative and keeping the same as neutral; the mixed case shows that the three are not exhaustive under inclusion, in line with Ren's second confirmed reading: ordering a mixed part needs a measure. What is compared is which formations are admitted; renewal capacity and richness of relations, which Ren also named, are not compared. The reading and the names are the AI's."
+    "zh": "Ren 写道，生成的是“its existence creates more possibilities of becoming - more future, not less”，并说可以辨认三种动力学（“degenerative/neutral/generative”）。Ren 确认：一个将来保留另一个所有的并有所增加时更多；整体从不是任何中心对它的模型，以包含比较不许可强加的终结，许可它需要权衡的度量，那是另一个前提。读法（AI 的论证）：扩大读作生成的，缩小读作退化的，保持不变读作中性的；混合的部分说明这三种在包含之下不穷尽，这与 Ren 确认的第二项读法一致：给混合定序需要度量。比较的是哪些形成被接纳；Ren 也提到的更新能力与关系的丰富没有比较。读法与名称是 AI 的。",
+    "en": "Ren wrote that being generative is that “its existence creates more possibilities of becoming - more future, not less”, and that degenerative, neutral and generative dynamics can be identified (“degenerative/neutral/generative”). Ren confirmed that one future has more than another when it keeps everything the other has and adds some, and that the whole is never any center's model of it, so comparison by inclusion licenses no imposed ending; licensing one needs a measure that trades possibilities, a further premise. A reading (the AI's argument): widening reads as generative, narrowing as degenerative and keeping the same as neutral; the mixed case shows that the three are not exhaustive under inclusion, in line with Ren's second confirmed reading: ordering a mixed part needs a measure. What is compared is which formations are admitted; renewal capacity and richness of relations, which Ren also named, are not compared. The reading and the names are the AI's."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
   "aliases": [
@@ -388,7 +388,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.Flow.widens_iff_within_margin_at",
         "Becoming.Flow.Balances.widens_iff_within_margin"
@@ -526,6 +526,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -566,7 +572,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -648,6 +654,10 @@
     {
       "en": "2026-10-20: 71 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/6177b9ea302aea86/four-cases-of-a-part.json and in git.",
       "zh": "2026-10-20：71 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/6177b9ea302aea86/four-cases-of-a-part.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): 'the author's reading' in the correspondence reads 'a reading (the AI's argument)', the reading keeping its AI label, and the label no longer says 'adopted on Ren's delegation'. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法”改为“读法（AI 的论证）”，读法保留其 AI 标签，标签不再写“依 Ren 的交托采用”。规律未变。"
     }
   ],
   "text_versions": [

@@ -150,8 +150,8 @@
       "en": "Bisimulation compares frames with the same move and claim types; a test is a claim after a finite course of moves, and the conditions under which passing the same tests makes configurations alike are given by tests-fix-likeness-where-determined."
     },
     {
-      "zh": "相同之下的确定性（DeterminedAt）是定义；第一部分以 Determined 陈述的定理以它重述，见 determinacy-up-to-likeness。",
-      "en": "Determinacy up to likeness (DeterminedAt) is a definition; the Part I theorems stated with Determined are restated with it in determinacy-up-to-likeness."
+      "zh": "相同之下的确定性（DeterminedAt）是定义；不含条件的理论中以 Determined 陈述的定理以它重述，见 determinacy-up-to-likeness。",
+      "en": "Determinacy up to likeness (DeterminedAt) is a definition; the theorems of the theory without the condition stated with Determined are restated with it in determinacy-up-to-likeness."
     },
     {
       "zh": "IdentifiesAlike.carries 要框架在每个配置处相同之下确定；有意义的描述是给出的，不推出它存在。",
@@ -379,8 +379,8 @@
     {
       "id": "determinacy-up-to-likeness",
       "detail": {
-        "zh": "第一部分以 Determined 陈述的定理在相同之下的重述，以及需要相等之处的见证。",
-        "en": "The Part I theorems stated with Determined restated up to likeness, with witnesses where equality is needed."
+        "zh": "不含条件的理论中以 Determined 陈述的定理在相同之下的重述，以及需要相等之处的见证。",
+        "en": "The theorems of the theory without the condition stated with Determined, restated up to likeness, with witnesses where equality is needed."
       }
     }
   ],
@@ -811,6 +811,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and ExplanatoryBranching) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Experiment, Becoming.Frame, Becoming.Joint, Becoming.Labelled, Becoming.Laws, Becoming.Mechanism, Becoming.Recurrence and Becoming.Unfolding). The retired modules' content is also stated in Becoming.BranchingCorrespondence, Becoming.Granularity and Becoming.Likeness, which this record does not cite with declarations. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and ExplanatoryBranching）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Experiment, Becoming.Frame, Becoming.Joint, Becoming.Labelled, Becoming.Laws, Becoming.Mechanism, Becoming.Recurrence and Becoming.Unfolding）。退役模块的内容也陈述于 Becoming.BranchingCorrespondence, Becoming.Granularity and Becoming.Likeness，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label Part I in a hypothesis and a related detail replaced by the theory without the condition; the aliases keep the former search names. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条前提与一条相关说明中的退役标签“第一部分”改为不含条件的理论；别名保留旧的检索名。规律未变。"
     }
   ],
   "text_versions": [

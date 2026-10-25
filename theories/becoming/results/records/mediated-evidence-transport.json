@@ -25,8 +25,8 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "zh": "解释关联：复用完成的 G0/J 方向；实现条件不独自证明权限及目的正当。",
-        "en": "Interpretive connection: reuses the completed G0/J direction; implementation conditions do not independently justify permissions or ends."
+        "zh": "解释关联：复用条件对齐路线上已完成的方向；实现条件不独自证明权限及目的正当。",
+        "en": "Interpretive connection: reuses the completed direction of the conditional alignment route; implementation conditions do not independently justify permissions or ends."
       }
     }
   ],
@@ -209,6 +209,10 @@
     {
       "en": "2026-10-20: 20 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/947c2efcb9e2f811/mediated-evidence-transport.json and in git.",
       "zh": "2026-10-20：20 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/947c2efcb9e2f811/mediated-evidence-transport.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0/J in a related detail reads the conditional alignment route; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条关联说明中的退役标签 G0/J 改为条件对齐路线；主张不变。"
     }
   ]
 }

@@ -26,7 +26,7 @@
 ## Conditions
 
 - No axiom. For the act: that the rest follows a law of exchange reading through coupling (ExchangeLaw.Through), balance, the same formations present and a common start, written into each theorem, as in the-gap-for-ones-own-act; for a part beyond the closure: the rest fixed (Flow.WithheldLevels) and balance on what the closure couples into.
-- That a selection goes through a pool's pooled coupling (Web.SelectsThroughAll) is a condition, as in selection-through-registration. The member-level converse takes a list holding exactly the members and each member's coupling of the two histories decided (Decided), named where they enter.
+- That a selection goes through a pool's pooled coupling (Web.SelectsThroughAll) is a condition, as in selection-through-couplings. The member-level converse takes a list holding exactly the members and each member's coupling of the two histories decided (Decided), named where they enter.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -123,6 +123,7 @@ Aliases: `what pooled coupling reaches`, `合起来的耦合及于什么`, `the 
 - 21 October 2026, AP1: reading another's couplings is pooling with it (record reading-anothers-couplings-is-pooling, study section 282); this record's laws and their statements are unchanged.
 - 21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosureOf, WithinClosureOf.of_member, closedUnder_withinClosureOf, withinClosureOf_iff, withinClosureOf_single to Becoming.Frame; ClosedUnder, WithinClosure, WithinClosure.refl, WithinClosure.trans, WithinClosure.of_rel to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.
 - 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the premise names the record by its current id, selection-through-couplings, for its former id; nothing else changed.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](what-pooled-coupling-reaches.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -132,4 +133,4 @@ Aliases: `what pooled coupling reaches`, `合起来的耦合及于什么`, `the 
 
 </details>
 
-Documentary review UTC: `2026-10-18T12:53:29+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

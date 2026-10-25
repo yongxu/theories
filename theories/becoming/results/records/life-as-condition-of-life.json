@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "zh": "形成与条件是一个关系项的两种角色；体现的关系项作为条件，并经由另一个活跃者的给予而生起。",
     "en": "Formations and conditions are two roles of one relatum; an embodied relatum is a condition, and it arises through another's giving."
@@ -288,8 +288,8 @@
     "en": "Relate remains, across steps, to the formation whose remains they are; read “the drawing ends it” through a counterfactual relation; relate embodied relata as conditions to “more”."
   },
   "correspondence": {
-    "zh": "Web 与 Flow 把形成与条件分为两类，省略了“生作为生的条件”：父母与后代、森林与林下、群落与学习者，只能经由代理条件表示。按非二元方法（先说明同一生成展开中的关系，再说明行动者与承受者怎样在其中分化），本结果把形成与条件读作一个关系项的两种角色；一类读法另需哪个条件就是哪个形成的对应，是表示的前提。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。作者把“体现的关系项作为条件”与“体现的关系项经由另一个活跃者的给予而生起”读作原话中两个“生”之间关系的一种形式内容：第二个“生”（生起）由另一个活跃者的给予给出（AI 论证）。把体现的关系项读作“生”是 AI 读法，依 Ren 的交托采用（DELEGATED-CHOICES D4）；它不替代 Ren 的原话，也不推出它是好的。在逐步读法下，终结之步的汲取对每个汲取者都不 living，这一判定不估值任何汲取者；进程是否更差由可能性的比较决定（DELEGATED-CHOICES D6）。新名称按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
-    "en": "Web and Flow split formations and conditions into two kinds, omitting life as a condition of life (parents and young, a forest and its understory, a community and its learners), representable only through a proxy condition. Following the nondual method (relations in one becoming first, then how actors and patients differentiate within them), this result reads formations and conditions as two roles of one relatum; the one-kind reading needs in addition the correspondence of which condition is which formation, a premise of the representation. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). The author reads an embodied relatum as a condition, and its arising through another's giving, as one formal content of the relation between the two 生 of those words: the second 生, arising, is given by another active relatum's giving (an AI argument). Reading embodied relata as 生 is an AI reading, adopted on Ren's delegation (DELEGATED-CHOICES D4); it does not replace Ren's words and does not show that it is good. On the stepwise reading drawing at an ending is not living, for every drawer, a verdict that values no drawer; whether a course is worse is for the comparison on possibilities (DELEGATED-CHOICES D6). The new names are adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
+    "zh": "Web 与 Flow 把形成与条件分为两类，省略了“生作为生的条件”：父母与后代、森林与林下、群落与学习者，只能经由代理条件表示。按非二元方法（先说明同一生成展开中的关系，再说明行动者与承受者怎样在其中分化），本结果把形成与条件读作一个关系项的两种角色；一类读法另需哪个条件就是哪个形成的对应，是表示的前提。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。AI 把“体现的关系项作为条件”与“体现的关系项经由另一个活跃者的给予而生起”读作原话中两个“生”之间关系的一种形式内容：第二个“生”（生起）由另一个活跃者的给予给出（AI 论证）。把体现的关系项读作“生”是 AI 读法，依 Ren 的交托采用（DELEGATED-CHOICES D4）；它不替代 Ren 的原话，也不推出它是好的。在逐步读法下，终结之步的汲取对每个汲取者都不 living，这一判定不估值任何汲取者；进程是否更差由可能性的比较决定（DELEGATED-CHOICES D6）。新名称按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
+    "en": "Web and Flow split formations and conditions into two kinds, omitting life as a condition of life (parents and young, a forest and its understory, a community and its learners), representable only through a proxy condition. Following the nondual method (relations in one becoming first, then how actors and patients differentiate within them), this result reads formations and conditions as two roles of one relatum; the one-kind reading needs in addition the correspondence of which condition is which formation, a premise of the representation. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). The AI reads an embodied relatum as a condition, and its arising through another's giving, as one formal content of the relation between the two 生 of those words: the second 生, arising, is given by another active relatum's giving (an AI argument). Reading embodied relata as 生 is an AI reading, adopted on Ren's delegation (DELEGATED-CHOICES D4); it does not replace Ren's words and does not show that it is good. On the stepwise reading drawing at an ending is not living, for every drawer, a verdict that values no drawer; whether a course is worse is for the comparison on possibilities (DELEGATED-CHOICES D6). The new names are adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
   "aliases": [
@@ -401,17 +401,17 @@
       "id": "metaethical-core-characterization",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "Mutualism.significant_iff 用 G0 的刻画 Valuation.significant_iff。",
-        "en": "Mutualism.significant_iff uses G0's characterization Valuation.significant_iff."
+        "zh": "Mutualism.significant_iff 用生生之意义的刻画 Valuation.significant_iff。",
+        "en": "Mutualism.significant_iff uses the characterization of living significance, Valuation.significant_iff."
       },
       "interface": {
         "output": {
-          "zh": "连通整体上 G0 的刻画。",
-          "en": "G0's characterization on a connected whole."
+          "zh": "连通整体上生生之意义的刻画。",
+          "en": "The characterization of living significance on a connected whole."
         },
         "input": {
-          "zh": "互利见证上 G0 恰为种子加两项中立。",
-          "en": "On the mutualism witness G0 is exactly a seed with both neutralities."
+          "zh": "互利见证上生生之意义恰为种子加两项中立。",
+          "en": "On the mutualism witness living significance is exactly a seed with both neutralities."
         },
         "conditions": {
           "zh": "连通与一个活的事件。",
@@ -977,6 +977,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from World.lean to Prelude.lean, total. Proof bindings (Correspondence.lean, Roles.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Arising.lean, Correspondence.lean, Dependence.lean, Flow.lean, Roles.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 World.lean 到 Prelude.lean：total。证明绑定（Correspondence.lean、Roles.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Arising.lean、Correspondence.lean、Dependence.lean、Flow.lean、Roles.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0 in a dependency's detail and interface reads living significance, and 'the author reads' in the correspondence reads 'the AI reads', keeping the reading's AI label; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条依存的说明与接口中的退役标签 G0 改为生生之意义，对应中的“作者把……读作”改为“AI 把……读作”，读法保留其 AI 标签；主张不变。"
     }
   ],
   "text_versions": [

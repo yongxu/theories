@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "部分之外的形成都经自己的耦合回应时，两个流的比较在部分的回应所及之内决定：两个流经其外每个形成的耦合无别、它交换相同，差别到不了它；只有支持耦合入时，回应所及是所及闭包之并。",
     "en": "Where every formation outside a part responds through its couplings, two flows compare within its responsive reach: beyond it they are alike through the couplings, the part exchanges alike, and the difference never arrives; where only support couples in, the reach is the union of reach closures."
@@ -171,8 +171,8 @@
       "en": "For the trophic cascade and the loop: the witnesses' flows, webs and parts; the trophic flow in which the deer respond (Trophic.responsiveFlow, responsiveWeb) is the one the feedback laws supplied."
     },
     {
-      "zh": "步从第 0 步计；水平、所需与数量是自然数。不用公理 Unrestricted。",
-      "en": "Steps are counted from step 0; levels, needs and amounts are natural numbers. The axiom Unrestricted does not occur."
+      "zh": "步从第 0 步计；水平、所需与数量是自然数。不用延续条件 Unrestricted。",
+      "en": "Steps are counted from step 0; levels, needs and amounts are natural numbers. The continuation condition Unrestricted does not occur."
     }
   ],
   "does_not_show": [
@@ -238,8 +238,8 @@
     "en": "Loops under laws with no finite coupling strength (answered by how-a-carried-difference-grows where the strengths are given)."
   },
   "correspondence": {
-    "zh": "AI 把本理论与一般的因果系统（x_{t+1} = F(x_t, u_t, ε_t)、反馈、自适应参数、吸引子）作比较并提出五项改进之后，Ren 写道：“Great, let's finish all of them, you can spawn sub agents in a wise order if needed”。本项是其中第二项（提议是 AI 的）：其余回应时的反事实，回答本章开放项“其余交换随之调整的反事实”中其余经其耦合回应的情形。读法（AI 的，依 Ren 的交托采用）：一个动作有两种反事实，其余固定时只计部分直接到达的，其余经其耦合回应时计部分对经耦合入者影响的闭包；一个动作对与之相互作用的形成造成什么，在第二种之内决定；升级回路是每一方都经其耦合回应、差别回到部分的情形，它不在其余固定的比较中出现；只经阈耦合时回应所及是所及闭包之并，这给所及闭包一个反事实的意义：其余经其支持回应时，一个动作的差别所能到之处。来源中粘贴的因果系统文字（含军备竞赛的回路）作者未注明，不是 Ren 的话，也不是本理论的前提。",
-    "en": "After the AI compared the theory with a general cause–effect system (x_{t+1} = F(x_t, u_t, ε_t), feedback, adaptive parameters, attractors) and proposed five improvements, Ren wrote: “Great, let's finish all of them, you can spawn sub agents in a wise order if needed”. This is the second proposal, the AI's: the counterfactual where the rest responds, answering, for the case where the rest responds through its couplings, the chapter's open item “the counterfactual in which the rest of the exchange adjusts”. Readings (the AI's, adopted on Ren's delegation): an act has two counterfactuals, with the rest fixed, where only what the part reaches directly counts, and with the rest responding through its couplings, where the part's closure under affecting what couples in counts; what an act does to formations that interact with it is decided within the second; an escalation loop is the case where each party responds through its couplings and the difference returns to the part, which does not show in the comparison with the rest fixed; with coupling by threshold only, the responsive reach is the union of the reach closures, which gives the reach closure a counterfactual meaning: where the difference an act makes can arrive when the rest responds through its support. The cause–effect text pasted in the source, including its arms-race loop, has no stated author; it is not Ren's wording and not a premise of the theory."
+    "zh": "AI 把本理论与一般的因果系统（x_{t+1} = F(x_t, u_t, ε_t)、反馈、自适应参数、吸引子）作比较并提出五项改进之后，Ren 写道：“Great, let's finish all of them, you can spawn sub agents in a wise order if needed”。本项是其中第二项（提议是 AI 的）：其余回应时的反事实，回答本章开放项“其余交换随之调整的反事实”中其余经其耦合回应的情形。读法（AI 的）：一个动作有两种反事实，其余固定时只计部分直接到达的，其余经其耦合回应时计部分对经耦合入者影响的闭包；一个动作对与之相互作用的形成造成什么，在第二种之内决定；升级回路是每一方都经其耦合回应、差别回到部分的情形，它不在其余固定的比较中出现；只经阈耦合时回应所及是所及闭包之并，这给所及闭包一个反事实的意义：其余经其支持回应时，一个动作的差别所能到之处。来源中粘贴的因果系统文字（含军备竞赛的回路）作者未注明，不是 Ren 的话，也不是本理论的前提。",
+    "en": "After the AI compared the theory with a general cause–effect system (x_{t+1} = F(x_t, u_t, ε_t), feedback, adaptive parameters, attractors) and proposed five improvements, Ren wrote: “Great, let's finish all of them, you can spawn sub agents in a wise order if needed”. This is the second proposal, the AI's: the counterfactual where the rest responds, answering, for the case where the rest responds through its couplings, the chapter's open item “the counterfactual in which the rest of the exchange adjusts”. Readings (the AI's): an act has two counterfactuals, with the rest fixed, where only what the part reaches directly counts, and with the rest responding through its couplings, where the part's closure under affecting what couples in counts; what an act does to formations that interact with it is decided within the second; an escalation loop is the case where each party responds through its couplings and the difference returns to the part, which does not show in the comparison with the rest fixed; with coupling by threshold only, the responsive reach is the union of the reach closures, which gives the reach closure a counterfactual meaning: where the difference an act makes can arrive when the rest responds through its support. The cause–effect text pasted in the source, including its arms-race loop, has no stated author; it is not Ren's wording and not a premise of the theory."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean",
   "aliases": [
@@ -304,8 +304,8 @@
       },
       "interface": {
         "output": {
-          "zh": "覆盖差别所及的任何意义作公理的比较。",
-          "en": "Any significance covering what the difference reaches makes the axiom's comparison."
+          "zh": "覆盖差别所及的任何意义作延续条件的比较。",
+          "en": "Any significance covering what the difference reaches makes the continuation condition's comparison."
         },
         "input": {
           "zh": "差别到不了回应所及之外，所以覆盖不在回应所及之外者的意义就覆盖差别所及。",
@@ -828,6 +828,10 @@
     {
       "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosure, ClosedUnder to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：WithinClosure, ClosedUnder to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: 'the axiom' in a hypothesis and a dependency interface reads 'the continuation condition', and the correspondence's readings are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：一条假设与一个依赖接口中的“公理”改为“延续条件”，对应中的读法标为 AI 的读法，不再写“依 Ren 的交托采用”，引语原样保留。规律未变。"
     }
   ],
   "text_versions": [

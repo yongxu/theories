@@ -28,7 +28,7 @@ Strict loss matching obeys the laws below on every frame (Becoming.LossMatching)
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Reuses G0’s interface in the current significance structure and J’s practical scope; FR is an additional revisable comparison commitment, not a new Part I theorem or second fundamental axiom.
+- Reuses living significance as a stated condition and J’s practical scope; FR is an additional revisable comparison commitment, not a theorem of the theory without the condition or a further fundamental premise.
 - H and fixed L are complete actual basic losses of an independently described common kind; recovery is reachable and timely, intervening support is real, and terminal harm, unrepeatable participation, common collapse, different coercion and undertakings are not omitted.
 - Distinct living realizations, reliable jointly feasible protection and independent permission are established; scale-dependent burdens and live chance commitments enter comparison. FR does not guarantee physical scalability.
 - That joint lesser basic protection can become sufficient for choice is FR’s explicit normative commitment; it is not derived from finite duration, physical continuity or causal dependence. Rejecting permanent gravity priority still permits incomparability or chances on both sides, and is therefore not equivalent to FR’s sufficiency commitment.
@@ -139,6 +139,7 @@ Aliases: `FR finite responsiveness to aggregation`, `有限合并回应 FR`, `Be
 - 14 October 2026, seventeenth independent review ([BECOMING-GENERAL-LAWS-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-GENERAL-LAWS-REVIEW.md)), findings G1 and G6, landed with the next checker run: the theorem `RepairComparison.fragile_b3_below_nothing` is renamed `fragile_b3_better_than_none`, its docstring and those of `LossMatching` now say "strictly better by matching than no configuration"; the law on reading at episode time (law 6) now says that the retained loss holds by the definition of `ReadsAt` and that whether an actual frame reads at episode time is the premise, citing `not_readsAt_of_recovery`.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (StrictTransport.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: StrictTransport.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (GenerativeLossComparison and RepairComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Frame, Becoming.LossMatching, Becoming.MatchedCourses and Becoming.StrictTransport). The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the first premise restated in the current terms (living significance as a stated condition; the theory without the condition) in place of the retired labels G0, Part I and the second axiom. The Chinese of a hypothesis no longer uses the retired Part I rendering (不含条件的理论, as the English reads).
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](finite-aggregation-within-restorable-basic-losses.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -149,4 +150,4 @@ Aliases: `FR finite responsiveness to aggregation`, `有限合并回应 FR`, `Be
 
 </details>
 
-Documentary review UTC: `2026-10-14T03:10:21.287278+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:50:22+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

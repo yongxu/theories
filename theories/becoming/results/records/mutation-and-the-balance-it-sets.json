@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T14:52:46+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
-    "en": "Carriers losing m offspring to mutation hold their share exactly where their advantage s balances the loss, at s / (s + m), approached from below without overshoot; with no advantage they decline whatever their share. It is the balance of Price's equation, selection against transmission.",
-    "zh": "因突变失去 m 个后代的携带者，恰在其优势 s 抵消损失处保持份额，即 s / (s + m)，自下方无超越地趋近；无优势时无论份额为何都下降。此平衡即选择与传递的 Price 平衡。"
+    "en": "Present carriers losing m offspring to mutation keep their share exactly at s / (s + m), advantage s balancing the loss, the balance of Price's equation. A run at or below it stays there, its share never falling, one at or above stays so; with no advantage the share never rises, and with loss falls.",
+    "zh": "存在的携带者因突变失去 m 个后代时，恰在 s / (s + m) 保持份额，其优势 s 抵消损失，即 Price 方程之平衡。在其处或其下的过程留在其处或其下、份额从不下降，在其处或其上者留在其处或其上；无优势时份额从不上升，有损失时下降。"
   },
   "laws": [
     {
@@ -33,8 +33,8 @@
       ]
     },
     {
-      "en": "Where k = w + s the share is kept exactly at s / (s + m); a run at or below that balance stays at or below it, its share never falling, and one above stays above.",
-      "zh": "k = w + s 时份额恰保持于 s / (s + m)；在此平衡处或其下开始的过程保持在其处或其下、份额从不下降，在其上者保持在其上。",
+      "en": "Where k = w + s the share is kept exactly at s / (s + m); a run at or below that balance stays at or below it, its share never falling, and one at or above stays at or above.",
+      "zh": "k = w + s 时份额恰保持于 s / (s + m)；在此平衡处或其下开始的过程保持在其处或其下、份额从不下降，在其处或其上开始者保持在其处或其上。",
       "declarations": [
         "Becoming.Reproduction.Mutation.kept_share",
         "Becoming.Reproduction.Mutation.below_stays",
@@ -389,6 +389,10 @@
     {
       "en": "22 October 2026: added (EV14), mutation, transmission that is not exact, and the balance it sets; study section 368.",
       "zh": "2026年10月22日：新增（EV14），突变即不精确的传递及其设定的平衡；研究第 368 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement no longer says the balance is approached from below (no convergence is proved): a run at or below it stays there with its share never falling, one at or above stays at or above; the carriers' presence the balance and the fall take is named; the law of the balance said that a run above stays above and now says at or above, as proved; the other laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述不再说平衡自下方被趋近（没有证明收敛）：在其处或其下的过程留在其处或其下、份额从不下降，在其处或其上者留在其处或其上；写明平衡与下降所需的携带者存在；平衡之定律原说在其上者保持在其上，现依所证改为在其处或其上；其余定律不变。"
     }
   ]
 }

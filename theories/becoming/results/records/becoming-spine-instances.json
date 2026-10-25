@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-19T13:38:06+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "claim": {
     "zh": "种子—边闭包（WholeGroundCoverage 的 Reached、CutCoverageAudit 的 Reach）与评价者链（EvaluatorGrounding 的 Chain）恰是边过程上的可达。框架的可达配置构成共同延续空间：保持步骤与主张的映射携带每个可共同实现的组合，步骤可提升、主张可反映的摘要不丢失任何组合。稳健回应恰是可容许性取完成的共同回应，每个稳健回应都是判断过程的共同回应；保证即一步完成；LiveStep 即 Enabled；按一次观察过滤规则表即纯观察上的 After。函数式情境的实践表述恰是提升规则 L 下表述在确定框架上的情形；在 L 下，生成比较提升到回应，并给出理由、协调选择的存活与持续改进无存活者，对每个框架成立。L 是实质承诺：有一好一坏两个结果的回应，在保守规则下两个方向都不可比。核心的生生之意义、生成扩展、C、确保的正面根据与 D 在定义上就是 GenerativeComparison 与 PositionedPositiveReason 的定义；“先基本条件、后生的增益”的实践判断在配置上即 PracticalJudgment.Better（BetterAt）。判断即一步探究：一个回应是判断过程的共同回应，当且仅当它在每个所信配置上可容许（核心的 commonResponse_judge_iff）。在外围（Mathlib）：观察上的策略实施纠正，当且仅当它在每个观察值的格上的行动是共同回应；共同行动存在，当且仅当每个格都有共同回应；安全选择即显示该值的世界上的共同回应；CorrectionBoundary 与 ObservationChange 的细化定理由核心的 commonResponse_antitone 导出。开放形态有限实现直接作用于共同 Frame 的 Run，同一个新形成见证在显式意义条件下取得 relevance；另两项旧接口适配完成原生成生产端到正面根据消费端的组合。",
     "en": "Seed–edge closures (WholeGroundCoverage.Reached, CutCoverageAudit.Reach) and evaluator chains (EvaluatorGrounding.Chain) are exactly reachability on the edge process. A frame's reachable configurations form a joint-continuation space: a step- and claim-preserving map carries every jointly realizable bundle, and a summary whose steps lift and whose claims reflect loses none. A robust response is exactly a common response with completion as admissibility, and every robust response is a common response of the judgment process; a guarantee is one-step completion; LiveStep is Enabled; filtering a rule list by one observation is After on a pure observation. The functional articulation of a situation is exactly the articulation under the lifting rule L on the deterministic frame; under L, generative comparison lifts to responses and supplies reasons, survival of coherent selection and the absence of survivors under continual improvement on every frame. L is substantive: a response with one better and one worse outcome is comparable in neither direction under the conservative rule. The core's living significance, generative extension, C, secured positive ground and D are by definition those of GenerativeComparison and PositionedPositiveReason; the practical judgment of basic conditions first, then living gain, on configurations is PracticalJudgment.Better (BetterAt). A judgment is a one-step inquiry: a response is a common response of the judgment process exactly when it is admissible at every believed configuration (the core's commonResponse_judge_iff). In the periphery, with Mathlib, a policy on observations implements correction exactly when its action on each observation value's cell is a common response; a common action exists exactly when every cell has one; a safe choice is a common response on the worlds showing the value; and the refinement theorems of CorrectionBoundary and ObservationChange follow from the core's commonResponse_antitone. Bounded open-form realization applies to a Run of the shared Frame, and the same novel witness receives relevance under the explicit significance condition; two inherited-interface adapters complete the generation-to-positive-ground composition."
@@ -33,29 +33,29 @@
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
   "aliases": [
-    "Becoming.reached_iff_closure",
-    "Becoming.cutReach_iff_closure",
-    "Becoming.chain_iff_reach",
-    "Becoming.Frame.map_preserves_bundles",
-    "Becoming.Frame.lift_reflects_bundles",
-    "Becoming.commonResponse_is_robust",
-    "Becoming.robust_iff_commonResponse",
-    "Becoming.guarantees_iff_completes",
-    "Becoming.liveStep_iff_enabled",
-    "Becoming.after_observe_iff",
-    "Becoming.revise_is_after",
+    "Becoming.reached_iff_closure (retired module)",
+    "Becoming.cutReach_iff_closure (retired module)",
+    "Becoming.chain_iff_reach (retired module)",
+    "Becoming.Frame.map_preserves",
+    "Becoming.Frame.lift_reflects",
+    "Becoming.commonResponse_is_robust (retired module)",
+    "Becoming.robust_iff_commonResponse (retired module)",
+    "Becoming.guarantees_iff_completes (retired module)",
+    "Becoming.liveStep_iff_enabled (retired module)",
+    "Becoming.Narrowing.after_observe_iff",
+    "Becoming.Narrowing.revise_is_after",
     "Becoming.comparison_lifts",
     "Becoming.lifted_comparison_supplies_reason",
     "Becoming.lift_coherent_selection_survives",
     "Becoming.lift_continual_improvement_has_no_survivor",
-    "Becoming.articulation_iff_lifted",
+    "Becoming.Alternatives.articulation_iff_lifted",
     "Becoming.LiftModel.some_outcome_does_not_lift",
     "Becoming.LiftModel.lift_needs_live_middle",
-    "Becoming.g0_iff",
-    "Becoming.extension_iff",
-    "Becoming.comparison_iff",
-    "Becoming.securesPositiveGround_iff",
-    "Becoming.positionedArticulation_iff",
+    "Becoming.g0_iff (retired module)",
+    "Becoming.extension_iff (retired module)",
+    "Becoming.comparison_iff (retired module)",
+    "Becoming.securesPositiveGround_iff (retired module)",
+    "Becoming.positionedArticulation_iff (retired module)",
     "Becoming.commonResponse_judge_iff",
     "Becoming.implements_iff_commonResponse",
     "Becoming.commonAction_iff_commonResponse",
@@ -70,8 +70,8 @@
       "id": "metaethical-core-characterization",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "comparison_lifts 与各提升定理直接使用核心的 Extension、Comparison（C）、LiftBetter（L）与 Enabled；g0_iff、extension_iff、comparison_iff 表明 G0、生成扩展与 C 就是 GenerativeComparison 在框架库存上的定义。",
-        "en": "comparison_lifts and the lifted theorems directly use the core's Extension, Comparison (C), LiftBetter (L) and Enabled; g0_iff, extension_iff and comparison_iff show that G0, generative extension and C are GenerativeComparison's definitions on the frame's inventory."
+        "zh": "comparison_lifts 与各提升定理直接使用核心的 Extension、Comparison（C）、LiftBetter（L）与 Enabled；g0_iff、extension_iff、comparison_iff 表明生生之意义、生成扩展与 C 就是 GenerativeComparison 在框架库存上的定义。",
+        "en": "comparison_lifts and the lifted theorems directly use the core's Extension, Comparison (C), LiftBetter (L) and Enabled; g0_iff, extension_iff and comparison_iff show that living significance, generative extension and C are GenerativeComparison's definitions on the frame's inventory."
       },
       "interface": {
         "output": {
@@ -101,8 +101,8 @@
     {
       "id": "practical-judgment-under-living-significance",
       "detail": {
-        "zh": "robust_iff_commonResponse 把 J 的稳健判断等同于探究层的共同回应，因此 J 的稳健性定理可在可靠探究的所见范围上使用；J 的规范前提不因此得到证明。",
-        "en": "robust_iff_commonResponse identifies J's robust judgment with the inquiry layer's common response, so J's robustness theorems apply on the scope of a sound inquiry; J's normative premises are not thereby proved."
+        "zh": "robust_iff_commonResponse 把实践承诺的稳健判断等同于探究层的共同回应，因此实践承诺的稳健性定理可在可靠探究的所见范围上使用；实践承诺的规范前提不因此得到证明。",
+        "en": "robust_iff_commonResponse identifies the practical commitments' robust judgment with the inquiry layer's common response, so their robustness theorems apply on the scope of a sound inquiry; their normative premises are not thereby proved."
       }
     },
     {
@@ -143,8 +143,8 @@
     {
       "id": "continuation-condition-yields-living-significance",
       "detail": {
-        "zh": "桥接的 Discharge 一节在那里：公理之下外围的 G0 对每个清单成立，外围的三项定理由公理推出。",
-        "en": "The bridge's Discharge section belongs there: under the axiom the periphery's G0 holds for every inventory, and three of the periphery's theorems follow from the axiom."
+        "zh": "桥接的 Discharge 一节在那里：延续条件之下外围的 G0 对每个清单成立，外围的三项定理由延续条件推出。",
+        "en": "The bridge's Discharge section belongs there: under the continuation condition the periphery's G0 holds for every inventory, and three of the periphery's theorems follow from the continuation condition."
       }
     },
     {
@@ -183,8 +183,8 @@
     "en": "Adds no normative content: bridges transport theorems without proving their premises, and the meaning of history types and the normative warrant of supplied relations remain the user's to supply. L is only the conservative rule; stronger lifting rules (some-outcome, expectation or risk rules) are not studied. The unification of renewal and consumption and the dynamic reading of `living` are in becoming-renewal-reading. The Mathlib bridge connects only the selection and safety interfaces of CorrectionBoundary and ObservationChange; their randomized bounds and real-valued models are not stated on the core, and the passage by choice to a single policy is not restated."
   },
   "validation_scope": {
-    "zh": "2026-10-14：Becoming.Bridge 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Bridge 40 项定理（其中 Ranking.wholeRun_iff 与 Ranking.undisturbed_eq 属 ranking-under-readings，withinClosure_iff_closure 属 levels-of-closure，Discharge 一节的 5 项属 one-axiom-yields-g0），连同 Becoming.Frame 新增的 Reach.map、Reach.lift，全部空依赖；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致，其 propext、Quot.sound、Classical.choice 另列。控制例不计为新定理。分类检查对 46 个模块逐行机械检查。作者自审，尚无独立反审。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。核心新增 commonResponse_judge_iff，空依赖。外围桥接 CorrectionInquiry 经 Lean 4.30.0-rc2 与 Mathlib（ea11ccc0）成功实查（20261013T095049.338744Z）：7 项定理／8 项声明审计，全部空依赖；闭包中其余 80 个模块（含核心）的当前字节与已通过回执一致。 P89（2026-10-13）：Bridge 的旧声明保持，四项新增适配已实查且公理报告为空；本记录的 Bridge 绑定转到本次冻结回执，其余既有证明保留各自原回执，不将适配另计为独立成果。",
-    "en": "The current bytes of Becoming.Bridge, Becoming.Lifting (the lifting rule L and its countermodels) and Becoming.EdgeClosure (the seed–edge closure) are bound to the latest consolidated receipt in the references, every source declaration with an empty axiom report. Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): Becoming.Bridge's 40 theorems (Ranking.wholeRun_iff and Ranking.undisturbed_eq belonging to ranking-under-readings, withinClosure_iff_closure to levels-of-closure, the 5 of the Discharge section to one-axiom-yields-g0), with Becoming.Frame's new Reach.map and Reach.lift, all have empty axiom reports; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts, with their propext, Quot.sound and Classical.choice listed separately. Controls are not counted as new theorems. The classification check mechanically checks all 46 module rows. Author's review only; no independent review yet. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The core adds commonResponse_judge_iff with an empty axiom report. The peripheral bridge CorrectionInquiry passed a check with Lean 4.30.0-rc2 and Mathlib (ea11ccc0) (20261013T095049.338744Z): 7 theorems/8 declaration audits, all with empty axiom reports; the current bytes of the other 80 modules in its closure, the core included, match passed receipts. P89 (13 October 2026): prior Bridge declarations remain; four added adapters are checked with empty axiom reports. This record binds Bridge to the new frozen receipt while other proofs retain their original receipts; adapters are not independent results."
+    "zh": "Becoming.Bridge 自 2026-10-19 在 lean/history/becoming/，末次实查于 20261018T235724.886433Z；当前只查核心重述，公理报告全空；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Bridge 40 项定理（其中 Ranking.wholeRun_iff 与 Ranking.undisturbed_eq 属 ranking-under-readings，withinClosure_iff_closure 属 levels-of-closure，Discharge 一节的 5 项属 continuation-condition-yields-living-significance），连同 Becoming.Frame 新增的 Reach.map、Reach.lift，全部空依赖；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致，其 propext、Quot.sound、Classical.choice 另列。控制例不计为新定理。分类检查对 46 个模块逐行机械检查。作者自审，尚无独立反审。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。核心新增 commonResponse_judge_iff，空依赖。外围桥接 CorrectionInquiry 经 Lean 4.30.0-rc2 与 Mathlib（ea11ccc0）成功实查（20261013T095049.338744Z）：7 项定理／8 项声明审计，全部空依赖；闭包中其余 80 个模块（含核心）的当前字节与已通过回执一致。 P89（2026-10-13）：Bridge 的旧声明保持，四项新增适配已实查且公理报告为空；不将适配另计为独立成果。",
+    "en": "Becoming.Bridge has been in lean/history/becoming/ since 19 October 2026, last checked at 20261018T235724.886433Z; current runs check the core restatements (Lifting, EdgeClosure, Bundles, Alternatives, Narrowing, Inquiry), every source declaration with an empty axiom report. Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): Becoming.Bridge's 40 theorems (Ranking.wholeRun_iff and Ranking.undisturbed_eq belonging to ranking-under-readings, withinClosure_iff_closure to levels-of-closure, the 5 of the Discharge section to continuation-condition-yields-living-significance), with Becoming.Frame's new Reach.map and Reach.lift, all have empty axiom reports; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts, with their propext, Quot.sound and Classical.choice listed separately. Controls are not counted as new theorems. The classification check mechanically checks all 46 module rows. Author's review only; no independent review yet. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The core adds commonResponse_judge_iff with an empty axiom report. The peripheral bridge CorrectionInquiry passed a check with Lean 4.30.0-rc2 and Mathlib (ea11ccc0) (20261013T095049.338744Z): 7 theorems/8 declaration audits, all with empty axiom reports; the current bytes of the other 80 modules in its closure, the core included, match passed receipts. P89 (13 October 2026): prior Bridge declarations remain; four added adapters are checked with empty axiom reports. Adapters are not independent results."
   },
   "references": [
     {
@@ -243,7 +243,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean",
       "role": "proof",
-      "sha256": "31d1008172c544a8f74627f83c5733ec2610fcad33862e7e41c04dadee96e8f7",
+      "sha256": "bc67b6ed7e70a6c3cec89ed790d20fb6d29a1a305ef16c3f5a845fadffb65f3b",
       "declarations": [
         "Becoming.edgeProcess",
         "Becoming.Closure"
@@ -670,6 +670,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -724,7 +730,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.EdgeClosure",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -856,6 +862,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, CorrectionInfrastructure, CutCoverageAudit, EvaluatorGrounding, GenerativeComparison, JointContinuationClassification, PositionedPositiveReason, PracticalJudgment, PracticalReach, SeedReachProcesses, StandardsBridge and WholeGroundCoverage) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Alternatives, Becoming.Bundles, Becoming.EdgeClosure, Becoming.Extension, Becoming.Frame, Becoming.FrontierFrames, Becoming.Inquiry, Becoming.Lexical, Becoming.Lifting, Becoming.Metaethics, Becoming.Narrowing, Becoming.NarrowingRuns, Becoming.ValuationFrames, CorrectionBoundary, CorrectionInquiry, InquirySufficiency and ObservationChange). The retired modules' content is also stated in Becoming.Acceptance, Becoming.Frontier, Becoming.GuardHorizon, Becoming.MoveOutcomeProcesses, Becoming.PositiveGround, Becoming.ProfileReach, Becoming.ScopedReach and Becoming.SeedReach, which this record does not cite with declarations. The canonical source becomes Becoming.Lifting, which states the lifting rule in the core. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, CorrectionInfrastructure, CutCoverageAudit, EvaluatorGrounding, GenerativeComparison, JointContinuationClassification, PositionedPositiveReason, PracticalJudgment, PracticalReach, SeedReachProcesses, StandardsBridge and WholeGroundCoverage）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Alternatives, Becoming.Bundles, Becoming.EdgeClosure, Becoming.Extension, Becoming.Frame, Becoming.FrontierFrames, Becoming.Inquiry, Becoming.Lexical, Becoming.Lifting, Becoming.Metaethics, Becoming.Narrowing, Becoming.NarrowingRuns, Becoming.ValuationFrames, CorrectionBoundary, CorrectionInquiry, InquirySufficiency and ObservationChange）。退役模块的内容也陈述于 Becoming.Acceptance, Becoming.Frontier, Becoming.GuardHorizon, Becoming.MoveOutcomeProcesses, Becoming.PositiveGround, Becoming.ProfileReach, Becoming.ScopedReach and Becoming.SeedReach，本记录未以声明引用它们。规范来源改为 Becoming.Lifting，它在核心中陈述提升规则。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the validation scope says the bridge module has been retired to history since it was last checked, with current runs checking the core restatements, instead of binding its current bytes, drops the sentence that this record binds the bridge, and names the living-significance record by its current id; aliases point to the core names where the core restates the bridge's laws (Bundles, Alternatives, Narrowing), and the bridge-only names are marked as retired; 'the axiom' in a related detail reads 'the continuation condition'; the label G0 in a dependency detail reads living significance (the Lean names g0_iff and the periphery's G0 are kept); J, the label of J1–J4 as PracticalJudgment, in a related detail reads the practical commitments. The claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：验证范围改为：桥接模块自末次实查后已移入历史，当前只查核心重述，不再说其当前字节被绑定，删去本记录绑定桥接一句，并以现行 id 称生生之意义的记录；别名在核心重述桥接规律处改指核心名称（Bundles、Alternatives、Narrowing），只属桥接的名称标为退役；一条相关说明中的“公理”改为“延续条件”；一条依存说明中的标签 G0 改为生生之意义（Lean 名 g0_iff 与外围的 G0 保留）；一条相关说明中的 J（作为 PracticalJudgment 的 J1–J4 之标签）改为实践承诺。主张不变。"
     }
   ]
 }

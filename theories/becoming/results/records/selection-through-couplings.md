@@ -39,7 +39,7 @@
 
 - The laws do not derive who selects, what couples into the selector, whether an actual selection goes through the couplings, whether offspring follow the selection, or whether reaching beyond is chosen.
 - The more couples in, the larger the coupling closure and the smaller the gap: the law's force lies entirely in what actually couples into the selector.
-- The main law is near-definitional and the blindness a one-line corollary of the theorems of testing-within-registration; the contribution is conceptual.
+- The main law is near-definitional and the blindness a one-line corollary of the theorems of testing-within-couplings; the contribution is conceptual.
 - share_rises_through is an application, and its combination with transmission and an open world is a reading; where others respond to the stock a selection rests on, the response hypotheses can fail.
 - The formation of arbitrary physical primitives and more general rule-changing capture keep their own scope.
 - Known as the proxy problem (Goodhart 1975, Amodei and others 2016, Manheim and Garrabrant 2018); Zhuang and Hadfield-Menell (NeurIPS 2020) prove a stronger, quantitative form.
@@ -155,6 +155,7 @@ Aliases: `Becoming.Web.SelectsThrough`, `Becoming.Web.ScoresThrough`, `Becoming.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one does_not_show item added. The claim and its premises are unchanged.
 - 21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosure, ClosedUnder to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the third boundary cited testing-within-registration, a former id; it now cites testing-within-couplings.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](selection-through-couplings.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -165,4 +166,4 @@ Aliases: `Becoming.Web.SelectsThrough`, `Becoming.Web.ScoresThrough`, `Becoming.
 
 </details>
 
-Documentary review UTC: `2026-10-20T07:47:06+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:44:50+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

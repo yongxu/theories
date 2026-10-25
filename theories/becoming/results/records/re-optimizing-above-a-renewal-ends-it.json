@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-21T00:10:59+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "en": "Over a course in which a part re-optimizes at every step, a dependence on a condition beyond, renewed by r at its need and at most r below, is lost exactly where the draw exceeds r, for good; the renewal below the need decides only the drawers' take; several optimizers jointly above r lose it.",
     "zh": "部分每步重新优化的过程中，对之外条件的依存（在其需要处每步更新 r、其下至多 r）恰在那里的汲取超出 r 时永久丧失；需要之下的更新只决定汲取者所取；合计超出 r 的多个优化者使其丧失。"
@@ -186,8 +186,8 @@
       "kind": "scope"
     },
     {
-      "en": "An optimizer ranking courses rather than steps (a sole owner), an equilibrium of the course rather than mutual best responses step by step, and how optimizers come to them.",
-      "zh": "对过程而非对步排序的优化者（唯一所有者）、过程的均衡而非逐步的相互最优回应，以及优化者如何达到它们。",
+      "en": "An optimizer ranking courses rather than steps (Scott's sole owner, in the fisheries literature), an equilibrium of the course rather than mutual best responses step by step, and how optimizers come to them.",
+      "zh": "对过程而非对步排序的优化者（渔业文献中 Scott 所谓唯一所有者）、过程的均衡而非逐步的相互最优回应，以及优化者如何达到它们。",
       "kind": "scope"
     },
     {
@@ -807,6 +807,10 @@
     {
       "en": "23 October 2026, EC6 (study section 375): Optimum.ends_within is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
       "zh": "2026年10月23日，EC6（研究第 375 节）：Optimum.ends_within 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): a boundary names the source of the term 'sole owner' (Scott, in the fisheries literature) instead of using it as the theory's own word for an optimizer ranking courses. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条界限写明“唯一所有者”一词的来源（渔业文献中的 Scott），不再把它当作本理论对按过程排序之优化者的用词。规律未变。"
     }
   ]
 }

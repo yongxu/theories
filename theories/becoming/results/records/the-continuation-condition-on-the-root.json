@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T22:05:14+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "en": "Stated on continuation relative to a class, the condition is that every occurrence lies within every center's continuing under the class; held de se along a relation, it is exactly the root's condition at the one of that relation taken as the net.",
     "zh": "以相对于类之续而述，条件为：凡事皆在每一中心于此类下之续中；依一关系 de se 而持，恰即以该关系为网、于其一下之根之条件。"
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "en": "Lying within a closure along a relation is being reached on a line under the one of that relation; so the condition held de se along a relation is exactly the root's condition at the one of that relation taken as the net, and on the own-closure reading of claims living significance follows, with S0, both neutralities and, where something lives, a seed.",
+      "en": "Lying within a closure along a relation is being reached on a line under the one of that relation; so the condition held de se along a relation is exactly the root's condition at the one of that relation taken as the net, and on the own-closure reading of claims living significance follows, with self-significance, both neutralities and, where something lives, a seed.",
       "zh": "在一关系之闭包内，即在该关系之一下之线所及；故依一关系 de se 而持之条件，恰即以该关系为网、于其一下之根之条件；以自闭包读断言者，生之有义由之，并自之有义、二中立，有生则有种。",
       "declarations": [
         "Becoming.ownClosure_unrestricted_iff_noOutside",
@@ -168,7 +168,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "a29512c66c458a2cb425316c80ee980c251526114f5c9304a0f2a1a300f1a10a"
+      "sha256": "ce19d5e94af601d69a4a6141431e06b68b32ef9811de9a088c3934f7a98584d6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
@@ -202,6 +202,10 @@
     {
       "en": "24 October 2026: added (GS2), from the review of the root against its two source texts, with SW's proposal 3 and PW's item 3; study section 392.",
       "zh": "2026年10月24日：新增（GS2），出自根与其二篇来源之对照审查，并取 SW 之提议三与 PW 之第三项；研究第 392 节。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label S0 in the third law reads self-significance; the law is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第三条律英文中的退役标签 S0 改为自身意义；律不变。"
     }
   ]
 }

@@ -8,10 +8,14 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T05:50:00+00:00",
+  "reviewed_at_utc": "2026-10-25T14:35:54+00:00",
+  "statement": {
+    "en": "An observable read through a reduction is single-valued exactly where it agrees across what the reduction merges, so no map restores two different configurations it merges; a real-amplitude dephasing fragment is an instance, and retaining the joint state with a blank register permits exact reversal.",
+    "zh": "可观测量经约化所读出者单值，恰当它在约化所合并者上一致；故没有映射能恢复约化所合并的两个不同构形。一个实振幅退相干片段是其实例；保留与空白寄存器的共同态则可精确逆转。"
+  },
   "claim": {
-    "zh": "对每个约化与观测：观测经约化读出的是单值，恰在观测于约化所合并者之间相同之处；在约化合并的两个构型上，在两处都对的解码器存在恰当观测在那里一致，所以没有映射能恢复它合并的两个不同构型。在明示实振幅片段中，受控 X/Z 次序与完全退相干保留控制分支权重但改变固定测量响应；对角线合并加号响应不同的相干与退化矩阵，故仅凭对角线的解码失败；退相干合并制备与相干矩阵，故没有统一逆映射：两者都是实例。与空白寄存器的可逆交互经约化恰好实现退相干；保留共同状态允许精确反转。",
-    "en": "For every reduction and observable: what the observable reads through the reduction is single-valued exactly where it agrees across what the reduction merges; on two configurations the reduction merges, a decoder right at both exists exactly when the observable agrees there, so no map restores two different configurations it merges. In the specified real-amplitude fragment, controlled X/Z order and complete dephasing preserve control branch weights while changing a fixed measurement response; the diagonal merges the coherent and degraded matrices, whose plus responses differ, so a diagonal-only decoder fails, and dephasing merges the prepared and coherent matrices, so no uniform inverse exists: both are instances. A reversible interaction with a blank register realizes the dephasing on reduction, and retaining the joint state permits exact reversal."
+    "zh": "对每个约化与观测：观测经约化读出的是单值，恰在观测于约化所合并者之间相同之处；在约化合并的两个构型上，在两处都对的解码器存在恰当观测在那里一致，所以没有映射能恢复它合并的两个不同构型。在明示实振幅片段中，受控 X/Z 次序与完全退相干保留控制分支权重但改变固定测量响应；对角线合并加号响应不同的相干与退化矩阵，故仅凭对角线的解码失败；退相干合并制备与相干矩阵，故没有统一逆映射：两者都是实例。与空白寄存器的可逆交互经约化恰好实现退相干；保留共同状态允许精确反转；沿运行，退相干不是无损的，以后所读的任何东西都不能恢复制备与相干之运行从何处开始。",
+    "en": "For every reduction and observable: what the observable reads through the reduction is single-valued exactly where it agrees across what the reduction merges; on two configurations the reduction merges, a decoder right at both exists exactly when the observable agrees there, so no map restores two different configurations it merges. In the specified real-amplitude fragment, controlled X/Z order and complete dephasing preserve control branch weights while changing a fixed measurement response; the diagonal merges the coherent and degraded matrices, whose plus responses differ, so a diagonal-only decoder fails, and dephasing merges the prepared and coherent matrices, so no uniform inverse exists: both are instances. A reversible interaction with a blank register realizes the dephasing on reduction, and retaining the joint state permits exact reversal; along runs, dephasing is not lossless, and nothing read later restores where the prepared and coherent runs began."
   },
   "hypotheses": [
     {
@@ -29,19 +33,19 @@
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dephasing.lean",
   "aliases": [
-    "Generative.OperativeCoherence.switched_density (retired module)",
-    "Generative.OperativeCoherence.dephase_keeps_response_iff (retired module)",
-    "Generative.OperativeCoherence.no_diagonal_response_decoder (retired module)",
-    "Generative.OperativeCoherence.no_uniform_dephase_inverse (retired module)",
-    "Generative.OperativeCoherence.recording_reduces_to_dephase (retired module)",
-    "Generative.OperativeCoherence.joint_reversal_restores_control (retired module)",
     "Becoming.Readout.reading_single_iff",
     "Becoming.Readout.decodes_iff_of_section",
     "Becoming.Readout.decoder_pair_iff",
     "Becoming.Readout.no_restore",
-    "Becoming.Instances.diagonal_no_decoder (retired module)",
-    "Becoming.Instances.dephase_no_restore (retired module)",
-    "Becoming.Courses.runs_no_restore"
+    "Becoming.Courses.runs_no_restore",
+    "Becoming.Dephasing.switched_density",
+    "Becoming.Dephasing.dephase_keeps_response_iff",
+    "Becoming.Dephasing.no_diagonal_response_decoder",
+    "Becoming.Dephasing.no_uniform_dephase_inverse",
+    "Becoming.Dephasing.recording_reduces_to_dephase",
+    "Becoming.Dephasing.joint_reversal_restores_control",
+    "Becoming.Dephasing.not_lossless",
+    "Becoming.Dephasing.no_restore_along"
   ],
   "dependencies": [],
   "related": [
@@ -109,7 +113,9 @@
         "Becoming.Dephasing.retained_response_exact",
         "Becoming.Dephasing.dephase_keeps_response_iff",
         "Becoming.Dephasing.recording_reduces_to_dephase",
-        "Becoming.Dephasing.joint_reversal_restores_control"
+        "Becoming.Dephasing.joint_reversal_restores_control",
+        "Becoming.Dephasing.not_lossless",
+        "Becoming.Dephasing.no_restore_along"
       ]
     },
     {
@@ -321,6 +327,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Instances and OperativeCoherence) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Courses, Becoming.Dephasing and Becoming.Readout). 8 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Instances and OperativeCoherence）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Courses, Becoming.Dephasing and Becoming.Readout）。8 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added; the claim adds what the core states along runs (dephasing is not lossless, and nothing read later restores where the prepared and coherent runs began). The aliases naming retired modules (Generative.OperativeCoherence.switched_density (retired module); Generative.OperativeCoherence.dephase_keeps_response_iff (retired module); Generative.OperativeCoherence.no_diagonal_response_decoder (retired module); Generative.OperativeCoherence.no_uniform_dephase_inverse (retired module); Generative.OperativeCoherence.recording_reduces_to_dephase (retired module); Generative.OperativeCoherence.joint_reversal_restores_control (retired module); Becoming.Instances.diagonal_no_decoder (retired module); Becoming.Instances.dephase_no_restore (retired module)) dropped, their declarations staying in the provenance references, and the core Dephasing laws added in their place.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述；主张加入核心沿运行所陈述者（退相干不是无损的，以后所读的任何东西都不能恢复制备与相干之运行从何处开始）。指向已退休模块的别名删去（其声明仍在来历引用中），代以核心 Dephasing 之律。"
     }
   ]
 }

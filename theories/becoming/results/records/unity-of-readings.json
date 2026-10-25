@@ -115,8 +115,8 @@
     "en": "Relations among claims as the flow and web of Contextual.world; continuous time and real amounts; an independent review."
   },
   "correspondence": {
-    "zh": "Ren 2026-10-14：“why do we need \"World\"? wasn't this about the whole and its parts, about everything?”，“no hard role has to be so - right now i think we are trapped by our speculative conditions”，“for us, non-Euclidean, or causality, still work”；对从关系开始的三步重建：“please, finish all”。本结果是第三步：一个统一的定理形式，语境中的读法为一般情形，World 为读法粘合的情形；意义以同样的不变标准读作两分。读法（AI 的，依 Ren 的交托采用）：核心在许多类型上陈述的是一个展开的读法；原来世界的一个前提，现在是一个部分的状态：其余是否闲置；那一条公理（§6.4 的条件）在规律所满足的不变之下归于预设，即 Ren 2026-10-10 所说的“belief”，没有它自身“can not justify itself”。最后这一读法只是类比（Ren 2026-10-18 取，DELEGATED-CHOICES D43，审查所见 D-e）：Novelty 对每个家族的量化不是 BoundaryInvariant，所以不支持不变之步，其根据仍开放。",
-    "en": "Ren, 14 October 2026: “why do we need \"World\"? wasn't this about the whole and its parts, about everything?”, “no hard role has to be so - right now i think we are trapped by our speculative conditions”, “for us, non-Euclidean, or causality, still work”; and, to the relation-first re-founding in three steps, “please, finish all”. This result is the third step: one theorem shape for unity, readings in context the general case and World the case where readings glue; significance read as a dichotomy under the same standard of invariance. Readings (the AI's, adopted on Ren's delegation): what the core states on many types are readings of one unfolding; what was a premise of the world is now a state of a part, whether the rest is idle; and under the invariance the laws meet, the one axiom (the condition of section 6.4) comes to the presupposition, the “belief” without which, Ren wrote on 10 October 2026, the self “can not justify itself”. That last reading is an analogy only (taken by Ren on 18 October 2026, DELEGATED-CHOICES D43, review finding D-e): Novelty's quantification over every family is not BoundaryInvariant, so it gives no support to the step of invariance, whose warrant stays open."
+    "zh": "Ren 2026-10-14：“why do we need \"World\"? wasn't this about the whole and its parts, about everything?”，“no hard role has to be so - right now i think we are trapped by our speculative conditions”，“for us, non-Euclidean, or causality, still work”；对从关系开始的三步重建：“please, finish all”。本结果是第三步：一个统一的定理形式，语境中的读法为一般情形，World 为读法粘合的情形；意义以同样的不变标准读作两分。读法（AI 的，依 Ren 的交托采用）：核心在许多类型上陈述的是一个展开的读法；原来世界的一个前提，现在是一个部分的状态：其余是否闲置；延续条件（§6.4）在规律所满足的不变之下归于预设，即 Ren 2026-10-10 所说的“belief”，没有它自身“can not justify itself”。最后这一读法只是类比（Ren 2026-10-18 取，DELEGATED-CHOICES D43，审查所见 D-e）：Novelty 对每个家族的量化不是 BoundaryInvariant，所以不支持不变之步，其根据仍开放。",
+    "en": "Ren, 14 October 2026: “why do we need \"World\"? wasn't this about the whole and its parts, about everything?”, “no hard role has to be so - right now i think we are trapped by our speculative conditions”, “for us, non-Euclidean, or causality, still work”; and, to the relation-first re-founding in three steps, “please, finish all”. This result is the third step: one theorem shape for unity, readings in context the general case and World the case where readings glue; significance read as a dichotomy under the same standard of invariance. Readings (the AI's, adopted on Ren's delegation): what the core states on many types are readings of one unfolding; what was a premise of the world is now a state of a part, whether the rest is idle; and under the invariance the laws meet, the continuation condition (section 6.4) comes to the presupposition, the “belief” without which, Ren wrote on 10 October 2026, the self “can not justify itself”. That last reading is an analogy only (taken by Ren on 18 October 2026, DELEGATED-CHOICES D43, review finding D-e): Novelty's quantification over every family is not BoundaryInvariant, so it gives no support to the step of invariance, whose warrant stays open."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean",
   "aliases": [
@@ -206,8 +206,8 @@
       },
       "interface": {
         "output": {
-          "zh": "不变恰是从预设到公理的条件句。",
-          "en": "Invariance is exactly the conditional from presupposition to axiom."
+          "zh": "不变恰是从预设到延续条件的条件句。",
+          "en": "Invariance is exactly the conditional from presupposition to the continuation condition."
         },
         "input": {
           "zh": "在同样的标准下意义不停在边界上。",
@@ -355,7 +355,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.bounded"
       ]
@@ -506,6 +506,12 @@
       "role": "receipt",
       "sha256": "5b95161950a33c0786cd1b0deb2afc0d821998ca4a4420c3a594d048252c57fb",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -574,7 +580,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -637,6 +643,10 @@
     {
       "en": "20 October 2026, R36 (the chapter, once): the canonical chapter was restructured, its 20 October edition frozen in theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md; this record's citations of the old section numbering re-pointed by content (section 6.15 to 6.4). The claim is unchanged.",
       "zh": "2026年10月20日，R36（本章只陈述一次）：规范章节重排，10月20日版冻结于 theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md；本记录对旧节号的引用按内容重指（§6.15 改为 §6.4）。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label 'the one axiom' in the correspondence (AI text) and 'axiom' in a dependency interface read the continuation condition; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应（AI 文字）中的“那一条公理”与一条依赖接口中的“公理”改为延续条件；主张不变。"
     }
   ],
   "text_versions": [

@@ -15,8 +15,8 @@
   },
   "laws": [
     {
-      "zh": "在依存网上，一个形成跨某步生起，当它在该步不活跃、在其后活跃；生成不息，当某个形成在任意晚的步生起（同一形成可以再生起）。生起（变为活跃）是生生第二个“生”的一种读法的形式载体（作者的读法）。",
-      "en": "On a web of dependence, a formation arises across a step when it is inactive at the step and active after it; generation is unceasing when some formation arises at arbitrarily late steps (the same formation may arise again). Arising, becoming active, is the formal carrier of one reading of the second 生 of 生生 (the author's reading).",
+      "zh": "在依存网上，一个形成跨某步生起，当它在该步不活跃、在其后活跃；生成不息，当某个形成在任意晚的步生起（同一形成可以再生起）。生起（变为活跃）是生生第二个“生”的一种读法的形式载体（AI 的读法）。",
+      "en": "On a web of dependence, a formation arises across a step when it is inactive at the step and active after it; generation is unceasing when some formation arises at arbitrarily late steps (the same formation may arise again). Arising, becoming active, is the formal carrier of one reading of the second 生 of 生生 (the AI's reading).",
       "declarations": [
         "Becoming.Web.Arises",
         "Becoming.Web.Unceasing"
@@ -249,8 +249,8 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-P9B-P10-P11-REVIEW.md",
       "detail": {
-        "zh": "一次独立审查：所审的全部声明接受，公理报告为空；现名 Depletes 的定义不涉及生起的形成，严格性所引见证没有上升，“任何有限部分都不能独自不息”需要耗散，“生生的第二个生”与“以消耗进行的生成”未标为作者的读法，交换用语与 Ren 的纠正相冲突（已在整合文档中更正）。",
-        "en": "An independent review: every declaration under review is accepted with empty axiom reports; the definition now named Depletes did not involve the arising formation, the cited strictness witness had no rise, “no finite part is unceasing on its own” needs dissipation, “the second 生 of 生生” and “generation by consumption” were not labelled as the author's reading, and the vocabulary of exchange conflicted with Ren's corrections (corrected in the integration note)."
+        "zh": "一次独立审查：所审的全部声明接受，公理报告为空；现名 Depletes 的定义不涉及生起的形成，严格性所引见证没有上升，“任何有限部分都不能独自不息”需要耗散，“生生的第二个生”与“以消耗进行的生成”未标为 AI 的读法，交换用语与 Ren 的纠正相冲突（已在整合文档中更正）。",
+        "en": "An independent review: every declaration under review is accepted with empty axiom reports; the definition now named Depletes did not involve the arising formation, the cited strictness witness had no rise, “no finite part is unceasing on its own” needs dissipation, “the second 生 of 生生” and “generation by consumption” were not labelled as the AI's reading, and the vocabulary of exchange conflicted with Ren's corrections (corrected in the integration note)."
       }
     },
     {
@@ -274,8 +274,8 @@
     "en": "State rising possibility, diversity and complexity; connect the generation component to Frame.Novel and to the “new living content” of universal_reason; test whether a generation component can enter a reading of living without repeating what “no harm” gives up."
   },
   "correspondence": {
-    "zh": "Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。本结果只形式化“不断…生”，并把它陈述在整体的继续上，这是作者的读法；依 Ren 的交托，第二个“生”是进一步的生成，即能形成者连同进一步形成的条件与生成者，以消耗为条件的生起由比较分类，比较读的是能形成者（DELEGATED-CHOICES D3，以其在一个说明中的位置修订，D45）。在这些前提下，由不被更新的条件承担的生起不能不息；在继续的层面，这与 Ren 所说的生成与退化不重叠相合（作者的读法）；在单个事件的层面，Arises 包括以消耗为条件的生起。所以结果支持来源中 AI 修正说明的看法，即“持续形成新组织”的“持续”已排除消耗型；它没有证明每个非消耗的样式都能不息。作者进一步诠释：在耗散之下，任何有限部分都不能独自不息，不息属于更大的展开（AI 论证；对流中的取用，no-finite-part-bears-taking 在耗散前提下证明了它）。实际展开是否满足消耗前提、RenewedBy、流的对应与耗散，是经验问题。新名称是审查的建议，按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
-    "en": "Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). This result formalizes only “unceasingly … 生” and states it on the whole's continuation, which is the author's reading; on Ren's delegation the second 生 is further generation, what can form together with the conditions and generators of further forming, and arising on depletion is classed by the comparison, which reads what can form (DELEGATED-CHOICES D3, revised by its place in one account, D45). Under these premises, arising borne by unrenewed conditions cannot be unceasing; at the level of continuation this accords with Ren's statement that generation and degeneration do not overlap (the author's reading), while at the level of single events Arises includes arising on a consumed condition. So the result supports the source's AI correction note that the “持续” of “持续形成新组织” already excludes the consuming type; it does not show that every non-consuming pattern can be unceasing. The author further interprets: under dissipation no finite part is unceasing on its own, and unceasing generation belongs to a larger unfolding (an AI argument; for taking in flows, no-finite-part-bears-taking proves it under the dissipation premise). Whether actual unfoldings meet the depletion premise, RenewedBy, the flow correspondence and dissipation is an empirical question. The new names are the reviewer's suggestions, adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
+    "zh": "Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。本结果只形式化“不断…生”，并把它陈述在整体的继续上，这是 AI 的读法；按 AI 的读法，第二个“生”是进一步的生成，即能形成者连同进一步形成的条件与生成者，以消耗为条件的生起由比较分类，比较读的是能形成者（DELEGATED-CHOICES D3，以其在一个说明中的位置修订，D45）。在这些前提下，由不被更新的条件承担的生起不能不息；在继续的层面，这与 Ren 所说的生成与退化不重叠相合（AI 的读法）；在单个事件的层面，Arises 包括以消耗为条件的生起。所以结果支持来源中 AI 修正说明的看法，即“持续形成新组织”的“持续”已排除消耗型；它没有证明每个非消耗的样式都能不息。AI 进一步诠释：在耗散之下，任何有限部分都不能独自不息，不息属于更大的展开（AI 论证；对流中的取用，no-finite-part-bears-taking 在耗散前提下证明了它）。实际展开是否满足消耗前提、RenewedBy、流的对应与耗散，是经验问题。新名称是审查的建议，按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
+    "en": "Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). This result formalizes only “unceasingly … 生” and states it on the whole's continuation, which is the AI's reading; in the AI's reading the second 生 is further generation, what can form together with the conditions and generators of further forming, and arising on depletion is classed by the comparison, which reads what can form (DELEGATED-CHOICES D3, revised by its place in one account, D45). Under these premises, arising borne by unrenewed conditions cannot be unceasing; at the level of continuation this accords with Ren's statement that generation and degeneration do not overlap (the AI's reading), while at the level of single events Arises includes arising on a consumed condition. So the result supports the source's AI correction note that the “持续” of “持续形成新组织” already excludes the consuming type; it does not show that every non-consuming pattern can be unceasing. The AI further interprets: under dissipation no finite part is unceasing on its own, and unceasing generation belongs to a larger unfolding (an AI argument; for taking in flows, no-finite-part-bears-taking proves it under the dissipation premise). Whether actual unfoldings meet the depletion premise, RenewedBy, the flow correspondence and dissipation is an empirical question. The new names are the reviewer's suggestions, adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
   "aliases": [
@@ -809,6 +809,10 @@
     {
       "en": "2026-10-20: 94 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/08d9d9908f3cdc5e/unceasing-generation-needs-renewal.json and in git.",
       "zh": "2026-10-20：94 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/08d9d9908f3cdc5e/unceasing-generation-needs-renewal.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): 'the author's reading' and 'the author further interprets' in a law, a counterexample and the correspondence read as the AI's, and the reading of the second 生 in the correspondence is the AI's instead of 'on Ren's delegation', so each reading keeps its AI label. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条律、一条反例与对应中的“作者的读法”“作者进一步诠释”改为 AI 的，对应中第二个“生”的读法由“依 Ren 的交托”改为 AI 的读法，使每个读法保留其 AI 标签。规律未变。"
     }
   ],
   "text_versions": [

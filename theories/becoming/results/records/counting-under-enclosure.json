@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T00:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
-    "zh": "被围住为变化定下界：从被围住的那一步起，活跃者连同有变化的步不多于那时所立者的总水平。有限世界与被围住的世界在一个选择之下计数规律相同，恰当这个选择约束变化且约束计数；起约束至多再加三条。",
-    "en": "Enclosure bounds change: from the step it holds, the relata active together with the steps of change stay within the total standing then. Finite and enclosed worlds have the same laws of counting under a selection exactly when it bounds change and binds counting; binding adds at most three more."
+    "zh": "被围住为变化定下界：从被围住的那一步起，活跃者连同有变化的步不多于那时所立者的总水平。有限世界与被围住的世界在一种取舍之下计数规律相同，恰当这种取舍约束变化且约束计数；起约束至多再加三条。",
+    "en": "Enclosure bounds change: from the step it holds, the relata active together with the steps of change stay within the total standing then. Finite and enclosed worlds have the same laws of counting under a choice exactly when it bounds change and binds counting; binding adds at most three more."
   },
   "laws": [
     {
@@ -98,8 +98,8 @@
       ]
     },
     {
-      "zh": "在每个前提选择之下：被围住的一步上只需平衡、耗散与体现，没有关系项活跃时那里所立者的总水平为零，任何成员开始立着都会使它下降，所以没有生起，不论谁给予、谁取用。",
-      "en": "Under each selection of the premises: at an enclosed step balance, dissipation and embodiment suffice, for with nothing active the total standing there is nothing and any member coming to stand would lower it, so nothing arises, whoever gives and whoever takes.",
+      "zh": "在每个前提之取舍之下：被围住的一步上只需平衡、耗散与体现，没有关系项活跃时那里所立者的总水平为零，任何成员开始立着都会使它下降，所以没有生起，不论谁给予、谁取用。",
+      "en": "Under each choice of the premises: at an enclosed step balance, dissipation and embodiment suffice, for with nothing active the total standing there is nothing and any member coming to stand would lower it, so nothing arises, whoever gives and whoever takes.",
       "declarations": [
         "Becoming.World.enclosed_binds_counting"
       ]
@@ -125,15 +125,15 @@
       ]
     },
     {
-      "zh": "称一个选择约束变化，若它选中平衡、体现与耗散。",
-      "en": "Say a selection bounds change when it selects balance, embodiment and dissipation.",
+      "zh": "称一种取舍约束变化，若它纳入平衡、体现与耗散。",
+      "en": "Say a choice bounds change when it chooses balance, embodiment and dissipation.",
       "declarations": [
         "Becoming.World.BoundsChange"
       ]
     },
     {
-      "zh": "所以在从某步起每步被围住的世界中，在八个前提的每个选择之下，对计数的一个逐点的性质在满足这个选择的每个世界的每个普查中成立，恰当它对每个满足两个条件的计数表成立：选择约束计数时，没有关系项活跃的一步上没有生起；选择约束变化时，从某步 T 起变化在一个界之内，且从 T 起没有关系项活跃的一步上没有生起。",
-      "en": "So in worlds with every step from some step on enclosed, under each selection of the eight premises a pointwise property of the counts holds of every census of every world meeting the selection exactly when it holds of every tally meeting two conditions: where the selection binds counting, nothing arises across a step at which nothing is active; where it bounds change, from some step T on change stays within a bound and nothing arises across a step at which nothing is active.",
+      "zh": "所以在从某步起每步被围住的世界中，在八个前提的每种取舍之下，对计数的一个逐点的性质在满足这种取舍的每个世界的每个普查中成立，恰当它对每个满足两个条件的计数表成立：取舍约束计数时，没有关系项活跃的一步上没有生起；取舍约束变化时，从某步 T 起变化在一个界之内，且从 T 起没有关系项活跃的一步上没有生起。",
+      "en": "So in worlds with every step from some step on enclosed, under each choice of the eight premises a pointwise property of the counts holds of every census of every world meeting the choice exactly when it holds of every tally meeting two conditions: where the choice binds counting, nothing arises across a step at which nothing is active; where it bounds change, from some step T on change stays within a bound and nothing arises across a step at which nothing is active.",
       "declarations": [
         "Becoming.World.enclosed_counting_under"
       ]
@@ -146,15 +146,15 @@
       ]
     },
     {
-      "zh": "不选耗散时，被围住不约束计数：变化界为零的被围住的队列实现其余条件下的每个计数表；缺平衡或缺体现时，不流动的队列每步都被围住。",
+      "zh": "不纳入耗散时，被围住不约束计数：变化界为零的被围住的队列实现其余条件下的每个计数表；缺平衡或缺体现时，不流动的队列每步都被围住。",
       "en": "Without dissipation enclosure leaves counting free: the enclosed queue with bound zero counts every tally meeting the other conditions; without balance or embodiment the still queues are enclosed at every step.",
       "declarations": [
         "Becoming.World.still_enclosed"
       ]
     },
     {
-      "zh": "所以被围住时，从某步起的变化界（连同此后没有关系项活跃的一步上没有生起）是一个选择之下的计数规律，恰当这个选择约束变化：不约束变化时，每步多一个的计数由满足这个选择、从某步起被围住的世界实现。",
-      "en": "So under enclosure a change bound from some step, with nothing arising from then on across a step at which nothing is active, is a law of counting under a selection exactly when it bounds change: where it does not, a count growing by one at every step is counted by a world meeting the selection and enclosed from some step on.",
+      "zh": "所以被围住时，从某步起的变化界（连同此后没有关系项活跃的一步上没有生起）是一种取舍之下的计数规律，恰当这种取舍约束变化：不约束变化时，每步多一个的计数由满足这种取舍、从某步起被围住的世界实现。",
+      "en": "So under enclosure a change bound from some step, with nothing arising from then on across a step at which nothing is active, is a law of counting under a choice exactly when it bounds change: where it does not, a count growing by one at every step is counted by a world meeting the choice and enclosed from some step on.",
       "declarations": [
         "Becoming.World.enclosed_change_bound_iff"
       ]
@@ -202,23 +202,23 @@
       ]
     },
     {
-      "zh": "所以在有限世界中，在八个前提的每个选择之下，对计数的一个逐点的性质在满足这个选择的每个有限世界的每个普查中成立，恰当它对每个满足三个条件的计数表成立：每步至多有某数个活跃；选择约束计数或约束变化时，没有关系项活跃的一步上没有生起；选择约束变化时，从第 0 步起变化在一个界之内。",
-      "en": "So in finite worlds, under each selection of the eight premises, a pointwise property of the counts holds of every census of every finite world meeting the selection exactly when it holds of every tally meeting three conditions: at most some number active at each step; where the selection binds counting or bounds change, nothing arising across a step at which nothing is active; where it bounds change, change within a bound from the first step.",
+      "zh": "所以在有限世界中，在八个前提的每种取舍之下，对计数的一个逐点的性质在满足这种取舍的每个有限世界的每个普查中成立，恰当它对每个满足三个条件的计数表成立：每步至多有某数个活跃；取舍约束计数或约束变化时，没有关系项活跃的一步上没有生起；取舍约束变化时，从第 0 步起变化在一个界之内。",
+      "en": "So in finite worlds, under each choice of the eight premises, a pointwise property of the counts holds of every census of every finite world meeting the choice exactly when it holds of every tally meeting three conditions: at most some number active at each step; where the choice binds counting or bounds change, nothing arising across a step at which nothing is active; where it bounds change, change within a bound from the first step.",
       "declarations": [
         "Becoming.World.finite_counting_under"
       ]
     },
     {
-      "zh": "“没有关系项活跃的一步上没有生起”在有限世界中是一个选择之下的规律，恰当这个选择选中平衡与体现，并选中只有活跃者给予或耗散；从第 0 步起的变化界是规律，恰当这个选择约束变化：每步替换一个成员的计数由满足其余任一选择的有限的环实现；所以 256 个选择在有限世界中给出三种规律。",
-      "en": "That nothing arises across a step at which nothing is active is a law in finite worlds under a selection exactly when it selects balance and embodiment, and only active relata giving or dissipation; a change bound from the first step is a law exactly where the selection bounds change, one member replaced at every step being counted by a finite ring meeting any other selection; so in finite worlds the 256 selections give three kinds of law.",
+      "zh": "“没有关系项活跃的一步上没有生起”在有限世界中是一种取舍之下的规律，恰当这种取舍纳入平衡与体现，并纳入只有活跃者给予或耗散；从第 0 步起的变化界是规律，恰当这种取舍约束变化：每步替换一个成员的计数由满足其余任一取舍的有限的环实现；所以 256 种取舍在有限世界中给出三种规律。",
+      "en": "That nothing arises across a step at which nothing is active is a law in finite worlds under a choice exactly when it chooses balance and embodiment, and only active relata giving or dissipation; a change bound from the first step is a law exactly where the choice bounds change, one member replaced at every step being counted by a finite ring meeting any other choice; so in finite worlds the 256 choices give three kinds of law.",
       "declarations": [
         "Becoming.World.finite_counting_binds_iff",
         "Becoming.World.finite_change_bound_iff"
       ]
     },
     {
-      "zh": "有限世界与从某步起被围住的世界在一个选择之下有相同的计数规律，恰当这个选择约束变化且约束计数：不约束变化时，每步多一个的计数由每步被围住的世界实现，不由任何有限世界实现；约束变化而不约束计数时，一个关系项在被围住之前从无到有地生起由被围住的世界实现，不由任何有限世界实现。",
-      "en": "Finite worlds and worlds enclosed from some step on have the same laws of counting under a selection exactly when it bounds change and binds counting: where it does not bound change, a count growing by one at every step is counted by a world enclosed at every step and by no finite world; where it bounds change without binding counting, one relatum arising from none before enclosure is counted by an enclosed world and by no finite world.",
+      "zh": "有限世界与从某步起被围住的世界在一种取舍之下有相同的计数规律，恰当这种取舍约束变化且约束计数：不约束变化时，每步多一个的计数由每步被围住的世界实现，不由任何有限世界实现；约束变化而不约束计数时，一个关系项在被围住之前从无到有地生起由被围住的世界实现，不由任何有限世界实现。",
+      "en": "Finite worlds and worlds enclosed from some step on have the same laws of counting under a choice exactly when it bounds change and binds counting: where it does not bound change, a count growing by one at every step is counted by a world enclosed at every step and by no finite world; where it bounds change without binding counting, one relatum arising from none before enclosure is counted by an enclosed world and by no finite world.",
       "declarations": [
         "Becoming.World.enclosed_iff_finite_counting_under",
         "Becoming.Queue.lone_settles"
@@ -233,15 +233,15 @@
       ]
     },
     {
-      "zh": "更一般地，从某步起被围住时，在每个选择 S 之下，对计数的一个逐点的性质在满足 S、从某步起被围住且 S 所选的每个前提都起约束的每个世界的每个普查中成立，恰当它对每个满足 World.enclosed_counting_under 的两个条件与 World.binding_counting_under 的三条的计数表成立。",
-      "en": "More generally, with enclosure from some step on, under each selection S, a pointwise property of the counts holds of every census of every world meeting S, enclosed from some step on, in which each premise S selects binds exactly when it holds of every tally meeting the two conditions of World.enclosed_counting_under and the three of World.binding_counting_under.",
+      "zh": "更一般地，从某步起被围住时，在每种取舍 S 之下，对计数的一个逐点的性质在满足 S、从某步起被围住且 S 所纳入的每个前提都起约束的每个世界的每个普查中成立，恰当它对每个满足 World.enclosed_counting_under 的两个条件与 World.binding_counting_under 的三条的计数表成立。",
+      "en": "More generally, with enclosure from some step on, under each choice S, a pointwise property of the counts holds of every census of every world meeting S, enclosed from some step on, in which each premise S chooses binds exactly when it holds of every tally meeting the two conditions of World.enclosed_counting_under and the three of World.binding_counting_under.",
       "declarations": [
         "Becoming.World.enclosed_binding_counting_under"
       ]
     },
     {
-      "zh": "被围住与起约束各自加上自己的规律，三条各自恰在与不被围住时相同的选择之下多出，因为生起可以在被围住之前。",
-      "en": "Enclosure and binding add their laws each on its own, each of the three under exactly the same selections as where nothing is enclosed, since what arises may arise before enclosure.",
+      "zh": "被围住与起约束各自加上自己的规律，三条各自恰在与不被围住时相同的取舍之下多出，因为生起可以在被围住之前。",
+      "en": "Enclosure and binding add their laws each on its own, each of the three under exactly the same choices as where nothing is enclosed, since what arises may arise before enclosure.",
       "declarations": [
         "Becoming.World.enclosed_binding_activity_iff",
         "Becoming.World.enclosed_binding_arising_iff",
@@ -249,7 +249,7 @@
       ]
     },
     {
-      "zh": "被围住时的见证：传递在每一步被围住，有损的队列从其给予之后一步起被围住；不选耗散时，队首在生起之后一步与自身再交换一个单位的队列在每一步被围住。",
+      "zh": "被围住时的见证：传递在每一步被围住，有损的队列从其给予之后一步起被围住；不纳入耗散时，队首在生起之后一步与自身再交换一个单位的队列在每一步被围住。",
       "en": "Witnesses under enclosure: the relay is enclosed at every step and the lossy queue from the step after its gift; without dissipation, a queue whose front exchanges one unit more each way with itself across the step after something joins is enclosed at every step.",
       "declarations": [
         "Becoming.World.relayQueue_enclosed",
@@ -259,7 +259,7 @@
       ]
     },
     {
-      "zh": "选中平衡、体现与耗散而不选只有活跃者给予与只有活跃者取用时，耗散只能在有所可失的封闭之步上起约束，于是队列在一个有关系项活跃、此后没有关系项活跃的一步上没有生起的步闭合，其队首在那一步多立一个单位并在跨这一步时失去它；其余情形用饱和的被围住的队列。",
+      "zh": "纳入平衡、体现与耗散而不纳入只有活跃者给予与只有活跃者取用时，耗散只能在有所可失的封闭之步上起约束，于是队列在一个有关系项活跃、此后没有关系项活跃的一步上没有生起的步闭合，其队首在那一步多立一个单位并在跨这一步时失去它；其余情形用饱和的被围住的队列。",
       "en": "With balance, embodiment and dissipation but neither only active relata giving nor only active relata taking, dissipation binds at a closed step only where something stands to be lost, so the queue closes at a step at which something is active, from which on nothing arises across a step at which nothing is active, its front standing one unit more there and shedding it across the step; otherwise the enclosed queue saturated.",
       "declarations": [
         "Becoming.Tally.occupied_from",
@@ -269,22 +269,22 @@
       ]
     },
     {
-      "zh": "没有有限世界使普查起约束，所以在选中普查的选择之下，有限世界中每个性质都是规律。",
-      "en": "No finite world binds the census, so under a selection with the census every property is a law in finite worlds.",
+      "zh": "没有有限世界使普查起约束，所以在纳入普查的取舍之下，有限世界中每个性质都是规律。",
+      "en": "No finite world binds the census, so under a choice with the census every property is a law in finite worlds.",
       "declarations": [
         "Becoming.World.finite_binding_census"
       ]
     },
     {
-      "zh": "在不选普查的每个选择 S 之下，对计数的一个逐点的性质在满足 S 且 S 所选的每个前提都起约束的每个有限世界的每个普查中成立，恰当它对每个满足 World.finite_counting_under 的三个条件、并满足以下三条的计数表成立：S 选中活动需要支持、只有活跃者给予或只有活跃者取用时有关系项活跃；S 选中体现时有某个生起；S 选中体现与有界传递，并选中只有活跃者给予、或同时选中只有活跃者取用与耗散时，在有关系项活跃的一步上有生起。",
-      "en": "Under each selection S without it, a pointwise property of the counts holds of every census of every finite world meeting S in which each premise S selects binds exactly when it holds of every tally meeting the three conditions of World.finite_counting_under and three more: something is active where S selects activity needing support, only active relata giving or only active relata taking; something arises where S selects embodiment; and something arises across a step at which something is active where S selects embodiment and bounded transmission with only active relata giving or with both only active relata taking and dissipation.",
+      "zh": "在不纳入普查的每种取舍 S 下，计数的逐点性质在满足 S、所纳入前提皆起约束的各有限世界的各普查中成立，恰当它对满足 World.finite_counting_under 三条件与下列三条之计数表皆成立：S 纳入活动需支持、只有活跃者给予或只有活跃者取用时有活跃者；纳入体现时有生起；纳入体现、有界传递，且纳入只有活跃者给予或兼纳入只有活跃者取用与耗散时，某步有活跃者且有生起。",
+      "en": "Under each choice S without it, a pointwise property of the counts holds of every census of every finite world meeting S in which each premise S chooses binds exactly when it holds of every tally meeting the three conditions of World.finite_counting_under and three more: something is active where S chooses activity needing support, only active relata giving or only active relata taking; something arises where S chooses embodiment; and something arises across a step at which something is active where S chooses embodiment and bounded transmission with only active relata giving or with both only active relata taking and dissipation.",
       "declarations": [
         "Becoming.World.finite_binding_counting_under"
       ]
     },
     {
-      "zh": "所以有限世界中起约束所加的，恰是有关系项活跃（选中活动需要支持、只有活跃者给予、只有活跃者取用或体现时）、有某个生起（选中体现时）与在有关系项活跃的一步上有生起；后者恰在选中体现，且选择约束计数或约束变化，或选中有界传递并选中只有活跃者给予、或同时选中只有活跃者取用与耗散时成立。",
-      "en": "So in finite worlds binding adds exactly that something is active (where activity needing support, only active relata giving, only active relata taking or embodiment is selected), that something arises (where embodiment is), and that something arises across a step at which something is active, exactly where embodiment is selected and the selection binds counting or bounds change, or selects bounded transmission with only active relata giving or with both only active relata taking and dissipation.",
+      "zh": "所以有限世界中起约束所加的，恰是有关系项活跃（纳入活动需要支持、只有活跃者给予、只有活跃者取用或体现时）、有某个生起（纳入体现时）与在有关系项活跃的一步上有生起；后者恰在纳入体现，且取舍约束计数或约束变化，或纳入有界传递并纳入只有活跃者给予、或同时纳入只有活跃者取用与耗散时成立。",
+      "en": "So in finite worlds binding adds exactly that something is active (where activity needing support, only active relata giving, only active relata taking or embodiment is chosen), that something arises (where embodiment is), and that something arises across a step at which something is active, exactly where embodiment is chosen and the choice binds counting or bounds change, or chooses bounded transmission with only active relata giving or with both only active relata taking and dissipation.",
       "declarations": [
         "Becoming.World.finite_binding_activity_iff",
         "Becoming.World.finite_binding_arising_iff",
@@ -299,7 +299,7 @@
       ]
     },
     {
-      "zh": "见证是有限的环，依存网饱和：不选体现时，环旁的传递把位置 1 所立的两个单位之一交给位置 0，失去另一个，不论位置是否被占。",
+      "zh": "见证是有限的环，依存网饱和：不纳入体现时，环旁的传递把位置 1 所立的两个单位之一交给位置 0，失去另一个，不论位置是否被占。",
       "en": "The finite witnesses are rings with saturated webs: without embodiment, a relay beside a ring handing one of the two units place 1 stands at on to place 0 and losing the other, whatever holds the places.",
       "declarations": [
         "Becoming.World.relayRing",
@@ -307,7 +307,7 @@
       ]
     },
     {
-      "zh": "选中体现、不选平衡，并选中耗散或只有活跃者给予时，有损的环的队首位置跨一步与自身及每个开始被占的位置各交换一个单位，再失去一个单位。",
+      "zh": "纳入体现、不纳入平衡，并纳入耗散或只有活跃者给予时，有损的环的队首位置跨一步与自身及每个开始被占的位置各交换一个单位，再失去一个单位。",
       "en": "With embodiment, without balance and with dissipation or only active relata giving, a lossy ring whose front's place, across one step, exchanges a unit each way with itself and each place coming to be held and loses one unit more.",
       "declarations": [
         "Becoming.World.lossyRing",
@@ -315,8 +315,8 @@
       ]
     },
     {
-      "zh": "选中体现、不选耗散，且不选平衡时也不选只有活跃者给予时，平衡的环在生起之后一步让队首的位置与自身再交换一个单位；选中平衡、体现与耗散时，饱和的有限队列（World.finiteQueue_saturated_binds）。",
-      "en": "With embodiment, without dissipation, and without only active relata giving where balance is not selected, a balanced ring whose front's place exchanges one unit more each way with itself across the step after something arises; with balance, embodiment and dissipation, the finite queue with its web saturated (World.finiteQueue_saturated_binds).",
+      "zh": "纳入体现、不纳入耗散，且不纳入平衡时也不纳入只有活跃者给予时，平衡的环在生起之后一步让队首的位置与自身再交换一个单位；纳入平衡、体现与耗散时，饱和的有限队列（World.finiteQueue_saturated_binds）。",
+      "en": "With embodiment, without dissipation, and without only active relata giving where balance is not chosen, a balanced ring whose front's place exchanges one unit more each way with itself across the step after something arises; with balance, embodiment and dissipation, the finite queue with its web saturated (World.finiteQueue_saturated_binds).",
       "declarations": [
         "Becoming.World.exchangingRing",
         "Becoming.World.exchangingRing_binding"
@@ -402,29 +402,29 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counting.lean",
       "detail": {
-        "zh": "World.closingQueue 与 World.enclosed_counting_under：选中平衡、体现与耗散而只有活跃者给予与只有活跃者取用都不选时，被围住之前的生起不受约束，在第 T 步闭合的队列中 T 之前可以有成员加入空队；不选耗散时，变化界为零的被围住的队列实现每个计数表，被围住不加任何规律。",
-        "en": "World.closingQueue and World.enclosed_counting_under: with balance, embodiment and dissipation selected but neither only active relata giving nor taking, arising before enclosure is unconstrained, members joining an empty queue before step T in the queue closing at T; without dissipation, the enclosed queue with bound zero counts every tally, and enclosure adds no law."
+        "zh": "World.closingQueue 与 World.enclosed_counting_under：纳入平衡、体现与耗散而只有活跃者给予与只有活跃者取用都不纳入时，被围住之前的生起不受约束，在第 T 步闭合的队列中 T 之前可以有成员加入空队；不纳入耗散时，变化界为零的被围住的队列实现每个计数表，被围住不加任何规律。",
+        "en": "World.closingQueue and World.enclosed_counting_under: with balance, embodiment and dissipation chosen but neither only active relata giving nor taking, arising before enclosure is unconstrained, members joining an empty queue before step T in the queue closing at T; without dissipation, the enclosed queue with bound zero counts every tally, and enclosure adds no law."
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counting.lean",
       "detail": {
-        "zh": "World.finite_change_bound_iff 与 World.enclosed_iff_finite_counting_under：每步替换一个成员的计数由满足除体现、除平衡或除耗散外全部前提的有限的环实现，所以变化界只在选择约束变化时是有限世界的规律；每步多一个的计数由每步被围住的队列实现，Queue.lone_settles 的一个关系项在被围住之前从无到有地生起，所以在其余的选择之下有限世界与被围住的世界的计数规律不同。",
-        "en": "World.finite_change_bound_iff and World.enclosed_iff_finite_counting_under: one member replaced at every step is counted by finite rings meeting every premise but embodiment, balance or dissipation, so a change bound is a law of finite worlds only where the selection bounds change; a count growing by one at every step is counted by queues enclosed at every step, and in Queue.lone_settles one relatum arises from none before enclosure, so under the other selections finite and enclosed worlds have different laws of counting."
+        "zh": "World.finite_change_bound_iff 与 World.enclosed_iff_finite_counting_under：每步替换一个成员的计数由满足除体现、除平衡或除耗散外全部前提的有限的环实现，所以变化界只在取舍约束变化时是有限世界的规律；每步多一个的计数由每步被围住的队列实现，Queue.lone_settles 的一个关系项在被围住之前从无到有地生起，所以在其余的取舍之下有限世界与被围住的世界的计数规律不同。",
+        "en": "World.finite_change_bound_iff and World.enclosed_iff_finite_counting_under: one member replaced at every step is counted by finite rings meeting every premise but embodiment, balance or dissipation, so a change bound is a law of finite worlds only where the choice bounds change; a count growing by one at every step is counted by queues enclosed at every step, and in Queue.lone_settles one relatum arises from none before enclosure, so under the other choices finite and enclosed worlds have different laws of counting."
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counting.lean",
       "detail": {
-        "zh": "World.finite_binding_joint_iff 与 World.finite_binding_census：选中体现，而选择既不约束计数与变化、也不选中有界传递连同只有活跃者给予或只有活跃者取用与耗散时，一个关系项在第一步从无到有地生起并留下（Queue.lone），由一个满足选择且所选前提都起约束的有限世界实现，生起之步上没有关系项活跃；所以第 3 条只在所说的选择之下是规律。在有限世界中它在比不被围住时（whole-law-of-counting）更多的选择之下成立：选中体现、平衡与耗散而不选只有活跃者给予与取用时，或选中体现、只有活跃者取用、耗散与有界传递而不选平衡与只有活跃者给予时。选中普查时没有有限世界使所选前提都起约束，规律空洞地是一切性质。",
-        "en": "World.finite_binding_joint_iff and World.finite_binding_census: with embodiment selected but a selection neither binding counting nor bounding change, nor selecting bounded transmission with only active relata giving or with only active relata taking and dissipation, one relatum arising from none across the first step and staying (Queue.lone) is counted by a finite world meeting the selection in which each selected premise binds, nothing being active at the step it arises; so the third law is a law only under the selections named. In finite worlds it holds under more selections than where nothing is enclosed (whole-law-of-counting): with embodiment, balance and dissipation but neither only active relata giving nor taking, and with embodiment, only active relata taking, dissipation and bounded transmission but neither balance nor only active relata giving. With the census selected no finite world binds the selected premises, and every property is vacuously a law."
+        "zh": "World.finite_binding_joint_iff 与 World.finite_binding_census：纳入体现，而取舍既不约束计数与变化、也不纳入有界传递连同只有活跃者给予或只有活跃者取用与耗散时，一个关系项在第一步从无到有地生起并留下（Queue.lone），由一个满足取舍且所纳入前提都起约束的有限世界实现，生起之步上没有关系项活跃；所以第 3 条只在所说的取舍之下是规律。在有限世界中它在比不被围住时（whole-law-of-counting）更多的取舍之下成立：纳入体现、平衡与耗散而不纳入只有活跃者给予与取用时，或纳入体现、只有活跃者取用、耗散与有界传递而不纳入平衡与只有活跃者给予时。纳入普查时没有有限世界使所纳入前提都起约束，规律空洞地是一切性质。",
+        "en": "World.finite_binding_joint_iff and World.finite_binding_census: with embodiment chosen but a choice neither binding counting nor bounding change, nor choosing bounded transmission with only active relata giving or with only active relata taking and dissipation, one relatum arising from none across the first step and staying (Queue.lone) is counted by a finite world meeting the choice in which each chosen premise binds, nothing being active at the step it arises; so the third law is a law only under the choices named. In finite worlds it holds under more choices than where nothing is enclosed (whole-law-of-counting): with embodiment, balance and dissipation but neither only active relata giving nor taking, and with embodiment, only active relata taking, dissipation and bounded transmission but neither balance nor only active relata giving. With the census chosen no finite world binds the chosen premises, and every property is vacuously a law."
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counting.lean",
       "detail": {
-        "zh": "World.enclosed_binding_joint_iff：选中体现、平衡与耗散，而不约束计数、也不选中只有活跃者给予与有界传递时，同一个从无到有生起并留下的关系项（Queue.lone）由一个从第 1 步起被围住、满足选择且所选前提都起约束的世界实现（失去多立单位的队列，其队首在第 1 步失去它多立的单位），生起之步上没有关系项活跃：在有限世界中这里第 3 条是规律，从某步起被围住时不是，因为生起可以在被围住之前。",
-        "en": "World.enclosed_binding_joint_iff: with embodiment, balance and dissipation selected but a selection neither binding counting nor selecting only active relata giving and bounded transmission, the same relatum arising from none and staying (Queue.lone) is counted by a world enclosed from the first step on, meeting the selection, in which each selected premise binds (a shedding queue, whose front sheds its spare unit across the first step), nothing being active at the step it arises: in finite worlds the third law holds here, under enclosure from some step on it does not, since what arises may arise before enclosure."
+        "zh": "World.enclosed_binding_joint_iff：纳入体现、平衡与耗散，而不约束计数、也不纳入只有活跃者给予与有界传递时，同一个从无到有生起并留下的关系项（Queue.lone）由一个从第 1 步起被围住、满足取舍且所纳入前提都起约束的世界实现（失去多立单位的队列，其队首在第 1 步失去它多立的单位），生起之步上没有关系项活跃：在有限世界中这里第 3 条是规律，从某步起被围住时不是，因为生起可以在被围住之前。",
+        "en": "World.enclosed_binding_joint_iff: with embodiment, balance and dissipation chosen but a choice neither binding counting nor choosing only active relata giving and bounded transmission, the same relatum arising from none and staying (Queue.lone) is counted by a world enclosed from the first step on, meeting the choice, in which each chosen premise binds (a shedding queue, whose front sheds its spare unit across the first step), nothing being active at the step it arises: in finite worlds the third law holds here, under enclosure from some step on it does not, since what arises may arise before enclosure."
       }
     }
   ],
@@ -445,8 +445,8 @@
     "en": "Local forms of the other laws, by the zero-premise plan."
   },
   "correspondence": {
-    "zh": "停息定理（ceasing-needs-arising、continued-change-needs-openness）说被围住时变化不再复现；本结果给出它的定量形式，以及它在计数上的全部内容：被围住的展开中，计数只多受一个变化界约束，其余由计数表与八个前提给出（whole-law-of-counting）；在全部八个前提之下，在计数上有限世界与从某步起被围住的世界无法区分，在一个前提选择之下恰在它约束变化且约束计数时无法区分；被围住所加的恰在选中平衡、体现与耗散时出现，有限所加的还有计数的界，以及耗散从第一步起对生起的约束。作者的读法（AI 论证）：变化界就是被围住时所立者总水平的逐步耗散在计数上的样子；在被围住的展开中，每一次形成或消解都耗去关系中立着的一些东西，能不息地变化的是开放的展开（continued-change-needs-openness）；没有耗散，封闭的家族可以不取用而给予，被围住就不再约束计数；有限的世界从第一步起就被围住，所以在那里不需要只有活跃者取用，耗散连同平衡与体现就使生起需要在场者。这是活动的计数，英文名称 arising/ceasing 经 Ren 确认（2026-10-09-arising-ceasing-names；中文 生起／止息 是 AI 的译名）；它不是 Ren 提议中的“生成的”“退化的”（Ren 写道“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，以“吧”预设二者不重叠，所以这一读法不是其所指；二者读作对能形成者的扩大与缩小，DELEGATED-CHOICES D2）；它也不评价生起、止息或停息。",
-    "en": "The rest theorem (ceasing-needs-arising, continued-change-needs-openness) says change does not recur under enclosure; this result gives its quantitative form and all it says of counting: in an enclosed unfolding the counts are constrained by a change bound and by nothing more than the tally and the eight premises (whole-law-of-counting); under all eight premises, in counting, finite worlds cannot be told from worlds enclosed from some step on, and under a selection of the premises they cannot be told apart exactly where it bounds change and binds counting; what enclosure adds appears exactly where balance, embodiment and dissipation are selected, and finiteness adds a bound on the count and the constraint of dissipation on arising from the first step. The author's reading (an AI argument): the change bound is what the stepwise dissipation of the total standing under enclosure looks like in the counts; in an enclosed unfolding every forming or dissolving spends something standing in the relations, and what can change without end is the open unfolding (continued-change-needs-openness); without dissipation a closed family can be given to without taking, and enclosure no longer constrains counting; a finite world is enclosed from the first step, so there only active relata taking is not needed: dissipation with balance and embodiment already makes arising need what is present. This is the counting of activity, whose English names arising and ceasing Ren confirmed (2026-10-09-arising-ceasing-names; the Chinese 生起／止息 being the AI's rendering); it is not the proposal's generative and degenerative (Ren wrote ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’, a tag question presuming that they do not overlap, so this reading is not what is meant; they read as widening and narrowing what can form, DELEGATED-CHOICES D2); it evaluates neither arising, ceasing nor rest."
+    "zh": "停息定理（ceasing-needs-arising、continued-change-needs-openness）说被围住时变化不再复现；本结果给出它的定量形式，以及它在计数上的全部内容：被围住的展开中，计数只多受一个变化界约束，其余由计数表与八个前提给出（whole-law-of-counting）；在全部八个前提之下，在计数上有限世界与从某步起被围住的世界无法区分，在一个前提之取舍之下恰在它约束变化且约束计数时无法区分；被围住所加的恰在纳入平衡、体现与耗散时出现，有限所加的还有计数的界，以及耗散从第一步起对生起的约束。读法（AI 的论证）：变化界就是被围住时所立者总水平的逐步耗散在计数上的样子；在被围住的展开中，每一次形成或消解都耗去关系中立着的一些东西，能不息地变化的是开放的展开（continued-change-needs-openness）；没有耗散，封闭的家族可以不取用而给予，被围住就不再约束计数；有限的世界从第一步起就被围住，所以在那里不需要只有活跃者取用，耗散连同平衡与体现就使生起需要在场者。这是活动的计数，英文名称 arising/ceasing 经 Ren 确认（2026-10-09-arising-ceasing-names；中文 生起／止息 是 AI 的译名）；它不是 Ren 提议中的“生成的”“退化的”（Ren 写道“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，以“吧”预设二者不重叠，所以这一读法不是其所指；二者读作对能形成者的扩大与缩小，DELEGATED-CHOICES D2）；它也不评价生起、止息或停息。",
+    "en": "The rest theorem (ceasing-needs-arising, continued-change-needs-openness) says change does not recur under enclosure; this result gives its quantitative form and all it says of counting: in an enclosed unfolding the counts are constrained by a change bound and by nothing more than the tally and the eight premises (whole-law-of-counting); under all eight premises, in counting, finite worlds cannot be told from worlds enclosed from some step on, and under a choice of the premises they cannot be told apart exactly where it bounds change and binds counting; what enclosure adds appears exactly where balance, embodiment and dissipation are chosen, and finiteness adds a bound on the count and the constraint of dissipation on arising from the first step. A reading (the AI's argument): the change bound is what the stepwise dissipation of the total standing under enclosure looks like in the counts; in an enclosed unfolding every forming or dissolving spends something standing in the relations, and what can change without end is the open unfolding (continued-change-needs-openness); without dissipation a closed family can be given to without taking, and enclosure no longer constrains counting; a finite world is enclosed from the first step, so there only active relata taking is not needed: dissipation with balance and embodiment already makes arising need what is present. This is the counting of activity, whose English names arising and ceasing Ren confirmed (2026-10-09-arising-ceasing-names; the Chinese 生起／止息 being the AI's rendering); it is not the proposal's generative and degenerative (Ren wrote ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’, a tag question presuming that they do not overlap, so this reading is not what is meant; they read as widening and narrowing what can form, DELEGATED-CHOICES D2); it evaluates neither arising, ceasing nor rest."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean",
   "aliases": [
@@ -944,7 +944,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "0362e707d7ec1f584c895a74718635b56d1da92aec8feecdbd66d9c1f99020a3",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
       "declarations": []
     },
     {
@@ -1169,6 +1169,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1202,7 +1208,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1372,6 +1378,10 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite, World.Balanced, World.Embodied, World.Dissipative to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Finite, World.Balanced, World.Embodied, World.Dissipative to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): a subset of the eight premises is now called a choice of premises, not a selection ('chooses', 'chosen'), in every live field: selection is the word for what goes through couplings. One law's Chinese text is shortened to its limit. The laws and their scope are unchanged. In the correspondence \"the author's reading (an AI argument)\" now reads \"a reading (the AI's argument)\", keeping its AI label.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：八个前提的一个子集今称“前提之取舍”，不称“选择”（动词作“纳入”），见于每个现行字段：“选择”一词留给经耦合而行者。一条律的中文缩至其限内。规律及其范围不变。对应中的“作者的读法（AI 论证）”改为“读法（AI 的论证）”，保留其 AI 标签。"
     }
   ],
   "text_versions": [

@@ -311,7 +311,7 @@
     },
     {
       "en": "That coming to rest, returning, turning or a class is good, fortunate or supports 生生; the module has no ethical predicate and no judgment of fortune.",
-      "zh": "归于静止、复返、变或某一类是善的、吉的或支持生生；模块没有伦理谓词，也没有吉凶判断。",
+      "zh": "停息、复返、变或某一类是善的、吉的或支持生生；模块没有伦理谓词，也没有吉凶判断。",
       "kind": "non-implication"
     }
   ],
@@ -1135,6 +1135,10 @@
     {
       "en": "20 October 2026, R35b (the instance and applications ring: the Changes and place/transition nets as instances, six leaves as applications, both held to the core's conditions and outside it by direction): Moved with their full names: from Commuting.lean to HexagramCommuting.lean, Hexagram.complement_moves. Proof bindings (Commuting.lean, HexagramLaws.lean) rebound to core receipt 20261020T045544.667431Z. Re-pointed after reading the change: Commuting.lean, the namespace Hexagram section (complement_moves, waxWane_apart, waxWane_halfway, wane_breaks, flip_complement, changes_symmetric, changes_mirror_apart) moved unchanged to HexagramCommuting; no longer imports Hexagrams; the general laws unchanged; HexagramLaws.lean, imports HexagramCommuting instead of Commuting; statements unchanged; THE-THEORY-OF-BECOMING.md, section 9: the rings (instances and applications), the receipt and the counts follow R35b. The claim is unchanged.",
       "zh": "2026年10月20日，R35b（实例与应用环：《周易》与位置/迁移网为实例，六个叶子模块为应用，二者受核心同样的条件约束，按方向在核心之外）：连同完整名称移动：从 Commuting.lean 到 HexagramCommuting.lean：Hexagram.complement_moves。证明绑定（Commuting.lean、HexagramLaws.lean）改到核心回执 20261020T045544.667431Z。读过改动后重新指向：Commuting.lean，namespace Hexagram 一节（complement_moves、waxWane_apart、waxWane_halfway、wane_breaks、flip_complement、changes_symmetric、changes_mirror_apart）原样移到 HexagramCommuting；不再导入 Hexagrams；一般规律不变；HexagramLaws.lean，改导入 HexagramCommuting 而非 Commuting；陈述不变；THE-THEORY-OF-BECOMING.md，§9：环（实例与应用）、回执与计数随 R35b。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): The retired 归于静止 replaced by 停息 (coming to rest).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役的“归于静止”改为“停息”。"
     }
   ],
   "text_versions": [

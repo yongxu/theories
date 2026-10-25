@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-15T12:00:00+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "两个框架都在相同之下确定时，线性检验固定相同；两个框架都有限、步与主张已定时，分支检验固定相同，证明是构造性的。线性检验所见恰是每个分岔推迟到显现时的相同。",
     "en": "Linear tests fix likeness where both frames are determined up to likeness, and branching tests fix it where both frames are finite with decided steps and claims, by a constructive proof. Linear tests see exactly likeness with every branching postponed."
@@ -111,17 +111,11 @@
       ]
     },
     {
-      "zh": "核心的分支检验就是外围 ExplanatoryBranching 的检验，一一对应，在同样的配置成立，所以通过同样的检验在两边是一回事；在有限、已定的模型上，通过外围的同样检验恰是相同，不用经典推理；在像有限的模型上，由检验到相同的方向是外围的 same_iff_bisimilar，其证明是经典的。",
-      "en": "The core's branching tests are the tests of the periphery's ExplanatoryBranching, read one to one and holding at the same configurations, so passing the same tests is the same in both; on finite decided models, passing the periphery's same tests is likeness, with no classical reasoning; on image-finite models the direction from the tests to likeness is the periphery's same_iff_bisimilar, whose proof is classical.",
+      "zh": "有限、已定的框架之外，由检验到相同的方向需要更多：以排中律为具名假设、每个动作的结果被列出时，通过同样分支检验的配置相同，所以恰在通过它们时相同；动作与主张都不必列出。外围的像有限形式是经典的，只作来源。",
+      "en": "Beyond finite decided frames the direction from the tests to likeness needs more: under excluded middle, a named hypothesis, and with each move's outcomes listed, configurations passing the same branching tests are alike, so they are alike exactly where they pass them; neither the moves nor the claims need be listed. The periphery's image-finite form is classical and stays provenance.",
       "declarations": [
-        "Becoming.BranchingTest.toTest",
-        "Becoming.BranchingTest.ofTest",
-        "Becoming.BranchingTest.toTest_ofTest",
-        "Becoming.BranchingTest.ofTest_toTest",
-        "Becoming.BranchingTest.holds_toTest",
-        "Becoming.sameBranchingTests_iff_same",
-        "Becoming.same_iff_alike_of_finiteDecided",
-        "Becoming.Alike.same"
+        "Becoming.alike_of_sameBranchingTests_of_em",
+        "Becoming.alike_iff_sameBranchingTests_of_em"
       ]
     },
     {
@@ -253,8 +247,8 @@
     "en": "In the periphery, a model where the principle of law 9 holds and whether a decided family holds nowhere is not decided, showing the principle weaker."
   },
   "correspondence": {
-    "zh": "读法（AI 的；Ren 2026-10-14 同意此方向）：线性检验看不到的恰是展开在何处分岔（规律 12）；只有分支的检验看得到。外围中像有限的模型的分支检验固定相同（same_iff_bisimilar，经典），经桥接（branching_bisimulation_iff）与核心的互模拟相连；核心中，在有限、已定的框架上它是构造性的，而对每个有限框架判定相同就是排中律。规律 9 的原则按标准名称是较小限定全知原则（LLPO），这里取递减族的形式；规律 11 的形式，即两个已判定存在式的德摩根律，是它的标准等价形式；“一个已判定的族是否处处不成立已判定”按标准名称是弱限定全知原则（WLPO）；Lean 名称保持结构性的，两者都不是前提。见整合文档 §98 与 Becoming.Likeness 一节。",
-    "en": "Reading (the AI's; Ren agreed with its direction on 14 October 2026): what linear tests cannot see is exactly where the unfolding branches (law 12); only tests that branch see it. In the periphery, branching tests fix likeness for image-finite models (same_iff_bisimilar, classically), joined to the core's bisimulation by the bridge (branching_bisimulation_iff); in the core they fix it constructively on finite decided frames, and deciding likeness for every finite frame is excluded middle. The principle of law 9 is, by its standard name, the lesser limited principle of omniscience (LLPO), here in a form for decreasing families; law 11's form, de Morgan's law for two decided existentials, is a standard equivalent; that whether a decided family holds nowhere is decided is, by its standard name, the weak limited principle of omniscience (WLPO); the Lean names stay structural, and neither is a premise. See §98 of the integration note and its section on Becoming.Likeness."
+    "zh": "读法（AI 的）：线性检验看不到的恰是展开在何处分岔（规律 12）；只有分支的检验看得到。外围中像有限的模型的分支检验固定相同（same_iff_bisimilar，经典），核心中以排中律为具名假设陈述（alike_iff_sameBranchingTests_of_em）；核心中，在有限、已定的框架上它是构造性的，而对每个有限框架判定相同就是排中律。规律 9 的原则按标准名称是较小限定全知原则（LLPO），这里取递减族的形式；规律 11 的形式，即两个已判定存在式的德摩根律，是它的标准等价形式；“一个已判定的族是否处处不成立已判定”按标准名称是弱限定全知原则（WLPO）；Lean 名称保持结构性的，两者都不是前提。见整合文档 §98 与 Becoming.Likeness 一节。",
+    "en": "Reading (the AI's): what linear tests cannot see is exactly where the unfolding branches (law 12); only tests that branch see it. In the periphery, branching tests fix likeness for image-finite models (same_iff_bisimilar, classically), stated in the core with excluded middle a named hypothesis (alike_iff_sameBranchingTests_of_em); in the core they fix it constructively on finite decided frames, and deciding likeness for every finite frame is excluded middle. The principle of law 9 is, by its standard name, the lesser limited principle of omniscience (LLPO), here in a form for decreasing families; law 11's form, de Morgan's law for two decided existentials, is a standard equivalent; that whether a decided family holds nowhere is decided is, by its standard name, the weak limited principle of omniscience (WLPO); the Lean names stay structural, and neither is a premise. See §98 of the integration note and its section on Becoming.Likeness."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Histories.lean",
   "aliases": [
@@ -276,8 +270,8 @@
     "Becoming.alike_of_sameBranchingTests_iff_em",
     "Becoming.alike_of_sameBranchingTests_outcomes_iff",
     "Becoming.OutcomesListed.alike_iff_sameBranchingTests",
-    "Becoming.sameBranchingTests_iff_same",
-    "Becoming.same_iff_alike_of_finiteDecided",
+    "Becoming.sameBranchingTests_iff_same (retired module)",
+    "Becoming.same_iff_alike_of_finiteDecided (retired module)",
     "Becoming.eitherThroughout_iff_eitherNever",
     "Becoming.sameTests_iff_postponed_alike",
     "Becoming.alike_postponed_iff_determined",
@@ -294,7 +288,9 @@
     "Becoming.frameBy_across_exact",
     "the tests are a bounded record",
     "检验即有界的记录",
-    "Becoming.frameBy_within_exact"
+    "Becoming.frameBy_within_exact",
+    "Becoming.alike_of_sameBranchingTests_of_em",
+    "Becoming.alike_iff_sameBranchingTests_of_em"
   ],
   "dependencies": [
     {
@@ -534,7 +530,9 @@
         "Becoming.EndOfPath.not_alikeTo_past",
         "Becoming.EndOfPath.first",
         "Becoming.EndOfPath.second",
-        "Becoming.EndOfPath.classes_exact"
+        "Becoming.EndOfPath.classes_exact",
+        "Becoming.alike_of_sameBranchingTests_of_em",
+        "Becoming.alike_iff_sameBranchingTests_of_em"
       ]
     },
     {
@@ -1012,6 +1010,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Refinement.lean to Prelude.lean, DistinctUnder. Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): skip (now skipAt); skip_le (now skipAt_le). Proof bindings (Labelled.lean, Likeness.lean, Refinement.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Labelled.lean, Refinement.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Likeness.lean: likeness, bisimulations and tests stated once for a family of relations (BisimulationWith, AlikeWith, TestWith); MatchesParts moved here; Alike.holds_iff proved as the case of no relation; statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Refinement.lean 到 Prelude.lean：DistinctUnder。以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：skip（现为 skipAt）；skip_le（现为 skipAt_le）。证明绑定（Labelled.lean、Likeness.lean、Refinement.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Labelled.lean、Refinement.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Likeness.lean：为一族关系陈述一次的相似、互模拟与检验（BisimulationWith、AlikeWith、TestWith）；MatchesParts 移入；Alike.holds_iff 作为无关系的情形证明；陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the tenth law, whose declarations existed only in the retired Bridge module, replaced in place by its core form: under excluded middle, a named hypothesis, with each move's outcomes listed, the same branching tests make configurations alike, and exactly so; the periphery's image-finite form stays provenance. The correspondence names that core form instead of the bridge and labels its reading as the AI's without a person's agreement as its standing; the two retired aliases marked as such, the core names added. The claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第十条规律的声明只在已退役的 Bridge 模块中，原处改为其核心形式：以排中律为具名假设、每个动作的结果被列出时，同样的分支检验使配置相同，且恰是如此；外围的像有限形式只作来源。对应改称这一核心形式而不再称桥接，读法标为 AI 的，不以任何人的同意为其地位；两个退役别名标为退役，加入核心名称。主张不变。"
     }
   ],
   "text_versions": [

@@ -263,7 +263,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
       "role": "proof",
-      "sha256": "f6cb9359ec15d601e97d1e4768fa197293d3092581c5202207eadcadc74baa55"
+      "sha256": "0ecc85e079993dbe5dd62c459262a0e9ddea52cff1467e3191cf152f80a93687"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",

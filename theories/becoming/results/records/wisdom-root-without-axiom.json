@@ -2,8 +2,8 @@
   "schema_version": 2,
   "id": "wisdom-root-without-axiom",
   "title": {
-    "zh": "智慧之根在无公理的理论中",
-    "en": "The root of wisdom in the theory without axiom"
+    "zh": "智慧之根在不含条件的理论中",
+    "en": "The root of wisdom in the theory without the condition"
   },
   "kind": "argument",
   "status": "reviewed-scoped",
@@ -14,8 +14,8 @@
     "en": "The checked laws of coupling and 识, 理, testing, learning and generalization, selection and training, enough, runaway, judgment and the meta level, and the routes of formation hold of every extrapolation and representation with the same content, axiom-free in the core: wisdom-root's formal support."
   },
   "claim": {
-    "en": "Each law below is stated for every formation, extrapolation, lumping, selection or determined law, with no axiom in the core (the periphery learning-bridge theorems use only Lean's standard axioms) and its conditions written into its theorem, so no representation keeping the same content escapes it. Together with the formal routes of formation, these laws are the formal support for wisdom-root (the universal laws and routes of formation within the scope of the theory without axiom).",
-    "zh": "下列每条规律都对每个形成、每个外推、每个归并、每个选择或每个确定的律陈述，核心中不用公理（外围学习桥接的定理只用 Lean 的标准公理），其条件写在定理中，所以保留相同内容的任何表示都避不开它。连同形成的形式路线，它们是目标 wisdom-root 的形式支撑（无公理的理论所及的普遍规律与形成路线）。"
+    "en": "Each law below is stated for every formation, extrapolation, lumping, selection or determined law, with no axiom in the core (the periphery learning-bridge theorems use only Lean's standard axioms) and its conditions written into its theorem, so no representation keeping the same content escapes it. Together with the formal routes of formation, these laws are the formal support for wisdom-root (the universal laws and routes of formation within the scope of the theory without the condition).",
+    "zh": "下列每条规律都对每个形成、每个外推、每个归并、每个选择或每个确定的律陈述，核心中不用公理（外围学习桥接的定理只用 Lean 的标准公理），其条件写在定理中，所以保留相同内容的任何表示都避不开它。连同形成的形式路线，它们是目标 wisdom-root 的形式支撑（不含条件的理论所及的普遍规律与形成路线）。"
   },
   "laws": [
     {
@@ -130,8 +130,8 @@
       "en": "No premise is added; the core uses no axiom, and the periphery learning bridge (LearningCorrespondence's hebbian_activity_law_iff, updating_network_law_iff and responsive_learns) uses propext, Quot.sound and Classical.choice; each law's conditions stay in its theorems (balance only where used, the rest of the exchange fixed, decided values, a world held by a list and so on), as in the respective records."
     },
     {
-      "zh": "把规律对到智慧的各面（耦合与识、理、检验、学习、明、够、失控、代理、判断、元）是 AI 的读法，理依 Ren，其余依 Ren 的交托采用；“明”在这里只指看见耦合入自身者之外要他者的耦合，不取其全部古典含义；“对每个表示成立”指每个外推都受这些规律约束，不指有智慧者显式持有一个模型。",
-      "en": "Matching the laws to aspects of wisdom (coupling and 识, 理, testing, learning, 明, enough, runaway, proxies, judgment, meta level) is the AI's reading, adopted on Ren's delegation (理 is Ren's); 明 here means only that seeing beyond what couples into oneself needs another's couplings, not its whole classical sense; “holding of every representation” means every extrapolation is bound by these laws, not that the wise hold an explicit model."
+      "zh": "把规律对到智慧的各面（耦合与识、理、检验、学习、明、够、失控、代理、判断、元）是 AI 的读法，理依 Ren；“明”在这里只指看见耦合入自身者之外要他者的耦合，不取其全部古典含义；“对每个表示成立”指每个外推都受这些规律约束，不指有智慧者显式持有一个模型。",
+      "en": "Matching the laws to aspects of wisdom (coupling and 识, 理, testing, learning, 明, enough, runaway, proxies, judgment, meta level) is the AI's reading (理 is Ren's); 明 here means only that seeing beyond what couples into oneself needs another's couplings, not its whole classical sense; “holding of every representation” means every extrapolation is bound by these laws, not that the wise hold an explicit model."
     },
     {
       "zh": "“对每个表示成立”保持各定理的类型与条件。应用于智慧须另说明判断内容、根据、范围、强度及 E；不表示所有智慧活动都具有每个模块的功能或必须继续修改。",
@@ -139,8 +139,8 @@
     }
   ],
   "correspondence": {
-    "en": "Ren’s reading of 理 and the formal integration of the laws are retained. Correspondence to aspects of wisdom is an interpretive dependency, not a new Lean composition: which law constitutes which aspect of wisdom is an argument, not a theorem; 理 is read as Ren reads it, and the other readings are the AI's, adopted on Ren's delegation.",
-    "zh": "Ren 的理读法与各规律的形式整合保留。智慧各面的对应是解释性依赖，不是新增 Lean 组合：哪条规律构成智慧的哪一面是论证，不是定理；理依 Ren，其余读法是 AI 的，依 Ren 的交托采用。"
+    "en": "Ren’s reading of 理 and the formal integration of the laws are retained. Correspondence to aspects of wisdom is an interpretive dependency, not a new Lean composition: which law constitutes which aspect of wisdom is an argument, not a theorem; 理 is read as Ren reads it, and the other readings are the AI's.",
+    "zh": "Ren 的理读法与各规律的形式整合保留。智慧各面的对应是解释性依赖，不是新增 Lean 组合：哪条规律构成智慧的哪一面是论证，不是定理；理依 Ren，其余读法是 AI 的。"
   },
   "canonical_source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
   "aliases": [
@@ -352,8 +352,8 @@
     {
       "id": "practical-judgment-under-living-significance",
       "detail": {
-        "zh": "判断的伦理正当性走章节 §6.4 的条件（以那一条公理为条件 G0 是定理），本记录不改变它，也不含伦理谓词。",
-        "en": "The ethical warrant of judgment goes through the condition of chapter section 6.4 (with the one axiom as a condition, G0 is a theorem); this record does not change it and contains no ethical predicate."
+        "zh": "判断的伦理正当性走第 7 章 §3 的条件（以延续条件为假设，生生之意义是定理），本记录不改变它，也不含伦理谓词。",
+        "en": "The ethical warrant of judgment goes through the condition of chapter 7, §3 (with the continuation condition as a hypothesis, living significance is a theorem); this record does not change it and contains no ethical predicate."
       }
     },
     {
@@ -375,8 +375,8 @@
   ],
   "progress": [
     {
-      "en": "Formal support matched: the checked laws of the theory without axiom are matched to the four connections of the wisdom-root target, adding no Lean; which law constitutes which aspect of wisdom is an argument.",
-      "zh": "形式支撑的对照：无公理的理论中已检查的规律逐条对到目标 wisdom-root 的四条连接，不新增 Lean；哪条规律构成智慧的哪一面是论证。",
+      "en": "Formal support matched: the checked laws of the theory without the condition are matched to the four connections of the wisdom-root target, adding no Lean; which law constitutes which aspect of wisdom is an argument.",
+      "zh": "形式支撑的对照：不含条件的理论中已检查的规律逐条对到目标 wisdom-root 的四条连接，不新增 Lean；哪条规律构成智慧的哪一面是论证。",
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#93-智慧之根在第一部分所及p75"
     },
     {
@@ -937,6 +937,10 @@
     {
       "en": "20 October 2026, R36 (the chapter, once): the canonical chapter was restructured, its 20 October edition frozen in theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md; this record's citations of the old section numbering re-pointed by content (section 6.15 to 6.4). The claim is unchanged.",
       "zh": "2026年10月20日，R36（本章只陈述一次）：规范章节重排，10月20日版冻结于 theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md；本记录对旧节号的引用按内容重指（§6.15 改为 §6.4）。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in a related detail the retired labels replaced by the current terms ('the one axiom' by the continuation condition, G0 by living significance) and the old chapter section 6.4 by the condition's current home, chapter 7, §3; the aliases keep the record's former names; the theory without axiom, the 17 October rendering of Part I, in the title, the claim and the first progress line reads the theory without the condition; and the readings in a hypothesis and the correspondence are the AI's without 'adopted on Ren's delegation'. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条相关说明中的退役标签改为现行术语（“那一条公理”改为延续条件，G0 改为生生之意义），旧章节 §6.4 改为条件的现行所在，第 7 章 §3；别名保留本记录的旧名；标题、主张与第一条进展中的“无公理的理论”（10月17日对第一部分的译名）改为不含条件的理论；一条前提与对应中的读法标为 AI 的，不再写“依 Ren 的交托采用”。规律未变。"
     }
   ],
   "text_versions": [

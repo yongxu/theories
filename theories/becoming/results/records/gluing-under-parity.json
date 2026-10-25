@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
-    "zh": "每个语境要求奇偶时，有不依语境的读法，恰当没有语境的选择矛盾（每个主张被计偶数次而所要求的奇偶相加为奇）；有矛盾时，不依语境之读法的混合平均至多满足 m 个语境中的 m − 1 个，按语境索引的读法满足全部 m 个。",
-    "en": "Where each context requires a parity, a context-free reading exists exactly where no selection of contexts contradicts (each claim counted evenly, the parities adding to odd); then mixtures of context-free readings meet at most m − 1 of the m contexts on average, readings in context all m."
+    "zh": "每个语境要求奇偶、主张列举不重复且其相等可判定、语境被列出时，有不依语境的读法，恰当没有语境的选择矛盾；m 个语境矛盾时，不依语境之读法的混合平均至多满足其中 m − 1 个，而按语境各给一个在其可能性之内的赋值来读，满足全部 m 个。",
+    "en": "Where each context requires a parity, claims listed once and compared decidedly, contexts listed, a context-free reading exists exactly where no selection of contexts contradicts; where m do, context-free mixtures meet at most m − 1 on average, a reading per context within its possibilities all m."
   },
   "laws": [
     {
@@ -254,8 +254,8 @@
     "en": "Contextuality beyond parity: the exact obstruction for general finite possibilities; probabilistic contextuality and the quantum values with real amplitudes (periphery); a correspondence theorem joining the periphery's CorrectionRelations cycle law to this one; an independent review."
   },
   "correspondence": {
-    "zh": "Ren 2026-10-12 问框架所失去的是否像“wave/particle”，并同意了把值读作语境所显示者的回答；2026-10-15：“please make best of your judgement, and push the frontier of completeness”。本结果是 contextual-registration 的下一步“奇偶障碍的一般定理；概率的语境性”：对奇偶约束，“不依语境的主张是表示的承诺”成为确切的规律，这一承诺恰在一个可检查的障碍处失效，障碍给出 Bell 型的界。奇偶律是 GF(2) 上的 Gauss 消元，即线性方程组的 Fredholm 择一；全有或全无的奇偶证明出自 Mermin（1990）与 Mermin–Peres 方格，上同调的奇偶判据出自 Abramsky、Barbosa、Kishida、Lal 与 Mansfield（2015，“Contextuality, cohomology and paradox”），奇偶博弈出自 Arkhipov（2012）。读法（AI 的，依 Ren 2026-10-15 的交托采用，DELEGATED-CHOICES D33）：m − 1 与 m 之差，是语境所承载的；值是语境所显示者，一个关系。",
-    "en": "Ren asked on 12 October 2026 whether what a frame loses is like “wave/particle”, and agreed with the reply reading a value as what a context shows; on 15 October 2026: “please make best of your judgement, and push the frontier of completeness”. This result is the next step of contextual-registration, “the general parity obstruction; probabilistic contextuality”: for parity constraints, “context-free claims are a commitment of the representation” becomes an exact law, the commitment failing exactly at a checkable obstruction, which gives a Bell-type bound. The parity law is Gaussian elimination over GF(2), the Fredholm alternative for linear systems; all-versus-nothing parity proofs are Mermin's (1990) and the Mermin–Peres square's, the cohomological parity criterion is Abramsky, Barbosa, Kishida, Lal and Mansfield's (2015, “Contextuality, cohomology and paradox”), and parity games are Arkhipov's (2012). Readings (the AI's, adopted on Ren's delegation of 15 October 2026, DELEGATED-CHOICES D33): the difference between m − 1 and m is what the context carries; a value is what a context shows, a relation."
+    "zh": "Ren 2026-10-12 问框架所失去的是否像“wave/particle”，并同意了把值读作语境所显示者的回答；2026-10-15：“please make best of your judgement, and push the frontier of completeness”。本结果是 claims-shown-in-context 的下一步“奇偶障碍的一般定理；概率的语境性”：对奇偶约束，“不依语境的主张是表示的承诺”成为确切的规律，这一承诺恰在一个可检查的障碍处失效，障碍给出 Bell 型的界。奇偶律是 GF(2) 上的 Gauss 消元，即线性方程组的 Fredholm 择一；全有或全无的奇偶证明出自 Mermin（1990）与 Mermin–Peres 方格，上同调的奇偶判据出自 Abramsky、Barbosa、Kishida、Lal 与 Mansfield（2015，“Contextuality, cohomology and paradox”），奇偶博弈出自 Arkhipov（2012）。读法（AI 的，依 Ren 2026-10-15 的交托采用，DELEGATED-CHOICES D33）：m − 1 与 m 之差，是语境所承载的；值是语境所显示者，一个关系。",
+    "en": "Ren asked on 12 October 2026 whether what a frame loses is like “wave/particle”, and agreed with the reply reading a value as what a context shows; on 15 October 2026: “please make best of your judgement, and push the frontier of completeness”. This result is the next step of claims-shown-in-context, “the general parity obstruction; probabilistic contextuality”: for parity constraints, “context-free claims are a commitment of the representation” becomes an exact law, the commitment failing exactly at a checkable obstruction, which gives a Bell-type bound. The parity law is Gaussian elimination over GF(2), the Fredholm alternative for linear systems; all-versus-nothing parity proofs are Mermin's (1990) and the Mermin–Peres square's, the cohomological parity criterion is Abramsky, Barbosa, Kishida, Lal and Mansfield's (2015, “Contextuality, cohomology and paradox”), and parity games are Arkhipov's (2012). Readings (the AI's, adopted on Ren's delegation of 15 October 2026, DELEGATED-CHOICES D33): the difference between m − 1 and m is what the context carries; a value is what a context shows, a relation."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gluing.lean",
   "aliases": [
@@ -533,7 +533,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "7b75d13c6894760a277c2f14a39e8b63e4a7b7b6d70e9c2e938d80c64d1cfe99"
+      "sha256": "0d0b610a56eee4ea5cf3e2c3b1dc2fc3d9de9d29512c835c4d2d8ee30e628654"
     },
     {
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
@@ -745,6 +745,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Population.lean to Prelude.lean, Distinct; from World.lean to Prelude.lean, total. Proof bindings (Flow.lean, Population.lean, Prelude.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Flow.lean, Population.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Population.lean 到 Prelude.lean：Distinct；从 World.lean 到 Prelude.lean：total。证明绑定（Flow.lean、Population.lean、Prelude.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Flow.lean、Population.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement names the conditions of the exact law (claims listed without repetition and compared decidedly, contexts listed) and that reading in context takes an assignment within each context's possibilities, one supplied for each; a former record id updated; the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明确切定律的条件（主张列举不重复且其相等可判定，语境被列出），并说按语境之读需为每个语境各给一个在其可能性之内的赋值；更新一个旧记录编号；定律不变。"
     }
   ],
   "text_versions": [

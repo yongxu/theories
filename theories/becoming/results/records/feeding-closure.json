@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "zh": "一个延续所依存的，是含它、对供给封闭的最小区域；它不用前提即推出，闭包之外的在任何一步都不向闭包所需的条件给予。清除者的网中沿依存的区域恰是各形成的供给闭包。",
     "en": "What a continuation depends on is the least region holding it that is closed under feeding; it is reached with no premise, and nothing beyond it gives, at any step, to a condition its members require. In the clearer's web the region along dependence is exactly each formation's feeding closure."
@@ -217,8 +217,8 @@
     "en": "Give the relation that fixes the actual following of an amount given, and an exact criterion for carrying however the taking is attributed; join the dependence closure as events in temporal order; model how a center forms and represents its closure."
   },
   "correspondence": {
-    "zh": "路线 (b) 是 AI 的表述，Ren 引用了它：“No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren 选定：“let's aim for a first, then try to archive b”。作者的读法（AI 论证，依 Ren 的交托采用）：供给闭包读“what it actually depends on”。它也曾被读作 Ren 的“the system that one is in”，作为从一个中心沿依存到达的系统；这一读法已撤回：供给闭包在影响闭包之内，影响闭包与所及闭包都在系统之内，为那一层级提供的是所及闭包（见 levels-of-closure，AI 的读法，依 Ren 的交托采用）。名称（FedClosed、WithinFeeding、Overshoot 等）是 AI 按 Ren 的命名准则所选。把经条件可能保持的较早给予读作跨步供给；数量无来源标记，此读法未确定实际来源，也未推导中心的认识，也不恢复已撤回的“所在系统”读法。",
-    "en": "Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren chose: “let's aim for a first, then try to archive b”. The author's reading (an AI argument, adopted on Ren's delegation): the feeding closure reads “what it actually depends on”. It was also read as Ren's “the system that one is in”, the system reached from a center along dependence; that reading is withdrawn: the feeding closure lies within the influence closure, the influence and reach closures lie within the system, and the reach closure is offered for that level (see levels-of-closure; the AI's reading, adopted on Ren's delegation). The names (FedClosed, WithinFeeding, Overshoot and others) are the AI's, chosen by Ren's naming standard. Earlier giving possibly retained through a condition is read as feeding across steps; quantities bear no origin marks, so this does not identify actual origin or derive a center's recognition, and it does not restore the withdrawn system reading."
+    "zh": "路线 (b) 是 AI 的表述，Ren 引用了它：“No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren 选定：“let's aim for a first, then try to archive b”。读法（AI 的）：供给闭包读“what it actually depends on”。它也曾被读作 Ren 的“the system that one is in”，作为从一个中心沿依存到达的系统；这一读法已撤回：供给闭包在影响闭包之内，影响闭包与所及闭包都在系统之内，为那一层级提供的是所及闭包（见 levels-of-closure，AI 的读法，依 Ren 的交托采用）。名称（FedClosed、WithinFeeding、Overshoot 等）是 AI 按 Ren 的命名准则所选。把经条件可能保持的较早给予读作跨步供给；数量无来源标记，此读法未确定实际来源，也未推导中心的认识，也不恢复已撤回的“所在系统”读法。",
+    "en": "Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren chose: “let's aim for a first, then try to archive b”. A reading (the AI's): the feeding closure reads “what it actually depends on”. It was also read as Ren's “the system that one is in”, the system reached from a center along dependence; that reading is withdrawn: the feeding closure lies within the influence closure, the influence and reach closures lie within the system, and the reach closure is offered for that level (see levels-of-closure; the AI's reading, adopted on Ren's delegation). The names (FedClosed, WithinFeeding, Overshoot and others) are the AI's, chosen by Ren's naming standard. Earlier giving possibly retained through a condition is read as feeding across steps; quantities bear no origin marks, so this does not identify actual origin or derive a center's recognition, and it does not restore the withdrawn system reading."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean",
   "aliases": [
@@ -809,6 +809,10 @@
     {
       "en": "21 October 2026, EC1 (study section 307): the feeding closure and the closure across steps are now the frame's closure of a relation by definition (Flow.WithinFeeding is WithinClosure under Flow.FedFrom, Flow.WithinFeedingAcross under Flow.FedFromAcross), so their reflexivity, transitivity, closedness and what lies beyond them are proved through that closure's laws (WithinClosure.not_rel for Flow.beyond_gives_nothing and Flow.beyond_gives_nothing_across). Flow.FedFrom moved unchanged from Becoming.Feedback; Flow.FedFromAcross is new. The claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：供给闭包与跨步闭包现按定义即框架上关系的闭包（Flow.WithinFeeding 是 Flow.FedFrom 下的 WithinClosure，Flow.WithinFeedingAcross 是 Flow.FedFromAcross 下的），故其自反、传递、封闭及其外者经该闭包之律证明（Flow.beyond_gives_nothing 与 Flow.beyond_gives_nothing_across 经 WithinClosure.not_rel）。Flow.FedFrom 原样由 Becoming.Feedback 移来；Flow.FedFromAcross 为新增。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument, adopted on Ren's delegation)' reads 'a reading (the AI's)', Ren's quoted words kept verbatim; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证，依 Ren 的交托采用）”改为“读法（AI 的）”，Ren 的引语原样保留；主张不变。"
     }
   ],
   "text_versions": [

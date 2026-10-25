@@ -241,8 +241,8 @@
     "en": "A map of the premises stated relative to a further reading (a continuation relation, a renewal relation, a decaying reserve, a family of conditions)."
   },
   "correspondence": {
-    "zh": "计划对“完整”的第三条读法要求每个动力学前提划出整个空间的真部分。P22 对七个前提给出了这一点；本结果补上普查与有界传递，并更进一步：前提不仅各自偶然，而且其余八个相对于彼此独立，在这八个之中没有一个藏在其余之中。八个是 P22 的七个去掉储备承载（由活动需要支持推出），加上普查与有界传递；连同储备承载与生起者体现这两个较弱的形式，世界层面共陈述十个前提。作者的读法（AI 论证）：蕴含显示哪些前提只是另一前提的较弱形式（有储备承载、生起者体现）或在活动可判定的有限世界中自动成立（普查；不给可判定性而对每个有限世界要求它，就蕴含排中律），以及耗散与只有活跃者取用怎样在被围住的步上带来只有活跃者给予；独立性显示剩下的每一个都是对世界的独立限定。有限与被围住不在这八个之中，而停息定理正是以它们为转折（可判定性不再需要，P58）；加上它们，只有活跃者给予与普查就推出。多个见证没有流，关于流的四个前提（只有活跃者给予、只有活跃者取用、耗散、有界传递）在其中空成立：strained、unbalanced、latent、multitude 与互利者没有流，scatter 没有被围住的步，morsel 没有依存、给予与世系，lossless 的水平不变；只有 novel 中其余七个都起约束。这足以证明独立；平衡另有取用与耗散每步起约束的见证（draining_but）。相对于另一读法陈述的前提——延续关系（Identity）、更新关系（Generation）、衰减的储备（Reserve）、条件家族（Flow、Dissipation）——没有在这里映射；流中每个参与者只列一次是表示的条件，不是世界的条件。前提的名称与这些世界的名称是 AI 的表述，按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
-    "en": "The plan's third part of completeness asks that each dynamical premise carve a proper part of the whole space. P22 gave this for seven premises; this result adds the census and bounded transmission and goes further: the premises are not only each contingent, the remaining eight are independent relative to one another, none hidden in the others among these eight. The eight are P22's seven without the reserve carrying activity, which follows from activity needing support, together with the census and bounded transmission; with the two weaker forms, a reserve carrying activity and embodied arising, ten premises are stated of worlds. The author's reading (an AI argument): the implications show which premises are only weaker forms of another (activity carried, whatever arises embodied) or hold automatically in finite worlds whose activity is decided (a census; asking it of every finite world without decidability implies excluded middle), and how dissipation and only active relata taking bring only active relata giving across enclosed steps; independence shows that each of the rest is a separate restriction of worlds. Finiteness and enclosure are not among the eight, though the rest theorems turn on them (decidability is no longer needed, P58); with them added, only active relata giving and a census follow. Several witnesses have no flow, so the four premises about the flow (only active relata giving, only active relata taking, dissipation, bounded transmission) hold vacuously there: strained, unbalanced, latent, multitude and the mutualists have no flow, scatter has no enclosed step, morsel has no dependence, giving or descent, and the levels of lossless are steady; only in novel do all the other seven bind. That suffices for independence; for balance a second witness has taking and dissipation binding at every step (draining_but). Premises stated relative to a further reading, a continuation relation (Identity), a renewal relation (Generation), a decaying reserve (Reserve) or a family of conditions (Flow, Dissipation), are not mapped here; that each formation taking part is listed once in a flow is a condition of the representation, not of the world. The names of the premises and of these worlds are the AI's formulations, adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
+    "zh": "计划对“完整”的第三条读法要求每个动力学前提划出整个空间的真部分。P22 对七个前提给出了这一点；本结果补上普查与有界传递，并更进一步：前提不仅各自偶然，而且其余八个相对于彼此独立，在这八个之中没有一个藏在其余之中。八个是 P22 的七个去掉储备承载（由活动需要支持推出），加上普查与有界传递；连同储备承载与生起者体现这两个较弱的形式，世界层面共陈述十个前提。读法（AI 的论证）：蕴含显示哪些前提只是另一前提的较弱形式（有储备承载、生起者体现）或在活动可判定的有限世界中自动成立（普查；不给可判定性而对每个有限世界要求它，就蕴含排中律），以及耗散与只有活跃者取用怎样在被围住的步上带来只有活跃者给予；独立性显示剩下的每一个都是对世界的独立限定。有限与被围住不在这八个之中，而停息定理正是以它们为转折（可判定性不再需要，P58）；加上它们，只有活跃者给予与普查就推出。多个见证没有流，关于流的四个前提（只有活跃者给予、只有活跃者取用、耗散、有界传递）在其中空成立：strained、unbalanced、latent、multitude 与互利者没有流，scatter 没有被围住的步，morsel 没有依存、给予与世系，lossless 的水平不变；只有 novel 中其余七个都起约束。这足以证明独立；平衡另有取用与耗散每步起约束的见证（draining_but）。相对于另一读法陈述的前提——延续关系（Identity）、更新关系（Generation）、衰减的储备（Reserve）、条件家族（Flow、Dissipation）——没有在这里映射；流中每个参与者只列一次是表示的条件，不是世界的条件。前提的名称与这些世界的名称是 AI 的表述，按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
+    "en": "The plan's third part of completeness asks that each dynamical premise carve a proper part of the whole space. P22 gave this for seven premises; this result adds the census and bounded transmission and goes further: the premises are not only each contingent, the remaining eight are independent relative to one another, none hidden in the others among these eight. The eight are P22's seven without the reserve carrying activity, which follows from activity needing support, together with the census and bounded transmission; with the two weaker forms, a reserve carrying activity and embodied arising, ten premises are stated of worlds. A reading (the AI's argument): the implications show which premises are only weaker forms of another (activity carried, whatever arises embodied) or hold automatically in finite worlds whose activity is decided (a census; asking it of every finite world without decidability implies excluded middle), and how dissipation and only active relata taking bring only active relata giving across enclosed steps; independence shows that each of the rest is a separate restriction of worlds. Finiteness and enclosure are not among the eight, though the rest theorems turn on them (decidability is no longer needed, P58); with them added, only active relata giving and a census follow. Several witnesses have no flow, so the four premises about the flow (only active relata giving, only active relata taking, dissipation, bounded transmission) hold vacuously there: strained, unbalanced, latent, multitude and the mutualists have no flow, scatter has no enclosed step, morsel has no dependence, giving or descent, and the levels of lossless are steady; only in novel do all the other seven bind. That suffices for independence; for balance a second witness has taking and dissipation binding at every step (draining_but). Premises stated relative to a further reading, a continuation relation (Identity), a renewal relation (Generation), a decaying reserve (Reserve) or a family of conditions (Flow, Dissipation), are not mapped here; that each formation taking part is listed once in a flow is a condition of the representation, not of the world. The names of the premises and of these worlds are the AI's formulations, adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
   "aliases": [
@@ -537,7 +537,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "0362e707d7ec1f584c895a74718635b56d1da92aec8feecdbd66d9c1f99020a3",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
       "declarations": [
         "Becoming.World.unbalanced_world",
         "Becoming.World.mutualism_world"
@@ -746,6 +746,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -758,7 +764,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -899,6 +905,10 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.rests_unrefuted, World.Embodied.arising to Becoming.InAmounts; World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.rests_unrefuted, World.Embodied.arising to Becoming.InAmounts；World.Counted to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): 'the author's reading' in the correspondence reads 'a reading (the AI's argument)', the reading keeping its AI label. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法”改为“读法（AI 的论证）”，读法保留其 AI 标签。规律未变。"
     }
   ],
   "text_versions": [

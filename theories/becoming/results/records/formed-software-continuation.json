@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-13T23:30:00+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
     "zh": "LibreOffice的选定历史说明部分改组和过渡承担可以支撑活动先于最终法人完成；Narwhal的日期化接续进一步显示，运行改造后仍可保留原API依存，其作者对将来改价的顾虑进入月度承诺安排。",
     "en": "Selected LibreOffice history supports activity under partial reorganization before final incorporation; Narwhal’s dated continuation further shows retained API dependence after operational adaptation, with stated concern about future repricing entering monthly commitments."
@@ -69,8 +69,8 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "zh": "对有效承接、机构改变和真实损失的规范应用仍依G0/J/E；历史成功不独自证明整体更好。",
-        "en": "Normative use for effective succession, institutional change and real losses retains G0/J/E; historical success alone does not establish whole improvement."
+        "zh": "对有效承接、机构改变和真实损失的规范应用仍依生生之意义、实践承诺与对应 E；历史成功不独自证明整体更好。",
+        "en": "Normative use for effective succession, institutional change and real losses retains living significance, the practical commitments and correspondence E; historical success alone does not establish whole improvement."
       }
     }
   ],
@@ -290,6 +290,10 @@
     {
       "en": "2026-10-20: 2 bookkeeping notes condensed of 17 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/fc76e9a2a18ddd7a/formed-software-continuation.json and in git.",
       "zh": "2026-10-20：2 条记账性说明合并（17 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/fc76e9a2a18ddd7a/formed-software-continuation.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels G0/J in a related note replaced by living significance and the practical commitments (correspondence E named); the assessment is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条相关说明中已退役的标签 G0/J 改为生生之意义与实践承诺（写明对应 E）；评估不变。"
     }
   ],
   "text_versions": [

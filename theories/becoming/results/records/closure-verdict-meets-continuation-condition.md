@@ -18,7 +18,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- The axiom: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the comparison theorems and is not proved; reading it as Ren's axiom is the AI's reading, adopted on Ren's delegation.
+- The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the comparison theorems, stated and not asserted, and is not proved; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16).
 - The covering condition (covers): every formation the other path admits lies in the region or is admitted by the first; it always holds where the feeding closure is the whole.
 - The Clearing comparison uses the levels with the clearer's part withheld (Flow.WithheldLevels), keeping the rest of the exchange fixed.
 - Discrete steps, counted from step 0; natural-number levels, needs and amounts.
@@ -39,7 +39,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Interdependence have empty axiom reports, the axiom Unrestricted being a hypothesis of the comparison theorems, not a Lean axiom; core purity verified. Author counterreview in the integration note; not yet independently reviewed.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z): the theorems of Becoming.Interdependence have empty axiom reports, the continuation condition Unrestricted being a hypothesis of the comparison theorems, not a Lean axiom; core purity verified. Author counterreview in the integration note; not yet independently reviewed.
 
 Canonical source: [Interdependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean)
 
@@ -53,30 +53,30 @@ Give the closures step by step.
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren chose: “let's aim for a first, then try to archive b”. The author's reading (an AI argument, adopted on Ren's delegation): the feeding closure reads “what it actually depends on”. It was also read as Ren's “the system that one is in”, the system reached from a center along dependence; that reading is withdrawn: the feeding closure lies within the influence closure, the influence and reach closures lie within the system, and the reach closure is offered for that level (see levels-of-closure; the AI's reading, adopted on Ren's delegation). The names (FedClosed, WithinFeeding, Overshoot and others) are the AI's, chosen by Ren's naming standard. Of the levels Ren wrote: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”; and: “there could be the whole realizes itself(like us, we recognize that "we" are the universe/ecosystem that realizes its own existence), understanding itself, and updates itself, this is also under the selection rules and constraints in theory, but in practice, how this happens, needs more thoughts”. The author's reading (an AI argument, adopted on Ren's delegation): route (b) reaches the self and what it depends on (corrected from “the self and the system one is in”), and the whole only where the whole is one feeding closure, where its verdict is the axiom's; what the axiom adds is significance for continuations whose loss returns to no one; a center whose represented boundary is the whole holds the axiom's significance (bounded_whole).
+Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only describes, and “should” is what a center does once its represented boundary matches what it actually depends on. The theory then explains recognition and motivation but claims no warrant beyond them.” Ren chose: “let's aim for a first, then try to archive b”. The reading (an AI argument): the feeding closure reads “what it actually depends on”. It was also read as Ren's “the system that one is in”, the system reached from a center along dependence; that reading is withdrawn: the feeding closure lies within the influence closure, the influence and reach closures lie within the system, and the reach closure is offered for that level (see levels-of-closure; an AI reading). The names (FedClosed, WithinFeeding, Overshoot and others) are the AI's, chosen by Ren's naming standard. Of the levels Ren wrote: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”; and: “there could be the whole realizes itself(like us, we recognize that "we" are the universe/ecosystem that realizes its own existence), understanding itself, and updates itself, this is also under the selection rules and constraints in theory, but in practice, how this happens, needs more thoughts”. The reading (an AI argument): route (b) reaches the self and what it depends on (corrected from “the self and the system one is in”), and the whole only where the whole is one feeding closure, where its verdict is the continuation condition's; what the continuation condition adds is significance for continuations whose loss returns to no one; a center whose represented boundary is the whole holds the continuation condition's significance (bounded_whole).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). Reuses the axiom Unrestricted and significance bounded by regions, bounded.
-  - Output: The axiom and significance bounded by regions.
-  - Input: Significance bounded by the whole is the axiom; where the two verdicts agree.
+- **formal-reuse**: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). Reuses the continuation condition Unrestricted and significance bounded by regions, bounded.
+  - Output: The continuation condition and significance bounded by regions.
+  - Input: Significance bounded by the whole is the continuation condition; where the two verdicts agree.
   - Preserved conditions: None. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
 - **formal-reuse**: [significance-retained-within-margin](significance-retained-within-margin.md). Reuses retaining and adding (Web.Retains, Web.Adds), Web.Includes.retains and Web.retains_iff_includes.
-  - Output: Under the axiom retaining is inclusion.
+  - Output: Under the continuation condition retaining is inclusion.
   - Input: The verdict bounded by a region is inclusion too, under covering.
-  - Preserved conditions: The axiom. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
-- **formal-reuse**: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Reuses Web.retains_bounded_iff and Clearing.clearer_loses_dweller; there the axiom's verdict always decides the verdict within every region (Web.Retains.within), here where the converse holds is given.
-  - Output: Retaining bounded by regions; under the axiom the free rider's part loses the dweller.
-  - Input: Where the verdict within the closure agrees with the axiom's or parts from it.
-  - Preserved conditions: The axiom; the withheld levels. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
+  - Preserved conditions: The continuation condition. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
+- **formal-reuse**: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Reuses Web.retains_bounded_iff and Clearing.clearer_loses_dweller; there the continuation condition's verdict always decides the verdict within every region (Web.Retains.within), here where the converse holds is given.
+  - Output: Retaining bounded by regions; under the continuation condition the free rider's part loses the dweller.
+  - Input: Where the verdict within the closure agrees with the continuation condition's or parts from it.
+  - Preserved conditions: The continuation condition; the withheld levels. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
 - **formal-reuse**: [feeding-closure](feeding-closure.md). Reuses the feeding closure (Flow.WithinFeeding) and Clearing.fedClosed.
   - Output: The feeding closure; the clearer's closure omits the dweller.
   - Input: Significance bounded by the feeding closure.
   - Preserved conditions: None. [Interdependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean)
 - **formal-reuse**: [consumption-ends-with-feeders](consumption-ends-with-feeders.md). Reuses Overshoot's whole (Overshoot.closure_whole).
   - Output: The feeding closure of either is the whole.
-  - Input: In Overshoot the verdict within the closure is the axiom's.
+  - Input: In Overshoot the verdict within the closure is the continuation condition's.
   - Preserved conditions: None. [Interdependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean)
 - **formal-reuse**: [loss-beyond-a-region](loss-beyond-a-region.md). Reuses Clearing.loses_beyond, Web.LosesBeyond.narrow and Clearing.alongDependence.
   - Output: The clearer closes nothing within its dependence.
@@ -86,9 +86,9 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
   - Output: Without the clearer's part the dweller is admitted, with it unsupported from step 2 on.
   - Input: From the dweller's standpoint the levels without it add the dweller.
   - Preserved conditions: The withheld levels. [Regions.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean)
-- related, not a proved adapter: [derived-extent-limits](derived-extent-limits.md). There the center along dependence is not derived from the dynamics; here, without the axiom, the verdict bounded by the feeding closure is the axiom's where the closure is the whole, and not in the clearer's web.
-- related, not a proved adapter: [comparison-within-reach](comparison-within-reach.md). Advances this result: for any significance covering what a part has reached before each step, the comparison with and without the part is the axiom's (Flow.Balances.comparison_within_reach), so the covering condition of Web.retains_bounded_iff_includes follows from the dynamics.
-- related, not a proved adapter: [presupposition-scopes](presupposition-scopes.md). Significance bounded by each center's closure is the least making every presupposition sub-true; route (b) and the axiom are one presupposition at narrow and at wide scope (presupposition_scopes).
+- related, not a proved adapter: [derived-extent-limits](derived-extent-limits.md). There the center along dependence is not derived from the dynamics; here, without the continuation condition, the verdict bounded by the feeding closure is the continuation condition's where the closure is the whole, and not in the clearer's web.
+- related, not a proved adapter: [comparison-within-reach](comparison-within-reach.md). Advances this result: for any significance covering what a part has reached before each step, the comparison with and without the part is the continuation condition's (Flow.Balances.comparison_within_reach), so the covering condition of Web.retains_bounded_iff_includes follows from the dynamics.
+- related, not a proved adapter: [presupposition-scopes](presupposition-scopes.md). Significance bounded by each center's closure is the least making every presupposition sub-true; route (b) and the continuation condition are one presupposition at narrow and at wide scope (presupposition_scopes).
 
 **Used by:** [feeding-from-a-step](feeding-from-a-step.md)
 
@@ -125,6 +125,7 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `Becoming.bounded_whole`, `Becoming.Web.retains_bounded_iff_includes`, `Becoming.Web.retains_bounded_iff_retains`, `Becoming.Flow.within_closure_iff_retains`, `Becoming.Overshoot.within_closure_iff_retains`, `Becoming.Clearing.within_closure_yet_loses`
 
@@ -143,6 +144,7 @@ Aliases: `Becoming.bounded_whole`, `Becoming.Web.retains_bounded_iff_includes`, 
 - 18 October 2026, the N1 renaming (Ren: "Renames, full scope"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged.
 - 18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Clearing.free_rider_loses (now Clearing.clearer_loses_dweller). Proof bindings (Interdependence.lean, Significance.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Interdependence.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Significance.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired label replaced by the current term: the first hypothesis names the continuation condition, stated and not asserted, its reading an AI reading (D16), with no person as its standing; 'the axiom' in the dependency interfaces, related details, validation scope and the AI readings of the correspondence reads 'the continuation condition', the quoted words kept verbatim and the readings labelled as AI readings instead of 'adopted on Ren's delegation'. No law changed.
 - 9 rebinding entries (2026-10-11 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](closure-verdict-meets-continuation-condition.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -153,4 +155,4 @@ Aliases: `Becoming.bounded_whole`, `Becoming.Web.retains_bounded_iff_includes`, 
 
 </details>
 
-Documentary review UTC: `2026-10-14T15:05:38+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -7,7 +7,7 @@
 
 Editable record: [multivalued-joining-common-structure.json](multivalued-joining-common-structure.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-08T13:52:31.763955+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T14:32:50+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
@@ -85,7 +85,7 @@ Hashes in the editable record bind the reviewed source versions. The checker doe
 
 Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition.
 
-Aliases: `Generative.ExplanatoryJoiningBranches.common_multivalued_structure`, `Becoming.Joining.common_multivalued_structure_of_em`, `Becoming.Joining.common_structure`, `Becoming.Joining.operation_lifts_iff`
+Aliases: `Generative.ExplanatoryJoiningBranches.common_multivalued_structure`, `Becoming.Joining.common_multivalued_structure_of_em (retired module)`, `Becoming.Joining.common_structure`, `Becoming.Joining.operation_lifts_iff (retired module)`
 
 <a id="沿革-history"></a>
 ## History
@@ -97,4 +97,5 @@ Aliases: `Generative.ExplanatoryJoiningBranches.common_multivalued_structure`, `
 - 19 October 2026, U3 (study section 196): the presentation laws this record cites read on a frame (Becoming.PresentationFrames): exact reduced codes of a frame's branching tests correspond one to one, factor through the canonical one, and the joint relation of a joint frame descends to them exactly where saturated. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Moved with their full names: from PresentationFrames.lean to Presentations.lean, PresentationFrames.canonical_kernel. Removed as pure forwarders (each applied one law to its own binders), the law named instead: PresentationFrames.canonical_factor (now Presentations.canonical_factor); PresentationFrames.correspondence (now Presentations.relative_unique_correspondence); PresentationFrames.joint_blocked (now Presentations.separating_relation_blocks_descent); PresentationFrames.joint_descends_iff (now Presentations.relation_descends_iff_saturated); PresentationFrames.joint_image_iff (now Presentations.lift_exact_iff_saturated); PresentationFrames.joint_reading_unique (now Presentations.relational_reading_unique_on_used). Proof bindings (Joining.lean, JoiningCodes.lean, Presentations.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Joining.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; JoiningCodes.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Presentations.lean, takes as its final section PresentationFrames, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them. The claim is unchanged.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryBranching, ExplanatoryJoiningBranches and JoiningBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.BranchingCorrespondence, Becoming.Joining, Becoming.JoiningCodes, Becoming.Presentations and ExplanatoryJoiningBranchWitnesses). The retired modules' content is also stated in Becoming.Granularity, Becoming.Labelled and Becoming.Likeness, which this record does not cite with declarations. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the aliases Becoming.Joining.operation_lifts_iff and Becoming.Joining.common_multivalued_structure_of_em marked as of a retired module: they are declared only in the history copy of JoiningBridge, which the record cites as provenance; the current proof is Becoming.Joining.common_structure. The claim is unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](multivalued-joining-common-structure.json).

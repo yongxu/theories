@@ -14,7 +14,7 @@
 2. In a balanced flow, where the levels with a part admit within a region everything the levels without it admit there, they include the levels without it exactly when the part's net draw stays within the margin for every formation outside the region that the levels without it admit. (`Becoming.Flow.Balances.includes_iff_beyond_within`)
 3. Where a part's activity widens what can form within its own region, the levels with it widen those without it exactly when its net draw stays within the margin for every formation outside the region that the levels without it admit, and the two are mixed exactly when the draw goes beyond for one such formation. (`Becoming.Flow.Balances.widens_iff_others_within`, `Becoming.Flow.Balances.mixed_iff_other_beyond`)
 4. Zero margin: where a formation outside the own region, admitted without the part, needs a condition at exactly the level it stands at without the part's exchange, any net draw of the part on that condition makes own widening mixed. (`Becoming.Flow.Balances.mixed_of_tight`)
-5. Where the part's net draw is nothing on every condition required by a formation outside the own region that the levels without it admit, own widening widens the whole, whatever the levels; a comparison reading only the own region, both ways, then registers a change where nothing is closed. (`Becoming.Flow.Balances.widens_of_untaken_beyond`, `Becoming.Flow.Balances.widens_yet_own_changed`)
+5. Where the part's net draw is nothing on every condition required by a formation outside the own region that the levels without it admit, own widening widens the whole, whatever the levels; a comparison reading only the own region, both ways, then shows a change where nothing is closed: at some step the levels without the part do not admit within the own region what the levels with it admit there. (`Becoming.Flow.Balances.widens_of_untaken_beyond`, `Becoming.Flow.Balances.widens_yet_own_changed`)
 6. Any decided set of formations at each step, a reachable set included, is what the web reading each formation as its own condition, at need one, admits; nothing is conserved in that web. (`Becoming.Web.reachWeb`, `Becoming.Web.admits_reachWeb_iff`)
 7. Witness: a drawer takes one unit of a shared condition and gives one to its store, which its own option needs; another formation needs the shared condition at one. With one unit of slack the drawer's own widening widens the whole; with none it is mixed. (`Becoming.OwnDrawing.flow`, `Becoming.OwnDrawing.web`, `Becoming.OwnDrawing.balances`, `Becoming.OwnDrawing.withheld`, `Becoming.OwnDrawing.own_widens`, `Becoming.OwnDrawing.ample_widens`, `Becoming.OwnDrawing.tight_mixed`)
 
@@ -75,6 +75,7 @@ Turner, Smith, Shah, Critch and Tadepalli (NeurIPS 2021) show optimal policies t
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 
 Aliases: `own widening within the margin`, `余量之内的自身扩大`, `when keeping options open closes another's`, `power-seeking and the margin`, `Becoming.Flow.Balances.widens_iff_others_within`, `Becoming.Flow.Balances.mixed_iff_other_beyond`, `Becoming.Flow.Balances.mixed_of_tight`
 
@@ -82,7 +83,8 @@ Aliases: `own widening within the margin`, `余量之内的自身扩大`, `when 
 ### History
 
 - 20 October 2026: added (OW1), the margin law read for a part's own region and joined to the formal results on power-seeking and impact measures, after a literature check (significance review, section "option-keeping and the margin"); study section 243.
+- 25 October 2026, board item DF (study section 418): the fifth law said the own-region comparison 'registers' a change (a retired word); it now says what the Lean concludes: at some step the levels without the part do not admit within the own region what the levels with it admit there.
 
 </details>
 
-Documentary review UTC: `2026-10-20T09:01:52+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T14:50:56+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

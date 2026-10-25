@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
-    "zh": "每一层是更细一层在严格递增的时刻读出；平衡（每个关系项只列出一次）与耗散由更细一层传到更粗一层。一段最粗的步在任何一层读出时，所立者在其中各细步不被否定地下降，则总水平下降的细步数不多于最粗一层段首的总水平，与层无关。",
-    "en": "Each level reads the next finer one at strictly increasing times, and balance (each relatum listed once) and dissipation pass to coarser levels. At any level, with what stands not refuted to run down at each fine step, a coarsest stretch has no more falls of total standing than its starting total."
+    "zh": "每一层是更细一层在严格递增的时刻读出；平衡（每个关系项只列出一次）与耗散由更细一层传到更粗一层。一段最粗的步在任何一层读出时，在该层所立者的普查之下，所立者在其中各细步不被否定地下降，则总水平下降的细步数不多于最粗一层段首的总水平，与层无关。",
+    "en": "Each level reads the next finer at strictly increasing times; balance (relata listed once) and dissipation pass to coarser ones. At any level, under a census of what stands and running down not refuted at each fine step, a coarsest stretch has no more falls of total standing than its starting total."
   },
   "claim": {
     "zh": "塔（Tower）：每一层有一个网与一个流，第 n 层是第 n+1 层在严格递增的时刻 refine n 读出（web_sample、flow_sample）。最粗一层的步 s 是第 n 层的 reads n s；最粗一层是第 n 层在这些时刻读出（Tower.web_zero、Tower.level_zero），这些时刻严格递增（Tower.reads_strict）。每一层的规律：每个关系项只列出一次的平衡与耗散传到更粗一层（Tower.balances_coarser、Tower.dissipative_coarser）。分得再细，变化也有界：最粗一层从 S 起 N 步的一段在第 n 层读出，第 n 层有所立者的普查、所立者在其中各细步不被否定地下降时，总水平下降的细步（即有水平改变的步）不多于最粗一层在 S 的总水平（Tower.changes_within），界与 n 无关。",
@@ -23,8 +23,8 @@
       "en": "No global premise: running down and the census only at the level and fine steps used."
     },
     {
-      "zh": "表示：时间为一族离散读法，由 Sampling 的读出相连（Ren 2026-10-12 的决定）；核心不取实数。",
-      "en": "Representation: time as a family of discrete readings linked by the reading of Sampling (Ren's decision of 12 October); the core takes no real numbers."
+      "zh": "表示：时间为一族离散读法，由 Sampling 的读出相连；核心不取实数。",
+      "en": "Representation: time as a family of discrete readings linked by the reading of Sampling; the core takes no real numbers."
     }
   ],
   "correspondence": {
@@ -296,6 +296,10 @@
     {
       "en": "2026-10-20: 73 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/20db001509c7d5d6/continuous-time-as-tower.json and in git.",
       "zh": "2026-10-20：73 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/20db001509c7d5d6/continuous-time-as-tower.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement names the census of what stands that the bound on falls takes; the representation premise gives the reading without naming who chose it (the decision stays in the correspondence as provenance).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明下降次数之界所需的所立者普查；表示前提只陈述读法，不再写选定者（该决定作为来历留在对应中）。"
     }
   ]
 }

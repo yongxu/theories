@@ -1,0 +1,1030 @@
+{
+ "units": [
+  {
+   "unit": "sweep-0",
+   "done": {
+    "changed": [
+     {
+      "target": "living-significance-on-held-lives",
+      "change": "correspondence.en/zh (AI text only; Ren's quotes untouched): 'the axiom's one job' / 那条公理的唯一作用 -> 'the continuation condition's one job' / 延续条件的唯一作用; every S0 -> self-significance / 自身意义; N_std -> standpoint neutrality / 立场中立 (capitalized where it starts a sentence); N_rel -> relational neutrality / 关系中立; G0 -> living significance / 生生之意义; 'N_std as the axiom' / 把 N_std 读作那条公理 -> 'standpoint neutrality as the continuation condition' / 把立场中立读作延续条件; 'names that bridge as the one axiom' / 命名为唯一公理 -> 'as the continuation condition' / 命名为延续条件; 'the boundary the axiom denies' / 那条公理所否认的边界 -> 'the boundary the continuation condition denies' / 延续条件所否认的边界. validation_scope: 'S0, N_std and N_rel being hypotheses' / S0、N_std 与 N_rel 是定理的假设 -> 'self-significance, standpoint neutrality and relational neutrality being hypotheses' / 自身意义、立场中立与关系中立是定理的假设. dependencies[0].interface.output: 'The valuation, S0, the two neutralities, connection and G0' / 估值、S0、两条中立、连通与 G0 -> 'The valuation, self-significance, the two neutralities, connection and living significance' / 估值、自身意义、两条中立、连通与生生之意义. dependencies[0].interface.input: 'On held lives G0 is exactly S0 everywhere with N_std; on a connected whole S0 with N_rel also gives G0.' -> 'On held lives living significance is exactly self-significance everywhere with standpoint neutrality; on a connected whole self-significance with relational neutrality also gives living significance.' (zh likewise). dependencies[2].detail: 'what G0 adds beyond S0 can be concentrated in N_std' -> 'what living significance adds beyond self-significance can be concentrated in standpoint neutrality' (zh likewise). related[1].detail: 'connection and N_rel' / 连通与 N_rel -> 'connection and relational neutrality' / 连通与关系中立. Existing DF history note extended by one clause; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "metaethical-core-characterization",
+      "change": "related[0].detail: '(N_rel), BI is an instance of N_rel, and the standpoint-to-normative bridge is N_std' / （N_rel），BI 是 N_rel 的特例，立场到规范的桥是 N_std -> '(relational neutrality), BI is an instance of relational neutrality, and the standpoint-to-normative bridge is standpoint neutrality' / （关系中立），BI 是关系中立的特例，立场到规范的桥是立场中立. related[4].detail: 'patient-side N_rel' / 承受者一侧的 N_rel -> 'patient-side relational neutrality' / 承受者一侧的关系中立. limitations: 'Proves none of S0, N, A, C, L or J' / 不证明 S0、N、A、C、L 或 J -> 'Proves none of self-significance, the neutralities, A, C, L or J' / 不证明自身意义、两种中立、A、C、L 或 J (schema 1: en +30, zh +4 chars). next_delta: \"N's philosophical warrant\" / N 的哲学根据 -> \"the neutralities' philosophical warrant\" / 两种中立的哲学根据. Existing DF note extended by one clause; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "life-as-condition-of-life",
+      "change": "spec applied. dependencies[3].detail: \"uses G0's characterization Valuation.significant_iff\" / 用 G0 的刻画 -> 'uses the characterization of living significance, Valuation.significant_iff' / 用生生之意义的刻画; interface.output: \"G0's characterization on a connected whole\" / 连通整体上 G0 的刻画 -> 'The characterization of living significance on a connected whole' / 连通整体上生生之意义的刻画; interface.input: 'On the mutualism witness G0 is exactly' / 互利见证上 G0 恰为 -> 'living significance is exactly' / 生生之意义恰为 (no N_rel occurs in dependencies[3]; it already says 'both neutralities'). correspondence: 'The author reads an embodied relatum' / 作者把“体现的关系项作为条件” -> 'The AI reads an embodied relatum' / AI 把“体现的关系项作为条件”. New DF history note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "relational-generative-comparison",
+      "change": "related[0].detail: 'the established explicit G0/J route' / 沿既有公开 G0/J 公理路线 -> 'the established conditional alignment route' / 沿既有的条件对齐路线 ('explicit'/公开…公理 belonged to the label's variant 'explicit axiom route'). limitations: 'premise-free C/G0' / C/G0 无前提成立 -> 'premise-free C or living significance' / C 或生生之意义无前提成立 (schema 1: en +20, zh +3). New DF history note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "becoming-spine-instances",
+      "change": "dependencies[0].detail: 'show that G0, generative extension and C are' / 表明 G0、生成扩展与 C -> 'show that living significance, generative extension and C are' / 表明生生之意义、生成扩展与 C. Existing DF note extended (inserted before 'The claim is unchanged.'); reviewed_at_utc refreshed."
+     },
+     {
+      "target": "space-and-its-parts",
+      "change": "correspondence: \"The author's reading (an AI argument): this result gives\" / 作者的读法（AI 论证）：本结果给出 -> \"A reading (the AI's): this result gives\" / 读法（AI 的）：本结果给出; 'one part of what G0 counts as living' / 是 G0 所计的 living 的一个部分 -> 'one part of what living significance counts as living' / 是生生之意义所计的 living 的一个部分. New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "more-needs-renewers",
+      "change": "spec applied (the item is now hypotheses[3], an earlier pass inserted a premise): \"This is the author's reading.\" / 这是作者的读法。 -> \"This is a reading (the AI's).\" / 这是读法（AI 的）。 correspondence: 'The author reads the result as one structure of 生生' / 作者把结果读作“生生”的一种结构 -> 'The AI reads the result ...' / AI 把结果读作“生生”的一种结构. Existing DF note extended; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "bounded-census-keeps-pace",
+      "change": "correspondence: \"The author's reading (an AI argument):\" / 作者的读法（AI 论证）： -> \"A reading (the AI's):\" / 读法（AI 的）：. New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "census-balance",
+      "change": "correspondence: \"The author's reading (an AI argument):\" / 作者的读法（AI 论证）： -> \"A reading (the AI's):\" / 读法（AI 的）：. New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "consumption-ends-with-feeders",
+      "change": "correspondence: \"The author's reading (an AI argument, adopted on Ren's delegation):\" / 作者的读法（AI 论证，依 Ren 的交托采用）： -> \"A reading (the AI's):\" / 读法（AI 的）： (the whole label replaced, as earlier DF passes did). New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "feeding-closure",
+      "change": "correspondence: \"The author's reading (an AI argument, adopted on Ren's delegation):\" / 作者的读法（AI 论证，依 Ren 的交托采用）： -> \"A reading (the AI's):\" / 读法（AI 的）：. New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "generation-is-replenishment",
+      "change": "correspondence: 'The author reads the result as one formal content' / 作者把结果读作原话中 -> 'The AI reads the result ...' / AI 把结果读作原话中; \"(the author's interpretation, an AI argument; K1\" / （作者的诠释，AI 论证；第七次 -> \"(the AI's interpretation and argument; K1\" / （AI 的诠释与论证；第七次. New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "market-supported-finite-transition",
+      "change": "related[0].detail: 'The mechanism informs existing G0/J judgment;' / 机制结果供既有 G0/J 判断使用； -> 'The mechanism informs existing judgment under living significance and the practical commitments;' / 机制结果供既有的、生生之意义与实践承诺之下的判断使用；. Existing DF note extended; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "presupposition-scopes",
+      "change": "correspondence: 'standpoint-invariance, the rule of N_std,' / 即 N_std 的规则 -> 'standpoint-invariance, the rule of standpoint neutrality,' / 即立场中立的规则. Existing DF note extended (before 'No law changed.'); reviewed_at_utc refreshed."
+     },
+     {
+      "target": "represented-boundary-against-dependence",
+      "change": "correspondence (schema 1, shrinks): \"The author's reading (an AI argument, adopted on Ren's delegation): a region\" / 作者的读法（AI 论证，依 Ren 的交托采用）：一个条件区域 -> \"A reading (the AI's): a region\" / 读法（AI 的）：一个条件区域. New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "theory-of-becoming-foundation",
+      "change": "related[7].detail: 'G0 follows;' / 的条件之下 G0 得出； -> 'living significance follows;' / 的条件之下生生之意义得出；. progress[6]: 'in the theory without axiom it is a condition' / 在无公理的理论中， -> 'in the theory without the condition it is a condition' / 在不带延续条件的理论中， ('the theory without axiom' was the earlier rendering of the retired Part I, 第一部分 -> 不用公理的理论 in the retired crosswalk). New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "whole-persists-through-generation",
+      "change": "correspondence (schema 1, shrinks): \"(the author's interpretation, an AI argument; K3\" / （作者的诠释，AI 论证；第七次 -> \"(the AI's interpretation and argument; K3\" / （AI 的诠释与论证；第七次. New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "room-read-off-the-exchange",
+      "change": "correspondence (registration sense): 'what the order registers of the beyond does not enter,' / 序对之外记录什么不进入， -> 'what of the beyond couples into the order does not enter,' / 之外何者耦合入序不进入，. New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "the-continuation-condition-on-the-root",
+      "change": "laws[2].en: 'living significance follows, with S0, both neutralities' -> 'living significance follows, with self-significance, both neutralities' (en 369 chars, under 420; zh already reads 自之有义). New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "history notes (all 19 changed records)",
+      "change": "Each has exactly one note beginning '25 October 2026, board item DF (study section DF_N):' / '2026年10月25日，工作板条目 DF（研究第 DF_N 节）：'. Seven existing notes were extended by one clause (living-significance-on-held-lives, metaethical-core-characterization, becoming-spine-instances, more-needs-renewers, market-supported-finite-transition, presupposition-scopes; continuation-relative-to-a-class unchanged). Twelve new notes were appended, lowercase after the colon as earlier notes are. reviewed_at_utc = 2026-10-25T17:02:48+00:00. Layout is json.dumps(indent=2, ensure_ascii=False) + newline, key order kept. Edit script: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/df1_apply.py; replacement log: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/df1_log.json"
+     }
+    ],
+    "kept": [
+     {
+      "target": "continuation-relative-to-a-class, finite-fallible-inquiry-necessity, laws-at-coarser-steps (no change)",
+      "why": "No retired label, registration sense or 'author's reading' in their fields. 'are registered with their losses in the plan' and 'adapters registered as timely-response-necessity' use 'registered' in its ordinary sense of listing a record, not what reaches a selector. laws-at-coarser-steps' 'the author's counterreview' is review provenance."
+     },
+     {
+      "target": "becoming-spine-instances: related[7] 'the periphery's G0' / 外围的 G0; g0_iff; PracticalJudgment.Better (BetterAt) and \"PracticalJudgment's ... better x y\" in the claim and hypotheses[2]",
+      "why": "These are Lean names, or the periphery's definition named as such. The brief says to keep them."
+     },
+     {
+      "target": "metaethical-core-characterization: related[2] 'GenerativeComparison.G0 predicate'",
+      "why": "Lean name of the periphery's definition."
+     },
+     {
+      "target": "bare 'J' (metaethical-core-characterization limitations and related[4] 'weights remain with J' / 由 J 承担; becoming-spine-instances related[1] \"J's robust judgment\")",
+      "why": "The live chapters 03, 05 and 07 still name the practical commitments 'J' and 'J1–J4'. The 08-METHOD table retires only 'the G0/J route' and 'J1–J4 as PracticalJudgment'. A, C, L, D and 'seed' are also current, so they are kept."
+     },
+     {
+      "target": "Ren's words in quotation marks (living-significance-on-held-lives 'if we want to add one axiom'; space-and-its-parts 'when we add axiom ... doesn't even require axiom'; the quoted route (b) text 'No axiom. ...' in consumption-ends-with-feeders and feeding-closure)",
+      "why": "Ren's words stay verbatim with their source. Only the AI text around them changed."
+     },
+     {
+      "target": "space-and-its-parts correspondence 'Ren says that with an axiom we can define the good' / Ren 说加上公理可以定义好",
+      "why": "This reports Ren's own word for his proposal. It is not the retired label in live AI framing."
+     },
+     {
+      "target": "ordinary 'axiom' (zero-axiom goal, Lean axioms): space-and-its-parts does_not_show[0], correspondence, related[0]; theory-of-becoming-foundation statement and does_not_show[2]; census/bounded-census related[2] 无公理的整体演绎; 'not a Lean axiom' / 'no Lean axiom' / 'not an axiom' in presupposition-scopes, more-needs-renewers, space-and-its-parts, represented-boundary-against-dependence, whole-persists-through-generation; 'No axiom.' in the hypotheses of room-read-off-the-exchange and the-continuation-condition-on-the-root; relational-generative-comparison next_delta 'axiom-free gate'",
+      "why": "None of these is 'the one axiom' label. They speak of logical axioms or of the zero-axiom target."
+     },
+     {
+      "target": "'Author counterreview', \"Author's review only\", 'author review in study section …' and 作者反审/作者自审/作者审查 in validation_scope (most records); life-as-condition-of-life 'a separate agent, not an author'",
+      "why": "This is review provenance, not 'the author's reading'. Earlier DF passes kept these phrases too."
+     },
+     {
+      "target": "relational-generative-comparison validation_scope 'Registration does not recompile.' / 本次登记不重新编译",
+      "why": "Bookkeeping act of entering the record, not the retired selector sense."
+     },
+     {
+      "target": "bounded-census-keeps-pace dependencies[3].detail.zh 静止的流（Flow.still）",
+      "why": "Names the Lean Flow.still. It is not the retired 归于静止."
+     },
+     {
+      "target": "theory-of-becoming-foundation progress[*].source anchors (#67-折叠-g0p51, #162-第二部分折叠进第一部分一个条件小节p128)",
+      "why": "These are link anchors to study sections. Changing them would break the links."
+     },
+     {
+      "target": "FLAG, outside this sweep's scope: 'adopted on Ren's delegation' / 依 Ren 的交托采用 where it is not part of an 'author's reading' label",
+      "why": "The brief limits changes to labels, registration and 'the author's reading'. DEFECTS-FOUND line 151 lists this wording as a defect, and earlier DF passes removed it in presupposition-scopes and in the hypothesis of living-significance-on-held-lives. It remains in: living-significance-on-held-lives correspondence (D11); life-as-condition-of-life correspondence (D4); consumption-ends-with-feeders correspondence (twice) and dependencies[3].interface.conditions (D17); feeding-closure correspondence; represented-boundary-against-dependence limitations; space-and-its-parts correspondence 'On Ren's delegation'; whole-persists-through-generation correspondence and limitations (D5). Similar text names a person as the standing of a decision: 'under Ren's naming rule (D36)', laws-at-coarser-steps 'Ren set on 11 October…', theory-of-becoming-foundation hypotheses[0] 'Ren authorizes…' and progress[3]. Inside 'the author's reading (…, adopted on Ren's delegation)' labels, the whole label became 'a reading (the AI's)'."
+     },
+     {
+      "target": "FLAG: living-significance-on-held-lives laws[8].zh 所以生命意义是自身意义加立场中立",
+      "why": "生命意义 is an older Chinese rendering of living significance. It is not a retired label, so it is kept under 'change nothing else'. Changing it to 生生之意义 would make the record consistent."
+     },
+     {
+      "target": "the-continuation-condition-on-the-root: zh title and alias 根上之续存条件; laws[2].zh 自之有义",
+      "why": "These are alternative renderings of current terms, not retired labels."
+     }
+    ],
+    "checker": "`python3 -B tools/research/research.py check --changed-since 0e368fbf2 --ids <the 19 changed ids>`, last run: exit 1 with 21 errors. None of them is about the content of my records. 20 are 'generated view differs' (README, RESULTS, GOALS, theory-graph.json, THEORY-GRAPH.md and the .md pages of the changed records), which the brief says to ignore. The other is 'Research inputs changed during this operation; rerun against the latest source versions', caused by other agents editing this worktree at the same time. A v1-growth error on own-good-to-reachable-living-significance appeared in the first run; it is not my record and was gone on the rerun. Growth ratchet warnings, all within limits: metaethical-core-characterization limitations en 333->363, zh 105->109; relational-generative-comparison limitations en 311->331, zh 90->93; metaethical correspondence 729->761 came from an earlier pass. Source drift for my records is only in Lean files other agents changed (Space.lean, EdgeClosure.lean, Retaining.lean). `python3 -B tools/research/research.py lint --ids <same>`: exit 0, errors [], 39 warnings (31 length, 4 stock-boundary, 2 round-number P40, 1 negation-lead, 1 status-restatement). All were there before this pass. Three items over the brief's caps predate it and I left them alone because the sweep does not cover them: living-significance-on-held-lives does_not_show[4] en 246 > 240, more-needs-renewers laws[3] en 583 > 420, theory-of-becoming-foundation progress[10] en 356 > 240 (all at the same length at 0e368fbf2). Every field I changed is within its cap: living-significance validation_scope 535/207, root laws[2] 369, metaethical next_delta 247/91."
+   },
+   "findings": [
+    {
+     "target": "living-significance-on-held-lives, hypotheses[4] (en and zh), changed by an earlier DF pass",
+     "quote": "and under the continuation condition it follows (continuation-condition-yields-living-significance). / 在延续条件之下它成立（continuation-condition-yields-living-significance）",
+     "problem": "This says more than the Lean proves. The theorem it cites needs a reading premise: a claim's significance has to be some formation's continuation at some step. The metaethical-core-characterization premise that was rewritten in the same sweep states that reading; this one leaves it out.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean:366-375 (Valuation.premises_of_unrestricted takes `reads : ∀ p c, sig p (step c) (formation c) → V.sig p c`); theories/becoming/chapters/07-SIGNIFICANCE.md:118 ('On any reading where a claim's significance is some formation's continuation at some step'); theories/becoming/results/records/living-significance-on-held-lives.json:123-124; compare metaethical-core-characterization.json:19 ('where a claim's significance is a formation's continuation')",
+     "fix": "en: 'Living significance is a condition the theory states and does not assert; on held lives this characterization is one way of stating it, and under the continuation condition, where a claim's significance is a formation's continuation, it follows (continuation-condition-yields-living-significance).' (297 chars, limit 420). zh: '生生之意义是理论陈述而不断言的条件；在被持有的生命上，这一刻画是陈述它的一种方式，在延续条件之下，于主张之意义即某形成之延续之意义的读法上，它成立（continuation-condition-yields-living-significance）。' (125 chars, limit 190). The existing DF note already covers this premise.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "metaethical-core-characterization, correspondence.en (an earlier pass replaced \"Ren's G0\")",
+     "quote": "`living` reads 生生; matching living significance, whose object is 生生, uses the relational reading of renewing formation",
+     "problem": "The English adds a clause the Chinese does not have; the zh reads only '对应生生之意义时取更新型形成的关系读法'. The added clause also says more than the label did. The chapter and the module both say 生生 is the object of the direction, compared by widening and read apart from the valuation, and that no reading of `living` includes further generation.",
+     "evidence": "theories/becoming/results/records/metaethical-core-characterization.json:31-32; experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean:12 ('生生 is read separately, by widening what can form'); theories/becoming/chapters/07-SIGNIFICANCE.md:95 ('no reading of `living` includes further generation, and 生生, the object of the direction, is compared by widening')",
+     "fix": "en: '`living` reads 生生; matching living significance uses the relational reading of renewing formation (relational-renewal-classification, relational-reading-comparison), ...'. Drop ', whose object is 生生,'. The zh stays as it is, and the existing DF note ('the correspondence restated in the current terms') still covers the change.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "metaethical-core-characterization, history[16] (the DF note)",
+     "quote": "The first premise item and the correspondence restated in the current terms (living significance, the continuation condition) in place of the retired labels G0, Part I/II and the one axiom;",
+     "problem": "The note says hypotheses[0] was only relabelled, but its premise list also changed: 'S0, N_rel, N_std and A' became 'The seed, both neutralities and A'. Self-significance (S0) is not the seed; it is one way to supply a seed. The new wording matches the Lean, but the change in substance is not recorded.",
+     "evidence": "theories/becoming/results/records/metaethical-core-characterization.json:19 (hypotheses[0].en now 'The seed, both neutralities and A are explicit normative premises'), :459 (history[16]); Becoming/Metaethics.lean:147-166 (SelfSignificance and Seed are separate definitions; Grounds := Seed ∧ Neutral transmits ∧ Neutral shares); Becoming/ValuationFrames.lean:92-97 (significant_iff : Significant ↔ Grounds)",
+     "fix": "In history[16].en, after 'the one axiom;' insert: 'in that premise item S0 reads the seed, the premise Valuation.significant_iff takes (a position with self-significance and an own living claim supplies one);'. In zh, after '与那一条公理；' insert: '该前提中 S0 改为种子，即 Valuation.significant_iff 所取的前提（持自身意义且有自身活的主张的位置提供一个）；'.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "generation-is-replenishment, correspondence.en/zh (the sentence this pass edited; the problem was already there)",
+     "quote": "(read as 生 only under Ren's reading) / （只在 Ren 把它读作“生”时才读作生命）",
+     "problem": "This reading is credited to Ren, so it does not carry its AI label. The words date from P23 (9 October), when the reading was still left to Ren. P110 then decided it as D4, an AI decision made on delegation, and life-as-condition-of-life labels the same reading 'an AI reading ... (D4)'. The zh also says 读作生命 (read as life), while the en says 'read as 生'.",
+     "evidence": "theories/becoming/results/records/generation-is-replenishment.json:300-301 (correspondence), :867 (history P23, then P110 adopting D4 for 'readings and names formerly left to Ren'); _process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md:6 and :44 (D4: 'embodied relata are 生', decided by the AI); life-as-condition-of-life correspondence ('Reading embodied relata as 生 is an AI reading ... (DELEGATED-CHOICES D4)')",
+     "fix": "en: '(read as 生 under an AI reading, D4)'. zh: '（依 AI 的读法读作“生”，D4）'. Add one clause to the existing DF note, en: \", and '(read as 生 only under Ren's reading)', stale since D4 decided that reading, reads '(read as 生 under an AI reading, D4)'\"; zh: '，“只在 Ren 把它读作‘生’时”改为“依 AI 的读法（D4）”'.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "metaethical-core-characterization, limitations.en/zh and related[4].detail.en/zh",
+     "quote": "Proves none of self-significance, the neutralities, A, C, L or J, binds no position rejecting them / 不证明自身意义、两种中立、A、C、L 或 J; and: so weights remain with J. / 权重仍由 J 承担。",
+     "problem": "The sentence is only half moved to current terms: N became 'the neutralities' but J, the J1–J4 label the brief maps to 'the practical commitments', was kept. This pass rewrote the same sentence in becoming-stepwise-reading as '...or the practical commitments'. The chapters still write 'the practical commitments (J)', so this is about consistency, not meaning.",
+     "evidence": "theories/becoming/results/records/metaethical-core-characterization.json:87-88, :137-138; becoming-stepwise-reading.json (limitations: 'Proves none of self-significance, the neutralities, A, C, L or the practical commitments; binds no rejecter'); theories/becoming/chapters/08-METHOD.md retired-labels table (J1–J4 → the practical commitments); Becoming/Metaethics.lean:32 (J1–J4: PracticalJudgment); theories/becoming/chapters/03-KNOWING.md:9 ('the practical commitments (J)')",
+     "fix": "limitations.en: 'Proves none of self-significance, the neutralities, A, C, L or the practical commitments, binds no rejecter, and does not treat ...' (+39 chars against 0e368fbf2, inside the schema-1 limit of 40). limitations.zh: '不证明自身意义、两种中立、A、C、L 或实践承诺，...' (+6). related[4].detail.en: '... so weights remain with the practical commitments.' zh: '... 权重仍由实践承诺承担。' Extend the DF note with 'and J as the practical commitments' / '，J 改为实践承诺'.",
+     "severity": "style"
+    },
+    {
+     "target": "becoming-spine-instances, related[1].detail.en/zh",
+     "quote": "robust_iff_commonResponse identifies J's robust judgment with the inquiry layer's common response, so J's robustness theorems apply on the scope of a sound inquiry; J's normative premises are not thereby proved.",
+     "problem": "The J label for J1–J4 (PracticalJudgment) was not replaced here, though other records in this sweep replace it with 'the practical commitments'. The detail points at practical-judgment-under-living-significance, so J here means exactly the practical commitments.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:104-105; 08-METHOD.md retired-labels table; the same sweep's replacements of J/G0/J by 'the practical commitments' (acquired-revision-of-pending-task, becoming-stepwise-reading)",
+     "fix": "en: 'robust_iff_commonResponse identifies robust judgment under the practical commitments with the inquiry layer's common response, so their robustness theorems apply on the scope of a sound inquiry; the practical commitments, normative premises, are not thereby proved.' zh: 'robust_iff_commonResponse 把实践承诺之下的稳健判断等同于探究层的共同回应，因此其稳健性定理可在可靠探究的所见范围上使用；实践承诺这些规范前提不因此得到证明。' Extend the DF note by a clause saying J in a related detail reads the practical commitments.",
+     "severity": "style"
+    },
+    {
+     "target": "living-significance-on-held-lives, history[14] (the DF note)",
+     "quote": "the same labels in the correspondence, the validation scope, two dependency details and interfaces and a related detail / 对应、验证范围、两条依存说明与接口及一条相关说明中的同样标签",
+     "problem": "The note says more fields changed than did. Only one dependency detail changed (dependencies[2].detail), plus one dependency's interface (dependencies[0].interface.input and .output). dependencies[0].detail is unchanged.",
+     "evidence": "git diff of theories/becoming/results/records/living-significance-on-held-lives.json: changed leaves are dependencies[0].interface.input/output and dependencies[2].detail only; json:521-522",
+     "fix": "en: '... the validation scope, a dependency detail, a dependency's interface and a related detail ...'. zh: '对应、验证范围、一条依存说明、一条依存的接口及一条相关说明中的同样标签'.",
+     "severity": "style"
+    }
+   ],
+   "fixed": {
+    "applied": [
+     "living-significance-on-held-lives hypotheses[4] (en/zh): the clause now carries the reading premise that Valuation.premises_of_unrestricted needs ('reads'). It says 'under the continuation condition, where a claim's significance is a formation's continuation, it follows' (en 297 chars); the zh adds 于主张之意义即某形成之延续之意义的读法上 (125 chars), matching metaethical-core-characterization. The finding said the existing DF note already covered this. It did not: the earlier pass had silently swapped the clause 'the readings of the restatement are decided on Ren's delegation' for this cross-reference. history[14] now records that swap.",
+     "living-significance-on-held-lives history[14] (en/zh): the field list now reads 'a dependency detail, a dependency's interface and a related detail' (zh 一条依存说明、一条依存的接口及一条相关说明). A leaf diff against 0e368fbf2 confirmed that only dependencies[0].interface.input/output and dependencies[2].detail changed.",
+     "metaethical-core-characterization correspondence.en: dropped ', whose object is 生生,'. It was not in the zh, and 07 §3.1 makes 生生 the object of the direction, compared by widening, not the object of living significance. The existing DF note covers the restatement.",
+     "metaethical-core-characterization history[16] (en/zh): records that in hypotheses[0] S0 now reads the seed, as in Valuation.Grounds (Seed ∧ Neutral transmits ∧ Neutral shares, Metaethics.lean), and that a position with self-significance and an own living claim supplies one (seed_of_selfSignificance).",
+     "metaethical-core-characterization limitations (en/zh) and related[4].detail (en/zh): J now reads 'the practical commitments' / 实践承诺. Here J is the premise card's 'J1–J4: PracticalJudgment' in Metaethics.lean, which is exactly the retired row. To stay inside the schema-1 limit, the English 'binds no position rejecting them' became 'binds no rejecter'. The check reports limitations growth of +39 en and +6 zh against base, and the correspondence now +11 en, down from +34. The DF note was extended to cover this, including that the English sentence was tightened.",
+     "becoming-spine-instances related[1].detail (en/zh): 'J's robust judgment / robustness theorems / normative premises' now read 'the practical commitments' robust judgment ... their robustness theorems ... their normative premises' (zh 实践承诺的 in all three places). The possessive form is kept, so the meaning does not change. In the bridge, robust_iff_commonResponse is stated about PracticalJudgment.Robust, so J is the retired J1–J4 label. The DF note was extended by one clause.",
+     "generation-is-replenishment correspondence: en '(read as 生 only under Ren's reading)' now reads '(read as 生 only under an AI reading, D4)'. zh '（只在 Ren 把它读作“生”时才读作生命）' now reads '（只在 AI 的读法下读作“生”，D4）', which also fixes the zh 'read as life' that contradicted P23. I kept 'only' from the original wording, which the finding's fix had dropped, so the reading's conditional force is unchanged. The DF note was extended by one clause."
+    ],
+    "rejected": [],
+    "checker": "Command: python3 -B tools/research/research.py check --changed-since 0e368fbf2 --ids living-significance-on-held-lives metaethical-core-characterization becoming-spine-instances generation-is-replenishment. The only errors were 'generated view differs', which the brief says to ignore. The only source drift for these ids is becoming-spine-instances on Becoming/EdgeClosure.lean, a file another agent changed, not one of mine. The v1-growth warnings for metaethical-core-characterization are within the brief's ratchet (limitations +39 en / +6 zh, correspondence +11 en). Command: research.py lint --ids (same four): errors []. Its only warnings are length warnings on fields this pass left unchanged; for example, does_not_show[4] of living-significance-on-held-lives is byte-identical to base. All four files keep the json.dumps(indent=2, ensure_ascii=False) + newline layout, and each still has exactly one DF note, amended rather than added. Edits are in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df/theories/becoming/results/records/{living-significance-on-held-lives,metaethical-core-characterization,becoming-spine-instances,generation-is-replenishment}.json. The edit script is /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/df_g0_apply.py."
+   }
+  },
+  {
+   "unit": "sweep-1",
+   "done": {
+    "changed": [
+     {
+      "target": "continuation-condition-yields-living-significance (theories/becoming/results/records/continuation-condition-yields-living-significance.json)",
+      "change": "dependencies[0].detail en/zh: in the list of reused core declarations 'G0' → 'LivingSignificance' (the core's current name; R30 table Becoming.G0 → Becoming.LivingSignificance). dependencies[0].interface.output: 'The valuation, S0, the two neutralities, the seed, G0 and C.' → 'The valuation, self-significance, the two neutralities, the seed, living significance and C.' (zh 估值、S0…G0 → 估值、自身意义…生生之意义). dependencies[0].interface.input: 'G0, S0, both neutralities' → 'living significance, self-significance, both neutralities' (zh 推出 G0、S0 → 推出生生之意义、自身意义). dependencies[1].detail: 'There G0 on held lives is exactly S0 at every standpoint with N_std (the reading of section 6.2: S0 as wanting, N_std as the axiom); here … gives S0 … and N_std' → 'There living significance on held lives is exactly self-significance at every standpoint with standpoint neutrality (the reading of section 6.2: self-significance as wanting, standpoint neutrality as the premise); here … gives self-significance … and standpoint neutrality' (zh likewise; N_std 为公理 → 立场中立为前提). dependencies[1].interface.output: 'The equivalence of G0 with S0 … and N_std.' → '…of living significance with self-significance … and standpoint neutrality.' dependencies[2].detail, [2].interface.input, [3].detail, [3].interface.input: 'G0' → 'living significance' (zh 生生之意义). dependencies[5].interface.input: 'taking G0 as a hypothesis' → 'taking living significance (its G0) as a hypothesis' (zh 以生生之意义（即其 G0）为假设). dependencies[6],[7].interface.output: 'Taking G0 as a hypothesis' → 'Taking living significance (the periphery's G0) as a hypothesis'; [8]: 'Taking G0 and D' → 'Taking living significance (the periphery's G0) and D' (zh 以生生之意义（外围的 G0）…). related[3].detail and related[5].detail: 'takes G0 as a hypothesis' → 'takes living significance (the periphery's G0) as a hypothesis' (zh likewise). History: the existing DF_N note extended by one sentence (en/zh) naming these replacements."
+     },
+     {
+      "target": "becoming-stepwise-reading",
+      "change": "hypotheses[2]: 'the transmission result needs N_rel' → 'needs relational neutrality' (zh 需要 N_rel → 需要关系中立). does_not_show[0]: 'Proves none of self-significance, N, A, C, L or J' → 'Proves none of self-significance, the two neutralities, A, C, L or the practical commitments' (zh 自身意义、N、A、C、L 或 J → 自身意义、两种中立、A、C、L 或实践承诺). dependencies[1].detail: \"uses N_rel's rule transmits\" → 'uses the rule of relational neutrality, transmits' (zh 使用关系中立的规则 transmits). dependencies[1].interface.output: \"G0 ⇔ seed ∧ N_rel ∧ N_std; N_rel's transmission rule\" → 'living significance ⇔ seed ∧ relational neutrality ∧ standpoint neutrality; the transmission rule of relational neutrality' (zh likewise). New DF_N history note."
+     },
+     {
+      "target": "relational-renewal-classification",
+      "change": "correspondence (AI text only): \"not an addition owed beyond G0: G0's object is 生生\" → 'not an addition owed beyond living significance: the object of living significance is 生生' (zh G0 之外 / G0 的对象 → 生生之意义之外 / 生生之意义的对象); Ren's quoted '我G0是什么？' untouched. related[0].detail: 'gives a G0 event-reading interface' → \"gives an event-reading interface for living significance (the periphery's G0)\" (zh 生生之意义（外围的 G0）的逐事件接口). related[1].detail: \"G0's positive ground\" → 'the positive ground of living significance' (zh 生生之意义的正面根据). related[4].detail: \"the relational reading of G0's generation\" → 'the relational reading of the generation living significance concerns' (zh 对生生之意义所涉之生成的关系读法). New DF_N history note."
+     },
+     {
+      "target": "differences-below-threshold (schema 1)",
+      "change": "correspondence (AI text): '理 is read as a model answerable to registration' → 'answerable to coupling' (zh 对识负责 → 对耦合负责; 识 there meant registers); 'whether a formation's own standing counts as registered' → 'counts as coupled in' (zh 是否算作被识 → 是否算作耦合入). Growth vs 0e368fbf2: en −4, zh +2 (within ratchet). Existing DF_N note extended by one sentence."
+     },
+     {
+      "target": "condition-correspondence-discipline (schema 1)",
+      "change": "hypotheses[1]: 'needs N_rel' → 'needs relational neutrality' (zh 需要关系中立). dependencies[1].interface.output: \"G0's characterization on a connected whole.\" → 'The characterization of living significance on a connected whole.' (zh 连通整体上生生之意义的刻画). New DF_N history note."
+     },
+     {
+      "target": "rest-with-refinement-counted (schema 1)",
+      "change": "hypotheses[1]: \"The author's reading (AI, adopted on Ren's delegation):\" → \"A reading (the AI's, adopted on Ren's delegation):\" (zh 作者的读法（AI，…）→ 读法（AI 的，…）). correspondence: 'read by the author as the case of zero premises' → 'read by the AI as …' (zh 作者读作 → AI 读作). limitations: \"the author's elaboration adopted on Ren's delegation\" → \"the AI's elaboration …\" (zh 作者的展开 → AI 的展开). Ratchet: correspondence en −4/zh +1, limitations en −4/zh +1. New DF_N history note."
+     },
+     {
+      "target": "counting-standing-and-dependence",
+      "change": "correspondence: \"The author's reading (AI argument):\" → 'A reading (an AI argument):' (zh 作者的读法（AI 论证）→ 读法（AI 论证）); \"Part I's laws of counting, with no axiom\" → 'the laws of counting of the theory without the condition, with no axiom' (zh 第一部分不加公理的计数规律 → 不用条件的理论中不加公理的计数规律). related[0].detail: \"Part I's laws of counting\" → 'the laws of counting of the theory without the condition' (zh 第一部分计数规律 → 不用条件的理论中计数规律). Existing DF_N note extended."
+     },
+     {
+      "target": "what-taking-all-excludes",
+      "change": "Chinese only, where the English had already replaced 'register' by 'show' (verified against the record's first version): counterexamples[0].detail.zh 不记下 → 不显出; next_delta.zh 记下经由… → 显出经由…; related[2].detail.zh 不记下它 → 不显出它. Existing DF_N note extended."
+     },
+     {
+      "target": "closing-needs-net-draw",
+      "change": "correspondence: \"The author's reading (an AI argument):\" → 'A reading (an AI argument):' (zh 作者的读法（AI 论证）→ 读法（AI 论证）). New DF_N history note."
+     },
+     {
+      "target": "continued-change-needs-openness",
+      "change": "correspondence: \"The author's reading (an AI argument):\" → 'A reading (an AI argument):' (zh likewise). Existing DF_N note extended."
+     },
+     {
+      "target": "laws-of-one-step",
+      "change": "Spec item applied to AI text only: correspondence 'the laws of Part I that the premises bound are laws of each step' → 'the laws that the premises bound in the theory without the condition are laws of each step' (zh 前提约束的第一部分规律 → 不用条件的理论中前提约束的规律). Existing DF_N note extended."
+     },
+     {
+      "target": "mediated-evidence-transport (schema 1)",
+      "change": "related[0].detail: 'reuses the completed G0/J direction' → 'reuses the completed direction under living significance and the practical commitments' (zh 复用完成的、生生之意义与实践承诺之下的方向). New DF_N history note."
+     },
+     {
+      "target": "reserved-shutdown-during-recovery (schema 1)",
+      "change": "related[0].detail: 'the completed G0/J direction informs' → 'the completed direction under living significance and the practical commitments informs' (zh 已完成的、生生之意义与实践承诺之下的方向说明). Existing DF_N note extended."
+     },
+     {
+      "target": "unity-of-readings",
+      "change": "correspondence (AI text): 'the one axiom (the condition of section 6.4) comes to the presupposition' → 'the continuation condition (section 6.4) comes to the presupposition' (zh 那一条公理（§6.4 的条件）→ 延续条件（§6.4）). dependencies[3].interface.output: 'from presupposition to axiom' → 'from presupposition to the continuation condition' (zh 到公理 → 到延续条件; checked against Becoming.boundaryInvariant_iff_conditional, whose docstring says the continuation condition). New DF_N history note."
+     }
+    ],
+    "kept": [
+     {
+      "target": "Lean names that use G0 (continuation-condition: GenerativeComparison.G0 in declarations, g0_iff, Frame.inventory, inventory_g0_of_unrestricted, g0_recognizes_traded_gains, 'the periphery's G0' in dependencies[5].detail; hypotheses[4] '(G0 in the periphery)'; protection-priority: GenerativeComparison.G0, PracticalJudgment.Better)",
+      "why": "Each is a Lean declaration name or names the periphery's own definition. The brief keeps these."
+     },
+     {
+      "target": "Record ids and paths (metaethical-core-characterization, learning-by-refutation, one-axiom-yields-g0 in text_versions/former_ids, aliases)",
+      "why": "These are ids, file paths or Lean names, not live labels."
+     },
+     {
+      "target": "Ren's quoted words: relational-renewal '我G0是什么？…'; differences-below-threshold '“for registers, use 识”', 'apparently weird', and the account of the 计入/反映/识 history; continuation-condition 'which requires axiom'",
+      "why": "Ren's words stay verbatim with their source. The account of the word's history mentions 'registers' as a word rather than using it in the retired sense."
+     },
+     {
+      "target": "J2 (protection-priority-excludes-uniform-aggregation)",
+      "why": "J1/J2 is still a live label in chapter 07 and in the core ScoreRepresentation docstring. Only 'J1–J4 as PracticalJudgment' is retired, and there PracticalJudgment.Better is named as Lean."
+     },
+     {
+      "target": "Ordinary uses of 'register' or 登记/记下: control-coherence-loss 'blank register'/空白寄存器; fidelity-under-one-discipline 'register' (genre); classical-definitions 'registered with the classification'; conditional-foundation-assessment 'Registers…'/登记; transition-grouping 'registration adds no theorem'/登记; scientific-inquiry 登记为待建; condition-correspondence related[0].zh 记下 (en 'noted')",
+      "why": "These are quantum, linguistic or bookkeeping senses, not the coupling sense."
+     },
+     {
+      "target": "'Author counterreview' / 'the author's counterreview' / 作者反审 / 作者自审 / 'Same author' / 同作者 in validation_scope (many records); fidelity-under-one-discipline 'the authors' model family'/与作者同族",
+      "why": "These name review practice or the model family that wrote the texts. None is 'the author's reading', so I left them alone."
+     },
+     {
+      "target": "Records read in full with nothing in scope: control-coherence-loss, fidelity-under-one-discipline, protection-priority-excludes-uniform-aggregation, classical-definitions-in-the-grammar, conditional-foundation-assessment, continuous-time-as-tower, how-loops-form, laws-at-finer-units, scientific-inquiry-foundation, transition-grouping-word-partition",
+      "why": "No retired label, registration sense or 'the author's reading' in any live field. Left unchanged, with no history note."
+     },
+     {
+      "target": "Noticed but outside this sweep's rules (not changed): continuation-condition does_not_show[0].zh uses 生命意义 where its title and statement use 生生之意义; differences-below-threshold correspondence.zh has an unfilled placeholder '§{SEC}.2' (en says §70.2); laws-of-one-step correspondence says 'a selection of the eight premises' and 'selection theorems/results' (zh 选择), where GLOSSARY says 'a choice of premises'; continued-change-needs-openness uses 归于停息; several records still give Ren's delegation or decision as standing ('on Ren's delegation', 'Ren decided on 12 October')",
+      "why": "None of these is one of the listed retired labels, the registration sense or 'the author's reading', so the brief's 'change nothing else' applies. They are reported for the integrator."
+     }
+    ],
+    "checker": "The check (python3 -B tools/research/research.py check --changed-since 0e368fbf2 --ids, with the 14 changed ids) exits 1. All 14 errors are 'generated view differs' (README, RESULTS, GOALS, theory-graph and record .md views), which the brief says to ignore. The source_drift entries for my records come from Lean files other agents changed in this worktree (Retaining.lean, Space.lean, Exclusion.lean), not from me. The remaining check items are warnings: length warnings that were there before my edits, plus 3 v1-growth warnings for small Chinese growth that stays under the 20-character ratchet (differences-below-threshold correspondence +2; rest-with-refinement-counted limitations +1 and correspondence +1). The lint (python3 -B tools/research/research.py lint --ids, same ids) exits 0 with 30 warnings and no errors, all length or style warnings that predate my edits. Every edited record keeps the json.dumps(indent=2, ensure_ascii=False)+newline layout and its key order, and has exactly one '25 October 2026, board item DF (study section DF_N):' note. history, references and proof_bindings are untouched. Edit helper and spec are in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/df1g1/ (apply.py, spec.json, mkspec.py)."
+   },
+   "findings": [
+    {
+     "target": "continuation-condition-yields-living-significance: hypotheses[4] en/zh, plus the matching clause of its DF history note (theories/becoming/results/records/continuation-condition-yields-living-significance.json:160-161, 1109-1110)",
+     "quote": "The audit's completeness comes from reading every occurrence of living significance (G0 in the periphery), not from a Lean theorem / 审计的完整性来自对生生之意义（外围中的 G0）全部出现的逐处阅读",
+     "problem": "The gloss narrows the audit. The label G0 there covered occurrences in both the core and the periphery. As written, the audit reads as if it covered only the periphery's G0. Law 13 of the same record still says 'every occurrence of living significance' with no restriction.",
+     "evidence": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md:273 (P44): 'every occurrence of G0 in the core (9 files) and in the periphery's generative-capacity files (19) audited'. R30 renamed the core's Becoming.G0 to Becoming.LivingSignificance (development/r30-names/RENAME-TABLE.json), so the core occurrences were part of the audit.",
+     "fix": "en: 'reading every occurrence of living significance (G0 in the periphery)' → 'reading every occurrence of living significance in the core and the periphery' (407→415 chars, within 420). zh: '对生生之意义（外围中的 G0）全部出现的逐处阅读' → '对核心与外围中生生之意义全部出现的逐处阅读'. In the DF note: en 'the audit hypothesis naming living significance (G0 in the periphery)' → 'the audit hypothesis naming living significance in the core and the periphery'; zh '审计一条改称生生之意义（外围中的 G0）' → '审计一条改称核心与外围中的生生之意义'.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "mediated-evidence-transport: related[0].detail en/zh and its DF history note (theories/becoming/results/records/mediated-evidence-transport.json:28-29, 214-215)",
+     "quote": "reuses the completed direction under living significance and the practical commitments / 复用完成的、生生之意义与实践承诺之下的方向",
+     "problem": "'G0/J direction' is the retired label 'the G0/J route', and the table maps it to one exact term: the conditional alignment route. The editor spelled out the label's parts instead. That wording drops 'conditional', omits C, and does not match how 07 now states the related result (condition for scope, C for order, J1–J4). Another record in this DF sweep rendered the identical sentence with the table's term.",
+     "evidence": "theories/becoming/chapters/08-METHOD.md:535 ('| the G0/J route | the conditional alignment route |'); theories/becoming/chapters/07-SIGNIFICANCE.md:520; theories/becoming/results/records/recoverable-mediated-change.json:52 ('reuses the completed direction of the conditional alignment route', zh '复用条件对齐路线上已完成的方向').",
+     "fix": "en: 'Interpretive connection: reuses the completed direction of the conditional alignment route; implementation conditions do not independently justify permissions or ends.' zh: '解释关联：复用条件对齐路线上已完成的方向；实现条件不独自证明权限及目的正当。' DF note: en '…the retired label G0/J in a related detail reads the conditional alignment route; the claim is unchanged.' zh '…一条关联说明中的退役标签 G0/J 改为条件对齐路线；主张不变。'",
+     "severity": "imprecise"
+    },
+    {
+     "target": "reserved-shutdown-during-recovery: related[0].detail en/zh and the last clause of its DF history note (theories/becoming/results/records/reserved-shutdown-during-recovery.json:132-133, 124-125)",
+     "quote": "the completed direction under living significance and the practical commitments informs preserving response conditions / 已完成的、生生之意义与实践承诺之下的方向说明为何回应条件应被保留",
+     "problem": "This is the same retired label 'G0/J' (route/direction). The table maps it to 'the conditional alignment route'. The paraphrase does not use that term and does not match how the related result is now stated.",
+     "evidence": "theories/becoming/chapters/08-METHOD.md:535; theories/becoming/chapters/07-SIGNIFICANCE.md:520; theories/becoming/results/records/recoverable-mediated-change.json:52.",
+     "fix": "en: 'Interpretive connection: the completed direction of the conditional alignment route informs preserving response conditions; this stop grant still needs its own normative warrant.' zh: '解释关联：条件对齐路线上已完成的方向说明为何回应条件应被保留；当前停止授权的正当性仍需单独根据。' DF note: en 'Also, the retired label G0/J in a related detail reads the conditional alignment route.' zh '另，一条关联说明中的退役标签 G0/J 改为条件对齐路线。'",
+     "severity": "imprecise"
+    },
+    {
+     "target": "what-taking-all-excludes: laws[1].zh (theories/becoming/results/records/what-taking-all-excludes.json:31)",
+     "quote": "自任何一步起的水平 + 1 步中，…其活动一旦停止不再恢复之处，它自那么多步之后不再活跃",
+     "problem": "An earlier DF pass corrected the English to match the Lean ('is inactive from T plus the level on') but left the Chinese as it was. 'That many steps' points back to 'level + 1 steps', so the Chinese says inactive one step later than the Lean, or is at best ambiguous. It also never names T. English and Chinese now disagree.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean:272,280 (continuing_ends_taker: 'is inactive from `T + W.level T c` on'; ∀ k, ¬ W.active (T + (W.level T c + k)) g). The record's English laws[1] (line 30) already says 'from T plus the level on'.",
+     "fix": "zh: '自任何一步起的水平 + 1 步中' → '自任何一步 T 起的水平 + 1 步中', and '它自那么多步之后不再活跃' → '它自第 T + 水平步起不再活跃' (146→153 chars, within 190). Extend the record's DF note by a clause, e.g. en 'the Chinese of the competitive-exclusion law names the step T and the step T plus the level, as the English and the Lean do'; zh '竞争排除一律之中文写明步 T 与第 T + 水平步，与英文及 Lean 一致'.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "protection-priority-excludes-uniform-aggregation: related[1].detail.zh (theories/becoming/results/records/protection-priority-excludes-uniform-aggregation.json:60)",
+     "quote": "把对齐方向 §3 中“J2 不由生生之意义推出、代价是拒绝某些聚合补偿”变为检查过的命题。",
+     "problem": "The replacement was made inside quotation marks, which present the text as the words of the alignment direction's §3. §3 never says 生生之意义, so the quotation now attributes words to the source that it does not contain. The sibling record changed the same sentence by removing the quotation marks (indirect speech, 之说). The English here is already indirect.",
+     "evidence": "theories/becoming/history/ALIGNMENT-DIRECTION.zh.md:38 (§3 wording: '单凭 G0 或“不能无限牺牲”推不出…代价是拒绝某些聚合补偿'); theories/becoming/results/records/alignment-direction-under-widening.json:91 ('把 §3 中 J2 不由生生之意义推出、代价是拒绝某些聚合补偿之说变为…').",
+     "fix": "zh: '把对齐方向 §3 中 J2 不由生生之意义推出、代价是拒绝某些聚合补偿之说变为检查过的命题。'",
+     "severity": "imprecise"
+    },
+    {
+     "target": "laws-of-one-step: does_not_show[5] en/zh (theories/becoming/results/records/laws-of-one-step.json:188-189)",
+     "quote": "Closure is not what bounds change: the proof uses running down, and closure, which the name ‘closure bounds change’ names, is how the premises supply it. / 约束变化的不是封闭：证明用的是下降；",
+     "problem": "An earlier DF pass removed the attribution and also weakened the boundary. Before, it said the proof shows that running down bounds change. Now it says only that the proof uses running down. The rules allow no boundary to become weaker, and nothing in the attribution fix required this change.",
+     "evidence": "git diff of the record (HEAD en 'the proof shows that running down does, closure being how the premises supply it'; zh '证明表明是下降'); Lean Flow.runsDown_bounds_change (experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean:61).",
+     "fix": "en: 'Closure is not what bounds change: the proof shows that running down does, and closure, which the name ‘closure bounds change’ names, is how the premises supply it.' (163 chars). zh: '约束变化的不是封闭：证明表明是下降；“封闭约束变化”之名所指的封闭，是前提给出下降的方式。'",
+     "severity": "imprecise"
+    },
+    {
+     "target": "laws-of-one-step: laws[14] en/zh and correspondence en/zh (theories/becoming/results/records/laws-of-one-step.json:128-129, 224-225)",
+     "quote": "a premise selected for every step … so the selection results follow / The selection theorems ask which laws the counts obey under a selection of the eight premises … so the selection results are corollaries / 选择定理问的是：在八个前提的某个选择之下 … 选择结果因此是推论 / 对每一步都选的前提 … 所以选择结果随之成立",
+     "problem": "The glossary reserves 'selection' for what goes through a selector's couplings and calls a subset of the World premises 'a choice of premises'. This is outside the retired-label table but under the same AGENTS rule of one sense per term. counting-standing-and-dependence, in this same group, had its premise 'selections' changed to 'choices' (zh 取舍/纳入) by its DF pass. Its sibling laws-of-one-step was left with the old sense, so the two records are inconsistent.",
+     "evidence": "GLOSSARY.md:42; theories/becoming/chapters/01-ROOT.md:398-399 ('under a choice of premises', 'Under each choice of premises'); the DF note of counting-standing-and-dependence ('a subset of the eight premises is now called a choice of premises, not a selection').",
+     "fix": "laws[14] en: 'a premise selected for every step' → 'a premise chosen for every step'; 'so the selection results follow' → 'so the results for each choice follow' (416→420). laws[14] zh: '对每一步都选的前提' → '对每一步都纳入的前提'; '所以选择结果随之成立' → '所以各取舍下的结果随之成立'. correspondence en: 'The selection theorems ask which laws the counts obey under a selection of the eight premises.' → 'The theorems for each choice of premises ask which laws the counts obey under a choice of the eight premises.'; 'so the selection results are corollaries' → 'so the results for each choice are corollaries'. correspondence zh: '选择定理问的是：在八个前提的某个选择之下' → '各取舍下的定理问的是：在八个前提的某种取舍之下'; '选择结果因此是推论' → '各取舍下的结果因此是推论'. Extend the DF note by a clause (en 'and a subset of the premises is called a choice, not a selection'; zh '前提之子集称取舍，不称选择').",
+     "severity": "imprecise"
+    },
+    {
+     "target": "differences-below-threshold: DF history note (theories/becoming/results/records/differences-below-threshold.json:543-544)",
+     "quote": "…runaway-distance-uncoupled, for its former id; nothing else changed. The registration words left in the AI text of the correspondence now read in the coupling vocabulary… / …取代其旧编号；别无改变。对应之 AI 文字中余下的登记之词改用耦合之词…",
+     "problem": "This pass extended the note, and it now contradicts itself: it says 'nothing else changed' and then describes a further change to the correspondence.",
+     "evidence": "theories/becoming/results/records/differences-below-threshold.json:543-544 (the DF note as extended in this pass).",
+     "fix": "en: '; nothing else changed.' → '; the claim is unchanged.' zh: '；别无改变。' → '；主张不变。'",
+     "severity": "style"
+    }
+   ],
+   "fixed": {
+    "applied": [
+     "continuation-condition-yields-living-significance: I applied a different fix from the one suggested. The suggested 'in the core and the periphery' would claim more than P44 did, since P44 audited the core plus only the periphery's 19 generative-capacity files. So I removed the narrowing gloss instead. hypotheses[4] en now reads 'reading every occurrence of living significance, not from a Lean theorem' and zh '对生生之意义全部出现的逐处阅读'. This matches the unrestricted 'every occurrence of G0' in the base text and law 13. In the DF note, 'the audit hypothesis naming living significance (G0 in the periphery)' became 'naming living significance' (zh '审计一条改称生生之意义').",
+     "mediated-evidence-transport: related[0].detail now uses the table's term. en: 'reuses the completed direction of the conditional alignment route'; zh: '复用条件对齐路线上已完成的方向'. The DF note's G0/J clause now says it 'reads the conditional alignment route' (zh '改为条件对齐路线').",
+     "reserved-shutdown-during-recovery: related[0].detail en reads 'the completed direction of the conditional alignment route informs preserving response conditions'; zh '条件对齐路线上已完成的方向说明为何回应条件应被保留'. The 'Also' clause of the DF note now says the conditional alignment route (zh 条件对齐路线).",
+     "what-taking-all-excludes: laws[1].zh now says '自任何一步 T 起的水平 + 1 步中' and '它自第 T + 水平步起不再活跃', which matches the English and Exclusion.lean continuing_ends_taker (inactive from T + W.level T c on). The DF note is amended with this clause in en and zh. It also corrected the note's 'the first law (in English)' to 'the competitive-exclusion law (in English)', because the law the earlier pass changed is laws[1], not laws[0].",
+     "protection-priority-excludes-uniform-aggregation: related[1].detail.zh no longer has quotation marks; it now reads '把对齐方向 §3 中 J2 不由生生之意义推出、代价是拒绝某些聚合补偿之说变为检查过的命题。' The text was already a paraphrase, and §3 says G0, not 生生之意义. The DF note is amended: the related note's Chinese is a paraphrase of §3 and is no longer in quotation marks.",
+     "laws-of-one-step: does_not_show[5] has its original strength back. en: 'the proof shows that running down does, and closure, which the name ‘closure bounds change’ names, is how the premises supply it'; zh '证明表明是下降；“封闭约束变化”之名所指的封闭，是前提给出下降的方式。' The attribution stays removed.",
+     "laws-of-one-step: in laws[14] and the correspondence, a subset of the premises is now a 'choice', following GLOSSARY.md:42 and the sibling record counting-standing-and-dependence. laws[14] en: 'a premise chosen for every step', 'so the results for each choice follow' (exactly 420 chars). laws[14] zh: '对每一步都纳入的前提', '所以各取舍下的结果随之成立'. Correspondence en: 'The theorems on choices of premises ask which laws the counts obey under a choice of the eight premises.' and 'so the results for each choice are corollaries'. Correspondence zh: '各取舍下的定理问的是：在八个前提的某种取舍之下' and '各取舍下的结果因此是推论'. The DF note is amended by one clause in en and zh.",
+     "differences-below-threshold: in the DF note, '; nothing else changed.' became '; the claim is unchanged.' and zh '；别无改变。' became '；主张不变。'. The note no longer contradicts itself."
+    ],
+    "rejected": [],
+    "checker": "I edited with a Python script that checks each replacement matches exactly once and writes json.dumps(indent=2, ensure_ascii=False) plus a newline. All 7 records round-tripped byte-identical before the edit, and each keeps one DF note. Checks were run on the 7 changed ids (continuation-condition-yields-living-significance, mediated-evidence-transport, reserved-shutdown-during-recovery, what-taking-all-excludes, protection-priority-excludes-uniform-aggregation, laws-of-one-step, differences-below-threshold). `python3 -B tools/research/research.py check --changed-since 0e368fbf2 --ids ...` reported only 'generated view differs' errors, plus source drift in Lean files I did not touch (Retaining.lean, Exclusion.lean), both of which the brief says to ignore. `python3 -B tools/research/research.py lint --ids ...` reported 0 errors and 17 warnings. All 17 are in fields this pass did not touch, for example the correspondence length of continuation-condition-yields-living-significance and laws[0] and laws[3] of what-taking-all-excludes. The edited fields are within their limits: laws-of-one-step laws[14] is 420/114, its does_not_show[5] 164/45, and what-taking-all-excludes laws[1].zh 153. The edit script is /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/df1g1/apply.py and the check output is /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/df1g1/check.json."
+   }
+  },
+  {
+   "unit": "sweep-2",
+   "done": {
+    "changed": [
+     {
+      "target": "own-good-to-reachable-living-significance (schema 1)",
+      "change": "hypotheses[0] en/zh: S0 (x3) -> self-significance / 自身意义 ('S0 is first-personal' -> 'self-significance is first-personal'; 'S0's content' -> 'the content of self-significance'). hypotheses[3]: 'J1–J4' -> 'the practical commitments' / 实践承诺; 'content of S0' -> 'content of self-significance'. dependencies[0].detail: 'derivation from S0' -> 'from self-significance' (GenerativeComparison.G0 kept). dependencies[0].interface.output: 'For an S0-holding position, G0 holds' -> 'For a position holding self-significance, living significance holds' (zh 对持自身意义的位置…生生之意义成立). interface.input: 'The G0 hypothesis of contingent_generation_has_positive_ground' -> 'The living-significance hypothesis (the periphery's G0) of …' (zh 生生之意义前提（外围的 G0）). related[0]: S0 x2 -> self-significance; 'The Universal Metaethical Core locates' -> 'The account of significance, comparison and practical judgment locates' (zh 普遍元伦理核心 -> 意义、比较与实践判断的说明). related[1]: 'S0-holding evaluators' -> 'evaluators holding self-significance'. related[3]: N_rel x2 -> relational neutrality / 关系中立, N_std -> standpoint neutrality / 立场中立. limitations en: S0 x3 -> self-significance, tightened for the v1 ratchet ('and accepting' -> ', accepting'; 'cannot be derived' -> 'is not derivable'; 'is not defended' -> 'is undefended'; growth 540->579, +39); zh S0 x3 -> 自身意义 (+1). Existing DF note extended by one clause; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "relational-reading-comparison",
+      "change": "correspondence: 'Reading G0's 'generation' relationally follows Ren's G0, whose object is 生生' -> 'Reading the 'generation' of living significance relationally follows Ren's statement of it, whose object is 生生' (zh 以关系读生生之意义的“生成”，依据的是 Ren 对它的表述); related[0]: 'the G0/J route' -> 'the conditional alignment route' (条件对齐路线), 'G0's generation' -> 'the generation in living significance'; related[1]: 'under G0 and C … G0 includes both' -> 'under living significance and C … living significance includes both'; related[3]: 'the same G0 predicate' -> 'the same predicate of living significance (the periphery's G0)'; next_delta: 'J commitment' -> 'a practical commitment' (J 层承诺 -> 实践承诺). Existing DF note extended."
+     },
+     {
+      "target": "living-on-and-descent (spec item)",
+      "change": "hypotheses[1]: N_rel x2 -> relational neutrality / 关系中立; dependencies[3].detail: 'N_rel (transmits)' -> 'relational neutrality (transmits)', 'G0 is exactly a seed' -> 'living significance is exactly a seed'; dependencies[3].interface.output: 'G0's characterization on a connected whole' -> 'The characterization of living significance on a connected whole'; related[1]: 'where N_rel transmits' -> 'where relational neutrality transmits'; correspondence: 'the author reads descent as' -> 'the AI reads descent as' (作者把世系读作 -> AI 把世系读作). New DF note; reviewed_at_utc refreshed."
+     },
+     {
+      "target": "open-form-realization-under-revision (schema 1)",
+      "change": "dependencies[0].interface.output: 'Under G0' -> 'Under living significance' (在生生之意义下); interface.conditions: 'explicit G0' -> 'explicit living significance'; dependencies[1].interface.output: 'satisfies G0 under Unrestricted' -> 'satisfies living significance (the periphery's G0) under Unrestricted'; interface.input: 'The G0 premise of the original securesNewContent_by_bound' -> 'The living-significance premise of …'. Existing DF note extended."
+     },
+     {
+      "target": "ranking-under-readings",
+      "change": "correspondence en/zh: G0 x5 -> living significance / 生生之意义 ('If G0 and C share…', 'If G0 takes the stepwise reading…', 'G0 and C no longer share', 'C's “living content” as G0's living' -> 'as the living of living significance'). Existing DF note extended."
+     },
+     {
+      "target": "renewing-consuming-formation (schema 1)",
+      "change": "limitations: 'its interface with G0 and C' -> 'its interface with living significance and C' (zh 与 G0、C 的接口 -> 与生生之意义、C 的接口; en +17, zh +2); related[4]: 'wear-law bound and G0 interface' -> 'wear-law bound and its interface with living significance'. Existing DF note extended."
+     },
+     {
+      "target": "what-a-rise-draws-from-beyond (spec item)",
+      "change": "does_not_show[3]: 'why a selection through the group does not register it' -> '… is not coupled to it' (不记下它 -> 不耦合入它); related[1]: 'no selection through a member registers it' -> '… is not coupled to it' (都不记下它 -> 都不耦合入它). Checked against DrawnBeyond.lean (¬ W.CoupledInto obs h c). New DF note."
+     },
+     {
+      "target": "entropy-history-and-record",
+      "change": "hypotheses[4]: 'The author's reading (AI, adopted on Ren's delegation):' -> 'A reading (the AI's, adopted on Ren's delegation):' (作者的读法（AI，…） -> 读法（AI 的，…）). New DF note."
+     },
+     {
+      "target": "effective-capacity-and-eventual-reachability (spec item, schema 1)",
+      "change": "hypotheses[3]: 'no probability, optimal policy, infinite continuation or G0/J input is supplied' -> '… or input from living significance and the practical commitments is supplied' (G0/J 输入 -> 生生之意义与实践承诺的输入). Existing DF note extended."
+     },
+     {
+      "target": "a-law-through-changing-coupling-along-one-run",
+      "change": "dependencies[1].interface.output en: 'What registers alike in a formation at a step' -> 'What a formation couples into alike at a step' (zh already 耦合); related[0]: 'a difference below a threshold is not registered' -> '… is not coupled in' (不被识 -> 不耦合入). New DF note."
+     },
+     {
+      "target": "ceasing-needs-arising",
+      "change": "correspondence: 'The author's reading (an AI argument):' -> 'A reading (the AI's argument):' (作者的读法（AI 论证） -> 读法（AI 的论证）). New DF note."
+     },
+     {
+      "target": "comparison-content-under-regrouping (schema 1)",
+      "change": "related[2]: 'without reopening completed G0/J inferences' -> 'without reopening completed inferences of the conditional alignment route' (不重开条件对齐路线上已成的推论). New DF note."
+     },
+     {
+      "target": "counting-under-enclosure",
+      "change": "correspondence: 'The author's reading (an AI argument):' -> 'A reading (the AI's argument):' (zh likewise). Existing DF note extended by a sentence."
+     },
+     {
+      "target": "formed-software-continuation",
+      "change": "related[1]: 'retains G0/J/E' -> 'retains living significance, the practical commitments and correspondence E' (仍依G0/J/E -> 仍依生生之意义、实践承诺与对应 E). New DF note."
+     },
+     {
+      "target": "loss-beyond-a-region",
+      "change": "correspondence: 'The author had said' (the AI) -> 'The AI had said' (作者先前说 -> AI 先前说); 'The author's reading (an AI argument, adopted on Ren's delegation):' -> 'A reading (the AI's argument, adopted on Ren's delegation):' (zh likewise). New DF note."
+     },
+     {
+      "target": "own-count-misses-joint-excess",
+      "change": "correspondence: 'The author's reading (an AI argument):' -> 'A reading (the AI's argument):' (zh likewise). New DF note."
+     },
+     {
+      "target": "recoverable-mediated-change (schema 1)",
+      "change": "related[0]: 'reuses the completed G0/J direction' -> 'reuses the completed direction of the conditional alignment route' (复用条件对齐路线上已完成的方向). Existing DF note extended."
+     },
+     {
+      "target": "rest-at-every-resolution",
+      "change": "hypotheses[2]: 'the author reads it as an upper bound' -> 'the AI reads it as …' (作者读作 -> AI 读作); correspondence: 'The author's reading (an AI argument, adopted on Ren's delegation):' -> 'A reading (the AI's argument, …):' (zh likewise). New DF note."
+     },
+     {
+      "target": "universal-practical-warrant",
+      "change": "related[0]: 'The explicit-axiom route' (retired label of the G0/J route, per the old canonical crosswalk) -> 'The conditional alignment route' (显式公理路线 -> 条件对齐路线); related[2]: 'deriving G0' -> 'deriving living significance' (G0的正式取得 -> 生生之意义的正式取得); validation_scope: 'the capture, registration and plan-revision records' -> 'the capture, coupling and plan-revision records' (登记 -> 耦合; en 598 -> 594, under the 600 error cap). New DF note."
+     },
+     {
+      "target": "consequence-revised-reference-plan (schema 1)",
+      "change": "validation_scope: 'Author counterreview clarifies registration scope' -> '… clarifies coupling scope' (参考登记范围 -> 参考耦合范围; no growth). New DF note."
+     }
+    ],
+    "kept": [
+     {
+      "target": "Lean names everywhere (aliases, declarations, Lean-named predicates)",
+      "why": "Kept because they are Lean declaration names. Examples: GenerativeComparison.G0 (own-good dependencies[0], relational-reading hypotheses[0]); EvaluatorGrounding.reach_is_g0 and self_good_derives_reachable_g0 (own-good aliases); RenewalComparison.g0_relational; inventory_g0_of_unrestricted (open-form); 'G0 and C from GenerativeComparison' (renewing-consuming hypotheses[2]); revise_registers_failure (consequence-revised claim); transmits (living-on-and-descent); Law.Lossless in Becoming.Recurrence (entropy). Also the former_id self-reachable-g0 and the record id selection-under-registration-revision."
+     },
+     {
+      "target": "ceasing-needs-arising validation_scope 'Dependence and Generation' (Becoming.Generation, now Becoming.Arising)",
+      "why": "It names the module as it was bound at receipt 20261014T091930.724493Z. Renaming it would misdescribe that historical receipt."
+     },
+     {
+      "target": "Individual commitment names J1, J1/J3 (ranking-under-readings related[1] and [4], renewing-consuming-formation related[2])",
+      "why": "These name single practical commitments, and the live chapters still use them (07: 'Conditional (J1)', 'J1/J2'; 08 premise card). 'The practical commitments' would change the meaning, so only the bundle label J1–J4 and G0/J were replaced."
+     },
+     {
+      "target": "Ren's quoted words and Ren-provenance clauses",
+      "why": "Ren's words are kept verbatim with their source (AGENTS). Examples: entropy hypotheses[3]; correspondence quotes in ranking-under-readings, rest-at-every-resolution, loss-beyond-a-region, own-count, ceasing, counting, living-on-and-descent; '整体中的生及其继续生成' in relational-reading-comparison. The clauses 'adopted on Ren's delegation' and 'decided on Ren's delegation' were left alone because they are outside this sweep's rules (change nothing else)."
+     },
+     {
+      "target": "'Author counterreview', 'author self-review', 'author review', 'same-author' in validation scopes (many records); 作者反审/作者自审",
+      "why": "These describe who did a review, not 'the author's reading'. They fall outside the sweep's terms and were left unchanged."
+     },
+     {
+      "target": "Cited authors: situated-recovery hypotheses[0] ('author-provided coefficient', 作者的完整原始处理); formed-software-continuation progress[1] ('the author's stated reasons', 作者主帖)",
+      "why": "Here 'the author' means a cited paper's author or the Narwhal developer, not the AI."
+     },
+     {
+      "target": "Ordinary 'register/record' words: exclusive-footprint-support related[0] ('neither is registered as a proved generalization', i.e. recorded/counted, zh 不计作); joint-correlation counterexamples[0] 'register relations' (a quantum register, 寄存器); organizational-rule-inheritance hypotheses[1] 'full recorded roster' (登记名册); versioned-request-completion related[0] zh 这里登记解释关联 ('this records'); entropy laws[2] zh 历史却记下两次 and counterexamples[2] 记录记下每次交换 (a history/record counting exchanges); living-on-and-descent correspondence zh 记下 ('records … as a next step'); ranking-under-readings 记入 ('includes')",
+      "why": "These are ordinary bookkeeping or quantum-register senses, not the retired registration sense (what a selector couples into)."
+     },
+     {
+      "target": "Live 'axiom' uses: 'zero-axiom', 'no axiom', 'axiom report', 'not axioms', 'deduction of the whole without axioms', 'strong axiom-free foundation'",
+      "why": "These concern the zero-axiom target or Lean axiom reports, not 'the one axiom'. My records have no 'Part I/II', 'the one axiom', 'folding' or '归于静止' uses."
+     },
+     {
+      "target": "Records with no change: exclusive-footprint-support, joint-correlation-reduced-dynamics, organizational-rule-inheritance, situated-recovery-empirical-correspondence, versioned-request-completion",
+      "why": "I read every field except history, references and proof_bindings. Each remaining hit is a Lean name, an ordinary word or a cited author, as listed above."
+     },
+     {
+      "target": "Other uses of N_rel/S0 in Lean docstrings, and 'Part B' (renewing-consuming)",
+      "why": "The Lean files are not mine to edit. 'Part B' is a part of that result, not Part I/II."
+     }
+    ],
+    "checker": "The last check run errored only on the cases the brief said to ignore: `python3 -B tools/research/research.py check --changed-since 0e368fbf2 --ids <the 20 changed ids>` exits 1 with 20 errors, all 'generated view differs' for README, RESULTS, GOALS, the theory graph and the records' .md pages. It reports no other error. Source drift is reported only for Space.lean and Retaining.lean, which other agents edited, not me.\n\nOne error came up on the first run and is fixed. own-good-to-reachable-living-significance limitations failed the v1 growth ratchet: en went 540 -> 582. After tightening the same sentence it is 540 -> 579 (+39, a warning). Its zh is 153 -> 154. renewing-consuming-formation limitations grew en +17 and zh +2. Both are warnings only.\n\nA rerun once reported 'Research inputs changed during this operation'. That came from concurrent edits by other agents and was gone on the next rerun.\n\n`python3 -B tools/research/research.py lint --ids <same>` exits 0 with errors [] and 52 warnings, all of kinds that were already there. The only length warning made worse is ranking-under-readings correspondence: en 1279 -> 1352, where the cap of 1200 is a warning.\n\nEvery changed record has exactly one 'DF_N' history note. Ten records got a new note. In the ten that already had one, the note was extended by a clause, with the trailing 'unchanged' clause moved to the end. reviewed_at_utc was refreshed to 2026-10-25T17:03:04+00:00. The layout is json.dumps(indent=2, ensure_ascii=False) plus a newline, with key order kept.\n\nFiles edited: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df/theories/becoming/results/records/{own-good-to-reachable-living-significance, relational-reading-comparison, living-on-and-descent, open-form-realization-under-revision, ranking-under-readings, renewing-consuming-formation, what-a-rise-draws-from-beyond, entropy-history-and-record, effective-capacity-and-eventual-reachability, a-law-through-changing-coupling-along-one-run, ceasing-needs-arising, comparison-content-under-regrouping, counting-under-enclosure, formed-software-continuation, loss-beyond-a-region, own-count-misses-joint-excess, recoverable-mediated-change, rest-at-every-resolution, universal-practical-warrant, consequence-revised-reference-plan}.json\n\nThe edit script is /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/dfg2/apply.py. The checker outputs are check3.out and lint3.out in the same folder."
+   },
+   "findings": [
+    {
+     "target": "theories/becoming/results/records/what-a-rise-draws-from-beyond.json does_not_show[3].en",
+     "quote": "the laws say where what a rise draws lands and why a selection through the group is not coupled to it.",
+     "problem": "The replacement for 'does not register it' uses 'is coupled to'. That is not the glossary term 'couples into' (what reaches a selector through its couplings). In the records, 'is coupled to ... with strength k' is the loop-coupling sense from 02 (how strongly one level responds to another). So the boundary now names the other sense of coupling. It also no longer matches the zh '不耦合入它' or the record's own law ('a condition no member couples into'). The Lean meant is ¬ W.CoupledInto obs h c for every member h.",
+     "evidence": "GLOSSARY.md:34 (coupling = how strongly one level responds to another) vs GLOSSARY.md:41 (couples into, never 'registers'); records how-much-difference-arrives.json:49 and loops-within-what-a-law-reads.json:67 use 'is coupled to ... with strength'; Becoming/DrawnBeyond.lean:280,301 (∀ h, members h → ¬ W.CoupledInto obs h c); Becoming/Testing.lean:214; what-a-rise-draws-from-beyond.json:136-137",
+     "fix": "en: \"That the draw is wrong or the ending a harm: the laws say where what a rise draws lands and why a selection through the group does not take it in.\" (146 chars). Keep zh '以及经群体的选择为何不耦合入它' as it is.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "theories/becoming/results/records/what-a-rise-draws-from-beyond.json related[1].detail.en (the-gap-for-ones-own-act) and its DF history note",
+     "quote": "The broken dependence lies on a condition no member couples into, so by the gap no selection through a member is coupled to it.",
+     "problem": "Same issue as does_not_show[3]: 'registers it' became 'is coupled to it', the loop-strength phrase from 02. The glossary's 'couples into' / 'takes in' is the term meant here. The first clause of the same sentence uses 'couples into', so the sentence switches sense halfway through. The DF note repeats the wrong phrase.",
+     "evidence": "what-a-rise-draws-from-beyond.json:285 and :483; GLOSSARY.md:34,41; Becoming/DrawnBeyond.lean:66-68 ('no member of the selecting group couples into, and so cannot see')",
+     "fix": "related[1].detail.en: \"The broken dependence lies on a condition no member couples into, so by the gap no selection through a member takes it in.\" Keep the zh. In the DF note (en), replace '(\"does not register it\" and \"registers it\" now \"is not coupled to it\")' with '(\"does not register it\" now \"does not take it in\", \"registers it\" now \"takes it in\")'.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "theories/becoming/results/records/consequence-revised-reference-plan.json validation_scope (en/zh) and its DF history note",
+     "quote": "Author counterreview clarifies coupling scope and adds actual drift history",
+     "problem": "Here 'registration scope' meant the scope of the installed reference registration: a reading through the installed contacts, which the counterreview says is 'not the system's entire access'. The 18 October rename turned that declaration (ReferencePlan.registered) into alikeOnInstalled, a lumping on installed contacts, not into a coupling. 'Coupling' names the Web relation of 03 (support by threshold plus observed levels, Web.CoupledInto), which the reference plan does not use. So the replaced term does not mean exactly what the label meant here.",
+     "evidence": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/n1-migration/RENAME-TABLE.json:96 (\"Becoming.ReferencePlan.registered\": \"Becoming.ReferencePlan.alikeOnInstalled\"); Becoming/ReferencePlan.lean:343-345 ('Only constructed and installed contacts participate in this lumping'); _process/research/2026-10-05-generative-foundation-review/root-foundation/META-ATTRACTOR-RECONCILIATION.md:177; consequence-revised-reference-plan.json:149-150,459-460",
+     "fix": "en: 'Author counterreview clarifies the installed contacts' scope and adds actual drift history' (field 866 -> 881, +11 over base 870, within the ratchet). zh: '作者反审明确已安装接触的范围并补入实际漂移历史' (367 -> 369, +2). In the DF note, en: '(\"registration scope\" now \"the installed contacts' scope\", as the Lean rename made ReferencePlan.registered alikeOnInstalled)'; zh: '（“参考登记范围”改为“已安装接触的范围”）'.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "theories/becoming/results/records/open-form-realization-under-revision.json claim (key order)",
+     "quote": "\"claim\": {\n    \"en\": \"Along a run of a frame, where completion is decided, ...\",\n    \"zh\": \"沿一个框的运行，...\"",
+     "problem": "An earlier pass of this diff swapped the claim's keys from zh, en (base 0e368fbf2) to en, zh. That breaks the sweep's layout rule that keys keep their order. It is the only record in the group whose existing keys were reordered.",
+     "evidence": "git show 0e368fbf2:theories/becoming/results/records/open-form-realization-under-revision.json gives claim keys ['zh','en']; the current file at lines 16-18 gives ['en','zh']",
+     "fix": "Write the claim with \"zh\" first and \"en\" second, as in the base. Leave the text as it is. Optionally move the new 'statement' key after 'reviewed_at_utc', where renewing-consuming-formation, effective-capacity-and-eventual-reachability and exclusive-footprint-support put it.",
+     "severity": "style"
+    }
+   ],
+   "fixed": {
+    "applied": [
+     "what-a-rise-draws-from-beyond does_not_show[3].en: 'is not coupled to it' changed to 'does not take it in'. The Lean (DrawnBeyond.lean:280,301, for every member h, not W.CoupledInto obs h c) is the 03 sense of 'couples into' / 'takes in', not the 02 loop-strength sense of 'coupling'. The text now matches the zh '不耦合入它'. The zh is unchanged. Length is 146/240.",
+     "what-a-rise-draws-from-beyond related[the-gap-for-ones-own-act].detail.en: 'no selection through a member is coupled to it' changed to '... takes it in', so the sentence keeps the one sense of its first clause ('couples into'). The zh is unchanged. The existing DF note (en) is amended to read '(\"does not register it\" now \"does not take it in\", \"registers it\" now \"takes it in\")', and it is still the record's only DF note.",
+     "consequence-revised-reference-plan validation_scope: 'clarifies coupling scope' changed to 'clarifies the scope of the lumping on installed contacts', and zh '参考耦合范围' changed to '已安装接触上归并的范围'. I chose this over the reviewer's 'the installed contacts' scope' because it follows the Lean itself (ReferencePlan.registered was renamed alikeOnInstalled, whose docstring says 'Only constructed and installed contacts participate in this lumping'). It also uses the claim's own word 'lumping' and avoids 'reading', which would get confused with an interpretive reading. Against base 0e368fbf2 the field grows by +28 en (870 to 898) and +5 zh (367 to 372), within the ratchet. The existing DF note (en/zh) is amended to name the new phrase and the Lean rename; it is still one note.",
+     "open-form-realization-under-revision: claim keys restored to the base order (zh, then en) with the text unchanged. The new 'statement' key is moved after 'reviewed_at_utc', where renewing-consuming-formation, effective-capacity-and-eventual-reachability and exclusive-footprint-support put it. Its inner keys are now zh, en to match the record's convention, and its text is unchanged. The file is still written as json.dumps(indent=2, ensure_ascii=False) plus a newline."
+    ],
+    "rejected": [],
+    "checker": "The edits were applied by the script /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/df-g2-fix.py. I ran `python3 -B tools/research/research.py check --changed-since 0e368fbf2 --ids what-a-rise-draws-from-beyond consequence-revised-reference-plan open-form-realization-under-revision` in the worktree. It selected 3 records and gave 8 errors, all 'generated view differs' (README, RESULTS, GOALS, theory graph, and the three record .md views), which the brief says to ignore. Source drift for these ids was 0 (77 drifts are in unrelated files). The `lint --ids` run on the same three ids gave 0 errors and 15 warnings. None of the warnings is new except that the consequence-revised-reference-plan validation_scope length warning (en 898 > 800, zh 372 > 350) now carries higher counts; the field was already over at base (870/367), and the growth stays within the +40/+20 ratchet. No v1-growth warnings appeared. Changed files: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df/theories/becoming/results/records/what-a-rise-draws-from-beyond.json, /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df/theories/becoming/results/records/consequence-revised-reference-plan.json, /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df/theories/becoming/results/records/open-form-realization-under-revision.json. Nothing was committed."
+   }
+  },
+  {
+   "unit": "sweep-3",
+   "done": {
+    "changed": [
+     {
+      "target": "continuation-condition-decomposition.correspondence",
+      "change": "en 'the rule of N_std, and extending' -> 'the rule of standpoint neutrality, and extending'; 'G0 itself is no longer an axiom: Ren folded it after the audit…' -> 'Living significance itself is no longer an axiom: Ren restated it as a condition after the audit…'; zh '即 N_std 的规则，' -> '即立场中立的规则，'; 'G0 本身已不是公理：…Ren 把它折叠。' -> '生生之意义本身已不是公理：…Ren 把它改述为条件。'"
+     },
+     {
+      "target": "continuation-condition-decomposition.dependencies[1,5,6].detail/interface",
+      "change": "[1].output 'the G0 it gives' -> 'the living significance it gives' (zh 'G0' -> '生生之意义'). [5].detail 'decomposes G0 into a seed, N_rel and N_std' -> 'decomposes living significance into a seed, relational and standpoint neutrality' (zh to match). [5].output \"G0's characterization.\" -> 'The characterization of living significance.' (zh 'G0 的刻画' -> '生生之意义的刻画'). [5].input 'the rule of N_std.' -> 'the rule of standpoint neutrality.' (zh to match). [6].detail 'decomposes G0 into S0 … with N_std; … continuation form of S0' -> 'decomposes living significance into self-significance … with standpoint neutrality; … continuation form of self-significance' (zh 生生之意义/自身意义/立场中立). [6].output to match."
+     },
+     {
+      "target": "continuation-condition-decomposition.related[0].detail + history",
+      "change": "\"carries all of G0's content beyond S0\" -> \"carries all of living significance's content beyond self-significance\" (zh '承载生生之意义超出自身意义的全部内容'). I extended the existing DF note by one clause listing these replacements, plus 'folded' -> 'restated as a condition'."
+     },
+     {
+      "target": "derived-extent-limits.correspondence",
+      "change": "en 'and that the one axiom “closes the whole”' -> 'and that the continuation condition, proposed then as an axiom, “closes the whole”'; 'follows from S0' -> 'follows from self-significance'; 'S0 with N_rel along dependence gives G0 (significant_of_transmits in held-lives-g0-is-centering)' -> 'self-significance with relational neutrality along dependence gives living significance (significant_of_transmits in living-significance-on-held-lives)', where the old id is a former id of that record. zh to match: '那条公理' -> '延续条件（当时作为公理提出）', and S0/N_rel/G0 replaced the same way."
+     },
+     {
+      "target": "derived-extent-limits.dependencies[2].interface + history",
+      "change": "output 'G0 is exactly S0 everywhere with N_std' -> 'living significance is exactly self-significance everywhere with standpoint neutrality'; input 'does not force N_std' -> 'does not force standpoint neutrality' (zh to match). New DF note appended."
+     },
+     {
+      "target": "becoming-renewal-reading (schema 1)",
+      "change": "hypotheses[2] 'needs N_rel' -> 'needs relational neutrality' (zh 关系中立). dependencies[2].detail \"N_rel's rule\" -> \"relational neutrality's rule\". dependencies[2].interface.output 'G0 ⇔ seed ∧ N_rel ∧ N_std; N_rel's…' -> 'living significance ⇔ seed ∧ relational neutrality ∧ standpoint neutrality; relational neutrality's…'. related[1].detail 'G0 interface' -> 'living-significance interface'. limitations en 'Proves none of S0, N, A, C, L or J and binds no position rejecting them.' -> 'Proves none of self-significance, neutrality, A, C, L or J1–J4 and binds none who reject them.' (773 -> 795, under the 800 cap and within the +40 ratchet); zh '不证明 S0、N、A、C、L 或 J，' -> '不证明自身意义、关系与立场中立、A、C、L 或 J1–J4，' (+11). New DF note appended."
+     },
+     {
+      "target": "conveyance-crosses-the-boundary (schema 1)",
+      "change": "hypotheses[0] 'along which N_rel transmits' -> 'along which relational neutrality transmits'. correspondence \"The author's reading (an AI argument):\" -> \"A reading (the AI's argument):\" and '(under N_rel)' -> '(under relational neutrality)' (en +8, zh -5); zh '作者的读法（AI 论证）：' -> '读法（AI 的论证）：', '（在 N_rel 下）' -> '（在关系中立下）'. related[0] 'Connection and N_rel give' -> 'Connection and relational neutrality give'. related[1] 'definitions of N_rel (transmits)' -> 'definitions of relational neutrality (transmits)'. limitations 'reaching under N_rel is the relational half of the axiom' -> 'reaching under relational neutrality is the relational half of the continuation condition' (+33; in commit 1f6f375f6, 'the axiom' was the one axiom). zh to match throughout. New DF note appended."
+     },
+     {
+      "target": "unceasing-generation-needs-renewal",
+      "change": "laws[0] \"(the author's reading)\" -> \"(the AI's reading)\" (zh '（AI 的读法）'). counterexamples[9].detail \"labelled as the author's reading\" -> \"labelled as the AI's reading\" (zh '未标为 AI 的读法'). correspondence: \"which is the author's reading;\" -> \"which is the AI's reading;\", \"(the author's reading)\" -> \"(the AI's reading)\", 'The author further interprets:' -> 'The AI further interprets:', with zh to match. New DF note appended."
+     },
+     {
+      "target": "no-finite-part-bears-taking",
+      "change": "does_not_show[7] \"the author's analogy\" -> \"the AI's analogy\" (zh 'AI 的类比'). related[0].detail \"the author's argument\" -> \"the AI's argument\" (zh '把 AI 的论证“'). correspondence 'The author reads the result' -> 'The AI reads the result' and \"(the author's interpretation)\" -> \"(the AI's interpretation)\", with zh to match. New DF note appended."
+     },
+     {
+      "target": "wisdom-root-without-axiom.related[1].detail",
+      "change": "Per the spec: en 'the condition of chapter section 6.4 (with the one axiom as a condition, G0 is a theorem);' -> 'the condition of chapter 7, §3 (with the continuation condition as a hypothesis, living significance is a theorem);'. The 07-SIGNIFICANCE.md anchor 'condition' is §3, 'The continuation condition'. I deviated from the spec's wording on purpose: 'as a hypothesis' instead of 'as a condition', to avoid 'condition as a condition'; it matches the AGENTS.md usage 'a theorem taking it as a hypothesis'. zh '走章节 §6.4 的条件（以那一条公理为条件 G0 是定理）' -> '走第 7 章 §3 的条件（以延续条件为假设，生生之意义是定理）'. New DF note appended."
+     },
+     {
+      "target": "horizon-optima-hold-the-greatest-renewal",
+      "change": "Per the spec: counterexamples[0].detail 'registers nothing of the dependence' -> 'takes in nothing of the dependence' (zh '按汲取之序对该依存毫无记录' -> '按汲取之序丝毫不耦合入该依存'). correspondence 'registers its levels only through' -> 'takes in its levels only through' (zh '被更新者记录该水平' -> '被更新者耦合入该水平'). New DF note appended."
+     },
+     {
+      "target": "alignment-direction-under-widening.related[0].detail + history",
+      "change": "en 'J2 is not implied by G0' -> 'J2 is not implied by living significance'; zh '把 §3 中“J2 不由 G0 推出、代价是拒绝某些聚合补偿”变为' -> '把 §3 中 J2 不由生生之意义推出、代价是拒绝某些聚合补偿之说变为'. The quotation marks were dropped because §3 is English and now reads living significance, so the zh is a paraphrase. I extended the existing DF note by one clause."
+     },
+     {
+      "target": "census-balance-under-continuation, map-of-premises, whole-law-of-counting: correspondence",
+      "change": "\"The author's reading (an AI argument):\" -> \"A reading (the AI's argument):\"; zh '作者的读法（AI 论证）：' -> '读法（AI 的论证）：'. census and map each got a new DF note; whole-law-of-counting's existing DF note was extended by one clause."
+     },
+     {
+      "target": "feedback-and-reach, four-cases-of-a-part, support-from-the-supported: correspondence",
+      "change": "\"The author's reading (an AI argument, adopted on Ren's delegation):\" -> \"A reading (the AI's argument, adopted on Ren's delegation):\"; zh '作者的读法（AI 论证，依 Ren 的交托采用）：' -> '读法（AI 的论证，依 Ren 的交托采用）：'. Each got a new DF note."
+     },
+     {
+      "target": "configurations-alike-by-relation",
+      "change": "hypotheses[2] 'the Part I theorems stated with Determined' -> 'the theorems of the theory without the condition stated with Determined' (zh '第一部分以 Determined 陈述的定理' -> '不含条件的理论中以 Determined 陈述的定理'). related[3].detail 'The Part I theorems stated with Determined restated' -> 'The theorems of the theory without the condition stated with Determined, restated' (zh to match). New DF note appended."
+     },
+     {
+      "target": "positioned-positive-reason.dependencies[0].interface.conditions",
+      "change": "'Same G0, inventory and prior content;' -> \"Same living significance (the periphery's `G0`), inventory and prior content;\" (zh '同一 G0、' -> '同一生生之意义（外围的 `G0`）、'). I extended the existing DF note by one clause."
+     },
+     {
+      "target": "recurrence-without-premise.related[2].detail",
+      "change": "\"in Part I's zero-premise line\" -> 'in the zero-premise line of the theory without the condition' (zh '第一部分零前提一线中' -> '不含条件的理论的零前提一线中'). New DF note appended."
+     },
+     {
+      "target": "joint-difference-making.correspondence",
+      "change": "\"from the author's prior knowledge\" -> \"from the AI's prior knowledge\" (zh '作者据先前知识' -> 'AI 据先前知识'). New DF note appended."
+     },
+     {
+      "target": "testing-within-couplings.correspondence",
+      "change": "'read by the AI as a model answerable to registration,' -> 'read by the AI as “a model answerable to registration”,' (zh '读作对识负责的模型，' -> '读作“对识负责的模型”，'). The superseded wording is now quoted as former wording, the way generalization-through-lumping cites it. I extended the existing DF note by one clause."
+     }
+    ],
+    "kept": [
+     {
+      "target": "alignment-direction-under-widening.hypotheses[0] 'J1–J4: J1/J2 as Priority…', plus the J1/J2 and J3/J4 uses in laws, progress and does_not_show",
+      "why": "J1–J4 and J1…J4 are live names in 08-METHOD (§1 line 87, the premise card row). The retired label is only 'J1–J4 as `PracticalJudgment`'. I first tried 'The practical commitments:' here and reverted it, since that also lengthened a field already over its cap (549/420). PracticalJudgment is a Lean name."
+     },
+     {
+      "target": "testing-within-couplings.hypotheses[4] 'asked then as whether it is registered'",
+      "why": "It reports the wording of Ren's question as asked at the time, and 'asked then as' already marks it as former; the zh already quotes it. Adding quotation marks would have lengthened a field already over its cap (427/420). The aliases 'registration closure'/'识闭包', former_ids testing-within-registration and the text_versions paths are also kept: they are old search names, an id and paths."
+     },
+     {
+      "target": "configurations-alike-by-relation.aliases 'same registered future'/'所识的未来相同'; wisdom-root-without-axiom.aliases 'root of wisdom, Part I'/'智慧之根（第一部分）'",
+      "why": "Aliases keep former search names, following the convention of the earlier passes. The parent may want to decide this for every group."
+     },
+     {
+      "target": "wisdom-root-without-axiom.progress[0].source anchor containing 第一部分",
+      "why": "It is a link anchor into a study section heading; changing it would break the link."
+     },
+     {
+      "target": "'author counterreview' / 'The author's counterreview' / '作者反审' / 'author review' / 'not an author' / '未参与撰写' in validation_scope (most records)",
+      "why": "These name a review step (the authoring AI's counterreview, or a separate reviewer), not 'the author's reading' of a claim. They are evidence labels."
+     },
+     {
+      "target": "context-sensitive-updating-correspondence: author-processed coefficients, author code (作者)",
+      "why": "'author' here means the authors of the cited empirical study."
+     },
+     {
+      "target": "fidelity-of-the-classical-statements: the authors' family, the authoring model, 作者同族; 'in another register'",
+      "why": "These name the model family that wrote the 經, which is the design under test. 'register' is the linguistic sense (style register)."
+     },
+     {
+      "target": "positive-ground-open-futures: 'registration does not recompile' / 登记无新编译",
+      "why": "This is registering a result in the record register (bookkeeping), not the registration sense of coupling. The stale 'chapter section 6.4' there is not a target of this pass."
+     },
+     {
+      "target": "joint-practice-forms-continuation: 记下审查, 登记席位, 工作者, authority/authorization",
+      "why": "These are bookkeeping and office-roll senses and ordinary words. 工作者 and 'authority' only match the scan pattern. The record is unchanged."
+     },
+     {
+      "target": "continuation-condition-decomposition / positioned-positive-reason: related id metaethical-core-characterization; alias PositionedPositiveReason.g0_holds; the periphery `G0`",
+      "why": "These are a record id and Lean names, which are kept verbatim."
+     },
+     {
+      "target": "Ren's quoted words (“closes the whole”, “exactly”, “all above does not require any axiom”) and 'on Ren's delegation'",
+      "why": "Ren's quoted words stay verbatim, and the delegation provenance is outside the targets."
+     },
+     {
+      "target": "unceasing-generation-needs-renewal 记入",
+      "why": "Ordinary 'includes', not the registration sense."
+     },
+     {
+      "target": "continuation-condition-decomposition / derived-extent-limits correspondence length (1712 and 1298 against the 1200 cap)",
+      "why": "The current terms are unavoidably longer than the labels. Correspondence is a warning-level cap on schema 2, outside the brief's limits list and outside the schema-1 ratchet. derived-extent-limits crossed from 1187 to 1298. Fields that were already over their caps are pre-existing warnings."
+     },
+     {
+      "target": "joint-practice-forms-continuation, context-sensitive-updating-correspondence, fidelity-of-the-classical-statements, positive-ground-open-futures",
+      "why": "After checking every hit, no retired label, registration sense or 'the author's reading' was left in them, so they are unchanged."
+     }
+    ],
+    "checker": "Last run of `python3 -B tools/research/research.py check --changed-since 0e368fbf2 --ids <20 ids>` (ids passed space-separated through xargs, because zsh does not word-split $IDS): exit 1, with 19 errors, every one 'generated view differs' (README, RESULTS, GOALS, theory-graph, and 14 record .md views), which the brief says to ignore. 20 records were selected. There were 61 selected style warnings and no style errors. v1-growth warnings are all within the tolerance: becoming-renewal-reading limitations en +22, zh +11; conveyance-crosses-the-boundary limitations en +33 and correspondence en +8; positioned-positive-reason limitations +17/+1 from the earlier DF pass. source_drift lists 6 of my ids, all from Lean files I did not touch (Direction.lean, Retaining.lean, Space.lean). `python3 -B tools/research/research.py lint --ids <same>`: exit 0, 55 findings, all warnings, no errors. Every changed record round-trips with json.dumps(indent=2, ensure_ascii=False)+newline. 20 records changed, 4 unchanged; only record JSON files under theories/becoming/results/records/ were edited. Nothing was committed and no git command that changes state was run."
+   },
+   "findings": [
+    {
+     "target": "horizon-optima-hold-the-greatest-renewal.counterexamples[0].detail.zh",
+     "quote": "故当有的最大更新水平满足需要、有的不满足时，按汲取之序丝毫不耦合入该依存（Optimum.Holding.gated_alike）。",
+     "problem": "The replacement reverses the direction of the relation. In this repository's Chinese, the subject of 耦合入 is what reaches the selector: 06-CLASSICAL-TEXTS has 存量只以阈耦合入读法 and 他人之差别不耦合入, and the records have 基础只有支持耦合入 and 耦合入行动之组闭包的条件. So the new zh says the order by the draw couples into the dependence. The en ('the order by the draw takes in nothing of the dependence') and the old zh (按汲取之序对该依存毫无记录) both say that nothing of the dependence reaches the order.",
+     "evidence": "theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.json:145 (zh) against :144 (en); GLOSSARY.md:41 ('couples into: what reaches a selector through its couplings'); theories/becoming/chapters/06-CLASSICAL-TEXTS.md:311, :347",
+     "fix": "Replace '按汲取之序丝毫不耦合入该依存' with '该依存丝毫不耦合入按汲取之序'. The DF note needs no change.",
+     "severity": "error"
+    },
+    {
+     "target": "horizon-optima-hold-the-greatest-renewal.correspondence.zh",
+     "quote": "读法（AI 的）：过程所汲取只通过在某水平被更新者耦合入该水平；",
+     "problem": "Same reversal as in the counterexample. The en reads 'what a course draws takes in its levels only through what is renewed there', meaning the levels reach what the course draws. The new zh says what the course draws couples into the level.",
+     "evidence": "theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.json:167 (zh) against :166 (en); GLOSSARY.md:41",
+     "fix": "Replace '过程所汲取只通过在某水平被更新者耦合入该水平' with '一个水平只经在该水平被更新者耦合入过程所汲取'.",
+     "severity": "error"
+    },
+    {
+     "target": "wisdom-root-without-axiom.title, .claim, .progress[0] (en and zh)",
+     "quote": "The root of wisdom in the theory without axiom / 智慧之根在无公理的理论中; claim: \"within the scope of the theory without axiom\" / \"无公理的理论所及的普遍规律与形成路线\"; progress[0]: \"the checked laws of the theory without axiom\" / \"无公理的理论中已检查的规律\"",
+     "problem": "A missed use of the retired label Part I. 'The theory without axiom' is the 17 October rendering of Part I; the record's own history says so ('outdated labels (the axiom, Part I) replaced by ... the theory without axiom'). The current term in the method chapter's table is 'the theory without the condition'. The old name now misleads: since the condition is not asserted, the whole theory, conditional section included, is without axiom. No live chapter uses 'theory without axiom'. The sweep's search did not catch it: the same rendering is in 74 records, so the orchestrator may want to treat it in every group.",
+     "evidence": "theories/becoming/results/records/wisdom-root-without-axiom.json:5-6, :17-18, :378-379; history note at :900 ('Part I replaced by ... the theory without axiom'); theories/becoming/chapters/08-METHOD.md:527 ('there is one theory with a conditional section') and :534 ('Part I, Part II | the theory without the condition; its conditional section')",
+     "fix": "Title: 'The root of wisdom in the theory without the condition' / '智慧之根在不含条件的理论中'. Claim: '...within the scope of the theory without the condition)' / '（不含条件的理论所及的普遍规律与形成路线）'. Progress[0]: 'the checked laws of the theory without the condition are matched...' / '不含条件的理论中已检查的规律逐条对到...'. Keep the aliases. Extend the existing DF note by one clause: '; and the theory without axiom, the 17 October rendering of Part I, in the title, the claim and the first progress line reads the theory without the condition' / '；标题、主张与第一条进展中的“无公理的理论”（10月17日对第一部分的译名）改为不含条件的理论'.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "positive-ground-open-futures.overview.evidence (en and zh)",
+     "quote": "the theory without axiom states it as a condition, and under the continuation condition it is a theorem (chapter section 6.4; the theory does not assert the condition) / 无公理的理论把它作为条件陈述，在延续条件之下它是定理（章节 §6.4，理论不断言这一条件）",
+     "problem": "The same missed Part I rendering ('the theory without axiom'), plus the stale old-chapter reference 'chapter section 6.4'. In wisdom-root-without-axiom this pass replaced that same reference with the condition's current home, chapter 7, §3; here it is left.",
+     "evidence": "theories/becoming/results/records/positive-ground-open-futures.json:479-480; theories/becoming/chapters/08-METHOD.md:534; theories/becoming/chapters/07-SIGNIFICANCE.md:81-82 (anchor condition, '## 3. The continuation condition'); wisdom-root-without-axiom related[1] as edited in this pass",
+     "fix": "en: 'the theory without the condition states it as a condition, and under the continuation condition it is a theorem (chapter 7, §3; the theory does not assert the condition)'. zh: '不含条件的理论把它作为条件陈述，在延续条件之下它是定理（第 7 章 §3，理论不断言这一条件）'. Extend the record's DF note by a clause saying so.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "positive-ground-open-futures.claim (en and zh)",
+     "quote": "one response realizing some new generation in every presently grounded continuation has some positive ground in each continuation / 同一个回应若在每段当前有根据的接续中实现某种新的生成内容",
+     "problem": "An earlier DF pass rewrote hypothesis 1 to match the core theorem ('actual new living relations ... the admitted continuations'), but left the claim, so the claim and the hypothesis now disagree. The claim still says 'new generation' in 'presently grounded' continuations. The Lean and the chapter take living content absent before, in every admitted continuation. 'New generation' is also the wider sense AGENTS rules out ('generative never means any new organization').",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SecuredContent.lean:102-105 (contingent_newContent: formed : ∀ h, admitted h → ∃ q, living q ∧ F.realized h q ∧ ¬ before h q); theories/becoming/chapters/07-SIGNIFICANCE.md:126 ('Where each admitted continuation realizes living content absent before'); theories/becoming/results/records/positive-ground-open-futures.json:13-14 against the edited hypotheses[0]",
+     "fix": "en: replace 'realizing some new generation in every presently grounded continuation' with 'realizing living content absent before in every admitted continuation'. zh: replace '在每段当前有根据的接续中实现某种新的生成内容' with '在每段被接纳的接续中实现此前没有的活的内容'. Add a clause to the existing DF note.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "joint-practice-forms-continuation.statement.en",
+     "quote": "a present rostered reviewer other than the worker records the method the context answers",
+     "problem": "This statement was added by an earlier DF pass and garbles the condition: it reads as if the reviewer records some method. The Lean condition is that the reviewer's recorded method equals the context (methodAt s r = s.context). The claim says it correctly ('whose recorded method answers as the current context does'), and so does the zh (审查者所记之做法应答当前处境).",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean:1388-1391 (round_iff), :71-74 (docstring); theories/becoming/results/records/joint-practice-forms-continuation.json:13",
+     "fix": "Replace with: 'A practice round of attempt, response, revision and tested retry completes exactly when the worker is present and so is a rostered reviewer, not the worker, whose recorded method is the context's; it then only records the review, installs that method in the worker and completes the trial.' (289 characters, under the 300 cap). Change the same phrase in the DF note to match.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "testing-within-couplings.laws[3] (en and zh)",
+     "quote": "With conditions compared decidedly and without a model / 条件可判定地比较、没有模型时",
+     "problem": "An earlier DF pass rewrote this law. The hypothesis it added is `[DecidableEq C]`, which decides equality of conditions. 'Compared decidedly' suggests a decided order or comparison, which the theorem does not take.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean:332 (theorem tail_unexcluded [DecidableEq C] {t : Nat} (c : C)); theories/becoming/results/records/testing-within-couplings.json:47-48",
+     "fix": "en: 'With equality of conditions decided and without a model, ...'. zh: '条件之相等可判定、没有模型时，……'. In the DF note, 'it takes conditions compared decidedly' becomes 'it takes equality of conditions decided' (zh '它取条件之相等可判定').",
+     "severity": "imprecise"
+    },
+    {
+     "target": "becoming-renewal-reading.limitations.en",
+     "quote": "Proves none of self-significance, neutrality, A, C, L or J1–J4 and binds none who reject them.",
+     "problem": "The old N stood for both neutralities, and the zh now says so (关系与立场中立). The en 'neutrality' is not the current term ('relational and standpoint neutrality'), so en and zh disagree. Separately, 'binds none who reject them' replaces the structural 'no position' with a personal 'none who', while the zh keeps 立场.",
+     "evidence": "theories/becoming/results/records/becoming-renewal-reading.json:187 (en) against :186 (zh '不证明自身意义、关系与立场中立、A、C、L 或 J1–J4，不约束拒绝它们的立场'); theories/becoming/chapters/08-METHOD.md:532; metaethical-core-characterization uses 'both neutralities'",
+     "fix": "Replace with 'Proves none of self-significance, both neutralities, A, C, L or J1–J4; binds none rejecting them.' This keeps the field at 798 characters, under the 800 cap, and its growth at +25, within the +40 ratchet. In the DF note, 'neutrality' becomes 'both neutralities'.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "feedback-and-reach.correspondence, four-cases-of-a-part.correspondence, support-from-the-supported.correspondence (en and zh)",
+     "quote": "A reading (the AI's argument, adopted on Ren's delegation): / 读法（AI 的论证，依 Ren 的交托采用）：",
+     "problem": "This is outside the label sweep and optional; it is a consistency point. In this same group, the earlier DF pass on continuation-condition-decomposition dropped 'adopted on Ren's delegation' from the identical reading label. Its DF note says 'readings are labelled as AI readings instead of adopted on Ren's delegation', and presupposition-scopes did the same. These three sibling records keep the phrase, which grounds the reading's standing in Ren's delegation.",
+     "evidence": "theories/becoming/results/records/feedback-and-reach.json:186-187, four-cases-of-a-part.json:193-194, support-from-the-supported.json:179-180; continuation-condition-decomposition DF note; _process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md:151; AGENTS.md ('never present them as ... the standing of a reading')",
+     "fix": "If the DF item treats this uniformly, write 'A reading (the AI's argument):' / '读法（AI 的论证）：' and add a clause to each DF note ('the reading labelled as the AI's without naming whose delegation adopted it'). Otherwise leave these as they are.",
+     "severity": "style"
+    }
+   ],
+   "fixed": {
+    "applied": [
+     "horizon-optima-hold-the-greatest-renewal counterexamples[0].detail.zh: '按汲取之序丝毫不耦合入该依存' -> '该依存丝毫不耦合入按汲取之序'. In this repository's Chinese the subject of 耦合入 is what reaches the selector (06 has 存量只以阈耦合入读法), so the new zh now matches the en 'the order by the draw takes in nothing of the dependence'. The DF note is unchanged; it still describes the change from the base correctly.",
+     "horizon-optima-hold-the-greatest-renewal correspondence.zh: '过程所汲取只通过在某水平被更新者耦合入该水平' -> '一个水平只经在该水平被更新者耦合入过程所汲取'. The relation now runs the same way as the en ('what a course draws takes in its levels only through what is renewed there').",
+     "wisdom-root-without-axiom title, claim and progress[0], en and zh: 'the theory without axiom' / 无公理的理论 -> 'the theory without the condition' / 不含条件的理论. The record's own 17 October history note gives 'the theory without axiom for Part I', and 08-METHOD's table maps Part I to 'the theory without the condition'. The aliases are kept and the DF note is extended by a clause. Title lengths: en 54/100, zh 13/40.",
+     "positive-ground-open-futures overview.evidence, en and zh: 'the theory without axiom' / 无公理的理论 -> 'the theory without the condition' / 不含条件的理论, and the stale 'chapter section 6.4' / 章节 §6.4 -> 'chapter 7, its section on the continuation condition' / 第 7 章论延续条件之节. I changed the reviewer's 'chapter 7, §3' so it points to the same 07 §3. A '§3' in this public overview field raises the lint's section-reference process-marker warning, and the old zh '§6.4' raised one too; both warnings are now gone. The DF note is extended.",
+     "positive-ground-open-futures claim, en and zh: 'realizing some new generation in every presently grounded continuation' -> 'realizing living content absent before in every admitted continuation' / '在每段所接纳的接续中实现此前没有的活的内容'. The claim now agrees with hypothesis 1 as the earlier pass edited it, with SecuredContent.contingent_newContent (formed : ∀ h, admitted h → ∃ q, living q ∧ realized h q ∧ ¬ before h q) and with the 07 home section. 所接纳的 matches the hypothesis' zh. The DF note is extended.",
+     "joint-practice-forms-continuation statement.en -> 'A practice round of attempt, response, revision and tested retry completes exactly when the worker is present and so is a rostered reviewer, not the worker, whose recorded method answers as the context does; it then only records the review, installs that method in the worker and completes the trial.' (exactly 300 characters). This matches round_iff (methodAt s r = s.context) and the claim's own wording. The reviewer's 'is the context's' became 'answers as the context does', the Lean docstring's phrase. The same phrase is fixed in the DF note; the zh statement was already right.",
+     "testing-within-couplings laws[3]: 'With conditions compared decidedly' -> 'With equality of conditions decided' / '条件可判定地比较' -> '条件之相等可判定', since the theorem takes only [DecidableEq C]. In the DF note, 'it takes conditions compared decidedly' -> 'it takes equality of conditions decided' / '它取条件之可判定比较' -> '它取条件之相等可判定'.",
+     "becoming-renewal-reading limitations.en: 'Proves none of self-significance, neutrality, A, C, L or J1–J4 and binds none who reject them.' -> 'Proves none of self-significance, both neutralities, A, C, L or J1–J4; binds none rejecting them.' The field is now 798/800 characters, +25 en against 0e368fbf2, within the +40 ratchet. In the DF note, 'neutrality' -> 'both neutralities'. J1–J4 stays: 07 and 08 use it as the current premise letters, and only 'J1–J4 as PracticalJudgment' is retired.",
+     "Finding 9, applied across all my files: 'A reading (the AI's argument, adopted on Ren's delegation):' -> 'A reading (the AI's argument):' / '读法（AI 的论证）：' in the correspondence of feedback-and-reach, four-cases-of-a-part and support-from-the-supported. Each DF note gets a clause saying the label no longer says 'adopted on Ren's delegation'. This group already handles the phrase this way in continuation-condition-decomposition, DEFECTS-FOUND line 151 lists it as a defect, and AGENTS forbids presenting Ren's words as the standing of a reading.",
+     "Finding 9, the other places in my files where a reading or decision rested on Ren's delegation (only provenance wording removed, no content changed): wisdom-root-without-axiom hypotheses[1] ('is the AI's reading (理 is Ren's)' / '是 AI 的读法，理依 Ren；') and correspondence ('the other readings are the AI's.' / '其余读法是 AI 的。'). testing-within-couplings correspondence ('the AI's narrowed ones (DELEGATED-CHOICES D26), not the wording Ren accepted'). unceasing-generation-needs-renewal correspondence ('in the AI's reading the second 生 is further generation' / '按 AI 的读法'). conveyance-crosses-the-boundary hypotheses[0] ('decided by the AI' / '由 AI 决定') and limitations ('it is the AI's decision;' / '是 AI 的决定；'; schema 1, and the field got shorter). Every DF note was extended; each record still has exactly one.",
+     "Checks: `research.py check --changed-since 0e368fbf2 --ids` <the 11 changed ids> reports no error other than 'generated view differs'. Source drift appears in Retaining.lean and Space.lean (cited by four-cases-of-a-part and support-from-the-supported), which other agents are editing. The ratchet gives only warnings within tolerance: becoming-renewal-reading limitations +25/+11, conveyance limitations +23 and correspondence +8 from the earlier pass. `research.py lint --ids` on the same 11 gives 0 errors and 19 warnings, down from 22 before this pass. Layout round-trips byte-identically."
+    ],
+    "rejected": [
+     {
+      "finding": "horizon-optima-hold-the-greatest-renewal: extend the DF note for the zh word-order fix",
+      "why": "Not needed, and the reviewer said so too. The note says 'registers' became 'takes in' (zh 耦合入) in the counterexample and the correspondence, and that is still exactly the change from the base."
+     },
+     {
+      "finding": "becoming-renewal-reading: keep the base wording 'binds no position rejecting them' (my own alternative, which would also match the zh 立场)",
+      "why": "It would put limitations.en at 805, over its 800 cap, and add a length warning. No other words in that sentence can be cut without changing its sense, so I used the reviewer's 'binds none rejecting them'. It is not personal and stays within the cap and the ratchet."
+     }
+    ],
+    "checker": "python3 -B tools/research/research.py check --changed-since 0e368fbf2 --ids horizon-optima-hold-the-greatest-renewal wisdom-root-without-axiom positive-ground-open-futures joint-practice-forms-continuation testing-within-couplings becoming-renewal-reading feedback-and-reach four-cases-of-a-part support-from-the-supported unceasing-generation-needs-renewal conveyance-crosses-the-boundary (only 'generated view differs' errors; source drift only in Lean files other agents are editing) and python3 -B tools/research/research.py lint --ids <same 11> (0 errors, 19 warnings, down from 22). Edit script: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/df-g3-edits.py. Records edited, all under /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df/theories/becoming/results/records/: horizon-optima-hold-the-greatest-renewal.json, wisdom-root-without-axiom.json, positive-ground-open-futures.json, joint-practice-forms-continuation.json, testing-within-couplings.json, becoming-renewal-reading.json, feedback-and-reach.json, four-cases-of-a-part.json, support-from-the-supported.json, unceasing-generation-needs-renewal.json, conveyance-crosses-the-boundary.json. Note for the orchestrator: 'the theory without axiom' (the 17 October rendering of Part I) is still in about 78 records repo-wide. 'on Ren's delegation' / 依 Ren 的交托 is still in about 72 records outside this group (83 at base). Other groups may need the same treatment for consistency.\"]"
+   }
+  },
+  {
+   "unit": "chapters",
+   "done": {
+    "changed": [
+     {
+      "target": "theories/becoming/chapters/01-ROOT.md:358 (r-finite-trace-transport row; group 1 row 3)",
+      "change": "Old: '...(`Generative.trace_map`); the converse needs a lifting hypothesis at every starting fiber.' New: '...(`Generative.trace_map`); for such a map the converse, every course from the image of a configuration being the image of one from it, endpoints included, holds exactly where every step from an image lifts, from each configuration with that image, by the same move into the fiber of its target (`Generative.projection_exact_iff`).' I checked this against GenerativeCore.lean:229. projection_exact_iff states (preservation ∧ lifting) ↔ ∀ s as r, Trace Q (q s) as r ↔ ∃ t, Trace P s as t ∧ q t = r. So for a step-preserving map, the converse holds exactly where the lifting condition does. This is the record's new statement. Receipt 20261025T080929.528151Z reports an empty axiom report for both trace_map and projection_exact_iff."
+     },
+     {
+      "target": "theories/becoming/chapters/07-SIGNIFICANCE.md:474 (group 1 row 11)",
+      "change": "Old: 'and an optimum's drain wherever that leaves room' New: 'and an optimum's drain wherever there is room'. The triage is right. In Optimum.lean, least_iff (:556) has the exact condition '¬ ¬ ∃ o'', eligible o'' ∧ Exceeds ds o'' o' for every eligible o standing above another at a condition beyond. Room (:520) is a property of the eligible outcomes, and least_of_room (:570) and Web.optimum_broken_iff (:629) assume it. Nothing about the drawing 'leaves room', so 'wherever there is room' is the sufficient condition the cited laws use."
+     },
+     {
+      "target": "theories/becoming/chapters/04-LIFE.md:50 (r-a-pattern-lasts-through-passing; group 2 row 28)",
+      "change": "Inserted after '`PatternRelay` attains the bounds (witness).' and before 'The passing premise is a hypothesis,'. New text: 'On the grammar (the occurrences of carrying as carrier, a step of continuation a formation going on or one it gives the pattern to, the pattern's class alike in carrying and the finer carrier class also of one formation), the passing premise says exactly that every occurrence carrying the pattern after a step has a predecessor (有前) under the pattern's class (`Web.byPassing_iff_hasPred`); a carrier begins (生) and ends (亡) under the carrier class exactly where it arises and ceases, an alteration (异) of a carrying occurrence is a passing, and a passing to another formation is an alteration; and that every beginning is a passing and that the pattern is passed across one of every *d* consecutive steps from *T* on are derived from grammar laws (`Web.ByPassing.begins_passed_by_grammar`, `Web.ByPassing.passes_within_by_line`).' I checked each clause against PatternPassing.lean: passingContinuation :367, carrierClass :375, byPassing_iff_hasPred :401, arises_iff_sheng_carrier :409, ceases_iff_wang_carrier :419, passesAt_of_alters :432, alters_of_passes :442 (which needs b ≠ a, hence 'to another formation'), begins_passed_by_grammar :537 and passes_within_by_line :495. These are the record's new laws 4 and 5. I did not restate 火传 (passing_fire), because its row is in 01-ROOT's table under r-continuation-relative-to-a-class. Receipt 20261025T080929.528151Z reports empty axiom reports for all the PatternPassing declarations cited, so 'No axiom.' still holds. I followed the triage's wording with one correction: 'passed once every d steps' became 'passed across one of every d consecutive steps', which is what passes_within states."
+     }
+    ],
+    "kept": [
+     {
+      "target": "theories/becoming/chapters/05-COLLECTIVES.md:154 §7(b), 'open access dissipating what a sole owner would keep (Gordon 1954)' (group 1 row 30, optional)",
+      "why": "No change. 'Sole owner' appears only in a cited correspondence to the fisheries literature. The sentence states the literature's result in its own terms, beside its other term 'open access', and the formal claim before it is already in core words ('rebuilt by every optimum alone'). The SPINE §6 rule bars 'owner' as ontology and social words for formal notions; it does not bar naming a cited source's term. This matches the record's correspondence and the Optimum.lean docstrings (:387-:459), which the row says may stay. The suggested alternative would be longer without being more exact."
+     },
+     {
+      "target": "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json statement.en/zh (not my file; for the record's owner)",
+      "why": "Not edited: outside my brief. The statement still says the optima are at the least level 'exactly where lowering it leaves room' (zh '恰在降低之外留有余地时'). That is the same loose wording this row corrects. least_iff's exact condition is that every eligible outcome standing above another at a condition beyond is not unbeaten on the family, as the record's law 1 and 05 §7(a) already say. The related detail was corrected by an earlier pass."
+     }
+    ],
+    "checker": "I ran `python3 -B tools/research/research.py links` in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df. It checked 1442 files and 77993 links and found 3 broken links, none in my four chapter files (none in theories/becoming/chapters/ at all). All 3 are in other sessions' study folders. Two are missing anchors in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/REVIEW-PF2.md (line 11 '#r-what-leaves-a-class-follows-its-line', line 24 '#future-path'). One is a missing path in .../development/ue1-fep-bridge/REVIEW-UE1.md (line 6 'tree/Becoming/HabitCapture.lean'). `git diff --stat` on my files shows one line changed in each of 01-ROOT.md, 04-LIFE.md and 07-SIGNIFICANCE.md; 05-COLLECTIVES.md is unchanged. Nothing was committed."
+   },
+   "findings": [
+    {
+     "target": "theories/becoming/chapters/04-LIFE.md:7 (Bases paragraph; consequence of the 04-LIFE.md:50 insertion, group 2 row 28)",
+     "quote": "None is yet restated on the grammar.",
+     "problem": "The insertion at 04-LIFE.md:50 now says, in the same chapter, that on the grammar the passing premise is exactly a predecessor (有前) under the pattern's class, that carriers begin (生) and end (亡) under the carrier class, and that two of the law's statements are derived from grammar laws. The Bases paragraph still says no law of the chapter is on the grammar, so the chapter contradicts itself. DEFECTS-FOUND.md:226 anticipated this: if the record were extended, 04 could say this law is partly on the grammar. The generated theory graph already counts one of the life region's modules as stated on the grammar.",
+     "evidence": "04-LIFE.md:50 (new sentence 'On the grammar (...), the passing premise says exactly that ... (`Web.byPassing_iff_hasPred`) ... derived from grammar laws (`Web.ByPassing.begins_passed_by_grammar`, `Web.ByPassing.passes_within_by_line`)'); PatternPassing.lean:1 imports Becoming.Grammar, :401, :537, :495; theories/becoming/results/THEORY-GRAPH.md:356 'Modules (16, 1 stated on the grammar)' (PatternPassing is the one); 08-METHOD.md:371-374 (a lifting restates the law with only the fields it uses, and these statements are still World statements); DEFECTS-FOUND.md:226.",
+     "fix": "Replace 'None is yet restated on the grammar.' with 'None is yet lifted onto the grammar; only the law of passing is read on it in part ([below](#r-a-pattern-lasts-through-passing)).'",
+     "severity": "error"
+    },
+    {
+     "target": "theories/becoming/chapters/07-SIGNIFICANCE.md:283 (r-the-continuation-condition-on-the-root paragraph; a use the sweep missed in this file)",
+     "quote": "living significance follows, with S0 at every standpoint, both neutralities and,",
+     "problem": "'S0' is a retired label (08-METHOD.md's retired-labels table maps it to self-significance). It is not a Lean name here: the cited theorem's conclusion is `∀ p, V.SelfSignificance p`. The same chapter says 'self-significance' at :103, :118 and :139, so this is the one remaining use of the retired label in live text in the four files. The word only came over from the Lean docstring's prose.",
+     "evidence": "08-METHOD.md:532 ('S0, N_rel, N_std | self-significance; relational and standpoint neutrality'); GrammarScope.lean:275-279 (premises_of_noOutside concludes V.Significant ∧ (∀ p, V.SelfSignificance p) ∧ Neutral V.transmits ∧ Neutral V.shares ∧ ...); 07-SIGNIFICANCE.md:118 states the same instance with 'self-significance everywhere'.",
+     "fix": "Replace 'with S0 at every standpoint' with 'with self-significance at every standpoint'.",
+     "severity": "error"
+    },
+    {
+     "target": "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json statement.en / statement.zh (outside the four chapter files; the editor's 'kept' note flags it for the record's owner)",
+     "quote": "has its optima at the least level beyond exactly where lowering it leaves room / 恰在降低之外留有余地时",
+     "problem": "This is the residue of DEFECTS-FOUND.md:110 that row 11 left open. least_iff's exact condition is that no eligible outcome standing above another at a condition beyond goes unbeaten on the family, a double negation. 'Leaves room' reads as Room, which is an existence claim and only sufficient (least_of_room), so 'exactly where ... leaves room' is slightly stronger in a constructive reading. The 07-SIGNIFICANCE.md:474 summary of this same record and the record's related detail were corrected in this pass, but the statement was not. Law 1 of the record and 05-COLLECTIVES.md:147 already give the exact form.",
+     "evidence": "Optimum.lean:556-560 (least_iff, condition ¬ ¬ ∃ o'', eligible o'' ∧ Exceeds ds o'' o); Optimum.lean:520-523 (Room, an ∃) and :570 (least_of_room); record laws[0].en 'exactly where every eligible outcome standing above another beyond is not unbeaten on the family'; 05-COLLECTIVES.md:147; DEFECTS-FOUND.md:110.",
+     "fix": "Set statement.en to: 'Each order rising with what couples in has optima at the least level beyond exactly where no eligible outcome above another beyond is unbeaten on it; an optimum breaks exactly what some outcome breaks there; raising the family lowers the beyond with the loss; keeping each dependence takes the slack.' (300 characters). In statement.zh, replace '恰在降低之外留有余地时' with '恰在无一在之外高于另一结果的合格结果在族上不被胜过时' (92 characters). Extend the record's existing DF history note by one clause: the statement gives least_iff's exact condition instead of 'where lowering it leaves room'.",
+     "severity": "imprecise"
+    },
+    {
+     "target": "theories/becoming/chapters/04-LIFE.md:50 (inserted grammar sentence, group 2 row 28)",
+     "quote": "On the grammar (the occurrences of carrying as carrier, a step of continuation a formation going on or one it gives the pattern to, the pattern's class alike in carrying and the finer carrier class also of one formation),",
+     "problem": "One sentence uses 'carrier' in two senses. 'As carrier' is the grammar's carrier, the type a relation is on (the glossary's sense). In 'a carrier begins (生) ... under the carrier class' and in the paragraph's 'its carriers', a carrier is a formation carrying the pattern. In addition, the grammar's carrier is every pair of a step and a formation, not only the carrying ones; the same sentence goes on to speak of 'every occurrence carrying the pattern', which presupposes occurrences that do not carry.",
+     "evidence": "PatternPassing.lean:317-319 (the carrier is pairs (t, a) of a step and a formation) and :375 (carrierClass : «际» (Nat × F), over all pairs); GLOSSARY.md:9 ('a two-place predicate on a carrier'); 01-ROOT.md:262 ('Occurrences are pairs of a step and a relatum'); 04-LIFE.md:50 ('A pattern outlasting its carriers').",
+     "fix": "Replace the parenthesis with: '(occurrences, pairs of a step and a formation, as the grammar's carrier; a step of continuation a formation going on or one it gives the pattern to; the pattern's class alike in carrying, and the finer carrier class also of one formation)'.",
+     "severity": "style"
+    }
+   ],
+   "fixed": {
+    "applied": [
+     "theories/becoming/chapters/04-LIFE.md:7 (Bases): 'None is yet restated on the grammar.' now reads 'None is yet lifted onto the grammar; only the law of passing is read on it, in part ([below](#r-a-pattern-lasts-through-passing)).' The old sentence contradicted §2 of the same chapter, where the passing premise is restated on the grammar (Web.byPassing_iff_hasPred) and two of the law's statements are derived from grammar laws (begins_passed_by_grammar, passes_within_by_line). Those statements are still World statements, and nothing in 04 has had the full lifting that 08 §6 describes (the law restated with only the fields it uses). So 'lifted' plus 'read on it, in part' is exact. The Thesis line ('Open: ... the restatement of these laws on the grammar') is still true and was left alone. The new anchor link resolves (research.py links shows no broken link in any chapter).",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:283 (§4.5, r-the-continuation-condition-on-the-root): 'with S0 at every standpoint' now reads 'with self-significance at every standpoint'. S0 is the retired label (08-METHOD retired-labels table: S0 -> self-significance) and not a Lean name here. premises_of_noOutside concludes (∀ p, V.SelfSignificance p), and the record's third law was already corrected the same way. 07 now has no use of S0.",
+     "theories/becoming/chapters/04-LIFE.md:50 (§2, r-a-pattern-lasts-through-passing): the parenthesis now reads '(occurrences, pairs of a step and a formation, as the grammar's carrier; a step of continuation a formation going on or one it gives the pattern to; the pattern's class alike in carrying, and the finer carrier class also of one formation)'. The finding is correct. PatternPassing's grammar carrier is Nat x F, meaning every pair of a step and a formation, not only the carrying ones (carrierClass : «际» (Nat × F)). Saying 'the grammar's carrier' explicitly separates that sense from the chapter's 'carriers' (formations carrying the pattern), and the later phrase 'every occurrence carrying the pattern' now makes sense. No law changed."
+    ],
+    "rejected": [
+     {
+      "finding": "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json statement.en/zh: replace 'exactly where lowering it leaves room' / '恰在降低之外留有余地时' with least_iff's exact double-negation condition, and extend the record's DF note",
+      "why": "Not applied here because the file is outside this brief, which allows only the four chapter files. On the merits the finding is correct and should go to the record's owner. Optimum.lean least_iff (lines 556-560) has the exact condition ¬¬∃ o'', eligible o'' ∧ Exceeds ds o'' o. Room is a ∀...∃ statement and only sufficient (least_of_room). So 'exactly where ... leaves room' claims more than the Lean proves under a constructive reading, while law 1 and 05-COLLECTIVES.md:147 already use the exact form. The proposed statement.en and the zh replacement look right. The owner should check them against the 300/150 limits and the schema ratchet, and add the clause to the existing DF history note."
+     }
+    ],
+    "checker": "Ran in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df. I changed no record, so no history note was added. I checked the two records whose home sections I edited.\n\n1. `python3 -B tools/research/research.py check --changed-since 0e368fbf2 --ids a-pattern-lasts-through-passing the-continuation-condition-on-the-root`: the only errors are 'generated view differs' (to be ignored).\n2. Source drift: there is one scoped drift entry. the-continuation-condition-on-the-root references theories/becoming/chapters/07-SIGNIFICANCE.md with role 'statement'. The edit to §4 'with S0' changed the bytes after its reviewed sha256 (a29512c6...). It changes nothing the record says. I did not touch the record's references, as the rules require. At landing, the lander should re-point it with tools/research/repoint.py (--ids the-continuation-condition-on-the-root --paths theories/becoming/chapters/07-SIGNIFICANCE.md). None of the 04-LIFE.md edits caused drift.\n3. `python3 -B tools/research/research.py lint --ids` on the same two ids: 0 errors. There is 1 warning, negation-lead on a-pattern-lasts-through-passing's statement, which comes from earlier text.\n4. `python3 -B tools/research/research.py links`: 3 broken links, all outside the chapters (iv3-dependence, ue1-fep-bridge). None is in 04 or 07."
+   }
+  }
+ ],
+ "critic": {
+  "to_fix": [
+   {
+    "target": "comparison-by-widening",
+    "field": "claim.en",
+    "quote": "(Web.paths_livingSignificance_comparison, see one-axiom-yields-g0)",
+    "fix": "(Web.paths_livingSignificance_comparison, see continuation-condition-yields-living-significance). The text cites a stale former id that carries both 'one axiom' and G0."
+   },
+   {
+    "target": "comparison-by-widening",
+    "field": "claim.zh",
+    "quote": "（Web.paths_livingSignificance_comparison，见 one-axiom-yields-g0）",
+    "fix": "（Web.paths_livingSignificance_comparison，见 continuation-condition-yields-living-significance）"
+   },
+   {
+    "target": "comparison-by-widening",
+    "field": "related[0].detail.en",
+    "quote": "There, with the axiom as a condition, C holds on level paths with retaining and adding what has significance as “better” (Web.paths_livingSignificance_comparison); here, with no axiom, with widening as “better”, the two being the same under the axiom.",
+    "fix": "There, under the continuation condition, C holds on level paths with retaining and adding what has significance as “better” (Web.paths_livingSignificance_comparison); here, without the condition, with widening as “better”, the two being the same under the condition."
+   },
+   {
+    "target": "comparison-by-widening",
+    "field": "related[0].detail.zh",
+    "quote": "那里以公理为条件，在水平路径上 C 以保留且增加有意义者为“更好”成立（Web.paths_livingSignificance_comparison）；这里不用公理，以扩大为“更好”，公理之下二者相同。",
+    "fix": "那里在延续条件之下，在水平路径上 C 以保留且增加有意义者为“更好”成立（Web.paths_livingSignificance_comparison）；这里不用该条件，以扩大为“更好”，在该条件之下二者相同。"
+   },
+   {
+    "target": "comparison-by-widening",
+    "field": "limitations.en",
+    "quote": "after the reduction, the axiom's step of invariance becomes the content of calling the generative space good.",
+    "fix": "after the reduction, the continuation condition's step of invariance becomes the content of calling the generative space good."
+   },
+   {
+    "target": "comparison-by-widening",
+    "field": "limitations.zh",
+    "quote": "还原之后，公理的不变之步成为称生成的空间为好的内容。",
+    "fix": "还原之后，延续条件的不变之步成为称生成的空间为好的内容。"
+   },
+   {
+    "target": "alignment-direction-under-widening",
+    "field": "overview.summary.en",
+    "quote": "This requirement has the stated axiomatic scope:",
+    "fix": "This requirement holds only under the stated premises (the continuation condition for scope, C for order, and the practical commitments):"
+   },
+   {
+    "target": "alignment-direction-under-widening",
+    "field": "overview.summary.zh",
+    "quote": "这项必要要求具有明示的公理范围；",
+    "fix": "这项必要要求只在所述前提之下成立（延续条件定范围，C 定次序，加上实践承诺）；"
+   },
+   {
+    "target": "selection-under-registration-revision",
+    "field": "dependencies[0].interface.output.en",
+    "quote": "Web registration-based selection and equivalence",
+    "fix": "Web selection through coupling and lumping equivalence (this matches the zh field, which already reads “Web 的经耦合选择及归并等价关系”)"
+   },
+   {
+    "target": "selection-under-registration-revision",
+    "field": "dependencies[1].detail.en",
+    "quote": "Proves the exact registration-change criterion on the same Through definition",
+    "fix": "Proves the exact lumping-change criterion on the same Through definition (this matches the zh field, which already reads “归并改变的精确条件”)"
+   },
+   {
+    "target": "selection-under-registration-revision",
+    "field": "dependencies[1].interface.input.en",
+    "quote": "Proves the exact registration-change criterion on the same Through definition",
+    "fix": "Proves the exact lumping-change criterion on the same Through definition"
+   },
+   {
+    "target": "formed-copying-registration",
+    "field": "dependencies[0].detail.zh",
+    "quote": "registered_operation_refines 将注册后的运行对应到旧步骤",
+    "fix": "registered_operation_refines 将经接触的运行对应到旧步骤 (the en field already reads “relates execution through contacts to the old steps”; the Lean names stay)"
+   },
+   {
+    "target": "coming-and-ceasing-keep-pace",
+    "field": "correspondence.en",
+    "quote": "The one the author finds most contentful:",
+    "fix": "The one the AI finds most contentful:"
+   },
+   {
+    "target": "coming-and-ceasing-keep-pace",
+    "field": "correspondence.en",
+    "quote": "The author reads this as one formal content of Ren's scope",
+    "fix": "The AI reads this as one formal content of Ren's scope"
+   },
+   {
+    "target": "coming-and-ceasing-keep-pace",
+    "field": "correspondence.zh",
+    "quote": "其中作者认为最有内容的一条",
+    "fix": "其中 AI 认为最有内容的一条"
+   },
+   {
+    "target": "coming-and-ceasing-keep-pace",
+    "field": "correspondence.zh",
+    "quote": "作者把这读作 Ren 所说",
+    "fix": "AI 把这读作 Ren 所说"
+   },
+   {
+    "target": "rising-and-falling-in-one-exchange",
+    "field": "correspondence.en",
+    "quote": "The author reads this as one formal content of that scope within a single step (an AI argument)",
+    "fix": "The AI reads this as one formal content of that scope within a single step (an AI argument)"
+   },
+   {
+    "target": "rising-and-falling-in-one-exchange",
+    "field": "correspondence.zh",
+    "quote": "作者把这读作该范围在一步之内的一种形式内容",
+    "fix": "AI 把这读作该范围在一步之内的一种形式内容"
+   },
+   {
+    "target": "finite-aggregation-within-restorable-basic-losses",
+    "field": "hypotheses[0].zh",
+    "quote": "不是无条件部分的定理",
+    "fix": "不是不含条件的理论的定理 (this is the Part I sense in Chinese; the en field already reads “the theory without the condition”)"
+   },
+   {
+    "target": "widening-along-a-reading",
+    "field": "laws[2].zh",
+    "quote": "：这是一种形成类型上的扩大所不计入的。",
+    "fix": "：只在旧形成上读扩大，显示不出它。 (计入 was the earlier Chinese for “registers”; the en field was already corrected to “widening read on the old formations alone does not show it”)"
+   },
+   {
+    "target": "hexagram-arrangements-and-laws",
+    "field": "laws[11].zh",
+    "quote": "也不从某步起归于静止",
+    "fix": "也不从某步起停息 (this is the table row 归于静止 → 停息, which is outside the sweep's list but is in the retired-labels table; en “comes to rest”, Lean never_comes_to_rest)"
+   },
+   {
+    "target": "hexagram-world-laws",
+    "field": "does_not_show[2].zh",
+    "quote": "归于静止、复返、变或某一类是善的",
+    "fix": "停息、复返、变或某一类是善的 (the same table row; en “coming to rest”)"
+   }
+  ],
+  "kept": "Scope: I scanned all 430 JSON records under theories/becoming/results/records/, every field except history, references and proof_bindings. The 17 redirect stub pages (.md files with no .json) were skipped. I also scanned the eight chapters, in English and Chinese. Nothing was edited.\n\nRetired-labels table: theories/becoming/chapters/08-METHOD.md lines 526–540 match HEAD exactly. The worktree's only hunk in 08 is at line 326. The table is unchanged.\n\nChapters: nothing to fix. The kept uses are:\n- 12 lines in the table and its history: 08:522, 527 and 531–540.\n- 5 record ids or anchors: 03:281–282 for selection-under-registration-revision, 04:90 for formed-copying-registration, 07:97–98 for metaethical-core-characterization.\n- 2 Lean file names or link labels: 04:90 and 04:291, for CopyingRegistration.lean.\n- 2 source or history paths: 07:86 (the one-axiom source file) and 07:564 (G0-WARRANT.md).\n- 7 ordinary English lines: 08:66, 584, 586, 633, 638 use \"register\" for the decision register; 08:435 has \"folded\" a row.\n- 13 ordinary Chinese lines in 06, where 记下 and 登记 mean noting or recording in the corpus: lines 4, 45, 61, 72, 73, 75, 84, 144 (twice), 481, 564. Also 作者 at 06:135 (a role in the 中论) and 06:577 (the texts' authors).\n\nRecords: 22 uses to fix, in the list. The rest are kept. Counts are matches in the live fields:\n- About 90 Lean names. These include the periphery's GenerativeComparison.G0 written \"the periphery's G0\" or \"外围的 G0\", the g0_* declarations, PracticalJudgment.Better and other PracticalJudgment names, and Lean-name aliases. They also include the current declarations carries_unregistered, level_registers, refutes_registered, order_registers, grow_widens_unregistered, revise_registers_failure, Registration.web_keeps_iff, registered_inheritance, registered_operation_refines and registered_copy_iff, and the Law.Lossless family. All of these exist in the live Lean.\n- 16 current record ids that contain a retired word: selection-under-registration-revision, formed-copying-registration, metaethical-core-characterization, wisdom-root-without-axiom.\n- 8 file paths, such as CopyingRegistration.lean and ExplanatoryJoiningRegisters.lean.\n- About 69 uses in history or frozen contexts:\n  - former_ids, text_versions paths, and progress[].source anchors into history sections;\n  - correspondence text that tells how a name changed: differences-below-threshold (6), a-law-through-coupling-along-one-run (3), continuation-condition-decomposition (1), derived-extent-limits (2, \"proposed then as an axiom\");\n  - quotations of earlier readings or questions: generalization-through-lumping and testing-within-couplings (4), plus 9 earlier-sense 识 uses.\n- 24 former-name aliases. Examples: 'Practical judgment G0/J1–J4', 'root of wisdom, Part I', '智慧之根（第一部分）', 'registration revision', '登记关系修订', 'least registration', 'registration closure', and 8 aliases using 识.\n- 9 uses that are Ren's words, quoted or reported:\n  - living-significance-on-held-lives: \"if we want to add one axiom\";\n  - relational-renewal-classification: \"我G0是什么\";\n  - a-law-through-coupling-along-one-run: Ren's board message, en and zh;\n  - space-and-its-parts: \"with an axiom we can define the good\";\n  - coming-and-ceasing-keep-pace: the zh 加上公理, from Ren's proposal.\n- About 175 ordinary words:\n  - 63 uses of 计入 meaning \"counting in\";\n  - 34 uses of fold in its other senses: bifurcation, b-fold, foldl;\n  - 33 cases of \"no Lean axiom\" or \"a hypothesis, not an axiom\", plus the propext uses;\n  - 14 English uses of register meaning a quantum register, a linguistic register, record bookkeeping or the registry;\n  - 14 Chinese uses of 记下 or 登记 meaning noting, bookkeeping or a roll;\n  - 13 uses of 第一部分 or 第二部分 meaning the first or second component;\n  - the rest: 空公理范围, the type-theory axiom, \"not installed as an axiom\", and 识 meaning \"identify\" in fidelity-coders-on-own-and-other-texts.\n\nThe hundreds of \"axiom report\" and \"不加公理\" uses are logic-report wording, not labels, and are not counted.\n\nBorderline cases, kept:\n- Aliases holding former titles. They are rendered beside History and keep old searches working. If aliases count as live text, drop them instead: the G0/J1–J4 alias in practical-judgment-under-living-significance, the 'Part I' aliases in wisdom-root-without-axiom, and the registration aliases.\n- protection-priority-excludes-uniform-aggregation, hypotheses[1]: \"J2 is PracticalJudgment.Better\". It states the record's periphery Lean, so it is not J1–J4 used as a label.\n\nOutside this brief, noted only:\n- The generated .md record pages are stale until `make research-render` runs. For example, practical-judgment-under-living-significance.md line 23 still reads \"The G0 positive-significance interface, folded...\".\n- g0_iff, cited in becoming-spine-instances dependencies[0].detail and continuation-condition-yields-living-significance dependencies[5].detail, exists only in the retired history/Bridge.lean. That is a binding defect, not a label.\n- Many correspondence fields still say \"adopted on Ren's delegation\", for example comparison-by-widening limitations. That belongs to the names and provenance defect class."
+ }
+}

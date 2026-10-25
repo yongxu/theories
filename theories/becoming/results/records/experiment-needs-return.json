@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "相对于确定性，记录恰在取过之处固定一个动作的结果，自己的动作若换一个会怎样只在配置返回之处被固定。保留历史的运行永不返回，所以实验需要一个关于何者无关的模型。",
     "en": "Relative to determinacy, the record fixes a move's outcome exactly where it was taken, and what one's act would have done otherwise is fixed only where the configuration returns. A kept history never returns, so experiment needs a model of what is irrelevant."
@@ -186,8 +186,8 @@
     "en": "The formal bridge with the lumping the couplings make in Becoming.Testing as the projection (see projection-carrying-a-law and generalization-through-lumping); the general form of which correlation between moves and what is hidden leaves a model never excluded; experiment where a forgotten part of the move makes a difference (see causal-models-as-processes)."
   },
   "correspondence": {
-    "zh": "testing-within-registration 留下的开放项（审查 F6）：一个动作造成什么，是有与无此动作的两段历史的比较。Ren 在那一结果落地后写“land and merge all, then continue”，看过结果后写“no extra review needed, merge, then continue”。读法（AI 的，依 Ren 的交托采用）：实验是在配置（按实验者的读法）返回之处变动自己的动作；重复是这一返回；对照是步骤经读法分解的模型；与略去者无关的变动是随机化的结构形式；以 testing-within-registration 的耦合为读法，阈下与所及之外的不显出是不分解的情形。",
-    "en": "The open item of testing-within-registration (review F6): what an act does compares the history with it and the history without it. After that result landed Ren wrote “land and merge all, then continue”, and on the result “no extra review needed, merge, then continue”. Readings (the AI's, adopted on Ren's delegation): an experiment is varying one's own act where the configuration, as the experimenter reads it, returns; replication is that return; a control is the model that the step factors through the reading; variation independent of what is left out is the structural form of randomization; with the couplings of testing-within-registration as the reading, what does not show below the threshold or beyond the reach is a case where the step does not factor."
+    "zh": "testing-within-couplings 留下的开放项（审查 F6）：一个动作造成什么，是有与无此动作的两段历史的比较。Ren 在那一结果落地后写“land and merge all, then continue”，看过结果后写“no extra review needed, merge, then continue”。读法（AI 的，依 Ren 的交托采用）：实验是在配置（按实验者的读法）返回之处变动自己的动作；重复是这一返回；对照是步骤经读法分解的模型；与略去者无关的变动是随机化的结构形式；以 testing-within-couplings 的耦合为读法，阈下与所及之外的不显出是不分解的情形。",
+    "en": "The open item of testing-within-couplings (review F6): what an act does compares the history with it and the history without it. After that result landed Ren wrote “land and merge all, then continue”, and on the result “no extra review needed, merge, then continue”. Readings (the AI's, adopted on Ren's delegation): an experiment is varying one's own act where the configuration, as the experimenter reads it, returns; replication is that return; a control is the model that the step factors through the reading; variation independent of what is left out is the structural form of randomization; with the couplings of testing-within-couplings as the reading, what does not show below the threshold or beyond the reach is a case where the step does not factor."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Experiment.lean",
   "aliases": [
@@ -677,6 +677,10 @@
     {
       "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one does_not_show item added (this record is not in SA1's table; the match is LK1's judgment). The claim and its premises are unchanged.",
       "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；增加一条 does_not_show（本记录不在 SA1 的表中；这一对应是 LK1 的判断）。主张与其前提不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the correspondence names the record by its current id, testing-within-couplings, for its former id; nothing else changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应以现行编号 testing-within-couplings 称该记录，取代其旧编号；别无改变。"
     }
   ],
   "text_versions": [

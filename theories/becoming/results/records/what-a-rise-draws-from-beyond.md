@@ -31,7 +31,7 @@
 - That more offspring go to raisers: a premise, not derived from the flow; the offspring relation is any listing of generations, not descent in the flow.
 - That the selecting formation causes the break beyond the accounting; the break is read at the step's start, as in Becoming.Dependence. Which dependence breaks when several take at once is stated by the joint draw (Becoming.JointDraw), from the amounts each takes and gives, which the flow supplies.
 - Replenishment of the beyond from outside the whole, which the gainless premise excludes, and the rise it sustains; the openness law bounds the family's stock, not the share.
-- That the draw is wrong or the ending a harm: the laws say where what a rise draws lands and why a selection through the group does not register it.
+- That the draw is wrong or the ending a harm: the laws say where what a rise draws lands and why a selection through the group does not take it in.
 - **Counterexample:** Lapsing: with the same offspring, more going to the taker which raises the store, nothing is discordant, yet the taker's offspring do not reach beyond and the share falls from a half to nothing: selection alone does not carry the share (Lapsing.share_falls). WithinSlack: a rise equal to the slack breaks nothing. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -75,7 +75,7 @@ The accounting is a conservation law on a closed whole, as in material-flow and 
   - Input: Which dependence the rise breaks, and that its formation does not go on as it was.
   - Preserved conditions: Dependent for the endings. [Dependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean)
 - related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Whether what the rise draws from beyond is depended on, how much more is drawn, and the share that reaches beyond, which that record left open.
-- related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). The broken dependence lies on a condition no member couples into, so by the gap no selection through a member registers it.
+- related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). The broken dependence lies on a condition no member couples into, so by the gap no selection through a member takes it in.
 - related, not a proved adapter: [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md). What an optimum, not a rise, does beyond what couples in.
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). How much each formation takes when several draw, derived for optimizers at a mutual best response.
 - related, not a proved adapter: [a-rise-past-the-inflow-is-drawn-from-beyond](a-rise-past-the-inflow-is-drawn-from-beyond.md). Graded by the whole's inflow, the fall of the beyond, the break past the slack, reaching beyond and the bound over a stretch hold past the inflow; the gainless laws here are their case of no inflow and are derived from them.
@@ -111,7 +111,8 @@ Aliases: `what a rise draws from beyond`, `上升从其外汲取什么`, `a rise
 - 21 October 2026, SG1: what an optimum does beyond what couples in (record what-an-optimum-does-beyond-what-couples-in, study section 283); this record's laws and their statements are unchanged.
 - 21 October 2026, SG3: how much each formation takes when several draw, which the joint-draw laws take as supplied, derived for optimizers at a mutual best response (record several-optimizers-drain-by-their-joint-capacity, study section 290); this record's laws and their statements are unchanged.
 - 22 October 2026, IF1: graded by the inflow in record a-rise-past-the-inflow-is-drawn-from-beyond; the gainless laws of this record are now derived as its case of no inflow, their statements unchanged (study section 355).
+- 25 October 2026, board item DF (study section 418): the retired registration vocabulary in a boundary and a related note replaced by coupling ("does not register it" now "does not take it in", "registers it" now "takes it in"); the laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-22T13:10:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T17:03:04+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

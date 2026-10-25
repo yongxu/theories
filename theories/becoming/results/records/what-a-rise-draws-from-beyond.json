@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-22T13:10:31+00:00",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
     "en": "Where the whole gains nothing, the beyond falls by the rise and the loss; past the slack of the dependences there one breaks, unseen by a selection rewarding the rise; raising is reaching beyond, whose share over generations favouring raisers is never selected against; closed, the beyond bounds it.",
     "zh": "整体无所增益时，其外降低上升之量加损失；超出其外依存的余量时其中一个被打断，奖励上升的选择看不见它；升高即伸向之外，在偏向升高者的世代中其份额从不被逆向选择；封闭时其外约束上升。"
@@ -133,8 +133,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the draw is wrong or the ending a harm: the laws say where what a rise draws lands and why a selection through the group does not register it.",
-      "zh": "汲取是错的或终止是伤害：这些规律说的是上升所汲取者落在何处，以及经群体的选择为何不记下它。",
+      "en": "That the draw is wrong or the ending a harm: the laws say where what a rise draws lands and why a selection through the group does not take it in.",
+      "zh": "汲取是错的或终止是伤害：这些规律说的是上升所汲取者落在何处，以及经群体的选择为何不耦合入它。",
       "kind": "non-implication"
     }
   ],
@@ -282,8 +282,8 @@
     {
       "id": "the-gap-for-ones-own-act",
       "detail": {
-        "en": "The broken dependence lies on a condition no member couples into, so by the gap no selection through a member registers it.",
-        "zh": "被打断的依存所在的条件无一成员耦合入，所以按其缺口，经任何成员的选择都不记下它。"
+        "en": "The broken dependence lies on a condition no member couples into, so by the gap no selection through a member takes it in.",
+        "zh": "被打断的依存所在的条件无一成员耦合入，所以按其缺口，经任何成员的选择都不耦合入它。"
       }
     },
     {
@@ -478,6 +478,10 @@
     {
       "en": "22 October 2026, IF1: graded by the inflow in record a-rise-past-the-inflow-is-drawn-from-beyond; the gainless laws of this record are now derived as its case of no inflow, their statements unchanged (study section 355).",
       "zh": "2026年10月22日，IF1：在记录 a-rise-past-the-inflow-is-drawn-from-beyond 中按流入分级；本记录无所增益的规律现作为其无流入的情形导出，陈述不变（研究第 355 节）。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired registration vocabulary in a boundary and a related note replaced by coupling (\"does not register it\" now \"does not take it in\", \"registers it\" now \"takes it in\"); the laws are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条边界与一条相关说明中已退役的登记词汇改为耦合（“不记下它”改为“不耦合入它”）；规律不变。"
     }
   ]
 }

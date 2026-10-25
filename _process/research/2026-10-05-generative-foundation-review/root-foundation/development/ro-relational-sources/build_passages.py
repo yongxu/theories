@@ -10,7 +10,7 @@ and preserve the atlas texts they quote. usage: python3 -B build_passages.py [--
 - With --preserve, the atlas texts quoted are copied from the two archives into
   sources/chinese-classical-texts/<atlas>/ (never over an existing file) and PROVENANCE.json is written.
 The mappers' readings are the AI's; this script does not change them, except where FIXES says
-(a source, locator or fragments replaced, or a sentence of a reading replaced after review, or, where a later item
+(a source, locator or fragments replaced, or a sentence of a reading or of a gap replaced after review, or, where a later item
 proved what an entry computed or its gap named, declarations and records added and the gap marked closed, or, where a
 later decision judged the structure an entry reads differently, its kind and its whole reading replaced).
 passages.json changes only through FIXES, never in place: a build rewrites the whole file, so an edit made
@@ -432,7 +432,10 @@ FIXES = {
                        'bound an opposing exchange crosses m and a witness alternates without end '
                        '(Flow.crosses_of_above, Regulation.Overshooting.oscillates); with one side only the premise '
                        'of Flow.restores holds and the level stays above m (Regulation.OneSided.above).'),
-        'why': 'RG proved the two-sided law the reading named as a gap, with both of its failures'},
+        'gap_sub': [('why_it_matters', 'the Widening loop law', 'the LoopReturn loop law')],
+        'why': ('RG proved the two-sided law the reading named as a gap, with both of its failures; DF '
+                '(DEFECTS-FOUND, 06): the gap named the loop law\'s module by its name before R22 (Widening, now '
+                'LoopReturn)')},
     'lao-42-chong-qi-yi-wei-he': {
         'declarations_add': ['Becoming.Flow.withinGap_iff_between',
                              'Becoming.Flow.settles',
@@ -579,12 +582,25 @@ FIXES = {
                        "withholding stays (gives_needs_sparing, total_stays), so 柔弱者生之徒 holds where withholding is "
                        "local, not universally; the comparison 'the soft overcomes the hard' across laws is a gap."),
         'why': ZHK_WHY},
+    'zuo-xuan12-zhi-ge-wei-wu': {
+        'reading_sub': [('Widening 证明：', 'LoopReturn 证明：')],
+        'why': ('DF (DEFECTS-FOUND, 06): the reading named the module of its laws by its name before R22 (Widening, now '
+                'LoopReturn); the declarations already follow the rename')},
+    'tanjing-zi-xing': {
+        'locator': '行由品；懺悔品',
+        'why': ('DF (DEFECTS-FOUND, review packet): in the preserved HS08.txt the first three fragments lie in 行由第一 '
+                'and 「被妄念浮雲蓋覆自性，不得明朗」 in 懺悔第六; none lies in 般若第二')},
+    'weishi-xun-xi': {
+        'locator': '卷二熏习；卷九、卷十转依',
+        'why': ('DF (DEFECTS-FOUND, review packet): in the preserved R5BU001.txt 「轉謂二分，轉捨、轉得。」 lies in 卷第九 '
+                'and 「損本識中染種勢力，益本識內淨種功能」 in 卷第十')},
 }
 
 # Renamed declarations, a correction of every entry that names one: the Lean renamed them after the mappers
 # wrote, statements unchanged (R22: development/r22-names/RENAME-TABLE.json, Widening -> LoopReturn; R30:
-# development/r30-names/RENAME-TABLE.json). The declarations and the names in a reading follow; the reading's
-# words do not change. Applied after FIXES, so a FIXES entry may still name an old declaration.
+# development/r30-names/RENAME-TABLE.json). The declarations, the declarations a gap names as nearest, and the
+# names in a reading follow; the reading's words do not change. Applied after FIXES, so a FIXES entry may still
+# name an old declaration.
 RENAMED_WHY = ('names follow the renamed declarations (R22, R30; tables in development/r22-names and '
                'development/r30-names), statements unchanged')
 
@@ -743,6 +759,11 @@ def main():
                     p[k] = e[k]
             if fix.get('gap_closed') and 'gap' in p:
                 p['gap'] = dict(p['gap'], closed=fix['gap_closed'])
+            for field, old, new in fix.get('gap_sub', []):
+                if old not in (p.get('gap') or {}).get(field, ''):
+                    problems.append(f'{pid}: gap correction does not apply: {field}: {old}')
+                else:
+                    p['gap'] = dict(p['gap'], **{field: p['gap'][field].replace(old, new)})
             if 'reading' in fix:
                 p['reading'], p['reading_en'] = fix['reading'], fix['reading_en']
             for old, new in fix.get('reading_sub', []):
@@ -755,11 +776,14 @@ def main():
                 p['reading_en'] = p['reading_en'].replace(old, new)
             if fix:
                 p['corrected'] = fix['why']
-            before = (p['declarations'], p['reading'], p['reading_en'])
+            nearest = lambda: (p.get('gap') or {}).get('nearest')
+            before = (p['declarations'], p['reading'], p['reading_en'], nearest())
             p['declarations'] = [RENAMES.get(d, d) for d in p['declarations']]
+            if nearest():
+                p['gap'] = dict(p['gap'], nearest=[RENAMES.get(d, d) for d in nearest()])
             p['reading'] = rename_text_r30(rename_text(p['reading'], RENAMES), R30_WINDOWS, R30_WORDS)
             p['reading_en'] = rename_text_r30(rename_text(p['reading_en'], RENAMES), R30_WINDOWS, R30_WORDS)
-            if (p['declarations'], p['reading'], p['reading_en']) != before:
+            if (p['declarations'], p['reading'], p['reading_en'], nearest()) != before:
                 p['corrected'] = (p['corrected'] + '; ' if p.get('corrected') else '') + RENAMED_WHY
             before = (p['records'], p['reading'], p['reading_en'])
             p['records'] = [RECORD_RENAMES.get(r, r) for r in p['records']]

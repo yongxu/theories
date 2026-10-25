@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-18T12:53:29+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "en": "A pool's selections are blind beyond the union of its members' coupling closures and separate exactly what the members do not all couple alike. An act differing only beyond that union, the pool's own included, is selected alike within it; a formation whose admission the act changes separates it.",
     "zh": "一组的选择在其成员耦合闭包之并以外不见，恰分开并非每个成员都耦合得无别者。差别留在此闭包之外的动作（这组自身的动作在内）在闭包内被选得相同；接纳被此动作改变的形成分开它。"
@@ -124,8 +124,8 @@
       "zh": "不加公理。就动作而言：其余遵从经耦合而读的交换律（ExchangeLaw.Through）、平衡、出现的形成相同、起点相同，写进每条定理，如 the-gap-for-ones-own-act；就闭包之外的部分而言：其余固定（Flow.WithheldLevels），并在闭包所耦合入者上平衡。"
     },
     {
-      "en": "That a selection goes through a pool's pooled coupling (Web.SelectsThroughAll) is a condition, as in selection-through-registration. The member-level converse takes a list holding exactly the members and each member's coupling of the two histories decided (Decided), named where they enter.",
-      "zh": "选择经一组合起来的耦合（Web.SelectsThroughAll）是条件，如 selection-through-registration。成员层面的逆向陈述取一个恰列出成员的列表，以及每个成员对两段历史的耦合已判定（Decided），在其进入之处写明。"
+      "en": "That a selection goes through a pool's pooled coupling (Web.SelectsThroughAll) is a condition, as in selection-through-couplings. The member-level converse takes a list holding exactly the members and each member's coupling of the two histories decided (Decided), named where they enter.",
+      "zh": "选择经一组合起来的耦合（Web.SelectsThroughAll）是条件，如 selection-through-couplings。成员层面的逆向陈述取一个恰列出成员的列表，以及每个成员对两段历史的耦合已判定（Decided），在其进入之处写明。"
     }
   ],
   "does_not_show": [
@@ -590,6 +590,10 @@
     {
       "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the premise names the record by its current id, selection-through-couplings, for its former id; nothing else changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提以现行编号 selection-through-couplings 称该记录，取代其旧编号；别无改变。"
     }
   ],
   "text_versions": [

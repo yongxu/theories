@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-14T16:15:00+00:00",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
   "statement": {
     "zh": "沿一个关系，预设次真是闭包上的意义，超真就是延续条件；路线 (b) 与延续条件是同一预设，“不论边界怎样划”分别取窄辖域与宽辖域。",
     "en": "Along a relation the presupposition sub-true is significance over the closure, and super-true is the continuation condition; route (b) and the continuation condition are one presupposition with “however the boundary is drawn” at narrow and at wide scope."
@@ -142,10 +142,6 @@
     {
       "zh": "离散的步（从第 0 步计）；自然数的水平、所需与数量。",
       "en": "Discrete steps, counted from step 0; natural-number levels, needs and amounts."
-    },
-    {
-      "zh": "G0 已由 Ren 2026-10-11 折叠，不再是公理。",
-      "en": "G0 was folded by Ren on 11 October 2026 and is no longer an axiom."
     }
   ],
   "does_not_show": [
@@ -192,8 +188,8 @@
     "en": "A self individuated by lineage (Ren's “the continuation goes beyond one’s cycle of life, goes beyond one’s death”)."
   },
   "correspondence": {
-    "zh": "Ren 在《Truth exist》中写道：“There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” 此前写道，自身是 “a cognitive model which can not justify itself without some sort of \"belief\"”，“we”是 “the universe/ecosystem that realizes its own existence”。AI 提出公理可能由它从 Ren 的话中读出的三个主张推出，只差一步（AI 的话，见来源）；第十六次审查更正：结果是公理的分解，不是化约。作者的读法（AI 论证，依 Ren 的交托采用）：预设读 Ren 所说自身不能没有的 belief，把它用作前提是 AI 的一步；沿一个关系覆盖由构造成立，“we”支持把整体作为一种划法，“There is no absolute self”本身不给出覆盖；“for all beings”最直接地读作对立场不变，即 N_std 的规则，把“universal invariations”推广到意义是 AI 的读法；Ren 的层级读作预设的三种读法：超真、沿影响次真、沿空关系次真。超真、次真之名取自超赋值（Fine 1975）与次赋值（Hyde 1997），依据先前知识；其余名称（Boundary、SignificantWithin、BoundaryInvariant、StandpointInvariant、OneCounts）是 AI 按 Ren 的命名准则所选。",
-    "en": "In “Truth exist” Ren wrote: “There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” Earlier Ren wrote that the self is “a cognitive model which can not justify itself without some sort of \"belief\"”, and that “we” are “the universe/ecosystem that realizes its own existence”. The AI proposed that the axiom may follow from three claims it read from Ren's words, one step short (the AI's words, in the source); the sixteenth review corrected this: the result is a decomposition of the axiom, not a reduction. The author's reading (an AI argument, adopted on Ren's delegation): the presupposition reads the “belief” without which, Ren wrote, the self cannot justify itself, and using it as a premise is the AI's step; along a relation covering holds by construction, Ren's “we” supports the whole as one drawing, and “There is no absolute self” does not by itself give covering; “for all beings” reads most directly as standpoint-invariance, the rule of N_std, and extending “universal invariations” to significance is the AI's reading; Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation. Super-truth and sub-truth are named from supervaluation (Fine 1975) and subvaluation (Hyde 1997), from prior knowledge; the other names (Boundary, SignificantWithin, BoundaryInvariant, StandpointInvariant, OneCounts) are the AI's, chosen by Ren's naming standard."
+    "zh": "Ren 在《Truth exist》中写道：“There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” 此前写道，自身是 “a cognitive model which can not justify itself without some sort of \"belief\"”，“we”是 “the universe/ecosystem that realizes its own existence”。AI 提出延续条件可能由它从 Ren 的话中读出的三个主张推出，只差一步（AI 的话，见来源）；第十六次审查更正：结果是延续条件的分解，不是化约。读法（AI 论证）：预设读 Ren 所说自身不能没有的 belief，把它用作前提是 AI 的一步；沿一个关系覆盖由构造成立，“we”支持把整体作为一种划法，“There is no absolute self”本身不给出覆盖；“for all beings”最直接地读作对立场不变，即立场中立的规则，把“universal invariations”推广到意义是 AI 的读法；Ren 的层级读作预设的三种读法：超真、沿影响次真、沿空关系次真。超真、次真之名取自超赋值（Fine 1975）与次赋值（Hyde 1997），依据先前知识；其余名称（Boundary、SignificantWithin、BoundaryInvariant、StandpointInvariant、OneCounts）是 AI 按 Ren 的命名准则所选。",
+    "en": "In “Truth exist” Ren wrote: “There is a set of universal invariations, that for every universe, becoming happens, the law follows”; “There is no absolute self, and the continuation goes beyond one’s cycle of life, goes beyond one’s death.” Earlier Ren wrote that the self is “a cognitive model which can not justify itself without some sort of \"belief\"”, and that “we” are “the universe/ecosystem that realizes its own existence”. The AI proposed that the continuation condition may follow from three claims it read from Ren's words, one step short (the AI's words, in the source); the sixteenth review corrected this: the result is a decomposition of the continuation condition, not a reduction. The reading (an AI argument): the presupposition reads the “belief” without which, Ren wrote, the self cannot justify itself, and using it as a premise is the AI's step; along a relation covering holds by construction, Ren's “we” supports the whole as one drawing, and “There is no absolute self” does not by itself give covering; “for all beings” reads most directly as standpoint-invariance, the rule of standpoint neutrality, and extending “universal invariations” to significance is the AI's reading; Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation. Super-truth and sub-truth are named from supervaluation (Fine 1975) and subvaluation (Hyde 1997), from prior knowledge; the other names (Boundary, SignificantWithin, BoundaryInvariant, StandpointInvariant, OneCounts) are the AI's, chosen by Ren's naming standard."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
   "aliases": [
@@ -286,8 +282,8 @@
       },
       "interface": {
         "output": {
-          "zh": "覆盖所及的意义给出公理的比较。",
-          "en": "Significance covering what is reached gives the axiom's comparison."
+          "zh": "覆盖所及的意义给出延续条件的比较。",
+          "en": "Significance covering what is reached gives the continuation condition's comparison."
         },
         "input": {
           "zh": "沿含影响的关系次真的预设覆盖闭包之内的部分所及。",
@@ -309,12 +305,12 @@
       },
       "interface": {
         "output": {
-          "zh": "公理与有界的意义。",
-          "en": "The axiom and bounded significance."
+          "zh": "延续条件与有界的意义。",
+          "en": "The continuation condition and bounded significance."
         },
         "input": {
-          "zh": "超真的预设恰是公理；路线 (b) 是最小的次真意义。",
-          "en": "The presupposition super-true is exactly the axiom; route (b) is the least sub-true significance."
+          "zh": "超真的预设恰是延续条件；路线 (b) 是最小的次真意义。",
+          "en": "The presupposition super-true is exactly the continuation condition; route (b) is the least sub-true significance."
         },
         "conditions": {
           "zh": "无。",
@@ -397,15 +393,15 @@
     {
       "id": "continuation-condition-decomposition",
       "detail": {
-        "zh": "宽辖域的预设由覆盖、次真与对边界不变给出；不变承载公理在预设之外的全部内容。",
-        "en": "The presupposition at wide scope is given by covering, sub-truth and boundary-invariance; invariance carries all of the axiom's content beyond the presupposition."
+        "zh": "宽辖域的预设由覆盖、次真与对边界不变给出；不变承载延续条件在预设之外的全部内容。",
+        "en": "The presupposition at wide scope is given by covering, sub-truth and boundary-invariance; invariance carries all of the continuation condition's content beyond the presupposition."
       }
     },
     {
       "id": "whole-first-and-bounded-centers",
       "detail": {
-        "zh": "Ren 的层级读作预设的三种读法：超真、沿影响次真、沿空关系次真（AI 的读法，依 Ren 的交托采用）；以自身为界的意义（bounded_rival，读作 Ren 的 belief）是沿空关系次真的预设。",
-        "en": "Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation (the AI's reading, adopted on Ren's delegation); significance bounded by the self (bounded_rival, read as Ren's belief) is the presupposition sub-true along the empty relation."
+        "zh": "Ren 的层级读作预设的三种读法：超真、沿影响次真、沿空关系次真（AI 的读法）；以自身为界的意义（bounded_rival，读作 Ren 的 belief）是沿空关系次真的预设。",
+        "en": "Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation (an AI reading); significance bounded by the self (bounded_rival, read as Ren's belief) is the presupposition sub-true along the empty relation."
       }
     }
   ],
@@ -493,7 +489,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.bounded",
         "Becoming.Web.Retains.not_added",
@@ -675,6 +671,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -722,7 +724,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -811,6 +813,10 @@
     {
       "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: ClosedUnder, WithinClosure, closedUnder_withinClosure to Becoming.Frame; Flow.FedFrom to Becoming.Interdependence. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：ClosedUnder, WithinClosure, closedUnder_withinClosure to Becoming.Frame; Flow.FedFrom to Becoming.Interdependence。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: 'the axiom' in the dependency interfaces, related details and correspondence reads 'the continuation condition', and readings are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim. The hypothesis recording the fold of G0, a premise of none of the laws, is removed; the retired label is explained once in the method chapter; N_std in the correspondence reads standpoint neutrality. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：依赖接口、相关说明与对应中的“公理”改为“延续条件”，读法标为 AI 的读法，不再写“依 Ren 的交托采用”，引语原样保留。记录 G0 折叠的那条假设不是任何规律的前提，予以删去；退役标签只在方法一章说明一次；对应中的 N_std 改为立场中立。规律未变。"
     }
   ],
   "text_versions": [

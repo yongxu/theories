@@ -57,7 +57,7 @@ LibreOffice enters Ubuntu beta before foundation incorporation under interim ass
   - Input: Assess whether actual release, distribution and interim support remain inside that fixed scope.
   - Preserved conditions: Original theorem unchanged; newly formed relations require independent evidence and the case supplies no quantitative parameters. [MARKET-INTERNET-DEGENERATION.md](../../../../_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md)
 - related, not a proved adapter: [effective-capacity-and-eventual-reachability](effective-capacity-and-eventual-reachability.md). Credits the inherited distinction between preparation, current capacity and exercise; adds historical correspondence, not a repeated proof.
-- related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Normative use for effective succession, institutional change and real losses retains G0/J/E; historical success alone does not establish whole improvement.
+- related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Normative use for effective succession, institutional change and real losses retains living significance, the practical commitments and correspondence E; historical success alone does not establish whole improvement.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -96,6 +96,7 @@ Aliases: —
 - 2026-10-09: continued from finite-support obstruction to actual organizational formation, preserving seven primary statements and checking release/distribution before incorporation; no new mathematics or exclusive theory is claimed.
 - 2026-10-09: extends the same assessment previously titled “Independent continuation formed within shared software activity” with API-change history. Five developer posts and two reread statements distinguish continuation from reorganization control, with current-retrieval/editing limits. LibreOffice evidence, earlier proofs and failures remain; no additional result counted.
 - 2026-10-14 readability migration to schema 2: the claim's first sentence became the statement, and its second (Apollo's ending and different inherited commitments remain) is carried by the counterexample and the third hypothesis; the limitations became 5 typed does-not-show items; the next step's first sentence (both continuation correspondences complete) became 2 anchored progress lines, and the rest is restated positively with the same content. No claim, premise, status, dependency, related link, reference or source hash changed. Every earlier sentence is mapped in the [migration table](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-general-laws-plan/readability/migrations/formed-software-continuation.md); the exact earlier record is text_versions[0].
+- 25 October 2026, board item DF (study section 418): the retired labels G0/J in a related note replaced by living significance and the practical commitments (correspondence E named); the assessment is unchanged.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](formed-software-continuation.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -106,4 +107,4 @@ Aliases: —
 
 </details>
 
-Documentary review UTC: `2026-10-13T23:30:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T17:03:04+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

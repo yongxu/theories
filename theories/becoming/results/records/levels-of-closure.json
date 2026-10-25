@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
     "zh": "供给闭包在影响闭包之内，影响闭包与所及闭包在系统之内，每个包含都可以是严格的，影响闭包与所及闭包方向相反；一个共同条件使系统成为整体。",
     "en": "The feeding closure lies within the influence closure, and the influence and reach closures within the system, each inclusion possibly strict, the influence and reach closures pointing in opposite directions; one common condition makes the system the whole."
@@ -123,8 +123,8 @@
       ]
     },
     {
-      "zh": "在这样的共同供给条件下，以各中心供给闭包为界的意义，即 Becoming.Interdependence 不用公理的路线，就是延续条件；每个中心的系统都是整体时，以系统为界的意义就是延续条件，Clearing 是一个系统。这一条件在这里只作为结论出现：某个有界的意义恰是它。",
-      "en": "Under such a common feeding condition, significance bounded by each center's feeding closure, the route without axiom of Becoming.Interdependence, is the continuation condition; where each center's system is the whole, significance bounded by the system is the continuation condition, and Clearing is one system. The condition appears here only as a conclusion, that some bounded significance is exactly it.",
+      "zh": "在这样的共同供给条件下，以各中心供给闭包为界的意义，即不用延续条件的路线，就是这一条件；每个中心的系统都是整体时，以系统为界的意义就是延续条件，Clearing 是一个系统。这一条件在这里只作为结论出现：某个有界的意义恰是它。",
+      "en": "Under such a common feeding condition, significance bounded by each center's feeding closure, the route without the continuation condition, is that condition; where each center's system is the whole, significance bounded by the system is the continuation condition, and Clearing is one system. The condition appears here only as a conclusion, that some bounded significance is exactly it.",
       "declarations": [
         "Becoming.Flow.feeding_unrestricted_of_common",
         "Becoming.Flow.bounded_system_whole",
@@ -195,8 +195,8 @@
     "en": "Give the closures step by step (a difference's routes in time are in how-much-difference-arrives)."
   },
   "correspondence": {
-    "zh": "Ren 的长远目标：“I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”；Ren 要求“pursue the strongest claims and complete proof”。Ren 的层级：“i think it should be the whole, and a weaker version is within the system that one is in, then the self”。作者的读法（AI 论证，依 Ren 的交托采用）：影响闭包读一个形成自身的反馈在效果经他者的支持与活动传递时所能承载的；所及闭包读 Ren 中间的“the system that one is in”（供给闭包曾被读作所在系统，这一读法已撤回）；系统（对共享条件的闭包）界定每个效果，却不读那一层级：一个共同条件就使它成为整体，系统划分形成，没有嵌套与中心；“situational awareness”读作中心知道其部分在反馈之外所到达的。名称（ClosedUnder、WithinClosure、AffectedBy、WithinInfluence、Affects、WithinReach、TakesPart、Shares、WithinSystem、Reaches、ReachesBefore、DiffersBefore、Trophic 等）是 AI 按 Ren 的命名准则所选；营养级联是生态学用语。",
-    "en": "Ren's long-term objectives: “I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”; Ren asked to “pursue the strongest claims and complete proof”. Ren's levels: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”. The author's reading (an AI argument, adopted on Ren's delegation): the influence closure reads what a formation's own feedback can carry once effects pass through the support and activity of others; the reach closure reads Ren's intermediate “the system that one is in” (the feeding closure was earlier read as the system one is in; that reading is withdrawn); the system, the closure under sharing a condition, bounds every effect but does not read that level: one common condition makes it the whole, and systems partition the formations, with no nesting and no center; “situational awareness” reads as a center knowing what its part reaches beyond its feedback. The names (ClosedUnder, WithinClosure, AffectedBy, WithinInfluence, Affects, WithinReach, TakesPart, Shares, WithinSystem, Reaches, ReachesBefore, DiffersBefore, Trophic and others) are the AI's, chosen by Ren's naming standard; trophic cascade is the ecological term."
+    "zh": "Ren 的长远目标：“I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”；Ren 要求“pursue the strongest claims and complete proof”。Ren 的层级：“i think it should be the whole, and a weaker version is within the system that one is in, then the self”。读法（AI 论证）：影响闭包读一个形成自身的反馈在效果经他者的支持与活动传递时所能承载的；所及闭包读 Ren 中间的“the system that one is in”（供给闭包曾被读作所在系统，这一读法已撤回）；系统（对共享条件的闭包）界定每个效果，却不读那一层级：一个共同条件就使它成为整体，系统划分形成，没有嵌套与中心；“situational awareness”读作中心知道其部分在反馈之外所到达的。名称（ClosedUnder、WithinClosure、AffectedBy、WithinInfluence、Affects、WithinReach、TakesPart、Shares、WithinSystem、Reaches、ReachesBefore、DiffersBefore、Trophic 等）是 AI 按 Ren 的命名准则所选；营养级联是生态学用语。",
+    "en": "Ren's long-term objectives: “I want to push the frontier as strong as possible, in terms of human knowledge, or have the full truth set(still need situational awareness), the universal ethics”; Ren asked to “pursue the strongest claims and complete proof”. Ren's levels: “i think it should be the whole, and a weaker version is within the system that one is in, then the self”. The reading (an AI argument): the influence closure reads what a formation's own feedback can carry once effects pass through the support and activity of others; the reach closure reads Ren's intermediate “the system that one is in” (the feeding closure was earlier read as the system one is in; that reading is withdrawn); the system, the closure under sharing a condition, bounds every effect but does not read that level: one common condition makes it the whole, and systems partition the formations, with no nesting and no center; “situational awareness” reads as a center knowing what its part reaches beyond its feedback. The names (ClosedUnder, WithinClosure, AffectedBy, WithinInfluence, Affects, WithinReach, TakesPart, Shares, WithinSystem, Reaches, ReachesBefore, DiffersBefore, Trophic and others) are the AI's, chosen by Ren's naming standard; trophic cascade is the ecological term."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
   "aliases": [
@@ -298,13 +298,13 @@
       "id": "continuation-condition-yields-living-significance",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用 Unrestricted 与 bounded，只作为结论：某个有界的意义恰是公理。",
-        "en": "Reuses Unrestricted and bounded, as conclusions only: some bounded significance is exactly the axiom."
+        "zh": "复用 Unrestricted 与 bounded，只作为结论：某个有界的意义恰是延续条件。",
+        "en": "Reuses Unrestricted and bounded, as conclusions only: some bounded significance is exactly the continuation condition."
       },
       "interface": {
         "output": {
-          "zh": "公理 Unrestricted 与有界的意义 bounded。",
-          "en": "The axiom Unrestricted and bounded significance."
+          "zh": "延续条件 Unrestricted 与有界的意义 bounded。",
+          "en": "The continuation condition Unrestricted and bounded significance."
         },
         "input": {
           "zh": "Flow.feeding_unrestricted_of_common、Flow.bounded_system_whole、Clearing.system_whole。",
@@ -345,8 +345,8 @@
     {
       "id": "whole-first-and-bounded-centers",
       "detail": {
-        "zh": "Ren 的层级“the whole … the system that one is in … the self”：系统不读中间的层级，为它提供所及闭包（AI 的读法，依 Ren 的交托采用）。",
-        "en": "Ren's levels “the whole … the system that one is in … the self”: the system does not read the intermediate level, and the reach closure is offered for it (the AI's reading, adopted on Ren's delegation)."
+        "zh": "Ren 的层级“the whole … the system that one is in … the self”：系统不读中间的层级，为它提供所及闭包（AI 的读法）。",
+        "en": "Ren's levels “the whole … the system that one is in … the self”: the system does not read the intermediate level, and the reach closure is offered for it (an AI reading)."
       }
     },
     {
@@ -441,7 +441,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean",
       "role": "proof",
-      "sha256": "31d1008172c544a8f74627f83c5733ec2610fcad33862e7e41c04dadee96e8f7",
+      "sha256": "bc67b6ed7e70a6c3cec89ed790d20fb6d29a1a305ef16c3f5a845fadffb65f3b",
       "declarations": [
         "Becoming.withinClosure_iff_closure",
         "Becoming.Closure"
@@ -485,7 +485,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "role": "proof",
-      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b",
+      "sha256": "765303640f6474b35508dd5251844c06994112e191dc0ebc09675f9e9b893226",
       "declarations": [
         "Becoming.bounded"
       ]
@@ -663,6 +663,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -703,7 +709,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.EdgeClosure",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -724,7 +730,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -822,6 +828,10 @@
     {
       "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: 'the axiom' in a dependency's detail and interface reads 'the continuation condition', and the eleventh law's 'route without axiom' of a named module reads 'the route without the continuation condition', with no module name; the readings in a related detail and the correspondence are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim. No law changed in content.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：一项依赖的说明与接口中的“公理”改为“延续条件”，第十一条规律中某模块“不用公理的路线”改为“不用延续条件的路线”，不再写模块名；一条相关说明与对应中的读法标为 AI 的读法，不再写“依 Ren 的交托采用”，引语原样保留。规律内容未变。"
     }
   ],
   "text_versions": [

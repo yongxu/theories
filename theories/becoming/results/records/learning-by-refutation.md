@@ -9,7 +9,7 @@
 
 Editable record: [learning-by-refutation.json](learning-by-refutation.json) · [Register](../../../../RESULTS.md)
 
-Documentary review UTC: `2026-10-14T00:00:00+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
+Documentary review UTC: `2026-10-25T14:49:05+00:00`. Run the registry checker for source drift; this page is not a fresh proof receipt.
 
 <a id="主张-claim"></a>
 ## Claim
@@ -99,7 +99,7 @@ Hashes in the editable record bind the reviewed source versions. The checker doe
 <a id="复用与下一增量-reuse-and-next-delta"></a>
 ## Reuse and next delta
 
-Learning where the values through the map themselves are not told apart (learnability where the map does not tell configurations apart is in learnable-through-registration); a probabilistic reading; the connection with registration-within-what-it-registers (a family of readings within what it reads, incomplete at every step).
+Learning where the values through the map themselves are not told apart (learnability where the map does not tell configurations apart is in learnable-through-a-map); a probabilistic reading; the connection with readings-within-what-they-read (a family of readings within what it reads, incomplete at every step).
 
 Aliases: `problem of induction`, `归纳问题`, `identification in the limit`
 
@@ -118,4 +118,5 @@ Aliases: `problem of induction`, `归纳问题`, `identification in the limit`
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Recurrence.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Recurrence.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Learning.lean, Recurrence.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Learning.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): Learning.back (now Copying.nth); Learning.mem_upto (now mem_downFrom); Learning.upto (now downFrom). Proof bindings (Learning.lean, Testing.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Learning.lean, Testing.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the next step names the records by their current ids, learnable-through-a-map and readings-within-what-they-read, for their former ids; nothing else changed.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](learning-by-refutation.json).

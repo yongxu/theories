@@ -58,7 +58,7 @@ The chapter's open programme (section 8.2, Selection, causes and experiment) nam
   - Input: The criterion the changing coupling is taken through, and the fixed coupling it is compared with.
   - Preserved conditions: An equivalence. [LawThroughCoupling.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/LawThroughCoupling.lean)
 - **formal-reuse**: [testing-within-couplings](testing-within-couplings.md). Reuses Web.AlikeThrough and thresholdOnly: Web.AlikeThrough at one step is the coupling with that step's dependence fixed.
-  - Output: What registers alike in a formation at a step, under two level histories.
+  - Output: What a formation couples into alike at a step, under two level histories.
   - Input: The coupling of one step compared with the changing coupling.
   - Preserved conditions: None beyond the web. [Testing.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean)
 - **formal-reuse**: [becoming-dependence-dynamics](becoming-dependence-dynamics.md). Reuses Dependence, Web.Forms, Web.Dissolves and Dependence.along: dependences read off the configuration, and a run read through them as a Web.
@@ -69,7 +69,7 @@ The chapter's open programme (section 8.2, Selection, causes and experiment) nam
   - Output: Levels, requirements and needs read off configurations.
   - Input: The conditions fixed at one step.
   - Preserved conditions: None. [Renewal.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean)
-- related, not a proved adapter: [differences-below-threshold](differences-below-threshold.md). There a difference below a threshold is not registered; here which thresholds a formation has changes along a run, and with it what it couples into.
+- related, not a proved adapter: [differences-below-threshold](differences-below-threshold.md). There a difference below a threshold is not coupled in; here which thresholds a formation has changes along a run, and with it what it couples into.
 
 **Law family:** A law along one run (lead: [a-law-through-a-projection-along-one-run](a-law-through-a-projection-along-one-run.md)). Under an equivalence, a law admits a run's steps up to a step exactly where steps alike under it, by the same move, end alike, and failure persists. The lead states it once; the law through what a formation couples into and the law through coupling that changes along the run were recorded first, are superseded by the lead and are its readings. Members: [a-law-through-a-projection-along-one-run](a-law-through-a-projection-along-one-run.md) · [a-law-through-coupling-along-one-run](a-law-through-coupling-along-one-run.md).
 
@@ -117,6 +117,7 @@ Aliases: —
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Dependence.lean, Likeness.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Dependence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Likeness.lean, takes as its final section ListedOutcomeFrames, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 20 October 2026, R33 (G4): superseded by a-law-through-a-projection-along-one-run, the one record of a law along one run under a relation; its laws, premises, non-implications, witness, aliases and links are there, its declarations in Becoming.LawAlongRun under their names. The evidence here is kept as it was: the module's bytes in the Lean history folder, bound to the receipts that checked them. Also: Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 224 added; THE-THEORY-OF-BECOMING.md, the law along one run under a relation in one bullet, learning through a map as tracking, LoopReturn's factor and the join with Loops, the tolerance law on a web, the world an interleaving builds; §9 (receipt, counts, connectivity) follows R33.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (LawThroughChangingCoupling and LawThroughCoupling) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Admission, Becoming.Dependence, Becoming.Joint, Becoming.Labelled, Becoming.Laws, Becoming.Likeness, Becoming.Renewal, Becoming.Testing and Becoming.World). The claim is unchanged.
+- 25 October 2026, board item DF (study section 418): the retired registration vocabulary in a dependency interface and a related note replaced by coupling ("what registers alike in a formation" now "what a formation couples into alike", "is not registered" now "is not coupled in"); the laws are unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](a-law-through-changing-coupling-along-one-run.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -126,4 +127,4 @@ Aliases: —
 
 </details>
 
-Documentary review UTC: `2026-10-20T00:09:49+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T17:03:04+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

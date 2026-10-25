@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-18T16:04:59+00:00",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
-    "en": "Where renewal depends on what it renews, a formation that takes all that is given and continues excludes every other taker through a window as long as the level: one living by taking ends. Taking jointly within what is given keeps all; the levels still admit the excluded where it ends.",
-    "zh": "更新依存于所更新者之处，取尽所给且持续的形成，在与水平一样长的窗口内排除每个其他取用者：以取用为生者终结。联合地在所给之内取用则全都保持；被排除者终结之处，水平仍容纳它。"
+    "en": "Where renewal depends on what it renews, a formation taking all that is given and continuing leaves no other taking through all of any window one step longer than the level: one living by taking ends. Taking jointly within what is given keeps all; the levels still admit the excluded where it ends.",
+    "zh": "更新依存于所更新者之处，取尽所给且持续的形成，使任何比水平长一步的窗口中，没有其他形成每步都在取用：以取用为生者终结。联合地在所给之内取用则全都保持；被排除者终结之处，水平仍容纳它。"
   },
   "laws": [
     {
@@ -27,8 +27,8 @@
       ]
     },
     {
-      "en": "Competitive exclusion: a full taker that continues, depending on the condition at such a need, leaves no other formation taking from it at each of the level + 1 steps from any step; a formation active only while it takes from the condition is not active at each of them and, where its activity does not resume once it stops, it is inactive from that many steps on; a formation that continues alongside another taker does not take all that is given at each of them.",
-      "zh": "竞争排除：取尽所给且持续、以这样的需要依存于该条件的形成，自任何一步起的水平 + 1 步中，不留下每步都从该条件取用的其他形成；只在从该条件取用时才活跃的形成，不在其中每一步都活跃，其活动一旦停止不再恢复之处，它自那么多步之后不再活跃；与另一取用者同在而持续的形成，不在其中每一步都取尽所给。",
+      "en": "Competitive exclusion: with a full taker continuing, depending on the condition at such a need, for every other formation and step T, not at every one of the level + 1 steps from T is it present and taking; one active only while taking is not active at every one of them and, not resuming once stopped, is inactive from T plus the level on; one continuing beside a taker at every step does not take all at every one.",
+      "zh": "竞争排除：取尽所给且持续、以这样的需要依存于该条件的形成，自任何一步 T 起的水平 + 1 步中，不留下每步都从该条件取用的其他形成；只在从该条件取用时才活跃的形成，不在其中每一步都活跃，其活动一旦停止不再恢复之处，它自第 T + 水平步起不再活跃；与另一取用者同在而持续的形成，不在其中每一步都取尽所给。",
       "declarations": [
         "Becoming.Web.active_before",
         "Becoming.Flow.continuing_excludes",
@@ -111,7 +111,7 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
       "detail": {
         "en": "Excluding.admission_alike: the levels of the excluding course admit the second at every step, and its level path and that of the sharing course include each other, while the second ends from step one; a comparison of level paths by admission does not show an ending through exclusion from taking.",
-        "zh": "Excluding.admission_alike：排除的进程中水平每步都容纳第二个，它的水平路径与分享的进程的互相包含，而第二个自第一步起终结；以容纳比较水平路径，不记下经由被排除于取用之外的终结。"
+        "zh": "Excluding.admission_alike：排除的进程中水平每步都容纳第二个，它的水平路径与分享的进程的互相包含，而第二个自第一步起终结；以容纳比较水平路径，不显出经由被排除于取用之外的终结。"
       }
     }
   ],
@@ -129,7 +129,7 @@
   },
   "next_delta": {
     "en": "Endings forced in the witnesses of section 6.3; how taking all that is given forms other than by a rising take; a comparison of courses that shows an ending through exclusion from taking; an independent review.",
-    "zh": "第 6.3 节见证中强制的终结；取尽所给如何以上升的取用以外的方式形成；记下经由被排除于取用之外的终结的进程比较；独立审查。"
+    "zh": "第 6.3 节见证中强制的终结；取尽所给如何以上升的取用以外的方式形成；显出经由被排除于取用之外的终结的进程比较；独立审查。"
   },
   "correspondence": {
     "en": "The chapter's open programme (section 8.2, \"Continuation (§6.7) and feeding\") named \"a witness in which ending another serves the clearer's continuation (a stronger case of the meta-attractor)\". Ren, 18 October 2026: \"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\" (provenance, not warrant); the AI chose the item. Ending another serves taking all that is given, not continuing as such. The law is the form here of the competitive exclusion principle of ecology, where one formation takes the whole renewal. The reading is D44 of DELEGATED-CHOICES.",
@@ -168,7 +168,7 @@
       "id": "significance-retained-within-margin",
       "detail": {
         "en": "There retaining and the margin compare level paths by what they admit; here the levels admit the excluded formation at every step while it ends, so that comparison does not show it.",
-        "zh": "那里保留与余量以所容纳者比较水平路径；这里水平每步都容纳被排除的形成而它终结，所以那一比较不记下它。"
+        "zh": "那里保留与余量以所容纳者比较水平路径；这里水平每步都容纳被排除的形成而它终结，所以那一比较不显出它。"
       }
     },
     {
@@ -230,7 +230,7 @@
         "Becoming.add_le_total_of_mem",
         "Becoming.mem_of_mem_cons_ne"
       ],
-      "sha256": "fa25d3cfc8c2439f369d24149f6d003a7419a52179fefafecb7ed4fc84907952"
+      "sha256": "ef82273d1887b8557387c6056390326f952be0a7d7dd1a29cd4863a80663dff8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T154830.591298Z/verification.json",
@@ -269,12 +269,18 @@
       "role": "receipt",
       "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Exclusion",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -303,6 +309,10 @@
     {
       "en": "20 October 2026, R36 (the chapter, once): the canonical chapter was restructured, its 20 October edition frozen in theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md; this record's citations of the old section numbering re-pointed by content (section 6.7 to 6.3). The claim is unchanged.",
       "zh": "2026年10月20日，R36（本章只陈述一次）：规范章节重排，10月20日版冻结于 theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md；本记录对旧节号的引用按内容重指（§6.7 改为 §6.3）。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the competitive-exclusion law (in English) and the statement worded with the negation outside the window, as the Lean states: no other formation takes at every one of the level + 1 steps, rather than at none of them; the window named as one step longer than the level. No law changed. Also, the Chinese of a counterexample, the next step and a related detail says 显出 (shows) for 记下, the registration word the English had already replaced by 'show', and the Chinese of the competitive-exclusion law names the step T and the step T plus the level, as the English and the Lean do.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：竞争排除的规律（英文）与陈述把否定放在窗口之外，按 Lean 的陈述：没有其他形成在水平 + 1 步中的每一步都取用，而不是在其中任何一步都不取用；窗口写明比水平长一步。规律未变。另，一条反例、下一步与一条关联说明的中文以“显出”代“记下”（登记之词，英文已改作 show）；竞争排除规律的中文写明步 T 与第 T + 水平步，与英文及 Lean 一致。"
     }
   ],
   "text_versions": [

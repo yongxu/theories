@@ -8,7 +8,7 @@
   "kind": "argument",
   "status": "reviewed-scoped",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "既有实践原则在有根据的 AI 对应下支持生成、修订、交接与适当结束，并保留能力增长的真实好处和损失。",
     "en": "With warranted AI correspondence, the practical principles support generative development, revision, transfer and appropriate ending while retaining capability growth’s real benefits and losses."
@@ -88,8 +88,8 @@
     {
       "id": "protection-priority-excludes-uniform-aggregation",
       "detail": {
-        "zh": "把 §3 中“J2 不由 G0 推出、代价是拒绝某些聚合补偿”变为一个构造情境中检查过的命题：自然数评分都交换，有界评分与 J2 一致；本论证不变。",
-        "en": "Turns §3's statement that J2 is not implied by G0 and rejects some aggregate compensation into a claim checked in one constructed situation: natural-number scores all trade, while a bounded score agrees with J2; this argument is unchanged."
+        "zh": "把 §3 中 J2 不由生生之意义推出、代价是拒绝某些聚合补偿之说变为一个构造情境中检查过的命题：自然数评分都交换，有界评分与 J2 一致；本论证不变。",
+        "en": "Turns §3's statement that J2 is not implied by living significance and rejects some aggregate compensation into a claim checked in one constructed situation: natural-number scores all trade, while a bounded score agrees with J2; this argument is unchanged."
       }
     },
     {
@@ -202,7 +202,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
       "role": "proof",
-      "sha256": "1037bf6d52dcffd5386403c5b47d08c50e6aaeff33d8c946545e53847531935c",
+      "sha256": "0a83be75acc20439780166f1dcc5c8bd462bd597e4986132a293ce1670cc18e4",
       "declarations": [
         "Becoming.Direction.frame",
         "Becoming.Direction.options_iff",
@@ -400,6 +400,12 @@
       "role": "receipt",
       "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -426,7 +432,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Direction",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -517,6 +523,10 @@
     {
       "en": "21 October 2026, CG1c (study section 304): CG1's boundary read through the laws landed since (CG2's Flow.outrun_reading_alike, SG3's Optimum.MutualBest.full and Optimum.mutual_beyond, SG4's Web.mutual_course_lost): does_not_show, progress and evidence restated, two related records; chapter 7.4, 7.5, 7.7 (EN) and 7.5 (ZH). No law, premise or status changed.",
       "zh": "2026年10月21日，CG1c（研究第304节）：经此后落地的规律（CG2 的 Flow.outrun_reading_alike，SG3 的 Optimum.MutualBest.full 与 Optimum.mutual_beyond，SG4 的 Web.mutual_course_lost）读 CG1 的边界：重述 does_not_show、progress 与证据，增两条相关记录；第 7.4、7.5、7.7 节（英文）与 7.5 节（中文）。规律、前提与状态都不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the law on kept basic admissions states what the Lean proves with no decision, that the admission is not refuted at a chosen option (a double negation), under the premise that one move's outcome admits every basic admission any move's outcome admits; and G0 in a related detail reads living significance, the zh paraphrase of §3 no longer in quotation marks. The declarations are unchanged. The overview's 'stated axiomatic scope' names the premises: the continuation condition for scope, C for order and the practical commitments.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：关于所保持之基本接纳的定律陈述 Lean 不用判定所证者：在某个动作的结果接纳任何动作结果所接纳的每个基本接纳的前提下，该接纳在被选的选项上不被否证（双重否定）；一条相关说明中的 G0 改为生生之意义，§3 之意转述不再加引号。声明不变。概览的“明示的公理范围”改为写出前提：延续条件定范围，C 定次序，加上实践承诺。"
     }
   ],
   "text_versions": [
@@ -543,8 +553,8 @@
       "zh": "能够评价并修订目的的 AI 对齐"
     },
     "summary": {
-      "en": "The core, the explicit practical commitments, and warranted AI correspondence provide a normative framework for aligning learning, action, revision, transfer and appropriate ending with actual living and further shared generation. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Alignment that evaluates its ends needs normative criteria; within this framework, generative reasons must enter that judgment. This requirement has the stated axiomatic scope: the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
-      "zh": "核心、公开的实践承诺及有根据的 AI 对应，共同提供规范框架，使学习、行动、修订、交接和适当结束指向真实的生与进一步共同生成。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。评价目的的对齐需要规范判准；在本框架中，生成理由必须进入判断。这项必要要求具有明示的公理范围；论证不声称该表述是每一种对齐理论唯一可能的基础。"
+      "en": "The core, the explicit practical commitments, and warranted AI correspondence provide a normative framework for aligning learning, action, revision, transfer and appropriate ending with actual living and further shared generation. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Alignment that evaluates its ends needs normative criteria; within this framework, generative reasons must enter that judgment. This requirement holds under the stated premises (the continuation condition for scope, C for order, and the practical commitments): the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
+      "zh": "核心、公开的实践承诺及有根据的 AI 对应，共同提供规范框架，使学习、行动、修订、交接和适当结束指向真实的生与进一步共同生成。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。评价目的的对齐需要规范判准；在本框架中，生成理由必须进入判断。这项必要要求在所述前提之下成立（延续条件定范围，C 定次序，加上实践承诺）；论证不声称该表述是每一种对齐理论唯一可能的基础。"
     },
     "evidence": {
       "zh": "已完成并经独立审查的哲学论证，含一个说明哪些变化会改变判断的 AI 案例。Lean 检查案例中的判断确由所述生生之意义与实践承诺推出，交叉基本损失不排序（经独立重编译）。另行检查表明：基本保护优先不由 C 推出（生生之意义不约束排序）；在一个所给磨损规律下，一步的形成计数把消耗型接续排在持续形成之前，而这种消耗随后终止共享形成。前提是否正确、部署系统是否认可或遵循，是另外的问题。在脊柱上，一个核心模式在读作扩大的 C 与实践承诺之下陈述网之动作上的方向，区分两个动作者只经耦合入它的组被选择。",
@@ -562,8 +572,8 @@
       ]
     },
     {
-      "en": "Under J1/J2 on the moves' frame, a chosen move keeps the basic admissions some move keeps, and with the moves listed, the comparison weakly decided and the admission decided, that admission is required of the choice.",
-      "zh": "在动作框架上的 J1/J2 之下，被选的动作保持某个动作所保持的基本接纳；动作列出、比较弱可判定、接纳可判定时，这一接纳是选择所要求的。",
+      "en": "Under J1/J2 on the moves' frame, where one move's outcome admits every basic admission any move's outcome admits, a basic admission it makes is not refuted at any chosen option (a double negation; no decision used); with the moves' outcomes listed, the comparison weakly decided on them and the admission decided at each, that admission is required of the choice.",
+      "zh": "在动作框架上的 J1/J2 之下，某个动作的结果接纳任何动作结果所接纳的每个基本接纳时，它所作的基本接纳在任何被选的选项上都不被否证（双重否定，不用判定）；动作的结果列出、比较在其上弱可判定、接纳在每个结果上可判定时，这一接纳是选择所要求的。",
       "declarations": [
         "Becoming.Direction.chosen_keeps_basic",
         "Becoming.Direction.kept_required"
