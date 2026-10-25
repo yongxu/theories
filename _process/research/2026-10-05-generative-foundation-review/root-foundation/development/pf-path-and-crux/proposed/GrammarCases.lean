@@ -372,7 +372,8 @@ alike and the condition apart, and its line from the first family's first member
 the second. The first family is left only into the condition, which the class holds apart from the
 member (`«所经不同则不及»`). -/
 theorem affecting_member_outside (n : Nat) : ¬ «所及» affecting (sameValue living) (.a 0) (.b n) :=
-  «所经不同则不及» (sameValue_class living) first_left_into_condition rfl rfl
+  «所经不同则不及» (sameValue_class living)
+    (fun u v inside s outside => first_left_into_condition u v inside s.1 outside) rfl rfl
     (fun _ ⟨_, e⟩ alike => by subst e; exact Bool.noConfusion alike)
 
 /-- A step along `fed`, from a member of the first family, stays in it. -/

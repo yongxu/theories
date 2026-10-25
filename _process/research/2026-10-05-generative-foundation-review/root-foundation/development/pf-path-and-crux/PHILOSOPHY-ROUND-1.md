@@ -12,24 +12,27 @@ A first round of philosophical work on the open question of [07 §4.6](../../../
 
 Its steps 3 and 4 had been shown only in small models. `Becoming.GrammarPath` states them for every carrier, relation and class.
 
-- **Step 3 holds in general** (`«所经必同»`, `«所经不同则不及»`). Where a region is left only into a set of occurrences, a line under a class from inside to outside holds a member of that set alike to its start. A class that leaves out the conditions a line must pass through reaches nothing beyond them.
-- **Step 4 holds in general, with one more premise** (`«常闭则后皆续»`). Under a constant class, call a member *closed* where everything it conditions is alike to it (`«闭于»`). Everything downstream of anything alike to a closed member is alike to it and lies on a line under the class. Without closure the conclusion fails (witness `Unclosed`), and without constancy it fails too (witness `Inconstant`).
-- **The premise is exact** (`«常类之闭当且仅当后皆同类»`). Under constancy, a member is closed exactly where everything downstream of it is alike to it.
-- **Finitude does not break the distinction** (`«至终有常»`, `FiniteDescent`). Constancy forbids any line to end (`«有常则续不尽»`), so in a finite world no class with a continuation step is constant, not even the one. This was the dossier's strongest objection to P2. *Constancy up to the net's end* asks only that a line under the class end where the net itself ends, not while what it is alike to goes on. The laws hold under it for a closed member that conditions something.
-  - In a finite descent, the class of descent is constant up to the net's end and takes in all that follows the first birth.
-  - The organism's class is not, since its line ends at old age while the net goes on (`FiniteDescent.member_not_constant_to_end`).
+- **Step 3 holds in general** (`«所经必同»`, `«所经不同则不及»`). Where a region is left under a class only into a set of occurrences, a line under that class from inside to outside holds a member of that set alike to its start. A class under which a line runs out of its family through its conditions must hold one of them, the one it passes; a class that holds none of them reaches nothing beyond.
+- **Step 4 holds in general, with one more premise** (`«常闭则后皆续»`). Say a class *holds a member's effects* where everything the member conditions is alike to it (`«所缘同于»`). This is a property of one member. It is not what `«闭合当且仅当有常»` calls closure, which is the constancy of a coarse net. Under a constant class, everything downstream of anything alike to a member whose effects the class holds is alike to it and lies on a line under the class. Neither premise can be dropped:
+  - Without holding the effects, the conclusion fails even where the member's line runs through the condition (witness `Unclosed`: the member conditions the condition, the condition feeds `t`, the class is constant, and `t` is not reached).
+  - Without constancy, even up to the net's end, it fails too (witness `Inconstant`).
+- **The premise is exact** (`«常类之闭当且仅当后皆同类»`). Given constancy, a class holds a member's effects exactly where everything downstream of the member is alike to it.
+- **Finitude does not break the distinction.** This was the dossier's strongest objection to P2. Constancy lets no line end after its first step (`«有常则相续不尽»`). So in a net where every line ends (finite and without cycles, for example) no class under which anything continues is constant, not even the one; that general claim is argued from the law, and `FiniteFamilies.one_not_constant` is a witness.
+  - *Constancy up to the net's end* (`«至终有常»`): whatever an alike occurrence conditions, this one conditions something alike to it, unless this one conditions nothing at all. So a line under the class ends only at an occurrence that conditions nothing. It is still a full one-step bisimulation condition on every alike pair, waived only at such occurrences.
+  - The laws hold under it (`«至终常闭则后皆续»`, `«至终常类之闭当且仅当后皆同类»`), and a relation under which a line ends at an occurrence that still conditions something lacks it (`«亡而网续则不至终有常»`).
+  - In a finite net with two families (`FiniteFamilies`), the class of one family is narrower than the one and constant up to the net's end. It takes in everything downstream of the family's first birth and nothing of the other family. The organism's class is not constant up to the net's end, its line ending at old age while the net goes on.
 
-**So the path is an equivalence, not a derivation.** Under constancy up to the net's end, the wide scope (everything downstream of one's acts, at any remove, lies on one's own line) is *equivalent* to closure (everything one conditions is alike to oneself). The path does not get a wide scope from narrow premises. It shows that the wide scope is exactly one premise, closure, given a regularity. That is the most important thing the general form shows, and it relocates the crux.
+**So, given a regularity, the wide scope is equivalent to its first step.** Under constancy, or constancy up to the net's end, "everything downstream of one's acts, at any remove, is alike to oneself" is equivalent to "everything one conditions is alike to oneself". For a class, alike to oneself means on one's own line from there. The backward direction is the one-step case. The forward direction is a real derivation, and the regularity does its work there: without it the step fails (`Inconstant`). So the path does not get a wide scope from narrow premises alone. It gets it from two premises: a regularity, and holding one's effects. Of these, the second carries the reach and the first carries it on. That is what the general form shows, and it relocates the crux.
 
 ## 2. Three questions, not one
 
 The question "a line that ends, or the regularity one's acts keep going?" now splits:
 
 - **Q-A, ending.** Does the self whose continuation one presupposes end while what it conditions goes on? This is P2, as constancy up to the net's end.
-- **Q-B, ownership.** Is everything one conditions alike to oneself, one's own in the sense of scope? This is closure, the premise the general form adds.
+- **Q-B, ownership.** Is everything one conditions alike to oneself, one's own in the sense of scope? This is holding one's effects (closure at a member), the premise the general form adds.
 - **Q-C, content and bearer.** When one acts for an outcome after one's end, is the presupposed significance about one's own continuation, or about the outcome, held de dicto?
 
-P3 is no longer a separate premise. Under closure, the conditions one affects are among what one conditions. Step 3 shows what P3 was doing: a class that leaves out the conditions one's line runs through cuts the line there.
+P3 splits. Its *affects* half (one's line runs through the conditions one affects) is absorbed: the conditions one affects are among what one conditions, so holding one's effects covers them, and step 3 shows that a class leaving them out cuts the line there. Its *takes in* half (one's next stage is conditioned through what one draws on) drops out of the path. What only conditions one carries no reach (`SharedCondition.fed_outside`), so it matters only to Q-B's argument from renewal (§4), not to the path.
 
 ## 3. Q-A: the line that ends
 
@@ -40,7 +43,7 @@ P3 is no longer a separate premise. Under closure, the conditions one affects ar
 
 On this view, one's continuation is the organism's line, and it ends at death.
 
-**What the root says about that class.** In general, a class under which a line ends at an occurrence that still conditions something is not constant up to the net's end (`«亡而网续则不至终有常»`, for any relation, a class or not). The organism's class is such a class wherever its last stage conditions anything at all, as remains, offspring and works do; the finite descent is a witness (`FiniteDescent.member_not_constant_to_end`). Constancy is bisimulation for a class (`«闭合当且仅当有常»`): whether an occurrence's successors are alike is fixed by its class alone. So the organism's class fails in a precise sense. Being this organism does not fix whether what follows is still this organism: the young stage goes on to the old stage, the old stage to someone else's birth. The class is a description the dynamics do not lump. The step into an end leaves the core (`«亡前理变»`, GS1): at death, the regularity the organism took part in changes, and a coarser one, which carried the organism's stages along with what they conditioned, can go on.
+**What the root says about that class.** In general, a class under which a line ends at an occurrence that still conditions something is not constant up to the net's end (`«亡而网续则不至终有常»`, for any relation, a class or not). The organism's class is such a class wherever its last stage conditions anything at all, as remains, offspring and works do; the finite net with two families is a witness (`FiniteFamilies.member_not_constant_to_end`). Constancy is bisimulation for a class (`«闭合当且仅当有常»`): which classes an occurrence's successors fall in is fixed by its class alone. So the organism's class fails in a precise sense. Being this organism does not fix whether what follows is still this organism: the young stage goes on to the old stage, the old stage to someone else's birth. The class is a description the dynamics do not lump. The step into an end leaves the core (`«亡前理变»`, GS1): at death, the regularity the organism took part in changes, and a coarser one, which carried the organism's stages along with what they conditioned, can go on.
 
 **The argument for the regularity side, from what a self is on the root.**
 
@@ -55,9 +58,9 @@ On this view, one's continuation is the organism's line, and it ends at death.
 
 ## 4. Q-B: ownership of effects
 
-The general form makes closure the real crux. Is everything one conditions one's own?
+The general form makes holding one's effects (closure at a member, in what follows) the real crux. Is everything one conditions one's own?
 
-**Against closure: it confuses causal with agential ownership.** Williams's and Nagel's papers on moral luck (both called "Moral Luck", 1976 and 1979) show how far what we are held to answer for outruns what we control. The doctrine of double effect separates what one intends from what one merely foresees. Closure seems to make every remote effect of one's acts "mine", which no account of responsibility accepts.
+**Against closure: it confuses causal with agential ownership.** Williams's and Nagel's papers on moral luck (both called "Moral Luck", both 1976, in the Aristotelian Society's supplementary volume; Nagel's revised in *Mortal Questions*, 1979) show how far what we are held to answer for outruns what we control. The doctrine of double effect separates what one intends from what one merely foresees. Closure seems to make every remote effect of one's acts "mine", which no account of responsibility accepts.
 
 **Reply: scope is not blame.** The theory's scope says whose losses count from one's standpoint. It does not say what one is culpable for, and the chapter claims no duty (07 §4.6, "what the path does not reach"). Closure for scope says only this: from my standpoint, a loss to what my acts condition counts as a loss on my own line. That is far weaker than closure for responsibility, and the moral-luck literature does not touch it. A person who poisons a river they did not know fed a village has not lost nothing of their own on this view, though they may be blameless.
 
@@ -69,17 +72,17 @@ The narrow theorist does not disown all effects. They hold a *partial* closure: 
 
 - **Buddhist.** The recollection that one is "the owner of one's actions, heir to one's actions" (*kammassaka*, Aṅguttara Nikāya 5.57; to verify) is closure stated as a practice: what one's acts condition is one's own. It comes together with no-self (anattā), which denies that the organism's class is a self. That is the theory's pairing exactly: no closed self, and a continuation carried by what one's acts condition.
 - **The family line.** 「积善之家，必有余庆；积不善之家，必有余殃」 (《周易·坤·文言》): a family that accumulates good has blessings to spare, and one that accumulates evil has calamities to spare. This is closure under a kin class. Effects are carried on in a family line, which is the shape of `TwoLines`: a family line whose core carries it past each member's end and reaches no other family.
-- **Lines joined through shared conditions.** 「天地之塞，吾其体；天地之帅，吾其性。民吾同胞，物吾与也」 (张载《西铭》): what fills heaven and earth is my body, and what directs them is my nature; all people are my siblings, and all things my companions. One's body is one's conditions; because the conditions are shared, all lines are siblings. This is the path of §4.6 in classical form: the class must hold the conditions (step 3), and through shared conditions it reaches other lines (`SharedCondition.affecting_reaches_other`). 西铭 is among the sources of this repository's own 生生 texts (`sources/07-shengsheng-buxi/`).
-- **Mencius against Yang Zhu.** Refusing to pluck one hair is the narrow self *refusing* closure: what my body could give is not mine to count.
+- **Lines joined through shared conditions.** 「天地之塞，吾其体；天地之帅，吾其性。民吾同胞，物吾与也」 (张载《西铭》): what fills heaven and earth is my body, and what directs them is my nature; all people are my siblings, and all things my companions. One's body is one's conditions; because the conditions are shared, all lines are siblings. This is the path of §4.6 in classical form: the class must hold the conditions (step 3), and through shared conditions it reaches other lines (`SharedCondition.affecting_reaches_other`). 西铭 is cited in this repository's own 生生 texts (`sources/07-shengsheng-buxi/`).
+- **Mencius against Yang Zhu.** Refusing to pluck one hair is the narrow self *refusing* closure: what my act would benefit is not mine to count.
 
-**Verdict on Q-B.** Closure is where the question now lies, and the general form shows it is not a side premise: given a regularity, it is equivalent to the wide scope. Its strongest objection, from moral luck, fails once scope is kept apart from blame. Its strongest support is structural: on the root, one goes on only through what one conditions. The narrow alternative, partial closure, has to draw its line by the identity in question.
+**Verdict on Q-B.** Closure is where the question now lies, and the general form shows it is not a side premise: given a regularity, it is equivalent to the wide scope. Its strongest objection, from moral luck, fails once scope is kept apart from blame. Its strongest support is structural: on the root, one goes on only through what one conditions. It carries the reach only together with a regularity (§1). The narrow alternative, partial closure, has to draw its line by the identity in question.
 
 ## 5. Q-C: content, bearer, and the dilemma of posthumous agency
 
 Much of human agency aims at outcomes after the agent's death: wills, planted trees, children raised, work left behind.
 
 - Scheffler's "afterlife conjecture" (*Death and the Afterlife*, 2013, checked by RP2) argues that much of what we value presupposes that others will live after us.
-- 「太上有立德，其次有立功，其次有立言，虽久不废，此之谓不朽」 (《左传·襄公二十四年》): highest is to establish virtue, next to establish deeds, next to establish words; what lasts long without decay is called the imperishable. This names immortality as the regularity one's acts keep going, the regularity side in its own words.
+- 「大上有立德，其次有立功，其次有立言，虽久不废，此之谓不朽」 (《左传·襄公二十四年》; 大 read as 太): highest is to establish virtue, next to establish deeds, next to establish words; what lasts long without decay is called the imperishable. This names immortality as the regularity one's acts keep going, the regularity side in its own words.
 
 **The dilemma.** An act aimed at an outcome after one's death presupposes that the outcome has significance. Either:
 
@@ -95,7 +98,7 @@ The narrow de se reading explains neither. So posthumous agency is either eviden
 - Pervasive human agency outruns the narrow self de se. The narrow theorist must explain it by the step held contingently, so the step is not alien to agency.
 - The disagreement shrinks from "does concern reach the future?" to "is that reach rationally required, or only common?"
 
-**Content and bearer** (dossier P-20, question 1). The bearer of the presupposition is de se: it is the agent's. Its content can be de dicto (Nagel, *The Possibility of Altruism*, 1970). The question "a line that ends, or the regularity one's acts keep going?" asks about a third thing, the *object*: when the content is "my continuation", which line is mine? So the alternative is real and does not confuse content with bearer. It is a question about the reference of "my" in a de se content, which is the question of which class one's own line runs under. The dilemma shows that this reference question and the de dicto reading are the two ways posthumous agency can be explained.
+**Content and bearer** (dossier P-20, question 1). The bearer of the presupposition is de se: it is the agent's. Its content can be de dicto: the distinction is Lewis's ("Attitudes De Dicto and De Se", 1979), after Castañeda and Perry. Nagel (*The Possibility of Altruism*, 1970) argues that reasons must be statable impersonally. The question "a line that ends, or the regularity one's acts keep going?" asks about a third thing, the *object*: when the content is "my continuation", which line is mine? So the alternative is real and does not confuse content with bearer. It is a question about the reference of "my" in a de se content, which is the question of which class one's own line runs under. The dilemma shows that this reference question and the de dicto reading are the two ways posthumous agency can be explained.
 
 ## 6. Where the first round leaves the crux
 
@@ -104,10 +107,10 @@ The narrow de se reading explains neither. So posthumous agency is either eviden
 | | Established (Lean) | Argued here | Open |
 |---|---|---|---|
 | Step 3 | in general (`«所经必同»`) | — | — |
-| Step 4 | in general, with closure; exact (`«常类之闭当且仅当后皆同类»`) | — | — |
-| Finitude | answered by constancy up to the net's end (`FiniteDescent`) | — | — |
+| Step 4 | in general, with holding the member's effects and a regularity; exact given the regularity (`«常类之闭当且仅当后皆同类»`, `«至终常类之闭当且仅当后皆同类»`) | — | — |
+| Finitude | answered by constancy up to the net's end, with a class narrower than the one (`FiniteFamilies`) | — | — |
 | Q-A, ending | a class whose line ends where the net goes on is not constant up to the net's end (`«亡而网续则不至终有常»`) | it is a class the dynamics do not lump, so not a self of its own | whether the presupposed self must be one of its own |
-| Q-B, ownership | closure is equivalent to the wide scope | scope is not blame; partial closure draws its line by the identity in question | an account of "one's own" narrower than closure and not circular |
+| Q-B, ownership | given a regularity, holding one's effects is equivalent to the wide scope | scope is not blame; partial closure draws its line by the identity in question | an account of "one's own" narrower than closure and not circular |
 | Q-C, content | — | the dilemma of posthumous agency; the alternative concerns the reference of "my" | whether the reach is rationally required or only common |
 
 **Strongest objections left standing.**
@@ -122,7 +125,7 @@ The narrow de se reading explains neither. So posthumous agency is either eviden
 
 - state steps 3–4 as laws, with closure as an explicit premise;
 - restate P2 as constancy up to the net's end;
-- give the conclusion as the equivalence;
+- give the conclusion as the equivalence, given a regularity, with the regularity's work stated;
 - replace the Open item on steps 3–4 with the agential-class question of §6.
 
 **To P-20** (through the dossier's owner):
@@ -138,3 +141,22 @@ The narrow de se reading explains neither. So posthumous agency is either eviden
 3. Is there a non-circular account of "one's own" narrower than everything one conditions, for example the effects one intends, and does it pass the test the organism fails?
 4. Does posthumous agency (Scheffler; the 不朽 of 《左传》) count as evidence for the regularity side, or only as evidence that agents commonly take the step?
 5. Are the classical forms read here (kamma ownership with no-self; 余庆 in a family line; 西铭's body as heaven and earth) fair readings of their sources, or does the formal frame flatten them?
+
+## Review
+
+An independent AI reader (read-only, not the author) checked this study and `Becoming.GrammarPath` sentence by sentence against the Lean, 25 October 2026. It made twelve findings, and all were taken:
+
+- the definition of constancy up to the net's end, described exactly;
+- a redundant hypothesis dropped from the up-to-the-end equivalence;
+- `Inconstant` strengthened to fail constancy up to the net's end;
+- `Unclosed` replaced by a witness in which the member's line runs through the condition;
+- `ThirdFed` described as needing constancy;
+- "finite" corrected to "a net where every line ends";
+- the finitude answer given a class narrower than the one (`FiniteFamilies`);
+- "equivalence, not a derivation" corrected to state the regularity's work;
+- step 3 stated as holding one of the conditions passed;
+- the name `«有常则同类者有后»` changed to `«有常则同类者有所缘»`, and the member's property renamed `«所缘同于»` to keep it apart from `«闭合当且仅当有常»`;
+- the proposed corollary in `Becoming.GrammarCases` noted as needing its record's declaration list updated;
+- P3 split into its two halves.
+
+Literature corrections taken: Nagel's "Moral Luck" dated 1976, and the de se / de dicto distinction credited to Lewis; 「大上」 as in the received text of 《左传》; the Mencius gloss; 西铭 "cited in".

@@ -10,38 +10,43 @@ later feed. Two of its steps were shown only in witnesses (`Becoming.GrammarCase
 states them for every carrier, relation and class.
 
 * **What a line must pass, its class must hold (所经必同).** Where a region (a decided predicate `P`)
-  is left only into a set `C` (every step from inside `P` to outside lands in `C`), a line under a
-  class from inside the region to outside holds a member of `C` alike to its start, and reaches it
-  (`«所经必同»`). So where no member of `C` is alike to the start, nothing outside the region is
-  reached under that class (`«所经不同则不及»`). Read with a family as the region and its conditions as
-  `C`: a class under which a line runs through its conditions must hold them.
-  `SharedCondition.affecting_member_outside` is its case.
-* **A regularity that holds its member's effects takes in all that follows (常闭则后皆续).** Under a
-  constant class (`«有常»`), call a member *closed* where everything it conditions is alike to it
-  (`«闭于»`). Then whatever is alike to a closed member conditions only what is alike to it
-  (`«常闭则所缘同类»`), so everything downstream of anything alike to it is alike to it and on a line
-  under the class from there (`«常闭则后皆续»`), and anything a line from a center reaches that is
-  alike to the member carries the line on to all that follows it (`«常闭则所及皆及»`). Under constancy
-  the closure is exactly this: a member is closed exactly where everything downstream of it is alike
-  to it (`«常类之闭当且仅当后皆同类»`). Read with a member and a condition it affects: a regularity
-  holding all of a member's effects takes in whatever its conditions later feed.
-* **Up to the net's end.** Constancy forbids a line to end at all (`«有常则续不尽»`), so in a finite
-  world, where every line ends, no class with a continuation step is constant (`FiniteDescent`: not
-  even the one). The laws above hold under a weaker condition: *constancy up to the net's end*
-  (`«至终有常»`), where a line under the class ends only where the net itself ends there, not while
-  what it is alike to goes on. Constancy gives it (`«有常则至终有常»`), and a class under which a line
-  ends while the net goes on there lacks it (`«亡而网续则不至终有常»`). Under it, for a closed member
-  that conditions something, the same laws hold (`«至终常闭则后皆续»`, `«至终常闭则所及皆及»`,
-  `«至终常类之闭当且仅当后皆同类»`); the constant forms are their corollaries. In the finite descent
-  the class of descent is constant up to the net's end and takes in all that follows the first
-  member's birth, while the organism's class is not, its line ending at old age while the net goes on
-  (`FiniteDescent.descent_constant_to_end`, `FiniteDescent.member_not_constant_to_end`,
-  `FiniteDescent.descent_takes_in_all`).
-* **Neither premise can be dropped.** A constant class holding a condition with a member need not take
-  in what the condition feeds where the member's effects leave its class (`Unclosed`); and a member
-  closed under a class that is not constant need not have what follows its effects alike to it
-  (`Inconstant`). `ThirdFed.constant_takes_third` in `Becoming.GrammarCases` is the pointwise form of
-  constancy itself (`«有常之逐点»`), which needs neither premise.
+  is left under a class only into a set `C` (every step under the class from inside `P` to outside
+  lands in `C`), a line under the class from inside the region to outside holds a member of `C`
+  alike to its start, and reaches it (`«所经必同»`). So where no member of `C` is alike to the start,
+  nothing outside the region is reached under that class (`«所经不同则不及»`). Read with a family as
+  the region and its conditions as `C`: a class under which a line runs out of its family through
+  its conditions must hold one of them, the one it passes. `SharedCondition.affecting_member_outside`
+  is its case.
+* **A regularity that holds a member's effects takes in all that follows (常闭则后皆续).** Call a
+  member's effects *held* by a relation where everything it conditions is alike to it (`«所缘同于»`).
+  This is a property of one member, not the constancy of a coarse net that `«闭合当且仅当有常»`
+  calls closure. Under a constant class (`«有常»`), whatever is alike to a member whose effects the
+  class holds conditions only what is alike to it (`«常闭则所缘同类»`), so everything downstream of
+  anything alike to it is alike to it and on a line under the class from there (`«常闭则后皆续»`),
+  and anything a line from a center reaches that is alike to the member carries the line on to all
+  that follows it (`«常闭则所及皆及»`). Given constancy, holding a member's effects is equivalent to
+  everything downstream of it being alike to it (`«常类之闭当且仅当后皆同类»`): the backward direction
+  is the one-step case, and the forward direction is where constancy does its work.
+* **Up to the net's end.** Constancy lets no line end after its first step (`«有常则相续不尽»`), so in
+  a net where every line ends (finite and with no cycle, for example) no class under which anything
+  continues is constant; `FiniteDescent` is a witness, where not even the one is. The laws above hold
+  under a weaker condition, *constancy up to the net's end* (`«至终有常»`): whatever an alike
+  occurrence conditions, this one conditions something alike to it, unless this one conditions
+  nothing at all; so a line under the class ends only at an occurrence that conditions nothing.
+  Constancy gives it (`«有常则至终有常»`), and a class under which a line ends at an occurrence that
+  still conditions something lacks it (`«亡而网续则不至终有常»`, for any relation). Under it the same
+  laws hold, for a member that conditions something where the start is another occurrence alike to
+  it (`«至终常闭则后皆续»`, `«至终常闭则所及皆及»`, `«至终常类之闭当且仅当后皆同类»`); the constant forms
+  are their corollaries. In a finite descent with two families the class of one family is narrower
+  than the one, constant up to the net's end, and takes in everything downstream of its first birth
+  and nothing of the other family, while the organism's class is not constant up to the net's end,
+  its line ending at old age while the net goes on (`FiniteFamilies`).
+* **Neither premise can be dropped.** Where a member's line runs through a condition but the member's
+  effects leave its class, a constant class holding the member with the condition does not take in
+  what the condition feeds (`Unclosed`); and where the class is not constant, even up to the net's
+  end, a member whose effects it holds need not have what follows them alike to it (`Inconstant`).
+  `ThirdFed.constant_takes_third` in `Becoming.GrammarCases` needs constancy and not this premise: it
+  is a one-step instance of `«有常之逐点»`, whose conclusion is alikeness to the member's next stage.
 
 Every declaration has an empty axiom report. The decided predicate in `«所经必同»` is what lets the
 proof ask, of each occurrence on the line, whether it is still inside the region; no classical
@@ -56,11 +61,11 @@ section Path
 
 variable {α : Type u}
 
-/-- **What a line must pass, its class must hold (所经必同).** Where every step from inside a region
-`P` to outside it lands in `C`, a line under a class `E` from inside to outside holds a member of `C`
-alike to its start, and reaches it. -/
+/-- **What a line must pass, its class must hold (所经必同).** Where every step under a class `E` from
+inside a region `P` to outside it lands in `C`, a line under `E` from inside to outside holds a member
+of `C` alike to its start, and reaches it. -/
 theorem «所经必同» {R E : «际» α} (hE : «类» E) {P : α → Bool} {C : α → Prop}
-    (exits : ∀ u v, P u = true → R u v → P v = false → C v) {x y : α}
+    (exits : ∀ u v, P u = true → «续» R E u v → P v = false → C v) {x y : α}
     (inside : P x = true) (outside : P y = false) (reached : «所及» R E x y) :
     ∃ c, C c ∧ E x c ∧ «所及» R E x c := by
   have key : ∀ u w, «相续» R E u w → P u = true → P w = false → ∃ c, C c ∧ «所及» R E u c := by
@@ -68,11 +73,11 @@ theorem «所经必同» {R E : «际» α} (hE : «类» E) {P : α → Bool} {
     induction line with
     | one c =>
       intro pu pw
-      exact ⟨_, exits _ _ pu c.1 pw, .inr (.one c)⟩
+      exact ⟨_, exits _ _ pu c pw, .inr (.one c)⟩
     | @more a b _ c _ ih =>
       intro pa pw
       cases pb : P b with
-      | false => exact ⟨b, exits a b pa c.1 pb, .inr (.one c)⟩
+      | false => exact ⟨b, exits a b pa c pb, .inr (.one c)⟩
       | true =>
         match ih pb pw with
         | ⟨d, hd, .inl e⟩ => exact ⟨d, hd, .inr (e ▸ .one c)⟩
@@ -86,18 +91,20 @@ theorem «所经必同» {R E : «际» α} (hE : «类» E) {P : α → Bool} {
 
 /-- **Where the class holds nothing the line must pass, nothing beyond is reached.** -/
 theorem «所经不同则不及» {R E : «际» α} (hE : «类» E) {P : α → Bool} {C : α → Prop}
-    (exits : ∀ u v, P u = true → R u v → P v = false → C v) {x y : α}
+    (exits : ∀ u v, P u = true → «续» R E u v → P v = false → C v) {x y : α}
     (inside : P x = true) (outside : P y = false) (apart : ∀ c, C c → ¬ E x c) :
     ¬ «所及» R E x y := fun reached =>
   match «所经必同» hE exits inside outside reached with
   | ⟨c, hc, alike, _⟩ => apart c hc alike
 
-/-- A member is *closed* under a class where everything it conditions is alike to it (闭于). -/
-def «闭于» (R E : «际» α) (m : α) : Prop := ∀ v, R m v → E m v
+/-- A member's effects are *held* by a relation where everything it conditions is alike to it
+(所缘同于). This is a property of one member, not the constancy of a coarse net that
+`«闭合当且仅当有常»` calls closure. -/
+def «所缘同于» (R E : «际» α) (m : α) : Prop := ∀ v, R m v → E m v
 
 /-- **Constancy up to the net's end (至终有常).** Whatever an alike occurrence conditions, this one
-conditions something alike, unless this one conditions nothing at all. A line under such a class ends
-only where the net itself ends there, not while what it is alike to goes on. -/
+conditions something alike to it, unless this one conditions nothing at all; so a line under the class
+ends only at an occurrence that conditions nothing. -/
 def «至终有常» (R E : «际» α) : Prop :=
   ∀ u u', E u u' → ∀ v, R u v → (∃ v', R u' v' ∧ E v v') ∨ ∀ w, ¬ R u' w
 
@@ -105,9 +112,9 @@ def «至终有常» (R E : «际» α) : Prop :=
 theorem «有常则至终有常» {R E : «际» α} (constant : «有常» R E) : «至终有常» R E :=
   fun u u' e v r => .inl ((«有常之逐点» R E).mp constant u u' e v r)
 
-/-- **A class under which a line ends while the net goes on there is not constant up to the net's
-end (亡而网续则不至终有常).** The up-to-the-end form of `«有亡之续则不有常»`: where a line under `E` ends at
-`y` and `y` still conditions something, `E` is not constant up to the net's end. -/
+/-- **A relation under which a line ends at an occurrence that still conditions something is not
+constant up to the net's end (亡而网续则不至终有常).** The up-to-the-end form of `«有亡之续则不有常»`,
+for any relation `E`, a class or not. -/
 theorem «亡而网续则不至终有常» {R E : «际» α} {x y : α} (hxy : «续» R E x y)
     (ends : «亡» R E y) (goes : ∃ w, R y w) : ¬ «至终有常» R E := fun constant =>
   match constant x y hxy.2 y hxy.1 with
@@ -115,85 +122,90 @@ theorem «亡而网续则不至终有常» {R E : «际» α} {x y : α} (hxy : 
   | .inr stops => match goes with
     | ⟨w, hw⟩ => stops w hw
 
-/-- **Up to the net's end, whatever is alike to a closed member that conditions something conditions
-only what is alike to it.** -/
+/-- **Up to the net's end, whatever is alike to a member that conditions something, and whose effects
+the class holds, conditions only what is alike to it.** -/
 theorem «至终常闭则所缘同类» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m : α}
-    (goes : ∃ w, R m w) (closed : «闭于» R E m) {u v : α} (alike : E u m) (step : R u v) : E v m :=
+    (goes : ∃ w, R m w) (held : «所缘同于» R E m) {u v : α} (alike : E u m) (step : R u v) : E v m :=
   match constant u m alike v step with
-  | .inl ⟨v', hv', ev⟩ => hE.trans ev (hE.symm (closed v' hv'))
+  | .inl ⟨v', hv', ev⟩ => hE.trans ev (hE.symm (held v' hv'))
   | .inr stops => match goes with
     | ⟨w, hw⟩ => absurd hw (stops w)
 
-/-- **A regularity that holds its member's effects takes in all that follows (常闭则后皆续), up to the
+/-- **A regularity that holds a member's effects takes in all that follows (常闭则后皆续), up to the
 net's end.** Under a class constant up to the net's end, everything downstream of anything alike to a
-closed member that conditions something is alike to it and lies on a line under the class from
-there. -/
+member that conditions something, and whose effects the class holds, is alike to it and lies on a line
+under the class from there. That the member conditions something is needed where the start is another
+occurrence alike to it. -/
 theorem «至终常闭则后皆续» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m : α}
-    (goes : ∃ w, R m w) (closed : «闭于» R E m) {c t : α} (alike : E c m) (down : «及» R c t) :
+    (goes : ∃ w, R m w) (held : «所缘同于» R E m) {c t : α} (alike : E c m) (down : «及» R c t) :
     E t m ∧ «相续» R E c t := by
   induction down with
   | one step =>
-    have et := «至终常闭则所缘同类» hE constant goes closed alike step
+    have et := «至终常闭则所缘同类» hE constant goes held alike step
     exact ⟨et, .one ⟨step, hE.trans alike (hE.symm et)⟩⟩
   | @more a b _ step _ ih =>
-    have eb : E b m := «至终常闭则所缘同类» hE constant goes closed alike step
+    have eb : E b m := «至终常闭则所缘同类» hE constant goes held alike step
     match ih eb with
     | ⟨et, rest⟩ => exact ⟨et, .more ⟨step, hE.trans alike (hE.symm eb)⟩ rest⟩
 
-/-- Under a constant class, a member alike to something that conditions something conditions
+/-- Under a constant class, what is alike to an occurrence that conditions something conditions
 something itself. -/
-theorem «有常则同类者有后» {R E : «际» α} (constant : «有常» R E) {c m v : α} (alike : E c m)
+theorem «有常则同类者有所缘» {R E : «际» α} (constant : «有常» R E) {c m v : α} (alike : E c m)
     (step : R c v) : ∃ w, R m w :=
   match («有常之逐点» R E).mp constant c m alike v step with
   | ⟨w, hw, _⟩ => ⟨w, hw⟩
 
-/-- **Under a constant class, whatever is alike to a closed member conditions only what is alike to
-it.** -/
+/-- **Under a constant class, whatever is alike to a member whose effects the class holds conditions
+only what is alike to it.** -/
 theorem «常闭则所缘同类» {R E : «际» α} (hE : «类» E) (constant : «有常» R E) {m : α}
-    (closed : «闭于» R E m) {u v : α} (alike : E u m) (step : R u v) : E v m :=
-  «至终常闭则所缘同类» hE («有常则至终有常» constant) («有常则同类者有后» constant alike step) closed
+    (held : «所缘同于» R E m) {u v : α} (alike : E u m) (step : R u v) : E v m :=
+  «至终常闭则所缘同类» hE («有常则至终有常» constant) («有常则同类者有所缘» constant alike step) held
     alike step
 
-/-- **A regularity that holds its member's effects takes in all that follows (常闭则后皆续).** Under a
-constant class, everything downstream of anything alike to a closed member is alike to it and lies on
-a line under the class from there. -/
+/-- **A regularity that holds a member's effects takes in all that follows (常闭则后皆续).** Under a
+constant class, everything downstream of anything alike to a member whose effects the class holds is
+alike to it and lies on a line under the class from there. -/
 theorem «常闭则后皆续» {R E : «际» α} (hE : «类» E) (constant : «有常» R E) {m : α}
-    (closed : «闭于» R E m) {c t : α} (alike : E c m) (down : «及» R c t) :
+    (held : «所缘同于» R E m) {c t : α} (alike : E c m) (down : «及» R c t) :
     E t m ∧ «相续» R E c t :=
   match down with
   | .one step => «至终常闭则后皆续» hE («有常则至终有常» constant)
-      («有常则同类者有后» constant alike step) closed alike (.one step)
+      («有常则同类者有所缘» constant alike step) held alike (.one step)
   | .more step rest => «至终常闭则后皆续» hE («有常则至终有常» constant)
-      («有常则同类者有后» constant alike step) closed alike (.more step rest)
+      («有常则同类者有所缘» constant alike step) held alike (.more step rest)
 
-/-- **What a line reaches alike to a closed member, it carries on to all that follows**, up to the
-net's end. -/
+/-- **What a line reaches alike to a member that conditions something, and whose effects the class
+holds, it carries on to all that follows**, up to the net's end. -/
 theorem «至终常闭则所及皆及» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m x c t : α}
-    (goes : ∃ w, R m w) (closed : «闭于» R E m) (toC : «所及» R E x c) (alike : E c m)
+    (goes : ∃ w, R m w) (held : «所缘同于» R E m) (toC : «所及» R E x c) (alike : E c m)
     (down : «及» R c t) : «所及» R E x t :=
-  «所及之传递» toC (.inr («至终常闭则后皆续» hE constant goes closed alike down).2)
+  «所及之传递» toC (.inr («至终常闭则后皆续» hE constant goes held alike down).2)
 
-/-- **What a line reaches alike to a closed member, it carries on to all that follows.** Under a
-constant class, where a line from a center reaches an occurrence alike to a closed member, it reaches
-everything downstream of that occurrence. -/
+/-- **What a line reaches alike to a member whose effects the class holds, it carries on to all that
+follows.** Under a constant class, where a line from a center reaches an occurrence alike to such a
+member, it reaches everything downstream of that occurrence. -/
 theorem «常闭则所及皆及» {R E : «际» α} (hE : «类» E) (constant : «有常» R E) {m x c t : α}
-    (closed : «闭于» R E m) (toC : «所及» R E x c) (alike : E c m) (down : «及» R c t) :
+    (held : «所缘同于» R E m) (toC : «所及» R E x c) (alike : E c m) (down : «及» R c t) :
     «所及» R E x t :=
-  «所及之传递» toC (.inr («常闭则后皆续» hE constant closed alike down).2)
+  «所及之传递» toC (.inr («常闭则后皆续» hE constant held alike down).2)
 
-/-- **Up to the net's end the closure is exactly this: a member that conditions something is closed
-exactly where everything downstream of it is alike to it.** -/
-theorem «至终常类之闭当且仅当后皆同类» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m : α}
-    (goes : ∃ w, R m w) : «闭于» R E m ↔ ∀ t, «及» R m t → E m t :=
-  ⟨fun closed _ down => hE.symm («至终常闭则后皆续» hE constant goes closed (hE.refl m) down).1,
+/-- **Up to the net's end, a class holds a member's effects exactly where everything downstream of the
+member is alike to it.** The backward direction is the one-step case; the forward direction is where
+constancy up to the net's end does its work. -/
+theorem «至终常类之闭当且仅当后皆同类» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m : α} :
+    «所缘同于» R E m ↔ ∀ t, «及» R m t → E m t :=
+  ⟨fun held _ down =>
+     match down with
+     | .one step => hE.symm («至终常闭则后皆续» hE constant ⟨_, step⟩ held (hE.refl m) (.one step)).1
+     | .more step rest =>
+       hE.symm («至终常闭则后皆续» hE constant ⟨_, step⟩ held (hE.refl m) (.more step rest)).1,
    fun all v step => all v (.one step)⟩
 
-/-- **Under constancy the closure is exactly this: a member is closed exactly where everything
-downstream of it is alike to it.** -/
+/-- **Under constancy, a class holds a member's effects exactly where everything downstream of the
+member is alike to it.** -/
 theorem «常类之闭当且仅当后皆同类» {R E : «际» α} (hE : «类» E) (constant : «有常» R E) {m : α} :
-    «闭于» R E m ↔ ∀ t, «及» R m t → E m t :=
-  ⟨fun closed _ down => hE.symm («常闭则后皆续» hE constant closed (hE.refl m) down).1,
-   fun all v step => all v (.one step)⟩
+    «所缘同于» R E m ↔ ∀ t, «及» R m t → E m t :=
+  «至终常类之闭当且仅当后皆同类» hE («有常则至终有常» constant)
 
 end Path
 
@@ -201,18 +213,19 @@ end Path
 
 namespace Unclosed
 
-/-! A condition `c` held alike with a member `m`, `c` feeding `t` and `m` conditioning `v`, with `t`
-and `v` in a second class: the class is constant and holds the condition with the member, but the
-member's effect leaves its class, and what the condition feeds is not taken in. -/
+/-! A member `m` conditioning a condition `c` and an effect `v`, the condition conditioning the member
+back and feeding `t`; `m` and `c` in one class, `t` and `v` in another. The class is constant and the
+member's line runs through the condition, but the member's effect `v` leaves its class, and what the
+condition feeds is not reached. -/
 
 inductive Occ | c | m | t | v
 
 def step : «际» Occ
   | .c, .c => False
-  | .c, .m => False
+  | .c, .m => True
   | .c, .t => True
   | .c, .v => False
-  | .m, .c => False
+  | .m, .c => True
   | .m, .m => False
   | .m, .t => False
   | .m, .v => True
@@ -225,7 +238,7 @@ def step : «际» Occ
   | .v, .t => False
   | .v, .v => False
 
-/-- The first class holds the condition and the member, the second what they condition. -/
+/-- The first class holds the condition and the member, the second what they condition beyond. -/
 def upper : Occ → Bool
   | .c => true
   | .m => true
@@ -240,20 +253,25 @@ theorem constant : «有常» step same := by
   apply («有常之逐点» step same).mpr
   intro u u' e x r
   match u, u', x, e, r with
+  | .c, .c, .m, _, _ => exact ⟨.m, trivial, rfl⟩
   | .c, .c, .t, _, _ => exact ⟨.t, trivial, rfl⟩
+  | .c, .m, .m, _, _ => exact ⟨.c, trivial, rfl⟩
   | .c, .m, .t, _, _ => exact ⟨.v, trivial, rfl⟩
+  | .m, .c, .c, _, _ => exact ⟨.m, trivial, rfl⟩
   | .m, .c, .v, _, _ => exact ⟨.t, trivial, rfl⟩
+  | .m, .m, .c, _, _ => exact ⟨.c, trivial, rfl⟩
   | .m, .m, .v, _, _ => exact ⟨.v, trivial, rfl⟩
   | .c, .t, _, e, _ => exact Bool.noConfusion e
   | .c, .v, _, e, _ => exact Bool.noConfusion e
   | .m, .t, _, e, _ => exact Bool.noConfusion e
   | .m, .v, _, e, _ => exact Bool.noConfusion e
 
-/-- **A constant class holding a condition with a member, where the member's effect leaves its class,
-does not take in what the condition feeds.** -/
+/-- **A constant class holding a member with a condition its line runs through, where the member's
+effects leave the class, does not take in what the condition feeds.** -/
 theorem not_taken_in :
-    same .c .m ∧ step .c .t ∧ ¬ «闭于» step same .m ∧ ¬ same .t .m ∧ ¬ «所及» step same .c .t :=
-  ⟨rfl, trivial, fun closed => Bool.noConfusion (closed .v trivial),
+    «续» step same .m .c ∧ step .c .t ∧ ¬ «所缘同于» step same .m ∧ ¬ same .t .m ∧
+      ¬ «所及» step same .m .t :=
+  ⟨⟨trivial, rfl⟩, trivial, fun held => Bool.noConfusion (held .v trivial),
    fun e => Bool.noConfusion e,
    fun reached => match reached with
      | .inl e => Occ.noConfusion e
@@ -263,8 +281,9 @@ end Unclosed
 
 namespace Inconstant
 
-/-! A member `m` conditioning `v` alike to it, `v` conditioning `w` in a second class: the member is
-closed but the class is not constant, and what follows its effect is not alike to it. -/
+/-! A member `m` conditioning `v` alike to it, `v` conditioning `w` in a second class: the class holds
+the member's effects but is not constant, even up to the net's end, and what follows its effect is not
+alike to it. -/
 
 inductive Occ | m | v | w
 
@@ -286,94 +305,98 @@ def upper : Occ → Bool
 
 def same : «际» Occ := fun x y => upper x = upper y
 
-/-- **A closed member under a class that is not constant need not have what follows its effects alike
-to it.** -/
+theorem same_class : «类» same := ⟨fun _ => rfl, Eq.symm, Eq.trans⟩
+
+/-- **A class that holds a member's effects but is not constant, even up to the net's end, need not
+have what follows them alike to the member.** -/
 theorem not_all_follow :
-    «闭于» step same .m ∧ ¬ «有常» step same ∧ «及» step .m .w ∧ ¬ same .w .m :=
+    «所缘同于» step same .m ∧ ¬ «至终有常» step same ∧ ¬ «有常» step same ∧ «及» step .m .w ∧
+      ¬ same .w .m :=
+  have notToEnd : ¬ «至终有常» step same := fun constant =>
+    match constant .v .m rfl .w trivial with
+    | .inl ⟨.v, _, e⟩ => Bool.noConfusion e
+    | .inl ⟨.m, h, _⟩ => h
+    | .inl ⟨.w, h, _⟩ => h
+    | .inr stops => stops .v trivial
   ⟨fun x r => match x, r with
      | .v, _ => rfl,
-   fun constant => match («有常之逐点» step same).mp constant .v .m rfl .w trivial with
-     | ⟨.v, _, e⟩ => Bool.noConfusion e,
+   notToEnd,
+   fun constant => notToEnd («有常则至终有常» constant),
    «及».more (R := step) (x := .m) (y := .v) (z := .w) trivial («及».one (R := step) (x := .v) (y := .w) trivial),
    fun e => Bool.noConfusion e⟩
 
 end Inconstant
 
+namespace FiniteFamilies
 
-namespace FiniteDescent
+/-! Two families, each with two members in turn, each member young then old, the second member's birth
+following the first's old age, and nothing after the second member's old age: a finite net in which
+every line ends. An occurrence is its family and its stage `0` to `3` (first young, first old, second
+young, second old). -/
 
-/-! Two members in turn, each young then old, the second's birth following the first's old age, and
-nothing after the second's old age: a finite world in which every line ends. -/
+abbrev Occ := Bool × Nat
 
-/-- The first member young and old, the second member young and old. -/
-inductive Occ | firstYoung | firstOld | secondYoung | secondOld
+/-- Within a family, each stage below the last goes on to the next. -/
+def step : «际» Occ := fun x y => x.1 = y.1 ∧ y.2 = x.2 + 1 ∧ x.2 < 3
 
-def step : «际» Occ
-  | .firstYoung, .firstYoung => False
-  | .firstYoung, .firstOld => True
-  | .firstYoung, .secondYoung => False
-  | .firstYoung, .secondOld => False
-  | .firstOld, .firstYoung => False
-  | .firstOld, .firstOld => False
-  | .firstOld, .secondYoung => True
-  | .firstOld, .secondOld => False
-  | .secondYoung, .firstYoung => False
-  | .secondYoung, .firstOld => False
-  | .secondYoung, .secondYoung => False
-  | .secondYoung, .secondOld => True
-  | .secondOld, _ => False
+/-- The class of a family. -/
+def family : «际» Occ := fun x y => x.1 = y.1
 
-/-- Which member an occurrence is. -/
-def second : Occ → Bool
-  | .firstYoung => false
-  | .firstOld => false
-  | .secondYoung => true
-  | .secondOld => true
+/-- The class of one member: its family and whether it is the second member. -/
+def member : «际» Occ := fun x y => x.1 = y.1 ∧ (decide (2 ≤ x.2) = decide (2 ≤ y.2))
 
-/-- The class of one member: the organism's. -/
-def member : «际» Occ := fun x y => second x = second y
+theorem family_class : «类» family := ⟨fun _ => rfl, Eq.symm, Eq.trans⟩
 
-/-- **In a finite world constancy picks out nothing: not even the class of descent, the one, is
-constant**, since a line ends at the second member's old age. -/
-theorem descent_not_constant : ¬ «有常» step («一» : «际» Occ) := fun constant =>
-  match («有常之逐点» step «一»).mp constant .secondYoung .secondOld trivial .secondOld trivial with
-  | ⟨.firstYoung, h, _⟩ => h
-  | ⟨.firstOld, h, _⟩ => h
-  | ⟨.secondYoung, h, _⟩ => h
-  | ⟨.secondOld, h, _⟩ => h
+/-- **The family's class is narrower than the one**: the two families are not alike. -/
+theorem family_narrower : ¬ family (false, 0) (true, 0) := fun e => Bool.noConfusion e
 
-/-- **Up to the net's end the class of descent is constant**: whatever any occurrence conditions, every
-other conditions something, unless it is the last. -/
-theorem descent_constant_to_end : «至终有常» step («一» : «际» Occ) := by
-  intro _ u' _ _ _
-  match u' with
-  | .firstYoung => exact .inl ⟨.firstOld, trivial, trivial⟩
-  | .firstOld => exact .inl ⟨.secondYoung, trivial, trivial⟩
-  | .secondYoung => exact .inl ⟨.secondOld, trivial, trivial⟩
-  | .secondOld => exact .inr (fun w => match w with
-      | .firstYoung => id
-      | .firstOld => id
-      | .secondYoung => id
-      | .secondOld => id)
+/-- **In a finite net the one is not constant**: the second member's old age conditions nothing. -/
+theorem one_not_constant : ¬ «有常» step («一» : «际» Occ) := fun constant =>
+  match («有常之逐点» step «一»).mp constant (false, 2) (false, 3) trivial (false, 3)
+      ⟨rfl, rfl, Nat.lt_succ_self 2⟩ with
+  | ⟨_, ⟨_, _, h⟩, _⟩ => Nat.lt_irrefl 3 h
 
-/-- **The organism's class is not constant even up to the net's end**: the first member's line ends at
-its old age while the net goes on to the second member's birth. -/
-theorem member_not_constant_to_end : ¬ «至终有常» step member := fun constant =>
-  match constant .firstOld .firstYoung rfl .secondYoung trivial with
-  | .inl ⟨.firstOld, _, e⟩ => Bool.noConfusion e
-  | .inl ⟨.firstYoung, h, _⟩ => h
-  | .inl ⟨.secondYoung, h, _⟩ => h
-  | .inl ⟨.secondOld, h, _⟩ => h
-  | .inr stops => stops .firstOld trivial
+/-- **Up to the net's end the family's class is constant**: whatever an occurrence of the family
+conditions, every other conditions the next stage of the same family, unless it is the last. -/
+theorem family_constant_to_end : «至终有常» step family := by
+  intro u u' e v r
+  match Nat.decLt u'.2 3 with
+  | .isTrue h => exact .inl ⟨(u'.1, u'.2 + 1), ⟨rfl, rfl, h⟩, r.1.symm.trans e⟩
+  | .isFalse h => exact .inr (fun _ s => h s.2.2)
 
-/-- **So up to the net's end, the class of descent takes in all that follows the first member's
-birth**: the first member's birth is closed under the one and conditions something, and everything
-downstream of it lies on its line. -/
-theorem descent_takes_in_all {t : Occ} (down : «及» step .firstYoung t) :
-    «所及» step («一» : «际» Occ) .firstYoung t :=
-  «至终常闭则所及皆及» (m := .firstYoung) «一为类» descent_constant_to_end
-    (⟨.firstOld, trivial⟩ : ∃ w, step .firstYoung w) (fun _ _ => trivial) (.inl rfl) trivial down
+/-- **The organism's class is not constant up to the net's end**: the first member's line ends at its
+old age while the net goes on to the second member's birth. -/
+theorem member_not_constant_to_end : ¬ «至终有常» step member :=
+  «亡而网续则不至终有常» (x := (false, 0)) (y := (false, 1))
+    ⟨⟨rfl, rfl, Nat.lt_succ_of_le (Nat.le_succ_of_le (Nat.le_succ 0))⟩, rfl, rfl⟩
+    (fun ⟨z, ⟨_, e2, _⟩, ⟨_, d⟩⟩ => by
+      have hz : z.2 = 2 := e2
+      rw [hz] at d
+      exact Bool.noConfusion d)
+    ⟨(false, 2), rfl, rfl, Nat.lt_succ_of_le (Nat.le_succ_of_le (Nat.le_refl 1))⟩
 
-end FiniteDescent
+/-- Everything the first birth of a family conditions is in its family. -/
+theorem first_birth_held (f : Bool) : «所缘同于» step family (f, 0) := fun _ s => s.1
+
+/-- **Up to the net's end, the family's class takes in everything downstream of the family's first
+birth.** -/
+theorem family_takes_in_all {f : Bool} {t : Occ} (down : «及» step (f, 0) t) :
+    «所及» step family (f, 0) t :=
+  «至终常闭则所及皆及» (m := (f, 0)) family_class family_constant_to_end ⟨(f, 1), rfl, rfl, Nat.zero_lt_succ 2⟩
+    (first_birth_held f) (.inl rfl) (family_class.refl _) down
+
+/-- **And nothing of the other family**: no line under any relation leaves a family. -/
+theorem other_family_outside (E : «际» Occ) (n : Nat) : ¬ «所及» step E (false, 0) (true, n) := by
+  have stays : ∀ x y, «相续» step E x y → y.1 = x.1 := by
+    intro x y line
+    induction line with
+    | one c => exact c.1.1.symm
+    | more c _ ih => exact ih.trans c.1.1.symm
+  intro reached
+  match reached with
+  | .inl e => exact Bool.noConfusion (congrArg Prod.fst e)
+  | .inr line => exact Bool.noConfusion (stays _ _ line)
+
+end FiniteFamilies
 
 end Becoming
