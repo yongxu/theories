@@ -21,7 +21,8 @@ where the two kinds leave alike. With no premise beyond the hypotheses each stat
   (`favours_alike`). The shared part pulls the rule toward even: a larger one gives a rule not
   higher in the share order where `c ≤ s` (`shared_lowers`, strictly where `c < s` and it is strictly
   larger, `shared_lowers_strictly`), and not lower where `s ≤ c` (`shared_raises`). A smaller cost
-  gives a rule not lower (`lower_c_raises`). With nothing coming back and a cost, the shapers' share
+  gives a rule not lower (`lower_c_raises`), and a strictly smaller one a strictly higher rule
+  (`lower_c_raises_strictly`). With nothing coming back and a cost, the shapers' share
   falls strictly at every step of the run, the shapers present at the start (`nothing_back_falls`,
   through `falls_strictly`, the mirror of `CarrierCounts.rises_strictly`). With no cost to the shapers
   alone the rule favours them whatever comes back (`c_zero_favours`); with nothing coming back as
@@ -79,7 +80,8 @@ back. Where what comes back is monotone in the shapers' share and covers the cos
   and how long each part lasts (`m`, `n`). Its lever is stated exactly at a step: where rule-making
   gives nothing back to the rule-makers alone and costs them, the capacity falls
   (`nothing_back_falls`); where it costs them nothing either, it is selected neither way
-  (`neutral_steady`); help that lowers the cost moves the rule toward the shapers (`lower_c_raises`).
+  (`neutral_steady`); help that lowers the cost gives a rule not lower, and strictly higher where it
+  lowers it strictly (`lower_c_raises`, `lower_c_raises_strictly`).
 - Duration: where what comes back covers the cost, ending it sooner never helps the shapers
   (`back_longer_not_less`). The rule's value a shaping sets is read again from the share at the next
   reading step (`RuleCapture.perturbation_absorbed`, from a locked start and for a change keeping the
@@ -213,6 +215,14 @@ rule after shaping is not lower in the share order. -/
 theorem lower_c_raises {a s p c c' : Nat} {pos : 0 < a} (lower : c' ≤ c) :
     CarrierCounts.order.le (shaped a s p c pos) (shaped a s p c' pos) :=
   Nat.mul_le_mul_left _ (Nat.add_le_add_right (Nat.add_le_add_left lower a) p)
+
+/-- **A strictly smaller cost gives a strictly higher rule**: with the cost strictly lowered and
+nothing else changed, the rule after shaping is strictly higher in the share order. -/
+theorem lower_c_raises_strictly {a s p c c' : Nat} {pos : 0 < a} (lower : c' < c) :
+    (shaped a s p c pos).carrier * (shaped a s p c' pos).other <
+      (shaped a s p c' pos).carrier * (shaped a s p c pos).other :=
+  Nat.mul_lt_mul_of_pos_left (Nat.add_lt_add_right (Nat.add_lt_add_left lower a) p)
+    (Nat.lt_of_lt_of_le pos (Nat.le_trans (Nat.le_add_right a s) (Nat.le_add_right (a + s) p)))
 
 /-- **The shared part is part of what each leaves**: the rule after shaping with a shared part `p` is
 the rule over the base `a + p` with nothing shared. -/

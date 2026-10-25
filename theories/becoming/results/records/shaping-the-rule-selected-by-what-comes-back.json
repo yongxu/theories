@@ -26,13 +26,14 @@
       ]
     },
     {
-      "en": "The shared part pulls the rule toward even: a larger one gives a rule not higher in the share order where c ≤ s, strictly lower where c < s and it is strictly larger, and not lower where s ≤ c; a smaller cost gives a rule not lower; the rule with a shared part p is the rule over the base a + p with nothing shared.",
-      "zh": "同得部分使规则趋平：c ≤ s 时，同得愈大，规则于份额之序中不升，c < s 且严格更大时严格更低；s ≤ c 时不降；成本更低，规则不降；带同得部分 p 之规则，即以 a + p 为基而无同得之规则。",
+      "en": "The shared part pulls the rule toward even: a larger one gives a rule not higher in the share order where c ≤ s, strictly lower where c < s and it is strictly larger, and not lower where s ≤ c; a smaller cost gives a rule not lower, and a strictly smaller one a strictly higher rule; the rule with a shared part p is the rule over the base a + p with nothing shared.",
+      "zh": "同得部分使规则趋平：c ≤ s 时，同得愈大，规则于份额之序中不升，c < s 且严格更大时严格更低；s ≤ c 时不降；成本更低，规则不降，严格更低则严格更高；带同得部分 p 之规则，即以 a + p 为基而无同得之规则。",
       "declarations": [
         "Becoming.RuleShaping.shared_lowers",
         "Becoming.RuleShaping.shared_lowers_strictly",
         "Becoming.RuleShaping.shared_raises",
         "Becoming.RuleShaping.lower_c_raises",
+        "Becoming.RuleShaping.lower_c_raises_strictly",
         "Becoming.RuleShaping.shaped_shift"
       ]
     },
@@ -190,8 +191,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T071027.387418Z): Becoming.RuleShaping, 57 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent, taken in study section 403; not reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T071027.387418Z）：Becoming.RuleShaping，57 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查，见研究第 403 节；未经人审。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T071027.387418Z): Becoming.RuleShaping, 58 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent, taken in study section 403; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T071027.387418Z）：Becoming.RuleShaping，58 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查，见研究第 403 节；未经人审。"
   },
   "next_delta": {
     "en": "Graded capacities; a gain made by the shapers and divided among all; a gain growing with the number of domains captured (the ratchet); gains passing between domains; a theorem joining what comes back to the shapers with MA2's readers drawn from the selected; a frozen test of whether what comes back decides the direction; an independent review by a person.",
@@ -281,6 +282,7 @@
         "Becoming.RuleShaping.held",
         "Becoming.RuleShaping.le_select_iff",
         "Becoming.RuleShaping.lower_c_raises",
+        "Becoming.RuleShaping.lower_c_raises_strictly",
         "Becoming.RuleShaping.lt_select_iff",
         "Becoming.RuleShaping.neutral_steady",
         "Becoming.RuleShaping.nothing_back_falls",
@@ -347,6 +349,10 @@
     {
       "en": "25 October 2026: added (MA3), the meta-attractor's second order; study section 403.",
       "zh": "2026年10月25日：新增（MA3），元吸引子之第二阶；研究第 403 节。"
+    },
+    {
+      "en": "25 October 2026 (MA3a, after an independent review of the alignment dossier): lower_c_raises_strictly added, so that a strictly smaller cost gives a strictly higher rule; the home section, the module's doc, the root bullet and the checker's scope say \"a smaller cost gives a rule not lower\" where they had said \"raises it\", and state \"the shapers present\" with nothing_back_falls and stretch_iff.",
+      "zh": "2026年10月25日（MA3a，对齐卷宗之独立审查之后）：增 lower_c_raises_strictly，成本严格更低则规则严格更高；主节、模块说明、根模块条目与检查器范围由「升之」改为「成本更低，规则不降」，并于 nothing_back_falls 与 stretch_iff 处说明「有塑规者」。"
     }
   ]
 }

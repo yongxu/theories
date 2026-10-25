@@ -1888,10 +1888,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   On `RuleCapture`'s counts the carriers are shapers: each leaves `a + s + p` offspring and each
   other `a + c + p`, `s` what comes back to the shapers alone, `p` what comes to every member alike,
   `c` the cost. At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p`;
-  a larger `p` pulls the rule toward even, a smaller cost raises it; with nothing coming back and a
-  cost the shapers' share falls at every step, and with no cost and nothing coming back it stays.
-  Selection by rules in turn is selection by their product, so `m` steps before anything comes back
-  and `n` with it keep the share from falling exactly where
+  a larger `p` pulls the rule toward even; a smaller cost gives a rule not lower, a strictly smaller
+  one a strictly higher rule; with nothing coming back and a cost the shapers' share falls at every
+  step, the shapers present, and with no cost and nothing coming back it stays. Selection by rules
+  in turn is selection by their product, so, the shapers present, `m` steps before anything comes
+  back and `n` with it keep the share from falling exactly where
   `(a + c + p)^m (a + c + p)^n ≤ (a + p)^m (a + s + p)^n`; across a stretch the shared part can turn
   the verdict (`SharedFlips`). On the reading of what comes back from the share (`byBack`),
   `ReadsShare` is equivalent to what comes back being monotone in the share (`byBack_reads_iff`);

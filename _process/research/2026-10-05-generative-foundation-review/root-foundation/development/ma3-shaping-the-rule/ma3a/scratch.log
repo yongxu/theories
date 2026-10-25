@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ma3a-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ma3-shaping-the-rule/ma3a/tree",
+  "modules": 91,
+  "ran": [
+    "Becoming.RuleShaping",
+    "BecomingRuleShapingAxiomAudit"
+  ],
+  "reused": 90,
+  "unclean": [],
+  "audits": {
+    "Becoming.RuleShaping": {
+      "theorems": 52,
+      "declarations": 58,
+      "with_axioms": {}
+    }
+  }
+}
