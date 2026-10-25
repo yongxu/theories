@@ -230,6 +230,13 @@
         "en": "A pool read by its majority separates no more than the pool; here a pool of readings, whose counts decide the rule's direction.",
         "zh": "以多数读的汇合所分辨不多于汇合；此处是读法之汇合，其计数决定规则的方向。"
       }
+    },
+    {
+      "id": "shaping-read-by-readers-drawn-from-the-selected",
+      "detail": {
+        "en": "MA4: the pool of two of RuleShaping's rules after shaping, hi coming back where a shaper reads and lo where an other does; there ReadsShare is equivalent to lo ≤ hi, and a critical mass decides the direction.",
+        "zh": "MA4：RuleShaping 二塑规后规则之池，塑规者读时所返为 hi、他者读时为 lo；于彼 ReadsShare 等价于 lo ≤ hi，临界量定其向。"
+      }
     }
   ],
   "references": [
@@ -310,7 +317,7 @@
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "427ab874b35505dae6f3aece58e4f3621afc71efe03db7e52764e398afcb3544"
+      "sha256": "4705493b0df17017398a5eaed0b198aa0cfb8db5bd433ccaecb8ebf178d5b011"
     },
     {
       "path": "theories/becoming/OPENING.md",
@@ -350,6 +357,10 @@
     {
       "en": "25 October 2026: landed on main, its owner idle since 22 October, by the session coordinating AJ on Ren's yes; merged with main, the statement carried from the retired canonical chapter's §4.5 to 02 §9, the core checker re-run on the merged tree (receipt 20261025T045617.350224Z); study section 401; readings D67 (D64 when proved). The laws are unchanged.",
       "zh": "2026年10月25日：其所有者自 10 月 22 日起闲置，由协调 AJ 的会话依 Ren 之同意落地主干；与主干合并，陈述由已退役的总章 §4.5 移至 02 §9，在合并之树上重跑核心检查器（回执 20261025T045617.350224Z）；研究第 401 节；读法 D67（证明时为 D64）。诸律不变。"
+    },
+    {
+      "en": "26 October 2026 (MA4, study section 413): related record shaping-read-by-readers-drawn-from-the-selected added. The laws are unchanged.",
+      "zh": "2026年10月26日（MA4，研究第 413 节）：增相关记录 shaping-read-by-readers-drawn-from-the-selected。诸律不变。"
     }
   ]
 }

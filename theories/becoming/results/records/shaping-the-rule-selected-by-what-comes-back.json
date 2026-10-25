@@ -139,8 +139,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Graded capacities, a return growing with the number of domains captured, returns passing between domains, real-valued shares, noise, and what comes back read through a pool of readers drawn from the selected (board item MA2).",
-      "zh": "分级之能、随所捕获之领域数而增之所返、领域间相传之所返、实数份额、噪声，以及经由取自被选者之读者池而读之所返（看板项 MA2）。",
+      "en": "Graded capacities, a return growing with the number of domains captured, returns passing between domains, real-valued shares and noise; what comes back read through a pool of readers drawn from the selected is stated in shaping-read-by-readers-drawn-from-the-selected (board item MA4).",
+      "zh": "分级之能、随所捕获之领域数而增之所返、领域间相传之所返、实数份额与噪声；经由取自被选者之读者池而读之所返，见 shaping-read-by-readers-drawn-from-the-selected（看板项 MA4）。",
       "kind": "scope"
     },
     {
@@ -195,8 +195,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T071027.387418Z）：Becoming.RuleShaping，58 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查，见研究第 403 节；未经人审。"
   },
   "next_delta": {
-    "en": "Graded capacities; a gain made by the shapers and divided among all; a gain growing with the number of domains captured (the ratchet); gains passing between domains; a theorem joining what comes back to the shapers with MA2's readers drawn from the selected; a frozen test of whether what comes back decides the direction; an independent review by a person.",
-    "zh": "分级之能；塑规者所得而由众人分享之益；随所捕获之领域数而增之所得（棘轮）；领域间相传之所得；接返于塑规者者与 MA2 取自被选者之读者之定理；所返是否定向之冻结检验；人之独立审查。"
+    "en": "Graded capacities; a gain made by the shapers and divided among all; a gain growing with the number of domains captured (the ratchet); gains passing between domains; a frozen test of whether what comes back decides the direction; an independent review by a person.",
+    "zh": "分级之能；塑规者所得而由众人分享之益；随所捕获之领域数而增之所得（棘轮）；领域间相传之所得；所返是否定向之冻结检验；人之独立审查。"
   },
   "correspondence": {
     "en": "The meta-attractor's second order (theories/meta-attractor, 'Selection for control over selection', 2 October 2026): recursive selection favours greater control over future selection where the capacity varies and is retained, has real influence, and returns to the practice soon enough to outweigh its cost; its continuous gradient Γ_T − C′(q) is zero where nothing comes back (χ = 0) or the feedback stage is one step, and its levers act on how much of what rule-making gives comes back to the rule-makers (χ) and on how fast the support shaping builds decays (δ). Here in counts at a step: s for what comes back, p for what every member receives; across a stretch, m and n steps before and with what comes back. Price (1970) keeps the accounts of such selection; Olson (1965) on why a benefit shared by all selects nothing in those who bear its cost; niche construction (Odling-Smee, Laland and Feldman 2003) on organisms changing the selection they face; rent-seeking (Tullock 1967; Krueger 1974) and regulatory capture (Stigler 1971) on spending to shape rules; the persistence of elites (Acemoglu and Robinson 2008); power-seeking of optimal policies (Turner and others 2021); natural selection among AI agents (Hendrycks 2023); influence-seeking patterns (Christiano 2019); robust agent-agnostic processes (Critch 2021); gradual disempowerment (Kulveit and others 2025). The offspring comparison is elementary; what this adds is the conditions, joined to RuleCapture's lock, each bounded by a witness. Positioning list taken from board item AJ's plan.",
@@ -244,8 +244,15 @@
     {
       "id": "readers-drawn-from-the-selected",
       "detail": {
-        "en": "MA2: ReadsShare from a pool of readers drawn from the selected; here ReadsShare is equivalent to what comes back to the shapers being monotone in their share. Related, not a proved adapter: no theorem joins the two yet.",
-        "zh": "MA2：自取自被选者之读者池得 ReadsShare；此处 ReadsShare 等价于返于塑规者者随其份额单调。相关而非已证之接合：尚无定理接二者。"
+        "en": "MA2: ReadsShare from a pool of readers drawn from the selected; here ReadsShare is equivalent to what comes back to the shapers being monotone in their share. The two are joined in shaping-read-by-readers-drawn-from-the-selected (MA4), where the pool of two rules after shaping reads the share exactly where lo ≤ hi.",
+        "zh": "MA2：自取自被选者之读者池得 ReadsShare；此处 ReadsShare 等价于返于塑规者者随其份额单调。二者接于 shaping-read-by-readers-drawn-from-the-selected（MA4）：二塑规后规则之池随份额而读恰当 lo ≤ hi。"
+      }
+    },
+    {
+      "id": "shaping-read-by-readers-drawn-from-the-selected",
+      "detail": {
+        "en": "MA4: this module's rule after shaping read by readers drawn from the selected; the threshold assumed here (thresholdBack) is replaced there by a critical mass located by who reads and the cost.",
+        "zh": "MA4：本模块塑规后之规则由取自被选者之读者读之；此处所设之门槛（thresholdBack）于彼处代以由谁读与成本所定之临界量。"
       }
     }
   ],
@@ -359,6 +366,10 @@
     {
       "en": "25 October 2026 (MA3a, study section 409, after an independent review of the alignment dossier): lower_c_raises_strictly added, so that a strictly smaller cost gives a strictly higher rule; the home section, the module's doc, the root bullet and the checker's scope say \"a smaller cost gives a rule not lower\" where they had said \"raises it\", and state \"the shapers present\" with nothing_back_falls and stretch_iff.",
       "zh": "2026年10月25日（MA3a，研究第 409 节，对齐卷宗之独立审查之后）：增 lower_c_raises_strictly，成本严格更低则规则严格更高；主节、模块说明、根模块条目与检查器范围由「升之」改为「成本更低，规则不降」，并于 nothing_back_falls 与 stretch_iff 处说明「有塑规者」。"
+    },
+    {
+      "en": "26 October 2026 (MA4, study section 413): joined with the readers drawn from the selected in shaping-read-by-readers-drawn-from-the-selected; the next step, the related record and the scope item on the pool updated. The laws are unchanged.",
+      "zh": "2026年10月26日（MA4，研究第 413 节）：与取自被选者之读者接于 shaping-read-by-readers-drawn-from-the-selected；下一步、相关记录及关于读者池之范围条目随之更新。诸律不变。"
     }
   ]
 }

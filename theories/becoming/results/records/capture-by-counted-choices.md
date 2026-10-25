@@ -68,6 +68,8 @@ Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezz
 - **formal-reuse**: [a-formations-own-course](a-formations-own-course.md). Web.ValuesThrough, Web.courseThrough, Web.selectsThrough_iff_prefix, Web.alikeThroughUpTo_iff_prefix; Learning.prefixOf.
 - related, not a proved adapter: [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md). What a pool separates; choosers sharing their folds are such a pool.
 
+**Used by:** [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

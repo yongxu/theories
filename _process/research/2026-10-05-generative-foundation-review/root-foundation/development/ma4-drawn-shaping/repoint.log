@@ -1,0 +1,14 @@
+re-pointing 1 pairs; left to their owners: []
+{
+ "records": 1,
+ "apply": true,
+ "by_record": {
+  "readers-drawn-from-the-selected": {
+   "paths": [
+    "theories/becoming/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

@@ -113,11 +113,9 @@ record = {
     'family': 'F01',
     'reviewed_at_utc': NOW,
     'statement': {
-        'en': "Where the rule's readers are drawn from those it selects and the shapers among them read at least as much "
-              "coming back to the shapers as the others among them do, the selection of the capacity to shape the rule "
-              "and the lock of the rule it shapes are one loop, either way: above a critical mass, located exactly by "
-              "who reads and the cost, the capacity rises and the rule stays locked in its favour; below it the "
-              "capacity falls and the rule stays locked against it.",
+        'en': "Where a rule's readers come from those it selects and its shapers read at least as much coming back to "
+              "them as others do, the rule's lock and the capacity to shape it are one loop: above a critical mass set "
+              "by who reads and the cost, the capacity rises, the rule locked for it; below, the reverse.",
         'zh': '规则之读者取自其所选者、且其中塑规者读返于塑规者者不少于其中他者时，塑规之能之被选与其所塑规则之锁定为一回路，两向皆然：'
               '在由谁读与成本所恰定之临界量之上，其能升而规则锁定于其利；其下，其能降而规则锁定于其不利。'},
     'laws': [{'en': en, 'zh': zh, 'declarations': ds} for en, zh, ds in groups],

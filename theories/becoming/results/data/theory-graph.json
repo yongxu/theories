@@ -4340,6 +4340,18 @@
    "page": "theories/becoming/results/records/several-optimizers-drain-by-their-joint-capacity.md"
   },
   {
+   "id": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "type": "result",
+   "record": "shaping-read-by-readers-drawn-from-the-selected",
+   "title": "What comes back to the shapers, read by readers drawn from the selected",
+   "title_zh": "返于塑规者者，由取自被选者之读者读之",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md"
+  },
+  {
    "id": "record:shaping-the-rule-selected-by-what-comes-back",
    "type": "result",
    "record": "shaping-the-rule-selected-by-what-comes-back",
@@ -7165,6 +7177,17 @@
    "name": "Becoming.ChoiceCountCapture",
    "level": "L1",
    "theorems": 35,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.DrawnShaping",
+   "type": "module",
+   "name": "Becoming.DrawnShaping",
+   "level": "L1",
+   "theorems": 31,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -27325,6 +27348,12 @@
    "anchor": "r-shaping-the-rule-selected-by-what-comes-back"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-shaping-read-by-readers-drawn-from-the-selected"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
@@ -29740,6 +29769,21 @@
   {
    "from": "module:Becoming.DrawnBeyond",
    "to": "module:Becoming.SelectionTerm",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.DrawnShaping",
+   "to": "module:Becoming.ChoiceCountCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.DrawnShaping",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.DrawnShaping",
+   "to": "module:Becoming.RuleShaping",
    "type": "imports"
   },
   {
@@ -44788,6 +44832,11 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:readers-drawn-from-the-selected",
+   "to": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "type": "related"
+  },
+  {
    "from": "record:reading-anothers-couplings-is-pooling",
    "to": "module:Becoming.Selection",
    "type": "proved-in"
@@ -47363,6 +47412,61 @@
    "type": "related"
   },
   {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "module:Becoming.ChoiceCountCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "module:Becoming.DrawnShaping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "module:Becoming.RuleCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "module:Becoming.RuleShaping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:a-reading-against-the-share-does-not-ratchet",
+   "type": "related"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:capture-by-counted-choices",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:capture-through-the-rule",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:closed-capture",
+   "type": "related"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:readers-drawn-from-the-selected",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:shaping-the-rule-selected-by-what-comes-back",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:shaping-the-rule-selected-by-what-comes-back",
    "to": "module:Becoming.RuleCapture",
    "type": "proved-in"
@@ -47390,6 +47494,11 @@
   {
    "from": "record:shaping-the-rule-selected-by-what-comes-back",
    "to": "record:several-optimizers-drain-by-their-joint-capacity",
+   "type": "related"
+  },
+  {
+   "from": "record:shaping-the-rule-selected-by-what-comes-back",
+   "to": "record:shaping-read-by-readers-drawn-from-the-selected",
    "type": "related"
   },
   {
@@ -52880,6 +52989,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-runaway-distance-uncoupled",
    "to": "record:runaway-distance-uncoupled",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:shaping-read-by-readers-drawn-from-the-selected",
    "type": "states"
   },
   {

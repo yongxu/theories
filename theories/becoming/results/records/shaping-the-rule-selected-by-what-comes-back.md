@@ -29,7 +29,7 @@
 
 - That actual practices, institutions or trained systems carry a capacity to shape their rule from parent to offspring, or that what comes back to them is read from their share: these are premises, and their calibration to the present world is not established.
 - That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C.
-- Graded capacities, a return growing with the number of domains captured, returns passing between domains, real-valued shares, noise, and what comes back read through a pool of readers drawn from the selected (board item MA2).
+- Graded capacities, a return growing with the number of domains captured, returns passing between domains, real-valued shares and noise; what comes back read through a pool of readers drawn from the selected is stated in shaping-read-by-readers-drawn-from-the-selected (board item MA4).
 - That the shared part leaves a stretch unchanged: it is part of the base (shaped_shift) and can turn the verdict (SharedFlips).
 - A gain made by the shapers and divided among all: s and p are constants of the rule, so the shared part reaches every member even with no shapers present and does not grow with their number; the cost is borne at every step, with what comes back or not.
 - That the timing law's verdict is fixed by c, s, m and n alone: it depends on the base a, and so on whether the cost is read as what the others leave more or what the shapers leave less (with 3 left before shaping, c = 1, s = 2, three steps before and four with what comes back fall, the case a = 2 here).
@@ -49,7 +49,7 @@ Canonical source: [RuleShaping.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-Graded capacities; a gain made by the shapers and divided among all; a gain growing with the number of domains captured (the ratchet); gains passing between domains; a theorem joining what comes back to the shapers with MA2's readers drawn from the selected; a frozen test of whether what comes back decides the direction; an independent review by a person.
+Graded capacities; a gain made by the shapers and divided among all; a gain growing with the number of domains captured (the ratchet); gains passing between domains; a frozen test of whether what comes back decides the direction; an independent review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -65,9 +65,10 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 - related, not a proved adapter: [closed-capture](closed-capture.md). The loop whose every level reads only the share; here the capacity that forms its rule is selected.
 - related, not a proved adapter: [target-capture](target-capture.md). A target's share among descendants; here the target is the capacity to shape the rule.
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Capacity joined without coupling; here help that lowers the cost of shaping moves the rule toward the shapers.
-- related, not a proved adapter: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). MA2: ReadsShare from a pool of readers drawn from the selected; here ReadsShare is equivalent to what comes back to the shapers being monotone in their share. Related, not a proved adapter: no theorem joins the two yet.
+- related, not a proved adapter: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). MA2: ReadsShare from a pool of readers drawn from the selected; here ReadsShare is equivalent to what comes back to the shapers being monotone in their share. The two are joined in shaping-read-by-readers-drawn-from-the-selected (MA4), where the pool of two rules after shaping reads the share exactly where lo ≤ hi.
+- related, not a proved adapter: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). MA4: this module's rule after shaping read by readers drawn from the selected; the threshold assumed here (thresholdBack) is replaced there by a critical mass located by who reads and the cost.
 
-**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md)
+**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -88,6 +89,7 @@ Aliases: `The capacity to shape the rule, selected by what comes back to it`, `�
 
 - 25 October 2026: added (MA3), the meta-attractor's second order; study section 403.
 - 25 October 2026 (MA3a, study section 409, after an independent review of the alignment dossier): lower_c_raises_strictly added, so that a strictly smaller cost gives a strictly higher rule; the home section, the module's doc, the root bullet and the checker's scope say "a smaller cost gives a rule not lower" where they had said "raises it", and state "the shapers present" with nothing_back_falls and stretch_iff.
+- 26 October 2026 (MA4, study section 413): joined with the readers drawn from the selected in shaping-read-by-readers-drawn-from-the-selected; the next step, the related record and the scope item on the pool updated. The laws are unchanged.
 
 </details>
 

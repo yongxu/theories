@@ -125,6 +125,10 @@ The goal is an alignment of the joint selection, humans, institutions and traine
 
 [readers-drawn-from-the-selected](theories/becoming/results/records/readers-drawn-from-the-selected.md): `recorded-checked`
 
+[shaping-read-by-readers-drawn-from-the-selected](theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md): `recorded-checked`
+
+[shaping-the-rule-selected-by-what-comes-back](theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md): `recorded-checked`
+
 [widening-as-what-every-weighting-ranks](theories/becoming/results/records/widening-as-what-every-weighting-ranks.md): `recorded-checked`
 
 <a id="generative-foundation"></a>

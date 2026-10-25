@@ -143,6 +143,7 @@ import Becoming.RuleCapture
 import Becoming.ClosedCapture
 import Becoming.RuleShaping
 import Becoming.ChoiceCountCapture
+import Becoming.DrawnShaping
 import Becoming.PatternPassing
 import Becoming.JointKeeping
 import Becoming.Undecided
@@ -1945,6 +1946,21 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   choosing, the share falls at every step (`posterior_count_falls`, by `RuleShaping`). A leaf: an
   instance module of selection through couplings, capture through the rule and closed capture, read
   on active inference, whose lock is the lock-in of increasing returns (board item UE1).
+* `Becoming.DrawnShaping` (L1): what comes back to the shapers, read by readers drawn from the
+  selected. The rule after shaping (`RuleShaping.shaped`) is read as the pool of its readers'
+  readings (`ClosedCapture.Drawn.pool`), each shaper among the readers reading what comes back to the
+  shapers alone as `hi` and each other as `lo`, both with the same `a`, `p` and `c`. The rule read
+  reads the share monotonically exactly where `lo ≤ hi` (`drawn_reads_iff`), against it where
+  `hi ≤ lo`; at a share it favours the shapers exactly where
+  `x.carrier * c + x.other * c ≤ x.carrier * hi + x.other * lo`, whatever `a` and `p`, and with
+  `lo ≤ c ≤ hi` exactly where the shapers stand to the others at least as `c - lo` to `hi - c`
+  (`critical_iff`). It favours the shapers at every share exactly where `c ≤ lo` and `c ≤ hi`, at no
+  share exactly where `lo < c` and `hi ≤ c`; with `lo ≤ hi` a share decides exactly where
+  `lo < c < hi` (`critical_mass_iff`), and from a start under the rule read there every course is
+  locked one way at every step (`drawn_locked_either`), the share rising strictly above the critical
+  mass and falling strictly below it, the shapers present (`drawn_rises`, `drawn_falls`). A leaf: the
+  join of `RuleShaping`'s shaping with `ClosedCapture`'s readers, which nothing below needs (board
+  item MA4).
 * `Becoming.PatternPassing` (L1): a pattern that outlasts each of its carriers lasts only through
   passing. Read on a web whose activity is carrying, a pattern present at every step from `T`
   on with carriers brief for `d` has a carrier beginning within every `d` steps; under the

@@ -1,11 +1,11 @@
 {
- "commit": "86c8bfe4bb7e1b0dcbe3d106058e4b156a75e6e4",
+ "commit": "550b71772165e14eb552cfb08c3043e58796d335",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261025T160649.851818Z",
+ "core_receipt_at_commit": "20261025T163242.561061Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 325,
- "constants": 44814,
- "spine_theorems": 14986,
+ "tracked_modules": 326,
+ "constants": 44865,
+ "spine_theorems": 15017,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,17 +27,17 @@
  },
  "classes": {
   "statement on both families": 1060,
-  "statement on Process/Frame/Run/Trace": 2998,
+  "statement on Process/Frame/Run/Trace": 3010,
   "statement on World/Flow/Web": 3606,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 186,
-  "used by a theorem on the base": 5273,
+  "used by a theorem on the base": 5281,
   "instance on the base recorded": 153,
-  "apart: own vocabulary": 1341,
-  "apart: prelude-only statement": 108
+  "apart: own vocabulary": 1350,
+  "apart: prelude-only statement": 110
  },
- "apart": 1449,
- "apart_general_structure_by_design": 600,
+ "apart": 1460,
+ "apart_general_structure_by_design": 611,
  "apart_otherwise": 849,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 92,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 831,
- "apart_roots": 832,
+ "apart_used_by_nothing": 835,
+ "apart_roots": 836,
  "apart_roots_by_category": {
   "model-witness": 383,
   "support": 117,
-  "general-structure": 299,
+  "general-structure": 303,
   "restates": 13,
   "logical-strength": 12,
   "calibration": 8
@@ -282,6 +282,10 @@
   "Becoming.StrictTransport": [
    11,
    18
+  ],
+  "Becoming.DrawnShaping": [
+   11,
+   31
   ],
   "Becoming.PartialReadout": [
    11,
@@ -698,19 +702,19 @@
  },
  "rings": {
   "core": {
-   "modules": 309,
-   "theorems": 14226,
-   "apart": 1355,
+   "modules": 310,
+   "theorems": 14257,
+   "apart": 1366,
    "classes": {
     "statement on both families": 1046,
-    "statement on Process/Frame/Run/Trace": 2787,
+    "statement on Process/Frame/Run/Trace": 2799,
     "statement on World/Flow/Web": 3581,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 175,
-    "used by a theorem on the base": 4914,
+    "used by a theorem on the base": 4922,
     "instance on the base recorded": 153,
-    "apart: own vocabulary": 1248,
-    "apart: prelude-only statement": 107
+    "apart: own vocabulary": 1257,
+    "apart: prelude-only statement": 109
    }
   },
   "instances": {
@@ -821,7 +825,7 @@
  },
  "records_by_best_alias_class": {
   "statement on both families": 77,
-  "statement on Process/Frame/Run/Trace": 138,
+  "statement on Process/Frame/Run/Trace": 139,
   "statement on World/Flow/Web": 128,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 4,
@@ -9489,6 +9493,37 @@
   "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_locks_up": "statement on Process/Frame/Run/Trace",
   "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_keeps_first": "statement on Process/Frame/Run/Trace",
   "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.shaped_le_iff": "used by a theorem on the base",
+  "Becoming.DrawnShaping.drawn_reads_iff": "used by a theorem on the base",
+  "Becoming.DrawnShaping.drawn_against": "apart: own vocabulary",
+  "Becoming.DrawnShaping.mul_split": "apart: prelude-only statement",
+  "Becoming.DrawnShaping.drawn_split": "apart: prelude-only statement",
+  "Becoming.DrawnShaping.drawn_favours_iff": "apart: own vocabulary",
+  "Becoming.DrawnShaping.drawn_lt_iff": "apart: own vocabulary",
+  "Becoming.DrawnShaping.drawn_favours_alike": "apart: own vocabulary",
+  "Becoming.DrawnShaping.critical_iff": "apart: own vocabulary",
+  "Becoming.DrawnShaping.alike_favours_iff": "apart: own vocabulary",
+  "Becoming.DrawnShaping.favours_everywhere_iff": "apart: own vocabulary",
+  "Becoming.DrawnShaping.disfavours_strictly_everywhere_iff": "apart: own vocabulary",
+  "Becoming.DrawnShaping.critical_mass_iff": "apart: own vocabulary",
+  "Becoming.DrawnShaping.drawn_locks": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.drawn_from_below": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.drawn_locked_either": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.upper_strictly": "used by a theorem on the base",
+  "Becoming.DrawnShaping.drawn_rises": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.drawn_carrier_pos": "used by a theorem on the base",
+  "Becoming.DrawnShaping.present_along_course": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.drawn_falls": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.CriticalMass.one_pos": "used by a theorem on the base",
+  "Becoming.DrawnShaping.CriticalMass.even_favours": "used by a theorem on the base",
+  "Becoming.DrawnShaping.CriticalMass.few_disfavours": "used by a theorem on the base",
+  "Becoming.DrawnShaping.CriticalMass.at_mass": "used by a theorem on the base",
+  "Becoming.DrawnShaping.CriticalMass.even_locks": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.CriticalMass.even_rises": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.CriticalMass.few_locks": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.CriticalMass.few_falls": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.CriticalMass.at_mass_stays": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnShaping.Against.not_locked": "statement on Process/Frame/Run/Trace",
   "Becoming.Web.carrying_active": "statement on World/Flow/Web",
   "Becoming.Web.carrying_iff": "statement on World/Flow/Web",
   "Becoming.Web.begins_within": "statement on World/Flow/Web",

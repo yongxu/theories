@@ -1666,6 +1666,11 @@
    "base": "old-base",
    "note": "SG3"
   },
+  "shaping-read-by-readers-drawn-from-the-selected": {
+   "region": "map",
+   "base": "general",
+   "note": "DrawnShaping MA4: what comes back to the shapers, read by readers drawn from the selected"
+  },
   "shaping-the-rule-selected-by-what-comes-back": {
    "region": "map",
    "base": "general",
@@ -2537,6 +2542,11 @@
    "region": "map",
    "base": "old-base",
    "note": "RB1 whose dependence a rise breaks"
+  },
+  "Becoming.DrawnShaping": {
+   "region": "map",
+   "base": "general",
+   "note": "MA4 the join of the capacity to shape the rule with the readers drawn from the selected"
   },
   "Becoming.Drift": {
    "region": "life",

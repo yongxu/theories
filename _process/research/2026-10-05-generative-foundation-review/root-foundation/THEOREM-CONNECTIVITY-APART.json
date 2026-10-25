@@ -4176,6 +4176,26 @@
    "module": "Becoming.ConditionalWeights",
    "category": "support",
    "reason": "an arithmetic or list lemma, or a one-line unpacking of the module's own definitions"
+  },
+  "Becoming.DrawnShaping.alike_favours_iff": {
+   "module": "Becoming.DrawnShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping read by readers drawn from the selected; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.DrawnShaping.critical_mass_iff": {
+   "module": "Becoming.DrawnShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping read by readers drawn from the selected; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.DrawnShaping.drawn_against": {
+   "module": "Becoming.DrawnShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping read by readers drawn from the selected; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.DrawnShaping.drawn_favours_alike": {
+   "module": "Becoming.DrawnShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping read by readers drawn from the selected; the base states no shaping of the rule, so nothing on it uses this law"
   }
  },
  "instances": {
