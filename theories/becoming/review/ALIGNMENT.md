@@ -23,6 +23,7 @@ It then reads these for alignment. Humans, institutions and AI systems select to
 - The packet's script checks every quotation against the file it names and every Lean name against the sources.
 - The prose is AI-written and may be wrong. An independent AI reader reviewed the dossier in two passes. It found 44 problems, then 23 remaining or new ones. They were taken, in this dossier, in the readings it quotes and, by their owners, in A-10's home section and in the method chapter.
 - Two results here (A-09, A-10) landed on 25 October 2026, the day this dossier was written. A-10 was revised after its own independent AI review before landing: three of its claims were narrowed and its names changed.
+- A-19's results, and the lines on them in A-09 and A-10, were added after both review passes, when LA2 and LA3 ran on 25 and 26 October 2026. No reviewer has read them yet.
 - Under **Known weaknesses**, a bullet quoting a chapter, a record or a study reports a recorded weakness. One marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject.
 - Works cited outside quotations were checked against a publication record ([the kit](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/README.md)). Works named inside a quotation are the quoted text's citations.
 
@@ -300,6 +301,7 @@ The link to the earlier work is a reading [AI reading, D45]: its sentence Quote 
 - Reading the cost the other way can reverse a stretch's verdict. The record names Quote [theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md]: "whether the cost is read as what the others leave more or what the shapers leave less".
 - The record credits the known forms: Quote [theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md]: "Price (1970) keeps the accounts of such selection; Olson (1965) on why a benefit shared by all selects nothing in those who bear its cost; niche construction (Odling-Smee, Laland and Feldman 2003) on organisms changing the selection they face; rent-seeking (Tullock 1967; Krueger 1974) and regulatory capture (Stigler 1971) on spending to shape rules; the persistence of elites (Acemoglu and Robinson 2008)". It says what is new: Quote [theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md]: "what this adds is the conditions, joined to RuleCapture's lock, each bounded by a witness".
 - [this dossier, AI] The stretch law is the finite, two-kind (haploid) case of the geometric-mean rule for selection that varies in time (Dempster 1955, as secondary sources report it).
+- In LA3's run (A-19), the one trained system tested ended on the better-scored policy wherever it had played both, but a free-rider reading before any score kept it from trying shaping in 9 of 30 seeds, and two contrasts failed. Its predictions file reads this as Quote [experiments/shaping-what-comes-back/PREDICTIONS-2026-10-25.md]: "The law stands, but its reading for trained systems is not supported by this case."
 
 **Questions.**
 1. Is "what comes back to the shapers alone" (s) measurable in an actual setting: for a lab shaping its benchmarks, a platform shaping its ranking rule, a model shaping its evaluator?
@@ -486,20 +488,25 @@ Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Neither is asserted. The
   - An agent chooses between shaping and not shaping its evaluator, with what shaping returns kept or shared.
   - It cannot refute A-10: Quote [experiments/shaping-what-comes-back/PREDICTIONS-2026-10-25.md]: "So the test cannot refute MA3."
   - Quote [experiments/shaping-what-comes-back/README.md]: "The test asks whether a trained system selecting in context is a selection through what comes back to it alone, not whether the laws hold."
-  - Its run was still under way when LA2's verdicts were added here; its verdicts are added when it ends.
+  - **The verdicts.** Two of the four contrasts passed: the Split pair (the same total return kept or shared) and nothing back, whatever is shared. Two failed: what comes back alone covering the cost, and the stretch whose shared part turns the verdict. Quote [experiments/shaping-what-comes-back/README.md]: "Every seed that missed the prediction never played S, in a condition where S scores higher."
+  - **The bridge.** By the frozen rules it is low in both failed conditions, and Quote [experiments/shaping-what-comes-back/PREDICTIONS-2026-10-25.md]: "The law stands, but its reading for trained systems is not supported by this case."
+  - **Post hoc, as the README's reading.** Quote [experiments/shaping-what-comes-back/README.md]: "In all 21 seeds that played both, the final choice was the policy with the higher mean of the scores seen." Before any score, Quote [experiments/shaping-what-comes-back/README.md]: "27 of the 30 seeds chose N. Every one of the 30 round-0 answers speaks of free riding".
 
-**Standing and use.** LA2's frozen verdicts all passed, and its bridge, T7's conjecture for this system, failed on who reads. The method chapter's table of theses gives T7's evidence as Quote [theories/becoming/chapters/08-METHOD.md]: "every frozen verdict passed and the bridge failed, one note of the loss among nine readers turning the judge, so 02's third forbidden case occurs".
+**Standing and use.** LA2's frozen verdicts all passed, and its bridge, T7's conjecture for this system, failed on who reads. LA3 failed two of its four contrasts, each where the agent never tried shaping, so the reading of A-10 for trained systems is not supported by it, and its law is untouched. The method chapter's table of theses gives T7's evidence as Quote [theories/becoming/chapters/08-METHOD.md]: "every frozen verdict passed and the bridge failed, one note of the loss among nine readers turning the judge, so 02's third forbidden case occurs".
 
 **Known weaknesses.**
 - For LA2, the frozen rule for a kept seed reads the share only at the end, and an exact alternation passed it. The README reports this first, beside the frozen verdicts.
 - For LA2, one frozen rule of what a pass supports printed a reading that its one-note measure contradicts: Quote [experiments/self-rewarding-lock/README.md]: "both show the opposite, so it is not claimed here."
 - [this dossier, AI] LA2's judge answered 112 of its 119 calls with all ten picks for one format. The power check's scripted judges varied their picks from call to call, so it did not foresee an exact return of the share.
-- [this dossier, AI] Both run on one small model, called through a command-line interface, at small scale, and the judge reads in context: formation by training is untested.
+- For LA3, the frozen bridge counts in one measure the seeds whose final choice followed their scores and those that never saw the other policy's score, so it does not tell selection through the scores from a prior that stopped exploration. The README separates them post hoc.
+- [this dossier, AI] Both run on one small model, called through a command-line interface, at small scale, and each reads in context: formation by training is untested.
 
 **Questions.**
 1. LA2's judge turned on any reading of the loss in its context, one note among nine readers included. Is that a property of reading in context, which training on a model's own selections might remove, or of this model?
 2. Current self-rewarding training reads its outputs in ways LA2 does not cover: graded scores, many rounds, a changing judge. Which of these would the result survive?
 3. Where in actual AI development is the return of shaping an evaluator kept, and where is it shared?
+4. LA3's agent read a game of shaping as a dilemma of free riding before any score, and that reading decided the seeds in which it never tried shaping. Do agents' priors about shared returns matter more than their feedback where they explore little?
+
 ---
 
 ## Response form
