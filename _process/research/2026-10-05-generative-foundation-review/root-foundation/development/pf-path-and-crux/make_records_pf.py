@@ -94,11 +94,10 @@ record = {
     'family': 'F01',
     'reviewed_at_utc': NOW,
     'statement': {
-        'en': "A line under a class that must pass through a set holds a member of it alike to its start; under a class "
-              "constant, or constant up to the net's end, everything downstream of a member whose effects the class "
-              "holds lies on its line, and given the regularity that is equivalent to holding the effects; a relation "
-              "under which a line ends where the net goes on is not constant up to the net's end.",
-        'zh': '一类下必经一集之线，含该集中与其始同类者；于有常或至网之终有常之类下，类持其所缘之员之后皆在其线上，有此理则与持其所缘等价；网续而线亡之关系，不至网之终有常。'},
+        'en': "A line under a class leaving a region only through a set holds a member of it; under a constant class, or one "
+              "constant up to the net's end, all downstream of a member whose effects the class holds is alike to it and on "
+              "its line, which is equivalent to holding the effects.",
+        'zh': '一类下唯经一集出一域之线，含其一员；于有常或至网之终有常之类下，类持其所缘之员之后皆与之同类而在其线上，与持其所缘等价。'},
     'laws': [{'en': en, 'zh': zh, 'declarations': sorted(d)} for en, zh, d in laws],
     'hypotheses': [{
         'en': "No axiom and no premise beyond each law's own: for every carrier, relation and class; the region in the first "
@@ -106,8 +105,8 @@ record = {
         'zh': '不加公理，除各律所带者外不加前提：对一切载体、关系与类；首律之域可判；见证之网为所给，设离散之步与载体上之相等。'}],
     'does_not_show': [
         {'en': "That a self's own line runs under a class constant up to the net's end, or that its class holds its effects "
-               "(07 §4.6's P2 and P4: the de se question as two questions).",
-         'zh': '一自之线在至网之终有常之类下，或其类持其所缘（07 §4.6 之 P2、P4：de se 之问分为二问）。',
+               "(the path's P2 and P4: the de se question as two questions).",
+         'zh': '一自之线在至网之终有常之类下，或其类持其所缘（此路之 P2、P4：de se 之问分为二问）。',
          'kind': 'non-implication'},
         {'en': 'That a class holding only a member\'s intended effects can, or cannot, be constant up to the net\'s end.',
          'zh': '唯持一员所意之所缘之类，能否至网之终有常。', 'kind': 'non-implication'},
