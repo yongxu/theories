@@ -5640,7 +5640,7 @@ Definitions and types:
 <details>
 <summary>RegimeReals.lean — 17 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/REVIEW-UE2.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean`
 

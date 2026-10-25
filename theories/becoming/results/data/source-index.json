@@ -1528,6 +1528,25 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/REVIEW-UE2.md": {
+      "title": "UE2 review: conditional weights and surprisal on the counting layer (25 October 2026)",
+      "local_links": [
+        "AGENTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/PLAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/VariationalBound.lean",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/periphery.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/tree/Becoming/ConditionalWeights.lean",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/tree/Becoming/Typicality.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/periphery-mathlib-pin/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/representation/check_representation.py",
+        "theories/becoming/chapters/02-MAP.md",
+        "theories/becoming/chapters/03-KNOWING.md"
+      ]
+    },
     "experiments/integrated-correction/general-framework/generative-basis/ecological-selection/contextual-establishment/README.md": {
       "title": "Establishment observations and surface-selection correspondence",
       "local_links": [
@@ -4525,7 +4544,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tail.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T140233.595881Z/verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T142054.885803Z/verification.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",

@@ -20025,7 +20025,7 @@ Definitions and types:
 <a id="module-bd4a62191779"></a>
 
 <details>
-<summary>RuleShaping.lean — 57 explicit declarations</summary>
+<summary>RuleShaping.lean — 58 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/REVIEW-UE1.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -20035,66 +20035,67 @@ Imports: `Becoming.RuleCapture`, `Becoming.Recurrence`, `Becoming.SelectionTerm`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.RuleShaping.eq_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L128) | 128 |
-| [Becoming.RuleShaping.favours_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L133) | 133 |
-| [Becoming.RuleShaping.disfavours_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L140) | 140 |
-| [Becoming.RuleShaping.favours_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L148) | 148 |
-| [Becoming.RuleShaping.shared_lowers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L155) | 155 |
-| [Becoming.RuleShaping.shared_lowers_strictly](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L173) | 173 |
-| [Becoming.RuleShaping.shared_raises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L195) | 195 |
-| [Becoming.RuleShaping.lower_c_raises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L213) | 213 |
-| [Becoming.RuleShaping.shaped_shift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L219) | 219 |
-| [Becoming.RuleShaping.falls_strictly](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L227) | 227 |
-| [Becoming.RuleShaping.present_along](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L236) | 236 |
-| [Becoming.RuleShaping.present_of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L242) | 242 |
-| [Becoming.RuleShaping.nothing_back_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L252) | 252 |
-| [Becoming.RuleShaping.c_zero_favours](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L263) | 263 |
-| [Becoming.RuleShaping.neutral_steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L268) | 268 |
-| [Becoming.RuleShaping.select_thenBy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L282) | 282 |
-| [Becoming.RuleShaping.pow_pos_of_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L287) | 287 |
-| [Becoming.RuleShaping.orbit_held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L296) | 296 |
-| [Becoming.RuleShaping.le_select_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L303) | 303 |
-| [Becoming.RuleShaping.lt_select_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L315) | 315 |
-| [Becoming.RuleShaping.stretch_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L327) | 327 |
-| [Becoming.RuleShaping.stretch_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L338) | 338 |
-| [Becoming.RuleShaping.stretch_lt_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L348) | 348 |
-| [Becoming.RuleShaping.wait_not_more](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L361) | 361 |
-| [Becoming.RuleShaping.back_longer_not_less](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L376) | 376 |
-| [Becoming.RuleShaping.byBack_reads_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L396) | 396 |
-| [Becoming.RuleShaping.covering_locks](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L408) | 408 |
-| [Becoming.RuleShaping.thresholdBack_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L425) | 425 |
-| [Becoming.RuleShaping.thresholdBack_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L429) | 429 |
-| [Becoming.RuleShaping.thresholdBack_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L434) | 434 |
-| [Becoming.RuleShaping.threshold_from_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L447) | 447 |
-| [Becoming.RuleShaping.threshold_from_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L466) | 466 |
-| [Becoming.RuleShaping.threshold_rule_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L485) | 485 |
-| [Becoming.RuleShaping.threshold_rule_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L509) | 509 |
-| [Becoming.RuleShaping.threshold_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L535) | 535 |
-| [Becoming.RuleShaping.threshold_present_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L553) | 553 |
-| [Becoming.RuleShaping.threshold_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L568) | 568 |
-| [Becoming.RuleShaping.Split.one_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L593) | 593 |
-| [Becoming.RuleShaping.Split.favours](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L600) | 600 |
-| [Becoming.RuleShaping.Split.shared_disfavours](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L604) | 604 |
-| [Becoming.RuleShaping.Split.rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L608) | 608 |
-| [Becoming.RuleShaping.Split.falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L612) | 612 |
-| [Becoming.RuleShaping.SharedFlips.one_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L619) | 619 |
-| [Becoming.RuleShaping.SharedFlips.without_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L623) | 623 |
-| [Becoming.RuleShaping.SharedFlips.with_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L629) | 629 |
-| [Becoming.RuleShaping.Timing.two_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L640) | 640 |
-| [Becoming.RuleShaping.Timing.soon_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L644) | 644 |
-| [Becoming.RuleShaping.Timing.late_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L652) | 652 |
-| [Becoming.RuleShaping.Timing.shorter_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L658) | 658 |
-| [Becoming.RuleShaping.Timing.seven_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L664) | 664 |
-| [Becoming.RuleShaping.Timing.eight_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L670) | 670 |
+| [Becoming.RuleShaping.eq_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L130) | 130 |
+| [Becoming.RuleShaping.favours_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L135) | 135 |
+| [Becoming.RuleShaping.disfavours_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L142) | 142 |
+| [Becoming.RuleShaping.favours_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L150) | 150 |
+| [Becoming.RuleShaping.shared_lowers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L157) | 157 |
+| [Becoming.RuleShaping.shared_lowers_strictly](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L175) | 175 |
+| [Becoming.RuleShaping.shared_raises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L197) | 197 |
+| [Becoming.RuleShaping.lower_c_raises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L215) | 215 |
+| [Becoming.RuleShaping.lower_c_raises_strictly](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L221) | 221 |
+| [Becoming.RuleShaping.shaped_shift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L229) | 229 |
+| [Becoming.RuleShaping.falls_strictly](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L237) | 237 |
+| [Becoming.RuleShaping.present_along](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L246) | 246 |
+| [Becoming.RuleShaping.present_of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L252) | 252 |
+| [Becoming.RuleShaping.nothing_back_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L262) | 262 |
+| [Becoming.RuleShaping.c_zero_favours](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L273) | 273 |
+| [Becoming.RuleShaping.neutral_steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L278) | 278 |
+| [Becoming.RuleShaping.select_thenBy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L292) | 292 |
+| [Becoming.RuleShaping.pow_pos_of_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L297) | 297 |
+| [Becoming.RuleShaping.orbit_held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L306) | 306 |
+| [Becoming.RuleShaping.le_select_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L313) | 313 |
+| [Becoming.RuleShaping.lt_select_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L325) | 325 |
+| [Becoming.RuleShaping.stretch_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L337) | 337 |
+| [Becoming.RuleShaping.stretch_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L348) | 348 |
+| [Becoming.RuleShaping.stretch_lt_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L358) | 358 |
+| [Becoming.RuleShaping.wait_not_more](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L371) | 371 |
+| [Becoming.RuleShaping.back_longer_not_less](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L386) | 386 |
+| [Becoming.RuleShaping.byBack_reads_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L406) | 406 |
+| [Becoming.RuleShaping.covering_locks](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L418) | 418 |
+| [Becoming.RuleShaping.thresholdBack_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L435) | 435 |
+| [Becoming.RuleShaping.thresholdBack_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L439) | 439 |
+| [Becoming.RuleShaping.thresholdBack_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L444) | 444 |
+| [Becoming.RuleShaping.threshold_from_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L457) | 457 |
+| [Becoming.RuleShaping.threshold_from_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L476) | 476 |
+| [Becoming.RuleShaping.threshold_rule_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L495) | 495 |
+| [Becoming.RuleShaping.threshold_rule_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L519) | 519 |
+| [Becoming.RuleShaping.threshold_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L545) | 545 |
+| [Becoming.RuleShaping.threshold_present_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L563) | 563 |
+| [Becoming.RuleShaping.threshold_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L578) | 578 |
+| [Becoming.RuleShaping.Split.one_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L603) | 603 |
+| [Becoming.RuleShaping.Split.favours](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L610) | 610 |
+| [Becoming.RuleShaping.Split.shared_disfavours](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L614) | 614 |
+| [Becoming.RuleShaping.Split.rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L618) | 618 |
+| [Becoming.RuleShaping.Split.falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L622) | 622 |
+| [Becoming.RuleShaping.SharedFlips.one_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L629) | 629 |
+| [Becoming.RuleShaping.SharedFlips.without_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L633) | 633 |
+| [Becoming.RuleShaping.SharedFlips.with_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L639) | 639 |
+| [Becoming.RuleShaping.Timing.two_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L650) | 650 |
+| [Becoming.RuleShaping.Timing.soon_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L654) | 654 |
+| [Becoming.RuleShaping.Timing.late_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L662) | 662 |
+| [Becoming.RuleShaping.Timing.shorter_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L668) | 668 |
+| [Becoming.RuleShaping.Timing.seven_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L674) | 674 |
+| [Becoming.RuleShaping.Timing.eight_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L680) | 680 |
 
 Definitions and types:
 
-- `def` [Becoming.RuleShaping.shaped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L123) (L123)
-- `def` [Becoming.RuleShaping.thenBy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L278) (L278)
-- `def` [Becoming.RuleShaping.held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L292) (L292)
-- `def` [Becoming.RuleShaping.byBack](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L391) (L391)
-- `def` [Becoming.RuleShaping.thresholdBack](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L423) (L423)
-- `def` [Becoming.RuleShaping.Split.even](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L596) (L596)
+- `def` [Becoming.RuleShaping.shaped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L125) (L125)
+- `def` [Becoming.RuleShaping.thenBy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L288) (L288)
+- `def` [Becoming.RuleShaping.held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L302) (L302)
+- `def` [Becoming.RuleShaping.byBack](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L401) (L401)
+- `def` [Becoming.RuleShaping.thresholdBack](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L433) (L433)
+- `def` [Becoming.RuleShaping.Split.even](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean#L606) (L606)
 
 </details>
 
@@ -23138,7 +23139,7 @@ Definitions and types:
 <details>
 <summary>Typicality.lean — 52 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/REVIEW-UE2.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean`
 

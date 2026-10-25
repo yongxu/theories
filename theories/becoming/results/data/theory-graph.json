@@ -7095,7 +7095,7 @@
    "type": "module",
    "name": "Becoming.RuleShaping",
    "level": "L1",
-   "theorems": 51,
+   "theorems": 52,
    "region": "map",
    "base": "general",
    "on_grammar": false,

@@ -4001,6 +4001,11 @@
    "module": "Becoming.GrammarPath",
    "category": "general-structure",
    "reason": "where the class holds the effects of a member that conditions something, how what lies outside is divided is idle: a law of every relation and class on any carrier"
+  },
+  "Becoming.RuleShaping.lower_c_raises_strictly": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
   }
  },
  "instances": {

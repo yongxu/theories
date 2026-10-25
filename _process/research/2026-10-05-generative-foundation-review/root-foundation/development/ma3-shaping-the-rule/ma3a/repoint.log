@@ -1,0 +1,23 @@
+{
+ "records": 2,
+ "apply": true,
+ "by_record": {
+  "capture-by-counted-choices": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean"
+   ],
+   "rebound": []
+  },
+  "shaping-the-rule-selected-by-what-comes-back": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T142054.885803Z/verification.json",
+    "theories/becoming/chapters/02-MAP.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean"
+   ]
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

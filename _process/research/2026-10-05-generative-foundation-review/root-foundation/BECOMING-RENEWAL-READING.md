@@ -18183,3 +18183,25 @@ Output → input: 07 §4.6 (P2 read at one's own class; the home section; step 4
 **Constructivity.** No omniscience principle. The split is given by a decided predicate, and the cases are distinguished on `Bool` (`decEq`). The receipt's empty axiom reports are the evidence.
 
 **Self-review.** (1) Each sentence of the new block, the P2 premise, the new sub-bullet and the changed citations was read against its declaration. (2) PF's and PF2's statements are unchanged; only their proofs changed, now one line each through the forms at the member's class. (3) Not done: an independent review, and the correspondence named in Boundary.
+
+## 409. MA3's texts made exact, and the strict law of the cost (MA3a)
+
+An independent review of the alignment dossier, relayed by board item AJ, found one overstatement in MA3's home section (§403): 02 §9 said "a smaller cost raises it" where `RuleShaping.lower_c_raises` proves a rule not lower (`order.le`, weak, for `c' ≤ c`). The same overstatement stood in the module's reading on help that lowers the cost, the root module's bullet and the checker's scope. Rather than only weaken those lines, MA3a proves the strict law, so the reading holds exactly where the cost is lowered strictly.
+
+```text
+Result(s): record shaping-the-rule-selected-by-what-comes-back extended (law 2, its declarations, history).
+Delta: lower_c_raises_strictly: with the cost strictly lowered (c' < c) and nothing else changed, the rule after
+       shaping is strictly higher in the share order. Texts: 02 §9's paragraph and reading, the module's doc and its
+       reading on help that lowers the cost, the root bullet, the checker's scope and the package README rows (EN, ZH)
+       now say "a smaller cost gives a rule not lower, and a strictly smaller one a strictly higher rule", and state
+       "the shapers present" with nothing_back_falls and stretch_iff wherever those are stated (02 §9 already did);
+       the shared part is said to decide the direction only at a step, as before.
+Supplied premises / correspondence: none new.
+Evidence: Becoming.RuleShaping, 52 theorems in 58 declarations; core receipt 20261025T142054.885803Z, every
+       axiom report empty.
+Boundary: as in §403.
+Output → input: the record; 02 §9; the module; the root bullet; the checker's scope; the README rows; 08's counts.
+       Feeds AJ's reading on assistance (07 §6, D68), which can cite the strict law.
+```
+
+**Self-review.** (1) Every sentence that cited `lower_c_raises` was reread against its statement (weak) and now cites the strict law where it says "higher". (2) No other statement of MA3 changed.

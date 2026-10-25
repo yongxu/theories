@@ -313,7 +313,7 @@
         "Becoming.RuleShaping.threshold_rule_below",
         "Becoming.RuleShaping.wait_not_more"
       ],
-      "sha256": "b9e957b463ecab5241881c5918aa1a9b1498db492dc1a82ce369ca69309c9d0a"
+      "sha256": "69f20e4418df5ff93d6bbe463856c431fe520c0dc52ee2f6a710ede009a2ce72"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
@@ -333,13 +333,19 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "77377ee265a217befbd42b54f5db371f9ec8ab1f1a636e15dc4a1c9f34b6b915"
+      "sha256": "810139ce7f8d817a1519cf3dc856edc0521cbb853deec4df61d75266318ab4bf"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T142054.885803Z/verification.json",
+      "role": "receipt",
+      "sha256": "517ad03190000ee26579b8f5970d8b8a1c2b482bf428359d72e78e8fa732797f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T071027.387418Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T142054.885803Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RuleShaping",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -351,8 +357,8 @@
       "zh": "2026年10月25日：新增（MA3），元吸引子之第二阶；研究第 403 节。"
     },
     {
-      "en": "25 October 2026 (MA3a, after an independent review of the alignment dossier): lower_c_raises_strictly added, so that a strictly smaller cost gives a strictly higher rule; the home section, the module's doc, the root bullet and the checker's scope say \"a smaller cost gives a rule not lower\" where they had said \"raises it\", and state \"the shapers present\" with nothing_back_falls and stretch_iff.",
-      "zh": "2026年10月25日（MA3a，对齐卷宗之独立审查之后）：增 lower_c_raises_strictly，成本严格更低则规则严格更高；主节、模块说明、根模块条目与检查器范围由「升之」改为「成本更低，规则不降」，并于 nothing_back_falls 与 stretch_iff 处说明「有塑规者」。"
+      "en": "25 October 2026 (MA3a, study section 409, after an independent review of the alignment dossier): lower_c_raises_strictly added, so that a strictly smaller cost gives a strictly higher rule; the home section, the module's doc, the root bullet and the checker's scope say \"a smaller cost gives a rule not lower\" where they had said \"raises it\", and state \"the shapers present\" with nothing_back_falls and stretch_iff.",
+      "zh": "2026年10月25日（MA3a，研究第 409 节，对齐卷宗之独立审查之后）：增 lower_c_raises_strictly，成本严格更低则规则严格更高；主节、模块说明、根模块条目与检查器范围由「升之」改为「成本更低，规则不降」，并于 nothing_back_falls 与 stretch_iff 处说明「有塑规者」。"
     }
   ]
 }

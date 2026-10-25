@@ -1,0 +1,34 @@
+{
+  "errors": [
+    "shaping-the-rule-selected-by-what-comes-back: invalid proof receipt binding: declarations not elaborated in Becoming.RuleShaping: Becoming.RuleShaping.lower_c_raises_strictly"
+  ],
+  "source_drift": [
+    {
+      "id": "capture-by-counted-choices",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
+      "reviewed_sha256": "b9e957b463ecab5241881c5918aa1a9b1498db492dc1a82ce369ca69309c9d0a",
+      "current_sha256": "69f20e4418df5ff93d6bbe463856c431fe520c0dc52ee2f6a710ede009a2ce72",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "shaping-the-rule-selected-by-what-comes-back",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
+      "reviewed_sha256": "b9e957b463ecab5241881c5918aa1a9b1498db492dc1a82ce369ca69309c9d0a",
+      "current_sha256": "69f20e4418df5ff93d6bbe463856c431fe520c0dc52ee2f6a710ede009a2ce72",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "shaping-the-rule-selected-by-what-comes-back",
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "reviewed_sha256": "77377ee265a217befbd42b54f5db371f9ec8ab1f1a636e15dc4a1c9f34b6b915",
+      "current_sha256": "810139ce7f8d817a1519cf3dc856edc0521cbb853deec4df61d75266318ab4bf",
+      "changed_sections": [
+        "## 9. Capture"
+      ]
+    }
+  ]
+}

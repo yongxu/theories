@@ -315,7 +315,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "b9e957b463ecab5241881c5918aa1a9b1498db492dc1a82ce369ca69309c9d0a"
+      "sha256": "69f20e4418df5ff93d6bbe463856c431fe520c0dc52ee2f6a710ede009a2ce72"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
