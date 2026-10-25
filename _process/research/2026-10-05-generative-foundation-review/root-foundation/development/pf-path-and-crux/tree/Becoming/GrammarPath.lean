@@ -40,7 +40,12 @@ states them for every carrier, relation and class.
   are their corollaries. In a finite descent with two families the class of one family is narrower
   than the one, constant up to the net's end, and takes in everything downstream of its first birth
   and nothing of the other family, while the organism's class is not constant up to the net's end,
-  its line ending at old age while the net goes on (`FiniteFamilies`).
+  its line ending at old age while the net goes on (`FiniteFamilies`). In a finite net with two families
+  sharing a condition they affect, every premise holds at once: the class holding the families with
+  their condition is narrower than the one, constant up to the net's end and holds the first member's
+  effects, and its line from the first family's first birth reaches the second family past the first
+  member's end, while the member's class is not constant up to the net's end
+  (`FiniteSharedCondition`).
 * **Neither premise can be dropped.** Where a member's line runs through a condition but the member's
   effects leave its class, a constant class holding the member with the condition does not take in
   what the condition feeds (`Unclosed`); and where the class is not constant, even up to the net's
@@ -398,5 +403,133 @@ theorem other_family_outside (E : «际» Occ) (n : Nat) : ¬ «所及» step E 
   | .inr line => exact Bool.noConfusion (stays _ _ line)
 
 end FiniteFamilies
+
+
+namespace FiniteSharedCondition
+
+/-! Two families and a condition they share, each of four stages, and a fourth thing joined to nothing.
+Each family's stage goes on to its next and to the condition's next; the condition's stage goes on to
+each family's next and to its own; nothing goes on after stage `3`. The class "living or the
+condition" holds the families with the condition and leaves the fourth thing out. Here every premise
+of the path holds at once: a member's line ends, the class is constant up to the net's end and
+narrower than the one, it holds the first member's effects, and its line from the first family's
+first birth reaches the second family past that member's end. -/
+
+/-- The first family, the second, the shared condition, and a fourth thing joined to nothing. -/
+inductive Kind | a | b | r | x
+
+abbrev Occ := Kind × Nat
+
+/-- Which kinds condition which. -/
+def link : Kind → Kind → Prop
+  | .a, .a => True
+  | .a, .b => False
+  | .a, .r => True
+  | .a, .x => False
+  | .b, .a => False
+  | .b, .b => True
+  | .b, .r => True
+  | .b, .x => False
+  | .r, .a => True
+  | .r, .b => True
+  | .r, .r => True
+  | .r, .x => False
+  | .x, .a => False
+  | .x, .b => False
+  | .x, .r => False
+  | .x, .x => False
+
+/-- A stage below the last goes on to the next stage of the kinds it conditions. -/
+def step : «际» Occ := fun u v => link u.1 v.1 ∧ v.2 = u.2 + 1 ∧ u.2 < 3
+
+/-- Living or the condition, as against the fourth thing. -/
+def joined : Kind → Bool
+  | .a => true
+  | .b => true
+  | .r => true
+  | .x => false
+
+/-- The class holding the families with their condition. -/
+def held : «际» Occ := fun u v => joined u.1 = joined v.1
+
+/-- The class of one member: its kind and whether it is the second member (stages `2` and `3`). -/
+def member : «际» Occ := fun u v => u.1 = v.1 ∧ decide (2 ≤ u.2) = decide (2 ≤ v.2)
+
+theorem held_class : «类» held := ⟨fun _ => rfl, Eq.symm, Eq.trans⟩
+
+theorem link_joined : ∀ k k', link k k' → joined k = true ∧ joined k' = true
+  | .a, .a, _ => ⟨rfl, rfl⟩
+  | .a, .r, _ => ⟨rfl, rfl⟩
+  | .b, .b, _ => ⟨rfl, rfl⟩
+  | .b, .r, _ => ⟨rfl, rfl⟩
+  | .r, .a, _ => ⟨rfl, rfl⟩
+  | .r, .b, _ => ⟨rfl, rfl⟩
+  | .r, .r, _ => ⟨rfl, rfl⟩
+  | .a, .b, h => False.elim h
+  | .a, .x, h => False.elim h
+  | .b, .a, h => False.elim h
+  | .b, .x, h => False.elim h
+  | .r, .x, h => False.elim h
+  | .x, .a, h => False.elim h
+  | .x, .b, h => False.elim h
+  | .x, .r, h => False.elim h
+  | .x, .x, h => False.elim h
+
+theorem link_self : ∀ k, joined k = true → link k k
+  | .a, _ => trivial
+  | .b, _ => trivial
+  | .r, _ => trivial
+  | .x, h => Bool.noConfusion h
+
+/-- **The class is narrower than the one**: it leaves the fourth thing out. -/
+theorem held_narrower : ¬ held (.a, 0) (.x, 0) := fun e => Bool.noConfusion e
+
+/-- **In this finite net the one is not constant.** -/
+theorem one_not_constant : ¬ «有常» step («一» : «际» Occ) := fun constant =>
+  match («有常之逐点» step «一»).mp constant (.a, 2) (.a, 3) trivial (.a, 3)
+      ⟨trivial, rfl, Nat.lt_succ_self 2⟩ with
+  | ⟨_, ⟨_, _, h⟩, _⟩ => Nat.lt_irrefl 3 h
+
+/-- **Up to the net's end the class holding the families with their condition is constant.** -/
+theorem held_constant_to_end : «至终有常» step held := by
+  intro u u' e v r
+  have hu : joined u.1 = true := (link_joined _ _ r.1).1
+  have hv : joined v.1 = true := (link_joined _ _ r.1).2
+  have hu' : joined u'.1 = true := e ▸ hu
+  match Nat.decLt u'.2 3 with
+  | .isTrue h => exact .inl ⟨(u'.1, u'.2 + 1), ⟨link_self _ hu', rfl, h⟩, hv.trans hu'.symm⟩
+  | .isFalse h => exact .inr (fun _ s => h s.2.2)
+
+/-- **The class holds the first member's effects**: everything the first family's first birth
+conditions is in it. -/
+theorem first_birth_held : «所缘同于» step held (.a, 0) := fun _ s => ((link_joined _ _ s.1).2).symm
+
+/-- **The member's line ends while the net goes on**, so the member's class is not constant up to the
+net's end. -/
+theorem member_not_constant_to_end : ¬ «至终有常» step member :=
+  «亡而网续则不至终有常» (x := (.a, 0)) (y := (.a, 1))
+    ⟨⟨trivial, rfl, Nat.zero_lt_succ 2⟩, rfl, rfl⟩
+    (fun ⟨z, ⟨_, e2, _⟩, ⟨k, d⟩⟩ => by
+      have hz : z.2 = 2 := e2
+      rw [hz] at d
+      exact Bool.noConfusion d)
+    ⟨(.a, 2), trivial, rfl, Nat.lt_succ_of_le (Nat.le_succ 1)⟩
+
+/-- **The line under the class from the first family's first birth reaches the second family past the
+first member's end**, through the condition the first member affects: the second family's stage `2`,
+after the first member's line has ended at stage `1`. -/
+theorem reaches_other_past_end : «所及» step held (.a, 0) (.b, 2) :=
+  «至终常闭则所及皆及» (m := (.a, 0)) held_class held_constant_to_end
+    (⟨(.a, 1), trivial, rfl, Nat.zero_lt_succ 2⟩ : ∃ w, step (.a, 0) w) first_birth_held (.inl rfl) rfl
+    («及».more (x := (Kind.a, 0)) (y := (Kind.r, 1)) (z := (Kind.b, 2)) ⟨trivial, rfl, Nat.zero_lt_succ 2⟩
+      («及».one ⟨trivial, rfl, Nat.lt_succ_of_le (Nat.le_succ 1)⟩))
+
+/-- **And not the fourth thing**, joined to nothing. -/
+theorem fourth_outside (n : Nat) : ¬ «所及» step held (.a, 0) (.x, n) := fun reached =>
+  match reached with
+  | .inl e => Kind.noConfusion (congrArg Prod.fst e)
+  | .inr line => Bool.noConfusion («线内同类» held_class line)
+
+end FiniteSharedCondition
 
 end Becoming

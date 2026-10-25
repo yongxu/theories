@@ -44,7 +44,9 @@ edit(root, """  grows with its number, the rate read in its
   (`«亡而网续则不至终有常»`). Witnesses that neither premise can be dropped (`Unclosed`, `Inconstant`),
   and a finite net with two families in which the one is not constant while one family's class,
   narrower than the one, is constant up to the net's end and the organism's is not
-  (`FiniteFamilies`).
+  (`FiniteFamilies`); and a finite net with two families sharing a condition they affect, where every
+  premise holds at once and the line from one family's first birth reaches the other past the first
+  member's end (`FiniteSharedCondition`).
 """)
 
 checker = PKG / 'check_becoming.py'
@@ -53,7 +55,8 @@ edit(checker, '''    "GrammarCases: small witnesses''', '''    "GrammarPath: a l
     "under a constant class, and up to the net's end, everything downstream of anything alike to a member whose "
     "effects the class holds is alike to it and on its line, and given the regularity that is equivalent to holding "
     "the effects; a relation under which a line ends where the net goes on is not constant up to the net's end; "
-    "witnesses that neither premise can be dropped, and a finite net with two families. "
+    "witnesses that neither premise can be dropped, a finite net with two families, and one with a shared condition "
+    "where every premise holds at once. "
     "GrammarCases: small witnesses''')
 
 row_en = ('| L1 | [`Becoming.GrammarPath`](Becoming/GrammarPath.lean) | what a line under a class must hold, and what a '
@@ -62,12 +65,12 @@ row_en = ('| L1 | [`Becoming.GrammarPath`](Becoming/GrammarPath.lean) | what a l
           'alike to a member whose effects the class holds is on its line, and given the regularity that is equivalent '
           'to holding them (`«常闭则后皆续»`, `«常类之闭当且仅当后皆同类»`), also up to the net\'s end (`«至终有常»`, '
           '`«至终常闭则后皆续»`); a line ending while the net goes on rules out constancy up to the net\'s end '
-          '(`«亡而网续则不至终有常»`); witnesses (`Unclosed`, `Inconstant`, `FiniteFamilies`) |')
+          '(`«亡而网续则不至终有常»`); witnesses (`Unclosed`, `Inconstant`, `FiniteFamilies`, `FiniteSharedCondition`) |')
 row_zh = ('| L1 | [`Becoming.GrammarPath`](Becoming/GrammarPath.lean) | 一类下之线所必含者，与一理所纳者'
           '（除各律所带者外不加前提）：出一域唯经一集之线，含该集中与其始同类者（`«所经必同»`）；有常之类下，'
           '与一所缘皆同于己者同类者之后皆在其线上，有常之下与此等价（`«常闭则后皆续»`、`«常类之闭当且仅当后皆同类»`），至网之终亦然'
           '（`«至终有常»`、`«至终常闭则后皆续»`）；网续而线亡者，其类不至终有常（`«亡而网续则不至终有常»`）；'
-          '见证（`Unclosed`、`Inconstant`、`FiniteFamilies`） |')
+          '见证（`Unclosed`、`Inconstant`、`FiniteFamilies`、`FiniteSharedCondition`） |')
 for name, row in (('README.md', row_en), ('README.zh.md', row_zh)):
     path = PKG / name
     lines = path.read_text(encoding='utf-8').split('\n')

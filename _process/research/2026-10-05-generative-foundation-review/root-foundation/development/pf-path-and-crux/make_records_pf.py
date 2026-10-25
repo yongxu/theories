@@ -75,6 +75,13 @@ laws = [
      "and reaches nothing of the other family; the organism's class is not constant up to the net's end.",
      '二家各有二员相继之有限之网中：一不有常；一家之类窄于一，至网之终有常，纳其家首生之后之一切，而不及他家；一员之类至网之终不有常。',
      G('FiniteFamilies')),
+    ("In a finite net with two families sharing a condition they affect, and a fourth thing joined to nothing, every premise "
+     "holds at once: the class holding the families with their condition is narrower than the one, constant up to the "
+     "net's end and holds the first member's effects; its line from the first family's first birth reaches the second "
+     "family past the first member's end and never the fourth thing; the member's class is not constant up to the net's "
+     "end.",
+     '二家共一其所影响之条件、另有一无所连之第四物之有限之网中，诸前提同时成立：含二家与其条件之类窄于一，至网之终有常，持首员之所缘；其自首家首生之线，过首员之亡而及于次家，而永不及第四物；一员之类至网之终不有常。',
+     G('FiniteSharedCondition')),
 ]
 covered = set().union(*(set(d) for _, _, d in laws))
 assert covered == names, sorted(names - covered)

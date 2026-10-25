@@ -47,7 +47,9 @@ Delta: in Becoming.GrammarPath, for every carrier, relation and class: a line un
        the laws hold under it («至终常闭则后皆续», «至终常闭则所及皆及», «至终常类之闭当且仅当后皆同类»); witnesses
        Unclosed and Inconstant (neither premise can be dropped) and FiniteFamilies (in a finite net the one is not
        constant, a family's class narrower than the one is constant up to the net's end and takes in all
-       downstream of its first birth and nothing of the other family, and the organism's class is not).
+       downstream of its first birth and nothing of the other family, and the organism's class is not) and
+       FiniteSharedCondition (every premise at once: a class narrower than the one, constant up to the net's end,
+       holding the first member's effects, whose line reaches the other family past the first member's end).
 Supplied premises / correspondence: decided membership of the region in «所经必同»; for the witnesses, the nets
        supplied, discrete steps and equality on the carriers.
 Evidence: Becoming.GrammarPath; core receipt {RECEIPT}, every axiom report empty.
