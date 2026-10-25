@@ -1,0 +1,18 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/tree",
+  "modules": 36,
+  "ran": [
+    "Becoming.EventualWidening",
+    "BecomingEventualWideningAxiomAudit"
+  ],
+  "reused": 35,
+  "unclean": [],
+  "audits": {
+    "Becoming.EventualWidening": {
+      "theorems": 59,
+      "declarations": 80,
+      "with_axioms": {}
+    }
+  }
+}
+exit 0
