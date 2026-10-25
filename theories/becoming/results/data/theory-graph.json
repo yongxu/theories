@@ -5036,6 +5036,18 @@
    "page": "theories/becoming/results/records/what-a-law-of-the-whole-and-no-part-takes.md"
   },
   {
+   "id": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "result",
+   "record": "what-a-line-holds-and-a-regularity-takes-in",
+   "title": "What a line must hold, and what a regularity takes in",
+   "title_zh": "线所必含，与理之所纳",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.md"
+  },
+  {
    "id": "record:what-a-method-comes-to-say-in-the-limit",
    "type": "result",
    "record": "what-a-method-comes-to-say-in-the-limit",
@@ -8941,6 +8953,17 @@
    "theorems": 42,
    "region": "root",
    "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GrammarPath",
+   "type": "module",
+   "name": "Becoming.GrammarPath",
+   "level": "L1",
+   "theorems": 36,
+   "region": "unassigned",
+   "base": "",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -28471,6 +28494,12 @@
    "anchor": "r-the-class-of-being-joined"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-a-line-holds-and-a-regularity-takes-in",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-a-line-holds-and-a-regularity-takes-in"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -29775,6 +29804,16 @@
   {
    "from": "module:Becoming.GrammarMap",
    "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarPath",
+   "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarPath",
+   "to": "module:Becoming.GrammarMap",
    "type": "imports"
   },
   {
@@ -49318,6 +49357,31 @@
    "type": "related"
   },
   {
+   "from": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "to": "module:Becoming.GrammarPath",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "to": "record:reach-past-ones-own-end",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "to": "record:reach-through-a-shared-condition",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "to": "record:the-class-of-being-joined",
+   "type": "related"
+  },
+  {
    "from": "record:what-a-method-comes-to-say-in-the-limit",
    "to": "module:Becoming.Enough",
    "type": "proved-in"
@@ -53540,6 +53604,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it",
    "to": "record:weights-within-a-ratio-agree-past-it",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-a-line-holds-and-a-regularity-takes-in",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
    "type": "states"
   },
   {

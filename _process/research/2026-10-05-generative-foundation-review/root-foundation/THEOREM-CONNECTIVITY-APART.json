@@ -3671,6 +3671,96 @@
    "module": "Becoming.Grammar",
    "category": "general-structure",
    "reason": "for a class, what shares a position under the two-way core shares abiding; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
+  },
+  "Becoming.«所经不同则不及»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "nothing beyond is reached where the class holds none of what the line must pass: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (Becoming.GrammarPath is a leaf until the owner of Becoming.GrammarCases decides on the proposed corollary)"
+  },
+  "Becoming.«常闭则所缘同类»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "under a constant class, what is alike to a member whose effects it holds conditions only what is alike: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (Becoming.GrammarPath is a leaf until the owner of Becoming.GrammarCases decides on the proposed corollary)"
+  },
+  "Becoming.«常闭则所及皆及»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "under a constant class, a line reaching what is alike to such a member reaches all that follows: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (Becoming.GrammarPath is a leaf until the owner of Becoming.GrammarCases decides on the proposed corollary)"
+  },
+  "Becoming.«常类之闭当且仅当后皆同类»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "under constancy, holding a member's effects is equivalent to all downstream being alike: a law of every relation and class on any carrier, the general form of 07 §4.6's steps 3-4; the base states no line under a class yet, so nothing on it uses this law (Becoming.GrammarPath is a leaf until the owner of Becoming.GrammarCases decides on the proposed corollary)"
+  },
+  "Becoming.Unclosed.constant": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the class of the unclosed witness is constant: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.Unclosed.not_taken_in": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "without holding the member's effects, a constant class does not reach what the condition feeds: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.Inconstant.same_class": {
+   "module": "Becoming.GrammarPath",
+   "category": "support",
+   "reason": "a one-line check that the inconstant witness's relation is a class"
+  },
+  "Becoming.Inconstant.not_all_follow": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "without constancy, even up to the net's end, what follows a held effect need not be alike: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteFamilies.family_narrower": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the family's class is narrower than the one: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteFamilies.one_not_constant": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "in a finite net the one is not constant: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteFamilies.member_not_constant_to_end": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the organism's class is not constant up to the net's end: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteFamilies.family_takes_in_all": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the family's class takes in all downstream of its first birth: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteFamilies.other_family_outside": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "no line leaves its family: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteSharedCondition.held_narrower": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the class holding the families with their condition is narrower than the one: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteSharedCondition.one_not_constant": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "in the finite shared-condition net the one is not constant: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteSharedCondition.member_not_constant_to_end": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the member's class is not constant up to the net's end: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteSharedCondition.reaches_other_past_end": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the line reaches the second family past the first member's end: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.FiniteSharedCondition.fourth_outside": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the line never reaches the fourth thing: a witness of Becoming.GrammarPath (PF)"
   }
  },
  "instances": {

@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-428 registered results: 398 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 977 curated edges join 378 results to the results they draw on.
+429 registered results: 399 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 978 curated edges join 379 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -357,6 +357,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-a-finite-history-refutes][] ← <a id="what-a-finite-history-refutes--becoming-finite-horizon"></a>[becoming-finite-horizon][]
 - [what-a-finite-stretch-verifies][] ← <a id="what-a-finite-stretch-verifies--a-history-read-off-its-finite-stretches"></a>[a-history-read-off-its-finite-stretches][] · <a id="what-a-finite-stretch-verifies--what-a-finite-history-refutes"></a>[what-a-finite-history-refutes][]
 - [what-a-law-of-the-whole-and-no-part-takes][] ← <a id="what-a-law-of-the-whole-and-no-part-takes--sensitivity-is-the-least-coupling"></a>[sensitivity-is-the-least-coupling][] · <a id="what-a-law-of-the-whole-and-no-part-takes--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="what-a-law-of-the-whole-and-no-part-takes--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][]
+- [what-a-line-holds-and-a-regularity-takes-in][] ← <a id="what-a-line-holds-and-a-regularity-takes-in--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
 - [what-a-method-comes-to-say-in-the-limit][] ← <a id="what-a-method-comes-to-say-in-the-limit--what-a-finite-stretch-verifies"></a>[what-a-finite-stretch-verifies][] · <a id="what-a-method-comes-to-say-in-the-limit--what-a-finite-history-refutes"></a>[what-a-finite-history-refutes][] · <a id="what-a-method-comes-to-say-in-the-limit--when-the-runs-of-a-process-settle"></a>[when-the-runs-of-a-process-settle][]
 - [what-a-pools-acts-respond-to][] ← <a id="what-a-pools-acts-respond-to--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="what-a-pools-acts-respond-to--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="what-a-pools-acts-respond-to--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="what-a-pools-acts-respond-to--timely-response-necessity"></a>[timely-response-necessity][]
 - [what-a-rise-draws-from-beyond][] ← <a id="what-a-rise-draws-from-beyond--raising-what-couples-in-draws-from-beyond"></a>[raising-what-couples-in-draws-from-beyond][] · <a id="what-a-rise-draws-from-beyond--entropy-history-and-record"></a>[entropy-history-and-record][] · <a id="what-a-rise-draws-from-beyond--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="what-a-rise-draws-from-beyond--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][]
@@ -768,6 +769,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-a-finite-history-refutes]: theories/becoming/results/records/what-a-finite-history-refutes.md
 [what-a-finite-stretch-verifies]: theories/becoming/results/records/what-a-finite-stretch-verifies.md
 [what-a-law-of-the-whole-and-no-part-takes]: theories/becoming/results/records/what-a-law-of-the-whole-and-no-part-takes.md
+[what-a-line-holds-and-a-regularity-takes-in]: theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.md
 [what-a-method-comes-to-say-in-the-limit]: theories/becoming/results/records/what-a-method-comes-to-say-in-the-limit.md
 [what-a-pools-acts-respond-to]: theories/becoming/results/records/what-a-pools-acts-respond-to.md
 [what-a-rise-draws-from-beyond]: theories/becoming/results/records/what-a-rise-draws-from-beyond.md

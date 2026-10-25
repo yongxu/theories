@@ -1956,6 +1956,11 @@
    "base": "old-base",
    "note": "P126 WLPO calibration"
   },
+  "what-a-line-holds-and-a-regularity-takes-in": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarPath: what a line must hold; a regularity holding a member's effects takes in all that follows"
+  },
   "what-a-method-comes-to-say-in-the-limit": {
    "region": "knowing",
    "base": "general",
