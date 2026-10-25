@@ -965,8 +965,8 @@ Where: 07 §6, the block "When control over the selection is itself selected" ([
 4. **Shared rule-making.**
    - Rule-making whose returns come to every member alike gives shaping no advantage at a step (`RuleShaping.favours_alike`).
    - Where nothing comes back to the shapers alone at any step, a cost selects against shaping over every stretch (`RuleShaping.nothing_back_falls`).
-   - With the same total return, whether it is kept or shared decides the sign (`RuleShaping.Split`).
-   - Where something does come back, the shared part can turn the verdict across a stretch (`RuleShaping.SharedFlips`), so the reading never says that the shared part removes the selection for control however large it is.
+   - With the same total return, whether it is kept or shared decides the sign (`RuleShaping.Split.favours`, `RuleShaping.Split.shared_disfavours`).
+   - Where something does come back, the shared part can turn the verdict across a stretch (`RuleShaping.SharedFlips.without_falls`, `RuleShaping.SharedFlips.with_rises`), so the reading never says that the shared part removes the selection for control however large it is.
 
    That the model's shared part, the same to every member whether shapers are present or not, is what open rule-making gives is the reading.
 
