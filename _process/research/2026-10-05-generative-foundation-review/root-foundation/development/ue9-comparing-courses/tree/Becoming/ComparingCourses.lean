@@ -6,47 +6,67 @@ import Becoming.EventualWideningInstances
 07's open item asks for a comparison of a range whose widening keeps widening with one merely
 wider now, never reversing widening and counting neither novelty nor scale. UE4's lag
 (`LagWitness.lag`) is the case such a comparison should decide and eventual widening cannot.
-Read on what courses admit, three laws locate what it can be there.
+Read on what courses admit, three laws, and a condition with its checks, locate what it can be
+there.
 
-* **Keeping widening over admitting alike closes a cycle.** Two rankings crossed by widening close
-  one: a transitive relation containing widening that ranks `l` above `l'` and `k` above `k'`, where
-  `l'` widens `k` and `k'` widens `l`, ranks `l` above itself (`Web.ranks_self_of_crossed`). On a
-  web of formations on two sides, each requiring its own condition at need one (`Sides.web`), the
-  course admitting at step `t` the formations of one side up to `t` and the course admitting the
-  first of them and every formation of the other side are so crossed with their mirrors under
-  exchanging the sides.
-  - No strict partial order containing widening ranks every course keeping widening by name from
-    the first step above every course that admits alike from the first step, is wider up to the
-    first step and is mixed with it (`Sides.no_order_ranks_keeping_over_alike`): the mirrored pair
-    is in that class too, so no invariance is needed.
+* **On a web of formations on two sides, keeping widening by name over admitting alike closes a
+  cycle.** Two rankings crossed by widening close one: a transitive relation containing widening
+  that ranks `l` above `l'` and `k` above `k'`, where `l'` widens `k` and `k'` widens `l`, ranks `l`
+  above itself (`Web.ranks_self_of_crossed`). On a web of formations on two sides, each requiring
+  its own condition at need one (`Sides.web`), take the course admitting at step `t` the
+  formations of one side up to `t`, and the course admitting the first of them and every formation
+  of the other side. With their mirrors under exchanging the sides they are so crossed: the static
+  course of each pair widens the keeping course of the other
+  (`Sides.firstAndOther_widens_swapped`, `Sides.swapped_widens_growing`), while neither keeping
+  course widens the static course of the other (`Sides.not_growing_widens_swapped`,
+  `Sides.not_swapped_growing_widens`).
+  - On the two-sided web, no strict partial order containing widening ranks every course keeping
+    widening by name from the first step above every course that admits alike from the first
+    step, is wider up to the first step and is mixed with it
+    (`Sides.no_order_ranks_keeping_over_alike`): the mirrored pair is in that class too, so no
+    invariance is needed.
   - For the one pair, a transitive relation containing widening and unchanged by the exchange that
     ranks the growing course above the other ranks it above itself
-    (`Sides.keeping_over_alike_cycles`); without the exchange that one ranking is consistent
-    (`Sides.exchange_needed`). The reverse ranking is consistent with every premise
-    (`Sides.reverse_consistent`), by scale alone among others (`Sides.scale_counts`).
-  - The other course admits infinitely many formations. Where a static course's admissions are held
-    by a list, ranking keeping widening over admitting alike is a strict partial order containing
-    widening on every web (`Web.ListedOrder.irrefl`, `Web.ListedOrder.trans`,
-    `Web.ListedOrder.ranks`); on the two-sided web it ranks the growing course above the first
-    formations of both sides, where widening or eventual widening is silent (`Sides.listed_consistent`).
+    (`Sides.keeping_over_alike_cycles`); without the exchange, a strict partial order containing
+    widening can rank it so (`Sides.exchange_needed`). The reverse ranking is consistent with every
+    premise (`Sides.reverse_consistent`), by scale alone among others (`Sides.scale_counts`).
+  - The static course admits infinitely many formations, and the cycle needs that: where a static
+    course's admissions are held by a list, ranking keeping widening by name over admitting alike
+    is a strict partial order containing widening on every web (`Web.ListedOrder.irrefl`,
+    `Web.ListedOrder.trans`, `Web.ListedOrder.ranks`); on the two-sided web it ranks the growing
+    course above the first formations of both sides, where widening or eventual widening is silent
+    (`Sides.listed_consistent`).
+  - Infinite width does not suffice. On a web whose first side needs one condition at one and whose
+    second side's formation `m` needs another condition at `m + 1`, a static course admitting the
+    whole first side is in the class and no list holds its admissions, yet the ranking is a strict
+    partial order containing widening (`AllOrSegment.unlisted_consistent`): there no static course
+    includes a course keeping widening by name (`AllOrSegment.not_static_includes`).
+  - "By name" is needed. Along the continuation carrying every formation of the own-condition web
+    into formation `0`, two courses keep widening, and two listed static courses, each alike from
+    the first step, wider up to it and mixed with one of them, widen the keeping course of the
+    other; read along it, no strict partial order containing widening ranks every such pair
+    (`AlongMerging.no_order_ranks_along_listed`).
 * **Widening with a lag is a strict partial order that decides the lag.** A course includes
   another with lag `d` when every formation the other admits at a step it admits `d` steps later
   (`Web.IncludesLater`); it widens it with a lag when it includes it with some lag and the other
   includes it with none (`Web.WidensWithLag`). Widening or widening with a lag
   (`Web.WidensOrWithLag`):
-  - is a strict partial order containing widening by one order lemma, the strict part of a preorder
-    joined to a transitive relation inside it (`strictJoin_trans`, `Web.strictJoin_order`);
+  - is a strict partial order containing widening by one order lemma, a transitive relation joined
+    to the strict part of a transitive relation containing it (`strictJoin_trans`,
+    `Web.strictJoin_order`); so are the orders of a lag varying with the formation and of a lag
+    for each admission (`Web.widensOrWithFormationLag_order`, `Web.widensOrEachLater_order`);
   - is unchanged by every renaming constant across steps (`Web.widensOrWithLag_rename`) and by
     exchanging the sides (`Sides.widensOrWithLag_swap`), but compares formations across steps by
     name: a re-identification varying with the step can change its verdict, where widening is
-    unchanged by every re-identification (`Relabel.lag_reads_names`, `Web.widens_reidentify`).
-    Along a continuation the lagged order is unchanged by every re-identification carrying it, and
-    by name it is this order (`Web.widensOrWithLagAlong_reidentify`,
-    `Web.widensOrWithLagAlong_itself_iff`);
+    unchanged by every re-identification (`NamesAcrossSteps.lag_reads_names`,
+    `Web.widens_reidentify`). Along a continuation the lagged order is unchanged by every
+    re-identification carrying it, and by name it is this order
+    (`Web.widensOrWithLagAlong_reidentify`, `Web.widensOrWithLagAlong_itself_iff`);
   - decides the lag (`LagWitness.decided`), as do lags varying with the formation or with each
     admission (`LagWitness.formationLag_decides`, `LagWitness.eachLag_decides`) and the tail
-    order, inclusion with a lag from some step on joined to widening or eventual widening, which
-    contains eventual widening (`Web.tailOrder_order`, `LagWitness.tailOrder_decides`);
+    order, the strict part of inclusion with a lag from some step on joined to widening or
+    eventual widening, which contains eventual widening (`Web.tailOrder_order`,
+    `LagWitness.tailOrder_decides`);
   - is silent both ways on the two-sided pair, neither including the other at any lag
     (`Sides.silent`).
   Widening with a lag alone does not contain widening (`Delayed.widens_not_withLag`).
@@ -62,8 +82,11 @@ Read on what courses admit, three laws locate what it can be there.
 * **Keeping what the other keeps.** Widening or widening with a lag, and the tail order, rank a
   course above another only where it keeps admitting, from some step on, every formation the other
   keeps admitting from some step on (`Web.KeepsWhatKept`, `Web.WidensOrWithLag.keepsWhatKept`,
-  `Web.TailOrder.keepsWhatKept`). Under that condition the two-sided pair is unranked both ways and
-  the listed ranking of the growing course above the first formations is excluded
+  `Web.TailOrder.keepsWhatKept`), and so does the order of a lag varying with the formation
+  (`Web.WidensOrWithFormationLag.keepsWhatKept`). The order of a lag for each admission does not:
+  it ranks a course above one that keeps a formation the first drops
+  (`EachLagDrops.eachLag_not_keeping`). Under that condition the two-sided pair is unranked both
+  ways and the listed ranking of the growing course above the first formations is excluded
   (`Sides.keeping_reading`).
 
 Each law is a theorem for every web or a witness on a web of whole-number amounts and discrete
@@ -74,7 +97,8 @@ namespace Becoming
 
 variable {F F' C : Type}
 
-/-- **The strict part of a preorder, joined to a transitive relation inside it, is transitive.** -/
+/-- **A transitive relation joined to the strict part of a transitive relation containing it is
+transitive.** -/
 theorem strictJoin_trans {α : Type} {S P : α → α → Prop}
     (sTrans : ∀ {a b c}, S a b → S b c → S a c) (pTrans : ∀ {a b c}, P a b → P b c → P a c)
     (within : ∀ {a b}, S a b → P a b) {a b c : α} :
@@ -126,8 +150,8 @@ end Lag
 
 variable {W : Web F C} {l l' l'' : Nat → C → Nat}
 
-/-- **Widening joined to the strict part of a preorder containing inclusion is a strict partial
-order containing widening.** -/
+/-- **Widening joined to the strict part of a transitive relation containing inclusion is a
+strict partial order containing widening.** -/
 theorem strictJoin_order {P : (Nat → C → Nat) → (Nat → C → Nat) → Prop}
     (trans : ∀ {a b c}, P a b → P b c → P a c) (includes : ∀ {a b}, W.Includes a b → P a b) :
     (∀ a, ¬ (W.Widens a a ∨ (P a a ∧ ¬ P a a))) ∧
@@ -231,8 +255,8 @@ theorem not_listed_includes_keeping {k s : Nat → C → Nat} (keeps : W.KeepsWi
           (length_le_of_sub distinct fun f mem =>
             within f ((alike S f (Nat.zero_le S)).mp (includes S f (all f mem)))))
 
-/-- Widening, with every course including a course that keeps widening put above every course
-included in a listed static course of the class. -/
+/-- Widening, with every course including a course that keeps widening by name put above every
+course included in a listed static course of the class. -/
 def ListedOrder (W : Web F C) (a b : Nat → C → Nat) : Prop :=
   W.Widens a b ∨ ∃ k s, W.Includes a k ∧ KeepingOverListedAlike W k s ∧ W.Includes s b
 
@@ -288,6 +312,33 @@ theorem IncludesEachLater.trans (first : W.IncludesEachLater l l')
 
 theorem IncludesEachLater.of_includes (includes : W.Includes l l') : W.IncludesEachLater l l' :=
   fun t f admitted => ⟨0, includes t f admitted⟩
+
+/-- Widening, or the strict part of inclusion with a lag varying with the formation. -/
+def WidensOrWithFormationLag (W : Web F C) (l l' : Nat → C → Nat) : Prop :=
+  W.Widens l l' ∨ (W.IncludesWithFormationLag l l' ∧ ¬ W.IncludesWithFormationLag l' l)
+
+/-- Widening, or the strict part of inclusion with a lag for each admission. -/
+def WidensOrEachLater (W : Web F C) (l l' : Nat → C → Nat) : Prop :=
+  W.Widens l l' ∨ (W.IncludesEachLater l l' ∧ ¬ W.IncludesEachLater l' l)
+
+/-- **With a lag varying with the formation, a strict partial order containing widening**
+(`strictJoin_order`). -/
+theorem widensOrWithFormationLag_order :
+    (∀ a, ¬ W.WidensOrWithFormationLag a a) ∧
+      (∀ {a b c}, W.WidensOrWithFormationLag a b → W.WidensOrWithFormationLag b c →
+        W.WidensOrWithFormationLag a c) ∧
+      (∀ {a b}, W.Widens a b → W.WidensOrWithFormationLag a b) :=
+  strictJoin_order (W := W) (P := W.IncludesWithFormationLag) IncludesWithFormationLag.trans
+    IncludesWithFormationLag.of_includes
+
+/-- **With a lag for each admission, a strict partial order containing widening**
+(`strictJoin_order`). -/
+theorem widensOrEachLater_order :
+    (∀ a, ¬ W.WidensOrEachLater a a) ∧
+      (∀ {a b c}, W.WidensOrEachLater a b → W.WidensOrEachLater b c → W.WidensOrEachLater a c) ∧
+      (∀ {a b}, W.Widens a b → W.WidensOrEachLater a b) :=
+  strictJoin_order (W := W) (P := W.IncludesEachLater) IncludesEachLater.trans
+    IncludesEachLater.of_includes
 
 /-- **Widening or widening with a lag loses nothing for good**: what the other admits at a step,
 the course admits at that step or a later one. -/
@@ -525,6 +576,24 @@ theorem WidensOrWithLag.keepsWhatKept : W.WidensOrWithLag l l' → W.KeepsWhatKe
       KeepsWhatKept.of_includesLaterFrom (T₀ := 0) (d := d)
         (fun t f _ admitted => includes t f admitted)
 
+/-- A lag varying with the formation keeps what the other keeps. -/
+theorem IncludesWithFormationLag.keepsWhatKept (lagged : W.IncludesWithFormationLag l l') :
+    W.KeepsWhatKept l l' :=
+  match lagged with
+  | ⟨d, includes⟩ => fun f ⟨T, kept⟩ => ⟨T + d f, fun _ le => match le_dest le with
+    | ⟨k, same⟩ =>
+      have shifted : W.Admits (l (T + k + d f)) (T + k + d f) f :=
+        includes (T + k) f (kept (T + k) (Nat.le_add_right T k))
+      Eq.subst (motive := fun x => W.Admits (l x) x f)
+        ((Nat.add_right_comm T k (d f)).trans same.symm) shifted⟩
+
+/-- So does widening or the strict part of inclusion with a lag varying with the formation. -/
+theorem WidensOrWithFormationLag.keepsWhatKept :
+    W.WidensOrWithFormationLag l l' → W.KeepsWhatKept l l'
+  | .inl widens =>
+      KeepsWhatKept.of_includesFrom (T₀ := 0) (fun t f _ admitted => widens.1 t f admitted)
+  | .inr ⟨lagged, _⟩ => lagged.keepsWhatKept
+
 end Web
 
 open Web
@@ -646,6 +715,16 @@ theorem swap_firstAndOther_false {t n : Nat} :
   ⟨fun admitted => firstAndOther_true.mp (swap_false.mp admitted),
    fun le => swap_false.mpr (firstAndOther_true.mpr le)⟩
 
+/-- The growing course does not widen the mirror of the other course. -/
+theorem not_growing_widens_swapped : ¬ web.Widens growing (swap firstAndOther) :=
+  fun widens =>
+    Nat.not_succ_le_zero 4 (growing_true.mp (widens.1 0 (true, 5) swap_firstAndOther_true))
+
+/-- The mirror of the growing course does not widen the other course. -/
+theorem not_swapped_growing_widens : ¬ web.Widens (swap growing) firstAndOther :=
+  fun widens =>
+    not_swap_growing_true (widens.1 0 (true, 0) (firstAndOther_true.mpr (Nat.le_refl 0)))
+
 /-- The mirror of the growing course keeps widening by name from the first step. -/
 theorem swap_growing_keepsWidening : web.KeepsWidening itself (swap growing) 0 :=
   ⟨fun _ _ _ later => (includesAcross_itself_iff later).mpr fun f admitted => match f with
@@ -673,9 +752,9 @@ theorem swap_mixed : web.Mixed (swap growing) (swap firstAndOther) :=
     fun admitted => Nat.not_succ_le_zero 0 (swap_firstAndOther_false.mp admitted)⟩,
    ⟨0, (true, 0), swap_firstAndOther_true, not_swap_growing_true⟩⟩
 
-/-- **No strict partial order containing widening ranks keeping widening over admitting alike.**
-The mirrored pair is in the class too, and each course widens the other's mirror, so no invariance
-is needed. -/
+/-- **On the two-sided web, no strict partial order containing widening ranks keeping widening by
+name over admitting alike.** The mirrored pair is in the class too, and the static course of each
+pair widens the keeping course of the other, so no invariance is needed. -/
 theorem no_order_ranks_keeping_over_alike
     {R : (Nat → Bool × Nat → Nat) → (Nat → Bool × Nat → Nat) → Prop}
     (irrefl : ∀ a, ¬ R a a) (trans : ∀ {a b c}, R a b → R b c → R a c)
@@ -710,7 +789,7 @@ theorem not_firstAndOther_includes : ¬ web.Includes firstAndOther growing :=
     (firstAndOther_true.mp (includes 1 (true, 1) (growing_true.mpr (Nat.le_refl 1))))
 
 /-- **For one pair the exchange is needed**: without it, a strict partial order containing
-widening ranks the growing course above the other. -/
+widening can rank the growing course above the other, as this one does. -/
 theorem exchange_needed :
     (∀ a, ¬ onePair a a) ∧ (∀ {a b c}, onePair a b → onePair b c → onePair a c) ∧
       (∀ {a b}, web.Widens a b → onePair a b) ∧ onePair growing firstAndOther :=
@@ -832,7 +911,7 @@ theorem reverseOrder_exchanged {a b : Nat → Bool × Nat → Nat} :
   | .inr ⟨above, below⟩ => .inr ⟨Above.mirror above, Below.mirror below⟩
 
 /-- **The cycle forbids one verdict only.** A strict partial order containing widening and
-unchanged by the exchange ranks the other course above the growing one. -/
+unchanged by the exchange can rank the other course above the growing one, as this one does. -/
 theorem reverse_consistent :
     (∀ a, ¬ reverseOrder a a) ∧
       (∀ {a b c}, reverseOrder a b → reverseOrder b c → reverseOrder a c) ∧
@@ -871,10 +950,11 @@ theorem growing_over_firsts : KeepingOverListedAlike web growing firsts :=
       | (false, 0) => .tail _ (.head _)
       | (_, _ + 1) => absurd admitted not_firsts_succ⟩⟩
 
-/-- **With listed static courses the ranking is consistent.** Ranking keeping widening over
+/-- **With listed static courses the ranking is consistent.** Ranking keeping widening by name over
 admitting alike, restricted to static courses whose admissions a list holds, is a strict partial
-order containing widening on every web; here it ranks the growing course above the first formations
-of both sides, where widening or eventual widening is silent both ways. -/
+order containing widening on every web (`Web.ListedOrder.irrefl`, `Web.ListedOrder.trans`,
+`Web.ListedOrder.ranks`); here, on the two-sided web, it ranks the growing course above the first
+formations of both sides, where widening or eventual widening is silent both ways. -/
 theorem listed_consistent :
     (∀ a, ¬ ListedOrder web a a) ∧
       (∀ {a b c}, ListedOrder web a b → ListedOrder web b c → ListedOrder web a c) ∧
@@ -1006,6 +1086,358 @@ theorem scale_counts :
 
 end Sides
 
+/-! ## Infinite width does not suffice
+
+Here the first side is all or nothing and the second side an initial segment: a static course can
+admit every formation of the first side, which no list holds, but no static course includes a
+course keeping widening by name, so ranking keeping widening over admitting alike is a strict
+partial order containing widening. -/
+
+namespace AllOrSegment
+
+/-- The first side's formations need condition `true` at one; formation `(false, m)` needs
+condition `false` at `m + 1`. -/
+def needOf : Bool × Nat → Nat
+  | (true, _) => 1
+  | (false, m) => m + 1
+
+/-- Formations on two sides, each side requiring its own condition. -/
+def web : Web (Bool × Nat) Bool :=
+  ⟨fun _ _ => 0, fun _ _ => True, fun _ f c => c = f.1, fun _ f _ => needOf f, fun _ _ _ => False⟩
+
+theorem admits_iff {m : Bool → Nat} {t : Nat} {f : Bool × Nat} :
+    web.Admits m t f ↔ needOf f ≤ m f.1 :=
+  ⟨fun admitted => admitted f.1 rfl,
+   fun le _ same => Eq.subst (motive := fun x => needOf f ≤ m x) same.symm le⟩
+
+/-- Admitting one formation of the first side admits them all. -/
+theorem firstSide_all {m : Bool → Nat} {t n n' : Nat} (admitted : web.Admits m t (true, n)) :
+    web.Admits m t (true, n') :=
+  (admits_iff (t := t) (f := (true, n'))).mpr ((admits_iff (t := t) (f := (true, n))).mp admitted)
+
+/-- After every step, a course keeping widening by name opens on the second side. -/
+theorem secondSide_opening {k : Nat → Bool → Nat} (keeps : web.KeepsWidening itself k 0)
+    (S : Nat) :
+    ∃ U, S ≤ U ∧ ∃ m, web.Admits (k U) U (false, m) ∧ ¬ web.Admits (k S) S (false, m) :=
+  match keeps.2 S (Nat.zero_le S) with
+  | ⟨U, le, exceeds⟩ => match (exceedsAcross_itself_iff le).mp exceeds with
+    | ⟨(false, m), admitted, before⟩ => ⟨U, le, m, admitted, before⟩
+    | ⟨(true, _), admitted, _⟩ => match keeps.2 U (Nat.zero_le U) with
+      | ⟨U', le', exceeds'⟩ => match (exceedsAcross_itself_iff le').mp exceeds' with
+        | ⟨(true, _), _, before'⟩ => absurd (firstSide_all admitted) before'
+        | ⟨(false, m), admitted', before'⟩ =>
+          ⟨U', Nat.le_trans le le', m, admitted', fun earlier =>
+            before' ((includesAcross_itself_iff le).mp (keeps.1 S U (Nat.zero_le S) le) _ earlier)⟩
+
+/-- A course keeping widening by name admits every formation of the second side at some step. -/
+theorem reaches_secondSide {k : Nat → Bool → Nat} (keeps : web.KeepsWidening itself k 0) :
+    ∀ n, ∃ S, web.Admits (k S) S (false, n)
+  | 0 => match secondSide_opening keeps 0 with
+    | ⟨U, _, m, admitted, _⟩ =>
+      ⟨U, admits_iff.mpr (Nat.le_trans (Nat.succ_le_succ (Nat.zero_le m)) (admits_iff.mp admitted))⟩
+  | n + 1 => match reaches_secondSide keeps n with
+    | ⟨S, at_S⟩ => match secondSide_opening keeps S with
+      | ⟨U, _, m, admitted, before⟩ =>
+        have below : k S false < m + 1 :=
+          Nat.gt_of_not_le fun le => before (admits_iff.mpr le)
+        have lt : n + 1 < m + 1 := Nat.lt_of_le_of_lt (admits_iff.mp at_S) below
+        ⟨U, admits_iff.mpr (Nat.le_trans lt (admits_iff.mp admitted))⟩
+
+/-- No static course includes a course keeping widening by name. -/
+theorem not_static_includes {k s : Nat → Bool → Nat} (keeps : web.KeepsWidening itself k 0)
+    (alike : web.AdmitsAlikeFrom s 0) (includes : web.Includes s k) : False :=
+  match reaches_secondSide keeps (s 0 false) with
+  | ⟨S, admitted⟩ =>
+    Nat.not_succ_le_self (s 0 false)
+      (admits_iff.mp ((alike S (false, s 0 false) (Nat.zero_le S)).mp (includes S _ admitted)))
+
+/-- The class of `Web.RanksKeepingOverAlike`. -/
+def KeepingOverAlike (k s : Nat → Bool → Nat) : Prop :=
+  web.KeepsWidening itself k 0 ∧ web.AdmitsAlikeFrom s 0 ∧ web.WidensUpTo 0 s k ∧ web.Mixed k s
+
+/-- Widening, with every course including a keeping course put above every course its static
+course includes. -/
+def ClassOrder (a b : Nat → Bool → Nat) : Prop :=
+  web.Widens a b ∨ ∃ k s, web.Includes a k ∧ KeepingOverAlike k s ∧ web.Includes s b
+
+theorem ClassOrder.irrefl (a : Nat → Bool → Nat) : ¬ ClassOrder a a
+  | .inl widens => widens.not_reverse widens
+  | .inr ⟨_, _, ak, ⟨keeps, alike, _, _⟩, sa⟩ => not_static_includes keeps alike (sa.trans ak)
+
+theorem ClassOrder.trans {a b c : Nat → Bool → Nat} :
+    ClassOrder a b → ClassOrder b c → ClassOrder a c
+  | .inl first, .inl second => .inl (first.trans second)
+  | .inl first, .inr ⟨k, s, bk, pair, sc⟩ => .inr ⟨k, s, first.1.trans bk, pair, sc⟩
+  | .inr ⟨k, s, ak, pair, sb⟩, .inl second => .inr ⟨k, s, ak, pair, sb.trans second.1⟩
+  | .inr ⟨_, _, _, ⟨_, alike, _, _⟩, sb⟩, .inr ⟨_, _, bk, ⟨keeps, _, _, _⟩, _⟩ =>
+      (not_static_includes keeps alike (sb.trans bk)).elim
+
+/-- The second side rising: `(false, m)` admitted at step `t` for `m ≤ t`. -/
+def rising (t : Nat) : Bool → Nat
+  | true => 0
+  | false => t + 1
+
+/-- Every formation of the first side, and `(false, 0)`, at every step. -/
+def wide (_ : Nat) : Bool → Nat
+  | true => 1
+  | false => 1
+
+theorem rising_keeps : web.KeepsWidening itself rising 0 :=
+  ⟨fun _ _ _ le => (includesAcross_itself_iff le).mpr fun f admitted => match f with
+      | (true, _) => absurd (admits_iff.mp admitted) (Nat.not_succ_le_zero 0)
+      | (false, _) => admits_iff.mpr (Nat.le_trans (admits_iff.mp admitted) (Nat.succ_le_succ le)),
+   fun S _ => ⟨S + 1, Nat.le_succ S, (exceedsAcross_itself_iff (Nat.le_succ S)).mpr
+      ⟨(false, S + 1), admits_iff.mpr (Nat.le_refl _),
+       fun admitted => Nat.not_succ_le_self (S + 1) (admits_iff.mp admitted)⟩⟩⟩
+
+/-- The rising course and the wide one are in the class. -/
+theorem rising_over_wide : KeepingOverAlike rising wide :=
+  ⟨rising_keeps, fun _ _ _ => Iff.rfl,
+   ⟨fun _ f le admitted => match f with
+      | (true, _) => absurd (admits_iff.mp admitted) (Nat.not_succ_le_zero 0)
+      | (false, _) => admits_iff.mpr (Nat.le_trans (admits_iff.mp admitted) (Nat.succ_le_succ le)),
+    ⟨0, (true, 0), Nat.le_refl 0, admits_iff.mpr (Nat.le_refl 1),
+     fun admitted => Nat.not_succ_le_zero 0 (admits_iff.mp admitted)⟩⟩,
+   ⟨⟨1, (false, 1), admits_iff.mpr (Nat.le_refl 2),
+     fun admitted => Nat.not_succ_le_self 1 (admits_iff.mp admitted)⟩,
+    ⟨0, (true, 0), admits_iff.mpr (Nat.le_refl 1),
+     fun admitted => Nat.not_succ_le_zero 0 (admits_iff.mp admitted)⟩⟩⟩
+
+/-- The first side's formations below `n`. -/
+def firstSide : Nat → List (Bool × Nat)
+  | 0 => []
+  | n + 1 => (true, n) :: firstSide n
+
+theorem firstSide_below : ∀ {n : Nat} {f : Bool × Nat}, f ∈ firstSide n → f.2 < n
+  | 0, _, mem => nomatch mem
+  | n + 1, _, mem => match mem_cons_cases mem with
+    | .inl same => Eq.subst (motive := fun x => Prod.snd x < n + 1) same.symm (Nat.lt_succ_self n)
+    | .inr rest => Nat.lt_trans (firstSide_below rest) (Nat.lt_succ_self n)
+
+theorem firstSide_distinct : ∀ n, Distinct (firstSide n)
+  | 0 => trivial
+  | n + 1 => ⟨fun mem => Nat.lt_irrefl n (firstSide_below mem), firstSide_distinct n⟩
+
+theorem firstSide_length : ∀ n, (firstSide n).length = n
+  | 0 => rfl
+  | n + 1 => congrArg Nat.succ (firstSide_length n)
+
+theorem firstSide_fst : ∀ {n : Nat} {f : Bool × Nat}, f ∈ firstSide n → f.1 = true
+  | 0, _, mem => nomatch mem
+  | _ + 1, _, mem => match mem_cons_cases mem with
+    | .inl same => congrArg Prod.fst same
+    | .inr rest => firstSide_fst rest
+
+/-- The wide course admits every formation of the first side: no list holds its admissions. -/
+theorem wide_not_listed : ¬ ∃ xs : List (Bool × Nat), ∀ f, web.Admits (wide 0) 0 f → f ∈ xs :=
+  fun ⟨xs, within⟩ =>
+    Nat.not_succ_le_self xs.length
+      (Eq.subst (motive := fun n => n ≤ xs.length) (firstSide_length (xs.length + 1))
+        (length_le_of_sub (firstSide_distinct (xs.length + 1)) fun f mem =>
+          match f, firstSide_fst mem with
+          | (true, _), _ => within _ (admits_iff.mpr (Nat.le_refl 1))
+          | (false, _), same => Bool.noConfusion same))
+
+/-- **Infinite width does not suffice.** On this web a pair of the class has a static course no
+list holds, and yet a strict partial order containing widening ranks every pair of the class. -/
+theorem unlisted_consistent :
+    KeepingOverAlike rising wide ∧
+      (¬ ∃ xs : List (Bool × Nat), ∀ f, web.Admits (wide 0) 0 f → f ∈ xs) ∧
+      (∀ a, ¬ ClassOrder a a) ∧ (∀ {a b c}, ClassOrder a b → ClassOrder b c → ClassOrder a c) ∧
+      (∀ {a b}, web.Widens a b → ClassOrder a b) ∧ web.RanksKeepingOverAlike ClassOrder :=
+  ⟨rising_over_wide, wide_not_listed, ClassOrder.irrefl, ClassOrder.trans,
+   fun widens => .inl widens,
+   fun l l' keeps alike wider mixed => .inr ⟨l, l', Includes.refl l, ⟨keeps, alike, wider, mixed⟩,
+     Includes.refl l'⟩⟩
+
+end AllOrSegment
+
+/-! ## By name: along a merging continuation, listed static courses close the cycle
+
+07 §2 reads keeping widening along a continuation (`Web.KeepsWidening R`). Along the continuation
+carrying every formation into formation `0`, four courses on the own-condition web cross, the
+static ones alike from the first step and listed, so the listed scope of the ranking needs keeping
+widening by name. -/
+
+namespace AlongMerging
+
+open OwnCondition
+
+/-- Every formation continues into formation `0`. -/
+def intoZero : Nat → Nat → Nat → Prop := fun _ _ f => f = 0
+
+/-- A chain along `intoZero` stays put or ends at `0`. -/
+theorem linked_cases : ∀ {s g u h : Nat},
+    Linked intoZero s g u h → (s = u ∧ g = h) ∨ (s < u ∧ h = 0)
+  | _, _, _, _, .here _ _ => .inl ⟨rfl, rfl⟩
+  | s, _, _, _, .next step rest => match linked_cases rest with
+    | .inl ⟨same, same'⟩ =>
+      .inr ⟨Eq.subst (motive := fun x => s < x) same (Nat.lt_succ_self s), same'.symm.trans step⟩
+    | .inr ⟨lt, zero⟩ => .inr ⟨Nat.lt_trans (Nat.lt_succ_self s) lt, zero⟩
+
+/-- Every formation is linked to `0` at every later step. -/
+theorem linked_to_zero (s g : Nat) : ∀ k, Linked intoZero s g (s + (k + 1)) 0
+  | 0 => .next rfl (.here (s + 1) 0)
+  | k + 1 => Linked.append (linked_to_zero s g k) (.next rfl (.here (s + (k + 1) + 1) 0))
+
+/-- A formation other than `0` one step on is linked to nothing. -/
+theorem not_linked_succ {s f g : Nat} (linked : Linked intoZero s f (s + 1) (g + 1)) : False :=
+  match linked_cases linked with
+  | .inl ⟨same, _⟩ =>
+    Nat.lt_irrefl s (Eq.subst (motive := fun x => s < x) same.symm (Nat.lt_succ_self s))
+  | .inr ⟨_, zero⟩ => Nat.noConfusion zero
+
+/-- A course admitting formation `0` at every step includes along `intoZero` across every
+stretch. -/
+theorem includesAcross_of_zero {l : Nat → Nat → Nat} (zero : ∀ t, 0 < l t 0) :
+    web.IncludesAcrossFrom intoZero l 0 :=
+  fun S U _ le f admitted => match exists_steps_between le with
+    | ⟨0, same⟩ => ⟨f, Eq.subst (motive := fun x => Linked intoZero S f x f) same.symm (.here S f),
+        Eq.subst (motive := fun x => web.Admits (l x) x f) same.symm admitted⟩
+    | ⟨k + 1, same⟩ =>
+      ⟨0, Eq.subst (motive := fun x => Linked intoZero S f x 0) same.symm (linked_to_zero S f k),
+       admits_iff.mpr (zero U)⟩
+
+theorem not_admits_of_zero {m : Nat → Nat} {t f : Nat} (zero : m f = 0) : ¬ web.Admits m t f :=
+  fun admitted =>
+    Nat.lt_irrefl 0 (Eq.subst (motive := fun x => 0 < x) zero (admits_iff.mp admitted))
+
+theorem admits_of_one {m : Nat → Nat} {t f : Nat} (one : m f = 1) : web.Admits m t f :=
+  admits_iff.mpr (Eq.subst (motive := fun x => 0 < x) one.symm Nat.zero_lt_one)
+
+/-- Formations `0` and `1` at step `0`, `0` and `2` after. -/
+def keepingA (t : Nat) : Nat → Nat
+  | 0 => 1
+  | 1 => rung t 0
+  | 2 => rung 1 t
+  | _ + 3 => 0
+
+/-- Formations `0` and `3` at step `0`, `0` and `4` after. -/
+def keepingB (t : Nat) : Nat → Nat
+  | 0 => 1
+  | 1 => 0
+  | 2 => 0
+  | 3 => rung t 0
+  | 4 => rung 1 t
+  | _ + 5 => 0
+
+/-- Formations `0`, `1`, `3`, `4` at every step. -/
+def staticA (_ : Nat) : Nat → Nat
+  | 0 => 1
+  | 1 => 1
+  | 2 => 0
+  | 3 => 1
+  | 4 => 1
+  | _ + 5 => 0
+
+/-- Formations `0`, `1`, `2`, `3` at every step. -/
+def staticB (_ : Nat) : Nat → Nat
+  | 0 => 1
+  | 1 => 1
+  | 2 => 1
+  | 3 => 1
+  | _ + 4 => 0
+
+theorem keepingA_keeps : web.KeepsWidening intoZero keepingA 0 :=
+  ⟨includesAcross_of_zero fun _ => Nat.zero_lt_one,
+   fun S _ => ⟨S + 1, Nat.le_succ S,
+     ⟨2, admits_of_one rfl, fun _ linked _ => not_linked_succ linked⟩⟩⟩
+
+theorem keepingB_keeps : web.KeepsWidening intoZero keepingB 0 :=
+  ⟨includesAcross_of_zero fun _ => Nat.zero_lt_one,
+   fun S _ => ⟨S + 1, Nat.le_succ S,
+     ⟨4, admits_of_one rfl, fun _ linked _ => not_linked_succ linked⟩⟩⟩
+
+theorem staticA_wider_first : web.WidensUpTo 0 staticA keepingA :=
+  ⟨fun t f le admitted => match t, f, le, admitted with
+     | 0, 0, _, _ => admits_of_one rfl
+     | 0, 1, _, _ => admits_of_one rfl
+     | 0, 2, _, admitted => absurd admitted (not_admits_of_zero rfl)
+     | 0, 3, _, _ => admits_of_one rfl
+     | 0, _ + 4, _, admitted => absurd admitted (not_admits_of_zero rfl)
+     | t + 1, _, le, _ => absurd le (Nat.not_succ_le_zero t),
+   ⟨0, 3, Nat.le_refl 0, admits_of_one rfl, not_admits_of_zero rfl⟩⟩
+
+theorem staticB_wider_first : web.WidensUpTo 0 staticB keepingB :=
+  ⟨fun t f le admitted => match t, f, le, admitted with
+     | 0, 0, _, _ => admits_of_one rfl
+     | 0, 1, _, _ => admits_of_one rfl
+     | 0, 2, _, _ => admits_of_one rfl
+     | 0, 3, _, _ => admits_of_one rfl
+     | 0, 4, _, admitted => absurd admitted (not_admits_of_zero rfl)
+     | 0, _ + 5, _, admitted => absurd admitted (not_admits_of_zero rfl)
+     | t + 1, _, le, _ => absurd le (Nat.not_succ_le_zero t),
+   ⟨0, 1, Nat.le_refl 0, admits_of_one rfl, not_admits_of_zero rfl⟩⟩
+
+theorem mixedA : web.Mixed keepingA staticA :=
+  ⟨⟨1, 2, admits_of_one rfl, not_admits_of_zero rfl⟩,
+   ⟨0, 3, admits_of_one rfl, not_admits_of_zero rfl⟩⟩
+
+theorem mixedB : web.Mixed keepingB staticB :=
+  ⟨⟨1, 4, admits_of_one rfl, not_admits_of_zero rfl⟩,
+   ⟨0, 1, admits_of_one rfl, not_admits_of_zero rfl⟩⟩
+
+theorem listedA : ∃ xs : List Nat, ∀ f, web.Admits (staticA 0) 0 f → f ∈ xs :=
+  ⟨[0, 1, 3, 4], fun f admitted => match f with
+    | 0 => .head _
+    | 1 => .tail _ (.head _)
+    | 2 => absurd admitted (not_admits_of_zero rfl)
+    | 3 => .tail _ (.tail _ (.head _))
+    | 4 => .tail _ (.tail _ (.tail _ (.head _)))
+    | _ + 5 => absurd admitted (not_admits_of_zero rfl)⟩
+
+theorem listedB : ∃ xs : List Nat, ∀ f, web.Admits (staticB 0) 0 f → f ∈ xs :=
+  ⟨[0, 1, 2, 3], fun f admitted => match f with
+    | 0 => .head _
+    | 1 => .tail _ (.head _)
+    | 2 => .tail _ (.tail _ (.head _))
+    | 3 => .tail _ (.tail _ (.tail _ (.head _)))
+    | _ + 4 => absurd admitted (not_admits_of_zero rfl)⟩
+
+/-- The static course of the first pair widens the keeping course of the second. -/
+theorem staticA_widens_keepingB : web.Widens staticA keepingB :=
+  ⟨fun _ f admitted => match f with
+     | 0 => admits_of_one rfl
+     | 1 => absurd admitted (not_admits_of_zero rfl)
+     | 2 => absurd admitted (not_admits_of_zero rfl)
+     | 3 => admits_of_one rfl
+     | 4 => admits_of_one rfl
+     | _ + 5 => absurd admitted (not_admits_of_zero rfl),
+   ⟨0, 1, admits_of_one rfl, not_admits_of_zero rfl⟩⟩
+
+/-- The static course of the second pair widens the keeping course of the first. -/
+theorem staticB_widens_keepingA : web.Widens staticB keepingA :=
+  ⟨fun _ f admitted => match f with
+     | 0 => admits_of_one rfl
+     | 1 => admits_of_one rfl
+     | 2 => admits_of_one rfl
+     | _ + 3 => absurd admitted (not_admits_of_zero rfl),
+   ⟨0, 3, admits_of_one rfl, not_admits_of_zero rfl⟩⟩
+
+/-- The class with keeping widening read along `intoZero` and the static course listed. -/
+def KeepingAlongOverListedAlike (k s : Nat → Nat → Nat) : Prop :=
+  web.KeepsWidening intoZero k 0 ∧ web.AdmitsAlikeFrom s 0 ∧ web.WidensUpTo 0 s k ∧
+    web.Mixed k s ∧ ∃ xs : List Nat, ∀ f, web.Admits (s 0) 0 f → f ∈ xs
+
+theorem pairA : KeepingAlongOverListedAlike keepingA staticA :=
+  ⟨keepingA_keeps, fun _ _ _ => Iff.rfl, staticA_wider_first, mixedA, listedA⟩
+
+theorem pairB : KeepingAlongOverListedAlike keepingB staticB :=
+  ⟨keepingB_keeps, fun _ _ _ => Iff.rfl, staticB_wider_first, mixedB, listedB⟩
+
+/-- **With keeping widening read along a continuation, listing does not save the ranking.** No
+strict partial order containing widening ranks every course keeping widening along `intoZero` above
+every listed static course that admits alike from the first step, was wider up to it and is mixed
+with it. -/
+theorem no_order_ranks_along_listed {R : (Nat → Nat → Nat) → (Nat → Nat → Nat) → Prop}
+    (irrefl : ∀ a, ¬ R a a) (trans : ∀ {a b c}, R a b → R b c → R a c)
+    (widening : ∀ {a b}, web.Widens a b → R a b)
+    (ranks : ∀ k s, KeepingAlongOverListedAlike k s → R k s) : False :=
+  irrefl keepingA (ranks_self_of_crossed trans widening staticA_widens_keepingB
+    staticB_widens_keepingA (ranks keepingA staticA pairA) (ranks keepingB staticB pairB))
+
+end AlongMerging
+
 /-! ## Widening with a lag decides the lag -/
 
 namespace LagWitness
@@ -1097,6 +1529,92 @@ theorem widens_not_withLag :
   ⟨rising_widens, fun widens => widens.2 ⟨1, lagging_includes⟩⟩
 
 end Delayed
+
+/-! ## A lag for each admission can drop what the other keeps
+
+On the own-condition web `steady` admits formation `0` at every step; `alternate` admits it at even
+steps only, and formation `1` at step `0`. The order of a lag for each admission ranks `alternate`
+above `steady`, though `alternate` does not keep what `steady` keeps; a uniform lag or a lag varying
+with the formation never ranks so. -/
+
+namespace EachLagDrops
+
+open OwnCondition
+
+/-- One at even steps, zero at odd ones. -/
+def evenLevel : Nat → Nat
+  | 0 => 1
+  | 1 => 0
+  | n + 2 => evenLevel n
+
+theorem even_or_next : ∀ t, 0 < evenLevel t ∨ 0 < evenLevel (t + 1)
+  | 0 => .inl Nat.zero_lt_one
+  | 1 => .inr Nat.zero_lt_one
+  | n + 2 => even_or_next n
+
+theorem odd_or_next : ∀ t, evenLevel t = 0 ∨ evenLevel (t + 1) = 0
+  | 0 => .inr rfl
+  | 1 => .inl rfl
+  | n + 2 => odd_or_next n
+
+/-- Formation `0` at every step. -/
+def steady (_ : Nat) : Nat → Nat
+  | 0 => 1
+  | _ + 1 => 0
+
+/-- Formation `0` at even steps, and formation `1` at step `0`. -/
+def alternate (t : Nat) : Nat → Nat
+  | 0 => evenLevel t
+  | 1 => rung t 0
+  | _ + 2 => 0
+
+theorem steady_zero {t : Nat} : web.Admits (steady t) t 0 :=
+  admits_iff.mpr Nat.zero_lt_one
+
+theorem steady_only {t f : Nat} (admitted : web.Admits (steady t) t f) : f = 0 :=
+  match f, admitted with
+  | 0, _ => rfl
+  | _ + 1, admitted => absurd (admits_iff.mp admitted) (Nat.lt_irrefl 0)
+
+theorem not_steady_one {t : Nat} : ¬ web.Admits (steady t) t 1 :=
+  fun admitted => Nat.lt_irrefl 0 (admits_iff.mp admitted)
+
+theorem alternate_one : web.Admits (alternate 0) 0 1 :=
+  admits_iff.mpr Nat.zero_lt_one
+
+/-- Each admission of `steady` is answered by `alternate` at the same step or the next. -/
+theorem alternate_includesEachLater : web.IncludesEachLater alternate steady :=
+  fun t _ admitted =>
+    Eq.subst (motive := fun g => ∃ d, web.Admits (alternate (t + d)) (t + d) g)
+      (steady_only admitted).symm
+      (match even_or_next t with
+       | .inl pos => ⟨0, admits_iff.mpr pos⟩
+       | .inr pos => ⟨1, admits_iff.mpr pos⟩)
+
+/-- `steady` never answers `alternate`'s admission of formation `1`. -/
+theorem not_steady_includesEachLater : ¬ web.IncludesEachLater steady alternate :=
+  fun includes => match includes 0 1 alternate_one with
+    | ⟨_, admitted⟩ => not_steady_one admitted
+
+/-- `alternate` does not keep what `steady` keeps. -/
+theorem not_keeps : ¬ web.KeepsWhatKept alternate steady :=
+  fun keeps => match keeps 0 ⟨0, fun _ _ => steady_zero⟩ with
+    | ⟨T, kept⟩ => match odd_or_next T with
+      | .inl zero => Nat.lt_irrefl 0 (Eq.subst (motive := fun x => 0 < x) zero
+          ((admits_iff (m := alternate T)).mp (kept T (Nat.le_refl T))))
+      | .inr zero => Nat.lt_irrefl 0 (Eq.subst (motive := fun x => 0 < x) zero
+          ((admits_iff (m := alternate (T + 1))).mp (kept (T + 1) (Nat.le_succ T))))
+
+/-- **A lag for each admission can drop what the other keeps.** Its order ranks `alternate` above
+`steady`, which keeps a formation `alternate` does not keep; widening or widening with a lag, and
+the order of a lag varying with the formation, do not rank them so. -/
+theorem eachLag_not_keeping :
+    web.WidensOrEachLater alternate steady ∧ ¬ web.KeepsWhatKept alternate steady ∧
+      ¬ web.WidensOrWithLag alternate steady ∧ ¬ web.WidensOrWithFormationLag alternate steady :=
+  ⟨.inr ⟨alternate_includesEachLater, not_steady_includesEachLater⟩, not_keeps,
+   fun ranks => not_keeps ranks.keepsWhatKept, fun ranks => not_keeps ranks.keepsWhatKept⟩
+
+end EachLagDrops
 
 /-! ## Widening with a lag and eventual widening disagree -/
 
@@ -1216,7 +1734,7 @@ end TailAndLag
 
 /-! ## Widening with a lag reads names across steps -/
 
-namespace Relabel
+namespace NamesAcrossSteps
 
 /-- Two formations, each requiring its own condition at need one. -/
 def web : Web Bool Bool :=
@@ -1286,6 +1804,6 @@ theorem along_restores :
   (widensOrWithLagAlong_reidentify exchange).mpr
     (widensOrWithLagAlong_itself_iff.mpr (.inr later_withLag))
 
-end Relabel
+end NamesAcrossSteps
 
 end Becoming

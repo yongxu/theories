@@ -35,3 +35,21 @@
     }
   }
 }
+
+# Re-check fixes after RECHECK-UE9, probes P1-P4 and P6 folded in (scratch_build.py, Lean 4.29.1), 2026-10-25T21:17Z
+# kit sha256 e5d2cb98205f84165d0cefda8f65540d21379b3a3d34dcee65f987c3af632ee6
+# main at 66854dbf7
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/tree",
+  "modules": 67,
+  "ran": [],
+  "reused": 68,
+  "unclean": [],
+  "audits": {
+    "Becoming.ComparingCourses": {
+      "theorems": 191,
+      "declarations": 244,
+      "with_axioms": {}
+    }
+  }
+}
