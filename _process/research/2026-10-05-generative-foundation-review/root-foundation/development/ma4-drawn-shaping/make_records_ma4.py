@@ -263,7 +263,7 @@ record = {
                    {'path': RECEIPT, 'role': 'receipt', 'sha256': sha(RECEIPT)},
                    {'path': STUDY, 'role': 'integration', 'sha256': sha(STUDY)},
                    {'path': KIT + 'NOTE.md', 'role': 'integration', 'sha256': sha(KIT + 'NOTE.md')},
-                   {'path': KIT + 'REVIEW-MA4.md', 'role': 'integration', 'sha256': sha(KIT + 'REVIEW-MA4.md')},
+                   {'path': KIT + 'REVIEW-MA4.md', 'role': 'review', 'sha256': sha(KIT + 'REVIEW-MA4.md')},
                    {'path': CH2, 'role': 'statement', 'sha256': sha(CH2)},
                    {'path': OVERVIEW, 'role': 'statement', 'sha256': sha(OVERVIEW)},
                    {'path': META, 'role': 'statement', 'sha256': sha(META)}],
