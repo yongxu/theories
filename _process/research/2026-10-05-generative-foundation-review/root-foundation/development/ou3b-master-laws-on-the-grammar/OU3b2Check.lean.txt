@@ -1,0 +1,51 @@
+import Becoming
+import Becoming.FallibleInquiry
+
+/-! The statements of the originals OU3b-2 reproves from the grammar's laws, printed in full. -/
+
+set_option pp.all true
+open Becoming
+theorem ou3b2_statements_printed : True := trivial
+#check @Becoming.ClosedUnder
+#check @Becoming.WithinClosure
+#check @Becoming.WithinClosure.refl
+#check @Becoming.WithinClosure.trans
+#check @Becoming.WithinClosure.of_rel
+#check @Becoming.WithinClosure.mono
+#check @Becoming.WithinClosure.symm
+#check @Becoming.WithinClosure.not_rel
+#check @Becoming.closedUnder_withinClosure
+#check @Becoming.closure_iff_certified
+#check @Becoming.not_within_of_closed
+#check @Becoming.le_succ_cases
+#check @Becoming.gap_of_lt
+#check @Becoming.mem_cons_split
+#check @Becoming.skipAt
+#check @Becoming.skipAt_ne
+#check @Becoming.skipAt_le
+#check @Becoming.skipAt_lt
+#check @Becoming.split_at_head
+#check @Becoming.revisits_within
+#check @Becoming.Branching.Lossless.returns
+#check @Becoming.Law.lossless_of_returns
+#check @Becoming.Law.Lossless.returns
+#check @Becoming.Law.lossless_iff_returns
+#check @Becoming.Law.Drawn.not_returns
+#check @Becoming.Law.drawn_iff_not_returns
+#check @Becoming.constant_of_goAlike
+#check @Becoming.goAlike_of_constant
+#check @Becoming.Law.sameFuture_of_goAlike
+#check @Becoming.withinClosure_iff_reached
+#check @Becoming.withinClosure_of_line
+#check @Becoming.image_determined_iff
+#check @Becoming.Web.Includes.refl
+#check @Becoming.Web.Includes.trans
+#check @Becoming.Web.Includes.not_exceeded
+#check @Becoming.Web.Widens.not_reverse
+#check @Becoming.Web.Widens.trans
+#check @Becoming.Web.Keeps.symm
+#check @Becoming.Web.Mixed.symm
+#check @Becoming.Web.Widens.not_keeps
+#check @Becoming.Web.Widens.not_mixed
+#check @Becoming.Web.Keeps.not_mixed
+#check @Becoming.RecurrenceRuns.lossless_iff_returns

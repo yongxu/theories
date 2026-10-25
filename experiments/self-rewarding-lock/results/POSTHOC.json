@@ -1,0 +1,261 @@
+{
+ "calls": 119,
+ "readings_by_input": {
+  "0 lists : 9 prose, loss read by notes": {
+   "calls": 25,
+   "list": 0,
+   "picks": 250
+  },
+  "0 lists : 9 prose, loss read by nothing": {
+   "calls": 16,
+   "list": 0,
+   "picks": 160
+  },
+  "1 lists : 8 prose, loss read by notes": {
+   "calls": 5,
+   "list": 0,
+   "picks": 50
+  },
+  "1 lists : 8 prose, loss read by nothing": {
+   "calls": 8,
+   "list": 3,
+   "picks": 80
+  },
+  "2 lists : 7 prose, loss read by nothing": {
+   "calls": 1,
+   "list": 3,
+   "picks": 10
+  },
+  "2 lists : 7 prose, loss read by report": {
+   "calls": 5,
+   "list": 0,
+   "picks": 50
+  },
+  "3 lists : 6 prose, loss read by notes": {
+   "calls": 5,
+   "list": 0,
+   "picks": 50
+  },
+  "3 lists : 6 prose, loss read by nothing": {
+   "calls": 6,
+   "list": 47,
+   "picks": 60
+  },
+  "5 lists : 4 prose, loss read by nothing": {
+   "calls": 1,
+   "list": 10,
+   "picks": 10
+  },
+  "7 lists : 2 prose, loss read by notes": {
+   "calls": 5,
+   "list": 0,
+   "picks": 50
+  },
+  "7 lists : 2 prose, loss read by nothing": {
+   "calls": 1,
+   "list": 9,
+   "picks": 10
+  },
+  "7 lists : 2 prose, loss read by report": {
+   "calls": 5,
+   "list": 0,
+   "picks": 50
+  },
+  "8 lists : 1 prose, loss read by notes": {
+   "calls": 5,
+   "list": 0,
+   "picks": 50
+  },
+  "8 lists : 1 prose, loss read by nothing": {
+   "calls": 6,
+   "list": 60,
+   "picks": 60
+  },
+  "8 lists : 1 prose, loss read by report": {
+   "calls": 5,
+   "list": 0,
+   "picks": 50
+  },
+  "9 lists : 0 prose, loss read by nothing": {
+   "calls": 15,
+   "list": 150,
+   "picks": 150
+  },
+  "9 lists : 0 prose, loss read by report": {
+   "calls": 5,
+   "list": 0,
+   "picks": 50
+  }
+ },
+ "h1_la2_share_of_list_picks": {
+  "8 of 9 list answers, no note: favours lists": 1.0,
+  "8 of 9 list answers, one note: favours lists": 0.0,
+  "8 of 9 prose answers with notes: favours prose": 0.0,
+  "6 of 9 prose answers with notes: favours prose": 0.0,
+  "every reader reads the loss (the report): favours prose": [
+   [
+    "2 lists : 7 prose, loss read by report",
+    0.0
+   ],
+   [
+    "7 lists : 2 prose, loss read by report",
+    0.0
+   ],
+   [
+    "8 lists : 1 prose, loss read by report",
+    0.0
+   ],
+   [
+    "9 lists : 0 prose, loss read by report",
+    0.0
+   ]
+  ]
+ },
+ "courses_step_by_step": {
+  "in_time": {
+   "held_throughout": 5,
+   "seeds": 5,
+   "seed_0": {
+    "steps": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "share_held_at": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "rule_held_at": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "held_throughout": true,
+    "shares": [
+     "1/23",
+     "1/243",
+     "1/2663",
+     "1/29283",
+     "1/322103",
+     "1/3543123",
+     "1/38974343"
+    ]
+   }
+  },
+  "late": {
+   "held_throughout": 0,
+   "seeds": 5,
+   "seed_0": {
+    "steps": [
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "share_held_at": [
+     4,
+     6,
+     8
+    ],
+    "rule_held_at": [
+     5,
+     7,
+     8
+    ],
+    "held_throughout": false,
+    "shares": [
+     "32/33",
+     "32/43",
+     "32/33",
+     "32/43",
+     "32/33"
+    ]
+   }
+  },
+  "unread": {
+   "held_throughout": 5,
+   "seeds": 5,
+   "seed_0": {
+    "steps": [
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "share_held_at": [
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "rule_held_at": [
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "held_throughout": true,
+    "shares": [
+     "32/33",
+     "352/353",
+     "3872/3873",
+     "42592/42593",
+     "468512/468513"
+    ]
+   }
+  },
+  "read_all": {
+   "held_throughout": 5,
+   "seeds": 5,
+   "seed_0": {
+    "steps": [
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "share_held_at": [
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "rule_held_at": [
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "held_throughout": true,
+    "shares": [
+     "32/33",
+     "32/43",
+     "32/153",
+     "32/1363",
+     "32/14673"
+    ]
+   }
+  }
+ },
+ "no_prose_answer_in_the_reference_set_from_share": "17/18"
+}
