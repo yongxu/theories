@@ -22,7 +22,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That nothing reaches successors: what comes after every present center's end is reached by a line under a class that goes on past it, or by the step of invariance.
+- That nothing reaches successors: what comes after every present center's end is reached by a line under a class that continues past it, or by the step of invariance.
 - How far actual lives overlap, or which actual formations feed which: the laws read a given web and flow.
 - An exact law of need for a continuation without end: giving without end is shown, not which member gives.
 - **Counterexample:** Overlapping: the first formation active at steps 0 and 1, the middle at 1 and 2, the last at 2 and 3; the middle feeds the first at step 1, the last the middle at step 2. The last lies within the first's feeding closure, not within it read with time up to step 1, and is not needed by the first though among its possible feeders (Overlapping.closure_overreaches). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
@@ -54,7 +54,7 @@ PW note §2-§3 held that need reaches contemporaries and predecessors, never su
 - **formal-reuse**: [self-concern-through-dependence](self-concern-through-dependence.md). Reuses NeedsPart, the flows read off a web (Flow.FedOnlyOn), Flow.DrawsPast, Flow.GivesWithin, the two-tier flows (Flow.FedThroughStores, Flow.GivesInto) and pos_or_of_add_pos; read with Flow.needsSome_without_end.
 - **formal-reuse**: [feeding-closure](feeding-closure.md). Reuses feeding at a common step (Flow.FedBy) and the feeding closure (Flow.WithinFeeding, Flow.WithinFeeding.of_fedBy, Flow.WithinFeeding.trans).
 - related, not a proved adapter: [feeding-from-a-step](feeding-from-a-step.md). The closure from a step, shrinking as feeding stops; here the closure up to a step, holding only what gives by then.
-- related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). Where the reach past one's own end comes from instead: a line under a class that goes on past it.
+- related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). Where the reach past one's own end comes from instead: a line under a class that continues past it.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -75,6 +75,7 @@ Aliases: `Need and feeding, read with time`, `带着时间来读的所需与供�
 
 - 24 October 2026: added (IV3k), from PW's candidates (1) and (2); study section 397.
 - 25 October 2026: corrected (IV3l) after an independent review against the Lean: the correspondence says the Lean corrects PW on predecessors; study section 399.
+- 26 October 2026: "goes on past" (延 in the glossary, going on without end) replaced by "continues past", the sense of «过亡而续», in what it does not show and its related entry (OC3); content unchanged; study section 413.
 
 </details>
 

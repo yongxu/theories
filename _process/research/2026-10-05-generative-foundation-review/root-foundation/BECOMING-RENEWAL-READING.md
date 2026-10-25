@@ -18391,3 +18391,22 @@ Output→input: fulfillment-chance-floor, sum-over-histories-exact → condition
 **The review.** An independent read-only review by a separate AI agent with a Lean rebuild ([REVIEW-UE2](development/ue2-conditional-weights/REVIEW-UE2.md)) found the Lean sound and the text overclaiming: 1 error, 4 overclaims, 11 imprecisions, 3 suggestions. All were taken: the free-energy reading of the exit bound and the candidate third part dropped; the conditioning laws labelled near-definitional; the prior-share premise, the natural-weighting scope and shares with a zero whole stated; "falls to the need" told apart from a break; the record laws' hypotheses asked of the courses of k steps; the margin lemmas moved into Typicality and the binomial mean left to Drift (rule 9); `given` renamed `restrict`; the periphery's missing declaration, its equality case and its support form fixed. The reviewer's re-check found 18 findings addressed and one partly, with five small new issues, none blocking the core; all were taken before landing (only `⟨0, 0⟩` compares either way; Weighted's owner, not a recompile, keeps `whole_courses` above `transfer_weight`; the record fields; the periphery not stated as checked; "drift" in one sense).
 
 **Readings** [AI reading, D45]. A share read as a probability is a number of situations of a kind, so conditioning, Bayes's rule and a posterior are counting. Given the weighting, a record of the course so far bears on a break within the horizon only through the margin it shows and the steps it leaves: the counting form of T6's seen half, with the weighting as the independently warranted model T6 allows.
+
+## 413. "Goes on past" an end read as "continues past" (OC3)
+
+The glossary gives "goes on" one sense, 延: going on along some branch, without end ([02 §1](../../../../theories/becoming/chapters/02-MAP.md#branches)). `«过亡而续»` shows less. Under a coarser class, what continues an occurrence at which a finer line ends is reached, so the line continues past that end; in a finite net it still ends, later. Read with the glossary, "goes on past one's end" claims an endless continuation the theorem does not give. OC2 found the phrase in the live texts (§411) and left it for this pass.
+
+```text
+Result(s): none new; wording only.
+Delta: "goes on past" an end replaced by "continues past": D64's reading in 07 §4.3 and P-15's quote of it; the record
+       need-and-feeding-read-with-time (what it does not show, its related entry, a history line); D64 in
+       DELEGATED-CHOICES; the title of 07 §4.6's step 2 and P-20's step 2, on the PF line owner's answer. No statement
+       changes.
+Supplied premises / correspondence: none.
+Evidence: the glossary's "goes on" (02 §1) and the statement of «过亡而续».
+Boundary: frozen texts keep the phrase (earlier sections of this study, PW's note, PF's philosophy rounds, the kits and
+       history). "Goes on" stays where it means 延: "goes on without end", and "can go on through new members" (07 §4.5).
+Output → input: 07 §4.3 and §4.6; PHILOSOPHY.md P-15 and P-20; the record need-and-feeding-read-with-time; D64.
+```
+
+The first sentence of `Becoming.GrammarPath`'s module doc keeps the phrase until the next landing that rebuilds the module, which applies the same change: the PF line's owner chose this, since a comment alone is not worth a checker run and the re-binding of the records bound to the module.
