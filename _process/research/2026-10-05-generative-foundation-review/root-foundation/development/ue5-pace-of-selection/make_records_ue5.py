@@ -1,0 +1,439 @@
+#!/usr/bin/env python3
+"""UE5 records: write pace-of-selection-within-what-flows-in (every declaration of Becoming.SelectionPace), and in
+what-bounds-offspring-numbers take the clause UE5 answers out of the next delta and add a history entry (its laws and
+their statements unchanged). Mirrors UE1's make_records_ue1.py, with the record built by a function so that it can be
+linted before landing; every old text is asserted before it is replaced.
+usage (from the checkout root, after texts_ue5.py): python3 -B <kit>/make_records_ue5.py RECEIPT N"""
+import datetime
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path.cwd()
+PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation/'
+STUDY = RF + 'BECOMING-RENEWAL-READING.md'
+NOTE = RF + 'development/ue5-pace-of-selection/NOTE.md'
+REVIEW = RF + 'development/ue5-pace-of-selection/REVIEW-UE5.md'
+CH4 = 'theories/becoming/chapters/04-LIFE.md'
+MOD = f'{PKG}/Becoming/SelectionPace.lean'
+PROOFS = [f'{PKG}/Becoming/{m}.lean' for m in ('Reproduction', 'Entropy', 'SelectionTerm', 'Evolution', 'Flow',
+                                                 'Dependence')]
+RECORDS = ROOT / 'theories/becoming/results/records'
+RID = 'pace-of-selection-within-what-flows-in'
+MONTHS = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+          'November', 'December')
+DEPENDS = ('what-bounds-offspring-numbers', 'additive-part-of-offspring-variance', 'selection-term-over-generations',
+           'evolution-on-descent', 'a-rise-past-the-inflow-is-drawn-from-beyond', 'laws-of-one-step')
+RELATED = ('what-a-rise-draws-from-beyond', 'entropy-history-and-record')
+
+GENERAL = [
+    ("Across a step at which the flow balances on some relata followed by the offspring of some parents, each "
+     "offspring coming to stand at m or more, the offspring, m for each, with what the relata stand at after the "
+     "step, are at most what they stood at before and the list's inflow: Entropy's stock law, re-derived on a list "
+     "balanced on.",
+     '某一步流平衡于若干关系项继以若干亲代之后代，每一后代立起且所立不少于 m：后代各计 m，加诸关系项于步后所立，不过其于步前所立加此列之流入；'
+     '即 Entropy 之存量律，于所平衡之列上重导。',
+     ('lineage', 'lineage_mono', 'lineage_sub', 'fresh_total', 'standing_total', 'born_within_inflow')),
+    ("Read on a parent and its offspring, m times its offspring number is at most what the parent stood at and what "
+     "flows into its lineage; read on a generation, m times the next size is at most what the generation stood at "
+     "and what flows into it and its offspring.",
+     '读于一亲及其后代，m 乘其后代数不过该亲所立加流入其谱系者；读于一代，m 乘下一代之数不过此代所立加流入此代及其后代者。',
+     ('parent_within_inflow', 'generation_within_inflow')),
+    ("A member of the next generation standing at m or more after the step that brings it to stand, and at most m "
+     "then as a parent, stands at exactly m. In a web where a formation is active only where its conditions support "
+     "it, a relatum active at a step that requires its own standing at need m or more stands at m or more.",
+     '下一代之成员，于使之立起之步后所立不少于 m，其时作为亲代所立至多 m，则所立恰为 m。于构成仅于其条件支持之处方为活跃之网中，'
+     '于某步活跃、要求自身所立且所需不少于 m 之关系项，所立不少于 m。',
+     ('standing_pinned', 'stands_of_need')),
+    ("The carried inflow sums, lineage by lineage, what flows into each parent's lineage weighted by the parent's "
+     "amount, so what passes between carrying lineages counts. With exact transmission the next total is the "
+     "parents' amounts weighted by their offspring numbers.",
+     '所携流入：逐谱系相加，各亲谱系所受之流入以该亲之量加权，故携带者谱系之间所传者亦计入。传递确切时，下一代之总为以后代数加权之亲代之量。',
+     ('carriedInflow', 'sum_exact')),
+    ("Across a step balanced on the generation and its offspring, each offspring standing at m or more, with exact "
+     "transmission, m times the next total is at most the parents' standings weighted by their amounts with the "
+     "carried inflow; with each parent standing at most m, at most m times this total with the carried inflow.",
+     '一步平衡于此代及其后代，每一后代所立不少于 m，传递确切：m 乘下一代之总不过以量加权之亲代所立加所携流入；每亲所立至多 m 时，'
+     '不过 m 乘此代之总加所携流入。',
+     ('offspring_within_carried', 'total_within_carried')),
+    ("In a population not shrinking, m times the mean's cross-multiplied rise is at most the size times the carried "
+     "inflow, and m times the concordance is at most m times the discordance with it: with exact transmission Price's "
+     "equation is the selection term proper, a rewrite stated in the package for the fifth time.",
+     '群不缩时，m 乘均值交叉相乘之升不过群之数乘所携流入，m 乘一致度不过 m 乘不一致度加之：传递确切时 Price 之方程即选择项本身，'
+     '此重写于包中为第五次陈述。',
+     ('mean_step_exact', 'response_within_carried', 'selection_within_carried')),
+    ("With m positive, each parent standing at most m and nothing carried in, a rise of the mean leaves the next "
+     "generation smaller than this one.",
+     'm 为正、每亲所立至多 m 且无所携流入时，均值之升使下一代小于此代。',
+     ('unfed_rise_shrinks',)),
+    ("What flows into a lineage is at most what flows into each parent's lineage, summed, so the inflow into the "
+     "carriers' joint lineage is at most the carried inflow.",
+     '流入一谱系者不过流入各亲谱系者之和，故流入携带者共同谱系者不过所携流入。',
+     ('carriers', 'mem_carriers', 'total_lineage_one', 'total_lineage', 'excess_add_le', 'excess_total_le',
+      'inflow_lineage_le', 'total_carriers_le', 'joint_within_carried')),
+    ("For an amount of zero or one, its carriers listed as in the generation: under balance on the carriers, some "
+     "other relata and the carriers' offspring, with exact transmission and each carrier standing at most m, m times "
+     "the next total with what the rest stands at after the step is at most m times this total with what the rest "
+     "stood at before and the list's inflow.",
+     '零一之量，其携带者依代中之序：平衡于携带者、其余若干关系项及携带者之后代，传递确切且每一携带者所立至多 m，则 m 乘下一代之总加其余于步后所立，'
+     '不过 m 乘此代之总加其余于步前所立加此列之流入。',
+     ('total_carriers_unit', 'share_within_rest')),
+    ("Read with the rest of a whole, the carriers' rise is within what the rest falls by and what flows into the "
+     "whole: a rise past the inflow is drawn from beyond, read on offspring. With no rest, the total rises by at "
+     "most the inflow into the carriers' joint lineage over m.",
+     '以整体之其余读之，携带者之升不过其余之降加流入整体者：越过流入之升取自其外，读于后代。无其余时，总之升不过流入携带者共同谱系者除以 m。',
+     ('share_within_joint',)),
+    ("Over a stretch of such steps, m times the final total is at most m times the first with the stretch's carried "
+     "inflow; where the final generation is no smaller than the first, m times the mean's cross-multiplied move is "
+     "at most the first size times that inflow.",
+     '一段之步皆如此时，m 乘终之总不过 m 乘始之总加此段之所携流入；终代不小于首代时，m 乘均值交叉相乘之移不过首代之数乘该流入。',
+     ('stretch_within_carried', 'moved_within_carried')),
+    ("Where each step carries at most I, that move is at most the first size times T · I, a linear bound from a cap "
+     "on the total: for an amount of zero or one at constant size N, reaching the whole from a share p₀ needs a "
+     "carried inflow of at least m · N · (1 − p₀), at most m · N whatever p₀ is.",
+     '每步所携至多 I 时，此移不过首代之数乘 T · I，为由总量之上限而来之线性界：零一之量于恒定规模 N，自份额 p₀ 至全体，所需所携流入至少 '
+     'm · N · (1 − p₀)，无论 p₀ 如何皆不过 m · N。',
+     ('steps_to_move',)),
+    ("With m positive, each parent standing at most m and what flows into its lineage, with m, at most k · m, the "
+     "parent leaves at most k offspring, and an exactly transmitted total multiplies by at most k a step and by at "
+     "most k ^ T over T steps.",
+     'm 为正，每亲所立至多 m，流入其谱系者加 m 至多 k · m：该亲之后代至多 k 个，传递确切之总每步至多乘 k，T 步至多乘 k ^ T。',
+     ('parent_within_factor', 'total_within_factor', 'total_within_power')),
+    ("In a population not shrinking the share then multiplies by at most k ^ T, and a final total reaching the final "
+     "size needs the first size to be at most k ^ T times the first total: from c carriers among N, "
+     "T ≥ log_k (N / c), the reproductive-excess limit of Nei and Felsenstein (1971) in counts.",
+     '群不缩时，份额至多乘 k ^ T；终之总及于终代之数，需首代之数至多为 k ^ T 乘始之总：自 N 中 c 个携带者起，T ≥ log_k (N / c)，'
+     '即 Nei 与 Felsenstein（1971）繁殖盈余之限之计数形式。',
+     ('share_within_power', 'whole_within_power')),
+    ("Read by offspring number with exact transmission across a step, and the next step balanced on the next "
+     "generation and its offspring, each standing at m or more, m times the next size squared with the squared "
+     "differences of offspring numbers over pairs is at most this size times what the next generation stands at and "
+     "what flows into it and its offspring.",
+     '以后代数读之，某步传递确切，下一步平衡于下一代及其后代、各所立不少于 m：m 乘（下一代之数之平方加后代数两两之差之平方和）'
+     '不过此代之数乘（下一代所立加流入下一代及其后代者）。',
+     ('number_step_within_inflow',)),
+    ("With each member of the next generation standing at most m and the population not shrinking, m times the "
+     "squared differences of offspring numbers over pairs is at most the size times that inflow; with m positive and "
+     "nothing flowing in, offspring numbers are uniform.",
+     '下一代每成员所立至多 m 且群不缩时，m 乘后代数两两之差之平方和不过群之数乘该流入；m 为正而无流入时，后代数均一。',
+     ('number_spread_within_inflow', 'number_unfed_uniform')),
+    ("Where offspring number is itself transmitted exactly besides an amount, m times the amount's cross-multiplied "
+     "response, squared, is at most the size times the next step's inflow into the next generation and its offspring "
+     "times the amount's squared differences over pairs, read on the generations by offspring number.",
+     '除一量之外后代数本身亦确切传递时，m 乘此量交叉相乘之响应之平方，不过群之数乘下一步流入下一代及其后代者乘此量两两之差之平方和；'
+     '读于以后代数读之诸代。',
+     ('numbered', 'numbered_family', 'numbered_number', 'response_sq_within_inflow')),
+]
+
+WITNESSES = [
+    ("Witness (Displacement): in a family closed, balanced and dissipated on, gaining nothing, a carrier takes one unit "
+     "each from a pool, itself and another member and gives one to each of two offspring; the size stays at two, the "
+     "share rises from a half to the whole, the carried inflow is one, and the response and selection laws hold with "
+     "equality.",
+     '见证（Displacement）：一族封闭、平衡且耗散，无所得，一携带者自一池、自身与另一成员各取一单位，予两后代各一；群之数仍为二，'
+     '份额自一半升至全体，所携流入为一，响应与选择之律皆以等号成立。',
+     'Displacement', ('Relatum', 'level', 'web', 'takeFirst', 'giveFirst', 'take', 'give', 'present', 'flow', 'family',
+                      'every', 'balances', 'closed', 'dissipates', 'firstKids', 'kids', 'marks', 'generations', 'arise',
+                      'stands', 'exact', 'capped', 'unit', 'displacement', 'premises', 'least')),
+    ("In Displacement, with the inflow into the whole or into the population's own lineage in place of the carried "
+     "inflow the response law fails; the carrier's lineage rises by one while the rest of the whole falls by two; "
+     "with k two the factor law holds with equality.",
+     'Displacement 中，以流入整体者或流入群自身谱系者代所携流入，响应之律不成立；携带者之谱系升一，而整体之其余降二；k 为二时因子之律以等号成立。',
+     'Displacement', ('natural_fails', 'rest_falls', 'fedEach', 'factor')),
+    ("Read by offspring number, every premise of the spread bound holds at Displacement's first step but exact "
+     "transmission of offspring number, and the spread bound and the next-step bound on the response squared both "
+     "fail.",
+     '以后代数读之，除后代数之确切传递外，散布之界之前提于 Displacement 之首步皆成立，而散布之界与下一步响应平方之界皆不成立。',
+     'Displacement', ('capped_later', 'spread_needs_inheritance')),
+    ("Witness (Fed): a parent leaves two offspring and an idle member none; each offspring leaves two, as its parent "
+     "did, standing at one and taking one unit from itself and one from a source, so the inflow into the second "
+     "generation and its offspring is two, and both offspring-number bounds hold with equality.",
+     '见证（Fed）：一亲留两后代，一闲置成员无后代；每一后代如其亲各留二，所立为一，自身与一源各取一单位，故流入第二代及其后代者为二，'
+     '后代数之两界皆以等号成立。',
+     'Fed', ('Relatum', 'levelFirst', 'levelSecond', 'levelLater', 'level', 'web', 'fromParent', 'fromFirst',
+             'fromSecond', 'toPair', 'toFirstPair', 'toSecondPair', 'takeFirst', 'takeSecond', 'giveFirst',
+             'giveSecond', 'take', 'give', 'present', 'flow', 'balances', 'kidsFirst', 'kidsSecond', 'kids',
+             'generations', 'number', 'exact', 'arise', 'stands', 'capped', 'fed', 'premises', 'least')),
+    ("Witness (Inherited, Displacement extended by a step at which each offspring leaves two): closed, dissipated on "
+     "and gaining nothing at both steps, offspring number inherited, the response squared, four, is not within the "
+     "size times the same step's inflow times the amount's spread.",
+     '见证（Inherited，即 Displacement 加一步，每一后代各留二）：两步皆封闭、耗散且无所得，后代数被继承，响应之平方为四，'
+     '不在群之数乘同一步之流入乘此量之散布之内。',
+     'Inherited', ('Relatum', 'levelFirst', 'levelSecond', 'levelLater', 'level', 'web', 'fromCarrier', 'fromLeft',
+                   'fromRight', 'toPair', 'toLeftPair', 'toRightPair', 'takeFirst', 'takeSecond', 'giveFirst',
+                   'giveSecond', 'take', 'give', 'present', 'flow', 'family', 'every', 'balances', 'closedFirst',
+                   'closedSecond', 'dissipatesFirst', 'dissipatesSecond', 'kidsFirst', 'kidsSecond', 'kids', 'marks',
+                   'generations', 'ariseFirst', 'standsFirst', 'exactFirst', 'cappedFirst', 'inherited',
+                   'same_step_fails')),
+    ("In Inherited the next-step law holds with equality, the next step's inflow two, and the stretch law over two "
+     "steps holds with equality, 1 · 4 = 1 · 1 + (1 + 2).",
+     'Inherited 中，下一步之律以等号成立，下一步之流入为二；两步之段之律亦以等号成立，1 · 4 = 1 · 1 + (1 + 2)。',
+     'Inherited', ('ariseSecond', 'standsSecond', 'exactSecond', 'cappedSecond', 'next_step_attained', 'ariseBoth',
+                   'standsBoth', 'exactBoth', 'cappedBoth', 'stretch_attained')),
+    ("Witness (Swap): two carriers each give their unit to the other's offspring, so the carried inflow is two while "
+     "the carriers' joint lineage, where the two gifts net, draws nothing, and nothing is gained.",
+     '见证（Swap）：两携带者各以其单位予对方之后代，故所携流入为二，而两赠相抵之携带者共同谱系一无所取，亦一无所得。',
+     'Swap', ('Relatum', 'levelFirst', 'levelLater', 'level', 'web', 'fromLeft', 'fromRight', 'toRightKid',
+              'toLeftKid', 'takeFirst', 'giveFirst', 'take', 'give', 'present', 'flow', 'balances', 'kidsFirst', 'kids',
+              'generations', 'swap')),
+    ("Witness (Uncapped): a carrier standing at two leaves two offspring from its own standing while another member's "
+     "standing is lost; every premise of the response law holds but the parents' cap, and the share rises from a half "
+     "to the whole with nothing carried in.",
+     '见证（Uncapped）：一携带者所立为二，以自身所立留两后代，而另一成员之所立失去；除亲代之上限外响应之律之前提皆成立，份额于无所携流入时'
+     '自一半升至全体。',
+     'Uncapped', ('Relatum', 'levelFirst', 'levelLater', 'level', 'web', 'fromCarrier', 'fromOther', 'toPair',
+                  'takeFirst', 'giveFirst', 'take', 'give', 'present', 'flow', 'balances', 'kidsFirst', 'kids', 'marks',
+                  'generations', 'arise', 'stands', 'exact', 'uncapped')),
+    ("Witness (Shrink): a carrier leaves one offspring from its own standing and the other member none; the share "
+     "rises while the size falls from two to one, as unfed_rise_shrinks concludes, and the response law fails.",
+     '见证（Shrink）：一携带者以自身所立留一后代，另一成员无后代；份额升而群之数自二降为一，如 unfed_rise_shrinks 所断，响应之律不成立。',
+     'Shrink', ('Relatum', 'levelFirst', 'levelLater', 'level', 'web', 'fromCarrier', 'toKid', 'takeFirst',
+                'giveFirst', 'take', 'give', 'present', 'flow', 'balances', 'kidsFirst', 'kids', 'marks',
+                'generations', 'arise', 'stands', 'exact', 'capped', 'shrink')),
+]
+
+
+def laws(names):
+    """The record's laws, each with its declarations; every declaration of the module is cited exactly once."""
+    out = []
+    for en, zh, short in GENERAL:
+        out.append({'en': en, 'zh': zh, 'declarations': ['Becoming.SelectionPace.' + s for s in short]})
+    for en, zh, space, short in WITNESSES:
+        out.append({'en': en, 'zh': zh, 'declarations': [f'Becoming.SelectionPace.{space}.{s}' for s in short]})
+    cited = [d for law in out for d in law['declarations']]
+    missing = sorted(set(cited) - names)
+    assert not missing, missing
+    assert len(cited) == len(set(cited))
+    assert set(cited) == names, sorted(names - set(cited))
+    return out
+
+
+def build(names, sha, receipt_id, n):
+    """The record, from the module's declaration names, a hash function over repository paths, the receipt and N."""
+    year, month, day = int(receipt_id[:4]), int(receipt_id[4:6]), int(receipt_id[6:8])
+    date_en, date_zh = f'{day} {MONTHS[month - 1]} {year}', f'{year}年{month}月{day}日'
+    receipt = f'{PKG}/becoming-checks/{receipt_id}/verification.json'
+    now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
+    return {
+        'schema_version': 2,
+        'id': RID,
+        'title': {'en': 'The pace of selection, within what flows into the lineages carrying an amount',
+                  'zh': '选择之速，不过流入携带该量之谱系者'},
+        'kind': 'theorem',
+        'status': 'recorded-checked',
+        'family': 'F01',
+        'reviewed_at_utc': now,
+        'statement': {
+            'en': "Under balance on the lineages, offspring standing at m or more, parents at most m and exact "
+                  "transmission, a total rises by at most what flows into carrying lineages over m, and a cap on each "
+                  "parent's lineage inflow caps its growth at a power of the cap; a bound by the whole's inflow is false.",
+            'zh': '平衡于谱系、后代所立不少于 m、亲代至多 m、传递确切时，一量之总所升不过流入携带者谱系者除以 m；流入每亲谱系者有上限，'
+                  '则其增长不过此上限之幂；以整体之流入为界则不成立。'},
+        'laws': laws(names),
+        'hypotheses': [
+            {'en': "No axiom: discrete steps; natural-number amounts and standings; generations each listed as the "
+                   "offspring of the last (SelectionTerm.Generations); balance only on the family the lineage occupies "
+                   "across the step (Flow.BalancesOn); each offspring coming to stand at a supplied least standing m or "
+                   "more. Dissipation is not used.",
+             'zh': '不加公理：离散之步；自然数之量与所立；诸代各列为前一代之后代（SelectionTerm.Generations）；流仅平衡于谱系于此步所占之族'
+                   '（Flow.BalancesOn）；每一后代立起，所立不少于所给之最少所立 m。不用耗散。'},
+            {'en': "Where a law states them: each parent standing at most m, exact transmission, a population not "
+                   "shrinking, an amount of zero or one (the carriers' laws), what flows into each parent's lineage "
+                   "with m at most k · m (the factor laws), and offspring number itself transmitted exactly (the "
+                   "response-squared law).",
+             'zh': '于所述之律：每亲所立至多 m、传递确切、群不缩、零一之量（携带者之律）、流入每亲谱系者加 m 至多 k · m（因子之律），'
+                   '以及后代数本身确切传递（响应平方之律）。'}],
+        'does_not_show': [
+            {'en': "A pace bounded by what flows into the whole or into the population's own lineage: that is false "
+                   "(Displacement.natural_fails); the whole-level form is share_within_rest.",
+             'zh': '以流入整体者或流入群自身谱系者为速度之界：此不成立（Displacement.natural_fails）；整体层面之形式为 share_within_rest。',
+             'kind': 'non-implication'},
+            {'en': "Haldane's limit from selective deaths, which the generations here do not list; steps_to_move is "
+                   "linear, and the per-parent law is the reproductive-excess form.",
+             'zh': 'Haldane 由选择性死亡而来之限，此处诸代不列之；steps_to_move 为线性，每亲之律为繁殖盈余之形式。',
+             'kind': 'scope'},
+            {'en': "The carriers' joint law for an amount above one, how long exact transmission of offspring number with "
+                   "growth can last within a bounded inflow, drift and mutation.",
+             'zh': '量大于一时携带者之共同之律、于有界之流入内后代数之确切传递连同增长能持续多久、漂变与突变。',
+             'kind': 'scope'},
+            {'en': "A least standing from the dynamics: m is a supplied level, tied to the web's need only through "
+                   "stands_of_need.",
+             'zh': '由动力学而来之最少所立：m 为所给之水平，仅经 stands_of_need 与网之所需相连。',
+             'kind': 'scope'},
+            {'en': "A tightening by dissipation: on the lineage's own family it leaves no inflow, the closed case, and "
+                   "Displacement, dissipated on its whole family, attains the bounds.",
+             'zh': '由耗散而来之收紧：于谱系自身之族上耗散则无流入，即封闭之情形；Displacement 于其整个族上耗散而达此诸界。',
+             'kind': 'scope'},
+            {'en': "A balanced-on form of Entropy's stock law, which born_within_inflow re-derives on its list (the "
+                   "Entropy owner's decision); born_within_stock stays beside it, neither placement of the offspring "
+                   "deriving the other.",
+             'zh': 'Entropy 存量律之平衡于族之形式，born_within_inflow 于其列上重导之（由 Entropy 之主决定）；born_within_stock 与之并存，'
+                   '后代之两种安放互不能推出。',
+             'kind': 'scope'},
+            {'en': "That actual populations meet exact transmission of offspring number or the per-member bounds; soft "
+                   "selection is a reading of Displacement, not a theorem.",
+             'zh': '实有之群合于后代数之确切传递或每成员之界；软选择为对 Displacement 之读法，非定理。',
+             'kind': 'correspondence'},
+            {'en': 'That any pace, amount or lineage is better: no evaluation enters, and ranking needs C.',
+             'zh': '任何速度、量或谱系为更好：不入评价，排序须 C。', 'kind': 'non-implication'}],
+        'counterexamples': [
+            {'path': MOD, 'detail': {
+                'en': "The natural statement fails: in a family closed, balanced and dissipated on, gaining nothing, the "
+                      "carriers' share rises from a half to the whole at constant size two, and the response law with the "
+                      "inflow into the whole or into the population's own lineage in place of the carried inflow fails "
+                      "(Displacement.natural_fails).",
+                'zh': '自然之陈述不成立：一族封闭、平衡且耗散，无所得，携带者之份额于恒定规模二自一半升至全体；以流入整体者或流入群自身谱系者代所携流入，'
+                      '响应之律不成立（Displacement.natural_fails）。'}},
+            {'path': MOD, 'detail': {
+                'en': "The bound with the same step's inflow fails even with offspring number inherited "
+                      "(Inherited.same_step_fails); without inheritance the next-step variant fails too "
+                      "(Displacement.spread_needs_inheritance).",
+                'zh': '以同一步之流入为界，于后代数被继承时亦不成立（Inherited.same_step_fails）；无继承时，下一步之变体亦不成立'
+                      '（Displacement.spread_needs_inheritance）。'}},
+            {'path': MOD, 'detail': {
+                'en': "Without parents standing at most m, or with the population shrinking, the response law fails "
+                      "(Uncapped.uncapped, Shrink.shrink).",
+                'zh': '亲代所立不受 m 之限，或群缩小时，响应之律不成立（Uncapped.uncapped，Shrink.shrink）。'}},
+            {'path': MOD, 'detail': {
+                'en': "The carried inflow counts what passes between carrying lineages: two carriers giving their units "
+                      "to each other's offspring carry an inflow of two while their joint lineage draws nothing "
+                      "(Swap.swap).",
+                'zh': '所携流入计入携带者谱系之间所传者：两携带者以其单位互予对方之后代，所携流入为二，而其共同谱系一无所取（Swap.swap）。'}}],
+        'standard_boundaries': ['no-ethical-premise', 'no-evaluation', 'discrete-steps', 'formal-not-empirical',
+                                'names-provisional', 'omission-not-refutation'],
+        'validation_scope': {
+            'en': f'Machine-checked by the consolidated Lean 4.29.1 checker (receipt {receipt_id}): '
+                  f'Becoming.SelectionPace, {len(names)} declarations, every one with an empty axiom report, all cited '
+                  f'here. Built in one session by an AI agent; an independent read-only review by a separate AI agent '
+                  f'(1 error, 3 overclaims, 9 imprecisions, 7 suggestions), every finding taken, in study section {n}; '
+                  f'not reviewed by a person.',
+            'zh': f'Lean 4.29.1 合并检查器实查（回执 {receipt_id}）：Becoming.SelectionPace，{len(names)} 项声明，公理报告皆空，本记录全引。'
+                  f'于一会话中由 AI 代理构建；另一 AI 代理作独立只读审查（1 项错误、3 项过度陈述、9 项不精确、7 项建议），所见皆采，'
+                  f'见研究第 {n} 节；未经人审。'},
+        'next_delta': {
+            'en': "The carriers' joint law for an amount above one, in layers; the least standing tied to need beyond one "
+                  "lemma; how long exact transmission of offspring number with growth can last within a bounded inflow; "
+                  "a balanced-on form of Entropy's stock law; a frozen test of the whole-level form; review by a person.",
+            'zh': '量大于一时携带者之共同之律，分层为之；最少所立与所需之关联，不止一引理；有界流入内后代数之确切传递连同增长能持续多久；'
+                  'Entropy 存量律之平衡于族之形式；整体层面形式之冻结检验；人之审查。'},
+        'correspondence': {
+            'en': "Malthus (1798), the main neighbour: reproduction limited by what sustains it, read on the lineages "
+                  "carrying an amount. Price (1970, Nature 227) and Fisher (1930) state identities that admit every "
+                  "pace; the flow bounds them. number_unfed_uniform is density regulation of heritable variance in "
+                  "fitness in counts, Fisher's deterioration of the environment as Price (1972, Annals of Human Genetics "
+                  "36) read it. Haldane (1957, Journal of Genetics 55) counted selective deaths; Nei (1971, Genetics 68) "
+                  "and Felsenstein (1971, American Naturalist 105) restated his limit from a reproductive excess, "
+                  "substitutions at least ln(1/p₀)/ln k generations apart, which whole_within_power states in counts. "
+                  "Wallace (1975, Evolution 29): Displacement is the setting of soft selection, a reading. Smith and "
+                  "Fretwell (1974, American Naturalist 108): parent_within_inflow is their model's premise. The readings "
+                  "are the AI's (D45), in development/ue5-pace-of-selection/NOTE.md, with the review in REVIEW-UE5.md.",
+            'zh': 'Malthus（1798），主要之邻：繁殖受其所赖以维持者之限，读于携带一量之谱系。Price（1970）与 Fisher（1930）所陈为容许任何速度之恒等式；'
+                  '流约束之。number_unfed_uniform 为可遗传适合度方差之密度调节之计数形式，即 Price（1972）所读之 Fisher 环境之恶化。Haldane（1957）'
+                  '计选择性死亡；Nei（1971）与 Felsenstein（1971）由繁殖盈余重述其限，替代之间相隔至少 ln(1/p₀)/ln k 代，whole_within_power '
+                  '以计数陈述之。Wallace（1975）：Displacement 为软选择之情境，为一读法。Smith 与 Fretwell（1974）：parent_within_inflow 为其模型之前提。'
+                  '读法皆 AI 之读（D45），载于 NOTE.md，审查见 REVIEW-UE5.md。'},
+        'canonical_source': MOD,
+        'aliases': ['The pace of selection, within what flows into the lineages carrying an amount',
+                    '选择之速，不过流入携带该量之谱系者', 'pace of selection within the inflow',
+                    'the reproductive-excess limit in counts', 'Becoming.SelectionPace.response_within_carried'],
+        'dependencies': [
+            {'id': 'what-bounds-offspring-numbers', 'relation': 'formal-reuse',
+             'detail': {'en': 'Reproduction.Generations.ByNumber, ByNumber.step, ByNumber.concord_eq, '
+                              'Reproduction.concord_self_zero_iff, born_flatMap, mem_flatMap_cases; born_within_stock is '
+                              'the closed sibling of born_within_inflow.',
+                        'zh': 'Reproduction.Generations.ByNumber、ByNumber.step、ByNumber.concord_eq、Reproduction.concord_self_zero_iff、'
+                              'born_flatMap、mem_flatMap_cases；born_within_stock 为 born_within_inflow 之封闭之兄弟。'}},
+            {'id': 'additive-part-of-offspring-variance', 'relation': 'formal-reuse',
+             'detail': {'en': 'Reproduction.Generations.response_sq_le, which response_sq_within_inflow joins to the '
+                              'spread bound.',
+                        'zh': 'Reproduction.Generations.response_sq_le，response_sq_within_inflow 接之于散布之界。'}},
+            {'id': 'selection-term-over-generations', 'relation': 'formal-reuse',
+             'detail': {'en': 'SelectionTerm.Generations and its mean_step, offspring_eq, born_eq, total_flatMap; Exact, '
+                              'raised_exact, lowered_exact.',
+                        'zh': 'SelectionTerm.Generations 及其 mean_step、offspring_eq、born_eq、total_flatMap；Exact、raised_exact、'
+                              'lowered_exact。'}},
+            {'id': 'evolution-on-descent', 'relation': 'formal-reuse',
+             'detail': {'en': 'Becoming.price, selected and born; Web.ComesToStand and Web.Dependent as read on descent.',
+                        'zh': 'Becoming.price、selected 与 born；Web.ComesToStand 与 Web.Dependent，如读于世系者。'}},
+            {'id': 'a-rise-past-the-inflow-is-drawn-from-beyond', 'relation': 'formal-reuse',
+             'detail': {'en': 'Flow.inflow and Flow.replenishment_le_inflow; share_within_rest reads its law on offspring.',
+                        'zh': 'Flow.inflow 与 Flow.replenishment_le_inflow；share_within_rest 读其律于后代。'}},
+            {'id': 'laws-of-one-step', 'relation': 'formal-reuse',
+             'detail': {'en': 'Flow.BalancesOn, BalancesOn.over and Balances.on.',
+                        'zh': 'Flow.BalancesOn、BalancesOn.over 与 Balances.on。'}}],
+        'related': [
+            {'id': 'what-a-rise-draws-from-beyond',
+             'detail': {'en': 'The beyond falls by the rise and the loss; the carriers and the rest of a whole are a case.',
+                        'zh': '其外降其所升与所失；携带者与整体之其余即其一例。'}},
+            {'id': 'entropy-history-and-record',
+             'detail': {'en': "Entropy's module, whose stock law born_within_inflow re-derives on a list balanced on.",
+                        'zh': 'Entropy 之模块，born_within_inflow 于所平衡之列上重导其存量律。'}}],
+        'references': ([{'path': MOD, 'role': 'proof', 'declarations': sorted(names), 'sha256': sha(MOD)}]
+                       + [{'path': p, 'role': 'proof', 'sha256': sha(p)} for p in PROOFS]
+                       + [{'path': receipt, 'role': 'receipt', 'sha256': sha(receipt)},
+                          {'path': STUDY, 'role': 'integration', 'sha256': sha(STUDY)},
+                          {'path': NOTE, 'role': 'integration', 'sha256': sha(NOTE)},
+                          {'path': REVIEW, 'role': 'review', 'sha256': sha(REVIEW)},
+                          {'path': CH4, 'role': 'statement', 'sha256': sha(CH4)}]),
+        'proof_bindings': [{'source': MOD, 'receipt': receipt, 'sha256_pointer': '/source_sha256/Becoming.SelectionPace',
+                            'success_pointer': '/status', 'success_value': 'passed'}],
+        'history': [{'en': f'{date_en}: added (UE5), the first candidate of UE0\'s audit of third parts: the natural '
+                           f'statement false, the pace bounded by what flows into the carrying lineages, a third part '
+                           f'against Price and Fisher, yes and weak; study section {n}.',
+                     'zh': f'{date_zh}：新增（UE5），UE0 第三部分稽核之首一候选：自然之陈述不成立，速度受流入携带者谱系者之界，'
+                           f'对 Price 与 Fisher 之第三部分，成立而弱；研究第 {n} 节。'}],
+    }
+
+
+def answer_in_bounds(receipt_id, n):
+    """what-bounds-offspring-numbers: the clause UE5 answers leaves the next delta; a history entry (EV10's pattern)."""
+    year, month, day = int(receipt_id[:4]), int(receipt_id[4:6]), int(receipt_id[6:8])
+    date_en, date_zh = f'{day} {MONTHS[month - 1]} {year}', f'{year}年{month}月{day}日'
+    path = RECORDS / 'what-bounds-offspring-numbers.json'
+    raw = path.read_text(encoding='utf-8')
+    old = json.loads(raw)
+    assert json.dumps(old, ensure_ascii=False, indent=2) + '\n' == raw, 'the record would not round-trip byte for byte'
+    clause_en = 'a lineage open to inflow, bounded by what flows in; '
+    clause_zh = '向流入开放的世系，受流入之量约束；'
+    assert old['next_delta']['en'].count(clause_en) == 1, old['next_delta']['en']
+    assert old['next_delta']['zh'].count(clause_zh) == 1, old['next_delta']['zh']
+    assert not any('UE5' in h.get('en', '') for h in old['history'])
+    old['next_delta']['en'] = old['next_delta']['en'].replace(clause_en, '')
+    old['next_delta']['zh'] = old['next_delta']['zh'].replace(clause_zh, '')
+    old['history'].append({
+        'en': f'{date_en}, UE5: a lineage open to inflow, bounded by what flows in, is answered by record {RID} (study '
+              f'section {n}), which joins Becoming.Reproduction to Becoming.Entropy; this record\'s next delta updated; '
+              f'its laws and their statements are unchanged.',
+        'zh': f'{date_zh}，UE5：向流入开放的世系受流入之量约束，由记录 {RID} 回答（研究第 {n} 节），其接 Becoming.Reproduction 于 '
+              f'Becoming.Entropy；本记录的下一步已更新；定律及其陈述不变。'})
+    path.write_text(json.dumps(old, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+def main():
+    receipt_id, n = sys.argv[1], int(sys.argv[2])
+
+    def sha(path):
+        return hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
+
+    receipt = f'{PKG}/becoming-checks/{receipt_id}/verification.json'
+    core = json.loads((ROOT / receipt).read_text())
+    assert core['status'] == 'passed'
+    assert core['source_sha256']['Becoming.SelectionPace'] == sha(MOD)
+    mod = next(m for m in core['modules'] if m['module'] == 'Becoming.SelectionPace')
+    assert not any(mod['axiom_dependencies'].values())
+    names = {d['name'] for d in mod['declarations']}
+    assert len(names) == 224, len(names)
+    for rid in DEPENDS + RELATED:
+        assert (RECORDS / f'{rid}.json').exists(), rid
+    record = build(names, sha, receipt_id, n)
+    path = RECORDS / f'{RID}.json'
+    assert not path.exists()
+    path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    answer_in_bounds(receipt_id, n)
+    print('records:', RID, len(names), 'declarations; what-bounds-offspring-numbers next delta and history updated')
+
+
+if __name__ == '__main__':
+    main()
