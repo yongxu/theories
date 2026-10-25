@@ -1,0 +1,150 @@
+@Becoming.ClosedUnder.{u_1} : {X : Type u_1} → (rel : X → X → Prop) → (region : X → Prop) → Prop
+@Becoming.WithinClosure.{u_1} : {X : Type u_1} → (rel : X → X → Prop) → (f g : X) → Prop
+@Becoming.WithinClosure.refl.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} (f : X),
+  @Becoming.WithinClosure.{u_1} X rel f f
+@Becoming.WithinClosure.trans.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} {f g h : X}
+  (first : @Becoming.WithinClosure.{u_1} X rel f g) (second : @Becoming.WithinClosure.{u_1} X rel g h),
+  @Becoming.WithinClosure.{u_1} X rel f h
+@Becoming.WithinClosure.of_rel.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} {f g : X} (related : rel f g),
+  @Becoming.WithinClosure.{u_1} X rel f g
+@Becoming.WithinClosure.mono.{u_1} : ∀ {X : Type u_1} {rel rel' : X → X → Prop}
+  (larger : ∀ (g h : X), rel g h → rel' g h) {f g : X} (within : @Becoming.WithinClosure.{u_1} X rel f g),
+  @Becoming.WithinClosure.{u_1} X rel' f g
+@Becoming.WithinClosure.symm.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} (symmetric : ∀ (g h : X), rel g h → rel h g)
+  {f g : X} (within : @Becoming.WithinClosure.{u_1} X rel f g), @Becoming.WithinClosure.{u_1} X rel g f
+@Becoming.WithinClosure.not_rel.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} {f g h : X}
+  (within : @Becoming.WithinClosure.{u_1} X rel f g) (beyond : Not (@Becoming.WithinClosure.{u_1} X rel f h)),
+  Not (rel g h)
+@Becoming.closedUnder_withinClosure.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} (f : X),
+  @Becoming.ClosedUnder.{u_1} X rel (@Becoming.WithinClosure.{u_1} X rel f)
+@Becoming.closure_iff_certified.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} {region : X → Prop} {f : X},
+  Iff (∀ (g : X), Iff (region g) (@Becoming.WithinClosure.{u_1} X rel f g))
+    (And (region f)
+      (And (@Becoming.ClosedUnder.{u_1} X rel region) (∀ (g : X), region g → @Becoming.WithinClosure.{u_1} X rel f g)))
+@Becoming.not_within_of_closed.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} {region : X → Prop} {f g : X}
+  (closed : @Becoming.ClosedUnder.{u_1} X rel region) (holds : region f) (outside : Not (region g)),
+  Not (@Becoming.WithinClosure.{u_1} X rel f g)
+@Becoming.le_succ_cases : ∀ {n K : Nat}
+  (le :
+    @LE.le.{0} Nat instLENat n
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) K
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))),
+  Or (@LE.le.{0} Nat instLENat n K)
+    (@Eq.{1} Nat n
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) K
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+@Becoming.gap_of_lt : ∀ {i j : Nat} (lt : @LT.lt.{0} Nat instLTNat i j),
+  @Exists.{1} Nat fun (d : Nat) =>
+    @Eq.{1} Nat j
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) i
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) d
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+@Becoming.mem_cons_split.{u_1} : ∀ {S : Type u_1} {x a : S} {l : List.{u_1} S}
+  (mem : @Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) (@List.cons.{u_1} S a l) x),
+  Or (@Eq.{u_1 + 1} S x a) (@Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) l x)
+Becoming.skipAt : Nat → Nat → Nat
+Becoming.skipAt_ne : ∀ (m n : Nat), @Ne.{1} Nat (Becoming.skipAt m n) m
+Becoming.skipAt_le : ∀ (m n : Nat),
+  @LE.le.{0} Nat instLENat (Becoming.skipAt m n)
+    (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+Becoming.skipAt_lt : ∀ (m : Nat) {i j : Nat},
+  @LT.lt.{0} Nat instLTNat i j → @LT.lt.{0} Nat instLTNat (Becoming.skipAt m i) (Becoming.skipAt m j)
+@Becoming.split_at_head.{u_1} : ∀ {S : Type u_1} {g : Nat → S} {a : S} {l : List.{u_1} S} (K : Nat),
+  (∀ (n : Nat),
+      @LE.le.{0} Nat instLENat n K →
+        Or (@Eq.{u_1 + 1} S (g n) a)
+          (@Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) l (g n))) →
+    Or
+      (@Exists.{1} Nat fun (i : Nat) =>
+        @Exists.{1} Nat fun (j : Nat) =>
+          And (@LT.lt.{0} Nat instLTNat i j) (And (@LE.le.{0} Nat instLENat j K) (@Eq.{u_1 + 1} S (g i) (g j))))
+      (Or
+        (∀ (n : Nat),
+          @LE.le.{0} Nat instLENat n K →
+            @Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) l (g n))
+        (@Exists.{1} Nat fun (m : Nat) =>
+          And (@LE.le.{0} Nat instLENat m K)
+            (And (@Eq.{u_1 + 1} S (g m) a)
+              (∀ (n : Nat),
+                @LE.le.{0} Nat instLENat n K →
+                  @Ne.{1} Nat n m →
+                    @Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) l (g n)))))
+@Becoming.revisits_within.{u_1} : ∀ {S : Type u_1} (l : List.{u_1} S) (g : Nat → S),
+  (∀ (n : Nat),
+      @LE.le.{0} Nat instLENat n (@List.length.{u_1} S l) →
+        @Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) l (g n)) →
+    @Exists.{1} Nat fun (i : Nat) =>
+      @Exists.{1} Nat fun (j : Nat) =>
+        And (@LT.lt.{0} Nat instLTNat i j)
+          (And (@LE.le.{0} Nat instLENat j (@List.length.{u_1} S l)) (@Eq.{u_1 + 1} S (g i) (g j)))
+@Becoming.Branching.Lossless.returns.{u_1,
+    u_2} : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process.{u_1, u_2} S A}
+  (lossless : @Becoming.Branching.Lossless.{u_1, u_2} S A P) {all : List.{u_1} S}
+  (every : ∀ (s : S), @Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) all s)
+  (r : @Becoming.Run.{u_1, u_2} S A P),
+  @Becoming.Branching.Returns.{u_1, u_2} S A P
+    (@Becoming.Run.state.{u_1, u_2} S A P r (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))))
+@Becoming.Law.lossless_of_returns.{u_1} : ∀ {S : Type u_1} {next : S → S}
+  (returns : ∀ (s : S), @Becoming.Law.Returns.{u_1} S next s), @Becoming.Law.Lossless.{u_1} S next
+@Becoming.Law.Lossless.returns.{u_1} : ∀ {S : Type u_1} {next : S → S} (lossless : @Becoming.Law.Lossless.{u_1} S next)
+  {all : List.{u_1} S}
+  (every : ∀ (s : S), @Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) all s) (s : S),
+  @Becoming.Law.Returns.{u_1} S next s
+@Becoming.Law.lossless_iff_returns.{u_1} : ∀ {S : Type u_1} {next : S → S} {all : List.{u_1} S}
+  (every : ∀ (s : S), @Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) all s),
+  Iff (@Becoming.Law.Lossless.{u_1} S next) (∀ (s : S), @Becoming.Law.Returns.{u_1} S next s)
+@Becoming.Law.Drawn.not_returns.{u_1} : ∀ {S : Type u_1} {next : S → S} {s : S}
+  (drawn : @Becoming.Law.Drawn.{u_1} S next s), Not (@Becoming.Law.Returns.{u_1} S next s)
+@Becoming.Law.drawn_iff_not_returns.{u_1} : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Iff (@Becoming.Law.Drawn.{u_1} S next s) (Not (@Becoming.Law.Returns.{u_1} S next s))
+@Becoming.constant_of_goAlike.{u_1, u_2,
+    u_3} : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process.{u_1, u_2} S A} {π : S → K}
+  (total : ∀ (s : S) (a : A), @Exists.{u_1 + 1} S fun (t : S) => @Generative.Process.step.{u_1, u_2} S A P s a t)
+  (alike : @Becoming.GoAlike.{u_1, u_2, u_3} S A K P π) (a : A),
+  @Becoming.«有常».{u_1} S (@Becoming.moveRel.{u_1, u_2} S A P a) (@Becoming.sameValue.{u_1, u_3} S K π)
+@Becoming.goAlike_of_constant.{u_1, u_2,
+    u_3} : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process.{u_1, u_2} S A} {π : S → K}
+  (determined : @Becoming.Determined.{u_1, u_2} S A P)
+  (constant :
+    ∀ (a : A), @Becoming.«有常».{u_1} S (@Becoming.moveRel.{u_1, u_2} S A P a) (@Becoming.sameValue.{u_1, u_3} S K π)),
+  @Becoming.GoAlike.{u_1, u_2, u_3} S A K P π
+@Becoming.Law.sameFuture_of_goAlike.{u_1,
+    u_2} : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R}
+  (alike : @Becoming.GoAlike.{u_1, 0, u_2} S Unit R (@Becoming.Law.process.{u_1} S next) o) (s s' : S),
+  @Eq.{u_2 + 1} R (o s) (o s') → @Becoming.Law.SameFuture.{u_1, u_2} S R next o s s'
+@Becoming.withinClosure_iff_reached.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} {f g : X},
+  Iff (@Becoming.WithinClosure.{u_1} X rel f g) (@Becoming.«所及».{u_1} X rel (@Becoming.«一».{u_1} X) f g)
+@Becoming.withinClosure_of_line.{u_1} : ∀ {X : Type u_1} {rel : X → X → Prop} {f g : X}
+  (line : @Becoming.«相续».{u_1} X rel (@Becoming.«一».{u_1} X) f g), @Becoming.WithinClosure.{u_1} X rel f g
+@Becoming.image_determined_iff.{u_1, u_2,
+    u_3} : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process.{u_1, u_2} S A} {π : S → K},
+  Iff (@Becoming.Determined.{u_3, u_2} K A (@Becoming.Image.{u_1, u_2, u_3} S A K P π))
+    (@Becoming.GoAlike.{u_1, u_2, u_3} S A K P π)
+@Becoming.Web.Includes.refl : ∀ {F C : Type} {W : Becoming.Web F C} (l : Nat → C → Nat),
+  @Becoming.Web.Includes F C W l l
+@Becoming.Web.Includes.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat}
+  (first : @Becoming.Web.Includes F C W l l') (second : @Becoming.Web.Includes F C W l' l''),
+  @Becoming.Web.Includes F C W l l''
+@Becoming.Web.Includes.not_exceeded : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (includes : @Becoming.Web.Includes F C W l l'), Not (@Becoming.Web.Exceeds F C W l' l)
+@Becoming.Web.Widens.not_reverse : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (widens : @Becoming.Web.Widens F C W l l'), Not (@Becoming.Web.Widens F C W l' l)
+@Becoming.Web.Widens.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat}
+  (first : @Becoming.Web.Widens F C W l l') (second : @Becoming.Web.Widens F C W l' l''),
+  @Becoming.Web.Widens F C W l l''
+@Becoming.Web.Keeps.symm : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (keeps : @Becoming.Web.Keeps F C W l l'), @Becoming.Web.Keeps F C W l' l
+@Becoming.Web.Mixed.symm : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (mixed : @Becoming.Web.Mixed F C W l l'), @Becoming.Web.Mixed F C W l' l
+@Becoming.Web.Widens.not_keeps : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (widens : @Becoming.Web.Widens F C W l l'), Not (@Becoming.Web.Keeps F C W l l')
+@Becoming.Web.Widens.not_mixed : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (widens : @Becoming.Web.Widens F C W l l'), Not (@Becoming.Web.Mixed F C W l l')
+@Becoming.Web.Keeps.not_mixed : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (keeps : @Becoming.Web.Keeps F C W l l'), Not (@Becoming.Web.Mixed F C W l l')
+@Becoming.RecurrenceRuns.lossless_iff_returns.{u_1} : ∀ {S : Type u_1} {next : S → S} {all : List.{u_1} S}
+  (every : ∀ (s : S), @Membership.mem.{u_1, u_1} S (List.{u_1} S) (@List.instMembership.{u_1} S) all s),
+  Iff (@Becoming.Branching.Lossless.{u_1, 0} S Unit (@Becoming.Law.process.{u_1} S next))
+    (∀ (s : S), @Becoming.Branching.Returns.{u_1, 0} S Unit (@Becoming.Law.process.{u_1} S next) s)
+
