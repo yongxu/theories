@@ -313,6 +313,7 @@ import Becoming.GrammarCourse
 import Becoming.GrammarRegularity
 import Becoming.GrammarScope
 import Becoming.GrammarCases
+import Becoming.GrammarPath
 
 /-!
 # The Theory of Becoming: the formal core
@@ -3283,6 +3284,21 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread
   grows with its number, the rate read in its
   regularity (`Belief`).
+* `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
+  (board item PF), for every carrier, relation and class. Where a region is left under a class only
+  into a set, a line under the class from inside to outside holds a member of that set alike to its
+  start (`«所经必同»`, `«所经不同则不及»`). Under a constant class, everything downstream of anything
+  alike to a member whose effects the class holds (`«所缘同于»`) is alike to it and on a line under the
+  class (`«常闭则后皆续»`), and, given constancy, holding the effects is equivalent to that
+  (`«常类之闭当且仅当后皆同类»`); the same holds up to the net's end (`«至终有常»`,
+  `«至终常闭则后皆续»`, `«至终常类之闭当且仅当后皆同类»`), and a relation under which a line ends at an
+  occurrence that still conditions something is not constant up to the net's end
+  (`«亡而网续则不至终有常»`). Witnesses that neither premise can be dropped (`Unclosed`, `Inconstant`),
+  and a finite net with two families in which the one is not constant while one family's class,
+  narrower than the one, is constant up to the net's end and the organism's is not
+  (`FiniteFamilies`); and a finite net with two families sharing a condition they affect, where every
+  premise holds at once and the line from one family's first birth reaches the other past the first
+  member's end (`FiniteSharedCondition`).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.
