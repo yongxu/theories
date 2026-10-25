@@ -9,7 +9,7 @@ The UE plan's purpose for item 7, a result no neighbouring field states, is not 
 ## What lands
 
 **The record.**
-- Proposed id `widening-on-late-tails-and-carriers`.
+- Id `eventual-widening`.
 - Title: *Widening on late tails, and what carries a widening*.
 - Standing: theorem, near-definitional.
 
@@ -17,8 +17,8 @@ The UE plan's purpose for item 7, a result no neighbouring field states, is not 
 
 | Module | Theorems | Declarations | Imports |
 |---|---|---|---|
-| `Becoming.EventualWidening` | 25 | 38 | `Becoming.Regions`, `Becoming.ContinuedClasses`, `Becoming.Population` |
-| `Becoming.EventualWideningInstances` | 77 | 98 | `Becoming.EventualWidening`, `Becoming.Verification`, `Becoming.Weightings` |
+| `Becoming.EventualWidening` | 24 | 36 | `Becoming.Regions`, `Becoming.ContinuedClasses`, `Becoming.Population` |
+| `Becoming.EventualWideningInstances` | 82 | 106 | `Becoming.EventualWidening`, `Becoming.Verification`, `Becoming.Weightings` |
 
 **Laws** (draft of the record's list).
 1. **Widening on late tails.** One level path eventually widens another where, from some step on, it widens it on every tail, each read on the web from its first step (`Web.after`, `Web.tailFrom`, `Web.EventuallyWidens`).
@@ -33,11 +33,12 @@ The UE plan's purpose for item 7, a result no neighbouring field states, is not 
 4. **Keeping widening.** Along a continuation, from a step on, nothing admitted is lost and something keeps being opened (`Web.IncludesAcrossFrom`, `Web.KeepsOpening`, `Web.KeepsWidening`). It holds from every later step and is unchanged by every re-identification carrying the continuation (`Web.KeepsWidening.later`, `Web.keepsWidening_reidentify`).
    - By name over a listed type no range keeps widening (`Web.KeepsWidening.gathers`, `Web.KeepsWidening.not_listed`).
    - A course keeping widening by name eventually widens a range admitting alike from some step on what it admits at some step (`Web.AdmitsAlikeFrom`, `Web.KeepsWidening.eventually_widens_of_within`; the lemma `Web.KeepsOpening.eventually_widens`).
-5. **What carries a widening.** A flow's range is opened by the opened from a step where gains of support recur and every later gain is given, on a rising condition the gainer requires, by a supported formation that itself gained support later than that step (`Flow.OpenedByOpened`). Where nothing is supported from some step on, no flow is opened by the opened (`Flow.OpenedByOpened.not_of_unsupported`).
+5. **What carries a widening** (in the instances module, beside its witnesses). A flow's range is opened by the opened from a step where gains of support recur and every later gain is given, on a rising condition the gainer requires, by a supported formation that itself gained support later than that step (`Flow.OpenedByOpened`). The definition is provisional: its proposed first law would reach the giver only up to double negation, and that law fixes the form. Where nothing is supported from some step on, no flow is opened by the opened (`Flow.OpenedByOpened.not_of_unsupported`).
 6. **Witnesses.**
    - A burst widens a rising course up to step 0, the two are mixed over every step, and the rising course eventually widens the burst and keeps widening (`OwnCondition.disagreement`).
    - A saturated course widens and eventually widens the rising one and keeps widening from no step (`OwnCondition.not_monotone`, `OwnCondition.full_eventually_widens_rising`).
    - A course keeping every formation of another from one step later is mixed with it in every tail (`LagWitness.lag`).
+   - Ranking by opened by the opened reverses widening: the relay is opened by the opened, a flow giving nothing on a saturated web is not, and the saturated levels widen the rising ones (`Saturated.reverses`).
    - Along a merging continuation a constant course keeps widening (`MergedWitness.keeps_widening_along_merge`).
    - One range is carried by a relay or by one giver with every admission the same (`OpeningChain.carried`).
    - A closed cycle is opened by the opened with no widening (`ClosedCycle.cycle`).
@@ -52,7 +53,7 @@ The UE plan's purpose for item 7, a result no neighbouring field states, is not 
 - Which actual courses meet any of these readings.
 
 **Standing for 08 §8** (known results). Near-definitional:
-- eventual widening is widening on late tails, the inclusion form of a tail criterion; on counts it entails overtaking (von Weizsäcker 1965; Gale 1967) but is not overtaking;
+- eventual widening is widening on late tails, the inclusion form of a tail criterion. That, counting finitely many admissions at each step, it entails overtaking (von Weizsäcker 1965; Gale 1967) and not conversely is an argument, not proved in Lean; the record does not cite it as a law;
 - the frame laws are the density of a tail reading (liveness in Alpern and Schneider's sense);
 - `not_listed` is the pigeonhole;
 - the joining law uses its hypotheses directly.
@@ -68,21 +69,23 @@ The UE plan's purpose for item 7, a result no neighbouring field states, is not 
 > **Theorem** (World). *Widening on late tails, and what carries a widening.*
 > - One level path *eventually widens* another where, from some step on, it widens it on every tail (`Web.EventuallyWidens`). This is first-order widening read on late tails, not a comparison of growth.
 > - Its order laws are widening's. It never reverses widening, and widening or eventual widening is transitive (`Web.Widens.not_eventually_reversed`, `Web.WidensOrEventually.trans`).
-> - It reads only tails (`Web.EventuallyWidens.of_agree_left`). Where some path eventually widens a course, eventually widening it and its complement are both dense, so the verdict is neither verifiable nor refutable and can be insulated from every record (`Web.eventually_neither`, `Web.eventually_insulated`).
+> - It reads only tails (`Web.EventuallyWidens.of_agree_left`). Where some path eventually widens a course, eventually widening it and its complement are both dense (the first course varied, the second fixed), so the verdict is neither verifiable nor refutable and can be insulated from every record (`Web.eventually_neither`, `Web.eventually_insulated`).
 > - A path whose admissions a list holds eventually widens nothing (`Web.not_eventually_of_listed`).
 > - A course *keeps widening* along a continuation where nothing admitted is lost and something keeps being opened (`Web.KeepsWidening`). By name over a listed type none does, and a course wider at every step can fail to (`Web.KeepsWidening.not_listed`, `OwnCondition.not_monotone`).
 > - A course keeping widening eventually widens a range that admits alike on what it admits at some step (`Web.KeepsWidening.eventually_widens_of_within`). A course keeping every formation of another from one step later is mixed with it in every tail (`LagWitness.lag`).
-> - One range can be carried by a relay of openings or by one giver, every admission the same (`OpeningChain.carried`), and a closed cycle is opened by the opened with no widening (`ClosedCycle.cycle`).
+> - One range can be carried by a relay of openings or by one giver, every admission the same (`OpeningChain.carried`), and a closed cycle is opened by the opened with no widening (`ClosedCycle.cycle`); the property, opened by the opened, is provisional (`Flow.OpenedByOpened`).
 > - Calling eventual widening better is a premise beyond C, not asserted.
+> - It does not capture the second-order direction of 生生, a range whose widening keeps widening against one merely wider now, which stays open, as does a law relating 生成 to widening (02).
 >
-> (record: `widening-on-late-tails-and-carriers`, to be linked when it exists)
+> (record: `eventual-widening`, to be linked when it exists)
 
 ## Rule 9
 
-- **`Becoming.EventualWidening`.** Its order laws are derived from `Web.Widens`'s (`Widens.not_reverse`, `Widens.trans`) on shifted webs: below, not beside, with no second proof of a strict partial order. Keeping widening is built on `Web.IncludesAcross` and `Web.ExceedsAcross`. `Web.after` is new: the package has `World.after` and no shift of a web, and it reads a web from step `S` as `World.after` reads a world. No existing module imports this one. Its row should say it is a leaf as a tool, the long-run reading of widening, until the gain bridge or the givers law imports it.
+- **`Becoming.EventualWidening`.** Its order laws are derived from `Web.Widens`'s (`Widens.not_reverse`, `Widens.trans`) on shifted webs: below, not beside, with no second proof of a strict partial order. Keeping widening is built on `Web.IncludesAcross` and `Web.ExceedsAcross`. `Web.after` is new: the package has `World.after` and no shift of a web, and it reads a web from step `S` as `World.after` reads a world. It holds eventual widening and keeping widening only; candidate C's property is in the instances module (the re-check's R3). No existing module imports this one. Its row should say it is a leaf as a tool, the long-run reading of widening, until the gain bridge or the givers law imports it.
 - **`Becoming.EventualWideningInstances`.** A leaf as an instance module and models:
   - its frame laws are instances of 03's (`not_verifiable_of_adheres`, `not_refutable_of_adheres`, `insulates_iff_dense`);
   - its listing law reads the weighting characterization's hypothesis (`Web.ListsAdmitted`);
+  - it states the property of what carries a widening (`Flow.OpenedByOpened`, provisional) beside its witnesses;
   - the rest are witnesses.
 - **At landing**, register the apart roots in the connectivity run, as UE1 did.
 
@@ -97,14 +100,21 @@ None of this is in the landing modules. Each item is in DESIGN.md and would be c
 - **C∞**, named with its cost and not proposed (DESIGN §3.1).
 - **The neighbours' containment** in UE's sense (DESIGN §4), which has no third part yet.
 
-## Before landing (for the lander)
+## Landing (for the lander)
 
-1. A full checker run of the two modules with a receipt.
-2. The record JSON, with the laws, conditions, does-not-show, standing and dependencies above.
-3. The home-section paragraph in 07 §2.
-4. The known-results row in 08 §8.
-5. The connectivity registration.
-6. The board row.
-7. The generated pages, rendered and checked as AGENTS asks.
+The scripts are in this kit, modelled on UE1's landed kit. Run them from the checkout root of a clean landing worktree, against the then-current main. Each asserts that every edit applies exactly once. None has been run; each parses, and each anchor occurs exactly once in the files as they stand today.
 
-A check of this revision against REVIEW-UE4 before landing is advised. DESIGN.md and this note stay as the study.
+1. `python3 -B <kit>/integrate_ue4.py`. It copies both modules into the package and imports them in the root module after `Becoming.Regions`, each with an L1 bullet after Regions' bullet. It also adds them to the checker's core list after `"Becoming.Regions"` and to its SCOPE text before the `Standpoints` entry, and adds their README rows (EN, ZH) after Regions' row.
+2. The checker (`check_becoming.py`), for a fresh core receipt `RECEIPT`.
+3. `python3 -B <kit>/texts_ue4.py RECEIPT N`. It edits:
+   - 07 §2: the home paragraph `r-eventual-widening`, with the labelled reading [AI reading, D45] that the second-order direction stays open, inserted before `r-comparison-content-under-regrouping`, that is, right after `r-widening-along-a-reading` and in the section of `r-four-cases-of-a-part`;
+   - 07's Open list: an item before `r-universal-practical-warrant`;
+   - 08 §8, `beyond-the-table`: a bullet at the end of the list, before the market model's assessment;
+   - 08's receipt counts (UE1's regex block);
+   - the study section `N` (from `study_ue4.txt`) and regions.
+4. `python3 -B <kit>/make_records_ue4.py RECEIPT N`. It writes the record `eventual-widening`, citing all 142 declarations, and asserts the receipt's hashes and empty axiom reports for both modules.
+5. The renders and checks AGENTS asks for: `research-render`, `research-check`, `research-links`, `research-test`.
+6. The connectivity run, then `python3 -B <kit>/register_ue4.py CONNECTIVITY_LOG` for the apart roots.
+7. `python3 -B <kit>/board_ue4.py land UE4 RECEIPT N QUEUE STATE`.
+
+The reviewer's re-check found the revision ready to land after small text fixes; they are made (DESIGN §7). DESIGN.md and this note stay as the study.

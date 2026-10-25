@@ -1,10 +1,10 @@
 # UE4: the second-order direction of 生生 (design note)
 
-25 October 2026. AI-authored design note for board item UE4 (item 7 of the [UE plan](../ue-unified-explanation/PLAN.md)). Revised the same day against the independent review ([REVIEW-UE4](REVIEW-UE4.md): 3 errors, 6 overclaims, 15 imprecisions, 5 suggestions). Every finding is taken, and §7 maps each one to its answer. The first version is at commit `92f41c5bf`. What lands, and what stays design, is in [LANDING.md](LANDING.md). This note changes no chapter or record.
+25 October 2026. AI-authored design note for board item UE4 (item 7 of the [UE plan](../ue-unified-explanation/PLAN.md)). Revised the same day against the independent review ([REVIEW-UE4](REVIEW-UE4.md): 3 errors, 6 overclaims, 15 imprecisions, 5 suggestions). Every finding is taken, and §7 maps each one to its answer. The first version is at commit `92f41c5bf`. The reviewer's re-check of the revision (appended to the review) found 27 findings fully addressed, 2 in part, and five small new issues (R1–R5); all are fixed here (§7). What lands, and what stays design, is in [LANDING.md](LANDING.md). This note changes no chapter or record.
 
 **The kit.** Two modules in [`tree/Becoming/`](tree/Becoming/), built with `scratch_build.py` against the pure core ([log](scratch.log)), every axiom report empty, no warnings:
-- [`EventualWidening.lean`](tree/Becoming/EventualWidening.lean): 25 theorems in 38 declarations.
-- [`EventualWideningInstances.lean`](tree/Becoming/EventualWideningInstances.lean): 77 theorems in 98 declarations.
+- [`EventualWidening.lean`](tree/Becoming/EventualWidening.lean): 24 theorems in 36 declarations.
+- [`EventualWideningInstances.lean`](tree/Becoming/EventualWideningInstances.lean): 82 theorems in 106 declarations.
 
 It is a working build, not a receipt. Lean names below are the kit's or the package's; anything marked *proposed* is not proved.
 
@@ -13,7 +13,7 @@ It is a working build, not a receipt. Lean names below are the kit's or the pack
 **The second-order direction of 生生, a range whose widening keeps widening compared with one merely wider now, is still not captured.** The kit formalizes the long run of widening and sustained widening, not growth of the widening itself:
 - **Eventual widening is first order.** It is first-order widening read on late tails: `l` eventually widens `l'` where, from some step on, `l` widens `l'` on every tail (`Web.EventuallyWidens`). It needs no growth: a steady course eventually widens one that collapses (`Web.eventually_of_vanishing`).
 - **It is silent on a lag.** A course that keeps widening, and admits every formation of another from one step later forever, is mixed with it in every tail (`LagWitness.lag`).
-- **Keeping widening is a property, not an order.** Its first half, nothing lost along a continuation, is refuted by a finite stretch, and widening does not keep it (`OwnCondition.not_monotone`).
+- **Keeping widening is a property, not an order.** Its first half, nothing lost along a continuation, can be refuted by a finite stretch (a loss within it), and widening does not keep it (`OwnCondition.not_monotone`).
 - **The second-order content lies elsewhere**, in what carries a widening (candidate C) and in what a course keeps possible (candidate B), and neither has laws yet.
 
 **What the kit does give.**
@@ -163,7 +163,7 @@ So widening over the whole run orders neither above the other. Read over that fi
 
 **Relation to `Web.Widens`.**
 - The order laws are widening's on late tails: irreflexive, transitive, one-way (`Web.EventuallyWidens.irrefl`, `.trans`, `.not_reverse`, from `Widens.not_reverse` and `Widens.trans`). They are not a second proof beside widening's.
-- It orders some pairs that widening leaves mixed (F1) and reverses none that widening orders (`Web.Widens.not_eventually_reversed`, `Web.EventuallyWidens.not_included`). Where widening orders a pair, eventual widening agrees (widening without end, `Web.WidensWithoutEnd.eventually`; `OwnCondition.full_eventually_widens_rising`) or is silent (the wider course exceeds only over a first stretch).
+- It orders some pairs that widening leaves mixed (F1) and reverses none that widening orders (`Web.Widens.not_eventually_reversed`, `Web.EventuallyWidens.not_included`). Where widening orders a pair, eventual widening agrees (widening without end, `Web.WidensWithoutEnd.eventually`; `OwnCondition.full_eventually_widens_rising`) or, classically, is silent (the wider course exceeds only over a first stretch). The split is classical, as 07's four cases are: from no excess at arbitrarily late steps no step after which excess stops can be named.
 - Inclusion composes with it on either side (`Web.Includes.trans_eventually`, `Web.EventuallyWidens.trans_includes`). So widening or eventual widening is irreflexive and transitive (`Web.WidensOrEventually`, `.irrefl`, `.trans`): the two can be held together.
 - It reads only tails. Level paths agreeing from some step on eventually widen, and are eventually widened, alike (`Web.EventuallyWidens.of_agree_left`, `.of_agree_right`): every finite stretch is ignored.
 - Eventual widening is not an extension on the frame of level paths, so C read there does not give it [AI reading].
@@ -279,13 +279,15 @@ E's realized course widens K's realized course. K would cover E, through its unr
 
 ### 3.3 Candidate C: what carries a widening (openings that were opened)
 
-**Statement** (World, flow `L`, web `W`; in the kit). A flow's range is *opened by the opened* from `T` where two things hold (`Flow.OpenedByOpened`):
+**Statement** (World, flow `L`, web `W`; in the kit's instances module, beside its witnesses). A flow's range is *opened by the opened* from `T` where two things hold (`Flow.OpenedByOpened`):
 - gains of support recur;
 - every gain after `T` is given, on a condition the gainer requires before the step and that rises across it, by a supported formation taking part that itself gained support after `T`, earlier.
 
 The recurrence clause excludes the vacuous case. A web on which nothing is supported from some step on is opened by the opened from no step (`Flow.OpenedByOpened.not_of_unsupported`; on `OwnCondition.web`, `OwnCondition.not_opened`), so the end of degeneration does not qualify.
 
 [AI reading] It reads, on support, one face of what D1 reads as generation generating generation: the generators of further forming. Like a chain of support it is not 生生, which asks a direction as well.
+
+**The definition is provisional.** Its proposed first law, the uniform form of support passing on, would reach the giver only up to double negation, as `Flow.support_passes_on` does. Constructively that law would conclude a weaker form than the definition, so the law fixes the form: with the double negation inside, or with support decided. The witnesses meet either form.
 
 A stronger variant would read each opened formation as a part and ask it to widen against its own withholding. That needs withheld levels for every opened formation, which in natural numbers need not exist.
 
@@ -317,7 +319,7 @@ A stronger variant would read each opened formation as a part and ask it to wide
 - The definition: none beyond the representation.
 - The uniform law: balance, only active giving, activity needing support, requirements not loosening, brief support.
 - The givers law: balance, upkeep, bounded capacity per giver, and decided equality for counting.
-- To rank: none is proposed. A tumour line, or a capture loop reproducing its carriers, can be opened by the opened while closing what it draws on: 05's meta-attractor case. Ranking by opened by the opened runs against widening wholesale, so it could enter only after C, by a named premise [AI reading].
+- To rank: none is proposed. A tumour line, or a capture loop reproducing its carriers, can be opened by the opened while closing what it draws on: 05's meta-attractor case. Ranking by opened by the opened runs against widening wholesale (`Saturated.reverses`: the relay is opened by the opened, a flow giving nothing on a saturated web is not, and the saturated levels widen the rising ones), so it could enter only after C, by a named premise.
 
 **Standing.** Definition and witnesses proved (kit); the laws proposed.
 
@@ -388,11 +390,11 @@ The UE plan's purpose for this item is a result no neighbouring field states, an
 | | `EventuallyWidens.of_agree_left`, `.of_agree_right` | it reads only tails |
 | | `Web.KeepsWidening W R l T`, `KeepsWidening.not_listed` | keeping widening; none by name over a listed type |
 | | `KeepsWidening.eventually_widens_of_within` | THE-CORE's pair in the case where the range merely wider now admits alike |
-| | `Flow.OpenedByOpened`, `OpenedByOpened.not_of_unsupported` | what carries a widening; the end of degeneration excluded |
 | `Becoming.EventualWideningInstances` | `Web.eventually_dense`, `not_eventually_dense`, `eventually_neither`, `eventually_insulated` | 03's frame: dense both ways, neither verifiable nor refutable, insulable |
+| | `Flow.OpenedByOpened` (provisional), `OpenedByOpened.not_of_unsupported` | what carries a widening; the end of degeneration excluded |
 | | `Web.not_eventually_of_listed` | where the weighting characterization is silent |
 | | `OwnCondition.disagreement`, `OwnCondition.not_monotone`, `LagWitness.lag`, `MergedWitness.keeps_widening_along_merge` | the witnesses of F1, F2, the lag and the merge |
-| | `OpeningChain.carried`, `ClosedCycle.cycle` | one range with two carriers; opened by the opened with no widening |
+| | `OpeningChain.carried`, `ClosedCycle.cycle`, `Saturated.reverses` | one range with two carriers; opened by the opened with no widening; ranking by it reverses widening |
 
 **What would show the definition wrong.**
 - *Too narrow (1): other directions.* A pair that every reading argued from the work counts as "keeps widening against merely wider now", where the growing course widens in other directions and never comes to include the other. Eventual widening is silent there; a verdict would need a measure trading across formations, a premise of another kind than C∞.
@@ -444,3 +446,15 @@ The readings marked [AI reading] are the AI's and change no theorem.
 | 27 | the leaf | LANDING.md, rule 9 |
 | 28 | C and the root's `«生生»` | §3.3: the correspondence, and why C is on the World |
 | 29 | names | `IncludesAcrossFrom`, `AdmitsAlikeFrom`, `OpeningChain.relay`, `OpeningChain.oneGiver`, `oneGiver_not_opened` |
+
+The re-check (appended to REVIEW-UE4) and where each point is answered:
+
+| Point | Answer |
+|---|---|
+| 14, in part | the opening: nothing lost "can be refuted by a finite stretch (a loss within it)" |
+| 17(c), in part | LANDING's row for 08 §8 labels "entails overtaking" an argument, not proved in Lean, with its condition (finitely many admissions at each step) |
+| R1 | `Saturated.reverses` added to the instances module and cited (§3.3 premises; module readings) |
+| R2 | LANDING's draft for 07 §2 says the second-order direction stays open, with 02's law, and qualifies the frame laws (the first course varied, the second fixed) |
+| R3 | `Flow.OpenedByOpened` and `OpenedByOpened.not_of_unsupported` moved into `Becoming.EventualWideningInstances`, beside their witnesses; `Becoming.EventualWidening` is exactly the long-run tool |
+| R4 | the definition marked provisional (§3.3; the module; LANDING; the record) |
+| R5 | "classically" added (§3.1; module docstring) |

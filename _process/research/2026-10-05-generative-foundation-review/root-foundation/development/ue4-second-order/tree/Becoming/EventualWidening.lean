@@ -3,11 +3,11 @@ import Becoming.ContinuedClasses
 import Becoming.Population
 
 /-!
-# Eventual widening: widening read on late tails, keeping widening, and what carries a widening
+# Eventual widening: widening read on late tails, and keeping widening
 
-`Web.Widens` compares two level paths of one web at every step. This module states three things
-widening says, or cannot say, about the long run and about what carries a range, with no premise
-beyond the representation. No ethical predicate, ranking or axiom occurs.
+`Web.Widens` compares two level paths of one web at every step. This module states what widening
+says about the long run, and a course whose range keeps widening, with no premise beyond the
+representation. No ethical predicate, ranking or axiom occurs.
 
 **What this is not.** Eventual widening is first-order widening read on late tails. It is not the
 second-order comparison the account leaves open, a range whose widening keeps widening against one
@@ -26,9 +26,11 @@ it cannot compare a course that keeps every formation of another from one step l
   eventually widen it (`EventuallyWidens.not_included`, `Widens.not_eventually_reversed`).
   Inclusion composes with it on either side (`Includes.trans_eventually`,
   `EventuallyWidens.trans_includes`), so widening or eventual widening (`Web.WidensOrEventually`)
-  is irreflexive and transitive. Where widening orders a pair, eventual widening agrees (widening
-  without end, `Web.WidensWithoutEnd`, `WidensWithoutEnd.eventually`) or is silent (the wider
-  course exceeds only over a first stretch).
+  is irreflexive and transitive. Where widening orders a pair, eventual widening agrees where the
+  wider course exceeds at arbitrarily late steps (widening without end, `Web.WidensWithoutEnd`,
+  `WidensWithoutEnd.eventually`). Classically it otherwise is silent, the wider course exceeding
+  only over a first stretch. That split is classical: from no excess at arbitrarily late steps no
+  step after which excess stops can be named.
 * **It reads only tails.** Level paths agreeing from some step on eventually widen, and are
   eventually widened, alike (`EventuallyWidens.of_agree_left`, `EventuallyWidens.of_agree_right`):
   every finite stretch is ignored. A course admitting something at arbitrarily late steps
@@ -42,20 +44,16 @@ it cannot compare a course that keeps every formation of another from one step l
   level path keeps widening by name (`KeepsWidening.not_listed`, the pigeonhole through
   `length_le_of_sub`). Along a supplied continuation it can hold of a course admitting the same at
   every step, where a formation re-formed at each step continues nothing (`MergedWitness`, in the
-  instances module): read
-  along `R`, keeping widening counts re-formation as opening.
+  instances module): read along `R`, keeping widening counts re-formation as opening.
 * **Keeping widening and a range admitting alike.** A level path *admits alike* from `T` where at
   every later step it admits exactly what it admits at `T` (`Web.AdmitsAlikeFrom`). A course
   keeping widening by name eventually widens a range that admits alike from some step and whose
   admissions there it admits at some step from `T` (`KeepsWidening.eventually_widens_of_within`):
   nothing lost gives the inclusion. Given the inclusion as a hypothesis, keeping opening alone
   suffices (`KeepsOpening.eventually_widens`, a lemma).
-* **What carries a widening.** A flow's range is *opened by the opened* from `T` where gains of
-  support recur and every gain after `T` is given, on a condition the gainer requires before the
-  step and that rises across it, by a supported formation taking part that itself gained support
-  after `T`, earlier (`Flow.OpenedByOpened`). A web on which nothing is supported from some step
-  on is opened by the opened from no step (`Flow.OpenedByOpened.not_of_unsupported`): the end of
-  degeneration does not qualify.
+
+What carries a widening, the property *opened by the opened*, is stated beside its witnesses in
+`Becoming.EventualWideningInstances` (`Flow.OpenedByOpened`).
 
 **Standing.** Every law here is near-definitional: the order laws are widening's on late tails, the
 tail laws are the definition read pointwise, `not_listed` is the pigeonhole, and the joining laws
@@ -63,13 +61,11 @@ use their hypotheses directly.
 
 **Readings (the AI's, for UE4's design note; not adopted).** Eventual widening is the long-run
 form of widening: a tail comparison in inclusion form. Unlike overtaking, which sums, it ignores
-every finite stretch. Opened by the opened reads, on support, one face of what D1 reads as
-generation generating generation: the generators of further forming. Like a chain of support it
-is not 生生, which asks a direction as well. None of the three ranks:
+every finite stretch. Neither it nor keeping widening ranks:
 * calling eventual widening better is a premise beyond C, named C∞ in the note;
-* ranking by keeping widening runs against widening wholesale (`OwnCondition.not_monotone`, in
-  the instances module), and so does ranking by opened by the opened, so either could enter only
-  after C, by a named premise.
+* ranking by keeping widening runs against widening wholesale (`OwnCondition.not_monotone`), and
+  so does ranking by opened by the opened (`Saturated.reverses`), both in the instances module.
+  Either could enter only after C, by a named premise.
 
 **What is not derived.** Which courses an actual unfolding offers; the gain, renewal or number of
 givers that keeping widening needs, which the note keeps as design; comparisons over branching
@@ -383,28 +379,5 @@ theorem KeepsWidening.eventually_widens_of_within {T T₂ S : Nat}
     alike
 
 end Web
-
-/-! ## What carries a widening -/
-
-namespace Flow
-
-variable {F C : Type}
-
-/-- **Opened by the opened**: gains of support recur, and every gain after step `T` is given, on a
-condition the gainer requires before the step and that rises across it, by a supported formation
-taking part that itself gained support after `T`, earlier. -/
-def OpenedByOpened (L : Flow F C) (W : Web F C) (T : Nat) : Prop :=
-  (∀ N, ∃ t f, N ≤ t ∧ W.GainsSupport t f) ∧
-    ∀ t f, T < t → W.GainsSupport t f → ∃ c g u, W.requires t f c ∧ W.Rises t c ∧
-      g ∈ L.present t ∧ 0 < L.give t g c ∧ W.Supported t g ∧ T ≤ u ∧ u < t ∧ W.GainsSupport u g
-
-/-- **The end of degeneration is not opened by the opened**: where nothing is supported from some
-step on, no gain recurs. -/
-theorem OpenedByOpened.not_of_unsupported {L : Flow F C} {W : Web F C} {T : Nat}
-    (none_ : ∀ t f, T ≤ t → ¬ W.Supported t f) (T' : Nat) : ¬ L.OpenedByOpened W T' :=
-  fun ⟨recur, _⟩ => match recur T with
-    | ⟨t, f, from_, gains⟩ => none_ (t + 1) f (Nat.le_succ_of_le from_) gains.2
-
-end Flow
 
 end Becoming

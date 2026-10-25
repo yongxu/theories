@@ -3,11 +3,12 @@ import Becoming.Verification
 import Becoming.Weightings
 
 /-!
-# Eventual widening: its instances and witnesses
+# Eventual widening: its instances and witnesses, and what carries a widening
 
 The instances of `Becoming.EventualWidening` in chapter 03's frame and against the weighting
-characterization of C, and the witnesses that mark what eventual widening, keeping widening and
-being opened by the opened do and do not say. No ethical predicate, ranking or axiom occurs.
+characterization of C; the property of what carries a widening, *opened by the opened*; and the
+witnesses that mark what eventual widening, keeping widening and being opened by the opened do and
+do not say. No ethical predicate, ranking or axiom occurs.
 
 * **In chapter 03's frame.** Read the level paths as the runs of the process of all sequences of
   levels (`Sequences.process`). Where some level path eventually widens `l'`, eventually widening
@@ -43,6 +44,14 @@ being opened by the opened do and do not say. No ethical predicate, ranking or a
   every formation continues as `false`, a course admitting the same at every step keeps widening
   (`MergedWitness.keeps_widening_along_merge`), and by name it does not
   (`MergedWitness.not_keeps_widening_by_name`).
+* **What carries a widening.** A flow's range is *opened by the opened* from `T` where gains of
+  support recur and every gain after `T` is given, on a condition the gainer requires before the
+  step and that rises across it, by a supported formation taking part that itself gained support
+  after `T`, earlier (`Flow.OpenedByOpened`). The definition is provisional: its proposed first law,
+  the uniform form of `Flow.support_passes_on`, would reach the giver only up to double negation,
+  and that law fixes the form. A web on which nothing is supported from some step on is opened by
+  the opened from no step (`Flow.OpenedByOpened.not_of_unsupported`): the end of degeneration does
+  not qualify.
 * **One range, two carriers** (`OpeningChain`). On one web whose levels are the rising course
   (`OpeningChain.level_rising`), two flows balance with only active formations giving and activity
   needing support. In the relay each formation gives the next its unit (`OpeningChain.relay`);
@@ -59,6 +68,11 @@ being opened by the opened do and do not say. No ethical predicate, ranking or a
   widening (`ClosedCycle.not_keeps_widening_by_name`). Opened by the opened neither is nor gives
   widening. On `OwnCondition.web`, where nothing is ever supported, no flow is opened by the opened
   (`OwnCondition.not_opened`): the recurrence clause excludes the vacuous case.
+* **Ranking by opened by the opened reverses widening** (`Saturated`). The relay is opened by the
+  opened and its levels are the rising course; a flow that gives nothing, on a web where every
+  condition stands at one throughout, is opened by the opened from no step, since no gain recurs,
+  and its levels are the saturated course, which widens the rising one on the same requirements
+  (`Saturated.reverses`). So ranking by opened by the opened runs against widening wholesale.
 
 **Standing.** Near-definitional: the frame laws are the density of a tail reading (03 §5), the listing
 law is the definition read against a list, and the witnesses are constructions.
@@ -140,6 +154,31 @@ theorem not_eventually_of_listed {items : List (Nat × F)} (listed : W.ListsAdmi
       Nat.lt_irrefl t (Nat.lt_of_lt_of_le (lt_stepBound (listed t f admitted)) from_)
 
 end Web
+
+/-! ## What carries a widening -/
+
+namespace Flow
+
+variable {F C : Type}
+
+/-- **Opened by the opened**: gains of support recur, and every gain after step `T` is given, on a
+condition the gainer requires before the step and that rises across it, by a supported formation
+taking part that itself gained support after `T`, earlier. Provisional: its first law, the uniform
+form of `Flow.support_passes_on`, would reach the giver only up to double negation, and that law
+fixes the form. -/
+def OpenedByOpened (L : Flow F C) (W : Web F C) (T : Nat) : Prop :=
+  (∀ N, ∃ t f, N ≤ t ∧ W.GainsSupport t f) ∧
+    ∀ t f, T < t → W.GainsSupport t f → ∃ c g u, W.requires t f c ∧ W.Rises t c ∧
+      g ∈ L.present t ∧ 0 < L.give t g c ∧ W.Supported t g ∧ T ≤ u ∧ u < t ∧ W.GainsSupport u g
+
+/-- **The end of degeneration is not opened by the opened**: where nothing is supported from some
+step on, no gain recurs. -/
+theorem OpenedByOpened.not_of_unsupported {L : Flow F C} {W : Web F C} {T : Nat}
+    (none_ : ∀ t f, T ≤ t → ¬ W.Supported t f) (T' : Nat) : ¬ L.OpenedByOpened W T' :=
+  fun ⟨recur, _⟩ => match recur T with
+    | ⟨t, f, from_, gains⟩ => none_ (t + 1) f (Nat.le_succ_of_le from_) gains.2
+
+end Flow
 
 /-! ## The disagreement and saturation -/
 
@@ -503,6 +542,41 @@ theorem carried :
    oneGiver_not_opened⟩
 
 end OpeningChain
+
+/-! ## Ranking by opened by the opened reverses widening -/
+
+namespace Saturated
+
+open OwnCondition
+
+/-- Every condition stands at one throughout; each formation requires its own condition at need
+one. -/
+def web : Web Nat Nat :=
+  ⟨fun _ _ => 1, fun _ _ => True, fun _ n c => c = n, fun _ _ _ => 1, fun _ _ _ => False⟩
+
+/-- Nothing takes part. -/
+def still : Flow Nat Nat := ⟨fun _ => [], fun _ _ _ => 0, fun _ _ _ => 0⟩
+
+theorem level_full : web.level = full := rfl
+
+theorem still_balances : still.Balances web := fun _ _ => rfl
+
+/-- Everything is supported throughout, so nothing gains support, and no gain recurs. -/
+theorem still_not_opened (T : Nat) : ¬ Flow.OpenedByOpened still web T :=
+  fun ⟨recur, _⟩ => match recur 0 with
+    | ⟨_, _, _, gains⟩ => gains.1 (fun _ _ => Nat.le_refl 1)
+
+/-- **Ranking by opened by the opened reverses widening.** The relay is opened by the opened and its
+levels are the rising course; a flow that is not, on a web whose levels are the saturated course,
+has levels that widen the rising course (read on the same requirements). -/
+theorem reverses :
+    Flow.OpenedByOpened OpeningChain.relay OpeningChain.web 0 ∧ OpeningChain.web.level = rising ∧
+      (∀ T, ¬ Flow.OpenedByOpened still web T) ∧ web.level = full ∧
+      OwnCondition.web.Widens full rising :=
+  ⟨OpeningChain.relay_opened, OpeningChain.level_rising, still_not_opened, level_full,
+   full_widens_rising⟩
+
+end Saturated
 
 /-! ## Opened by the opened without widening -/
 
