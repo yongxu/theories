@@ -1,6 +1,6 @@
 # When selection favours control over its own rules
 
-*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Result 6 (MA2) landed on 25 October 2026: core receipt `20261025T045617.350224Z`, every axiom report empty. Its review was by one independent AI reviewer, not by a person. Result 7 (MA3) landed the same day, after an independent review revised its names and three of its claims: 51 theorems in 57 declarations, core receipt `20261025T071027.387418Z`, every axiom report empty. Chapter 7 states the readings below as decision D68. LA2 and LA3 ran on 25 and 26 October 2026, from their frozen commits.*
+*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Result 6 (MA2) landed on 25 October 2026: core receipt `20261025T045617.350224Z`, every axiom report empty. Its review was by one independent AI reviewer, not by a person. Result 7 (MA3) landed the same day, after an independent review revised its names and three of its claims: 51 theorems in 57 declarations, core receipt `20261025T071027.387418Z`, every axiom report empty. Result 8 (MA4) landed on 26 October 2026, after one independent AI review that found no unsound Lean: 38 declarations, core receipt `20261025T165537.368039Z`, every axiom report empty. Chapter 7 states the readings below as decision D68. LA2 and LA3 ran on 25 and 26 October 2026, from their frozen commits.*
 
 ## The question
 
@@ -50,13 +50,23 @@ A selection *reads* a quantity when its signal depends on it, directly or throug
    - **The lock.** The rule is read from the share exactly where what comes back is monotone in the share (`byBack_reads_iff`). Where what comes back covers the cost at every share, the course locks (`covering_locks`).
    - **Witness,** with a = 1 and c = 1. The same total return of 5, kept as (s, p) = (2, 3), favours shaping at a step; shared as (0, 5), it selects against shaping (`Split`; MA3).
 
+8. **Where the rule's readers are drawn from those it selects, the capacity to shape the rule and the lock are one loop** ([record](../../../../../../theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md)). This joins results 6 and 7. Read the rule after shaping as the pool of its readers, drawn from those it selects and counted as the population counts them. Each shaper among the readers reads hi coming back to the shapers alone and each other member lo, both with the same a, p and c.
+   - **Who reads.** The rule read is a monotone function of the share exactly where lo ≤ hi (`DrawnShaping.drawn_reads_iff`). As in result 6, the loop's premise is moved onto who reads, not removed.
+   - **A critical mass.** With lo ≤ hi, the rule favours the shapers at some share and the others strictly at another exactly where lo < c < hi (`critical_mass_iff`). There it favours the shapers exactly where they stand to the others at least as c − lo to hi − c (`critical_iff`).
+   - **One loop, either way.** With lo ≤ hi, under every schedule of reading, every course from a start under the rule read there is locked one way at every step (`drawn_locked_either`). With shapers present at the start: above the critical mass, their share rises at every step and the course is locked for them; below it, their share falls at every step and the course is locked the other way (`drawn_rises`, `drawn_falls`).
+   - **Witness,** with a = 1, nothing shared, a cost of 1, and 3 read as coming back where a shaper reads and 0 where another does. From one shaper to one other, the shapers' share rises at every step. From one to three it falls at every step, the course locked the other way (`CriticalMass.even_rises`, `few_falls`, `few_locks`). The shapers among the readers read three times the cost coming back in both, so the share decides.
+   - **Not shown.**
+     - That keeping control from being selected and leaving a lock are independent. Below the critical mass control is not selected, yet the course is locked. Leaving needs a reading beyond the share, as in result 6, and that is not joined to this.
+     - Courses with noise. Under rare mutation the long-run state is the risk-dominant one (Kandori, Mailath and Rob 1993; Young 1993), here the shapers' where lo < c < hi and 2c < hi + lo.
+     - Where lo < c < hi the model is a stag hunt, and its critical mass is the mixed equilibrium.
+
 The known forms of these results are listed under *Closest work*, item by item. The comparisons themselves are elementary. What is added is the conditions, the joins between results, the witness at each edge, and one statement that holds across fields that state these results separately.
 
 ## What follows for alignment
 
 These are readings. Each rests on the results named. The four readings on assistance, obedience, counter-rules and shared rule-making are stated in [chapter 7, §6](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#6-what-a-selection-reaches-alignment-with-no-premise) as decision D68.
 
-- **The unit is the joint selection.** Results 1 to 7 hold of any selector. They apply alike to a rater, a training run, a developer, a market or a state, and to any combination of them.
+- **The unit is the joint selection.** Results 1 to 8 hold of any selector. They apply alike to a rater, a training run, a developer, a market or a state, and to any combination of them.
 - **Obedience adds capacity, not reading.** An assistant that optimizes its principal's signal adds to what the principal can do, not to what the principal reads.
   - Read with result 4: where principal and assistant act as optimizers at a mutual best response, what the principal does not read falls as it would under one optimizer of their joint capacity.
   - Read with result 7: help that lowers the cost of shaping gives a rule no less favourable to shaping (`lower_c_raises`), and moves the threshold c ≤ s toward the shapers at each step.
@@ -68,14 +78,15 @@ These are readings. Each rests on the results named. The four readings on assist
   - Where something does come back, the shared part can still turn the verdict across a stretch (`SharedFlips`).
   - A witness shows that fewer steps with something back can turn the sign (`Timing.shorter_falls`).
   - From result 6: a loss read while its readers still outnumber the carriers turns the course, even when only those the selection thins read it. Read once they no longer do, it leaves the lock for good, even though that reading reaches beyond the share.
-- **What gets out of a lock.** From result 5: a change in what the rule reads, toward what lies outside the share. A reform of the rule's value alone is absorbed, and so is a reform of the reading where the reading is itself formed from the share. From result 6: the change has to come in time.
-- **Instrumental convergence, located.** Result 3 is its one-agent form. Results 5 and 7 together are its form for a population of practices: a means that wins locally becomes the rule.
+  - From result 8: where the rule's readers are drawn from those it selects, control falls below the critical mass, even where the shapers among the readers read more coming back than shaping costs (`CriticalMass.few_falls`).
+- **What gets out of a lock.** From result 5: a change in what the rule reads, toward what lies outside the share. A reform of the rule's value alone is absorbed, and so is a reform of the reading where the reading is itself formed from the share. From result 6: the change has to come in time. From result 8: keeping control from being selected does not by itself get out, since every course read from the share alone is locked one way or the other.
+- **Instrumental convergence, located.** Result 3 is its one-agent form. Results 5 and 7 together are its form for a population of practices: a means that wins locally becomes the rule. Result 8 makes them one loop where the rule's readers are drawn from those it selects: above a critical mass, the capacity to shape the rule is selected and the rule locks for it.
 - **Compare courses by widening, not by a score.**
   - One course widens another when at every step it allows everything the other allows, and at some step more.
   - Over a finite list of what can be allowed, one course widens another exactly when every positive weighting of the list ranks it higher (`Weighting.widens_iff_every_positive`; [record](../../../../../../theories/becoming/results/records/widening-as-what-every-weighting-ranks.md)).
   - Mixed cases are ranked both ways by some positive weighting, so no weighting is forced on them.
 
-  There is no single score to optimize, and a course that closes options another keeps never widens it. Two premises enter here: whose losses count (scope), and that widening is better (order). The account names both and asserts neither, and no result from 1 to 7 uses either.
+  There is no single score to optimize, and a course that closes options another keeps never widens it. Two premises enter here: whose losses count (scope), and that widening is better (order). The account names both and asserts neither, and no result from 1 to 8 uses either.
 
 ## Evidence on systems, as it fell
 
@@ -126,12 +137,13 @@ Taken from the AI's knowledge; not yet checked against the sources.
 - Result 4: the commons in evolutionary biology (Rankin, Bargum and Kokko 2007); influence-seeking patterns (Christiano 2019).
 - Result 5: Campbell (1979); regulatory capture (Stigler 1971); robust agent-agnostic processes (Critch 2021).
 - Results 6 and 7: Price (1970); collective goods (Olson 1965); rent-seeking (Tullock 1967; Krueger 1974); niche construction (Odling-Smee, Laland and Feldman 2003); the persistence of elites (Acemoglu and Robinson 2008); natural selection among AIs (Hendrycks 2023); gradual disempowerment (Kulveit and others 2025).
+- Result 8: the stag hunt and risk dominance (Harsanyi and Selten 1988; Skyrms 2004); critical mass and thresholds (Schelling 1978; Granovetter 1978); lock-in under increasing returns (Arthur 1989); the long-run state under noise (Kandori, Mailath and Rob 1993; Young 1993).
 - The commons tests: Piatti and others (2024).
 
 ## Questions for you
 
 1. Which result here is already known in a form not credited above?
 2. Where does a modelling choice (discrete steps, counts, a monotone reading) hide a premise that decides the result?
-3. In which settings of AI development or deployment is the return of shaping an evaluator kept, and in which is it shared?
+3. In which settings of AI development or deployment is the return of shaping an evaluator kept, and in which is it shared? Where are an evaluator's readers drawn from those it selects, as result 8 supposes?
 4. Do LA2's and LA3's results, as they fell, change your view? What would a version that discriminates better need?
 5. Is widening too weak to guide action, given how much it leaves unranked?
