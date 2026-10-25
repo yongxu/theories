@@ -31,6 +31,7 @@ PARTS = {
     "BUDDHIST-THOUGHT.md": ("zh", "审查材料 · 佛学"),
     "LOGIC.md": ("en", "Review dossier · Logic"),
     "PHILOSOPHY.md": ("en", "Review dossier · Philosophy"),
+    "ALIGNMENT.md": ("en", "Review dossier · Alignment"),
 }
 
 ZH_NUM = "〇一二三四五六七八九"

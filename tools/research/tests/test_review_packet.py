@@ -8,7 +8,7 @@ by a reviewer. A quote-only change to a chapter now has to keep the dossiers in 
 people, that is the right cost.
 
 On failure, update the dossier's quotation or Lean name, or tell its owner on the work board: RP for README,
-CLASSICAL-TEXTS, BUDDHIST-THOUGHT and LOGIC; RP2 for PHILOSOPHY.
+CLASSICAL-TEXTS, BUDDHIST-THOUGHT and LOGIC; RP2 for PHILOSOPHY; AJ4 for ALIGNMENT.
 """
 import contextlib
 import importlib.util
@@ -19,7 +19,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[3]
 CHECKER = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/check_dossiers.py'
 PACKET = ROOT / 'theories/becoming/review'
-OWNERS = {'PHILOSOPHY.md': 'RP2'}  # every other part of the packet: RP
+OWNERS = {'PHILOSOPHY.md': 'RP2', 'ALIGNMENT.md': 'AJ4'}  # every other part of the packet: RP
 
 
 def load_checker():
