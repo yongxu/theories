@@ -1,6 +1,6 @@
 # The crux, second round: a self that owns only its intended effects
 
-The second round of philosophical work on the open question of [07 §4.6](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#future-path), after the [first round](PHILOSOPHY-ROUND-1.md). Written by the AI, 25 October 2026, for board item PF2. It is an argument, not a result: it proves nothing beyond the Lean it cites, and every reading in it is an AI reading. The new formal facts are in PF2's extension of `Becoming.GrammarPath` (kit `tree2/Becoming/GrammarPath.lean`, a scratch build with every axiom report empty, not yet landed). References are from the AI's knowledge unless marked checked; each must be verified against the publication before it is cited elsewhere.
+The second round of philosophical work on the open question of [07 §4.6](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#future-path), after the [first round](PHILOSOPHY-ROUND-1.md). Written by the AI, 25 October 2026, for board item PF2. It is an argument, not a result: it proves nothing beyond the Lean it cites, and every reading in it is an AI reading. The new formal facts are in PF2's extension of `Becoming.GrammarPath` (kit `tree2/Becoming/GrammarPath.lean`, a scratch build with every axiom report empty, not yet landed). References are from the AI's knowledge, checked by an independent reader where the review note says so; each must be verified against the publication before it is cited elsewhere.
 
 ## 1. The question
 
@@ -8,96 +8,118 @@ The first round left one narrow position standing ([round 1 §6](PHILOSOPHY-ROUN
 
 07 §4.6 left the formal question open: *can a class that holds a member's intended effects, and not its other effects, be constant up to the net's end?* Round 1 guessed that if intended effects condition unintended ones, constancy suggests it cannot. That guess had the direction wrong.
 
+Nothing in the Lean marks an effect as intended. The formal facts are about any class that does not hold all of a member's effects, which fails P4 at that member. Reading such a class as one drawn by intention is the AI's reading throughout.
+
 ## 2. What the Lean shows
 
-- **Side effects follow the line** (`«旁效随行»`, `«旁效随线»`). Take a class constant up to the net's end, and a member that conditions something not alike to it, a side effect in the class's terms. Then every occurrence on its line under the class that conditions anything also conditions something alike to that side effect and outside the class.
-- **A clean intended step breaks the regularity** (`«旁效不随则不至终有常»`, witness `CleanStep`). Where an occurrence on the intended line goes on without a side effect of that kind, the class is not constant, even up to the net's end.
-- **The agential class can be a regularity of its own.** In `Unclosed`, read in `AgentWithWake`, the class holding a member with its intended effect and not its side effects is constant. Its line never reaches a side effect, and every step of it that goes on carries one.
-- **It reaches nothing beyond its intended line.** It does not hold its effects. So by PF's exact law (`«常类之闭当且仅当后皆同类»`) something downstream lies outside it, and its line does not take in what its intended effects feed (`Unclosed.not_taken_in`).
+- **A class can be constant up to the net's end without holding a member's effects** (`FiniteWake`, finite and without cycles). The class holding a member and part of what follows it, and keeping the rest apart, is constant up to the net's end, though not constant. Read as an agent, the part it holds is the intended line and the rest is the wake.
+- **What leaves the class follows each alike step** (`«出类随行»`, `«出类随线»`). Under a class constant up to the net's end, suppose a member conditions something not alike to it. Then every occurrence alike to the member that conditions anything also conditions something alike to that effect and outside the class. In particular, every occurrence on the member's line does.
+  - This is nearly the definition of constancy up to the net's end, read at a member the class does not close.
+  - "Alike to that effect" is only as fine as the class divides what lies outside it. A class drawn by intention has no reason to divide the outside finely. In `FiniteWake` it lumps it into one class, so there the law says only that something outside the class follows every step that goes on.
+- **A step with nothing outside the class breaks constancy** (`«出类不随则不至终有常»`, witness `CleanStep`). Where an occurrence alike to the member conditions something but nothing alike to the member's outside effect, the class is not constant, even up to the net's end.
+- **Its line reaches nothing outside it.** This holds for *any* class, since a line under a class stays within it (`«线内同类»`); it is not a finding about this one. Here the member's own outside effect is downstream of it and outside the class, so the class leaves part of what follows the member out of its scope.
 
 **So P2 does not decide between the agential self and the wide self.**
 
-- The organism fails P2: its line ends while what it conditions goes on.
-- The agential self can pass P2, but only with a *wake*: side effects of one kind at every step of its line that goes on.
-- The wide self passes P2 and P4.
+- The organism fails P2 wherever its last stage conditions anything (`«亡而网续则不至终有常»`).
+- The agential self can pass P2 (`FiniteWake`). Given that the member has an effect outside the class, it passes only if something outside the class follows every occurrence alike to the member that goes on.
+- The wide self passes P2 in the witnesses (`FiniteFamilies`, `FiniteSharedCondition`) and passes P4 by construction.
 
-Round 1 hoped the agential self would fail the test the organism fails. It does not. The whole crux now rests on P4, whether the class of one's line holds one's effects.
+Round 1 hoped the agential self would fail the test the organism fails. It does not. The crux now rests on P4: whether the class of one's line holds one's effects.
 
-## 3. The wake is fixed by the same regularity
+## 3. What one's kind fixes, and what it does not
 
-**What the side-effect law says.** An agential self that is a regularity of its own is never without its wake. The wake is not scattered or accidental. At every step that goes on, a side effect *of the same kind* follows. Constancy is bisimulation for a class (`«闭合当且仅当有常»`): which classes an occurrence's successors fall in is fixed by its class alone. Under such a class, the agent's kind fixes the kind of its wake as fully as it fixes its intended line.
+**What the law gives.** Under a class constant up to the net's end, for every occurrence that conditions something, the classes its successors fall in are fixed by its class. The law reads this at a member the class does not close: what leaves the class at the member leaves it, alike, at every occurrence alike to the member that goes on.
 
-**The argument from determination** [AI reading].
+**What it does not give.**
+- The law does not say which successors exist, how many, or whether an occurrence goes on at all.
+- It does not say the wake is a regularity of its own, a line or a self; nothing shows that.
+- It fixes the wake only at the class's own grain. If the class lumps everything outside it together, "the same kind of wake" means only "something outside".
 
-1. A self of its own is a class whose going-on is fixed by its own kind (round 1 §3).
-2. Under such a class, the kind of side effect at each step that goes on is fixed by the same kind (`«旁效随线»`, with constancy).
-3. So one's own kind fixes one's wake as fully as one's intended line.
-4. Drawing "one's own" by intention therefore splits what one's own kind fixes into two parts and keeps one.
+**The argument from determination, at its true strength** [AI reading].
 
-The agential theorist needs a reason why what one's own kind fixes is not one's own.
+1. A self of its own is a class whose going-on is fixed by its own kind (round 1 §3), where "kind" means the class, and "fixed" means which classes its successors fall in.
+2. In that sense, under such a class, that something outside the class follows each step that goes on is fixed by the same kind (`«出类随行»`).
+3. So one's own kind fixes that one leaves a wake, in the same sense as it fixes one's intended line.
+4. Drawing "one's own" by intention keeps the part of what one's kind fixes that one intends, and leaves the rest.
 
-**The reply from intention.** Intention supplies such a reason: the self is drawn by the description under which one acts (Anscombe; Davidson, "Actions, Reasons, and Causes", 1963). What one does intentionally is what one does under that description. The wake falls outside it.
+This is weaker than the first draft claimed. An intention-drawn class fixes *that* there is a wake, not *what* it is, unless it divides the outside finely. The argument shows only this: the agential self cannot be a regularity of its own and be clean. Its regularity carries something it excludes at every step that goes on. Whether the excluded part is a principled boundary is the question of P4, not settled here.
 
-**The rejoinder.** On the root, the description under which one acts is itself a condition within the unfolding. It is a fact about what conditions the act, not a boundary in what the act conditions. Choosing the class of one's line by intention is coherent. It is a choice of class, and no law of the dynamics singles it out over the wide class. Whether the wide class is a regularity wherever the agential one is, is not shown; in `Unclosed` it is. So the agential view becomes the claim that *intention fixes scope*, not only responsibility. That claim needs its own argument.
+**The reply from intention.** The self is drawn by the description under which one acts (Anscombe's phrase, adopted by Davidson, "Actions, Reasons, and Causes", 1963). What one does intentionally is what one does under that description, and the wake falls outside it.
 
-## 4. Double effect counts the wake
+**The rejoinder.** On the root, the description under which one acts is itself a condition within the unfolding. It is a fact about what conditions the act, not a boundary in what the act conditions. Choosing the class of one's line by intention is coherent. It is a choice of class, and no law of the dynamics singles it out over the wide class. Whether a wide class is constant up to the net's end wherever an agential one is, is not shown. So the agential view becomes the claim that *intention fixes scope*, not only responsibility, and that claim needs its own argument.
 
-The most developed intention-based doctrine is the doctrine of double effect. Its sources are Aquinas on self-defence (*Summa Theologiae* II-II, q. 64, a. 7) and its modern formulations: Anscombe, "War and Murder" (1961); Foot, "The Problem of Abortion and the Doctrine of the Double Effect" (1967); Quinn, "Actions, Intentions, and Consequences" (1989).
+## 4. Double effect weighs the wake
 
-In its standard form, the doctrine permits causing a harm as a foreseen side effect only where the harm is not intended, is not the means, and is *proportionate* to the good intended. The proportionality condition weighs the side effect. Even the doctrine that makes intention decisive for permissibility keeps the wake within what is weighed. It distinguishes the side effect's standing in *blame* (not intended) from its standing in *scope* (counted in the weighing).
+The most developed intention-based doctrine is the doctrine of double effect. Its source is Aquinas on self-defence (*Summa Theologiae* II-II, q. 64, a. 7). Its modern discussion includes Anscombe, "War and Murder" (1961); Foot, "The Problem of Abortion and the Doctrine of the Double Effect" (1967), who mainly criticizes it; and Quinn, "Actions, Intentions, and Consequences" (1989), who defends a revised form.
 
-So the strongest tradition behind the agential self does not support an agential *scope*. It supports exactly the separation the first round drew: scope is not blame. Scanlon (*Moral Dimensions*, 2008) argues that intention bears on the meaning of an act, not on its permissibility. That presses the same way: intention matters, but not to whose losses count.
+In its standard form, the doctrine is about *permissibility*. A harm may be caused as a foreseen side effect only where it is not intended, is not the means, and is *proportionate* to the good intended. So the doctrine separates two things: the condition that rules a harm out when it is intended (permissibility), and the weighing that counts it when it is foreseen (proportionality). Even the doctrine that makes intention decisive for what may be done keeps the side effect within what is weighed.
 
-**Verdict.** The agential self has a principled place in responsibility. For scope it has no support from the tradition built on it, since that tradition weighs the wake. Holding the wake in scope while not intending it is the doctrine's own structure.
+So the strongest tradition behind the agential self does not support an agential *scope*. What it supports is a structure in which intention bears on what is permitted while foreseen harm still counts in the weighing. That is close to the first round's separation of scope from blame, with permissibility in blame's place. Scanlon (*Moral Dimensions*, 2008) moves intention further, from permissibility to the meaning of an act. That presses the same way: intention matters, but not to whose losses count.
+
+**Verdict.** The agential self has a principled place in permissibility and responsibility. For scope, it gets no support from the tradition built on intention, which weighs the wake.
 
 ## 5. The wake and alignment
 
 This bears directly on why the theory exists. [AI reading; correspondence, not shown]
 
-An optimizer's objective is its intended effects. In the theory's terms, a selection reaches only what couples into its selector, and an optimum drains what lies beyond its couplings where that gives room (T3; [05](../../../../../../theories/becoming/chapters/05-COLLECTIVES.md#t3)). An optimizer whose scope is its objective is an agential self in the sense of this round. The side-effect law adds a structural point: if such a system is a regularity of its own, its wake is a regularity too, of one kind at every step. Its side effects are not occasional accidents of an otherwise clean process; they recur with the process.
+An optimizer's objective is its intended effects. In the theory's terms, a selection reaches only what couples into its selector, and an optimum drains what lies beyond its couplings where that gives room (T3; [05](../../../../../../theories/becoming/chapters/05-COLLECTIVES.md#t3)). An optimizer whose scope is its objective is an agential self in the sense of this round. The law adds one structural point: if such a system's scope is a regularity of its own up to the end, something outside that scope follows every step of its process that goes on. Its side effects cannot be absent at a step where the process goes on. The law does not say they are of one kind beyond what the scope's own class distinguishes, or that they form a regularity.
 
 Work on side effects in AI safety tries to put the wake back into the objective:
-
 - "avoiding negative side effects" (Amodei and others, "Concrete Problems in AI Safety", 2016);
-- relative reachability (Krakovna and others, 2018–2019);
-- attainable utility preservation (Turner and others, 2020).
+- relative reachability (Krakovna and others, 2018; a stepwise version, 2019);
+- attainable utility preservation (Turner, Hadfield-Menell and Tadepalli, 2020).
 
-In the theory's terms, these are partial closures: ways for a system's scope to hold more of its effects. The crux of the ethics, P4, is then also the crux of this part of alignment. *Does a system's scope hold its effects?* A conjecture worth testing, not a result: since a regular agent's wake has one kind at every step, a side-effect measure keyed to kinds of effect, rather than to enumerated outcomes, would follow it.
+In the theory's terms, these are partial closures: ways for a system's scope to hold more of its effects. The crux of the ethics, P4, is then also the crux of this part of alignment. *Does a system's scope hold its effects?*
 
 ## 6. Where the second round leaves the crux
 
-| Self | P2 (a regularity of its own, up to the net's end) | P4 (holds its effects) | Reaches |
+| Self | P2 (constant up to the net's end) | P4 (holds its effects) | Its line reaches |
 |---|---|---|---|
-| the organism | fails where its last stage conditions anything (`«亡而网续则不至终有常»`) | — | its own line, until its end |
-| the agential self | can hold, only with a wake at every step that goes on (`«旁效随线»`, `Unclosed`); a clean step breaks it (`CleanStep`) | fails by construction | its intended line, never its wake |
-| the wide self | holds in the witnesses (`FiniteFamilies`, `FiniteSharedCondition`) | holds | everything downstream of its acts (`«至终常闭则所及皆及»`) |
+| the organism | fails where its last stage conditions anything (`«亡而网续则不至终有常»`) | — | its own stages, until its end |
+| the agential self | can hold (`FiniteWake`); given an outside effect, only with something outside following every alike step that goes on (`«出类随行»`), and a step without breaks it (`«出类不随则不至终有常»`, `CleanStep`) | fails at the member by construction | only what is alike to it (`«线内同类»`), never its wake |
+| the wide self | holds in the witnesses (`FiniteFamilies`, `FiniteSharedCondition`) | holds by construction | everything downstream of its acts (`«至终常闭则所及皆及»`) |
 
-**The crux, restated.** *Is one's own the class that holds everything one's own kind fixes, wake included, or only the part one intends?* The first round's two questions (ending, ownership) reduce to the second. Ending excludes the organism; it does not exclude the agential self.
+**The crux, restated.** *Is one's own the class that holds everything one's acts condition, or only the part one intends, given that the intended part, if it is a regularity of its own, always leaves something outside at every step that goes on?* Ending excludes the organism. It does not exclude the agential self, so the crux is P4.
 
 **For holding the wake:**
 - one goes on only through what one conditions (round 1 §4);
-- one's kind fixes one's wake as fully as one's intended line (§3);
-- the doctrine of double effect itself weighs the wake (§4).
+- an agential self that is a regularity of its own cannot be clean: its own kind fixes that it leaves a wake (§3);
+- double effect itself weighs the wake (§4).
 
 **Against:**
-- intention individuates action;
-- one can coherently choose the class of one's line by intention, and the dynamics do not single out the wide class over it.
+- intention individuates action and bears on permissibility;
+- one can coherently choose the class of one's line by intention, and no law of the dynamics singles out the wide class over it.
 
 **Open.**
-- **Formal.** Is "side effects of the member's kind follow every step that goes on" also sufficient for constancy up to the net's end, under some further condition? Only necessity is shown.
-- **For philosophers.** Can intention, which individuates action and grounds responsibility, also fix whose losses count, given that double effect weighs the side effect?
-- **Empirical, for alignment.** Does a side-effect measure keyed to kinds of effect follow an optimizer's wake better than one keyed to outcomes?
+- **Formal.** The law gives a necessary condition. For a class with two blocks, that condition together with its counterpart for the intended line is constancy up to the net's end by definition, so sufficiency is nearly trivial there. The open question is whether some condition weaker than that counterpart suffices for classes that divide the outside more finely.
+- **For philosophers.** Can intention, which individuates action and bears on permissibility, also fix whose losses count, given that double effect weighs the side effect?
+- **For alignment, as a conjecture.** Does a measure of what leaves a system's scope at each step, keyed to the scope's own classes, track its side effects as well as measures keyed to enumerated outcomes?
 
 ## 7. Proposals
 
 **To 07 §4.6** (through the IV3 line's owner):
-- answer the Open item: the agential class can be constant up to the net's end, only with a wake (`«旁效随线»`, `CleanStep`, `AgentWithWake`);
+- answer the Open item: a class holding only part of a member's effects can be constant up to the net's end (`FiniteWake`), and then something outside it follows every alike step that goes on (`«出类随行»`, `«出类不随则不至终有常»`);
 - sharpen the P4 bullet: P2 does not exclude the agential self, so P4 carries the crux;
-- replace the Open item with the sufficiency question.
+- replace the Open item with the sufficiency question as restated above.
 
 **To P-20** (through the dossier's owner): add the agential self and the double-effect point to the questions.
 
 **Questions for human philosophers**, in neutral form:
-1. Can intention fix scope (whose losses count) as well as responsibility, given that the doctrine of double effect weighs foreseen side effects in its proportionality condition?
-2. If an agent's kind fixes its side effects as fully as its intended effects, is the intended part a principled boundary for "one's own"?
+1. Can intention fix scope (whose losses count) as well as permissibility, given that the doctrine of double effect weighs foreseen side effects in its proportionality condition?
+2. If an agent drawn by intention cannot be a regularity of its own without leaving something outside at every step, is the intended part a principled boundary for "one's own"?
 3. Is the agential self, read as an optimizer whose scope is its objective, a fair model of the side-effect problem in AI alignment?
+
+## Review
+
+An independent AI reader (read-only, not the author) checked the Lean and this study, 25 October 2026. It found no error in the proofs and twelve problems in the claims; all were taken. Among them:
+- "side effect" (旁效) renamed in the Lean to 出类 ("leaving the class"), since nothing marks an intended effect;
+- the law stated as nearly definitional, its "same kind" only as fine as the class;
+- the argument from determination cut to its true strength;
+- "reaches nothing beyond its line" credited to `«线内同类»`;
+- the cyclic witness replaced by `FiniteWake`;
+- the wide self's P2 limited to the witnesses;
+- double effect stated as a doctrine of permissibility, with Foot as a critic;
+- the sufficiency question restated.
+
+The reader confirmed the citations of Aquinas, Anscombe, Quinn, Scanlon, Davidson, Amodei and others, Krakovna and others, and Turner and others.

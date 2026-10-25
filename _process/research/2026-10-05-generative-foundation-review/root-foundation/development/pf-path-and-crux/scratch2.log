@@ -9,8 +9,8 @@
   "unclean": [],
   "audits": {
     "Becoming.GrammarPath": {
-      "theorems": 42,
-      "declarations": 67,
+      "theorems": 46,
+      "declarations": 75,
       "with_axioms": {}
     }
   }
