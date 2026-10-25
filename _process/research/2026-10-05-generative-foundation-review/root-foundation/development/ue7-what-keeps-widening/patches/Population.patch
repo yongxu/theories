@@ -1,0 +1,49 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean
+index 7f0112e806149491ccce83abbc16c66c1fb41f06..e68f38221537d3c5277950ed207cb4a72ee5f401 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean
+@@ -148,11 +148,41 @@ theorem length_le_of_matched {S : α → β → Prop} : ∀ {l : List α} {m : L
+             ((Nat.add_succ _ _).trans (congrArg Nat.succ (ListTests.length_append p q).symm)))
+         whole ▸ Nat.succ_le_succ inner
+ 
+-/-- A list without repetition whose members all belong to another list is no longer. -/
++/-- **Counted from below.** A list without repetition, each member of which belongs to another
++list and has a positive quantity there, is no longer than the count of the other list's entries at
++which the quantity is positive. The lower bound beside `count_le_of_sub`. No decision of equality
++enters: the distinctness of the first list supplies every inequality used. -/
++theorem length_le_count {q : α → Nat} : ∀ {xs ps : List α}, Distinct xs →
++    (∀ a, a ∈ xs → a ∈ ps ∧ 0 < q a) → xs.length ≤ count ps q
++  | [], _, _, _ => Nat.zero_le _
++  | a :: xs, ps, ⟨fresh, distinct⟩, within =>
++    match List.append_of_mem (within a (.head xs)).1 with
++    | ⟨p, r, split⟩ =>
++      have inner : xs.length ≤ count (p ++ r) q :=
++        length_le_count distinct fun b mem =>
++          ⟨mem_remove (fun same => fresh (Eq.subst (motive := fun x => x ∈ xs) same mem))
++             (Eq.subst (motive := fun l => b ∈ l) split (within b (.tail a mem)).1),
++           (within b (.tail a mem)).2⟩
++      have one : 1 ≤ sign (q a) := match q a, (within a (.head xs)).2 with
++        | 0, positive => absurd positive (Nat.lt_irrefl 0)
++        | _ + 1, _ => Nat.le_refl 1
++      have whole : count ps q =
++          total p (fun x => sign (q x)) + (sign (q a) + total r (fun x => sign (q x))) :=
++        (congrArg (fun l => count l q) split).trans (total_append (fun x => sign (q x)) (a :: r) p)
++      have rest : count (p ++ r) q = total p (fun x => sign (q x)) + total r (fun x => sign (q x)) :=
++        total_append (fun x => sign (q x)) r p
++      Nat.le_trans (Nat.succ_le_succ (Nat.le_trans inner (Nat.le_of_eq rest)))
++        (Nat.le_trans (Nat.le_of_eq (Nat.add_assoc _ _ 1))
++          (Nat.le_trans (Nat.add_le_add_left (Nat.le_trans (Nat.le_of_eq (Nat.add_comm _ 1))
++              (Nat.add_le_add_right one _)) _)
++            (Nat.le_of_eq whole.symm)))
++
++/-- A list without repetition whose members all belong to another list is no longer: counted from
++below with every member counted once (`length_le_count`). -/
+ theorem length_le_of_sub {l m : List α} (distinct : Distinct l) (sub : ∀ a, a ∈ l → a ∈ m) :
+     l.length ≤ m.length :=
+-  length_le_of_matched (S := Eq) distinct (fun a mem => ⟨a, sub a mem, rfl⟩)
+-    fun _ _ _ _ _ same same' => same.trans same'.symm
++  Nat.le_trans (length_le_count (q := fun _ => 1) distinct fun a mem => ⟨sub a mem, Nat.zero_lt_one⟩)
++    (Nat.le_of_eq (total_ones m))
+ 
+ /-- Counting the members a quantity is positive at, in a list without repetition: no more
+ than a list holding every such member. -/

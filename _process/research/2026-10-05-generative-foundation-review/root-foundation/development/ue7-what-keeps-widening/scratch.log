@@ -15,3 +15,497 @@
     }
   }
 }
+
+--- 26 October 2026, after the review (REVIEW-UE7.md): the whole kit tree (KeepingWidening and the
+modified copies of Population, Novelty, Gain and Admission) against main at 5d4941161, OU3b landed.
+Population and Admission compiled in the run just before, with the same bytes; this run reused them. ---
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/tree",
+  "modules": 88,
+  "ran": [
+    "Becoming.Novelty",
+    "Becoming.Gain",
+    "Becoming.KeepingWidening",
+    "BecomingGainAxiomAudit",
+    "BecomingKeepingWideningAxiomAudit",
+    "BecomingNoveltyAxiomAudit"
+  ],
+  "reused": 87,
+  "unclean": [],
+  "audits": {
+    "Becoming.Admission": {
+      "theorems": 56,
+      "declarations": 84,
+      "with_axioms": {}
+    },
+    "Becoming.Gain": {
+      "theorems": 29,
+      "declarations": 34,
+      "with_axioms": {}
+    },
+    "Becoming.KeepingWidening": {
+      "theorems": 126,
+      "declarations": 154,
+      "with_axioms": {}
+    },
+    "Becoming.Novelty": {
+      "theorems": 22,
+      "declarations": 23,
+      "with_axioms": {}
+    },
+    "Becoming.Population": {
+      "theorems": 122,
+      "declarations": 147,
+      "with_axioms": {}
+    }
+  }
+}
+--- the audits' own output: #print axioms over every declaration of each module, run with the build's
+Lean in tree/.build ---
+== Becoming.KeepingWidening: 154 of 154 declarations do not depend on any axioms
+'Becoming.«全生成则生成»' does not depend on any axioms
+'Becoming.Web.KeepsWidening.distinct_configs' does not depend on any axioms
+'Becoming.Web.KeepsWidening.passes_every_bound' does not depend on any axioms
+'Becoming.Web.KeepsWidening.rises_late' does not depend on any axioms
+'Becoming.Web.KeepsWidening.from_rest_or_open' does not depend on any axioms
+'Becoming.Web.KeepsWidening.open_late' does not depend on any axioms
+'Becoming.Flow.whole_not_keepsWidening' does not depend on any axioms
+'Becoming.Flow.TakesWhileSupported' does not depend on any axioms
+'Becoming.Web.KeepsWidening.more' does not depend on any axioms
+'Becoming.Web.KeepsWidening.replenishment_unbounded' does not depend on any axioms
+'Becoming.Web.KeepsWidening.renewers_unbounded' does not depend on any axioms
+'Becoming.Flow.gain_given_by_recent_gainer_decided' does not depend on any axioms
+'Becoming.Flow.OpenedByOpenedWithin' does not depend on any axioms
+'Becoming.Flow.openedByOpenedWithin_of_brief' does not depend on any axioms
+'Becoming.Flow.not_within_zero' does not depend on any axioms
+'Becoming.Flow.OpenedByOpenedWithin.not_of_unsupported' does not depend on any axioms
+'Becoming.Flow.OpenedByOpenedWithin.succ' does not depend on any axioms
+'Becoming.Flow.OpenedByOpenedWithin.add' does not depend on any axioms
+'Becoming.Flow.OpenedByOpenedWithin.mono' does not depend on any axioms
+'Becoming.Flow.OpenedByOpenedWithin.lagged' does not depend on any axioms
+'Becoming.Flow.openedByOpenedWithin_of_opened' does not depend on any axioms
+'Becoming.Web.admitting' does not depend on any axioms
+'Becoming.Web.Linked.steps_le' does not depend on any axioms
+'Becoming.Web.Linked.same_of_at' does not depend on any axioms
+'Becoming.Web.Linked.one_step' does not depend on any axioms
+'Becoming.Web.Linked.snoc' does not depend on any axioms
+'Becoming.Web.linked_of_reached' does not depend on any axioms
+'Becoming.Web.includesAcrossFrom_iff_endless' does not depend on any axioms
+'Becoming.Web.kept_of_includes_by_name' does not depend on any axioms
+'Becoming.Flow.PassesSupport' does not depend on any axioms
+'Becoming.Flow.passesSupport_carries_iff' does not depend on any axioms
+'Becoming.Flow.gain_carried' does not depend on any axioms
+'Becoming.Flow.passes_or_carried_on' does not depend on any axioms
+'Becoming.Flow.generation_of_brief' does not depend on any axioms
+'Becoming.Flow.generation_of_includes_brief' does not depend on any axioms
+'Becoming.Flow.descends_along_passings' does not depend on any axioms
+'Becoming.Flow.not_exceedsAcross_along_passings' does not depend on any axioms
+'Becoming.Flow.not_keepsOpening_along_passings' does not depend on any axioms
+'Becoming.Flow.not_keepsWidening_along_passings' does not depend on any axioms
+'Becoming.OwnCondition.rung_le_one' does not depend on any axioms
+'Becoming.OwnCondition.rising_kept' does not depend on any axioms
+'Becoming.OwnCondition.not_within' does not depend on any axioms
+'Becoming.Ladder.atZero' does not depend on any axioms
+'Becoming.Ladder.atZero_pos' does not depend on any axioms
+'Becoming.Ladder.same' does not depend on any axioms
+'Becoming.Ladder.same_self' does not depend on any axioms
+'Becoming.Ladder.unusedAt' does not depend on any axioms
+'Becoming.Ladder.unused_step' does not depend on any axioms
+'Becoming.Ladder.levelAt' does not depend on any axioms
+'Becoming.Ladder.requiresOf' does not depend on any axioms
+'Becoming.Ladder.needOf' does not depend on any axioms
+'Becoming.Ladder.activeAt' does not depend on any axioms
+'Becoming.Ladder.web' does not depend on any axioms
+'Becoming.Ladder.supported_some' does not depend on any axioms
+'Becoming.Ladder.supported_none' does not depend on any axioms
+'Becoming.Ladder.keeps_widening' does not depend on any axioms
+'Becoming.Ladder.requiresWithin' does not depend on any axioms
+'Becoming.Ladder.frontier' does not depend on any axioms
+'Becoming.Ladder.frontier_balances' does not depend on any axioms
+'Becoming.Ladder.frontier_gainless' does not depend on any axioms
+'Becoming.Ladder.frontier_open' does not depend on any axioms
+'Becoming.Ladder.frontier_witness' does not depend on any axioms
+'Becoming.Ladder.stock_unbounded' does not depend on any axioms
+'Becoming.Ladder.takingPart' does not depend on any axioms
+'Becoming.Ladder.upkeepTake' does not depend on any axioms
+'Becoming.Ladder.upkeepGive' does not depend on any axioms
+'Becoming.Ladder.upkept' does not depend on any axioms
+'Becoming.Ladder.shift_balance' does not depend on any axioms
+'Becoming.Ladder.upkept_balances' does not depend on any axioms
+'Becoming.Ladder.upkept_takes' does not depend on any axioms
+'Becoming.Ladder.upkept_capacity' does not depend on any axioms
+'Becoming.Ladder.upkept_gainless' does not depend on any axioms
+'Becoming.Ladder.upkept_witness' does not depend on any axioms
+'Becoming.Ladder.frontier_capacity' does not depend on any axioms
+'Becoming.Ladder.frontier_renewers' does not depend on any axioms
+'Becoming.Ladder.upkeep_needed' does not depend on any axioms
+'Becoming.Ladder.oneGive' does not depend on any axioms
+'Becoming.Ladder.oneRenewer' does not depend on any axioms
+'Becoming.Ladder.oneRenewer_balances' does not depend on any axioms
+'Becoming.Ladder.oneRenewer_renewers' does not depend on any axioms
+'Becoming.Ladder.capacity_needed' does not depend on any axioms
+'Becoming.Ladder.unbalanced' does not depend on any axioms
+'Becoming.Ladder.balance_needed' does not depend on any axioms
+'Becoming.ClosedCycle.mark_sum' does not depend on any axioms
+'Becoming.ClosedCycle.gainless' does not depend on any axioms
+'Becoming.ClosedCycle.keeps_opening_by_name' does not depend on any axioms
+'Becoming.ClosedCycle.requiresWithin' does not depend on any axioms
+'Becoming.ClosedCycle.stock_one' does not depend on any axioms
+'Becoming.ClosedCycle.closed' does not depend on any axioms
+'Becoming.ClosedCycle.distinct' does not depend on any axioms
+'Becoming.ClosedCycle.bounded_while_opening' does not depend on any axioms
+'Becoming.ClosedCycle.takes_while_supported' does not depend on any axioms
+'Becoming.ClosedCycle.capacity' does not depend on any axioms
+'Becoming.ClosedCycle.renewers_le' does not depend on any axioms
+'Becoming.ClosedCycle.renewers_bounded_while_opening' does not depend on any axioms
+'Becoming.ClosedCycle.brief' does not depend on any axioms
+'Becoming.ClosedCycle.unloosened' does not depend on any axioms
+'Becoming.ClosedCycle.opened_within' does not depend on any axioms
+'Becoming.ClosedCycle.cycle_within' does not depend on any axioms
+'Becoming.ClosedCycle.passesSupport_next' does not depend on any axioms
+'Becoming.ClosedCycle.linked_along_passings' does not depend on any axioms
+'Becoming.ClosedCycle.linked_along_passings_to' does not depend on any axioms
+'Becoming.ClosedCycle.includes_along_passings' does not depend on any axioms
+'Becoming.ClosedCycle.not_opening_along' does not depend on any axioms
+'Becoming.ClosedCycle.generation_without_widening' does not depend on any axioms
+'Becoming.ClosedCycle.generates' does not depend on any axioms
+'Becoming.OpeningChain.keeps_widening' does not depend on any axioms
+'Becoming.OpeningChain.stock_le' does not depend on any axioms
+'Becoming.OpeningChain.fixed_but_unbounded' does not depend on any axioms
+'Becoming.OpeningChain.relay_within' does not depend on any axioms
+'Becoming.OpeningChain.lasting' does not depend on any axioms
+'Becoming.OpeningChain.oneGiver_not_within' does not depend on any axioms
+'Becoming.OpeningChain.carriers_within' does not depend on any axioms
+'Becoming.OpeningChain.unloosened' does not depend on any axioms
+'Becoming.OpeningChain.gains_recur' does not depend on any axioms
+'Becoming.OpeningChain.brevity_needed' does not depend on any axioms
+'Becoming.OpeningChain.lagging' does not depend on any axioms
+'Becoming.OpeningChain.laggedRelay' does not depend on any axioms
+'Becoming.OpeningChain.laggedRelay_balances' does not depend on any axioms
+'Becoming.OpeningChain.laggedRelay_acting' does not depend on any axioms
+'Becoming.OpeningChain.laggedRelay_within' does not depend on any axioms
+'Becoming.OpeningChain.laggedRelay_not_opened' does not depend on any axioms
+'Becoming.OpeningChain.within_not_fixed_origin' does not depend on any axioms
+'Becoming.OpeningChain.lateGiving' does not depend on any axioms
+'Becoming.OpeningChain.lateGiving_succ' does not depend on any axioms
+'Becoming.OpeningChain.lateGiver' does not depend on any axioms
+'Becoming.OpeningChain.lateGiver_balances' does not depend on any axioms
+'Becoming.OpeningChain.lateGiver_acting' does not depend on any axioms
+'Becoming.OpeningChain.lateGiver_opened' does not depend on any axioms
+'Becoming.OpeningChain.lateGiver_not_within' does not depend on any axioms
+'Becoming.OpeningChain.forms_independent' does not depend on any axioms
+'Becoming.Saturated.supported' does not depend on any axioms
+'Becoming.Saturated.no_carry' does not depend on any axioms
+'Becoming.Saturated.endless' does not depend on any axioms
+'Becoming.Saturated.lasting_kept' does not depend on any axioms
+'Becoming.Saturated.still_not_within' does not depend on any axioms
+'Becoming.Saturated.reverses_within' does not depend on any axioms
+'Becoming.Loosening.strict' does not depend on any axioms
+'Becoming.Loosening.strict_le_one_iff' does not depend on any axioms
+'Becoming.Loosening.web' does not depend on any axioms
+'Becoming.Loosening.supported_iff' does not depend on any axioms
+'Becoming.Loosening.keeps_widening' does not depend on any axioms
+'Becoming.Loosening.bounded_while_widening' does not depend on any axioms
+'Becoming.Source.web' does not depend on any axioms
+'Becoming.Source.flow' does not depend on any axioms
+'Becoming.Source.supported_iff' does not depend on any axioms
+'Becoming.Source.balances' does not depend on any axioms
+'Becoming.Source.keeps_widening' does not depend on any axioms
+'Becoming.Source.every' does not depend on any axioms
+'Becoming.Source.distinct' does not depend on any axioms
+'Becoming.Source.requiresWithin' does not depend on any axioms
+'Becoming.Source.closed' does not depend on any axioms
+'Becoming.Source.not_gainless' does not depend on any axioms
+'Becoming.Source.from_nothing' does not depend on any axioms
+== Becoming.Population: 147 of 147 declarations do not depend on any axioms
+'Becoming.mem_map_of' does not depend on any axioms
+'Becoming.mem_of_map' does not depend on any axioms
+'Becoming.distinct_map' does not depend on any axioms
+'Becoming.mem_remove' does not depend on any axioms
+'Becoming.length_le_of_matched' does not depend on any axioms
+'Becoming.length_le_count' does not depend on any axioms
+'Becoming.length_le_of_sub' does not depend on any axioms
+'Becoming.count_le_of_sub' does not depend on any axioms
+'Becoming.search' does not depend on any axioms
+'Becoming.decideSome' does not depend on any axioms
+'Becoming.rises_between' does not depend on any axioms
+'Becoming.mark_one' does not depend on any axioms
+'Becoming.mark_zero' does not depend on any axioms
+'Becoming.not_not_all' does not depend on any axioms
+'Becoming.came_between_from' does not depend on any axioms
+'Becoming.came_between' does not depend on any axioms
+'Becoming.mark_add_not' does not depend on any axioms
+'Becoming.mark_turn' does not depend on any axioms
+'Becoming.total_congr_on' does not depend on any axioms
+'Becoming.mem_insert' does not depend on any axioms
+'Becoming.distinct_remove' does not depend on any axioms
+'Becoming.marks_le_of_sub' does not depend on any axioms
+'Becoming.mark_le_total' does not depend on any axioms
+'Becoming.total_le_mark' does not depend on any axioms
+'Becoming.gaining_of_losing' does not depend on any axioms
+'Becoming.losing_of_gaining' does not depend on any axioms
+'Becoming.recurs_shift' does not depend on any axioms
+'Becoming.recurs_unshift' does not depend on any axioms
+'Becoming.gaining_of_losing_from' does not depend on any axioms
+'Becoming.losing_of_gaining_from' does not depend on any axioms
+'Becoming.Listed' does not depend on any axioms
+'Becoming.Listed.keeps_at' does not depend on any axioms
+'Becoming.Listed.keeps' does not depend on any axioms
+'Becoming.Listed.across_at' does not depend on any axioms
+'Becoming.Listed.across' does not depend on any axioms
+'Becoming.Listed.over_stretch_on' does not depend on any axioms
+'Becoming.Listed.over_stretch' does not depend on any axioms
+'Becoming.Listed.ceasings_within' does not depend on any axioms
+'Becoming.Listed.comings_within' does not depend on any axioms
+'Becoming.Listed.ceasing_iff_shortfall_from' does not depend on any axioms
+'Becoming.Listed.ceasing_iff_shortfall' does not depend on any axioms
+'Becoming.Listed.coming_iff_excess_from' does not depend on any axioms
+'Becoming.Listed.coming_iff_excess' does not depend on any axioms
+'Becoming.Listed.coming_of_ceasing' does not depend on any axioms
+'Becoming.Listed.ceasing_of_returning' does not depend on any axioms
+'Becoming.Listed.ceasing_of_coming' does not depend on any axioms
+'Becoming.Listed.coming_iff_ceasing' does not depend on any axioms
+'Becoming.Listed.ceasing_of_outpacing' does not depend on any axioms
+'Becoming.Tally' does not depend on any axioms
+'Becoming.Listed.tally' does not depend on any axioms
+'Becoming.Balance' does not depend on any axioms
+'Becoming.Tally.balance' does not depend on any axioms
+'Becoming.Tally.ceasing_le' does not depend on any axioms
+'Becoming.tally_iff' does not depend on any axioms
+'Becoming.balance_not_tally' does not depend on any axioms
+'Becoming.Tally.congr' does not depend on any axioms
+'Becoming.steps_length' does not depend on any axioms
+'Becoming.steps_within' does not depend on any axioms
+'Becoming.steps_of_within' does not depend on any axioms
+'Becoming.steps_distinct' does not depend on any axioms
+'Becoming.steps_below_all' does not depend on any axioms
+'Becoming.steps_below' does not depend on any axioms
+'Becoming.steps_above_none' does not depend on any axioms
+'Becoming.steps_above' does not depend on any axioms
+'Becoming.Queue.gone' does not depend on any axioms
+'Becoming.Queue.holds' does not depend on any axioms
+'Becoming.Queue.line' does not depend on any axioms
+'Becoming.Queue.gone_succ' does not depend on any axioms
+'Becoming.Queue.listed' does not depend on any axioms
+'Becoming.Queue.kept_end' does not depend on any axioms
+'Becoming.Queue.ceasings_eq' does not depend on any axioms
+'Becoming.Queue.comings_eq' does not depend on any axioms
+'Becoming.Queue.counts' does not depend on any axioms
+'Becoming.Pointwise' does not depend on any axioms
+'Becoming.counting_laws' does not depend on any axioms
+'Becoming.tally_iff_counted' does not depend on any axioms
+'Becoming.Queue.reached' does not depend on any axioms
+'Becoming.occurrences' does not depend on any axioms
+'Becoming.occurrences_before' does not depend on any axioms
+'Becoming.occurrences_succ' does not depend on any axioms
+'Becoming.occurrences_mono' does not depend on any axioms
+'Becoming.occurrences_le' does not depend on any axioms
+'Becoming.occurrences_zero_le' does not depend on any axioms
+'Becoming.falls_by_occurrences' does not depend on any axioms
+'Becoming.ChangeBound' does not depend on any axioms
+'Becoming.ChangeBound.not_recurring' does not depend on any axioms
+'Becoming.ChangeBound.from_zero' does not depend on any axioms
+'Becoming.ChangeBound.joins' does not depend on any axioms
+'Becoming.ChangeBound.reach' does not depend on any axioms
+'Becoming.changeBound_iff_zero' does not depend on any axioms
+'Becoming.Swap.change' does not depend on any axioms
+'Becoming.Swap.mark_split' does not depend on any axioms
+'Becoming.Swap.mark_twice' does not depend on any axioms
+'Becoming.Swap.counted' does not depend on any axioms
+'Becoming.Swap.tally' does not depend on any axioms
+'Becoming.Swap.change_bound' does not depend on any axioms
+'Becoming.Swap.at_first' does not depend on any axioms
+'Becoming.Swap.decide_of_end' does not depend on any axioms
+'Becoming.ChangeBound.lpo_of_ends' does not depend on any axioms
+'Becoming.Web.Census' does not depend on any axioms
+'Becoming.Web.DependenceCensus' does not depend on any axioms
+'Becoming.Web.DependenceCensus.forming_of_dissolving' does not depend on any axioms
+'Becoming.Web.DependenceCensus.forming_iff_dissolving' does not depend on any axioms
+'Becoming.Web.decideForms' does not depend on any axioms
+'Becoming.Web.decideDissolves' does not depend on any axioms
+'Becoming.Web.DependenceCensus.over_stretch' does not depend on any axioms
+'Becoming.Web.arises_of_more' does not depend on any axioms
+'Becoming.Web.unceasing_of_growth' does not depend on any axioms
+'Becoming.Web.unceasing_iff_bounded' does not depend on any axioms
+'Becoming.Web.Census.over_stretch' does not depend on any axioms
+'Becoming.Flow.takers_le_covering' does not depend on any axioms
+'Becoming.Flow.More.grows_covering' does not depend on any axioms
+'Becoming.Flow.More.grows' does not depend on any axioms
+'Becoming.Flow.More.arising_never_stops_covering' does not depend on any axioms
+'Becoming.Flow.More.unceasing_covering' does not depend on any axioms
+'Becoming.Flow.More.unceasing' does not depend on any axioms
+'Becoming.Expansion.distinct' does not depend on any axioms
+'Becoming.Expansion.listed' does not depend on any axioms
+'Becoming.Expansion.census' does not depend on any axioms
+'Becoming.Expansion.counted' does not depend on any axioms
+'Becoming.Cycle.distinct' does not depend on any axioms
+'Becoming.Cycle.listed' does not depend on any axioms
+'Becoming.Cycle.census' does not depend on any axioms
+'Becoming.Cycle.counted' does not depend on any axioms
+'Becoming.Oscillation.alive' does not depend on any axioms
+'Becoming.Oscillation.pair' does not depend on any axioms
+'Becoming.Oscillation.census' does not depend on any axioms
+'Becoming.Oscillation.counted' does not depend on any axioms
+'Becoming.Dormant.web' does not depend on any axioms
+'Becoming.Dormant.more_without_arising' does not depend on any axioms
+'Becoming.Repeated.rep' does not depend on any axioms
+'Becoming.Repeated.web' does not depend on any axioms
+'Becoming.Repeated.flow' does not depend on any axioms
+'Becoming.Repeated.ones' does not depend on any axioms
+'Becoming.Repeated.census' does not depend on any axioms
+'Becoming.Repeated.more_without_arising' does not depend on any axioms
+'Becoming.Inactive.present' does not depend on any axioms
+'Becoming.Inactive.flow' does not depend on any axioms
+'Becoming.Inactive.web' does not depend on any axioms
+'Becoming.Inactive.alive' does not depend on any axioms
+'Becoming.Inactive.ones' does not depend on any axioms
+'Becoming.Inactive.gives' does not depend on any axioms
+'Becoming.Inactive.present_le' does not depend on any axioms
+'Becoming.Inactive.distinct' does not depend on any axioms
+'Becoming.Inactive.more_without_arising' does not depend on any axioms
+'Becoming.Unrecorded.flow' does not depend on any axioms
+'Becoming.Unrecorded.drawing_without_taking' does not depend on any axioms
+== Becoming.Novelty: 23 of 23 declarations do not depend on any axioms
+'Becoming.upto_or_fails' does not depend on any axioms
+'Becoming.Web.revisits_of_bounded' does not depend on any axioms
+'Becoming.Web.revisits_of_nonrising' does not depend on any axioms
+'Becoming.Web.returns_of_bounded' does not depend on any axioms
+'Becoming.Web.exceeds_of_distinct_configs' does not depend on any axioms
+'Becoming.Web.unbounded_of_distinct_configs' does not depend on any axioms
+'Becoming.Web.distinct_configs_of_apart' does not depend on any axioms
+'Becoming.Web.exceeds_of_new' does not depend on any axioms
+'Becoming.Web.unbounded_of_new' does not depend on any axioms
+'Becoming.Web.unbounded_of_never_revisits' does not depend on any axioms
+'Becoming.Web.unread_of_new_record' does not depend on any axioms
+'Becoming.Web.unread_of_unbounded' does not depend on any axioms
+'Becoming.Web.never_revisits_of_loses' does not depend on any axioms
+'Becoming.Web.changes_le_stock' does not depend on any axioms
+'Becoming.Web.rests_of_loses' does not depend on any axioms
+'Becoming.Web.counting' does not depend on any axioms
+'Becoming.Web.counting_new' does not depend on any axioms
+'Becoming.Web.counting_gains' does not depend on any axioms
+'Becoming.Flow.Balances.bounded' does not depend on any axioms
+'Becoming.Flow.bounded_counting_rest' does not depend on any axioms
+'Becoming.Flow.uncarried_of_bounded' does not depend on any axioms
+'Becoming.World.forgets_of_bounded' does not depend on any axioms
+'Becoming.first_law_cases' does not depend on any axioms
+== Becoming.Gain: 34 of 34 declarations do not depend on any axioms
+'Becoming.le_of_increasing' does not depend on any axioms
+'Becoming.map_eq_at' does not depend on any axioms
+'Becoming.map_eq_on' does not depend on any axioms
+'Becoming.some_mem_tail' does not depend on any axioms
+'Becoming.Web.rises_within_of_new' does not depend on any axioms
+'Becoming.Web.rises_late_of_new' does not depend on any axioms
+'Becoming.Web.config_eq_of_sub' does not depend on any axioms
+'Becoming.Web.new_of_sub' does not depend on any axioms
+'Becoming.Web.NewAt' does not depend on any axioms
+'Becoming.Web.exceeds_of_firsts' does not depend on any axioms
+'Becoming.Web.rises_late_of_firsts' does not depend on any axioms
+'Becoming.Web.RequiresWithin' does not depend on any axioms
+'Becoming.Web.supported_of_config' does not depend on any axioms
+'Becoming.Web.FirstSupported' does not depend on any axioms
+'Becoming.Web.newAt_of_first' does not depend on any axioms
+'Becoming.Web.rises_late_of_newly_supported' does not depend on any axioms
+'Becoming.Flow.NetGiver' does not depend on any axioms
+'Becoming.Flow.rise_netGiver' does not depend on any axioms
+'Becoming.Flow.netGiver_cases' does not depend on any axioms
+'Becoming.Flow.rest_netGiver_iff' does not depend on any axioms
+'Becoming.Flow.BalancesOn.rest_not_netGiver' does not depend on any axioms
+'Becoming.Flow.rise_given' does not depend on any axioms
+'Becoming.Flow.rise_given_between' does not depend on any axioms
+'Becoming.Flow.rise_from_rest_or_open' does not depend on any axioms
+'Becoming.Flow.whole_rise_from_rest' does not depend on any axioms
+'Becoming.Flow.whole_bounded_of_rest_idle' does not depend on any axioms
+'Becoming.Flow.whole_recurs_of_rest_idle' does not depend on any axioms
+'Becoming.Flow.whole_not_new_of_rest_idle' does not depend on any axioms
+'Becoming.Flow.new_from_rest_or_open' does not depend on any axioms
+'Becoming.Flow.new_beyond_every' does not depend on any axioms
+'Becoming.Flow.newly_supported_from_rest_or_open' does not depend on any axioms
+'Becoming.Flow.empty' does not depend on any axioms
+'Becoming.Flow.empty_gainless' does not depend on any axioms
+'Becoming.Flow.counting_given_by_rest' does not depend on any axioms
+== Becoming.Admission: 84 of 84 declarations do not depend on any axioms
+'Becoming.unitStep' does not depend on any axioms
+'Becoming.unitStep_pos' does not depend on any axioms
+'Becoming.unitDrop' does not depend on any axioms
+'Becoming.Web.GainsSupport' does not depend on any axioms
+'Becoming.Web.LosesSupport' does not depend on any axioms
+'Becoming.Web.Unloosened' does not depend on any axioms
+'Becoming.Web.Untightened' does not depend on any axioms
+'Becoming.Web.GainsSupport.rises' does not depend on any axioms
+'Becoming.Web.LosesSupport.falls' does not depend on any axioms
+'Becoming.Flow.rise_given_by_supported_at' does not depend on any axioms
+'Becoming.Flow.rise_given_by_supported' does not depend on any axioms
+'Becoming.Flow.gain_given_by_supported_at' does not depend on any axioms
+'Becoming.Flow.gains_from_supported_at' does not depend on any axioms
+'Becoming.Flow.gains_from_supported' does not depend on any axioms
+'Becoming.Flow.comes_within_not_not' does not depend on any axioms
+'Becoming.Flow.gain_given_by_recent_gainer_at' does not depend on any axioms
+'Becoming.Flow.gain_given_by_recent_gainer' does not depend on any axioms
+'Becoming.Flow.support_passes_on' does not depend on any axioms
+'Becoming.Flow.unsupported_stays_at' does not depend on any axioms
+'Becoming.Flow.unsupported_stays' does not depend on any axioms
+'Becoming.Flow.nothing_supported_stays_at' does not depend on any axioms
+'Becoming.Flow.nothing_supported_stays' does not depend on any axioms
+'Becoming.Web.Admits' does not depend on any axioms
+'Becoming.Web.FitsBand' does not depend on any axioms
+'Becoming.Web.Includes' does not depend on any axioms
+'Becoming.Web.Exceeds' does not depend on any axioms
+'Becoming.Web.admitted' does not depend on any axioms
+'Becoming.Web.includes_iff' does not depend on any axioms
+'Becoming.Web.exceeds_iff' does not depend on any axioms
+'Becoming.Web.FitsBand.admits' does not depend on any axioms
+'Becoming.Web.not_arises_of_unchanged' does not depend on any axioms
+'Becoming.Web.supported_iff_admits' does not depend on any axioms
+'Becoming.Web.Admits.mono' does not depend on any axioms
+'Becoming.Web.Includes.refl' does not depend on any axioms
+'Becoming.Web.Includes.trans' does not depend on any axioms
+'Becoming.Web.Includes.not_exceeded' does not depend on any axioms
+'Becoming.rebalance' does not depend on any axioms
+'Becoming.Flow.withhold' does not depend on any axioms
+'Becoming.Flow.partTaken' does not depend on any axioms
+'Becoming.Flow.partGiven' does not depend on any axioms
+'Becoming.Flow.WithheldLevels' does not depend on any axioms
+'Becoming.Flow.split_at' does not depend on any axioms
+'Becoming.Flow.taken_withhold' does not depend on any axioms
+'Becoming.Flow.given_withhold' does not depend on any axioms
+'Becoming.Flow.WithheldLevels.unique' does not depend on any axioms
+'Becoming.Flow.withheld_at' does not depend on any axioms
+'Becoming.Flow.Balances.withheld' does not depend on any axioms
+'Becoming.Flow.supported_of_net_give_at' does not depend on any axioms
+'Becoming.Flow.admits_of_net_draw_at' does not depend on any axioms
+'Becoming.Flow.supported_iff_within_margin_at' does not depend on any axioms
+'Becoming.Flow.Balances.supported_of_net_give' does not depend on any axioms
+'Becoming.Flow.Balances.admits_of_net_draw' does not depend on any axioms
+'Becoming.Flow.Balances.supported_iff_within_margin' does not depend on any axioms
+'Becoming.Flow.Balances.closes_nothing' does not depend on any axioms
+'Becoming.Flow.Balances.opens_nothing' does not depend on any axioms
+'Becoming.Flow.Balances.changes_nothing' does not depend on any axioms
+'Becoming.Flow.fitsBand_iff_within_margins_at' does not depend on any axioms
+'Becoming.Restoring.flow' does not depend on any axioms
+'Becoming.Restoring.balances_unitStep' does not depend on any axioms
+'Becoming.Restoring.need' does not depend on any axioms
+'Becoming.Restoring.Adapting.web' does not depend on any axioms
+'Becoming.Restoring.Adapting.restores' does not depend on any axioms
+'Becoming.Restoring.Inflow.web' does not depend on any axioms
+'Becoming.Restoring.Inflow.restores' does not depend on any axioms
+'Becoming.Restoring.Inflow.giverPart' does not depend on any axioms
+'Becoming.Restoring.Inflow.withheld' does not depend on any axioms
+'Becoming.Restoring.Inflow.widens' does not depend on any axioms
+'Becoming.Restoring.Idle.web' does not depend on any axioms
+'Becoming.Restoring.Idle.restores' does not depend on any axioms
+'Becoming.Restoring.Carried.web' does not depend on any axioms
+'Becoming.Restoring.Carried.restores' does not depend on any axioms
+'Becoming.Restoring.Spontaneous.web' does not depend on any axioms
+'Becoming.Restoring.Spontaneous.restores' does not depend on any axioms
+'Becoming.Transfer.Formation' does not depend on any axioms
+'Becoming.Transfer.flow' does not depend on any axioms
+'Becoming.Transfer.web' does not depend on any axioms
+'Becoming.Transfer.balances' does not depend on any axioms
+'Becoming.Transfer.acting' does not depend on any axioms
+'Becoming.Transfer.taking' does not depend on any axioms
+'Becoming.Transfer.dependent' does not depend on any axioms
+'Becoming.Transfer.conveyorPart' does not depend on any axioms
+'Becoming.Transfer.withheldLevel' does not depend on any axioms
+'Becoming.Transfer.withheld' does not depend on any axioms
+'Becoming.Transfer.mixed' does not depend on any axioms

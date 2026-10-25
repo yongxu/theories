@@ -1,0 +1,110 @@
+The seven landed statements UE7 re-proves (board rule 9), printed with pp.all by UE7Check.lean.txt
+(every declaration of the checkout's Population, Novelty, Gain and Admission, 281 in all, #check'd) against
+main at 5d4941161 and against the kit's copies. The two outputs, 281 statements each, are
+byte-identical: sha256 42e30a0683d3185a110879a8c3d0d68fd417f5836002a9511bc0273f708d37cc. Below, the seven re-proved ones as printed.
+
+@Becoming.length_le_of_sub : ∀ {α : Type} {l m : List.{0} α} (distinct : @Becoming.Distinct.{0} α l)
+  (sub :
+    ∀ (a : α),
+      @Membership.mem.{0, 0} α (List.{0} α) (@List.instMembership.{0} α) l a →
+        @Membership.mem.{0, 0} α (List.{0} α) (@List.instMembership.{0} α) m a),
+  @LE.le.{0} Nat instLENat (@List.length.{0} α l) (@List.length.{0} α m)
+
+@Becoming.Web.exceeds_of_new : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List.{0} C} {T K : Nat}
+  (new :
+    ∀ (i j : Nat),
+      @LT.lt.{0} Nat instLTNat i j →
+        @LE.le.{0} Nat instLENat j
+            (@List.length.{0} (List.{0} Nat) (Becoming.configurationsWithin (@List.length.{0} C cs) K)) →
+          @Ne.{1} (List.{0} Nat)
+            (@Becoming.Web.config F C W cs (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) T i))
+            (@Becoming.Web.config F C W cs (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) T j))),
+  @Exists.{1} Nat fun (n : Nat) =>
+    And
+      (@LE.le.{0} Nat instLENat n
+        (@List.length.{0} (List.{0} Nat) (Becoming.configurationsWithin (@List.length.{0} C cs) K)))
+      (@LT.lt.{0} Nat instLTNat K
+        (@Becoming.Web.stock F C W cs (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) T n)))
+
+@Becoming.Web.unbounded_of_new : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List.{0} C} {T : Nat}
+  (new :
+    ∀ (i j : Nat),
+      @LT.lt.{0} Nat instLTNat i j →
+        @Ne.{1} (List.{0} Nat)
+          (@Becoming.Web.config F C W cs (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) T i))
+          (@Becoming.Web.config F C W cs (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) T j)))
+  (K M : Nat),
+  @Exists.{1} Nat fun (t : Nat) =>
+    And (@LE.le.{0} Nat instLENat M t) (@LT.lt.{0} Nat instLTNat K (@Becoming.Web.stock F C W cs t))
+
+@Becoming.Web.exceeds_of_firsts : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List.{0} C} {T K : Nat} {at_ : Nat → Nat}
+  (increasing : ∀ (i j : Nat), @LT.lt.{0} Nat instLTNat i j → @LT.lt.{0} Nat instLTNat (at_ i) (at_ j))
+  (from_ : ∀ (n : Nat), @LE.le.{0} Nat instLENat T (at_ n))
+  (firsts : ∀ (n : Nat), @Becoming.Web.NewAt F C W cs T (at_ n)),
+  @Exists.{1} Nat fun (n : Nat) =>
+    And
+      (@LE.le.{0} Nat instLENat n
+        (@List.length.{0} (List.{0} Nat) (Becoming.configurationsWithin (@List.length.{0} C cs) K)))
+      (@LT.lt.{0} Nat instLTNat K (@Becoming.Web.stock F C W cs (at_ n)))
+
+@Becoming.Web.rises_late_of_firsts : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List.{0} C} {T : Nat} {at_ : Nat → Nat}
+  (increasing : ∀ (i j : Nat), @LT.lt.{0} Nat instLTNat i j → @LT.lt.{0} Nat instLTNat (at_ i) (at_ j))
+  (from_ : ∀ (n : Nat), @LE.le.{0} Nat instLENat T (at_ n))
+  (firsts : ∀ (n : Nat), @Becoming.Web.NewAt F C W cs T (at_ n)) (M : Nat),
+  @Exists.{1} Nat fun (t : Nat) =>
+    And (@LE.le.{0} Nat instLENat M t)
+      (@LT.lt.{0} Nat instLTNat (@Becoming.Web.stock F C W cs t)
+        (@Becoming.Web.stock F C W cs
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) t
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+
+@Becoming.Flow.gains_from_supported_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {f : F}
+  (balances :
+    ∀ (c : C),
+      @Becoming.Dependence.requires.{0} Nat F C W t f c →
+        @Becoming.Flow.BalancesOn F C L W (@List.cons.{0} C c (@List.nil.{0} C)) t)
+  (givers : ∀ (c : C), @Becoming.Dependence.requires.{0} Nat F C W t f c → @Becoming.Flow.GiversSupported F C L W t c)
+  (gains : @Becoming.Web.GainsSupport F C W t f) (unloosened : @Becoming.Web.Unloosened F C W t f),
+  Not
+    (∀ (c : C),
+      @Becoming.Dependence.requires.{0} Nat F C W t f c →
+        ∀ (g : F),
+          @Membership.mem.{0, 0} F (List.{0} F) (@List.instMembership.{0} F) (@Becoming.Flow.present F C L t) g →
+            @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                (@Becoming.Flow.give F C L t g c) →
+              Not (@Becoming.Web.Supported F C W t g))
+
+@Becoming.Flow.support_passes_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  (balances : @Becoming.Flow.Balances F C L W) (acting : @Becoming.Flow.Acting F C L W)
+  (dependent : @Becoming.Web.Dependent F C W) (unloosened : ∀ (t : Nat) (f : F), @Becoming.Web.Unloosened F C W t f)
+  {K : Nat}
+  (brief :
+    ∀ (t : Nat) (g : F),
+      Not
+        (∀ (i : Nat),
+          @LE.le.{0} Nat instLENat i K →
+            @Becoming.Web.Supported F C W (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) t i) g))
+  (recurs :
+    ∀ (N : Nat),
+      @Exists.{1} Nat fun (t : Nat) =>
+        @Exists.{1} F fun (f : F) => And (@LE.le.{0} Nat instLENat N t) (@Becoming.Web.GainsSupport F C W t f))
+  (T N : Nat),
+  Not
+    (Not
+      (@Exists.{1} Nat fun (t : Nat) =>
+        @Exists.{1} F fun (f : F) =>
+          @Exists.{1} C fun (c : C) =>
+            @Exists.{1} F fun (g : F) =>
+              @Exists.{1} Nat fun (u : Nat) =>
+                And (@LE.le.{0} Nat instLENat N t)
+                  (And (@Becoming.Web.GainsSupport F C W t f)
+                    (And (@Becoming.Dependence.requires.{0} Nat F C W t f c)
+                      (And
+                        (@Membership.mem.{0, 0} F (List.{0} F) (@List.instMembership.{0} F)
+                          (@Becoming.Flow.present F C L t) g)
+                        (And
+                          (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                            (@Becoming.Flow.give F C L t g c))
+                          (And (@Becoming.Web.Supported F C W t g)
+                            (And (@LE.le.{0} Nat instLENat T u)
+                              (And (@LT.lt.{0} Nat instLTNat u t) (@Becoming.Web.GainsSupport F C W u g))))))))))

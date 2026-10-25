@@ -4,7 +4,7 @@ This is an AI-authored independent review of board item UE7 as committed at `71e
 
 - [DESIGN.md](DESIGN.md), sha256 `e97f11aa…1b00dff4`;
 - [NOTE.md](NOTE.md), sha256 `9f40ee33…893e887a`;
-- [tree/Becoming/SustainedWidening.lean](tree/Becoming/SustainedWidening.lean), sha256 `0b03db44…f52b451f`;
+- [tree/Becoming/SustainedWidening.lean](history/SustainedWidening.lean), sha256 `0b03db44…f52b451f`;
 - [scratch.log](scratch.log).
 
 They were read with [AGENTS](../../../../../../AGENTS.md); rules 8 and 9 of the [work board](../../../../../BECOMING-WORKBOARD.md); [RESULT-WORKFLOW](../../../../../RESULT-WORKFLOW.md); §1 of the [UE plan](../ue-unified-explanation/PLAN.md#1-the-objective) and the [UE0 audit](../ue0-third-parts/AUDIT.md); 02 §1 and [02's Open list](../../../../../../theories/becoming/chapters/02-MAP.md#open); [07 §2](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-eventual-widening) and [07's Open list](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#open); the [glossary](../../../../../../GLOSSARY.md); the [eventual-widening record](../../../../../../theories/becoming/results/records/eventual-widening.md) (UE4); and the package modules `EventualWidening`, `EventualWideningInstances`, `ContinuedClasses` (`Linked`), `Flow`, `Gain`, `Novelty`, `Population`, `Admission`, `Dissipation`, `Recurrence`, `Thresholds`, `Prelude`, `PatternPassing`, `Grammar`, `GrammarMap` and `MapInstances`.

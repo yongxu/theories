@@ -1,0 +1,132 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Novelty.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Novelty.lean
+index 61dfc73268db57a7fddf6c8b4472eb9b3e0211f5..6e6dcae861df66922d9484c952abbdaa951794a8 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Novelty.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Novelty.lean
+@@ -17,12 +17,17 @@ each change.
+   two steps (`Web.revisits_of_bounded`). A stock that never rises is the bound at `T`
+   (`Web.revisits_of_nonrising`). Changing without end, such a part returns after a change: it is
+   not the case that it never revisits (`Web.returns_of_bounded`).
+-* **Only what gains is new, with a bounded wait.** A family whose configurations at the steps
+-  `T, …, T + N` are all different, where `N` counts the configurations of its members totalling at
+-  most `K`, has stock above `K` at one of those steps (`Web.exceeds_of_new`). The step is found by
+-  checking the stock at each of those steps; nothing infinite is decided. So a family new at every
+-  step exceeds every bound at arbitrarily late steps (`Web.unbounded_of_new`). A family that
+-  changes without end and never revisits stays within no bound (`Web.unbounded_of_never_revisits`).
++* **Only what gains is new, with a bounded wait.** A list of steps at which a family's
++  configurations are pairwise distinct, longer than the number of configurations of its members
++  totalling at most `K`, holds a step with stock above `K` (`Web.exceeds_of_distinct_configs`). The
++  steps need be neither consecutive nor in order, and the step is found by checking the stock at
++  each of them; nothing infinite is decided. A family with such lists of every length from every
++  step on exceeds every bound at arbitrarily late steps (`Web.unbounded_of_distinct_configs`).
++  Consecutive steps are a case: a family whose configurations at the steps `T, …, T + N` are all
++  different, where `N` counts the configurations of its members totalling at most `K`, has stock
++  above `K` at one of those steps (`Web.exceeds_of_new`), and a family new at every step exceeds
++  every bound at arbitrarily late steps (`Web.unbounded_of_new`). A family that changes without end
++  and never revisits stays within no bound (`Web.unbounded_of_never_revisits`).
+   New at every step is possible: in `Web.counting` the level is the step (`Web.counting_new`,
+   `Web.counting_gains`).
+ * **A part held within a bound forgets.** No reading of its configuration gives at each step a
+@@ -105,32 +110,88 @@ theorem returns_of_bounded {T K : Nat} (bound : ∀ t, T ≤ t → W.stock cs t
+ 
+ /-! ## Novelty -/
+ 
++/-- **Distinct configurations exceed.** A list of steps at which a family's configurations are
++pairwise distinct, longer than the number of configurations of its members totalling at most `K`,
++holds a step at which the family's stock exceeds `K`. The steps need be neither consecutive nor in
++order; the step is found by checking the stock at each listed step. -/
++theorem exceeds_of_distinct_configs {K : Nat} {ss : List Nat}
++    (distinct : Distinct (ss.map (W.config cs)))
++    (long : (configurationsWithin cs.length K).length < ss.length) :
++    ∃ s, s ∈ ss ∧ K < W.stock cs s :=
++  match search (p := fun s => W.stock cs s ≤ K) ss with
++  | .inl ⟨s, mem, over⟩ => ⟨s, mem, Nat.gt_of_not_le over⟩
++  | .inr within =>
++    absurd (Nat.le_trans (Nat.le_of_eq (length_map (W.config cs) ss).symm)
++        (length_le_of_sub distinct fun _ mem => match preimage_of_mem_map mem with
++          | ⟨s, listed, same⟩ => Eq.subst (motive := fun y => y ∈ configurationsWithin cs.length K)
++              same (config_within (within s listed))))
++      (Nat.not_le_of_gt long)
++
++/-- **Distinct configurations without end exceed every bound.** A family that has, from every step
++on, lists of every length of later steps at which its configurations are pairwise distinct exceeds
++every bound at arbitrarily late steps. -/
++theorem unbounded_of_distinct_configs
++    (lists : ∀ M n, ∃ ss : List Nat, ss.length = n ∧ (∀ s, s ∈ ss → M ≤ s) ∧
++      Distinct (ss.map (W.config cs))) (K M : Nat) :
++    ∃ t, M ≤ t ∧ K < W.stock cs t :=
++  match lists M ((configurationsWithin cs.length K).length + 1) with
++  | ⟨_, length, late, distinct⟩ =>
++    match exceeds_of_distinct_configs distinct
++        (Eq.subst (motive := fun n => (configurationsWithin cs.length K).length < n) length.symm
++          (Nat.lt_succ_self _)) with
++    | ⟨s, mem, over⟩ => ⟨s, late s mem, over⟩
++
++/-- Steps read along a list of indices without repetition, at which the configurations are apart
++whenever the indices are in order, have pairwise distinct configurations. -/
++theorem distinct_configs_of_apart {at_ : Nat → Nat} {ns : List Nat} (distinct : Distinct ns)
++    (apart : ∀ i j, i ∈ ns → j ∈ ns → i < j → W.config cs (at_ i) ≠ W.config cs (at_ j)) :
++    Distinct ((ns.map at_).map (W.config cs)) :=
++  Eq.subst (motive := fun l => Distinct l) (map_comp_eq at_ (W.config cs) ns).symm
++    (distinct_map_on (g := fun n => W.config cs (at_ n))
++      (fun a b memA memB same => match Nat.lt_or_ge a b with
++        | .inl lt => absurd same (apart a b memA memB lt)
++        | .inr ge => match Nat.eq_or_lt_of_le ge with
++          | .inl eq => eq.symm
++          | .inr lt => absurd same.symm (apart b a memB memA lt))
++      distinct)
++
+ /-- **Only what gains is new, with a bounded wait.** Where the configurations of a family at the
+ steps `T, …, T + N` are all different, `N` being the number of configurations of its members
+-totalling at most `K`, at one of those steps its stock exceeds `K`. The step is found by checking
+-the stock at each of those steps. -/
++totalling at most `K`, at one of those steps its stock exceeds `K`: the case of
++`exceeds_of_distinct_configs` for the list of those steps. The step is found by checking the stock
++at each of those steps. -/
+ theorem exceeds_of_new {T K : Nat}
+     (new : ∀ i j, i < j → j ≤ (configurationsWithin cs.length K).length →
+       W.config cs (T + i) ≠ W.config cs (T + j)) :
+     ∃ n, n ≤ (configurationsWithin cs.length K).length ∧ K < W.stock cs (T + n) :=
+-  match upto_or_fails (fun n => W.stock cs (T + n) ≤ K) (configurationsWithin cs.length K).length with
+-  | .inl within =>
+-    match revisits_within (configurationsWithin cs.length K) (fun n => W.config cs (T + n))
+-        (fun n le => config_within (within n le)) with
+-    | ⟨i, j, lt, le, same⟩ => absurd same (new i j lt le)
+-  | .inr ⟨n, le, over⟩ => ⟨n, le, Nat.gt_of_not_le over⟩
++  have within : ∀ {n}, n ∈ steps 0 ((configurationsWithin cs.length K).length + 1) →
++      n ≤ (configurationsWithin cs.length K).length :=
++    fun mem => Nat.le_of_lt_succ
++      (Nat.lt_of_lt_of_le (steps_within mem) (Nat.le_of_eq (Nat.zero_add _)))
++  match exceeds_of_distinct_configs (K := K)
++      (distinct_configs_of_apart (at_ := fun n => T + n)
++        (ns := steps 0 ((configurationsWithin cs.length K).length + 1)) (steps_distinct 0 _)
++        fun i j _ memJ lt => new i j lt (within memJ))
++      (Eq.subst (motive := fun n => (configurationsWithin cs.length K).length < n)
++        ((steps_length 0 _).symm.trans (length_map (fun n => T + n) _).symm)
++        (Nat.lt_succ_self _)) with
++  | ⟨_, mem, over⟩ => match preimage_of_mem_map mem with
++    | ⟨n, listed, same⟩ =>
++      ⟨n, within listed, Eq.subst (motive := fun x => K < W.stock cs x) same.symm over⟩
+ 
+ /-- **What keeps being new keeps gaining.** A family whose configuration from `T` on is new at
+-every step exceeds every bound at arbitrarily late steps. -/
++every step exceeds every bound at arbitrarily late steps: from every step `M` on, the steps
++`T + i` with `i` from `M` on are later and have pairwise distinct configurations
++(`unbounded_of_distinct_configs`). -/
+ theorem unbounded_of_new {T : Nat}
+     (new : ∀ i j, i < j → W.config cs (T + i) ≠ W.config cs (T + j)) (K M : Nat) :
+     ∃ t, M ≤ t ∧ K < W.stock cs t :=
+-  match exceeds_of_new (W := W) (cs := cs) (T := T + M) (K := K) (fun i j lt _ same =>
+-      new (M + i) (M + j) (Nat.add_lt_add_left lt M)
+-        ((congrArg (W.config cs) (Nat.add_assoc T M i)).symm.trans
+-          (same.trans (congrArg (W.config cs) (Nat.add_assoc T M j))))) with
+-  | ⟨n, _, over⟩ => ⟨T + M + n, Nat.le_trans (Nat.le_add_left M T) (Nat.le_add_right (T + M) n),
+-      over⟩
++  unbounded_of_distinct_configs (fun M' n => ⟨(steps M' n).map (fun i => T + i),
++      (length_map _ _).trans (steps_length M' n),
++      fun _ mem => match preimage_of_mem_map mem with
++        | ⟨i, listed, same⟩ => Eq.subst (motive := fun x => M' ≤ x) same
++            (Nat.le_trans (steps_mem listed) (Nat.le_add_left i T)),
++      distinct_configs_of_apart (steps_distinct M' n) fun i j _ _ lt => new i j lt⟩) K M
+ 
+ /-- A family that changes without end and never revisits a configuration stays within no
+ bound. -/

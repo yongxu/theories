@@ -1,0 +1,128 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean
+index 045fc401e4b1a284dbc433941cb3a212eb3d612d..f6549105a57f67a59d7351d648e6ecebc57930bb 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean
+@@ -180,17 +180,32 @@ theorem rise_given_by_supported (balances : L.Balances W) (acting : L.Acting W)
+     ∃ g, g ∈ L.present t ∧ 0 < L.give t g c ∧ W.Supported t g :=
+   rise_given_by_supported_at (balances.on [c] t) (acting.giversSupported dependent t c) rises
+ 
++/-- **A gain is given on a rising requirement by a supported formation.** With balance across the
++step at each condition the formation requires, and whatever gives to such a condition there
++supported, it cannot be refuted that a gain of support by a formation whose requirements do not
++loosen is given, on a condition it requires that rises across the step, by a supported formation
++taking part. The double negation locates the condition that rose. -/
++theorem gain_given_by_supported_at {t : Nat} {f : F}
++    (balances : ∀ c, W.requires t f c → L.BalancesOn W [c] t)
++    (givers : ∀ c, W.requires t f c → L.GiversSupported W t c) (gains : W.GainsSupport t f)
++    (unloosened : W.Unloosened t f) :
++    ¬ ¬ ∃ c g, W.requires t f c ∧ W.Rises t c ∧ g ∈ L.present t ∧ 0 < L.give t g c ∧
++      W.Supported t g :=
++  fun none => gains.rises unloosened fun c requires rises =>
++    match rise_given_by_supported_at (balances c requires) (givers c requires) rises with
++    | ⟨g, mem, gives, supported⟩ => none ⟨c, g, requires, rises, mem, gives, supported⟩
++
+ /-- Support is gained only from the supported, at the step it is gained: with balance
+ across the step at each condition the formation requires, and whatever gives to such a
+ condition there supported, a formation whose requirements do not loosen gains support only
+-where a supported formation taking part gives to a condition it requires. -/
++where a supported formation taking part gives to a condition it requires
++(`gain_given_by_supported_at`). -/
+ theorem gains_from_supported_at {t : Nat} {f : F}
+     (balances : ∀ c, W.requires t f c → L.BalancesOn W [c] t)
+     (givers : ∀ c, W.requires t f c → L.GiversSupported W t c) (gains : W.GainsSupport t f) (unloosened : W.Unloosened t f) :
+     ¬ ∀ c, W.requires t f c → ∀ g, g ∈ L.present t → 0 < L.give t g c → ¬ W.Supported t g :=
+-  fun none => gains.rises unloosened fun c requires rises =>
+-    match rise_given_by_supported_at (balances c requires) (givers c requires) rises with
+-    | ⟨g, mem, gives, supported⟩ => none c requires g mem gives supported
++  fun none => gain_given_by_supported_at balances givers gains unloosened
++    fun ⟨c, g, requires, _, mem, gives, supported⟩ => none c requires g mem gives supported
+ 
+ /-- Support is gained only from the supported: in a balanced flow where only active
+ formations give and activity needs support, a formation whose requirements do not loosen
+@@ -220,32 +235,72 @@ theorem comes_within_not_not {p : Nat → Prop} {S : Nat} : ∀ {K : Nat}, p (S
+             none ⟨u, from_, Nat.lt_succ_of_lt below, fails, after⟩)
+       (fun k => k (.inr fun h => k (.inl h)))
+ 
++/-- **A gain is given by a recent gainer.** With balance at each condition `f` requires across the
++step from `S + K`, whatever gives to such a condition there supported, `f`'s requirements not
++loosening across it, and no formation supported at all of the `K + 1` steps from `S` to `S + K`:
++it cannot be refuted that a gain of support by `f` across the step from `S + K` is given, on a
++condition `f` requires that rises, by a supported formation taking part that itself gained support
++across a step from `S` to before `S + K`. Every hypothesis is read at one step or one window. The
++two double negations locate the condition that rose (`gain_given_by_supported_at`) and the step of
++the window at which the giver gained support (`comes_within_not_not`). -/
++theorem gain_given_by_recent_gainer_at {S K : Nat} {f : F}
++    (balances : ∀ c, W.requires (S + K) f c → L.BalancesOn W [c] (S + K))
++    (givers : ∀ c, W.requires (S + K) f c → L.GiversSupported W (S + K) c)
++    (unloosened : W.Unloosened (S + K) f)
++    (brief : ∀ g, ¬ ∀ i, i ≤ K → W.Supported (S + i) g)
++    (gains : W.GainsSupport (S + K) f) :
++    ¬ ¬ ∃ c g u, W.requires (S + K) f c ∧ W.Rises (S + K) c ∧ g ∈ L.present (S + K) ∧
++      0 < L.give (S + K) g c ∧ W.Supported (S + K) g ∧ S ≤ u ∧ u < S + K ∧ W.GainsSupport u g :=
++  fun none => gain_given_by_supported_at balances givers gains unloosened
++    fun ⟨c, g, requires, rises, mem, gives, supported⟩ =>
++      comes_within_not_not (p := fun j => W.Supported j g) (S := S) supported (brief g)
++        fun ⟨u, from_, below, fails, holds⟩ =>
++          none ⟨c, g, u, requires, rises, mem, gives, supported, from_, below, fails, holds⟩
++
++/-- **The uniform form, globally.** In a balanced flow where only active formations give and
++activity needs support, with requirements never loosening and no formation supported at `K + 1`
++consecutive steps, every gain of support across a step from `S + K` is, up to double negation,
++given on a required condition that rises by a supported formation that gained support across a
++step from `S` to before `S + K`. -/
++theorem gain_given_by_recent_gainer (balances : L.Balances W) (acting : L.Acting W)
++    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {K : Nat}
++    (brief : ∀ t g, ¬ ∀ i, i ≤ K → W.Supported (t + i) g) {S : Nat} {f : F}
++    (gains : W.GainsSupport (S + K) f) :
++    ¬ ¬ ∃ c g u, W.requires (S + K) f c ∧ W.Rises (S + K) c ∧ g ∈ L.present (S + K) ∧
++      0 < L.give (S + K) g c ∧ W.Supported (S + K) g ∧ S ≤ u ∧ u < S + K ∧ W.GainsSupport u g :=
++  gain_given_by_recent_gainer_at (fun c _ => balances.on [c] (S + K))
++    (fun c _ => acting.giversSupported dependent (S + K) c) (unloosened (S + K) f) (brief S) gains
++
+ /-- **Support is passed on by formations that gained it later.** In a balanced flow where only
+ active formations give and activity needs support, with requirements never loosening and no
+ formation supported for more than `K + 1` steps in a row: where some formation gains support at
+ arbitrarily late steps, then for every `T` and `N` it cannot be refuted that, at some step from
+ `N` on, a formation gains support through the giving of a supported formation that itself gained
+ support after `T`. Support runs as a chain of gains, each giver a newer gainer; a chain of support
+-is not yet 生生, which asks a direction as well (chapter §6.1). -/
++is not yet 生生, which asks a direction as well (chapter §6.1). A corollary of
++`gain_given_by_recent_gainer`, a gain late enough taken with the window that ends at it. -/
+ theorem support_passes_on (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
+     (unloosened : ∀ t f, W.Unloosened t f) {K : Nat}
+     (brief : ∀ t g, ¬ ∀ i, i ≤ K → W.Supported (t + i) g)
+     (recurs : ∀ N, ∃ t f, N ≤ t ∧ W.GainsSupport t f) (T N : Nat) :
+     ¬ ¬ ∃ t f c g u, N ≤ t ∧ W.GainsSupport t f ∧ W.requires t f c ∧ g ∈ L.present t ∧
+       0 < L.give t g c ∧ W.Supported t g ∧ T ≤ u ∧ u < t ∧ W.GainsSupport u g :=
+-  match recurs (N + (K + (T + 1))) with
+-  | ⟨t, f, late, gains⟩ => fun none =>
+-    have span : K + (T + 1) ≤ t := Naturals.le_of_add_le_left late
+-    have back : t - K + K = t := Naturals.sub_add_cancel (Naturals.le_of_add_le_right span)
+-    have after : T + 1 ≤ t - K := Naturals.le_sub_of_add_le span
+-    gains_from_supported balances acting dependent gains (unloosened t f)
+-      fun c requires g mem gives supported =>
+-        comes_within_not_not (p := fun j => W.Supported j g) (S := t - K)
+-          (Eq.subst (motive := fun j => W.Supported j g) back.symm supported) (brief (t - K) g)
+-          fun ⟨u, from_, below, fails, holds⟩ =>
+-            none ⟨t, f, c, g, u, Nat.le_trans (Nat.le_add_right N _) late, gains, requires, mem, gives,
+-              supported, Nat.le_trans (Nat.le_succ T) (Nat.le_trans after from_),
+-              Nat.lt_of_lt_of_le below (Nat.le_of_eq back), fails, holds⟩
++  match recurs (N + (T + 1) + K) with
++  | ⟨t, f, late, gains⟩ => match le_dest late with
++    | ⟨m, at_⟩ =>
++      have same : N + (T + 1) + m + K = t := (Nat.add_right_comm (N + (T + 1)) m K).trans at_.symm
++      have law := Eq.subst (motive := fun x => ¬ ¬ ∃ c g u, W.requires x f c ∧ W.Rises x c ∧
++          g ∈ L.present x ∧ 0 < L.give x g c ∧ W.Supported x g ∧ N + (T + 1) + m ≤ u ∧ u < x ∧
++          W.GainsSupport u g) same
++        (gain_given_by_recent_gainer balances acting dependent unloosened brief
++          (Eq.subst (motive := fun x => W.GainsSupport x f) same.symm gains))
++      fun none => law fun ⟨c, g, u, requires, _, mem, gives, supported, from_, below, gained⟩ =>
++        none ⟨t, f, c, g, u,
++          Nat.le_trans (Nat.le_trans (Nat.le_add_right N (T + 1)) (Nat.le_add_right _ K)) late,
++          gains, requires, mem, gives, supported,
++          Nat.le_trans (Nat.le_succ T) (Nat.le_trans (Nat.le_add_left (T + 1) N)
++            (Nat.le_trans (Nat.le_add_right _ m) from_)),
++          below, gained⟩
+ 
+ /-- Where nothing beyond gives, the end absorbs, over the steps it is used at: with balance
+ at each condition a member requires and whatever gives to such a condition supported, across

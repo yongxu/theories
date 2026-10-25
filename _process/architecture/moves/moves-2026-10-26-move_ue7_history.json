@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-10-26-move_ue7_history",
+  "date": "2026-10-25T19:01:24+00:00",
+  "base_commit": "5d4941161d40cc6207827a2e5e9ba24b68fb2278",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/tree/Becoming/SustainedWidening.lean",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/history/SustainedWidening.lean",
+      "sha256": "0b03db44f6cf12726fa42a4d94ea0a5bb8c81b7e5a4fb2aab729683ef52b451f",
+      "blob": "148ea941ad6d87e4c7ecf1da236ef0fb7868c0c8",
+      "reason": "UE7's module as reviewed (REVIEW-UE7, sha256 0b03db44...f52b451f), superseded by tree/Becoming/KeepingWidening.lean in the fix round; kept as the review's evidence",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/tree/Becoming/SustainedWidening.lean"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/REVIEW-UE7.md",
+      "old_sha256": "f4a4e6e6f86d6551e5057431da5c78d7b6976720846cbb5983c1628eb7acc505",
+      "new_sha256": "e0b3010d9c4034ab79b42b31d2aff5b92efb6e411b4a9b43e4bb5ee75316e8b8",
+      "references": 1
+    }
+  ],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/history"
+  ],
+  "generated_pages_to_rerender": [
+    "theories/becoming/results/data/lean-index.json"
+  ],
+  "verification_errors": []
+}
