@@ -1,6 +1,6 @@
 # Review dossier A: alignment
 
-**What this is.** One part of the review packet of the Theory of Becoming, for researchers in AI alignment: agent foundations and decision theory, cooperative AI and multi-agent risk, AI governance, and evaluations. It sets out 19 items, each a theorem, assessment, reading or test of the theory that bears on alignment. For each it asks:
+**What this is.** One part of the review packet of the Theory of Becoming, for researchers in AI alignment: agent foundations and decision theory, cooperative AI and multi-agent risk, AI governance, and evaluations. It sets out 20 items, each a theorem, assessment, reading or test of the theory that bears on alignment. For each it asks:
 - whether the item is correctly described;
 - whether it is credited where it restates known work;
 - whether it is put at its right strength;
@@ -23,7 +23,7 @@ It then reads these for alignment. Humans, institutions and AI systems select to
 - The packet's script checks every quotation against the file it names and every Lean name against the sources.
 - The prose is AI-written and may be wrong. An independent AI reader reviewed the dossier in two passes. It found 44 problems, then 23 remaining or new ones. They were taken, in this dossier, in the readings it quotes and, by their owners, in A-10's home section and in the method chapter.
 - Two results here (A-09, A-10) landed on 25 October 2026, the day this dossier was written. A-10 was revised after its own independent AI review before landing: three of its claims were narrowed and its names changed.
-- A-19's results, and the lines on them in A-09 and A-10, were added after both review passes, when LA2 and LA3 ran on 25 and 26 October 2026. No reviewer has read them yet.
+- Added after both review passes, and not yet read by the dossier's reviewer: A-10b (MA4, landed on 26 October 2026 after its own independent AI review), and A-19's results with the lines on them in A-09 and A-10 (LA2 and LA3, run on 25 and 26 October 2026).
 - Under **Known weaknesses**, a bullet quoting a chapter, a record or a study reports a recorded weakness. One marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject.
 - Works cited outside quotations were checked against a publication record ([the kit](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/README.md)). Works named inside a quotation are the quoted text's citations.
 
@@ -307,6 +307,46 @@ The link to the earlier work is a reading [AI reading, D45]: its sentence Quote 
 1. Is "what comes back to the shapers alone" (s) measurable in an actual setting: for a lab shaping its benchmarks, a platform shaping its ranking rule, a model shaping its evaluator?
 2. Do natural selection among AIs (Hendrycks 2023), influence-seeking patterns (Christiano 2019) and gradual disempowerment (Kulveit and others 2025) need a return kept by the shaper, or do they run on a shared one?
 
+<a id="a-10b"></a>
+### A-10b The capacity and the lock as one loop
+
+```lean
+theorem drawn_reads_iff {a p c hi lo : Nat} {pos : 0 < a} :
+    ReadsShare CarrierCounts.order CarrierCounts.order (drawnRead a p c hi lo pos) ↔ lo ≤ hi
+
+theorem critical_mass_iff {a p c hi lo : Nat} {pos : 0 < a} (step : lo ≤ hi) :
+    ((∃ x, CarrierCounts.favours (drawn a p c hi lo pos x)) ∧
+        ∃ x, (drawn a p c hi lo pos x).carrier < (drawn a p c hi lo pos x).other) ↔
+      lo < c ∧ c < hi
+
+theorem drawn_locked_either {a p c hi lo : Nat} {pos : 0 < a} (step : lo ≤ hi) (reads : Nat → Bool)
+    (x : CarrierCounts) :
+    (∀ k, Locked CarrierCounts.order CarrierCounts.favours (drawnRead a p c hi lo pos)
+        (drawnCourse a p c hi lo pos reads x k)) ∨
+      ∀ k, Locked (reverse CarrierCounts.order) CarrierCounts.disfavours (drawnRead a p c hi lo pos)
+        (drawnCourse a p c hi lo pos reads x k)
+```
+
+File: `Becoming/DrawnShaping.lean`.
+
+**Meaning.** Read A-10's rule as A-09's pool. Each shaper among the readers reads it with `hi` coming back to the shapers alone, and each other member with `lo`, both with the same a, p and c, the readers counted as the population counts them (`DrawnShaping.drawn`).
+- **Who reads.** The rule read is a monotone function of the share exactly where `lo ≤ hi` (`DrawnShaping.drawn_reads_iff`). As in A-09, the loop's premise is moved to who reads, not removed.
+- **A critical mass.** With `lo ≤ hi`, a share decides the direction, the rule favouring the shapers at some share and the others strictly at another, exactly where `lo < c < hi` (`DrawnShaping.critical_mass_iff`). With `lo ≤ c ≤ hi` it favours the shapers exactly where they stand to the others at least as `c − lo` to `hi − c` (`DrawnShaping.critical_iff`).
+- **One loop.** With `lo ≤ hi`, under every schedule of reading, from a start under the rule read there, every configuration of the course is locked one way: for the shapers where that rule favours them, and the other way where it favours the others (`DrawnShaping.drawn_locked_either`). With shapers present at the start, their share rises at every step where the rule read there strictly favours them, and falls at every step where it strictly favours the others (`DrawnShaping.drawn_rises`, `DrawnShaping.drawn_falls`).
+- **Witness:** a = 1, nothing shared, a cost of one, and three coming back where a shaper reads and none where another does. From one shaper to one other, the shapers' share rises at every step (`DrawnShaping.CriticalMass.even_rises`). From one to three it falls at every step, the course locked the other way (`DrawnShaping.CriticalMass.few_falls`, `DrawnShaping.CriticalMass.few_locks`).
+
+**Standing and use.** Theorem (counts), landed on 26 October 2026 (board item MA4), after both of this dossier's review passes. Its record: Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "the rule's lock and the capacity to shape it are one loop: above a critical mass set by who reads and the cost, the capacity rises, the rule locked for it; below, the reverse." Read on the meta-attractor, Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "this joins its second order, selection for control over selection, to its closed loop."
+
+**Known weaknesses.**
+- Control over the selection left unselected does not leave the lock. Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), which is not joined."
+- Without noise only: Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "under rare mutation in a large finite population the long-run state is the risk-dominant one (Kandori, Mailath and Rob 1993; Young 1993), here the shapers' where lo < c < hi and 2c < hi + lo, as in the witness; the critical mass bounds courses without noise only."
+- Elementary, and known in form. Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner". Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989)". Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "what is new on the spine is the critical-mass computation, which is elementary."
+- This item shares A-09's premise, the rule read as a pool of its readers counted by kind (`ClosedCapture.Drawn.pool`). In LA2's run (A-19), one note of the loss among nine readers turned the one trained judge tested, so for that judge Quote [experiments/self-rewarding-lock/README.md]: "what fails is H1-LA2 as stated, a pool counted by kind with these readings, not every pool".
+
+**Questions.**
+1. In an actual evaluation regime, who are the readers, and do those who shape it read more coming back to the shapers than other readers do? How would one measure the critical mass?
+2. Under noise the long-run state is the risk-dominant one, here the shapers' wherever lo < c < hi and 2c < hi + lo. Does that make the critical mass beside the point for alignment over long horizons?
+
 ---
 
 ## Part 3. Readings for alignment
@@ -526,6 +566,7 @@ For each item give one verdict: **accept** (the item is correctly described, cre
 | [A-08](#a-08) The lock outlives a loss it does not read | | |
 | [A-09](#a-09) Who reads, and when the loss is read | | |
 | [A-10](#a-10) The capacity to shape the rule, selected by what comes back to it | | |
+| [A-10b](#a-10b) The capacity and the lock as one loop | | |
 | [A-11](#a-11) Assistance does not lower the selection for control | | |
 | [A-12](#a-12) Obedience adds capacity, not coupling | | |
 | [A-13](#a-13) A counter-rule read from its own share locks | | |
