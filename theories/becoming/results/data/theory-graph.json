@@ -9065,7 +9065,7 @@
    "type": "module",
    "name": "Becoming.GrammarPath",
    "level": "L1",
-   "theorems": 77,
+   "theorems": 86,
    "region": "unassigned",
    "base": "",
    "on_grammar": true,

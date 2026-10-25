@@ -3687,11 +3687,6 @@
    "category": "model-witness",
    "reason": "without holding the member's effects, a constant class does not reach what the condition feeds: a witness of Becoming.GrammarPath (PF)"
   },
-  "Becoming.Inconstant.same_class": {
-   "module": "Becoming.GrammarPath",
-   "category": "support",
-   "reason": "a one-line check that the inconstant witness's relation is a class"
-  },
   "Becoming.Inconstant.not_all_follow": {
    "module": "Becoming.GrammarPath",
    "category": "model-witness",
@@ -3972,11 +3967,6 @@
    "category": "support",
    "reason": "a one-line check that the split by a predicate is a class"
   },
-  "Becoming.«二分本类常当且仅当内外皆随»": {
-   "module": "Becoming.GrammarPath",
-   "category": "general-structure",
-   "reason": "under the split, the condition at a member's class is that what stays and what leaves follow every alike step: a law of every relation and class on any carrier"
-  },
   "Becoming.«亡而网续则不至终有常»": {
    "module": "Becoming.GrammarPath",
    "category": "general-structure",
@@ -4006,6 +3996,31 @@
    "module": "Becoming.RuleShaping",
    "category": "general-structure",
    "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.CleanStep.ends_where_net_ends": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "every line from the member ends only where the net does, though the class fails the condition at the member: a witness of Becoming.GrammarPath (OC2)"
+  },
+  "Becoming.FinerWake.finer_not_constant_at": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "dividing what lies outside more finely breaks the condition even there: a witness of Becoming.GrammarPath (OC2)"
+  },
+  "Becoming.FinerWake.same_class": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "both divisions give the member the same class: a witness of Becoming.GrammarPath (OC2)"
+  },
+  "Becoming.FinerWake.split_constant_at": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "under the split the class meets the condition at the member, every alike occurrence staying and leaving: a witness of Becoming.GrammarPath (OC2)"
+  },
+  "Becoming.«出类不随则不至终有常»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "where an occurrence alike to a member conditions something but nothing alike to an effect that leaves the class, the class is not constant up to the net's end: PF2's form, kept as the corollary of «出类不随则本类不至终有常» (rule 9): a law of every relation and class on any carrier"
   }
  },
  "instances": {

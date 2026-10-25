@@ -6,6 +6,7 @@ the latest receipt. PF is `yes` where PF's and PF2's wording was fixed in the sa
 usage (from the checkout root): python3 -B board_oc2.py progress | head | land RECEIPT SECTION THEOREMS DECLS PF"""
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path.cwd()
@@ -32,12 +33,16 @@ elif sys.argv[1] == 'head':
 elif sys.argv[1] == 'land':
     receipt, section, theorems, decls, pf = sys.argv[2], int(sys.argv[3]), sys.argv[4], sys.argv[5], sys.argv[6]
     assert pf in ('yes', 'no')
-    cells[2] = (f'landed 2026-10-25, core receipt `{receipt}`; {FOUND}, all fixed: Becoming.GrammarPath {theorems} '
+    cells[2] = (f'landed {datetime.now(timezone.utc).date().isoformat()}, core receipt `{receipt}`; {FOUND}, all fixed: Becoming.GrammarPath {theorems} '
                 f'theorems in {decls} declarations, empty axiom reports, earlier statements unchanged; the record '
                 'constancy-read-at-a-members-class and what-leaves-a-class-follows-its-line\'s next step corrected; '
                 f'07 §4.6, P-20, the root bullet, the checker scope and the README rows; study §{section} '
                 '(§408 kept, its corrections there)' +
-                ('; PF\'s and PF2\'s "goes on" fixed on the PF line owner\'s yes' if pf == 'yes' else
+                ('; PF\'s and PF2\'s "goes on" fixed on the PF line owner\'s yes. Known uses kept: PF\'s two philosophy '
+                 'studies (cited by sha256 by PF\'s and PF2\'s records, frozen), PF2\'s record statement and third law '
+                 '(not on the list answered), and "goes on past" an end in the module doc, §4.6 step 2, D64\'s reading, '
+                 'need-and-feeding-read-with-time, P-15 and P-20 (the sense of «过亡而续»; for a pass of its own, '
+                 f'study §{section})' if pf == 'yes' else
                  '; PF\'s and PF2\'s "goes on" for "conditions something" left with the PF line\'s owner (the list is '
                  f'in study §{section})'))
     row = ' | '.join(cells)

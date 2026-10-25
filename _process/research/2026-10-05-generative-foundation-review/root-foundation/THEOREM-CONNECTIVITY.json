@@ -1,11 +1,11 @@
 {
- "commit": "85d279b363f1ec2f5401276079bc02ddbb750585",
+ "commit": "bae1e23993f4dd7174caab502c7bca285ebb9468",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261025T142054.885803Z",
+ "core_receipt_at_commit": "20261025T152131.281884Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 324,
- "constants": 44565,
- "spine_theorems": 14872,
+ "constants": 44617,
+ "spine_theorems": 14881,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 186,
   "used by a theorem on the base": 5261,
   "instance on the base recorded": 153,
-  "apart: own vocabulary": 1249,
+  "apart: own vocabulary": 1258,
   "apart: prelude-only statement": 98
  },
- "apart": 1347,
- "apart_general_structure_by_design": 516,
- "apart_otherwise": 831,
+ "apart": 1356,
+ "apart_general_structure_by_design": 515,
+ "apart_otherwise": 841,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 91,
   "of them on the base": 72,
@@ -73,11 +73,11 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 797,
- "apart_roots": 798,
+ "apart_used_by_nothing": 800,
+ "apart_roots": 801,
  "apart_roots_by_category": {
-  "model-witness": 374,
-  "support": 115,
+  "model-witness": 378,
+  "support": 114,
   "general-structure": 276,
   "restates": 13,
   "logical-strength": 12,
@@ -163,13 +163,13 @@
    97,
    391
   ],
+  "Becoming.GrammarPath": [
+   86,
+   86
+  ],
   "Becoming.Reproduction": [
    80,
    114
-  ],
-  "Becoming.GrammarPath": [
-   77,
-   77
   ],
   "Becoming.Drift": [
    70,
@@ -695,8 +695,8 @@
  "rings": {
   "core": {
    "modules": 308,
-   "theorems": 14112,
-   "apart": 1253,
+   "theorems": 14121,
+   "apart": 1262,
    "classes": {
     "statement on both families": 1046,
     "statement on Process/Frame/Run/Trace": 2787,
@@ -705,7 +705,7 @@
     "proof through a base family": 175,
     "used by a theorem on the base": 4902,
     "instance on the base recorded": 153,
-    "apart: own vocabulary": 1156,
+    "apart: own vocabulary": 1165,
     "apart: prelude-only statement": 97
    }
   },
@@ -15852,15 +15852,18 @@
   "Becoming.«至终常类之闭当且仅当后皆同类»": "apart: own vocabulary",
   "Becoming.«常类之闭当且仅当后皆同类»": "apart: own vocabulary",
   "Becoming.«外合不失本类之常»": "apart: own vocabulary",
+  "Becoming.«外分唯系出类之同»": "apart: own vocabulary",
   "Becoming.«闭则外分无关»": "apart: own vocabulary",
   "Becoming.«二分为类»": "apart: own vocabulary",
   "Becoming.«异三则同»": "apart: prelude-only statement",
   "Becoming.«本类之常至二分»": "apart: own vocabulary",
   "Becoming.«二分本类常当且仅当内外皆随»": "apart: own vocabulary",
+  "Becoming.«内外皆缘则二分本类常»": "apart: own vocabulary",
   "Becoming.Unclosed.same_class": "apart: own vocabulary",
   "Becoming.Unclosed.constant": "apart: own vocabulary",
   "Becoming.Unclosed.not_taken_in": "apart: own vocabulary",
   "Becoming.Inconstant.same_class": "apart: own vocabulary",
+  "Becoming.Inconstant.not_constant_at": "apart: own vocabulary",
   "Becoming.Inconstant.not_all_follow": "apart: own vocabulary",
   "Becoming.FiniteFamilies.family_class": "apart: own vocabulary",
   "Becoming.FiniteFamilies.family_narrower": "apart: own vocabulary",
@@ -15885,7 +15888,9 @@
   "Becoming.FiniteSharedCondition.reaches_other_past_end": "apart: own vocabulary",
   "Becoming.FiniteSharedCondition.fourth_outside": "apart: own vocabulary",
   "Becoming.CleanStep.own_class": "apart: own vocabulary",
+  "Becoming.CleanStep.not_constant_at": "apart: own vocabulary",
   "Becoming.CleanStep.not_constant_to_end": "apart: own vocabulary",
+  "Becoming.CleanStep.ends_where_net_ends": "apart: own vocabulary",
   "Becoming.FiniteWake.own_class": "apart: own vocabulary",
   "Becoming.FiniteWake.constant_to_end": "apart: own vocabulary",
   "Becoming.FiniteWake.not_constant": "apart: own vocabulary",
@@ -15896,6 +15901,10 @@
   "Becoming.FinerOutside.split_constant_at": "apart: own vocabulary",
   "Becoming.FinerOutside.not_held": "apart: own vocabulary",
   "Becoming.FinerOutside.finer_not_constant_at": "apart: own vocabulary",
+  "Becoming.FinerWake.same_class": "apart: own vocabulary",
+  "Becoming.FinerWake.both": "apart: own vocabulary",
+  "Becoming.FinerWake.split_constant_at": "apart: own vocabulary",
+  "Becoming.FinerWake.finer_not_constant_at": "apart: own vocabulary",
   "Becoming.UnevenOutside.finer_class": "apart: own vocabulary",
   "Becoming.UnevenOutside.same_class": "apart: own vocabulary",
   "Becoming.UnevenOutside.split_constant_at": "apart: own vocabulary",

@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:05:56+00:00",
+  "reviewed_at_utc": "2026-10-25T16:13:57+00:00",
   "statement": {
-    "en": "Constancy up to the net's end asked only at a member's class carries the path's laws and fails where a line ends while the net goes on; where the class holds the member's effects how what lies outside is divided is idle, and otherwise the split asks least.",
-    "zh": "只问于一员之类之至网之终有常，足承此路诸律，线亡网续处不成；类持员之所缘时类外之分无关，否则二分所问最少。"
+    "en": "Constancy up to the net's end asked only at a member's class carries the path's laws and fails where a line ends at an occurrence still conditioning something; how what lies outside is divided bears only through effects leaving the class, and where a predicate decides the class the split asks least.",
+    "zh": "只问于一员之类之至网之终有常，足承此路诸律，线亡于仍有所缘者处则不成；类外之分唯经出类之效而入，一谓词判员之类时二分所问最少。"
   },
   "laws": [
     {
@@ -24,8 +24,8 @@
       ]
     },
     {
-      "en": "Each law of the path that asks constancy up to the net's end holds at the member's class, and PF's and PF2's forms are its corollaries: what is alike to a member whose effects the class holds conditions only what is alike to it, everything downstream is on its line, what a line reaches it carries on, holding the effects is everything downstream being alike, and what leaves the class follows every alike step that goes on.",
-      "zh": "此路诸问至网之终有常之律，皆于员之类成立，PF 与 PF2 之形为其推论：与类持其所缘之员同类者唯缘同类者，其下游皆在其线上，线所及者延至其后，持所缘即下游皆同类，出类者随每一同类而有所缘之步。",
+      "en": "Each law of the path that asks constancy up to the net's end holds at the member's class, and PF's and PF2's forms are its corollaries: where a member conditions something and the class holds its effects, what is alike to it conditions only what is alike to it, everything downstream is on its line, and what a line reaches it carries on; holding the effects is everything downstream being alike; and what leaves the class follows every alike occurrence that conditions anything.",
+      "zh": "此路诸问至网之终有常之律，皆于员之类成立，PF 与 PF2 之形为其推论：一员有所缘而类持其所缘时，与之同类者唯缘同类者，其下游皆在其线上，线所及者延至其后；持所缘即下游皆同类；出类者随每一有所缘之同类者。",
       "declarations": [
         "Becoming.«出类不随则本类不至终有常»",
         "Becoming.«本类出类随线»",
@@ -37,38 +37,43 @@
       ]
     },
     {
-      "en": "A line that ends while it still conditions something fails the condition at its class; the organism's class fails it at the first member in both finite witnesses.",
-      "zh": "线亡而仍有所缘者，于其类不成此条件；两有限见证中，个体之类于首员处不成之。",
+      "en": "A line that ends while it still conditions something fails the condition at its class, and the condition asks more than that a line end only where the net does; the organism's class fails it at the first member in both finite witnesses, and the class that holds a member's effects without the regularity fails it at the member.",
+      "zh": "线亡而仍有所缘者，于其类不成此条件，而此条件所问多于线唯于网终处亡；两有限见证中，个体之类于首员处不成之；持员之所缘而无此理之类，于此员处不成之。",
       "declarations": [
+        "Becoming.CleanStep.ends_where_net_ends",
+        "Becoming.CleanStep.not_constant_at",
         "Becoming.FiniteFamilies.member_class",
         "Becoming.FiniteFamilies.member_not_constant_at",
         "Becoming.FiniteSharedCondition.member_class",
         "Becoming.FiniteSharedCondition.member_not_constant_at",
+        "Becoming.Inconstant.not_constant_at",
         "Becoming.«亡而网续则本类不至终有常»"
       ]
     },
     {
-      "en": "Where the class holds the effects of a member that conditions something, every class giving the member the same class gives the same verdict: how what lies outside is divided is idle.",
-      "zh": "类持一有所缘之员之所缘时，凡予此员同一类者，判同：类外如何分无关。",
+      "en": "How what lies outside is divided bears on the condition only through what is alike to an effect that leaves the member's class; so where the class holds the effects of a member that conditions something, every class giving the member the same class gives the same verdict: how what lies outside is divided is idle.",
+      "zh": "类外之分唯经与出员之类之效同类者而系于此条件；故类持一有所缘之员之所缘时，凡予此员同一类者，判同：类外如何分无关。",
       "declarations": [
+        "Becoming.«外分唯系出类之同»",
         "Becoming.«闭则外分无关»"
       ]
     },
     {
-      "en": "Merging what lies outside keeps the condition, so where a predicate decides the member's class the split of that class from the rest asks least; under the split the condition is that what stays and what leaves follow every alike step that goes on.",
-      "zh": "合类外者不失此条件，故一谓词判员之类时，以此类与其余二分者所问最少；二分之下，此条件即留者与出者皆随每一同类而有所缘之步。",
+      "en": "Merging what lies outside keeps the condition, so where a predicate decides the member's class the split of that class from the rest asks least; under the split the condition is that what stays and what leaves follow every alike occurrence that conditions anything, and it holds where every such occurrence conditions something in the class and something outside.",
+      "zh": "合类外者不失此条件，故一谓词判员之类时，以此类与其余二分者所问最少；二分之下，此条件即留者与出者皆随每一有所缘之同类者，凡此等者皆既缘类内者又缘类外者时即成。",
       "declarations": [
         "Becoming.«二分»",
         "Becoming.«二分为类»",
         "Becoming.«二分本类常当且仅当内外皆随»",
+        "Becoming.«内外皆缘则二分本类常»",
         "Becoming.«外合不失本类之常»",
         "Becoming.«异三则同»",
         "Becoming.«本类之常至二分»"
       ]
     },
     {
-      "en": "Dividing what lies outside more finely can break the condition; a witness where the split meets it without holding the member's effects.",
-      "zh": "细分类外者可破此条件；见证中二分成之而不持员之所缘。",
+      "en": "Dividing what lies outside more finely can break the condition, even where every alike occurrence that conditions anything conditions something in the class and something outside; witnesses where the split meets it.",
+      "zh": "细分类外者可破此条件，即使每一有所缘之同类者皆既缘类内者又缘类外者；见证中二分成之。",
       "declarations": [
         "Becoming.FinerOutside.Occ",
         "Becoming.FinerOutside.finer",
@@ -79,7 +84,16 @@
         "Becoming.FinerOutside.not_held",
         "Becoming.FinerOutside.same_class",
         "Becoming.FinerOutside.split_constant_at",
-        "Becoming.FinerOutside.step"
+        "Becoming.FinerOutside.step",
+        "Becoming.FinerWake.Occ",
+        "Becoming.FinerWake.both",
+        "Becoming.FinerWake.finer",
+        "Becoming.FinerWake.finer_not_constant_at",
+        "Becoming.FinerWake.inClass",
+        "Becoming.FinerWake.kind",
+        "Becoming.FinerWake.same_class",
+        "Becoming.FinerWake.split_constant_at",
+        "Becoming.FinerWake.step"
       ]
     },
     {
@@ -118,14 +132,19 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the steps of actual agents each leave something outside the class of their line (a correspondence).",
-      "zh": "实际行动者之每一步皆有出其线之类者（一对应）。",
+      "en": "That every occurrence alike to an actual agent that conditions anything both conditions something in the class of its line and leaves something outside it (a correspondence).",
+      "zh": "实际行动者之每一有所缘之同类者，皆既缘其线之类内者又有出其类者（一对应）。",
       "kind": "non-implication"
     },
     {
       "en": "That the split is the only division worth reading: finer divisions sort effects by kind, which other questions may need.",
       "zh": "二分为唯一可读之分：更细之分按种类分效，他问或需之。",
       "kind": "non-implication"
+    },
+    {
+      "en": "That a class under which every line from a member ends only where the net does meets the condition at the member: in CleanStep it does not.",
+      "zh": "自一员出之线皆唯于网终处亡之类，于此员处成此条件：CleanStep 中不成。",
+      "kind": "converse"
     }
   ],
   "counterexamples": [],
@@ -137,16 +156,16 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T140233.595881Z): Becoming.GrammarPath, every declaration with an empty axiom report; this record cites the 43 declarations OC1 added. PF's and PF2's statements are unchanged, their proofs now through the forms at a member's class. Author review in study section 408; no independent review.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T140233.595881Z）：Becoming.GrammarPath，公理报告皆空；本记录引 OC1 所增之 43 项。PF 与 PF2 之陈述未变，其证明今经于员之类之形。作者审查见研究第 408 节；无独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T160649.851818Z): Becoming.GrammarPath, every declaration with an empty axiom report; this record cites the 57 declarations OC1 and OC2 added. PF's and PF2's statements are unchanged, their proofs now through the forms at a member's class. Author review in study section 408; an independent review (one reviewer, read-only) and its fixes in study section 411.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T160649.851818Z）：Becoming.GrammarPath，公理报告皆空；本记录引 OC1 与 OC2 所增之 57 项。PF 与 PF2 之陈述未变，其证明今经于员之类之形。作者审查见研究第 408 节；独立审查（一审者，只读）及其修正见研究第 411 节。"
   },
   "next_delta": {
-    "en": "A correspondence: whether the steps of actual agents each leave something outside the class of their line, so that P2 read at one's own class passes a self drawn by intention in actual nets. The crux, P4, is put to philosophers.",
-    "zh": "一对应：实际行动者之每一步是否皆有出其线之类者，从而读于自之类之 P2 于实际之网中通过以所意划之自。关键 P4 交哲学家。"
+    "en": "A correspondence: whether every occurrence alike to an actual agent that conditions anything both conditions something in the class of its line and leaves something outside it, so that P2, read with the split of that class from the rest, passes a self drawn by intention in actual nets. The crux, P4, is put to philosophers.",
+    "zh": "一对应：实际行动者之每一有所缘之同类者，是否皆既缘其线之类内者又有出其类者，从而以此类与其余二分读之之 P2 于实际之网中通过以所意划之自。关键 P4 交哲学家。"
   },
   "correspondence": {
-    "en": "Read with the path's P2: a self's regularity of its own is constancy up to the net's end at its own class. Under the split of oneself from the rest it asks of a self that holds its effects only that its line go on at every alike step that goes on, and of a self drawn by intention, besides, that something leave at every alike step that goes on wherever one does; the reading is the AI's.",
-    "zh": "以此路之 P2 读之：自之自有之理，即于其自之类之至网之终有常。以自与其余二分，于持其所缘之自，唯问其线于每一同类而有所缘之步皆续；于以所意划之自，另问凡有一步出类，则每一同类而有所缘之步皆有出者；读法为 AI 之。"
+    "en": "Read with the path's P2: a self's regularity of its own is constancy up to the net's end at its own class. Of a self that acts and holds its effects it requires, however what one leaves out is divided, that every occurrence alike to it condition only what is alike to it, so its line continues from every alike occurrence that conditions anything. Of a self drawn by intention, read with the split of itself from the rest, it requires that where any alike occurrence conditions something in its class, or something outside, every alike occurrence that conditions anything does too, which holds where each both conditions something in its class and leaves something outside. The reading is the AI's.",
+    "zh": "以此路之 P2 读之：自之自有之理，即于其自之类之至网之终有常。于有所缘且持其所缘之自，无论所遗于外者如何分，要求与之同类者皆唯缘同类者，故其线于每一有所缘之同类者皆续。于以所意划之自，以自与其余二分读之，要求凡有一同类者缘类内者或缘类外者，则每一有所缘之同类者亦然；每一者皆既缘类内者又有出类者时即成。读法为 AI 之。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
   "aliases": [
@@ -179,6 +198,8 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
       "role": "proof",
       "declarations": [
+        "Becoming.CleanStep.ends_where_net_ends",
+        "Becoming.CleanStep.not_constant_at",
         "Becoming.FinerOutside.Occ",
         "Becoming.FinerOutside.finer",
         "Becoming.FinerOutside.finer_class",
@@ -189,10 +210,20 @@
         "Becoming.FinerOutside.same_class",
         "Becoming.FinerOutside.split_constant_at",
         "Becoming.FinerOutside.step",
+        "Becoming.FinerWake.Occ",
+        "Becoming.FinerWake.both",
+        "Becoming.FinerWake.finer",
+        "Becoming.FinerWake.finer_not_constant_at",
+        "Becoming.FinerWake.inClass",
+        "Becoming.FinerWake.kind",
+        "Becoming.FinerWake.same_class",
+        "Becoming.FinerWake.split_constant_at",
+        "Becoming.FinerWake.step",
         "Becoming.FiniteFamilies.member_class",
         "Becoming.FiniteFamilies.member_not_constant_at",
         "Becoming.FiniteSharedCondition.member_class",
         "Becoming.FiniteSharedCondition.member_not_constant_at",
+        "Becoming.Inconstant.not_constant_at",
         "Becoming.UnevenOutside.Occ",
         "Becoming.UnevenOutside.finer",
         "Becoming.UnevenOutside.finer_class",
@@ -208,7 +239,9 @@
         "Becoming.«二分为类»",
         "Becoming.«二分本类常当且仅当内外皆随»",
         "Becoming.«亡而网续则本类不至终有常»",
+        "Becoming.«内外皆缘则二分本类常»",
         "Becoming.«出类不随则本类不至终有常»",
+        "Becoming.«外分唯系出类之同»",
         "Becoming.«外合不失本类之常»",
         "Becoming.«异三则同»",
         "Becoming.«本类之常至二分»",
@@ -223,17 +256,17 @@
         "Becoming.«至终有常则本类至终有常»",
         "Becoming.«闭则外分无关»"
       ],
-      "sha256": "5ffee63ef17ed5ed18d8b22122468cd780ee347a07a8119bfa5e1a939914c4f7"
+      "sha256": "471420ce6c98bb6353fe85916b7aec96fa12c0e127c3ee16a73a9d84e084f82b"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T140233.595881Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T160649.851818Z/verification.json",
       "role": "receipt",
-      "sha256": "37734434c2b0916a62fc3cc20e6dc0d18c4a7e7cb05e9f691305d9d150dd2bd9"
+      "sha256": "a02b4b82488ba2dd7619b7978aa35b5986d3dc13da7c2808ad373f1296956186"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "048135276263cd95fcb630b585c38903b00b974671f646eca1480e56a3cc4226"
+      "sha256": "24c22f4604910b2d9f8e65b72edcaffeba6a89ddeaa915ef957ef6246310571d"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/REVIEW-PF2.md",
@@ -241,15 +274,20 @@
       "sha256": "64c576699eec9c183237aad10d8692b64416360ec735f863ffcb4267f12ae395"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/oc-own-class/REVIEW-OC1.md",
+      "role": "review",
+      "sha256": "4ac355476a3a6b7d5ae7221f0ccf1710391b6850c475b7e8cf9d8db59c4291db"
+    },
+    {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "b6993959075ba3a9ce5bec2e75b3f629f722fcd9cc2665769c71ac7926c5be78"
+      "sha256": "e2e4a1f4c55e4f64868916638b6c0c32e06ff4d8a750fb44c2fc6861bbb3d13b"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T140233.595881Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T160649.851818Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarPath",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -259,6 +297,10 @@
     {
       "en": "25 October 2026: added (OC1), answering 07 §4.6's Open item on which class P2 reads and how finely it divides what one leaves out; study section 408.",
       "zh": "2026年10月25日：新增（OC1），答 07 §4.6 关于 P2 读何类、如何细分所遗于外者之开放问题；研究第 408 节。"
+    },
+    {
+      "en": "25 October 2026: reviewed independently (OC2): 4 errors, 9 imprecisions and 4 clarity points in its texts, no proof wrong, all fixed; the laws extended (what lies outside bears only through effects leaving the class; a sufficient condition under the split; the condition asks more than line-ending; the witnesses at the member's class; FinerWake). The Open item it answered: its formal part by laws, the choice of class by a labelled reading. Study section 411.",
+      "zh": "2026年10月25日：独立审查（OC2）：其文中四误、九不确、四欠明，证明无误，皆已修正；诸律扩充（类外之分唯经出类之效；二分下之充分条件；此条件所问多于线唯于网终处亡；见证于员之类；FinerWake）。其所答之开放问题：形式部分以律答之，读何类以标明之读法答之。研究第 411 节。"
     }
   ]
 }

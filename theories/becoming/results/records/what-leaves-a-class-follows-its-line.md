@@ -39,7 +39,7 @@ Canonical source: [GrammarPath.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-Answered for P2 in constancy-read-at-a-members-class (OC1): read at one's own class, with the split asking least, P2 asks of a class that does not hold a member's effects only that what stays and what leaves follow every alike step that goes on. What remains is P4's question, put to philosophers.
+Answered for P2 in constancy-read-at-a-members-class (OC1, reviewed in OC2): read at one's own class with the split, which asks least where a predicate decides the class, P2 asks exactly that what stays and what leaves follow every alike occurrence that conditions anything. Reading P2 so is argued, not proved; whether actual agents meet it is a correspondence; P4's question is put to philosophers.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -65,6 +65,7 @@ Read with a class drawn by what a member intends, the agential self of the path:
 | provenance | [PHILOSOPHY-ROUND-2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-2.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T140233.595881Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T160649.851818Z/verification.json) | — |
 
 Aliases: `What leaves a class follows its line`, `出类者随其线`, `Becoming.«出类随线»`, `Becoming.«出类随行»`
 
@@ -73,6 +74,7 @@ Aliases: `What leaves a class follows its line`, `出类者随其线`, `Becoming
 
 - 25 October 2026: added (PF2), answering the path's Open item on a class that holds only intended effects; study section 407.
 - 25 October 2026: next step answered by constancy-read-at-a-members-class (OC1); the laws now corollaries of the forms at a member's class, statements unchanged; study section 408.
+- 25 October 2026: the answer to its next step reviewed independently (OC2): its formal part is answered by laws, the choice of class by a labelled reading; study section 411.
 
 </details>
 

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """OC2: bring the apart-root register in line with what connectivity's `--check` names after OC2. It adds an entry for
 each new root, and for PF2's law that OC2's derivation left unused (CleanStep's global failure now goes through the
-form at the member's class). It removes the entry of a root that a new law now uses (`«二分本类常当且仅当内外皆随»`,
-used by `«内外皆缘则二分本类常»`). Textual edits; the rest of the file stays byte for byte.
+form at the member's class). It removes the entries of roots that OC2 now uses (`«二分本类常当且仅当内外皆随»`, used
+by `«内外皆缘则二分本类常»`; `Inconstant.same_class`, used by `Inconstant.not_constant_at`). Textual edits; the rest of
+the file stays byte for byte.
 usage (from the checkout root): python3 -B register_oc2.py NAME ... [--remove NAME ...] (the names `--check` gave)"""
 import json
 import re
@@ -33,7 +34,7 @@ KNOWN = {
     'Becoming.FinerWake.finer_not_constant_at': ('model-witness', w("dividing what lies outside more finely breaks the "
                                                                     "condition even there")),
 }
-REMOVABLE = {'Becoming.«二分本类常当且仅当内外皆随»'}
+REMOVABLE = {'Becoming.«二分本类常当且仅当内外皆随»', 'Becoming.Inconstant.same_class'}
 args = sys.argv[1:]
 cut = args.index('--remove') if '--remove' in args else len(args)
 names, removed = args[:cut], args[cut + 1:]
