@@ -2314,7 +2314,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   telling going on from ending at every point is exactly excluded middle (`«延尽之定当且仅当排中»`);
   a sequence of classes, no order between them assumed, reads generation at every order
   (`«阶生成»`); renewal without end and ceasing are going on along some branch and ending on every
-  branch of renewing into (`«生生即延»`, `«息即尽»`). A leaf.
+  branch of renewing into (`«生生即延»`, `«息即尽»`). Imported by `Becoming.GrammarScope`,
+  `Becoming.GrammarPath` and `Becoming.MapInstances`.
 * `Becoming.MapInstances` (L2): the old base's regimes on the map, with occurrences as pairs of a
   step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
   alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
@@ -2329,7 +2330,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   apart is not in the core (`«可分则不在核»`); the converse, the Hennessy–Milner direction, is a
   calibration and is not stated. A room in balance and a room held by a thermostat share a core
   class while no window opens and are told apart once the window's opening is in the net
-  (`«恒温与平衡»`): no intervener outside the net. A leaf.
+  (`«恒温与平衡»`): no intervener outside the net. Imported by `Becoming.GrammarCases`.
 * `Becoming.GrammarCandidates` (L0): the corpus's 59 candidate theorems of the grammar, tested
   (the OU2c kit's `outcomes.tsv`: 38 proved, 15 needing a premise, 3
   refuted, 2 misclassified, 1 not expressible). Correlatives that are the two ends of one relation
@@ -3288,7 +3289,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and the one, constant, its core going on through each birth, the other family not reached
   (`TwoLines`). Two lines that share a condition: where the members affect it, one line's future
   reaches the other's through it under the one, not under "a member or not"; where they only feed
-  from it, under no relation (`SharedCondition`, board item GS4). A third thing joined to nothing lies
+  from it, under no relation (`SharedCondition`, board item GS4; both of these derived from
+  `«所经不同则不及»`, board item GS6). A third thing joined to nothing lies
   outside the class of being joined; one affecting the condition is left out by a finer constant class
   that still reaches; one the condition feeds is taken in by every constant class holding a member
   with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread
@@ -3308,7 +3310,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   narrower than the one, is constant up to the net's end and the organism's is not
   (`FiniteFamilies`); and a finite net with two families sharing a condition they affect, where every
   premise holds at once and the line from one family's first birth reaches the other past the first
-  member's end (`FiniteSharedCondition`).
+  member's end (`FiniteSharedCondition`). `Becoming.GrammarCases` derives from `«所经不同则不及»` its
+  shared-condition witnesses under "a member or not" and where the members only feed from the
+  condition (board item GS6).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

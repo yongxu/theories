@@ -1,5 +1,6 @@
 import Becoming.GrammarScope
 import Becoming.GrammarTesting
+import Becoming.GrammarPath
 
 /-!
 # Test systems of the source texts as small witnesses of the grammar (诸例)
@@ -49,9 +50,13 @@ changes.
   under the one from the first family's first member reaches the second family's member two
   generations on, through it (`SharedCondition.affecting_reaches_other`); under the class "a member or
   not", which holds both families' members alike and the condition apart, it does not
-  (`SharedCondition.affecting_member_outside`). Where the members only feed from a condition they do
-  not affect, the line under no relation reaches the other family (`SharedCondition.fed_outside`). No
-  class narrower than the one is shown to reach, and no core is computed.
+  (`SharedCondition.affecting_member_outside`): along the net the first family is left only into the
+  condition, and that class holds no stage of the condition alike to the first family's first member,
+  so this follows from `«所经不同则不及»` (`Becoming.GrammarPath`). Where the members only feed from a
+  condition they do not affect, the line under no relation reaches the other family
+  (`SharedCondition.fed_outside`): a line under any relation is a line under the one, and along `fed`
+  the first family is never left, so the same law applies with nothing to pass. No class narrower than
+  the one is shown to reach in this net, and no core is computed.
 * **A third thing joined to nothing** (`ThirdThing`). With a third thing that conditions nothing and
   is conditioned by nothing but its own earlier stage, the class of being joined (`«同族» R «一»`,
   GrammarScope) holds the first family's first member with the condition and with the second family's
@@ -286,11 +291,10 @@ theorem core_through_birth (f : Bool) (n : Nat) :
      | ⟨_, .inl ⟨h, _⟩⟩ => Bool.noConfusion h
      | ⟨_, .inr ⟨_, e⟩⟩ => Nat.succ_ne_self n (same.2.trans (congrArg Prod.fst e)).symm⟩
 
-/-- A line stays within its family. -/
-theorem line_in_family {E : «际» Occ} {x y : Occ} (line : «相续» step E x y) : y.1 = x.1 := by
-  induction line with
-  | one c => exact c.1.1
-  | more c _ ih => exact ih.trans c.1.1
+/-- A line stays within its family: every step keeps the family, so a line under any relation is a
+line under the family line's class, whose ends are alike (`«线内同类»`). -/
+theorem line_in_family {E : «际» Occ} {x y : Occ} (line : «相续» step E x y) : y.1 = x.1 :=
+  («线内同类» family_class («及之单调» (fun _ _ c => ⟨c.1, c.1.1.symm⟩) _ _ line)).symm
 
 /-- **Reaching one's successors is not reaching everything**: from the first birth of one family, the
 line under the one reaches no member of the other family. -/
@@ -350,67 +354,52 @@ theorem affecting_reaches_other : «所及» affecting «一» (.a 0) (.b 2) :=
   have second : «续» affecting «一» (.r 1) (.b 2) := ⟨rfl, trivial⟩
   .inr («及».more first (.one second))
 
-/-- A step under the class of being a member or not, from a member of the first family, stays in it. -/
-theorem affecting_member_step {m : Nat} {y : Occ} (c : «续» affecting (sameValue living) (.a m) y) : ∃ k, y = .a k :=
-  match y, c with
-  | .a k, _ => ⟨k, rfl⟩
-  | .b _, c => False.elim c.1
-  | .r _, c => absurd c.2 (fun h => Bool.noConfusion h)
+/-- Whether an occurrence is a member of the first family. -/
+def firstFamily : Occ → Bool
+  | .a _ => true
+  | .b _ => false
+  | .r _ => false
 
-/-- A line under the class of being a member or not, from a member of the first family, stays in the
-first family. -/
-theorem affecting_member_stays {x y : Occ} (line : «相续» affecting (sameValue living) x y) :
-    ∀ m, x = .a m → ∃ k, y = .a k := by
-  induction line with
-  | one c =>
-    intro m e
-    subst e
-    exact affecting_member_step c
-  | more c _ ih =>
-    intro m e
-    subst e
-    match affecting_member_step c with
-    | ⟨k, e'⟩ => exact ih k e'
+/-- Along `affecting`, the first family is left only into the shared condition. -/
+theorem first_left_into_condition (u v : Occ) (inside : firstFamily u = true) (s : affecting u v)
+    (outside : firstFamily v = false) : ∃ k, v = .r k :=
+  match u, v, inside, s, outside with
+  | .a _, .r k, _, _, _ => ⟨k, rfl⟩
+  | .a _, .b _, _, s, _ => False.elim s
+  | .a _, .a _, _, _, e => Bool.noConfusion e
+  | .b _, _, e, _, _ => Bool.noConfusion e
+  | .r _, _, e, _, _ => Bool.noConfusion e
 
 /-- **Under "a member or not", the other line is not reached**: that class holds both families' members
 alike and the condition apart, and its line from the first family's first member reaches no member of
-the second. -/
-theorem affecting_member_outside (n : Nat) : ¬ «所及» affecting (sameValue living) (.a 0) (.b n) := fun reached =>
-  match reached with
-  | .inl e => Occ.noConfusion e
-  | .inr line => match affecting_member_stays line 0 rfl with
-    | ⟨_, e⟩ => Occ.noConfusion e
+the second. The first family is left only into the condition, which the class holds apart from the
+member (`«所经不同则不及»`). -/
+theorem affecting_member_outside (n : Nat) : ¬ «所及» affecting (sameValue living) (.a 0) (.b n) :=
+  «所经不同则不及» (sameValue_class living)
+    (fun u v inside s outside => first_left_into_condition u v inside s.1 outside) rfl rfl
+    (fun _ ⟨_, e⟩ alike => by subst e; exact Bool.noConfusion alike)
 
-/-- A step along `fed`, from a member of the first family, stays in it. -/
-theorem fed_step {E : «际» Occ} {m : Nat} {y : Occ} (c : «续» fed E (.a m) y) : ∃ k, y = .a k :=
-  match y, c with
-  | .a k, _ => ⟨k, rfl⟩
-  | .b _, c => False.elim c.1
-  | .r _, c => False.elim c.1
-
-/-- A line along `fed`, under any relation, from a member of the first family, stays in the first
-family. -/
-theorem fed_stays {E : «际» Occ} {x y : Occ} (line : «相续» fed E x y) :
-    ∀ m, x = .a m → ∃ k, y = .a k := by
-  induction line with
-  | one c =>
-    intro m e
-    subst e
-    exact fed_step c
-  | more c _ ih =>
-    intro m e
-    subst e
-    match fed_step c with
-    | ⟨k, e'⟩ => exact ih k e'
+/-- Along `fed`, the first family is never left. -/
+theorem first_never_left (u v : Occ) (inside : firstFamily u = true) (s : fed u v)
+    (outside : firstFamily v = false) : False :=
+  match u, v, inside, s, outside with
+  | .a _, .a _, _, _, e => Bool.noConfusion e
+  | .a _, .b _, _, s, _ => s
+  | .a _, .r _, _, s, _ => s
+  | .b _, _, e, _, _ => Bool.noConfusion e
+  | .r _, _, e, _, _ => Bool.noConfusion e
 
 /-- **Where the members only feed from a condition they do not affect, no relation reaches the other
 line**: under every relation, the line from the first family's first member reaches no member of the
-second. -/
+second. A line under any relation is a line under the one, and along `fed` the first family is never
+left, so the one has nothing outside it to pass (`«所经不同则不及»` with no exit). -/
 theorem fed_outside (E : «际» Occ) (n : Nat) : ¬ «所及» fed E (.a 0) (.b n) := fun reached =>
-  match reached with
-  | .inl e => Occ.noConfusion e
-  | .inr line => match fed_stays line 0 rfl with
-    | ⟨_, e⟩ => Occ.noConfusion e
+  «所经不同则不及» (P := firstFamily) (C := fun _ => False) «一为类»
+    (fun u v inside s outside => first_never_left u v inside s.1 outside) rfl rfl
+    (fun _ none _ => none)
+    (match reached with
+     | .inl e => .inl e
+     | .inr line => .inr («及之单调» (fun _ _ c => ⟨c.1, trivial⟩) _ _ line))
 
 end SharedCondition
 
@@ -475,13 +464,12 @@ theorem step_keeps_third : ∀ {x y : Occ}, step x y → third x = third y
   | .s _, .b _, h => False.elim h
   | .s _, .r _, h => False.elim h
 
-/-- The class of being joined keeps every stage of the third thing apart from the rest. -/
-theorem family_keeps_third {x y : Occ} (fam : «同族» step «一» x y) : third x = third y := by
-  induction fam with
-  | refl _ => rfl
-  | step c => exact step_keeps_third c.1
-  | symm _ ih => exact ih.symm
-  | trans _ _ ih₁ ih₂ => exact ih₁.trans ih₂
+/-- The class of being joined keeps every stage of the third thing apart from the rest: no condition
+joins the third thing to the rest, so "the third thing or not" has 缘 as its continuation and contains
+the class of being joined (`«续即缘当且仅当含族»`). -/
+theorem family_keeps_third {x y : Occ} (fam : «同族» step «一» x y) : third x = third y :=
+  («续即缘当且仅当含族» step (sameValue_class third)).mp
+    (fun _ _ => ⟨fun h => h.1, fun h => ⟨h, step_keeps_third h⟩⟩) _ _ fam
 
 /-- **The class of being joined holds the first family's first member with the condition and with the
 second family's member two generations on, and not with the third thing**; so it is narrower than the

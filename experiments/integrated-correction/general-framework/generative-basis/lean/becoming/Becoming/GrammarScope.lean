@@ -355,11 +355,9 @@ lies on its line. -/
 theorem descent_no_outside : «续无外» step «一» (fun (_ : Unit) => ((0, false) : Occ)) :=
   fun _ x => descent_reaches x.1 x.2
 
-/-- A line under the member's class stays with one member. -/
-theorem member_line {x y : Occ} (line : «相续» step member x y) : y.1 = x.1 := by
-  induction line with
-  | one c => exact c.2.symm
-  | more c _ ih => exact ih.trans c.2.symm
+/-- A line under the member's class stays with one member (`«线内同类»`). -/
+theorem member_line {x y : Occ} (line : «相续» step member x y) : y.1 = x.1 :=
+  («线内同类» member_class line).symm
 
 /-- **Under the member's class it fails**: the first member's line reaches nothing of the next member. -/
 theorem member_outside : ¬ «续无外» step member (fun (_ : Unit) => ((0, false) : Occ)) := fun none =>

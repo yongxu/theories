@@ -1,0 +1,24 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/gs6/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gs6-shared-condition-derived/tree",
+  "modules": 112,
+  "ran": [
+    "Becoming.GrammarScope",
+    "Becoming.GrammarCases",
+    "BecomingGrammarCasesAxiomAudit",
+    "BecomingGrammarScopeAxiomAudit"
+  ],
+  "reused": 110,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarCases": {
+      "theorems": 40,
+      "declarations": 68,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarScope": {
+      "theorems": 37,
+      "declarations": 44,
+      "with_axioms": {}
+    }
+  }
+}

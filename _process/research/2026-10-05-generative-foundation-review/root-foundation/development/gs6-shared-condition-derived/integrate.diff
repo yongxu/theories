@@ -1,0 +1,135 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
+index 0d35852a2..6a16f68b5 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
+@@ -3287,8 +3287,9 @@ every module importing one of them; L1 holds the rest. No module imports one of
+   (`LineOfDescent.Endless.generates`). Two family lines, the class of one strictly between a member's
+   and the one, constant, its core going on through each birth, the other family not reached
+   (`TwoLines`). Two lines that share a condition: where the members affect it, one line's future
+-  reaches the other's through it under the one, not under "a member or not"; where they only feed
+-  from it, under no relation (`SharedCondition`, board item GS4). A third thing joined to nothing lies
++  reaches the other's through it under the one, not under "a member or not" (derived from
++  `«所经不同则不及»`, board item GS6); where they only feed from it, under no relation
++  (`SharedCondition`, board item GS4). A third thing joined to nothing lies
+   outside the class of being joined; one affecting the condition is left out by a finer constant class
+   that still reaches; one the condition feeds is taken in by every constant class holding a member
+   with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread
+@@ -3308,7 +3309,8 @@ every module importing one of them; L1 holds the rest. No module imports one of
+   narrower than the one, is constant up to the net's end and the organism's is not
+   (`FiniteFamilies`); and a finite net with two families sharing a condition they affect, where every
+   premise holds at once and the line from one family's first birth reaches the other past the first
+-  member's end (`FiniteSharedCondition`).
++  member's end (`FiniteSharedCondition`). `Becoming.GrammarCases` derives its shared-condition
++  witness under "a member or not" from `«所经不同则不及»` (board item GS6).
+ * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
+   a description.
+ * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean
+index fd393933c..e842750d6 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean
+@@ -1,5 +1,6 @@
+ import Becoming.GrammarScope
+ import Becoming.GrammarTesting
++import Becoming.GrammarPath
+ 
+ /-!
+ # Test systems of the source texts as small witnesses of the grammar (诸例)
+@@ -49,7 +50,9 @@ changes.
+   under the one from the first family's first member reaches the second family's member two
+   generations on, through it (`SharedCondition.affecting_reaches_other`); under the class "a member or
+   not", which holds both families' members alike and the condition apart, it does not
+-  (`SharedCondition.affecting_member_outside`). Where the members only feed from a condition they do
++  (`SharedCondition.affecting_member_outside`): the first family is left only into the condition,
++  which that class does not hold alike to the member, so the case follows from `«所经不同则不及»`
++  (`Becoming.GrammarPath`). Where the members only feed from a condition they do
+   not affect, the line under no relation reaches the other family (`SharedCondition.fed_outside`). No
+   class narrower than the one is shown to reach, and no core is computed.
+ * **A third thing joined to nothing** (`ThirdThing`). With a third thing that conditions nothing and
+@@ -350,36 +353,30 @@ theorem affecting_reaches_other : «所及» affecting «一» (.a 0) (.b 2) :=
+   have second : «续» affecting «一» (.r 1) (.b 2) := ⟨rfl, trivial⟩
+   .inr («及».more first (.one second))
+ 
+-/-- A step under the class of being a member or not, from a member of the first family, stays in it. -/
+-theorem affecting_member_step {m : Nat} {y : Occ} (c : «续» affecting (sameValue living) (.a m) y) : ∃ k, y = .a k :=
+-  match y, c with
+-  | .a k, _ => ⟨k, rfl⟩
+-  | .b _, c => False.elim c.1
+-  | .r _, c => absurd c.2 (fun h => Bool.noConfusion h)
++/-- Whether an occurrence is a member of the first family. -/
++def firstFamily : Occ → Bool
++  | .a _ => true
++  | .b _ => false
++  | .r _ => false
+ 
+-/-- A line under the class of being a member or not, from a member of the first family, stays in the
+-first family. -/
+-theorem affecting_member_stays {x y : Occ} (line : «相续» affecting (sameValue living) x y) :
+-    ∀ m, x = .a m → ∃ k, y = .a k := by
+-  induction line with
+-  | one c =>
+-    intro m e
+-    subst e
+-    exact affecting_member_step c
+-  | more c _ ih =>
+-    intro m e
+-    subst e
+-    match affecting_member_step c with
+-    | ⟨k, e'⟩ => exact ih k e'
++/-- Along `affecting`, the first family is left only into the shared condition. -/
++theorem first_left_into_condition (u v : Occ) (inside : firstFamily u = true) (s : affecting u v)
++    (outside : firstFamily v = false) : ∃ k, v = .r k :=
++  match u, v, inside, s, outside with
++  | .a _, .r k, _, _, _ => ⟨k, rfl⟩
++  | .a _, .b _, _, s, _ => False.elim s
++  | .a _, .a _, _, _, e => Bool.noConfusion e
++  | .b _, _, e, _, _ => Bool.noConfusion e
++  | .r _, _, e, _, _ => Bool.noConfusion e
+ 
+ /-- **Under "a member or not", the other line is not reached**: that class holds both families' members
+ alike and the condition apart, and its line from the first family's first member reaches no member of
+-the second. -/
+-theorem affecting_member_outside (n : Nat) : ¬ «所及» affecting (sameValue living) (.a 0) (.b n) := fun reached =>
+-  match reached with
+-  | .inl e => Occ.noConfusion e
+-  | .inr line => match affecting_member_stays line 0 rfl with
+-    | ⟨_, e⟩ => Occ.noConfusion e
++the second. The first family is left only into the condition, which the class holds apart from the
++member (`«所经不同则不及»`). -/
++theorem affecting_member_outside (n : Nat) : ¬ «所及» affecting (sameValue living) (.a 0) (.b n) :=
++  «所经不同则不及» (sameValue_class living)
++    (fun u v inside s outside => first_left_into_condition u v inside s.1 outside) rfl rfl
++    (fun _ ⟨_, e⟩ alike => by subst e; exact Bool.noConfusion alike)
+ 
+ /-- A step along `fed`, from a member of the first family, stays in it. -/
+ theorem fed_step {E : «际» Occ} {m : Nat} {y : Occ} (c : «续» fed E (.a m) y) : ∃ k, y = .a k :=
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md
+index 4a6f255dc..65f07f59d 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md
+@@ -295,8 +295,8 @@ Core purity is [Ren's requirement](../../../../../../sources/15-codex-theory-con
+ | L1 | [`Becoming.GrammarCourse`](Becoming/GrammarCourse.lean) | 文 in the grammar of continuation (no premise): a law's step as 缘 and a map's values as a class; the same course through the map is the core of the value class (`Law.core_is_sameFuture`) and likeness by bisimulation is that core (`Law.alike_iff_core`); the coarsest value-keeping class is the core (`Law.coarsest_iff_core`); the states of a course are its core along the steps (`SameAhead.is_core`); the bounded laws, two courses as one net and learnability through the core |
+ | L1 | [`Becoming.GrammarRegularity`](Becoming/GrammarRegularity.lean) | the regularity of a line, kept and left, and rules that change themselves, in the grammar (no premise beyond each law's own): from a step under the core every occurrence its line under the core reaches is continued under it (`«守理则不穷»`); a step into an end, and the last step of every line that ends, leaves the core (`«亡前理变»`, `«有亡之线末步离核»`); a process with moves as relations (`constant_of_goAlike`, `goAlike_of_constant`); a rule that changes itself (`adaptive_constant_iff`, `adaptive_core_apart`); closed capture: the class of share, rule and step count constant along every schedule exactly where nothing beyond is read (`ClosedCapture.constant_iff_unread`), the locked line unending while the loss alters (`ClosedCapture.lock_line`), the line under favouring not unending under a reading that turns against favouring past a loss bound (`ClosedCapture.loss_ends_line`) |
+ | L1 | [`Becoming.GrammarScope`](Becoming/GrammarScope.lean) | the continuation condition on the root, with no significance parameter (no premise beyond each law's own): every occurrence on every center's line under a class (`«续无外»`) or in its family (`«族无外»`), at every coarser class too; held de se along a relation, the root's condition at the one of it (`withinClosure_iff_reached`, `ownClosure_unrestricted_iff_noOutside`), with living significance on the own-closure reading of claims (`premises_of_noOutside`); along a net with no cycle only one center (`«续无外则同一中心»`); past one's own end (`«过亡而续»`); the core continues exactly where some line under it never ends (`«核有续当且仅当有不穷»`); two lines of descent (`LineOfDescent`); the class of being joined, the finest with 缘 as its continuation (`«续即缘当且仅当含族»`) |
+-| L1 | [`Becoming.GrammarCases`](Becoming/GrammarCases.lean) | test systems of the source texts as small witnesses (no premise beyond each net's own): decay, the step not in the regularity of intact or not in the net of possibilities (`Decay.time_not_in_core`), the time left in it in a history within that net (`Decay.history_apart`); overlapping identities (`Overlap`); a line of descent generating at two grains (`LineOfDescent.Endless.generates`); two family lines, a core going on through births (`TwoLines`); one line reaching another through a condition its members affect (`SharedCondition`); a third thing joined three ways (`ThirdThing`, `ThirdAffects`, `ThirdFed`); a belief whose rate grows with its number (`Belief`) |
+-| L1 | [`Becoming.GrammarPath`](Becoming/GrammarPath.lean) | what a line under a class must hold, and what a regularity takes in (no premise beyond each law's own): a line leaving a region only into a set holds a member of it alike to its start (`«所经必同»`); under a constant class, everything downstream of anything alike to a member whose effects the class holds is on its line, and given the regularity that is equivalent to holding them (`«常闭则后皆续»`, `«常类之闭当且仅当后皆同类»`), also up to the net's end (`«至终有常»`, `«至终常闭则后皆续»`); a line ending while the net goes on rules out constancy up to the net's end (`«亡而网续则不至终有常»`); witnesses (`Unclosed`, `Inconstant`, `FiniteFamilies`, `FiniteSharedCondition`) |
++| L1 | [`Becoming.GrammarCases`](Becoming/GrammarCases.lean) | test systems of the source texts as small witnesses (no premise beyond each net's own): decay, the step not in the regularity of intact or not in the net of possibilities (`Decay.time_not_in_core`), the time left in it in a history within that net (`Decay.history_apart`); overlapping identities (`Overlap`); a line of descent generating at two grains (`LineOfDescent.Endless.generates`); two family lines, a core going on through births (`TwoLines`); one line reaching another through a condition its members affect, and under "a member or not" not, derived from `«所经不同则不及»` (`SharedCondition`); a third thing joined three ways (`ThirdThing`, `ThirdAffects`, `ThirdFed`); a belief whose rate grows with its number (`Belief`) |
++| L1 | [`Becoming.GrammarPath`](Becoming/GrammarPath.lean) | what a line under a class must hold, and what a regularity takes in (no premise beyond each law's own): a line leaving a region only into a set holds a member of it alike to its start (`«所经必同»`); under a constant class, everything downstream of anything alike to a member whose effects the class holds is on its line, and given the regularity that is equivalent to holding them (`«常闭则后皆续»`, `«常类之闭当且仅当后皆同类»`), also up to the net's end (`«至终有常»`, `«至终常闭则后皆续»`); a line ending while the net goes on rules out constancy up to the net's end (`«亡而网续则不至终有常»`); witnesses (`Unclosed`, `Inconstant`, `FiniteFamilies`, `FiniteSharedCondition`); `Becoming.GrammarCases` derives its shared-condition witness from `«所经不同则不及»` |
+ | L1 | [`Becoming.Pace`](Becoming/Pace.lean) | how fast a rule may change (no premise beyond the hypotheses named): a two-level course whose rule changes only at reading steps is a run of one law (`paced_run`); a rule that never reads is kept and unreached (`rule_unreached`) and loses what it merges (`never_reads_loses`); a fast difference reaches the rule only at a reading step (`rule_until_reading`, exact in `Copying`); regaining needs a change of rule (`Switching.changing_regains`); a stretch of `L` steps fixes every pair of held courses with at most `N` states exactly when `L ≥ 2N - 1` (`pace_law`, `dissolving`, `held_fixed`); a course read whole is fixed by `N + 1` steps, exactly (`whole_fixed`, `whole_fixed_exact`); reading through a pool (`rule_through_pool`) |
+ | L1 | [`Becoming.RuleCapture`](Becoming/RuleCapture.lean) | a selection whose rule reads the share it selects (no premise beyond the hypotheses named): where no rule turns against the reading the share falls at no step and the course is locked from the step after its first reading step (`favouring_locks`; on counts with a margin, `CarrierCounts.margin_course`, strictly under a positive margin, `CarrierCounts.rises_strictly`); locked, neither share nor rule falls (`locked_stays`, `locked_rises`); a perturbation keeping the direction is absorbed at the next reading step (`perturbation_absorbed`); a reading favouring at every share locks every course from the step after its second reading step, exactly (`uniform_locks`, `Second.second_exact`); monotone laws keep the order of courses (`order_kept`, `perturbation_keeps_below`); against the reading, a late reading alternates without end (`Alternating.alternates`) and a reversing perturbation across a threshold is not absorbed (`Reversed.not_absorbed`); the share order is the comparison of `share_not_lower` (`CarrierCounts.share_not_lower_counts`); two rules lock together (`pairOrder`, `pairReading`, `ReadsShare.pair`, `pair_locks`); a reading against the share does not ratchet (`share_kept_along`, `against_not_rising`) |
+ | L1 | [`Becoming.ClosedCapture`](Becoming/ClosedCapture.lean) | a loop whose every level reads only the share (no premise beyond the hypotheses named): where neither the next share nor the rule read reads what lies beyond the share (`ClosedCapture.Unread`), courses alike in share and rule stay alike in both (`ClosedCapture.unread_course`, `ClosedCapture.reads_beyond_of_apart`), exactly then along every schedule (`ClosedCapture.courses_alike_iff_unread`), the law of a part read alone on the two-level step: what the loop reads makes sense by itself exactly where nothing beyond the share is read (`ClosedCapture.identifiesAlike_iff_unread`, from `Law.now_identifiesAlike_iff_goAlike`), and the share's law joined with a step beyond runs as the share's law alone (`ClosedCapture.join_course`); a locked loop outlives a loss passing every bound (`ClosedCapture.lock_outlives_loss`), and a reading of the loss turns past its bound (`ClosedCapture.turned_by_loss`; witness `ClosedCapture.Beyond`, `Beyond.closed_locked`, `Beyond.open_falls`); where how the rule is read is formed from the share, rule and reading are one rule read from the share (`ClosedCapture.both_reads`), a change of the reading is absorbed (`ClosedCapture.reading_absorbed`, `ClosedCapture.readers_not_below`, `ClosedCapture.readers_uniform_locks`; witness `ClosedCapture.Proportional.reform_absorbed`); where the rule is the pool of readers drawn from those it selects, counted as it counts them, it reads the share exactly where each carrier's reading favours the carriers at least as much as each other's (`ClosedCapture.Drawn.pool_reads_iff`; against the share, `Drawn.pool_against`; readers counted by the share, `Drawn.pool_through`; mirrored readings, `Drawn.mirror_favours_iff`), and where only the others read the loss once it reaches a bound, a reading step at which the rule in force and the rule read agree locks the course for good (`ClosedCapture.agreeing_stays`), the lock kept exactly where the carriers are then at least as many (`ClosedCapture.Thinned.kept_iff`, `Thinned.turned_iff`; witnesses `Thinned.inTime_turned`, `Thinned.late_kept`) |
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md
+index 5adc6c2bd..db42e2b87 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md
+@@ -158,8 +158,8 @@
+ | L1 | [`Becoming.GrammarCourse`](Becoming/GrammarCourse.lean) | 文入续之文法（不加前提）：法之步为缘，象之值为类；经象文同即值之类之核（`Law.core_is_sameFuture`），象所示之系辞中之同即此核（`Law.alike_iff_core`）；守值之最粗之类即核（`Law.coarsest_iff_core`）；文之状即其沿步之核（`SameAhead.is_core`）；有界之律、二文合为一网与可知皆经核而述 |
+ | L1 | [`Becoming.GrammarRegularity`](Becoming/GrammarRegularity.lean) | 理之守与离，及自改其则者，于文法中读（除各律所带者外不加前提）：自核下之一步起，其核下之续所及者皆于核下有后（`«守理则不穷»`）；入亡之一步、凡终之线之末步，皆离核（`«亡前理变»`、`«有亡之线末步离核»`）；以动为际（`constant_of_goAlike`、`goAlike_of_constant`）；自改其则者（`adaptive_constant_iff`、`adaptive_core_apart`）；闭合之捕获：份额、规则与步数之类于每一读之时序皆有常，恰当份额之外无所读（`ClosedCapture.constant_iff_unread`），自锁住之始，锁之续不尽而损每步皆异（`ClosedCapture.lock_line`），读过损之界即不偏向者，偏向之续非不尽（`ClosedCapture.loss_ends_line`） |
+ | L1 | [`Becoming.GrammarScope`](Becoming/GrammarScope.lean) | 根上之续存条件，不设有义之参数（除各律所带者外不加前提）：凡事皆在每一中心于一类下之线所及（`«续无外»`）或其族中（`«族无外»`），于较粗之类亦然；依一关系 de se 而持，即以该关系为网、于其一下之根之条件（`withinClosure_iff_reached`、`ownClosure_unrestricted_iff_noOutside`），以自闭包读断言者生之有义由之（`premises_of_noOutside`）；无环之网中唯一中心（`«续无外则同一中心»`）；过己之亡而续（`«过亡而续»`）；核有续恰当其下有一线不尽（`«核有续当且仅当有不穷»`）；二传承之线（`LineOfDescent`）；相连之类，以缘为续之最细之类（`«续即缘当且仅当含族»`） |
+-| L1 | [`Becoming.GrammarCases`](Becoming/GrammarCases.lean) | 来源二篇之检验系统之小见证（除各网所带者外不加前提）：衰变，可能之网中步不在「完与否」之理中（`Decay.time_not_in_core`），其内一史中余时在其中（`Decay.history_apart`）；相交之同一（`Overlap`）；传承之线于两种粒度生成（`LineOfDescent.Endless.generates`）；二家族之线，其核于出生处续（`TwoLines`）；经其成员所影响之条件，一线及于他线（`SharedCondition`）；以三种方式相连之第三物（`ThirdThing`、`ThirdAffects`、`ThirdFed`）；传播之率随其数而增之信念（`Belief`） |
+-| L1 | [`Becoming.GrammarPath`](Becoming/GrammarPath.lean) | 一类下之线所必含者，与一理所纳者（除各律所带者外不加前提）：出一域唯经一集之线，含该集中与其始同类者（`«所经必同»`）；有常之类下，与一所缘皆同于己者同类者之后皆在其线上，有常之下与此等价（`«常闭则后皆续»`、`«常类之闭当且仅当后皆同类»`），至网之终亦然（`«至终有常»`、`«至终常闭则后皆续»`）；网续而线亡者，其类不至终有常（`«亡而网续则不至终有常»`）；见证（`Unclosed`、`Inconstant`、`FiniteFamilies`、`FiniteSharedCondition`） |
++| L1 | [`Becoming.GrammarCases`](Becoming/GrammarCases.lean) | 来源二篇之检验系统之小见证（除各网所带者外不加前提）：衰变，可能之网中步不在「完与否」之理中（`Decay.time_not_in_core`），其内一史中余时在其中（`Decay.history_apart`）；相交之同一（`Overlap`）；传承之线于两种粒度生成（`LineOfDescent.Endless.generates`）；二家族之线，其核于出生处续（`TwoLines`）；经其成员所影响之条件，一线及于他线，而于「成员与否」之下不及，由 `«所经不同则不及»` 推得（`SharedCondition`）；以三种方式相连之第三物（`ThirdThing`、`ThirdAffects`、`ThirdFed`）；传播之率随其数而增之信念（`Belief`） |
++| L1 | [`Becoming.GrammarPath`](Becoming/GrammarPath.lean) | 一类下之线所必含者，与一理所纳者（除各律所带者外不加前提）：出一域唯经一集之线，含该集中与其始同类者（`«所经必同»`）；有常之类下，与一所缘皆同于己者同类者之后皆在其线上，有常之下与此等价（`«常闭则后皆续»`、`«常类之闭当且仅当后皆同类»`），至网之终亦然（`«至终有常»`、`«至终常闭则后皆续»`）；网续而线亡者，其类不至终有常（`«亡而网续则不至终有常»`）；见证（`Unclosed`、`Inconstant`、`FiniteFamilies`、`FiniteSharedCondition`）；`Becoming.GrammarCases` 之共条件见证由 `«所经不同则不及»` 推得 |
+ | L1 | [`Becoming.FinerTraces`](Becoming/FinerTraces.lean) | 所计数的处境是一个确定进程的诸历程（不加前提）：更细的历程恰是更细之律的迹，忘去处境即正权重步之律的迹 |
+ | L1 | [`Becoming.HistorySums`](Becoming/HistorySums.lean) | 历史之和的支撑、拆分、确切阶与其间之步（除了各定理所写者不加前提）：在可能性所容之步以外为零的权重，不把任何东西带到可能性达不到之处（`Weights.transfer_zero_of_impossible`）；转移在每个中间视界拆分（`Weights.transfer_split`、`Weights.along_append`）；确切阶（`Weights.exactly`）在视界之上为零（`Weights.exactly_above`），选项可交换时 i 阶是恰有 i 个回应的历程之和（`Weights.exactly_eq_courses`、`Weights.transfer_labelled`），`Becoming.Routes` 的各阶是它们的部分和（`Weights.within_eq_sum_exactly`），整个和是它们的和（`Weights.transfer_eq_sum_exactly`）；一个构形给出 `binom n i * M ^ i`（`Routes.SelfLoop.exactly_eq`）；用先列者权重时分组不成立，所以需要可交换（`HistorySums.grouping_needs_commuting`）；所携带的只依赖其间之步（`Weights.transfer_between`）；在进程的迹上：`Weights.transfer_zero_of_no_trace`、`HistorySums.trace_split_iff`、`HistorySums.exactly_trace`、`HistorySums.exactly_responses_trace`、`HistorySums.labelled_trace_iff`、`Weights.transfer_between_traces` |
+ | L2 | [`Becoming.Metaethics`](Becoming/Metaethics.lean) | 普遍元伦理核心：前提卡、G0 刻画、极小性、普遍理由、C 与 L；整段、逐步与关系层面的关系读法 |
