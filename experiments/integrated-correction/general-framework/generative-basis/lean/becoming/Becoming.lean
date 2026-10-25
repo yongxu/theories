@@ -3344,7 +3344,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   premise holds at once and the line from one family's first birth reaches the other past the first
   member's end (`FiniteSharedCondition`). `Becoming.GrammarCases` derives from `«所经不同则不及»` its
   shared-condition witnesses under "a member or not" and where the members only feed from the
-  condition (board item GS6).
+  condition (board item GS6). Under a class constant up to the net's end, what leaves the
+  class at a member follows every alike step that goes on (`«出类随行»`, `«出类随线»`), and a step with
+  nothing outside the class breaks it (`«出类不随则不至终有常»`, `CleanStep`); a finite class constant up
+  to the net's end can leave a member's effects out (`FiniteWake`; board item PF2).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.
