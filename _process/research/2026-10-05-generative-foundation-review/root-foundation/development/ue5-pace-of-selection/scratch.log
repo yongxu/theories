@@ -1,9 +1,9 @@
-# UE5 scratch build log (revision against REVIEW-UE5.md)
+# UE5 scratch build log (the re-check's fixes, against REVIEW-UE5.md "Re-check of the revision (6170c9fa7)")
 # command: cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue5-pace-of-selection/tree
-# checkout HEAD: 94676cb2cea8affb4897fb94c5aa7e04943633f6
+# checkout HEAD: 856967ac49d7b968a1b53e278f2da1a767ed4836
 # lean: leanprover/lean4:v4.29.1
-# source sha256: 92556df7caaa3c29562aff87b652c36d400e64ff8ce052f734803433c307a3ca  tree/Becoming/SelectionPace.lean
-# utc: 2026-10-25T16:01:52Z
+# source sha256: abf440add3b6dd9c9a94ce3f0efe7b4fb9f23f9607fd296a8a9268a96a1a72b3  tree/Becoming/SelectionPace.lean
+# utc: 2026-10-25T17:10:24Z
 
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue5-pace-of-selection/tree",

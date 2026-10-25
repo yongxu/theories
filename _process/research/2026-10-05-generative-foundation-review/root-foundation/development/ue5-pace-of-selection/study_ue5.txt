@@ -9,9 +9,10 @@ Delta: (1) offspring within what stood and what flowed in. Across a step at whic
        followed by the offspring of some parents, each offspring coming to stand at m or more: the offspring, m for
        each, with what the relata stand at after, are at most what they stood at before and the list's inflow
        (SelectionPace.born_within_inflow; Entropy's stock law re-derived on a list balanced on); read on a parent and
-       its lineage, and on a generation (parent_within_inflow, generation_within_inflow). Parents standing at no more
-       than m pin every later member at exactly m (standing_pinned); where activity needs support, m follows from a
-       dependence (stands_of_need).
+       its lineage, and on a generation (parent_within_inflow, generation_within_inflow). A member of the next
+       generation standing at no more than m as a parent stands at exactly m (standing_pinned): over a stretch with
+       the parents capped at each step before T, generations 1 to T - 1, and generation T only where capped too;
+       where activity needs support, m follows from a dependence (stands_of_need).
        (2) the carried inflow. What flows into each parent's lineage, summed lineage by lineage and weighted by the
        amount (carriedInflow): what passes between carrying lineages counts, so it is at least the inflow into the
        carriers' joint lineage (joint_within_carried, from inflow_lineage_le; Swap, two against none). With exact
@@ -27,7 +28,9 @@ Delta: (1) offspring within what stood and what flowed in. Across a step at whic
        (4) a cap on each parent. With what flows into each parent's lineage, with m, at most k m, a parent leaves at
        most k offspring (parent_within_factor), the total multiplies by at most k^T over T steps
        (total_within_factor, total_within_power), and reaching the whole from c carriers among N in a population not
-       shrinking needs N <= k^T c (share_within_power, whole_within_power): the reproductive-excess limit in counts.
+       shrinking needs N <= k^T c (share_within_power, whole_within_power): one substitution from p0 takes at least
+       log_k(1/p0) steps under a cap on each parent, the form behind the reproductive-excess limit, and not the
+       spacing of successive substitutions.
        (5) offspring number. Read by offspring number with exact transmission, m times the squared differences of
        offspring numbers over pairs is at most the size times the next generation's inflow, the next generation
        standing at no more than m and the population not shrinking (number_step_within_inflow,
@@ -44,17 +47,21 @@ Premises: discrete steps; natural-number amounts and standings; generations each
        more; where stated, parents standing at no more than m, exact transmission, a population not shrinking, an
        amount of zero or one, a cap k m on each parent's lineage inflow with m, offspring number transmitted exactly.
        No probability; dissipation is not used.
-Evidence: core receipt {RECEIPT}; Becoming.SelectionPace, every declaration with an empty axiom report; the bounds
-       met with equality in Displacement, Inherited and Fed; capped and sustained needed (Uncapped, Shrink).
-Boundary: Haldane's cost in selective deaths (none is modelled); the carriers' joint law for an amount above one; how
-       long exact transmission of offspring number with growth can last within a bounded inflow; drift and mutation;
-       that actual populations meet the per-member bounds or exact transmission of offspring number.
+Evidence: core receipt {RECEIPT}; Becoming.SelectionPace, every declaration with an empty axiom report; the
+       response, selection, factor, stretch, next-step and offspring-number laws met with equality in Displacement,
+       Inherited and Fed, share_within_rest with one unit of slack (Displacement.rest_falls) and joint_within_carried
+       strict (Swap); capped and sustained needed (Uncapped, Shrink); an independent review and its re-check of the
+       revision, every finding taken.
+Boundary: Haldane's cost in selective deaths (none is modelled); the spacing of successive substitutions; the
+       carriers' joint law for an amount above one; the cap laws asked of the carriers alone; how long exact
+       transmission of offspring number with growth can last within a bounded inflow; drift and mutation; that
+       actual populations meet the per-member bounds or exact transmission of offspring number.
 Output→input: what-bounds-offspring-numbers, additive-part-of-offspring-variance, selection-term-over-generations,
        evolution-on-descent, a-rise-past-the-inflow-is-drawn-from-beyond, laws-of-one-step →
        pace-of-selection-within-what-flows-in → a frozen test of the whole-level form; UE.
 ```
 
-**How it stands to Price, Fisher and Haldane.** Price's equation and Fisher's step, in counts, are identities that admit every pace. Under balance on the lineages, with each offspring standing at `m` and each parent at no more than `m`, the mean of an exactly transmitted amount rises in a population not shrinking only as far as the carried inflow allows. Two counts make this concrete. A share going from a half to the whole at constant size two needs at least one unit of carried inflow (`Displacement.least`). Read by offspring number, sizes two, two and four need an inflow of at least two (`Fed.least`). Each law is the stock law of the carrying lineages under the per-member bounds, an equality in the witnesses, so the third part is yes and weak, carried by its premises. It is a per-step, quantitative companion of the closed-lineage law (`Reproduction.Flow.closed_lineage_lowered`) under other premises: no standing above `m` and no shrinking, instead of closure and dissipation. Haldane's cost is a total of selective deaths, logarithmic in the inverse of the starting frequency, and the model has none. The counting analogue of his limit is the per-parent law, the reproductive-excess form of Nei and Felsenstein (1971). `steps_to_move` is linear.
+**How it stands to Price, Fisher and Haldane.** Price's equation and Fisher's step, in counts, are identities that admit every pace. Under balance on the lineages, with each offspring standing at `m` and each parent at no more than `m`, the mean of an exactly transmitted amount rises in a population not shrinking only as far as the carried inflow allows. Two counts make this concrete. A share going from a half to the whole at constant size two needs at least one unit of carried inflow (`Displacement.least`). Read by offspring number, sizes two, two and four need an inflow of at least two (`Fed.least`). Each law is the stock law of the carrying lineages under the per-member bounds, and the response, selection, factor, stretch, next-step and offspring-number laws are equalities in the witnesses, so the third part is yes and weak, carried by its premises. It is a per-step, quantitative companion of the closed-lineage law (`Reproduction.Flow.closed_lineage_lowered`) under other premises: no standing above `m` and no shrinking, instead of closure and dissipation. Haldane's cost is a total of selective deaths, logarithmic in the inverse of the starting frequency, and the model has none. The per-parent law bounds the steps one substitution takes from p₀ under a cap on each parent. That is the one-substitution form behind the reproductive-excess limit of Nei and Felsenstein (1971); the spacing of successive substitutions that their limit states is not derived. `steps_to_move` is linear.
 
 **The review.** An independent read-only review by a separate AI agent ([REVIEW-UE5](development/ue5-pace-of-selection/REVIEW-UE5.md)) found the Lean sound and the text saying more than the Lean in four places: 1 error, 3 overclaims, 9 imprecisions, 7 suggestions.
 - The error: the note had claimed the audit's candidate holds where offspring number is transmitted exactly. What holds is a variant with the next step's inflow (`response_sq_within_inflow`), and the candidate as stated fails (`Inherited.same_step_fails`).
@@ -73,5 +80,18 @@ The rule 9 moves stay owners' decisions:
 - a balanced-on form of Entropy's stock law, with the global law derived from it, for the Entropy owner;
 - `mean_step_exact` moved to `SelectionTerm`, with `numbered` beside `ByNumber`;
 - `born_within_stock` stays beside `born_within_inflow`, since in the pure core neither placement of the offspring derives the other.
+
+**The re-check.** The same reviewer re-checked the revision ([REVIEW-UE5](development/ue5-pace-of-selection/REVIEW-UE5.md#re-check-of-the-revision-6170c9fa7)). It confirmed four things:
+- all twenty findings hold;
+- the Lean is sound, rebuilt twice with 103 theorems in 224 declarations and every axiom report empty;
+- the per-parent law is right and can hold with growth;
+- both of `whole_within_power`'s further premises are needed.
+
+It found 1 overclaim, 3 imprecisions and 1 suggestion, all in text. All five were taken, the first four as fixes:
+- *the overclaim*: the per-parent law bounds one substitution, not the spacing of successive substitutions;
+- *the first imprecision*: `born_within_stock` is the case dissipated on, not the closed case;
+- *the second*: the laws the witnesses attain are named, `share_within_rest` keeping one unit of slack and `joint_within_carried` strict;
+- *the third*: stale facts, among them the stretch reading of `standing_pinned`, which pins generations 1 to T − 1 and generation T only where it is capped too;
+- *the suggestion*: the cap laws asked of the carriers alone, which the re-check's probe proves for the factor law. It is left as a follow-up, since it changes the hypotheses of four laws and their uses.
 
 **Readings** [AI reading, D45]. The pace law is Malthus's limit read on the lineages carrying an amount. The variance bound is density regulation of heritable variance in fitness under exact transmission of offspring number: Fisher's deterioration of the environment, which Price (1972) read as the transmission term, in counts. A part of a closed whole gaining by drawing on the rest is the setting of Wallace's soft selection (1975), a reading, since one step of a supplied flow cannot show how output responds to composition. `parent_within_inflow` is the budget constraint of Smith and Fretwell's model (1974), its premise and not its result.

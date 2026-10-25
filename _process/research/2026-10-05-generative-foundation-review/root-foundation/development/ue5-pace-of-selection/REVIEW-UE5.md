@@ -928,3 +928,370 @@ theorem response_sq_fails :
 end SelectionPaceDiag
 end Becoming
 ```
+
+## Re-check of the revision (6170c9fa7)
+
+26 October 2026. The same reviewer, read-only. Re-checked: the revision committed at `6170c9fa7`. The bytes are `SelectionPace.lean` `92556df7…07a3ca`, `NOTE.md` `c409db52…`, `LANDING.md` `a7dc15ef…`, `make_records_ue5.py` `c10dab38…`, `texts_ue5.py` `875e4300…`, `study_ue5.txt` `8d24f5be…`, `integrate_ue5.py` `ad3711c9…`, `register_ue5.py` `8754476a…` and `board_ue5.py` `7073a8dd…`. This section is the only text written in the repository. Builds, the probe and the dry runs ran in scratch (`…/scratchpad/ue5-review/`), and the probe's text is kept at the end.
+
+### Verdict
+
+The revision takes all twenty findings, and each fix holds against the Lean and the texts.
+
+- **Build.** The module was rebuilt twice: at `6170c9fa7`, and again at main `841d2cb51`, where UE2 has landed. UE2 changed `Typicality`, `ConditionalWeights` and the root module, and none of them is in `SelectionPace`'s closure. Both builds gave 103 theorems in 224 declarations, every step reused from passed steps, no warning, every axiom report empty.
+- **The fixes.** The error is fixed in Lean (`Inherited.same_step_fails`, `Inherited.next_step_attained`) and in every text. "Haldane's cost" is gone. Four things are now stated, with Lean wherever a claim needs it:
+  - what the carried inflow counts;
+  - the equality case;
+  - the failure of the natural statement;
+  - its place under the drawn-from-beyond laws.
+- **The per-parent law** is right and can hold with growth. Its reading `T ≥ log_k (1/p₀)` is honest, and both of its premises are needed (re-check probe: 21 theorems, every axiom report empty).
+- **The landing scripts** apply exactly once on today's main in a scratch dry run, and the record cites every declaration once.
+
+What remains is text:
+- The Nei–Felsenstein reading claims the spacing of successive substitutions, where the Lean bounds one substitution. This is an overclaim, and this review's suggestion 18 started it.
+- "The closed case" names the case dissipated on.
+- The 04, 08 and study texts call every law an equality in the witnesses.
+- A few facts in LANDING and the NOTE are stale.
+
+**Counts:** 1 overclaim, 3 imprecisions, 1 suggestion. **Recommendation:** land after the fixes of R1 to R4. No Lean statement changes.
+
+### 1. The build
+
+- **At `6170c9fa7`.** `scratch_build.py` on a copy of the kit's tree: 31 modules, 32 steps all reused, `unclean: []`, `Becoming.SelectionPace` 103 theorems in 224 declarations, `with_axioms: {}`.
+- **At main `841d2cb51`.** The same result.
+- **The counts by kind.** The general part holds 41 theorems and 4 definitions, made up of 13 laws, 13 corollaries, 2 restatements and 13 helpers. The witnesses hold 62 theorems in 179 declarations, 16 of them stating what a world shows. 45 + 179 = 224.
+
+### 2. The twenty findings
+
+| # | Finding | Status | Checked in | Residue |
+|---|---|---|---|---|
+| 1 | Error: the same-step candidate | Fixed | `Inherited.same_step_fails`: closed, dissipated on and gaining nothing at both steps, offspring number inherited, the bound false. Also `response_sq_within_inflow`'s docstring, module l.92–100, NOTE l.84 and l.126, the record's second counterexample, study (6) | — |
+| 2 | "Haldane's cost in counting form" | Fixed | Gone from every statement. `steps_to_move` is called linear wherever it appears. The board title fix applies in the dry run | R1, in the reading that replaced it |
+| 3 | Dissipation tightening | Fixed | Module l.168–171, NOTE l.137, the record's fifth does-not-show item | R2 |
+| 4 | Row 23 | Fixed | NOTE l.120 and study l.57: a companion under other premises, neither implying the other | — |
+| 5 | What `carriedInflow` counts | Fixed | The definition's docstring. `joint_within_carried`, for any amounts, from `inflow_lineage_le`. `Swap`. The record's fourth counterexample | — |
+| 6 | Attainment is the equality case | Fixed in the module and NOTE (l.107–112) | The 04, 08 and study texts | R3 |
+| 7 | The natural statement | Fixed | `natural_fails`, which also gives the population lineage's inflow as 0; `rest_falls`; `share_within_rest`. SelectionReach and DrawnBeyond are cited in the module, NOTE, study and 04 text | — |
+| 8 | Soft selection | Fixed | Worded as a reading everywhere | — |
+| 9 | `spread_needs_inheritance` | Fixed | Both failing inequalities stated, by `decide` | — |
+| 10 | Smith and Fretwell | Fixed | "its premise; its result is not read" | — |
+| 11 | The test | Fixed | NOTE l.127: the test as stated tests the idealization; a frozen test of `share_within_rest`, low risk said | — |
+| 12 | What the premises pin | Fixed | `standing_pinned`, `stands_of_need` | R4, the stretch reading |
+| 13 | Small text fixes | Fixed | `Fed`'s docstring now names the take from itself; "re-derived here unnamed" | — |
+| 14 | A balanced-on stock law in `Entropy` | Listed as the Entropy owner's decision | `born_within_inflow`'s docstring, LANDING move 1, the record's sixth does-not-show item | — |
+| 15 | `mean_step_exact`, `numbered` | Listed | "fifth statement"; LANDING moves 3 and 4; `Displacement`'s shape named | — |
+| 16 | Witnesses for `capped`, `sustained` | Fixed | `Uncapped`, `Shrink`: every other premise stated, and the law fails | — |
+| 17 | The joint law | Fixed for amounts of zero or one | `share_within_joint`, `joint_within_carried`; layers left open | — |
+| 18 | The per-parent law | Added | `parent_within_factor` to `whole_within_power`; `Displacement.factor` | R1, R5 |
+| 19 | Wording | Fixed | No "pays", "surplus" or "costs" outside the Haldane reading and the naming of Smith and Fretwell's model | — |
+| 20 | Counts | Fixed, verified above | NOTE l.19–25, LANDING l.24–25 | R4, the line count |
+
+Rule 9 stands as the review left it. `UE5` is a leaf, and its row and root bullet say why: it joins two modules neither of which imports the other, which was checked over their import closures. The moves the review named are listed for their owners in LANDING. The record's formal-reuse links are honest:
+- *a-rise-past-the-inflow-is-drawn-from-beyond* binds `Flow.inflow` and `Flow.replenishment_le_inflow`;
+- *laws-of-one-step* binds `Flow.BalancesOn` and `BalancesOn.over`;
+- *evolution-on-descent* binds `price`, `selected`, `Web.ComesToStand` and `Web.Dependent`.
+
+### 3. The per-parent law
+
+**Statement and hypotheses.** `parent_within_factor` takes five premises:
+- balance on `lineage [p] kids`;
+- the offspring arising at `m`;
+- the parent at no more than `m`;
+- `0 < m`;
+- `inflow + m ≤ k · m`.
+
+From them it gives `(kids p).length ≤ k`. The proof runs `parent_within_inflow`, then `capped`, then the cap, then divides by `m`. `total_within_factor`, `total_within_power`, `share_within_power` and `whole_within_power` follow by `sum_exact`, an induction and two inequalities. The induction uses `mul_assoc_nat`, axiom-free. Each docstring says what its Lean says.
+
+**Satisfiable with growth: yes.** `Displacement.factor` meets the factor law with equality at `k = 2`, the total doubling. The probe adds three theorems:
+- `OnDisplacement.whole_attained`: every premise of `whole_within_power` holds with `m = 1`, `k = 2`, `T = 1`. The size stays at two and the carriers reach the whole, so `n₀ = 2 = 2¹ · 1`, with equality.
+- `OnInherited.power_attained`: `total_within_power` over two steps with `k = 2`, met with equality, `s₂ = 4 = 2² · 1`. The population grows from two to four, and `whole_within_power` holds strictly, `2 < 2² · 1`.
+- `OnShrink.whole_needs_sustained`: with `k = 1` and `T = 1`, every premise but `sustained` holds (`total_within_power` applies), and the final total reaches the final size. Yet `n₀ ≤ kᵀ · c` fails, `2 ≤ 1`.
+
+**`T ≥ log_k (1/p₀)` is honest, under two premises that are both needed.**
+- `whole` (`n_T ≤ s_T`) is fixation for an amount of zero or one.
+- `sustained` (`n₀ ≤ n_T`) excludes a population shrinking onto its carriers. Without it, `Shrink` fixes in one step with `k = 1`.
+- Then `n₀ ≤ n_T ≤ s_T ≤ kᵀ · s₀`.
+- The bound is tight at constant size (`Displacement`) and loose by the growth `n_T / n₀` otherwise (`Inherited`). So `p₀` is the share at the start, and the constant-size setting of Haldane and of Nei and Felsenstein is the one where the reading is sharp.
+
+**The counterpart.** The cap plays the same role as theirs: a cap `k` on what each parent leaves. The power laws use it only through `(kids p).length ≤ k`. Here that offspring cap counts offspring that come to stand, and it is reached from a cap on what flows into the parent's lineage. Their `k` counts offspring produced, before selective deaths, and it implies the same offspring cap. A form stated from the offspring cap would apply under their premise directly. The law differs from theirs in two ways:
+- It bounds one substitution, where their limit, as the texts quote it, spaces successive substitutions (R1).
+- It asks the cap of every parent, where only the carriers' is used (R5).
+
+### 4. The landing scripts
+
+**Dry run.** In scratch, fake checkout roots held copies (`git show`) of every file the scripts read. They were taken from main at `841d2cb51`, where UE2 has landed, §412 is the last study section and the latest receipt is `20261025T163242.561061Z`. No file the scripts read or edit has changed between that commit and main at `b8ab5cb84`. Earlier runs took them from main at `53b3e7591` and from UE2's landing branch at `524fd9d8a`. In each root the scripts ran in LANDING's order:
+1. `integrate_ue5.py`;
+2. `texts_ue5.py RECEIPT 413`;
+3. `make_records_ue5.py`, on a fabricated receipt holding the module's hash and its 224 declaration names, taken from the audit driver;
+4. `board_ue5.py title`, then `land`;
+5. `register_ue5.py`, on a fabricated connectivity line.
+
+Every edit applied exactly once and every assertion held, in every root.
+- **Placement.**
+  - The 04 anchor sits between `r-what-bounds-offspring-numbers` and `r-additive-part-of-offspring-variance`.
+  - The 08 bullet ends the list beyond the table, after UE2's two.
+  - The root import and bullet follow Entropy's.
+  - The checker's scope entry follows Reproduction's; that list is in thematic order, not alphabetical.
+  - The README rows follow Entropy's row, and the regions are sorted.
+  - The board row moves to the history file that holds the other landed rows.
+  - *what-bounds-offspring-numbers* round-trips byte for byte, and its next delta reads cleanly without the clause.
+- **The record.** `laws()` against the audit's names cites each of the 224 declarations exactly once. The record has 26 laws, 2 hypotheses, 8 does-not-show items and 4 counterexamples, and `style.lint` finds nothing on a preview.
+- **The queue.** MA4's and UE1b's kits share with UE5 only 08's list-end anchor. Each appends before it, so UE5's anchors stay unique after them. `N` is read at landing, and `texts_ue5.py` asserts that it is absent.
+- **Claims beyond the Lean:** R1, R2 and R3, in the 04 and 08 text, the record, the study and the suggested queue text.
+
+### Findings of the re-check
+
+**R1. "The reproductive-excess limit in counts" is its one-substitution form.** *Overclaim.*
+- *Where.*
+  - Module docstring l.134–139.
+  - NOTE l.77 and l.125.
+  - LANDING l.66, l.102, l.106 and the suggested QUEUE text (l.194–195).
+  - `make_records_ue5.py`: the law at l.106 and l.108, `correspondence` (l.328, l.334) and the alias "the reproductive-excess limit in counts" (l.340).
+  - `texts_ue5.py` l.46 (the 04 reading) and l.67 (the 08 bullet).
+  - The study, l.30 and l.57.
+- *What the Lean shows.* `whole_within_power`: from `c` carriers among `n₀`, in a population not shrinking whose final total reaches its size, `n₀ ≤ kᵀ · c`. One substitution therefore takes `T ≥ log_k (n₀ / c)` steps.
+- *What the texts claim.* Nei's and Felsenstein's limit, as the texts quote it, spaces successive substitutions: "at least ln(1/p₀)/ln k generations apart". It holds with substitutions overlapping because loci multiply within one genotype.
+- *Why it does not follow.* With exact transmission a lineage carries all its amounts together. Two amounts that start in the same carriers reach the whole together, so no spacing law follows from `whole_within_power`. This review's suggestion 18 used the same words and was imprecise.
+- *Fix.* Write "its one-substitution form in counts (from `c` carriers among `N`, `T ≥ log_k (N / c)`); the spacing of overlapping substitutions is not derived". Narrow or drop the alias, and add that spacing to the record's scope items.
+
+**R2. "The closed case" for `born_within_stock`.** *Imprecision.*
+- *Where.*
+  - Module docstring l.169–170.
+  - NOTE l.137.
+  - The record's fifth does-not-show item (l.265, "the closed case"; l.267, 即封闭之情形).
+  - The dependency on *what-bounds-offspring-numbers* (l.345, "the closed sibling"; l.347, 封闭之兄弟).
+- *The Lean.* `Reproduction.Flow.born_within_stock` assumes balance on `ds` and dissipation on `ds`, with the offspring distinct and within `ds`. It has no `Flow.ClosedAt`. In the package, closure is a different predicate, and the same texts call `Displacement` "closed, balanced and dissipated on". Module l.167 rightly calls `closed_lineage_lowered`, which does assume closure, "the closed case".
+- *Fix.* Write "the case dissipated on (no inflow)" (即耗散之情形), and "its sibling for a family dissipated on" (耗散之兄弟).
+
+**R3. "Each law … an equality in the witnesses."** *Imprecision.*
+- *Where.* `texts_ue5.py` l.44 (the 04 witnesses paragraph) and l.67 (the 08 bullet); the study, l.57, and l.47–48 ("the bounds met with equality").
+- *What holds with equality.*
+  - The response and selection laws: `Displacement.displacement`.
+  - The factor law: `Displacement.factor`.
+  - The stretch and next-step laws: `Inherited`.
+  - The offspring-number step and spread laws: `Fed.fed`.
+- *What does not.*
+  - `share_within_rest` holds with one unit of slack in `rest_falls` (`2 + 0 ≤ 1 + 2 + 0`): the unit the carrier takes and gives to none.
+  - `joint_within_carried` is strict in `Swap`, 0 against 2.
+  - `born_within_inflow`, `share_within_joint`, `steps_to_move`, `moved_within_carried` and `whole_within_power` are not stated with equality in any witness. This probe meets `whole_within_power` with equality in `Displacement` and strictly in `Inherited`.
+- *Fix.* Use the NOTE's own wording: the response, selection, factor, stretch, next-step and offspring-number laws are equalities in the witnesses.
+
+**R4. Stale facts and small text.** *Imprecision.*
+- **LANDING l.155.** "The last is §410, UE4's" is stale. §412 (UE2) is the last on main. MA4 and UE1b are ready to land, so UE5's `N` is read at landing.
+- **LANDING l.18 and l.154.** The anchors were checked, and the Lean said to be unchanged, at `fde9115cb`. Since then UE2 has changed the package. Its modules are outside `SelectionPace`'s closure, and the dry run above re-checks every anchor at `841d2cb51`.
+- **NOTE l.7 and l.3.** "2,499 lines": the module has 2,505. "Nothing is committed": it was committed at `6170c9fa7`.
+- **NOTE l.184.** "`steps_to_move`'s uniform cap per step is attained only with T = 1" should read "the witnesses attain it only at T = 1 (in `Displacement`, not stated as a theorem)". Nothing shows that the law cannot be attained over a longer stretch.
+- **The stretch reading of `standing_pinned`.** It appears at module l.32–35 and l.293–297, NOTE l.46, `texts_ue5.py` l.38, LANDING l.30 and study l.13. Over a stretch with `capped` at each `t < T`, the members of generations 1 to `T − 1` are pinned. The final generation is pinned only if `capped` holds of it too.
+- **NOTE l.185 and LANDING l.201.** "Not re-checked": the re-check is this section.
+
+**R5. The cap is asked of every parent, and only the carriers' is used.** *Suggestion.*
+- `total_within_factor`, `total_within_power`, `share_within_power` and `whole_within_power` ask `fed`, `capped` and balance of every parent of the generation. The proofs use them only where the amount is not zero.
+- The probe's `total_within_factor_carriers` asks them of the carriers only, with balance on the carriers' joint lineage, and its axiom report is empty. This is the cap their bound uses, on what the favoured type leaves, and it lets non-carriers be fed beyond `k`.
+- Optional: adopt it, in which case the power and whole laws follow by the same induction. Otherwise, say in the docstrings that only the carriers' caps are used.
+
+### Recommendation
+
+**Land after the fixes of R1 to R4**, all in text: the module docstring, NOTE, LANDING, `make_records_ue5.py`, `texts_ue5.py` and the study.
+- **R1 and R2 change the module's bytes.** Rebuild, save `scratch.log`, update `KIT_SHA256` in `integrate_ue5.py`, and update the sha256 in NOTE and LANDING. This is LANDING's own procedure.
+- **R5 is optional.**
+- **The verdict goes into three places,** as LANDING asks: the study's review paragraph, the record's validation scope and the board state. For example: "re-checked against the revision: every finding taken; R1–R4 fixed".
+- **No Lean statement changes.**
+
+### Appendix: the re-check probe
+
+Scratch file `ue5-review/tree-recheck-probe/Becoming/SelectionPaceRecheck.lean`, sha256 `10c7ed36485301f077a7e5cffbee3f73b77b3ddbce28c092016ffc4bc48ab5d4`, 193 lines. It was built with `scratch_build.py` over a tree holding it and the kit module: 21 theorems in 21 declarations, no warning, every axiom report empty.
+
+```lean
+import Becoming.SelectionPace
+
+/-!
+# Re-check probe for UE5's revision (6170c9fa7)
+
+Scratch only. The per-parent law read on the module's own witnesses: met with equality where the size
+stays, loose where the population grows, failing without `sustained`; and the factor law with the
+cap, the parents' standing and the balance asked of the carriers only.
+-/
+
+namespace Becoming
+
+namespace SelectionPace
+
+namespace Recheck
+
+open SelectionTerm
+
+variable {X : Type} {L : Flow X X} {W : Web X X}
+
+/-- A positive count is nonzero. -/
+theorem nonzero_of_pos : ∀ {a : Nat}, 0 < a → nonzero a = true
+  | 0, h => absurd h (Nat.lt_irrefl 0)
+  | _ + 1, _ => rfl
+
+/-- A product bounded where its weight is positive. -/
+theorem mul_le_where_pos {x k : Nat} : ∀ a : Nat, (0 < a → x ≤ k) → x * a ≤ k * a
+  | 0, _ => Nat.le_refl 0
+  | n + 1, h => Nat.mul_le_mul_right (n + 1) (h (Nat.succ_pos n))
+
+/-- **The factor law with the cap asked of the carriers only.** Balance on the carriers' joint
+lineage, their offspring arising at `m`, each carrier standing at no more than `m` and what flows
+into each carrier's lineage, with `m`, at most `k · m`: an exactly transmitted total multiplies by at
+most `k`. Nothing is asked of a parent that does not carry the amount. -/
+theorem total_within_factor_carriers {G : Generations X} {t m k : Nat}
+    (balanced : L.BalancesOn W (lineage (carriers G t) (G.kids t)) t)
+    (arise : ∀ p c, p ∈ carriers G t → c ∈ G.kids t p → W.ComesToStand t c)
+    (stands : ∀ p c, p ∈ carriers G t → c ∈ G.kids t p → m ≤ W.level (t + 1) c)
+    (exact : Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (capped : ∀ p, p ∈ carriers G t → W.level t p ≤ m) (positive : 0 < m)
+    (fed : ∀ p, p ∈ carriers G t → L.inflow (lineage [p] (G.kids t)) t + m ≤ k * m) :
+    G.sum (t + 1) ≤ k * G.sum t :=
+  Nat.le_trans (Nat.le_of_eq (sum_exact exact))
+    (Nat.le_trans
+      (total_le _ fun p mp => mul_le_where_pos (G.amount t p) fun pos =>
+        have mc : p ∈ carriers G t := ListTests.mem_filter_iff.mpr ⟨mp, nonzero_of_pos pos⟩
+        parent_within_factor (fun c mc' => balanced c (lineage_sub mc c mc'))
+          (fun c mc' => arise p c mc mc') (fun c mc' => stands p c mc mc') (capped p mc) positive
+          (fed p mc))
+      (Nat.le_of_eq (total_mul k _ _)))
+
+namespace OnDisplacement
+
+open Displacement
+
+theorem ariseOne : ∀ t p c, t < 1 → p ∈ generations.family t → c ∈ generations.kids t p →
+    web.ComesToStand t c
+  | 0, p, c, _, mp, mc => arise p c mp mc
+  | _ + 1, _, _, lt, _, _ => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+theorem standsOne : ∀ t p c, t < 1 → p ∈ generations.family t → c ∈ generations.kids t p →
+    1 ≤ web.level (t + 1) c
+  | 0, p, c, _, mp, mc => stands p c mp mc
+  | _ + 1, _, _, lt, _, _ => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+theorem exactOne : ∀ t, t < 1 →
+    Exact (generations.family t) (generations.kids t) (generations.amount t)
+      (generations.amount (t + 1))
+  | 0, _ => exact
+  | _ + 1, lt => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+theorem cappedOne : ∀ t p, t < 1 → p ∈ generations.family t → web.level t p ≤ 1
+  | 0, p, _, mp => capped p mp
+  | _ + 1, _, lt, _ => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+theorem fedOne : ∀ t p, t < 1 → p ∈ generations.family t →
+    flow.inflow (lineage [p] (generations.kids t)) t + 1 ≤ 2 * 1
+  | 0, p, _, mp => fedEach p mp
+  | _ + 1, _, lt, _ => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+/-- **`whole_within_power` met with equality.** Every premise holds with `m` one, `k` two and `T`
+one, the size stays at two and the carriers reach the whole: `N = k ^ T · c`, `2 = 2 · 1`. -/
+theorem whole_attained :
+    generations.size 0 ≤ 2 ^ 1 * generations.sum 0 ∧
+      generations.size 0 = 2 ^ 1 * generations.sum 0 :=
+  ⟨whole_within_power (L := flow) (W := web) (G := generations) (m := 1) (k := 2) (T := 1)
+      (Nat.succ_pos 0) (fun t _ => balances.on _ t) ariseOne standsOne exactOne cappedOne fedOne
+      (Nat.le_refl 2) (Nat.le_refl 2),
+    rfl⟩
+
+/-- The carriers-only factor law applies to `Displacement` with `k` two. -/
+theorem carriers_factor : generations.sum (0 + 1) ≤ 2 * generations.sum 0 :=
+  total_within_factor_carriers (t := 0) (balances.on _ 0)
+    (fun p c mp mc => arise p c (mem_carriers mp) mc)
+    (fun p c mp mc => stands p c (mem_carriers mp) mc) exact
+    (fun p mp => capped p (mem_carriers mp)) (Nat.succ_pos 0)
+    (fun p mp => fedEach p (mem_carriers mp))
+
+end OnDisplacement
+
+namespace OnInherited
+
+open Inherited
+
+theorem fedFirst : ∀ p, p ∈ generations.family 0 →
+    flow.inflow (lineage [p] (generations.kids 0)) 0 + 1 ≤ 2 * 1
+  | _, .head _ => by decide
+  | _, .tail _ (.head _) => by decide
+  | _, .tail _ (.tail _ mem) => nomatch mem
+
+theorem fedSecond : ∀ p, p ∈ generations.family (0 + 1) →
+    flow.inflow (lineage [p] (generations.kids (0 + 1))) (0 + 1) + 1 ≤ 2 * 1
+  | _, .head _ => by decide
+  | _, .tail _ (.head _) => by decide
+  | _, .tail _ (.tail _ mem) => nomatch mem
+
+theorem fedBoth : ∀ t p, t < 2 → p ∈ generations.family t →
+    flow.inflow (lineage [p] (generations.kids t)) t + 1 ≤ 2 * 1
+  | 0, p, _, mp => fedFirst p mp
+  | 1, p, _, mp => fedSecond p mp
+  | _ + 2, _, lt, _ => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 2 _))
+
+/-- **The power law over two steps, met with equality; the whole law loose as the population
+grows.** With `m` one and `k` two at both steps the total goes from one to four, `4 = 2 ^ 2 · 1`;
+the size doubles, so `whole_within_power` holds strictly, `2 < 2 ^ 2 · 1`. -/
+theorem power_attained :
+    generations.sum 2 ≤ 2 ^ 2 * generations.sum 0 ∧
+      generations.sum 2 = 2 ^ 2 * generations.sum 0 ∧
+      generations.size 0 ≤ 2 ^ 2 * generations.sum 0 ∧
+      generations.size 0 < 2 ^ 2 * generations.sum 0 :=
+  ⟨total_within_power (L := flow) (W := web) (G := generations) (m := 1) (k := 2) (Nat.succ_pos 0) 2
+      (fun t _ => balances.on _ t) ariseBoth standsBoth exactBoth cappedBoth fedBoth,
+    rfl,
+    whole_within_power (L := flow) (W := web) (G := generations) (m := 1) (k := 2) (T := 2)
+      (Nat.succ_pos 0) (fun t _ => balances.on _ t) ariseBoth standsBoth exactBoth cappedBoth fedBoth
+      (by decide) (by decide),
+    by decide⟩
+
+end OnInherited
+
+namespace OnShrink
+
+open Shrink
+
+theorem ariseOne : ∀ t p c, t < 1 → p ∈ generations.family t → c ∈ generations.kids t p →
+    web.ComesToStand t c
+  | 0, p, c, _, mp, mc => arise p c mp mc
+  | _ + 1, _, _, lt, _, _ => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+theorem standsOne : ∀ t p c, t < 1 → p ∈ generations.family t → c ∈ generations.kids t p →
+    1 ≤ web.level (t + 1) c
+  | 0, p, c, _, mp, mc => stands p c mp mc
+  | _ + 1, _, _, lt, _, _ => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+theorem exactOne : ∀ t, t < 1 →
+    Exact (generations.family t) (generations.kids t) (generations.amount t)
+      (generations.amount (t + 1))
+  | 0, _ => exact
+  | _ + 1, lt => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+theorem cappedOne : ∀ t p, t < 1 → p ∈ generations.family t → web.level t p ≤ 1
+  | 0, p, _, mp => capped p mp
+  | _ + 1, _, lt, _ => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+theorem fedFirst : ∀ p, p ∈ generations.family 0 →
+    flow.inflow (lineage [p] (generations.kids 0)) 0 + 1 ≤ 1 * 1
+  | _, .head _ => by decide
+  | _, .tail _ (.head _) => by decide
+  | _, .tail _ (.tail _ mem) => nomatch mem
+
+theorem fedOne : ∀ t p, t < 1 → p ∈ generations.family t →
+    flow.inflow (lineage [p] (generations.kids t)) t + 1 ≤ 1 * 1
+  | 0, p, _, mp => fedFirst p mp
+  | _ + 1, _, lt, _ => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 1 _))
+
+/-- **Without `sustained` the whole law fails.** Every premise of `whole_within_power` but
+`sustained` holds with `m` one, `k` one and `T` one, and the final total reaches the final size:
+the population shrinks onto its one carrier, and `N ≤ k ^ T · c` fails (`2 ≤ 1`). -/
+theorem whole_needs_sustained :
+    generations.sum 1 ≤ 1 ^ 1 * generations.sum 0 ∧
+      generations.size 1 ≤ generations.sum 1 ∧ ¬ generations.size 0 ≤ generations.size 1 ∧
+      ¬ generations.size 0 ≤ 1 ^ 1 * generations.sum 0 :=
+  ⟨total_within_power (L := flow) (W := web) (G := generations) (m := 1) (k := 1) (Nat.succ_pos 0)
+      1 (fun t _ => balances.on _ t) ariseOne standsOne exactOne cappedOne fedOne,
+    by decide, by decide, by decide⟩
+
+end OnShrink
+
+end Recheck
+
+end SelectionPace
+
+end Becoming
+```

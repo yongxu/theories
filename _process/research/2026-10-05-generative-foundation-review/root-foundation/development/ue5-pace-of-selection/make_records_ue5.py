@@ -102,10 +102,11 @@ GENERAL = [
      'm 为正，每亲所立至多 m，流入其谱系者加 m 至多 k · m：该亲之后代至多 k 个，传递确切之总每步至多乘 k，T 步至多乘 k ^ T。',
      ('parent_within_factor', 'total_within_factor', 'total_within_power')),
     ("In a population not shrinking the share then multiplies by at most k ^ T, and a final total reaching the final "
-     "size needs the first size to be at most k ^ T times the first total: from c carriers among N, "
-     "T ≥ log_k (N / c), the reproductive-excess limit of Nei and Felsenstein (1971) in counts.",
-     '群不缩时，份额至多乘 k ^ T；终之总及于终代之数，需首代之数至多为 k ^ T 乘始之总：自 N 中 c 个携带者起，T ≥ log_k (N / c)，'
-     '即 Nei 与 Felsenstein（1971）繁殖盈余之限之计数形式。',
+     "size needs the first size to be at most k ^ T times the first total: one substitution from c carriers among N "
+     "takes T ≥ log_k (N / c) steps, the form behind the reproductive-excess limit of Nei and Felsenstein (1971), in "
+     "counts.",
+     '群不缩时，份额至多乘 k ^ T；终之总及于终代之数，需首代之数至多为 k ^ T 乘始之总：自 N 中 c 个携带者起，一次替代需 '
+     'T ≥ log_k (N / c) 步，即 Nei 与 Felsenstein（1971）繁殖盈余之限所本之形式，以计数陈述。',
      ('share_within_power', 'whole_within_power')),
     ("Read by offspring number with exact transmission across a step, and the next step balanced on the next "
      "generation and its offspring, each standing at m or more, m times the next size squared with the squared "
@@ -250,9 +251,9 @@ def build(names, sha, receipt_id, n):
                    "(Displacement.natural_fails); the whole-level form is share_within_rest.",
              'zh': '以流入整体者或流入群自身谱系者为速度之界：此不成立（Displacement.natural_fails）；整体层面之形式为 share_within_rest。',
              'kind': 'non-implication'},
-            {'en': "Haldane's limit from selective deaths, which the generations here do not list; steps_to_move is "
-                   "linear, and the per-parent law is the reproductive-excess form.",
-             'zh': 'Haldane 由选择性死亡而来之限，此处诸代不列之；steps_to_move 为线性，每亲之律为繁殖盈余之形式。',
+            {'en': "Haldane's limit from selective deaths, which the generations here do not list, and the spacing of "
+                   "successive substitutions: whole_within_power bounds one substitution, and steps_to_move is linear.",
+             'zh': 'Haldane 由选择性死亡而来之限，此处诸代不列之；相继替代之间隔：whole_within_power 只界一次替代，steps_to_move 为线性。',
              'kind': 'scope'},
             {'en': "The carriers' joint law for an amount above one, how long exact transmission of offspring number with "
                    "growth can last within a bounded inflow, drift and mutation.",
@@ -262,9 +263,10 @@ def build(names, sha, receipt_id, n):
                    "stands_of_need.",
              'zh': '由动力学而来之最少所立：m 为所给之水平，仅经 stands_of_need 与网之所需相连。',
              'kind': 'scope'},
-            {'en': "A tightening by dissipation: on the lineage's own family it leaves no inflow, the closed case, and "
-                   "Displacement, dissipated on its whole family, attains the bounds.",
-             'zh': '由耗散而来之收紧：于谱系自身之族上耗散则无流入，即封闭之情形；Displacement 于其整个族上耗散而达此诸界。',
+            {'en': "A tightening by dissipation: on the lineage's own family it leaves no inflow, the case dissipated on "
+                   "that born_within_stock treats, and Displacement, dissipated on its whole family, attains the response "
+                   "and selection laws.",
+             'zh': '由耗散而来之收紧：于谱系自身之族上耗散则无流入，即耗散之情形（born_within_stock）；Displacement 于其整个族上耗散而达响应与选择之律。',
              'kind': 'scope'},
             {'en': "A balanced-on form of Entropy's stock law, which born_within_inflow re-derives on its list (the "
                    "Entropy owner's decision); born_within_stock stays beside it, neither placement of the offspring "
@@ -307,16 +309,18 @@ def build(names, sha, receipt_id, n):
             'en': f'Machine-checked by the consolidated Lean 4.29.1 checker (receipt {receipt_id}): '
                   f'Becoming.SelectionPace, {len(names)} declarations, every one with an empty axiom report, all cited '
                   f'here. Built in one session by an AI agent; an independent read-only review by a separate AI agent '
-                  f'(1 error, 3 overclaims, 9 imprecisions, 7 suggestions), every finding taken, in study section {n}; '
-                  f'not reviewed by a person.',
+                  f'(1 error, 3 overclaims, 9 imprecisions, 7 suggestions) and its re-check of the revision (1 overclaim, '
+                  f'3 imprecisions, 1 suggestion), every finding taken, the last suggestion as a follow-up, in study '
+                  f'section {n}; not reviewed by a person.',
             'zh': f'Lean 4.29.1 合并检查器实查（回执 {receipt_id}）：Becoming.SelectionPace，{len(names)} 项声明，公理报告皆空，本记录全引。'
-                  f'于一会话中由 AI 代理构建；另一 AI 代理作独立只读审查（1 项错误、3 项过度陈述、9 项不精确、7 项建议），所见皆采，'
-                  f'见研究第 {n} 节；未经人审。'},
+                  f'于一会话中由 AI 代理构建；另一 AI 代理作独立只读审查（1 项错误、3 项过度陈述、9 项不精确、7 项建议）并复查修订'
+                  f'（1 项过度陈述、3 项不精确、1 项建议），所见皆采，末一建议列为后续，见研究第 {n} 节；未经人审。'},
         'next_delta': {
-            'en': "The carriers' joint law for an amount above one, in layers; the least standing tied to need beyond one "
-                  "lemma; how long exact transmission of offspring number with growth can last within a bounded inflow; "
-                  "a balanced-on form of Entropy's stock law; a frozen test of the whole-level form; review by a person.",
-            'zh': '量大于一时携带者之共同之律，分层为之；最少所立与所需之关联，不止一引理；有界流入内后代数之确切传递连同增长能持续多久；'
+            'en': "The carriers' joint law for an amount above one, in layers; the cap laws asked of the carriers alone; "
+                  "the least standing tied to need beyond one lemma; how long exact transmission of offspring number with "
+                  "growth can last within a bounded inflow; a balanced-on form of Entropy's stock law; a frozen test of the "
+                  "whole-level form; review by a person.",
+            'zh': '量大于一时携带者之共同之律，分层为之；上限之诸律只问携带者；最少所立与所需之关联，不止一引理；有界流入内后代数之确切传递连同增长能持续多久；'
                   'Entropy 存量律之平衡于族之形式；整体层面形式之冻结检验；人之审查。'},
         'correspondence': {
             'en': "Malthus (1798), the main neighbour: reproduction limited by what sustains it, read on the lineages "
@@ -325,26 +329,28 @@ def build(names, sha, receipt_id, n):
                   "fitness in counts, Fisher's deterioration of the environment as Price (1972, Annals of Human Genetics "
                   "36) read it. Haldane (1957, Journal of Genetics 55) counted selective deaths; Nei (1971, Genetics 68) "
                   "and Felsenstein (1971, American Naturalist 105) restated his limit from a reproductive excess, "
-                  "substitutions at least ln(1/p₀)/ln k generations apart, which whole_within_power states in counts. "
+                  "substitutions at least ln(1/p₀)/ln k generations apart; whole_within_power bounds the steps one "
+                  "substitution takes from p₀ under a cap on each parent, the form behind that limit, in counts, and not "
+                  "the spacing of successive substitutions. "
                   "Wallace (1975, Evolution 29): Displacement is the setting of soft selection, a reading. Smith and "
                   "Fretwell (1974, American Naturalist 108): parent_within_inflow is their model's premise. The readings "
                   "are the AI's (D45), in development/ue5-pace-of-selection/NOTE.md, with the review in REVIEW-UE5.md.",
             'zh': 'Malthus（1798），主要之邻：繁殖受其所赖以维持者之限，读于携带一量之谱系。Price（1970）与 Fisher（1930）所陈为容许任何速度之恒等式；'
                   '流约束之。number_unfed_uniform 为可遗传适合度方差之密度调节之计数形式，即 Price（1972）所读之 Fisher 环境之恶化。Haldane（1957）'
-                  '计选择性死亡；Nei（1971）与 Felsenstein（1971）由繁殖盈余重述其限，替代之间相隔至少 ln(1/p₀)/ln k 代，whole_within_power '
-                  '以计数陈述之。Wallace（1975）：Displacement 为软选择之情境，为一读法。Smith 与 Fretwell（1974）：parent_within_inflow 为其模型之前提。'
+                  '计选择性死亡；Nei（1971）与 Felsenstein（1971）由繁殖盈余重述其限，替代之间相隔至少 ln(1/p₀)/ln k 代；whole_within_power '
+                  '界定每亲受限时一次替代自 p₀ 所需之步数，即该限所本之形式，以计数陈述，而非相继替代之间隔。Wallace（1975）：Displacement 为软选择之情境，为一读法。Smith 与 Fretwell（1974）：parent_within_inflow 为其模型之前提。'
                   '读法皆 AI 之读（D45），载于 NOTE.md，审查见 REVIEW-UE5.md。'},
         'canonical_source': MOD,
         'aliases': ['The pace of selection, within what flows into the lineages carrying an amount',
                     '选择之速，不过流入携带该量之谱系者', 'pace of selection within the inflow',
-                    'the reproductive-excess limit in counts', 'Becoming.SelectionPace.response_within_carried'],
+                    'one substitution under a cap on each parent', 'Becoming.SelectionPace.response_within_carried'],
         'dependencies': [
             {'id': 'what-bounds-offspring-numbers', 'relation': 'formal-reuse',
              'detail': {'en': 'Reproduction.Generations.ByNumber, ByNumber.step, ByNumber.concord_eq, '
                               'Reproduction.concord_self_zero_iff, born_flatMap, mem_flatMap_cases; born_within_stock is '
-                              'the closed sibling of born_within_inflow.',
+                              'born_within_inflow\'s sibling for a family dissipated on.',
                         'zh': 'Reproduction.Generations.ByNumber、ByNumber.step、ByNumber.concord_eq、Reproduction.concord_self_zero_iff、'
-                              'born_flatMap、mem_flatMap_cases；born_within_stock 为 born_within_inflow 之封闭之兄弟。'}},
+                              'born_flatMap、mem_flatMap_cases；born_within_stock 为 born_within_inflow 之耗散之兄弟。'}},
             {'id': 'additive-part-of-offspring-variance', 'relation': 'formal-reuse',
              'detail': {'en': 'Reproduction.Generations.response_sq_le, which response_sq_within_inflow joins to the '
                               'spread bound.',
