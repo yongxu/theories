@@ -1,0 +1,9 @@
+import sys
+sys.path.insert(0, '/private/tmp/claude-501/-Users-ren-theories/b7c6b747-6b9c-4356-8b68-e395f26999fa/scratchpad/ma4b-review/py')
+from model import *
+a, p, c, hi, lo, lo2 = 1, 0, 3, 5, 2, 0
+not5 = lambda t: t != 5
+N = 5
+cs = joined(a, p, c, hi, lo, lo2, N, not5, (1, 1), N + 6)
+print([(t, 'F' if locked_fav(a, p, c, hi, lo2, cs[t]) else '', 'R' if locked_rev(a, p, c, hi, lo2, cs[t]) else '') for t in range(N, N + 6)])
+# A schedule reading only at the bound step and never again: does the deadline's "every schedule" hold?

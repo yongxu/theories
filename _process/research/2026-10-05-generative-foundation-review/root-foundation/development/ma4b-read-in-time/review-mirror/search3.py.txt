@@ -1,0 +1,29 @@
+import sys, collections
+sys.path.insert(0, '.')
+from model import *
+al = lambda t: True
+dist = collections.Counter()
+ex = {}
+for a in (1, 2, 3):
+ for p in (0, 1, 2):
+  for c in range(1, 6):
+   for hi in range(c + 1, 11):
+    for lo in range(0, hi + 1):
+     for lo2 in range(0, hi + 1):
+        for xc in (1, 2):
+          for xo in range(1, 16):
+            x0 = (xc, xo)
+            if not fav(drawn(a, p, c, hi, lo, x0)): continue
+            m = ma4(a, p, c, hi, lo, al, x0, 7)
+            late = [drawn(a, p, c, hi, lo2, x) for x, _ in m]
+            for N in range(0, 5):
+              if (not fav(late[N])) and (not dis(late[N + 1])):
+                cs = joined(a, p, c, hi, lo, lo2, N, al, x0, N + 14)
+                kind, first = 'none', None
+                for t in range(N + 1, N + 14):
+                  if locked_rev(a, p, c, hi, lo2, cs[t]): kind = 'R'; first = t; break
+                  if locked_fav(a, p, c, hi, lo2, cs[t]): kind = 'F'; first = t; break
+                key = (kind, None if first is None else first - N, 'lo2>lo' if lo2 > lo else 'lo2<=lo')
+                dist[key] += 1
+                ex.setdefault(key, (a, p, c, hi, lo, lo2, x0, N))
+for k in sorted(dist, key=str): print(k, dist[k], ex[k])

@@ -1,0 +1,500 @@
+import Becoming.ReadInTime
+
+/-!
+# Probes for the review of `Becoming.ReadInTime` (MA4b). Scratch only, not for the repository.
+-/
+
+namespace Becoming
+
+namespace ReadInTimeProbe
+
+open Pace RuleCapture ClosedCapture
+
+theorem one_pos : 0 < 1 := Nat.zero_lt_one
+
+/-- Reading at every step. -/
+def always : Nat → Bool := fun _ => true
+
+/-! ## P1. The step between can still turn the course for good
+
+`a = 1`, nothing shared, a cost of one, `hi = 3`, `lo = 2`, `lo' = 0`, one shaper to three others,
+the rule read at every step, the others reading the loss from step 0. -/
+
+def oneToThree : CarrierCounts := ⟨1, 3, Nat.zero_lt_succ 2⟩
+
+/-- Every premise of `one_between`, `kept_early_iff` and `turned_early_iff` holds; step 0 is the
+step between (the late reading favours the others strictly at the start and the shapers strictly
+at MA4's share of step 1); yet the course read from step 0 is locked the other way at every step
+from step 4. -/
+theorem between_turns :
+    CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 2 one_pos oneToThree) ∧
+    ¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 0 one_pos
+        (DrawnShaping.drawnCourse 1 0 1 3 2 one_pos always oneToThree 0).1) ∧
+    ¬ CarrierCounts.disfavours (DrawnShaping.drawn 1 0 1 3 0 one_pos
+        (DrawnShaping.drawnCourse 1 0 1 3 2 one_pos always oneToThree 1).1) ∧
+    ∀ k, Locked (reverse CarrierCounts.order) CarrierCounts.disfavours
+      (DrawnShaping.drawnRead 1 0 1 3 0 one_pos)
+      ((ReadInTime.lossCourse 1 0 1 3 2 0 0 one_pos always oneToThree (2 + 1 + (1 + k))).1.1,
+       (ReadInTime.lossCourse 1 0 1 3 2 0 0 one_pos always oneToThree (2 + 1 + (1 + k))).2) :=
+  ⟨show 8 ≤ 13 by decide, show ¬ 8 ≤ 7 by decide, show ¬ 76 ≤ 74 by decide,
+   (ReadInTime.turned_iff (fB := Beyond.lossStep) (a := 1) (p := 0) (c := 1) (hi := 3) (lo := 2)
+      (lo' := 0) (N := 0) (pos := one_pos) (reads := always)
+      (s := ((oneToThree, 0), DrawnShaping.drawn 1 0 1 3 2 one_pos oneToThree))
+      (r := 2) Thinned.lossStep_accrues (Nat.zero_le 3) rfl rfl
+      (Nat.zero_le _) (show 556 ≤ 566 by decide)).mpr (show 41872 ≤ 42248 by decide)⟩
+
+/-- The module's own laws place the reading from step 0 neither among those that keep the lock
+from step 1 nor among those that turn the course from step 2. -/
+theorem between_neither :
+    (¬ ∀ k, Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 1 3 0 one_pos)
+        ((ReadInTime.lossCourse 1 0 1 3 2 0 0 one_pos always oneToThree (0 + (1 + k))).1.1,
+         (ReadInTime.lossCourse 1 0 1 3 2 0 0 one_pos always oneToThree (0 + (1 + k))).2)) ∧
+    (¬ ∀ k, Locked (reverse CarrierCounts.order) CarrierCounts.disfavours
+        (DrawnShaping.drawnRead 1 0 1 3 0 one_pos)
+        ((ReadInTime.lossCourse 1 0 1 3 2 0 0 one_pos always oneToThree (0 + 1 + (1 + k))).1.1,
+         (ReadInTime.lossCourse 1 0 1 3 2 0 0 one_pos always oneToThree (0 + 1 + (1 + k))).2)) :=
+  ⟨fun kept => between_turns.2.1
+      ((ReadInTime.kept_early_iff (show 2 ≤ 3 by decide) (Nat.zero_le 3) between_turns.1 rfl).mp kept),
+   fun turned => between_turns.2.2.1
+      ((ReadInTime.turned_early_iff (show 2 ≤ 3 by decide) (Nat.zero_le 3) between_turns.1 rfl rfl).mp
+        turned)⟩
+
+/-- And `one_between` names step 0 as the only step between. -/
+theorem only_zero {M : Nat}
+    (atM : ¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 0 one_pos
+        (DrawnShaping.drawnCourse 1 0 1 3 2 one_pos always oneToThree M).1) ∧
+      ¬ CarrierCounts.disfavours (DrawnShaping.drawn 1 0 1 3 0 one_pos
+        (DrawnShaping.drawnCourse 1 0 1 3 2 one_pos always oneToThree (M + 1)).1)) : 0 = M :=
+  ReadInTime.one_between (show 2 ≤ 3 by decide) (Nat.zero_le 3) between_turns.1
+    ⟨between_turns.2.1, between_turns.2.2.1⟩ atM
+
+/-! ## P2. The classification needs steps `N` and `N + 1` reading
+
+The witness of the module (`a = 1`, `c = 3`, `hi = 5`, `lo = 2`, `lo' = 0`, one to one), read at
+every step but step 3. -/
+
+def notThree : Nat → Bool
+  | 3 => false
+  | _ => true
+
+/-- `turned_early_iff` without `reads (N + 1)`: at `N = 2` its right side holds (the late reading
+favours the others at MA4's share of step 3), every other premise holds, and the course read from
+step 2 is not locked the other way at step 4. -/
+theorem turned_early_needs_next :
+    notThree 2 = true ∧ notThree 3 = false ∧
+    CarrierCounts.disfavours (DrawnShaping.drawn 1 0 3 5 0 ReadInTime.Window.one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 ReadInTime.Window.one_pos notThree ReadInTime.Window.even 3).1) ∧
+    ¬ Locked (reverse CarrierCounts.order) CarrierCounts.disfavours
+        (DrawnShaping.drawnRead 1 0 3 5 0 ReadInTime.Window.one_pos)
+        ((ReadInTime.lossCourse 1 0 3 5 2 0 2 ReadInTime.Window.one_pos notThree ReadInTime.Window.even
+            (2 + 1 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 3 5 2 0 2 ReadInTime.Window.one_pos notThree ReadInTime.Window.even
+            (2 + 1 + (1 + 0))).2) :=
+  ⟨rfl, rfl, show 42260 ≤ 42680 by decide,
+   fun lock => (show ¬ 23373560 * 580 ≤ 550 * 23996240 by decide) lock.2⟩
+
+/-- Read at every step but step 3, two steps (2 and 3) are steps from which a reading neither keeps
+the lock from the next step nor turns the course from the step after. -/
+theorem two_neither :
+    (¬ Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 0 ReadInTime.Window.one_pos)
+        ((ReadInTime.lossCourse 1 0 3 5 2 0 2 ReadInTime.Window.one_pos notThree ReadInTime.Window.even (2 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 3 5 2 0 2 ReadInTime.Window.one_pos notThree ReadInTime.Window.even (2 + (1 + 0))).2)) ∧
+    (¬ Locked (reverse CarrierCounts.order) CarrierCounts.disfavours
+        (DrawnShaping.drawnRead 1 0 3 5 0 ReadInTime.Window.one_pos)
+        ((ReadInTime.lossCourse 1 0 3 5 2 0 2 ReadInTime.Window.one_pos notThree ReadInTime.Window.even (2 + 1 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 3 5 2 0 2 ReadInTime.Window.one_pos notThree ReadInTime.Window.even (2 + 1 + (1 + 0))).2)) ∧
+    (¬ Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 0 ReadInTime.Window.one_pos)
+        ((ReadInTime.lossCourse 1 0 3 5 2 0 3 ReadInTime.Window.one_pos notThree ReadInTime.Window.even (3 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 3 5 2 0 3 ReadInTime.Window.one_pos notThree ReadInTime.Window.even (3 + (1 + 0))).2)) ∧
+    (¬ Locked (reverse CarrierCounts.order) CarrierCounts.disfavours
+        (DrawnShaping.drawnRead 1 0 3 5 0 ReadInTime.Window.one_pos)
+        ((ReadInTime.lossCourse 1 0 3 5 2 0 3 ReadInTime.Window.one_pos notThree ReadInTime.Window.even (3 + 1 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 3 5 2 0 3 ReadInTime.Window.one_pos notThree ReadInTime.Window.even (3 + 1 + (1 + 0))).2)) :=
+  ⟨fun lock => (show ¬ 580 ≤ 550 by decide) lock.1,
+   turned_early_needs_next.2.2.2,
+   fun lock => (show ¬ 678 * 27231056 ≤ 28225784 * 580 by decide) lock.2,
+   fun lock => (show ¬ 28225784 ≤ 27231056 by decide) lock.1⟩
+
+
+/-! ## P3. `turned_iff` needs `lo' ≤ hi` (the "Turned" bullet drops it)
+
+`a = 1`, nothing shared, a cost of four, `hi = 1`, `lo' = 2`, from one to one under a rule one to
+two, the loss read from step 0, read at every step. -/
+
+def oneToOne : CarrierCounts := ⟨1, 1, Nat.zero_lt_one⟩
+def oneToTwo : CarrierCounts := ⟨1, 2, Nat.zero_lt_succ 1⟩
+
+theorem turned_needs_readers :
+    CarrierCounts.disfavours (DrawnShaping.drawn 1 0 4 1 2 one_pos
+        (ReadInTime.course Beyond.lossStep 1 0 4 1 0 2 0 one_pos always ((oneToOne, 0), oneToTwo) 0).1.1) ∧
+    CarrierCounts.disfavours (DrawnShaping.drawn 1 0 4 1 2 one_pos
+        (ReadInTime.course Beyond.lossStep 1 0 4 1 0 2 0 one_pos always ((oneToOne, 0), oneToTwo) (0 + 1)).1.1) ∧
+    ¬ Locked (reverse CarrierCounts.order) CarrierCounts.disfavours (DrawnShaping.drawnRead 1 0 4 1 2 one_pos)
+        ((ReadInTime.course Beyond.lossStep 1 0 4 1 0 2 0 one_pos always ((oneToOne, 0), oneToTwo) (0 + 1 + (1 + 0))).1.1,
+         (ReadInTime.course Beyond.lossStep 1 0 4 1 0 2 0 one_pos always ((oneToOne, 0), oneToTwo) (0 + 1 + (1 + 0))).2) :=
+  ⟨show 5 ≤ 10 by decide, show 8 ≤ 15 by decide,
+   fun lock => (show ¬ 70 * 15 ≤ 8 * 125 by decide) lock.2⟩
+
+/-! ## P4. `kept_iff` needs `Accrues fB` (dropped in its docstring and in the "Kept" bullet)
+
+The loss reset to zero at every step, `N = 1`, the witness's readings, from two shapers to one
+other under a rule one to one with the loss at one. -/
+
+def twoToOne' : CarrierCounts := ⟨2, 1, Nat.zero_lt_one⟩
+
+theorem kept_needs_accrues :
+    ¬ Accrues (fun (_ : CarrierCounts × Nat) (_ : CarrierCounts) => 0) ∧
+    CarrierCounts.favours oneToOne ∧
+    2 * 3 + 1 * 3 ≤ 2 * 5 + 1 * 0 ∧
+    ¬ Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 0 one_pos)
+        ((ReadInTime.course (fun _ _ => 0) 1 0 3 5 2 0 1 one_pos always ((twoToOne', 1), oneToOne) (0 + (1 + 1))).1.1,
+         (ReadInTime.course (fun _ _ => 0) 1 0 3 5 2 0 1 one_pos always ((twoToOne', 1), oneToOne) (0 + (1 + 1))).2) :=
+  ⟨fun accrues => absurd (accrues (twoToOne', 0) oneToOne) (Nat.not_succ_le_zero 0),
+   Nat.le_refl 1, show 9 ≤ 10 by decide,
+   fun lock => (show ¬ 15 * 152 ≤ 168 * 12 by decide) lock.2⟩
+
+/-! ## P5. `Window.late_kept` needs `lo' ≤ 5` ("by any reading of this form" in the module bullet)
+
+The witness, the others reading `lo' = 6` from step 4: the rule in force at step 5 favours the
+shapers, yet the course is not locked at step 5, the late reading reading against the share. -/
+
+theorem late_kept_needs_readers :
+    CarrierCounts.favours (ReadInTime.lossCourse 1 0 3 5 2 6 4 one_pos always ReadInTime.Window.even (4 + (1 + 0))).2 ∧
+    ¬ Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 6 one_pos)
+        ((ReadInTime.lossCourse 1 0 3 5 2 6 4 one_pos always ReadInTime.Window.even (4 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 3 5 2 6 4 one_pos always ReadInTime.Window.even (4 + (1 + 0))).2) :=
+  ⟨show 27231056 ≤ 43370744 by decide,
+   fun lock => (show ¬ 43370744 * 1304162972224 ≤ 2063975607136 * 27231056 by decide) lock.2⟩
+
+/-! ## P6. `kept_early_iff` and `closed_kept` need the start favoured (where `lo < lo'`)
+
+`a = 1`, nothing shared, a cost of two, `hi = 3`, `lo = 0`, `lo' = 2`, one to one, read at every
+step, the loss read from step 0. -/
+
+theorem kept_early_needs_fav :
+    (DrawnShaping.drawn 1 0 2 3 0 one_pos oneToOne).carrier < (DrawnShaping.drawn 1 0 2 3 0 one_pos oneToOne).other ∧
+    CarrierCounts.favours (DrawnShaping.drawn 1 0 2 3 2 one_pos
+        (DrawnShaping.drawnCourse 1 0 2 3 0 one_pos always oneToOne 0).1) ∧
+    ¬ Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 2 3 2 one_pos)
+        ((ReadInTime.lossCourse 1 0 2 3 0 2 (0 + 0) one_pos always oneToOne (0 + 0 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 2 3 0 2 (0 + 0) one_pos always oneToOne (0 + 0 + (1 + 0))).2) :=
+  ⟨show 5 < 6 by decide, show 6 ≤ 7 by decide,
+   fun lock => (show ¬ 7 * 33 ≤ 38 * 6 by decide) lock.2⟩
+
+/-! ## P7. `deadline`: `some` and `strict` are needed; `covers` is not -/
+
+def noShaper : CarrierCounts := ⟨0, 1, Nat.zero_lt_one⟩
+
+/-- No shaper: `a = 1`, a cost of one, `hi = lo = 2`, `lo' = 0`, from none to one; the start's rule
+favours the shapers strictly (three to two), the deadline is `2 * 1 * 1 = 2`, and from the reading
+at step 2 the rule in force at step 3 favours the others. -/
+theorem deadline_needs_some :
+    (DrawnShaping.drawn 1 0 1 2 2 one_pos noShaper).other < (DrawnShaping.drawn 1 0 1 2 2 one_pos noShaper).carrier ∧
+    (DrawnShaping.drawn 1 0 1 2 2 one_pos noShaper).other * 1 * noShaper.other = 2 ∧
+    ¬ Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 1 2 0 one_pos)
+        ((ReadInTime.lossCourse 1 0 1 2 2 0 2 one_pos always noShaper (2 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 1 2 2 0 2 one_pos always noShaper (2 + (1 + 0))).2) :=
+  ⟨show 2 < 3 by decide, rfl, fun lock => (show ¬ 8 ≤ 4 by decide) lock.1⟩
+
+/-- Read only at step 12. -/
+def onlyTwelve : Nat → Bool
+  | 12 => true
+  | _ => false
+
+/-- Weakly favoured: `a = 1`, a cost of two, `hi = 3`, `lo = 1`, `lo' = 0`, one to one: the start's
+rule is six to six, the deadline is `6 * 2 * 1 = 12`, and the others reading the loss at step 12
+leave a rule favouring the others at step 13. -/
+theorem deadline_needs_strict :
+    CarrierCounts.favours (DrawnShaping.drawn 1 0 2 3 1 one_pos oneToOne) ∧
+    ¬ (DrawnShaping.drawn 1 0 2 3 1 one_pos oneToOne).other < (DrawnShaping.drawn 1 0 2 3 1 one_pos oneToOne).carrier ∧
+    (DrawnShaping.drawn 1 0 2 3 1 one_pos oneToOne).other * 2 * oneToOne.other = 12 ∧ onlyTwelve 12 = true ∧
+    ¬ Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 2 3 0 one_pos)
+        ((ReadInTime.lossCourse 1 0 2 3 1 0 12 one_pos onlyTwelve oneToOne (12 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 2 3 1 0 12 one_pos onlyTwelve oneToOne (12 + (1 + 0))).2) :=
+  ⟨show 6 ≤ 6 by decide, show ¬ 6 < 6 by decide, rfl, rfl,
+   fun lock => (show ¬ 13060694016 ≤ 10883911680 by decide) lock.1⟩
+
+variable {a p c hi lo lo' : Nat} {pos : 0 < a}
+
+/-- **`covers` follows from `step` and `strict`.** A start whose rule read favours the shapers
+strictly, with `lo ≤ hi`, has `c < hi`. -/
+theorem covers_of_strict (step : lo ≤ hi) {x : CarrierCounts}
+    (strict : (DrawnShaping.drawn a p c hi lo pos x).other < (DrawnShaping.drawn a p c hi lo pos x).carrier) :
+    c < hi :=
+  match Nat.lt_or_ge c hi with
+  | .inl h => h
+  | .inr h =>
+    absurd strict (Nat.not_lt_of_le
+      (show x.carrier * (a + hi + p) + x.other * (a + lo + p) ≤ x.carrier * (a + c + p) + x.other * (a + c + p) from
+        Nat.add_le_add
+          (Nat.mul_le_mul_left _ (Nat.add_le_add_right (Nat.add_le_add_left h a) p))
+          (Nat.mul_le_mul_left _ (Nat.add_le_add_right (Nat.add_le_add_left (Nat.le_trans step h) a) p))))
+
+/-- So `deadline` holds without `covers`. -/
+theorem deadline' {reads : Nat → Bool} (step : lo ≤ hi) (readers : lo' ≤ hi) {x : CarrierCounts}
+    (some : 0 < x.carrier)
+    (strict : (DrawnShaping.drawn a p c hi lo pos x).other < (DrawnShaping.drawn a p c hi lo pos x).carrier)
+    {N : Nat} (late : (DrawnShaping.drawn a p c hi lo pos x).other * c * x.other ≤ N)
+    (at_N : reads N = true) (k : Nat) :
+    Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead a p c hi lo' pos)
+      ((ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + (1 + k))).1.1,
+        (ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + (1 + k))).2) :=
+  ReadInTime.deadline step readers (covers_of_strict step strict) some strict late at_N k
+
+/-! ## P8. Premises `one_between` and `closed_for_every` do not need -/
+
+/-- A sequence of rules that never falls has at most one step at which it favours the others
+strictly and the shapers strictly at the next. -/
+theorem at_most_one_up {g : Nat → CarrierCounts} (up : ∀ t d, CarrierCounts.order.le (g t) (g (t + d)))
+    {N M : Nat} (atN : ¬ CarrierCounts.favours (g N) ∧ ¬ CarrierCounts.disfavours (g (N + 1)))
+    (atM : ¬ CarrierCounts.favours (g M) ∧ ¬ CarrierCounts.disfavours (g (M + 1))) : N = M :=
+  have after : ∀ {n m : Nat}, ¬ CarrierCounts.disfavours (g (n + 1)) → n + 1 ≤ m → CarrierCounts.favours (g m) :=
+    fun {n m} strict le =>
+      CarrierCounts.upper
+        (Eq.subst (motive := fun j => CarrierCounts.order.le (g (n + 1)) (g j)) (add_sub_of_le le)
+          (up (n + 1) (m - (n + 1))))
+        (Nat.le_of_lt (Nat.gt_of_not_le strict))
+  Nat.le_antisymm (Nat.le_of_not_lt fun lt => atN.1 (after atM.2 lt))
+    (Nat.le_of_not_lt fun lt => atM.1 (after atN.2 lt))
+
+/-- A sequence of rules that never rises has no such step. -/
+theorem none_down {g : Nat → CarrierCounts} (down : ∀ t, CarrierCounts.order.le (g (t + 1)) (g t)) {N : Nat}
+    (atN : ¬ CarrierCounts.favours (g N) ∧ ¬ CarrierCounts.disfavours (g (N + 1))) : False :=
+  atN.1 (CarrierCounts.upper (down N) (Nat.le_of_lt (Nat.gt_of_not_le atN.2)))
+
+/-- **`one_between` with `lo ≤ hi` alone**: neither `lo' ≤ hi` nor the start favoured is needed.
+MA4's course is monotone one way or the other, and the late reading reads the share one way or the
+other, so the late reading along the course never falls or never rises. -/
+theorem one_between' {reads : Nat → Bool} (step : lo ≤ hi) {x : CarrierCounts} {N M : Nat}
+    (atN : ¬ CarrierCounts.favours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x N).1) ∧
+      ¬ CarrierCounts.disfavours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x (N + 1)).1))
+    (atM : ¬ CarrierCounts.favours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x M).1) ∧
+      ¬ CarrierCounts.disfavours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x (M + 1)).1)) :
+    N = M :=
+  have mono := (DrawnShaping.drawn_reads_iff (a := a) (p := p) (c := c) (pos := pos)).mpr step
+  match Nat.le_total (DrawnShaping.drawn a p c hi lo pos x).other (DrawnShaping.drawn a p c hi lo pos x).carrier,
+    Nat.le_total lo' hi with
+  | .inl fav, .inl readers => ReadInTime.one_between step readers fav atN atM
+  | .inl fav, .inr against =>
+    have up : ∀ t d, CarrierCounts.order.le (DrawnShaping.drawnCourse a p c hi lo pos reads x t).1
+        (DrawnShaping.drawnCourse a p c hi lo pos reads x (t + d)).1 := fun t d =>
+      (locked_not_below CarrierCounts.raises mono CarrierCounts.upper
+        (DrawnShaping.drawn_locks (reads := reads) step fav t).1 d).1
+    absurd (none_down (g := fun t => DrawnShaping.drawn a p c hi lo' pos
+        (DrawnShaping.drawnCourse a p c hi lo pos reads x t).1)
+      (fun t => Drawn.pool_against (DrawnShaping.shaped_le_iff.mpr against) _ _
+        (DrawnShaping.drawn a p c hi lo pos x) (DrawnShaping.drawn a p c hi lo pos x) (up t 1)) atN) id
+  | .inr dis, .inl readers =>
+    have down : ∀ t d, CarrierCounts.order.le (DrawnShaping.drawnCourse a p c hi lo pos reads x (t + d)).1
+        (DrawnShaping.drawnCourse a p c hi lo pos reads x t).1 := fun t d =>
+      (locked_not_below CarrierCounts.lowers mono.reverse CarrierCounts.lower
+        (DrawnShaping.drawn_from_below (reads := reads) step dis t).1 d).1
+    absurd (none_down (g := fun t => DrawnShaping.drawn a p c hi lo' pos
+        (DrawnShaping.drawnCourse a p c hi lo pos reads x t).1)
+      (fun t => Drawn.pool_reads (DrawnShaping.shaped_le_iff.mpr readers) _ _
+        (DrawnShaping.drawn a p c hi lo pos x) (DrawnShaping.drawn a p c hi lo pos x) (down t 1)) atN) id
+  | .inr dis, .inr against =>
+    have down : ∀ t d, CarrierCounts.order.le (DrawnShaping.drawnCourse a p c hi lo pos reads x (t + d)).1
+        (DrawnShaping.drawnCourse a p c hi lo pos reads x t).1 := fun t d =>
+      (locked_not_below CarrierCounts.lowers mono.reverse CarrierCounts.lower
+        (DrawnShaping.drawn_from_below (reads := reads) step dis t).1 d).1
+    at_most_one_up (g := fun t => DrawnShaping.drawn a p c hi lo' pos
+        (DrawnShaping.drawnCourse a p c hi lo pos reads x t).1)
+      (fun t d => Drawn.pool_against (DrawnShaping.shaped_le_iff.mpr against) _ _
+        (DrawnShaping.drawn a p c hi lo pos x) (DrawnShaping.drawn a p c hi lo pos x) (down t d)) atN atM
+
+/-- **`closed_for_every` without the start favoured**: with `lo ≤ hi`, a step at which the least late
+reading favours the shapers forces the start's rule read to favour them. -/
+theorem closed_for_every' {reads : Nat → Bool} (step : lo ≤ hi) (readers : lo' ≤ hi) {x : CarrierCounts} {s : Nat}
+    (closed : CarrierCounts.favours
+      (DrawnShaping.drawn a p c hi 0 pos (DrawnShaping.drawnCourse a p c hi lo pos reads x s).1))
+    (d : Nat) (at_N : reads (s + d) = true) (k : Nat) :
+    Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead a p c hi lo' pos)
+      ((ReadInTime.lossCourse a p c hi lo lo' (s + d) pos reads x (s + d + (1 + k))).1.1,
+        (ReadInTime.lossCourse a p c hi lo lo' (s + d) pos reads x (s + d + (1 + k))).2) :=
+  have fav : CarrierCounts.favours (DrawnShaping.drawn a p c hi lo pos x) :=
+    match Nat.le_total (DrawnShaping.drawn a p c hi lo pos x).other (DrawnShaping.drawn a p c hi lo pos x).carrier with
+    | .inl f => f
+    | .inr dis => CarrierCounts.upper
+        (Drawn.pool_reads (DrawnShaping.shaped_le_iff.mpr step) _ _
+          (DrawnShaping.drawn a p c hi lo pos x) (DrawnShaping.drawn a p c hi lo pos x)
+          (DrawnShaping.drawn_from_below (reads := reads) step dis s).2.1)
+        (ReadInTime.least closed lo)
+  ReadInTime.closed_for_every step readers fav closed d at_N k
+
+/-! ## P9. The witness read from step 3 is not locked at step 5 (NOTE §3.8 says "from step 5") -/
+
+theorem too_late_not_at_five :
+    CarrierCounts.favours (ReadInTime.Window.readFrom 3 5).2 ∧
+    ¬ Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 0 one_pos)
+        ((ReadInTime.Window.readFrom 3 5).1.1, (ReadInTime.Window.readFrom 3 5).2) :=
+  ⟨show 27231056 ≤ 28225784 by decide,
+   fun lock => (show ¬ 28225784 * 1155025015360 ≤ 1193881779040 * 27231056 by decide) lock.2⟩
+
+/-! ## P10. The deadline is not a law of the share
+
+Twice the witness's start (two to two) gives every course the same shares, the window closed from
+step 4 as before, and a deadline four times as late. -/
+
+def twoToTwo : CarrierCounts := ⟨2, 2, Nat.zero_lt_succ 1⟩
+
+theorem scaled_deadline :
+    (DrawnShaping.drawn 1 0 3 5 2 one_pos twoToTwo).other * 3 * twoToTwo.other = 96 ∧
+    ¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 3 5 0 one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos always twoToTwo 3).1) ∧
+    ∀ (lo' : Nat), lo' ≤ 5 → ∀ d k, Locked CarrierCounts.order CarrierCounts.favours
+      (DrawnShaping.drawnRead 1 0 3 5 lo' one_pos)
+      ((ReadInTime.lossCourse 1 0 3 5 2 lo' (4 + d) one_pos always twoToTwo (4 + d + (1 + k))).1.1,
+        (ReadInTime.lossCourse 1 0 3 5 2 lo' (4 + d) one_pos always twoToTwo (4 + d + (1 + k))).2) :=
+  ⟨rfl, show ¬ 1365760 ≤ 1352320 by decide,
+   fun lo' readers d k => ReadInTime.closed_for_every (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2)
+      (lo' := lo') (pos := one_pos) (reads := always) (x := twoToTwo) (s := 4) (show 2 ≤ 5 by decide)
+      readers (show 16 ≤ 18 by decide) (show 6971150336 ≤ 7225800704 by decide) d rfl k⟩
+
+/-! ## P11. `late_rises` needs the start favoured and `lo' ≤ hi` -/
+
+/-- From one shaper to three others with MA4's witness readings (`c = 1`, `hi = 3`, `lo = lo' = 0`),
+the start favouring the others: the late reading falls from step 0 to step 1. -/
+theorem late_rises_needs_fav :
+    ¬ CarrierCounts.order.le
+      (DrawnShaping.drawn 1 0 1 3 0 one_pos (DrawnShaping.drawnCourse 1 0 1 3 0 one_pos always oneToThree 0).1)
+      (DrawnShaping.drawn 1 0 1 3 0 one_pos (DrawnShaping.drawnCourse 1 0 1 3 0 one_pos always oneToThree (0 + 1)).1) :=
+  show ¬ 7 * 62 ≤ 52 * 8 by decide
+
+/-- The witness with `lo' = 6 > hi`: the late reading falls from step 0 to step 1. -/
+theorem late_rises_needs_readers :
+    ¬ CarrierCounts.order.le
+      (DrawnShaping.drawn 1 0 3 5 6 one_pos (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos always ReadInTime.Window.even 0).1)
+      (DrawnShaping.drawn 1 0 3 5 6 one_pos (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos always ReadInTime.Window.even (0 + 1)).1) :=
+  show ¬ 13 * 68 ≤ 110 * 8 by decide
+
+/-- `late_rises` needs `lo ≤ hi`: `a = 1`, a cost of two, `hi = 1`, `lo = 11`, `lo' = 0`, one to
+one; the start's rule favours the shapers (fourteen to six), yet the late reading falls from step 4
+to step 5. -/
+theorem late_rises_needs_step :
+    CarrierCounts.favours (DrawnShaping.drawn 1 0 2 1 11 one_pos oneToOne) ∧
+    ¬ CarrierCounts.order.le
+      (DrawnShaping.drawn 1 0 2 1 0 one_pos (DrawnShaping.drawnCourse 1 0 2 1 11 one_pos always oneToOne 4).1)
+      (DrawnShaping.drawn 1 0 2 1 0 one_pos (DrawnShaping.drawnCourse 1 0 2 1 11 one_pos always oneToOne (4 + 1)).1) :=
+  ⟨show 6 ≤ 14 by decide,
+   show ¬ 33804160 * 3449560166400 ≤ 2201567436800 * 52961280 by decide⟩
+
+/-! ## P12. `closed_kept` needs `s + d` a reading step (the "Once favoured" bullet drops it) -/
+
+def notFive : Nat → Bool
+  | 5 => false
+  | _ => true
+
+/-- The witness read at every step but step 5: the late reading favours the shapers at MA4's share
+of step 4, yet with the bound at step 5 the course is not locked under the late reading at step 6. -/
+theorem closed_kept_needs_reading :
+    CarrierCounts.favours (DrawnShaping.drawn 1 0 3 5 0 one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos notFive ReadInTime.Window.even 4).1) ∧
+    notFive (4 + 1) = false ∧
+    ¬ Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 0 one_pos)
+        ((ReadInTime.lossCourse 1 0 3 5 2 0 (4 + 1) one_pos notFive ReadInTime.Window.even (4 + 1 + (1 + 0))).1.1,
+         (ReadInTime.lossCourse 1 0 3 5 2 0 (4 + 1) one_pos notFive ReadInTime.Window.even (4 + 1 + (1 + 0))).2) :=
+  ⟨show 27231056 ≤ 28225784 by decide, rfl,
+   fun lock => (show ¬ 33274104 * 40790756357556317696 ≤ 46517969806748812544 * 27231056 by decide) lock.2⟩
+
+/-! ## P13. Weak favouring: at a tie a reading both keeps and turns
+
+MA4's witness at its critical mass (`a = 1`, a cost of one, `hi = 3`, `lo = lo' = 0`, one shaper to
+two others), read at every step, the loss read from step 0: the late reading favours the shapers
+(weakly) at the start, yet the course read from there is locked the other way from step 2, as well
+as in the shapers' favour from step 1. -/
+
+theorem tie_both :
+    CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 0 one_pos
+        (DrawnShaping.drawnCourse 1 0 1 3 0 one_pos always oneToTwo 0).1) ∧
+    (∀ k, Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 1 3 0 one_pos)
+        ((ReadInTime.lossCourse 1 0 1 3 0 0 0 one_pos always oneToTwo (0 + (1 + k))).1.1,
+         (ReadInTime.lossCourse 1 0 1 3 0 0 0 one_pos always oneToTwo (0 + (1 + k))).2)) ∧
+    (∀ k, Locked (reverse CarrierCounts.order) CarrierCounts.disfavours (DrawnShaping.drawnRead 1 0 1 3 0 one_pos)
+        ((ReadInTime.lossCourse 1 0 1 3 0 0 0 one_pos always oneToTwo (0 + 1 + (1 + k))).1.1,
+         (ReadInTime.lossCourse 1 0 1 3 0 0 0 one_pos always oneToTwo (0 + 1 + (1 + k))).2)) :=
+  ⟨show 6 ≤ 6 by decide,
+   (ReadInTime.kept_early_iff (a := 1) (p := 0) (c := 1) (hi := 3) (lo := 0) (lo' := 0) (N := 0) (pos := one_pos)
+      (reads := always) (x := oneToTwo) (Nat.zero_le 3) (Nat.zero_le 3) (show 6 ≤ 6 by decide) rfl).mpr
+     (show 6 ≤ 6 by decide),
+   (ReadInTime.turned_early_iff (a := 1) (p := 0) (c := 1) (hi := 3) (lo := 0) (lo' := 0) (N := 0) (pos := one_pos)
+      (reads := always) (x := oneToTwo) (Nat.zero_le 3) (Nat.zero_le 3) (show 6 ≤ 6 by decide) rfl rfl).mpr
+     (show 36 ≤ 36 by decide)⟩
+
+/-- In the module's witness step 3 is the one step between, and `one_between` makes it the only one. -/
+theorem witness_only_three {M : Nat}
+    (atM : ¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 3 5 0 one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos always ReadInTime.Window.even M).1) ∧
+      ¬ CarrierCounts.disfavours (DrawnShaping.drawn 1 0 3 5 0 one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos always ReadInTime.Window.even (M + 1)).1)) : 3 = M :=
+  ReadInTime.one_between (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2) (lo' := 0) (pos := one_pos)
+    (reads := always) (x := ReadInTime.Window.even) (show 2 ≤ 5 by decide) (Nat.zero_le 5) (show 8 ≤ 9 by decide)
+    ⟨show ¬ 42680 ≤ 42260 by decide, show ¬ 28225784 ≤ 27231056 by decide⟩ atM
+
+/-! ## P14 (optional Lean for the fix). The step between starts a new round
+
+Where the late reading favours the shapers at MA4's share of step `N + 1` (as at the step between),
+the course read from `N` is decided at step `N + 2` by `kept_iff`: locked in the shapers' favour
+from `N + 3` exactly where the late reading favours them at the share of step `N + 2`. Neither the
+start favoured nor `lo ≤ hi` is needed. -/
+
+theorem between_round {reads : Nat → Bool} (readers : lo' ≤ hi) {x : CarrierCounts} {N : Nat}
+    (late1 : CarrierCounts.favours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x (N + 1)).1))
+    (at_next : reads (N + 1) = true) (at_two : reads (N + 2) = true) :
+    (∀ k, Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead a p c hi lo' pos)
+        ((ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + 2 + (1 + k))).1.1,
+          (ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + 2 + (1 + k))).2)) ↔
+      CarrierCounts.favours (DrawnShaping.drawn a p c hi lo' pos
+        (ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + 2)).1.1) :=
+  have grows := fun t => ClosedCapture.loss_grows (fA := CarrierCounts.select) (fB := Beyond.lossStep)
+    (h := ReadInTime.lossRead a p c hi lo lo' N pos) (reads := reads) Thinned.lossStep_accrues
+    ((x, 0), DrawnShaping.drawn a p c hi lo pos x) t
+  have past1 : N ≤ (ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + 1)).1.2 :=
+    Nat.le_trans (Nat.le_trans (Nat.le_succ N) (Nat.le_of_eq (Nat.zero_add (N + 1)).symm)) (grows (N + 1))
+  have past2 : N ≤ (ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + 2)).1.2 :=
+    Nat.le_trans (Nat.le_trans (Nat.le_add_right N 2) (Nat.le_of_eq (Nat.zero_add (N + 2)).symm)) (grows (N + 2))
+  have rule2 : (ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + 1 + 1)).2 =
+      Drawn.pool (RuleShaping.shaped a hi p c pos) (RuleShaping.shaped a lo' p c pos)
+        (ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + 1)).1.1 :=
+    Thinned.rule_read Thinned.lossStep_accrues at_next past1
+  have share1 := ReadInTime.next_share (a := a) (p := p) (c := c) (hi := hi) (lo := lo) (lo' := lo')
+    (N := N) (pos := pos) (reads := reads) (x := x)
+  have fav2 : CarrierCounts.favours (ReadInTime.lossCourse a p c hi lo lo' N pos reads x (N + 2)).2 :=
+    Eq.subst (motive := CarrierCounts.favours) rule2.symm
+      (Eq.subst (motive := fun y => CarrierCounts.favours (DrawnShaping.drawn a p c hi lo' pos y)) share1.symm late1)
+  (ReadInTime.kept_iff Thinned.lossStep_accrues readers at_two past2 fav2).trans
+    (DrawnShaping.drawn_favours_iff (a := a) (p := p) (pos := pos)).symm
+
+/-- In the probe of P1 the new round turns the course: the late reading favours the others at the
+share of step 2 (556 to 566). -/
+theorem between_round_P1 :
+    ¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 0 one_pos
+        (ReadInTime.lossCourse 1 0 1 3 2 0 0 one_pos always oneToThree (0 + 2)).1.1) :=
+  show ¬ 566 ≤ 556 by decide
+
+/-! ## P15 (for the kit, which cites it). In-time steps come first
+
+`study_ma4b.txt`, `texts_ma4b.py` and `make_records_ma4b.py` cite `ReadInTime.in_time_earlier`, which
+the module does not contain. This is one statement of it, a corollary of `late_rises`. -/
+
+theorem in_time_earlier {reads : Nat → Bool} (step : lo ≤ hi) (readers : lo' ≤ hi) {x : CarrierCounts}
+    (fav : CarrierCounts.favours (DrawnShaping.drawn a p c hi lo pos x)) {s t : Nat} (le : s ≤ t)
+    (later : CarrierCounts.disfavours
+      (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x t).1)) :
+    CarrierCounts.disfavours
+      (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x s).1) :=
+  CarrierCounts.lower
+    (Eq.subst (motive := fun j => CarrierCounts.order.le
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x s).1)
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x j).1))
+      (add_sub_of_le le) (ReadInTime.late_rises step readers fav s (t - s)))
+    later
+
+end ReadInTimeProbe
+
+end Becoming

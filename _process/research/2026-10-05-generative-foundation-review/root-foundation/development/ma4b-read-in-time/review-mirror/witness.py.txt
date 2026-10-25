@@ -1,0 +1,14 @@
+import sys
+sys.path.insert(0, '/private/tmp/claude-501/-Users-ren-theories/b7c6b747-6b9c-4356-8b68-e395f26999fa/scratchpad/ma4b-review/py')
+from model import *
+a, p, c, hi, lo, lo2 = 1, 0, 3, 5, 2, 0
+al = lambda t: True
+m = ma4(a, p, c, hi, lo, al, (1, 1), 6)
+for t, (x, g) in enumerate(m):
+    L = drawn(a, p, c, hi, lo2, x)
+    print('MA4 step', t, 'share', x, 'rule in force', g, 'late', L, 'late favours' if fav(L) else 'late disfavours',
+          'least threshold', x[1] * c <= x[0] * (hi - c))
+g0 = drawn(a, p, c, hi, lo, (1, 1)); print('start rule', g0, 'deadline', g0[1] * c * 1)
+for N in range(0, 6):
+    cs = joined(a, p, c, hi, lo, lo2, N, al, (1, 1), N + 8)
+    print('read from', N, ''.join(('F' if locked_fav(a, p, c, hi, lo2, cs[t]) else '') + ('R' if locked_rev(a, p, c, hi, lo2, cs[t]) else '') + ('.' if not (locked_fav(a, p, c, hi, lo2, cs[t]) or locked_rev(a, p, c, hi, lo2, cs[t])) else '') + ' ' for t in range(0, N + 8)))

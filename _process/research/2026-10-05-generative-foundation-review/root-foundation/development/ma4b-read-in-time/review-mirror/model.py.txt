@@ -1,0 +1,37 @@
+# Exact mirror of the Lean definitions used by Becoming.ReadInTime (Nat arithmetic).
+def le(x, y):  # CarrierCounts.order.le x y
+    return x[0] * y[1] <= y[0] * x[1]
+def fav(g): return g[1] <= g[0]
+def dis(g): return g[0] <= g[1]
+def select(x, g): return (x[0] * g[0], x[1] * g[1])
+def shaped(a, s, p, c): return (a + s + p, a + c + p)
+def pool(u, v, x): return (x[0] * u[0] + x[1] * v[0], x[0] * u[1] + x[1] * v[1])
+def drawn(a, p, c, hi, lo, x): return pool(shaped(a, hi, p, c), shaped(a, lo, p, c), x)
+def lossPool(a, p, c, hi, lo, lo2, N, x, l):
+    return drawn(a, p, c, hi, lo, x) if l < N else drawn(a, p, c, hi, lo2, x)
+
+def joined(a, p, c, hi, lo, lo2, N, reads, x0, T, fB=lambda x, l, g: l + 1, l0=0, g0=None):
+    """lossCourse: ((x, loss), rule) at steps 0..T"""
+    g = drawn(a, p, c, hi, lo, x0) if g0 is None else g0
+    x, l = x0, l0
+    out = [((x, l), g)]
+    for t in range(T):
+        nx, nl = select(x, g), fB(x, l, g)
+        ng = lossPool(a, p, c, hi, lo, lo2, N, x, l) if reads(t) else g
+        x, l, g = nx, nl, ng
+        out.append(((x, l), g))
+    return out
+
+def ma4(a, p, c, hi, lo, reads, x0, T):
+    g = drawn(a, p, c, hi, lo, x0); x = x0; out = [(x, g)]
+    for t in range(T):
+        nx = select(x, g); ng = drawn(a, p, c, hi, lo, x) if reads(t) else g
+        x, g = nx, ng; out.append((x, g))
+    return out
+
+def locked_fav(a, p, c, hi, lo2, cfg):
+    (x, _), g = cfg
+    return fav(g) and le(g, drawn(a, p, c, hi, lo2, x))
+def locked_rev(a, p, c, hi, lo2, cfg):
+    (x, _), g = cfg
+    return dis(g) and le(drawn(a, p, c, hi, lo2, x), g)
