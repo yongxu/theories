@@ -4445,7 +4445,7 @@
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ma4-drawn-shaping/tree/Becoming/DrawnShaping.lean",
-      "sha256": "2a87e8797b279f1aa5ded88e661aada101a26ca3b4f9dee2c18cd3af06e20c2f",
+      "sha256": "d0a7a76938f92bb848fbc73d7ec940a79f97bfc1b3009ca7d6fd472904eda576",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -99865,220 +99865,6 @@
       ],
       "declarations": [],
       "declaration_counts": {},
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
-    "2a87e8797b279f1aa5ded88e661aada101a26ca3b4f9dee2c18cd3af06e20c2f": {
-      "byte_size": 25784,
-      "line_count": 406,
-      "imports": [
-        "Becoming.RuleShaping",
-        "Becoming.ClosedCapture"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "drawn",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn",
-          "line": 100
-        },
-        {
-          "kind": "def",
-          "name": "drawnBack",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawnBack",
-          "line": 104
-        },
-        {
-          "kind": "def",
-          "name": "drawnCourse",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawnCourse",
-          "line": 108
-        },
-        {
-          "kind": "theorem",
-          "name": "shaped_le_iff",
-          "qualified_name_hint": "Becoming.DrawnShaping.shaped_le_iff",
-          "line": 116
-        },
-        {
-          "kind": "theorem",
-          "name": "drawn_reads_iff",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn_reads_iff",
-          "line": 126
-        },
-        {
-          "kind": "theorem",
-          "name": "mul_split",
-          "qualified_name_hint": "Becoming.DrawnShaping.mul_split",
-          "line": 134
-        },
-        {
-          "kind": "theorem",
-          "name": "drawn_split",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn_split",
-          "line": 138
-        },
-        {
-          "kind": "theorem",
-          "name": "drawn_favours_iff",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn_favours_iff",
-          "line": 145
-        },
-        {
-          "kind": "theorem",
-          "name": "drawn_favours_alike",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn_favours_alike",
-          "line": 154
-        },
-        {
-          "kind": "theorem",
-          "name": "critical_iff",
-          "qualified_name_hint": "Becoming.DrawnShaping.critical_iff",
-          "line": 161
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_favours_iff",
-          "qualified_name_hint": "Becoming.DrawnShaping.alike_favours_iff",
-          "line": 178
-        },
-        {
-          "kind": "def",
-          "name": "noShapers",
-          "qualified_name_hint": "Becoming.DrawnShaping.noShapers",
-          "line": 186
-        },
-        {
-          "kind": "theorem",
-          "name": "favours_everywhere_iff",
-          "qualified_name_hint": "Becoming.DrawnShaping.favours_everywhere_iff",
-          "line": 190
-        },
-        {
-          "kind": "theorem",
-          "name": "disfavours_everywhere",
-          "qualified_name_hint": "Becoming.DrawnShaping.disfavours_everywhere",
-          "line": 202
-        },
-        {
-          "kind": "theorem",
-          "name": "drawn_locks",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn_locks",
-          "line": 215
-        },
-        {
-          "kind": "theorem",
-          "name": "drawn_from_below",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn_from_below",
-          "line": 238
-        },
-        {
-          "kind": "theorem",
-          "name": "upper_strictly",
-          "qualified_name_hint": "Becoming.DrawnShaping.upper_strictly",
-          "line": 258
-        },
-        {
-          "kind": "theorem",
-          "name": "lower_strictly",
-          "qualified_name_hint": "Becoming.DrawnShaping.lower_strictly",
-          "line": 271
-        },
-        {
-          "kind": "theorem",
-          "name": "drawn_rises",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn_rises",
-          "line": 285
-        },
-        {
-          "kind": "theorem",
-          "name": "drawn_carrier_pos",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn_carrier_pos",
-          "line": 295
-        },
-        {
-          "kind": "theorem",
-          "name": "present_drawn",
-          "qualified_name_hint": "Becoming.DrawnShaping.present_drawn",
-          "line": 305
-        },
-        {
-          "kind": "theorem",
-          "name": "drawn_falls",
-          "qualified_name_hint": "Becoming.DrawnShaping.drawn_falls",
-          "line": 331
-        },
-        {
-          "kind": "theorem",
-          "name": "one_pos",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.one_pos",
-          "line": 350
-        },
-        {
-          "kind": "def",
-          "name": "even",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.even",
-          "line": 353
-        },
-        {
-          "kind": "def",
-          "name": "oneToTwo",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.oneToTwo",
-          "line": 356
-        },
-        {
-          "kind": "def",
-          "name": "oneToThree",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.oneToThree",
-          "line": 359
-        },
-        {
-          "kind": "theorem",
-          "name": "even_favours",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.even_favours",
-          "line": 364
-        },
-        {
-          "kind": "theorem",
-          "name": "few_disfavours",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.few_disfavours",
-          "line": 369
-        },
-        {
-          "kind": "theorem",
-          "name": "at_mass",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.at_mass",
-          "line": 374
-        },
-        {
-          "kind": "theorem",
-          "name": "even_locks",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.even_locks",
-          "line": 379
-        },
-        {
-          "kind": "theorem",
-          "name": "even_rises",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.even_rises",
-          "line": 387
-        },
-        {
-          "kind": "theorem",
-          "name": "few_falls",
-          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.few_falls",
-          "line": 395
-        }
-      ],
-      "declaration_counts": {
-        "def": 7,
-        "theorem": 25
-      },
       "textual_markers": {
         "sorry": [],
         "admit": [],
@@ -376857,6 +376643,257 @@
         "unsafe": []
       },
       "print_axioms_commands": 12
+    },
+    "d0a7a76938f92bb848fbc73d7ec940a79f97bfc1b3009ca7d6fd472904eda576": {
+      "byte_size": 37514,
+      "line_count": 574,
+      "imports": [
+        "Becoming.RuleShaping",
+        "Becoming.ClosedCapture",
+        "Becoming.ChoiceCountCapture"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "drawn",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn",
+          "line": 142
+        },
+        {
+          "kind": "def",
+          "name": "drawnRead",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawnRead",
+          "line": 146
+        },
+        {
+          "kind": "def",
+          "name": "drawnCourse",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawnCourse",
+          "line": 150
+        },
+        {
+          "kind": "theorem",
+          "name": "shaped_le_iff",
+          "qualified_name_hint": "Becoming.DrawnShaping.shaped_le_iff",
+          "line": 158
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_reads_iff",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_reads_iff",
+          "line": 168
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_against",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_against",
+          "line": 176
+        },
+        {
+          "kind": "theorem",
+          "name": "mul_split",
+          "qualified_name_hint": "Becoming.DrawnShaping.mul_split",
+          "line": 184
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_split",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_split",
+          "line": 188
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_favours_iff",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_favours_iff",
+          "line": 196
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_lt_iff",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_lt_iff",
+          "line": 207
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_favours_alike",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_favours_alike",
+          "line": 216
+        },
+        {
+          "kind": "theorem",
+          "name": "critical_iff",
+          "qualified_name_hint": "Becoming.DrawnShaping.critical_iff",
+          "line": 223
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_favours_iff",
+          "qualified_name_hint": "Becoming.DrawnShaping.alike_favours_iff",
+          "line": 240
+        },
+        {
+          "kind": "def",
+          "name": "noShapers",
+          "qualified_name_hint": "Becoming.DrawnShaping.noShapers",
+          "line": 248
+        },
+        {
+          "kind": "theorem",
+          "name": "favours_everywhere_iff",
+          "qualified_name_hint": "Becoming.DrawnShaping.favours_everywhere_iff",
+          "line": 253
+        },
+        {
+          "kind": "theorem",
+          "name": "disfavours_strictly_everywhere_iff",
+          "qualified_name_hint": "Becoming.DrawnShaping.disfavours_strictly_everywhere_iff",
+          "line": 280
+        },
+        {
+          "kind": "theorem",
+          "name": "critical_mass_iff",
+          "qualified_name_hint": "Becoming.DrawnShaping.critical_mass_iff",
+          "line": 306
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_locks",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_locks",
+          "line": 329
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_from_below",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_from_below",
+          "line": 352
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_locked_either",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_locked_either",
+          "line": 374
+        },
+        {
+          "kind": "theorem",
+          "name": "upper_strictly",
+          "qualified_name_hint": "Becoming.DrawnShaping.upper_strictly",
+          "line": 386
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_rises",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_rises",
+          "line": 400
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_carrier_pos",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_carrier_pos",
+          "line": 410
+        },
+        {
+          "kind": "theorem",
+          "name": "present_along_course",
+          "qualified_name_hint": "Becoming.DrawnShaping.present_along_course",
+          "line": 420
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_falls",
+          "qualified_name_hint": "Becoming.DrawnShaping.drawn_falls",
+          "line": 447
+        },
+        {
+          "kind": "theorem",
+          "name": "one_pos",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.one_pos",
+          "line": 466
+        },
+        {
+          "kind": "def",
+          "name": "even",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.even",
+          "line": 469
+        },
+        {
+          "kind": "def",
+          "name": "oneToTwo",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.oneToTwo",
+          "line": 472
+        },
+        {
+          "kind": "def",
+          "name": "oneToThree",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.oneToThree",
+          "line": 475
+        },
+        {
+          "kind": "theorem",
+          "name": "even_favours",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.even_favours",
+          "line": 480
+        },
+        {
+          "kind": "theorem",
+          "name": "few_disfavours",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.few_disfavours",
+          "line": 485
+        },
+        {
+          "kind": "theorem",
+          "name": "at_mass",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.at_mass",
+          "line": 490
+        },
+        {
+          "kind": "theorem",
+          "name": "even_locks",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.even_locks",
+          "line": 495
+        },
+        {
+          "kind": "theorem",
+          "name": "even_rises",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.even_rises",
+          "line": 503
+        },
+        {
+          "kind": "theorem",
+          "name": "few_locks",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.few_locks",
+          "line": 512
+        },
+        {
+          "kind": "theorem",
+          "name": "few_falls",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.few_falls",
+          "line": 520
+        },
+        {
+          "kind": "theorem",
+          "name": "at_mass_stays",
+          "qualified_name_hint": "Becoming.DrawnShaping.CriticalMass.at_mass_stays",
+          "line": 529
+        },
+        {
+          "kind": "theorem",
+          "name": "not_locked",
+          "qualified_name_hint": "Becoming.DrawnShaping.Against.not_locked",
+          "line": 547
+        }
+      ],
+      "declaration_counts": {
+        "def": 7,
+        "theorem": 31
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "d0b1b70779f5eb1a38c9172bd1cc616d396e20753a1357390bad33d18116c333": {
       "byte_size": 5010,
