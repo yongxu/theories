@@ -17554,7 +17554,7 @@ Continues §385 (IV3f), where the capacity of a feeder was read off its own stor
 ```text
 Result(s): record self-concern-through-dependence extended; no new record.
 Delta: (1) the flows. A family fed from lower members ks, each giving the family at most what it takes from its
-       own store (outside the family, no two members sharing one); the stores given only by upper members js,
+       own store; the stores given only by upper members js,
        each within a supplied capacity cap₂ however it divides its giving among them; every store balancing
        (Flow.FedThroughStores). A formation's part is its giving into the hierarchy, to the family or to a store
        (Flow.GivesInto).
@@ -17621,7 +17621,7 @@ Delta: (1) need ends at the end. Over any class of flows read off a web in which
        two tiers likewise for giving into the hierarchy (Flow.needs_into_iff_none_of_inactive, by
        Flow.active_of_givesInto). So need reaches only what is active within the stretch it is read across,
        and nothing active only before or after it; with Flow.needsSome_without_end (§387), a consumer drawing
-       without end needs giving without end. Need reaches forward exactly as far as the continuation it is
+       without end needs giving without end. Need reaches forward no farther than the continuation it is
        read across.
        (2) the feeding closure read with time. Its link is feeding at a step no later than the step the fed
        formation is read at (Flow.FedUpTo); the closure up to T (Flow.WithinFeedingUpTo) holds, besides the
@@ -17651,7 +17651,7 @@ Output → input: the new record; 07's thesis line, §1 and §4.3; D64; the pack
 
 **What was built.** In `Becoming.Weightings`: `Flow.active_of_givesWithin`, `Flow.active_of_givesInto`, `Flow.needs_iff_none_of_inactive`, `Flow.needs_into_iff_none_of_inactive`; `Flow.FedUpTo`, `Flow.WithinFeedingUpTo`, `Flow.gives_of_withinFeedingUpTo`, `Flow.active_of_withinFeedingUpTo`, `Flow.withinFeeding_of_upTo`; the witness `Overlapping` with `Overlapping.closure_overreaches`. The module has 390 theorems in 551 declarations (375 in 528 before). Every earlier statement is unchanged.
 
-**What it says.** PW argued that need reaches contemporaries and predecessors and never successors, and that the feeding closure reaches the future only when read without time. Both now have their exact form. Need reaches what is active within the stretch of the continuation it carries; the feeding closure read with time holds only what gives by the step it is read up to; read across every step it runs forward through lives that overlap in turn, to formations no continuation in it needs. So the planetary reading of D64 gives a shared scope among those whose lives overlap, not over those who come after. What comes after every present center is reached elsewhere: by a line under a class that goes on past one's end (GS2, 07 §4.5), or by the step.
+**What it says.** PW argued that need reaches contemporaries and predecessors and never successors, and that the feeding closure reaches the future only when read without time. Both now have an exact form, and it corrects the first: need reaches, except vacuously, only what is active within the stretch of the continuation it carries, so neither predecessors nor successors active only outside it; the feeding closure read with time holds, besides its formation, only what gives by the step it is read up to; read across every step it can run forward through lives that overlap in turn, to formations the first's continuation does not need. So the planetary reading of D64 gives a scope that reaches nothing after the step it is read up to. (Corrected in §399, IV3l.) What comes after every present center is reached elsewhere: by a line under a class that goes on past one's end (GS2, 07 §4.5), or by the step.
 
 **Chapter 7's order.** SW's proposal 2 asked that the thesis line and §1 lead with the structural reading and state the non-entailment as a fact about the free parameter. Both are now so. The definition of a significance stays as it was, tied to no region, and §1 now says that and names the tie the work already has (`selfAscribed (ownClosure rel) center`).
 
@@ -17688,3 +17688,58 @@ Output → input: the philosophers' reviews, each answered where it concerns (07
 **What the independent review found.** A separate AI reader checked the first draft against chapter 7, the Lean and the study of the step, in two passes. The first pass made 27 findings. The most serious were these. In P-18 to P-20, witnesses were stated as laws and a quantifier was dropped. The constancy argument had a gap the draft did not mention: under a constant class no line ends, so where every line ends no class with a continuation step is constant, and failing constancy does not single out the narrow self. The draft centred a study note's framing, not the chapter's own open question. Credits were misplaced or missing: Goodpaster mapped to the wrong split, Prior described as stating the gap, Williams offered for the wrong side, and the step study's credits to Nagel, Hare and Korsgaard and the Extreme Claim objection omitted. Three parts of chapter 7 were missing: graded significance and whether numbers count, the disclosed comparison commitments, and doing and allowing. All were taken. The opening now centres the chapter's question and labels P-20 an AI reading; the witnesses are flagged; the constancy gap is a known weakness in P-18 and P-20; P-22 to P-24 were added.
 
 The second pass found 20 findings fixed, 5 fixed in substance, and 11 new errors introduced by the revision, two from wording the reviewer had suggested: a dropped hypothesis in P-17 (the root's condition, which `premises_of_noOutside` assumes); the constancy point anchored on a theorem about the one only (now `LineOfDescent.Last.never_unending`, the conclusion marked as an inference); step 2 of P-20 stated as a theorem beyond its first clause; the centers' scope misglossed; hypotheses dropped in the comparison commitments and in graded significance; a cutoff in time conflated with discounting; and references not recorded. All were fixed. Every reference cited outside a quotation now has a recorded check (kit README), and Hare, Williams on internal reasons and two impact-measure papers were added.
+
+## 399. The independent review of IV3i, IV3j, IV3k and 07 §4.6, and its fixes (IV3l)
+
+As §387 (IV3h) did for IV3 to IV3g: a reader that did not write the line (a separate AI agent, read-only, given the texts and the Lean but not the author's reasoning) checked every text claim of IV3i (§388), IV3j (§396), IV3k (§397) and 07 §4.6 against the Lean. It found 2 errors, 11 imprecisions and 6 notes, all checked against the Lean statements and all fixed. RP2's reader found one more gap, in §4.6's crux, and it is fixed here too.
+
+```text
+Result(s): no new record; records self-concern-through-dependence and need-and-feeding-read-with-time corrected.
+Delta: the fixes, by finding.
+       F1 (error): the new record's correspondence said the Lean makes PW's "need reaches predecessors" exact; a
+          formation active only before the stretch is needed only vacuously too, so the Lean corrects PW there.
+          The record and §397 now say so.
+       F2 (error): "the closure runs forward to formations no continuation in it needs" claimed a universal the
+          witness does not prove; in the same web a formation in the closure needs the last one's giving.
+          Now: "formations the first's continuation does not need" (D64 item 14, 07's planetary reading, §397).
+       F3: "a shared scope among those whose lives overlap" overstated: the closure read with time holds givers
+          from any earlier step. Now: the scope reaches nothing after the step it is read up to (D64 item 5,
+          07, the overview EN and ZH, §397).
+       F4, F9: need reaches what is active within the stretch only except vacuously and over flows in which only
+          active formations give, and the closure holds its own formation besides what gives; added where the
+          exact law is not adjacent (07, §4.6 step 1, D64 item 14, the overview, the README rows, the root
+          module's doc); "it overreaches" became "it can overreach".
+       F5: 08 item 12 said "need reaches"; for need on flows reach is a reading (D64). Now read as reach, with
+          the exceptions of F4.
+       F6, F14: the store-degree law is for each member, and attained only where the member can give each
+          shortfall (07's table, the record, D64 item 11, the README rows, both module docs).
+       F7: "no reading rests on a vacuous need" was not shown for three Routing witnesses. Now proved:
+          Routing.possible gives a flow of the hierarchy in which the user draws past the stock in each of
+          those settings (the routed flow with a formation outside both tiers left out).
+       F8: the two-tier row's setting gains the flows' own conditions (the family balancing and given only by
+          lower members, the stores balancing, only active formations giving, each taking part once a step).
+       F10: §4.6 step 2 now cites what shows each part (TwoLines.between, TwoLines.family_constant,
+          TwoLines.core_through_birth, TwoLines.line_in_family, TwoLines.other_line_outside).
+       F11 and RP2's gap: a constant class is one under which no line ends («有常则相续不尽»), so P2 asks that the
+          line one's acts keep going be endless, which is not shown; failing constancy does not single out the
+          organism's class (in the descent that ends no class under which anything continues is constant, an
+          inference from LineOfDescent.Last.never_unending that no landed theorem states).
+       F12, F13: §4.6 step 4 reads affecting_reaches_other as reaching one member and constant_takes_third as
+          holding the third thing's stage; the conclusion says which witnesses show which part.
+       F15, F16, F17, F18, F19: the record's next step; D64's "Where" line; §396's attribution of the stores'
+          premises; the module's path to THE-STEP-OF-INVARIANCE (history); "the other active members" in
+          the overview.
+Supplied premises / correspondence: unchanged.
+Evidence: Becoming.Weightings (Routing.possible added, docs corrected); core receipt 20261025T041715.335885Z, every axiom
+       report empty.
+Boundary: PF's GrammarPath (constancy up to the net's end, the general forms of §4.6's steps 3-4) lands after
+       this and replaces §4.6's statement of the crux through the IV3 line's owner.
+Output → input: the two records; 07 §4.3 and §4.6; 08 item 12; the overview (EN, ZH); D64; the README rows (EN,
+       ZH); the module docs; §396 and §397 corrected in place.
+```
+
+**What was built.** In `Becoming.Weightings`: `Routing.possible`; the module's doc corrected. The module has 391 theorems in 552 declarations (390 in 551 before). Every earlier statement is unchanged.
+
+**What the review changed.** The two errors were both claims of more than the Lean shows, and both sat in readings, not in theorems. The imprecisions were omitted hypotheses (activity, vacuity, each member) and witnesses glossed as laws. One fix is a theorem: three needs the texts relied on now have their flows shown.
+
+**Self-review.** (1) No earlier statement changed. (2) Every finding was checked against its Lean before it was fixed. (3) Not done: PF's general forms (Boundary).

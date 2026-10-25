@@ -32,7 +32,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261024T024337.158597Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. Author review in study section 397.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T041715.335885Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. Author review in study section 397; an independent AI reader checked it against the Lean, its findings fixed in section 399.
 
 Canonical source: [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
@@ -46,7 +46,7 @@ Feeding carried across steps, read with time; an exact law of need for a continu
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-PW note §2-§3: need reaches contemporaries and predecessors, never successors, and the feeding closure reaches the future only read without time; made exact here. Parfit: what matters passes to successors in degrees; here need does not pass at all, and the reach past one's end is a question of classes (GS2).
+PW note §2-§3 held that need reaches contemporaries and predecessors, never successors, and that the feeding closure reaches the future only read without time. The Lean corrects the first: need reaches, except vacuously, only what is active within the stretch it is read across, so neither predecessors nor successors active only outside it. Parfit: what matters passes to successors in degrees; here need does not pass at all, and the reach past one's end is a question of classes (GS2).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -62,7 +62,7 @@ PW note §2-§3: need reaches contemporaries and predecessors, never successors,
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) | `Becoming.Flow.FedUpTo`, `Becoming.Flow.WithinFeedingUpTo`, `Becoming.Flow.active_of_givesInto`, `Becoming.Flow.active_of_givesWithin`, `Becoming.Flow.active_of_withinFeedingUpTo`, `Becoming.Flow.gives_of_withinFeedingUpTo`, `Becoming.Flow.needs_iff_none_of_inactive`, `Becoming.Flow.needs_into_iff_none_of_inactive`, `Becoming.Flow.withinFeeding_of_upTo`, `Becoming.Overlapping.acting`, `Becoming.Overlapping.active`, `Becoming.Overlapping.closure_overreaches`, `Becoming.Overlapping.draws`, `Becoming.Overlapping.fed`, `Becoming.Overlapping.fed_first`, `Becoming.Overlapping.fed_middle`, `Becoming.Overlapping.flow`, `Becoming.Overlapping.give`, `Becoming.Overlapping.give_pos`, `Becoming.Overlapping.last_quiet`, `Becoming.Overlapping.level`, `Becoming.Overlapping.take`, `Becoming.Overlapping.web` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
 | provenance | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md) | — |
@@ -74,7 +74,8 @@ Aliases: `Need and feeding, read with time`, `带着时间来读的所需与供�
 ### History
 
 - 24 October 2026: added (IV3k), from PW's candidates (1) and (2); study section 397.
+- 25 October 2026: corrected (IV3l) after an independent review against the Lean: the correspondence says the Lean corrects PW on predecessors; study section 399.
 
 </details>
 
-Documentary review UTC: `2026-10-24T02:46:18+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T04:20:19+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

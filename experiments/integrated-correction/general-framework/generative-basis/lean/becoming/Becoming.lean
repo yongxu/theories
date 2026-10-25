@@ -2075,13 +2075,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   elsewhere every need holds vacuously (`Flow.possible_iff_covers`); wherever a flow is possible, a
   feeder's degree of need, the least it gives while the consumer draws past the stock, is the sum of
   what each step demands beyond what the others can give (`Flow.least_giving_of_possible`;
-  `Capacities.second_in_degree`), and so it is with capacities read off the feeders' own stores
-  (`Flow.least_giving_from_stores`; `OwnStores.first_in_degree`). Across two tiers, lower members passing on
+  `Capacities.second_in_degree`), and with capacities read off the feeders' own stores the bound holds
+  and is attained where the feeder can give each shortfall (`Flow.least_giving_from_stores`;
+  `OwnStores.first_in_degree`). Across two tiers, lower members passing on
   what they take from their own stores and upper members giving the stores within their capacities, a
   formation's giving into the hierarchy is needed exactly where, at some step, the other upper members
   cannot give what the stores rise or the others cannot give the demand through the hierarchy
-  (`Flow.needs_iff_through_short`; `Routing`). Read with time, need reaches only what is active within
-  the stretch it is read across (`Flow.needs_iff_none_of_inactive`), and a feeding closure up to a step
+  (`Flow.needs_iff_through_short`; `Routing`). Read with time, over flows in which only active formations
+  give, need reaches, except vacuously, only what is active within the stretch it is read across
+  (`Flow.needs_iff_none_of_inactive`), and a feeding closure up to a step holds, besides its formation,
   only what gives by then (`Flow.gives_of_withinFeedingUpTo`), while the closure read across every step
   can run past the end of what it carries (`Overlapping.closure_overreaches`). The readings are the AI's
   (D59, D60, D64).

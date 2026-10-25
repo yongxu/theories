@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-24T02:19:46+00:00",
+  "reviewed_at_utc": "2026-10-25T04:20:19+00:00",
   "statement": {
     "en": "Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures; on the base, a consumer needs a feeder exactly where the others could not together give what a step demands, and drawing past a hierarchy fed from above needs giving into its top.",
     "zh": "从己地持有，自我关切恰在诸中心彼此位于对方闭包之内处对每个立场都相同；在基底上，消耗者恰在其余者合起来给不出某步需求之处需要某供给者的给予，而汲取超出只从上方供给的层级，需要向其顶层的给予。"
@@ -365,8 +365,8 @@
       ]
     },
     {
-      "en": "With capacities read off the feeders' own stores, under the store law's premises, every flow from the stores in which the consumer draws past the stock has a member giving at least the sum of its shortfalls under the stores' falls, and where it can give each some such flow has it give exactly that. Witness OwnStores: the first feeder needed in degree two, the second in degree zero.",
-      "zh": "以从供给者自身库存读出的容量，在库存之律的前提下，消耗者汲取超出存量的每个库存之流都使某成员至少给出其在库存下降量下的缺额之和；它能给出每个缺额时，某个这样的流使它恰好给出这么多。见证 OwnStores：第一个供给者被需要的程度为二，第二个为零。",
+      "en": "With capacities read off the feeders' own stores, under the store law's premises, every flow from the stores in which the consumer draws past the stock has each member give at least the sum of its shortfalls under the stores' falls, and where a member can give each, some such flow has it give exactly that. Witness OwnStores: the first feeder needed in degree two, the second in degree zero.",
+      "zh": "以从供给者自身库存读出的容量，在库存之律的前提下，消耗者汲取超出存量的每个库存之流都使每个成员至少给出其在库存下降量下的缺额之和；某成员能给出每个缺额时，某个这样的流使它恰好给出这么多。见证 OwnStores：第一个供给者被需要的程度为二，第二个为零。",
       "declarations": [
         "Becoming.Flow.gradedStoreDrawn",
         "Becoming.Flow.gradedStoreDrawn_gives",
@@ -385,25 +385,26 @@
       "declarations": [
         "Becoming.Flow.FedThroughStores",
         "Becoming.Flow.GivesInto",
-        "Becoming.Flow.taken_store",
-        "Becoming.Flow.storesRisen_le_given",
-        "Becoming.Flow.storesRisen_le_capacity",
+        "Becoming.Flow.needs_iff_through_short",
         "Becoming.Flow.replenishment_le_othersThrough",
         "Becoming.Flow.routedDrawn",
-        "Becoming.Flow.routedDrawn_fedThroughStores",
         "Becoming.Flow.routedDrawn_drawsPast",
+        "Becoming.Flow.routedDrawn_fedThroughStores",
         "Becoming.Flow.routedDrawn_not_gives",
-        "Becoming.Flow.needs_iff_through_short",
+        "Becoming.Flow.storesRisen_le_capacity",
+        "Becoming.Flow.storesRisen_le_given",
+        "Becoming.Flow.taken_store",
+        "Becoming.Routing.fill_needs_top",
+        "Becoming.Routing.lone_router_needed",
+        "Becoming.Routing.possible",
+        "Becoming.Routing.rise_needs_top",
+        "Becoming.Routing.router_not_needed",
+        "Becoming.Routing.top_needed",
+        "Becoming.Routing.tops_not_needed",
         "Becoming.Web.RoutesAt",
-        "Becoming.Web.storesRisen",
         "Becoming.Web.othersThrough",
         "Becoming.Web.storeNeed",
-        "Becoming.Routing.top_needed",
-        "Becoming.Routing.lone_router_needed",
-        "Becoming.Routing.router_not_needed",
-        "Becoming.Routing.tops_not_needed",
-        "Becoming.Routing.rise_needs_top",
-        "Becoming.Routing.fill_needs_top"
+        "Becoming.Web.storesRisen"
       ]
     }
   ],
@@ -587,8 +588,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261024T021740.570138Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。文献核查是显著性审查中的“依存”核查。作者审查见研究第 373、378、382 至 386、388 与 396 节；一个独立的 AI 读者核对了至第 386 节的部分，其发现在第 387 节修正。"
   },
   "next_delta": {
-    "en": "Whether need across a stretch reaches what is active only after it, and the feeding closure read with time; then more tiers, each tier's capacity read off its own supply.",
-    "zh": "跨一个区间的“所需”是否达到只在其后才活跃者，以及带着时间来读的供养闭包；然后是更多层，每层的容量从其自身供给读出。"
+    "en": "More tiers, each tier's capacity read off its own supply; the degree of need across two tiers. Need and feeding read with time are in need-and-feeding-read-with-time.",
+    "zh": "更多层，每层的容量从其自身供给读出；跨两层的被需要程度。带着时间来读的所需与供养见 need-and-feeding-read-with-time。"
   },
   "correspondence": {
     "en": "The ecological Self (Næss 1987): self-concern for a self drawn widely is care for all; here only the centers need depend on one another. The convergence hypothesis (Norton 1984, 1991) and its critics (Steverson 1995; Westra 1997): anthropocentric and nonanthropocentric policy converge within what humans need and part beyond it; here the de se and de dicto readings agree within the common closure. Transmission of reasons to necessary means (Kiesewetter 2015) against facilitative means (Raz 2005): need against feeding, parting where the others could together give what a feeder gives. Ecological redundancy (Walker 1992, 1995). Reading (the AI's, D64): human beings now plausibly lie within one another's feeding closures through one atmosphere, one biosphere and one economy.",
@@ -876,6 +877,7 @@
         "Becoming.PartAlone",
         "Becoming.Routing.fill_needs_top",
         "Becoming.Routing.lone_router_needed",
+        "Becoming.Routing.possible",
         "Becoming.Routing.rise_needs_top",
         "Becoming.Routing.router_not_needed",
         "Becoming.Routing.top_needed",
@@ -952,17 +954,17 @@
         "Becoming.withinClosure_iff_of_centersWithin",
         "Becoming.withinClosure_needs_iff"
       ],
-      "sha256": "c0fc54802fc30473db5a2f6f28e11071523085665c64a063c12938d13ec12762"
+      "sha256": "33d6ec243eec01782ba8fd9a27ed31ab63f1ad4e5a4a0d90b81ffccaafa8626b"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T021740.570138Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json",
       "role": "receipt",
-      "sha256": "2c2d2a2801b8ac67ab2ba83314a291b4cad5f5a428395491e1d1cab7e931027d"
+      "sha256": "697a9f2eaf57686cc3441d12fb1a0e56474cbde6a927c942255e4100e92941f1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "6e6c8c0c6984a708f779211eb23a4289439e61b360be17d237da925f8d07f79a"
+      "sha256": "fb50764892a348f25e42abb965690b8c8ba852ad68a64ba79b53c0037095a9c9"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -972,7 +974,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "24cd5d1f31aaf366b687f976afcc8bbe6aa1b03e303d163b9e33de2c5a1d9039"
+      "sha256": "aef030e5dfe445fb1333e2fc1cd733bb336daf51a604b085bde3fcd5eb8c8bcd"
     },
     {
       "path": "theories/becoming/history/THE-STEP-OF-INVARIANCE.md",
@@ -988,18 +990,12 @@
       "path": "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
       "role": "provenance",
       "sha256": "a8b73f284cb195d4988570c83bf5cce290a50e2945235d5b88f20affe6badf37"
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json",
-      "role": "receipt",
-      "sha256": "eccef2960be674d8ed01fcd661d1e2757e8df2ac8e01c6416fcf4db5ac57f0a9",
-      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1045,6 +1041,10 @@
     {
       "en": "24 October 2026: extended (IV3j): need across two tiers, the upper members dividing their giving among the stores and giving the stores' rises; the Routing witness; study section 396.",
       "zh": "2026年10月24日：扩展（IV3j）：跨两层的“所需”，上层成员把给予分给诸库存并补足其上升；Routing 见证；研究第 396 节。"
+    },
+    {
+      "en": "25 October 2026: corrected (IV3l) after an independent review against the Lean: each member, not a member, in the store-degree law; the two-tier witnesses shown not vacuous (Routing.possible); next step updated; study section 399.",
+      "zh": "2026年10月25日：经对照 Lean 的独立审查后修正（IV3l）：库存程度之律中为每个成员而非某成员；两层见证经证明非空真（Routing.possible）；下一步更新；研究第 399 节。"
     }
   ]
 }
