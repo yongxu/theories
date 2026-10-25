@@ -9,7 +9,7 @@ The goal is the missing connection of an existing scope, [generative alignment](
 **An alignment of the joint selection.** Humans, institutions and trained systems select together, and that joint selection is what is aligned. It is aligned where three conditions hold:
 
 1. **Control is not selected.** Capacity to shape the rule is not itself selected, because what shaping brings back to the shapers alone does not cover its cost: at each step (`c ≤ s` fails) and across the steps the selection runs (`stretch_iff`). *Being proved: MA3, its statements fixed (§3).*
-2. **A lock is left in time.** Where a lock forms, the selection leaves it by reading what lies beyond its share before the loss passes its point of no return. *Proved under named premises:* [closed capture](../../../../../../theories/becoming/results/records/closed-capture.md), with timing from MA2 (verified, not on main).
+2. **A lock is left in time.** Where a lock forms, the selection leaves it by reading what lies beyond its share before the loss passes its point of no return. *Proved under named premises:* [closed capture](../../../../../../theories/becoming/results/records/closed-capture.md), with timing from MA2 ([readers drawn from the selected](../../../../../../theories/becoming/results/records/readers-drawn-from-the-selected.md), landed 25 October).
 3. **Courses are compared by widening.** Every positive weighting ranks a widening higher, and widening ranks no narrowing above what it narrows. *Proved:* [widening by every weighting](../../../../../../theories/becoming/results/records/widening-as-what-every-weighting-ranks.md).
 
 Whose losses count is the continuation condition, and that widening is better is C. Both are named and neither is asserted.
@@ -49,12 +49,12 @@ Whose losses count is the continuation condition, and that widening is better is
 - [the alignment direction under widening](../../../../../../theories/becoming/results/records/alignment-direction-under-widening.md);
 - the theses T3 (optimization drains what lies beyond its couplings where that gives room) and T7 (a measure read from what it selects outlives its refutation), both conjectured for actual systems ([08, theses](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)).
 
-**Verified, not on main.** MA2, readers drawn from the selected:
-- branch `ma2`, tip `e8257c8ce` (22 October 2026), last merged with main that day;
-- `Becoming.ClosedCapture` gains 42 declarations, every axiom report empty;
-- record `readers-drawn-from-the-selected`.
+**Landed 25 October 2026.** MA2, readers drawn from the selected ([record](../../../../../../theories/becoming/results/records/readers-drawn-from-the-selected.md)):
+- proved on branch `ma2` on 22 October by its owner session; landed as `7bdacfc28`, on Ren's yes, on the tree merged with main after OU6 (core receipt `20261025T045617.350224Z`);
+- `Becoming.ClosedCapture` 63 theorems in 85 declarations, 42 of them MA2's, every axiom report empty;
+- home section 02 §9 (`r-readers-drawn-from-the-selected`), study §401, readings D67.
 
-It derives `ReadsShare` where each carrier's reading favours the carriers at least as much as each other's. The same readers reading the same loss turn the course if they read it in time and leave it locked if they read it late. Its owner session has been idle since that day.
+Within the pool, `ReadsShare` is equivalent to one comparison of two readings, each kind reading at least as favourably for its own kind, so the premise is moved to who reads, not removed. The same readers reading the same loss turn the course if they read it in time and leave it locked if they read it late.
 
 **Claimed, statements fixed.** MA3, selection on the capacity to shape the rule, is a new leaf module `Becoming.RuleShaping` on `RuleCapture`'s counts. A fork of the conversation that wrote this plan claimed it on 24 October 2026 and fixed its statements the same day. After an independent review they stand at 51 theorems in 57 declarations, every axiom report empty in a scratch build, not yet the checker.
 
@@ -92,10 +92,7 @@ This is the second order of the meta-attractor line ([its conditional result of 
 
 Pace, as the board's *Now* section and [08 §12](../../../../../../theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws) state it: a few lines landed come before many held open. At most two of these run at once, and now the two are MA3 and this plan.
 
-**Step 1. MA2 lands.** Unified head first: merge main into `ma2`, renumber its study section, re-render, run the core checker, then take the queue.
-- Its owner session has been idle since 22 October. By board rule 4 the claim lapses after three days without activity, about 25 October, 20:00 Asia/Bangkok, and any session may then reclaim it and land it.
-- Ren can resume the owner session sooner.
-- Nothing waits on it: MA3 builds on main alone and joins MA2 once it lands.
+**Step 1. MA2 landed** (25 October 2026, `7bdacfc28`), taken over on Ren's yes before its claim lapsed: main merged into `ma2` three times, its text carried from the retired chapter to 02 §9, its study section renumbered as other landings took 398 to 400, and the core checker run on the tree merged after OU6.
 
 **Step 2. MA3** (its owner). What this plan asks of it, for the owner to take or leave:
 - **Positioning, in its record's correspondence:**
@@ -150,7 +147,7 @@ Two further conditions: one page that a reader finishes, and positioning against
 
 ## 6. What would change the plan
 
-- **MA2 does not land.** MA3 stands on `RuleCapture` alone, and the timing of a reading stays a premise.
+- **MA2's premise is not met.** That actual rules are pools of readers drawn from those they select, each kind reading in its own favour, is not shown; where it fails, the timing of a reading is not a result for that rule.
 - **MA3 does not land as fixed.** If its join to capture (`byBack_reads_iff`, an equivalence, and `covering_locks`) does not pass the checker, the readings in step 3 that rest on MA3 are not warranted by it, and AJ4 says so.
 - **A frozen test fails where its prediction forbids.** The thesis moves.
 - **A better argument for another order.** It replaces this one; the order here is the AI's.
@@ -159,7 +156,7 @@ Two further conditions: one page that a reader finishes, and positioning against
 
 | Item | Owner | State |
 |---|---|---|
-| MA2 | its 22 October owner session; landing taken over on Ren's yes by the coordinating session of this plan | verified on `ma2`; merged with main in its worktree; in the queue after OU6 |
+| MA2 | its 22 October owner session; landing taken over on Ren's yes by the coordinating session of this plan | landed 25 October 2026 (`7bdacfc28`, core receipt `20261025T045617.350224Z`) |
 | MA3 | the fork of the unification-and-coherence conversation | statements fixed 24 October 2026 and revised after an independent review (scratch build, 51 theorems in 57 declarations); landing after OU6 |
 | AJ (this plan, AJ3's designs) | the coordinating session of this plan (fork 2 of the same conversation) | plan written; AJ3's designs start after MA3 lands |
 | AJ2, AJ4 | the third fork of the same conversation | AJ4 held since `c4dfe54cd`; AJ2 handed to it in `1c291dd29`; both after MA3 lands |
