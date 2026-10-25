@@ -21,7 +21,7 @@ It then reads these for alignment. Humans, institutions and AI systems select to
 **How it was made.** Everything in the theory was made with AI: the Lean proofs, the chapters, the readings, the tests and this dossier. No human has reviewed any of it.
 - A script copied the Lean statements from the source files ([`lean_statements.py`](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rp2-philosophy/lean_statements.py)).
 - The packet's script checks every quotation against the file it names and every Lean name against the sources.
-- The prose is AI-written and may be wrong. An independent AI reader reviewed the dossier in two passes. It found 44 problems, then 23 remaining or new ones. They were taken, in this dossier, in the readings it quotes and, by its owner, in A-10's home section. One credit in the method chapter is left to its keeper and reported below as a known weakness (A-01).
+- The prose is AI-written and may be wrong. An independent AI reader reviewed the dossier in two passes. It found 44 problems, then 23 remaining or new ones. They were taken, in this dossier, in the readings it quotes and, by their owners, in A-10's home section and in the method chapter.
 - Two results here (A-09, A-10) landed on 25 October 2026, the day this dossier was written. A-10 was revised after its own independent AI review before landing: three of its claims were narrowed and its names changed.
 - Under **Known weaknesses**, a bullet quoting a chapter, a record or a study reports a recorded weakness. One marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject.
 - Works cited outside quotations were checked against a publication record ([the kit](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/README.md)). Works named inside a quotation are the quoted text's citations.
@@ -74,7 +74,7 @@ The terms:
 **Known weaknesses.**
 - The record calls the main law near-definitional (quoted above).
 - The record also says: Quote [theories/becoming/results/records/selection-through-couplings.md]: "The laws do not derive who selects, what couples into the selector, whether an actual selection goes through the couplings". So the work lies in measuring what actually couples in.
-- [this dossier, AI] The method chapter credits Quote [theories/becoming/chapters/08-METHOD.md]: "supervisory control under partial observation (Ramadge and Wonham 1987)". That paper founds supervisory control with every event observed. Control under partial observation is Lin and Wonham (1988) and Cieslak, Desclaux, Fawaz and Varaiya (1988).
+- The method chapter's credit here was corrected on 25 October 2026 after this dossier's review. It now credits supervisory control (Ramadge and Wonham 1987) and, under partial observation, Lin and Wonham (1988) and Cieslak, Desclaux, Fawaz and Varaiya (1988).
 
 **Questions.**
 1. Is "what couples into the selector" the right primitive for reward misspecification and side effects, or does it hide what matters, such as distribution shift?
@@ -482,7 +482,7 @@ Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Neither is asserted. The
   - It cannot refute A-10: Quote [experiments/shaping-what-comes-back/PREDICTIONS-2026-10-25.md]: "So the test cannot refute MA3."
   - Quote [experiments/shaping-what-comes-back/README.md]: "The test asks whether a trained system selecting in context is a selection through what comes back to it alone, not whether the laws hold."
 
-**Standing and use.** Frozen and not run. Their model usage, at most 156 and 180 calls, waits for approval. The method chapter's table of theses, written before LA2 was frozen, still gives T7 Quote [theories/becoming/chapters/08-METHOD.md]: "none frozen".
+**Standing and use.** Frozen and not run. Their model usage, at most 156 and 180 calls, waits for approval. The method chapter's table of theses gives T7's evidence as Quote [theories/becoming/chapters/08-METHOD.md]: "LA2, a lock in a self-rewarding loop in one trained system, frozen at `36c8b79cb`, not yet run".
 
 **Known weaknesses.**
 - For LA2: Quote [experiments/self-rewarding-lock/README.md]: "A judge on which the reviewers' notes have no effect would also pass every contrast." Its frozen rules say what more a pass supports.
