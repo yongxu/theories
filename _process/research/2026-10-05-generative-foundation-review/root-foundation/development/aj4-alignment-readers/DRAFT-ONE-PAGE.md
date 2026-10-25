@@ -90,8 +90,11 @@ These are readings. Each rests on the results named. The four readings on assist
 - **MQ1 and SE1** ([experiment](../../../../../../experiments/side-effect-benchmarks/README.md)).
   - The draw on a condition the reward does not read, read against its margin, predicted which cells die and when in 8 of 8 variants; a reference baseline managed 0 of 8.
   - Given the same information, this forecast does not beat relative reachability or attainable utility preservation. It matches them where it decides, and it decides less.
-- **Frozen, or to be frozen before running:**
-  - LA1: an LLM agent choosing through its reward's feedback in a commons (thesis T3).
+- **LA1:** Claude Haiku choosing a harvesting threshold in a commons from its reward's feedback, frozen before it ran, 210 calls (thesis T3; [experiment](../../../../../../experiments/commons-llm-feedback/README.md)).
+  - The open side passed: every seed ended with restraint where restraint pays.
+  - The locked side failed. In two of four settings, two of five seeds ended with a little restraint their reward does not reward, worth 92.5% to 98.2% of the best.
+  - Post hoc, changing no verdict: every seed revised from its feedback, and the two failed settings are the two where the feedback separates the best threshold from the next least well.
+- **To be frozen before running:**
   - LA2: a lock in a self-rewarding loop, where a judge formed from the model's own selected outputs leaves a loss unread (thesis T7).
   - LA3: whether a return that is kept or shared decides the sign of selection for shaping an evaluator (result 7).
 
