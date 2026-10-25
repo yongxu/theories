@@ -489,3 +489,119 @@ Applied to the kit's Typicality, with the three lemmas removed from ConditionalW
    ```
 
 Result: Typicality 52 theorems in 72 declarations, ConditionalWeights 90 in 106. TypicalRuns, Situations, Drift, FinerTraces, SituationTraces and HistorySums keep their counts. Every axiom report is empty.
+
+## Re-check of the revision (8dfee102e)
+
+This re-check is AI-authored and covers the kit as committed at `8dfee102e`: NOTE.md, LANDING.md, `tree/Becoming/ConditionalWeights.lean` (sha256 `311e0586…1c938c16`), `tree/Becoming/Typicality.lean` (sha256 `9eacd128…de6bc98`) and `periphery/ConditionalWeightsReals.lean` (sha256 `31532e34…4477b0`).
+
+**How it was checked.**
+
+- **Rebuild.** The revised tree was rebuilt with Typicality, ConditionalWeights and the six dependents: 88 steps, all reused from the shared cache, nothing unclean. ConditionalWeights has 92 theorems in 109 declarations and Typicality 52 in 72. The six dependents keep their counts, and every axiom report is empty.
+- **Diffs.** The kit's Typicality, diffed against the landed file, is exactly the V2 amendments, plus the retitled bullet with its frequency reading.
+- **Declarations.** Comparing the declaration lists before and after confirms the renames, additions and removals the drafter lists.
+- **Probe.** Two theorems, every axiom report empty: `positive_part_zero_whole` and `reciprocal_of_impossible` (see N1 below).
+- **Periphery.** The module was recompiled against the pinned Mathlib: no error or warning, and the three standard axioms, as logged.
+
+### Verdict
+
+The revision takes the review faithfully. 18 findings are addressed and one is partly addressed (12, whose reason has a false claim), and the new Lean is correct. The re-check finds five new issues: one small error, three imprecisions and a suggestion.
+
+None blocks the core. ConditionalWeights and the Typicality change are ready to land once the three text fixes N1, N2 and N4 are made, with N3 applied to the record fields at landing. The periphery module stays out until it has a checker. Nothing in the core's Lean depends on it, and LANDING §4 keeps Gibbs' inequality unclaimed until it has a receipt.
+
+### The findings
+
+| # | Status | Note |
+|---|---|---|
+| 1 | Addressed | The Correspondence and NOTE §4.3 are in the review's words; no third part. |
+| 2 | Addressed | Near-definitional labels; the two theorems are now remarks. UE1's premise card is corrected through `ue1-fep-bridge/NOTE-CORRECTIONS.md` §1. That is the right route, since the record capture-by-counted-choices cites NOTE §3. |
+| 3 | Addressed | The premise is stated, with `prior_share` and `Witness.prior_not_share`. |
+| 4 | Addressed | |
+| 5 | Addressed | `Share.zero_whole`, `share_zero_whole`, `Witness.le_not_transitive`, and the four docstrings. One wording is too broad (N1); it came from this review's own phrasing. |
+| 6 | Addressed | `share_product_le_right` builds. |
+| 7 | Addressed | `fallsTo_succ` is by `rfl`. The bound for breaks is `fallsWithin_share` at `m + 1`. |
+| 8 | Addressed | `shows` and `carries` take `u.length = k`; `mass_record` goes through `mass_congr_mem`. |
+| 9, 10, 11 | Addressed | |
+| 12 | Partly addressed | The Lean is done: the margin lemmas moved, the binomial mean dropped and the mass helpers derived. The stated reason for leaving `whole_courses` above `transfer_weight` is false (N2). |
+| 13, 14 | Addressed | |
+| 15, 16 | Addressed | `neg_log_sum_le` in support form is the main theorem; the equality is exact. |
+| 17 | Addressed | A plan in LANDING §4; nothing is built, as appropriate. |
+| 18 | Addressed | |
+| 19 | Addressed | LANDING.md, with N3's corrections. |
+
+### New issues
+
+**N1. "A share with nothing in its whole compares either way with every share."** *Imprecision.*
+- **Location.** Module docstring, lines 25–26; `Share.zero_whole`'s bold title; LANDING §2, record (a), law 2.
+- **What is wrong.**
+  - Only `⟨0, 0⟩` compares either way with every share. `⟨1, 0⟩` lies above `⟨0, 1⟩` but not below it (probe `positive_part_zero_whole`).
+  - The reciprocal of the share of an event no course meets is such a share, `⟨2, 0⟩` over one step (probe `reciprocal_of_impossible`), and `fallsWithin_reciprocal` compares reciprocals.
+  - The wording came from finding 5 above, which was loose. NOTE §1 has it right.
+- **Fix.** "`⟨0, 0⟩`, the share of an event whose whole is nothing (`share_zero_whole`), compares either way with every share and is the same ratio as any."
+
+**N2. Weighted is not imported by most of the core.** *Error (small).*
+- **Location.** NOTE §2, the reason for leaving `whole_courses` above `transfer_weight`.
+- **What is wrong.** The NOTE says Weighted "is imported by most of the core, so the move recompiles most of it". From the package's imports, 33 of the receipt's 306 core modules depend on `Becoming.Weighted` (34 of 320 package modules).
+- **Fix.** State the number, or drop the reason. Weighted's owner's decision is the reason that stands.
+
+**N3. Record fields in LANDING §2.** *Imprecision.*
+- **What is wrong.**
+  - Record (b) lists drift-offspring-sampled as a dependency "for the balanced level". But ConditionalWeights does not import Drift, and no theorem of (b) uses the binomial means: the bounds get the balance through Typicality's step identities. It is a `related` link, not an inference edge. The same holds for margin-of-a-regime, which supplies only vocabulary.
+  - The formal reuse of `mass`, `mass_mono` and `IncludedOn` is from fulfillment-chance-floor, the record that cites them, not from sum-over-histories-exact. It belongs among the dependencies of (a) and (b).
+  - In passing: LANDING §5 says "§408 is the latest", but §409 now exists.
+
+**N4. The core docstring when it lands without the periphery.** *Imprecision.*
+- **Location.** Module docstring, lines 98–100: "free energy and its bound are stated only in the periphery, over the reals (`development/ue2-conditional-weights/periphery`)".
+- **What is wrong.** Once the core lands alone, this points from a landed module to an unchecked draft as if the result were stated.
+- **Fix.** "drafted for the periphery, over the reals, with no receipt yet (…)". LANDING §3 already asks for the same check of UE1's NOTE-CORRECTIONS §1.
+
+**N5. "Drift" in two senses.** *Suggestion.*
+- **Location.** Module docstring, lines 63–64: "by the binomial means of `Becoming.Drift` … so no drift wears the margin down"; also line 122, "a level with a drift".
+- **What is wrong.** `Becoming.Drift` is sampling drift. Here "drift" also means a mean change of the level. And the balance is arithmetic from those means, not a theorem of this module.
+- **Fix.** "no mean change wears the margin down (arithmetic from `Drift.expected_ones` and `expected_zeros`)", and "a level whose rises and falls do not balance".
+
+### What the records should and should not claim
+
+**Should claim.**
+- **(a)** The identities of counting on natural weightings of listed domains, labelled near-definitional:
+  - restriction and total weight;
+  - Bayes's rule as a ratio identity;
+  - the generative model's posterior share and the comparison of hypotheses;
+  - `prior_share` under one likelihood total;
+  - joint shares at most either share;
+  - step conjunctions over independent steps.
+
+  The reading of the reciprocal share as pointwise surprisal goes under correspondence.
+- **(b)** These laws:
+  - Chebyshev at a margin, an instance of `typical`;
+  - falling to the need within the horizon on at most n·p·q/m² of the weight, which is Kolmogorov's maximal inequality (1928) restated in counting form;
+  - breaks from m + 1;
+  - the record law, read as Markov independence given the weighting, with the weighting as T6's warranted model.
+
+  Its hypotheses: two values, natural weights, rises q and falls p (balanced by construction), independent steps, and records asked of the courses of k steps.
+- **typicality-by-counting.** The maximal law, with its caveat: the counts stay near their means at every step, and the frequencies show the weights at the horizon only.
+
+**Should not claim.**
+- any free-energy content in the core, or Gibbs' inequality as checked before the periphery has a receipt;
+- a third part for UE1, or that the exit bound is the principle's quantity: it is only the unregulated case that quantity is measured against;
+- that a level leaves every margin in time, since recurrence is not proved;
+- the near-definitional laws as substantive results of the containment;
+- the prior and likelihood readings without one likelihood total;
+- conditioning for possibility or signed counts;
+- "break" for falling to the need at m;
+- the level's balance as a law of (b), or Drift as a dependency;
+- the surprisal bound where m·m ≤ n·p·q;
+- exponential exit bounds;
+- `whole_courses` as new without saying that it lands above `Typicality.transfer_weight` until Weighted's owner decides;
+- that a share with a zero whole, as such, compares either way (only `⟨0, 0⟩` does).
+
+**Probe text** (scratch, beside unchanged copies of the revised modules):
+
+```lean
+theorem positive_part_zero_whole :
+    (⟨0, 1⟩ : Share).le ⟨1, 0⟩ ∧ ¬ (⟨1, 0⟩ : Share).le ⟨0, 1⟩ :=
+  ⟨Nat.zero_le _, fun h => (by decide : ¬ (1 * 1 ≤ 0 * 0)) h⟩
+
+theorem reciprocal_of_impossible :
+    (share (Typicality.courses 1) (Typicality.weight 1 1) (fun _ => false)).reciprocal = ⟨2, 0⟩ :=
+  rfl
+```
