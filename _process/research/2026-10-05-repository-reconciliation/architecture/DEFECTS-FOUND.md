@@ -250,3 +250,9 @@ Found by the fixers and auditors of the second round while checking every theore
 - Record fidelity-coders-on-own-and-other-texts: the statement 'neither coder under-detects referents planted in its own text' claims more than the data, which identify only the summed self effect with an interval reaching −0.05, and it contradicts the record's own does_not_show. The record statement should say that no negative combined interaction was detected.
 - 08 now states results that have no records: what a summary keeps (GenerativeCore and deeper/ReconfigurableSupportLogic, HistoryRealization), covering (Becoming.MoveOutcomeProcesses), type formation (ProductTower, GeneratedPaths), contraction (deeper/GeneratedContraction) and the self-reference limits (ReflectiveIdentity, RecognitionalBinding). regions.json or new records may want them; their anchors are section anchors, not r- anchors.
 
+## Found while re-syncing the review packet (25 October 2026, RP, study §405)
+
+- Record candidate-theorems-of-the-corpus omits the symmetry premise of «不可致诘而有常则混而为一», and the outcomes of its 59 candidates leave out the two misclassified and the one not expressible.
+- Record of the 文理生生 fidelity test says "per pair" where the measure is per 條 (the classical-texts dossier, C-35, states it per 條).
+- The frozen history file `theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md` places 損力益能轉 in 卷九 (it is in 卷十) and «被妄念浮雲蓋覆自性» in 行由品 or 般若品 (in the 宗宝本 it is in 懺悔第六, T48 no. 2008, p. 354b28). The file is frozen; the Buddhist-thought dossier gives the correct places.
+
