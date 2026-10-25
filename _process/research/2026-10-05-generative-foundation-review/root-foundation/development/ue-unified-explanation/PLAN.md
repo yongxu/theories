@@ -64,6 +64,16 @@ In the account's terms, the theory explains reality as one unfolding where four 
 
   Its shape matches a published simulation of habit and devaluation ([note](../ue1-fep-bridge/NOTE.md#4-what-the-kit-proves) §4).
 
+- **What the audit found (UE0, [audit](../ue0-third-parts/AUDIT.md)).** Of the 21 rows of 08 §8 and §9, four have a third part, three of them distinct:
+  - gated joint excess (row 7);
+  - the optimum laws (row 20, which row 19's drain is);
+  - weakly, the order of what can form (row 5).
+
+  Beyond those rows, so does Price, Fisher and Hamilton joined to the flow, which 08 §8's table lacks. Every third part joins a framework that lacks conservation, renewal over time or a threshold to a premise or law of the theory's own, and each forbidden statement is already known in a neighbouring field: critical depensation, the Malthusian bound, bioeconomic overharvesting, pinwheel scheduling. So the theory reaches farther than each framework alone, and not farther than the sciences taken together. That fixes what the objective can claim. Its contribution so far is the joining itself, one account with its premises in one place. Reaching farther than the sciences together needs results no neighbouring field states. The candidates:
+  - the second-order direction of 生生 (UE4);
+  - the audit's ranked unproved third parts: the pace of selection bounded by the inflow, a counting bound on surviving expected joint excess, what lies beyond falling along improvement;
+  - frozen tests that could fail.
+
 ## 4. The path
 
 Ordered by what each containment would show. Each item is claimed on the board before work, reviewed independently before landing, and lands through the queue.
