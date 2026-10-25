@@ -35,6 +35,28 @@ Two further rules come from how public text has failed a cold read before:
 - **Plain words.** Field-standard terms are used, and no coined word, metaphor or allusion appears in the text. Each term of the work is replaced, or explained once where the page needs it.
 - **No names in the argument.** Persons and organizations appear only in the section that gives credit. Citations taken from the AI's knowledge are marked so until they are checked against the sources.
 
+**What RP2's two review passes found** (the philosophers' dossier, `65d5fe530`, reported by the board's coordinator on 24 October 2026). The independent reader found the same fault throughout:
+- witnesses stated as laws;
+- hypotheses dropped ("exactly where", "at one step", "only vacuously");
+- theorems cited for claims of a different strength.
+
+A second pass after the fixes found eleven more. One citation recalled by the AI did not exist.
+
+So AJ4 does four things:
+- It checks quotations and Lean names with `check_dossiers.py`, and copies Lean statements exactly with the kit's `lean_statements.py` (`development/rp2-philosophy/`).
+- It checks every reference outside a quotation against a publication record, and logs the check.
+- It quotes what the chapters state only as readings as readings.
+- It treats these faults as the first thing the cold read looks for.
+
+The draft was revised for them on 24 October. The changes:
+- the definition of reading now includes what the signal depends on indirectly;
+- the "met before the step" hypothesis is restored in result 2;
+- the bounds, the "met at the start" hypothesis and the witness are restored in result 3;
+- the start condition and the threshold case are restored in result 5;
+- the exact condition in result 6;
+- the witness's values in result 7;
+- in the readings, "raises" became "gives a rule no less favourable", a witness is no longer stated as a law, and each reading says which result it is read with.
+
 ## 4. Deliverables
 
 1. **The page.** One page, readable in ten minutes: the claim, the results with their conditions and standing, the readings for alignment, what is not claimed, the tests, how to check, the closest work. Its draft is in this folder.
@@ -47,12 +69,17 @@ Two further rules come from how public text has failed a cold read before:
 2. After MA3 and MA2 land, the standings are fixed and AJ2 is written, handed to this session by AJ's owner on 24 October.
    - AJ2 is the four readings for 07's alignment section. Before drafting, check 07's owner rows on the board.
    - Each reading says what it rests on, and none rests on more:
-     - help that lowers the cost of shaping raises the selection for control, by `cheaper_raises`;
+     - help that lowers the cost of shaping gives a rule no less favourable to control, by `lower_c_raises`;
      - an assistant joined to its principal adds capacity and no coupling, by the joint-capacity record, not MA3;
      - a counter-rule read from its own share locks like the rule it replaced, by `RuleCapture` and closed capture, not MA3;
-     - shared rule-making gives shaping no advantage, and a cost then selects against it, by `favours_alike` and `open_falls`, with the `ComesBack` witness.
+     - shared rule-making gives shaping no advantage at a step, and with nothing back to the shapers at any step a cost selects against it over any stretch, by `favours_alike` and `nothing_back_falls`, with the `Split` witness. Where something comes back, the shared part can turn the verdict across a stretch (`SharedFlips`), so the reading never says the shared part selects nothing however large.
+   - MA3's names and three of its claims changed after an independent review on 24 October (AJ's plan, `aede9e490`):
+     - `byBack_reads_iff` is an equivalence, not a derivation of `ReadsShare`;
+     - only the number of steps of each kind matters, not their order, and timing binds only where the steps with something back are bounded;
+     - the verdict across a stretch depends on the base a;
+     - "correction" is retired as a dualist word.
    - The page then quotes the readings from their home section.
-   - MA2's standing comes from its landing: home section `02-MAP.md#r-readers-drawn-from-the-selected`, readings D67, study §398, and its core receipt.
+   - MA2's standing comes from its landing: home section `02-MAP.md#r-readers-drawn-from-the-selected`, readings D67, the next free study section when it lands (IV3l holds §399 and OU6 §400), and its core receipt.
 3. The citation check.
 4. The dossier, checked by script as the other dossiers are.
 5. A cold read by an independent reader before landing.

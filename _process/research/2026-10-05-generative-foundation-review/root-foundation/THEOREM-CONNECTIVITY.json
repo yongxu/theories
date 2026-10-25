@@ -1,11 +1,11 @@
 {
- "commit": "64127a32f544b3155d9e1699a541e8d71717ade3",
- "sources_match_commit": false,
- "core_receipt_at_commit": "20261024T021740.570138Z",
+ "commit": "f71b921ae8959fa56bcf61ffd5f7a1a14af2babd",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261025T041715.335885Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 319,
- "constants": 43764,
- "spine_theorems": 14556,
+ "constants": 43811,
+ "spine_theorems": 14569,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,17 +28,17 @@
  "classes": {
   "statement on both families": 1056,
   "statement on Process/Frame/Run/Trace": 2962,
-  "statement on World/Flow/Web": 3518,
+  "statement on World/Flow/Web": 3519,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 185,
   "used by a theorem on the base": 5204,
   "instance on the base recorded": 153,
-  "apart: own vocabulary": 1126,
+  "apart: own vocabulary": 1138,
   "apart: prelude-only statement": 91
  },
- "apart": 1217,
- "apart_general_structure_by_design": 484,
- "apart_otherwise": 733,
+ "apart": 1229,
+ "apart_general_structure_by_design": 488,
+ "apart_otherwise": 741,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 90,
   "of them on the base": 72,
@@ -73,15 +73,15 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 720,
- "apart_roots": 720,
+ "apart_used_by_nothing": 731,
+ "apart_roots": 731,
  "apart_roots_by_category": {
-  "model-witness": 329,
+  "model-witness": 334,
   "support": 107,
-  "general-structure": 252,
+  "general-structure": 257,
   "restates": 13,
   "logical-strength": 12,
-  "calibration": 7
+  "calibration": 8
  },
  "apart_roots_unclassified": [],
  "register_entries_not_apart_roots": [],
@@ -160,7 +160,7 @@
  "apart_by_module": {
   "Becoming.Weightings": [
    97,
-   390
+   391
   ],
   "Becoming.Reproduction": [
    80,
@@ -175,8 +175,8 @@
    66
   ],
   "Becoming.Grammar": [
-   47,
-   64
+   53,
+   70
   ],
   "Becoming.SelectionLevels": [
    47,
@@ -186,13 +186,13 @@
    40,
    42
   ],
+  "Becoming.GrammarMap": [
+   38,
+   39
+  ],
   "Becoming.GrammarScope": [
    37,
    37
-  ],
-  "Becoming.GrammarMap": [
-   35,
-   36
   ],
   "Becoming.HexagramPlaces": [
    32,
@@ -254,6 +254,10 @@
    13,
    129
   ],
+  "Becoming.GrammarReadings": [
+   12,
+   12
+  ],
   "Becoming.PropositionIdentity": [
    12,
    12
@@ -273,10 +277,6 @@
   "Becoming.HexagramSequences": [
    11,
    96
-  ],
-  "Becoming.GrammarReadings": [
-   9,
-   9
   ],
   "Becoming.Quantum": [
    9,
@@ -682,17 +682,17 @@
  "rings": {
   "core": {
    "modules": 303,
-   "theorems": 13796,
-   "apart": 1123,
+   "theorems": 13809,
+   "apart": 1135,
    "classes": {
     "statement on both families": 1042,
     "statement on Process/Frame/Run/Trace": 2751,
-    "statement on World/Flow/Web": 3493,
+    "statement on World/Flow/Web": 3494,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 174,
     "used by a theorem on the base": 4845,
     "instance on the base recorded": 153,
-    "apart: own vocabulary": 1033,
+    "apart: own vocabulary": 1045,
     "apart: prelude-only statement": 90
    }
   },
@@ -805,7 +805,7 @@
  "records_by_best_alias_class": {
   "statement on both families": 76,
   "statement on Process/Frame/Run/Trace": 135,
-  "statement on World/Flow/Web": 127,
+  "statement on World/Flow/Web": 128,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 4,
   "used by a theorem on the base": 11,
@@ -1802,7 +1802,8 @@
   "Becoming.«位核含于核»": "apart: own vocabulary",
   "Becoming.«亡于核下不变»": "apart: own vocabulary",
   "Becoming.«生于位核下不变»": "apart: own vocabulary",
-  "Becoming.«位同则四相同»": "apart: own vocabulary",
+  "Becoming.«位同则生亡同»": "apart: own vocabulary",
+  "Becoming.«位同则住同»": "apart: own vocabulary",
   "Becoming.«有常之同谓»": "apart: own vocabulary",
   "Becoming.«相须之对称»": "apart: own vocabulary",
   "Becoming.«无自相须»": "apart: own vocabulary",
@@ -1812,6 +1813,8 @@
   "Becoming.«因于则因于核»": "apart: own vocabulary",
   "Becoming.«相须则相须核»": "apart: own vocabulary",
   "Becoming.«生生不息»": "apart: own vocabulary",
+  "Becoming.«自不复生则息»": "apart: own vocabulary",
+  "Becoming.«不复生则息»": "apart: own vocabulary",
   "Becoming.«一之下皆息»": "apart: own vocabulary",
   "Becoming.«两端分则中有标»": "used by a theorem on the base",
   "Becoming.«线内同类»": "used by a theorem on the base",
@@ -1822,14 +1825,20 @@
   "Becoming.Flame.not_core_f₀": "apart: own vocabulary",
   "Becoming.«以核为判据则火无续»": "apart: own vocabulary",
   "Becoming.Flame.joint_eq": "apart: own vocabulary",
-  "Becoming.«火因于薪»": "apart: own vocabulary",
+  "Becoming.«火薪相须»": "apart: own vocabulary",
+  "Becoming.«火之见证不择类»": "apart: own vocabulary",
+  "Becoming.«两火以薪定理»": "apart: own vocabulary",
+  "Becoming.«两火同火不足以定理»": "apart: own vocabulary",
   "Becoming.«化之二说同形»": "apart: own vocabulary",
   "Becoming.«化为有缘之成坏»": "apart: own vocabulary",
   "Becoming.«同于为类»": "apart: own vocabulary",
   "Becoming.«同于不必传递»": "apart: own vocabulary",
   "Becoming.«相续之末有前»": "apart: own vocabulary",
   "Becoming.«复者住»": "apart: own vocabulary",
-  "Becoming.«有常则通»": "apart: own vocabulary",
+  "Becoming.«有常则往不穷»": "apart: own vocabulary",
+  "Becoming.«两向有常则通»": "apart: own vocabulary",
+  "Becoming.«有常而不通»": "apart: own vocabulary",
+  "Becoming.«昼夜往来不穷»": "apart: own vocabulary",
   "Becoming.«非一非异»": "apart: own vocabulary",
   "Becoming.«因灭而续»": "apart: own vocabulary",
   "Becoming.«传则异»": "apart: own vocabulary",
@@ -1839,10 +1848,11 @@
   "Becoming.«全守有终不并»": "apart: own vocabulary",
   "Becoming.«有常则无终»": "apart: own vocabulary",
   "Becoming.«有终则粗不有常»": "apart: own vocabulary",
-  "Becoming.«全生有终之定当且仅当排中»": "apart: own vocabulary",
+  "Becoming.«不穷有终之定当且仅当排中»": "apart: own vocabulary",
   "Becoming.«全生成之所及亦全生成»": "apart: own vocabulary",
   "Becoming.«有终之所前亦有终»": "apart: own vocabulary",
   "Becoming.«全三域之周»": "apart: own vocabulary",
+  "Becoming.«全三域之定当且仅当排中»": "apart: own vocabulary",
   "Becoming.«阶全生成则上无终»": "apart: own vocabulary",
   "Becoming.«相续之续»": "apart: own vocabulary",
   "Becoming.«延尽不并»": "apart: own vocabulary",
@@ -1856,6 +1866,8 @@
   "Becoming.«单行则生守不并»": "apart: own vocabulary",
   "Becoming.«延尽之定当且仅当排中»": "apart: own vocabulary",
   "Becoming.«阶生成则上不退化»": "apart: own vocabulary",
+  "Becoming.«生生即延»": "apart: own vocabulary",
+  "Becoming.«息即尽»": "apart: own vocabulary",
   "Becoming.Map.step_irrefl": "apart: own vocabulary",
   "Becoming.Map.Endless.generation": "apart: own vocabulary",
   "Becoming.Map.Still.keeping": "apart: own vocabulary",
@@ -12171,6 +12183,7 @@
   "Becoming.Routing.tops_not_needed": "statement on World/Flow/Web",
   "Becoming.Routing.rise_needs_top": "statement on World/Flow/Web",
   "Becoming.Routing.fill_needs_top": "statement on World/Flow/Web",
+  "Becoming.Routing.possible": "statement on World/Flow/Web",
   "Becoming.Overlapping.give_pos": "statement on World/Flow/Web",
   "Becoming.Overlapping.acting": "statement on World/Flow/Web",
   "Becoming.Overlapping.fed": "statement on World/Flow/Web",

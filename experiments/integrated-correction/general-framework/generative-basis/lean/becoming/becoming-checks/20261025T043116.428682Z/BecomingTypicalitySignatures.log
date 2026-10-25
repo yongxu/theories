@@ -1,0 +1,96 @@
+@Becoming.Typicality.mem_extend_true : ∀ {w : List Bool} {ws : List (List Bool)},
+  w ∈ ws → true :: w ∈ Becoming.Typicality.extend ws ∧ false :: w ∈ Becoming.Typicality.extend ws
+@Becoming.Typicality.of_mem_extend : ∀ {v : List Bool} {ws : List (List Bool)},
+  v ∈ Becoming.Typicality.extend ws → ∃ b w, v = b :: w ∧ w ∈ ws
+@Becoming.Typicality.mem_courses_iff : ∀ {n : Nat} {w : List Bool}, w ∈ Becoming.Typicality.courses n ↔ w.length = n
+Becoming.Typicality.extend_length : ∀ (ws : List (List Bool)), (Becoming.Typicality.extend ws).length = 2 * ws.length
+Becoming.Typicality.courses_length : ∀ (n : Nat), (Becoming.Typicality.courses n).length = 2 ^ n
+Becoming.Typicality.total_extend : ∀ (f : List Bool → Nat) (ws : List (List Bool)),
+  Becoming.total (Becoming.Typicality.extend ws) f = Becoming.total ws fun w => f (true :: w) + f (false :: w)
+@Becoming.Typicality.total_congr : ∀ {f g : List Bool → Nat},
+  (∀ (w : List Bool), f w = g w) → ∀ (ws : List (List Bool)), Becoming.total ws f = Becoming.total ws g
+Becoming.Typicality.total_add : ∀ (f g : List Bool → Nat) (ws : List (List Bool)),
+  (Becoming.total ws fun w => f w + g w) = Becoming.total ws f + Becoming.total ws g
+Becoming.Typicality.total_mul : ∀ (c : Nat) (f : List Bool → Nat) (ws : List (List Bool)),
+  (Becoming.total ws fun w => c * f w) = c * Becoming.total ws f
+Becoming.Typicality.total_mul_right : ∀ (c : Nat) (f : List Bool → Nat) (ws : List (List Bool)),
+  (Becoming.total ws fun w => f w * c) = Becoming.total ws f * c
+@Becoming.Typicality.total_le : ∀ {f g : List Bool → Nat},
+  (∀ (w : List Bool), f w ≤ g w) → ∀ (ws : List (List Bool)), Becoming.total ws f ≤ Becoming.total ws g
+Becoming.Typicality.total_weight : ∀ (p q n : Nat),
+  Becoming.total (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q) = (p + q) ^ n
+Becoming.Typicality.sq_add : ∀ (x q : Nat), (x + q) * (x + q) = x * x + q * (2 * x + q)
+Becoming.Typicality.square_true : ∀ (p q : Nat) (w : List Bool),
+  Becoming.Typicality.square p q (true :: w) =
+    Becoming.Typicality.square p q w + q * (2 * Becoming.Typicality.ahead q w + q)
+Becoming.Typicality.square_false : ∀ (p q : Nat) (w : List Bool),
+  Becoming.Typicality.square p q (false :: w) =
+    Becoming.Typicality.square p q w + p * (2 * Becoming.Typicality.behind p w + p)
+Becoming.Typicality.cross_true : ∀ (p q : Nat) (w : List Bool),
+  Becoming.Typicality.cross p q (true :: w) = Becoming.Typicality.cross p q w + 2 * (q * Becoming.Typicality.behind p w)
+Becoming.Typicality.cross_false : ∀ (p q : Nat) (w : List Bool),
+  Becoming.Typicality.cross p q (false :: w) = Becoming.Typicality.cross p q w + 2 * (p * Becoming.Typicality.ahead q w)
+Becoming.Typicality.split : ∀ (p W A a : Nat), p * W * (A + a) = p * (W * A) + W * (p * a)
+Becoming.Typicality.regroup : ∀ (p q u a b : Nat), p * u + a + (q * u + b) = (p + q) * u + (a + b)
+Becoming.Typicality.steps_leave : ∀ (p q x y : Nat),
+  p * (q * (2 * x + q)) + q * (p * (2 * y + p)) = p * (2 * (q * y)) + q * (2 * (p * x)) + p * q * (p + q)
+Becoming.Typicality.weighted_square : ∀ (p q : Nat) (w : List Bool),
+  Becoming.Typicality.weight p q (true :: w) * Becoming.Typicality.square p q (true :: w) +
+      Becoming.Typicality.weight p q (false :: w) * Becoming.Typicality.square p q (false :: w) =
+    (p + q) * (Becoming.Typicality.weight p q w * Becoming.Typicality.square p q w) +
+      (Becoming.Typicality.weight p q w *
+          (p * (2 * (q * Becoming.Typicality.behind p w)) + q * (2 * (p * Becoming.Typicality.ahead q w))) +
+        Becoming.Typicality.weight p q w * (p * q * (p + q)))
+Becoming.Typicality.weighted_cross : ∀ (p q : Nat) (w : List Bool),
+  Becoming.Typicality.weight p q (true :: w) * Becoming.Typicality.cross p q (true :: w) +
+      Becoming.Typicality.weight p q (false :: w) * Becoming.Typicality.cross p q (false :: w) =
+    (p + q) * (Becoming.Typicality.weight p q w * Becoming.Typicality.cross p q w) +
+      Becoming.Typicality.weight p q w *
+        (p * (2 * (q * Becoming.Typicality.behind p w)) + q * (2 * (p * Becoming.Typicality.ahead q w)))
+Becoming.Typicality.step_weight : ∀ (p q n : Nat),
+  (p + q) * (n * (p * q * (p + q) ^ n)) + p * q * (p + q) * (p + q) ^ n = (n + 1) * (p * q * (p + q) ^ (n + 1))
+Becoming.Typicality.spread : ∀ (p q n : Nat),
+  (Becoming.total (Becoming.Typicality.courses n) fun w =>
+      Becoming.Typicality.weight p q w * Becoming.Typicality.square p q w) =
+    (Becoming.total (Becoming.Typicality.courses n) fun w =>
+        Becoming.Typicality.weight p q w * Becoming.Typicality.cross p q w) +
+      n * (p * q * (p + q) ^ n)
+@Becoming.Typicality.two_mul_le_of_le : ∀ {x y : Nat}, x ≤ y → 2 * (x * y) ≤ x * x + y * y
+Becoming.Typicality.two_mul_le : ∀ (x y : Nat), 2 * (x * y) ≤ x * x + y * y
+Becoming.Typicality.offBy_le : ∀ (p q d : Nat) (w : List Bool),
+  Becoming.Typicality.offBy p q d w * d + Becoming.Typicality.weight p q w * Becoming.Typicality.cross p q w ≤
+    Becoming.Typicality.weight p q w * Becoming.Typicality.square p q w
+Becoming.Typicality.typical : ∀ (p q n d : Nat),
+  Becoming.total (Becoming.Typicality.courses n) (Becoming.Typicality.offBy p q d) * d ≤ n * (p * q * (p + q) ^ n)
+Becoming.Typicality.ones_add_zeros : ∀ (w : List Bool),
+  Becoming.Typicality.ones w + Becoming.Typicality.zeros w = w.length
+Becoming.Typicality.weight_pow : ∀ (p q : Nat) (w : List Bool),
+  Becoming.Typicality.weight p q w = p ^ Becoming.Typicality.ones w * q ^ Becoming.Typicality.zeros w
+Becoming.Typicality.weight_mul : ∀ (p q u v : Nat) (w : List Bool),
+  Becoming.Typicality.weight p q w * Becoming.Typicality.weight u v w = Becoming.Typicality.weight (p * u) (q * v) w
+@Becoming.Typicality.tilt_le : ∀ {u v : Nat},
+  v ≤ u → ∀ {k a : Nat}, k ≤ a → ∀ (b : Nat), u ^ k * v ^ (a + b) ≤ u ^ a * v ^ b * v ^ k
+Becoming.Typicality.atLeast_le : ∀ (p q k : Nat) {u v : Nat},
+  v ≤ u →
+    ∀ (w : List Bool),
+      Becoming.Typicality.atLeast p q k w * (u ^ k * v ^ w.length) ≤
+        Becoming.Typicality.weight (p * u) (q * v) w * v ^ k
+@Becoming.Typicality.total_le_mem : ∀ {f g : List Bool → Nat} (ws : List (List Bool)),
+  (∀ (w : List Bool), w ∈ ws → f w ≤ g w) → Becoming.total ws f ≤ Becoming.total ws g
+@Becoming.Typicality.total_congr_mem : ∀ {f g : List Bool → Nat} (ws : List (List Bool)),
+  (∀ (w : List Bool), w ∈ ws → f w = g w) → Becoming.total ws f = Becoming.total ws g
+Becoming.Typicality.concentrated : ∀ (p q k n : Nat) {u v : Nat},
+  v ≤ u →
+    Becoming.total (Becoming.Typicality.courses n) (Becoming.Typicality.atLeast p q k) * (u ^ k * v ^ n) ≤
+      (p * u + q * v) ^ n * v ^ k
+Becoming.Typicality.few_far_ahead : ∀ (k n : Nat),
+  Becoming.total (Becoming.Typicality.courses n) (Becoming.Typicality.atLeast 1 1 k) * 3 ^ k ≤ 4 ^ n
+Becoming.Typicality.along_weight : ∀ (p q : Nat) (s : Bool) (h : List (Unit × Bool)),
+  Becoming.counting.along (Becoming.Typicality.stepWeight p q) (fun x => 1) s h =
+    Becoming.Typicality.weight p q (List.map Prod.snd h)
+Becoming.Typicality.transfer_weight : ∀ (p q n : Nat) (s : Bool),
+  Becoming.counting.transfer (Becoming.Typicality.stepWeight p q) [()] [true, false] (fun x => 1) n s = (p + q) ^ n
+Becoming.Typicality.sum_courses_weight : ∀ (p q n : Nat) (s : Bool),
+  Becoming.counting.sum (Becoming.courses [()] [true, false] n)
+      (Becoming.counting.along (Becoming.Typicality.stepWeight p q) (fun x => 1) s) =
+    Becoming.total (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q)

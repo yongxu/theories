@@ -1,0 +1,8 @@
+Becoming.Irreversibility.deadEnd_no_return : ¬Becoming.Reach Becoming.DeadEnd.law true false
+Becoming.Irreversibility.same_change_different_return : Generative.Trace Becoming.DeadEnd.law false [()] true ∧
+  Generative.Trace Becoming.Irreversibility.flip false [()] true ∧
+    ¬Becoming.Reach Becoming.DeadEnd.law true false ∧ Becoming.Reach Becoming.Irreversibility.flip true false
+Becoming.Irreversibility.constant_reading_hides_loss : (∀ (q : Unit → Prop),
+    (∃ t, Becoming.Reach Becoming.DeadEnd.law false t ∧ q ((fun x => ()) t)) ↔
+      ∃ t, Becoming.Reach Becoming.DeadEnd.law true t ∧ q ((fun x => ()) t)) ∧
+  ¬Becoming.Reach Becoming.DeadEnd.law true false

@@ -1,0 +1,345 @@
+@Becoming.Lasting.Lasts.within : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {n : Nat} {s : S}, Becoming.Lasting.Lasts f adm guard n s → guard s
+@Becoming.Lasting.Ladder.lasts : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {C : Nat → S → Prop},
+  Becoming.Lasting.Ladder f adm guard C → ∀ (n : Nat) (s : S), C n s → Becoming.Lasting.Lasts f adm guard n s
+@Becoming.Lasting.lasts_ladder : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop},
+  Becoming.Lasting.Ladder f adm guard (Becoming.Lasting.Lasts f adm guard)
+@Becoming.Lasting.lasts_iff_ladder : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {n : Nat} {s : S}, Becoming.Lasting.Lasts f adm guard n s ↔ ∃ C, C n s ∧ Becoming.Lasting.Ladder f adm guard C
+@Becoming.Lasting.Necessary.of_lasts : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {L : Nat → S → Prop},
+  Becoming.Lasting.Necessary f adm guard L → ∀ (n : Nat) (s : S), Becoming.Lasting.Lasts f adm guard n s → L n s
+@Becoming.Lasting.lasts_necessary : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop},
+  Becoming.Lasting.Necessary f adm guard (Becoming.Lasting.Lasts f adm guard)
+@Becoming.Lasting.lasts_iff_necessary : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {n : Nat} {s : S},
+  Becoming.Lasting.Lasts f adm guard n s ↔ ∀ (L : Nat → S → Prop), Becoming.Lasting.Necessary f adm guard L → L n s
+@Becoming.Lasting.lasts_iff_of_exact : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {C : Nat → S → Prop},
+  Becoming.Lasting.Ladder f adm guard C →
+    Becoming.Lasting.Necessary f adm guard C → ∀ (n : Nat) (s : S), Becoming.Lasting.Lasts f adm guard n s ↔ C n s
+@Becoming.Lasting.prepend_admissible : ∀ {A : Type u_1} {adm : A → Prop} {a : A} {d : Nat → A},
+  adm a → (∀ (k : Nat), adm (d k)) → ∀ (k : Nat), adm (Becoming.Settling.consAct a d k)
+@Becoming.Lasting.Lasts.histories : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {n : Nat} {s : S},
+  Becoming.Lasting.Lasts f adm guard n s →
+    ∀ (d : Nat → A), (∀ (k : Nat), adm (d k)) → ∀ (k : Nat), k ≤ n → guard (Becoming.Viability.history f s d k)
+@Becoming.Lasting.lasts_of_histories : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {a₀ : A},
+  adm a₀ →
+    ∀ {n : Nat} {s : S},
+      (∀ (d : Nat → A), (∀ (k : Nat), adm (d k)) → ∀ (k : Nat), k ≤ n → guard (Becoming.Viability.history f s d k)) →
+        Becoming.Lasting.Lasts f adm guard n s
+@Becoming.Lasting.lasts_iff_histories : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {a₀ : A},
+  adm a₀ →
+    ∀ {n : Nat} {s : S},
+      Becoming.Lasting.Lasts f adm guard n s ↔
+        ∀ (d : Nat → A), (∀ (k : Nat), adm (d k)) → ∀ (k : Nat), k ≤ n → guard (Becoming.Viability.history f s d k)
+@Becoming.Lasting.Lasts.trace : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {plan : List A} {n : Nat} {s t : S},
+  Becoming.Lasting.Lasts f adm guard n s →
+    Generative.Trace (Becoming.Viability.disturbed f adm) s plan t → plan.length ≤ n → guard t
+@Becoming.Lasting.lasts_of_kernel : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  (n : Nat) {s : S},
+  Becoming.Viability.Kernel (Becoming.Viability.disturbed f adm) guard s → Becoming.Lasting.Lasts f adm guard n s
+@Becoming.Lasting.kernel_iff_lasts : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {s : S},
+  Becoming.Viability.Kernel (Becoming.Viability.disturbed f adm) guard s ↔
+    ∀ (n : Nat), Becoming.Lasting.Lasts f adm guard n s
+@Becoming.Lasting.guarded_agrees : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {guard : S → Prop}
+  [inst : DecidablePred guard] {s : S} {d : Nat → A} {n : Nat},
+  (∀ (k : Nat), k ≤ n → guard (Becoming.Viability.history f s d k)) →
+    Becoming.Viability.guardedHistory f guard s d n = some (Becoming.Viability.history f s d n)
+@Becoming.Lasting.guarded_within : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {guard : S → Prop}
+  [inst : DecidablePred guard] {s : S} {d : Nat → A} {n : Nat} {t : S},
+  Becoming.Viability.guardedHistory f guard s d (n + 1) = some t →
+    t = Becoming.Viability.history f s d (n + 1) ∧ ∀ (k : Nat), k ≤ n + 1 → guard (Becoming.Viability.history f s d k)
+@Becoming.Lasting.guarded_upto_iff : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {guard : S → Prop}
+  [inst : DecidablePred guard] {s : S} {d : Nat → A},
+  guard s →
+    ∀ {n : Nat},
+      Becoming.Viability.guardedHistory f guard s d n = some (Becoming.Viability.history f s d n) ↔
+        ∀ (k : Nat), k ≤ n → guard (Becoming.Viability.history f s d k)
+@Becoming.Lasting.guarded_none_iff : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {guard : S → Prop}
+  [inst : DecidablePred guard] {s : S} {d : Nat → A},
+  guard s →
+    ∀ {n : Nat},
+      Becoming.Viability.guardedHistory f guard s d n = none ↔
+        ¬∀ (k : Nat), k ≤ n → guard (Becoming.Viability.history f s d k)
+@Becoming.Lasting.Drains.along : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {L : Nat → S → Prop},
+  Becoming.Lasting.Drains f adm guard L →
+    ∀ (n : Nat) (s : S) (d : Nat → A),
+      (∀ (k : Nat), adm (d k)) → (∀ (k : Nat), k ≤ n → guard (Becoming.Viability.history f s d k)) → L n s
+@Becoming.Lasting.Drains.leaves : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {L : Nat → S → Prop},
+  Becoming.Lasting.Drains f adm guard L →
+    ∀ {n : Nat} {s : S},
+      ¬L n s →
+        ∀ (d : Nat → A), (∀ (k : Nat), adm (d k)) → ¬∀ (k : Nat), k ≤ n → guard (Becoming.Viability.history f s d k)
+@Becoming.Lasting.Drains.necessary : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {L : Nat → S → Prop},
+  Becoming.Lasting.Drains f adm guard L → ∀ {a₀ : A}, adm a₀ → Becoming.Lasting.Necessary f adm guard L
+Becoming.Lasting.Collapse.level_not_lasting : (Becoming.Lasting.Drains Becoming.Lasting.Collapse.step (fun x => True)
+    (fun b => b = true) fun x b => b = true) ∧
+  (fun x b => b = true) 1 true ∧
+    ¬Becoming.Lasting.Lasts Becoming.Lasting.Collapse.step (fun x => True) (fun b => b = true) 1 true
+@Becoming.Lasting.orbit_mono : ∀ {V : Type u_1} {rel : V → V → Prop} {g : V → V},
+  (∀ (a b : V), rel a b → rel (g a) (g b)) →
+    ∀ {a b : V}, rel a b → ∀ (n : Nat), rel (Becoming.Law.orbit g a n) (Becoming.Law.orbit g b n)
+@Becoming.Lasting.below_orbit : ∀ {V : Type u_1} {rel : V → V → Prop} {g : V → V},
+  (∀ (a b c : V), rel a b → rel b c → rel a c) →
+    (∀ (a b : V), rel a b → rel (g a) (g b)) →
+      ∀ {x : Nat → V} {v : V},
+        rel (x 0) v → (∀ (n : Nat), rel (x (n + 1)) (g (x n))) → ∀ (n : Nat), rel (x n) (Becoming.Law.orbit g v n)
+@Becoming.Lasting.stays_below_iff : ∀ {V : Type u_1} {rel : V → V → Prop} {g : V → V},
+  (∀ (a : V), rel a a) →
+    (∀ (a b c : V), rel a b → rel b c → rel a c) →
+      (∀ (a b : V), rel a b → rel (g a) (g b)) →
+        ∀ {v θ : V} {n : Nat},
+          (∀ (x : Nat → V), rel (x 0) v → (∀ (k : Nat), rel (x (k + 1)) (g (x k))) → ∀ (k : Nat), k ≤ n → rel (x k) θ) ↔
+            ∀ (k : Nat), k ≤ n → rel (Becoming.Law.orbit g v k) θ
+@Becoming.Lasting.small_descends : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {V : Type u_3}
+  {rel : V → V → Prop} {g : V → V},
+  (∀ (a b c : V), rel a b → rel b c → rel a c) →
+    (∀ (a b : V), rel a b → rel (g a) (g b)) →
+      ∀ {R : S → Prop} {q : S → V},
+        (∀ (x : S) (a : A), adm a → R x → rel (q (f x a)) (g (q x))) →
+          ∀ {θ : V} {k : Nat} {x : S} {a : A},
+            adm a → R x → rel (Becoming.Law.orbit g (q x) (k + 1)) θ → rel (Becoming.Law.orbit g (q (f x a)) k) θ
+@Becoming.Lasting.exhausts : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {V : Type u_3} {rel : V → V → Prop} {g : V → V},
+  (∀ (a b c : V), rel a b → rel b c → rel a c) →
+    (∀ (a b : V), rel a b → rel (g a) (g b)) →
+      ∀ {R : S → Prop} {q : S → V} {θ : V} {level : Nat → S → Prop},
+        (∀ (x : S) (a : A), adm a → R x → R (f x a)) →
+          (∀ (x : S) (a : A), adm a → R x → rel (q (f x a)) (g (q x))) →
+            (∀ (x : S), guard x → level 0 x) →
+              (∀ (k : Nat) (x : S) (a : A),
+                  R x →
+                    guard x → adm a → rel (Becoming.Law.orbit g (q x) (k + 1)) θ → level k (f x a) → level (k + 1) x) →
+                ∀ {n : Nat} {s : S},
+                  R s →
+                    rel (Becoming.Law.orbit g (q s) n) θ →
+                      ¬level n s →
+                        ∀ (d : Nat → A),
+                          (∀ (k : Nat), adm (d k)) → ¬∀ (k : Nat), k ≤ n → guard (Becoming.Viability.history f s d k)
+@Becoming.Lasting.closed_orbit : ∀ {S : Type u_1} {next : S → S} {K : S → Prop},
+  (∀ (x : S), K x → K (next x)) → ∀ {s : S}, K s → ∀ (n : Nat), K (Becoming.Law.orbit next s n)
+@Becoming.Lasting.avoids_iff_closed : ∀ {S : Type u_1} {next : S → S} {target : S → Prop} {s : S},
+  (∀ (n : Nat), ¬target (Becoming.Law.orbit next s n)) ↔
+    ∃ K, K s ∧ (∀ (x : S), K x → ¬target x) ∧ ∀ (x : S), K x → K (next x)
+@Becoming.Lasting.orbit_eq_history : ∀ {S : Type u_1} (next : S → S) (s : S) (d : Nat → Unit) (n : Nat),
+  Becoming.Law.orbit next s n = Becoming.Viability.history (Becoming.Lasting.determined next) s d n
+@Becoming.Lasting.avoids_iff_kernel : ∀ {S : Type u_1} {next : S → S} {target : S → Prop} {s : S},
+  (∀ (n : Nat), ¬target (Becoming.Law.orbit next s n)) ↔
+    Becoming.Viability.Kernel (Becoming.Viability.disturbed (Becoming.Lasting.determined next) fun x => True)
+      (fun x => ¬target x) s
+@Becoming.Lasting.some_avoids_iff : ∀ {S : Type u_1} {next : S → S} {target seed : S → Prop},
+  (∃ s, seed s ∧ ∀ (n : Nat), ¬target (Becoming.Law.orbit next s n)) ↔
+    ∃ K, (∃ s, seed s ∧ K s) ∧ (∀ (x : S), K x → ¬target x) ∧ ∀ (x : S), K x → K (next x)
+@Becoming.Lasting.none_avoid_iff : ∀ {S : Type u_1} {next : S → S} {target seed : S → Prop},
+  (∀ (s : S), seed s → ¬∀ (n : Nat), ¬target (Becoming.Law.orbit next s n)) ↔
+    ¬∃ K, (∃ s, seed s ∧ K s) ∧ (∀ (x : S), K x → ¬target x) ∧ ∀ (x : S), K x → K (next x)
+@Becoming.Lasting.reaches_excludes : ∀ {S : Type u_1} {next : S → S} {target seed : S → Prop},
+  (∀ (s : S), seed s → ∃ n, target (Becoming.Law.orbit next s n)) →
+    ¬∃ K, (∃ s, seed s ∧ K s) ∧ (∀ (x : S), K x → ¬target x) ∧ ∀ (x : S), K x → K (next x)
+@Becoming.Lasting.fixed_avoids : ∀ {S : Type u_1} {next : S → S} {target : S → Prop} {x : S},
+  next x = x → ¬target x → ∀ (n : Nat), ¬target (Becoming.Law.orbit next x n)
+@Becoming.Lasting.Funnel.reaches : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop}
+  {F : Nat → S → Prop},
+  Becoming.Lasting.Funnel f adm target F → ∀ (n : Nat) (s : S), F n s → Becoming.Lasting.Reaches f adm target n s
+@Becoming.Lasting.reaches_funnel : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop},
+  Becoming.Lasting.Funnel f adm target (Becoming.Lasting.Reaches f adm target)
+@Becoming.Lasting.reaches_iff_funnel : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} {n : Nat} {s : S},
+  Becoming.Lasting.Reaches f adm target n s ↔ ∃ F, F n s ∧ Becoming.Lasting.Funnel f adm target F
+@Becoming.Lasting.Reaches.of_target : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} (n : Nat) {s : S}, target s → Becoming.Lasting.Reaches f adm target n s
+@Becoming.Lasting.Basin.of_reaches : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} {L : Nat → S → Prop},
+  Becoming.Lasting.Basin f adm target L → ∀ (n : Nat) (s : S), Becoming.Lasting.Reaches f adm target n s → L n s
+@Becoming.Lasting.reaches_basin : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop},
+  Becoming.Lasting.Basin f adm target (Becoming.Lasting.Reaches f adm target)
+@Becoming.Lasting.reaches_iff_basin : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} {n : Nat} {s : S},
+  Becoming.Lasting.Reaches f adm target n s ↔ ∀ (L : Nat → S → Prop), Becoming.Lasting.Basin f adm target L → L n s
+@Becoming.Lasting.reaches_iff_of_exact : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} {C : Nat → S → Prop},
+  Becoming.Lasting.Funnel f adm target C →
+    Becoming.Lasting.Basin f adm target C → ∀ (n : Nat) (s : S), Becoming.Lasting.Reaches f adm target n s ↔ C n s
+@Becoming.Lasting.Reaches.succ : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop}
+  {n : Nat} {s : S}, Becoming.Lasting.Reaches f adm target n s → Becoming.Lasting.Reaches f adm target (n + 1) s
+@Becoming.Lasting.Reaches.add : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop}
+  {n : Nat} {s : S},
+  Becoming.Lasting.Reaches f adm target n s → ∀ (j : Nat), Becoming.Lasting.Reaches f adm target (n + j) s
+@Becoming.Lasting.Reaches.mono : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop}
+  {n m : Nat} {s : S}, Becoming.Lasting.Reaches f adm target n s → n ≤ m → Becoming.Lasting.Reaches f adm target m s
+@Becoming.Lasting.Reaches.trans : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target B : S → Prop}
+  {k : Nat},
+  (∀ (x : S), B x → Becoming.Lasting.Reaches f adm target k x) →
+    ∀ {m : Nat} {s : S}, Becoming.Lasting.Reaches f adm B m s → Becoming.Lasting.Reaches f adm target (k + m) s
+@Becoming.Lasting.Reaches.histories : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} {n : Nat} {s : S},
+  Becoming.Lasting.Reaches f adm target n s →
+    ∀ (d : Nat → A), (∀ (k : Nat), adm (d k)) → ∃ k, k ≤ n ∧ target (Becoming.Viability.history f s d k)
+@Becoming.Lasting.reaches_of_histories : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} [DecidablePred target] {a₀ : A},
+  adm a₀ →
+    ∀ {n : Nat} {s : S},
+      (∀ (d : Nat → A), (∀ (k : Nat), adm (d k)) → ∃ k, k ≤ n ∧ target (Becoming.Viability.history f s d k)) →
+        Becoming.Lasting.Reaches f adm target n s
+@Becoming.Lasting.reaches_iff_histories : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} [DecidablePred target] {a₀ : A},
+  adm a₀ →
+    ∀ {n : Nat} {s : S},
+      Becoming.Lasting.Reaches f adm target n s ↔
+        ∀ (d : Nat → A), (∀ (k : Nat), adm (d k)) → ∃ k, k ≤ n ∧ target (Becoming.Viability.history f s d k)
+@Becoming.Lasting.Reaches.not_lasts : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} {a₀ : A},
+  adm a₀ →
+    ∀ {n : Nat} {s : S},
+      Becoming.Lasting.Reaches f adm target n s → ¬Becoming.Lasting.Lasts f adm (fun x => ¬target x) n s
+@Becoming.Lasting.Variant.funnel : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop}
+  {n : Nat} {V : S → Nat},
+  Becoming.Lasting.Variant f adm target n V → Becoming.Lasting.Funnel f adm target fun k x => V x ≤ k ∧ V x ≤ n
+@Becoming.Lasting.Variant.reaches : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop}
+  {n : Nat} {V : S → Nat},
+  Becoming.Lasting.Variant f adm target n V → ∀ {s : S}, V s ≤ n → Becoming.Lasting.Reaches f adm target n s
+@Becoming.Lasting.reaches_iff_orbit : ∀ {S : Type u_1} {target : S → Prop} {next : S → S} {n : Nat} {s : S},
+  Becoming.Lasting.Reaches (Becoming.Lasting.determined next) (fun x => True) target n s ↔
+    ∃ k, k ≤ n ∧ target (Becoming.Law.orbit next s k)
+@Becoming.Lasting.orbit_reaches_iff_funnel : ∀ {S : Type u_1} {target : S → Prop} {next : S → S} {n : Nat} {s : S},
+  (∃ k, k ≤ n ∧ target (Becoming.Law.orbit next s k)) ↔
+    ∃ F, F n s ∧ (∀ (x : S), F 0 x → target x) ∧ ∀ (k : Nat) (x : S), F (k + 1) x → target x ∨ F k (next x)
+@Becoming.Lasting.hitTime_succ : ∀ {S : Type u_1} {target : S → Prop} {next : S → S} [inst : DecidablePred target]
+  (m : Nat) (x : S),
+  Becoming.Lasting.hitTime target next (m + 1) x =
+    if target x then 0 else Becoming.Lasting.hitTime target next m (next x) + 1
+@Becoming.Lasting.hitTime_stable : ∀ {S : Type u_1} {target : S → Prop} {next : S → S} [inst : DecidablePred target]
+  (m : Nat) (y : S),
+  Becoming.Lasting.hitTime target next m y < m →
+    Becoming.Lasting.hitTime target next (m + 1) y = Becoming.Lasting.hitTime target next m y
+@Becoming.Lasting.hitTime_of_reaches : ∀ {S : Type u_1} {target : S → Prop} {next : S → S} [inst : DecidablePred target]
+  (m : Nat) (y : S),
+  Becoming.Lasting.Reaches (Becoming.Lasting.determined next) (fun x => True) target m y →
+    Becoming.Lasting.hitTime target next (m + 1) y ≤ m
+@Becoming.Lasting.hitTime_lowers : ∀ {S : Type u_1} {target : S → Prop} {next : S → S} [inst : DecidablePred target]
+  (n : Nat) (x : S),
+  Becoming.Lasting.hitTime target next (n + 1) x ≤ n →
+    target x ∨ Becoming.Lasting.hitTime target next (n + 1) (next x) < Becoming.Lasting.hitTime target next (n + 1) x
+@Becoming.Lasting.orbit_reaches_iff_variant : ∀ {S : Type u_1} {target : S → Prop} {next : S → S} [DecidablePred target]
+  {n : Nat} {s : S},
+  (∃ k, k ≤ n ∧ target (Becoming.Law.orbit next s k)) ↔ ∃ V, V s ≤ n ∧ ∀ (x : S), V x ≤ n → target x ∨ V (next x) < V x
+@Becoming.Lasting.reaches_of_not_lasts : ∀ {S : Type u_1} {target : S → Prop} {next : S → S} [DecidablePred target]
+  {n : Nat} {s : S},
+  ¬Becoming.Lasting.Lasts (Becoming.Lasting.determined next) (fun x => True) (fun x => ¬target x) n s →
+    Becoming.Lasting.Reaches (Becoming.Lasting.determined next) (fun x => True) target n s
+@Becoming.Lasting.reaches_iff_not_lasts : ∀ {S : Type u_1} {target : S → Prop} {next : S → S} [DecidablePred target]
+  {n : Nat} {s : S},
+  Becoming.Lasting.Reaches (Becoming.Lasting.determined next) (fun x => True) target n s ↔
+    ¬Becoming.Lasting.Lasts (Becoming.Lasting.determined next) (fun x => True) (fun x => ¬target x) n s
+@Becoming.Lasting.dual_needs_decision : ∀ {S : Type u_1} {next : S → S} {s : S},
+  (∀ (target : S → Prop),
+      ¬Becoming.Lasting.Lasts (Becoming.Lasting.determined next) (fun x => True) (fun x => ¬target x) 0 s →
+        Becoming.Lasting.Reaches (Becoming.Lasting.determined next) (fun x => True) target 0 s) →
+    ∀ (p : Prop), ¬¬p → p
+@Becoming.Lasting.variant_decides : ∀ {S : Type u_1} {s : S} {n : Nat} {V : S → Nat},
+  V s ≤ n → (∀ (x : S), V x ≤ n → x = s ∨ V x < V x) → ∀ (x : S), x = s ↔ V x ≤ n
+@Becoming.Lasting.numeric_needs_decision : ∀ {S : Type u_1},
+  (∀ (next : S → S) (target : S → Prop) (n : Nat) (s : S),
+      (∃ k, k ≤ n ∧ target (Becoming.Law.orbit next s k)) →
+        ∃ V, V s ≤ n ∧ ∀ (x : S), V x ≤ n → target x ∨ V (next x) < V x) →
+    ∀ (x y : S), x = y ∨ ¬x = y
+Becoming.Lasting.Search.every_history : ∀ (g : Nat → Bool) (d : Nat → Nat),
+  (∀ (k : Nat), (fun x => True) (d k)) →
+    ∃ k, k ≤ 1 ∧ Becoming.Lasting.Search.found g (Becoming.Viability.history Becoming.Lasting.Search.step none d k)
+Becoming.Lasting.Search.reaches_iff_lpo : ∀ (g : Nat → Bool),
+  Becoming.Lasting.Reaches Becoming.Lasting.Search.step (fun x => True) (Becoming.Lasting.Search.found g) 1 none ↔
+    (∃ b, g b = true) ∨ ∀ (a : Nat), g a = false
+Becoming.Lasting.Search.histories_need_decision : (∀ (g : Nat → Bool),
+    (∀ (d : Nat → Nat),
+        (∀ (k : Nat), (fun x => True) (d k)) →
+          ∃ k,
+            k ≤ 1 ∧
+              Becoming.Lasting.Search.found g (Becoming.Viability.history Becoming.Lasting.Search.step none d k)) →
+      Becoming.Lasting.Reaches Becoming.Lasting.Search.step (fun x => True) (Becoming.Lasting.Search.found g) 1 none) →
+  ∀ (g : Nat → Bool), (∃ b, g b = true) ∨ ∀ (a : Nat), g a = false
+@Becoming.Lasting.Continues.down : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (n : Nat) (s : S),
+  Becoming.Lasting.Continues P (n + 1) s → Becoming.Lasting.Continues P n s
+@Becoming.Lasting.Continues.decided : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Lasting.FinitelyBranching P → ∀ (n : Nat) (s : S), Becoming.Decided (Becoming.Lasting.Continues P n s)
+@Becoming.Lasting.list_throughout_not_not : ∀ {β : Type u_1} {Q : Nat → β → Prop},
+  (∀ (k : Nat) (b : β), Becoming.Decided (Q k b)) →
+    (∀ (k : Nat) (b : β), Q (k + 1) b → Q k b) →
+      ∀ (l : List β), (∀ (k : Nat), ∃ b, b ∈ l ∧ Q k b) → ¬¬∃ b, b ∈ l ∧ ∀ (k : Nat), Q k b
+@Becoming.Lasting.Unbounded.successors : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Lasting.Unbounded P s →
+    ∀ {l : List S},
+      (∀ (t : S), (∃ a, P.step s a t) ↔ t ∈ l) → ∀ (k : Nat), ∃ t, t ∈ l ∧ Becoming.Lasting.Continues P k t
+@Becoming.Lasting.Unbounded.step_not_not : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Lasting.FinitelyBranching P →
+    ∀ {s : S}, Becoming.Lasting.Unbounded P s → ¬¬∃ t, (∃ a, P.step s a t) ∧ Becoming.Lasting.Unbounded P t
+@Becoming.Lasting.Unbounded.step_of_either : ∀ {S : Type u_1} {A : Type u_2},
+  Becoming.EitherThroughout →
+    ∀ {P : Generative.Process S A},
+      Becoming.Lasting.FinitelyBranching P →
+        ∀ {s : S}, Becoming.Lasting.Unbounded P s → ∃ t, (∃ a, P.step s a t) ∧ Becoming.Lasting.Unbounded P t
+@Becoming.Lasting.unbounded_start_of_either : ∀ {S : Type u_1} {A : Type u_2},
+  Becoming.EitherThroughout →
+    ∀ {P : Generative.Process S A},
+      Becoming.Lasting.FinitelyBranching P →
+        ∀ (starts : List S),
+          (∀ (n : Nat), ∃ s, s ∈ starts ∧ Becoming.Lasting.Continues P n s) →
+            ∃ s, s ∈ starts ∧ Becoming.Lasting.Unbounded P s
+@Becoming.Lasting.runOf_start : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : S → Prop}
+  (select : (s : S) → K s → { p // P.step s p.fst p.snd ∧ K p.snd }) (s : S) (held : K s),
+  (Becoming.Lasting.runOf select s held).state 0 = s
+@Becoming.Lasting.runOf_within : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : S → Prop}
+  (select : (s : S) → K s → { p // P.step s p.fst p.snd ∧ K p.snd }) (s : S) (held : K s) (n : Nat),
+  K ((Becoming.Lasting.runOf select s held).state n)
+@Becoming.Lasting.lifting : ∀ {S : Type u_1} {A : Type u_2},
+  Becoming.EitherThroughout →
+    ∀ {P : Generative.Process S A},
+      Becoming.Lasting.FinitelyBranching P →
+        ∀
+          (choose :
+            (s : S) →
+              (∃ t, (∃ a, P.step s a t) ∧ Becoming.Lasting.Unbounded P t) →
+                { p // P.step s p.fst p.snd ∧ Becoming.Lasting.Unbounded P p.snd })
+          {s : S},
+          Becoming.Lasting.Unbounded P s → ∃ r, r.state 0 = s ∧ ∀ (n : Nat), Becoming.Lasting.Unbounded P (r.state n)
+@Becoming.Lasting.TwoChains.branching : ∀ {α β : Nat → Prop},
+  (∀ (k : Nat), Becoming.Decided (α k)) →
+    (∀ (k : Nat), Becoming.Decided (β k)) → Becoming.Lasting.FinitelyBranching (Becoming.Lasting.TwoChains.process α β)
+@Becoming.Lasting.TwoChains.chain_continues : ∀ {α β : Nat → Prop} {b : Bool},
+  (∀ (k : Nat), Becoming.Chains.Side α β b (k + 1) → Becoming.Chains.Side α β b k) →
+    ∀ (n m : Nat),
+      Becoming.Chains.Side α β b (n + m) →
+        Becoming.Lasting.Continues (Becoming.Lasting.TwoChains.process α β) n (Becoming.Chains.Pos.on b m)
+@Becoming.Lasting.TwoChains.chain_holds : ∀ {α β : Nat → Prop} {b : Bool} (n m : Nat),
+  Becoming.Lasting.Continues (Becoming.Lasting.TwoChains.process α β) (n + 1) (Becoming.Chains.Pos.on b m) →
+    Becoming.Chains.Side α β b (m + n)
+@Becoming.Lasting.TwoChains.two_unbounded : ∀ {α β : Nat → Prop},
+  (∀ (k : Nat), α (k + 1) → α k) →
+    (∀ (k : Nat), β (k + 1) → β k) →
+      (∀ (k : Nat), α k ∨ β k) →
+        Becoming.Lasting.Unbounded (Becoming.Lasting.TwoChains.process α β) Becoming.Chains.Pos.two
+@Becoming.Lasting.TwoChains.side_of_unbounded : ∀ {α β : Nat → Prop} {b : Bool},
+  Becoming.Lasting.Unbounded (Becoming.Lasting.TwoChains.process α β) (Becoming.Chains.Pos.on b 0) →
+    ∀ (k : Nat), Becoming.Chains.Side α β b k
+Becoming.Lasting.step_iff_either : (∀ (S A : Type) (P : Generative.Process S A),
+    Becoming.Lasting.FinitelyBranching P →
+      ∀ (s : S), Becoming.Lasting.Unbounded P s → ∃ t, (∃ a, P.step s a t) ∧ Becoming.Lasting.Unbounded P t) ↔
+  Becoming.EitherThroughout
+Becoming.Lasting.Fan.arm_continues : ∀ (j k n : Nat),
+  k + j ≤ n → Becoming.Lasting.Continues Becoming.Lasting.Fan.process j (Becoming.Lasting.Fan.Pos.arm n k)
+Becoming.Lasting.Fan.arm_bounded : ∀ (j k n : Nat),
+  k ≤ n → Becoming.Lasting.Continues Becoming.Lasting.Fan.process j (Becoming.Lasting.Fan.Pos.arm n k) → k + j ≤ n
+Becoming.Lasting.Fan.root_unbounded : Becoming.Lasting.Unbounded Becoming.Lasting.Fan.process
+  Becoming.Lasting.Fan.Pos.root
+Becoming.Lasting.Fan.no_unbounded_step : ¬∃ t,
+    (∃ a, Becoming.Lasting.Fan.process.step Becoming.Lasting.Fan.Pos.root a t) ∧
+      Becoming.Lasting.Unbounded Becoming.Lasting.Fan.process t

@@ -1,0 +1,63 @@
+<a id="future-path"></a>
+### 4.6 The future without the step: one path
+
+The step of invariance extends scope to losses that return to no one. Read with time, those losses include everything after every present center has ended, the future that the condition's "continuation into the future" names. This section joins §4.3 and §4.5 into one path that reaches part of that future with no step of invariance, and says where it can be denied.
+
+<a id="r-what-a-line-holds-and-a-regularity-takes-in"></a>
+**Theorem** (root; any type, and witnesses). *What a line must hold, and what a regularity takes in.*
+
+- **What a line must pass, its class must hold.** Where a region, given by a decided predicate, is left under a class only into a set of occurrences, a line under that class from inside the region to outside holds a member of that set alike to its start, and reaches it (`«所经必同»`). Where the class holds none of them alike to the start, nothing outside is reached (`«所经不同则不及»`).
+- **Holding a member's effects.** Say a class holds a member's effects where everything the member conditions is alike to it (`«所缘同于»`). Under a constant class, everything downstream of anything alike to such a member is alike to it and lies on a line under the class from there, so a line that reaches it reaches all that follows (`«常闭则后皆续»`, `«常闭则所及皆及»`). Given constancy, holding a member's effects is equivalent to everything downstream of it being alike to it (`«常类之闭当且仅当后皆同类»`): the backward direction is the one-step case, and the forward direction is constancy's work.
+- **Up to the net's end.** A class is *constant up to the net's end* where whatever an alike occurrence conditions, this one conditions something alike to it, unless this one conditions nothing (`«至终有常»`); a line under it ends only at an occurrence that conditions nothing. Constancy gives it (`«有常则至终有常»`). A relation under which a line ends at an occurrence that still conditions something lacks it (`«亡而网续则不至终有常»`). Under it the same laws hold, for a member that conditions something (needed where the start is another occurrence alike to it) (`«至终常闭则后皆续»`, `«至终常闭则所及皆及»`, `«至终常类之闭当且仅当后皆同类»`).
+- **Witnesses.** Neither premise can be dropped:
+  - where a member's line runs through a condition but the member's effects leave its class, a constant class holding the member with the condition does not reach what the condition feeds (`Unclosed.not_taken_in`);
+  - where the class is not constant even up to the net's end, a class holding a member's effects need not have what follows them alike to it (`Inconstant.not_all_follow`).
+
+  In a finite net with two families, each of two members in turn:
+  - the one is not constant (`FiniteFamilies.one_not_constant`);
+  - the class of one family, narrower than the one, is constant up to the net's end, takes in everything downstream of the family's first birth and reaches nothing of the other family (`FiniteFamilies.family_narrower`, `FiniteFamilies.family_constant_to_end`, `FiniteFamilies.family_takes_in_all`, `FiniteFamilies.other_family_outside`);
+  - the organism's class is not constant up to the net's end, its line ending at old age while the net goes on (`FiniteFamilies.member_not_constant_to_end`).
+
+  In a finite net with two families sharing a condition they affect, and a fourth thing joined to nothing, every premise holds at once. The class holding the families with their condition:
+  - is narrower than the one (`FiniteSharedCondition.held_narrower`);
+  - is constant up to the net's end (`FiniteSharedCondition.held_constant_to_end`);
+  - holds the first member's effects (`FiniteSharedCondition.first_birth_held`).
+
+  Its line from the first family's first birth reaches the second family past the first member's end (`FiniteSharedCondition.reaches_other_past_end`) and never the fourth thing (`FiniteSharedCondition.fourth_outside`). The member's class is not constant up to the net's end (`FiniteSharedCondition.member_not_constant_to_end`), and the one is not constant (`FiniteSharedCondition.one_not_constant`).
+
+([record](../results/records/what-a-line-holds-and-a-regularity-takes-in.md), [`Becoming.GrammarPath`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean))
+
+**Argument** [AI reading; each step cites its Lean, and the joining of the steps is argued]. Premises:
+
+- (P1) Held de se, acting presupposes that one's own continuation has significance ([§4.1](#decomposition)).
+- (P2) The self whose continuation is presupposed is a line under a class on the root ([§4.5](#condition-on-the-root)), and that class is constant up to the net's end: a regularity of its own, whose line ends only where the net itself ends.
+- (P3) One's line runs through the conditions one affects.
+- (P4) The class of one's line holds one's effects: everything one conditions is alike to oneself.
+
+Steps:
+
+1. *Need does not reach the future.* Over flows in which only active formations give, a formation active at no step of the stretch a continuation is read across is needed only where nothing lets that continuation go on (`Flow.needs_iff_none_of_inactive`). Read with time, the feeding closure holds, besides its formation, only what gives by then (`Flow.gives_of_withinFeedingUpTo`), and read across every step it can overreach (`Overlapping.closure_overreaches`) ([§4.3](#r-need-and-feeding-read-with-time)). So the future is reached, if at all, along a line, not along need.
+2. *A line goes on past a member's end.* Under a coarser class, what continues an occurrence at which a finer line ends is reached (`«过亡而续»`). In the witness of two family lines that share nothing, a family line is narrower than the one (`TwoLines.between`) and constant, since every family line there goes on without end (`TwoLines.family_constant`), and it carries the line with its core through each birth while each member's line ends (`TwoLines.core_through_birth`); every line stays within its family (`TwoLines.line_in_family`), so even the line under the one from one family's first birth does not reach the other's (`TwoLines.other_line_outside`; [01](01-ROOT.md#r-the-source-texts-test-systems)). In a finite net, where no family goes on without end, a family's class is still constant up to the net's end and the organism's is not (`FiniteFamilies`, above). In time, self-concern alone is kin-shaped.
+3. *The class must hold one of the conditions the line passes* (`«所经必同»`). The shared-condition witness is a case: a class holding both families' members without the condition reaches no member of the other family (`SharedCondition.affecting_member_outside`).
+4. *What one's class holds with one, it carries on to all that follows.* Under P2 and P4, everything downstream of one's acts lies on one's line, and everything downstream of whatever one's class holds with one is alike to one and lies on a line under the class from there, on one's own line wherever one's line reaches it (`«至终常闭则后皆续»`, `«至终常闭则所及皆及»`). The witnesses read narrowly:
+   - Under the one, the line from the first family's first member reaches the second family's member two generations on, through the condition its members affect (`SharedCondition.affecting_reaches_other`), and through a common cause it reaches none (`SharedCondition.fed_outside`).
+   - A constant class holding a stage of the condition with a member holds the third thing's stage that the condition feeds alike with what the member conditions next (`ThirdFed.constant_takes_third`).
+   - What only affects the condition can be left out (`ThirdAffects.finer_class_reaches`).
+   - In a finite net the parts hold together: the class holding the families with their condition, narrower than the one, reaches the second family past the first member's end (`FiniteSharedCondition`, above).
+
+*Conclusion.* Under P1–P4, one's concern for one's own continuation reaches everything downstream of what one conditions (`«至终常闭则所及皆及»`): across lines where the conditions one affects feed them, and past one's own end. That is a law, not only a reading of witnesses. Its parts, which `TwoLines` and `SharedCondition` show apart, hold together in `FiniteSharedCondition`. It needs no step of invariance and does not choose the one. Given the regularity of P2, P4 is equivalent to everything downstream of one's acts being alike to oneself (`«至终常类之闭当且仅当后皆同类»`), and what is alike to oneself downstream lies on one's line from there (`«至终常闭则后皆续»`). So the reach rests on one premise, holding one's effects, carried on by the regularity. The regularity does real work: without it, holding one's effects gives nothing beyond the first step (`Inconstant`), and without P4 the regularity gives nothing beyond the class (`Unclosed`).
+
+*What the path does not reach.* Each center counting from another's standpoint beyond its part as a condition. What affects one's conditions without being fed by them, counted as more than a cause. Present beings beyond every closure. Whatever no chain joins. These remain the step's.
+
+*Where it can be denied.*
+
+- **P2 and P4 are the crux.**
+  - Constancy itself lets no line end after its first step (`«有常则相续不尽»`). So in a net where every line ends no class under which anything continues is constant, the one included. That is an inference from the law; the finite witnesses show it for the one (`FiniteFamilies.one_not_constant`, `FiniteSharedCondition.one_not_constant`). P2 asks for constancy up to the net's end instead. That condition does tell a family's class, and the class holding the families with their condition, from the organism's.
+  - The organism's class fails P2 wherever its last stage conditions anything (`«亡而网续则不至终有常»`): its line ends while what it conditions goes on, so it is no regularity of its own. Denying P2 is coherent, since one can presuppose the significance of a line that ends.
+  - Denying P4 is also coherent: one can hold only some of one's effects as one's own. But the effects that are one's own later stages are themselves conditioned through what one takes in, so such a partial holding draws its line by the identity in question [AI reading].
+
+  The questions the path leaves, put to philosophers in the [review packet](../review/README.md): *in acting, does one presuppose the significance of a line that ends, or of the regularity one's acts keep going?* And *are one's effects one's own, in the sense of whose losses count, not of what one answers for?*
+- **P3 is a correspondence.** The laws of renewal support it ([04](04-LIFE.md#r-generation-is-replenishment)), but it is not shown for actual selves. Nor is it shown that the actual net is joined, or in which direction.
+
+The argument is set out with its history in [PW's note](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md#6f-where-pw-stands-24-october-2026-ai-reading) and a first round of philosophical work in [PF's study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-1.md).
+

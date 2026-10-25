@@ -1,0 +1,68 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean b/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/proposed/GrammarCases.lean
+index fd393933c..2779f4c2f 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean
++++ b/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/proposed/GrammarCases.lean
+@@ -1,5 +1,6 @@
+ import Becoming.GrammarScope
+ import Becoming.GrammarTesting
++import Becoming.GrammarPath
+ 
+ /-!
+ # Test systems of the source texts as small witnesses of the grammar (诸例)
+@@ -350,36 +351,30 @@ theorem affecting_reaches_other : «所及» affecting «一» (.a 0) (.b 2) :=
+   have second : «续» affecting «一» (.r 1) (.b 2) := ⟨rfl, trivial⟩
+   .inr («及».more first (.one second))
+ 
+-/-- A step under the class of being a member or not, from a member of the first family, stays in it. -/
+-theorem affecting_member_step {m : Nat} {y : Occ} (c : «续» affecting (sameValue living) (.a m) y) : ∃ k, y = .a k :=
+-  match y, c with
+-  | .a k, _ => ⟨k, rfl⟩
+-  | .b _, c => False.elim c.1
+-  | .r _, c => absurd c.2 (fun h => Bool.noConfusion h)
++/-- Whether an occurrence is a member of the first family. -/
++def firstFamily : Occ → Bool
++  | .a _ => true
++  | .b _ => false
++  | .r _ => false
+ 
+-/-- A line under the class of being a member or not, from a member of the first family, stays in the
+-first family. -/
+-theorem affecting_member_stays {x y : Occ} (line : «相续» affecting (sameValue living) x y) :
+-    ∀ m, x = .a m → ∃ k, y = .a k := by
+-  induction line with
+-  | one c =>
+-    intro m e
+-    subst e
+-    exact affecting_member_step c
+-  | more c _ ih =>
+-    intro m e
+-    subst e
+-    match affecting_member_step c with
+-    | ⟨k, e'⟩ => exact ih k e'
++/-- Along `affecting`, the first family is left only into the shared condition. -/
++theorem first_left_into_condition (u v : Occ) (inside : firstFamily u = true) (s : affecting u v)
++    (outside : firstFamily v = false) : ∃ k, v = .r k :=
++  match u, v, inside, s, outside with
++  | .a _, .r k, _, _, _ => ⟨k, rfl⟩
++  | .a _, .b _, _, s, _ => False.elim s
++  | .a _, .a _, _, _, e => Bool.noConfusion e
++  | .b _, _, e, _, _ => Bool.noConfusion e
++  | .r _, _, e, _, _ => Bool.noConfusion e
+ 
+ /-- **Under "a member or not", the other line is not reached**: that class holds both families' members
+ alike and the condition apart, and its line from the first family's first member reaches no member of
+-the second. -/
+-theorem affecting_member_outside (n : Nat) : ¬ «所及» affecting (sameValue living) (.a 0) (.b n) := fun reached =>
+-  match reached with
+-  | .inl e => Occ.noConfusion e
+-  | .inr line => match affecting_member_stays line 0 rfl with
+-    | ⟨_, e⟩ => Occ.noConfusion e
++the second. The first family is left only into the condition, which the class holds apart from the
++member (`«所经不同则不及»`). -/
++theorem affecting_member_outside (n : Nat) : ¬ «所及» affecting (sameValue living) (.a 0) (.b n) :=
++  «所经不同则不及» (sameValue_class living)
++    (fun u v inside s outside => first_left_into_condition u v inside s.1 outside) rfl rfl
++    (fun _ ⟨_, e⟩ alike => by subst e; exact Bool.noConfusion alike)
+ 
+ /-- A step along `fed`, from a member of the first family, stays in it. -/
+ theorem fed_step {E : «际» Occ} {m : Nat} {y : Occ} (c : «续» fed E (.a m) y) : ∃ k, y = .a k :=

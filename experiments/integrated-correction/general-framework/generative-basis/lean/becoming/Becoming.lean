@@ -2080,13 +2080,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   elsewhere every need holds vacuously (`Flow.possible_iff_covers`); wherever a flow is possible, a
   feeder's degree of need, the least it gives while the consumer draws past the stock, is the sum of
   what each step demands beyond what the others can give (`Flow.least_giving_of_possible`;
-  `Capacities.second_in_degree`), and so it is with capacities read off the feeders' own stores
-  (`Flow.least_giving_from_stores`; `OwnStores.first_in_degree`). Across two tiers, lower members passing on
+  `Capacities.second_in_degree`), and with capacities read off the feeders' own stores the bound holds
+  and is attained where the feeder can give each shortfall (`Flow.least_giving_from_stores`;
+  `OwnStores.first_in_degree`). Across two tiers, lower members passing on
   what they take from their own stores and upper members giving the stores within their capacities, a
   formation's giving into the hierarchy is needed exactly where, at some step, the other upper members
   cannot give what the stores rise or the others cannot give the demand through the hierarchy
-  (`Flow.needs_iff_through_short`; `Routing`). Read with time, need reaches only what is active within
-  the stretch it is read across (`Flow.needs_iff_none_of_inactive`), and a feeding closure up to a step
+  (`Flow.needs_iff_through_short`; `Routing`). Read with time, over flows in which only active formations
+  give, need reaches, except vacuously, only what is active within the stretch it is read across
+  (`Flow.needs_iff_none_of_inactive`), and a feeding closure up to a step holds, besides its formation,
   only what gives by then (`Flow.gives_of_withinFeedingUpTo`), while the closure read across every step
   can run past the end of what it carries (`Overlapping.closure_overreaches`). The readings are the AI's
   (D59, D60, D64).
@@ -2290,9 +2292,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   onto it (board item OU3).
 * `Becoming.GrammarReadings` (L0): the corpus's definitions in the grammar. The 墨经's and the
   荀子's 化 are one form, alteration (`«化之二说同形»`), and 化 is the 金师子章's 成坏 along 缘
-  (`«化为有缘之成坏»`); the 墨经's 同 is a class exactly where belonging is to one only
-  (`«同于为类»`, `«同于不必传递»`); a returning occurrence abides (`«复者住»`) and under a constant
-  class a line with a past never ends (`«有常则通»`); in a net without self-conditioning,
+  (`«化为有缘之成坏»`); the 墨经's 同 is a class where each belongs to one and one only (sufficient,
+  `«同于为类»`) and otherwise need not be transitive (`«同于不必传递»`); a returning occurrence
+  abides (`«复者住»`); 通 is going along 缘 and coming along its converse without end: under a
+  constant class a line with a past never ends going (`«有常则往不穷»`), what abides passes through
+  where a class is constant both ways (`«两向有常则通»`), and constancy one way is not enough
+  (`«有常而不通»`); in a net without self-conditioning,
   continuation is neither identity nor mere difference (`«非一非异»`), and the 中论's 「因即為斷滅」
   holds under identity while the line continues under a coarser class (`«因灭而续»`). A leaf.
 * `Becoming.GrammarMap` (L0): the map of generation, keeping and degeneration, read at two
@@ -2302,11 +2307,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   exclude each other (`«延尽不并»`); generation (`«生成»`: some branch renews without end), keeping
   (`«守»`: some branch goes on without renewal) and degeneration (`«退化»`: every branch ends) are
   read on branches, generation and keeping can hold at one point (`Map.«生守相杂»`, the mixed
-  region) and exclude each other on a single line (`«单行则生守不并»`); the every-branch forms
-  (`«全生成»`, `«全守»`, `«有终»`) are their strong and weak cases. Renewal does not decide the
-  region (`Map.Short.renews_and_ends_everywhere`); telling going on from ending at every point is
-  exactly excluded middle (`«延尽之定当且仅当排中»`); a chain of classes reads generation at every
-  order (`«阶生成»`). A leaf.
+  region) and exclude each other on a single line (`«单行则生守不并»`); the strong forms read the
+  whole coarse line (`«全生成»`, `«全守»`, and `«有终»`, reaching an end, which is not
+  degeneration). Renewal does not decide the region (`Map.Short.renews_and_ends_everywhere`);
+  telling going on from ending at every point is exactly excluded middle (`«延尽之定当且仅当排中»`);
+  a sequence of classes, no order between them assumed, reads generation at every order
+  (`«阶生成»`); renewal without end and ceasing are going on along some branch and ending on every
+  branch of renewing into (`«生生即延»`, `«息即尽»`). A leaf.
 * `Becoming.MapInstances` (L2): the old base's regimes on the map, with occurrences as pairs of a
   step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
   alike in activity and formation. Carrying renewal is a step into an occurrence whose formation

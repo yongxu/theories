@@ -1,0 +1,220 @@
+@Becoming.Cuts.link_symm : ∀ {F : Type} {a b g h : F}, Becoming.Cuts.Link a b g h → Becoming.Cuts.Link a b h g
+@Becoming.Cuts.within_congr : ∀ {F : Type} {rel rel' : F → F → Prop},
+  (∀ (g h : F), rel g h ↔ rel' g h) → ∀ {f g : F}, Becoming.WithinClosure rel f g ↔ Becoming.WithinClosure rel' f g
+@Becoming.Cuts.within_of_steps : ∀ {F : Type} {rel rel' : F → F → Prop},
+  (∀ (g h : F), rel g h → Becoming.WithinClosure rel' g h) →
+    ∀ {f g : F}, Becoming.WithinClosure rel f g → Becoming.WithinClosure rel' f g
+@Becoming.Cuts.closure_unchanged_iff_bypassed : ∀ {F : Type} {rel added : F → F → Prop},
+  (∀ (f g : F), Becoming.WithinClosure (Becoming.Cuts.Joined rel added) f g ↔ Becoming.WithinClosure rel f g) ↔
+    ∀ (g h : F), added g h → Becoming.WithinClosure rel g h
+@Becoming.Cuts.link_cut_unchanged_iff : ∀ {F : Type} {rel : F → F → Prop} {a b : F},
+  (∀ (f g : F),
+      Becoming.WithinClosure (Becoming.Cuts.Joined rel (Becoming.Cuts.Link a b)) f g ↔ Becoming.WithinClosure rel f g) ↔
+    Becoming.WithinClosure rel a b ∧ Becoming.WithinClosure rel b a
+@Becoming.Cuts.link_cut_unchanged_iff_of_symm : ∀ {F : Type} {rel : F → F → Prop} {a b : F},
+  (∀ (g h : F), rel g h → rel h g) →
+    ((∀ (f g : F),
+        Becoming.WithinClosure (Becoming.Cuts.Joined rel (Becoming.Cuts.Link a b)) f g ↔
+          Becoming.WithinClosure rel f g) ↔
+      Becoming.WithinClosure rel a b)
+@Becoming.Cuts.within_link_iff : ∀ {F : Type} {rel : F → F → Prop} {a b f g : F},
+  Becoming.WithinClosure (Becoming.Cuts.Joined rel (Becoming.Cuts.Link a b)) f g ↔
+    Becoming.WithinClosure rel f g ∨
+      Becoming.WithinClosure rel f a ∧ Becoming.WithinClosure rel b g ∨
+        Becoming.WithinClosure rel f b ∧ Becoming.WithinClosure rel a g
+@Becoming.Cuts.within_of_unlinked : ∀ {F : Type} {rel : F → F → Prop} {n g : F},
+  Becoming.Cuts.Unlinked rel n → Becoming.WithinClosure rel n g → g = n
+@Becoming.Cuts.not_within_unlinked : ∀ {F : Type} {rel : F → F → Prop} {n f : F},
+  Becoming.Cuts.Unlinked rel n → f ≠ n → ¬Becoming.WithinClosure rel f n
+@Becoming.Cuts.within_attached_iff : ∀ {F : Type} {rel : F → F → Prop} {p n f g : F},
+  Becoming.Cuts.Unlinked rel n →
+    f ≠ n →
+      g ≠ n →
+        (Becoming.WithinClosure (Becoming.Cuts.Joined rel (Becoming.Cuts.Link p n)) f g ↔
+          Becoming.WithinClosure rel f g)
+@Becoming.Cuts.links_symm : ∀ {F : Type} {es : List (F × F)} {g h : F},
+  Becoming.Cuts.Links es g h → Becoming.Cuts.Links es h g
+@Becoming.Cuts.links_split : ∀ {F : Type} {e : F × F} {newer older : List (F × F)} {g h : F},
+  Becoming.Cuts.Links (newer ++ e :: older) g h ↔
+    Becoming.Cuts.Joined (Becoming.Cuts.Links (newer ++ older)) (Becoming.Cuts.Link e.fst e.snd) g h
+@Becoming.Cuts.links_of_mem : ∀ {F : Type} {es : List (F × F)} {e : F × F}, e ∈ es → Becoming.Cuts.Links es e.fst e.snd
+@Becoming.Cuts.Attaches.suffix : ∀ {F : Type} {newer rest : List (F × F)},
+  Becoming.Cuts.Attaches (newer ++ rest) → Becoming.Cuts.Attaches rest
+@Becoming.Cuts.Attaches.listed_once : ∀ {F : Type} {p n : F} {newer older : List (F × F)},
+  Becoming.Cuts.Attaches (newer ++ (p, n) :: older) → ¬(p, n) ∈ newer ∧ ¬(p, n) ∈ older
+@Becoming.Cuts.attached_link_separates : ∀ {F : Type} {p n : F} {newer older : List (F × F)},
+  Becoming.Cuts.Attaches (newer ++ (p, n) :: older) → ¬Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) p n
+@Becoming.Cuts.joined_bypass_iff : ∀ {F : Type} {p n a b : F} {newer older : List (F × F)},
+  Becoming.Cuts.Attaches (newer ++ (p, n) :: older) →
+    (Becoming.WithinClosure (Becoming.Cuts.Joined (Becoming.Cuts.Links (newer ++ older)) (Becoming.Cuts.Link a b)) p n ↔
+      Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) p a ∧
+          Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) b n ∨
+        Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) p b ∧
+          Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) a n)
+@Becoming.Cuts.joined_cut_unchanged_iff : ∀ {F : Type} {p n a b : F} {newer older : List (F × F)},
+  Becoming.Cuts.Attaches (newer ++ (p, n) :: older) →
+    ((∀ (f g : F),
+        Becoming.WithinClosure
+            (Becoming.Cuts.Joined (Becoming.Cuts.Links (newer ++ (p, n) :: older)) (Becoming.Cuts.Link a b)) f g ↔
+          Becoming.WithinClosure (Becoming.Cuts.Joined (Becoming.Cuts.Links (newer ++ older)) (Becoming.Cuts.Link a b))
+            f g) ↔
+      Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) p a ∧
+          Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) b n ∨
+        Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) p b ∧
+          Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) a n)
+@Becoming.Cuts.mem_split : ∀ {F : Type} {e : F × F} {newer older : List (F × F)} {e' : F × F},
+  e' ∈ newer ++ e :: older → e' = e ∨ e' ∈ newer ++ older
+@Becoming.Cuts.mem_widen : ∀ {F : Type} {e : F × F} {newer older : List (F × F)} {e' : F × F},
+  e' ∈ newer ++ older → e' ∈ newer ++ e :: older
+@Becoming.Cuts.mem_set_apart : ∀ {F : Type} {e : F × F} {newer older : List (F × F)}, e ∈ newer ++ e :: older
+@Becoming.Cuts.mem_append_cases : ∀ {F : Type} {newer older : List (F × F)} {e : F × F},
+  e ∈ newer ++ older → e ∈ newer ∨ e ∈ older
+@Becoming.Cuts.mem_append_right : ∀ {F : Type} {newer older : List (F × F)} {e : F × F}, e ∈ older → e ∈ newer ++ older
+@Becoming.Cuts.exists_split : ∀ {F : Type} {es : List (F × F)} {e : F × F},
+  e ∈ es → ∃ newer older, es = newer ++ e :: older
+@Becoming.Cuts.append_cons_assoc : ∀ {F : Type} {front : List (F × F)} {e : F × F} {back rest : List (F × F)},
+  front ++ e :: back ++ rest = front ++ e :: (back ++ rest)
+@Becoming.Cuts.links_mem : ∀ {F : Type} {es : List (F × F)} {g h : F},
+  Becoming.Cuts.Links es g h → ∃ e, e ∈ es ∧ Becoming.Cuts.Link e.fst e.snd g h
+@Becoming.Cuts.links_of_link : ∀ {F : Type} {es : List (F × F)} {e : F × F},
+  e ∈ es → ∀ {g h : F}, Becoming.Cuts.Link e.fst e.snd g h → Becoming.Cuts.Links es g h
+@Becoming.Cuts.Attaches.distinct : ∀ {F : Type} {es : List (F × F)} {e : F × F},
+  Becoming.Cuts.Attaches es → e ∈ es → e.fst ≠ e.snd
+@Becoming.Flow.shares_iff_beside : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} [DecidableEq C] (c : C)
+  {g h : F}, L.Shares W g h ↔ Becoming.Cuts.Joined (L.SharesBeside W c) (L.BothTakePart W c) g h
+@Becoming.Flow.system_unchanged_without_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  [DecidableEq C] (c : C),
+  (∀ (f g : F), L.WithinSystem W f g ↔ Becoming.WithinClosure (L.SharesBeside W c) f g) ↔
+    ∀ (g h : F), L.TakesPart W g c → L.TakesPart W h c → Becoming.WithinClosure (L.SharesBeside W c) g h
+@Becoming.Flow.system_unchanged_of_single : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  [DecidableEq C] {c : C},
+  (∀ (g h : F), L.TakesPart W g c → L.TakesPart W h c → g = h) →
+    ∀ (f g : F), L.WithinSystem W f g ↔ Becoming.WithinClosure (L.SharesBeside W c) f g
+@Becoming.Flow.withinSystem_of_no_part : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {n : F},
+  (∀ (c : C), ¬L.TakesPart W n c) → (∀ (g : F), L.WithinSystem W n g ↔ g = n) ∧ ∀ (f : F), f ≠ n → ¬L.WithinSystem W f n
+@Becoming.Flow.withinSystem_two_takers_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  [DecidableEq C] {c : C} {a b : F},
+  (∀ (g : F), L.TakesPart W g c ↔ g = a ∨ g = b) →
+    ∀ {f g : F},
+      L.WithinSystem W f g ↔
+        Becoming.WithinClosure (L.SharesBeside W c) f g ∨
+          Becoming.WithinClosure (L.SharesBeside W c) f a ∧ Becoming.WithinClosure (L.SharesBeside W c) b g ∨
+            Becoming.WithinClosure (L.SharesBeside W c) f b ∧ Becoming.WithinClosure (L.SharesBeside W c) a g
+@Becoming.Flow.alone_beside_of_only : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {n : F},
+  (∀ (d : C), L.TakesPart W n d → d = c) →
+    (∀ (g : F), Becoming.WithinClosure (L.SharesBeside W c) n g ↔ g = n) ∧
+      ∀ (f : F), f ≠ n → ¬Becoming.WithinClosure (L.SharesBeside W c) f n
+@Becoming.Flow.within_of_two_takers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {R : F → F → Prop}
+  {j : C} {a b : F},
+  (∀ (g : F), L.TakesPart W g j ↔ g = a ∨ g = b) →
+    ∀ {x y : F},
+      L.TakesPart W x j →
+        L.TakesPart W y j → Becoming.WithinClosure (Becoming.Cuts.Joined R (Becoming.Cuts.Link a b)) x y
+@Becoming.Flow.GrownBy.takes_part_of_link : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {added : C → Prop} {es : List (F × F)} {cond : F → C},
+  L.GrownBy W added es cond →
+    ∀ {e : F × F},
+      e ∈ es →
+        ∀ {x y : F}, Becoming.Cuts.Link e.fst e.snd x y → L.TakesPart W x (cond e.snd) ∧ L.TakesPart W y (cond e.snd)
+@Becoming.Flow.GrownBy.link_of_takers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {added : C → Prop}
+  {es : List (F × F)} {cond : F → C},
+  L.GrownBy W added es cond →
+    ∀ {e : F × F},
+      e ∈ es →
+        ∀ {x y : F},
+          L.TakesPart W x (cond e.snd) → L.TakesPart W y (cond e.snd) → x = y ∨ Becoming.Cuts.Link e.fst e.snd x y
+@Becoming.Flow.GrownBy.cond_ne : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {added : C → Prop}
+  {es : List (F × F)} {cond : F → C},
+  L.GrownBy W added es cond →
+    ∀ {p n : F} {newer older : List (F × F)},
+      es = newer ++ (p, n) :: older → ∀ {e : F × F}, e ∈ newer ++ older → cond e.snd ≠ cond n
+@Becoming.Flow.GrownBy.attached_only : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {added : C → Prop}
+  {es : List (F × F)} {cond : F → C},
+  L.GrownBy W added es cond →
+    ∀ {p n : F} {newer older : List (F × F)},
+      es = newer ++ (p, n) :: older →
+        ∀ {d : C}, L.TakesPart W n d → added d ∨ d = cond n ∨ ∃ e, e ∈ newer ∧ cond e.snd = d
+@Becoming.Flow.GrownBy.outside_step : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {added : C → Prop}
+  {es : List (F × F)} {cond : F → C},
+  L.GrownBy W added es cond →
+    ∀ {p n : F} {newer older : List (F × F)},
+      es = newer ++ (p, n) :: older →
+        ∀ {x y : F},
+          L.SharesOutside W (fun d => d = cond n ∨ added d) x y →
+            Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) x y
+@Becoming.Flow.GrownBy.outside_of_link : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {added : C → Prop} {es : List (F × F)} {cond : F → C},
+  L.GrownBy W added es cond →
+    ∀ {p n : F} {newer older : List (F × F)},
+      es = newer ++ (p, n) :: older →
+        ∀ {x y : F}, Becoming.Cuts.Links (newer ++ older) x y → L.SharesOutside W (fun d => d = cond n ∨ added d) x y
+@Becoming.Flow.GrownBy.within_outside_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {added : C → Prop} {es : List (F × F)} {cond : F → C},
+  L.GrownBy W added es cond →
+    ∀ {p n : F} {newer older : List (F × F)},
+      es = newer ++ (p, n) :: older →
+        ∀ {f g : F},
+          Becoming.WithinClosure (L.SharesOutside W fun d => d = cond n ∨ added d) f g ↔
+            Becoming.WithinClosure (Becoming.Cuts.Links (newer ++ older)) f g
+@Becoming.Flow.GrownBy.within_outside_added_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {added : C → Prop} {es : List (F × F)} {cond : F → C},
+  L.GrownBy W added es cond →
+    ∀ {f g : F},
+      Becoming.WithinClosure (L.SharesOutside W added) f g ↔ Becoming.WithinClosure (Becoming.Cuts.Links es) f g
+@Becoming.Flow.GrownBy.condition_needed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {es : List (F × F)} {cond : F → C},
+  L.GrownBy W (fun x => False) es cond →
+    ∀ {p n : F} {newer older : List (F × F)},
+      es = newer ++ (p, n) :: older → L.WithinSystem W p n ∧ ¬Becoming.WithinClosure (L.SharesBeside W (cond n)) p n
+@Becoming.Flow.GrownBy.every_condition_needed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {es : List (F × F)} {cond : F → C},
+  L.GrownBy W (fun x => False) es cond →
+    ∀ {g : F} {d : C},
+      L.TakesPart W g d → ¬∀ (f h : F), L.WithinSystem W f h ↔ Becoming.WithinClosure (L.SharesBeside W d) f h
+@Becoming.Flow.GrownBy.latest_alone : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cond : F → C}
+  {p n : F} {older : List (F × F)},
+  L.GrownBy W (fun x => False) ((p, n) :: older) cond →
+    (∀ (g : F), Becoming.WithinClosure (L.SharesBeside W (cond n)) n g ↔ g = n) ∧
+      ∀ (f : F), f ≠ n → ¬Becoming.WithinClosure (L.SharesBeside W (cond n)) f n
+@Becoming.Flow.GrownBy.suffix : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {added : C → Prop}
+  {cond : F → C} {newer older : List (F × F)},
+  L.GrownBy W added (newer ++ older) cond → L.GrownBy W (fun d => added d ∨ ∃ e, e ∈ newer ∧ cond e.snd = d) older cond
+@Becoming.Flow.GrownBy.beside_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {es : List (F × F)}
+  {cond : F → C} [DecidableEq C] {j : C} {a b : F},
+  L.GrownBy W (fun d => d = j) es cond →
+    (∀ (g : F), L.TakesPart W g j ↔ g = a ∨ g = b) →
+      ∀ {p n : F} {newer older : List (F × F)},
+        es = newer ++ (p, n) :: older →
+          ∀ {f g : F},
+            Becoming.WithinClosure (L.SharesBeside W (cond n)) f g ↔
+              Becoming.WithinClosure
+                (Becoming.Cuts.Joined (Becoming.Cuts.Links (newer ++ older)) (Becoming.Cuts.Link a b)) f g
+@Becoming.Flow.GrownBy.system_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {es : List (F × F)}
+  {cond : F → C} [DecidableEq C] {j : C} {a b : F},
+  L.GrownBy W (fun d => d = j) es cond →
+    (∀ (g : F), L.TakesPart W g j ↔ g = a ∨ g = b) →
+      ∀ {f g : F},
+        L.WithinSystem W f g ↔
+          Becoming.WithinClosure (Becoming.Cuts.Joined (Becoming.Cuts.Links es) (Becoming.Cuts.Link a b)) f g
+@Becoming.Flow.GrownBy.bypass_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {es : List (F × F)}
+  {cond : F → C} [DecidableEq C] {j : C} {a b : F},
+  L.GrownBy W (fun d => d = j) es cond →
+    (∀ (g : F), L.TakesPart W g j ↔ g = a ∨ g = b) →
+      ∀ {p n : F} {newer older : List (F × F)},
+        es = newer ++ (p, n) :: older →
+          (Becoming.WithinClosure (L.SharesBeside W (cond n)) p n ↔
+            Becoming.WithinClosure (L.SharesOutside W fun d => d = cond n ∨ d = j) p a ∧
+                Becoming.WithinClosure (L.SharesOutside W fun d => d = cond n ∨ d = j) b n ∨
+              Becoming.WithinClosure (L.SharesOutside W fun d => d = cond n ∨ d = j) p b ∧
+                Becoming.WithinClosure (L.SharesOutside W fun d => d = cond n ∨ d = j) a n)
+@Becoming.Flow.GrownBy.cut_unchanged_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {es : List (F × F)} {cond : F → C} [DecidableEq C] {j : C} {a b : F},
+  L.GrownBy W (fun d => d = j) es cond →
+    (∀ (g : F), L.TakesPart W g j ↔ g = a ∨ g = b) →
+      ∀ {p n : F} {newer older : List (F × F)},
+        es = newer ++ (p, n) :: older →
+          ((∀ (f g : F), L.WithinSystem W f g ↔ Becoming.WithinClosure (L.SharesBeside W (cond n)) f g) ↔
+            Becoming.WithinClosure (L.SharesOutside W fun d => d = cond n ∨ d = j) p a ∧
+                Becoming.WithinClosure (L.SharesOutside W fun d => d = cond n ∨ d = j) b n ∨
+              Becoming.WithinClosure (L.SharesOutside W fun d => d = cond n ∨ d = j) p b ∧
+                Becoming.WithinClosure (L.SharesOutside W fun d => d = cond n ∨ d = j) a n)

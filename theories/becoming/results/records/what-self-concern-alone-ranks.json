@@ -196,7 +196,7 @@
         "Becoming.Weighting.some_increasingInOwn_reverses",
         "Becoming.Weighting.widensOwn_iff_every_increasingInOwn"
       ],
-      "sha256": "c0fc54802fc30473db5a2f6f28e11071523085665c64a063c12938d13ec12762"
+      "sha256": "33d6ec243eec01782ba8fd9a27ed31ab63f1ad4e5a4a0d90b81ffccaafa8626b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T070625.290320Z/verification.json",
@@ -216,7 +216,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "24cd5d1f31aaf366b687f976afcc8bbe6aa1b03e303d163b9e33de2c5a1d9039"
+      "sha256": "aef030e5dfe445fb1333e2fc1cd733bb336daf51a604b085bde3fcd5eb8c8bcd"
     },
     {
       "path": "theories/becoming/history/THE-STEP-OF-INVARIANCE.md",
@@ -286,12 +286,18 @@
       "role": "receipt",
       "sha256": "eccef2960be674d8ed01fcd661d1e2757e8df2ac8e01c6416fcf4db5ac57f0a9",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json",
+      "role": "receipt",
+      "sha256": "697a9f2eaf57686cc3441d12fb1a0e56474cbde6a927c942255e4100e92941f1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"

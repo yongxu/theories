@@ -28,7 +28,7 @@ What the drafter could not state well:
 
 ## 02-MAP.md
 
-- GrammarMap.lean's header says the regions 'cover every point where going on and renewal are decided'. The theorem «全三域之周» takes full excluded middle (∀ P, P ∨ ¬P) as its hypothesis, not local decidedness. The header is looser than the theorem.
+- GrammarMap.lean's header says the regions 'cover every point where going on and renewal are decided'. The theorem «全三域之周» takes full excluded middle (∀ P, P ∨ ¬P) as its hypothesis, not local decidedness. The header is looser than the theorem. **Corrected** (OU6, study §400): the header now says excluded middle, and that every point of every model lies in one of the strong forms is exactly excluded middle («全三域之定当且仅当排中»).
 - regions.json gives base 'frame' to renewing-consuming-formation, growth-constrained-fragmentation and recoverable-mediated-change. These modules (universal-ethics RenewingFormation, GrownFragmentation, RecoverableControl) lie outside the pure core, and their receipts report propext, Quot.sound and Classical.choice for most declarations (for example RenewingFormation.beyond_current_ceases and GrownFragmentation.development_accounts). They are periphery. The canonical chapter §2.1 already calls the wear-law result periphery. The chapter labels them (periphery).
 - regions.json gives two-sided-regulation-and-late-reading base 'general'. Its central laws (Flow.withinGap_iff_between, Flow.regulates, the Regulation course flows) are stated on Flow and Web with balance, which is the World model. The chapter labels it (World).
 - The versioned-request-completion and pending-task-context-applicability instances use periphery modules (CorrectionVersioned imports Mathlib-dependent CorrectionRelations; VersionedTaskInstances imports Mathlib). regions.json says 'frame' only. The general countdown and stock laws are in the core.
@@ -209,7 +209,7 @@ Found by the fixers and auditors of the second round while checking every theore
 
 ### From chapter 02
 
-- Record generation-and-degeneration-at-two-grains repeats the misreading of 全生成/全守 as 'every-branch generation/keeping' (cross-model #1). Restate them as strong forms with the quantifiers of GrammarMap.lean. Note that «全三域之周» covers only the strong forms; coverage by «生成»/«守»/«退化» is unproved. A hand check suggests a counterexample: a line that renews once and then goes on still is 全守 and none of the three at its start. This would be a Lean item to claim on the board.
+- Record generation-and-degeneration-at-two-grains repeats the misreading of 全生成/全守 as 'every-branch generation/keeping' (cross-model #1). Restate them as strong forms with the quantifiers of GrammarMap.lean. Note that «全三域之周» covers only the strong forms; coverage by «生成»/«守»/«退化» is unproved. A hand check suggests a counterexample: a line that renews once and then goes on still is 全守 and none of the three at its start. This would be a Lean item to claim on the board. **Record corrected** (OU6, study §400): the law states the strong forms with their quantifiers and says coverage by the some-branch regions is not proved; the counterexample is still a hand check.
 - New section anchor 'map-on-the-world' in 02 §1 (not a record). regions.json needs no change from this chapter beyond the packet's moves.
 
 ### From chapter 03

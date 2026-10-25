@@ -243,15 +243,16 @@ order every standpoint shares when each weighs what can form in its own way.
   next `stock N + 1` steps (`Flow.needsSome_without_end`). In `FeedersInTurn` a flow is possible,
   so the user's need of both copies is not vacuous (`FeedersInTurn.possible`).
 * **Need in degree from the stores.** With capacities read off the feeders' own stores the degree
-  law holds as well: every flow from the stores in which the consumer draws past the stock has a
-  member giving at least the sum of its shortfalls under the stores' falls, and where it can give
-  each, the graded flow from the stores (`Flow.gradedStoreDrawn`), in which each member also takes
-  its store's fall, has it give exactly that (`Flow.least_giving_from_stores`). In `OwnStores` the
+  law's bound holds as well: every flow from the stores in which the consumer draws past the stock
+  has each member give at least the sum of its shortfalls under the stores' falls, and where a
+  member can give each of them, the graded flow from the stores (`Flow.gradedStoreDrawn`), in which
+  each member also takes its store's fall, has it give exactly that (`Flow.least_giving_from_stores`). In `OwnStores` the
   user needs the first feeder in degree two and the second in degree zero
   (`OwnStores.first_in_degree`).
-* **Need across two tiers.** Where a family is fed from lower members, each giving at most what
-  it takes from its own store, and the stores are given only by upper members, each within its
-  capacity however it divides its giving among them (`Flow.FedThroughStores`), what is taken from
+* **Need across two tiers.** Where a family, balancing across the stretch, is fed only from lower
+  members, each giving at most what it takes from its own store, only active formations giving and
+  each taking part at most once a step, and the stores balance and are given only by upper members,
+  each within its capacity however it divides its giving among them (`Flow.FedThroughStores`), what is taken from
   a store that balances is what it falls and what it is given beyond what it rises
   (`Flow.taken_store`), and the stores together are given at least what they rise
   (`Flow.storesRisen_le_given`). So where `e`, if it takes part, gives nothing into the hierarchy
@@ -273,7 +274,9 @@ order every standpoint shares when each weighs what can form in its own way.
   (`Routing.tops_not_needed`) until a lower store rises and takes what the other could have routed,
   and then each (`Routing.rise_needs_top`). Where a store rises that only one upper member can
   give, the user needs that member though the others could feed it through the hierarchy
-  (`Routing.fill_needs_top`): need is read off the whole web as given.
+  (`Routing.fill_needs_top`): need is read off the whole web as given. In each of these settings a
+  flow is possible, so none of these needs is vacuous (`Routing.possible`; for the first,
+  `Routing.router_not_needed`).
 * **Need and feeding, read with time.** Over any flows read off a web in which only active
   formations give, a formation active at no step of the stretch is needed exactly where no such flow
   lets the consumer draw past the stock (`Flow.needs_iff_none_of_inactive`; across two tiers
@@ -321,7 +324,7 @@ order every standpoint shares when each weighs what can form in its own way.
   under the continuation condition it loses the dweller (`Clearing.centers_retain_yet_loses`).
 
 **Reading (the AI's; the argument is in the chapter
-`theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md`).** Read a
+`theories/becoming/history/THE-STEP-OF-INVARIANCE.md`).** Read a
 positive weighting, or any order increasing in admission, as one standpoint's order, partial in how much it weighs each formation's
 possibility but counting all of them, and the order every such standpoint shares as the impartial
 order. Then the impartial order is exactly C, the comparisons partiality may decide are exactly the
@@ -5801,6 +5804,49 @@ theorem fill_needs_top :
       (fun _ _ _ => trivial) (by decide) own separate).mpr
       ⟨0, Nat.le_refl 0, by decide, .inl (by decide)⟩,
    by decide⟩
+
+/-- **In each setting where a need is read above, some flow lets the user draw past the stock**: the
+routed flow with a formation outside both tiers left out (formation `9`) is a flow of the hierarchy
+in which the user draws past its stock, with one lower member and one upper member, with a lower
+store rising and two upper members, and with one lower store falling and the other rising. So
+`lone_router_needed`, `rise_needs_top` and `fill_needs_top` are not vacuous. -/
+theorem possible :
+    (∃ L, Flow.FedThroughStores still store [0] [1] [3] cap 0 1 L ∧
+      Flow.DrawsPast [0] 0 1 (L, still) 0) ∧
+    (∃ L, Flow.FedThroughStores rising store [0] [1, 2] [3, 4] cap 0 1 L ∧
+      Flow.DrawsPast [0] 0 1 (L, rising) 0) ∧
+    (∃ L, Flow.FedThroughStores filling store [0] [1, 2] [3] cap 0 1 L ∧
+      Flow.DrawsPast [0] 0 1 (L, filling) 0) :=
+  ⟨⟨_, Flow.routedDrawn_fedThroughStores (c₀ := 0) (f := 0) (e := 9) distinct (.head []) apart_one
+      apart_three (absent (by decide) absent_nil) (absent (by decide) absent_nil) tiers_one own
+      separate_one
+      (fun t _ to => match t, to with
+        | 0, _ => by decide
+        | _ + 1, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 1 _)))
+      (fun t _ to => match t, to with
+        | 0, _ => by decide
+        | _ + 1, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 1 _))),
+    Flow.routedDrawn_drawsPast (.head []) (fun _ _ _ => trivial) (by decide)⟩,
+   ⟨_, Flow.routedDrawn_fedThroughStores (c₀ := 0) (f := 0) (e := 9) distinct (.head []) apart_two
+      apart_four (absent (by decide) (absent (by decide) absent_nil))
+      (absent (by decide) (absent (by decide) absent_nil)) tiers own separate
+      (fun t _ to => match t, to with
+        | 0, _ => by decide
+        | _ + 1, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 1 _)))
+      (fun t _ to => match t, to with
+        | 0, _ => by decide
+        | _ + 1, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 1 _))),
+    Flow.routedDrawn_drawsPast (.head []) (fun _ _ _ => trivial) (by decide)⟩,
+   ⟨_, Flow.routedDrawn_fedThroughStores (c₀ := 0) (f := 0) (e := 9) distinct (.head []) apart_two
+      apart_three (absent (by decide) (absent (by decide) absent_nil))
+      (absent (by decide) absent_nil) tiers_three own separate
+      (fun t _ to => match t, to with
+        | 0, _ => by decide
+        | _ + 1, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 1 _)))
+      (fun t _ to => match t, to with
+        | 0, _ => by decide
+        | _ + 1, to => absurd to (Nat.not_lt_of_le (Nat.le_add_left 1 _))),
+    Flow.routedDrawn_drawsPast (.head []) (fun _ _ _ => trivial) (by decide)⟩⟩
 
 end Routing
 

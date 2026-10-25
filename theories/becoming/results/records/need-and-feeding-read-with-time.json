@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-24T02:46:18+00:00",
+  "reviewed_at_utc": "2026-10-25T04:20:19+00:00",
   "statement": {
     "en": "Over flows where only active formations give, a formation active at no step of a stretch is needed only where nothing lets the consumer draw past the stock; read with time, a feeding closure up to a step holds only what gives by then, though read across every step it can run past what it carries.",
     "zh": "在只有活跃构成给予的流上，区间内无一步活跃的构成只在无流使消耗者汲取超出存量处被需要；带着时间来读，至某步的供养闭包只含到那时为止给予者，跨一切步来读则可越过所承担者。"
@@ -96,16 +96,16 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261024T024337.158597Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. Author review in study section 397.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261024T024337.158597Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。作者审查见研究第 397 节。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T041715.335885Z): every declaration of Becoming.Weightings has an empty axiom report, and the checker verifies core purity. Author review in study section 397; an independent AI reader checked it against the Lean, its findings fixed in section 399.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T041715.335885Z）：Becoming.Weightings 的每项声明公理报告为空；检查器并核对核心纯净。作者审查见研究第 397 节；一个独立的 AI 读者对照 Lean 审查，其发现在第 399 节修正。"
   },
   "next_delta": {
     "en": "Feeding carried across steps, read with time; an exact law of need for a continuation without end; which class a center's own line runs under, so that its reach past its end is fixed.",
     "zh": "跨步承载的供养，带着时间来读；无终延续的精确“所需”律；中心自身之线在何类下，以定其过终之所及。"
   },
   "correspondence": {
-    "en": "PW note §2-§3: need reaches contemporaries and predecessors, never successors, and the feeding closure reaches the future only read without time; made exact here. Parfit: what matters passes to successors in degrees; here need does not pass at all, and the reach past one's end is a question of classes (GS2).",
-    "zh": "PW 笔记 §2-§3：所需达到同时代者与前人，从不达到后来者；供养闭包只在不带时间来读时达到未来；此处使之精确。帕菲特：重要者以程度传给后来者；此处所需全不传递，过己之终的所及是类的问题（GS2）。"
+    "en": "PW note §2-§3 held that need reaches contemporaries and predecessors, never successors, and that the feeding closure reaches the future only read without time. The Lean corrects the first: need reaches, except vacuously, only what is active within the stretch it is read across, so neither predecessors nor successors active only outside it. Parfit: what matters passes to successors in degrees; here need does not pass at all, and the reach past one's end is a question of classes (GS2).",
+    "zh": "PW 笔记 §2-§3 认为所需达到同时代者与前人，从不达到后来者；供养闭包只在不带时间来读时达到未来。Lean 修正了前一点：所需除空真情形外只达到在其所读区间内活跃者，故只在区间外活跃的前人与后来者都不达到。帕菲特：重要者以程度传给后来者；此处所需全不传递，过己之终的所及是类的问题（GS2）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
   "aliases": [
@@ -178,22 +178,22 @@
         "Becoming.Overlapping.take",
         "Becoming.Overlapping.web"
       ],
-      "sha256": "c0fc54802fc30473db5a2f6f28e11071523085665c64a063c12938d13ec12762"
+      "sha256": "33d6ec243eec01782ba8fd9a27ed31ab63f1ad4e5a4a0d90b81ffccaafa8626b"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json",
       "role": "receipt",
-      "sha256": "eccef2960be674d8ed01fcd661d1e2757e8df2ac8e01c6416fcf4db5ac57f0a9"
+      "sha256": "697a9f2eaf57686cc3441d12fb1a0e56474cbde6a927c942255e4100e92941f1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "12b8f30a5ac47a6c16baf4bbc6553378c46f1310b362d96e6a65090db71e155f"
+      "sha256": "fb50764892a348f25e42abb965690b8c8ba852ad68a64ba79b53c0037095a9c9"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "43cbb0bcfe0879aad68d133217e6f23c85a3d80549927fa16e6bac35f1f6ffc1"
+      "sha256": "aef030e5dfe445fb1333e2fc1cd733bb336daf51a604b085bde3fcd5eb8c8bcd"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md",
@@ -209,7 +209,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -219,6 +219,10 @@
     {
       "en": "24 October 2026: added (IV3k), from PW's candidates (1) and (2); study section 397.",
       "zh": "2026年10月24日：新增（IV3k），出自 PW 的候选（1）与（2）；研究第 397 节。"
+    },
+    {
+      "en": "25 October 2026: corrected (IV3l) after an independent review against the Lean: the correspondence says the Lean corrects PW on predecessors; study section 399.",
+      "zh": "2026年10月25日：经对照 Lean 的独立审查后修正（IV3l）：对应项说明 Lean 在前人一点上修正 PW；研究第 399 节。"
     }
   ]
 }
