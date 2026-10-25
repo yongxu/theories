@@ -1,16 +1,16 @@
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ma4-drawn-shaping/tree",
-  "modules": 93,
+  "modules": 94,
   "ran": [
     "Becoming.DrawnShaping",
     "BecomingDrawnShapingAxiomAudit"
   ],
-  "reused": 92,
+  "reused": 93,
   "unclean": [],
   "audits": {
     "Becoming.DrawnShaping": {
-      "theorems": 25,
-      "declarations": 32,
+      "theorems": 31,
+      "declarations": 38,
       "with_axioms": {}
     }
   }
