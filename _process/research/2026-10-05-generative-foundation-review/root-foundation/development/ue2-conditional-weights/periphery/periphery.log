@@ -1,13 +1,18 @@
-# UE2 periphery draft: compile log
-utc: 20261025T102022Z
-command: (cd $SYSTEMS_MATHLIB_PROJECT = ~/repos/生生不息) lake env lean periphery/VariationalBound.lean
+# UE2 periphery draft: compile log (revision after REVIEW-UE2.md)
+utc: 20261025T142628Z
+command: (cd $SYSTEMS_MATHLIB_PROJECT = ~/repos/生生不息) lake env lean periphery/ConditionalWeightsReals.lean
 toolchain: leanprover/lean4:v4.30.0-rc2
 mathlib rev: ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa (lake-manifest.json)
 pin sha256: lakefile.lean 738411c8fa58a1a15e4c01c20fb07cf56574abcf4d0f3158523c2ca41f96bc58, lake-manifest.json 740eef1aae725322b99872aba59cc5c902378b992bfe9122737a454f3076321b (as in lean/periphery-mathlib-pin/README.md)
-source sha256: 438046c91ae6aff9399e8e5e667d73c53134e6954be9e1569ed5ed18edb73e48
---- lean output (empty apart from the #print axioms lines means no error or warning) ---
-'VariationalBound.term_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-'VariationalBound.free_energy_ge_surprisal' depends on axioms: [propext, Classical.choice, Quot.sound]
-'VariationalBound.free_energy_posterior' depends on axioms: [propext, Classical.choice, Quot.sound]
-'VariationalBound.free_energy_ge_surprisal_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+source sha256: 31532e34157d077998d8a31d921c61e5aefef01278c9a9f2244b3862524477b0
+replaces the draft periphery/VariationalBound.lean (sha256 438046c9…d73e48, in history at 4c1639402), renamed after the core module it instantiates (board rule 8)
+--- lean output (nothing but the #print axioms lines means no error or warning) ---
+'Becoming.ConditionalWeights.term_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ConditionalWeights.term_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ConditionalWeights.nonempty_of_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ConditionalWeights.neg_log_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ConditionalWeights.neg_log_sum_le_of_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ConditionalWeights.neg_log_sum_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ConditionalWeights.neg_log_sum_at_posterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ConditionalWeights.log_reciprocal_share_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 exit 0

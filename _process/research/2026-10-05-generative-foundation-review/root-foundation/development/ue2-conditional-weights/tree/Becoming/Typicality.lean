@@ -28,16 +28,19 @@ ratio `p : q` exactly where `x = y`, and `(x - y)²`, stated without subtraction
   `p·q / ((p + q)²·ε²·n)` of it, which falls as `n` grows: Chebyshev's variance bound and the
   counting form of the law of large numbers. With `p = q = 1` every course weighs one, and the count of courses of `n` steps
   whose ones and zeros differ by at least `δ`, times `δ²`, is at most `n·2^n`.
-* **Most courses show the weights at every step.** Stop the pair `(x, y)` of a course at the first
-  step at which its squared deviation reaches `d` (`stopped`, `stopStep`); up to that step it is
-  the course's own pair, and from it the pair has reached `d` (`stopped_spec`, with `reachesBy`
+* **The deviation stays within the bound at every step.** Stop the pair `(x, y)` of a course at the
+  first step at which its squared deviation reaches `d` (`stopped`, `stopStep`); up to that step it
+  is the course's own pair, and from it the pair has reached `d` (`stopped_spec`, with `reachesBy`
   whether the course reaches `d` at some step). A step adds `p·q·(p + q)` times the weight of the
   courses whose pair still moves (`moving`), and nothing for the others (`stopped_square_step`,
   `stopped_cross_step`, through `weighted_square` and `weighted_cross`), so the stopped squares add
   up to at most the stopped cross terms plus `n·p·q·(p + q)^n` (`stopped_spread`). Hence the
   courses whose squared deviation reaches `d` at some step, their start included, weigh, times `d`,
   at most `n·p·q·(p + q)^n` (`typical_throughout`), the bound `typical` gives for the last step
-  alone; `typical` is its case (`offBy_le_within`).
+  alone; `typical` is its case (`offBy_le_within`). Read with `d = ((p + q)·ε·n)²`, the courses
+  whose count of ones strays from `k·p / (p + q)` by `ε·n` or more at some step `k ≤ n` weigh at
+  most `p·q / ((p + q)²·ε²·n)` of the whole: the counts stay near their means throughout, while the
+  frequencies show the weights at the horizon.
 * **Concentration is exponential.** Weighting each one by `u` and each zero by `v` multiplies
   the weights step by step (`weight_mul`). So for every `u ≥ v`, the courses of `n` steps with at
   least `k` ones weigh, times `u ^ k · v ^ n`, at most `(p·u + q·v) ^ n · v ^ k`
@@ -69,7 +72,9 @@ by weighting each one (`concentrated`) is the exponential-moment method of Chern
 they are stated over natural weights, with no real numbers and no probability measure: the counts
 are of courses, or, in `Becoming.Situations`, of situations.
 
-The AM–GM step `2·x·y ≤ x·x + y·y` is proved on the way (`two_mul_le`). The arithmetic uses
+The AM–GM step `2·x·y ≤ x·x + y·y` is proved on the way (`two_mul_le`), as the case at margin
+zero of the margin square: where `x + m ≤ y`, `m·m + 2·x·y ≤ x·x + y·y` (`margin_square`, through
+the identity `square_gap`). The arithmetic uses
 the core's inductive forms of distributivity, associativity and powers in `Becoming.Prelude`
 (`add_mul_split`, `mul_assoc_nat`, `mul_turn` and `Naturals.pow_add`), since Lean's prelude forms of
 these laws use propositional extensionality. Ren took the reading of their words on 16 October 2026.
@@ -318,15 +323,29 @@ theorem spread (p q : Nat) : ∀ n,
 
 /-! ## Most courses show the weights -/
 
+/-- Four amounts regrouped: `a + ((a + b) + (b + c)) = ((a + b) + (a + b)) + c`. -/
+theorem regroup_square (a b c : Nat) : a + ((a + b) + (b + c)) = ((a + b) + (a + b)) + c := by
+  rw [Nat.add_assoc a b (b + c), Nat.add_assoc (a + b) (a + b) c, Nat.add_assoc a b (a + b + c),
+    Nat.add_assoc a b c, Nat.add_left_comm b a (b + c)]
+
+/-- `x·x + (x + k)·(x + k)` is `2·x·(x + k)` with `k·k` more. -/
+theorem square_gap (x k : Nat) : x * x + (x + k) * (x + k) = 2 * (x * (x + k)) + k * k := by
+  rw [add_mul_split x k (x + k), Nat.mul_add k x k, Nat.mul_comm k x, Naturals.two_mul,
+    Nat.mul_add x x k]
+  exact regroup_square (x * x) (x * k) (k * k)
+
+/-- **A difference of at least `m` squares to at least `m·m`**: where `x + m ≤ y`,
+`m·m + 2·x·y ≤ x·x + y·y`. -/
+theorem margin_square {x y m : Nat} (le : x + m ≤ y) : m * m + 2 * (x * y) ≤ x * x + y * y :=
+  match le_dest (Naturals.le_of_add_le_right le) with
+  | ⟨k, at_y⟩ => by
+    rw [at_y, square_gap x k, Nat.add_comm (m * m)]
+    exact Nat.add_le_add_left
+      (Nat.mul_self_le_mul_self (Naturals.le_of_add_le_add_left (at_y ▸ le))) _
+
+/-- `2·x·y ≤ x·x + y·y` where `x ≤ y`: the margin square at margin zero. -/
 theorem two_mul_le_of_le {x y : Nat} (le : x ≤ y) : 2 * (x * y) ≤ x * x + y * y :=
-  match le_dest le with
-  | ⟨e, at_y⟩ => by
-    rw [at_y]
-    have same : x * x + (x + e) * (x + e) = (x * (x + e) + x * (x + e)) + e * e := by
-      rw [add_mul_split x e (x + e), Nat.mul_add e x e, Nat.mul_comm e x, Nat.add_left_comm,
-        ← Nat.add_assoc (x * x) (x * e) (e * e), ← Nat.mul_add x x e, Nat.add_assoc]
-    rw [same, Nat.two_mul]
-    exact Nat.le_add_right _ _
+  Nat.le_trans (Nat.le_of_eq (Nat.zero_add _).symm) (margin_square (m := 0) le)
 
 /-- **`2·x·y ≤ x·x + y·y`.** -/
 theorem two_mul_le (x y : Nat) : 2 * (x * y) ≤ x * x + y * y :=
@@ -340,18 +359,7 @@ theorem two_mul_le (x y : Nat) : 2 * (x * y) ≤ x * x + y * y :=
 def offBy (p q d : Nat) (w : List Bool) : Nat :=
   if d + cross p q w ≤ square p q w then weight p q w else 0
 
-theorem offBy_le (p q d : Nat) (w : List Bool) :
-    offBy p q d w * d + weight p q w * cross p q w ≤ weight p q w * square p q w :=
-  if far : d + cross p q w ≤ square p q w then by
-    show (if d + cross p q w ≤ square p q w then weight p q w else 0) * d + _ ≤ _
-    rw [if_pos far, ← Nat.mul_add]
-    exact Nat.mul_le_mul_left _ far
-  else by
-    show (if d + cross p q w ≤ square p q w then weight p q w else 0) * d + _ ≤ _
-    rw [if_neg far, Nat.zero_mul, Nat.zero_add]
-    exact Nat.mul_le_mul_left _ (two_mul_le _ _)
-
-/-! ## Most courses show the weights at every step -/
+/-! ## The deviation at every step -/
 
 /-- `x·x + y·y` of a pair `(x, y)`. -/
 def pairSquare (s : Nat × Nat) : Nat := s.1 * s.1 + s.2 * s.2
@@ -536,9 +544,9 @@ theorem offByWithin_le (p q d : Nat) (w : List Bool) :
     rw [unreached, if_neg (fun same => Bool.noConfusion same), Nat.zero_mul, Nat.zero_add]
     exact Nat.mul_le_mul_left _ (two_mul_le _ _)
 
-/-- **Most courses show the weights at every step.** The courses of `n` steps whose squared
-deviation reaches `d` at some step weigh, times `d`, at most `n·p·q·(p + q)^n`, the bound
-`typical` gives for the last step alone: Kolmogorov's maximal inequality, in counting form. -/
+/-- **The deviation stays within the bound at every step.** The courses of `n` steps whose squared
+deviation reaches `d` at some step weigh, times `d`, at most `n·p·q·(p + q)^n`, the bound `typical`
+gives for the last step alone: Kolmogorov's maximal inequality, in counting form. -/
 theorem typical_throughout (p q n d : Nat) :
     total (courses n) (offByWithin p q d) * d ≤ n * (p * q * (p + q) ^ n) :=
   have bound := total_le (offByWithin_le p q d) (courses n)
