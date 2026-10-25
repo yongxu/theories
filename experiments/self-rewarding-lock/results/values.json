@@ -1,0 +1,189 @@
+{
+ "witness": {
+  "inTime": [
+   {
+    "share": [
+     1,
+     8
+    ],
+    "rule": [
+     4,
+     1
+    ]
+   },
+   {
+    "share": [
+     4,
+     8
+    ],
+    "rule": [
+     12,
+     33
+    ]
+   },
+   {
+    "share": [
+     48,
+     264
+    ],
+    "rule": [
+     24,
+     36
+    ]
+   },
+   {
+    "share": [
+     1152,
+     9504
+    ],
+    "rule": [
+     456,
+     1104
+    ]
+   }
+  ],
+  "late": [
+   {
+    "share": [
+     1,
+     8
+    ],
+    "rule": [
+     4,
+     1
+    ]
+   },
+   {
+    "share": [
+     4,
+     8
+    ],
+    "rule": [
+     12,
+     9
+    ]
+   },
+   {
+    "share": [
+     48,
+     72
+    ],
+    "rule": [
+     24,
+     12
+    ]
+   },
+   {
+    "share": [
+     1152,
+     864
+    ],
+    "rule": [
+     264,
+     120
+    ]
+   },
+   {
+    "share": [
+     304128,
+     103680
+    ],
+    "rule": [
+     5472,
+     4608
+    ]
+   }
+  ]
+ },
+ "start": [
+  1,
+  8
+ ],
+ "rule_before_reading": [
+  4,
+  1
+ ],
+ "ref": 9,
+ "steps": 8,
+ "loss_per_step": 5,
+ "losses": [
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45
+ ],
+ "established": [
+  {
+   "step": 0,
+   "share": [
+    1,
+    8
+   ],
+   "lists_in_reference_set": 1
+  },
+  {
+   "step": 1,
+   "share": [
+    4,
+    8
+   ],
+   "lists_in_reference_set": 3
+  },
+  {
+   "step": 2,
+   "share": [
+    16,
+    8
+   ],
+   "lists_in_reference_set": 6
+  },
+  {
+   "step": 3,
+   "share": [
+    64,
+    8
+   ],
+   "lists_in_reference_set": 8
+  },
+  {
+   "step": 4,
+   "share": [
+    256,
+    8
+   ],
+   "lists_in_reference_set": 9
+  }
+ ],
+ "conditions": {
+  "in_time": {
+   "r0": 0,
+   "notes": true,
+   "report": false
+  },
+  "in_time_unread": {
+   "r0": 0,
+   "notes": false,
+   "report": false
+  },
+  "late": {
+   "r0": 3,
+   "notes": true,
+   "report": false
+  },
+  "unread": {
+   "r0": 3,
+   "notes": false,
+   "report": false
+  },
+  "read_all": {
+   "r0": 3,
+   "notes": true,
+   "report": true
+  }
+ }
+}

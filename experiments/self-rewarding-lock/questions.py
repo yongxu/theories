@@ -1,0 +1,28 @@
+"""The 24 questions of LA2: everyday help questions a three-sentence answer can serve, as list or as prose."""
+
+QUESTIONS = [
+    "How can I keep cut flowers fresh longer?",
+    "What is a good way to start running if I have never run before?",
+    "How do I get a red wine stain out of a cotton shirt?",
+    "How can I fall asleep more easily at night?",
+    "What should I pack for a weekend hiking trip?",
+    "How do I make a simple vinaigrette?",
+    "How can I make my phone battery last longer during the day?",
+    "How do I keep basil growing well on a windowsill?",
+    "What is a good way to learn the vocabulary of a new language?",
+    "How can I keep a cast-iron pan from rusting?",
+    "How should I prepare for a job interview the day before?",
+    "How can I reduce condensation on my windows in winter?",
+    "How do I cook rice so that it is not sticky?",
+    "How can I make a long flight more comfortable?",
+    "How do I choose a ripe avocado at the store?",
+    "What can I do to keep my bike chain in good condition?",
+    "How can I write a clear email to a colleague I have never met?",
+    "How do I clean a computer keyboard safely?",
+    "How can I keep bread fresh for several days?",
+    "What is a good way to organize a small kitchen?",
+    "How do I help a houseplant that has yellow leaves?",
+    "How can I save money on groceries each week?",
+    "How do I stop my glasses from fogging up when I wear a mask?",
+    "What should I do to prepare my garden for winter?",
+]
