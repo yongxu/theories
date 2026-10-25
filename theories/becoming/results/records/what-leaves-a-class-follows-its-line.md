@@ -5,14 +5,14 @@
 
 `what-leaves-a-class-follows-its-line` · **recorded-checked** · theorem · F01 · [record](what-leaves-a-class-follows-its-line.json) · [register](../../../../RESULTS.md)
 
-> Under a class constant up to the net's end, what leaves the class at a member follows every alike step that goes on, and a step with nothing outside breaks constancy; such a class can leave a member's effects out.
+> Under a class constant up to the net's end, what leaves the class at a member follows every alike occurrence that conditions anything, and a step with nothing outside breaks constancy; such a class can leave a member's effects out.
 
 <a id="laws--规律"></a>
 ## Laws
 
 1. Under a class constant up to the net's end, where a member conditions something not alike to it, every occurrence alike to the member that conditions anything conditions something alike to that effect and outside the class, every one on its line in particular. This is nearly the definition read at a member whose effects the class does not hold. (`Becoming.«出类随线»`, `Becoming.«出类随行»`)
 2. Where an occurrence alike to such a member conditions something but nothing alike to its outside effect, the class is not constant up to the net's end; a witness. (`Becoming.CleanStep.Occ`, `Becoming.CleanStep.intended`, `Becoming.CleanStep.not_constant_to_end`, `Becoming.CleanStep.own`, `Becoming.CleanStep.own_class`, `Becoming.CleanStep.step`, `Becoming.«出类不随则不至终有常»`)
-3. In a finite net without cycles, a class holding a member and part of what follows it is constant up to the net's end though not constant, does not hold the member's effects, and something outside it follows every step of its line that goes on. (`Becoming.FiniteWake.Occ`, `Becoming.FiniteWake.constant_to_end`, `Becoming.FiniteWake.line`, `Becoming.FiniteWake.not_constant`, `Becoming.FiniteWake.not_held`, `Becoming.FiniteWake.own`, `Becoming.FiniteWake.own_class`, `Becoming.FiniteWake.step`, `Becoming.FiniteWake.wake_follows`)
+3. In a finite net without cycles, a class holding a member and part of what follows it is constant up to the net's end though not constant, does not hold the member's effects, and something outside it follows every step of its line that conditions anything. (`Becoming.FiniteWake.Occ`, `Becoming.FiniteWake.constant_to_end`, `Becoming.FiniteWake.line`, `Becoming.FiniteWake.not_constant`, `Becoming.FiniteWake.not_held`, `Becoming.FiniteWake.own`, `Becoming.FiniteWake.own_class`, `Becoming.FiniteWake.step`, `Becoming.FiniteWake.wake_follows`)
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -75,6 +75,7 @@ Aliases: `What leaves a class follows its line`, `出类者随其线`, `Becoming
 - 25 October 2026: added (PF2), answering the path's Open item on a class that holds only intended effects; study section 407.
 - 25 October 2026: next step answered by constancy-read-at-a-members-class (OC1); the laws now corollaries of the forms at a member's class, statements unchanged; study section 408.
 - 25 October 2026: the answer to its next step reviewed independently (OC2): its formal part is answered by laws, the choice of class by a labelled reading; study section 411.
+- 26 October 2026: "goes on" (延, coinductive in the glossary) replaced by "conditions anything" in the statement and the third law, as OC2 found; content unchanged.
 
 </details>
 
