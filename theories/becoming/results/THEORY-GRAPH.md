@@ -2,14 +2,14 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2957 nodes, 5132 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2960 nodes, 5150 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 76 | 63 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 90 | 73 | 0 |
 | Knowing and testing | 0 | 79 | 72 | 0 |
-| Life and evolution | 0 | 34 | 16 | 0 |
+| Life and evolution | 0 | 35 | 17 | 0 |
 | Collectives and selection | 0 | 54 | 16 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
 | Significance and alignment | 0 | 69 | 50 | 0 |
@@ -320,7 +320,7 @@ Modules (72, 1 stated on the grammar): `ClassifiedBeliefProcesses`, `CodeAcquisi
 
 ## Life and evolution
 
-Results (34):
+Results (35):
 
 - [A confined rise within a whole, and what a founding carries](records/confined-rise-within-a-whole.md) (recorded-checked)
 - [A dependence formed from drawing](records/dependence-formed-from-drawing.md) (recorded-checked)
@@ -353,11 +353,12 @@ Results (34):
 - [Selection within groups and among them](records/selection-within-and-among-groups.md) (recorded-checked)
 - [The additive part of the variance in offspring number](records/additive-part-of-offspring-variance.md) (recorded-checked)
 - [The breeding value](records/the-breeding-value.md) (recorded-checked)
+- [The pace of selection, within what flows into the lineages carrying an amount](records/pace-of-selection-within-what-flows-in.md) (recorded-checked)
 - [The selection term proper, over generations](records/selection-term-over-generations.md) (recorded-checked)
 - [Transmission as inheritance with a bounded need](records/transmission-is-inheritance-and-need.md) (recorded-checked)
 - [What bounds offspring numbers, and selection on offspring number itself](records/what-bounds-offspring-numbers.md) (recorded-checked)
 
-Modules (16, 1 stated on the grammar): `ContinuingRevision`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `PatternPassing`, `Population`, `Reproduction`, `SelectionLevels`, `SelectionRuns`, `SelectionTerm`, `Transmission`, `Units`
+Modules (17, 1 stated on the grammar): `ContinuingRevision`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `PatternPassing`, `Population`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionTerm`, `Transmission`, `Units`
 
 
 ## Collectives and selection
@@ -564,4 +565,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-305 of 323 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+306 of 324 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

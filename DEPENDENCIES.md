@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-438 registered results: 408 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1010 curated edges join 388 results to the results they draw on.
+439 registered results: 409 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1016 curated edges join 389 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -232,6 +232,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [own-count-misses-joint-excess][] ← <a id="own-count-misses-joint-excess--more-needs-renewers"></a>[more-needs-renewers][] · <a id="own-count-misses-joint-excess--renewing-consuming-formation"></a>[renewing-consuming-formation][] *(interpretive)* · <a id="own-count-misses-joint-excess--laws-of-one-step"></a>[laws-of-one-step][]
 - [own-good-to-reachable-living-significance][] ← <a id="own-good-to-reachable-living-significance--positive-ground-open-futures"></a>[positive-ground-open-futures][]
 - [own-widening-within-the-margin][] ← <a id="own-widening-within-the-margin--four-cases-of-a-part"></a>[four-cases-of-a-part][]
+- [pace-of-selection-within-what-flows-in][] ← <a id="pace-of-selection-within-what-flows-in--what-bounds-offspring-numbers"></a>[what-bounds-offspring-numbers][] · <a id="pace-of-selection-within-what-flows-in--additive-part-of-offspring-variance"></a>[additive-part-of-offspring-variance][] · <a id="pace-of-selection-within-what-flows-in--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="pace-of-selection-within-what-flows-in--evolution-on-descent"></a>[evolution-on-descent][] · <a id="pace-of-selection-within-what-flows-in--a-rise-past-the-inflow-is-drawn-from-beyond"></a>[a-rise-past-the-inflow-is-drawn-from-beyond][] · <a id="pace-of-selection-within-what-flows-in--laws-of-one-step"></a>[laws-of-one-step][]
 - [pending-task-context-applicability][] ← <a id="pending-task-context-applicability--acquired-revision-of-pending-task"></a>[acquired-revision-of-pending-task][]
 - [place-relations-in-context][] ← <a id="place-relations-in-context--hexagrams-on-the-spine"></a>[hexagrams-on-the-spine][] · <a id="place-relations-in-context--claims-shown-in-context"></a>[claims-shown-in-context][] · <a id="place-relations-in-context--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [place-transition-nets-on-the-spine][] ← <a id="place-transition-nets-on-the-spine--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="place-transition-nets-on-the-spine--rising-and-falling-in-one-exchange"></a>[rising-and-falling-in-one-exchange][] · <a id="place-transition-nets-on-the-spine--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="place-transition-nets-on-the-spine--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="place-transition-nets-on-the-spine--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][]
@@ -643,6 +644,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [own-count-misses-joint-excess]: theories/becoming/results/records/own-count-misses-joint-excess.md
 [own-good-to-reachable-living-significance]: theories/becoming/results/records/own-good-to-reachable-living-significance.md
 [own-widening-within-the-margin]: theories/becoming/results/records/own-widening-within-the-margin.md
+[pace-of-selection-within-what-flows-in]: theories/becoming/results/records/pace-of-selection-within-what-flows-in.md
 [pending-task-context-applicability]: theories/becoming/results/records/pending-task-context-applicability.md
 [place-relations-in-context]: theories/becoming/results/records/place-relations-in-context.md
 [place-transition-nets-on-the-spine]: theories/becoming/results/records/place-transition-nets-on-the-spine.md

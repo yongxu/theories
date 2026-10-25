@@ -2102,11 +2102,6 @@
    "category": "general-structure",
    "reason": "read on the weights themselves the bound is attained, Fisher's exact case: a law of any finite family read with natural-number weights and amounts, with no world"
   },
-  "Becoming.Reproduction.Generations.response_sq_le": {
-   "module": "Becoming.Reproduction",
-   "category": "general-structure",
-   "reason": "over listed generations with exact transmission the cross-multiplied rise or fall of the mean, squared, is at most the product of the spreads: a law of any finite family read with natural-number weights and amounts, with no world beyond the listed generations"
-  },
   "Becoming.Reproduction.Unrelated.unrelated": {
    "module": "Becoming.Reproduction",
    "category": "model-witness",

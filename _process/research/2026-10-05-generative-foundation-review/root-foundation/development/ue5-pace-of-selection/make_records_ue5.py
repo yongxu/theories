@@ -327,7 +327,10 @@ def build(names, sha, receipt_id, n):
                   "carrying an amount. Price (1970, Nature 227) and Fisher (1930) state identities that admit every "
                   "pace; the flow bounds them. number_unfed_uniform is density regulation of heritable variance in "
                   "fitness in counts, Fisher's deterioration of the environment as Price (1972, Annals of Human Genetics "
-                  "36) read it. Haldane (1957, Journal of Genetics 55) counted selective deaths; Nei (1971, Genetics 68) "
+                  "36) read it. response_sq_within_inflow is the bound of Crow (1958, Human Biology 30) and Arnold and "
+                  "Wade (1984, Evolution 38), the standardized selection differential at most the root of the opportunity "
+                  "for selection, Cauchy-Schwarz in counts, with the opportunity bounded by the next generation's inflow. "
+                  "Haldane (1957, Journal of Genetics 55) counted selective deaths; Nei (1971, Genetics 68) "
                   "and Felsenstein (1971, American Naturalist 105) restated his limit from a reproductive excess, "
                   "substitutions at least ln(1/p₀)/ln k generations apart; whole_within_power bounds the steps one "
                   "substitution takes from p₀ under a cap on each parent, the form behind that limit, in counts, and not "
@@ -336,7 +339,7 @@ def build(names, sha, receipt_id, n):
                   "Fretwell (1974, American Naturalist 108): parent_within_inflow is their model's premise. The readings "
                   "are the AI's (D45), in development/ue5-pace-of-selection/NOTE.md, with the review in REVIEW-UE5.md.",
             'zh': 'Malthus（1798），主要之邻：繁殖受其所赖以维持者之限，读于携带一量之谱系。Price（1970）与 Fisher（1930）所陈为容许任何速度之恒等式；'
-                  '流约束之。number_unfed_uniform 为可遗传适合度方差之密度调节之计数形式，即 Price（1972）所读之 Fisher 环境之恶化。Haldane（1957）'
+                  '流约束之。number_unfed_uniform 为可遗传适合度方差之密度调节之计数形式，即 Price（1972）所读之 Fisher 环境之恶化。response_sq_within_inflow 即 Crow（1958）与 Arnold、Wade（1984）之界：标准化选择差至多为选择机会之平方根，以计数陈述之 Cauchy–Schwarz，而选择机会受下一代之流入所限。Haldane（1957）'
                   '计选择性死亡；Nei（1971）与 Felsenstein（1971）由繁殖盈余重述其限，替代之间相隔至少 ln(1/p₀)/ln k 代；whole_within_power '
                   '界定每亲受限时一次替代自 p₀ 所需之步数，即该限所本之形式，以计数陈述，而非相继替代之间隔。Wallace（1975）：Displacement 为软选择之情境，为一读法。Smith 与 Fretwell（1974）：parent_within_inflow 为其模型之前提。'
                   '读法皆 AI 之读（D45），载于 NOTE.md，审查见 REVIEW-UE5.md。'},

@@ -47,7 +47,7 @@ Canonical source: [Reproduction.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-The additive part through several carried amounts at once; offspring numbers bounded by what a parent takes from the conditions it depends on, with support; a lineage open to inflow, bounded by what flows in; an independent review.
+The additive part through several carried amounts at once; offspring numbers bounded by what a parent takes from the conditions it depends on, with support; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -71,7 +71,7 @@ Fisher's fundamental theorem (Fisher 1930) in its case of exact transmission: th
 - related, not a proved adapter: [evolution-on-descent](evolution-on-descent.md). Descent read with what it gives: offspring numbers bounded by giving and taking, and a lineage that ends within a closed family.
 - related, not a proved adapter: [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md). The additive part through any carried amount, of which this record's exact case is the top.
 
-**Used by:** [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md)
+**Used by:** [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md) · [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -96,6 +96,7 @@ Aliases: `what bounds offspring numbers`, `什么约束后代数`, `selection on
 - 20 October 2026: added (EV2), section 8.1 item 9's bound on offspring numbers and the variance form; study section 244.
 - 20 October 2026, EV4 and EV5 (selection within and among groups; among groups by ending): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV4's and EV5's additions: in 2.4 a bullet for each of Becoming.SelectionLevels and Becoming.GroupEnding and the record list; two rows of the record table; 8.1 item 9; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.
 - 20 October 2026, EV10: Becoming.Reproduction gains the additive part through one carried amount (record additive-part-of-offspring-variance, study section 279); this record's first open item is answered there for one amount, its does-not-show item and next delta updated; its laws and their statements are unchanged.
+- 25 October 2026, UE5: a lineage open to inflow, bounded by what flows in, is answered by record pace-of-selection-within-what-flows-in (study section 416), which joins Becoming.Reproduction to Becoming.Entropy; this record's next delta updated; its laws and their statements are unchanged.
 
 </details>
 

@@ -80,6 +80,7 @@ import Becoming.LeastLoss
 import Becoming.WholeAmounts
 import Becoming.InAmounts
 import Becoming.Entropy
+import Becoming.SelectionPace
 import Becoming.Units
 import Becoming.Imbalance
 import Becoming.Continuity
@@ -1083,6 +1084,24 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   stock after a step with what the family loses is the stock before with what it gains, which is
   at most the inflow, and over a stretch the stock rises by at most the stretch's inflow. Losing
   exactly what is dissipated is the case of no inflow.
+* `Becoming.SelectionPace` (L1): the pace of selection, within what flows in (no premise beyond
+  the hypotheses named). Across a step at which the flow balances on the family a lineage
+  occupies, each offspring coming to stand at `m` or more: offspring listed after some relata,
+  `m` for each, are within what those relata stood at and the list's inflow
+  (`born_within_inflow`). With exact transmission and each parent standing at no more than `m`,
+  the total of an amount rises by at most what flows into each carrying lineage over `m`
+  (`total_within_carried`), counted lineage by lineage so that what passes between carrying
+  lineages counts; the mean of a population not shrinking rises accordingly
+  (`response_within_carried`), and a rise nothing feeds shrinks the population
+  (`unfed_rise_shrinks`). For an amount of zero or one, the carriers' rise is within what the
+  rest of a whole falls by and what flows into the whole (`share_within_rest`), the law that a
+  rise past the inflow is drawn from beyond read on offspring. A cap on what flows into each
+  parent's lineage caps the total's growth at `k ^ T` over `T` steps (`total_within_power`,
+  `whole_within_power`). Read by offspring number, `m` times its squared differences over pairs
+  is at most the size times the next generation's inflow (`number_spread_within_inflow`). The
+  natural statement, a pace bounded by what flows into the whole, fails
+  (`Displacement.natural_fails`). A leaf: it joins `Becoming.Reproduction` and `Becoming.Entropy`,
+  neither of which imports the other, and nothing below needs it (board item UE5).
 * `Becoming.Units` (L1): the laws of one step at a finer unit, the test of the commitment
   to whole units. Arising needing an active giver holds at every resolution with no condition
   on the split; the law of one exchange holds with change read in the unit (read in raw counts

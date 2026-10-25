@@ -170,8 +170,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T091125.435056Z）：Becoming.Reproduction 的 72 项声明（50 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 244 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "The additive part through several carried amounts at once; offspring numbers bounded by what a parent takes from the conditions it depends on, with support; a lineage open to inflow, bounded by what flows in; an independent review.",
-    "zh": "同时经由多个所载之量的加性部分；以亲代从其所依存条件所取之量、连同支持来约束后代数；向流入开放的世系，受流入之量约束；独立审查。"
+    "en": "The additive part through several carried amounts at once; offspring numbers bounded by what a parent takes from the conditions it depends on, with support; an independent review.",
+    "zh": "同时经由多个所载之量的加性部分；以亲代从其所依存条件所取之量、连同支持来约束后代数；独立审查。"
   },
   "correspondence": {
     "en": "Fisher's fundamental theorem (Fisher 1930) in its case of exact transmission: the change of mean fitness is the variance of fitness over its mean. With n_t the size of generation t, number_variation and ByNumber.step say n_t n_(t+2) - n_(t+1)^2 = concordance + n_t(raised - lowered), the concordance over ordered pairs being n_t^2 times the variance of offspring number; Price (1972) reads the general theorem as the partial change, the rest left to the environment. That a finite closed resource ends reproduction is the Malthusian bound. Readings (the AI's): selection on offspring number never lowers its mean; where nothing flows in, transmission must.",
@@ -404,6 +404,10 @@
     {
       "en": "20 October 2026, EV10: Becoming.Reproduction gains the additive part through one carried amount (record additive-part-of-offspring-variance, study section 279); this record's first open item is answered there for one amount, its does-not-show item and next delta updated; its laws and their statements are unchanged.",
       "zh": "2026年10月20日，EV10：Becoming.Reproduction 增加经由一个所载之量的加性部分（记录 additive-part-of-offspring-variance，研究第 279 节）；本记录的第一个开放项在那里就一个量得到回答，其“未表明”项与下一步已更新；定律及其陈述不变。"
+    },
+    {
+      "en": "25 October 2026, UE5: a lineage open to inflow, bounded by what flows in, is answered by record pace-of-selection-within-what-flows-in (study section 416), which joins Becoming.Reproduction to Becoming.Entropy; this record's next delta updated; its laws and their statements are unchanged.",
+      "zh": "2026年10月25日，UE5：向流入开放的世系受流入之量约束，由记录 pace-of-selection-within-what-flows-in 回答（研究第 416 节），其接 Becoming.Reproduction 于 Becoming.Entropy；本记录的下一步已更新；定律及其陈述不变。"
     }
   ]
 }

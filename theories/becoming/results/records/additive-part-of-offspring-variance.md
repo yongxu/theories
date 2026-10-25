@@ -66,7 +66,7 @@ Fisher 1930's fundamental theorem in its general form, read by Price 1972: the c
 - related, not a proved adapter: [mutation-and-the-balance-it-sets](mutation-and-the-balance-it-sets.md). Mutation, the transmission side of the same step.
 - related, not a proved adapter: [the-breeding-value](the-breeding-value.md). Several carried amounts at once: the breeding value.
 
-**Used by:** [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md) · [the-breeding-value](the-breeding-value.md)
+**Used by:** [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md) · [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md) · [the-breeding-value](the-breeding-value.md)
 
 <a id="sources--来源"></a>
 ### Sources

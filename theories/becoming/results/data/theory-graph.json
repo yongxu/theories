@@ -3356,6 +3356,18 @@
    "page": "theories/becoming/results/records/own-widening-within-the-margin.md"
   },
   {
+   "id": "record:pace-of-selection-within-what-flows-in",
+   "type": "result",
+   "record": "pace-of-selection-within-what-flows-in",
+   "title": "The pace of selection, within what flows into the lineages carrying an amount",
+   "title_zh": "选择之速，不过流入携带该量之谱系者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/pace-of-selection-within-what-flows-in.md"
+  },
+  {
    "id": "record:pending-task-context-applicability",
    "type": "result",
    "record": "pending-task-context-applicability",
@@ -6497,6 +6509,17 @@
    "level": "L1",
    "theorems": 190,
    "region": "map",
+   "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.SelectionPace",
+   "type": "module",
+   "name": "Becoming.SelectionPace",
+   "level": "L1",
+   "theorems": 103,
+   "region": "life",
    "base": "old-base",
    "on_grammar": false,
    "reaches_grammar": true
@@ -27977,6 +28000,12 @@
    "anchor": "r-what-bounds-offspring-numbers"
   },
   {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-pace-of-selection-within-what-flows-in",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-pace-of-selection-within-what-flows-in"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-additive-part-of-offspring-variance",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
@@ -31918,6 +31947,16 @@
   {
    "from": "module:Becoming.SelectionLevels",
    "to": "module:Becoming.SelectionTerm",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.SelectionPace",
+   "to": "module:Becoming.Entropy",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.SelectionPace",
+   "to": "module:Becoming.Reproduction",
    "type": "imports"
   },
   {
@@ -43676,6 +43715,81 @@
    "type": "related"
   },
   {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "module:Becoming.Dependence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "module:Becoming.Entropy",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "module:Becoming.Evolution",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "module:Becoming.Reproduction",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "module:Becoming.SelectionPace",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "module:Becoming.SelectionTerm",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "record:additive-part-of-offspring-variance",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "record:entropy-history-and-record",
+   "type": "related"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "record:evolution-on-descent",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "record:laws-of-one-step",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "record:selection-term-over-generations",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "record:what-a-rise-draws-from-beyond",
+   "type": "related"
+  },
+  {
+   "from": "record:pace-of-selection-within-what-flows-in",
+   "to": "record:what-bounds-offspring-numbers",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:pending-task-context-applicability",
    "to": "module:Becoming.Stock",
    "type": "proved-in"
@@ -53718,6 +53832,11 @@
   {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
    "to": "record:organizational-rule-inheritance",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-pace-of-selection-within-what-flows-in",
+   "to": "record:pace-of-selection-within-what-flows-in",
    "type": "states"
   },
   {

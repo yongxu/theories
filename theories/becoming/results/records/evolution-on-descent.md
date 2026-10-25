@@ -86,7 +86,7 @@ The unification plan asks for transmission, variation and selection through desc
 - related, not a proved adapter: [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md). The exact form of transmission: inheritance with the need within a bound; the evolution bounds at one descent, needing only some supported giver.
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The selection term proper in counting form, the mean's course over generations, and support never selected against.
 
-**Used by:** [learned-procedure-transmission](learned-procedure-transmission.md) · [map-of-premises](map-of-premises.md) · [selection-term-over-generations](selection-term-over-generations.md) · [space-and-its-parts](space-and-its-parts.md) · [target-capture](target-capture.md) · [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md)
+**Used by:** [learned-procedure-transmission](learned-procedure-transmission.md) · [map-of-premises](map-of-premises.md) · [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md) · [selection-term-over-generations](selection-term-over-generations.md) · [space-and-its-parts](space-and-its-parts.md) · [target-capture](target-capture.md) · [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md)
 
 <a id="sources--来源"></a>
 ### Sources

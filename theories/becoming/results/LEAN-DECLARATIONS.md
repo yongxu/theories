@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 314 | 14,416 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 315 | 14,519 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -831,6 +831,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Selection.lean](lean-declarations/becoming-core.md#module-8b0687844bea) | Becoming pure core |
 | [SelectionGap.lean](lean-declarations/becoming-core.md#module-bff05f8dbe13) | Becoming pure core |
 | [SelectionLevels.lean](lean-declarations/becoming-core.md#module-0babad5be0a3) | Becoming pure core |
+| [SelectionPace.lean](lean-declarations/becoming-core.md#module-4798dff64094) | Becoming pure core |
 | [SelectionPool.lean](lean-declarations/becoming-core.md#module-2ab3fe374991) | Becoming pure core |
 | [SelectionReach.lean](lean-declarations/becoming-core.md#module-fbecd7401f01) | Becoming pure core |
 | [SelectionRelabelCorrespondence.lean](lean-declarations/abstraction.md#module-d28f30cfca89) | Abstraction, applicability and constitution |

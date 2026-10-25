@@ -77,7 +77,7 @@ CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
         "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Founding", "Becoming.Drift", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
-        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.WholeAmounts", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.Units", "Becoming.Imbalance", "Becoming.Continuity",
+        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.WholeAmounts", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.SelectionPace", "Becoming.Units", "Becoming.Imbalance", "Becoming.Continuity",
         "Becoming.Continuation", "Becoming.RenewalFlow", "Becoming.Admission", "Becoming.Exclusion", "Becoming.Exhaustion",
         "Becoming.Regions", "Becoming.EventualWidening", "Becoming.EventualWideningInstances", "Becoming.Growth", "Becoming.Retaining", "Becoming.OwnWidening", "Becoming.Clearing", "Becoming.Extension",
         "Becoming.Metaethics", "Becoming.Lifting", "Becoming.Ranking", "Becoming.ActiveReading", "Becoming.LossMatching", "Becoming.StrictTransport", "Becoming.MatchedCourses",
@@ -1081,6 +1081,19 @@ SCOPE = (
     "times its covariation with offspring number equal to its own spread, at most d^2 times offspring "
     "number's, and with exact transmission d times the cross-multiplied rise of its mean is that "
     "spread; witnesses an additive and an interacting offspring number. "
+    "SelectionPace: across a step at which the flow balances on the family a lineage occupies, "
+    "offspring each coming to stand at m or more number, m for each, at most what stood and what "
+    "flowed in; with exact transmission and each parent standing at no more than m, m times the next "
+    "total of an amount is at most m times this one with what flows into each carrying lineage, "
+    "counted lineage by lineage, the mean of a population not shrinking rises within it, and a rise "
+    "nothing feeds shrinks the population; for an amount of zero or one the carriers' rise is within "
+    "what the rest of a whole falls by and what flows into the whole, and within the inflow into "
+    "their joint lineage; with what flows into each parent's lineage, with m, at most k m, a parent "
+    "leaves at most k offspring and the total grows by at most k^T over T steps; read by offspring "
+    "number, m times the squared differences of offspring numbers over pairs is at most the size "
+    "times the next generation's inflow, and with offspring number inherited the response of any "
+    "amount, squared, is bounded by the next step's inflow; with the inflow into the whole or into "
+    "the population's own lineage in place of the carried inflow the response law fails. "
     "SelectionLevels: over a family listed as k groups of equal size, the whole's concordance with k "
     "times the groups' own discordance and the discordance among groups read by their totals equals "
     "the whole's discordance with k times the groups' own concordance and the concordance among "

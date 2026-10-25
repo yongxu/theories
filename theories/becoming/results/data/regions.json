@@ -1256,6 +1256,11 @@
    "base": "old-base",
    "note": "OW1 OwnWidening"
   },
+  "pace-of-selection-within-what-flows-in": {
+   "region": "life",
+   "base": "old-base",
+   "note": "SelectionPace UE5: the pace of selection within what flows into the carrying lineages"
+  },
   "pending-task-context-applicability": {
    "region": "significance",
    "base": "periphery",
@@ -3552,6 +3557,11 @@
    "region": "life",
    "base": "general",
    "note": "multilevel Price equation, k groups of m"
+  },
+  "Becoming.SelectionPace": {
+   "region": "life",
+   "base": "old-base",
+   "note": "UE5 the pace of selection within what flows in: Reproduction joined to Entropy"
   },
   "Becoming.SelectionPool": {
    "region": "collective",
