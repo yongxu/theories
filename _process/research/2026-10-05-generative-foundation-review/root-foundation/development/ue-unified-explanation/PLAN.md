@@ -57,7 +57,7 @@ In the account's terms, the theory explains reality as one unfolding where four 
 
   These are containments with their first two parts and, mostly, no third.
 - **Unifications claimed as theses.** Four results known in substance are claimed as one law across fields ([08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim)): selection through couplings across reward, training, natural selection, prices and votes (T3); C as the whole of the order (T5); one merge across computation, heat, extinction and forgetting; and overshoot, externality and Goodhart's law as one law of the optimum. As theses they forbid what the source fields leave open, and their tests are the objective's evidence.
-- **The first new containment, a restatement so far.** The free-energy principle (UE1), in kit: its premises on the card, and `Becoming.ChoiceCountCapture`. Its review found the kit sound and the third part, as first stated, not surviving:
+- **The first new containment, a restatement so far.** The free-energy principle (UE1), landed 25 October ([record](../../../../../../theories/becoming/results/records/capture-by-counted-choices.md)): its premises on the card, and `Becoming.ChoiceCountCapture`. Its review found the kit sound and the third part, as first stated, not surviving:
   - the lock of a rule read from the count of its choices is the lock-in of increasing returns (Arthur 1989), which active inference's own simulation of devaluation already shows (Friston and others 2016, §5.2), and counting the action taken is psychology's value-free habit;
   - the contrast with counting the posterior at the time of choosing concerns a rule active inference does not use: it counts the end-of-trial posterior, close to the executed policy;
   - the pooling result is a reading of the pool law under its hypotheses.
@@ -74,23 +74,25 @@ In the account's terms, the theory explains reality as one unfolding where four 
   - the audit's ranked unproved third parts: the pace of selection bounded by the inflow, a counting bound on surviving expected joint excess, what lies beyond falling along improvement;
   - frozen tests that could fail.
 
+  Where they stand (26 October). UE4 landed its first step, eventual widening ([record](../../../../../../theories/becoming/results/records/eventual-widening.md)): first-order and near-definitional, so not such a result; what keeps widening, and what it needs, is UE7. UE5 states the pace of selection; its review found the bound by total inflow linear, not Haldane's cost, and closer to Arnold and Wade's bound on the selection differential (1984). UE6, held by another session, searched the audit's eight candidates against the literature and found none surviving ([round 1](../ue6-beyond-the-sciences/ASTRA-NOVELTY.md)): the counting bound on surviving joint excess is a case of Bertsimas and Popescu's sharp moment bounds (2005), and the drain along improvement is the identity behind `Flow.Balances.family_le_iff`.
+
 ## 4. The path
 
 Ordered by what each containment would show. Each item is claimed on the board before work, reviewed independently before landing, and lands through the queue.
 
-1. **UE1, the free-energy principle** (claimed). The most developed rival unification of self-organization and cognition, and the one offered as the basis of collective human and AI intelligence.
-2. **UE0, the audit of the third parts.** For each restated framework in 08 §8, does the theory forbid something the source field leaves open? Where it does, state it as a thesis with its refutation. Where it does not, record the restatement. This tells the theory where it reaches farther and where it does not, before it claims more.
+1. **UE1, the free-energy principle** (landed 25 October; a restatement, its third part open). The most developed rival unification of self-organization and cognition, and the one offered as the basis of collective human and AI intelligence.
+2. **UE0, the audit of the third parts** (done: [audit](../ue0-third-parts/AUDIT.md)). For each restated framework in 08 §8, does the theory forbid something the source field leaves open? Where it does, state it as a thesis with its refutation. Where it does not, record the restatement. This tells the theory where it reaches farther and where it does not, before it claims more.
 3. **UE2, conditional weights and surprisal** on the counting layer the core already has (`Becoming.Weighted`: the sum over histories exact, every weighting a premise; `Becoming.Typicality`: Chebyshev, Chernoff and the counting law of large numbers):
    - Bayes's rule as the weight of the courses agreeing with a record;
    - the share of a set of courses as the counting form of surprisal;
    - the variational bound in the periphery, where logarithms are needed;
    - the chance of leaving what a continuation needs, bounded by its margin over its spread.
 
-   This pays the free-energy principle's main debt.
+   This pays two of the principle's three quantities in counting form, belief and pointwise surprisal; free energy needs logarithms, so it stays in the periphery (ready to land, after OC2).
 4. **UE3, stochastic thermodynamics.** Every least loss physics supplies is a theorem there ([08 §8](../../../../../../theories/becoming/chapters/08-METHOD.md#beyond-the-table)). Deriving the World's dissipation from a fluctuation theorem would derive a premise from a stated physics.
 5. **Constructor theory.** Its laws say which transformations are possible, which impossible, and why. The theory's admission and widening speak of what can form. The containment would read tasks as admissions and test whether widening is the order constructor theory's possible tasks carry.
 6. **Causal sets.** The root's precedence is the reach of the condition relation, strict exactly where the net has no cycle ([01](../../../../../../theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol)), and a causal set is a locally finite order. The containment would state the root's laws on causal sets and ask what continuation relative to a class adds to an order: patterns that last, on spacetime read as order.
-7. **Assembly theory and the adjacent possible.** The second-order direction of 生生, a range whose widening keeps widening, is the theory's least formalized part ([07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-along-a-reading)). Assembly theory measures selection by the steps that build an object, and the adjacent possible states how the possible grows. Containing them would give 生生 its formal second half.
+7. **Assembly theory and the adjacent possible** (UE4 landed its first step; UE7 claimed). The second-order direction of 生生, a range whose widening keeps widening, is the theory's least formalized part ([07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-along-a-reading)). Assembly theory measures selection by the steps that build an object, and the adjacent possible states how the possible grows. Containing them would give 生生 its formal second half.
 8. **Quantum probability.** Contextuality already holds as gluing under parity ([03](../../../../../../theories/becoming/chapters/03-KNOWING.md#r-gluing-under-parity)). Quantum probability needs UE2 and more, so it comes last.
 
 ## 5. The structural gaps
@@ -116,8 +118,9 @@ The overview's open list names what a full explanation must face ([§10](../../.
 
 ## 8. Owners
 
-- UE (coordination) and UE1 are held by the session that wrote this plan.
-- UE0, UE2, UE3 and items 5–8 are unclaimed; claim them on the board.
+- UE (coordination) is held by the session that wrote this plan, which also drafted and landed UE0, UE1 and UE4 and holds UE2, UE1b, UE5 and UE7.
+- UE6, the search for results no neighbouring field states, is held by another session (Unification and coherence progress); UE7 is kept disjoint from it.
+- UE3 (stochastic thermodynamics) and items 5, 6 and 8 are unclaimed; claim them on the board.
 
 ## Literature (from prior knowledge, not re-read for this plan)
 
