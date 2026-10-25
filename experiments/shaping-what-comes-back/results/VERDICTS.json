@@ -1,0 +1,154 @@
+{
+ "conditions": {
+  "s2p3": {
+   "predicted": "S",
+   "final": [
+    "S",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "first": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "hits": 5,
+   "seeds": 5,
+   "verdict": "passed",
+   "played_both": 5,
+   "played_one": 0,
+   "final_is_better_seen": 5,
+   "H1_holds": true
+  },
+  "s0p5": {
+   "predicted": "N",
+   "final": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "first": [
+    "N",
+    "N",
+    "N",
+    "S",
+    "N"
+   ],
+   "hits": 5,
+   "seeds": 5,
+   "verdict": "passed",
+   "played_both": 4,
+   "played_one": 1,
+   "final_is_better_seen": 4,
+   "H1_holds": true
+  },
+  "s2p0": {
+   "predicted": "S",
+   "final": [
+    "N",
+    "N",
+    "S",
+    "N",
+    "S"
+   ],
+   "first": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "hits": 2,
+   "seeds": 5,
+   "verdict": "failed",
+   "played_both": 2,
+   "played_one": 3,
+   "final_is_better_seen": 2,
+   "H1_holds": false
+  },
+  "s0p0": {
+   "predicted": "N",
+   "final": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "first": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "hits": 5,
+   "seeds": 5,
+   "verdict": "passed",
+   "played_both": 4,
+   "played_one": 1,
+   "final_is_better_seen": 4,
+   "H1_holds": true
+  },
+  "m2n1_p0": {
+   "predicted": "N",
+   "final": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "first": [
+    "S",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "hits": 5,
+   "seeds": 5,
+   "verdict": "passed",
+   "played_both": 3,
+   "played_one": 2,
+   "final_is_better_seen": 3,
+   "H1_holds": false
+  },
+  "m2n1_p5": {
+   "predicted": "S",
+   "final": [
+    "S",
+    "S",
+    "N",
+    "N",
+    "S"
+   ],
+   "first": [
+    "S",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "hits": 3,
+   "seeds": 5,
+   "verdict": "failed",
+   "played_both": 3,
+   "played_one": 2,
+   "final_is_better_seen": 3,
+   "H1_holds": false
+  }
+ },
+ "contrasts": {
+  "K1_split_same_total_kept_or_shared": true,
+  "K2_kept_covering_the_cost_whatever_shared": false,
+  "K3_nothing_back_whatever_shared": true,
+  "K4_shared_part_turns_a_stretch": false
+ }
+}

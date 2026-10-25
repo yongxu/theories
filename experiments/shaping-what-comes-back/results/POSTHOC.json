@@ -1,0 +1,592 @@
+{
+ "conditions": {
+  "s2p3": {
+   "expected": {
+    "S": 21600,
+    "N": 12500
+   },
+   "seeds": [
+    {
+     "seed": 0,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "S"
+     ],
+     "other_first_played_in": 5,
+     "mean_seen": {
+      "N": 12552.7,
+      "S": 21459.3
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 1,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "S",
+      "S"
+     ],
+     "other_first_played_in": 4,
+     "mean_seen": {
+      "N": 12545.7,
+      "S": 21786.0
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 2,
+     "round0": "N",
+     "played": [
+      "N",
+      "S",
+      "S",
+      "S",
+      "S"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "N": 12634.6,
+      "S": 21609.6
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 3,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "S",
+      "S"
+     ],
+     "other_first_played_in": 4,
+     "mean_seen": {
+      "N": 12531.5,
+      "S": 21800.3
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 4,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "S",
+      "S",
+      "S"
+     ],
+     "other_first_played_in": 3,
+     "mean_seen": {
+      "N": 12379.0,
+      "S": 21564.5
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    }
+   ]
+  },
+  "s0p5": {
+   "expected": {
+    "S": 21600,
+    "N": 34300
+   },
+   "seeds": [
+    {
+     "seed": 0,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "S",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": 3,
+     "mean_seen": {
+      "N": 34308.5,
+      "S": 21795.3
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 1,
+     "round0": "N",
+     "played": [
+      "N",
+      "S",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "N": 34415.7,
+      "S": 21560.0
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 2,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "S",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": 3,
+     "mean_seen": {
+      "N": 34420.9,
+      "S": 21615.5
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 3,
+     "round0": "S",
+     "played": [
+      "S",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "S": 21776.8,
+      "N": 34102.7
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 4,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": null,
+     "mean_seen": {
+      "N": 34387.1
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    }
+   ]
+  },
+  "s2p0": {
+   "expected": {
+    "S": 2700,
+    "N": 800
+   },
+   "seeds": [
+    {
+     "seed": 0,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": null,
+     "mean_seen": {
+      "N": 801.0
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 1,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": null,
+     "mean_seen": {
+      "N": 794.8
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 2,
+     "round0": "N",
+     "played": [
+      "N",
+      "S",
+      "S",
+      "S",
+      "S"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "N": 812.9,
+      "S": 2699.8
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 3,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": null,
+     "mean_seen": {
+      "N": 798.2
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 4,
+     "round0": "N",
+     "played": [
+      "N",
+      "S",
+      "S",
+      "S",
+      "S"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "N": 806.1,
+      "S": 2720.2
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    }
+   ]
+  },
+  "s0p0": {
+   "expected": {
+    "S": 100,
+    "N": 800
+   },
+   "seeds": [
+    {
+     "seed": 0,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "S",
+      "N"
+     ],
+     "other_first_played_in": 4,
+     "mean_seen": {
+      "N": 796.2,
+      "S": 98.7
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 1,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "S",
+      "N"
+     ],
+     "other_first_played_in": 4,
+     "mean_seen": {
+      "N": 783.6,
+      "S": 98.8
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 2,
+     "round0": "N",
+     "played": [
+      "N",
+      "S",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "N": 803.9,
+      "S": 99.7
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 3,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": null,
+     "mean_seen": {
+      "N": 794.5
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 4,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "S",
+      "N"
+     ],
+     "other_first_played_in": 4,
+     "mean_seen": {
+      "N": 805.9,
+      "S": 95.8
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    }
+   ]
+  },
+  "m2n1_p0": {
+   "expected": {
+    "S": 1600,
+    "N": 2700
+   },
+   "seeds": [
+    {
+     "seed": 0,
+     "round0": "S",
+     "played": [
+      "S",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "S": 1652.3,
+      "N": 2657.3
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 1,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": null,
+     "mean_seen": {
+      "N": 2716.7
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 2,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "S",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": 3,
+     "mean_seen": {
+      "N": 2708.0,
+      "S": 1504.5
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 3,
+     "round0": "N",
+     "played": [
+      "N",
+      "S",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "N": 2701.3,
+      "S": 1535.8
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 4,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": null,
+     "mean_seen": {
+      "N": 2708.9
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    }
+   ]
+  },
+  "m2n1_p5": {
+   "expected": {
+    "S": 75600,
+    "N": 51200
+   },
+   "seeds": [
+    {
+     "seed": 0,
+     "round0": "S",
+     "played": [
+      "S",
+      "N",
+      "S",
+      "S",
+      "S"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "S": 75574.1,
+      "N": 51714.3
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 1,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "S",
+      "S",
+      "S"
+     ],
+     "other_first_played_in": 3,
+     "mean_seen": {
+      "N": 51308.4,
+      "S": 74612.8
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 2,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": null,
+     "mean_seen": {
+      "N": 51141.1
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 3,
+     "round0": "N",
+     "played": [
+      "N",
+      "N",
+      "N",
+      "N",
+      "N"
+     ],
+     "other_first_played_in": null,
+     "mean_seen": {
+      "N": 51200.2
+     },
+     "final": "N",
+     "round0_frames_a_dilemma": true
+    },
+    {
+     "seed": 4,
+     "round0": "N",
+     "played": [
+      "N",
+      "S",
+      "S",
+      "S",
+      "S"
+     ],
+     "other_first_played_in": 2,
+     "mean_seen": {
+      "N": 51189.0,
+      "S": 75363.7
+     },
+     "final": "S",
+     "round0_frames_a_dilemma": true
+    }
+   ]
+  }
+ },
+ "totals": {
+  "round0_N": 27,
+  "round0_frames_a_dilemma": 30,
+  "seeds": 30,
+  "played_both": 21,
+  "final_is_better_seen": 21,
+  "played_one": 9,
+  "final_is_the_one_played": 9
+ }
+}
