@@ -1,0 +1,146 @@
+# UE2 scratch build
+utc: 20261025T102228Z
+command: BECOMING_FRESH=1 python3 -B scratch_build.py /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/tree Becoming.Typicality Becoming.ConditionalWeights Becoming.TypicalRuns Becoming.Situations Becoming.Drift Becoming.FinerTraces Becoming.SituationTraces Becoming.HistorySums
+tree sha256: Typicality.lean db46cf81f98cf8c06f3d5868a8493162b2174eca4f367fd26191af0aae7e8906, ConditionalWeights.lean c1dc12986625f2e3f27cb83409562854599140800fe59ba494fd7bd5d6f8cf28
+landed Typicality.lean sha256 (base of the proposed change): 904976890149379d5d5e061cebf97235035ed94091985003ff51801b52e1d8a3
+the six dependents are built from the checkout against the tree's Typicality, to show the change keeps them compiling; BECOMING_FRESH=1 ran every step of the 80-module closure (88 steps, none reused)
+---
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/tree",
+  "modules": 80,
+  "ran": [
+    "Becoming.Prelude",
+    "GenerativeCore",
+    "Becoming.Frame",
+    "Becoming.Recurrence",
+    "RelationalRenewal",
+    "Becoming.Amounts",
+    "Becoming.Renewal",
+    "Becoming.World",
+    "Becoming.Witnesses",
+    "Becoming.Dependence",
+    "Becoming.Restoration",
+    "Becoming.Grammar",
+    "Becoming.Arising",
+    "Becoming.Labelled",
+    "Becoming.Laws",
+    "Becoming.Joint",
+    "Becoming.Experiment",
+    "Becoming.Mechanism",
+    "Becoming.Flow",
+    "Becoming.Change",
+    "Becoming.Evolution",
+    "Becoming.Population",
+    "Becoming.Dissipation",
+    "Becoming.Locality",
+    "Becoming.Roles",
+    "Becoming.Reserve",
+    "Becoming.InAmounts",
+    "Becoming.Space",
+    "Becoming.Unfolding",
+    "Becoming.Attraction",
+    "Becoming.Capture",
+    "Becoming.Branching",
+    "Becoming.Diagonal",
+    "Becoming.Context",
+    "Becoming.Admission",
+    "Becoming.Continuation",
+    "Becoming.Regions",
+    "Becoming.Retaining",
+    "Becoming.Clearing",
+    "Becoming.Interdependence",
+    "Becoming.Feedback",
+    "Becoming.Testing",
+    "Becoming.Selection",
+    "Becoming.Learning",
+    "Becoming.Description",
+    "Becoming.Decidedness",
+    "Becoming.Refinement",
+    "Becoming.Identification",
+    "Becoming.Premises",
+    "Becoming.Openness",
+    "Becoming.Resolution",
+    "Becoming.Weighted",
+    "Becoming.Typicality",
+    "Becoming.ConditionalWeights",
+    "Becoming.Histories",
+    "Becoming.Likeness",
+    "Becoming.Distinguishing",
+    "Becoming.Viability",
+    "Becoming.Lasting",
+    "Becoming.Parting",
+    "Becoming.Segmentation",
+    "Becoming.CrossSituational",
+    "Becoming.Situations",
+    "Becoming.WeightedTraces",
+    "Becoming.FinerTraces",
+    "Becoming.TypicalRuns",
+    "Becoming.SelectionTerm",
+    "Becoming.Integers",
+    "Becoming.Reproduction",
+    "Becoming.SelectionLevels",
+    "Becoming.GroupEnding",
+    "Becoming.Drift",
+    "Becoming.SituationTraces",
+    "Becoming.Response",
+    "Becoming.Counterfactual",
+    "Becoming.TimedResponse",
+    "Becoming.Propagation",
+    "Becoming.Loops",
+    "Becoming.Routes",
+    "Becoming.HistorySums",
+    "BecomingTypicalityAxiomAudit",
+    "BecomingConditionalWeightsAxiomAudit",
+    "BecomingTypicalRunsAxiomAudit",
+    "BecomingSituationsAxiomAudit",
+    "BecomingDriftAxiomAudit",
+    "BecomingFinerTracesAxiomAudit",
+    "BecomingSituationTracesAxiomAudit",
+    "BecomingHistorySumsAxiomAudit"
+  ],
+  "reused": 0,
+  "unclean": [],
+  "audits": {
+    "Becoming.Typicality": {
+      "theorems": 50,
+      "declarations": 70,
+      "with_axioms": {}
+    },
+    "Becoming.ConditionalWeights": {
+      "theorems": 93,
+      "declarations": 109,
+      "with_axioms": {}
+    },
+    "Becoming.TypicalRuns": {
+      "theorems": 21,
+      "declarations": 25,
+      "with_axioms": {}
+    },
+    "Becoming.Situations": {
+      "theorems": 38,
+      "declarations": 53,
+      "with_axioms": {}
+    },
+    "Becoming.Drift": {
+      "theorems": 82,
+      "declarations": 95,
+      "with_axioms": {}
+    },
+    "Becoming.FinerTraces": {
+      "theorems": 11,
+      "declarations": 12,
+      "with_axioms": {}
+    },
+    "Becoming.SituationTraces": {
+      "theorems": 20,
+      "declarations": 23,
+      "with_axioms": {}
+    },
+    "Becoming.HistorySums": {
+      "theorems": 39,
+      "declarations": 51,
+      "with_axioms": {}
+    }
+  }
+}
+exit 0
