@@ -23,6 +23,7 @@ each with a short English gloss.
 | `«生»`, `«住»`, `«亡»`, `«异»` | begins, abides, ends; alters (continues while a finer class tells apart) |
 | `«不穷»` | the line from an occurrence never ends |
 | `«复生»`, `«生生»` | renews (conditions a beginning that goes on); renewal without end |
+| `«复生至»`, `«息»` | renews into (conditions a beginning whose line reaches); ceasing (what it renews into all cease; inductive) |
 | `«有常»` | `E` is constant under `R`: `E˘;R ⊆ R;E˘` |
 | `«核»`, `«位核»` | the core: the greatest symmetric constant relation inside `E`; read both ways |
 | `«粗»`, `«粗复生»` | the coarse net (缘 between classes); renewal at the grain of a class |
@@ -169,8 +170,9 @@ theorem «住于细则住于粗» (R : «际» α) {E E' : «际» α} (h : «�
     (hx : «住» R E x) : «住» R E' x :=
   ⟨let ⟨w, hw⟩ := hx.1; ⟨w, «粗化» R h w x hw⟩, let ⟨y, hy⟩ := hx.2; ⟨y, «粗化» R h x y hy⟩⟩
 
-/-- The converse fails: something can end under the finer class while it abides under the
-coarser one (a line of two occurrences, the second unlike the first under the finer `«静»`). -/
+/-- The converse of `«亡于粗则亡于细»` fails: something can end under the finer class while it does
+not end under the coarser one (a line of two occurrences, the second unlike the first under the finer
+`«静»`). -/
 theorem «亡于细者不必亡于粗» :
     ∃ (α : Type) (R E E' : «际» α) (x : α), «则» E E' ∧ «亡» R E x ∧ ¬ «亡» R E' x := by
   refine ⟨Bool, fun x y => x = false ∧ y = true, «静», «一», false, fun _ _ _ => trivial, ?_, ?_⟩
@@ -515,11 +517,24 @@ theorem «生于位核下不变» {R E : «际» α} (hE : «类» E) {y y' : α
       | ⟨w, hrw, hww⟩ =>
         hy ⟨w, hrw, hE.trans (hE.trans (hE.symm (hSE w' w hww)) he) (hE.symm (hSE y y' hyy))⟩
 
-/-- So the positions are read off the two-way core: what shares a position shares beginning,
-abiding and ending. -/
-theorem «位同则四相同» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «位核» R E y y') :
+/-- So beginning and ending are read off the two-way core: for a class `E`, what its two-way core
+relates shares beginning and shares ending. Abiding carries over too (`«位同则住同»`); altering is a
+relation between two occurrences with a finer class, not a mark of one occurrence. -/
+theorem «位同则生亡同» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «位核» R E y y') :
     («生» R E y → «生» R E y') ∧ («亡» R E y → «亡» R E y') :=
   ⟨«生于位核下不变» hE hk, «亡于核下不变» hE («位核含于核» R E y y' hk)⟩
+
+/-- **Abiding is read off the two-way core too (位同则住同).** For a class `E`, what its two-way core
+relates shares abiding: a predecessor carries over by the core's constancy under the converse of 缘,
+a successor by its constancy under 缘. -/
+theorem «位同则住同» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «位核» R E y y')
+    (hy : «住» R E y) : «住» R E y' :=
+  match hk, hy with
+  | ⟨S, hSE, _, hc, hc', hyy⟩, ⟨⟨w, hrw, hew⟩, ⟨z, hrz, hez⟩⟩ =>
+    ⟨match («有常之逐点» («逆» R) S).mp hc' y y' hyy w hrw with
+      | ⟨w', hrw', hww⟩ => ⟨w', hrw', hE.trans (hE.trans (hE.symm (hSE w w' hww)) hew) (hSE y y' hyy)⟩,
+     match («有常之逐点» R S).mp hc y y' hyy z hrz with
+      | ⟨z', hrz', hzz⟩ => ⟨z', hrz', hE.trans (hE.trans (hE.symm (hSE y y' hyy)) hez) (hSE z z' hzz)⟩⟩
 
 end Position
 
@@ -597,16 +612,48 @@ theorem «相须则相须核» (R : «际» α) {E₁ E₂ : «际» α} (h₁ :
   have hs := «合有常则足以定理» R h₁ h₂ h.1
   ⟨hs.1, hs.2, h.2.1, h.2.2⟩
 
-/-- Ceasing (息): nothing on the line from `x` renews. -/
-def «息» (R E : «际» α) (x : α) : Prop := ∀ y, (x = y ∨ «相续» R E x y) → ¬ «复生» R E y
+/-- Renewing into (复生至): `x` conditions an occurrence that begins a line under `E`, and the line
+reaches `w`. Renewal without end (`«生生»`) holds where `x` lies in a family each member of which
+renews into some member of the family. -/
+def «复生至» (R E : «际» α) (x w : α) : Prop := ∃ y, R x y ∧ «生» R E y ∧ «相续» R E y w
 
-/-- **Renewal without end does not cease (生生不息).** -/
-theorem «生生不息» {R E : «际» α} {x : α} (h : «生生» R E x) : ¬ «息» R E x :=
-  fun hs => hs x (.inl rfl) («生生则复生» h)
+/-- Ceasing (息), defined positively and inductively along renewing into: `x` ceases where
+everything `x` renews into ceases; where `x` renews into nothing, it ceases at once. It is the least
+property so closed, the dual of renewal without end (`«生生»`, the greatest family that keeps
+renewing). Both are said on the same relation (`«复生至»`), in which each occurs positively; the
+relation itself contains the negative condition of beginning (`«生»`). That every chain of renewals
+from a ceasing occurrence is finite is not stated. -/
+inductive «息» (R E : «际» α) : α → Prop
+  | mk {x : α} : (∀ w, «复生至» R E x w → «息» R E w) → «息» R E x
+
+/-- **Renewal without end does not cease (生生不息).** The two exclude each other by construction:
+one is the greatest family that keeps renewing, the other the least property closed under
+renewing into. -/
+theorem «生生不息» {R E : «际» α} {x : α} (h : «生生» R E x) : ¬ «息» R E x := by
+  intro c
+  induction c with
+  | mk _ ih =>
+    match «生生之展» h with
+    | ⟨y, w, hr, hb, hl, hw⟩ => exact ih w ⟨y, hr, hb, hl⟩ hw
+
+/-- **What does not itself renew ceases (自不复生则息).** Renewing into begins with a renewal, so an
+occurrence that does not renew renews into nothing. Ceasing, like renewal without end, concerns what
+an occurrence renews into, not its line: an occurrence that does not renew ceases even where its line
+goes on into renewal without end. -/
+theorem «自不复生则息» {R E : «际» α} {x : α} (h : ¬ «复生» R E x) : «息» R E x :=
+  .mk fun _ ⟨y, hr, hb, hl⟩ => absurd ⟨y, hr, hb, match hl with
+    | .one c => ⟨_, c⟩
+    | .more c _ => ⟨_, c⟩⟩ h
+
+/-- Where nothing on the line from `x` renews, `x` ceases: the old reading of ceasing (no renewal
+anywhere on the line) implies the new one. -/
+theorem «不复生则息» {R E : «际» α} {x : α} (none : ∀ y, (x = y ∨ «相续» R E x y) → ¬ «复生» R E y) :
+    «息» R E x :=
+  «自不复生则息» (none x (.inl rfl))
 
 /-- Under the one, everything ceases. -/
 theorem «一之下皆息» (R : «际» α) (x : α) : «息» R «一» x :=
-  fun y _ => «一之下无复生» R y
+  .mk fun _ ⟨_, hr, hb, _⟩ => absurd ⟨x, hr, trivial⟩ hb
 
 end Sufficing
 
@@ -749,13 +796,82 @@ theorem joint_eq {x y : Flame} (h : «合» alike sameFuel x y) : x = y := by
 
 end Flame
 
-/-- **The flame's regularity lies in fire and fuel (火因于薪).** "Flame or not" is not constant (a
-line under it ends), and together with the fuel left it fixes the course: what is alike under
-both lies in the core of "flame or not". -/
-theorem «火因于薪» : «因于核» Flame.step Flame.alike Flame.sameFuel :=
-  ⟨fun x y h => match Flame.joint_eq h with
-    | rfl => ⟨«静», fun a b q => by cases q; exact rfl, fun a b q => q.symm, «静有常» _, rfl⟩,
-   «有亡之续则不有常» (x := Flame.f₁) (y := Flame.f₂) ⟨trivial, rfl⟩
-     (fun ⟨z, hr, _⟩ => by cases z <;> first | exact False.elim hr | exact Bool.noConfusion ‹_›)⟩
+/-- **Fire and fuel need each other (火薪相须).** In the four-moment flame, "flame or not" and "the
+same fuel left" each suffice for the other's regularity, and neither is constant (a line under each
+ends): they need each other through the core. The leaning goes both ways; the witness fixes no
+direction. -/
+theorem «火薪相须» : «相须核» Flame.step Flame.alike Flame.sameFuel := by
+  refine ⟨fun x y h => ?_, fun x y h => ?_, ?_, ?_⟩
+  · have e : x = y := Flame.joint_eq h
+    subst e
+    exact ⟨«静», fun a b q => by cases q; exact rfl, fun a b q => q.symm, «静有常» _, rfl⟩
+  · have e : x = y := Flame.joint_eq ⟨h.2, h.1⟩
+    subst e
+    exact ⟨«静», fun a b q => by cases q; exact rfl, fun a b q => q.symm, «静有常» _, rfl⟩
+  · exact «有亡之续则不有常» (x := Flame.f₁) (y := Flame.f₂) ⟨trivial, rfl⟩
+      (fun ⟨z, hr, _⟩ => by cases z <;> first | exact False.elim hr | exact Bool.noConfusion ‹_›)
+  · exact «有亡之续则不有常» (x := Flame.f₂) (y := Flame.ash) ⟨trivial, rfl⟩
+      (fun ⟨z, hr, _⟩ => by cases z <;> exact False.elim hr)
+
+/-- **The four-moment witness picks no class (火之见证不择类).** Every class that, with "flame or
+not", tells the four moments apart suffices for the flame's regularity, fuel or any other. So the
+witness shows that the core of "flame or not" is not its criterion of continuation and that a finer
+description fixes the course; it does not show which description that is. -/
+theorem «火之见证不择类» {E₂ : «际» Flame} (apart : «则» («合» Flame.alike E₂) «静») :
+    «足以定理» Flame.step Flame.alike E₂ := fun x y h => by
+  have e : x = y := apart x y h
+  subst e
+  exact ⟨«静», fun a b q => by cases q; exact rfl, fun a b q => q.symm, «静有常» _, rfl⟩
+
+/-- Two flames burning side by side, each through the four moments (the `Bool` says which flame). -/
+abbrev TwoFlames : Type := Bool × Flame
+
+namespace TwoFlames
+
+/-- Each flame goes on through its own moments. -/
+def step : «际» TwoFlames := fun x y => x.1 = y.1 ∧ Flame.step x.2 y.2
+
+/-- Flame or not. -/
+def alike : «际» TwoFlames := fun x y => Flame.alike x.2 y.2
+
+/-- The same fuel left. -/
+def sameFuel : «际» TwoFlames := fun x y => Flame.sameFuel x.2 y.2
+
+/-- The same flame. -/
+def sameFlame : «际» TwoFlames := fun x y => x.1 = y.1
+
+end TwoFlames
+
+/-- **In two flames the fuel left suffices, and not by telling everything apart (两火以薪定理).** With
+two flames side by side, "flame or not" together with "the same fuel left" relates the two flames
+at one moment, which are two occurrences; still what is alike under both lies in the core of "flame
+or not": the fuel left fixes the course. -/
+theorem «两火以薪定理» :
+    «足以定理» TwoFlames.step TwoFlames.alike TwoFlames.sameFuel ∧
+      «合» TwoFlames.alike TwoFlames.sameFuel (true, Flame.f₀) (false, Flame.f₀) ∧
+      (true, Flame.f₀) ≠ ((false, Flame.f₀) : TwoFlames) := by
+  refine ⟨fun x y h => ?_, ⟨rfl, rfl⟩, fun e => Bool.noConfusion (congrArg Prod.fst e)⟩
+  refine ⟨fun u v => u.2 = v.2, fun u v q => congrArg Flame.burns q, fun u v q => q.symm, ?_,
+    Flame.joint_eq (x := x.2) (y := y.2) h⟩
+  apply («有常之逐点» TwoFlames.step (fun u v : TwoFlames => u.2 = v.2)).mpr
+  intro u u' q v hr
+  exact ⟨(u'.1, v.2), ⟨rfl, q ▸ hr.2⟩, rfl⟩
+
+/-- **Sameness of flame does not suffice (两火同火不足以定理).** "Flame or not" together with "the same
+flame" relates a flame's first two moments, whose futures differ by how long is left: what is
+alike under both need not lie in the core of "flame or not". -/
+theorem «两火同火不足以定理» : ¬ «足以定理» TwoFlames.step TwoFlames.alike TwoFlames.sameFlame := by
+  intro h
+  match h (true, Flame.f₀) (true, Flame.f₁) ⟨rfl, rfl⟩ with
+  | ⟨S, hSE, hs, hc, hS⟩ =>
+    have hc' : «有常» Flame.step (fun a b => S (true, a) (true, b)) := by
+      apply («有常之逐点» Flame.step _).mpr
+      intro a a' q v hr
+      match («有常之逐点» TwoFlames.step S).mp hc (true, a) (true, a') q (true, v) ⟨rfl, hr⟩ with
+      | ⟨⟨b, m⟩, ⟨hb, hm⟩, hw⟩ =>
+        cases hb
+        exact ⟨m, hm, hw⟩
+    exact Flame.not_core_f₀ (S := fun a b => S (true, a) (true, b))
+      (fun a b q => hSE (true, a) (true, b) q) (fun a b q => hs (true, a) (true, b) q) hc' hS
 
 end Becoming

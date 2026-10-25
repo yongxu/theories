@@ -1,0 +1,163 @@
+@Becoming.Withholding.Chain.zero_eq : ∀ {α : Type u_1} {up : α → α → Prop} {b a : α},
+  Becoming.Withholding.Chain up 0 b a → b = a
+@Becoming.Withholding.Chain.last_of_eq : ∀ {α : Type u_1} {up : α → α → Prop} {n : Nat} {b a : α},
+  Becoming.Withholding.Chain up n b a → ∀ (k : Nat), n = k + 1 → ∃ c, Becoming.Withholding.Chain up k b c ∧ up c a
+@Becoming.Withholding.Chain.last : ∀ {α : Type u_1} {up : α → α → Prop} {k : Nat} {b a : α},
+  Becoming.Withholding.Chain up (k + 1) b a → ∃ c, Becoming.Withholding.Chain up k b c ∧ up c a
+@Becoming.Withholding.Chain.prefix : ∀ {α : Type u_1} {up : α → α → Prop} {k : Nat} (m : Nat) {b a : α},
+  Becoming.Withholding.Chain up (k + m) b a → ∃ c, Becoming.Withholding.Chain up k b c
+@Becoming.Withholding.Chain.append : ∀ {α : Type u_1} {up : α → α → Prop} {i : Nat} {x y : α},
+  Becoming.Withholding.Chain up i x y →
+    ∀ {j : Nat} {z : α}, Becoming.Withholding.Chain up j y z → Becoming.Withholding.Chain up (i + j) x z
+@Becoming.Withholding.Chain.iterate : ∀ {α : Type u_1} {up : α → α → Prop} {p : Nat} {b : α},
+  Becoming.Withholding.Chain up p b b → ∀ (k : Nat), Becoming.Withholding.Chain up (p * k) b b
+@Becoming.Withholding.Within.mono : ∀ {α : Type u_1} {up : α → α → Prop} {k n : Nat} {b a : α},
+  Becoming.Withholding.Within up k b a → k ≤ n → Becoming.Withholding.Within up n b a
+@Becoming.Withholding.waitsAll_closed : ∀ {α : Type u_1} (up : α → α → Prop) (s : α → Prop) (n : Nat) (a : α),
+  (Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state n a ↔
+    ∀ (b : α), Becoming.Withholding.Within up n b a → s b
+@Becoming.Withholding.waitsAll_gives_earlier : ∀ {α : Type u_1} {up : α → α → Prop} {s : α → Prop} {n : Nat} {a : α},
+  (Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state (n + 1) a →
+    (Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state n a
+@Becoming.Withholding.waitsAll_withholding_stays : ∀ {α : Type u_1} {up : α → α → Prop} {s : α → Prop} {n : Nat}
+  {a : α},
+  ¬(Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state n a →
+    ∀ (k : Nat), ¬(Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state (n + k) a
+@Becoming.Withholding.waitsAll_withholding_stays_le : ∀ {α : Type u_1} {up : α → α → Prop} {s : α → Prop} {n m : Nat}
+  {a : α},
+  ¬(Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state n a →
+    n ≤ m → ¬(Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state m a
+@Becoming.Withholding.withholding_spreads : ∀ {α : Type u_1} {up : α → α → Prop} {s : α → Prop} {b a : α} {k n : Nat},
+  ¬s b →
+    Becoming.Withholding.Chain up k b a → k ≤ n → ¬(Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state n a
+@Becoming.Withholding.withholding_absorbs : ∀ {α : Type u_1} {up : α → α → Prop} {s : α → Prop} {b : α} {d : Nat},
+  (∀ (a : α), Becoming.Withholding.Within up d b a) →
+    ¬s b → ∀ (n : Nat), d ≤ n → ∀ (a : α), ¬(Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state n a
+@Becoming.Withholding.total_withholding_merges : ∀ {α : Type u_1} {up : α → α → Prop} {s s' : α → Prop} {n m : Nat},
+  (∀ (a : α), ¬(Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state n a) →
+    (∀ (a : α), ¬(Becoming.Law.run (Becoming.Withholding.waitsAll up) s').state m a) →
+      ∀ (k : Nat) (a : α),
+        (Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state (n + k) a ↔
+          (Becoming.Law.run (Becoming.Withholding.waitsAll up) s').state (m + k) a
+@Becoming.Withholding.answers_closed : ∀ {α : Type u_1} (up : α → α → Prop) (s : α → Prop) (n : Nat) (a : α),
+  (Becoming.Law.run (Becoming.Withholding.answers up) s).state n a ↔
+    ∀ (b : α), Becoming.Withholding.Chain up n b a → s b
+@Becoming.Withholding.no_longer_chain : ∀ {α : Type u_1} {up : α → α → Prop} {L : Nat},
+  (∀ (b a : α), ¬Becoming.Withholding.Chain up L b a) →
+    ∀ (n : Nat), L ≤ n → ∀ (b a : α), ¬Becoming.Withholding.Chain up n b a
+@Becoming.Withholding.gives_without_chain : ∀ {α : Type u_1} {up : α → α → Prop} (s : α → Prop) {L : Nat},
+  (∀ (b a : α), ¬Becoming.Withholding.Chain up L b a) →
+    ∀ (n : Nat), L ≤ n → ∀ (a : α), (Becoming.Law.run (Becoming.Withholding.answers up) s).state n a
+@Becoming.Withholding.withholding_returns : ∀ {α : Type u_1} {up : α → α → Prop} {p : Nat} {b : α} {s : α → Prop},
+  Becoming.Withholding.Chain up p b b →
+    ¬s b → ∀ (k : Nat), ¬(Becoming.Law.run (Becoming.Withholding.answers up) s).state (k * p) b
+@Becoming.Withholding.waitsAll_more_waiting : ∀ {α : Type u_1} {up up' : α → α → Prop} (s : α → Prop),
+  (∀ (b a : α), up b a → up' b a) →
+    ∀ (n : Nat) (a : α),
+      (Becoming.Law.run (Becoming.Withholding.waitsAll up') s).state n a →
+        (Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state n a
+@Becoming.Withholding.answers_more_waiting : ∀ {α : Type u_1} {up up' : α → α → Prop} (s : α → Prop),
+  (∀ (b a : α), up b a → up' b a) →
+    ∀ (n : Nat) (a : α),
+      (Becoming.Law.run (Becoming.Withholding.answers up') s).state n a →
+        (Becoming.Law.run (Becoming.Withholding.answers up) s).state n a
+Becoming.Withholding.Line.no_chain_two : ∀ (b a : Becoming.Withholding.Line),
+  ¬Becoming.Withholding.Chain Becoming.Withholding.Line.Waits 2 b a
+Becoming.Withholding.Line.passes_out_exact : (∀ (s : Becoming.Withholding.Line → Prop) (n : Nat),
+    2 ≤ n →
+      ∀ (a : Becoming.Withholding.Line),
+        (Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Line.Waits) s).state n a) ∧
+  ¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Line.Waits)
+          Becoming.Withholding.Line.firstWithheld).state
+      1 Becoming.Withholding.Line.second
+@Becoming.Withholding.Ring.answers_first : ∀ {s : Becoming.Withholding.Ring → Prop},
+  Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.first ↔
+    s Becoming.Withholding.Ring.third
+@Becoming.Withholding.Ring.answers_second : ∀ {s : Becoming.Withholding.Ring → Prop},
+  Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.second ↔
+    s Becoming.Withholding.Ring.first
+@Becoming.Withholding.Ring.answers_third : ∀ {s : Becoming.Withholding.Ring → Prop},
+  Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.third ↔
+    s Becoming.Withholding.Ring.second
+Becoming.Withholding.Ring.within_two : ∀ (a : Becoming.Withholding.Ring),
+  Becoming.Withholding.Within Becoming.Withholding.Ring.Waits 2 Becoming.Withholding.Ring.first a
+Becoming.Withholding.Ring.loop : Becoming.Withholding.Chain Becoming.Withholding.Ring.Waits 3
+  Becoming.Withholding.Ring.first Becoming.Withholding.Ring.first
+Becoming.Withholding.Ring.waitsAll_absorbs_exact : (∀ (n : Nat),
+    2 ≤ n →
+      ∀ (a : Becoming.Withholding.Ring),
+        ¬(Becoming.Law.run (Becoming.Withholding.waitsAll Becoming.Withholding.Ring.Waits)
+                Becoming.Withholding.Ring.oneWithheld).state
+            n a) ∧
+  (Becoming.Law.run (Becoming.Withholding.waitsAll Becoming.Withholding.Ring.Waits)
+        Becoming.Withholding.Ring.oneWithheld).state
+    1 Becoming.Withholding.Ring.third
+@Becoming.Withholding.Ring.rotate_first : ∀ {s : Becoming.Withholding.Ring → Prop},
+  ¬s Becoming.Withholding.Ring.first ∧ s Becoming.Withholding.Ring.second ∧ s Becoming.Withholding.Ring.third →
+    Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.first ∧
+      ¬Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.second ∧
+        Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.third
+@Becoming.Withholding.Ring.rotate_second : ∀ {s : Becoming.Withholding.Ring → Prop},
+  s Becoming.Withholding.Ring.first ∧ ¬s Becoming.Withholding.Ring.second ∧ s Becoming.Withholding.Ring.third →
+    Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.first ∧
+      Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.second ∧
+        ¬Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.third
+@Becoming.Withholding.Ring.rotate_third : ∀ {s : Becoming.Withholding.Ring → Prop},
+  s Becoming.Withholding.Ring.first ∧ s Becoming.Withholding.Ring.second ∧ ¬s Becoming.Withholding.Ring.third →
+    ¬Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.first ∧
+      Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.second ∧
+        Becoming.Withholding.answers Becoming.Withholding.Ring.Waits s Becoming.Withholding.Ring.third
+Becoming.Withholding.Ring.answers_circulates : ∀ (k : Nat),
+  (¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+              Becoming.Withholding.Ring.oneWithheld).state
+          (3 * k) Becoming.Withholding.Ring.first ∧
+      (Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+              Becoming.Withholding.Ring.oneWithheld).state
+          (3 * k) Becoming.Withholding.Ring.second ∧
+        (Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+              Becoming.Withholding.Ring.oneWithheld).state
+          (3 * k) Becoming.Withholding.Ring.third) ∧
+    ((Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+              Becoming.Withholding.Ring.oneWithheld).state
+          (3 * k + 1) Becoming.Withholding.Ring.first ∧
+        ¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+                  Becoming.Withholding.Ring.oneWithheld).state
+              (3 * k + 1) Becoming.Withholding.Ring.second ∧
+          (Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+                Becoming.Withholding.Ring.oneWithheld).state
+            (3 * k + 1) Becoming.Withholding.Ring.third) ∧
+      (Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+              Becoming.Withholding.Ring.oneWithheld).state
+          (3 * k + 2) Becoming.Withholding.Ring.first ∧
+        (Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+                Becoming.Withholding.Ring.oneWithheld).state
+            (3 * k + 2) Becoming.Withholding.Ring.second ∧
+          ¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+                  Becoming.Withholding.Ring.oneWithheld).state
+              (3 * k + 2) Becoming.Withholding.Ring.third
+Becoming.Withholding.Ring.answers_returns : ∀ (k : Nat),
+  ¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.Withholding.Ring.Waits)
+          Becoming.Withholding.Ring.oneWithheld).state
+      (k * 3) Becoming.Withholding.Ring.first
+@Becoming.Withholding.Ring.givesFirst_first : ∀ {s : Becoming.Withholding.Ring → Prop} (m : Nat),
+  (Becoming.Law.run (Becoming.Withholding.givesFirst Becoming.Withholding.Ring.isFirst Becoming.Withholding.Ring.Waits)
+        s).state
+    (m + 1) Becoming.Withholding.Ring.first
+@Becoming.Withholding.Ring.givesFirst_second : ∀ {s : Becoming.Withholding.Ring → Prop} (m : Nat),
+  (Becoming.Law.run (Becoming.Withholding.givesFirst Becoming.Withholding.Ring.isFirst Becoming.Withholding.Ring.Waits)
+        s).state
+    (m + 2) Becoming.Withholding.Ring.second
+@Becoming.Withholding.Ring.givesFirst_third : ∀ {s : Becoming.Withholding.Ring → Prop} (m : Nat),
+  (Becoming.Law.run (Becoming.Withholding.givesFirst Becoming.Withholding.Ring.isFirst Becoming.Withholding.Ring.Waits)
+        s).state
+    (m + 3) Becoming.Withholding.Ring.third
+Becoming.Withholding.Ring.givesFirst_restores : ∀ (s : Becoming.Withholding.Ring → Prop) (n : Nat),
+  3 ≤ n →
+    ∀ (a : Becoming.Withholding.Ring),
+      (Becoming.Law.run
+            (Becoming.Withholding.givesFirst Becoming.Withholding.Ring.isFirst Becoming.Withholding.Ring.Waits) s).state
+        n a
+Becoming.Withholding.Ring.givesFirst_restores_exact : ¬(Becoming.Law.run
+        (Becoming.Withholding.givesFirst Becoming.Withholding.Ring.isFirst Becoming.Withholding.Ring.Waits)
+        Becoming.Withholding.Ring.oneWithheld).state
+    2 Becoming.Withholding.Ring.third

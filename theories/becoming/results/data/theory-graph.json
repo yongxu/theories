@@ -208,6 +208,22 @@
    "region": "root"
   },
   {
+   "id": "concept:复生至",
+   "type": "concept",
+   "name": "«复生至»",
+   "gloss": "renews into (conditions a beginning whose line reaches); ceasing (what it renews into all cease; inductive)",
+   "module": "Becoming.Grammar",
+   "region": "root"
+  },
+  {
+   "id": "concept:息",
+   "type": "concept",
+   "name": "«息»",
+   "gloss": "renews into (conditions a beginning whose line reaches); ceasing (what it renews into all cease; inductive)",
+   "module": "Becoming.Grammar",
+   "region": "root"
+  },
+  {
    "id": "concept:有常",
    "type": "concept",
    "name": "«有常»",
@@ -283,7 +299,7 @@
    "id": "concept:通",
    "type": "concept",
    "name": "«通»",
-   "gloss": "XCS 「往來不窮謂之通」",
+   "gloss": "XCS-11-010 「往來不窮謂之通」",
    "module": "Becoming.GrammarReadings",
    "region": "classical"
   },
@@ -299,7 +315,7 @@
    "id": "concept:全生成",
    "type": "concept",
    "name": "«全生成»",
-   "gloss": "generation: the coarse line never ends and a carrying renewal lies ahead of every point of it",
+   "gloss": "generation in the strong form: the coarse line never ends and a carrying renewal lies ahead of every point of it",
    "module": "Becoming.GrammarMap",
    "region": "map"
   },
@@ -307,7 +323,7 @@
    "id": "concept:全守",
    "type": "concept",
    "name": "«全守»",
-   "gloss": "keeping: the coarse line never ends, and from some point no carrying renewal lies ahead",
+   "gloss": "keeping in the strong form: the coarse line never ends, and from some point no carrying renewal lies ahead",
    "module": "Becoming.GrammarMap",
    "region": "map"
   },
@@ -315,7 +331,7 @@
    "id": "concept:有终",
    "type": "concept",
    "name": "«有终»",
-   "gloss": "degeneration: the coarse line reaches an end",
+   "gloss": "reaching an end: some point the coarse line reaches ends (not degeneration, `«退化»`, which is ending on every branch)",
    "module": "Becoming.GrammarMap",
    "region": "map"
   },
@@ -3520,6 +3536,18 @@
    "page": "theories/becoming/results/records/reaching-before-and-after-a-juncture.md"
   },
   {
+   "id": "record:readers-drawn-from-the-selected",
+   "type": "result",
+   "record": "readers-drawn-from-the-selected",
+   "title": "Readers drawn from the selected",
+   "title_zh": "从所选者中抽出的读者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/readers-drawn-from-the-selected.md"
+  },
+  {
    "id": "record:reading-anothers-couplings-is-pooling",
    "type": "result",
    "record": "reading-anothers-couplings-is-pooling",
@@ -5456,7 +5484,7 @@
    "type": "module",
    "name": "Becoming.Grammar",
    "level": "L0",
-   "theorems": 64,
+   "theorems": 70,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -5467,7 +5495,7 @@
    "type": "module",
    "name": "Becoming.GrammarReadings",
    "level": "L0",
-   "theorems": 9,
+   "theorems": 12,
    "region": "classical",
    "base": "grammar",
    "on_grammar": true,
@@ -5478,7 +5506,7 @@
    "type": "module",
    "name": "Becoming.GrammarMap",
    "level": "L0",
-   "theorems": 36,
+   "theorems": 39,
    "region": "map",
    "base": "grammar",
    "on_grammar": true,
@@ -6996,7 +7024,7 @@
    "type": "module",
    "name": "Becoming.ClosedCapture",
    "level": "L1",
-   "theorems": 28,
+   "theorems": 63,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -27117,6 +27145,12 @@
    "anchor": "r-closed-capture"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-readers-drawn-from-the-selected"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
@@ -34701,6 +34735,11 @@
   {
    "from": "record:closed-capture",
    "to": "record:joint-difference-making",
+   "type": "related"
+  },
+  {
+   "from": "record:closed-capture",
+   "to": "record:readers-drawn-from-the-selected",
    "type": "related"
   },
   {
@@ -44189,6 +44228,36 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:readers-drawn-from-the-selected",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:readers-drawn-from-the-selected",
+   "to": "module:Becoming.RuleCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:readers-drawn-from-the-selected",
+   "to": "record:a-pool-read-by-its-majority",
+   "type": "related"
+  },
+  {
+   "from": "record:readers-drawn-from-the-selected",
+   "to": "record:a-reading-against-the-share-does-not-ratchet",
+   "type": "related"
+  },
+  {
+   "from": "record:readers-drawn-from-the-selected",
+   "to": "record:capture-through-the-rule",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:readers-drawn-from-the-selected",
+   "to": "record:closed-capture",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:reading-anothers-couplings-is-pooling",
    "to": "module:Becoming.Selection",
    "type": "proved-in"
@@ -52091,6 +52160,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-reaching-before-and-after-a-juncture",
    "to": "record:reaching-before-and-after-a-juncture",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+   "to": "record:readers-drawn-from-the-selected",
    "type": "states"
   },
   {

@@ -79,7 +79,7 @@ The draft was revised for them on 24 October. The changes:
      - the verdict across a stretch depends on the base a;
      - "correction" is retired as a dualist word.
    - The page then quotes the readings from their home section.
-   - MA2's standing comes from its landing: home section `02-MAP.md#r-readers-drawn-from-the-selected`, readings D67, study §399 (RP2 took §398), and its core receipt.
+   - MA2's standing comes from its landing: home section `02-MAP.md#r-readers-drawn-from-the-selected`, readings D67, the next free study section when it lands (IV3l holds §399 and OU6 §400), and its core receipt.
 3. The citation check.
 4. The dossier, checked by script as the other dossiers are.
 5. A cold read by an independent reader before landing.

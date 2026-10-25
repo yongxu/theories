@@ -2,7 +2,7 @@
 
 **What this is.** One part of the review packet of the Theory of Becoming, for readers in logic: relation algebra, coalgebra and bisimulation, constructive mathematics and modal logic. It sets out 29 items, each a definition or theorem of the theory's formal root or of its logical method, and asks whether each is correctly stated, correctly described in the chapters, credited where it restates known work, and stated at its exact strength.
 
-**How it was made.** Everything in the theory was made with AI: the Lean proofs, the chapters, the readings of the classical texts and this dossier; no human has reviewed any of it. A script copied the Lean statements from the source files; the prose is AI-written and may be wrong. The [defects already found](../../../_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md) and the [review of the grammar against its sources](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/reviews/2026-10-23-sources-against-v10.md) (its Lean corrections are open as board item OU6) are cited under each item they concern. Under **Known weaknesses**, a bullet citing DEFECTS-FOUND, a review or a chapter reports a recorded weakness; one marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject. The chapter reviews found one fault everywhere: Quote [_process/research/2026-10-05-repository-reconciliation/architecture/DECISIONS-ROUND-2.md]: "theorem sentences that drop an operative hypothesis, change a quantifier, turn a negative constructive conclusion into an existential one, or cite a neighbouring declaration of different strength". The chapters were then corrected against the Lean; whether the corrections are complete is part of what is asked.
+**How it was made.** Everything in the theory was made with AI: the Lean proofs, the chapters, the readings of the classical texts and this dossier; no human has reviewed any of it. A script copied the Lean statements from the source files; the prose is AI-written and may be wrong. The [defects already found](../../../_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md) and the [review of the grammar against its sources](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/reviews/2026-10-23-sources-against-v10.md) (its Lean corrections have been made; each item says what changed) are cited under each item they concern. Under **Known weaknesses**, a bullet citing DEFECTS-FOUND, a review or a chapter reports a recorded weakness; one marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject. The chapter reviews found one fault everywhere: Quote [_process/research/2026-10-05-repository-reconciliation/architecture/DECISIONS-ROUND-2.md]: "theorem sentences that drop an operative hypothesis, change a quantifier, turn a negative constructive conclusion into an existential one, or cite a neighbouring declaration of different strength". The chapters were then corrected against the Lean; whether the corrections are complete is part of what is asked.
 
 **What the theory says of itself.** Quote [theories/becoming/chapters/08-METHOD.md]: "None of the central results is new mathematics: each is near-definitional or a known result restated." That verdict comes from an AI prior-art review of 20 October 2026 ([BECOMING-SIGNIFICANCE-REVIEW](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#ranked-table)), which read the ten central results of the earlier chapter before the grammar (Parts 1 and 2 below) existed; of the items here it covered only the premise ledger with its calibrations and the significance result of L-23. On the grammar, the judgments of prior art are the chapters' own credits at each result (01 §4 names bisimulation equivalence), the sources review's verdict that the operations are Tarski's relation algebra with Chinese names (L-01), and the credits this dossier states at each item, which the reviewer is asked to check.
 
@@ -175,7 +175,7 @@ File: `Becoming/Grammar.lean`. **Meaning.** The core of `E` under `R` is the uni
 **Known weaknesses.**
 - [this dossier, AI] At the theorem the chapter credits no prior result, Quote [theories/becoming/chapters/01-ROOT.md]: "So the core is the greatest matching relation within the class, and it always exists." The credit above is this dossier's.
 - [this dossier, AI] The core is defined by an existential over all relations inside `Prop`, so its existence uses Lean's impredicative `Prop`; the pure-core discipline (L-19) reports axioms, not this.
-- The flame witness that uses the core singles out nothing ([01 §5](../chapters/01-ROOT.md#fire-and-fuel); review §5): the joint class of its two descriptions is identity on the four moments, so Quote [theories/becoming/chapters/01-ROOT.md]: "the witness singles out neither the fuel nor a direction." The reverse dependence and the mutual need are argued by hand, not stated in Lean.
+- The flame witness that uses the core singles out nothing in one flame ([01 §5](../chapters/01-ROOT.md#fire-and-fuel); review §5): the joint class of its two descriptions is identity on the four moments, so each suffices for the other's regularity, and since neither is constant (a line under each ends) the two need each other through the core (`«火薪相须»`) and every description that with "burning or not" tells the moments apart suffices (`«火之见证不择类»`). In two flames side by side the fuel left suffices while sameness of flame does not (`«两火以薪定理»`, `«两火同火不足以定理»`): a decision against one named alternative, not in general.
 
 **Questions.**
 1. Is the credit above accurate and sufficient, and is the restriction to `E ∩ E˘` stated correctly?
@@ -214,19 +214,22 @@ Files: `Becoming/Grammar.lean`, `Becoming/GrammarCourse.lean`, `Becoming/Change.
 def «位核» (R E : «际» α) : «际» α :=
   fun u u' => ∃ S : «际» α, «则» S E ∧ «则» S («逆» S) ∧ «有常» R S ∧ «有常» («逆» R) S ∧ S u u'
 
-theorem «位同则四相同» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «位核» R E y y') :
+theorem «位同则生亡同» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «位核» R E y y') :
     («生» R E y → «生» R E y') ∧ («亡» R E y → «亡» R E y')
+
+theorem «位同则住同» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «位核» R E y y')
+    (hy : «住» R E y) : «住» R E y'
 ```
 
-File: `Becoming/Grammar.lean`. **Meaning.** The two-way core asks constancy under `R` and its converse; it is the greatest such relation and lies inside the core (`«位根»`, `«位核含于核»`). Ending is invariant under the core, beginning under the two-way core (`«亡于核下不变»`, `«生于位核下不变»`). The two-way core is the greatest bisimulation inside `E` (in general `E ∩ E˘`, as for the core) for `R` and its converse together: bisimulation for the basic temporal language, with future and past: the standard notion of bisimulation (Blackburn, de Rijke and Venema 2001, §2.2) taken for a language with the converse modality (its §1.3), as that book leaves to its exercises. **Standing and use.** Root theorems ([01 §4](../chapters/01-ROOT.md#constancy-and-core)): Quote [theories/becoming/chapters/01-ROOT.md]: "A position is fixed by all its relations, before as well as after." **Reading and class.** None.
+File: `Becoming/Grammar.lean`. **Meaning.** The two-way core asks constancy under `R` and its converse; it is the greatest such relation and lies inside the core (`«位根»`, `«位核含于核»`). Ending is invariant under the core, beginning and abiding under the two-way core (`«亡于核下不变»`, `«生于位核下不变»`, `«位同则住同»`). The two-way core is the greatest bisimulation inside `E` (in general `E ∩ E˘`, as for the core) for `R` and its converse together: bisimulation for the basic temporal language, with future and past: the standard notion of bisimulation (Blackburn, de Rijke and Venema 2001, §2.2) taken for a language with the converse modality (its §1.3), as that book leaves to its exercises. **Standing and use.** Root theorems ([01 §4](../chapters/01-ROOT.md#constancy-and-core)): Quote [theories/becoming/chapters/01-ROOT.md]: "A position is fixed by all its relations, before as well as after." **Reading and class.** None.
 
 **Known weaknesses.**
-- `«位同则四相同»`, whose name glosses as *same position, same four marks*, proves only beginning and ending (review §5); the chapter now says so.
+- The theorem's former name said *same position, same four marks*, while it proves only beginning and ending (review §5); it is now `«位同则生亡同»`, *same position, same beginning and ending*, and abiding has its own theorem (`«位同则住同»`). Altering is a relation between two occurrences with a finer class, so "four marks of one occurrence" was not a statement the core could carry.
 - Two moments of a stationary process lie in one two-way core class and are separated only by carrier equality (L-02).
 
 **Questions.**
 1. Is that identification correct?
-2. Should the theorem's name be changed to what it proves?
+2. Altering is read as a relation between two occurrences with a finer class. Is there a sense in which it should be read off the two-way core, and if so, under which hypothesis on the finer class?
 
 <a id="l-09"></a>
 ### L-09 The map at two grains: 延 coinductive, 尽 inductive
@@ -249,7 +252,7 @@ theorem «生守相杂» : «生成» fork «一» «静» .root ∧ «守» for
 File: `Becoming/GrammarMap.lean`. **Meaning.** 延 (glossed *goes on along some branch*) is coinductive: `x` lies in some predicate `S` each member of which has a continuation in `S`. It names no sequence of points; obtaining one is a dependent-choice step (the shape `runs_iff_dependentChoice` calibrates for processes, L-18; no such theorem for 延). 尽 (glossed *ends on every branch*) is inductive accessibility: the least predicate holding at `x` wherever it holds at every continuation of `x`. How it relates to *every path is finite* depends on branching, decidability and bar induction or the fan theorem, and is not stated here. The two exclude each other. Generation is such an `S` containing `x` with, ahead of every member `z`, a carrying renewal between members `u`, `v`, `u` reached from `z`; keeping, such an `S` with no carrying renewal between members. Where each occurrence conditions at most one other, they exclude each other (`«单行则生守不并»`); on a branching relation they can share a point. **Standing and use.** Root theorems; the regions generation, keeping, degeneration ([02 §1](../chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains)). **Reading and class.** [AI reading, D65]: 生成 is continuation at two grains, not 生生.
 
 **Known weaknesses.**
-- The module's docstrings call `«全守»` keeping and `«有终»` degeneration, against the chapter (Quote [experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean]: "Degeneration (退化): the coarse line from `x` reaches an end."), and the record misread the strong forms (DEFECTS-FOUND, second round, from chapter 02). The docstring of `«阶全生成»` says the classes are each finer than the next, which is not a hypothesis (review §5).
+- The module's docstrings called `«有终»` degeneration, against the chapter, and the record misread the strong forms (DEFECTS-FOUND, second round, from chapter 02); the docstring of `«阶全生成»` said the classes are each finer than the next, which is not a hypothesis (review §5). The docstrings now call `«有终»` reaching an end and say no order between the classes is assumed; the witness `Map.Short.degeneration` keeps its name, though it states only an end (有终); that the same point degenerates is `Map.Short.ends`.
 
 **Questions.**
 1. Is 尽, inductive accessibility, the right constructive reading of *ends on every branch*, and under which hypotheses (finite or decided branching, decidable bars, bar induction, the fan theorem) should its relation to *every path is finite* be stated?
@@ -275,7 +278,7 @@ theorem «全三域之周» (em : ∀ P : Prop, P ∨ ¬ P) (R L E : «际» α)
 File: `Becoming/GrammarMap.lean`. **Meaning.** Three forms read the whole coarse line; they exclude each other pairwise, and with excluded middle every point lies in one. **Standing and use.** Root theorems ([02 §1](../chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains)). **Reading and class.** None.
 
 **Known weaknesses.**
-- `«全三域之周»` takes excluded middle for all propositions, while the module header says Quote [experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean]: "where going on and renewal are decided they cover every point" (DEFECTS-FOUND, 02).
+- `«全三域之周»` takes excluded middle for all propositions; the module header said the forms cover every point where going on and renewal are decided (DEFECTS-FOUND, 02) and now says excluded middle. That every model's every point lies in one of the three is exactly excluded middle (`«全三域之定当且仅当排中»`); whether local decidedness suffices for a given model is not stated.
 - Coverage by the some-branch regions is open, and the chapter's counterexample is Quote [theories/becoming/chapters/02-MAP.md]: "(a hand check, not in the Lean)".
 
 **Questions.**
@@ -293,18 +296,22 @@ theorem «四相之定当且仅当排中» :
 theorem «延尽之定当且仅当排中» :
     (∀ (β : Type) (R L : «际» β) (x : β), «延» R L x ∨ «尽» R L x) ↔ ∀ P : Prop, P ∨ ¬ P
 
-theorem «全生有终之定当且仅当排中» :
+theorem «不穷有终之定当且仅当排中» :
     (∀ (β : Type) (R L : «际» β) (x : β), «不穷» R L x ∨ «有终» R L x) ↔ ∀ P : Prop, P ∨ ¬ P
+
+theorem «全三域之定当且仅当排中» :
+    (∀ (β : Type) (R L E : «际» β) (x : β), «全生成» R L E x ∨ «全守» R L E x ∨ «有终» R L x) ↔
+      ∀ P : Prop, P ∨ ¬ P
 
 theorem law_iff_em :
     (∀ w : World, w.Finite → (w.ArisingRecurs ↔ w.CeasingRecurs)) ↔ ∀ Q : Prop, Q ∨ ¬ Q
 ```
 
-Files: `Becoming/Grammar.lean`, `Becoming/GrammarMap.lean`, `Becoming/Space.lean`. **Meaning.** Deciding, in every model, whether an occurrence begins or has a predecessor; whether a point goes on or ends on every branch; and whether a coarse line is without end or reaches an end: each is exactly excluded middle. **Standing and use.** Calibrations ([01 §3](../chapters/01-ROOT.md#four-marks), [02 §1](../chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains)): Quote [theories/becoming/chapters/02-MAP.md]: "the boundary between going on and ending is where a line's going on is not decided". **Reading and class.** None.
+Files: `Becoming/Grammar.lean`, `Becoming/GrammarMap.lean`, `Becoming/Space.lean`. **Meaning.** Deciding, in every model, whether an occurrence begins or has a predecessor; whether a point goes on or ends on every branch; whether a coarse line is without end or reaches an end; and in which of the three strong forms a point lies: each is exactly excluded middle. **Standing and use.** Calibrations ([01 §3](../chapters/01-ROOT.md#four-marks), [02 §1](../chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains)): Quote [theories/becoming/chapters/02-MAP.md]: "the boundary between going on and ending is where a line's going on is not decided". **Reading and class.** None.
 
 **Known weaknesses.**
-- Each proof encodes an arbitrary proposition `P` as the relation `fun _ _ => P` on `Unit`. For the World's law the method chapter relabels the same pattern a lemma: Quote [theories/becoming/chapters/08-METHOD.md]: "the need comes from activity being an arbitrary proposition, not from change". By that rule the grammar's three may be lemmas too. DEFECTS-FOUND (06) applies the rule to two similar calibrations of the readings (相待之还 ⇔ double-negation elimination, 必或不当 ⇔ weak excluded middle): Quote [_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md]: "These are calibrations of logic, which by repository rule are lemmas of their items".
-- `«全生有终之定当且仅当排中»` is a dichotomy of `«不穷»` against `«有终»`, not of generation against degeneration (review §5; the chapter says so).
+- Each proof encodes an arbitrary proposition `P` as the relation `fun _ _ => P` on `Unit`. For the World's law the method chapter relabels the same pattern a lemma: Quote [theories/becoming/chapters/08-METHOD.md]: "the need comes from activity being an arbitrary proposition, not from change". By that rule the grammar's four may be lemmas too. DEFECTS-FOUND (06) applies the rule to two similar calibrations of the readings (相待之还 ⇔ double-negation elimination, 必或不当 ⇔ weak excluded middle): Quote [_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md]: "These are calibrations of logic, which by repository rule are lemmas of their items".
+- The calibration of `«不穷»` against `«有终»` was formerly named as if of generation against degeneration (review §5); it is now `«不穷有终之定当且仅当排中»`, and the three strong forms have their own calibration (`«全三域之定当且仅当排中»`).
 
 **Questions.**
 1. By the theory's own criterion (a calibration says something about the unfolding), are these calibrations or lemmas?

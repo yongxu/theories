@@ -17743,3 +17743,116 @@ Output → input: the two records; 07 §4.3 and §4.6; 08 item 12; the overview 
 **What the review changed.** The two errors were both claims of more than the Lean shows, and both sat in readings, not in theorems. The imprecisions were omitted hypotheses (activity, vacuity, each member) and witnesses glossed as laws. One fix is a theorem: three needs the texts relied on now have their flows shown.
 
 **Self-review.** (1) No earlier statement changed. (2) Every finding was checked against its Lean before it was fixed. (3) Not done: PF's general forms (Boundary).
+
+## 400. Corrections to the grammar from the review of its sources (OU6)
+
+Board item OU6 ([Ren's choice](../../../../sources/15-codex-theory-conversations/2026-10-24-grammar-corrections.md)); the corrections are those the [review of the grammar against its sources](development/one-unfolding-root/reviews/2026-10-23-sources-against-v10.md) §5 found in the Lean, and the work below is the AI's. Kit: [development/ou6-corrections/](development/ou6-corrections/) ([CHANGES.md](development/ou6-corrections/CHANGES.md) lists every declaration renamed, redefined or added).
+
+```text
+Result(s): no new record; corrections to continuation-relative-to-a-class, classical-definitions-in-the-grammar
+       and generation-and-degeneration-at-two-grains.
+Delta: (1) the theorem on the two-way core renamed «位同则生亡同», since it shows only that, for a class,
+       beginning and ending carry over; abiding carries over too, by its own theorem («位同则住同»), and
+       altering, a relation between two occurrences with a finer class, is not a mark of one occurrence;
+       (2) the flame witness restated as what it shows: in one flame "flame or not" and "the same fuel left"
+       need each other through the core («火薪相须»), and every class that with "flame or not" tells the
+       moments apart suffices for its regularity («火之见证不择类»), so one flame singles out neither fuel nor
+       a direction; in two flames side by side the fuel left suffices although its joint class with "flame or
+       not" relates two distinct occurrences («两火以薪定理»), and sameness of flame does not suffice
+       («两火同火不足以定理»);
+       (3) 通 defined with its 往來, going along 缘 and coming along its converse («通»): constancy one way
+       gives, from a continued point, only going without end («有常则往不穷») and not 通 («有常而不通»,
+       counting up from zero); for a class, constancy both ways gives 通 at what abides («两向有常则通»);
+       under the one, day and night go and come without end («昼夜往来不穷»);
+       (4) ceasing defined positively, by induction on renewing into («复生至», «息»): the least property so
+       closed, dual to renewal without end, the greatest family that keeps renewing; the two exclude each other
+       by construction («生生不息»); what does not itself renew ceases («自不复生则息»), so ceasing concerns
+       what an occurrence renews into, not its line, and the old reading implies the new («不复生则息»); along
+       renewing into,
+       under the one, they are 延 and 尽 respectively («生生即延», «息即尽»);
+       (5) the excluded-middle calibration renamed «不穷有终之定当且仅当排中» and joined by
+       «全三域之定当且仅当排中» for the three strong forms;
+       (6) docstrings: «亡于细者不必亡于粗» (does not end under the coarser, not "abides"), «阶全生成» (no
+       order between the classes assumed), «有终» and the strong forms in GrammarMap and MapInstances (an
+       end, not degeneration), the GrammarMap header (excluded middle, not "where decided"; the coarse net not
+       used), «同于为类» (sufficient, not "exactly where"); the record of the two grains states the strong
+       forms with their quantifiers (DEFECTS-FOUND, chapter 02).
+Premises / correspondence: none added. 往來 read as a relation and its converse is the reading of the unit
+       XCS-11-010 in the classification; the two-flame model is a model, as the one flame is.
+Evidence: core receipt 20261025T043938.655037Z (Becoming.Grammar 70 theorems in 118 declarations, Becoming.GrammarReadings 12
+       in 17, Becoming.GrammarMap 39 in 58; empty axiom reports; the package rebuilt); a cross-model review
+       (GPT astra) and two rounds of Opus reviewers (records, English, Chinese, completeness), each finding
+       judged against the Lean; the dossiers' quotation and name checker.
+Boundary: the order 穷 → 变 → 通 is still not proved; the two flames decide a description against one named
+       alternative, not in general, and that every flame continues only through its fuel is not proved; that
+       what does not renew without end ceases is not proved, and that renewing and ceasing can hold together
+       is a hand step, with no model of both in Lean. The witness Map.Short.degeneration keeps its name though
+       it states only an end (有终); that the same point degenerates is Map.Short.ends. The review's other
+       items (stale plan text, the two "three minima", vocabulary) are not Lean corrections and stay with the
+       plan's owner.
+Output → input: chapters 01, 02 and 06 and the three dossiers state the corrected theorems; 06's open item on
+       通 and 息 is now the order 穷 → 变 → 通 alone.
+```
+
+**Why the flame needed a second model.** In one flame the two descriptions together tell every moment apart, so their joint class is identity, and identity is constant: any description that separates the moments would serve. The review saw that the witness therefore picks out nothing, and the hand argument it gave (each leans on the other through the core) is now a theorem. A witness that picks out the fuel against an alternative needs a model where the joint class is not identity: two flames burning side by side, alike moment by moment. There the fuel left still fixes the course of "flame or not", although together with "flame or not" it relates the two flames at one moment, while "the same flame" relates a flame's first two moments, whose futures differ.
+
+**Why ceasing is inductive.** Renewal without end is the greatest family each member of which renews into a member again; its positive dual is the least property closed under renewing into, so that an occurrence ceases where everything it renews into ceases. The old definition (nothing on the line renews) implies the new one, and the new one excludes renewal without end by construction rather than by negation. That every occurrence either renews without end or ceases is not proved; for 延 and 尽 over every relation it is exactly excluded middle.
+
+## 401. Readers drawn from the selected (MA2)
+
+```text
+Result(s): readers-drawn-from-the-selected (new); reuses capture-through-the-rule (Raises, ReadsShare,
+           Locked, locked_stays, locked_not_below, CarrierCounts, select, lowers, lower, hi, lo) and
+           closed-capture (join, joinRead, join_course, Accrues, loss_grows, reads_beyond_of_apart,
+           Beyond.lossStep); closed-capture's next step revised
+Delta: OPENING [^meta] said that the rule's being read from the share is the premise ReadsShare, not a
+       result, and closed-capture's next step asked for the reading formed by a selection among readers,
+       a reading of the share and part of what lies beyond, and a loss read late. Now in Lean: the rule as
+       the pool of readers drawn from the population it selects, counted as it counts them (Drawn.pool),
+       reads the share monotonically exactly where each carrier's reading favours the carriers at least as
+       much as each other's (Drawn.pool_reads, pool_reads_iff), and against the share where it favours them
+       less (pool_against); with the loss read only by the others, from a step at which it has reached its
+       bound the course is the share's own loop under the late pool (Thinned.past_course), a reading step at
+       which the rule in force and the rule read agree locks the course that way for good (agreeing_stays,
+       read_late_kept, read_in_time_turns), and with mirrored readings the counts at that step decide
+       (kept_iff, turned_iff). Witnesses: one loss, the same readers, read in time and read late.
+Premises / correspondence: the pool form (two kinds of reader, each reading alike, summed unnormalized,
+       counted as the population is); the others' late reading not above the carriers'; for kept_iff and
+       turned_iff, the mirror and the carriers' reading favouring strictly. Correspondence: the corpus's
+       "selecting the selectors"; regulatory capture through who staffs the regulator; a reform carried by
+       a minority of evaluators.
+Evidence: core receipt 20261022T110422.961776Z (passed; Becoming.ClosedCapture now 63 theorems and 85
+       declarations, the 42 new ones with empty axiom reports); connectivity none apart.
+Boundary: readers of one kind reading differently; weights other than counts; readings formed by argument;
+       real-valued shares; the calibration of any of this; that readers are minds (a reading, D58, D67).
+Output → input: OPENING [^meta]; 02 §9 (a home section and T7) and the overview's capture paragraph (EN,
+       ZH); the meta-attractor page; the package README rows and the root module's doc; D67; closed-capture's
+       next step.
+```
+
+**The question.** The note's sharpest admitted limit was its premise: the loop locks where the rule is read monotonically from the share it selects (`ReadsShare`), and nothing said why a rule would be read so. The meta-attractor corpus gives a mechanism, not a function: the winners come to hold recruitment, training and evaluation, so the rule is read by those it selected. And it says the loop "closes in the minds it selects", which closed-capture stated only as a reading formed from the share by a map (`ReadsShare` on `mind`), with no reader in it.
+
+**What is proved** (each a theorem of `Becoming.ClosedCapture`, from the stated hypotheses, every one with an empty axiom report):
+
+- *The pool reads the share.* The pool of readings `Drawn.pool u v x` gives each kind of offspring the sum of what the readers propose, each carrier among them proposing `u` and each other `v`, the readers counted as the population `x` counts them. Two pools compare as a part alike on both sides and a crosswise part (`Drawn.cross`), and the crosswise part is one rearrangement of products, the larger share paired with the larger reading (`Drawn.rearrange`, exact in `rearrange_eq`). So the pool is monotone in the share exactly where `v` is not above `u` (`pool_reads_iff`, the converse read at the populations no carrier to one other and one to one; `pool_reads` its direction); where `u` is not above `v` it reads against the share (`pool_against`) and, along a course whose rules favour, its rule read does not rise (`pool_not_rising`, through `against_not_rising`); and where the counts of readers are themselves a monotone function of the share, those the selection favours over-represented among the readers, it still reads the share (`pool_through`), every course locked from the step after its second reading step where every reader reads favourably (`through_locks`).
+- *Mirrored readings: the counts decide.* Where the others propose for the others what the carriers propose for the carriers, the carriers' proposal favouring them strictly, the pool favours the carriers exactly where they are at least as many as the others, and favours the others exactly where they are at least as many as the carriers (`mirror_favours_iff`, `mirror_disfavours_iff`, through `rearrange_lt`).
+- *A loss read by part of the pool.* `Thinned.lossPool u v w N`: the carriers read `u` whatever the loss; the others read `v` while the loss is below `N` and `w` from then on. Readings alike at every configuration whose loss is at least `N` give one joined course from a start whose loss is at least `N`, the loss accruing (`course_past`), so from a step at which the loss has reached `N` the share and rule run as the share's own two-level course under the pool of `u` and `w` (`past_course`, with `join_course` and `paced_shift`).
+- *Agreement locks.* At a reading step at which the rule in force and the rule read both favour, the course is locked at the next step and stays so, neither share nor rule ever below where they were (`agreeing_locks`, `agreeing_stays`); read with both orders reversed, the same holds of the others. So: read late, the rule in force and the late pool both favouring the carriers, the lock holds for good while the loss grows by at least one a step and every other reader reads it (`read_late_kept`); read in time, both favouring the others, the course is locked the other way for good (`read_in_time_turns`).
+- *The counts at the reading decide.* With the mirror: the rule in force favouring the carriers, the course is locked for good exactly where the carriers are at least as many as the others at the step the loss is read (`kept_iff`); the rule in force favouring the others, it is locked the other way for good exactly where the others are at least as many (`turned_iff`).
+- *Witnesses.* One carrier to eight others under `hi`, read at every step, each step adding one to the loss; the carriers read `hi`, the others one to one and `lo` once they read the loss. Read from the start, the others still the more numerous at step 1, the course is locked the other way from step 2 and the carriers' share falls from step 2 to step 3 (`inTime_majority`, `inTime_turned`). Read from step 3, the carriers by then 1,152 to 864, the course is locked for good from step 4 (`late_majority`, `late_kept`). The late reading reads beyond the share (`late_reads_loss`).
+
+**What it says.** Two things the note left as premise or reading are now laws under a narrower premise. First, `ReadsShare` is not a separate assumption once the readers are those the rule selects: within the pool it is equivalent to one comparison, each kind reading at least as favourably for its own kind. The premise moves from a property of a function to a statement of who reads, which is the corpus's own mechanism and is open to observation (who staffs the evaluation). It is not weaker in general: the pool form is itself a strong modelling choice, and the record states it. Second, the closing in the readers it selects is exact: a loss read only by those the selection disfavours decides the loop once, at the step they read it, by the counts then. Evidence of the loss, however complete and however long it grows, read after the selection has made its readers the fewer, leaves the lock in place for good; the same evidence read while they are not yet the fewer turns it for good. So 明 has a time: a reading of what lies beyond the share leaves the loop only while it is held by readers not yet outnumbered, which is the model's form of the corpus's ordering claim: what reads the loss must be in place before the selection it would correct has run far.
+
+**What it does not do.** It does not show that any actual rule is such a pool, that each kind reads in its own favour, or that readers are minds. Readers of one kind reading differently, weights other than head counts, and readings formed by argument rather than by kind are not represented; the pool sums readings unnormalized, so a reading's size weighs with its count (the mirrored readings have equal sizes); `favours` and `disfavours` include ties, and the in-time witness shows the strict fall. The calibration to today's world is untouched.
+
+**Self-review and review.** An independent reviewer (one subagent, read-only) checked the statements against their docstrings, the witnesses' numbers by hand, the honesty of "derived" and the names. Its findings were applied: `pool_reads_iff` added, so the equivalence within the pool is stated rather than implied; the in-time direction stated as `turned_iff` with `mirror_disfavours_iff`; the step hypothesis of `past_course` weakened to the loss at the step; `majority_decides` replaced by `kept_iff` and `turned_iff`, whose names state the structure and whose last sentence no longer overclaims; the pool's size weighting, the ties and the `readers` hypotheses named in the docstrings; the witness steps counted by index throughout; "the winners write the rule" removed from a docstring.
+
+**The run.** Core 285 modules; 11 Lean steps ran, 1,193 reused, receipt `20261022T110422.961776Z`, on main at `8ca7ffc88`; the one core module main changed before the landing (`Becoming.Significance`, SD1) lies outside the 86 modules of `Becoming.ClosedCapture`'s import closure. Connectivity: 704 of 13,312 apart, none of them among the new declarations (a first measurement found `pool_against`, `pool_favours`, `pool_reads_iff` and `pool_through` used by nothing on the base; `pool_not_rising` and `through_locks` state them on the course, and `pool_reads` is now the direction of `pool_reads_iff`).
+
+**The landing (24 and 25 October 2026).** The work above was verified on 22 October on branch `ma2` and never reached main: its owner session merged main twice, the second time renumbering this section to 355, and then went idle before the fast-forward. On Ren's yes, the session coordinating AJ took the landing over before the claim lapsed. Main had moved 276 commits, the restructured account (RA) among them, so the landing is a merge with the text carried, not a fast-forward:
+
+- `Becoming.ClosedCapture` is unchanged from the branch, and main had not touched it.
+- The text written into the retired canonical chapter's §4.5, T7 and its terms table is carried into the chapter that now homes these results: a home section in 02 §9 (`r-readers-drawn-from-the-selected`), T7's standing and forbids, a reading labelled D67, and one sentence in §9's opening. The overview's capture paragraph (EN, ZH), OPENING's `[^meta]` and the meta-attractor page each gain the result in their own words. The history copies of the retired chapter keep their bytes.
+- The readings decision moves from D64 to D67, because D64 was taken on 23 October by the readings of self-concern through dependence. This section moves from 355 to 401.
+- closed-capture keeps main's record, with MA2's next step, its history line and the related record re-applied. The three records whose only change on the branch was re-pointing after edits to the retired chapter take main's versions.
+- The core checker ran on the tree merged with main after OU6: receipt `20261025T045617.350224Z`, 319 modules, 23 Lean steps run and 1,253 reused; `Becoming.ClosedCapture` 63 theorems in 85 declarations, every axiom report empty. Connectivity found no new apart root. Before the run a scratch build of `Becoming.ClosedCapture` and `Becoming.GrammarRegularity`, which imports it since GS1, passed on the merged tree; the two modules' declarations share no name.

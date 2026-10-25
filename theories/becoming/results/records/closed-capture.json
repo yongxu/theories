@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T12:59:18+00:00",
+  "reviewed_at_utc": "2026-10-25T04:58:08+00:00",
   "statement": {
     "en": "In a selection whose rule, and how the rule is read, are read from the share it selects, a loss the loop does not read leaves it locked however large it grows, and a change of the reading is absorbed; what leaves is a change of the law, such as a reading of what lies beyond the share.",
     "zh": "在规则及规则怎样被读都从所选出份额读出的选择中，回路不读的损失不论多大都使它保持锁定，读法的改变被吸收；离开的是律的改变，例如对份额之外者的读取。"
@@ -146,12 +146,12 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T125537.657165Z): the 43 declarations of Becoming.ClosedCapture, 28 of them theorems, have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study sections 242 and 309; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T125537.657165Z）：Becoming.ClosedCapture 的 43 项声明（28 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 242 与 309 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T045617.350224Z): the 43 declarations of Becoming.ClosedCapture cited here, 28 of them theorems, have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study sections 242 and 309; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T045617.350224Z）：本记录所引 Becoming.ClosedCapture 的 43 项声明（28 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 242 与 309 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Readings that read the share and part of what lies beyond, and how much of the loss a reading must read to leave; a loss read late; the reading formed by a selection among readers rather than by a map; real-valued shares; an independent review.",
-    "zh": "既读份额又读份额之外一部分的读法，以及读法须读多少损失才离开；迟读的损失；由读者之间的选择而非由一个映射形成的读法；实数份额；独立审查。"
+    "en": "Readings of the share and of part of what lies beyond with weights other than a pool counted by kind, and how much of the loss such a reading must read to leave; real-valued shares; an independent review.",
+    "zh": "以按类计数的汇合以外的权重读份额与份额之外一部分的读法，以及这样的读法须读多少损失才离开；实数份额；独立审查。"
   },
   "correspondence": {
     "en": "The meta-attractor (theories/meta-attractor): its 2025-08 formalisation separates the state and the rule that scores it, with the rule updated from the state; partial reform re-absorbed is perturbation_absorbed and reading_absorbed, and the metric surviving its own refutation is lock_outlives_loss. Goodhart (1975) says a measure made a target stops measuring; this states why it is kept: what keeps it reads the share it gives, not what it fails to measure. Lock-in under increasing returns (Arthur 1989) and regulatory capture (Stigler 1971) are the closest prior results; the delta is the reading itself read from the share, and the exact condition (Unread) under which a loss leaves the lock. In supervisory control the loop's condition is observability under a reading of the joined whole, the reader inside the plant (Wakaiki, Tabuada and Hespanha 2019, Theorem 4.1); for a reward read through a channel the loop forms, a consistent corruption is indistinguishable from none and a reading the loop does not form is the way out (Everitt, Krakovna, Orseau and Legg 2017, Theorems 11 and 19); for a rule learned from what it admits, closed-loop identifiability (Borkar and Varaiya 1979). On the spine Unread is exactly the law of a part read alone (identifiesAlike_iff_unread), the lumping law that also settles what a learner identifies.",
@@ -271,6 +271,13 @@
         "en": "Read in the grammar: the class of share, rule and step count constant along every schedule exactly where nothing beyond is read, and the locked line unending while the loss alters (GS1).",
         "zh": "于文法中读：份额、规则与步数之类于每一读之时序皆有常，恰当份额之外无所读；锁之续不尽而损每步皆异（GS1）。"
       }
+    },
+    {
+      "id": "readers-drawn-from-the-selected",
+      "detail": {
+        "en": "The reading formed by a selection among readers: the rule as the pool of readers drawn from those it selects, and the loss read late by the readers the selection thins.",
+        "zh": "由读者之间的选择形成的读法：规则为从其所选者中抽出的读者之汇合，以及被选择稀释的读者迟读的损失。"
+      }
     }
   ],
   "references": [
@@ -322,7 +329,7 @@
         "Becoming.ClosedCapture.turned_by_loss",
         "Becoming.ClosedCapture.unread_course"
       ],
-      "sha256": "bc2ac2354c33c14ad49d362553804f2fe6de6079178a100160bd2868ebf9722d"
+      "sha256": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
@@ -335,9 +342,9 @@
       "sha256": "6e3ff605c2dc083a3b7a745ce8832dbeea4b4bade11cdfb16d5acfc83c8838b5"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T125537.657165Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T045617.350224Z/verification.json",
       "role": "receipt",
-      "sha256": "a256947b6cb2f3348f3b2f3e5cb02df8deff8e439f769a58cfea25d99dbe5acb"
+      "sha256": "dd32556ecad5da789503939ee6651f24e73a4f67ce4bc14b85ddde466abc1422"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
@@ -352,7 +359,7 @@
     {
       "path": "theories/becoming/OPENING.md",
       "role": "statement",
-      "sha256": "9f719265444669c8c2086349a9c2e178c6dec11ae5b281b55d417f51a9cb5057"
+      "sha256": "8bd42fc5b5b0c594a50648cc5866a323d1a00dbaf434fc49e1df74ecf38fff16"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
@@ -368,7 +375,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T125537.657165Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T045617.350224Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ClosedCapture",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -386,6 +393,10 @@
     {
       "en": "24 October 2026, GS1: read in the grammar (record rules-that-change-themselves-in-the-grammar, study section 390); no statement of this record changed.",
       "zh": "2026年10月24日，GS1：于文法中读（记录 rules-that-change-themselves-in-the-grammar，研究第 390 节）；本记录之陈述未变。"
+    },
+    {
+      "en": "25 October 2026, MA2 (proved 22 October, landed 25 October): the next step revised, the reading formed by a selection among readers, a reading of the share and part of what lies beyond by a pool, and a loss read late now stated in readers-drawn-from-the-selected; the module gained that record's declarations, so the evidence counts this record's own; study section 401. The laws are unchanged.",
+      "zh": "2026年10月25日，MA2（10 月 22 日证明，10 月 25 日落地）：下一步修订，由读者之间的选择形成的读法、由汇合读份额与份额之外一部分的读法、迟读的损失，现陈述于 readers-drawn-from-the-selected；模块增加了该记录的声明，所以证据只计本记录所引者；研究第 401 节。诸律不变。"
     }
   ]
 }

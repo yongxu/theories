@@ -29,3 +29,11 @@ Answering the AI's question "Shall I check MA2 and claim selection for control o
 ## How the AI reads it (AI-authored)
 
 The fork Ren names had claimed MA3, selection on the capacity to shape the rule, which is the item the AI proposed; MA2's verified landing still waits on its owner session, idle since 22 October. The goal is an alignment of the joint selection, humans, institutions and trained systems selecting together, that does not come to select for control over its own selection and that leaves a lock in time by reading what lies beyond its share, its courses compared by widening under the two named premises. The plan that states it, the reasons for that representation and the ordered path is [AJ's plan](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md); the board shows the path. Two things in it are Ren's: a goal record in GOALS changes goal scope, so it is proposed to him, not adopted; and spending model usage on tests stays his choice. The words are provenance for the goal, not the warrant for any claim: the plan argues each step from the work.
+
+## Landing MA2 (later the same day)
+
+Asked "Shall I land MA2 here now, without waiting for its claim to lapse?", Ren chose this reply, worded by the AI:
+
+> Yes: land MA2 here now, before its claim lapses. Merge main into ma2, re-home its text into the new chapters, run the core checker, take the queue.
+
+Context (AI-authored): MA2 was verified on branch `ma2` on 22 October and never reached main; its owner session had been idle since then, and under board rule 4 the claim would have lapsed only after three days. The reply authorizes taking the landing over before that. What the landing carried and changed is in study section 401.

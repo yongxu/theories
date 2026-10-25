@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "id": "readers-drawn-from-the-selected",
+  "title": {
+    "en": "Readers drawn from the selected",
+    "zh": "从所选者中抽出的读者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T04:58:08+00:00",
+  "statement": {
+    "en": "A rule read by readers drawn from the population it selects reads the share exactly where each carrier reads at least as favourably for the carriers as each other does; where only the others read the loss, the counts at the step they read it decide for good whether the lock is kept or turned.",
+    "zh": "由其所选人口中抽出的读者所读的规则，恰在每个携带者对携带者的偏向不少于每个其他者之时从份额读出；只有其他者读损失时，读到那一步的计数永远决定锁定保持还是翻转。"
+  },
+  "laws": [
+    {
+      "en": "The pool reads the share: the rule read as the sum of its readers' readings, each carrier among them reading u and each other v, counted as the population counts them, is monotone in the share exactly where v is not above u. Two pools compare as a part alike on both sides and a crosswise part, one rearrangement of products.",
+      "zh": "汇合读份额：规则读作其读者读法之和，每个携带者读 u、每个其他者读 v，如人口那样计数，恰在 v 不高于 u 之处随份额单调。两个汇合之比较分为两边相同的部分与交叉的部分，后者是一次乘积的重排。",
+      "declarations": [
+        "Becoming.ClosedCapture.Drawn.pool",
+        "Becoming.ClosedCapture.Drawn.poolRead",
+        "Becoming.ClosedCapture.Drawn.rearrange_eq",
+        "Becoming.ClosedCapture.Drawn.rearrange",
+        "Becoming.ClosedCapture.Drawn.add_swap",
+        "Becoming.ClosedCapture.Drawn.cross",
+        "Becoming.ClosedCapture.Drawn.pool_mono",
+        "Becoming.ClosedCapture.Drawn.pool_reads",
+        "Becoming.ClosedCapture.Drawn.pool_reads_iff"
+      ]
+    },
+    {
+      "en": "Where u is not above v the pool reads against the share, and along a course whose rules favour its rule read does not rise. Where the counts of readers are a monotone function of the share it still reads the share, and every reader reading favourably, every course is locked from the step after its second reading step.",
+      "zh": "u 不高于 v 之处汇合逆份额而读，沿规则都偏向的进程其读出的规则不上升。读者计数是份额的单调函数之处它仍读份额；每个读者都偏向地读时，每个进程自第二个读取步之后锁定。",
+      "declarations": [
+        "Becoming.ClosedCapture.Drawn.pool_mono_against",
+        "Becoming.ClosedCapture.Drawn.pool_against",
+        "Becoming.ClosedCapture.Drawn.pool_not_rising",
+        "Becoming.ClosedCapture.Drawn.pool_through",
+        "Becoming.ClosedCapture.Drawn.pool_favours",
+        "Becoming.ClosedCapture.Drawn.through_locks"
+      ]
+    },
+    {
+      "en": "Against a mirrored reading the counts decide: the others reading for the others what the carriers read for the carriers, the carriers' reading favouring them strictly, the pool favours the carriers exactly where they are at least as many as the others, and the others exactly where they are at least as many as the carriers.",
+      "zh": "对镜像之读法，计数决定：其他者为其他者读携带者为携带者所读者，携带者之读法严格偏向携带者，则汇合恰在携带者不少于其他者处偏向携带者，恰在其他者不少于携带者处偏向其他者。",
+      "declarations": [
+        "Becoming.ClosedCapture.Drawn.rearrange_lt",
+        "Becoming.ClosedCapture.Drawn.mirror_favours_iff",
+        "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff",
+        "Becoming.ClosedCapture.Drawn.le_of_disfavours",
+        "Becoming.ClosedCapture.Drawn.mirror_le"
+      ]
+    },
+    {
+      "en": "A loss read by part of the pool: the carriers read u whatever the loss, the others v below a bound N and w from then on. Readings alike wherever the loss is at least N give one joined course, the loss accruing; so from a step at which the loss has reached N the course is the share's own loop under the pool of u and w, whose rule read is that pool at the share.",
+      "zh": "由汇合之一部分读的损失：携带者不论损失都读 u，其他者在界 N 之下读 v、此后读 w。在损失至少为 N 的每一构形上相同的读法，自这样的起点、损失累积时，给出同一合并进程；所以自损失达到 N 的一步起，份额与规则如份额自身在 u 与 w 之汇合下的两速进程运行，那里读取步所读的规则就是该份额处的汇合。",
+      "declarations": [
+        "Becoming.ClosedCapture.Thinned.lossPool",
+        "Becoming.ClosedCapture.Thinned.lossPool_past",
+        "Becoming.ClosedCapture.Thinned.course",
+        "Becoming.ClosedCapture.turn_agree",
+        "Becoming.ClosedCapture.course_past",
+        "Becoming.ClosedCapture.Thinned.past_course",
+        "Becoming.ClosedCapture.Thinned.rule_read"
+      ]
+    },
+    {
+      "en": "Agreement locks for good: at a reading step at which the rule in force and the rule read both favour, the course is locked from the next step on, share and rule never below where they were. Read late, both favouring the carriers, the lock holds while the loss grows and every other reader reads it; read in time, both favouring the others, the course is locked the other way.",
+      "zh": "一致则永远锁定：在施行的规则与读出的规则都偏向的读取步，进程在下一步锁定并保持，份额与规则都不再低于那时。迟读时，施行的规则与迟来的汇合都偏向携带者，锁定保持，而损失每步至少增一、每个其他读者都读它；及时读时，两者都偏向其他者，进程永远反向锁定。",
+      "declarations": [
+        "Becoming.ClosedCapture.agreeing_locks",
+        "Becoming.ClosedCapture.agreeing_stays",
+        "Becoming.ClosedCapture.Thinned.read_late_kept",
+        "Becoming.ClosedCapture.Thinned.read_in_time_turns"
+      ]
+    },
+    {
+      "en": "The counts at the reading decide: with the others' late reading the mirror of the carriers', at a reading step at which the loss has reached its bound, the rule in force favouring the carriers, the course is locked for good exactly where the carriers are at least as many as the others there; the rule in force favouring the others, it is locked the other way for good exactly where the others are at least as many.",
+      "zh": "读取时的计数决定：其他者迟来的读法为携带者读法之镜像时，在损失已达其界的读取步，若施行的规则偏向携带者，进程恰在那时携带者不少于其他者之处永远锁定；若施行的规则偏向其他者，恰在其他者不少于携带者之处永远反向锁定。",
+      "declarations": [
+        "Becoming.ClosedCapture.Thinned.kept_iff",
+        "Becoming.ClosedCapture.Thinned.turned_iff"
+      ]
+    },
+    {
+      "en": "Witnesses: one carrier to eight others under a rule favouring the carriers four to one, read at every step, the loss rising by one a step; the carriers read four to one for themselves, the others one to one, then four to one for themselves once they read the loss. Read from the start, the course is locked the other way from step 2; read from step 3, it is locked for good from step 4.",
+      "zh": "见证：一个携带者对八个其他者，规则以四比一偏向携带者，每步都读，每步损失加一；携带者为自己读四比一，其他者读一比一，读到损失后为自己读四比一。自起点读，其他者仍较多，进程自第 2 步反向锁定，携带者份额下降；自第 3 步读，携带者那时已较多，进程自第 4 步永远锁定；迟来的读法读份额之外者。",
+      "declarations": [
+        "Becoming.ClosedCapture.Thinned.fewCarriers",
+        "Becoming.ClosedCapture.Thinned.inTime",
+        "Becoming.ClosedCapture.Thinned.late",
+        "Becoming.ClosedCapture.Thinned.lossStep_accrues",
+        "Becoming.ClosedCapture.Thinned.inTime_majority",
+        "Becoming.ClosedCapture.Thinned.inTime_turned",
+        "Becoming.ClosedCapture.Thinned.late_majority",
+        "Becoming.ClosedCapture.Thinned.late_kept",
+        "Becoming.ClosedCapture.Thinned.late_reads_loss"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Each statement names its hypotheses: the pool form (two kinds of reader, each reading alike, summed unnormalized, counted as the population counts them); the others' reading not above the carriers' (readers); for the loss, Accrues and a reading step at which the loss has reached its bound; for the counts, the others' late reading the mirror of the carriers' and the carriers' reading favouring strictly.",
+      "zh": "不加公理。各陈述列出其假设：汇合之形（两类读者，每类读法相同，未归一求和，如人口那样计数）；其他者之读法不高于携带者之读法（readers）；对损失，Accrues，以及损失已达其界的读取步；对计数，其他者迟来的读法为携带者读法之镜像，且携带者之读法严格偏向。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any actual rule is the pool of readers drawn from those it selects, or that each kind reads at least as favourably for its own kind: within the pool ReadsShare is equivalent to that comparison, so the premise is moved to who reads, not removed.",
+      "zh": "任何实际的规则是从其所选者中抽出、如其计数那样计数的读者之汇合，或每类读者对本类的偏向不少于另一类：在汇合之内 ReadsShare 等价于这一比较，所以前提被移到谁在读，并未去除。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Readers of one kind reading differently, weights other than counts, readings formed by argument; the pool sums readings unnormalized, so a reading's size weighs with its count (mirrored readings have equal sizes).",
+      "zh": "同类读者读法不同、计数以外的权重、由论证而非由类别形成的读法；汇合未归一求和，所以读法的大小与其计数一同加权，镜像的读法大小相等。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the readers are minds, institutions or a culture: that is a reading (D58, D67). Nor the calibration of any of this to the present world.",
+      "zh": "读者是心智、机构或文化：这是读法（D58、D67）。也不说其中任何一点与当今世界的校准。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Favouring and disfavouring both hold of a rule giving each kind alike, so locked the other way says the carriers' share never rises again, not that it falls; the in-time witness shows the strict fall.",
+      "zh": "偏向与不偏向都对给两类相同的规则成立，所以反向锁定说的是携带者份额不再上升，不是它下降；及时之见证显示严格的下降。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+      "detail": {
+        "en": "The time of the reading is not idle: the same readers reading the same loss lock the course the other way when they read it from the start and leave it locked for good when they first read it at step 3 (Thinned.inTime_turned, Thinned.late_kept), though the late reading reads beyond the share (Thinned.late_reads_loss).",
+        "zh": "读取的时间并非无关：同样的读者读同样的损失，自起点读则进程反向锁定，第 3 步才首次读则锁定永远保持（Thinned.inTime_turned、Thinned.late_kept），尽管迟来的读法读份额之外者（Thinned.late_reads_loss）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T045617.350224Z, on the tree merged with main when it landed; first passed at 20261022T110422.961776Z): the 42 declarations cited here that Becoming.ClosedCapture gained have empty axiom reports; the checker verifies core purity. Built on 22 October in one session and reviewed there by one independent read-only reviewer, whose findings were applied; landed on 25 October by another session (study section 401); not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T045617.350224Z，在落地时与主干合并之树上；首次通过于 20261022T110422.961776Z）：本记录所引 Becoming.ClosedCapture 新增的 42 项声明公理报告为空；检查器并核对核心纯净。10 月 22 日在一个会话中构建，并由一位独立的只读审查者审查，其意见已采纳；10 月 25 日由另一会话落地（研究第 401 节）；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Readers of one kind reading differently, and readers moving between kinds; weights read from the readings' own sizes; a loss read by a share of the readers that the selection does not thin; real-valued shares; an independent review by a person.",
+    "zh": "同类读者读法不同，以及读者在类别间移动；由读法自身大小读出的权重；由选择不稀释的那部分读者所读的损失；实数份额；人的独立审查。"
+  },
+  "correspondence": {
+    "en": "The meta-attractor corpus's \"selecting the selectors\", the passage from being selected by a rule to helping reproduce the rule that selects you, through who holds recruitment, training and evaluation; regulatory capture through who staffs the regulator (Stigler 1971); a reform carried by a minority of evaluators. Within the pool the result is the mediant property of ratios read as a monotone reading; its delta is the loss read by the part of the pool the selection thins, and the exact counts at the reading that decide the lock.",
+    "zh": "元吸引子文本的“选择选择者”，即经由谁掌握招聘、训练与评价，从被规则选择到帮助再生产选择你的规则；经由谁充任监管者的规制俘获（Stigler 1971）；由少数评价者承担的改革。在汇合之内，此结果是比值之中项性质读作单调读法；其增量是由被选择稀释的那部分汇合所读的损失，以及读取时决定锁定的确切计数。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+  "aliases": [
+    "readers drawn from the selected",
+    "从所选者中抽出的读者",
+    "selecting the selectors",
+    "选择选择者",
+    "the pool reads the share",
+    "a loss read late by thinned readers",
+    "Becoming.ClosedCapture.Drawn.pool_reads_iff",
+    "Becoming.ClosedCapture.Thinned.kept_iff",
+    "Becoming.ClosedCapture.Thinned.turned_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "capture-through-the-rule",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Applies Becoming.RuleCapture's lock (Raises, ReadsShare, Locked, locked_stays, locked_not_below) to the pool, read either way (lowers, lower, ReadsShare.reverse), with its counts (CarrierCounts, order, favours, disfavours, select, hi, lo).",
+        "zh": "把 Becoming.RuleCapture 的锁定（Raises、ReadsShare、Locked、locked_stays、locked_not_below）用于汇合，正反两向（lowers、lower、ReadsShare.reverse），并用其计数（CarrierCounts、order、favours、disfavours、select、hi、lo）。"
+      },
+      "interface": {
+        "output": {
+          "en": "A rule read monotonically from the share locks, and stays locked, from a locked configuration.",
+          "zh": "从份额单调读出的规则自锁定构形起锁定并保持。"
+        },
+        "input": {
+          "en": "The pool, shown to read the share; the agreement of rule in force and rule read at a reading step.",
+          "zh": "已证读份额的汇合；读取步上施行规则与读出规则的一致。"
+        },
+        "conditions": {
+          "en": "Raises, the pool's readers not above one another as stated, favouring kept upward.",
+          "zh": "Raises、所述的读者之间的次序、向上保持的偏向。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean"
+      }
+    },
+    {
+      "id": "closed-capture",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Builds on the share's law joined with a step beyond (join, joinRead, join_course), Accrues and loss_grows, reads_beyond_of_apart and Beyond.lossStep.",
+        "zh": "建立在带份额之外一步的份额之律（join、joinRead、join_course）、Accrues 与 loss_grows、reads_beyond_of_apart 与 Beyond.lossStep 之上。"
+      },
+      "interface": {
+        "output": {
+          "en": "The joined loop runs as the share's own loop where the reading reads only the share; the loss grows by at least one a step.",
+          "zh": "读法只读份额之处，合并的回路如份额自身的回路运行；损失每步至少增一。"
+        },
+        "input": {
+          "en": "The loss read by part of the pool, past its bound.",
+          "zh": "越过其界后由汇合一部分读的损失。"
+        },
+        "conditions": {
+          "en": "Accrues.",
+          "zh": "Accrues。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "a-reading-against-the-share-does-not-ratchet",
+      "detail": {
+        "en": "The pool whose carriers read less favourably for the carriers reads against the share, the case in which the rise the lock rests on does not form.",
+        "zh": "携带者读法对携带者偏向较少的汇合逆份额而读，即锁定所依的上升不形成的情形。"
+      }
+    },
+    {
+      "id": "a-pool-read-by-its-majority",
+      "detail": {
+        "en": "A pool read by its majority separates no more than the pool; here a pool of readings, whose counts decide the rule's direction.",
+        "zh": "以多数读的汇合所分辨不多于汇合；此处是读法之汇合，其计数决定规则的方向。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ClosedCapture.Drawn.add_swap",
+        "Becoming.ClosedCapture.Drawn.cross",
+        "Becoming.ClosedCapture.Drawn.le_of_disfavours",
+        "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff",
+        "Becoming.ClosedCapture.Drawn.mirror_favours_iff",
+        "Becoming.ClosedCapture.Drawn.mirror_le",
+        "Becoming.ClosedCapture.Drawn.pool",
+        "Becoming.ClosedCapture.Drawn.poolRead",
+        "Becoming.ClosedCapture.Drawn.pool_against",
+        "Becoming.ClosedCapture.Drawn.pool_favours",
+        "Becoming.ClosedCapture.Drawn.pool_mono",
+        "Becoming.ClosedCapture.Drawn.pool_mono_against",
+        "Becoming.ClosedCapture.Drawn.pool_not_rising",
+        "Becoming.ClosedCapture.Drawn.pool_reads",
+        "Becoming.ClosedCapture.Drawn.pool_reads_iff",
+        "Becoming.ClosedCapture.Drawn.pool_through",
+        "Becoming.ClosedCapture.Drawn.rearrange",
+        "Becoming.ClosedCapture.Drawn.rearrange_eq",
+        "Becoming.ClosedCapture.Drawn.rearrange_lt",
+        "Becoming.ClosedCapture.Drawn.through_locks",
+        "Becoming.ClosedCapture.Thinned.course",
+        "Becoming.ClosedCapture.Thinned.fewCarriers",
+        "Becoming.ClosedCapture.Thinned.inTime",
+        "Becoming.ClosedCapture.Thinned.inTime_majority",
+        "Becoming.ClosedCapture.Thinned.inTime_turned",
+        "Becoming.ClosedCapture.Thinned.kept_iff",
+        "Becoming.ClosedCapture.Thinned.late",
+        "Becoming.ClosedCapture.Thinned.late_kept",
+        "Becoming.ClosedCapture.Thinned.late_majority",
+        "Becoming.ClosedCapture.Thinned.late_reads_loss",
+        "Becoming.ClosedCapture.Thinned.lossPool",
+        "Becoming.ClosedCapture.Thinned.lossPool_past",
+        "Becoming.ClosedCapture.Thinned.lossStep_accrues",
+        "Becoming.ClosedCapture.Thinned.past_course",
+        "Becoming.ClosedCapture.Thinned.read_in_time_turns",
+        "Becoming.ClosedCapture.Thinned.read_late_kept",
+        "Becoming.ClosedCapture.Thinned.rule_read",
+        "Becoming.ClosedCapture.Thinned.turned_iff",
+        "Becoming.ClosedCapture.agreeing_locks",
+        "Becoming.ClosedCapture.agreeing_stays",
+        "Becoming.ClosedCapture.course_past",
+        "Becoming.ClosedCapture.turn_agree"
+      ],
+      "sha256": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+      "role": "proof",
+      "sha256": "40942b8659853baef361e206f26005e9a86580e0129550faae8c7bb1abaf6272"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T045617.350224Z/verification.json",
+      "role": "receipt",
+      "sha256": "dd32556ecad5da789503939ee6651f24e73a4f67ce4bc14b85ddde466abc1422"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "fa227a9ffe8f68087e10707421bbb98dcac23ea20df80d9dc8ea9168a68021bb"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+      "role": "integration",
+      "sha256": "541c19af25c1fb7ab02ddfbe7b26fc13390bebdfb3417c5c802ef2d8bbd1d9af"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "00727036c9d1aecbbf7d951b24d90d71baf96a87617a2247a743035259a0fee8"
+    },
+    {
+      "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "427ab874b35505dae6f3aece58e4f3621afc71efe03db7e52764e398afcb3544"
+    },
+    {
+      "path": "theories/becoming/OPENING.md",
+      "role": "statement",
+      "sha256": "8bd42fc5b5b0c594a50648cc5866a323d1a00dbaf434fc49e1df74ecf38fff16"
+    },
+    {
+      "path": "theories/meta-attractor/README.md",
+      "role": "statement",
+      "sha256": "e70500ca4ba7b2a4e49544267d156ac20e08fd8c0f55647cd9c0eb211d4431d6"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md",
+      "role": "provenance",
+      "sha256": "7bff26c6d2369ca6c905fa7c5a9765597328fb90c5df4fc2f8e0a7f1b98dbaa5"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md",
+      "role": "provenance",
+      "sha256": "a0c9f349d08a6eeb1da4310e85ca0e0cd2ab042ee3231bfc728787896f0f4717"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T045617.350224Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ClosedCapture",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (MA2) on branch ma2, on Ren's question about OPENING's note on the meta-attractor; an independent read-only review applied.",
+      "zh": "2026年10月22日：于 ma2 分支新增（MA2），回应 Ren 关于 OPENING 元吸引子之注的提问；已采纳一次独立的只读审查。"
+    },
+    {
+      "en": "25 October 2026: landed on main, its owner idle since 22 October, by the session coordinating AJ on Ren's yes; merged with main, the statement carried from the retired canonical chapter's §4.5 to 02 §9, the core checker re-run on the merged tree (receipt 20261025T045617.350224Z); study section 401; readings D67 (D64 when proved). The laws are unchanged.",
+      "zh": "2026年10月25日：其所有者自 10 月 22 日起闲置，由协调 AJ 的会话依 Ren 之同意落地主干；与主干合并，陈述由已退役的总章 §4.5 移至 02 §9，在合并之树上重跑核心检查器（回执 20261025T045617.350224Z）；研究第 401 节；读法 D67（证明时为 D64）。诸律不变。"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+import Becoming.PropositionIdentity
+#print axioms Becoming.PropositionIdentity.Extensional
+#print axioms Becoming.PropositionIdentity.Interderivation
+#print axioms Becoming.PropositionIdentity.endOf
+#print axioms Becoming.PropositionIdentity.relation
+#print axioms Becoming.PropositionIdentity.lumped_iff
+#print axioms Becoming.PropositionIdentity.extensional_iff_lumped
+#print axioms Becoming.PropositionIdentity.lumped_of_extensional
+#print axioms Becoming.PropositionIdentity.Formula
+#print axioms Becoming.PropositionIdentity.Formula.eval
+#print axioms Becoming.PropositionIdentity.Formula.eval_congr
+#print axioms Becoming.PropositionIdentity.Formula.atoms
+#print axioms Becoming.PropositionIdentity.Formula.read
+#print axioms Becoming.PropositionIdentity.Formula.read_congr
+#print axioms Becoming.PropositionIdentity.byName
+#print axioms Becoming.PropositionIdentity.byName_lumped_iff
+#print axioms Becoming.PropositionIdentity.lumped_of_byName
+#print axioms Becoming.PropositionIdentity.iff_witness_unique
+#print axioms Becoming.PropositionIdentity.derivation_unique
+#print axioms Becoming.PropositionIdentity.flip
+#print axioms Becoming.PropositionIdentity.two_equivalences
+#print axioms Becoming.PropositionIdentity.transport_const
+#print axioms Becoming.PropositionIdentity.transport_refl

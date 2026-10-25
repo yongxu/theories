@@ -1,0 +1,16 @@
+import Becoming.OwnWidening
+#check @Becoming.Web.WidensWithin.exceeds
+#check @Becoming.Web.WidensWithin.not_keeps
+#check @Becoming.Web.WidensWithin.not_narrowed
+#check @Becoming.Web.admits_reachWeb_iff
+#check @Becoming.Flow.Balances.includes_iff_beyond_within
+#check @Becoming.Flow.Balances.widens_iff_others_within
+#check @Becoming.Flow.Balances.mixed_iff_other_beyond
+#check @Becoming.Flow.Balances.mixed_of_tight
+#check @Becoming.Flow.Balances.widens_of_untaken_beyond
+#check @Becoming.Flow.Balances.widens_yet_own_changed
+#check @Becoming.OwnDrawing.balances
+#check @Becoming.OwnDrawing.withheld
+#check @Becoming.OwnDrawing.own_widens
+#check @Becoming.OwnDrawing.ample_widens
+#check @Becoming.OwnDrawing.tight_mixed

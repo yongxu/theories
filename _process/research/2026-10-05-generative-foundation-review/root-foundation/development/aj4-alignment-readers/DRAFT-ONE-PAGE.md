@@ -1,6 +1,6 @@
 # When selection favours control over its own rules
 
-*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Two of the results it uses are not yet on the main line. MA2 is checked on its branch, merged with main and in the landing queue. MA3's statements were revised after an independent review and now stand at 51 theorems in 57 declarations, in a scratch build that has not yet been through the checker.*
+*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Result 6 (MA2) landed on 25 October 2026: core receipt `20261025T045617.350224Z`, every axiom report empty. Its review was by one independent AI reviewer, not by a person. Result 7 (MA3) was revised after an independent review and stands at 51 theorems in 57 declarations, in a scratch build that has not yet been through the checker.*
 
 ## The question
 
@@ -33,9 +33,11 @@ A selection *reads* a quantity when its signal depends on it, directly or throug
    - Suppose how the rule is read is also formed from the share. Then a loss the loop does not read leaves it locked, however large the loss grows (`ClosedCapture.lock_outlives_loss`; [record](../../../../../../theories/becoming/results/records/closed-capture.md)).
    - Each result has a witness where it fails. Without the start condition, the loop alternates forever. Read from the loss instead of the share, the loop turns.
 
-6. **When the loss is read decides whether a lock can still be left.** Suppose the rule is the pooled reading of readers drawn from those it selected.
-   - Where each carrier's reading favours the carriers at least as much as each other member's reading does, the rule's being read from the share is derived, not assumed.
-   - Suppose only the members the selection thins read a loss. Then the same readers reading the same loss turn the course if they read it in time. Once the selection has left them no more than the carriers, they leave it locked for good (`Thinned.kept_iff`, `Thinned.turned_iff`; witness: one carrier to eight others under a four-to-one rule; MA2, whose home section will be in chapter 2).
+6. **When the loss is read decides whether a lock can still be left.** Suppose the rule is the pooled reading of readers drawn from the population it selects ([record](../../../../../../theories/becoming/results/records/readers-drawn-from-the-selected.md)).
+   - **Who reads.** The pool reads the share exactly where each carrier's reading favours the carriers at least as much as each other member's reading does (`Drawn.pool_reads_iff`). This is an equivalence. It moves the premise that the rule reads the share onto who reads; it does not remove it.
+   - **When the loss is read.** Suppose only the other members read a loss, their late reading mirrors the carriers', and the rule in force favours the carriers. Then the lock is kept for good exactly where the carriers are at least as many as the others when the loss is read. Otherwise the course turns (`Thinned.kept_iff`, `Thinned.turned_iff`).
+   - **Witness:** one carrier to eight others under a four-to-one rule. Read from the start, the loss turns the course. Read from step 3, it leaves the course locked for good, even though that late reading reads beyond the share (`inTime_turned`, `late_kept`, `late_reads_loss`).
+   - **Not shown:** that actual rules are such pools, or that each kind reads in its own favour.
 
 7. **At a step, capacity to shape the rule is selected exactly where what comes back to the shapers alone covers its cost.** Model shaping in counts: each shaper leaves a + s + p descendants and each other member a + c + p. Here s is what shaping returns to the shapers alone, p is what it returns to every member alike, and c is its cost, counted as the others' advantage.
    - **At a step.** The rule favours shaping exactly where c ≤ s, and p decides nothing (`RuleShaping.favours_iff`, `favours_alike`).
@@ -65,7 +67,7 @@ These are readings. Each rests on the results named.
   - Where nothing comes back to the shapers at any step and shaping has a cost, as when all its returns are shared alike, the shapers' share falls over any stretch (`nothing_back_falls`).
   - Where something does come back, the shared part can still turn the verdict across a stretch (`SharedFlips`).
   - A witness shows that fewer steps with something back can turn the sign (`Timing.shorter_falls`).
-  - From result 6: a loss read in time turns the course, even when only those the selection thins read it.
+  - From result 6: a loss read while its readers still outnumber the carriers turns the course, even when only those the selection thins read it. Read once they no longer do, it leaves the lock for good, even though that reading reaches beyond the share.
 - **What gets out of a lock.** From result 5: a change in what the rule reads, toward what lies outside the share. A reform of the rule's value alone is absorbed, and so is a reform of the reading where the reading is itself formed from the share. From result 6: the change has to come in time.
 - **Instrumental convergence, located.** Result 3 is its one-agent form. Results 5 and 7 together are its form for a population of practices: a means that wins locally becomes the rule.
 - **Compare courses by widening, not by a score.**

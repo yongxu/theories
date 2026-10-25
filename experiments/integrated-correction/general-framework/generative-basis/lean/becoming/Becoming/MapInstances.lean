@@ -6,8 +6,8 @@ import Becoming.Continuation
 /-!
 # The map's instances: the old base's regimes as regions (地图之例)
 
-`Becoming.GrammarMap` reads generation (`«全生成»`), keeping (`«全守»`) and degeneration (`«有终»`) at
-a fine class `E` and a coarse class `L`. This module reads the old base in it, with one reading
+`Becoming.GrammarMap` reads generation and keeping in the strong form (`«全生成»`, `«全守»`) and
+reaching an end (`«有终»`, not degeneration, `«退化»`) at a fine class `E` and a coarse class `L`. This module reads the old base in it, with one reading
 throughout, already used by `Becoming.Identity`, `Becoming.ContinuedClasses` and
 `Becoming.PatternPassing`:
 
@@ -35,11 +35,11 @@ Results.
   (`Web.itself_not_generation`), every endless line keeps (`Web.itself_keeps`), and a formation
   active at every step keeps (`Web.always_keeps`). The name classes therefore never read as
   generation: generation needs a continuation other than names.
-* **Degeneration.** A line from an active occurrence along which nothing reached at some step is
+* **Not going on, and reaching an end.** A line from an active occurrence along which nothing reached at some step is
   active does not go on (`Web.not_endless_of_gone`), so it lies outside generation and keeping
   (`Map.outside_of_not_endless`); where going on is decided at the points of the line, it
-  degenerates (`Web.degenerates_of_gone`). This is where the map's boundary
-  (`«全生有终之定当且仅当排中»`) enters the instances: the regimes below refute going on
+  reaches an end (有终; `Web.degenerates_of_gone`, whose name is older than the distinction). This is where the map's boundary
+  (`«不穷有终之定当且仅当排中»`) enters the instances: the regimes below refute going on
   constructively, and reaching an end is the further step that decided going on supplies. Three
   regimes of the base fall there:
   - consumption of a condition whose dependence the line still holds at a later step at no lower
@@ -61,8 +61,9 @@ Not connected: renewal along a continuation (`Web.RenewingAlong`) reads conditio
 line goes on, and does not imply any region (`Map.renewal_undecided`); consumption along a
 continuation (`Web.ConsumingAlong`) ends a line only where the line holds the dependence consumed
 (`Web.consumed_held_not_endless`), since a drawer need not depend on what it draws. The coarse
-line's going on (`«不穷»`) asks every branch to go on, so a branch's end is the line's
-degeneration.
+line's going on (`«不穷»`) asks every branch to go on, so one branch's end is enough for the line
+not to go on and, where decided, to reach an end (有终); degeneration (尽) asks every branch to
+end.
 
 Modelling choices: discrete steps, formations a fixed index type, activity Prop-valued, natural
 number levels and needs. Every declaration has an empty axiom report.
@@ -239,7 +240,7 @@ theorem always_keeps {t : Nat} {f : F} (always : ∀ s, t ≤ s → W.active s f
         (always (s + 1) (Nat.le_succ_of_le later)),
       fun _ => Eq.subst (motive := fun h => W.active s h) same.symm (always s later)⟩⟩
 
-/-! ## Degeneration -/
+/-! ## Not going on, and reaching an end -/
 
 /-- **A line along which nothing reached at a step is active does not go on.** -/
 theorem not_endless_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
@@ -250,7 +251,8 @@ theorem not_endless_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) 
   | ⟨k, at_⟩ => match reaches_onward endless k with
     | ⟨y, hy, at'⟩ => gone y hy (at'.trans at_.symm) (active_along_line start hy)
 
-/-- **Where going on is decided, such a line degenerates**: it reaches an end. -/
+/-- **Where going on is decided, such a line reaches an end** (有终); that it degenerates (尽) is not
+shown. -/
 theorem degenerates_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
     (gone : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →
       ¬ W.active y.1 y.2)

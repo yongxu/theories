@@ -2,12 +2,12 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2925 nodes, 5003 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2929 nodes, 5011 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
-| The root: relation, condition, class, continuation, core | 29 | 76 | 63 | 0 |
-| The map: generation, keeping, degeneration, orders | 5 | 85 | 70 | 0 |
+| The root: relation, condition, class, continuation, core | 31 | 76 | 63 | 0 |
+| The map: generation, keeping, degeneration, orders | 5 | 86 | 70 | 0 |
 | Knowing and testing | 0 | 78 | 71 | 0 |
 | Life and evolution | 0 | 34 | 16 | 0 |
 | Collectives and selection | 0 | 53 | 15 | 0 |
@@ -33,6 +33,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | `«生»`, `«住»`, `«亡»`, `«异»` | begins, abides, ends; alters (continues while a finer class tells apart) | `Becoming.Grammar` |
 | `«不穷»` | the line from an occurrence never ends | `Becoming.Grammar` |
 | `«复生»`, `«生生»` | renews (conditions a beginning that goes on); renewal without end | `Becoming.Grammar` |
+| `«复生至»`, `«息»` | renews into (conditions a beginning whose line reaches); ceasing (what it renews into all cease; inductive) | `Becoming.Grammar` |
 | `«有常»` | `E` is constant under `R`: `E˘;R ⊆ R;E˘` | `Becoming.Grammar` |
 | `«核»`, `«位核»` | the core: the greatest symmetric constant relation inside `E`; read both ways | `Becoming.Grammar` |
 | `«粗»`, `«粗复生»` | the coarse net (缘 between classes); renewal at the grain of a class | `Becoming.Grammar` |
@@ -40,11 +41,11 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | `«成坏»` | JSZ-P-08-003 「諸根合會是成相，諸緣各住自位是壞相」 | `Becoming.GrammarReadings` |
 | `«同于»` | MJ-J-039 「同，異而俱於之一也」 | `Becoming.GrammarReadings` |
 | `«复»` | LZ-16-005 「復命曰常」 | `Becoming.GrammarReadings` |
-| `«通»` | XCS 「往來不窮謂之通」 | `Becoming.GrammarReadings` |
+| `«通»` | XCS-11-010 「往來不窮謂之通」 | `Becoming.GrammarReadings` |
 | `«传»` | carrying renewal: the coarse pattern continues from `x` to `y` while a fine line begins at `y` (火传) | `Becoming.GrammarMap` |
-| `«全生成»` | generation: the coarse line never ends and a carrying renewal lies ahead of every point of it | `Becoming.GrammarMap` |
-| `«全守»` | keeping: the coarse line never ends, and from some point no carrying renewal lies ahead | `Becoming.GrammarMap` |
-| `«有终»` | degeneration: the coarse line reaches an end | `Becoming.GrammarMap` |
+| `«全生成»` | generation in the strong form: the coarse line never ends and a carrying renewal lies ahead of every point of it | `Becoming.GrammarMap` |
+| `«全守»` | keeping in the strong form: the coarse line never ends, and from some point no carrying renewal lies ahead | `Becoming.GrammarMap` |
+| `«有终»` | reaching an end: some point the coarse line reaches ends (not degeneration, `«退化»`, which is ending on every branch) | `Becoming.GrammarMap` |
 | `«新而有终»` | renewing and still ending: a carrying renewal on a line that ends | `Becoming.GrammarMap` |
 
 ## The root: relation, condition, class, continuation, core
@@ -133,7 +134,7 @@ Modules (63, 8 stated on the grammar): `BranchingCorrespondence`, `Carriers`, `C
 
 ## The map: generation, keeping, degeneration, orders
 
-Results (85):
+Results (86):
 
 - [A continuing family cannot go unfed from beyond](records/continuing-self-fed-from-beyond.md) (recorded-checked)
 - [A coupling saturated by what it has carried](records/a-coupling-saturated-by-what-it-has-carried.md) (recorded-checked)
@@ -176,6 +177,7 @@ Results (85):
 - [Possibly and necessarily drawn](records/necessarily-drawn-is-not-returning.md) (recorded-checked)
 - [Preparation bounds and actual changes in joint realization](records/effective-capacity-and-eventual-reachability.md) (recorded-checked)
 - [Reaching before and after a juncture](records/reaching-before-and-after-a-juncture.md) (recorded-checked)
+- [Readers drawn from the selected](records/readers-drawn-from-the-selected.md) (recorded-checked)
 - [Recurring taking keeps finite families from staying closed](records/no-finite-part-bears-taking.md) (recorded-checked)
 - [Refinement counted as a giving](records/rest-with-refinement-counted.md) (recorded-checked)
 - [Regulation from one side, beyond the gap, and locally](records/regulation-from-one-side-and-locally.md) (recorded-checked)

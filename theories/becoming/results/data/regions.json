@@ -1331,6 +1331,11 @@
    "base": "general",
    "note": "Junctures"
   },
+  "readers-drawn-from-the-selected": {
+   "region": "map",
+   "base": "general",
+   "note": "ClosedCapture MA2: the rule read by readers drawn from the selected; a loss read in time or late"
+  },
   "reading-anothers-couplings-is-pooling": {
    "region": "collective",
    "base": "old-base",

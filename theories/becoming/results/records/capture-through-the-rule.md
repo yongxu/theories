@@ -69,7 +69,7 @@ Closes the third gap of the map of the Chinese sources onto the spine (record ch
 - related, not a proved adapter: [a-history-read-off-its-finite-stretches](a-history-read-off-its-finite-stretches.md). Ideals.Preorder, the order this record's laws are stated for, is defined there.
 - related, not a proved adapter: [closed-capture](closed-capture.md). The loop closed: a loss it does not read leaves it locked, a reading of the loss leaves, and the reading read from the share is absorbed as the rule's value is.
 
-**Used by:** [a-reading-against-the-share-does-not-ratchet](a-reading-against-the-share-does-not-ratchet.md) · [closed-capture](closed-capture.md) · [two-rules-lock-together](two-rules-lock-together.md)
+**Used by:** [a-reading-against-the-share-does-not-ratchet](a-reading-against-the-share-does-not-ratchet.md) · [closed-capture](closed-capture.md) · [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md) · [two-rules-lock-together](two-rules-lock-together.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -1,0 +1,389 @@
+@Becoming.pos_of_sign : ∀ {n : Nat}, 0 < Becoming.sign n → 0 < n
+@Becoming.sign_pos : ∀ {n : Nat}, 0 < n → 0 < Becoming.sign n
+@Becoming.total_eq_zero : ∀ {α : Type} {q : α → Nat} {as : List α},
+  (∀ (a : α), a ∈ as → q a = 0) → Becoming.total as q = 0
+@Becoming.total_le_at : ∀ {α : Type} {q : α → Nat} {a : α},
+  (∀ (b : α), 0 < q b → b = a) → ∀ {as : List α}, Becoming.Distinct as → Becoming.total as q ≤ q a
+@Becoming.total_le_of_support : ∀ {α : Type} {q : α → Nat} {l m : List α},
+  Becoming.Distinct l → (∀ (a : α), a ∈ l → 0 < q a → a ∈ m) → Becoming.total l q ≤ Becoming.total m q
+@Becoming.insertNew_spec : ∀ {α : Type} {a : α} {l : List α},
+  Becoming.Distinct l →
+    ∀ (decide : Decidable (a ∈ l)),
+      Becoming.Distinct (Becoming.insertNew a l decide) ∧
+        a ∈ Becoming.insertNew a l decide ∧ ∀ (b : α), b ∈ l → b ∈ Becoming.insertNew a l decide
+@Becoming.adjoin_spec : ∀ {α : Type} [inst : DecidableEq α] {l : List α},
+  Becoming.Distinct l →
+    ∀ (ds : List α),
+      Becoming.Distinct (Becoming.adjoin ds l) ∧
+        (∀ (a : α), a ∈ ds → a ∈ Becoming.adjoin ds l) ∧ ∀ (b : α), b ∈ l → b ∈ Becoming.adjoin ds l
+Becoming.Amounts.whole_sum : ∀ (d : Nat → Nat) (n S : Nat),
+  Becoming.Amounts.whole.sum d S n = Becoming.total (Becoming.steps S n) d
+@Becoming.Flow.DissipatesOn.replenishment_takers : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t → L.replenishment cs t + L.takers cs t ≤ L.uptake cs t
+@Becoming.Flow.DissipatesOn.takes_of_gives : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t →
+    ∀ {f : F}, f ∈ L.present t → 0 < Becoming.total cs (L.give t f) → 0 < Becoming.total cs (L.take t f)
+@Becoming.Flow.enclosed_of_finite : ∀ {F C : Type} {L : Becoming.Flow F C} {all : List C},
+  Becoming.Distinct all → (∀ (c : C), c ∈ all) → ∀ (t : Nat), L.Enclosed t
+@Becoming.Flow.DissipatesOn.gives_less_closed : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.DissipatesOn cs t →
+    L.ClosedAt cs t →
+      ∀ {f : F},
+        f ∈ L.present t → ∀ {c : C}, 0 < L.give t f c → Becoming.total cs (L.give t f) < Becoming.total cs (L.take t f)
+@Becoming.Flow.Dissipative.gives_less : ∀ {F C : Type} {L : Becoming.Flow F C},
+  L.Dissipative →
+    ∀ {cs : List C} {t : Nat},
+      Becoming.Distinct cs →
+        L.ClosedAt cs t →
+          ∀ {f : F},
+            f ∈ L.present t →
+              ∀ {c : C}, 0 < L.give t f c → Becoming.total cs (L.give t f) < Becoming.total cs (L.take t f)
+@Becoming.Flow.Dissipative.giving_needs_uptake : ∀ {F C : Type} {L : Becoming.Flow F C},
+  L.Dissipative →
+    ∀ {t : Nat}, L.Enclosed t → ∀ {f : F}, f ∈ L.present t → ∀ {c : C}, 0 < L.give t f c → ∃ d, 0 < L.take t f d
+@Becoming.Flow.BalancesOn.runs_down : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat}, L.BalancesOn W cs t → L.DissipatesOn cs t → W.stock cs (t + 1) + L.takers cs t ≤ W.stock cs t
+@Becoming.Flow.DissipatesOn.still_untaken : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat},
+  L.DissipatesOn cs t → L.BalancesOn W cs t → (∀ (c : C), c ∈ cs → L.taken t c = 0) → ¬∃ c, c ∈ cs ∧ W.Rises t c
+@Becoming.Flow.BalancesOn.taking_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat},
+  L.BalancesOn W cs t →
+    L.DissipatesOn cs t →
+      ∀ {f : F}, f ∈ L.present t → 0 < Becoming.total cs (L.take t f) → W.stock cs (t + 1) < W.stock cs t
+@Becoming.Flow.BalancesOn.fall_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {c : C},
+  L.BalancesOn W cs t → L.DissipatesOn cs t → c ∈ cs → W.Falls t c → W.stock cs (t + 1) < W.stock cs t
+@Becoming.Flow.BalancesOn.rise_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {c : C},
+  L.BalancesOn W cs t → L.DissipatesOn cs t → c ∈ cs → W.Rises t c → W.stock cs (t + 1) < W.stock cs t
+@Becoming.Flow.BalancesOn.comes_from_standing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {t : Nat} {c : C},
+  L.BalancesOn W cs t → L.DissipatesOn cs t → c ∈ cs → W.ComesToStand t c → 0 < W.stock cs t
+@Becoming.Flow.Balances.runs_down : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {cs : List C} {t : Nat}, L.DissipatesOn cs t → W.stock cs (t + 1) + L.takers cs t ≤ W.stock cs t
+@Becoming.Flow.takers_within_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  (S N : Nat),
+  (∀ (t : Nat), S ≤ t → t < S + N → L.BalancesOn W cs t) →
+    (∀ (t : Nat), S ≤ t → t < S + N → L.DissipatesOn cs t) →
+      W.stock cs (S + N) + Becoming.total (Becoming.steps S N) (L.takers cs) ≤ W.stock cs S
+@Becoming.Flow.Balances.takers_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {cs : List C} (S N : Nat),
+      (∀ (t : Nat), S ≤ t → L.DissipatesOn cs t) →
+        W.stock cs (S + N) + Becoming.total (Becoming.steps S N) (L.takers cs) ≤ W.stock cs S
+@Becoming.Flow.taking_not_recurring_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W cs t) →
+    (∀ (t : Nat), T ≤ t → L.DissipatesOn cs t) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.Flow.Balances.taking_not_recurring : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {cs : List C} {T : Nat}, (∀ (t : Nat), T ≤ t → L.DissipatesOn cs t) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.Flow.takers_pos_of_sub : ∀ {F C : Type} {L : Becoming.Flow F C} {cs ds : List C},
+  (∀ (c : C), c ∈ cs → c ∈ ds) → ∀ {t : Nat}, 0 < L.takers cs t → 0 < L.takers ds t
+@Becoming.Flow.taking_not_recurring_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs ds : List C},
+  (∀ (c : C), c ∈ cs → c ∈ ds) →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.BalancesOn W ds t) →
+        (∀ (t : Nat), T ≤ t → L.DissipatesOn ds t) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.Flow.Dissipative.opens : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {cs ds : List C},
+        Becoming.Distinct ds →
+          (∀ (c : C), c ∈ cs → c ∈ ds) →
+            (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.ClosedAt ds t
+@Becoming.Flow.Dissipative.finite_taking_not_recurring : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {all : List C},
+        Becoming.Distinct all → (∀ (c : C), c ∈ all) → ∀ (cs : List C), ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.Flow.More.takers_recur : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C},
+  L.More cs → ∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.Flow.takers_recur_of_arising : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  (∀ (N : Nat), ∃ t f, N ≤ t ∧ L.ArisesTaking W cs t f) → ∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.Flow.More.opens : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {cs ds : List C},
+        Becoming.Distinct ds →
+          (∀ (c : C), c ∈ cs → c ∈ ds) → L.More cs → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.ClosedAt ds t
+@Becoming.Flow.opens_of_arising : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {cs ds : List C},
+        Becoming.Distinct ds →
+          (∀ (c : C), c ∈ cs → c ∈ ds) →
+            (∀ (N : Nat), ∃ t f, N ≤ t ∧ L.ArisesTaking W cs t f) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.ClosedAt ds t
+@Becoming.Flow.around_of_finite : ∀ {F C : Type} {L : Becoming.Flow F C} {all : List C},
+  Becoming.Distinct all → (∀ (c : C), c ∈ all) → ∀ (ds : List C) (t : Nat), L.Around ds t
+@Becoming.Flow.Enclosed.around : ∀ {F C : Type} {L : Becoming.Flow F C} [DecidableEq C] {t : Nat},
+  L.Enclosed t → ∀ (ds : List C), L.Around ds t
+@Becoming.Flow.Enclosed.around_not_not : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat},
+  L.Enclosed t → ∀ (ds : List C), ¬¬L.Around ds t
+@Becoming.Flow.dissipatesOn_of_inward_at : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat},
+  (∀ (es : List C), Becoming.Distinct es → L.ClosedAt es t → L.DissipatesOn es t) →
+    ∀ {ds : List C}, Becoming.Distinct ds → L.Around ds t → L.Inward ds t → L.DissipatesOn ds t
+@Becoming.Flow.Dissipative.dissipatesOn_of_inward : ∀ {F C : Type} {L : Becoming.Flow F C},
+  L.Dissipative →
+    ∀ {ds : List C}, Becoming.Distinct ds → ∀ {t : Nat}, L.Around ds t → L.Inward ds t → L.DissipatesOn ds t
+@Becoming.Flow.taking_draws_in_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C},
+  Becoming.Distinct ds →
+    ∀ {T₀ : Nat},
+      (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+        (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W ds t) →
+          (∀ (t : Nat), T₀ ≤ t → ∀ (es : List C), Becoming.Distinct es → L.ClosedAt es t → L.DissipatesOn es t) →
+            (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers ds t) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → L.Inward ds t
+@Becoming.Flow.taking_draws_in : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers ds t) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → L.Inward ds t
+@Becoming.Flow.rise_lowers_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {t : Nat}, L.DissipatesOn ds t → ∀ {c : C}, c ∈ ds → W.Rises t c → W.stock ds (t + 1) < W.stock ds t
+@Becoming.Flow.standing_lowers_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {t : Nat},
+      L.DissipatesOn ds t → ∀ {c : C}, c ∈ ds → W.ComesToStand t c → W.stock ds (t + 1) < W.stock ds t
+@Becoming.Flow.standing_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.Distinct ds →
+          ∀ {t : Nat}, L.ClosedAt ds t → ∀ {c : C}, c ∈ ds → W.ComesToStand t c → W.stock ds (t + 1) < W.stock ds t
+@Becoming.Flow.rising_not_recurring_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W ds t) →
+    (∀ (t : Nat), T ≤ t → L.DissipatesOn ds t) → ¬∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.Rises t c
+@Becoming.Flow.standing_not_recurring_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W ds t) →
+    (∀ (t : Nat), T ≤ t → L.DissipatesOn ds t) → ¬∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.ComesToStand t c
+@Becoming.Flow.rising_not_recurring_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.DissipatesOn ds t) → ¬∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.Rises t c
+@Becoming.Flow.standing_not_recurring_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {T : Nat},
+      (∀ (t : Nat), T ≤ t → L.DissipatesOn ds t) → ¬∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.ComesToStand t c
+@Becoming.Flow.rising_opens : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.Distinct ds →
+          (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.Rises t c) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.ClosedAt ds t
+@Becoming.Flow.standing_opens : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.Distinct ds →
+          (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.ComesToStand t c) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.ClosedAt ds t
+@Becoming.Flow.rising_draws_in_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C},
+  Becoming.Distinct ds →
+    ∀ {T₀ : Nat},
+      (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+        (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W ds t) →
+          (∀ (t : Nat), T₀ ≤ t → ∀ (es : List C), Becoming.Distinct es → L.ClosedAt es t → L.DissipatesOn es t) →
+            (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.Rises t c) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → L.Inward ds t
+@Becoming.Flow.rising_draws_in : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.Rises t c) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → L.Inward ds t
+@Becoming.Flow.standing_draws_in : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.ComesToStand t c) →
+                ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → L.Inward ds t
+@Becoming.Flow.rising_not_recurring : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {all : List C}, Becoming.Distinct all → (∀ (c : C), c ∈ all) → ¬∀ (N : Nat), ∃ t c, N ≤ t ∧ W.Rises t c
+@Becoming.Flow.standing_not_recurring : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {all : List C}, Becoming.Distinct all → (∀ (c : C), c ∈ all) → ¬∀ (N : Nat), ∃ t c, N ≤ t ∧ W.ComesToStand t c
+@Becoming.Flow.BalancesOn.falls_cover : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {t : Nat},
+  L.BalancesOn W ds t →
+    L.DissipatesOn ds t →
+      Becoming.risen ds (fun c s => W.level s c) t + L.takers ds t ≤ Becoming.fallen ds (fun c s => W.level s c) t
+@Becoming.Flow.BalancesOn.falls_of_taking : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {t : Nat}, L.BalancesOn W ds t → L.DissipatesOn ds t → 0 < L.takers ds t → ∃ d, d ∈ ds ∧ W.Falls t d
+@Becoming.Flow.depletes_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {event : Nat → Prop},
+  (∀ (t : Nat), event t → L.BalancesOn W ds t ∧ L.DissipatesOn ds t ∧ 0 < L.takers ds t) → W.Depletes ds event
+@Becoming.Flow.BalancesOn.rise_with_fall : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {t : Nat},
+  L.BalancesOn W ds t → L.DissipatesOn ds t → ∀ {c : C}, c ∈ ds → W.Rises t c → ∃ d, d ∈ ds ∧ d ≠ c ∧ W.Falls t d
+@Becoming.Flow.BalancesOn.rise_exchange : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {t : Nat},
+  L.BalancesOn W ds t →
+    L.DissipatesOn ds t →
+      ∀ {c : C},
+        c ∈ ds →
+          W.Rises t c →
+            (∀ (f : F), f ∈ L.present t → 0 < L.give t f c → W.active t f) →
+              (∀ (f : F) (d : C), f ∈ L.present t → 0 < L.take t f d → W.active t f ∧ W.draws t f d) →
+                (∃ f, f ∈ L.present t ∧ W.active t f ∧ 0 < L.give t f c ∧ 0 < Becoming.total ds (L.take t f)) ∧
+                  ∃ d g,
+                    d ∈ ds ∧ d ≠ c ∧ W.Falls t d ∧ g ∈ L.present t ∧ W.active t g ∧ W.draws t g d ∧ 0 < L.take t g d
+@Becoming.Flow.Balances.falls_cover : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {t : Nat},
+      L.DissipatesOn ds t →
+        Becoming.risen ds (fun c s => W.level s c) t + L.takers ds t ≤ Becoming.fallen ds (fun c s => W.level s c) t
+@Becoming.Flow.Balances.falls_of_taking : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {ds : List C} {t : Nat}, L.DissipatesOn ds t → 0 < L.takers ds t → ∃ d, d ∈ ds ∧ W.Falls t d
+@Becoming.Flow.Balances.depletes : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {event : Nat → Prop},
+      (∀ (t : Nat), event t → L.DissipatesOn ds t ∧ 0 < L.takers ds t) → W.Depletes ds event
+@Becoming.Flow.rise_with_fall : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {t : Nat}, L.DissipatesOn ds t → ∀ {c : C}, c ∈ ds → W.Rises t c → ∃ d, d ∈ ds ∧ d ≠ c ∧ W.Falls t d
+@Becoming.Flow.standing_with_fall : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {t : Nat},
+      L.DissipatesOn ds t → ∀ {c : C}, c ∈ ds → W.ComesToStand t c → ∃ d, d ∈ ds ∧ d ≠ c ∧ W.Falls t d
+@Becoming.Flow.rise_alone_opens : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.Distinct ds →
+          ∀ {t : Nat} {c : C}, c ∈ ds → W.Rises t c → (∀ (d : C), d ∈ ds → ¬W.Falls t d) → ¬L.ClosedAt ds t
+@Becoming.Flow.rise_exchange : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      L.Taking W →
+        ∀ {ds : List C} {t : Nat},
+          L.DissipatesOn ds t →
+            ∀ {c : C},
+              c ∈ ds →
+                W.Rises t c →
+                  (∃ f, f ∈ L.present t ∧ W.active t f ∧ 0 < L.give t f c ∧ 0 < Becoming.total ds (L.take t f)) ∧
+                    ∃ d g,
+                      d ∈ ds ∧ d ≠ c ∧ W.Falls t d ∧ g ∈ L.present t ∧ W.active t g ∧ W.draws t g d ∧ 0 < L.take t g d
+Becoming.Frontier.burns : ∀ (n t : Nat),
+  Becoming.Frontier.unburnt n (t + 1) + Becoming.Frontier.burning n t = Becoming.Frontier.unburnt n t
+Becoming.Frontier.burning_self : ∀ (n : Nat), Becoming.Frontier.burning n n = 1
+Becoming.Frontier.burning_at : ∀ (n t : Nat), 0 < Becoming.Frontier.burning n t → n = t
+Becoming.Frontier.growers_take : ∀ (t n : Nat),
+  (Becoming.total (Becoming.Frontier.growers n) fun f =>
+      Becoming.Frontier.flow.take t f Becoming.Frontier.Condition.pool) =
+    n
+Becoming.Frontier.growers_give : ∀ (t : Nat) (c : Becoming.Frontier.Condition) (n : Nat),
+  (Becoming.total (Becoming.Frontier.growers n) fun f => Becoming.Frontier.flow.give t f c) = 0
+Becoming.Frontier.growers_take_fuel : ∀ (t m n : Nat),
+  (Becoming.total (Becoming.Frontier.growers n) fun f =>
+      Becoming.Frontier.flow.take t f (Becoming.Frontier.Condition.fuel m)) =
+    0
+Becoming.Frontier.balances : Becoming.Frontier.flow.Balances Becoming.Frontier.web
+Becoming.Frontier.dissipative : Becoming.Frontier.flow.Dissipative
+Becoming.Frontier.takers_pool : ∀ (t : Nat), Becoming.Frontier.flow.takers [Becoming.Frontier.Condition.pool] t = t
+Becoming.Frontier.more : Becoming.Frontier.flow.More [Becoming.Frontier.Condition.pool]
+@Becoming.Frontier.frontier : ∀ {ds : List Becoming.Frontier.Condition},
+  Becoming.Distinct ds →
+    Becoming.Frontier.Condition.pool ∈ ds → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → Becoming.Frontier.flow.ClosedAt ds t
+Becoming.Frontier.closed : ∀ (t : Nat),
+  Becoming.Frontier.flow.ClosedAt [Becoming.Frontier.Condition.pool, Becoming.Frontier.Condition.fuel t] t
+Becoming.Frontier.pool_fuel_distinct : ∀ (t : Nat),
+  Becoming.Distinct [Becoming.Frontier.Condition.pool, Becoming.Frontier.Condition.fuel t]
+Becoming.Frontier.enclosed : ∀ (t : Nat), Becoming.Frontier.flow.Enclosed t
+Becoming.Frontier.around : ∀ (t : Nat), Becoming.Frontier.flow.Around [Becoming.Frontier.Condition.pool] t
+Becoming.Frontier.draws_in : ∀ (N : Nat),
+  ¬∀ (t : Nat), N ≤ t → Becoming.Frontier.flow.Inward [Becoming.Frontier.Condition.pool] t
+Becoming.Frontier.gives_without_taking : Becoming.Frontier.flow.Dissipative ∧
+  ∀ (t : Nat),
+    0 <
+        Becoming.total [Becoming.Frontier.Condition.pool]
+          (Becoming.Frontier.flow.give (t + 1) Becoming.Frontier.Formation.source) ∧
+      Becoming.total [Becoming.Frontier.Condition.pool]
+          (Becoming.Frontier.flow.take (t + 1) Becoming.Frontier.Formation.source) =
+        0
+Becoming.Rooted.balances : Becoming.Frontier.flow.Balances Becoming.Rooted.web
+Becoming.Rooted.growers_lt : ∀ (t i : Nat), Becoming.Frontier.Formation.grower i ∈ Becoming.Frontier.growers t → i < t
+Becoming.Rooted.growers_listed : ∀ (t i : Nat),
+  i < t → Becoming.Frontier.Formation.grower i ∈ Becoming.Frontier.growers t
+Becoming.Rooted.growers_distinct : ∀ (t : Nat), Becoming.Distinct (Becoming.Frontier.growers t)
+Becoming.Rooted.source_fresh : ∀ (t : Nat), ¬Becoming.Frontier.Formation.source ∈ Becoming.Frontier.growers t
+Becoming.Rooted.present_distinct : ∀ (t : Nat), Becoming.Distinct (Becoming.Frontier.flow.present t)
+Becoming.Rooted.census : Becoming.Rooted.web.Census Becoming.Frontier.flow.present
+Becoming.Rooted.burning_pos : ∀ (n t : Nat), 0 < (n + 1) * Becoming.Frontier.burning n t → n = t
+Becoming.Rooted.taking : Becoming.Frontier.flow.Taking Becoming.Rooted.web
+Becoming.Rooted.acting : Becoming.Frontier.flow.Acting Becoming.Rooted.web
+Becoming.Rooted.dependent : Becoming.Rooted.web.Dependent
+Becoming.Rooted.arises_taking : ∀ (t : Nat),
+  Becoming.Frontier.flow.ArisesTaking Becoming.Rooted.web [Becoming.Frontier.Condition.pool] t
+    (Becoming.Frontier.Formation.grower t)
+Becoming.Rooted.rooted : Becoming.Frontier.flow.Balances Becoming.Rooted.web ∧
+  Becoming.Frontier.flow.Acting Becoming.Rooted.web ∧
+    Becoming.Frontier.flow.Taking Becoming.Rooted.web ∧
+      Becoming.Rooted.web.Dependent ∧
+        Becoming.Rooted.web.Census Becoming.Frontier.flow.present ∧
+          Becoming.Frontier.flow.Dissipative ∧
+            Becoming.Frontier.flow.More [Becoming.Frontier.Condition.pool] ∧
+              Becoming.Rooted.web.Unceasing ∧
+                ∀ {ds : List Becoming.Frontier.Condition},
+                  Becoming.Distinct ds →
+                    Becoming.Frontier.Condition.pool ∈ ds →
+                      ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → Becoming.Frontier.flow.ClosedAt ds t
+Becoming.Lone.balances : Becoming.Lone.flow.Balances Becoming.Lone.web
+Becoming.Lone.dissipative : Becoming.Lone.flow.Dissipative
+Becoming.Lone.lone : Becoming.Lone.flow.Balances Becoming.Lone.web ∧
+  Becoming.Lone.flow.Dissipative ∧
+    (∀ (t : Nat), Becoming.Lone.flow.takers [Becoming.Frontier.Condition.pool] t = 1) ∧
+      (∀ (t : Nat) (f : Becoming.Lone.Formation), ¬Becoming.Lone.web.Arises t f) ∧
+        ¬Becoming.Lone.flow.More [Becoming.Frontier.Condition.pool]
+@Becoming.Lone.frontier : ∀ {ds : List Becoming.Frontier.Condition},
+  Becoming.Distinct ds →
+    Becoming.Frontier.Condition.pool ∈ ds → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → Becoming.Lone.flow.ClosedAt ds t
+Becoming.Lone.closed : ∀ (t : Nat),
+  Becoming.Lone.flow.ClosedAt [Becoming.Frontier.Condition.pool, Becoming.Frontier.Condition.fuel t] t
+Becoming.Lone.enclosed : ∀ (t : Nat), Becoming.Lone.flow.Enclosed t
+Becoming.Lone.draws_in : ∀ (N : Nat),
+  ¬∀ (t : Nat), N ≤ t → Becoming.Lone.flow.Inward [Becoming.Frontier.Condition.pool] t
+Becoming.Lone.repeated_family : ∀ (t : Nat),
+  Becoming.Lone.flow.ClosedAt
+      [Becoming.Frontier.Condition.pool, Becoming.Frontier.Condition.pool, Becoming.Frontier.Condition.fuel t] t ∧
+    Becoming.Lone.Formation.source ∈ Becoming.Lone.flow.present t ∧
+      Becoming.total
+            [Becoming.Frontier.Condition.pool, Becoming.Frontier.Condition.pool, Becoming.Frontier.Condition.fuel t]
+            (Becoming.Lone.flow.give t Becoming.Lone.Formation.source) =
+          2 ∧
+        Becoming.total
+            [Becoming.Frontier.Condition.pool, Becoming.Frontier.Condition.pool, Becoming.Frontier.Condition.fuel t]
+            (Becoming.Lone.flow.take t Becoming.Lone.Formation.source) =
+          2
+Becoming.Spray.fresh : ∀ (cs : List Nat), ¬(Becoming.total cs fun c => c) + 1 ∈ cs
+Becoming.Spray.unenclosed : ∀ (t : Nat), ¬Becoming.Spray.flow.Enclosed t
+Becoming.Spray.dissipative : Becoming.Spray.flow.Dissipative
+Becoming.Spray.spray : Becoming.Spray.flow.Balances Becoming.Spray.web ∧
+  Becoming.Spray.flow.Acting Becoming.Spray.web ∧
+    Becoming.Spray.flow.Taking Becoming.Spray.web ∧
+      Becoming.Spray.web.Dependent ∧
+        Becoming.Spray.flow.Dissipative ∧
+          (∀ (t : Nat), ¬Becoming.Spray.flow.Enclosed t) ∧
+            (∀ (t : Nat),
+                0 < Becoming.Spray.flow.give t Becoming.Spray.Formation.renewer 0 ∧
+                  ∀ (c : Nat), Becoming.Spray.flow.take t Becoming.Spray.Formation.renewer c = 0) ∧
+              ∀ (t : Nat), 0 < Becoming.Spray.flow.takers [0] t
+@Becoming.Flow.Dissipative.one_taking_not_recurring : ∀ {F : Type} {L : Becoming.Flow F Unit} {W : Becoming.Web F Unit},
+  L.Balances W → L.Dissipative → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers [()] t
+Becoming.witnesses_not_dissipative : ¬Becoming.Expansion.flow.Dissipative ∧
+  ¬Becoming.Cycle.flow.Dissipative ∧
+    ¬Becoming.Pulse.flow.Dissipative ∧
+      ¬Becoming.Steady.flow.Dissipative ∧ ¬Becoming.Repeated.flow.Dissipative ∧ ¬Becoming.Oscillation.flow.Dissipative

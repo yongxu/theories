@@ -1,0 +1,65 @@
+@Becoming.SameBranchingTests.refl : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C) (s : S),
+  Becoming.SameBranchingTests F F s s
+@Becoming.SameBranchingTests.symm : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  Becoming.SameBranchingTests F G s s' → Becoming.SameBranchingTests G F s' s
+@Becoming.SameBranchingTests.trans : ∀ {S : Type u_1} {S' : Type u_2} {S'' : Type u_3} {A : Type u_4} {C : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {H : Becoming.Frame S'' A C} {s : S} {s' : S'} {s'' : S''},
+  Becoming.SameBranchingTests F G s s' → Becoming.SameBranchingTests G H s' s'' → Becoming.SameBranchingTests F H s s''
+@Becoming.SameBranchingTests.inverse_functional : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∀ (s t : S), Becoming.SameBranchingTests F F s t → s = t) →
+    ∀ {s t : S} {s' : S'}, Becoming.SameBranchingTests F G s s' → Becoming.SameBranchingTests F G t s' → s = t
+@Becoming.SameBranchingTests.bisimulation_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∀ (p : Prop), Becoming.Decided p) →
+    (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        Becoming.Bisimulation F G (Becoming.SameBranchingTests F G)
+@Becoming.alike_of_equal_codes_of_em : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4}
+  {F : Becoming.Frame S A C},
+  (∀ (p : Prop), Becoming.Decided p) →
+    (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+      ∀ {p : Becoming.Presentations.Presentation S (Becoming.BranchingTest A C) D},
+        Becoming.Presentations.Exact (Becoming.BranchingTest.Holds F) p →
+          ∀ {s t : S}, p.encode s = p.encode t → Becoming.Alike F F s t
+@Becoming.SameBranchingTests.total_of_reachable_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∀ (p : Prop), Becoming.Decided p) →
+    (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        ∀ {root : S} {root' : S'},
+          Becoming.SameBranchingTests F G root root' →
+            (∀ (s : S), ∃ as, Generative.Trace F.P root as s) → ∀ (s : S), ∃ s', Becoming.SameBranchingTests F G s s'
+@Becoming.SameBranchingTests.correspondence_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∀ (p : Prop), Becoming.Decided p) →
+    (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        ∀ {root : S} {root' : S'},
+          Becoming.SameBranchingTests F G root root' →
+            (∀ (s : S), ∃ as, Generative.Trace F.P root as s) →
+              (∀ (s' : S'), ∃ as, Generative.Trace G.P root' as s') →
+                (∀ (s t : S), Becoming.SameBranchingTests F F s t → s = t) →
+                  (∀ (s' t' : S'), Becoming.SameBranchingTests G G s' t' → s' = t') →
+                    (∀ (s : S),
+                        ∃ s',
+                          Becoming.SameBranchingTests F G s s' ∧
+                            ∀ (t' : S'), Becoming.SameBranchingTests F G s t' → t' = s') ∧
+                      ∀ (s' : S'),
+                        ∃ s,
+                          Becoming.SameBranchingTests F G s s' ∧ ∀ (t : S), Becoming.SameBranchingTests F G t s' → t = s
+@Becoming.SameBranchingTests.step_iff_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∀ (p : Prop), Becoming.Decided p) →
+    (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        (∀ (s t : S), Becoming.SameBranchingTests F F s t → s = t) →
+          (∀ (s' t' : S'), Becoming.SameBranchingTests G G s' t' → s' = t') →
+            ∀ {s t : S} {s' t' : S'},
+              Becoming.SameBranchingTests F G s s' →
+                Becoming.SameBranchingTests F G t t' → ∀ (a : A), F.P.step s a t ↔ G.P.step s' a t'
+@Becoming.Bisimulation.agrees : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {B : S → S' → Prop},
+  (∀ (s' t' : S'), Becoming.SameBranchingTests G G s' t' → s' = t') →
+    Becoming.Bisimulation F G B → ∀ {s : S} {s' t' : S'}, Becoming.SameBranchingTests F G s s' → B s t' → s' = t'

@@ -1876,7 +1876,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`Beyond`: the same selection locked read from the share, falling read from the loss). Where how
   the rule is read is itself formed from the share, rule and reading are one rule read from the
   share: a change of the reading alone is absorbed at the next reading step, and where the rule read
-  favours at every reading every course locks from its second reading step (`Proportional`).
+  favours at every reading every course locks from its second reading step (`Proportional`). Where
+  the rule is the pool of its readers' readings, the readers drawn from those it selects and counted
+  as it counts them, it reads the share exactly where each carrier's reading favours the carriers at
+  least as much as each other's (`Drawn`); where only the others read the loss once it reaches a
+  bound, the counts at the step they read it decide for good whether the lock is kept or turned
+  (`Thinned`).
 * `Becoming.PatternPassing` (L1): a pattern that outlasts each of its carriers lasts only through
   passing. Read on a web whose activity is carrying, a pattern present at every step from `T`
   on with carriers brief for `d` has a carrier beginning within every `d` steps; under the
@@ -2288,9 +2293,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   onto it (board item OU3).
 * `Becoming.GrammarReadings` (L0): the corpus's definitions in the grammar. The 墨经's and the
   荀子's 化 are one form, alteration (`«化之二说同形»`), and 化 is the 金师子章's 成坏 along 缘
-  (`«化为有缘之成坏»`); the 墨经's 同 is a class exactly where belonging is to one only
-  (`«同于为类»`, `«同于不必传递»`); a returning occurrence abides (`«复者住»`) and under a constant
-  class a line with a past never ends (`«有常则通»`); in a net without self-conditioning,
+  (`«化为有缘之成坏»`); the 墨经's 同 is a class where each belongs to one and one only (sufficient,
+  `«同于为类»`) and otherwise need not be transitive (`«同于不必传递»`); a returning occurrence
+  abides (`«复者住»`); 通 is going along 缘 and coming along its converse without end: under a
+  constant class a line with a past never ends going (`«有常则往不穷»`), what abides passes through
+  where a class is constant both ways (`«两向有常则通»`), and constancy one way is not enough
+  (`«有常而不通»`); in a net without self-conditioning,
   continuation is neither identity nor mere difference (`«非一非异»`), and the 中论's 「因即為斷滅」
   holds under identity while the line continues under a coarser class (`«因灭而续»`). A leaf.
 * `Becoming.GrammarMap` (L0): the map of generation, keeping and degeneration, read at two
@@ -2300,11 +2308,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   exclude each other (`«延尽不并»`); generation (`«生成»`: some branch renews without end), keeping
   (`«守»`: some branch goes on without renewal) and degeneration (`«退化»`: every branch ends) are
   read on branches, generation and keeping can hold at one point (`Map.«生守相杂»`, the mixed
-  region) and exclude each other on a single line (`«单行则生守不并»`); the every-branch forms
-  (`«全生成»`, `«全守»`, `«有终»`) are their strong and weak cases. Renewal does not decide the
-  region (`Map.Short.renews_and_ends_everywhere`); telling going on from ending at every point is
-  exactly excluded middle (`«延尽之定当且仅当排中»`); a chain of classes reads generation at every
-  order (`«阶生成»`). A leaf.
+  region) and exclude each other on a single line (`«单行则生守不并»`); the strong forms read the
+  whole coarse line (`«全生成»`, `«全守»`, and `«有终»`, reaching an end, which is not
+  degeneration). Renewal does not decide the region (`Map.Short.renews_and_ends_everywhere`);
+  telling going on from ending at every point is exactly excluded middle (`«延尽之定当且仅当排中»`);
+  a sequence of classes, no order between them assumed, reads generation at every order
+  (`«阶生成»`); renewal without end and ceasing are going on along some branch and ending on every
+  branch of renewing into (`«生生即延»`, `«息即尽»`). A leaf.
 * `Becoming.MapInstances` (L2): the old base's regimes on the map, with occurrences as pairs of a
   step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
   alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
