@@ -71,6 +71,7 @@ A reading as values derived from the web where admission is decided; an independ
 | statement | [WENLI-AND-BECOMING.md](../../history/WENLI-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING-ZHONGHUA.md](../../history/THE-THEORY-OF-BECOMING-ZHONGHUA.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `A formation's own course`, `待者自身之文`, `Becoming.Web.courseThrough`
 

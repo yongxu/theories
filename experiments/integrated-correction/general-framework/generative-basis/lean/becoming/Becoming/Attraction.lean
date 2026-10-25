@@ -27,6 +27,9 @@ or a process of the spine. Merging, returning and reachability are Recurrence's
 * **Every law draws exactly what does not return.** For every determined law, with no premise,
   a configuration is drawn exactly where it does not return (`Law.drawn_iff_not_returns`): what
   lies ahead of it is an absorbing region it enters at the first step (`Law.drawnInto_ahead`).
+  Both laws are the grammar's for a fixed successor (`«定后则返者不入»` and
+  `«定后有后则入当且仅当不返»` of `Becoming.GrammarLaws`) at the law's relation `next x = y`, where
+  absorbing is closed (`Law.absorbing_iff_closed`) and drawn is drawn in (`Law.drawn_iff_drawnIn`).
 * **The future narrows.** What can be had `n` steps on is an absorbing region
   (`Law.reachable_absorbing`), and every possibility lost by step `n` is drawn into it,
   entering at step `n` (`Law.lost_drawn`, `Law.drawn_of_lost`). What returns is an absorbing
@@ -136,6 +139,28 @@ theorem returns_iff_ahead {next : S → S} {s : S} : Returns next s ↔ Ahead ne
   ⟨fun returns => returns.undo,
     fun ⟨k, back⟩ => returns_iff.mpr ⟨k + 1, Nat.succ_pos k, (orbit_shift next s k).trans back⟩⟩
 
+/-! ## Drawn, on the grammar
+
+At the law's relation `next x = y` (`Becoming.Recurrence`), an absorbing region is the grammar's
+closed region and being drawn is the grammar's drawn in (`«入»`), so the laws of lock-in below are
+the grammar's for a fixed successor. -/
+
+/-- **Absorbing is closed.** -/
+theorem absorbing_iff_closed {next : S → S} {R : S → Prop} :
+    Absorbing next R ↔ «闭» (fun x y => next x = y) R :=
+  ⟨fun absorbing x _ holds e => by cases e; exact absorbing x holds,
+   fun closed s holds => closed s (next s) holds rfl⟩
+
+/-- **Drawn is the grammar's drawn in**, at the relation of the law. -/
+theorem drawn_iff_drawnIn {next : S → S} {s : S} : Drawn next s ↔ «入» (fun x y => next x = y) s :=
+  ⟨fun ⟨R, absorbing, outside, n, enters⟩ => match n, enters with
+    | 0, enters => absurd enters outside
+    | n + 1, enters =>
+      ⟨R, absorbing_iff_closed.mp absorbing, outside, _, reaches_iff_orbit.mpr ⟨n, rfl⟩, enters⟩,
+   fun ⟨R, closed, outside, _, reach, holds⟩ => match reaches_iff_orbit.mp reach with
+    | ⟨n, to⟩ => ⟨R, absorbing_iff_closed.mpr closed, outside, n + 1,
+        Eq.subst (motive := R) to.symm holds⟩⟩
+
 /-! ## Lock-in -/
 
 /-- **What is drawn in never comes back.** Where `R` is absorbing and `s` lies outside it, from
@@ -145,14 +170,11 @@ theorem DrawnInto.never_back {next : S → S} {R : S → Prop} (absorbing : Abso
     ∀ k, orbit next s (n + k) ≠ s :=
   fun k back => outside (Eq.subst (motive := R) back (absorbing.orbit enters k))
 
-/-- **A drawn configuration never returns.** -/
+/-- **A drawn configuration never returns**: the grammar's law for a fixed successor
+(`«定后则返者不入»`) at the law's relation. -/
 theorem Drawn.not_returns {next : S → S} {s : S} (drawn : Drawn next s) : ¬ Returns next s :=
-  fun returns => match drawn, returns_iff.mp returns with
-  | _, ⟨0, pos, _⟩ => absurd pos (Nat.lt_irrefl 0)
-  | ⟨_, absorbing, outside, n, enters⟩, ⟨p + 1, _, back⟩ =>
-    DrawnInto.never_back absorbing outside enters (p * n)
-      ((congrArg (orbit next s) ((Nat.add_comm n (p * n)).trans (Nat.succ_mul p n).symm)).trans
-        (orbit_mul back n))
+  fun returns =>
+    «定后则返者不入» (next_fixed next) (returns_iff_reaches.mp returns) (drawn_iff_drawnIn.mp drawn)
 
 /-! ## Every law draws exactly what does not return -/
 
@@ -164,9 +186,12 @@ theorem drawnInto_ahead {next : S → S} {s : S} (never : ¬ Returns next s) :
 
 /-- **Every law draws exactly what does not return.** For every determined law, with no
 premise, a configuration is drawn into some absorbing region exactly where it does not
-return. -/
+return: the grammar's law for a fixed successor that every configuration has
+(`«定后有后则入当且仅当不返»`) at the law's relation. -/
 theorem drawn_iff_not_returns {next : S → S} {s : S} : Drawn next s ↔ ¬ Returns next s :=
-  ⟨Drawn.not_returns, fun never => ⟨Ahead next s, absorbing_ahead next s, drawnInto_ahead never⟩⟩
+  drawn_iff_drawnIn.trans ((«定后有后则入当且仅当不返» (next_fixed next) (next_total next s)).trans
+    ⟨fun never returns => never (returns_iff_reaches.mp returns),
+     fun never reach => never (returns_iff_reaches.mpr reach)⟩)
 
 /-! ## The future narrows -/
 

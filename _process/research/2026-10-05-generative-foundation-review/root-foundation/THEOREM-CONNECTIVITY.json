@@ -1,11 +1,11 @@
 {
- "commit": "51e77cbcf0887f04a7e5dc880d9693166a96dd8d",
+ "commit": "cc8e1fc91b5398614c22742bf85783607790ad86",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261025T173410.671057Z",
+ "core_receipt_at_commit": "20261025T174631.939884Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 328,
- "constants": 45669,
- "spine_theorems": 15205,
+ "tracked_modules": 329,
+ "constants": 45968,
+ "spine_theorems": 15356,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,20 +27,20 @@
  },
  "classes": {
   "statement on both families": 1060,
-  "statement on Process/Frame/Run/Trace": 3010,
-  "statement on World/Flow/Web": 3726,
+  "statement on Process/Frame/Run/Trace": 3020,
+  "statement on World/Flow/Web": 3736,
   "statement on the base only through a law of its own module": 261,
-  "proof through a base family": 187,
-  "used by a theorem on the base": 5347,
-  "instance on the base recorded": 153,
-  "apart: own vocabulary": 1357,
-  "apart: prelude-only statement": 104
+  "proof through a base family": 191,
+  "used by a theorem on the base": 5425,
+  "instance on the base recorded": 155,
+  "apart: own vocabulary": 1402,
+  "apart: prelude-only statement": 106
  },
- "apart": 1461,
- "apart_general_structure_by_design": 608,
- "apart_otherwise": 853,
+ "apart": 1508,
+ "apart_general_structure_by_design": 634,
+ "apart_otherwise": 874,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 92,
+  "spine theorems that are pure forwarders": 109,
   "of them on the base": 72,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 12,
@@ -73,15 +73,15 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 846,
- "apart_roots": 847,
+ "apart_used_by_nothing": 878,
+ "apart_roots": 879,
  "apart_roots_by_category": {
-  "model-witness": 387,
-  "support": 118,
-  "general-structure": 309,
+  "model-witness": 392,
+  "support": 129,
+  "general-structure": 324,
   "restates": 13,
   "logical-strength": 12,
-  "calibration": 8
+  "calibration": 9
  },
  "apart_roots_unclassified": [],
  "register_entries_not_apart_roots": [],
@@ -160,8 +160,8 @@
  },
  "apart_by_module": {
   "Becoming.Weightings": [
-   97,
-   391
+   103,
+   397
   ],
   "Becoming.ConditionalWeights": [
    93,
@@ -184,7 +184,7 @@
    114
   ],
   "Becoming.Grammar": [
-   53,
+   52,
    70
   ],
   "Becoming.SelectionLevels": [
@@ -195,17 +195,21 @@
    38,
    39
   ],
+  "Becoming.GrammarScope": [
+   38,
+   38
+  ],
   "Becoming.GrammarCases": [
    38,
    40
   ],
-  "Becoming.GrammarScope": [
-   37,
-   37
-  ],
   "Becoming.RuleShaping": [
    36,
    52
+  ],
+  "Becoming.GrammarLaws": [
+   34,
+   113
   ],
   "Becoming.HexagramPlaces": [
    32,
@@ -307,6 +311,10 @@
    9,
    101
   ],
+  "Becoming.Amounts": [
+   9,
+   37
+  ],
   "Becoming.ListFootprints": [
    9,
    9
@@ -330,10 +338,6 @@
   "Becoming.Openness": [
    8,
    78
-  ],
-  "Becoming.Amounts": [
-   8,
-   36
   ],
   "Becoming.SecuredContent": [
    8,
@@ -475,6 +479,10 @@
    4,
    39
   ],
+  "Becoming.Frame": [
+   3,
+   30
+  ],
   "Becoming.Arising": [
    3,
    44
@@ -535,9 +543,17 @@
    2,
    25
   ],
+  "Becoming.Attraction": [
+   2,
+   56
+  ],
   "Becoming.Space": [
    2,
    62
+  ],
+  "Becoming.InAmounts": [
+   2,
+   91
   ],
   "Becoming.Exclusion": [
    2,
@@ -607,21 +623,17 @@
    1,
    25
   ],
-  "Becoming.Frame": [
+  "Becoming.Recurrence": [
    1,
-   28
+   82
   ],
   "Becoming.OneStep": [
    1,
    305
   ],
-  "Becoming.Attraction": [
-   1,
-   54
-  ],
   "Becoming.Flow": [
    1,
-   97
+   102
   ],
   "Becoming.Population": [
    1,
@@ -706,19 +718,19 @@
  },
  "rings": {
   "core": {
-   "modules": 312,
-   "theorems": 14445,
-   "apart": 1367,
+   "modules": 313,
+   "theorems": 14596,
+   "apart": 1414,
    "classes": {
     "statement on both families": 1046,
-    "statement on Process/Frame/Run/Trace": 2799,
-    "statement on World/Flow/Web": 3701,
+    "statement on Process/Frame/Run/Trace": 2809,
+    "statement on World/Flow/Web": 3711,
     "statement on the base only through a law of its own module": 215,
-    "proof through a base family": 176,
-    "used by a theorem on the base": 4988,
-    "instance on the base recorded": 153,
-    "apart: own vocabulary": 1264,
-    "apart: prelude-only statement": 103
+    "proof through a base family": 180,
+    "used by a theorem on the base": 5066,
+    "instance on the base recorded": 155,
+    "apart: own vocabulary": 1309,
+    "apart: prelude-only statement": 105
    }
   },
   "instances": {
@@ -1809,7 +1821,7 @@
  },
  "theorems": {
   "Becoming.«则之自反»": "used by a theorem on the base",
-  "Becoming.«则之传递»": "apart: own vocabulary",
+  "Becoming.«则之传递»": "used by a theorem on the base",
   "Becoming.«及之传递»": "used by a theorem on the base",
   "Becoming.«及之单调»": "used by a theorem on the base",
   "Becoming.«一为类»": "apart: own vocabulary",
@@ -2149,9 +2161,124 @@
   "Becoming.mem_downFrom": "used by a theorem on the base",
   "Becoming.le_of_mem_downFrom": "used by a theorem on the base",
   "Becoming.Undecided.mem_upto": "used by a theorem on the base",
+  "Becoming.«所闭之自反»": "used by a theorem on the base",
+  "Becoming.«所闭之传递»": "used by a theorem on the base",
+  "Becoming.«缘在所闭»": "used by a theorem on the base",
+  "Becoming.«所闭之闭»": "used by a theorem on the base",
+  "Becoming.«所闭之单调»": "used by a theorem on the base",
+  "Becoming.«所闭之对称»": "used by a theorem on the base",
+  "Becoming.«所闭之界»": "used by a theorem on the base",
+  "Becoming.«闭含所闭»": "apart: own vocabulary",
+  "Becoming.«所闭之证»": "instance on the base recorded",
+  "Becoming.«闭而外则不所闭»": "instance on the base recorded",
+  "Becoming.«闭之及»": "used by a theorem on the base",
+  "Becoming.«及之所闭»": "used by a theorem on the base",
+  "Becoming.«所闭当且仅当同一或及»": "used by a theorem on the base",
+  "Becoming.«及当且仅当一步而所闭»": "used by a theorem on the base",
+  "Becoming.GrammarLaws.length_insert": "used by a theorem on the base",
+  "Becoming.GrammarLaws.length_replicate": "used by a theorem on the base",
+  "Becoming.GrammarLaws.le_succ_cases": "used by a theorem on the base",
+  "Becoming.GrammarLaws.gap_of_lt": "used by a theorem on the base",
+  "Becoming.GrammarLaws.mem_cons_split": "used by a theorem on the base",
+  "Becoming.GrammarLaws.skipAt_ne": "used by a theorem on the base",
+  "Becoming.GrammarLaws.skipAt_le": "used by a theorem on the base",
+  "Becoming.GrammarLaws.skipAt_lt": "used by a theorem on the base",
+  "Becoming.GrammarLaws.split_at_head": "used by a theorem on the base",
+  "Becoming.GrammarLaws.revisits_within": "used by a theorem on the base",
+  "Becoming.GrammarLaws.split_append": "apart: prelude-only statement",
+  "Becoming.«对之长»": "used by a theorem on the base",
+  "Becoming.«等长则一对»": "used by a theorem on the base",
+  "Becoming.«一之对»": "used by a theorem on the base",
+  "Becoming.«对之单调»": "apart: own vocabulary",
+  "Becoming.«对之自反»": "apart: own vocabulary",
+  "Becoming.«对之左插»": "apart: own vocabulary",
+  "Becoming.«对之逆»": "apart: own vocabulary",
+  "Becoming.«对则守数»": "used by a theorem on the base",
+  "Becoming.«守数当且仅当可对»": "used by a theorem on the base",
+  "Becoming.«等长而不对之例»": "apart: own vocabulary",
+  "Becoming.«对之取»": "apart: own vocabulary",
+  "Becoming.«对之接»": "apart: own vocabulary",
+  "Becoming.«对之传»": "apart: own vocabulary",
+  "Becoming.«对之并»": "used by a theorem on the base",
+  "Becoming.«对之换»": "apart: own vocabulary",
+  "Becoming.«对之族»": "used by a theorem on the base",
+  "Becoming.«对之程»": "apart: own vocabulary",
+  "Becoming.«聚之长»": "used by a theorem on the base",
+  "Becoming.GrammarLaws.total_congr": "used by a theorem on the base",
+  "Becoming.«程守数当且仅当可对»": "apart: own vocabulary",
+  "Becoming.«定后之逐点»": "apart: own vocabulary",
+  "Becoming.«定前之逐点»": "apart: own vocabulary",
+  "Becoming.«定前即逆之定后»": "apart: own vocabulary",
+  "Becoming.«迭则及»": "used by a theorem on the base",
+  "Becoming.«及即迭»": "used by a theorem on the base",
+  "Becoming.«迭之接»": "used by a theorem on the base",
+  "Becoming.«迭之周»": "used by a theorem on the base",
+  "Becoming.«定后则定后于»": "used by a theorem on the base",
+  "Becoming.«定后于之后»": "used by a theorem on the base",
+  "Becoming.«迭之定于»": "used by a theorem on the base",
+  "Becoming.«迭之定»": "used by a theorem on the base",
+  "Becoming.«迭之定前»": "used by a theorem on the base",
+  "Becoming.«入当且仅当有不返»": "used by a theorem on the base",
+  "Becoming.«定后于环则所及皆返»": "used by a theorem on the base",
+  "Becoming.«定后环则所及皆返»": "apart: own vocabulary",
+  "Becoming.«定后于则返者不入»": "used by a theorem on the base",
+  "Becoming.«定后则返者不入»": "used by a theorem on the base",
+  "Becoming.«有后不返则入»": "used by a theorem on the base",
+  "Becoming.«定后于有后则入当且仅当不返»": "used by a theorem on the base",
+  "Becoming.«定后有后则入当且仅当不返»": "used by a theorem on the base",
+  "Becoming.«无后者不入亦不返»": "apart: own vocabulary",
+  "Becoming.«入而返之例»": "apart: own vocabulary",
+  "Becoming.«非定后返而不入之例»": "apart: own vocabulary",
+  "Becoming.«遍后则有线»": "used by a theorem on the base",
+  "Becoming.«定前则线不并»": "used by a theorem on the base",
+  "Becoming.«线不并则可退»": "used by a theorem on the base",
+  "Becoming.«定前则线可退»": "used by a theorem on the base",
+  "Becoming.«线则及»": "used by a theorem on the base",
+  "Becoming.«线则所闭»": "used by a theorem on the base",
+  "Becoming.«线有限不并则回»": "used by a theorem on the base",
+  "Becoming.«线有限不并则返»": "used by a theorem on the base",
+  "Becoming.«线有限定前则返»": "used by a theorem on the base",
+  "Becoming.«定后于线有限则末返»": "used by a theorem on the base",
+  "Becoming.«有限遍后定前则皆返»": "used by a theorem on the base",
+  "Becoming.«定后于二返则不并»": "used by a theorem on the base",
+  "Becoming.«皆返定后则定前»": "used by a theorem on the base",
+  "Becoming.«有限遍后定后则定前当且仅当皆返»": "used by a theorem on the base",
+  "Becoming.«屡则或屡»": "apart: own vocabulary",
+  "Becoming.«线或在所闭»": "used by a theorem on the base",
+  "Becoming.«尽则不或屡»": "used by a theorem on the base",
+  "Becoming.«尽则不屡»": "apart: own vocabulary",
+  "Becoming.«止而不入之例»": "apart: own vocabulary",
+  "Becoming.«入而屡之例»": "apart: own vocabulary",
+  "Becoming.«同行之逐点»": "used by a theorem on the base",
+  "Becoming.«有常局定后则同行»": "used by a theorem on the base",
+  "Becoming.«有常定后则同行»": "used by a theorem on the base",
+  "Becoming.«有常则可续»": "apart: own vocabulary",
+  "Becoming.«同行可续则有常»": "used by a theorem on the base",
+  "Becoming.«同行遍后则有常»": "used by a theorem on the base",
+  "Becoming.«局定后则有常当且仅当同行可续»": "apart: own vocabulary",
+  "Becoming.«同行当且仅当有常»": "apart: own vocabulary",
+  "Becoming.«类同行遍后则含于核»": "apart: own vocabulary",
+  "Becoming.«同行之迭»": "used by a theorem on the base",
+  "Becoming.«同行于迭»": "apart: own vocabulary",
+  "Becoming.«像定后当且仅当同行»": "used by a theorem on the base",
+  "Becoming.«逾则不则»": "used by a theorem on the base",
+  "Becoming.«广则不则»": "apart: own vocabulary",
+  "Becoming.«广非自»": "apart: own vocabulary",
+  "Becoming.«广不可逆»": "used by a theorem on the base",
+  "Becoming.«广之传递»": "used by a theorem on the base",
+  "Becoming.«齐即谓»": "apart: own vocabulary",
+  "Becoming.«齐之对称»": "used by a theorem on the base",
+  "Becoming.«杂之对称»": "used by a theorem on the base",
+  "Becoming.«广则非齐»": "used by a theorem on the base",
+  "Becoming.«广则非杂»": "used by a theorem on the base",
+  "Becoming.«齐则非杂»": "used by a theorem on the base",
+  "Becoming.«四比之周»": "apart: own vocabulary",
+  "Becoming.«则逾之定当且仅当排中»": "apart: own vocabulary",
   "Becoming.World.of_web": "statement on both families",
   "Becoming.World.of_flow": "statement on both families",
   "Becoming.Run.window_trace": "statement on Process/Frame/Run/Trace",
+  "Becoming.closedUnder_iff_closed": "apart: own vocabulary",
+  "Becoming.withinClosure_iff_within": "apart: own vocabulary",
   "Becoming.WithinClosure.refl": "used by a theorem on the base",
   "Becoming.WithinClosure.trans": "used by a theorem on the base",
   "Becoming.WithinClosure.of_rel": "used by a theorem on the base",
@@ -2182,6 +2309,8 @@
   "Becoming.Assurance.ofMap_determined": "statement on Process/Frame/Run/Trace",
   "Becoming.Assurance.ofPartial_determined": "statement on Process/Frame/Run/Trace",
   "Becoming.Assurance.trace_ofPartial_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.determined_iff_fixed": "statement on Process/Frame/Run/Trace",
+  "Becoming.goAlikeUnder_iff_alike": "statement on Process/Frame/Run/Trace",
   "Becoming.Run.ofWithMove_toWithMove": "statement on Process/Frame/Run/Trace",
   "Becoming.Run.toWithMove_ofWithMove": "statement on Process/Frame/Run/Trace",
   "Becoming.withMove_open": "statement on Process/Frame/Run/Trace",
@@ -2317,7 +2446,7 @@
   "Becoming.skipAt_ne": "used by a theorem on the base",
   "Becoming.skipAt_le": "used by a theorem on the base",
   "Becoming.skipAt_lt": "used by a theorem on the base",
-  "Becoming.split_at_head": "used by a theorem on the base",
+  "Becoming.split_at_head": "apart: prelude-only statement",
   "Becoming.revisits_within": "used by a theorem on the base",
   "Becoming.revisits_of_held": "used by a theorem on the base",
   "Becoming.revisits_from": "used by a theorem on the base",
@@ -2330,7 +2459,9 @@
   "Becoming.not_marks": "used by a theorem on the base",
   "Becoming.Law.orbit_add": "used by a theorem on the base",
   "Becoming.Law.orbit_shift": "used by a theorem on the base",
-  "Becoming.Law.orbit_mul": "used by a theorem on the base",
+  "Becoming.Law.steps_orbit": "statement on Process/Frame/Run/Trace",
+  "Becoming.Law.step_fixed": "statement on Process/Frame/Run/Trace",
+  "Becoming.Law.orbit_mul": "proof through a base family",
   "Becoming.Branching.units_length": "used by a theorem on the base",
   "Becoming.Branching.law_trace_of": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.law_trace_iff": "statement on Process/Frame/Run/Trace",
@@ -2343,10 +2474,13 @@
   "Becoming.Branching.Returns.pred": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Returns.reachable_from": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Returns.reachable": "statement on Process/Frame/Run/Trace",
+  "Becoming.Branching.returns_iff_reaches": "statement on Process/Frame/Run/Trace",
+  "Becoming.Branching.lossless_iff_fixedBefore": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Lossless.cancel": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Lossless.comes_back": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Lossless.recurs": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Lossless.returns": "statement on Process/Frame/Run/Trace",
+  "Becoming.Branching.Lossless.returns_of_total": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Lossless.no_rise": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.rise_not_lossless": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Lossless.unlisted": "statement on Process/Frame/Run/Trace",
@@ -2355,6 +2489,12 @@
   "Becoming.Law.reachable_iff": "statement on Process/Frame/Run/Trace",
   "Becoming.Law.keeps_iff": "statement on Process/Frame/Run/Trace",
   "Becoming.Law.returns_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.Law.next_fixed": "used by a theorem on the base",
+  "Becoming.Law.next_total": "used by a theorem on the base",
+  "Becoming.Law.reaches_of_orbit": "used by a theorem on the base",
+  "Becoming.Law.reaches_iff_orbit": "used by a theorem on the base",
+  "Becoming.Law.returns_iff_reaches": "statement on Process/Frame/Run/Trace",
+  "Becoming.Law.lossless_iff_fixedBefore": "statement on Process/Frame/Run/Trace",
   "Becoming.Law.lost_stays": "statement on Process/Frame/Run/Trace",
   "Becoming.Law.merged_stays": "used by a theorem on the base",
   "Becoming.Law.Lossless.cancel": "statement on Process/Frame/Run/Trace",
@@ -2668,6 +2808,7 @@
   "Becoming.Confound.varied_refutes": "statement on Process/Frame/Run/Trace",
   "Becoming.factors_image": "statement on Process/Frame/Run/Trace",
   "Becoming.Image.least": "statement on Process/Frame/Run/Trace",
+  "Becoming.image_step_iff": "statement on Process/Frame/Run/Trace",
   "Becoming.image_determined_iff": "statement on Process/Frame/Run/Trace",
   "Becoming.carries_law_iff": "statement on Process/Frame/Run/Trace",
   "Becoming.goAlike_id_iff": "statement on Process/Frame/Run/Trace",
@@ -3811,9 +3952,11 @@
   "Becoming.Successive.fed": "statement on World/Flow/Web",
   "Becoming.Successive.takes_part_once": "statement on World/Flow/Web",
   "Becoming.Successive.relay": "statement on World/Flow/Web",
-  "Becoming.Law.absorbing_ahead": "used by a theorem on the base",
+  "Becoming.Law.absorbing_ahead": "apart: own vocabulary",
   "Becoming.Law.Absorbing.orbit": "used by a theorem on the base",
   "Becoming.Law.returns_iff_ahead": "statement on Process/Frame/Run/Trace",
+  "Becoming.Law.absorbing_iff_closed": "used by a theorem on the base",
+  "Becoming.Law.drawn_iff_drawnIn": "used by a theorem on the base",
   "Becoming.Law.DrawnInto.never_back": "used by a theorem on the base",
   "Becoming.Law.Drawn.not_returns": "statement on Process/Frame/Run/Trace",
   "Becoming.Law.drawnInto_ahead": "statement on Process/Frame/Run/Trace",
@@ -3946,7 +4089,12 @@
   "Becoming.Web.rising_of_coming": "statement on World/Flow/Web",
   "Becoming.lt_iff_pos": "used by a theorem on the base",
   "Becoming.Flow.Acting.giversSupported": "statement on World/Flow/Web",
+  "Becoming.Flow.balances_iff_units": "statement on World/Flow/Web",
+  "Becoming.Flow.balances_of_matched": "statement on World/Flow/Web",
   "Becoming.Flow.Balances.over": "statement on World/Flow/Web",
+  "Becoming.Flow.balancesOn_iff_units": "statement on World/Flow/Web",
+  "Becoming.Flow.over_iff_units": "statement on World/Flow/Web",
+  "Becoming.Flow.BalancesOn.units_over": "statement on World/Flow/Web",
   "Becoming.Flow.Balances.on": "statement on World/Flow/Web",
   "Becoming.Flow.balances_iff_on": "statement on World/Flow/Web",
   "Becoming.Flow.BalancesOn.over": "statement on World/Flow/Web",
@@ -6466,7 +6614,8 @@
   "Becoming.Amounts.times_le": "used by a theorem on the base",
   "Becoming.Amounts.still_le": "used by a theorem on the base",
   "Becoming.Amounts.losses_within": "used by a theorem on the base",
-  "Becoming.Amounts.loses_times": "used by a theorem on the base",
+  "Becoming.Amounts.loses_times": "apart: own vocabulary",
+  "Becoming.Amounts.falls_end": "used by a theorem on the base",
   "Becoming.Amounts.rests_unrefuted": "used by a theorem on the base",
   "Becoming.Amounts.rests": "used by a theorem on the base",
   "Becoming.Amounts.rests_of_archimedean": "used by a theorem on the base",
@@ -6556,6 +6705,8 @@
   "Becoming.Halving.new_without_gain": "apart: own vocabulary",
   "Becoming.Dyadic.half_return": "apart: own vocabulary",
   "Becoming.Amounts.fallsStop_congr": "used by a theorem on the base",
+  "Becoming.Amounts.fallsStop_iff": "apart: own vocabulary",
+  "Becoming.Amounts.fallsStop_of_ends": "apart: own vocabulary",
   "Becoming.Amounts.noEndlessFall_of_fallsAtLeast": "used by a theorem on the base",
   "Becoming.Amounts.whole_fallsAtLeast": "used by a theorem on the base",
   "Becoming.Amounts.whole_noEndlessFall": "used by a theorem on the base",
@@ -7136,6 +7287,8 @@
   "Becoming.Flow.unsupported_stays": "statement on World/Flow/Web",
   "Becoming.Flow.nothing_supported_stays_at": "statement on World/Flow/Web",
   "Becoming.Flow.nothing_supported_stays": "statement on World/Flow/Web",
+  "Becoming.Web.includes_iff": "statement on World/Flow/Web",
+  "Becoming.Web.exceeds_iff": "statement on World/Flow/Web",
   "Becoming.Web.FitsBand.admits": "statement on World/Flow/Web",
   "Becoming.Web.not_arises_of_unchanged": "statement on World/Flow/Web",
   "Becoming.Web.supported_iff_admits": "statement on World/Flow/Web",
@@ -7242,6 +7395,9 @@
   "Becoming.Web.not_losesBeyond_whole": "statement on World/Flow/Web",
   "Becoming.Web.AdmitsWithin.not_losesBeyond": "statement on World/Flow/Web",
   "Becoming.Web.admitsWithin_self": "statement on World/Flow/Web",
+  "Becoming.Web.widens_iff": "statement on World/Flow/Web",
+  "Becoming.Web.keeps_iff": "statement on World/Flow/Web",
+  "Becoming.Web.mixed_iff": "statement on World/Flow/Web",
   "Becoming.Web.Widens.not_reverse": "statement on World/Flow/Web",
   "Becoming.Web.Widens.trans": "statement on World/Flow/Web",
   "Becoming.Web.Keeps.symm": "statement on World/Flow/Web",
@@ -12251,6 +12407,12 @@
   "Becoming.presupposition_iff_all_of_invariant": "used by a theorem on the base",
   "Becoming.bounded_invariant_iff": "instance on the base recorded",
   "Becoming.BoundaryWorlds.presupposition_iff_all": "statement on both families",
+  "Becoming.Weighting.includesOn_iff": "apart: own vocabulary",
+  "Becoming.Weighting.exceedsOn_iff": "apart: own vocabulary",
+  "Becoming.Weighting.widensOn_iff": "apart: own vocabulary",
+  "Becoming.Weighting.mixedOn_iff": "apart: own vocabulary",
+  "Becoming.Weighting.WidensOn.not_reverse": "apart: own vocabulary",
+  "Becoming.Weighting.WidensOn.trans": "apart: own vocabulary",
   "Becoming.Weighting.term_le": "used by a theorem on the base",
   "Becoming.Weighting.term_lt": "apart: prelude-only statement",
   "Becoming.Weighting.term_le_of": "used by a theorem on the base",
@@ -13636,7 +13798,7 @@
   "Becoming.RegimeMargin.Crossing.climbs": "used by a theorem on the base",
   "Becoming.RegimeMargin.Crossing.rises_without_rest": "statement on Process/Frame/Run/Trace",
   "Becoming.RegimeMargin.Alternation.keeps": "used by a theorem on the base",
-  "Becoming.RegimeMargin.Alternation.returns": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Alternation.returns": "proof through a base family",
   "Becoming.RegimeMargin.Alternation.alternates": "statement on Process/Frame/Run/Trace",
   "Becoming.RegimeMargin.leading_le": "used by a theorem on the base",
   "Becoming.RegimeMargin.leading_true": "used by a theorem on the base",
@@ -13653,8 +13815,8 @@
   "Becoming.RegimeMargin.Adjusted.fates": "statement on Process/Frame/Run/Trace",
   "Becoming.RegimeMargin.threshold_regime": "statement on the base only through a law of its own module",
   "Becoming.RegimeMargin.Notch.keeps": "used by a theorem on the base",
-  "Becoming.RegimeMargin.Notch.stays_three": "used by a theorem on the base",
-  "Becoming.RegimeMargin.Notch.ends_four": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Notch.stays_three": "proof through a base family",
+  "Becoming.RegimeMargin.Notch.ends_four": "proof through a base family",
   "Becoming.RegimeMargin.Notch.no_threshold": "statement on Process/Frame/Run/Trace",
   "Becoming.RegimeMargin.Drawn.add_cancel": "used by a theorem on the base",
   "Becoming.RegimeMargin.Drawn.sub_mono": "used by a theorem on the base",
@@ -16109,6 +16271,7 @@
   "Becoming.«续无外则同一中心»": "apart: own vocabulary",
   "Becoming.«续无外则中心无缘»": "apart: own vocabulary",
   "Becoming.withinClosure_of_line": "apart: own vocabulary",
+  "Becoming.eq_or_reach_iff_reached": "apart: own vocabulary",
   "Becoming.withinClosure_iff_reached": "apart: own vocabulary",
   "Becoming.ownClosure_unrestricted_iff_noOutside": "apart: own vocabulary",
   "Becoming.premises_of_noOutside": "apart: own vocabulary",

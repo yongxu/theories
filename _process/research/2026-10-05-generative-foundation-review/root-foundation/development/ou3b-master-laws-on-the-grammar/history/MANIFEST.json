@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "root": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history",
+  "entries": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/DRAFT-NOTES.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history/DRAFT-NOTES.md",
+      "sha256": "4212395bb37bbce8e815dc544e449ca8908e6de0341372d85aaca1b8016562d6",
+      "blob": "3560a2af4bb57e6c2231b94daa9c0b3f8fa3254e",
+      "batch": "moves-2026-10-26-move_ou3b",
+      "reason": "superseded by OU3b2-NOTES (rounds 2-3): describes the first draft (module B, the _by_grammar copies, the old names)",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/DRAFT-NOTES.md"
+    },
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/OU3bCheck.lean.txt",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history/OU3bCheck.lean.txt",
+      "sha256": "209ebb512b464aa94c9c29f68a79224232ddcdd6747125582cd3224572817778",
+      "blob": "5d99e2a31bb9a20b203274d56cf40dc62294378c",
+      "batch": "moves-2026-10-26-move_ou3b",
+      "reason": "superseded by OU3b2Check.lean.txt: the first draft's statement check",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/OU3bCheck.lean.txt"
+    }
+  ]
+}

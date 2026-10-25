@@ -172,7 +172,7 @@
         "Becoming.Web.selects_alike_of_bounded",
         "Becoming.Web.states_by_reading"
       ],
-      "sha256": "c1ced92e41c8e456b869062913127104bf3757cfda18ceaf4b8ccb0c77e775d9"
+      "sha256": "f856ebcbc2cd8e034600f54e35f619372136e16c414c2fe14d0cc11ad495bc79"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110022.458880Z/verification.json",
@@ -198,12 +198,18 @@
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
       "role": "statement",
       "sha256": "9b33bf992472aa02756e599084585bd36f95e8dd03912d90b809311f54b04f22"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110022.458880Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.IdentificationRuns",
       "success_pointer": "/status",
       "success_value": "passed"

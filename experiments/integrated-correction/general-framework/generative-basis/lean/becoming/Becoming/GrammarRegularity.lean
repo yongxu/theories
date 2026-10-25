@@ -36,7 +36,8 @@ where along a line the core is left.
 * **Moves as relations.** A process with moves is a family of relations, one for each move
   (`moveRel`). Where every move is possible from every configuration, a process going alike by a map
   has the map's class constant under every move (`constant_of_goAlike`); where the process is
-  determined, the converse holds (`goAlike_of_constant`).
+  determined, the converse holds (`goAlike_of_constant`). Both are the grammar's lumping laws
+  (`«同行遍后则有常»`, `«有常定后则同行»` of `Becoming.GrammarLaws`) at each move.
 * **A rule that changes itself.** For a state going on under a rule that itself goes on
   (`adaptive`), the state's class is constant under every move, and is its own core under every
   move, exactly where the rule makes no difference to the state (`adaptive_constant_iff`,
@@ -188,20 +189,18 @@ variable {S : Type u} {A : Type v} {K : Type w}
 def moveRel (P : Process S A) (a : A) : «际» S := fun s t => P.step s a t
 
 /-- **Where every move is possible from every configuration, a process going alike by a map has the
-map's class constant under every move.** -/
+map's class constant under every move**: the grammar's lumping law (`«同行遍后则有常»`) at the move,
+going alike being the grammar's there (`goAlikeUnder_iff_alike`). -/
 theorem constant_of_goAlike {P : Process S A} {π : S → K} (total : ∀ s a, ∃ t, P.step s a t)
     (alike : GoAlike P π) (a : A) : «有常» (moveRel P a) (sameValue π) :=
-  («有常之逐点» (moveRel P a) (sameValue π)).mpr fun u u' same v step =>
-    match total u' a with
-    | ⟨v', step'⟩ => ⟨v', step', alike u u' a v v' same step step'⟩
+  «同行遍后则有常» (goAlikeUnder_iff_alike.mp alike a) (fun s => total s a)
 
 /-- **Where the process is determined, the map's class constant under every move makes it go alike
-by the map.** -/
+by the map**: the grammar's lumping law (`«有常定后则同行»`) at each move, determinacy being a fixed
+successor there (`determined_iff_fixed`). -/
 theorem goAlike_of_constant {P : Process S A} {π : S → K} (determined : Determined P)
     (constant : ∀ a, «有常» (moveRel P a) (sameValue π)) : GoAlike P π :=
-  fun s s' a u u' same step step' =>
-    match («有常之逐点» (moveRel P a) (sameValue π)).mp (constant a) s s' same u step with
-    | ⟨v', step'', e⟩ => e.trans (congrArg π (determined s' a v' u' step'' step'))
+  goAlikeUnder_iff_alike.mpr fun a => «有常定后则同行» (constant a) (determined_iff_fixed.mp determined a)
 
 /-- A determined process with every move possible goes alike by a map exactly where the map's class
 is constant under every move. -/

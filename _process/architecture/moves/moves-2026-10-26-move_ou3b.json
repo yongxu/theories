@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-10-26-move_ou3b",
+  "date": "2026-10-25T18:26:43+00:00",
+  "base_commit": "cc8e1fc91b5398614c22742bf85783607790ad86",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/DRAFT-NOTES.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history/DRAFT-NOTES.md",
+      "sha256": "4212395bb37bbce8e815dc544e449ca8908e6de0341372d85aaca1b8016562d6",
+      "blob": "3560a2af4bb57e6c2231b94daa9c0b3f8fa3254e",
+      "reason": "superseded by OU3b2-NOTES (rounds 2-3): describes the first draft (module B, the _by_grammar copies, the old names)",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/DRAFT-NOTES.md"
+    },
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/OU3bCheck.lean.txt",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history/OU3bCheck.lean.txt",
+      "sha256": "209ebb512b464aa94c9c29f68a79224232ddcdd6747125582cd3224572817778",
+      "blob": "5d99e2a31bb9a20b203274d56cf40dc62294378c",
+      "reason": "superseded by OU3b2Check.lean.txt: the first draft's statement check",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/OU3bCheck.lean.txt"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-OU3b2.md",
+      "old_sha256": "14deaaf294eb1c703768118369f03dd25fbdb8a58bd1e556cb411b71b94db53e",
+      "new_sha256": "c91793793666776c35a3748651b218f30ce9e4296598c64247a227495ac7b0c9",
+      "references": 1
+    }
+  ],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history"
+  ],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}

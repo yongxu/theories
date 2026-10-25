@@ -133,7 +133,7 @@
         "Becoming.«相续之始有后»",
         "Becoming.«相续之末步»"
       ],
-      "sha256": "984f34169fac0411a35e0b0199e054529d49008ccbd818dcfc5083977c551dc1"
+      "sha256": "b24f3482898c95886d483c1eeb868ccb7412459eafa24d0dce70646a3884d79f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194024.593238Z/verification.json",
@@ -149,12 +149,18 @@
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
       "sha256": "69614011796b5ccfc8fcd9183c539038033f77f83e1b75b9ac7602a75258d9a8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194024.593238Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarRegularity",
       "success_pointer": "/status",
       "success_value": "passed"

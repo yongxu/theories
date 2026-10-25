@@ -82,6 +82,7 @@ The whole-number, decided form of the least-loss law of rest, stated through bal
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T173410.671057Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `Becoming.Amounts.falls_by_stretch`, `Becoming.Amounts.unmarked_within`, `Becoming.Amounts.le_by_exchange`
 

@@ -105,6 +105,7 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T134333.178862Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T173410.671057Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustment comes to rest`, `a law's run with a bounded mark`, `一个体制的运行静于何处`, `Becoming.RegimeMargin.Adjusted.comes_to_rest`, `Becoming.RegimeMargin.rests_within`, `Becoming.LastChange.still_within`
 

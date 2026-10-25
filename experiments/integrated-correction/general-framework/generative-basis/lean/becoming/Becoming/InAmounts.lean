@@ -33,6 +33,9 @@ exactly a family's rest, and locates where amounts supply it.
   way (`InAmounts.steady_of_stock_le`): a rise needs something given, and a relatum that took and
   gave back no less took nothing. So every change of a member's level lowers the total strictly
   (`InAmounts.change_lowers`), with no least loss.
+* **The premise on the grammar.** That an amount's strict falls stop is the grammar's
+  non-recurrence of strict falls along it (`Amounts.fallsStop_iff`, by definition), and falls that
+  end stop (`Amounts.fallsStop_of_ends`, the grammar's `«尽则不或屡»`).
 * **A family's rest is one amount's.** Balanced and dissipated on from some step on, a family stops
   changing, as far as can be refuted, exactly where its total stops falling
   (`InAmounts.change_stops_iff`). No premise on the amounts enters.
@@ -136,6 +139,22 @@ theorem fallsStop_congr {s s' : Nat → A} {T : Nat} (same : ∀ t, T ≤ t → 
       (Eq.subst (motive := fun x => M.le x (s (t + 1))) (same t later).symm
         (Eq.subst (motive := fun x => M.le (s' t) x) (same (t + 1) (Nat.le_succ_of_le later)).symm
           le))⟩
+
+/-- **The falls stopping is the grammar's non-recurrence**: an amount's strict falls stop from `T`
+on exactly where the steps of not being within the next value (`¬ M.le a b`) do not recur along it
+from `T` on, as far as can be refuted (`«或屡»`). -/
+theorem fallsStop_iff {s : Nat → A} {T : Nat} :
+    M.FallsStop s T ↔ ¬ «或屡» (fun a b => ¬ M.le a b) s T :=
+  Iff.rfl
+
+/-- **Falls that end stop**: where an amount does not rise from `T` on, as far as can be refuted,
+and every course from its value at `T` of no rise then a strict fall ends (`«尽»`), its strict falls
+stop: the grammar's law of rest (`«尽则不或屡»`) at the amounts. No converse, from falls stopping
+along a line to the ending of the courses, is established. -/
+theorem fallsStop_of_ends {s : Nat → A} {T : Nat} (still : ∀ t, T ≤ t → ¬¬ M.le (s (t + 1)) (s t))
+    (ends : «尽» («而» («所闭» (fun a b => M.le b a)) (fun a b => ¬ M.le a b)) «一» (s T)) :
+    M.FallsStop s T :=
+  «尽则不或屡» still ends
 
 /-- **A least fall, in Archimedean amounts, leaves no endless fall.** Where every strict fall is
 by at least an amount `ε` above nothing and every amount lies within finitely many copies of `ε`

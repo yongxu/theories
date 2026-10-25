@@ -62,6 +62,7 @@ No cause, no change: a state function of unchanged inputs does not change.
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `Arising needs change`, `生起需变`, `Becoming.Web.not_arises_of_unchanged`
 

@@ -153,7 +153,7 @@
         "Becoming.«续无外则同一中心»",
         "Becoming.«续无外则族无外»"
       ],
-      "sha256": "c197a5e999ad41115de1899f1b368d756d37dd95eeed41e738fec33e28215348"
+      "sha256": "12a3171a69cb11fdab9140c2dd20791eb2792e34f176fa83063b1104ea7f2919"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T220231.427406Z/verification.json",
@@ -181,12 +181,18 @@
       "role": "receipt",
       "sha256": "f399061e1e9af72fb012a69861653f1a5496c6907982a2723399bcee788614ae",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"

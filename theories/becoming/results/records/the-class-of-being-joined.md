@@ -70,6 +70,7 @@ PW NOTE §7 item 5, in part: the class of being joined holds the living with the
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `The class of being joined`, `相连之类`, `Becoming.«续即缘当且仅当含族»`
 

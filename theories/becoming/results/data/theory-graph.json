@@ -2984,6 +2984,18 @@
    "page": "theories/becoming/results/records/market-supported-finite-transition.md"
   },
   {
+   "id": "record:master-laws-on-the-grammar",
+   "type": "result",
+   "record": "master-laws-on-the-grammar",
+   "title": "The master laws on the grammar",
+   "title_zh": "文法上的主律",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/master-laws-on-the-grammar.md"
+  },
+  {
    "id": "record:material-preparation-output",
    "type": "result",
    "record": "material-preparation-output",
@@ -5678,6 +5690,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.GrammarLaws",
+   "type": "module",
+   "name": "Becoming.GrammarLaws",
+   "level": "L0",
+   "theorems": 113,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.World",
    "type": "module",
    "name": "Becoming.World",
@@ -5686,7 +5709,7 @@
    "region": "root",
    "base": "old-base",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Witnesses",
@@ -5697,29 +5720,29 @@
    "region": "method",
    "base": "old-base",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Frame",
    "type": "module",
    "name": "Becoming.Frame",
    "level": "L0",
-   "theorems": 28,
+   "theorems": 30,
    "region": "root",
    "base": "frame",
-   "on_grammar": false,
-   "reaches_grammar": false
+   "on_grammar": true,
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Laws",
    "type": "module",
    "name": "Becoming.Laws",
    "level": "L1",
-   "theorems": 3,
+   "theorems": 5,
    "region": "root",
    "base": "frame",
-   "on_grammar": false,
-   "reaches_grammar": false
+   "on_grammar": true,
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Labelled",
@@ -5741,7 +5764,7 @@
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Derivation",
@@ -5752,7 +5775,7 @@
    "region": "method",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.ClassifiedBeliefProcesses",
@@ -5763,7 +5786,7 @@
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.MoveOutcomeProcesses",
@@ -5781,11 +5804,11 @@
    "type": "module",
    "name": "Becoming.Recurrence",
    "level": "L1",
-   "theorems": 71,
+   "theorems": 82,
    "region": "map",
    "base": "frame",
-   "on_grammar": false,
-   "reaches_grammar": false
+   "on_grammar": true,
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Diagonal",
@@ -5818,7 +5841,7 @@
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Quantum",
@@ -5840,7 +5863,7 @@
    "region": "root",
    "base": "general",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Dependence",
@@ -5851,7 +5874,7 @@
    "region": "root",
    "base": "old-base",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Restoration",
@@ -5862,7 +5885,7 @@
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Horizon",
@@ -5902,10 +5925,10 @@
    "type": "module",
    "name": "Becoming.Mechanism",
    "level": "L1",
-   "theorems": 30,
+   "theorems": 31,
    "region": "knowing",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -6067,10 +6090,10 @@
    "type": "module",
    "name": "Becoming.Attraction",
    "level": "L1",
-   "theorems": 54,
+   "theorems": 56,
    "region": "map",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -6082,7 +6105,7 @@
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Arising",
@@ -6100,10 +6123,10 @@
    "type": "module",
    "name": "Becoming.Flow",
    "level": "L1",
-   "theorems": 97,
+   "theorems": 102,
    "region": "map",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -6463,11 +6486,11 @@
    "type": "module",
    "name": "Becoming.Amounts",
    "level": "L1",
-   "theorems": 36,
+   "theorems": 37,
    "region": "map",
    "base": "general",
-   "on_grammar": false,
-   "reaches_grammar": false
+   "on_grammar": true,
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.LeastLoss",
@@ -6496,10 +6519,10 @@
    "type": "module",
    "name": "Becoming.InAmounts",
    "level": "L1",
-   "theorems": 89,
+   "theorems": 91,
    "region": "map",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -6584,10 +6607,10 @@
    "type": "module",
    "name": "Becoming.Admission",
    "level": "L1",
-   "theorems": 51,
+   "theorems": 53,
    "region": "map",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -6617,10 +6640,10 @@
    "type": "module",
    "name": "Becoming.Regions",
    "level": "L1",
-   "theorems": 20,
+   "theorems": 23,
    "region": "root",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -6709,7 +6732,7 @@
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Lifting",
@@ -6764,7 +6787,7 @@
    "region": "significance",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.MatchedCourses",
@@ -6907,7 +6930,7 @@
    "region": "root",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.SeedReach",
@@ -6918,7 +6941,7 @@
    "region": "root",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.ScopedReach",
@@ -6929,7 +6952,7 @@
    "region": "root",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Boundaries",
@@ -6947,10 +6970,10 @@
    "type": "module",
    "name": "Becoming.Weightings",
    "level": "L2",
-   "theorems": 391,
+   "theorems": 397,
    "region": "significance",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -7402,7 +7425,7 @@
    "region": "significance",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.AssurancePlans",
@@ -7413,7 +7436,7 @@
    "region": "significance",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Integers",
@@ -7501,7 +7524,7 @@
    "region": "map",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Viability",
@@ -7512,7 +7535,7 @@
    "region": "map",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Keeping",
@@ -7523,7 +7546,7 @@
    "region": "map",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Prelude",
@@ -7556,7 +7579,7 @@
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Actuation",
@@ -7567,7 +7590,7 @@
    "region": "significance",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.TreeSearch",
@@ -7699,7 +7722,7 @@
    "region": "map",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Countdown",
@@ -7710,7 +7733,7 @@
    "region": "map",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Lasting",
@@ -7732,7 +7755,7 @@
    "region": "life",
    "base": "general",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.Retrodiction",
@@ -8568,7 +8591,7 @@
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.IdentificationRuns",
@@ -8578,7 +8601,7 @@
    "theorems": 58,
    "region": "knowing",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -9052,7 +9075,7 @@
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.NarrowingRuns",
@@ -9063,7 +9086,7 @@
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.SecuredContent",
@@ -9118,7 +9141,7 @@
    "region": "collective",
    "base": "frame",
    "on_grammar": false,
-   "reaches_grammar": false
+   "reaches_grammar": true
   },
   {
    "id": "module:Becoming.GrammarCourse",
@@ -9147,7 +9170,7 @@
    "type": "module",
    "name": "Becoming.GrammarScope",
    "level": "L1",
-   "theorems": 37,
+   "theorems": 38,
    "region": "significance",
    "base": "grammar",
    "on_grammar": true,
@@ -26434,6 +26457,12 @@
    "anchor": "r-a-regularity-kept-and-changed"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-master-laws-on-the-grammar",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-master-laws-on-the-grammar"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-place-transition-nets-on-the-spine",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -29096,6 +29125,11 @@
   },
   {
    "from": "module:Becoming.Amounts",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Amounts",
    "to": "module:Becoming.Prelude",
    "type": "imports"
   },
@@ -30046,6 +30080,11 @@
   },
   {
    "from": "module:Becoming.Frame",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Frame",
    "to": "module:Becoming.Prelude",
    "type": "imports"
   },
@@ -30137,6 +30176,21 @@
   {
    "from": "module:Becoming.GrammarCourse",
    "to": "module:Becoming.Unrolling",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarLaws",
+   "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarLaws",
+   "to": "module:Becoming.GrammarMap",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarLaws",
+   "to": "module:Becoming.Prelude",
    "type": "imports"
   },
   {
@@ -42435,6 +42489,161 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Admission",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Amounts",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Attraction",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.IdentificationRuns",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.InAmounts",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Laws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Mechanism",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Recurrence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Regions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Weightings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:attraction-is-not-returning",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:balance-from-conservation-along-a-relation",
+   "type": "related"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:census-balance",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:four-cases-of-a-part",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:least-loss-rest",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:levels-of-closure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:more-needs-renewers",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:projection-carrying-a-law",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:recurrence-without-premise",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:rest-exactly-where-falls-stop",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:where-a-run-goes-on",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "record:widening-as-what-every-weighting-ranks",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:material-preparation-output",
    "to": "module:Becoming.Copying",
    "type": "proved-in"
@@ -52687,6 +52896,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-map-of-premises",
    "to": "record:map-of-premises",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-master-laws-on-the-grammar",
+   "to": "record:master-laws-on-the-grammar",
    "type": "states"
   },
   {

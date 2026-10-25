@@ -55,7 +55,10 @@ representation. Its names describe the dynamics.
   admits every formation the other admits (`Web.Includes`), a preorder
   (`Web.Includes.refl`, `Web.Includes.trans`). It *exceeds* the other when at some step it
   admits a formation the other does not (`Web.Exceeds`), which no path it includes does
-  (`Web.Includes.not_exceeded`). Three cases follow
+  (`Web.Includes.not_exceeded`). These are the grammar's inclusion and exceeding
+  (`«则»`, `«逾»` of `Becoming.GrammarLaws`) at what the paths admit, read as a relation on
+  (step, formation) pairs (`Web.admitted`, `Web.includes_iff`, `Web.exceeds_iff`), and the three
+  laws are the grammar's (`«则之自反»`, `«则之传递»`, `«逾则不则»`) there. Three cases follow
   from the part's exchange at every step:
   - giving each condition at least what it takes closes nothing (`Flow.Balances.closes_nothing`);
   - giving no more than it takes opens nothing (`Flow.Balances.opens_nothing`);
@@ -334,7 +337,25 @@ def Includes (l l' : Nat → C → Nat) : Prop :=
 def Exceeds (l l' : Nat → C → Nat) : Prop :=
   ∃ t f, W.Admits (l t) t f ∧ ¬ W.Admits (l' t) t f
 
+/-- What a level path admits, as a relation of the grammar on (step, formation) pairs: the identity
+at the pairs whose formation its levels admit at that step. A homogeneous relation is needed
+because the grammar's comparison is of relations on one carrier, and admission relates a step to a
+formation; this encoding is a choice of representation. -/
+def admitted (l : Nat → C → Nat) : «际» (Nat × F) :=
+  fun p q => p = q ∧ W.Admits (l p.1) p.1 p.2
+
 variable {W}
+
+/-- **Including is the grammar's inclusion** (`«则»`) of what the paths admit, both ways, with no
+hypothesis. -/
+theorem includes_iff {l l' : Nat → C → Nat} : W.Includes l l' ↔ «则» (W.admitted l') (W.admitted l) :=
+  ⟨fun includes _ _ ⟨e, admits⟩ => ⟨e, includes _ _ admits⟩,
+   fun inside t f admits => (inside (t, f) (t, f) ⟨rfl, admits⟩).2⟩
+
+/-- **Exceeding is the grammar's** (`«逾»`), both ways, with no hypothesis. -/
+theorem exceeds_iff {l l' : Nat → C → Nat} : W.Exceeds l l' ↔ «逾» (W.admitted l) (W.admitted l') :=
+  ⟨fun ⟨t, f, admits, not⟩ => ⟨(t, f), (t, f), ⟨rfl, admits⟩, fun ⟨_, admitted⟩ => not admitted⟩,
+   fun ⟨p, _, ⟨e, admits⟩, not⟩ => ⟨p.1, p.2, admits, fun admitted => not ⟨e, admitted⟩⟩⟩
 
 /-- Levels within a band admit. -/
 theorem FitsBand.admits {cap : Nat → F → C → Nat} {l : C → Nat} {t : Nat} {f : F}
@@ -364,19 +385,19 @@ theorem Admits.mono {l l' : C → Nat} {t : Nat} {f : F} (le : ∀ c, l' c ≤ l
     (admits : W.Admits l' t f) : W.Admits l t f :=
   fun c requires => Nat.le_trans (admits c requires) (le c)
 
-/-- Inclusion is reflexive. -/
+/-- Inclusion is reflexive (`«则之自反»`). -/
 theorem Includes.refl (l : Nat → C → Nat) : W.Includes l l :=
-  fun _ _ admits => admits
+  includes_iff.mpr («则之自反» (W.admitted l))
 
-/-- Inclusion is transitive. -/
+/-- Inclusion is transitive (`«则之传递»`). -/
 theorem Includes.trans {l l' l'' : Nat → C → Nat} (first : W.Includes l l')
     (second : W.Includes l' l'') : W.Includes l l'' :=
-  fun t f admits => first t f (second t f admits)
+  includes_iff.mpr («则之传递» (includes_iff.mp second) (includes_iff.mp first))
 
-/-- A level path that includes another and is exceeded by it does not exist. -/
+/-- A level path that includes another and is exceeded by it does not exist (`«逾则不则»`). -/
 theorem Includes.not_exceeded {l l' : Nat → C → Nat} (includes : W.Includes l l') :
-    ¬ W.Exceeds l' l
-  | ⟨t, f, admitted, not⟩ => not (includes t f admitted)
+    ¬ W.Exceeds l' l :=
+  fun exceeds => «逾则不则» (exceeds_iff.mp exceeds) (includes_iff.mp includes)
 
 end Web
 

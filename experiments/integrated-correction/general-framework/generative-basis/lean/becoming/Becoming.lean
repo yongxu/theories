@@ -4,6 +4,7 @@ import Becoming.GrammarMap
 import Becoming.GrammarTesting
 import Becoming.GrammarCandidates
 import Becoming.MapInstances
+import Becoming.GrammarLaws
 import Becoming.World
 import Becoming.Witnesses
 import Becoming.Frame
@@ -353,7 +354,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   of its steps and an invariant is a region closed under them, so what is kept by the steps
   holds wherever the process reaches because the closure is closed; the closures of the later
   layers (feeding, influence, reach, sharing, coupling, a presupposition's scope) are this
-  closure under their relations.
+  closure under their relations. The closure is the grammar's (`«闭»`, `«所闭»` of
+  `Becoming.GrammarLaws`, by definition), and its laws here are proved from the grammar's.
 * `Becoming.Laws` (L1): the law-level notions the layers share, stated once just after the frame (no premise):
   determined processes (`Determined`), laws of change and partial laws read as processes and run
   along a course (`Assurance.ofMap`, `Assurance.ofPartial`, `Assurance.trace_ofPartial_iff`), and
@@ -1017,7 +1019,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   at each size bounds the takings of that size, but neither growth nor the amount: a whole
   unit can pass in ever more, ever smaller transfers without end.
 * `Becoming.Amounts` (L1): rest over amounts that may be dense, below the rest family (it imports
-  only `Becoming.Prelude`). Over amounts with an order that addition keeps and cancels, with
+  only `Becoming.Prelude` and `Becoming.GrammarLaws`; its law of rest is the grammar's, `«尽则不或屡»`,
+  the falls ending within finitely many least losses, `Amounts.falls_end`). Over amounts with an order that addition keeps and cancels, with
   nothing least and possibly dense, the losses of a falling stock, added, are within the stock;
   rest needs two premises the whole numbers supply: a least loss `ε` at each step at which the
   change counted happens, and the stock lying within finitely many copies of `ε` (which
@@ -2413,8 +2416,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   is its class's core (`«根»`), and taking the core as the class leaves a flame with no
   continuation (`«以核为判据则火无续»`). For a class, constancy is exactly closure of the coarse
   net (`«闭合当且仅当有常»`); that every occurrence either begins or has a predecessor is exactly
-  excluded middle (`«四相之定当且仅当排中»`). A leaf until the continuation family is lifted
-  onto it (board item OU3).
+  excluded middle (`«四相之定当且仅当排中»`). Below every model since board item OU3b:
+  `Becoming.GrammarLaws` imports it, and `Becoming.Frame` imports that.
 * `Becoming.GrammarReadings` (L0): the corpus's definitions in the grammar. The 墨经's and the
   荀子's 化 are one form, alteration (`«化之二说同形»`), and 化 is the 金师子章's 成坏 along 缘
   (`«化为有缘之成坏»`); the 墨经's 同 is a class where each belongs to one and one only (sufficient,
@@ -2438,8 +2441,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   telling going on from ending at every point is exactly excluded middle (`«延尽之定当且仅当排中»`);
   a sequence of classes, no order between them assumed, reads generation at every order
   (`«阶生成»`); renewal without end and ceasing are going on along some branch and ending on every
-  branch of renewing into (`«生生即延»`, `«息即尽»`). Imported by `Becoming.GrammarScope`,
-  `Becoming.GrammarPath` and `Becoming.MapInstances`.
+  branch of renewing into (`«生生即延»`, `«息即尽»`). Imported by `Becoming.GrammarLaws`,
+  `Becoming.GrammarScope`, `Becoming.GrammarPath` and `Becoming.MapInstances`.
 * `Becoming.MapInstances` (L2): the old base's regimes on the map, with occurrences as pairs of a
   step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
   alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
@@ -2472,6 +2475,32 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `preimage_of_mem_map`), proved by recursion where the prelude uses `propext`; and the one balance
   over a stretch, a count balanced at each step being balanced over it (`balance_over_stretch_on`),
   from which the stretch balances of flows, amounts, courses and censuses are derived.
+* `Becoming.GrammarLaws` (L0): the five master laws of 08 §7 on the grammar, for every carrier and
+  relation, with no premise. Closure: lying within a closure (`«所闭»`) is being the occurrence
+  itself or reached (`«所闭当且仅当同一或及»`). Balance: a perfect pairing of finite lists under a
+  relation (`«对»`) conserves count (`«对之长»`) and under the one is exactly equal count
+  (`«一之对»`); pairings compose, join, gather over a family and carry over a stretch under the
+  closure (`«对之接»`, `«对之并»`, `«对之族»`, `«对之程»`), and the count law at a step and over a
+  stretch is exactly a pairing of units (`«守数当且仅当可对»`, `«程守数当且仅当可对»`): an exact
+  cardinality representation, near-definitional, the pairing supplied. Finite runs: drawn in is
+  reaching something that does not reach back (`«入当且仅当有不返»`); with the successor fixed at
+  what it reaches, an occurrence reaching itself is not drawn (`«定后于则返者不入»`); along a line
+  a list holds, merging nothing at its places, the start reaches itself (`«线有限不并则返»`, by
+  pigeonhole with no decidability); where every course of no rise then a least fall ends, the
+  falls along a line that does not rise do not recur (`«尽则不或屡»`), and rest is no case of being
+  drawn either way (`«止而不入之例»`, `«入而屡之例»`). Lumping: with the successor fixed where `E`
+  leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
+  map's image has a fixed successor exactly where sameness under the map goes alike
+  (`«像定后当且仅当同行»`). Order: widening of relations is irreflexive, one-way and transitive and
+  excludes keeping and being mixed (`«广不可逆»`, `«广之传递»`). It imports the grammar, its map
+  and the prelude only, and `Becoming.Frame` imports it, so every model lies above it: closure is
+  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`; finite runs in
+  `Becoming.Recurrence`, `Becoming.Attraction` and `Becoming.Amounts`; lumping, bridged in
+  `Becoming.Laws`, in `Becoming.Mechanism`, `Becoming.GrammarRegularity` and
+  `Becoming.IdentificationRuns`; order in `Becoming.Admission`, `Becoming.Regions` and
+  `Becoming.Weightings`. Balance is represented both ways in `Becoming.Flow`
+  (`Flow.balances_iff_units`) and not derived: its consumers need only the count, so their proofs
+  stay arithmetic (board item OU3b).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the

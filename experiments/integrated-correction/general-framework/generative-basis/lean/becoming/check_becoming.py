@@ -69,7 +69,7 @@ import check as audit_support  # noqa: E402
 FOUNDATION = ["GenerativeCore", "InquirySufficiency", "RelationalRenewal"]
 # The package: the base (`Becoming.World`, the one unfolding's records, a world being a run of the
 # frame; prelude only), the four core layers and their root. Compile order comes from the imports.
-CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.Prelude", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
+CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
@@ -187,6 +187,19 @@ RECEIPT = HERE / "becoming-verification.json"
 RETAINED = HERE / "becoming-checks"
 
 SCOPE = (
+    "GrammarLaws: the five master laws on the grammar, for every carrier and relation: closure is being the "
+    "occurrence itself or reached; perfect pairings of finite lists under a relation conserve count, are exactly "
+    "equal count under the one, compose, join, gather over a family and carry over a stretch under the closure, so "
+    "the count law at a step and over a stretch is exactly a pairing of units, near-definitional; an occurrence is "
+    "drawn exactly where it reaches something that does not reach back, with the successor fixed at what it reaches "
+    "one reaching itself is not drawn, along a line a list holds merging nothing at its places brings it back to its "
+    "start, and within finitely many occurrences with successors merging nothing is every occurrence reaching itself "
+    "under a fixed successor; where every course of no rise then a least fall ends, the falls along a line that does "
+    "not rise do not recur, rest being no case of being drawn either way; going alike is constancy where the "
+    "successor is fixed and a successor available, and a map's image has a fixed successor exactly where sameness "
+    "under the map goes alike; widening of relations is a strict order excluding keeping and being mixed. Frame's "
+    "closure is the grammar's, and the models' laws of closure, finite runs, lumping and order are proved from these; "
+    "balance is represented both ways in Flow and not derived. "
     "GrammarPath: a line under a class that must pass through a set holds a member of it alike to its start; "
     "under a constant class, and up to the net's end, everything downstream of anything alike to a member whose "
     "effects the class holds is alike to it and on its line, and given the regularity that is equivalent to holding "

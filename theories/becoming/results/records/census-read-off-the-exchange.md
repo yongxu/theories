@@ -83,6 +83,7 @@ The first open target of chapter §8.1, the deductive necessity of the whole, ha
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `census read off the exchange`, `从交换读出的普查`, `Becoming.Flow.readOff_census_of_closed`, `Becoming.World.Finite.withRest_counted`, `Becoming.Flow.listed_iff_lpo`
 

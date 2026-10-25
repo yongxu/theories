@@ -564,7 +564,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
       "role": "proof",
-      "sha256": "a360bf56d40bb977b686bd8756651357f995c5133d22cdd231ed79a71dc5899b"
+      "sha256": "42022bafd4ad708f38914393017450031c1ab300bf4d9745bb190d4429b7ad01"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
@@ -584,12 +584,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
       "role": "proof",
-      "sha256": "33d6ec243eec01782ba8fd9a27ed31ab63f1ad4e5a4a0d90b81ffccaafa8626b"
+      "sha256": "fe507d9adf7ac5a5e1f8a6d959368ecccfc60e7db7773798f10a3f6de8fcfdfe"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
       "role": "proof",
-      "sha256": "6d97f6b26e6396b6ea64fae3f46c0fa7b6bc10d359ff3be3dea5213e683303e1"
+      "sha256": "767d9a4b834fff22258376d97242e8ed4f71203005f350088cf5297ce40736f0"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T152131.281884Z/verification.json",

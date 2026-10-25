@@ -60,7 +60,7 @@ The root chapter's open item on self-changing conditions, narrowed: a rule chang
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «有常之逐点», «类有常当且仅当含于核».
 - **formal-reuse**: [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md). Law.unending_iff_steps, Law.unending_alike.
 
-**Used by:** [the-source-texts-test-systems](the-source-texts-test-systems.md)
+**Used by:** [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [the-source-texts-test-systems](the-source-texts-test-systems.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -71,6 +71,7 @@ The root chapter's open item on self-changing conditions, narrowed: a rule chang
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194024.593238Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [02-MAP.md](../../chapters/02-MAP.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `Rules that change themselves, read in the grammar`, `自改其则者于文法中读`, `Becoming.ClosedCapture.lock_line`
 

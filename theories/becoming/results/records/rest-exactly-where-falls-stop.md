@@ -68,6 +68,8 @@ Well-foundedness of a strict order, read for dissipative worlds: with dependent 
 - related, not a proved adapter: [least-loss-rest](least-loss-rest.md). A least fall in Archimedean amounts is the other.
 - related, not a proved adapter: [space-and-its-parts](space-and-its-parts.md). Its whole-number rest theorem is the instance here with its own premises.
 
+**Used by:** [master-laws-on-the-grammar](master-laws-on-the-grammar.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -81,6 +83,7 @@ Well-foundedness of a strict order, read for dissipative worlds: with dependent 
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `rest exactly where falls stop`, `恰在下降停止之处停息`, `no endless fall`, `没有无尽的下降`, `one premise of rest`, `停息的唯一前提`, `Becoming.World.InAmounts.change_stops_iff`, `Becoming.Amounts.NoEndlessFall`, `Becoming.Pass.endless_keeps_from_rest`
 

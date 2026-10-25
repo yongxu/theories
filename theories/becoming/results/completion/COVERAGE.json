@@ -1040,7 +1040,7 @@
     {
       "id": "return",
       "name": "Finite runs",
-      "statement": "within finitely many configurations a law returns every configuration or is drawn, and rest is a case of being drawn",
+      "statement": "within finitely many configurations a law returns every configuration or is drawn; where every course of no rise then a least fall ends, falls along a line that does not rise do not recur, and rest is not a case of being drawn",
       "anchors": [
         "Becoming.Branching.Returns",
         "Becoming.Branching.Lossless",

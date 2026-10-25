@@ -15,6 +15,19 @@ unfolding as amounts that the formations taking part in each step take and give
   before, plus its replenishment (`Balances.over`), and the same holds over any stretch
   of steps (`Balances.accumulates`). Adding amounts across conditions presupposes that
   their units are commensurable.
+* **Balance on the grammar.** A flow balances a web exactly where, at every step and condition,
+  unit lists as long as the level before and what is given are matched one to one, under the one,
+  with unit lists as long as the level after and what is taken (`balances_iff_units`); on a family
+  across a step likewise (`balancesOn_iff_units`); a matching under any relation gives balance
+  (`balances_of_matched`). The family's balance is matched the same way (`over_iff_units`), and the
+  grammar's law of families (`«对之族»`) gathers the members' matchings into the family's
+  (`BalancesOn.units_over`); over a stretch, the grammar's `«程守数当且仅当可对»` and `«对之程»` are
+  the representation and the law. This reads balance on the grammar (`«对»` of
+  `Becoming.GrammarLaws`), as an exact cardinality representation; it does not derive it, since the
+  matching is supplied, not drawn from the unfolding. The numerical proofs (`Balances.over`,
+  `BalancesOn.over`, `Balances.accumulates` and their consumers) stay arithmetic: each needs only
+  the count, which a matching under the one is exactly (`«一之对»`), so routing them through lists
+  would add a dependence and no content.
 * Balance makes every change the work of a formation. In a balanced flow every rise is
   given to (`Balances.rise_given`), and where only active formations give, the premise
   `RenewedBy` of `Becoming.Arising` is a theorem (`Balances.renewedBy`). Every fall is
@@ -141,9 +154,8 @@ theorem total_map (g : α → β) (q : β → Nat) :
 
 /-- Quantities that agree everywhere have the same total. -/
 theorem total_congr {p q : α → Nat} (same : ∀ a, p a = q a) :
-    ∀ as : List α, total as p = total as q
-  | [] => rfl
-  | a :: as => (congrArg (· + total as p) (same a)).trans (congrArg (q a + ·) (total_congr same as))
+    ∀ as : List α, total as p = total as q :=
+  GrammarLaws.total_congr same
 
 /-- Each member counted once totals the number of members. -/
 theorem total_ones : ∀ as : List α, total as (fun _ => 1) = as.length
@@ -306,6 +318,35 @@ theorem Acting.giversSupported (acting : L.Acting W) (dependent : W.Dependent) (
     (c : C) : L.GiversSupported W t c :=
   fun f present gives => dependent t f (acting t f c present gives)
 
+/-- **A flow balances a web exactly where its units are matched one to one**, on the grammar: at
+every step and condition, lists of units as long as the level before, what is given, the level
+after and what is taken exist with the first two matched one to one, under the one, with the last
+two (`«守数当且仅当可对»`). An exact cardinality representation of natural-number balance at one
+step: the matching is supplied, built from the numbers, not derived from the unfolding. -/
+theorem balances_iff_units : L.Balances W ↔ ∀ t c, ∃ before given after taken : List Unit,
+      before.length = W.level t c ∧ given.length = L.given t c ∧
+        after.length = W.level (t + 1) c ∧ taken.length = L.taken t c ∧
+          «对» «一» (before ++ given) (after ++ taken) :=
+  ⟨fun balances t c => «守数当且仅当可对».mp (balances t c),
+   fun units t c => «守数当且仅当可对».mpr (units t c)⟩
+
+/-- **A one-to-one matching under any relation gives balance**: lists of any carrier, as long as
+the level before, what is given, the level after and what is taken, the first two matched one to
+one with the last two under some relation, at every step and condition (`«对则守数»`). For an
+arbitrary relation only this direction holds: under the empty relation equal counts have no
+matching (`«等长而不对之例»`). -/
+theorem balances_of_matched {α : Type _} {R : «际» α}
+    (matched : ∀ t c, ∃ before given after taken : List α,
+      before.length = W.level t c ∧ given.length = L.given t c ∧
+        after.length = W.level (t + 1) c ∧ taken.length = L.taken t c ∧
+          «对» R (before ++ given) (after ++ taken)) :
+    L.Balances W :=
+  fun t c => match matched t c with
+    | ⟨_, _, _, _, hb, hg, ha, ht, h⟩ => by
+      have conserved := «对则守数» h
+      rw [hb, hg, ha, ht] at conserved
+      exact conserved
+
 /-- The family's total after a step, plus its uptake, is its total before, plus its
 replenishment. -/
 theorem Balances.over (balances : L.Balances W) : ∀ (cs : List C) (t : Nat),
@@ -326,6 +367,63 @@ def BalancesOn (cs : List C) (t : Nat) : Prop :=
   ∀ c, c ∈ cs → W.level (t + 1) c + L.taken t c = W.level t c + L.given t c
 
 variable {L W}
+
+/-- **A flow balances on a family across a step exactly where each member's units are matched
+one to one**, under the one (`«守数当且仅当可对»`). -/
+theorem balancesOn_iff_units {cs : List C} {t : Nat} :
+    L.BalancesOn W cs t ↔ ∀ c, c ∈ cs → ∃ before given after taken : List Unit,
+      before.length = W.level t c ∧ given.length = L.given t c ∧
+        after.length = W.level (t + 1) c ∧ taken.length = L.taken t c ∧
+          «对» «一» (before ++ given) (after ++ taken) :=
+  ⟨fun balances c mem => «守数当且仅当可对».mp (balances c mem),
+   fun units c mem => «守数当且仅当可对».mpr (units c mem)⟩
+
+/-- **The family's balance is a matching of the family's units**, both ways: the family's total
+after a step with its uptake is its total before with its replenishment exactly where unit lists,
+one for each member's level before, what it is given, its level after and what is taken from it,
+gathered over the family (`«聚»`), match the level before with what is given to the level after
+with what is taken, one to one under the one. -/
+theorem over_iff_units {cs : List C} {t : Nat} :
+    W.stock cs (t + 1) + L.uptake cs t = W.stock cs t + L.replenishment cs t ↔
+      ∃ before given after taken : C → List Unit,
+        (∀ c, (before c).length = W.level t c) ∧ (∀ c, (given c).length = L.given t c) ∧
+          (∀ c, (after c).length = W.level (t + 1) c) ∧ (∀ c, (taken c).length = L.taken t c) ∧
+            «对» «一» («聚» before cs ++ «聚» given cs) («聚» after cs ++ «聚» taken cs) :=
+  have gathered : ∀ (u : C → List Unit) (q : C → Nat), (∀ c, (u c).length = q c) →
+      («聚» u cs).length = total cs q :=
+    fun u _ lengths => («聚之长» u cs).trans (total_congr lengths cs)
+  ⟨fun e => ⟨fun c => List.replicate (W.level t c) (), fun c => List.replicate (L.given t c) (),
+      fun c => List.replicate (W.level (t + 1) c) (), fun c => List.replicate (L.taken t c) (),
+      fun _ => GrammarLaws.length_replicate () _, fun _ => GrammarLaws.length_replicate () _,
+      fun _ => GrammarLaws.length_replicate () _, fun _ => GrammarLaws.length_replicate () _,
+      «一之对».mpr ((ListTests.length_append _ _).trans
+        ((Naturals.add_congr (gathered _ _ fun _ => GrammarLaws.length_replicate () _)
+            (gathered _ _ fun _ => GrammarLaws.length_replicate () _)).trans
+          (e.symm.trans ((Naturals.add_congr
+            (gathered _ _ fun _ => GrammarLaws.length_replicate () _)
+            (gathered _ _ fun _ => GrammarLaws.length_replicate () _)).symm.trans
+              (ListTests.length_append _ _).symm))))⟩,
+   fun ⟨before, given, after, taken, hb, hg, ha, ht, h⟩ =>
+    (Naturals.add_congr (gathered after _ ha) (gathered taken _ ht)).symm.trans
+      ((ListTests.length_append _ _).symm.trans ((«对之长» h).symm.trans
+        ((ListTests.length_append _ _).trans
+          (Naturals.add_congr (gathered before _ hb) (gathered given _ hg)))))⟩
+
+/-- **Balanced on a family, the members' matchings gather into the family's**: the grammar's law of
+families (`«对之族»`) at the members' unit lists. -/
+theorem BalancesOn.units_over {cs : List C} {t : Nat} (balances : L.BalancesOn W cs t) :
+    ∃ before given after taken : C → List Unit,
+      (∀ c, c ∈ cs → (before c).length = W.level t c ∧ (given c).length = L.given t c ∧
+        (after c).length = W.level (t + 1) c ∧ (taken c).length = L.taken t c) ∧
+          «对» «一» («聚» (fun c => before c ++ given c) cs) («聚» (fun c => after c ++ taken c) cs) :=
+  ⟨fun c => List.replicate (W.level t c) (), fun c => List.replicate (L.given t c) (),
+   fun c => List.replicate (W.level (t + 1) c) (), fun c => List.replicate (L.taken t c) (),
+   fun _ _ => ⟨GrammarLaws.length_replicate () _, GrammarLaws.length_replicate () _,
+     GrammarLaws.length_replicate () _, GrammarLaws.length_replicate () _⟩,
+   «对之族» cs fun c mem => «一之对».mpr ((ListTests.length_append _ _).trans
+     ((Naturals.add_congr (GrammarLaws.length_replicate () _) (GrammarLaws.length_replicate () _)).trans
+       ((balances c mem).symm.trans ((Naturals.add_congr (GrammarLaws.length_replicate () _)
+         (GrammarLaws.length_replicate () _)).symm.trans (ListTests.length_append _ _).symm))))⟩
 
 /-- Balance is balance on every family across every step. -/
 theorem Balances.on (balances : L.Balances W) (cs : List C) (t : Nat) : L.BalancesOn W cs t :=

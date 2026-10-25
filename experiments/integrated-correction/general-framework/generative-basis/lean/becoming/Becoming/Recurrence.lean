@@ -45,7 +45,14 @@ assumed of any unfolding; it is the condition written into each law that uses it
   while some configuration never returns has no list holding every configuration
   (`Lossless.unlisted`). Losing nothing, no quantity that never falls along an orbit rises on
   it (`Lossless.no_rise`), so a quantity that never falls along an orbit and rises at some
-  step of it, an arrow, needs a law that merges (`rise_not_lossless`).
+  step of it, an arrow, needs a law that merges (`rise_not_lossless`). These laws are the
+  grammar's law of finite runs (`Becoming.GrammarLaws`) at the law's relation `next x = y`, whose
+  successor is fixed and total (`Law.next_fixed`, `Law.next_total`), where returning is reaching
+  itself and merging nothing is a fixed predecessor (`Law.returns_iff_reaches`,
+  `Law.lossless_iff_fixedBefore`): `lossless_iff_returns`, `Lossless.returns` and
+  `lossless_of_returns` are proved from it. Under every process, the same law at the steps gives
+  every configuration returning from a step out of each, with no run supplied
+  (`Branching.Lossless.returns_of_total`).
 * **Open worlds separate the three.** Counting on (`Nat.succ`) merges nothing, never returns,
   cannot have its beginning again after one step, and rises at every step: an arrow without
   loss (`succ_open`). Counting down (`Nat.pred`) merges zero and one, yet every number can be
@@ -77,7 +84,9 @@ open world, while its present, held within finitely many configurations, forgets
 of these laws as entropy, as the passing Ren names, or as thermodynamic recurrence belong to
 the study, not to this module.
 
-**Classical sources.** `revisits_within` is the pigeonhole principle, and `lossless_iff_returns`
+**Classical sources.** `revisits_within` is the pigeonhole principle, a lemma on numbers and lists
+proved once in `Becoming.GrammarLaws`, where the law of finite runs needs it below the frame; the
+declarations here are its aliases. `lossless_iff_returns`
 is the classical fact that an injective self-map of a finite set is a permutation, every point
 lying on a cycle; `returns_iff_keeps` adds that it is then surjective at every step. What is the
 spine's own is the form: no decidable equality and no choice is used, a list holding the
@@ -139,100 +148,46 @@ section Sequences
 
 variable {S : Type u}
 
-/-! ## Revisiting, with no decidability -/
+/-! ## Revisiting, with no decidability
+
+Pigeonhole, a lemma on numbers and lists, is proved once in `Becoming.GrammarLaws`, where the law
+of finite runs needs it below the frame; the declarations here are its aliases, each with its
+statement there. -/
 
 /-- A step that comes no later than `K + 1` is no later than `K` or is `K + 1`. -/
 theorem le_succ_cases {n K : Nat} (le : n ≤ K + 1) : n ≤ K ∨ n = K + 1 :=
-  match Nat.lt_or_ge n (K + 1) with
-  | .inl lt => Or.inl (Nat.le_of_lt_succ lt)
-  | .inr ge => Or.inr (Nat.le_antisymm le ge)
+  GrammarLaws.le_succ_cases le
 
 /-- How far `j` lies beyond `i`, at least one step. -/
 theorem gap_of_lt {i j : Nat} (lt : i < j) : ∃ d, j = i + (d + 1) :=
-  let ⟨d, same⟩ := le_dest lt
-  ⟨d, same.trans (Nat.succ_add i d)⟩
+  GrammarLaws.gap_of_lt lt
 
-theorem mem_cons_split {x a : S} {l : List S} (mem : x ∈ a :: l) : x = a ∨ x ∈ l := by
-  cases mem with
-  | head => exact Or.inl rfl
-  | tail _ mem => exact Or.inr mem
+theorem mem_cons_split {x a : S} {l : List S} (mem : x ∈ a :: l) : x = a ∨ x ∈ l :=
+  GrammarLaws.mem_cons_split mem
 
 /-- The `n`-th number other than `m`, counting from zero. -/
-def skipAt : Nat → Nat → Nat
-  | 0, n => n + 1
-  | _ + 1, 0 => 0
-  | m + 1, n + 1 => skipAt m n + 1
+def skipAt : Nat → Nat → Nat := GrammarLaws.skipAt
 
-theorem skipAt_ne : ∀ m n, skipAt m n ≠ m
-  | 0, _ => fun same => Nat.noConfusion same
-  | _ + 1, 0 => fun same => Nat.noConfusion same
-  | m + 1, n + 1 => fun same => skipAt_ne m n (Nat.succ.inj same)
+theorem skipAt_ne : ∀ m n, skipAt m n ≠ m := GrammarLaws.skipAt_ne
 
-theorem skipAt_le : ∀ m n, skipAt m n ≤ n + 1
-  | 0, _ => Nat.le_refl _
-  | _ + 1, 0 => Nat.zero_le _
-  | m + 1, n + 1 => Nat.succ_le_succ (skipAt_le m n)
+theorem skipAt_le : ∀ m n, skipAt m n ≤ n + 1 := GrammarLaws.skipAt_le
 
-theorem skipAt_lt : ∀ m {i j : Nat}, i < j → skipAt m i < skipAt m j
-  | 0, _, _, lt => Nat.succ_lt_succ lt
-  | _ + 1, 0, _ + 1, _ => Nat.succ_pos _
-  | m + 1, _ + 1, _ + 1, lt => Nat.succ_lt_succ (skipAt_lt m (Nat.lt_of_succ_lt_succ lt))
-  | _ + 1, _, 0, lt => absurd lt (Nat.not_lt_zero _)
+theorem skipAt_lt : ∀ m {i j : Nat}, i < j → skipAt m i < skipAt m j := GrammarLaws.skipAt_lt
 
 /-- Sorting the first `K + 1` values of a sequence held by `a :: l`: two of them coincide, or
 all of them lie in `l`, or all but one, which is `a`, lie in `l`. -/
 theorem split_at_head {g : Nat → S} {a : S} {l : List S} :
     ∀ K, (∀ n, n ≤ K → g n = a ∨ g n ∈ l) →
       (∃ i j, i < j ∧ j ≤ K ∧ g i = g j) ∨ (∀ n, n ≤ K → g n ∈ l) ∨
-        (∃ m, m ≤ K ∧ g m = a ∧ ∀ n, n ≤ K → n ≠ m → g n ∈ l)
-  | 0, held =>
-    match held 0 (Nat.le_refl 0) with
-    | .inl at_a => Or.inr (Or.inr ⟨0, Nat.le_refl 0, at_a,
-        fun n le other => absurd (Nat.le_antisymm le (Nat.zero_le n)) other⟩)
-    | .inr mem => Or.inr (Or.inl fun n le => by
-        have same : n = 0 := Nat.le_antisymm le (Nat.zero_le n)
-        subst same
-        exact mem)
-  | K + 1, held =>
-    match split_at_head K (fun n le => held n (Nat.le_succ_of_le le)) with
-    | .inl ⟨i, j, lt, le, same⟩ => Or.inl ⟨i, j, lt, Nat.le_succ_of_le le, same⟩
-    | .inr (.inl all) =>
-      match held (K + 1) (Nat.le_refl _) with
-      | .inl at_a => Or.inr (Or.inr ⟨K + 1, Nat.le_refl _, at_a, fun n le other =>
-          match le_succ_cases le with
-          | .inl le => all n le
-          | .inr same => absurd same other⟩)
-      | .inr mem => Or.inr (Or.inl fun n le =>
-          match le_succ_cases le with
-          | .inl le => all n le
-          | .inr same => by subst same; exact mem)
-    | .inr (.inr ⟨m, le_m, at_m, rest⟩) =>
-      match held (K + 1) (Nat.le_refl _) with
-      | .inl at_a =>
-        Or.inl ⟨m, K + 1, Nat.lt_succ_of_le le_m, Nat.le_refl _, at_m.trans at_a.symm⟩
-      | .inr mem => Or.inr (Or.inr ⟨m, Nat.le_succ_of_le le_m, at_m, fun n le other =>
-          match le_succ_cases le with
-          | .inl le => rest n le other
-          | .inr same => by subst same; exact mem⟩)
+        (∃ m, m ≤ K ∧ g m = a ∧ ∀ n, n ≤ K → n ≠ m → g n ∈ l) :=
+  GrammarLaws.split_at_head
 
 /-- **Pigeonhole, with no decidability.** If a list holds the first `l.length + 1` values of a
 sequence, two of them coincide. Nothing is decided about the configurations: membership
 in the list is used as it is given. -/
 theorem revisits_within : ∀ (l : List S) (g : Nat → S), (∀ n, n ≤ l.length → g n ∈ l) →
-    ∃ i j, i < j ∧ j ≤ l.length ∧ g i = g j
-  | [], _, held => nomatch held 0 (Nat.le_refl 0)
-  | _ :: l, g, held =>
-    match split_at_head (l.length + 1) (fun n le => mem_cons_split (held n le)) with
-    | .inl found => found
-    | .inr (.inl all) =>
-      let ⟨i, j, lt, le, same⟩ :=
-        revisits_within l g (fun n le => all n (Nat.le_succ_of_le le))
-      ⟨i, j, lt, Nat.le_succ_of_le le, same⟩
-    | .inr (.inr ⟨m, _, _, rest⟩) =>
-      let ⟨i, j, lt, le, same⟩ := revisits_within l (fun n => g (skipAt m n)) (fun n le =>
-        rest (skipAt m n) (Nat.le_trans (skipAt_le m n) (Nat.succ_le_succ le)) (skipAt_ne m n))
-      ⟨skipAt m i, skipAt m j, skipAt_lt m lt, Nat.le_trans (skipAt_le m j) (Nat.succ_le_succ le),
-        same⟩
+    ∃ i j, i < j ∧ j ≤ l.length ∧ g i = g j :=
+  GrammarLaws.revisits_within
 
 /-- Two steps of a sequence at one configuration. -/
 def Revisits (g : Nat → S) : Prop := ∃ i j, i < j ∧ g i = g j
@@ -330,11 +285,27 @@ theorem orbit_shift (next : S → S) (s : S) (n : Nat) :
     orbit next s (n + 1) = orbit next (next s) n :=
   (congrArg (orbit next s) (Nat.add_comm n 1)).trans (orbit_add next s 1 n)
 
+/-- A determined law's orbit is its `n` steps: `orbit next s n` is had from `s` by `n` steps of the
+law's process. -/
+theorem steps_orbit (next : S → S) : ∀ (n : Nat) (s : S),
+    «迭» (fun x y => (process next).step x () y) n s (orbit next s n)
+  | 0, _ => rfl
+  | n + 1, s => ⟨next s, rfl,
+      Eq.subst (motive := fun z => «迭» (fun x y => (process next).step x () y) n (next s) z)
+        (orbit_shift next s n).symm (steps_orbit next n (next s))⟩
+
+/-- The steps of a determined law's process have a fixed successor. -/
+theorem step_fixed (next : S → S) : «定后» (fun x y => (process next).step x () y) :=
+  fun _ _ ⟨_, e₁, e₂⟩ => e₁.trans e₂.symm
+
+/-- A configuration had again after `p` steps is had again after every multiple of `p`: the
+grammar's law of loops (`«迭之周»`) at the law's steps, read back on the orbit by the fixed
+successor (`«迭之定»`). -/
 theorem orbit_mul {next : S → S} {s : S} {p : Nat} (back : orbit next s p = s) :
-    ∀ k, orbit next s (p * k) = s
-  | 0 => rfl
-  | k + 1 => (orbit_add next s (p * k) p).trans
-      ((congrArg (fun x => orbit next x p) (orbit_mul back k)).trans back)
+    ∀ k, orbit next s (p * k) = s :=
+  fun k => «迭之定» (step_fixed next) (p * k) (steps_orbit next (p * k) s)
+    («迭之周» (Eq.subst (motive := fun w => «迭» (fun x y => (process next).step x () y) p s w) back
+      (steps_orbit next p s)) k)
 
 end Law
 
@@ -450,28 +421,35 @@ theorem Returns.reachable {s : S} (returns : Returns P s) (n : Nat) : Reachable 
   match returns.reachable_from n with
   | ⟨x, as, len, path, _⟩ => ⟨x, as, len, path⟩
 
+/-- **Returning is reaching itself along the steps**, under every process: a first step, then
+lying within the closure of the steps (`«及当且仅当一步而所闭»`, `reach_iff_withinClosure`). -/
+theorem returns_iff_reaches {s : S} : Returns P s ↔ «及» (Steps P) s s :=
+  ⟨fun ⟨a, t, step, reach⟩ => «及当且仅当一步而所闭».mpr ⟨t, ⟨a, step⟩, reach_iff_withinClosure.mp reach⟩,
+   fun reach => match «及当且仅当一步而所闭».mp reach with
+    | ⟨t, ⟨a, step⟩, within⟩ => ⟨a, t, step, reach_iff_withinClosure.mpr within⟩⟩
+
+/-- **Merging nothing is a fixed predecessor of the steps**, under every process. -/
+theorem lossless_iff_fixedBefore : Lossless P ↔ «定前» (Steps P) :=
+  ⟨fun lossless x y ⟨_, ⟨a, s₁⟩, ⟨b, s₂⟩⟩ => lossless x y a b _ s₁ s₂,
+   fun fixed x y a b _ s₁ s₂ => fixed x y ⟨_, ⟨a, s₁⟩, ⟨b, s₂⟩⟩⟩
+
 /-- Merging nothing, where two steps of a run are at one configuration, so are the steps as
-many before them, back to the beginning. -/
+many before them, back to the beginning: the grammar's law (`«定前则线可退»`) at the steps, the run
+being the line, up to the later of the two steps. -/
 theorem Lossless.cancel (lossless : Lossless P) (r : Run P) :
-    ∀ i d, r.state i = r.state (i + d) → r.state 0 = r.state d
-  | 0, d, same => same.trans (congrArg r.state (Nat.zero_add d))
-  | i + 1, d, same =>
-    have shift : r.state (i + d + 1) = r.state (i + 1) :=
-      (congrArg r.state (Nat.succ_add i d).symm).trans same.symm
-    Lossless.cancel lossless r i d (lossless _ _ _ _ _ (r.step i)
-      (Eq.subst (motive := fun z => P.step (r.state (i + d)) (r.act (i + d)) z) shift
-        (r.step (i + d))))
+    ∀ i d, r.state i = r.state (i + d) → r.state 0 = r.state d :=
+  fun i d same => «定前则线可退» (N := i + d) (lossless_iff_fixedBefore.mp lossless)
+    (fun k _ => ⟨r.act k, r.step k⟩) i d (Nat.le_refl _) same
 
 /-- **Merging nothing within finitely many configurations, a run comes back to where it
 began.** Where a list holds the configurations of a run of a process that merges nothing, the
-run is at its first configuration again after some steps. -/
+run is at its first configuration again after some steps: the grammar's line law
+(`«线有限不并则回»`) at the steps, the run being the line. -/
 theorem Lossless.comes_back (lossless : Lossless P) (r : Run P) {l : List S}
     (held : ∀ n, r.state n ∈ l) : ∃ d, 0 < d ∧ r.state d = r.state 0 :=
-  match revisits_within l r.state (fun n _ => held n) with
-  | ⟨i, _, lt, _, same⟩ => match gap_of_lt lt with
-    | ⟨d, gap⟩ =>
-      ⟨d + 1, Nat.succ_pos d,
-        (lossless.cancel r i (d + 1) (same.trans (congrArg r.state gap))).symm⟩
+  match «线有限不并则回» («定前则线不并» (lossless_iff_fixedBefore.mp lossless) r.state l.length)
+      (fun i _ => ⟨r.act i, r.step i⟩) (fun n _ => held n) with
+  | ⟨d, pos, _, back⟩ => ⟨d, pos, back⟩
 
 /-- **Merging nothing within finitely many configurations, every configuration of a run comes
 back on the run itself.** -/
@@ -480,16 +458,23 @@ theorem Lossless.recurs (lossless : Lossless P) (r : Run P) {l : List S}
   lossless.comes_back (r.onward i) (fun n => held (i + n))
 
 /-- **Merging nothing within finitely many configurations, a configuration with a run returns**,
-where some run begins at the configuration; `Law.Lossless.returns` is the case of a determined
-law's run. -/
+where some run begins at the configuration: the grammar's line law (`«线有限定前则返»`) at the
+steps, the run being the line. -/
 theorem Lossless.returns (lossless : Lossless P) {all : List S} (every : ∀ s, s ∈ all)
     (r : Run P) : Returns P (r.state 0) :=
-  match lossless.comes_back r (fun _ => every _) with
-  | ⟨0, pos, _⟩ => absurd pos (Nat.lt_irrefl 0)
-  | ⟨d + 1, _, back⟩ =>
-    ⟨r.act 0, r.state 1, r.step 0,
-      Eq.subst (motive := fun z => Reach P (r.state 1) z)
-        ((congrArg r.state (Nat.add_comm 1 d)).trans back) (r.reach 1 d)⟩
+  returns_iff_reaches.mpr
+    («线有限定前则返» (l := all) (lossless_iff_fixedBefore.mp lossless)
+      (fun i _ => ⟨r.act i, r.step i⟩) (fun _ _ => every _))
+
+/-- **Merging nothing within finitely many configurations, with a step from each, every
+configuration returns**, under every process, with no run supplied: the grammar's law of finite
+runs (`«有限遍后定前则皆返»`) at the steps. `Lossless.returns` supplies a run from the configuration;
+here a step from every configuration supplies it. -/
+theorem Lossless.returns_of_total (lossless : Lossless P) {all : List S}
+    (every : ∀ s, s ∈ all) (total : ∀ s, ∃ a t, P.step s a t) (s : S) : Returns P s :=
+  returns_iff_reaches.mpr
+    («有限遍后定前则皆返» every (fun x => match total x with | ⟨a, t, step⟩ => ⟨t, a, step⟩)
+      (lossless_iff_fixedBefore.mp lossless) s)
 
 /-- **Merging nothing within finitely many configurations, nothing rises along a run.** A
 quantity that never falls along a run keeps its value across every step. -/
@@ -576,6 +561,50 @@ theorem returns_iff {next : S → S} {s : S} : Returns next s ↔ ∃ p, 0 < p �
     | k + 1, _, back => ⟨(), next s, rfl,
         Branching.law_reach_iff.mpr ⟨k, (orbit_shift next s k).symm.trans back⟩⟩⟩
 
+/-! ### The law as a relation of the grammar
+
+A determined law is the relation `next x = y`: its successor is fixed and every configuration has
+one. Read so, returning is reaching itself and merging nothing is a fixed predecessor, and the
+laws of finite runs below are the grammar's (`Becoming.GrammarLaws`) at this relation. -/
+
+/-- A determined law has a fixed successor. -/
+theorem next_fixed (next : S → S) : «定后» (fun x y => next x = y) :=
+  fun _ _ ⟨_, e₁, e₂⟩ => e₁.symm.trans e₂
+
+/-- Under a determined law every configuration has a successor. -/
+theorem next_total (next : S → S) : ∀ x, ∃ y, next x = y := fun x => ⟨next x, rfl⟩
+
+/-- What is had `n + 1` steps on is reached. -/
+theorem reaches_of_orbit {next : S → S} : ∀ (n : Nat) {s y : S}, orbit next s (n + 1) = y →
+    «及» (fun x y => next x = y) s y
+  | 0, _, _, to => .one to
+  | n + 1, s, _, to => .more rfl (reaches_of_orbit n ((orbit_shift next s (n + 1)).symm.trans to))
+
+/-- Reaching along a law is being had some positive number of steps on its orbit. -/
+theorem reaches_iff_orbit {next : S → S} {s y : S} :
+    «及» (fun x y => next x = y) s y ↔ ∃ n, orbit next s (n + 1) = y :=
+  ⟨fun reach => by
+    induction reach with
+    | one e => exact ⟨0, e⟩
+    | @more x _ _ e _ ih => exact match ih with
+      | ⟨n, to⟩ => ⟨n + 1, (orbit_shift next x (n + 1)).trans (by cases e; exact to)⟩,
+   fun ⟨n, to⟩ => reaches_of_orbit n to⟩
+
+/-- **Returning is reaching itself.** -/
+theorem returns_iff_reaches {next : S → S} {s : S} :
+    Returns next s ↔ «及» (fun x y => next x = y) s s :=
+  returns_iff.trans
+    ⟨fun ⟨p, pos, back⟩ => match p, pos, back with
+      | n + 1, _, back => reaches_iff_orbit.mpr ⟨n, back⟩,
+     fun reach => match reaches_iff_orbit.mp reach with
+      | ⟨n, back⟩ => ⟨n + 1, Nat.succ_pos n, back⟩⟩
+
+/-- **Merging nothing is the grammar's fixed predecessor.** -/
+theorem lossless_iff_fixedBefore {next : S → S} : Lossless next ↔ «定前» (fun x y => next x = y) :=
+  lossless_iff.trans
+    ⟨fun lossless x y ⟨_, e₁, e₂⟩ => lossless x y (e₁.trans e₂.symm),
+     fun fixed x y same => fixed x y ⟨next x, rfl, same.symm⟩⟩
+
 /-! ### What every law keeps and loses -/
 
 /-- **A possibility lost stays lost**, under every law: the case of `Branching.lost_stays` at the
@@ -590,24 +619,20 @@ theorem merged_stays {next : S → S} {x y : S} (merged : next x = next y) (n : 
   (orbit_shift next x n).trans
     ((congrArg (fun z => orbit next z n) merged).trans (orbit_shift next y n).symm)
 
-/-- Merging nothing at a step, a law merges nothing over any number of steps. -/
+/-- Merging nothing at a step, a law merges nothing over any number of steps: the grammar's law
+(`«迭之定前»`) at the law's steps. -/
 theorem Lossless.cancel {next : S → S} (lossless : Lossless next) {x y : S} :
-    ∀ n, orbit next x n = orbit next y n → x = y
-  | 0, same => same
-  | n + 1, same => Lossless.cancel lossless n (lossless_iff.mp lossless _ _ same)
+    ∀ n, orbit next x n = orbit next y n → x = y :=
+  fun n same => «迭之定前» (fun a b ⟨z, e₁, e₂⟩ => lossless a b () () z e₁ e₂) n
+    (steps_orbit next n x)
+    (Eq.subst (motive := fun w => «迭» (fun x y => (process next).step x () y) n y w) same.symm
+      (steps_orbit next n y))
 
-/-- A law under which every configuration returns merges nothing. -/
+/-- A law under which every configuration returns merges nothing: the grammar's law for a fixed
+successor (`«皆返定后则定前»`) at the law's relation. -/
 theorem lossless_of_returns {next : S → S} (returns : ∀ s, Returns next s) : Lossless next :=
-  lossless_iff.mpr fun x y merged =>
-    match returns_iff.mp (returns x), returns_iff.mp (returns y) with
-    | ⟨0, pos, _⟩, _ => absurd pos (Nat.lt_irrefl 0)
-    | _, ⟨0, pos, _⟩ => absurd pos (Nat.lt_irrefl 0)
-    | ⟨p + 1, _, back_x⟩, ⟨q + 1, _, back_y⟩ =>
-      calc x = orbit next x ((p + 1) * q + p + 1) := (orbit_mul back_x (q + 1)).symm
-        _ = orbit next y ((p + 1) * q + p + 1) := merged_stays merged _
-        _ = orbit next y ((q + 1) * (p + 1)) :=
-          congrArg (orbit next y) (Nat.mul_comm (p + 1) (q + 1))
-        _ = y := orbit_mul back_y (p + 1)
+  lossless_iff_fixedBefore.mpr
+    («皆返定后则定前» (next_fixed next) fun s => returns_iff_reaches.mp (returns s))
 
 /-- **Undoing is going on.** Where `s` returns, the step from `s` is undone only by going on
 under the same law: further steps lead from `next s` back to `s`. -/
@@ -619,34 +644,23 @@ theorem Returns.undo {next : S → S} {s : S} (returns : Returns next s) :
 
 /-! ### Finitely many configurations -/
 
-/-- **Losing nothing, everything returns**, where a list holds every configuration: the law of
-every process (`Branching.Lossless.returns`) along the law's run from `s`. -/
+/-- **Losing nothing, everything returns**, where a list holds every configuration: the grammar's
+law of finite runs (`«有限遍后定前则皆返»`) at the law's relation. -/
 theorem Lossless.returns {next : S → S} (lossless : Lossless next) {all : List S}
     (every : ∀ s, s ∈ all) (s : S) : Returns next s :=
-  Branching.Lossless.returns lossless every (run next s)
+  returns_iff_reaches.mpr
+    («有限遍后定前则皆返» every (next_total next) (lossless_iff_fixedBefore.mp lossless) s)
 
 /-- Where a list holds every configuration, a configuration that can be had as many steps on
-as the list is long returns. -/
+as the list is long returns: the grammar's law (`«定后于线有限则末返»`) at the law's relation, the
+orbit being the line. -/
 theorem returns_of_reachable {next : S → S} {all : List S} (every : ∀ s, s ∈ all) {s : S}
     (reach : Reachable next all.length s) : Returns next s :=
-  let ⟨x, to⟩ := reachable_iff.mp reach
-  let ⟨i, _, lt, le, same⟩ := revisits_within all (orbit next x) (fun _ _ => every _)
-  let ⟨d, gap⟩ := gap_of_lt lt
-  let ⟨e, rest⟩ := le_dest (Nat.le_trans (Nat.le_of_lt lt) le)
-  have back : orbit next (orbit next x i) (d + 1) = orbit next x i :=
-    (orbit_add next x i (d + 1)).symm.trans ((congrArg (orbit next x) gap.symm).trans same.symm)
-  have reached : orbit next (orbit next x i) e = s :=
-    (orbit_add next x i e).symm.trans ((congrArg (orbit next x) rest.symm).trans to)
-  returns_iff.mpr ⟨d + 1, Nat.succ_pos d,
-    calc orbit next s (d + 1)
-        = orbit next (orbit next (orbit next x i) e) (d + 1) :=
-          congrArg (fun w => orbit next w (d + 1)) reached.symm
-      _ = orbit next (orbit next x i) (e + (d + 1)) := (orbit_add next _ e (d + 1)).symm
-      _ = orbit next (orbit next x i) ((d + 1) + e) :=
-          congrArg (orbit next (orbit next x i)) (Nat.add_comm e (d + 1))
-      _ = orbit next (orbit next (orbit next x i) (d + 1)) e := orbit_add next _ (d + 1) e
-      _ = orbit next (orbit next x i) e := congrArg (fun w => orbit next w e) back
-      _ = s := reached⟩
+  match reachable_iff.mp reach with
+  | ⟨x, to⟩ => returns_iff_reaches.mpr
+      (Eq.subst (motive := fun w => «及» (fun x y => next x = y) w w) to
+        («定后于线有限则末返» (g := orbit next x) («定后则定后于» (next_fixed next) x)
+          (fun _ _ => rfl) (fun _ _ => every _)))
 
 /-- **Losing nothing within finitely many configurations, nothing rises.** Where a list holds
 every configuration and the law merges nothing, a quantity that never falls along an orbit
@@ -670,10 +684,14 @@ theorem rise_not_lossless {next : S → S} {all : List S} (every : ∀ s, s ∈ 
   Branching.rise_not_lossless (run next s) (fun _ => every _) step rises
 
 /-- **Within finitely many configurations, losing nothing is returning.** Where a list holds
-every configuration, a law merges nothing exactly where every configuration returns. -/
+every configuration, a law merges nothing exactly where every configuration returns: the grammar's
+law of finite runs (`«有限遍后定后则定前当且仅当皆返»`) at the law's relation. -/
 theorem lossless_iff_returns {next : S → S} {all : List S} (every : ∀ s, s ∈ all) :
     Lossless next ↔ ∀ s, Returns next s :=
-  ⟨fun lossless => lossless.returns every, lossless_of_returns⟩
+  lossless_iff_fixedBefore.trans
+    ((«有限遍后定后则定前当且仅当皆返» every (next_total next) (next_fixed next)).trans
+      ⟨fun loops s => returns_iff_reaches.mpr (loops s),
+       fun returns s => returns_iff_reaches.mp (returns s)⟩)
 
 /-- **Within finitely many configurations, returning is keeping every possibility.** -/
 theorem returns_iff_keeps {next : S → S} {all : List S} (every : ∀ s, s ∈ all) :

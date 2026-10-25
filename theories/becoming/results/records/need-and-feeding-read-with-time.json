@@ -178,7 +178,7 @@
         "Becoming.Overlapping.take",
         "Becoming.Overlapping.web"
       ],
-      "sha256": "33d6ec243eec01782ba8fd9a27ed31ab63f1ad4e5a4a0d90b81ffccaafa8626b"
+      "sha256": "fe507d9adf7ac5a5e1f8a6d959368ecccfc60e7db7773798f10a3f6de8fcfdfe"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json",
@@ -204,12 +204,18 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sw-significance-without-a-value-layer/NOTE.md",
       "role": "provenance",
       "sha256": "901b49167864c3ae5c6aaec9729c88c8f7819d0a51b37b9967c1fc775aa3c838"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"

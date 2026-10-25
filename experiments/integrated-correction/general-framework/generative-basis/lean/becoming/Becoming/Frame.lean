@@ -1,4 +1,5 @@
 import Becoming.Prelude
+import Becoming.GrammarLaws
 import GenerativeCore
 
 /-!
@@ -17,9 +18,12 @@ realization. Runs, reachability and invariants are defined through the core `Tra
 results compose with the core's composition, product and transport theorems. Every
 declaration has an empty axiom report.
 
-**One closure.** A region is closed under a relation when whatever a member bears the
-relation to is a member (`ClosedUnder`); one element lies within another's closure when every
-closed region holding the other holds it (`WithinClosure`). The closure is reflexive and
+**One closure, the grammar's.** A region is closed under a relation when whatever a member bears
+the relation to is a member (`ClosedUnder`); one element lies within another's closure when every
+closed region holding the other holds it (`WithinClosure`). Both are the grammar's, at the
+relation: `ClosedUnder rel` is `«闭» rel` and `WithinClosure rel` is `«所闭» rel` of
+`Becoming.GrammarLaws`, by definition (`closedUnder_iff_closed`, `withinClosure_iff_within`), and
+their laws here are the grammar's closure laws at the relation. The closure is reflexive and
 transitive, grows with the relation, is symmetric under a symmetric relation, and nothing
 within it bears the relation to what lies beyond it (`WithinClosure.refl`,
 `WithinClosure.trans`, `WithinClosure.mono`, `WithinClosure.symm`, `WithinClosure.not_rel`).
@@ -72,73 +76,79 @@ theorem Run.window_trace {P : Process S A} (r : Run P) :
 
 /-! ## Closure -/
 
-/-- A region is closed under a relation: whatever a member bears the relation to is a member. -/
+/-- A region is closed under a relation: whatever a member bears the relation to is a member. It
+is the grammar's closed region `«闭»` at the relation. -/
 def ClosedUnder {X : Type u} (rel : X → X → Prop) (region : X → Prop) : Prop :=
-  ∀ g h, region g → rel g h → region h
+  «闭» rel region
 
 /-- `g` lies within `f`'s closure under a relation: every region closed under it that holds `f`
-holds `g`. -/
+holds `g`. It is the grammar's closure `«所闭»` at the relation. -/
 def WithinClosure {X : Type u} (rel : X → X → Prop) (f g : X) : Prop :=
-  ∀ region, ClosedUnder rel region → region f → region g
+  «所闭» rel f g
+
+/-- A region closed under a relation is the grammar's closed region, by definition. -/
+theorem closedUnder_iff_closed {X : Type u} {rel : X → X → Prop} {region : X → Prop} :
+    ClosedUnder rel region ↔ «闭» rel region :=
+  Iff.rfl
+
+/-- Lying within a closure is the grammar's, by definition. -/
+theorem withinClosure_iff_within {X : Type u} {rel : X → X → Prop} {f g : X} :
+    WithinClosure rel f g ↔ «所闭» rel f g :=
+  Iff.rfl
 
 namespace WithinClosure
 
 variable {X : Type u} {rel rel' : X → X → Prop}
 
-/-- An element lies within its own closure. -/
+/-- An element lies within its own closure (`«所闭之自反»`). -/
 theorem refl (f : X) : WithinClosure rel f f :=
-  fun _ _ holds => holds
+  «所闭之自反» rel f
 
-/-- A closure is transitive. -/
+/-- A closure is transitive (`«所闭之传递»`). -/
 theorem trans {f g h : X} (first : WithinClosure rel f g) (second : WithinClosure rel g h) :
     WithinClosure rel f h :=
-  fun region closed holds => second region closed (first region closed holds)
+  «所闭之传递» first second
 
-/-- What an element bears the relation to lies within its closure. -/
+/-- What an element bears the relation to lies within its closure (`«缘在所闭»`). -/
 theorem of_rel {f g : X} (related : rel f g) : WithinClosure rel f g :=
-  fun _ closed holds => closed f g holds related
+  «缘在所闭» related
 
-/-- A larger relation has a larger closure. -/
+/-- A larger relation has a larger closure (`«所闭之单调»`). -/
 theorem mono (larger : ∀ g h, rel g h → rel' g h) {f g : X} (within : WithinClosure rel f g) :
     WithinClosure rel' f g :=
-  fun region closed holds =>
-    within region (fun a b inside related => closed a b inside (larger a b related)) holds
+  «所闭之单调» larger f g within
 
-/-- Under a symmetric relation the closure is symmetric. -/
+/-- Under a symmetric relation the closure is symmetric (`«所闭之对称»`). -/
 theorem symm (symmetric : ∀ g h, rel g h → rel h g) {f g : X} (within : WithinClosure rel f g) :
     WithinClosure rel g f :=
-  within (fun x => WithinClosure rel x f)
-    (fun x y back related => (of_rel (symmetric x y related)).trans back) (refl f)
+  «所闭之对称» symmetric f g within
 
-/-- Nothing within a closure bears the relation to what lies beyond it. -/
+/-- Nothing within a closure bears the relation to what lies beyond it (`«所闭之界»`). -/
 theorem not_rel {f g h : X} (within : WithinClosure rel f g) (beyond : ¬ WithinClosure rel f h) :
     ¬ rel g h :=
-  fun related => beyond (within.trans (of_rel related))
+  «所闭之界» within beyond
 
 end WithinClosure
 
-/-- An element's closure is closed under the relation. -/
+/-- An element's closure is closed under the relation (`«所闭之闭»`). -/
 theorem closedUnder_withinClosure {X : Type u} {rel : X → X → Prop} (f : X) :
     ClosedUnder rel (WithinClosure rel f) :=
-  fun _ _ within related => within.trans (WithinClosure.of_rel related)
+  «所闭之闭» rel f
 
 /-- **A certificate of a closure.** A region is an element's closure exactly when it holds the
 element, is closed under the relation and lies within the element's closure: what the region
-holds is reached, and nothing reached leaves it. -/
+holds is reached, and nothing reached leaves it (`«所闭之证»`). -/
 theorem closure_iff_certified {X : Type u} {rel : X → X → Prop} {region : X → Prop} {f : X} :
     (∀ g, region g ↔ WithinClosure rel f g) ↔
       region f ∧ ClosedUnder rel region ∧ ∀ g, region g → WithinClosure rel f g :=
-  ⟨fun exact => ⟨(exact f).mpr (WithinClosure.refl f),
-      fun g h inside related => (exact h).mpr (((exact g).mp inside).trans (WithinClosure.of_rel related)),
-      fun g inside => (exact g).mp inside⟩,
-   fun ⟨holds, closed, reached⟩ g => ⟨reached g, fun within => within region closed holds⟩⟩
+  «所闭之证»
 
 /-- **Certified regions apart are closures apart.** Where a closed region holds `f` but not `g`,
-`g` is not within `f`'s closure. -/
+`g` is not within `f`'s closure (`«闭而外则不所闭»`). -/
 theorem not_within_of_closed {X : Type u} {rel : X → X → Prop} {region : X → Prop} {f g : X}
     (closed : ClosedUnder rel region) (holds : region f) (outside : ¬ region g) :
     ¬ WithinClosure rel f g :=
-  fun within => outside (within region closed holds)
+  «闭而外则不所闭» closed holds outside
 
 /-- `g` lies within a group's closure under a relation: within some member's closure. -/
 def WithinClosureOf {X : Type u} (rel : X → X → Prop) (group : X → Prop) (g : X) : Prop :=

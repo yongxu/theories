@@ -1,6 +1,6 @@
 # OU3b / OU3b-2 review: the master laws on the grammar
 
-AI review, 26 October 2026. Independent and adversarial, read-only except for this file. It covers `tree/Becoming/GrammarLaws.lean` and the diffs of the eleven changed modules against the checkout (`experiments/…/lean/becoming/Becoming/`), read against [DESIGN](DESIGN.md), [DRAFT-NOTES](DRAFT-NOTES.md), [OU3b2-NOTES](OU3b2-NOTES.md), [REVIEW-ASTRA-A](REVIEW-ASTRA-A.md), 08 §6–§7, `Becoming.Grammar`, AGENTS.md and board rule 9. Paths are relative to this folder unless given in full. A is `tree/Becoming/GrammarLaws.lean`.
+AI review, 26 October 2026. Independent and adversarial, read-only except for this file. It covers `tree/Becoming/GrammarLaws.lean` and the diffs of the eleven changed modules against the checkout (`experiments/…/lean/becoming/Becoming/`), read against [DESIGN](DESIGN.md), [DRAFT-NOTES](history/DRAFT-NOTES.md), [OU3b2-NOTES](OU3b2-NOTES.md), [REVIEW-ASTRA-A](REVIEW-ASTRA-A.md), 08 §6–§7, `Becoming.Grammar`, AGENTS.md and board rule 9. Paths are relative to this folder unless given in full. A is `tree/Becoming/GrammarLaws.lean`.
 
 ## What I checked myself
 

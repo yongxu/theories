@@ -65,6 +65,7 @@ The source texts' "a regularity can be temporarily self-maintaining without bein
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194024.593238Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `A regularity kept and left along its own line`, `理之守与离`, `Becoming.«有亡之线末步离核»`
 

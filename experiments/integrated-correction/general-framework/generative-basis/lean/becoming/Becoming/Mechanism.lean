@@ -16,9 +16,12 @@ reading of time nor a finer unit of amount (`Becoming.Resolution`).
   read through `π` (`Image`) is the least process the step factors through (`factors_image`,
   `Image.least`). Some determined process on the description admits every step so read if and
   only if configurations alike under `π` go alike under `π` (`GoAlike`, `carries_law_iff`,
-  `image_determined_iff`). Through the identity this is determinacy (`goAlike_id_iff`); through
-  the description that distinguishes nothing it always holds (`goAlike_const`); a description of
-  the image carries a law exactly where the composite description does (`goAlike_image_iff`).
+  `image_determined_iff`): the grammar's law that the image of a relation along a map has a fixed
+  successor exactly where sameness under the map goes alike (`«像定后当且仅当同行»` of
+  `Becoming.GrammarLaws`), at each move (`image_step_iff`). Through the identity this is
+  determinacy (`goAlike_id_iff`); through the description that distinguishes nothing it always
+  holds (`goAlike_const`); a description of the image carries a law exactly where the composite
+  description does (`goAlike_image_iff`).
   Two runs taking the same moves from configurations alike stay alike (`GoAlike.runs_agree`).
 * **What the step does not depend on is re-absorbed in one step.** Where the whole next
   configuration depends only on `π` (`DependsOnlyOn`), two runs taking the same moves from
@@ -99,13 +102,24 @@ theorem Image.least {P : Process S A} {π : S → K} {Q : Process K A}
     (Image P π).step k a κ → Q.step k a κ
   | ⟨s, u, at_k, step, to⟩ => at_k ▸ to ▸ factors s a u step
 
-/-- **The image is determined exactly where configurations alike go alike.** -/
+/-- Each move of the image is the grammar's image (`«像»`) of the move along the projection, by
+definition. It documents the representation: no proof uses it, since unfolding the definitions does
+the work (`image_determined_iff`). -/
+theorem image_step_iff {P : Process S A} {π : S → K} {a : A} {k κ : K} :
+    (Image P π).step k a κ ↔ «像» π (fun s t => P.step s a t) k κ :=
+  Iff.rfl
+
+/-- **The image is determined exactly where configurations alike go alike**: the grammar's law of
+the image (`«像定后当且仅当同行»`) at each move, determinacy being a fixed successor at each move
+(`determined_iff_fixed`) and going alike the grammar's at each move (`goAlikeUnder_iff_alike`). The
+law carried may be partial: nothing is said of a successor existing. -/
 theorem image_determined_iff {P : Process S A} {π : S → K} :
     Determined (Image P π) ↔ GoAlike P π :=
-  ⟨fun determined s s' a u u' same step step' =>
-    determined (π s) a (π u) (π u') ⟨s, u, rfl, step, rfl⟩ ⟨s', u', same.symm, step', rfl⟩,
-   fun alike _ _ _ _ ⟨s, u, at_k, step, to⟩ ⟨s', u', at_k', step', to'⟩ =>
-    to.symm.trans ((alike s s' _ u u' (at_k.trans at_k'.symm) step step').trans to')⟩
+  determined_iff_fixed.trans
+    ⟨fun fixed => goAlikeUnder_iff_alike.mpr fun a =>
+        («像定后当且仅当同行» (π := π) (R := fun s t => P.step s a t)).mp (fixed a),
+     fun alike a => («像定后当且仅当同行» (π := π) (R := fun s t => P.step s a t)).mpr
+        (goAlikeUnder_iff_alike.mp alike a)⟩
 
 /-- **A projection carries a law exactly where configurations alike under it go alike.** Some
 determined process on the description admits every step of `P` read through `π` if and only if

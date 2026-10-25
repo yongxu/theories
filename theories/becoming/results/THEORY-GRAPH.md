@@ -2,11 +2,11 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2960 nodes, 5150 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2963 nodes, 5187 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
-| The root: relation, condition, class, continuation, core | 31 | 76 | 63 | 0 |
+| The root: relation, condition, class, continuation, core | 31 | 77 | 64 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 90 | 73 | 0 |
 | Knowing and testing | 0 | 79 | 72 | 0 |
 | Life and evolution | 0 | 35 | 17 | 0 |
@@ -51,7 +51,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 
 ## The root: relation, condition, class, continuation, core
 
-Results (76):
+Results (77):
 
 - [A configuration is how it relates](records/configurations-alike-by-relation.md) (recorded-checked)
 - [A negation's change, and cases into a stable conclusion](records/negation-change-and-stable-cases.md) (recorded-checked)
@@ -114,6 +114,7 @@ Results (76):
 - [The laws of one step](records/laws-of-one-step.md) (recorded-checked)
 - [The least footprint and least order where idleness is decided](records/least-footprint-where-idleness-decided.md) (recorded-checked)
 - [The map of premises](records/map-of-premises.md) (recorded-checked)
+- [The master laws on the grammar](records/master-laws-on-the-grammar.md) (recorded-checked)
 - [The move alone does not fix the outcome](records/the-move-alone-underdetermines.md) (recorded-checked)
 - [The order of exchanges as the invariant](records/order-of-exchanges-is-the-invariant.md) (recorded-checked)
 - [The step index read off the relata's own courses](records/the-step-index-from-own-courses.md) (recorded-checked)
@@ -130,7 +131,7 @@ Results (76):
 - [Where a run goes on](records/where-a-run-goes-on.md) (recorded-checked)
 - [Which links a closure needs](records/which-links-a-closure-needs.md) (recorded-checked)
 
-Modules (63, 8 stated on the grammar): `BranchingCorrespondence`, `Carriers`, `CensusBinding`, `CensusCounts`, `Change`, `Composition`, `ContextualRuns`, `ContinuedClasses`, `Counting`, `CourseRoles`, `Courses`, `Dependence`, `EdgeClosure`, `ExchangePremises`, `FinerTraces`, `Fragments`, `Frame`, `Gluing`, `Grammar`, `GrammarCases`, `GrammarRegularity`, `Granularity`, `Histories`, `HistoryIdeals`, `HistoryIdealsTraces`, `HistoryLanguages`, `Identity`, `Interleavings`, `Joining`, `JoiningCodes`, `JoiningContexts`, `JoiningRoles`, `JointCorrespondence`, `JointPhase`, `Labelled`, `LabelledRoles`, `Laws`, `Likeness`, `ListedWebs`, `Listing`, `LocalUnits`, `MoveFormation`, `OneStep`, `OrderNormal`, `OverExchange`, `ParityReadings`, `Persistence`, `PlaceTransitionNets`, `Premises`, `Presentations`, `Reading`, `Readings`, `Regions`, `Renewal`, `Roles`, `Runs`, `ScopedReach`, `SeedReach`, `SituationTraces`, `Situations`, `Space`, `Unfolding`, `World`
+Modules (64, 12 stated on the grammar): `BranchingCorrespondence`, `Carriers`, `CensusBinding`, `CensusCounts`, `Change`, `Composition`, `ContextualRuns`, `ContinuedClasses`, `Counting`, `CourseRoles`, `Courses`, `Dependence`, `EdgeClosure`, `ExchangePremises`, `FinerTraces`, `Fragments`, `Frame`, `Gluing`, `Grammar`, `GrammarCases`, `GrammarLaws`, `GrammarRegularity`, `Granularity`, `Histories`, `HistoryIdeals`, `HistoryIdealsTraces`, `HistoryLanguages`, `Identity`, `Interleavings`, `Joining`, `JoiningCodes`, `JoiningContexts`, `JoiningRoles`, `JointCorrespondence`, `JointPhase`, `Labelled`, `LabelledRoles`, `Laws`, `Likeness`, `ListedWebs`, `Listing`, `LocalUnits`, `MoveFormation`, `OneStep`, `OrderNormal`, `OverExchange`, `ParityReadings`, `Persistence`, `PlaceTransitionNets`, `Premises`, `Presentations`, `Reading`, `Readings`, `Regions`, `Renewal`, `Roles`, `Runs`, `ScopedReach`, `SeedReach`, `SituationTraces`, `Situations`, `Space`, `Unfolding`, `World`
 
 
 ## The map: generation, keeping, degeneration, orders
@@ -228,7 +229,7 @@ Results (90):
 - [Where two courses rejoin](records/where-two-courses-rejoin.md) (recorded-checked)
 - [Whether a loop closes, keeps or widens a difference](records/whether-a-loop-closes-a-difference.md) (recorded-checked)
 
-Modules (73, 3 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
+Modules (73, 9 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
 
 
 ## Knowing and testing
@@ -315,7 +316,7 @@ Results (79):
 - [Which selections survive and remain executable when the lumping changes](records/selection-under-registration-revision.md) (recorded-checked)
 - [文 in the grammar of continuation](records/wen-in-the-grammar.md) (recorded-checked)
 
-Modules (72, 1 stated on the grammar): `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `GrammarTesting`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
+Modules (72, 3 stated on the grammar): `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `GrammarTesting`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
 
 
 ## Life and evolution
@@ -520,7 +521,7 @@ Results (69):
 - [Widening as what every weighting ranks](records/widening-as-what-every-weighting-ranks.md) (recorded-checked)
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)
 
-Modules (50, 1 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `ChanceFloors`, `Clearing`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `Interdependence`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
+Modules (50, 2 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `ChanceFloors`, `Clearing`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `Interdependence`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
 
 
 ## Method and the formal core
@@ -565,4 +566,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-306 of 324 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+294 of 325 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

@@ -83,6 +83,7 @@ Termination of a finite-state system under a potential that never rises and fall
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `rest theorem in any amounts`, `任何量中的停息定理`, `world in amounts`, `任何量中的世界`, `rest with no least loss for worlds`, `Becoming.World.InAmounts`, `Becoming.World.InAmounts.rests_unrefuted_enclosed`, `Becoming.Pass.never_rests`
 

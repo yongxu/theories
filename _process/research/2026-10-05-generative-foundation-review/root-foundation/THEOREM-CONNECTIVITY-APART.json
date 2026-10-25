@@ -2747,11 +2747,6 @@
    "category": "general-structure",
    "reason": "the coarse net joins only different classes; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
   },
-  "Becoming.«一之续»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "continuation under the full class is the relation itself; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
   "Becoming.«一之生»": {
    "module": "Becoming.Grammar",
    "category": "general-structure",
@@ -2786,11 +2781,6 @@
    "module": "Becoming.Grammar",
    "category": "general-structure",
    "reason": "renewal without end is the greatest renewing family; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
-  "Becoming.«则之传递»": {
-   "module": "Becoming.Grammar",
-   "category": "support",
-   "reason": "inclusion of relations is transitive: a one-line unpacking of the grammar's own definition"
   },
   "Becoming.«分叉»": {
    "module": "Becoming.Grammar",
@@ -4251,6 +4241,176 @@
    "module": "Becoming.SetPointOptimum",
    "category": "support",
    "reason": "an arithmetic or list lemma used by the module's laws (Becoming.SetPointOptimum, UE1b)"
+  },
+  "Becoming.Amounts.fallsStop_iff": {
+   "module": "Becoming.InAmounts",
+   "category": "support",
+   "reason": "an amount's strict falls stopping is the grammar's non-recurrence «或屡» of strict falls along it, by definition (Iff.rfl): the representation of the premise of rest, documenting it (OU3b)"
+  },
+  "Becoming.Amounts.fallsStop_of_ends": {
+   "module": "Becoming.InAmounts",
+   "category": "general-structure",
+   "reason": "over any amounts, falls whose courses end stop: the grammar's law of rest at the amounts (OU3b); the rest theorems take the stopping as their premise, so nothing on the base uses it"
+  },
+  "Becoming.Amounts.loses_times": {
+   "module": "Becoming.Amounts",
+   "category": "general-structure",
+   "reason": "the losses accumulated at m recurrences of a least loss, over any amounts; since OU3b the law of rest is proved from the grammar's (Amounts.falls_end and «尽则不或屡»), so nothing on the base uses this different law"
+  },
+  "Becoming.Law.absorbing_ahead": {
+   "module": "Becoming.Attraction",
+   "category": "general-structure",
+   "reason": "what lies ahead of a configuration under a determined law is absorbing: a law of every map on any type; since OU3b being drawn is proved from the grammar's law (Law.drawn_iff_not_returns), so nothing on the base uses it"
+  },
+  "Becoming.Weighting.WidensOn.not_reverse": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "widening over a listing goes one way, from the grammar's «广不可逆»: a law of any finite listing, with no world (OU3b)"
+  },
+  "Becoming.Weighting.WidensOn.trans": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "widening over a listing is transitive, from the grammar's «广之传递»: a law of any finite listing, with no world (OU3b)"
+  },
+  "Becoming.Weighting.mixedOn_iff": {
+   "module": "Becoming.Weightings",
+   "category": "support",
+   "reason": "mixed over a listing is the grammar's «杂» of the coreflexive relations admitted, both ways: the representation of order over a listing (OU3b)"
+  },
+  "Becoming.closedUnder_iff_closed": {
+   "module": "Becoming.Frame",
+   "category": "support",
+   "reason": "Frame's closed region is the grammar's «闭», by definition (Iff.rfl): the representation of closure, documenting it (OU3b)"
+  },
+  "Becoming.split_at_head": {
+   "module": "Becoming.Recurrence",
+   "category": "support",
+   "reason": "a list lemma kept by name as an alias of GrammarLaws.split_at_head, its one proof (OU3b); the pigeonhole revisits_within no longer uses this alias"
+  },
+  "Becoming.withinClosure_iff_within": {
+   "module": "Becoming.Frame",
+   "category": "support",
+   "reason": "Frame's closure is the grammar's «所闭», by definition (Iff.rfl): the representation of closure, documenting it (OU3b)"
+  },
+  "Becoming.withinClosure_of_line": {
+   "module": "Becoming.GrammarScope",
+   "category": "general-structure",
+   "reason": "a line under the one of a relation lies within the closure along it, from the grammar's «所闭当且仅当同一或及» (OU3b): a law of every relation on any carrier; nothing on the base uses it"
+  },
+  "Becoming.«入而屡之例»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "a fact about one constructed relation: a place drawn in while its marked steps recur, so being drawn is not rest (OU3b)"
+  },
+  "Becoming.«入而返之例»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "a fact about one constructed relation: a witness that a hypothesis of a master law on the grammar cannot be omitted, or that two of its notions differ (OU3b)"
+  },
+  "Becoming.«则逾之定当且仅当排中»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "calibration",
+   "reason": "the exact logical principle (excluded middle) that deciding inclusion against exceeding for every pair of relations needs; a lemma of the four cases on the grammar (OU3b)"
+  },
+  "Becoming.«同行于迭»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier (a master law on the grammar, OU3b); the models use the forms they need, and this one nothing on the base uses"
+  },
+  "Becoming.«同行当且仅当有常»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "the global form of a local law of every relation on any carrier (OU3b); the models use the local or other forms, so nothing on the base uses this one"
+  },
+  "Becoming.«四比之周»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "where inclusion or exceeding is decided both ways, two relations widen, keep or are mixed: the four cases on the grammar, a law of every relation on any carrier (OU3b); the base states its own four cases (four-cases-of-a-part)"
+  },
+  "Becoming.«定前之逐点»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
+  },
+  "Becoming.«定前即逆之定后»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
+  },
+  "Becoming.«定后之逐点»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
+  },
+  "Becoming.«定后环则所及皆返»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "the global form of a local law of every relation on any carrier (OU3b); the models use the local or other forms, so nothing on the base uses this one"
+  },
+  "Becoming.«对之程»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "a law of pairings under every relation (balance on the grammar, OU3b); the base reads balance in numbers, represented on the grammar at one step and over a family in Flow, and its consumers stay arithmetic, so nothing on the base uses this one"
+  },
+  "Becoming.«对之逆»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "a law of pairings under every relation (balance on the grammar, OU3b); the base reads balance in numbers, represented on the grammar at one step and over a family in Flow, and its consumers stay arithmetic, so nothing on the base uses this one"
+  },
+  "Becoming.«局定后则有常当且仅当同行可续»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "with the successor fixed where a relation leads, constancy is exactly going alike with a successor available: the exact gap between the two, a law of every relation on any carrier (OU3b); the models use its two directions, not the equivalence"
+  },
+  "Becoming.«广则不则»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
+  },
+  "Becoming.«广非自»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
+  },
+  "Becoming.«无后者不入亦不返»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "without a successor an occurrence is neither drawn nor reaches itself, so the successor hypothesis of the law of being drawn cannot be omitted: a law of every relation on any carrier (OU3b)"
+  },
+  "Becoming.«止而不入之例»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "a fact about one constructed relation: a place at rest and not drawn, so rest is not a case of being drawn (OU3b)"
+  },
+  "Becoming.«程守数当且仅当可对»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "the count law over a stretch is exactly a pairing of units over it, both ways (OU3b); it represents the prelude's stretch balance (balance_over_stretch_on), which lies below the grammar's laws and stays arithmetic, so nothing on the base uses it"
+  },
+  "Becoming.«等长而不对之例»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "a fact about one constructed relation: a witness that a hypothesis of a master law on the grammar cannot be omitted, or that two of its notions differ (OU3b)"
+  },
+  "Becoming.«类同行遍后则含于核»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "a class going alike under a relation with a successor everywhere lies inside its own core: a law of every relation on any carrier (OU3b) joining lumping to the core; nothing on the base uses it"
+  },
+  "Becoming.«闭含所闭»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
+  },
+  "Becoming.«非定后返而不入之例»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "a fact about one constructed relation: a witness that a hypothesis of a master law on the grammar cannot be omitted, or that two of its notions differ (OU3b)"
+  },
+  "Becoming.«齐即谓»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
   }
  },
  "instances": {

@@ -157,13 +157,13 @@ theorem part_identifiesAlike_iff {X : Type u} {C : Type v} {next : X × C → X 
            subst e
            exact rest x c c'⟩
 
-/-- Where the map's value carries a law, it fixes its own future through the map. -/
+/-- Where the map's value carries a law, it fixes its own future through the map: the grammar's
+law that going alike keeps lines of every length alike (`«同行之迭»`), at the law's process, whose
+`n` steps lead to the orbit (`steps_orbit`). -/
 theorem sameFuture_of_goAlike {next : S → S} {o : S → R} (alike : GoAlike (process next) o) :
-    ∀ s s', o s = o s' → SameFuture next o s s' := by
-  intro s s' e n
-  induction n with
-  | zero => exact e
-  | succ n ih => exact Learning.goAlike_iff_lumped.mp alike _ _ ih
+    ∀ s s', o s = o s' → SameFuture next o s s' :=
+  fun s s' e n => «同行之迭» (goAlikeUnder_iff_alike.mp alike ()) n e
+    (steps_orbit next n s) (steps_orbit next n s')
 
 /-- **The map's present value makes sense by itself exactly where it carries a law**: a condition
 on one step. -/

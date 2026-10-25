@@ -400,7 +400,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "fd40f0139f004b10ca255b8119e08aa008e3da267c7190540e6a1d31483d535a",
+      "sha256": "88cfbe49dcc3e30dcca82c262af37063d1ec8b7c7c7b3d900f01be07d7d46641",
       "declarations": [
         "Becoming.Flow.Balances",
         "Becoming.Flow.Acting",
@@ -536,6 +536,12 @@
       "role": "receipt",
       "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -555,7 +561,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"

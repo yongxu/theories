@@ -105,6 +105,7 @@ The step across standpoints is Gewirth's argument from the sufficiency of agency
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194747.611176Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261024T024337.158597Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 
 Aliases: `what the step across standpoints reaches`, `跨立场的一步达到哪里`, `Gewirth's step reaches the centers`, `the narrower scope as the centers`, `what wants its continuation`, `Becoming.forced_iff_center`, `Becoming.forced_iff_within`, `Becoming.unrestricted_atCenters_iff`, `the de se question`, `de se and de dicto presupposition`, `Becoming.selfAscribed_iff_withinSome`, `Becoming.forced_iff_within_some`, `Becoming.Valuation.transmits_iff_closed`, `Becoming.Valuation.forced_iff_reach`, `Becoming.Valuation.forced_whole_iff_connected`
 

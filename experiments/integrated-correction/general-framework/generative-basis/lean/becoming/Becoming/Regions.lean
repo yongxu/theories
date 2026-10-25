@@ -39,7 +39,11 @@ conditions a formation actually requires and takes part in.
   degenerative where those without it widen those with it. Widening goes one way and is
   transitive, and the four cases exclude one another (`Web.Widens.not_reverse`,
   `Web.Widens.trans`, `Web.Widens.not_keeps`, `Web.Widens.not_mixed`,
-  `Web.Keeps.not_mixed`). No significance, standpoint or boundary enters.
+  `Web.Keeps.not_mixed`): these are the grammar's order laws (`Becoming.GrammarLaws`) at what the
+  paths admit, read as a relation on (step, formation) pairs (`Web.admitted`), where including,
+  exceeding, widening, keeping and being mixed are the grammar's (`Web.includes_iff`,
+  `Web.exceeds_iff`, `Web.widens_iff`, `Web.keeps_iff`, `Web.mixed_iff`). No significance,
+  standpoint or boundary enters.
 * **Losing beyond the dependence** (the witness `Clearing`, stated in `Becoming.Clearing`). In
   `Clearing`, the levels without the clearer's part
   exist (`Clearing.withheld`): the resource rises by one at each step and the habitat
@@ -165,35 +169,56 @@ def Mixed (l l' : Nat → C → Nat) : Prop :=
 
 variable {W}
 
-/-- Widening goes one way. -/
-theorem Widens.not_reverse {l l' : Nat → C → Nat} (widens : W.Widens l l') : ¬ W.Widens l' l :=
-  fun back => widens.1.not_exceeded back.2
+/-! ### The comparison on the grammar
 
-/-- Widening is transitive. -/
+Including and exceeding are the grammar's (`«则»`, `«逾»`) at what the paths admit
+(`Web.admitted`, `Web.includes_iff`, `Web.exceeds_iff` of `Becoming.Admission`); so are widening,
+keeping and being mixed (`«广»`, `«齐»`, `«杂»` of `Becoming.GrammarLaws`), both ways, with no
+hypothesis, and the laws of the four cases below are the grammar's order laws there. -/
+
+/-- **Widening is the grammar's widening** of what the paths admit. -/
+theorem widens_iff {l l' : Nat → C → Nat} : W.Widens l l' ↔ «广» (W.admitted l) (W.admitted l') :=
+  ⟨fun ⟨includes, exceeds⟩ => ⟨includes_iff.mp includes, exceeds_iff.mp exceeds⟩,
+   fun ⟨inside, exceeds⟩ => ⟨includes_iff.mpr inside, exceeds_iff.mpr exceeds⟩⟩
+
+/-- **Keeping the same is the grammar's.** -/
+theorem keeps_iff {l l' : Nat → C → Nat} : W.Keeps l l' ↔ «齐» (W.admitted l) (W.admitted l') :=
+  ⟨fun ⟨one, other⟩ => ⟨includes_iff.mp other, includes_iff.mp one⟩,
+   fun ⟨one, other⟩ => ⟨includes_iff.mpr other, includes_iff.mpr one⟩⟩
+
+/-- **Being mixed is the grammar's.** -/
+theorem mixed_iff {l l' : Nat → C → Nat} : W.Mixed l l' ↔ «杂» (W.admitted l) (W.admitted l') :=
+  ⟨fun ⟨one, other⟩ => ⟨exceeds_iff.mp one, exceeds_iff.mp other⟩,
+   fun ⟨one, other⟩ => ⟨exceeds_iff.mpr one, exceeds_iff.mpr other⟩⟩
+
+/-- Widening goes one way (`«广不可逆»`). -/
+theorem Widens.not_reverse {l l' : Nat → C → Nat} (widens : W.Widens l l') : ¬ W.Widens l' l :=
+  fun back => «广不可逆» (widens_iff.mp widens) (widens_iff.mp back)
+
+/-- Widening is transitive (`«广之传递»`). -/
 theorem Widens.trans {l l' l'' : Nat → C → Nat} (first : W.Widens l l') (second : W.Widens l' l'') :
     W.Widens l l'' :=
-  ⟨first.1.trans second.1, match first.2 with
-    | ⟨t, f, admits, not⟩ => ⟨t, f, admits, fun admitted => not (second.1 t f admitted)⟩⟩
+  widens_iff.mpr («广之传递» (widens_iff.mp first) (widens_iff.mp second))
 
-/-- Keeping the same is symmetric. -/
+/-- Keeping the same is symmetric (`«齐之对称»`). -/
 theorem Keeps.symm {l l' : Nat → C → Nat} (keeps : W.Keeps l l') : W.Keeps l' l :=
-  ⟨keeps.2, keeps.1⟩
+  keeps_iff.mpr («齐之对称» (keeps_iff.mp keeps))
 
-/-- Being mixed is symmetric. -/
+/-- Being mixed is symmetric (`«杂之对称»`). -/
 theorem Mixed.symm {l l' : Nat → C → Nat} (mixed : W.Mixed l l') : W.Mixed l' l :=
-  ⟨mixed.2, mixed.1⟩
+  mixed_iff.mpr («杂之对称» (mixed_iff.mp mixed))
 
-/-- Widening is not keeping the same. -/
+/-- Widening is not keeping the same (`«广则非齐»`). -/
 theorem Widens.not_keeps {l l' : Nat → C → Nat} (widens : W.Widens l l') : ¬ W.Keeps l l' :=
-  fun keeps => keeps.2.not_exceeded widens.2
+  fun keeps => «广则非齐» (widens_iff.mp widens) (keeps_iff.mp keeps)
 
-/-- Widening is not mixed. -/
+/-- Widening is not mixed (`«广则非杂»`). -/
 theorem Widens.not_mixed {l l' : Nat → C → Nat} (widens : W.Widens l l') : ¬ W.Mixed l l' :=
-  fun mixed => widens.1.not_exceeded mixed.2
+  fun mixed => «广则非杂» (widens_iff.mp widens) (mixed_iff.mp mixed)
 
-/-- Keeping the same is not mixed. -/
+/-- Keeping the same is not mixed (`«齐则非杂»`). -/
 theorem Keeps.not_mixed {l l' : Nat → C → Nat} (keeps : W.Keeps l l') : ¬ W.Mixed l l' :=
-  fun mixed => keeps.1.not_exceeded mixed.2
+  fun mixed => «齐则非杂» (keeps_iff.mp keeps) (mixed_iff.mp mixed)
 
 /-- The whole first. The comparison over the whole is the comparison within every region at
 once: `l` includes `l'` exactly when, at every step and within every region, it admits what `l'`

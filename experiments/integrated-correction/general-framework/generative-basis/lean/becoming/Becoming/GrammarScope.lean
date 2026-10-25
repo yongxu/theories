@@ -27,7 +27,8 @@ parameter is added. No definition of an earlier module changes.
   `R`, `E` and the centers, with no significance parameter; the class and the centers are supplied,
   not read off the net.
 * **The condition held de se is the root's.** Lying within a closure along a relation is being
-  reached on a line under the one of that relation (`withinClosure_iff_reached`). So the condition
+  reached on a line under the one of that relation (`withinClosure_iff_reached`), the grammar's
+  closure law (`«所闭当且仅当同一或及»` of `Becoming.GrammarLaws`) read on lines. So the condition
   held de se along a relation, `Unrestricted (selfAscribed (ownClosure rel) center)`, is exactly the
   root's condition at the one of that relation taken as the net
   (`ownClosure_unrestricted_iff_noOutside`). Each theorem of `Becoming.Significance` taking the
@@ -233,28 +234,27 @@ end Root
 
 section World
 
-/-- A line under the one of a relation lies within the closure along it. -/
+/-- A line under the one of a relation lies within the closure along it: what the line reaches
+(`«相续含于及»`) lies within the closure (`«所闭当且仅当同一或及»`). -/
 theorem withinClosure_of_line {X : Type u} {rel : X → X → Prop} {f g : X} (line : «相续» rel «一» f g) :
-    WithinClosure rel f g := by
-  induction line with
-  | one c => exact WithinClosure.of_rel c.1
-  | more c _ ih => exact (WithinClosure.of_rel c.1).trans ih
+    WithinClosure rel f g :=
+  «所闭当且仅当同一或及».mpr (.inr («相续含于及» rel «一» _ _ line))
+
+/-- Being `x` or reached from it is being reached on a line under the one. -/
+theorem eq_or_reach_iff_reached {X : Type u} {R : «际» X} {x y : X} :
+    (x = y ∨ «及» R x y) ↔ «所及» R «一» x y :=
+  ⟨fun h => match h with
+    | .inl e => .inl e
+    | .inr reach => .inr («及之单调» (fun a b r => ((«一之续» R) a b).mpr r) _ _ reach),
+   fun h => match h with
+    | .inl e => .inl e
+    | .inr line => .inr («相续含于及» R «一» _ _ line)⟩
 
 /-- **Lying within a closure along a relation is being reached on a line under the one of that
-relation.** -/
+relation**: the grammar's closure law (`«所闭当且仅当同一或及»`) read on lines. -/
 theorem withinClosure_iff_reached {X : Type u} {rel : X → X → Prop} {f g : X} :
-    WithinClosure rel f g ↔ «所及» rel «一» f g := by
-  constructor
-  · intro within
-    refine within («所及» rel «一» f) ?_ (.inl rfl)
-    intro a b reached related
-    match reached with
-    | .inl e => exact .inr (.one ⟨e ▸ related, trivial⟩)
-    | .inr line => exact .inr («相续之续» line ⟨related, trivial⟩)
-  · intro reached
-    match reached with
-    | .inl e => exact e ▸ WithinClosure.refl f
-    | .inr line => exact withinClosure_of_line line
+    WithinClosure rel f g ↔ «所及» rel «一» f g :=
+  «所闭当且仅当同一或及».trans eq_or_reach_iff_reached
 
 variable {F Pos : Type}
 
