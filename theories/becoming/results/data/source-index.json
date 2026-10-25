@@ -1570,6 +1570,23 @@
         "theories/becoming/chapters/05-COLLECTIVES.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/DESIGN.md": {
+      "title": "UE7: what keeps widening, and what it needs (design note)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/PLAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/NOTE.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean"
+      ]
+    },
     "experiments/integrated-correction/general-framework/generative-basis/ecological-selection/contextual-establishment/README.md": {
       "title": "Establishment observations and surface-selection correspondence",
       "local_links": [

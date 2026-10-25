@@ -265,7 +265,7 @@ Definitions and types:
 <details>
 <summary>Admission.lean — 78 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/DESIGN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean`
 
@@ -5496,7 +5496,7 @@ Definitions and types:
 <details>
 <summary>EventualWidening.lean — 36 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/DESIGN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean`
 
@@ -5551,7 +5551,7 @@ Definitions and types:
 <details>
 <summary>EventualWideningInstances.lean — 106 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/DESIGN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean`
 
@@ -7128,7 +7128,7 @@ Definitions and types:
 <details>
 <summary>Gain.lean — 34 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/DESIGN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean`
 
@@ -7729,7 +7729,7 @@ Definitions and types:
 <details>
 <summary>GrammarMap.lean — 58 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/DESIGN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean`
 
@@ -13129,7 +13129,7 @@ Definitions and types:
 <details>
 <summary>MapInstances.lean — 25 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/DESIGN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean`
 
@@ -15550,7 +15550,7 @@ Definitions and types:
 <details>
 <summary>PatternPassing.lean — 47 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/DESIGN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean`
 
