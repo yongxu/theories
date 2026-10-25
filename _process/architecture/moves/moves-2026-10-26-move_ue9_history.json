@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-10-26-move_ue9_history",
+  "date": "2026-10-25T19:46:53+00:00",
+  "base_commit": "8460f56c07ca5b287d9df8f16fea5633ad7460ee",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/tree/Becoming/ComparingCourses.lean",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/history/ComparingCourses.lean",
+      "sha256": "5a952632b7994b0df58f6046e627f74e6e39cfa278680b5b37192660de3b55a9",
+      "blob": "3bf76b82d40032487a5740f714fd44791c920b21",
+      "reason": "UE9's module as reviewed (REVIEW-UE9, sha256 5a952632...de3b55a9), superseded in the fix round by the module at the same path; kept as the review's evidence",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/tree/Becoming/ComparingCourses.lean"
+    }
+  ],
+  "keep_references": true,
+  "rewritten": [],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/history"
+  ],
+  "generated_pages_to_rerender": [
+    "theories/becoming/results/data/lean-index.json"
+  ],
+  "verification_errors": []
+}

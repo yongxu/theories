@@ -17,3 +17,21 @@
     }
   }
 }
+
+# Fix round after REVIEW-UE9 (scratch_build.py, Lean 4.29.1), 2026-10-25T19:59Z
+# kit sha256 18066bba45716c3341c8bdc17ae2005c5bcf8e838d7fbcb0f9ef8adf51554a0d
+# main at 98d205302
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/tree",
+  "modules": 67,
+  "ran": [],
+  "reused": 68,
+  "unclean": [],
+  "audits": {
+    "Becoming.ComparingCourses": {
+      "theorems": 141,
+      "declarations": 176,
+      "with_axioms": {}
+    }
+  }
+}
