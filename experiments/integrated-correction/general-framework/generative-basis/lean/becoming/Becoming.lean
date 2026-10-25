@@ -139,6 +139,7 @@ import Becoming.LoopReturn
 import Becoming.Pace
 import Becoming.RuleCapture
 import Becoming.ClosedCapture
+import Becoming.RuleShaping
 import Becoming.PatternPassing
 import Becoming.JointKeeping
 import Becoming.Undecided
@@ -1882,6 +1883,21 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   least as much as each other's (`Drawn`); where only the others read the loss once it reaches a
   bound, the counts at the step they read it decide for good whether the lock is kept or turned
   (`Thinned`).
+* `Becoming.RuleShaping` (L1): the capacity to shape the rule, selected by what comes back to it.
+  On `RuleCapture`'s counts the carriers are shapers: each leaves `a + s + p` offspring and each
+  other `a + c + p`, `s` what comes back to the shapers alone, `p` what comes to every member alike,
+  `c` the cost. At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p`;
+  a larger `p` pulls the rule toward even, a smaller cost raises it; with nothing coming back and a
+  cost the shapers' share falls at every step, and with no cost and nothing coming back it stays.
+  Selection by rules in turn is selection by their product, so `m` steps before anything comes back
+  and `n` with it keep the share from falling exactly where
+  `(a + c + p)^m (a + c + p)^n ≤ (a + p)^m (a + s + p)^n`; across a stretch the shared part can turn
+  the verdict (`SharedFlips`). On the reading of what comes back from the share (`byBack`),
+  `ReadsShare` is equivalent to what comes back being monotone in the share (`byBack_reads_iff`);
+  monotone and covering the cost, the loop locks (`covering_locks`); at a threshold with
+  `lo < c < hi` the share rises at every step from above and falls at every step from below
+  (`threshold_rises`, `threshold_falls`). A leaf: a model of selection on the capacity, which
+  nothing below needs (board item MA3).
 * `Becoming.PatternPassing` (L1): a pattern that outlasts each of its carriers lasts only through
   passing. Read on a web whose activity is carrying, a pattern present at every step from `T`
   on with carriers brief for `d` has a carrier beginning within every `d` steps; under the
