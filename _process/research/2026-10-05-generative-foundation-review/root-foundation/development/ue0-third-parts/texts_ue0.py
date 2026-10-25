@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path.cwd()
 CH8 = ROOT / 'theories/becoming/chapters/08-METHOD.md'
 AUDIT = '../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md'
+VERDICT = '../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md'
 
 
 def edit(path, old, new):
@@ -27,7 +28,7 @@ edit(CH8, """A theorem a specialist would not foresee, a prediction that could f
 - joint excess under the gate: steps of joint excess from below the renewal's reach end every dependent at that need, whatever each drawer's own draw ([05](05-COLLECTIVES.md#r-own-count-misses-joint-excess));
 - the optimum laws, which carry the drain in §9's first and fourth unifications ([05](05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in)).
 
-Price's equation and Fisher's theorem joined to the flow have one as well ([04](04-LIFE.md#r-what-bounds-offspring-numbers)). Each joins a framework that lacks conservation, renewal over time or a threshold to a premise or law of the theory, and forbids what the conjunction forbids. Each forbidden statement is known in a neighbouring field (critical depensation, the Malthusian bound, bioeconomics, scheduling), and none is one a specialist there would not foresee. So the theory reaches farther than each contained framework alone, and not yet farther than the sciences taken together.
+Price's equation and Fisher's theorem joined to the flow have one as well ([04](04-LIFE.md#r-what-bounds-offspring-numbers)). Each joins a framework that lacks conservation, renewal over time or a threshold to a premise or law of the theory, and forbids what the conjunction forbids. Each forbidden statement is known in a neighbouring field (critical depensation, the Malthusian bound, bioeconomics, scheduling), and none is one a specialist there would not foresee. So the theory reaches farther than each contained framework alone, and not yet farther than the sciences taken together. A further search in three rounds, over the audit's candidates, the root's laws and the one candidate the audit left unlocated, found no result that no neighbouring field states ([search]({VERDICT})).
 
 <a id="theses"></a>""")
 print('texts: 08 §8 third parts')
