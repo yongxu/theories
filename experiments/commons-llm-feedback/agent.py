@@ -80,9 +80,12 @@ def choose(cond_name, cond, seed, rnd, history, final, cache):
     text = prompt(cond, history, final)
     for attempt in range(2):
         code, out, err = call(text)
-        if code != 0 or "limit" in out.lower()[:200]:
-            raise RuntimeError(f"claude call failed ({code}): {out[:200]} {err[:200]}")
         m = parse(out)
+        # Deviation, 25 October 2026, after 84 calls (README, "Deviation"): the CLI's usage-limit
+        # notice carries no "m = <n>", so an answer that merely uses the word ("limited regrowth")
+        # and gives a valid choice is no longer taken for it.
+        if code != 0 or (m is None and "limit" in out.lower()[:200]):
+            raise RuntimeError(f"claude call failed ({code}): {out[:200]} {err[:200]}")
         if m is not None:
             break
     rec = dict(cond=cond_name, seed=seed, round=rnd, final=final, prompt=text, answer=out, m=m,
