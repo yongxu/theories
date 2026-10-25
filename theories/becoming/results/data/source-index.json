@@ -1556,6 +1556,18 @@
         "theories/becoming/chapters/03-KNOWING.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-3-CANDIDATE-4.md": {
+      "title": "UE6 round 3: candidate 4, a coupling rate for several optimizers",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ASTRA-NOVELTY.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-2-ROOT.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/round-3-build.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/tree/Becoming/CoupledDrawers.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+        "theories/becoming/chapters/05-COLLECTIVES.md"
+      ]
+    },
     "experiments/integrated-correction/general-framework/generative-basis/ecological-selection/contextual-establishment/README.md": {
       "title": "Establishment observations and surface-selection correspondence",
       "local_links": [
