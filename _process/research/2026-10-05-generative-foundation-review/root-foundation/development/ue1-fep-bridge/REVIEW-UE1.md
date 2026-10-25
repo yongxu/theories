@@ -506,3 +506,34 @@ end HabitCaptureProbe
 
 end Becoming
 ```
+
+## Re-check of the revision (565185307)
+
+Read: [NOTE.md](NOTE.md) and [tree/Becoming/ChoiceCountCapture.lean](tree/Becoming/ChoiceCountCapture.lean) at `565185307`, with the plan and the board's UE1 row as revised in `41cde6b83`. The kit tree was rebuilt with `scratch_build.py`: 35 theorems in 45 declarations, every axiom report empty, as stated. The landing drafts were not read, as asked.
+
+**Verdict.** The revision takes the findings faithfully. Every count law now starts in sync, `counted_locks_down` carries its rule clause, and `counted_chooses_down` is added. The posterior-counting laws are now instances of `RuleShaping`. The witnesses from the probe, the stale-rule and moved-count edges, are in the module with correct docstrings, and the NOTE no longer claims a third part. Three small new issues remain, none in a proof. The module is ready to land as a leaf instance module once N1 below is fixed.
+
+**(1) The findings.**
+- **Addressed (22):** 1–17, 19–23.
+  - 3 and 4: the plan and board follow in `41cde6b83`.
+  - 11: `weighted`, `weighted_reads` and `lower_strict` stay in the leaf, with the reason stated, as rule 9 allows.
+  - 17: the board's probability sentence is gone.
+- **Partly addressed (1):** 18. The escape claim is withdrawn, but its replacement rests on an unreviewed draft (N2).
+
+**(2) New issues.**
+- **N1. Overclaim, Lean docstring.** `pooled_unchosen_beyond` is titled "Sharing folds moves the boundary outward and no further". It proves only "no further": the choice is blind beyond the pool's coupling closure. The outward half is 05's law (`Web.separates_all_iff_member`).
+  - Fix: retitle it "Choosers sharing their folds are blind beyond the pool's coupling closure". To state the outward half, cite `Web.separates_all_iff_member`.
+- **N2. Imprecision, NOTE §5 reading 3.** "UE1b … proved it wrong" states the results of a drafted kit as proved. UE1b (`e1427437c`) has a scratch build but no review.
+  - Fix: write "UE1b's draft kit, not yet reviewed, states …". The reading then stands on that kit pending its review. Keep it out of the record until UE1b lands.
+- **N3. Imprecision, NOTE §7(c), from this review's own wording.** "For a sampling agent, the claim is about the argmax" is ambiguous. In a sampling agent a sampled choice of the other policy is a change of the counts, and the law does not exclude a crossing by one.
+  - Fix: "the prediction is for an agent choosing the argmax; with sampled choices it holds only while no sampled choice of the other policy carries the counts across the threshold".
+- **Trivial.**
+  - NOTE §4, "adds the end-of-trial posterior … to the habit's counts": the counts are the prior's over all policies (`e`).
+  - `start_locked`: its docstring says "the course is locked"; the theorem is about the start.
+
+**(3) Landing.** Ready as a leaf instance module of selection through couplings, capture through the rule and closed capture, after N1. The record should carry:
+- its scope: two policies of distinct behaviour, an argmax chooser, ties to the first policy, the in-sync start and a standing score;
+- part 1 and the pooled part as near-definitional instances of 03 §1 and 05's pool law;
+- the restatement verdict.
+
+Its home section belongs beside capture through the rule (02 §9). The 08 §8 row should name the lock-in of increasing returns (Arthur 1989) and the value-free habit (Miller, Shenhav and Ludvig 2019). The record should not cite UE1b's draft results or the sampling clause of N3.

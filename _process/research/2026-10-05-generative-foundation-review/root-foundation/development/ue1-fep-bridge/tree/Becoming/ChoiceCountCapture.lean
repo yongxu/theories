@@ -194,8 +194,9 @@ theorem pooled_selectsThrough {group : F → Prop} {members : List F}
     Eq.subst (motive := fun bs => choice (memberFolds value update start members t l) ↔ choice bs)
       (memberFolds_alike values update start alike members listed) Iff.rfl
 
-/-- **Sharing folds moves the boundary outward and no further.** With a part withheld and the rest
-of the exchange fixed, balance on what couples into the pool's coupling closure, every member of
+/-- **Choosers sharing their folds are blind beyond the pool's coupling closure.** (That sharing
+separates what some member separates is 05's pool law, `Web.separates_all_iff_member`.) With a
+part withheld and the rest of the exchange fixed, balance on what couples into the pool's coupling closure, every member of
 the part beyond that closure and the choosers within it, the choosers sharing their folds choose
 alike with and without the part, whatever their update and their choice. -/
 theorem pooled_unchosen_beyond {L : Flow F C} {part : F → Bool} {l : Nat → C → Nat}
@@ -275,7 +276,7 @@ theorem weighted_favours_iff {κc κo : Nat} {pos : 0 < κo} {x g : CarrierCount
     favours (weighted κc κo pos x g) ↔ κo * x.other ≤ κc * x.carrier :=
   Iff.rfl
 
-/-- **At or above the threshold, with the rule in force read from the counts, the course is
+/-- **At or above the threshold, with the rule in force read from the counts, the start is
 locked.** -/
 theorem start_locked {κc κo : Nat} {pos : 0 < κo} {x : CarrierCounts}
     (above : κo * x.other ≤ κc * x.carrier) :
