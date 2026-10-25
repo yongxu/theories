@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2940 nodes, 5053 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2942 nodes, 5057 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -12,7 +12,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Life and evolution | 0 | 34 | 16 | 0 |
 | Collectives and selection | 0 | 53 | 15 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
-| Significance and alignment | 0 | 67 | 48 | 0 |
+| Significance and alignment | 0 | 68 | 48 | 0 |
 | Method and the formal core | 0 | 14 | 23 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 | Not yet assigned | 0 | 0 | 1 | 0 |
@@ -443,7 +443,7 @@ Modules (9, 3 stated on the grammar): `GrammarCandidates`, `GrammarCourse`, `Gra
 
 ## Significance and alignment
 
-Results (67):
+Results (68):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -457,6 +457,7 @@ Results (67):
 - [Comparison where the rest responds](records/comparison-where-the-rest-responds.md) (recorded-checked)
 - [Comparison within reach](records/comparison-within-reach.md) (recorded-checked)
 - [Completion of an in-flight request along its retained route](records/versioned-request-completion.md) (recorded-checked)
+- [Constancy read at a member's class, and how what lies outside it is divided](records/constancy-read-at-a-members-class.md) (recorded-checked)
 - [Decomposition of the continuation condition](records/continuation-condition-decomposition.md) (recorded-checked)
 - [Evidence recovery and the limits of stop access after interrupted change](records/recoverable-mediated-change.md) (recorded-checked)
 - [Executed instructions transport candidate evidence](records/mediated-evidence-transport.md) (recorded-checked)

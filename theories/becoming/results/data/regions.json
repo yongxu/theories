@@ -391,6 +391,11 @@
    "base": "general",
    "note": "Contacts/Stock: consequences revise reference"
   },
+  "constancy-read-at-a-members-class": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "GrammarPath: constancy up to the net's end read at a member's class, and the division of what lies outside"
+  },
   "constitutive-binding-assessment": {
    "region": "knowing",
    "base": "none",

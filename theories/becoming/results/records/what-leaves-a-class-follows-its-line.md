@@ -39,7 +39,7 @@ Canonical source: [GrammarPath.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-How finely the class P2 reads should divide what a self leaves out, and whether it should constrain only the self's block; a two-block characterization with the blocks given decidably.
+Answered for P2 in constancy-read-at-a-members-class (OC1): read at one's own class, with the split asking least, P2 asks of a class that does not hold a member's effects only that what stays and what leaves follow every alike step that goes on. What remains is P4's question, put to philosophers.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -64,6 +64,7 @@ Read with a class drawn by what a member intends, the agential self of the path:
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | provenance | [PHILOSOPHY-ROUND-2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-2.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T140233.595881Z/verification.json) | — |
 
 Aliases: `What leaves a class follows its line`, `出类者随其线`, `Becoming.«出类随线»`, `Becoming.«出类随行»`
 
@@ -71,6 +72,7 @@ Aliases: `What leaves a class follows its line`, `出类者随其线`, `Becoming
 ### History
 
 - 25 October 2026: added (PF2), answering the path's Open item on a class that holds only intended effects; study section 407.
+- 25 October 2026: next step answered by constancy-read-at-a-members-class (OC1); the laws now corollaries of the forms at a member's class, statements unchanged; study section 408.
 
 </details>
 

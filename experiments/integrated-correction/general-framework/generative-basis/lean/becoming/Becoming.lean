@@ -3347,7 +3347,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   condition (board item GS6). Under a class constant up to the net's end, what leaves the
   class at a member follows every alike step that goes on (`«出类随行»`, `«出类随线»`), and a step with
   nothing outside the class breaks it (`«出类不随则不至终有常»`, `CleanStep`); a finite class constant up
-  to the net's end can leave a member's effects out (`FiniteWake`; board item PF2).
+  to the net's end can leave a member's effects out (`FiniteWake`; board item PF2). Read at a member's
+  class (`«本类至终有常»`), constancy up to the net's end carries these laws, the global forms being
+  corollaries; where the class holds the member's effects, how what lies outside is divided is idle
+  (`«闭则外分无关»`), and otherwise the split of the member's class from the rest asks least, exactly that
+  what stays and what leaves follow every alike step that goes on (`«二分本类常当且仅当内外皆随»`;
+  `FinerOutside`, `UnevenOutside`; board item OC1).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

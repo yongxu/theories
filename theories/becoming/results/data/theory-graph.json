@@ -1280,6 +1280,18 @@
    "page": "theories/becoming/results/records/consequence-revised-reference-plan.md"
   },
   {
+   "id": "record:constancy-read-at-a-members-class",
+   "type": "result",
+   "record": "constancy-read-at-a-members-class",
+   "title": "Constancy read at a member's class, and how what lies outside it is divided",
+   "title_zh": "于员之类之至终有常，与类外之分",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/constancy-read-at-a-members-class.md"
+  },
+  {
    "id": "record:constitutive-binding-assessment",
    "type": "result",
    "record": "constitutive-binding-assessment",
@@ -9019,7 +9031,7 @@
    "type": "module",
    "name": "Becoming.GrammarPath",
    "level": "L1",
-   "theorems": 46,
+   "theorems": 77,
    "region": "unassigned",
    "base": "",
    "on_grammar": true,
@@ -28576,6 +28588,12 @@
    "anchor": "r-what-leaves-a-class-follows-its-line"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-constancy-read-at-a-members-class",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-constancy-read-at-a-members-class"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -35756,6 +35774,21 @@
    "from": "record:consequence-revised-reference-plan",
    "to": "record:selection-under-registration-revision",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:constancy-read-at-a-members-class",
+   "to": "module:Becoming.GrammarPath",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:constancy-read-at-a-members-class",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:constancy-read-at-a-members-class",
+   "to": "record:what-leaves-a-class-follows-its-line",
+   "type": "related"
   },
   {
    "from": "record:constitutive-binding-assessment",
@@ -53630,6 +53663,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-condition-correspondence-discipline",
    "to": "record:condition-correspondence-discipline",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-constancy-read-at-a-members-class",
+   "to": "record:constancy-read-at-a-members-class",
    "type": "states"
   },
   {

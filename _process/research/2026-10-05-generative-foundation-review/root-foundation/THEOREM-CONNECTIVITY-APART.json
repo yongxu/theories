@@ -3911,6 +3911,96 @@
    "module": "Becoming.GrammarPath",
    "category": "model-witness",
    "reason": "something outside the class follows every step of its line that goes on: a witness of Becoming.GrammarPath (PF2)"
+  },
+  "Becoming.FinerOutside.finer_class": {
+   "module": "Becoming.GrammarPath",
+   "category": "support",
+   "reason": "a one-line check that the finer witness's relation is a class"
+  },
+  "Becoming.FinerOutside.finer_not_constant_at": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "dividing what lies outside more finely breaks the condition: a witness of Becoming.GrammarPath (OC1)"
+  },
+  "Becoming.FinerOutside.not_held": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the split does not hold the member's effects: a witness of Becoming.GrammarPath (OC1)"
+  },
+  "Becoming.FinerOutside.same_class": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "both divisions give the member the same class: a witness of Becoming.GrammarPath (OC1)"
+  },
+  "Becoming.FinerOutside.split_constant_at": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "under the split the class meets the condition at the member: a witness of Becoming.GrammarPath (OC1)"
+  },
+  "Becoming.UnevenOutside.finer_class": {
+   "module": "Becoming.GrammarPath",
+   "category": "support",
+   "reason": "a one-line check that the finer witness's relation is a class"
+  },
+  "Becoming.UnevenOutside.finer_constant_to_end": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "a finer division is constant up to the net's end: a witness of Becoming.GrammarPath (OC1)"
+  },
+  "Becoming.UnevenOutside.held": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the split holds the member's effects: a witness of Becoming.GrammarPath (OC1)"
+  },
+  "Becoming.UnevenOutside.same_class": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "both divisions give the member the same class: a witness of Becoming.GrammarPath (OC1)"
+  },
+  "Becoming.UnevenOutside.split_constant_at": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "under the split the class meets the condition at the member: a witness of Becoming.GrammarPath (OC1)"
+  },
+  "Becoming.UnevenOutside.split_not_constant_to_end": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the split is not constant up to the net's end: a witness of Becoming.GrammarPath (OC1)"
+  },
+  "Becoming.«二分为类»": {
+   "module": "Becoming.GrammarPath",
+   "category": "support",
+   "reason": "a one-line check that the split by a predicate is a class"
+  },
+  "Becoming.«二分本类常当且仅当内外皆随»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "under the split, the condition at a member's class is that what stays and what leaves follow every alike step: a law of every relation and class on any carrier"
+  },
+  "Becoming.«亡而网续则不至终有常»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "a relation under which a line ends at an occurrence that still conditions something is not constant up to the net's end, for any relation: PF's form, kept; its witnesses now go through the form at a member's class: a law of every relation and class on any carrier"
+  },
+  "Becoming.«出类随行»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "what leaves the class follows each alike step, under constancy up to the net's end: PF2's form, kept as the corollary of «本类出类随行» (rule 9): a law of every relation and class on any carrier"
+  },
+  "Becoming.«本类之常至二分»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "where a predicate decides a member's class, the condition at it under any class gives it under the split: a law of every relation and class on any carrier"
+  },
+  "Becoming.«至终有常之逐类»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "constancy up to the net's end is that at every member's class: a law of every relation and class on any carrier"
+  },
+  "Becoming.«闭则外分无关»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "where the class holds the effects of a member that conditions something, how what lies outside is divided is idle: a law of every relation and class on any carrier"
   }
  },
  "instances": {
