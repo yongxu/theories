@@ -13,7 +13,8 @@ usage (from the checkout root):
   --paths    sources the author has reread; references to them are set to the current bytes. Without --paths,
              every reference whose bytes changed is a candidate, so give --ids to bound it.
   --ids      only these records (default: every record); --ids-file reads them from a file.
-  --drift-json  the output of research.py check or render; re-points exactly the (record, path) pairs of its source_drift.
+  --drift-json  the output of research.py check or render; re-points exactly the (record, path) pairs of its source_drift,
+             and nothing when it lists none.
   --receipt  a passing receipt (path to verification.json); with --lean, the proof bindings of those Lean files are
              rebound to it, after checking that it binds the file's current sha256 and records success.
   --apply    write the records and the log line; without it, print what would change (dry run).
@@ -96,6 +97,10 @@ def main(argv=None):
         per = {}
         for x in json.loads(Path(a.drift_json).read_text()).get('source_drift', []):
             per.setdefault(x['id'], set()).add(x['path'])
+        if not per:
+            # No pair: without this, a.ids stays empty and every changed reference of every record is re-pointed.
+            print(json.dumps({'records': 0, 'apply': a.apply, 'by_record': {}}, ensure_ascii=False, indent=1))
+            return 0
         a.ids = (a.ids or []) + sorted(per)
     if a.lean and not a.receipt:
         ap.error('--lean needs --receipt')
