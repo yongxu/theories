@@ -1,12 +1,13 @@
 # MA4b: landing runbook
 
-These are the steps to land `Becoming.ReadInTime` (board item MA4b), on MA4's pattern (`../ma4-drawn-shaping/`). Every script asserts that each of its edits applies exactly once. On 26 October 2026 a dry run on a scratch copy of main at `d9443722f` applied every anchor of `integrate_ma4b.py`, and every anchor of `texts_ma4b.py` up to 08's counts.
+These are the steps to land `Becoming.ReadInTime` (board item MA4b), on MA4's pattern (`../ma4-drawn-shaping/`). Every script asserts that each of its edits applies exactly once. On 26 October 2026 a dry run on a scratch copy of main at `d9443722f` applied every anchor of `integrate_ma4b.py`, and every anchor of `texts_ma4b.py` up to 08's counts. After the review was taken, a second dry run on a scratch copy of main at `98d205302` (after DF1 and UE7) ran `integrate_ma4b.py`, `texts_ma4b.py` and `make_records_ma4b.py` to the end, against a mock receipt that adds `Becoming.ReadInTime` to UE7's; the study section came out as §420, and the new record lints clean.
 
-## Before the landing
-1. Take the independent review's findings (`REVIEW-MA4b.md`). NOTE.md gains a section on what was taken.
-2. Rebuild in scratch, and write the theorem and declaration counts into `study_ma4b.txt`. Also fill the study's standing and review paragraphs (`{THEOREMS}`, `{DECLARATIONS}`, `{STANDING}`, `{REVIEW}`); `texts_ma4b.py` refuses an unfilled placeholder.
-3. Set `STANDING` in `board_ma4b.py` from the review.
+## Before the landing (done 26 October 2026)
+1. The independent review's findings (`REVIEW-MA4b.md`) are taken; NOTE.md §8 says how.
+2. Rebuilt in scratch (34 theorems in 39 declarations, every axiom report empty); the counts, standing and review paragraph are in `study_ma4b.txt`, whose only placeholders left are `{N}` and `{RECEIPT}`.
+3. `STANDING` in `board_ma4b.py` is set from the review.
 4. Re-run the dry run if main has moved.
+5. Mark the head of the queue: `python3 -B <kit>/board_ma4b.py head MA4b "<text>"`, committing the board alone.
 
 ## The landing (in a worktree from main: `.claude/worktrees/ma4b-landing`, branch `ma4b-landing`)
 1. `python3 -B <kit>/integrate_ma4b.py`

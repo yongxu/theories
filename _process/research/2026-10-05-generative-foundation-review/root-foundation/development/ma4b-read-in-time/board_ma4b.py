@@ -3,7 +3,8 @@
 moves the row to the history file after the last landed row, with its state set to STATE_TEXT and its claim's expected
 standing replaced by the standing the review gave. It also puts QUEUE_TEXT at the head of the queue note and names the
 receipt as the latest.
-usage (from the checkout root): python3 -B board_ma4b.py state MA4b TEXT | python3 -B board_ma4b.py land MA4b RECEIPT N QUEUE STATE"""
+`head ID TEXT` puts the item at the head of the queue note (TEXT without parentheses); `land` removes that mark.
+usage (from the checkout root): python3 -B board_ma4b.py head MA4b TEXT | state MA4b TEXT | land MA4b RECEIPT N QUEUE STATE"""
 import re
 import sys
 from pathlib import Path
@@ -14,7 +15,12 @@ HISTORY = ROOT / '_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_20
 EXPECTED = ("Expected standing: elementary, a weighted majority read one step late; Collingridge's dilemma (1980), "
             "lock-in (David 1985, Arthur 1989) and the tipping models credited; what it adds is the join on the spine "
             "and the exact window.")
-STANDING = None  # set from the review before landing
+STANDING = ("Standing (independent review): elementary, MA2's Thinned laws composed with MA4's monotone course, the "
+            "lag of one step being the representation's; the window is exact at every step but at most one, given "
+            "readings at N and N + 1, and the course from that step is left open (a new round, which can go either "
+            "way); the deadline is a loose bound, quadratic in the start's counts; in this model Collingridge's second "
+            "horn is a theorem and the first a premise (the bound N); the nearest prior result is Biggs, Carpenter and "
+            "Brock 2009.")
 item = sys.argv[2]
 board = BOARD.read_text(encoding='utf-8').split('\n')
 rows = [i for i, line in enumerate(board) if line.startswith(f'| **{item}: ')]
@@ -22,7 +28,12 @@ assert len(rows) == 1, rows
 cells = board[rows[0]].split(' | ')
 assert len(cells) == 5, len(cells)
 
-if sys.argv[1] == 'state':
+if sys.argv[1] == 'head':
+    queue = [i for i, line in enumerate(board) if line.startswith('- **Queue:** ')]
+    assert len(queue) == 1 and '(' not in sys.argv[3] and ')' not in sys.argv[3]
+    board[queue[0]] = board[queue[0]].replace('- **Queue:** ', f'- **Queue:** {item} at the head of the queue ({sys.argv[3]}); ', 1)
+    BOARD.write_text('\n'.join(board), encoding='utf-8')
+elif sys.argv[1] == 'state':
     cells[2] = sys.argv[3]
     board[rows[0]] = ' | '.join(cells)
     BOARD.write_text('\n'.join(board), encoding='utf-8')
@@ -36,6 +47,9 @@ elif sys.argv[1] == 'land':
     del board[rows[0]]
     queue = [i for i, line in enumerate(board) if line.startswith('- **Queue:** ')]
     assert len(queue) == 1
+    head = re.match(r'- \*\*Queue:\*\* ' + re.escape(item) + r' at the head of the queue \([^()]*\); ', board[queue[0]])
+    if head:
+        board[queue[0]] = '- **Queue:** ' + board[queue[0]][head.end():]
     board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + queue_text + '; ', 1)
     latest = [i for i, line in enumerate(board) if 'the latest core receipt is' in line]
     assert len(latest) == 1, latest

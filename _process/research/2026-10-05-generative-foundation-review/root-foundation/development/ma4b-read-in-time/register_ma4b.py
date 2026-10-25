@@ -22,12 +22,13 @@ LAW = ('a law of selection on counts of two kinds (RuleCapture\'s CarrierCounts)
        'nothing on it uses this law')
 SUPPORT_UNPACK = ('a one-line unpacking of the module\'s own definitions, or a general lemma on counts or powers it '
                   'uses')
-support_unpack = {'lossRead_before', 'turn_before', 'loss_next', 'next_share', 'held_counts', 'powers_base_le'}
+support_unpack = {'shapedLossPool_before', 'turn_before', 'loss_next', 'next_share', 'held_counts',
+                  'powers_base_le', 'powers_eq_pow', 'covers_of_strict'}
 
 
 def classify(name):
     short = name[len(PREFIX):]
-    if short.startswith('Window.'):
+    if short.startswith(('Window.', 'Between.', 'Tie.')):
         return 'model-witness', W
     if short in support_unpack:
         return 'support', SUPPORT_UNPACK
