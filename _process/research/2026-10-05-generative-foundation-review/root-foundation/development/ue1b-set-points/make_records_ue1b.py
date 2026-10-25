@@ -188,11 +188,7 @@ groups = [
      '一步中流在一族上平衡、无其他参与的构成与该族交换、该族步后存量等于步前存量时，一个参与的构成，若给族与某条件之量加一损失'
      '至多为其从二者所取，则从该条件所取至少为其在该处所给加该损失。',
      D('Flow.held_draws')),
-    ("Over n steps, where each formation of a part keeps its family's stock, alone exchanging with it, losing at least "
-     "a given amount on it with a condition, and their losses together exceed at each step what the rest gives the "
-     "condition, from a level below n + m, the gate at need m leaves every formation depending on it at need m or more "
-     "inactive from step n on, however small each loss; with each one's couplings in its family, apart from the "
-     "condition, none couples into it. From Flow.joint_excess_ends; no order or choice enters.",
+    ("Over n steps, where each formation of a part alone keeps its family's stock, losing at least an amount there with a condition, their losses together exceeding what the rest gives the condition each step, from below n + m the gate at need m ends every dependent at need m or more from step n on, whatever each loss; none couples into it if its couplings lie in its family. From Flow.joint_excess_ends; no choice enters.",
      '在 n 步中，一部分的每个构成独自与其族交换而保持其族的存量，在其族与某条件上至少失去给定之量，其损失合计每步都超过其余者给该'
      '条件之量，该条件起于 n + m 之下，则需要 m 处的闸使以至少 m 的需要依存于它的每个构成自第 n 步起不再活动，不论每份损失多小；'
      '各自的耦合都在其族中而不含该条件时，无一耦合入它。由 Flow.joint_excess_ends；不入序或选择。',

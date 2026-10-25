@@ -1,9 +1,10 @@
-# OU3b-2 full scratch build (round 2: balance in Flow, B removed, Admission), 26 October 2026: python3 -B scratch_build.py <DEV>/tree Becoming.OU3b2Check + the 12 changed or new modules
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree",
-  "modules": 328,
+  "modules": 329,
   "ran": [
     "Becoming.GrammarLaws",
+    "Becoming.Amounts",
+    "Becoming.Renewal",
     "Becoming.Frame",
     "Becoming.World",
     "Becoming.Witnesses",
@@ -236,6 +237,7 @@
     "Becoming.MoveFormation",
     "Becoming.Sensitivity",
     "Becoming.Tail",
+    "Becoming.ConditionalWeights",
     "Becoming.Situations",
     "Becoming.Regulation",
     "Becoming.ReadingSchedule",
@@ -319,9 +321,12 @@
     "BecomingGrammarScopeAxiomAudit",
     "BecomingAdmissionAxiomAudit",
     "BecomingFlowAxiomAudit",
-    "BecomingRegionsAxiomAudit"
+    "BecomingRegionsAxiomAudit",
+    "BecomingAmountsAxiomAudit",
+    "BecomingInAmountsAxiomAudit",
+    "BecomingWeightingsAxiomAudit"
   ],
-  "reused": 24,
+  "reused": 22,
   "unclean": [],
   "audits": {
     "Becoming.OU3b2Check": {
@@ -330,8 +335,8 @@
       "with_axioms": {}
     },
     "Becoming.GrammarLaws": {
-      "theorems": 83,
-      "declarations": 98,
+      "theorems": 113,
+      "declarations": 133,
       "with_axioms": {}
     },
     "Becoming.Frame": {
@@ -340,8 +345,8 @@
       "with_axioms": {}
     },
     "Becoming.Recurrence": {
-      "theorems": 81,
-      "declarations": 102,
+      "theorems": 82,
+      "declarations": 103,
       "with_axioms": {}
     },
     "Becoming.Attraction": {
@@ -380,15 +385,29 @@
       "with_axioms": {}
     },
     "Becoming.Flow": {
-      "theorems": 99,
-      "declarations": 136,
+      "theorems": 102,
+      "declarations": 139,
       "with_axioms": {}
     },
     "Becoming.Regions": {
       "theorems": 23,
       "declarations": 31,
       "with_axioms": {}
+    },
+    "Becoming.Amounts": {
+      "theorems": 37,
+      "declarations": 42,
+      "with_axioms": {}
+    },
+    "Becoming.InAmounts": {
+      "theorems": 91,
+      "declarations": 127,
+      "with_axioms": {}
+    },
+    "Becoming.Weightings": {
+      "theorems": 397,
+      "declarations": 559,
+      "with_axioms": {}
     }
   }
 }
-# statements: diff of pp.all #check output, checkout vs this tree: IDENTICAL (43 declarations; OU3b2-statements.txt)

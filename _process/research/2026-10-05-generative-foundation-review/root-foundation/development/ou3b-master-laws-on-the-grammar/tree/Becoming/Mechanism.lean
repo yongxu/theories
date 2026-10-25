@@ -18,9 +18,10 @@ reading of time nor a finer unit of amount (`Becoming.Resolution`).
   only if configurations alike under `π` go alike under `π` (`GoAlike`, `carries_law_iff`,
   `image_determined_iff`): the grammar's law that the image of a relation along a map has a fixed
   successor exactly where sameness under the map goes alike (`«像定后当且仅当同行»` of
-  `Becoming.GrammarLaws`), at each move (`image_step_iff`). Through the identity this is determinacy (`goAlike_id_iff`); through
-  the description that distinguishes nothing it always holds (`goAlike_const`); a description of
-  the image carries a law exactly where the composite description does (`goAlike_image_iff`).
+  `Becoming.GrammarLaws`), at each move (`image_step_iff`). Through the identity this is
+  determinacy (`goAlike_id_iff`); through the description that distinguishes nothing it always
+  holds (`goAlike_const`); a description of the image carries a law exactly where the composite
+  description does (`goAlike_image_iff`).
   Two runs taking the same moves from configurations alike stay alike (`GoAlike.runs_agree`).
 * **What the step does not depend on is re-absorbed in one step.** Where the whole next
   configuration depends only on `π` (`DependsOnlyOn`), two runs taking the same moves from
@@ -102,7 +103,8 @@ theorem Image.least {P : Process S A} {π : S → K} {Q : Process K A}
   | ⟨s, u, at_k, step, to⟩ => at_k ▸ to ▸ factors s a u step
 
 /-- Each move of the image is the grammar's image (`«像»`) of the move along the projection, by
-definition. -/
+definition. It documents the representation: no proof uses it, since unfolding the definitions does
+the work (`image_determined_iff`). -/
 theorem image_step_iff {P : Process S A} {π : S → K} {a : A} {k κ : K} :
     (Image P π).step k a κ ↔ «像» π (fun s t => P.step s a t) k κ :=
   Iff.rfl

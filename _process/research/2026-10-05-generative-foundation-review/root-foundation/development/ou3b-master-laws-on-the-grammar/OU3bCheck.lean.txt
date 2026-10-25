@@ -1,3 +1,7 @@
+-- SUPERSEDED (26 October 2026) by OU3b2Check.lean.txt: this check compared the first draft's
+-- `_by_grammar` copies and imports module B (Becoming.GrammarLawsInstances), neither of which
+-- remains in tree/. Kept unmoved as evidence of the draft; it no longer compiles against tree/.
+
 import Becoming.GrammarLawsInstances
 import Becoming.GrammarScope
 

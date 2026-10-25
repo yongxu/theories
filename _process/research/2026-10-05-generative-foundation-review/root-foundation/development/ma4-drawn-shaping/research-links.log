@@ -1,7 +1,7 @@
 python3 -B tools/research/research.py links
 {
-  "files_checked": 1480,
-  "links_checked": 79040,
+  "files_checked": 1484,
+  "links_checked": 79049,
   "broken": 0,
   "broken_by_kind": {},
   "broken_by_role": {},

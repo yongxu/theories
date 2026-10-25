@@ -27,9 +27,9 @@ or a process of the spine. Merging, returning and reachability are Recurrence's
 * **Every law draws exactly what does not return.** For every determined law, with no premise,
   a configuration is drawn exactly where it does not return (`Law.drawn_iff_not_returns`): what
   lies ahead of it is an absorbing region it enters at the first step (`Law.drawnInto_ahead`).
-  Both laws are the grammar's for a fixed successor (`«定后则返者不入»`, `«入当且仅当不返»` of
-  `Becoming.GrammarLaws`) at the law's relation `next x = y`, where absorbing is closed
-  (`Law.absorbing_iff_closed`) and drawn is drawn in (`Law.drawn_iff_drawnIn`).
+  Both laws are the grammar's for a fixed successor (`«定后则返者不入»` and
+  `«定后有后则入当且仅当不返»` of `Becoming.GrammarLaws`) at the law's relation `next x = y`, where
+  absorbing is closed (`Law.absorbing_iff_closed`) and drawn is drawn in (`Law.drawn_iff_drawnIn`).
 * **The future narrows.** What can be had `n` steps on is an absorbing region
   (`Law.reachable_absorbing`), and every possibility lost by step `n` is drawn into it,
   entering at step `n` (`Law.lost_drawn`, `Law.drawn_of_lost`). What returns is an absorbing
@@ -186,10 +186,10 @@ theorem drawnInto_ahead {next : S → S} {s : S} (never : ¬ Returns next s) :
 
 /-- **Every law draws exactly what does not return.** For every determined law, with no
 premise, a configuration is drawn into some absorbing region exactly where it does not
-return: the grammar's law for a fixed successor that every configuration has (`«入当且仅当不返»`)
-at the law's relation. -/
+return: the grammar's law for a fixed successor that every configuration has
+(`«定后有后则入当且仅当不返»`) at the law's relation. -/
 theorem drawn_iff_not_returns {next : S → S} {s : S} : Drawn next s ↔ ¬ Returns next s :=
-  drawn_iff_drawnIn.trans ((«入当且仅当不返» (next_fixed next) (next_total next s)).trans
+  drawn_iff_drawnIn.trans ((«定后有后则入当且仅当不返» (next_fixed next) (next_total next s)).trans
     ⟨fun never returns => never (returns_iff_reaches.mp returns),
      fun never reach => never (returns_iff_reaches.mpr reach)⟩)
 

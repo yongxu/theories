@@ -10,7 +10,7 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-25T13:41:26+00:00",
   "statement": {
-    "en": "Under a class constant up to the net's end, what leaves the class at a member follows every alike step that goes on, and a step with nothing outside breaks constancy; such a class can leave a member's effects out.",
+    "en": "Under a class constant up to the net's end, what leaves the class at a member follows every alike occurrence that conditions anything, and a step with nothing outside breaks constancy; such a class can leave a member's effects out.",
     "zh": "于至网之终有常之类下，一员处出类者随每一同类而有所缘之步，无类外者之步破其有常；此类可不持一员之所缘。"
   },
   "laws": [
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "en": "In a finite net without cycles, a class holding a member and part of what follows it is constant up to the net's end though not constant, does not hold the member's effects, and something outside it follows every step of its line that goes on.",
+      "en": "In a finite net without cycles, a class holding a member and part of what follows it is constant up to the net's end though not constant, does not hold the member's effects, and something outside it follows every step of its line that conditions anything.",
       "zh": "于无环之有限之网中，含一员及其后之一部之类，至网之终有常而非有常，不持此员之所缘，其线上每一有所缘之步皆有类外者随之。",
       "declarations": [
         "Becoming.FiniteWake.Occ",
@@ -205,6 +205,10 @@
     {
       "en": "25 October 2026: the answer to its next step reviewed independently (OC2): its formal part is answered by laws, the choice of class by a labelled reading; study section 411.",
       "zh": "2026年10月25日：其下一步之答经独立审查（OC2）：形式部分以律答之，读何类以标明之读法答之；研究第 411 节。"
+    },
+    {
+      "en": "26 October 2026: \"goes on\" (延, coinductive in the glossary) replaced by \"conditions anything\" in the statement and the third law, as OC2 found; content unchanged.",
+      "zh": "2026年10月26日：英文陈述与第三律中之 goes on（延，词表中为余归纳）改为 conditions anything，依 OC2 之所见；内容未变。"
     }
   ]
 }
