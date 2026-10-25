@@ -1,13 +1,62 @@
+UE1b kit, revised after REVIEW-UE1b.md: scratch builds and the statement comparison (25 October 2026).
+
+== 1. The revised kit with the rule 9 refactor of Optimum (tree/Becoming/Optimum.lean, tree/Becoming/SetPointOptimum.lean)
+$ python3 -B scratch_build.py <kit>/tree Becoming.Optimum Becoming.SetPointOptimum Becoming.RegimeMargin Becoming
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1b-set-points/tree",
-  "modules": 50,
+  "modules": 323,
   "ran": [
     "Becoming.SetPointOptimum",
-    "BecomingSetPointOptimumAxiomAudit"
+    "Becoming",
+    "BecomingSetPointOptimumAxiomAudit",
+    "BecomingAxiomAudit"
   ],
-  "reused": 49,
+  "reused": 323,
   "unclean": [],
   "audits": {
+    "Becoming.Optimum": {
+      "theorems": 506,
+      "declarations": 637,
+      "with_axioms": {}
+    },
+    "Becoming.SetPointOptimum": {
+      "theorems": 82,
+      "declarations": 124,
+      "with_axioms": {}
+    },
+    "Becoming.RegimeMargin": {
+      "theorems": 246,
+      "declarations": 336,
+      "with_axioms": {}
+    },
+    "Becoming": {
+      "theorems": 0,
+      "declarations": 0,
+      "with_axioms": {}
+    }
+  }
+}
+exit 0
+
+== 2. Before: the landed Optimum and RegimeMargin, and the kit as reviewed (sha256 c3ea2427…6bb2bbb), in a scratch tree
+$ python3 -B scratch_build.py <scratch>/before Becoming.Optimum Becoming.RegimeMargin Becoming.SetPointOptimum
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/ue1b/before",
+  "modules": 69,
+  "ran": [],
+  "reused": 72,
+  "unclean": [],
+  "audits": {
+    "Becoming.Optimum": {
+      "theorems": 503,
+      "declarations": 634,
+      "with_axioms": {}
+    },
+    "Becoming.RegimeMargin": {
+      "theorems": 246,
+      "declarations": 336,
+      "with_axioms": {}
+    },
     "Becoming.SetPointOptimum": {
       "theorems": 69,
       "declarations": 100,
@@ -16,3 +65,76 @@
   }
 }
 exit 0
+
+== 3. Statement comparison
+Statement comparison: declaration types printed as Lean Expr (raw, and with binder names erased)
+from the landed build (Optimum, RegimeMargin, the reviewed kit) and the refactored build.
+Becoming.Optimum: constants before 1057, after 1060; of those before, present after with a
+  byte-identical type: 1054; alpha-identical: 1054
+  not present after: ['Becoming.Optimum.Above.floor_or_full.match_1_1', 'Becoming.Optimum.Above.full.match_1_1', 'Becoming.Optimum.optimum_beyond.match_1_1']
+  added: ['Becoming.Optimum.Above.floor_or_full_of_ranked', 'Becoming.Optimum.Above.floor_or_full_of_ranked.match_1_1', 'Becoming.Optimum.Above.full_of_ranked', 'Becoming.Optimum.Above.full_of_ranked.match_1_1', 'Becoming.Optimum.beyond_of_ranked', 'Becoming.Optimum.beyond_of_ranked.match_1_1']
+Becoming.RegimeMargin: constants before 546, after 546; of those before, present after with a
+  byte-identical type: 546; alpha-identical: 546
+  not present after: []
+  added: []
+moved Becoming.Optimum.Above.full_of_ranked: before in Becoming.SetPointOptimum, after in Becoming.Optimum; alpha-identical: True
+moved Becoming.Optimum.Above.floor_or_full_of_ranked: before in Becoming.SetPointOptimum, after in Becoming.Optimum; alpha-identical: True
+moved Becoming.Optimum.beyond_of_ranked: before in Becoming.SetPointOptimum, after in Becoming.Optimum; alpha-identical: True
+rising law Becoming.Optimum.Above.full: byte-identical type: True
+rising law Becoming.Optimum.Above.floor_or_full: byte-identical type: True
+rising law Becoming.Optimum.optimum_beyond: byte-identical type: True
+
+== 4. Sources
+3da737a69545d00146977487c4e287526233d6db927f5606fe0ae94031621d3f  <package>/Becoming/Optimum.lean
+6b8c4e2024cf6f5d8b1ffc1dd5cf8849f032e2bc118c23ed76c4f20f9eaeb6dc  <kit>/tree/Becoming/Optimum.lean
+cfe9340e72987ef78d5d728458f9c6125feea8e37d472411b3985f3337a5a142  <kit>/tree/Becoming/SetPointOptimum.lean
+
+== 5. The comparison script (dump_types.lean; the before run adds 'import Becoming.SetPointOptimum'),
+run as: LEAN_PATH=<tree>/.build lean dump_types.lean, Lean 4.29.1
+import Lean
+import Becoming.Optimum
+import Becoming.RegimeMargin
+
+open Lean
+
+/-- Every binder name erased: alpha-equivalent types print alike. -/
+partial def eraseNames : Expr → Expr
+  | .forallE _ t b bi => .forallE `x (eraseNames t) (eraseNames b) bi
+  | .lam _ t b bi => .lam `x (eraseNames t) (eraseNames b) bi
+  | .app f a => .app (eraseNames f) (eraseNames a)
+  | .letE _ t v b nd => .letE `x (eraseNames t) (eraseNames v) (eraseNames b) nd
+  | .mdata m e => .mdata m (eraseNames e)
+  | .proj s i e => .proj s i (eraseNames e)
+  | e => e
+
+def kindOf : ConstantInfo → String
+  | .thmInfo _ => "theorem" | .defnInfo _ => "def" | .axiomInfo _ => "axiom"
+  | .opaqueInfo _ => "opaque" | .quotInfo _ => "quot" | .inductInfo _ => "inductive"
+  | .ctorInfo _ => "ctor" | .recInfo _ => "rec"
+
+def dumpModule (env : Environment) (mod : Name) : IO Unit := do
+  let some idx := env.getModuleIdx? mod | throw <| IO.userError s!"module {mod} not found"
+  let md := env.header.moduleData[idx.toNat]!
+  let mut lines : Array String := #[]
+  for ci in md.constants do
+    lines := lines.push s!"{mod}\t{kindOf ci}\t{ci.name}\tRAW\t{ci.type.dbgToString}"
+    lines := lines.push s!"{mod}\t{kindOf ci}\t{ci.name}\tNORM\t{(eraseNames ci.type).dbgToString}"
+  for line in lines.qsort (· < ·) do
+    IO.println line
+
+def dumpNamed (env : Environment) (n : Name) : IO Unit := do
+  match env.find? n with
+  | some ci =>
+    let mod := match env.getModuleIdxFor? n with
+      | some i => env.header.moduleNames[i.toNat]!
+      | none => `here
+    IO.println s!"MOVED\t{n}\t{mod}\tNORM\t{(eraseNames ci.type).dbgToString}"
+  | none => IO.println s!"MOVED\t{n}\tMISSING"
+
+#eval show CoreM Unit from do
+  let env ← getEnv
+  dumpModule env `Becoming.Optimum
+  dumpModule env `Becoming.RegimeMargin
+  for n in [`Becoming.Optimum.Above.full_of_ranked, `Becoming.Optimum.Above.floor_or_full_of_ranked,
+      `Becoming.Optimum.beyond_of_ranked] do
+    dumpNamed env n

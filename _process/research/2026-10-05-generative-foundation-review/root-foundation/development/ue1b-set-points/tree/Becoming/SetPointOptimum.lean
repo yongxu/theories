@@ -8,32 +8,44 @@ import Becoming.Regulation
 where there is room, every optimum stands at the least level beyond among the eligible outcomes
 (`Optimum.least_of_room`), and in an exchange each member of the part takes its whole capacity at
 every condition beyond (`Optimum.optimum_beyond`). An order greatest at a set point of what couples
-in is not rising: it has a point of enough. This module states what the optima of such orders do
-beyond their couplings, in the outcomes, orders and exchanges of `Becoming.Optimum`, and where joint
-excess (`Flow.joint_excess_ends`) still ends a condition that several formations holding set points
-draw on, with no premise beyond the hypotheses each statement names. The set point `s` is read on
-the family `ds`; the gap of two amounts is `gap` of `Becoming.Propagation`, read up to the set
-point by `Regulation.gap_of_ge`.
+in is not rising. This module states what the optima of such orders do beyond their couplings, in
+the outcomes, orders and exchanges of `Becoming.Optimum`, and where joint excess
+(`Flow.joint_excess_ends`) still ends a condition that formations holding their levels draw on, with
+no premise beyond the hypotheses each statement names. The set point `s` is read on the family `ds`;
+the gap of two amounts is `gap` of `Becoming.Propagation`, and lying between a set point and a
+level, on the level's side and no farther, is `Regulation.Between`, regulation's no overshoot.
 
 * **Orders nearing a set point.** One outcome is nearer a set point than another on a family where
-  at each condition of the family it stands no farther from it and at one nearer, whatever either
-  holds beyond (`Optimum.Nearer`, which is `Exceeds` read on the gaps from the set point); an order
-  is nearing where it ranks above every nearer outcome (`Optimum.Nearing`), as an order is rising
-  where it ranks above every exceeding one. The order by the family's total gap is nearing
-  (`Optimum.byGap_nearing`), and so is every order ranking above wherever a nearing order does
-  (`Optimum.Nearing.mono`). Nothing ranks above an outcome at the set point by distance
-  (`Optimum.byGap_enough`), so an eligible one is an optimum (`Optimum.atSetPoint_frontier`), and
-  an order with such a point of enough is not rising where the family holds a condition
-  (`Optimum.not_rising_of_enough`, `Optimum.byGap_not_rising`).
+  at each condition of the family it lies between the set point and the other, and at one it is
+  strictly nearer, whatever either holds beyond (`Optimum.Nearer`); an order is nearing where it
+  ranks above every nearer outcome (`Optimum.Nearing`), as an order is rising where it ranks above
+  every exceeding one. A nearing order is so single-peaked at the set point condition by condition,
+  each side weighed as it may be. An order falling with the distance from the set point at each
+  condition, both sides alike, is nearing (`Optimum.nearing_of_gaps`), the order by the family's
+  total gap among them (`Optimum.byGap_nearing`); so is an order costlier above the set point than
+  below (`Skew.nearing`), which does not fall with the distance alike on both sides
+  (`Skew.not_by_gaps`). Every order ranking above wherever a nearing order does is nearing
+  (`Optimum.Nearing.mono`). No nearing order that never ranks two outcomes above each other is
+  rising, where the family holds a condition (`Optimum.Nearing.not_rising`): neither the order by
+  distance (`Optimum.byGap_not_rising`) nor the order by distance with the beyond counted after
+  (`Optimum.byGapThen_not_rising`). Nor is any order under which an outcome is ranked below none
+  (`Optimum.not_rising_of_unbeaten`), as an outcome at the set point is by distance
+  (`Optimum.byGap_unbeaten_at`).
 * **Where the set point can be reached, every optimum stands at it, exactly.** Every nearing order
   has its optima at the set point exactly where no eligible outcome off it goes unbeaten by a nearer
-  eligible one (`Optimum.settled_iff`); so where some eligible outcome stands at the set point,
-  every optimum does (`Optimum.settled`), whatever the room.
-* **At the set point there is no drive beyond.** Where the set point can be reached, every optimum
-  of every nearing order stands beyond at the least level among the eligible outcomes at the set
-  point exactly where those outcomes all stand alike beyond (`Optimum.least_at_iff`): what lies
-  beyond is what reaching the set point leaves there. Counted after the set point, the beyond is
-  left at least as high, in total, as by any way of reaching it (`Optimum.counted_after_most`).
+  eligible one (`Optimum.atSetPoint_iff`); so where some eligible outcome stands at the set point,
+  every optimum does (`Optimum.atSetPoint_of_reach`), whatever the room, and several optimizers each
+  reaching its set point stand at their joint set point (`Optimum.mutual_atSetPoint`).
+* **Nearing alone asks nothing of what lies beyond.** Where the set point can be reached, an outcome
+  is an optimum of some nearing order exactly where it is eligible and at the set point
+  (`Optimum.optima_iff`), and every optimum of every nearing order stands beyond at the least level
+  among the eligible outcomes at the set point exactly where those all stand alike beyond
+  (`Optimum.least_at_iff`): the class leaves what lies beyond where the way of reaching the set
+  point leaves it. One nearing order can still drive what lies beyond through what it counts after
+  the set point. Counting more beyond, it leaves the beyond, in total, at the most any eligible way
+  of reaching the set point leaves (`Optimum.counted_after_most`), and with one condition beyond it
+  keeps a need there exactly where some such way keeps it (`Optimum.counted_after_keeps_iff`);
+  counting less beyond, it drains (`Topped.counted_less_drains`).
 * **Below the set point a nearing order rises.** Among outcomes up to the set point, one is nearer
   exactly where it exceeds on the family (`Optimum.nearer_iff_exceeds`), so there a nearing order
   ranks above every exceeding outcome (`Optimum.Nearing.rises_below`), and every nearing order has
@@ -41,96 +53,114 @@ point by `Regulation.gap_of_ge`.
   exactly where room holds among them (`Optimum.least_below_iff`, from `Optimum.least_iff`;
   `Optimum.least_below`). Room up to the set point fails at an outcome at the set point standing
   above another beyond, so this law bites where the set point is out of reach.
-* **What reaching the set point draws, exactly.** In a balanced step where the family with the
-  conditions beyond gains nothing and the family stands at its set point after the step, the
-  beyond after it, with what the whole loses and the set point's total, is the family and the
-  beyond before (`Flow.Balances.settled_draws`, from `Flow.Balances.beyond_falls_exactly`): the
-  beyond with the loss falls by exactly the family's rise to its set point (and rises by its fall
-  to it), and, the set point held across the step, the beyond falls by the loss alone
-  (`Flow.Balances.held_draws_lost`). With
-  each condition beyond depended on at a need it meets, a dependence breaks where the set point's
-  total with the loss exceeds the family before with the slack (`Flow.Balances.settled_breaks`),
-  and with one condition beyond exactly there (`Flow.Balances.settled_broken_iff`). Every optimum of
-  a nearing order whose set point some eligible outcome reaches draws so
-  (`Flow.nearing_optimum_draws`).
+* **What reaching the set point draws.** In a balanced step where the whole, the family with the
+  conditions beyond, gains nothing and the family stands at its set point after the step, the beyond
+  after it, with what the whole loses and the set point's total, is the family and the beyond before
+  (`Flow.Balances.atSetPoint_draws`, from `Flow.Balances.beyond_falls_exactly`): the beyond falls by
+  the family's shortfall from its set point with what the step loses, and rises where the family
+  stood above it; with the set point held across the step, it falls by the loss alone
+  (`Flow.Balances.held_draws_lost`). With each condition beyond depended on at a need it meets, some
+  dependence breaks where the set point's total with the loss exceeds the family before with the
+  slack (`Flow.Balances.atSetPoint_breaks`); with one condition beyond, exactly there
+  (`Flow.Balances.atSetPoint_broken_iff`); with several, the identity fixes the total drawn, not its
+  spread. Every optimum of a nearing order whose set point some eligible outcome reaches draws so
+  (`Flow.nearing_optimum_draws`), and several such optimizers draw their joint shortfall, as one
+  with their joint set point (`Flow.Balances.mutual_atSetPoint_draws`), breaking a dependence beyond
+  where it exceeds the slack, whatever each one's own (`Flow.Balances.mutual_atSetPoint_breaks`).
 * **In an exchange, below the set point, the whole capacity.** One unit moved from a condition
   beyond into a condition of the family below its set point is nearer it
   (`Optimum.transfer_nearer`). So among the outcomes open to a part, every optimum of every nearing
-  order standing below its set point at a condition of the family stands at each condition beyond
-  at the level before, with what the rest gives and less what it takes, less the part's whole
-  capacity, or at nothing (`Optimum.nearing_beyond`): where every optimum of every rising order
-  stands (`Optimum.nearing_as_rising`). One law carries both: an optimum takes the whole capacity at
-  a condition beyond wherever its order ranks above it the outcome with one unit moved from there
-  into the family (`Optimum.Above.full_of_ranked`, `Optimum.Above.floor_or_full_of_ranked`,
-  `Optimum.beyond_of_ranked`); `Optimum.Above.full`, `Optimum.Above.floor_or_full` and
-  `Optimum.optimum_beyond` state its rising case, with proofs of their own.
-* **Several at once draw their joint shortfall.** Several nearing optimizers at one step, each
-  reaching its set point among the outcomes eligible to it, stand at their joint set point
-  (`Optimum.mutual_settled`) and draw from beyond together exactly the joint set point's shortfall
-  with the loss, as one optimizer with their joint set point would
-  (`Flow.Balances.mutual_settled_draws`); where that exceeds the slack a dependence beyond breaks,
-  whatever each one's own shortfall (`Flow.Balances.mutual_settled_breaks`).
-* **Holding a set point draws what is lost, and joint excess still ends what is drawn on.** A
-  formation alone exchanging with its family, holding it at a set point across a step, takes from a
+  order standing below its set point at a condition of the family stands at each condition beyond at
+  the level before, with what the rest gives and less what it takes, less the part's whole capacity,
+  or at nothing (`Optimum.nearing_beyond`): where every optimum of every rising order stands
+  (`Optimum.nearing_as_rising`). Both are cases of one law of `Becoming.Optimum`, whose rising laws
+  are its cases too: an optimum takes the whole capacity at a condition beyond wherever its order
+  ranks above it the outcome with one unit moved from there into the family
+  (`Optimum.Above.full_of_ranked`, `Optimum.Above.floor_or_full_of_ranked`,
+  `Optimum.beyond_of_ranked`).
+* **Holding a level takes at least what is lost, and joint excess ends what is drawn on.** A
+  formation alone exchanging with its family, holding the family's stock across a step, takes from a
   condition at least what it gives there with what it loses on its family with that condition
-  (`Flow.held_draws`). So where formations holding their families at set points lose together, at
-  each of `n` steps, more than the formations outside them give a condition, from a level below
-  `n + m`, under the gate at need `m` every formation depending on the condition at a need of at
-  least `m` is inactive from the `n`-th step on, however small each one's loss, each within what the
-  step gives included; and none of them couples into the condition where its couplings lie in its
-  family (`Flow.held_excess_ends`, from `Flow.joint_excess_ends`).
+  (`Flow.held_draws`). Where formations so holding lose together, at each of `n` steps, more than
+  the formations outside them give a condition whose level starts below `n + m`, under the gate at
+  need `m` every formation depending on the condition at a need of at least `m` is inactive from the
+  `n`-th step on, however small each one's loss; where each one's couplings lie in its family, apart
+  from the condition, none couples into it (`Flow.held_excess_ends`, from `Flow.joint_excess_ends`).
+  No order or choice enters these laws. A family at its set point at two steps holds its stock
+  between them (`Optimum.stock_eq_of_atSetPoint`), and a nearing chooser holds its family at the set
+  point wherever, at each step, an eligible outcome reaches it (`Optimum.atSetPoint_of_reach`); the
+  course of choices is not formalized.
 * **Witnesses.** Among the splits of three units between a source and a store, where room holds and
   every rising optimum empties the source, every optimum of every order nearing a store of `k`
-  leaves the source at `3 - k` (`Drain.settled_source`), so the dweller needing two units is kept
+  leaves the source at `3 - k` (`Drain.atSetPoint_source`), so it meets the dweller's need of two
   exactly where `k` is at most one, the slack (`Drain.kept_iff`; `Drain.nearing_keeps` at one,
-  `Drain.nearing_breaks` at two). In an exchange from a store at its set point of one, the step
-  exchanging nothing and the step taking a unit of the source and losing it are both optima of the
-  order by distance, the first keeping the dweller and the second breaking it, while every rising
-  optimum breaks it (`Topped.nearing_either`, `Topped.rising_drains`); with the source counted after
-  the set point every optimum keeps it (`Topped.counted_after_keeps`); a set point no open outcome
-  reaches breaks it as a rising order does (`Topped.out_of_reach`). Two takers each nearing a store
-  of its own at one, from a source of three of which a dweller needs two, each short of its set
-  point by no more than the slack of one, together break the dweller (`TwoStores.jointly_broken`).
-  Two formations each holding a store at one by drawing from a pool the unit they lose, each within
-  the one unit the pool is given, end its renewal from a pool of two in two steps, neither coupling
-  into the pool (`HeldPair.held_end`).
+  `Drain.nearing_breaks` at two); an aspiration level at a store of one with the source counted
+  after leaves it at two as well (`Drain.satisficingThen_keeps`). In an exchange from a store at its
+  set point of one, every nearing optimum stands at it, and the step exchanging nothing and the step
+  taking a unit of the source and losing it are both optima of the order by distance, the first
+  leaving the source at the dweller's need of two and the second below it, while every rising
+  optimum leaves it below (`Topped.nearing_either`, `Topped.rising_drains`). There, with the source
+  counted after the set point every optimum meets the need (`Topped.counted_after_keeps`), with less
+  source counted after every optimum leaves it below (`Topped.counted_less_drains`), and under every
+  positive weight on the source against the store's gap every optimum meets the need
+  (`Topped.weighted_keeps`); a set point no open outcome reaches leaves it below the need, as a
+  rising order does (`Topped.out_of_reach`). With two conditions beyond, counting the beyond after
+  the set point empties one of them though a way of reaching the set point keeps both
+  (`Spread.counted_after_empties`). Two takers each nearing a store of its own at one, from a source
+  of three of which a dweller needs two, each short of its set point by no more than the slack of
+  one, together break the dweller (`TwoStores.jointly_broken`). Two formations each holding a store
+  at one by drawing from a pool the unit they lose, each within the one unit the pool is given, end
+  its renewal from a pool of two in two steps, neither coupling into the pool (`HeldPair.held_end`).
 
-So a point of enough removes the drive beyond what couples in, not the draw. Below its set point a
-nearing order rises with what couples in and its optima drain as a rising order's do; at its set
-point it no longer drives what lies beyond, which stands where reaching the set point leaves it:
-lower by exactly the set point's shortfall where the step loses nothing, and anywhere a way of
-reaching the set point leaves it, the least included, where the step can lose what it takes.
+So a set point removes the drive of the class beyond what couples in, not the draw. Below its set
+point a nearing order rises with what couples in and its optima drain as a rising order's do. At its
+set point the class asks nothing of what lies beyond, which stands where the way of reaching the set
+point leaves it: lower by the set point's shortfall with what the step loses, in a balanced step in
+which the whole gains nothing. Which way is taken, where several reach the set point, is decided by
+what else the order counts or by the choice among optima, not by the set point.
 
 **Reading (the AI's).** Active inference casts preferences as prior beliefs over outcomes, highest
-at the characteristic states (Friston and others, "Active inference and learning", 2016); a
-preference falling with the distance from its mode at each observed condition ranks outcomes as an
-order nearing that mode on what is observed. Such a chooser escapes the drive beyond its couplings
-at its set point, not the drain below it, nor joint excess: below its set point it drains as a
-maximizer does (`Optimum.least_below`, `Optimum.nearing_beyond`); at its set point it draws what
-reaching the set point draws, exactly the shortfall with what is lost where the exchange conserves
-(`Flow.Balances.settled_draws`), and where the exchange can lose a draining outcome is an optimum
-beside a keeping one (`Topped.nearing_either`), as for an order rising only to a target
-(`Drain.satisficing_either`); and holding its set point it draws what it loses, so that several,
-each within what a condition is given, can end it unseen (`Flow.held_excess_ends`). An aspiration
-level (Simon, "A behavioral model of rational choice", 1955) is such a target: it neither drives nor
-keeps above it. A set point adds the ranking of overshoot below, which fixes the draw where nothing
-is lost and not otherwise. What keeps at the set point is a term counted after it: the most beyond
-any way of reaching the set point leaves (`Optimum.counted_after_most`), where counted after a
-rising order nothing is kept (`Drain.counted_after_drains`); and only there, since below the set
-point the order still rises.
+at the characteristic states (Friston and others, "Active inference and learning", 2016). A
+preference single-peaked at its mode on each observed condition, each side weighed as it may be,
+ranks outcomes as an order nearing that mode on what is observed; a drive that is a norm of the
+deviations from set points, as in homeostatic reinforcement learning (Keramati and Gutkin 2014),
+falls with the distance alike on both sides. Such a chooser escapes the drive beyond its couplings
+at its set point, not the drain below it, nor joint excess. Below its set point it drains as a
+maximizer does (`Optimum.least_below`, `Optimum.nearing_beyond`). At its set point it draws what the
+way of reaching the set point draws (`Flow.Balances.atSetPoint_draws`). Where the step can lose what
+it takes, the set point alone does not protect what lies beyond, the order by distance having the
+draining step among its optima beside the keeping one (`Topped.nearing_either`), and a term on what
+lies beyond counted after the set point does protect it there (`Topped.counted_after_keeps`). That
+contrast with rising orders belongs to the plateau, not to the set point. Counted after a rising
+order, with room, such a term changes nothing (`Optimum.Rising.mono`, `Optimum.least_of_room`;
+`Drain.counted_after_drains`); counted after an order with a plateau, a set point or an aspiration
+level (Simon, "A behavioral model of rational choice", 1955; `Drain.satisficingThen_keeps`), it
+decides within the plateau. Counting more beyond after a set point, it leaves, in total, the most
+any way of reaching the set point leaves (`Optimum.counted_after_most`); counting less, it drains
+(`Topped.counted_less_drains`). Such a term reads what lies beyond: it is a coupling ranked second.
+So what protects at a set point is how the choice among equal optima is made, the point of mild
+optimization (Taylor, "Quantilizers", 2016): a choice drawn from a base distribution over the ways
+of reaching the set point would be a quantilizer and inherit its bound, an arbitrary choice has
+none. Formations holding a level take at least their loss from what they share, so several, each
+within what a condition is given, can end it together (`Flow.held_excess_ends`); no choice enters
+that law.
 
 What is not derived: that an agent's preferences form a nearing order (one whose best level at a
-condition depends on the levels at others, or that does not fall with the distance from it at each,
-is not one), or any probability, surprisal or expected free energy; which outcomes are eligible,
-whether one reaches the set point, and room up to it (hypotheses wherever they enter); the optimum
-where no eligible outcome reaches the set point and some stand above it; in an exchange, the optima
-at the set point beyond the witness, and above it; which outcomes are eligible to each of several
-optimizers at once (those it can bring about with the others' steps as they are, supplied, not read
-off an exchange as `Optimum.MutualBest` does for rising orders); that a formation holding a set
-point exchanges alone with its family, holds it at every step (what every nearing optimum does
-where the set point can be reached, `Optimum.settled`) and loses what it loses (each supplied). The
-representation commits to discrete steps and natural amounts. No ethical predicate, ranking or
-axiom occurs.
+condition depends on the levels at others, or that is not single-peaked at each, is not one), or any
+probability, surprisal, expected free energy or precision; which outcomes are eligible, whether one
+reaches the set point, and room up to it (hypotheses wherever they enter); the optimum where no
+eligible outcome reaches the set point and some stand above it; in an exchange, the optima at the
+set point beyond the witnesses, and above it; which optimum is taken where several stand at the set
+point, which decides keeping wherever a step can lose what it takes; terms counted after the set
+point are lexicographic, so that with continuous amounts or finite precision, where exact ties are
+rare, a weighted term trades against the set point instead (`Topped.weighted_keeps` is one weighted
+case); several optimizers share one set point on shared conditions, and conflicting set points are
+not treated; which outcomes are eligible to each of several optimizers at once (supplied, not read
+off an exchange as `Optimum.MutualBest` does for rising orders); that formations hold their levels,
+exchange alone with their families and lose what they lose (supplied). Every law is of one step or
+of supplied courses, and deterministic: under noise over a horizon a set point on later states makes
+reserves worth holding, so a rising drive on stores can return. The representation commits to
+discrete steps and natural amounts. No ethical predicate, ranking or axiom occurs.
 -/
 
 namespace Becoming
@@ -144,17 +174,19 @@ namespace Optimum
 /-! ## Orders nearing a set point
 
 An order rising with a family ranks above every outcome higher on it; an order nearing a set point
-ranks above every outcome nearer the set point on it. Where the set point can be reached, every
-optimum stands at it, and there the order asks nothing of what lies beyond. -/
+ranks above every outcome lying, at each condition of the family, between the set point and the
+other, and nearer at one. Where the set point can be reached, every optimum stands at it, and the
+class asks nothing more of what lies beyond. -/
 
 /-- How far an outcome stands from a set point at each condition: the gap of the two amounts. -/
 def gapTo (s o : C → Nat) : C → Nat := fun c => gap (o c) (s c)
 
-/-- One outcome is nearer a set point than another on a family: at each of its conditions no
-farther from the set point, and nearer at one, whatever either holds elsewhere. Read on the gaps,
-the other's gaps exceed the one's. -/
+/-- One outcome is nearer a set point than another on a family: at each condition of the family it
+lies between the set point and the other (on the other's side of the set point and no farther,
+`Regulation.Between`), and at one it is strictly nearer, whatever either holds elsewhere. -/
 def Nearer (ds : List C) (s o' o : C → Nat) : Prop :=
-  Exceeds ds (gapTo s o) (gapTo s o')
+  (∀ c, c ∈ ds → Regulation.Between (s c) (o c) (o' c)) ∧
+    ∃ c, c ∈ ds ∧ gapTo s o' c < gapTo s o c
 
 /-- An order nears a set point of a family: it ranks above every outcome nearer the set point on
 the family, whatever either holds elsewhere. -/
@@ -177,9 +209,25 @@ def byGap (ds : List C) (s o' o : C → Nat) : Prop :=
 variable {ds rest : List C} {s : C → Nat} {eligible : (C → Nat) → Prop}
   {better : (C → Nat) → (C → Nat) → Prop}
 
+/-- The set point lies between itself and every level. -/
+theorem setPoint_between (m x : Nat) : Regulation.Between m x m :=
+  ⟨fun mx => ⟨Nat.le_refl m, mx⟩, fun xm => ⟨xm, Nat.le_refl m⟩⟩
+
+/-- Nearer is nearer by the gaps: no farther at each condition of the family, nearer at one. -/
+theorem Nearer.gaps {o o' : C → Nat} (nearer : Nearer ds s o' o) :
+    Exceeds ds (gapTo s o) (gapTo s o') :=
+  ⟨fun c mem => Regulation.Between.gap_le (nearer.1 c mem), nearer.2⟩
+
+/-- **An order falling with the distance from the set point is nearing.** An order ranking above
+every outcome no farther from the set point at each condition of the family and nearer at one, the
+two sides alike, is nearing. -/
+theorem nearing_of_gaps (falls : ∀ o o', Exceeds ds (gapTo s o) (gapTo s o') → better o' o) :
+    Nearing ds s better :=
+  fun o o' nearer => falls o o' nearer.gaps
+
 /-- **The order by distance nears the set point.** -/
 theorem byGap_nearing (ds : List C) (s : C → Nat) : Nearing ds s (byGap ds s) :=
-  fun _ _ nearer => Exceeds.total_lt nearer
+  nearing_of_gaps fun _ _ farther => Exceeds.total_lt farther
 
 /-- **An order ranking above wherever a nearing order does is nearing.** -/
 theorem Nearing.mono (nearing : Nearing ds s better) {better' : (C → Nat) → (C → Nat) → Prop}
@@ -201,45 +249,57 @@ theorem atSetPoint_single {c : C} {o : C → Nat} (at_ : o c = s c) : AtSetPoint
     | .inl same => Eq.subst (motive := fun y => o y = s y) same.symm at_
     | .inr nothing => nomatch nothing
 
-/-- **The point of enough.** Nothing ranks above an outcome at the set point by distance. -/
-theorem byGap_enough {o₀ : C → Nat} (at₀ : AtSetPoint ds s o₀) (o : C → Nat) :
+/-- **No outcome ranks above one at the set point by distance**: the order's point of enough. -/
+theorem byGap_unbeaten_at {o₀ : C → Nat} (at₀ : AtSetPoint ds s o₀) (o : C → Nat) :
     ¬ byGap ds s o o₀ :=
-  fun above => Nat.not_lt_zero _ (Nat.lt_of_lt_of_le above (Nat.le_of_eq (total_gapTo_eq_zero at₀)))
+  fun above => Nat.not_lt_zero _
+    (Nat.lt_of_lt_of_le above (Nat.le_of_eq (total_gapTo_eq_zero at₀)))
 
 /-- An eligible outcome at the set point is an optimum of the order by distance. -/
 theorem atSetPoint_frontier {o₀ : C → Nat} (eligibleO : eligible o₀) (at₀ : AtSetPoint ds s o₀) :
     Frontier eligible (byGap ds s) o₀ :=
-  ⟨eligibleO, fun o _ above => byGap_enough at₀ o above⟩
+  ⟨eligibleO, fun o _ above => byGap_unbeaten_at at₀ o above⟩
 
-/-- **An order with a point of enough is not rising.** Where some outcome is ranked below no
-outcome and the family holds a condition, the order does not rise with the family: the outcome one
-higher everywhere exceeds it on the family. -/
-theorem not_rising_of_enough {o₀ : C → Nat} (enough : ∀ o, ¬ better o o₀) {d : C}
+/-- **An order under which some outcome is ranked below none is not rising.** Where the family
+holds a condition, the outcome one higher everywhere exceeds it on the family. -/
+theorem not_rising_of_unbeaten {o₀ : C → Nat} (unbeaten : ∀ o, ¬ better o o₀) {d : C}
     (inside : d ∈ ds) : ¬ Rising ds better :=
-  fun rising => enough _
+  fun rising => unbeaten _
     (rising o₀ (fun x => o₀ x + 1) ⟨fun _ _ => Nat.le_succ _, d, inside, Nat.lt_succ_self _⟩)
 
 /-- **The order by distance is not rising**, where the family holds a condition. -/
 theorem byGap_not_rising {d : C} (inside : d ∈ ds) : ¬ Rising ds (byGap ds s) :=
-  not_rising_of_enough (byGap_enough (o₀ := s) fun _ _ => rfl) inside
+  not_rising_of_unbeaten (byGap_unbeaten_at (o₀ := s) fun _ _ => rfl) inside
 
 /-- An outcome at the set point is nearer it than every outcome off it at a condition of the
 family. -/
 theorem nearer_of_atSetPoint {o₀ o : C → Nat} (at₀ : AtSetPoint ds s o₀) {c : C} (mem : c ∈ ds)
     (off : ¬ o c = s c) : Nearer ds s o₀ o :=
-  ⟨fun _ listed => Nat.le_trans (Nat.le_of_eq (gapTo_eq_zero at₀ listed)) (Nat.zero_le _),
+  ⟨fun x listed => Eq.subst (motive := fun y => Regulation.Between (s x) (o x) y)
+      (at₀ x listed).symm (setPoint_between (s x) (o x)),
    c, mem, Nat.lt_of_le_of_lt (Nat.le_of_eq (gapTo_eq_zero at₀ mem))
      (Nat.pos_of_ne_zero fun zero => off (gap_eq_zero_iff.mp zero))⟩
+
+/-- **No asymmetric nearing order is rising.** Where the family holds a condition, an order that is
+nearing and never ranks two outcomes above each other does not rise with the family: the set point
+and the outcome one above it at every condition would each rank above the other. -/
+theorem Nearing.not_rising (nearing : Nearing ds s better)
+    (asymm : ∀ o o', better o' o → ¬ better o o') {d : C} (inside : d ∈ ds) :
+    ¬ Rising ds better :=
+  fun rising => asymm s (fun x => s x + 1)
+    (rising s _ ⟨fun _ _ => Nat.le_succ _, d, inside, Nat.lt_succ_self _⟩)
+    (nearing (fun x => s x + 1) s
+      (nearer_of_atSetPoint (fun _ _ => rfl) inside (Nat.succ_ne_self (s d))))
 
 /-- **Every optimum at the set point, exactly.** Every order nearing a set point has its optima
 at the set point exactly where every eligible outcome off it at a condition of the family is not
 unbeaten by an eligible outcome nearer it. -/
-theorem settled_iff :
+theorem atSetPoint_iff :
     (∀ better, Nearing ds s better → ∀ o, Frontier eligible better o → AtSetPoint ds s o) ↔
       ∀ o, eligible o → ∀ c, c ∈ ds → ¬ o c = s c →
         ¬ ¬ ∃ o'', eligible o'' ∧ Nearer ds s o'' o :=
-  ⟨fun settles o eligibleO c mem off unbeaten =>
-      off (settles (fun o₁ o₂ => Nearer ds s o₁ o₂) (fun _ _ nearer => nearer) o
+  ⟨fun atSet o eligibleO c mem off unbeaten =>
+      off (atSet (fun o₁ o₂ => Nearer ds s o₁ o₂) (fun _ _ nearer => nearer) o
         ⟨eligibleO, fun o'' eligible'' nearer => unbeaten ⟨o'', eligible'', nearer⟩⟩ c mem),
    fun beaten _ nearing o optimum c mem => match Nat.decEq (o c) (s c) with
      | .isTrue same => same
@@ -249,10 +309,10 @@ theorem settled_iff :
 
 /-- **Where the set point can be reached, every optimum stands at it.** Where some eligible
 outcome stands at the set point, every optimum of every order nearing it does. -/
-theorem settled (nearing : Nearing ds s better) {o₀ : C → Nat} (reach : eligible o₀)
+theorem atSetPoint_of_reach (nearing : Nearing ds s better) {o₀ : C → Nat} (reach : eligible o₀)
     (at₀ : AtSetPoint ds s o₀) {o : C → Nat} (optimum : Frontier eligible better o) :
     AtSetPoint ds s o :=
-  settled_iff.mpr
+  atSetPoint_iff.mpr
     (fun _ _ _ mem off unreached => unreached ⟨o₀, reach, nearer_of_atSetPoint at₀ mem off⟩)
     better nearing o optimum
 
@@ -260,7 +320,7 @@ theorem settled (nearing : Nearing ds s better) {o₀ : C → Nat} (reach : elig
 levels are, for each of several optimizers, an optimum among the outcomes eligible to it of an
 order nearing a set point on its family, one of those outcomes standing at the set point, the
 levels stand at the set point on every family the optimizers' families cover. -/
-theorem mutual_settled {I : Type} {opt : List I} {fam : I → List C}
+theorem mutual_atSetPoint {I : Type} {opt : List I} {fam : I → List C}
     {elig : I → (C → Nat) → Prop} {orders : I → (C → Nat) → (C → Nat) → Prop} {o : C → Nat}
     (covered : ∀ c, c ∈ ds → ∃ i, i ∈ opt ∧ c ∈ fam i)
     (nearing : ∀ i, i ∈ opt → Nearing (fam i) s (orders i))
@@ -268,13 +328,25 @@ theorem mutual_settled {I : Type} {opt : List I} {fam : I → List C}
     (best : ∀ i, i ∈ opt → Frontier (elig i) (orders i) o) : AtSetPoint ds s o :=
   fun c mem => match covered c mem with
     | ⟨i, listed, inside⟩ => match reach i listed with
-      | ⟨_, eligible₀, at₀⟩ => settled (nearing i listed) eligible₀ at₀ (best i listed) c inside
+      | ⟨_, eligible₀, at₀⟩ =>
+        atSetPoint_of_reach (nearing i listed) eligible₀ at₀ (best i listed) c inside
 
-/-- **At the set point, the least level beyond only where every way of reaching it leaves the
-same.** Where some eligible outcome stands at the set point, every optimum of every order nearing
-it stands beyond at the least level among the eligible outcomes at the set point exactly where
-those outcomes all stand alike beyond. No room enters: at its set point a nearing order does not
-drive what lies beyond. -/
+/-- **Nearing alone asks nothing of what lies beyond.** Where some eligible outcome stands at the
+set point, an outcome is an optimum of some nearing order exactly where it is eligible and at the
+set point. -/
+theorem optima_iff {o₀ : C → Nat} (reach : eligible o₀) (at₀ : AtSetPoint ds s o₀) {o : C → Nat} :
+    (∃ better, Nearing ds s better ∧ Frontier eligible better o) ↔
+      (eligible o ∧ AtSetPoint ds s o) :=
+  ⟨fun ⟨_, nearing, optimum⟩ => ⟨optimum.1, atSetPoint_of_reach nearing reach at₀ optimum⟩,
+   fun ⟨eligibleO, atO⟩ => ⟨byGap ds s, byGap_nearing ds s, atSetPoint_frontier eligibleO atO⟩⟩
+
+/-- **At the set point, the least level beyond, for the class, only where every way of reaching it
+leaves the same.** Where some eligible outcome stands at the set point, every optimum of every order
+nearing it stands beyond at the least level among the eligible outcomes at the set point exactly
+where those outcomes all stand alike beyond. This is a statement about the class: its forward
+direction uses only the order by distance, which is indifferent to what lies beyond, while one
+nearing order can still drive what lies beyond through what it counts after the set point
+(`counted_after_most`). No room enters. -/
 theorem least_at_iff {o₀ : C → Nat} (reach : eligible o₀) (at₀ : AtSetPoint ds s o₀) :
     (∀ better, Nearing ds s better → ∀ o, Frontier eligible better o →
         Least rest (fun o => eligible o ∧ AtSetPoint ds s o) o) ↔
@@ -287,8 +359,8 @@ theorem least_at_iff {o₀ : C → Nat} (reach : eligible o₀) (at₀ : AtSetPo
         (least (byGap ds s) (byGap_nearing ds s) o' (atSetPoint_frontier eligibleO' atO') c mem o
           ⟨eligibleO, atO⟩),
    fun alike _ nearing o optimum c mem o' reached =>
-      Nat.le_of_eq (alike o o' optimum.1 (settled nearing reach at₀ optimum) reached.1 reached.2
-        c mem)⟩
+      Nat.le_of_eq (alike o o' optimum.1 (atSetPoint_of_reach nearing reach at₀ optimum)
+        reached.1 reached.2 c mem)⟩
 
 /-- The order by distance from a set point with what lies beyond counted after: nearer first, and
 among outcomes as near, more beyond in total. -/
@@ -300,17 +372,54 @@ def byGapThen (ds : List C) (s : C → Nat) (rest : List C) (o' o : C → Nat) :
 theorem byGapThen_nearing : Nearing ds s (byGapThen ds s rest) :=
   (byGap_nearing ds s).mono fun _ _ nearer => .inl nearer
 
-/-- **Counted after the set point, the most beyond any way of reaching it leaves.** Where some
-eligible outcome stands at the set point, every optimum of the order by distance with the beyond
-counted after stands at the set point and leaves the beyond, in total, at least where every
-eligible outcome at the set point does. Counted after a rising order, the beyond drains all the
-same (`Drain.counted_after_drains`). -/
+/-- The order by distance with the beyond counted after never ranks two outcomes above each
+other. -/
+theorem byGapThen_asymm : ∀ o o', byGapThen ds s rest o' o → ¬ byGapThen ds s rest o o' :=
+  fun _ _ above below => match above, below with
+    | .inl closer, .inl closer' => Nat.lt_irrefl _ (Nat.lt_trans closer closer')
+    | .inl closer, .inr ⟨same, _⟩ =>
+      Nat.lt_irrefl _ (Nat.lt_of_lt_of_le closer (Nat.le_of_eq same))
+    | .inr ⟨same, _⟩, .inl closer =>
+      Nat.lt_irrefl _ (Nat.lt_of_lt_of_le closer (Nat.le_of_eq same))
+    | .inr ⟨_, more⟩, .inr ⟨_, more'⟩ => Nat.lt_irrefl _ (Nat.lt_trans more more')
+
+/-- **The order by distance with the beyond counted after is not rising**, where the family holds
+a condition. -/
+theorem byGapThen_not_rising {d : C} (inside : d ∈ ds) : ¬ Rising ds (byGapThen ds s rest) :=
+  byGapThen_nearing.not_rising byGapThen_asymm inside
+
+/-- **Counted after the set point, the most beyond, in total, that any way of reaching it leaves.**
+Where some eligible outcome stands at the set point, every optimum of the order by distance with
+the beyond counted after stands at the set point and leaves the beyond, in total, at least where
+every eligible outcome at the set point does. It maximizes the total, not each condition
+(`Spread.counted_after_empties`), and keeps no more than some way of reaching the set point leaves
+(`counted_after_keeps_iff`). -/
 theorem counted_after_most {o₀ : C → Nat} (reach : eligible o₀) (at₀ : AtSetPoint ds s o₀)
     {o : C → Nat} (optimum : Frontier eligible (byGapThen ds s rest) o) :
     AtSetPoint ds s o ∧ ∀ o', eligible o' → AtSetPoint ds s o' → total rest o' ≤ total rest o :=
-  have atO := settled byGapThen_nearing reach at₀ optimum
+  have atO := atSetPoint_of_reach byGapThen_nearing reach at₀ optimum
   ⟨atO, fun o' eligibleO' atO' => Nat.ge_of_not_lt fun more => optimum.2 o' eligibleO'
     (.inr ⟨(total_gapTo_eq_zero atO').trans (total_gapTo_eq_zero atO).symm, more⟩)⟩
+
+/-- **With one condition beyond, counted after the set point keeps a need exactly where some way of
+reaching the set point keeps it.** -/
+theorem counted_after_keeps_iff {c : C} {need : Nat} {o₀ : C → Nat} (reach : eligible o₀)
+    (at₀ : AtSetPoint ds s o₀) {o : C → Nat}
+    (optimum : Frontier eligible (byGapThen ds s [c]) o) :
+    need ≤ o c ↔ ∃ o', eligible o' ∧ AtSetPoint ds s o' ∧ need ≤ o' c :=
+  ⟨fun kept => ⟨o, optimum.1, (counted_after_most reach at₀ optimum).1, kept⟩,
+   fun ⟨o', eligible', at', kept'⟩ => Nat.le_trans kept'
+     (le_of_add_le_add_right 0 ((counted_after_most reach at₀ optimum).2 o' eligible' at'))⟩
+
+/-- The order by distance from a set point with less beyond counted after: nearer first, and among
+outcomes as near, less beyond in total. -/
+def byGapLess (ds : List C) (s : C → Nat) (rest : List C) (o' o : C → Nat) : Prop :=
+  byGap ds s o' o ∨
+    (total ds (gapTo s o') = total ds (gapTo s o) ∧ total rest o' < total rest o)
+
+/-- The order by distance with less beyond counted after nears the set point. -/
+theorem byGapLess_nearing : Nearing ds s (byGapLess ds s rest) :=
+  (byGap_nearing ds s).mono fun _ _ nearer => .inl nearer
 
 /-! ## Below the set point, a nearing order rises
 
@@ -338,17 +447,15 @@ theorem gapTo_of_upTo {o : C → Nat} (upTo : UpToSetPoint ds s o) {c : C} (mem 
 than another on the family exactly where it exceeds the other there. -/
 theorem nearer_iff_exceeds {o o' : C → Nat} (upTo : UpToSetPoint ds s o)
     (upTo' : UpToSetPoint ds s o') : Nearer ds s o' o ↔ Exceeds ds o' o :=
-  ⟨fun ⟨le, c, mem, lt⟩ =>
-    ⟨fun x listed => (sub_le_sub_iff (upTo x listed) (upTo' x listed)).mp
-        (Nat.le_trans (Nat.le_of_eq (gapTo_of_upTo upTo' listed).symm)
-          (Nat.le_trans (le x listed) (Nat.le_of_eq (gapTo_of_upTo upTo listed)))),
+  ⟨fun ⟨between, c, mem, lt⟩ =>
+    ⟨fun x listed => ((between x listed).2 (upTo x listed)).1,
      c, mem, (sub_lt_sub_iff (upTo' c mem)).mp
         (Nat.lt_of_le_of_lt (Nat.le_of_eq (gapTo_of_upTo upTo' mem).symm)
           (Nat.lt_of_lt_of_le lt (Nat.le_of_eq (gapTo_of_upTo upTo mem))))⟩,
    fun ⟨le, c, mem, lt⟩ =>
-    ⟨fun x listed => Nat.le_trans (Nat.le_of_eq (gapTo_of_upTo upTo' listed))
-        (Nat.le_trans ((sub_le_sub_iff (upTo x listed) (upTo' x listed)).mpr (le x listed))
-          (Nat.le_of_eq (gapTo_of_upTo upTo listed).symm)),
+    ⟨fun x listed =>
+      ⟨fun sx => ⟨Nat.le_trans sx (le x listed), Nat.le_trans (upTo' x listed) sx⟩,
+       fun _ => ⟨le x listed, upTo' x listed⟩⟩,
      c, mem, Nat.lt_of_le_of_lt (Nat.le_of_eq (gapTo_of_upTo upTo' mem))
         (Nat.lt_of_lt_of_le ((sub_lt_sub_iff (upTo' c mem)).mpr lt)
           (Nat.le_of_eq (gapTo_of_upTo upTo mem).symm))⟩⟩
@@ -400,8 +507,9 @@ end Optimum
 
 /-! ## What reaching the set point draws
 
-On a balanced step gaining nothing on the whole, the family's rise to its set point is paid from
-beyond, with what the step loses: `Flow.Balances.beyond_falls_exactly` read at the set point. -/
+On a balanced step in which the whole gains nothing, the family's rise to its set point is paid
+from beyond, with what the step loses: `Flow.Balances.beyond_falls_exactly` read at the set
+point. -/
 
 namespace Flow
 
@@ -412,48 +520,50 @@ variable {L : Flow F C} {W : Web F C} {ds rest : List C} {s : C → Nat} {t : Na
 the conditions beyond it gains nothing across a step and the family stands at its set point after
 the step, the beyond after the step, with what the whole loses across it and the set point's
 total, is the family and the beyond before. -/
-theorem Balances.settled_draws (balances : L.Balances W) (gainless : L.GainlessOn (ds ++ rest) t)
-    (settled : Optimum.AtSetPoint ds s (W.level (t + 1))) :
+theorem Balances.atSetPoint_draws (balances : L.Balances W)
+    (gainless : L.GainlessOn (ds ++ rest) t) (atSet : Optimum.AtSetPoint ds s (W.level (t + 1))) :
     W.stock rest (t + 1) + L.lost (ds ++ rest) t + total ds s = W.stock ds t + W.stock rest t :=
-  have family : W.stock ds (t + 1) = total ds s := total_congr_on settled
+  have family : W.stock ds (t + 1) = total ds s := total_congr_on atSet
   (Nat.add_comm _ _).trans ((Nat.add_assoc _ _ _).symm.trans
     ((congrArg (· + W.stock rest (t + 1) + L.lost (ds ++ rest) t) family.symm).trans
       (balances.beyond_falls_exactly gainless)))
 
 /-- **Holding the set point, the beyond falls by the loss.** Where the family stands at its set
-point before and after a balanced step gaining nothing on the whole, the beyond after the step,
-with what the whole loses, is the beyond before. -/
-theorem Balances.held_draws_lost (balances : L.Balances W) (gainless : L.GainlessOn (ds ++ rest) t)
-    (before : Optimum.AtSetPoint ds s (W.level t))
+point before and after a balanced step in which the whole gains nothing, the beyond after the
+step, with what the whole loses, is the beyond before. -/
+theorem Balances.held_draws_lost (balances : L.Balances W)
+    (gainless : L.GainlessOn (ds ++ rest) t) (before : Optimum.AtSetPoint ds s (W.level t))
     (after : Optimum.AtSetPoint ds s (W.level (t + 1))) :
     W.stock rest (t + 1) + L.lost (ds ++ rest) t = W.stock rest t :=
-  add_right_cancel (total ds s) ((balances.settled_draws gainless after).trans
+  add_right_cancel (total ds s) ((balances.atSetPoint_draws gainless after).trans
     ((congrArg (· + W.stock rest t) (total_congr_on before)).trans (Nat.add_comm _ _)))
 
-/-- **Past the slack, the set point breaks a dependence beyond.** Where, besides, each condition
+/-- **Past the slack, the set point breaks some dependence beyond.** Where, besides, each condition
 beyond is depended on at a need it meets, and the set point's total with what the whole loses
-exceeds the family before with the slack, one of those dependences is broken across the step. -/
-theorem Balances.settled_breaks {dep : C → F} (balances : L.Balances W)
+exceeds the family before with the slack, one of those dependences is broken across the step. With
+several conditions beyond this is sufficient, not necessary: the draw's total is fixed, not its
+spread. -/
+theorem Balances.atSetPoint_breaks {dep : C → F} (balances : L.Balances W)
     (gainless : L.GainlessOn (ds ++ rest) t) (met : W.MetOn dep rest t)
-    (settled : Optimum.AtSetPoint ds s (W.level (t + 1)))
+    (atSet : Optimum.AtSetPoint ds s (W.level (t + 1)))
     (exceeds : W.stock ds t + W.slack dep rest t < total ds s + L.lost (ds ++ rest) t) :
     ∃ c, c ∈ rest ∧ W.Broken t (dep c) c :=
   balances.breaks_beyond gainless met (Eq.subst
     (motive := fun y => W.stock ds t + W.slack dep rest t < y + L.lost (ds ++ rest) t)
-    (total_congr_on settled).symm exceeds)
+    (total_congr_on atSet).symm exceeds)
 
 /-- **With one condition beyond, exactly.** Where the beyond is one condition depended on at a
-need it meets, the set point breaks the dependence across a balanced step gaining nothing on the
-whole exactly where the set point's total with what the whole loses exceeds the family before with
-the slack. -/
-theorem Balances.settled_broken_iff {dep : C → F} {c : C} (balances : L.Balances W)
+need it meets, the set point breaks the dependence across a balanced step in which the whole gains
+nothing exactly where the set point's total with what the whole loses exceeds the family before
+with the slack. -/
+theorem Balances.atSetPoint_broken_iff {dep : C → F} {c : C} (balances : L.Balances W)
     (gainless : L.GainlessOn (ds ++ [c]) t) (met : W.MetOn dep [c] t)
-    (settled : Optimum.AtSetPoint ds s (W.level (t + 1))) :
+    (atSet : Optimum.AtSetPoint ds s (W.level (t + 1))) :
     W.Broken t (dep c) c ↔
       W.stock ds t + (W.level t c - W.need t (dep c) c) < total ds s + L.lost (ds ++ [c]) t :=
   have meets := (met c (.head [])).2
   have exact : W.level (t + 1) c + 0 + L.lost (ds ++ [c]) t + total ds s =
-      W.stock ds t + (W.level t c + 0) := balances.settled_draws gainless settled
+      W.stock ds t + (W.level t c + 0) := balances.atSetPoint_draws gainless atSet
   have key : W.level (t + 1) c + (total ds s + L.lost (ds ++ [c]) t) =
       W.need t (dep c) c + (W.stock ds t + (W.level t c - W.need t (dep c) c)) :=
     (congrArg (W.level (t + 1) c + ·) (Nat.add_comm _ _)).trans
@@ -474,15 +584,15 @@ theorem nearing_optimum_draws (balances : L.Balances W) (gainless : L.GainlessOn
     (nearing : Optimum.Nearing ds s better) {o₀ : C → Nat} (reach : eligible o₀)
     (at₀ : Optimum.AtSetPoint ds s o₀) (optimum : Frontier eligible better (W.level (t + 1))) :
     W.stock rest (t + 1) + L.lost (ds ++ rest) t + total ds s = W.stock ds t + W.stock rest t :=
-  balances.settled_draws gainless (Optimum.settled nearing reach at₀ optimum)
+  balances.atSetPoint_draws gainless (Optimum.atSetPoint_of_reach nearing reach at₀ optimum)
 
 /-- **Several nearing optimizers at once draw their joint shortfall, as one.** In a balanced flow
 gaining nothing on the whole across a step, where the levels after the step are, for each of
 several optimizers, an optimum among the outcomes eligible to it of an order nearing its set point
 on its family, each set point reached by an outcome eligible to its optimizer, and the family is
-covered by theirs, the beyond after the step with what the whole loses and the set point's total
-is the family and the beyond before: what one optimizer with their joint set point draws. -/
-theorem Balances.mutual_settled_draws {I : Type} {opt : List I} {fam : I → List C}
+covered by theirs, the beyond after the step with what the whole loses and the joint set point's
+total is the family and the beyond before: what one optimizer with their joint set point draws. -/
+theorem Balances.mutual_atSetPoint_draws {I : Type} {opt : List I} {fam : I → List C}
     {elig : I → (C → Nat) → Prop} {orders : I → (C → Nat) → (C → Nat) → Prop}
     (balances : L.Balances W) (gainless : L.GainlessOn (ds ++ rest) t)
     (covered : ∀ c, c ∈ ds → ∃ i, i ∈ opt ∧ c ∈ fam i)
@@ -490,14 +600,13 @@ theorem Balances.mutual_settled_draws {I : Type} {opt : List I} {fam : I → Lis
     (reach : ∀ i, i ∈ opt → ∃ o₀, elig i o₀ ∧ Optimum.AtSetPoint (fam i) s o₀)
     (best : ∀ i, i ∈ opt → Frontier (elig i) (orders i) (W.level (t + 1))) :
     W.stock rest (t + 1) + L.lost (ds ++ rest) t + total ds s = W.stock ds t + W.stock rest t :=
-  balances.settled_draws gainless (Optimum.mutual_settled covered nearing reach best)
+  balances.atSetPoint_draws gainless (Optimum.mutual_atSetPoint covered nearing reach best)
 
-/-- **Each within the slack, together past it, they break a dependence beyond.** Under the
-conditions of `Flow.Balances.mutual_settled_draws`, each condition beyond depended on at a need it
-meets, where the joint set point's total with what the whole loses exceeds the family before with
-the slack, one of those dependences is broken across the step, whatever each optimizer's own
-shortfall. -/
-theorem Balances.mutual_settled_breaks {I : Type} {opt : List I} {fam : I → List C}
+/-- **Together past the slack, whatever each one's shortfall, they break a dependence beyond.**
+Under the conditions of `Flow.Balances.mutual_atSetPoint_draws`, each condition beyond depended on
+at a need it meets, where the joint set point's total with what the whole loses exceeds the family
+before with the slack, one of those dependences is broken across the step. -/
+theorem Balances.mutual_atSetPoint_breaks {I : Type} {opt : List I} {fam : I → List C}
     {elig : I → (C → Nat) → Prop} {orders : I → (C → Nat) → (C → Nat) → Prop} {dep : C → F}
     (balances : L.Balances W) (gainless : L.GainlessOn (ds ++ rest) t) (met : W.MetOn dep rest t)
     (covered : ∀ c, c ∈ ds → ∃ i, i ∈ opt ∧ c ∈ fam i)
@@ -506,16 +615,17 @@ theorem Balances.mutual_settled_breaks {I : Type} {opt : List I} {fam : I → Li
     (best : ∀ i, i ∈ opt → Frontier (elig i) (orders i) (W.level (t + 1)))
     (exceeds : W.stock ds t + W.slack dep rest t < total ds s + L.lost (ds ++ rest) t) :
     ∃ c, c ∈ rest ∧ W.Broken t (dep c) c :=
-  balances.settled_breaks gainless met (Optimum.mutual_settled covered nearing reach best) exceeds
+  balances.atSetPoint_breaks gainless met (Optimum.mutual_atSetPoint covered nearing reach best)
+    exceeds
 
 end Flow
 
 /-! ## In the exchange: below the set point, the whole capacity
 
 Among the outcomes open to a part across one step of exchange (`Flow.Outcome`), an optimum takes
-the part's whole capacity beyond wherever a unit moved from there into the family ranks above it:
-for a rising order everywhere, for a nearing order wherever the family stands below its set
-point. -/
+the part's whole capacity beyond wherever a unit moved from there into the family ranks above it
+(`Optimum.beyond_of_ranked`): for a rising order everywhere, for a nearing order wherever the family
+stands below its set point. -/
 
 namespace Optimum
 
@@ -532,115 +642,27 @@ theorem transfer_nearer [DecidableEq C] {c d : C} (out : ¬ c ∈ ds) (inside : 
   have kept : ∀ x, x ∈ ds → transfer c d o x = if x = d then o d + 1 else o x :=
     fun _ listed => if_neg fun same => out (Eq.subst (motive := fun y => y ∈ ds) same listed)
   have atD : transfer c d o d = o d + 1 := (kept d inside).trans (if_pos rfl)
-  have closer : gapTo s (transfer c d o) d < gapTo s o d :=
-    Nat.lt_of_le_of_lt
+  ⟨fun x listed => match decEq x d with
+    | .isTrue same =>
+      have shortX : o x < s x := Eq.subst (motive := fun y => o y < s y) same.symm short
+      have atX : transfer c d o x = o x + 1 :=
+        (kept x listed).trans ((if_pos same).trans (congrArg (o · + 1) same.symm))
+      Eq.subst (motive := fun y => Regulation.Between (s x) (o x) y) atX.symm
+        ⟨fun sx => absurd shortX (Nat.not_lt_of_le sx), fun _ => ⟨Nat.le_succ (o x), shortX⟩⟩
+    | .isFalse other => Eq.subst (motive := fun y => Regulation.Between (s x) (o x) y)
+        ((kept x listed).trans (if_neg other)).symm (Regulation.Between.refl (s x) (o x)),
+   d, inside,
+   Nat.lt_of_le_of_lt
       (Nat.le_of_eq ((congrArg (gap · (s d)) atD).trans
         (Regulation.gap_of_ge (short : o d + 1 ≤ s d))))
       (Nat.lt_of_lt_of_le ((sub_lt_sub_iff (short : o d + 1 ≤ s d)).mpr (Nat.lt_succ_self _))
-        (Nat.le_of_eq (Regulation.gap_of_ge (Nat.le_of_lt short)).symm))
-  ⟨fun x listed => match decEq x d with
-    | .isTrue same => Eq.subst (motive := fun y => gapTo s (transfer c d o) y ≤ gapTo s o y)
-        same.symm (Nat.le_of_lt closer)
-    | .isFalse other =>
-      Nat.le_of_eq (congrArg (gap · (s x)) ((kept x listed).trans (if_neg other))),
-   d, inside, closer⟩
-
-/-- **Above its floor, an optimum takes the whole capacity wherever a unit moved into the family
-ranks above it.** Where an optimum among the outcomes open to the part above the floors stands
-above the floor at a condition beyond, and its order ranks above it the outcome with one unit moved
-from there into a condition of the family, every step reaching it has each member taking part take
-its whole capacity there and give nothing there. `Above.full` is the case of an order rising with
-the family, every such unit ranking above. -/
-theorem Above.full_of_ranked [DecidableEq F] [DecidableEq C] {floor o : C → Nat} {L' : Flow F C}
-    (distinct : Distinct (L.present t)) (cdistinct : Distinct (ds ++ rest))
-    (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C} (inside : d ∈ ds)
-    (optimum : Frontier (Above L part l cap ds rest t floor) better o)
-    (acts : L.ActsWithin part cap (ds ++ rest) t L')
-    (balances : ∀ x, o x + L'.taken t x = l x + L'.given t x) {c : C} (mem : c ∈ rest)
-    (ranked : better (Optimum.transfer c d o) o) (above : floor c < o c) {h : F}
-    (present : h ∈ L.present t) (member : part h = true) :
-    L'.take t h c = cap h c ∧ L'.give t h c = 0 :=
-  have beaten : (L'.take t h c < cap h c ∨ 0 < L'.give t h c) → False := fun spare =>
-    optimum.2 _ (Above.transfer distinct cdistinct apart mem inside acts balances optimum.1.2
-      above present member spare) ranked
-  ⟨Nat.le_antisymm (acts.2.2.1 h c member) (Nat.ge_of_not_lt fun lt => beaten (.inl lt)),
-   match gave : L'.give t h c with
-   | 0 => rfl
-   | n + 1 => absurd (.inr (Nat.lt_of_lt_of_le (Nat.succ_pos n) (Nat.le_of_eq gave.symm)))
-       beaten⟩
-
-/-- **At its floor, or the whole capacity.** Where an optimum among the outcomes open to the part
-above the floors stands at a condition beyond, and its order ranks above it the outcome with one
-unit moved from there into a condition of the family, it stands at its floor there, or there the
-part takes its whole capacity and gives nothing. `Above.floor_or_full` is the rising case. -/
-theorem Above.floor_or_full_of_ranked [DecidableEq F] [DecidableEq C] {floor o : C → Nat}
-    (distinct : Distinct (L.present t)) (cdistinct : Distinct (ds ++ rest))
-    (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C} (inside : d ∈ ds)
-    (optimum : Frontier (Above L part l cap ds rest t floor) better o) {c : C} (mem : c ∈ rest)
-    (ranked : better (Optimum.transfer c d o) o) :
-    o c = floor c ∨
-      o c + L.restTaken part t c + L.capacity part cap t c = l c + L.restGiven part t c :=
-  match optimum.1, Nat.lt_or_ge (floor c) (o c) with
-  | _, .inr atMost => Or.inl (Nat.le_antisymm atMost (optimum.1.2 c mem))
-  | ⟨⟨L', acts, balances⟩, _⟩, .inl above => by
-    have full := fun h (present : h ∈ L.present t) (member : part h = true) =>
-      Above.full_of_ranked distinct cdistinct apart inside optimum acts balances mem ranked above
-        present member
-    have takes : (total (L.present t) fun h => bif part h then L'.take t h c else 0) =
-        L.capacity part cap t c :=
-      total_congr_on fun h present => by
-        show (bif part h then L'.take t h c else 0) = (bif part h then cap h c else 0)
-        cases member : part h
-        · rfl
-        · exact (full h present member).1
-    have gives : (total (L.present t) fun h => bif part h then L'.give t h c else 0) = 0 :=
-      (total_congr_on fun h present => by
-        show (bif part h then L'.give t h c else 0) = 0
-        cases member : part h
-        · rfl
-        · exact (full h present member).2).trans (total_zero (L.present t))
-    have taken := acts.taken_eq c
-    have given := acts.given_eq c
-    rw [takes] at taken
-    rw [gives, Nat.add_zero] at given
-    refine Or.inr ?_
-    rw [Nat.add_assoc, ← taken, ← given]
-    exact balances c
-
-/-- **Beyond, what the rest leaves less the capacity, wherever a unit moved in ranks above.** Among
-the outcomes open to a part, an optimum whose order ranks above it the outcome with one unit moved
-from a condition beyond into a condition of the family stands there at the level before, with what
-the rest gives and less what it takes, less the part's whole capacity, or at nothing.
-`optimum_beyond` is the rising case. -/
-theorem beyond_of_ranked [DecidableEq F] [DecidableEq C] (distinct : Distinct (L.present t))
-    (cdistinct : Distinct (ds ++ rest)) (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C}
-    (inside : d ∈ ds) {o : C → Nat}
-    (optimum : Frontier (L.Outcome part l cap (ds ++ rest) t) better o) {c : C} (mem : c ∈ rest)
-    (ranked : better (transfer c d o) o) :
-    o c = l c + L.restGiven part t c - L.restTaken part t c - L.capacity part cap t c :=
-  match Above.floor_or_full_of_ranked distinct cdistinct apart inside (above_nothing optimum) mem
-      ranked with
-  | .inr full => by
-    rw [← full, Naturals.sub_sub, Nat.add_assoc, Naturals.add_sub_cancel]
-  | .inl nothing => by
-    have nothing : o c = 0 := nothing
-    obtain ⟨L', acts, balances⟩ := optimum.1
-    have reach : l c + L.restGiven part t c ≤ L.restTaken part t c + L.capacity part cap t c :=
-      calc l c + L.restGiven part t c
-          ≤ l c + L'.given t c := Nat.add_le_add_left (by
-            rw [acts.given_eq c]
-            exact Nat.le_add_right _ _) _
-        _ = o c + L'.taken t c := (balances c).symm
-        _ = L'.taken t c := by rw [nothing, Nat.zero_add]
-        _ ≤ L.restTaken part t c + L.capacity part cap t c := by
-            rw [acts.taken_eq c]
-            exact Nat.add_le_add_left (acts.part_taken_le c) _
-    rw [nothing, Naturals.sub_sub, sub_eq_zero_of_le reach]
+        (Nat.le_of_eq (Regulation.gap_of_ge (Nat.le_of_lt short)).symm))⟩
 
 /-- **Below its set point, a nearing optimum draws the whole capacity beyond.** Among the outcomes
 open to a part, every optimum of every order nearing a set point of the family that stands below
 the set point at a condition of the family stands at each condition beyond at the level before,
-with what the rest gives and less what it takes, less the part's whole capacity, or at nothing. -/
+with what the rest gives and less what it takes, less the part's whole capacity, or at nothing:
+`beyond_of_ranked`, the unit moved in being nearer. -/
 theorem nearing_beyond [DecidableEq F] [DecidableEq C] (distinct : Distinct (L.present t))
     (cdistinct : Distinct (ds ++ rest)) (apart : ∀ c, c ∈ rest → ¬ c ∈ ds) {d : C}
     (inside : d ∈ ds) (nearing : Nearing ds s better) {o : C → Nat}
@@ -666,10 +688,11 @@ theorem nearing_as_rising [DecidableEq F] [DecidableEq C] (distinct : Distinct (
 
 end Optimum
 
-/-! ## Several formations holding set points: joint excess
+/-! ## Formations holding their levels: joint excess
 
-A formation holding its family at a set point while it loses draws what it loses from beyond; the
-joint excess of `Flow.joint_excess_ends` follows where several draw so on one condition. -/
+A formation holding its family's stock while it loses takes at least what it loses from beyond;
+the joint excess of `Flow.joint_excess_ends` follows where several so take from one condition. No
+order or choice enters. -/
 
 /-- Over a list without repetition, a quantity that is nothing at every member but one totals at
 most its value at that one: `total_le_at` read on the list alone. -/
@@ -685,26 +708,29 @@ theorem Optimum.total_le_of_only {α : Type} [DecidableEq α] {q : α → Nat} {
         distinct)
       (Nat.le_of_eq (if_pos rfl)))
 
+/-- **A family at its set point at two steps holds its stock between them.** -/
+theorem Optimum.stock_eq_of_atSetPoint {W : Web F C} {fam : List C} {s : C → Nat} {t u : Nat}
+    (atT : Optimum.AtSetPoint fam s (W.level t)) (atU : Optimum.AtSetPoint fam s (W.level u)) :
+    W.stock fam u = W.stock fam t :=
+  (total_congr_on atU).trans (total_congr_on atT).symm
+
 namespace Flow
 
 variable {L : Flow F C} {W : Web F C}
 
-/-- **Holding its family at a set point, a formation draws what it loses.** Where across the step
+/-- **Holding its family's stock, a formation takes at least what it loses.** Where across the step
 from `t` the flow balances on a family, no other formation taking part exchanges with the family,
-and the family stands at a set point before and after the step, a formation taking part that gives
-the family and a condition `c`, with `l`, at most what it takes from them takes from `c` at least
-what it gives there with `l`. -/
-theorem held_draws [DecidableEq F] {fam : List C} {s : C → Nat} {t : Nat} {h : F} {c : C}
-    {l : Nat} (balances : L.BalancesOn W fam t) (distinct : Distinct (L.present t))
+and the family's stock after the step is its stock before, a formation taking part that gives the
+family and a condition `c`, with `l`, at most what it takes from them takes from `c` at least what
+it gives there with `l`. -/
+theorem held_draws [DecidableEq F] {fam : List C} {t : Nat} {h : F} {c : C} {l : Nat}
+    (balances : L.BalancesOn W fam t) (distinct : Distinct (L.present t))
     (present : h ∈ L.present t)
     (alone : ∀ g, g ∈ L.present t → ¬ g = h → ∀ x, x ∈ fam →
       L.take t g x = 0 ∧ L.give t g x = 0)
-    (before : Optimum.AtSetPoint fam s (W.level t))
-    (after : Optimum.AtSetPoint fam s (W.level (t + 1)))
+    (held : W.stock fam (t + 1) = W.stock fam t)
     (loses : l + total fam (L.give t h) + L.give t h c ≤ total fam (L.take t h) + L.take t h c) :
     l + L.give t h c ≤ L.take t h c :=
-  have held : W.stock fam (t + 1) = W.stock fam t :=
-    (total_congr_on after).trans (total_congr_on before).symm
   have takes : total fam (L.take t h) ≤ L.uptake fam t :=
     total_le fam fun x _ => le_total_of_mem (q := fun g => L.take t g x) present
   have gives : L.replenishment fam t ≤ total fam (L.give t h) :=
@@ -719,9 +745,9 @@ theorem held_draws [DecidableEq F] {fam : List C} {s : C → Nat} {t : Nat} {h :
         (Nat.add_le_add_right (Nat.le_trans takes (Nat.le_trans within gives)) _)
         (Nat.le_of_eq (Nat.add_comm _ _)))))
 
-/-- **Formations holding set points, each within what a condition is given, end it together.**
-Across `n` steps from `T`, let each formation of a part (`holding`) taking part hold its family at
-a set point, alone exchanging with it, and lose at least a given amount on its family with a
+/-- **Formations holding their levels, each within what a condition is given, end it together.**
+Across `n` steps from `T`, let each formation of a part (`holders`) taking part hold its family's
+stock, alone exchanging with the family, and lose at least a given amount on its family with a
 condition `c`. Where at each step the part's losses together exceed what the formations outside it
 give `c`, and the level of `c` at `T` is below `n + m`, under the gate at need `m` every formation
 depending on `c` at a need of at least `m` is inactive from `T + n` on, however small each member's
@@ -730,41 +756,39 @@ family, apart from `c`, no member couples into `c`. Derived from `Flow.joint_exc
 theorem held_excess_ends [DecidableEq F] (balances : L.Balances W) (acting : L.Acting W)
     (dependent : W.Dependent) {c : C} {m : Nat}
     (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c)
-    {holding : F → Bool} {fam : F → List C} {s : C → Nat} {lose : Nat → F → Nat} {T n : Nat}
+    {holders : F → Bool} {fam : F → List C} {lose : Nat → F → Nat} {T n : Nat}
     (distinct : ∀ k, k < n → Distinct (L.present (T + k)))
-    (alone : ∀ k, k < n → ∀ h, h ∈ L.present (T + k) → holding h = true →
+    (alone : ∀ k, k < n → ∀ h, h ∈ L.present (T + k) → holders h = true →
       ∀ g, g ∈ L.present (T + k) → ¬ g = h → ∀ x, x ∈ fam h →
         L.take (T + k) g x = 0 ∧ L.give (T + k) g x = 0)
-    (held : ∀ k, k < n → ∀ h, h ∈ L.present (T + k) → holding h = true →
-      Optimum.AtSetPoint (fam h) s (W.level (T + k)) ∧
-        Optimum.AtSetPoint (fam h) s (W.level (T + k + 1)))
-    (loses : ∀ k, k < n → ∀ h, h ∈ L.present (T + k) → holding h = true →
+    (held : ∀ k, k < n → ∀ h, h ∈ L.present (T + k) → holders h = true →
+      W.stock (fam h) (T + k + 1) = W.stock (fam h) (T + k))
+    (loses : ∀ k, k < n → ∀ h, h ∈ L.present (T + k) → holders h = true →
       lose (T + k) h + total (fam h) (L.give (T + k) h) + L.give (T + k) h c ≤
         total (fam h) (L.take (T + k) h) + L.take (T + k) h c)
-    (exceeds : ∀ k, k < n → L.restGiven holding (T + k) c <
-      total (L.present (T + k)) fun h => bif holding h then lose (T + k) h else 0)
+    (exceeds : ∀ k, k < n → L.restGiven holders (T + k) c <
+      total (L.present (T + k)) fun h => bif holders h then lose (T + k) h else 0)
     (start : W.level T c < n + m) {obs : F → C → Prop}
-    (listed : ∀ h x, holding h = true → W.CoupledInto obs h x → x ∈ fam h)
-    (apart : ∀ h, holding h = true → ¬ c ∈ fam h) :
+    (listed : ∀ h x, holders h = true → W.CoupledInto obs h x → x ∈ fam h)
+    (apart : ∀ h, holders h = true → ¬ c ∈ fam h) :
     (∀ k g, W.requires (T + n + k) g c → m ≤ W.need (T + n + k) g c →
       ¬ W.active (T + n + k) g) ∧
-      ∀ h, holding h = true → ¬ W.CoupledInto obs h c :=
+      ∀ h, holders h = true → ¬ W.CoupledInto obs h c :=
   ⟨joint_excess_ends balances acting dependent gated (fun k below => by
     have draws : ∀ h, h ∈ L.present (T + k) →
-        (bif holding h then lose (T + k) h + L.give (T + k) h c else 0) ≤
-          (bif holding h then L.take (T + k) h c else 0) := fun h mem => by
-      cases holds : holding h
+        (bif holders h then lose (T + k) h + L.give (T + k) h c else 0) ≤
+          (bif holders h then L.take (T + k) h c else 0) := fun h mem => by
+      cases holds : holders h
       · exact Nat.le_refl 0
       · exact held_draws (balances.on (fam h) (T + k)) (distinct k below) mem
-          (alone k below h mem holds) (held k below h mem holds).1 (held k below h mem holds).2
-          (loses k below h mem holds)
+          (alone k below h mem holds) (held k below h mem holds) (loses k below h mem holds)
     have split : (total (L.present (T + k)) fun h =>
-        bif holding h then lose (T + k) h + L.give (T + k) h c else 0) =
-        (total (L.present (T + k)) fun h => bif holding h then lose (T + k) h else 0) +
-          total (L.present (T + k)) fun h => bif holding h then L.give (T + k) h c else 0 :=
-      (total_congr (fun h => by cases holding h <;> rfl) _).trans (total_add _ _ _)
-    have taken := total_split holding (fun h => L.take (T + k) h c) (L.present (T + k))
-    have given := total_split holding (fun h => L.give (T + k) h c) (L.present (T + k))
+        bif holders h then lose (T + k) h + L.give (T + k) h c else 0) =
+        (total (L.present (T + k)) fun h => bif holders h then lose (T + k) h else 0) +
+          total (L.present (T + k)) fun h => bif holders h then L.give (T + k) h c else 0 :=
+      (total_congr (fun h => by cases holders h <;> rfl) _).trans (total_add _ _ _)
+    have taken := total_split holders (fun h => L.take (T + k) h c) (L.present (T + k))
+    have given := total_split holders (fun h => L.give (T + k) h c) (L.present (T + k))
     exact Nat.lt_of_le_of_lt (Nat.le_of_eq given)
       (Nat.lt_of_lt_of_le (Nat.add_lt_add_right (exceeds k below) _)
         (Nat.le_trans (Nat.le_of_eq split.symm) (Nat.le_trans (total_le _ draws)
@@ -793,12 +817,13 @@ theorem storedAt_split {k : Nat} (within : k ≤ 3) : Split (storedAt k) :=
 
 /-- **The set point decides the draw.** Among the splits of three units, every optimum of every
 order nearing a store of `k`, `k` at most three, leaves the source at `3 - k`: derived from
-`settled`. -/
-theorem settled_source {k : Nat} (within : k ≤ 3) {better : (Place → Nat) → (Place → Nat) → Prop}
+`atSetPoint_of_reach`. -/
+theorem atSetPoint_source {k : Nat} (within : k ≤ 3) {better : (Place → Nat) → (Place → Nat) → Prop}
     (nearing : Nearing [Place.store] (fun _ => k) better) {o : Place → Nat}
     (optimum : Frontier Split better o) : o .source = 3 - k :=
   have atStore : o .store = k :=
-    settled nearing (storedAt_split within) (atSetPoint_single rfl) optimum .store (.head [])
+    atSetPoint_of_reach nearing (storedAt_split within) (atSetPoint_single rfl) optimum .store
+      (.head [])
   (Naturals.add_sub_cancel (o .source) k).symm.trans
     (congrArg (· - k) ((congrArg (o .source + ·) atStore).symm.trans optimum.1))
 
@@ -810,7 +835,7 @@ theorem kept_iff {k : Nat} (within : k ≤ 3) {better : (Place → Nat) → (Pla
     (optimum : Frontier Split better o) :
     (web WithinSlack.level).need 0 .dweller .source ≤ o .source ↔ k ≤ 1 :=
   Eq.subst (motive := fun y => (web WithinSlack.level).need 0 .dweller .source ≤ y ↔ k ≤ 1)
-    (settled_source within nearing optimum).symm
+    (atSetPoint_source within nearing optimum).symm
     (match k, within with
       | 0, _ => by decide
       | 1, _ => by decide
@@ -832,7 +857,7 @@ theorem nearing_keeps :
       ∀ o, Frontier Split better o → o .source = 0) ∧
     (web WithinSlack.level).need 0 .dweller .source = 2 :=
   ⟨split_shared.room source_apart (.head []),
-   fun _ nearing _ optimum => settled_source (by decide) nearing optimum,
+   fun _ nearing _ optimum => atSetPoint_source (by decide) nearing optimum,
    atSetPoint_frontier (storedAt_split (by decide)) (atSetPoint_single rfl),
    fun _ rising _ optimum => Nat.le_zero.mp (least_of_shared rising source_apart (.head [])
      split_shared optimum Place.source (.head []) ((web drainedLevel).level 1) rfl),
@@ -844,8 +869,37 @@ theorem nearing_breaks {better : (Place → Nat) → (Place → Nat) → Prop}
     (nearing : Nearing [Place.store] (fun _ => 2) better) {o : Place → Nat}
     (optimum : Frontier Split better o) :
     o .source = 1 ∧ o .source < (web WithinSlack.level).need 0 .dweller .source :=
-  have at1 : o .source = 1 := settled_source (by decide) nearing optimum
+  have at1 : o .source = 1 := atSetPoint_source (by decide) nearing optimum
   ⟨at1, Eq.subst (motive := fun y => y < 2) at1.symm (Nat.lt_succ_self 1)⟩
+
+/-- An aspiration level at a store of one with the source counted after: ranked first by whether
+the store reaches one, and among outcomes alike in that, by more at the source. -/
+def satisficingThen (o' o : Place → Nat) : Prop :=
+  satisficing o' o ∨ ((1 ≤ o' .store ↔ 1 ≤ o .store) ∧ o .source < o' .source)
+
+/-- **Counted after an aspiration level, the source is kept as well.** Every optimum among the
+splits of three units of the order satisficing at a store of one with the source counted after
+leaves the source at two, the dweller's need, as every optimum of every order nearing a store of
+one does (`Drain.nearing_keeps`): the plateau of the first term lets the second decide, a set point
+or not. -/
+theorem satisficingThen_keeps {o : Place → Nat} (optimum : Frontier Split satisficingThen o) :
+    o .source = 2 :=
+  have kept : Split keptLevel := rfl
+  match hs : o .store with
+  | 0 => absurd (Or.inl ⟨Nat.le_refl 1,
+        Eq.subst (motive := fun y => y < 1) hs.symm (Nat.zero_lt_succ 0)⟩ :
+          satisficingThen keptLevel o)
+      (optimum.2 keptLevel kept)
+  | n + 1 =>
+    have split : o .source + (n + 1) = 3 :=
+      Eq.subst (motive := fun y => o .source + y = 3) hs optimum.1
+    have atMost : o .source ≤ 2 :=
+      Nat.le_of_succ_le_succ (Nat.le_trans
+        (Nat.add_le_add_left (Nat.succ_le_succ (Nat.zero_le n)) (o .source))
+        (Nat.le_of_eq split))
+    Nat.le_antisymm atMost (Nat.ge_of_not_lt fun lower => optimum.2 keptLevel kept
+      (Or.inr ⟨⟨fun _ => Eq.subst (motive := fun y => 1 ≤ y) hs.symm
+          (Nat.succ_le_succ (Nat.zero_le n)), fun _ => Nat.le_refl 1⟩, lower⟩))
 
 end Drain
 
@@ -901,11 +955,11 @@ theorem discarding_open : Open drawnOne :=
     | .source => rfl
     | .store => rfl⟩
 
-/-- **At the set point the order neither drives nor protects.** From the store at its set point of
-one and two units at the source, every optimum of every order nearing a store of one stands at it,
-and among the outcomes open to the taker the step exchanging nothing and the step taking a unit and
-losing it are both optima of the order by distance: the first leaves the source at the dweller's
-need of two, the second at one, below it. -/
+/-- **At the set point the order by distance neither drives nor protects.** From the store at its
+set point of one and two units at the source, every optimum of every order nearing a store of one
+stands at it, and among the outcomes open to the taker the step exchanging nothing and the step
+taking a unit and losing it are both optima of the order by distance: the first leaves the source
+at the dweller's need of two, the second at one, below it. -/
 theorem nearing_either :
     (∀ better : (Place → Nat) → (Place → Nat) → Prop, Nearing [Place.store] one better →
       ∀ o, Frontier Open better o → o .store = 1) ∧
@@ -914,7 +968,7 @@ theorem nearing_either :
     (web WithinSlack.level).need 0 .dweller .source ≤ start .source ∧
     drawnOne .source < (web WithinSlack.level).need 0 .dweller .source :=
   ⟨fun _ nearing _ optimum =>
-     settled nearing idle_open (atSetPoint_single rfl) optimum .store (.head []),
+     atSetPoint_of_reach nearing idle_open (atSetPoint_single rfl) optimum .store (.head []),
    atSetPoint_frontier idle_open (atSetPoint_single rfl),
    atSetPoint_frontier discarding_open (atSetPoint_single rfl),
    Nat.le_refl 2, Nat.lt_succ_self 1⟩
@@ -936,6 +990,41 @@ theorem counted_after_keeps {o : Place → Nat}
     (web WithinSlack.level).need 0 .dweller .source ≤ o .source :=
   le_of_add_le_add_right 0 ((counted_after_most idle_open (atSetPoint_single rfl) optimum).2
     start idle_open (atSetPoint_single rfl))
+
+/-- **With less source counted after the set point, the source is drained.** Every optimum, among
+the outcomes open to the taker, of the order nearing the store's set point by distance with less
+source counted after leaves the source at most at one, below the dweller's need of two: a nearing
+order can drive the drain at its set point. -/
+theorem counted_less_drains {o : Place → Nat}
+    (optimum : Frontier Open (byGapLess [Place.store] one [Place.source]) o) :
+    o .source ≤ 1 ∧ 1 < (web WithinSlack.level).need 0 .dweller .source :=
+  ⟨Nat.ge_of_not_lt fun more => optimum.2 drawnOne discarding_open
+    (match Nat.eq_zero_or_pos (total [Place.store] (gapTo one o)) with
+      | .inl zero => .inr ⟨(rfl : total [Place.store] (gapTo one drawnOne) = 0).trans zero.symm,
+          Nat.add_lt_add_right more 0⟩
+      | .inr pos => .inl pos),
+   Nat.lt_succ_self 1⟩
+
+/-- The store's gap from its set point traded against the source at weight `w`: an outcome ranks
+above another where `w` times its source less its gap is greater. -/
+def weighted (w : Nat) (o' o : Place → Nat) : Prop :=
+  w * o .source + gapTo one o' .store < w * o' .source + gapTo one o .store
+
+/-- **Under every positive weight on the source, the source is kept.** Every optimum, among the
+outcomes open to the taker, of the order trading the source at a positive weight against the
+store's gap from its set point meets the dweller's need: the step exchanging nothing ranks above
+every outcome leaving less than two at the source. -/
+theorem weighted_keeps {w : Nat} (positive : 0 < w) {o : Place → Nat}
+    (optimum : Frontier Open (weighted w) o) :
+    (web WithinSlack.level).need 0 .dweller .source ≤ o .source :=
+  Nat.ge_of_not_lt fun below => optimum.2 start idle_open
+    (show w * o .source + gapTo one start .store < w * start .source + gapTo one o .store from
+      Nat.lt_of_lt_of_le
+        (Nat.lt_of_le_of_lt
+          (Nat.add_le_add_right (Nat.mul_le_mul_left w (Nat.le_of_lt_succ below)) _)
+          (Nat.lt_of_lt_of_le (Nat.add_lt_add_left positive (w * 1))
+            (Nat.le_of_eq (Nat.mul_succ w 1).symm)))
+        (Nat.le_add_right _ _))
 
 /-- Every outcome open to the taker leaves the store at most two: the taker gives the store no more
 than it takes, and takes at most one, from the source alone. -/
@@ -970,6 +1059,98 @@ theorem out_of_reach {better : (Place → Nat) → (Place → Nat) → Prop}
     (Nat.lt_of_le_of_lt (store_le_two optimum.1) (Nat.lt_succ_self 2)) (.head [])
 
 end Topped
+
+namespace Spread
+
+/-- A condition of the family and two beyond it. -/
+inductive Spot where
+  | family
+  | first
+  | second
+
+/-- The set point: one. -/
+def one : Spot → Nat := fun _ => 1
+
+/-- At the set point, the first condition beyond emptied, three in the second. -/
+def lopsided : Spot → Nat
+  | .family => 1
+  | .first => 0
+  | .second => 3
+
+/-- At the set point, one in each condition beyond. -/
+def even : Spot → Nat
+  | .family => 1
+  | .first => 1
+  | .second => 1
+
+/-- Two ways of reaching the set point. -/
+def Eligible (o : Spot → Nat) : Prop := o = lopsided ∨ o = even
+
+/-- **Counted after the set point, a condition beyond is emptied though a way of reaching the set
+point keeps it.** Every optimum of the order by distance with the beyond counted after leaves the
+first condition at nothing, while `even`, eligible and at the set point, leaves one at each. -/
+theorem counted_after_empties :
+    (∀ o, Frontier Eligible (byGapThen [Spot.family] one [Spot.first, Spot.second]) o →
+      o .first = 0) ∧
+    Eligible even ∧ AtSetPoint [Spot.family] one even ∧ 1 ≤ even .first ∧ 1 ≤ even .second :=
+  ⟨fun _ optimum => match optimum.1 with
+    | .inl same => Eq.subst (motive := fun x => x Spot.first = 0) same.symm rfl
+    | .inr same => absurd
+        (Eq.subst (motive := fun x => byGapThen [Spot.family] one [Spot.first, Spot.second]
+            lopsided x)
+          same.symm (.inr ⟨rfl, Nat.lt_succ_self 2⟩))
+        (optimum.2 lopsided (.inl rfl)),
+   .inr rfl, atSetPoint_single rfl, Nat.le_refl 1, Nat.le_refl 1⟩
+
+end Spread
+
+namespace Skew
+
+/-- Single-peaked at two: three for each unit over, one for each unit under. -/
+def cost (o : Unit → Nat) : Nat := (o () - 2) + (o () - 2) + (o () - 2) + (2 - o ())
+
+/-- The order by that cost, the lower ranking above. -/
+def order (o' o : Unit → Nat) : Prop := cost o' < cost o
+
+/-- The set point: two. -/
+def two : Unit → Nat := fun _ => 2
+
+/-- **An order costlier above the set point than below is nearing.** -/
+theorem nearing : Nearing [()] two order :=
+  fun o o' nearer =>
+    have b : Regulation.Between 2 (o ()) (o' ()) := nearer.1 () (.head [])
+    have st : gap (o' ()) 2 < gap (o ()) 2 := match nearer.2 with
+      | ⟨_, _, lt⟩ => lt
+    match Nat.le_total 2 (o ()) with
+    | .inl over =>
+      have yb := b.1 over
+      have lt : o' () - 2 < o () - 2 :=
+        Nat.lt_of_le_of_lt (Nat.le_of_eq (Regulation.gap_of_le yb.1).symm)
+          (Nat.lt_of_lt_of_le st (Nat.le_of_eq (Regulation.gap_of_le over)))
+      show cost o' < cost o from
+        Nat.lt_of_le_of_lt (Nat.le_of_eq (congrArg (_ + ·) (sub_eq_zero_of_le yb.1)))
+          (Nat.lt_of_lt_of_le (Nat.add_lt_add_right (Nat.add_lt_add (Nat.add_lt_add lt lt) lt) 0)
+            (Nat.le_of_eq (congrArg (_ + ·) (sub_eq_zero_of_le over)).symm))
+    | .inr under =>
+      have yb := b.2 under
+      have lt : 2 - o' () < 2 - o () :=
+        Nat.lt_of_le_of_lt (Nat.le_of_eq (Regulation.gap_of_ge yb.2).symm)
+          (Nat.lt_of_lt_of_le st (Nat.le_of_eq (Regulation.gap_of_ge under)))
+      show cost o' < cost o from
+        Nat.lt_of_le_of_lt
+          (Nat.le_of_eq (congrArg (fun a => a + a + a + (2 - o' ())) (sub_eq_zero_of_le yb.2)))
+          (Nat.lt_of_lt_of_le (Nat.add_lt_add_left lt (0 + 0 + 0))
+            (Nat.le_of_eq
+              (congrArg (fun a => a + a + a + (2 - o ())) (sub_eq_zero_of_le under)).symm))
+
+/-- **It does not fall with the distance alike on both sides.** With the set point at two, one unit
+over stands no farther from it than two units under, and nearer, yet ranks below. -/
+theorem not_by_gaps : ¬ ∀ o o', Exceeds [()] (gapTo two o) (gapTo two o') → order o' o :=
+  fun falls => Nat.lt_irrefl 2 (Nat.lt_trans (Nat.lt_succ_self 2)
+    (falls (fun _ => 0) (fun _ => 3)
+      ⟨fun _ _ => (Nat.le_succ 1 : 1 ≤ 2), (), .head [], (Nat.lt_succ_self 1 : 1 < 2)⟩ : 3 < 2))
+
+end Skew
 
 namespace TwoStores
 
@@ -1051,7 +1232,7 @@ theorem best (w : Bool) : Frontier (Eligible w) (byGap (family w) one) (web.leve
 
 /-- **Each within the slack, together past it.** Each taker's own shortfall below its set point is
 within the slack of the dweller's need, one unit; at the taker's joint best response the dweller's
-dependence on the source is broken: derived from `Flow.Balances.mutual_settled_breaks`. -/
+dependence on the source is broken: derived from `Flow.Balances.mutual_atSetPoint_breaks`. -/
 theorem jointly_broken :
     (∀ w, total (family w) one ≤
       web.stock (family w) 0 + web.slack (fun _ => .dweller) [Place.source] 0) ∧
@@ -1059,7 +1240,7 @@ theorem jointly_broken :
   ⟨fun w => match w with
     | true => Nat.le_refl 1
     | false => Nat.le_refl 1,
-   Flow.Balances.mutual_settled_breaks (opt := [true, false]) (fam := family) (elig := Eligible)
+   Flow.Balances.mutual_atSetPoint_breaks (opt := [true, false]) (fam := family) (elig := Eligible)
     (orders := fun w => byGap (family w) one) (s := one) (dep := fun _ => Member.dweller)
     (ds := [Place.store true, Place.store false]) balances gainless
     (fun x mem => (match x, mem with
@@ -1079,7 +1260,7 @@ end TwoStores
 
 namespace HeldPair
 
-/-- A renewer and two formations holding stores: the members of `Witnesses.relay`. -/
+/-- A renewer and two formations holders stores: the members of `Witnesses.relay`. -/
 abbrev Member := Witnesses.Member
 
 /-- Equality of members is decided. -/
@@ -1100,8 +1281,8 @@ inductive Spot where
   | firstStore
   | secondStore
 
-/-- The part holding stores at a set point: the first and the second. -/
-def holding : Member → Bool
+/-- The part holders stores at a set point: the first and the second. -/
+def holders : Member → Bool
   | .renewer => false
   | .first => true
   | .second => true
@@ -1243,7 +1424,7 @@ theorem distinct : ∀ t, Distinct (flow.present t)
   | _ + 2 => trivial
 
 /-- No other formation exchanges with the store of the first or of the second. -/
-theorem alone : ∀ (t : Nat) (h : Member), holding h = true → ∀ g, ¬ g = h → ∀ x, x ∈ store h →
+theorem alone : ∀ (t : Nat) (h : Member), holders h = true → ∀ g, ¬ g = h → ∀ x, x ∈ store h →
     flow.take t g x = 0 ∧ flow.give t g x = 0
   | _, .first, _, .renewer, _, _, .head _ => ⟨rfl, rfl⟩
   | _, .first, _, .second, _, _, .head _ => ⟨rfl, rfl⟩
@@ -1265,7 +1446,7 @@ theorem held (t : Nat) (h : Member) : AtSetPoint (store h) one (web.level t) :=
     | .renewer, _, mem => nomatch mem
 
 /-- The first and the second each lose one unit on their store with the pool. -/
-theorem loses (t : Nat) : ∀ h, holding h = true →
+theorem loses (t : Nat) : ∀ h, holders h = true →
     1 + total (store h) (flow.give t h) + flow.give t h .pool ≤
       total (store h) (flow.take t h) + flow.take t h .pool
   | .first, _ => Nat.le_refl 2
@@ -1273,14 +1454,14 @@ theorem loses (t : Nat) : ∀ h, holding h = true →
   | .renewer, holds => nomatch holds
 
 /-- Their losses together exceed what the renewer gives the pool. -/
-theorem exceeds : ∀ k, k < 2 → flow.restGiven holding (0 + k) .pool <
-    total (flow.present (0 + k)) fun h => bif holding h then 1 else 0
+theorem exceeds : ∀ k, k < 2 → flow.restGiven holders (0 + k) .pool <
+    total (flow.present (0 + k)) fun h => bif holders h then 1 else 0
   | 0, _ => Nat.lt_succ_self 1
   | 1, _ => Nat.lt_succ_self 1
   | k + 2, below => absurd below (Nat.not_lt_of_le (Nat.le_add_left 2 k))
 
 /-- The couplings of the first and the second lie in their stores. -/
-theorem listed : ∀ h x, holding h = true → web.CoupledInto observes h x → x ∈ store h
+theorem listed : ∀ h x, holders h = true → web.CoupledInto observes h x → x ∈ store h
   | .first, .firstStore, _, _ => .head []
   | .second, .secondStore, _, _ => .head []
   | .first, .pool, _, couples => (match couples with
@@ -1298,7 +1479,7 @@ theorem listed : ∀ h x, holding h = true → web.CoupledInto observes h x → 
   | .renewer, _, holds, _ => nomatch holds
 
 /-- The pool lies in neither family. -/
-theorem apart : ∀ h, holding h = true → ¬ Spot.pool ∈ store h
+theorem apart : ∀ h, holders h = true → ¬ Spot.pool ∈ store h
   | .first, _, mem => (match mem with
     | .tail _ no => nomatch no)
   | .second, _, mem => (match mem with
@@ -1320,21 +1501,21 @@ theorem within : ∀ t, t < 2 → flow.WithinOwn t .pool ∧ ¬ flow.WithinJoint
     fun joint => Nat.not_succ_le_self 1 joint⟩
   | t + 2, below => absurd below (Nat.not_lt_of_le (Nat.le_add_left 2 t))
 
-/-- **Two formations holding set points, each within the renewal, end it together, unseen.** The
+/-- **Two formations holders set points, each within the renewal, end it together, unseen.** The
 first and the second each hold their store at its set point of one by drawing from the pool the
 unit they lose, each within the one unit the step gives the pool, while the two take two; from a
 pool of two the renewal, which depends on the pool, ends after two steps, and neither couples into
 the pool. The stipulated activity says so; derived here through `Flow.held_excess_ends`, the witness
-shows the law's hypotheses holding together with each draw within the renewal. -/
+shows the law's hypotheses holders together with each draw within the renewal. -/
 theorem held_end :
     (∀ t, t < 2 → flow.WithinOwn t .pool ∧ ¬ flow.WithinJoint t .pool) ∧
       (∀ k g, web.requires (0 + 2 + k) g .pool → 1 ≤ web.need (0 + 2 + k) g .pool →
         ¬ web.active (0 + 2 + k) g) ∧
-      ∀ h, holding h = true → ¬ web.CoupledInto observes h .pool :=
-  ⟨within, Flow.held_excess_ends (fam := store) (s := one) (lose := fun _ _ => 1) (T := 0)
-    (n := 2) (m := 1) balances acting dependent gated (fun k _ => distinct (0 + k))
+      ∀ h, holders h = true → ¬ web.CoupledInto observes h .pool :=
+  ⟨within, Flow.held_excess_ends (fam := store) (lose := fun _ _ => 1) (T := 0) (n := 2)
+    (m := 1) balances acting dependent gated (fun k _ => distinct (0 + k))
     (fun k _ h _ holds g _ other x mem => alone (0 + k) h holds g other x mem)
-    (fun k _ h _ _ => ⟨held (0 + k) h, held (0 + k + 1) h⟩)
+    (fun k _ h _ _ => stock_eq_of_atSetPoint (held (0 + k) h) (held (0 + k + 1) h))
     (fun k _ h _ holds => loses (0 + k) h holds) exceeds (Nat.lt_succ_self 2) listed apart⟩
 
 end HeldPair
