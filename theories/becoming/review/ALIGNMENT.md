@@ -1,6 +1,6 @@
 # Review dossier A: alignment
 
-**What this is.** One part of the review packet of the Theory of Becoming, for researchers in AI alignment: agent foundations and decision theory, cooperative AI and multi-agent risk, AI governance, and evaluations. It sets out 20 items, each a theorem, assessment, reading or test of the theory that bears on alignment. For each it asks:
+**What this is.** One part of the review packet of the Theory of Becoming, for researchers in AI alignment: agent foundations and decision theory, cooperative AI and multi-agent risk, AI governance, and evaluations. It sets out 21 items, each a theorem, assessment, reading or test of the theory that bears on alignment. For each it asks:
 - whether the item is correctly described;
 - whether it is credited where it restates known work;
 - whether it is put at its right strength;
@@ -23,7 +23,7 @@ It then reads these for alignment. Humans, institutions and AI systems select to
 - The packet's script checks every quotation against the file it names and every Lean name against the sources.
 - The prose is AI-written and may be wrong. An independent AI reader reviewed the dossier in two passes. It found 44 problems, then 23 remaining or new ones. They were taken, in this dossier, in the readings it quotes and, by their owners, in A-10's home section and in the method chapter.
 - Two results here (A-09, A-10) landed on 25 October 2026, the day this dossier was written. A-10 was revised after its own independent AI review before landing: three of its claims were narrowed and its names changed.
-- Added after both review passes, and not yet read by the dossier's reviewer: A-10b (MA4, landed on 26 October 2026 after its own independent AI review), and A-19's results with the lines on them in A-09 and A-10 (LA2 and LA3, run on 25 and 26 October 2026).
+- Added after both review passes, and not yet read by the dossier's reviewer: A-10b and A-10c (MA4 and MA4b, landed on 26 October 2026, each after its own independent AI review), and A-19's results with the lines on them in A-09 and A-10 (LA2 and LA3, run on 25 and 26 October 2026).
 - Under **Known weaknesses**, a bullet quoting a chapter, a record or a study reports a recorded weakness. One marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject.
 - Works cited outside quotations were checked against a publication record ([the kit](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/README.md)). Works named inside a quotation are the quoted text's citations.
 
@@ -338,7 +338,7 @@ File: `Becoming/DrawnShaping.lean`.
 **Standing and use.** Theorem (counts), landed on 26 October 2026 (board item MA4), after both of this dossier's review passes. Its record: Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "the rule's lock and the capacity to shape it are one loop: above a critical mass set by who reads and the cost, the capacity rises, the rule locked for it; below, the reverse." Read on the meta-attractor, Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "this joins its second order, selection for control over selection, to its closed loop."
 
 **Known weaknesses.**
-- Control over the selection left unselected does not leave the lock. Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), joined in loss-read-in-time-by-the-others (MA4b)."
+- Control over the selection left unselected does not leave the lock. Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), joined in loss-read-in-time-by-the-others (MA4b)." That join is A-10c.
 - Without noise only: Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "under rare mutation in a large finite population the long-run state is the risk-dominant one (Kandori, Mailath and Rob 1993; Young 1993), here the shapers' where lo < c < hi and 2c < hi + lo, as in the witness; the critical mass bounds courses without noise only."
 - Elementary, and known in form. Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner". Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989)". Quote [theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md]: "what is new on the spine is the critical-mass computation, which is elementary."
 - This item shares A-09's premise, the rule read as a pool of its readers counted by kind (`ClosedCapture.Drawn.pool`). In LA2's run (A-19), one note of the loss among nine readers turned the one trained judge tested, so for that judge Quote [experiments/self-rewarding-lock/README.md]: "what fails is H1-LA2 as stated, a pool counted by kind with these readings, not every pool".
@@ -346,6 +346,64 @@ File: `Becoming/DrawnShaping.lean`.
 **Questions.**
 1. In an actual evaluation regime, who are the readers, and do those who shape it read more coming back to the shapers than other readers do? How would one measure the critical mass?
 2. Under noise the long-run state is the risk-dominant one, here the shapers' wherever lo < c < hi and 2c < hi + lo. Does that make the critical mass beside the point for alignment over long horizons?
+
+<a id="a-10c"></a>
+### A-10c A loss read in time leaves the lock, where control is selected too
+
+```lean
+variable {fB : CarrierCounts × Nat → CarrierCounts → Nat} {a p c hi lo lo' N : Nat} {pos : 0 < a}
+  {reads : Nat → Bool}
+
+theorem kept_early_iff (step : lo ≤ hi) (readers : lo' ≤ hi) {x : CarrierCounts}
+    (fav : CarrierCounts.favours (DrawnShaping.drawn a p c hi lo pos x)) (at_N : reads N = true) :
+    (∀ k, Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead a p c hi lo' pos)
+        ((lossCourse a p c hi lo lo' N pos reads x (N + (1 + k))).1.1,
+          (lossCourse a p c hi lo lo' N pos reads x (N + (1 + k))).2)) ↔
+      CarrierCounts.favours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x N).1)
+
+theorem turned_early_iff (step : lo ≤ hi) (readers : lo' ≤ hi) {x : CarrierCounts}
+    (fav : CarrierCounts.favours (DrawnShaping.drawn a p c hi lo pos x)) (at_N : reads N = true)
+    (at_next : reads (N + 1) = true) :
+    (∀ k, Locked (reverse CarrierCounts.order) CarrierCounts.disfavours
+        (DrawnShaping.drawnRead a p c hi lo' pos)
+        ((lossCourse a p c hi lo lo' N pos reads x (N + 1 + (1 + k))).1.1,
+          (lossCourse a p c hi lo lo' N pos reads x (N + 1 + (1 + k))).2)) ↔
+      CarrierCounts.disfavours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x (N + 1)).1)
+
+theorem at_most_one_between (step : lo ≤ hi) {x : CarrierCounts} {N M : Nat}
+    (atN : ¬ CarrierCounts.favours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x N).1) ∧
+      ¬ CarrierCounts.disfavours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x (N + 1)).1))
+    (atM : ¬ CarrierCounts.favours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x M).1) ∧
+      ¬ CarrierCounts.disfavours
+        (DrawnShaping.drawn a p c hi lo' pos (DrawnShaping.drawnCourse a p c hi lo pos reads x (M + 1)).1)) :
+    N = M
+```
+
+File: `Becoming/ReadInTime.lean`.
+
+**Meaning.** Join A-09's timing to A-10b. The others among the readers read a loss once it reaches a bound N, and from then on read `lo'` coming back to the shapers in place of `lo`, with the same a, p and c (`ReadInTime.shapedLossPool`). Up to step N the course is A-10b's (`ReadInTime.early`).
+- **Kept or turned, exactly.** Take a start whose rule favours the shapers, with `lo ≤ hi` and `lo' ≤ hi`, and the others reading the loss from a reading step N. The course is locked in the shapers' favour for good from N + 1 exactly where the late reading favours them at the share of step N (`ReadInTime.kept_early_iff`). With step N + 1 reading too, it is locked the other way for good from N + 2 exactly where the late reading favours the others, ties included, at the share of step N + 1 (`ReadInTime.turned_early_iff`). The lag of a step is the representation's: a rule read at a step is in force from the next.
+- **The window.** Along that course the late reading never falls (`ReadInTime.late_never_falls`). So the steps from which a reading turns the course come first, and once the late reading would favour the shapers, every later reading keeps the lock (`ReadInTime.in_time_earlier`, `ReadInTime.kept_once_favoured`). With `lo ≤ hi` alone, at most one step lies between (`ReadInTime.at_most_one_between`). From it the course starts a new round, which can go either way (`ReadInTime.kept_next_round_iff`, `ReadInTime.Between.turned`, `ReadInTime.Window.too_late`).
+- **A deadline.** From a start with a shaper present whose rule g favours the shapers strictly, a reading from any step from g.other · c · x.other on keeps the lock, under every schedule of reading (`ReadInTime.deadline`). This is a bound, quadratic in the start's counts, not a law of the share (`ReadInTime.Window.scaled`).
+- **Witness:** a = 1, nothing shared, c = 3, hi = 5, lo = 2 and lo' = 0, from one shaper to one other, above A-10b's critical mass, read at every step. Read from step 2, the course is turned for good from step 4 (`ReadInTime.Window.in_time`). Step 3 is the one step between: read from there, the course is not turned, and from step 6 it is locked in the shapers' favour (`ReadInTime.Window.too_late`). The deadline is 24 (`ReadInTime.Window.by_deadline`).
+
+**Standing and use.** Theorem (counts), landed on 26 October 2026 (board item MA4b), after both of this dossier's review passes. Its record: Quote [theories/becoming/results/records/loss-read-in-time-by-the-others.md]: "a reading while their late reading a step on still favours them turns the course; once it would favour the shapers the lock stays; at most one step lies between, and a deadline bounds the window." Its home section reads it for the joint selection's two conditions, control over the selection left unselected and a lock left in time [AI reading, D45]: Quote [theories/becoming/chapters/02-MAP.md]: "above the critical mass, where control is selected, a reading of the loss in time still leaves it: in this model the second condition can hold where the first fails". And Quote [theories/becoming/chapters/02-MAP.md]: "the point of no return belongs to the share's course, and the loss only times the reading".
+
+**Known weaknesses.**
+- The two conditions are not shown independent. Quote [theories/becoming/results/records/loss-read-in-time-by-the-others.md]: "here a lock is left in time where control is selected, not the converse."
+- The others' reading is a premise, in its form and in its time. Quote [theories/becoming/results/records/loss-read-in-time-by-the-others.md]: "A late reading of another form: with its own weight it has another window, and with a weight against the shapers chosen after the share is seen, far enough below theirs, the others could turn the course from any share." Of Collingridge's dilemma (1980), Quote [theories/becoming/results/records/loss-read-in-time-by-the-others.md]: "Here the second is a theorem (from the first step at which the late reading would favour the shapers a reading keeps the lock, and past the least reading's threshold every reading of this form does) and the first a premise, the loss read only from N."
+- The deadline is loose. Quote [theories/becoming/results/records/loss-read-in-time-by-the-others.md]: "the deadline is a bound, quadratic in the start's counts (24 in the witness and 96 from two to two, both closed from step 4); none is stated for a weakly favouring start or one with no shaper."
+- Elementary, and known in form. Quote [theories/becoming/results/records/loss-read-in-time-by-the-others.md]: "Biggs, Carpenter and Brock (2009) give the continuous analogue of the window: the window for averting a regime shift ends abruptly." Quote [theories/becoming/results/records/loss-read-in-time-by-the-others.md]: "What is new on the spine is the join: a window exact at every step but at most one, given readings at N and N + 1, its lag of one step, and a deadline; each law is elementary."
+- Where it was tested on a trained system, it did not apply. Quote [theories/becoming/results/records/loss-read-in-time-by-the-others.md]: "the one frozen test of the timing law on one (LA2, experiments/self-rewarding-lock) found one note in nine turned it, so the law did not apply there."
+
+**Questions.**
+1. The loss is read only once it reaches a bound N, a premise. What sets that bound in actual oversight of AI systems, and what would lower it?
+2. The window closes on the share's course, not on the size of the loss. Can the share at which the others' late reading would favour the shapers be seen before it is passed?
 
 ---
 
@@ -567,6 +625,7 @@ For each item give one verdict: **accept** (the item is correctly described, cre
 | [A-09](#a-09) Who reads, and when the loss is read | | |
 | [A-10](#a-10) The capacity to shape the rule, selected by what comes back to it | | |
 | [A-10b](#a-10b) The capacity and the lock as one loop | | |
+| [A-10c](#a-10c) A loss read in time leaves the lock, where control is selected too | | |
 | [A-11](#a-11) Assistance does not lower the selection for control | | |
 | [A-12](#a-12) Obedience adds capacity, not coupling | | |
 | [A-13](#a-13) A counter-rule read from its own share locks | | |
