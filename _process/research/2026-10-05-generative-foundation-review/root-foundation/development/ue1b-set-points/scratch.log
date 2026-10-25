@@ -1,17 +1,16 @@
-UE1b kit, revised after REVIEW-UE1b.md: scratch builds and the statement comparison (25 October 2026).
+UE1b kit, revised after REVIEW-UE1b.md and its re-check: scratch builds and the statement comparison (25 October 2026).
 
 == 1. The revised kit with the rule 9 refactor of Optimum (tree/Becoming/Optimum.lean, tree/Becoming/SetPointOptimum.lean)
+Rebuilt after the re-check's fixes, over the package at main d6addb3e4 (UE4 landed); the module bytes are those of section 4.
 $ python3 -B scratch_build.py <kit>/tree Becoming.Optimum Becoming.SetPointOptimum Becoming.RegimeMargin Becoming
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1b-set-points/tree",
-  "modules": 323,
+  "modules": 325,
   "ran": [
-    "Becoming.SetPointOptimum",
     "Becoming",
-    "BecomingSetPointOptimumAxiomAudit",
     "BecomingAxiomAudit"
   ],
-  "reused": 323,
+  "reused": 327,
   "unclean": [],
   "audits": {
     "Becoming.Optimum": {
@@ -87,7 +86,7 @@ rising law Becoming.Optimum.optimum_beyond: byte-identical type: True
 == 4. Sources
 3da737a69545d00146977487c4e287526233d6db927f5606fe0ae94031621d3f  <package>/Becoming/Optimum.lean
 6b8c4e2024cf6f5d8b1ffc1dd5cf8849f032e2bc118c23ed76c4f20f9eaeb6dc  <kit>/tree/Becoming/Optimum.lean
-cfe9340e72987ef78d5d728458f9c6125feea8e37d472411b3985f3337a5a142  <kit>/tree/Becoming/SetPointOptimum.lean
+22b6140d3a4cc2631a1f125b3a39395f8140d264431ed0ef3d145864a204253a  <kit>/tree/Becoming/SetPointOptimum.lean
 
 == 5. The comparison script (dump_types.lean; the before run adds 'import Becoming.SetPointOptimum'),
 run as: LEAN_PATH=<tree>/.build lean dump_types.lean, Lean 4.29.1
