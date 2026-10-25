@@ -634,3 +634,146 @@ end Frame
 
 end Becoming
 ```
+
+## Re-check of the revision (da9933409)
+
+The same reviewer re-checked the revision at `da9933409` (AI-authored):
+
+- DESIGN.md (`cf40a771…15d3925f`) and LANDING.md (`233a3437…5a581cf1`);
+- `tree/Becoming/EventualWidening.lean` (`b753c1ae…3ee697c3`) and `EventualWideningInstances.lean` (`a70fbe3e…88f38e48`).
+
+**How it was checked.**
+
+- **Rebuild.** The kit was rebuilt with `scratch_build.py`: 25 theorems in 38 declarations and 77 theorems in 98, every axiom report empty, as the note says (all steps reused from the cache).
+- **Statements.** Every theorem was read against its docstring and against the module docstrings.
+- **Names and links.** Every Lean name cited in DESIGN.md and LANDING.md resolves. Every link and anchor resolves.
+- **Clashes.** None of the new namespaces or declarations (`OwnCondition`, `LagWitness`, `MergedWitness`, `OpeningChain`, `ClosedCycle`, `Web.after`, `Web.splice`, `Web.eventually_dense` and the rest) clashes with a name in the package. The package's `eventually_dense` is `Sequences.eventually_dense`, in another namespace.
+- **Probe.** A re-check probe, 4 theorems in 6 declarations with every axiom report empty, is given [below](#appendix-the-re-check-probe).
+
+**Verdict.**
+
+- **The findings.** All 29 are taken: 27 fully and 2 in part. The revision is careful: DESIGN §7's map was checked row by row against the files and is right.
+- **The Lean.** It has no error. Eventual widening is now defined as widening on every late tail; its order laws come from widening's; and the splice laws are density statements in 03's frame. `eventually_widens_of_within` derives the inclusion, and `OpenedByOpened` is no longer vacuous.
+- **New issues.** Five small ones, none in a Lean statement (below).
+- **The landing set.** Right in substance, with one placement change.
+
+### 1. The findings
+
+- **Addressed (27):** 1–13, 15, 16 and 18–29, each where DESIGN §7 says.
+- **Partly addressed (2):**
+  - **14.** The opening of DESIGN.md says that nothing lost along a continuation "is refuted by a finite stretch". It can be, by a loss within the stretch, as F3 says correctly. Write "can be refuted by a finite stretch (a loss within it)".
+  - **17(c).** DESIGN §3.1 labels "on counts eventual widening entails overtaking" as an argument, not in Lean. LANDING's row for 08 §8 drops both the label and the condition (finitely many admissions at each step). Restore both there, so the record does not cite it as a law.
+- **Not addressed:** none.
+
+### 2. New issues
+
+**R1. "Ranking by opened by the opened runs against widening wholesale" is stated with no theorem.** *Imprecision.*
+- **Location.** The module readings of `EventualWidening`; DESIGN §3.3, Premises.
+- **What is wrong.** The claim is true but unproved in the kit. The probe proves it: the relay is opened by the opened and its levels are the rising course. A flow that gives nothing, on a web where every condition stands at one throughout, is opened by the opened from no step (no gain recurs). Its levels are the saturated course, which widens the rising one on the same requirements (`Saturated.reverses`).
+- **Fix.** Add the witness to the instances module and cite it, or label the sentence "(a witness, `Saturated.reverses` in the review)".
+
+**R2. The home-section draft omits two limits.** *Imprecision.*
+- **Location.** LANDING.md, the draft text for 07 §2.
+- **What is wrong.** The record's "does not show" says that the second-order direction stays open, but the draft paragraph for 07 §2 does not. 07 §2 is where "how far is open" stands.
+- **Fix.**
+  - Add the line: "It does not capture the second-order direction of 生生, a range whose widening keeps widening against one merely wider now, which stays open, as does a law relating 生成 to widening (02)."
+  - Add the frame laws' qualifier: "the first course varied, the second fixed".
+
+**R3. Candidate C's definition sits in the module whose row calls it "the long-run reading of widening".** *Suggestion.*
+- **Location.** `Flow.OpenedByOpened` and `OpenedByOpened.not_of_unsupported` in `Becoming.EventualWidening`; LANDING.md, rule 9.
+- **What is wrong.** The definition does not use eventual widening. Its witnesses (`OpeningChain`, `ClosedCycle`, `OwnCondition.not_opened`) are in the instances module.
+- **Fix.** Move the two declarations into `Becoming.EventualWideningInstances`, beside their witnesses. `Becoming.EventualWidening` is then exactly the tool its row describes, and keeping C out of the core, if that is ever chosen, touches one module only.
+
+**R4. C's definition may not be the form its first law concludes.** *Suggestion.*
+- **Location.** `Flow.OpenedByOpened`; DESIGN §3.3, the proposed uniform form of support passing on.
+- **What is wrong.** The definition asks for a giver outright. The proposed law, like `Flow.support_passes_on`, would conclude it only up to double negation (DESIGN §3.3 says so). Constructively, the first law then reaches a weaker form than the landed definition. Rule 9 would then ask for a second definition, or for decided support.
+- **Fix.** State in the record that C's definition is provisional until its first law fixes its form. Or define it now with the double negation inside; the witnesses meet either form.
+
+**R5. "Agrees or is silent".** *Nit.*
+- **Location.** The `EventualWidening` module docstring and DESIGN §3.1.
+- **What is wrong.** "Where widening orders a pair, eventual widening agrees … or is silent (the wider course exceeds only over a first stretch)" is a dichotomy only classically. Constructively, from no excess at arbitrarily late steps, no step after which excess stops can be named.
+- **Fix.** Add "(classically)", as 07 does for the four cases.
+
+### 3. The landing set
+
+**Land both modules, with R3's move.** The record's limits rest on the instances module:
+
+- the frame laws (dense both ways, neither verifiable nor refutable, insulable);
+- the silence of the weighting characterization (`not_eventually_of_listed`);
+- the lag, the merge, the disagreement and saturation.
+
+So landing only `Becoming.EventualWidening` would drop the theorems that say what eventual widening cannot do. As the module stands, it would also land C's definition without the witnesses that delimit it, which is the worst combination.
+
+Candidate C's definition with its two witnesses is fit to land as a property with no law. The relay and the single giver give "what carries a range is invisible to widening"; the closed cycle gives "possible with no widening". This is the exact form of 07 §2's sentence that 生生 can exceed what widening counts. Add R1's witness and R4's caveat.
+
+If the integrator prefers C out of the core:
+
+- remove the definition and `not_of_unsupported` from `Becoming.EventualWidening`;
+- remove `OpeningChain`, `ClosedCycle` and `OwnCondition.not_opened` from the instances module;
+- land the rest, and keep C whole as design.
+
+Either way, the row should name each module as a leaf (a tool; an instance module and models) until the gain bridge or the givers law imports it, and register the apart roots.
+
+### 4. What the record should and should not claim
+
+**It should claim**, each as near-definitional:
+- **Eventual widening.** It is first-order widening read on every late tail. Its order laws are widening's; it never reverses widening; with widening it is a strict partial order; and it reads only tails.
+- **The frame.** Where some course eventually widens a second, the verdict and its complement are both dense (the first course varied, the second fixed). So it is neither verifiable nor refutable, and a practice fixed by the record can keep it against every record.
+- **The listing.** A course whose admissions are listed eventually widens nothing, so C's weighting characterization is silent on eventual widening.
+- **Keeping widening.** It is a property, not monotone in widening. By name over a listed type no course keeps widening. Along a supplied continuation, re-formation counts as opening. It eventually widens a range admitting alike on what it once admitted, which is the one case of THE-CORE's pair a law reaches.
+- **The lag.** A course keeping every formation of another from one step later is mixed with it in every tail.
+- **If C lands.** One range can be carried by a relay of openings or by one giver with every admission the same; opened by the opened is possible with no widening; the recurrence clause excludes a whole where nothing is supported. Both carrier flows give from nothing, so they do not meet the first law.
+
+**It should not claim:**
+- **The second-order direction of 生生.** It stays open. Say so in the record and in the 07 §2 paragraph (R2).
+- **That eventual widening is better.** That is C∞, a premise beyond C, named and not asserted. If its cost is mentioned: it discounts every loss confined to a finite stretch, its verdicts can be insulated against every record, and it is the unlimited-continuation rival that the priority of basic conditions rejects.
+- **That keeping widening or opened by the opened is 生生, a direction or a ranking.** Ranking by either runs against widening (`not_monotone`; R1).
+- **A law relating 生成 to widening.** 02's open item stays open, and the record states no gain, renewal or giver law.
+- **A third part of any neighbour's containment, or novelty.**
+- **That eventual widening entails overtaking as a theorem.** It is an argument, under finitely many admissions at each step.
+
+### Appendix: the re-check probe
+
+`Becoming/UE4RecheckProbe.lean`, built against the revised kit (copied unchanged) in a new scratch tree: 4 theorems in 6 declarations, every axiom report empty. It is a probe for R1, not proposed for landing as written.
+
+```lean
+import Becoming.EventualWideningInstances
+
+/-! Re-check probe (scratch only): ranking by opened by the opened reverses widening. -/
+
+namespace Becoming
+
+namespace Saturated
+
+open OwnCondition
+
+/-- Every condition stands at one throughout; each formation requires its own condition at need one. -/
+def web : Web Nat Nat :=
+  ⟨fun _ _ => 1, fun _ _ => True, fun _ n c => c = n, fun _ _ _ => 1, fun _ _ _ => False⟩
+
+/-- Nothing takes part. -/
+def still : Flow Nat Nat := ⟨fun _ => [], fun _ _ _ => 0, fun _ _ _ => 0⟩
+
+theorem level_full : web.level = full := rfl
+
+theorem still_balances : still.Balances web := fun _ _ => rfl
+
+/-- Everything is supported throughout, so nothing gains support, and no gain recurs. -/
+theorem still_not_opened (T : Nat) : ¬ Flow.OpenedByOpened still web T :=
+  fun ⟨recur, _⟩ => match recur 0 with
+    | ⟨_, _, _, gains⟩ => gains.1 (fun _ _ => Nat.le_refl 1)
+
+/-- **Ranking by opened by the opened reverses widening.** The relay is opened by the opened and its
+levels are the rising course; a flow that is not, on a web whose levels are the saturated course,
+has levels that widen the rising course (read on the same requirements). -/
+theorem reverses :
+    Flow.OpenedByOpened OpeningChain.relay OpeningChain.web 0 ∧ OpeningChain.web.level = rising ∧
+      (∀ T, ¬ Flow.OpenedByOpened still web T) ∧ web.level = full ∧
+      OwnCondition.web.Widens full rising :=
+  ⟨OpeningChain.relay_opened, OpeningChain.level_rising, still_not_opened, level_full,
+   full_widens_rising⟩
+
+end Saturated
+
+end Becoming
+```
