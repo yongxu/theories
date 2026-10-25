@@ -72,8 +72,7 @@ The same faults in 07 §6's readings and in D68 were fixed there too.
   - A-10's known forms quoted from its record;
   - the stretch law credited as the haploid case of the geometric-mean rule, to Dempster alone.
 
-**Left to their owners:**
+**Fixed by their owners:**
 - 02 §9's "a smaller cost raises it" in MA3's home section, fixed by MA3's owner the same day ("a smaller cost gives a rule not lower", landed with `bf2576f19`);
-- 08's credit for partial observation, and its T7 row that predates LA2, for the board's coordinator.
+- 08's credit for partial observation, and its T7 row that predated LA2, corrected by the board's coordinator the same day (`456e0a3b7`), with the three lines of the dossier that quoted them.
 
-The dossier reports both as known weaknesses where they bear.
