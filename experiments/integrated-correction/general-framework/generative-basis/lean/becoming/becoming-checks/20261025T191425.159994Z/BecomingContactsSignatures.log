@@ -1,0 +1,63 @@
+@Becoming.Contacts.mem_or_not : ∀ {I : Type} [DecidableEq I] (i : I) (l : List I), i ∈ l ∨ ¬i ∈ l
+@Becoming.Contacts.spot_self : ∀ {I : Type} [inst : DecidableEq I] (i : I), Becoming.Contacts.spot i i = true
+@Becoming.Contacts.spot_other : ∀ {I : Type} [inst : DecidableEq I] {i j : I},
+  j ≠ i → Becoming.Contacts.spot i j = false
+@Becoming.Contacts.agree_spot : ∀ {I : Type} [inst : DecidableEq I] {D : I → Prop} {i : I},
+  ¬D i → Becoming.Learning.Training.AgreeOn D (fun x => false) (Becoming.Contacts.spot i)
+@Becoming.Contacts.through_data_iff : ∀ {I : Type} [DecidableEq I] {D : I → Prop},
+  (∀ (i : I), D i ∨ ¬D i) →
+    ∀ {i : I}, (Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn D) fun x => x i = true) ↔ D i
+@Becoming.Contacts.keeps_data_iff : ∀ {I : Type} [DecidableEq I] {S : Type u_1} {D : S → I → Prop} (s t : S),
+  (∀ (i : I), D t i ∨ ¬D t i) →
+    (Becoming.Registration.Keeps (fun s => Becoming.Learning.Training.AgreeOn (D s)) s t ↔ ∀ (i : I), D s i → D t i)
+@Becoming.Contacts.survive_data_iff : ∀ {I : Type} [DecidableEq I] {S : Type u_1} {D : S → I → Prop} (s t : S),
+  (∀ (i : I), D t i ∨ ¬D t i) →
+    ((∀ (select : (I → Bool) → Prop),
+        Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn (D s)) select →
+          Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn (D t)) select) ↔
+      ∀ (i : I), D s i → D t i)
+@Becoming.Contacts.AgreeOn.refl : ∀ {I V : Type} (plan : List I) (x : I → V), Becoming.Contacts.AgreeOn plan x x
+@Becoming.Contacts.through_at_iff : ∀ {I : Type} [DecidableEq I] {plan : List I} {i : I},
+  (Becoming.Learning.Training.Through (Becoming.Contacts.AgreeOn plan) fun x => x i = true) ↔ i ∈ plan
+@Becoming.Contacts.keeps_iff_retains : ∀ {I : Type} [DecidableEq I] {S : Type u_1} (plan : S → List I) (s t : S),
+  Becoming.Registration.Keeps (fun s => Becoming.Contacts.AgreeOn (plan s)) s t ↔ ∀ (i : I), i ∈ plan s → i ∈ plan t
+@Becoming.Contacts.selections_survive_iff : ∀ {I : Type} [DecidableEq I] {S : Type u_1} (plan : S → List I) (s t : S),
+  (∀ (select : (I → Bool) → Prop),
+      Becoming.Learning.Training.Through (Becoming.Contacts.AgreeOn (plan s)) select →
+        Becoming.Learning.Training.Through (Becoming.Contacts.AgreeOn (plan t)) select) ↔
+    ∀ (i : I), i ∈ plan s → i ∈ plan t
+@Becoming.Contacts.retired_loses : ∀ {I : Type} [DecidableEq I] {D D' : List I} {i : I},
+  i ∈ D →
+    ¬i ∈ D' →
+      (Becoming.Learning.Training.Through (Becoming.Contacts.AgreeOn D) fun x => x i = true) ∧
+        ¬Becoming.Learning.Training.Through (Becoming.Contacts.AgreeOn D') fun x => x i = true
+@Becoming.Contacts.trace_keeps_of_retains : ∀ {I : Type} [DecidableEq I] {S : Type u_1} {A : Type u_2}
+  {P : Generative.Process S A} {plan : S → List I},
+  (∀ (s : S) (a : A) (t : S), P.step s a t → ∀ (i : I), i ∈ plan s → i ∈ plan t) →
+    ∀ {s t : S} {as : List A},
+      Generative.Trace P s as t →
+        ∀ (select : (I → Bool) → Prop),
+          Becoming.Learning.Training.Through (Becoming.Contacts.AgreeOn (plan s)) select →
+            Becoming.Learning.Training.Through (Becoming.Contacts.AgreeOn (plan t)) select
+@Becoming.Contacts.answers_iff : ∀ {I : Type} [DecidableEq I] (ρ : List I → Option I → List I),
+  (∀ (D : List I) (i : I),
+      Becoming.Learning.Training.Through (Becoming.Contacts.AgreeOn (ρ D (some i))) fun x => x i = true) ↔
+    Becoming.Contacts.Answers ρ
+@Becoming.Contacts.blind_answers_iff : ∀ {I : Type} {ρ : List I → Option I → List I},
+  Becoming.Contacts.Blind ρ → (Becoming.Contacts.Answers ρ ↔ ∀ (D : List I) (i : I), i ∈ ρ D none)
+@Becoming.Contacts.blind_misses : ∀ {I : Type} [DecidableEq I] {ρ : List I → Option I → List I},
+  Becoming.Contacts.Blind ρ →
+    Becoming.Contacts.Unlisted I →
+      ∀ (D : List I),
+        ∃ i, ¬Becoming.Learning.Training.Through (Becoming.Contacts.AgreeOn (ρ D (some i))) fun x => x i = true
+Becoming.Contacts.nat_bound : ∀ (l : List Nat), ∃ b, ∀ (m : Nat), m ∈ l → m < b
+Becoming.Contacts.nat_unlisted : Becoming.Contacts.Unlisted Nat
+Becoming.Contacts.finite_blind_answers : (Becoming.Contacts.Blind fun x x_1 => [false, true]) ∧
+  Becoming.Contacts.Answers fun x x_1 => [false, true]
+@Becoming.References.bool_other : ∀ {p q r : Bool}, p ≠ q → p ≠ r → q = r
+@Becoming.References.drives_iff : ∀ {X : Type} (c : X → Bool) (x y : X),
+  (∀ (b : Bool), c (Becoming.References.pick c x y b) = b) ↔ c x ≠ c y
+@Becoming.References.stays_iff : ∀ {X : Type} {c c' : X → Bool} {e : Bool → X},
+  (∀ (b : Bool), c (e b) = b) → ((∀ (b : Bool), c' (e b) = b) ↔ ∀ (b : Bool), c' (e b) = c (e b))
+@Becoming.References.inverted_fails : ∀ {X : Type} {c : X → Bool} {e : Bool → X},
+  (∀ (b : Bool), c (e b) = b) → ∀ (b : Bool), (fun x => !c x) (e b) ≠ b

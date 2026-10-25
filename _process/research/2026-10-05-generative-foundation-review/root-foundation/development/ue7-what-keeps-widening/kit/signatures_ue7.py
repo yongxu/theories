@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""UE7 (OU3b's signatures_ou3b.py with UE7's modules): compare the printed statements (`#check @name`, the checker's
+signature audit) of every declaration of the four changed modules (Population, Novelty, Gain, Admission) between main's
+receipt (the one HEAD holds) and the landing's receipt. The logs come from the checker's shared cache (each step's key
+in the receipt) or, failing that, from the retained run folder. A declaration whose statement changed, or that is gone,
+is reported; new declarations are listed (expected: length_le_count; Web.exceeds_of_distinct_configs,
+Web.unbounded_of_distinct_configs, Web.distinct_configs_of_apart; Flow.gain_given_by_supported_at,
+Flow.gain_given_by_recent_gainer_at, Flow.gain_given_by_recent_gainer). UE7 rewrites no definition. Importable
+(`compare()`), or run to print the report.
+usage (from the checkout root, after the checker): python3 -B <kit>/signatures_ue7.py [RECEIPT_ID]"""
+import json
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path.cwd()
+PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+CHANGED = ('Population', 'Novelty', 'Gain', 'Admission')
+ADDED = {'Population': ['Becoming.length_le_count'],
+         'Novelty': ['Becoming.Web.distinct_configs_of_apart', 'Becoming.Web.exceeds_of_distinct_configs',
+                     'Becoming.Web.unbounded_of_distinct_configs'],
+         'Gain': [],
+         'Admission': ['Becoming.Flow.gain_given_by_recent_gainer', 'Becoming.Flow.gain_given_by_recent_gainer_at',
+                       'Becoming.Flow.gain_given_by_supported_at']}
+
+
+def receipt_at_head():
+    out = subprocess.run(['git', 'show', f'HEAD:{PKG}/becoming-verification.json'], cwd=ROOT, capture_output=True,
+                         text=True, check=True).stdout
+    return json.loads(out)
+
+
+def receipt(rid=None):
+    path = ROOT / PKG / ('becoming-verification.json' if rid is None else f'becoming-checks/{rid}/verification.json')
+    return json.loads(path.read_text())
+
+
+def log_of(r, step):
+    key = r['lean_steps']['keys'][step]
+    cached = Path(r['lean_steps']['cache']) / f'{key}.json'
+    if cached.exists():
+        return json.loads(cached.read_text())['log']
+    retained = Path(r['retained_run']) / step if r.get('retained_run') else None
+    if retained and retained.exists():
+        return retained.read_text()
+    raise SystemExit(f'no log for {step} (key {key}): neither in the cache nor in the retained run')
+
+
+def parse(log):
+    """name -> printed statement; an entry starts at column 0, its continuation lines are indented."""
+    out, name, lines = {}, None, []
+    for line in log.split('\n'):
+        if line and not line[0].isspace():
+            if name:
+                out[name] = '\n'.join(lines)
+            head = line.split(' : ', 1)[0]
+            name, lines = head.lstrip('@'), [line]
+        elif name is not None:
+            lines.append(line)
+    if name:
+        out[name] = '\n'.join(lines)
+    return {n: s.rstrip() for n, s in out.items()}
+
+
+DEF_RE = re.compile(r'^(?:@\[[^\]]*\]\s*)?(?:private |protected |noncomputable )*(def|abbrev|structure|inductive|class) (\S+)')
+STARTS = ('def ', 'abbrev ', 'structure ', 'inductive ', 'class ', 'theorem ', 'lemma ', 'instance ', 'example ',
+          'namespace ', 'end ', 'section', 'variable ', 'open ', '/-', '@[', 'private ', 'protected ', 'noncomputable ',
+          'universe ', 'set_option ', 'attribute ', 'local ', '#')
+
+
+def definitions(text):
+    """name (with the enclosing namespaces) -> the definition's text, docstrings left out."""
+    out, ns, name, body = {}, [], None, []
+    for line in text.split('\n'):
+        if line.startswith(STARTS) or (line and not line[0].isspace() and line[0] != '|'):
+            if name:
+                out[name] = '\n'.join(body).rstrip()
+                name = None
+            m = DEF_RE.match(line)
+            if line.startswith('namespace '):
+                ns.append(line.split()[1])
+            elif line.startswith('end ') and ns and line.split()[1] == ns[-1]:
+                ns.pop()
+            elif m:
+                name, body = '.'.join(ns + [m.group(2)]), [line]
+        elif name is not None:
+            body.append(line)
+    if name:
+        out[name] = '\n'.join(body).rstrip()
+    return out
+
+
+def source_at_head(m):
+    return subprocess.run(['git', 'show', f'HEAD:{PKG}/Becoming/{m}.lean'], cwd=ROOT, capture_output=True, text=True,
+                          check=True).stdout
+
+
+def compare(new_id=None):
+    old, new = receipt_at_head(), receipt(new_id)
+    report = {}
+    for m in CHANGED:
+        step = f'Becoming{m}Signatures.log'
+        a, b = parse(log_of(old, step)), parse(log_of(new, step))
+        da = definitions(source_at_head(m))
+        db = definitions((ROOT / PKG / f'Becoming/{m}.lean').read_text(encoding='utf-8'))
+        report[m] = {'old': len(a), 'new': len(b),
+                     'changed': sorted(n for n in a if n in b and a[n] != b[n]),
+                     'gone': sorted(n for n in a if n not in b),
+                     'added': sorted(n for n in b if n not in a),
+                     'definitions_rewritten': sorted(n for n in da if n in db and da[n] != db[n]),
+                     'definitions_gone': sorted(n for n in da if n not in db),
+                     'definitions_added': sorted(n for n in db if n not in da)}
+    return old, new, report
+
+
+if __name__ == '__main__':
+    old, new, report = compare(sys.argv[1] if len(sys.argv) > 1 else None)
+    print(json.dumps({'old_receipt': old['utc'], 'new_receipt': new['utc'], 'modules': report}, indent=1,
+                     ensure_ascii=False))
+    rewritten = {m: r['definitions_rewritten'] for m, r in report.items() if r['definitions_rewritten']}
+    print('definitions whose bodies changed (expected: none):', rewritten)
+    print('added:', {m: r['added'] for m, r in report.items()})
+    expected = {}
+    for m, r in report.items():
+        if sorted(r['added']) != ADDED[m]:
+            print('unexpected additions in', m, r['added'])
+    bad = {m: r for m, r in report.items() if r['changed'] or r['gone'] or r['definitions_gone']}
+    if rewritten != expected:
+        bad['definitions'] = rewritten
+    print('statements unchanged in every changed module' if not bad else f'CHANGED OR GONE: {bad}')
+    sys.exit(1 if bad else 0)

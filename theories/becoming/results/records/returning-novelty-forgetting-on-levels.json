@@ -63,6 +63,15 @@
         "Becoming.first_law_cases",
         "Becoming.Flow.bounded_counting_rest"
       ]
+    },
+    {
+      "en": "The list form: at any listed steps, in any order, with pairwise distinct configurations, more of them than the configurations within a bound, the stock exceeds the bound at one; with such lists of every length from every step on, at arbitrarily late steps. Steps whose configurations differ pairwise give such a list. The laws on consecutive steps are its case.",
+      "zh": "列表形式：于任意列出之诸步（顺序不论），构型两两不同、其数多于界内构型之数时，存量于其中一步超出界；自每一步起皆有任意长的此类列表时，于任意晚的步上超出。构型两两相异的诸步给出此类列表。连续之步上的诸律为其一例。",
+      "declarations": [
+        "Becoming.Web.exceeds_of_distinct_configs",
+        "Becoming.Web.unbounded_of_distinct_configs",
+        "Becoming.Web.distinct_configs_of_apart"
+      ]
     }
   ],
   "hypotheses": [
@@ -116,8 +125,8 @@
     "decidability"
   ],
   "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261015T143041.527461Z）：Becoming.Novelty 的 20 项声明（19 项定理）公理报告为空；检查器并核对核心纯净。作者反审见研究 §125；经第十八次审查（AI，只读，未重建 Lean）审阅，未要求更正。",
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261015T143041.527461Z): the 20 declarations of Becoming.Novelty, 19 of them theorems, have empty axiom reports; the checker verifies core purity. Author counterreview in study section 125; reviewed by the eighteenth review (AI, read-only, no Lean rebuild), which asked no correction."
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261015T143041.527461Z): the 20 declarations of Becoming.Novelty, 19 of them theorems, have empty axiom reports; the checker verifies core purity. Author counterreview in study section 125; reviewed by the eighteenth review (AI, read-only, no Lean rebuild), which asked no correction. The list form was checked at receipt 20261025T191425.159994Z and reviewed with UE7 (AI).",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261015T143041.527461Z）：Becoming.Novelty 的 20 项声明（19 项定理）公理报告为空；检查器并核对核心纯净。作者反审见研究 §125；经第十八次审查（AI，只读，未重建 Lean）审阅，未要求更正。列表形式于回执 20261025T191425.159994Z 实查，随 UE7 受 AI 审查。"
   },
   "next_delta": {
     "zh": "分支过程上的同样规律（Becoming.Branching），界作为部分的状态；连续时间与实数的量；独立审查。",
@@ -241,7 +250,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Novelty.lean",
       "role": "proof",
-      "sha256": "cf007758b346574741dd7c890a19d9d495fecceaf63de91f1bedb7adb358f382",
+      "sha256": "f0280c2c349b50c28715511f260d291c75b3715b72d4a79bd8446cbfc127775b",
       "declarations": [
         "Becoming.upto_or_fails",
         "Becoming.Web.revisits_of_bounded",
@@ -262,7 +271,10 @@
         "Becoming.Flow.bounded_counting_rest",
         "Becoming.Flow.uncarried_of_bounded",
         "Becoming.World.forgets_of_bounded",
-        "Becoming.first_law_cases"
+        "Becoming.first_law_cases",
+        "Becoming.Web.exceeds_of_distinct_configs",
+        "Becoming.Web.unbounded_of_distinct_configs",
+        "Becoming.Web.distinct_configs_of_apart"
       ]
     },
     {
@@ -404,12 +416,18 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "role": "receipt",
+      "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Novelty.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Novelty",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -477,6 +495,10 @@
     {
       "en": "2026-10-20: 33 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/1bb2db192c7cda8f/returning-novelty-forgetting-on-levels.json and in git.",
       "zh": "2026-10-20：33 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/1bb2db192c7cda8f/returning-novelty-forgetting-on-levels.json 和 git 中。"
+    },
+    {
+      "en": "26 October 2026, board item UE7 (study section 419): a law added, the list form (Web.exceeds_of_distinct_configs, Web.unbounded_of_distinct_configs, Web.distinct_configs_of_apart), from which exceeds_of_new and unbounded_of_new are re-proved, their statements unchanged (board rule 9).",
+      "zh": "2026年10月26日，工作板条目 UE7（研究第 419 节）：加入一律，即列表形式（Web.exceeds_of_distinct_configs、Web.unbounded_of_distinct_configs、Web.distinct_configs_of_apart），exceeds_of_new 与 unbounded_of_new 由之重证，陈述不变（工作板规则 9）。"
     }
   ],
   "text_versions": [

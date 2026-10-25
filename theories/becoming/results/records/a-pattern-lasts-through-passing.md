@@ -57,6 +57,8 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
   - Preserved conditions: Carriers brief for d. [Wholes.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean)
 - related, not a proved adapter: [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md). The passing premise plays the role transmission plays in evolution: supplied, not derived.
 
+**Used by:** [what-keeping-widening-needs](what-keeping-widening-needs.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

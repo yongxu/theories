@@ -1,0 +1,59 @@
+{
+ "old_receipt": "20261025T184500.197330Z",
+ "new_receipt": "20261025T191425.159994Z",
+ "modules": {
+  "Population": {
+   "old": 121,
+   "new": 122,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.length_le_count"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Novelty": {
+   "old": 19,
+   "new": 22,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Web.distinct_configs_of_apart",
+    "Becoming.Web.exceeds_of_distinct_configs",
+    "Becoming.Web.unbounded_of_distinct_configs"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Gain": {
+   "old": 29,
+   "new": 29,
+   "changed": [],
+   "gone": [],
+   "added": [],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  },
+  "Admission": {
+   "old": 53,
+   "new": 56,
+   "changed": [],
+   "gone": [],
+   "added": [
+    "Becoming.Flow.gain_given_by_recent_gainer",
+    "Becoming.Flow.gain_given_by_recent_gainer_at",
+    "Becoming.Flow.gain_given_by_supported_at"
+   ],
+   "definitions_rewritten": [],
+   "definitions_gone": [],
+   "definitions_added": []
+  }
+ }
+}
+definitions whose bodies changed (expected: none): {}
+added: {'Population': ['Becoming.length_le_count'], 'Novelty': ['Becoming.Web.distinct_configs_of_apart', 'Becoming.Web.exceeds_of_distinct_configs', 'Becoming.Web.unbounded_of_distinct_configs'], 'Gain': [], 'Admission': ['Becoming.Flow.gain_given_by_recent_gainer', 'Becoming.Flow.gain_given_by_recent_gainer_at', 'Becoming.Flow.gain_given_by_supported_at']}
+statements unchanged in every changed module

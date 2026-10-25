@@ -246,6 +246,7 @@ import Becoming.Observation
 import Becoming.Frequency
 import Becoming.MutualDependence
 import Becoming.Gain
+import Becoming.KeepingWidening
 import Becoming.Gluing
 import Becoming.Runs
 import Becoming.CourseWorlds
@@ -595,7 +596,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   listing exactly when it holds of every tally. The tally is the balance with no more
   ceasing across a step than were listed before it. Within a change bound, the count together
   with the steps of change staying within a number, change does not recur, while a step
-  after which nothing changes needs omniscience in general.
+  after which nothing changes needs omniscience in general. A list without repetition whose
+  members each lie in another list with a positive weight is no longer than that list's
+  weighted count, with no decision of equality.
 * `Becoming.Identity` (L1): which formation at one step continues which at the next.
   Labels carry nothing, while the pattern of names across steps carries identity; each
   step's relations, each condition's class and how many formations take and give do not
@@ -1180,7 +1183,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   these as Ren's generative, degenerative and neutral is the AI's reading.
   A need with a cap is harmed by too much as by too little, the band exact on both sides; what does
   not change gives no arising.
-  Support gained ever later is passed on by formations that gained it later.
+  Every gain is given, up to double negation, on a rising required condition by a supported
+  formation taking part; where no support lasts `K + 1` steps, by one that gained support within the
+  `K` steps before, so support gained ever later is passed on by formations that gained it later.
 * `Becoming.Exclusion` (L1): what taking all that is given excludes, with no ethical premise.
   A formation takes all that is given to a condition across a step where it takes part and
   takes from it at least all that the step gives to it; alongside it, any other taker makes
@@ -1239,11 +1244,35 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   rising course that eventually widens it and keeps widening (`OwnCondition.disagreement`); a
   saturated course widens the rising one and keeps widening from no step
   (`OwnCondition.not_monotone`); a course keeping every formation of another from one step later is
-  mixed with it in every tail (`LagWitness.lag`). Opened by the opened, a provisional property of
-  what carries a range (`Flow.OpenedByOpened`): one range is carried by a relay of openings or by
+  mixed with it in every tail (`LagWitness.lag`). Opened by the opened in its first form, at a fixed
+  origin (`Flow.OpenedByOpened`), superseded by `Becoming.KeepingWidening`'s recency form, which the
+  uniform law of support passing on gives: one range is carried by a relay of openings or by
   one giver with every admission the same (`OpeningChain.carried`), a closed cycle is opened by the
   opened with no widening (`ClosedCycle.cycle`), and ranking by it reverses widening
   (`Saturated.reverses`). A leaf: an instance module and models (board item UE4).
+* `Becoming.KeepingWidening` (L2, through `Becoming.MapInstances`): what a range that keeps
+  widening needs, and what carries it. A course keeping widening by name on the actual levels, what
+  its formations require fixed within a finite family, lists steps with pairwise distinct
+  configurations of every length (`Web.KeepsWidening.distinct_configs`), so by Novelty's list form
+  the family's stock passes every bound and rises at arbitrarily late steps
+  (`Web.KeepsWidening.passes_every_bound`, `Web.KeepsWidening.rises_late`); under the first law the
+  rest gives it net or it is open at arbitrarily late steps (`Web.KeepsWidening.from_rest_or_open`),
+  and a finite balanced world under the first law has no such course
+  (`Flow.whole_not_keepsWidening`). Under upkeep its takers are more without end
+  (`Web.KeepsWidening.more`), and with balance its replenishment, with bounded giving its renewers,
+  are bounded from no step on (`Web.KeepsWidening.renewers_unbounded`). Opened by the opened within
+  a recency bound (`Flow.OpenedByOpenedWithin`) is the form Admission's uniform law of support
+  passing on gives; brief supports give it, and it and UE4's form are independent
+  (`OpeningChain.forms_independent`). The map reads nothing lost as an endless line of the admitted
+  pattern (`Web.includesAcrossFrom_iff_endless`); along carrying on or passing support a carrying
+  renewal is a passing of support (`Flow.passesSupport_carries_iff`) and brief supports make every
+  supported endless line 全生成 (`Flow.generation_of_brief`); 全生成 is 生成 (`«全生成则生成»`).
+  Under the World premises nothing keeps opening along passing of support
+  (`Flow.not_keepsWidening_along_passings`), so on both readings used 全生成 and keeping widening do
+  not hold together. Witnesses show each premise needed (`Ladder`, `ClosedCycle`, `OpeningChain`,
+  `Loosening`, `Source`, `Saturated`). Each law is a restatement or near-definitional, and none
+  compares two courses. A leaf: it joins EventualWidening with Gain, Flow and the map, which no
+  landed module joins (board item UE7).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'
@@ -2810,8 +2839,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 
 * `Becoming.Novelty` (L1): returning, novelty and forgetting on the levels alone, with no premise.
   Each law's condition is a state of the part written into it: a family whose stock stays within a
-  bound returns; a family new at each of as many steps as there are configurations within a bound
-  exceeds the bound at one of them, so what is new at every step exceeds every bound; no reading of a
+  bound returns; a family whose configurations differ pairwise at as many listed steps as there are
+  configurations within a bound exceeds the bound at one of them, consecutive steps among them, so
+  what is new at every step exceeds every bound; no reading of a
   bounded configuration gives a record that never repeats or a count without bound, so a bounded
   family exchanged with without end, and a finite whole, forget; with loss at each change, change does
   not recur without end. Entropy's forms under the first law are cases.

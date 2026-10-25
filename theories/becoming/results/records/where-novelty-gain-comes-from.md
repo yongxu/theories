@@ -91,6 +91,8 @@ Ren, 15 October 2026: “What's the best choices to make? please make best of yo
 - related, not a proved adapter: [where-a-move-is-formed](where-a-move-is-formed.md). The counterpart for moves: moves formed by a whole, rest or part a list holds repeat within the list's length, and moves that never settle into a cycle need a former no list holds.
 - related, not a proved adapter: [whole-persists-through-generation](whole-persists-through-generation.md). A persisting whole of transient parts needs parts to keep arising; here, where endless novelty comes from.
 
+**Used by:** [what-keeping-widening-needs](what-keeping-widening-needs.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -129,6 +131,7 @@ Ren, 15 October 2026: “What's the best choices to make? please make best of yo
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json) | — |
 
 Aliases: `where novelty's gain comes from`, `新的增益从哪里来`, `every rise is given`, `每次上升都是被给予的`, `endless novelty is exchange beyond every finite family`, `无尽的新是越出每个有限家族的交换`, `unceasing generation within a bounded whole is return`, `有界整体中的不息生成是回返`
 

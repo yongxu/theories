@@ -5276,6 +5276,18 @@
    "page": "theories/becoming/results/records/what-finitely-many-labels-fix.md"
   },
   {
+   "id": "record:what-keeping-widening-needs",
+   "type": "result",
+   "record": "what-keeping-widening-needs",
+   "title": "What keeping widening needs, and what carries it",
+   "title_zh": "持续扩大需要什么，以及承载它者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/what-keeping-widening-needs.md"
+  },
+  {
    "id": "record:what-leaves-a-class-follows-its-line",
    "type": "result",
    "record": "what-leaves-a-class-follows-its-line",
@@ -6156,7 +6168,7 @@
    "type": "module",
    "name": "Becoming.Population",
    "level": "L1",
-   "theorems": 121,
+   "theorems": 122,
    "region": "life",
    "base": "old-base",
    "on_grammar": false,
@@ -6607,7 +6619,7 @@
    "type": "module",
    "name": "Becoming.Admission",
    "level": "L1",
-   "theorems": 53,
+   "theorems": 56,
    "region": "map",
    "base": "old-base",
    "on_grammar": true,
@@ -8026,7 +8038,7 @@
    "type": "module",
    "name": "Becoming.Novelty",
    "level": "L1",
-   "theorems": 19,
+   "theorems": 22,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -8349,6 +8361,17 @@
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.KeepingWidening",
+   "type": "module",
+   "name": "Becoming.KeepingWidening",
+   "level": "L2, through `Becoming.MapInstances`",
+   "theorems": 126,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -28611,6 +28634,12 @@
    "anchor": "r-eventual-widening"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-keeping-widening-needs"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-content-under-regrouping",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -30676,6 +30705,26 @@
   {
    "from": "module:Becoming.Keeping",
    "to": "module:Becoming.Viability",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.KeepingWidening",
+   "to": "module:Becoming.EventualWideningInstances",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.KeepingWidening",
+   "to": "module:Becoming.Gain",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.KeepingWidening",
+   "to": "module:Becoming.MapInstances",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.KeepingWidening",
+   "to": "module:Becoming.Thresholds",
    "type": "imports"
   },
   {
@@ -37977,6 +38026,11 @@
    "from": "record:eventual-widening",
    "to": "record:what-a-finite-stretch-verifies",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:what-keeping-widening-needs",
+   "type": "related"
   },
   {
    "from": "record:eventual-widening",
@@ -48304,6 +48358,11 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:support-passed-on",
+   "to": "record:what-keeping-widening-needs",
+   "type": "related"
+  },
+  {
    "from": "record:supported-renewal-recovery",
    "to": "module:Becoming.Continuation",
    "type": "proved-in"
@@ -50897,6 +50956,116 @@
    "from": "record:what-finitely-many-labels-fix",
    "to": "record:what-an-extrapolation-given-nothing-fixes",
    "type": "related"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.Admission",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.ContinuedClasses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.EventualWidening",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.EventualWideningInstances",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.Gain",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.KeepingWidening",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.MapInstances",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.Novelty",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.Thresholds",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:a-pattern-lasts-through-passing",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:classes-along-a-continuation",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:eventual-widening",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:eventual-widening",
+   "type": "related"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:loops-within-what-a-law-reads",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:more-needs-renewers",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:returning-novelty-forgetting-on-levels",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:support-from-the-supported",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:support-passed-on",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:where-novelty-gain-comes-from",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:widening-along-a-reading",
+   "type": "formal-reuse"
   },
   {
    "from": "record:what-leaves-a-class-follows-its-line",
@@ -54776,6 +54945,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-a-line-holds-and-a-regularity-takes-in",
    "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs",
+   "to": "record:what-keeping-widening-needs",
    "type": "states"
   },
   {

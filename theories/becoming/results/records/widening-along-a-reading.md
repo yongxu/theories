@@ -58,7 +58,7 @@ Relative reachability (Krakovna et al. 2019) compares the states reachable withi
   - Preserved conditions: That widening is better is C's open warrant; nothing here uses it. [Growth.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean)
 - related, not a proved adapter: [which-links-a-closure-needs](which-links-a-closure-needs.md). Flow.GrownBy's entries attach one formation by one new condition; Web.attach is that step read on a web, and attach_widensAlong_iff says when it widens.
 
-**Used by:** [eventual-widening](eventual-widening.md)
+**Used by:** [eventual-widening](eventual-widening.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
 
 <a id="sources--来源"></a>
 ### Sources

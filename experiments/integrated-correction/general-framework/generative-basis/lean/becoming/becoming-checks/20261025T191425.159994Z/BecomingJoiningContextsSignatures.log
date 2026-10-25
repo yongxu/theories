@@ -1,0 +1,71 @@
+@Becoming.Joining.trace_end_unique : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P → ∀ {s t t' : S} {as : List A}, Generative.Trace P s as t → Generative.Trace P s as t' → t = t'
+@Becoming.Joining.Context.realizes_hole : ∀ {F : Type u_1} (J : Becoming.Joining F) (x y : F),
+  Becoming.Joining.Context.Realizes J Becoming.Joining.Context.hole x y ↔ y = x
+@Becoming.Joining.Context.realizes_left : ∀ {F : Type u_1} (J : Becoming.Joining F) (a : F)
+  (c : Becoming.Joining.Context F) (x y : F),
+  Becoming.Joining.Context.Realizes J (Becoming.Joining.Context.left a c) x y ↔
+    ∃ m, Becoming.Joining.Context.Realizes J c x m ∧ J a m y
+@Becoming.Joining.Context.realizes_right : ∀ {F : Type u_1} (J : Becoming.Joining F) (c : Becoming.Joining.Context F)
+  (a x y : F),
+  Becoming.Joining.Context.Realizes J (c.right a) x y ↔ ∃ m, Becoming.Joining.Context.Realizes J c x m ∧ J m a y
+@Becoming.Joining.Context.course_splice : ∀ {F : Type u_1} (inner outer : Becoming.Joining.Context F),
+  (outer.splice inner).course = inner.course ++ outer.course
+@Becoming.Joining.Context.realizes_splice : ∀ {F : Type u_1} (J : Becoming.Joining F)
+  (outer inner : Becoming.Joining.Context F) (x z : F),
+  Becoming.Joining.Context.Realizes J (outer.splice inner) x z ↔
+    ∃ y, Becoming.Joining.Context.Realizes J inner x y ∧ Becoming.Joining.Context.Realizes J outer y z
+@Becoming.Joining.Context.possible_splice : ∀ {F : Type u_1} (J : Becoming.Joining F)
+  (outer inner : Becoming.Joining.Context F) (x : F),
+  Becoming.Joining.Context.Possible J (outer.splice inner) x ↔
+    ∃ y, Becoming.Joining.Context.Realizes J inner x y ∧ Becoming.Joining.Context.Possible J outer y
+@Becoming.Joining.Context.realizes_functional : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Functional →
+    ∀ (c : Becoming.Joining.Context F) {x y z : F},
+      Becoming.Joining.Context.Realizes J c x y → Becoming.Joining.Context.Realizes J c x z → y = z
+@Becoming.Joining.Context.possible_splice_of_realizes : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Functional →
+    ∀ {inner : Becoming.Joining.Context F} {x y : F},
+      Becoming.Joining.Context.Realizes J inner x y →
+        ∀ (outer : Becoming.Joining.Context F),
+          Becoming.Joining.Context.Possible J (outer.splice inner) x ↔ Becoming.Joining.Context.Possible J outer y
+@Becoming.Joining.ContextSame.refl : ∀ {F : Type u_1} (J : Becoming.Joining F) (x : F), J.ContextSame x x
+@Becoming.Joining.ContextSame.symm : ∀ {F : Type u_1} {J : Becoming.Joining F} {x y : F},
+  J.ContextSame x y → J.ContextSame y x
+@Becoming.Joining.ContextSame.trans : ∀ {F : Type u_1} {J : Becoming.Joining F} {x y z : F},
+  J.ContextSame x y → J.ContextSame y z → J.ContextSame x z
+@Becoming.Joining.Context.possible_right : ∀ {F : Type u_1} (J : Becoming.Joining F) (a b : F),
+  Becoming.Joining.Context.Possible J (Becoming.Joining.Context.hole.right b) a ↔ J.Composable a b
+@Becoming.Joining.Context.possible_left : ∀ {F : Type u_1} (J : Becoming.Joining F) (a b : F),
+  Becoming.Joining.Context.Possible J (Becoming.Joining.Context.left a Becoming.Joining.Context.hole) b ↔
+    J.Composable a b
+@Becoming.Joining.ContextSame.composable_iff : ∀ {F : Type u_1} {J : Becoming.Joining F} {a a' b b' : F},
+  J.ContextSame a a' → J.ContextSame b b' → (J.Composable a b ↔ J.Composable a' b')
+@Becoming.Joining.ContextSame.realized : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Functional →
+    ∀ {a b x y : F},
+      J.ContextSame a b →
+        ∀ (c : Becoming.Joining.Context F),
+          Becoming.Joining.Context.Realizes J c a x → Becoming.Joining.Context.Realizes J c b y → J.ContextSame x y
+@Becoming.Joining.ContextSame.joined : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Functional →
+    ∀ {a a' b b' z z' : F}, J.ContextSame a a' → J.ContextSame b b' → J a b z → J a' b' z' → J.ContextSame z z'
+@Becoming.Joining.Compatible.realizes : ∀ {F : Type u_1} {J : Becoming.Joining F} {B : F → F → Prop},
+  J.Compatible B →
+    ∀ (c : Becoming.Joining.Context F) {x y : F},
+      B x y →
+        (∀ (z : F),
+            Becoming.Joining.Context.Realizes J c x z → ∃ w, Becoming.Joining.Context.Realizes J c y w ∧ B z w) ∧
+          ∀ (w : F), Becoming.Joining.Context.Realizes J c y w → ∃ z, Becoming.Joining.Context.Realizes J c x z ∧ B z w
+@Becoming.Joining.Compatible.contextSame : ∀ {F : Type u_1} {J : Becoming.Joining F} {B : F → F → Prop},
+  J.Compatible B → ∀ {x y : F}, B x y → J.ContextSame x y
+@Becoming.Joining.ContextSame.compatible : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Functional → J.Compatible J.ContextSame
+@Becoming.Joining.contextSame_iff_compatible : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Functional → ∀ (x y : F), J.ContextSame x y ↔ ∃ B, J.Compatible B ∧ B x y
+@Becoming.Joining.Context.realizes_extend : ∀ {F : Type u_1} (J : Becoming.Joining F)
+  (as : List (Becoming.Joining.Move F)) (c : Becoming.Joining.Context F) (x y : F),
+  Becoming.Joining.Context.Realizes J (c.extend as) x y ↔
+    ∃ m, Becoming.Joining.Context.Realizes J c x m ∧ Generative.Trace J.frame.P m as y
+@Becoming.Joining.ContextSame.iff_sameTests : ∀ {F : Type u_1} {J : Becoming.Joining F} {x y : F},
+  J.ContextSame x y ↔ Becoming.SameTests J.frame J.frame x y

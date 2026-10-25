@@ -1,0 +1,81 @@
+re-pointing 55 pairs in 52 records: 54 Lean pairs (statements unchanged in all 4 modules), 1 others:
+   eventual-widening theories/becoming/chapters/07-SIGNIFICANCE.md ['## 2. The order with no premise']
+left to their owners: []
+-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "support-from-the-supported": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "support-passed-on": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "testing-within-couplings": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "what-a-cut-loses": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean"
+   ]
+  },
+  "what-dependence-alone-carries-of-a-level": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+   ]
+  },
+  "where-novelty-gain-comes-from": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Novelty.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Novelty.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean"
+   ]
+  },
+  "whole-law-of-counting": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean"
+   ]
+  }
+ }
+}
+ 
+repoint: 52 records (dry run)

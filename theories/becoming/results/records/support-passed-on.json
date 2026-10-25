@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
   "statement": {
-    "en": "In a balanced flow where only active formations give, activity needs support, requirements never loosen and support spells are bounded, support gained ever later cannot be refuted to come from givers that themselves gained support after any given step.",
-    "zh": "平衡之流中，只有活动者给予、活动需要支持、需求不松、受支持之连续步数有界时，支持若任意晚仍被获得，则不能驳倒：其给予者自身在任一给定步之后才获得支持。"
+    "en": "Under balance, active giving, activity needing support, unloosened requirements and support spells of at most K + 1 steps, every gain of support is, up to double negation, given by a formation that gained support within the K steps before; so support gained ever later comes from ever later gainers.",
+    "zh": "在平衡、只有活跃者给予、活跃需支撑、需求不放松、受支撑至多连续 K + 1 步时，每一支撑之获得在双重否定下皆由于此前 K 步内获得支撑之构成给予；故越来越晚所得之支撑来自越来越晚的获得者。"
   },
   "laws": [
     {
@@ -20,6 +20,14 @@
       "declarations": [
         "Becoming.Flow.comes_within_not_not",
         "Becoming.Flow.support_passes_on"
+      ]
+    },
+    {
+      "en": "The uniform form: with balance at the conditions the gainer requires, those giving to them supported, requirements not loosening and no support lasting K + 1 steps, a gain across the step from S + K is, up to double negation, given on a rising required condition by a supported formation taking part that gained support within the K steps before; under the World premises at every step. The law above follows from it.",
+      "zh": "一致形式：在获得者所需之诸条件上平衡、给予它们者受支撑、需求不放松、且无支撑持续 K + 1 步时，跨自 S + K 之步的获得，在双重否定下，于所需且上升之条件上，由一参与的受支撑构成给予，该构成于此前 K 步内获得支撑；于世界前提下每步皆然。上一律由之推出。",
+      "declarations": [
+        "Becoming.Flow.gain_given_by_recent_gainer_at",
+        "Becoming.Flow.gain_given_by_recent_gainer"
       ]
     }
   ],
@@ -51,8 +59,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 342 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person. The uniform form was checked at receipt 20261025T191425.159994Z and reviewed with UE7 (AI).",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 2 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 342 节；未经人的独立审查。一致形式于回执 20261025T191425.159994Z 实查，随 UE7 受 AI 审查。"
   },
   "next_delta": {
     "en": "An independent review.",
@@ -85,6 +93,13 @@
         "en": "States a gap its map found (entries xici-sheng-sheng-zhi-wei-yi).",
         "zh": "陈述其对应所发现之缺口（条目 xici-sheng-sheng-zhi-wei-yi）。"
       }
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "detail": {
+        "en": "The recency form of opened by the opened reads the uniform form; with support decided, its decided form finds the giver and its step.",
+        "zh": "由已开者所开之近期形式读此一致形式；支撑可判定时，其可判定形式找到给予者及其步。"
+      }
     }
   ],
   "references": [
@@ -93,9 +108,11 @@
       "role": "proof",
       "declarations": [
         "Becoming.Flow.comes_within_not_not",
-        "Becoming.Flow.support_passes_on"
+        "Becoming.Flow.support_passes_on",
+        "Becoming.Flow.gain_given_by_recent_gainer_at",
+        "Becoming.Flow.gain_given_by_recent_gainer"
       ],
-      "sha256": "767d9a4b834fff22258376d97242e8ed4f71203005f350088cf5297ce40736f0"
+      "sha256": "8353141c372581724c3370927c5cd9ddfed892120cc2a8874053ca83f81f3115"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
@@ -132,12 +149,18 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "role": "receipt",
+      "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Admission",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -147,6 +170,10 @@
     {
       "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 342.",
       "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 342 节。"
+    },
+    {
+      "en": "26 October 2026, board item UE7 (study section 419): the uniform form added as a second law (Flow.gain_given_by_recent_gainer_at, Flow.gain_given_by_recent_gainer) and the statement restated with it; support_passes_on is re-proved from it, its statement unchanged (board rule 9); related to what-keeping-widening-needs.",
+      "zh": "2026年10月26日，工作板条目 UE7（研究第 419 节）：一致形式作为第二律加入（Flow.gain_given_by_recent_gainer_at、Flow.gain_given_by_recent_gainer），陈述随之重述；support_passes_on 由之重证，陈述不变（工作板规则 9）；与 what-keeping-widening-needs 相关。"
     }
   ]
 }

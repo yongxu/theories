@@ -78,7 +78,7 @@ P118's third reading as Ren took it on 16 October 2026, and P122, left open “w
 - related, not a proved adapter: [every-origin-passes-the-gate](every-origin-passes-the-gate.md). There the gate of coupling and testing; here what couples in bounds a law's couplings, and loops lie within what is read.
 - related, not a proved adapter: [observation-is-a-route](observation-is-a-route.md). Observation is a route of readings from what is observed: a difference goes only downstream, and a stock couples into a formation only through a level it reads downstream of the stock; a route forms by closing.
 
-**Used by:** [observation-is-a-route](observation-is-a-route.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md) · [where-a-level-couples](where-a-level-couples.md)
+**Used by:** [observation-is-a-route](observation-is-a-route.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md) · [where-a-level-couples](where-a-level-couples.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -128,6 +128,7 @@ P118's third reading as Ren took it on 16 October 2026, and P122, left open “w
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json) | — |
 
 Aliases: `loops within what a law reads`, `回路在律所读之内`, `what a law reads`, `律所读`, `reading bounds coupling`, `读限制耦合`, `the break`, `断裂`, `standing law`, `立律`, `stock read only below a threshold`, `只在低于阈值时才读的储量`, `distance to the break carried nowhere`, `断裂还有多远不被带到任何处`, `draw witness`, `汲取的见证`
 

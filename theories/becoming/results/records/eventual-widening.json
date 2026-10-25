@@ -97,8 +97,8 @@
       ]
     },
     {
-      "en": "What carries a widening, provisionally: a flow's range is opened by the opened from a step where gains of support recur and every later gain is given, on a condition the gainer requires before the step and that rises across it, by a supported formation taking part that itself gained support after that step, earlier. Where nothing is supported from some step on, no flow is opened by the opened. Provisional: its first law, the uniform form of support passing on, would reach the giver only up to double negation.",
-      "zh": "承载扩大者（暂定）：一流的范围从某步起由已开者所开，若支撑之获得复现，且其后每一获得，皆在获得者于该步之前所需、且跨步上升之条件上，由一参与的受支撑构成给予，而该构成本身在该步之后、更早时获得支撑。从某步起无一受支撑之处，无流由已开者所开。暂定：其第一律，即支撑传递之一致形式，只在双重否定下达到给予者。",
+      "en": "What carries a widening, in its first form: a flow's range is opened by the opened from a step where gains of support recur and every later gain is given, on a condition the gainer requires before the step and that rises across it, by a supported formation taking part that itself gained support after that step, earlier. Where nothing is supported from some step on, no flow is opened by the opened. Superseded by the recency form (what-keeping-widening-needs): at one origin this form counts a late single giver.",
+      "zh": "承载扩大者（初形）：一流的范围从某步起由已开者所开，若支撑之获得复现，且其后每一获得，皆在获得者于该步之前所需、且跨步上升之条件上，由一参与的受支撑构成给予，而该构成本身在该步之后、更早时获得支撑。从某步起无一受支撑之处，无流由已开者所开。已为近期形式（what-keeping-widening-needs）取代：在单一起点上此形式计入迟来的单一给予者。",
       "declarations": [
         "Becoming.Flow.OpenedByOpened",
         "Becoming.Flow.OpenedByOpened.not_of_unsupported"
@@ -263,8 +263,8 @@
       "kind": "scope"
     },
     {
-      "en": "Which actual courses meet any of these readings; and the definition of opened by the opened is provisional until its first law fixes its form.",
-      "zh": "哪些实有进程合于这些读法；由已开者所开之定义在其第一律定其形式之前为暂定。",
+      "en": "Which actual courses meet any of these readings; and the first form of opened by the opened is superseded: its first law fixed a recency form (what-keeping-widening-needs).",
+      "zh": "哪些实有进程合于这些读法；由已开者所开之初形已被取代：其第一律定出近期形式（what-keeping-widening-needs）。",
       "kind": "correspondence"
     }
   ],
@@ -304,8 +304,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T152131.281884Z）：Becoming.EventualWidening 与 Becoming.EventualWideningInstances，142 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作独立只读审查，其所见皆采，修订复查，见研究第 410 节；未经人审。"
   },
   "next_delta": {
-    "en": "The gain bridge (a range keeping widening on the actual levels, requirements in a finite family, passing every bound, fed from beyond) or the givers law (under upkeep, a range keeping widening needs its givers to multiply), each a candidate no neighbouring field states; the uniform form of support passing on; widening of what can be reached over branching courses; review by a person.",
-    "zh": "增益之桥（于实有水平上持续扩大、需求在一有限族内、超出一切界并由外而喂的范围）或给予者之律（有维持时，持续扩大的范围需其给予者增多），二者皆为邻域未述之结果的候选；支撑传递之一致形式；对分支进程的可达之扩大；人之独立审查。"
+    "en": "A comparison of two courses that decides the lag (UE9); the gain bridge and the givers law are proved, as restatements (what-keeping-widening-needs); widening of what can be reached over branching courses; review by a person.",
+    "zh": "决定滞后的两进程之比较（UE9）；增益之桥与给予者之律已作为重述得证（what-keeping-widening-needs）；对分支进程的可达之扩大；人之审查。"
   },
   "correspondence": {
     "en": "A tail criterion in inclusion form: a criterion reading only tails is a dictatorship of the future (Chichilnisky 1996, 'An axiomatic approach to sustainable development', Social Choice and Welfare 13); on counts, with finitely many admissions at each step, eventual widening entails the overtaking criterion (von Weizsäcker 1965; Gale 1967), an argument not proved in Lean. The density of its verdicts is liveness in the sense of Alpern and Schneider (1985, 'Defining liveness', Information Processing Letters 21). The question it answers in part is THE-CORE's: a range whose widening keeps widening against one merely wider now, whose nearest neighbour is Kauffman's adjacent possible (Investigations, 2000). The readings are the AI's, stated in development/ue4-second-order/DESIGN.md with the review in REVIEW-UE4.md.",
@@ -401,6 +401,13 @@
       "detail": {
         "en": "A comparison in the long run in counts, under a supplied wear law: consuming forms more at first, renewing more past a bound.",
         "zh": "在计数中、于给定磨损律下的长程比较：消耗者起初形成更多，更新者过界后更多。"
+      }
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "detail": {
+        "en": "What keeping widening needs: the gain bridge, renewers multiplying, the recency form of opened by the opened with this record's witnesses restated, the map law and the exclusion along passing of support.",
+        "zh": "持续扩大需要什么：增益之桥、更新者增多、由已开者所开之近期形式（本记录之见证为之重述）、图谱律与沿支撑之传递的排除律。"
       }
     }
   ],
@@ -589,7 +596,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
       "role": "proof",
-      "sha256": "767d9a4b834fff22258376d97242e8ed4f71203005f350088cf5297ce40736f0"
+      "sha256": "8353141c372581724c3370927c5cd9ddfed892120cc2a8874053ca83f81f3115"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T152131.281884Z/verification.json",
@@ -609,7 +616,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "b3622b32b929e0b60906a9de7aa40001e563e9cf3caa2373589dffda90f663b9"
+      "sha256": "b17cfd62bb58fa7cfb14daa328ab22dd2a22675f18fdad3c7c8f0ea14a3d9518"
     }
   ],
   "proof_bindings": [
@@ -632,6 +639,10 @@
     {
       "en": "25 October 2026: added (UE4), widening on late tails and what carries a widening, near-definitional; the second-order direction of 生生 stays open; study section 410.",
       "zh": "2026年10月25日：新增（UE4），在晚期尾段上读的扩大与承载扩大者，近乎定义；生生的二阶方向仍未定；研究第 410 节。"
+    },
+    {
+      "en": "26 October 2026, board item UE7 (study section 419): the carrier law's first form marked superseded by the recency form of what-keeping-widening-needs, with the reason (a late single giver); the provisional does-not-show item and the next step updated; the definition and its witnesses are unchanged.",
+      "zh": "2026年10月26日，工作板条目 UE7（研究第 419 节）：承载之律的初形标为被 what-keeping-widening-needs 之近期形式所取代，并陈其理由（迟来的单一给予者）；暂定之不显示项与下一步随之更新；定义与其见证不变。"
     }
   ]
 }

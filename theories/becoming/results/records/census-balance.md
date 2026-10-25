@@ -114,6 +114,7 @@ The finite-family law (held_over_stretch in coming-and-ceasing-keep-pace) holds 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json) | — |
 
 Aliases: `Becoming.Listed.across`, `Becoming.Listed.over_stretch`, `Becoming.Listed.ceasings_within`, `Becoming.Listed.comings_within`, `Becoming.Web.Census.over_stretch`, `Becoming.Web.StandingCensus.over_stretch`, `Becoming.balance_over_stretch`, `Becoming.marks_le_of_sub`, `Becoming.Listed.ceasing_iff_shortfall`, `Becoming.Listed.coming_iff_excess`, `Becoming.Web.DependenceCensus.over_stretch`
 

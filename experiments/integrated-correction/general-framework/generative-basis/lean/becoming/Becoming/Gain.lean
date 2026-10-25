@@ -26,7 +26,9 @@ With the rest of the whole counted as a relatum (`Flow.withImbalance`), nothing 
   its stock rises within that stretch (`Web.rises_within_of_new`); one new at every step rises at
   arbitrarily late steps (`Web.rises_late_of_new`). The same holds along first visits, steps at
   which the configuration is one the family has not had since `T` (`Web.NewAt`,
-  `Web.exceeds_of_firsts`, `Web.rises_late_of_firsts`): first visits need not be consecutive.
+  `Web.exceeds_of_firsts`, `Web.rises_late_of_firsts`): first visits need not be consecutive. Both
+  are cases of the list form of `Becoming.Novelty` (`Web.exceeds_of_distinct_configs`,
+  `Web.unbounded_of_distinct_configs`).
   Under the first law each such rise is the rest's or crosses the family's boundary
   (`Flow.new_from_rest_or_open`), and so for every family without repetition holding its members
   (`Web.new_of_sub`, `Flow.new_beyond_every`): no finite family closes over endless novelty.
@@ -133,30 +135,41 @@ def NewAt (W : Web F C) (cs : List C) (T t : Nat) : Prop :=
 
 /-- **First visits gain, with a bounded wait.** Along steps from `T` in increasing order, each a
 first visit, the stock exceeds `K` at one of the first `N + 1` of them, `N` counting the
-configurations of the family's members totalling at most `K`. `exceeds_of_new` is the case of
-consecutive steps. -/
+configurations of the family's members totalling at most `K`: the case of
+`exceeds_of_distinct_configs` for the list of those steps, whose configurations the first visits
+keep pairwise distinct. `exceeds_of_new` is the case of consecutive steps. -/
 theorem exceeds_of_firsts {T K : Nat} {at_ : Nat → Nat}
     (increasing : ∀ i j, i < j → at_ i < at_ j) (from_ : ∀ n, T ≤ at_ n)
     (firsts : ∀ n, W.NewAt cs T (at_ n)) :
     ∃ n, n ≤ (configurationsWithin cs.length K).length ∧ K < W.stock cs (at_ n) :=
-  match upto_or_fails (fun n => W.stock cs (at_ n) ≤ K) (configurationsWithin cs.length K).length with
-  | .inl within =>
-    match revisits_within (configurationsWithin cs.length K) (fun n => W.config cs (at_ n))
-        (fun n le => config_within (within n le)) with
-    | ⟨i, j, lt, _, same⟩ => absurd same (firsts j (at_ i) (from_ i) (increasing i j lt))
-  | .inr ⟨n, le, over⟩ => ⟨n, le, Nat.gt_of_not_le over⟩
+  match exceeds_of_distinct_configs (K := K)
+      (distinct_configs_of_apart (at_ := at_)
+        (ns := steps 0 ((configurationsWithin cs.length K).length + 1)) (steps_distinct 0 _)
+        fun i j _ _ lt => firsts j (at_ i) (from_ i) (increasing i j lt))
+      (Eq.subst (motive := fun n => (configurationsWithin cs.length K).length < n)
+        ((steps_length 0 _).symm.trans (length_map at_ _).symm) (Nat.lt_succ_self _)) with
+  | ⟨_, mem, over⟩ => match preimage_of_mem_map mem with
+    | ⟨n, listed, same⟩ =>
+      ⟨n, Nat.le_of_lt_succ (Nat.lt_of_lt_of_le (steps_within listed) (Nat.le_of_eq (Nat.zero_add _))),
+       Eq.subst (motive := fun x => K < W.stock cs x) same.symm over⟩
 
-/-- **First visits without end rise at arbitrarily late steps.** -/
+/-- **First visits without end rise at arbitrarily late steps**: from every step on, the first
+visits at the later indices are later steps with pairwise distinct configurations, so the stock
+exceeds every bound at arbitrarily late steps (`unbounded_of_distinct_configs`) and passes its
+value at `M`. -/
 theorem rises_late_of_firsts {T : Nat} {at_ : Nat → Nat}
     (increasing : ∀ i j, i < j → at_ i < at_ j) (from_ : ∀ n, T ≤ at_ n)
     (firsts : ∀ n, W.NewAt cs T (at_ n)) (M : Nat) :
     ∃ t, M ≤ t ∧ W.stock cs t < W.stock cs (t + 1) :=
-  match exceeds_of_firsts (W := W) (K := W.stock cs M) (at_ := fun n => at_ (M + n))
-      (fun i j lt => increasing (M + i) (M + j) (Nat.add_lt_add_left lt M))
-      (fun n => from_ (M + n)) (fun n => firsts (M + n)) with
-  | ⟨n, _, over⟩ =>
-    match rises_between (q := W.stock cs)
-        (Nat.le_trans (Nat.le_add_right M n) (le_of_increasing increasing (M + n))) over with
+  match unbounded_of_distinct_configs (W := W) (cs := cs)
+      (fun M' n => ⟨(steps M' n).map at_, (length_map at_ _).trans (steps_length M' n),
+        fun _ mem => match preimage_of_mem_map mem with
+          | ⟨i, listed, same⟩ => Eq.subst (motive := fun x => M' ≤ x) same
+              (Nat.le_trans (steps_mem listed) (le_of_increasing increasing i)),
+        distinct_configs_of_apart (steps_distinct M' n)
+          fun i j _ _ lt => firsts j (at_ i) (from_ i) (increasing i j lt)⟩)
+      (W.stock cs M) M with
+  | ⟨_, later, over⟩ => match rises_between (q := W.stock cs) later over with
     | ⟨t, from_, _, up⟩ => ⟨t, from_, up⟩
 
 /-! ## What newly forms -/

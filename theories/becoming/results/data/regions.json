@@ -2056,6 +2056,11 @@
    "base": "general",
    "note": "Labels"
   },
+  "what-keeping-widening-needs": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "KeepingWidening UE7: what keeping widening needs (gain from beyond, renewers), the recency form of opened by the opened, the map law, the exclusion along passing"
+  },
   "what-leaves-a-class-follows-its-line": {
    "region": "significance",
    "base": "grammar",
@@ -2972,6 +2977,11 @@
    "region": "map",
    "base": "frame",
    "note": "guard kept through what is registered"
+  },
+  "Becoming.KeepingWidening": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "UE7 what keeping widening needs, and what carries it"
   },
   "Becoming.Labelled": {
    "region": "root",

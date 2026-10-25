@@ -5,12 +5,13 @@
 
 `support-passed-on` · **recorded-checked** · theorem · F01 · [record](support-passed-on.json) · [register](../../../../RESULTS.md)
 
-> In a balanced flow where only active formations give, activity needs support, requirements never loosen and support spells are bounded, support gained ever later cannot be refuted to come from givers that themselves gained support after any given step.
+> Under balance, active giving, activity needing support, unloosened requirements and support spells of at most K + 1 steps, every gain of support is, up to double negation, given by a formation that gained support within the K steps before; so support gained ever later comes from ever later gainers.
 
 <a id="laws--规律"></a>
 ## Laws
 
 1. A property at S + K that fails at S cannot be refuted to come about within the K steps; in such a flow, for every T and N, it cannot be refuted that from N on a formation gains support from a supported giver that itself gained support after T. (`Becoming.Flow.comes_within_not_not`, `Becoming.Flow.support_passes_on`)
+2. The uniform form: with balance at the conditions the gainer requires, those giving to them supported, requirements not loosening and no support lasting K + 1 steps, a gain across the step from S + K is, up to double negation, given on a rising required condition by a supported formation taking part that gained support within the K steps before; under the World premises at every step. The law above follows from it. (`Becoming.Flow.gain_given_by_recent_gainer_at`, `Becoming.Flow.gain_given_by_recent_gainer`)
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -28,7 +29,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 2 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person. The uniform form was checked at receipt 20261025T191425.159994Z and reviewed with UE7 (AI).
 
 Canonical source: [Admission.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean)
 
@@ -49,13 +50,16 @@ Relay of resources through successive generations of recipients.
 
 - **formal-reuse**: [support-from-the-supported](support-from-the-supported.md). Its gain from a supported giver, taken along: the giver itself a later gainer.
 - related, not a proved adapter: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). States a gap its map found (entries xici-sheng-sheng-zhi-wei-yi).
+- related, not a proved adapter: [what-keeping-widening-needs](what-keeping-widening-needs.md). The recency form of opened by the opened reads the uniform form; with support decided, its decided form finds the giver and its step.
+
+**Used by:** [what-keeping-widening-needs](what-keeping-widening-needs.md)
 
 <a id="sources--来源"></a>
 ### Sources
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Admission.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean) | `Becoming.Flow.comes_within_not_not`, `Becoming.Flow.support_passes_on` |
+| proof | [Admission.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean) | `Becoming.Flow.comes_within_not_not`, `Becoming.Flow.support_passes_on`, `Becoming.Flow.gain_given_by_recent_gainer_at`, `Becoming.Flow.gain_given_by_recent_gainer` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
@@ -63,6 +67,7 @@ Relay of resources through successive generations of recipients.
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json) | — |
 
 Aliases: `Support passed on by later gainers`, `支持由后得者传下`, `Becoming.Flow.comes_within_not_not`
 
@@ -70,6 +75,7 @@ Aliases: `Support passed on by later gainers`, `支持由后得者传下`, `Beco
 ### History
 
 - 22 October 2026: added (ZG), for the gap the ZH reading raised; study section 342.
+- 26 October 2026, board item UE7 (study section 419): the uniform form added as a second law (Flow.gain_given_by_recent_gainer_at, Flow.gain_given_by_recent_gainer) and the statement restated with it; support_passes_on is re-proved from it, its statement unchanged (board rule 9); related to what-keeping-widening-needs.
 
 </details>
 
