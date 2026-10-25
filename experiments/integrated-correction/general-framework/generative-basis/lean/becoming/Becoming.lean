@@ -227,6 +227,7 @@ import Becoming.Courses
 import Becoming.Parting
 import Becoming.Onward
 import Becoming.Typicality
+import Becoming.ConditionalWeights
 import Becoming.Situations
 import Becoming.Propagation
 import Becoming.Regulation
@@ -2845,6 +2846,23 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   The weights are `Becoming.Weighted`'s counting weights of free branching. That the course which
   happens is typical is not derived: every course is a run. Concentration is exponential: for
   every u ≥ v, the courses with at least k ones weigh, times u^k·v^n, at most (p·u + q·v)^n·v^k.
+  The deviation stays within the bound at every step: the courses whose squared deviation reaches d
+  at some step weigh, times d, at most n·p·q·(p + q)^n (`typical_throughout`, Kolmogorov's maximal
+  inequality), and `typical` is its last step; 2·x·y ≤ x·x + y·y is the margin square at margin
+  zero (`margin_square`) (board item UE2).
+* `Becoming.ConditionalWeights` (L1): conditional weights, shares and the exit from a margin on the
+  counting layer, with no premise beyond the weighting each statement names. The weighting
+  restricted to a record gives an event the weight of the courses meeting it and the record, its
+  whole the record's weight (`restrict`, `mass_restrict`, `whole_restrict`); shares compared by
+  cross-multiplication obey Bayes's rule as a ratio identity (`restrict_two_ways`); a generative
+  model's posterior share is the prior weight times the likelihood weight over their sum
+  (`posterior_single`), a prior weight being the prior share where the likelihood totals agree
+  (`prior_share`); shares of independent parts and of step events over independent steps multiply
+  (`share_product`, `share_meetsEach`). These are identities of counting, near-definitional. On
+  Typicality's courses a balanced level standing m above a need reaches it within n steps on at
+  most n·p·q/m² of the weight (`fallsWithin_share`, by `Typicality.typical_throughout`), a break
+  being reaching it from m + 1 (`fallsTo_succ`); given a record of the course so far showing the
+  margin m', on at most n·p·q/m'² (`record_bound`). A leaf (board item UE2).
 * `Becoming.Situations` (L1): what natural weights count, with no premise. Where each step is
   taken in as many situations as its weight, the law whose moves are the situations is
   determined, and a law whose steps are those of positive weight is it with the situation

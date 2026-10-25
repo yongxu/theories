@@ -39,6 +39,8 @@ No dependency on another migrated record is asserted; source imports and supplie
 
 - Related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). J3 supports the undertaking interpretation; the pure mass inequality does not itself require that normative premise.
 
+**Used by:** [conditioning-by-restriction](conditioning-by-restriction.md) · [exit-from-a-margin](exit-from-a-margin.md)
+
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts
 

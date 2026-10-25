@@ -1,11 +1,11 @@
 {
- "commit": "bae1e23993f4dd7174caab502c7bca285ebb9468",
+ "commit": "86c8bfe4bb7e1b0dcbe3d106058e4b156a75e6e4",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261025T152131.281884Z",
+ "core_receipt_at_commit": "20261025T160649.851818Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 324,
- "constants": 44617,
- "spine_theorems": 14881,
+ "tracked_modules": 325,
+ "constants": 44814,
+ "spine_theorems": 14986,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -31,16 +31,16 @@
   "statement on World/Flow/Web": 3606,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 186,
-  "used by a theorem on the base": 5261,
+  "used by a theorem on the base": 5273,
   "instance on the base recorded": 153,
-  "apart: own vocabulary": 1258,
-  "apart: prelude-only statement": 98
+  "apart: own vocabulary": 1341,
+  "apart: prelude-only statement": 108
  },
- "apart": 1356,
- "apart_general_structure_by_design": 515,
- "apart_otherwise": 841,
+ "apart": 1449,
+ "apart_general_structure_by_design": 600,
+ "apart_otherwise": 849,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 91,
+  "spine theorems that are pure forwarders": 92,
   "of them on the base": 72,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 12,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 800,
- "apart_roots": 801,
+ "apart_used_by_nothing": 831,
+ "apart_roots": 832,
  "apart_roots_by_category": {
-  "model-witness": 378,
-  "support": 114,
-  "general-structure": 276,
+  "model-witness": 383,
+  "support": 117,
+  "general-structure": 299,
   "restates": 13,
   "logical-strength": 12,
   "calibration": 8
@@ -162,6 +162,10 @@
   "Becoming.Weightings": [
    97,
    391
+  ],
+  "Becoming.ConditionalWeights": [
+   93,
+   93
   ],
   "Becoming.GrammarPath": [
    86,
@@ -669,7 +673,7 @@
   ],
   "Becoming.Typicality": [
    1,
-   40
+   52
   ],
   "Becoming.Observation": [
    1,
@@ -694,19 +698,19 @@
  },
  "rings": {
   "core": {
-   "modules": 308,
-   "theorems": 14121,
-   "apart": 1262,
+   "modules": 309,
+   "theorems": 14226,
+   "apart": 1355,
    "classes": {
     "statement on both families": 1046,
     "statement on Process/Frame/Run/Trace": 2787,
     "statement on World/Flow/Web": 3581,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 175,
-    "used by a theorem on the base": 4902,
+    "used by a theorem on the base": 4914,
     "instance on the base recorded": 153,
-    "apart: own vocabulary": 1165,
-    "apart: prelude-only statement": 97
+    "apart: own vocabulary": 1248,
+    "apart: prelude-only statement": 107
    }
   },
   "instances": {
@@ -823,7 +827,7 @@
   "proof through a base family": 4,
   "used by a theorem on the base": 11,
   "instance on the base recorded": 2,
-  "apart: own vocabulary": 31
+  "apart: own vocabulary": 33
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -857,9 +861,21 @@
    ]
   },
   {
+   "id": "conditioning-by-restriction",
+   "modules": [
+    "Becoming.ConditionalWeights"
+   ]
+  },
+  {
    "id": "constancy-read-at-a-members-class",
    "modules": [
     "Becoming.GrammarPath"
+   ]
+  },
+  {
+   "id": "exit-from-a-margin",
+   "modules": [
+    "Becoming.ConditionalWeights"
    ]
   },
   {
@@ -12980,9 +12996,21 @@
   "Becoming.Typicality.weighted_cross": "used by a theorem on the base",
   "Becoming.Typicality.step_weight": "used by a theorem on the base",
   "Becoming.Typicality.spread": "used by a theorem on the base",
+  "Becoming.Typicality.regroup_square": "used by a theorem on the base",
+  "Becoming.Typicality.square_gap": "used by a theorem on the base",
+  "Becoming.Typicality.margin_square": "used by a theorem on the base",
   "Becoming.Typicality.two_mul_le_of_le": "used by a theorem on the base",
   "Becoming.Typicality.two_mul_le": "used by a theorem on the base",
-  "Becoming.Typicality.offBy_le": "used by a theorem on the base",
+  "Becoming.Typicality.reachesBy_of_end": "used by a theorem on the base",
+  "Becoming.Typicality.stopped_spec": "used by a theorem on the base",
+  "Becoming.Typicality.moving_le": "used by a theorem on the base",
+  "Becoming.Typicality.stopped_go": "used by a theorem on the base",
+  "Becoming.Typicality.stopped_square_step": "used by a theorem on the base",
+  "Becoming.Typicality.stopped_cross_step": "used by a theorem on the base",
+  "Becoming.Typicality.stopped_spread": "used by a theorem on the base",
+  "Becoming.Typicality.offByWithin_le": "used by a theorem on the base",
+  "Becoming.Typicality.typical_throughout": "used by a theorem on the base",
+  "Becoming.Typicality.offBy_le_within": "used by a theorem on the base",
   "Becoming.Typicality.typical": "used by a theorem on the base",
   "Becoming.Typicality.ones_add_zeros": "used by a theorem on the base",
   "Becoming.Typicality.weight_pow": "used by a theorem on the base",
@@ -12996,6 +13024,99 @@
   "Becoming.Typicality.along_weight": "used by a theorem on the base",
   "Becoming.Typicality.transfer_weight": "used by a theorem on the base",
   "Becoming.Typicality.sum_courses_weight": "used by a theorem on the base",
+  "Becoming.ConditionalWeights.entry_and": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.entry_swap": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.entry_split": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.entry_test_le": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.entry_mul_left": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.entry_and_true": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.entry_and_comm": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.entry_restrict_le": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.mass_eq_sum": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_congr_mem": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_congr": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_le_of_entries": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_none": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_append": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_map": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_joinMap": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_mul_left": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_mul_right": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.whole_of_entries": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_eq_total": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_and_comm": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_and_true": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_restrict": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.whole_restrict": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_split": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.restrict_le": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_restrict_le": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.restrict_restrict": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.restrict_comm": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Share.le_refl": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Share.le_trans": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Share.zero_whole": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Share.le_iff_reciprocal": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Share.mul_le_mul": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Share.mul_le_left": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.share_le_of_included": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.share_within": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.share_zero_whole": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.restrict_two_ways": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_scaled_event": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_pairs": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_product": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.share_product": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.share_product_le": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.share_product_le_right": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_first": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.restrict_independent": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_pairWeight": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.evidence": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.posterior_le_iff": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_absent": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_single": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.prior_share": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.posterior_single": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.posterior_le_iff_single": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_meetsEach": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.whole_courses": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.foldr_whole": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.foldr_part": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.share_meetsEach": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.fallsTo_succ": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.deviates_offBy": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.whole_typical": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.deviates_bound": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.fallsWithin_of_end": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.fallsWithin_reachesBy": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.fallsWithin_entry": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.fallsWithin_bound": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.fallsTo_bound": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.fallsWithin_share": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.fallsWithin_reciprocal": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.joinMap_congr": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.joinMap_single": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.extend_append": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.extend_joinMap": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.extend_map_append": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.courses_add": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.drop_append_length": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.weight_append": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.ones_append": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.zeros_append": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.margin_shift": "apart: prelude-only statement",
+  "Becoming.ConditionalWeights.fallsTo_append": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.fallsWithin_append": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.mass_record": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.record_fallsWithin": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.record_share": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.record_bound": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Witness.le_not_transitive": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Witness.positive_part_zero_whole": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Witness.within_exceeds_end": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Witness.prior_not_share": "apart: own vocabulary",
+  "Becoming.ConditionalWeights.Witness.record_reverses": "apart: own vocabulary",
   "Becoming.Situations.sum_upto": "used by a theorem on the base",
   "Becoming.Situations.finerLaw_determined": "statement on Process/Frame/Run/Trace",
   "Becoming.Situations.finerLaw_step_iff": "statement on Process/Frame/Run/Trace",

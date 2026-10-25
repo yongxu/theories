@@ -1,0 +1,301 @@
+{
+  "schema_version": 2,
+  "id": "exit-from-a-margin",
+  "title": {
+    "en": "The exit from a margin, and what a record of the course says of it",
+    "zh": "离开边距，及历程之记录对其所言"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T16:34:54+00:00",
+  "statement": {
+    "en": "A balanced level standing m above a need reaches it within n steps on at most n·p·q/m² of the weight, by Kolmogorov's maximal inequality in counting form; a break is reaching it from m + 1. Given a record leaving the level m′ above the need, the share is the share from m′.",
+    "zh": "高于需要 m 之平衡水平，于 n 步内达到需要者至多占 n·p·q/m² 之重，即计数形式之 Kolmogorov 极大不等式；断裂即自 m + 1 达到之。给定使水平高于需要 m′ 之记录，其份额即自 m′ 之份额。"
+  },
+  "laws": [
+    {
+      "en": "The deviation bound at the horizon: the courses of n steps whose deviation at the horizon reaches m either way weigh, times m·m, at most n·p·q·(p + q)ⁿ, the weighted squared spread; Chebyshev's bound read at a margin, an instance of typical.",
+      "zh": "终点之偏差界：终点偏差两向达到 m 之 n 步历程之重乘 m·m 至多 n·p·q·(p + q)ⁿ，即加权之平方离散；于边距读之 Chebyshev 界，typical 之实例。",
+      "declarations": [
+        "Becoming.ConditionalWeights.deviates",
+        "Becoming.ConditionalWeights.deviates_offBy",
+        "Becoming.ConditionalWeights.whole_typical",
+        "Becoming.ConditionalWeights.deviates_bound"
+      ]
+    },
+    {
+      "en": "A level standing m above a need, raised q by each one and lowered p by each zero, reaches the need or falls below it at some step on courses weighing, times m·m, at most n·p·q·(p + q)ⁿ, from the bound at every step; those ending there are among them; as shares, at most n·p·q over m·m, with the reciprocal at least m·m over n·p·q.",
+      "zh": "高于需要 m 之水平，每个一升 q、每个零降 p，于某步达到或低于需要之历程之重乘 m·m 至多 n·p·q·(p + q)ⁿ，由每步之界；终于其处者在其中；以份额言，至多 n·p·q 比 m·m，其倒数至少 m·m 比 n·p·q。",
+      "declarations": [
+        "Becoming.ConditionalWeights.fallsTo",
+        "Becoming.ConditionalWeights.fallsWithin",
+        "Becoming.ConditionalWeights.fallsWithin_of_end",
+        "Becoming.ConditionalWeights.fallsWithin_reachesBy",
+        "Becoming.ConditionalWeights.fallsWithin_entry",
+        "Becoming.ConditionalWeights.fallsWithin_bound",
+        "Becoming.ConditionalWeights.fallsTo_bound",
+        "Becoming.ConditionalWeights.fallsWithin_share",
+        "Becoming.ConditionalWeights.fallsWithin_reciprocal"
+      ]
+    },
+    {
+      "en": "Standing at the need is supported, so a break is reaching it from m + 1, the level below the need, on a share at most n·p·q over (m + 1)·(m + 1). A course can fall and recover: over two steps with p = q = 1 and m = 1, two courses reach the need within the horizon and one ends below it.",
+      "zh": "立于需要处为受支撑，故断裂即自 m + 1 达到之，水平低于需要，其份额至多 n·p·q 比 (m + 1)·(m + 1)。历程可降而复升：p = q = 1、m = 1 之两步中，两历程于其内达到需要，一历程终于其下。",
+      "declarations": [
+        "Becoming.ConditionalWeights.fallsTo_succ",
+        "Becoming.ConditionalWeights.Witness.within_exceeds_end"
+      ]
+    },
+    {
+      "en": "A course of k + n steps is n later steps after k earlier ones. For a record of the earliest k steps every agreeing course of which leaves the level m′ above the need without having reached it, the agreeing courses reaching it within the horizon weigh the record's weight times what the n-step courses reaching it from m′ weigh; given the record their share is that share, at most n·p·q over m′·m′.",
+      "zh": "k + n 步之历程为 k 步之后之 n 步。早 k 步之记录，问于 k 步之历程，其每一相合之历程使水平高于需要 m′ 且未达之，则相合而于其内达到需要之历程之重为记录之重乘自 m′ 达到之 n 步历程之重；给定记录，其份额即该份额，至多 n·p·q 比 m′·m′。",
+      "declarations": [
+        "Becoming.ConditionalWeights.courses_add",
+        "Becoming.ConditionalWeights.mass_record",
+        "Becoming.ConditionalWeights.margin_shift",
+        "Becoming.ConditionalWeights.fallsTo_append",
+        "Becoming.ConditionalWeights.fallsWithin_append",
+        "Becoming.ConditionalWeights.record_fallsWithin",
+        "Becoming.ConditionalWeights.record_share",
+        "Becoming.ConditionalWeights.record_bound",
+        "Becoming.ConditionalWeights.joinMap_congr",
+        "Becoming.ConditionalWeights.joinMap_single",
+        "Becoming.ConditionalWeights.extend_append",
+        "Becoming.ConditionalWeights.extend_joinMap",
+        "Becoming.ConditionalWeights.extend_map_append",
+        "Becoming.ConditionalWeights.drop_append_length",
+        "Becoming.ConditionalWeights.weight_append",
+        "Becoming.ConditionalWeights.ones_append",
+        "Becoming.ConditionalWeights.zeros_append"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own: Typicality's courses on two values with natural weights p and q; one level raised q by each one and lowered p by each zero, balanced by construction; independent steps; for the record laws, a record asked of the courses of k steps, with the margin m′ it shows.",
+      "zh": "不加公理，除各律所带者外不加前提：Typicality 二值之历程与自然数权重 p、q；一水平每个一升 q、每个零降 p，依构造平衡；独立之步；于记录之律，问于 k 步历程之记录及其所显之边距 m′。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the exit bound is the free-energy principle's quantity: it is the unregulated case a reading of persisting is measured against, void from n = m·m/(p·q), and gives that principle's containment no third part.",
+      "zh": "离开之界为自由能原理之量：其为不受调节之情形，持续之读法以之为衡，自 n = m·m/(p·q) 起无效，且不给该原理之包含第三部分。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a level leaves every margin in time: a balanced walk recurs, which is not proved here.",
+      "zh": "水平终将离开每一边距：平衡之游走复返，此处未证。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "A level whose rises and falls do not balance, more than two values, or steps that are not independent.",
+      "zh": "升降不平衡之水平、多于二值，或不独立之步。",
+      "kind": "scope"
+    },
+    {
+      "en": "Exponential exit bounds: one on ending fallen follows from concentrated; one within the horizon needs its maximal form.",
+      "zh": "指数之离开界：终于降者由 concentrated 得之；其内者须其极大形式。",
+      "kind": "scope"
+    },
+    {
+      "en": "The surprisal bound where m·m ≤ n·p·q, where it says nothing.",
+      "zh": "m·m ≤ n·p·q 处之惊异界，其处无所言。",
+      "kind": "scope"
+    },
+    {
+      "en": "A break at margin m: standing at the need is supported, and a break is reaching it from m + 1.",
+      "zh": "边距 m 处之断裂：立于需要处受支撑，断裂即自 m + 1 达到之。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "T6's invisible half: that a record not holding the level bounds nothing.",
+      "zh": "T6 之不可见之半：不含水平之记录无所界。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "detail": {
+        "en": "Counting the courses that reach the need at some step can count more than counting those that end there or below: over two steps with p = q = 1 and m = 1, two against one (Witness.within_exceeds_end).",
+        "zh": "计于某步达到需要之历程，可多于计终于其处或其下者：p = q = 1、m = 1 之两步中，二对一（Witness.within_exceeds_end）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T163242.561061Z): Becoming.ConditionalWeights, 110 declarations, every one with an empty axiom report; this record cites 32 of them and conditioning-by-restriction the other 78; Typicality.typical_throughout in the same receipt. Built in one session; an independent read-only review by a separate AI agent with a Lean rebuild, its findings taken and the revision re-checked, in study section 412; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T163242.561061Z）：Becoming.ConditionalWeights，110 项声明，公理报告皆空；本记录引其 32 项，conditioning-by-restriction 引其余 78 项；Typicality.typical_throughout 在同一回执。于一会话中构建；另一 AI 代理作独立只读审查并重建 Lean，其所见皆采，修订经复查，见研究第 412 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "The one-sided (Cantelli) form of the bound, never above one; exits for a level whose rises and falls do not balance; an exponential bound within the horizon; T6's invisible half in counting form; review by a person.",
+    "zh": "界之单边（Cantelli）形式，永不过一；升降不平衡之水平之离开；其内之指数界；计数形式之 T6 不可见之半；人之审查。"
+  },
+  "correspondence": {
+    "en": "Kolmogorov's maximal inequality (1928), restated in counting form for a balanced walk on two values, with Chebyshev's bound (1867) its last step. Read with the free-energy principle, the bound is the unregulated case its reading of persisting is measured against: a balanced level that nothing reads leaves a margin m within n steps on at most n·p·q/m² of the weight, so leaving has surprisal at least log (m·m / (n·p·q)) where m·m exceeds n·p·q, and persisting longer needs a giving that reads the level. The record law is the independence of the steps given the weighting, read as the seen half of T6 with the weighting as its independently warranted model. The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.",
+    "zh": "Kolmogorov 极大不等式（1928），为二值平衡游走以计数形式重述，Chebyshev 界（1867）为其最后一步。与自由能原理并读，此界为不受调节之情形，其持续之读法以之为衡：无物读之之平衡水平，于 n 步内离开边距 m 者至多占 n·p·q/m² 之重，故 m·m 大于 n·p·q 处离开之惊异至少为 log (m·m / (n·p·q))，更久之持续须一读其水平之给予。记录之律为给定权重时诸步之独立，读作 T6 可见之半，权重为其独立所据之模型。读法皆 AI 之读，载于 development/ue2-conditional-weights/NOTE.md，审查见 REVIEW-UE2.md。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+  "aliases": [
+    "The exit from a margin, and what a record of the course says of it",
+    "离开边距，及历程之记录对其所言",
+    "the exit from a margin",
+    "Becoming.ConditionalWeights.fallsWithin_share",
+    "Becoming.ConditionalWeights.record_share"
+  ],
+  "dependencies": [
+    {
+      "id": "typicality-by-counting",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "typical, typical_throughout, margin_square, offBy, offByWithin, reachesBy, the total lemmas, weight, courses, ahead, behind, extend, ones, zeros and mem_courses_iff.",
+        "zh": "typical、typical_throughout、margin_square、offBy、offByWithin、reachesBy、诸 total 引理、weight、courses、ahead、behind、extend、ones、zeros 与 mem_courses_iff。"
+      }
+    },
+    {
+      "id": "fulfillment-chance-floor",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "mass and mass_mono.",
+        "zh": "mass 与 mass_mono。"
+      }
+    },
+    {
+      "id": "conditioning-by-restriction",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "restrict, share, Share with its order and reciprocal, and the mass laws.",
+        "zh": "restrict、share、Share 及其序与倒数，与质量之律。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "drift-offspring-sampled",
+      "detail": {
+        "en": "The binomial means, from which the level's balance is arithmetic; not an inference edge.",
+        "zh": "二项之均值，水平之平衡由之算出；非推理之边。"
+      }
+    },
+    {
+      "id": "margin-of-a-regime",
+      "detail": {
+        "en": "The margin vocabulary; the regime's point of no return, where giving reads the level, is a different distance.",
+        "zh": "边距之词汇；体制之不归点，于其处给予读其水平，为另一距离。"
+      }
+    },
+    {
+      "id": "slowing-down-before-an-own-end",
+      "detail": {
+        "en": "T6's seen half for a condition's own end, in the periphery; here, a dependent's need, given the weighting.",
+        "zh": "T6 可见之半于条件自身之终，在外围；此处为依赖者之需要，给定权重。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ConditionalWeights.Witness.within_exceeds_end",
+        "Becoming.ConditionalWeights.courses_add",
+        "Becoming.ConditionalWeights.deviates",
+        "Becoming.ConditionalWeights.deviates_bound",
+        "Becoming.ConditionalWeights.deviates_offBy",
+        "Becoming.ConditionalWeights.drop_append_length",
+        "Becoming.ConditionalWeights.extend_append",
+        "Becoming.ConditionalWeights.extend_joinMap",
+        "Becoming.ConditionalWeights.extend_map_append",
+        "Becoming.ConditionalWeights.fallsTo",
+        "Becoming.ConditionalWeights.fallsTo_append",
+        "Becoming.ConditionalWeights.fallsTo_bound",
+        "Becoming.ConditionalWeights.fallsTo_succ",
+        "Becoming.ConditionalWeights.fallsWithin",
+        "Becoming.ConditionalWeights.fallsWithin_append",
+        "Becoming.ConditionalWeights.fallsWithin_bound",
+        "Becoming.ConditionalWeights.fallsWithin_entry",
+        "Becoming.ConditionalWeights.fallsWithin_of_end",
+        "Becoming.ConditionalWeights.fallsWithin_reachesBy",
+        "Becoming.ConditionalWeights.fallsWithin_reciprocal",
+        "Becoming.ConditionalWeights.fallsWithin_share",
+        "Becoming.ConditionalWeights.joinMap_congr",
+        "Becoming.ConditionalWeights.joinMap_single",
+        "Becoming.ConditionalWeights.margin_shift",
+        "Becoming.ConditionalWeights.mass_record",
+        "Becoming.ConditionalWeights.ones_append",
+        "Becoming.ConditionalWeights.record_bound",
+        "Becoming.ConditionalWeights.record_fallsWithin",
+        "Becoming.ConditionalWeights.record_share",
+        "Becoming.ConditionalWeights.weight_append",
+        "Becoming.ConditionalWeights.whole_typical",
+        "Becoming.ConditionalWeights.zeros_append"
+      ],
+      "sha256": "479c8401487664728e63fd6d247dcfb89b2fd578185097251bcf2055cac0361f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
+      "role": "proof",
+      "sha256": "9eacd128aa74fe2651784e16421008e5f1447b9f9351be5bd2ab51cb0de6bc98"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+      "role": "proof",
+      "sha256": "0a73e620d493cadc46e730187cf7c02f948df35b1b1ef91e0b78e7d96ee9b81c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
+      "role": "receipt",
+      "sha256": "8daf4987d18687825a9b30b0786f9a0349a4a901d98b25f80ace9ec43a4d7f7f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "01cf204f7cc73950ccb8f350b07a6035bf4482de09694ad278753278efe37c96"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
+      "role": "integration",
+      "sha256": "c7b3c3d8c82a96d9c61e5074f8be5f3b8bdb566c9fe1491a47938dc8b0b3e380"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "f06162419f705b38fc87ec27a223ddc671dace59b629c91d9f3dbcfd2d65e132"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "d1617cd81aa353304cae97d6510da26c335e4498b8a3dfced1cff6143c342d04"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ConditionalWeights",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Typicality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (UE2), the exit from a margin and the record law; study section 412.",
+      "zh": "2026年10月26日：新增（UE2），离开边距与记录之律；研究第 412 节。"
+    }
+  ]
+}

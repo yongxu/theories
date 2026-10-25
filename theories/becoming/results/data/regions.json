@@ -371,6 +371,11 @@
    "base": "none",
    "note": "superseded five-condition review"
   },
+  "conditioning-by-restriction": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ConditionalWeights UE2: conditioning by restriction, shares, a generative model's posterior"
+  },
   "conditions-kept-together": {
    "region": "collective",
    "base": "frame",
@@ -625,6 +630,11 @@
    "region": "root",
    "base": "general",
    "note": "Composition: exclusive footprints support leaves"
+  },
+  "exit-from-a-margin": {
+   "region": "map",
+   "base": "general",
+   "note": "ConditionalWeights UE2: the exit from a margin and what a record of the course says of it"
   },
   "experiment-needs-return": {
    "region": "knowing",
@@ -2337,6 +2347,11 @@
    "region": "root",
    "base": "frame",
    "note": "whole and parts as one more relation"
+  },
+  "Becoming.ConditionalWeights": {
+   "region": "knowing",
+   "base": "general",
+   "note": "UE2 conditional weights and the exit from a margin on the counting layer"
   },
   "Becoming.ContactCourses": {
    "region": "knowing",

@@ -1,0 +1,387 @@
+{
+  "schema_version": 2,
+  "id": "conditioning-by-restriction",
+  "title": {
+    "en": "Conditioning by restriction, shares and a generative model's posterior",
+    "zh": "以限制为条件、份额与生成模型之后验"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T16:34:54+00:00",
+  "statement": {
+    "en": "On a natural weighting of listed courses, restricting to a record is conditioning: an event weighs what the courses meeting it and the record weigh. Shares compared by cross-multiplication obey Bayes's rule, give a generative model's posterior and multiply under independence.",
+    "zh": "于所列历程之自然数权重，限于一记录即条件化：一事件之重为兼合该事件与该记录之历程之重。以交叉相乘比较之份额合贝叶斯法则，给生成模型之后验，独立时相乘，皆为计数之恒等。"
+  },
+  "laws": [
+    {
+      "en": "A mass is the sum of counting over its entries, so it adds over joined listings, reads mapped and nested listings and scales with its weighting, by the sum laws of the sum over histories; masses agreeing entry by entry agree, the event holding nowhere weighs nothing, and a conjunction weighs the same in either order.",
+      "zh": "质量是对其各项之计数之和，故于并列之列举相加，读映射与嵌套之列举，随其权重缩放，皆由历史之和之和律；逐项相同之质量相同，处处不成立之事件无重，合取两序之重相同。",
+      "declarations": [
+        "Becoming.ConditionalWeights.entry_and",
+        "Becoming.ConditionalWeights.entry_swap",
+        "Becoming.ConditionalWeights.entry_split",
+        "Becoming.ConditionalWeights.entry_test_le",
+        "Becoming.ConditionalWeights.entry_mul_left",
+        "Becoming.ConditionalWeights.entry_and_true",
+        "Becoming.ConditionalWeights.entry_and_comm",
+        "Becoming.ConditionalWeights.entry_restrict_le",
+        "Becoming.ConditionalWeights.mass_eq_sum",
+        "Becoming.ConditionalWeights.mass_congr_mem",
+        "Becoming.ConditionalWeights.mass_congr",
+        "Becoming.ConditionalWeights.mass_le_of_entries",
+        "Becoming.ConditionalWeights.mass_none",
+        "Becoming.ConditionalWeights.mass_append",
+        "Becoming.ConditionalWeights.mass_map",
+        "Becoming.ConditionalWeights.mass_joinMap",
+        "Becoming.ConditionalWeights.mass_mul_left",
+        "Becoming.ConditionalWeights.mass_mul_right",
+        "Becoming.ConditionalWeights.whole_of_entries",
+        "Becoming.ConditionalWeights.mass_eq_total",
+        "Becoming.ConditionalWeights.mass_and_comm",
+        "Becoming.ConditionalWeights.mass_and_true"
+      ]
+    },
+    {
+      "en": "Restricting a weighting to a record keeps the weight of each course agreeing with it and gives every other course nothing; under it an event weighs what the courses meeting the event and the record weigh, and its whole is the record's weight. An event weighs its courses agreeing with a record plus those disagreeing; a record raises no weight; two records in turn are their conjunction, in either order.",
+      "zh": "限于一记录之权重，保留与之相合之各历程之重，余者皆为零；其下一事件之重为兼合该事件与该记录之历程之重，其总为记录之重。一事件之重为其与记录相合者与不合者之和；记录不增任何重；先后两记录即其合取，两序皆然。",
+      "declarations": [
+        "Becoming.ConditionalWeights.restrict",
+        "Becoming.ConditionalWeights.mass_restrict",
+        "Becoming.ConditionalWeights.whole_restrict",
+        "Becoming.ConditionalWeights.mass_split",
+        "Becoming.ConditionalWeights.restrict_le",
+        "Becoming.ConditionalWeights.mass_restrict_le",
+        "Becoming.ConditionalWeights.restrict_restrict",
+        "Becoming.ConditionalWeights.restrict_comm"
+      ]
+    },
+    {
+      "en": "A share is a part of a whole compared by cross-multiplication, a preorder on shares with a positive whole, and one share is at most another exactly where the other's reciprocal is at most its own. ⟨0, 0⟩, the share of an event whose whole is nothing, compares either way with every share and the order is not transitive through it; a positive part over nothing does not compare so. A wider event has no smaller share.",
+      "zh": "份额为部分比整体，以交叉相乘比较，于整体为正之份额上为预序；一份额不大于另一份额，恰当另一份额之倒数不大于其倒数。⟨0, 0⟩ 即整体为零之事件之份额，与每一份额两向皆可比，序经之不传递；部分为正而整体为零者不然。更宽之事件份额不更小。",
+      "declarations": [
+        "Becoming.ConditionalWeights.Share",
+        "Becoming.ConditionalWeights.Share.le",
+        "Becoming.ConditionalWeights.Share.Same",
+        "Becoming.ConditionalWeights.Share.mul",
+        "Becoming.ConditionalWeights.Share.one",
+        "Becoming.ConditionalWeights.Share.reciprocal",
+        "Becoming.ConditionalWeights.Share.le_refl",
+        "Becoming.ConditionalWeights.Share.le_trans",
+        "Becoming.ConditionalWeights.Share.zero_whole",
+        "Becoming.ConditionalWeights.Share.le_iff_reciprocal",
+        "Becoming.ConditionalWeights.Share.mul_le_mul",
+        "Becoming.ConditionalWeights.Share.mul_le_left",
+        "Becoming.ConditionalWeights.share",
+        "Becoming.ConditionalWeights.share_le_of_included",
+        "Becoming.ConditionalWeights.share_within",
+        "Becoming.ConditionalWeights.share_zero_whole",
+        "Becoming.ConditionalWeights.Witness.le_not_transitive",
+        "Becoming.ConditionalWeights.Witness.positive_part_zero_whole"
+      ]
+    },
+    {
+      "en": "Bayes's rule as a ratio identity: a hypothesis's share under the weighting restricted to a record, taken with the record's share, is the record's share under the weighting restricted to the hypothesis, taken with the hypothesis's share, since both count the courses meeting the two; where the record weighs nothing the identity says nothing.",
+      "zh": "贝叶斯法则为比之恒等：限于记录之权重下假设之份额乘记录之份额，即限于假设之权重下记录之份额乘假设之份额，二者所计皆兼合二者之历程；记录无重之处，此恒等无所言。",
+      "declarations": [
+        "Becoming.ConditionalWeights.restrict_two_ways"
+      ]
+    },
+    {
+      "en": "In a generative model a course pairs a listed hypothesis and record and weighs the prior weight times the record's weight under it. The pair weight factors; the courses agreeing with a record weigh the sum of these products; a hypothesis listed once has its product over that sum as its share given the record; and after a record of positive weight hypotheses compare as their products, which can reverse their order.",
+      "zh": "生成模型中，历程为所列假设与所列记录之对，其重为假设之先验权重乘记录于其下之重：对之重可分解；与记录相合之历程之重为诸积之和；列一次之假设，给定记录之份额为其积比此和。记录之重为正时，假设之比较即先验权重乘似然权重之比较，记录可翻转其序。",
+      "declarations": [
+        "Becoming.ConditionalWeights.pairWeight",
+        "Becoming.ConditionalWeights.mass_pairs",
+        "Becoming.ConditionalWeights.mass_pairWeight",
+        "Becoming.ConditionalWeights.evidence",
+        "Becoming.ConditionalWeights.posterior_single",
+        "Becoming.ConditionalWeights.posterior_le_iff",
+        "Becoming.ConditionalWeights.posterior_le_iff_single",
+        "Becoming.ConditionalWeights.mass_absent",
+        "Becoming.ConditionalWeights.mass_single",
+        "Becoming.ConditionalWeights.Witness.prior",
+        "Becoming.ConditionalWeights.Witness.lik",
+        "Becoming.ConditionalWeights.Witness.record_reverses"
+      ]
+    },
+    {
+      "en": "A prior weight is the hypothesis's share before any record where every listed hypothesis's likelihood weights have one total; in general a hypothesis's share is its prior weight times its own likelihood total, over the whole, and equal prior weights with totals 1 and 3 weigh 1 and 3.",
+      "zh": "诸假设之似然权重总和相同时，先验权重即假设于任何记录之前之份额；一般而言，假设之份额为其先验权重乘其自身似然之总，比整体；先验权重相等而总为 1 与 3 者，重为 1 与 3。",
+      "declarations": [
+        "Becoming.ConditionalWeights.prior_share",
+        "Becoming.ConditionalWeights.Witness.likUneven",
+        "Becoming.ConditionalWeights.Witness.prior_not_share"
+      ]
+    },
+    {
+      "en": "Over the pairs of two listed domains weighted by products, two independent events weigh the product of their masses and take the product of their shares, the joint share at most either share, and a record of one part leaves the share of an event of the other the same ratio. Over courses of independent steps, the share of a conjunction of step events, one at each step, is the product of their shares.",
+      "zh": "以积加权之两列举之对上，两独立事件之重为其质量之积，份额为其份额之积，合份额不大于任一份额，一部分之记录使另一部分事件之份额比不变。于独立步之历程，每步一事件之合取之份额为诸步份额之积。",
+      "declarations": [
+        "Becoming.ConditionalWeights.mass_scaled_event",
+        "Becoming.ConditionalWeights.mass_product",
+        "Becoming.ConditionalWeights.share_product",
+        "Becoming.ConditionalWeights.share_product_le",
+        "Becoming.ConditionalWeights.share_product_le_right",
+        "Becoming.ConditionalWeights.mass_first",
+        "Becoming.ConditionalWeights.restrict_independent",
+        "Becoming.ConditionalWeights.independentWeight",
+        "Becoming.ConditionalWeights.meetsEach",
+        "Becoming.ConditionalWeights.mass_meetsEach",
+        "Becoming.ConditionalWeights.whole_courses",
+        "Becoming.ConditionalWeights.foldr_whole",
+        "Becoming.ConditionalWeights.foldr_part",
+        "Becoming.ConditionalWeights.share_meetsEach"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own: a listed domain of any type, an entry listed twice counting twice, a natural weighting, Boolean events and records; for the generative model, listed hypotheses and records with natural prior and likelihood weights, and for the single-hypothesis laws decidable equality and a hypothesis listed once; for independence, product weights.",
+      "zh": "不加公理，除各律所带者外不加前提：任意类型之所列域（列两次者计两次）、自然数权重、布尔之事件与记录；于生成模型，所列之假设与记录及其自然数先验与似然权重，于单一假设之律，可判定之相等与列一次之假设；于独立，积权重。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Conditioning beyond natural weightings: for possibility, restriction is conditioning without shares; signed counts cancel, so a restricted signed weighting has no share.",
+      "zh": "自然数权重之外的条件化：于可能性，限制即无份额之条件化；带符号之计数相消，限制后之带符号权重无份额。",
+      "kind": "scope"
+    },
+    {
+      "en": "The prior and likelihood readings without one likelihood total: otherwise a hypothesis's share before any record is its prior weight times its own likelihood total, over the whole.",
+      "zh": "无共同似然之总时之先验与似然读法：否则假设于记录前之份额为其先验权重乘其自身似然之总，比整体。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Surprisal, entropy or free energy as numbers: the reciprocal share orders as pointwise surprisal does and multiplies where it adds, but averages of logarithms have no reciprocal-share form.",
+      "zh": "作为数之惊异、熵或自由能：倒数份额之序同于逐点之惊异，惊异相加处其相乘，而对数之平均无倒数份额之形式。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Graded evidence on a general domain: records are Boolean, and a likelihood weighting multiplying a prior appears only as the generative model's pair weight.",
+      "zh": "一般域上之分级证据：记录为布尔，似然权重乘先验仅见于生成模型之对之重。",
+      "kind": "scope"
+    },
+    {
+      "en": "That these identities are substantive results of a containment of the free-energy principle: they are identities of counting, near-definitional.",
+      "zh": "此诸恒等为包含自由能原理之实质结果：其为计数之恒等，近乎定义。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That whole_courses is a new law: it generalizes Typicality.transfer_weight, the two-valued case, and lands above it; transfer_weight keeps its own proof until the general law moves into Becoming.Weighted.",
+      "zh": "whole_courses 为新律：其推广二值之 Typicality.transfer_weight，而立于其上；transfer_weight 保留自身之证明，直至通律移入 Becoming.Weighted。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which weighting an actual unfolding has: a share counts situations of a kind and fixes no course that happens.",
+      "zh": "实有之展开具何权重：份额计同类之情境，不定发生之历程。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "detail": {
+        "en": "A record can turn the order of two hypotheses: prior weights 3 and 1 with likelihood totals 5 and 5 give courses weighing 15 and 5, and 3 and 5 given the record (Witness.record_reverses).",
+        "zh": "记录可翻转两假设之序：先验权重 3 与 1、似然之总皆为 5，历程之重为 15 与 5，给定记录则为 3 与 5（Witness.record_reverses）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "detail": {
+        "en": "Where the likelihood totals differ a prior weight is not the prior share: equal prior weights with totals 1 and 3 weigh 1 and 3 (Witness.prior_not_share).",
+        "zh": "似然之总不同时先验权重非先验份额：先验权重相等而总为 1 与 3 者，重为 1 与 3（Witness.prior_not_share）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "detail": {
+        "en": "The share order is not transitive through ⟨0, 0⟩, and a positive part over nothing does not compare either way (Witness.le_not_transitive, Witness.positive_part_zero_whole).",
+        "zh": "份额之序经 ⟨0, 0⟩ 不传递，部分为正而整体为零者不两向可比（Witness.le_not_transitive、Witness.positive_part_zero_whole）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T163242.561061Z): Becoming.ConditionalWeights, 110 declarations, every one with an empty axiom report; this record cites 78 of them and exit-from-a-margin the other 32. Built in one session; an independent read-only review by a separate AI agent with a Lean rebuild, its findings taken and the revision re-checked, in study section 412; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T163242.561061Z）：Becoming.ConditionalWeights，110 项声明，公理报告皆空；本记录引其 78 项，exit-from-a-margin 引其余 32 项。于一会话中构建；另一 AI 代理作独立只读审查并重建 Lean，其所见皆采，修订经复查，见研究第 412 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "Restriction stated once for every weighting, with possibility's support commuting with it; graded records on a general domain; the join to the periphery's variational bound once it has a receipt; review by a person.",
+    "zh": "对每种权重陈述一次限制，可能性之支撑与之交换；一般域上之分级记录；外围变分界有回执后与之相接；人之审查。"
+  },
+  "correspondence": {
+    "en": "Read a share as a probability, a number of situations of a kind (weights-count-situations): restriction is conditioning, restrict_two_ways is Bayes's theorem P(h | o) P(o) = P(o | h) P(h) (Bayes 1763; Laplace 1774), the share of evidence in the whole is a generative model's marginal likelihood and posterior_single its posterior, these readings of the prior and the likelihood holding where every listed hypothesis's likelihood weights have one total (prior_share). The reciprocal share is a counting form of pointwise surprisal, log (1 / P): it reverses the order of shares and its products are surprisal's sums. Entropy and free energy, averages of logarithms, have no such form; free energy and its bound are drafted for the periphery with no receipt. The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.",
+    "zh": "份额读作概率，即同类情境之数（weights-count-situations）：限制即条件化，restrict_two_ways 即贝叶斯定理 P(h | o) P(o) = P(o | h) P(h)（Bayes 1763；Laplace 1774），evidence 于整体之份额为生成模型之边缘似然，posterior_single 为其后验；先验与似然之此读法，于诸假设似然权重之总相同时成立（prior_share）。倒数份额为逐点惊异 log (1 / P) 之计数形式：反份额之序，其积为惊异之和。熵与自由能为对数之平均，无此形式；自由能及其界拟于外围，无回执。读法皆 AI 之读，载于 development/ue2-conditional-weights/NOTE.md，审查见 REVIEW-UE2.md。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+  "aliases": [
+    "Conditioning by restriction, shares and a generative model's posterior",
+    "以限制为条件、份额与生成模型之后验",
+    "conditioning by restriction",
+    "Bayes's rule in counting form",
+    "Becoming.ConditionalWeights.restrict_two_ways",
+    "Becoming.ConditionalWeights.posterior_single"
+  ],
+  "dependencies": [
+    {
+      "id": "fulfillment-chance-floor",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "mass, mass_mono and IncludedOn: the mass of an event on a listed domain and its monotonicity.",
+        "zh": "mass、mass_mono 与 IncludedOn：所列域上事件之质量及其单调。"
+      }
+    },
+    {
+      "id": "sum-over-histories-exact",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "counting, openSteps, courses, joinMap and Weights.along; Weights.sum_congr, sum_append, sum_map, sum_joinMap and mul_sum, from which the mass laws are read through mass_eq_sum.",
+        "zh": "counting、openSteps、courses、joinMap 与 Weights.along；Weights.sum_congr、sum_append、sum_map、sum_joinMap 与 mul_sum，质量之律经 mass_eq_sum 由之读出。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "weights-count-situations",
+      "detail": {
+        "en": "Shares read as numbers of situations of a kind, a reading.",
+        "zh": "份额读作同类情境之数，为一读法。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ConditionalWeights.Share",
+        "Becoming.ConditionalWeights.Share.Same",
+        "Becoming.ConditionalWeights.Share.le",
+        "Becoming.ConditionalWeights.Share.le_iff_reciprocal",
+        "Becoming.ConditionalWeights.Share.le_refl",
+        "Becoming.ConditionalWeights.Share.le_trans",
+        "Becoming.ConditionalWeights.Share.mul",
+        "Becoming.ConditionalWeights.Share.mul_le_left",
+        "Becoming.ConditionalWeights.Share.mul_le_mul",
+        "Becoming.ConditionalWeights.Share.one",
+        "Becoming.ConditionalWeights.Share.reciprocal",
+        "Becoming.ConditionalWeights.Share.zero_whole",
+        "Becoming.ConditionalWeights.Witness.le_not_transitive",
+        "Becoming.ConditionalWeights.Witness.lik",
+        "Becoming.ConditionalWeights.Witness.likUneven",
+        "Becoming.ConditionalWeights.Witness.positive_part_zero_whole",
+        "Becoming.ConditionalWeights.Witness.prior",
+        "Becoming.ConditionalWeights.Witness.prior_not_share",
+        "Becoming.ConditionalWeights.Witness.record_reverses",
+        "Becoming.ConditionalWeights.entry_and",
+        "Becoming.ConditionalWeights.entry_and_comm",
+        "Becoming.ConditionalWeights.entry_and_true",
+        "Becoming.ConditionalWeights.entry_mul_left",
+        "Becoming.ConditionalWeights.entry_restrict_le",
+        "Becoming.ConditionalWeights.entry_split",
+        "Becoming.ConditionalWeights.entry_swap",
+        "Becoming.ConditionalWeights.entry_test_le",
+        "Becoming.ConditionalWeights.evidence",
+        "Becoming.ConditionalWeights.foldr_part",
+        "Becoming.ConditionalWeights.foldr_whole",
+        "Becoming.ConditionalWeights.independentWeight",
+        "Becoming.ConditionalWeights.mass_absent",
+        "Becoming.ConditionalWeights.mass_and_comm",
+        "Becoming.ConditionalWeights.mass_and_true",
+        "Becoming.ConditionalWeights.mass_append",
+        "Becoming.ConditionalWeights.mass_congr",
+        "Becoming.ConditionalWeights.mass_congr_mem",
+        "Becoming.ConditionalWeights.mass_eq_sum",
+        "Becoming.ConditionalWeights.mass_eq_total",
+        "Becoming.ConditionalWeights.mass_first",
+        "Becoming.ConditionalWeights.mass_joinMap",
+        "Becoming.ConditionalWeights.mass_le_of_entries",
+        "Becoming.ConditionalWeights.mass_map",
+        "Becoming.ConditionalWeights.mass_meetsEach",
+        "Becoming.ConditionalWeights.mass_mul_left",
+        "Becoming.ConditionalWeights.mass_mul_right",
+        "Becoming.ConditionalWeights.mass_none",
+        "Becoming.ConditionalWeights.mass_pairWeight",
+        "Becoming.ConditionalWeights.mass_pairs",
+        "Becoming.ConditionalWeights.mass_product",
+        "Becoming.ConditionalWeights.mass_restrict",
+        "Becoming.ConditionalWeights.mass_restrict_le",
+        "Becoming.ConditionalWeights.mass_scaled_event",
+        "Becoming.ConditionalWeights.mass_single",
+        "Becoming.ConditionalWeights.mass_split",
+        "Becoming.ConditionalWeights.meetsEach",
+        "Becoming.ConditionalWeights.pairWeight",
+        "Becoming.ConditionalWeights.posterior_le_iff",
+        "Becoming.ConditionalWeights.posterior_le_iff_single",
+        "Becoming.ConditionalWeights.posterior_single",
+        "Becoming.ConditionalWeights.prior_share",
+        "Becoming.ConditionalWeights.restrict",
+        "Becoming.ConditionalWeights.restrict_comm",
+        "Becoming.ConditionalWeights.restrict_independent",
+        "Becoming.ConditionalWeights.restrict_le",
+        "Becoming.ConditionalWeights.restrict_restrict",
+        "Becoming.ConditionalWeights.restrict_two_ways",
+        "Becoming.ConditionalWeights.share",
+        "Becoming.ConditionalWeights.share_le_of_included",
+        "Becoming.ConditionalWeights.share_meetsEach",
+        "Becoming.ConditionalWeights.share_product",
+        "Becoming.ConditionalWeights.share_product_le",
+        "Becoming.ConditionalWeights.share_product_le_right",
+        "Becoming.ConditionalWeights.share_within",
+        "Becoming.ConditionalWeights.share_zero_whole",
+        "Becoming.ConditionalWeights.whole_courses",
+        "Becoming.ConditionalWeights.whole_of_entries",
+        "Becoming.ConditionalWeights.whole_restrict"
+      ],
+      "sha256": "479c8401487664728e63fd6d247dcfb89b2fd578185097251bcf2055cac0361f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+      "role": "proof",
+      "sha256": "0a73e620d493cadc46e730187cf7c02f948df35b1b1ef91e0b78e7d96ee9b81c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
+      "role": "receipt",
+      "sha256": "8daf4987d18687825a9b30b0786f9a0349a4a901d98b25f80ace9ec43a4d7f7f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "01cf204f7cc73950ccb8f350b07a6035bf4482de09694ad278753278efe37c96"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
+      "role": "integration",
+      "sha256": "c7b3c3d8c82a96d9c61e5074f8be5f3b8bdb566c9fe1491a47938dc8b0b3e380"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "d1617cd81aa353304cae97d6510da26c335e4498b8a3dfced1cff6143c342d04"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ConditionalWeights",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (UE2), conditioning on the counting layer, identities of counting; study section 412.",
+      "zh": "2026年10月26日：新增（UE2），计数层上之条件化，计数之恒等；研究第 412 节。"
+    }
+  ]
+}

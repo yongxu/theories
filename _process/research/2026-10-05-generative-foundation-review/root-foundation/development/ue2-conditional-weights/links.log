@@ -1,0 +1,88 @@
+{
+  "files_checked": 1476,
+  "links_checked": 78904,
+  "broken": 10,
+  "broken_by_kind": {
+    "absolute-path": 10
+  },
+  "broken_by_role": {
+    "live": 10
+  },
+  "by_directory": {
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar": 10
+  },
+  "list": [
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 3,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLawsInstances.lean:12",
+      "kind": "absolute-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 6,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLaws.lean:29",
+      "kind": "absolute-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 6,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLawsInstances.lean:110",
+      "kind": "absolute-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 9,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLaws.lean:6",
+      "kind": "absolute-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 9,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLawsInstances.lean:25",
+      "kind": "absolute-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 12,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLawsInstances.lean:259",
+      "kind": "absolute-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 15,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLaws.lean:579",
+      "kind": "absolute-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 18,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLaws.lean:138",
+      "kind": "absolute-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 21,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLaws.lean:477",
+      "kind": "absolute-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/REVIEW-ASTRA-A.md",
+      "line": 24,
+      "target": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/GrammarLaws.lean:523",
+      "kind": "absolute-path",
+      "role": "live"
+    }
+  ],
+  "not_in_repository": [],
+  "scope": "Relative links and #anchors in live and generated Markdown (paths.py roles); history, evidence, sources and scratch are frozen and not checked. Paths must match tracked or untracked files exactly. Targets inside a submodule or excluded by .gitignore are listed under not_in_repository, not counted."
+}
