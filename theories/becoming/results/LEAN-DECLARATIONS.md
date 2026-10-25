@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 309 | 14,080 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 311 | 14,186 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -268,6 +268,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [EvaluativeExtension.lean](lean-declarations/ethics.md#module-3b1ffb21fd90) | Normative grounding and generative direction |
 | [EvaluativeSuccession.lean](lean-declarations/shared.md#module-d6e11394f125) | Organizational formation through revisable evaluation |
 | [EvaluatorGrounding.lean](lean-declarations/ethics.md#module-dc7f1c8b5d8f) | Normative grounding and generative direction |
+| [EventualWidening.lean](lean-declarations/becoming-core.md#module-70d77685923e) | Becoming pure core |
+| [EventualWideningInstances.lean](lean-declarations/becoming-core.md#module-5269cc70e703) | Becoming pure core |
 | [EvidenceQualifiedCorrection.lean](lean-declarations/ethics.md#module-0fcc117b8f45) | Normative grounding and generative direction |
 | [EvidenceQualifiedCorrectionCases.lean](lean-declarations/ethics.md#module-69599ee1af2c) | Normative grounding and generative direction |
 | [EvidenceThroughChange.lean](lean-declarations/learning.md#module-820a29505426) | Learning, prediction and dynamics |

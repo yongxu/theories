@@ -74,7 +74,7 @@ Open classes of ideals are the Scott-open sets, on runs the open sets of the top
 - related, not a proved adapter: [scientific-inquiry-foundation](scientific-inquiry-foundation.md). The formal side of the demarcation comparison: a practice that insulates its favoured verdict keeps a verdict no finite record refutes.
 - related, not a proved adapter: [what-a-method-comes-to-say-in-the-limit](what-a-method-comes-to-say-in-the-limit.md). The next levels: readings verified or refuted in the limit, where settling and recurrence sit.
 
-**Used by:** [what-a-method-comes-to-say-in-the-limit](what-a-method-comes-to-say-in-the-limit.md)
+**Used by:** [eventual-widening](eventual-widening.md) · [what-a-method-comes-to-say-in-the-limit](what-a-method-comes-to-say-in-the-limit.md)
 
 <a id="sources--来源"></a>
 ### Sources

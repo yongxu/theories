@@ -78,7 +78,7 @@ Ren wrote that being generative is that “its existence creates more possibilit
 - related, not a proved adapter: [continued-change-needs-openness](continued-change-needs-openness.md). Of worlds: a world enclosed around what stands comes to rest; here, of the whole: once nothing is supported, nothing is supported or active again. Their premises differ, and no instance theorem joins them.
 - related, not a proved adapter: [relational-renewal-classification](relational-renewal-classification.md). RenewalBridge gives the support-gated family's balance, givers_supported and Flow.restores, the premises of this result's laws; the instance itself is not yet stated.
 
-**Used by:** [arising-needs-change](arising-needs-change.md) · [four-cases-of-a-part](four-cases-of-a-part.md) · [represented-boundary-against-dependence](represented-boundary-against-dependence.md) · [support-passed-on](support-passed-on.md)
+**Used by:** [arising-needs-change](arising-needs-change.md) · [eventual-widening](eventual-widening.md) · [four-cases-of-a-part](four-cases-of-a-part.md) · [represented-boundary-against-dependence](represented-boundary-against-dependence.md) · [support-passed-on](support-passed-on.md)
 
 <a id="sources--来源"></a>
 ### Sources

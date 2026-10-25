@@ -1772,6 +1772,18 @@
    "page": "theories/becoming/results/records/entropy-history-and-record.md"
   },
   {
+   "id": "record:eventual-widening",
+   "type": "result",
+   "record": "eventual-widening",
+   "title": "Widening on late tails, and what carries a widening",
+   "title_zh": "在晚期尾段上读的扩大，以及承载扩大者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/eventual-widening.md"
+  },
+  {
    "id": "record:every-loss-passes-a-juncture",
    "type": "result",
    "record": "every-loss-passes-a-juncture",
@@ -6536,6 +6548,28 @@
    "level": "L1",
    "theorems": 20,
    "region": "root",
+   "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.EventualWidening",
+   "type": "module",
+   "name": "Becoming.EventualWidening",
+   "level": "L1",
+   "theorems": 24,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.EventualWideningInstances",
+   "type": "module",
+   "name": "Becoming.EventualWideningInstances",
+   "level": "L1",
+   "theorems": 82,
+   "region": "significance",
    "base": "old-base",
    "on_grammar": false,
    "reaches_grammar": true
@@ -28408,6 +28442,12 @@
    "anchor": "r-widening-along-a-reading"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-eventual-widening",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-eventual-widening"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-content-under-regrouping",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -29683,6 +29723,36 @@
   {
    "from": "module:Becoming.Entropy",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EventualWidening",
+   "to": "module:Becoming.ContinuedClasses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EventualWidening",
+   "to": "module:Becoming.Population",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EventualWidening",
+   "to": "module:Becoming.Regions",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EventualWideningInstances",
+   "to": "module:Becoming.EventualWidening",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EventualWideningInstances",
+   "to": "module:Becoming.Verification",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EventualWideningInstances",
+   "to": "module:Becoming.Weightings",
    "type": "imports"
   },
   {
@@ -37554,6 +37624,96 @@
    "from": "record:entropy-history-and-record",
    "to": "record:theory-of-becoming-foundation",
    "type": "related"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "module:Becoming.Admission",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "module:Becoming.ContinuedClasses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "module:Becoming.EventualWidening",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "module:Becoming.EventualWideningInstances",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "module:Becoming.Horizon",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "module:Becoming.Regions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "module:Becoming.Verification",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "module:Becoming.Weightings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:classes-along-a-continuation",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:four-cases-of-a-part",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:more-needs-renewers",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:renewing-consuming-formation",
+   "type": "related"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:support-from-the-supported",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:support-passed-on",
+   "type": "related"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:what-a-finite-history-refutes",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:what-a-finite-stretch-verifies",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:widening-along-a-reading",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:widening-as-what-every-weighting-ranks",
+   "type": "formal-reuse"
   },
   {
    "from": "record:every-loss-passes-a-juncture",
@@ -53688,6 +53848,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits",
    "to": "record:derived-extent-limits",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-eventual-widening",
+   "to": "record:eventual-widening",
    "type": "states"
   },
   {

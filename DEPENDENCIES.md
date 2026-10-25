@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-433 registered results: 403 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 988 curated edges join 383 results to the results they draw on.
+434 registered results: 404 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 996 curated edges join 384 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -116,6 +116,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [encounter-control-and-retention][] ← <a id="encounter-control-and-retention--encounter-selection-and-revision"></a>[encounter-selection-and-revision][] *(interpretive)* · <a id="encounter-control-and-retention--naming-attention-coverage"></a>[naming-attention-coverage][] *(interpretive)*
 - [encounter-selection-and-revision][] ← <a id="encounter-selection-and-revision--enacted-scene-binding"></a>[enacted-scene-binding][]
 - [entropy-history-and-record][] ← <a id="entropy-history-and-record--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="entropy-history-and-record--rest-at-every-resolution"></a>[rest-at-every-resolution][] · <a id="entropy-history-and-record--recurrence-without-premise"></a>[recurrence-without-premise][]
+- [eventual-widening][] ← <a id="eventual-widening--four-cases-of-a-part"></a>[four-cases-of-a-part][] · <a id="eventual-widening--widening-along-a-reading"></a>[widening-along-a-reading][] · <a id="eventual-widening--classes-along-a-continuation"></a>[classes-along-a-continuation][] · <a id="eventual-widening--what-a-finite-stretch-verifies"></a>[what-a-finite-stretch-verifies][] · <a id="eventual-widening--what-a-finite-history-refutes"></a>[what-a-finite-history-refutes][] · <a id="eventual-widening--widening-as-what-every-weighting-ranks"></a>[widening-as-what-every-weighting-ranks][] · <a id="eventual-widening--support-from-the-supported"></a>[support-from-the-supported][] · <a id="eventual-widening--more-needs-renewers"></a>[more-needs-renewers][]
 - [every-loss-passes-a-juncture][] ← <a id="every-loss-passes-a-juncture--returning-where-the-course-branches"></a>[returning-where-the-course-branches][] · <a id="every-loss-passes-a-juncture--necessarily-drawn-is-not-returning"></a>[necessarily-drawn-is-not-returning][] · <a id="every-loss-passes-a-juncture--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] *(application)* · <a id="every-loss-passes-a-juncture--revision-with-an-undecided-value"></a>[revision-with-an-undecided-value][]
 - [every-origin-passes-the-gate][] ← <a id="every-origin-passes-the-gate--organizational-rule-inheritance"></a>[organizational-rule-inheritance][]
 - [evolution-on-descent][] ← <a id="evolution-on-descent--living-on-and-descent"></a>[living-on-and-descent][] · <a id="evolution-on-descent--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="evolution-on-descent--more-needs-renewers"></a>[more-needs-renewers][] · <a id="evolution-on-descent--generation-is-replenishment"></a>[generation-is-replenishment][]
@@ -508,6 +509,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [encounter-control-and-retention]: theories/becoming/results/records/encounter-control-and-retention.md
 [encounter-selection-and-revision]: theories/becoming/results/records/encounter-selection-and-revision.md
 [entropy-history-and-record]: theories/becoming/results/records/entropy-history-and-record.md
+[eventual-widening]: theories/becoming/results/records/eventual-widening.md
 [every-loss-passes-a-juncture]: theories/becoming/results/records/every-loss-passes-a-juncture.md
 [every-origin-passes-the-gate]: theories/becoming/results/records/every-origin-passes-the-gate.md
 [evolution-on-descent]: theories/becoming/results/records/evolution-on-descent.md

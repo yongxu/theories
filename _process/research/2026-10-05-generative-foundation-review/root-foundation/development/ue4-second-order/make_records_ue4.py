@@ -193,8 +193,8 @@ record = {
     'family': 'F07',
     'reviewed_at_utc': NOW,
     'statement': {
-        'en': 'Eventual widening, widening on every late tail, is first-order widening read on late tails: a strict partial order with widening that never reverses it and reads only tails, its verdicts dense both ways and insulable against every record, silent on a lag; keeping widening is a property widening does not keep; what carries a range is invisible to widening. Near-definitional; the second-order direction of 生生 stays open.',
-        'zh': '最终扩大即每个晚期尾段上的扩大，是在晚期尾段上读的一阶扩大：与扩大合为严格偏序，从不逆转扩大，只读尾段，其判定两向皆稠密、可对一切记录隔绝，对滞后不置一词；持续扩大是扩大所不保持的性质；承载一个范围者对扩大不可见。近乎定义；生生的二阶方向仍未定。'},
+        'en': "Eventual widening is first-order widening on late tails: with widening a strict partial order, never reversing it, reading only tails, dense both ways and insulable against every record. Widening sees neither keeping widening nor what carries a range. Near-definitional; 生生's second order stays open.",
+        'zh': '最终扩大是晚期尾段上的一阶扩大：与扩大合为严格偏序，从不逆转扩大，只读尾段，其判定两向皆稠密、可对一切记录隔绝。扩大既看不见持续扩大，也看不见承载一个范围者。近乎定义；生生的二阶方向仍未定。'},
     'laws': [{'en': en, 'zh': zh, 'declarations': ds} for en, zh, ds in groups],
     'hypotheses': [{
         'en': "No axiom and no premise beyond the representation: discrete steps on one unbounded index, natural-number "
@@ -259,13 +259,9 @@ record = {
               f'{len(names)} 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作独立只读审查，其所见皆采，修订复查，'
               f'见研究第 {N} 节；未经人审。'},
     'next_delta': {
-        'en': "The gain bridge (a range keeping widening on the actual levels, with requirements in a finite family, "
-              "passing every bound and fed from beyond) or the givers law (under upkeep, a range keeping widening needs "
-              "its givers to multiply), either a candidate for a result no neighbouring field states; the uniform form of "
-              "support passing on, which fixes the form of opened by the opened; widening of what can be reached, over "
-              "branching courses; review by a person.",
-        'zh': '增益之桥（于实有水平上持续扩大、需求在一有限族内的范围，超出一切界并由外而喂）或给予者之律（有维持时，持续扩大的范围需其给予者增多），'
-              '二者皆为邻域未述之结果的候选；支撑传递之一致形式，定由已开者所开之形式；对分支进程的可达之扩大；人之独立审查。'},
+        'en': 'The gain bridge (a range keeping widening on the actual levels, requirements in a finite family, passing every bound, fed from beyond) or the givers law (under upkeep, a range keeping widening needs its givers to multiply), each a candidate no neighbouring field states; the uniform form of support passing on; widening of what can be reached over branching courses; review by a person.',
+        'zh': '增益之桥（于实有水平上持续扩大、需求在一有限族内、超出一切界并由外而喂的范围）或给予者之律（有维持时，持续扩大的范围需其给予者增多），'
+              '二者皆为邻域未述之结果的候选；支撑传递之一致形式；对分支进程的可达之扩大；人之独立审查。'},
     'correspondence': {
         'en': "A tail criterion in inclusion form: a criterion reading only tails is a dictatorship of the future "
               "(Chichilnisky 1996, 'An axiomatic approach to sustainable development', Social Choice and Welfare 13); "

@@ -60,7 +60,7 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
   - Preserved conditions: None. [Horizon.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Horizon.lean)
 - related, not a proved adapter: [a-history-read-off-its-finite-stretches](a-history-read-off-its-finite-stretches.md). There the laws of ideals of any order, read on the histories of every process: this record's laws are derived there as the case of runs, adhering is the least closed class, and each step between refutable and closed classes is, asked of every process, exactly double-negation elimination.
 
-**Used by:** [a-history-read-off-its-finite-stretches](a-history-read-off-its-finite-stretches.md) · [what-a-finite-stretch-verifies](what-a-finite-stretch-verifies.md) · [what-a-method-comes-to-say-in-the-limit](what-a-method-comes-to-say-in-the-limit.md)
+**Used by:** [a-history-read-off-its-finite-stretches](a-history-read-off-its-finite-stretches.md) · [eventual-widening](eventual-widening.md) · [what-a-finite-stretch-verifies](what-a-finite-stretch-verifies.md) · [what-a-method-comes-to-say-in-the-limit](what-a-method-comes-to-say-in-the-limit.md)
 
 <a id="sources--来源"></a>
 ### Sources

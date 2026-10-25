@@ -596,6 +596,11 @@
    "base": "old-base",
    "note": "Entropy R5: history monotone, record"
   },
+  "eventual-widening": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "EventualWidening UE4: widening read on late tails, keeping widening, carriers invisible to widening"
+  },
   "every-loss-passes-a-juncture": {
    "region": "map",
    "base": "frame",
@@ -2537,6 +2542,16 @@
    "region": "map",
    "base": "old-base",
    "note": "level and configuration laws on web"
+  },
+  "Becoming.EventualWidening": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "UE4 eventual widening (widening on late tails) and keeping widening"
+  },
+  "Becoming.EventualWideningInstances": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "UE4 eventual widening's frame, listing and witnesses; what carries a widening"
   },
   "Becoming.Evolution": {
    "region": "life",

@@ -89,6 +89,8 @@ import Becoming.Admission
 import Becoming.Exclusion
 import Becoming.Exhaustion
 import Becoming.Regions
+import Becoming.EventualWidening
+import Becoming.EventualWideningInstances
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1189,6 +1191,34 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   it. Renewal over a region of conditions is renewal at the step when the region covers
   every condition the formation takes part in, keeps its own support when it covers what
   it requires, and over a region omitting a requirement can lose its own support.
+* `Becoming.EventualWidening` (L1): widening read on late tails, and keeping widening (no premise
+  beyond the representation). The web from a step on (`Web.after`) and a level path from it
+  (`Web.tailFrom`) give eventual widening, widening on every late tail (`Web.EventuallyWidens`):
+  first-order widening read on late tails, not a comparison of growth. Its order laws are
+  widening's (`Web.EventuallyWidens.irrefl`, `Web.EventuallyWidens.trans`); it never reverses
+  widening, and widening or eventual widening is transitive (`Web.Widens.not_eventually_reversed`,
+  `Web.WidensOrEventually.trans`); it reads only tails (`Web.EventuallyWidens.of_agree_left`). A
+  course keeps widening along a continuation where nothing admitted is lost and something keeps
+  being opened (`Web.KeepsWidening`): by name over a listed type none does
+  (`Web.KeepsWidening.not_listed`), and one that does eventually widens a range admitting alike on
+  what it admits at some step (`Web.KeepsWidening.eventually_widens_of_within`). Near-definitional.
+  A leaf: a tool, the long-run reading of widening, until a gain or giver law imports it (board
+  item UE4).
+* `Becoming.EventualWideningInstances` (L1): eventual widening's instances and witnesses, and what
+  carries a widening. Read on the sequences of levels, where some course eventually widens a second,
+  eventually widening it and its complement are dense (the first course varied, the second fixed),
+  so the verdict is neither verifiable nor refutable and a practice fixed by the record can keep it
+  against every record (`Web.eventually_neither`, `Web.eventually_insulated`, by
+  `insulates_iff_dense`); a course whose admissions are listed eventually widens nothing
+  (`Web.not_eventually_of_listed`). Witnesses: a burst wider at the first step is mixed with a
+  rising course that eventually widens it and keeps widening (`OwnCondition.disagreement`); a
+  saturated course widens the rising one and keeps widening from no step
+  (`OwnCondition.not_monotone`); a course keeping every formation of another from one step later is
+  mixed with it in every tail (`LagWitness.lag`). Opened by the opened, a provisional property of
+  what carries a range (`Flow.OpenedByOpened`): one range is carried by a relay of openings or by
+  one giver with every admission the same (`OpeningChain.carried`), a closed cycle is opened by the
+  opened with no widening (`ClosedCycle.cycle`), and ranking by it reverses widening
+  (`Saturated.reverses`). A leaf: an instance module and models (board item UE4).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

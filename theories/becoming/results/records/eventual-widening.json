@@ -1,0 +1,637 @@
+{
+  "schema_version": 2,
+  "id": "eventual-widening",
+  "title": {
+    "en": "Widening on late tails, and what carries a widening",
+    "zh": "在晚期尾段上读的扩大，以及承载扩大者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-25T15:28:33+00:00",
+  "statement": {
+    "en": "Eventual widening is first-order widening on late tails: with widening a strict partial order, never reversing it, reading only tails, dense both ways and insulable against every record. Widening sees neither keeping widening nor what carries a range. Near-definitional; 生生's second order stays open.",
+    "zh": "最终扩大是晚期尾段上的一阶扩大：与扩大合为严格偏序，从不逆转扩大，只读尾段，其判定两向皆稠密、可对一切记录隔绝。扩大既看不见持续扩大，也看不见承载一个范围者。近乎定义；生生的二阶方向仍未定。"
+  },
+  "laws": [
+    {
+      "en": "Eventual widening: one level path eventually widens another where, from some step on, it widens it on every tail, each read on the web from its first step (the web from a step on, as World.after reads a world). It is first-order widening read on late tails, not a comparison of growth. Read pointwise, it is inclusion from some step on with exceeding at arbitrarily late steps. Near-definitional.",
+      "zh": "最终扩大：一条水平路径从某步起在每个尾段上扩大另一条，各尾段读于自其首步起的网（自某步起的网，如 World.after 读世界）。它是在晚期尾段上读的一阶扩大，不是对增长的比较。逐点读之，即从某步起的包含加上在任意晚的步上的超出。近乎定义。",
+      "declarations": [
+        "Becoming.Web.after",
+        "Becoming.Web.tailFrom",
+        "Becoming.Web.EventuallyWidens",
+        "Becoming.Web.IncludesFrom",
+        "Becoming.Web.ExceedsLate",
+        "Becoming.Web.eventuallyWidens_iff",
+        "Becoming.Web.Includes.after",
+        "Becoming.Web.ExceedsLate.exceeds",
+        "Becoming.Web.Includes.not_exceedsLate"
+      ]
+    },
+    {
+      "en": "Its order laws are widening's on tails: irreflexive, transitive and one-way. It never reverses widening or keeping the same, inclusion composes with it on either side, and widening or eventual widening is irreflexive and transitive. Widening whose exceeding recurs at arbitrarily late steps is eventual widening; where widening orders a pair, eventual widening agrees there and, classically, is silent otherwise. Wider up to a step is the comparison over a first stretch.",
+      "zh": "其序律即尾段上扩大的序律：非自反、可传递、单向。它从不逆转扩大或保持相同，包含在两侧与之复合，扩大或最终扩大非自反且可传递。超出在任意晚的步上复现的扩大即最终扩大；扩大排序一对之处，最终扩大在彼处一致，经典地在其余处不置可否。截至某步更宽，是对首段的比较。",
+      "declarations": [
+        "Becoming.Web.EventuallyWidens.irrefl",
+        "Becoming.Web.EventuallyWidens.trans",
+        "Becoming.Web.EventuallyWidens.not_reverse",
+        "Becoming.Web.EventuallyWidens.not_included",
+        "Becoming.Web.Widens.not_eventually_reversed",
+        "Becoming.Web.Includes.trans_eventually",
+        "Becoming.Web.EventuallyWidens.trans_includes",
+        "Becoming.Web.WidensOrEventually",
+        "Becoming.Web.WidensOrEventually.irrefl",
+        "Becoming.Web.WidensOrEventually.trans",
+        "Becoming.Web.WidensWithoutEnd",
+        "Becoming.Web.WidensWithoutEnd.widens",
+        "Becoming.Web.WidensWithoutEnd.eventually",
+        "Becoming.Web.WidensUpTo"
+      ]
+    },
+    {
+      "en": "It reads only tails: level paths agreeing from some step on eventually widen, and are eventually widened, alike, so every finite stretch is ignored. A course admitting something at arbitrarily late steps eventually widens one that admits nothing from some step on.",
+      "zh": "它只读尾段：从某步起一致的水平路径，最终扩大与被最终扩大皆同，故每个有限段都被忽略。在任意晚的步上有所纳的进程，最终扩大从某步起一无所纳的进程。",
+      "declarations": [
+        "Becoming.Web.EventuallyWidens.of_agree_left",
+        "Becoming.Web.EventuallyWidens.of_agree_right",
+        "Becoming.Web.eventually_of_vanishing"
+      ]
+    },
+    {
+      "en": "Read on the runs of the process of all sequences of levels, where some level path eventually widens a second, eventually widening it and its complement are both dense, the first course varied and the second fixed; so the verdict is neither verifiable nor refutable, and a practice fixed by the record can keep it against every record. Instances of 03's density laws.",
+      "zh": "读于一切水平序列之过程的运行：某水平路径最终扩大第二条之处，最终扩大它与其补皆稠密（变第一进程，第二进程固定）；故此判定既不可证实亦不可证伪，依记录而定的实践可对一切记录保持它。为 03 稠密之律的实例。",
+      "declarations": [
+        "Becoming.Web.splice",
+        "Becoming.Web.splice_before",
+        "Becoming.Web.splice_from",
+        "Becoming.Web.eventually_dense",
+        "Becoming.Web.not_eventually_dense",
+        "Becoming.Web.eventually_neither",
+        "Becoming.Web.eventually_insulated"
+      ]
+    },
+    {
+      "en": "A level path whose admissions a list holds eventually widens nothing, so the weighting characterization of C, which needs both courses' admissions listed, is silent on eventual widening.",
+      "zh": "所纳被一列表所持的水平路径不最终扩大任何路径，故 C 的加权刻画（需两进程之所纳皆被列出）对最终扩大不置一词。",
+      "declarations": [
+        "Becoming.Web.stepBound",
+        "Becoming.Web.lt_stepBound",
+        "Becoming.Web.not_eventually_of_listed"
+      ]
+    },
+    {
+      "en": "Keeping widening: along a continuation, from a step on, nothing admitted is lost across any stretch and after every step something is admitted that continues nothing admitted then. It holds from every later step and is unchanged by every re-identification carrying the continuation. By name over a listed type no range keeps widening (the pigeonhole). A course keeping widening by name eventually widens a range that admits alike from some step on what it admits at some step, nothing lost giving the inclusion; with the inclusion given, keeping opening suffices.",
+      "zh": "持续扩大：沿一延续，从某步起任一段中所纳无失，且每步之后有所纳者不延续当时所纳的任何者。它自每一后步起皆成立，且不因承载该延续的任何重新识别而变。按名在列出的类型上，没有范围持续扩大（鸽笼）。按名持续扩大的进程，最终扩大一个从某步起一律同纳其于某步所纳者的范围，无失给出包含；包含既给，持续开出即足。",
+      "declarations": [
+        "Becoming.Web.IncludesAcrossFrom",
+        "Becoming.Web.KeepsOpening",
+        "Becoming.Web.KeepsWidening",
+        "Becoming.Web.AdmitsAlikeFrom",
+        "Becoming.Web.KeepsWidening.later",
+        "Becoming.Web.keepsWidening_reidentify",
+        "Becoming.Web.KeepsWidening.gathers",
+        "Becoming.Web.KeepsWidening.not_listed",
+        "Becoming.Web.KeepsOpening.eventually_widens",
+        "Becoming.Web.KeepsWidening.eventually_widens_of_within"
+      ]
+    },
+    {
+      "en": "What carries a widening, provisionally: a flow's range is opened by the opened from a step where gains of support recur and every later gain is given, on a condition the gainer requires before the step and that rises across it, by a supported formation taking part that itself gained support after that step, earlier. Where nothing is supported from some step on, no flow is opened by the opened. Provisional: its first law, the uniform form of support passing on, would reach the giver only up to double negation.",
+      "zh": "承载扩大者（暂定）：一流的范围从某步起由已开者所开，若支撑之获得复现，且其后每一获得，皆在获得者于该步之前所需、且跨步上升之条件上，由一参与的受支撑构成给予，而该构成本身在该步之后、更早时获得支撑。从某步起无一受支撑之处，无流由已开者所开。暂定：其第一律，即支撑传递之一致形式，只在双重否定下达到给予者。",
+      "declarations": [
+        "Becoming.Flow.OpenedByOpened",
+        "Becoming.Flow.OpenedByOpened.not_of_unsupported"
+      ]
+    },
+    {
+      "en": "Witnesses of the disagreement and of saturation (each formation requiring only its own condition at need one): a burst admitting formations 0 and 1 at step 0 and nothing after widens a rising course, admitting at step t the formations up to t, up to step 0; the two are mixed over every step; the rising course eventually widens the burst and keeps widening by name, the burst from no step. A saturated course widens and eventually widens the rising one and keeps widening from no step, so no order ranking each course that keeps widening above each that does not agrees with widening. On that web no flow is opened by the opened.",
+      "zh": "分歧与饱和之见证（每一构成只需其自身条件，需求为一）：于第 0 步纳构成 0 与 1、此后一无所纳的突发进程，至第 0 步扩大于第 t 步纳至 t 诸构成的上升进程；二者在全部步上为混合；上升进程最终扩大突发进程且按名持续扩大，突发进程自无一步起持续扩大。饱和进程扩大且最终扩大上升进程，而自无一步起持续扩大，故凡把每个持续扩大的进程排在每个不持续扩大者之上的序，皆不合于扩大。该网上无流由已开者所开。",
+      "declarations": [
+        "Becoming.OwnCondition.rung",
+        "Becoming.OwnCondition.rung_pos",
+        "Becoming.OwnCondition.le_of_rung_pos",
+        "Becoming.OwnCondition.rung_mono",
+        "Becoming.OwnCondition.rung_zero",
+        "Becoming.OwnCondition.web",
+        "Becoming.OwnCondition.admits_iff",
+        "Becoming.OwnCondition.rising",
+        "Becoming.OwnCondition.burst",
+        "Becoming.OwnCondition.full",
+        "Becoming.OwnCondition.rising_iff",
+        "Becoming.OwnCondition.burst_zero_iff",
+        "Becoming.OwnCondition.burst_later",
+        "Becoming.OwnCondition.full_admits",
+        "Becoming.OwnCondition.zero_of_le_zero",
+        "Becoming.OwnCondition.burst_widens_now",
+        "Becoming.OwnCondition.mixed",
+        "Becoming.OwnCondition.rising_eventually_widens_burst",
+        "Becoming.OwnCondition.rising_keeps_widening",
+        "Becoming.OwnCondition.burst_not_opening",
+        "Becoming.OwnCondition.burst_not_keeps_widening",
+        "Becoming.OwnCondition.disagreement",
+        "Becoming.OwnCondition.full_widens_rising",
+        "Becoming.OwnCondition.full_eventually_widens_rising",
+        "Becoming.OwnCondition.full_not_opening",
+        "Becoming.OwnCondition.not_monotone",
+        "Becoming.OwnCondition.not_opened"
+      ]
+    },
+    {
+      "en": "Witness of a lag: a course admitting only formation t at step t, and a course admitting the formations below t. The second keeps widening by name and admits, at every step after it, every formation the first admits; yet neither eventually widens the other: one-step novelties against a course keeping each of them forever are mixed in every tail.",
+      "zh": "滞后之见证：于第 t 步只纳构成 t 的进程，与纳小于 t 诸构成的进程。后者按名持续扩大，并于其后每步纳前者所纳的每一构成；然二者皆不最终扩大对方：一步之新，对永久保持其每一者的进程，在每个尾段上皆为混合。",
+      "declarations": [
+        "Becoming.LagWitness.travelling",
+        "Becoming.LagWitness.lagging",
+        "Becoming.LagWitness.lagging_iff",
+        "Becoming.LagWitness.travelling_iff",
+        "Becoming.LagWitness.lagging_keeps_widening",
+        "Becoming.LagWitness.kept_later",
+        "Becoming.LagWitness.not_eventually_lagging",
+        "Becoming.LagWitness.not_eventually_travelling",
+        "Becoming.LagWitness.lag"
+      ]
+    },
+    {
+      "en": "Witness of a merge: over the two formations of Bool, along the continuation in which every formation continues as false, a course admitting the same at every step keeps widening, a formation re-formed at each step continuing nothing; by name it does not.",
+      "zh": "合并之见证：于 Bool 的两个构成上，沿每一构成皆延续为 false 的延续，每步所纳相同的进程持续扩大，每步重新形成的构成不延续任何者；按名则不然。",
+      "declarations": [
+        "Becoming.MergedWitness.web",
+        "Becoming.MergedWitness.merge",
+        "Becoming.MergedWitness.steady",
+        "Becoming.MergedWitness.admits",
+        "Becoming.MergedWitness.into_true_aux",
+        "Becoming.MergedWitness.into_true",
+        "Becoming.MergedWitness.to_false",
+        "Becoming.MergedWitness.keeps_widening_along_merge",
+        "Becoming.MergedWitness.listed",
+        "Becoming.MergedWitness.not_keeps_widening_by_name"
+      ]
+    },
+    {
+      "en": "Witness of one range with two carriers: on one web whose levels are the rising course, a relay, in which each formation gives the next its unit, and a single giver both balance with only active formations giving and activity needing support; the relay's range is opened by the opened and the single giver's is not, while every admission is the same. Each unit is given from nothing, so neither flow meets the first law.",
+      "zh": "一个范围两种承载者之见证：于水平即上升进程的同一网上，接力（每一构成给下一构成其单位）与单一给予者皆平衡，只有活跃者给予，活跃需支撑；接力的范围由已开者所开，单一给予者则否，而每一所纳皆同。每一单位皆从无中给予，故二流皆不合第一律。",
+      "declarations": [
+        "Becoming.OpeningChain.web",
+        "Becoming.OpeningChain.level_rising",
+        "Becoming.OpeningChain.supported_iff",
+        "Becoming.OpeningChain.gains_iff",
+        "Becoming.OpeningChain.rises_next",
+        "Becoming.OpeningChain.opening",
+        "Becoming.OpeningChain.opening_pos",
+        "Becoming.OpeningChain.relay",
+        "Becoming.OpeningChain.oneGiver",
+        "Becoming.OpeningChain.balanced_step",
+        "Becoming.OpeningChain.relay_balances",
+        "Becoming.OpeningChain.oneGiver_balances",
+        "Becoming.OpeningChain.relay_acting",
+        "Becoming.OpeningChain.oneGiver_acting",
+        "Becoming.OpeningChain.dependent",
+        "Becoming.OpeningChain.relay_opened",
+        "Becoming.OpeningChain.oneGiver_not_opened",
+        "Becoming.OpeningChain.carried"
+      ]
+    },
+    {
+      "en": "Witness that ranking by opened by the opened reverses widening: the relay is opened by the opened and its levels are the rising course; a flow giving nothing, on a web where every condition stands at one throughout, is opened by the opened from no step, and its levels, the saturated course, widen the rising one on the same requirements.",
+      "zh": "按由已开者所开排序会逆转扩大之见证：接力由已开者所开，其水平即上升进程；于每一条件始终立于一的网上一无所给的流，自无一步起由已开者所开，其水平即饱和进程，在同样的需求上扩大上升进程。",
+      "declarations": [
+        "Becoming.Saturated.web",
+        "Becoming.Saturated.still",
+        "Becoming.Saturated.level_full",
+        "Becoming.Saturated.still_balances",
+        "Becoming.Saturated.still_not_opened",
+        "Becoming.Saturated.reverses"
+      ]
+    },
+    {
+      "en": "Witness of a closed cycle: two formations pass one unit around, the active one taking it from its own condition and giving it to the other's; the cycle balances, is opened by the opened with a gain at every step, and along the continuation in which each formation continues as the other nothing is lost and nothing is opened, while by name the range does not keep widening. Opened by the opened neither is nor gives widening.",
+      "zh": "闭环之见证：两个构成传递一个单位，活跃者自其自身条件取之而给对方条件；此环平衡，每步皆有获得而由已开者所开；沿每一构成皆延续为对方的延续，无所失亦无所开，而按名范围不持续扩大。由已开者所开既不是扩大，也不给出扩大。",
+      "declarations": [
+        "Becoming.ClosedCycle.parity",
+        "Becoming.ClosedCycle.mark",
+        "Becoming.ClosedCycle.mark_pos_iff",
+        "Becoming.ClosedCycle.mark_self",
+        "Becoming.ClosedCycle.mark_not_left",
+        "Becoming.ClosedCycle.not_ne",
+        "Becoming.ClosedCycle.web",
+        "Becoming.ClosedCycle.flow",
+        "Becoming.ClosedCycle.supported_iff",
+        "Becoming.ClosedCycle.gains_iff",
+        "Becoming.ClosedCycle.balances",
+        "Becoming.ClosedCycle.acting",
+        "Becoming.ClosedCycle.dependent",
+        "Becoming.ClosedCycle.rises_at",
+        "Becoming.ClosedCycle.give_pos",
+        "Becoming.ClosedCycle.opened",
+        "Becoming.ClosedCycle.passing",
+        "Becoming.ClosedCycle.linked_parity",
+        "Becoming.ClosedCycle.linked_to",
+        "Becoming.ClosedCycle.includes_across",
+        "Becoming.ClosedCycle.not_opening",
+        "Becoming.ClosedCycle.listed",
+        "Becoming.ClosedCycle.not_keeps_widening_by_name",
+        "Becoming.ClosedCycle.cycle"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond the representation: discrete steps on one unbounded index, natural-number levels, and one web for the two level paths compared (its requirements read on each tail by the web from that step). The frame laws hold where some level path eventually widens the second course, and vary the first course only. Keeping widening reads a supplied continuation, or names. The carrier witnesses balance, with only active formations giving and activity needing support, and give from nothing.",
+      "zh": "不加公理，除表示外不加前提：一条无界指标上的离散之步、自然数水平、所比较的两条水平路径共用一网（其需求在每个尾段上由自该步起的网读出）。框架之律在某水平路径最终扩大第二进程之处成立，只变第一进程。持续扩大读一给定的延续，或按名。承载者之见证平衡，只有活跃者给予，活跃需支撑，且从无中给予。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The second-order direction of 生生, a range whose widening keeps widening compared with one merely wider now: eventual widening needs no growth (a steady course eventually widens one that collapses) and is silent on a lag. It stays open, and the study names what a next attempt needs.",
+      "zh": "生生的二阶方向，即扩大持续扩大的范围与仅当下更宽者之比较：最终扩大无需增长（稳定的进程最终扩大崩溃者），且对滞后不置一词。它仍未定，研究列出下一次尝试所需。",
+      "kind": "scope"
+    },
+    {
+      "en": "That eventual widening is better: calling it better is a premise beyond C (C∞ in the study), named and not asserted. It would discount every loss confined to a finite stretch, its verdicts can be insulated against every record, and it is the unlimited continuation priority that the priority of basic conditions rejects.",
+      "zh": "最终扩大更好：称其更好是 C 之外的前提（研究中的 C∞），已命名而未断言。它会贬低一切限于有限段的损失，其判定可对一切记录隔绝，且即基本条件优先所拒的无限延续优先。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That keeping widening or being opened by the opened is 生生, a direction or a ranking: ranking by either runs against widening (OwnCondition.not_monotone, Saturated.reverses).",
+      "zh": "持续扩大或由已开者所开即生生、方向或排序：按二者之一排序皆与扩大相悖（OwnCondition.not_monotone、Saturated.reverses）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A law relating 生成 to widening (02 stays open), or any gain, renewal or giver law; comparisons over branching courses; novelty; and that eventual widening entails overtaking as a theorem, which is an argument under finitely many admissions at each step.",
+      "zh": "关于生成与扩大的律（02 仍未定），或任何增益、更新或给予者之律；对分支进程的比较；新颖；以及最终扩大蕴涵超越作为定理，那只是在每步所纳有限下的论证。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which actual courses meet any of these readings; and the definition of opened by the opened is provisional until its first law fixes its form.",
+      "zh": "哪些实有进程合于这些读法；由已开者所开之定义在其第一律定其形式之前为暂定。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean",
+      "detail": {
+        "en": "A lag defeats eventual widening: a course keeping widening, and keeping every formation of another from one step later, is mixed with it in every tail (LagWitness.lag).",
+        "zh": "滞后挫败最终扩大：持续扩大、且自晚一步起保持另一进程每一构成的进程，与之在每个尾段上皆为混合（LagWitness.lag）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean",
+      "detail": {
+        "en": "Keeping widening is not kept by widening: a saturated course widens a course that keeps widening and keeps widening from no step (OwnCondition.not_monotone).",
+        "zh": "持续扩大不为扩大所保持：饱和进程扩大一持续扩大的进程，而自无一步起持续扩大（OwnCondition.not_monotone）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean",
+      "detail": {
+        "en": "What carries a range is invisible to widening: a relay and a single giver give the same admissions, only the relay opened by the opened (OpeningChain.carried); a closed cycle is opened by the opened with no widening (ClosedCycle.cycle).",
+        "zh": "承载一个范围者对扩大不可见：接力与单一给予者给出相同的所纳，唯接力由已开者所开（OpeningChain.carried）；闭环由已开者所开而无扩大（ClosedCycle.cycle）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T152131.281884Z): Becoming.EventualWidening and Becoming.EventualWideningInstances, 142 declarations, every one with an empty axiom report, all cited here. Built in one session; an independent read-only review by a separate AI agent, its findings taken and the revision re-checked, in study section 410; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T152131.281884Z）：Becoming.EventualWidening 与 Becoming.EventualWideningInstances，142 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作独立只读审查，其所见皆采，修订复查，见研究第 410 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "The gain bridge (a range keeping widening on the actual levels, requirements in a finite family, passing every bound, fed from beyond) or the givers law (under upkeep, a range keeping widening needs its givers to multiply), each a candidate no neighbouring field states; the uniform form of support passing on; widening of what can be reached over branching courses; review by a person.",
+    "zh": "增益之桥（于实有水平上持续扩大、需求在一有限族内、超出一切界并由外而喂的范围）或给予者之律（有维持时，持续扩大的范围需其给予者增多），二者皆为邻域未述之结果的候选；支撑传递之一致形式；对分支进程的可达之扩大；人之独立审查。"
+  },
+  "correspondence": {
+    "en": "A tail criterion in inclusion form: a criterion reading only tails is a dictatorship of the future (Chichilnisky 1996, 'An axiomatic approach to sustainable development', Social Choice and Welfare 13); on counts, with finitely many admissions at each step, eventual widening entails the overtaking criterion (von Weizsäcker 1965; Gale 1967), an argument not proved in Lean. The density of its verdicts is liveness in the sense of Alpern and Schneider (1985, 'Defining liveness', Information Processing Letters 21). The question it answers in part is THE-CORE's: a range whose widening keeps widening against one merely wider now, whose nearest neighbour is Kauffman's adjacent possible (Investigations, 2000). The readings are the AI's, stated in development/ue4-second-order/DESIGN.md with the review in REVIEW-UE4.md.",
+    "zh": "包含形式的尾段准则：只读尾段的准则是未来的独裁（Chichilnisky 1996）；于计数上、每步所纳有限时，最终扩大蕴涵超越准则（von Weizsäcker 1965；Gale 1967），此为论证，未在 Lean 中证明。其判定之稠密即 Alpern 与 Schneider（1985）意义上的活性。它部分回答的问题是 THE-CORE 的：扩大持续扩大的范围与仅当下更宽者之比较，其最近之邻为 Kauffman 的相邻可能（2000）。读法皆 AI 之读，载于 development/ue4-second-order/DESIGN.md，审查见 REVIEW-UE4.md。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+  "aliases": [
+    "Widening on late tails, and what carries a widening",
+    "在晚期尾段上读的扩大，以及承载扩大者",
+    "eventual widening",
+    "keeping widening",
+    "opened by the opened",
+    "widening on late tails",
+    "Becoming.Web.EventuallyWidens",
+    "Becoming.Web.KeepsWidening"
+  ],
+  "dependencies": [
+    {
+      "id": "four-cases-of-a-part",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.Admits, Web.Includes, Web.Exceeds, Web.Widens, Web.Mixed; Widens.not_reverse, Widens.trans, Includes.trans, Includes.not_exceeded, from which the order laws on tails are derived.",
+        "zh": "Web.Admits、Web.Includes、Web.Exceeds、Web.Widens、Web.Mixed；Widens.not_reverse、Widens.trans、Includes.trans、Includes.not_exceeded，尾段上的序律由之推出。"
+      }
+    },
+    {
+      "id": "widening-along-a-reading",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.IncludesAcross, Web.ExceedsAcross, includesAcross_itself_iff, exceedsAcross_itself_iff, includesAcross_reidentify, exceedsAcross_reidentify, Web.Linked.itself_of_le.",
+        "zh": "Web.IncludesAcross、Web.ExceedsAcross、includesAcross_itself_iff、exceedsAcross_itself_iff、includesAcross_reidentify、exceedsAcross_reidentify、Web.Linked.itself_of_le。"
+      }
+    },
+    {
+      "id": "classes-along-a-continuation",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.Linked, Web.itself, Web.exists_steps_between, Reidentify.carry.",
+        "zh": "Web.Linked、Web.itself、Web.exists_steps_between、Reidentify.carry。"
+      }
+    },
+    {
+      "id": "what-a-finite-stretch-verifies",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Dense, Practice, ByRecord, Insulates, insulates_iff_dense.",
+        "zh": "Dense、Practice、ByRecord、Insulates、insulates_iff_dense。"
+      }
+    },
+    {
+      "id": "what-a-finite-history-refutes",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Verifiable, Refutable, Adheres, not_verifiable_of_adheres, not_refutable_of_adheres; Sequences.process, Sequences.run, Sequences.agree_iff.",
+        "zh": "Verifiable、Refutable、Adheres、not_verifiable_of_adheres、not_refutable_of_adheres；Sequences.process、Sequences.run、Sequences.agree_iff。"
+      }
+    },
+    {
+      "id": "widening-as-what-every-weighting-ranks",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.ListsAdmitted, the hypothesis of Web.widens_iff_every_weighting.",
+        "zh": "Web.ListsAdmitted，即 Web.widens_iff_every_weighting 之假设。"
+      }
+    },
+    {
+      "id": "support-from-the-supported",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.GainsSupport and Web.Supported, the vocabulary of opened by the opened.",
+        "zh": "Web.GainsSupport 与 Web.Supported，由已开者所开之词汇。"
+      }
+    },
+    {
+      "id": "more-needs-renewers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "length_le_of_sub and Distinct, the pigeonhole of KeepsWidening.not_listed.",
+        "zh": "length_le_of_sub 与 Distinct，KeepsWidening.not_listed 之鸽笼。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "support-passed-on",
+      "detail": {
+        "en": "Flow.support_passes_on gives, up to double negation and at arbitrarily late steps, a gain given by a newer gainer; its uniform form, proposed, would fix the form of opened by the opened.",
+        "zh": "Flow.support_passes_on 在双重否定下、于任意晚的步上给出由更新的获得者给予之获得；其一致形式（所拟）将定由已开者所开之形式。"
+      }
+    },
+    {
+      "id": "renewing-consuming-formation",
+      "detail": {
+        "en": "A comparison in the long run in counts, under a supplied wear law: consuming forms more at first, renewing more past a bound.",
+        "zh": "在计数中、于给定磨损律下的长程比较：消耗者起初形成更多，更新者过界后更多。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.AdmitsAlikeFrom",
+        "Becoming.Web.EventuallyWidens",
+        "Becoming.Web.EventuallyWidens.irrefl",
+        "Becoming.Web.EventuallyWidens.not_included",
+        "Becoming.Web.EventuallyWidens.not_reverse",
+        "Becoming.Web.EventuallyWidens.of_agree_left",
+        "Becoming.Web.EventuallyWidens.of_agree_right",
+        "Becoming.Web.EventuallyWidens.trans",
+        "Becoming.Web.EventuallyWidens.trans_includes",
+        "Becoming.Web.ExceedsLate",
+        "Becoming.Web.ExceedsLate.exceeds",
+        "Becoming.Web.Includes.after",
+        "Becoming.Web.Includes.not_exceedsLate",
+        "Becoming.Web.Includes.trans_eventually",
+        "Becoming.Web.IncludesAcrossFrom",
+        "Becoming.Web.IncludesFrom",
+        "Becoming.Web.KeepsOpening",
+        "Becoming.Web.KeepsOpening.eventually_widens",
+        "Becoming.Web.KeepsWidening",
+        "Becoming.Web.KeepsWidening.eventually_widens_of_within",
+        "Becoming.Web.KeepsWidening.gathers",
+        "Becoming.Web.KeepsWidening.later",
+        "Becoming.Web.KeepsWidening.not_listed",
+        "Becoming.Web.Widens.not_eventually_reversed",
+        "Becoming.Web.WidensOrEventually",
+        "Becoming.Web.WidensOrEventually.irrefl",
+        "Becoming.Web.WidensOrEventually.trans",
+        "Becoming.Web.WidensUpTo",
+        "Becoming.Web.WidensWithoutEnd",
+        "Becoming.Web.WidensWithoutEnd.eventually",
+        "Becoming.Web.WidensWithoutEnd.widens",
+        "Becoming.Web.after",
+        "Becoming.Web.eventuallyWidens_iff",
+        "Becoming.Web.eventually_of_vanishing",
+        "Becoming.Web.keepsWidening_reidentify",
+        "Becoming.Web.tailFrom"
+      ],
+      "sha256": "f2e6ee1758c511708da0051023a3d9a7dea1aa17044e767938d23b7891c408cb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ClosedCycle.acting",
+        "Becoming.ClosedCycle.balances",
+        "Becoming.ClosedCycle.cycle",
+        "Becoming.ClosedCycle.dependent",
+        "Becoming.ClosedCycle.flow",
+        "Becoming.ClosedCycle.gains_iff",
+        "Becoming.ClosedCycle.give_pos",
+        "Becoming.ClosedCycle.includes_across",
+        "Becoming.ClosedCycle.linked_parity",
+        "Becoming.ClosedCycle.linked_to",
+        "Becoming.ClosedCycle.listed",
+        "Becoming.ClosedCycle.mark",
+        "Becoming.ClosedCycle.mark_not_left",
+        "Becoming.ClosedCycle.mark_pos_iff",
+        "Becoming.ClosedCycle.mark_self",
+        "Becoming.ClosedCycle.not_keeps_widening_by_name",
+        "Becoming.ClosedCycle.not_ne",
+        "Becoming.ClosedCycle.not_opening",
+        "Becoming.ClosedCycle.opened",
+        "Becoming.ClosedCycle.parity",
+        "Becoming.ClosedCycle.passing",
+        "Becoming.ClosedCycle.rises_at",
+        "Becoming.ClosedCycle.supported_iff",
+        "Becoming.ClosedCycle.web",
+        "Becoming.Flow.OpenedByOpened",
+        "Becoming.Flow.OpenedByOpened.not_of_unsupported",
+        "Becoming.LagWitness.kept_later",
+        "Becoming.LagWitness.lag",
+        "Becoming.LagWitness.lagging",
+        "Becoming.LagWitness.lagging_iff",
+        "Becoming.LagWitness.lagging_keeps_widening",
+        "Becoming.LagWitness.not_eventually_lagging",
+        "Becoming.LagWitness.not_eventually_travelling",
+        "Becoming.LagWitness.travelling",
+        "Becoming.LagWitness.travelling_iff",
+        "Becoming.MergedWitness.admits",
+        "Becoming.MergedWitness.into_true",
+        "Becoming.MergedWitness.into_true_aux",
+        "Becoming.MergedWitness.keeps_widening_along_merge",
+        "Becoming.MergedWitness.listed",
+        "Becoming.MergedWitness.merge",
+        "Becoming.MergedWitness.not_keeps_widening_by_name",
+        "Becoming.MergedWitness.steady",
+        "Becoming.MergedWitness.to_false",
+        "Becoming.MergedWitness.web",
+        "Becoming.OpeningChain.balanced_step",
+        "Becoming.OpeningChain.carried",
+        "Becoming.OpeningChain.dependent",
+        "Becoming.OpeningChain.gains_iff",
+        "Becoming.OpeningChain.level_rising",
+        "Becoming.OpeningChain.oneGiver",
+        "Becoming.OpeningChain.oneGiver_acting",
+        "Becoming.OpeningChain.oneGiver_balances",
+        "Becoming.OpeningChain.oneGiver_not_opened",
+        "Becoming.OpeningChain.opening",
+        "Becoming.OpeningChain.opening_pos",
+        "Becoming.OpeningChain.relay",
+        "Becoming.OpeningChain.relay_acting",
+        "Becoming.OpeningChain.relay_balances",
+        "Becoming.OpeningChain.relay_opened",
+        "Becoming.OpeningChain.rises_next",
+        "Becoming.OpeningChain.supported_iff",
+        "Becoming.OpeningChain.web",
+        "Becoming.OwnCondition.admits_iff",
+        "Becoming.OwnCondition.burst",
+        "Becoming.OwnCondition.burst_later",
+        "Becoming.OwnCondition.burst_not_keeps_widening",
+        "Becoming.OwnCondition.burst_not_opening",
+        "Becoming.OwnCondition.burst_widens_now",
+        "Becoming.OwnCondition.burst_zero_iff",
+        "Becoming.OwnCondition.disagreement",
+        "Becoming.OwnCondition.full",
+        "Becoming.OwnCondition.full_admits",
+        "Becoming.OwnCondition.full_eventually_widens_rising",
+        "Becoming.OwnCondition.full_not_opening",
+        "Becoming.OwnCondition.full_widens_rising",
+        "Becoming.OwnCondition.le_of_rung_pos",
+        "Becoming.OwnCondition.mixed",
+        "Becoming.OwnCondition.not_monotone",
+        "Becoming.OwnCondition.not_opened",
+        "Becoming.OwnCondition.rising",
+        "Becoming.OwnCondition.rising_eventually_widens_burst",
+        "Becoming.OwnCondition.rising_iff",
+        "Becoming.OwnCondition.rising_keeps_widening",
+        "Becoming.OwnCondition.rung",
+        "Becoming.OwnCondition.rung_mono",
+        "Becoming.OwnCondition.rung_pos",
+        "Becoming.OwnCondition.rung_zero",
+        "Becoming.OwnCondition.web",
+        "Becoming.OwnCondition.zero_of_le_zero",
+        "Becoming.Saturated.level_full",
+        "Becoming.Saturated.reverses",
+        "Becoming.Saturated.still",
+        "Becoming.Saturated.still_balances",
+        "Becoming.Saturated.still_not_opened",
+        "Becoming.Saturated.web",
+        "Becoming.Web.eventually_dense",
+        "Becoming.Web.eventually_insulated",
+        "Becoming.Web.eventually_neither",
+        "Becoming.Web.lt_stepBound",
+        "Becoming.Web.not_eventually_dense",
+        "Becoming.Web.not_eventually_of_listed",
+        "Becoming.Web.splice",
+        "Becoming.Web.splice_before",
+        "Becoming.Web.splice_from",
+        "Becoming.Web.stepBound"
+      ],
+      "sha256": "be434fea82139e2019c06e382d45db5d9f473d8258ac2e9d0e1f0609aafcc95a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "role": "proof",
+      "sha256": "a360bf56d40bb977b686bd8756651357f995c5133d22cdd231ed79a71dc5899b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+      "role": "proof",
+      "sha256": "dce4cb423a51e73dd7746368da1c55c5687d7abe34bfefbdd1d5e3fda99fc1ee"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Verification.lean",
+      "role": "proof",
+      "sha256": "cab47ad5e7f430ba120bb22eb345cd3b0e0c519dea025ab050356865801277c2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Horizon.lean",
+      "role": "proof",
+      "sha256": "12a357aa3b8ea6aad625f599fabf7dc64a4fc4b0058173747488e916e9f17f0b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "role": "proof",
+      "sha256": "33d6ec243eec01782ba8fd9a27ed31ab63f1ad4e5a4a0d90b81ffccaafa8626b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "sha256": "6d97f6b26e6396b6ea64fae3f46c0fa7b6bc10d359ff3be3dea5213e683303e1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T152131.281884Z/verification.json",
+      "role": "receipt",
+      "sha256": "3b11ff66fbd3cc8ab93cc96ad89c2484aaa4e3f7f52929282f759e85dc2cfd1c"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f69b433ec466b643039a220cc39ccf98b6444d79cad00c4006046c81567d6664"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/DESIGN.md",
+      "role": "integration",
+      "sha256": "f1987d762968b9bd9091594b085c9170660c2f407252d048b29cfa231ff47544"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "b3622b32b929e0b60906a9de7aa40001e563e9cf3caa2373589dffda90f663b9"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T152131.281884Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.EventualWidening",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T152131.281884Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.EventualWideningInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "25 October 2026: added (UE4), widening on late tails and what carries a widening, near-definitional; the second-order direction of 生生 stays open; study section 410.",
+      "zh": "2026年10月25日：新增（UE4），在晚期尾段上读的扩大与承载扩大者，近乎定义；生生的二阶方向仍未定；研究第 410 节。"
+    }
+  ]
+}
