@@ -14,9 +14,9 @@ It proves a small set of laws about this on discrete models, and none of them us
 - A rule read monotonically from the share it selects locks, where every rule it reads favours the carriers.
 - At a step, the capacity to shape that rule is not selected against exactly where what comes back to the shapers alone covers its cost. It is selected exactly where what comes back exceeds the cost.
 
-It then reads these for alignment. Humans, institutions and AI systems select together, so the unit to align is that joint selection, not one system and its principal. Tests on trained systems are few, and their results are mixed (A-18).
+It then reads these for alignment. Humans, institutions and AI systems select together, so the unit to align is that joint selection, not one system and its principal. Tests on trained systems are few, and their results are mixed (A-18, A-19).
 
-**How long it takes.** Reading takes about two hours; a reply on every item, a day or more. Any item can be answered alone. If you have one hour, read [A-02](#a-02), [A-07](#a-07), [A-10](#a-10), [A-12](#a-12), [A-14](#a-14) and [A-18](#a-18): the drain beyond what is read, the lock, the selection for control, the two readings an alignment researcher is best placed to judge, and the evidence.
+**How long it takes.** Reading takes about two hours; a reply on every item, a day or more. Any item can be answered alone. If you have one hour, read [A-02](#a-02), [A-07](#a-07), [A-10](#a-10), [A-12](#a-12), [A-14](#a-14), [A-18](#a-18) and [A-19](#a-19): the drain beyond what is read, the lock, the selection for control, the two readings an alignment researcher is best placed to judge, and the evidence.
 
 **How it was made.** Everything in the theory was made with AI: the Lean proofs, the chapters, the readings, the tests and this dossier. No human has reviewed any of it.
 - A script copied the Lean statements from the source files ([`lean_statements.py`](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rp2-philosophy/lean_statements.py)).
@@ -250,6 +250,7 @@ File: `Becoming/ClosedCapture.lean`.
 - Quote [theories/becoming/results/records/readers-drawn-from-the-selected.md]: "so the premise is moved to who reads, not removed".
 - Readers of one kind are assumed to read alike, and the pool's readings are summed unnormalized (the record).
 - [this dossier, AI] "In time" here is set by the counts, not by a clock. Whether real oversight has such a threshold is open.
+- In LA2's run (A-19), the one trained system tested did not read as this pool: one note of the loss among nine readers turned its reading, so Quote [experiments/self-rewarding-lock/README.md]: "MA2's timing law does not apply to it."
 
 **Questions.**
 1. Does the result say anything that a model of shifting electorates or shareholder majorities does not?
@@ -469,29 +470,36 @@ Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Neither is asserted. The
 2. How much should LA1's locked-side failures count, given the frozen reading and the post hoc power analysis?
 
 <a id="a-19"></a>
-### A-19 Tests frozen and not yet run
+### A-19 The tests of 25 and 26 October: LA2 and LA3
 
-**Meaning.** Two tests on Claude Haiku are frozen: their predictions, verdict rules, exact values and code were committed before any model call. Each has a power check, so that each verdict claims only a difference its simulated feedback resolves.
+**Meaning.** Two tests on Claude Haiku were frozen before any model call: their predictions, verdict rules, exact values and code were committed first. Each has a power check, so that each verdict claims only a difference its simulated feedback resolves. Both were run from their frozen commits on 25 and 26 October 2026.
 
 - **LA2, a lock in a self-rewarding loop** ([experiment](../../../experiments/self-rewarding-lock/README.md), frozen at `36c8b79cb`).
   - A judge picks among the model's answers, and its reading is formed from its own earlier picks. A loss is attached that, by condition, Quote [experiments/self-rewarding-lock/README.md]: "is read by nobody, by the readers the selection disfavours, or by every reader".
   - It tests T7 (A-08, A-09) through its bridge: Quote [experiments/self-rewarding-lock/PREDICTIONS-2026-10-25.md]: "H1-LA2 is T7's conjecture for this system, and the verdicts are its test."
   - Every test takes the call as its unit. Each failed condition carries a label, fixed before the run, saying whether its readings resolve the failure.
+  - **The verdicts.** Quote [experiments/self-rewarding-lock/README.md]: "No frozen verdict failed: every condition went as predicted in 5 of 5 seeds, L1 to L4 passed, and both reported measures were resolved."
+  - **The bridge failed.** Where 8 of the judge's 9 readers were list answers and one prose answer carried a note of the loss, Quote [experiments/self-rewarding-lock/README.md]: "it chose prose in all 50 picks of `late`'s first reading, in all five seeds." Without the note it chose lists in all 60 picks at those counts. So Quote [experiments/self-rewarding-lock/README.md]: "H1-LA2 as stated fails for this judge, T7's third forbidden case occurs in this system, and MA2's timing law does not apply to it."
+  - **A pass by a tie.** The late condition's seeds count as kept, but its course did not lock: Quote [experiments/self-rewarding-lock/README.md]: "From step 4 it alternated between 32/33 and 32/43, and its share at step 8 equalled its share at step 4 exactly."
+  - **What held.** Quote [experiments/self-rewarding-lock/README.md]: "In `unread` the course locked at its first reading and stayed locked at every step, while the unread loss grew to 45 by step 8." Read by every reader, the loss turned the course and kept it turned.
 - **LA3, what comes back decides the sign** ([experiment](../../../experiments/shaping-what-comes-back/README.md), frozen at `b3a6b7b66`).
   - An agent chooses between shaping and not shaping its evaluator, with what shaping returns kept or shared.
   - It cannot refute A-10: Quote [experiments/shaping-what-comes-back/PREDICTIONS-2026-10-25.md]: "So the test cannot refute MA3."
   - Quote [experiments/shaping-what-comes-back/README.md]: "The test asks whether a trained system selecting in context is a selection through what comes back to it alone, not whether the laws hold."
+  - Its run was still under way when LA2's verdicts were added here; its verdicts are added when it ends.
 
-**Standing and use.** Frozen and not run. Their model usage, at most 156 and 180 calls, waits for approval. The method chapter's table of theses gives T7's evidence as Quote [theories/becoming/chapters/08-METHOD.md]: "LA2, a lock in a self-rewarding loop in one trained system, frozen at `36c8b79cb`, not yet run".
+**Standing and use.** LA2's frozen verdicts all passed, and its bridge, T7's conjecture for this system, failed on who reads. The method chapter's table of theses gives T7's evidence as Quote [theories/becoming/chapters/08-METHOD.md]: "every frozen verdict passed and the bridge failed, one note of the loss among nine readers turning the judge, so 02's third forbidden case occurs".
 
 **Known weaknesses.**
-- For LA2: Quote [experiments/self-rewarding-lock/README.md]: "A judge on which the reviewers' notes have no effect would also pass every contrast." Its frozen rules say what more a pass supports.
-- [this dossier, AI] Both run on one small model called through a command-line interface, at small scale. A positive result would support the mechanism in that setting only.
+- For LA2, the frozen rule for a kept seed reads the share only at the end, and an exact alternation passed it. The README reports this first, beside the frozen verdicts.
+- For LA2, one frozen rule of what a pass supports printed a reading that its one-note measure contradicts: Quote [experiments/self-rewarding-lock/README.md]: "both show the opposite, so it is not claimed here."
+- [this dossier, AI] LA2's judge answered 112 of its 119 calls with all ten picks for one format. The power check's scripted judges varied their picks from call to call, so it did not foresee an exact return of the share.
+- [this dossier, AI] Both run on one small model, called through a command-line interface, at small scale, and the judge reads in context: formation by training is untested.
 
 **Questions.**
-1. Does LA2's design tell T7 apart from its rival accounts (listed in its predictions file)? Current self-rewarding training reads its outputs in ways the model does not cover: graded scores, many rounds, a changing judge.
-2. Where in actual AI development is the return of shaping an evaluator kept, and where is it shared?
-
+1. LA2's judge turned on any reading of the loss in its context, one note among nine readers included. Is that a property of reading in context, which training on a model's own selections might remove, or of this model?
+2. Current self-rewarding training reads its outputs in ways LA2 does not cover: graded scores, many rounds, a changing judge. Which of these would the result survive?
+3. Where in actual AI development is the return of shaping an evaluator kept, and where is it shared?
 ---
 
 ## Response form
@@ -518,7 +526,7 @@ For each item give one verdict: **accept** (the item is correctly described, cre
 | [A-16](#a-16) Two premises, two roles | | |
 | [A-17](#a-17) The conditional direction | | |
 | [A-18](#a-18) The tests so far | | |
-| [A-19](#a-19) Tests frozen and not yet run | | |
+| [A-19](#a-19) The tests of 25 and 26 October: LA2 and LA3 | | |
 
 **General.** What would an alignment researcher add or object to, beyond the items? Is any known result restated without credit? Is the joint selection the right unit to align?
 
