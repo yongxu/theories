@@ -59,3 +59,10 @@ The result feeds:
 - 07 §6's readings (AJ2's owner);
 - AJ4's dossier;
 - T7.
+
+## 7. What the draft states (26 October 2026)
+
+`Becoming.ReadInTime` in the kit's tree, built in scratch: 25 theorems in 31 declarations, every axiom report empty (`scratch.log`). Against the design:
+- Statements 1 to 6 and 8 are as designed: `kept_iff`, `turned_iff`, `early`, `closed_kept`, `least`, `least_iff`, `closed_for_every`, and the witness `Window.in_time`, `Window.too_late`, `Window.late_kept`.
+- Statement 7 is proved in the core, not left open: `deadline`, with the bound `g.other * c * x.other` (`g` the rule read at the start), for a start with at least one shaper whose rule favours strictly and `c < hi`, under every schedule. The route is a comparison with the start's rule held fixed (`held`, `held_le`, `held_counts`), then Bernoulli's inequality (`bernoulli_powers`, `held_past`). The witness's deadline is 24, and its window is closed from step 4 (`Window.by_deadline`). So the bound is loose, linear where the share grows geometrically.
+- Added: the window stated in MA4's course. Read from `N`, the course is kept for good exactly where the late verdict favours at MA4's share at `N` (`kept_early_iff`), and turned for good exactly where it disfavours at MA4's share at `N + 1` (`turned_early_iff`). The late verdict never falls along MA4's course (`late_rises`). At most one step lies between the steps of the two kinds (`one_between`): the step at which the late verdict favours the others strictly at its share and the shapers strictly at the next. In the witness that step is 3.
