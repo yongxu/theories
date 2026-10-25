@@ -1,10 +1,21 @@
 import Becoming
 import Becoming.FallibleInquiry
 
-/-! The statements of the originals OU3b-2 reproves from the grammar's laws, printed in full. -/
+/-! The statements of the originals OU3b-2 and OU3b-3 reprove from the grammar's laws, and of the
+master-law anchors they represent, printed in full; and the bodies of the definitions they
+redefine, checked against the checkout's by `rfl` (`#check` compares types, not values). -/
+
+open Becoming
+
+example : @ClosedUnder = fun {X : Type _} (rel : X → X → Prop) (region : X → Prop) =>
+    ∀ g h, region g → rel g h → region h := rfl
+example : @WithinClosure = fun {X : Type _} (rel : X → X → Prop) (f g : X) =>
+    ∀ region, ClosedUnder rel region → region f → region g := rfl
+example : ∀ n, skipAt 0 n = n + 1 := fun _ => rfl
+example : ∀ m, skipAt (m + 1) 0 = 0 := fun _ => rfl
+example : ∀ m n, skipAt (m + 1) (n + 1) = skipAt m n + 1 := fun _ _ => rfl
 
 set_option pp.all true
-open Becoming
 theorem ou3b2_statements_printed : True := trivial
 #check @Becoming.ClosedUnder
 #check @Becoming.WithinClosure
@@ -49,3 +60,27 @@ theorem ou3b2_statements_printed : True := trivial
 #check @Becoming.Web.Widens.not_mixed
 #check @Becoming.Web.Keeps.not_mixed
 #check @Becoming.RecurrenceRuns.lossless_iff_returns
+#check @Becoming.Law.orbit_mul
+#check @Becoming.Law.Lossless.cancel
+#check @Becoming.Law.returns_of_reachable
+#check @Becoming.Law.returns_iff_keeps
+#check @Becoming.Branching.Lossless.cancel
+#check @Becoming.Branching.Lossless.comes_back
+#check @Becoming.Branching.Lossless.recurs
+#check @Becoming.Branching.Returns
+#check @Becoming.Branching.Lossless
+#check @Becoming.Amounts.rests_unrefuted
+#check @Becoming.Amounts.rests
+#check @Becoming.Amounts.FallsStop
+#check @Becoming.total_congr
+#check @Becoming.Flow.Balances
+#check @Becoming.Flow.BalancesOn
+#check @Becoming.Flow.Balances.over
+#check @Becoming.balance_over_stretch_on
+#check @Becoming.Weighting.IncludesOn
+#check @Becoming.Weighting.ExceedsOn
+#check @Becoming.Weighting.WidensOn
+#check @Becoming.Weighting.MixedOn
+#check @Becoming.Web.Widens
+#check @Becoming.GoAlikeUnder
+#check @Becoming.carries_law_iff

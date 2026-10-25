@@ -1,3 +1,5 @@
+> **Superseded** (26 October 2026) by [OU3b2-NOTES](OU3b2-NOTES.md) and [AUDIT](AUDIT.md). These notes describe the first draft: module B (`Becoming.GrammarLawsInstances`), the `_by_grammar` copies and the old names, none of which remain in `tree/`. Kept unmoved as evidence of the draft.
+
 # OU3b draft notes: the five master laws on the grammar
 
 AI-written drafting notes, 25 October 2026, for board item OU3b ([design](DESIGN.md)). Scratch only: nothing outside this folder was edited, nothing committed, the board untouched.
