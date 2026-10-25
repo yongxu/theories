@@ -1,0 +1,32 @@
+{
+  "files_checked": 1441,
+  "links_checked": 78050,
+  "broken": 2,
+  "broken_by_kind": {
+    "missing-anchor": 2
+  },
+  "broken_by_role": {
+    "live": 2
+  },
+  "by_directory": {
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence": 2
+  },
+  "list": [
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/REVIEW-PF2.md",
+      "line": 11,
+      "target": "#r-what-leaves-a-class-follows-its-line",
+      "kind": "missing-anchor",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/REVIEW-PF2.md",
+      "line": 24,
+      "target": "#future-path",
+      "kind": "missing-anchor",
+      "role": "live"
+    }
+  ],
+  "not_in_repository": [],
+  "scope": "Relative links and #anchors in live and generated Markdown (paths.py roles); history, evidence, sources and scratch are frozen and not checked. Paths must match tracked or untracked files exactly. Targets inside a submodule or excluded by .gitignore are listed under not_in_repository, not counted."
+}

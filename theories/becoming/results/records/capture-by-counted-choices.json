@@ -1,0 +1,371 @@
+{
+  "schema_version": 2,
+  "id": "capture-by-counted-choices",
+  "title": {
+    "en": "A chooser reading what couples in, its rule read from the count of its choices",
+    "zh": "读其所耦合者之择者，其规则读自其所择之计数"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T10:41:18+00:00",
+  "statement": {
+    "en": "A chooser choosing from a fold of what couples in selects through its couplings, and choosers sharing folds through pooled couplings; a rule read from the count of its choices, in sync under a standing score, never leaves the region its threshold sets and outlives an unread loss.",
+    "zh": "自所耦合者之折叠而择者经其耦合而选，共享折叠之择者经其合耦合而选；规则读自其所择之计数，常立评分之下起时同步，则永不离其门槛所定之域，逆其评分亦然，且久于其所不读之损失；于择时计后验，则其份额每步皆降。"
+  },
+  "laws": [
+    {
+      "en": "The choice made from a fold of the prefix of what couples into a formation, whatever the fold and whatever the choice, is a selection through the formation's couplings up to each step; histories alike through the couplings are chosen alike, and with a part acting only beyond the coupling closure withheld, the rest of the exchange fixed and balance on what couples in, the choice is the same with and without the part. Near-definitional.",
+      "zh": "自一构成所耦合者之前缀之折叠而择，无论如何折叠、如何择，至每步皆为经该构成之耦合之选择；经其耦合相同之历史择之相同；仅作用于耦合闭包之外之部分被扣、交换之余不变、所耦合者平衡时，有无此部分择之相同。近乎定义。",
+      "declarations": [
+        "Becoming.ChoiceCountCapture.foldAfter",
+        "Becoming.ChoiceCountCapture.selectsThrough",
+        "Becoming.ChoiceCountCapture.chosen_alike",
+        "Becoming.ChoiceCountCapture.unchosen_beyond_coupling"
+      ]
+    },
+    {
+      "en": "Choosers sharing their folds, each of a listed member's own course and the choice read off the list (a shared model built from all their prefixes among such choices), select through the group's pooled couplings; a part acting only beyond the pool's coupling closure does not change their choice.",
+      "zh": "共享折叠之择者，各折叠所列成员自身之进程，择读自其列（自其全部前缀所建之共享模型亦在其中），经群之合耦合而选；仅作用于合耦合闭包之外之部分，不改其择。",
+      "declarations": [
+        "Becoming.ChoiceCountCapture.memberFolds",
+        "Becoming.ChoiceCountCapture.memberFolds_alike",
+        "Becoming.ChoiceCountCapture.pooled_selectsThrough",
+        "Becoming.ChoiceCountCapture.pooled_unchosen_beyond"
+      ]
+    },
+    {
+      "en": "A chooser over two policies takes the first where its rule weighs it at least as much as the second, and that policy's count rises by one; choosing by a favouring rule raises the share it reads, strictly, and choosing by a rule favouring the second strictly does not raise it; the rule read from the counts weighted by a standing score (κc, κo) is monotone in the share and favours the first policy exactly where κo · other ≤ κc · carrier.",
+      "zh": "二策之择者，于其规则予第一策不少于第二策之权时取第一策，该策之计数加一；以偏向之规则而择，升其所读之份额，且严格；以严格偏向第二策之规则而择，不升之；以常立之评分（κc、κo）加权、读自计数之规则随份额单调，偏向第一策恰当 κo · other ≤ κc · carrier。",
+      "declarations": [
+        "Becoming.ChoiceCountCapture.choose",
+        "Becoming.ChoiceCountCapture.choose_favoured",
+        "Becoming.ChoiceCountCapture.choose_unfavoured",
+        "Becoming.ChoiceCountCapture.choose_raises",
+        "Becoming.ChoiceCountCapture.choose_rises_strictly",
+        "Becoming.ChoiceCountCapture.choose_lowers",
+        "Becoming.ChoiceCountCapture.weighted",
+        "Becoming.ChoiceCountCapture.weighted_reads",
+        "Becoming.ChoiceCountCapture.weighted_favours_iff"
+      ]
+    },
+    {
+      "en": "Under a standing score, with the rule in force read from the counts at the start, along every schedule of reading the threshold κo · other ≤ κc · carrier divides the counts into two regions the course never leaves: at or above it the chooser takes the first policy at every step and neither the share nor the rule falls, also where the score favours the second policy (κc < κo); below it the rule favours the second policy strictly, the chooser takes the second policy at every step and neither the share nor the rule rises. Ties go to the first policy.",
+      "zh": "常立评分之下，起时所行之规则读自计数，对任一读之安排，门槛 κo · other ≤ κc · carrier 将计数分为进程永不离之两域：于其上（含），择者每步取第一策，份额与规则皆不降，评分偏向第二策（κc < κo）时亦然；于其下，规则严格偏向第二策，择者每步取第二策，份额与规则皆不升。等则归第一策。",
+      "declarations": [
+        "Becoming.ChoiceCountCapture.start_locked",
+        "Becoming.ChoiceCountCapture.counted_locks",
+        "Becoming.ChoiceCountCapture.counted_chooses",
+        "Becoming.ChoiceCountCapture.lower_strict",
+        "Becoming.ChoiceCountCapture.counted_locks_down",
+        "Becoming.ChoiceCountCapture.counted_chooses_down"
+      ]
+    },
+    {
+      "en": "Counted from the posterior at the time of choosing (selection by the fixed rule ⟨s + κc, s + κo⟩, the counts scaled with the posterior's weights added), a standing score favouring the second policy lowers the first policy's share strictly at that step, carriers present, and along a course at a positive fixed scale at every step; derived from RuleShaping. A falling share need not cross the threshold soon.",
+      "zh": "于择时计后验（以定则 ⟨s + κc, s + κo⟩ 选择，计数放大而加后验之权），偏向第二策之常立评分于该步使第一策之份额严格下降（有携带者），于放大为正之定进程中每步皆然；由 RuleShaping 推出。份额下降不必很快越过门槛。",
+      "declarations": [
+        "Becoming.ChoiceCountCapture.byScore",
+        "Becoming.ChoiceCountCapture.posterior_count_falls",
+        "Becoming.ChoiceCountCapture.posterior_course_falls"
+      ]
+    },
+    {
+      "en": "Joined to a coordinate that neither the counts nor the score reads, rising by at least one at every step, from counts at or above the threshold with the rule in force read from them the coordinate stands at least b + t at step t while the course stays locked and neither the share nor the rule is below its start.",
+      "zh": "接一坐标，计数与评分皆不读之，每步至少升一；自门槛之上（含）之计数、所行之规则读自之起，第 t 步该坐标至少为 b + t，而进程保持锁定，份额与规则皆不低于起点。",
+      "declarations": [
+        "Becoming.ChoiceCountCapture.counted_outlives_loss"
+      ]
+    },
+    {
+      "en": "Witnesses: three to one keeps the first policy against a score weighing the second twice as much; from one to one the score decides for good; one count moved, three to two, locks the other way; counted from the posterior at the time of choosing, three to one falls at the first step while the weighted rule still favours the first policy, by a tie, and favours the second from the second step.",
+      "zh": "见证：三对一，对予第二策二倍之权之评分仍保持第一策；自一对一起，评分永定之；移一计数为三对二，则反向锁定；于择时计后验，三对一首步份额即降，而加权之规则仍以等而偏第一策，自第二步起偏第二策。",
+      "declarations": [
+        "Becoming.ChoiceCountCapture.Witness.two_pos",
+        "Becoming.ChoiceCountCapture.Witness.four_pos",
+        "Becoming.ChoiceCountCapture.Witness.counts",
+        "Becoming.ChoiceCountCapture.Witness.counted_beats_score",
+        "Becoming.ChoiceCountCapture.Witness.even",
+        "Becoming.ChoiceCountCapture.Witness.score_decides",
+        "Becoming.ChoiceCountCapture.Witness.moved",
+        "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
+        "Becoming.ChoiceCountCapture.Witness.posterior_share_falls",
+        "Becoming.ChoiceCountCapture.Witness.after_one_still_first",
+        "Becoming.ChoiceCountCapture.Witness.after_two_turns"
+      ]
+    },
+    {
+      "en": "Witnesses that the in-sync start is a hypothesis: counts three to one, above the threshold of the score one to two, under a rule an older score left in force (one to four), read at every step, lock the other way from step 5; a change of score to one to four read one step late, the old rule still in force, leaves the first policy locked from step 2, while read at once it locks the other way.",
+      "zh": "起时同步为一假设之见证：计数三对一，于评分一对二之门槛之上，旧评分所留之规则（一对四）在行、每步皆读，自第 5 步起反向锁定；评分改为一对四而迟一步读之、旧规则仍在行，自第 2 步起第一策锁定；即时读之，则反向锁定。",
+      "declarations": [
+        "Becoming.ChoiceCountCapture.Witness.Stale.stale",
+        "Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_locks_down",
+        "Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_never_first",
+        "Becoming.ChoiceCountCapture.Witness.Stale.late",
+        "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_locks_up",
+        "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_keeps_first",
+        "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own: for the selection laws, a reading of each step's values that reads exactly the formation's admission and the conditions coupled into it (ValuesThrough), and for the blindness laws the hypotheses of Flow.unselected_beyond_coupling and Flow.unselected_beyond_pool; for the count laws, discrete steps, natural counts with the second positive (RuleCapture's CarrierCounts), a choice taking the policy its rule weighs more with ties to the first, a standing score entering as two whole-number weights with the second positive, and the rule in force read from the counts at the start.",
+      "zh": "不加公理，除各律所带者外不加前提：于选择之律，每步之值恰读该构成之准入与耦合于其者（ValuesThrough），于盲之律，Flow.unselected_beyond_coupling 与 Flow.unselected_beyond_pool 之假设；于计数之律，离散之步、第二数为正之自然数计数（RuleCapture 之 CarrierCounts）、择其规则予权更多之策且等则第一、常立之评分以两个整数权入之且第二为正，以及起时所行之规则读自计数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Any probability, surprisal, free energy or expected free energy: what is kept is any fold of what couples in, and the score two whole-number weights (board item UE2 carries conditioning and surprisal in counting form).",
+      "zh": "任何概率、惊异、自由能或期望自由能：所存者为所耦合者之任意折叠，评分为两个整数权（看板项 UE2 承担计数形式之条件化与惊异）。",
+      "kind": "scope"
+    },
+    {
+      "en": "Active inference's own scheme: it counts the end-of-trial posterior over policies, close to the executed policy where outcomes reveal it and split among policies that explain the trial equally; its prior is the counts' expected log, not the counts; it has a free-energy term, sampling and inferred precision. The threshold is the model's, not SPM's.",
+      "zh": "主动推断自身之方案：其计试末之策后验，结果揭示所行之策时近于所行之策，而于同等解释该试之诸策间分之；其先验为计数之期望对数而非计数；其有自由能项、取样与所推之精度。门槛为模型之门槛，非 SPM 之门槛。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That actual agents, brains or trained systems count their choices so or choose at the argmax; the overtraining effect the lock matches in rats has failed to replicate in humans (de Wit and others 2018).",
+      "zh": "实有之主体、脑或受训之系统如此计其所择，或择于最大后验；锁定所合之大鼠过度训练效应，于人类之重复未成（de Wit 等 2018）。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That the free-energy principle's partition into thing and world is a coupling structure of the World model: the selection laws read its sparse coupling, not its blanket condition, and no representation theorem joins a Langevin system with a Markov blanket to a web.",
+      "zh": "自由能原理之物与世界之分划为 World 模型之耦合结构：选择之律读其稀疏耦合而非其毯之条件，且无表示定理接带马尔可夫毯之朗之万系统与网。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "More than two policies, intermediate precision, a score that changes with the outcomes, additive counting's timescale, and that a crossing under posterior counting comes within any horizon.",
+      "zh": "多于二策、中间精度、随结果而变之评分、加性计数之时标，以及于后验计数下越过门槛于任何时限内到来。",
+      "kind": "scope"
+    },
+    {
+      "en": "That capture by counted choices is a loss or a gain: no evaluation enters, and ranking courses needs C.",
+      "zh": "计数择之捕获为损为益：不入评价，排序进程须 C。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
+      "detail": {
+        "en": "A score is not enough to turn a count: three choices of the first policy to one keep it against a score weighing the second twice as much (Witness.counted_beats_score), while from one to one the score decides for good (Witness.score_decides).",
+        "zh": "评分不足以转计数：第一策三次对一次，对予第二策二倍之权之评分仍保持第一策（Witness.counted_beats_score）；自一对一起，评分永定之（Witness.score_decides）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
+      "detail": {
+        "en": "The lock is not absolute: one count moved locks the course the other way (Witness.moved_locks_down), and a rule in force not read from the counts carries counts above the threshold the other way (Witness.Stale.above_but_stale_locks_down).",
+        "zh": "锁定非绝对：移一计数则进程反向锁定（Witness.moved_locks_down）；所行之规则非读自计数，则门槛之上之计数亦被带向反向（Witness.Stale.above_but_stale_locks_down）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
+      "detail": {
+        "en": "A falling share need not cross at once: counted from the posterior at the time of choosing, three to one falls at the first step while the weighted rule still favours the first policy, by a tie (Witness.after_one_still_first), and favours the second from the second step (Witness.after_two_turns).",
+        "zh": "份额下降不必即刻越过：于择时计后验，三对一首步份额即降，而加权之规则仍以等而偏第一策（Witness.after_one_still_first），自第二步起偏第二策（Witness.after_two_turns）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T103820.622467Z): Becoming.ChoiceCountCapture, 45 declarations, every one with an empty axiom report, all cited here. Built in one session; an independent read-only review by a separate AI agent, its findings taken and the revision re-checked, in study section 406; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T103820.622467Z）：Becoming.ChoiceCountCapture，45 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作独立只读审查，其所见皆采，修订复查，见研究第 406 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "A third part against the free-energy principle, the first candidate a claim that belief sharing lets a collective respond to what no member couples to; a law with a bound for additive counting; SPM's prior and its split among equally good policies; a frozen test of whether a count of choices reverses; review by a person.",
+    "zh": "对自由能原理之第三部分：其文献中理论所禁之陈述，首一候选为信念共享使集体回应无一成员所耦合者之说；加性计数之有界之律；SPM 之先验与其于同等之策间之分；计数之择于常立评分下是否反转之冻结检验；人之独立审查。"
+  },
+  "correspondence": {
+    "en": "Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016, 'Active inference and learning', Neuroscience & Biobehavioral Reviews 68): the prior over policies counts beliefs about the selected policy at the end of each trial (§2.4; SPM12's spm_MDP_VB adds the end-of-trial posterior over policies); devalued after the habit has formed (trial 48) the habit persists and strengthens itself with repeated execution, devalued after 16 trials the agent switches at once (§5.2). The lock is the lock-in of increasing returns (Arthur 1989, The Economic Journal 99); counting the action taken is the value-free habit (Miller, Shenhav and Ludvig 2019, Psychological Review 126). Overtraining and insensitivity to devaluation in rats (Adams 1982; Dickinson 1985); five failures to induce it in humans (de Wit and others 2018, Journal of Experimental Psychology: General 147). The free-energy principle's sparse coupling read as the couplings; shared generative models (Friston and others 2024, 'Designing ecosystems of intelligence from first principles', Collective Intelligence 3) as pooled couplings at most. A restatement with its third part open; the readings are the AI's, stated in development/ue1-fep-bridge/NOTE.md with the sources read and the review in REVIEW-UE1.md.",
+    "zh": "主动推断（Friston、FitzGerald、Rigoli、Schwartenbeck、O'Doherty、Pezzulo 2016）：策之先验于每试之末计关于所选之策之信念（§2.4；SPM12 之 spm_MDP_VB 加试末之策后验）；习惯成后贬值（第 48 试），习惯持续且以重复之执行自强，16 试后贬值则主体立即转向（§5.2）。锁定即递增报酬之锁入（Arthur 1989）；计所行之行动即无值习惯（Miller、Shenhav、Ludvig 2019）。大鼠之过度训练与对贬值之不敏（Adams 1982；Dickinson 1985）；人类诱导之五次失败（de Wit 等 2018）。自由能原理之稀疏耦合读作耦合；共享之生成模型（Friston 等 2024）至多读作合耦合。为一重述，其第三部分未定；读法皆 AI 之读，载于 development/ue1-fep-bridge/NOTE.md 并列所读之源，审查见 REVIEW-UE1.md。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
+  "aliases": [
+    "A chooser reading what couples in, its rule read from the count of its choices",
+    "读其所耦合者之择者，其规则读自其所择之计数",
+    "capture by counted choices",
+    "habit capture",
+    "active inference as a selection through couplings",
+    "Becoming.ChoiceCountCapture.counted_locks"
+  ],
+  "dependencies": [
+    {
+      "id": "capture-through-the-rule",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "CarrierCounts, its order, favours, upper, select; Raises, ReadsShare, ReadsShare.reverse, Locked, locked_stays, locked_rises, reverse; Pace.paced_fast_succ.",
+        "zh": "CarrierCounts 及其序、favours、upper、select；Raises、ReadsShare、ReadsShare.reverse、Locked、locked_stays、locked_rises、reverse；Pace.paced_fast_succ。"
+      }
+    },
+    {
+      "id": "closed-capture",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Accrues, join, joinRead, lock_outlives_loss.",
+        "zh": "Accrues、join、joinRead、lock_outlives_loss。"
+      }
+    },
+    {
+      "id": "shaping-the-rule-selected-by-what-comes-back",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "RuleShaping.falls_strictly and present_along, from which the posterior-counting laws are derived.",
+        "zh": "RuleShaping.falls_strictly 与 present_along，后验计数之律由之推出。"
+      }
+    },
+    {
+      "id": "selection-through-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.SelectsThrough, Web.SelectsThroughAll, Web.AlikeThroughUpTo, Web.AlikeThroughAll, Flow.unselected_beyond_coupling, Flow.unselected_beyond_pool.",
+        "zh": "Web.SelectsThrough、Web.SelectsThroughAll、Web.AlikeThroughUpTo、Web.AlikeThroughAll、Flow.unselected_beyond_coupling、Flow.unselected_beyond_pool。"
+      }
+    },
+    {
+      "id": "a-formations-own-course",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.ValuesThrough, Web.courseThrough, Web.selectsThrough_iff_prefix, Web.alikeThroughUpTo_iff_prefix; Learning.prefixOf.",
+        "zh": "Web.ValuesThrough、Web.courseThrough、Web.selectsThrough_iff_prefix、Web.alikeThroughUpTo_iff_prefix；Learning.prefixOf。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-pooled-coupling-reaches",
+      "detail": {
+        "en": "What a pool separates; choosers sharing their folds are such a pool.",
+        "zh": "池所能分辨者；共享折叠之择者即此池。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_locks_down",
+        "Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_never_first",
+        "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down",
+        "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_keeps_first",
+        "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_locks_up",
+        "Becoming.ChoiceCountCapture.Witness.Stale.late",
+        "Becoming.ChoiceCountCapture.Witness.Stale.stale",
+        "Becoming.ChoiceCountCapture.Witness.after_one_still_first",
+        "Becoming.ChoiceCountCapture.Witness.after_two_turns",
+        "Becoming.ChoiceCountCapture.Witness.counted_beats_score",
+        "Becoming.ChoiceCountCapture.Witness.counts",
+        "Becoming.ChoiceCountCapture.Witness.even",
+        "Becoming.ChoiceCountCapture.Witness.four_pos",
+        "Becoming.ChoiceCountCapture.Witness.moved",
+        "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
+        "Becoming.ChoiceCountCapture.Witness.posterior_share_falls",
+        "Becoming.ChoiceCountCapture.Witness.score_decides",
+        "Becoming.ChoiceCountCapture.Witness.two_pos",
+        "Becoming.ChoiceCountCapture.byScore",
+        "Becoming.ChoiceCountCapture.choose",
+        "Becoming.ChoiceCountCapture.choose_favoured",
+        "Becoming.ChoiceCountCapture.choose_lowers",
+        "Becoming.ChoiceCountCapture.choose_raises",
+        "Becoming.ChoiceCountCapture.choose_rises_strictly",
+        "Becoming.ChoiceCountCapture.choose_unfavoured",
+        "Becoming.ChoiceCountCapture.chosen_alike",
+        "Becoming.ChoiceCountCapture.counted_chooses",
+        "Becoming.ChoiceCountCapture.counted_chooses_down",
+        "Becoming.ChoiceCountCapture.counted_locks",
+        "Becoming.ChoiceCountCapture.counted_locks_down",
+        "Becoming.ChoiceCountCapture.counted_outlives_loss",
+        "Becoming.ChoiceCountCapture.foldAfter",
+        "Becoming.ChoiceCountCapture.lower_strict",
+        "Becoming.ChoiceCountCapture.memberFolds",
+        "Becoming.ChoiceCountCapture.memberFolds_alike",
+        "Becoming.ChoiceCountCapture.pooled_selectsThrough",
+        "Becoming.ChoiceCountCapture.pooled_unchosen_beyond",
+        "Becoming.ChoiceCountCapture.posterior_count_falls",
+        "Becoming.ChoiceCountCapture.posterior_course_falls",
+        "Becoming.ChoiceCountCapture.selectsThrough",
+        "Becoming.ChoiceCountCapture.start_locked",
+        "Becoming.ChoiceCountCapture.unchosen_beyond_coupling",
+        "Becoming.ChoiceCountCapture.weighted",
+        "Becoming.ChoiceCountCapture.weighted_favours_iff",
+        "Becoming.ChoiceCountCapture.weighted_reads"
+      ],
+      "sha256": "aa9e1c63199bf74aaf9585db861aecaf3c4cccc6649a39e762be2d4fb509eda6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+      "role": "proof",
+      "sha256": "40942b8659853baef361e206f26005e9a86580e0129550faae8c7bb1abaf6272"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+      "role": "proof",
+      "sha256": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
+      "role": "proof",
+      "sha256": "b9e957b463ecab5241881c5918aa1a9b1498db492dc1a82ce369ca69309c9d0a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+      "role": "proof",
+      "sha256": "068eec35f455c8ea1e87b8dad5eb0b15b009767086adef96c7e895156854dc6b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+      "role": "proof",
+      "sha256": "c1ced92e41c8e456b869062913127104bf3757cfda18ceaf4b8ccb0c77e775d9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T103820.622467Z/verification.json",
+      "role": "receipt",
+      "sha256": "71966d5fb5b165a217d618cc14de93bd5cc01825486280a56128fb4d9468ce14"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f4d9d8b39afb6248ba20084fb696bcab70f4588062e3f7fb2a0c3d5358c9b1fc"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md",
+      "role": "integration",
+      "sha256": "8cb9c49af2624d3a451836a8285797673f1cd1c1b9941fd6b461f5edea9592e4"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "3d73137bc1f10ef05069473fba4314137d1c02e4dce7f9597ddc9769600a88a4"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "87d83fde5cb14ea983785ef5c2523ae902bb91df6557f36a6a70bcd3ad9f92c2"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T103820.622467Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ChoiceCountCapture",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "25 October 2026: added (UE1), the free-energy principle's first containment, a restatement with its third part open; study section 406.",
+      "zh": "2026年10月25日：新增（UE1），自由能原理之首次包含，为一重述，其第三部分未定；研究第 406 节。"
+    }
+  ]
+}

@@ -123,7 +123,7 @@ record = {
     'family': 'F01',
     'reviewed_at_utc': NOW,
     'statement': {
-        'en': 'A chooser choosing from a fold of what couples in selects through its couplings, and choosers sharing their folds through their pooled couplings; a rule read from the count of its choices, in sync at the start under a standing score, never leaves the region its threshold sets, also against the score, and outlives a loss it does not read, while counted from the posterior at the time of choosing its share falls at every step.',
+        'en': 'A chooser choosing from a fold of what couples in selects through its couplings, and choosers sharing folds through pooled couplings; a rule read from the count of its choices, in sync under a standing score, never leaves the region its threshold sets and outlives an unread loss.',
         'zh': '自所耦合者之折叠而择者经其耦合而选，共享折叠之择者经其合耦合而选；规则读自其所择之计数，常立评分之下起时同步，则永不离其门槛所定之域，逆其评分亦然，且久于其所不读之损失；于择时计后验，则其份额每步皆降。'},
     'laws': [{'en': en, 'zh': zh, 'declarations': ds} for en, zh, ds in groups],
     'hypotheses': [{
@@ -192,10 +192,7 @@ record = {
         'zh': f'Lean 4.29.1 合并检查器实查（回执 {RECEIPT_ID}）：Becoming.ChoiceCountCapture，{len(names)} 项声明，公理报告皆空，本记录全引。'
               f'于一会话中构建；另一 AI 代理作独立只读审查，其所见皆采，修订复查，见研究第 {N} 节；未经人审。'},
     'next_delta': {
-        'en': "A third part against the free-energy principle: a statement in its literature the theory forbids, the first "
-              "candidate a claim that belief sharing lets a collective respond to what no member couples to; a law with a "
-              "bound for additive counting; SPM's prior and its split among equally good policies; a frozen test of whether "
-              "a count of choices reverses under a standing score; an independent review by a person.",
+        'en': "A third part against the free-energy principle, the first candidate a claim that belief sharing lets a collective respond to what no member couples to; a law with a bound for additive counting; SPM's prior and its split among equally good policies; a frozen test of whether a count of choices reverses; review by a person.",
         'zh': '对自由能原理之第三部分：其文献中理论所禁之陈述，首一候选为信念共享使集体回应无一成员所耦合者之说；加性计数之有界之律；SPM 之先验与其于同等之策间之分；'
               '计数之择于常立评分下是否反转之冻结检验；人之独立审查。'},
     'correspondence': {

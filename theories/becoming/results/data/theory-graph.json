@@ -920,6 +920,18 @@
    "page": "theories/becoming/results/records/candidate-theorems-of-the-corpus.md"
   },
   {
+   "id": "record:capture-by-counted-choices",
+   "type": "result",
+   "record": "capture-by-counted-choices",
+   "title": "A chooser reading what couples in, its rule read from the count of its choices",
+   "title_zh": "读其所耦合者之择者，其规则读自其所择之计数",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/capture-by-counted-choices.md"
+  },
+  {
    "id": "record:capture-through-the-rule",
    "type": "result",
    "record": "capture-through-the-rule",
@@ -7060,6 +7072,17 @@
    "name": "Becoming.RuleShaping",
    "level": "L1",
    "theorems": 51,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ChoiceCountCapture",
+   "type": "module",
+   "name": "Becoming.ChoiceCountCapture",
+   "level": "L1",
+   "theorems": 35,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -27203,6 +27226,12 @@
    "anchor": "r-shaping-the-rule-selected-by-what-comes-back"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-capture-by-counted-choices"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
@@ -29063,6 +29092,21 @@
   {
    "from": "module:Becoming.Change",
    "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ChoiceCountCapture",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ChoiceCountCapture",
+   "to": "module:Becoming.IdentificationRuns",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ChoiceCountCapture",
+   "to": "module:Becoming.RuleShaping",
    "type": "imports"
   },
   {
@@ -33959,6 +34003,66 @@
    "from": "record:candidate-theorems-of-the-corpus",
    "to": "record:classical-definitions-in-the-grammar",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "module:Becoming.ChoiceCountCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "module:Becoming.IdentificationRuns",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "module:Becoming.RuleCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "module:Becoming.RuleShaping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "module:Becoming.Selection",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:a-formations-own-course",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:capture-through-the-rule",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:closed-capture",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:selection-through-couplings",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:shaping-the-rule-selected-by-what-comes-back",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:what-pooled-coupling-reaches",
+   "type": "related"
   },
   {
    "from": "record:capture-through-the-rule",
@@ -52148,6 +52252,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-becoming-return-grades",
    "to": "record:becoming-return-grades",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+   "to": "record:capture-by-counted-choices",
    "type": "states"
   },
   {

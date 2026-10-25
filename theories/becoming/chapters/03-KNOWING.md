@@ -41,6 +41,8 @@ Training is the same structure with the data as the map ([§6](#r-generalization
 
 **Reading** [AI reading, D25]. Keeping, rewarding, reproducing and training depend on nothing beyond what couples into the selector; the reading for AI training is [07](07-SIGNIFICANCE.md#alignment-without-premise)'s.
 
+A chooser that folds what couples in and chooses from the fold, the free-energy principle's agent so represented among them, selects through its couplings whatever its update and choice, and choosers sharing their folds select through their pooled couplings ([02 §9](02-MAP.md#r-capture-by-counted-choices)).
+
 <a id="observation"></a>
 ## 2. Observation is a route
 

@@ -3861,6 +3861,36 @@
    "module": "Becoming.RuleShaping",
    "category": "support",
    "reason": "an arithmetic lemma on natural numbers about the counts multiplied across a stretch"
+  },
+  "Becoming.ChoiceCountCapture.Witness.after_one_still_first": {
+   "module": "Becoming.ChoiceCountCapture",
+   "category": "model-witness",
+   "reason": "a witness of the count laws on two policies (Becoming.ChoiceCountCapture, UE1)"
+  },
+  "Becoming.ChoiceCountCapture.Witness.after_two_turns": {
+   "module": "Becoming.ChoiceCountCapture",
+   "category": "model-witness",
+   "reason": "a witness of the count laws on two policies (Becoming.ChoiceCountCapture, UE1)"
+  },
+  "Becoming.ChoiceCountCapture.Witness.posterior_share_falls": {
+   "module": "Becoming.ChoiceCountCapture",
+   "category": "model-witness",
+   "reason": "a witness of the count laws on two policies (Becoming.ChoiceCountCapture, UE1)"
+  },
+  "Becoming.ChoiceCountCapture.choose_rises_strictly": {
+   "module": "Becoming.ChoiceCountCapture",
+   "category": "general-structure",
+   "reason": "an instance law of selection through couplings or of capture through the rule, read on a chooser whose prior counts its own choices (active inference); the base states no such chooser, so nothing on it uses this law"
+  },
+  "Becoming.ChoiceCountCapture.posterior_course_falls": {
+   "module": "Becoming.ChoiceCountCapture",
+   "category": "general-structure",
+   "reason": "an instance law of selection through couplings or of capture through the rule, read on a chooser whose prior counts its own choices (active inference); the base states no such chooser, so nothing on it uses this law"
+  },
+  "Becoming.ChoiceCountCapture.weighted_favours_iff": {
+   "module": "Becoming.ChoiceCountCapture",
+   "category": "support",
+   "reason": "a one-line unpacking of the module's own definitions"
   }
  },
  "instances": {

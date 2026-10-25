@@ -3,7 +3,7 @@
 This is an AI-authored independent review of board item UE1 as committed at `bfa80c29b`. It covers two files:
 
 - [NOTE.md](NOTE.md), sha256 `c6a9941a…e1213`;
-- [tree/Becoming/HabitCapture.lean](tree/Becoming/HabitCapture.lean), sha256 `9d87d5ab…cdc22`.
+- `tree/Becoming/HabitCapture.lean` (renamed `ChoiceCountCapture.lean` in the revision; the reviewed bytes are at commit `bfa80c29b`), sha256 `9d87d5ab…cdc22`.
 
 They were read with [the UE plan](../ue-unified-explanation/PLAN.md); chapters 01, 02, 03, 05, 07 and 08; and the package modules `RuleCapture`, `ClosedCapture`, `RuleShaping`, `Selection`, `IdentificationRuns`, `Pace`, `Weighted` and `Typicality`.
 

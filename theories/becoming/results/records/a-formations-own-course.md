@@ -58,6 +58,8 @@ A reading as values derived from the web where admission is decided; an independ
 - related, not a proved adapter: [testing-within-couplings](testing-within-couplings.md). Web.AlikeThrough and the coupling into a formation.
 - related, not a proved adapter: [the-split-that-makes-sense](the-split-that-makes-sense.md). States read off a course; the coarsest value-keeping class.
 
+**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

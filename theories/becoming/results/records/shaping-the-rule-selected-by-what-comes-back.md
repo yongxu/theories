@@ -67,6 +67,8 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Capacity joined without coupling; here help that lowers the cost of shaping moves the rule toward the shapers.
 - related, not a proved adapter: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). MA2: ReadsShare from a pool of readers drawn from the selected; here ReadsShare is equivalent to what comes back to the shapers being monotone in their share. Related, not a proved adapter: no theorem joins the two yet.
 
+**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

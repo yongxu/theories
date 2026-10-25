@@ -241,6 +241,11 @@
    "base": "grammar",
    "note": "GrammarCandidates: 59 candidates, 38 proved, 15 conditional, 3 refuted"
   },
+  "capture-by-counted-choices": {
+   "region": "map",
+   "base": "general",
+   "note": "ChoiceCountCapture UE1: a chooser reading what couples in, its rule read from the count of its choices"
+  },
   "capture-through-the-rule": {
    "region": "map",
    "base": "general",
@@ -2277,6 +2282,11 @@
    "region": "root",
    "base": "grammar",
    "note": "arising/forming/standing and ceasing as one change; no premise; imports Grammar, reads Web"
+  },
+  "Becoming.ChoiceCountCapture": {
+   "region": "map",
+   "base": "general",
+   "note": "UE1 capture by counted choices: the free-energy principle as a case"
   },
   "Becoming.ClassifiedBeliefProcesses": {
    "region": "knowing",

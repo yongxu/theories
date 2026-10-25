@@ -140,6 +140,7 @@ import Becoming.Pace
 import Becoming.RuleCapture
 import Becoming.ClosedCapture
 import Becoming.RuleShaping
+import Becoming.ChoiceCountCapture
 import Becoming.PatternPassing
 import Becoming.JointKeeping
 import Becoming.Undecided
@@ -1898,6 +1899,20 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `lo < c < hi` the share rises at every step from above and falls at every step from below
   (`threshold_rises`, `threshold_falls`). A leaf: a model of selection on the capacity, which
   nothing below needs (board item MA3).
+* `Becoming.ChoiceCountCapture` (L1): a chooser reading what couples in, its rule read from the
+  count of its choices. The choice made from a fold of the prefix of what couples in, whatever the
+  fold and the choice, is a selection through the couplings (`selectsThrough`,
+  `unchosen_beyond_coupling`), and choosers sharing their folds select through their pooled
+  couplings (`pooled_selectsThrough`, `pooled_unchosen_beyond`); near-definitional. A chooser over
+  two policies counting its choices, the rule read from the counts weighted by a standing score
+  (`choose`, `weighted`): under a standing score, with the rule in force read from the counts, the
+  threshold `κo · other ≤ κc · carrier` divides the counts into two regions the course never
+  leaves, also against the score (`counted_locks`, `counted_locks_down`), and the lock outlives a
+  loss it does not read (`counted_outlives_loss`); a moved count, a stale rule or a change of score
+  read late carries the course across (`Witness`). Counted from the posterior at the time of
+  choosing, the share falls at every step (`posterior_count_falls`, by `RuleShaping`). A leaf: an
+  instance module of selection through couplings, capture through the rule and closed capture, read
+  on active inference, whose lock is the lock-in of increasing returns (board item UE1).
 * `Becoming.PatternPassing` (L1): a pattern that outlasts each of its carriers lasts only through
   passing. Read on a web whose activity is carrying, a pattern present at every step from `T`
   on with carriers brief for `d` has a carrier beginning within every `d` steps; under the
