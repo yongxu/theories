@@ -19,18 +19,19 @@ level, on the level's side and no farther, is `Regulation.Between`, regulation's
   at each condition of the family it lies between the set point and the other, and at one it is
   strictly nearer, whatever either holds beyond (`Optimum.Nearer`); an order is nearing where it
   ranks above every nearer outcome (`Optimum.Nearing`), as an order is rising where it ranks above
-  every exceeding one. A nearing order is so single-peaked at the set point condition by condition,
-  each side weighed as it may be. An order falling with the distance from the set point at each
-  condition, both sides alike, is nearing (`Optimum.nearing_of_gaps`), the order by the family's
-  total gap among them (`Optimum.byGap_nearing`); so is an order costlier above the set point than
-  below (`Skew.nearing`), which does not fall with the distance alike on both sides
-  (`Skew.not_by_gaps`). Every order ranking above wherever a nearing order does is nearing
-  (`Optimum.Nearing.mono`). No nearing order that never ranks two outcomes above each other is
-  rising, where the family holds a condition (`Optimum.Nearing.not_rising`): neither the order by
-  distance (`Optimum.byGap_not_rising`) nor the order by distance with the beyond counted after
-  (`Optimum.byGapThen_not_rising`). Nor is any order under which an outcome is ranked below none
-  (`Optimum.not_rising_of_unbeaten`), as an outcome at the set point is by distance
-  (`Optimum.byGap_unbeaten_at`).
+  every exceeding one. A nearing order is so strictly single-peaked at the set point condition by
+  condition, each peak not depending on the others and each side weighed as it may be. An order
+  falling with the distance from the set point at each condition, both sides alike, is nearing
+  (`Optimum.nearing_of_gaps`), the order by the family's total gap among them
+  (`Optimum.byGap_nearing`); so is an order costlier above the set point than below
+  (`Skew.nearing`), which does not fall with the distance alike on both sides (`Skew.not_by_gaps`).
+  Every order ranking above wherever a nearing order does is nearing (`Optimum.Nearing.mono`). No
+  nearing order that never ranks two outcomes above each other is rising, where the family holds a
+  condition (`Optimum.Nearing.not_rising`): neither the order by distance
+  (`Optimum.byGap_not_rising`) nor the order by distance with the beyond counted after
+  (`Optimum.byGapThen_not_rising`). Nor, where the family holds a condition, is any order under
+  which an outcome is ranked below none (`Optimum.not_rising_of_unbeaten`), as an outcome at the set
+  point is by distance (`Optimum.byGap_unbeaten_at`).
 * **Where the set point can be reached, every optimum stands at it, exactly.** Every nearing order
   has its optima at the set point exactly where no eligible outcome off it goes unbeaten by a nearer
   eligible one (`Optimum.atSetPoint_iff`); so where some eligible outcome stands at the set point,
@@ -121,32 +122,34 @@ what else the order counts or by the choice among optima, not by the set point.
 
 **Reading (the AI's).** Active inference casts preferences as prior beliefs over outcomes, highest
 at the characteristic states (Friston and others, "Active inference and learning", 2016). A
-preference single-peaked at its mode on each observed condition, each side weighed as it may be,
-ranks outcomes as an order nearing that mode on what is observed; a drive that is a norm of the
-deviations from set points, as in homeostatic reinforcement learning (Keramati and Gutkin 2014),
-falls with the distance alike on both sides. Such a chooser escapes the drive beyond its couplings
-at its set point, not the drain below it, nor joint excess. Below its set point it drains as a
-maximizer does (`Optimum.least_below`, `Optimum.nearing_beyond`). At its set point it draws what the
-way of reaching the set point draws (`Flow.Balances.atSetPoint_draws`). Where the step can lose what
-it takes, the set point alone does not protect what lies beyond, the order by distance having the
-draining step among its optima beside the keeping one (`Topped.nearing_either`), and a term on what
-lies beyond counted after the set point does protect it there (`Topped.counted_after_keeps`). That
-contrast with rising orders belongs to the plateau, not to the set point. Counted after a rising
-order, with room, such a term changes nothing (`Optimum.Rising.mono`, `Optimum.least_of_room`;
-`Drain.counted_after_drains`); counted after an order with a plateau, a set point or an aspiration
-level (Simon, "A behavioral model of rational choice", 1955; `Drain.satisficingThen_keeps`), it
-decides within the plateau. Counting more beyond after a set point, it leaves, in total, the most
-any way of reaching the set point leaves (`Optimum.counted_after_most`); counting less, it drains
-(`Topped.counted_less_drains`). Such a term reads what lies beyond: it is a coupling ranked second.
-So what protects at a set point is how the choice among equal optima is made, the point of mild
-optimization (Taylor, "Quantilizers", 2016): a choice drawn from a base distribution over the ways
-of reaching the set point would be a quantilizer and inherit its bound, an arbitrary choice has
-none. Formations holding a level take at least their loss from what they share, so several, each
-within what a condition is given, can end it together (`Flow.held_excess_ends`); no choice enters
-that law.
+preference strictly single-peaked at its mode on each observed condition, each peak not depending on
+the others and each side weighed as it may be, ranks outcomes as an order nearing that mode on what
+is observed; a drive that is a norm of the deviations from set points, as in homeostatic
+reinforcement learning (Keramati and Gutkin 2014), falls with the distance alike on both sides. Such
+a chooser escapes the drive beyond its couplings at its set point, not the drain below it, nor joint
+excess. Below its set point it drains as a maximizer does (`Optimum.least_below`,
+`Optimum.nearing_beyond`). At its set point it draws what the way of reaching the set point draws
+(`Flow.Balances.atSetPoint_draws`). Where the step can lose what it takes, the set point alone does
+not protect what lies beyond, the order by distance having the draining step among its optima beside
+the keeping one (`Topped.nearing_either`), and a term on what lies beyond counted after the set
+point does protect it there (`Topped.counted_after_keeps`). That contrast with rising orders belongs
+to the plateau, not to the set point. Counted after a rising order, with room, such a term changes
+nothing (`Optimum.Rising.mono`, `Optimum.least_of_room`; `Drain.counted_after_drains`); counted
+after an order with a plateau, a set point or an aspiration level (Simon, "A behavioral model of
+rational choice", 1955; `Drain.satisficingThen_keeps`), it decides within the plateau. Counting more
+beyond after a set point, it leaves, in total, the most any way of reaching the set point leaves
+(`Optimum.counted_after_most`); counting less, it drains (`Topped.counted_less_drains`). Such a term
+reads what lies beyond: it is a coupling ranked second. So what protects at a set point is how the
+choice among equal optima is made, the point of mild optimization (Taylor, "Quantilizers", 2016): a
+choice drawn from a base distribution over the ways of reaching the set point would be a quantilizer
+and inherit its bound, an arbitrary choice has none. Formations holding a level take at least their
+loss from what they share, so several, each within what a condition is given, can end it together
+(`Flow.held_excess_ends`); no choice enters that law.
 
 What is not derived: that an agent's preferences form a nearing order (one whose best level at a
-condition depends on the levels at others, or that is not single-peaked at each, is not one), or any
+condition depends on the levels at others, or that is not strictly single-peaked at each, is not
+one: a preference indifferent within a tolerance band around the set point is not nearing, the band
+being a two-sided aspiration level, to which the plateau's results apply instead), or any
 probability, surprisal, expected free energy or precision; which outcomes are eligible, whether one
 reaches the set point, and room up to it (hypotheses wherever they enter); the optimum where no
 eligible outcome reaches the set point and some stand above it; in an exchange, the optima at the
@@ -392,8 +395,8 @@ theorem byGapThen_not_rising {d : C} (inside : d ∈ ds) : ¬ Rising ds (byGapTh
 Where some eligible outcome stands at the set point, every optimum of the order by distance with
 the beyond counted after stands at the set point and leaves the beyond, in total, at least where
 every eligible outcome at the set point does. It maximizes the total, not each condition
-(`Spread.counted_after_empties`), and keeps no more than some way of reaching the set point leaves
-(`counted_after_keeps_iff`). -/
+(`Spread.counted_after_empties`), and keeps a need only where some way of reaching the set point
+keeps it (`counted_after_keeps_iff`). -/
 theorem counted_after_most {o₀ : C → Nat} (reach : eligible o₀) (at₀ : AtSetPoint ds s o₀)
     {o : C → Nat} (optimum : Frontier eligible (byGapThen ds s rest) o) :
     AtSetPoint ds s o ∧ ∀ o', eligible o' → AtSetPoint ds s o' → total rest o' ≤ total rest o :=
@@ -745,7 +748,7 @@ theorem held_draws [DecidableEq F] {fam : List C} {t : Nat} {h : F} {c : C} {l :
         (Nat.add_le_add_right (Nat.le_trans takes (Nat.le_trans within gives)) _)
         (Nat.le_of_eq (Nat.add_comm _ _)))))
 
-/-- **Formations holding their levels, each within what a condition is given, end it together.**
+/-- **Formations holding their levels, losing together more than a condition is given, end it.**
 Across `n` steps from `T`, let each formation of a part (`holders`) taking part hold its family's
 stock, alone exchanging with the family, and lose at least a given amount on its family with a
 condition `c`. Where at each step the part's losses together exceed what the formations outside it
@@ -1260,7 +1263,7 @@ end TwoStores
 
 namespace HeldPair
 
-/-- A renewer and two formations holders stores: the members of `Witnesses.relay`. -/
+/-- A renewer and two formations holding stores: the members of `Witnesses.relay`. -/
 abbrev Member := Witnesses.Member
 
 /-- Equality of members is decided. -/
@@ -1281,7 +1284,7 @@ inductive Spot where
   | firstStore
   | secondStore
 
-/-- The part holders stores at a set point: the first and the second. -/
+/-- The part holding stores at a set point: the first and the second. -/
 def holders : Member → Bool
   | .renewer => false
   | .first => true
@@ -1501,12 +1504,12 @@ theorem within : ∀ t, t < 2 → flow.WithinOwn t .pool ∧ ¬ flow.WithinJoint
     fun joint => Nat.not_succ_le_self 1 joint⟩
   | t + 2, below => absurd below (Nat.not_lt_of_le (Nat.le_add_left 2 t))
 
-/-- **Two formations holders set points, each within the renewal, end it together, unseen.** The
+/-- **Two formations holding set points, each within the renewal, end it together, unseen.** The
 first and the second each hold their store at its set point of one by drawing from the pool the
 unit they lose, each within the one unit the step gives the pool, while the two take two; from a
 pool of two the renewal, which depends on the pool, ends after two steps, and neither couples into
 the pool. The stipulated activity says so; derived here through `Flow.held_excess_ends`, the witness
-shows the law's hypotheses holders together with each draw within the renewal. -/
+shows the law's hypotheses holding together with each draw within the renewal. -/
 theorem held_end :
     (∀ t, t < 2 → flow.WithinOwn t .pool ∧ ¬ flow.WithinJoint t .pool) ∧
       (∀ k g, web.requires (0 + 2 + k) g .pool → 1 ≤ web.need (0 + 2 + k) g .pool →

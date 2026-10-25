@@ -13,6 +13,16 @@ In active inference an agent's preferences are its characteristic states: it ran
 
 The text now says what the Lean proves.
 
+**Re-checked** (the re-check appended to the review): every finding addressed, one suggestion in part. Its new points are taken here:
+
+- four docstrings the rename to `holders` had garbled now read "holding";
+- "strictly single-peaked" throughout, with a tolerance band listed as not nearing;
+- "where the family holds a condition" wherever no nearing order is said to rise;
+- two docstring nits (`counted_after_most`, `held_excess_ends`);
+- LANDING's re-points and board row.
+
+The landing scripts are in this folder ([LANDING.md](LANDING.md), §7).
+
 - **Kit.**
   - `Becoming.SetPointOptimum`, [tree/Becoming/SetPointOptimum.lean](tree/Becoming/SetPointOptimum.lean): pure core, importing `Becoming.Optimum` and `Becoming.Regulation` only.
   - [tree/Becoming/Optimum.lean](tree/Becoming/Optimum.lean): the landed `Optimum` with the rule 9 refactor (§5).
@@ -142,7 +152,7 @@ As first written in the UE1 note: "A chooser with set points escapes the optimiz
 **Verdict: it holds in part.** The review confirmed the verdict and corrected its wording.
 
 1. *"It does not apply to such a chooser as such": wrong.*
-   - No asymmetric nearing order rises with what couples in (`Optimum.Nearing.not_rising`), so `least_of_room` does not apply to it as stated.
+   - No asymmetric nearing order rises with what couples in, where the family holds a condition (`Optimum.Nearing.not_rising`), so `least_of_room` does not apply to it as stated.
    - But below its set point a nearing order rises (`Optimum.nearer_iff_exceeds`, `Optimum.Nearing.rises_below`), and the drain applies there exactly (`Optimum.least_below_iff`).
    - In an exchange it takes the whole capacity, as a rising order does (`Optimum.nearing_beyond`, `Optimum.nearing_as_rising`; witness `Topped.out_of_reach`).
 2. *"Escapes the drain": the class escapes the drive at the set point, not the draw.*
@@ -163,7 +173,7 @@ As first written in the UE1 note: "A chooser with set points escapes the optimiz
 
 **Corrected wording** [AI reading]:
 
-> 3. **A chooser with set points escapes the optimizer's drive at its set point, not the drain below it, nor joint excess.** An order nearing a set point is single-peaked there at each observed condition, each side weighed as it may be (`Optimum.Nearing`), and no asymmetric such order rises with what couples in (`Optimum.Nearing.not_rising`).
+> 3. **A chooser with set points escapes the optimizer's drive at its set point, not the drain below it, nor joint excess.** An order nearing a set point is strictly single-peaked there at each observed condition, each peak not depending on the others and each side weighed as it may be (`Optimum.Nearing`), and, where the family holds a condition, no asymmetric such order rises with what couples in (`Optimum.Nearing.not_rising`).
 >
 > Below its set point it rises with what couples in, and its optima drain as a maximizer's do: with room up to the set point, to the least level beyond among the outcomes up to it (`Optimum.least_below`); in an exchange, by the part's whole capacity at every condition beyond (`Optimum.nearing_beyond`).
 >
@@ -178,7 +188,8 @@ As first written in the UE1 note: "A chooser with set points escapes the optimiz
 ## 4. What is not derived
 
 - **The correspondence with the free-energy principle is a reading.**
-  - That an agent's preferences form a nearing order is not derived. They do where the preference is single-peaked at the set point at each observed condition, either side weighed as it may be.
+  - That an agent's preferences form a nearing order is not derived. They do where the preference is strictly single-peaked at the set point at each observed condition, each peak not depending on the others, either side weighed as it may be.
+  - A preference indifferent within a tolerance band around the set point, common in homeostasis, is not nearing: the band is a two-sided aspiration level, and the plateau's results apply to it instead.
   - One whose best level at a condition depends on the levels at others is not nearing. `Nearer` is still read condition by condition, though no longer symmetric in distance.
   - No probability, surprisal, expected free energy, epistemic term or precision appears. Optima are the high-precision limit, as for the counted choice of `Becoming.ChoiceCountCapture`.
 - **Supplied wherever they enter:** which outcomes are eligible, whether one reaches the set point, and room up to it.
@@ -246,13 +257,13 @@ As first written in the UE1 note: "A chooser with set points escapes the optimiz
 | 14 | Stale references | `Becoming.ChoiceCountCapture`. |
 | 15 | "Settled" | Renamed as the review tabulates. |
 | 16 | "Enough" | Renamed: `not_rising_of_unbeaten`, `byGap_unbeaten_at`. |
-| 17 | Placement and small duplicates | `holders` renamed. `total_le_of_only` now derives from `total_le_at`. Moving `Weightings.total_le_at_on`, the prelude lemmas and a shared `transfer` evaluation are left to their owners (LANDING.md, optional). |
+| 17 | Placement and small duplicates | `holders` renamed. `total_le_of_only` derives from `total_le_at`, as before. Moving `Weightings.total_le_at_on`, the prelude lemmas and a shared `transfer` evaluation are left to their owners (LANDING.md, optional). |
 | 18 | Error: three proofs beside `Optimum`'s (rule 9) | Refactor applied in the kit copy and built, with no statement changed (§5). |
 | 19 | Additions | `optima_iff`, `counted_after_keeps_iff` and `Nearing.not_rising` added. Generalizing `MutualBest.full` and `mutual_beyond` is left to Optimum's owner (LANDING.md, optional). |
 
 ## 7. Open issues
 
-- **The frozen test** (UE1 note, §7(c)). An active-inference agent with single-peaked preferences over an observed store shares a renewed source with a dweller. What the law predicts, fixed before the run:
+- **The frozen test** (UE1 note, §7(c)). An active-inference agent with strictly single-peaked preferences over an observed store shares a renewed source with a dweller. What the law predicts, fixed before the run:
   - where it cannot discard and its shortfall is within the slack, it keeps the dweller (`Drain.kept_iff`);
   - where it can discard, keeping is not implied. The discarding policy is as good as idling (`Topped.nearing_either`), so the share of draining is the tie-break's: one half with a flat prior over the two policies, tilted by any habit or cost of acting. A keeping agent would not refute the law, and a draining one would show only that ties exist;
   - with a weighted log-preference on the source, at any positive weight, it keeps (`Topped.weighted_keeps`). This is a weighted order, not the lexicographic `byGapThen`.
