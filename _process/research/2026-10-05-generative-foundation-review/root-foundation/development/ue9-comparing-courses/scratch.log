@@ -1,0 +1,19 @@
+# UE9 scratch builds (scratch_build.py, Lean 4.29.1), 2026-10-25T18:29Z
+# kit sha256 5a952632b7994b0df58f6046e627f74e6e39cfa278680b5b37192660de3b55a9
+# main at c8bd66581
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/tree",
+  "modules": 65,
+  "ran": [
+    "Becoming.ComparingCourses",
+    "BecomingComparingCoursesAxiomAudit"
+  ],
+  "reused": 64,
+  "unclean": [],
+  "audits": {
+    "Becoming.ComparingCourses": {
+      "theorems": 58,
+      "declarations": 70,
+      "with_axioms": {}
+    }
+  }
+}
