@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1931,
-    "distinct_byte_contents": 1523,
+    "lean_paths": 1932,
+    "distinct_byte_contents": 1524,
     "byte_identical_duplicate_groups": 144,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 998,
+      "development-attempt": 999,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 894
@@ -4850,6 +4850,15 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/tree/Becoming/GrammarPath.lean",
       "sha256": "63ac06cd24544c4e9e5fa784d2dc887405f3b6dfdffd337e5e244071701e1391",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/tree2/Becoming/GrammarPath.lean",
+      "sha256": "cf2af2c3f3282d441ec73c5724a525712cc2db3b1433994b2df7961cc48528a1",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -359715,6 +359724,432 @@
       "declaration_counts": {
         "def": 1,
         "theorem": 19
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "cf2af2c3f3282d441ec73c5724a525712cc2db3b1433994b2df7961cc48528a1": {
+      "byte_size": 32722,
+      "line_count": 638,
+      "imports": [
+        "Becoming.Grammar",
+        "Becoming.GrammarMap"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "«所经必同»",
+          "qualified_name_hint": "Becoming.«所经必同»",
+          "line": 80
+        },
+        {
+          "kind": "theorem",
+          "name": "«所经不同则不及»",
+          "qualified_name_hint": "Becoming.«所经不同则不及»",
+          "line": 106
+        },
+        {
+          "kind": "def",
+          "name": "«所缘同于»",
+          "qualified_name_hint": "Becoming.«所缘同于»",
+          "line": 116
+        },
+        {
+          "kind": "def",
+          "name": "«至终有常»",
+          "qualified_name_hint": "Becoming.«至终有常»",
+          "line": 121
+        },
+        {
+          "kind": "theorem",
+          "name": "«有常则至终有常»",
+          "qualified_name_hint": "Becoming.«有常则至终有常»",
+          "line": 125
+        },
+        {
+          "kind": "theorem",
+          "name": "«亡而网续则不至终有常»",
+          "qualified_name_hint": "Becoming.«亡而网续则不至终有常»",
+          "line": 131
+        },
+        {
+          "kind": "theorem",
+          "name": "«至终常闭则所缘同类»",
+          "qualified_name_hint": "Becoming.«至终常闭则所缘同类»",
+          "line": 140
+        },
+        {
+          "kind": "theorem",
+          "name": "«至终常闭则后皆续»",
+          "qualified_name_hint": "Becoming.«至终常闭则后皆续»",
+          "line": 152
+        },
+        {
+          "kind": "theorem",
+          "name": "«有常则同类者有所缘»",
+          "qualified_name_hint": "Becoming.«有常则同类者有所缘»",
+          "line": 166
+        },
+        {
+          "kind": "theorem",
+          "name": "«常闭则所缘同类»",
+          "qualified_name_hint": "Becoming.«常闭则所缘同类»",
+          "line": 173
+        },
+        {
+          "kind": "theorem",
+          "name": "«常闭则后皆续»",
+          "qualified_name_hint": "Becoming.«常闭则后皆续»",
+          "line": 181
+        },
+        {
+          "kind": "theorem",
+          "name": "«至终常闭则所及皆及»",
+          "qualified_name_hint": "Becoming.«至终常闭则所及皆及»",
+          "line": 192
+        },
+        {
+          "kind": "theorem",
+          "name": "«常闭则所及皆及»",
+          "qualified_name_hint": "Becoming.«常闭则所及皆及»",
+          "line": 200
+        },
+        {
+          "kind": "theorem",
+          "name": "«旁效随行»",
+          "qualified_name_hint": "Becoming.«旁效随行»",
+          "line": 208
+        },
+        {
+          "kind": "theorem",
+          "name": "«旁效随线»",
+          "qualified_name_hint": "Becoming.«旁效随线»",
+          "line": 219
+        },
+        {
+          "kind": "theorem",
+          "name": "«旁效不随则不至终有常»",
+          "qualified_name_hint": "Becoming.«旁效不随则不至终有常»",
+          "line": 231
+        },
+        {
+          "kind": "theorem",
+          "name": "«至终常类之闭当且仅当后皆同类»",
+          "qualified_name_hint": "Becoming.«至终常类之闭当且仅当后皆同类»",
+          "line": 240
+        },
+        {
+          "kind": "theorem",
+          "name": "«常类之闭当且仅当后皆同类»",
+          "qualified_name_hint": "Becoming.«常类之闭当且仅当后皆同类»",
+          "line": 251
+        },
+        {
+          "kind": "inductive",
+          "name": "Occ",
+          "qualified_name_hint": "Becoming.Unclosed.Occ",
+          "line": 266
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.Unclosed.step",
+          "line": 268
+        },
+        {
+          "kind": "def",
+          "name": "upper",
+          "qualified_name_hint": "Becoming.Unclosed.upper",
+          "line": 287
+        },
+        {
+          "kind": "def",
+          "name": "same",
+          "qualified_name_hint": "Becoming.Unclosed.same",
+          "line": 293
+        },
+        {
+          "kind": "theorem",
+          "name": "same_class",
+          "qualified_name_hint": "Becoming.Unclosed.same_class",
+          "line": 295
+        },
+        {
+          "kind": "theorem",
+          "name": "constant",
+          "qualified_name_hint": "Becoming.Unclosed.constant",
+          "line": 297
+        },
+        {
+          "kind": "theorem",
+          "name": "not_taken_in",
+          "qualified_name_hint": "Becoming.Unclosed.not_taken_in",
+          "line": 316
+        },
+        {
+          "kind": "inductive",
+          "name": "Occ",
+          "qualified_name_hint": "Becoming.Inconstant.Occ",
+          "line": 333
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.Inconstant.step",
+          "line": 335
+        },
+        {
+          "kind": "def",
+          "name": "upper",
+          "qualified_name_hint": "Becoming.Inconstant.upper",
+          "line": 346
+        },
+        {
+          "kind": "def",
+          "name": "same",
+          "qualified_name_hint": "Becoming.Inconstant.same",
+          "line": 351
+        },
+        {
+          "kind": "theorem",
+          "name": "same_class",
+          "qualified_name_hint": "Becoming.Inconstant.same_class",
+          "line": 353
+        },
+        {
+          "kind": "theorem",
+          "name": "not_all_follow",
+          "qualified_name_hint": "Becoming.Inconstant.not_all_follow",
+          "line": 357
+        },
+        {
+          "kind": "abbrev",
+          "name": "Occ",
+          "qualified_name_hint": "Becoming.FiniteFamilies.Occ",
+          "line": 382
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.FiniteFamilies.step",
+          "line": 385
+        },
+        {
+          "kind": "def",
+          "name": "family",
+          "qualified_name_hint": "Becoming.FiniteFamilies.family",
+          "line": 388
+        },
+        {
+          "kind": "def",
+          "name": "member",
+          "qualified_name_hint": "Becoming.FiniteFamilies.member",
+          "line": 391
+        },
+        {
+          "kind": "theorem",
+          "name": "family_class",
+          "qualified_name_hint": "Becoming.FiniteFamilies.family_class",
+          "line": 393
+        },
+        {
+          "kind": "theorem",
+          "name": "family_narrower",
+          "qualified_name_hint": "Becoming.FiniteFamilies.family_narrower",
+          "line": 396
+        },
+        {
+          "kind": "theorem",
+          "name": "one_not_constant",
+          "qualified_name_hint": "Becoming.FiniteFamilies.one_not_constant",
+          "line": 399
+        },
+        {
+          "kind": "theorem",
+          "name": "family_constant_to_end",
+          "qualified_name_hint": "Becoming.FiniteFamilies.family_constant_to_end",
+          "line": 406
+        },
+        {
+          "kind": "theorem",
+          "name": "member_not_constant_to_end",
+          "qualified_name_hint": "Becoming.FiniteFamilies.member_not_constant_to_end",
+          "line": 414
+        },
+        {
+          "kind": "theorem",
+          "name": "first_birth_held",
+          "qualified_name_hint": "Becoming.FiniteFamilies.first_birth_held",
+          "line": 424
+        },
+        {
+          "kind": "theorem",
+          "name": "family_takes_in_all",
+          "qualified_name_hint": "Becoming.FiniteFamilies.family_takes_in_all",
+          "line": 428
+        },
+        {
+          "kind": "theorem",
+          "name": "other_family_outside",
+          "qualified_name_hint": "Becoming.FiniteFamilies.other_family_outside",
+          "line": 434
+        },
+        {
+          "kind": "inductive",
+          "name": "Kind",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.Kind",
+          "line": 459
+        },
+        {
+          "kind": "abbrev",
+          "name": "Occ",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.Occ",
+          "line": 461
+        },
+        {
+          "kind": "def",
+          "name": "link",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.link",
+          "line": 464
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.step",
+          "line": 483
+        },
+        {
+          "kind": "def",
+          "name": "joined",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.joined",
+          "line": 486
+        },
+        {
+          "kind": "def",
+          "name": "held",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.held",
+          "line": 493
+        },
+        {
+          "kind": "def",
+          "name": "member",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.member",
+          "line": 496
+        },
+        {
+          "kind": "theorem",
+          "name": "held_class",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.held_class",
+          "line": 498
+        },
+        {
+          "kind": "theorem",
+          "name": "link_joined",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.link_joined",
+          "line": 500
+        },
+        {
+          "kind": "theorem",
+          "name": "link_self",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.link_self",
+          "line": 518
+        },
+        {
+          "kind": "theorem",
+          "name": "held_narrower",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.held_narrower",
+          "line": 525
+        },
+        {
+          "kind": "theorem",
+          "name": "one_not_constant",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.one_not_constant",
+          "line": 528
+        },
+        {
+          "kind": "theorem",
+          "name": "held_constant_to_end",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.held_constant_to_end",
+          "line": 534
+        },
+        {
+          "kind": "theorem",
+          "name": "first_birth_held",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.first_birth_held",
+          "line": 545
+        },
+        {
+          "kind": "theorem",
+          "name": "member_not_constant_to_end",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.member_not_constant_to_end",
+          "line": 549
+        },
+        {
+          "kind": "theorem",
+          "name": "reaches_other_past_end",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.reaches_other_past_end",
+          "line": 561
+        },
+        {
+          "kind": "theorem",
+          "name": "fourth_outside",
+          "qualified_name_hint": "Becoming.FiniteSharedCondition.fourth_outside",
+          "line": 568
+        },
+        {
+          "kind": "inductive",
+          "name": "Occ",
+          "qualified_name_hint": "Becoming.CleanStep.Occ",
+          "line": 582
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.CleanStep.step",
+          "line": 584
+        },
+        {
+          "kind": "def",
+          "name": "intended",
+          "qualified_name_hint": "Becoming.CleanStep.intended",
+          "line": 603
+        },
+        {
+          "kind": "def",
+          "name": "own",
+          "qualified_name_hint": "Becoming.CleanStep.own",
+          "line": 609
+        },
+        {
+          "kind": "theorem",
+          "name": "own_class",
+          "qualified_name_hint": "Becoming.CleanStep.own_class",
+          "line": 611
+        },
+        {
+          "kind": "theorem",
+          "name": "not_constant_to_end",
+          "qualified_name_hint": "Becoming.CleanStep.not_constant_to_end",
+          "line": 615
+        },
+        {
+          "kind": "theorem",
+          "name": "wake_follows",
+          "qualified_name_hint": "Becoming.AgentWithWake.wake_follows",
+          "line": 630
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 2,
+        "def": 19,
+        "inductive": 4,
+        "theorem": 42
       },
       "textual_markers": {
         "sorry": [],

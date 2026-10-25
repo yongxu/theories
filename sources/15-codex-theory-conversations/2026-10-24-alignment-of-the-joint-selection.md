@@ -37,3 +37,11 @@ Asked "Shall I land MA2 here now, without waiting for its claim to lapse?", Ren 
 > Yes: land MA2 here now, before its claim lapses. Merge main into ma2, re-home its text into the new chapters, run the core checker, take the queue.
 
 Context (AI-authored): MA2 was verified on branch `ma2` on 22 October and never reached main; its owner session had been idle since then, and under board rule 4 the claim would have lapsed only after three days. The reply authorizes taking the landing over before that. What the landing carried and changed is in study section 401.
+
+## Sharpening the goal's objective (25 October 2026)
+
+Asked "Shall I sharpen the generative-alignment goal's objective to the joint selection's three conditions?", Ren chose this reply, worded by the AI:
+
+> Yes: sharpen the generative-alignment goal's objective to the joint selection's three conditions (control not selected, a lock left in time, courses compared by widening), keeping its scope.
+
+Context (AI-authored): a goal record's scope and objective change only with Ren's approval. The objective of `_process/goals/generative-alignment.json` now states the three conditions in the account's terms. Its scope, premises and completion clause are unchanged. Its sources gain this conversation and the objective about the alignment community, and its results gain the records the conditions rest on so far: closed-capture, readers-drawn-from-the-selected and widening-as-what-every-weighting-ranks. MA3's record follows when it lands.
