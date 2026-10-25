@@ -94,7 +94,7 @@ These are readings. Each rests on the results named. The four readings on assist
   - The open side passed: every seed ended with restraint where restraint pays.
   - The locked side failed. In two of four settings, two of five seeds ended with a little restraint their reward does not reward, worth 92.5% to 98.2% of the best.
   - Post hoc, changing no verdict: every seed revised from its feedback, and the two failed settings are the two where the feedback separates the best threshold from the next least well.
-- **To be frozen before running:**
+- **Frozen and not run** (LA2 at `36c8b79cb`, LA3 at `b3a6b7b66`; model usage waits for approval). LA3 cannot refute result 7. In its game the expected scores compare exactly as result 7's classes do, so it tests whether a model selecting in context comes to the policy its own scores favour. A full pass of LA2 alone does not show that the judge read the loss notes.
   - LA2: a lock in a self-rewarding loop, where a judge formed from the model's own selected outputs leaves a loss unread (thesis T7).
   - LA3: whether a return that is kept or shared decides the sign of selection for shaping an evaluator (result 7).
 
