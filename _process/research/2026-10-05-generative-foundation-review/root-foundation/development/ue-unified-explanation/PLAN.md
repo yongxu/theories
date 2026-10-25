@@ -62,7 +62,7 @@ In the account's terms, the theory explains reality as one unfolding where four 
   - the contrast with counting the posterior at the time of choosing concerns a rule active inference does not use: it counts the end-of-trial posterior, close to the executed policy;
   - the pooling result is a reading of the pool law under its hypotheses.
 
-  What the kit adds is exactness for a simplified model and the edges of that exactness (a moved count, a stale rule, a change of score read late). A real third part needs a statement in the principle's literature that the theory forbids; the first candidate is a claim that belief sharing lets a collective respond to what no member couples to ([note](../ue1-fep-bridge/NOTE.md) §7).
+  What the kit adds is exactness for a simplified model and the edges of that exactness (a moved count, a stale rule, a change of score read late). A real third part needs a statement in the principle's literature that the theory forbids. The first candidate, a claim that belief sharing lets a collective respond to what no member couples to, was searched for and not found ([search](../ue1-fep-bridge/THIRD-PART-SEARCH.md): 16 claims from 15 papers). Seven claims are forbidden under a natural reading by other laws of the theory: symmetry (01's commuting law, 05 §9's shared codes) and joint excess. Each is a known result, and each forbids a verbal generalization, not a paper's simulation ([corrections](../ue1-fep-bridge/NOTE-CORRECTIONS.md) §3).
 
 - **What the audit found (UE0, [audit](../ue0-third-parts/AUDIT.md)).** Of the 21 rows of 08 §8 and §9, four have a third part, three of them distinct:
   - gated joint excess (row 7);
