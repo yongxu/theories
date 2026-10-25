@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 311 | 14,195 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 312 | 14,300 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -143,6 +143,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CompositionalFormation.lean](lean-declarations/inquiry.md#module-60bbe467c572) | Attainable inquiry, contact and process laws |
 | [CompositionalTransmission.lean](lean-declarations/inquiry.md#module-17e1d21d3551) | Attainable inquiry, contact and process laws |
 | [ConcernExtension.lean](lean-declarations/ethics.md#module-73fe52179f3c) | Normative grounding and generative direction |
+| [ConditionalWeights.lean](lean-declarations/becoming-core.md#module-151bbdf2e7b7) | Becoming pure core |
 | [ConnectedGenerativeModel.lean](lean-declarations/core.md#module-5fa095440b41) | Generative core and relational structure |
 | [ConnectedModel.lean](lean-declarations/core.md#module-5c73c09dd045) | Generative core and relational structure |
 | [ConnectionistRecovery.lean](lean-declarations/ethics.md#module-4b3906aa71e1) | Normative grounding and generative direction |

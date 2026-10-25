@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-434 registered results: 404 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 996 curated edges join 384 results to the results they draw on.
+436 registered results: 406 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1001 curated edges join 386 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -79,6 +79,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [comparison-where-the-rest-responds][] ← <a id="comparison-where-the-rest-responds--testing-within-couplings"></a>[testing-within-couplings][] · <a id="comparison-where-the-rest-responds--comparison-within-reach"></a>[comparison-within-reach][] · <a id="comparison-where-the-rest-responds--feedback-and-reach"></a>[feedback-and-reach][] · <a id="comparison-where-the-rest-responds--levels-of-closure"></a>[levels-of-closure][] · <a id="comparison-where-the-rest-responds--laws-of-one-step"></a>[laws-of-one-step][]
 - [comparison-within-reach][] ← <a id="comparison-within-reach--feedback-and-reach"></a>[feedback-and-reach][] · <a id="comparison-within-reach--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="comparison-within-reach--four-cases-of-a-part"></a>[four-cases-of-a-part][] · <a id="comparison-within-reach--levels-of-closure"></a>[levels-of-closure][] · <a id="comparison-within-reach--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][] · <a id="comparison-within-reach--loss-beyond-a-region"></a>[loss-beyond-a-region][]
 - [condition-correspondence-discipline][] ← <a id="condition-correspondence-discipline--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="condition-correspondence-discipline--metaethical-core-characterization"></a>[metaethical-core-characterization][]
+- [conditioning-by-restriction][] ← <a id="conditioning-by-restriction--fulfillment-chance-floor"></a>[fulfillment-chance-floor][] · <a id="conditioning-by-restriction--sum-over-histories-exact"></a>[sum-over-histories-exact][]
 - [conditions-kept-together][] ← <a id="conditions-kept-together--becoming-renewal-reading"></a>[becoming-renewal-reading][] · <a id="conditions-kept-together--where-a-run-goes-on"></a>[where-a-run-goes-on][]
 - [configurations-alike-by-relation][] ← <a id="configurations-alike-by-relation--joint-difference-making"></a>[joint-difference-making][] · <a id="configurations-alike-by-relation--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="configurations-alike-by-relation--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="configurations-alike-by-relation--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="configurations-alike-by-relation--branching-tests-bisimulation"></a>[branching-tests-bisimulation][]
 - [confined-rise-within-a-whole][] ← <a id="confined-rise-within-a-whole--groups-whose-conditions-are-coupled"></a>[groups-whose-conditions-are-coupled][] · <a id="confined-rise-within-a-whole--groups-formed-by-descent"></a>[groups-formed-by-descent][] · <a id="confined-rise-within-a-whole--selection-term-over-generations"></a>[selection-term-over-generations][]
@@ -121,6 +122,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [every-origin-passes-the-gate][] ← <a id="every-origin-passes-the-gate--organizational-rule-inheritance"></a>[organizational-rule-inheritance][]
 - [evolution-on-descent][] ← <a id="evolution-on-descent--living-on-and-descent"></a>[living-on-and-descent][] · <a id="evolution-on-descent--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="evolution-on-descent--more-needs-renewers"></a>[more-needs-renewers][] · <a id="evolution-on-descent--generation-is-replenishment"></a>[generation-is-replenishment][]
 - [exchanges-commute-unless-joined][] ← <a id="exchanges-commute-unless-joined--only-the-order-of-change-shows"></a>[only-the-order-of-change-shows][]
+- [exit-from-a-margin][] ← <a id="exit-from-a-margin--typicality-by-counting"></a>[typicality-by-counting][] · <a id="exit-from-a-margin--fulfillment-chance-floor"></a>[fulfillment-chance-floor][] · <a id="exit-from-a-margin--conditioning-by-restriction"></a>[conditioning-by-restriction][]
 - [experiment-needs-return][] ← <a id="experiment-needs-return--joint-difference-making"></a>[joint-difference-making][] · <a id="experiment-needs-return--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="experiment-needs-return--testing-within-couplings"></a>[testing-within-couplings][]
 - [far-conveying-runs-the-family-down][] ← <a id="far-conveying-runs-the-family-down--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][]
 - [feedback-and-reach][] ← <a id="feedback-and-reach--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="feedback-and-reach--levels-of-closure"></a>[levels-of-closure][] · <a id="feedback-and-reach--four-cases-of-a-part"></a>[four-cases-of-a-part][]
@@ -468,6 +470,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [comparison-where-the-rest-responds]: theories/becoming/results/records/comparison-where-the-rest-responds.md
 [comparison-within-reach]: theories/becoming/results/records/comparison-within-reach.md
 [condition-correspondence-discipline]: theories/becoming/results/records/condition-correspondence-discipline.md
+[conditioning-by-restriction]: theories/becoming/results/records/conditioning-by-restriction.md
 [conditions-kept-together]: theories/becoming/results/records/conditions-kept-together.md
 [configurations-alike-by-relation]: theories/becoming/results/records/configurations-alike-by-relation.md
 [confined-rise-within-a-whole]: theories/becoming/results/records/confined-rise-within-a-whole.md
@@ -515,6 +518,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [evolution-on-descent]: theories/becoming/results/records/evolution-on-descent.md
 [exchanges-commute-unless-joined]: theories/becoming/results/records/exchanges-commute-unless-joined.md
 [exclusive-footprint-support]: theories/becoming/results/records/exclusive-footprint-support.md
+[exit-from-a-margin]: theories/becoming/results/records/exit-from-a-margin.md
 [experiment-needs-return]: theories/becoming/results/records/experiment-needs-return.md
 [fallible-witness-diagnosability]: theories/becoming/results/records/fallible-witness-diagnosability.md
 [far-conveying-runs-the-family-down]: theories/becoming/results/records/far-conveying-runs-the-family-down.md
@@ -540,6 +544,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [formed-software-continuation]: theories/becoming/results/records/formed-software-continuation.md
 [forming-anew-necessary-and-sufficient]: theories/becoming/results/records/forming-anew-necessary-and-sufficient.md
 [four-cases-of-a-part]: theories/becoming/results/records/four-cases-of-a-part.md
+[fulfillment-chance-floor]: theories/becoming/results/records/fulfillment-chance-floor.md
 [functional-joining-common-structure]: theories/becoming/results/records/functional-joining-common-structure.md
 [generalization-through-lumping]: theories/becoming/results/records/generalization-through-lumping.md
 [generation-and-degeneration-at-two-grains]: theories/becoming/results/records/generation-and-degeneration-at-two-grains.md

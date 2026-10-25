@@ -106,6 +106,7 @@ Ren, 16 October 2026: “we are describing what everything obeys, but at every m
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json) | — |
 
 Aliases: `Becoming.Undecided.upto`, `Becoming.Situations.sum_upto`, `Becoming.Situations.sum_one`, `Becoming.Situations.finerLaw`, `Becoming.Situations.finerLaw_determined`, `Becoming.Situations.finerLaw_step_iff`, `Becoming.Situations.finerSteps`, `Becoming.Situations.finer`, `Becoming.Situations.coarse`, `Becoming.Situations.sum_finer`, `Becoming.Situations.finer_count`, `Becoming.Situations.sum_courses_values`, `Becoming.Situations.situations_count`, `Becoming.Situations.mul_indicator`, `Becoming.Situations.total_only`, `Becoming.Situations.situations_of_course`, `Becoming.Situations.far`, `Becoming.Situations.weight_far`, `Becoming.Situations.situations_typical`
 

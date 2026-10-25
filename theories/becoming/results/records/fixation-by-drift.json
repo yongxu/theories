@@ -283,7 +283,7 @@
         "Becoming.Typicality.total_weight",
         "Becoming.Typicality.total_congr_mem"
       ],
-      "sha256": "904976890149379d5d5e061cebf97235035ed94091985003ff51801b52e1d8a3"
+      "sha256": "9eacd128aa74fe2651784e16421008e5f1447b9f9351be5bd2ab51cb0de6bc98"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json",
@@ -310,6 +310,12 @@
       "role": "receipt",
       "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
+      "role": "receipt",
+      "sha256": "8daf4987d18687825a9b30b0786f9a0349a4a901d98b25f80ace9ec43a4d7f7f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -322,7 +328,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Typicality",
       "success_pointer": "/status",
       "success_value": "passed"

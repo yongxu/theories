@@ -1,9 +1,9 @@
-# UE5 scratch build log
+# UE5 scratch build log (revision against REVIEW-UE5.md)
 # command: cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue5-pace-of-selection/tree
-# checkout HEAD: 47b780e1cbc700d1ab0b7d3fb73aaa9195b6bd27
+# checkout HEAD: 94676cb2cea8affb4897fb94c5aa7e04943633f6
 # lean: leanprover/lean4:v4.29.1
-# source sha256: 893cce815f33d5f7321e0c7cbdea5c49879e7ffd5aa47bbccb26f17bea884487  tree/Becoming/SelectionPace.lean
-# utc: 2026-10-25T14:14:04Z
+# source sha256: 92556df7caaa3c29562aff87b652c36d400e64ff8ce052f734803433c307a3ca  tree/Becoming/SelectionPace.lean
+# utc: 2026-10-25T16:01:52Z
 
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue5-pace-of-selection/tree",
@@ -16,8 +16,8 @@
   "unclean": [],
   "audits": {
     "Becoming.SelectionPace": {
-      "theorems": 43,
-      "declarations": 84,
+      "theorems": 103,
+      "declarations": 224,
       "with_axioms": {}
     }
   }

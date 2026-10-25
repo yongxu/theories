@@ -1232,6 +1232,18 @@
    "page": "theories/becoming/results/records/conditional-foundation-assessment.md"
   },
   {
+   "id": "record:conditioning-by-restriction",
+   "type": "result",
+   "record": "conditioning-by-restriction",
+   "title": "Conditioning by restriction, shares and a generative model's posterior",
+   "title_zh": "以限制为条件、份额与生成模型之后验",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/conditioning-by-restriction.md"
+  },
+  {
    "id": "record:conditions-kept-together",
    "type": "result",
    "record": "conditions-kept-together",
@@ -1842,6 +1854,18 @@
    "region": "root",
    "base": "general",
    "page": "theories/becoming/results/records/exclusive-footprint-support.md"
+  },
+  {
+   "id": "record:exit-from-a-margin",
+   "type": "result",
+   "record": "exit-from-a-margin",
+   "title": "The exit from a margin, and what a record of the course says of it",
+   "title_zh": "离开边距，及历程之记录对其所言",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/exit-from-a-margin.md"
   },
   {
    "id": "record:experiment-needs-return",
@@ -8064,9 +8088,20 @@
    "type": "module",
    "name": "Becoming.Typicality",
    "level": "L1",
-   "theorems": 40,
+   "theorems": 52,
    "region": "knowing",
    "base": "frame",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ConditionalWeights",
+   "type": "module",
+   "name": "Becoming.ConditionalWeights",
+   "level": "L1",
+   "theorems": 93,
+   "region": "knowing",
+   "base": "general",
    "on_grammar": false,
    "reaches_grammar": true
   },
@@ -27038,6 +27073,12 @@
    "anchor": "r-margin-of-a-regime"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-exit-from-a-margin",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-exit-from-a-margin"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-threshold-in-the-state-plane",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
@@ -27498,6 +27539,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
    "anchor": "r-typicality-by-counting"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-conditioning-by-restriction",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-conditioning-by-restriction"
   },
   {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-split-that-makes-sense",
@@ -29248,6 +29295,11 @@
   {
    "from": "module:Becoming.Composition",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ConditionalWeights",
+   "to": "module:Becoming.Typicality",
    "type": "imports"
   },
   {
@@ -35621,6 +35673,31 @@
    "type": "related"
   },
   {
+   "from": "record:conditioning-by-restriction",
+   "to": "module:Becoming.ConditionalWeights",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:conditioning-by-restriction",
+   "to": "module:Becoming.Weighted",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:conditioning-by-restriction",
+   "to": "record:fulfillment-chance-floor",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conditioning-by-restriction",
+   "to": "record:sum-over-histories-exact",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conditioning-by-restriction",
+   "to": "record:weights-count-situations",
+   "type": "related"
+  },
+  {
    "from": "record:conditions-kept-together",
    "to": "module:Becoming.JointKeeping",
    "type": "proved-in"
@@ -37929,6 +38006,51 @@
    "from": "record:exclusive-footprint-support",
    "to": "record:draws-on-a-shared-stock",
    "type": "related"
+  },
+  {
+   "from": "record:exit-from-a-margin",
+   "to": "module:Becoming.ConditionalWeights",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:exit-from-a-margin",
+   "to": "module:Becoming.Typicality",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:exit-from-a-margin",
+   "to": "module:Becoming.Weighted",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:exit-from-a-margin",
+   "to": "record:conditioning-by-restriction",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:exit-from-a-margin",
+   "to": "record:drift-offspring-sampled",
+   "type": "related"
+  },
+  {
+   "from": "record:exit-from-a-margin",
+   "to": "record:fulfillment-chance-floor",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:exit-from-a-margin",
+   "to": "record:margin-of-a-regime",
+   "type": "related"
+  },
+  {
+   "from": "record:exit-from-a-margin",
+   "to": "record:slowing-down-before-an-own-end",
+   "type": "related"
+  },
+  {
+   "from": "record:exit-from-a-margin",
+   "to": "record:typicality-by-counting",
+   "type": "formal-reuse"
   },
   {
    "from": "record:experiment-needs-return",
@@ -52561,6 +52683,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-exit-from-a-margin",
+   "to": "record:exit-from-a-margin",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-far-conveying-runs-the-family-down",
    "to": "record:far-conveying-runs-the-family-down",
    "type": "states"
@@ -52903,6 +53030,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-claims-shown-in-context",
    "to": "record:claims-shown-in-context",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-conditioning-by-restriction",
+   "to": "record:conditioning-by-restriction",
    "type": "states"
   },
   {

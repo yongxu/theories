@@ -1,6 +1,6 @@
 # AJ: alignment of the joint selection (plan)
 
-24 October 2026, brought up to date late on 25 October 2026. AI-authored plan for the coordination of this line ([source of the goal](../../../../../../sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md)). It states the goal in the account's terms, argues for that representation, lists what is on main and what is missing, and orders the path. The board shows the path and holds the claims ([board](../../../../../BECOMING-WORKBOARD.md)); results are stated in their records and home sections, not here.
+24 October 2026, brought up to date on 26 October 2026. AI-authored plan for the coordination of this line ([source of the goal](../../../../../../sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md)). It states the goal in the account's terms, argues for that representation, lists what is on main and what is missing, and orders the path. The board shows the path and holds the claims ([board](../../../../../BECOMING-WORKBOARD.md)); results are stated in their records and home sections, not here.
 
 ## 1. The goal
 
@@ -8,7 +8,7 @@ The goal is the missing connection of an existing scope, [generative alignment](
 
 **An alignment of the joint selection.** Humans, institutions and trained systems select together, and that joint selection is what is aligned. It is aligned where three conditions hold:
 
-1. **Control is not selected.** Capacity to shape the rule is not itself selected, because what shaping brings back to the shapers alone does not cover its cost: at each step (`c ≤ s` fails) and across the steps the selection runs (`stretch_iff`). *Proved:* [MA3](../../../../../../theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md), landed 25 October. *Joined to who reads:* MA4, claimed (§4, step 6).
+1. **Control is not selected.** Capacity to shape the rule is not itself selected, because what shaping brings back to the shapers alone does not cover its cost: at each step (`c ≤ s` fails) and across the steps the selection runs (`stretch_iff`). *Proved:* [MA3](../../../../../../theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md), landed 25 October. *Joined to who reads:* MA4, reviewed and ready to land (§4, step 6).
 2. **A lock is left in time.** Where a lock forms, the selection leaves it by reading what lies beyond its share before the loss passes its point of no return. *Proved under named premises:* [closed capture](../../../../../../theories/becoming/results/records/closed-capture.md), with timing from MA2 ([readers drawn from the selected](../../../../../../theories/becoming/results/records/readers-drawn-from-the-selected.md), landed 25 October).
 3. **Courses are compared by widening.** Every positive weighting ranks a widening higher, and widening ranks no narrowing above what it narrows. *Proved:* [widening by every weighting](../../../../../../theories/becoming/results/records/widening-as-what-every-weighting-ranks.md).
 
@@ -20,7 +20,7 @@ Whose losses count is the continuation condition, and that widening is better is
 - *A single scalar of any kind.*
 - *A final state.* Completion is not closure ([08 §12](../../../../../../theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws)).
 
-**Instrumental convergence and the meta-attractor.** Instrumental convergence is the one-agent case of condition 1's failure: a long-horizon optimizer keeps its own base at the level of greatest renewal and breaks at once every dependence that needs more ([horizon optima](../../../../../../theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md)). The [meta-attractor](../../../../../../theories/meta-attractor/README.md) is the failure of conditions 1 and 2 together: control over the selection is selected, and the rule it shapes locks. That the two failures are one loop where the rule's readers are drawn from those it selects is what MA4 is to prove; until it lands, the sentence is the plan's reading.
+**Instrumental convergence and the meta-attractor.** Instrumental convergence is the one-agent case of condition 1's failure: a long-horizon optimizer keeps its own base at the level of greatest renewal and breaks at once every dependence that needs more ([horizon optima](../../../../../../theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md)). The [meta-attractor](../../../../../../theories/meta-attractor/README.md) is the failure of conditions 1 and 2 together: control over the selection is selected, and the rule it shapes locks. That the two failures are one loop where the rule's readers are drawn from those it selects, and the shapers among them read at least as much coming back to the shapers as the others do, is what MA4 proves: above a critical mass one start condition gives both. Below it control is not selected, yet the rule is still read from the share alone and locked the other way, so condition 1 does not by itself give condition 2. Until MA4 is on main the sentence stays the plan's reading.
 
 ## 2. Why this representation
 
@@ -55,10 +55,11 @@ Whose losses count is the continuation condition, and that widening is better is
 - **AJ2**, the readings for alignment, in 07 §6 as decision D68 (`5f3e932d3`; the assistance reading in its strict form, `64f35f1e1`).
 - **AJ4's dossier** for alignment researchers, the review packet's fifth (`bccbac9f8`, `theories/becoming/review/ALIGNMENT.md`), on Ren's choice of 25 October; two independent review passes taken. Sending the packet stays Ren's step.
 - **LA1** scored (`0c2163ae3`; in T3's evidence in 05, `a327da923`, and in the dossier). The open side passed, every seed ending with restraint where it pays. On the locked side two of four settings failed, two of five seeds each ending with a little restraint its reward does not reward, worth 92.5% to 98.2% of the best. By the frozen reading the failures count against the claim for in-context selection by this model. The post hoc reading, that the failed settings are those whose feedback separates the best threshold from the next least well, is a hypothesis for a frozen follow-up, not a rescue.
-- **LA2 and LA3** frozen (`36c8b79cb`, `b3a6b7b66`) and running since `16bde61fa`, on Ren's yes; their verdicts are reported as they fall.
+- **LA2** run (`1e2b99d26`; in T7's evidence in 02 and 08 and in the dossier, `25e8a8fc0`). Every frozen verdict passed and the bridge failed: one note of the loss among nine readers turned the judge, so T7's third forbidden case occurs in this system and MA2's timing law does not apply to this judge.
+- **LA3** frozen (`b3a6b7b66`) and running since `16bde61fa`, on Ren's yes; its verdicts are reported as they fall.
 
 **Missing:**
-1. A theorem joining what comes back to the shapers with MA2's readers (MA3's record names it as next): MA4, claimed.
+1. A theorem joining what comes back to the shapers with MA2's readers (MA3's record names it as next): MA4, reviewed, ready to land.
 2. A frozen follow-up that tells LA1's two readings of its locked-side failure apart (feedback that barely resolves the best threshold; a restraint the model brings from training).
 3. The one page for alignment readers (AJ4's draft, `development/aj4-alignment-readers/DRAFT-ONE-PAGE.md`).
 4. A reading of a loss by the disfavoured once the shapers pass the critical mass (where MA2's timing meets MA4), a candidate after MA4.
@@ -79,19 +80,19 @@ Pace, as the board's *Now* section and [08 §12](../../../../../../theories/beco
 
 **Step 5. AJ4: the dossier landed** (`bccbac9f8`); the one page is in draft with AJ4's holder. It is not a paper.
 
-**Step 6. MA4: what comes back to the shapers, read by readers drawn from the selected** (claimed 25 October 2026 by this plan's session). MA3's rule after shaping is read by readers drawn from the population as it counts them, each shaper among them reading what comes back to the shapers alone as `hi` and each other as `lo` (MA2's pool of two of MA3's rules). Statements to prove:
-- the rule read reads the share exactly where `lo ≤ hi`, so MA3's premise on the loop (what comes back monotone in the share) is derived from who reads;
-- at a share the rule favours the shapers exactly where `(x.carrier + x.other) · c ≤ x.carrier · hi + x.other · lo`, whatever `a` and `p`: with `lo < c < hi` a critical mass of shapers decides, and what every member receives does not move it;
-- from a start where the rule read favours, the shapers' share is never again below its start and every later configuration is locked: the selection for control over the selection and the lock of the rule it shapes are one loop; from a start where it disfavours, the share is never again above its start; strictly where strict;
-- a witness: the same gain from their own readers, three at a cost of one, selects the capacity from one shaper to each other and not from one to three.
+**Step 6. MA4: what comes back to the shapers, read by readers drawn from the selected** (claimed 25 October 2026 by this plan's session; drafted, reviewed once by an independent reader, every finding taken but one left to RuleCapture's owner; ready to land). MA3's rule after shaping is read by readers drawn from the population as it counts them, each shaper among them reading what comes back to the shapers alone as `hi` and each other as `lo` (MA2's pool of two of MA3's rules; `Becoming.DrawnShaping`, kit `development/ma4-drawn-shaping/`). What it proves:
+- the rule read reads the share monotonically exactly where `lo ≤ hi`, so MA3's premise on the loop is moved to who reads, not removed; where `hi ≤ lo` it reads against the share;
+- at a share the rule favours the shapers exactly where `x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo`, whatever `a` and `p`; it favours them at every share exactly where `c ≤ lo` and `c ≤ hi`, at none exactly where `lo < c` and `hi ≤ c`, and with `lo ≤ hi` a share decides, a critical mass, exactly where `lo < c < hi`;
+- with `lo ≤ hi`, from a start under the rule read there, the course is locked in the shapers' favour and their share never below the start where the rule favours them, and locked the other way and the share never above where it favours the others, so every such course is locked one way at every step; strictly where strict;
+- witnesses: three read as coming back at a cost of one selects the capacity from one shaper to each other and not from one to three, where the course is still locked, the other way; and without `lo ≤ hi` a favoured start need not be locked.
 
-Expected standing: elementary. It is the bistability of positive frequency-dependent selection, and the threshold models of Schelling (1971, 1978) and Granovetter (1978) and Arthur's lock-in under increasing returns (1989) are to be credited. What it adds is the join on the spine: MA3's loop with its premise derived from MA2's readers, and MA3's assumed threshold (`thresholdBack`) replaced by one derived from who reads. A new leaf module of the pure core, changing neither `RuleShaping` nor `ClosedCapture`; an independent review before the landing.
+Standing after the review: elementary. Where `lo < c < hi` it is the stag hunt, its critical mass the mixed equilibrium; reading at every step is discrete-time replicator selection; the threshold models of Schelling (1973, 1978) and Granovetter (1978) and Arthur's lock-in (1989) are credited, and so is the noise bound: under rare mutation the long-run state is the risk-dominant one (Kandori, Mailath and Rob 1993; Young 1993), capture by the shapers wherever `2c < hi + lo`. The lock half is near-definitional; what is new on the spine is the critical-mass computation. It does not show the two conditions independent: every course read from the share alone is locked one way or the other, so leaving needs a reading beyond the share, which is MA2's timing and is not joined (a candidate MA4b, §3).
 
 ## 5. What a good job is, as its readers will judge it
 
 The best predictor of how alignment researchers will read this line is how the four AI reviewers read the meta-attractor's conference paper on 2 October 2026. They found three faults, and where each stands:
-- *The alignment claims were not in the model.* MA3 and AJ2 put the claim for control over the selection in the model, with its conditions. That the meta-attractor's two failures are one loop is still a reading until MA4 lands.
-- *The mathematics was classical and presented as new.* Each record says which comparison is elementary and what is added, and the dossier credits supervisory control and the selection literature; MA4's record is to credit frequency dependence and threshold models.
+- *The alignment claims were not in the model.* MA3 and AJ2 put the claim for control over the selection in the model, with its conditions. That the meta-attractor's two failures are one loop is proved by MA4 under its premises, and stays a reading until MA4 is on main.
+- *The mathematics was classical and presented as new.* Each record says which comparison is elementary and what is added, and the dossier credits supervisory control and the selection literature; MA4's record credits the stag hunt, threshold models, lock-in and the noise bound.
 - *Nothing was measured.* LA1 measured, and its failures are reported first; LA2 and LA3 are running.
 
 Two further conditions: one page that a reader finishes, and positioning against the closest work (in MA3's record and the dossier).
@@ -110,7 +111,7 @@ Two further conditions: one page that a reader finishes, and positioning against
 | MA2 | its 22 October owner session; landing taken over on Ren's yes by this plan's session | landed 25 October 2026 (`7bdacfc28`) |
 | MA3, MA3a | the fork of the unification-and-coherence conversation that claimed MA3 | landed 25 October 2026 (`b68a7040e`, `4e3059af8`) |
 | AJ2, AJ4 | the third fork of the same conversation | AJ2 landed (`5f3e932d3`); AJ4's dossier landed (`bccbac9f8`), the one page in draft |
-| AJ3 (LA2, LA3) | a side session of the third fork | frozen; running since `16bde61fa` |
+| AJ3 (LA2, LA3) | a side session of the third fork | LA2 run (`1e2b99d26`); LA3 running since `16bde61fa` |
 | LA1 | the session that froze and ran it | scored (`0c2163ae3`) |
-| AJ (this plan), MA4 | the coordinating session of this plan (fork 2 of the same conversation) | plan current; MA4 claimed 25 October 2026 |
+| AJ (this plan), MA4 | the coordinating session of this plan (fork 2 of the same conversation) | plan current; MA4 reviewed, ready to land after UE2 |
 | Model usage for tests; sending the packet; the goal's scope | Ren | usage for LA1 to LA3 given; the packet not yet sent |

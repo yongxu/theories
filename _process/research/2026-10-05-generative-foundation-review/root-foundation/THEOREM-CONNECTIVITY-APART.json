@@ -4021,6 +4021,161 @@
    "module": "Becoming.GrammarPath",
    "category": "general-structure",
    "reason": "where an occurrence alike to a member conditions something but nothing alike to an effect that leaves the class, the class is not constant up to the net's end: PF2's form, kept as the corollary of «出类不随则本类不至终有常» (rule 9): a law of every relation and class on any carrier"
+  },
+  "Becoming.ConditionalWeights.Share.le_refl": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "support",
+   "reason": "an arithmetic or list lemma, or a one-line unpacking of the module's own definitions"
+  },
+  "Becoming.ConditionalWeights.Share.le_trans": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.Share.mul_le_mul": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.Share.zero_whole": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.Witness.le_not_transitive": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "model-witness",
+   "reason": "a witness on one constructed weighting or pair of shares (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.Witness.positive_part_zero_whole": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "model-witness",
+   "reason": "a witness on one constructed weighting or pair of shares (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.Witness.prior_not_share": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "model-witness",
+   "reason": "a witness on one constructed weighting or pair of shares (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.Witness.record_reverses": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "model-witness",
+   "reason": "a witness on one constructed weighting or pair of shares (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.Witness.within_exceeds_end": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "model-witness",
+   "reason": "a witness on one constructed weighting or pair of shares (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.deviates_bound": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of the courses of Becoming.Typicality read at a margin (the exit from a margin and what a record of the course says of it), with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.fallsTo_bound": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of the courses of Becoming.Typicality read at a margin (the exit from a margin and what a record of the course says of it), with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.fallsTo_succ": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "support",
+   "reason": "an arithmetic or list lemma, or a one-line unpacking of the module's own definitions"
+  },
+  "Becoming.ConditionalWeights.fallsWithin_reciprocal": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of the courses of Becoming.Typicality read at a margin (the exit from a margin and what a record of the course says of it), with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.mass_restrict_le": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.mass_split": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.posterior_le_iff_single": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.posterior_single": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.prior_share": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.record_bound": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of the courses of Becoming.Typicality read at a margin (the exit from a margin and what a record of the course says of it), with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.record_share": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of the courses of Becoming.Typicality read at a margin (the exit from a margin and what a record of the course says of it), with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.restrict_comm": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.restrict_independent": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.restrict_le": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.restrict_restrict": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.restrict_two_ways": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.share_le_of_included": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.share_meetsEach": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.share_product_le": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.share_product_le_right": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.share_zero_whole": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "general-structure",
+   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
+  },
+  "Becoming.ConditionalWeights.whole_of_entries": {
+   "module": "Becoming.ConditionalWeights",
+   "category": "support",
+   "reason": "an arithmetic or list lemma, or a one-line unpacking of the module's own definitions"
   }
  },
  "instances": {

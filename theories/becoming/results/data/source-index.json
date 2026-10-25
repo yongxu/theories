@@ -44,6 +44,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Closing.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Commuting.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
@@ -559,6 +560,8 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/REVIEW-UE1.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/REVIEW-UE2.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/LANDING.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/REVIEW-UE4.md",
@@ -1553,6 +1556,18 @@
         "theories/becoming/chapters/03-KNOWING.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-3-CANDIDATE-4.md": {
+      "title": "UE6 round 3: candidate 4, a coupling rate for several optimizers",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ASTRA-NOVELTY.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-2-ROOT.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/round-3-build.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/tree/Becoming/CoupledDrawers.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+        "theories/becoming/chapters/05-COLLECTIVES.md"
+      ]
+    },
     "experiments/integrated-correction/general-framework/generative-basis/ecological-selection/contextual-establishment/README.md": {
       "title": "Establishment observations and surface-selection correspondence",
       "local_links": [
@@ -1741,6 +1756,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Commuting.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContactCourses.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Contacts.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
@@ -2053,6 +2069,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Closing.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Contacts.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
@@ -4504,6 +4521,8 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/priority-identification-verification.json",
+        "experiments/self-rewarding-lock/README.md",
+        "experiments/shaping-what-comes-back/README.md",
         "experiments/valuer-agreement/README.md",
         "sources/15-codex-theory-conversations/2026-10-10-wanting-continuation-one-axiom.md",
         "theories/becoming/chapters/01-ROOT.md",
@@ -4555,7 +4574,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tail.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T160649.851818Z/verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",

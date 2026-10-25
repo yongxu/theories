@@ -1,0 +1,30 @@
+# UE6: the search for results no neighbouring field states, and its verdict
+
+AI-written, 26 October 2026, for board item UE6. A bounded search, not established novelty and not established absence: three rounds, each by a different reader, each with a literature search, each written down in this folder.
+
+## The question
+
+UE0's audit concluded that the theory reaches farther than each framework it contains taken alone, and not farther than the sciences taken together ([AUDIT](../ue0-third-parts/AUDIT.md) §7). 08 §8 names what would change that verdict: a theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker. UE6 looked for the first, and records where the other two stand.
+
+## What was searched
+
+| Round | Reader | Over | Found |
+|---|---|---|---|
+| 1 ([brief](BRIEF-astra-novelty.md), [answer](ASTRA-NOVELTY.md)) | GPT astra, high effort, read-only with web search | UE0 §8's eight ranked candidates, and new combinations of the model laws | No survivor. Closer prior statements than UE0 had: Arnold and Wade 1984 (the selection differential bounded by the spread of fitness), Bertsimas and Popescu 2005 (sharp one-sided moment bounds, stronger than the Chebyshev form), Juhás, Lehocki and Lorenz 2007 (concurrent enabling of Petri-net transitions by summed requirements), Albarracin and others 2024 (component resilience depleting a collective's resources under active inference), Sampath and others 1995 (diagnosability under observational equivalence), Reeb and Wolf 2014 with Sagawa 2014 (Landauer's bound, and why logical irreversibility is not exergy destruction). Candidate 4 unlocated and underspecified. Two new combinations proposed and withdrawn by the reader as foreseeable. |
+| 2 ([answer](ROUND-2-ROOT.md)) | Opus, high effort, read-only with web search | the root: 22 of the grammar's laws or groups (continuation relative to a class, the core, the map at two grains, the path laws, the class of being joined, feeding read with time) | 18 known, 4 restated, none new. Constancy is the simulation condition, and for a symmetric class bisimulation, so the core is the greatest bisimulation within the class (Park, Milner, Paige and Tarjan); the map laws are branching-time temporal logic; the path laws are lumpability and closed classes (Kemeny and Snell); the flame law is the rank theorem for well-founded graphs. Every root law holds in every model, so it forbids no observation. The one correspondence not found in print, persistence under a sortal read as the greatest bisimulation within it, unifies vocabulary and forbids nothing new. |
+| 3 ([answer](ROUND-3-CANDIDATE-4.md), Lean in [tree](tree/Becoming/CoupledDrawers.lean)) | Opus, xhigh effort, with web search and Lean | candidate 4, the one left unlocated: a coupling for each step a dependence is met, given to each of several optimizers over a horizon | False as UE0 states it. Drawers in turn with the coupling below the need drain the condition at every perfect profile; drawers at once with no pivotal drawer drain it at every coupling. The exact law that survives, kept exactly where the coupling exceeds the need for drawers in turn, broken where it falls short, with the renewal forgone and the joint capacity dropping out, is a specialization of threshold provision with a pivotal contributor (Palfrey and Rosenthal 1984; Bagnoli and Lipman 1989; Erev and Rapoport 1990) and of known thresholds in dynamic commons (Barrett 2013; Diekert 2017). Scratch module `Becoming.CoupledDrawers`, 57 theorems in 72 declarations, every axiom report empty; a working build, not a receipt. |
+
+## The verdict
+
+**No result was found that no neighbouring field states.** UE0's verdict stands and is now checked three ways: the theory reaches farther than each framework alone, not farther than the sciences together. Its contribution is the joining, one account with its premises in one place, together with its generality (every order rising with what couples in, every relation, every renewal law) and its exactness (necessary and sufficient, with witnesses on both sides). Neither makes a forbidden statement new.
+
+Of the other two routes of 08 §8:
+
+- **A prediction that could fail and does not.** The frozen tests on trained systems are the live route. LA1 (scored 25 October) passed on its open side and failed on its locked side in two of four settings; by its frozen reading the failures count against the claim for in-context selection by that model. LA2 and LA3 are running from their frozen files, under AJ3's owner. A pass would be an empirical result about a trained system, which no field states for these systems, while the law it tests stays a known one.
+- **A premise derived from something weaker.** Not attempted here. Round 1 found that Landauer's bound alone does not supply the World's least loss (`EntropyProduction.DestroysAtLeast`): heat exported is not exergy destroyed (Sagawa 2014). Such a derivation would lessen what the theory assumes; it would not make a result new to the sciences.
+
+## What follows
+
+- **For the UE plan** (its owner's): the candidates of §3 are searched; candidate 4 should not be cited as a candidate; the ranked list stands closed with none surviving. What would reach farther is a law no field has a form of, and the search found the root's laws to be the known mathematics of simulation and lumping. The route left is the tests.
+- **For chapter 05** (the optimum's owner, after OU3b lands): `Becoming.CoupledDrawers` is a verified correction that a one-optimizer law does not carry to several. Drawers in turn keep a dependence exactly where the coupling for each step exceeds the need, whatever the renewal forgone, because the last drawer of a step decides whether the need is met and has no stake after it. It is near-definitional beside threshold provision and is kept in this folder until it is claimed and landed. No live text was found carrying the step-coupling law over to several optimizers (searched: chapters, the alignment dossier).
+- **For 08 §8:** nothing changes. Its verdict and its sentence on what would change the verdicts stand.
