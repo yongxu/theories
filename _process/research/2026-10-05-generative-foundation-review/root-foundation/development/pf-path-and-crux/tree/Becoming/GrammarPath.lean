@@ -29,7 +29,8 @@ states them for every carrier, relation and class.
   world, where every line ends, no class with a continuation step is constant (`FiniteDescent`: not
   even the one). The laws above hold under a weaker condition: *constancy up to the net's end*
   (`«至终有常»`), where a line under the class ends only where the net itself ends there, not while
-  what it is alike to goes on. Constancy gives it (`«有常则至终有常»`), and under it, for a closed member
+  what it is alike to goes on. Constancy gives it (`«有常则至终有常»`), and a class under which a line
+  ends while the net goes on there lacks it (`«亡而网续则不至终有常»`). Under it, for a closed member
   that conditions something, the same laws hold (`«至终常闭则后皆续»`, `«至终常闭则所及皆及»`,
   `«至终常类之闭当且仅当后皆同类»`); the constant forms are their corollaries. In the finite descent
   the class of descent is constant up to the net's end and takes in all that follows the first
@@ -103,6 +104,16 @@ def «至终有常» (R E : «际» α) : Prop :=
 /-- Constancy is constancy up to the net's end. -/
 theorem «有常则至终有常» {R E : «际» α} (constant : «有常» R E) : «至终有常» R E :=
   fun u u' e v r => .inl ((«有常之逐点» R E).mp constant u u' e v r)
+
+/-- **A class under which a line ends while the net goes on there is not constant up to the net's
+end (亡而网续则不至终有常).** The up-to-the-end form of `«有亡之续则不有常»`: where a line under `E` ends at
+`y` and `y` still conditions something, `E` is not constant up to the net's end. -/
+theorem «亡而网续则不至终有常» {R E : «际» α} {x y : α} (hxy : «续» R E x y)
+    (ends : «亡» R E y) (goes : ∃ w, R y w) : ¬ «至终有常» R E := fun constant =>
+  match constant x y hxy.2 y hxy.1 with
+  | .inl ⟨v', hv', ev⟩ => ends ⟨v', hv', ev⟩
+  | .inr stops => match goes with
+    | ⟨w, hw⟩ => stops w hw
 
 /-- **Up to the net's end, whatever is alike to a closed member that conditions something conditions
 only what is alike to it.** -/

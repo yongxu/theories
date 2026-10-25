@@ -1,16 +1,23 @@
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/tree",
-  "modules": 3,
+  "modules": 112,
   "ran": [
     "Becoming.GrammarPath",
-    "BecomingGrammarPathAxiomAudit"
+    "Becoming.GrammarCases",
+    "BecomingGrammarPathAxiomAudit",
+    "BecomingGrammarCasesAxiomAudit"
   ],
-  "reused": 2,
+  "reused": 110,
   "unclean": [],
   "audits": {
     "Becoming.GrammarPath": {
-      "theorems": 20,
-      "declarations": 34,
+      "theorems": 21,
+      "declarations": 35,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarCases": {
+      "theorems": 41,
+      "declarations": 69,
       "with_axioms": {}
     }
   }
