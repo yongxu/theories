@@ -51,8 +51,8 @@ states them for every carrier, relation and class.
   conditions anything conditions something alike to that effect and outside the class (`«出类随行»`),
   so every one on its line does (`«出类随线»`); where one such occurrence conditions nothing alike to
   that effect, the class is not constant up to the net's end (`«出类不随则不至终有常»`, witness
-  `CleanStep`). This is nearly the definition of constancy up to the net's end read at a member the
-  class does not close, and "alike to that effect" is only as fine as the class divides what lies
+  `CleanStep`). This is nearly the definition of constancy up to the net's end read at a member whose
+  effects the class does not hold, and "alike to that effect" is only as fine as the class divides what lies
   outside it. Read with a class drawn by what a member intends [a reading; nothing in the Lean marks an
   intended effect]: such a class can be constant up to the net's end without holding the member's
   effects (`FiniteWake`, finite and without cycles), and then every step of its line that goes on has
@@ -208,7 +208,7 @@ theorem «常闭则所及皆及» {R E : «际» α} (hE : «类» E) (constant 
 /-- **What leaves the class follows each alike step (出类随行).** Under a class constant up to the net's
 end, where a member conditions something not alike to it, whatever is alike to the member and
 conditions anything conditions something alike to that effect and not alike to itself. Nearly the
-definition of constancy up to the net's end, read at a member that the class does not close. -/
+definition of constancy up to the net's end, read at a member whose effects the class does not hold. -/
 theorem «出类随行» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m c u : α}
     (alike : E c m) (effect : R m u) (outside : ¬ E m u) (goes : ∃ w, R c w) :
     ∃ x, R c x ∧ E u x ∧ ¬ E c x :=

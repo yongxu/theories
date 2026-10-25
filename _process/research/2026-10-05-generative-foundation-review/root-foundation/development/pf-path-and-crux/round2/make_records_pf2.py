@@ -42,8 +42,8 @@ assert set(LAWS) <= new and CLEAN and WAKE and new == set(LAWS) | set(CLEAN) | s
 laws = [
     ("Under a class constant up to the net's end, where a member conditions something not alike to it, every occurrence "
      "alike to the member that conditions anything conditions something alike to that effect and outside the class, "
-     "every one on its line in particular. This is nearly the definition read at a member the class does not close.",
-     '于至网之终有常之类下，一员缘一不与之同类者时，凡与此员同类而有所缘者，皆缘一与该者同类而在类外者，其线上之每一者尤然。此几即定义，读于类所不闭之员。',
+     "every one on its line in particular. This is nearly the definition read at a member whose effects the class does not hold.",
+     '于至网之终有常之类下，一员缘一不与之同类者时，凡与此员同类而有所缘者，皆缘一与该者同类而在类外者，其线上之每一者尤然。此几即定义，读于类不持其所缘之员。',
      LAWS[:2]),
     ("Where an occurrence alike to such a member conditions something but nothing alike to its outside effect, the class "
      "is not constant up to the net's end; a witness.",
@@ -78,9 +78,9 @@ record = {
          'zh': '任何效为所意：诸律关乎任何不持一员所缘之类，以之读行动者为一读法。', 'kind': 'non-implication'},
         {'en': 'That what leaves the class is of one kind beyond what the class distinguishes, or forms a regularity of its own.',
          'zh': '出类者于类所别之外为同一种，或自成一理。', 'kind': 'non-implication'},
-        {'en': 'That the necessary condition suffices for constancy up to the net\'s end where the class divides the outside '
-               'finely.',
-         'zh': '类细分其外时，此必要条件足以至网之终有常。', 'kind': 'converse'},
+        {'en': 'That the necessary condition suffices for constancy up to the net\'s end: for a class with more than two '
+               'blocks it does not (a three-block net, checked in the IV3 line\'s review of PF2).',
+         'zh': '此必要条件足以至网之终有常：类多于二块时不足（三块之网，见 IV3 线对 PF2 之审查）。', 'kind': 'converse'},
         {'en': 'Whether intention fixes whose losses count (the path\'s P4).',
          'zh': '所意能否定谁之所失计入（此路之 P4）。', 'kind': 'non-implication'}],
     'counterexamples': [],
@@ -93,9 +93,9 @@ record = {
         'zh': f'Lean 4.29.1 合并检查器实查（回执 {RECEIPT_ID}）：Becoming.GrammarPath，公理报告皆空；本记录引 PF2 所增之 {len(new)} 项。'
               f'独立 AI 审查与作者审查见研究第 {N} 节。'},
     'next_delta': {
-        'en': 'Whether a condition weaker than the counterpart for what the class holds suffices for constancy up to the net\'s '
-              'end, for classes dividing the outside finely.',
-        'zh': '类细分其外时，较弱于类所持者之对应条件之条件，能否足以至网之终有常。'},
+        'en': 'How finely the class P2 reads should divide what a self leaves out, and whether it should constrain only the '
+              'self\'s block; a two-block characterization with the blocks given decidably.',
+        'zh': 'P2 所读之类应如何细分一自所遗于外者，是否只应约束自之块；块可判给出时之二块刻画。'},
     'correspondence': {
         'en': 'Read with a class drawn by what a member intends, the agential self of the path: it can pass P2, and then is '
               'never clean, so P2 does not exclude it and P4 carries the crux. A second round of philosophical work is in '
@@ -108,7 +108,7 @@ record = {
          'detail': {'en': '«至终有常», «线内同类» through it, the module\'s conventions.', 'zh': '«至终有常»、经之之 «线内同类»、本模块之约定。'}}],
     'related': [
         {'id': 'continuation-relative-to-a-class',
-         'detail': {'en': 'Constancy, read at a member the class does not close.', 'zh': '有常，读于类所不闭之员。'}}],
+         'detail': {'en': 'Constancy, read at a member whose effects the class does not hold.', 'zh': '有常，读于类不持其所缘之员。'}}],
     'references': [{'path': PATH, 'role': 'proof', 'declarations': sorted(new), 'sha256': sha(PATH)},
                    {'path': RECEIPT, 'role': 'receipt', 'sha256': sha(RECEIPT)},
                    {'path': STUDY, 'role': 'integration', 'sha256': sha(STUDY)},

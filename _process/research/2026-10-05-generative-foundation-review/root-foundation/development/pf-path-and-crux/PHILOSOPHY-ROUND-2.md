@@ -14,7 +14,7 @@ Nothing in the Lean marks an effect as intended. The formal facts are about any 
 
 - **A class can be constant up to the net's end without holding a member's effects** (`FiniteWake`, finite and without cycles). The class holding a member and part of what follows it, and keeping the rest apart, is constant up to the net's end, though not constant. Read as an agent, the part it holds is the intended line and the rest is the wake.
 - **What leaves the class follows each alike step** (`«出类随行»`, `«出类随线»`). Under a class constant up to the net's end, suppose a member conditions something not alike to it. Then every occurrence alike to the member that conditions anything also conditions something alike to that effect and outside the class. In particular, every occurrence on the member's line does.
-  - This is nearly the definition of constancy up to the net's end, read at a member the class does not close.
+  - This is nearly the definition of constancy up to the net's end, read at a member whose effects the class does not hold.
   - "Alike to that effect" is only as fine as the class divides what lies outside it. A class drawn by intention has no reason to divide the outside finely. In `FiniteWake` it lumps it into one class, so there the law says only that something outside the class follows every step that goes on.
 - **A step with nothing outside the class breaks constancy** (`«出类不随则不至终有常»`, witness `CleanStep`). Where an occurrence alike to the member conditions something but nothing alike to the member's outside effect, the class is not constant, even up to the net's end.
 - **Its line reaches nothing outside it.** This holds for *any* class, since a line under a class stays within it (`«线内同类»`); it is not a finding about this one. Here the member's own outside effect is downstream of it and outside the class, so the class leaves part of what follows the member out of its scope.
@@ -29,7 +29,7 @@ Round 1 hoped the agential self would fail the test the organism fails. It does 
 
 ## 3. What one's kind fixes, and what it does not
 
-**What the law gives.** Under a class constant up to the net's end, for every occurrence that conditions something, the classes its successors fall in are fixed by its class. The law reads this at a member the class does not close: what leaves the class at the member leaves it, alike, at every occurrence alike to the member that goes on.
+**What the law gives.** Under a class constant up to the net's end, for every occurrence that conditions something, the classes its successors fall in are fixed by its class. The law reads this at a member whose effects the class does not hold: what leaves the class at the member leaves it, alike, at every occurrence alike to the member that goes on.
 
 **What it does not give.**
 - The law does not say which successors exist, how many, or whether an occurrence goes on at all.
@@ -92,7 +92,7 @@ In the theory's terms, these are partial closures: ways for a system's scope to 
 - one can coherently choose the class of one's line by intention, and no law of the dynamics singles out the wide class over it.
 
 **Open.**
-- **Formal.** The law gives a necessary condition. For a class with two blocks, that condition together with its counterpart for the intended line is constancy up to the net's end by definition, so sufficiency is nearly trivial there. The open question is whether some condition weaker than that counterpart suffices for classes that divide the outside more finely.
+- **Formal.** The law gives a necessary condition, and it is not sufficient. The IV3 line's owner, reviewing PF2, checked outside the package that for two blocks given by a tag, that condition together with its counterpart for the intended line is constancy up to the net's end. They also checked that in a net of three blocks the condition holds while constancy up to the net's end fails ([review](../iv3-dependence/REVIEW-PF2.md)). Constancy up to the net's end constrains every block of a class, the outside included. So what stays open is how finely the class P2 reads should divide what a self leaves out, and whether P2 should constrain only the self's block. That division fixes how much P2 asks of the agential self.
 - **For philosophers.** Can intention, which individuates action and bears on permissibility, also fix whose losses count, given that double effect weighs the side effect?
 - **For alignment, as a conjecture.** Does a measure of what leaves a system's scope at each step, keyed to the scope's own classes, track its side effects as well as measures keyed to enumerated outcomes?
 
@@ -101,7 +101,7 @@ In the theory's terms, these are partial closures: ways for a system's scope to 
 **To 07 §4.6** (through the IV3 line's owner):
 - answer the Open item: a class holding only part of a member's effects can be constant up to the net's end (`FiniteWake`), and then something outside it follows every alike step that goes on (`«出类随行»`, `«出类不随则不至终有常»`);
 - sharpen the P4 bullet: P2 does not exclude the agential self, so P4 carries the crux;
-- replace the Open item with the sufficiency question as restated above.
+- replace the Open item with how finely a self's class divides what it leaves out (as agreed with the IV3 line's owner, [review](../iv3-dependence/REVIEW-PF2.md)).
 
 **To P-20** (through the dossier's owner): add the agential self and the double-effect point to the questions.
 
