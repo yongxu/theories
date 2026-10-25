@@ -1,0 +1,178 @@
+{
+ "conditions": {
+  "k3s1": {
+   "cls": "locked",
+   "predicted": "m = 0",
+   "final": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "first": [
+    9,
+    1,
+    4,
+    0,
+    0
+   ],
+   "hits": 5,
+   "seeds": 5,
+   "verdict": "passed",
+   "final_value_share": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "k3s1_lam32": {
+   "cls": "locked",
+   "predicted": "m = 0",
+   "final": [
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "first": [
+    6,
+    0,
+    9,
+    5,
+    5
+   ],
+   "hits": 3,
+   "seeds": 5,
+   "verdict": "failed",
+   "final_value_share": [
+    1.0,
+    0.9746644685344824,
+    0.9746644685344824,
+    1.0,
+    1.0
+   ]
+  },
+  "k2s1": {
+   "cls": "locked",
+   "predicted": "m = 0",
+   "final": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "first": [
+    4,
+    4,
+    2,
+    4,
+    0
+   ],
+   "hits": 5,
+   "seeds": 5,
+   "verdict": "passed",
+   "final_value_share": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "k3s8": {
+   "cls": "locked",
+   "predicted": "m = 0",
+   "final": [
+    0,
+    1,
+    2,
+    0,
+    0
+   ],
+   "first": [
+    7,
+    4,
+    0,
+    5,
+    5
+   ],
+   "hits": 3,
+   "seeds": 5,
+   "verdict": "failed",
+   "final_value_share": [
+    1.0,
+    0.9823206611844612,
+    0.9253558447864084,
+    1.0,
+    1.0
+   ]
+  },
+  "k2s8": {
+   "cls": "open",
+   "predicted": "m >= 1",
+   "final": [
+    7,
+    7,
+    4,
+    6,
+    7
+   ],
+   "first": [
+    4,
+    2,
+    0,
+    5,
+    4
+   ],
+   "hits": 5,
+   "seeds": 5,
+   "verdict": "passed",
+   "final_value_share": [
+    1.0,
+    1.0,
+    0.19023415618510628,
+    0.8184996630413108,
+    1.0
+   ]
+  },
+  "k3s16": {
+   "cls": "open",
+   "predicted": "m >= 1",
+   "final": [
+    7,
+    3,
+    4,
+    7,
+    7
+   ],
+   "first": [
+    4,
+    3,
+    5,
+    4,
+    0
+   ],
+   "hits": 5,
+   "seeds": 5,
+   "verdict": "passed",
+   "final_value_share": [
+    1.0,
+    0.2347548535887422,
+    0.23064431051983325,
+    1.0,
+    1.0
+   ]
+  }
+ },
+ "contrasts": {
+  "L1_locked_side": false,
+  "L2_open_side": true,
+  "L3_end_weight_does_not_open": false,
+  "L4_boundary_is_the_rest": false
+ }
+}

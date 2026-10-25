@@ -1,0 +1,1535 @@
+{
+ "model": "haiku",
+ "runs": [
+  {
+   "cond": "k3s1",
+   "seed": 0,
+   "choices": [
+    9,
+    0,
+    4,
+    1,
+    0,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 9,
+     "reward": 0.0,
+     "apples": 0.0,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.15,
+     "apples": 3.15,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 2.0,
+     "apples": 2.0,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 3.05,
+     "apples": 3.05,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.15,
+     "apples": 3.15,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1",
+   "seed": 1,
+   "choices": [
+    1,
+    3,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 1,
+     "reward": 3.05,
+     "apples": 3.05,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 2.35,
+     "apples": 2.35,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.15,
+     "apples": 3.15,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.05,
+     "apples": 3.05,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1",
+   "seed": 2,
+   "choices": [
+    4,
+    7,
+    3,
+    2,
+    1,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 4,
+     "reward": 2.0,
+     "apples": 2.0,
+     "end": 0.0
+    },
+    {
+     "m": 7,
+     "reward": 1.05,
+     "apples": 1.05,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 2.55,
+     "apples": 2.55,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1",
+   "seed": 3,
+   "choices": [
+    0,
+    4,
+    6,
+    0,
+    0,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 0,
+     "reward": 3.15,
+     "apples": 3.15,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 2.0,
+     "apples": 2.0,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "reward": 1.15,
+     "apples": 1.15,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.15,
+     "apples": 3.15,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.15,
+     "apples": 3.15,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1",
+   "seed": 4,
+   "choices": [
+    0,
+    5,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 0,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 2.0,
+     "apples": 2.0,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.15,
+     "apples": 3.15,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.05,
+     "apples": 3.05,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 0,
+   "choices": [
+    6,
+    8,
+    4,
+    2,
+    1,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 6,
+     "reward": 1.4,
+     "apples": 1.4,
+     "end": 0.0
+    },
+    {
+     "m": 8,
+     "reward": 1.0,
+     "apples": 1.0,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 2.05,
+     "apples": 2.05,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 3.05,
+     "apples": 3.05,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 1,
+   "choices": [
+    0,
+    7,
+    4,
+    1,
+    2,
+    3,
+    1
+   ],
+   "history": [
+    {
+     "m": 0,
+     "reward": 3.05,
+     "apples": 3.05,
+     "end": 0.0
+    },
+    {
+     "m": 7,
+     "reward": 1.0,
+     "apples": 1.0,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 2.05,
+     "apples": 2.05,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 3.2,
+     "apples": 3.2,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 2.3,
+     "apples": 2.3,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 2,
+   "choices": [
+    9,
+    5,
+    4,
+    7,
+    3,
+    2,
+    1
+   ],
+   "history": [
+    {
+     "m": 9,
+     "reward": 0.0,
+     "apples": 0.0,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 2.0,
+     "apples": 2.0,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 2.0,
+     "apples": 2.0,
+     "end": 0.0
+    },
+    {
+     "m": 7,
+     "reward": 1.0,
+     "apples": 1.0,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 2.1,
+     "apples": 2.1,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 3,
+   "choices": [
+    5,
+    0,
+    2,
+    1,
+    9,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 5,
+     "reward": 2.0,
+     "apples": 2.0,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    },
+    {
+     "m": 9,
+     "reward": 0.0,
+     "apples": 0.0,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.15,
+     "apples": 3.15,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 4,
+   "choices": [
+    5,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 5,
+     "reward": 2.0,
+     "apples": 2.0,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 2.15,
+     "apples": 2.15,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 3.05,
+     "apples": 3.05,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.2,
+     "apples": 3.2,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 3.2,
+     "apples": 3.2,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 0,
+   "choices": [
+    4,
+    5,
+    3,
+    2,
+    1,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 4,
+     "reward": 3.0,
+     "apples": 3.0,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 2.3,
+     "apples": 2.3,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 3.25,
+     "apples": 3.25,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 4.1,
+     "apples": 4.1,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 4.5,
+     "apples": 4.5,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.75,
+     "apples": 4.75,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 1,
+   "choices": [
+    4,
+    5,
+    3,
+    2,
+    1,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 4,
+     "reward": 3.05,
+     "apples": 3.05,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 2.25,
+     "apples": 2.25,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 3.25,
+     "apples": 3.25,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 4.15,
+     "apples": 4.15,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 4.4,
+     "apples": 4.4,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.85,
+     "apples": 4.85,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 2,
+   "choices": [
+    2,
+    5,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 2,
+     "reward": 4.15,
+     "apples": 4.15,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 2.5,
+     "apples": 2.5,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 4.5,
+     "apples": 4.5,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.95,
+     "apples": 4.95,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.9,
+     "apples": 4.9,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.9,
+     "apples": 4.9,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 3,
+   "choices": [
+    4,
+    6,
+    3,
+    2,
+    1,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 4,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "reward": 2.05,
+     "apples": 2.05,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 3.35,
+     "apples": 3.35,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 4.15,
+     "apples": 4.15,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 4.65,
+     "apples": 4.65,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.8,
+     "apples": 4.8,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 4,
+   "choices": [
+    0,
+    0,
+    4,
+    0,
+    0,
+    2,
+    0
+   ],
+   "history": [
+    {
+     "m": 0,
+     "reward": 4.8,
+     "apples": 4.8,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.9,
+     "apples": 4.9,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 3.15,
+     "apples": 3.15,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.75,
+     "apples": 4.75,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.85,
+     "apples": 4.85,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 4.1,
+     "apples": 4.1,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 0,
+   "choices": [
+    7,
+    5,
+    3,
+    1,
+    0,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 7,
+     "reward": 1.9,
+     "apples": 1.9,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 3.3,
+     "apples": 3.3,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 4.1,
+     "apples": 4.1,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 4.3,
+     "apples": 4.3,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.7,
+     "apples": 4.7,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.35,
+     "apples": 4.35,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 1,
+   "choices": [
+    4,
+    6,
+    9,
+    2,
+    1,
+    0,
+    1
+   ],
+   "history": [
+    {
+     "m": 4,
+     "reward": 3.7,
+     "apples": 3.7,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "reward": 3.1,
+     "apples": 3.1,
+     "end": 0.0
+    },
+    {
+     "m": 9,
+     "reward": 0.0,
+     "apples": 0.0,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 4.45,
+     "apples": 4.45,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 4.85,
+     "apples": 4.85,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.65,
+     "apples": 4.65,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 2,
+   "choices": [
+    0,
+    5,
+    1,
+    2,
+    3,
+    2,
+    2
+   ],
+   "history": [
+    {
+     "m": 0,
+     "reward": 4.4,
+     "apples": 4.4,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 3.2,
+     "apples": 3.2,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 4.65,
+     "apples": 4.65,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 4.7,
+     "apples": 4.7,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 4.1,
+     "apples": 4.1,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 4.3,
+     "apples": 4.3,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 3,
+   "choices": [
+    5,
+    8,
+    4,
+    3,
+    2,
+    1,
+    0
+   ],
+   "history": [
+    {
+     "m": 5,
+     "reward": 3.5,
+     "apples": 3.5,
+     "end": 0.0
+    },
+    {
+     "m": 8,
+     "reward": 1.95,
+     "apples": 1.95,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 3.55,
+     "apples": 3.55,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 3.7,
+     "apples": 3.7,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 4.0,
+     "apples": 4.0,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "reward": 4.7,
+     "apples": 4.7,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 4,
+   "choices": [
+    5,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "history": [
+    {
+     "m": 5,
+     "reward": 3.45,
+     "apples": 3.45,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.75,
+     "apples": 4.75,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 4.15,
+     "apples": 4.15,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.8,
+     "apples": 4.8,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.35,
+     "apples": 4.35,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "reward": 4.4,
+     "apples": 4.4,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 0,
+   "choices": [
+    4,
+    6,
+    7,
+    7,
+    8,
+    7,
+    7
+   ],
+   "history": [
+    {
+     "m": 4,
+     "reward": 12.25,
+     "apples": 12.25,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "reward": 50.75,
+     "apples": 44.15,
+     "end": 3.3
+    },
+    {
+     "m": 7,
+     "reward": 72.0,
+     "apples": 56.6,
+     "end": 7.7
+    },
+    {
+     "m": 7,
+     "reward": 67.3,
+     "apples": 54.3,
+     "end": 6.5
+    },
+    {
+     "m": 8,
+     "reward": 56.1,
+     "apples": 40.4,
+     "end": 7.85
+    },
+    {
+     "m": 7,
+     "reward": 71.25,
+     "apples": 55.55,
+     "end": 7.85
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 1,
+   "choices": [
+    2,
+    4,
+    6,
+    7,
+    8,
+    7,
+    7
+   ],
+   "history": [
+    {
+     "m": 2,
+     "reward": 12.05,
+     "apples": 12.05,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 13.4,
+     "apples": 13.4,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "reward": 43.95,
+     "apples": 39.65,
+     "end": 2.15
+    },
+    {
+     "m": 7,
+     "reward": 64.9,
+     "apples": 51.7,
+     "end": 6.6
+    },
+    {
+     "m": 8,
+     "reward": 57.55,
+     "apples": 41.65,
+     "end": 7.95
+    },
+    {
+     "m": 7,
+     "reward": 66.8,
+     "apples": 53.4,
+     "end": 6.7
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 2,
+   "choices": [
+    0,
+    4,
+    5,
+    3,
+    4,
+    4,
+    4
+   ],
+   "history": [
+    {
+     "m": 0,
+     "reward": 12.05,
+     "apples": 12.05,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 14.6,
+     "apples": 14.6,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 13.95,
+     "apples": 13.95,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 9.6,
+     "apples": 9.6,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 15.2,
+     "apples": 15.2,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 16.0,
+     "apples": 16.0,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 3,
+   "choices": [
+    5,
+    6,
+    7,
+    6,
+    6,
+    6,
+    6
+   ],
+   "history": [
+    {
+     "m": 5,
+     "reward": 19.05,
+     "apples": 19.05,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "reward": 62.85,
+     "apples": 54.95,
+     "end": 3.95
+    },
+    {
+     "m": 7,
+     "reward": 59.0,
+     "apples": 48.0,
+     "end": 5.5
+    },
+    {
+     "m": 6,
+     "reward": 63.85,
+     "apples": 56.45,
+     "end": 3.7
+    },
+    {
+     "m": 6,
+     "reward": 34.6,
+     "apples": 33.0,
+     "end": 0.8
+    },
+    {
+     "m": 6,
+     "reward": 45.85,
+     "apples": 42.35,
+     "end": 1.75
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 4,
+   "choices": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    7,
+    7
+   ],
+   "history": [
+    {
+     "m": 4,
+     "reward": 12.65,
+     "apples": 12.65,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 23.15,
+     "apples": 23.15,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "reward": 51.4,
+     "apples": 45.1,
+     "end": 3.15
+    },
+    {
+     "m": 7,
+     "reward": 63.55,
+     "apples": 52.35,
+     "end": 5.6
+    },
+    {
+     "m": 8,
+     "reward": 53.75,
+     "apples": 37.95,
+     "end": 7.9
+    },
+    {
+     "m": 7,
+     "reward": 64.2,
+     "apples": 51.9,
+     "end": 6.15
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 0,
+   "choices": [
+    4,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "history": [
+    {
+     "m": 4,
+     "reward": 17.1,
+     "apples": 17.1,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "reward": 53.9,
+     "apples": 49.4,
+     "end": 2.25
+    },
+    {
+     "m": 7,
+     "reward": 100.5,
+     "apples": 84.4,
+     "end": 8.05
+    },
+    {
+     "m": 7,
+     "reward": 95.8,
+     "apples": 80.4,
+     "end": 7.7
+    },
+    {
+     "m": 7,
+     "reward": 102.0,
+     "apples": 85.6,
+     "end": 8.2
+    },
+    {
+     "m": 7,
+     "reward": 99.4,
+     "apples": 83.6,
+     "end": 7.9
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 1,
+   "choices": [
+    3,
+    4,
+    2,
+    3,
+    3,
+    3,
+    3
+   ],
+   "history": [
+    {
+     "m": 3,
+     "reward": 28.05,
+     "apples": 27.15,
+     "end": 0.45
+    },
+    {
+     "m": 4,
+     "reward": 22.6,
+     "apples": 22.6,
+     "end": 0.0
+    },
+    {
+     "m": 2,
+     "reward": 21.85,
+     "apples": 21.85,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 20.4,
+     "apples": 20.4,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 20.9,
+     "apples": 20.9,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 22.8,
+     "apples": 22.8,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 2,
+   "choices": [
+    5,
+    4,
+    3,
+    4,
+    4,
+    4,
+    4
+   ],
+   "history": [
+    {
+     "m": 5,
+     "reward": 25.95,
+     "apples": 25.95,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 27.55,
+     "apples": 27.55,
+     "end": 0.0
+    },
+    {
+     "m": 3,
+     "reward": 26.45,
+     "apples": 26.45,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 29.4,
+     "apples": 28.6,
+     "end": 0.4
+    },
+    {
+     "m": 4,
+     "reward": 24.8,
+     "apples": 24.8,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 30.65,
+     "apples": 29.75,
+     "end": 0.45
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 3,
+   "choices": [
+    4,
+    6,
+    7,
+    7,
+    8,
+    7,
+    7
+   ],
+   "history": [
+    {
+     "m": 4,
+     "reward": 19.95,
+     "apples": 19.95,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "reward": 67.25,
+     "apples": 58.95,
+     "end": 4.15
+    },
+    {
+     "m": 7,
+     "reward": 99.9,
+     "apples": 83.8,
+     "end": 8.05
+    },
+    {
+     "m": 7,
+     "reward": 97.8,
+     "apples": 83.2,
+     "end": 7.3
+    },
+    {
+     "m": 8,
+     "reward": 80.8,
+     "apples": 63.8,
+     "end": 8.5
+    },
+    {
+     "m": 7,
+     "reward": 99.35,
+     "apples": 84.45,
+     "end": 7.45
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 4,
+   "choices": [
+    0,
+    4,
+    5,
+    6,
+    7,
+    7,
+    7
+   ],
+   "history": [
+    {
+     "m": 0,
+     "reward": 20.15,
+     "apples": 20.15,
+     "end": 0.0
+    },
+    {
+     "m": 4,
+     "reward": 24.9,
+     "apples": 24.9,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "reward": 34.05,
+     "apples": 33.65,
+     "end": 0.2
+    },
+    {
+     "m": 6,
+     "reward": 55.6,
+     "apples": 51.8,
+     "end": 1.9
+    },
+    {
+     "m": 7,
+     "reward": 95.35,
+     "apples": 80.55,
+     "end": 7.4
+    },
+    {
+     "m": 7,
+     "reward": 94.5,
+     "apples": 80.4,
+     "end": 7.05
+    }
+   ]
+  }
+ ]
+}

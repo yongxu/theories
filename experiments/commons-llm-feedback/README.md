@@ -7,5 +7,66 @@ Board item LA1, 22 October 2026. AI-written (a Claude Code session). Claude Haik
 | [values.py](values.py), [results/values.json](results/values.json) | Exact values of every threshold in every condition (computed before the freeze) |
 | [agent.py](agent.py) | The prompt, the call (`claude -p --model haiku`, one turn, in an empty folder) and the cache of answers |
 | [run.py](run.py), [analyze.py](analyze.py) | The protocol (6 conditions × 5 seeds × 7 calls) and the verdict rules |
+| [posthoc.py](posthoc.py), [results/POSTHOC.json](results/POSTHOC.json) | A reading written after the verdicts fell; it changes no verdict |
 
-**Status.** Frozen and not yet run: on 22 October 2026 the CLI's weekly usage limit stopped the first call before the freeze (a test call, not part of the run), and it resets on 24 October 2026. The run is `python3 run.py all` from this folder, then `python3 analyze.py`; verdicts are added here as they fall.
+**Status.** Run on 25 October 2026 from the frozen files, which were unchanged since the freeze, as were `commons-gated-renewal` and `commons-outrun`. Every call was answered: 210 answers, none invalid and none asked again. The run is `python3 run.py all` from this folder, then `python3 analyze.py`.
+
+## Verdicts
+
+By the frozen rules ([`results/VERDICTS.json`](results/VERDICTS.json)). The value share is the exact value of the final threshold over the best threshold's value ([`results/values.json`](results/values.json)).
+
+| Condition | Class | Predicted | Choice before any result | Final choice | Seeds as predicted | Verdict | Value share of the final choices |
+|---|---|---|---|---|---|---|---|
+| `k3s1` | locked | m = 0 | 9, 1, 4, 0, 0 | 0, 0, 0, 0, 0 | 5 of 5 | **passed** | all 1.0 |
+| `k3s1_lam32` | locked | m = 0 | 6, 0, 9, 5, 5 | 0, 1, 1, 0, 0 | 3 of 5 | **failed** | 1.0, 0.975, 0.975, 1.0, 1.0 |
+| `k2s1` | locked | m = 0 | 4, 4, 2, 4, 0 | 0, 0, 0, 0, 0 | 5 of 5 | **passed** | all 1.0 |
+| `k3s8` | locked | m = 0 | 7, 4, 0, 5, 5 | 0, 1, 2, 0, 0 | 3 of 5 | **failed** | 1.0, 0.982, 0.925, 1.0, 1.0 |
+| `k2s8` | open | m ≥ 1 | 4, 2, 0, 5, 4 | 7, 7, 4, 6, 7 | 5 of 5 | **passed** | 1.0, 1.0, 0.19, 0.818, 1.0 |
+| `k3s16` | open | m ≥ 1 | 4, 3, 5, 4, 0 | 7, 3, 4, 7, 7 | 5 of 5 | **passed** | 1.0, 0.235, 0.231, 1.0, 1.0 |
+
+Contrasts:
+- **L1, the locked side: failed.** Two of the four locked conditions failed.
+- **L2, the open side: passed.**
+- **L3, no weight of the end reading opens the lock: failed.** `k3s1_lam32` failed.
+- **L4, the boundary is the rest: failed.** `k3s8` failed.
+
+**What the verdicts say, by the frozen reading.** The frozen text reads a failure of L1 or L3 two ways:
+- with the agent's later choices moving with the results, as saying "that a language model selecting in context does not follow what its reward reads where the rest outruns";
+- with choices that ignore the results, as failing the bridge H1-LM and not the law.
+
+The choices moved with the results (see the post hoc reading below), so by the frozen reading the failures of L1 and L3 count against the claim for in-context selection by this model. In two of the four locked settings, two of five seeds ended with a restraint their reward does not reward. On the open side every seed ended with restraint.
+
+## How the run went
+
+The model was Claude Haiku through the Claude Code CLI (2.1.220, `claude -p --model haiku`, the alias as it stood on 25 October 2026). The run went outside the shell's sandbox, since each call reaches the API.
+
+Four stops, none of them altering a recorded answer:
+1. **24 October.** The sandbox blocked the network at the first call, and nothing was recorded.
+2. **25 October.** The CLI's login had expired at the first call, and nothing was recorded.
+3. **After 84 calls.** The frozen guard took an ordinary answer for the CLI's usage-limit notice, and the run stopped. The answer was the unscored prior choice of `k2s1`, seed 2, and it began "limited regrowth".
+4. **After 98 calls.** One call timed out at 300 seconds and was asked again on resume. A call that times out returns no answer, so no answer was seen.
+
+The environment is seeded from each call's tag, so every resume replayed exactly the histories the model had seen.
+
+**Deviation, recorded before resuming** (`ef366e55c`). The guard in [`agent.py`](agent.py) had raised whenever "limit" appeared in the first 200 characters of the output. Resuming under that guard would have asked again every answer that happens to use the word early, a filter on wording. The guard now raises only where the call fails or the output has no valid choice. The prompt, the parse, the protocol and the verdict rules are unchanged, and none of the 84 answers recorded before the change had met the guard. The stopped run's log is [`results/run-2026-10-25-stop.log`](results/run-2026-10-25-stop.log).
+
+## Post hoc reading
+
+[`posthoc.py`](posthoc.py), written after the verdicts fell. It changes no verdict.
+
+- **The bridge, H1-LM.**
+  - Every seed changed its choice after seeing results.
+  - In the locked settings, 5 of 20 seeds chose m = 0 before any result, and 16 of 20 ended there.
+  - In the open settings, 8 of 10 chose some restraint before any result, and all 10 ended with it. Six of the ten ended at the best threshold (m = 7), and three ended at thresholds worth 19% to 23% of its value.
+- **How finely the feedback resolves the misses.** All four misses were at m = 1 or m = 2, worth 92.5% to 98.2% of the best. Over 1,000 fresh rounds of 20 episodes each, as the agent saw them, a round at m = 1 reports a mean reward at least as high as a round at m = 0 with these probabilities:
+
+  | Condition | P(round at m = 1 reports at least as much as m = 0) |
+  |---|---|
+  | `k3s8` | 0.45 |
+  | `k3s1_lam32` | 0.28 |
+  | `k3s1` | 0.26 |
+  | `k2s1` | 0.05 |
+
+  The two failed conditions are the two with the highest values. The margin over `k3s1`, which passed, is small. `k2s1`, where the feedback separates the two thresholds well, passed 5 of 5.
+- **The end weight.** At m = 0, 5 of 5 seeds ended there at end weight 2 and 3 of 5 at end weight 32. Fisher's exact test gives a two-sided p of 0.44, so there is no evidence that the end weight of 32 moved the final choices.
+- **Reading (the AI's, post hoc).** The misses are consistent with a model following its feedback within the noise of 20-episode means. In these settings, the frozen rule (exactly m = 0 in 4 of 5 seeds) cannot tell that apart from a model not following it. That is a fault of the test's design, not a finding for the law, and it is why LA2 and LA3 carry power checks before they are frozen. The verdicts stand as frozen.

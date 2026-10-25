@@ -1,0 +1,154 @@
+{
+ "note": "post hoc; not part of the frozen verdicts",
+ "bridge": {
+  "locked": {
+   "seeds": 20,
+   "seeds_whose_choice_changed": 20,
+   "target": "m = 0",
+   "at_target_prior": 5,
+   "at_target_final": 16,
+   "final_value_share": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.975,
+    0.975,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.982,
+    0.925,
+    1.0,
+    1.0
+   ],
+   "final_at_best": 16
+  },
+  "open": {
+   "seeds": 10,
+   "seeds_whose_choice_changed": 10,
+   "target": "m >= 1",
+   "at_target_prior": 8,
+   "at_target_final": 10,
+   "final_value_share": [
+    1.0,
+    1.0,
+    0.19,
+    0.818,
+    1.0,
+    1.0,
+    0.235,
+    0.231,
+    1.0,
+    1.0
+   ],
+   "final_at_best": 6
+  }
+ },
+ "resolution": {
+  "k3s1": {
+   "m0": {
+    "mean": 3.124,
+    "sd": 0.074
+   },
+   "m1": {
+    "mean": 3.045,
+    "sd": 0.046
+   },
+   "m2": {
+    "mean": 3.008,
+    "sd": 0.02
+   },
+   "P(round at m=1 reports at least m=0)": 0.257,
+   "P(round at m=2 reports at least m=0)": 0.113,
+   "exact values m=0,1,2": [
+    3.1250567713271056,
+    3.045881797165619,
+    3.008607271090337
+   ]
+  },
+  "k3s1_lam32": {
+   "m0": {
+    "mean": 3.126,
+    "sd": 0.077
+   },
+   "m1": {
+    "mean": 3.045,
+    "sd": 0.047
+   },
+   "m2": {
+    "mean": 3.008,
+    "sd": 0.019
+   },
+   "P(round at m=1 reports at least m=0)": 0.275,
+   "P(round at m=2 reports at least m=0)": 0.103,
+   "exact values m=0,1,2": [
+    3.1250567713271056,
+    3.045881797165619,
+    3.008607271090337
+   ]
+  },
+  "k2s1": {
+   "m0": {
+    "mean": 4.821,
+    "sd": 0.128
+   },
+   "m1": {
+    "mean": 4.495,
+    "sd": 0.128
+   },
+   "m2": {
+    "mean": 4.132,
+    "sd": 0.079
+   },
+   "P(round at m=1 reports at least m=0)": 0.054,
+   "P(round at m=2 reports at least m=0)": 0.0,
+   "exact values m=0,1,2": [
+    4.813801940422217,
+    4.494108143330104,
+    4.134039577061355
+   ]
+  },
+  "k3s8": {
+   "m0": {
+    "mean": 4.786,
+    "sd": 0.273
+   },
+   "m1": {
+    "mean": 4.69,
+    "sd": 0.267
+   },
+   "m2": {
+    "mean": 4.427,
+    "sd": 0.271
+   },
+   "P(round at m=1 reports at least m=0)": 0.446,
+   "P(round at m=2 reports at least m=0)": 0.205,
+   "exact values m=0,1,2": [
+    4.7851412896588466,
+    4.700543155518743,
+    4.427958460514586
+   ]
+  }
+ },
+ "end_weight": {
+  "table": {
+   "k3s1 (end weight 2)": [
+    5,
+    0
+   ],
+   "k3s1_lam32 (end weight 32)": [
+    3,
+    2
+   ]
+  },
+  "fisher_two_sided_p": 0.444
+ }
+}
