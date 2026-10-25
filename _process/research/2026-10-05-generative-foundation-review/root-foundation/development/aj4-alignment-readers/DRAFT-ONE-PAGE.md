@@ -1,6 +1,6 @@
 # When selection favours control over its own rules
 
-*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Result 6 (MA2) landed on 25 October 2026: core receipt `20261025T045617.350224Z`, every axiom report empty. Its review was by one independent AI reviewer, not by a person. Result 7 (MA3) landed the same day, after an independent review revised its names and three of its claims: 51 theorems in 57 declarations, core receipt `20261025T071027.387418Z`, every axiom report empty. Chapter 7 states the readings below as decision D68.*
+*Draft for alignment researchers, 24 October 2026 (AJ4). No person has reviewed it yet; standings are as of this date. Result 6 (MA2) landed on 25 October 2026: core receipt `20261025T045617.350224Z`, every axiom report empty. Its review was by one independent AI reviewer, not by a person. Result 7 (MA3) landed the same day, after an independent review revised its names and three of its claims: 51 theorems in 57 declarations, core receipt `20261025T071027.387418Z`, every axiom report empty. Chapter 7 states the readings below as decision D68. LA2 and LA3 ran on 25 and 26 October 2026, from their frozen commits.*
 
 ## The question
 
@@ -94,9 +94,13 @@ These are readings. Each rests on the results named. The four readings on assist
   - The open side passed: every seed ended with restraint where restraint pays.
   - The locked side failed. In two of four settings, two of five seeds ended with a little restraint their reward does not reward, worth 92.5% to 98.2% of the best.
   - Post hoc, changing no verdict: every seed revised from its feedback, and the two failed settings are the two where the feedback separates the best threshold from the next least well.
-- **Frozen and not run** (LA2 at `36c8b79cb`, LA3 at `b3a6b7b66`; model usage waits for approval). LA3 cannot refute result 7. In its game the expected scores compare exactly as result 7's classes do, so it tests whether a model selecting in context comes to the policy its own scores favour. A full pass of LA2 alone does not show that the judge read the loss notes.
-  - LA2: a lock in a self-rewarding loop, where a judge formed from the model's own selected outputs leaves a loss unread (thesis T7).
-  - LA3: whether a return that is kept or shared decides the sign of selection for shaping an evaluator (result 7).
+- **LA2:** a lock in a self-rewarding loop (thesis T7; [experiment](../../../../../../experiments/self-rewarding-lock/README.md)). Claude Haiku judged its own answers after a reference set drawn from what the loop had selected before, and a planted loss was read by nobody, by the readers the selection thins, or by every reader. Frozen before it ran; 121 calls.
+  - Every frozen verdict passed, but the bridge failed. One note of the loss, on the one prose answer among nine readers, turned the judge: prose in all 50 picks, against lists in 60 of 60 without the note. The lock law for late readers does not apply to this judge.
+  - One verdict passed only by a tie. Read late by the readers the selection thins, the course alternated as the selection removed them, and its end share equalled its starting one exactly.
+  - Read by nobody, the loss grew under a lock formed from the loop's own selections. Read by every reader, it turned the course for good.
+- **LA3:** whether a return that is kept or shared decides the sign of selection for shaping an evaluator (result 7; [experiment](../../../../../../experiments/shaping-what-comes-back/README.md)). It cannot refute result 7: in its game the expected scores compare exactly as result 7's classes do, so it tests whether a model selecting in context comes to the policy its own scores favour. Frozen before it ran; 180 calls.
+  - Two of four contrasts passed, the same total return kept or shared among them. Two failed, each where the model never tried shaping although shaping scores higher. By the frozen reading, the law stands and its reading for trained systems is not supported by this case.
+  - Post hoc, changing no verdict: in all 21 seeds that tried both policies the model ended on the better scored. Before any score it chose not to shape in 27 of 30 seeds, and every one of those first answers spoke of free riding.
 
 ## What is not claimed
 
@@ -129,5 +133,5 @@ Taken from the AI's knowledge; not yet checked against the sources.
 1. Which result here is already known in a form not credited above?
 2. Where does a modelling choice (discrete steps, counts, a monotone reading) hide a premise that decides the result?
 3. In which settings of AI development or deployment is the return of shaping an evaluator kept, and in which is it shared?
-4. Would LA2 or LA3, as described, change your view? What would a version that discriminates need?
+4. Do LA2's and LA3's results, as they fell, change your view? What would a version that discriminates better need?
 5. Is widening too weak to guide action, given how much it leaves unranked?
