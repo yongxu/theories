@@ -1,0 +1,771 @@
+{
+ "REPS": 2000,
+ "models": {
+  "pool_strong": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.9972,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_condition_passes": {
+    "in_time": 1.0,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 1.0,
+    "L3_who_reads_decides": 1.0,
+    "L4_when_it_is_read_decides": 1.0
+   },
+   "failure_labels": {},
+   "P_control_kept_in_4_of_5": 0.664,
+   "P_control_turned_in_4_of_5": 0.007,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.899,
+    "one_note_in_nine": 0.0235
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.899,
+    "the counts decide, one note in nine outweighed": 0.899,
+    "the loss read in time turned a course that would otherwise be kept": 0.6205,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.007,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0
+   }
+  },
+  "pool_moderate": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.9763,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_condition_passes": {
+    "in_time": 0.994,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 1.0,
+    "L3_who_reads_decides": 1.0,
+    "L4_when_it_is_read_decides": 0.994
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.005,
+     "failed later in the course": 0.001
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.4045,
+   "P_control_turned_in_4_of_5": 0.063,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.601,
+    "one_note_in_nine": 0.013
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.601,
+    "the counts decide, one note in nine outweighed": 0.601,
+    "the loss read in time turned a course that would otherwise be kept": 0.295,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.063,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0
+   }
+  },
+  "pool_weak_formation": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.9938,
+    "late": 0.993,
+    "unread": 0.9959,
+    "read_all": 1.0
+   },
+   "P_condition_passes": {
+    "in_time": 1.0,
+    "late": 0.9985,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 1.0,
+    "L3_who_reads_decides": 0.9985,
+    "L4_when_it_is_read_decides": 0.9985
+   },
+   "failure_labels": {
+    "late": {
+     "not resolved by the readings": 0.0015
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.858,
+   "P_control_turned_in_4_of_5": 0.0025,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.896,
+    "one_note_in_nine": 0.0275
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.896,
+    "the counts decide, one note in nine outweighed": 0.895,
+    "the loss read in time turned a course that would otherwise be kept": 0.783,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.0025,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0
+   }
+  },
+  "pool_formation_both_ways": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.9994,
+    "late": 0.9999,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_condition_passes": {
+    "in_time": 1.0,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 1.0,
+    "L3_who_reads_decides": 1.0,
+    "L4_when_it_is_read_decides": 1.0
+   },
+   "failure_labels": {},
+   "P_control_kept_in_4_of_5": 0.0,
+   "P_control_turned_in_4_of_5": 0.9945,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.2505,
+    "one_note_in_nine": 0.012
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.2505,
+    "the counts decide, one note in nine outweighed": 0.2505,
+    "the loss read in time turned a course that would otherwise be kept": 0.0,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.9945,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0
+   }
+  },
+  "pool_near_even": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.7052,
+    "late": 0.8986,
+    "unread": 0.905,
+    "read_all": 0.8858
+   },
+   "P_condition_passes": {
+    "in_time": 0.542,
+    "late": 0.917,
+    "unread": 0.921,
+    "read_all": 0.905
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 0.921,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 0.905,
+    "L3_who_reads_decides": 0.8295,
+    "L4_when_it_is_read_decides": 0.494
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.4085,
+     "failed later in the course": 0.047,
+     "failed at the first reading": 0.0025
+    },
+    "late": {
+     "not resolved by the readings": 0.082,
+     "failed at the first reading": 0.0005,
+     "failed later in the course": 0.0005
+    },
+    "unread": {
+     "not resolved by the readings": 0.0765,
+     "failed later in the course": 0.002,
+     "failed at the first reading": 0.0005
+    },
+    "read_all": {
+     "not resolved by the readings": 0.0905,
+     "failed later in the course": 0.0045
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.201,
+   "P_control_turned_in_4_of_5": 0.183,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.097,
+    "one_note_in_nine": 0.0125
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.097,
+    "the counts decide, one note in nine outweighed": 0.078,
+    "the loss read in time turned a course that would otherwise be kept": 0.024,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.0845,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0005,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0005,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0025
+   }
+  },
+  "pool_moderate_clumped": {
+   "clump": 0.5,
+   "P_seed_as_predicted": {
+    "in_time": 0.7616,
+    "late": 0.928,
+    "unread": 0.9361,
+    "read_all": 0.9459
+   },
+   "P_condition_passes": {
+    "in_time": 0.6485,
+    "late": 0.952,
+    "unread": 0.9645,
+    "read_all": 0.971
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 0.9645,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 0.971,
+    "L3_who_reads_decides": 0.9245,
+    "L4_when_it_is_read_decides": 0.6165
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.318,
+     "failed later in the course": 0.0325,
+     "failed at the first reading": 0.001
+    },
+    "late": {
+     "not resolved by the readings": 0.046,
+     "failed later in the course": 0.002
+    },
+    "unread": {
+     "not resolved by the readings": 0.0325,
+     "failed later in the course": 0.003
+    },
+    "read_all": {
+     "not resolved by the readings": 0.023,
+     "failed later in the course": 0.006
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.33,
+   "P_control_turned_in_4_of_5": 0.0935,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.199,
+    "one_note_in_nine": 0.01
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.199,
+    "the counts decide, one note in nine outweighed": 0.185,
+    "the loss read in time turned a course that would otherwise be kept": 0.0795,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.057,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.001
+   }
+  },
+  "single_reading": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 1.0,
+    "late": 0.379,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_condition_passes": {
+    "in_time": 1.0,
+    "late": 0.0675,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 1.0,
+    "L3_who_reads_decides": 0.0675,
+    "L4_when_it_is_read_decides": 0.0675
+   },
+   "failure_labels": {
+    "late": {
+     "failed at the first reading": 0.8945,
+     "not resolved by the readings": 0.038
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.3975,
+   "P_control_turned_in_4_of_5": 0.0625,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 1.0,
+    "one_note_in_nine": 0.988
+   },
+   "P_supported": {
+    "the others' readers read the loss": 1.0,
+    "the counts decide, one note in nine outweighed": 0.0675,
+    "the loss read in time turned a course that would otherwise be kept": 0.027,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.003,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.8905,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0
+   }
+  },
+  "formation": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.7938,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 0.0001
+   },
+   "P_condition_passes": {
+    "in_time": 0.717,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 0.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 0.0,
+    "L3_who_reads_decides": 0.0,
+    "L4_when_it_is_read_decides": 0.717
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.2565,
+     "failed later in the course": 0.0265
+    },
+    "read_all": {
+     "failed at the first reading": 0.6365,
+     "not resolved by the readings": 0.3635
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.0065,
+   "P_control_turned_in_4_of_5": 0.7285,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.027,
+    "one_note_in_nine": 0.0085
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.027,
+    "the counts decide, one note in nine outweighed": 0.0,
+    "the loss read in time turned a course that would otherwise be kept": 0.0015,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.5145,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.4625,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0
+   }
+  },
+  "discount": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.9774,
+    "late": 0.9999,
+    "unread": 1.0,
+    "read_all": 0.0001
+   },
+   "P_condition_passes": {
+    "in_time": 0.9945,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 0.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 0.0,
+    "L3_who_reads_decides": 0.0,
+    "L4_when_it_is_read_decides": 0.9945
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.0035,
+     "failed later in the course": 0.002
+    },
+    "read_all": {
+     "failed at the first reading": 0.5965,
+     "not resolved by the readings": 0.4035
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.4005,
+   "P_control_turned_in_4_of_5": 0.0585,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.5985,
+    "one_note_in_nine": 0.0175
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.5985,
+    "the counts decide, one note in nine outweighed": 0.0,
+    "the loss read in time turned a course that would otherwise be kept": 0.3055,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.058,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.5945,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0
+   }
+  },
+  "notes_idle_each_for_own": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.9785,
+    "late": 0.9998,
+    "unread": 0.9999,
+    "read_all": 1.0
+   },
+   "P_condition_passes": {
+    "in_time": 0.999,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 1.0,
+    "L3_who_reads_decides": 1.0,
+    "L4_when_it_is_read_decides": 0.999
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.001
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.0,
+   "P_control_turned_in_4_of_5": 0.991,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.0335,
+    "one_note_in_nine": 0.0105
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.0335,
+    "the counts decide, one note in nine outweighed": 0.0335,
+    "the loss read in time turned a course that would otherwise be kept": 0.0,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.99,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0
+   }
+  },
+  "notes_idle_near_even": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.3647,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_condition_passes": {
+    "in_time": 0.0665,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 1.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 1.0,
+    "L3_who_reads_decides": 1.0,
+    "L4_when_it_is_read_decides": 0.0665
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.8955,
+     "failed later in the course": 0.028,
+     "failed at the first reading": 0.01
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.402,
+   "P_control_turned_in_4_of_5": 0.055,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.0425,
+    "one_note_in_nine": 0.0145
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.0425,
+    "the counts decide, one note in nine outweighed": 0.0425,
+    "the loss read in time turned a course that would otherwise be kept": 0.0045,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.002,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.01
+   }
+  },
+  "notes_idle_near_even_clumped": {
+   "clump": 0.5,
+   "P_seed_as_predicted": {
+    "in_time": 0.3977,
+    "late": 0.9371,
+    "unread": 0.9321,
+    "read_all": 0.9683
+   },
+   "P_condition_passes": {
+    "in_time": 0.079,
+    "late": 0.9705,
+    "unread": 0.9635,
+    "read_all": 0.991
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 0.9635,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 0.991,
+    "L3_who_reads_decides": 0.9625,
+    "L4_when_it_is_read_decides": 0.0755
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.8665,
+     "failed at the first reading": 0.0265,
+     "failed later in the course": 0.028
+    },
+    "late": {
+     "not resolved by the readings": 0.026,
+     "failed later in the course": 0.0035
+    },
+    "unread": {
+     "not resolved by the readings": 0.0335,
+     "failed at the first reading": 0.0005,
+     "failed later in the course": 0.0025
+    },
+    "read_all": {
+     "failed later in the course": 0.0035,
+     "not resolved by the readings": 0.0055
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.331,
+   "P_control_turned_in_4_of_5": 0.088,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.038,
+    "one_note_in_nine": 0.008
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.038,
+    "the counts decide, one note in nine outweighed": 0.0365,
+    "the loss read in time turned a course that would otherwise be kept": 0.005,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.007,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0005,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0265
+   }
+  },
+  "taste_list": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.0,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 0.0
+   },
+   "P_condition_passes": {
+    "in_time": 0.0,
+    "late": 1.0,
+    "unread": 1.0,
+    "read_all": 0.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 1.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 0.0,
+    "L3_who_reads_decides": 0.0,
+    "L4_when_it_is_read_decides": 0.0
+   },
+   "failure_labels": {
+    "in_time": {
+     "failed at the first reading": 1.0
+    },
+    "read_all": {
+     "failed at the first reading": 0.845,
+     "not resolved by the readings": 0.155
+    }
+   },
+   "P_control_kept_in_4_of_5": 1.0,
+   "P_control_turned_in_4_of_5": 0.0,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.033,
+    "one_note_in_nine": 0.0105
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.033,
+    "the counts decide, one note in nine outweighed": 0.0,
+    "the loss read in time turned a course that would otherwise be kept": 0.0,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.0,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.0,
+    "the readers that carry the loss, the more numerous, did not turn the course": 1.0
+   }
+  },
+  "taste_prose": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 1.0,
+    "late": 0.0,
+    "unread": 0.0,
+    "read_all": 1.0
+   },
+   "P_condition_passes": {
+    "in_time": 1.0,
+    "late": 0.0,
+    "unread": 0.0,
+    "read_all": 1.0
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 0.0,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 1.0,
+    "L3_who_reads_decides": 0.0,
+    "L4_when_it_is_read_decides": 0.0
+   },
+   "failure_labels": {
+    "late": {
+     "not resolved by the readings": 0.155,
+     "failed at the first reading": 0.845
+    },
+    "unread": {
+     "not resolved by the readings": 0.1515,
+     "failed at the first reading": 0.8485
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.0,
+   "P_control_turned_in_4_of_5": 1.0,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.027,
+    "one_note_in_nine": 0.0095
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.027,
+    "the counts decide, one note in nine outweighed": 0.0,
+    "the loss read in time turned a course that would otherwise be kept": 0.0,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.0,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0,
+    "no lock formed from the loop's own selections": 0.8485,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0
+   }
+  },
+  "even": {
+   "clump": 0.0,
+   "P_seed_as_predicted": {
+    "in_time": 0.4845,
+    "late": 0.5303,
+    "unread": 0.5343,
+    "read_all": 0.4607
+   },
+   "P_condition_passes": {
+    "in_time": 0.1685,
+    "late": 0.2295,
+    "unread": 0.223,
+    "read_all": 0.1425
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 0.223,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 0.1425,
+    "L3_who_reads_decides": 0.033,
+    "L4_when_it_is_read_decides": 0.041
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.787,
+     "failed later in the course": 0.016,
+     "failed at the first reading": 0.0285
+    },
+    "late": {
+     "not resolved by the readings": 0.7585,
+     "failed at the first reading": 0.0105,
+     "failed later in the course": 0.0015
+    },
+    "unread": {
+     "not resolved by the readings": 0.7655,
+     "failed later in the course": 0.0045,
+     "failed at the first reading": 0.007
+    },
+    "read_all": {
+     "not resolved by the readings": 0.8475,
+     "failed at the first reading": 0.006,
+     "failed later in the course": 0.004
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.2225,
+   "P_control_turned_in_4_of_5": 0.165,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.0325,
+    "one_note_in_nine": 0.0135
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.0325,
+    "the counts decide, one note in nine outweighed": 0.001,
+    "the loss read in time turned a course that would otherwise be kept": 0.0,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.0055,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.001,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0015,
+    "no lock formed from the loop's own selections": 0.007,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.0285
+   }
+  },
+  "even_clumped": {
+   "clump": 0.5,
+   "P_seed_as_predicted": {
+    "in_time": 0.4834,
+    "late": 0.5322,
+    "unread": 0.5273,
+    "read_all": 0.4681
+   },
+   "P_condition_passes": {
+    "in_time": 0.163,
+    "late": 0.2265,
+    "unread": 0.2195,
+    "read_all": 0.1395
+   },
+   "P_contrast_passes": {
+    "L1_an_unread_loss_leaves_the_lock": 0.2195,
+    "L2_a_loss_read_by_every_reader_turns_the_course": 0.1395,
+    "L3_who_reads_decides": 0.0335,
+    "L4_when_it_is_read_decides": 0.031
+   },
+   "failure_labels": {
+    "in_time": {
+     "not resolved by the readings": 0.7735,
+     "failed later in the course": 0.0195,
+     "failed at the first reading": 0.044
+    },
+    "late": {
+     "not resolved by the readings": 0.758,
+     "failed later in the course": 0.004,
+     "failed at the first reading": 0.0115
+    },
+    "unread": {
+     "not resolved by the readings": 0.7495,
+     "failed at the first reading": 0.022,
+     "failed later in the course": 0.009
+    },
+    "read_all": {
+     "not resolved by the readings": 0.8375,
+     "failed at the first reading": 0.0135,
+     "failed later in the course": 0.0095
+    }
+   },
+   "P_control_kept_in_4_of_5": 0.2,
+   "P_control_turned_in_4_of_5": 0.1755,
+   "P_measure_resolved": {
+    "notes_where_most_readers": 0.0395,
+    "one_note_in_nine": 0.0135
+   },
+   "P_supported": {
+    "the others' readers read the loss": 0.0395,
+    "the counts decide, one note in nine outweighed": 0.0015,
+    "the loss read in time turned a course that would otherwise be kept": 0.0005,
+    "in_time turned by the readers' counts alone, the loss not needed": 0.007,
+    "a single reading turned the lock (the third forbidden case of T7)": 0.0005,
+    "a loss read by every reader did not turn the course, a taste for lists ruled out": 0.0015,
+    "no lock formed from the loop's own selections": 0.022,
+    "the readers that carry the loss, the more numerous, did not turn the course": 0.044
+   }
+  }
+ }
+}
