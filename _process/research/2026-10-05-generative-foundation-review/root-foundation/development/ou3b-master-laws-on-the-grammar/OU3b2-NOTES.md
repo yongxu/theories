@@ -69,11 +69,11 @@ At amounts:
 - `Amounts.falls_end`: within fewer than `m` least losses, the courses of no rise then a least fall end.
 - `Amounts.rests_unrefuted` is now proved from `«尽则不或屡»` and `falls_end`, with its statement unchanged, and `Amounts.rests` follows from it as before.
 - `Amounts.FallsStop` is `¬ «或屡» (fun a b => ¬ M.le a b) s T` by definition (`Amounts.fallsStop_iff`, both ways).
-- Falls that end stop (`Amounts.fallsStop_of_ends`). The converse needs dependent choice and is not stated.
+- Falls that end stop (`Amounts.fallsStop_of_ends`). No converse is established (review: REVIEW-ASTRA-3.md, finding 1).
 
 **F2: rest is not a case of `«入»`**, proved both ways:
 - `«止而不入之例»`: a fixed point is at rest and not drawn.
-- `«入而屡之例»`: along the successor on the whole numbers, 0 is drawn and its `F`-steps recur.
+- `«入而屡之例»`: along the successor on the whole numbers, 0 is drawn and its marked `F` steps recur (marked steps, not falls of an amount).
 
 A's header states this, and the proposed revision of 08 §7's row is [PROPOSED-08-7-FINITE-RUNS](PROPOSED-08-7-FINITE-RUNS.md).
 

@@ -87,8 +87,8 @@ their consumers' stay arithmetic, since each needs only the count.
   the falls end), and `Amounts.FallsStop` is, by definition, the non-recurrence of strict falls
   (`Amounts.fallsStop_iff`). **Rest is not a case of being drawn in**: a fixed point is at rest and
   not drawn (`«止而不入之例»`), and a place can be drawn in while its steps of `F` recur
-  (`«入而屡之例»`). Rest is a case of ending (`«尽»`), which `Becoming.GrammarMap` reads as
-  degeneration (`«退化»`).
+  (`«入而屡之例»`). The ending of the courses (`«尽»`) gives rest; it is a sufficient condition,
+  not what rest is, and no converse is established.
 * **Lumping.** `«同行» R E` (`R˘;E;R ⊆ E`) says that `E`-alike occurrences go to `E`-alike
   occurrences (`«同行之逐点»`). Constancy (`«有常»`) gives it where the successor is fixed at the
   occurrences `E` leads to (`«有常局定后则同行»`); it gives constancy where a successor exists at
@@ -108,9 +108,9 @@ their consumers' stay arithmetic, since each needs only the count.
 
 What is not shown: that any model's relation is functional, total or listed (the models supply
 these); the n-step lines law for lines of different lengths; that a pairing under continuation
-(`«对» («续» R E)`) adds anything to equal count, which is not stated; the converse of the law of
-rest, from rest along every line to the ending of the courses, which would build an endless course
-from endlessly many falls and needs dependent choice. Every statement is pointwise; no equality of
+(`«对» («续» R E)`) adds anything to equal count, which is not stated; any converse of the law of
+rest, from rest along a line to the ending of the courses: none is established, and one would have
+to say which step relations it compares and on what logic. Every statement is pointwise; no equality of
 relations is used, and every declaration has an empty axiom report.
 -/
 
@@ -953,9 +953,9 @@ theorem «有限遍后定后则定前当且仅当皆返» {R : «际» α} {all 
 /-! ### Rest (止): falls that end
 
 A line `g` whose steps from `T` on are steps of `Q` (no rise, say) is at rest where its steps of `F`
-(a least fall, say) do not recur. Rest is a case of ending (`«尽»`, which `Becoming.GrammarMap`
-reads as degeneration, `«退化»`): where every course of `Q` steps then an `F` step ends from the
-line's place at `T`, the `F` steps along the line do not recur. It is not a case of being drawn in
+(a least fall, say) do not recur. The ending of the courses (`«尽»`) gives rest: where every course
+of `Q` steps then an `F` step ends from the line's place at `T`, the `F` steps along the line do
+not recur. That is a sufficient condition, not what rest is; no converse is established. It is not a case of being drawn in
 (`«入»`): a place at rest need not be drawn, and a place drawn in need not come to rest. -/
 
 /-- Steps of `F` recur along the line `g` (屡): after every place, a later step of `g` is one of `F`. -/
