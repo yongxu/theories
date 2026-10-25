@@ -1,0 +1,1175 @@
+{
+ "model": "haiku",
+ "runs": [
+  {
+   "cond": "s2p3",
+   "seed": 0,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12762.6
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12371.25
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12421.4
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12655.7
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21459.35
+    }
+   ]
+  },
+  {
+   "cond": "s2p3",
+   "seed": 1,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "S",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12633.4
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12573.75
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12429.9
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21924.05
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21648.05
+    }
+   ]
+  },
+  {
+   "cond": "s2p3",
+   "seed": 2,
+   "choices": [
+    "N",
+    "S",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12634.6
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21788.8
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21430.55
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21707.5
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21511.6
+    }
+   ]
+  },
+  {
+   "cond": "s2p3",
+   "seed": 3,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "S",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12612.65
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12364.7
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12617.2
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21741.9
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21858.7
+    }
+   ]
+  },
+  {
+   "cond": "s2p3",
+   "seed": 4,
+   "choices": [
+    "N",
+    "N",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12386.1
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 12371.85
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21793.35
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21378.35
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21521.85
+    }
+   ]
+  },
+  {
+   "cond": "s0p5",
+   "seed": 0,
+   "choices": [
+    "N",
+    "N",
+    "S",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34493.95
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34481.15
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21795.3
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34148.65
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34110.4
+    }
+   ]
+  },
+  {
+   "cond": "s0p5",
+   "seed": 1,
+   "choices": [
+    "N",
+    "S",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34103.1
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21560.05
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34172.4
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34758.8
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34628.55
+    }
+   ]
+  },
+  {
+   "cond": "s0p5",
+   "seed": 2,
+   "choices": [
+    "N",
+    "N",
+    "S",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34337.85
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34492.9
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21615.55
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34718.85
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34134.2
+    }
+   ]
+  },
+  {
+   "cond": "s0p5",
+   "seed": 3,
+   "choices": [
+    "S",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 21776.75
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34227.7
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 33933.35
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 33865.4
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34384.4
+    }
+   ]
+  },
+  {
+   "cond": "s0p5",
+   "seed": 4,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34274.65
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34770.2
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34832.1
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 34231.55
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 33827.1
+    }
+   ]
+  },
+  {
+   "cond": "s2p0",
+   "seed": 0,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 784.35
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 818.9
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 817.3
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 810.8
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 773.7
+    }
+   ]
+  },
+  {
+   "cond": "s2p0",
+   "seed": 1,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 763.75
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 777.3
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 815.75
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 813.1
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 803.85
+    }
+   ]
+  },
+  {
+   "cond": "s2p0",
+   "seed": 2,
+   "choices": [
+    "N",
+    "S",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 812.9
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 2693.8
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 2669.75
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 2723.55
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 2712.15
+    }
+   ]
+  },
+  {
+   "cond": "s2p0",
+   "seed": 3,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 821.3
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 779.15
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 786.05
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 814.45
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 790.3
+    }
+   ]
+  },
+  {
+   "cond": "s2p0",
+   "seed": 4,
+   "choices": [
+    "N",
+    "S",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 806.15
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 2788.15
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 2723.0
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 2700.9
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 2668.65
+    }
+   ]
+  },
+  {
+   "cond": "s0p0",
+   "seed": 0,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "S",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 808.05
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 800.9
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 789.75
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 98.65
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 786.25
+    }
+   ]
+  },
+  {
+   "cond": "s0p0",
+   "seed": 1,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "S",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 786.5
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 781.0
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 812.9
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 98.8
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 754.15
+    }
+   ]
+  },
+  {
+   "cond": "s0p0",
+   "seed": 2,
+   "choices": [
+    "N",
+    "S",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 791.5
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 99.65
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 792.75
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 808.0
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 823.35
+    }
+   ]
+  },
+  {
+   "cond": "s0p0",
+   "seed": 3,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 774.2
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 780.15
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 809.85
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 792.15
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 816.25
+    }
+   ]
+  },
+  {
+   "cond": "s0p0",
+   "seed": 4,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "S",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 831.35
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 825.6
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 781.7
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 95.85
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 784.8
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p0",
+   "seed": 0,
+   "choices": [
+    "S",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 1652.35
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2690.45
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2674.95
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2666.7
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2597.25
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p0",
+   "seed": 1,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2673.35
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2696.95
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2744.3
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2736.1
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2732.8
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p0",
+   "seed": 2,
+   "choices": [
+    "N",
+    "N",
+    "S",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2779.55
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2662.1
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 1504.5
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2699.5
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2690.75
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p0",
+   "seed": 3,
+   "choices": [
+    "N",
+    "S",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2658.7
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 1535.75
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2645.65
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2763.8
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2736.95
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p0",
+   "seed": 4,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2692.15
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2753.35
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2699.8
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2710.7
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 2688.65
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p5",
+   "seed": 0,
+   "choices": [
+    "S",
+    "N",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 75528.0
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 51714.35
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 75666.55
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 75662.2
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 75439.55
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p5",
+   "seed": 1,
+   "choices": [
+    "N",
+    "N",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 51209.0
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 51407.8
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 75043.85
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 73748.0
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 75046.4
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p5",
+   "seed": 2,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 50449.55
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 51935.6
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 50772.25
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 50999.2
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 51549.05
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p5",
+   "seed": 3,
+   "choices": [
+    "N",
+    "N",
+    "N",
+    "N",
+    "N",
+    "N"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 51657.25
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 51757.75
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 50626.9
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 51195.5
+    },
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 50763.45
+    }
+   ]
+  },
+  {
+   "cond": "m2n1_p5",
+   "seed": 4,
+   "choices": [
+    "N",
+    "S",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "history": [
+    {
+     "policy": "N",
+     "chosen": true,
+     "score": 51189.0
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 74661.35
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 74007.35
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 76517.15
+    },
+    {
+     "policy": "S",
+     "chosen": true,
+     "score": 76269.05
+    }
+   ]
+  }
+ ]
+}
