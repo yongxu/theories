@@ -672,3 +672,129 @@ end Optimum
 
 end Becoming
 ```
+
+## Re-check of the revision (21274cd02)
+
+AI-authored re-check, 25 October 2026, of the revision at `21274cd02`. It covers:
+
+- NOTE.md, LANDING.md and scratch.log;
+- tree/Becoming/SetPointOptimum.lean, sha256 `cfe9340e…37a5a142`;
+- tree/Becoming/Optimum.lean, sha256 `6b8c4e20…f9eaeb6dc`.
+
+The kit was rebuilt in a scratch copy (`ue1b-review2/recheck`), every step reused from the cache:
+
+| Module | Theorems | Declarations |
+|---|---|---|
+| `Optimum` | 506 | 637 |
+| `SetPointOptimum` | 82 | 124 |
+| `RegimeMargin` | 246 | 336 |
+
+The root module compiles, no step is unclean, and every axiom report is empty.
+
+**Verdict.**
+
+- **The findings.** The revision takes every finding: 18 are addressed and one (17, a suggestion) is partly addressed.
+- **The Lean.** The Lean is sound, and stronger than reviewed:
+  - `Nearer` by betweenness widens the class of orders;
+  - `held_draws` and `held_excess_ends` need only a held stock;
+  - the review's probes are now the kit's own theorems.
+- **The refactor.** The `Optimum` refactor is byte for byte the tree this review built and compared, so no statement of `Optimum` changes.
+- **New errors.** They are small:
+  - four docstrings garbled by the rename of `holding`;
+  - a misstatement in NOTE §6;
+  - an unqualified "single-peaked";
+  - one process point in LANDING: history lines on re-points.
+
+The kit is ready to land once the four docstrings are fixed. The other points below can be taken at landing.
+
+### 1. The findings
+
+| # | Status | How |
+|---|---|---|
+| 1 | Addressed | "The set point alone does not protect", with `Topped.counted_after_keeps` cited: module *Reading*, NOTE §1 and §3, and LANDING's text for UE1's NOTE-CORRECTIONS. |
+| 2 | Addressed | "In total" throughout; `counted_after_keeps_iff` and `Spread.counted_after_empties` added. Nit: `counted_after_most`'s docstring ends "keeps no more than some way of reaching the set point leaves", which is true of every optimum; write "keeps a need only where some way of reaching the set point keeps it". |
+| 3 | Addressed | `Drain.satisficingThen_keeps`, `byGapLess`, `Topped.counted_less_drains`; the plateau decides, not the set point. |
+| 4 | Addressed | `optima_iff`; "Nearing alone asks nothing"; the `least_at_iff` docstring says it is a statement about the class. |
+| 5 | Addressed | Held stocks as hypotheses, `stock_eq_of_atSetPoint`, "at least", "no choice enters", and the coupling clause marked a restatement. Nit: `held_excess_ends`'s headline, "each within what a condition is given", names a case, not a hypothesis (its body says so). |
+| 6 | Addressed | One condition exact, several sufficient (the `atSetPoint_breaks` docstring), the loss and the sign. |
+| 7 | Addressed | NOTE §7 as proposed, and `Topped.weighted_keeps`. Checked: under every positive weight, idling beats every outcome leaving less than two at the source. |
+| 8 | Addressed | `Nearer` by `Regulation.Between`; `nearing_of_gaps`, `Skew.nearing`, `Skew.not_by_gaps`. See new point 4 on strictness. |
+| 9 | Addressed | `Nearing.not_rising`, `byGapThen_asymm`, `byGapThen_not_rising`. |
+| 10 | Addressed | The headline, and how the dweller is read. |
+| 11 | Addressed | The headline. |
+| 12 | Addressed | Listed in NOTE §4 and in the module docstring. |
+| 13 | Addressed | The four omissions are listed. |
+| 14 | Addressed | `Becoming.ChoiceCountCapture`. |
+| 15 | Addressed | Renamed; no `settled` remains. |
+| 16 | Addressed | Renamed. |
+| 17 | Partly | `holders` renamed, but the rename garbled four docstrings (new point 1). The other three moves are left to their owners, acceptable for a suggestion. NOTE §6 misstates `total_le_of_only` (new point 2). |
+| 18 | Addressed | The refactor is byte-identical to the tested tree (§3 below). |
+| 19 | Addressed | The three additions are made; the `MutualBest` generalization is left optional. |
+
+### 2. New points
+
+1. **Four garbled docstrings.** *Error (text; fix before landing).*
+   - **Location.** `HeldPair` in the kit, where a replacement of `holding` by `holders` hit prose:
+     - "two formations holders stores" (line 1263);
+     - "The part holders stores at a set point" (line 1284);
+     - "Two formations holders set points" (line 1504);
+     - "the law's hypotheses holders together" (line 1509).
+   - **Fix.** Write "holding" in all four. As they stand, they would land in the core's docstrings.
+2. **NOTE §6, row 17.** *Imprecision.*
+   - **What is wrong.** It says "`total_le_of_only` now derives from `total_le_at`". It always did: the proof is unchanged since `e1427437c`.
+   - **Fix.** "derives from `total_le_at`, as before".
+3. **Re-points take no history notes.** *Imprecision (process).*
+   - **What is wrong.** LANDING §2.3 calls a history line on `re-optimizing-above-a-renewal-ends-it` and `several-optimizers-drain-by-their-joint-capacity` optional. RESULT-WORKFLOW says that a re-point which changes nothing the record says takes none: it is made with `tools/research/repoint.py` and logged once in `_process/architecture/rebinds.jsonl`.
+   - **Fix.** No history line on those two, unless their declaration lists change.
+   - **Also.** LANDING's "law 3" of `room-read-off-the-exchange` is `laws[3]`, its fourth law.
+4. **"Single-peaked" needs "strictly".** *Imprecision.*
+   - **Location.** The module docstring (its first bullet and its *Reading*), NOTE §3's corrected wording and §4, and LANDING §3's draft and *Reading*.
+   - **What is wrong.**
+     - Nearing asks for strict improvement at each step toward the set point. So a preference indifferent within a tolerance band around the set point, common in homeostasis, is not nearing: the band is a two-sided aspiration level, and the plateau results apply to it instead.
+     - The converse in the readings ("single-peaked at each observed condition, they form a nearing order") also needs each condition's peak to be independent of the others. That condition is stated in the list of what is not derived, but not beside the claim.
+   - **Fix.** Write "strictly single-peaked at each condition, its peak not depending on the others", and add "a tolerance band is not nearing" to what is not derived.
+5. **"Where the family holds a condition."** *Imprecision.*
+   - **Location.** NOTE §3's corrected wording, LANDING §3's draft, and LANDING's root bullet and README rows.
+   - **What is wrong.** They say that no asymmetric nearing order is rising, without the hypothesis. Over an empty family every order rises, vacuously. `Nearing.not_rising` has the hypothesis.
+   - **Fix.** Keep "where the family holds a condition" in the record and the chapter.
+6. **Part 2 of the board row.** *Imprecision (process).*
+   - **What is wrong.** The board row claims UE1b together with pooled generative models (UE1's item e), but the kit and LANDING cover part 1 only. LANDING §5 moves "the UE1b row to history".
+   - **Fix.** Say what becomes of part 2: open, split off, or answered by UE1's reading 4 through 05 §8.
+
+### 3. The Optimum refactor and the re-points
+
+- **No statement changes.**
+  - tree/Becoming/Optimum.lean (`6b8c4e20…`) is byte-identical to `ue1b-review2/refactor/Becoming/Optimum.lean`. That is the tree this review built and whose 634 declaration types it compared with the landed ones: identical, the three moved theorems up to hygienic binder names.
+  - The landed `Optimum.lean` is unchanged since then (`3da737a6…`, last changed at `423800365`), so the comparison holds at HEAD.
+  - The drafter's wider comparison agrees. It covers all constants, also with binder names erased: 1054 of the 1057 before are byte-identical, the other 3 are compiler matchers of the old proofs, and `RegimeMargin`'s 546 are identical.
+- **The 17 re-points are bookkeeping.**
+  - All 17 records bind `Becoming/Optimum.lean` at receipt `20261023T055339.893510Z` (counted: 17). Their statements, laws and declaration lists stay true.
+  - So re-point them to the new core receipt with `repoint.py`, in one `rebinds.jsonl` line. The line cites the diff read (three proofs made corollaries, three theorems added, one docstring sentence) and scratch.log §3.
+  - They take no history notes and no refresh of `reviewed_at_utc`. EC6's landing did the same (`205696be5`: "history notes in seven records; other citing records re-pointed").
+  - The one exception is `room-read-off-the-exchange`. LANDING adds the three general laws to the declaration lists of its `laws[3]` and `references[0]`. A changed declaration list takes the history line LANDING drafts and a refreshed `reviewed_at_utc`.
+
+### 4. Ready to land, and what the record should claim
+
+**Ready** once new point 1 is fixed. Points 2–6 can be taken in the landing commit.
+
+**The record should claim** the following, on any outcomes and any orders, at one step:
+
+- *The class.* Nearer is read by betweenness, and `nearing_of_gaps` with `Skew` shows the class is wider than orders falling with symmetric distance. No asymmetric nearing order is rising, where the family holds a condition.
+- *At the set point.* Where an eligible outcome reaches it, every optimum stands there, and the optima of the class are exactly the eligible outcomes at the set point (`optima_iff`, near-definitional).
+- *Counted after.* A term counted after leaves the most beyond, in total, among the ways of reaching the set point. With one condition beyond, it keeps a need exactly where some way keeps it; with several, it can empty one. Counting less drains. The effect belongs to the plateau, which aspiration levels share, not to the set point.
+- *Below the set point.* The drain of `Optimum` returns (`least_below_iff`, and `nearing_beyond`, now through `beyond_of_ranked`).
+- *On the World.* The draw identity at the set point; the break exact with one condition beyond, the condition sufficient with several.
+- *Joint excess.* It holds for formations holding their families' stocks, with no order or choice in the law.
+
+**The record should not claim:**
+
+- that active-inference preferences are nearing: that is a reading, and it needs strictness and independent peaks; nor anything about probability, precision or expected free energy;
+- that a set point protects what lies beyond: protection depends on the choice among equal optima, which is not modelled;
+- that a term counted after keeps each dependence;
+- that holders are choosers re-optimizing at every step;
+- that the weighted case holds beyond `Topped`;
+- the quantilizer bound, a reading that is not proved;
+- anything over a horizon or under noise;
+- the frozen test's predictions as results.
+
+Keep `counted_after_most` and `optima_iff` labelled near-definitional (a lexicographic order; the class's indifference). Keep the correspondences (Friston and others, Keramati and Gutkin, Simon, Taylor) labelled as readings cited from bibliographic knowledge.
