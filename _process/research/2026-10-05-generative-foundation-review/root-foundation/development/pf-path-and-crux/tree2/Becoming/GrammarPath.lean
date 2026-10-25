@@ -46,14 +46,17 @@ states them for every carrier, relation and class.
   effects, and its line from the first family's first birth reaches the second family past the first
   member's end, while the member's class is not constant up to the net's end
   (`FiniteSharedCondition`).
-* **Side effects follow the line (旁效随线).** Under a class constant up to the net's end, where a
-  member conditions something not alike to it, every occurrence on its line under the class that
-  conditions something conditions something alike to that effect and outside the class
-  (`«旁效随行»`, `«旁效随线»`); where one such occurrence conditions nothing alike to it, the class is
-  not constant up to the net's end (`«旁效不随则不至终有常»`). Read with a class holding a member's
-  intended effects and not its side effects: such a class can be a regularity of its own (`Unclosed`,
-  read in `AgentWithWake`), but only where side effects of the same kind follow every step of its line
-  that goes on; an intended step with no side effect of that kind breaks it (`CleanStep`).
+* **What leaves the class follows the line (出类随线).** Under a class constant up to the net's end,
+  where a member conditions something not alike to it, every occurrence alike to the member that
+  conditions anything conditions something alike to that effect and outside the class (`«出类随行»`),
+  so every one on its line does (`«出类随线»`); where one such occurrence conditions nothing alike to
+  that effect, the class is not constant up to the net's end (`«出类不随则不至终有常»`, witness
+  `CleanStep`). This is nearly the definition of constancy up to the net's end read at a member the
+  class does not close, and "alike to that effect" is only as fine as the class divides what lies
+  outside it. Read with a class drawn by what a member intends [a reading; nothing in the Lean marks an
+  intended effect]: such a class can be constant up to the net's end without holding the member's
+  effects (`FiniteWake`, finite and without cycles), and then every step of its line that goes on has
+  an effect outside it.
 * **Neither premise can be dropped.** Where a member's line runs through a condition but the member's
   effects leave its class, a constant class holding the member with the condition does not take in
   what the condition feeds (`Unclosed`); and where the class is not constant, even up to the net's
@@ -202,10 +205,11 @@ theorem «常闭则所及皆及» {R E : «际» α} (hE : «类» E) (constant 
     «所及» R E x t :=
   «所及之传递» toC (.inr («常闭则后皆续» hE constant held alike down).2)
 
-/-- **Side effects follow the line, one step (旁效随行).** Under a class constant up to the net's end,
-where a member conditions something not alike to it, whatever is alike to the member and conditions
-something conditions something alike to that effect and not alike to itself. -/
-theorem «旁效随行» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m c u : α}
+/-- **What leaves the class follows each alike step (出类随行).** Under a class constant up to the net's
+end, where a member conditions something not alike to it, whatever is alike to the member and
+conditions anything conditions something alike to that effect and not alike to itself. Nearly the
+definition of constancy up to the net's end, read at a member that the class does not close. -/
+theorem «出类随行» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m c u : α}
     (alike : E c m) (effect : R m u) (outside : ¬ E m u) (goes : ∃ w, R c w) :
     ∃ x, R c x ∧ E u x ∧ ¬ E c x :=
   match constant m c (hE.symm alike) u effect with
@@ -213,25 +217,25 @@ theorem «旁效随行» {R E : «际» α} (hE : «类» E) (constant : «至�
   | .inr stops => match goes with
     | ⟨w, hw⟩ => absurd hw (stops w)
 
-/-- **Side effects follow the line (旁效随线).** Under a class constant up to the net's end, where a
-member conditions something not alike to it, every occurrence on its line under the class that
-conditions something conditions something alike to that effect and outside the class. -/
-theorem «旁效随线» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m c u : α}
+/-- **What leaves the class follows the line (出类随线).** Under a class constant up to the net's end,
+where a member conditions something not alike to it, every occurrence on its line under the class that
+conditions anything conditions something alike to that effect and outside the class. -/
+theorem «出类随线» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m c u : α}
     (line : «所及» R E m c) (effect : R m u) (outside : ¬ E m u) (goes : ∃ w, R c w) :
     ∃ x, R c x ∧ E u x ∧ ¬ E c x :=
-  «旁效随行» hE constant
+  «出类随行» hE constant
     (match line with
      | .inl e => e ▸ hE.refl m
      | .inr l => hE.symm («线内同类» hE l)) effect outside goes
 
-/-- **Where a side effect does not follow, the class is not constant up to the net's end
-(旁效不随则不至终有常).** Where a member conditions something not alike to it, and an occurrence alike
+/-- **Where nothing leaving the class follows, the class is not constant up to the net's end
+(出类不随则不至终有常).** Where a member conditions something not alike to it, and an occurrence alike
 to the member conditions something but nothing alike to that effect, the class is not constant up to
 the net's end. -/
-theorem «旁效不随则不至终有常» {R E : «际» α} (hE : «类» E) {m c u : α} (alike : E c m)
+theorem «出类不随则不至终有常» {R E : «际» α} (hE : «类» E) {m c u : α} (alike : E c m)
     (effect : R m u) (outside : ¬ E m u) (goes : ∃ w, R c w) (clean : ∀ x, R c x → ¬ E u x) :
     ¬ «至终有常» R E := fun constant =>
-  match «旁效随行» hE constant alike effect outside goes with
+  match «出类随行» hE constant alike effect outside goes with
   | ⟨x, hx, ux, _⟩ => clean x hx ux
 
 /-- **Up to the net's end, a class holds a member's effects exactly where everything downstream of the
@@ -575,9 +579,10 @@ end FiniteSharedCondition
 
 namespace CleanStep
 
-/-! A member `m` with an intended effect `i` and a side effect `u`; the intended effect goes on to `j`
-with no side effect of its own. The class holding the member with its intended line and leaving the
-side effect out is not constant, even up to the net's end. -/
+/-! A member `m` conditioning `i` and `u`; `i` goes on to `j` and conditions nothing outside the class.
+The class holding `m`, `i` and `j` and keeping `u` apart is not constant, even up to the net's end.
+Read as an agent, `i` would be an intended effect that goes on with no side effect; that is a
+reading. -/
 
 inductive Occ | m | i | j | u
 
@@ -599,7 +604,7 @@ def step : «际» Occ
   | .u, .j => False
   | .u, .u => False
 
-/-- The intended line, as against the side effect. -/
+/-- The line held by the class, as against what leaves it. -/
 def intended : Occ → Bool
   | .m => true
   | .i => true
@@ -610,29 +615,89 @@ def own : «际» Occ := fun x y => intended x = intended y
 
 theorem own_class : «类» own := ⟨fun _ => rfl, Eq.symm, Eq.trans⟩
 
-/-- **An intended effect that goes on without a side effect of its own makes the agential class fail
-constancy up to the net's end.** -/
+/-- **An occurrence alike to the member that goes on with nothing outside the class makes the class fail
+constancy up to the net's end** (`«出类不随则不至终有常»`). -/
 theorem not_constant_to_end : ¬ «至终有常» step own :=
-  «旁效不随则不至终有常» own_class (m := .m) (c := .i) (u := .u) rfl trivial (fun e => Bool.noConfusion e)
+  «出类不随则不至终有常» own_class (m := .m) (c := .i) (u := .u) rfl trivial (fun e => Bool.noConfusion e)
     ⟨.j, trivial⟩ (fun x r => match x, r with
       | .j, _ => fun e => Bool.noConfusion e)
 
 end CleanStep
 
-namespace AgentWithWake
+namespace FiniteWake
 
-/-! `Unclosed` read as an agent with a wake: the member `m` acts on `c` (its intended effect, which
-conditions it back) and conditions `v` (a side effect); `c` feeds `t`. The agential class holding the
-member with its intended effect and not its side effects is constant, its line never reaches a side
-effect, and every occurrence on it that goes on has a side effect alike to `v`. -/
+/-! A member `m` conditioning `i` and `u`, `i` conditioning `j` and `u₂`, and nothing after: finite and
+without cycles. The class holding `m`, `i` and `j` and keeping `u` and `u₂` apart is constant up to the
+net's end though not constant, does not hold the member's effects, and every step of its line that
+goes on has an effect outside it. Read as an agent with a wake, `i` and `j` would be its intended line
+and `u`, `u₂` its side effects; that is a reading. -/
 
-/-- **The agential class can be constant**, and side effects follow every step of its line. -/
-theorem wake_follows {c' : Unclosed.Occ} (line : «所及» Unclosed.step Unclosed.same .m c')
-    (goes : ∃ w, Unclosed.step c' w) :
-    ∃ x, Unclosed.step c' x ∧ Unclosed.same .v x ∧ ¬ Unclosed.same c' x :=
-  «旁效随线» Unclosed.same_class («有常则至终有常» Unclosed.constant) line trivial
-    (fun e => Bool.noConfusion e) goes
+inductive Occ | m | i | j | u | u₂
 
-end AgentWithWake
+def step : «际» Occ
+  | .m, .m => False
+  | .m, .i => True
+  | .m, .j => False
+  | .m, .u => True
+  | .m, .u₂ => False
+  | .i, .m => False
+  | .i, .i => False
+  | .i, .j => True
+  | .i, .u => False
+  | .i, .u₂ => True
+  | .j, .m => False
+  | .j, .i => False
+  | .j, .j => False
+  | .j, .u => False
+  | .j, .u₂ => False
+  | .u, .m => False
+  | .u, .i => False
+  | .u, .j => False
+  | .u, .u => False
+  | .u, .u₂ => False
+  | .u₂, .m => False
+  | .u₂, .i => False
+  | .u₂, .j => False
+  | .u₂, .u => False
+  | .u₂, .u₂ => False
+
+def line : Occ → Bool
+  | .m => true
+  | .i => true
+  | .j => true
+  | .u => false
+  | .u₂ => false
+
+def own : «际» Occ := fun x y => line x = line y
+
+theorem own_class : «类» own := ⟨fun _ => rfl, Eq.symm, Eq.trans⟩
+
+/-- **The class is constant up to the net's end.** -/
+theorem constant_to_end : «至终有常» step own := by
+  intro x x' e v r
+  cases x <;> cases v <;> cases x' <;>
+    first
+    | exact False.elim r
+    | exact Bool.noConfusion e
+    | exact .inl ⟨.i, trivial, rfl⟩
+    | exact .inl ⟨.j, trivial, rfl⟩
+    | exact .inl ⟨.u, trivial, rfl⟩
+    | exact .inl ⟨.u₂, trivial, rfl⟩
+    | exact .inr (fun w h => by cases w <;> exact False.elim h)
+
+/-- **It is not constant**: `j` is alike to `m` and conditions nothing. -/
+theorem not_constant : ¬ «有常» step own := fun constant =>
+  match («有常之逐点» step own).mp constant .m .j rfl .i trivial with
+  | ⟨w, h, _⟩ => by cases w <;> exact False.elim h
+
+/-- **It does not hold the member's effects.** -/
+theorem not_held : ¬ «所缘同于» step own .m := fun held => Bool.noConfusion (held .u trivial)
+
+/-- **Every step of its line that goes on has an effect outside it.** -/
+theorem wake_follows {c : Occ} (onLine : «所及» step own .m c) (goes : ∃ w, step c w) :
+    ∃ x, step c x ∧ own .u x ∧ ¬ own c x :=
+  «出类随线» own_class constant_to_end onLine trivial (fun e => Bool.noConfusion e) goes
+
+end FiniteWake
 
 end Becoming
