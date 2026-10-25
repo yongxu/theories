@@ -23,7 +23,8 @@ OUT = ROOT / "theories/becoming/results"
 MANIFEST = ROOT / "_process/architecture/generated-manifest.json"
 SCRIPT = Path(__file__).resolve().relative_to(ROOT).as_posix()
 # .claude/worktrees holds other sessions' checkouts of this repository, not sources of it.
-EXCLUDED = (".git", ".lake", "node_modules", ".venv", "venv", "__pycache__", ".claude/worktrees")
+# .build holds the copies a scratch build compiles (scratch_build.py), not sources.
+EXCLUDED = (".git", ".lake", ".build", "node_modules", ".venv", "venv", "__pycache__", ".claude/worktrees")
 KINDS = "theorem|lemma|def|abbrev|structure|inductive|opaque|axiom|constant"
 DECL = re.compile(r"^\s*(?:@\[[^\n]*?\]\s*)*(?:(?:private|protected|noncomputable|unsafe|partial|nonrec)\s+)*(?P<kind>" + KINDS + r")\s+(?P<name>«[^»]+»|[^\s\[\]{}():=]+)")
 LINK = re.compile(r"\[[^\]\n]*\]\((<[^>\n]+>|[^\s)]+)(?:\s+\"[^\"]*\")?\)")
@@ -453,7 +454,7 @@ def render_index(manifest: dict, sources: dict) -> str:
     for role_name, count in s["roles"].items():
         rows.append(f"| {ROLE_LABELS[role_name]} | {count:,} |")
     rows += ["", f"The working-source and audit entries contain **{s['working_named_theorem_lemma_occurrences']:,} explicit theorem/lemma occurrences** and {s['working_explicit_named_declaration_occurrences']:,} explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.", "",
-        "Hidden, ignored and untracked files are included; `.git`, `.lake`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.", "",
+        "Hidden, ignored and untracked files are included; `.git`, `.lake`, `.build`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.", "",
         "The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaque, axiom and constant declarations; it does not enumerate generated constructors and projections, instances or anonymous examples. Source code remains authoritative for semantics and hypotheses.", "",
         H("##", "Direction index", "方向索引 / Direction index"), "", "| Direction | Working sources and audit entries |", "|---|---:|",
     ]

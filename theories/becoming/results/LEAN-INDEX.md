@@ -19,19 +19,19 @@ Warrant of ethical premises, valid inference, recognition, motivation and implem
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **2,039 `.lean` paths and 1,539 distinct byte contents**, including 217 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **1,945 `.lean` paths and 1,539 distinct byte contents**, including 143 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|
 | Audit driver | 13 |
-| Development attempt | 1,104 |
+| Development attempt | 1,010 |
 | Historical draft | 3 |
 | Imported archive | 23 |
 | Working source | 896 |
 
 The working-source and audit entries contain **26,227 explicit theorem/lemma occurrences** and 38,789 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
 
-Hidden, ignored and untracked files are included; `.git`, `.lake`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.
+Hidden, ignored and untracked files are included; `.git`, `.lake`, `.build`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.
 
 The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaque, axiom and constant declarations; it does not enumerate generated constructors and projections, instances or anonymous examples. Source code remains authoritative for semantics and hypotheses.
 
