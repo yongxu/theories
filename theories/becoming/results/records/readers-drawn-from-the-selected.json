@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T11:07:55+00:00",
+  "reviewed_at_utc": "2026-10-25T04:58:08+00:00",
   "statement": {
     "en": "A rule read by readers drawn from the population it selects reads the share exactly where each carrier reads at least as favourably for the carriers as each other does; where only the others read the loss, the counts at the step they read it decide for good whether the lock is kept or turned.",
     "zh": "由其所选人口中抽出的读者所读的规则，恰在每个携带者对携带者的偏向不少于每个其他者之时从份额读出；只有其他者读损失时，读到那一步的计数永远决定锁定保持还是翻转。"
@@ -117,8 +117,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the readers are minds, institutions or a culture: that is a reading (D58, D64). Nor the calibration of any of this to the present world.",
-      "zh": "读者是心智、机构或文化：这是读法（D58、D64）。也不说其中任何一点与当今世界的校准。",
+      "en": "That the readers are minds, institutions or a culture: that is a reading (D58, D67). Nor the calibration of any of this to the present world.",
+      "zh": "读者是心智、机构或文化：这是读法（D58、D67）。也不说其中任何一点与当今世界的校准。",
       "kind": "correspondence"
     },
     {
@@ -145,8 +145,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110422.961776Z): the 42 declarations cited here that Becoming.ClosedCapture gained have empty axiom reports; the checker verifies core purity. Built in one session and reviewed there by one independent read-only reviewer, whose findings were applied (study section 355); not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T110422.961776Z）：本记录所引 Becoming.ClosedCapture 新增的 42 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建，并由一位独立的只读审查者审查，其意见已采纳（研究第 355 节）；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T045617.350224Z, on the tree merged with main when it landed; first passed at 20261022T110422.961776Z): the 42 declarations cited here that Becoming.ClosedCapture gained have empty axiom reports; the checker verifies core purity. Built on 22 October in one session and reviewed there by one independent read-only reviewer, whose findings were applied; landed on 25 October by another session (study section 401); not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T045617.350224Z，在落地时与主干合并之树上；首次通过于 20261022T110422.961776Z）：本记录所引 Becoming.ClosedCapture 新增的 42 项声明公理报告为空；检查器并核对核心纯净。10 月 22 日在一个会话中构建，并由一位独立的只读审查者审查，其意见已采纳；10 月 25 日由另一会话落地（研究第 401 节）；未经人的独立审查。"
   },
   "next_delta": {
     "en": "Readers of one kind reading differently, and readers moving between kinds; weights read from the readings' own sizes; a loss read by a share of the readers that the selection does not thin; real-valued shares; an independent review by a person.",
@@ -288,45 +288,55 @@
       "sha256": "40942b8659853baef361e206f26005e9a86580e0129550faae8c7bb1abaf6272"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110422.961776Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T045617.350224Z/verification.json",
       "role": "receipt",
-      "sha256": "55b12ac1bc2bd9959748b3cfc5329dd86ba03c3a8ff66ba5b2a1f3d68b812763"
+      "sha256": "dd32556ecad5da789503939ee6651f24e73a4f67ce4bc14b85ddde466abc1422"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "99c991737757746c2433932399c3283aaa454ccc8f5945bdef579bcd0d24eb2e"
+      "sha256": "fa227a9ffe8f68087e10707421bbb98dcac23ea20df80d9dc8ea9168a68021bb"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
       "role": "integration",
-      "sha256": "b56db58a5046b908e882ed36b6498475a273f8fa1c69da3212e6db9dc50d4ff6"
+      "sha256": "541c19af25c1fb7ab02ddfbe7b26fc13390bebdfb3417c5c802ef2d8bbd1d9af"
     },
     {
-      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "4bd52c8b4cb6b6f55209cde165cdad6e9b89046d130febbd32b851dc5d4ebd1e"
+      "sha256": "00727036c9d1aecbbf7d951b24d90d71baf96a87617a2247a743035259a0fee8"
+    },
+    {
+      "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "427ab874b35505dae6f3aece58e4f3621afc71efe03db7e52764e398afcb3544"
     },
     {
       "path": "theories/becoming/OPENING.md",
       "role": "statement",
-      "sha256": "30d714ca112a41ddf79c350ff55b136f10b6b3b92661a214b397bb02e1a4f982"
+      "sha256": "8bd42fc5b5b0c594a50648cc5866a323d1a00dbaf434fc49e1df74ecf38fff16"
     },
     {
       "path": "theories/meta-attractor/README.md",
       "role": "statement",
-      "sha256": "550ab09ce47feda61576684a0ac85e3428ef6e825952e2b275e1659591ced249"
+      "sha256": "e70500ca4ba7b2a4e49544267d156ac20e08fd8c0f55647cd9c0eb211d4431d6"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md",
       "role": "provenance",
       "sha256": "7bff26c6d2369ca6c905fa7c5a9765597328fb90c5df4fc2f8e0a7f1b98dbaa5"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md",
+      "role": "provenance",
+      "sha256": "a0c9f349d08a6eeb1da4310e85ca0e0cd2ab042ee3231bfc728787896f0f4717"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110422.961776Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T045617.350224Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ClosedCapture",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -334,8 +344,12 @@
   ],
   "history": [
     {
-      "en": "22 October 2026: added (MA2), on Ren's question about OPENING's note on the meta-attractor; study section 355; readings D64; an independent read-only review applied.",
-      "zh": "2026年10月22日：新增（MA2），回应 Ren 关于 OPENING 元吸引子之注的提问；研究第 355 节；读法 D64；已采纳一次独立的只读审查。"
+      "en": "22 October 2026: added (MA2) on branch ma2, on Ren's question about OPENING's note on the meta-attractor; an independent read-only review applied.",
+      "zh": "2026年10月22日：于 ma2 分支新增（MA2），回应 Ren 关于 OPENING 元吸引子之注的提问；已采纳一次独立的只读审查。"
+    },
+    {
+      "en": "25 October 2026: landed on main, its owner idle since 22 October, by the session coordinating AJ on Ren's yes; merged with main, the statement carried from the retired canonical chapter's §4.5 to 02 §9, the core checker re-run on the merged tree (receipt 20261025T045617.350224Z); study section 401; readings D67 (D64 when proved). The laws are unchanged.",
+      "zh": "2026年10月25日：其所有者自 10 月 22 日起闲置，由协调 AJ 的会话依 Ren 之同意落地主干；与主干合并，陈述由已退役的总章 §4.5 移至 02 §9，在合并之树上重跑核心检查器（回执 20261025T045617.350224Z）；研究第 401 节；读法 D67（证明时为 D64）。诸律不变。"
     }
   ]
 }

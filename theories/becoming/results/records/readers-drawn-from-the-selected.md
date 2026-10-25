@@ -28,7 +28,7 @@
 
 - That any actual rule is the pool of readers drawn from those it selects, or that each kind reads at least as favourably for its own kind: within the pool ReadsShare is equivalent to that comparison, so the premise is moved to who reads, not removed.
 - Readers of one kind reading differently, weights other than counts, readings formed by argument; the pool sums readings unnormalized, so a reading's size weighs with its count (mirrored readings have equal sizes).
-- That the readers are minds, institutions or a culture: that is a reading (D58, D64). Nor the calibration of any of this to the present world.
+- That the readers are minds, institutions or a culture: that is a reading (D58, D67). Nor the calibration of any of this to the present world.
 - Favouring and disfavouring both hold of a rule giving each kind alike, so locked the other way says the carriers' share never rises again, not that it falls; the in-time witness shows the strict fall.
 - **Counterexample:** The time of the reading is not idle: the same readers reading the same loss lock the course the other way when they read it from the start and leave it locked for good when they first read it at step 3 (Thinned.inTime_turned, Thinned.late_kept), though the late reading reads beyond the share (Thinned.late_reads_loss). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean)
 
@@ -37,7 +37,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T110422.961776Z): the 42 declarations cited here that Becoming.ClosedCapture gained have empty axiom reports; the checker verifies core purity. Built in one session and reviewed there by one independent read-only reviewer, whose findings were applied (study section 351); not independently reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T045617.350224Z, on the tree merged with main when it landed; first passed at 20261022T110422.961776Z): the 42 declarations cited here that Becoming.ClosedCapture gained have empty axiom reports; the checker verifies core purity. Built on 22 October in one session and reviewed there by one independent read-only reviewer, whose findings were applied; landed on 25 October by another session (study section 401); not independently reviewed by a person.
 
 Canonical source: [ClosedCapture.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean)
 
@@ -74,21 +74,24 @@ The meta-attractor corpus's "selecting the selectors", the passage from being se
 |---|---|---|
 | proof | [ClosedCapture.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean) | `Becoming.ClosedCapture.Drawn.add_swap`, `Becoming.ClosedCapture.Drawn.cross`, `Becoming.ClosedCapture.Drawn.le_of_disfavours`, `Becoming.ClosedCapture.Drawn.mirror_disfavours_iff`, `Becoming.ClosedCapture.Drawn.mirror_favours_iff`, `Becoming.ClosedCapture.Drawn.mirror_le`, `Becoming.ClosedCapture.Drawn.pool`, `Becoming.ClosedCapture.Drawn.poolRead`, `Becoming.ClosedCapture.Drawn.pool_against`, `Becoming.ClosedCapture.Drawn.pool_favours`, `Becoming.ClosedCapture.Drawn.pool_mono`, `Becoming.ClosedCapture.Drawn.pool_mono_against`, `Becoming.ClosedCapture.Drawn.pool_not_rising`, `Becoming.ClosedCapture.Drawn.pool_reads`, `Becoming.ClosedCapture.Drawn.pool_reads_iff`, `Becoming.ClosedCapture.Drawn.pool_through`, `Becoming.ClosedCapture.Drawn.rearrange`, `Becoming.ClosedCapture.Drawn.rearrange_eq`, `Becoming.ClosedCapture.Drawn.rearrange_lt`, `Becoming.ClosedCapture.Drawn.through_locks`, `Becoming.ClosedCapture.Thinned.course`, `Becoming.ClosedCapture.Thinned.fewCarriers`, `Becoming.ClosedCapture.Thinned.inTime`, `Becoming.ClosedCapture.Thinned.inTime_majority`, `Becoming.ClosedCapture.Thinned.inTime_turned`, `Becoming.ClosedCapture.Thinned.kept_iff`, `Becoming.ClosedCapture.Thinned.late`, `Becoming.ClosedCapture.Thinned.late_kept`, `Becoming.ClosedCapture.Thinned.late_majority`, `Becoming.ClosedCapture.Thinned.late_reads_loss`, `Becoming.ClosedCapture.Thinned.lossPool`, `Becoming.ClosedCapture.Thinned.lossPool_past`, `Becoming.ClosedCapture.Thinned.lossStep_accrues`, `Becoming.ClosedCapture.Thinned.past_course`, `Becoming.ClosedCapture.Thinned.read_in_time_turns`, `Becoming.ClosedCapture.Thinned.read_late_kept`, `Becoming.ClosedCapture.Thinned.rule_read`, `Becoming.ClosedCapture.Thinned.turned_iff`, `Becoming.ClosedCapture.agreeing_locks`, `Becoming.ClosedCapture.agreeing_stays`, `Becoming.ClosedCapture.course_past`, `Becoming.ClosedCapture.turn_agree` |
 | proof | [RuleCapture.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean) | — |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T110422.961776Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T045617.350224Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
-| statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| statement | [02-MAP.md](../../chapters/02-MAP.md) | — |
+| statement | [THE-THEORY-OF-BECOMING.md](../../THE-THEORY-OF-BECOMING.md) | — |
 | statement | [OPENING.md](../../OPENING.md) | — |
 | statement | [README.md](../../../meta-attractor/README.md) | — |
 | provenance | [2026-10-22-push-meta-attractor-further.md](../../../../sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md) | — |
+| provenance | [2026-10-24-alignment-of-the-joint-selection.md](../../../../sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md) | — |
 
 Aliases: `readers drawn from the selected`, `从所选者中抽出的读者`, `selecting the selectors`, `选择选择者`, `the pool reads the share`, `a loss read late by thinned readers`, `Becoming.ClosedCapture.Drawn.pool_reads_iff`, `Becoming.ClosedCapture.Thinned.kept_iff`, `Becoming.ClosedCapture.Thinned.turned_iff`
 
 <a id="history--沿革"></a>
 ### History
 
-- 22 October 2026: added (MA2), on Ren's question about OPENING's note on the meta-attractor; study section 351; readings D64; an independent read-only review applied.
+- 22 October 2026: added (MA2) on branch ma2, on Ren's question about OPENING's note on the meta-attractor; an independent read-only review applied.
+- 25 October 2026: landed on main, its owner idle since 22 October, by the session coordinating AJ on Ren's yes; merged with main, the statement carried from the retired canonical chapter's §4.5 to 02 §9, the core checker re-run on the merged tree (receipt 20261025T045617.350224Z); study section 401; readings D67 (D64 when proved). The laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-22T11:07:55+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-25T04:58:08+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

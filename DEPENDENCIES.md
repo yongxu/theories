@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-427 registered results: 397 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 975 curated edges join 377 results to the results they draw on.
+428 registered results: 398 with a recorded Lean receipt (`recorded-checked`), 19 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 977 curated edges join 378 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -245,6 +245,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [reach-past-ones-own-end][] ← <a id="reach-past-ones-own-end--a-regularity-kept-and-changed"></a>[a-regularity-kept-and-changed][] · <a id="reach-past-ones-own-end--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="reach-past-ones-own-end--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][]
 - [reach-through-a-shared-condition][] ← <a id="reach-through-a-shared-condition--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="reach-through-a-shared-condition--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="reach-through-a-shared-condition--wen-in-the-grammar"></a>[wen-in-the-grammar][]
 - [reaching-before-and-after-a-juncture][] ← <a id="reaching-before-and-after-a-juncture--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][] · <a id="reaching-before-and-after-a-juncture--basins-of-a-determined-law"></a>[basins-of-a-determined-law][]
+- [readers-drawn-from-the-selected][] ← <a id="readers-drawn-from-the-selected--capture-through-the-rule"></a>[capture-through-the-rule][] · <a id="readers-drawn-from-the-selected--closed-capture"></a>[closed-capture][]
 - [reading-anothers-couplings-is-pooling][] ← <a id="reading-anothers-couplings-is-pooling--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="reading-anothers-couplings-is-pooling--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [reading-through-a-pool][] ← <a id="reading-through-a-pool--how-fast-a-rule-may-change"></a>[how-fast-a-rule-may-change][]
 - [readings-within-what-they-read][] ← <a id="readings-within-what-they-read--recurrence-without-premise"></a>[recurrence-without-premise][]
@@ -645,6 +646,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [reach-past-ones-own-end]: theories/becoming/results/records/reach-past-ones-own-end.md
 [reach-through-a-shared-condition]: theories/becoming/results/records/reach-through-a-shared-condition.md
 [reaching-before-and-after-a-juncture]: theories/becoming/results/records/reaching-before-and-after-a-juncture.md
+[readers-drawn-from-the-selected]: theories/becoming/results/records/readers-drawn-from-the-selected.md
 [reading-anothers-couplings-is-pooling]: theories/becoming/results/records/reading-anothers-couplings-is-pooling.md
 [reading-through-a-pool]: theories/becoming/results/records/reading-through-a-pool.md
 [readings-within-what-they-read]: theories/becoming/results/records/readings-within-what-they-read.md

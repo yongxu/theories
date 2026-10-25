@@ -2,12 +2,12 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2927 nodes, 5003 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2929 nodes, 5011 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 76 | 63 | 0 |
-| The map: generation, keeping, degeneration, orders | 5 | 85 | 70 | 0 |
+| The map: generation, keeping, degeneration, orders | 5 | 86 | 70 | 0 |
 | Knowing and testing | 0 | 78 | 71 | 0 |
 | Life and evolution | 0 | 34 | 16 | 0 |
 | Collectives and selection | 0 | 53 | 15 | 0 |
@@ -134,7 +134,7 @@ Modules (63, 8 stated on the grammar): `BranchingCorrespondence`, `Carriers`, `C
 
 ## The map: generation, keeping, degeneration, orders
 
-Results (85):
+Results (86):
 
 - [A continuing family cannot go unfed from beyond](records/continuing-self-fed-from-beyond.md) (recorded-checked)
 - [A coupling saturated by what it has carried](records/a-coupling-saturated-by-what-it-has-carried.md) (recorded-checked)
@@ -177,6 +177,7 @@ Results (85):
 - [Possibly and necessarily drawn](records/necessarily-drawn-is-not-returning.md) (recorded-checked)
 - [Preparation bounds and actual changes in joint realization](records/effective-capacity-and-eventual-reachability.md) (recorded-checked)
 - [Reaching before and after a juncture](records/reaching-before-and-after-a-juncture.md) (recorded-checked)
+- [Readers drawn from the selected](records/readers-drawn-from-the-selected.md) (recorded-checked)
 - [Recurring taking keeps finite families from staying closed](records/no-finite-part-bears-taking.md) (recorded-checked)
 - [Refinement counted as a giving](records/rest-with-refinement-counted.md) (recorded-checked)
 - [Regulation from one side, beyond the gap, and locally](records/regulation-from-one-side-and-locally.md) (recorded-checked)
