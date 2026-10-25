@@ -107,7 +107,7 @@ def main(paths):
             t = m.group(1).strip('.,;:()')
             if not ('«' in t or re.fullmatch(r'[A-Za-z][\w\']*(\.[\w\'«»]+)+', t) or re.fullmatch(r'[a-z]+(_[a-z0-9]+)+', t)):
                 continue
-            if '/' in t or t.endswith(('.md', '.lean', '.py', '.json', '.tsv')):
+            if '/' in t or t.endswith(('.md', '.lean', '.py', '.json', '.tsv', '.xlsx')):
                 continue
             last = t.split('.')[-1]
             if t not in decls and last not in decls:

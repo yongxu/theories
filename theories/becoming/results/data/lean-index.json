@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1937,
-    "distinct_byte_contents": 1528,
+    "lean_paths": 1938,
+    "distinct_byte_contents": 1529,
     "byte_identical_duplicate_groups": 145,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1003,
+      "development-attempt": 1004,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 895
@@ -5423,6 +5423,17 @@
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/tree/Becoming/HabitCapture.lean",
+      "sha256": "9d87d5abc6de838a1f2d917793d9ad4219e8e1e287da5f92959714b1602cdc22",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -274350,6 +274361,202 @@
         "unsafe": []
       },
       "print_axioms_commands": 21
+    },
+    "9d87d5abc6de838a1f2d917793d9ad4219e8e1e287da5f92959714b1602cdc22": {
+      "byte_size": 23479,
+      "line_count": 379,
+      "imports": [
+        "Becoming.IdentificationRuns",
+        "Becoming.ClosedCapture"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "beliefAfter",
+          "qualified_name_hint": "Becoming.HabitCapture.beliefAfter",
+          "line": 79
+        },
+        {
+          "kind": "theorem",
+          "name": "selectsThrough",
+          "qualified_name_hint": "Becoming.HabitCapture.selectsThrough",
+          "line": 88
+        },
+        {
+          "kind": "theorem",
+          "name": "chosen_alike",
+          "qualified_name_hint": "Becoming.HabitCapture.chosen_alike",
+          "line": 97
+        },
+        {
+          "kind": "theorem",
+          "name": "unchosen_beyond_coupling",
+          "qualified_name_hint": "Becoming.HabitCapture.unchosen_beyond_coupling",
+          "line": 109
+        },
+        {
+          "kind": "def",
+          "name": "choose",
+          "qualified_name_hint": "Becoming.HabitCapture.choose",
+          "line": 133
+        },
+        {
+          "kind": "theorem",
+          "name": "choose_favoured",
+          "qualified_name_hint": "Becoming.HabitCapture.choose_favoured",
+          "line": 137
+        },
+        {
+          "kind": "theorem",
+          "name": "choose_unfavoured",
+          "qualified_name_hint": "Becoming.HabitCapture.choose_unfavoured",
+          "line": 141
+        },
+        {
+          "kind": "theorem",
+          "name": "choose_raises",
+          "qualified_name_hint": "Becoming.HabitCapture.choose_raises",
+          "line": 147
+        },
+        {
+          "kind": "theorem",
+          "name": "choose_rises_strictly",
+          "qualified_name_hint": "Becoming.HabitCapture.choose_rises_strictly",
+          "line": 152
+        },
+        {
+          "kind": "theorem",
+          "name": "choose_lowers",
+          "qualified_name_hint": "Becoming.HabitCapture.choose_lowers",
+          "line": 159
+        },
+        {
+          "kind": "def",
+          "name": "weighted",
+          "qualified_name_hint": "Becoming.HabitCapture.weighted",
+          "line": 166
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_reads",
+          "qualified_name_hint": "Becoming.HabitCapture.weighted_reads",
+          "line": 170
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_favours_iff",
+          "qualified_name_hint": "Becoming.HabitCapture.weighted_favours_iff",
+          "line": 180
+        },
+        {
+          "kind": "theorem",
+          "name": "start_locked",
+          "qualified_name_hint": "Becoming.HabitCapture.start_locked",
+          "line": 185
+        },
+        {
+          "kind": "theorem",
+          "name": "habit_locks",
+          "qualified_name_hint": "Becoming.HabitCapture.habit_locks",
+          "line": 195
+        },
+        {
+          "kind": "theorem",
+          "name": "habit_chooses",
+          "qualified_name_hint": "Becoming.HabitCapture.habit_chooses",
+          "line": 219
+        },
+        {
+          "kind": "theorem",
+          "name": "lower_strict",
+          "qualified_name_hint": "Becoming.HabitCapture.lower_strict",
+          "line": 230
+        },
+        {
+          "kind": "theorem",
+          "name": "habit_locks_down",
+          "qualified_name_hint": "Becoming.HabitCapture.habit_locks_down",
+          "line": 245
+        },
+        {
+          "kind": "def",
+          "name": "soft",
+          "qualified_name_hint": "Becoming.HabitCapture.soft",
+          "line": 271
+        },
+        {
+          "kind": "theorem",
+          "name": "soft_falls",
+          "qualified_name_hint": "Becoming.HabitCapture.soft_falls",
+          "line": 277
+        },
+        {
+          "kind": "def",
+          "name": "softCourse",
+          "qualified_name_hint": "Becoming.HabitCapture.softCourse",
+          "line": 287
+        },
+        {
+          "kind": "theorem",
+          "name": "softCourse_some",
+          "qualified_name_hint": "Becoming.HabitCapture.softCourse_some",
+          "line": 292
+        },
+        {
+          "kind": "theorem",
+          "name": "soft_course_falls",
+          "qualified_name_hint": "Becoming.HabitCapture.soft_course_falls",
+          "line": 301
+        },
+        {
+          "kind": "theorem",
+          "name": "habit_outlives_loss",
+          "qualified_name_hint": "Becoming.HabitCapture.habit_outlives_loss",
+          "line": 312
+        },
+        {
+          "kind": "def",
+          "name": "counts",
+          "qualified_name_hint": "Becoming.HabitCapture.Witness.counts",
+          "line": 340
+        },
+        {
+          "kind": "theorem",
+          "name": "habit_beats_score",
+          "qualified_name_hint": "Becoming.HabitCapture.Witness.habit_beats_score",
+          "line": 345
+        },
+        {
+          "kind": "def",
+          "name": "even",
+          "qualified_name_hint": "Becoming.HabitCapture.Witness.even",
+          "line": 355
+        },
+        {
+          "kind": "theorem",
+          "name": "score_decides",
+          "qualified_name_hint": "Becoming.HabitCapture.Witness.score_decides",
+          "line": 359
+        },
+        {
+          "kind": "theorem",
+          "name": "soft_gives_way",
+          "qualified_name_hint": "Becoming.HabitCapture.Witness.soft_gives_way",
+          "line": 369
+        }
+      ],
+      "declaration_counts": {
+        "def": 7,
+        "theorem": 22
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "9e3e4e21ff47851b16ae85de09d2c3666a48a6c20b3108b78435422e9c48389a": {
       "byte_size": 5952,

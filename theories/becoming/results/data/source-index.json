@@ -544,6 +544,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/r38-open-joins",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/r46-one-renumbering",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rb1-drawn-beyond",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/COLD-READ-2026-10-25.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/build_passages.py",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/mappers",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py",
@@ -1004,6 +1005,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/REGISTRATION-VOCABULARY-STUDY.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/SSBX-REPOSITORY-REVIEW.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/r36-chapter/register.py",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json",
@@ -1053,6 +1055,7 @@
         "sources/15-codex-theory-conversations/2026-10-23-one-system.md",
         "sources/15-codex-theory-conversations/2026-10-23-repository-architecture.md",
         "sources/15-codex-theory-conversations/2026-10-24-a-conversation-at-home.md",
+        "sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md",
         "sources/15-codex-theory-conversations/2026-10-24-significance-a-dualist-word.md",
         "sources/15-codex-theory-conversations/2026-10-24-the-place.md",
         "sources/16-claude-code-directions/2026-09-25-the-mind-not-the-approach.md",
@@ -1087,6 +1090,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/REGISTRATION-VOCABULARY-STUDY.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/SSBX-REPOSITORY-REVIEW.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/r36-chapter/register.py",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json",
@@ -1131,8 +1135,10 @@
         "sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md",
         "sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md",
         "sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md",
+        "sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md",
         "sources/16-claude-code-directions/2026-09-25-the-mind-not-the-approach.md",
         "theories/becoming/chapters/02-MAP.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
         "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md",
         "theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md",
@@ -4466,7 +4472,8 @@
         "theories/becoming/history/PRACTICAL-JUDGMENT.md",
         "theories/becoming/history/THE-STEP-OF-INVARIANCE.md",
         "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
-        "theories/becoming/review/README.md"
+        "theories/becoming/review/README.md",
+        "theories/meta-attractor/README.md"
       ]
     },
     "theories/becoming/chapters/08-METHOD.md": {

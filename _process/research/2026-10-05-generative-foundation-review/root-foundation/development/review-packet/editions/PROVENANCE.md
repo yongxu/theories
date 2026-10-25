@@ -1,0 +1,11 @@
+# Editions collated for the classical-texts dossier
+
+Downloaded on 25 October 2026 by the editor who re-synced `theories/becoming/review/CLASSICAL-TEXTS.md` after the cold read (F8), to collate the 墨经, 荀子 and 庄子 quotations under review against standard texts. The variants the dossier records (C-01 大故, C-07, C-08 攖, C-09, C-11 至/止, C-34 或/域) and the commentaries it quotes (楊倞 on C-10, 郭象 on C-26) were read in these files. They are kept as fetched, as evidence for those claims; the corpus the theory classifies is unchanged. ctext.org refused automated access, so these sources were used instead; 王先謙《荀子集解》 and 孫詒讓's own commentary were not consulted.
+
+| File | Text | Source | Terms | sha256 |
+|---|---|---|---|---|
+| [`jiangu10.txt`](jiangu10.txt) | 孫詒讓《墨子閒詁》卷十（經上、經說上等）之正文 | Wikisource, 墨子閒詁/卷十, revision 853994 (wikitext) | the work is in the public domain; the transcription under Wikisource's terms | `53105f9019d2e77ea371d0d0b8059e726619edcee7e87f1601e690c68ec805b7` |
+| [`kr-mozi10.txt`](kr-mozi10.txt) | 《墨子》卷十，文淵閣四庫全書本 | Kanseki Repository KR3j0002, file KR3j0002_010.txt (raw.githubusercontent.com/kanripo/KR3j0002/master/) | under the Kanseki Repository's terms (kanripo.org) | `8fd2e9ad90ffa5066dea8ed304129746537ea33ae474e2cae387850c4e17e3f7` |
+| [`kr-xunzi16.txt`](kr-xunzi16.txt) | 《荀子》卷第十六（正名篇，楊倞注），四部叢刊本 | Kanseki Repository KR3a0002, file KR3a0002_016.txt, branch master (SBCK), commit 1d41d987 | under the Kanseki Repository's terms (kanripo.org) | `3e5ed40b0e88ea305bfd3f9074c4d76775144a7095da34e6a960c7707d634463` |
+| [`kr-xunzi16-wyg.txt`](kr-xunzi16-wyg.txt) | 《荀子》卷十六，文淵閣四庫全書本 | Kanseki Repository KR3a0002, file KR3a0002_016.txt, branch WYG | under the Kanseki Repository's terms (kanripo.org) | `782ae88ccc8b2e65883072e0697718c48259d41d3aa4a252aae769042d6d3f04` |
+| [`nh4.txt`](nh4.txt) | 《南華真經注疏》卷四（內篇養生主，郭象注、成玄英疏） | Wikisource, 南華真經註疏/卷四, revision 6353040 (wikitext) | the work is in the public domain; the transcription under Wikisource's terms | `dc65dfc214fcbb083bdc6eecd57449bbada74585f2439f756407b91bc6c34985` |

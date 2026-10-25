@@ -18017,3 +18017,43 @@ Output → input: 07 §4.5 (a sentence after the paragraph's two negative result
 A second independent review (two Claude Opus agents, on the Lean and on the texts) followed, once the four further derivations were in. It found no defect in the Lean: the five statements are byte-identical to main's, each new proof applies its law with no induction of its own, and `first_never_left`'s patterns are exhaustive and constructor-only. Taken: the record's next step, which listed as open what `ThirdThing` already gives in the same module (a class narrower than the one, constant, whose line reaches the second family and whose core continues the first step), and is now limited to this net; the root bullet's "both of these", which could cover the positive result; step 3's missing start of the line; §4.5's "the net" in a paragraph with two nets; `fed_outside`'s docstring ("the one has nothing outside it to pass"); this section's count of register entries and its "only proof"; the dependency details of the three records whose proofs changed; GS4's reading in §4.5, "the only class shown to reach", scoped to its witness; a stronger guard on the edit of PF's record. The receipt, not the scratch build, is the evidence for the committed bytes: the module doc was revised after the last scratch build.
 
 **Self-review.** (1) Each changed sentence was read against its declaration after the review. (2) Not done: the items in Boundary.
+
+## 405. The review packet after its cold read (RP)
+
+Board item RP. A cold read of the packet as its recipients would meet it ([report](development/review-packet/COLD-READ-2026-10-25.md), main at `7b29360f1`) found it not ready to send; the work below takes RP's share of its twelve findings, and the work is the AI's. RP2 takes the philosophy dossier and the reader edition; the sender, purpose and consent terms (F1) are Ren's.
+
+```text
+Result(s): no new result; a review instrument corrected.
+Delta: (1) the three dossiers re-synced to the chapters, records and Lean as of `3f294b01c` (after OU6, IV3l,
+       PF, GS1-GS6, MA2, MA3): every item's claims checked against what it cites, stale states removed (results
+       now proved described as open, work-item words, a dead overview section, renamed declarations), the
+       sender's bookkeeping dropped from the weaknesses and the current fact stated instead (F3, F5); internal
+       terms defined once and expert-unfamiliar terms glossed, Lean identifiers glossed in the logic dossier with
+       a short guide to reading Lean, classical Chinese translated beside its checked quotation (F4, in RP's
+       dossiers);
+       (2) source claims checked or deleted (F8): the 墨经, 荀子 and 庄子 quotations under review collated
+       against the 四库, 四部叢刊 and 閒詁 texts (variants that matter recorded: 大故, 攖, 至/止, 或/域, and
+       杨倞's and 郭象's notes quoted), the Buddhist attributions checked in CBETA (法藏 T1846, 元晓 T1844, the
+       杂阿含 and both 坛经 recensions), an unsupported "from memory" variant and an unverifiable reading of 指
+       deleted; pinpoint citations in the logic dossier verified or dropped; the editions kept with their
+       provenance (development/review-packet/editions/);
+       (3) each dossier opens with an honest time and a one-hour path (F2); research-level questions marked
+       optional; questions numbered for citation, verdicts defined, plain email replies allowed (F9);
+       (4) the cover: the grammar described as standard relation algebra whose terms are named and read from the
+       texts (F6); everything, the Lean proofs included, written with AI (F7); honest times; the nine groups of
+       passages named, the 阿含 and 坛经 listed; the public repository and AI reading of reviews stated, the terms
+       left to the covering letter (F12, F1 in part);
+       (5) the re-coding: agreement.py reads every unit inside a quoted range and freezes the quoted list
+       (QUOTED.txt) when the packet is sent; the sheet also as SHEET.xlsx with dropdowns, written reproducibly
+       by make_sheet_xlsx.py and read back by agreement.py; the codebook self-contained (no chapter to read
+       before coding), four dossiers named, an honest time to be piloted, 亡 and 灭 told apart (F10, F11);
+       chapter 6's glossary note on 息 brought to its inductive definition.
+Premises: none added.
+Evidence: one editor, one skeptical reviewer and one fixer per dossier (45 findings, all taken); every quotation
+       and Lean name checked by script (check_dossiers.py, now also in research-test); the reader edition
+       builds; agreement.py tested on a synthetic coder; SHEET.xlsx read back equal to SHEET.tsv.
+Boundary: not yet sent. Who sends, under what terms, by when, and whether to push are Ren's; the freeze commit is
+       named with RP2 when the four dossiers agree; the codebook's time is not yet piloted; Graham 1978 was not
+       read directly (C-01 cites a work that follows its translation); ctext.org refused automated access.
+Output → input: the packet ready for Ren's decisions on sending; then the reviews.
+```

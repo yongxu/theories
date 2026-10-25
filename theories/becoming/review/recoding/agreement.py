@@ -15,6 +15,8 @@ as one more coder. Standard library only.
 import argparse
 import csv
 import re
+import xml.etree.ElementTree as ET
+import zipfile
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -23,10 +25,68 @@ ROOT = HERE.parents[3]
 KEY = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/recoding-key.tsv'
 CODES = ['甲', '乙', '丙一', '丁', '戊', '己', '庚', '未读出']  # the classes of the AI's brief (classify/BRIEF.md)
 
+QUOTED = HERE / 'QUOTED.txt'
+
+
+def natural(unit):
+    """Order unit ids as their parts read: MJ-S-068.5 before MJ-S-068.10, LZ-56-003 before LZ-56-005."""
+    return [(0, int(t), '') if t.isdigit() else (1, 0, t) for t in re.split(r'(\d+)', unit)]
+
+
+def stem(unit):
+    """The id without its last number: units of one range share it."""
+    return re.sub(r'\d+$', '', unit)
+
+
+def quoted_in_dossiers(units):
+    """Every sampled unit a dossier quotes: single ids (〔ID〕, Source [ID]) and every unit inside a range
+    (〔A–B〕, Source [A–B]), a range taken in the natural order of ids that share its first id's stem."""
+    found = set()
+    for d in sorted(HERE.parent.glob('*.md')):
+        text = d.read_text(encoding='utf-8')
+        for a, b in re.findall(r'(?:〔|Source \[)([A-Z0-9][A-Z0-9.-]*?)(?:\s*[–—~]\s*([A-Z0-9][A-Z0-9.-]*?))?(?:〕|\])', text):
+            found.add(a)
+            if b:
+                lo, hi = natural(a), natural(b)
+                found |= {u for u in units if stem(u) == stem(a) and lo <= natural(u) <= hi}
+    return found & units
+
 
 def read(path):
+    """Rows of a sheet: a UTF-8 tab-separated file, or the .xlsx a coder returns (first worksheet, first row the
+    header), read with the standard library."""
+    if str(path).endswith('.xlsx'):
+        return read_xlsx(path)
     with open(path, encoding='utf-8', newline='') as f:
         return list(csv.DictReader(f, delimiter='\t'))
+
+
+def read_xlsx(path):
+    ns = {'m': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
+    with zipfile.ZipFile(path) as z:
+        shared = []
+        if 'xl/sharedStrings.xml' in z.namelist():
+            for si in ET.fromstring(z.read('xl/sharedStrings.xml')).findall('m:si', ns):
+                shared.append(''.join(t.text or '' for t in si.iter('{%s}t' % ns['m'])))
+        sheets = sorted(n for n in z.namelist() if n.startswith('xl/worksheets/sheet') and n.endswith('.xml'))
+        root = ET.fromstring(z.read(sheets[0]))
+    table = []
+    for row in root.find('m:sheetData', ns).findall('m:row', ns):
+        values = {}
+        for c in row.findall('m:c', ns):
+            ref, kind = c.get('r'), c.get('t')
+            column = 0
+            for ch in re.match(r'[A-Z]+', ref).group(0):
+                column = column * 26 + ord(ch) - 64
+            if kind == 'inlineStr':
+                text = ''.join(t.text or '' for t in c.iter('{%s}t' % ns['m']))
+            else:
+                v = c.find('m:v', ns)
+                text = '' if v is None else (shared[int(v.text)] if kind == 's' else v.text or '')
+            values[column - 1] = text
+        table.append([values.get(i, '') for i in range(max(values) + 1)] if values else [])
+    header = table[0]
+    return [dict(zip(header, r + [''] * (len(header) - len(r)))) for r in table[1:] if any(x.strip() for x in r)]
 
 
 def kappa(pairs):
@@ -69,14 +129,20 @@ def main():
     ap.add_argument('sheets', nargs='+')
     ap.add_argument('--key', default=str(KEY))
     ap.add_argument('--out')
+    ap.add_argument('--write-quoted', action='store_true',
+                    help='freeze the sampled units the dossiers quote into QUOTED.txt and stop')
     args = ap.parse_args()
     key = {r['n']: r for r in read(args.key)}
+    if args.write_quoted:
+        ids = quoted_in_dossiers({r['id'] for r in key.values()})
+        QUOTED.write_text(''.join(i + '\n' for i in sorted(ids, key=natural)), encoding='utf-8')
+        print(f'{len(ids)} sampled units quoted in the dossiers, written to {QUOTED.name}')
+        return
     # Sampled units the dossiers quote (with the AI's class beside them): a coder who read a dossier first may have
-    # seen them, so every figure is also given without them.
-    quoted = set()
-    for d in HERE.parent.glob('*.md'):
-        quoted |= set(re.findall(r'〔([A-Z0-9][A-Z0-9.-]*?)(?:[–—~][^〕]*)?〕', d.read_text(encoding='utf-8')))
-        quoted |= set(re.findall(r'Source \[([A-Z0-9][A-Z0-9.-]*?)\]', d.read_text(encoding='utf-8')))
+    # seen them, so every figure is also given without them. The list is frozen in QUOTED.txt when the packet is
+    # sent (--write-quoted); without that file the dossiers are scanned as they now stand.
+    quoted = (set(QUOTED.read_text(encoding='utf-8').split()) if QUOTED.is_file()
+              else quoted_in_dossiers({r['id'] for r in key.values()}))
     seen = {n for n, r in key.items() if r['id'] in quoted}
     coders = {}
     for s in args.sheets:
