@@ -1,0 +1,4436 @@
+{
+ "model": "haiku",
+ "pool_size": 24,
+ "runs": [
+  {
+   "cond": "in_time",
+   "seed": 0,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     968
+    ],
+    [
+     4,
+     10648
+    ],
+    [
+     4,
+     117128
+    ],
+    [
+     4,
+     1288408
+    ],
+    [
+     4,
+     14172488
+    ],
+    [
+     4,
+     155897368
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": true,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "6adb6e701ff2c042890f1ed9d56afaa68a5c413f1d207b70392f98a23478ab70"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": true,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "c2880da7f73ef21ff5d429a25e15850673fbd844bb3bdd7505c8abd7039b970e"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "fa0484e69e4e3817470dc28a3b0ab99bf0d2cb5dbc4fcc6da38e8c0c1c14ff20"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "d112f0919f249b3cbf87004bdb1f08357e7ad010a609275863a0db0c3a97f275"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "11775bf3e45cc10d6fdf3f8099911245d62d2be88dbc2e4db4f7ccfb67022ab2"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "5371dd266b3e0fd841bdcb9681864b5256c6d4d4788ef311bff94d4441cdf9d0"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "41e65ef31697e983a08f2150968e52471d5f0ec8d36ef9581019ce0a5b2b18ef"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "in_time",
+   "seed": 1,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     968
+    ],
+    [
+     4,
+     10648
+    ],
+    [
+     4,
+     117128
+    ],
+    [
+     4,
+     1288408
+    ],
+    [
+     4,
+     14172488
+    ],
+    [
+     4,
+     155897368
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": true,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "30ef9365a269e2f9e85fd2271b9f818496efb5719a0bdd62aae43e5e3cb521f1"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": true,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "6ac5b1e8a10ab53a5d4d46655ab34f37c2c1f70ab0a43cda120f65ab12a94f7e"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "67ba28385d59e43c4608f1566de312fabc3509723d0d6add081e8e9493797546"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "786d8d1af2ddc20ae3eee774c5f8c26a2a265ec2b0a63f2588883c0ed2e4450a"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "68d3f5a492a8173424c8c8efb3bbc6c8c798fc117848d0ee16979cdf95b29493"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "8b987dc59599ee9038305a980434c287803cad7970a9a9ec1da5e6c66d0a41c6"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "f9b00975709c6e7e177a2d0916c0855018cb9cbcbb5f5fe38b7495d215d4a185"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "in_time",
+   "seed": 2,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     968
+    ],
+    [
+     4,
+     10648
+    ],
+    [
+     4,
+     117128
+    ],
+    [
+     4,
+     1288408
+    ],
+    [
+     4,
+     14172488
+    ],
+    [
+     4,
+     155897368
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": true,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "2af576e6d99fafaccd6433c2539c41aeca1bc78ba0ec9106e6865bdcdfda0465"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": true,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "d7da684add8128a677f7c8f62017df30113fae3e3dd9b1f17e7463b822cc9599"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "15d499228e45e59c2df02708adfc321c41d414e2124dba0d209c23e19ccb426a"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "61ea3b64e3f6cc1bc7745214f27ee0b1532a9b0a3f5cdc668c7c159764e9acc1"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "815748a98fdb7e6bde4738fb029f2ae3a8c13e5b86714df275af490eaaf77015"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "7747adb0020134dd862b2e9ad9c2fb4c490bfd82ea3803e52a3f0ce1d0ab6de4"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "0aa77d2e0e728b6a9610fcc83b1f7d3df6d3e99ff0e041ff2b39c758cecf81fb"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "in_time",
+   "seed": 3,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     968
+    ],
+    [
+     4,
+     10648
+    ],
+    [
+     4,
+     117128
+    ],
+    [
+     4,
+     1288408
+    ],
+    [
+     4,
+     14172488
+    ],
+    [
+     4,
+     155897368
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": true,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "aa831648fa02928848f09d1d8cdc35f098491c004982a2baa9abb41eda16ba82"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": true,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "6f65c8b9b92a10813074b381698e6a3c714952b027a57385d48d6778bb464156"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "30582ef11d1e1e386a7ca96c7ddf59a35a383a513e7989889193047ca14cd84e"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "33d876004182c22f36dde90b5b7bdaf73411196a83a93e208af96c7c90ff0e46"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "74f381b45965e996e857b9fa240cdcd616e9324342d7c664961303dcd4399d74"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "e7bc9cb3c2c235db26855de76288fda7c84fbd274aeca0be170762a081955524"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "0d1d03f8bbe4b2e017c90f336b5b4c01b556bbfd022a388d3c0302b8653ef157"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "in_time",
+   "seed": 4,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     968
+    ],
+    [
+     4,
+     10648
+    ],
+    [
+     4,
+     117128
+    ],
+    [
+     4,
+     1288408
+    ],
+    [
+     4,
+     14172488
+    ],
+    [
+     4,
+     155897368
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": true,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "90585de1634c39464d37dd3aec9550f775da160ed1f7499010e9c82a24f50238"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": true,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "740fa725d042f34f9c5ca2571ec785889dfb6b0f0ade3810023e600c5e705e5b"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "4db384601f40b255f10a5cfd82f524b080ce8f7c3d3ddeb62b12f961006d6f9b"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "16c13f30b9790146744e0a3793c74b7aa1533bd8013e38dd5760d66f825e8801"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "cfe1733d6ad30dd7d586a3490b20ff68e142f1f5b76f45b2097b49c42e491d70"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "ebacc1e569fc6abc3fab3bffc80ace7023852030fa14ce1dca15eca05897f0f0"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "e4132f6f6cf31d52fee7092ef4e1e3eda4103c10b55fff181516dec7e30bf457"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "in_time_unread",
+   "seed": 0,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     36,
+     264
+    ],
+    [
+     36,
+     2904
+    ],
+    [
+     36,
+     31944
+    ],
+    [
+     36,
+     351384
+    ],
+    [
+     36,
+     3865224
+    ],
+    [
+     36,
+     42517464
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     9,
+     3
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": false,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "db5b7e5b4c7e644081c18f5225287b2281fc02fedaa8f70f14e09f36e74bd8f1"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": false,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 8,
+      "prose": 2,
+      "valid": true,
+      "key": "13c73d4dfa876a72711abf52b9bf7a711da5fc222044b7acbc13e7cb08eee6c5"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "0938b1d25c235646d43b619e09bf10d3ed31a359b9dd1b61a892caa0283f7a60"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "6fdc6dfeab3378476cb1676c4170a0ef89a6976ee4a61251507c46f43a4f5669"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "8e3e45faa478a7d4361fa519b668be310efc13ac9815cd2c1a4ec5a1c12292b6"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "8d558d4083fc7dc87e93f8a4bbd957b64e1b36f6f3115e780de345bfbd391c4d"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "92439af6f433225a78d09a5b328015468e2dc52ef17d84897ffe65eefc8599f5"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "in_time_unread",
+   "seed": 1,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     32,
+     352
+    ],
+    [
+     32,
+     3872
+    ],
+    [
+     32,
+     42592
+    ],
+    [
+     32,
+     468512
+    ],
+    [
+     32,
+     5153632
+    ],
+    [
+     32,
+     56689952
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     8,
+     4
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": false,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "f582537c288edb4e693020dfc531893d35ecd84900b24d6e27021bc67eae6ab2"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": false,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 7,
+      "prose": 3,
+      "valid": true,
+      "key": "c79ef39702e332845b304bdccdc066f939c432e804b9b62450ccdd94b58e50a6"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "71255498e38e05c6dcd9b7131994b354b1337b3282ff2902a56718767c02a2bb"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "92c52b2cfa74b5abcc71a76fb1b2b8be2933670dd3655796b870b5503de3e14f"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "68ecc0e8f389edeeeb67511e5f740a527b93f7acfd53eb14ff57401b3eb4801c"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "58240625bb5588f229f248d4eff1f5f5b6fa6fd3ef7fd144f1ec03a426495cf3"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "fb945a600f35b8cf7017925d6667a43afbfc216d03c96e53d6425ff12a3797c9"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "in_time_unread",
+   "seed": 2,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     24,
+     528
+    ],
+    [
+     24,
+     5808
+    ],
+    [
+     24,
+     63888
+    ],
+    [
+     24,
+     702768
+    ],
+    [
+     24,
+     7730448
+    ],
+    [
+     24,
+     85034928
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     6,
+     6
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": false,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "4d8bc77c8194b0c1a8e127b56a0807bbb075c01f3905a3d6901f6d61b0444636"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": false,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 5,
+      "prose": 5,
+      "valid": true,
+      "key": "07102014524dfee3d3a6eff114bf540bcb47a80733c1258351edc5e6b93c8b5e"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "a3e1016a8921a5d496c6317840e4418f3948938026522b5c58e88a9dd3f57d8a"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "657123fdb7cc52a5cc0e5fbaf208ab33a1c8ff40bbf7d3171d7aca15a267e3f7"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "47ad5bab99ab44661eaf0a9adc3b7153482888f20bf8736b06d946e72b9bc00c"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "f9d05bd723c49f346a80fb79ab727a4ca3abaa1be516eec3d1168ff1ac398ecc"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "15c1595a16c2dfb00c114fcf918a2146c306d7173bb8cc22a4bf14ac9b4a5d4a"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "in_time_unread",
+   "seed": 3,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     64
+    ],
+    [
+     176,
+     64
+    ],
+    [
+     704,
+     512
+    ],
+    [
+     7040,
+     1024
+    ],
+    [
+     77440,
+     1024
+    ],
+    [
+     851840,
+     1024
+    ],
+    [
+     9370240,
+     1024
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     10,
+     2
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": false,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 3,
+      "prose": 7,
+      "valid": true,
+      "key": "1f48adc3dd3642570526caa88905895246f8be7866005d23303ade8ed050b00a"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": false,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "1f168b9091acc8ca895cea1c50e99276f362e6745f994ad502041127e397c2a8"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 2,
+      "n_prose": 7,
+      "notes": false,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 3,
+      "prose": 7,
+      "valid": true,
+      "key": "0db0042612a5850802440e2fe36b10a0db89254a74b5ca24c31bd07ee777c5b1"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 9,
+      "prose": 1,
+      "valid": true,
+      "key": "af2ea3ed847266ca92578704a2377fd1c75dbaccd5c02268c988af84dbf01b04"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 5,
+      "n_prose": 4,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "74750a04e4316028816aee2237b2463cd413fb3772bae1b124358b49d9135a67"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "cfa150f16d7694280d90d14c5e25fcdbe7d55150829ec0a364b96a091e7d3f06"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "a4342799729c642c6164541d96dbfabdf4082aa2e7c8c47e2669f9af90673e82"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "in_time_unread",
+   "seed": 4,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     44,
+     88
+    ],
+    [
+     44,
+     968
+    ],
+    [
+     352,
+     3872
+    ],
+    [
+     352,
+     42592
+    ],
+    [
+     352,
+     468512
+    ],
+    [
+     352,
+     5153632
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     8,
+     4
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 0,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": false,
+      "report": false,
+      "loss": 5
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "37af028488330c12e6ea5a688cd665569c72e894c1c1dad14bd35362e746b80f"
+     }
+    },
+    {
+     "spec": {
+      "step": 1,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": false,
+      "report": false,
+      "loss": 10
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "ca877ff7b0fb8b3bf25a74f1236c5c333e05e920cd8892060259188daecf52c5"
+     }
+    },
+    {
+     "spec": {
+      "step": 2,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 15
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "806f1493e19d28e7bac8efd39c9feb120bf47c77d04a24ac919da4e2fa046459"
+     }
+    },
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 3,
+      "n_prose": 6,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 7,
+      "prose": 3,
+      "valid": true,
+      "key": "786d2bbd9051d38aa5e972cb67fa7af3b70b400ec5f4636eac1b81570f1fa356"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "21428e92c428f5973d371403e9ec1573ddd9ffc01be678b23a6043fe050a8bf1"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 1,
+      "n_prose": 8,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "ab5ef856633ddad61b6fca5f317997a530d96c15c92709c4b6eba094a12edba2"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 0,
+      "n_prose": 9,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "ec6e400a0a114039a5cbefee26d4bd28e19e190843721fb6ff34f274b2a4d1c3"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "late",
+   "seed": 0,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     2816,
+     88
+    ],
+    [
+     2816,
+     968
+    ],
+    [
+     30976,
+     968
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "b052133f459336a24864dc60a9f857fba7b2fe59c385d371d5ddb34bc86acceb"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "a14ca2023eaa1ac830f759041a8919ca6da4c3bf7e2682581dd06d8f7fb0b070"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "450742fc4d86affe92a455779c92fb45de3016a3ee265e833aa31b1ff80732f8"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "1628b0342ad1e22e457ea7919e2332a1244a7381f9eb33fa5de6521cf82c339b"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "late",
+   "seed": 1,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     2816,
+     88
+    ],
+    [
+     2816,
+     968
+    ],
+    [
+     30976,
+     968
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "b013a8e65ec038befae1836c049141b6b57a0567eb4b57038e495168460edfb7"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "a0a2efdbb66d65c66ceadcbd7f2cfaaff27f950733230bfb3c62f7d0588eaf21"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "454d8eeb92535775f717fe8f8ad0132d4a4677ca2a3979c7a29505ae82c10fd5"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "db05e15b7d1dcfbac4f51ad61d8057a02b243699f51f4ea939fca8f781eca0be"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "late",
+   "seed": 2,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     2816,
+     88
+    ],
+    [
+     2816,
+     968
+    ],
+    [
+     30976,
+     968
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "ede95d92644cbf9d8be1b81a7661f1d4f54403049ce80e54814723463e8be2bc"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "634bbc6a273546ae072a004ee6a7840a8167aa5b0f83965e3a89e53983c1c065"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "33c9ef5bbe28488fd02a706e35ab80ca61b9cf2b2f863b23114eb6529829916d"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "ecd352b9cf4393df8dd3e50a99211541cd464c503bbd9f62731d31307cd67629"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "late",
+   "seed": 3,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     2816,
+     88
+    ],
+    [
+     2816,
+     968
+    ],
+    [
+     30976,
+     968
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "1c4d3ba6150de8829ab0106360288a962f510e5baad67619129e7b98075e168a"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "c374b57cc2ed2ee74d182f91305afec6f70b24d17a699f3a40e51d9f5dea0109"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "ff8e86a62414f06d74cc7eac8532cfe1fc03f39410bdfcaebef8ac2da3582d24"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "a4342799729c642c6164541d96dbfabdf4082aa2e7c8c47e2669f9af90673e82"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "late",
+   "seed": 4,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     2816,
+     88
+    ],
+    [
+     2816,
+     968
+    ],
+    [
+     30976,
+     968
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "f1886cff16ccd88b4c9cd1a2999e9297124718ca1caa1381298055821b453e33"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "53413df0d83e03f76c729dff0c1e814ba85220d62771c893a94044a539178c24"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "a0b721d039362efa5f664c33a3742904c2b9858b56d509ece21b62ba259ab540"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "ba90d515400510489dea96a9160247b71b9c548e7dc416011e50fc98b2512b87"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "unread",
+   "seed": 0,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     2816,
+     8
+    ],
+    [
+     30976,
+     8
+    ],
+    [
+     340736,
+     8
+    ],
+    [
+     3748096,
+     8
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "4697775b11443e10cceb5fde3f46715b863e133366efcd6c34ca00ff14d556ae"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "a14ca2023eaa1ac830f759041a8919ca6da4c3bf7e2682581dd06d8f7fb0b070"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "d03ca9b3b992b263342066b7bc3310e461923b5e4926b5f0b45872b9f1078ed3"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "1628b0342ad1e22e457ea7919e2332a1244a7381f9eb33fa5de6521cf82c339b"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "unread",
+   "seed": 1,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     2816,
+     8
+    ],
+    [
+     30976,
+     8
+    ],
+    [
+     340736,
+     8
+    ],
+    [
+     3748096,
+     8
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "05047c2cd52eba7a392cbe9a7007198d9502ec47bcbdedc8eb1d376b1543ff44"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "a0a2efdbb66d65c66ceadcbd7f2cfaaff27f950733230bfb3c62f7d0588eaf21"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "bfa455a93cc3ca74584f6f09d08d57c66a795cff5db0ad1b0ed9d71c31aae299"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "db05e15b7d1dcfbac4f51ad61d8057a02b243699f51f4ea939fca8f781eca0be"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "unread",
+   "seed": 2,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     2816,
+     8
+    ],
+    [
+     30976,
+     8
+    ],
+    [
+     340736,
+     8
+    ],
+    [
+     3748096,
+     8
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "0a6f5d179b66079755d8d9db73d595a1e025c7a22772ab2dae0da131e7d8e8c9"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "634bbc6a273546ae072a004ee6a7840a8167aa5b0f83965e3a89e53983c1c065"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "269d288c557c71f1cf8d694750ade2caa3e9e3687c51e5d3cb6355bb697943fa"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "ecd352b9cf4393df8dd3e50a99211541cd464c503bbd9f62731d31307cd67629"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "unread",
+   "seed": 3,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     2816,
+     8
+    ],
+    [
+     30976,
+     8
+    ],
+    [
+     340736,
+     8
+    ],
+    [
+     3748096,
+     8
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "a567c5a97d54a13f8a076fce51f40504ee9c915f1620ac5a761264bd58f20b79"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "c374b57cc2ed2ee74d182f91305afec6f70b24d17a699f3a40e51d9f5dea0109"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "e5bff93e92a00db473ff4b42fa7a69b706133377d179060e977f61a504c98018"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "a4342799729c642c6164541d96dbfabdf4082aa2e7c8c47e2669f9af90673e82"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "unread",
+   "seed": 4,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     2816,
+     8
+    ],
+    [
+     30976,
+     8
+    ],
+    [
+     340736,
+     8
+    ],
+    [
+     3748096,
+     8
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     11,
+     1
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": false,
+      "report": false,
+      "loss": 20
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "a98823c17f9f4e35f8ff03859d14a83f2c7e0d138d892c1df998754e19e1ba06"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 25
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "53413df0d83e03f76c729dff0c1e814ba85220d62771c893a94044a539178c24"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 30
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "ae118107aae7bcf7e0de93cfc9bae21dad63b6b80ebd791da19bb4339aa82a0e"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": false,
+      "report": false,
+      "loss": 35
+     },
+     "picks": {
+      "list": 10,
+      "prose": 0,
+      "valid": true,
+      "key": "ba90d515400510489dea96a9160247b71b9c548e7dc416011e50fc98b2512b87"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "read_all",
+   "seed": 0,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     256,
+     968
+    ],
+    [
+     256,
+     10648
+    ],
+    [
+     256,
+     117128
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": true,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "dc8aa10ca50aba34d9ebb7375a904ddf3078d229fa1c151420a57210662c1f67"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": true,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "3bf48c69ce78dc58c5e416db661b9ebd5f2b517a5a61b3ec484b83be2f74f065"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": true,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "45f74c9b58c90a831d407df01e88546781e658dba8d35990f2df57bce11f7efa"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 2,
+      "n_prose": 7,
+      "notes": true,
+      "report": true,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "3663bea513bc4c7f04b1171eb66f56288802b6e2ed8bda18f444be6bf1084e8e"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "read_all",
+   "seed": 1,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     256,
+     968
+    ],
+    [
+     256,
+     10648
+    ],
+    [
+     256,
+     117128
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": true,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "b7c2a89ca22b5278c9ff25ea31a4b4af1ac45b50ac90683d02f18be06b1dc461"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": true,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "de900201b04b8820de999c9ba955dd5589fcaf2161031e58333e5e26aeb2474f"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": true,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "afdf351348702fd9234167f4d379081c1febd6cea90be83235e0a3b700b090a6"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 2,
+      "n_prose": 7,
+      "notes": true,
+      "report": true,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "25f6bbbb87889850773b33f0ad2ef366037c0d639358c0eb69b9ebfff5d0491d"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "read_all",
+   "seed": 2,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     256,
+     968
+    ],
+    [
+     256,
+     10648
+    ],
+    [
+     256,
+     117128
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": true,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "e404e81a0e27dcaa6ae84fbb6f3159dc1e464a01837948c75cd6b16124985a42"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": true,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "04eceec4870c3f7e7cee5ee1008e10de33178fbee0c31d3cfd6c6e3c5a2aa2e1"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": true,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "c3a78f4319596b8c0f993c2ef2b29521a2b2d292a00772fdb358d7e8520a379a"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 2,
+      "n_prose": 7,
+      "notes": true,
+      "report": true,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "6f9b57c5bfe9b062c3323351dc6e6270f977bddf1740ec50a97e84b421dd3bd1"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "read_all",
+   "seed": 3,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     256,
+     968
+    ],
+    [
+     256,
+     10648
+    ],
+    [
+     256,
+     117128
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": true,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "54a81cbc8a8870b1c62397dc4cf079f20f877b7f98254f6c7b06aa3ca5d0d6fe"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": true,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "05d685429730804033ee920a5d26bc6aca0cacc7bf8084defd5f5c2b97fec2c8"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": true,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "8e9590be5d44f732f9e107061cd4ab01cc05691fa73bc1b117576e2ad533a47f"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 2,
+      "n_prose": 7,
+      "notes": true,
+      "report": true,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "5d830f003c36e81d2ec8582b24caa742524d4b3e4af71043baf241538fcc97cd"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  },
+  {
+   "cond": "read_all",
+   "seed": 4,
+   "shares": [
+    [
+     1,
+     8
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     64,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     88
+    ],
+    [
+     256,
+     968
+    ],
+    [
+     256,
+     10648
+    ],
+    [
+     256,
+     117128
+    ]
+   ],
+   "rules": [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ],
+    [
+     1,
+     11
+    ]
+   ],
+   "readings": [
+    {
+     "spec": {
+      "step": 3,
+      "n_lists": 8,
+      "n_prose": 1,
+      "notes": true,
+      "report": true,
+      "loss": 20
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "1165bf3702b44ce06ae90d9a9804933907c17f6c936b3714b719c367d2cb5197"
+     }
+    },
+    {
+     "spec": {
+      "step": 4,
+      "n_lists": 9,
+      "n_prose": 0,
+      "notes": true,
+      "report": true,
+      "loss": 25
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "1cdf637ed17f136e3948bbaa7f2c19651bd616ea5434b6ff79a0ef55c85e264d"
+     }
+    },
+    {
+     "spec": {
+      "step": 5,
+      "n_lists": 7,
+      "n_prose": 2,
+      "notes": true,
+      "report": true,
+      "loss": 30
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "756a3702e30e5eb344ed4d5f4e5fa1a21d991a5e907ce67e17d426961ebf61b0"
+     }
+    },
+    {
+     "spec": {
+      "step": 6,
+      "n_lists": 2,
+      "n_prose": 7,
+      "notes": true,
+      "report": true,
+      "loss": 35
+     },
+     "picks": {
+      "list": 0,
+      "prose": 10,
+      "valid": true,
+      "key": "7cbcfc7e2d1af850d8740f068fa343a435a97a06f45cb58d7a6d4d9d2ecaf10f"
+     }
+    }
+   ],
+   "valid": true,
+   "losses": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+   ]
+  }
+ ]
+}

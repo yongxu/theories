@@ -1,0 +1,431 @@
+{
+ "conditions": {
+  "in_time": {
+   "predicted": "turned",
+   "seeds": 5,
+   "invalid_seeds": 0,
+   "first_reading": {
+    "calls": 10,
+    "mean_list_share": 0.0,
+    "p_lists": 1.0,
+    "p_prose": 0.0009765625,
+    "side": "prose"
+   },
+   "kept_seeds": 0,
+   "turned_seeds": 5,
+   "stepwise": [
+    [
+     7,
+     7
+    ],
+    [
+     7,
+     7
+    ],
+    [
+     7,
+     7
+    ],
+    [
+     7,
+     7
+    ],
+    [
+     7,
+     7
+    ]
+   ],
+   "share_from": [
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     88
+    ]
+   ],
+   "share_end": [
+    [
+     4,
+     155897368
+    ],
+    [
+     4,
+     155897368
+    ],
+    [
+     4,
+     155897368
+    ],
+    [
+     4,
+     155897368
+    ],
+    [
+     4,
+     155897368
+    ]
+   ],
+   "hits": 5,
+   "verdict": "passed",
+   "label": null
+  },
+  "in_time_unread": {
+   "predicted": null,
+   "seeds": 5,
+   "invalid_seeds": 0,
+   "first_reading": {
+    "calls": 10,
+    "mean_list_share": 0.43,
+    "p_lists": 0.744140625,
+    "p_prose": 0.353515625,
+    "side": "unresolved"
+   },
+   "kept_seeds": 1,
+   "turned_seeds": 4,
+   "stepwise": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "share_from": [
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     4,
+     88
+    ],
+    [
+     16,
+     64
+    ],
+    [
+     4,
+     88
+    ]
+   ],
+   "share_end": [
+    [
+     36,
+     42517464
+    ],
+    [
+     32,
+     56689952
+    ],
+    [
+     24,
+     85034928
+    ],
+    [
+     9370240,
+     1024
+    ],
+    [
+     352,
+     5153632
+    ]
+   ]
+  },
+  "late": {
+   "predicted": "kept",
+   "seeds": 5,
+   "invalid_seeds": 0,
+   "first_reading": {
+    "calls": 5,
+    "mean_list_share": 0.0,
+    "p_lists": 1.0,
+    "p_prose": 0.03125,
+    "side": "prose"
+   },
+   "kept_seeds": 5,
+   "turned_seeds": 0,
+   "stepwise": [
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "share_from": [
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ]
+   ],
+   "share_end": [
+    [
+     30976,
+     968
+    ],
+    [
+     30976,
+     968
+    ],
+    [
+     30976,
+     968
+    ],
+    [
+     30976,
+     968
+    ],
+    [
+     30976,
+     968
+    ]
+   ],
+   "hits": 5,
+   "verdict": "passed",
+   "label": null
+  },
+  "unread": {
+   "predicted": "kept",
+   "seeds": 5,
+   "invalid_seeds": 0,
+   "first_reading": {
+    "calls": 5,
+    "mean_list_share": 1.0,
+    "p_lists": 0.03125,
+    "p_prose": 1.0,
+    "side": "lists"
+   },
+   "kept_seeds": 5,
+   "turned_seeds": 0,
+   "stepwise": [
+    [
+     5,
+     5
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     5,
+     5
+    ]
+   ],
+   "share_from": [
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ]
+   ],
+   "share_end": [
+    [
+     3748096,
+     8
+    ],
+    [
+     3748096,
+     8
+    ],
+    [
+     3748096,
+     8
+    ],
+    [
+     3748096,
+     8
+    ],
+    [
+     3748096,
+     8
+    ]
+   ],
+   "hits": 5,
+   "verdict": "passed",
+   "label": null
+  },
+  "read_all": {
+   "predicted": "turned",
+   "seeds": 5,
+   "invalid_seeds": 0,
+   "first_reading": {
+    "calls": 5,
+    "mean_list_share": 0.0,
+    "p_lists": 1.0,
+    "p_prose": 0.03125,
+    "side": "prose"
+   },
+   "kept_seeds": 0,
+   "turned_seeds": 5,
+   "stepwise": [
+    [
+     5,
+     5
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     5,
+     5
+    ]
+   ],
+   "share_from": [
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ],
+    [
+     256,
+     8
+    ]
+   ],
+   "share_end": [
+    [
+     256,
+     117128
+    ],
+    [
+     256,
+     117128
+    ],
+    [
+     256,
+     117128
+    ],
+    [
+     256,
+     117128
+    ],
+    [
+     256,
+     117128
+    ]
+   ],
+   "hits": 5,
+   "verdict": "passed",
+   "label": null
+  }
+ },
+ "contrasts": {
+  "L1_an_unread_loss_leaves_the_lock": true,
+  "L2_a_loss_read_by_every_reader_turns_the_course": true,
+  "L3_who_reads_decides": true,
+  "L4_when_it_is_read_decides": true
+ },
+ "measures": {
+  "notes_where_most_readers": {
+   "pairs": 10,
+   "mean_difference": 0.43,
+   "p_value": 0.015625,
+   "resolved": true
+  },
+  "one_note_in_nine": {
+   "pairs": 5,
+   "mean_difference": 1.0,
+   "p_value": 0.03125,
+   "resolved": true
+  }
+ },
+ "supports": {
+  "the others' readers read the loss": true,
+  "the counts decide, one note in nine outweighed": true,
+  "the loss read in time turned a course that would otherwise be kept": false,
+  "in_time turned by the readers' counts alone, the loss not needed": true,
+  "a single reading turned the lock (the third forbidden case of T7)": false,
+  "a loss read by every reader did not turn the course, a taste for lists ruled out": false,
+  "no lock formed from the loop's own selections": false,
+  "the readers that carry the loss, the more numerous, did not turn the course": false
+ }
+}
