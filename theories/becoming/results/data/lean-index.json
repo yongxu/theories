@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2026,
-    "distinct_byte_contents": 1526,
+    "lean_paths": 2027,
+    "distinct_byte_contents": 1527,
     "byte_identical_duplicate_groups": 217,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1092,
+      "development-attempt": 1093,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 895
@@ -4339,6 +4339,17 @@
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/review_pf2_open_item.lean",
+      "sha256": "2d2715c1aacb0c452cb6fe25a57e270501bc7de9afefa5b3f86e81cccbc9f580",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/REVIEW-PF2.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -102169,6 +102180,92 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "2d2715c1aacb0c452cb6fe25a57e270501bc7de9afefa5b3f86e81cccbc9f580": {
+      "byte_size": 4691,
+      "line_count": 99,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "«际»",
+          "qualified_name_hint": "«际»",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "«至终有常»",
+          "qualified_name_hint": "«至终有常»",
+          "line": 10
+        },
+        {
+          "kind": "theorem",
+          "name": "bool_other",
+          "qualified_name_hint": "bool_other",
+          "line": 13
+        },
+        {
+          "kind": "theorem",
+          "name": "two_blocks",
+          "qualified_name_hint": "two_blocks",
+          "line": 24
+        },
+        {
+          "kind": "inductive",
+          "name": "Occ",
+          "qualified_name_hint": "ThreeBlocks.Occ",
+          "line": 47
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "ThreeBlocks.step",
+          "line": 49
+        },
+        {
+          "kind": "def",
+          "name": "block",
+          "qualified_name_hint": "ThreeBlocks.block",
+          "line": 57
+        },
+        {
+          "kind": "def",
+          "name": "alike",
+          "qualified_name_hint": "ThreeBlocks.alike",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_follows",
+          "qualified_name_hint": "ThreeBlocks.outside_follows",
+          "line": 63
+        },
+        {
+          "kind": "theorem",
+          "name": "nothing_inside",
+          "qualified_name_hint": "ThreeBlocks.nothing_inside",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "not_constant_to_end",
+          "qualified_name_hint": "ThreeBlocks.not_constant_to_end",
+          "line": 88
+        }
+      ],
+      "declaration_counts": {
+        "def": 5,
+        "inductive": 1,
+        "theorem": 5
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 4
     },
     "2d28cc9e79567654e454864b42d8b5e920d88b912b0c56e456ba75fa63665365": {
       "byte_size": 504,
