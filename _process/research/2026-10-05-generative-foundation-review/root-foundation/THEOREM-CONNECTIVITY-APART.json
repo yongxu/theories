@@ -3761,6 +3761,121 @@
    "module": "Becoming.GrammarPath",
    "category": "model-witness",
    "reason": "the line never reaches the fourth thing: a witness of Becoming.GrammarPath (PF)"
+  },
+  "Becoming.RuleShaping.SharedFlips.with_rises": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.SharedFlips.without_falls": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.Split.falls": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.Split.favours": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.Split.rises": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.Split.shared_disfavours": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.Timing.eight_rises": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.Timing.late_falls": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.Timing.seven_falls": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.Timing.shorter_falls": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.Timing.soon_rises": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a witness of the capacity to shape the rule on counts of two kinds (Becoming.RuleShaping, MA3)"
+  },
+  "Becoming.RuleShaping.back_longer_not_less": {
+   "module": "Becoming.RuleShaping",
+   "category": "support",
+   "reason": "an arithmetic lemma on natural numbers about the counts multiplied across a stretch"
+  },
+  "Becoming.RuleShaping.c_zero_favours": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.RuleShaping.favours_alike": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.RuleShaping.lower_c_raises": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.RuleShaping.neutral_steady": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.RuleShaping.nothing_back_falls": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.RuleShaping.pow_pos_of_pos": {
+   "module": "Becoming.RuleShaping",
+   "category": "support",
+   "reason": "a one-line unpacking of the module's own definitions"
+  },
+  "Becoming.RuleShaping.shaped_shift": {
+   "module": "Becoming.RuleShaping",
+   "category": "support",
+   "reason": "a one-line unpacking of the module's own definitions"
+  },
+  "Becoming.RuleShaping.shared_lowers": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.RuleShaping.shared_lowers_strictly": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.RuleShaping.shared_raises": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
+  },
+  "Becoming.RuleShaping.wait_not_more": {
+   "module": "Becoming.RuleShaping",
+   "category": "support",
+   "reason": "an arithmetic lemma on natural numbers about the counts multiplied across a stretch"
   }
  },
  "instances": {

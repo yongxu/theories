@@ -1641,6 +1641,11 @@
    "base": "old-base",
    "note": "SG3"
   },
+  "shaping-the-rule-selected-by-what-comes-back": {
+   "region": "map",
+   "base": "general",
+   "note": "RuleShaping MA3: capacity to shape the rule selected by what comes back"
+  },
   "significance-retained-within-margin": {
    "region": "significance",
    "base": "old-base",
@@ -3412,6 +3417,11 @@
    "region": "collective",
    "base": "frame",
    "note": "organizational rule inheritance through enacted relations"
+  },
+  "Becoming.RuleShaping": {
+   "region": "map",
+   "base": "general",
+   "note": "MA3 capacity to shape the rule, selected by what comes back"
   },
   "Becoming.Runaway": {
    "region": "map",

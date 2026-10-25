@@ -1,0 +1,7 @@
+{
+  "errors": [
+    "shaping-the-rule-selected-by-what-comes-back: statement: length: en 413 chars > 300",
+    "shaping-the-rule-selected-by-what-comes-back: alias not elaborated in the bound receipts: Becoming.RuleShaping"
+  ],
+  "source_drift": []
+}
