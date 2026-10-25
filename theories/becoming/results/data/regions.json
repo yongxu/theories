@@ -341,6 +341,11 @@
    "base": "old-base",
    "note": "decided finite family: arising and ceasing keep pace"
   },
+  "comparing-two-courses-on-what-they-admit": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ComparingCourses UE9: comparing two courses on what they admit (the cycle of crossed rankings, widening with a lag, the tail order, keeping what the other keeps)"
+  },
   "comparison-by-widening": {
    "region": "significance",
    "base": "old-base",
@@ -2372,6 +2377,11 @@
    "region": "map",
    "base": "frame",
    "note": "commuting law keeps symmetric images apart"
+  },
+  "Becoming.ComparingCourses": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "UE9 comparing two courses on what they admit"
   },
   "Becoming.Composition": {
    "region": "root",

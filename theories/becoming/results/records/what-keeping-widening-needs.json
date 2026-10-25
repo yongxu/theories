@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-25T19:30:48+00:00",
   "statement": {
-    "en": "A course keeping widening by name with fixed finite requirements needs unbounded stock, fed from beyond; under upkeep, renewers multiply; support passing on makes opened by the opened a recency bound; under the World premises nothing keeps opening along passing of support. None compares two courses.",
-    "zh": "按名持续扩大、需求有限而固定的进程超出一切界并由外而喂；有维持时其更新者增多；支撑之传递把由已开者所开定为近期之界；在世界前提下沿支撑之传递无一持续开出。无一比较两个进程。"
+    "en": "A course keeping widening by name with fixed finite requirements needs unbounded stock, fed from beyond; under upkeep, renewers multiply; passing support makes opened by the opened a recency bound; nothing keeps opening along passing of support under the World premises if requirements never loosen.",
+    "zh": "按名持续扩大、需求有限而固定的进程超出一切界并由外而喂；有维持时其更新者增多；支撑之传递把由已开者所开定为近期之界；在世界前提且需求永不放松时，沿支撑之传递无一持续开出。"
   },
   "laws": [
     {
@@ -98,8 +98,8 @@
       ]
     },
     {
-      "en": "Under the World premises, whatever is supported at a step is, up to double negation, linked along carrying on or passing support to something supported at any earlier step. So along every continuation containing it the levels exceed from no step to a later one, and nothing keeps opening or keeps widening there: on both readings used, 全生成 and keeping widening do not hold together. Near-definitional.",
-      "zh": "在世界前提下，任一步上受支撑者，在双重否定下，沿“延续或传递支撑”与任一更早步上受支撑者相连。故沿包含它的每一延续，水平从无一步到更晚之步超出，彼处无一持续开出或持续扩大：于所用两种读法上，全生成与持续扩大不并立。近乎定义。",
+      "en": "If requirements never loosen, under the World premises what is supported at a step is, up to double negation, linked along carrying on or passing support to something supported at any earlier step. So along every continuation containing it the levels exceed from no step to a later one, and nothing keeps opening or widening there: on both readings used, 全生成 and keeping widening do not hold together. Near-definitional.",
+      "zh": "需求永不放松时，在世界前提下，任一步上受支撑者，在双重否定下，沿“延续或传递支撑”与任一更早步上受支撑者相连。故沿包含它的每一延续，水平从无一步到更晚之步超出，彼处无一持续开出或持续扩大：于所用两种读法上，全生成与持续扩大不并立。近乎定义。",
       "declarations": [
         "Becoming.Web.Linked.snoc",
         "Becoming.Flow.descends_along_passings",
@@ -262,8 +262,8 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Each law states its premises: the first law (nothing comes from nothing), balance on the family from a step, upkeep, bounded giving per entry, brief supports, or the World premises (balance, only active formations giving, activity needing support, requirements never loosening).",
-      "zh": "不加公理。每一律陈其前提：第一律（无不自无生）、自某步起在族上平衡、维持、每条目给予有界、支撑短暂，或世界前提（平衡、只有活跃者给予、活跃需支撑、需求永不放松）。"
+      "en": "No axiom. Each law states its premises: the first law (nothing comes from nothing), balance on the family from a step, upkeep, bounded giving per entry, brief supports, or three World premises (balance, only active formations giving, activity needing support) with requirements never loosening, which is not a World premise.",
+      "zh": "不加公理。每一律陈其前提：第一律（无不自无生）、自某步起在族上平衡、维持、每条目给予有界、支撑短暂，或三条世界前提（平衡、只有活跃者给予、活跃需支撑）加上需求永不放松，后者非世界前提。"
     },
     {
       "en": "Modelling choices: discrete steps; natural-number amounts, on which passing every bound depends (in a dense order needs approaching a limit could support ever more formations at a bounded stock; argued, not proved in Lean); admission by name over a fixed type of formations; takers and renewers as entries of the present list.",
@@ -333,8 +333,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T191425.159994Z）：Becoming.KeepingWidening 之 154 项声明与 Population 之 length_le_count，公理报告皆空，本记录全引；Population、Novelty、Gain 与 Admission 之每一定理所印陈述不变。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE7），其所见除一项外皆采，见研究第 419 节；未经人审。"
   },
   "next_delta": {
-    "en": "A comparison of two courses on admitted ranges (UE9); growth by kinds not given in advance; a reading on which 全生成 and keeping widening hold together; review by a person.",
-    "zh": "在所纳范围上对两个进程之比较（UE9）；非预先给定之种类的增长；全生成与持续扩大可并立的读法；人之审查。"
+    "en": "Comparing two courses on admitted ranges is done (comparing-two-courses-on-what-they-admit), what a course keeps reachable and what carries its openings remaining; growth by kinds not given in advance; a reading on which 全生成 and keeping widening hold together; review by a person.",
+    "zh": "在所纳范围上比较两个进程已成（comparing-two-courses-on-what-they-admit），进程保持可达者与承载其开出者仍待；非预先给定之种类的增长；全生成与持续扩大可并立的读法；人之审查。"
   },
   "correspondence": {
     "en": "Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evolution measured against an isolated system's recurrence (Bedau and others 2000; Adams and others 2017); the TAP equation (Cortês and others), whose logistic variant limits innovation, and assembly theory (Sharma and others 2023), which notes mass constraints, so the gain bridge is the conservation they leave out as stated; autocatalytic sets, food-generated (Hordijk and Steel 2012; Vasas and others 2012); maintenance and depreciation, break-even investment (Solow 1956) and the maintenance coefficient (Pirt 1965), which semi-endogenous growth (Jones 1995) leaves out as stated; demography with a maximal lifespan for the uniform form; biogenesis for the exclusion. Graded in development/ue7-what-keeps-widening/NOTE.md and REVIEW-UE7.md; the readings are the AI's.",
@@ -447,6 +447,13 @@
       "detail": {
         "en": "Its first carrier form is superseded by the recency form here; its witnesses are restated for it.",
         "zh": "其承载之初形为此处的近期形式所取代；其见证为之重述。"
+      }
+    },
+    {
+      "id": "comparing-two-courses-on-what-they-admit",
+      "detail": {
+        "en": "Comparing two courses on what they admit, which no law here does.",
+        "zh": "就所纳比较两个进程，此处无一律为之。"
       }
     }
   ],
@@ -688,7 +695,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "b17cfd62bb58fa7cfb14daa328ab22dd2a22675f18fdad3c7c8f0ea14a3d9518"
+      "sha256": "7ace404140e2a9688e51b7147bcc85d8add9774e395f7dbbe802ef13a26c4c4e"
     }
   ],
   "proof_bindings": [
@@ -711,6 +718,14 @@
     {
       "en": "26 October 2026: added (UE7), what keeping widening needs and what carries it: the gain bridge and renewers multiplying, restatements; the recency form of opened by the opened, the map law and the exclusion along passing of support, near-definitional; none compares two courses; study section 419.",
       "zh": "2026年10月26日：新增（UE7），持续扩大需要什么以及承载它者：增益之桥与更新者增多，皆为重述；由已开者所开之近期形式、图谱律与沿支撑之传递的排除律，近乎定义；无一比较两个进程；研究第 419 节。"
+    },
+    {
+      "en": "26 October 2026, board item UE9 (study section 421): the next step updated: two courses are compared on admitted ranges in comparing-two-courses-on-what-they-admit; no declaration changed.",
+      "zh": "2026年10月26日，工作板条目 UE9（研究第 421 节）：下一步随之更新：两个进程于 comparing-two-courses-on-what-they-admit 中在所纳范围上得比较；无一声明改变。"
+    },
+    {
+      "en": "26 October 2026, board item UE9 (study section 421): the passing laws stated with requirements never loosening, a hypothesis beside the World premises, as UE8's first review found (the statement, law 9 and the premises, with 07 §2 and the Open items of 07 and 02); the statement's last sentence, none compares two courses, left to the first does-not-show item for the length cap; no declaration changed.",
+      "zh": "2026年10月26日，工作板条目 UE9（研究第 421 节）：支撑传递诸律陈明需求永不放松，此为世界前提之外的假设，如 UE8 首审所见（陈述、律九与前提，连同 07 §2 及 07、02 之未决项）；陈述末句“无一比较两个进程”因长度上限留于首条“未示”；无一声明改变。"
     }
   ]
 }

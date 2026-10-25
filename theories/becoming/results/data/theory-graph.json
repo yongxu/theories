@@ -1160,6 +1160,18 @@
    "page": "theories/becoming/results/records/coming-and-ceasing-keep-pace.md"
   },
   {
+   "id": "record:comparing-two-courses-on-what-they-admit",
+   "type": "result",
+   "record": "comparing-two-courses-on-what-they-admit",
+   "title": "Comparing two courses on what they admit",
+   "title_zh": "就所纳比较两个进程",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/comparing-two-courses-on-what-they-admit.md"
+  },
+  {
    "id": "record:comparison-by-widening",
    "type": "result",
    "record": "comparison-by-widening",
@@ -6687,6 +6699,17 @@
    "name": "Becoming.EventualWideningInstances",
    "level": "L1",
    "theorems": 82,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ComparingCourses",
+   "type": "module",
+   "name": "Becoming.ComparingCourses",
+   "level": "L1",
+   "theorems": 191,
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
@@ -28669,6 +28692,12 @@
    "anchor": "r-what-keeping-widening-needs"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparing-two-courses-on-what-they-admit",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-comparing-two-courses-on-what-they-admit"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-content-under-regrouping",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -29459,6 +29488,11 @@
   {
    "from": "module:Becoming.Commuting",
    "to": "module:Becoming.LearningRuns",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ComparingCourses",
+   "to": "module:Becoming.EventualWideningInstances",
    "type": "imports"
   },
   {
@@ -35602,6 +35636,96 @@
    "type": "related"
   },
   {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.Admission",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.ComparingCourses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.ContinuedClasses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.EventualWidening",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.EventualWideningInstances",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.Growth",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.Identity",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.Regions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:bounded-census-keeps-pace",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:classes-along-a-continuation",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:eventual-widening",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:eventual-widening",
+   "type": "related"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:four-cases-of-a-part",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:identity-across-steps",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:what-keeping-widening-needs",
+   "type": "related"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:widening-along-a-reading",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:widening-as-what-every-weighting-ranks",
+   "type": "related"
+  },
+  {
    "from": "record:comparison-by-widening",
    "to": "module:Becoming.Admission",
    "type": "proved-in"
@@ -38025,6 +38149,11 @@
    "from": "record:eventual-widening",
    "to": "record:classes-along-a-continuation",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:comparing-two-courses-on-what-they-admit",
+   "type": "related"
   },
   {
    "from": "record:eventual-widening",
@@ -51128,6 +51257,11 @@
   },
   {
    "from": "record:what-keeping-widening-needs",
+   "to": "record:comparing-two-courses-on-what-they-admit",
+   "type": "related"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
    "to": "record:eventual-widening",
    "type": "formal-reuse"
   },
@@ -54804,6 +54938,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-closure-verdict-meets-continuation-condition",
    "to": "record:closure-verdict-meets-continuation-condition",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparing-two-courses-on-what-they-admit",
+   "to": "record:comparing-two-courses-on-what-they-admit",
    "type": "states"
   },
   {

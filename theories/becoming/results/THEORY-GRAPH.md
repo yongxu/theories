@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2969 nodes, 5240 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2972 nodes, 5262 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -12,7 +12,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Life and evolution | 0 | 35 | 17 | 0 |
 | Collectives and selection | 0 | 54 | 16 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
-| Significance and alignment | 0 | 70 | 51 | 0 |
+| Significance and alignment | 0 | 71 | 52 | 0 |
 | Method and the formal core | 0 | 14 | 23 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 | Not yet assigned | 0 | 0 | 1 | 0 |
@@ -450,7 +450,7 @@ Modules (9, 3 stated on the grammar): `GrammarCandidates`, `GrammarCourse`, `Gra
 
 ## Significance and alignment
 
-Results (70):
+Results (71):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -460,6 +460,7 @@ Results (70):
 - [Basic-condition priority](records/protection-priority-excludes-uniform-aggregation.md) (recorded-checked)
 - [Certain positive ground with open forms in visible futures](records/positive-ground-open-futures.md) (recorded-checked)
 - [Closing needs a net draw](records/closing-needs-net-draw.md) (recorded-checked)
+- [Comparing two courses on what they admit](records/comparing-two-courses-on-what-they-admit.md) (recorded-checked)
 - [Comparison C read as widening](records/comparison-by-widening.md) (recorded-checked)
 - [Comparison where the rest responds](records/comparison-where-the-rest-responds.md) (recorded-checked)
 - [Comparison within reach](records/comparison-within-reach.md) (recorded-checked)
@@ -523,7 +524,7 @@ Results (70):
 - [Widening as what every weighting ranks](records/widening-as-what-every-weighting-ranks.md) (recorded-checked)
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)
 
-Modules (51, 3 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `ChanceFloors`, `Clearing`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
+Modules (52, 3 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
 
 
 ## Method and the formal core
@@ -568,4 +569,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-295 of 327 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+296 of 328 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

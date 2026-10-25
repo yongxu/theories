@@ -60,7 +60,7 @@ Reading a class along lineages rather than names is the move from token identity
   - Preserved conditions: The continuation is supplied. [ContinuedClasses.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean)
 - related, not a proved adapter: [identity-across-steps](identity-across-steps.md). That record's does_not_show named classes under splits and merges as not stated; this record states the renewing and consuming classes.
 
-**Used by:** [eventual-widening](eventual-widening.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
+**Used by:** [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md) · [eventual-widening](eventual-widening.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
 
 <a id="sources--来源"></a>
 ### Sources

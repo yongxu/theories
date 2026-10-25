@@ -93,6 +93,7 @@ import Becoming.Exhaustion
 import Becoming.Regions
 import Becoming.EventualWidening
 import Becoming.EventualWideningInstances
+import Becoming.ComparingCourses
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1274,6 +1275,36 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Loosening`, `Source`, `Saturated`). Each law is a restatement or near-definitional, and none
   compares two courses. A leaf: it joins EventualWidening with Gain, Flow and the map, which no
   landed module joins (board item UE7).
+* `Becoming.ComparingCourses` (L1): what a comparison of two courses can be on what they admit.
+  Two rankings crossed by widening close a cycle (`Web.ranks_self_of_crossed`). On a web of
+  formations on two sides (`Sides.web`), no strict partial order containing widening ranks every
+  course keeping widening by name from the first step above every course that admits alike from
+  the first step, was wider up to it and is mixed with it
+  (`Sides.no_order_ranks_keeping_over_alike`); for one pair the cycle needs the exchange of sides
+  (`Sides.keeping_over_alike_cycles`, `Sides.exchange_needed`), the reverse ranking is consistent,
+  by scale among others (`Sides.reverse_consistent`, `Sides.scale_counts`), and where the static
+  course's admissions are listed the ranking is a strict partial order containing widening on every
+  web (`Web.ListedOrder.irrefl`, `Web.ListedOrder.trans`, `Web.ListedOrder.ranks`). Infinite width
+  does not suffice (`AllOrSegment.unlisted_consistent`), and along a merging continuation listed
+  static courses close the cycle (`AlongMerging.no_order_ranks_along_listed`). Widening with a lag
+  (`Web.IncludesLater`, `Web.WidensWithLag`): a transitive relation joined to the strict part of a
+  transitive relation containing it is transitive (`strictJoin_trans`), so widening or widening
+  with a lag is a strict partial order containing widening (`Web.strictJoin_order`,
+  `Web.WidensOrWithLag.irrefl`, `Web.WidensOrWithLag.trans`), as are the orders of the other lags
+  (`Web.widensOrWithFormationLag_order`, `Web.widensOrEachLater_order`). It reads names across
+  steps (`NamesAcrossSteps.lag_reads_names`); along a continuation it is unchanged by every
+  re-identification carrying it (`Web.widensOrWithLagAlong_reidentify`). It decides UE4's lag
+  (`LagWitness.decided`), as do lags varying with the formation or for each admission and the tail
+  order, which contains eventual widening (`Web.tailOrder_order`, `LagWitness.tailOrder_decides`).
+  On the own-condition web widening with a lag and eventual widening disagree, so no strict partial
+  order there contains both (`TailAndLag.no_order_contains_both`); the tail order ranks a course
+  above one that admitted what it never admits (`TailAndLag.tailOrder_loses`), widening or widening
+  with a lag never (`Web.WidensOrWithLag.includesEachLater`). Keeping what the other keeps
+  (`Web.KeepsWhatKept`) is met by widening or widening with a lag and by the tail order, not by the
+  order of a lag for each admission (`EachLagDrops.eachLag_not_keeping`), and leaves the two-sided
+  pair unranked both ways (`Sides.keeping_reading`). Each law is near-definitional. A leaf:
+  alternative comparisons and their witnesses, which no module uses and C's order does not adopt
+  (board item UE9).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

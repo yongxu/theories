@@ -276,9 +276,9 @@ laws = [capped('laws', {'en': en, 'zh': zh, 'declarations': ds}, item=True) for 
 title = capped('title', {'en': 'Comparing two courses on what they admit', 'zh': '就所纳比较两个进程'})
 statement = capped('statement', {
     'en': "On a two-sided web, ranking every course keeping widening by name above every course admitting alike, "
-          "wider at first and mixed with it, closes a cycle, never with listed static courses. Widening with a lag "
+          "wider at first and mixed with it, closes a cycle, only with unlisted static courses. Widening with a lag "
           "decides UE4's lag, as does a tail order; it and eventual widening rank a pair oppositely.",
-    'zh': '在两侧之网上，把每个按名持续扩大的进程排在每个所纳相同、起初更宽且与之混杂者之上便闭成一环，静态所纳有列表时则从不。带滞后的扩大判定 UE4 '
+    'zh': '在两侧之网上，把每个按名持续扩大的进程排在每个所纳相同、起初更宽且与之混杂者之上便闭成一环，仅在静态所纳无列表时。带滞后的扩大判定 UE4 '
           '的滞后，尾序亦然；带滞后的扩大与最终扩大对一对进程排序相反。'})
 hypotheses = [capped('hypotheses', x, item=True) for x in (
     {'en': "No axiom. Law 1's class form uses a strict partial order containing widening; its one-pair form adds "

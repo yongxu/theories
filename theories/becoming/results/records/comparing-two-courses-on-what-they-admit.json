@@ -1,0 +1,922 @@
+{
+  "schema_version": 2,
+  "id": "comparing-two-courses-on-what-they-admit",
+  "title": {
+    "en": "Comparing two courses on what they admit",
+    "zh": "就所纳比较两个进程"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-25T21:32:44+00:00",
+  "statement": {
+    "en": "On a two-sided web, ranking every course keeping widening by name above every course admitting alike, wider at first and mixed with it, closes a cycle, only with unlisted static courses. Widening with a lag decides UE4's lag, as does a tail order; it and eventual widening rank a pair oppositely.",
+    "zh": "在两侧之网上，把每个按名持续扩大的进程排在每个所纳相同、起初更宽且与之混杂者之上便闭成一环，仅在静态所纳无列表时。带滞后的扩大判定 UE4 的滞后，尾序亦然；带滞后的扩大与最终扩大对一对进程排序相反。"
+  },
+  "laws": [
+    {
+      "en": "One order lemma. A transitive relation joined to the strict part of a transitive relation containing it is transitive, and an irreflexive relation joined to the strict part of any relation is irreflexive; so widening joined to the strict part of any transitive relation containing inclusion is a strict partial order containing widening. Every order below is its case. Near-definitional.",
+      "zh": "一条序之引理。传递关系并上包含它的传递关系之严格部分仍传递，非自反关系并上任一关系之严格部分仍非自反；故扩大并上任何包含“包含”的传递关系之严格部分，是包含扩大的严格偏序。下述诸序皆其特例。近乎定义。",
+      "declarations": [
+        "Becoming.strictJoin_trans",
+        "Becoming.strictJoin_irrefl",
+        "Becoming.Web.strictJoin_order"
+      ]
+    },
+    {
+      "en": "Two rankings crossed by widening close a cycle, on every web: a transitive relation containing widening that ranks l above l' and k above k', where l' widens k and k' widens l, ranks l above itself. Ranking keeping widening over admitting alike puts every course keeping widening by name from the first step above every course admitting alike from it, wider up to it and mixed with it.",
+      "zh": "为扩大所交叉的两个排序闭成一环，于每一网：包含扩大的传递关系若把 l 排在 l' 之上、k 排在 k' 之上，而 l' 扩大 k、k' 扩大 l，则把 l 排在自身之上。“持续扩大优于所纳相同”把每个自首步起按名持续扩大的进程，排在每个自首步起所纳相同、至首步更宽且与之混杂的进程之上。",
+      "declarations": [
+        "Becoming.Web.ranks_self_of_crossed",
+        "Becoming.Web.RanksKeepingOverAlike"
+      ]
+    },
+    {
+      "en": "Witness: formations on two sides, each needing its own condition at one. The growing course admits at step t one side's formations up to t; the other admits at every step the first of them and the whole other side. The growing course keeps widening by name; the other admits alike, was wider up to the first step and is mixed with it. Each static course widens the mirrored pair's keeping course, never conversely.",
+      "zh": "见证：两侧之构成，各只需自身之条件，需求为一。生长之进程于第 t 步纳一侧至 t 之构成；另一进程每步纳该侧之首与另一侧之全部构成。生长之进程按名持续扩大；另一进程所纳相同、至首步更宽且与之混杂。每对之静态进程扩大另一对之持续进程，而无一持续进程扩大另一对之静态进程。",
+      "declarations": [
+        "Becoming.Sides.web",
+        "Becoming.Sides.admits_iff",
+        "Becoming.Sides.swap",
+        "Becoming.Sides.growing",
+        "Becoming.Sides.firstAndOther",
+        "Becoming.Sides.growing_true",
+        "Becoming.Sides.not_growing_false",
+        "Becoming.Sides.firstAndOther_true",
+        "Becoming.Sides.firstAndOther_false",
+        "Becoming.Sides.growing_keepsWidening",
+        "Becoming.Sides.firstAndOther_alike",
+        "Becoming.Sides.firstAndOther_wider_first",
+        "Becoming.Sides.growing_mixed",
+        "Becoming.Sides.firstAndOther_widens_swapped",
+        "Becoming.Sides.swapped_widens_growing",
+        "Becoming.Sides.not_growing_widens_swapped",
+        "Becoming.Sides.not_swapped_growing_widens"
+      ]
+    },
+    {
+      "en": "Exchanging the sides carries admission, inclusion with any lag and exceeding to the mirror and back, so the mirrored pair meets the same four conditions: the mirror of the growing course keeps widening by name, and the mirror of the other admits alike, was wider up to the first step and is mixed with it.",
+      "zh": "交换两侧把所纳、任一滞后之包含与超出带到镜像并带回，故镜像之对满足同样四个条件：生长之进程的镜像按名持续扩大，另一进程的镜像所纳相同、至首步更宽且与之混杂。",
+      "declarations": [
+        "Becoming.Sides.swap_admits",
+        "Becoming.Sides.swap_admits_back",
+        "Becoming.Sides.swap_false",
+        "Becoming.Sides.swap_true",
+        "Becoming.Sides.swap_growing_false",
+        "Becoming.Sides.not_swap_growing_true",
+        "Becoming.Sides.swap_firstAndOther_true",
+        "Becoming.Sides.swap_firstAndOther_false",
+        "Becoming.Sides.swap_growing_keepsWidening",
+        "Becoming.Sides.swap_firstAndOther_alike",
+        "Becoming.Sides.swap_wider_first",
+        "Becoming.Sides.swap_mixed",
+        "Becoming.Sides.includesLater_swap",
+        "Becoming.Sides.includesLater_of_swap",
+        "Becoming.Sides.includes_swap",
+        "Becoming.Sides.exceeds_swap",
+        "Becoming.Sides.swap_swap_includes",
+        "Becoming.Sides.includes_swap_swap"
+      ]
+    },
+    {
+      "en": "Law 1. On the two-sided web no strict partial order containing widening ranks keeping widening by name over admitting alike; the mirrored pair is in the class, so no invariance is needed. For one pair the exchange is needed: a transitive relation containing widening and unchanged by it ranks the growing course above itself if over the other, and widening with that pair added and closed is a strict partial order.",
+      "zh": "律一。在两侧之网上，没有包含扩大的严格偏序能把按名持续扩大排在所纳相同之上：镜像之对亦在此类中，故不需不变性。就单对而言，包含扩大、不因交换而变、把生长之进程排在另一进程之上的传递关系，把它排在自身之上；扩大加上此一对并闭合后是严格偏序，故彼处交换为必需。",
+      "declarations": [
+        "Becoming.Sides.no_order_ranks_keeping_over_alike",
+        "Becoming.Sides.keeping_over_alike_cycles",
+        "Becoming.Sides.onePair",
+        "Becoming.Sides.not_firstAndOther_includes",
+        "Becoming.Sides.exchange_needed"
+      ]
+    },
+    {
+      "en": "One verdict only. Widening joined to ranking whatever includes the other course or its mirror above whatever the growing course or its mirror includes is a strict partial order containing widening and unchanged by the exchange; it ranks the other course above the growing one. The cycle forbids ranking the growing course above the other, not the reverse.",
+      "zh": "只禁一种判定。扩大并上“凡包含另一进程或其镜像者，排在凡为生长之进程或其镜像所包含者之上”，是包含扩大、不因交换而变的严格偏序；它把另一进程排在生长之进程之上。此环禁止的是把生长之进程排在另一进程之上，而非其反。",
+      "declarations": [
+        "Becoming.Sides.Above",
+        "Becoming.Sides.Below",
+        "Becoming.Sides.reverseOrder",
+        "Becoming.Sides.not_below_above",
+        "Becoming.Sides.reverseOrder_irrefl",
+        "Becoming.Sides.Above.of_includes",
+        "Becoming.Sides.Below.of_includes",
+        "Becoming.Sides.reverseOrder_trans",
+        "Becoming.Sides.Above.mirror",
+        "Becoming.Sides.Below.mirror",
+        "Becoming.Sides.reverseOrder_exchanged",
+        "Becoming.Sides.reverse_consistent"
+      ]
+    },
+    {
+      "en": "The exchange admits counting scale. A course admits at least as many formations as another at every step when, at each step, a map one to one on what the other admits carries it into what the course admits; widening joined to the strict part of that is a strict partial order containing widening, unchanged by the exchange, and it ranks the other course above the growing one by scale alone.",
+      "zh": "交换容许计规模。若每步皆有一映射，于另一进程所纳上为一对一，把它带入此进程所纳，则此进程每步所纳之构成至少一样多；扩大并上其严格部分，是包含扩大、不因交换而变的严格偏序，且仅凭规模把另一进程排在生长之进程之上。",
+      "declarations": [
+        "Becoming.Sides.flip",
+        "Becoming.Sides.flip_flip",
+        "Becoming.Sides.ScaleAtLeast",
+        "Becoming.Sides.ScaleAtLeast.of_includes",
+        "Becoming.Sides.ScaleAtLeast.trans",
+        "Becoming.Sides.ScaleAtLeast.exchanged",
+        "Becoming.Sides.scaleOrder",
+        "Becoming.Sides.growing_zero_eq",
+        "Becoming.Sides.scale_firstAndOther_growing",
+        "Becoming.Sides.not_scale_growing_firstAndOther",
+        "Becoming.Sides.scale_counts"
+      ]
+    },
+    {
+      "en": "Scope: the cycle needs infinitely many admissions. A static course whose admissions a list holds includes no course keeping widening by name; so widening joined to ranking, for each such pair of the class, whatever includes its keeping course above whatever its static course includes is a strict partial order containing widening on every web, ranking the growing course above the first formations on the two-sided web.",
+      "zh": "范围：此环需要无穷多所纳。所纳由列表持有的静态进程不包含任何按名持续扩大的进程；故扩大并上（对此类中静态所纳有列表的每一对）“凡包含持续扩大者，排在凡为静态者所包含者之上”，于每一网皆是包含扩大的严格偏序；于两侧之网上它把生长之进程排在两侧首构成之上。",
+      "declarations": [
+        "Becoming.Web.KeepingOverListedAlike",
+        "Becoming.Web.not_listed_includes_keeping",
+        "Becoming.Web.ListedOrder",
+        "Becoming.Web.ListedOrder.irrefl",
+        "Becoming.Web.ListedOrder.trans",
+        "Becoming.Web.ListedOrder.ranks",
+        "Becoming.Sides.firsts",
+        "Becoming.Sides.firsts_zero",
+        "Becoming.Sides.not_firsts_succ",
+        "Becoming.Sides.growing_over_firsts",
+        "Becoming.Sides.listed_consistent"
+      ]
+    },
+    {
+      "en": "Infinite width does not suffice. On a web whose first side needs one condition at one and whose second side's formation m needs another at m + 1, no static course includes a course keeping widening by name; a static course admitting the whole first side, which no list holds, is in the class with the rising course, and ranking keeping widening by name over admitting alike is a strict partial order containing widening.",
+      "zh": "无穷之宽不足。于一网上，第一侧之构成需一条件至一，第二侧之构成 m 需另一条件至 m + 1：无静态进程包含按名持续扩大的进程；纳整个第一侧的静态进程（无列表能持有其所纳）与上升之进程同在此类中，而把按名持续扩大排在所纳相同之上是包含扩大的严格偏序。",
+      "declarations": [
+        "Becoming.AllOrSegment.needOf",
+        "Becoming.AllOrSegment.web",
+        "Becoming.AllOrSegment.admits_iff",
+        "Becoming.AllOrSegment.firstSide_all",
+        "Becoming.AllOrSegment.secondSide_opening",
+        "Becoming.AllOrSegment.reaches_secondSide",
+        "Becoming.AllOrSegment.not_static_includes",
+        "Becoming.AllOrSegment.KeepingOverAlike",
+        "Becoming.AllOrSegment.ClassOrder",
+        "Becoming.AllOrSegment.ClassOrder.irrefl",
+        "Becoming.AllOrSegment.ClassOrder.trans",
+        "Becoming.AllOrSegment.rising",
+        "Becoming.AllOrSegment.wide",
+        "Becoming.AllOrSegment.rising_keeps",
+        "Becoming.AllOrSegment.rising_over_wide",
+        "Becoming.AllOrSegment.firstSide",
+        "Becoming.AllOrSegment.firstSide_below",
+        "Becoming.AllOrSegment.firstSide_distinct",
+        "Becoming.AllOrSegment.firstSide_length",
+        "Becoming.AllOrSegment.firstSide_fst",
+        "Becoming.AllOrSegment.wide_not_listed",
+        "Becoming.AllOrSegment.unlisted_consistent"
+      ]
+    },
+    {
+      "en": "By name is needed. On the own-condition web, along the continuation carrying every formation into formation 0, two courses keep widening, and two listed static courses, each alike from the first step, wider up to it and mixed with one of them, widen the other's keeping course; so with keeping widening read along a continuation, no strict partial order containing widening ranks every such pair.",
+      "zh": "按名为必需。于自身条件之网上，沿把每一构成带入构成 0 的延续，两个进程持续扩大；两个所纳有列表的静态进程各自首步起所纳相同、至首步更宽且与其一混杂，并扩大另一对的持续进程；故持续扩大沿一延续读时，无包含扩大的严格偏序能排序每一此类之对。",
+      "declarations": [
+        "Becoming.AlongMerging.intoZero",
+        "Becoming.AlongMerging.linked_cases",
+        "Becoming.AlongMerging.linked_to_zero",
+        "Becoming.AlongMerging.not_linked_succ",
+        "Becoming.AlongMerging.includesAcross_of_zero",
+        "Becoming.AlongMerging.not_admits_of_zero",
+        "Becoming.AlongMerging.admits_of_one",
+        "Becoming.AlongMerging.keepingA",
+        "Becoming.AlongMerging.keepingB",
+        "Becoming.AlongMerging.staticA",
+        "Becoming.AlongMerging.staticB",
+        "Becoming.AlongMerging.keepingA_keeps",
+        "Becoming.AlongMerging.keepingB_keeps",
+        "Becoming.AlongMerging.staticA_wider_first",
+        "Becoming.AlongMerging.staticB_wider_first",
+        "Becoming.AlongMerging.mixedA",
+        "Becoming.AlongMerging.mixedB",
+        "Becoming.AlongMerging.listedA",
+        "Becoming.AlongMerging.listedB",
+        "Becoming.AlongMerging.staticA_widens_keepingB",
+        "Becoming.AlongMerging.staticB_widens_keepingA",
+        "Becoming.AlongMerging.KeepingAlongOverListedAlike",
+        "Becoming.AlongMerging.pairA",
+        "Becoming.AlongMerging.pairB",
+        "Becoming.AlongMerging.no_order_ranks_along_listed"
+      ]
+    },
+    {
+      "en": "Law 2. A course includes another with lag d when every formation the other admits at a step, it admits d steps later; it widens it with a lag when it includes it with some lag and the other includes it with none. Inclusion with a lag is a preorder, lags adding; widening or widening with a lag is a strict partial order containing widening, never reversing it; widening with a lag composes with widening on either side.",
+      "zh": "律二。若另一进程于一步所纳之每一构成，此进程于 d 步之后皆纳，则此进程以滞后 d 包含它；若此进程以某滞后包含它，而它不以任何滞后包含此进程，则此进程带滞后地扩大它。带滞后之包含为前序，滞后相加；扩大或带滞后的扩大是包含扩大的严格偏序，从不逆转扩大，带滞后的扩大与扩大两侧皆可相接。",
+      "declarations": [
+        "Becoming.Web.IncludesLater",
+        "Becoming.Web.IncludesWithLag",
+        "Becoming.Web.WidensWithLag",
+        "Becoming.Web.WidensOrWithLag",
+        "Becoming.Web.IncludesLater.of_includes",
+        "Becoming.Web.IncludesLater.trans",
+        "Becoming.Web.IncludesWithLag.refl",
+        "Becoming.Web.IncludesWithLag.trans",
+        "Becoming.Web.IncludesWithLag.of_includes",
+        "Becoming.Web.WidensWithLag.irrefl",
+        "Becoming.Web.WidensWithLag.trans",
+        "Becoming.Web.Widens.trans_withLag",
+        "Becoming.Web.WidensWithLag.trans_widens",
+        "Becoming.Web.WidensOrWithLag.of_widens",
+        "Becoming.Web.WidensOrWithLag.irrefl",
+        "Becoming.Web.WidensOrWithLag.trans",
+        "Becoming.Web.Widens.not_reversed_withLag"
+      ]
+    },
+    {
+      "en": "The lag's form does not matter for the order: a lag varying with the formation, and a lag for each admission, are again transitive and contain inclusion, so each joined to widening is a strict partial order containing widening. Widening or widening with a lag gives inclusion with a lag for each admission: what the other admits at a step, the course admits then or later.",
+      "zh": "滞后之形式于序无关：随构成而变的滞后与每次所纳各自的滞后，仍传递且包含“包含”，故各自并上扩大皆是包含扩大的严格偏序。扩大或带滞后的扩大给出每次所纳各自滞后之包含：另一进程于一步所纳者，此进程于该步或更晚之步纳之。",
+      "declarations": [
+        "Becoming.Web.IncludesLaterBy",
+        "Becoming.Web.IncludesWithFormationLag",
+        "Becoming.Web.IncludesWithFormationLag.trans",
+        "Becoming.Web.IncludesWithFormationLag.of_includes",
+        "Becoming.Web.IncludesEachLater",
+        "Becoming.Web.IncludesEachLater.trans",
+        "Becoming.Web.IncludesEachLater.of_includes",
+        "Becoming.Web.WidensOrWithFormationLag",
+        "Becoming.Web.WidensOrEachLater",
+        "Becoming.Web.widensOrWithFormationLag_order",
+        "Becoming.Web.widensOrEachLater_order",
+        "Becoming.Web.WidensOrWithLag.includesEachLater"
+      ]
+    },
+    {
+      "en": "The lag reads names across steps. Widening is unchanged by every re-identification of formations, even one varying with the step; widening or widening with a lag is unchanged by every renaming constant across steps and, on the two-sided web, by the exchange. On a web of two formations, exchanging their names from step one on changes its verdict.",
+      "zh": "滞后跨步按名读构成。扩大不因构成之任何重新认同而变，即使随步而变者亦然；扩大或带滞后的扩大不因跨步恒定之任何更名而变，于两侧之网上亦不因交换而变。于两构成之网上，自第一步起交换其名会改变其判定。",
+      "declarations": [
+        "Becoming.Web.includes_reidentify",
+        "Becoming.Web.exceeds_reidentify",
+        "Becoming.Web.widens_reidentify",
+        "Becoming.Web.includesLater_rename",
+        "Becoming.Web.widensOrWithLag_rename",
+        "Becoming.Sides.widensOrWithLag_swap",
+        "Becoming.NamesAcrossSteps.web",
+        "Becoming.NamesAcrossSteps.flip",
+        "Becoming.NamesAcrossSteps.flip_flip",
+        "Becoming.NamesAcrossSteps.exchange",
+        "Becoming.NamesAcrossSteps.once",
+        "Becoming.NamesAcrossSteps.later",
+        "Becoming.NamesAcrossSteps.admits_iff",
+        "Becoming.NamesAcrossSteps.re_admits_iff",
+        "Becoming.NamesAcrossSteps.later_withLag",
+        "Becoming.NamesAcrossSteps.not_later_withLag_renamed",
+        "Becoming.NamesAcrossSteps.lag_reads_names"
+      ]
+    },
+    {
+      "en": "Along a continuation the lag need not read names: a course includes another with lag d along it when what the other admits at a step is linked, d steps later, to what it admits. Widening joined to its strict part is a strict partial order containing widening; by name it is widening or widening with a lag; it is unchanged by every re-identification carrying the continuation, and the verdict renaming lost comes back.",
+      "zh": "沿一延续，滞后不必按名读：若另一进程于一步所纳者，于 d 步之后与此进程所纳者相连，则此进程沿之以滞后 d 包含它。扩大并上其严格部分是包含扩大的严格偏序；按名即扩大或带滞后的扩大；它不因承载此延续的任何重新认同而变，因更名而失的判定复归。",
+      "declarations": [
+        "Becoming.Web.Linked.append",
+        "Becoming.Web.IncludesLaterAlong",
+        "Becoming.Web.IncludesLaterAlong.of_includes",
+        "Becoming.Web.IncludesLaterAlong.trans",
+        "Becoming.Web.includesLaterAlong_itself_iff",
+        "Becoming.Web.includesLaterAlong_reidentify",
+        "Becoming.Web.WidensOrWithLagAlong",
+        "Becoming.Web.widensOrWithLagAlong_order",
+        "Becoming.Web.widensOrWithLagAlong_itself_iff",
+        "Becoming.Web.widensOrWithLagAlong_reidentify",
+        "Becoming.NamesAcrossSteps.along_restores"
+      ]
+    },
+    {
+      "en": "The tail order: inclusion with a lag from some step on is a preorder containing widening and eventual widening, and widening or eventual widening joined to its strict part is a strict partial order containing both, on every web.",
+      "zh": "尾序：自某步起带滞后之包含是包含扩大与最终扩大的前序；扩大或最终扩大并上其严格部分，于每一网皆是包含二者的严格偏序。",
+      "declarations": [
+        "Becoming.Web.IncludesLaterFrom",
+        "Becoming.Web.TailLag",
+        "Becoming.Web.TailLag.trans",
+        "Becoming.Web.TailLag.of_widensOrEventually",
+        "Becoming.Web.TailOrder",
+        "Becoming.Web.TailOrder.irrefl",
+        "Becoming.Web.TailOrder.trans",
+        "Becoming.Web.tailOrder_order"
+      ]
+    },
+    {
+      "en": "UE4's lag decided: the course keeping every formation of the travelling one a step later widens it with lag one, where neither eventually widens the other; lags varying with the formation or for each admission, and the tail order, decide it as well.",
+      "zh": "UE4 之滞后得判：晚一步保有行进进程每一构成的进程，以滞后一扩大它，而二者无一最终扩大对方；随构成而变或每次所纳各自的滞后，以及尾序，亦判定之。",
+      "declarations": [
+        "Becoming.LagWitness.includesLater_one",
+        "Becoming.LagWitness.not_travelling_includes",
+        "Becoming.LagWitness.widensWithLag",
+        "Becoming.LagWitness.decided",
+        "Becoming.LagWitness.formationLag_decides",
+        "Becoming.LagWitness.eachLag_decides",
+        "Becoming.LagWitness.tailOrder_decides"
+      ]
+    },
+    {
+      "en": "Where it is silent: on the two-sided pair neither course includes the other at any lag. Widening with a lag alone does not contain widening: a rising course widens its copy one step late, which includes it with lag one, so the disjunction with widening is needed.",
+      "zh": "其沉默之处：两侧之对中，无一进程以任何滞后包含对方。单独带滞后的扩大不包含扩大：上升之进程扩大其晚一步之副本，而副本以滞后一包含它，故须与扩大取析取。",
+      "declarations": [
+        "Becoming.Sides.silent",
+        "Becoming.Delayed.rising_widens",
+        "Becoming.Delayed.lagging_includes",
+        "Becoming.Delayed.widens_not_withLag"
+      ]
+    },
+    {
+      "en": "Law 3. On the own-condition web the course ahead admits at step t the formations from 1 to t + 1; the early course admits formation 0 at step 0 and those from 1 to t + 1 at step t + 1. The course ahead eventually widens the early one, which widens it with a lag, so no strict partial order there contains both, nor eventual widening and a lag varying with the formation or for each admission.",
+      "zh": "律三。于自身条件之网上，领先之进程于第 t 步纳 1 至 t + 1 之构成；早先之进程于第 0 步纳构成 0，于第 t + 1 步纳 1 至 t + 1。领先者最终扩大早先者，早先者带滞后地扩大领先者，故彼处无严格偏序包含二者，亦无包含最终扩大与随构成而变或每次所纳各自之滞后者。",
+      "declarations": [
+        "Becoming.TailAndLag.ahead",
+        "Becoming.TailAndLag.early",
+        "Becoming.TailAndLag.not_ahead_zero",
+        "Becoming.TailAndLag.ahead_succ",
+        "Becoming.TailAndLag.early_zero",
+        "Becoming.TailAndLag.early_succ",
+        "Becoming.TailAndLag.not_early_zero_succ",
+        "Becoming.TailAndLag.not_early_succ_zero",
+        "Becoming.TailAndLag.includesFrom",
+        "Becoming.TailAndLag.exceedsLate",
+        "Becoming.TailAndLag.eventually",
+        "Becoming.TailAndLag.early_includes",
+        "Becoming.TailAndLag.not_ahead_includes",
+        "Becoming.TailAndLag.disagree",
+        "Becoming.TailAndLag.no_order_contains_both",
+        "Becoming.TailAndLag.formationLag_conflict",
+        "Becoming.TailAndLag.eachLag_conflict"
+      ]
+    },
+    {
+      "en": "Why the choice matters: the tail order ranks the course ahead above the early one, which admitted formation 0 at step 0, a formation the course ahead never admits; widening or widening with a lag never ranks a course above one that admitted what it never admits.",
+      "zh": "此选择何以要紧：尾序把领先之进程排在早先之进程之上，而后者于第 0 步纳了领先者从不纳的构成 0；扩大或带滞后的扩大从不把一进程排在纳过其从不纳者之进程之上。",
+      "declarations": [
+        "Becoming.TailAndLag.tailOrder_loses"
+      ]
+    },
+    {
+      "en": "Law 4. A course keeps what another keeps when every formation the other admits at every step from some step on, it admits at every step from some step on. Widening or widening with a lag, and the tail order, rank a course above another only where it keeps what the other keeps; under it the two-sided pair is unranked both ways and the listed ranking above the first formations is excluded. A condition, not an order.",
+      "zh": "律四。若另一进程自某步起每步皆纳之构成，此进程亦自某步起每步皆纳，则此进程保有另一进程所保有者。扩大或带滞后的扩大，以及尾序，只在此条件下把一进程排在另一进程之上；在此条件下两侧之对两向皆不排序，排在首构成之上的列表排序被排除。这是条件，不是序。",
+      "declarations": [
+        "Becoming.Web.KeepsWhatKept",
+        "Becoming.Web.KeepsWhatKept.of_includesFrom",
+        "Becoming.Web.KeepsWhatKept.of_includesLaterFrom",
+        "Becoming.Web.TailOrder.keepsWhatKept",
+        "Becoming.Web.WidensOrWithLag.keepsWhatKept",
+        "Becoming.Sides.not_keepsWhatKept_growing",
+        "Becoming.Sides.not_keepsWhatKept_firstAndOther",
+        "Becoming.Sides.not_keepsWhatKept_firsts",
+        "Becoming.Sides.keeping_reading"
+      ]
+    },
+    {
+      "en": "Law 4 tells the lag's forms apart. A lag varying with the formation keeps what the other keeps, on every web. A lag for each admission need not: on the own-condition web its order ranks the course admitting formation 0 at even steps only, and formation 1 at step 0, above the course admitting formation 0 at every step, which keeps what the first drops; the other orders do not rank them so.",
+      "zh": "律四区分滞后之诸形式。随构成而变的滞后保有对方所保有者，于每一网皆然。每次所纳各自的滞后则未必：于自身条件之网上，其序把只于偶数步纳构成 0、并于第 0 步纳构成 1 的进程，排在每步皆纳构成 0 的进程之上，而后者保有前者所舍者；其余诸序不如此排。",
+      "declarations": [
+        "Becoming.Web.IncludesWithFormationLag.keepsWhatKept",
+        "Becoming.Web.WidensOrWithFormationLag.keepsWhatKept",
+        "Becoming.EachLagDrops.evenLevel",
+        "Becoming.EachLagDrops.even_or_next",
+        "Becoming.EachLagDrops.odd_or_next",
+        "Becoming.EachLagDrops.steady",
+        "Becoming.EachLagDrops.alternate",
+        "Becoming.EachLagDrops.steady_zero",
+        "Becoming.EachLagDrops.steady_only",
+        "Becoming.EachLagDrops.not_steady_one",
+        "Becoming.EachLagDrops.alternate_one",
+        "Becoming.EachLagDrops.alternate_includesEachLater",
+        "Becoming.EachLagDrops.not_steady_includesEachLater",
+        "Becoming.EachLagDrops.not_keeps",
+        "Becoming.EachLagDrops.eachLag_not_keeping"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Law 1's class form uses a strict partial order containing widening; its one-pair form adds invariance under exchanging the sides; laws 2 and 3 state their orders on every web or on a witness; law 4 is a necessary condition checked on witnesses.",
+      "zh": "不加公理。律一之类形式用包含扩大的严格偏序；其单对形式加上交换两侧下之不变；律二、律三于每一网或于一见证上陈其序；律四为在见证上检验的必要条件。"
+    },
+    {
+      "en": "Modelling choices: discrete steps and whole-number levels; admission as meeting each need, by name, over a fixed type of formations; keeping widening read by name in law 1; the lag compares formations across steps by name (along a continuation it need not); law 1's cycle needs a static course admitting infinitely many formations, which does not suffice.",
+      "zh": "建模之选：离散之步与整数水平；在固定的构成类型上按名满足每一需求即为所纳；律一按名读持续扩大；滞后跨步按名比较构成（沿一延续则不必）；律一之环需要纳无穷多构成的静态进程，而此不足够。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That widening with a lag, or the tail order, is the second-order direction of 生生: widening with a lag ranks by what each keeps of the other's admissions over time.",
+      "zh": "带滞后的扩大或尾序即生生的二阶方向：带滞后的扩大按各自随时间保有对方所纳者而排序。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Anything about what a course keeps reachable or what carries its openings, 07's other two candidates, which are not read on admitted ranges.",
+      "zh": "关于进程保持可达者或承载其开出者（07 的另两个候选）的任何结论，二者不在所纳范围上读。",
+      "kind": "scope"
+    },
+    {
+      "en": "An impossibility on every web, or for comparisons that are not strict partial orders containing widening: with listed static admissions, or where no static course includes a keeping one, the ranking is consistent.",
+      "zh": "于每一网之不可能性，或对非包含扩大之严格偏序者之不可能性：静态所纳有列表时，或无静态进程包含持续进程时，该排序一致。",
+      "kind": "scope"
+    },
+    {
+      "en": "That every form of the lag meets law 4: the order of a lag for each admission can rank a course above one keeping a formation it drops.",
+      "zh": "滞后之每一形式皆满足律四：每次所纳各自之滞后的序可把一进程排在保有其所舍构成者之上。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a comparison here ranks a course better: ranking needs C, and choosing between counting early steps and reading only tails is a further premise.",
+      "zh": "此处之比较把某进程排得更好：排序需要 C，在计早期之步与只读尾之间作选择是又一前提。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A result no neighbouring field states: law 1's one-pair form has the shape of Askell's incomparability argument, and the other laws are near-definitional.",
+      "zh": "近邻领域无人陈述的结果：律一之单对形式具 Askell 不可比论证之形，其余诸律近乎定义。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+      "detail": {
+        "en": "On the two-sided web no strict partial order containing widening and unchanged by the exchange ranks the growing course above the other (Sides.keeping_over_alike_cycles), yet one ranks the other above it (Sides.reverse_consistent).",
+        "zh": "在两侧之网上，没有包含扩大、不因交换而变的严格偏序能把生长之进程排在另一进程之上（Sides.keeping_over_alike_cycles），却有一个把另一进程排在其上（Sides.reverse_consistent）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+      "detail": {
+        "en": "Widening with a lag alone does not contain widening: the rising course widens its copy one step late, which includes it with lag one (Delayed.widens_not_withLag).",
+        "zh": "单独带滞后的扩大不包含扩大：上升之进程扩大其晚一步之副本，而副本以滞后一包含它（Delayed.widens_not_withLag）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+      "detail": {
+        "en": "On the own-condition web the course ahead eventually widens the early one, which widens it with a lag (TailAndLag.disagree).",
+        "zh": "于自身条件之网上，领先之进程最终扩大早先之进程，后者带滞后地扩大前者（TailAndLag.disagree）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+      "detail": {
+        "en": "Exchanging two formations' names from step one on changes the lag order's verdict, where widening is unchanged by every re-identification (NamesAcrossSteps.lag_reads_names).",
+        "zh": "自第一步起交换两构成之名会改变滞后之序的判定，而扩大不因任何重新认同而变（NamesAcrossSteps.lag_reads_names）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+      "detail": {
+        "en": "Along the continuation carrying every formation into one, listed static courses close the cycle (AlongMerging.no_order_ranks_along_listed).",
+        "zh": "沿把每一构成带入其一的延续，所纳有列表的静态进程亦闭环（AlongMerging.no_order_ranks_along_listed）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+      "detail": {
+        "en": "An infinitely wide static course need not close it: on AllOrSegment.web the class is ranked consistently (AllOrSegment.unlisted_consistent).",
+        "zh": "无穷之宽的静态进程未必闭环：于 AllOrSegment.web 上此类可一致地排序（AllOrSegment.unlisted_consistent）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+      "detail": {
+        "en": "The order of a lag for each admission ranks a course above one that keeps a formation it drops (EachLagDrops.eachLag_not_keeping).",
+        "zh": "每次所纳各自之滞后的序把一进程排在保有其所舍构成者之上（EachLagDrops.eachLag_not_keeping）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.ComparingCourses, 244 declarations, every one with an empty axiom report, all cited here; Web.Linked.append generalizes the landed Web.Linked.snoc and sits beside it until moved below. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE9), every finding taken, and a re-check (RECHECK-UE9), every finding taken but one, in study section 421; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T212948.819150Z）：Becoming.ComparingCourses 之 244 项声明，公理报告皆空，本记录全引；Web.Linked.append 推广已落地之 Web.Linked.snoc，移至下层前与之并存。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE9），其所见皆采，并作复查（RECHECK-UE9），其所见除一项外皆采，见研究第 421 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "07's other two candidates, what a course keeps reachable and what carries its openings; a reason, or a premise, for counting early steps or reading only tails; review by a person.",
+    "zh": "07 的另两个候选：进程保持可达者与承载其开出者；计早期之步或只读尾的理由或前提；人之审查。"
+  },
+  "correspondence": {
+    "en": "Infinite ethics and social choice: law 1's one-pair form has the shape of Askell's (2018) incomparability argument, in which Pareto, transitivity, permutability and invariance across qualitative duplicates force incomparability between infinite worlds, here in one direction only; the exchange is an instance of relative anonymity, or permutation invariance (Sen 1984; Asheim, d'Aspremont and Banerjee 2010; Goodman and Lederman 2024); Diamond (1965) and Basu and Mitra (2003) are distant; ranking by the number of options (Pattanaik and Xu 1990) is the neighbour for counting scale. Suzumura consistency (1976) and Szpilrajn's extension theorem (1930) are vocabulary only. Read by the AI, eventual widening is decided by tails, like a dictatorship of the future (Chichilnisky 1996). Delayed simulation for Büchi automata (Etessami, Wilke and Schuller 2001; 2005) is the analogue of a lag for each admission, delay games with bounded lookahead (Hosch and Landweber 1972; Holtmann, Kaiser and Thomas 2012) of a uniform lag; overtaking and catching up (Atsumi 1965; von Weizsäcker 1965; Gale 1967; Brock 1970) are scalar and distant. Graded in UE9's NOTE and REVIEW-UE9; the readings are the AI's.",
+    "zh": "无限伦理与社会选择：律一之单对形式具 Askell（2018）不可比论证之形，此处只在一个方向上；交换是相对匿名或置换不变之一例（Sen 1984；Asheim、d'Aspremont 与 Banerjee 2010；Goodman 与 Lederman 2024）；Diamond（1965）与 Basu、Mitra（2003）较远；按选项数目排序（Pattanaik 与 Xu 1990）是计规模之近邻。Suzumura 一致性与 Szpilrajn 延拓定理只是用语。依 AI 之读，最终扩大由尾决定，如未来之独裁（Chichilnisky 1996）。延迟模拟（Etessami、Wilke 与 Schuller 2001）类于每次所纳各自之滞后，有界前瞻之延迟博弈（Hosch 与 Landweber 1972）类于一致之滞后；超越与追赶（Atsumi 1965；von Weizsäcker 1965）为标量，较远。分级见 UE9 之 NOTE.md 与 REVIEW-UE9.md；读法皆 AI 之读。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+  "aliases": [
+    "Comparing two courses on what they admit",
+    "就所纳比较两个进程",
+    "widening with a lag",
+    "the tail order",
+    "keeping what the other keeps",
+    "Becoming.Web.WidensOrWithLag",
+    "Becoming.Sides.no_order_ranks_keeping_over_alike"
+  ],
+  "dependencies": [
+    {
+      "id": "eventual-widening",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.EventuallyWidens, Web.WidensOrEventually, Web.KeepsWidening with KeepsWidening.gathers, Web.AdmitsAlikeFrom, Web.WidensUpTo, Web.IncludesFrom and Web.ExceedsLate; the own-condition web and UE4's lag witness.",
+        "zh": "Web.EventuallyWidens、Web.WidensOrEventually、Web.KeepsWidening 及 KeepsWidening.gathers、Web.AdmitsAlikeFrom、Web.WidensUpTo、Web.IncludesFrom 与 Web.ExceedsLate；自身条件之网与 UE4 之滞后见证。"
+      }
+    },
+    {
+      "id": "four-cases-of-a-part",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.Includes, Web.Exceeds, Web.Widens and Web.Mixed, the comparison every law here extends.",
+        "zh": "Web.Includes、Web.Exceeds、Web.Widens 与 Web.Mixed，此处每一律所扩展的比较。"
+      }
+    },
+    {
+      "id": "identity-across-steps",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reidentify, Web.reidentify and Reidentify.rename: the re-identifications and renamings the lag is read under.",
+        "zh": "Reidentify、Web.reidentify 与 Reidentify.rename：读滞后时所依之重新认同与更名。"
+      }
+    },
+    {
+      "id": "classes-along-a-continuation",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.Linked, Web.itself, Reidentify.carry and the links carried, for the lag along a continuation.",
+        "zh": "Web.Linked、Web.itself、Reidentify.carry 与被承载之链接，用于沿一延续之滞后。"
+      }
+    },
+    {
+      "id": "widening-along-a-reading",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.Linked.itself_of_le and Web.Linked.itself_same, by which the lag along itself is the lag by name.",
+        "zh": "Web.Linked.itself_of_le 与 Web.Linked.itself_same，由之沿自身之滞后即按名之滞后。"
+      }
+    },
+    {
+      "id": "bounded-census-keeps-pace",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "length_le_of_sub, the pigeonhole by which a listed static course includes no course keeping widening by name.",
+        "zh": "length_le_of_sub，由此鸽巢原理，所纳有列表的静态进程不包含任何按名持续扩大的进程。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "eventual-widening",
+      "detail": {
+        "en": "Its lag is decided here, by widening with a lag and by the tail order, which contains eventual widening; the two rank a pair oppositely.",
+        "zh": "其滞后在此得判，由带滞后的扩大与包含最终扩大的尾序；二者对一对进程排序相反。"
+      }
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "detail": {
+        "en": "What one course keeping widening needs; here two courses are compared on what they admit.",
+        "zh": "一个持续扩大的进程需要什么；此处就所纳比较两个进程。"
+      }
+    },
+    {
+      "id": "widening-as-what-every-weighting-ranks",
+      "detail": {
+        "en": "C read as widening; no order here is adopted by C, and choosing one is a further premise.",
+        "zh": "读作扩大的 C；此处无一序为 C 所采，选取其一是又一前提。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.AllOrSegment.ClassOrder",
+        "Becoming.AllOrSegment.ClassOrder.irrefl",
+        "Becoming.AllOrSegment.ClassOrder.trans",
+        "Becoming.AllOrSegment.KeepingOverAlike",
+        "Becoming.AllOrSegment.admits_iff",
+        "Becoming.AllOrSegment.firstSide",
+        "Becoming.AllOrSegment.firstSide_all",
+        "Becoming.AllOrSegment.firstSide_below",
+        "Becoming.AllOrSegment.firstSide_distinct",
+        "Becoming.AllOrSegment.firstSide_fst",
+        "Becoming.AllOrSegment.firstSide_length",
+        "Becoming.AllOrSegment.needOf",
+        "Becoming.AllOrSegment.not_static_includes",
+        "Becoming.AllOrSegment.reaches_secondSide",
+        "Becoming.AllOrSegment.rising",
+        "Becoming.AllOrSegment.rising_keeps",
+        "Becoming.AllOrSegment.rising_over_wide",
+        "Becoming.AllOrSegment.secondSide_opening",
+        "Becoming.AllOrSegment.unlisted_consistent",
+        "Becoming.AllOrSegment.web",
+        "Becoming.AllOrSegment.wide",
+        "Becoming.AllOrSegment.wide_not_listed",
+        "Becoming.AlongMerging.KeepingAlongOverListedAlike",
+        "Becoming.AlongMerging.admits_of_one",
+        "Becoming.AlongMerging.includesAcross_of_zero",
+        "Becoming.AlongMerging.intoZero",
+        "Becoming.AlongMerging.keepingA",
+        "Becoming.AlongMerging.keepingA_keeps",
+        "Becoming.AlongMerging.keepingB",
+        "Becoming.AlongMerging.keepingB_keeps",
+        "Becoming.AlongMerging.linked_cases",
+        "Becoming.AlongMerging.linked_to_zero",
+        "Becoming.AlongMerging.listedA",
+        "Becoming.AlongMerging.listedB",
+        "Becoming.AlongMerging.mixedA",
+        "Becoming.AlongMerging.mixedB",
+        "Becoming.AlongMerging.no_order_ranks_along_listed",
+        "Becoming.AlongMerging.not_admits_of_zero",
+        "Becoming.AlongMerging.not_linked_succ",
+        "Becoming.AlongMerging.pairA",
+        "Becoming.AlongMerging.pairB",
+        "Becoming.AlongMerging.staticA",
+        "Becoming.AlongMerging.staticA_widens_keepingB",
+        "Becoming.AlongMerging.staticA_wider_first",
+        "Becoming.AlongMerging.staticB",
+        "Becoming.AlongMerging.staticB_widens_keepingA",
+        "Becoming.AlongMerging.staticB_wider_first",
+        "Becoming.Delayed.lagging_includes",
+        "Becoming.Delayed.rising_widens",
+        "Becoming.Delayed.widens_not_withLag",
+        "Becoming.EachLagDrops.alternate",
+        "Becoming.EachLagDrops.alternate_includesEachLater",
+        "Becoming.EachLagDrops.alternate_one",
+        "Becoming.EachLagDrops.eachLag_not_keeping",
+        "Becoming.EachLagDrops.evenLevel",
+        "Becoming.EachLagDrops.even_or_next",
+        "Becoming.EachLagDrops.not_keeps",
+        "Becoming.EachLagDrops.not_steady_includesEachLater",
+        "Becoming.EachLagDrops.not_steady_one",
+        "Becoming.EachLagDrops.odd_or_next",
+        "Becoming.EachLagDrops.steady",
+        "Becoming.EachLagDrops.steady_only",
+        "Becoming.EachLagDrops.steady_zero",
+        "Becoming.LagWitness.decided",
+        "Becoming.LagWitness.eachLag_decides",
+        "Becoming.LagWitness.formationLag_decides",
+        "Becoming.LagWitness.includesLater_one",
+        "Becoming.LagWitness.not_travelling_includes",
+        "Becoming.LagWitness.tailOrder_decides",
+        "Becoming.LagWitness.widensWithLag",
+        "Becoming.NamesAcrossSteps.admits_iff",
+        "Becoming.NamesAcrossSteps.along_restores",
+        "Becoming.NamesAcrossSteps.exchange",
+        "Becoming.NamesAcrossSteps.flip",
+        "Becoming.NamesAcrossSteps.flip_flip",
+        "Becoming.NamesAcrossSteps.lag_reads_names",
+        "Becoming.NamesAcrossSteps.later",
+        "Becoming.NamesAcrossSteps.later_withLag",
+        "Becoming.NamesAcrossSteps.not_later_withLag_renamed",
+        "Becoming.NamesAcrossSteps.once",
+        "Becoming.NamesAcrossSteps.re_admits_iff",
+        "Becoming.NamesAcrossSteps.web",
+        "Becoming.Sides.Above",
+        "Becoming.Sides.Above.mirror",
+        "Becoming.Sides.Above.of_includes",
+        "Becoming.Sides.Below",
+        "Becoming.Sides.Below.mirror",
+        "Becoming.Sides.Below.of_includes",
+        "Becoming.Sides.ScaleAtLeast",
+        "Becoming.Sides.ScaleAtLeast.exchanged",
+        "Becoming.Sides.ScaleAtLeast.of_includes",
+        "Becoming.Sides.ScaleAtLeast.trans",
+        "Becoming.Sides.admits_iff",
+        "Becoming.Sides.exceeds_swap",
+        "Becoming.Sides.exchange_needed",
+        "Becoming.Sides.firstAndOther",
+        "Becoming.Sides.firstAndOther_alike",
+        "Becoming.Sides.firstAndOther_false",
+        "Becoming.Sides.firstAndOther_true",
+        "Becoming.Sides.firstAndOther_widens_swapped",
+        "Becoming.Sides.firstAndOther_wider_first",
+        "Becoming.Sides.firsts",
+        "Becoming.Sides.firsts_zero",
+        "Becoming.Sides.flip",
+        "Becoming.Sides.flip_flip",
+        "Becoming.Sides.growing",
+        "Becoming.Sides.growing_keepsWidening",
+        "Becoming.Sides.growing_mixed",
+        "Becoming.Sides.growing_over_firsts",
+        "Becoming.Sides.growing_true",
+        "Becoming.Sides.growing_zero_eq",
+        "Becoming.Sides.includesLater_of_swap",
+        "Becoming.Sides.includesLater_swap",
+        "Becoming.Sides.includes_swap",
+        "Becoming.Sides.includes_swap_swap",
+        "Becoming.Sides.keeping_over_alike_cycles",
+        "Becoming.Sides.keeping_reading",
+        "Becoming.Sides.listed_consistent",
+        "Becoming.Sides.no_order_ranks_keeping_over_alike",
+        "Becoming.Sides.not_below_above",
+        "Becoming.Sides.not_firstAndOther_includes",
+        "Becoming.Sides.not_firsts_succ",
+        "Becoming.Sides.not_growing_false",
+        "Becoming.Sides.not_growing_widens_swapped",
+        "Becoming.Sides.not_keepsWhatKept_firstAndOther",
+        "Becoming.Sides.not_keepsWhatKept_firsts",
+        "Becoming.Sides.not_keepsWhatKept_growing",
+        "Becoming.Sides.not_scale_growing_firstAndOther",
+        "Becoming.Sides.not_swap_growing_true",
+        "Becoming.Sides.not_swapped_growing_widens",
+        "Becoming.Sides.onePair",
+        "Becoming.Sides.reverseOrder",
+        "Becoming.Sides.reverseOrder_exchanged",
+        "Becoming.Sides.reverseOrder_irrefl",
+        "Becoming.Sides.reverseOrder_trans",
+        "Becoming.Sides.reverse_consistent",
+        "Becoming.Sides.scaleOrder",
+        "Becoming.Sides.scale_counts",
+        "Becoming.Sides.scale_firstAndOther_growing",
+        "Becoming.Sides.silent",
+        "Becoming.Sides.swap",
+        "Becoming.Sides.swap_admits",
+        "Becoming.Sides.swap_admits_back",
+        "Becoming.Sides.swap_false",
+        "Becoming.Sides.swap_firstAndOther_alike",
+        "Becoming.Sides.swap_firstAndOther_false",
+        "Becoming.Sides.swap_firstAndOther_true",
+        "Becoming.Sides.swap_growing_false",
+        "Becoming.Sides.swap_growing_keepsWidening",
+        "Becoming.Sides.swap_mixed",
+        "Becoming.Sides.swap_swap_includes",
+        "Becoming.Sides.swap_true",
+        "Becoming.Sides.swap_wider_first",
+        "Becoming.Sides.swapped_widens_growing",
+        "Becoming.Sides.web",
+        "Becoming.Sides.widensOrWithLag_swap",
+        "Becoming.TailAndLag.ahead",
+        "Becoming.TailAndLag.ahead_succ",
+        "Becoming.TailAndLag.disagree",
+        "Becoming.TailAndLag.eachLag_conflict",
+        "Becoming.TailAndLag.early",
+        "Becoming.TailAndLag.early_includes",
+        "Becoming.TailAndLag.early_succ",
+        "Becoming.TailAndLag.early_zero",
+        "Becoming.TailAndLag.eventually",
+        "Becoming.TailAndLag.exceedsLate",
+        "Becoming.TailAndLag.formationLag_conflict",
+        "Becoming.TailAndLag.includesFrom",
+        "Becoming.TailAndLag.no_order_contains_both",
+        "Becoming.TailAndLag.not_ahead_includes",
+        "Becoming.TailAndLag.not_ahead_zero",
+        "Becoming.TailAndLag.not_early_succ_zero",
+        "Becoming.TailAndLag.not_early_zero_succ",
+        "Becoming.TailAndLag.tailOrder_loses",
+        "Becoming.Web.IncludesEachLater",
+        "Becoming.Web.IncludesEachLater.of_includes",
+        "Becoming.Web.IncludesEachLater.trans",
+        "Becoming.Web.IncludesLater",
+        "Becoming.Web.IncludesLater.of_includes",
+        "Becoming.Web.IncludesLater.trans",
+        "Becoming.Web.IncludesLaterAlong",
+        "Becoming.Web.IncludesLaterAlong.of_includes",
+        "Becoming.Web.IncludesLaterAlong.trans",
+        "Becoming.Web.IncludesLaterBy",
+        "Becoming.Web.IncludesLaterFrom",
+        "Becoming.Web.IncludesWithFormationLag",
+        "Becoming.Web.IncludesWithFormationLag.keepsWhatKept",
+        "Becoming.Web.IncludesWithFormationLag.of_includes",
+        "Becoming.Web.IncludesWithFormationLag.trans",
+        "Becoming.Web.IncludesWithLag",
+        "Becoming.Web.IncludesWithLag.of_includes",
+        "Becoming.Web.IncludesWithLag.refl",
+        "Becoming.Web.IncludesWithLag.trans",
+        "Becoming.Web.KeepingOverListedAlike",
+        "Becoming.Web.KeepsWhatKept",
+        "Becoming.Web.KeepsWhatKept.of_includesFrom",
+        "Becoming.Web.KeepsWhatKept.of_includesLaterFrom",
+        "Becoming.Web.Linked.append",
+        "Becoming.Web.ListedOrder",
+        "Becoming.Web.ListedOrder.irrefl",
+        "Becoming.Web.ListedOrder.ranks",
+        "Becoming.Web.ListedOrder.trans",
+        "Becoming.Web.RanksKeepingOverAlike",
+        "Becoming.Web.TailLag",
+        "Becoming.Web.TailLag.of_widensOrEventually",
+        "Becoming.Web.TailLag.trans",
+        "Becoming.Web.TailOrder",
+        "Becoming.Web.TailOrder.irrefl",
+        "Becoming.Web.TailOrder.keepsWhatKept",
+        "Becoming.Web.TailOrder.trans",
+        "Becoming.Web.Widens.not_reversed_withLag",
+        "Becoming.Web.Widens.trans_withLag",
+        "Becoming.Web.WidensOrEachLater",
+        "Becoming.Web.WidensOrWithFormationLag",
+        "Becoming.Web.WidensOrWithFormationLag.keepsWhatKept",
+        "Becoming.Web.WidensOrWithLag",
+        "Becoming.Web.WidensOrWithLag.includesEachLater",
+        "Becoming.Web.WidensOrWithLag.irrefl",
+        "Becoming.Web.WidensOrWithLag.keepsWhatKept",
+        "Becoming.Web.WidensOrWithLag.of_widens",
+        "Becoming.Web.WidensOrWithLag.trans",
+        "Becoming.Web.WidensOrWithLagAlong",
+        "Becoming.Web.WidensWithLag",
+        "Becoming.Web.WidensWithLag.irrefl",
+        "Becoming.Web.WidensWithLag.trans",
+        "Becoming.Web.WidensWithLag.trans_widens",
+        "Becoming.Web.exceeds_reidentify",
+        "Becoming.Web.includesLaterAlong_itself_iff",
+        "Becoming.Web.includesLaterAlong_reidentify",
+        "Becoming.Web.includesLater_rename",
+        "Becoming.Web.includes_reidentify",
+        "Becoming.Web.not_listed_includes_keeping",
+        "Becoming.Web.ranks_self_of_crossed",
+        "Becoming.Web.strictJoin_order",
+        "Becoming.Web.tailOrder_order",
+        "Becoming.Web.widensOrEachLater_order",
+        "Becoming.Web.widensOrWithFormationLag_order",
+        "Becoming.Web.widensOrWithLagAlong_itself_iff",
+        "Becoming.Web.widensOrWithLagAlong_order",
+        "Becoming.Web.widensOrWithLagAlong_reidentify",
+        "Becoming.Web.widensOrWithLag_rename",
+        "Becoming.Web.widens_reidentify",
+        "Becoming.strictJoin_irrefl",
+        "Becoming.strictJoin_trans"
+      ],
+      "sha256": "e5d2cb98205f84165d0cefda8f65540d21379b3a3d34dcee65f987c3af632ee6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
+      "role": "proof",
+      "sha256": "f2e6ee1758c511708da0051023a3d9a7dea1aa17044e767938d23b7891c408cb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean",
+      "role": "proof",
+      "sha256": "be434fea82139e2019c06e382d45db5d9f473d8258ac2e9d0e1f0609aafcc95a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "sha256": "8353141c372581724c3370927c5cd9ddfed892120cc2a8874053ca83f81f3115"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "role": "proof",
+      "sha256": "42022bafd4ad708f38914393017450031c1ab300bf4d9745bb190d4429b7ad01"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "role": "proof",
+      "sha256": "c28cb4492b18b6907671a602c88356085ca3656d36e3ba0c918b328dbd913098"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+      "role": "proof",
+      "sha256": "dce4cb423a51e73dd7746368da1c55c5687d7abe34bfefbdd1d5e3fda99fc1ee"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean",
+      "role": "proof",
+      "sha256": "af11278905eaca12cf1a71655a237caf46b4d2a3fe48115d5014766e6b098b87"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "b6dbed19c25ed2c0bb4f66ebfa97c40103fbdbc1892ef16be788350daa2d780e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "fc8dbd12d055084f4c7ad8cd79d049a2001c88fe94d6d29ccd377ed8e464f933"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/NOTE.md",
+      "role": "integration",
+      "sha256": "89b6a485d61c28ff1fb0dff73e99c1fdf67304a5eeb71e95f7bf41e9213733b4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/REVIEW-UE9.md",
+      "role": "integration",
+      "sha256": "7852e1bb9a8469238171e6695ea18be7bef678230f7883a600ffab5cdda36eb3"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/RECHECK-UE9.md",
+      "role": "integration",
+      "sha256": "76d843227860d4825ca06ea43b25f2c578673b612c434b471b13d22091101766"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "7ace404140e2a9688e51b7147bcc85d8add9774e395f7dbbe802ef13a26c4c4e"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ComparingCourses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (UE9), comparing two courses on what they admit: the cycle of crossed rankings on the two-sided web and its scope, widening with a lag and the tail order, which decide UE4's lag, the first ranking a pair opposite to eventual widening, and keeping what the other keeps; near-definitional; after a review and a re-check; study section 421.",
+      "zh": "2026年10月26日：新增（UE9），就所纳比较两个进程：交叉排序之环及其范围，带滞后的扩大与尾序（二者判定 UE4 之滞后，前者对一对进程之排序与最终扩大相反），以及保有对方所保有者；近乎定义；经审查与复查；研究第 421 节。"
+    }
+  ]
+}

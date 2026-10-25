@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 318 | 14,837 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 319 | 15,028 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -133,6 +133,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CommonOrganization.lean](lean-declarations/other.md#module-4501154a9279) | Other formal studies |
 | [CommonTaskRevision.lean](lean-declarations/other.md#module-f3a330415bf8) | Other formal studies |
 | [Commuting.lean](lean-declarations/becoming-core.md#module-135f427c041b) | Becoming pure core |
+| [ComparingCourses.lean](lean-declarations/becoming-core.md#module-8f4ea8f7874b) | Becoming pure core |
 | [CompletionApplicability.lean](lean-declarations/core.md#module-b4ba5435b460) | Generative core and relational structure |
 | [CompletionAudit.lean](lean-declarations/valuation.md#module-3ae2f0d8deb5) | Valuation development and liangzhi |
 | [CompletionBoundaries.lean](lean-declarations/abstraction.md#module-c1591ec1fb8e) | Abstraction, applicability and constitution |

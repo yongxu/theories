@@ -123,7 +123,7 @@ The open programme and the next step of becoming-dependence-dynamics list the in
 - related, not a proved adapter: [whole-persists-through-generation](whole-persists-through-generation.md). States the part–whole relation this result omits: a whole is active exactly while some part is, and where parts are brief, or end with finitely many active at once, a whole persists through the generation of its parts.
 - related, not a proved adapter: [census-balance-under-continuation](census-balance-under-continuation.md). The census balance under a continuation: without splits ceasing recurring needs arising recurring, without merges under a bounded count conversely; budding and joining each defeat one half (Tandem).
 
-**Used by:** [census-balance-under-continuation](census-balance-under-continuation.md) · [classes-along-a-continuation](classes-along-a-continuation.md) · [whole-persists-through-generation](whole-persists-through-generation.md)
+**Used by:** [census-balance-under-continuation](census-balance-under-continuation.md) · [classes-along-a-continuation](classes-along-a-continuation.md) · [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md) · [whole-persists-through-generation](whole-persists-through-generation.md)
 
 <a id="sources--来源"></a>
 ### Sources
