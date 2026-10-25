@@ -318,7 +318,7 @@ theorem lower_c_raises {a s p c c' : Nat} {pos : 0 < a} (lower : c' ≤ c) :
     CarrierCounts.order.le (shaped a s p c pos) (shaped a s p c' pos)
 ```
 
-**Meaning.** Help that lowers the cost of shaping, with nothing else changed, gives a rule not lower in the share order (`RuleShaping.lower_c_raises`). Where it brings the cost to within what comes back to the shapers alone, it turns the rule at a step from disfavouring them to favouring them (`RuleShaping.favours_iff`). Capable assistance to whoever shapes the rule is read as not lowering the selection for control, and as able to turn it toward the shapers.
+**Meaning.** Help that lowers the cost of shaping, with nothing else changed, gives a rule not lower in the share order (`RuleShaping.lower_c_raises`), and lowering it strictly gives a strictly higher rule (`RuleShaping.lower_c_raises_strictly`). Where it brings the cost to within what comes back to the shapers alone, it turns the rule at a step from disfavouring them to favouring them (`RuleShaping.favours_iff`). Capable assistance to whoever shapes the rule is read as not lowering the selection for control, as raising it where the cost falls strictly, and as able to turn it toward the shapers.
 
 **Standing and use.** Reading [AI reading, D68]. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "It rests on those laws alone."
 
