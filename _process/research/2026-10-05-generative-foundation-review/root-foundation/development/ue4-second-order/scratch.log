@@ -1,16 +1,23 @@
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/tree",
-  "modules": 36,
+  "modules": 64,
   "ran": [
     "Becoming.EventualWidening",
-    "BecomingEventualWideningAxiomAudit"
+    "Becoming.EventualWideningInstances",
+    "BecomingEventualWideningAxiomAudit",
+    "BecomingEventualWideningInstancesAxiomAudit"
   ],
-  "reused": 35,
+  "reused": 62,
   "unclean": [],
   "audits": {
     "Becoming.EventualWidening": {
-      "theorems": 59,
-      "declarations": 80,
+      "theorems": 25,
+      "declarations": 38,
+      "with_axioms": {}
+    },
+    "Becoming.EventualWideningInstances": {
+      "theorems": 77,
+      "declarations": 98,
       "with_axioms": {}
     }
   }

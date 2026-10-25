@@ -1,83 +1,80 @@
-import Becoming.ContinuedClasses
 import Becoming.Regions
+import Becoming.ContinuedClasses
 import Becoming.Population
 
 /-!
-# Eventual widening: widening without end, keeping widening, and comparison in the long run
+# Eventual widening: widening read on late tails, keeping widening, and what carries a widening
 
-`Web.Widens` compares two level paths of one web at every step: one widens the other where at
-every step it admits everything the other admits, and at some step more. A course wider over the
-first steps and a course that keeps opening later are then mixed, and over any first stretch the
-first widens the second. This module states, with no premise beyond the representation, what
-widening says about the long run: a comparison by the steps from some step on, and a course whose
-range keeps widening along it. No ethical predicate, ranking or axiom occurs; whether either
-comparison is better is not stated.
+`Web.Widens` compares two level paths of one web at every step. This module states three things
+widening says, or cannot say, about the long run and about what carries a range, with no premise
+beyond the representation. No ethical predicate, ranking or axiom occurs.
 
-* **The comparison in the long run.** From step `T` on `l` includes `l'` (`Web.IncludesFrom`);
-  `l` exceeds `l'` at arbitrarily late steps (`Web.ExceedsLate`). `l` *widens `l'` without end*
-  where it includes it at every step and exceeds it at arbitrarily late steps
-  (`Web.WidensWithoutEnd`), and *eventually widens* it where it includes it from some step on and
-  exceeds it at arbitrarily late steps (`Web.EventuallyWidens`). Widening without end is widening
-  (`WidensWithoutEnd.widens`) and eventual widening (`WidensWithoutEnd.eventually`). Eventual
-  widening is irreflexive, transitive and one-way (`EventuallyWidens.irrefl`,
-  `EventuallyWidens.trans`, `EventuallyWidens.not_reverse`).
-* **It never runs against widening.** A level path included by another at every step does not
-  eventually widen it (`EventuallyWidens.not_included`), so eventual widening never reverses
-  widening or keeping the same (`Widens.not_eventually_reversed`). Inclusion composes with it on
-  either side (`Includes.trans_eventually`, `EventuallyWidens.trans_includes`), so widening or
-  eventual widening (`Web.WidensOrEventually`) is irreflexive and transitive
-  (`WidensOrEventually.irrefl`, `WidensOrEventually.trans`): the two can be held together.
-* **No first stretch decides it.** Whatever a level path does up to a step `h`, following `l'`
-  after `h` leaves no eventual widening of `l'` (`not_eventually_of_splice`), and where some level
-  path eventually widens `l'`, following it after `h` gives one (`eventually_of_splice`): no
-  finite prefix verifies or refutes eventual widening.
-* **A course whose range keeps widening.** Along a continuation `R` (`Web.IncludesAcross`,
-  `Web.ExceedsAcross`), from `T` on nothing admitted is lost across any stretch
-  (`Web.HoldsFrom`) and after every step something is admitted that continues nothing admitted
-  before (`Web.KeepsOpening`); both together are *keeping widening* (`Web.KeepsWidening`). It
-  holds from every later step (`KeepsWidening.later`) and is unchanged by every re-identification
-  carrying the continuation (`keepsWidening_reidentify`).
-* **Over a listed type, no range read by name keeps widening.** Where a list holds every
-  formation, no level path keeps widening by name from any step (`KeepsWidening.not_listed`):
-  widening without end, read by name, needs formations without end.
-* **Keeping widening outlasts a range that settles.** A course keeping widening by name eventually
-  widens every course that it includes from some step on and that from some step admits, at each
-  step, exactly what it admitted then (`Web.SettlesFrom`, `KeepsWidening.eventually_widens`);
-  every course admitting something at arbitrarily late steps eventually widens one that admits
-  nothing from some step on (`eventually_of_vanishing`).
-* **Witnesses** (`OwnCondition`: each formation requires only its own condition, at need one).
-  `rising` admits at step `t` the formations up to `t`; `burst` admits formations `0` and `1` at
-  step `0` and nothing after; `full` admits everything throughout. Up to step `0` the burst widens
-  the rising course (`OwnCondition.burst_widens_now`), over every step the two are mixed
-  (`OwnCondition.mixed`), and the rising course eventually widens the burst
-  (`OwnCondition.rising_eventually_widens_burst`), keeps widening by name
-  (`OwnCondition.rising_keeps_widening`) where the burst does not
-  (`OwnCondition.burst_not_keeps_widening`): plain widening and eventual widening disagree
-  (`OwnCondition.disagreement`). Keeping widening is not kept by widening: `full` widens `rising`
-  and does not keep widening from any step (`OwnCondition.not_monotone`), so no order that ranks
-  each course keeping widening above each that does not agrees with widening.
-* **What carries a widening.** A flow's range is *opened by the opened* from `T` where every gain
-  of support after `T` is given, to a condition the gainer requires, by a supported formation
-  taking part that itself gained support after `T`, earlier (`Flow.OpenedByOpened`). On one web
-  whose levels are the rising course (`OpeningChain.web`, `OpeningChain.level_rising`), two flows
-  balance with only active formations giving and activity needing support: in the relay each
-  formation gives the next its unit (`OpeningChain.flow`), and in the other one formation gives
-  every unit (`OpeningChain.sun`). The relay's range is opened by the opened
-  (`OpeningChain.flow_opened`) and the single giver's is not (`OpeningChain.sun_not_opened`),
-  while the levels, and so every admission, are the same (`OpeningChain.carried`): what carries a
-  range is invisible to widening.
+**What this is not.** Eventual widening is first-order widening read on late tails. It is not the
+second-order comparison the account leaves open, a range whose widening keeps widening against one
+merely wider now: it needs no growth (a steady course eventually widens one that collapses), and
+it cannot compare a course that keeps every formation of another from one step later
+(`LagWitness`, in `Becoming.EventualWideningInstances`). That comparison stays open.
 
-**Readings (the AI's, for UE4's design note; not adopted).** Eventual widening is the comparison
-of courses in the long run, the inclusion form of an overtaking criterion with no discount;
-keeping widening is "a range whose widening keeps widening"; opened by the opened is "generation
-generating generation" read on support. None ranks: calling any of them better is a premise beyond
-C, and the note names it.
+* **Widening on late tails.** The web from step `S` on (`Web.after`, as `World.after` reads a
+  world) and a level path from `S` on (`Web.tailFrom`) give the definition: `l` *eventually widens*
+  `l'` where, from some step on, `l` widens `l'` on every tail (`Web.EventuallyWidens`). Its order
+  laws are widening's: irreflexive, transitive and one-way (`EventuallyWidens.irrefl`,
+  `EventuallyWidens.trans`, `EventuallyWidens.not_reverse`, from `Widens.not_reverse` and
+  `Widens.trans`). Read pointwise, it is inclusion from some step on (`Web.IncludesFrom`) with
+  exceeding at arbitrarily late steps (`Web.ExceedsLate`; `eventuallyWidens_iff`).
+* **It never reverses widening.** A level path included by another at every step does not
+  eventually widen it (`EventuallyWidens.not_included`, `Widens.not_eventually_reversed`).
+  Inclusion composes with it on either side (`Includes.trans_eventually`,
+  `EventuallyWidens.trans_includes`), so widening or eventual widening (`Web.WidensOrEventually`)
+  is irreflexive and transitive. Where widening orders a pair, eventual widening agrees (widening
+  without end, `Web.WidensWithoutEnd`, `WidensWithoutEnd.eventually`) or is silent (the wider
+  course exceeds only over a first stretch).
+* **It reads only tails.** Level paths agreeing from some step on eventually widen, and are
+  eventually widened, alike (`EventuallyWidens.of_agree_left`, `EventuallyWidens.of_agree_right`):
+  every finite stretch is ignored. A course admitting something at arbitrarily late steps
+  eventually widens one that admits nothing from some step on (`eventually_of_vanishing`).
+* **Keeping widening.** Along a continuation `R`, from `T` on nothing admitted is lost across any
+  stretch (`Web.IncludesAcrossFrom`) and after every step something is admitted that continues
+  nothing admitted then (`Web.KeepsOpening`); both together are keeping widening
+  (`Web.KeepsWidening`). It holds from every later step (`KeepsWidening.later`) and is unchanged by
+  every re-identification carrying the continuation (`keepsWidening_reidentify`).
+* **By name over a listed type, no range keeps widening.** Where a list holds every formation, no
+  level path keeps widening by name (`KeepsWidening.not_listed`, the pigeonhole through
+  `length_le_of_sub`). Along a supplied continuation it can hold of a course admitting the same at
+  every step, where a formation re-formed at each step continues nothing (`MergedWitness`, in the
+  instances module): read
+  along `R`, keeping widening counts re-formation as opening.
+* **Keeping widening and a range admitting alike.** A level path *admits alike* from `T` where at
+  every later step it admits exactly what it admits at `T` (`Web.AdmitsAlikeFrom`). A course
+  keeping widening by name eventually widens a range that admits alike from some step and whose
+  admissions there it admits at some step from `T` (`KeepsWidening.eventually_widens_of_within`):
+  nothing lost gives the inclusion. Given the inclusion as a hypothesis, keeping opening alone
+  suffices (`KeepsOpening.eventually_widens`, a lemma).
+* **What carries a widening.** A flow's range is *opened by the opened* from `T` where gains of
+  support recur and every gain after `T` is given, on a condition the gainer requires before the
+  step and that rises across it, by a supported formation taking part that itself gained support
+  after `T`, earlier (`Flow.OpenedByOpened`). A web on which nothing is supported from some step
+  on is opened by the opened from no step (`Flow.OpenedByOpened.not_of_unsupported`): the end of
+  degeneration does not qualify.
+
+**Standing.** Every law here is near-definitional: the order laws are widening's on late tails, the
+tail laws are the definition read pointwise, `not_listed` is the pigeonhole, and the joining laws
+use their hypotheses directly.
+
+**Readings (the AI's, for UE4's design note; not adopted).** Eventual widening is the long-run
+form of widening: a tail comparison in inclusion form. Unlike overtaking, which sums, it ignores
+every finite stretch. Opened by the opened reads, on support, one face of what D1 reads as
+generation generating generation: the generators of further forming. Like a chain of support it
+is not 生生, which asks a direction as well. None of the three ranks:
+* calling eventual widening better is a premise beyond C, named C∞ in the note;
+* ranking by keeping widening runs against widening wholesale (`OwnCondition.not_monotone`, in
+  the instances module), and so does ranking by opened by the opened, so either could enter only
+  after C, by a named premise.
 
 **What is not derived.** Which courses an actual unfolding offers; the gain, renewal or number of
-givers that keeping widening needs (the note states those laws as next statements); comparisons over
-branching courses. The representation commits to discrete steps on one index and natural-number
-levels. Every declaration has an empty axiom report (scratch build). No ethical predicate, ranking
-or axiom occurs.
+givers that keeping widening needs, which the note keeps as design; comparisons over branching
+courses. The representation commits to discrete steps on one index and natural-number levels.
+Every declaration has an empty axiom report (scratch build).
 -/
 
 namespace Becoming
@@ -86,19 +83,31 @@ namespace Web
 
 variable {F F' C : Type}
 
-/-! ## The comparison in the long run -/
+/-! ## Widening read on late tails -/
+
+/-- **The web from step `S` on**: its step `t` is step `S + t`, as `World.after` reads a world. -/
+def after (W : Web F C) (S : Nat) : Web F C :=
+  ⟨fun t => W.level (S + t), fun t => W.active (S + t), fun t => W.requires (S + t),
+   fun t => W.need (S + t), fun t => W.draws (S + t)⟩
+
+/-- A level path from step `S` on. -/
+def tailFrom (S : Nat) (l : Nat → C → Nat) : Nat → C → Nat := fun t => l (S + t)
 
 section Tails
 
 variable (W : Web F C)
 
-/-- From step `T` on, the level path `l` includes `l'`: at every step from `T` it admits every
-formation `l'` admits. -/
+/-- **Eventual widening**: from some step on, `l` widens `l'` on every tail, each read on the web
+from its first step. First-order widening read on late tails. -/
+def EventuallyWidens (l l' : Nat → C → Nat) : Prop :=
+  ∃ T, ∀ S, T ≤ S → (W.after S).Widens (tailFrom S l) (tailFrom S l')
+
+/-- From step `T` on, `l` includes `l'`: at every step from `T` it admits every formation `l'`
+admits. -/
 def IncludesFrom (T : Nat) (l l' : Nat → C → Nat) : Prop :=
   ∀ t f, T ≤ t → W.Admits (l' t) t f → W.Admits (l t) t f
 
-/-- `l` exceeds `l'` at arbitrarily late steps: after every step, at some step it admits a
-formation `l'` does not. -/
+/-- `l` exceeds `l'` at arbitrarily late steps. -/
 def ExceedsLate (l l' : Nat → C → Nat) : Prop :=
   ∀ S, ∃ t f, S ≤ t ∧ W.Admits (l t) t f ∧ ¬ W.Admits (l' t) t f
 
@@ -106,11 +115,6 @@ def ExceedsLate (l l' : Nat → C → Nat) : Prop :=
 steps. -/
 def WidensWithoutEnd (l l' : Nat → C → Nat) : Prop :=
   W.Includes l l' ∧ W.ExceedsLate l l'
-
-/-- **Eventual widening**: from some step on `l` includes `l'`, and it exceeds it at arbitrarily
-late steps. -/
-def EventuallyWidens (l l' : Nat → C → Nat) : Prop :=
-  (∃ T, W.IncludesFrom T l l') ∧ W.ExceedsLate l l'
 
 /-- **Wider up to a step**: up to step `h`, `l` admits every formation `l'` admits, and at some step
 up to `h` one it does not. -/
@@ -126,66 +130,64 @@ end Tails
 
 variable {W : Web F C} {l l' l'' : Nat → C → Nat}
 
-/-- Inclusion at every step is inclusion from every step. -/
-theorem Includes.from_ (includes : W.Includes l l') (T : Nat) : W.IncludesFrom T l l' :=
-  fun t f _ admitted => includes t f admitted
+/-- Inclusion holds on every tail. -/
+theorem Includes.after (includes : W.Includes l l') (S : Nat) :
+    (W.after S).Includes (tailFrom S l) (tailFrom S l') :=
+  fun t f admitted => includes (S + t) f admitted
 
-/-- Inclusion from a step holds from every later step. -/
-theorem IncludesFrom.later {T T' : Nat} (later : T ≤ T') (includes : W.IncludesFrom T l l') :
-    W.IncludesFrom T' l l' :=
-  fun t f from_ admitted => includes t f (Nat.le_trans later from_) admitted
-
-/-- Inclusion from a step composes. -/
-theorem IncludesFrom.trans {T T' : Nat} (first : W.IncludesFrom T l l')
-    (second : W.IncludesFrom T' l' l'') : W.IncludesFrom (T + T') l l'' :=
-  fun t f from_ admitted =>
-    first t f (Nat.le_trans (Nat.le_add_right T T') from_)
-      (second t f (Nat.le_trans (Nat.le_add_left T' T) from_) admitted)
-
-/-- Exceeding at arbitrarily late steps is exceeding. -/
-theorem ExceedsLate.exceeds (late : W.ExceedsLate l l') : W.Exceeds l l' :=
-  match late 0 with
-  | ⟨t, f, _, admitted, not⟩ => ⟨t, f, admitted, not⟩
-
-/-- A level path that includes another at every step is not exceeded by it at any step, late or
-not. -/
-theorem Includes.not_exceedsLate (includes : W.Includes l' l) : ¬ W.ExceedsLate l l' :=
-  fun late => includes.not_exceeded late.exceeds
-
-/-- **Widening without end is widening.** -/
-theorem WidensWithoutEnd.widens (widens : W.WidensWithoutEnd l l') : W.Widens l l' :=
-  ⟨widens.1, widens.2.exceeds⟩
-
-/-- **Widening without end is eventual widening.** -/
-theorem WidensWithoutEnd.eventually (widens : W.WidensWithoutEnd l l') :
-    W.EventuallyWidens l l' :=
-  ⟨⟨0, widens.1.from_ 0⟩, widens.2⟩
-
-/-- No level path eventually widens itself. -/
+/-- **Eventual widening is irreflexive**, as widening is. -/
 theorem EventuallyWidens.irrefl : ¬ W.EventuallyWidens l l :=
-  fun ⟨_, late⟩ => match late 0 with
-    | ⟨_, _, _, admitted, not⟩ => not admitted
+  fun ⟨T, tails⟩ => (tails T (Nat.le_refl T)).not_reverse (tails T (Nat.le_refl T))
 
-/-- **Eventual widening is transitive.** -/
+/-- **Eventual widening is transitive**, as widening is. -/
 theorem EventuallyWidens.trans (first : W.EventuallyWidens l l')
     (second : W.EventuallyWidens l' l'') : W.EventuallyWidens l l'' :=
-  match first.1, second.1 with
-  | ⟨T, inc⟩, ⟨T', inc'⟩ =>
-    ⟨⟨T + T', inc.trans inc'⟩, fun S => match second.2 (S + (T + T')) with
-      | ⟨t, f, from_, admitted, not⟩ =>
-        have late : T + T' ≤ t := Nat.le_trans (Nat.le_add_left (T + T') S) from_
-        ⟨t, f, Nat.le_trans (Nat.le_add_right S (T + T')) from_,
-          inc t f (Nat.le_trans (Nat.le_add_right T T') late) admitted, not⟩⟩
+  match first, second with
+  | ⟨T, tails⟩, ⟨T', tails'⟩ => ⟨T + T', fun S le =>
+      (tails S (Nat.le_trans (Nat.le_add_right T T') le)).trans
+        (tails' S (Nat.le_trans (Nat.le_add_left T' T) le))⟩
 
 /-- **Eventual widening goes one way.** -/
 theorem EventuallyWidens.not_reverse (widens : W.EventuallyWidens l l') :
     ¬ W.EventuallyWidens l' l :=
   fun back => EventuallyWidens.irrefl (widens.trans back)
 
-/-- **Eventual widening never reverses inclusion**: a level path included by another at every
-step does not eventually widen it. -/
+/-- **Read pointwise**, eventual widening is inclusion from some step on with exceeding at
+arbitrarily late steps. -/
+theorem eventuallyWidens_iff :
+    W.EventuallyWidens l l' ↔ (∃ T, W.IncludesFrom T l l') ∧ W.ExceedsLate l l' :=
+  ⟨fun ⟨T, tails⟩ =>
+     ⟨⟨T, fun _ f from_ admitted => match le_dest from_ with
+        | ⟨k, apart⟩ =>
+          Eq.subst (motive := fun x => W.Admits (l x) x f) apart.symm
+            ((tails T (Nat.le_refl T)).1 k f
+              (Eq.subst (motive := fun x => W.Admits (l' x) x f) apart admitted))⟩,
+      fun S₀ => match (tails (S₀ + T) (Nat.le_add_left T S₀)).2 with
+        | ⟨k, f, admitted, not⟩ =>
+          ⟨S₀ + T + k, f, Nat.le_trans (Nat.le_add_right S₀ T) (Nat.le_add_right (S₀ + T) k),
+           admitted, not⟩⟩,
+   fun ⟨⟨T, inc⟩, late⟩ => ⟨T, fun S le =>
+     ⟨fun t f admitted => inc (S + t) f (Nat.le_trans le (Nat.le_add_right S t)) admitted,
+      match late S with
+      | ⟨_, f, from_, admitted, not⟩ => match le_dest from_ with
+        | ⟨k, apart⟩ =>
+          ⟨k, f, Eq.subst (motive := fun x => W.Admits (l x) x f) apart admitted,
+           fun back => not (Eq.subst (motive := fun x => W.Admits (l' x) x f) apart.symm back)⟩⟩⟩⟩
+
+/-- Exceeding at arbitrarily late steps is exceeding. -/
+theorem ExceedsLate.exceeds (late : W.ExceedsLate l l') : W.Exceeds l l' :=
+  match late 0 with
+  | ⟨t, f, _, admitted, not⟩ => ⟨t, f, admitted, not⟩
+
+/-- A level path that includes another at every step is not exceeded by it, late or not. -/
+theorem Includes.not_exceedsLate (includes : W.Includes l' l) : ¬ W.ExceedsLate l l' :=
+  fun late => includes.not_exceeded late.exceeds
+
+/-- **Eventual widening never reverses inclusion**: a level path included by another at every step
+does not eventually widen it. -/
 theorem EventuallyWidens.not_included (widens : W.EventuallyWidens l l') : ¬ W.Includes l' l :=
-  fun includes => includes.not_exceedsLate widens.2
+  fun includes => match widens with
+    | ⟨T, tails⟩ => (includes.after T).not_exceeded (tails T (Nat.le_refl T)).2
 
 /-- **Eventual widening never reverses widening.** -/
 theorem Widens.not_eventually_reversed (widens : W.Widens l l') : ¬ W.EventuallyWidens l' l :=
@@ -194,21 +196,19 @@ theorem Widens.not_eventually_reversed (widens : W.Widens l l') : ¬ W.Eventuall
 /-- Inclusion, then eventual widening, is eventual widening. -/
 theorem Includes.trans_eventually (includes : W.Includes l l')
     (widens : W.EventuallyWidens l' l'') : W.EventuallyWidens l l'' :=
-  match widens.1 with
-  | ⟨T, inc⟩ =>
-    ⟨⟨T, fun t f from_ admitted => includes t f (inc t f from_ admitted)⟩,
-     fun S => match widens.2 S with
-      | ⟨t, f, from_, admitted, not⟩ => ⟨t, f, from_, includes t f admitted, not⟩⟩
+  match widens with
+  | ⟨T, tails⟩ => ⟨T, fun S le => match tails S le with
+      | ⟨inc, ⟨t, f, admitted, not⟩⟩ =>
+        ⟨(includes.after S).trans inc, ⟨t, f, includes.after S t f admitted, not⟩⟩⟩
 
 /-- Eventual widening, then inclusion, is eventual widening. -/
 theorem EventuallyWidens.trans_includes (widens : W.EventuallyWidens l l')
     (includes : W.Includes l' l'') : W.EventuallyWidens l l'' :=
-  match widens.1 with
-  | ⟨T, inc⟩ =>
-    ⟨⟨T, fun t f from_ admitted => inc t f from_ (includes t f admitted)⟩,
-     fun S => match widens.2 S with
-      | ⟨t, f, from_, admitted, not⟩ =>
-        ⟨t, f, from_, admitted, fun held => not (includes t f held)⟩⟩
+  match widens with
+  | ⟨T, tails⟩ => ⟨T, fun S le => match tails S le with
+      | ⟨inc, ⟨t, f, admitted, not⟩⟩ =>
+        ⟨inc.trans (includes.after S),
+         ⟨t, f, admitted, fun held => not (includes.after S t f held)⟩⟩⟩
 
 /-- Widening or eventual widening is irreflexive. -/
 theorem WidensOrEventually.irrefl : ¬ W.WidensOrEventually l l
@@ -224,51 +224,57 @@ theorem WidensOrEventually.trans (first : W.WidensOrEventually l l')
   | .inr a, .inl b => .inr (a.trans_includes b.1)
   | .inr a, .inr b => .inr (a.trans b)
 
-/-! ## No first stretch decides it -/
+/-- Widening without end is widening. -/
+theorem WidensWithoutEnd.widens (widens : W.WidensWithoutEnd l l') : W.Widens l l' :=
+  ⟨widens.1, widens.2.exceeds⟩
 
-/-- The level path that follows `l` up to step `h` and `m` after it. -/
-def splice (h : Nat) (l m : Nat → C → Nat) : Nat → C → Nat :=
-  fun t => if t ≤ h then l t else m t
+/-- **Widening without end is eventual widening**: where widening orders a pair and the wider course
+exceeds at arbitrarily late steps, eventual widening agrees. -/
+theorem WidensWithoutEnd.eventually (widens : W.WidensWithoutEnd l l') :
+    W.EventuallyWidens l l' :=
+  eventuallyWidens_iff.mpr ⟨⟨0, fun t f _ admitted => widens.1 t f admitted⟩, widens.2⟩
 
-theorem splice_after {h t : Nat} {l m : Nat → C → Nat} (after : h < t) :
-    splice h l m t = m t :=
-  match (inferInstance : Decidable (t ≤ h)) with
-  | .isTrue le => absurd (Nat.lt_of_lt_of_le after le) (Nat.lt_irrefl h)
-  | .isFalse not => if_neg not
+/-- **Eventual widening reads only the tail of the first course**: level paths agreeing from some
+step on eventually widen alike. -/
+theorem EventuallyWidens.of_agree_left {l₁ l₂ : Nat → C → Nat} {T : Nat}
+    (agree : ∀ t, T ≤ t → l₁ t = l₂ t) (widens : W.EventuallyWidens l₁ l') :
+    W.EventuallyWidens l₂ l' :=
+  match widens with
+  | ⟨T₀, tails⟩ => ⟨T + T₀, fun S le =>
+      have same : ∀ k, l₁ (S + k) = l₂ (S + k) := fun k =>
+        agree (S + k) (Nat.le_trans (Nat.le_trans (Nat.le_add_right T T₀) le) (Nat.le_add_right S k))
+      match tails S (Nat.le_trans (Nat.le_add_left T₀ T) le) with
+      | ⟨inc, ⟨k, f, admitted, not⟩⟩ =>
+        ⟨fun t g held => Eq.subst (motive := fun x => (W.after S).Admits x t g) (same t)
+            (inc t g held),
+         ⟨k, f, Eq.subst (motive := fun x => (W.after S).Admits x k f) (same k) admitted, not⟩⟩⟩
 
-theorem splice_before {h t : Nat} {l m : Nat → C → Nat} (before : t ≤ h) :
-    splice h l m t = l t :=
-  if_pos before
+/-- **Eventual widening reads only the tail of the second course.** -/
+theorem EventuallyWidens.of_agree_right {l₁ l₂ : Nat → C → Nat} {T : Nat}
+    (agree : ∀ t, T ≤ t → l₁ t = l₂ t) (widens : W.EventuallyWidens l l₁) :
+    W.EventuallyWidens l l₂ :=
+  match widens with
+  | ⟨T₀, tails⟩ => ⟨T + T₀, fun S le =>
+      have same : ∀ k, l₁ (S + k) = l₂ (S + k) := fun k =>
+        agree (S + k) (Nat.le_trans (Nat.le_trans (Nat.le_add_right T T₀) le) (Nat.le_add_right S k))
+      match tails S (Nat.le_trans (Nat.le_add_left T₀ T) le) with
+      | ⟨inc, ⟨k, f, admitted, not⟩⟩ =>
+        ⟨fun t g held => inc t g
+            (Eq.subst (motive := fun x => (W.after S).Admits x t g) (same t).symm held),
+         ⟨k, f, admitted,
+          fun held => not (Eq.subst (motive := fun x => (W.after S).Admits x k f) (same k).symm held)⟩⟩⟩
 
-/-- **No first stretch verifies eventual widening.** Whatever `l` admits up to `h`, the level path
-following it up to `h` and `l'` after it does not eventually widen `l'`. -/
-theorem not_eventually_of_splice (h : Nat) (l l' : Nat → C → Nat) :
-    ¬ W.EventuallyWidens (splice h l l') l' :=
-  fun ⟨_, late⟩ => match late (h + 1) with
-    | ⟨t, f, from_, admitted, not⟩ =>
-      not (Eq.subst (motive := fun x => W.Admits x t f)
-        (splice_after (Nat.lt_of_lt_of_le (Nat.lt_succ_self h) from_)) admitted)
+/-- **What admits nothing from some step on is eventually widened** by every course admitting
+something at arbitrarily late steps. -/
+theorem eventually_of_vanishing {T : Nat} (gone : ∀ t f, T ≤ t → ¬ W.Admits (l' t) t f)
+    (admits : ∀ S, ∃ t f, S ≤ t ∧ W.Admits (l t) t f) : W.EventuallyWidens l l' :=
+  eventuallyWidens_iff.mpr ⟨⟨T, fun t f from_ admitted => absurd admitted (gone t f from_)⟩,
+    fun S => match admits (S + T) with
+      | ⟨t, f, from_, admitted⟩ =>
+        ⟨t, f, Nat.le_trans (Nat.le_add_right S T) from_, admitted,
+         gone t f (Nat.le_trans (Nat.le_add_left T S) from_)⟩⟩
 
-/-- **No first stretch refutes it.** Where some level path `m` eventually widens `l'`, whatever `l`
-admits up to `h`, the level path following it up to `h` and `m` after it eventually widens `l'`. -/
-theorem eventually_of_splice {m : Nat → C → Nat} (widens : W.EventuallyWidens m l') (h : Nat)
-    (l : Nat → C → Nat) : W.EventuallyWidens (splice h l m) l' :=
-  match widens.1 with
-  | ⟨T, inc⟩ =>
-    ⟨⟨T + (h + 1), fun t f from_ admitted =>
-        Eq.subst (motive := fun x => W.Admits x t f)
-          (splice_after (Nat.lt_of_lt_of_le (Nat.lt_succ_self h)
-            (Nat.le_trans (Nat.le_add_left (h + 1) T) from_))).symm
-          (inc t f (Nat.le_trans (Nat.le_add_right T (h + 1)) from_) admitted)⟩,
-     fun S => match widens.2 (S + (h + 1)) with
-      | ⟨t, f, from_, admitted, not⟩ =>
-        ⟨t, f, Nat.le_trans (Nat.le_add_right S (h + 1)) from_,
-         Eq.subst (motive := fun x => W.Admits x t f)
-          (splice_after (Nat.lt_of_lt_of_le (Nat.lt_succ_self h)
-            (Nat.le_trans (Nat.le_add_left (h + 1) S) from_))).symm admitted,
-         not⟩⟩
-
-/-! ## A course whose range keeps widening -/
+/-! ## Keeping widening -/
 
 section Keeping
 
@@ -276,7 +282,7 @@ variable (W : Web F C)
 
 /-- From `T` on, along the continuation `R`, nothing the levels `l` admit is lost: across every
 stretch from `T` on they include along `R`. -/
-def HoldsFrom (R : Nat → F → F → Prop) (l : Nat → C → Nat) (T : Nat) : Prop :=
+def IncludesAcrossFrom (R : Nat → F → F → Prop) (l : Nat → C → Nat) (T : Nat) : Prop :=
   ∀ S U, T ≤ S → S ≤ U → W.IncludesAcross R l S U
 
 /-- From `T` on, along `R`, after every step something is admitted that continues nothing admitted
@@ -287,11 +293,11 @@ def KeepsOpening (R : Nat → F → F → Prop) (l : Nat → C → Nat) (T : Nat
 /-- **Keeping widening**: from `T` on, along `R`, nothing admitted is lost and something keeps
 being opened. -/
 def KeepsWidening (R : Nat → F → F → Prop) (l : Nat → C → Nat) (T : Nat) : Prop :=
-  W.HoldsFrom R l T ∧ W.KeepsOpening R l T
+  W.IncludesAcrossFrom R l T ∧ W.KeepsOpening R l T
 
-/-- The level path `l` settles from `T`: at every step from `T` it admits exactly what it admits
-at `T`. -/
-def SettlesFrom (l : Nat → C → Nat) (T : Nat) : Prop :=
+/-- The level path `l` admits alike from `T`: at every step from `T` it admits exactly what it
+admits at `T`. -/
+def AdmitsAlikeFrom (l : Nat → C → Nat) (T : Nat) : Prop :=
   ∀ U f, T ≤ U → (W.Admits (l U) U f ↔ W.Admits (l T) T f)
 
 end Keeping
@@ -341,12 +347,13 @@ theorem KeepsWidening.not_listed {fs : List F} (every : ∀ f, f ∈ fs) {T : Na
         (Eq.subst (motive := fun n => n ≤ fs.length) length
           (length_le_of_sub distinct fun f _ => every f))
 
-/-- **Keeping widening outlasts a range that settles.** A course keeping widening by name eventually
-widens a course it includes from some step on and that settles from some step. -/
-theorem KeepsWidening.eventually_widens {T T₁ T₂ : Nat} (keeps : W.KeepsWidening itself l T)
-    (includes : W.IncludesFrom T₁ l l') (settles : W.SettlesFrom l' T₂) :
+/-- **Keeping opening, with the inclusion given.** A course keeping opening by name eventually widens
+a course it includes from some step on and that admits alike from some step. Nothing lost is not
+used: the inclusion is a hypothesis. A lemma of `KeepsWidening.eventually_widens_of_within`. -/
+theorem KeepsOpening.eventually_widens {T T₁ T₂ : Nat} (opens : W.KeepsOpening itself l T)
+    (includes : W.IncludesFrom T₁ l l') (alike : W.AdmitsAlikeFrom l' T₂) :
     W.EventuallyWidens l l' :=
-  ⟨⟨T₁, includes⟩, fun S₀ =>
+  eventuallyWidens_iff.mpr ⟨⟨T₁, includes⟩, fun S₀ =>
     have inner : T₁ + T₂ ≤ T + (T₁ + T₂) := Nat.le_add_left (T₁ + T₂) T
     have outer : T + (T₁ + T₂) ≤ S₀ + (T + (T₁ + T₂)) := Nat.le_add_left _ S₀
     have atT : T ≤ S₀ + (T + (T₁ + T₂)) := Nat.le_trans (Nat.le_add_right T _) outer
@@ -354,272 +361,50 @@ theorem KeepsWidening.eventually_widens {T T₁ T₂ : Nat} (keeps : W.KeepsWide
       Nat.le_trans (Nat.le_add_right T₁ T₂) (Nat.le_trans inner outer)
     have atT₂ : T₂ ≤ S₀ + (T + (T₁ + T₂)) :=
       Nat.le_trans (Nat.le_add_left T₂ T₁) (Nat.le_trans inner outer)
-    match keeps.2 (S₀ + (T + (T₁ + T₂))) atT with
+    match opens (S₀ + (T + (T₁ + T₂))) atT with
     | ⟨U, later, exceeds⟩ => match (exceedsAcross_itself_iff later).mp exceeds with
       | ⟨g, admitted, before⟩ =>
         ⟨U, g, Nat.le_trans (Nat.le_add_right S₀ _) later, admitted, fun held =>
-          before (includes _ g atT₁ ((settles _ g atT₂).mpr
-            ((settles U g (Nat.le_trans atT₂ later)).mp held)))⟩⟩
+          before (includes _ g atT₁ ((alike _ g atT₂).mpr
+            ((alike U g (Nat.le_trans atT₂ later)).mp held)))⟩⟩
 
-/-- **What ends is outlasted.** A course admitting something at arbitrarily late steps eventually
-widens a course that admits nothing from some step on. -/
-theorem eventually_of_vanishing {T : Nat} (gone : ∀ t f, T ≤ t → ¬ W.Admits (l' t) t f)
-    (admits : ∀ S, ∃ t f, S ≤ t ∧ W.Admits (l t) t f) : W.EventuallyWidens l l' :=
-  ⟨⟨T, fun t f from_ admitted => absurd admitted (gone t f from_)⟩, fun S =>
-    match admits (S + T) with
-    | ⟨t, f, from_, admitted⟩ =>
-      ⟨t, f, Nat.le_trans (Nat.le_add_right S T) from_, admitted,
-       gone t f (Nat.le_trans (Nat.le_add_left T S) from_)⟩⟩
+/-- **Keeping widening eventually widens a range that admits alike on what it admits at some step.**
+A course keeping widening by name from `T` eventually widens a range admitting alike from `T₂` whose
+admissions at `T₂` it admits at some step `S` from `T`: nothing lost carries that inclusion to every
+later step. -/
+theorem KeepsWidening.eventually_widens_of_within {T T₂ S : Nat}
+    (keeps : W.KeepsWidening itself l T) (alike : W.AdmitsAlikeFrom l' T₂) (from_ : T ≤ S)
+    (within : ∀ f, W.Admits (l' T₂) T₂ f → W.Admits (l S) S f) : W.EventuallyWidens l l' :=
+  KeepsOpening.eventually_widens keeps.2 (T₁ := S + T₂)
+    (fun t f later admitted =>
+      (includesAcross_itself_iff (Nat.le_trans (Nat.le_add_right S T₂) later)).mp
+        (keeps.1 S t from_ (Nat.le_trans (Nat.le_add_right S T₂) later)) f
+        (within f ((alike t f (Nat.le_trans (Nat.le_add_left T₂ S) later)).mp admitted)))
+    alike
 
 end Web
 
-/-! ## What carries a widening: openings that were opened -/
+/-! ## What carries a widening -/
 
 namespace Flow
 
 variable {F C : Type}
 
-/-- **Opened by the opened**: every gain of support after step `T` is given, to a condition the
-gainer requires after the step, by a supported formation taking part, which itself gained support
-after `T`, earlier. -/
+/-- **Opened by the opened**: gains of support recur, and every gain after step `T` is given, on a
+condition the gainer requires before the step and that rises across it, by a supported formation
+taking part that itself gained support after `T`, earlier. -/
 def OpenedByOpened (L : Flow F C) (W : Web F C) (T : Nat) : Prop :=
-  ∀ t f, T < t → W.GainsSupport t f → ∃ c g u, W.requires (t + 1) f c ∧ g ∈ L.present t ∧
-    0 < L.give t g c ∧ W.Supported t g ∧ T ≤ u ∧ u < t ∧ W.GainsSupport u g
+  (∀ N, ∃ t f, N ≤ t ∧ W.GainsSupport t f) ∧
+    ∀ t f, T < t → W.GainsSupport t f → ∃ c g u, W.requires t f c ∧ W.Rises t c ∧
+      g ∈ L.present t ∧ 0 < L.give t g c ∧ W.Supported t g ∧ T ≤ u ∧ u < t ∧ W.GainsSupport u g
+
+/-- **The end of degeneration is not opened by the opened**: where nothing is supported from some
+step on, no gain recurs. -/
+theorem OpenedByOpened.not_of_unsupported {L : Flow F C} {W : Web F C} {T : Nat}
+    (none_ : ∀ t f, T ≤ t → ¬ W.Supported t f) (T' : Nat) : ¬ L.OpenedByOpened W T' :=
+  fun ⟨recur, _⟩ => match recur T with
+    | ⟨t, f, from_, gains⟩ => none_ (t + 1) f (Nat.le_succ_of_le from_) gains.2
 
 end Flow
-
-/-! ## Witnesses: a range wider now, one that keeps widening, and one saturated -/
-
-namespace OwnCondition
-
-/-- One where `c` is at most `t`, nothing otherwise. -/
-def rung : Nat → Nat → Nat
-  | 0, _ => 1
-  | _ + 1, 0 => 0
-  | c + 1, t + 1 => rung c t
-
-theorem rung_pos : ∀ {c t : Nat}, c ≤ t → 0 < rung c t
-  | 0, _, _ => Nat.zero_lt_one
-  | _ + 1, 0, le => absurd le (Nat.not_succ_le_zero _)
-  | c + 1, t + 1, le => (rung_pos (c := c) (t := t) (Nat.le_of_succ_le_succ le) : 0 < rung c t)
-
-theorem le_of_rung_pos : ∀ {c t : Nat}, 0 < rung c t → c ≤ t
-  | 0, _, _ => Nat.zero_le _
-  | _ + 1, 0, pos => absurd pos (Nat.lt_irrefl 0)
-  | c + 1, t + 1, pos => Nat.succ_le_succ (le_of_rung_pos (c := c) (t := t) pos)
-
-/-- Each formation `n` requires only its own condition `n`, at need one. -/
-def web : Web Nat Nat :=
-  ⟨fun _ _ => 0, fun _ _ => True, fun _ n c => c = n, fun _ _ _ => 1, fun _ _ _ => False⟩
-
-theorem admits_iff {m : Nat → Nat} {t n : Nat} : web.Admits m t n ↔ 0 < m n :=
-  ⟨fun admitted => admitted n rfl,
-   fun pos _ same => Eq.subst (motive := fun x => 0 < m x) same.symm pos⟩
-
-/-- At step `t` the conditions up to `t` stand at one: one formation more a step. -/
-def rising : Nat → Nat → Nat := fun t c => rung c t
-
-/-- At step `0` conditions `0` and `1` stand at one, and nothing after: wider at once, then gone. -/
-def burst : Nat → Nat → Nat
-  | 0, c => rung c 1
-  | _ + 1, _ => 0
-
-/-- Every condition stands at one at every step. -/
-def full : Nat → Nat → Nat := fun _ _ => 1
-
-theorem rising_iff {t n : Nat} : web.Admits (rising t) t n ↔ n ≤ t :=
-  ⟨fun admitted => le_of_rung_pos ((admits_iff (m := rising t)).mp admitted),
-   fun le => (admits_iff (m := rising t)).mpr (rung_pos le)⟩
-
-theorem burst_zero_iff {n : Nat} : web.Admits (burst 0) 0 n ↔ n ≤ 1 :=
-  ⟨fun admitted => le_of_rung_pos ((admits_iff (m := burst 0)).mp admitted),
-   fun le => (admits_iff (m := burst 0)).mpr (rung_pos le)⟩
-
-theorem burst_later {t n : Nat} : ¬ web.Admits (burst (t + 1)) (t + 1) n :=
-  fun admitted => Nat.lt_irrefl 0 (admits_iff.mp admitted)
-
-theorem full_admits {t n : Nat} : web.Admits (full t) t n :=
-  admits_iff.mpr Nat.zero_lt_one
-
-/-- Steps up to `0` are `0`. -/
-theorem zero_of_le_zero : ∀ {t : Nat}, t ≤ 0 → t = 0
-  | 0, _ => rfl
-  | _ + 1, le => absurd le (Nat.not_succ_le_zero _)
-
-/-- **Up to step 0 the burst widens the rising course.** -/
-theorem burst_widens_now : web.WidensUpTo 0 burst rising :=
-  ⟨fun t n le admitted =>
-    have zero : t = 0 := zero_of_le_zero le
-    have atZero : web.Admits (rising 0) 0 n :=
-      Eq.subst (motive := fun s => web.Admits (rising s) s n) zero admitted
-    Eq.subst (motive := fun s => web.Admits (burst s) s n) zero.symm
-      (burst_zero_iff.mpr (Nat.le_trans (rising_iff.mp atZero) (Nat.zero_le 1))),
-   ⟨0, 1, Nat.le_refl 0, burst_zero_iff.mpr (Nat.le_refl 1),
-    fun admitted => Nat.not_succ_le_zero 0 (rising_iff.mp admitted)⟩⟩
-
-/-- **Over every step the two are mixed.** -/
-theorem mixed : web.Mixed rising burst :=
-  ⟨⟨1, 0, rising_iff.mpr (Nat.zero_le 1), burst_later⟩,
-   ⟨0, 1, burst_zero_iff.mpr (Nat.le_refl 1),
-    fun admitted => Nat.not_succ_le_zero 0 (rising_iff.mp admitted)⟩⟩
-
-/-- **The rising course eventually widens the burst.** -/
-theorem rising_eventually_widens_burst : web.EventuallyWidens rising burst :=
-  Web.eventually_of_vanishing (T := 1)
-    (fun t _ from_ admitted => match t, from_, admitted with
-      | _ + 1, _, admitted => burst_later admitted)
-    (fun S => ⟨S, 0, Nat.le_refl S, rising_iff.mpr (Nat.zero_le S)⟩)
-
-/-- **The rising course keeps widening by name.** -/
-theorem rising_keeps_widening : web.KeepsWidening Web.itself rising 0 :=
-  ⟨fun _ _ _ later => (Web.includesAcross_itself_iff later).mpr fun _ admitted =>
-      rising_iff.mpr (Nat.le_trans (rising_iff.mp admitted) later),
-   fun S _ => ⟨S + 1, Nat.le_succ S, (Web.exceedsAcross_itself_iff (Nat.le_succ S)).mpr
-      ⟨S + 1, rising_iff.mpr (Nat.le_refl (S + 1)),
-       fun admitted => Nat.not_succ_le_self S (rising_iff.mp admitted)⟩⟩⟩
-
-/-- **The burst does not keep opening from any step.** -/
-theorem burst_not_opening (T : Nat) : ¬ web.KeepsOpening Web.itself burst T :=
-  fun opens => match opens (T + 1) (Nat.le_succ T) with
-    | ⟨U, later, ⟨_, admitted, _⟩⟩ => match U, later, admitted with
-      | 0, later, _ => absurd later (Nat.not_succ_le_zero T)
-      | _ + 1, _, admitted => burst_later admitted
-
-theorem burst_not_keeps_widening (T : Nat) : ¬ web.KeepsWidening Web.itself burst T :=
-  fun keeps => burst_not_opening T keeps.2
-
-/-- **Plain widening and eventual widening disagree.** Up to step `0` the burst widens the rising
-course; over every step the two are mixed; the rising course eventually widens the burst, and keeps
-widening by name where the burst does not. -/
-theorem disagreement :
-    web.WidensUpTo 0 burst rising ∧ web.Mixed rising burst ∧ web.EventuallyWidens rising burst ∧
-      web.KeepsWidening Web.itself rising 0 ∧ ∀ T, ¬ web.KeepsWidening Web.itself burst T :=
-  ⟨burst_widens_now, mixed, rising_eventually_widens_burst, rising_keeps_widening,
-   burst_not_keeps_widening⟩
-
-/-- The saturated course widens the rising one. -/
-theorem full_widens_rising : web.Widens full rising :=
-  ⟨fun _ _ _ => full_admits, ⟨0, 1, full_admits,
-    fun admitted => Nat.not_succ_le_zero 0 (rising_iff.mp admitted)⟩⟩
-
-/-- The saturated course opens nothing from any step. -/
-theorem full_not_opening (T : Nat) : ¬ web.KeepsOpening Web.itself full T :=
-  fun opens => match opens T (Nat.le_refl T) with
-    | ⟨_, later, ⟨g, _, apart⟩⟩ => apart g (Web.Linked.itself_of_le later) full_admits
-
-/-- **Keeping widening is not kept by widening.** The saturated course widens the rising course,
-which keeps widening by name, and keeps widening from no step: no order ranking every course that
-keeps widening above every course that does not agrees with widening. -/
-theorem not_monotone :
-    web.Widens full rising ∧ web.KeepsWidening Web.itself rising 0 ∧
-      ∀ T, ¬ web.KeepsWidening Web.itself full T :=
-  ⟨full_widens_rising, rising_keeps_widening, fun T keeps => full_not_opening T keeps.2⟩
-
-theorem rung_mono : ∀ c t, rung c t ≤ rung c (t + 1)
-  | 0, _ => Nat.le_refl 1
-  | _ + 1, 0 => Nat.zero_le _
-  | c + 1, t + 1 => (rung_mono c t : rung c t ≤ rung c (t + 1))
-
-theorem rung_zero : ∀ {c t : Nat}, t < c → rung c t = 0
-  | 0, _, lt => absurd lt (Nat.not_lt_zero _)
-  | _ + 1, 0, _ => rfl
-  | c + 1, t + 1, lt => (rung_zero (c := c) (t := t) (Nat.lt_of_succ_lt_succ lt) : rung c t = 0)
-
-end OwnCondition
-
-/-! ## Witnesses: one range, carried by its own openings or by one giver -/
-
-namespace OpeningChain
-
-open OwnCondition
-
-/-- The rising course as a web: the conditions up to `t` stand at one at step `t`, the formations up
-to `t` are active, and each formation requires only its own condition, at need one. -/
-def web : Web Nat Nat :=
-  ⟨fun t c => rung c t, fun t n => n ≤ t, fun _ n c => c = n, fun _ _ _ => 1, fun _ _ _ => False⟩
-
-/-- Its levels are the rising course. -/
-theorem level_rising : web.level = rising := rfl
-
-theorem supported_iff {t n : Nat} : web.Supported t n ↔ n ≤ t :=
-  ⟨fun supported => le_of_rung_pos (supported n rfl),
-   fun le _ same => Eq.subst (motive := fun x => 0 < rung x t) same.symm (rung_pos le)⟩
-
-/-- A gain of support across the step from `t` is formation `t + 1`'s. -/
-theorem gains_iff {t f : Nat} : web.GainsSupport t f ↔ f = t + 1 :=
-  ⟨fun ⟨before, after⟩ => Nat.le_antisymm (supported_iff.mp after)
-      ((Nat.lt_or_ge t f).resolve_right fun le => before (supported_iff.mpr le)),
-   fun same => ⟨fun supported => Nat.not_succ_le_self t
-      (Eq.subst (motive := fun x => x ≤ t) same (supported_iff.mp supported)),
-     supported_iff.mpr (Nat.le_of_eq same)⟩⟩
-
-/-- What steps the level of condition `c` from `g` to `g + 1`: one unit to condition `g + 1`. -/
-def opening (g c : Nat) : Nat := rung c (g + 1) - rung c g
-
-theorem opening_pos (t : Nat) : 0 < opening t (t + 1) :=
-  Eq.subst (motive := fun x => 0 < rung (t + 1) (t + 1) - x) (rung_zero (Nat.lt_succ_self t)).symm
-    (rung_pos (Nat.le_refl (t + 1)))
-
-/-- **The relay**: at step `t` formation `t` alone takes part and gives one unit to condition
-`t + 1`. -/
-def flow : Flow Nat Nat := ⟨fun t => [t], fun _ _ _ => 0, fun _ g c => opening g c⟩
-
-/-- **One giver**: at step `t` formation `0` alone takes part and gives the same unit. -/
-def sun : Flow Nat Nat := ⟨fun _ => [0], fun _ _ _ => 0, fun t _ c => opening t c⟩
-
-theorem balanced_step (t c : Nat) : rung c (t + 1) = rung c t + opening t c :=
-  (add_sub_of_le (rung_mono c t)).symm
-
-/-- The relay balances. -/
-theorem flow_balances : flow.Balances web := fun t c =>
-  show rung c (t + 1) + (0 + 0) = rung c t + (opening t c + 0) from balanced_step t c
-
-/-- The single giver balances on the same web. -/
-theorem sun_balances : sun.Balances web := fun t c =>
-  show rung c (t + 1) + (0 + 0) = rung c t + (opening t c + 0) from balanced_step t c
-
-/-- In the relay only active formations give. -/
-theorem flow_acting : flow.Acting web := fun _ _ _ mem _ =>
-  match mem_cons_cases mem with
-  | .inl same => Nat.le_of_eq same
-  | .inr inner => nomatch inner
-
-/-- With the single giver only active formations give. -/
-theorem sun_acting : sun.Acting web := fun t _ _ mem _ =>
-  match mem_cons_cases mem with
-  | .inl same => Eq.subst (motive := fun x => x ≤ t) same.symm (Nat.zero_le t)
-  | .inr inner => nomatch inner
-
-/-- In both, a formation is active only where supported. -/
-theorem dependent : web.Dependent := fun _ _ active => supported_iff.mpr active
-
-/-- **The relay is opened by the opened**: every gain after step `0` is given by the formation that
-gained support at the step before. -/
-theorem flow_opened : Flow.OpenedByOpened flow web 0 := fun t f after gains =>
-  match t, after, gains_iff.mp gains with
-  | s + 1, _, same => ⟨f, s + 1, s, rfl, .head [],
-      Eq.subst (motive := fun x => 0 < opening (s + 1) x) same.symm (opening_pos (s + 1)),
-      supported_iff.mpr (Nat.le_refl (s + 1)), Nat.zero_le s, Nat.lt_succ_self s,
-      gains_iff.mpr rfl⟩
-
-/-- **The single giver's range is not opened by the opened**: its giver never gained support. -/
-theorem sun_not_opened : ¬ Flow.OpenedByOpened sun web 0 := fun opened =>
-  match opened 1 2 (Nat.lt_succ_self 0) (gains_iff.mpr rfl) with
-  | ⟨_, _, u, _, mem, _, _, _, _, gained⟩ =>
-    match mem_cons_cases mem with
-    | .inl same => gained.1 (supported_iff.mpr
-        (Eq.subst (motive := fun x => x ≤ u) same.symm (Nat.zero_le u)))
-    | .inr inner => nomatch inner
-
-/-- **One range, two carriers.** On one web, so with the same levels at every step and so the same
-admissions (widening keeps them the same), the relay and the single giver both balance with only
-active formations giving, and the relay's range is opened by the opened while the single giver's is
-not. -/
-theorem carried :
-    flow.Balances web ∧ sun.Balances web ∧ flow.Acting web ∧ sun.Acting web ∧ web.Dependent ∧
-      Flow.OpenedByOpened flow web 0 ∧ ¬ Flow.OpenedByOpened sun web 0 :=
-  ⟨flow_balances, sun_balances, flow_acting, sun_acting, dependent, flow_opened, sun_not_opened⟩
-
-end OpeningChain
 
 end Becoming
