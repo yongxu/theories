@@ -1,18 +1,17 @@
 {
   "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/tree",
-  "modules": 91,
+  "modules": 93,
   "ran": [
-    "Becoming.HabitCapture",
-    "BecomingHabitCaptureAxiomAudit"
+    "Becoming.ChoiceCountCapture",
+    "BecomingChoiceCountCaptureAxiomAudit"
   ],
-  "reused": 90,
+  "reused": 92,
   "unclean": [],
   "audits": {
-    "Becoming.HabitCapture": {
-      "theorems": 22,
-      "declarations": 29,
+    "Becoming.ChoiceCountCapture": {
+      "theorems": 35,
+      "declarations": 45,
       "with_axioms": {}
     }
   }
 }
-exit 0
