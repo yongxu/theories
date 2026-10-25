@@ -38,7 +38,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T165537.368039Z): Becoming.DrawnShaping, 38 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent (sixteen findings, no unsound Lean), taken as the kit note says, study section 413; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T165537.368039Z): Becoming.DrawnShaping, 38 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent (sixteen findings, no unsound Lean), taken as the kit note says, study section 414; not reviewed by a person.
 
 Canonical source: [DrawnShaping.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean)
 
@@ -87,7 +87,7 @@ Aliases: `What comes back to the shapers, read by readers drawn from the selecte
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (MA4), the join of the capacity to shape the rule with the readers drawn from the selected, after one independent review; study section 413.
+- 26 October 2026: added (MA4), the join of the capacity to shape the rule with the readers drawn from the selected, after one independent review; study section 414.
 
 </details>
 

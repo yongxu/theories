@@ -1,0 +1,13 @@
+{
+ "records": 1,
+ "apply": true,
+ "by_record": {
+  "shaping-read-by-readers-drawn-from-the-selected": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

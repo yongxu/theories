@@ -89,7 +89,7 @@ Aliases: `The capacity to shape the rule, selected by what comes back to it`, `å
 
 - 25 October 2026: added (MA3), the meta-attractor's second order; study section 403.
 - 25 October 2026 (MA3a, study section 409, after an independent review of the alignment dossier): lower_c_raises_strictly added, so that a strictly smaller cost gives a strictly higher rule; the home section, the module's doc, the root bullet and the checker's scope say "a smaller cost gives a rule not lower" where they had said "raises it", and state "the shapers present" with nothing_back_falls and stretch_iff.
-- 26 October 2026 (MA4, study section 413): joined with the readers drawn from the selected in shaping-read-by-readers-drawn-from-the-selected; the next step, the related record and the scope item on the pool updated. The laws are unchanged.
+- 26 October 2026 (MA4, study section 414): joined with the readers drawn from the selected in shaping-read-by-readers-drawn-from-the-selected; the next step, the related record and the scope item on the pool updated. The laws are unchanged.
 
 </details>
 

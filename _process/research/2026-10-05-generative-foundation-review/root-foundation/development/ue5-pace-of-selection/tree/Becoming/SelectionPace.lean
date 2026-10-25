@@ -31,10 +31,11 @@ needs it.
   beyond one for each parent is fed by `m` units flowing into its lineage at its own step
   (`parent_within_factor`). A member of the next generation standing at `m` or more after the
   step that brings it to stand, and at no more than `m` then as a parent, stands at exactly `m`
-  (`standing_pinned`): over a stretch meeting both premises, members after the first generation
-  never stand above the least. The least standing is a supplied level; where activity needs
-  support (`Web.Dependent`), a relatum active at a step that requires its own standing then at
-  need `m` or more stands at `m` or more (`stands_of_need`).
+  (`standing_pinned`): over a stretch of `T` steps whose parents each stand at no more than `m`,
+  the members of generations `1` to `T - 1` stand at exactly the least, and those of generation
+  `T` do where they stand at no more than `m` too. The least standing is a supplied level; where
+  activity needs support (`Web.Dependent`), a relatum active at a step that requires its own
+  standing then at need `m` or more stands at `m` or more (`stands_of_need`).
 * **The response of a carried amount.** Count, for an amount read of each parent, what flows into
   each parent's lineage, summed lineage by lineage and weighted by the amount (`carriedInflow`):
   what passes between carrying lineages counts as inflow into the receiver and is not netted
@@ -79,8 +80,11 @@ needs it.
   multiplies by at most `k` a step (`total_within_factor`) and by at most `k ^ T` over `T` steps
   (`total_within_power`). Where the population is not shrinking, the share multiplies by at most
   `k ^ T` (`share_within_power`), and a final total reaching the final size needs the first size
-  to be at most `k ^ T` times the first total (`whole_within_power`): from `c` carriers among
-  `N`, `T ≥ log_k (N / c)`, growing with the logarithm of the inverse of the starting share.
+  to be at most `k ^ T` times the first total (`whole_within_power`): one substitution, from `c`
+  carriers among `N` to the whole, takes `T ≥ log_k (N / c)` steps, growing with the logarithm of
+  the inverse of the starting share. The premises are asked of every parent, though a parent
+  whose amount is nothing adds nothing to the total before or after the step; asking them of the
+  carriers alone is left open here.
 * **Offspring number.** Read by offspring number with exact transmission across a step, `m` times
   the next size squared with the squared differences of offspring numbers over pairs is at most this
   size times what the next generation stands at and what flows into it and its offspring
@@ -135,11 +139,14 @@ population.
   growing with the logarithm of the inverse of the starting frequency, and drew from it a limit on
   the rate of substitution; Nei (1971) and Felsenstein (1971) restated the limit from a
   reproductive excess, each parent leaving at most `k` offspring, so that substitutions are at
-  least `ln (1 / p₀) / ln k` generations apart. `whole_within_power` is that limit in counts, under
-  a cap on what flows into each parent's lineage. Haldane's cost itself is not modelled: the
-  generations list only offspring that come to stand, and none is culled. `steps_to_move` is a
-  linear bound from a cap on the total, the Malthusian bound read on the carrying lineages, and
-  not Haldane's cost.
+  least `ln (1 / p₀) / ln k` generations apart. `whole_within_power` bounds the steps one
+  substitution takes from `p₀` under a cap on what flows into each parent's lineage,
+  `T ≥ log_k (N / c)` from `c` carriers among `N`: the one-substitution form behind their limit,
+  in counts. It is not the spacing of successive substitutions, which is not derived: with exact
+  transmission a lineage carries all its amounts together, so two amounts starting in the same
+  carriers reach the whole together. Haldane's cost itself is not modelled: the generations list
+  only offspring that come to stand, and none is culled. `steps_to_move` is a linear bound from a
+  cap on the total, the Malthusian bound read on the carrying lineages, and not Haldane's cost.
 - Price (1970, *Nature* 227): the change of a mean is the selection term with the transmission
   term, an identity admitting every count; with exact transmission the response is the selection
   term (`mean_step_exact`), and the flow bounds it (`selection_within_carried`).
@@ -166,9 +173,10 @@ false (`Displacement.natural_fails`); Haldane's cost in selective deaths; the ca
 for an amount above one; how long exact transmission of offspring number with growth can last
 within a bounded inflow, whose closed case is `Reproduction.Flow.closed_lineage_lowered`; drift
 and mutation. Dissipation is not used. Dissipation on the lineage's own family would leave it no
-inflow (`Flow.DissipatesOn.gainlessOn`, `Flow.gainlessOn_iff_inflow`: the closed case,
-`Reproduction.Flow.born_within_stock`); dissipation on a wider family does not tighten these
-bounds: `Displacement` is dissipated on its whole family and attains them. Modelling choices:
+inflow (`Flow.DissipatesOn.gainlessOn`, `Flow.gainlessOn_iff_inflow`), the case dissipated on
+that `Reproduction.Flow.born_within_stock` treats; dissipation on a wider family does not tighten
+these bounds: `Displacement` is dissipated on its whole family and attains the response and
+selection laws. The spacing of successive substitutions is not derived. Modelling choices:
 natural-number amounts and standings, discrete steps, generations each listed as the offspring of
 the last, each offspring coming to stand across its step; the least standing `m` is a supplied
 level, tied to the web's `need` only through `stands_of_need`; a lineage's family is listed as the
@@ -290,11 +298,13 @@ theorem generation_within_inflow {G : Generations X} {t m : Nat}
       (Nat.le_add_right _ _))
     (born_within_inflow (es := G.family t) balanced arise stands)
 
-/-- **Members after the first generation stand at exactly `m`.** Where each offspring of a
-generation stands at `m` or more after the step and each member of the next generation stands at
-no more than `m` then, each member of the next generation stands at exactly `m`. Over a stretch,
-parents standing at no more than `m` at each step with offspring standing at `m` or more at the
-step before pin every member after the first generation so. -/
+/-- **A member of the next generation standing at no more than `m` stands at exactly `m`.** Where
+each offspring of a generation stands at `m` or more after the step and each member of the next
+generation stands at no more than `m` then, each member of the next generation stands at exactly
+`m`. Over a stretch of `T` steps, with offspring standing at `m` or more after each step and
+parents standing at no more than `m` at each step before `T`, the members of generations `1` to
+`T - 1` stand at exactly `m`; those of generation `T` do only where they stand at no more than `m`
+too. -/
 theorem standing_pinned {G : Generations X} {t m : Nat}
     (stands : ∀ p k, p ∈ G.family t → k ∈ G.kids t p → m ≤ W.level (t + 1) k)
     (capped : ∀ p, p ∈ G.family (t + 1) → W.level (t + 1) p ≤ m) :
@@ -699,7 +709,9 @@ theorem parent_within_factor {t m k : Nat} {p : X} {kids : X → List X}
 /-- **So an exactly transmitted total multiplies by at most `k` a step.** Across a step at which
 the flow balances on the generation and its offspring, each offspring coming to stand at `m` or
 more, with exact transmission, each parent standing at no more than `m` and what flows into each
-parent's lineage, with `m`, at most `k` times `m`: the next total is at most `k` times this one. -/
+parent's lineage, with `m`, at most `k` times `m`: the next total is at most `k` times this one.
+The premises are asked of every parent, though a parent whose amount is nothing adds nothing to
+either total. -/
 theorem total_within_factor {G : Generations X} {t m k : Nat}
     (balanced : L.BalancesOn W (lineage (G.family t) (G.kids t)) t)
     (arise : ∀ p c, p ∈ G.family t → c ∈ G.kids t p → W.ComesToStand t c)
@@ -764,7 +776,8 @@ theorem share_within_power {G : Generations X} {m k T : Nat} (positive : 0 < m)
 /-- **Reaching the whole needs a power of the cap.** Where besides the final total reaches the
 final size (for an amount of zero or one: every member of the final generation carries it), the
 first size is at most `k ^ T` times the first total: from `c` carriers among `N`, `N ≤ k ^ T · c`,
-so `T ≥ log_k (N / c)`. -/
+so one substitution takes `T ≥ log_k (N / c)` steps. It bounds one substitution, not the spacing
+of successive ones. -/
 theorem whole_within_power {G : Generations X} {m k T : Nat} (positive : 0 < m)
     (balanced : ∀ t, t < T → L.BalancesOn W (lineage (G.family t) (G.kids t)) t)
     (arise : ∀ t p c, t < T → p ∈ G.family t → c ∈ G.kids t p → W.ComesToStand t c)

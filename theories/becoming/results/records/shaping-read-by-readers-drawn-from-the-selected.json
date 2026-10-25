@@ -148,8 +148,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T165537.368039Z): Becoming.DrawnShaping, 38 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent (sixteen findings, no unsound Lean), taken as the kit note says, study section 413; not reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T165537.368039Z）：Becoming.DrawnShaping，38 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查（十六项意见，无不健全之 Lean），依工作包说明采纳，见研究第 413 节；未经人审。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T165537.368039Z): Becoming.DrawnShaping, 38 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent (sixteen findings, no unsound Lean), taken as the kit note says, study section 414; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T165537.368039Z）：Becoming.DrawnShaping，38 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查（十六项意见，无不健全之 Lean），依工作包说明采纳，见研究第 414 节；未经人审。"
   },
   "next_delta": {
     "en": "A loss read by the others among the readers once the shapers pass the critical mass, the readers' timing (ClosedCapture.Thinned) joined to the rise; readers who learn; a cost changing with the share; noise and the long-run state; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.",
@@ -290,7 +290,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "28b00989422b7b06f75a38147e450fbf3f0ca8812dd03adfe7a09cc834871145"
+      "sha256": "6ebf2f2c30c432c2cf507054f4a0d85e819c16b72a8770441cb81ecbceba037f"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ma4-drawn-shaping/NOTE.md",
@@ -329,8 +329,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (MA4), the join of the capacity to shape the rule with the readers drawn from the selected, after one independent review; study section 413.",
-      "zh": "2026年10月26日：新增（MA4），塑规之能与取自被选者之读者之接合，经一次独立审查；研究第 413 节。"
+      "en": "26 October 2026: added (MA4), the join of the capacity to shape the rule with the readers drawn from the selected, after one independent review; study section 414.",
+      "zh": "2026年10月26日：新增（MA4），塑规之能与取自被选者之读者之接合，经一次独立审查；研究第 414 节。"
     }
   ]
 }

@@ -5680,7 +5680,7 @@
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue5-pace-of-selection/tree/Becoming/SelectionPace.lean",
-      "sha256": "92556df7caaa3c29562aff87b652c36d400e64ff8ce052f734803433c307a3ca",
+      "sha256": "abf440add3b6dd9c9a94ce3f0efe7b4fb9f23f9607fd296a8a9268a96a1a72b3",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -274392,1373 +274392,6 @@
       },
       "print_axioms_commands": 0
     },
-    "92556df7caaa3c29562aff87b652c36d400e64ff8ce052f734803433c307a3ca": {
-      "byte_size": 117061,
-      "line_count": 2505,
-      "imports": [
-        "Becoming.Reproduction",
-        "Becoming.Entropy"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "lineage",
-          "qualified_name_hint": "Becoming.SelectionPace.lineage",
-          "line": 193
-        },
-        {
-          "kind": "theorem",
-          "name": "lineage_mono",
-          "qualified_name_hint": "Becoming.SelectionPace.lineage_mono",
-          "line": 196
-        },
-        {
-          "kind": "theorem",
-          "name": "lineage_sub",
-          "qualified_name_hint": "Becoming.SelectionPace.lineage_sub",
-          "line": 204
-        },
-        {
-          "kind": "theorem",
-          "name": "fresh_total",
-          "qualified_name_hint": "Becoming.SelectionPace.fresh_total",
-          "line": 211
-        },
-        {
-          "kind": "theorem",
-          "name": "standing_total",
-          "qualified_name_hint": "Becoming.SelectionPace.standing_total",
-          "line": 218
-        },
-        {
-          "kind": "theorem",
-          "name": "born_within_inflow",
-          "qualified_name_hint": "Becoming.SelectionPace.born_within_inflow",
-          "line": 238
-        },
-        {
-          "kind": "theorem",
-          "name": "parent_within_inflow",
-          "qualified_name_hint": "Becoming.SelectionPace.parent_within_inflow",
-          "line": 266
-        },
-        {
-          "kind": "theorem",
-          "name": "generation_within_inflow",
-          "qualified_name_hint": "Becoming.SelectionPace.generation_within_inflow",
-          "line": 283
-        },
-        {
-          "kind": "theorem",
-          "name": "standing_pinned",
-          "qualified_name_hint": "Becoming.SelectionPace.standing_pinned",
-          "line": 298
-        },
-        {
-          "kind": "theorem",
-          "name": "stands_of_need",
-          "qualified_name_hint": "Becoming.SelectionPace.stands_of_need",
-          "line": 309
-        },
-        {
-          "kind": "def",
-          "name": "carriedInflow",
-          "qualified_name_hint": "Becoming.SelectionPace.carriedInflow",
-          "line": 319
-        },
-        {
-          "kind": "theorem",
-          "name": "sum_exact",
-          "qualified_name_hint": "Becoming.SelectionPace.sum_exact",
-          "line": 324
-        },
-        {
-          "kind": "theorem",
-          "name": "mean_step_exact",
-          "qualified_name_hint": "Becoming.SelectionPace.mean_step_exact",
-          "line": 337
-        },
-        {
-          "kind": "theorem",
-          "name": "offspring_within_carried",
-          "qualified_name_hint": "Becoming.SelectionPace.offspring_within_carried",
-          "line": 349
-        },
-        {
-          "kind": "theorem",
-          "name": "total_within_carried",
-          "qualified_name_hint": "Becoming.SelectionPace.total_within_carried",
-          "line": 371
-        },
-        {
-          "kind": "theorem",
-          "name": "response_within_carried",
-          "qualified_name_hint": "Becoming.SelectionPace.response_within_carried",
-          "line": 387
-        },
-        {
-          "kind": "theorem",
-          "name": "selection_within_carried",
-          "qualified_name_hint": "Becoming.SelectionPace.selection_within_carried",
-          "line": 408
-        },
-        {
-          "kind": "theorem",
-          "name": "unfed_rise_shrinks",
-          "qualified_name_hint": "Becoming.SelectionPace.unfed_rise_shrinks",
-          "line": 431
-        },
-        {
-          "kind": "def",
-          "name": "carriers",
-          "qualified_name_hint": "Becoming.SelectionPace.carriers",
-          "line": 454
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_carriers",
-          "qualified_name_hint": "Becoming.SelectionPace.mem_carriers",
-          "line": 458
-        },
-        {
-          "kind": "theorem",
-          "name": "total_lineage_one",
-          "qualified_name_hint": "Becoming.SelectionPace.total_lineage_one",
-          "line": 463
-        },
-        {
-          "kind": "theorem",
-          "name": "total_lineage",
-          "qualified_name_hint": "Becoming.SelectionPace.total_lineage",
-          "line": 468
-        },
-        {
-          "kind": "theorem",
-          "name": "excess_add_le",
-          "qualified_name_hint": "Becoming.SelectionPace.excess_add_le",
-          "line": 476
-        },
-        {
-          "kind": "theorem",
-          "name": "excess_total_le",
-          "qualified_name_hint": "Becoming.SelectionPace.excess_total_le",
-          "line": 482
-        },
-        {
-          "kind": "theorem",
-          "name": "inflow_lineage_le",
-          "qualified_name_hint": "Becoming.SelectionPace.inflow_lineage_le",
-          "line": 491
-        },
-        {
-          "kind": "theorem",
-          "name": "total_carriers_le",
-          "qualified_name_hint": "Becoming.SelectionPace.total_carriers_le",
-          "line": 502
-        },
-        {
-          "kind": "theorem",
-          "name": "total_carriers_unit",
-          "qualified_name_hint": "Becoming.SelectionPace.total_carriers_unit",
-          "line": 519
-        },
-        {
-          "kind": "theorem",
-          "name": "joint_within_carried",
-          "qualified_name_hint": "Becoming.SelectionPace.joint_within_carried",
-          "line": 543
-        },
-        {
-          "kind": "theorem",
-          "name": "share_within_rest",
-          "qualified_name_hint": "Becoming.SelectionPace.share_within_rest",
-          "line": 555
-        },
-        {
-          "kind": "theorem",
-          "name": "share_within_joint",
-          "qualified_name_hint": "Becoming.SelectionPace.share_within_joint",
-          "line": 590
-        },
-        {
-          "kind": "theorem",
-          "name": "stretch_within_carried",
-          "qualified_name_hint": "Becoming.SelectionPace.stretch_within_carried",
-          "line": 613
-        },
-        {
-          "kind": "theorem",
-          "name": "moved_within_carried",
-          "qualified_name_hint": "Becoming.SelectionPace.moved_within_carried",
-          "line": 640
-        },
-        {
-          "kind": "theorem",
-          "name": "steps_to_move",
-          "qualified_name_hint": "Becoming.SelectionPace.steps_to_move",
-          "line": 663
-        },
-        {
-          "kind": "theorem",
-          "name": "parent_within_factor",
-          "qualified_name_hint": "Becoming.SelectionPace.parent_within_factor",
-          "line": 686
-        },
-        {
-          "kind": "theorem",
-          "name": "total_within_factor",
-          "qualified_name_hint": "Becoming.SelectionPace.total_within_factor",
-          "line": 703
-        },
-        {
-          "kind": "theorem",
-          "name": "total_within_power",
-          "qualified_name_hint": "Becoming.SelectionPace.total_within_power",
-          "line": 721
-        },
-        {
-          "kind": "theorem",
-          "name": "share_within_power",
-          "qualified_name_hint": "Becoming.SelectionPace.share_within_power",
-          "line": 750
-        },
-        {
-          "kind": "theorem",
-          "name": "whole_within_power",
-          "qualified_name_hint": "Becoming.SelectionPace.whole_within_power",
-          "line": 768
-        },
-        {
-          "kind": "theorem",
-          "name": "number_step_within_inflow",
-          "qualified_name_hint": "Becoming.SelectionPace.number_step_within_inflow",
-          "line": 788
-        },
-        {
-          "kind": "theorem",
-          "name": "number_spread_within_inflow",
-          "qualified_name_hint": "Becoming.SelectionPace.number_spread_within_inflow",
-          "line": 813
-        },
-        {
-          "kind": "theorem",
-          "name": "number_unfed_uniform",
-          "qualified_name_hint": "Becoming.SelectionPace.number_unfed_uniform",
-          "line": 841
-        },
-        {
-          "kind": "def",
-          "name": "numbered",
-          "qualified_name_hint": "Becoming.SelectionPace.numbered",
-          "line": 863
-        },
-        {
-          "kind": "theorem",
-          "name": "numbered_family",
-          "qualified_name_hint": "Becoming.SelectionPace.numbered_family",
-          "line": 868
-        },
-        {
-          "kind": "theorem",
-          "name": "numbered_number",
-          "qualified_name_hint": "Becoming.SelectionPace.numbered_number",
-          "line": 874
-        },
-        {
-          "kind": "theorem",
-          "name": "response_sq_within_inflow",
-          "qualified_name_hint": "Becoming.SelectionPace.response_sq_within_inflow",
-          "line": 886
-        },
-        {
-          "kind": "inductive",
-          "name": "Relatum",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.Relatum",
-          "line": 951
-        },
-        {
-          "kind": "def",
-          "name": "level",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.level",
-          "line": 960
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.web",
-          "line": 972
-        },
-        {
-          "kind": "def",
-          "name": "takeFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.takeFirst",
-          "line": 981
-        },
-        {
-          "kind": "def",
-          "name": "giveFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.giveFirst",
-          "line": 993
-        },
-        {
-          "kind": "def",
-          "name": "take",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.take",
-          "line": 1004
-        },
-        {
-          "kind": "def",
-          "name": "give",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.give",
-          "line": 1008
-        },
-        {
-          "kind": "def",
-          "name": "present",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.present",
-          "line": 1012
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.flow",
-          "line": 1016
-        },
-        {
-          "kind": "def",
-          "name": "family",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.family",
-          "line": 1022
-        },
-        {
-          "kind": "theorem",
-          "name": "every",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.every",
-          "line": 1024
-        },
-        {
-          "kind": "theorem",
-          "name": "balances",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.balances",
-          "line": 1031
-        },
-        {
-          "kind": "theorem",
-          "name": "closed",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.closed",
-          "line": 1043
-        },
-        {
-          "kind": "theorem",
-          "name": "dissipates",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.dissipates",
-          "line": 1045
-        },
-        {
-          "kind": "def",
-          "name": "firstKids",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.firstKids",
-          "line": 1049
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.kids",
-          "line": 1056
-        },
-        {
-          "kind": "def",
-          "name": "marks",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.marks",
-          "line": 1061
-        },
-        {
-          "kind": "def",
-          "name": "generations",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.generations",
-          "line": 1070
-        },
-        {
-          "kind": "theorem",
-          "name": "arise",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.arise",
-          "line": 1075
-        },
-        {
-          "kind": "theorem",
-          "name": "stands",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.stands",
-          "line": 1083
-        },
-        {
-          "kind": "theorem",
-          "name": "exact",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.exact",
-          "line": 1091
-        },
-        {
-          "kind": "theorem",
-          "name": "capped",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.capped",
-          "line": 1099
-        },
-        {
-          "kind": "theorem",
-          "name": "unit",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.unit",
-          "line": 1105
-        },
-        {
-          "kind": "theorem",
-          "name": "displacement",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.displacement",
-          "line": 1117
-        },
-        {
-          "kind": "theorem",
-          "name": "natural_fails",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.natural_fails",
-          "line": 1133
-        },
-        {
-          "kind": "theorem",
-          "name": "premises",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.premises",
-          "line": 1145
-        },
-        {
-          "kind": "theorem",
-          "name": "rest_falls",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.rest_falls",
-          "line": 1161
-        },
-        {
-          "kind": "theorem",
-          "name": "fedEach",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.fedEach",
-          "line": 1177
-        },
-        {
-          "kind": "theorem",
-          "name": "factor",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.factor",
-          "line": 1186
-        },
-        {
-          "kind": "theorem",
-          "name": "least",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.least",
-          "line": 1197
-        },
-        {
-          "kind": "theorem",
-          "name": "capped_later",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.capped_later",
-          "line": 1215
-        },
-        {
-          "kind": "theorem",
-          "name": "spread_needs_inheritance",
-          "qualified_name_hint": "Becoming.SelectionPace.Displacement.spread_needs_inheritance",
-          "line": 1228
-        },
-        {
-          "kind": "inductive",
-          "name": "Relatum",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.Relatum",
-          "line": 1257
-        },
-        {
-          "kind": "def",
-          "name": "levelFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.levelFirst",
-          "line": 1271
-        },
-        {
-          "kind": "def",
-          "name": "levelSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.levelSecond",
-          "line": 1284
-        },
-        {
-          "kind": "def",
-          "name": "levelLater",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.levelLater",
-          "line": 1296
-        },
-        {
-          "kind": "def",
-          "name": "level",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.level",
-          "line": 1307
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.web",
-          "line": 1312
-        },
-        {
-          "kind": "def",
-          "name": "fromParent",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.fromParent",
-          "line": 1320
-        },
-        {
-          "kind": "def",
-          "name": "fromFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.fromFirst",
-          "line": 1332
-        },
-        {
-          "kind": "def",
-          "name": "fromSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.fromSecond",
-          "line": 1344
-        },
-        {
-          "kind": "def",
-          "name": "toPair",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.toPair",
-          "line": 1356
-        },
-        {
-          "kind": "def",
-          "name": "toFirstPair",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.toFirstPair",
-          "line": 1368
-        },
-        {
-          "kind": "def",
-          "name": "toSecondPair",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.toSecondPair",
-          "line": 1380
-        },
-        {
-          "kind": "def",
-          "name": "takeFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.takeFirst",
-          "line": 1391
-        },
-        {
-          "kind": "def",
-          "name": "takeSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.takeSecond",
-          "line": 1402
-        },
-        {
-          "kind": "def",
-          "name": "giveFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.giveFirst",
-          "line": 1413
-        },
-        {
-          "kind": "def",
-          "name": "giveSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.giveSecond",
-          "line": 1424
-        },
-        {
-          "kind": "def",
-          "name": "take",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.take",
-          "line": 1438
-        },
-        {
-          "kind": "def",
-          "name": "give",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.give",
-          "line": 1443
-        },
-        {
-          "kind": "def",
-          "name": "present",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.present",
-          "line": 1448
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.flow",
-          "line": 1453
-        },
-        {
-          "kind": "theorem",
-          "name": "balances",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.balances",
-          "line": 1458
-        },
-        {
-          "kind": "def",
-          "name": "kidsFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.kidsFirst",
-          "line": 1487
-        },
-        {
-          "kind": "def",
-          "name": "kidsSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.kidsSecond",
-          "line": 1498
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.kids",
-          "line": 1509
-        },
-        {
-          "kind": "def",
-          "name": "generations",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.generations",
-          "line": 1515
-        },
-        {
-          "kind": "theorem",
-          "name": "number",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.number",
-          "line": 1520
-        },
-        {
-          "kind": "theorem",
-          "name": "exact",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.exact",
-          "line": 1522
-        },
-        {
-          "kind": "theorem",
-          "name": "arise",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.arise",
-          "line": 1530
-        },
-        {
-          "kind": "theorem",
-          "name": "stands",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.stands",
-          "line": 1540
-        },
-        {
-          "kind": "theorem",
-          "name": "capped",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.capped",
-          "line": 1550
-        },
-        {
-          "kind": "theorem",
-          "name": "fed",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.fed",
-          "line": 1561
-        },
-        {
-          "kind": "theorem",
-          "name": "premises",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.premises",
-          "line": 1574
-        },
-        {
-          "kind": "theorem",
-          "name": "least",
-          "qualified_name_hint": "Becoming.SelectionPace.Fed.least",
-          "line": 1592
-        },
-        {
-          "kind": "inductive",
-          "name": "Relatum",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.Relatum",
-          "line": 1614
-        },
-        {
-          "kind": "def",
-          "name": "levelFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.levelFirst",
-          "line": 1628
-        },
-        {
-          "kind": "def",
-          "name": "levelSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.levelSecond",
-          "line": 1640
-        },
-        {
-          "kind": "def",
-          "name": "levelLater",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.levelLater",
-          "line": 1652
-        },
-        {
-          "kind": "def",
-          "name": "level",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.level",
-          "line": 1663
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.web",
-          "line": 1668
-        },
-        {
-          "kind": "def",
-          "name": "fromCarrier",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.fromCarrier",
-          "line": 1676
-        },
-        {
-          "kind": "def",
-          "name": "fromLeft",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.fromLeft",
-          "line": 1688
-        },
-        {
-          "kind": "def",
-          "name": "fromRight",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.fromRight",
-          "line": 1700
-        },
-        {
-          "kind": "def",
-          "name": "toPair",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.toPair",
-          "line": 1712
-        },
-        {
-          "kind": "def",
-          "name": "toLeftPair",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.toLeftPair",
-          "line": 1724
-        },
-        {
-          "kind": "def",
-          "name": "toRightPair",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.toRightPair",
-          "line": 1736
-        },
-        {
-          "kind": "def",
-          "name": "takeFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.takeFirst",
-          "line": 1747
-        },
-        {
-          "kind": "def",
-          "name": "takeSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.takeSecond",
-          "line": 1758
-        },
-        {
-          "kind": "def",
-          "name": "giveFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.giveFirst",
-          "line": 1769
-        },
-        {
-          "kind": "def",
-          "name": "giveSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.giveSecond",
-          "line": 1780
-        },
-        {
-          "kind": "def",
-          "name": "take",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.take",
-          "line": 1794
-        },
-        {
-          "kind": "def",
-          "name": "give",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.give",
-          "line": 1799
-        },
-        {
-          "kind": "def",
-          "name": "present",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.present",
-          "line": 1804
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.flow",
-          "line": 1809
-        },
-        {
-          "kind": "def",
-          "name": "family",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.family",
-          "line": 1815
-        },
-        {
-          "kind": "theorem",
-          "name": "every",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.every",
-          "line": 1818
-        },
-        {
-          "kind": "theorem",
-          "name": "balances",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.balances",
-          "line": 1830
-        },
-        {
-          "kind": "theorem",
-          "name": "closedFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.closedFirst",
-          "line": 1859
-        },
-        {
-          "kind": "theorem",
-          "name": "closedSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.closedSecond",
-          "line": 1861
-        },
-        {
-          "kind": "theorem",
-          "name": "dissipatesFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.dissipatesFirst",
-          "line": 1863
-        },
-        {
-          "kind": "theorem",
-          "name": "dissipatesSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.dissipatesSecond",
-          "line": 1867
-        },
-        {
-          "kind": "def",
-          "name": "kidsFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.kidsFirst",
-          "line": 1872
-        },
-        {
-          "kind": "def",
-          "name": "kidsSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.kidsSecond",
-          "line": 1883
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.kids",
-          "line": 1894
-        },
-        {
-          "kind": "def",
-          "name": "marks",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.marks",
-          "line": 1900
-        },
-        {
-          "kind": "def",
-          "name": "generations",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.generations",
-          "line": 1913
-        },
-        {
-          "kind": "theorem",
-          "name": "ariseFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.ariseFirst",
-          "line": 1918
-        },
-        {
-          "kind": "theorem",
-          "name": "standsFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.standsFirst",
-          "line": 1926
-        },
-        {
-          "kind": "theorem",
-          "name": "exactFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.exactFirst",
-          "line": 1934
-        },
-        {
-          "kind": "theorem",
-          "name": "cappedFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.cappedFirst",
-          "line": 1942
-        },
-        {
-          "kind": "theorem",
-          "name": "inherited",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.inherited",
-          "line": 1948
-        },
-        {
-          "kind": "theorem",
-          "name": "ariseSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.ariseSecond",
-          "line": 1956
-        },
-        {
-          "kind": "theorem",
-          "name": "standsSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.standsSecond",
-          "line": 1966
-        },
-        {
-          "kind": "theorem",
-          "name": "exactSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.exactSecond",
-          "line": 1976
-        },
-        {
-          "kind": "theorem",
-          "name": "cappedSecond",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.cappedSecond",
-          "line": 1986
-        },
-        {
-          "kind": "theorem",
-          "name": "same_step_fails",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.same_step_fails",
-          "line": 1996
-        },
-        {
-          "kind": "theorem",
-          "name": "next_step_attained",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.next_step_attained",
-          "line": 2013
-        },
-        {
-          "kind": "theorem",
-          "name": "ariseBoth",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.ariseBoth",
-          "line": 2030
-        },
-        {
-          "kind": "theorem",
-          "name": "standsBoth",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.standsBoth",
-          "line": 2036
-        },
-        {
-          "kind": "theorem",
-          "name": "exactBoth",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.exactBoth",
-          "line": 2042
-        },
-        {
-          "kind": "theorem",
-          "name": "cappedBoth",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.cappedBoth",
-          "line": 2049
-        },
-        {
-          "kind": "theorem",
-          "name": "stretch_attained",
-          "qualified_name_hint": "Becoming.SelectionPace.Inherited.stretch_attained",
-          "line": 2058
-        },
-        {
-          "kind": "inductive",
-          "name": "Relatum",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.Relatum",
-          "line": 2075
-        },
-        {
-          "kind": "def",
-          "name": "levelFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.levelFirst",
-          "line": 2083
-        },
-        {
-          "kind": "def",
-          "name": "levelLater",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.levelLater",
-          "line": 2089
-        },
-        {
-          "kind": "def",
-          "name": "level",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.level",
-          "line": 2095
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.web",
-          "line": 2099
-        },
-        {
-          "kind": "def",
-          "name": "fromLeft",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.fromLeft",
-          "line": 2107
-        },
-        {
-          "kind": "def",
-          "name": "fromRight",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.fromRight",
-          "line": 2114
-        },
-        {
-          "kind": "def",
-          "name": "toRightKid",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.toRightKid",
-          "line": 2121
-        },
-        {
-          "kind": "def",
-          "name": "toLeftKid",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.toLeftKid",
-          "line": 2128
-        },
-        {
-          "kind": "def",
-          "name": "takeFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.takeFirst",
-          "line": 2134
-        },
-        {
-          "kind": "def",
-          "name": "giveFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.giveFirst",
-          "line": 2140
-        },
-        {
-          "kind": "def",
-          "name": "take",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.take",
-          "line": 2146
-        },
-        {
-          "kind": "def",
-          "name": "give",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.give",
-          "line": 2150
-        },
-        {
-          "kind": "def",
-          "name": "present",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.present",
-          "line": 2154
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.flow",
-          "line": 2158
-        },
-        {
-          "kind": "theorem",
-          "name": "balances",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.balances",
-          "line": 2163
-        },
-        {
-          "kind": "def",
-          "name": "kidsFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.kidsFirst",
-          "line": 2173
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.kids",
-          "line": 2179
-        },
-        {
-          "kind": "def",
-          "name": "generations",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.generations",
-          "line": 2184
-        },
-        {
-          "kind": "theorem",
-          "name": "swap",
-          "qualified_name_hint": "Becoming.SelectionPace.Swap.swap",
-          "line": 2192
-        },
-        {
-          "kind": "inductive",
-          "name": "Relatum",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.Relatum",
-          "line": 2204
-        },
-        {
-          "kind": "def",
-          "name": "levelFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.levelFirst",
-          "line": 2212
-        },
-        {
-          "kind": "def",
-          "name": "levelLater",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.levelLater",
-          "line": 2218
-        },
-        {
-          "kind": "def",
-          "name": "level",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.level",
-          "line": 2224
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.web",
-          "line": 2228
-        },
-        {
-          "kind": "def",
-          "name": "fromCarrier",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.fromCarrier",
-          "line": 2236
-        },
-        {
-          "kind": "def",
-          "name": "fromOther",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.fromOther",
-          "line": 2243
-        },
-        {
-          "kind": "def",
-          "name": "toPair",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.toPair",
-          "line": 2250
-        },
-        {
-          "kind": "def",
-          "name": "takeFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.takeFirst",
-          "line": 2256
-        },
-        {
-          "kind": "def",
-          "name": "giveFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.giveFirst",
-          "line": 2262
-        },
-        {
-          "kind": "def",
-          "name": "take",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.take",
-          "line": 2268
-        },
-        {
-          "kind": "def",
-          "name": "give",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.give",
-          "line": 2272
-        },
-        {
-          "kind": "def",
-          "name": "present",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.present",
-          "line": 2276
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.flow",
-          "line": 2280
-        },
-        {
-          "kind": "theorem",
-          "name": "balances",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.balances",
-          "line": 2285
-        },
-        {
-          "kind": "def",
-          "name": "kidsFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.kidsFirst",
-          "line": 2295
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.kids",
-          "line": 2301
-        },
-        {
-          "kind": "def",
-          "name": "marks",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.marks",
-          "line": 2306
-        },
-        {
-          "kind": "def",
-          "name": "generations",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.generations",
-          "line": 2312
-        },
-        {
-          "kind": "theorem",
-          "name": "arise",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.arise",
-          "line": 2317
-        },
-        {
-          "kind": "theorem",
-          "name": "stands",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.stands",
-          "line": 2325
-        },
-        {
-          "kind": "theorem",
-          "name": "exact",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.exact",
-          "line": 2333
-        },
-        {
-          "kind": "theorem",
-          "name": "uncapped",
-          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.uncapped",
-          "line": 2345
-        },
-        {
-          "kind": "inductive",
-          "name": "Relatum",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.Relatum",
-          "line": 2366
-        },
-        {
-          "kind": "def",
-          "name": "levelFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.levelFirst",
-          "line": 2373
-        },
-        {
-          "kind": "def",
-          "name": "levelLater",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.levelLater",
-          "line": 2378
-        },
-        {
-          "kind": "def",
-          "name": "level",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.level",
-          "line": 2383
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.web",
-          "line": 2387
-        },
-        {
-          "kind": "def",
-          "name": "fromCarrier",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.fromCarrier",
-          "line": 2395
-        },
-        {
-          "kind": "def",
-          "name": "toKid",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.toKid",
-          "line": 2401
-        },
-        {
-          "kind": "def",
-          "name": "takeFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.takeFirst",
-          "line": 2406
-        },
-        {
-          "kind": "def",
-          "name": "giveFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.giveFirst",
-          "line": 2411
-        },
-        {
-          "kind": "def",
-          "name": "take",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.take",
-          "line": 2416
-        },
-        {
-          "kind": "def",
-          "name": "give",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.give",
-          "line": 2420
-        },
-        {
-          "kind": "def",
-          "name": "present",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.present",
-          "line": 2424
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.flow",
-          "line": 2428
-        },
-        {
-          "kind": "theorem",
-          "name": "balances",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.balances",
-          "line": 2433
-        },
-        {
-          "kind": "def",
-          "name": "kidsFirst",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.kidsFirst",
-          "line": 2441
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.kids",
-          "line": 2446
-        },
-        {
-          "kind": "def",
-          "name": "marks",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.marks",
-          "line": 2451
-        },
-        {
-          "kind": "def",
-          "name": "generations",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.generations",
-          "line": 2456
-        },
-        {
-          "kind": "theorem",
-          "name": "arise",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.arise",
-          "line": 2461
-        },
-        {
-          "kind": "theorem",
-          "name": "stands",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.stands",
-          "line": 2468
-        },
-        {
-          "kind": "theorem",
-          "name": "exact",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.exact",
-          "line": 2475
-        },
-        {
-          "kind": "theorem",
-          "name": "capped",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.capped",
-          "line": 2482
-        },
-        {
-          "kind": "theorem",
-          "name": "shrink",
-          "qualified_name_hint": "Becoming.SelectionPace.Shrink.shrink",
-          "line": 2492
-        }
-      ],
-      "declaration_counts": {
-        "def": 115,
-        "inductive": 6,
-        "theorem": 103
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "931cbbd68de8b2ef95aef22f202d860f20cabed9a45a56ce789ed522c28a8862": {
       "byte_size": 891,
       "line_count": 15,
@@ -318302,6 +316935,1373 @@
         "def": 55,
         "inductive": 2,
         "theorem": 85
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "abf440add3b6dd9c9a94ce3f0efe7b4fb9f23f9607fd296a8a9268a96a1a72b3": {
+      "byte_size": 118212,
+      "line_count": 2518,
+      "imports": [
+        "Becoming.Reproduction",
+        "Becoming.Entropy"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "lineage",
+          "qualified_name_hint": "Becoming.SelectionPace.lineage",
+          "line": 201
+        },
+        {
+          "kind": "theorem",
+          "name": "lineage_mono",
+          "qualified_name_hint": "Becoming.SelectionPace.lineage_mono",
+          "line": 204
+        },
+        {
+          "kind": "theorem",
+          "name": "lineage_sub",
+          "qualified_name_hint": "Becoming.SelectionPace.lineage_sub",
+          "line": 212
+        },
+        {
+          "kind": "theorem",
+          "name": "fresh_total",
+          "qualified_name_hint": "Becoming.SelectionPace.fresh_total",
+          "line": 219
+        },
+        {
+          "kind": "theorem",
+          "name": "standing_total",
+          "qualified_name_hint": "Becoming.SelectionPace.standing_total",
+          "line": 226
+        },
+        {
+          "kind": "theorem",
+          "name": "born_within_inflow",
+          "qualified_name_hint": "Becoming.SelectionPace.born_within_inflow",
+          "line": 246
+        },
+        {
+          "kind": "theorem",
+          "name": "parent_within_inflow",
+          "qualified_name_hint": "Becoming.SelectionPace.parent_within_inflow",
+          "line": 274
+        },
+        {
+          "kind": "theorem",
+          "name": "generation_within_inflow",
+          "qualified_name_hint": "Becoming.SelectionPace.generation_within_inflow",
+          "line": 291
+        },
+        {
+          "kind": "theorem",
+          "name": "standing_pinned",
+          "qualified_name_hint": "Becoming.SelectionPace.standing_pinned",
+          "line": 308
+        },
+        {
+          "kind": "theorem",
+          "name": "stands_of_need",
+          "qualified_name_hint": "Becoming.SelectionPace.stands_of_need",
+          "line": 319
+        },
+        {
+          "kind": "def",
+          "name": "carriedInflow",
+          "qualified_name_hint": "Becoming.SelectionPace.carriedInflow",
+          "line": 329
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_exact",
+          "qualified_name_hint": "Becoming.SelectionPace.sum_exact",
+          "line": 334
+        },
+        {
+          "kind": "theorem",
+          "name": "mean_step_exact",
+          "qualified_name_hint": "Becoming.SelectionPace.mean_step_exact",
+          "line": 347
+        },
+        {
+          "kind": "theorem",
+          "name": "offspring_within_carried",
+          "qualified_name_hint": "Becoming.SelectionPace.offspring_within_carried",
+          "line": 359
+        },
+        {
+          "kind": "theorem",
+          "name": "total_within_carried",
+          "qualified_name_hint": "Becoming.SelectionPace.total_within_carried",
+          "line": 381
+        },
+        {
+          "kind": "theorem",
+          "name": "response_within_carried",
+          "qualified_name_hint": "Becoming.SelectionPace.response_within_carried",
+          "line": 397
+        },
+        {
+          "kind": "theorem",
+          "name": "selection_within_carried",
+          "qualified_name_hint": "Becoming.SelectionPace.selection_within_carried",
+          "line": 418
+        },
+        {
+          "kind": "theorem",
+          "name": "unfed_rise_shrinks",
+          "qualified_name_hint": "Becoming.SelectionPace.unfed_rise_shrinks",
+          "line": 441
+        },
+        {
+          "kind": "def",
+          "name": "carriers",
+          "qualified_name_hint": "Becoming.SelectionPace.carriers",
+          "line": 464
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_carriers",
+          "qualified_name_hint": "Becoming.SelectionPace.mem_carriers",
+          "line": 468
+        },
+        {
+          "kind": "theorem",
+          "name": "total_lineage_one",
+          "qualified_name_hint": "Becoming.SelectionPace.total_lineage_one",
+          "line": 473
+        },
+        {
+          "kind": "theorem",
+          "name": "total_lineage",
+          "qualified_name_hint": "Becoming.SelectionPace.total_lineage",
+          "line": 478
+        },
+        {
+          "kind": "theorem",
+          "name": "excess_add_le",
+          "qualified_name_hint": "Becoming.SelectionPace.excess_add_le",
+          "line": 486
+        },
+        {
+          "kind": "theorem",
+          "name": "excess_total_le",
+          "qualified_name_hint": "Becoming.SelectionPace.excess_total_le",
+          "line": 492
+        },
+        {
+          "kind": "theorem",
+          "name": "inflow_lineage_le",
+          "qualified_name_hint": "Becoming.SelectionPace.inflow_lineage_le",
+          "line": 501
+        },
+        {
+          "kind": "theorem",
+          "name": "total_carriers_le",
+          "qualified_name_hint": "Becoming.SelectionPace.total_carriers_le",
+          "line": 512
+        },
+        {
+          "kind": "theorem",
+          "name": "total_carriers_unit",
+          "qualified_name_hint": "Becoming.SelectionPace.total_carriers_unit",
+          "line": 529
+        },
+        {
+          "kind": "theorem",
+          "name": "joint_within_carried",
+          "qualified_name_hint": "Becoming.SelectionPace.joint_within_carried",
+          "line": 553
+        },
+        {
+          "kind": "theorem",
+          "name": "share_within_rest",
+          "qualified_name_hint": "Becoming.SelectionPace.share_within_rest",
+          "line": 565
+        },
+        {
+          "kind": "theorem",
+          "name": "share_within_joint",
+          "qualified_name_hint": "Becoming.SelectionPace.share_within_joint",
+          "line": 600
+        },
+        {
+          "kind": "theorem",
+          "name": "stretch_within_carried",
+          "qualified_name_hint": "Becoming.SelectionPace.stretch_within_carried",
+          "line": 623
+        },
+        {
+          "kind": "theorem",
+          "name": "moved_within_carried",
+          "qualified_name_hint": "Becoming.SelectionPace.moved_within_carried",
+          "line": 650
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_to_move",
+          "qualified_name_hint": "Becoming.SelectionPace.steps_to_move",
+          "line": 673
+        },
+        {
+          "kind": "theorem",
+          "name": "parent_within_factor",
+          "qualified_name_hint": "Becoming.SelectionPace.parent_within_factor",
+          "line": 696
+        },
+        {
+          "kind": "theorem",
+          "name": "total_within_factor",
+          "qualified_name_hint": "Becoming.SelectionPace.total_within_factor",
+          "line": 715
+        },
+        {
+          "kind": "theorem",
+          "name": "total_within_power",
+          "qualified_name_hint": "Becoming.SelectionPace.total_within_power",
+          "line": 733
+        },
+        {
+          "kind": "theorem",
+          "name": "share_within_power",
+          "qualified_name_hint": "Becoming.SelectionPace.share_within_power",
+          "line": 762
+        },
+        {
+          "kind": "theorem",
+          "name": "whole_within_power",
+          "qualified_name_hint": "Becoming.SelectionPace.whole_within_power",
+          "line": 781
+        },
+        {
+          "kind": "theorem",
+          "name": "number_step_within_inflow",
+          "qualified_name_hint": "Becoming.SelectionPace.number_step_within_inflow",
+          "line": 801
+        },
+        {
+          "kind": "theorem",
+          "name": "number_spread_within_inflow",
+          "qualified_name_hint": "Becoming.SelectionPace.number_spread_within_inflow",
+          "line": 826
+        },
+        {
+          "kind": "theorem",
+          "name": "number_unfed_uniform",
+          "qualified_name_hint": "Becoming.SelectionPace.number_unfed_uniform",
+          "line": 854
+        },
+        {
+          "kind": "def",
+          "name": "numbered",
+          "qualified_name_hint": "Becoming.SelectionPace.numbered",
+          "line": 876
+        },
+        {
+          "kind": "theorem",
+          "name": "numbered_family",
+          "qualified_name_hint": "Becoming.SelectionPace.numbered_family",
+          "line": 881
+        },
+        {
+          "kind": "theorem",
+          "name": "numbered_number",
+          "qualified_name_hint": "Becoming.SelectionPace.numbered_number",
+          "line": 887
+        },
+        {
+          "kind": "theorem",
+          "name": "response_sq_within_inflow",
+          "qualified_name_hint": "Becoming.SelectionPace.response_sq_within_inflow",
+          "line": 899
+        },
+        {
+          "kind": "inductive",
+          "name": "Relatum",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.Relatum",
+          "line": 964
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.level",
+          "line": 973
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.web",
+          "line": 985
+        },
+        {
+          "kind": "def",
+          "name": "takeFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.takeFirst",
+          "line": 994
+        },
+        {
+          "kind": "def",
+          "name": "giveFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.giveFirst",
+          "line": 1006
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.take",
+          "line": 1017
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.give",
+          "line": 1021
+        },
+        {
+          "kind": "def",
+          "name": "present",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.present",
+          "line": 1025
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.flow",
+          "line": 1029
+        },
+        {
+          "kind": "def",
+          "name": "family",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.family",
+          "line": 1035
+        },
+        {
+          "kind": "theorem",
+          "name": "every",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.every",
+          "line": 1037
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.balances",
+          "line": 1044
+        },
+        {
+          "kind": "theorem",
+          "name": "closed",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.closed",
+          "line": 1056
+        },
+        {
+          "kind": "theorem",
+          "name": "dissipates",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.dissipates",
+          "line": 1058
+        },
+        {
+          "kind": "def",
+          "name": "firstKids",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.firstKids",
+          "line": 1062
+        },
+        {
+          "kind": "def",
+          "name": "kids",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.kids",
+          "line": 1069
+        },
+        {
+          "kind": "def",
+          "name": "marks",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.marks",
+          "line": 1074
+        },
+        {
+          "kind": "def",
+          "name": "generations",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.generations",
+          "line": 1083
+        },
+        {
+          "kind": "theorem",
+          "name": "arise",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.arise",
+          "line": 1088
+        },
+        {
+          "kind": "theorem",
+          "name": "stands",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.stands",
+          "line": 1096
+        },
+        {
+          "kind": "theorem",
+          "name": "exact",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.exact",
+          "line": 1104
+        },
+        {
+          "kind": "theorem",
+          "name": "capped",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.capped",
+          "line": 1112
+        },
+        {
+          "kind": "theorem",
+          "name": "unit",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.unit",
+          "line": 1118
+        },
+        {
+          "kind": "theorem",
+          "name": "displacement",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.displacement",
+          "line": 1130
+        },
+        {
+          "kind": "theorem",
+          "name": "natural_fails",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.natural_fails",
+          "line": 1146
+        },
+        {
+          "kind": "theorem",
+          "name": "premises",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.premises",
+          "line": 1158
+        },
+        {
+          "kind": "theorem",
+          "name": "rest_falls",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.rest_falls",
+          "line": 1174
+        },
+        {
+          "kind": "theorem",
+          "name": "fedEach",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.fedEach",
+          "line": 1190
+        },
+        {
+          "kind": "theorem",
+          "name": "factor",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.factor",
+          "line": 1199
+        },
+        {
+          "kind": "theorem",
+          "name": "least",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.least",
+          "line": 1210
+        },
+        {
+          "kind": "theorem",
+          "name": "capped_later",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.capped_later",
+          "line": 1228
+        },
+        {
+          "kind": "theorem",
+          "name": "spread_needs_inheritance",
+          "qualified_name_hint": "Becoming.SelectionPace.Displacement.spread_needs_inheritance",
+          "line": 1241
+        },
+        {
+          "kind": "inductive",
+          "name": "Relatum",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.Relatum",
+          "line": 1270
+        },
+        {
+          "kind": "def",
+          "name": "levelFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.levelFirst",
+          "line": 1284
+        },
+        {
+          "kind": "def",
+          "name": "levelSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.levelSecond",
+          "line": 1297
+        },
+        {
+          "kind": "def",
+          "name": "levelLater",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.levelLater",
+          "line": 1309
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.level",
+          "line": 1320
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.web",
+          "line": 1325
+        },
+        {
+          "kind": "def",
+          "name": "fromParent",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.fromParent",
+          "line": 1333
+        },
+        {
+          "kind": "def",
+          "name": "fromFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.fromFirst",
+          "line": 1345
+        },
+        {
+          "kind": "def",
+          "name": "fromSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.fromSecond",
+          "line": 1357
+        },
+        {
+          "kind": "def",
+          "name": "toPair",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.toPair",
+          "line": 1369
+        },
+        {
+          "kind": "def",
+          "name": "toFirstPair",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.toFirstPair",
+          "line": 1381
+        },
+        {
+          "kind": "def",
+          "name": "toSecondPair",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.toSecondPair",
+          "line": 1393
+        },
+        {
+          "kind": "def",
+          "name": "takeFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.takeFirst",
+          "line": 1404
+        },
+        {
+          "kind": "def",
+          "name": "takeSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.takeSecond",
+          "line": 1415
+        },
+        {
+          "kind": "def",
+          "name": "giveFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.giveFirst",
+          "line": 1426
+        },
+        {
+          "kind": "def",
+          "name": "giveSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.giveSecond",
+          "line": 1437
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.take",
+          "line": 1451
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.give",
+          "line": 1456
+        },
+        {
+          "kind": "def",
+          "name": "present",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.present",
+          "line": 1461
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.flow",
+          "line": 1466
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.balances",
+          "line": 1471
+        },
+        {
+          "kind": "def",
+          "name": "kidsFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.kidsFirst",
+          "line": 1500
+        },
+        {
+          "kind": "def",
+          "name": "kidsSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.kidsSecond",
+          "line": 1511
+        },
+        {
+          "kind": "def",
+          "name": "kids",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.kids",
+          "line": 1522
+        },
+        {
+          "kind": "def",
+          "name": "generations",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.generations",
+          "line": 1528
+        },
+        {
+          "kind": "theorem",
+          "name": "number",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.number",
+          "line": 1533
+        },
+        {
+          "kind": "theorem",
+          "name": "exact",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.exact",
+          "line": 1535
+        },
+        {
+          "kind": "theorem",
+          "name": "arise",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.arise",
+          "line": 1543
+        },
+        {
+          "kind": "theorem",
+          "name": "stands",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.stands",
+          "line": 1553
+        },
+        {
+          "kind": "theorem",
+          "name": "capped",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.capped",
+          "line": 1563
+        },
+        {
+          "kind": "theorem",
+          "name": "fed",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.fed",
+          "line": 1574
+        },
+        {
+          "kind": "theorem",
+          "name": "premises",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.premises",
+          "line": 1587
+        },
+        {
+          "kind": "theorem",
+          "name": "least",
+          "qualified_name_hint": "Becoming.SelectionPace.Fed.least",
+          "line": 1605
+        },
+        {
+          "kind": "inductive",
+          "name": "Relatum",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.Relatum",
+          "line": 1627
+        },
+        {
+          "kind": "def",
+          "name": "levelFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.levelFirst",
+          "line": 1641
+        },
+        {
+          "kind": "def",
+          "name": "levelSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.levelSecond",
+          "line": 1653
+        },
+        {
+          "kind": "def",
+          "name": "levelLater",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.levelLater",
+          "line": 1665
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.level",
+          "line": 1676
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.web",
+          "line": 1681
+        },
+        {
+          "kind": "def",
+          "name": "fromCarrier",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.fromCarrier",
+          "line": 1689
+        },
+        {
+          "kind": "def",
+          "name": "fromLeft",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.fromLeft",
+          "line": 1701
+        },
+        {
+          "kind": "def",
+          "name": "fromRight",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.fromRight",
+          "line": 1713
+        },
+        {
+          "kind": "def",
+          "name": "toPair",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.toPair",
+          "line": 1725
+        },
+        {
+          "kind": "def",
+          "name": "toLeftPair",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.toLeftPair",
+          "line": 1737
+        },
+        {
+          "kind": "def",
+          "name": "toRightPair",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.toRightPair",
+          "line": 1749
+        },
+        {
+          "kind": "def",
+          "name": "takeFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.takeFirst",
+          "line": 1760
+        },
+        {
+          "kind": "def",
+          "name": "takeSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.takeSecond",
+          "line": 1771
+        },
+        {
+          "kind": "def",
+          "name": "giveFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.giveFirst",
+          "line": 1782
+        },
+        {
+          "kind": "def",
+          "name": "giveSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.giveSecond",
+          "line": 1793
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.take",
+          "line": 1807
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.give",
+          "line": 1812
+        },
+        {
+          "kind": "def",
+          "name": "present",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.present",
+          "line": 1817
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.flow",
+          "line": 1822
+        },
+        {
+          "kind": "def",
+          "name": "family",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.family",
+          "line": 1828
+        },
+        {
+          "kind": "theorem",
+          "name": "every",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.every",
+          "line": 1831
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.balances",
+          "line": 1843
+        },
+        {
+          "kind": "theorem",
+          "name": "closedFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.closedFirst",
+          "line": 1872
+        },
+        {
+          "kind": "theorem",
+          "name": "closedSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.closedSecond",
+          "line": 1874
+        },
+        {
+          "kind": "theorem",
+          "name": "dissipatesFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.dissipatesFirst",
+          "line": 1876
+        },
+        {
+          "kind": "theorem",
+          "name": "dissipatesSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.dissipatesSecond",
+          "line": 1880
+        },
+        {
+          "kind": "def",
+          "name": "kidsFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.kidsFirst",
+          "line": 1885
+        },
+        {
+          "kind": "def",
+          "name": "kidsSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.kidsSecond",
+          "line": 1896
+        },
+        {
+          "kind": "def",
+          "name": "kids",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.kids",
+          "line": 1907
+        },
+        {
+          "kind": "def",
+          "name": "marks",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.marks",
+          "line": 1913
+        },
+        {
+          "kind": "def",
+          "name": "generations",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.generations",
+          "line": 1926
+        },
+        {
+          "kind": "theorem",
+          "name": "ariseFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.ariseFirst",
+          "line": 1931
+        },
+        {
+          "kind": "theorem",
+          "name": "standsFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.standsFirst",
+          "line": 1939
+        },
+        {
+          "kind": "theorem",
+          "name": "exactFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.exactFirst",
+          "line": 1947
+        },
+        {
+          "kind": "theorem",
+          "name": "cappedFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.cappedFirst",
+          "line": 1955
+        },
+        {
+          "kind": "theorem",
+          "name": "inherited",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.inherited",
+          "line": 1961
+        },
+        {
+          "kind": "theorem",
+          "name": "ariseSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.ariseSecond",
+          "line": 1969
+        },
+        {
+          "kind": "theorem",
+          "name": "standsSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.standsSecond",
+          "line": 1979
+        },
+        {
+          "kind": "theorem",
+          "name": "exactSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.exactSecond",
+          "line": 1989
+        },
+        {
+          "kind": "theorem",
+          "name": "cappedSecond",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.cappedSecond",
+          "line": 1999
+        },
+        {
+          "kind": "theorem",
+          "name": "same_step_fails",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.same_step_fails",
+          "line": 2009
+        },
+        {
+          "kind": "theorem",
+          "name": "next_step_attained",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.next_step_attained",
+          "line": 2026
+        },
+        {
+          "kind": "theorem",
+          "name": "ariseBoth",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.ariseBoth",
+          "line": 2043
+        },
+        {
+          "kind": "theorem",
+          "name": "standsBoth",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.standsBoth",
+          "line": 2049
+        },
+        {
+          "kind": "theorem",
+          "name": "exactBoth",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.exactBoth",
+          "line": 2055
+        },
+        {
+          "kind": "theorem",
+          "name": "cappedBoth",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.cappedBoth",
+          "line": 2062
+        },
+        {
+          "kind": "theorem",
+          "name": "stretch_attained",
+          "qualified_name_hint": "Becoming.SelectionPace.Inherited.stretch_attained",
+          "line": 2071
+        },
+        {
+          "kind": "inductive",
+          "name": "Relatum",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.Relatum",
+          "line": 2088
+        },
+        {
+          "kind": "def",
+          "name": "levelFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.levelFirst",
+          "line": 2096
+        },
+        {
+          "kind": "def",
+          "name": "levelLater",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.levelLater",
+          "line": 2102
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.level",
+          "line": 2108
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.web",
+          "line": 2112
+        },
+        {
+          "kind": "def",
+          "name": "fromLeft",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.fromLeft",
+          "line": 2120
+        },
+        {
+          "kind": "def",
+          "name": "fromRight",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.fromRight",
+          "line": 2127
+        },
+        {
+          "kind": "def",
+          "name": "toRightKid",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.toRightKid",
+          "line": 2134
+        },
+        {
+          "kind": "def",
+          "name": "toLeftKid",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.toLeftKid",
+          "line": 2141
+        },
+        {
+          "kind": "def",
+          "name": "takeFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.takeFirst",
+          "line": 2147
+        },
+        {
+          "kind": "def",
+          "name": "giveFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.giveFirst",
+          "line": 2153
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.take",
+          "line": 2159
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.give",
+          "line": 2163
+        },
+        {
+          "kind": "def",
+          "name": "present",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.present",
+          "line": 2167
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.flow",
+          "line": 2171
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.balances",
+          "line": 2176
+        },
+        {
+          "kind": "def",
+          "name": "kidsFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.kidsFirst",
+          "line": 2186
+        },
+        {
+          "kind": "def",
+          "name": "kids",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.kids",
+          "line": 2192
+        },
+        {
+          "kind": "def",
+          "name": "generations",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.generations",
+          "line": 2197
+        },
+        {
+          "kind": "theorem",
+          "name": "swap",
+          "qualified_name_hint": "Becoming.SelectionPace.Swap.swap",
+          "line": 2205
+        },
+        {
+          "kind": "inductive",
+          "name": "Relatum",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.Relatum",
+          "line": 2217
+        },
+        {
+          "kind": "def",
+          "name": "levelFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.levelFirst",
+          "line": 2225
+        },
+        {
+          "kind": "def",
+          "name": "levelLater",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.levelLater",
+          "line": 2231
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.level",
+          "line": 2237
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.web",
+          "line": 2241
+        },
+        {
+          "kind": "def",
+          "name": "fromCarrier",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.fromCarrier",
+          "line": 2249
+        },
+        {
+          "kind": "def",
+          "name": "fromOther",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.fromOther",
+          "line": 2256
+        },
+        {
+          "kind": "def",
+          "name": "toPair",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.toPair",
+          "line": 2263
+        },
+        {
+          "kind": "def",
+          "name": "takeFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.takeFirst",
+          "line": 2269
+        },
+        {
+          "kind": "def",
+          "name": "giveFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.giveFirst",
+          "line": 2275
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.take",
+          "line": 2281
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.give",
+          "line": 2285
+        },
+        {
+          "kind": "def",
+          "name": "present",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.present",
+          "line": 2289
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.flow",
+          "line": 2293
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.balances",
+          "line": 2298
+        },
+        {
+          "kind": "def",
+          "name": "kidsFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.kidsFirst",
+          "line": 2308
+        },
+        {
+          "kind": "def",
+          "name": "kids",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.kids",
+          "line": 2314
+        },
+        {
+          "kind": "def",
+          "name": "marks",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.marks",
+          "line": 2319
+        },
+        {
+          "kind": "def",
+          "name": "generations",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.generations",
+          "line": 2325
+        },
+        {
+          "kind": "theorem",
+          "name": "arise",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.arise",
+          "line": 2330
+        },
+        {
+          "kind": "theorem",
+          "name": "stands",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.stands",
+          "line": 2338
+        },
+        {
+          "kind": "theorem",
+          "name": "exact",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.exact",
+          "line": 2346
+        },
+        {
+          "kind": "theorem",
+          "name": "uncapped",
+          "qualified_name_hint": "Becoming.SelectionPace.Uncapped.uncapped",
+          "line": 2358
+        },
+        {
+          "kind": "inductive",
+          "name": "Relatum",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.Relatum",
+          "line": 2379
+        },
+        {
+          "kind": "def",
+          "name": "levelFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.levelFirst",
+          "line": 2386
+        },
+        {
+          "kind": "def",
+          "name": "levelLater",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.levelLater",
+          "line": 2391
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.level",
+          "line": 2396
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.web",
+          "line": 2400
+        },
+        {
+          "kind": "def",
+          "name": "fromCarrier",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.fromCarrier",
+          "line": 2408
+        },
+        {
+          "kind": "def",
+          "name": "toKid",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.toKid",
+          "line": 2414
+        },
+        {
+          "kind": "def",
+          "name": "takeFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.takeFirst",
+          "line": 2419
+        },
+        {
+          "kind": "def",
+          "name": "giveFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.giveFirst",
+          "line": 2424
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.take",
+          "line": 2429
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.give",
+          "line": 2433
+        },
+        {
+          "kind": "def",
+          "name": "present",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.present",
+          "line": 2437
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.flow",
+          "line": 2441
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.balances",
+          "line": 2446
+        },
+        {
+          "kind": "def",
+          "name": "kidsFirst",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.kidsFirst",
+          "line": 2454
+        },
+        {
+          "kind": "def",
+          "name": "kids",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.kids",
+          "line": 2459
+        },
+        {
+          "kind": "def",
+          "name": "marks",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.marks",
+          "line": 2464
+        },
+        {
+          "kind": "def",
+          "name": "generations",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.generations",
+          "line": 2469
+        },
+        {
+          "kind": "theorem",
+          "name": "arise",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.arise",
+          "line": 2474
+        },
+        {
+          "kind": "theorem",
+          "name": "stands",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.stands",
+          "line": 2481
+        },
+        {
+          "kind": "theorem",
+          "name": "exact",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.exact",
+          "line": 2488
+        },
+        {
+          "kind": "theorem",
+          "name": "capped",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.capped",
+          "line": 2495
+        },
+        {
+          "kind": "theorem",
+          "name": "shrink",
+          "qualified_name_hint": "Becoming.SelectionPace.Shrink.shrink",
+          "line": 2505
+        }
+      ],
+      "declaration_counts": {
+        "def": 115,
+        "inductive": 6,
+        "theorem": 103
       },
       "textual_markers": {
         "sorry": [],

@@ -1,6 +1,6 @@
 # UE5: what lands, and how
 
-26 October 2026. AI-authored landing note for board item UE5, written with the revision against [REVIEW-UE5](REVIEW-UE5.md). The laws, witnesses and readings are in [NOTE.md](NOTE.md). This note says what lands and where, which rule 9 moves stay owners' decisions, and how the scripts in this kit land it. No script has been run beyond a parse check, and no chapter, record, board row or generated page has been changed.
+26 October 2026. AI-authored landing note for board item UE5, written with the revision against [REVIEW-UE5](REVIEW-UE5.md) and updated for the same reviewer's re-check of that revision, whose fixes are taken ([re-check](#re-check)). The laws, witnesses and readings are in [NOTE.md](NOTE.md). This note says what lands and where, which rule 9 moves stay owners' decisions, what is left as a follow-up, and how the scripts in this kit land it. No script has been run beyond a parse check, and no chapter, record, board row or generated page has been changed.
 
 **The decision.** Land one record, `pace-of-selection-within-what-flows-in` (family F01, region `life`, base `old-base`). Its home is 04 §4, directly after [what bounds offspring numbers](../../../../../../theories/becoming/chapters/04-LIFE.md#r-what-bounds-offspring-numbers), whose open clause it answers. It also gets one bullet in 08 §8's [known results beyond the table](../../../../../../theories/becoming/chapters/08-METHOD.md#beyond-the-table). The module is a leaf ([rule 9](#rule-9)). In the record [what bounds offspring numbers](../../../../../../theories/becoming/results/records/what-bounds-offspring-numbers.md), the next delta loses the clause UE5 answers ("a lineage open to inflow, bounded by what flows in") and the history gains an entry; its laws and their statements are unchanged.
 
@@ -15,11 +15,11 @@
   - two hypotheses, eight items it does not show, four counterexamples.
 - The repository's record lint (`style.lint`) and field validation found nothing on a preview built from it.
 
-**The module**, from [`tree/Becoming/`](tree/Becoming/). The scratch build ([log](scratch.log), 2026-10-25T16:01Z, checkout `94676cb2c`) had no error and no warning, every axiom report empty, and the core pure. The package's Lean is unchanged at `fde9115cb`.
+**The module**, from [`tree/Becoming/`](tree/Becoming/). The scratch build ([log](scratch.log), 2026-10-25T17:10Z, checkout `856967ac4`) had no error and no warning, every axiom report empty, and the core pure. The re-check's fixes changed docstrings only, and the counts are those the reviewer rebuilt.
 
 | Module | Theorems | Declarations | Imports | sha256 |
 |---|---|---|---|---|
-| `Becoming.SelectionPace` | 103 | 224 | `Becoming.Reproduction`, `Becoming.Entropy` | `92556df7…07a3ca` |
+| `Becoming.SelectionPace` | 103 | 224 | `Becoming.Reproduction`, `Becoming.Entropy` | `abf440ad…1a72b3` |
 
 - *The general part*: 41 theorems and 4 definitions (`lineage`, `carriedInflow`, `carriers`, `numbered`). The theorems are 13 laws, 13 corollaries, 2 restatements under exact transmission (`sum_exact`, `mean_step_exact`) and 13 helpers.
 - *The witnesses*: 62 theorems in 179 declarations, in six worlds (`Displacement`, `Fed`, `Inherited`, `Swap`, `Uncapped`, `Shrink`). Sixteen theorems state what a world shows; the other 46 are its facts.
@@ -27,7 +27,7 @@
 **Laws** (a summary; `m` is the least standing, and the script's text is the authority).
 1. **Offspring within what stood and what flowed in.** Take a step at which the flow balances on some relata followed by the offspring of some parents, each offspring coming to stand at `m` or more. Then `m` for each offspring, with what the relata stand at after the step, is at most what they stood at before and the list's inflow (`born_within_inflow`).
    - It is read on a parent and on a generation (`parent_within_inflow`, `generation_within_inflow`).
-   - Parents standing at no more than `m` pin every later member at exactly `m` (`standing_pinned`).
+   - A member of the next generation standing at no more than `m` as a parent stands at exactly `m` (`standing_pinned`). Over a stretch with the parents capped at each step before `T`, this pins generations 1 to T − 1, and generation T only where it is capped too.
    - In a web where activity needs support, `m` follows from a need (`stands_of_need`).
 2. **The response of a carried amount.** The carried inflow sums, lineage by lineage, what flows into each parent's lineage weighted by its amount, so what passes between carrying lineages counts (`carriedInflow`).
    - With exact transmission and each parent standing at no more than `m`: m·s′ ≤ m·s + the carried inflow (`total_within_carried`).
@@ -45,8 +45,9 @@
 7. **Witnesses.**
    - The natural statement fails (`Displacement.natural_fails`, `Displacement.rest_falls`).
    - The audit's candidate, with the same step's inflow, fails even with offspring number inherited (`Inherited.same_step_fails`).
-   - The bounds are met with equality (`Displacement.displacement`, `Displacement.factor`, `Fed.fed`, `Inherited.next_step_attained`, `Inherited.stretch_attained`).
-   - The carried inflow counts what passes between carrying lineages (`Swap.swap`).
+   - The response and selection laws, the factor law, the stretch and next-step laws and the offspring-number laws are met with equality (`Displacement.displacement`, `Displacement.factor`, `Inherited.stretch_attained`, `Inherited.next_step_attained`, `Fed.fed`).
+   - Not every law is attained: `share_within_rest` keeps one unit of slack in `Displacement.rest_falls`.
+   - The carried inflow counts what passes between carrying lineages, so `joint_within_carried` is strict there, none against two (`Swap.swap`).
    - Without parents standing at no more than `m`, or with the population shrinking, the response law fails (`Uncapped.uncapped`, `Shrink.shrink`).
 
 <a id="the-per-parent-law"></a>
@@ -61,9 +62,13 @@ Under them the parent leaves at most `k` offspring (`parent_within_factor`). The
 - `total_within_factor`: with these premises for every parent of a generation and exact transmission, s_{t+1} ≤ k·s_t;
 - `total_within_power`: with them at each of `T` steps, s_T ≤ k^T·s_0;
 - `share_within_power`: adding n_0 ≤ n_T, n_0·s_T ≤ k^T·(n_T·s_0);
-- `whole_within_power`: adding n_T ≤ s_T, n_0 ≤ k^T·s_0. So from `c` carriers among `N`, T ≥ log_k(N/c) = log_k(1/p₀).
+- `whole_within_power`: adding n_T ≤ s_T, n_0 ≤ k^T·s_0. So one substitution, from `c` carriers among `N`, takes T ≥ log_k(N/c) = log_k(1/p₀) steps.
 
-`Displacement` meets the factor law with equality for k = 2 (`Displacement.factor`). This is the reproductive-excess limit of Nei (1971) and Felsenstein (1971) in counts. It is near-definitional once the cap is supplied: the flow's part is turning a cap on what flows in into a cap on offspring.
+`Displacement` meets the factor law with equality for k = 2 (`Displacement.factor`).
+- *What it is.* The law bounds the steps one substitution takes from p₀ under a cap on each parent. That is the one-substitution form behind the reproductive-excess limit of Nei (1971) and Felsenstein (1971), in counts.
+- *What it is not.* It is not the spacing of successive substitutions that their limit states, and that spacing is not derived.
+- *How strong it is.* It is near-definitional once the cap is supplied: the flow's part is turning a cap on what flows in into a cap on offspring.
+- *The re-check's findings.* The law is right and can hold with growth, and both of `whole_within_power`'s further premises are needed. The premises are asked of every parent, though the re-check's probe proves the factor law from the carriers' alone, so the carriers-only form is a [follow-up](#follow-ups).
 
 **Conditions** (the record's hypotheses). No axiom, and these modelling choices:
 - discrete steps;
@@ -82,7 +87,7 @@ Dissipation is not used. Each law adds only the premises it states:
 
 **Does not show** (the record's eight items, in brief).
 - A pace bounded by what flows into the whole or into the population's own lineage: that is false.
-- Haldane's limit from selective deaths, which the generations do not list.
+- Haldane's limit from selective deaths, which the generations do not list, and the spacing of successive substitutions: `whole_within_power` bounds one substitution.
 - The carriers' joint law for an amount above one; how long exact transmission of offspring number with growth can last within a bounded inflow; drift and mutation.
 - A least standing from the dynamics: `m` is supplied, tied to need only through `stands_of_need`.
 - A tightening by dissipation.
@@ -98,13 +103,14 @@ Dissipation is not used. Each law adds only the premises it states:
 - *04 §4*, between `r-what-bounds-offspring-numbers` and `r-additive-part-of-offspring-variance`, the script adds:
   - the anchor `r-pace-of-selection-within-what-flows-in`;
   - a theorem paragraph with five bullets: offspring within what stood and what flowed in, the response of a carried amount, the carriers and the rest, the cap on each parent, and offspring number;
-  - a witnesses paragraph;
-  - a labelled reading [AI reading, D45]. It reads the result as Malthus's limit read on the carrying lineages, and the per-parent form as the reproductive-excess limit in counts. It is not Haldane's cost, which counts selective deaths. Wallace's soft selection is the setting of a part gaining from the rest.
+  - a witnesses paragraph, which names the laws the witnesses attain and says where they do not (`share_within_rest`'s unit of slack, `joint_within_carried` strict in `Swap`);
+  - a labelled reading [AI reading, D45]. It reads the result as Malthus's limit read on the carrying lineages. The per-parent form bounds the steps one substitution takes from p₀ under a cap on each parent: the form behind the reproductive-excess limit, not the spacing of successive substitutions. It is not Haldane's cost, which counts selective deaths. Wallace's soft selection is the setting of a part gaining from the rest.
 - *04, elsewhere*: the link reference `[selectionpace]` and an item in the Open list.
 - *08 §8*: one bullet at the end of the known results beyond the table. It says that:
   - the result is the Malthusian limit read on the carrying lineages, joined to Price's and Fisher's identities;
-  - the per-parent form is the Nei–Felsenstein limit in counts, not Haldane's cost;
+  - the per-parent form bounds one substitution under a cap on each parent, the form behind the Nei–Felsenstein limit, not the spacing of successive substitutions, and not Haldane's cost;
   - the variance bound is density regulation of heritable variance in fitness;
+  - the response, selection, factor, stretch, next-step and offspring-number laws are equalities in the witnesses;
   - the third part is yes and weak, carried by its premises;
   - the natural statement is false.
 
@@ -139,6 +145,20 @@ The review's moves are generalizations below that would change modules other own
 
 After landing, the same moves would change a landed module's names.
 
+## Follow-ups
+
+- **The cap laws asked of the carriers alone** (the re-check's R5, a suggestion).
+  - *Now.* `total_within_factor`, `total_within_power`, `share_within_power` and `whole_within_power` ask balance, arising at `m`, the cap on standing and the cap on inflow of every parent of the generation.
+  - *What suffices.* For the factor law the carriers' premises suffice: the re-check's probe proves it from them alone, with balance on the carriers' joint lineage (`total_within_factor_carriers`, every axiom report empty). That is the cap the classical bound uses, on what the favoured type leaves, and it lets the other members leave more than `k`.
+  - *Why it waits.* Adopting it changes the hypotheses of four laws and their uses in `Displacement`, not one line, so it is not made here.
+  - *If it is taken before landing.* The power and whole laws would follow by the same induction, still to be written. The module, its scratch log, `KIT_SHA256` and the record's text change with it, as for the rule 9 moves.
+  - *Meanwhile.* The module's docstrings say that the premises are asked of every parent and leave the carriers-only form open.
+- The others are the record's next delta:
+  - the carriers' joint law for an amount above one, in layers;
+  - the least standing tied to need beyond one lemma;
+  - how long exact transmission of offspring number with growth can last within a bounded inflow;
+  - a frozen test of the whole-level form.
+
 ## Not scripted: options for the lander
 
 Two edits would rewrite an existing line rather than add one, so research-check's scoped drift could bear on records citing those sections. The scripts leave them out:
@@ -151,8 +171,9 @@ Two edits would rewrite an existing line rather than add one, so research-check'
 - Run them from the checkout root of a clean landing worktree, on the then-current main, in the order below.
 - Each asserts that every edit applies exactly once and that what it adds is absent.
 - None has been run, and each parses.
-- On main at `fde9115cb`, a read-only check and a static evaluation of each script's edits found every anchor exactly once and every target absent.
-- `N` is the next study section; the last is §410, UE4's.
+- On main at `062def692`, after UE2's landing, a read-only check and a static evaluation of each script's edits found every anchor exactly once and every target absent. The reviewer's dry run found the same at `841d2cb51`.
+- MA4's and UE1b's kits, which land first, share only 08's list-end anchor with UE5. Each adds lines before it, so UE5's anchors stay unique after them. The lander re-runs the checks on the then-current main all the same.
+- `N` is the next free study section, read at landing; `texts_ue5.py` asserts that it is absent. Nothing in the kit assumes a number.
 
 **The steps.**
 1. `python3 -B <kit>/integrate_ue5.py`. It asserts the kit module's sha256 and copies the module into the package, then edits four places:
@@ -185,20 +206,25 @@ Two edits would rewrite an existing line rather than add one, so research-check'
 
 ```text
 STATE: landed 2026-10-DD (core receipt `RECEIPT`, study §N; record pace-of-selection-within-what-flows-in,
-home 04 §4; reviewed, REVIEW-UE5.md, every finding taken; the natural statement false, the pace within what
+home 04 §4; reviewed and re-checked, REVIEW-UE5.md, the review's 20 findings and the re-check's R1-R4 taken,
+R5 (the cap laws asked of the carriers alone) a follow-up; the natural statement false, the pace within what
 flows into the carrying lineages; third part against Price and Fisher yes and weak)
 
 QUEUE: UE5 landed (the pace of selection: a pace bounded by what flows into the whole is false, a part of a
 closed whole rising by drawing on the rest; under balance on the lineages, offspring standing at m or more,
 parents at most m and exact transmission, a total rises by at most what flows into the carrying lineages over m,
-counted lineage by lineage; a cap on each parent's lineage inflow caps growth at k^T, the reproductive-excess
-limit of Nei and Felsenstein in counts; read by offspring number, its variance within the next generation's
-inflow per member; the third part against Price and Fisher yes and weak; `Becoming.SelectionPace` 103 theorems
-in 224 declarations, a leaf, core receipt `RECEIPT`, study §N, new record pace-of-selection-within-what-flows-in,
-home 04 §4, what-bounds-offspring-numbers' next delta updated, row in the history file)
+counted lineage by lineage; a cap on each parent's lineage inflow caps growth at k^T, so one substitution from
+p₀ takes at least log_k(1/p₀) steps, the form behind the reproductive-excess limit, not the spacing of
+successive substitutions; read by offspring number, its variance within the next generation's inflow per
+member; the third part against Price and Fisher yes and weak; reviewed and re-checked; `Becoming.SelectionPace`
+103 theorems in 224 declarations, a leaf, core receipt `RECEIPT`, study §N, new record
+pace-of-selection-within-what-flows-in, home 04 §4, what-bounds-offspring-numbers' next delta updated, row in
+the history file)
 ```
 
-**Re-check.** The reviewer has not re-checked the revision. If a re-check is made, its verdict goes into three places before landing:
-- the study's review paragraph ([study_ue5.txt](study_ue5.txt));
-- the record's validation scope ([make_records_ue5.py](make_records_ue5.py));
-- the board state.
+<a id="re-check"></a>
+**Re-check.** The same reviewer re-checked the revision committed at `6170c9fa7` ([REVIEW-UE5](REVIEW-UE5.md#re-check-of-the-revision-6170c9fa7)), and recommended landing after R1–R4.
+- *What it confirmed.* All twenty findings hold. The Lean is sound, rebuilt at `6170c9fa7` and at main `841d2cb51` with 103 theorems in 224 declarations and every axiom report empty. The per-parent law is right.
+- *What was fixed.* Its four text fixes are made in the module's docstrings, NOTE, this note, the study, the record and the 04 and 08 texts ([NOTE](NOTE.md#the-re-check) gives each).
+- *What waits.* R5 is a [follow-up](#follow-ups).
+- *Where its verdict is recorded.* The study's review paragraph ([study_ue5.txt](study_ue5.txt)), the record's validation scope ([make_records_ue5.py](make_records_ue5.py)) and the suggested board state. No further re-check is pending.

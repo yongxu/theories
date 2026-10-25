@@ -94,7 +94,7 @@ Aliases: `readers drawn from the selected`, `从所选者中抽出的读者`, `s
 
 - 22 October 2026: added (MA2) on branch ma2, on Ren's question about OPENING's note on the meta-attractor; an independent read-only review applied.
 - 25 October 2026: landed on main, its owner idle since 22 October, by the session coordinating AJ on Ren's yes; merged with main, the statement carried from the retired canonical chapter's §4.5 to 02 §9, the core checker re-run on the merged tree (receipt 20261025T045617.350224Z); study section 401; readings D67 (D64 when proved). The laws are unchanged.
-- 26 October 2026 (MA4, study section 413): related record shaping-read-by-readers-drawn-from-the-selected added. The laws are unchanged.
+- 26 October 2026 (MA4, study section 414): related record shaping-read-by-readers-drawn-from-the-selected added. The laws are unchanged.
 
 </details>
 

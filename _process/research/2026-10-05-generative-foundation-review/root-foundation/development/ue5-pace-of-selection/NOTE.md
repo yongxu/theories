@@ -1,18 +1,18 @@
 # UE5: the pace of selection, within what flows in
 
-25 October 2026, revised 25–26 October against [REVIEW-UE5](REVIEW-UE5.md). AI-drafted Lean and text for board item UE5, claimed by the coordinating session. Only this kit was written. No record, chapter, board row or generated page was changed, and nothing is committed. [LANDING.md](LANDING.md) says what lands and how.
+25 October 2026, revised 25–26 October against [REVIEW-UE5](REVIEW-UE5.md), and on 26 October against the same reviewer's re-check of that revision ([below](#the-re-check)). AI-drafted Lean and text for board item UE5, claimed by the coordinating session. Only this kit was written; no record, chapter, board row or generated page was changed. The revision was committed at `6170c9fa7`; the re-check's fixes are not committed. [LANDING.md](LANDING.md) says what lands and how.
 
 ## Files
 
-- `tree/Becoming/SelectionPace.lean`: the module `Becoming.SelectionPace`, 2,499 lines. It is pure core: it imports `Becoming.Reproduction` and `Becoming.Entropy` and nothing else.
+- `tree/Becoming/SelectionPace.lean`: the module `Becoming.SelectionPace`, 2,518 lines. It is pure core: it imports `Becoming.Reproduction` and `Becoming.Entropy` and nothing else.
 - `scratch.log`: the final scratch build, with the command, the checkout HEAD and the source's sha256.
-- `REVIEW-UE5.md`: the independent review of the first draft (`cbf47d521`).
+- `REVIEW-UE5.md`: the independent review of the first draft (`cbf47d521`), and the same reviewer's re-check of the revision (`6170c9fa7`).
 - `LANDING.md` and the landing scripts (`integrate_ue5.py`, `texts_ue5.py`, `make_records_ue5.py`, `register_ue5.py`, `board_ue5.py`, `study_ue5.txt`). None has been run; each parses.
 - `tree/.build/`: scratch build output, git-ignored and regenerable.
 
 ## Build
 
-`python3 -B scratch_build.py <kit>/tree` (Lean v4.29.1), on the final bytes (sha256 `92556df7…07a3ca`), the 30 imported modules reused from passed steps.
+`python3 -B scratch_build.py <kit>/tree` (Lean v4.29.1), on the final bytes (sha256 `abf440ad…1a72b3`), the 30 imported modules reused from passed steps. The re-check's fixes changed docstrings only; the build before them, on `92556df7…07a3ca`, gave the same counts.
 
 **103 theorems in 224 declarations. No error and no warning (`unclean: []`). Every axiom report is empty (`with_axioms: {}`).** The witnesses use disjoint, exhaustive patterns only, since overlapping patterns pull in `propext`.
 
@@ -43,7 +43,7 @@ The premise words:
 - **sustained**: the population is not shrinking;
 - **exact**: exact transmission.
 
-Capped and arising at `m` together pin every member after the first generation at exactly `m` (`standing_pinned`). Members never stand above the least, so every offspring beyond replacement must be fed by what flows in at its own step. This is where the laws' strength and their narrowness both lie. `m` is a supplied level. It follows from a dependence only through `stands_of_need`: in a web where activity needs support (`Web.Dependent`), a relatum active at a step that requires its own standing at need `m` or more stands at `m` or more.
+Arising at `m` and capped together pin a member of the next generation at exactly `m` (`standing_pinned`). Over a stretch with the parents capped at each step before `T`, the members of generations 1 to T − 1 are pinned, and those of generation T only where they are capped too. A capped parent never stands above the least, so every offspring beyond one for each parent must be fed by what flows in at its own step. This is where the laws' strength and their narrowness both lie. `m` is a supplied level. It follows from a dependence only through `stands_of_need`: in a web where activity needs support (`Web.Dependent`), a relatum active at a step that requires its own standing at need `m` or more stands at `m` or more.
 
 **Offspring within what stood and what flowed in.**
 - `born_within_inflow`: some relata `es`, then the offspring of some parents arising at `m`, with the flow balanced on the list. Then m·born + standing(es) after the step ≤ standing(es) before + inflow(list).
@@ -72,9 +72,13 @@ Capped and arising at `m` together pin every member after the first generation a
 - `total_within_factor`: s_{t+1} ≤ k·s_t.
 - `total_within_power`: s_T ≤ k^T·s_0 over `T` such steps.
 - `share_within_power`: adding n_0 ≤ n_T, n_0·s_T ≤ k^T·(n_T·s_0), so the share multiplies by at most k^T.
-- `whole_within_power`: adding n_T ≤ s_T (every final member carries a 0–1 amount), n_0 ≤ k^T·s_0. From `c` carriers among `N`, T ≥ log_k(N/c) = log_k(1/p₀).
+- `whole_within_power`: adding n_T ≤ s_T (every final member carries a 0–1 amount), n_0 ≤ k^T·s_0. So one substitution, from `c` carriers among `N`, takes T ≥ log_k(N/c) = log_k(1/p₀) steps.
 
-This is the reproductive-excess limit of Nei (1971) and Felsenstein (1971) in counts. It is near-definitional once the cap is supplied: the flow's part is turning a cap on what flows in into a cap on offspring (`parent_within_inflow`). `Displacement` meets it with equality for `k = 2` (`Displacement.factor`).
+The law bounds the steps one substitution takes from p₀ under a cap on each parent: the one-substitution form behind the reproductive-excess limit of Nei (1971) and Felsenstein (1971), in counts. It is not the spacing of successive substitutions that their limit states, and that spacing is not derived: with exact transmission a lineage carries all its amounts together, so two amounts starting in the same carriers reach the whole together. It is near-definitional once the cap is supplied: the flow's part is turning a cap on what flows in into a cap on offspring (`parent_within_inflow`). `Displacement` meets the factor law with equality for `k = 2` (`Displacement.factor`).
+
+Two further points come from the re-check's probe, proved there with empty axiom reports and not in this module:
+- Both of `whole_within_power`'s premises beyond the power law are needed. `whole` is fixation for a 0–1 amount; without `sustained`, `Shrink` reaches the whole in one step with k = 1.
+- The premises are asked of every parent, while their bound caps only what the favoured type leaves. The factor law asking them of the carriers alone holds, with balance on the carriers' joint lineage (the probe's `total_within_factor_carriers`), and the power and whole laws would follow by the same induction. It is left as a follow-up ([LANDING](LANDING.md#follow-ups)), since adopting it changes the hypotheses of four laws and their uses.
 
 **Offspring number.**
 - `number_step_within_inflow`: read by offspring number, exact at t, and the lineage at t+1 balanced and arising at `m`. Then m·(n₁² + V_t) ≤ n_t·(standing at t+1 + inflow at t+1), where V_t is the squared differences over pairs.
@@ -109,7 +113,7 @@ This is the reproductive-excess limit of Nei (1971) and Felsenstein (1971) in co
 - their offspring stand at `m`;
 - no formation takes more from a carrying lineage than it gives to it.
 
-The response and selection laws are equalities where, besides, the population's size stays. The witnesses are instances of this equality case. Attainment shows the inequalities lose nothing beyond the conservation identity. It does not show stringency, and "attained" should be read as no more.
+The response and selection laws are equalities where, besides, the population's size stays. The witnesses are instances of this equality case for the response, selection, factor, stretch, next-step and offspring-number laws. Not every law is attained: `share_within_rest` keeps one unit of slack in `Displacement.rest_falls` (the unit the carrier takes and gives to none), and `joint_within_carried` is strict in `Swap`, none against two. Attainment shows the inequalities lose nothing beyond the conservation identity. It does not show stringency, and "attained" should be read as no more.
 
 ## Third part against Price and Fisher
 
@@ -122,7 +126,7 @@ The response and selection laws are equalities where, besides, the population's 
   - Malthus (1798), the main one: reproduction limited by what sustains it, here read on the lineages carrying an amount.
   - Smith and Fretwell (1974): `parent_within_inflow` is the budget constraint of their model (its premise; its result, the best offspring size, is not read).
   - Density regulation of heritable variance in fitness: `number_unfed_uniform` in counts, under exact transmission of offspring number.
-  - Haldane (1957): his cost is a total of selective deaths, logarithmic in 1/p₀. The model has no selective deaths, since generations list only offspring that come to stand. `steps_to_move` is linear and is not Haldane's cost. The counting analogue of the limit is the per-parent law, the Nei–Felsenstein form.
+  - Haldane (1957): his cost is a total of selective deaths, logarithmic in 1/p₀. The model has no selective deaths, since generations list only offspring that come to stand. `steps_to_move` is linear and is not Haldane's cost. The per-parent law is the one-substitution form behind the Nei–Felsenstein limit, in counts; the spacing of successive substitutions is not derived.
 - **The audit's candidate as stated**, with the inflow of the same step, is false whether or not offspring number is transmitted exactly (`Displacement.displacement`; with offspring number inherited, `Inherited.same_step_fails`). What holds is a variant with the inflow of the next step into the next generation's lineage, where offspring number is transmitted exactly (`response_sq_within_inflow`, attained in `Inherited.next_step_attained`). Without that premise the variant fails too (`Displacement.spread_needs_inheritance`).
 - **The test.** The variance ceiling Var ≤ I/(m·n) needs exact transmission of offspring number, which no population meets, and its `I` is the inflow into the next generation's lineage net of what members take, counted lineage by lineage. As stated it tests the idealization. A test that can be frozen is the whole-level form (`share_within_rest`), whose quantities are measured on the whole population: for a marker carried at zero or one, in a population whose members stand at a fixed least amount (for example, cells at a fixed biomass just after division), `m` times the carriers' rise is at most what the rest of the population and its medium lose, plus the supply. The risk is low: a failure would show the accounting misread (the least standing, the rest's standing, the supply), not a law refuted.
 
@@ -131,10 +135,11 @@ The response and selection laws are equalities where, besides, the population's 
 - **Premises, stated where used, not derived:** the least standing `m` (beyond `stands_of_need`), parents standing at no more than `m`, exact transmission, a sustained population.
 - **A bound by the inflow into the whole family or into the population's own lineage.** It is false (`Displacement.natural_fails`).
 - **Haldane's cost in selective deaths.**
+- **The spacing of successive substitutions.** `whole_within_power` bounds one substitution.
 - **The carriers' joint law for an amount above one**; it would go in layers (the members whose amount is at least `j`, for each `j`).
 - **How long exact transmission of offspring number with growth can last within a bounded inflow.** The closed case is `Reproduction.Flow.closed_lineage_lowered`.
 - **Drift and mutation.**
-- **Dissipation is not used.** Dissipation on the lineage's own family would leave it no inflow (`Flow.DissipatesOn.gainlessOn`, `Flow.gainlessOn_iff_inflow`; the closed case, `Reproduction.Flow.born_within_stock`). Dissipation on a wider family does not tighten these bounds: `Displacement` is dissipated on its whole family and attains them.
+- **Dissipation is not used.** Dissipation on the lineage's own family would leave it no inflow (`Flow.DissipatesOn.gainlessOn`, `Flow.gainlessOn_iff_inflow`), the case dissipated on that `Reproduction.Flow.born_within_stock` treats. Dissipation on a wider family does not tighten these bounds: `Displacement` is dissipated on its whole family and attains the response and selection laws.
 - **Modelling choices:**
   - natural-number amounts and standings, discrete steps, generations each listed as the offspring of the last, each offspring coming to stand across its step;
   - a lineage's family is listed as parents then offspring and may repeat a relatum; the bounds still hold, but reading the inflow as the lineage's own needs a listing without repetition.
@@ -177,9 +182,28 @@ The module is a **leaf**. It joins `Reproduction` and `Entropy`, neither of whic
 
 The probe's witness worlds reported `propext` (overlapping patterns); `Inherited`, `Swap`, `Uncapped` and `Shrink` were rewritten with disjoint patterns and have empty axiom reports. The probe's R7 is the per-parent law, renamed (`fecund_number` → `parent_within_factor`, `fecund_step` → `total_within_factor`, `fecund_stretch` → `total_within_power`). Its general laws R1 (a balanced-on stock law, with `born_within_inflow` keeping what the list loses) and R2 (dissipated on, a family has no inflow) were not taken into the module. Both are statements about `Flow` whose home is `Entropy` (rule 9), and R1 is the Entropy owner's decision; the module's text cites R2's two Entropy lemmas instead.
 
+## The re-check
+
+The same reviewer re-checked the revision committed at `6170c9fa7` ([REVIEW-UE5](REVIEW-UE5.md#re-check-of-the-revision-6170c9fa7)). Its verdict:
+- the revision takes all twenty findings, and each fix holds;
+- the Lean is sound (rebuilt at `6170c9fa7` and at main `841d2cb51`: 103 theorems in 224 declarations, every axiom report empty);
+- the per-parent law is right and can hold with growth, and both of `whole_within_power`'s further premises are needed;
+- the landing scripts apply exactly once in a scratch dry run.
+
+It found 1 overclaim, 3 imprecisions and 1 suggestion, all in text, and recommended landing after R1–R4. The findings use the re-check's own labels, not the first probe's. All five were taken, R5 as a follow-up:
+
+| # | Finding | Fix |
+|---|---|---|
+| R1 | Overclaim: `whole_within_power` bounds one substitution, where the texts called it the Nei–Felsenstein spacing of successive substitutions | Module, NOTE, LANDING, study, record and the 04 and 08 texts: the steps one substitution takes from p₀ under a cap on each parent, the form behind the classical limit, not the spacing of successive substitutions. The spacing is added to the record's scope items, and the alias is narrowed |
+| R2 | `born_within_stock` assumes dissipation, not closure | "The case dissipated on" for "the closed case" (module, NOTE, record's scope item); "its sibling for a family dissipated on" in the record's link to what bounds offspring numbers |
+| R3 | Not every law is an equality in the witnesses | The attained laws are named (response, selection, factor, stretch, next-step, offspring number); `share_within_rest`'s unit of slack and `joint_within_carried`'s strictness are stated (04 and 08 texts, study, NOTE, LANDING) |
+| R4 | Stale facts | No study number assumed (`N` is read at landing); the line count and hashes updated; the stretch reading of `standing_pinned` corrected (generations 1 to T − 1, and generation T only where capped); `steps_to_move`'s attainment at T = 1 stated as the witnesses'; "not re-checked" dropped |
+| R5 | Suggestion: the cap is needed only at carriers | Not a one-line change (the hypotheses of four laws and their uses), so it is a follow-up in [LANDING](LANDING.md#follow-ups). The module's docstrings say the premises are asked of every parent and leave the carriers-only form open |
+
 ## Open issues
 
 - The carriers' joint law for an amount above one (layers).
 - The least standing tied to need beyond the one lemma.
-- `steps_to_move`'s uniform cap per step is attained only with T = 1; `stretch_within_carried` is attained over two steps (`Inherited.stretch_attained`).
-- The literature verdicts come from the AI's prior knowledge and the review's sources; no new search was made for this revision. The revision has not been re-checked by the reviewer.
+- The cap laws asked of the carriers alone (the re-check's R5; [LANDING](LANDING.md#follow-ups)).
+- The witnesses attain `steps_to_move`'s uniform cap per step only at T = 1 (in `Displacement`, not stated as a theorem); nothing shows that it cannot be attained over a longer stretch. `stretch_within_carried` is attained over two steps (`Inherited.stretch_attained`).
+- The literature verdicts come from the AI's prior knowledge and the review's sources; no new search was made for this revision.

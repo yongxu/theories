@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path.cwd()
 HERE = Path(__file__).resolve().parent
 PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
-KIT_SHA256 = '92556df7caaa3c29562aff87b652c36d400e64ff8ce052f734803433c307a3ca'
+KIT_SHA256 = 'abf440add3b6dd9c9a94ce3f0efe7b4fb9f23f9607fd296a8a9268a96a1a72b3'
 
 
 def edit(path, old, new):

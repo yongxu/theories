@@ -18392,7 +18392,26 @@ Output→input: fulfillment-chance-floor, sum-over-histories-exact → condition
 
 **Readings** [AI reading, D45]. A share read as a probability is a number of situations of a kind, so conditioning, Bayes's rule and a posterior are counting. Given the weighting, a record of the course so far bears on a break within the horizon only through the margin it shows and the steps it leaves: the counting form of T6's seen half, with the weighting as the independently warranted model T6 allows.
 
-## 413. What comes back to the shapers, read by readers drawn from the selected (MA4)
+## 413. "Goes on past" an end read as "continues past" (OC3)
+
+The glossary gives "goes on" one sense, 延: going on along some branch, without end ([02 §1](../../../../theories/becoming/chapters/02-MAP.md#branches)). `«过亡而续»` shows less. Under a coarser class, what continues an occurrence at which a finer line ends is reached, so the line continues past that end; in a finite net it still ends, later. Read with the glossary, "goes on past one's end" claims an endless continuation the theorem does not give. OC2 found the phrase in the live texts (§411) and left it for this pass.
+
+```text
+Result(s): none new; wording only.
+Delta: "goes on past" an end replaced by "continues past": D64's reading in 07 §4.3 and P-15's quote of it; the record
+       need-and-feeding-read-with-time (what it does not show, its related entry, a history line); D64 in
+       DELEGATED-CHOICES; the title of 07 §4.6's step 2 and P-20's step 2, on the PF line owner's answer. No statement
+       changes.
+Supplied premises / correspondence: none.
+Evidence: the glossary's "goes on" (02 §1) and the statement of «过亡而续».
+Boundary: frozen texts keep the phrase (earlier sections of this study, PW's note, PF's philosophy rounds, the kits and
+       history). "Goes on" stays where it means 延: "goes on without end", and "can go on through new members" (07 §4.5).
+Output → input: 07 §4.3 and §4.6; PHILOSOPHY.md P-15 and P-20; the record need-and-feeding-read-with-time; D64.
+```
+
+The first sentence of `Becoming.GrammarPath`'s module doc keeps the phrase until the next landing that rebuilds the module, which applies the same change: the PF line's owner chose this, since a comment alone is not worth a checker run and the re-binding of the records bound to the module.
+
+## 414. What comes back to the shapers, read by readers drawn from the selected (MA4)
 
 MA3 (§403, §409) proved what selects the capacity to shape the rule, and that on the reading of what comes back from the share (`byBack`) `ReadsShare` is a statement about what comes back. MA2 (§401) proved where `ReadsShare` comes from when the rule's readers are drawn from those it selects. Both records said that no theorem joins the two. AJ's plan reads the meta-attractor as two of the joint selection's conditions failing together (control over the selection selected, and the rule it shapes locked), and without the join that sentence was a reading. MA4 joins them: MA3's rule after shaping, read by MA2's pool. It is step 6 of board item AJ's plan. It serves alignment researchers reading the dossier (AJ4), which has to say what the join shows and what it does not.
 
