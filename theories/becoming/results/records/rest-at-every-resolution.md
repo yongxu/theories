@@ -102,7 +102,7 @@ The rest theorem with a fixed unit (continued-change-needs-openness) is the case
 - related, not a proved adapter: [theory-of-becoming-foundation](theory-of-becoming-foundation.md). Plan R1: one dimension of the representation's scope, the unit of amounts; this is not the deduction of the whole without axioms.
 - related, not a proved adapter: [rest-with-refinement-counted](rest-with-refinement-counted.md). There the splitting of the unit is counted as a formation that gives without taking, the spine's premises bring rest at every resolution with no premise added, and this record's witnesses are fed by the refinement; this record gives the laws without counting it.
 
-**Used by:** [entropy-history-and-record](entropy-history-and-record.md) · [laws-at-finer-units](laws-at-finer-units.md) · [least-loss-from-entropy-production](least-loss-from-entropy-production.md) · [rest-with-refinement-counted](rest-with-refinement-counted.md)
+**Used by:** [entropy-history-and-record](entropy-history-and-record.md) · [laws-at-finer-units](laws-at-finer-units.md) · [least-loss-from-entropy-production](least-loss-from-entropy-production.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [rest-with-refinement-counted](rest-with-refinement-counted.md)
 
 <a id="sources--来源"></a>
 ### Sources

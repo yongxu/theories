@@ -2900,6 +2900,18 @@
    "page": "theories/becoming/results/records/loss-beyond-a-region.md"
   },
   {
+   "id": "record:loss-read-in-time-by-the-others",
+   "type": "result",
+   "record": "loss-read-in-time-by-the-others",
+   "title": "The loss read in time by the others, joined to the critical mass",
+   "title_zh": "他者及时读损失，接于临界量",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/loss-read-in-time-by-the-others.md"
+  },
+  {
    "id": "record:losses-of-the-sum-over-histories",
    "type": "result",
    "record": "losses-of-the-sum-over-histories",
@@ -7258,6 +7270,17 @@
    "name": "Becoming.DrawnShaping",
    "level": "L1",
    "theorems": 31,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ReadInTime",
+   "type": "module",
+   "name": "Becoming.ReadInTime",
+   "level": "L1",
+   "theorems": 34,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -27452,6 +27475,12 @@
    "anchor": "r-shaping-read-by-readers-drawn-from-the-selected"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-loss-read-in-time-by-the-others"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
@@ -31490,6 +31519,11 @@
   {
    "from": "module:Becoming.Ranking",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadInTime",
+   "to": "module:Becoming.DrawnShaping",
    "type": "imports"
   },
   {
@@ -42283,6 +42317,71 @@
    "type": "related"
   },
   {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "module:Becoming.DrawnShaping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "module:Becoming.ReadInTime",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "module:Becoming.Recurrence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "module:Becoming.Resolution",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "module:Becoming.RuleCapture",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "module:Becoming.RuleShaping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "record:capture-through-the-rule",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "record:closed-capture",
+   "type": "related"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "record:readers-drawn-from-the-selected",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "record:rest-at-every-resolution",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:loss-read-in-time-by-the-others",
+   "to": "record:shaping-the-rule-selected-by-what-comes-back",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:losses-of-the-sum-over-histories",
    "to": "module:Becoming.Courses",
    "type": "proved-in"
@@ -45279,6 +45378,11 @@
   },
   {
    "from": "record:readers-drawn-from-the-selected",
+   "to": "record:loss-read-in-time-by-the-others",
+   "type": "related"
+  },
+  {
+   "from": "record:readers-drawn-from-the-selected",
    "to": "record:shaping-read-by-readers-drawn-from-the-selected",
    "type": "related"
   },
@@ -47900,6 +48004,11 @@
   {
    "from": "record:shaping-read-by-readers-drawn-from-the-selected",
    "to": "record:closed-capture",
+   "type": "related"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:loss-read-in-time-by-the-others",
    "type": "related"
   },
   {
@@ -53490,6 +53599,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-loops-within-what-a-law-reads",
    "to": "record:loops-within-what-a-law-reads",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
+   "to": "record:loss-read-in-time-by-the-others",
    "type": "states"
   },
   {

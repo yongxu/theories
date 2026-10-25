@@ -96,8 +96,8 @@
       "kind": "correspondence"
     },
     {
-      "en": "That control over the selection left unselected and a lock left in time are independent conditions: in this model, whose rule is read from the share alone, every course from the rule read at its start is locked one way or the other (drawn_locked_either), so control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), which is not joined.",
-      "zh": "控制不被选与及时离开锁定为相互独立之条件：此模型之规则唯读自份额，自起点所读之规则起之每一进程皆锁于一向或另一向（drawn_locked_either），故控制不被选本身不予及时离开之锁定，其逆于此不能示；离开须读份额之外者（ClosedCapture.Thinned），未接。",
+      "en": "That control over the selection left unselected and a lock left in time are independent conditions: in this model, whose rule is read from the share alone, every course from the rule read at its start is locked one way or the other (drawn_locked_either), so control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), joined in loss-read-in-time-by-the-others (MA4b).",
+      "zh": "控制不被选与及时离开锁定为相互独立之条件：此模型之规则唯读自份额，自起点所读之规则起之每一进程皆锁于一向或另一向（drawn_locked_either），故控制不被选本身不予及时离开之锁定，其逆于此不能示；离开须读份额之外者（ClosedCapture.Thinned），接于 loss-read-in-time-by-the-others（MA4b）。",
       "kind": "non-implication"
     },
     {
@@ -106,8 +106,8 @@
       "kind": "scope"
     },
     {
-      "en": "Readers who learn (hi and lo changing with the share), a cost changing with the share, readers not counted as the population counts them, starts not under the rule read there (a rule in force against the reading can carry the share across the mass, RuleCapture.Reversed.not_absorbed), a loss read by part of the readers once the shapers pass the mass (ClosedCapture.Thinned, not joined), and the mixed point where lo > hi and hi < c ≤ lo.",
-      "zh": "会学之读者（hi、lo 随份额而变）、随份额而变之成本、不依群体计数之读者、不在彼处所读之规则下之起点（与所读相反之所行规则可携份额越过临界量，RuleCapture.Reversed.not_absorbed）、塑规者越过临界量后由部分读者所读之损失（ClosedCapture.Thinned，未接），及 lo > hi 且 hi < c ≤ lo 之混合点。",
+      "en": "Readers who learn (hi and lo changing with the share), a cost changing with the share, readers not counted as the population counts them, starts not under the rule read there (a rule in force against the reading can carry the share across the mass, RuleCapture.Reversed.not_absorbed), a loss read by part of the readers once the shapers pass the mass (ClosedCapture.Thinned, joined in loss-read-in-time-by-the-others, MA4b), and the mixed point where lo > hi and hi < c ≤ lo.",
+      "zh": "会学之读者（hi、lo 随份额而变）、随份额而变之成本、不依群体计数之读者、不在彼处所读之规则下之起点（与所读相反之所行规则可携份额越过临界量，RuleCapture.Reversed.not_absorbed）、塑规者越过临界量后由部分读者所读之损失（ClosedCapture.Thinned，接于 loss-read-in-time-by-the-others，MA4b），及 lo > hi 且 hi < c ≤ lo 之混合点。",
       "kind": "scope"
     },
     {
@@ -152,8 +152,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T165537.368039Z）：Becoming.DrawnShaping，38 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查（十六项意见，无不健全之 Lean），依工作包说明采纳，见研究第 414 节；未经人审。"
   },
   "next_delta": {
-    "en": "A loss read by the others among the readers once the shapers pass the critical mass, the readers' timing (ClosedCapture.Thinned) joined to the rise; readers who learn; a cost changing with the share; noise and the long-run state; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.",
-    "zh": "塑规者越过临界量后由读者中他者所读之损失，读者之时序（ClosedCapture.Thinned）接于其升；会学之读者；随份额而变之成本；噪声与长期状态；彼处所读起点之一般锁定、upper_strictly 与 present_along_course 提入 RuleCapture（规则 9，由其所有者定）；人之独立审查。"
+    "en": "Readers who learn; a cost changing with the share; noise and the long-run state; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.",
+    "zh": "会学之读者；随份额而变之成本；噪声与长期状态；彼处所读起点之一般锁定、upper_strictly 与 present_along_course 提入 RuleCapture（规则 9，由其所有者定）；人之独立审查。"
   },
   "correspondence": {
     "en": "Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner: a shaper meeting a shaper leaves a + p + hi, a shaper meeting an other a + p + lo, an other meeting anyone a + p + c. The critical mass is its mixed equilibrium, at the shapers' share (c − lo)/(hi − lo), and risk dominance compares hi + lo with 2c (Harsanyi and Selten 1988; Skyrms 2004). Both readings give each other a + c + p, so the rule read is the frequency-weighted mean of the two readings up to a common factor, and reading at every step is discrete-time replicator selection up to a lag of one step (Hofbauer and Sigmund 1998). The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989), here decided by the start rather than by random arrivals; under noise the risk-dominant state is selected in the long run (Kandori, Mailath and Rob 1993; Young 1993). A biological comparator for readers favouring their own kind is the greenbeard (Gardner and West 2010; only the bibliographic record verified). Read on the meta-attractor (theories/meta-attractor), this joins its second order, selection for control over selection, to its closed loop. The lock half is near-definitional (RuleCapture's locked_stays and locked_not_below at a start read there), and drawn_reads_iff is a two-step composition (ClosedCapture.Drawn.pool_reads_iff, then shaped_le_iff); what is new on the spine is the critical-mass computation, which is elementary.",
@@ -213,6 +213,13 @@
       "detail": {
         "en": "Where hi ≤ lo the rule read reads against the share (drawn_against).",
         "zh": "hi ≤ lo 时所读之规则逆份额而读（drawn_against）。"
+      }
+    },
+    {
+      "id": "loss-read-in-time-by-the-others",
+      "detail": {
+        "en": "MA4b: the others among the readers read a loss once it reaches a bound; their reading leaves this module's lock only before their late reading would favour the shapers, for good while it still favours them a step on, with a lag of one step, at most one step between, and a deadline.",
+        "zh": "MA4b：读者中之他者于损失及一界后读之；其读唯于其迟读偏向塑规者之前方离本模块之锁定，下一步之迟读仍偏向他者时则永离，滞后一步，其间至多一步，且有期限。"
       }
     }
   ],
@@ -310,7 +317,7 @@
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "4705493b0df17017398a5eaed0b198aa0cfb8db5bd433ccaecb8ebf178d5b011"
+      "sha256": "f184a77fd58db54aa5e7875c3d6a8ee858b9f15feb3e505da9cb79a0f0e55eae"
     },
     {
       "path": "theories/meta-attractor/README.md",
@@ -331,6 +338,10 @@
     {
       "en": "26 October 2026: added (MA4), the join of the capacity to shape the rule with the readers drawn from the selected, after one independent review; study section 414.",
       "zh": "2026年10月26日：新增（MA4），塑规之能与取自被选者之读者之接合，经一次独立审查；研究第 414 节。"
+    },
+    {
+      "en": "26 October 2026 (MA4b, study section 420): the readers' timing joined to the critical mass in loss-read-in-time-by-the-others; the next step, the two scope items on the readers' timing, and a related record updated. The laws are unchanged.",
+      "zh": "2026年10月26日（MA4b，研究第 420 节）：读者之时序接于临界量，见 loss-read-in-time-by-the-others；下一步、关于读者时序之二范围条目及相关记录随之更新。诸律不变。"
     }
   ]
 }

@@ -119,6 +119,8 @@ The goal is an alignment of the joint selection, humans, institutions and traine
 
 [closed-capture](theories/becoming/results/records/closed-capture.md): `recorded-checked`
 
+[loss-read-in-time-by-the-others](theories/becoming/results/records/loss-read-in-time-by-the-others.md): `recorded-checked`
+
 [open-form-realization-under-revision](theories/becoming/results/records/open-form-realization-under-revision.md): `recorded-checked`
 
 [practical-judgment-under-living-significance](theories/becoming/results/records/practical-judgment-under-living-significance.md): `reviewed-scoped`

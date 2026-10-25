@@ -68,7 +68,7 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 - related, not a proved adapter: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). MA2: ReadsShare from a pool of readers drawn from the selected; here ReadsShare is equivalent to what comes back to the shapers being monotone in their share. The two are joined in shaping-read-by-readers-drawn-from-the-selected (MA4), where the pool of two rules after shaping reads the share exactly where lo ≤ hi.
 - related, not a proved adapter: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). MA4: this module's rule after shaping read by readers drawn from the selected; the threshold assumed here (thresholdBack) is replaced there by a critical mass located by who reads and the cost.
 
-**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
+**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -3812,11 +3812,6 @@
    "category": "general-structure",
    "reason": "a law of selection on counts of two kinds (RuleCapture's CarrierCounts) for every rule after shaping; the base states no shaping of the rule, so nothing on it uses this law"
   },
-  "Becoming.RuleShaping.pow_pos_of_pos": {
-   "module": "Becoming.RuleShaping",
-   "category": "support",
-   "reason": "a one-line unpacking of the module's own definitions"
-  },
   "Becoming.RuleShaping.shaped_shift": {
    "module": "Becoming.RuleShaping",
    "category": "support",

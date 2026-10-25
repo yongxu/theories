@@ -1066,6 +1066,11 @@
    "base": "old-base",
    "note": "loss beyond nested regions"
   },
+  "loss-read-in-time-by-the-others": {
+   "region": "map",
+   "base": "general",
+   "note": "ReadInTime MA4b: the loss read in time by the others, joined to the critical mass"
+  },
   "losses-of-the-sum-over-histories": {
    "region": "root",
    "base": "general",
@@ -3322,6 +3327,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "what C ranks: sharing over consumption, restraint over overdraw"
+  },
+  "Becoming.ReadInTime": {
+   "region": "map",
+   "base": "general",
+   "note": "MA4b the readers' timing joined to the critical mass"
   },
   "Becoming.Reading": {
    "region": "root",

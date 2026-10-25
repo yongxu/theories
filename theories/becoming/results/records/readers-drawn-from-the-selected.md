@@ -67,8 +67,9 @@ The meta-attractor corpus's "selecting the selectors", the passage from being se
 - related, not a proved adapter: [a-reading-against-the-share-does-not-ratchet](a-reading-against-the-share-does-not-ratchet.md). The pool whose carriers read less favourably for the carriers reads against the share, the case in which the rise the lock rests on does not form.
 - related, not a proved adapter: [a-pool-read-by-its-majority](a-pool-read-by-its-majority.md). A pool read by its majority separates no more than the pool; here a pool of readings, whose counts decide the rule's direction.
 - related, not a proved adapter: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). MA4: the pool of two of RuleShaping's rules after shaping, hi coming back where a shaper reads and lo where an other does; there ReadsShare is equivalent to lo ≤ hi, and a critical mass decides the direction.
+- related, not a proved adapter: [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md). MA4b: Thinned joined to MA4's critical mass; read past the bound, the counts when the loss is read decide, exactly and with no mirror premise, and a reading turns the course only before the late reading would favour the shapers.
 
-**Used by:** [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
+**Used by:** [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -95,6 +96,7 @@ Aliases: `readers drawn from the selected`, `从所选者中抽出的读者`, `s
 - 22 October 2026: added (MA2) on branch ma2, on Ren's question about OPENING's note on the meta-attractor; an independent read-only review applied.
 - 25 October 2026: landed on main, its owner idle since 22 October, by the session coordinating AJ on Ren's yes; merged with main, the statement carried from the retired canonical chapter's §4.5 to 02 §9, the core checker re-run on the merged tree (receipt 20261025T045617.350224Z); study section 401; readings D67 (D64 when proved). The laws are unchanged.
 - 26 October 2026 (MA4, study section 414): related record shaping-read-by-readers-drawn-from-the-selected added. The laws are unchanged.
+- 26 October 2026 (MA4b, study section 420): related record loss-read-in-time-by-the-others added. The laws are unchanged.
 
 </details>
 

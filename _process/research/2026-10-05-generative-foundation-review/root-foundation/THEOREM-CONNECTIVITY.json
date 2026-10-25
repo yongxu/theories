@@ -1,11 +1,11 @@
 {
- "commit": "ecb0ce662518dfe873f64f1abb2cf539af3390fc",
+ "commit": "251108e6478196dcd1bf2b9a04c33f92c9494cf6",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261025T184500.197330Z",
+ "core_receipt_at_commit": "20261025T191425.159994Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 330,
- "constants": 46270,
- "spine_theorems": 15489,
+ "tracked_modules": 331,
+ "constants": 46319,
+ "spine_theorems": 15523,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,18 +27,18 @@
  },
  "classes": {
   "statement on both families": 1060,
-  "statement on Process/Frame/Run/Trace": 3020,
+  "statement on Process/Frame/Run/Trace": 3043,
   "statement on World/Flow/Web": 3851,
   "statement on the base only through a law of its own module": 261,
   "proof through a base family": 191,
-  "used by a theorem on the base": 5444,
+  "used by a theorem on the base": 5463,
   "instance on the base recorded": 155,
-  "apart: own vocabulary": 1401,
-  "apart: prelude-only statement": 106
+  "apart: own vocabulary": 1396,
+  "apart: prelude-only statement": 103
  },
- "apart": 1507,
- "apart_general_structure_by_design": 633,
- "apart_otherwise": 874,
+ "apart": 1499,
+ "apart_general_structure_by_design": 629,
+ "apart_otherwise": 870,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 109,
   "of them on the base": 72,
@@ -74,10 +74,10 @@
   "Becoming.LeastLoss": 2
  },
  "apart_used_by_nothing": 878,
- "apart_roots": 879,
+ "apart_roots": 878,
  "apart_roots_by_category": {
   "model-witness": 392,
-  "support": 129,
+  "support": 128,
   "general-structure": 324,
   "restates": 13,
   "logical-strength": 12,
@@ -203,13 +203,13 @@
    38,
    40
   ],
-  "Becoming.RuleShaping": [
-   36,
-   52
-  ],
   "Becoming.GrammarLaws": [
    34,
    113
+  ],
+  "Becoming.RuleShaping": [
+   32,
+   52
   ],
   "Becoming.HexagramPlaces": [
    32,
@@ -291,10 +291,6 @@
    11,
    18
   ],
-  "Becoming.DrawnShaping": [
-   11,
-   31
-  ],
   "Becoming.PartialReadout": [
    11,
    25
@@ -366,6 +362,10 @@
   "Becoming.ChoiceCountCapture": [
    7,
    35
+  ],
+  "Becoming.DrawnShaping": [
+   7,
+   31
   ],
   "Becoming.Reconfiguration": [
    7,
@@ -718,19 +718,19 @@
  },
  "rings": {
   "core": {
-   "modules": 314,
-   "theorems": 14729,
-   "apart": 1413,
+   "modules": 315,
+   "theorems": 14763,
+   "apart": 1405,
    "classes": {
     "statement on both families": 1046,
-    "statement on Process/Frame/Run/Trace": 2809,
+    "statement on Process/Frame/Run/Trace": 2832,
     "statement on World/Flow/Web": 3826,
     "statement on the base only through a law of its own module": 215,
     "proof through a base family": 180,
-    "used by a theorem on the base": 5085,
+    "used by a theorem on the base": 5104,
     "instance on the base recorded": 155,
-    "apart: own vocabulary": 1308,
-    "apart: prelude-only statement": 105
+    "apart: own vocabulary": 1303,
+    "apart: prelude-only statement": 102
    }
   },
   "instances": {
@@ -841,8 +841,8 @@
  },
  "records_by_best_alias_class": {
   "statement on both families": 77,
-  "statement on Process/Frame/Run/Trace": 147,
-  "statement on World/Flow/Web": 130,
+  "statement on Process/Frame/Run/Trace": 148,
+  "statement on World/Flow/Web": 131,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 4,
   "used by a theorem on the base": 10,
@@ -9663,7 +9663,7 @@
   "Becoming.ClosedCapture.Thinned.late_majority": "statement on Process/Frame/Run/Trace",
   "Becoming.ClosedCapture.Thinned.late_kept": "statement on Process/Frame/Run/Trace",
   "Becoming.ClosedCapture.Thinned.late_reads_loss": "proof through a base family",
-  "Becoming.RuleShaping.eq_of_counts": "apart: own vocabulary",
+  "Becoming.RuleShaping.eq_of_counts": "used by a theorem on the base",
   "Becoming.RuleShaping.favours_iff": "used by a theorem on the base",
   "Becoming.RuleShaping.disfavours_iff": "used by a theorem on the base",
   "Becoming.RuleShaping.favours_alike": "apart: own vocabulary",
@@ -9679,9 +9679,9 @@
   "Becoming.RuleShaping.nothing_back_falls": "apart: own vocabulary",
   "Becoming.RuleShaping.c_zero_favours": "apart: own vocabulary",
   "Becoming.RuleShaping.neutral_steady": "apart: own vocabulary",
-  "Becoming.RuleShaping.select_thenBy": "apart: own vocabulary",
-  "Becoming.RuleShaping.pow_pos_of_pos": "apart: prelude-only statement",
-  "Becoming.RuleShaping.orbit_held": "apart: own vocabulary",
+  "Becoming.RuleShaping.select_thenBy": "used by a theorem on the base",
+  "Becoming.RuleShaping.pow_pos_of_pos": "used by a theorem on the base",
+  "Becoming.RuleShaping.orbit_held": "used by a theorem on the base",
   "Becoming.RuleShaping.le_select_iff": "apart: own vocabulary",
   "Becoming.RuleShaping.lt_select_iff": "apart: own vocabulary",
   "Becoming.RuleShaping.stretch_eq": "apart: own vocabulary",
@@ -9753,12 +9753,12 @@
   "Becoming.DrawnShaping.shaped_le_iff": "used by a theorem on the base",
   "Becoming.DrawnShaping.drawn_reads_iff": "used by a theorem on the base",
   "Becoming.DrawnShaping.drawn_against": "apart: own vocabulary",
-  "Becoming.DrawnShaping.mul_split": "apart: prelude-only statement",
-  "Becoming.DrawnShaping.drawn_split": "apart: prelude-only statement",
-  "Becoming.DrawnShaping.drawn_favours_iff": "apart: own vocabulary",
+  "Becoming.DrawnShaping.mul_split": "used by a theorem on the base",
+  "Becoming.DrawnShaping.drawn_split": "used by a theorem on the base",
+  "Becoming.DrawnShaping.drawn_favours_iff": "used by a theorem on the base",
   "Becoming.DrawnShaping.drawn_lt_iff": "apart: own vocabulary",
   "Becoming.DrawnShaping.drawn_favours_alike": "apart: own vocabulary",
-  "Becoming.DrawnShaping.critical_iff": "apart: own vocabulary",
+  "Becoming.DrawnShaping.critical_iff": "used by a theorem on the base",
   "Becoming.DrawnShaping.alike_favours_iff": "apart: own vocabulary",
   "Becoming.DrawnShaping.favours_everywhere_iff": "apart: own vocabulary",
   "Becoming.DrawnShaping.disfavours_strictly_everywhere_iff": "apart: own vocabulary",
@@ -9781,6 +9781,40 @@
   "Becoming.DrawnShaping.CriticalMass.few_falls": "statement on Process/Frame/Run/Trace",
   "Becoming.DrawnShaping.CriticalMass.at_mass_stays": "statement on Process/Frame/Run/Trace",
   "Becoming.DrawnShaping.Against.not_locked": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.kept_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.loss_next": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.turned_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.shapedLossPool_before": "used by a theorem on the base",
+  "Becoming.ReadInTime.turn_before": "used by a theorem on the base",
+  "Becoming.ReadInTime.early": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.next_share": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.late_never_falls": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.kept_early_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.turned_early_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.in_time_earlier": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.at_most_one_between_up": "used by a theorem on the base",
+  "Becoming.ReadInTime.none_between_down": "used by a theorem on the base",
+  "Becoming.ReadInTime.at_most_one_between": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.kept_next_round_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.kept_once_favoured": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.least": "used by a theorem on the base",
+  "Becoming.ReadInTime.least_iff": "used by a theorem on the base",
+  "Becoming.ReadInTime.kept_past_least": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.covers_of_strict": "used by a theorem on the base",
+  "Becoming.ReadInTime.powers_eq_pow": "used by a theorem on the base",
+  "Becoming.ReadInTime.held_counts": "used by a theorem on the base",
+  "Becoming.ReadInTime.powers_base_le": "used by a theorem on the base",
+  "Becoming.ReadInTime.held_le": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.held_past": "used by a theorem on the base",
+  "Becoming.ReadInTime.deadline": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.Window.in_time": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.Window.between": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.Window.too_late": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.Window.late_kept": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.Window.by_deadline": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.Window.scaled": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.Between.turned": "statement on Process/Frame/Run/Trace",
+  "Becoming.ReadInTime.Tie.both": "statement on Process/Frame/Run/Trace",
   "Becoming.Web.carrying_active": "statement on World/Flow/Web",
   "Becoming.Web.carrying_iff": "statement on World/Flow/Web",
   "Becoming.Web.begins_within": "statement on World/Flow/Web",

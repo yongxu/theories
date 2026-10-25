@@ -29,6 +29,11 @@ These are the steps to land `Becoming.ReadInTime` (board item MA4b), on MA4's pa
     Then scan for conflict markers.
 13. Gate with `git merge-base --is-ancestor main ma4b-landing`. In the shared checkout, check that it is not mid-merge and that no incoming path is locally modified, then `git merge --ff-only ma4b-landing`.
 
+## What the landing met (26 October 2026)
+- The 02 §9 reading and the overview (EN and ZH) said the deadline is "set by the start's rule, the cost and the share". It depends on the start's counts, not the share (`Window.scaled`, the review's finding 8), so the three sentences now say it is quadratic in the start's counts, and `texts_ma4b.py` with them.
+- Connectivity: `Becoming.ReadInTime` adds no apart root. `RuleShaping.pow_pos_of_pos` is no longer one, since `RuleShaping.held` uses it and ReadInTime reaches `held` through `RuleShaping.orbit_held`, so its register entry was removed; the study's output list says so.
+- A second run of `repoint_ma4b.sh`, with nothing left to re-point, re-pointed every changed reference of 373 records across 15 sources, most of them never touched by this landing: `repoint.py` read an empty drift list as no filter at all. That rebind was reverted before the commit (371 records restored from the branch's base, the same entries of MA4's and MA2's records reset to it, the check then showing no drift) and its log line removed. `repoint.py` now re-points nothing from an empty list (`tools/research/tests/test_repoint.py`), and `repoint_ma4b.sh` stops when it keeps no pair.
+
 ## After the landing
 - Update AJ's PLAN (§3 landed, the Missing list, step 7), AJ's board row, and the memory files.
 - Tell fork 3 (07 §6's readings and AJ4's dossier are theirs) and the coordinator.

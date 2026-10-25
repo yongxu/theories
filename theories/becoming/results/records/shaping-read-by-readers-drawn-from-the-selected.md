@@ -25,9 +25,9 @@
 ## Does not show
 
 - That actual rules are read by readers drawn from those they select, each kind counted as the population counts it, or that the shapers among the readers read at least as much coming back to the shapers as the others do: within the model the loop's premise is equivalent to that comparison (drawn_reads_iff), so the premise is moved to who reads, not removed, and its calibration to the present world is not established.
-- That control over the selection left unselected and a lock left in time are independent conditions: in this model, whose rule is read from the share alone, every course from the rule read at its start is locked one way or the other (drawn_locked_either), so control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), which is not joined.
+- That control over the selection left unselected and a lock left in time are independent conditions: in this model, whose rule is read from the share alone, every course from the rule read at its start is locked one way or the other (drawn_locked_either), so control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), joined in loss-read-in-time-by-the-others (MA4b).
 - Courses with noise, or convergence to either boundary state: the laws give the direction at every step on each side of the critical mass and the lock. In such a coordination game, under rare mutation in a large finite population the long-run state is the risk-dominant one (Kandori, Mailath and Rob 1993; Young 1993), here the shapers' where lo < c < hi and 2c < hi + lo, as in the witness; the critical mass bounds courses without noise only.
-- Readers who learn (hi and lo changing with the share), a cost changing with the share, readers not counted as the population counts them, starts not under the rule read there (a rule in force against the reading can carry the share across the mass, RuleCapture.Reversed.not_absorbed), a loss read by part of the readers once the shapers pass the mass (ClosedCapture.Thinned, not joined), and the mixed point where lo > hi and hi < c ≤ lo.
+- Readers who learn (hi and lo changing with the share), a cost changing with the share, readers not counted as the population counts them, starts not under the rule read there (a rule in force against the reading can carry the share across the mass, RuleCapture.Reversed.not_absorbed), a loss read by part of the readers once the shapers pass the mass (ClosedCapture.Thinned, joined in loss-read-in-time-by-the-others, MA4b), and the mixed point where lo > hi and hi < c ≤ lo.
 - That capture damages or supports 生生, or that a course below the critical mass is better than one above it: no evaluation enters, and ranking courses needs C.
 - **Counterexample:** The same reading of what comes back does not decide: in every start of the witness the shapers among the readers read three times the cost as coming back, yet from one to three the capacity falls at every step (CriticalMass.few_disfavours, CriticalMass.few_falls) while from one to one it rises (CriticalMass.even_favours, CriticalMass.even_rises). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean)
 - **Counterexample:** Without lo ≤ hi a strictly favoured start is not locked: with hi = 0 and lo = 3, from one to one the rule read favours the shapers five to four, yet the course is not locked at step 1 and the rule in force at step 2 is below the start's (Against.not_locked). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean)
@@ -45,7 +45,7 @@ Canonical source: [DrawnShaping.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A loss read by the others among the readers once the shapers pass the critical mass, the readers' timing (ClosedCapture.Thinned) joined to the rise; readers who learn; a cost changing with the share; noise and the long-run state; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.
+Readers who learn; a cost changing with the share; noise and the long-run state; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -63,6 +63,9 @@ Where lo < c < hi the model is the stag hunt in which the second strategy's payo
 - **formal-reuse**: [capture-by-counted-choices](capture-by-counted-choices.md). ChoiceCountCapture.lower_strict alone, whose mirror upper_strictly is stated here.
 - related, not a proved adapter: [closed-capture](closed-capture.md). The loop whose every level reads only the share; here every course read from the share alone is locked one way or the other, and leaving needs a reading beyond it.
 - related, not a proved adapter: [a-reading-against-the-share-does-not-ratchet](a-reading-against-the-share-does-not-ratchet.md). Where hi ≤ lo the rule read reads against the share (drawn_against).
+- related, not a proved adapter: [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md). MA4b: the others among the readers read a loss once it reaches a bound; their reading leaves this module's lock only before their late reading would favour the shapers, for good while it still favours them a step on, with a lag of one step, at most one step between, and a deadline.
+
+**Used by:** [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -88,6 +91,7 @@ Aliases: `What comes back to the shapers, read by readers drawn from the selecte
 ### History
 
 - 26 October 2026: added (MA4), the join of the capacity to shape the rule with the readers drawn from the selected, after one independent review; study section 414.
+- 26 October 2026 (MA4b, study section 420): the readers' timing joined to the critical mass in loss-read-in-time-by-the-others; the next step, the two scope items on the readers' timing, and a related record updated. The laws are unchanged.
 
 </details>
 

@@ -78,7 +78,9 @@ Boundary:
 Output → input:
        - the new record; MA4's and MA2's records; the goal's results;
        - 02 §9 and its Open list; the overview; the meta-attractor page; 08's counts;
-       - the package README rows (EN, ZH); the root module's doc; the checker's core list and scope; regions.json.
+       - the package README rows (EN, ZH); the root module's doc; the checker's core list and scope; regions.json;
+       - the connectivity register: no apart root added; RuleShaping.pow_pos_of_pos leaves it, connected now
+         through RuleShaping.orbit_held.
        It feeds AJ (condition 2, the point of no return belonging to the share's course), AJ4's dossier and 07 §6's
        readings (their owner), and T7.
 ```

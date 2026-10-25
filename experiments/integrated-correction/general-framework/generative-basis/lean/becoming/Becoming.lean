@@ -146,6 +146,7 @@ import Becoming.ClosedCapture
 import Becoming.RuleShaping
 import Becoming.ChoiceCountCapture
 import Becoming.DrawnShaping
+import Becoming.ReadInTime
 import Becoming.PatternPassing
 import Becoming.JointKeeping
 import Becoming.Undecided
@@ -2038,6 +2039,24 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   mass and falling strictly below it, the shapers present (`drawn_rises`, `drawn_falls`). A leaf: the
   join of `RuleShaping`'s shaping with `ClosedCapture`'s readers, which nothing below needs (board
   item MA4).
+* `Becoming.ReadInTime` (L1): the loss read in time by the others, joined to the critical mass. The
+  rule read is `ClosedCapture.Thinned.lossPool` over three of `RuleShaping`'s rules after shaping:
+  the shapers among the readers read `hi` coming back to the shapers, whatever the loss, and the
+  others `lo` while the loss is below `N` and `lo'` from then on, all with the same `a`, `p` and `c`
+  (`shapedLossPool`). Where every step adds at least one to the loss and `lo' ≤ hi`, at a reading
+  step past the bound at which the rule in force favours the shapers, the course is locked for good
+  exactly where `x.carrier * c + x.other * c ≤ x.carrier * hi + x.other * lo'` at the share there
+  (`kept_iff`); at one at which the late reading favours the others, the next step reading too, it
+  is locked the other way for good, one step late, exactly where the late reading favours the others
+  at the share of the next step (`turned_iff`). Before the bound the course is `DrawnShaping`'s
+  (`early`); along it the late reading never falls (`late_never_falls`), so, with steps `N` and
+  `N + 1` reading, the two laws decide a reading from `N` at every step but at most one
+  (`kept_early_iff`, `turned_early_iff`, `at_most_one_between`), from which the course starts a new
+  round (`kept_next_round_iff`). From a start whose rule `g` favours the shapers strictly, a shaper
+  present and `lo ≤ hi`, every reading of this form with `lo' ≤ hi` from a reading step from
+  `g.other * c * x.other` on keeps the lock (`deadline`, by `bernoulli_powers`). A leaf: the join of
+  `ClosedCapture`'s timing with `DrawnShaping`'s critical mass, which nothing below needs (board item
+  MA4b).
 * `Becoming.PatternPassing` (L1): a pattern that outlasts each of its carriers lasts only through
   passing. Read on a web whose activity is carrying, a pattern present at every step from `T`
   on with carriers brief for `d` has a carrier beginning within every `d` steps; under the

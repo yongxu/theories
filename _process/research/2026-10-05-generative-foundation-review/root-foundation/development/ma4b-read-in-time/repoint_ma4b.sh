@@ -3,6 +3,7 @@
 # landing changed, so another session's drift stays with its owner:
 #   the root module, the checker, the package README rows (EN and ZH), 02-MAP, 08-METHOD, the overview (EN and ZH), the
 #   meta-attractor page, the study, regions.json, the goal generative-alignment, and MA4's and MA2's records.
+# With no pair kept it stops: repoint.py once read an empty list as every record.
 # Each changed source was read before re-pointing. No Lean file a record binds was changed, so no binding is rebound.
 # usage (from the checkout root, after make_records_ma4b.py, register_ma4b.py and render): sh repoint_ma4b.sh
 set -e
@@ -27,6 +28,7 @@ left = [(x['id'], x['path']) for x in data.get('source_drift', []) if x['path'] 
 json.dump({'source_drift': kept}, open(f, 'w'))
 print('re-pointing', len(kept), 'pairs; left to their owners:', left)
 PY
+[ -n "$(python3 -c "import json; print(json.load(open('$F'))['source_drift'] and 1 or '')")" ] &&
 python3 -B tools/research/repoint.py --reason "MA4b landed: Becoming.ReadInTime joined to the core (root module's import and doc, the checker's core list and scope, the package README rows EN and ZH); 02 §9 (the lead, the home section of loss-read-in-time-by-the-others, the clause of MA4's reading on the readers' timing, a reading, the Open item); the overview's capture paragraph EN and ZH; the meta-attractor page's status line; 08's counts; the study; regions.json; the goal generative-alignment's results; MA4's and MA2's records; read before re-pointing" \
   --drift-json "$F" --apply
 rm -f "$D" "$F"

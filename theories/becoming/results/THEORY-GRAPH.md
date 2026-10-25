@@ -2,12 +2,12 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2966 nodes, 5223 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2969 nodes, 5240 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 77 | 64 | 0 |
-| The map: generation, keeping, degeneration, orders | 5 | 90 | 73 | 0 |
+| The map: generation, keeping, degeneration, orders | 5 | 91 | 74 | 0 |
 | Knowing and testing | 0 | 79 | 72 | 0 |
 | Life and evolution | 0 | 35 | 17 | 0 |
 | Collectives and selection | 0 | 54 | 16 | 0 |
@@ -136,7 +136,7 @@ Modules (64, 12 stated on the grammar): `BranchingCorrespondence`, `Carriers`, `
 
 ## The map: generation, keeping, degeneration, orders
 
-Results (90):
+Results (91):
 
 - [A chooser reading what couples in, its rule read from the count of its choices](records/capture-by-counted-choices.md) (recorded-checked)
 - [A continuing family cannot go unfed from beyond](records/continuing-self-fed-from-beyond.md) (recorded-checked)
@@ -210,6 +210,7 @@ Results (90):
 - [The feeding closure](records/feeding-closure.md) (recorded-checked)
 - [The least loss as a premise of rest](records/least-loss-rest.md) (recorded-checked)
 - [The least loss from entropy production](records/least-loss-from-entropy-production.md) (recorded-checked)
+- [The loss read in time by the others, joined to the critical mass](records/loss-read-in-time-by-the-others.md) (recorded-checked)
 - [The margin of a regime](records/margin-of-a-regime.md) (recorded-checked)
 - [The orders of a carried difference as a sum over histories](records/orders-as-a-sum-over-histories.md) (recorded-checked)
 - [The regime in any amounts, and its runs over the reals](records/regime-in-any-amounts.md) (recorded-checked)
@@ -229,7 +230,7 @@ Results (90):
 - [Where two courses rejoin](records/where-two-courses-rejoin.md) (recorded-checked)
 - [Whether a loop closes, keeps or widens a difference](records/whether-a-loop-closes-a-difference.md) (recorded-checked)
 
-Modules (73, 9 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
+Modules (74, 9 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
 
 
 ## Knowing and testing
@@ -567,4 +568,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-294 of 326 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+295 of 327 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
