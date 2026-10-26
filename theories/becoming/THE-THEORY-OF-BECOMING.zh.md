@@ -224,7 +224,7 @@ Lean 包的纯核只引入 Lean 的前奏，其中每一个源声明的公理报
 ## 10. 尚未表明者与未决者
 
 - **说明与表示。** 文法说明事物如何继续下去，这一点是论证了的，而不是证明了的；每一种生灭变化以及整个理论在文法中都有忠实的表示，这一点未决（[01](chapters/01-ROOT.md#open)）。
-- **提升。** 多数律是在世界模型或过程上证明的，尚未在文法上重新陈述，而文法还没有量（[08](chapters/08-METHOD.md#expressible-is-not-derived)）。
+- **提升。** 多数律是在世界模型或过程上证明的，尚未在文法上重新陈述，而文法还没有量（[08](chapters/08-METHOD.md#expressible-is-not-derived)）。五条主律已在文法上重新陈述：闭包之律及有限运行与序之律的一部分由之证出，归并证为等价，平衡以单位之配对表示，不推出；主律所依的 127 条声明中有 28 条通到文法（[01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)）。
 - **根与伦理作为一个说明。** 以从己方式沿一个关系持有，延续条件就是根的：在该关系的全类之下，没有任何东西位于每一个中心的相续之外（`«续无外»`）；沿一个无环的网，它只在只有一个中心时成立（[07 §4.5](chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root)）。07 §1 的自由意义尚未提升到根上，该章的其他律是尚未在根上陈述的实例，一个中心自己的相续在哪个类之下进行，仍属未决（[07](chapters/07-SIGNIFICANCE.md#open)）。
 - **根据。** 该条件、C 与不变之步是否有根据；自我的预设是否以从己方式持有；道德地位是否不变且平等。没有任何形式工作能了结这些问题，而为该条件奠基的根据不能单从动力学之律而来（[07](chapters/07-SIGNIFICANCE.md#open)，[08](chapters/08-METHOD.md#philosophical-warrant)）。
 - **整体的必然性。** 每一种生灭变化都有一条带有有限进程的交换之律；以及从包含到关系性构成的过渡（[08](chapters/08-METHOD.md#r-theory-of-becoming-foundation)）。
