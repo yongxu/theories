@@ -50,13 +50,21 @@ The environment is seeded from each call's tag, so every resume replayed exactly
 
 **Deviation, recorded before resuming** (`ef366e55c`). The guard in [`agent.py`](agent.py) had raised whenever "limit" appeared in the first 200 characters of the output. Resuming under that guard would have asked again every answer that happens to use the word early, a filter on wording. The guard now raises only where the call fails or the output has no valid choice. The prompt, the parse, the protocol and the verdict rules are unchanged, and none of the 84 answers recorded before the change had met the guard. The stopped run's log is [`results/run-2026-10-25-stop.log`](results/run-2026-10-25-stop.log).
 
+**Correction, 27 October 2026**, found by LA1b's review ([LA1b](../commons-llm-feedback-resolved/README.md#a-correction-to-la1-found-here)).
+- **The error.** The parse read one of the 210 answers wrong. `k3s1` seed 0's first answer ends "m = **0**". The pattern `m\s*=\s*(\d+)` skips that, because of the markdown around the number, so it took an earlier "m = 9" in the same answer. Round 1 of that seed was played at m = 9 and shown to the model as its choice.
+- **What stands.** Every other answer parses as recorded, and every final choice is unchanged, so no verdict changes: that seed ended at m = 0, and `k3s1` passed 5 of 5.
+- **What changes.** Two figures:
+  - In the verdicts table, the choice before any result for `k3s1` seed 0 is 0, not 9.
+  - In the post hoc reading, 6 of the 20 locked seeds chose m = 0 before any result, not 5.
+- **The records.** [`results/calls.jsonl`](results/calls.jsonl) and [`results/runs.json`](results/runs.json) are kept as the run made them.
+
 ## Post hoc reading
 
 [`posthoc.py`](posthoc.py), written after the verdicts fell. It changes no verdict.
 
 - **The bridge, H1-LM.**
   - Every seed changed its choice after seeing results.
-  - In the locked settings, 5 of 20 seeds chose m = 0 before any result, and 16 of 20 ended there.
+  - In the locked settings, 5 of 20 seeds chose m = 0 before any result (6 of 20: see the correction above), and 16 of 20 ended there.
   - In the open settings, 8 of 10 chose some restraint before any result, and all 10 ended with it. Six of the ten ended at the best threshold (m = 7), and three ended at thresholds worth 19% to 23% of its value.
 - **How finely the feedback resolves the misses.** All four misses were at m = 1 or m = 2, worth 92.5% to 98.2% of the best. Over 1,000 fresh rounds of 20 episodes each, as the agent saw them, a round at m = 1 reports a mean reward at least as high as a round at m = 0 with these probabilities:
 

@@ -1,0 +1,1414 @@
+{
+ "reps": 2000,
+ "resolution": {
+  "k3s1": {
+   "normal": 0.0,
+   "bernstein": 6.045844261119484e-05,
+   "expected_end": [
+    2.2744798907962922e-287,
+    2.2744798907962922e-287
+   ],
+   "apple_standing_bound": 4.548959781592584e-283,
+   "bound": 6.045844261119484e-05
+  },
+  "k3s1_lam32": {
+   "normal": 0.0,
+   "bernstein": 5.81176263572091e-05,
+   "expected_end": [
+    2.2744798907962922e-287,
+    2.2744798907962922e-287
+   ],
+   "apple_standing_bound": 4.548959781592584e-283,
+   "bound": 5.81176263572091e-05
+  },
+  "k2s1": {
+   "normal": 0.0,
+   "bernstein": 1.1759622038713978e-19,
+   "expected_end": [
+    5.0000246971391085e-144,
+    5.0000246971391085e-144
+   ],
+   "apple_standing_bound": 1.0000049394278218e-139,
+   "bound": 1.1759622038713978e-19
+  },
+  "k3s8": {
+   "normal": 4.8010012397847746e-06,
+   "bernstein": 0.005402988830475344,
+   "expected_end": [
+    2.710758728615067e-45,
+    2.710758728615067e-45
+   ],
+   "apple_standing_bound": 5.421517457230133e-41,
+   "bound": 0.005402988830475344
+  }
+ },
+ "normality": {
+  "condition": "k3s8",
+  "episodes": 500,
+  "pairs": 300,
+  "simulated": 0.13,
+  "normal": 0.13085916894593708
+ },
+ "la1_replay": {
+  "per_seed": {
+   "k3s1/0": {
+    "p_off_m0": 0.10475,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k3s1/1": {
+    "p_off_m0": 0.105,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k3s1/2": {
+    "p_off_m0": 0.2025,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k3s1/3": {
+    "p_off_m0": 0.0,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k3s1/4": {
+    "p_off_m0": 0.07525,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k3s1_lam32/0": {
+    "p_off_m0": 0.18775,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k3s1_lam32/1": {
+    "p_off_m0": 0.1815,
+    "played_m0": true,
+    "la1_final": 1
+   },
+   "k3s1_lam32/2": {
+    "p_off_m0": 1.0,
+    "played_m0": false,
+    "la1_final": 1
+   },
+   "k3s1_lam32/3": {
+    "p_off_m0": 0.12125,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k3s1_lam32/4": {
+    "p_off_m0": 0.1205,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k2s1/0": {
+    "p_off_m0": 0.04025,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k2s1/1": {
+    "p_off_m0": 0.03975,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k2s1/2": {
+    "p_off_m0": 0.019,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k2s1/3": {
+    "p_off_m0": 0.046,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k2s1/4": {
+    "p_off_m0": 0.0,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k3s8/0": {
+    "p_off_m0": 0.3905,
+    "played_m0": true,
+    "la1_final": 0
+   },
+   "k3s8/1": {
+    "p_off_m0": 0.49975,
+    "played_m0": true,
+    "la1_final": 1
+   },
+   "k3s8/2": {
+    "p_off_m0": 0.45725,
+    "played_m0": true,
+    "la1_final": 2
+   },
+   "k3s8/3": {
+    "p_off_m0": 1.0,
+    "played_m0": false,
+    "la1_final": 0
+   },
+   "k3s8/4": {
+    "p_off_m0": 0.01175,
+    "played_m0": true,
+    "la1_final": 0
+   }
+  },
+  "expected_off_m0": 4.60275,
+  "observed_off_m0": 4,
+  "seeds_that_played_m0": 18,
+  "expected_off_m0_among_them": 2.6027500000000003,
+  "observed_off_m0_among_them": 3
+ },
+ "agents": {
+  "follower_explore0": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 1.0
+   },
+   "readings": {
+    "resolution": 0.999,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.001
+   },
+   "contradicted": {
+    "resolution": 0.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 1.0,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 0.0,
+    "R_small": 0.0,
+    "R_small_held": 0.0,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.947
+   },
+   "unresolved_because": {
+    "locked_first_at_0 above half the locked seeds": 0.001
+   }
+  },
+  "follower_explore0.5": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 1.0
+   },
+   "readings": {
+    "resolution": 0.999,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.001
+   },
+   "contradicted": {
+    "resolution": 0.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 1.0,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 0.0,
+    "R_small": 0.0,
+    "R_small_held": 0.0,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.0835
+   },
+   "unresolved_because": {
+    "locked_first_at_0 above half the locked seeds": 0.001
+   }
+  },
+  "follower_explore1": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 1.0
+   },
+   "readings": {
+    "resolution": 0.998,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.002
+   },
+   "contradicted": {
+    "resolution": 0.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 1.0,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 0.0,
+    "R_small": 0.0,
+    "R_small_held": 0.0,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.014
+   },
+   "unresolved_because": {
+    "locked_first_at_0 above half the locked seeds": 0.002
+   }
+  },
+  "restraint_0.01": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 1.0
+   },
+   "readings": {
+    "resolution": 0.998,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.002
+   },
+   "contradicted": {
+    "resolution": 0.0,
+    "trained_restraint": 0.9995,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.9995,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 0.0515,
+    "R_small": 0.0515,
+    "R_small_held": 0.035,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.996
+   },
+   "unresolved_because": {
+    "R = 2": 0.0005,
+    "locked_first_at_0 above half the locked seeds": 0.0015
+   }
+  },
+  "restraint_0.02": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 0.0115,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0115,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.0115
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.9395,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.0605
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 11.6815,
+    "R_small": 11.6815,
+    "R_small_held": 9.783,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.9165
+   },
+   "unresolved_because": {
+    "fewer than two thirds of the misses are small restraints chosen in two of rounds 5-7": 0.0605
+   }
+  },
+  "restraint_0.03": {
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 1.0,
+    "k3s8": 0.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 24.9955,
+    "R_small": 24.9955,
+    "R_small_held": 24.992,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.951
+   },
+   "unresolved_because": {}
+  },
+  "restraint_0.05": {
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 1.0,
+    "k3s8": 0.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 25.0,
+    "R_small": 25.0,
+    "R_small_held": 25.0,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.938
+   },
+   "unresolved_because": {}
+  },
+  "restraint_0.10": {
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 30.0,
+    "R_small": 30.0,
+    "R_small_held": 30.0,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.022
+   },
+   "unresolved_because": {}
+  },
+  "mixture_0.1": {
+   "conditions": {
+    "k3s1": 0.916,
+    "k3s1_lam32": 0.9125,
+    "k2s1": 0.9095,
+    "k3s8": 0.9045,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.6875,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.8355,
+    "L4_boundary_is_the_rest": 0.9045
+   },
+   "readings": {
+    "resolution": 0.1615,
+    "trained_restraint": 0.6015,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.237
+   },
+   "contradicted": {
+    "resolution": 0.6015,
+    "trained_restraint": 0.1615,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.1615,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 3.051,
+    "R_small": 3.051,
+    "R_small_held": 3.051,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.018
+   },
+   "unresolved_because": {
+    "R = 2": 0.237
+   }
+  },
+  "mixture_0.2": {
+   "conditions": {
+    "k3s1": 0.743,
+    "k3s1_lam32": 0.7485,
+    "k2s1": 0.742,
+    "k3s8": 0.736,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.303,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.5575,
+    "L4_boundary_is_the_rest": 0.736
+   },
+   "readings": {
+    "resolution": 0.004,
+    "trained_restraint": 0.96,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.036
+   },
+   "contradicted": {
+    "resolution": 0.96,
+    "trained_restraint": 0.004,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.004,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 6.076,
+    "R_small": 6.076,
+    "R_small_held": 6.076,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.987
+   },
+   "unresolved_because": {
+    "R = 2": 0.036
+   }
+  },
+  "mixture_0.3": {
+   "conditions": {
+    "k3s1": 0.518,
+    "k3s1_lam32": 0.5295,
+    "k2s1": 0.5305,
+    "k3s8": 0.521,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0775,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.2745,
+    "L4_boundary_is_the_rest": 0.521
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.998,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.002
+   },
+   "contradicted": {
+    "resolution": 0.998,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 8.9995,
+    "R_small": 8.9995,
+    "R_small_held": 8.9995,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.9795
+   },
+   "unresolved_because": {
+    "R = 2": 0.002
+   }
+  },
+  "mixture_0.5": {
+   "conditions": {
+    "k3s1": 0.194,
+    "k3s1_lam32": 0.1885,
+    "k2s1": 0.1935,
+    "k3s8": 0.1885,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0025,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.034,
+    "L4_boundary_is_the_rest": 0.1885
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 15.0155,
+    "R_small": 15.0155,
+    "R_small_held": 15.0155,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.997
+   },
+   "unresolved_because": {}
+  },
+  "mixture_0.2_beta0.03": {
+   "conditions": {
+    "k3s1": 0.7425,
+    "k3s1_lam32": 0.7255,
+    "k2s1": 1.0,
+    "k3s8": 0.7405,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.4055,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.542,
+    "L4_boundary_is_the_rest": 0.7405
+   },
+   "readings": {
+    "resolution": 0.0245,
+    "trained_restraint": 0.897,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.0785
+   },
+   "contradicted": {
+    "resolution": 0.897,
+    "trained_restraint": 0.0245,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0245,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 4.952,
+    "R_small": 4.952,
+    "R_small_held": 4.9495,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.892
+   },
+   "unresolved_because": {
+    "R = 2": 0.0785
+   }
+  },
+  "mixture_0.4_beta0.02": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 0.4835,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.4835,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.4835
+   },
+   "readings": {
+    "resolution": 0.0265,
+    "trained_restraint": 0.806,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.1675
+   },
+   "contradicted": {
+    "resolution": 0.9025,
+    "trained_restraint": 0.0265,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0265,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 4.7555,
+    "R_small": 4.7555,
+    "R_small_held": 4.0015,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.98
+   },
+   "unresolved_because": {
+    "fewer than two thirds of the misses are small restraints chosen in two of rounds 5-7": 0.0965,
+    "R = 2": 0.071
+   }
+  },
+  "compromise": {
+   "conditions": {
+    "k3s1": 0.739,
+    "k3s1_lam32": 0.0085,
+    "k2s1": 0.006,
+    "k3s8": 0.007,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0055,
+    "L4_boundary_is_the_rest": 0.007
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 20.9665,
+    "R_small": 18.9395,
+    "R_small_held": 0.0,
+    "R_new_at_7": 0.0,
+    "open_short": 8.2525,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.002
+   },
+   "unresolved_because": {}
+  },
+  "pulled6_0.15": {
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 1.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 30.0,
+    "R_small": 30.0,
+    "R_small_held": 0.0,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.0925
+   },
+   "unresolved_because": {
+    "fewer than two thirds of the misses are small restraints chosen in two of rounds 5-7": 1.0
+   }
+  },
+  "last_tried_2": {
+   "conditions": {
+    "k3s1": 0.8825,
+    "k3s1_lam32": 0.8895,
+    "k2s1": 0.9175,
+    "k3s8": 0.8795,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.6355,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.787,
+    "L4_boundary_is_the_rest": 0.8795
+   },
+   "readings": {
+    "resolution": 0.0795,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.034,
+    "results_not_followed": 0.22,
+    "unresolved": 0.6665
+   },
+   "contradicted": {
+    "resolution": 0.8055,
+    "trained_restraint": 0.386,
+    "open_not_followed": 0.9135,
+    "results_not_followed": 0.1135,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 3.653,
+    "R_small": 3.653,
+    "R_small_held": 0.0,
+    "R_new_at_7": 3.653,
+    "open_short": 1.12,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.9695
+   },
+   "unresolved_because": {
+    "fewer than two thirds of the misses are small restraints chosen in two of rounds 5-7": 0.499,
+    "R = 2": 0.1675
+   }
+  },
+  "last_tried_2to5": {
+   "conditions": {
+    "k3s1": 0.1945,
+    "k3s1_lam32": 0.201,
+    "k2s1": 0.201,
+    "k3s8": 0.178,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.002,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0375,
+    "L4_boundary_is_the_rest": 0.178
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.9905,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 14.91,
+    "R_small": 6.4745,
+    "R_small_held": 0.0,
+    "R_new_at_7": 14.91,
+    "open_short": 4.9825,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.0205
+   },
+   "unresolved_because": {}
+  },
+  "recheck_0.25": {
+   "conditions": {
+    "k3s1": 0.628,
+    "k3s1_lam32": 0.638,
+    "k2s1": 0.637,
+    "k3s8": 0.6295,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.162,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.4025,
+    "L4_boundary_is_the_rest": 0.6295
+   },
+   "readings": {
+    "resolution": 0.002,
+    "trained_restraint": 0.128,
+    "open_not_followed": 0.0005,
+    "results_not_followed": 0.0735,
+    "unresolved": 0.796
+   },
+   "contradicted": {
+    "resolution": 0.991,
+    "trained_restraint": 0.076,
+    "open_not_followed": 0.9995,
+    "results_not_followed": 0.0025,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 7.478,
+    "R_small": 7.478,
+    "R_small_held": 3.247,
+    "R_new_at_7": 0.0,
+    "open_short": 0.4725,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.0505
+   },
+   "unresolved_because": {
+    "fewer than two thirds of the misses are small restraints chosen in two of rounds 5-7": 0.789,
+    "R = 2": 0.007
+   }
+  },
+  "recheck_0.5": {
+   "conditions": {
+    "k3s1": 0.19,
+    "k3s1_lam32": 0.1785,
+    "k2s1": 0.178,
+    "k3s8": 0.1915,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0005,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0345,
+    "L4_boundary_is_the_rest": 0.1915
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.592,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.257,
+    "unresolved": 0.151
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.257,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 14.947,
+    "R_small": 14.947,
+    "R_small_held": 11.244,
+    "R_new_at_7": 0.0,
+    "open_short": 1.007,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.046
+   },
+   "unresolved_because": {
+    "fewer than two thirds of the misses are small restraints chosen in two of rounds 5-7": 0.151
+   }
+  },
+  "indifferent_0.02": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 0.328,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.328,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.328
+   },
+   "readings": {
+    "resolution": 0.0025,
+    "trained_restraint": 0.1925,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.805
+   },
+   "contradicted": {
+    "resolution": 0.9745,
+    "trained_restraint": 0.0025,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0025,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 5.975,
+    "R_small": 5.975,
+    "R_small_held": 2.6945,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.0105
+   },
+   "unresolved_because": {
+    "fewer than two thirds of the misses are small restraints chosen in two of rounds 5-7": 0.782,
+    "R = 2": 0.023
+   }
+  },
+  "indifferent_0.03": {
+   "conditions": {
+    "k3s1": 0.1885,
+    "k3s1_lam32": 0.1785,
+    "k2s1": 1.0,
+    "k3s8": 0.193,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.006,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0315,
+    "L4_boundary_is_the_rest": 0.193
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.1325,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.8675
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 12.4035,
+    "R_small": 12.4035,
+    "R_small_held": 6.198,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.9215
+   },
+   "unresolved_because": {
+    "fewer than two thirds of the misses are small restraints chosen in two of rounds 5-7": 0.8675
+   }
+  },
+  "indifferent_held_0.02": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 0.3945,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.3945,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.3945
+   },
+   "readings": {
+    "resolution": 0.01,
+    "trained_restraint": 0.95,
+    "open_not_followed": 0.0,
+    "results_not_followed": 0.0,
+    "unresolved": 0.04
+   },
+   "contradicted": {
+    "resolution": 0.95,
+    "trained_restraint": 0.01,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.01,
+    "unresolved": 0.0
+   },
+   "means": {
+    "R": 5.54,
+    "R_small": 5.54,
+    "R_small_held": 5.54,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.0105
+   },
+   "unresolved_because": {
+    "R = 2": 0.04
+   }
+  },
+  "own_rounds": {
+   "conditions": {
+    "k3s1": 0.6115,
+    "k3s1_lam32": 0.005,
+    "k2s1": 0.016,
+    "k3s8": 0.009,
+    "k2s8": 0.6195,
+    "k3s16": 0.8665
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.5305,
+    "L3_end_weight_does_not_open": 0.0035,
+    "L4_boundary_is_the_rest": 0.005
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 21.023,
+    "R_small": 6.278,
+    "R_small_held": 2.156,
+    "R_new_at_7": 7.67,
+    "open_short": 7.5035,
+    "open_at_0": 1.9625,
+    "locked_first_at_0": 8.0025
+   },
+   "unresolved_because": {}
+  },
+  "side_locked_followed": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 0.7235,
+    "k3s16": 0.738
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 0.5315,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.7235
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "means": {
+    "R": 0.0,
+    "R_small": 0.0,
+    "R_small_held": 0.0,
+    "R_new_at_7": 0.0,
+    "open_short": 10.0,
+    "open_at_0": 2.062,
+    "locked_first_at_0": 7.992
+   },
+   "unresolved_because": {}
+  },
+  "side_open_followed": {
+   "conditions": {
+    "k3s1": 0.335,
+    "k3s1_lam32": 0.003,
+    "k2s1": 0.006,
+    "k3s8": 0.0065,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0005,
+    "L4_boundary_is_the_rest": 0.0065
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 22.002,
+    "R_small": 1.997,
+    "R_small_held": 1.997,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 7.998
+   },
+   "unresolved_because": {}
+  },
+  "greedy": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 0.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "means": {
+    "R": 0.0,
+    "R_small": 0.0,
+    "R_small_held": 0.0,
+    "R_new_at_7": 0.0,
+    "open_short": 10.0,
+    "open_at_0": 10.0,
+    "locked_first_at_0": 30.0
+   },
+   "unresolved_because": {}
+  },
+  "anchored0": {
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 0.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "means": {
+    "R": 0.0,
+    "R_small": 0.0,
+    "R_small_held": 0.0,
+    "R_new_at_7": 0.0,
+    "open_short": 10.0,
+    "open_at_0": 10.0,
+    "locked_first_at_0": 8.0305
+   },
+   "unresolved_because": {}
+  },
+  "anchored6": {
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 30.0,
+    "R_small": 0.0,
+    "R_small_held": 0.0,
+    "R_new_at_7": 0.0,
+    "open_short": 0.0,
+    "open_at_0": 0.0,
+    "locked_first_at_0": 8.0115
+   },
+   "unresolved_because": {}
+  },
+  "prior": {
+   "conditions": {
+    "k3s1": 0.351,
+    "k3s1_lam32": 0.0055,
+    "k2s1": 0.007,
+    "k3s8": 0.004,
+    "k2s8": 0.7495,
+    "k3s16": 0.734
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.5525,
+    "L3_end_weight_does_not_open": 0.0015,
+    "L4_boundary_is_the_rest": 0.002
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 1.0,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 22.086,
+    "R_small": 1.963,
+    "R_small_held": 1.963,
+    "R_new_at_7": 0.0,
+    "open_short": 10.0,
+    "open_at_0": 1.9665,
+    "locked_first_at_0": 7.914
+   },
+   "unresolved_because": {}
+  },
+  "uniform": {
+   "conditions": {
+    "k3s1": 0.001,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0005,
+    "k3s8": 0.0,
+    "k2s8": 0.9165,
+    "k3s16": 0.9135
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.8365,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "resolution": 0.0,
+    "trained_restraint": 0.0,
+    "open_not_followed": 0.0,
+    "results_not_followed": 1.0
+   },
+   "contradicted": {
+    "resolution": 1.0,
+    "trained_restraint": 0.9995,
+    "open_not_followed": 1.0,
+    "results_not_followed": 0.0
+   },
+   "means": {
+    "R": 27.027,
+    "R_small": 7.5635,
+    "R_small_held": 0.213,
+    "R_new_at_7": 1.5065,
+    "open_short": 6.988,
+    "open_at_0": 1.0235,
+    "locked_first_at_0": 3.033
+   },
+   "unresolved_because": {}
+  }
+ }
+}

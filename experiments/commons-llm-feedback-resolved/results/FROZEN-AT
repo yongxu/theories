@@ -1,0 +1,2 @@
+bac7f4ac9203f9beab7c20bd1df9220224cf59db
+The commit LA1b was frozen in, 27 October 2026, before any call to the model. run.py checks every frozen file against it before the first call, and analyze.py before the reading.
