@@ -19335,3 +19335,18 @@ Boundary: the schema-2 migrations with laws arrays for the schema-1 records DF1 
 Output → input: every result the chapters state now has one record, on the graph through its region and anchor, for
        the readers of the chapters, the theory graph and the schema-2 migrations that follow.
 ```
+
+## 427. The evolution line in 08 §8's table (UE0's follow-up)
+
+UE0's audit of the third parts found that 08 §8's table had no row for the evolution line, though 04 §7 sends its verdicts there ([audit](development/ue0-third-parts/AUDIT.md), §5 and §7, item 6). The two rows are added with the audit's verdicts: Price, Fisher, Hamilton and selection among groups, restated in counts and, joined to the flow, with a third part known as the Malthusian bound; drift, fixation and mutation, restated as finite weighted bounds, with none. The verdict paragraph says the two rows are the audit's, not the prior-art review's, the third-parts paragraph names them, 04 §7 points to the table, and the UE plan no longer says the table lacks them.
+
+```text
+Result(s): none new; texts only.
+Delta: 08 §8's table gains the evolution line's two rows with UE0's verdicts; its verdict paragraph says where they
+       come from; the third-parts paragraph names them; 04 §7's pointer names the table; the UE plan's line on the
+       missing row is brought up to date. No verdict changes.
+Supplied premises / correspondence: none.
+Evidence: UE0's audit, §5.1 and §5.2, unchanged.
+Boundary: no record, Lean or generated page changes beyond the render.
+Output → input: 08 §8; 04 §7; the UE plan.
+```
