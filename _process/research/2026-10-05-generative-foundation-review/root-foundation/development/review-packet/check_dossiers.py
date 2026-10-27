@@ -12,7 +12,8 @@ In TEXT, an ellipsis (…… or ...) marks an omission: each part must occur, in
 characters is reported (it can reverse a sense, as dropping 無 does). Whitespace and Wikisource markup are ignored.
 
 Lean names: every backticked token of the form `«…»` or `A.b` / `a_b` that names a declaration is looked up in the
-core package (Becoming/*.lean) and the periphery directories; a token not found is reported.
+core package (Becoming/*.lean) and the periphery directories the dossiers cite (physics, warning); a token not found is
+reported.
 """
 import csv, re, sys
 from pathlib import Path
@@ -20,7 +21,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[6]
 OUR = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/corpus'
 LEAN_DIRS = [ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming',
-             ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/physics']
+             ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/physics',
+             ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/warning']
 QUOTE = re.compile(r'(原文|引|Source|Quote)\s*[〔\[]([^〕\]]+)[〕\]]\s*[：:]\s*[「"“]([^」"”]+)[」"”]')
 TOKEN = re.compile(r'`([^`\s]+)`')
 
