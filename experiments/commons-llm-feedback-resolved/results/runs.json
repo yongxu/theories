@@ -1,0 +1,2527 @@
+{
+ "model": "haiku",
+ "cli": "2.1.220 (Claude Code)",
+ "frozen": "bac7f4ac9203f9beab7c20bd1df9220224cf59db",
+ "runs": [
+  {
+   "cond": "k3s1",
+   "seed": 0,
+   "answers": [
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 2.0051,
+     "apples": 2.0051,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.185,
+     "apples": 1.185,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.0443,
+     "apples": 3.0443,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.1222,
+     "apples": 3.1222,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1277,
+     "apples": 3.1277,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1265,
+     "apples": 3.1265,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1244,
+     "apples": 3.1244,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1",
+   "seed": 1,
+   "answers": [
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 2.0052,
+     "apples": 2.0052,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.0469,
+     "apples": 3.0469,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.1975,
+     "apples": 1.1975,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.1201,
+     "apples": 3.1201,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1247,
+     "apples": 3.1247,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1225,
+     "apples": 3.1225,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1262,
+     "apples": 3.1262,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1",
+   "seed": 2,
+   "answers": [
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 3,
+     "kind": "chosen",
+     "reward": 2.2978,
+     "apples": 2.2978,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.1938,
+     "apples": 1.1938,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.1247,
+     "apples": 3.1247,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.0479,
+     "apples": 3.0479,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1263,
+     "apples": 3.1263,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1274,
+     "apples": 3.1274,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1235,
+     "apples": 3.1235,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1",
+   "seed": 3,
+   "answers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1255,
+     "apples": 3.1255,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.1245,
+     "apples": 3.1245,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.1967,
+     "apples": 1.1967,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.0458,
+     "apples": 3.0458,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1261,
+     "apples": 3.1261,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1244,
+     "apples": 3.1244,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1234,
+     "apples": 3.1234,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1",
+   "seed": 4,
+   "answers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1197,
+     "apples": 3.1197,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.0466,
+     "apples": 3.0466,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.1246,
+     "apples": 3.1246,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.1923,
+     "apples": 1.1923,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1254,
+     "apples": 3.1254,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1258,
+     "apples": 3.1258,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1289,
+     "apples": 3.1289,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 0,
+   "answers": [
+    7,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 1.0136,
+     "apples": 1.0136,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.1929,
+     "apples": 1.1929,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.0453,
+     "apples": 3.0453,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.128,
+     "apples": 3.128,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1232,
+     "apples": 3.1232,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1261,
+     "apples": 3.1261,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1232,
+     "apples": 3.1232,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 1,
+   "answers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1288,
+     "apples": 3.1288,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.048,
+     "apples": 3.048,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.1811,
+     "apples": 1.1811,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.1308,
+     "apples": 3.1308,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1233,
+     "apples": 3.1233,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1236,
+     "apples": 3.1236,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.129,
+     "apples": 3.129,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 2,
+   "answers": [
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 2.0062,
+     "apples": 2.0062,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.1908,
+     "apples": 1.1908,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.1251,
+     "apples": 3.1251,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.0468,
+     "apples": 3.0468,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1244,
+     "apples": 3.1244,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1241,
+     "apples": 3.1241,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1219,
+     "apples": 3.1219,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 3,
+   "answers": [
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 1,
+     "kind": "chosen",
+     "reward": 3.0467,
+     "apples": 3.0467,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.1258,
+     "apples": 3.1258,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.1918,
+     "apples": 1.1918,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.0415,
+     "apples": 3.0415,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.123,
+     "apples": 3.123,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1309,
+     "apples": 3.1309,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1168,
+     "apples": 3.1168,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s1_lam32",
+   "seed": 4,
+   "answers": [
+    6,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 6,
+     "kind": "chosen",
+     "reward": 1.1826,
+     "apples": 1.1826,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 3.0474,
+     "apples": 3.0474,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 3.1227,
+     "apples": 3.1227,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 1.1903,
+     "apples": 1.1903,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1238,
+     "apples": 3.1238,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.1208,
+     "apples": 3.1208,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 3.126,
+     "apples": 3.126,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 0,
+   "answers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8188,
+     "apples": 4.8188,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.0645,
+     "apples": 2.0645,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.4913,
+     "apples": 4.4913,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.818,
+     "apples": 4.818,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8176,
+     "apples": 4.8176,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8162,
+     "apples": 4.8162,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8244,
+     "apples": 4.8244,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 1,
+   "answers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8104,
+     "apples": 4.8104,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.4889,
+     "apples": 4.4889,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.0591,
+     "apples": 2.0591,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.8219,
+     "apples": 4.8219,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8176,
+     "apples": 4.8176,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8111,
+     "apples": 4.8111,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8088,
+     "apples": 4.8088,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 2,
+   "answers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8193,
+     "apples": 4.8193,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.0612,
+     "apples": 2.0612,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.8092,
+     "apples": 4.8092,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.4855,
+     "apples": 4.4855,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8151,
+     "apples": 4.8151,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8106,
+     "apples": 4.8106,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8051,
+     "apples": 4.8051,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 3,
+   "answers": [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 3.1113,
+     "apples": 3.1113,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.8071,
+     "apples": 4.8071,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.0596,
+     "apples": 2.0596,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.494,
+     "apples": 4.494,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8173,
+     "apples": 4.8173,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8188,
+     "apples": 4.8188,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8061,
+     "apples": 4.8061,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s1",
+   "seed": 4,
+   "answers": [
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 3,
+     "kind": "chosen",
+     "reward": 3.4554,
+     "apples": 3.4554,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.4874,
+     "apples": 4.4874,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.8045,
+     "apples": 4.8045,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.0567,
+     "apples": 2.0567,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.816,
+     "apples": 4.816,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8143,
+     "apples": 4.8143,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8123,
+     "apples": 4.8123,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 0,
+   "answers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7796,
+     "apples": 4.7796,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8111,
+     "apples": 2.8111,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.7042,
+     "apples": 4.7042,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7767,
+     "apples": 4.7767,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7737,
+     "apples": 4.7737,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7601,
+     "apples": 4.7601,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.792,
+     "apples": 4.792,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 1,
+   "answers": [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 3.6811,
+     "apples": 3.6811,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.6949,
+     "apples": 4.6949,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8278,
+     "apples": 2.8278,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7766,
+     "apples": 4.7766,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.77,
+     "apples": 4.77,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8005,
+     "apples": 4.8005,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7828,
+     "apples": 4.7828,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 2,
+   "answers": [
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 3.2453,
+     "apples": 3.2453,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8102,
+     "apples": 2.8102,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7696,
+     "apples": 4.7696,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.7324,
+     "apples": 4.7324,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7907,
+     "apples": 4.7907,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7979,
+     "apples": 4.7979,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8072,
+     "apples": 4.8072,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 3,
+   "answers": [
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 3.2541,
+     "apples": 3.2541,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7905,
+     "apples": 4.7905,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8074,
+     "apples": 2.8074,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.7105,
+     "apples": 4.7105,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7837,
+     "apples": 4.7837,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7792,
+     "apples": 4.7792,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7714,
+     "apples": 4.7714,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 4,
+   "answers": [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 3.6794,
+     "apples": 3.6794,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.694,
+     "apples": 4.694,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7997,
+     "apples": 4.7997,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8176,
+     "apples": 2.8176,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7953,
+     "apples": 4.7953,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8009,
+     "apples": 4.8009,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7498,
+     "apples": 4.7498,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 5,
+   "answers": [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 3.6558,
+     "apples": 3.6558,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.795,
+     "apples": 2.795,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.7136,
+     "apples": 4.7136,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7859,
+     "apples": 4.7859,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7925,
+     "apples": 4.7925,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7829,
+     "apples": 4.7829,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7831,
+     "apples": 4.7831,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 6,
+   "answers": [
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 3,
+     "kind": "chosen",
+     "reward": 4.0824,
+     "apples": 4.0824,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.7064,
+     "apples": 4.7064,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8302,
+     "apples": 2.8302,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.8048,
+     "apples": 4.8048,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7633,
+     "apples": 4.7633,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7791,
+     "apples": 4.7791,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.789,
+     "apples": 4.789,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 7,
+   "answers": [
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 3,
+     "kind": "chosen",
+     "reward": 4.1062,
+     "apples": 4.1062,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8307,
+     "apples": 2.8307,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7808,
+     "apples": 4.7808,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.7035,
+     "apples": 4.7035,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7894,
+     "apples": 4.7894,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7952,
+     "apples": 4.7952,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.793,
+     "apples": 4.793,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 8,
+   "answers": [
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 3,
+     "kind": "chosen",
+     "reward": 4.1012,
+     "apples": 4.1012,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.8159,
+     "apples": 4.8159,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8062,
+     "apples": 2.8062,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.6913,
+     "apples": 4.6913,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.775,
+     "apples": 4.775,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7692,
+     "apples": 4.7692,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7979,
+     "apples": 4.7979,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 9,
+   "answers": [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 3.6877,
+     "apples": 3.6877,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.6686,
+     "apples": 4.6686,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7739,
+     "apples": 4.7739,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8173,
+     "apples": 2.8173,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.788,
+     "apples": 4.788,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7913,
+     "apples": 4.7913,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7895,
+     "apples": 4.7895,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 10,
+   "answers": [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 3.6876,
+     "apples": 3.6876,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8136,
+     "apples": 2.8136,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.7031,
+     "apples": 4.7031,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.778,
+     "apples": 4.778,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7836,
+     "apples": 4.7836,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7867,
+     "apples": 4.7867,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7981,
+     "apples": 4.7981,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 11,
+   "answers": [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 3.6855,
+     "apples": 3.6855,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.6987,
+     "apples": 4.6987,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8007,
+     "apples": 2.8007,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7759,
+     "apples": 4.7759,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8023,
+     "apples": 4.8023,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7891,
+     "apples": 4.7891,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7896,
+     "apples": 4.7896,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 12,
+   "answers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7859,
+     "apples": 4.7859,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.809,
+     "apples": 2.809,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.7906,
+     "apples": 4.7906,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.6865,
+     "apples": 4.6865,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.8128,
+     "apples": 4.8128,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7836,
+     "apples": 4.7836,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7773,
+     "apples": 4.7773,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 13,
+   "answers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7821,
+     "apples": 4.7821,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.8057,
+     "apples": 4.8057,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8178,
+     "apples": 2.8178,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.6821,
+     "apples": 4.6821,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7771,
+     "apples": 4.7771,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7917,
+     "apples": 4.7917,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7807,
+     "apples": 4.7807,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k3s8",
+   "seed": 14,
+   "answers": [
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final": 0,
+   "history": [
+    {
+     "m": 3,
+     "kind": "chosen",
+     "reward": 4.0971,
+     "apples": 4.0971,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 4.7031,
+     "apples": 4.7031,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 4.779,
+     "apples": 4.779,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 2.8125,
+     "apples": 2.8125,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7704,
+     "apples": 4.7704,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7718,
+     "apples": 4.7718,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 4.7909,
+     "apples": 4.7909,
+     "end": 0.0
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 0,
+   "answers": [
+    4,
+    5,
+    6,
+    6,
+    6
+   ],
+   "final": 6,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 12.6281,
+     "apples": 12.6281,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 54.3177,
+     "apples": 47.5373,
+     "end": 3.3902
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 12.7096,
+     "apples": 12.7096,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 12.9917,
+     "apples": 12.9917,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 21.3342,
+     "apples": 21.0232,
+     "end": 0.1555
+    },
+    {
+     "m": 6,
+     "kind": "chosen",
+     "reward": 54.3066,
+     "apples": 47.5846,
+     "end": 3.361
+    },
+    {
+     "m": 6,
+     "kind": "chosen",
+     "reward": 53.9118,
+     "apples": 47.3316,
+     "end": 3.2901
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 1,
+   "answers": [
+    4,
+    5,
+    7,
+    8,
+    7
+   ],
+   "final": 7,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 12.4856,
+     "apples": 12.4856,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 12.7074,
+     "apples": 12.7074,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 54.0107,
+     "apples": 47.3543,
+     "end": 3.3282
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 13.0698,
+     "apples": 13.0698,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 21.2401,
+     "apples": 20.8927,
+     "end": 0.1737
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 66.3355,
+     "apples": 53.3771,
+     "end": 6.4792
+    },
+    {
+     "m": 8,
+     "kind": "chosen",
+     "reward": 54.5523,
+     "apples": 39.0081,
+     "end": 7.7721
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 2,
+   "answers": [
+    3,
+    5,
+    7,
+    8,
+    7
+   ],
+   "final": 7,
+   "history": [
+    {
+     "m": 3,
+     "kind": "chosen",
+     "reward": 11.7237,
+     "apples": 11.7237,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 54.9447,
+     "apples": 48.1129,
+     "end": 3.4159
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 12.9844,
+     "apples": 12.9844,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 12.728,
+     "apples": 12.728,
+     "end": 0.0
+    },
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 21.4425,
+     "apples": 21.1449,
+     "end": 0.1488
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 65.9396,
+     "apples": 53.087,
+     "end": 6.4263
+    },
+    {
+     "m": 8,
+     "kind": "chosen",
+     "reward": 54.7629,
+     "apples": 39.1735,
+     "end": 7.7947
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 3,
+   "answers": [
+    0,
+    7,
+    8,
+    7,
+    7
+   ],
+   "final": 7,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 12.9291,
+     "apples": 12.9291,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 12.9328,
+     "apples": 12.9328,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 54.3675,
+     "apples": 47.6601,
+     "end": 3.3537
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 12.7454,
+     "apples": 12.7454,
+     "end": 0.0
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 66.2466,
+     "apples": 53.3084,
+     "end": 6.4691
+    },
+    {
+     "m": 8,
+     "kind": "chosen",
+     "reward": 54.7628,
+     "apples": 39.1862,
+     "end": 7.7883
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 66.2251,
+     "apples": 53.2979,
+     "end": 6.4636
+    }
+   ]
+  },
+  {
+   "cond": "k2s8",
+   "seed": 4,
+   "answers": [
+    0,
+    5,
+    7,
+    8,
+    7
+   ],
+   "final": 7,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 13.0401,
+     "apples": 13.0401,
+     "end": 0.0
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 12.8115,
+     "apples": 12.8115,
+     "end": 0.0
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 12.9266,
+     "apples": 12.9266,
+     "end": 0.0
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 54.2798,
+     "apples": 47.538,
+     "end": 3.3709
+    },
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 20.9846,
+     "apples": 20.6876,
+     "end": 0.1485
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 66.1692,
+     "apples": 53.228,
+     "end": 6.4706
+    },
+    {
+     "m": 8,
+     "kind": "chosen",
+     "reward": 54.8778,
+     "apples": 39.2626,
+     "end": 7.8076
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 0,
+   "answers": [
+    4,
+    5,
+    6,
+    6,
+    6
+   ],
+   "final": 6,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 22.3333,
+     "apples": 22.2587,
+     "end": 0.0373
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 66.5361,
+     "apples": 59.9249,
+     "end": 3.3056
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 23.1988,
+     "apples": 23.1334,
+     "end": 0.0327
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 23.552,
+     "apples": 23.4988,
+     "end": 0.0266
+    },
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 27.4064,
+     "apples": 27.118,
+     "end": 0.1442
+    },
+    {
+     "m": 6,
+     "kind": "chosen",
+     "reward": 66.2197,
+     "apples": 59.6887,
+     "end": 3.2655
+    },
+    {
+     "m": 6,
+     "kind": "chosen",
+     "reward": 66.5072,
+     "apples": 59.9518,
+     "end": 3.2777
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 1,
+   "answers": [
+    0,
+    5,
+    7,
+    8,
+    7
+   ],
+   "final": 7,
+   "history": [
+    {
+     "m": 0,
+     "kind": "chosen",
+     "reward": 23.4121,
+     "apples": 23.3395,
+     "end": 0.0363
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 23.3179,
+     "apples": 23.2417,
+     "end": 0.0381
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 66.5139,
+     "apples": 59.9631,
+     "end": 3.2754
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 23.3256,
+     "apples": 23.2608,
+     "end": 0.0324
+    },
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 27.7711,
+     "apples": 27.4405,
+     "end": 0.1653
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 96.9909,
+     "apples": 81.8805,
+     "end": 7.5552
+    },
+    {
+     "m": 8,
+     "kind": "chosen",
+     "reward": 80.4935,
+     "apples": 63.7643,
+     "end": 8.3646
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 2,
+   "answers": [
+    4,
+    7,
+    8,
+    7,
+    7
+   ],
+   "final": 7,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 22.1451,
+     "apples": 22.0683,
+     "end": 0.0384
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 65.9648,
+     "apples": 59.5106,
+     "end": 3.2271
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 23.5386,
+     "apples": 23.4738,
+     "end": 0.0324
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 23.529,
+     "apples": 23.4536,
+     "end": 0.0377
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 96.7182,
+     "apples": 81.6964,
+     "end": 7.5109
+    },
+    {
+     "m": 8,
+     "kind": "chosen",
+     "reward": 80.669,
+     "apples": 63.8654,
+     "end": 8.4018
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 96.4788,
+     "apples": 81.527,
+     "end": 7.4759
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 3,
+   "answers": [
+    5,
+    7,
+    7,
+    8,
+    7
+   ],
+   "final": 7,
+   "history": [
+    {
+     "m": 5,
+     "kind": "chosen",
+     "reward": 27.4578,
+     "apples": 27.1534,
+     "end": 0.1522
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 23.5578,
+     "apples": 23.504,
+     "end": 0.0269
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 66.1106,
+     "apples": 59.6848,
+     "end": 3.2129
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 23.1798,
+     "apples": 23.0996,
+     "end": 0.0401
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 96.1153,
+     "apples": 81.2257,
+     "end": 7.4448
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 96.8075,
+     "apples": 81.7613,
+     "end": 7.5231
+    },
+    {
+     "m": 8,
+     "kind": "chosen",
+     "reward": 80.658,
+     "apples": 63.8892,
+     "end": 8.3844
+    }
+   ]
+  },
+  {
+   "cond": "k3s16",
+   "seed": 4,
+   "answers": [
+    4,
+    7,
+    8,
+    7,
+    7
+   ],
+   "final": 7,
+   "history": [
+    {
+     "m": 4,
+     "kind": "chosen",
+     "reward": 22.2011,
+     "apples": 22.1295,
+     "end": 0.0358
+    },
+    {
+     "m": 1,
+     "kind": "assigned",
+     "reward": 23.4327,
+     "apples": 23.3569,
+     "end": 0.0379
+    },
+    {
+     "m": 0,
+     "kind": "assigned",
+     "reward": 23.0493,
+     "apples": 22.9875,
+     "end": 0.0309
+    },
+    {
+     "m": 6,
+     "kind": "assigned",
+     "reward": 66.3814,
+     "apples": 59.8718,
+     "end": 3.2548
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 96.4813,
+     "apples": 81.5081,
+     "end": 7.4866
+    },
+    {
+     "m": 8,
+     "kind": "chosen",
+     "reward": 80.6174,
+     "apples": 63.8506,
+     "end": 8.3834
+    },
+    {
+     "m": 7,
+     "kind": "chosen",
+     "reward": 96.8809,
+     "apples": 81.7973,
+     "end": 7.5418
+    }
+   ]
+  }
+ ]
+}

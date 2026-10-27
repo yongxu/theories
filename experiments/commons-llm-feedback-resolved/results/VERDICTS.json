@@ -1,0 +1,718 @@
+{
+ "conditions": {
+  "k3s1": {
+   "cls": "locked",
+   "predicted": "m = 0",
+   "first": [
+    5,
+    5,
+    3,
+    0,
+    0
+   ],
+   "final": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final_value_share": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "played": [
+    [
+     5,
+     6,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     5,
+     1,
+     6,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     6,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     6,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0,
+     6,
+     0,
+     0,
+     0
+    ]
+   ],
+   "verdict_seeds": 5,
+   "hits": 5,
+   "verdict": "passed",
+   "seeds": 5,
+   "hits_all_seeds": 5
+  },
+  "k3s1_lam32": {
+   "cls": "locked",
+   "predicted": "m = 0",
+   "first": [
+    7,
+    0,
+    5,
+    1,
+    6
+   ],
+   "final": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final_value_share": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "played": [
+    [
+     7,
+     6,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     6,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     5,
+     6,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     6,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     6,
+     1,
+     0,
+     6,
+     0,
+     0,
+     0
+    ]
+   ],
+   "verdict_seeds": 5,
+   "hits": 5,
+   "verdict": "passed",
+   "seeds": 5,
+   "hits_all_seeds": 5
+  },
+  "k2s1": {
+   "cls": "locked",
+   "predicted": "m = 0",
+   "first": [
+    0,
+    0,
+    0,
+    4,
+    3
+   ],
+   "final": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final_value_share": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "played": [
+    [
+     0,
+     6,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     6,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     6,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     4,
+     0,
+     6,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     1,
+     0,
+     6,
+     0,
+     0,
+     0
+    ]
+   ],
+   "verdict_seeds": 5,
+   "hits": 5,
+   "verdict": "passed",
+   "seeds": 5,
+   "hits_all_seeds": 5
+  },
+  "k3s8": {
+   "cls": "locked",
+   "predicted": "m = 0",
+   "first": [
+    0,
+    4,
+    5,
+    5,
+    4,
+    4,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    0,
+    0,
+    3
+   ],
+   "final": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "final_value_share": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "played": [
+    [
+     0,
+     6,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     4,
+     1,
+     6,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     5,
+     6,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     5,
+     0,
+     6,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     4,
+     1,
+     0,
+     6,
+     0,
+     0,
+     0
+    ],
+    [
+     4,
+     6,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     1,
+     6,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     6,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     0,
+     6,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     4,
+     1,
+     0,
+     6,
+     0,
+     0,
+     0
+    ],
+    [
+     4,
+     6,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     4,
+     1,
+     6,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     6,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     6,
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     1,
+     0,
+     6,
+     0,
+     0,
+     0
+    ]
+   ],
+   "verdict_seeds": 5,
+   "hits": 5,
+   "verdict": "passed",
+   "seeds": 15,
+   "hits_all_seeds": 15
+  },
+  "k2s8": {
+   "cls": "open",
+   "predicted": "m >= 1",
+   "first": [
+    4,
+    4,
+    3,
+    0,
+    0
+   ],
+   "final": [
+    6,
+    7,
+    7,
+    7,
+    7
+   ],
+   "final_value_share": [
+    0.818,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "played": [
+    [
+     4,
+     6,
+     1,
+     0,
+     5,
+     6,
+     6
+    ],
+    [
+     4,
+     1,
+     6,
+     0,
+     5,
+     7,
+     8
+    ],
+    [
+     3,
+     6,
+     0,
+     1,
+     5,
+     7,
+     8
+    ],
+    [
+     0,
+     0,
+     6,
+     1,
+     7,
+     8,
+     7
+    ],
+    [
+     0,
+     1,
+     0,
+     6,
+     5,
+     7,
+     8
+    ]
+   ],
+   "verdict_seeds": 5,
+   "hits": 5,
+   "verdict": "passed",
+   "seeds": 5,
+   "hits_all_seeds": 5
+  },
+  "k3s16": {
+   "cls": "open",
+   "predicted": "m >= 1",
+   "first": [
+    4,
+    0,
+    4,
+    5,
+    4
+   ],
+   "final": [
+    6,
+    7,
+    7,
+    7,
+    7
+   ],
+   "final_value_share": [
+    0.687,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "played": [
+    [
+     4,
+     6,
+     1,
+     0,
+     5,
+     6,
+     6
+    ],
+    [
+     0,
+     1,
+     6,
+     0,
+     5,
+     7,
+     8
+    ],
+    [
+     4,
+     6,
+     0,
+     1,
+     7,
+     8,
+     7
+    ],
+    [
+     5,
+     0,
+     6,
+     1,
+     7,
+     7,
+     8
+    ],
+    [
+     4,
+     1,
+     0,
+     6,
+     7,
+     8,
+     7
+    ]
+   ],
+   "verdict_seeds": 5,
+   "hits": 5,
+   "verdict": "passed",
+   "seeds": 5,
+   "hits_all_seeds": 5
+  }
+ },
+ "contrasts": {
+  "L1_locked_side": true,
+  "L2_open_side": true,
+  "L3_end_weight_does_not_open": true,
+  "L4_boundary_is_the_rest": true
+ },
+ "measures": {
+  "locked_seeds": 30,
+  "open_seeds": 10,
+  "R": 0,
+  "R_small": 0,
+  "R_small_held": 0,
+  "R_new_at_7": 0,
+  "R_by_condition": {
+   "k3s1": [
+    0,
+    5
+   ],
+   "k3s1_lam32": [
+    0,
+    5
+   ],
+   "k2s1": [
+    0,
+    5
+   ],
+   "k3s8": [
+    0,
+    15
+   ]
+  },
+  "R_by_gap": {
+   "0.018": {
+    "conditions": [
+     "k3s8"
+    ],
+    "misses": 0,
+    "seeds": 15
+   },
+   "0.025": {
+    "conditions": [
+     "k3s1",
+     "k3s1_lam32"
+    ],
+    "misses": 0,
+    "seeds": 10
+   },
+   "0.066": {
+    "conditions": [
+     "k2s1"
+    ],
+    "misses": 0,
+    "seeds": 5
+   }
+  },
+  "rate_rises_with_gap": false,
+  "R_by_round_of_m6": {
+   "2": [
+    0,
+    12
+   ],
+   "3": [
+    0,
+    12
+   ],
+   "4": [
+    0,
+    6
+   ]
+  },
+  "R_by_last_assigned": {
+   "0": [
+    0,
+    12
+   ],
+   "1": [
+    0,
+    12
+   ],
+   "6": [
+    0,
+    6
+   ]
+  },
+  "misses": [],
+  "open_short": 0,
+  "open_at_0": 0,
+  "invalid_finals": 0,
+  "locked_first_at_0": 9,
+  "final_is_best_seen": {
+   "locked": 30,
+   "open": 10
+  },
+  "final_is_best_of_own_rounds": {
+   "locked": 30,
+   "open": 10
+  },
+  "moved": {
+   "locked": 21,
+   "open": 10
+  },
+  "chosen_rounds_trying_a_new_threshold": 22,
+  "open_seeds_that_played_7": 8,
+  "fallback_rounds": 0
+ },
+ "readings": {
+  "resolution": {
+   "claim": "LA1's locked-side misses read as feedback that barely resolved the best threshold, or never showed it: with m = 0 assigned, resolved and seen, at most one locked seed ends with m >= 1, at most one open seed ends short of the assigned m = 6's value, and at most one final choice in all is invalid",
+   "consults": "R, open_short, invalid_finals, locked_first_at_0",
+   "supported": true,
+   "contradicted": false
+  },
+  "trained_restraint": {
+   "claim": "a small restraint held against resolved, assigned feedback: at least 3 locked seeds end with m >= 1, at least two thirds of them on a small restraint the model chose in at least two of rounds 5-7, while at most one open seed ends short of the assigned m = 6's value. It is a restraint brought from training, a pull of the assigned m = 6 that persists, differences near the gap read as ties with the pick kept, or the assigned m = 1 re-checked in most chosen rounds; the protocol does not tell these apart",
+   "consults": "R, R_small, R_small_held, open_short, invalid_finals",
+   "supported": false,
+   "contradicted": true
+  },
+  "open_not_followed": {
+   "claim": "the results are not followed where restraint pays: at least 2 open seeds end short of the assigned m = 6's value, while at most one locked seed ends with m >= 1 (greedy, anchored on m = 0, or kept to the first answer on the open side)",
+   "consults": "R, open_short, invalid_finals",
+   "supported": false,
+   "contradicted": true
+  },
+  "results_not_followed": {
+   "claim": "the final choices do not follow resolved results: at least 3 locked seeds end with m >= 1, and either at least 2 open seeds end short of the assigned m = 6's value, or more than a third of the misses are large restraints (value share below 0.85)",
+   "consults": "R, R_small, open_short",
+   "supported": false,
+   "contradicted": true
+  }
+ },
+ "frozen": "bac7f4ac9203f9beab7c20bd1df9220224cf59db"
+}

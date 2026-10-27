@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/ren/theories/experiments/commons-llm-feedback-resolved/run.py", line 168, in <module>
+    main(sys.argv)
+  File "/Users/ren/theories/experiments/commons-llm-feedback-resolved/run.py", line 161, in main
+    out.append(seed_run(name, cond, seed, chooser))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ren/theories/experiments/commons-llm-feedback-resolved/run.py", line 41, in seed_run
+    a = chooser(name, cond, seed, len(answers), history, False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ren/theories/experiments/commons-llm-feedback-resolved/run.py", line 156, in <lambda>
+    chooser = lambda name, cond, seed, answer, history, final: agent.choose(name, cond, seed, answer, history,
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ren/theories/experiments/commons-llm-feedback-resolved/agent.py", line 130, in choose
+    raise RuntimeError(f"claude call failed ({code}): {out[:200]} {err[:200]}")
+RuntimeError: claude call failed (1): API Error: Unable to connect to API (ENOTFOUND)
+ 
