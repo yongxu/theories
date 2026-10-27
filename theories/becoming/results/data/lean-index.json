@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1998,
-    "distinct_byte_contents": 1574,
+    "lean_paths": 1999,
+    "distinct_byte_contents": 1575,
     "byte_identical_duplicate_groups": 161,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1053,
+      "development-attempt": 1054,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 906
@@ -4495,6 +4495,17 @@
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/oc-own-class/review-oc4/OC4Doubts.lean",
+      "sha256": "b504a21bebe3f587d8473c4ff6e6e5487bbef790091ee4cddd1795975ccba3d6",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/oc-own-class/REVIEW-OC4.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -334173,6 +334184,424 @@
         "unsafe": []
       },
       "print_axioms_commands": 30
+    },
+    "b504a21bebe3f587d8473c4ff6e6e5487bbef790091ee4cddd1795975ccba3d6": {
+      "byte_size": 17920,
+      "line_count": 455,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "«际»",
+          "qualified_name_hint": "Scratch.«际»",
+          "line": 8
+        },
+        {
+          "kind": "inductive",
+          "name": "«及»",
+          "qualified_name_hint": "Scratch.«及»",
+          "line": 10
+        },
+        {
+          "kind": "structure",
+          "name": "«类»",
+          "qualified_name_hint": "Scratch.«类»",
+          "line": 14
+        },
+        {
+          "kind": "def",
+          "name": "«合»",
+          "qualified_name_hint": "Scratch.«合»",
+          "line": 22
+        },
+        {
+          "kind": "def",
+          "name": "«一»",
+          "qualified_name_hint": "Scratch.«一»",
+          "line": 23
+        },
+        {
+          "kind": "def",
+          "name": "«续»",
+          "qualified_name_hint": "Scratch.«续»",
+          "line": 24
+        },
+        {
+          "kind": "def",
+          "name": "«相续»",
+          "qualified_name_hint": "Scratch.«相续»",
+          "line": 25
+        },
+        {
+          "kind": "def",
+          "name": "«有后»",
+          "qualified_name_hint": "Scratch.«有后»",
+          "line": 26
+        },
+        {
+          "kind": "def",
+          "name": "«亡»",
+          "qualified_name_hint": "Scratch.«亡»",
+          "line": 27
+        },
+        {
+          "kind": "def",
+          "name": "«无环»",
+          "qualified_name_hint": "Scratch.«无环»",
+          "line": 28
+        },
+        {
+          "kind": "def",
+          "name": "«所及»",
+          "qualified_name_hint": "Scratch.«所及»",
+          "line": 29
+        },
+        {
+          "kind": "def",
+          "name": "«延»",
+          "qualified_name_hint": "Scratch.«延»",
+          "line": 30
+        },
+        {
+          "kind": "theorem",
+          "name": "«线内同类»",
+          "qualified_name_hint": "Scratch.«线内同类»",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "«所缘同于»",
+          "qualified_name_hint": "Scratch.«所缘同于»",
+          "line": 38
+        },
+        {
+          "kind": "def",
+          "name": "«至终有常»",
+          "qualified_name_hint": "Scratch.«至终有常»",
+          "line": 40
+        },
+        {
+          "kind": "def",
+          "name": "«本类至终有常»",
+          "qualified_name_hint": "Scratch.«本类至终有常»",
+          "line": 43
+        },
+        {
+          "kind": "def",
+          "name": "«二分»",
+          "qualified_name_hint": "Scratch.«二分»",
+          "line": 46
+        },
+        {
+          "kind": "theorem",
+          "name": "ownOutside",
+          "qualified_name_hint": "Scratch.ownOutside",
+          "line": 53
+        },
+        {
+          "kind": "theorem",
+          "name": "p3_of_p4",
+          "qualified_name_hint": "Scratch.p3_of_p4",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "acting_held_continues",
+          "qualified_name_hint": "Scratch.acting_held_continues",
+          "line": 108
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_iff_downstream_alike",
+          "qualified_name_hint": "Scratch.reach_iff_downstream_alike",
+          "line": 114
+        },
+        {
+          "kind": "theorem",
+          "name": "p4_of_reach",
+          "qualified_name_hint": "Scratch.p4_of_reach",
+          "line": 134
+        },
+        {
+          "kind": "theorem",
+          "name": "moment_at",
+          "qualified_name_hint": "Scratch.moment_at",
+          "line": 140
+        },
+        {
+          "kind": "inductive",
+          "name": "Occ",
+          "qualified_name_hint": "Scratch.ZeroStep.Occ",
+          "line": 149
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Scratch.ZeroStep.step",
+          "line": 150
+        },
+        {
+          "kind": "def",
+          "name": "inClass",
+          "qualified_name_hint": "Scratch.ZeroStep.inClass",
+          "line": 167
+        },
+        {
+          "kind": "theorem",
+          "name": "split_constant_at",
+          "qualified_name_hint": "Scratch.ZeroStep.split_constant_at",
+          "line": 172
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_while_net_goes",
+          "qualified_name_hint": "Scratch.ZeroStep.ends_while_net_goes",
+          "line": 182
+        },
+        {
+          "kind": "inductive",
+          "name": "Occ",
+          "qualified_name_hint": "Scratch.NoP2.Occ",
+          "line": 198
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Scratch.NoP2.step",
+          "line": 199
+        },
+        {
+          "kind": "def",
+          "name": "inClass",
+          "qualified_name_hint": "Scratch.NoP2.inClass",
+          "line": 225
+        },
+        {
+          "kind": "def",
+          "name": "E",
+          "qualified_name_hint": "Scratch.NoP2.E",
+          "line": 231
+        },
+        {
+          "kind": "theorem",
+          "name": "E_class",
+          "qualified_name_hint": "Scratch.NoP2.E_class",
+          "line": 232
+        },
+        {
+          "kind": "theorem",
+          "name": "not_at",
+          "qualified_name_hint": "Scratch.NoP2.not_at",
+          "line": 233
+        },
+        {
+          "kind": "theorem",
+          "name": "held",
+          "qualified_name_hint": "Scratch.NoP2.held",
+          "line": 238
+        },
+        {
+          "kind": "def",
+          "name": "inner",
+          "qualified_name_hint": "Scratch.NoP2.inner",
+          "line": 240
+        },
+        {
+          "kind": "theorem",
+          "name": "inner_step",
+          "qualified_name_hint": "Scratch.NoP2.inner_step",
+          "line": 246
+        },
+        {
+          "kind": "theorem",
+          "name": "inner_reach",
+          "qualified_name_hint": "Scratch.NoP2.inner_reach",
+          "line": 264
+        },
+        {
+          "kind": "theorem",
+          "name": "inner_alike",
+          "qualified_name_hint": "Scratch.NoP2.inner_alike",
+          "line": 268
+        },
+        {
+          "kind": "theorem",
+          "name": "downstream_alike",
+          "qualified_name_hint": "Scratch.NoP2.downstream_alike",
+          "line": 274
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_without_P2",
+          "qualified_name_hint": "Scratch.NoP2.reach_without_P2",
+          "line": 276
+        },
+        {
+          "kind": "inductive",
+          "name": "Occ",
+          "qualified_name_hint": "Scratch.CleanStepCopy.Occ",
+          "line": 284
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Scratch.CleanStepCopy.step",
+          "line": 285
+        },
+        {
+          "kind": "def",
+          "name": "intended",
+          "qualified_name_hint": "Scratch.CleanStepCopy.intended",
+          "line": 302
+        },
+        {
+          "kind": "def",
+          "name": "own",
+          "qualified_name_hint": "Scratch.CleanStepCopy.own",
+          "line": 307
+        },
+        {
+          "kind": "def",
+          "name": "rank",
+          "qualified_name_hint": "Scratch.CleanStepCopy.rank",
+          "line": 308
+        },
+        {
+          "kind": "theorem",
+          "name": "rank_lt",
+          "qualified_name_hint": "Scratch.CleanStepCopy.rank_lt",
+          "line": 313
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_lt",
+          "qualified_name_hint": "Scratch.CleanStepCopy.reach_lt",
+          "line": 330
+        },
+        {
+          "kind": "theorem",
+          "name": "acyclic",
+          "qualified_name_hint": "Scratch.CleanStepCopy.acyclic",
+          "line": 334
+        },
+        {
+          "kind": "theorem",
+          "name": "not_constant_to_end",
+          "qualified_name_hint": "Scratch.CleanStepCopy.not_constant_to_end",
+          "line": 335
+        },
+        {
+          "kind": "theorem",
+          "name": "holds_member_and_part",
+          "qualified_name_hint": "Scratch.CleanStepCopy.holds_member_and_part",
+          "line": 340
+        },
+        {
+          "kind": "inductive",
+          "name": "Occ",
+          "qualified_name_hint": "Scratch.TwoBlocks.Occ",
+          "line": 349
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Scratch.TwoBlocks.step",
+          "line": 350
+        },
+        {
+          "kind": "def",
+          "name": "inClass",
+          "qualified_name_hint": "Scratch.TwoBlocks.inClass",
+          "line": 376
+        },
+        {
+          "kind": "def",
+          "name": "E",
+          "qualified_name_hint": "Scratch.TwoBlocks.E",
+          "line": 382
+        },
+        {
+          "kind": "theorem",
+          "name": "leaving_follows",
+          "qualified_name_hint": "Scratch.TwoBlocks.leaving_follows",
+          "line": 383
+        },
+        {
+          "kind": "theorem",
+          "name": "not_at",
+          "qualified_name_hint": "Scratch.TwoBlocks.not_at",
+          "line": 391
+        },
+        {
+          "kind": "theorem",
+          "name": "not_to_end",
+          "qualified_name_hint": "Scratch.TwoBlocks.not_to_end",
+          "line": 396
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Scratch.FiniteCycle.step",
+          "line": 402
+        },
+        {
+          "kind": "theorem",
+          "name": "goes_on",
+          "qualified_name_hint": "Scratch.FiniteCycle.goes_on",
+          "line": 403
+        },
+        {
+          "kind": "inductive",
+          "name": "Occ",
+          "qualified_name_hint": "Scratch.GoesNeeded.Occ",
+          "line": 411
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Scratch.GoesNeeded.step",
+          "line": 412
+        },
+        {
+          "kind": "def",
+          "name": "inClass",
+          "qualified_name_hint": "Scratch.GoesNeeded.inClass",
+          "line": 422
+        },
+        {
+          "kind": "def",
+          "name": "E",
+          "qualified_name_hint": "Scratch.GoesNeeded.E",
+          "line": 426
+        },
+        {
+          "kind": "theorem",
+          "name": "to_end",
+          "qualified_name_hint": "Scratch.GoesNeeded.to_end",
+          "line": 427
+        },
+        {
+          "kind": "theorem",
+          "name": "fails",
+          "qualified_name_hint": "Scratch.GoesNeeded.fails",
+          "line": 434
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 30,
+        "inductive": 6,
+        "structure": 1,
+        "theorem": 28
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 14
     },
     "b51055c481ece65be63d66df2ee9439c65875db6c9ee05fadea004de45b56e25": {
       "byte_size": 13202,

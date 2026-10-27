@@ -37,8 +37,8 @@
       ]
     },
     {
-      "en": "A line that ends while it still conditions something fails the condition at its class, and the condition asks more than that a line end only where the net does; the organism's class fails it at the first member in both finite witnesses, and the class that holds a member's effects without the regularity fails it at the member.",
-      "zh": "线亡而仍有所缘者，于其类不成此条件，而此条件所问多于线唯于网终处亡；两有限见证中，个体之类于首员处不成之；持员之所缘而无此理之类，于此员处不成之。",
+      "en": "A line that ends while it still conditions something fails the condition at its class, and the condition asks more than that a line end only where the net does; the organism's class fails it at the first member in both finite witnesses, and in a witness where the class holds a member's effects but what follows them is not alike to it, the class fails it at the member.",
+      "zh": "线亡而仍有所缘者，于其类不成此条件，而此条件所问多于线唯于网终处亡；两有限见证中，个体之类于首员处不成之；见证中类持一员之所缘而其后者不与之同类，此类于此员处不成之。",
       "declarations": [
         "Becoming.CleanStep.ends_where_net_ends",
         "Becoming.CleanStep.not_constant_at",
@@ -281,7 +281,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "e2e4a1f4c55e4f64868916638b6c0c32e06ff4d8a750fb44c2fc6861bbb3d13b"
+      "sha256": "6759a5dd902a91e1950b4dde71e9eccab14eb48dfc74824d0c109603e990ab32"
     }
   ],
   "proof_bindings": [
@@ -301,6 +301,10 @@
     {
       "en": "25 October 2026: reviewed independently (OC2): 4 errors, 9 imprecisions and 4 clarity points in its texts, no proof wrong, all fixed; the laws extended (what lies outside bears only through effects leaving the class; a sufficient condition under the split; the condition asks more than line-ending; the witnesses at the member's class; FinerWake). The Open item it answered: its formal part by laws, the choice of class by a labelled reading. Study section 411.",
       "zh": "2026年10月25日：独立审查（OC2）：其文中四误、九不确、四欠明，证明无误，皆已修正；诸律扩充（类外之分唯经出类之效；二分下之充分条件；此条件所问多于线唯于网终处亡；见证于员之类；FinerWake）。其所答之开放问题：形式部分以律答之，读何类以标明之读法答之。研究第 411 节。"
+    },
+    {
+      "en": "27 October 2026: checked a second time (OC4): its third law describes the witness's class instead of calling it one without the regularity; the history line of 25 October counted 9 imprecisions in OC2's review, which numbers 10 (findings 5 to 14, 18 findings in all); study section 423.",
+      "zh": "2026年10月27日：经第二次审查（OC4）：其第三律述见证之类，不复称之为无此理者；10月25日之历史条记 OC2 之审查有 9 项不精确，实为 10 项（第 5 至 14 项，共 18 项）；研究第 423 节。"
     }
   ]
 }
