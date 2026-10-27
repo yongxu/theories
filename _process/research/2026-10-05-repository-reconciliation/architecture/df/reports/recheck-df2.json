@@ -1,0 +1,377 @@
+{
+ "about": "DF2: cold read of the chapters and records as applied (two readers, workflow wf_004fc46c-048), 27 October 2026",
+ "readers": [
+  {
+   "chapters": "01, 03, 08",
+   "checked": "I read the diffs against main for 01-ROOT.md, 03-KNOWING.md and 08-METHOD.md, and all sixteen records' JSON (statement, laws with their declarations, hypotheses, does_not_show, references). Against those I read the Lean each law cites: SeedReach, MoveOutcomeProcesses, GenerativeCore, HistoryLanguages, ReconfigurableSupportLogic, ProductTower, GeneratedPaths, GeneratedContraction, ContractionMechanisms, ReflectiveIdentity, RecognitionalBinding, FaultEnvelopes, PooledEnvelopes, TreeSearch, NormativeActivity, TemporalInspection, ChangingDependency, CalibratedUpdater, CalibrationRenewal, Narrowing, AssurancePlans, CodeAcquisition, RouteFormation, RelationsAcrossScales, InquiryChoice, GuardHorizon/Keeping and GrammarReadings. Where a paragraph states axioms, I checked the receipts: the ReconfigurableSupportLogic, NormativeActivity, TemporalInspection, changing-dependency, generated-contraction and package receipts. I also read df2_chapters.py and df2-pending.json.\n\nEvery reviewer correction to my chapters was applied as written: A2, A41, D8, D10, D11, D12, D22, D23 and D35. Each of the sixteen records has exactly one r-anchor, placed before its paragraph or at the start of its table row. Every cross-chapter r-link resolves, and D69 is present in both editions of DELEGATED-CHOICES. No lander edit broke a sentence, and no market or social words were added.\n\nThe defects that remain are of three kinds:\n1. **The 08 summary section states another record's laws.** In 08 §4, two bullets still state access-yet-to-form's laws (fixed_route_behavior_iff and the Witness), which D10 assigned to 03. The same section's axiom label then names a witness that 08 does not state.\n2. **One label is wrong and one claim overreaches.** Evidence-through-change says `Classical.choice` occurs \"in one declaration\", but every ChangingDependency declaration uses it. The same row says a change recorded as none \"leaves\" false confidence, but the Lean shows only one witness, so it \"can leave\" it.\n3. **Most home paragraphs state only part of their record.** Records that DF2 widened have laws, and sometimes their headline statement, that the home paragraph does not state:\n   - learning-a-rule-by-narrowing (its anchor also sits on an Assessment paragraph);\n   - composition-route (its duplicate-route sentence also generalizes a witness that holds only for equal primitives);\n   - certificates, what-a-total-keeps, access-yet-to-form, adaptive closure, readings-a-response-needs and when-to-inquire;\n   - correction-is-not-calibration (the sign-keeping gain change that 04 now points to);\n   - one-move-covering (03 also restates it, with a witness 08 lacks);\n   - reach-from-a-seed, contraction, self-reference, type formation and what-a-summary-keeps.\n\nSmaller label points: the when-to-inquire standing label omits its core law, and the L0 bullet's \"every module it imports\" leaves out GenerativeCore, which Frame imports.",
+   "findings": [
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "where": "§4, what-a-summary-keeps, bullets 3 and 4",
+     "old": "- In the access model, with the current route fixed, agreement on occupancy throughout the permitted access set is necessary and sufficient for every permitted word to have the same feasibility.\n- A newly admitted access can separate two states that every old judgment identified (`hidden_formed` and its witness): the access relations that can still form limit what a current abstraction may forget. The access model's exact behaviour with the route fixed and its witness are [knowing's](03-KNOWING.md#r-access-yet-to-form).",
+     "new": "- The access model's exact behaviour with the current route fixed, and a newly admitted access that separates two states every old judgment identified, are [knowing's](03-KNOWING.md#r-access-yet-to-form): the access relations that can still form limit what a current abstraction may forget.",
+     "severity": "error",
+     "why": "Bullet 3 states fixed_route_behavior_iff, and bullet 4 states the Witness (hidden_formed). Both are laws 0 and 1 of access-yet-to-form, whose home is 03's row. The record what-a-summary-keeps holds neither (its access law is exact_reader_separates and unrestricted_reader_injective only), so 08 states laws its record lacks, and one result has two homes. Bullet 4's own last sentence, written per D10, already says these belong to knowing.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean:161 (fixed_route_behavior_iff), :200 (Witness.hidden_formed); records what-a-summary-keeps law 2, access-yet-to-form laws 0-1; df2-pending.json D10",
+     "tag": "Ra0"
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "where": "§4, what-a-summary-keeps, standing label",
+     "old": "(any process; the access witness on standard axioms, as is the access model: `propext` and `Quot.sound` in some declarations)",
+     "new": "(any process; the access model's two laws on standard axioms: `propext`, and `Quot.sound` in one)",
+     "severity": "imprecise",
+     "why": "Once the witness is stated only in 03 (previous finding), the access model's content in this section is exact_reader_separates, on propext, and unrestricted_reader_injective, on propext and Quot.sound. The label should not name a witness the section does not state.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json modules[1].standard_axiom_audits (exact_reader_separates: propext; unrestricted_reader_injective: propext, Quot.sound)",
+     "tag": "Ra1"
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "where": "§4, what-a-summary-keeps, bullet 1",
+     "old": "(`projection_exact_iff`, the [root's](01-ROOT.md#r-finite-trace-transport) law; pointwise, `local_exact_iff_trace_exact`).",
+     "new": "(`projection_exact_iff`, the [root's](01-ROOT.md#r-finite-trace-transport) law; pointwise, `local_exact_iff_trace_exact`). Every step projecting and every summary step lifting then keep what is enabled and the feasibility of every finite word, and for a one-to-one map traces correspond end to end (`enabled_projection_iff`, `feasible_projection_iff`, `trace_faithful_iff`).",
+     "severity": "missing",
+     "why": "Record law 0, and its statement (\"then keeping every word's feasibility\"), include what preservation and lifting keep and the one-to-one case. The home does not state them.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean:268, :283, :310",
+     "tag": "Ra2"
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "where": "§4, one-move-covering, last bullet",
+     "old": "- Four processes on two configurations are witnesses: more possible outcomes need not cover, covering can remove a possibility, and a summary can hide a loss.",
+     "new": "- Laws of every process: a move completing a goal completes every weaker one; no move completes the goal nothing meets, and the goal everything meets is ensured exactly where some move is enabled; where a move of one process is enabled and another's moves cover it, some goal is ensured by both; no process ensures every goal another does not (`completes_mono`, `not_ensures_false`, `ensures_true_iff`, `common_goal`, `no_strict_gain_everywhere`). A goal read through a summary of the outcomes is ensured exactly where its pullback is (`summary_ensures_iff`), and a common response for a belief completes from every configuration where the belief holds (`common_completes`).\n- Four processes on two configurations are witnesses: more possible outcomes need not cover, covering can remove a possibility, a cover can ensure a new goal and open what was closed, goals ensured separately need not be ensured jointly, where no move is enabled nothing is ensured, and a summary can hide a loss.",
+     "severity": "missing",
+     "why": "Record laws 3 and 4 are not stated in the home. Law 5's witnesses are only partly stated: setting_covers_and_gains/opens, setting_separate_not_joint and halted_ensures_nothing are missing. 03's row states the jointly witness, but 08 does not.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean:115-189, :240-282",
+     "tag": "Ra3"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "Questions across scales table, Covering of moves row",
+     "old": "**Theorem** (any process; no premise). One process's moves cover another's at a configuration exactly where every goal one move of the second completes is completed by one move of the first; covering is kept along revisions each covering the last, and fails exactly where not every goal is carried (a lost goal is named under double-negation elimination, a hypothesis; that it is needed is not shown). Witnesses: more possible outcomes need not cover; goals ensured separately need not be ensured jointly; a summary can hide a loss. Stated in [08](08-METHOD.md#r-one-move-covering);",
+     "new": "Stated in [08](08-METHOD.md#r-one-move-covering): when one process's moves cover another's at a configuration, what one move ensures, and the witnesses;",
+     "severity": "imprecise",
+     "why": "The result's home is 08: regions.json gives method, and the anchor r-one-move-covering is there. This row restates the whole law and already differs from the home, carrying a witness the home lacks. A result is stated once, so the row should point to 08 rather than restate the result.",
+     "evidence": "theories/becoming/results/data/regions.json one-move-covering (region method); experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean:96, :148, :159",
+     "tag": "Ra4"
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "where": "§6, type-formation-gives-no-dynamics",
+     "old": "and with no steps it is equality (`reach_without_steps_iff`). Composition follows from the history construction.",
+     "new": "and with no steps it is equality (`reach_without_steps_iff`); every map sending the steps into a reflexive-transitive relation sends every reach into it (`reach_evaluate`). Composition follows from the history construction.",
+     "severity": "missing",
+     "why": "Record law 1 states reach_evaluate, which the home does not.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean:53",
+     "tag": "Ra5"
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "where": "§6, contraction-where-duplication-is-reachable",
+     "old": "A companion module (some declarations on `propext` and `Quot.sound`) gives two further facts. A five-state example with a left unit and a context that blocks the step shows that the context hypothesis is needed.",
+     "new": "Derivability is then reachability, every reach being derivable with no premise (`derivation_iff_reach`), and replacing `y` by `x` in every left context is exactly `x` reaching `y` (`replacement_iff_reach`). A companion module (some declarations on `propext` and `Quot.sound`) gives three witnesses. A five-state example with a left unit and a context that blocks the step shows that the context hypothesis is needed. Counting ready units and provision, one ready unit reaches no duplicate and contraction fails there, while a ready unit with one unit of provision reaches two (`no_free_contraction`, `paid_duplication`).",
+     "severity": "missing",
+     "why": "The record's statement says \"derivability is then reachability\", and laws 0 and 1 state derivation_iff_reach and replacement_iff_reach. Law 4 states the stock witness. None is in the home. The stock witness is also the only one using Quot.sound, which the label names.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean:51, :110; ContractionMechanisms.lean:89, :95-102; generated-contraction-checks/20261008T101759.536385Z/receipt.json (no_free_contraction: propext, Quot.sound)",
+     "tag": "Ra6"
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "where": "§6, self-reference-does-not-certify-itself, bullet 1",
+     "old": "Sameness alone does not give inferential continuation, since the standard a conclusion reaches must suffice for it to serve as the next premise.",
+     "new": "Sameness alone does not give inferential continuation, since the standard a conclusion reaches must suffice for it to serve as the next premise: two carryings compose through such a bridge (`compose_with_bridge`), and on three grades the strict-to-tolerant carrying, reflexive, carries established to unsettled and unsettled to absent but not established to absent (`reflexive_assessment_can_fail_composition`); tolerant to strict is not reflexive.",
+     "severity": "missing",
+     "why": "Record law 1 (the three grades, also a does_not_show entry) and law 0's compose_with_bridge are not stated in the home.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean:37, :69",
+     "tag": "Ra7"
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "where": "§6, self-reference-does-not-certify-itself, bullets 2-3",
+     "old": "- Admitting `C ↔ (C → Q)` under implication and reuse of a hypothesis yields any `Q` (Curry).\n- In the fragment with no source and one carrier at every atomic index, every closed term of type atom(i) → atom(i) evaluates to the identity.",
+     "new": "- Admitting `C ↔ (C → Q)` under implication and reuse of a hypothesis yields any `Q` (Curry), so no proposition `C` has `C ↔ (C → False)`.\n- In the fragment with no source, every term sends related context grounds to related values for every family of relations, so no closed term has an atomic type; with one carrier at every atomic index, every closed term of type atom(i) → atom(i) evaluates to the identity and keeps every criterion (`source_free_related`, `closed_identity_forced`).",
+     "severity": "missing",
+     "why": "Record law 2 (no_false_curry_fixed_point) and law 3 (source_free_related, no_closed_source_free_atom, closed_identity_preserves) are not stated in the home.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean:81; RecognitionalBinding.lean:23, :44, :52, :60",
+     "tag": "Ra8"
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "where": "§3, Rings and receipts, L0 bullet (changed by df2_layers.py)",
+     "old": "`Becoming.World` with every module it imports, that is",
+     "new": "`Becoming.World` with every core module it imports, that is",
+     "severity": "imprecise",
+     "why": "Frame imports GenerativeCore, one of the three foundation modules, so World's imports include a module the list leaves out. The list is exact only for the core modules it imports.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean:1-3; check_becoming.py:69 (FOUNDATION)",
+     "tag": "Ra9"
+    },
+    {
+     "file": "theories/becoming/chapters/01-ROOT.md",
+     "where": "§9.9, reach-from-a-seed",
+     "old": "with no moves only the seeds are reached. **Calibration.**",
+     "new": "with no moves only the seeds are reached, and seeds reached from other seeds add nothing (`substitute_seeds`). What is reached is the seed–edge closure under the moves (`fromSeed_iff_closure`); every target is reached exactly where every such invariant holds at every target (`covers_iff_invariant`); where reach at a configuration is decided, it is reached exactly where no invariant separates it (`fromSeed_iff_not_separated_of_decidable`). **Calibration.**",
+     "severity": "missing",
+     "why": "The home lacks four laws the record states. Law 0 gives the seed–edge closure and covers_iff_invariant, law 1 substitute_seeds, and law 2 the decided case. The closure law belongs in §9.9, whose subject is one closure.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SeedReach.lean:63, :80, :94, :135",
+     "tag": "Ra10"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§3, correction-is-not-calibration",
+     "old": "under an exact affine sign-transfer criterion; constant channels, one blind reference, mixed-epoch readings and change after calibration remain failures. Lean: `CalibratedUpdater.acquired_local_exact`, `CalibrationRenewal.all_signs_transfer_iff`, `CalibrationRenewal.renewed_run`, `CalibrationRenewal.late_change_still_fails`;",
+     "new": "under an exact affine sign-transfer criterion: two references fix an affine channel at every input (`CalibrationRenewal.two_references_complete`), and signs transfer between epochs exactly where the bias is kept and the gains agree in sign, so raising a gain from 1 to 2 keeps every sign (`CalibrationRenewal.positive_gain_change_preserves_signs`); the apparatus reports success exactly where every local reading does. In the named run seven units of inspection revise the overwritten matrix and six leave it unrevised, and without reference renewal it stays as it was after every number of steps. Constant channels, one blind reference, mixed-epoch readings, a curved channel agreeing with an affine one at both references, and change after calibration remain failures. Lean: `CalibratedUpdater.acquired_local_exact`, `CalibrationRenewal.all_signs_transfer_iff`, `CalibrationRenewal.renewed_run`, `CalibrationRenewal.late_change_still_fails`, `CalibrationRenewal.nonaffine_reference_alias`;",
+     "severity": "missing",
+     "why": "Several record laws are not stated in the home: law 0 report_requires_all, law 1 two_references_complete and positive_gain_change_preserves_signs, law 2 nonaffine_reference_alias, and law 3 six_units_cannot_revise and false_success_stalls. B44 points 04's \"need not invalidate judgment\" to this paragraph, which does not yet say it.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean:8, :26, :53, :310, :355, :364; CalibratedUpdater.lean:75; df2-pending.json B44",
+     "tag": "Ra11"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§5, three forces / learning-a-rule-by-narrowing",
+     "old": "<a id=\"r-learning-a-rule-by-narrowing\"></a>\n**Assessment**, *three forces*. Accuracy, epistemic support and obligation (to investigate, disclose, perform or compel) have different grounds: content and the relation it concerns fix accuracy without an external commander, and neither other force follows. A core law (`Becoming.Narrowing`, ported from StandardsBridge; empty axiom reports): on a nonempty candidate list a definite answer is error-free across the list only where every candidate agrees, so a repertoire omitting the actual rule can answer confidently and falsely. Lean: `Narrowing.answer_iff`, `Narrowing.safe_definite_requires_agreement`, `Narrowing.wrong_model_class_can_be_confidently_wrong`;",
+     "new": "**Assessment**, *three forces*. Accuracy, epistemic support and obligation (to investigate, disclose, perform or compel) have different grounds: content and the relation it concerns fix accuracy without an external commander, and neither other force follows.\n\n<a id=\"r-learning-a-rule-by-narrowing\"></a>\n**Theorem** (any type of questions; candidate rules listed, observations and their acquisition supplied; `Becoming.Narrowing`, ported from StandardsBridge, empty axiom reports). Narrowing a list of candidate rules by observations keeps exactly the rules fitting them, the actual rule among them where it is listed and the observations are faithful, and a dropped rule contradicts some observation. The answer asserting what every kept rule agrees on is safe; on a nonempty candidate list a definite answer is error-free across the list only where every candidate agrees, so it is the greatest safe answer. Observations acquired from a listed actual rule make every asserted answer its value; one observed case leaves the other unsettled and contrasting cases settle both; a repertoire omitting the actual rule can answer confidently and falsely. Lean: `Narrowing.narrowed_iff_fits`, `Narrowing.actual_retained`, `Narrowing.answer_iff`, `Narrowing.safe_definite_requires_agreement`, `Narrowing.answer_maximal`, `Narrowing.acquired_answers_correct`, `Narrowing.wrong_model_class_can_be_confidently_wrong`;",
+     "severity": "missing",
+     "why": "The record's anchor sits on an Assessment paragraph, and the home states one sub-law of a five-law record. It omits the record's statement itself: narrowing keeps exactly the fitting rules, the actual rule is kept, and the answer is the greatest safe answer. It also omits the acquisition and two-case laws. The theorem should be its own paragraph, under its anchor.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean:258, :263, :373, :379, :422, :527, :531, :545",
+     "tag": "Ra12"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§5, pre-spine table, Availability and soundness row",
+     "old": "roster; pooling the fault sets of several retained descriptions keeps certificates sound but can lose availability. A claim that no route exists needs the reachable scope exhausted: an exhausted inquiry budget returns *pending*, not absence. Lean: `FaultEnvelopes.availability_iff_separated`, `PooledEnvelopes.pooled_certificate_sound`, `PooledEnvelopes.every_candidate_ready_pool_not`, `TreeSearch.interrupted_pending`;",
+     "new": "roster, and support held only inside one admitted fault set is rejected; an empty envelope, or one admitting the whole roster, certifies nothing, and a stronger envelope accepts only what a nonempty weaker one accepts; one fault among three domains and a correlated pair among four are separated, while a correlated pair among three blocks the certificate. Pooling the fault sets of several retained descriptions keeps certificates sound for covered causes whichever description is actual, and narrowing the descriptions keeps separation and, while the pool is not empty, an accepted certificate; but pooling can lose availability: of three models of four members each is ready while their pool is not, a diagnosis need not identify the model, and a misleading one can accept only compromised support. A claim that no route exists needs the reachable scope exhausted: what a search finds is there, a search ending exhausted had nothing inhabited on its frontier, inspections at least the frontier's nodes settle it, an endpoint can be found with part of the tree unread, and an exhausted inquiry budget returns *pending*, not absence. Lean: `FaultEnvelopes.availability_iff_separated`, `FaultEnvelopes.stronger_envelope_no_new_acceptance`, `FaultEnvelopes.correlated_three_blocks`, `PooledEnvelopes.pooled_certificate_sound`, `PooledEnvelopes.refinement_preserves_certificate`, `PooledEnvelopes.every_candidate_ready_pool_not`, `TreeSearch.exhausted_dead`, `TreeSearch.interrupted_pending`;",
+     "severity": "missing",
+     "why": "Several record laws are not stated in the row. Missing: law 1's support_inside_fault_rejected; all of law 2 (empty, total and stronger envelopes) and law 3 (the named envelopes); and law 5's refinement, diagnosis and misleading-diagnosis results. Law 6 is only partly stated: scan_sound, exhausted_dead, scan_settles and found_without_complete_map are missing.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean:185, :189, :196, :231-237; PooledEnvelopes.lean:89, :105, :227, :237; TreeSearch.lean:165, :194, :219, :269",
+     "tag": "Ra13"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§5, pre-spine table, Adaptive closure row",
+     "old": "among repetition, production, suspension, uptake, ineffective inspection and rest resolves them in finitely many steps (`adaptive_closed_cannot_resolve`), so a rule never answering falsely must abstain there. A record can stay true of its sample while reusing it for the present question is wrong. Lean: `NormativeActivity.sound_closed_answer_abstains`, `NormativeActivity.historical_truth_present_error`, `NormativeActivity.reopening_and_inspection_repair`;",
+     "new": "among repetition, production, suspension, uptake, inspection (ineffective once closed), closure and rest resolves them in finitely many steps (`adaptive_closed_cannot_resolve`), so a rule never answering falsely must abstain there. A record can stay true of its sample while reusing it for the present question is wrong. Reopening, inspecting and taking up repairs the judgment, using up the inspection available; reopening and taking up without inspection does not, nor does reopening with no inspection left. Lean: `NormativeActivity.sound_closed_answer_abstains`, `NormativeActivity.historical_truth_present_error`, `NormativeActivity.reopening_and_inspection_repair`, `NormativeActivity.reopening_without_inspection_does_not_repair`;",
+     "severity": "missing",
+     "why": "The row cites reopening_and_inspection_repair but never states the repair law, which is record law 3 and part of the record's statement. Its list of closed-local moves also omits closure (close), which ClosedLocal admits and the record lists.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean:75-77, :232-242, :356",
+     "tag": "Ra14"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§5, pre-spine table, Evidence through change row, standing label",
+     "old": "(periphery modules; `propext`, `Quot.sound` and, in one declaration, `Classical.choice`, as their receipt reports; admitted transitions supplied)",
+     "new": "(periphery modules TemporalInspection and ChangingDependency; `propext` and `Quot.sound` in some TemporalInspection declarations, and every ChangingDependency declaration, over the reals, on `propext`, `Quot.sound` and `Classical.choice`, as their receipts report; admitted transitions supplied)",
+     "severity": "error",
+     "why": "Every ChangingDependency declaration in its receipt uses Classical.choice, including the cited error_growth_budget and the record's certificate_transfers and uncertainty_requires_tolerance. No TemporalInspection declaration uses it. \"In one declaration\" is false, and there are two receipts, not one.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/changing-dependency-verification.json modules[6].audits (all 25 with Classical.choice); universal-ethics/generative-capacity/temporal-inspection-checks/20261008T114957.579255Z/verification.json",
+     "tag": "Ra15"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§5, pre-spine table, Evidence through change row",
+     "old": "a control change can reopen an excluded arrangement, and a change recorded as none leaves false confidence. For a correction whose error grows as σ + ρt, a certificate covering the uncertainty interval needs 2ρt ≤ B − L − 2σ.",
+     "new": "predicting a reset, or a control change after the last report, can reopen an excluded arrangement, and a change recorded as none can leave false confidence, the actual world outside the possible ones while the certificate passes. Over the reals, an intervention certified from a reading with symmetric error E keeps the end within the target [L, B] wherever the actual value lies within E of the reading, and needs 2E ≤ B − L (`ChangingDependency.certificate_transfers`, `ChangingDependency.uncertainty_requires_tolerance`); for a correction whose error grows as σ + ρt, a certificate covering the uncertainty interval needs 2ρt ≤ B − L − 2σ.",
+     "severity": "overclaim",
+     "why": "understated_change_can_leave_false_confidence is one decided witness, and the record states it as \"can leave\". The row says \"leaves\". The row also lacks the reset witness of law 2, and law 3's certificate_transfers and 2E ≤ B − L.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean:385-404; systems-complexity/analysis/ChangingDependency.lean:51-73, :213",
+     "tag": "Ra16"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§5, Responding, when-to-inquire-and-when-to-respond, standing label",
+     "old": "**Theorem** (periphery over the reals; `Classical.choice`, `Quot.sound`, `propext`), *when to inquire and when to respond*.",
+     "new": "**Theorem** (in the core with empty axiom reports, given a choice over the readings; the periphery's form, for any types and a nonempty type of actions, on `Classical.choice`; the dosing witnesses over the reals on `propext`, `Quot.sound` and `Classical.choice`), *when to inquire and when to respond*.",
+     "severity": "imprecise",
+     "why": "The record leads with the core law (GuardHorizon, empty reports, ChoiceOver as a hypothesis). observed_class_policy_iff is over any types with [Nonempty U] and uses Classical.choice alone; only the dosing witnesses are over the reals. The label gives the paragraph a single reals-and-three-axioms standing.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean:335; systems-complexity/analysis/InquiryChoice.lean:65; record hypotheses[2]",
+     "tag": "Ra17"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§5, Responding, when-to-inquire-and-when-to-respond, last sentence",
+     "old": "Tolerances, horizon and repertoire are supplied; with a wider tolerance immediate response suffices with half the work.",
+     "new": "Moves good configuration by configuration need not be such a choice: two configurations under one reading, each good only with its own move, have none, while the reading telling them apart has one (`GuardHorizon.statewise_not_uniform`); a choice of admissible moves from readings keeps the guard n + 1 steps from every configuration within it (`GuardHorizon.uniform_viable`). Tolerances, horizon and repertoire are supplied; with a wider tolerance immediate response suffices with half the work. The supplied selector can choose an inquiry that stops below the target (`InquiryChoice.selected_inquiry_can_lack_support`); a second guard, checking that the dose the largest loss needs can be given, keeps the useful inquiry and refuses that one (`InquiryChoice.repaired_selection_retains_useful_inquiry`, `InquiryChoice.repaired_selection_rejects_insufficient_support`).",
+     "severity": "missing",
+     "why": "Record laws 1, 2 and 6, and law 5's stopping selector (also a does_not_show witness), are not stated in the home.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean:343, :364; systems-complexity/analysis/InquiryChoice.lean:206, :278, :282",
+     "tag": "Ra18"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§5, Responding, readings-a-response-needs, regulation band paragraph",
+     "old": "adding succeeds at 1, repeating it then fails, and adding then removing succeeds: success changes what the next success needs, with no outside disturbance.",
+     "new": "adding succeeds at 1, repeating it then fails, and adding then removing succeeds: success changes what the next success needs, with no outside disturbance. The band needs opposite moves at its ends, so no move chosen through a reading merging 1 and 2 succeeds from both (`AssurancePlans.Regulation.no_merged_move`), while adding at or below 1 and removing above keeps the band along its itinerary of every length (`AssurancePlans.Regulation.kept_along`).",
+     "severity": "missing",
+     "why": "Record law 0 (opposite_moves, no_merged_move, respond_keeps, kept_along), the band's reading law, is not stated in the home.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AssurancePlans.lean:165, :174, :187, :195",
+     "tag": "Ra19"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§4, Composition route row",
+     "old": "Primitive-only encounters cannot identify argument order, and a later change of the operative order defeats transfer. Where construction admits a route duplicating one argument, the old records stop identifying the operation; a further reference encounter exposes and repairs the duplicate, and without spare parts the error is recorded, not repaired.",
+     "new": "Three probes, the two atoms and one join, identify a code wherever its primitives differ, so the code read off them evaluates every expression as the code does, at every depth (`CodeAcquisition.acquired_exact`, `CodeAcquisition.acquired_every_expression`); primitive-only encounters cannot identify argument order, and a code read under one order answers a novel expression otherwise than the switched order does. For the collapsed code, whose primitives are equal, a program formed from connectors that duplicates one argument fits the old records yet answers the novel expression wrongly; the novel expression's record exposes it, a course with spare parts rebuilds the right program, and without spare parts the error is recorded, not repaired.",
+     "severity": "overclaim",
+     "why": "The row omits law 0 (acquired_exact), which leads the record's statement. Its \"Where construction admits a route duplicating one argument, the old records stop identifying the operation\" generalizes a witness. The Lean shows the duplicate fitting the records only for the collapsed code, whose primitives are equal. Where the primitives differ, the three probes identify the code exactly.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean:111, :121, :276, :314; RouteFormation.lean:497, :508, :741, :759",
+     "tag": "Ra20"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§6, Questions across scales, Totals row",
+     "old": "T(a, b) = (a + b, 0) keeps the total, yet no predicate of the total characterizes a ≥ 1 ∧ b ≥ 1.",
+     "new": "where |b| ≤ B the next total lies within |c|B of the total, and the total with b follows an exact law (`routing_error_bound`, `enriched_routing_exact`); T(a, b) = (a + b, 0) keeps the total, yet no predicate of the total characterizes a ≥ 1 ∧ b ≥ 1, while the minimum of the coordinates does (`minimum_preserves_protection`).",
+     "severity": "missing",
+     "why": "The record's statement says \"keeping one coordinate restores an exact law\" (enriched_routing_exact), and laws 0 and 1 include routing_error_bound and minimum_preserves_protection. The row states none of them.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean:151, :160, :185",
+     "tag": "Ra21"
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "where": "§6, Questions across scales, Access yet to form row",
+     "old": "All permitted finite event words have the same feasibility exactly where occupancy agrees on every permitted slot; states alike under every old observation can be told apart by a newly admitted probe, and an old view with the destination cannot rebuild the updated view without a fresh reading.",
+     "new": "All permitted finite event words have the same feasibility exactly where occupancy agrees on every permitted slot, and a probe, redirecting to a slot and taking it, is feasible exactly where the slot is permitted and free (`probe_exact`); states alike under every old observation and in their active view can be told apart by a newly admitted probe, so no reader of the active view decides the probe (`no_old_view_future_reader`); redirecting can keep occupancy and change whether taking is enabled (`redirect_changes_readiness_only`), and an old view with the destination cannot rebuild the updated view without a fresh reading.",
+     "severity": "missing",
+     "why": "The row omits law 0's probe_exact and law 2's no_old_view_future_reader and redirect_changes_readiness_only. The shared active view of law 1 is also not stated.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean:133, :226, :228, :246",
+     "tag": "Ra22"
+    }
+   ]
+  },
+  {
+   "chapters": "02, 04, 05, 07",
+   "checked": "I read every DF2 change in 02, 04, 05 and 07, the fifteen records (en fields, with zh where it matters), df2_chapters.py and df2-pending.json, and the cited Lean. That covers GeneratedSelectionRecurrence, ConsequenceTransmission, DevelopmentalAssociation, BoundaryModels FixedSelector, OrganizedScaleLoop, ConnectionistRecovery and DriftMargins, DevelopedResponse, MarketGenerativity, RegimeBoundary and RegimeAttraction, AlignmentSuccession, SeededContinuation, PracticalPriorityIdentification, Becoming.Reconfiguration, ValuationFrames, Metaethics, and Labelled and Renewal. I checked axiom labels against each receipt's per-declaration reports.\n\n**Anchors and links.** Each of the fifteen records has exactly one r- anchor, in its home section, on the line before its paragraph. regions.json has all fifteen. The 02 link to 07 r-significance-through-a-common-condition resolves, and so does the 07 link to 05 r-a-swap-symmetric-assignment-singles-out-none. The 04 link to 03 is the one exception, reported below.\n\n**Text that matches the Lean.** These read correctly against the Lean: the new 07 §3.1 paragraph, the 05 reviewers paragraph from C29, the C40 change, and the C6 addition (\"stock at least 5\" matches the Lean's `stock`). Also correct: the 02 renewal paragraph with the consumption clause removed, the swap paragraph, and the succession paragraph.\n\n**Defects.** Apart from the five summarised below, the defects are axiom labels the receipts do not support, home sections missing laws their records state, two leftovers from the split in becoming-renewal-reading, and two smaller wording fixes.\n- The 04 calibration link points to the old anchor, not the r- anchor.\n- \"accountability\" was newly introduced in 05 by the optional C4/C5 renamings.\n- The 05 reviewers heading has a broken phrase (\"the cases witnesses\").\n- In 04, the updater line misreads `developmental_response` as one-step and leaves out the drift window that the record's statement includes.\n- In 04, the stronger-arrangement paragraph leaves out the length bound in its record's statement.\n\n**A note on the diff.** main has moved 9 commits past the merge f000b886f, through 180cd1efd. So `git diff main` also shows main's own later changes to 02 §9 (MA4's reading, 047b090f7) and to 07 §6 (Read in time, 180cd1efd) as if reverted. They are not DF2 edits, and DF2 does not touch those lines. main should be merged again before landing, and render and check run after the merge commit.",
+   "findings": [
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "where": "§8, the updater line paragraph, first sentence",
+     "old": "The one-step connectionist recovery derives the developmental response, keeping the recurrence, the initial profile and the selection law as premises.",
+     "new": "The connectionist recovery derives the developmental response, the derivative of the state developed over any number of steps in one link's weight, and in one step, with the identity activation and an initial profile aligned with the selection profile, changing a link raises the score exactly where the change has the sign of the selection profile's product at its two ends, the Hebbian sign (`ConnectionistRecovery.developmental_response`, `ConnectionistRecovery.beneficial_iff_hebbian`), keeping the recurrence, the initial profile and the selection law as premises.",
+     "severity": "imprecise",
+     "why": "`developmental_response` holds for every number of steps t and any differentiable activation. Only the Hebbian law is one-step. The home sentence attaches 'one-step' to the developmental response and omits the Hebbian law, which the record's law 1 and statement state.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/ConnectionistRecovery.lean:68-72 (beneficial_iff_hebbian: step id, 0 < τ, aligned g b = m * s b) and :95-99 (developmental_response for every t)",
+     "tag": "Rb0"
+    },
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "where": "§8, the updater line paragraph, link added by B44",
+     "old": "([03](03-KNOWING.md#correction-is-not-calibration))",
+     "new": "([03](03-KNOWING.md#r-correction-is-not-calibration))",
+     "severity": "imprecise",
+     "why": "Links between chapters go to r-<id> anchors. 03 now carries r-correction-is-not-calibration on the line after the old section anchor, and the calibration clause is that record's result.",
+     "evidence": "theories/becoming/chapters/03-KNOWING.md:105-107",
+     "tag": "Rb1"
+    },
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "where": "§8, the updater line paragraph, drift clause",
+     "old": "under bounded drift, understated bounds can falsely certify success and loose valid bounds can withhold repair.",
+     "new": "under per-step gain and bias drift at most *a* and *b* and reading noise at most *e*, decoding an input of size at most 1 through the first channel's readings at 0 and 1 errs after *n* changes by at most *r* = (*n*(*a* + *b*) + *e*)/|gain|; with *a* + *b* > 0, 2*r* lies below a margin exactly at ages below (|gain| · margin/2 − *e*)/(*a* + *b*), and an estimate within *r* of a value beyond 2*r* in size reports its sign (`DriftMargins.aged_decoding_bound`, `DriftMargins.assurance_window`, `DriftMargins.separated_verdict`); understated bounds can falsely certify success and loose valid bounds can withhold repair.",
+     "severity": "missing",
+     "why": "The record's statement ('bounded drift fixes how long reference readings decide a margin') and its law 5 state the drift radius and its exact window. The home paragraph states only the two witnesses, so the record states a law its home section lacks.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/DriftMargins.lean:51-52, 70-76, 84-86, 160-162",
+     "tag": "Rb2"
+    },
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "where": "§8, equal-totals paragraph heading",
+     "old": "**Theorem** (periphery, Mathlib with `propext`, `Quot.sound`, `Classical.choice`; pre-spine module; witness). *Equal totals can hide what a capacity carries.*",
+     "new": "**Theorem** (periphery, its imports reaching Mathlib; pre-spine module; witness, the laws stated here with empty axiom reports: `OrganizedScaleLoop.history_changes_choice`, `no_memoryless_choice_readout`, `same_organ_amount_distinct_signal`, `no_amount_only_acquisition`). *Equal totals can hide what a capacity carries.*",
+     "severity": "imprecise",
+     "why": "The paragraph states only the two witnesses and their impossibilities, and the receipt gives all four empty axiom reports. Classical.choice enters only the view laws, which the paragraph does not use. The record's hypothesis says the same, so home and record disagree on the axiom label.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/organized-scale-checks/20261007T222003.863783Z/receipt.json:551, 607, 615 (modules[4].audits: history_changes_choice, no_memoryless_choice_readout, same_organ_amount_distinct_signal and no_amount_only_acquisition all []; concrete_view_* with Classical.choice); OrganizedScaleLoop.lean:242-272",
+     "tag": "Rb3"
+    },
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "where": "§2, stronger-arrangement paragraph heading",
+     "old": "**Theorem** (periphery, `propext`, `Quot.sound`, `Classical.choice`; pre-spine module; witness for the unavailability).",
+     "new": "**Theorem** (periphery, `propext`, `Quot.sound`, `Classical.choice`, except `reconstruction_counts` with `propext` only and the witnesses with none; pre-spine module; witness for the unavailability).",
+     "severity": "imprecise",
+     "why": "The paragraph cites reconstruction_counts, which reports propext only, and stronger_operation_can_be_unavailable, which reports no axiom. The record's hypothesis states this exception, and the home heading gives all three axioms to every cited law.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generated-selection-recurrence-verification/verification.json:132 (reconstruction_counts: [propext]), :178 (stronger_operation_can_be_unavailable: [])",
+     "tag": "Rb4"
+    },
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "where": "§2, stronger-arrangement paragraph, accounts sentence",
+     "old": "Every admitted finite history stays within the initial material and support, and in one history",
+     "new": "Every admitted finite history keeps the material exactly and available plus used support constant and, each step using support, is no longer than the support available at its start (`run_accounts`, `run_length_bound`); in one history",
+     "severity": "missing",
+     "why": "The record's statement says every admitted history 'keeps material and total support and is no longer than its starting support'. 'Stays within' is weaker than the conservation run_accounts proves, and the length bound is not in the home section.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GeneratedSelectionRecurrence.lean:179-181 (run_accounts), 197-199 (run_length_bound: events.length + next.available ≤ s.available)",
+     "tag": "Rb5"
+    },
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "where": "§11, joint-plans paragraph heading (the edited sentence)",
+     "old": "SeededContinuation.lean), `propext` and `Quot.sound` reported)",
+     "new": "SeededContinuation.lean), `propext` in some of the cited declarations and none in the others, as its receipt reports; `Quot.sound` enters only `absent_reserve_blocks_ignition`)",
+     "severity": "imprecise",
+     "why": "Of the four cited declarations, seeded_joint_plan and preservation_without_availability report propext, and reciprocal_eventual_promises_can_be_empty and ignition_requires_actual_reserve report none. Quot.sound is in absent_reserve_blocks_ignition alone, as the record's hypothesis says.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/seeded-continuation-verification.json:248, 298 (modules[2].audits); SeededContinuation.lean:63, 84, 89, 138, 142",
+     "tag": "Rb6"
+    },
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "where": "§10, market paragraph, the margin sentences (C4, C5)",
+     "old": "influence bound `λ` and accountability floor `θ`, let `M = α(1 − θ) − βλθ`. For `α, β ≥ 0`, `α + β ≤ 1`, `0 ≤ λ ≤ 1` and `0 < θ ≤ 1`, the accountability floor is kept at the next step, with correction paid and no error, from every accountability `q` with `θ ≤ q ≤ 1`",
+     "new": "influence bound `λ` and floor `θ`, let `M = α(1 − θ) − βλθ`. For `α, β ≥ 0`, `α + β ≤ 1`, `0 ≤ λ ≤ 1` and `0 < θ ≤ 1`, the floor is kept at the next step, with correction paid and no error in `q`, from every level `q` with `θ ≤ q ≤ 1`",
+     "severity": "style",
+     "why": "C4 and C5 were optional renamings. They add a social word, 'accountability', to theorem prose, where the Lean has `FloorProtected` over `qualityStep`. The kit dropped B31 and succession's 'fee' edit by the same rule. 'Floor' and 'level' keep C4's separation from 'collectible exposure' in structural words. The record's statement and laws 2-3 say 'accountability floor' and could follow.",
+     "evidence": "experiments/market-generativity/formal/RegimeBoundary.lean:8-13 (margin, FloorProtected via qualityStep q alpha beta w 1 0); MarketGenerativity.lean:16-17; _process/research/2026-10-05-repository-reconciliation/architecture/df/df2_chapters.py:4-7 (rule) and the EXTRA list (C4, C5 applied)",
+     "tag": "Rb7"
+    },
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "where": "§9, reviewers paragraph heading (C29)",
+     "old": "; the cases witnesses)",
+     "new": "; the computed cases are witnesses)",
+     "severity": "style",
+     "why": "'the cases witnesses' is two nouns with no verb or link, a broken phrase from the C29 text applied verbatim. The cited cases are the Lean's computed cases (readiness_cases, same_cause_not_redundant, stale_envelope_accepts_shared, omitted_cause_breaks).",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean:485-521, 580-584",
+     "tag": "Rb8"
+    },
+    {
+     "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "where": "§5, finite-agreement paragraph",
+     "old": "no_fixed_finite_weight_is_lexical`). Its evidence is",
+     "new": "no_fixed_finite_weight_is_lexical`); the pair that reverses lies outside the sample: the unprotected history with two more than the sample's largest count is lexically below the protected one with none, yet the sample's weight scores it higher (`PracticalPriorityIdentification.outside_sample_reversal`, `PracticalPriorityIdentification.reversing_history_unobserved`). Its evidence is",
+     "severity": "missing",
+     "why": "Record law 3, the out-of-sample reversal, cites two declarations the home section neither states nor cites, so the record states a law its home lacks.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean:67-78",
+     "tag": "Rb9"
+    },
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "where": "§8, same-carrier paragraph",
+     "old": "one later repairs and reconstructs, the other does not, so the same carrier",
+     "new": "one later repairs and reconstructs, the other cannot without a supplied assisted repair (`supplied_assistance_can_rescue_development`), so the same carrier",
+     "severity": "imprecise",
+     "why": "Record law 3 and its does_not_show say misbinding blocks only the unassisted continuation: with a supplied assisted repair first, the other child reaches an intact grandchild. 'The other does not' leaves that out.",
+     "evidence": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean:295-301",
+     "tag": "Rb10"
+    },
+    {
+     "file": "theories/becoming/results/records/becoming-renewal-reading.json",
+     "where": "correspondence.en (the zh field likewise)",
+     "old": "Connection depends on what counts as a condition and as participation: adding a condition everyone depends on at level 0 connects everything for free, while a too coarse common condition empties living (independent review Q4, Q10); a discipline excluding idle conditions is stated in condition-correspondence-discipline, which does not exclude a renewed condition every formation depends on at a positive level, used once by one living event, and does not resolve Q10.",
+     "new": "What counts as a condition and as participation decides connection, which significance-through-a-common-condition states with its caveat on idle conditions; a too coarse common condition empties living (independent review Q10), which condition-correspondence-discipline does not resolve.",
+     "severity": "imprecise",
+     "why": "The split moved connection and transmission to significance-through-a-common-condition, whose does_not_show[4] (C46) now holds the level-0 caveat. This record still states it, about a law that neither it nor 02 states any longer (one result, one record). The replacement keeps the Q10 point, which concerns the living reading this record keeps.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean:165-170 (connected_of_common, now the other record's); Labelled.lean:564-570 and Renewal.lean:61-63 (this record's laws, which use no common condition)",
+     "tag": "Rb11"
+    },
+    {
+     "file": "theories/becoming/results/records/becoming-renewal-reading.json",
+     "where": "hypotheses[1].en (the zh field likewise)",
+     "old": "`living` is the whole-run relational reading (active and not consuming) and `related` is participation in a common condition; both are disclosed reading choices, not proved correspondences.",
+     "new": "`living` is the whole-run relational reading (active and not consuming), a disclosed reading choice, not a proved correspondence; relation through a common condition is significance-through-a-common-condition's.",
+     "severity": "imprecise",
+     "why": "None of the kept run-class laws uses `related`. Conditions.along, falls_not_recurring and Renewable.class_belongs_to_the_run state classes and activity only. The `related` reading is hypothesis 2 of the new record, so this record keeps a hypothesis of a law it no longer states. The limitations sentence on 'the common-participation relation' has the same leftover.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean:564-570; Renewal.lean:61-63; ValuationFrames.lean:152-157 (`related` defined for the valuation)",
+     "tag": "Rb12"
+    }
+   ]
+  }
+ ]
+}

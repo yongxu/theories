@@ -339,9 +339,9 @@ standing-and-exchange reading of a run, by definition; the labelled process and 
 read from the world's side in `Becoming.Labelled`.
 
 Each note gives its module's layer, computed (`development/r31-support/layers.py` in the R31 kit):
-L0 is the base, `Becoming.World` with every module it imports: `Becoming.Frame`, `Becoming.Prelude`
-and the grammar's `Becoming.Grammar`, `Becoming.GrammarMap` and `Becoming.GrammarLaws`, on which the
-frame rests; L2 holds the modules
+L0 is the base, `Becoming.World` with every module of the package it imports: `Becoming.Frame`,
+`Becoming.Prelude` and the grammar's `Becoming.Grammar`, `Becoming.GrammarMap` and `Becoming.GrammarLaws`, on
+which the frame rests; L2 holds the modules
 whose source states the continuation condition or a valuation (`Unrestricted`, `Valuation`) and
 every module importing one of them; L1 holds the rest. No module imports one of a higher layer.
 

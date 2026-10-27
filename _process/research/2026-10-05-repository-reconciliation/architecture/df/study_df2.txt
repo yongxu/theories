@@ -31,19 +31,25 @@ Delta: (1) the records: each law stated against the Lean it cites at the current
        configuration is unreached; the product tower keeping emptiness, inhabitation and at most one element, so no
        element from an empty seed and no distinction from one of at most one element; contraction's rounds for any
        finite number, not without end; the closed identity term in the source-free fragment with one carrier at
-       every index; in 05 the market's θ called the accountability floor and q accountability, as in the record
-       and the module (the chapter had used "threshold" and "exposure" each for two quantities), with the
+       every index; ChangingDependency's every declaration on `Classical.choice`, not one, and an understated change
+       that can leave false confidence; the composition route's duplicating program fitting the old records for the
+       collapsed code only, the three probes identifying every code whose primitives differ; in 04 the
+       developmental response for any number of steps and the Hebbian sign in one step, and the accounts of the
+       stronger-arrangement history kept exactly; in 05 the market's θ called the floor and q the level, in the
+       record as in its home (the chapter had used "threshold" and "exposure" each for two quantities), with the
        maintenance end's half of the coupled law; in 07 no fixed weight agreeing on every pair of histories; Lean
-       names added where a home section cited none;
+       names added where a home section cited none, and each home section stating its record's statement;
        (3) one result, one record: significance through a common condition leaves becoming-renewal-reading, whose
        statement now says what it keeps (the run-class laws), for its own record at home in 07 §3.1, placed before
        the stepwise reading, which compares itself with it; 02 drops the clause it states and links its anchor;
-       one-move-covering is at home in 08 §4, with 03's row linking it; 05's Open item for its five records closed;
+       one-move-covering is at home in 08 §4, 03's row pointing to it, and 08's access-model bullets point to 03's
+       access-yet-to-form; learning-a-rule-by-narrowing is a theorem paragraph of its own beside the three-forces
+       assessment; 05's Open item for its five records closed;
        (4) statements for least-footprint-where-idleness-decided and normal-forms-need-decided-apartness, from 01's
        home sections, and decision D69 (both editions) for the grammar's readings, cited by 01's labels;
        (5) Closing.lean's header: Onset.unforeseen and Threshold.unforeseen are witnesses, so the amounts up to a
        step need not show whether a loop forms (comments only);
-       (6) the package layers: L0 is the World with every module it imports (Frame, Prelude, Grammar, GrammarMap,
+       (6) the package layers: L0 is the World with every module of the package it imports (Frame, Prelude, Grammar, GrammarMap,
        GrammarLaws), as layers.py now computes it from one base; eight root notes and both READMEs relabelled
        (OverExchange, GrammarScope, GrammarCases and KeepingWidening L2; MapInstances, GrammarReadings,
        GrammarTesting and GrammarCandidates L1), three modules given their missing English rows (Growth,
@@ -54,7 +60,10 @@ Premises: none added.
 Evidence: four drafters (one per chapter group), each reading every law against the Lean and its receipt; four
        skeptical reviewers, one per unit (29 records sound after edits, one sound; 189 edits: 20 errors, 23
        overclaims, 98 imprecisions, 15 omissions, 33 style), all taken except three renamings of landed text that
-       state no wrong meaning; a cold read of the chapters and records as applied (RECHECK); the periphery checker
+       state no wrong meaning; a cold read of the chapters and records as applied (two readers, 36 findings: every error,
+       overclaim and imprecision taken; an omission taken where a home section lacked part of its record's
+       statement, where another section points to it for a law, or where a result was stated twice, the record
+       keeping the laws beyond its statement); the periphery checker
        for SeededContinuation rerun to bind its current bytes; core receipt CRECEIPT (Closing.lean and the root's
        notes changed in comments only; every axiom report empty); research check, links and test pass.
 Boundary: the schema-2 migrations with laws arrays for the schema-1 records DF1 named are left (LEFT.md). The two ids

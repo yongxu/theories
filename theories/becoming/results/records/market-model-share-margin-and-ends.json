@@ -10,13 +10,13 @@
   "family": "F06",
   "reviewed_at_utc": "2026-10-26T16:30:00+00:00",
   "statement": {
-    "en": "In the market model an interior renewing share rises at a positive selection rate where its private advantage is positive; the accountability floor holds under every admissible influence exactly for a nonnegative margin; at erosion 1/2 both ends attract nearby states, some near the interior leave.",
-    "zh": "在市场模型中，介于零与全之间之更新份额，于选择率为正且私有优势为正处上升；问责之下限在每一容许之影响下得保，恰当边际非负；侵蚀为二分之一时，两端皆吸引其近旁之状态，而任意接近内部定态之状态有离去者。"
+    "en": "In the market model an interior renewing share rises at a positive selection rate where its private advantage is positive; the floor on the level q holds under every admissible influence exactly for a nonnegative margin; at erosion 1/2 both ends attract nearby states, some near the interior leave.",
+    "zh": "在市场模型中，介于零与全之间之更新份额，于选择率为正且私有优势为正处上升；q 之下限在每一容许之影响下得保，恰当边际非负；侵蚀为二分之一时，两端皆吸引其近旁之状态，而任意接近内部定态之状态有离去者。"
   },
   "laws": [
     {
-      "en": "The renewing practice's private return exceeds the extracting one's by exactly the gap: the fine times the accountability, plus the lobbying, less the renewal upkeep. For a share strictly between none and all, a positive selection rate and a positive gap, the share rises at the next step; a share of none stays none, in the original family at every erosion and in a numerical witness of the share law.",
-      "zh": "更新之实践的私有所得比抽取者恰多出差额：罚额乘问责，加游说，减更新之维护。份额严格介于零与全之间、选择率为正、差额为正时，份额下一步上升；份额为零则仍为零，于原参数族在每一侵蚀下，并于份额律之一数值见证中。",
+      "en": "The renewing practice's private return exceeds the extracting one's by exactly the gap: the fine times the level q, plus the lobbying, less the renewal upkeep. For a share strictly between none and all, a positive selection rate and a positive gap, the share rises at the next step; a share of none stays none, in the original family at every erosion and in a numerical witness of the share law.",
+      "zh": "更新之实践的私有所得比抽取者恰多出差额：罚额乘 q，加游说，减更新之维护。份额严格介于零与全之间、选择率为正、差额为正时，份额下一步上升；份额为零则仍为零，于原参数族在每一侵蚀下，并于份额律之一数值见证中。",
       "declarations": [
         "MarketGenerativity.profitR",
         "MarketGenerativity.profitE",
@@ -29,8 +29,8 @@
       ]
     },
     {
-      "en": "Write M = α(1 − θ) − βλθ for correction strength α, erosion by influence β, influence bound λ and floor θ. For α, β ≥ 0, α + β ≤ 1, 0 ≤ λ ≤ 1 and 0 < θ ≤ 1, with correction executed and no error, every accountability q in [θ, 1] under every influence w in [0, λ] stays at or above θ at the next step exactly where M ≥ 0.",
-      "zh": "记 M = α(1 − θ) − βλθ（纠正强度 α，影响之侵蚀 β，影响上界 λ，下限 θ）。α、β ≥ 0，α + β ≤ 1，0 ≤ λ ≤ 1，0 < θ ≤ 1，纠正执行且无误差时：凡问责 q ∈ [θ, 1]、影响 w ∈ [0, λ]，下一步 q 不低于 θ，恰当 M ≥ 0。",
+      "en": "Write M = α(1 − θ) − βλθ for correction strength α, erosion by influence β, influence bound λ and floor θ. For α, β ≥ 0, α + β ≤ 1, 0 ≤ λ ≤ 1 and 0 < θ ≤ 1, with correction executed and no error, every level q in [θ, 1] under every influence w in [0, λ] stays at or above θ at the next step exactly where M ≥ 0.",
+      "zh": "记 M = α(1 − θ) − βλθ（纠正强度 α，影响之侵蚀 β，影响上界 λ，下限 θ）。α、β ≥ 0，α + β ≤ 1，0 ≤ λ ≤ 1，0 < θ ≤ 1，纠正执行且无误差时：凡 q ∈ [θ, 1]、影响 w ∈ [0, λ]，下一步 q 不低于 θ，恰当 M ≥ 0。",
       "declarations": [
         "MarketGenerativity.qualityStep",
         "RegimeBoundary.margin",
@@ -40,8 +40,8 @@
       ]
     },
     {
-      "en": "For α > 0, β ≥ 0, 0 ≤ λ ≤ 1 and 0 < θ < 1, a low certificate (a share strictly between none and all, accountability in [0, θ), influence in [0, 1] and at most λ times the other share, the rise by correction at most the erosion) exists exactly where M < 0; at M = 0, with α + β ≤ 1 and θ ≤ 1, the floor is kept and no low certificate exists.",
-      "zh": "α > 0，β ≥ 0，0 ≤ λ ≤ 1，0 < θ < 1 时，低之证书（份额严格介于零与全之间，问责在 [0, θ)，影响在 [0, 1] 且至多为 λ 乘另一份额，纠正之提升不多于侵蚀）存在，恰当 M < 0；M = 0、α + β ≤ 1 且 θ ≤ 1 时，下限得保而无低之证书。",
+      "en": "For α > 0, β ≥ 0, 0 ≤ λ ≤ 1 and 0 < θ < 1, a low certificate (a share strictly between none and all, the level q in [0, θ), influence in [0, 1] and at most λ times the other share, the rise by correction at most the erosion) exists exactly where M < 0; at M = 0, with α + β ≤ 1 and θ ≤ 1, the floor is kept and no low certificate exists.",
+      "zh": "α > 0，β ≥ 0，0 ≤ λ ≤ 1，0 < θ < 1 时，低之证书（份额严格介于零与全之间，q 在 [0, θ)，影响在 [0, 1] 且至多为 λ 乘另一份额，纠正之提升不多于侵蚀）存在，恰当 M < 0；M = 0、α + β ≤ 1 且 θ ≤ 1 时，下限得保而无低之证书。",
       "declarations": [
         "RegimeBoundary.LowCertificate",
         "RegimeBoundary.low_certificate_requires_negative_margin",
@@ -92,8 +92,8 @@
       "zh": "有理数之状态与参数，逐步；政策、罚额、征收、因果之率、支持之律与下限皆为所给；纠正是已授权之政策，凡起始储备足其所需即装入。"
     },
     {
-      "en": "The floor law takes correction executed and no accountability error; the fixed states are classified in one family of parameters, attraction is shown at β = 1/2, and the coupling uses the original example with no shocks.",
-      "zh": "下限之律取纠正执行且问责无误差；定态于一参数族中分类，吸引示于 β = 1/2，耦合用原例且无冲击。"
+      "en": "The floor law takes correction executed and no error in q; the fixed states are classified in one family of parameters, attraction is shown at β = 1/2, and the coupling uses the original example with no shocks.",
+      "zh": "下限之律取纠正执行且q 无误差；定态于一参数族中分类，吸引示于 β = 1/2，耦合用原例且无冲击。"
     },
     {
       "en": "Periphery (Lean's rationals, imports Std): every cited theorem reports propext, Quot.sound and Classical.choice.",
@@ -299,8 +299,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), the market model's share law, its margin for the accountability floor and low certificates, and its two attracting ends and unstable interior state at erosion one half, coupled to support; from DEFECTS-FOUND (triage row 194); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），市场模型之份额律、问责下限与低之证书之边际，以及侵蚀为二分之一时两端之吸引与内部定态之不稳，并与支持耦合；出自 DEFECTS-FOUND（分诊第 194 行）；研究第 DF_N 节。"
+      "en": "26 October 2026: added (DF2), the market model's share law, its margin for the floor on the level q and low certificates, and its two attracting ends and unstable interior state at erosion one half, coupled to support; from DEFECTS-FOUND (triage row 194); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），市场模型之份额律、q 之下限与低之证书之边际，以及侵蚀为二分之一时两端之吸引与内部定态之不稳，并与支持耦合；出自 DEFECTS-FOUND（分诊第 194 行）；研究第 DF_N 节。"
     }
   ]
 }

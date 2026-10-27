@@ -2,7 +2,7 @@
 """R31, item 5: the layers of the core, computed, and the module tables generated from them.
 
 A module's layer is a checkable property of its source and imports (read by graph.py):
-* L0: the base, `Becoming.World` with every module it imports (Frame, Prelude, and the grammar's Grammar,
+* L0: the base, `Becoming.World` with every module of the package it imports (Frame, Prelude, and the grammar's Grammar,
   GrammarMap and GrammarLaws, on which the frame rests; the foundation
   `GenerativeCore`, `InquirySufficiency`, `RelationalRenewal` lies below them);
 * L2: a module whose source, outside comments and imports, names the continuation condition or a
@@ -30,7 +30,7 @@ sys.path.insert(0, str(HERE))
 import graph  # noqa: E402
 
 PKG = graph.PKG
-# The base is computed: the World with every module it imports (board item DF2, 27 October 2026; before the
+# The base is computed: the World with every module of the package it imports (board item DF2, 27 October 2026; before the
 # grammar joined it, the same rule gave World, Frame and Prelude).
 BASE = ["Becoming.World"]
 NOTES = json.load(open(HERE / "module-notes.json"))
