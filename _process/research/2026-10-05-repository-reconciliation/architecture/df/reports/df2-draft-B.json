@@ -1,0 +1,198 @@
+{
+ "records": [
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "rows": "144",
+   "file": "theories/becoming/results/records/stronger-arrangement-formed-by-reconfiguration.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/04-LIFE.md, ## 2. Passing and transmission (paragraph at line 95)",
+   "anchor_before": "**Theorem** (periphery, `propext`, `Quot.sound`, `Classical.choice`; pre-spine module; witness for the unavailability)",
+   "regions": {
+    "region": "life",
+    "base": "periphery",
+    "note": "GeneratedSelectionRecurrence"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "old": "([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GENERATED-SELECTION-RECURRENCE-INTEGRATION.md); [GeneratedSelectionRecurrence.lean][generatedrec])",
+     "new": "([Record](../results/records/stronger-arrangement-formed-by-reconfiguration.md); [study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GENERATED-SELECTION-RECURRENCE-INTEGRATION.md); [GeneratedSelectionRecurrence.lean][generatedrec])",
+     "why": "The home paragraph links its record. The old string occurs once in the chapter."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "F10. Proof binding: L/universal-ethics/GeneratedSelectionRecurrence.lean (sha 67d04821...) against generated-selection-recurrence-verification/verification.json, pointer /source_sha256/GeneratedSelectionRecurrence.lean, status passed. Here L = experiments/integrated-correction/general-framework/generative-basis/lean/. The four laws bind all 16 theorems. The record's axiom hypothesis follows the receipt exactly: every cited law uses propext, Quot.sound and Classical.choice, except reconstruction_counts (propext only) and the witnesses (no axiom). The chapter header names all three for the module, which is true of the module but coarser than the record; changing it is optional. Lint: 0 findings. research check for this id gives only render errors: a missing link and 'generated view differs' in RESULTS.md, THEORY-GRAPH.md and the record .md page. These clear with make research-render after the anchor and link are added. The lander must rebind the 04-LIFE.md statement hash after the chapter edits; the current sha is cd96b776..., unmodified. Related records: copying-b-fold, recurrent-chain-assembly. Boundaries: discrete-steps, no-evaluation, formal-not-empirical."
+  },
+  {
+   "id": "a-selected-template-need-not-raise-structure",
+   "rows": "145",
+   "file": "theories/becoming/results/records/a-selected-template-need-not-raise-structure.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/04-LIFE.md, ## 3. Descent (paragraph at line 112)",
+   "anchor_before": "**Theorem** (periphery, `propext` in 13 of 19 declarations, the rest none; pre-spine module)",
+   "regions": {
+    "region": "life",
+    "base": "periphery",
+    "note": "ConsequenceTransmission"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "old": "([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LIANGZHI-EVOLUTION-MATH.md); [ConsequenceTransmission.lean][consequence])",
+     "new": "([Record](../results/records/a-selected-template-need-not-raise-structure.md); [study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LIANGZHI-EVOLUTION-MATH.md); [ConsequenceTransmission.lean][consequence])",
+     "why": "The home paragraph links its record. The old string occurs once in the chapter."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "F01. Proof binding: experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean (sha 6d0cc231...) against that folder's verification.json, pointer /modules/3/sha256. The record's laws cite all 19 declarations, Native.* included. The chapter cites `same_composition_opposite_access`; its full Lean name is ConsequenceTransmission.Native.same_composition_opposite_access. The chapter's short form reads correctly in context, so no edit is needed; the triage gave the name wrongly. The record states the share law as an exact comparison of successor columns (a(AH + HH) < h(AA + HA)). It names faithful or equal two-way transfer as sufficient for the two readings to agree, not necessary, and adds a converse entry to does_not_show. It gives the native damage event as the no-change weight's native event in both reached states. It says the two reached histories differ in ancestry and initial support as well as access, so they are not a controlled pair. Studies: LIANGZHI-EVOLUTION-MATH.md (integration), LIANGZHI-EVOLUTION-REVIEW.md (review). Lint: 0 findings. Check: render-only errors, as for the other records. Rebind the 04-LIFE.md hash after the edits."
+  },
+  {
+   "id": "groups-formed-by-bonds-share-a-founder",
+   "rows": "146",
+   "file": "theories/becoming/results/records/groups-formed-by-bonds-share-a-founder.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/04-LIFE.md, ## 5. Groups (paragraph at line 178)",
+   "anchor_before": "**Theorem** (periphery, `propext`, `Quot.sound`; pre-spine module). *Groups formed by bonds share a founder.*",
+   "regions": {
+    "region": "life",
+    "base": "periphery",
+    "note": "DevelopmentalAssociation"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "old": "([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/DEVELOPMENTAL-ASSOCIATION-INTEGRATION.md); [DevelopmentalAssociation.lean][devassoc])",
+     "new": "([Record](../results/records/groups-formed-by-bonds-share-a-founder.md); [study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/DEVELOPMENTAL-ASSOCIATION-INTEGRATION.md); [DevelopmentalAssociation.lean][devassoc])",
+     "why": "The home paragraph links its record. The old string occurs once in the chapter."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "F01. Proof binding: L/universal-ethics/DevelopmentalAssociation.lean (sha 6137099d...) against developmental-association-verification/verification.json, pointer /source_sha256/DevelopmentalAssociation.lean. The laws bind 15 theorems. The result holds only under the stated hypotheses (no aggregation event, a lineage-consistent start). The aggregation counterexample sits in the laws. The snapshot impossibility limits only the bond-omitting snapshot. Axioms as the receipt reports: propext and Quot.sound or less; connected_same_founder uses none. The chapter's Ratcliff et al. 2015 correspondence is kept out of the record, which lists correspondence only in does_not_show. Related: groups-formed-by-descent, selection-within-and-among-groups-of-any-sizes. Lint: 0 findings. Check: render-only errors. Rebind the 04-LIFE.md hash after the edits."
+  },
+  {
+   "id": "recurrence-without-selector-revision",
+   "rows": "148, 113",
+   "file": "theories/becoming/results/records/recurrence-without-selector-revision.json",
+   "status": "reviewed-scoped",
+   "home": "theories/becoming/chapters/04-LIFE.md, ## 8. Organization within organisms (paragraph at line 233)",
+   "anchor_before": "**Theorem** (one declared process; witness; pre-spine module, empty axiom report)",
+   "regions": {
+    "region": "life",
+    "base": "periphery",
+    "note": "BoundaryModels FixedSelector (pre-spine, empty axiom report)"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "old": "([BoundaryModels.lean][boundary])",
+     "new": "([Record](../results/records/recurrence-without-selector-revision.md); [BoundaryModels.lean][boundary])",
+     "why": "The home paragraph links its record. The old string occurs once in the chapter."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "F09. Status is reviewed-scoped, not recorded-checked, because no passing receipt holds the current source hash of L/BoundaryModels.lean (3ca0b210...). Commit bf842fced changed only a first-line comment after the last check. The receipt and the checked snapshot L/verification-runs/1791274297069388000/sources/BoundaryModels.lean (a9c171e4...) are cited as provenance. The record has no proof_bindings. To make it recorded-checked, the lander can either re-run the BoundaryModels checker so the receipt holds the current bytes, or bind to the snapshot source with pointer /modules/1/source_sha256 in L/verification.json, then add proof_bindings and set the status. The record states six FixedSelector theorems: returns after two steps, changes at every alternating step, the selector is operative, the selector is kept at every time, plus the witness. It says recurrence can go on with the selector unrevised, not that learning is refuted. Its axiom hypothesis reads 'the checked bytes gave every FixedSelector theorem an empty axiom report', which is accurate for the snapshot. Study: LEAN-CORE-REVIEW.md (review). Related: organizational-rule-inheritance. Row 113 is covered by this record and rows 149–151. Lint: 0 findings. Check: render-only errors."
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "rows": "149, 113",
+   "file": "theories/becoming/results/records/equal-totals-can-hide-what-a-capacity-carries.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/04-LIFE.md, ## 8. Organization within organisms (paragraph at line 237)",
+   "anchor_before": "**Theorem** (periphery, Mathlib with `propext`, `Quot.sound`, `Classical.choice`; pre-spine module; witness). *Equal totals",
+   "regions": {
+    "region": "life",
+    "base": "periphery",
+    "note": "OrganizedScaleLoop (Mathlib)"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "old": "([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ORGANIZED-SCALES-INTEGRATION.md); [OrganizedScaleLoop.lean][organizedscale])",
+     "new": "([Record](../results/records/equal-totals-can-hide-what-a-capacity-carries.md); [study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ORGANIZED-SCALES-INTEGRATION.md); [OrganizedScaleLoop.lean][organizedscale])",
+     "why": "The home paragraph links its record. The old string occurs once in the chapter."
+    },
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "old": "end with equal material, current support, spent work, route and context",
+     "new": "end with equal material, current support, used work, route and context",
+     "why": "Optional. The record says 'used work' for the Lean field `spent`, which keeps the market word out of live text. This old string occurs once."
+    },
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "old": "The transfer, retention law, costs and timing are supplied",
+     "new": "The transfer, retention law, unit work draws and timing are supplied",
+     "why": "Optional, for the same market-word reason: each acquisition, withdrawal or approach draws one work unit, and the record says so. This old string occurs once."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "F09. Proof binding: L/systems-complexity/analysis/OrganizedScaleLoop.lean (sha b51055c4...) against organized-scale-checks/20261007T222003.863783Z/receipt.json, pointer /modules/4/source_sha256. The laws bind 12 declarations. The axiom hypothesis is exact per the receipt: the account and acquisition laws use propext, and the account and withdrawal laws also use Quot.sound; the impossibilities and witnesses use none; Classical.choice enters only the module's view laws, which are not cited. The chapter header names Classical.choice for the module. This is true of the module, but the cited theorems do not use it. A sharper header is optional and is left out of chapter_edits so the anchor_before text stays stable. The impossibilities quantify over every state of the joint law, and the record says so. Study: ORGANIZED-SCALES-INTEGRATION.md. Related: learned-procedure-transmission. Lint: 0 findings. Check: render-only errors. Rebind the 04-LIFE.md hash after the edits."
+  },
+  {
+   "id": "the-updater-line",
+   "rows": "150, 113",
+   "file": "theories/becoming/results/records/the-updater-line.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/04-LIFE.md, ## 8. Organization within organisms (paragraph at line 229)",
+   "anchor_before": "**Theorem** (periphery, Mathlib with `propext`, `Quot.sound`, `Classical.choice`; pre-spine modules). *The updater line.*",
+   "regions": {
+    "region": "life",
+    "base": "periphery",
+    "note": "ConnectionistRecovery, DevelopmentalMemory, UpdaterConsequences, DriftMargins"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "old": "([studies](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-CONNECTIONISM-RECOVERY.md), [memory]",
+     "new": "([Record](../results/records/the-updater-line.md); [studies](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-CONNECTIONISM-RECOVERY.md), [memory]",
+     "why": "The home paragraph links its record. The old string occurs once in the chapter."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "F09. The record has four proof sources under L/universal-ethics/evolution-connectionism/: ConnectionistRecovery (the canonical source), DevelopmentalMemory, UpdaterConsequences and DriftMargins. All are bound to drift-margins-checks/20261008T114955.171898Z/verification.json (fb69aa5b...), pointers /modules/0, /modules/1, /modules/2 and /modules/5 at source_sha256. The six laws bind 24 declarations, including responsive_after_failure and changed_route_cycle. After the final recheck I corrected one does_not_show entry: the rules are compared on one cycle of four tasks of two kinds (cycle = [c, c, c, a]), not 'two tasks'. Both languages and the generator now agree, and lint is still at 0 findings. The paragraph's calibration and renewal clauses (CalibratedUpdater, CalibrationRenewal) belong to correction-is-not-calibration (unit A, home 03-KNOWING.md near line 105). That record does not exist yet, so this record has no related link to it. Add one when it lands; until then this record's does_not_show points to chapter 03. Studies: EVOLUTION-CONNECTIONISM-RECOVERY, EVOLUTION-DEVELOPMENTAL-MEMORY, EVOLUTION-UPDATER-CONSEQUENCES, EVOLUTION-DRIFT-MARGINS. Related: learned-procedure-transmission. Check: render-only errors. Rebind the 04-LIFE.md hash after the edits."
+  },
+  {
+   "id": "same-carrier-need-not-fix-the-response",
+   "rows": "151, 113",
+   "file": "theories/becoming/results/records/same-carrier-need-not-fix-the-response.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/04-LIFE.md, ## 8. Organization within organisms (paragraph at line 241)",
+   "anchor_before": "**Theorem** (periphery, `propext`, and `Quot.sound` in two declarations; pre-spine module; witness)",
+   "regions": {
+    "region": "life",
+    "base": "periphery",
+    "note": "DevelopedResponse"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/04-LIFE.md",
+     "old": "([DevelopedResponse.lean][developed])",
+     "new": "([Record](../results/records/same-carrier-need-not-fix-the-response.md); [DevelopedResponse.lean][developed])",
+     "why": "The home paragraph links its record. The old string occurs once in the chapter."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "F09. Proof binding: experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean (sha 6f53d92d...) against development/verification.json (9a872421...), pointer /modules/4/sha256. The laws bind 9 declarations, including same_carrier_different_developmental_record, equal_cost_development_reconstructs_different_gates, same_assay_enacts_developed_difference, enabled_energy_balance and runnable_energy_balance. The Lean name 'equal_cost_...' is kept in declarations only; live prose avoids the market word. The record calls the result a witness ('can', 'need not'). It says both children are chemically A, so assay classes are not inherited kinds. It names the supplied assisted repair that rescues the continuation, so misbinding does not block every repair. Studies: LIANGZHI-DEVELOPMENT-MATH.md, LIANGZHI-DEVELOPMENT-REVIEW.md (review), LIANGZHI-EVOLUTION-SOURCES.md. Related: a-selected-template-need-not-raise-structure. Lint: 0 findings. Check: render-only errors. Rebind the 04-LIFE.md hash after the edits."
+  }
+ ],
+ "not_written": [
+  {
+   "id": "row 113",
+   "why": "Row 113 is the section-8 umbrella row. Its results are written as the records of rows 148, 149, 150 and 151 (recurrence-without-selector-revision, equal-totals-can-hide-what-a-capacity-carries, the-updater-line, same-carrier-need-not-fix-the-response), so a separate record would only wrap them."
+  },
+  {
+   "id": "render and chapter edits",
+   "why": "Not done, by the task's constraint (only my own new record files, no existing file edited). Anchors, record links and the optional wording edits in 04-LIFE.md are proposed, not made. make research-render was not run, because it rewrites shared generated pages (RESULTS.md, THEORY-GRAPH.md and the record .md pages). The 22 remaining check errors for these seven ids are all 'missing link' or 'generated view differs' and clear with that render. The lander must also rebind the 04-LIFE.md statement hash (currently cd96b776...) in all seven records after the chapter edits."
+  },
+  {
+   "id": "recurrence-without-selector-revision proof binding",
+   "why": "Not added: no passing receipt holds the current bytes of BoundaryModels.lean (only a first-line comment changed after the last check), so the record is reviewed-scoped. A checker re-run or a binding to the checked snapshot (L/verification.json, /modules/1/source_sha256) would make it recorded-checked."
+  }
+ ]
+}

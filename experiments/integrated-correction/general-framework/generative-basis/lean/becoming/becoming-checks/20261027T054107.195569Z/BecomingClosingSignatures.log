@@ -1,0 +1,183 @@
+@Becoming.strengthsBefore_before : ∀ {F C : Type} {k : Nat → F → C → Nat → C → Nat} {T u : Nat},
+  u < T → ∀ (h : F) (c : C) (s : Nat) (d : C), Becoming.strengthsBefore T k u h c s d = k u h c s d
+@Becoming.strengthsBefore_from : ∀ {F C : Type} {k : Nat → F → C → Nat → C → Nat} {T u : Nat},
+  T ≤ u → ∀ (h : F) (c : C) (s : Nat) (d : C), Becoming.strengthsBefore T k u h c s d = 0
+@Becoming.strengthsBefore_le : ∀ {F C : Type} {k : Nat → F → C → Nat → C → Nat} (T u : Nat) (h : F) (c : C) (s : Nat)
+  (d : C), Becoming.strengthsBefore T k u h c s d ≤ k u h c s d
+@Becoming.couplesAt_before_iff : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T u s : Nat} {d c : C},
+  Becoming.CouplesAt cs part (Becoming.strengthsBefore T k) present u s d c ↔
+    u < T ∧ Becoming.CouplesAt cs part k present u s d c
+@Becoming.couples_before_iff : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T : Nat} {d c : C},
+  Becoming.Couples cs part (Becoming.strengthsBefore T k) present d c ↔
+    ∃ u s, u < T ∧ Becoming.CouplesAt cs part k present u s d c
+@Becoming.couples_before_mono : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T T' : Nat},
+  T ≤ T' →
+    ∀ {d c : C},
+      Becoming.Couples cs part (Becoming.strengthsBefore T k) present d c →
+        Becoming.Couples cs part (Becoming.strengthsBefore T' k) present d c
+@Becoming.couples_of_before : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T : Nat} {d c : C},
+  Becoming.Couples cs part (Becoming.strengthsBefore T k) present d c → Becoming.Couples cs part k present d c
+@Becoming.couples_before_of_couplesAt : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {u s : Nat} {d c : C},
+  Becoming.CouplesAt cs part k present u s d c →
+    Becoming.Couples cs part (Becoming.strengthsBefore (u + 1) k) present d c
+@Becoming.Coupled.lift : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {k' : Nat → F → C → Nat → C → Nat},
+  (∀ (d c : C), Becoming.Couples cs part k present d c → Becoming.Couples cs part k' present d c) →
+    ∀ {v : Nat → C} {j : Nat}, Becoming.Coupled cs part k present v j → Becoming.Coupled cs part k' present v j
+@Becoming.OnLoop.lift : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {k' : Nat → F → C → Nat → C → Nat},
+  (∀ (d c : C), Becoming.Couples cs part k present d c → Becoming.Couples cs part k' present d c) →
+    ∀ {e : C}, Becoming.OnLoop cs part k present e → Becoming.OnLoop cs part k' present e
+@Becoming.Upstream.lift : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {k' : Nat → F → C → Nat → C → Nat},
+  (∀ (d c : C), Becoming.Couples cs part k present d c → Becoming.Couples cs part k' present d c) →
+    ∀ {e c : C}, Becoming.Upstream cs part k present e c → Becoming.Upstream cs part k' present e c
+@Becoming.coupled_formed : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {v : Nat → C} {m : Nat},
+  Becoming.Coupled cs part k present v m → ∃ T, Becoming.Coupled cs part (Becoming.strengthsBefore T k) present v m
+@Becoming.onLoop_iff_formed : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {e : C},
+  Becoming.OnLoop cs part k present e ↔ ∃ T, Becoming.OnLoop cs part (Becoming.strengthsBefore T k) present e
+@Becoming.upstream_iff_formed : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {e c : C},
+  Becoming.Upstream cs part k present e c ↔ ∃ T, Becoming.Upstream cs part (Becoming.strengthsBefore T k) present e c
+@Becoming.Closing.join_below : ∀ {C : Type} {v w : Nat → C} {i l : Nat}, l ≤ i → Becoming.Closing.join v w i l = v l
+@Becoming.Closing.join_from : ∀ {C : Type} {v w : Nat → C} {i : Nat},
+  v i = w 0 → ∀ (r : Nat), Becoming.Closing.join v w i (i + r) = w r
+@Becoming.Coupled.append : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {v w : Nat → C} {i j : Nat},
+  Becoming.Coupled cs part k present v i →
+    Becoming.Coupled cs part k present w j →
+      v i = w 0 → Becoming.Coupled cs part k present (Becoming.Closing.join v w i) (i + j)
+@Becoming.Coupled.one : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {d c : C},
+  Becoming.Couples cs part k present d c → Becoming.Coupled cs part k present (fun l => bif l.ble 0 then d else c) 1
+@Becoming.onLoop_of_closing : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {d c e : C},
+  Becoming.Couples cs part k present d c →
+    Becoming.Upstream cs part k present c e →
+      Becoming.Upstream cs part k present e d → Becoming.OnLoop cs part k present e
+@Becoming.Upstream.refl : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} (c : C), Becoming.Upstream cs part k present c c
+@Becoming.Closing.split : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T : Nat} {v : Nat → C} {m : Nat},
+  Becoming.Coupled cs part (Becoming.strengthsBefore (T + 1) k) present v m →
+    Becoming.Coupled cs part (Becoming.strengthsBefore T k) present v m ∨
+      ∃ i s, i < m ∧ Becoming.CouplesAt cs part k present T s (v i) (v (i + 1))
+@Becoming.onLoop_succ_iff : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T : Nat} {e : C},
+  Becoming.OnLoop cs part (Becoming.strengthsBefore (T + 1) k) present e ↔
+    Becoming.OnLoop cs part (Becoming.strengthsBefore T k) present e ∨
+      ∃ d c s,
+        Becoming.CouplesAt cs part k present T s d c ∧
+          Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present c e ∧
+            Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present e d
+@Becoming.forms_by_closing : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T : Nat} {e : C},
+  Becoming.OnLoop cs part (Becoming.strengthsBefore (T + 1) k) present e →
+    ¬Becoming.OnLoop cs part (Becoming.strengthsBefore T k) present e →
+      ∃ d c s,
+        Becoming.CouplesAt cs part k present T s d c ∧
+          Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present c e ∧
+            Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present e d
+@Becoming.responds_to_own_level : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T s : Nat} {c : C},
+  Becoming.CouplesAt cs part k present T s c c → Becoming.OnLoop cs part (Becoming.strengthsBefore (T + 1) k) present c
+@Becoming.carriedGive_congr_strength : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k k' : Nat → F → C → Nat → C → Nat} {t : Nat} {h : F} {c : C} {l : Nat → C → Nat},
+  (∀ (s : Nat) (d : C), k' t h c s d = k t h c s d) →
+    Becoming.carriedGive cs part σ k' t h c l = Becoming.carriedGive cs part σ k t h c l
+@Becoming.carried_before : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {T : Nat} (t : Nat),
+  t ≤ T →
+    ∀ (s : Nat),
+      s ≤ t →
+        ∀ (c : C),
+          Becoming.carried cs part σ (Becoming.strengthsBefore T k) present δ s c =
+            Becoming.carried cs part σ k present δ s c
+@Becoming.inflow_before_le : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} (T t : Nat) (c : C),
+  Becoming.inflow cs part (Becoming.strengthsBefore T k) present t c ≤ Becoming.inflow cs part k present t c
+@Becoming.carried_le_polynomial_before : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {T : Nat} {c : C},
+      (∀ (e : C),
+          Becoming.Upstream cs part (Becoming.strengthsBefore T k) present e c →
+            ¬Becoming.OnLoop cs part (Becoming.strengthsBefore T k) present e) →
+        ∀ {n : Nat},
+          cs.length ≤ n + 1 →
+            ∀ {M D : Nat},
+              (∀ (c : C), δ c ≤ D) →
+                (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+                  ∀ {t : Nat},
+                    t ≤ T →
+                      Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c ≤ D * Becoming.Loops.orderSum M n t
+@Becoming.Closing.Onset.strengths_early : ∀ {T u : Nat},
+  u < T →
+    ∀ (h c : Unit) (s : Nat) (d : Unit),
+      Becoming.Closing.Onset.strengths T u h c s d = Becoming.Loops.SelfLoop.strengths 0 u h c s d
+@Becoming.Closing.Onset.strengths_late : ∀ {T u : Nat},
+  T ≤ u →
+    ∀ (h c : Unit) (s : Nat) (d : Unit),
+      Becoming.Closing.Onset.strengths T u h c s d = Becoming.Loops.SelfLoop.strengths 1 u h c s d
+@Becoming.Closing.Onset.amount_succ_early : ∀ {T D t : Nat},
+  t < T → Becoming.Closing.Onset.amount T D (t + 1) = Becoming.Closing.Onset.amount T D t
+@Becoming.Closing.Onset.amount_succ_late : ∀ {T D t : Nat},
+  T ≤ t →
+    Becoming.Closing.Onset.amount T D (t + 1) =
+      Becoming.Closing.Onset.amount T D t + Becoming.Closing.Onset.amount T D t
+@Becoming.Closing.Onset.amount_before : ∀ {T D : Nat} (t : Nat), t ≤ T → Becoming.Closing.Onset.amount T D t = D
+Becoming.Closing.Onset.amount_after : ∀ (T D r : Nat), Becoming.Closing.Onset.amount T D (T + r) = D * 2 ^ r
+Becoming.Closing.Onset.forms : ∀ (T : Nat),
+  Becoming.OnLoop [()] (fun x => false) (Becoming.strengthsBefore (T + 1) (Becoming.Closing.Onset.strengths T))
+    (fun x => [()]) ()
+Becoming.Closing.Onset.not_formed : ∀ (T : Nat),
+  ¬Becoming.OnLoop [()] (fun x => false) (Becoming.strengthsBefore T (Becoming.Closing.Onset.strengths T))
+      (fun x => [()]) ()
+@Becoming.Closing.Onset.unforeseen : ∀ {T T' D t : Nat},
+  T ≤ T' → t ≤ T → Becoming.Closing.Onset.amount T D t = Becoming.Closing.Onset.amount T' D t
+@Becoming.ExchangeLaw.carryingRead_nonanticipating : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {σ : Nat → F → C → Nat} {κ : (Nat → C → Nat) → Nat → F → C → Nat → C → Nat},
+  Becoming.ReadsBefore κ → (Becoming.ExchangeLaw.carryingRead cs part σ κ).Nonanticipating
+@Becoming.formedCourse_succ : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {κ : (Nat → C → Nat) → Nat → F → C → Nat → C → Nat},
+  Becoming.ReadsBefore κ →
+    ∀ (t : Nat) (c : C),
+      Becoming.formedCourse cs part σ κ present δ (t + 1) c =
+        Becoming.formedCourse cs part σ κ present δ t c +
+          Becoming.total (present t) fun h =>
+            Becoming.carriedGive cs part σ (κ (Becoming.formedCourse cs part σ κ present δ)) t h c
+              (Becoming.formedCourse cs part σ κ present δ)
+@Becoming.formedCourse_eq_carried : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {κ : (Nat → C → Nat) → Nat → F → C → Nat → C → Nat},
+  Becoming.ReadsBefore κ →
+    ∀ (t : Nat) (c : C),
+      Becoming.formedCourse cs part σ κ present δ t c =
+        Becoming.carried cs part σ (κ (Becoming.formedCourse cs part σ κ present δ)) present δ t c
+Becoming.Closing.Threshold.reads : ∀ (θ : Nat), Becoming.ReadsBefore (Becoming.Closing.Threshold.reading θ)
+Becoming.Closing.Threshold.strengths_eq : ∀ (θ u : Nat) (h : Bool) (c : Unit) (s : Nat) (d : Unit),
+  Becoming.Closing.Threshold.strengths θ u h c s d =
+    bif s.beq u then bif θ.ble (Becoming.Closing.Threshold.level θ u) then 1 else 0 else 0
+Becoming.Closing.Threshold.level_succ : ∀ (θ t : Nat),
+  Becoming.Closing.Threshold.level θ (t + 1) =
+    Becoming.Closing.Threshold.level θ t +
+      (1 + (bif θ.ble (Becoming.Closing.Threshold.level θ t) then 1 else 0) * Becoming.Closing.Threshold.level θ t)
+Becoming.Closing.Threshold.level_before : ∀ (θ t : Nat), t ≤ θ → Becoming.Closing.Threshold.level θ t = t
+Becoming.Closing.Threshold.level_le_succ : ∀ (θ t : Nat),
+  Becoming.Closing.Threshold.level θ t ≤ Becoming.Closing.Threshold.level θ (t + 1)
+Becoming.Closing.Threshold.level_ge : ∀ (θ r : Nat), θ ≤ Becoming.Closing.Threshold.level θ (θ + r)
+Becoming.Closing.Threshold.level_after : ∀ (θ r : Nat), Becoming.Closing.Threshold.level θ (θ + r) + 1 = (θ + 1) * 2 ^ r
+Becoming.Closing.Threshold.not_formed : ∀ (θ : Nat),
+  ¬Becoming.OnLoop [()] (fun h => h) (Becoming.strengthsBefore θ (Becoming.Closing.Threshold.strengths θ))
+      (fun x => [true, false]) ()
+Becoming.Closing.Threshold.forms : ∀ (θ : Nat),
+  Becoming.OnLoop [()] (fun h => h) (Becoming.strengthsBefore (θ + 1) (Becoming.Closing.Threshold.strengths θ))
+    (fun x => [true, false]) ()
+@Becoming.Closing.Threshold.unforeseen : ∀ {θ θ' t : Nat},
+  θ ≤ θ' → t ≤ θ → Becoming.Closing.Threshold.level θ t = Becoming.Closing.Threshold.level θ' t

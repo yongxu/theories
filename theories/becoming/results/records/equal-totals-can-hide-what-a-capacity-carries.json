@@ -1,0 +1,175 @@
+{
+  "schema_version": 2,
+  "id": "equal-totals-can-hide-what-a-capacity-carries",
+  "title": {
+    "en": "Equal totals can hide what a capacity carries",
+    "zh": "相同的总量可隐去能力所承载者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F09",
+  "reviewed_at_utc": "2026-10-26T21:50:00+00:00",
+  "statement": {
+    "en": "In a declared joint history of contact, ingestion, transit, acquisition and withdrawal, two histories from one state can end with equal current conditions and used work yet differ in withdrawal, and equal whole-organ burden can carry different signals: the response follows relations the totals omit.",
+    "zh": "在所声明的接触、摄入、转运、取得与撤回的联合历史中，由同一状态出发的两段历史可终于相同的当前条件与已用功而撤回不同；相同的整器官负荷可承载不同的信号：回应随总量所略去的关系而定。"
+  },
+  "laws": [
+    {
+      "en": "Every step, and so every finite history of the joint law, keeps the material (regional burden plus patch) and the work (available plus used).",
+      "zh": "联合之律的每一步，从而每段有限历史，都保持物质（区域负荷加斑块）与功（可用加已用）。",
+      "declarations": [
+        "OrganizedScaleLoop.material_step",
+        "OrganizedScaleLoop.work_step",
+        "OrganizedScaleLoop.finite_history_accounts"
+      ]
+    },
+    {
+      "en": "Acquisition adds the route's product of gains times the anterior burden to what is retained, using one work unit, and adds nothing without work or through a route with a zero link; with at least two work units and the amount retained after acquisition reaching the threshold plus the opposing drive, acquisition then withdrawal ends contact, after which ingestion does nothing.",
+      "zh": "取得把路径增益之积乘前区负荷加入所保留者，用一单位功；无功或路径有零环节时不加；有至少两单位功、取得后所保留量达到阈值加对抗驱力时，取得后撤回结束接触，此后摄入无效。",
+      "declarations": [
+        "OrganizedScaleLoop.acquisition_amount",
+        "OrganizedScaleLoop.unsupported_acquisition",
+        "OrganizedScaleLoop.disrupted_acquisition",
+        "OrganizedScaleLoop.acquisition_withdrawal",
+        "OrganizedScaleLoop.withdrawal_changes_next_exposure"
+      ]
+    },
+    {
+      "en": "From one state, acquiring before or after ingestion ends with equal regional burdens, patch, available work, contact, route and context and equal used work, yet withdrawal at threshold 1 keeps contact in one and ends it in the other, so no function of those current conditions gives withdrawal for every state.",
+      "zh": "由同一状态出发，在摄入之前或之后取得，终于相同的各区负荷、斑块、可用功、接触、路径与情境以及相同的已用功，而阈值为 1 的撤回在一者中保持接触、在另一者中结束接触；所以没有这些当前条件的函数能对每个状态给出撤回。",
+      "declarations": [
+        "OrganizedScaleLoop.history_changes_choice",
+        "OrganizedScaleLoop.no_memoryless_choice_readout"
+      ]
+    },
+    {
+      "en": "Two states differing only in whether one unit lies in the anterior or the posterior region have equal burden but acquire different signals, so no function of the burden gives what acquisition retains for every state.",
+      "zh": "两个状态只在一单位位于前区还是后区上不同，负荷相同而取得的信号不同；所以没有负荷的函数能对每个状态给出取得所保留者。",
+      "declarations": [
+        "OrganizedScaleLoop.same_organ_amount_distinct_signal",
+        "OrganizedScaleLoop.no_amount_only_acquisition"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Supplied: the signal route and its gains, the cumulative retention law, one work unit per acquisition, withdrawal or approach, the withdrawal threshold, the context's opposing drive and the schedule of events; natural-number amounts, events in order.",
+      "zh": "所给：信号路径及其增益、累积的保留律、每次取得、撤回或趋近各一单位功、撤回阈值、情境的对抗驱力与事件的排程；自然数之量，事件依次发生。"
+    },
+    {
+      "en": "A conditional mechanism, not a calibrated connectome or fitted physiology; the two impossibilities quantify over every state of the joint law, the first uses two histories from one state, the second two states that differ only in where one unit lies.",
+      "zh": "条件机制，不是校准的连接组或拟合的生理学；两项不可能对联合之律的每个状态量化，前者用由同一状态出发的两段历史，后者用只在一单位所在上不同的两个状态。"
+    },
+    {
+      "en": "Periphery (its imports reach Mathlib): the account and acquisition laws use propext, with Quot.sound in the account and withdrawal laws; the impossibilities and their witnesses none, as the receipt reports; Classical.choice enters only the module's view laws, not cited here.",
+      "zh": "外围（其导入链含 Mathlib）：账目与取得诸律用 propext，账目与撤回诸律另用 Quot.sound；诸不可能及其见证不用公理，如回执所报；Classical.choice 只进入模块的视图诸律，此处未引。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Cell differentiation, tissue formation or ecological regeneration.",
+      "zh": "细胞分化、组织形成或生态再生。",
+      "kind": "scope"
+    },
+    {
+      "en": "That descriptions keeping acquisition history or regional signals fail: the impossibilities limit these coarse descriptions.",
+      "zh": "保留取得历史或区域信号的描述失败：诸不可能只限制这些粗描述。",
+      "kind": "scope"
+    },
+    {
+      "en": "A gut–neural relay identified in an organism, or its gains, draws and timing.",
+      "zh": "在某生物中识别出的肠—神经中继，或其增益、取用与时序。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "formal-not-empirical",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Checked by the module's checker with Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261007T222003.863783Z, the same bytes as organized-scale-verification.json; it binds the current bytes): OrganizedScaleLoop, 26 theorems audited, 12 cited here, with 77 inherited audits replayed. The study records a counter-review by the same author, not independent; not reviewed by a person.",
+    "zh": "以模块检查器与 Lean 4.30.0-rc2 及固定 Mathlib 检查（回执 20261007T222003.863783Z，与 organized-scale-verification.json 字节相同；绑定当前字节）：OrganizedScaleLoop 审计 26 条定理，此处引 12 条，并重放 77 项继承审计。研究记有同一作者的反审，非独立；未经人审。"
+  },
+  "next_delta": {
+    "en": "In one preparation, measure regional physiology, signalling, retained change, movement and later microbial conditions, and compare a current-total model, a model without acquired history and one keeping it, with matched capacity and held-out interventions.",
+    "zh": "在同一制备中测量区域生理、信号、保留的改变、运动与随后的微生物条件，并以匹配的容量与留出的干预比较当前总量模型、无取得历史的模型与保留它的模型。"
+  },
+  "correspondence": {
+    "en": "Learned pathogen avoidance in C. elegans after intestinal distention, through intestinal and sensory interventions (Filipowicz, Lalsiamthara and Aballay 2021, eLife 10), and a sensorimotor circuit carrying it to movement (Filipowicz, Lalsiamthara and Aballay 2022) constrain separate links; the model's three unit-gain stages, retention law and draws are not theirs. Reading retention as a material effect within the body is the AI's.",
+    "zh": "秀丽隐杆线虫肠扩张后习得的病原回避，经肠与感觉的干预（Filipowicz、Lalsiamthara 与 Aballay 2021，eLife 10），以及把它带到运动的感觉运动回路（Filipowicz、Lalsiamthara 与 Aballay 2022），约束各别的环节；模型的三个单位增益阶段、保留律与取用不出自它们。把保留读作体内的物质效应，是 AI 的解读。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/OrganizedScaleLoop.lean",
+  "aliases": [
+    "Equal totals can hide what a capacity carries",
+    "相同的总量可隐去能力所承载者",
+    "OrganizedScaleLoop.no_memoryless_choice_readout",
+    "OrganizedScaleLoop.no_amount_only_acquisition"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "learned-procedure-transmission",
+      "detail": {
+        "en": "Another construction in which what an exposure leaves enters later activity; here what is acquired, and where, decides withdrawal.",
+        "zh": "另一构造，其中接触所留进入以后的活动；此处所取得者及其所在决定撤回。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/OrganizedScaleLoop.lean",
+      "role": "proof",
+      "sha256": "b51055c481ece65be63d66df2ee9439c65875db6c9ee05fadea004de45b56e25",
+      "declarations": [
+        "OrganizedScaleLoop.material_step",
+        "OrganizedScaleLoop.work_step",
+        "OrganizedScaleLoop.finite_history_accounts",
+        "OrganizedScaleLoop.acquisition_amount",
+        "OrganizedScaleLoop.unsupported_acquisition",
+        "OrganizedScaleLoop.disrupted_acquisition",
+        "OrganizedScaleLoop.acquisition_withdrawal",
+        "OrganizedScaleLoop.withdrawal_changes_next_exposure",
+        "OrganizedScaleLoop.history_changes_choice",
+        "OrganizedScaleLoop.no_memoryless_choice_readout",
+        "OrganizedScaleLoop.same_organ_amount_distinct_signal",
+        "OrganizedScaleLoop.no_amount_only_acquisition"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/organized-scale-checks/20261007T222003.863783Z/receipt.json",
+      "role": "receipt",
+      "sha256": "97e920eef0c368987a3c00a26474382ec7ecd6208c292dfbfb6979ae572f2134",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/04-LIFE.md",
+      "role": "statement",
+      "sha256": "629da3b8cb7dc44e52ba9322e918262f52c06288cb06f294c0a7e065452436c0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ORGANIZED-SCALES-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "8deed694601b5f91447e262d6e34035b56e328d2d47f8d6490bad0c2cc980d0c",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/OrganizedScaleLoop.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/organized-scale-checks/20261007T222003.863783Z/receipt.json",
+      "sha256_pointer": "/modules/4/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), equal totals can hide what a capacity carries: material and work kept by every finite history, acquisition and withdrawal, the two histories with equal current conditions and different withdrawal, and equal burden carrying different signals; from DEFECTS-FOUND (triage rows 149 and 113); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），相同的总量可隐去能力所承载者：每段有限历史保持物质与功、取得与撤回、当前条件相同而撤回不同的两段历史，以及相同负荷承载不同信号；出自 DEFECTS-FOUND（分诊第 149 行与第 113 行）；研究第 426 节。"
+    }
+  ]
+}

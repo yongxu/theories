@@ -1,0 +1,176 @@
+{
+  "schema_version": 2,
+  "id": "same-carrier-need-not-fix-the-response",
+  "title": {
+    "en": "The same carrier need not fix the same response",
+    "zh": "同样的承载者未必固定同样的回应"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F09",
+  "reviewed_at_utc": "2026-10-26T22:10:00+00:00",
+  "statement": {
+    "en": "In a finite model, two histories differing only in whether developmental sampling came before or after an earlier repair reach carriers in the same native state and develop alike into children with different gates: one assay leaves one intact and able to capture, the other unable to capture or copy.",
+    "zh": "在一个有限模型中，只在发育采样先于或后于一次较早的修复上不同的两段历史，到达原生状态相同的承载者，同样地发育为门不同的子代：同一检测使一个完好且能捕获，另一个不能捕获也不能复制。"
+  },
+  "laws": [
+    {
+      "en": "From one initial state, two traces that differ only in the order of sampling and the founder's repair reach carriers with the same native state, each with a carrier pending and no rig or gate pending, their paired cues differing; the same development word then reconstructs children with the same native state, fuel 9 and one rig each, but different gates and no reading yet.",
+      "zh": "由同一初始状态，只在采样与始祖修复之次序上不同的两条迹，到达原生状态相同的承载者，各有一个待成的承载者、无待成的装置或门，配对线索不同；随后同一发育词重构出原生状态相同、燃料为 9、各有一个装置而门不同、尚无读数的子代。",
+      "declarations": [
+        "DevelopedResponse.same_carrier_different_developmental_record",
+        "DevelopedResponse.equal_cost_development_reconstructs_different_gates"
+      ]
+    },
+    {
+      "en": "The same read and act events at the same damaged site give both children the same reading and fuel, and leave one intact and able to capture, the other not intact and able neither to capture nor to copy; the response command reads only the acquired gate and the fresh reading.",
+      "zh": "在同一受损位点上同样的读取与行动事件，给两个子代相同的读数与燃料，使一个完好且能捕获，另一个不完好、既不能捕获也不能复制；回应指令只读所取得的门与新的读数。",
+      "declarations": [
+        "DevelopedResponse.same_assay_enacts_developed_difference",
+        "DevelopedResponse.command_uses_gate_and_reading"
+      ]
+    },
+    {
+      "en": "After the assay, the intact child's capture and copying form a carrier that develops into a grandchild which reads, acts and stays intact; the other cannot run that continuation, and with a supplied assisted repair first it reaches an intact grandchild with the first one's gate.",
+      "zh": "检测之后，完好子代的捕获与复制形成一个承载者，发育为读取、行动并保持完好的孙代；另一个不能运行此延续，先经所给的辅助修复后，才达到完好且门与前者相同的孙代。",
+      "declarations": [
+        "DevelopedResponse.consequence_reformation_reaches_operating_grandchild",
+        "DevelopedResponse.supplied_assistance_can_rescue_development"
+      ]
+    },
+    {
+      "en": "The model's bookkeeping never changes the native transition's physical result, and every enabled event and every runnable finite history balances the native energy: energy after plus the native reactions' draw is energy before.",
+      "zh": "模型的簿记从不改变原生转移的物理结果；每个可行事件与每段可运行的有限历史都平衡原生能量：之后的能量加原生反应的取用等于之前的能量。",
+      "declarations": [
+        "DevelopedResponse.advance_core",
+        "DevelopedResponse.enabled_energy_balance",
+        "DevelopedResponse.runnable_energy_balance"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "One finite model wrapping the native formation reactions: the scaffold and rig recipes, the cue-binding rule, the founder's protocol and the intervention channel are supplied; natural-number amounts, events in order; both children are chemically A, and assay classes are not the inherited kinds.",
+      "zh": "一个包裹原生形成反应的有限模型：支架与装置配方、线索绑定规则、始祖的程序与干预通道为所给；自然数之量，事件依次发生；两个子代在化学上皆为 A，检测类别不是所继承的类。"
+    },
+    {
+      "en": "Periphery, a module before the spine on Lean's core library and Std: propext in every cited declaration, Quot.sound also in the two energy laws, as the receipt reports.",
+      "zh": "外围，脊柱之前的模块，基于 Lean 核心库与 Std：所引每项声明用 propext，两条能量律另用 Quot.sound，如回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Care in an organism, natural event weights or indefinite renewal: one finite history is checked.",
+      "zh": "生物中的照料、自然的事件权重或无限的更新：只检查一段有限历史。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That misbinding blocks every repair: a supplied assisted repair rescues the continuation.",
+      "zh": "错误绑定阻断一切修复：所给的辅助修复可挽救此延续。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Normative warrant for the developed response, or that it is concern rather than local regulation.",
+      "zh": "所发育之回应的规范根据，或它是关切而非局部调节。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 7 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 15 with propext only and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; not reviewed by a person.",
+    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 development/verification.json，2026年10月7日通过，新鲜构建五个模块，107 项审计；绑定当前字节）：DevelopedResponse 审计 17 项声明，15 项只用 propext，两条能量律另用 Quot.sound，此处引 9 项。内部反审接受此构造；未经人审。"
+  },
+  "next_delta": {
+    "en": "Several transmissible response organizations re-formed differentially in a shared development, with the binding rule and the timing of sampling formed in the history rather than supplied.",
+    "zh": "多种可传递的回应组织在共同发育中差异地再形成，绑定规则与采样时机在历史中形成而非给定。"
+  },
+  "correspondence": {
+    "en": "Primary studies constrain separate links, not one history: earlier maternal care forming later care across generations in rats (Francis et al. 1999, Science 286), experience widening the scope of helping in rats (Ben-Ami Bartal et al. 2014, eLife 3), and non-maternal care going with proactive provision across primates (Burkart et al. 2014, Nature Communications 5). Reading gate formation as a developed response is the AI's.",
+    "zh": "原始研究约束各别的环节，而非一段历史：大鼠中早先的母性照料跨代形成以后的照料（Francis 等 1999，Science 286）、经历扩大大鼠帮助之范围（Ben-Ami Bartal 等 2014，eLife 3）、灵长类中非母照料与主动供给共变（Burkart 等 2014，Nature Communications 5）。把门的形成读作所发育的回应，是 AI 的解读。"
+  },
+  "canonical_source": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean",
+  "aliases": [
+    "The same carrier need not fix the same response",
+    "同样的承载者未必固定同样的回应",
+    "DevelopedResponse.same_carrier_different_developmental_record",
+    "DevelopedResponse.same_assay_enacts_developed_difference"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "a-selected-template-need-not-raise-structure",
+      "detail": {
+        "en": "The module this one extends: DevelopedResponse wraps its native reactions, and the module also reuses its successor-column law on a table read off the two assays (developed_table_comes_from_operating_assays, transmission_formula_applies_to_developed_table), which this record does not cite.",
+        "zh": "本模块所扩展者：DevelopedResponse 包裹其原生反应，该模块并把其后继之列律用于由两次检测读出的表（developed_table_comes_from_operating_assays、transmission_formula_applies_to_developed_table），本记录未引之。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean",
+      "role": "proof",
+      "sha256": "6f53d92de64a31f515df7f128e2c31ebb08a9df6d66627141df5eb258f58c1a7",
+      "declarations": [
+        "DevelopedResponse.same_carrier_different_developmental_record",
+        "DevelopedResponse.equal_cost_development_reconstructs_different_gates",
+        "DevelopedResponse.same_assay_enacts_developed_difference",
+        "DevelopedResponse.command_uses_gate_and_reading",
+        "DevelopedResponse.consequence_reformation_reaches_operating_grandchild",
+        "DevelopedResponse.supplied_assistance_can_rescue_development",
+        "DevelopedResponse.advance_core",
+        "DevelopedResponse.enabled_energy_balance",
+        "DevelopedResponse.runnable_energy_balance"
+      ]
+    },
+    {
+      "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json",
+      "role": "receipt",
+      "sha256": "9a87242192dccd915372b6fdc19a8c5a9a41ce4b9753c43b45ab816717659339",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/04-LIFE.md",
+      "role": "statement",
+      "sha256": "629da3b8cb7dc44e52ba9322e918262f52c06288cb06f294c0a7e065452436c0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LIANGZHI-DEVELOPMENT-MATH.md",
+      "role": "integration",
+      "sha256": "8e954e4c11f30b7581c442b84f095085eb4ff3fbcf39b6aee9bd2939fa67a707",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LIANGZHI-DEVELOPMENT-REVIEW.md",
+      "role": "review",
+      "sha256": "009b2730428c1d40fc9bb4da8a028a714aff01e02ecb8a53e0e51364fbae176c",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LIANGZHI-EVOLUTION-SOURCES.md",
+      "role": "integration",
+      "sha256": "b100d860af944f8ac9455739cd54d2a2400efdc76535d1973111455bb8992004",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean",
+      "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json",
+      "sha256_pointer": "/modules/4/sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), the same carrier need not fix the same response: two histories differing only in the timing of sampling give carriers alike, children with different gates and opposite outcomes of one assay, the continuation to a grandchild and its assisted rescue, and the energy balance; from DEFECTS-FOUND (triage rows 151 and 113); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），同样的承载者未必固定同样的回应：只在采样时机上不同的两段历史得到相同的承载者、门不同的子代与同一检测的相反结果，到孙代的延续及其辅助挽救，以及能量平衡；出自 DEFECTS-FOUND（分诊第 151 行与第 113 行）；研究第 426 节。"
+    }
+  ]
+}

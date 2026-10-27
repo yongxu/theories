@@ -1,0 +1,186 @@
+{
+  "schema_version": 2,
+  "id": "what-a-total-keeps",
+  "title": {
+    "en": "What a total keeps and loses across scales",
+    "zh": "总量跨尺度保留与失去者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F22",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "Every predictor of a routing law reading only the total of two coordinates errs by at least its coupling at one of two equal-total states, and keeping one coordinate restores an exact law; a transfer keeps the total exactly and hides the loss of a coordinate, which no predicate of the total detects.",
+    "zh": "只读两个坐标之总量的路由律预测，在总量相同的两个状态之一处误差至少为其耦合，保留一个坐标则恢复精确律；转移精确保持总量而隐去一个坐标的损失，总量的任何谓词都察觉不到。"
+  },
+  "laws": [
+    {
+      "en": "For the routing (a, b) ↦ (a + cb, b) the next total is the total plus cb, so any single value within ε of the next total at both (2, 0) and (0, 2), states of equal total, has c ≤ ε; where |b| ≤ B the next total lies within |c|B of the total; and the total together with b follows an exact law.",
+      "zh": "对路由 (a, b) ↦ (a + cb, b)，下一总量为总量加 cb，故在总量相同的 (2, 0) 与 (0, 2) 处都与下一总量相差不超过 ε 的单一值使 c ≤ ε；|b| ≤ B 时，下一总量与总量相差不超过 |c|B；总量连同 b 遵循一条精确律。",
+      "declarations": [
+        "RelationsAcrossScales.total",
+        "RelationsAcrossScales.routing",
+        "RelationsAcrossScales.routing_total",
+        "RelationsAcrossScales.routing_defect_lower_bound",
+        "RelationsAcrossScales.routing_error_bound",
+        "RelationsAcrossScales.enriched_routing_exact"
+      ]
+    },
+    {
+      "en": "The transfer (a, b) ↦ (a + b, 0) keeps the total exactly, yet (1, 1) has both coordinates at least 1 and its successor does not; no predicate of the total characterizes both coordinates being at least 1, while the minimum of the coordinates being at least 1 does.",
+      "zh": "转移 (a, b) ↦ (a + b, 0) 精确保持总量，但 (1, 1) 两个坐标都不小于 1，其后继则不然；没有总量的谓词刻画“两个坐标都不小于 1”，而“坐标之最小值不小于 1”刻画之。",
+      "declarations": [
+        "RelationsAcrossScales.transfer",
+        "RelationsAcrossScales.basicProtected",
+        "RelationsAcrossScales.total_exact_through_transfer",
+        "RelationsAcrossScales.exact_total_can_hide_loss",
+        "RelationsAcrossScales.no_total_only_protection",
+        "RelationsAcrossScales.minimum_preserves_protection"
+      ]
+    },
+    {
+      "en": "With a calibrated estimate, |actual − estimate| ≤ error, an estimate plus error below a threshold puts the actual value below it; for every positive error, an estimate at the threshold fits actual values on either side of it.",
+      "zh": "有校准的估计（|实际 − 估计| ≤ 误差）时，估计加误差低于阈值，使实际值低于阈值；对每个正的误差，处在阈值上的估计与阈值两侧的实际值都相合。",
+      "declarations": [
+        "RelationsAcrossScales.violation_certificate",
+        "RelationsAcrossScales.threshold_ambiguity"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Two real coordinates (Mathlib); the routing coefficient, the transfer, the threshold and the error bound are supplied illustrations.",
+      "zh": "两个实数坐标（Mathlib）；路由系数、转移、阈值与误差界为给定的示例。"
+    },
+    {
+      "en": "Axioms: every RelationsAcrossScales theorem cited uses propext, Quot.sound and Classical.choice, as its receipt reports.",
+      "zh": "公理：所引 RelationsAcrossScales 的每个定理都用 propext、Quot.sound 与 Classical.choice，如其回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That totals mislead in every system: the laws concern the named routing and transfer.",
+      "zh": "总量在每个系统中都误导：诸律只涉所命名的路由与转移。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a verdict is available within the error margin: an estimate at the threshold fits actual values on both sides.",
+      "zh": "在误差余量之内可得判决：处在阈值上的估计与两侧的实际值都相合。",
+      "kind": "non-implication",
+      "witness": "RelationsAcrossScales.threshold_ambiguity"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean",
+      "detail": {
+        "en": "The transfer keeps the total of (1, 1) and takes it to (2, 0), losing the second coordinate (exact_total_can_hide_loss).",
+        "zh": "转移保持 (1, 1) 的总量并把它变为 (2, 0)，失去第二个坐标（exact_total_can_hide_loss）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.30.0-rc2 with Mathlib): RelationsAcrossScales by its package checker (scales-verification.json), propext, Quot.sound and Classical.choice in every theorem cited; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.30.0-rc2 与 Mathlib 实查：RelationsAcrossScales 经其包检查器（scales-verification.json），所引每个定理用 propext、Quot.sound 与 Classical.choice；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "State the total's loss on the core: a summary that the steps do not respect, so that the error bound is read off which distinctions the steps carry across the summary.",
+    "zh": "在核心上陈述总量之损失：诸步不尊重的摘要，使误差界由诸步跨摘要所携带的区分读出。"
+  },
+  "correspondence": {
+    "en": "Error from predicting with a sum of micro variables is the aggregation problem (Theil 1954); exact aggregation where the law respects the partition is lumpability (Kemeny and Snell 1960); a threshold verdict under calibrated uncertainty follows JCGM 106:2012 on conformity assessment.",
+    "zh": "以微观变量之和作预测所致的误差即聚合问题（Theil 1954）；律尊重划分处的精确聚合即可归并性（Kemeny 与 Snell 1960）；在校准的不确定度下作阈值判决，依 JCGM 106:2012 关于合格评定的指南。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean",
+  "aliases": [
+    "what a total keeps",
+    "总量保留什么",
+    "RelationsAcrossScales.no_total_only_protection",
+    "RelationsAcrossScales.routing_defect_lower_bound"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "prefix-observation-loss",
+      "detail": {
+        "en": "All prefix questions can miss an intermediate loss; here a total misses the loss of a coordinate.",
+        "zh": "一切前缀问题都可能漏掉中间的损失；此处总量漏掉一个坐标的损失。"
+      }
+    },
+    {
+      "id": "one-move-covering",
+      "detail": {
+        "en": "A summary of outcomes can hide a loss of what one move ensures.",
+        "zh": "结果之摘要可隐去一步所确保者的损失。"
+      }
+    },
+    {
+      "id": "what-a-summary-keeps",
+      "detail": {
+        "en": "When a summary keeps every finite word's feasibility; a total is a summary the routing does not respect.",
+        "zh": "摘要何时保持每个有限词的可行性；总量是路由不尊重的摘要。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean",
+      "role": "proof",
+      "declarations": [
+        "RelationsAcrossScales.total",
+        "RelationsAcrossScales.routing",
+        "RelationsAcrossScales.routing_total",
+        "RelationsAcrossScales.routing_defect_lower_bound",
+        "RelationsAcrossScales.routing_error_bound",
+        "RelationsAcrossScales.enriched_routing_exact",
+        "RelationsAcrossScales.transfer",
+        "RelationsAcrossScales.basicProtected",
+        "RelationsAcrossScales.total_exact_through_transfer",
+        "RelationsAcrossScales.exact_total_can_hide_loss",
+        "RelationsAcrossScales.no_total_only_protection",
+        "RelationsAcrossScales.minimum_preserves_protection",
+        "RelationsAcrossScales.violation_certificate",
+        "RelationsAcrossScales.threshold_ambiguity"
+      ],
+      "sha256": "24f8eb4269927017b6e65841011c3a4a52002bfe405bf5d09d8a99be7c0cf273"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/scales-verification.json",
+      "role": "receipt",
+      "sha256": "4066bb9dd83ea1863d3600fc7327fd696c7c95d6de56de1e9cab6354314c1b20"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "58e42859a9f7ec5720b68d4bc28f43b02e2fc1d24ab766913ed0d56980751ef1"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/scales-verification.json",
+      "sha256_pointer": "/modules/2/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), the error a total makes for a routing law, the loss an exact total can hide, and threshold verdicts from calibrated readouts; from DEFECTS-FOUND (triage row 138); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），总量对路由律所致的误差、精确总量可隐去的损失，以及由校准读数作出的阈值判决；出自 DEFECTS-FOUND（分诊第 138 行）；研究第 426 节。"
+    }
+  ]
+}

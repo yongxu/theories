@@ -1,0 +1,140 @@
+{
+  "schema_version": 2,
+  "id": "recurrence-without-selector-revision",
+  "title": {
+    "en": "Recurrence without revision of the selector",
+    "zh": "选择者不修订的复现"
+  },
+  "kind": "theorem",
+  "status": "reviewed-scoped",
+  "family": "F09",
+  "reviewed_at_utc": "2026-10-26T21:40:00+00:00",
+  "statement": {
+    "en": "A declared process has a state that returns after two steps and changes at every step while its operative selector stays the same at every time: recurrence can go on with the selector unrevised, so learning or revision of the selector is a further claim.",
+    "zh": "一个所声明的过程有一个状态，两步后返回、每一步都改变，而其运作的选择者在每个时刻都相同：复现可在选择者未经修订时持续，所以学习或选择者的修订是另一主张。"
+  },
+  "laws": [
+    {
+      "en": "Every state returns to itself after two steps; every state whose selector selects alternation changes at the step; changing only the selector, at a common phase, changes the next phase, so the selector is operative; every step keeps the selector, so it is the same at every time.",
+      "zh": "每个状态两步后回到自身；选择者选择交替的每个状态在这一步改变；在相同相位下只改变选择者便改变下一相位，所以选择者在运作；每一步保持选择者，所以它在每个时刻都相同。",
+      "declarations": [
+        "GenerativeBoundary.FixedSelector.returns_after_two",
+        "GenerativeBoundary.FixedSelector.changes_phase_every_step",
+        "GenerativeBoundary.FixedSelector.selector_changes_next_phase",
+        "GenerativeBoundary.FixedSelector.selector_preserved_by_step",
+        "GenerativeBoundary.FixedSelector.selector_unchanged_at_every_time"
+      ]
+    },
+    {
+      "en": "Witness: the state at phase false selecting alternation returns after two steps, changes at the first and keeps its selector at every time; every later state selects alternation too, so it changes at every step.",
+      "zh": "见证：相位为假、选择交替的状态两步后返回，第一步改变，选择者在每个时刻保持；其后每个状态也选择交替，所以每一步都改变。",
+      "declarations": [
+        "GenerativeBoundary.FixedSelector.recurrent_process_with_fixed_selector",
+        "GenerativeBoundary.FixedSelector.changes_phase_every_step",
+        "GenerativeBoundary.FixedSelector.selector_unchanged_at_every_time"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "One declared two-phase process with a Boolean selector and a supplied transition: one value selects alternation, the other holding the phase; steps in order.",
+      "zh": "一个所声明的两相过程，带布尔选择者与所给的转移：一个值选择交替，另一个值保持相位；步骤依次进行。"
+    },
+    {
+      "en": "No axiom: the checked bytes gave every FixedSelector theorem an empty axiom report (Lean 4.29.1 with Std); a module before the spine, not on the pure core.",
+      "zh": "不加公理：所检查的字节使 FixedSelector 的每条定理公理报告为空（Lean 4.29.1 与 Std）；脊柱之前的模块，不在纯核心上。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That learning or selector revision never comes with recurrence: a richer process can learn.",
+      "zh": "学习或选择者修订从不伴随复现：更丰富的过程可以学习。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A definition or classification of every kind of learning.",
+      "zh": "对每种学习的定义或分类。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "The repository checker with Lean 4.29.1 passed BoundaryModels on 6 October 2026 (lean/verification.json, the checked bytes kept in its run folder), every FixedSelector theorem with an empty axiom report. On 16 October a comment was added to the file's first line, so no passing receipt binds the current bytes and the record is reviewed, not receipt-bound, until a checker run does. Reviewed in LEAN-CORE-REVIEW, whose first finding had the selector made operative and whose reinspection accepted the non-implication; not reviewed by a person.",
+    "zh": "仓库检查器以 Lean 4.29.1 于2026年10月6日通过 BoundaryModels（lean/verification.json，所检查字节存于其运行目录），FixedSelector 每条定理公理报告为空。10月16日文件首行加了注释，故无通过的回执绑定当前字节；在检查器重跑之前本记录为已审而非回执绑定。经 LEAN-CORE-REVIEW 审查：其首项发现促使选择者改为运作，复查接受此非蕴含；未经人审。"
+  },
+  "next_delta": {
+    "en": "A checker run binding the current bytes; the non-implication restated on the spine as an instance of the gate laws, the selector being a quantity every step keeps.",
+    "zh": "重跑检查器以绑定当前字节；在脊柱上把此非蕴含重述为门之诸律的实例，选择者是每一步都保持之量。"
+  },
+  "correspondence": {
+    "en": "In Ashby's (1952, Design for a Brain) terms the selector is a parameter that the step-mechanisms of an ultrastable system would change; here none does, and the system still cycles. Both readings, of the selector as such a parameter and of periodic behaviour as no evidence of adaptation without a change of rule, are the AI's.",
+    "zh": "按 Ashby（1952，Design for a Brain）的说法，选择者是超稳定系统的阶跃机制会改变的参数；此处无一改变它，系统仍循环。把选择者读作此种参数，以及无规则之改变则周期行为不是适应之证据，两种读法皆是 AI 的。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/BoundaryModels.lean",
+  "aliases": [
+    "Recurrence without revision of the selector",
+    "选择者不修订的复现",
+    "GenerativeBoundary.FixedSelector.recurrent_process_with_fixed_selector"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "organizational-rule-inheritance",
+      "detail": {
+        "en": "A quantity every step keeps is kept along every course; the selector is such a quantity while the phase recurs.",
+        "zh": "每一步都保持之量沿每条进程都被保持；选择者即此种量，而相位复现。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/BoundaryModels.lean",
+      "role": "proof",
+      "sha256": "3ca0b210f4e7b80c61aac9633a319c5e4039c98e5e7cc64dc7bf1d0b571d23d2",
+      "declarations": [
+        "GenerativeBoundary.FixedSelector.returns_after_two",
+        "GenerativeBoundary.FixedSelector.changes_phase_every_step",
+        "GenerativeBoundary.FixedSelector.selector_changes_next_phase",
+        "GenerativeBoundary.FixedSelector.selector_preserved_by_step",
+        "GenerativeBoundary.FixedSelector.selector_unchanged_at_every_time",
+        "GenerativeBoundary.FixedSelector.recurrent_process_with_fixed_selector"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
+      "role": "provenance",
+      "sha256": "362c4eda65deeb23222ed432ef4920d0525da9c6e0b7f101ec71f3e42fff350a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/verification-runs/1791274297069388000/sources/BoundaryModels.lean",
+      "role": "provenance",
+      "sha256": "a9c171e4a20857c82a7c8f6f8e4f48729f0900a671937e2421ec4c20ac69431e",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/04-LIFE.md",
+      "role": "statement",
+      "sha256": "1368f69ece22fe59a1557d20b3af7734b25a82214e9cda03845acd34b57f0db3",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LEAN-CORE-REVIEW.md",
+      "role": "review",
+      "sha256": "4cb7358824cf056d00941d52ea96b2ff4b4bb2d1328c946d36d3906fb54440c7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), recurrence without revision of the selector: a process returning after two steps and changing at every step with its operative selector the same at every time; reviewed-scoped, since no passing receipt binds the file's current bytes; from DEFECTS-FOUND (triage rows 148 and 113); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），选择者不修订的复现：一个两步后返回、每步改变而运作的选择者每刻相同的过程；因无通过的回执绑定该文件当前字节，状态为已审定范围；出自 DEFECTS-FOUND（分诊第 148 行与第 113 行）；研究第 426 节。"
+    }
+  ]
+}

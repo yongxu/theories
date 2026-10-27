@@ -1,11 +1,11 @@
-# What DF1 leaves, and where it goes
+# What DF leaves, and where it goes
 
-## DF2 (the next landing of board item DF, by the same session)
-- The 33 missing-record rows (kind missing-record in triage.json): new records for results the chapters state without one, with r- anchors in their home sections and regions.json entries; where the triage says a result is covered by another new record, one record.
-- Records with no statement: least-footprint-where-idleness-decided and normal-forms-need-decided-apartness (statements and laws from 01's home sections; schema-2 migration).
-- Schema-2 migrations with laws arrays for the schema-1 records whose rows proposed laws (their content is already in their statements and claims): joint-decomposition-lifting, finite-joining-tree-lifting, exclusive-footprint-support, control-coherence-loss, growth-constrained-fragmentation, recoverable-mediated-change, the four market records, draws-on-a-shared-stock, and the group-0 and group-1 records the editors named (rows 0, 1, 2, 3, 9, 14, 15, 17, 18, 19, 21, 29).
-- Two id renames whose names state the retired registration sense: selection-under-registration-revision → selection-when-the-lumping-changes, formed-copying-registration → formed-contacts-change-copying-fidelity (rename_ids.py: stubs, regions.json, anchors, inbound records).
-- A decision-register entry (D69) for the grammar's readings (01 §2, §8.6, §8.7), and 02-MAP line 105's link to 07#r-significance-through-a-common-condition once that record exists.
+DF2 (27 October 2026) made the 33 missing-record rows into thirty records, gave the two records with no statement their statements, and added decision D69; what DF1 and DF2 leave is below.
+
+## For a next landing of DF
+- Schema-2 migrations with laws arrays for the schema-1 records whose rows proposed laws (their content is already in their statements and claims): joint-decomposition-lifting, finite-joining-tree-lifting, exclusive-footprint-support, control-coherence-loss, growth-constrained-fragmentation, recoverable-mediated-change, the four market records, draws-on-a-shared-stock, and the group-0 and group-1 records the editors named (rows 0, 1, 2, 3, 9, 14, 15, 17, 18, 19, 21, 29); least-footprint-where-idleness-decided and normal-forms-need-decided-apartness have statements now and take their laws arrays with them.
+- Two id renames whose names state the retired registration sense: selection-under-registration-revision → selection-when-the-lumping-changes, formed-copying-registration → formed-contacts-change-copying-fidelity. `rename_ids.py` refuses both, because the generativity chain's record names them (in its historical evidence); the chain changes only through its maintenance record, so the renames wait on that decision.
+- recurrence-without-selector-revision is reviewed-scoped: no receipt binds BoundaryModels.lean's current bytes (a first-line comment changed after its last check). A rerun of its checker, or a binding to the checked snapshot, would make it recorded-checked.
 
 ## For owners (board notes)
 - OU3b's owner (the master laws on the grammar, lifting): likeness as the core of realizing the same claims, `Becoming.Alike F F s s' ↔ «核» (moveRel P ()) (claims alike) s s'` (new Lean).

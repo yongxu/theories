@@ -1,0 +1,228 @@
+{
+  "schema_version": 2,
+  "id": "learning-a-rule-by-narrowing",
+  "title": {
+    "en": "Learning a rule by narrowing: safe and greatest answers",
+    "zh": "经收窄学习规则：安全且最大的回答"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "Narrowing a list of candidate rules by observations keeps exactly the rules fitting them, the actual one among them where it is listed and the observations are faithful; the answer asserting what every kept rule agrees on is safe and, on a nonempty list, the greatest safe answer.",
+    "zh": "以观察收窄候选规则之列表，恰保留与之相合的规则；实际规则被列出且观察忠实时，它在其中；断言每个被保留规则所共同者的回答是安全的，列表非空时是最大的安全回答。"
+  },
+  "laws": [
+    {
+      "en": "Learning from a list of observations keeps exactly the listed rules fitting every observation; the actual rule is kept where it is listed and the observations are faithful to it; a dropped rule contradicts some observation; and revising twice by one observation is revising once.",
+      "zh": "由观察列表学习，恰保留与每个观察相合的所列规则；实际规则被列出且观察对它忠实时被保留；被去掉的规则与某个观察矛盾；以同一观察修订两次即修订一次。",
+      "declarations": [
+        "Becoming.Narrowing.learn",
+        "Becoming.Narrowing.mem_learn",
+        "Becoming.Narrowing.narrowed_iff_fits",
+        "Becoming.Narrowing.actual_retained",
+        "Becoming.Narrowing.counterevidence_of_dropped",
+        "Becoming.Narrowing.revise_revise"
+      ]
+    },
+    {
+      "en": "The answer asserts b at a question exactly where the list is not empty and every rule on it gives b there; it is safe, asserting only each listed rule's value. On a nonempty list every safe answer that asserts agrees with it, it is greatest, asserting whatever any safe answer asserts, and a safe greatest answer equals it at every question.",
+      "zh": "回答在某问题上断言 b，恰当列表非空且其上每个规则在那里给出 b；它是安全的，只断言每个所列规则之值。列表非空时，每个作出断言的安全回答都与它一致；它是最大的，断言任一安全回答所断言者；安全且最大的回答在每个问题上都等于它。",
+      "declarations": [
+        "Becoming.Narrowing.answer",
+        "Becoming.Narrowing.Safe",
+        "Becoming.Narrowing.Maximal",
+        "Becoming.Narrowing.answer_iff",
+        "Becoming.Narrowing.answer_safe",
+        "Becoming.Narrowing.safe_definite_requires_agreement",
+        "Becoming.Narrowing.answer_maximal",
+        "Becoming.Narrowing.unique_maximal_safe"
+      ]
+    },
+    {
+      "en": "Observations acquired from the actual rule are faithful to it, so where it is listed every asserted answer is its value. Re-encoding questions through a decoding transports answers, and transports learning where decoding inverts encoding; re-encoding the identity rule through negation gives a different answer at true.",
+      "zh": "取自实际规则的观察对它忠实，故它被列出时，每个被断言的回答都是其值。经解码重编码问题传送回答；解码反转编码时也传送学习；经否定重编码恒等规则，在“真”处给出不同的回答。",
+      "declarations": [
+        "Becoming.Narrowing.acquired_evidence_faithful",
+        "Becoming.Narrowing.acquired_answers_correct",
+        "Becoming.Narrowing.answer_transport",
+        "Becoming.Narrowing.learning_transport",
+        "Becoming.Narrowing.wrong_reencoding_breaks_transfer"
+      ]
+    },
+    {
+      "en": "For rules on the two cases of a Boolean question, every rule agrees with one of four listed candidates, so learning from them by acquired observations answers only correctly; observing the identity rule, one observed case leaves the other unsettled, contrasting cases settle both, and the settled answer need not be the last report.",
+      "zh": "对布尔问题两个情形上的规则，每个规则都与四个所列候选之一一致，故由它们以所取得的观察学习只作正确回答；观察恒等规则时，观察一个情形使另一个未定，对照的情形两者皆定，所定的回答未必是最后的报告。",
+      "declarations": [
+        "Becoming.Narrowing.repertoire_complete",
+        "Becoming.Narrowing.full_repertoire_correct",
+        "Becoming.Narrowing.one_sample_leaves_other_case_unsettled",
+        "Becoming.Narrowing.contrasting_acquisition_settles_both",
+        "Becoming.Narrowing.learned_response_differs_from_last_report"
+      ]
+    },
+    {
+      "en": "Witnesses: repeating one case leaves the other unsettled; a list lacking the actual rule can answer definitely and wrongly; and contradictory observations at one case leave the other unsettled.",
+      "zh": "见证：重复一个情形使另一个仍未定；缺实际规则的列表可确定地答错；在一个情形上相矛盾的观察使另一个未定。",
+      "declarations": [
+        "Becoming.Narrowing.repeated_same_case_does_not_settle_other",
+        "Becoming.Narrowing.wrong_model_class_can_be_confidently_wrong",
+        "Becoming.Narrowing.inconsistent_evidence_yields_no_answer"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Rules are functions from questions to Booleans, listed as candidates; an observation is a question with a value, and acquisition reads the actual rule at supplied questions.",
+      "zh": "规则是由问题到布尔值的函数，列为候选；观察是带值的问题，取得在给定的问题上读取实际规则。"
+    },
+    {
+      "en": "No premise: every Narrowing declaration has an empty axiom report; the pre-spine StandardsBridge it ports uses propext, Quot.sound and Classical.choice in some declarations.",
+      "zh": "无前提：Narrowing 的每个声明公理报告皆空；它所移植的前主干 StandardsBridge 在部分声明中用 propext、Quot.sound 与 Classical.choice。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the actual rule is among the candidates: where it is not, a definite answer can be wrong.",
+      "zh": "实际规则在候选之中：不在时，确定的回答可以是错的。",
+      "kind": "non-implication",
+      "witness": "Becoming.Narrowing.wrong_model_class_can_be_confidently_wrong"
+    },
+    {
+      "en": "Which questions to ask, or an obligation to investigate, disclose or act: the laws concern accuracy and safe answers only.",
+      "zh": "该问哪些问题，或调查、披露、行动之义务：诸律只涉准确与安全的回答。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
+      "detail": {
+        "en": "A list holding only the constant rule true, after one faithful observation of the identity at true, answers true at false, where the identity gives false (wrong_model_class_can_be_confidently_wrong).",
+        "zh": "只含常值规则“真”的列表，在对恒等规则于真处的一次忠实观察之后，于假处答真，而恒等规则在那里给出假（wrong_model_class_can_be_confidently_wrong）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.29.1): Becoming.Narrowing by the consolidated core checker (receipt 20261025T212948.819150Z), every declaration with an empty axiom report; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 实查：Becoming.Narrowing 经合并核心检查器（回执 20261025T212948.819150Z），每个声明公理报告皆空；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "State narrowing as a process whose observations are its own steps of inquiry, so that which question to ask next is read off the candidates that remain.",
+    "zh": "把收窄陈述为一个过程，其观察即其自身的探究之步，使下一个该问的问题由剩余的候选读出。"
+  },
+  "correspondence": {
+    "en": "Keeping exactly the candidates consistent with the observations is the version space (Mitchell 1982); answering only where every remaining candidate agrees, and abstaining otherwise, is the protocol of KWIK learning (Li, Littman and Walsh 2008).",
+    "zh": "恰保留与观察一致的候选，即版本空间（Mitchell 1982）；只在每个剩余候选一致处作答、否则弃答，即 KWIK 学习的协议（Li、Littman 与 Walsh 2008）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
+  "aliases": [
+    "learning a rule by narrowing",
+    "经收窄学习规则",
+    "Becoming.Narrowing.answer_iff",
+    "Becoming.Narrowing.unique_maximal_safe"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "becoming-spine-instances",
+      "detail": {
+        "en": "Narrowing's revision as the core's observation step.",
+        "zh": "Narrowing 的修订作为核心的观察之步。"
+      }
+    },
+    {
+      "id": "encounter-selection-and-revision",
+      "detail": {
+        "en": "Records only narrow the candidates; there of bindings, here of rules.",
+        "zh": "记录只收窄候选；彼处为约定，此处为规则。"
+      }
+    },
+    {
+      "id": "generalization-through-lumping",
+      "detail": {
+        "en": "Data fix a value where an input is lumped with an observed one; here the safe answer of what is kept.",
+        "zh": "数据在输入与某观察输入归并处确定其值；此处为所保留者的安全回答。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Narrowing.learn",
+        "Becoming.Narrowing.mem_learn",
+        "Becoming.Narrowing.narrowed_iff_fits",
+        "Becoming.Narrowing.actual_retained",
+        "Becoming.Narrowing.counterevidence_of_dropped",
+        "Becoming.Narrowing.revise_revise",
+        "Becoming.Narrowing.answer",
+        "Becoming.Narrowing.Safe",
+        "Becoming.Narrowing.Maximal",
+        "Becoming.Narrowing.answer_iff",
+        "Becoming.Narrowing.answer_safe",
+        "Becoming.Narrowing.safe_definite_requires_agreement",
+        "Becoming.Narrowing.answer_maximal",
+        "Becoming.Narrowing.unique_maximal_safe",
+        "Becoming.Narrowing.acquired_evidence_faithful",
+        "Becoming.Narrowing.acquired_answers_correct",
+        "Becoming.Narrowing.answer_transport",
+        "Becoming.Narrowing.learning_transport",
+        "Becoming.Narrowing.wrong_reencoding_breaks_transfer",
+        "Becoming.Narrowing.repertoire_complete",
+        "Becoming.Narrowing.full_repertoire_correct",
+        "Becoming.Narrowing.one_sample_leaves_other_case_unsettled",
+        "Becoming.Narrowing.contrasting_acquisition_settles_both",
+        "Becoming.Narrowing.learned_response_differs_from_last_report",
+        "Becoming.Narrowing.repeated_same_case_does_not_settle_other",
+        "Becoming.Narrowing.wrong_model_class_can_be_confidently_wrong",
+        "Becoming.Narrowing.inconsistent_evidence_yields_no_answer"
+      ],
+      "sha256": "d5c203f58f6d6a7dad66dac076558b00437917bc6bb8deefe3f9cb4dc676355b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/StandardsBridge.lean",
+      "role": "provenance",
+      "sha256": "f061dbc44da5cdf11ac5ff79b3f89558c7e177b23b9f121c1048c16ed353a42a"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "58e42859a9f7ec5720b68d4bc28f43b02e2fc1d24ab766913ed0d56980751ef1"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Narrowing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), that narrowing keeps exactly the fitting candidates, that the answer of what they agree on is the greatest safe answer, its transport and the witnesses on Boolean rules, in the core; from DEFECTS-FOUND (triage row 135); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），收窄恰保留相合的候选，其共同者之回答是最大的安全回答，其传送及布尔规则上的见证，皆在核心；出自 DEFECTS-FOUND（分诊第 135 行）；研究第 426 节。"
+    }
+  ]
+}

@@ -548,6 +548,18 @@
    "page": "theories/becoming/results/records/a-rise-past-the-inflow-is-drawn-from-beyond.md"
   },
   {
+   "id": "record:a-selected-template-need-not-raise-structure",
+   "type": "result",
+   "record": "a-selected-template-need-not-raise-structure",
+   "title": "A selected template need not increase the successor's structure",
+   "title_zh": "被选的模板未必提高后继的结构",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/a-selected-template-need-not-raise-structure.md"
+  },
+  {
    "id": "record:a-source-before-a-juncture",
    "type": "result",
    "record": "a-source-before-a-juncture",
@@ -570,6 +582,18 @@
    "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/a-step-coupling-keeps-at-every-horizon.md"
+  },
+  {
+   "id": "record:a-swap-symmetric-assignment-singles-out-none",
+   "type": "result",
+   "record": "a-swap-symmetric-assignment-singles-out-none",
+   "title": "A swap-symmetric assignment singles out no role",
+   "title_zh": "互换对称之指派不单挑一角",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/a-swap-symmetric-assignment-singles-out-none.md"
   },
   {
    "id": "record:a-weighting-faster-than-renewal-ends-the-base",
@@ -608,6 +632,18 @@
    "page": "theories/becoming/results/records/a-whole-of-every-part.md"
   },
   {
+   "id": "record:access-yet-to-form",
+   "type": "result",
+   "record": "access-yet-to-form",
+   "title": "Access yet to form: a newly permitted probe tells apart what old observations do not",
+   "title_zh": "尚待形成的存取：新许可的探测分辨旧观察所不分者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/access-yet-to-form.md"
+  },
+  {
    "id": "record:acquired-binding-compositional-use",
    "type": "result",
    "record": "acquired-binding-compositional-use",
@@ -630,6 +666,18 @@
    "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/acquired-revision-of-pending-task.md"
+  },
+  {
+   "id": "record:adaptive-closure-cannot-resolve",
+   "type": "result",
+   "record": "adaptive-closure-cannot-resolve",
+   "title": "Adaptive closure: a reference changed outside what is retained is not resolved from the view",
+   "title_zh": "适应性封闭：在所保留者之外改变的参照不能由所见分辨",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/adaptive-closure-cannot-resolve.md"
   },
   {
    "id": "record:additive-part-of-offspring-variance",
@@ -1028,6 +1076,18 @@
    "page": "theories/becoming/results/records/central-laws-over-every-exchange.md"
   },
   {
+   "id": "record:certificates-sound-and-available",
+   "type": "result",
+   "record": "certificates-sound-and-available",
+   "title": "Certificates over fault envelopes: sound, available exactly where separated",
+   "title_zh": "故障包络上的证书：可靠，恰在分隔处可用",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/certificates-sound-and-available.md"
+  },
+  {
    "id": "record:chinese-sources-on-the-spine",
    "type": "result",
    "record": "chinese-sources-on-the-spine",
@@ -1218,6 +1278,18 @@
    "region": "significance",
    "base": "old-base",
    "page": "theories/becoming/results/records/comparison-within-reach.md"
+  },
+  {
+   "id": "record:composition-route",
+   "type": "result",
+   "record": "composition-route",
+   "title": "The composition route: order not identified by primitives, a duplicate exposed by a fresh record",
+   "title_zh": "组合路线：原子读数不辨识顺序，新记录暴露重复",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "frame",
+   "page": "theories/becoming/results/records/composition-route.md"
   },
   {
    "id": "record:condition-correspondence-discipline",
@@ -1424,6 +1496,18 @@
    "page": "theories/becoming/results/records/continuous-time-as-tower.md"
   },
   {
+   "id": "record:contraction-where-duplication-is-reachable",
+   "type": "result",
+   "record": "contraction-where-duplication-is-reachable",
+   "title": "Contraction is admissible exactly where duplication is reachable",
+   "title_zh": "收缩恰在复制可达之处可容许",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "method",
+   "base": "frame",
+   "page": "theories/becoming/results/records/contraction-where-duplication-is-reachable.md"
+  },
+  {
    "id": "record:control-coherence-loss",
    "type": "result",
    "record": "control-coherence-loss",
@@ -1470,6 +1554,18 @@
    "region": "life",
    "base": "general",
    "page": "theories/becoming/results/records/copying-b-fold.md"
+  },
+  {
+   "id": "record:correction-is-not-calibration",
+   "type": "result",
+   "record": "correction-is-not-calibration",
+   "title": "Correction is not calibration: references recover the report, and later change defeats it",
+   "title_zh": "修正不是校准：参照读数恢复报告，其后的变化使之失效",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/correction-is-not-calibration.md"
   },
   {
    "id": "record:counterfactual-is-the-course",
@@ -1796,6 +1892,18 @@
    "page": "theories/becoming/results/records/entropy-history-and-record.md"
   },
   {
+   "id": "record:equal-totals-can-hide-what-a-capacity-carries",
+   "type": "result",
+   "record": "equal-totals-can-hide-what-a-capacity-carries",
+   "title": "Equal totals can hide what a capacity carries",
+   "title_zh": "相同的总量可隐去能力所承载者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/equal-totals-can-hide-what-a-capacity-carries.md"
+  },
+  {
    "id": "record:eventual-widening",
    "type": "result",
    "record": "eventual-widening",
@@ -1830,6 +1938,18 @@
    "region": "root",
    "base": "frame",
    "page": "theories/becoming/results/records/every-origin-passes-the-gate.md"
+  },
+  {
+   "id": "record:evidence-through-change",
+   "type": "result",
+   "record": "evidence-through-change",
+   "title": "Evidence through change: candidates propagated through every admitted change",
+   "title_zh": "经变化的证据：经每个被允许之变化传播的候选",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/evidence-through-change.md"
   },
   {
    "id": "record:evolution-on-descent",
@@ -1998,6 +2118,18 @@
    "region": "significance",
    "base": "frame",
    "page": "theories/becoming/results/records/finite-aggregation-within-restorable-basic-losses.md"
+  },
+  {
+   "id": "record:finite-agreement-does-not-identify-priority",
+   "type": "result",
+   "record": "finite-agreement-does-not-identify-priority",
+   "title": "Finite agreement does not identify lexical priority",
+   "title_zh": "有限一致不识别词典式优先",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/finite-agreement-does-not-identify-priority.md"
   },
   {
    "id": "record:finite-basis-common-interpretation",
@@ -2274,6 +2406,18 @@
    "region": "significance",
    "base": "general",
    "page": "theories/becoming/results/records/graded-significance-and-priority.md"
+  },
+  {
+   "id": "record:groups-formed-by-bonds-share-a-founder",
+   "type": "result",
+   "record": "groups-formed-by-bonds-share-a-founder",
+   "title": "Groups formed by bonds share a founder",
+   "title_zh": "由键形成的组有共同的始祖",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/groups-formed-by-bonds-share-a-founder.md"
   },
   {
    "id": "record:groups-formed-by-descent",
@@ -2624,6 +2768,18 @@
    "page": "theories/becoming/results/records/joint-plan-composition.md"
   },
   {
+   "id": "record:joint-plans-from-a-supported-start",
+   "type": "result",
+   "record": "joint-plans-from-a-supported-start",
+   "title": "Joint plans from a supported start",
+   "title_zh": "自受支持之起点的共同方案",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+  },
+  {
    "id": "record:joint-practice-forms-continuation",
    "type": "result",
    "record": "joint-practice-forms-continuation",
@@ -2742,6 +2898,18 @@
    "region": "life",
    "base": "periphery",
    "page": "theories/becoming/results/records/learned-procedure-transmission.md"
+  },
+  {
+   "id": "record:learning-a-rule-by-narrowing",
+   "type": "result",
+   "record": "learning-a-rule-by-narrowing",
+   "title": "Learning a rule by narrowing: safe and greatest answers",
+   "title_zh": "经收窄学习规则：安全且最大的回答",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/learning-a-rule-by-narrowing.md"
   },
   {
    "id": "record:learning-by-refutation",
@@ -2970,6 +3138,18 @@
    "region": "collective",
    "base": "frame",
    "page": "theories/becoming/results/records/market-finite-support-obstruction.md"
+  },
+  {
+   "id": "record:market-model-share-margin-and-ends",
+   "type": "result",
+   "record": "market-model-share-margin-and-ends",
+   "title": "The market model: the renewing share, the margin and the two ends",
+   "title_zh": "市场模型：更新之份额、边际与两端",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/market-model-share-margin-and-ends.md"
   },
   {
    "id": "record:market-partial-correction-boundary",
@@ -3210,6 +3390,18 @@
    "region": "knowing",
    "base": "old-base",
    "page": "theories/becoming/results/records/observation-is-a-route.md"
+  },
+  {
+   "id": "record:one-move-covering",
+   "type": "result",
+   "record": "one-move-covering",
+   "title": "What one move ensures, and covering of moves",
+   "title_zh": "一步所确保者与动作的覆盖",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "method",
+   "base": "frame",
+   "page": "theories/becoming/results/records/one-move-covering.md"
   },
   {
    "id": "record:one-reader-several-conditions",
@@ -3608,6 +3800,18 @@
    "page": "theories/becoming/results/records/re-optimizing-above-a-renewal-ends-it.md"
   },
   {
+   "id": "record:reach-from-a-seed",
+   "type": "result",
+   "record": "reach-from-a-seed",
+   "title": "Reach from a seed",
+   "title_zh": "自种子之所及",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "frame",
+   "page": "theories/becoming/results/records/reach-from-a-seed.md"
+  },
+  {
    "id": "record:reach-past-ones-own-end",
    "type": "result",
    "record": "reach-past-ones-own-end",
@@ -3680,6 +3884,18 @@
    "page": "theories/becoming/results/records/reading-through-a-pool.md"
   },
   {
+   "id": "record:readings-a-response-needs",
+   "type": "result",
+   "record": "readings-a-response-needs",
+   "title": "Readings a response needs: no coarsest adequate reading, and success changes the next move",
+   "title_zh": "回应所需的读法：没有最粗的充分读法，成功改变下一步",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "frame",
+   "page": "theories/becoming/results/records/readings-a-response-needs.md"
+  },
+  {
    "id": "record:readings-within-what-they-read",
    "type": "result",
    "record": "readings-within-what-they-read",
@@ -3726,6 +3942,18 @@
    "region": "root",
    "base": "general",
    "page": "theories/becoming/results/records/recurrence-without-premise.md"
+  },
+  {
+   "id": "record:recurrence-without-selector-revision",
+   "type": "result",
+   "record": "recurrence-without-selector-revision",
+   "title": "Recurrence without revision of the selector",
+   "title_zh": "选择者不修订的复现",
+   "status": "reviewed-scoped",
+   "kind": "theorem",
+   "region": "life",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/recurrence-without-selector-revision.md"
   },
   {
    "id": "record:recurrent-chain-assembly",
@@ -4100,6 +4328,18 @@
    "page": "theories/becoming/results/records/returning-where-the-course-branches.md"
   },
   {
+   "id": "record:reviewers-count-by-independent-causes",
+   "type": "result",
+   "record": "reviewers-count-by-independent-causes",
+   "title": "Reviewers count by independent causes, not names",
+   "title_zh": "审查者以独立之因计，不以名计",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/reviewers-count-by-independent-causes.md"
+  },
+  {
    "id": "record:revision-comes-to-drawing-everything",
    "type": "result",
    "record": "revision-comes-to-drawing-everything",
@@ -4206,6 +4446,18 @@
    "region": "root",
    "base": "old-base",
    "page": "theories/becoming/results/records/runs-on-families-chosen-step-by-step.md"
+  },
+  {
+   "id": "record:same-carrier-need-not-fix-the-response",
+   "type": "result",
+   "record": "same-carrier-need-not-fix-the-response",
+   "title": "The same carrier need not fix the same response",
+   "title_zh": "同样的承载者未必固定同样的回应",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/same-carrier-need-not-fix-the-response.md"
   },
   {
    "id": "record:scientific-inquiry-foundation",
@@ -4352,6 +4604,18 @@
    "page": "theories/becoming/results/records/self-concern-through-dependence.md"
   },
   {
+   "id": "record:self-reference-does-not-certify-itself",
+   "type": "result",
+   "record": "self-reference-does-not-certify-itself",
+   "title": "Self-reference does not certify itself",
+   "title_zh": "自指不自证",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "method",
+   "base": "general",
+   "page": "theories/becoming/results/records/self-reference-does-not-certify-itself.md"
+  },
+  {
    "id": "record:sensitivity-is-the-least-coupling",
    "type": "result",
    "record": "sensitivity-is-the-least-coupling",
@@ -4424,6 +4688,18 @@
    "page": "theories/becoming/results/records/significance-retained-within-margin.md"
   },
   {
+   "id": "record:significance-through-a-common-condition",
+   "type": "result",
+   "record": "significance-through-a-common-condition",
+   "title": "Significance through a common condition",
+   "title_zh": "经共同条件的意义",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "frame",
+   "page": "theories/becoming/results/records/significance-through-a-common-condition.md"
+  },
+  {
    "id": "record:situated-recovery-empirical-correspondence",
    "type": "result",
    "record": "situated-recovery-empirical-correspondence",
@@ -4484,6 +4760,18 @@
    "page": "theories/becoming/results/records/stepwise-law-of-easing.md"
   },
   {
+   "id": "record:stronger-arrangement-formed-by-reconfiguration",
+   "type": "result",
+   "record": "stronger-arrangement-formed-by-reconfiguration",
+   "title": "A stronger arrangement formed by reconfiguration",
+   "title_zh": "经重组形成的更强排列",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/stronger-arrangement-formed-by-reconfiguration.md"
+  },
+  {
    "id": "record:substitution-preserves-consumption",
    "type": "result",
    "record": "substitution-preserves-consumption",
@@ -4494,6 +4782,18 @@
    "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/substitution-preserves-consumption.md"
+  },
+  {
+   "id": "record:succession-on-a-funded-carrier",
+   "type": "result",
+   "record": "succession-on-a-funded-carrier",
+   "title": "Succession on a carrier provided for migration",
+   "title_zh": "为迁移所备之承载者上的承续",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/succession-on-a-funded-carrier.md"
   },
   {
    "id": "record:sum-over-histories-exact",
@@ -4772,6 +5072,18 @@
    "page": "theories/becoming/results/records/the-step-index-from-own-courses.md"
   },
   {
+   "id": "record:the-updater-line",
+   "type": "result",
+   "record": "the-updater-line",
+   "title": "The updater line: development, memory, replacement and margins of a learning network",
+   "title_zh": "更新者一线：学习网络的发育、记忆、替换与余量",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/the-updater-line.md"
+  },
+  {
    "id": "record:the-world-an-interleaving-builds",
    "type": "result",
    "record": "the-world-an-interleaving-builds",
@@ -4938,6 +5250,18 @@
    "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md"
+  },
+  {
+   "id": "record:type-formation-gives-no-dynamics",
+   "type": "result",
+   "record": "type-formation-gives-no-dynamics",
+   "title": "Type formation keeps the seed's boundary and gives no dynamics",
+   "title_zh": "类型构造保持种子之界而不给出动力学",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "method",
+   "base": "general",
+   "page": "theories/becoming/results/records/type-formation-gives-no-dynamics.md"
   },
   {
    "id": "record:typicality-by-counting",
@@ -5240,6 +5564,30 @@
    "page": "theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md"
   },
   {
+   "id": "record:what-a-summary-keeps",
+   "type": "result",
+   "record": "what-a-summary-keeps",
+   "title": "What a summary keeps",
+   "title_zh": "摘要保留什么",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "method",
+   "base": "frame",
+   "page": "theories/becoming/results/records/what-a-summary-keeps.md"
+  },
+  {
+   "id": "record:what-a-total-keeps",
+   "type": "result",
+   "record": "what-a-total-keeps",
+   "title": "What a total keeps and loses across scales",
+   "title_zh": "总量跨尺度保留与失去者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/what-a-total-keeps.md"
+  },
+  {
    "id": "record:what-an-extrapolation-given-nothing-fixes",
    "type": "result",
    "record": "what-an-extrapolation-given-nothing-fixes",
@@ -5442,6 +5790,18 @@
    "region": "method",
    "base": "general",
    "page": "theories/becoming/results/records/when-the-runs-of-a-process-settle.md"
+  },
+  {
+   "id": "record:when-to-inquire-and-when-to-respond",
+   "type": "result",
+   "record": "when-to-inquire-and-when-to-respond",
+   "title": "When to inquire and when to respond",
+   "title_zh": "何时探究，何时回应",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/when-to-inquire-and-when-to-respond.md"
   },
   {
    "id": "record:where-a-formations-acts-return",
@@ -5686,7 +6046,7 @@
    "id": "module:Becoming.GrammarReadings",
    "type": "module",
    "name": "Becoming.GrammarReadings",
-   "level": "L0",
+   "level": "L1",
    "theorems": 12,
    "region": "classical",
    "base": "grammar",
@@ -5708,7 +6068,7 @@
    "id": "module:Becoming.GrammarTesting",
    "type": "module",
    "name": "Becoming.GrammarTesting",
-   "level": "L0",
+   "level": "L1",
    "theorems": 6,
    "region": "knowing",
    "base": "grammar",
@@ -5719,7 +6079,7 @@
    "id": "module:Becoming.GrammarCandidates",
    "type": "module",
    "name": "Becoming.GrammarCandidates",
-   "level": "L0",
+   "level": "L1",
    "theorems": 66,
    "region": "classical",
    "base": "grammar",
@@ -5730,7 +6090,7 @@
    "id": "module:Becoming.MapInstances",
    "type": "module",
    "name": "Becoming.MapInstances",
-   "level": "L2",
+   "level": "L1",
    "theorems": 25,
    "region": "map",
    "base": "old-base",
@@ -8161,7 +8521,7 @@
    "id": "module:Becoming.OverExchange",
    "type": "module",
    "name": "Becoming.OverExchange",
-   "level": "L1",
+   "level": "L2",
    "theorems": 50,
    "region": "root",
    "base": "old-base",
@@ -9261,7 +9621,7 @@
    "id": "module:Becoming.GrammarScope",
    "type": "module",
    "name": "Becoming.GrammarScope",
-   "level": "L1",
+   "level": "L2",
    "theorems": 38,
    "region": "significance",
    "base": "grammar",
@@ -9272,7 +9632,7 @@
    "id": "module:Becoming.GrammarCases",
    "type": "module",
    "name": "Becoming.GrammarCases",
-   "level": "L1",
+   "level": "L2",
    "theorems": 40,
    "region": "root",
    "base": "grammar",
@@ -26957,6 +27317,12 @@
    "anchor": "r-levels-of-closure"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-reach-from-a-seed",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-reach-from-a-seed"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-which-links-a-closure-needs",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -27617,6 +27983,12 @@
    "anchor": "r-experiment-needs-return"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-correction-is-not-calibration"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-causal-models-as-processes",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -27821,6 +28193,12 @@
    "anchor": "r-historical-source-binding"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-composition-route",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-composition-route"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-naming-attention-coverage",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -27887,6 +28265,12 @@
    "anchor": "r-acquired-revision-of-pending-task"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-learning-a-rule-by-narrowing",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-learning-a-rule-by-narrowing"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-finite-fallible-inquiry-necessity",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -27899,6 +28283,30 @@
    "anchor": "r-fallible-witness-diagnosability"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-certificates-sound-and-available",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-certificates-sound-and-available"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-adaptive-closure-cannot-resolve"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-evidence-through-change"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-when-to-inquire-and-when-to-respond",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-when-to-inquire-and-when-to-respond"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-finite-continuation-plans",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -27909,6 +28317,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
    "anchor": "r-risk-certificate-outcome-distinction"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-readings-a-response-needs",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-readings-a-response-needs"
   },
   {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-incidence-common-refinement",
@@ -27975,6 +28389,18 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
    "anchor": "r-residual-continuation-correspondence"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-total-keeps",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-a-total-keeps"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-access-yet-to-form",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-access-yet-to-form"
   },
   {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-binding-preserving-substitution",
@@ -28109,10 +28535,22 @@
    "anchor": "r-recurrent-chain-assembly"
   },
   {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-stronger-arrangement-formed-by-reconfiguration",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-stronger-arrangement-formed-by-reconfiguration"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-evolution-on-descent",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
    "anchor": "r-evolution-on-descent"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-a-selected-template-need-not-raise-structure",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-a-selected-template-need-not-raise-structure"
   },
   {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-selection-term-over-generations",
@@ -28175,6 +28613,12 @@
    "anchor": "r-groups-whose-conditions-are-coupled"
   },
   {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-groups-formed-by-bonds-share-a-founder",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-groups-formed-by-bonds-share-a-founder"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
@@ -28221,6 +28665,30 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
    "anchor": "r-learned-procedure-transmission"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-the-updater-line",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-the-updater-line"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-recurrence-without-selector-revision",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-recurrence-without-selector-revision"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-equal-totals-can-hide-what-a-capacity-carries",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-equal-totals-can-hide-what-a-capacity-carries"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-same-carrier-need-not-fix-the-response",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-same-carrier-need-not-fix-the-response"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-difference-making",
@@ -28481,6 +28949,12 @@
    "anchor": "r-imposing-a-code-breaks-the-symmetry"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-swap-symmetric-assignment-singles-out-none",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-swap-symmetric-assignment-singles-out-none"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -28499,10 +28973,22 @@
    "anchor": "r-copied-witnesses-change-nothing"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-reviewers-count-by-independent-causes"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
    "anchor": "r-joint-practice-forms-continuation"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-market-model-share-margin-and-ends"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
@@ -28529,10 +29015,22 @@
    "anchor": "r-market-finite-support-obstruction"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-succession-on-a-funded-carrier"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plan-composition",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
    "anchor": "r-joint-plan-composition"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-joint-plans-from-a-supported-start"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation",
@@ -28749,6 +29247,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "r-own-good-to-reachable-living-significance"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-significance-through-a-common-condition",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-significance-through-a-common-condition"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-becoming-stepwise-reading",
@@ -28985,6 +29489,12 @@
    "anchor": "r-finite-aggregation-within-restorable-basic-losses"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-finite-agreement-does-not-identify-priority",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-finite-agreement-does-not-identify-priority"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -29093,6 +29603,18 @@
    "anchor": "r-what-discrete-steps-and-whole-amounts-represent"
   },
   {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-what-a-summary-keeps",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-what-a-summary-keeps"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-one-move-covering",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-one-move-covering"
+  },
+  {
    "id": "section:theories/becoming/chapters/08-METHOD.md#r-counts-exist-where-decided",
    "type": "section",
    "chapter": "theories/becoming/chapters/08-METHOD.md",
@@ -29135,10 +29657,28 @@
    "anchor": "r-lifting-where-branching-is-finite"
   },
   {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-type-formation-gives-no-dynamics",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-type-formation-gives-no-dynamics"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-contraction-where-duplication-is-reachable",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-contraction-where-duplication-is-reachable"
+  },
+  {
    "id": "section:theories/becoming/chapters/08-METHOD.md#r-becoming-spine-instances",
    "type": "section",
    "chapter": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "r-becoming-spine-instances"
+  },
+  {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-self-reference-does-not-certify-itself",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-self-reference-does-not-certify-itself"
   },
   {
    "id": "section:theories/becoming/chapters/08-METHOD.md#r-fidelity-coders-on-own-and-other-texts",
@@ -33315,6 +33855,16 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:a-selected-template-need-not-raise-structure",
+   "to": "record:evolution-on-descent",
+   "type": "related"
+  },
+  {
+   "from": "record:a-selected-template-need-not-raise-structure",
+   "to": "record:selection-term-over-generations",
+   "type": "related"
+  },
+  {
    "from": "record:a-source-before-a-juncture",
    "to": "module:Becoming.Junctures",
    "type": "proved-in"
@@ -33413,6 +33963,21 @@
    "from": "record:a-step-coupling-keeps-at-every-horizon",
    "to": "record:what-an-optimum-does-beyond-what-couples-in",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-swap-symmetric-assignment-singles-out-none",
+   "to": "record:a-code-formed-between-formations",
+   "type": "related"
+  },
+  {
+   "from": "record:a-swap-symmetric-assignment-singles-out-none",
+   "to": "record:finite-agreement-does-not-identify-priority",
+   "type": "related"
+  },
+  {
+   "from": "record:a-swap-symmetric-assignment-singles-out-none",
+   "to": "record:imposing-a-code-breaks-the-symmetry",
+   "type": "related"
   },
   {
    "from": "record:a-weighting-faster-than-renewal-ends-the-base",
@@ -33535,6 +34100,16 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:access-yet-to-form",
+   "to": "record:prefix-observation-loss",
+   "type": "related"
+  },
+  {
+   "from": "record:access-yet-to-form",
+   "to": "record:what-a-summary-keeps",
+   "type": "related"
+  },
+  {
    "from": "record:acquired-binding-compositional-use",
    "to": "module:Becoming.Courses",
    "type": "proved-in"
@@ -33563,6 +34138,21 @@
    "from": "record:acquired-revision-of-pending-task",
    "to": "record:versioned-request-completion",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:adaptive-closure-cannot-resolve",
+   "to": "record:evidence-through-change",
+   "type": "related"
+  },
+  {
+   "from": "record:adaptive-closure-cannot-resolve",
+   "to": "record:finite-fallible-inquiry-necessity",
+   "type": "related"
+  },
+  {
+   "from": "record:adaptive-closure-cannot-resolve",
+   "to": "record:testing-within-couplings",
+   "type": "related"
   },
   {
    "from": "record:additive-part-of-offspring-variance",
@@ -35035,6 +35625,36 @@
    "type": "related"
   },
   {
+   "from": "record:certificates-sound-and-available",
+   "to": "module:Becoming.FaultEnvelopes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:certificates-sound-and-available",
+   "to": "module:Becoming.PooledEnvelopes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:certificates-sound-and-available",
+   "to": "module:Becoming.TreeSearch",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:certificates-sound-and-available",
+   "to": "record:copied-witnesses-change-nothing",
+   "type": "related"
+  },
+  {
+   "from": "record:certificates-sound-and-available",
+   "to": "record:evidence-through-change",
+   "type": "related"
+  },
+  {
+   "from": "record:certificates-sound-and-available",
+   "to": "record:fallible-witness-diagnosability",
+   "type": "related"
+  },
+  {
    "from": "record:chinese-sources-on-the-spine",
    "to": "record:a-code-formed-between-formations",
    "type": "related"
@@ -36080,6 +36700,31 @@
    "type": "related"
   },
   {
+   "from": "record:composition-route",
+   "to": "module:Becoming.CodeAcquisition",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:composition-route",
+   "to": "module:Becoming.RouteFormation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:composition-route",
+   "to": "record:acquired-binding-compositional-use",
+   "type": "related"
+  },
+  {
+   "from": "record:composition-route",
+   "to": "record:encounter-selection-and-revision",
+   "type": "related"
+  },
+  {
+   "from": "record:composition-route",
+   "to": "record:generalization-through-lumping",
+   "type": "related"
+  },
+  {
    "from": "record:condition-correspondence-discipline",
    "to": "module:Becoming.Correspondence",
    "type": "proved-in"
@@ -36980,6 +37625,16 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:contraction-where-duplication-is-reachable",
+   "to": "record:self-reference-does-not-certify-itself",
+   "type": "related"
+  },
+  {
+   "from": "record:contraction-where-duplication-is-reachable",
+   "to": "record:type-formation-gives-no-dynamics",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:control-coherence-loss",
    "to": "module:Becoming.Courses",
    "type": "proved-in"
@@ -37093,6 +37748,21 @@
    "from": "record:copying-b-fold",
    "to": "record:recurrent-chain-assembly",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:correction-is-not-calibration",
+   "to": "record:experiment-needs-return",
+   "type": "related"
+  },
+  {
+   "from": "record:correction-is-not-calibration",
+   "to": "record:selection-under-registration-revision",
+   "type": "related"
+  },
+  {
+   "from": "record:correction-is-not-calibration",
+   "to": "record:the-updater-line",
+   "type": "related"
   },
   {
    "from": "record:counterfactual-is-the-course",
@@ -38190,6 +38860,11 @@
    "type": "related"
   },
   {
+   "from": "record:equal-totals-can-hide-what-a-capacity-carries",
+   "to": "record:learned-procedure-transmission",
+   "type": "related"
+  },
+  {
    "from": "record:eventual-widening",
    "to": "module:Becoming.Admission",
    "type": "proved-in"
@@ -38353,6 +39028,21 @@
    "from": "record:every-origin-passes-the-gate",
    "to": "record:organizational-rule-inheritance",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:evidence-through-change",
+   "to": "record:certificates-sound-and-available",
+   "type": "related"
+  },
+  {
+   "from": "record:evidence-through-change",
+   "to": "record:fallible-witness-diagnosability",
+   "type": "related"
+  },
+  {
+   "from": "record:evidence-through-change",
+   "to": "record:historical-source-binding",
+   "type": "related"
   },
   {
    "from": "record:evolution-on-descent",
@@ -38856,6 +39546,16 @@
   },
   {
    "from": "record:finite-aggregation-within-restorable-basic-losses",
+   "to": "record:protection-priority-excludes-uniform-aggregation",
+   "type": "related"
+  },
+  {
+   "from": "record:finite-agreement-does-not-identify-priority",
+   "to": "record:a-swap-symmetric-assignment-singles-out-none",
+   "type": "related"
+  },
+  {
+   "from": "record:finite-agreement-does-not-identify-priority",
    "to": "record:protection-priority-excludes-uniform-aggregation",
    "type": "related"
   },
@@ -39563,6 +40263,16 @@
    "from": "record:graded-significance-and-priority",
    "to": "record:widening-as-what-every-weighting-ranks",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:groups-formed-by-bonds-share-a-founder",
+   "to": "record:groups-formed-by-descent",
+   "type": "related"
+  },
+  {
+   "from": "record:groups-formed-by-bonds-share-a-founder",
+   "to": "record:selection-within-and-among-groups-of-any-sizes",
+   "type": "related"
   },
   {
    "from": "record:groups-formed-by-descent",
@@ -41235,6 +41945,16 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:joint-plans-from-a-supported-start",
+   "to": "record:finite-continuation-plans",
+   "type": "related"
+  },
+  {
+   "from": "record:joint-plans-from-a-supported-start",
+   "to": "record:joint-plan-composition",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:joint-practice-forms-continuation",
    "to": "record:organizational-rule-inheritance",
    "type": "formal-reuse"
@@ -41692,6 +42412,26 @@
   {
    "from": "record:learned-procedure-transmission",
    "to": "record:joint-practice-forms-continuation",
+   "type": "related"
+  },
+  {
+   "from": "record:learning-a-rule-by-narrowing",
+   "to": "module:Becoming.Narrowing",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:learning-a-rule-by-narrowing",
+   "to": "record:becoming-spine-instances",
+   "type": "related"
+  },
+  {
+   "from": "record:learning-a-rule-by-narrowing",
+   "to": "record:encounter-selection-and-revision",
+   "type": "related"
+  },
+  {
+   "from": "record:learning-a-rule-by-narrowing",
+   "to": "record:generalization-through-lumping",
    "type": "related"
   },
   {
@@ -42790,6 +43530,26 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:market-model-share-margin-and-ends",
+   "to": "record:market-finite-support-obstruction",
+   "type": "related"
+  },
+  {
+   "from": "record:market-model-share-margin-and-ends",
+   "to": "record:market-partial-correction-boundary",
+   "type": "related"
+  },
+  {
+   "from": "record:market-model-share-margin-and-ends",
+   "to": "record:market-protected-continuation",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:market-model-share-margin-and-ends",
+   "to": "record:succession-on-a-funded-carrier",
+   "type": "related"
+  },
+  {
    "from": "record:market-partial-correction-boundary",
    "to": "module:Becoming.Courses",
    "type": "proved-in"
@@ -43692,6 +44452,26 @@
   {
    "from": "record:observation-is-a-route",
    "to": "record:what-dependence-alone-carries-of-a-level",
+   "type": "related"
+  },
+  {
+   "from": "record:one-move-covering",
+   "to": "module:Becoming.MoveOutcomeProcesses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:one-move-covering",
+   "to": "record:finite-continuation-plans",
+   "type": "related"
+  },
+  {
+   "from": "record:one-move-covering",
+   "to": "record:what-a-summary-keeps",
+   "type": "related"
+  },
+  {
+   "from": "record:one-move-covering",
+   "to": "record:what-a-total-keeps",
    "type": "related"
   },
   {
@@ -45485,6 +46265,26 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:reach-from-a-seed",
+   "to": "module:Becoming.SeedReach",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reach-from-a-seed",
+   "to": "record:a-history-read-off-its-finite-stretches",
+   "type": "related"
+  },
+  {
+   "from": "record:reach-from-a-seed",
+   "to": "record:levels-of-closure",
+   "type": "related"
+  },
+  {
+   "from": "record:reach-from-a-seed",
+   "to": "record:type-formation-gives-no-dynamics",
+   "type": "related"
+  },
+  {
    "from": "record:reach-past-ones-own-end",
    "to": "module:Becoming.GrammarScope",
    "type": "proved-in"
@@ -45660,6 +46460,31 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:readings-a-response-needs",
+   "to": "module:Becoming.AssurancePlans",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:readings-a-response-needs",
+   "to": "record:assured-route-criterion",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:readings-a-response-needs",
+   "to": "record:risk-certificate-outcome-distinction",
+   "type": "related"
+  },
+  {
+   "from": "record:readings-a-response-needs",
+   "to": "record:the-split-that-makes-sense",
+   "type": "related"
+  },
+  {
+   "from": "record:readings-a-response-needs",
+   "to": "record:two-sided-regulation-and-late-reading",
+   "type": "related"
+  },
+  {
    "from": "record:readings-within-what-they-read",
    "to": "module:Becoming.Diagonal",
    "type": "proved-in"
@@ -45807,6 +46632,11 @@
   {
    "from": "record:recurrence-without-premise",
    "to": "record:where-a-run-goes-on",
+   "type": "related"
+  },
+  {
+   "from": "record:recurrence-without-selector-revision",
+   "to": "record:organizational-rule-inheritance",
    "type": "related"
   },
   {
@@ -47115,6 +47945,21 @@
    "type": "related"
   },
   {
+   "from": "record:reviewers-count-by-independent-causes",
+   "to": "module:Becoming.Reconfiguration",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reviewers-count-by-independent-causes",
+   "to": "record:certificates-sound-and-available",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reviewers-count-by-independent-causes",
+   "to": "record:copied-witnesses-change-nothing",
+   "type": "related"
+  },
+  {
    "from": "record:revision-comes-to-drawing-everything",
    "to": "record:drawers-in-turn-draw-everything",
    "type": "formal-reuse"
@@ -47443,6 +48288,11 @@
    "from": "record:runs-on-families-chosen-step-by-step",
    "to": "record:laws-of-one-step-complete",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:same-carrier-need-not-fix-the-response",
+   "to": "record:a-selected-template-need-not-raise-structure",
+   "type": "related"
   },
   {
    "from": "record:scientific-inquiry-foundation",
@@ -48000,6 +48850,16 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:self-reference-does-not-certify-itself",
+   "to": "record:binding-preserving-substitution",
+   "type": "related"
+  },
+  {
+   "from": "record:self-reference-does-not-certify-itself",
+   "to": "record:constitutive-binding-assessment",
+   "type": "related"
+  },
+  {
    "from": "record:sensitivity-is-the-least-coupling",
    "to": "module:Becoming.Change",
    "type": "proved-in"
@@ -48320,6 +49180,36 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:significance-through-a-common-condition",
+   "to": "module:Becoming.Metaethics",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:significance-through-a-common-condition",
+   "to": "module:Becoming.ValuationFrames",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:significance-through-a-common-condition",
+   "to": "record:becoming-renewal-reading",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:significance-through-a-common-condition",
+   "to": "record:becoming-stepwise-reading",
+   "type": "related"
+  },
+  {
+   "from": "record:significance-through-a-common-condition",
+   "to": "record:condition-correspondence-discipline",
+   "type": "related"
+  },
+  {
+   "from": "record:significance-through-a-common-condition",
+   "to": "record:metaethical-core-characterization",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:slowing-down-before-an-own-end",
    "to": "record:runaway-distance-uncoupled",
    "type": "related"
@@ -48470,6 +49360,16 @@
    "type": "related"
   },
   {
+   "from": "record:stronger-arrangement-formed-by-reconfiguration",
+   "to": "record:copying-b-fold",
+   "type": "related"
+  },
+  {
+   "from": "record:stronger-arrangement-formed-by-reconfiguration",
+   "to": "record:recurrent-chain-assembly",
+   "type": "related"
+  },
+  {
    "from": "record:substitution-preserves-consumption",
    "to": "module:Becoming.Dependence",
    "type": "proved-in"
@@ -48503,6 +49403,16 @@
    "from": "record:substitution-preserves-consumption",
    "to": "record:unceasing-generation-needs-renewal",
    "type": "related"
+  },
+  {
+   "from": "record:succession-on-a-funded-carrier",
+   "to": "record:market-model-share-margin-and-ends",
+   "type": "related"
+  },
+  {
+   "from": "record:succession-on-a-funded-carrier",
+   "to": "record:market-protected-continuation",
+   "type": "formal-reuse"
   },
   {
    "from": "record:sum-over-histories-exact",
@@ -49350,6 +50260,16 @@
    "type": "related"
   },
   {
+   "from": "record:the-updater-line",
+   "to": "record:correction-is-not-calibration",
+   "type": "related"
+  },
+  {
+   "from": "record:the-updater-line",
+   "to": "record:learned-procedure-transmission",
+   "type": "related"
+  },
+  {
    "from": "record:the-world-an-interleaving-builds",
    "to": "module:Becoming.Interleavings",
    "type": "proved-in"
@@ -49857,6 +50777,16 @@
   {
    "from": "record:two-sided-regulation-and-late-reading",
    "to": "record:whether-a-loop-closes-a-difference",
+   "type": "related"
+  },
+  {
+   "from": "record:type-formation-gives-no-dynamics",
+   "to": "record:levels-of-closure",
+   "type": "related"
+  },
+  {
+   "from": "record:type-formation-gives-no-dynamics",
+   "to": "record:reach-from-a-seed",
    "type": "related"
   },
   {
@@ -51235,6 +52165,46 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:what-a-summary-keeps",
+   "to": "module:Becoming.HistoryLanguages",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-summary-keeps",
+   "to": "record:a-law-through-a-projection-along-one-run",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-summary-keeps",
+   "to": "record:access-yet-to-form",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-summary-keeps",
+   "to": "record:derived-history-law-exactness",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-summary-keeps",
+   "to": "record:finite-trace-transport",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-total-keeps",
+   "to": "record:one-move-covering",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-total-keeps",
+   "to": "record:prefix-observation-loss",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-total-keeps",
+   "to": "record:what-a-summary-keeps",
+   "type": "related"
+  },
+  {
    "from": "record:what-an-extrapolation-given-nothing-fixes",
    "to": "module:Becoming.Unrolling",
    "type": "proved-in"
@@ -51872,6 +52842,31 @@
   {
    "from": "record:when-the-runs-of-a-process-settle",
    "to": "record:the-boundary-of-enough-under-undetermined-laws",
+   "type": "related"
+  },
+  {
+   "from": "record:when-to-inquire-and-when-to-respond",
+   "to": "module:Becoming.GuardHorizon",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-to-inquire-and-when-to-respond",
+   "to": "module:Becoming.Keeping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-to-inquire-and-when-to-respond",
+   "to": "record:finite-continuation-plans",
+   "type": "related"
+  },
+  {
+   "from": "record:when-to-inquire-and-when-to-respond",
+   "to": "record:risk-certificate-outcome-distinction",
+   "type": "related"
+  },
+  {
+   "from": "record:when-to-inquire-and-when-to-respond",
+   "to": "record:testing-within-couplings",
    "type": "related"
   },
   {
@@ -53640,6 +54635,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-reach-from-a-seed",
+   "to": "record:reach-from-a-seed",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-recurrence-without-decidedness",
    "to": "record:recurrence-without-decidedness",
    "type": "states"
@@ -54235,6 +55235,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-access-yet-to-form",
+   "to": "record:access-yet-to-form",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-acquired-binding-compositional-use",
    "to": "record:acquired-binding-compositional-use",
    "type": "states"
@@ -54242,6 +55247,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-acquired-revision-of-pending-task",
    "to": "record:acquired-revision-of-pending-task",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve",
+   "to": "record:adaptive-closure-cannot-resolve",
    "type": "states"
   },
   {
@@ -54265,8 +55275,18 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-certificates-sound-and-available",
+   "to": "record:certificates-sound-and-available",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-claims-shown-in-context",
    "to": "record:claims-shown-in-context",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-composition-route",
+   "to": "record:composition-route",
    "type": "states"
   },
   {
@@ -54290,6 +55310,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration",
+   "to": "record:correction-is-not-calibration",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-enacted-scene-binding",
    "to": "record:enacted-scene-binding",
    "type": "states"
@@ -54302,6 +55327,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-encounter-selection-and-revision",
    "to": "record:encounter-selection-and-revision",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+   "to": "record:evidence-through-change",
    "type": "states"
   },
   {
@@ -54400,6 +55430,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-learning-a-rule-by-narrowing",
+   "to": "record:learning-a-rule-by-narrowing",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-learning-by-refutation",
    "to": "record:learning-by-refutation",
    "type": "states"
@@ -54437,6 +55472,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-projection-carrying-a-law",
    "to": "record:projection-carrying-a-law",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-readings-a-response-needs",
+   "to": "record:readings-a-response-needs",
    "type": "states"
   },
   {
@@ -54590,6 +55630,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-total-keeps",
+   "to": "record:what-a-total-keeps",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-an-extrapolation-given-nothing-fixes",
    "to": "record:what-an-extrapolation-given-nothing-fixes",
    "type": "states"
@@ -54597,6 +55642,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-finitely-many-labels-fix",
    "to": "record:what-finitely-many-labels-fix",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-when-to-inquire-and-when-to-respond",
+   "to": "record:when-to-inquire-and-when-to-respond",
    "type": "states"
   },
   {
@@ -54622,6 +55672,11 @@
   {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-a-pattern-lasts-through-passing",
    "to": "record:a-pattern-lasts-through-passing",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-a-selected-template-need-not-raise-structure",
+   "to": "record:a-selected-template-need-not-raise-structure",
    "type": "states"
   },
   {
@@ -54652,6 +55707,11 @@
   {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-drift-offspring-sampled",
    "to": "record:drift-offspring-sampled",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-equal-totals-can-hide-what-a-capacity-carries",
+   "to": "record:equal-totals-can-hide-what-a-capacity-carries",
    "type": "states"
   },
   {
@@ -54687,6 +55747,11 @@
   {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-generation-is-replenishment",
    "to": "record:generation-is-replenishment",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-groups-formed-by-bonds-share-a-founder",
+   "to": "record:groups-formed-by-bonds-share-a-founder",
    "type": "states"
   },
   {
@@ -54745,8 +55810,18 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-recurrence-without-selector-revision",
+   "to": "record:recurrence-without-selector-revision",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-recurrent-chain-assembly",
    "to": "record:recurrent-chain-assembly",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-same-carrier-need-not-fix-the-response",
+   "to": "record:same-carrier-need-not-fix-the-response",
    "type": "states"
   },
   {
@@ -54775,8 +55850,18 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-stronger-arrangement-formed-by-reconfiguration",
+   "to": "record:stronger-arrangement-formed-by-reconfiguration",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-the-breeding-value",
    "to": "record:the-breeding-value",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-the-updater-line",
+   "to": "record:the-updater-line",
    "type": "states"
   },
   {
@@ -54817,6 +55902,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-step-coupling-keeps-at-every-horizon",
    "to": "record:a-step-coupling-keeps-at-every-horizon",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-swap-symmetric-assignment-singles-out-none",
+   "to": "record:a-swap-symmetric-assignment-singles-out-none",
    "type": "states"
   },
   {
@@ -54880,6 +55970,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "to": "record:joint-plans-from-a-supported-start",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation",
    "to": "record:joint-practice-forms-continuation",
    "type": "states"
@@ -54897,6 +55992,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-finite-support-obstruction",
    "to": "record:market-finite-support-obstruction",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+   "to": "record:market-model-share-margin-and-ends",
    "type": "states"
   },
   {
@@ -54970,6 +56070,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+   "to": "record:reviewers-count-by-independent-causes",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-room-read-off-the-exchange",
    "to": "record:room-read-off-the-exchange",
    "type": "states"
@@ -54982,6 +56087,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-steps-met-again-after-a-fall",
    "to": "record:steps-met-again-after-a-fall",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier",
+   "to": "record:succession-on-a-funded-carrier",
    "type": "states"
   },
   {
@@ -55250,6 +56360,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-finite-agreement-does-not-identify-priority",
+   "to": "record:finite-agreement-does-not-identify-priority",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-four-cases-of-a-part",
    "to": "record:four-cases-of-a-part",
    "type": "states"
@@ -55390,6 +56505,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-significance-through-a-common-condition",
+   "to": "record:significance-through-a-common-condition",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-stepwise-law-of-easing",
    "to": "record:stepwise-law-of-easing",
    "type": "states"
@@ -55500,6 +56620,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-contraction-where-duplication-is-reachable",
+   "to": "record:contraction-where-duplication-is-reachable",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/08-METHOD.md#r-counts-exist-where-decided",
    "to": "record:counts-exist-where-decided",
    "type": "states"
@@ -55530,6 +56655,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-one-move-covering",
+   "to": "record:one-move-covering",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/08-METHOD.md#r-proposition-identity",
    "to": "record:proposition-identity",
    "type": "states"
@@ -55537,6 +56667,11 @@
   {
    "from": "section:theories/becoming/chapters/08-METHOD.md#r-relata-counted-up-to-indiscernibility",
    "to": "record:relata-counted-up-to-indiscernibility",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-self-reference-does-not-certify-itself",
+   "to": "record:self-reference-does-not-certify-itself",
    "type": "states"
   },
   {
@@ -55550,8 +56685,18 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-type-formation-gives-no-dynamics",
+   "to": "record:type-formation-gives-no-dynamics",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/08-METHOD.md#r-what-a-law-of-the-whole-and-no-part-takes",
    "to": "record:what-a-law-of-the-whole-and-no-part-takes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-what-a-summary-keeps",
+   "to": "record:what-a-summary-keeps",
    "type": "states"
   },
   {

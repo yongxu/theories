@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "title": {
+    "en": "A stronger arrangement formed by reconfiguration",
+    "zh": "经重组形成的更强排列"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F10",
+  "reviewed_at_utc": "2026-10-26T21:10:00+00:00",
+  "statement": {
+    "en": "In a declared history a stronger arrangement absent at the start can form by reconfiguring an existing one; reconstruction, where it runs, rebuilds as many daughters as the actual output allows; every admitted history keeps material and total support and is no longer than its starting support.",
+    "zh": "在所声明的历史中，起初不存在的更强排列可经重组既有排列而形成；重构进行时按实际产出所容许的数目重建子代；每段被允许的历史保持物质与支持总量，其长度不超过起始的可用支持。"
+  },
+  "laws": [
+    {
+      "en": "Reconstruction rebuilds, faithfully and as fully as the recipe allows, one daughter for every four A and four H carriers of one source: the next weak and strong counts are the counts plus those capacities, and it runs exactly when that batch is nonempty and the available support covers all of it; with no arrangement active, as after an operation, strong then exceeds weak exactly where its capacity does.",
+      "zh": "重构按配方所容许的最大限度忠实地进行，每四个同源的 A 与四个 H 承载者重建一个子代：下一步的弱与强计数是原计数加这些容量；重构恰在此批非空且可用支持覆盖全批时进行；无活跃排列时（如一次运作之后），强随后多于弱恰当其容量多于弱的。",
+      "declarations": [
+        "GeneratedSelectionRecurrence.generated_table_carrier_bounds",
+        "GeneratedSelectionRecurrence.generated_table_maximal",
+        "GeneratedSelectionRecurrence.reconstruct_enabled_iff",
+        "GeneratedSelectionRecurrence.reconstruction_counts",
+        "GeneratedSelectionRecurrence.reconstructed_comparison"
+      ]
+    },
+    {
+      "en": "Reconfiguration turns active arrangements of one kind into the other, drawing one support unit per change by its definition and keeping every carrier; every operation, reconstruction and reconfiguration, and so every admitted finite history, keeps the material exactly and available plus used support constant, and each step uses support, so a history is no longer than the support available at its start.",
+      "zh": "重组把一类活跃排列转为另一类，按其定义每次改变用一单位支持，保留每个承载者；每次运作、重构与重组，从而每段被允许的有限历史，都精确保持物质，可用与已用支持之和不变；每一步都用去支持，所以历史的长度不超过其开始时的可用支持。",
+      "declarations": [
+        "GeneratedSelectionRecurrence.reconfiguration_accounts",
+        "GeneratedSelectionRecurrence.step_accounts",
+        "GeneratedSelectionRecurrence.step_consumes_support",
+        "GeneratedSelectionRecurrence.run_accounts",
+        "GeneratedSelectionRecurrence.run_length_bound"
+      ]
+    },
+    {
+      "en": "On the slice with no loose carriers, wherever the history admits an operation followed by reconstruction, the next weak count is 7 times the weak and the next strong count 33 times the strong over 2, rounded down: a conventional two-type recurrence recovered, not a better prediction.",
+      "zh": "在没有散置承载者的切片上，凡历史允许一次运作接一次重构之处，下一个弱计数是弱的 7 倍，下一个强计数是强的 33 倍除以 2 向下取整：这是对常规两类递推的恢复，不是更好的预测。",
+      "declarations": [
+        "GeneratedSelectionRecurrence.cycle_population_correspondence"
+      ]
+    },
+    {
+      "en": "Witnesses: from two weak arrangements, a reconfiguration and two cycles reach 49 weak and 264 strong, and reconfiguring all 16 strong daughters before the second cycle ends with none; no support, or more changes than arrangements, blocks reconfiguration; too few carriers, or support short of the whole batch, blocks reconstruction; with equal resources one weak arrangement operates where one strong cannot.",
+      "zh": "见证：由两个弱排列、无强排列出发，一次重组与两个循环达到 49 弱、264 强；第二循环前把 16 个强子代全部重组则终无强排列；无支持或改变多于排列时重组受阻；承载者不足或支持不及全批时重构受阻；资源相同时一个弱排列可运作而一个强排列不能。",
+      "declarations": [
+        "GeneratedSelectionRecurrence.formed_two_cycle_history",
+        "GeneratedSelectionRecurrence.first_generated_generation",
+        "GeneratedSelectionRecurrence.eroded_second_cycle_history",
+        "GeneratedSelectionRecurrence.support_failure_and_residual_limits",
+        "GeneratedSelectionRecurrence.stronger_operation_can_be_unavailable"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Supplied: the two configurations and their output (a weak arrangement of eight carriers yields 28 A and 30 H, a strong one 68 A and 66 H), the change operation, source association and the reconstruction recipe (four A and four H of one source per daughter, the whole batch or none); whole-number amounts and events in order.",
+      "zh": "所给：两种构型及其产出（八个承载者的弱排列产出 28 个 A 与 30 个 H，强排列产出 68 个 A 与 66 个 H）、改变操作、来源关联与重构配方（每个子代用同源的四个 A 与四个 H，全批或不做）；整数之量，事件依次发生。"
+    },
+    {
+      "en": "Finite support and precursor never replenished: the bound on a history's length follows from that, and finite supplied support is not recurring renewal.",
+      "zh": "有限的支持与前体从不补充：历史长度之界由此而来；所给的有限支持不是反复的更新。"
+    },
+    {
+      "en": "Periphery, a module before the spine on Lean's core library: every cited law uses propext, Quot.sound and Classical.choice, except reconstruction_counts (propext only) and the witnesses (none), as the receipt reports.",
+      "zh": "外围，脊柱之前的模块，基于 Lean 核心库：所引诸律皆用 propext、Quot.sound 与 Classical.choice，唯 reconstruction_counts 只用 propext，见证不用公理，如回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the recipe or the reconfiguration is selected or derived: both are supplied, and reconfiguration is a permitted event, not a policy.",
+      "zh": "配方或重组是被选出或被导出的：二者皆为所给，重组是被允许的事件，而非策略。",
+      "kind": "scope"
+    },
+    {
+      "en": "A molecular origin, a measured mutation rate or open-ended innovation: the stronger configuration comes from a supplied repertoire.",
+      "zh": "分子起源、实测突变率或开放的创新：更强的构型出自所给的库。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That a stronger arrangement must fail: the unavailability follows the all-at-once production guard and the larger draw.",
+      "zh": "更强的排列必然失败：此不可用来自一次全产的守卫与更大的取用。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Checked by the module's checker with Lean 4.29.1 (receipt generated-selection-recurrence-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes): GeneratedSelectionRecurrence, 26 declarations audited, 15 with empty reports, its 16 theorems all cited here. The study records a review by the implementing author, no independent review; not reviewed by a person.",
+    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 generated-selection-recurrence-verification，2026年10月7日通过，新鲜临时构建，检查期间源码未变；绑定当前字节）：GeneratedSelectionRecurrence 审计 26 项声明，15 项报告为空，其 16 条定理此处皆引。研究记有实现者自审，无独立审查；未经人审。"
+  },
+  "next_delta": {
+    "en": "Derive the reconstruction recipe or the timing of reconfiguration from the history instead of supplying them, and join the recipe to the core's copying law by an instance theorem.",
+    "zh": "由历史导出重构配方或重组的时机，而非给定；并以实例定理把配方接到核心的复制律。"
+  },
+  "correspondence": {
+    "en": "On the slice with no loose carriers the counts follow a deterministic two-type linear recurrence, a diagonal projection matrix apart from the rounding that pooled remainders bring (Caswell 2001, Matrix Population Models). Multicellular organization evolved in Chlamydomonas under predation by Paramecium (Herron et al. 2019, Scientific Reports 9:2328) motivates studying reconstruction formed in a history, without identifying the rates or recipe. Reading the reconfiguration as a change of organization rather than a mutation is the AI's.",
+    "zh": "在没有散置承载者的切片上，计数服从确定性的两类线性递推，除合并余数带来的取整外是对角投影矩阵（Caswell 2001，Matrix Population Models）。衣藻在草履虫捕食下演化出的多细胞组织（Herron 等 2019，Scientific Reports 9:2328）促使研究在历史中形成的重构，但不确定其速率或配方。把重组读作组织的改变而非突变，是 AI 的解读。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GeneratedSelectionRecurrence.lean",
+  "aliases": [
+    "A stronger arrangement formed by reconfiguration",
+    "经重组形成的更强排列",
+    "GeneratedSelectionRecurrence.reconstruction_counts",
+    "GeneratedSelectionRecurrence.cycle_population_correspondence"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "copying-b-fold",
+      "detail": {
+        "en": "The core's copying law bounds rounds by what one stock covers; here a history is bounded by its support, with no instance theorem joining the two.",
+        "zh": "核心的复制律以一个存量所能覆盖者界定轮数；此处历史以其支持为界，二者之间无实例定理相接。"
+      }
+    },
+    {
+      "id": "recurrent-chain-assembly",
+      "detail": {
+        "en": "A copying instance joined to the core's doubling law, its rounds running exactly where the support covers; this module has no such instance theorem.",
+        "zh": "接到核心加倍律的复制实例，其轮次恰在支持所及处进行；本模块无此种实例定理。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GeneratedSelectionRecurrence.lean",
+      "role": "proof",
+      "sha256": "67d04821a9d763968a945923e89006bceb5250b353d5b3a57ae49f11e7232f49",
+      "declarations": [
+        "GeneratedSelectionRecurrence.generated_table_carrier_bounds",
+        "GeneratedSelectionRecurrence.generated_table_maximal",
+        "GeneratedSelectionRecurrence.reconstruct_enabled_iff",
+        "GeneratedSelectionRecurrence.reconstruction_counts",
+        "GeneratedSelectionRecurrence.reconstructed_comparison",
+        "GeneratedSelectionRecurrence.reconfiguration_accounts",
+        "GeneratedSelectionRecurrence.step_accounts",
+        "GeneratedSelectionRecurrence.step_consumes_support",
+        "GeneratedSelectionRecurrence.run_accounts",
+        "GeneratedSelectionRecurrence.run_length_bound",
+        "GeneratedSelectionRecurrence.cycle_population_correspondence",
+        "GeneratedSelectionRecurrence.formed_two_cycle_history",
+        "GeneratedSelectionRecurrence.first_generated_generation",
+        "GeneratedSelectionRecurrence.eroded_second_cycle_history",
+        "GeneratedSelectionRecurrence.support_failure_and_residual_limits",
+        "GeneratedSelectionRecurrence.stronger_operation_can_be_unavailable"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generated-selection-recurrence-verification/verification.json",
+      "role": "receipt",
+      "sha256": "2370b23ed2a4c22f9f2e672e0b5270271c00065d2b58bdfcda9f17c59c1faa99",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/04-LIFE.md",
+      "role": "statement",
+      "sha256": "629da3b8cb7dc44e52ba9322e918262f52c06288cb06f294c0a7e065452436c0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GENERATED-SELECTION-RECURRENCE-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "09fb8b4b2a5c42e5b6ef7659c7142bca8e9322f10fe71c567461d9889845ab4c",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GeneratedSelectionRecurrence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generated-selection-recurrence-verification/verification.json",
+      "sha256_pointer": "/source_sha256/GeneratedSelectionRecurrence.lean",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), a stronger arrangement formed by reconfiguration: reconstruction counts fixed by the actual output, material and support kept by every admitted history and its length bounded by its support, the two-type recurrence recovered on the slice with no loose carriers, and the witnesses; from DEFECTS-FOUND (triage row 144); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），经重组形成的更强排列：重构计数由实际产出所定，每段被允许的历史保持物质与支持且其长度以支持为界，在无散置承载者的切片上恢复两类递推，以及诸见证；出自 DEFECTS-FOUND（分诊第 144 行）；研究第 426 节。"
+    }
+  ]
+}

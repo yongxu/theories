@@ -1,0 +1,284 @@
+{
+  "schema_version": 2,
+  "id": "the-updater-line",
+  "title": {
+    "en": "The updater line: development, memory, replacement and margins of a learning network",
+    "zh": "更新者一线：学习网络的发育、记忆、替换与余量"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F09",
+  "reviewed_at_utc": "2026-10-26T22:00:00+00:00",
+  "statement": {
+    "en": "In declared tanh networks the developmental response is the derivative of the developed state in a link's weight; selected updates can overwrite an old recall and further revision restore it; a failed updating rule can be replaced; bounded drift fixes how long reference readings decide a margin.",
+    "zh": "在所声明的 tanh 网络中，发育回应是发育状态对一条连接权重的导数；被选的更新可覆盖旧的回忆，进一步修订可使之恢复；失败的更新规则可被替换；有界漂移决定参照读数能判定余量多久。"
+  },
+  "laws": [
+    {
+      "en": "For the recurrence p ↦ (1 − δ)p + τσ(Bp) with σ differentiable, the derivative of the state developed over any number of steps in one link's weight is the response recurrence, tanh its case; for the identity activation, one step, τ > 0 and an initial profile aligned with the selection profile (g_b = m·s_b, m > 0), changing a link by w raises the score exactly where 0 < w·s_a·s_b, the Hebbian sign.",
+      "zh": "对递推 p ↦ (1 − δ)p + τσ(Bp)，σ 可微，任意步发育所得状态对一条连接权重的导数是回应递推，tanh 为其一例；恒等激活、一步、τ > 0 且初始剖面与选择剖面对齐（g_b = m·s_b，m > 0）时，连接改变 w 提高得分恰当 0 < w·s_a·s_b，即 Hebb 之号。",
+      "declarations": [
+        "ConnectionistRecovery.developmental_response",
+        "ConnectionistRecovery.tanh_developmental_response",
+        "ConnectionistRecovery.beneficial_iff_hebbian"
+      ]
+    },
+    {
+      "en": "In a three-unit tanh network formed by score-selected updates, trained on the first pattern and then the second, each is recalled from its partial cue at every later step; trained on the second four times, the network started at the first pattern recalls the second at every later step, so the old recall fails; four further updates on the first restore it from its partial cue, without a reset.",
+      "zh": "在由按得分所选之更新形成的三单元 tanh 网络中，先训练第一模式再训练第二模式，此后每一步皆可由部分线索回忆二者；第二模式训练四次，则由第一模式起始的网络此后每一步都回忆第二模式，旧回忆失效；再以第一模式更新四次，不经重置即由其部分线索恢复。",
+      "declarations": [
+        "DevelopmentalMemory.common_history_realized",
+        "DevelopmentalMemory.both_recall",
+        "DevelopmentalMemory.overwrite_changes_old_recall",
+        "DevelopmentalMemory.old_recall_fails",
+        "DevelopmentalMemory.old_recall_restored"
+      ]
+    },
+    {
+      "en": "Of two updating rules, the continual one learns at every task and the responsive one only on failure; on the network a failure left repaired, the responsive rule keeps it through any tasks, their updates there differ at a task of the second kind, and over one cycle it succeeds four times, the continual rule three. Every exposure and installation of the carrier history keeps the total of stock, source, used and waste.",
+      "zh": "两条更新规则中，持续者每项任务都学习，回应者只在失败时学习；在失败后修复的网络上，回应规则在任何任务下都保持它，两规则在第二类任务上的更新不同，一个循环中回应规则成功四次、持续规则三次。承载者历史的每次接触与安装都保持存量、来源、已用与废弃之和。",
+      "declarations": [
+        "UpdaterConsequences.routes_differ_after_failure",
+        "UpdaterConsequences.repaired_by_responsive",
+        "UpdaterConsequences.responsive_after_failure",
+        "UpdaterConsequences.cycle_conserves",
+        "UpdaterConsequences.installation_conserves",
+        "UpdaterConsequences.finite_history_conserves",
+        "UpdaterConsequences.changed_route_cycle"
+      ]
+    },
+    {
+      "en": "From the continual rule with a source of 12, one cycle of four tasks returns three units, short of the four that maintenance needs, and retires the rule; installing the responsive rule then renews twice; reinstalling the continual rule instead renews once and then fails again; a reported success leaves a failing network unrepaired.",
+      "zh": "以持续规则、来源 12 起始，四项任务的一个循环返回三单位，不及维护所需的四单位，规则被撤除；随后安装回应规则则两次更新；改为重装持续规则则更新一次后再次失败；报告的成功使失败的网络得不到修复。",
+      "declarations": [
+        "UpdaterConsequences.loss_retires_old_route",
+        "UpdaterConsequences.actual_replacement",
+        "UpdaterConsequences.new_route_renews",
+        "UpdaterConsequences.complete_replacement_history",
+        "UpdaterConsequences.old_proposal_fails_again",
+        "UpdaterConsequences.false_success_blocks_repair"
+      ]
+    },
+    {
+      "en": "Under per-step gain and bias drift at most a and b and reading noise at most e, decoding an input of size at most 1 through n steps of channel change with the first channel's readings at 0 and 1 errs by at most r = (n(a + b) + e)/|gain|; with a + b > 0, 2r is below a margin exactly at ages below (|gain|·margin/2 − e)/(a + b), and an estimate within r of a value beyond 2r in size reports its sign.",
+      "zh": "增益与偏置每步漂移至多 a 与 b、读数噪声至多 e 时，以最初通道在 0 与 1 处的读数解码经 n 步通道改变、大小至多为 1 的输入，误差至多 r = (n(a + b) + e)/|增益|；a + b > 0 时，2r 小于余量恰在年龄小于 (|增益|·余量/2 − e)/(a + b) 时；与某值相差不过 r 的估计，在该值大小超过 2r 时报告其号。",
+      "declarations": [
+        "DriftMargins.aged_decoding_bound",
+        "DriftMargins.assurance_window",
+        "DriftMargins.separated_verdict"
+      ]
+    },
+    {
+      "en": "Witnesses: a bound of 1/8 where a bias moved by 1/2 reports a negative margin as positive, a false success; the valid bound 1 decides no margin of any network, so the guarded update never repairs.",
+      "zh": "见证：偏置移动 1/2 而界取 1/8 时，把负余量报告为正，即错误的成功；有效的界 1 不能判定任何网络的余量，故受守卫的更新从不修复。",
+      "declarations": [
+        "DriftMargins.understated_bound_false_success",
+        "DriftMargins.wide_bound_withholds"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Supplied: the networks, profiles, recurrence constants, selection law and tasks; the two update rules, the cycle and the unit draws of the carrier history (four source units a cycle, four stock units to maintain, two to install); exact reference readings at 0 and 1, the drift and noise bounds and a nonzero first gain.",
+      "zh": "所给：网络、剖面、递推常数、选择律与任务；两条更新规则、承载者历史的循环与单位取用（每循环四单位来源，维护四单位存量，安装两单位）；0 与 1 处的精确参照读数、漂移与噪声之界以及非零的最初增益。"
+    },
+    {
+      "en": "Ages count local changes, not seconds; recall margins are how far a response lies beyond zero in its pattern's sign.",
+      "zh": "年龄计局部改变，不是秒；回忆余量是回应在其模式之号上超出零的距离。"
+    },
+    {
+      "en": "Periphery: real numbers and calculus from Mathlib; every cited theorem uses propext, Quot.sound and Classical.choice, as the receipt reports.",
+      "zh": "外围：实数与微积分来自 Mathlib；所引每条定理用 propext、Quot.sound 与 Classical.choice，如回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "A population, convergence or ethical theorem.",
+      "zh": "种群、收敛或伦理的定理。",
+      "kind": "scope"
+    },
+    {
+      "en": "How the drift and noise bounds are formed: they are supplied, and calibration from reference readings is stated with correction in chapter 03.",
+      "zh": "漂移与噪声之界如何形成：它们为所给；由参照读数而来的校准与修正一同陈述于第 03 章。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the responsive rule is better in general: the two are compared on one cycle of four tasks of two kinds.",
+      "zh": "回应规则一般地更好：二者只在两类四项任务的一个循环上比较。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Checked by the drift-margins checker with Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261008T114955.171898Z, six modules rebuilt against a pinned Mathlib cache, 307 audits; it binds the current bytes of all four modules): ConnectionistRecovery 29, DevelopmentalMemory 28, UpdaterConsequences 36 and DriftMargins 42 theorems, 24 cited here. Each study records a counter-review by its author, not independent; not reviewed by a person.",
+    "zh": "以漂移余量检查器与 Lean 4.30.0-rc2 及固定 Mathlib 检查（回执 20261008T114955.171898Z，六个模块以固定的 Mathlib 缓存重建，307 项审计；绑定四个模块的当前字节）：ConnectionistRecovery 29、DevelopmentalMemory 28、UpdaterConsequences 36、DriftMargins 42 条定理，此处引 24 条。各研究记有作者反审，非独立；未经人审。"
+  },
+  "next_delta": {
+    "en": "Derive the drift and noise bounds from the history of reference contact instead of supplying them, and join the replacement history to the reconstruction of learning procedures by an instance theorem.",
+    "zh": "由参照接触的历史导出漂移与噪声之界而非给定；并以实例定理把替换历史接到学习方式的重构。"
+  },
+  "correspondence": {
+    "en": "Watson et al. (2014, Evolution 68) derive a Hebbian direction for the evolution of developmental correlations in a one-step linear slice and study developmental memory of several patterns; the one-step law recovers that slice, and the memory laws state its recall, interference and restoration exactly in a three-unit case. The derivative of the developed state is the forward sensitivity of a recurrent network. Reading the replacement history as consequences entering the updating rule is the AI's.",
+    "zh": "Watson 等（2014，Evolution 68）在一步线性切片中导出发育相关之演化的 Hebb 方向，并研究多个模式的发育记忆；一步之律恢复该切片，记忆诸律在三单元情形中精确陈述其回忆、干扰与恢复。发育状态的导数是递归网络的前向敏感度。把替换历史读作后果进入更新规则，是 AI 的解读。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/ConnectionistRecovery.lean",
+  "aliases": [
+    "The updater line: development, memory, replacement and margins of a learning network",
+    "更新者一线：学习网络的发育、记忆、替换与余量",
+    "the updater line",
+    "ConnectionistRecovery.beneficial_iff_hebbian",
+    "DevelopmentalMemory.old_recall_restored",
+    "UpdaterConsequences.complete_replacement_history",
+    "DriftMargins.assurance_window"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "learned-procedure-transmission",
+      "detail": {
+        "en": "Its procedure bit runs this line's responsive or continual rule (LearnedProcedureTransmission.constructed_responsive, constructed_continual), its networks reconstructed through actual performance; this line's carrier replacement history is not yet joined to that reconstruction.",
+        "zh": "其更新控制位运行此一线的回应或持续规则（LearnedProcedureTransmission.constructed_responsive、constructed_continual），其网络经实际表现而重构；此一线的承载者替换历史尚未接到该重构。"
+      }
+    },
+    {
+      "id": "correction-is-not-calibration",
+      "detail": {
+        "en": "References renewed after calibration repair the overwritten matrix of these updater constructions; correction without a reference is not calibration.",
+        "zh": "校准之后更新的参照修复这些更新者构造中被覆盖的矩阵；无参照的修正不是校准。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/ConnectionistRecovery.lean",
+      "role": "proof",
+      "sha256": "0c59e2e5d52c5a2fe08c0bbca68b881b417c753103d9ae001ab0b0f35c41ac29",
+      "declarations": [
+        "ConnectionistRecovery.developmental_response",
+        "ConnectionistRecovery.tanh_developmental_response",
+        "ConnectionistRecovery.beneficial_iff_hebbian"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/DevelopmentalMemory.lean",
+      "role": "proof",
+      "sha256": "272a651cf3daaa4e1a44092e42a1589d9e13ad0c86687e71dc7f11d337ef1bd5",
+      "declarations": [
+        "DevelopmentalMemory.common_history_realized",
+        "DevelopmentalMemory.both_recall",
+        "DevelopmentalMemory.overwrite_changes_old_recall",
+        "DevelopmentalMemory.old_recall_fails",
+        "DevelopmentalMemory.old_recall_restored"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/UpdaterConsequences.lean",
+      "role": "proof",
+      "sha256": "56f99117dac7f45781f56e59c77d04ba0872bebe6e03f5778e1b46cc4c59b2c6",
+      "declarations": [
+        "UpdaterConsequences.routes_differ_after_failure",
+        "UpdaterConsequences.repaired_by_responsive",
+        "UpdaterConsequences.responsive_after_failure",
+        "UpdaterConsequences.cycle_conserves",
+        "UpdaterConsequences.installation_conserves",
+        "UpdaterConsequences.finite_history_conserves",
+        "UpdaterConsequences.loss_retires_old_route",
+        "UpdaterConsequences.actual_replacement",
+        "UpdaterConsequences.new_route_renews",
+        "UpdaterConsequences.complete_replacement_history",
+        "UpdaterConsequences.old_proposal_fails_again",
+        "UpdaterConsequences.false_success_blocks_repair",
+        "UpdaterConsequences.changed_route_cycle"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/DriftMargins.lean",
+      "role": "proof",
+      "sha256": "07493b4ca85648750b0290290f23ecbc5039bb0079cb216c8420e6bfeaa4257d",
+      "declarations": [
+        "DriftMargins.aged_decoding_bound",
+        "DriftMargins.assurance_window",
+        "DriftMargins.understated_bound_false_success",
+        "DriftMargins.wide_bound_withholds",
+        "DriftMargins.separated_verdict"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/drift-margins-checks/20261008T114955.171898Z/verification.json",
+      "role": "receipt",
+      "sha256": "fb69aa5bbabbedfa16cbe61c6e432d77f97316345954fd853191f421c45651f5",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/04-LIFE.md",
+      "role": "statement",
+      "sha256": "629da3b8cb7dc44e52ba9322e918262f52c06288cb06f294c0a7e065452436c0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-CONNECTIONISM-RECOVERY.md",
+      "role": "integration",
+      "sha256": "62c4fc692e68cffaa8ea439c7ced11ab61d68bfeb2fd6882287c624f8c09857e",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-DEVELOPMENTAL-MEMORY.md",
+      "role": "integration",
+      "sha256": "772e4ea40641aaa4822a4c5ae6a71374eaec8b10871cd9f9fcc8908e28aceba1",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-UPDATER-CONSEQUENCES.md",
+      "role": "integration",
+      "sha256": "ff9a5cae2be49e6226af5b4bde17d6f310463d1978426726d3e8c2925a15aeaa",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-DRIFT-MARGINS.md",
+      "role": "integration",
+      "sha256": "7c82de505727804f2e6bbab12bc42ac0c1eaf121aaea2ad6f642ee24f278ed86",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/ConnectionistRecovery.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/drift-margins-checks/20261008T114955.171898Z/verification.json",
+      "sha256_pointer": "/modules/0/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/DevelopmentalMemory.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/drift-margins-checks/20261008T114955.171898Z/verification.json",
+      "sha256_pointer": "/modules/1/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/UpdaterConsequences.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/drift-margins-checks/20261008T114955.171898Z/verification.json",
+      "sha256_pointer": "/modules/2/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/DriftMargins.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/drift-margins-checks/20261008T114955.171898Z/verification.json",
+      "sha256_pointer": "/modules/5/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), the updater line: the developmental response as a derivative and the Hebbian sign in one step, memory overwritten and restored, an updating rule replaced within finite accounts, and the drift radius, its exact window and the two margin witnesses; from DEFECTS-FOUND (triage rows 150 and 113); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），更新者一线：发育回应为导数及一步中的 Hebb 之号、记忆的覆盖与恢复、更新规则在有限账目内被替换，以及漂移半径、其精确窗口与两个余量见证；出自 DEFECTS-FOUND（分诊第 150 行与第 113 行）；研究第 426 节。"
+    }
+  ]
+}

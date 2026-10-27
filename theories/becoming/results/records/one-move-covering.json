@@ -1,0 +1,254 @@
+{
+  "schema_version": 2,
+  "id": "one-move-covering",
+  "title": {
+    "en": "What one move ensures, and covering of moves",
+    "zh": "一步所确保者与动作的覆盖"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "The moves of one process at a configuration cover another's exactly where every goal one move of the other ensures, one move of the first ensures; covering is a preorder carried along revisions, and a failed cover names a lost goal under double-negation elimination, taken as a hypothesis.",
+    "zh": "一个过程在某构形的动作覆盖另一个的，恰当后者一步所确保的每个目标前者一步也确保；覆盖是预序，沿逐次修订传递；以双重否定消去为假设时，失败的覆盖指出一个失去的目标。"
+  },
+  "laws": [
+    {
+      "en": "One move completes a goal from a configuration exactly where it is enabled there and every outcome meets the goal; a goal is ensured where some move does so. The moves of Q at t cover those of P at s where each enabled move of P is matched by an enabled move of Q whose outcomes are among its own, and they cover exactly where every goal P ensures from s, Q ensures from t.",
+      "zh": "一步从某构形完成一个目标，恰当它在那里可行且每个结果都满足该目标；有某一步如此时，目标被确保。Q 在 t 的动作覆盖 P 在 s 的动作，指 P 的每个可行动作都有 Q 的一个可行动作相配，其结果都在前者结果之中；恰当 P 从 s 确保的每个目标 Q 从 t 也确保时覆盖。",
+      "declarations": [
+        "Becoming.MoveOutcomeProcesses.Ensures",
+        "Becoming.MoveOutcomeProcesses.Covers",
+        "Becoming.MoveOutcomeProcesses.completes_one_iff",
+        "Becoming.MoveOutcomeProcesses.ensures_iff",
+        "Becoming.MoveOutcomeProcesses.covers_iff_moves",
+        "Becoming.MoveOutcomeProcesses.Covers.ensures",
+        "Becoming.MoveOutcomeProcesses.covers_iff"
+      ]
+    },
+    {
+      "en": "Covering is reflexive and transitive; revisions of a process, each covering the last, cover the first at every stage, the types of moves free to change at each revision.",
+      "zh": "覆盖自反且传递；一个过程的逐次修订，每次覆盖上一次，则在每个阶段都覆盖第一次，动作的类型可在每次修订时改变。",
+      "declarations": [
+        "Becoming.MoveOutcomeProcesses.covers_refl",
+        "Becoming.MoveOutcomeProcesses.covers_trans",
+        "Becoming.MoveOutcomeProcesses.covers_along"
+      ]
+    },
+    {
+      "en": "A cover fails exactly where not every goal is carried; under double-negation elimination, taken as a hypothesis, a failed cover names a goal the covered process ensures and the other does not.",
+      "zh": "覆盖恰在并非每个目标都被带过之处失败；以双重否定消去为假设时，失败的覆盖指出一个被覆盖过程确保而另一个不确保的目标。",
+      "declarations": [
+        "Becoming.MoveOutcomeProcesses.not_covers_iff",
+        "Becoming.MoveOutcomeProcesses.lost_goal_of_not_covers_of_dne"
+      ]
+    },
+    {
+      "en": "Laws of every process: a move completing a goal completes every weaker one; the goal nothing meets is never ensured; the goal everything meets is ensured exactly where some move is enabled; where P has an enabled move at s and Q at t covers it, some goal is ensured by both; and it is never so that every goal is ensured by Q and not by P.",
+      "zh": "每个过程的规律：完成一个目标的一步完成每个更弱的目标；无物满足的目标从不被确保；万物满足的目标恰在某一步可行处被确保；P 在 s 有可行步且 Q 在 t 覆盖它时，有某目标两者都确保；决不会每个目标都被 Q 确保而不被 P 确保。",
+      "declarations": [
+        "Becoming.MoveOutcomeProcesses.completes_mono",
+        "Becoming.MoveOutcomeProcesses.not_ensures_false",
+        "Becoming.MoveOutcomeProcesses.ensures_true_iff",
+        "Becoming.MoveOutcomeProcesses.common_goal",
+        "Becoming.MoveOutcomeProcesses.no_strict_gain_everywhere"
+      ]
+    },
+    {
+      "en": "A goal read through a summary of the outcomes is ensured exactly where its pullback to the configurations is; a common response for a belief completes from every configuration where the belief holds.",
+      "zh": "经结果之摘要读出的目标，恰在其拉回到构形的目标被确保时被确保；对一个信念的共同回应，从该信念成立的每个构形完成。",
+      "declarations": [
+        "Becoming.MoveOutcomeProcesses.summary_ensures_iff",
+        "Becoming.MoveOutcomeProcesses.common_completes"
+      ]
+    },
+    {
+      "en": "Witnesses on two configurations: the free process can reach more outcomes than the constant law and does not cover it; the law covers the free process and loses a possibility; the setting process covers the law, ensures a new goal and opens what was closed; goals it ensures separately are not ensured jointly; the halted process does not ensure false, which every outcome of its move meets; a summary can hide a loss.",
+      "zh": "两个构形上的见证：自由过程比常值律能达到更多结果，却不覆盖它；常值律覆盖自由过程而失去一种可能；设定过程覆盖常值律，确保新目标并打开原已关闭者；它分别确保的目标并不共同被确保；停止的过程不确保“假”，虽其动作的每个结果都满足之；摘要可隐去一项损失。",
+      "declarations": [
+        "Becoming.MoveOutcomeProcesses.toFalse",
+        "Becoming.MoveOutcomeProcesses.free",
+        "Becoming.MoveOutcomeProcesses.setting",
+        "Becoming.MoveOutcomeProcesses.halted",
+        "Becoming.MoveOutcomeProcesses.free_wider_not_covering",
+        "Becoming.MoveOutcomeProcesses.law_covers_free_and_loses",
+        "Becoming.MoveOutcomeProcesses.setting_covers_and_gains",
+        "Becoming.MoveOutcomeProcesses.setting_covers_and_opens",
+        "Becoming.MoveOutcomeProcesses.setting_separate_not_joint",
+        "Becoming.MoveOutcomeProcesses.halted_ensures_nothing",
+        "Becoming.MoveOutcomeProcesses.summary_hides_loss"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Processes on any type of configurations with any types of moves; goals are predicates of configurations, and nothing else is assumed of the processes.",
+      "zh": "任意构形类型、任意动作类型上的过程；目标是构形的谓词，此外对过程不作任何假定。"
+    },
+    {
+      "en": "No premise: every MoveOutcomeProcesses declaration has an empty axiom report; double-negation elimination enters only as the hypothesis of lost_goal_of_not_covers_of_dne.",
+      "zh": "无前提：MoveOutcomeProcesses 的每个声明公理报告皆空；双重否定消去只作为 lost_goal_of_not_covers_of_dne 的假设出现。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That double-negation elimination is needed to name a lost goal: the Lean shows that it suffices.",
+      "zh": "指出失去的目标需要双重否定消去：Lean 只表明它足够。",
+      "kind": "converse"
+    },
+    {
+      "en": "That covering, or more possible outcomes, is a gain: covering can remove a possibility, and more outcomes need not cover.",
+      "zh": "覆盖或更多可能结果是一种增益：覆盖可去掉一种可能，更多结果也未必覆盖。",
+      "kind": "non-implication",
+      "witness": "Becoming.MoveOutcomeProcesses.law_covers_free_and_loses"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean",
+      "detail": {
+        "en": "The free process reaches every outcome the constant law reaches and more, yet does not cover it (free_wider_not_covering).",
+        "zh": "自由过程达到常值律所达到的每个结果且更多，却不覆盖它（free_wider_not_covering）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean",
+      "detail": {
+        "en": "Read through the summary sending everything to false, a move of the free process meets the goal false; read whole, none ensures it (summary_hides_loss).",
+        "zh": "经把一切送到假的摘要读出，自由过程的一步满足目标“假”；整体读出，没有一步确保它（summary_hides_loss）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.29.1): Becoming.MoveOutcomeProcesses by the consolidated core checker (receipt 20261025T212948.819150Z), every declaration with an empty axiom report; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 实查：Becoming.MoveOutcomeProcesses 经合并核心检查器（回执 20261025T212948.819150Z），每个声明公理报告皆空；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Carry covering past one move: state when the moves of one process cover another's along every finite course, so that what a revision keeps is read off the goals its courses still ensure.",
+    "zh": "把覆盖推到一步之外：陈述一个过程的动作何时沿每个有限之程覆盖另一个的，使修订所保留者由其诸程仍确保的目标读出。"
+  },
+  "correspondence": {
+    "en": "Covering, each move matched by one whose outcomes are among its own, is the one-step form of alternating simulation (Alur, Henzinger, Kupferman and Vardi 1998), which keeps what one side can force. Reading covering revisions as a practice keeping what it could ensure is the AI's reading.",
+    "zh": "覆盖（每一步都有一步相配，其结果在前者结果之中）是交替模拟的一步形式（Alur、Henzinger、Kupferman 与 Vardi 1998），它保持一方所能迫使者。把覆盖的修订读作保持其所能确保者的实践，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean",
+  "aliases": [
+    "one-move covering",
+    "covering of moves",
+    "一步覆盖",
+    "Becoming.MoveOutcomeProcesses.covers_iff",
+    "Becoming.MoveOutcomeProcesses.covers_along"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "what-a-summary-keeps",
+      "detail": {
+        "en": "What a summary keeps of feasibility; here a summary of outcomes can hide a loss.",
+        "zh": "摘要保留可行性的什么；此处结果之摘要可隐去一项损失。"
+      }
+    },
+    {
+      "id": "what-a-total-keeps",
+      "detail": {
+        "en": "A total keeps a transfer exactly and hides the loss of a coordinate.",
+        "zh": "总量精确保持转移而隐去一个坐标的损失。"
+      }
+    },
+    {
+      "id": "finite-continuation-plans",
+      "detail": {
+        "en": "Plans branching on observations; a common response for a belief is their one-step case.",
+        "zh": "依观察分支的计划；对信念的共同回应是其一步情形。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.MoveOutcomeProcesses.Ensures",
+        "Becoming.MoveOutcomeProcesses.Covers",
+        "Becoming.MoveOutcomeProcesses.completes_one_iff",
+        "Becoming.MoveOutcomeProcesses.ensures_iff",
+        "Becoming.MoveOutcomeProcesses.covers_iff_moves",
+        "Becoming.MoveOutcomeProcesses.Covers.ensures",
+        "Becoming.MoveOutcomeProcesses.covers_iff",
+        "Becoming.MoveOutcomeProcesses.covers_refl",
+        "Becoming.MoveOutcomeProcesses.covers_trans",
+        "Becoming.MoveOutcomeProcesses.covers_along",
+        "Becoming.MoveOutcomeProcesses.not_covers_iff",
+        "Becoming.MoveOutcomeProcesses.lost_goal_of_not_covers_of_dne",
+        "Becoming.MoveOutcomeProcesses.completes_mono",
+        "Becoming.MoveOutcomeProcesses.not_ensures_false",
+        "Becoming.MoveOutcomeProcesses.ensures_true_iff",
+        "Becoming.MoveOutcomeProcesses.common_goal",
+        "Becoming.MoveOutcomeProcesses.no_strict_gain_everywhere",
+        "Becoming.MoveOutcomeProcesses.summary_ensures_iff",
+        "Becoming.MoveOutcomeProcesses.common_completes",
+        "Becoming.MoveOutcomeProcesses.toFalse",
+        "Becoming.MoveOutcomeProcesses.free",
+        "Becoming.MoveOutcomeProcesses.setting",
+        "Becoming.MoveOutcomeProcesses.halted",
+        "Becoming.MoveOutcomeProcesses.free_wider_not_covering",
+        "Becoming.MoveOutcomeProcesses.law_covers_free_and_loses",
+        "Becoming.MoveOutcomeProcesses.setting_covers_and_gains",
+        "Becoming.MoveOutcomeProcesses.setting_covers_and_opens",
+        "Becoming.MoveOutcomeProcesses.setting_separate_not_joint",
+        "Becoming.MoveOutcomeProcesses.halted_ensures_nothing",
+        "Becoming.MoveOutcomeProcesses.summary_hides_loss"
+      ],
+      "sha256": "e1ed73c1333483201e73a20e4a9d082ff13772612e28f1d16d414a3e7cb8afcb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalReach.lean",
+      "role": "provenance",
+      "sha256": "1b13fcc34fed86de83e6f09dae82b321422195f31fb97d37024d7143183d0e7b"
+    },
+    {
+      "path": "theories/becoming/chapters/08-METHOD.md",
+      "role": "statement",
+      "sha256": "fbd270da2f34e03888628b9e54a1cc3491cf30a414a23126f249b09bd7b68ccd"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "58e42859a9f7ec5720b68d4bc28f43b02e2fc1d24ab766913ed0d56980751ef1"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.MoveOutcomeProcesses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), what one move ensures, covering of moves exactly where every one-move goal is carried, its preorder along revisions, and the witnesses on two configurations, in the core; from DEFECTS-FOUND (triage rows 140 and 284); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），一步所确保者、恰在每个一步目标都被带过处的动作覆盖、其沿修订的预序，以及两个构形上的见证，皆在核心；出自 DEFECTS-FOUND（分诊第 140 与 284 行）；研究第 426 节。"
+    }
+  ]
+}

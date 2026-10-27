@@ -1,0 +1,187 @@
+{
+  "schema_version": 2,
+  "id": "adaptive-closure-cannot-resolve",
+  "title": {
+    "en": "Adaptive closure: a reference changed outside what is retained is not resolved from the view",
+    "zh": "适应性封闭：在所保留者之外改变的参照不能由所见分辨"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F05",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "Where a reference changes outside what is retained, two histories share their view while their present answers differ, and every policy choosing locally closed moves from the view keeps them so at every step; a sound answer from the view abstains, and reopening with inspection repairs.",
+    "zh": "参照改变而未进入所保留者时，两个历史所见相同而当下答案不同；每个由所见选择局部封闭动作的确定性策略，在每一步都使之如此；由所见作出的可靠回答必须弃答，重新打开并检查则修复。"
+  },
+  "laws": [
+    {
+      "en": "In the named model, the settled history (inspection, uptake, closure) and the changed one (the same, then the reference changed) share their view (the record, judgment, closure and three counts) while their targets differ.",
+      "zh": "在所命名的模型中，已定历史（检查、采纳、封闭）与已变历史（同上，再改变参照）所见相同（记录、判断、封闭与三个计数），而目标不同。",
+      "declarations": [
+        "Generative.NormativeActivity.view",
+        "Generative.NormativeActivity.target",
+        "Generative.NormativeActivity.settled",
+        "Generative.NormativeActivity.changed",
+        "Generative.NormativeActivity.reachable_closed_disagreement"
+      ]
+    },
+    {
+      "en": "Every policy choosing from the view among moves closed locally (repetition, production, suspension, uptake, inspection, ineffective once closed, closure and rest) keeps, for every number of steps, two closed histories with one view alike in view and each target as it was; so the settled and changed histories stay alike in view with different targets, as does every continuation by such moves.",
+      "zh": "每个由所见在局部封闭的动作（重复、产出、暂停、采纳、封闭后无效的检查、封闭与休止）之间选择的策略，对任意步数都使所见相同的两个封闭历史所见仍同、各自目标如前；故已定与已变历史所见始终相同而目标不同，经这类动作的每个接续亦然。",
+      "declarations": [
+        "Generative.NormativeActivity.ClosedLocal",
+        "Generative.NormativeActivity.adapt",
+        "Generative.NormativeActivity.adaptive_closed_invariant",
+        "Generative.NormativeActivity.adaptive_closed_cannot_resolve",
+        "Generative.NormativeActivity.closed_continuations_remain_unresolved"
+      ]
+    },
+    {
+      "en": "So no reading of the view resolves the target on the closed domain, and an answer from the view that is never false there gives no answer at the settled history; the changed history's record stays true of its sample while its judgment is wrong of the present.",
+      "zh": "所以在封闭域上，没有对所见的读取能分辨目标；在那里从不答错的、由所见作出的回答，在已定历史处不作回答；已变历史的记录对其样本仍为真，而其判断对当下为错。",
+      "declarations": [
+        "Generative.NormativeActivity.closed_domain_not_resolving",
+        "Generative.NormativeActivity.sound_closed_answer_abstains",
+        "Generative.NormativeActivity.historical_truth_present_error"
+      ]
+    },
+    {
+      "en": "Reopening, inspecting and taking up repairs the changed history's judgment, using up the inspection available; reopening and taking up without inspection does not repair, nor does reopening with no inspection left.",
+      "zh": "重新打开、检查并采纳修复已变历史的判断，用尽可用的检查；不检查而重新打开并采纳不修复，没有可用检查时重新打开也不修复。",
+      "declarations": [
+        "Generative.NormativeActivity.reopening_and_inspection_repair",
+        "Generative.NormativeActivity.reopening_without_inspection_does_not_repair",
+        "Generative.NormativeActivity.exhausted_reopening_does_not_repair"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The named model is supplied: the states, the events and their law, the view and the target; local closure is a stated property of each event, and the policy is a function of the view.",
+      "zh": "所命名的模型为给定：状态、事件及其律、所见与目标；局部封闭是每个事件的一项所述性质，策略是所见的函数。"
+    },
+    {
+      "en": "Axioms: ClosedLocal, adaptive_closed_invariant, adaptive_closed_cannot_resolve, closed_continuations_remain_unresolved and historical_truth_present_error use propext; the other declarations cited have empty axiom reports, as the module's receipt reports.",
+      "zh": "公理：ClosedLocal、adaptive_closed_invariant、adaptive_closed_cannot_resolve、closed_continuations_remain_unresolved 与 historical_truth_present_error 用 propext；其余所引声明公理报告皆空，如该模块回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That every closed practice fails: the law is proved for the two named histories and the listed moves.",
+      "zh": "每种封闭的实践都失败：此律只对两个具名历史与所列动作得证。",
+      "kind": "scope"
+    },
+    {
+      "en": "That reopening suffices: it repairs only with an inspection that can still be made.",
+      "zh": "重新打开即足够：只有在仍可检查时它才修复。",
+      "kind": "non-implication",
+      "witness": "Generative.NormativeActivity.reopening_without_inspection_does_not_repair"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.29.1): NormativeActivity by its own checker (receipt 20261007T204714.495458Z), propext where named and otherwise empty axiom reports; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 实查：NormativeActivity 经其自身检查器（回执 20261007T204714.495458Z），所列处用 propext，其余公理报告皆空；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "State the law on the core's processes for any reference outside what is retained: a projection that the moves respect and the target does not, so that the named histories become one instance.",
+    "zh": "在核心的过程上对所保留者之外的任何参照陈述此律：诸动作尊重而目标不尊重的投影，使所命名的历史成为一个实例。"
+  },
+  "correspondence": {
+    "en": "Abstaining where the view does not settle the answer is the reject option (Chow 1970) and the \"I don't know\" answer of KWIK learning (Li, Littman and Walsh 2008); reading closure as activity that no longer meets its reference is the AI's reading.",
+    "zh": "在所见不能定答案处弃答，即拒识选项（Chow 1970）与 KWIK 学习中“我不知道”的回答（Li、Littman 与 Walsh 2008）；把封闭读作不再与其参照相遇的活动，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+  "aliases": [
+    "adaptive closure",
+    "适应性封闭",
+    "Generative.NormativeActivity.adaptive_closed_cannot_resolve"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "testing-within-couplings",
+      "detail": {
+        "en": "What a test can exclude is fixed by what couples in; here a reference that has stopped coupling into the view.",
+        "zh": "检验能排除者由耦合进来者决定；此处是已不再耦合进所见的参照。"
+      }
+    },
+    {
+      "id": "finite-fallible-inquiry-necessity",
+      "detail": {
+        "en": "Coverage beyond responsive reach is bounded by the errors; here the view stops reaching the changed reference.",
+        "zh": "响应可达之外的覆盖以误差为界；此处所见不再达到已变的参照。"
+      }
+    },
+    {
+      "id": "evidence-through-change",
+      "detail": {
+        "en": "Candidates propagated through admitted change keep a certificate sound; here a change not admitted into the view.",
+        "zh": "经被允许之变化传播的候选使证书保持可靠；此处为未被纳入所见的变化。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.NormativeActivity.view",
+        "Generative.NormativeActivity.target",
+        "Generative.NormativeActivity.settled",
+        "Generative.NormativeActivity.changed",
+        "Generative.NormativeActivity.reachable_closed_disagreement",
+        "Generative.NormativeActivity.ClosedLocal",
+        "Generative.NormativeActivity.adapt",
+        "Generative.NormativeActivity.adaptive_closed_invariant",
+        "Generative.NormativeActivity.adaptive_closed_cannot_resolve",
+        "Generative.NormativeActivity.closed_continuations_remain_unresolved",
+        "Generative.NormativeActivity.closed_domain_not_resolving",
+        "Generative.NormativeActivity.sound_closed_answer_abstains",
+        "Generative.NormativeActivity.historical_truth_present_error",
+        "Generative.NormativeActivity.reopening_and_inspection_repair",
+        "Generative.NormativeActivity.reopening_without_inspection_does_not_repair",
+        "Generative.NormativeActivity.exhausted_reopening_does_not_repair"
+      ],
+      "sha256": "15105e2caa43fb9b00f228343be16a7d729ff5a3da10c506d134d07417ae622c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/normative-activity-checks/20261007T204714.495458Z/verification.json",
+      "role": "receipt",
+      "sha256": "d8cdade072ae0a6e1a77ff7d66d4c7bd9b8fa6cd397e022eec509e0065bef97f"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "58e42859a9f7ec5720b68d4bc28f43b02e2fc1d24ab766913ed0d56980751ef1"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/normative-activity-checks/20261007T204714.495458Z/verification.json",
+      "sha256_pointer": "/source_sha256/NormativeActivity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), that a policy choosing closed moves from a view keeps a changed reference unresolved, that a sound answer abstains, and what repairs it; from DEFECTS-FOUND (triage row 132); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），由所见选择封闭动作的策略使已变参照始终不可分辨，可靠的回答弃答，以及何者修复；出自 DEFECTS-FOUND（分诊第 132 行）；研究第 426 节。"
+    }
+  ]
+}

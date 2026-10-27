@@ -1,0 +1,512 @@
+{
+ "edits": [
+  {
+   "id": "certificates-sound-and-available",
+   "field": "hypotheses[2].en",
+   "old": "which use propext, Quot.sound and, in one declaration, Classical.choice.",
+   "new": "which use propext and Quot.sound in some declarations and Classical.choice in six execution, dispatch and completion laws not restated here, as their receipts report.",
+   "severity": "error",
+   "why": "The three periphery receipts report Classical.choice in six declarations, not one: FaultTolerantCorrection.execution_exact and quorum_to_actual_correction, EvidenceQualifiedCorrection.evidence_qualified_completion, and AcquiredCorrection.dispatch_completes, acquired_execution and complete_finite_discovery_and_execution. The old chapter label's 'in one declaration' was copied as a fact about the modules.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/fault-tolerant-correction-verification.json (/modules/FaultTolerantCorrection/dependencies), evidence-qualified-correction-verification.json, acquired-correction-verification.json"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "hypotheses[2].zh",
+   "old": "后者用 propext、Quot.sound，一个声明用 Classical.choice。",
+   "new": "后者部分声明用 propext 与 Quot.sound，六条此处未重述的执行、分派与完成之律用 Classical.choice，如其回执所报。",
+   "severity": "error",
+   "why": "Same correction in the Chinese.",
+   "evidence": "same receipts as the English edit"
+  },
+  {
+   "id": "theories/becoming/chapters/03-KNOWING.md",
+   "field": "chapter_edits[certificates-sound-and-available][0].new",
+   "old": "**Theorem** (any type; roster, fault envelopes, report law and protected monitor supplied; the core's restatements of the correction modules, with empty axiom reports).",
+   "new": "**Theorem** (core restatement of the correction modules: numbered domains, listed envelopes and a supplied tree; roster, fault envelopes, faithfulness outside the actual fault set and coverage of the actual causes supplied; no premise).",
+   "severity": "error",
+   "why": "'Any type' is false: Domain is Nat, an Envelope is List (List Nat), and the search runs on one inductive Tree. 'Report law and protected monitor' are inputs of the periphery's FaultTolerantCorrection, not of the declarations cited. The row also sits in a table headed 'Pre-spine law', so the label should say it is the core's restatement.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean:47-49, 30-34; PooledEnvelopes.lean:40-45; TreeSearch.lean:52-54; 03-KNOWING.md:335-337"
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "field": "laws[3].en",
+   "old": "for every network and list of tasks. In the named run, seven units revise the overwritten matrix with one update and six leave it unrevised;",
+   "new": "for every network and task list. In the named runs, seven units revise the overwritten matrix within two tasks, one succeeding; six leave it unrevised, none succeeding;",
+   "severity": "error",
+   "why": "The second component of runAdmitted / run counts tasks that succeed, not updates. actual_repair_after_inspection runs two tasks [.a,.a] and ends at weighted 2 4 with count 1, meaning one success. six_units_cannot_revise runs one task and ends at (weighted 1 4, 0).",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/UpdaterConsequences.lean:82-87; CalibrationRenewal.lean:196-200, 300-312"
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "field": "laws[3].en",
+   "old": "Renewal: inspecting",
+   "new": "Inspecting",
+   "severity": "style",
+   "why": "Removing the prefix keeps the law within 420 characters after the edit above (414).",
+   "evidence": "lint cap 420"
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "field": "laws[3].zh",
+   "old": "在所命名的运行中，七个单位以一次更新修订被覆盖的矩阵，六个单位则不修订；",
+   "new": "在所命名的运行中，七个单位在两个任务内修订被覆盖的矩阵，其一成功；六个单位不修订，无成功；",
+   "severity": "error",
+   "why": "Same correction in the Chinese.",
+   "evidence": "UpdaterConsequences.lean:82-87; CalibrationRenewal.lean:300-312"
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "field": "laws[3].zh",
+   "old": "更新：以至少",
+   "new": "以至少",
+   "severity": "style",
+   "why": "Keeps the Chinese in step with the English prefix removal.",
+   "evidence": "parity"
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "field": "laws[2].en",
+   "old": "Failures: a reading at 0 from one epoch and at 1 from another reports success where s·p is negative, as does a curved channel agreeing with an affine one at 0 and 1; an apparatus",
+   "new": "Witnesses of failure: a reading at 0 from one epoch and at 1 from another can report success where s·p is negative, as can a curved channel agreeing with an affine one at 0 and 1; in the named run, an apparatus",
+   "severity": "overclaim",
+   "why": "mixed_epoch_false_success and nonaffine_reference_alias are single witnesses (channels (1,0) and (1,2), p = −1, s = 1; curve p(2p−1)). stale_channel_blocks_actual_repair and late_change_still_fails concern the named identityChannels and changedChannels. As written, the law reads as general.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean:321-331, 364-369; CalibratedUpdater.lean:378-380"
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "field": "laws[2].zh",
+   "old": "失败：0 处读数取自一个时期、1 处取自另一时期，在 s·p 为负处报告成功；在 0 与 1 处与仿射通道一致的弯曲通道亦然；装置",
+   "new": "失败的见证：0 处读数取自一个时期、1 处取自另一时期，可在 s·p 为负处报告成功；在 0 与 1 处与仿射通道一致的弯曲通道亦可；在所命名的运行中，装置",
+   "severity": "overclaim",
+   "why": "Same correction in the Chinese.",
+   "evidence": "CalibrationRenewal.lean:321-331, 364-369"
+  },
+  {
+   "id": "what-a-total-keeps",
+   "field": "statement.en",
+   "old": "that reads only the total of two coordinates errs by at least its coupling at two states of equal total,",
+   "new": "reading only the total of two coordinates errs by at least its coupling at one of two equal-total states,",
+   "severity": "overclaim",
+   "why": "routing_defect_lower_bound shows that errors at most ε at both (2,0) and (0,2) force c ≤ ε, so the larger of the two errors is at least c. It does not show an error of c at each state. Result is 300 characters.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean:141-147"
+  },
+  {
+   "id": "what-a-total-keeps",
+   "field": "statement.zh",
+   "old": "在总量相同的两个状态处误差至少为其耦合",
+   "new": "在总量相同的两个状态之一处误差至少为其耦合",
+   "severity": "overclaim",
+   "why": "Same correction in the Chinese.",
+   "evidence": "RelationsAcrossScales.lean:141-147"
+  },
+  {
+   "id": "one-move-covering",
+   "field": "laws[5].en",
+   "old": "the halted process ensures nothing;",
+   "new": "the halted process does not ensure false, which every outcome of its move meets;",
+   "severity": "overclaim",
+   "why": "halted_ensures_nothing proves only that the goal o = false (met vacuously by every outcome) is not ensured. It does not cover every goal. Law is 418 characters after the edit.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean:269-275"
+  },
+  {
+   "id": "one-move-covering",
+   "field": "laws[5].zh",
+   "old": "停止的过程什么也不确保；",
+   "new": "停止的过程不确保“假”，虽其动作的每个结果都满足之；",
+   "severity": "overclaim",
+   "why": "Same correction in the Chinese.",
+   "evidence": "MoveOutcomeProcesses.lean:269-275"
+  },
+  {
+   "id": "learning-a-rule-by-narrowing",
+   "field": "laws[2].en",
+   "old": "re-encoding through negation gives a different answer at the same question.",
+   "new": "re-encoding the identity rule through negation gives a different answer at true.",
+   "severity": "overclaim",
+   "why": "wrong_reencoding_breaks_transfer is one witness: the list [id] at the question true. In general, negation leaves the answers of constant rules unchanged.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean:473-475"
+  },
+  {
+   "id": "learning-a-rule-by-narrowing",
+   "field": "laws[2].zh",
+   "old": "经否定重编码，在同一问题上给出不同的回答。",
+   "new": "经否定重编码恒等规则，在“真”处给出不同的回答。",
+   "severity": "overclaim",
+   "why": "Same correction in the Chinese.",
+   "evidence": "Narrowing.lean:473-475"
+  },
+  {
+   "id": "learning-a-rule-by-narrowing",
+   "field": "laws[3].en",
+   "old": "For rules of one Boolean question, every rule agrees with one of four listed candidates, so learning from them by acquired observations answers only correctly; one observed case",
+   "new": "For rules on the two cases of a Boolean question, every rule agrees with one of four listed candidates, so learning from them by acquired observations answers only correctly; observing the identity rule, one observed case",
+   "severity": "imprecise",
+   "why": "Rule Bool is Bool → Bool, rules over two cases (questions false and true), not rules of one question. The unsettled, settled and last-report results are witnesses on acquire id.",
+   "evidence": "Narrowing.lean:480, 511-537"
+  },
+  {
+   "id": "learning-a-rule-by-narrowing",
+   "field": "laws[3].zh",
+   "old": "对一个布尔问题上的规则，每个规则都与四个所列候选之一一致，故由它们以所取得的观察学习只作正确回答；观察一个情形",
+   "new": "对布尔问题两个情形上的规则，每个规则都与四个所列候选之一一致，故由它们以所取得的观察学习只作正确回答；观察恒等规则时，观察一个情形",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "Narrowing.lean:480, 511-537"
+  },
+  {
+   "id": "learning-a-rule-by-narrowing",
+   "field": "laws[4].en",
+   "old": "Repeating one case settles nothing new; a list lacking the actual rule can answer definitely and wrongly; and contradictory observations settle nothing.",
+   "new": "Witnesses: repeating one case leaves the other unsettled; a list lacking the actual rule can answer definitely and wrongly; and contradictory observations at one case leave the other unsettled.",
+   "severity": "overclaim",
+   "why": "repeated_same_case_does_not_settle_other and inconsistent_evidence_yields_no_answer / contradiction_settles_nothing show only answer = none at the question false, after observations at true. They do not show that nothing at all is settled.",
+   "evidence": "Narrowing.lean:539-551, 582-584"
+  },
+  {
+   "id": "learning-a-rule-by-narrowing",
+   "field": "laws[4].zh",
+   "old": "重复一个情形不定新的东西；缺实际规则的列表可确定地答错；矛盾的观察什么也不定。",
+   "new": "见证：重复一个情形使另一个仍未定；缺实际规则的列表可确定地答错；在一个情形上相矛盾的观察使另一个未定。",
+   "severity": "overclaim",
+   "why": "Same correction in the Chinese.",
+   "evidence": "Narrowing.lean:539-551, 582-584"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "laws[1].en",
+   "old": "and with support everywhere outside the actual set,",
+   "new": "and with support from exactly the domains outside the actual set,",
+   "severity": "imprecise",
+   "why": "availability_iff_separated takes supports := fun d => !(actual.contains d), support exactly outside the actual set. Under 'at least outside' (domains inside also supporting) the forward direction fails.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean:127-138"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "laws[1].zh",
+   "old": "支持遍及实际故障集之外时，",
+   "new": "恰由实际故障集之外诸域支持时，",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "FaultEnvelopes.lean:127-138"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "laws[2].en",
+   "old": "support everywhere outside the actual set is rejected;",
+   "new": "support from exactly the domains outside the actual set is rejected;",
+   "severity": "imprecise",
+   "why": "covering_faults_reject fixes supports := fun d => !(actual.contains d). Extra support from inside the actual set can be accepted.",
+   "evidence": "FaultEnvelopes.lean:118-125"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "laws[2].zh",
+   "old": "遍及实际故障集之外的支持被拒绝；",
+   "new": "恰由实际故障集之外诸域给出的支持被拒绝；",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "FaultEnvelopes.lean:118-125"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "laws[6].en",
+   "old": "Interrupted after one inspection, the search of a tree with one endpoint is pending, and with three it finds it;",
+   "new": "Stopped after one inspection, the search of a fork of a closed branch and an endpoint is pending; with three it finds it;",
+   "severity": "imprecise",
+   "why": "interrupted_pending is about the named tree .fork .closed (.endpoint true). A tree with one endpoint that is itself the endpoint is found in one inspection.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TreeSearch.lean:268-271"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "laws[6].en",
+   "old": "A search of a tree within a number of inspections finds only what is there;",
+   "new": "A search within a number of inspections finds only what is there;",
+   "severity": "style",
+   "why": "Keeps the law within 420 characters after the edit above (416).",
+   "evidence": "lint cap 420"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "laws[6].zh",
+   "old": "只检查一次即中断时，对有一个端点之树的搜索为未决，三次则找到它；",
+   "new": "只检查一次即中断时，对封闭分支与端点相分叉之树的搜索为未决，检查三次则找到端点；",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "TreeSearch.lean:268-271"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "laws[3].en",
+   "old": "a correlated pair among three blocks the certificate for support at one domain.",
+   "new": "a correlated pair among three blocks the certificate when only the domain outside the pair supports.",
+   "severity": "imprecise",
+   "why": "correlated_three_blocks uses supports d := (d == 2), domain 2 being the one outside the pair [0,1]. Support at any other single domain is not what is shown.",
+   "evidence": "FaultEnvelopes.lean:213-214, 236-238"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "laws[3].zh",
+   "old": "三域中一对相关故障使仅一域支持时的证书受阻。",
+   "new": "三域中一对相关故障在仅由该对之外一域支持时使证书受阻。",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "FaultEnvelopes.lean:236-238"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "correspondence.en",
+   "old": " and the condition on fail-prone systems for Byzantine quorums (Malkhi and Reiter 1998);",
+   "new": "; the envelope plays the role of a fail-prone system for Byzantine quorums (Malkhi and Reiter 1998), whose existence conditions ask more (no three fail-prone sets covering the servers);",
+   "severity": "imprecise",
+   "why": "Malkhi and Reiter's dissemination quorum systems exist where no three fail-prone sets cover the universe (masking systems need four). The pairwise Q² condition is Hirt and Maurer's, for passive adversaries, so identifying it with the Byzantine quorum condition is wrong. reviewers-count-by-independent-causes uses the looser 'plays the role of'.",
+   "evidence": "Malkhi and Reiter 1998, Distributed Computing 11 (dissemination quorum existence theorem); theories/becoming/results/records/reviewers-count-by-independent-causes.json correspondence"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "correspondence.zh",
+   "old": "，亦即拜占庭法定集中易失效系统的条件（Malkhi 与 Reiter 1998）；",
+   "new": "；包络相当于拜占庭法定集中的易失效系统（Malkhi 与 Reiter 1998），其存在条件要求更多（没有三个易失效集覆盖全部服务器）；",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "as above"
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "field": "statement.zh",
+   "old": "名册与被允许故障集之包络上的证书",
+   "new": "被允许故障集之包络上的证书",
+   "severity": "style",
+   "why": "The English says 'over an envelope of admitted fault sets'. The Chinese adds 'the roster'.",
+   "evidence": "statement.en"
+  },
+  {
+   "id": "when-to-inquire-and-when-to-respond",
+   "field": "laws[1].en",
+   "old": "where one reading gives two configurations, each with its own good move, no choice",
+   "new": "in the witness of two configurations under one reading, each good only with its own move, no choice",
+   "severity": "imprecise",
+   "why": "statewise_not_uniform is one witness: Bool under a constant reading with good s a := a = s, so each configuration has only its own good move. As written it reads as a general law, which is false wherever the two configurations also share a good move.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean:342-346"
+  },
+  {
+   "id": "when-to-inquire-and-when-to-respond",
+   "field": "laws[1].zh",
+   "old": "一个读数给出两个构形、各有其好动作时，由该读数作出的选择不能两处都好",
+   "new": "在两个构形共一个读数、各只以自己的动作为好的见证中，由该读数作出的选择不能两处都好",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "GuardHorizon.lean:342-346"
+  },
+  {
+   "id": "when-to-inquire-and-when-to-respond",
+   "field": "hypotheses[1].en",
+   "old": "a constant loss per step,",
+   "new": "a constant loss per step, recorded exactly by the reading step,",
+   "severity": "missing",
+   "why": "The reading step records view.loss := total s − total t, the exact loss, and the response doses from it. This exact post-query calibration is a modelling choice the dosing laws depend on (see the adaptive_dose_admissible docstring), and the hypotheses did not name it.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ScaleRevision.lean:60-65; InquiryChoice.lean:99-103, 215"
+  },
+  {
+   "id": "when-to-inquire-and-when-to-respond",
+   "field": "hypotheses[1].zh",
+   "old": "每步损失恒定，",
+   "new": "每步损失恒定且由读取一步精确记录，",
+   "severity": "missing",
+   "why": "Same addition in the Chinese.",
+   "evidence": "ScaleRevision.lean:60-65"
+  },
+  {
+   "id": "when-to-inquire-and-when-to-respond",
+   "field": "laws[5].en",
+   "old": "using 1044 units of work against inquiry's 2088;",
+   "new": "with loss 3 using 1044 units of work, against the 2088 of each inquiry run above;",
+   "severity": "imprecise",
+   "why": "immediate_uses_less_work is proved for loss 3 and target 3. The 2088 comes from the inquiry runs with target 7 (low_loss_inquiry, high_loss_inquiry), so the comparison is across named runs.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean:152-166, 180-184"
+  },
+  {
+   "id": "when-to-inquire-and-when-to-respond",
+   "field": "laws[5].zh",
+   "old": "所用功为 1044 单位，探究为 2088；",
+   "new": "在损失 3 下所用功为 1044 单位，上述每次探究运行为 2088；",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "InquiryChoice.lean:152-166, 180-184"
+  },
+  {
+   "id": "evidence-through-change",
+   "field": "statement.en",
+   "old": "Along every lawful history of readings, admitted changes and responses, the actual world stays among the possible ones,",
+   "new": "Every lawful history of readings, admitted changes and responses keeps the actual world among the possible ones once it is there,",
+   "severity": "imprecise",
+   "why": "lawful_history_preserves_known and history_to_current_certificate take Known start (the actual world among the possible ones, all of them represented) as a hypothesis. The statement should name the start condition. Result is 292 characters; the represented condition stays in law 1.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean:115, 204-217"
+  },
+  {
+   "id": "evidence-through-change",
+   "field": "statement.zh",
+   "old": "沿由读数、被允许之变化与回应构成的每段合律历史，实际世界始终在可能世界之中，",
+   "new": "由读数、被允许之变化与回应构成的每段合律历史，都使已在可能世界之中的实际世界留在其中，",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "TemporalInspection.lean:115, 204-217"
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "field": "correspondence.en",
+   "old": "is two-point calibration in the sense of the International Vocabulary of Metrology (JCGM 200:2012).",
+   "new": "is calibration in the sense of the International Vocabulary of Metrology (JCGM 200:2012, 2.39), with two measurement standards.",
+   "severity": "imprecise",
+   "why": "VIM defines calibration (2.39) but no 'two-point calibration'. The attribution should point to what the vocabulary defines.",
+   "evidence": "JCGM 200:2012 entry 2.39"
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "field": "correspondence.zh",
+   "old": "即国际计量学词汇（JCGM 200:2012）意义上的两点校准。",
+   "new": "即国际计量学词汇（JCGM 200:2012，2.39）意义上的校准，以两个测量标准为之。",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "JCGM 200:2012 entry 2.39"
+  },
+  {
+   "id": "theories/becoming/chapters/03-KNOWING.md",
+   "field": "chapter_edits[adaptive-closure-cannot-resolve][0].new",
+   "old": "`propext` in some declarations, as its receipt reports;",
+   "new": "`propext` in some declarations cited, as its receipt reports;",
+   "severity": "imprecise",
+   "why": "The module itself also has Quot.sound (exact_inspection reports propext and Quot.sound). Only the cited declarations are propext-only.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/normative-activity-checks/20261007T204714.495458Z/verification.json (Generative.NormativeActivity.exact_inspection)"
+  },
+  {
+   "id": "composition-route",
+   "field": "anchor_before",
+   "old": "Composition route | **Theorem** (periphery: pre-spine CompositionalAcquisition",
+   "new": "Composition route | **Theorem** (",
+   "severity": "imprecise",
+   "why": "The drafter's anchor text is destroyed by its own first chapter edit, so the lander must insert anchors before edits. The shorter text occurs once in 03-KNOWING.md now and survives the edit, so the order of the two scripts no longer matters.",
+   "evidence": "theories/becoming/chapters/03-KNOWING.md:263 (count of 'Composition route | **Theorem** (' is 1)"
+  },
+  {
+   "id": "access-yet-to-form",
+   "field": "laws[2].en",
+   "old": "redirecting keeps the occupancy and changes whether taking is enabled",
+   "new": "redirecting the hidden configuration keeps its occupancy and changes whether taking is enabled",
+   "severity": "imprecise",
+   "why": "redirect_changes_readiness_only is proved at hidden, redirected to true. Whether redirecting changes take-enabledness depends on the occupancy of the target.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean:246-253"
+  },
+  {
+   "id": "access-yet-to-form",
+   "field": "laws[2].zh",
+   "old": "改道保持占用而改变取用是否可行",
+   "new": "隐藏构形改道后占用不变，而取用是否可行改变",
+   "severity": "imprecise",
+   "why": "Same correction in the Chinese.",
+   "evidence": "ReconfigurableSupportLogic.lean:246-253"
+  },
+  {
+   "id": "access-yet-to-form",
+   "field": "statement.zh",
+   "old": "一个在每个旧观察下与当前视图中都与空构形无别的构形",
+   "new": "一个在旧观察下与当前视图中都与空构形无别的构形",
+   "severity": "style",
+   "why": "The English says 'in old observation'. The Lean has one observation map, observe firstOnly, so 'every' (每个) adds a quantifier.",
+   "evidence": "ReconfigurableSupportLogic.lean:205-211"
+  },
+  {
+   "id": "what-a-total-keeps",
+   "field": "hypotheses[1].en",
+   "old": "every RelationsAcrossScales declaration cited uses",
+   "new": "every RelationsAcrossScales theorem cited uses",
+   "severity": "style",
+   "why": "The definitions cited (total, routing, transfer, basicProtected) are not in the receipt's audits. Only the theorems are reported with the three axioms.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/scales-verification.json (/modules/2/audits)"
+  },
+  {
+   "id": "what-a-total-keeps",
+   "field": "hypotheses[1].zh",
+   "old": "所引 RelationsAcrossScales 的每个声明都用",
+   "new": "所引 RelationsAcrossScales 的每个定理都用",
+   "severity": "style",
+   "why": "Same correction in the Chinese.",
+   "evidence": "scales-verification.json (/modules/2/audits)"
+  },
+  {
+   "id": "what-a-total-keeps",
+   "field": "validation_scope.en",
+   "old": "in every declaration cited;",
+   "new": "in every theorem cited;",
+   "severity": "style",
+   "why": "As in the hypotheses.",
+   "evidence": "scales-verification.json (/modules/2/audits)"
+  },
+  {
+   "id": "what-a-total-keeps",
+   "field": "validation_scope.zh",
+   "old": "所引每个声明用",
+   "new": "所引每个定理用",
+   "severity": "style",
+   "why": "As in the hypotheses.",
+   "evidence": "scales-verification.json (/modules/2/audits)"
+  }
+ ],
+ "verdicts": [
+  {
+   "id": "when-to-inquire-and-when-to-respond",
+   "verdict": "sound-after-edits",
+   "note": "Every cited declaration exists. Laws 1-3 match GuardHorizon/Keeping exactly (ChoiceOver named, choiceOver_fin for Fin k), and laws 4-7 match InquiryChoice's numbers and the receipt's axioms (indistinguishable_conflict none, observed_class_policy_iff Classical.choice only). Fixes: law 2 is a witness, not a law; exact recording of the loss is a missing modelling choice; the work comparison is across named runs. Possible related link: becoming-spine-instances, whose CorrectionInquiry.implements_iff_commonResponse / commonAction_iff_commonResponse is the same observation-cell law in the periphery. The chapter edit is fine."
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "verdict": "sound-after-edits",
+   "note": "Every cited declaration is in the core receipt, and the core receipt reports empty axioms for all of them. No duplicate record: thresholds-of-waiting and copied-witnesses-change-nothing cite only other FaultEnvelopes laws; thresholds-of-waiting could be added to related. Errors: the hypothesis on the periphery's Classical.choice (six declarations, not one), and the drafter's chapter label 'any type' (Domain := Nat; report law and monitor are periphery inputs). Imprecise: exact-support wording in laws 2-3, the tree witness, the Malkhi-Reiter identification. Regions base 'general' agrees with the modules map's base for FaultEnvelopes."
+  },
+  {
+   "id": "adaptive-closure-cannot-resolve",
+   "verdict": "sound-after-edits",
+   "note": "Every law matches NormativeActivity (view = receipt, judgment, open flag and three counts; ClosedLocal events; adapt invariant for every n; SoundOn abstention at settled; repair, no-inspection and exhausted witnesses). The axioms are correct as receipt 20261007T204714.495458Z reports them, and the drafter's correction of the chapter label (propext only, not Quot.sound or Classical.choice) is right. Only the chapter-label wording needs 'cited'. Record text unchanged."
+  },
+  {
+   "id": "evidence-through-change",
+   "verdict": "sound-after-edits",
+   "note": "Laws check against TemporalInspection (Known, Lawful, History; mask 3 to 7 witnesses; the understated move is outside successors) and ChangingDependency (certificate_transfers, the 2E ≤ B − L necessity, error_growth_budget). Receipt axioms are exactly as listed. The statement should carry the start condition Known. The chapter label's 'in one declaration' Classical.choice is right for the names the chapter edit cites."
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "verdict": "sound-after-edits",
+   "note": "Laws 1-2 match acquired_local_exact, report_requires_all, two_references_complete and all_signs_transfer_iff (old.gain ≠ 0) exactly. Error in law 4: the run's second component counts successes, not updates. Law 3's failures are named witnesses. The VIM attribution should be loosened. Every cited declaration reports all three axioms in calibration-renewal-verification.json, defs included. The record_edit to the-updater-line matches that record's current related list byte for byte; its owner applies it."
+  },
+  {
+   "id": "learning-a-rule-by-narrowing",
+   "verdict": "sound-after-edits",
+   "note": "Laws 1-2 match Narrowing exactly: mem_learn, answer_iff, safe_definite_requires_agreement, answer_maximal and unique_maximal_safe on a nonempty list, pointwise. Not a duplicate: becoming-spine-instances cites revise_is_after and NarrowingRuns but does not state the safe/greatest law. Laws 3-5 overstate witnesses (negation re-encoding of [id] at true; unsettled answers only at false) and misdescribe Rule Bool. Regions: the modules map lists Becoming.Narrowing as 'frame' (because of the After bridge); the record's list laws make 'general' defensible."
+  },
+  {
+   "id": "readings-a-response-needs",
+   "verdict": "sound",
+   "note": "Every law matches AssurancePlans Regulation and Routes: opposite_moves, no_merged_move for any reading merging 1 and 2, kept_along, next_move_changes, completes_iff from unreached modes, adequate_merges_outcomes for leftReading only (the drafter's correction is right), common_coarsening_constant / inadequate and no_coarsest_adequate. The formal-reuse dependency on assured-route-criterion is right: completes_ofMap_single and completes_ofMap_iff are used. Routes.completes_iff is also stated as an instance in assured-route-criterion; that overlap is acceptable. The chapter edits are right."
+  },
+  {
+   "id": "composition-route",
+   "verdict": "sound-after-edits",
+   "note": "The laws match CodeAcquisition (acquired_exact where primitives differ, primitives_no_exact, wrong_order_fails_transfer) and RouteFormation (old_records_admit_duplicate, develop_course_collapsed from prepared 15 2, novel_record_separates, the repair course from prepared 27 6, and the no-parts course from prepared 27 2 with respond further = none). The drafter's correction that core ports exist is right. Only the anchor text needs changing so it survives the label edit. Regions: the modules map gives both modules 'general'; the drafter's 'frame' rests on law 4's courses of formationProcess, and the lander may align the two."
+  },
+  {
+   "id": "what-a-total-keeps",
+   "verdict": "sound-after-edits",
+   "note": "The laws match RelationsAcrossScales: the routing bound at (2,0) and (0,2), routing_error_bound, the enriched exact law, the transfer witnesses, no_total_only_protection, violation_certificate and threshold_ambiguity. Both of the drafter's chapter corrections are right. The statement overstates the lower bound as an error of c at each of the two states. Defs are not audited."
+  },
+  {
+   "id": "access-yet-to-form",
+   "verdict": "sound-after-edits",
+   "note": "fixed_route_behavior_iff (route equal), probe_exact, the hidden witness under allSlots and firstOnly, no_old_view_future_reader, no_blind_redirect_update and refreshed_view all match. The axioms match receipt.json exactly. Law 3's readiness clause is a witness at hidden. The chapter edit is right."
+  },
+  {
+   "id": "one-move-covering",
+   "verdict": "sound-after-edits",
+   "note": "One record for rows 140 and 284, at home in 08 §4, is right. Every law matches MoveOutcomeProcesses (covers_iff, covers_along with move types varying, not_covers_iff, lost_goal_of_not_covers_of_dne with DNE as hypothesis, summary_ensures_iff). The does_not_show of kind converse is right, and so is the drafter's correction of 03's 'takes double-negation elimination'. Only the halted witness is overstated. Family F01 and region method/base frame are consistent."
+  }
+ ],
+ "checked": "Read all 11 record files in full and compared every law with the exact Lean statement of each cited declaration, in the worktree at 04c7f93ae. Modules checked: GuardHorizon, Keeping, InquiryChoice with ScaleRevision's probeBody, FaultEnvelopes, PooledEnvelopes, TreeSearch, NormativeActivity, TemporalInspection, ChangingDependency, CalibratedUpdater, CalibrationRenewal with UpdaterConsequences.run, Narrowing, AssurancePlans, CodeAcquisition, RouteFormation, RelationsAcrossScales, ReconfigurableSupportLogic and MoveOutcomeProcesses. A script confirmed every cited declaration exists, every law declaration is listed in a references entry, and every Becoming.* name is in core receipt 20261025T212948.819150Z with no generated-axiom entry. I read every periphery receipt's axiom audits: inquiry-choice, normative-activity, temporal-inspection, changing-dependency, calibration-renewal, scales, reconfigurable-logic, standards-bridge, and the fault-tolerant, evidence-qualified and acquired correction receipts. research.py check reports no binding or drift errors for these ids, only RESULTS, THEORY-GRAPH and generated-view render errors that the lander's render resolves. research.py lint --ids gives 0 findings. Every anchor_before and every chapter-edit old string occurs exactly once in 03-KNOWING.md or 08-METHOD.md. Proposed replacements were applied in simulation: each old substring matches once, and every changed statement or law stays within 300/150 and 420/190. I searched records by module name for duplicates: none states the same result. Dependency and related ids all exist, three of them as other units' untracked files. Families match the nearest home records, and regions bases were compared with regions.json's modules map."
+}

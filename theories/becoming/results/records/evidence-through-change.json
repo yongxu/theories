@@ -1,0 +1,218 @@
+{
+  "schema_version": 2,
+  "id": "evidence-through-change",
+  "title": {
+    "en": "Evidence through change: candidates propagated through every admitted change",
+    "zh": "经变化的证据：经每个被允许之变化传播的候选"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F05",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "Every lawful history of readings, admitted changes and responses keeps the actual world among the possible ones once it is there, so a certificate over their pooled models stays sound; predicting a change can reopen excluded alternatives, and an understated change can leave false confidence.",
+    "zh": "由读数、被允许之变化与回应构成的每段合律历史，都使已在可能世界之中的实际世界留在其中，故其汇集模型上的证书保持可靠；预测一次变化可重开已排除的备择，被低报的变化可留下虚假的信心。"
+  },
+  "laws": [
+    {
+      "en": "A reading keeps every world that fits it, so the actual world, fitting its own report, is kept; prediction of an admitted change keeps every lawful successor of a possible world. Along every lawful history, from a state whose possible worlds hold the actual one and lie among the represented worlds, the finish has the same.",
+      "zh": "读数保留与之相合的每个世界，故与其自身报告相合的实际世界被保留；对被允许变化的预测保留每个可能世界的每个合律后继。从可能世界含实际世界且皆在被表示世界之中的状态出发，沿每段合律历史，终态亦然。",
+      "declarations": [
+        "TemporalInspection.received_actual_retained",
+        "TemporalInspection.prediction_contains_successor",
+        "TemporalInspection.Known",
+        "TemporalInspection.lawful_history_preserves_known"
+      ]
+    },
+    {
+      "en": "A certificate over the pool of the possible worlds' models then warrants, for the causes acting on commands, whatever every faithful domain outside those causes warrants, at every lawful finish.",
+      "zh": "于是在每个合律终态，可能世界之模型汇集上的证书，对作用于命令的原因，担保这些原因之外每个忠实域所担保者。",
+      "declarations": [
+        "TemporalInspection.current_pool_sound",
+        "TemporalInspection.history_to_current_certificate"
+      ]
+    },
+    {
+      "en": "Witnesses: after a scan leaves two models, predicting a reset reopens all three and the certificate that passed fails; a control change after the last report reopens all three; a change recorded as steady when the world moved leaves the actual world outside the possible ones, the certificate passing on compromised support while the audit fails.",
+      "zh": "见证：扫描留下两个模型后，预测一次重置重开全部三个，原先通过的证书失效；最后一次报告之后的控制改变重开全部三个；世界已移动却记为不变，使实际世界落在可能世界之外，证书凭受损的支持通过，而审计失败。",
+      "declarations": [
+        "TemporalInspection.predicting_change_reopens_relevant_alternatives",
+        "TemporalInspection.new_change_after_last_report_reopens_coverage",
+        "TemporalInspection.understated_change_can_leave_false_confidence"
+      ]
+    },
+    {
+      "en": "Over the reals, an intervention certified from a reading with symmetric error E keeps the end within the target [L, B] wherever the actual value lies within E of the reading, and needs 2E ≤ B − L; with error growing as σ + ρt it needs 2ρt ≤ B − L − 2σ.",
+      "zh": "实数上，由对称误差为 E 的读数所证的干预，在实际值与读数相差不超过 E 处使终值落在目标 [L, B] 之内，并需 2E ≤ B − L；误差按 σ + ρt 增长时需 2ρt ≤ B − L − 2σ。",
+      "declarations": [
+        "ChangingDependency.certified",
+        "ChangingDependency.certificate_transfers",
+        "ChangingDependency.uncertainty_requires_tolerance",
+        "ChangingDependency.error_growth_budget"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The worlds, the admitted changes and their successors, the reporting law and the faithfulness of diagnostics are supplied; recording, local atomic steps and command execution are protected.",
+      "zh": "世界、被允许之变化及其后继、报告律与诊断之忠实为给定；记录、局部原子步与命令执行受保护。"
+    },
+    {
+      "en": "For the bound, the error model σ + ρt and an additive intervention bounded by what is left are supplied, over the real numbers (Mathlib).",
+      "zh": "就界而言，误差模型 σ + ρt 与以剩余为界的相加干预为给定，在实数上（Mathlib）。"
+    },
+    {
+      "en": "Axioms: in TemporalInspection received_actual_retained and the understated-change witness use propext, the prediction and history laws propext and Quot.sound, the reset and control witnesses none; the ChangingDependency declarations use propext, Quot.sound and Classical.choice, as their receipts report.",
+      "zh": "公理：TemporalInspection 中 received_actual_retained 与低报变化之见证用 propext，预测与历史诸律用 propext 与 Quot.sound，重置与控制见证无公理；ChangingDependency 的声明用 propext、Quot.sound 与 Classical.choice，如其回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the admitted changes are the actual ones: the transition relation is supplied, not inferred from a notice or a clock.",
+      "zh": "被允许的变化就是实际的变化：迁移关系为给定，而非由通告或时钟推出。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Physical recovery or legitimacy: a passing certificate warrants only what faithful domains warrant.",
+      "zh": "物理恢复或正当性：通过的证书只担保忠实域所担保者。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a certificate which passes is sound when a change is understated: the actual world can fall outside the possible ones.",
+      "zh": "变化被低报时，通过的证书仍可靠：实际世界可落在可能世界之外。",
+      "kind": "non-implication",
+      "witness": "TemporalInspection.understated_change_can_leave_false_confidence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+      "detail": {
+        "en": "A movement recorded as steady: the actual world leaves the possible ones, the certificate passes on supports the actual faults include, and the audit fails (understated_change_can_leave_false_confidence).",
+        "zh": "移动被记为不变：实际世界离开可能世界，证书凭实际故障所含的支持通过，审计失败（understated_change_can_leave_false_confidence）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: TemporalInspection by its own checker (Lean 4.29.1, receipt 20261008T114957.579255Z); ChangingDependency by its package checker (Lean 4.30.0-rc2 with Mathlib); axioms as named; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 实查：TemporalInspection 经其自身检查器（Lean 4.29.1，回执 20261008T114957.579255Z）；ChangingDependency 经其包检查器（Lean 4.30.0-rc2 与 Mathlib）；公理如所列；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Join the inspection to the core's pooled envelopes: state the propagated candidates as a process on situations whose admitted changes are steps, so that the history law is an instance of the core's kept candidates.",
+    "zh": "把此检查接入核心的汇集包络：把传播的候选陈述为情境上的过程，被允许的变化为其步，使历史之律成为核心所保留候选的一个实例。"
+  },
+  "correspondence": {
+    "en": "Propagating a set of possible states through admitted transitions and filtering by later readings is set-membership state estimation (Schweppe 1968; Bertsekas and Rhodes 1971).",
+    "zh": "经被允许的迁移传播可能状态之集，再以后来的读数过滤，即集员状态估计（Schweppe 1968；Bertsekas 与 Rhodes 1971）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+  "aliases": [
+    "evidence through change",
+    "经变化的证据",
+    "TemporalInspection.lawful_history_preserves_known",
+    "ChangingDependency.error_growth_budget"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "certificates-sound-and-available",
+      "detail": {
+        "en": "Soundness of a certificate over pooled models at one time; here kept along a history of admitted change.",
+        "zh": "某一时刻汇集模型上证书的可靠；此处沿被允许之变化的历史保持。"
+      }
+    },
+    {
+      "id": "historical-source-binding",
+      "detail": {
+        "en": "An explanation of a dated record gives the content where every rival is told apart by a dated control.",
+        "zh": "对带日期记录的解释给出内容，在每个对手都被带日期的对照分开之处。"
+      }
+    },
+    {
+      "id": "fallible-witness-diagnosability",
+      "detail": {
+        "en": "Telling answers apart with fallible witnesses at one time.",
+        "zh": "在某一时刻以可错的见证者分辨回答。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+      "role": "proof",
+      "declarations": [
+        "TemporalInspection.received_actual_retained",
+        "TemporalInspection.prediction_contains_successor",
+        "TemporalInspection.Known",
+        "TemporalInspection.lawful_history_preserves_known",
+        "TemporalInspection.current_pool_sound",
+        "TemporalInspection.history_to_current_certificate",
+        "TemporalInspection.predicting_change_reopens_relevant_alternatives",
+        "TemporalInspection.new_change_after_last_report_reopens_coverage",
+        "TemporalInspection.understated_change_can_leave_false_confidence"
+      ],
+      "sha256": "4916c6b1d5cbf38b7cebdd378fa508c799e279c56daaf5359334c4a73bf48694"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ChangingDependency.lean",
+      "role": "proof",
+      "declarations": [
+        "ChangingDependency.certified",
+        "ChangingDependency.certificate_transfers",
+        "ChangingDependency.uncertainty_requires_tolerance",
+        "ChangingDependency.error_growth_budget"
+      ],
+      "sha256": "cb4d03ecb9306acfa6c65bc962b5cecb48de7e1244cb6d04903e75df8bb576f5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/temporal-inspection-checks/20261008T114957.579255Z/verification.json",
+      "role": "receipt",
+      "sha256": "b77a27c5f4fc4f904fc9a6e94052d0cf6098fae17f3c318fb8fa73f4560833b8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/changing-dependency-verification.json",
+      "role": "receipt",
+      "sha256": "7dfa3cda129221d2f561ec7810bdeac92bddd70954054b55def5c0ae87a21bcc"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "58e42859a9f7ec5720b68d4bc28f43b02e2fc1d24ab766913ed0d56980751ef1"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/temporal-inspection-checks/20261008T114957.579255Z/verification.json",
+      "sha256_pointer": "/sources/TemporalInspection/sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ChangingDependency.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/changing-dependency-verification.json",
+      "sha256_pointer": "/modules/6/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), that candidates propagated through admitted change keep the actual world and a pooled certificate sound, the witnesses of unpredicted and understated change, and the tolerance a growing error needs; from DEFECTS-FOUND (triage row 133); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），经被允许之变化传播的候选保留实际世界并使汇集证书可靠，未预测与被低报之变化的见证，以及增长之误差所需的容差；出自 DEFECTS-FOUND（分诊第 133 行）；研究第 426 节。"
+    }
+  ]
+}

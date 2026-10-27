@@ -1,0 +1,419 @@
+{
+ "edits": [
+  {
+   "id": "reach-from-a-seed",
+   "field": "statement.en",
+   "old": "That each configuration no such property separates is reached is exactly double-negation elimination.",
+   "new": "That every process reaches each configuration none separates is exactly double-negation elimination.",
+   "severity": "error",
+   "why": "The calibration is a statement about every process whose configurations and moves lie in one universe. For one fixed process, reaching each unseparated configuration is not double-negation elimination: where its reach is decided, it holds outright (fromSeed_iff_not_separated_of_decidable). The sentence as written puts it on the single process of the first clause. New length 295 of 300.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SeedReach.lean:177-179 (∀ (S A : Type u) (P …) …, ¬ Separated → FromSeed) ↔ ∀ p, ¬¬p → p; :135-141"
+  },
+  {
+   "id": "reach-from-a-seed",
+   "field": "statement.zh",
+   "old": "“凡无此种性质分开的构形皆可及”恰是双重否定消去。",
+   "new": "“每个过程都到达无此种性质分开的每个构形”恰是双重否定消去。",
+   "severity": "error",
+   "why": "Same quantifier as the English: the claim is about every process.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SeedReach.lean:177-179"
+  },
+  {
+   "id": "reach-from-a-seed",
+   "field": "laws[3].en",
+   "old": "One process needs it: one step between two configurations under exactly a condition whose double negation is given, the second not separated and reached only where the condition holds. Refuting every separation gives no path; reaching needs one.",
+   "new": "For each condition, one process needs it: one step under exactly that condition, its end not separated where the condition's double negation is given and reached only where it holds. Refuting every separation refutes only being unreached.",
+   "severity": "overclaim",
+   "why": "The Lean proves an equivalence with double-negation elimination. It does not prove that refuting every separation gives no path, which is a claim that something cannot be derived. 'One process' is really a family, conditional p, one process for each p. The theorem conditional_not_separated takes ¬¬p as a hypothesis. New law length 410 of 420.",
+   "evidence": "SeedReach.lean:149-151 (conditional p for every p), :154-158 (needs ¬¬p), :161-167, :180-183"
+  },
+  {
+   "id": "reach-from-a-seed",
+   "field": "laws[3].zh",
+   "old": "一个过程就需要它：在一个已给其双重否定的条件下，于两个构形之间恰走一步；后者不被分开，而只在该条件成立时可及。故否证每种分开并不给出路径，到达需要路径。",
+   "new": "对每个条件，一个过程就需要它：恰在该条件下走一步，已给该条件之双重否定时其终点不被分开，而只在该条件成立时可及。否证每种分开只否证不可及。",
+   "severity": "overclaim",
+   "why": "Matches the English fix: one process for each condition, and no claim that no path can be given. 116 of 190 characters.",
+   "evidence": "SeedReach.lean:149-167, :177-183"
+  },
+  {
+   "id": "reach-from-a-seed",
+   "field": "correspondence.en",
+   "old": "Classically the reachable set itself separates every unreachable configuration, and the converse step is double-negation elimination;",
+   "new": "The reachable set itself separates every unreachable configuration with no classical principle (unreached_has_invariant); the converse, from no separation to reach, is where double-negation elimination enters;",
+   "severity": "error",
+   "why": "Saying 'classically' credits the forward direction to classical logic. It is constructive: unreached_has_invariant has an empty axiom report and uses FromSeed itself as the separating invariant. Only the converse needs double-negation elimination.",
+   "evidence": "SeedReach.lean:88-91; core receipt becoming-checks/20261025T212948.819150Z/verification.json, module Becoming.SeedReach, axiom_dependencies unreached_has_invariant: []"
+  },
+  {
+   "id": "reach-from-a-seed",
+   "field": "correspondence.zh",
+   "old": "经典地，可达集本身分开每个不可达构形，逆向一步是双重否定消去；",
+   "new": "可达集本身分开每个不可达构形，无需经典原则（unreached_has_invariant）；逆向一步，由无分开到可及，才需双重否定消去；",
+   "severity": "error",
+   "why": "Same as the English.",
+   "evidence": "SeedReach.lean:88-91"
+  },
+  {
+   "id": "reach-from-a-seed",
+   "field": "laws[0].en",
+   "old": "and every target is reached exactly where every such property holds at every target",
+   "new": "and every target is reached exactly when every such property holds at every target",
+   "severity": "style",
+   "why": "covers_iff_invariant is an equivalence of two closed propositions, not a pointwise condition, so 'where' does not fit. 397 characters.",
+   "evidence": "SeedReach.lean:80-84"
+  },
+  {
+   "id": "reach-from-a-seed",
+   "field": "laws[0].zh",
+   "old": "每个目标都可及，恰在每个这样的性质在每个目标处都成立之处",
+   "new": "每个目标都可及，恰当每个这样的性质在每个目标处都成立",
+   "severity": "style",
+   "why": "Matches the English.",
+   "evidence": "SeedReach.lean:80-84"
+  },
+  {
+   "id": "reach-from-a-seed",
+   "field": "chapter_edits[0].new",
+   "old": "refuting every separation gives no path, and reaching a configuration needs one",
+   "new": "refuting every separation refutes only that the configuration is unreached, and reaching it needs a path",
+   "severity": "overclaim",
+   "why": "The same overclaim as in law 4, now in the chapter. The Lean shows only that getting the path from no separation, for every process, is equivalent to double-negation elimination.",
+   "evidence": "SeedReach.lean:122-132, :177-183; theories/becoming/chapters/01-ROOT.md:475"
+  },
+  {
+   "id": "reach-from-a-seed",
+   "field": "related",
+   "old": "(no entry for type-formation-gives-no-dynamics)",
+   "new": "append {\"id\": \"type-formation-gives-no-dynamics\", \"detail\": {\"en\": \"The pre-spine form of two of these laws: reachability is the least reflexive-transitive relation containing the steps, and with no steps it is equality (reach_without_steps_iff), the one-seed case of fromSeed_iff_seed_of_no_moves.\", \"zh\": \"其中两律的主干前形式：可达是含诸步的最小自反传递关系，无步时即相等（reach_without_steps_iff），即 fromSeed_iff_seed_of_no_moves 的单种子情形。\"}}",
+   "severity": "missing",
+   "why": "Both records are in this batch and state the same no-step law and leastness. GeneratedPaths' Reach has the same definition as the frame's Reach (∃ word, Trace P s word t on Generative.Process).",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean:20-21, :87-95; becoming/Becoming/Frame.lean:188; SeedReach.lean:102-107"
+  },
+  {
+   "id": "what-a-summary-keeps",
+   "field": "chapter_edits[2].new",
+   "old": "The access model and its witness are [knowing's](03-KNOWING.md#r-access-yet-to-form).",
+   "new": "The access model's exact behaviour with the route fixed and its witness are [knowing's](03-KNOWING.md#r-access-yet-to-form).",
+   "severity": "error",
+   "why": "This record keeps an access-model law of its own (law 3: exact_reader_separates, unrestricted_reader_injective). Saying 'the access model ... are knowing's' contradicts that, and would break one result, one record. Only fixed_route_behavior_iff and the Witness belong to access-yet-to-form (triage row 139). This wording matches the record_edit's own related detail.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean:161-166 (row 139), :170-190 (this record); triage.json row 139 laws"
+  },
+  {
+   "id": "what-a-summary-keeps",
+   "field": "chapter_edits (add, apply before edit [0])",
+   "old": "- An exact summary of feasibility cannot identify two configurations that differ on some finite word.",
+   "new": "- An exact summary of feasibility cannot identify two configurations that differ on some finite word (`feasible_difference_implies_projection_difference`). In the access model, a summary from which some reader reads off every word's feasibility separates occupancy throughout the permitted access set (`exact_reader_separates`); with every support permitted and the route fixed, every such encoding of occupancy is one to one (`unrestricted_reader_injective`).",
+   "severity": "missing",
+   "why": "Law 3 of the record (exact_reader_separates, unrestricted_reader_injective) is not stated anywhere in 08 §4. The record must say what its home section says. Bullet 2 is where the access instance of law 2 belongs.",
+   "evidence": "ReconfigurableSupportLogic.lean:170-190; theories/becoming/chapters/08-METHOD.md:279"
+  },
+  {
+   "id": "what-a-summary-keeps",
+   "field": "chapter_edits[0].new",
+   "old": "the access witness on standard axioms, `propext` and `Quot.sound`, and the access model's laws on `propext`)",
+   "new": "the access witness on standard axioms, as is the access model: `propext` and `Quot.sound` in some declarations)",
+   "severity": "imprecise",
+   "why": "With the access-model laws of law 3 in the section, the label 'the access model's laws on propext' is wrong: unrestricted_reader_injective uses propext and Quot.sound. The anchor_before prefix '**Theorem** (any process; the access witness on standard axioms' is kept.",
+   "evidence": "deeper/reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json /modules/1/standard_axiom_audits: unrestricted_reader_injective [propext, Quot.sound], exact_reader_separates [propext], fixed_route_behavior_iff [propext]"
+  },
+  {
+   "id": "what-a-summary-keeps",
+   "field": "related[1].detail.en",
+   "old": "Along one run: the image through a projection represents every finite path exactly, in projection_exact_iff's sense, exactly where configurations alike under it match steps.",
+   "new": "Its instance for the image process: the image through a projection represents every finite path exactly, in projection_exact_iff's sense, exactly where configurations alike under it match each other's steps (image_exact_iff).",
+   "severity": "imprecise",
+   "why": "image_exact_iff is about the image process of P through π. It is not a law along one run, even though the record's title is.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LawAlongRun.lean:287-300"
+  },
+  {
+   "id": "what-a-summary-keeps",
+   "field": "related[1].detail.zh",
+   "old": "沿一个运行：经投影之像在 projection_exact_iff 的意义上精确表示每条有限路径，恰在经它相同的构形相互匹配步之处。",
+   "new": "其对像过程的实例：经投影之像在 projection_exact_iff 的意义上精确表示每条有限路径，恰在经它相同的构形相互匹配步之处（image_exact_iff）。",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "LawAlongRun.lean:290-300"
+  },
+  {
+   "id": "what-a-summary-keeps",
+   "field": "references[3].role",
+   "old": "proof",
+   "new": "provenance",
+   "severity": "style",
+   "why": "The core receipt lists HistoryRealization as superseded, stated_by Becoming.HistoryLanguages and Becoming.Joining. R35 set the precedent on derived-history-law-exactness: references to superseded modules were re-roled as provenance, their declarations kept and their bindings dropped. If taken: drop proof_bindings[3] and the HistoryRealization clause in validation_scope and hypotheses[2]. Keep the two pre-spine names in law 4 only if check accepts law declarations listed in a provenance reference. Leaving it as it is stays valid, since the 6 October receipt binds the current bytes. This is the lander's choice.",
+   "evidence": "becoming/check_becoming.py:161 (\"HistoryRealization\": [\"Becoming.HistoryLanguages\", \"Becoming.Joining\"]); becoming/Becoming/HistoryLanguages.lean:35-38; theories/becoming/results/records/derived-history-law-exactness.json history (20 October 2026, R35)"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "next_delta.en",
+   "old": "Connect reachability's leastness to the core: prove GeneratedPaths' least reflexive-transitive relation equivalent to the frame's closure of steps (reach_iff_withinClosure), so the pre-spine module becomes an instance of the spine.",
+   "new": "Join both modules to the core: ProductTower imports only Lean's prelude and can join as it is, and GeneratedPaths' Reach is by definition the frame's Reach, so its leastness and the law with no steps follow from reach_iff_withinClosure and fromSeed_iff_seed_of_no_moves.",
+   "severity": "imprecise",
+   "why": "Generative.Deeper.Reach and Becoming.Reach are the same definition (∃ word, Trace P s word t on Generative.Process), so the proposed equivalence is Iff.rfl and adds nothing. The core already states the leastness (reach_iff_withinClosure, fromSeed_iff_invariant) and the no-step law in seed form. What remains is that neither module is in the core.",
+   "evidence": "deeper/GeneratedPaths.lean:20-21; becoming/Becoming/Frame.lean:188, :224-228; becoming/Becoming/SeedReach.lean:73-76, :102-107; deeper/ProductTower.lean:1 (no import)"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "next_delta.zh",
+   "old": "把可达之最小性接入核心：证明 GeneratedPaths 的最小自反传递关系与框架中诸步的闭包（reach_iff_withinClosure）等价，使这一主干之前的模块成为主干的实例。",
+   "new": "把两个模块接入核心：ProductTower 只用 Lean 前奏，可原样接入；GeneratedPaths 的 Reach 按定义即框架的 Reach，故其最小性与无步之律由 reach_iff_withinClosure 与 fromSeed_iff_seed_of_no_moves 得出。",
+   "severity": "imprecise",
+   "why": "Matches the English. Under 180 characters.",
+   "evidence": "GeneratedPaths.lean:20-21; Frame.lean:188"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "statement.en",
+   "old": "and keeps distinct seeds distinct;",
+   "new": "and the diagonal keeps distinct elements of the seed distinct;",
+   "severity": "imprecise",
+   "why": "The seed is the type X. seed_distinction_persists is about two distinct elements x ≠ y of the seed, sent apart by the diagonal at every level. It is not about distinct seed types. New length 294.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ProductTower.lean:69-72"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "statement.zh",
+   "old": "并使不同的种子保持不同；",
+   "new": "对角映射使种子中不同的元素保持不同；",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "ProductTower.lean:69-72"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "laws[0].en",
+   "old": "so distinct seeds stay distinct, and the leaf of a seed's diagonal is the seed.",
+   "new": "so distinct elements of the seed stay distinct, and the leaf of an element's diagonal is that element.",
+   "severity": "imprecise",
+   "why": "leaf_diagonal and diagonal_injective are about elements x : Seed.",
+   "evidence": "ProductTower.lean:25-34"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "laws[0].zh",
+   "old": "故不同的种子保持不同，种子之对角的叶即是种子。",
+   "new": "故种子中不同的元素保持不同，元素之对角的叶即是该元素。",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "ProductTower.lean:25-34"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "chapter_edits[0].new",
+   "old": "and keeps distinct seeds distinct.",
+   "new": "and the diagonal keeps distinct elements of the seed distinct.",
+   "severity": "imprecise",
+   "why": "Same correction, in the chapter edit.",
+   "evidence": "ProductTower.lean:69-72"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "chapter_edits (add)",
+   "old": "So type formation alone yields no distinction and no occurrence.",
+   "new": "So type formation alone yields no element from an empty seed and no distinction from a seed with at most one element.",
+   "severity": "imprecise",
+   "why": "Over a seed with two elements the tower does have distinct elements. The Lean shows only that the seed's boundary is kept: empty stays empty and at most one stays at most one, in both directions.",
+   "evidence": "ProductTower.lean:36-67; theories/becoming/chapters/08-METHOD.md:388"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "title.en",
+   "old": "Type formation gives no distinction and no dynamics",
+   "new": "Type formation keeps the seed's boundary and gives no dynamics",
+   "severity": "imprecise",
+   "why": "Same overreach as the chapter sentence: the tower over a seed with two or more elements has many distinct elements. Change aliases[0] and the correspondence sentence to match (below). 62 of 100 characters.",
+   "evidence": "ProductTower.lean:13-15, :36-67"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "title.zh",
+   "old": "类型构造不给出区分与动力学",
+   "new": "类型构造保持种子之界而不给出动力学",
+   "severity": "imprecise",
+   "why": "Matches the English. 17 of 40 characters.",
+   "evidence": "ProductTower.lean:36-67"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "aliases",
+   "old": "\"type formation gives no distinction and no dynamics\", \"类型构造不给出区分与动力学\"",
+   "new": "\"type formation keeps the seed's boundary and gives no dynamics\", \"类型构造保持种子之界而不给出动力学\"",
+   "severity": "imprecise",
+   "why": "The aliases repeat the title.",
+   "evidence": "ProductTower.lean:36-67"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "correspondence",
+   "old": "The reading that type formation gives no distinction and no dynamics is the AI's. | 把类型构造读作不给出区分与动力学，是 AI 的读法。",
+   "new": "The reading that type formation keeps the seed's boundary and gives no dynamics is the AI's. | 把类型构造读作保持种子之界而不给出动力学，是 AI 的读法。",
+   "severity": "imprecise",
+   "why": "Matches the new title, in the en and zh fields respectively.",
+   "evidence": "ProductTower.lean:36-67"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "hypotheses[0]",
+   "old": "ProductTower imports nothing | ProductTower 不导入任何模块",
+   "new": "ProductTower imports only Lean's prelude | ProductTower 只用 Lean 前奏",
+   "severity": "style",
+   "why": "A file with no import line still gets Init (the prelude). en and zh respectively.",
+   "evidence": "ProductTower.lean:1-9"
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "field": "related",
+   "old": "(no entry for reach-from-a-seed)",
+   "new": "append {\"id\": \"reach-from-a-seed\", \"detail\": {\"en\": \"The core's form: reach from seeds is the least invariant holding at them (fromSeed_iff_invariant), and with no move exactly the seeds are reached (fromSeed_iff_seed_of_no_moves), of which reach_without_steps_iff is the one-seed case.\", \"zh\": \"核心中的形式：自诸种子之所及是在其处成立的最小不变性质（fromSeed_iff_invariant），全无动作时所及恰是诸种子（fromSeed_iff_seed_of_no_moves），reach_without_steps_iff 是其单种子情形。\"}}",
+   "severity": "missing",
+   "why": "Same law in the core, written in this batch. levels-of-closure is already linked; reach-from-a-seed is the closer match.",
+   "evidence": "SeedReach.lean:73-76, :102-107; GeneratedPaths.lean:87-95"
+  },
+  {
+   "id": "contraction-where-duplication-is-reachable",
+   "field": "does_not_show[0].en",
+   "old": "The exponential modality: binary duplication gives every finite multiplicity, not unbounded reuse.",
+   "new": "The exponential modality: binary duplication reaches each finite multiple of a separately; no configuration is shown to stand for unboundedly many copies at once.",
+   "severity": "imprecise",
+   "why": "'Every finite multiplicity' is itself unbounded in n, so 'not unbounded reuse' contradicts it. duplicate_finite gives a reach to Copies join a n for each n. What is missing is one object that supplies any number of copies (!a).",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean:64-76"
+  },
+  {
+   "id": "contraction-where-duplication-is-reachable",
+   "field": "does_not_show[0].zh",
+   "old": "指数模态：二元复制给出每个有限倍数，不是无界的重复使用。",
+   "new": "指数模态：二元复制分别可达 a 的每个有限倍数；未表明有构形能同时代表无界多个副本。",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "GeneratedContraction.lean:64-76"
+  },
+  {
+   "id": "contraction-where-duplication-is-reachable",
+   "field": "validation_scope.en",
+   "old": "GeneratedContraction 14 of 14 and GeneratedPaths 9 of 9 declarations with empty axiom reports,",
+   "new": "GeneratedContraction 14 of 14 and GeneratedPaths 9 of 9 audited theorems with empty axiom reports (definitions are not audited),",
+   "severity": "imprecise",
+   "why": "The receipt audits only the 14 theorems. StepFrame, Replacement, Contraction, Copies, Derives and AdmissibleContraction are cited but not in the receipt. 413 of 600 characters.",
+   "evidence": "deeper/generated-contraction-checks/20261008T101759.536385Z/receipt.json /modules/2/axiom_audits (14 theorem names); GeneratedContraction.lean:13, :24, :56, :64, :88, :114"
+  },
+  {
+   "id": "contraction-where-duplication-is-reachable",
+   "field": "validation_scope.zh",
+   "old": "GeneratedContraction 14 项、GeneratedPaths 9 项声明公理报告皆空，ContractionMechanisms 24 项中 10 项为空",
+   "new": "GeneratedContraction 14 条、GeneratedPaths 9 条所审定理公理报告皆空（定义不受审），ContractionMechanisms 24 条中 10 条为空",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "generated-contraction receipt /modules/2, /modules/3"
+  },
+  {
+   "id": "contraction-where-duplication-is-reachable",
+   "field": "hypotheses[2]",
+   "old": "the calculus's declarations have empty axiom reports; | 演算的声明公理报告皆空；",
+   "new": "the calculus's theorems have empty axiom reports (its definitions are not audited); | 演算的定理公理报告皆空（其定义不受审）；",
+   "severity": "style",
+   "why": "Same point as validation_scope. en and zh respectively.",
+   "evidence": "generated-contraction receipt /modules/2"
+  },
+  {
+   "id": "contraction-where-duplication-is-reachable",
+   "field": "chapter_edits[1].new",
+   "old": "On one port, acquire–release rounds return it to free for any finite number of rounds, and from free two acquisitions with no release between are infeasible.",
+   "new": "On one port, take–release rounds return it to free for any finite number of rounds, and from free two takes with no release between are infeasible.",
+   "severity": "style",
+   "why": "The record says 'take–release' and 'two takes', and the Lean events are take and release. One term in chapter and record.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContractionMechanisms.lean:143-159"
+  },
+  {
+   "id": "self-reference-does-not-certify-itself",
+   "field": "laws[0].en",
+   "old": "A value carries from a premise role to a conclusion role where meeting the input criterion gives the output criterion; it carries to itself for all values exactly where the input criterion implies the output one, near-definitional. Two carryings compose through a bridge from the first output to the second input.",
+   "new": "One value carries to another from a premise role to a conclusion role where the first meeting the input criterion gives the second the output criterion; every value carries to itself exactly where the input criterion implies the output one, near-definitional. Two carryings compose through a bridge, at the middle value, from the first output criterion to the second input criterion.",
+   "severity": "imprecise",
+   "why": "Carries relates two values (input x → output y), not one. compose_with_bridge needs the bridge b y → c y only at the shared middle value y. 383 of 420 characters.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean:23-24, :37-41"
+  },
+  {
+   "id": "self-reference-does-not-certify-itself",
+   "field": "laws[0].zh",
+   "old": "一个值从前提角色承载到结论角色，指满足输入标准即给出输出标准；对一切值自承载，恰在输入标准蕴涵输出标准之处，近乎定义。两次承载经由第一输出到第二输入的桥接而复合。",
+   "new": "一个值从前提角色承载到另一个值的结论角色，指前者满足输入标准即给出后者的输出标准；每个值都自承载，恰在输入标准蕴涵输出标准之处，近乎定义。两次承载经由中间值处从第一输出标准到第二输入标准的桥接而复合。",
+   "severity": "imprecise",
+   "why": "Matches the English. 100 characters.",
+   "evidence": "ReflectiveIdentity.lean:23-41"
+  },
+  {
+   "id": "self-reference-does-not-certify-itself",
+   "field": "does_not_show[1].en",
+   "old": "That a value carried to itself carries along a chain: a reflexive carrying need not compose.",
+   "new": "That a carrying reflexive for every value is transitive: strict to tolerant carries every value to itself, established to unsettled and unsettled to absent, but not established to absent.",
+   "severity": "imprecise",
+   "why": "The witness shows that a carrying which is reflexive for all values is not transitive. 'A value carried to itself carries along a chain' names no clear property. 187 of 240 characters.",
+   "evidence": "ReflectiveIdentity.lean:56-61, :69-73"
+  },
+  {
+   "id": "self-reference-does-not-certify-itself",
+   "field": "does_not_show[1].zh",
+   "old": "自承载的值沿链承载：自反的承载不必复合。",
+   "new": "对每个值自反的承载是传递的：由严到宽使每个值自承载，已定到未定、未定到缺失皆承载，已定到缺失却不承载。",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "ReflectiveIdentity.lean:56-73"
+  },
+  {
+   "id": "self-reference-does-not-certify-itself",
+   "field": "statement.en",
+   "old": "Carrying a value unchanged from premise role to conclusion role holds for all values exactly where the premise criterion implies the conclusion criterion; admitting C ↔ (C → Q) yields Q; with one carrier at every atomic index, every closed source-free term of type atom(i) → atom(i) is the identity.",
+   "new": "Carrying each value unchanged from premise role to conclusion role holds exactly where the premise criterion implies the conclusion criterion; admitting C ↔ (C → Q) yields Q; with one carrier at every atomic index, every closed source-free term of type atom(i) → atom(i) evaluates to the identity.",
+   "severity": "imprecise",
+   "why": "closed_identity_forced is about evaluation (extract term … g = g). A term need not be syntactically λx.x: an applied identity also qualifies. 297 of 300 characters.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RecognitionalBinding.lean:52-58"
+  },
+  {
+   "id": "self-reference-does-not-certify-itself",
+   "field": "statement.zh",
+   "old": "把值原样从前提角色承载到结论角色，对一切值成立，恰在前提标准蕴涵结论标准之处；承认 C ↔ (C → Q) 即得 Q；每个原子指标用同一载体时，类型为原子(i) → 原子(i) 的每个闭的无来源项都是恒等。",
+   "new": "每个值原样从前提角色承载到结论角色，恰在前提标准蕴涵结论标准之处；承认 C ↔ (C → Q) 即得 Q；每个原子指标用同一载体时，类型为原子(i) → 原子(i) 的每个闭的无来源项都求值为恒等。",
+   "severity": "imprecise",
+   "why": "Matches the English. About 100 of 150 characters.",
+   "evidence": "RecognitionalBinding.lean:52-58"
+  },
+  {
+   "id": "self-reference-does-not-certify-itself",
+   "field": "hypotheses[0]",
+   "old": "every cited declaration has an empty axiom report in its receipt. | 所引每项声明在其回执中公理报告皆空。",
+   "new": "every cited theorem has an empty axiom report in its receipt; the cited definitions are not audited. | 所引每条定理在其回执中公理报告皆空；所引定义不受审。",
+   "severity": "style",
+   "why": "Carries, ReflexiveFor and SourceFree are cited, but the receipts audit only theorems. en and zh respectively.",
+   "evidence": "deeper/reflective-identity-checks/20261008T114343.985843Z/receipt.json empty_axiom_audits (11 theorems); deeper/recognitional-binding-checks/20261008T120159.334011Z/receipt.json /modules/2 (7 theorems)"
+  }
+ ],
+ "verdicts": [
+  {
+   "id": "reach-from-a-seed",
+   "verdict": "sound-after-edits",
+   "note": "All 19 declarations exist and match the record. The core receipt 20261025T212948.819150Z gives each an empty axiom report and binds the current bytes (layer 'application'). There is no duplicate: becoming-spine-instances cites only the retired history copy, as provenance. Family F01 and regions root/frame are right. The anchor text occurs once in 01-ROOT.md:475. Three things need edits: the statement leaves out 'every process', law 4 and the chapter edit claim that refuting separation 'gives no path', and the correspondence credits classical logic with a direction that is constructive. Its only check drift comes from another session's uncommitted D69 edits to 01 §2 and §8; repoint the statement hash after the chapter edit lands. lint 0."
+  },
+  {
+   "id": "what-a-summary-keeps",
+   "verdict": "sound-after-edits",
+   "note": "The GenerativeCore and HistoryLanguages declarations exist and are empty in the core receipt. ReconfigurableSupportLogic's receipt matches hypotheses[2]: exact_reader_separates [propext], unrestricted_reader_injective [propext, Quot.sound]. HistoryRealization's receipt (verification.json /modules/7) is clean. The drafter rightly left projection_exact_iff to finite-trace-transport and the Witness to access-yet-to-form. But law 3 is stated nowhere in 08, and the drafter's own pointer sentence says the whole access model is knowing's: add the bullet-2 chapter edit and narrow the pointer. Note also that derived-history-law-exactness already cites HistoryLanguages.PrefixClosed, law and trace_iff (the extension law from any admitted history). This record's feasible_iff and realizes_feasible are the empty-history and process-language corollaries, related but not duplicates; a related link would help. lint 0; check errors are render-only."
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "verdict": "sound-after-edits",
+   "note": "Both bindings to lean/verification.json pass, with current hashes and every audited theorem empty. The laws match the Lean exactly. The next_delta proposed an equivalence that is trivially true by definition, because Generative.Deeper.Reach and Becoming.Reach are the same proposition; it has been rewritten. Separately, for the owner of check_becoming.py: line 157 maps GeneratedPaths to Becoming.AssurancePlans, which states none of reach_least, reach_is_least_closure or reach_without_steps_iff. The core's forms are in Frame (reach_iff_withinClosure) and SeedReach. So the core receipt's 'superseded' entry for GeneratedPaths names the wrong module. The word 'seed' was used for both the type and its elements, and the title said 'no distinction' where the tower does have distinctions; both are fixed. lint 0; check errors are render-only."
+  },
+  {
+   "id": "contraction-where-duplication-is-reachable",
+   "verdict": "sound-after-edits",
+   "note": "Every law matches the Lean: StepFrame, left unit and the iff directions, duplicate_finite for n+1 copies, the five-state Interference witness, Stock and Serial. The axioms in hypotheses[2] match the receipt entry for each witness. The bindings to /modules/2 and /modules/3 pass with current hashes. The formal-reuse dependency on GeneratedPaths' reach laws is right. The drafter's chapter edits are right; the old 'any number of rounds' sentence did read like a limit claim. Remaining fixes are wording only: 'not unbounded reuse', and 'declarations' where the receipt audits theorems. No existing record cites these modules. lint 0."
+  },
+  {
+   "id": "self-reference-does-not-certify-itself",
+   "verdict": "sound-after-edits",
+   "note": "Every cited declaration exists. Both receipts pass and bind the current bytes (11 and 7 theorems empty). The chapter's correction to 'closed term, one carrier' is needed: ambient_ground_can_replace is a source-free open term of type atom→atom that is not the identity, so the chapter sentence was contradicted by its own witness. The label change is needed for a unique anchor. The cited literature checks out: Curry 1942, JSL 7; Reynolds 1983, IFIP; Cobreros, Égré, Ripley and van Rooij 2012, JPL 41. Strict-to-tolerant reflexivity without transitivity is exactly the property of ST logic. Fixes are imprecisions only: Carries relates two values, the composition witness, and evaluation rather than syntax. lint 0."
+  }
+ ],
+ "checked": "I read in full all five records the drafter wrote. Each was compared, declaration by declaration, with the Lean source in the worktree: SeedReach.lean, GenerativeCore.lean, HistoryLanguages.lean, deeper/HistoryRealization, ReconfigurableSupportLogic, ProductTower, GeneratedPaths, GeneratedContraction, ContractionMechanisms, ReflectiveIdentity and RecognitionalBinding, plus Frame.lean (Reach, reach_iff_withinClosure) and LawAlongRun.lean (image_exact_iff) for the dependencies. For every binding I read its receipt: the core 20261025T212948.819150Z (module layers, superseded_modules, per-declaration axioms), lean/verification.json /modules/4, /6 and /7, reconfigurable-logic /modules/1, generated-contraction /modules/2 and /3, reflective-identity and recognitional-binding /modules/2. I confirmed the shasum of every cited source matches its receipt. I read 01-ROOT.md §9.9 and 08-METHOD.md §4 and §6. The anchor texts occur once each, except the self-reference label, which needs the drafter's label edit first. I checked the regions bases against regions.json 'about', the families against session-results.json (F01, F11), and the standard_boundaries texts. I read triage rows 139 and 283, and searched the records for every module and central name: there are no duplicates, and access-yet-to-form does not exist yet. I checked the dependency and related targets: finite-trace-transport, levels-of-closure, derived-history-law-exactness, a-law-through-a-projection-along-one-run, a-history-read-off-its-finite-stretches, constitutive-binding-assessment and binding-preserving-substitution. research.py check: for these five ids the only errors are unrendered views (RESULTS.md, THEORY-GRAPH.md and the record .md pages), plus source drift on 01-ROOT.md for reach-from-a-seed caused by another session's uncommitted edits to 01 §2 and §8. research.py lint --ids on all five: 0 findings. I measured every proposed replacement against the caps in tools/research/style.py: statement 300/150, laws 420/190, does_not_show 240/110, title 100/40, next_delta 400/180, validation_scope 600/260."
+}

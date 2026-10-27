@@ -1,0 +1,196 @@
+{
+ "records": [
+  {
+   "id": "reach-from-a-seed",
+   "rows": "55",
+   "file": "theories/becoming/results/records/reach-from-a-seed.json",
+   "status": "written",
+   "home": "theories/becoming/chapters/01-ROOT.md, §9.9 Wholes, parts and closures",
+   "anchor_before": "**Theorem** (any process). *Reach from a seed.* A configuration is reached from",
+   "regions": {
+    "region": "root",
+    "base": "frame",
+    "note": "SeedReach: reach from seeds = least invariant; DNE calibration"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/01-ROOT.md",
+     "old": "**Theorem** (any process). *Reach from a seed.* A configuration is reached from a seed exactly where every property holding at the seed and invariant under the process holds there (`SeedReachProcesses.fromSeed_iff_invariant`), and some such invariant separates it exactly where it is not reached (`separated_iff_not_fromSeed`); a configuration no invariant separates is only not unreached (`not_not_fromSeed_of_not_separated`); with no moves only the seed is reached. **Calibration.** That every process reaches every configuration no invariant separates from the seed is exactly double-negation elimination (`fromSeed_of_not_separated_iff_dne`): reaching a configuration needs a path.",
+     "new": "**Theorem** (any process). *Reach from a seed.* A configuration is reached from the seeds exactly where every property holding at the seeds and invariant under the process holds there (`SeedReachProcesses.fromSeed_iff_invariant`), and some such invariant separates it exactly where it is not reached (`separated_iff_not_fromSeed`); a configuration no invariant separates is only not unreached (`not_not_fromSeed_of_not_separated`); with no moves only the seeds are reached. **Calibration.** That every process reaches every configuration no invariant separates from its seeds is exactly double-negation elimination (`fromSeed_of_not_separated_iff_dne`): refuting every separation gives no path, and reaching a configuration needs one ([record](../results/records/reach-from-a-seed.md)).",
+     "why": "The seed is a predicate (FromSeed: reached from some seed), so the properties hold at the seeds; the calibration says what the need means; the record link. The anchor_before prefix survives this edit."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": false,
+   "notes": "Core result (application ring Becoming.SeedReach, prelude only): all 19 declarations cited, empty axiom reports in core receipt 20261025T212948.819150Z, bound at /source_sha256/Becoming.SeedReach. Family F01 (levels-of-closure and which-links-a-closure-needs in the same section). No existing record states it (only becoming-spine-instances cites the retired history/SeedReachProcesses as provenance). levels-of-closure kept as related, not a dependency (fromSeed_iff_closure reuses EdgeClosure's Closure, a definition). The statement reference hashes 01-ROOT.md as committed at HEAD (6fa27282...), the version I read; the worktree copy carries another session's uncommitted D69 edits in §2 and §8, so check reports drift for this record only from those lines (changed_sections '## 2. Class and continuation', '## 8. The models'); after those edits and the anchor/link above are committed, repoint the statement hash. No metadata errors; lint 0 findings. The only other check errors for this id are the unrendered views (RESULTS.md, THEORY-GRAPH.md, its .md page), for the lander's render."
+  },
+  {
+   "id": "what-a-summary-keeps",
+   "rows": "283",
+   "file": "theories/becoming/results/records/what-a-summary-keeps.json",
+   "status": "written",
+   "home": "theories/becoming/chapters/08-METHOD.md, §4 Premise card (what a summary keeps)",
+   "anchor_before": "**Theorem** (any process; the access witness on standard axioms",
+   "regions": {
+    "region": "method",
+    "base": "frame",
+    "note": "GenerativeCore, HistoryLanguages, ReconfigurableSupportLogic: exact summaries, what feasibility keeps, history realization"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "**Theorem** (any process; the access witness on standard axioms). Map a detailed process onto a summary.",
+     "new": "**Theorem** (any process; the access witness on standard axioms, `propext` and `Quot.sound`, and the access model's laws on `propext`). Map a detailed process onto a summary.",
+     "why": "fixed_route_behavior_iff and exact_reader_separates use propext too, not only the witness; the receipt names propext and Quot.sound, never Classical.choice. The anchor_before prefix is kept."
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "(`projection_exact_iff`, `local_exact_iff_trace_exact`).",
+     "new": "(`projection_exact_iff`, the [root's](01-ROOT.md#r-finite-trace-transport) law; pointwise, `local_exact_iff_trace_exact`).",
+     "why": "projection_exact_iff is finite-trace-transport's result, at home in 01; one result, one record."
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "the access relations that can still form limit what a current abstraction may forget.",
+     "new": "the access relations that can still form limit what a current abstraction may forget. The access model and its witness are [knowing's](03-KNOWING.md#r-access-yet-to-form).",
+     "why": "Bullets 3 and 4 (fixed_route_behavior_iff, hidden_formed and its witness) are the result of unit A's record access-yet-to-form (triage row 139); apply only once that record and its anchor land."
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "(`history_feasible_iff`); every process's own language is one (`process_language_exact_history_realization`). Any smaller summary needs its own proof for the questions asked.",
+     "new": "(`HistoryLanguages.feasible_iff`; pre-spine `history_feasible_iff`); every process's own language is one (`realizes_feasible`, `process_language_exact_history_realization`). Any smaller summary needs its own proof for the questions asked: no process on one configuration has as its language the courses of at most one move (`Bounded.no_one_point_law`).",
+     "why": "The core states history realization in Becoming.HistoryLanguages (HistoryRealization is superseded by it in the core receipt); the Bounded witness is the Lean behind the last sentence."
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "and [ReconfigurableSupportLogic](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean).",
+     "new": "and [ReconfigurableSupportLogic](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean), and the core's [Becoming.HistoryLanguages](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryLanguages.lean) ([record](../results/records/what-a-summary-keeps.md)).",
+     "why": "Names the core module the record cites and links the record."
+    }
+   ],
+   "record_edits": [
+    {
+     "id": "what-a-summary-keeps",
+     "field": "related",
+     "old": "(no entry for access-yet-to-form)",
+     "new": "append {\"id\": \"access-yet-to-form\", \"detail\": {\"en\": \"The access model's exact behaviour with the route fixed and the newly admitted probe that tells apart configurations every old observation identifies.\", \"zh\": \"路线固定时存取模型的精确行为，以及把每个旧观察都无别的构形分开的新允许探测。\"}}",
+     "why": "Unit A writes access-yet-to-form in parallel; a related link to a record that does not exist yet fails check, so add it at landing."
+    }
+   ],
+   "check_clean": true,
+   "notes": "Deviations from the triage proposal: (1) law 1 does not restate projection_exact_iff, which finite-trace-transport (01, F01) already states and aliases; the record takes its pointwise form local_exact_iff_trace_exact, plus projected_trace_iff, enabled/feasible_projection_iff and trace_faithful_iff, with a formal-reuse dependency on finite-trace-transport. (2) Proposed laws 3-4 (fixed_route_behavior_iff, Witness.hidden_formed, old_observation_same, old_workload_exact, new_probe_separates) duplicate triage row 139 (access-yet-to-form, unit A), so they are not restated. From the access model this record keeps only exact_reader_separates and unrestricted_reader_injective, which row 139 does not list: what any summary must keep there, the access instance of law 2. (3) History realization is cited from the core's Becoming.HistoryLanguages (feasible_iff, feasible_prefixClosed, feasible_nil, realizes_feasible, law, PrefixClosed), together with the pre-spine names the chapter uses (history_feasible_iff, process_language_exact_history_realization), and gains the core witness Bounded.no_one_point_law and history_realizes. Bindings: GenerativeCore and HistoryLanguages to core receipt 20261025T212948.819150Z; ReconfigurableSupportLogic to reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json (/modules/1/sha256, success /passed true; binding_for.py reports it 'unbound' only because it looks for status=='passed'); HistoryRealization to lean/verification.json (/modules/7/source_sha256), which audits its declarations (the core receipt records only its hash as superseded). Family F01. 08-METHOD.md is unchanged from HEAD (7ad2ce70...). Check errors for this id are render only."
+  },
+  {
+   "id": "type-formation-gives-no-dynamics",
+   "rows": "285",
+   "file": "theories/becoming/results/records/type-formation-gives-no-dynamics.json",
+   "status": "written",
+   "home": "theories/becoming/chapters/08-METHOD.md, §6 Expressible is not derived (type formation)",
+   "anchor_before": "**Theorem** (any type for the tower, any process for reachability). Iterating",
+   "regions": {
+    "region": "method",
+    "base": "general",
+    "note": "ProductTower, GeneratedPaths: product tower keeps the seed's boundary; reach least closure"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "keeps emptiness, and keeps having at most one element, in both directions.",
+     "new": "keeps being empty, being inhabited and having at most one element, in both directions, and keeps distinct seeds distinct.",
+     "why": "tower_nonempty_iff and seed_distinction_persists are part of the law."
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "[GeneratedPaths](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean), with empty axiom reports.",
+     "new": "[GeneratedPaths](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean), with empty axiom reports ([record](../results/records/type-formation-gives-no-dynamics.md)).",
+     "why": "Record link."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Both sources are bound to the package receipt lean/verification.json (6 October 2026, status passed): ProductTower at /modules/4/source_sha256 and GeneratedPaths at /modules/6/source_sha256. That receipt lists each audited declaration with an empty axiom report (7 and 9 theorems). binding_for.py picked other receipts: contact-formation-verification.json for ProductTower, which lists no names, and the core receipt for GeneratedPaths, which records only its hash as superseded and audits none of its declarations. Family F11 (generated logic). levels-of-closure kept as related (the core's region form of the same leastness). The next_delta proposes an equivalence theorem joining GeneratedPaths to the core's reach_iff_withinClosure; no such theorem exists now. Check errors for this id are render only."
+  },
+  {
+   "id": "contraction-where-duplication-is-reachable",
+   "rows": "286",
+   "file": "theories/becoming/results/records/contraction-where-duplication-is-reachable.json",
+   "status": "written",
+   "home": "theories/becoming/chapters/08-METHOD.md, §6 Expressible is not derived (contraction)",
+   "anchor_before": "**Theorem** (any process). Take an object calculus of configurations with identity",
+   "regions": {
+    "region": "method",
+    "base": "frame",
+    "note": "GeneratedContraction: admissible contraction iff duplicate reachable"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "A companion module (some declarations on standard axioms) gives two further facts.",
+     "new": "A companion module (some declarations on `propext` and `Quot.sound`) gives two further facts.",
+     "why": "The receipt names exactly these axioms for ContractionMechanisms; no Classical.choice."
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "Any number of acquire–release rounds on one port does not give two supports at once.",
+     "new": "On one port, acquire–release rounds return it to free for any finite number of rounds, and from free two acquisitions with no release between are infeasible.",
+     "why": "serial_reuse is for every finite n, and no_overlapping_takes is the infeasibility of [take, take] from free. The old sentence reads like a limit claim."
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "and its own [receipt](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/generated-contraction-verification.json).",
+     "new": "and its own [receipt](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/generated-contraction-verification.json) ([record](../results/records/contraction-where-duplication-is-reachable.md)).",
+     "why": "Record link."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Bound to generated-contraction-checks/20261008T101759.536385Z/receipt.json (GeneratedContraction /modules/2/sha256, ContractionMechanisms /modules/3/sha256, success /passed true): GeneratedContraction 14 of 14 empty, ContractionMechanisms 10 of 24 empty. Hypotheses give the axioms of every cited witness: step_frame, paid_duplication and Serial empty; Interference.* and Mechanisms.left_unit propext; no_free_duplication and no_free_contraction propext and Quot.sound. Public text avoids the module's exchange words (budget, paid) and says 'a ready unit with one unit of provision'. no-ethical-premise-core-axiom-free is not cited because no module here is core; 'No ethical premise' is in the hypotheses. formal-reuse dependency on type-formation-gives-no-dynamics, since derivation_sound and reach_frame use GeneratedPaths' reach laws. Related: self-reference-does-not-certify-itself (Curry's derivation uses its hypothesis twice). The triage's 'cycles run without end' was a limit claim and is replaced by 'any finite number of rounds'. Family F11. Check errors for this id are render only."
+  },
+  {
+   "id": "self-reference-does-not-certify-itself",
+   "rows": "287",
+   "file": "theories/becoming/results/records/self-reference-does-not-certify-itself.json",
+   "status": "written",
+   "home": "theories/becoming/chapters/08-METHOD.md, §6 Expressible is not derived (self-reference)",
+   "anchor_before": "**Theorem** (any type; the criteria, the fixed-point equivalence and the term language supplied).",
+   "regions": {
+    "region": "method",
+    "base": "general",
+    "note": "ReflectiveIdentity, RecognitionalBinding: carry-over, Curry, source-free identity"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "<a id=\"self-reference\"></a>\n**Theorem** (any type).",
+     "new": "<a id=\"self-reference\"></a>\n**Theorem** (any type; the criteria, the fixed-point equivalence and the term language supplied).",
+     "why": "The bare label is 23 characters and occurs four times in 08 as a prefix, so no unique anchor text exists. The longer label states the theorem's supplied premises. Apply it before inserting the anchor, which goes between the two lines."
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "- In the fragment with no source, every term of type atom(i) → atom(i) evaluates to the identity.",
+     "new": "- In the fragment with no source and one carrier at every atomic index, every closed term of type atom(i) → atom(i) evaluates to the identity.",
+     "why": "closed_identity_forced takes a closed term (empty context) and the same carrier G at every atomic index."
+    },
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "[two](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/recognitional-binding-verification.json)).",
+     "new": "[two](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/recognitional-binding-verification.json)) ([record](../results/records/self-reference-does-not-certify-itself.md)).",
+     "why": "Record link."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Bindings: ReflectiveIdentity to reflective-identity-checks/20261008T114343.985843Z/receipt.json (/source_sha256, /passed true; 11 of 11 empty); RecognitionalBinding to recognitional-binding-checks/20261008T120159.334011Z/receipt.json (/modules/2/sha256; 7 empty, plus 14 of InferentialGrounds and GroundRelationTransport). binding_for.py reports both 'unbound' only because these receipts use passed:true. The aliases leave out ReflectiveIdentity's Lean names because its receipt has no modules list: check would reject them as not elaborated. The Lean-name aliases are RecognitionalBinding's. reflexive_exact is marked near-definitional. bound_identity_spec is not cited. Correspondence cites Curry 1942, Reynolds 1983 and Cobreros, Égré, Ripley and van Rooij 2012, and the self-reference reading is labelled the AI's. Related: constitutive-binding-assessment, binding-preserving-substitution. Family F11. Check errors for this id are render only."
+  }
+ ],
+ "not_written": [
+  {
+   "id": "(access model laws of row 283: fixed_route_behavior_iff and Witness.hidden_formed, old_observation_same, old_workload_exact, new_probe_separates)",
+   "why": "Not put in what-a-summary-keeps because they are the result of access-yet-to-form (triage row 139, unit A, chapter 03). Writing them twice would break one result, one record. 08's bullets 3-4 should link that record once it lands (chapter edit given)."
+  },
+  {
+   "id": "(law 1 of row 283 as proposed: Generative.projection_exact_iff)",
+   "why": "finite-trace-transport (01, F01) already states projection_exact_iff and holds it as an alias. what-a-summary-keeps reuses it through a formal-reuse dependency and states only the pointwise form and what exactness keeps."
+  }
+ ]
+}

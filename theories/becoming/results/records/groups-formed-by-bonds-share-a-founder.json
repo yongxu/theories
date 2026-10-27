@@ -1,0 +1,193 @@
+{
+  "schema_version": 2,
+  "id": "groups-formed-by-bonds-share-a-founder",
+  "title": {
+    "en": "Groups formed by bonds share a founder",
+    "zh": "由键形成的组有共同的始祖"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-26T21:30:00+00:00",
+  "statement": {
+    "en": "Where division copies the parent's retention state and founder, adding a bond while retention is active, every history of division, retention change and detachment from a lineage-consistent start keeps positions joined by bonds on one founder: group ancestry derived from bonds rather than a listing.",
+    "zh": "分裂复制亲代的保留状态与始祖，保留活跃时加一条键；则从世系一致的起点出发、由分裂、保留改变与脱离构成的每段历史中，由键相连的位置有同一始祖：组的世系出自键，而非出自列表。"
+  },
+  "laws": [
+    {
+      "en": "Runs of the event law (division, retention change, detachment, aggregation) are exactly the traces of its process; division adds one position copying the parent's retention state and founder and, while the parent retains, a bond from parent to daughter; a changed retention state governs the next division.",
+      "zh": "事件律（分裂、保留改变、脱离、聚合）的运行恰是其过程的迹；分裂加一个位置，复制亲代的保留状态与始祖，亲代保留时加一条由亲到子的键；改变后的保留状态支配下一次分裂。",
+      "declarations": [
+        "DevelopmentalAssociation.run_iff_core_trace",
+        "DevelopmentalAssociation.division_inherits",
+        "DevelopmentalAssociation.changed_state_governs_division"
+      ]
+    },
+    {
+      "en": "Every trace with no aggregation event from a lineage-consistent state (each bond joins two present positions of one founder) ends lineage-consistent, and there positions connected through bonds, either way and in chains, share a founder; so in every such run positions connected by actual bonds share a founder.",
+      "zh": "从世系一致的状态（每条键连接同一始祖的两个现有位置）出发、不含聚合事件的每条迹，终于世系一致的状态；在那里经键相连（不论方向、可成链）的位置有共同始祖；所以在每次这样的运行中，由实际的键相连的位置有共同始祖。",
+      "declarations": [
+        "DevelopmentalAssociation.division_preserves_lineage",
+        "DevelopmentalAssociation.step_preserves_lineage",
+        "DevelopmentalAssociation.trace_preserves_lineage",
+        "DevelopmentalAssociation.connected_same_founder",
+        "DevelopmentalAssociation.developed_groups_have_common_origin"
+      ]
+    },
+    {
+      "en": "In a seed of two founders, aggregating positions 0 and 1 joins positions of different founders by a bond, the counterexample outside the no-aggregation hypothesis. From one founder, detaching bond 1–2 or bond 0–1 after the same growth ends with equal counts, accounts, retention states and founders, yet detaching 0–1 is then available in one only, so no function of the bond-omitting snapshot predicts it exactly.",
+      "zh": "在两个始祖的种子中，聚合位置 0 与 1 以一条键连接不同始祖的位置，这是无聚合假设之外的反例。由一个始祖，同样生长之后脱离键 1–2 或键 0–1，终于相同的计数、账目、保留状态与始祖，而此后脱离 0–1 只在其一中可行；所以没有省略键的快照之函数能精确预测它。",
+      "declarations": [
+        "DevelopmentalAssociation.aggregation_breaks_clonal_conclusion",
+        "DevelopmentalAssociation.equal_cell_states_different_continuations",
+        "DevelopmentalAssociation.comparison_histories_are_actual",
+        "DevelopmentalAssociation.no_bond_free_exact_predictor"
+      ]
+    },
+    {
+      "en": "Witnesses from one founder: switching retention on and dividing three times forms a chain of four positions of one founder; a separated descendant goes on dividing into a new attached group; switching retention off changes later division without removing earlier bonds.",
+      "zh": "由一个始祖的见证：开启保留并分裂三次，形成同一始祖的四位置链；分离出的后代继续分裂成新的相连组；关闭保留改变以后的分裂，而不去除先前的键。",
+      "declarations": [
+        "DevelopmentalAssociation.changed_division_forms_group",
+        "DevelopmentalAssociation.separated_descendant_reconstructs_association",
+        "DevelopmentalAssociation.restored_separation_changes_later_growth"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Supplied: the local event law, when events occur, and unit accounts (a division uses one precursor and one support unit, every other event one support unit); positions are indices below the count; whole numbers, events in order.",
+      "zh": "所给：局部事件律、事件何时发生，以及单位账目（分裂用一个前体与一单位支持，其他事件各用一单位支持）；位置是小于计数的指标；整数，事件依次发生。"
+    },
+    {
+      "en": "No aggregation event in the history, and a lineage-consistent start. A founder is genealogical origin, not constant genotype, shared interest or genetic identity under change.",
+      "zh": "历史中无聚合事件，且起点世系一致。始祖是谱系的来源，不是不变的基因型、共同利益或变化下的遗传同一。"
+    },
+    {
+      "en": "Periphery, a module before the spine on the earlier generative core, which imports Std: the cited theorems use propext and Quot.sound, or less (connected_same_founder none), as the receipt reports.",
+      "zh": "外围，脊柱之前的模块，基于较早的生成核心（其导入 Std）：所引定理用 propext 与 Quot.sound 或更少（connected_same_founder 不用公理），如回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That models keeping bonds or history fail: the impossibility limits the bond-omitting snapshot only.",
+      "zh": "保留键或历史的模型失败：此不可能只限制省略键的快照。",
+      "kind": "scope"
+    },
+    {
+      "en": "A molecular derivation, a mutation rate, an energetic calibration or a fitted rate.",
+      "zh": "分子推导、突变率、能量校准或拟合的速率。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "How parts first come to live as one, or groups formed by aggregation or from several founders.",
+      "zh": "部分如何初次共生为一，或由聚合或多个始祖形成的组。",
+      "kind": "scope"
+    },
+    {
+      "en": "That selection favours attachment: differential survival and its ecological input are absent.",
+      "zh": "选择偏好相连：差异存续及其生态输入不在模型中。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "formal-not-empirical",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Checked by the module's checker with Lean 4.29.1 (receipt developmental-association-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes, which later receipts of other modules re-check): DevelopmentalAssociation, 41 declarations audited, 19 theorems, 15 cited here. The study records a review by the implementing author, no independent review; not reviewed by a person.",
+    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 developmental-association-verification，2026年10月7日通过，新鲜临时构建，检查期间源码未变；绑定当前字节，其他模块的后续回执复查之）：DevelopmentalAssociation 审计 41 项声明、19 条定理，此处引 15 条。研究记有实现者自审，无独立审查；未经人审。"
+  },
+  "next_delta": {
+    "en": "Differential continuation caused by the developed association, with ecological input, the draw of attachment, fragmentation and replenishment told apart, against a conventional model with the same structural information.",
+    "zh": "由所发育之相连引起的差异延续，区分生态输入、相连之取用、碎裂与补充，并与具有同样结构信息的常规模型相比。"
+  },
+  "correspondence": {
+    "en": "Snowflake yeast (Ratcliff et al. 2015, Nature Communications 6): impaired cell separation keeps mother and daughter attached, so clusters grow clonally, the case in which bonds alone give a common founder; no rate is fitted. Aggregative multicellularity falls under the excluded case, where aggregation_breaks_clonal_conclusion shows the common founder can fail. Reading founder as genealogy rather than genotype is the AI's.",
+    "zh": "雪花酵母（Ratcliff 等 2015，Nature Communications 6）：细胞分离受损使母子相连，簇以克隆方式生长，此即仅由键便给出共同始祖之例；未拟合速率。聚合型多细胞性属于被排除的情形，aggregation_breaks_clonal_conclusion 显示其中共同始祖可以不成立。把始祖读作谱系而非基因型，是 AI 的解读。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/DevelopmentalAssociation.lean",
+  "aliases": [
+    "Groups formed by bonds share a founder",
+    "由键形成的组有共同的始祖",
+    "DevelopmentalAssociation.developed_groups_have_common_origin",
+    "DevelopmentalAssociation.no_bond_free_exact_predictor"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "groups-formed-by-descent",
+      "detail": {
+        "en": "Groups formed by descent from listed uniform groups; here the groups are read off the bonds a history forms.",
+        "zh": "由所列之均一组经世系而成的组；此处组由历史所形成的键读出。"
+      }
+    },
+    {
+      "id": "selection-within-and-among-groups-of-any-sizes",
+      "detail": {
+        "en": "The master law reads any listing; this result derives one listing, connected positions, from bonds.",
+        "zh": "主律读任何列表；此结果由键导出一种列表，即相连的位置。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/DevelopmentalAssociation.lean",
+      "role": "proof",
+      "sha256": "6137099d1ae405f6f26bda3966960ce495dcc8e519297ae922cf4927a73eb8be",
+      "declarations": [
+        "DevelopmentalAssociation.run_iff_core_trace",
+        "DevelopmentalAssociation.division_inherits",
+        "DevelopmentalAssociation.changed_state_governs_division",
+        "DevelopmentalAssociation.division_preserves_lineage",
+        "DevelopmentalAssociation.step_preserves_lineage",
+        "DevelopmentalAssociation.trace_preserves_lineage",
+        "DevelopmentalAssociation.connected_same_founder",
+        "DevelopmentalAssociation.developed_groups_have_common_origin",
+        "DevelopmentalAssociation.aggregation_breaks_clonal_conclusion",
+        "DevelopmentalAssociation.equal_cell_states_different_continuations",
+        "DevelopmentalAssociation.comparison_histories_are_actual",
+        "DevelopmentalAssociation.no_bond_free_exact_predictor",
+        "DevelopmentalAssociation.changed_division_forms_group",
+        "DevelopmentalAssociation.separated_descendant_reconstructs_association",
+        "DevelopmentalAssociation.restored_separation_changes_later_growth"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/developmental-association-verification/verification.json",
+      "role": "receipt",
+      "sha256": "0ab7b96a0c4d02f1f6de9e5ae94546d475ec969253ad38411f1bd0d4073bcff3",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/04-LIFE.md",
+      "role": "statement",
+      "sha256": "1368f69ece22fe59a1557d20b3af7734b25a82214e9cda03845acd34b57f0db3",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/DEVELOPMENTAL-ASSOCIATION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "ef8da93374f22ffd4d064bedbc780252b426b2febfa4a04e09099a5ee0a95671",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/DevelopmentalAssociation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/developmental-association-verification/verification.json",
+      "sha256_pointer": "/source_sha256/DevelopmentalAssociation.lean",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), groups formed by bonds share a founder: division's inheritance, lineage consistency kept by every history without aggregation and so a common founder for positions connected by bonds, the aggregation counterexample, no bond-free exact predictor, and the developmental witnesses; from DEFECTS-FOUND (triage row 146); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），由键形成的组有共同的始祖：分裂之继承、不含聚合的每段历史保持世系一致从而经键相连的位置有共同始祖、聚合之反例、无不含键的精确预测，以及发育之见证；出自 DEFECTS-FOUND（分诊第 146 行）；研究第 426 节。"
+    }
+  ]
+}

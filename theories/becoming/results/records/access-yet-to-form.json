@@ -1,0 +1,177 @@
+{
+  "schema_version": 2,
+  "id": "access-yet-to-form",
+  "title": {
+    "en": "Access yet to form: a newly permitted probe tells apart what old observations do not",
+    "zh": "尚待形成的存取：新许可的探测分辨旧观察所不分者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F22",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "With the route fixed, two configurations of the access model give every finite word the same feasibility exactly where they agree in occupancy on the permitted supports; a history can form one alike to the clear configuration in old observation and active view, told apart by a newly permitted probe.",
+    "zh": "路线固定时，存取模型的两个构形使每个有限词的可行性相同，恰当其占用在每个许可的支撑上一致；一段历史可形成一个在旧观察下与当前视图中都与空构形无别的构形，而新许可的探测把它们分开。"
+  },
+  "laws": [
+    {
+      "en": "In the access model (a route, the occupancy of supports, and steps that redirect, take and release within a permitted set), with the route fixed two configurations give every finite event word the same feasibility exactly where their occupancy agrees on every permitted support. A probe, redirecting to a support and taking it, is feasible exactly where the support is permitted and free.",
+      "zh": "在存取模型中（一条路线、诸支撑的占用，以及在许可集合内改道、取用与释放之步），路线固定时，两个构形使每个有限事件词的可行性相同，恰当其占用在每个许可的支撑上一致。探测（改道到某支撑并取用之）可行，恰当该支撑被许可且空闲。",
+      "declarations": [
+        "Generative.ReconfigurableSupportLogic.Configuration",
+        "Generative.ReconfigurableSupportLogic.process",
+        "Generative.ReconfigurableSupportLogic.OccupancyAgrees",
+        "Generative.ReconfigurableSupportLogic.fixed_route_behavior_iff",
+        "Generative.ReconfigurableSupportLogic.probe",
+        "Generative.ReconfigurableSupportLogic.probe_exact"
+      ]
+    },
+    {
+      "en": "Witness: redirecting to the second support, taking it and redirecting back forms a hidden configuration from the clear one. With only the first support permitted the two have one observation and the same feasibility of every word, and they share the active view, the route and its occupancy; with both permitted, the probe of the second support is feasible from the clear one only.",
+      "zh": "见证：改道到第二个支撑、取用之再改道回来，由空构形形成一个隐藏构形。只许可第一个支撑时，二者观察相同、每个词的可行性相同，并共有当前视图（路线及其占用）；两个都许可时，对第二个支撑的探测只从空构形可行。",
+      "declarations": [
+        "Generative.ReconfigurableSupportLogic.Witness.clear",
+        "Generative.ReconfigurableSupportLogic.Witness.hidden",
+        "Generative.ReconfigurableSupportLogic.Witness.hidden_formed",
+        "Generative.ReconfigurableSupportLogic.Witness.old_observation_same",
+        "Generative.ReconfigurableSupportLogic.Witness.old_workload_exact",
+        "Generative.ReconfigurableSupportLogic.Witness.same_active_view",
+        "Generative.ReconfigurableSupportLogic.Witness.new_probe_separates"
+      ]
+    },
+    {
+      "en": "So no reader of the active view decides the probe's feasibility, and no update of the active view by the redirection target alone gives the view after redirecting; redirecting the hidden configuration keeps its occupancy and changes whether taking is enabled, and a current reading of the new support's occupancy gives the updated view.",
+      "zh": "所以没有对当前视图的读取能判定该探测的可行性，仅凭改道目标更新当前视图也不能给出改道后的视图；隐藏构形改道后占用不变，而取用是否可行改变，对新支撑占用的当前读取给出更新后的视图。",
+      "declarations": [
+        "Generative.ReconfigurableSupportLogic.Witness.no_old_view_future_reader",
+        "Generative.ReconfigurableSupportLogic.Witness.no_blind_redirect_update",
+        "Generative.ReconfigurableSupportLogic.Witness.redirect_changes_readiness_only",
+        "Generative.ReconfigurableSupportLogic.Witness.refreshed_view"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The supports, the permitted set, the route and the operations are supplied, with identity of supports decided; the witness has two supports.",
+      "zh": "支撑、许可集合、路线与操作为给定，支撑之同一已判定；见证有两个支撑。"
+    },
+    {
+      "en": "Axioms: fixed_route_behavior_iff uses propext, old_observation_same Quot.sound and old_workload_exact both; the other theorems cited have empty axiom reports, as the module's receipt reports.",
+      "zh": "公理：fixed_route_behavior_iff 用 propext，old_observation_same 用 Quot.sound，old_workload_exact 二者皆用；其余所引定理公理报告皆空，如该模块回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which supports will be permitted next, or that a fresh reading can be taken at once: obtaining a trustworthy reading atomically is a separate implementation.",
+      "zh": "下一步会许可哪些支撑，或新读取能即时取得：原子地取得可信读取是另一项实现。",
+      "kind": "scope"
+    },
+    {
+      "en": "That old observations suffice once the permitted set grows: the hidden configuration is alike under them and told apart by the new probe.",
+      "zh": "许可集合扩大后旧观察仍足够：隐藏构形在旧观察下无别，而被新探测分开。",
+      "kind": "non-implication",
+      "witness": "Generative.ReconfigurableSupportLogic.Witness.new_probe_separates"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.29.1): ReconfigurableSupportLogic by its own checker (receipt 20261008T105809.742208Z), propext and Quot.sound where named and otherwise empty axiom reports; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 实查：ReconfigurableSupportLogic 经其自身检查器（回执 20261008T105809.742208Z），所列处用 propext 与 Quot.sound，其余公理报告皆空；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "State on the core's processes how the permitted set changes, so that what a current view must keep is read off the access relations that can still form.",
+    "zh": "在核心的过程上陈述许可集合如何改变，使当前视图须保留者由仍可形成的存取关系读出。"
+  },
+  "correspondence": {
+    "en": "Refining an abstraction when a newly relevant distinction appears is counterexample-guided abstraction refinement (Clarke, Grumberg, Jha, Lu and Veith 2000). Reading a growing permitted set as access yet to form is the AI's reading.",
+    "zh": "新相关的区分出现时细化抽象，即反例引导的抽象细化（Clarke、Grumberg、Jha、Lu 与 Veith 2000）。把扩大的许可集合读作尚待形成的存取，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean",
+  "aliases": [
+    "access yet to form",
+    "尚待形成的存取",
+    "Generative.ReconfigurableSupportLogic.fixed_route_behavior_iff",
+    "Generative.ReconfigurableSupportLogic.Witness.new_probe_separates"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "what-a-summary-keeps",
+      "detail": {
+        "en": "Every summary from which feasibility can be read separates occupancy within the permitted set; here the permitted set grows.",
+        "zh": "凡能从中读出可行性的摘要都区分许可集合内的占用；此处许可集合扩大。"
+      }
+    },
+    {
+      "id": "prefix-observation-loss",
+      "detail": {
+        "en": "Positions alike under every prefix question differ in what an exposed suffix shows.",
+        "zh": "在每个前缀问题下无别的位置，在暴露的后缀所示者上不同。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.ReconfigurableSupportLogic.Configuration",
+        "Generative.ReconfigurableSupportLogic.process",
+        "Generative.ReconfigurableSupportLogic.OccupancyAgrees",
+        "Generative.ReconfigurableSupportLogic.fixed_route_behavior_iff",
+        "Generative.ReconfigurableSupportLogic.probe",
+        "Generative.ReconfigurableSupportLogic.probe_exact",
+        "Generative.ReconfigurableSupportLogic.Witness.clear",
+        "Generative.ReconfigurableSupportLogic.Witness.hidden",
+        "Generative.ReconfigurableSupportLogic.Witness.hidden_formed",
+        "Generative.ReconfigurableSupportLogic.Witness.old_observation_same",
+        "Generative.ReconfigurableSupportLogic.Witness.old_workload_exact",
+        "Generative.ReconfigurableSupportLogic.Witness.same_active_view",
+        "Generative.ReconfigurableSupportLogic.Witness.new_probe_separates",
+        "Generative.ReconfigurableSupportLogic.Witness.no_old_view_future_reader",
+        "Generative.ReconfigurableSupportLogic.Witness.no_blind_redirect_update",
+        "Generative.ReconfigurableSupportLogic.Witness.redirect_changes_readiness_only",
+        "Generative.ReconfigurableSupportLogic.Witness.refreshed_view"
+      ],
+      "sha256": "ba6511391b9ec50b9e96604982c84c3a3fc9a0dc2cb931acbb7979bfbd874911"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json",
+      "role": "receipt",
+      "sha256": "2b53c3994335fa24df27b90e8c83bd7e9f9c626d3486e02ee8d8ff4b6006e78a"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "58e42859a9f7ec5720b68d4bc28f43b02e2fc1d24ab766913ed0d56980751ef1"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json",
+      "sha256_pointer": "/modules/1/sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), that with the route fixed feasibility is occupancy on the permitted supports, and that a newly permitted probe tells apart a configuration formed alike under old observations; from DEFECTS-FOUND (triage row 139); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），路线固定时可行性即许可支撑上的占用，以及新许可的探测分开在旧观察下形成为无别的构形；出自 DEFECTS-FOUND（分诊第 139 行）；研究第 426 节。"
+    }
+  ]
+}

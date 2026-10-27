@@ -1,0 +1,222 @@
+{
+  "schema_version": 2,
+  "id": "readings-a-response-needs",
+  "title": {
+    "en": "Readings a response needs: no coarsest adequate reading, and success changes the next move",
+    "zh": "回应所需的读法：没有最粗的充分读法，成功改变下一步"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F08",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "In the three-route process each of two binary readings is adequate for arrival, while every reading coarser than both is constant and inadequate, so a response task can lack a coarsest adequate reading; in a regulation band, success changes what the next success needs.",
+    "zh": "在三路线过程中，两个二值读法各自对到达充分，而比二者都粗的读法是常值且不充分，故回应任务可以没有最粗的充分读法；在调节带中，成功改变下一次成功所需。"
+  },
+  "laws": [
+    {
+      "en": "In the regulation band, a count kept between 1 and 2 with each move adding or removing one, adding completes from 1 and removing does not, removing completes from 2 and adding does not, so no move chosen through a reading merging 1 and 2 completes from both; the response adding at or below 1 and removing above keeps the band along its itinerary of every length.",
+      "zh": "在调节带中（计数保持在 1 与 2 之间，每步加一或减一），从 1 加则完成而减不完成，从 2 减则完成而加不完成，故经合并 1 与 2 的读法所选的动作不能两处都完成；在 1 及以下加、其上减的回应，沿任意长度的行程保持该带。",
+      "declarations": [
+        "Becoming.AssurancePlans.Regulation.update",
+        "Becoming.AssurancePlans.Regulation.Band",
+        "Becoming.AssurancePlans.Regulation.respond",
+        "Becoming.AssurancePlans.Regulation.opposite_moves",
+        "Becoming.AssurancePlans.Regulation.no_merged_move",
+        "Becoming.AssurancePlans.Regulation.respond_keeps",
+        "Becoming.AssurancePlans.Regulation.kept_along"
+      ]
+    },
+    {
+      "en": "Adding from 1 completes, adding twice fails, and adding then removing completes: success changes what the next success needs, with no outside disturbance.",
+      "zh": "从 1 加一次完成，加两次失败，先加后减完成：成功改变下一次成功所需，无需外来扰动。",
+      "declarations": [
+        "Becoming.AssurancePlans.Regulation.next_move_changes"
+      ]
+    },
+    {
+      "en": "In the three-route process a route arrives from a mode exactly where it differs from the mode, and a reading of the mode is adequate for a response when the response to it arrives from every mode. Reading whether the mode is the first, or whether it is the last, is adequate; the first merges two modes from which one route's outcomes differ; every two modes share an arriving route, none arrives from all three.",
+      "zh": "在三路线过程中，一条路线从某模式到达，恰当它不同于该模式；对模式的读法对某回应充分，指对它的回应从每个模式都到达。“模式是否为第一个”与“是否为最后一个”各是充分读法；前者合并两个模式，某条路线从二者的结果不同；每两个模式都有共同到达的路线，没有一条从三个都到达。",
+      "declarations": [
+        "Becoming.AssurancePlans.Routes.completes_iff",
+        "Becoming.AssurancePlans.Routes.Adequate",
+        "Becoming.AssurancePlans.Routes.leftReading",
+        "Becoming.AssurancePlans.Routes.rightReading",
+        "Becoming.AssurancePlans.Routes.left_adequate",
+        "Becoming.AssurancePlans.Routes.right_adequate",
+        "Becoming.AssurancePlans.Routes.adequate_merges_outcomes",
+        "Becoming.AssurancePlans.Routes.pairwise_common",
+        "Becoming.AssurancePlans.Routes.no_common"
+      ]
+    },
+    {
+      "en": "A reading that factors through both binary readings, so coarser than each, is constant, and so adequate for no response; hence no adequate reading factors through every adequate binary reading.",
+      "zh": "经两个二值读法都可分解的读法（故比二者都粗）是常值，因而对任何回应都不充分；所以没有充分读法经每个充分的二值读法分解。",
+      "declarations": [
+        "Becoming.AssurancePlans.Routes.common_coarsening_constant",
+        "Becoming.AssurancePlans.Routes.common_coarsening_inadequate",
+        "Becoming.AssurancePlans.Routes.no_coarsest_adequate"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The band and the three routes are named determined processes of the core, with completion of a course in the core's sense; they are supplied witnesses, not models of disposition or judgment.",
+      "zh": "调节带与三路线是核心中具名的确定过程，程之完成取核心之义；它们是给定的见证，不是倾向或判断的模型。"
+    },
+    {
+      "en": "No premise: every AssurancePlans declaration cited has an empty axiom report; the pre-spine WisdomResponseStructure and ContextualWisdom use propext and, in some declarations, Quot.sound.",
+      "zh": "无前提：所引 AssurancePlans 的每个声明公理报告皆空；前主干的 WisdomResponseStructure 与 ContextualWisdom 用 propext，部分声明用 Quot.sound。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That every response task lacks a coarsest adequate reading: the three-route process is one task where none exists.",
+      "zh": "每个回应任务都没有最粗的充分读法：三路线过程是没有它的一个任务。",
+      "kind": "scope"
+    },
+    {
+      "en": "That judgment is scalar regulation, or that a response rule is wisdom: the band and the routes are witnesses.",
+      "zh": "判断即标量调节，或回应规则即智慧：调节带与路线只是见证。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.29.1): Becoming.AssurancePlans by the consolidated core checker (receipt 20261025T212948.819150Z), every declaration with an empty axiom report; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 实查：Becoming.AssurancePlans 经合并核心检查器（回执 20261025T212948.819150Z），每个声明公理报告皆空；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Characterize when a response task has a coarsest adequate reading on any determined process, so that the routes become one instance of a law and a split that makes sense the case where it exists.",
+    "zh": "刻画任一确定过程上的回应任务何时有最粗的充分读法，使三路线成为一条律的实例，而有意义的分割是它存在的情形。"
+  },
+  "correspondence": {
+    "en": "That a regulator must tell apart the disturbances needing different responses is requisite variety (Ashby 1956). Reading the band as success changing what the next success needs is the AI's reading.",
+    "zh": "调节者须分辨需要不同回应的扰动，即必需变异度（Ashby 1956）。把调节带读作成功改变下一次成功所需，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AssurancePlans.lean",
+  "aliases": [
+    "readings a response needs",
+    "回应所需的读法",
+    "Becoming.AssurancePlans.Routes.no_coarsest_adequate",
+    "Becoming.AssurancePlans.Regulation.next_move_changes",
+    "Generative.WisdomResponseStructure.no_coarsest_adequate_description (periphery module)",
+    "Generative.ContextualWisdom.success_changes_next_response (periphery module)"
+  ],
+  "dependencies": [
+    {
+      "id": "assured-route-criterion",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Completion of a course of a determined process is that criterion (Assurance.completes_ofMap_single, completes_ofMap_iff); the band's and the routes' completion laws are proved from it.",
+        "zh": "确定过程之程的完成即该准则（Assurance.completes_ofMap_single、completes_ofMap_iff）；调节带与路线的完成之律由它证出。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "risk-certificate-outcome-distinction",
+      "detail": {
+        "en": "A judgment through a projection is right only where it does not merge what must be told apart.",
+        "zh": "经投影的判断只在不合并须分辨者处为对。"
+      }
+    },
+    {
+      "id": "the-split-that-makes-sense",
+      "detail": {
+        "en": "A law's split that makes sense has a coarsest form; a response task need not.",
+        "zh": "律之有意义的分割有最粗形式；回应任务未必有。"
+      }
+    },
+    {
+      "id": "two-sided-regulation-and-late-reading",
+      "detail": {
+        "en": "Regulation from two sides, where the band needs opposite moves at its ends.",
+        "zh": "两侧调节，其带在两端需相反的动作。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AssurancePlans.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.AssurancePlans.Regulation.update",
+        "Becoming.AssurancePlans.Regulation.Band",
+        "Becoming.AssurancePlans.Regulation.respond",
+        "Becoming.AssurancePlans.Regulation.opposite_moves",
+        "Becoming.AssurancePlans.Regulation.no_merged_move",
+        "Becoming.AssurancePlans.Regulation.respond_keeps",
+        "Becoming.AssurancePlans.Regulation.kept_along",
+        "Becoming.AssurancePlans.Regulation.next_move_changes",
+        "Becoming.AssurancePlans.Routes.completes_iff",
+        "Becoming.AssurancePlans.Routes.Adequate",
+        "Becoming.AssurancePlans.Routes.leftReading",
+        "Becoming.AssurancePlans.Routes.rightReading",
+        "Becoming.AssurancePlans.Routes.left_adequate",
+        "Becoming.AssurancePlans.Routes.right_adequate",
+        "Becoming.AssurancePlans.Routes.adequate_merges_outcomes",
+        "Becoming.AssurancePlans.Routes.pairwise_common",
+        "Becoming.AssurancePlans.Routes.no_common",
+        "Becoming.AssurancePlans.Routes.common_coarsening_constant",
+        "Becoming.AssurancePlans.Routes.common_coarsening_inadequate",
+        "Becoming.AssurancePlans.Routes.no_coarsest_adequate"
+      ],
+      "sha256": "86a96eb70b6d92d5b8270810d68eb41fa55c7366d436e9950e4b2962896dcef2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomResponseStructure.lean",
+      "role": "provenance",
+      "declarations": [
+        "Generative.WisdomResponseStructure.no_coarsest_adequate_description"
+      ],
+      "sha256": "2760db38cbfb9eaa2b2ad969be9124d8e6c28a1389ed2c5fa7c26223fa7a878c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContextualWisdom.lean",
+      "role": "provenance",
+      "declarations": [
+        "Generative.ContextualWisdom.success_changes_next_response"
+      ],
+      "sha256": "25cb25904731565b4146680af403f8cfba112ea83a42ebd115592afa757a1ea9"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "fd56b1d37f0e44c9819e766477c90d45873236d30ead2ecab5e1b3a0856da4e1"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AssurancePlans.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.AssurancePlans",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), the regulation band, whose success changes the next move, and the three-route process, which has no coarsest adequate reading, in the core; from DEFECTS-FOUND (triage rows 136 and 96); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），其成功改变下一步的调节带，与没有最粗充分读法的三路线过程，皆在核心；出自 DEFECTS-FOUND（分诊第 136 与 96 行）；研究第 426 节。"
+    }
+  ]
+}

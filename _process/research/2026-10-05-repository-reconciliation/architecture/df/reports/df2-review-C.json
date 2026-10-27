@@ -1,0 +1,474 @@
+{
+ "edits": [
+  {
+   "id": "market-model-share-margin-and-ends",
+   "field": "statement.en",
+   "old": "In the rational market model the renewing share rises where its private advantage is positive; the accountability floor is kept under every admissible influence exactly where the margin is nonnegative; at erosion one half both ends attract nearby states, and states near the interior one can leave.",
+   "new": "In the market model an interior renewing share rises at a positive selection rate where its private advantage is positive; the accountability floor holds under every admissible influence exactly for a nonnegative margin; at erosion 1/2 both ends attract nearby states, some near the interior leave.",
+   "severity": "overclaim",
+   "why": "share_strictly_increases needs 0 < x < 1 and 0 < eta as well as 0 < g. At share 0 or 1 the share does not rise (zero_share_remains_zero), so the statement as written is false at the ends. The new text is 298 characters. It drops 'rational', which hypotheses[0] keeps, to fit the cap.",
+   "evidence": "experiments/market-generativity/formal/MarketGenerativity.lean:83-85; RegimeAttraction.lean:574"
+  },
+  {
+   "id": "market-model-share-margin-and-ends",
+   "field": "statement.zh",
+   "old": "在有理数之市场模型中，更新之份额在其私有优势为正处上升；",
+   "new": "在市场模型中，介于零与全之间之更新份额，于选择率为正且私有优势为正处上升；",
+   "severity": "overclaim",
+   "why": "The Chinese follows the corrected English: an interior share and a positive selection rate.",
+   "evidence": "experiments/market-generativity/formal/MarketGenerativity.lean:83-85"
+  },
+  {
+   "id": "market-model-share-margin-and-ends",
+   "field": "correspondence.en",
+   "old": "the share law is the two-type replicator equation in discrete time (Taylor and Jonker 1978), the gap being the difference of payoffs",
+   "new": "the share law is an Euler step, at rate η, of the two-type replicator equation of Taylor and Jonker (1978), ẋ = x(1 − x)(π_R − π_E), the gap being the difference of payoffs",
+   "severity": "imprecise",
+   "why": "Taylor and Jonker (1978) give the continuous-time replicator dynamics. shareStep x η g = x + η x(1−x) g is its forward-Euler step, not the standard discrete replicator x' = x·π_R/π̄.",
+   "evidence": "experiments/market-generativity/formal/MarketGenerativity.lean:13"
+  },
+  {
+   "id": "market-model-share-margin-and-ends",
+   "field": "correspondence.zh",
+   "old": "份额律是离散时间之二型复制子方程（Taylor 与 Jonker 1978），差额即收益之差",
+   "new": "份额律是 Taylor 与 Jonker（1978）之二型复制子方程 ẋ = x(1 − x)(π_R − π_E) 以率 η 所取之欧拉一步，差额即收益之差",
+   "severity": "imprecise",
+   "why": "The same correction as in the English.",
+   "evidence": "experiments/market-generativity/formal/MarketGenerativity.lean:13"
+  },
+  {
+   "id": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "field": "§10 market Theorem paragraph",
+   "old": "the threshold is protected at the next step, with correction paid and no quality error, from every exposure `q` with `θ ≤ q ≤ 1`",
+   "new": "the accountability floor is kept at the next step, with correction paid and no error, from every accountability `q` with `θ ≤ q ≤ 1`",
+   "severity": "style",
+   "why": "Optional. The record and formal/README call q accountability and θ the accountability floor. The chapter calls q 'exposure', yet its first sentence already uses 'collectible exposure' for fine·q, so one word names two quantities. Apply together with the next edit.",
+   "evidence": "experiments/market-generativity/formal/RegimeBoundary.lean:11-13; experiments/market-generativity/formal/README.md:40"
+  },
+  {
+   "id": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "field": "§10 market Theorem paragraph",
+   "old": "influence bound `λ` and threshold `θ`, let `M = α(1 − θ) − βλθ`",
+   "new": "influence bound `λ` and accountability floor `θ`, let `M = α(1 − θ) − βλθ`",
+   "severity": "style",
+   "why": "Optional, the companion of the edit above.",
+   "evidence": "experiments/market-generativity/formal/RegimeBoundary.lean:8-9"
+  },
+  {
+   "id": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "field": "§10 market Theorem paragraph",
+   "old": "coupled to the essential support the low end fails in finite time even with correction paid at every step (",
+   "new": "coupled to the essential support the low end fails in finite time even with correction paid at every step, while from the box about the maintenance end with support at least 5 the guarded history never fails (`high_coupled_history_never_fails`) (",
+   "severity": "missing",
+   "why": "Optional. Law 5 of the record states the maintenance-end half; the home section states only the low end.",
+   "evidence": "experiments/market-generativity/formal/RegimeAttraction.lean:532-542"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "statement.en",
+   "old": "Paired local plans are jointly valid where",
+   "new": "Paired valid local plans are jointly valid where",
+   "severity": "overclaim",
+   "why": "seeded_joint_plan takes hp and hq, works for each local plan. Arbitrary paired plans are not jointly valid. The new statement is 297 characters.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean:77"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "statement.zh",
+   "old": "配对之局部方案共同有效",
+   "new": "配对之有效局部方案共同有效",
+   "severity": "overclaim",
+   "why": "The same as the English.",
+   "evidence": "SeededContinuation.lean:77"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "validation_scope.en",
+   "old": "Machine-checked by Lean 4.29.1 (receipt seeded-continuation-verification.json,",
+   "new": "Machine-checked by Lean 4.30.0-rc2 with Mathlib at revision ea11ccc0 (receipt seeded-continuation-verification.json,",
+   "severity": "error",
+   "why": "The bound receipt records toolchain leanprover/lean4:v4.30.0-rc2, lean_version 4.30.0-rc2 (commit 3dc1a088) and mathlib_revision ea11ccc0…, not 4.29.1. The 8 October receipt already said the same; the rerun changed only checked_at_utc and the SeededContinuation source_sha256.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/seeded-continuation-verification.json:/toolchain,/lean_version,/mathlib_revision"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "validation_scope.zh",
+   "old": "Lean 4.29.1 实查（回执 seeded-continuation-verification.json，",
+   "new": "Lean 4.30.0-rc2（Mathlib 修订 ea11ccc0）实查（回执 seeded-continuation-verification.json，",
+   "severity": "error",
+   "why": "The same as the English.",
+   "evidence": "seeded-continuation-verification.json:/toolchain"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "hypotheses[2].en",
+   "old": "six cited theorems report propext, absent_reserve_blocks_ignition also Quot.sound, and the others none;",
+   "new": "six cited theorems report propext alone, absent_reserve_blocks_ignition propext and Quot.sound, and the other six none;",
+   "severity": "imprecise",
+   "why": "The old wording reads as if absent_reserve_blocks_ignition were among the six. In fact seven of the 13 cited theorems report propext: six alone, and absent_reserve_blocks_ignition with Quot.sound. The other six report nothing.",
+   "evidence": "seeded-continuation-verification.json:/modules/2/audits"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "hypotheses[2].zh",
+   "old": "所引六项定理报告 propext，absent_reserve_blocks_ignition 并报 Quot.sound，其余皆无；",
+   "new": "所引六项定理只报 propext，absent_reserve_blocks_ignition 报 propext 与 Quot.sound，其余六项皆无；",
+   "severity": "imprecise",
+   "why": "The same as the English.",
+   "evidence": "seeded-continuation-verification.json:/modules/2/audits"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "laws[1].en",
+   "old": "and where a law has no successor, preservation holds vacuously.",
+   "new": "and, in a witness, preservation holds where the law has no successor, so no step is available.",
+   "severity": "imprecise",
+   "why": "preservation_without_availability is one instance: Unit, properties True, the empty step relation. It is a witness, not a law for every law.",
+   "evidence": "SeededContinuation.lean:84-86"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "laws[1].zh",
+   "old": "律无后继之处，保持空洞地成立。",
+   "new": "见证中，律无后继之处保持成立，而无一步可行。",
+   "severity": "imprecise",
+   "why": "The same as the English.",
+   "evidence": "SeededContinuation.lean:84-86"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "correspondence.en",
+   "old": "in the style of assume-guarantee reasoning, where each component's guarantee is kept under the other's assumption (Jones 1983)",
+   "new": "in the style of rely-guarantee reasoning (Jones 1983), each property being kept by every step taken where both hold",
+   "severity": "imprecise",
+   "why": "Jones (1983) introduced rely-guarantee; 'assume-guarantee' is the Misra–Chandy and Abadi–Lamport term. mutual_history keeps r and s each under both hypotheses (r x → s x → step → r y), not each under the other's alone.",
+   "evidence": "SeededContinuation.lean:11-17"
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "field": "correspondence.zh",
+   "old": "属假设—保证推理之式，各部分之保证在他方之假设下得保（Jones 1983）",
+   "new": "属依赖—保证推理之式（Jones 1983），每一性质在两者皆成立处为每一步所保",
+   "severity": "imprecise",
+   "why": "The same as the English.",
+   "evidence": "SeededContinuation.lean:11-17"
+  },
+  {
+   "id": "a-swap-symmetric-assignment-singles-out-none",
+   "field": "correspondence.en",
+   "old": "the neutrality condition of May (1952), under which a rule treating two alternatives alike picks neither at a tied profile",
+   "new": "the anonymity and neutrality conditions of May (1952), under which a rule treating voters alike and the two alternatives alike picks neither where the votes are evenly split",
+   "severity": "imprecise",
+   "why": "Neutrality alone does not force a tie at an evenly split profile. Swapping the labels maps that profile to a different one unless anonymity identifies them. May's tie result uses both conditions.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean:99-110"
+  },
+  {
+   "id": "a-swap-symmetric-assignment-singles-out-none",
+   "field": "correspondence.zh",
+   "old": "May（1952）之中立条件下，对两选项一视同仁之规则在持平之处不择其一",
+   "new": "May（1952）之匿名与中立条件下，对投票者与两选项皆一视同仁之规则，在票数相等处不择其一",
+   "severity": "imprecise",
+   "why": "The same as the English.",
+   "evidence": "PracticalPriorityIdentification.lean:99-110"
+  },
+  {
+   "id": "a-swap-symmetric-assignment-singles-out-none",
+   "field": "related[0].detail.en",
+   "old": "no law keeping both brings agreement (SharedCodes.never_agrees_of_both)",
+   "new": "a law keeping both never brings the formations it exchanges to agree at a sense where the renaming moves every form (SharedCodes.never_agrees_of_both)",
+   "severity": "imprecise",
+   "why": "never_agrees_of_both concludes only for i and π i, at a sense m where τ m moves every form (hypothesis moves). 05 §9 states it with this condition.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean:921-924"
+  },
+  {
+   "id": "a-swap-symmetric-assignment-singles-out-none",
+   "field": "related[0].detail.zh",
+   "old": "自对交换构成与更名形式皆对称之起点，保持二者之律不致一致",
+   "new": "自对交换形成与更名形式皆对称之起点，保持二者之律，在更名移动每一形式之义上，永不使其所交换之形成一致",
+   "severity": "imprecise",
+   "why": "The same condition as the English. Also 'formations' is 形成, not 构成.",
+   "evidence": "SharedCodes.lean:921-924"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "laws[3].en",
+   "old": "A reconfiguration installs a candidate only where it is opened and the candidate ready, so there is no step to the merged roster and a step to the repaired one; an arrangement can be ready while a cause in every member's formula and in no bound fails every member.",
+   "new": "A reconfiguration installs only where opened, to a ready candidate, with reserve and time for its draw and response: from the original there is no step to the merged roster, one to the repaired; a roster can be ready while a cause in every member's formula and no bound fails every member.",
+   "severity": "error",
+   "why": "'Only where opened and ready' gives necessary conditions only. It cannot yield the step to the repaired roster: admits also needs reserve and time to cover amount + responseLoad (own_draw_alone_no_step is a ready candidate with no step). The two step facts are witnesses from the original installation. Apply together with the next edit, which shortens the first sentence; the whole law is then 414 characters.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean:228-232, 592-606, 609-612"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "laws[3].en",
+   "old": "The envelope of the separate roster, reused after the merger, accepts support by the two merged members, which the recomputed one rejects.",
+   "new": "The separate roster's envelope, reused after the merger, accepts the two merged members' support; recomputed, it rejects it.",
+   "severity": "style",
+   "why": "Shortened so that the law stays within 420 characters with the correction above.",
+   "evidence": "Reconfiguration.lean:518-520"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "laws[3].zh",
+   "old": "重组只在开启且候选就绪处装入候选，故无一步至合并之名册，而有一步至修复者；",
+   "new": "重组只在开启、候选就绪且储备与时间足其所需与回应之处装入候选：自原装置无一步至合并之名册，有一步至修复者；",
+   "severity": "error",
+   "why": "The same as the English.",
+   "evidence": "Reconfiguration.lean:228-232, 592-606"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "laws[2].en",
+   "old": "A formula needing two copies of one cause fails",
+   "new": "In the computed cases, a formula needing two copies of one cause fails",
+   "severity": "imprecise",
+   "why": "same_cause_not_redundant and readiness_cases are decide-checked instances (causes 0 and 1; separate3, merged3, repaired4, duplicated4), not laws for every roster. Read as witnesses, the law is 362 characters.",
+   "evidence": "Reconfiguration.lean:487-515"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "laws[2].zh",
+   "old": "要求同一原因两份之式，仅此一因即失效；",
+   "new": "于所算诸例中：要求同一原因两份之式，仅此一因即失效；",
+   "severity": "imprecise",
+   "why": "The same as the English.",
+   "evidence": "Reconfiguration.lean:487-515"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "dependencies",
+   "old": "[]",
+   "new": "[{\"id\": \"certificates-sound-and-available\", \"relation\": \"formal-reuse\", \"detail\": {\"en\": \"induced_certificate_sound and induced_certificate_available apply FaultEnvelopes.certificate_sound and certificate_available to the envelope the bounds induce, ready_separates giving its separation.\", \"zh\": \"induced_certificate_sound 与 induced_certificate_available 把 FaultEnvelopes.certificate_sound 与 certificate_available 用于诸界所导出之包络，其分隔由 ready_separates 给出。\"}}]",
+   "severity": "missing",
+   "why": "Laws 1 and 2 are FaultEnvelopes' soundness and availability applied to the induced envelope. certificates-sound-and-available is DF2 unit A's new record, now in the worktree and still untracked. Land it first or with this record.",
+   "evidence": "Reconfiguration.lean:132-136, 177-179"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "correspondence.en",
+   "old": "the bounds on causes that may occur together play the role of a fail-prone system, and readiness that of a quorum condition, in Byzantine quorum systems (Malkhi and Reiter 1998)",
+   "new": "the envelope the bounds induce plays the role of a fail-prone system (Malkhi and Reiter 1998), and readiness, no two of its fault sets covering the roster, is the two-set condition under which complements of fault sets pairwise intersect, weaker than the three-set condition Byzantine dissemination quorums need",
+   "severity": "imprecise",
+   "why": "The fail-prone system is the envelope of member fault sets, not the bounds on causes. ready ⇔ separated is U ⊄ B1 ∪ B2, the benign quorum (Q²) condition. Malkhi and Reiter's dissemination quorums need U ⊄ B1 ∪ B2 ∪ B3.",
+   "evidence": "Reconfiguration.lean:97, 139-141, 158-159"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "correspondence.zh",
+   "old": "可同时发生之原因之界，相当于拜占庭法定集系统中之易失效系统，就绪相当于法定集之条件（Malkhi 与 Reiter 1998）",
+   "new": "诸界所导出之包络相当于易失效系统（Malkhi 与 Reiter 1998），就绪（无两故障集覆盖名册）是使故障集之补两两相交之二集条件，弱于拜占庭传播法定集所需之三集条件",
+   "severity": "imprecise",
+   "why": "The same as the English.",
+   "evidence": "Reconfiguration.lean:139-141"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "chapter_edits[0].new",
+   "old": "**Theorem** (periphery module [`CorrectionReconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean), stated in the pure core by [`Reconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean), the cited theorems with empty axiom reports; causal fault formulas supplied; witness). Reviewers count by independent causes, not names. With reviewer fault sets computed from causal formulas,",
+   "new": "**Theorem** (pure core, no axiom: members and causes numbered, rosters as finite lists, failures Boolean, fault formulas and bounds supplied; the module [`Reconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean), which states the periphery module [`CorrectionReconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean); the cases witnesses). Reviewers count by independent causes, not names. With each reviewer failing by a formula over root causes and bounds on the causes that may occur together, a certificate over the induced envelope is sound for every covered set of causes, given faithful reviewers, and readiness (nonempty bounds, every two leaving a reviewer working under both) is exactly a nonempty separated induced envelope (`Reconfiguration.induced_certificate_sound`, `Reconfiguration.ready_iff_nonempty_separated`); a reconfiguration installs a candidate only where the step is opened and the candidate ready (`Reconfiguration.closed_rejected`, `Reconfiguration.unready_rejected`). In the computed cases, with reviewer fault sets computed from causal formulas,",
+   "severity": "missing",
+   "why": "The record leads with the general laws (soundness, readiness iff separation, the step's necessary conditions), but the drafted home section states only the witnesses. Every cited name is core with an empty report, so the heading should name the core module first, not 'periphery module'. Domain is Nat (FaultEnvelopes.lean:47), so the heading says 'numbered', not 'any type'. If applied, anchor_before becomes '**Theorem** (pure core, no axiom: members and causes numbered'.",
+   "evidence": "Reconfiguration.lean:125-136, 158-166, 363-372; FaultEnvelopes.lean:47"
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "field": "anchor_before",
+   "old": "**Theorem** (periphery module [`CorrectionReconfiguration`]",
+   "new": "**Theorem** (pure core, no axiom: members and causes numbered",
+   "severity": "style",
+   "why": "Follows the heading change above. Use it only if that edit is applied.",
+   "evidence": "theories/becoming/chapters/05-COLLECTIVES.md:269"
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "field": "hypotheses[2].en",
+   "old": "every cited declaration reports propext, Quot.sound and Classical.choice.",
+   "new": "every cited declaration reports propext, Quot.sound and Classical.choice except the structures Payload and Carrier, whose reports are empty.",
+   "severity": "error",
+   "why": "The receipt's dependencies list AlignmentSuccession.Payload: [] and AlignmentSuccession.Carrier: [].",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/alignment-continuity-verification.json:/modules/AlignmentSuccession/dependencies"
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "field": "hypotheses[2].zh",
+   "old": "所引每一声明皆报告 propext、Quot.sound 与 Classical.choice。",
+   "new": "所引声明除结构 Payload 与 Carrier（公理报告为空）外，皆报告 propext、Quot.sound 与 Classical.choice。",
+   "severity": "error",
+   "why": "The same as the English.",
+   "evidence": "alignment-continuity-verification.json:/modules/AlignmentSuccession/dependencies"
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "field": "validation_scope.en",
+   "old": "every cited declaration reports propext, Quot.sound and Classical.choice.",
+   "new": "every cited theorem reports propext, Quot.sound and Classical.choice.",
+   "severity": "error",
+   "why": "Payload and Carrier have empty reports. Every cited theorem does report all three.",
+   "evidence": "alignment-continuity-verification.json:/modules/AlignmentSuccession/dependencies"
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "field": "validation_scope.zh",
+   "old": "所引声明皆报 propext、Quot.sound 与 Classical.choice。",
+   "new": "所引定理皆报 propext、Quot.sound 与 Classical.choice。",
+   "severity": "error",
+   "why": "The same as the English.",
+   "evidence": "alignment-continuity-verification.json:/modules/AlignmentSuccession/dependencies"
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "field": "statement.en",
+   "old": "Under a certificate for correction's draw plus migration, a carrier refining the market step takes its step in every generation from a safe start, given a part and an authentic credential; a safe aggregate can lack a carrier, and a state safe for correction alone need not cover migration.",
+   "new": "Under a certificate for correction plus migration, a carrier refining the market step, running a command other than shutdown with a part and an authentic credential, steps each generation from a safe start; a safe aggregate can lack a carrier; safety for correction alone need not cover migration.",
+   "severity": "overclaim",
+   "why": "every_generation_executes also takes running and continuing (requested ≠ shutdown). A shutdown command leaves later generations not running, so the omission is substantive. The new text is 297 characters.",
+   "evidence": "experiments/market-generativity/meta-attractor/AlignmentSuccession.lean:195-201"
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "field": "statement.zh",
+   "old": "在为纠正所需加迁移之证书下，细化市场之步之承载者自安全之起点、有部件且凭据真确时，每一代皆走其一步；总量安全时可无承载者，只为纠正而安全之状态未必能兼顾迁移。",
+   "new": "在为纠正加迁移之证书下，细化市场之步之承载者，运行非关机之命令、有部件且凭据真确时，自安全之起点每一代皆走其一步；总量安全时可无承载者；只为纠正之安全未必兼顾迁移。",
+   "severity": "overclaim",
+   "why": "The same as the English.",
+   "evidence": "AlignmentSuccession.lean:195-201"
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "field": "laws[2].en",
+   "old": "and serving a requested shutdown completes and leaves the carrier not running.",
+   "new": "and serving a requested shutdown completes, the served command state no longer running.",
+   "severity": "imprecise",
+   "why": "aggregate_shutdown_does_not_force_perpetual_operation concerns serve's EffectiveCommand.State (completed, running) = (true, false), not the Carrier's running field.",
+   "evidence": "AlignmentSuccession.lean:260-262"
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "field": "laws[2].zh",
+   "old": "所请之关机得到服务而完成，承载者不再运行。",
+   "new": "所请之关机得到服务而完成，所服务之命令状态不再运行。",
+   "severity": "imprecise",
+   "why": "The same as the English.",
+   "evidence": "AlignmentSuccession.lean:260-262"
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "field": "dependencies[0].detail.en",
+   "old": "the safe rectangle kept at every time under a certificate, to the market law with the raised fee.",
+   "new": "the invariance of the safe rectangle under a certificate on which that record's safe_history_never_fails rests, to the market law with migration added to correction's draw.",
+   "severity": "imprecise",
+   "why": "Optional. market-protected-continuation cites safe_history_never_fails, not rectangle_all_times; the detail should say how the two connect. It also drops the market word 'fee' that the record's wording avoids.",
+   "evidence": "experiments/market-generativity/formal/MarketGenerativity.lean:259-263, 299-312"
+  },
+  {
+   "id": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "field": "§5 finite-agreement Theorem paragraph",
+   "old": "and it does not agree on every pair of histories (`PracticalPriorityIdentification.finite_agreement_without_global_identification`)",
+   "new": "and no fixed weight agrees on every pair of histories (`PracticalPriorityIdentification.finite_agreement_without_global_identification`, `PracticalPriorityIdentification.no_fixed_finite_weight_is_lexical`)",
+   "severity": "imprecise",
+   "why": "The record's statement says no fixed weight agrees globally (no_fixed_finite_weight_is_lexical); the chapter says only that the sample's weight does not. Align the home section with the record.",
+   "evidence": "PracticalPriorityIdentification.lean:83-95"
+  },
+  {
+   "id": "finite-agreement-does-not-identify-priority",
+   "field": "does_not_show[2].en",
+   "old": "or histories with more than one protection status.",
+   "new": "or histories carrying more than one protected condition.",
+   "severity": "style",
+   "why": "A History is Bool × Nat, one protection status. 'more than one protection status' is unclear; the intended scope is several protected conditions.",
+   "evidence": "PracticalPriorityIdentification.lean:8"
+  },
+  {
+   "id": "finite-agreement-does-not-identify-priority",
+   "field": "does_not_show[2].zh",
+   "old": "或带多于一个保护状态之历史。",
+   "new": "或带多于一个受保护条件之历史。",
+   "severity": "style",
+   "why": "The same as the English.",
+   "evidence": "PracticalPriorityIdentification.lean:8"
+  },
+  {
+   "id": "finite-agreement-does-not-identify-priority",
+   "field": "validation_scope.zh",
+   "old": "模块 PracticalPriorityIdentification）：主定理报告 propext 与 Quot.sound。",
+   "new": "模块 PracticalPriorityIdentification，引入 Std）：finite_agreement_without_global_identification 报告 propext 与 Quot.sound。",
+   "severity": "style",
+   "why": "The Chinese omits 'imports Std' and the theorem's name, which the English gives.",
+   "evidence": "priority-identification-verification.json:/modules/0/axiom_dependencies"
+  },
+  {
+   "id": "significance-through-a-common-condition",
+   "field": "statement.en",
+   "old": "Read through a run's conditions, a condition all living formations take part in connects the whole, so living significance is there exactly a seed with both neutralities; under relational neutrality, valuing a consumer's event reaches each living event of a formation the drawing leaves unsupported.",
+   "new": "Through a run's conditions, a condition all living formations take part in connects the whole; with a living event, living significance is exactly a seed with both neutralities; under relational neutrality valuing a consumer's event reaches each living event of some formation it leaves unsupported.",
+   "severity": "overclaim",
+   "why": "significant_iff_of_common needs a living event alive₀; without one, Significant holds vacuously and Grounds (which needs Seed) fails. valuing_consumption_reaches is existential (∃ g T), while 'a formation the drawing leaves unsupported' reads universally. The new text is 299 characters.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean:174-180, 196-203"
+  },
+  {
+   "id": "significance-through-a-common-condition",
+   "field": "statement.zh",
+   "old": "经一次运行之条件读出时，每个活的形成都参与之条件使整体连通，故此处生生之意义恰为种子加两种中立；在关系中立下，珍视消耗者之事件，及于汲取使之失去支持之形成的每个活的事件。",
+   "new": "经一次运行之条件，每个活的形成都参与之条件使整体连通；有一活的事件时，生生之意义恰为种子加两种中立；在关系中立下，珍视消耗者之事件，及于其使之失去支持之某一形成的每个活的事件。",
+   "severity": "overclaim",
+   "why": "The same as the English.",
+   "evidence": "ValuationFrames.lean:174-180, 196-203"
+  },
+  {
+   "id": "significance-through-a-common-condition",
+   "field": "does_not_show[4]",
+   "old": "",
+   "new": "{\"en\": \"That the connecting condition is used: a dependence at need 0 counts as taking part, so adjoining a condition every formation depends on at need 0 and none draws connects the whole; under interaction, as in condition-correspondence-discipline, it connects nothing.\", \"zh\": \"连通之条件被使用：需要为 0 之依存亦算参与，故加入一个每个形成皆以需要 0 依存、无人汲取之条件即使整体连通；在交互下（如 condition-correspondence-discipline），它不连通任何事物。\", \"kind\": \"non-implication\"}",
+   "severity": "missing",
+   "why": "Participates is requires ∨ draws, with no need. Such an adjoined condition is consumed by no one, so living is unchanged and connected_of_common applies: connection here is cheap. becoming-renewal-reading's correspondence notes this (review Q4); the caveat belongs with the laws now moving here.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean:129-136; ValuationFrames.lean:165-170"
+  },
+  {
+   "id": "significance-through-a-common-condition",
+   "field": "chapter_edits[0]",
+   "old": "",
+   "new": "Insert the paragraph before the stepwise reading rather than after the correspondence discipline. old: `<a id=\"r-becoming-stepwise-reading\"></a>`; new: the drafter's paragraph with its heading changed to `**Theorem** (any process; the whole-run reading of `living`; a witness for the unconnected case).`, its text otherwise unchanged and ending `([record](../results/records/significance-through-a-common-condition.md))`, then a blank line, then `<a id=\"r-becoming-stepwise-reading\"></a>`. anchor_before becomes `**Theorem** (any process; the whole-run reading of`.",
+   "severity": "style",
+   "why": "07 §3.1 never defines the whole-run reading, yet the stepwise paragraph says it 'differs from the whole-run reading both ways'. The correspondence-discipline paragraph narrows the co-participation relation this result introduces. Placed first, the result defines the reading before both use it. 'the separate witness' names a Lean namespace, not a premise.",
+   "evidence": "theories/becoming/chapters/07-SIGNIFICANCE.md:124, 127; ValuationFrames.lean:150-157"
+  }
+ ],
+ "verdicts": [
+  {
+   "id": "market-model-share-margin-and-ends",
+   "verdict": "sound-after-edits",
+   "note": "Every law matches its Lean: profits_difference, share_strictly_increases, no_entry_at_zero and zero_share_remains_zero; exact_floor_boundary and exact_low_certificate_boundary with their exact parameter ranges; zero_margin_is_protected_but_has_no_low_certificate; fixed_classification for 0<β≤3/4; high_approaches and low_approaches at β=1/2 with r≤1/32 and r≤1/48; middle_unstable as a witness; low_support_fails_finitely, coupled_eventual_floor_breach, low_guarded_history_fails and high_coupled_history_never_fails. All three receipts pass and bind the current bytes. Every cited theorem reports propext, Quot.sound and Classical.choice, as stated. No duplicate record. The dependency on market-protected-continuation (safe_history_never_fails) is right. Two fixes: the statement drops the interior-share and positive-rate hypotheses, and the correspondence calls an Euler step the discrete replicator. The chapter edits are correct; the term alignment and the maintenance-end law in the chapter are optional."
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "verdict": "sound-after-edits",
+   "note": "Laws 1 and 3 match seeded_joint_plan, compatible_from_seed, mutual_history and the Config witness exactly. The axiom counts are right but worded ambiguously. The rerun receipt is consistent: output hashes unchanged, frozen copy equal to the live source, only the import-line comment differs. Error: validation_scope says Lean 4.29.1, but the receipt is Lean 4.30.0-rc2 with Mathlib at ea11ccc0. The statement omits that the local plans must be valid. The vacuous-preservation law is a witness. The correspondence should cite rely-guarantee. F02 and the dependency on joint-plan-composition fit. The anchor text occurs once. The chapter and Open-item edits are correct."
+  },
+  {
+   "id": "a-swap-symmetric-assignment-singles-out-none",
+   "verdict": "sound-after-edits",
+   "note": "The statement and law match SwapInvariant → ¬ExactlyOne and two_assignments_fit_one_task. All four cited declarations have empty axiom reports in a passing receipt that binds d7416c92 (Lean 4.29.1). The anchor occurs once, and the 05 and 07 edits are correct. Fixes: the May (1952) tie result needs anonymity with neutrality, and the related detail drops never_agrees_of_both's condition on the sense, with 构成 for 形成."
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "verdict": "sound-after-edits",
+   "note": "Moving the record to the core module Becoming.Reconfiguration is right. The consolidated receipt 20261025T212948 lists it as stating CorrectionReconfiguration, its 80 declarations all have empty reports, and the six periphery aliases also report none. omitted_cause_breaks is read correctly (cause 9 in every formula, in no bound). Fixes: law 4's 'so' derives a step to the repaired roster from necessary conditions alone, while admits also needs reserve and time; law 3 states witnesses as laws; the formal-reuse dependency on unit A's certificates-sound-and-available is missing; the quorum correspondence is imprecise; the drafted home section states only the witnesses, under a 'periphery module' heading, though the record leads with core general laws. regions entry collective/general is acceptable."
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "verdict": "sound-after-edits",
+   "note": "The laws match exact_market_projection, payload_keeps_claims_and_history, carrier_and_work_accounted (given a part), the three blocking theorems, every_generation_executes with its exact hypotheses, and the financed and original-example witnesses. The receipt passes and binds 0af531d5 at the live meta-attractor path, Lean 4.29.1. Errors: the claim that every cited declaration reports all three axioms is wrong for Payload and Carrier, which report none. The statement omits the running-carrier and non-shutdown hypotheses. The shutdown witness concerns the served command state. The chapter edits are correct; the 'fee' rewording is optional."
+  },
+  {
+   "id": "finite-agreement-does-not-identify-priority",
+   "verdict": "sound-after-edits",
+   "note": "All three laws match bounded_comparison_agreement, every_finite_sample_agrees, no_fixed_finite_weight_is_lexical, finite_agreement_without_global_identification, outside_sample_reversal and reversing_history_unobserved, including the w+1 counter-pair. Axioms are at most propext and Quot.sound, Lean 4.29.1, and the binding passes. The related records and Fishburn (1974) are apt. Fix: the 07 home section claims only that the sample's weight fails globally, while the record (correctly) says no fixed weight agrees; align the chapter. The other two edits are minor wording."
+  },
+  {
+   "id": "significance-through-a-common-condition",
+   "verdict": "sound-after-edits",
+   "note": "The laws match Conditions.valuation, connected_of_common, significant_iff_of_common (standpoint and living event), Separate.not_connected over Separate.conditions, consumption_relates and valuing_consumption_reaches. All are in the consolidated receipt with empty reports; regions base frame and F07 are right. Checked the drafter's claim: Conditions.living_iff_relational is a declaration, history/becoming/Becoming/Bridge.lean:340. The becoming-renewal-reading record edits are consistent, and the proposed statement (299 characters) reads the witness as 'can'. Fixes: the statement drops the living-event hypothesis and reads an existential as universal. The cheap-connection caveat (a dependence at need 0 counts as taking part) should travel with the laws. The new 07 paragraph belongs before the stepwise reading, which presupposes the whole-run reading."
+  }
+ ],
+ "checked": "Worktree /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2, read-only. For each of the 7 records I read every sentence against the Lean: MarketGenerativity, RegimeBoundary, RegimeAttraction, SeededContinuation with JointContinuation and ContinuationAdequacy, PracticalPriorityIdentification, Becoming/Reconfiguration with CorrectionReconfiguration, AlignmentSuccession with rectangle_all_times, and ValuationFrames, Metaethics and RelationalRenewal. Also against the receipts' axiom maps (market receipts' new and inherited audits, seeded modules[2].audits, priority axiom_dependencies, correction-reconfiguration and alignment-continuity dependencies, consolidated 20261025T212948 modules) and the source hashes, all current. Compared the home sections of 05 §9 to §11, 07 §3.1 and §5, and 02 line 105. Every anchor_before and every chapter-edit old string occurs exactly once; 07b is absent, as expected for a new paragraph. research.py check: the only errors naming these ids are render-pending, and the one source drift is reach-from-a-seed (not this unit). lint --ids: 0 findings. Searched records for duplicates: none. Checked the dependencies and related records against those that exist, and the lengths of every proposed text (statements at most 300/150, laws at most 420/190). Two dependencies on other units: the dependency added to reviewers-count-by-independent-causes points to unit A's untracked certificates-sound-and-available.json, so that record must land first or together; joint-plans-from-a-supported-start binds the modified, uncommitted seeded-continuation-verification.json and its frozen sources copy, which must be committed with the record."
+}

@@ -977,3 +977,17 @@ Where: 07 §6, the block "When control over the selection is itself selected" ([
 - For reading 2: an assistant that adds the principal's couplings, not only its capacity. It would be read as extending the joint coupling, not as obedience.
 - For reading 3: a counter-rule read monotonically from its own share, with every rule it reads favouring its carriers, that does not lock.
 - For reading 4: open rule-making whose shared part is not a constant to every member, which the model does not cover. It would need its own law.
+
+<a id="d69-the-grammars-readings"></a>
+### The grammar's readings
+
+Where: 01 §2, §8.6 and §8.7 ([§2](../../../../theories/becoming/chapters/01-ROOT.md#class-and-continuation), [§8.6](../../../../theories/becoming/chapters/01-ROOT.md#instances), [§8.7](../../../../theories/becoming/chapters/01-ROOT.md#test-systems)); their losses are registered in the one-unfolding root's plan, §4.1 and §5.2 ([PLAN](development/one-unfolding-root/PLAN.md)). Decided in the one account of D45; registered by board item DF2, the chapter having labelled the first two with D45, the rule for every reading, and the third as new.
+
+**Decision.** Adopted with exact scope, in three readings.
+1. **The class is plural.** The 墨经's four samenesses, 重, 體, 合 and 類, are each a class once the whole, place or respect it relies on is fixed; 類同, alike in some respect, need not be transitive until its respect is fixed (`«同于不必传递»`, a witness).
+2. **The fire passed on.** 「指窮於爲薪，火傳也」 reads the pattern passed on while its carrier ceases: the step ends under the carrier's class and not under the pattern's, an alteration (`Web.passing_fire`). The World model's counting, amounts, recurrence and renaming laws are not its instances; only their premises are connected.
+3. **Consent and penalties.** An institution kept by its members' consent and one held by penalties, the source's pair of observationally equivalent mechanisms, are the thermostat witness read socially: in one core class of "in being or not" while the penalties stand, told apart once their removal is in the net. That is the witness's net with its occurrences renamed, not a new law.
+
+**Reasons.** Each reading claims no more than the law or witness it names: the class law with its witness that sameness in belonging need not be transitive, the alteration law, and the thermostat witness renamed.
+
+**What would change it.** A reading found to claim more than its law, or to conflict with another reading of the account.

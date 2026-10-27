@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "id": "joint-plans-from-a-supported-start",
+  "title": {
+    "en": "Joint plans from a supported start",
+    "zh": "自受支持之起点的共同方案"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F02",
+  "reviewed_at_utc": "2026-10-26T16:50:00+00:00",
+  "statement": {
+    "en": "Paired valid local plans are jointly valid where joint steps project faithfully, two properties hold on the start, locally allowed moves are jointly available where both hold and every joint step keeps both; mutual eventual promises force nothing, and in a witness ignition needs a stored reserve.",
+    "zh": "共同之步如实投影、两性质在起点成立、两者成立处局部允许之动作皆可共同实施、每一共同之步保持两者时，配对之有效局部方案共同有效；相互之终将承诺不迫使任何事；见证中点燃需要所储之储备。"
+  },
+  "laws": [
+    {
+      "en": "Where every joint step projects onto a step of each part, two properties of the joint configuration hold on a joint start projecting into the parts' starts, every pair of locally allowed moves is jointly allowed with a successor where both hold, and every joint step from there keeps both, two valid local plans are compatible and their paired plan is valid; along a history of such steps both hold at every step.",
+      "zh": "每一共同之步投影为各部分之一步，共同构形之两性质在投影入各部分起点之共同起点上成立，两者成立处每对局部允许之动作皆共同允许且有后继，自两者成立处之每一共同之步保持两者：则两份有效之局部方案相容，其配对方案有效；沿此类步之历史，两者每步皆成立。",
+      "declarations": [
+        "SeededContinuation.mutual_history",
+        "SeededContinuation.compatible_from_seed",
+        "SeededContinuation.seeded_joint_plan"
+      ]
+    },
+    {
+      "en": "Two eventual conditional promises, each \"if the other eventually does, I eventually do\", hold where neither ever happens; and, in a witness, preservation holds where the law has no successor, so no step is available.",
+      "zh": "两条终将之条件承诺（“若对方终将做，我终将做”）在双方都从不做之处成立；见证中，律无后继之处保持成立，而无一步可行。",
+      "declarations": [
+        "SeededContinuation.reciprocal_eventual_promises_can_be_empty",
+        "SeededContinuation.preservation_without_availability"
+      ]
+    },
+    {
+      "en": "In a shared renewal whose two sides each pass their activity to the other at every step, joint activity at any step is exactly joint activity at the start: an empty start stays empty, one side alone never becomes jointly active, a stored reserve ignites a start active at every step, and ignition needs the reserve and uses it up.",
+      "zh": "两侧每步互把活动传给对方之共同更新中，任一步之共同活跃恰为起点之共同活跃：空之起点仍空，单侧永不成为共同活跃，所储之储备点燃一个每步皆活跃之起点，点燃需要储备并用尽之。",
+      "declarations": [
+        "SeededContinuation.Config",
+        "SeededContinuation.tick",
+        "SeededContinuation.run",
+        "SeededContinuation.active",
+        "SeededContinuation.ignite",
+        "SeededContinuation.tick_supports_mutually",
+        "SeededContinuation.tick_active_iff",
+        "SeededContinuation.active_run_iff",
+        "SeededContinuation.empty_never_starts",
+        "SeededContinuation.partial_seed_not_joint",
+        "SeededContinuation.stored_seed_starts_and_maintains",
+        "SeededContinuation.ignition_requires_actual_reserve",
+        "SeededContinuation.absent_reserve_blocks_ignition"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Faithful joint-to-local projections, the start's support, the joint availability of locally allowed moves and the preservation of both properties by every joint step are supplied; plans are finite and branch on observations.",
+      "zh": "共同到局部之如实投影、起点之支持、局部允许之动作的共同可实施，以及每一共同之步对两性质之保持，皆为所给；方案有限，依观察分支。"
+    },
+    {
+      "en": "The shared renewal is a witness on Boolean configurations, one step at a time; ignition is a separate move, and the reserve is present at the start, not formed by a promise.",
+      "zh": "共同更新是布尔构形上之见证，逐步；点燃是另一动作，储备在起点即已存在，非由承诺形成。"
+    },
+    {
+      "en": "Periphery (imports JointContinuation and ContinuationAdequacy, built against Mathlib): six cited theorems report propext alone, absent_reserve_blocks_ignition propext and Quot.sound, and the other six none; none uses Classical.choice.",
+      "zh": "外围（引入 JointContinuation 与 ContinuationAdequacy，依 Mathlib 构建）：所引六项定理只报 propext，absent_reserve_blocks_ignition 报 propext 与 Quot.sound，其余六项皆无；无一用 Classical.choice。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "How a supported start forms, progress under an arbitrary schedule, or an infinite plan.",
+      "zh": "受支持之起点如何形成、任意调度下之推进或无穷之方案。",
+      "kind": "scope"
+    },
+    {
+      "en": "That an actual joint activity meets the projections, the support or the one-step availability: they are supplied.",
+      "zh": "实际之共同活动满足投影、支持或一步之可实施：皆为所给。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That preservation gives availability: a law with no successor preserves every property.",
+      "zh": "保持即给出可实施：无后继之律保持每一性质。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by Lean 4.30.0-rc2 with Mathlib at revision ea11ccc0 (receipt seeded-continuation-verification.json, rerun on 26 October 2026 against the current bytes of SeededContinuation.lean, which differ from those of the 8 October run only in a comment on the import line; modules ContinuationAdequacy, JointContinuation and SeededContinuation). The record was read against the current Lean; not reviewed by a person.",
+    "zh": "Lean 4.30.0-rc2（Mathlib 修订 ea11ccc0）实查（回执 seeded-continuation-verification.json，2026年10月26日依 SeededContinuation.lean 之当前字节重跑，其与10月8日之运行只差引入行上之一条注释；模块 ContinuationAdequacy、JointContinuation 与 SeededContinuation）。本记录对照当前 Lean 读过；未经人审。"
+  },
+  "next_delta": {
+    "en": "How a supported start forms in a run, and the paired plan from a seed on the spine, where mutual_history is the invariant law for the conjunction of the two properties and the composition is Viability.Plan.zip_keeps.",
+    "zh": "受支持之起点如何在运行中形成；以及于脊柱上自种子得出之配对方案：mutual_history 是两性质之合取之不变之律，合成即 Viability.Plan.zip_keeps。"
+  },
+  "correspondence": {
+    "en": "Concurrency: the one-step obligations are an inductive invariant for two properties, in the style of rely-guarantee reasoning (Jones 1983), each property being kept by every step taken where both hold. Read by the AI: cooperation among strangers needs a source, and mutual promises alone cannot start a loop.",
+    "zh": "并发：一步之义务是两性质之归纳不变式，属依赖—保证推理之式（Jones 1983），每一性质在两者皆成立处为每一步所保。依 AI 之读：陌生者之合作需要一个源头，单凭相互承诺不能启动一环。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean",
+  "aliases": [
+    "Joint plans from a supported start",
+    "自受支持之起点的共同方案",
+    "SeededContinuation.seeded_joint_plan",
+    "SeededContinuation.compatible_from_seed",
+    "SeededContinuation.reciprocal_eventual_promises_can_be_empty",
+    "SeededContinuation.ignition_requires_actual_reserve"
+  ],
+  "dependencies": [
+    {
+      "id": "joint-plan-composition",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "seeded_joint_plan closes JointContinuation.joint_plan_composition's compatibility premise with compatible_from_seed; the core law of that composition is Viability.Plan.zip_keeps.",
+        "zh": "seeded_joint_plan 以 compatible_from_seed 满足 JointContinuation.joint_plan_composition 之相容前提；该合成之核心律为 Viability.Plan.zip_keeps。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "finite-continuation-plans",
+      "detail": {
+        "en": "The finite observation-dependent plans each part runs.",
+        "zh": "各部分所行之有限、依观察分支之方案。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean",
+      "role": "proof",
+      "declarations": [
+        "SeededContinuation.mutual_history",
+        "SeededContinuation.compatible_from_seed",
+        "SeededContinuation.seeded_joint_plan",
+        "SeededContinuation.reciprocal_eventual_promises_can_be_empty",
+        "SeededContinuation.preservation_without_availability",
+        "SeededContinuation.Config",
+        "SeededContinuation.tick",
+        "SeededContinuation.run",
+        "SeededContinuation.active",
+        "SeededContinuation.ignite",
+        "SeededContinuation.tick_supports_mutually",
+        "SeededContinuation.tick_active_iff",
+        "SeededContinuation.active_run_iff",
+        "SeededContinuation.empty_never_starts",
+        "SeededContinuation.partial_seed_not_joint",
+        "SeededContinuation.stored_seed_starts_and_maintains",
+        "SeededContinuation.ignition_requires_actual_reserve",
+        "SeededContinuation.absent_reserve_blocks_ignition"
+      ],
+      "sha256": "b20d6a9db31d4cb7e3d308115c9325de45292828bda0410b176756a169c6f62d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/seeded-continuation-verification.json",
+      "role": "receipt",
+      "sha256": "7ca0d9e3432acc3299724c35431328027002405c7e8a8a343804f314f7c6735c"
+    },
+    {
+      "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "role": "statement",
+      "sha256": "116a52f07be1a4ea815abdfc15249f76fc324134c587194603db73722257ab4f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/SEEDED-CONTINUATION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "dc36db41b31d6a07c587b32807a3c26cf2f69bee58e3a9b2a3c83fe966394b54"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/seeded-continuation-verification.json",
+      "sha256_pointer": "/modules/2/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), paired local plans are jointly valid from a supported start under one-step joint availability and mutual preservation, mutual eventual promises force nothing, and in a witness ignition needs a stored reserve; from DEFECTS-FOUND (triage row 195); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），在一步之共同可实施与相互保持下，配对之局部方案自受支持之起点共同有效，相互之终将承诺不迫使任何事，见证中点燃需要所储之储备；出自 DEFECTS-FOUND（分诊第 195 行）；研究第 426 节。"
+    }
+  ]
+}

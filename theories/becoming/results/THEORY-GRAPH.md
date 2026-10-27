@@ -2,18 +2,18 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 2975 nodes, 5305 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3035 nodes, 5426 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
-| The root: relation, condition, class, continuation, core | 31 | 77 | 64 | 0 |
+| The root: relation, condition, class, continuation, core | 31 | 78 | 64 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 74 | 0 |
-| Knowing and testing | 0 | 79 | 72 | 0 |
-| Life and evolution | 0 | 35 | 17 | 0 |
-| Collectives and selection | 0 | 54 | 16 | 0 |
+| Knowing and testing | 0 | 89 | 72 | 0 |
+| Life and evolution | 0 | 42 | 17 | 0 |
+| Collectives and selection | 0 | 59 | 16 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
-| Significance and alignment | 0 | 72 | 53 | 0 |
-| Method and the formal core | 0 | 14 | 23 | 0 |
+| Significance and alignment | 0 | 74 | 53 | 0 |
+| Method and the formal core | 0 | 19 | 23 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 | Not yet assigned | 0 | 0 | 1 | 0 |
 
@@ -51,7 +51,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 
 ## The root: relation, condition, class, continuation, core
 
-Results (77):
+Results (78):
 
 - [A configuration is how it relates](records/configurations-alike-by-relation.md) (recorded-checked)
 - [A negation's change, and cases into a stable conclusion](records/negation-change-and-stable-cases.md) (recorded-checked)
@@ -95,6 +95,7 @@ Results (77):
 - [Place/transition nets on the spine](records/place-transition-nets-on-the-spine.md) (recorded-checked)
 - [Premises read off the exchange](records/premises-read-off-the-exchange.md) (recorded-checked)
 - [Process and frame as readings of one unfolding](records/process-and-frame-as-readings.md) (recorded-checked)
+- [Reach from a seed](records/reach-from-a-seed.md) (recorded-checked)
 - [Recurrence under every law of change](records/recurrence-without-premise.md) (recorded-checked)
 - [Recurrence without decidedness](records/recurrence-without-decidedness.md) (recorded-checked)
 - [Relational transformation with unchanged local states and a sufficient reduction](records/joint-correlation-reduced-dynamics.md) (recorded-checked)
@@ -235,13 +236,14 @@ Modules (74, 9 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attra
 
 ## Knowing and testing
 
-Results (79):
+Results (89):
 
 - [A family of readings within what it reads](records/readings-within-what-they-read.md) (recorded-checked)
 - [A formation's own course](records/a-formations-own-course.md) (recorded-checked)
 - [A history read off its finite stretches](records/a-history-read-off-its-finite-stretches.md) (recorded-checked)
 - [A law along one run, under a relation](records/a-law-through-a-projection-along-one-run.md) (recorded-checked)
 - [A projection carrying a law](records/projection-carrying-a-law.md) (recorded-checked)
+- [Access yet to form: a newly permitted probe tells apart what old observations do not](records/access-yet-to-form.md) (recorded-checked)
 - [Acquired access selects learning encounters](records/encounter-selection-and-revision.md) (recorded-checked)
 - [Acquired bindings enter compositional use](records/acquired-binding-compositional-use.md) (recorded-checked)
 - [Acquired consequences revise reference construction and actual use](records/consequence-revised-reference-plan.md) (recorded-checked)
@@ -249,9 +251,11 @@ Results (79):
 - [Acquired grounds, goal revision and actual continuation](records/formed-goal-revision-continuation.md) (recorded-checked)
 - [Action forms scenes available for binding](records/enacted-scene-binding.md) (recorded-checked)
 - [Activity forms reference revision and makes it recur](records/recurring-reference-revision.md) (recorded-checked)
+- [Adaptive closure: a reference changed outside what is retained is not resolved from the view](records/adaptive-closure-cannot-resolve.md) (recorded-checked)
 - [All prefix questions can still omit an intermediate loss](records/prefix-observation-loss.md) (recorded-checked)
 - [Binding-preserving substitution and its exact position criterion](records/binding-preserving-substitution.md) (recorded-checked)
 - [Branching-test equivalence and bisimulation](records/branching-tests-bisimulation.md) (recorded-checked)
+- [Certificates over fault envelopes: sound, available exactly where separated](records/certificates-sound-and-available.md) (recorded-checked)
 - [Claims shown in context](records/claims-shown-in-context.md) (recorded-checked)
 - [Common operational structure for functional joining](records/functional-joining-common-structure.md) (recorded-checked)
 - [Common relational structure for multivalued joining](records/multivalued-joining-common-structure.md) (recorded-checked)
@@ -259,8 +263,10 @@ Results (79):
 - [Conditioning by restriction, shares and a generative model's posterior](records/conditioning-by-restriction.md) (recorded-checked)
 - [Constitutive binding and the limits of presuppositionless promotion](records/constitutive-binding-assessment.md) (reviewed-scoped)
 - [Core as the root of wisdom target](records/wisdom-root.md) (open)
+- [Correction is not calibration: references recover the report, and later change defeats it](records/correction-is-not-calibration.md) (recorded-checked)
 - [Cross-articulation formation matching with retained references](records/retained-reference-joining-recovery.md) (recorded-checked)
 - [Empirical scope of encounter control and retained use](records/encounter-control-and-retention.md) (reviewed-scoped)
+- [Evidence through change: candidates propagated through every admitted change](records/evidence-through-change.md) (recorded-checked)
 - [Experiment needs return](records/experiment-needs-return.md) (recorded-checked)
 - [Extrapolation by elimination](records/learning-by-refutation.md) (recorded-checked)
 - [Feedback and reach](records/feedback-and-reach.md) (recorded-checked)
@@ -272,6 +278,7 @@ Results (79):
 - [Incidence questions yield a common relational refinement](records/incidence-common-refinement.md) (recorded-checked)
 - [Joining questions remain exact under the same encoding](records/joining-questions-survive-encoding.md) (recorded-checked)
 - [Later source learning binds retained records](records/retrospective-source-binding.md) (recorded-checked)
+- [Learning a rule by narrowing: safe and greatest answers](records/learning-a-rule-by-narrowing.md) (recorded-checked)
 - [Learning through a map is tracking in the limit](records/learning-through-a-map-is-tracking-in-the-limit.md) (recorded-checked)
 - [Necessary information conditions for fallible scientific discrimination](records/finite-fallible-inquiry-necessity.md) (recorded-checked)
 - [Necessary relational foundation of scientific inquiry](records/scientific-inquiry-foundation.md) (open)
@@ -284,6 +291,7 @@ Results (79):
 - [Public-data correspondence for situated recovery](records/situated-recovery-empirical-correspondence.md) (reviewed-scoped)
 - [Question fidelity and unique factors of open joining maps](records/joining-open-map-factor.md) (recorded-checked)
 - [Question translation and history recovery across finite operation scales](records/finite-granularity-question-recovery.md) (recorded-checked)
+- [Readings a response needs: no coarsest adequate reading, and success changes the next move](records/readings-a-response-needs.md) (recorded-checked)
 - [Revision with an undecided value](records/revision-with-an-undecided-value.md) (recorded-checked)
 - [Risk bounds and realized outcomes](records/risk-certificate-outcome-distinction.md) (recorded-checked)
 - [Selection right exactly where what matters is read](records/selection-right-exactly-where-read.md) (recorded-checked)
@@ -298,6 +306,7 @@ Results (79):
 - [Testing within the net](records/testing-within-the-net.md) (recorded-checked)
 - [Tests that fix likeness](records/tests-fix-likeness-where-determined.md) (recorded-checked)
 - [The boundary of enough under undetermined laws](records/the-boundary-of-enough-under-undetermined-laws.md) (recorded-checked)
+- [The composition route: order not identified by primitives, a duplicate exposed by a fresh record](records/composition-route.md) (recorded-checked)
 - [The least coupling with any number of conditions](records/sensitivity-is-the-least-coupling.md) (recorded-checked)
 - [The root of wisdom in the theory without the condition](records/wisdom-root-without-axiom.md) (reviewed-scoped)
 - [The split that makes sense, and states read off a history](records/the-split-that-makes-sense.md) (recorded-checked)
@@ -308,10 +317,12 @@ Results (79):
 - [What a finite history refutes](records/what-a-finite-history-refutes.md) (recorded-checked)
 - [What a finite stretch verifies, and what none can refute](records/what-a-finite-stretch-verifies.md) (recorded-checked)
 - [What a method comes to say in the limit](records/what-a-method-comes-to-say-in-the-limit.md) (recorded-checked)
+- [What a total keeps and loses across scales](records/what-a-total-keeps.md) (recorded-checked)
 - [What an extrapolation can learn through a map](records/learnable-through-a-map.md) (recorded-checked)
 - [What an extrapolation given nothing fixes](records/what-an-extrapolation-given-nothing-fixes.md) (recorded-checked)
 - [What finitely many labels fix](records/what-finitely-many-labels-fix.md) (recorded-checked)
 - [When readings in context glue, for parity](records/gluing-under-parity.md) (recorded-checked)
+- [When to inquire and when to respond](records/when-to-inquire-and-when-to-respond.md) (recorded-checked)
 - [Where a formation's acts return](records/where-a-formations-acts-return.md) (recorded-checked)
 - [Where seeking rests: more than now never does, above all others never for two](records/seeking-boundary.md) (recorded-checked)
 - [Which selections survive and remain executable when the lumping changes](records/selection-under-registration-revision.md) (recorded-checked)
@@ -322,16 +333,19 @@ Modules (72, 3 stated on the grammar): `ClassifiedBeliefProcesses`, `CodeAcquisi
 
 ## Life and evolution
 
-Results (35):
+Results (42):
 
 - [A confined rise within a whole, and what a founding carries](records/confined-rise-within-a-whole.md) (recorded-checked)
 - [A dependence formed from drawing](records/dependence-formed-from-drawing.md) (recorded-checked)
 - [A goal along a lineage](records/a-goal-along-a-lineage.md) (recorded-checked)
 - [A pattern outlasting its carriers lasts through passing](records/a-pattern-lasts-through-passing.md) (recorded-checked)
+- [A selected template need not increase the successor's structure](records/a-selected-template-need-not-raise-structure.md) (recorded-checked)
+- [A stronger arrangement formed by reconfiguration](records/stronger-arrangement-formed-by-reconfiguration.md) (recorded-checked)
 - [Actual material preparation output](records/material-preparation-output.md) (recorded-checked)
 - [Conveyance crosses the boundary](records/conveyance-crosses-the-boundary.md) (recorded-checked)
 - [Copying b-fold](records/copying-b-fold.md) (recorded-checked)
 - [Drift: offspring sampled rather than listed](records/drift-offspring-sampled.md) (recorded-checked)
+- [Equal totals can hide what a capacity carries](records/equal-totals-can-hide-what-a-capacity-carries.md) (recorded-checked)
 - [Evolution on descent](records/evolution-on-descent.md) (recorded-checked)
 - [Fixation by drift](records/fixation-by-drift.md) (recorded-checked)
 - [Fixation with selection in the draw](records/fixation-with-selection.md) (recorded-checked)
@@ -340,6 +354,7 @@ Results (35):
 - [Formed correction edits an existing successor](records/formed-copying-correction.md) (recorded-checked)
 - [Forming anew, necessary and sufficient](records/forming-anew-necessary-and-sufficient.md) (recorded-checked)
 - [Generation is replenishment](records/generation-is-replenishment.md) (recorded-checked)
+- [Groups formed by bonds share a founder](records/groups-formed-by-bonds-share-a-founder.md) (recorded-checked)
 - [Groups formed by descent](records/groups-formed-by-descent.md) (recorded-checked)
 - [Groups whose conditions are coupled](records/groups-whose-conditions-are-coupled.md) (recorded-checked)
 - [Inherited arrangement changes further copying](records/inherited-structural-copying.md) (recorded-checked)
@@ -349,6 +364,7 @@ Results (35):
 - [Mutation and the balance it sets](records/mutation-and-the-balance-it-sets.md) (recorded-checked)
 - [Need drift along a lineage](records/need-drift-along-a-lineage.md) (recorded-checked)
 - [Prepared material joins recurrent chain formation](records/recurrent-chain-assembly.md) (recorded-checked)
+- [Recurrence without revision of the selector](records/recurrence-without-selector-revision.md) (reviewed-scoped)
 - [Selection among groups by ending](records/selection-among-groups-by-ending.md) (recorded-checked)
 - [Selection with returns to groupmates](records/selection-with-returns-to-groupmates.md) (recorded-checked)
 - [Selection within and among groups of any sizes](records/selection-within-and-among-groups-of-any-sizes.md) (recorded-checked)
@@ -356,7 +372,9 @@ Results (35):
 - [The additive part of the variance in offspring number](records/additive-part-of-offspring-variance.md) (recorded-checked)
 - [The breeding value](records/the-breeding-value.md) (recorded-checked)
 - [The pace of selection, within what flows into the lineages carrying an amount](records/pace-of-selection-within-what-flows-in.md) (recorded-checked)
+- [The same carrier need not fix the same response](records/same-carrier-need-not-fix-the-response.md) (recorded-checked)
 - [The selection term proper, over generations](records/selection-term-over-generations.md) (recorded-checked)
+- [The updater line: development, memory, replacement and margins of a learning network](records/the-updater-line.md) (recorded-checked)
 - [Transmission as inheritance with a bounded need](records/transmission-is-inheritance-and-need.md) (recorded-checked)
 - [What bounds offspring numbers, and selection on offspring number itself](records/what-bounds-offspring-numbers.md) (recorded-checked)
 
@@ -365,7 +383,7 @@ Modules (17, 1 stated on the grammar): `ContinuingRevision`, `CopyCourses`, `Cop
 
 ## Collectives and selection
 
-Results (54):
+Results (59):
 
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
 - [A coupling a step keeps a dependence at every horizon](records/a-step-coupling-keeps-at-every-horizon.md) (recorded-checked)
@@ -373,6 +391,7 @@ Results (54):
 - [A pool that recruits through itself](records/a-pool-that-recruits-through-itself.md) (recorded-checked)
 - [A race for position draws everything](records/a-race-for-position-draws-everything.md) (recorded-checked)
 - [A rise past the inflow is drawn from beyond](records/a-rise-past-the-inflow-is-drawn-from-beyond.md) (recorded-checked)
+- [A swap-symmetric assignment singles out no role](records/a-swap-symmetric-assignment-singles-out-none.md) (recorded-checked)
 - [A weighting falling faster than renewal ends the base](records/a-weighting-faster-than-renewal-ends-the-base.md) (recorded-checked)
 - [A whole that draws its parts' arising beyond its renewal ends](records/whole-drawing-beyond-renewal-ends.md) (recorded-checked)
 - [Conditions kept together, and keeping a part](records/conditions-kept-together.md) (recorded-checked)
@@ -389,6 +408,7 @@ Results (54):
 - [Giving that waits on giving](records/giving-that-waits-on-giving.md) (recorded-checked)
 - [Imposing a code breaks the symmetry of forms](records/imposing-a-code-breaks-the-symmetry.md) (recorded-checked)
 - [Joint continuation of local plans](records/joint-plan-composition.md) (recorded-checked)
+- [Joint plans from a supported start](records/joint-plans-from-a-supported-start.md) (recorded-checked)
 - [Joint practice forms further participation and continuation](records/joint-practice-forms-continuation.md) (recorded-checked)
 - [Keeping a dependence forgoes the renewal at its need](records/keeping-forgoes-the-renewal-at-the-need.md) (recorded-checked)
 - [Least parts and equal shares](records/least-parts-and-equal-shares.md) (recorded-checked)
@@ -403,12 +423,15 @@ Results (54):
 - [Relative position is zero-sum; a race ends those ahead only through their dependence](records/relative-position-is-zero-sum.md) (recorded-checked)
 - [Required organization under the comparison C](records/organizational-formation-from-generative-comparison.md) (reviewed-scoped)
 - [Restoring giving from the worst start](records/restoring-giving-from-the-worst-start.md) (recorded-checked)
+- [Reviewers count by independent causes, not names](records/reviewers-count-by-independent-causes.md) (recorded-checked)
 - [Room read off the exchange](records/room-read-off-the-exchange.md) (recorded-checked)
 - [Several optimizers drain by their joint capacity](records/several-optimizers-drain-by-their-joint-capacity.md) (recorded-checked)
 - [Steps met again after a fall](records/steps-met-again-after-a-fall.md) (recorded-checked)
+- [Succession on a carrier provided for migration](records/succession-on-a-funded-carrier.md) (recorded-checked)
 - [Supported finite correction and protective handoff](records/market-supported-finite-transition.md) (recorded-checked)
 - [Synonyms and coined forms](records/synonyms-and-coined-forms.md) (recorded-checked)
 - [Taking what most hold](records/taking-what-most-hold.md) (recorded-checked)
+- [The market model: the renewing share, the margin and the two ends](records/market-model-share-margin-and-ends.md) (recorded-checked)
 - [The rest outruns the renewal](records/the-rest-outruns-the-renewal.md) (recorded-checked)
 - [Thresholds of waiting](records/thresholds-of-waiting.md) (recorded-checked)
 - [Tolerance monotone across laws](records/tolerance-monotone-across-laws.md) (recorded-checked)
@@ -450,7 +473,7 @@ Modules (9, 3 stated on the grammar): `GrammarCandidates`, `GrammarCourse`, `Gra
 
 ## Significance and alignment
 
-Results (72):
+Results (74):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -470,6 +493,7 @@ Results (72):
 - [Evidence recovery and the limits of stop access after interrupted change](records/recoverable-mediated-change.md) (recorded-checked)
 - [Executed instructions transport candidate evidence](records/mediated-evidence-transport.md) (recorded-checked)
 - [Feeding from a step](records/feeding-from-a-step.md) (recorded-checked)
+- [Finite agreement does not identify lexical priority](records/finite-agreement-does-not-identify-priority.md) (recorded-checked)
 - [Finite responsiveness to aggregation within same-kind recoverable basic losses](records/finite-aggregation-within-restorable-basic-losses.md) (reviewed-scoped)
 - [Four cases of a part](records/four-cases-of-a-part.md) (recorded-checked)
 - [From a standpoint's own good to reachable living significance](records/own-good-to-reachable-living-significance.md) (recorded-checked)
@@ -495,6 +519,7 @@ Results (72):
 - [Rule revision and actual generation with open forms](records/open-form-realization-under-revision.md) (recorded-checked)
 - [Self-concern through dependence](records/self-concern-through-dependence.md) (recorded-checked)
 - [Significance retained within the margin](records/significance-retained-within-margin.md) (recorded-checked)
+- [Significance through a common condition](records/significance-through-a-common-condition.md) (recorded-checked)
 - [Stronger universal practical warrant target](records/universal-practical-warrant.md) (open)
 - [Support from the supported](records/support-from-the-supported.md) (recorded-checked)
 - [The class of being joined](records/the-class-of-being-joined.md) (recorded-checked)
@@ -530,9 +555,10 @@ Modules (53, 4 stated on the grammar): `Acceptance`, `ActivationCapacity`, `Acti
 
 ## Method and the formal core
 
-Results (14):
+Results (19):
 
 - [Common interpretation of a finite basis](records/finite-basis-common-interpretation.md) (recorded-checked)
+- [Contraction is admissible exactly where duplication is reachable](records/contraction-where-duplication-is-reachable.md) (recorded-checked)
 - [Counting is a relation](records/counts-exist-where-decided.md) (recorded-checked)
 - [Existing interfaces are instances of the Becoming spine; comparison extends to every frame under the lifting rule](records/becoming-spine-instances.md) (recorded-checked)
 - [Fidelity coders on their own and the other's texts](records/fidelity-coders-on-own-and-other-texts.md) (reviewed-scoped)
@@ -540,11 +566,15 @@ Results (14):
 - [Listing once is decided identity](records/listing-once-is-decided-identity.md) (recorded-checked)
 - [Premise-tracked derivation soundness](records/derivation-soundness.md) (recorded-checked)
 - [Relata counted through relations](records/relata-counted-up-to-indiscernibility.md) (recorded-checked)
+- [Self-reference does not certify itself](records/self-reference-does-not-certify-itself.md) (recorded-checked)
 - [The last change of a run](records/the-last-change-of-a-run.md) (recorded-checked)
 - [Theory of Becoming: full foundational target](records/theory-of-becoming-foundation.md) (open)
+- [Type formation keeps the seed's boundary and gives no dynamics](records/type-formation-gives-no-dynamics.md) (recorded-checked)
 - [What a law of the whole and no part takes](records/what-a-law-of-the-whole-and-no-part-takes.md) (recorded-checked)
+- [What a summary keeps](records/what-a-summary-keeps.md) (recorded-checked)
 - [What discrete steps and whole amounts represent](records/what-discrete-steps-and-whole-amounts-represent.md) (recorded-checked)
 - [What identifying interderivable propositions keeps and loses (propext)](records/proposition-identity.md) (recorded-checked)
+- [What one move ensures, and covering of moves](records/one-move-covering.md) (recorded-checked)
 - [When the runs of a process settle](records/when-the-runs-of-a-process-settle.md) (recorded-checked)
 
 Modules (23, 0 stated on the grammar): `CensusTable`, `Coverage`, `Decidedness`, `Derivation`, `Ideals`, `IdleRemoval`, `Imbalance`, `IntegerOrder`, `Integers`, `ListingRefutations`, `Locality`, `Prelude`, `PropositionIdentity`, `Refinement`, `Reordering`, `Resolution`, `Standing`, `Stuttering`, `Tail`, `Tower`, `Undecided`, `WholeAmounts`, `Witnesses`

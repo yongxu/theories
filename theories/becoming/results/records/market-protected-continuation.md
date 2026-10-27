@@ -43,7 +43,7 @@ No dependency on another migrated record is asserted; source imports and supplie
 - Related, not a proved adapter: [market-partial-correction-boundary](market-partial-correction-boundary.md). The new result relaxes the correction parameter; the original scope remains preserved and reusable.
 - Related, not a proved adapter: [market-finite-support-obstruction](market-finite-support-obstruction.md). Completed finite-support obstruction preserving this record’s narrower result.
 
-**Used by:** [market-finite-support-obstruction](market-finite-support-obstruction.md) · [market-partial-correction-boundary](market-partial-correction-boundary.md) · [market-supported-finite-transition](market-supported-finite-transition.md)
+**Used by:** [market-finite-support-obstruction](market-finite-support-obstruction.md) · [market-model-share-margin-and-ends](market-model-share-margin-and-ends.md) · [market-partial-correction-boundary](market-partial-correction-boundary.md) · [market-supported-finite-transition](market-supported-finite-transition.md) · [succession-on-a-funded-carrier](succession-on-a-funded-carrier.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

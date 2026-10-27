@@ -1,0 +1,240 @@
+{
+  "schema_version": 2,
+  "id": "composition-route",
+  "title": {
+    "en": "The composition route: order not identified by primitives, a duplicate exposed by a fresh record",
+    "zh": "组合路线：原子读数不辨识顺序，新记录暴露重复"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F09",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "Three probes, the two atoms and one join, identify a compositional code wherever its primitives differ, the primitives alone leaving its order open; an operation formed from connectors can fit the old records while duplicating an argument; a fresh record exposes it and, with spare parts, repairs it.",
+    "zh": "三个探测（两个原子与一个连接）在原子值不同处辨识组合编码，只读原子值则顺序未定；由连接件形成的操作可在重复一个参数时仍与旧记录相合，新记录暴露它，有余件时修复它。"
+  },
+  "laws": [
+    {
+      "en": "Expressions are built from two atoms by joining and doubling; a code gives each atom a value and fixes the order in which a join puts its parts. The code read off the three probes is the code itself wherever its primitives differ, so it evaluates every expression as the code does, at every depth.",
+      "zh": "表达式由两个原子经连接与加倍构成；编码给每个原子一个值，并确定连接安放其部分的顺序。由三个探测读出的编码，在其原子值不同处就是该编码本身，故在任意深度上对每个表达式的求值都与该编码相同。",
+      "declarations": [
+        "Becoming.CodeAcquisition.acquired_exact",
+        "Becoming.CodeAcquisition.acquired_every_expression"
+      ]
+    },
+    {
+      "en": "Among codes with different primitives, the primitive readings alone merge codes that differ in order, so no answer read from them gives the order exactly; a code acquired under the usual order answers the novel expression otherwise than the switched order does.",
+      "zh": "在原子值不同的编码中，只读原子值会合并顺序不同的编码，故由此读出的回答不能精确给出顺序；在通常顺序下习得的编码，对新表达式的回答不同于改变后的顺序。",
+      "declarations": [
+        "Becoming.CodeAcquisition.primitiveEvidence",
+        "Becoming.CodeAcquisition.separated",
+        "Becoming.CodeAcquisition.primitives_not_lumped",
+        "Becoming.CodeAcquisition.primitives_no_exact",
+        "Becoming.CodeAcquisition.usual",
+        "Becoming.CodeAcquisition.switched",
+        "Becoming.CodeAcquisition.novel",
+        "Becoming.CodeAcquisition.wrong_order_fails_transfer"
+      ]
+    },
+    {
+      "en": "A program holds two primitive values and a route of sockets; the route of a code's order evaluates every expression as the code does. For the collapsed code, with equal primitives, a duplicating program fits the probe records yet answers the novel expression wrongly, and developing an apparatus trained from 15 units, with 2 parts, installs it; the novel expression's record rejects it and fits the right program.",
+      "zh": "程序含两个原子值与一条插口路线，编码顺序的路线使它对每个表达式的求值与编码相同。对原子值相等的塌缩编码，重复参数的程序与探测记录相合，却答错新表达式，对由 15 个单位训练、有 2 个部件的装置进行发展，装入它；新表达式的记录拒绝它，而与正确的程序相合。",
+      "declarations": [
+        "Becoming.RouteFormation.programFor_operates",
+        "Becoming.RouteFormation.collapsed",
+        "Becoming.RouteFormation.duplicated",
+        "Becoming.RouteFormation.old_records_admit_duplicate",
+        "Becoming.RouteFormation.develop_course_collapsed",
+        "Becoming.RouteFormation.novel_record_separates"
+      ]
+    },
+    {
+      "en": "Every course that develops, meets the novel expression's record and reconsiders, from an apparatus trained from 27 units with 6 parts, keeps that record, rejects the duplicate among its attempts and installs the right program, which answers a further unseen expression; with 2 parts the course blocks, keeps the record of the discrepancy, installs nothing and gives no answer.",
+      "zh": "由 27 个单位训练、有 6 个部件的装置出发，每个经发展、遇新表达式之记录并重新考虑的程，都保留该记录，在其尝试中拒绝重复者并装入正确的程序，后者回答另一个未见的表达式；只有 2 个部件时此程受阻，保留差异之记录，什么也不装入，也不作答。",
+      "declarations": [
+        "Becoming.RouteFormation.repair_course_rebuilds",
+        "Becoming.RouteFormation.repair_course_further",
+        "Becoming.RouteFormation.repair_course_no_parts"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The grammar, the probes, the connectors, the order of proposals, the samples and the draws are supplied; each placed socket draws one unit of stock and one part.",
+      "zh": "语法、探测、连接件、提议的次序、样本与所取用者为给定；每安放一个插口取用一个单位与一个部件。"
+    },
+    {
+      "en": "No premise: every CodeAcquisition and RouteFormation declaration has an empty axiom report; the pre-spine CompositionalAcquisition and CompositionalFormation use propext in some declarations.",
+      "zh": "无前提：CodeAcquisition 与 RouteFormation 的每个声明公理报告皆空；前主干的 CompositionalAcquisition 与 CompositionalFormation 在部分声明中用 propext。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Cognition or language: the model is a supplied, finite law family.",
+      "zh": "认知或语言：此模型是给定的有限律族。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a fresh record always repairs: without spare parts the discrepancy is recorded and nothing is installed.",
+      "zh": "新记录总能修复：没有余件时，差异被记录而什么也不装入。",
+      "kind": "non-implication",
+      "witness": "Becoming.RouteFormation.repair_course_no_parts"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean",
+      "detail": {
+        "en": "For the collapsed code, the duplicating program fits every probe record and answers the novel expression wrongly (old_records_admit_duplicate).",
+        "zh": "对塌缩编码，重复参数的程序与每个探测记录相合，却答错新表达式（old_records_admit_duplicate）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.29.1): Becoming.CodeAcquisition and Becoming.RouteFormation by the consolidated core checker (receipt 20261025T212948.819150Z), every declaration with an empty axiom report; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 实查：Becoming.CodeAcquisition 与 Becoming.RouteFormation 经合并核心检查器（回执 20261025T212948.819150Z），每个声明公理报告皆空；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "State which records identify a formed operation for any finite grammar: the probes as distinctions the operation must keep, so that the duplicate is the case where the records lump what the operation separates.",
+    "zh": "对任一有限语法陈述哪些记录辨识所形成的操作：探测作为操作必须保留的区分，使重复者成为记录归并了操作所分开者的情形。"
+  },
+  "correspondence": {
+    "en": "That training on primitives does not fix how they compose, so that systematic compositional generalization can fail, is the finding of Lake and Baroni (2018) for sequence-to-sequence networks; the correspondence is structural, not a model of those networks.",
+    "zh": "在原子上训练不确定其如何组合，故系统性的组合泛化可能失败，此即 Lake 与 Baroni（2018）对序列到序列网络的发现；此对应是结构上的，不是那些网络的模型。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean",
+  "aliases": [
+    "composition route",
+    "组合路线",
+    "Becoming.CodeAcquisition.primitives_no_exact",
+    "Becoming.RouteFormation.repair_course_no_parts",
+    "Generative.CompositionalAcquisition.primitive_readings_do_not_resolve_order (periphery module)",
+    "Generative.CompositionalAcquisition.changed_order_invalidates_transfer (periphery module)",
+    "Generative.CompositionalFormation.old_record_can_admit_wrong_constructed_operation (periphery module)",
+    "Generative.CompositionalFormation.fresh_record_changes_actual_reconstruction (periphery module)",
+    "Generative.CompositionalFormation.discrepancy_alone_does_not_supply_repair_parts (periphery module)"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "acquired-binding-compositional-use",
+      "detail": {
+        "en": "Reading every encoded sequence where grouping recovers the words; here the order of composition itself.",
+        "zh": "在分组恢复词之处读出每个编码序列；此处为组合顺序本身。"
+      }
+    },
+    {
+      "id": "generalization-through-lumping",
+      "detail": {
+        "en": "Data fix a value only where an input is lumped with an observed one; the duplicate is records lumping what the operation separates.",
+        "zh": "数据只在输入与某观察输入归并处定值；重复者即记录归并了操作所分开者。"
+      }
+    },
+    {
+      "id": "encounter-selection-and-revision",
+      "detail": {
+        "en": "Chosen encounters narrow the candidates; a fresh reference record is such an encounter.",
+        "zh": "所选的接触收窄候选；新的参照记录即这样的接触。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.CodeAcquisition.acquired_exact",
+        "Becoming.CodeAcquisition.acquired_every_expression",
+        "Becoming.CodeAcquisition.primitiveEvidence",
+        "Becoming.CodeAcquisition.separated",
+        "Becoming.CodeAcquisition.primitives_not_lumped",
+        "Becoming.CodeAcquisition.primitives_no_exact",
+        "Becoming.CodeAcquisition.usual",
+        "Becoming.CodeAcquisition.switched",
+        "Becoming.CodeAcquisition.novel",
+        "Becoming.CodeAcquisition.wrong_order_fails_transfer"
+      ],
+      "sha256": "583321dc89d8c558097f532e83b051873f4f96e65b0f603aeb2a4e91f5ad87da"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RouteFormation.programFor_operates",
+        "Becoming.RouteFormation.collapsed",
+        "Becoming.RouteFormation.duplicated",
+        "Becoming.RouteFormation.old_records_admit_duplicate",
+        "Becoming.RouteFormation.develop_course_collapsed",
+        "Becoming.RouteFormation.novel_record_separates",
+        "Becoming.RouteFormation.repair_course_rebuilds",
+        "Becoming.RouteFormation.repair_course_further",
+        "Becoming.RouteFormation.repair_course_no_parts"
+      ],
+      "sha256": "cf305ac30efa2bc9bbbe58b4c2b5d352c79a9620bbbd0cffc91dcd8c9cd5346e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/CompositionalAcquisition.lean",
+      "role": "provenance",
+      "declarations": [
+        "Generative.CompositionalAcquisition.primitive_readings_do_not_resolve_order",
+        "Generative.CompositionalAcquisition.changed_order_invalidates_transfer"
+      ],
+      "sha256": "c1bb4792d8f2034e870724f0a8828cef9ef31ecf36e3b6b53ed6e8eb3900f848"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/CompositionalFormation.lean",
+      "role": "provenance",
+      "declarations": [
+        "Generative.CompositionalFormation.old_record_can_admit_wrong_constructed_operation",
+        "Generative.CompositionalFormation.fresh_record_changes_actual_reconstruction",
+        "Generative.CompositionalFormation.discrepancy_alone_does_not_supply_repair_parts"
+      ],
+      "sha256": "975e7affcf982c64b42b9795e0129b1504441d71c4ff47069e0ba57d19a26be5"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "58e42859a9f7ec5720b68d4bc28f43b02e2fc1d24ab766913ed0d56980751ef1"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.CodeAcquisition",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RouteFormation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), that three probes identify a compositional code where its primitives differ and the primitives alone do not, and that a fresh record exposes and, with spare parts, repairs a duplicating operation, in the core; from DEFECTS-FOUND (triage row 137); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），三个探测在原子值不同处辨识组合编码而原子值本身不能，以及新记录暴露并在有余件时修复重复参数的操作，皆在核心；出自 DEFECTS-FOUND（分诊第 137 行）；研究第 426 节。"
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "schema_version": 2,
+  "id": "certificates-sound-and-available",
+  "title": {
+    "en": "Certificates over fault envelopes: sound, available exactly where separated",
+    "zh": "故障包络上的证书：可靠，恰在分隔处可用"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F05",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "A certificate over an envelope of admitted fault sets is sound wherever the actual fault set is admitted, and available for every admitted fault set exactly where every two leave a domain outside both; pooling models keeps soundness and can lose availability; an interrupted search is pending.",
+    "zh": "被允许故障集之包络上的证书，在实际故障集被允许处皆可靠；对每个被允许故障集都可用，恰当每两个之外都留有一域；汇集模型保持可靠而可能失去可用；被中断的搜索为未决。"
+  },
+  "laws": [
+    {
+      "en": "A certificate holds where the envelope is not empty and, for every admitted fault set, some domain of the roster outside it supports. An accepted certificate gives each admitted fault set a supporting domain outside it, so whatever every faithful domain outside the actual fault set warrants holds wherever that fault set is admitted.",
+      "zh": "证书成立，指包络非空，且对每个被允许的故障集，名册中有其外的某域支持。被接受的证书给每个被允许故障集一个其外的支持域，所以只要实际故障集被允许，其外每个忠实域所担保者即成立。",
+      "declarations": [
+        "Becoming.FaultEnvelopes.certificate",
+        "Becoming.FaultEnvelopes.certificate_iff",
+        "Becoming.FaultEnvelopes.certificate_witness",
+        "Becoming.FaultEnvelopes.certificate_sound"
+      ]
+    },
+    {
+      "en": "The envelope is separated where every two admitted fault sets leave a domain outside both. Separated, and every domain outside the actual admitted fault set supporting, the certificate holds; support only inside one admitted fault set is rejected; and with support from exactly the domains outside the actual set, the certificate holds for every admitted actual set exactly where the envelope is separated.",
+      "zh": "每两个被允许故障集之外都留有一域时，包络是分隔的。包络分隔、且被允许的实际故障集之外每域都支持时，证书成立；仅在一个被允许故障集之内的支持被拒绝；恰由实际故障集之外诸域支持时，证书对每个被允许的实际故障集都成立，恰当包络分隔。",
+      "declarations": [
+        "Becoming.FaultEnvelopes.separated",
+        "Becoming.FaultEnvelopes.certificate_available",
+        "Becoming.FaultEnvelopes.support_inside_fault_rejected",
+        "Becoming.FaultEnvelopes.availability_iff_separated"
+      ]
+    },
+    {
+      "en": "Where the actual fault set and one admitted fault set together cover the roster, support from exactly the domains outside the actual set is rejected; an empty envelope, or one admitting the whole roster, certifies nothing; a stronger envelope, each fault set of a nonempty weaker one lying within one of its own, accepts only what the weaker accepts.",
+      "zh": "实际故障集与一个被允许故障集合起来覆盖名册时，恰由实际故障集之外诸域给出的支持被拒绝；空包络或允许整个名册的包络什么也不证明；较强的包络（非空较弱包络的每个故障集都含于其某个故障集）只接受较弱者所接受的。",
+      "declarations": [
+        "Becoming.FaultEnvelopes.covering_faults_reject",
+        "Becoming.FaultEnvelopes.empty_envelope_rejects",
+        "Becoming.FaultEnvelopes.total_fault_rejects",
+        "Becoming.FaultEnvelopes.stronger_envelope_no_new_acceptance"
+      ]
+    },
+    {
+      "en": "Named envelopes: one fault among three domains, and a correlated pair among four, are separated; a correlated pair among three blocks the certificate when only the domain outside the pair supports.",
+      "zh": "具名包络：三域中一个故障、四域中一对相关故障是分隔的；三域中一对相关故障在仅由该对之外一域支持时使证书受阻。",
+      "declarations": [
+        "Becoming.FaultEnvelopes.one_fault_separation",
+        "Becoming.FaultEnvelopes.correlated_four_separation",
+        "Becoming.FaultEnvelopes.correlated_three_blocks"
+      ]
+    },
+    {
+      "en": "Where several causal models remain, the pool holds every fault set any of them admits, and an inquiry keeps the models agreeing with its answer. The actual model survives every faithful test, its faults lie in the pool, and a certificate over the pool is sound, for covered causes, whichever remaining model is actual.",
+      "zh": "仍有多个因果模型时，汇集含其中任一所允许的每个故障集，探究保留与其回答相合的模型。实际模型通过每个忠实检验，其故障在汇集之中；对被覆盖的原因，无论哪个剩余模型为实际，汇集上的证书都可靠。",
+      "declarations": [
+        "Becoming.PooledEnvelopes.pooled",
+        "Becoming.PooledEnvelopes.retain",
+        "Becoming.PooledEnvelopes.retained_truth",
+        "Becoming.PooledEnvelopes.model_faults_in_pool",
+        "Becoming.PooledEnvelopes.pooled_certificate_sound"
+      ]
+    },
+    {
+      "en": "Narrowing the models narrows the pool, keeps an accepted certificate while the pool is not empty, and keeps a separated pool separated; an empty family certifies nothing. In the computed case of three models of four members, each model is ready while their pool is not; a diagnosis need not identify the model, and a misleading one can accept only compromised support.",
+      "zh": "收窄模型使汇集收窄，汇集非空时保持已接受的证书，并使分隔的汇集保持分隔；空族什么也不证明。在四成员三模型的计算例中，每个模型都就绪而其汇集不就绪；诊断未必辨识出模型，误导的诊断可能只接受受损的支持。",
+      "declarations": [
+        "Becoming.PooledEnvelopes.pooled_subset",
+        "Becoming.PooledEnvelopes.refinement_preserves_certificate",
+        "Becoming.PooledEnvelopes.refinement_preserves_separation",
+        "Becoming.PooledEnvelopes.empty_family_rejects",
+        "Becoming.PooledEnvelopes.poolReady",
+        "Becoming.PooledEnvelopes.every_candidate_ready_pool_not",
+        "Becoming.PooledEnvelopes.diagnosis_not_identifying",
+        "Becoming.PooledEnvelopes.misleading_diagnosis_accepts_compromised"
+      ]
+    },
+    {
+      "en": "A search within a number of inspections finds only what is there; a search ending exhausted had no inhabited entry on its frontier; with inspections at least the frontier's nodes it is not left pending, and an inhabited tree is found. Stopped after one inspection, the search of a fork of a closed branch and an endpoint is pending; with three it finds it; a search can find an endpoint with part of the tree unread.",
+      "zh": "在若干次检查之内对树的有限搜索只找到那里有的东西；以穷尽告终的搜索，其前沿上没有有内容的条目；检查次数不少于前沿的节点数时不会未决，有内容的树会被找到。只检查一次即中断时，对封闭分支与端点相分叉之树的搜索为未决，检查三次则找到端点；搜索可在树的一部分未读时找到端点。",
+      "declarations": [
+        "Becoming.TreeSearch.scan",
+        "Becoming.TreeSearch.discover",
+        "Becoming.TreeSearch.scan_sound",
+        "Becoming.TreeSearch.discover_sound",
+        "Becoming.TreeSearch.exhausted_dead",
+        "Becoming.TreeSearch.scan_settles",
+        "Becoming.TreeSearch.inhabited_discovered",
+        "Becoming.TreeSearch.interrupted_pending",
+        "Becoming.TreeSearch.found_without_complete_map"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The roster, the envelopes and the faithfulness of domains outside the actual fault set are supplied, as is, for pooling, coverage of the actual causes by a remaining model.",
+      "zh": "名册、包络与实际故障集之外诸域的忠实为给定；汇集时，实际原因为某剩余模型所覆盖，亦为给定。"
+    },
+    {
+      "en": "The search inspects a supplied tree that does not change during the search; one inspection reads one node.",
+      "zh": "搜索检查一棵给定的树，搜索期间树不变；一次检查读一个节点。"
+    },
+    {
+      "en": "No premise: every FaultEnvelopes, PooledEnvelopes and TreeSearch declaration has an empty axiom report; they restate the periphery correction modules, which use propext and Quot.sound in some declarations and Classical.choice in six execution, dispatch and completion laws not restated here, as their receipts report.",
+      "zh": "无前提：FaultEnvelopes、PooledEnvelopes 与 TreeSearch 的每个声明公理报告皆空；它们重述外围修正模块，后者部分声明用 propext 与 Quot.sound，六条此处未重述的执行、分派与完成之律用 Classical.choice，如其回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That an envelope matches the actual shared causes: the envelope is supplied by an analysis the certificate does not check.",
+      "zh": "包络与实际的共同原因相符：包络由证书不检查的分析给出。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Byzantine agreement, legitimate initial authority or a cryptographic implementation.",
+      "zh": "拜占庭一致、正当的初始授权或密码学实现。",
+      "kind": "scope"
+    },
+    {
+      "en": "Absence from a search that stops: an interrupted search is pending, and only exhaustion of the frontier shows that nothing is there.",
+      "zh": "由停下的搜索得出不存在：被中断的搜索是未决，只有前沿穷尽才表明那里什么也没有。",
+      "kind": "non-implication",
+      "witness": "Becoming.TreeSearch.interrupted_pending"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PooledEnvelopes.lean",
+      "detail": {
+        "en": "Three models of four members: each is ready, their pool is not (every_candidate_ready_pool_not).",
+        "zh": "四成员三模型：各自就绪，其汇集不就绪（every_candidate_ready_pool_not）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean",
+      "detail": {
+        "en": "A correlated pair among three domains blocks the certificate (correlated_three_blocks).",
+        "zh": "三域中一对相关故障阻断证书（correlated_three_blocks）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.29.1): FaultEnvelopes, PooledEnvelopes and TreeSearch by the consolidated core checker (receipt 20261025T212948.819150Z), every declaration with an empty axiom report; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 实查：FaultEnvelopes、PooledEnvelopes 与 TreeSearch 经合并核心检查器（回执 20261025T212948.819150Z），每个声明公理报告皆空；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Read the envelope off the process: state which fault sets can occur together as the shared supports of the domains' formation, so that separation is a law of the formation rather than a supplied list.",
+    "zh": "由过程读出包络：把哪些故障集能一同发生陈述为诸域形成中的共同支撑，使分隔成为形成之律，而非给定的列表。"
+  },
+  "correspondence": {
+    "en": "Availability exactly where no two admitted fault sets cover the roster is the Q² condition on adversary structures (Hirt and Maurer 2000); the envelope plays the role of a fail-prone system for Byzantine quorums (Malkhi and Reiter 1998), whose existence conditions ask more (no three fail-prone sets covering the servers); the certificate is a quorum test, not agreement.",
+    "zh": "恰当没有两个被允许故障集覆盖名册时可用，即对手结构上的 Q² 条件（Hirt 与 Maurer 2000）；包络相当于拜占庭法定集中的易失效系统（Malkhi 与 Reiter 1998），其存在条件要求更多（没有三个易失效集覆盖全部服务器）；证书是法定集检验，不是一致协议。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean",
+  "aliases": [
+    "certificates sound and available",
+    "可靠且可用的证书",
+    "Becoming.FaultEnvelopes.availability_iff_separated",
+    "Becoming.PooledEnvelopes.pooled_certificate_sound",
+    "Becoming.TreeSearch.interrupted_pending"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "fallible-witness-diagnosability",
+      "detail": {
+        "en": "Two answers are told apart on a complete report exactly where their envelopes are cross-separated; here a certificate for one statement.",
+        "zh": "两个回答在完整报告上可分，恰当其包络交叉分隔；此处为一个陈述的证书。"
+      }
+    },
+    {
+      "id": "copied-witnesses-change-nothing",
+      "detail": {
+        "en": "Copied witnesses leave the certificate of FaultEnvelopes unchanged.",
+        "zh": "复制的见证者不改变 FaultEnvelopes 的证书。"
+      }
+    },
+    {
+      "id": "evidence-through-change",
+      "detail": {
+        "en": "The pooled certificate kept sound along every lawful history of admitted change.",
+        "zh": "汇集证书沿被允许之变化的每段合律历史保持可靠。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.FaultEnvelopes.certificate",
+        "Becoming.FaultEnvelopes.certificate_iff",
+        "Becoming.FaultEnvelopes.certificate_witness",
+        "Becoming.FaultEnvelopes.certificate_sound",
+        "Becoming.FaultEnvelopes.separated",
+        "Becoming.FaultEnvelopes.certificate_available",
+        "Becoming.FaultEnvelopes.support_inside_fault_rejected",
+        "Becoming.FaultEnvelopes.availability_iff_separated",
+        "Becoming.FaultEnvelopes.covering_faults_reject",
+        "Becoming.FaultEnvelopes.empty_envelope_rejects",
+        "Becoming.FaultEnvelopes.total_fault_rejects",
+        "Becoming.FaultEnvelopes.stronger_envelope_no_new_acceptance",
+        "Becoming.FaultEnvelopes.one_fault_separation",
+        "Becoming.FaultEnvelopes.correlated_four_separation",
+        "Becoming.FaultEnvelopes.correlated_three_blocks"
+      ],
+      "sha256": "020c64bdc60178c891a4ffa168d275efb35c4cddd8356ae3b4ad1521e5c9ec88"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PooledEnvelopes.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.PooledEnvelopes.pooled",
+        "Becoming.PooledEnvelopes.retain",
+        "Becoming.PooledEnvelopes.retained_truth",
+        "Becoming.PooledEnvelopes.model_faults_in_pool",
+        "Becoming.PooledEnvelopes.pooled_certificate_sound",
+        "Becoming.PooledEnvelopes.pooled_subset",
+        "Becoming.PooledEnvelopes.refinement_preserves_certificate",
+        "Becoming.PooledEnvelopes.refinement_preserves_separation",
+        "Becoming.PooledEnvelopes.empty_family_rejects",
+        "Becoming.PooledEnvelopes.poolReady",
+        "Becoming.PooledEnvelopes.every_candidate_ready_pool_not",
+        "Becoming.PooledEnvelopes.diagnosis_not_identifying",
+        "Becoming.PooledEnvelopes.misleading_diagnosis_accepts_compromised"
+      ],
+      "sha256": "a5db46017b8edf33b0675a9815a0f88fa3675eb03a27ac41fd3c2f71340be819"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TreeSearch.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.TreeSearch.scan",
+        "Becoming.TreeSearch.discover",
+        "Becoming.TreeSearch.scan_sound",
+        "Becoming.TreeSearch.discover_sound",
+        "Becoming.TreeSearch.exhausted_dead",
+        "Becoming.TreeSearch.scan_settles",
+        "Becoming.TreeSearch.inhabited_discovered",
+        "Becoming.TreeSearch.interrupted_pending",
+        "Becoming.TreeSearch.found_without_complete_map"
+      ],
+      "sha256": "1284ab5364913a8d655b70d52d9d35c67f1861576cd0288ae1339e6969253f6a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FaultTolerantCorrection.lean",
+      "role": "provenance",
+      "sha256": "38f978fcabfaadca45c90b2298cf57502b839c6c9b93c3b9d0827d9ac2cb66ac"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvidenceQualifiedCorrection.lean",
+      "role": "provenance",
+      "sha256": "a3c87bdfa01dbf6c25da19d4bbc0d6e028744b504d95023c76607379cc20327f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AcquiredCorrection.lean",
+      "role": "provenance",
+      "sha256": "5448267c53e610b28bd030dfb1a894be840c307d54cd76e4be3695f196e8cd62"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "fd56b1d37f0e44c9819e766477c90d45873236d30ead2ecab5e1b3a0856da4e1"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FaultEnvelopes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PooledEnvelopes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PooledEnvelopes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TreeSearch.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.TreeSearch",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), certificate soundness and availability over fault envelopes, pooled models, and the pending verdict of an interrupted search, all in the core; from DEFECTS-FOUND (triage row 131); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），故障包络上证书的可靠与可用、模型的汇集，以及被中断搜索的未决判决，皆在核心；出自 DEFECTS-FOUND（分诊第 131 行）；研究第 426 节。"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "schema_version": 2,
+  "id": "reviewers-count-by-independent-causes",
+  "title": {
+    "en": "Reviewers count by independent causes, not names",
+    "zh": "审查者以独立之因计，不以名计"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-26T17:00:00+00:00",
+  "statement": {
+    "en": "With failures computed from causes, a certificate over the induced fault sets is sound for each covered set of causes; readiness follows causes, not names: two of three reviewers under one cause keep their names, not readiness, and a shared cause the bounds omit can fail a whole ready roster.",
+    "zh": "各审查者之失效由原因算出时，所致故障集上之证书对每一被覆盖之原因集皆可靠；就绪随因而不随名：三位中两位归于一因，名皆保留而不就绪；诸界所遗漏之共有原因，可使整个就绪名册失效。"
+  },
+  "laws": [
+    {
+      "en": "Each member of a roster fails by a formula over root causes (a cause, either of two formulas, or both), and failure is monotone in the causes. Bounds on the causes that may occur together induce the roster's fault sets, and a certificate over that envelope is sound for every set of actual causes some bound covers, given members faithful where they work.",
+      "zh": "名册上每一成员依根原因上之式失效（一因、两式之一或两式皆是），失效对原因单调。可同时发生之原因之界导出名册之故障集；该包络上之证书，对某界所覆盖之每一实际原因集皆可靠，只要成员在其工作处如实。",
+      "declarations": [
+        "Becoming.Reconfiguration.FaultFormula",
+        "Becoming.Reconfiguration.fails",
+        "Becoming.Reconfiguration.fails_mono",
+        "Becoming.Reconfiguration.Arrangement",
+        "Becoming.Reconfiguration.induced",
+        "Becoming.Reconfiguration.envelope",
+        "Becoming.Reconfiguration.Covered",
+        "Becoming.Reconfiguration.outside_bound_survives",
+        "Becoming.Reconfiguration.induced_certificate_sound"
+      ]
+    },
+    {
+      "en": "An arrangement is ready where its bounds are not empty and every two of them leave some member working under both; readiness is exactly nonempty bounds with a separated induced envelope, and a ready arrangement makes the certificate available to members responsive where they work under covered causes.",
+      "zh": "一种安排就绪，是说其界非空且每两界皆留有在二者下皆工作之成员；就绪恰是界非空且导出包络分隔，就绪之安排使证书对在被覆盖之原因下工作处有回应之成员可得。",
+      "declarations": [
+        "Becoming.Reconfiguration.ready",
+        "Becoming.Reconfiguration.ready_iff_nonempty_separated",
+        "Becoming.Reconfiguration.induced_certificate_available"
+      ]
+    },
+    {
+      "en": "In the computed cases, a formula needing two copies of one cause fails with that cause alone, one needing two distinct causes does not, one needing either fails with one. Three members with distinct single causes are ready; with two under one cause, all three names kept, they are not; a fourth with its own cause repairs it; four under two causes are not ready.",
+      "zh": "于所算诸例中：要求同一原因两份之式，仅此一因即失效；要求两个不同原因者则否；要求两因之一者，一因即失效。三位各有单一不同原因者就绪；其中两位归于一因、三名皆在者不就绪；加第四位自有其因者修复之；四位归于两因者不就绪。",
+      "declarations": [
+        "Becoming.Reconfiguration.separate3",
+        "Becoming.Reconfiguration.merged3",
+        "Becoming.Reconfiguration.repaired4",
+        "Becoming.Reconfiguration.duplicated4",
+        "Becoming.Reconfiguration.envelopes_compute",
+        "Becoming.Reconfiguration.readiness_cases",
+        "Becoming.Reconfiguration.same_cause_not_redundant"
+      ]
+    },
+    {
+      "en": "The separate roster's envelope, reused after the merger, accepts the two merged members' support; recomputed, it rejects it. A reconfiguration installs only where opened, to a ready candidate, with reserve and time for its draw and response: from the original there is no step to the merged roster, one to the repaired; a roster can be ready while a cause in every member's formula and no bound fails every member.",
+      "zh": "分隔名册之包络于合并后再用，接受两位被合并成员之支持，重算之包络拒之。重组只在开启、候选就绪且储备与时间足其所需与回应之处装入候选：自原装置无一步至合并之名册，有一步至修复者；安排可以就绪，而每一成员之式皆含、诸界皆无之原因使每一成员失效。",
+      "declarations": [
+        "Becoming.Reconfiguration.stale_envelope_accepts_shared",
+        "Becoming.Reconfiguration.reconfigure",
+        "Becoming.Reconfiguration.unready_rejected",
+        "Becoming.Reconfiguration.closed_rejected",
+        "Becoming.Reconfiguration.shared_cause_no_step",
+        "Becoming.Reconfiguration.separated_repair_steps",
+        "Becoming.Reconfiguration.omitted",
+        "Becoming.Reconfiguration.omitted_cause_breaks"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom: every cited declaration has an empty axiom report (core module Becoming.Reconfiguration).",
+      "zh": "不加公理：所引每一声明之公理报告皆空（核心模块 Becoming.Reconfiguration）。"
+    },
+    {
+      "en": "The fault formulas are supplied upper bounds, not discovered causal laws; the bounds on co-occurring causes, the protected monitor, the opening of the step and the correspondence remain premises; rosters are finite lists, failures Boolean, and the cases are computed on rosters of three and four.",
+      "zh": "故障之式是所给之上界，非所发现之因果律；共现原因之界、受保护之监视、步之开启与对应仍为前提；名册为有限列表，失效为布尔值，诸例于三员与四员之名册上计算。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the formulas are the actual causes of failure: they are supplied bounds.",
+      "zh": "诸式即失效之实际原因：它们是所给之界。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That a passing certificate gives agreement across a network, or warrant for the rearrangement it installs.",
+      "zh": "通过之证书给出网络上之一致，或给所装入之重排以根据。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.Reconfiguration, 80 declarations, every one with an empty axiom report; core purity verified. The module states the periphery module CorrectionReconfiguration (receipt correction-reconfiguration-verification.json, whose six cited witnesses also report no axiom) in the core's vocabulary. The record was read against the current Lean; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T212948.819150Z）：Becoming.Reconfiguration 之 80 项声明公理报告皆空；核心纯净已核对。该模块以核心之用语陈述外围模块 CorrectionReconfiguration（回执 correction-reconfiguration-verification.json，所引六项见证亦不报公理）。本记录对照当前 Lean 读过；未经人审。"
+  },
+  "next_delta": {
+    "en": "Causes formed rather than supplied: fault formulas read from failures that occur in a run, and readiness where the bounds on co-occurring causes change.",
+    "zh": "形成而非所给之原因：从运行中发生之失效读出故障之式，以及共现原因之界变化时之就绪。"
+  },
+  "correspondence": {
+    "en": "Distributed systems: the envelope the bounds induce plays the role of a fail-prone system (Malkhi and Reiter 1998), and readiness, no two of its fault sets covering the roster, is the two-set condition under which complements of fault sets pairwise intersect, weaker than the three-set condition Byzantine dissemination quorums need. Read by the AI: redundancy counts independent channels, not names, as in the treatment of common-cause failure in reliability engineering.",
+    "zh": "分布式系统：诸界所导出之包络相当于易失效系统（Malkhi 与 Reiter 1998），就绪（无两故障集覆盖名册）是使故障集之补两两相交之二集条件，弱于拜占庭传播法定集所需之三集条件。依 AI 之读：冗余计独立之通道而不计名，如可靠性工程对共因失效之处理。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean",
+  "aliases": [
+    "Reviewers count by independent causes, not names",
+    "审查者以独立之因计，不以名计",
+    "Becoming.Reconfiguration.ready_iff_nonempty_separated",
+    "Becoming.Reconfiguration.induced_certificate_sound",
+    "Becoming.Reconfiguration.readiness_cases",
+    "Becoming.Reconfiguration.same_cause_not_redundant",
+    "CorrectionReconfiguration.renamed_support_is_not_redundancy",
+    "CorrectionReconfiguration.causal_readiness_changes"
+  ],
+  "dependencies": [
+    {
+      "id": "certificates-sound-and-available",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "induced_certificate_sound and induced_certificate_available apply FaultEnvelopes.certificate_sound and certificate_available to the envelope the bounds induce, ready_separates giving its separation.",
+        "zh": "induced_certificate_sound 与 induced_certificate_available 把 FaultEnvelopes.certificate_sound 与 certificate_available 用于诸界所导出之包络，其分隔由 ready_separates 给出。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "copied-witnesses-change-nothing",
+      "detail": {
+        "en": "A witness copying one on the roster changes no inspection; here a reviewer under the same cause as another adds nothing to readiness.",
+        "zh": "抄录名单上一员之见证不改任何检查；此处与另一审查者同因者不增就绪。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Reconfiguration.FaultFormula",
+        "Becoming.Reconfiguration.fails",
+        "Becoming.Reconfiguration.fails_mono",
+        "Becoming.Reconfiguration.Arrangement",
+        "Becoming.Reconfiguration.induced",
+        "Becoming.Reconfiguration.envelope",
+        "Becoming.Reconfiguration.Covered",
+        "Becoming.Reconfiguration.outside_bound_survives",
+        "Becoming.Reconfiguration.induced_certificate_sound",
+        "Becoming.Reconfiguration.ready",
+        "Becoming.Reconfiguration.ready_iff_nonempty_separated",
+        "Becoming.Reconfiguration.induced_certificate_available",
+        "Becoming.Reconfiguration.separate3",
+        "Becoming.Reconfiguration.merged3",
+        "Becoming.Reconfiguration.repaired4",
+        "Becoming.Reconfiguration.duplicated4",
+        "Becoming.Reconfiguration.envelopes_compute",
+        "Becoming.Reconfiguration.readiness_cases",
+        "Becoming.Reconfiguration.same_cause_not_redundant",
+        "Becoming.Reconfiguration.stale_envelope_accepts_shared",
+        "Becoming.Reconfiguration.reconfigure",
+        "Becoming.Reconfiguration.unready_rejected",
+        "Becoming.Reconfiguration.closed_rejected",
+        "Becoming.Reconfiguration.shared_cause_no_step",
+        "Becoming.Reconfiguration.separated_repair_steps",
+        "Becoming.Reconfiguration.omitted",
+        "Becoming.Reconfiguration.omitted_cause_breaks"
+      ],
+      "sha256": "a2f5af3ffb118556f464448302c03fe1789d7af41e9e07068a04f4dfd481389b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean",
+      "role": "proof",
+      "declarations": [
+        "CorrectionReconfiguration.renamed_support_is_not_redundancy",
+        "CorrectionReconfiguration.causal_readiness_changes",
+        "CorrectionReconfiguration.stale_envelope_accepts_captured_support",
+        "CorrectionReconfiguration.reform_rejects_shared_control",
+        "CorrectionReconfiguration.repaired_reform_installs",
+        "CorrectionReconfiguration.omitted_shared_cause_still_breaks_model"
+      ],
+      "sha256": "4bd7160762f4bb697c72293133c91934e3622674f75990f6328d186abd7425e7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-reconfiguration-verification.json",
+      "role": "receipt",
+      "sha256": "cb67f1b66ca964ed99c89bd2ca97607e555d1a32fa477b516a80de0af4eecb3e"
+    },
+    {
+      "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "role": "statement",
+      "sha256": "116a52f07be1a4ea815abdfc15249f76fc324134c587194603db73722257ab4f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CORRECTION-RECONFIGURATION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "e5b6cace4ab4e7e7cbb764310124a1f966a59f901f4790b2c6a9bec01901da16"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reconfiguration",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-reconfiguration-verification.json",
+      "sha256_pointer": "/sources/CorrectionReconfiguration/sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), with reviewer failures computed from causes the induced certificate is sound for covered causes and readiness follows causes, not names, on the core module that states CorrectionReconfiguration; from DEFECTS-FOUND (triage row 197); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），审查者之失效由原因算出时，导出之证书对被覆盖之原因可靠，就绪随因而不随名，陈于陈述 CorrectionReconfiguration 之核心模块；出自 DEFECTS-FOUND（分诊第 197 行）；研究第 426 节。"
+    }
+  ]
+}

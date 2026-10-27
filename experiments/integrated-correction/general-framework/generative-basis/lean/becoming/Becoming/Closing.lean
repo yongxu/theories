@@ -30,8 +30,8 @@ states how loops form, within the theory without axiom and with no premise beyon
   `T` (`carried_before`). So where no loop formed by `T` lies upstream of `c`, the carried amount
   at `c` up to `T` is at most a polynomial in the steps of degree one less than the number of listed
   conditions, whatever the couplings do later (`carried_le_polynomial_before`). The amounts up to
-  the step a loop forms do not show whether it will: a self-loop forming at step `T`
-  (`Closing.Onset`) carries the starting gap unchanged up to `T` and doubles it at every step after
+  the step a loop forms need not show whether it will: a self-loop forming at step `T`
+  (`Closing.Onset`, a witness) carries the starting gap unchanged up to `T` and doubles it at every step after
   (`Onset.amount_before`, `Onset.amount_after`); it forms at `T` and not before (`Onset.forms`,
   `Onset.not_formed`), and one forming at any later step carries the same amounts up to `T`
   (`Onset.unforeseen`).
@@ -47,18 +47,19 @@ states how loops form, within the theory without axiom and with no premise beyon
   (`Threshold.level_after`); and up to `θ` the course is the same for every threshold beyond it
   (`Threshold.unforeseen`).
 
-**Readings (the AI's, taken by Ren on 16 October 2026).**
+**Readings (the AI's, taken by Ren on 16 October 2026; the second revised on 27 October 2026, board item DF2,
+since `Onset.unforeseen` and `Threshold.unforeseen` are witnesses).**
 - Loops form within the unfolding by closing: a loop forms at the step at which some exchange comes
   to respond to a level downstream of the condition it gives to. Where the strengths are read off
   the course, as in the threshold witness, the couplings, and so the loops, are part of what the
   unfolding forms. This is the theorem Ren's reading 3 of `Becoming.Loops` was left pending for;
   the reading can now say that loops form and dissolve within the unfolding by this closing, and
   that the theorems take them as they stand at each step.
-- A loop's formation is not foreseen from the amounts before it. Before it forms the growth is at
-  most polynomial; the step it forms is not shown by the course so far, and the amounts after it
-  grow at least geometrically. This meets `Becoming.Runaway`: a runaway's break does not show
-  before it, and the formation of the loop that runs away does not show either, in the amounts
-  it carries. What can show it is what reads the couplings themselves (in the threshold
+- A loop's formation need not be foreseen from the amounts before it. Before it forms the growth
+  is at most polynomial; in the witnesses the course so far does not show the step it forms
+  (`Onset.unforeseen`, `Threshold.unforeseen`), and the amounts after it grow geometrically. This
+  meets `Becoming.Runaway`: a runaway's break does not show before it, and the formation of the
+  loop that runs away need not show either, in the amounts it carries. What can show it is what reads the couplings themselves (in the threshold
   witness, the distance of the level to `θ`).
 - How loops dissolve is the other side, stated in `Becoming.Remainder` (couplings that stop: a loop
   whose couplings stop carries what a finite order carries).

@@ -5,6 +5,10 @@
     "zh": "有名交换的正规形恰需要段内不相连可判定",
     "en": "Normal forms of named exchanges need exactly decided apartness on the stretch"
   },
+  "statement": {
+    "en": "With joining symmetric, two arrangements of a finite stretch are connected by commuting unjoined neighbours exactly where they order joined pairs alike; a complete invariant on the stretch exists exactly where apartness of distinct exchanges is decided, the normal form giving one.",
+    "zh": "相连对称时，有限段的两个安排经相邻不相连交换互达，恰当它们对相连之对给出同样先后；段上的完整不变量恰在不同交换的不相连可判定时存在，正规形给出一个。"
+  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
@@ -390,6 +394,10 @@
     {
       "en": "2026-10-20: 35 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4818b4f31d0b826b/normal-forms-need-decided-apartness.json and in git.",
       "zh": "2026-10-20：35 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4818b4f31d0b826b/normal-forms-need-decided-apartness.json 和 git 中。"
+    },
+    {
+      "en": "27 October 2026, board item DF2 (study section 426): A statement, as 01's home section states the result (rearranges_iff, complete_iff, normalForm_iff); its laws wait for the schema-2 migration.",
+      "zh": "2026年10月27日，工作板条目 DF2（研究第 426 节）：陈述，按 01 的归属一节所述（rearranges_iff、complete_iff、normalForm_iff）；其规律待迁移到第 2 版格式。"
     }
   ]
 }

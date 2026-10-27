@@ -1,0 +1,284 @@
+{
+ "records": [
+  {
+   "id": "market-model-share-margin-and-ends",
+   "rows": "194",
+   "file": "theories/becoming/results/records/market-model-share-margin-and-ends.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md, ## 10. Markets",
+   "anchor_before": "**Theorem** (periphery: the market model, `propext`, `Quot.sound` and `Classical.choice` reported",
+   "regions": {
+    "region": "collective",
+    "base": "periphery",
+    "note": "MarketGenerativity, RegimeBoundary, RegimeAttraction: share law, margin M, two ends"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "`Quot.sound` and `Classical.choice` reported; no record). For a share strictly",
+     "new": "`Quot.sound` and `Classical.choice` reported). For a share strictly",
+     "why": "The record now exists."
+    },
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "even with correction paid at every step ([receipt](../../../experiments/market-generativity/formal/attraction-verification.json)).",
+     "new": "even with correction paid at every step ([receipt](../../../experiments/market-generativity/formal/attraction-verification.json)). ([record](../results/records/market-model-share-margin-and-ends.md))",
+     "why": "Link the home section to its record."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Binds three module receipts (formal/verification.json at /source_sha256, boundary-verification.json at /sources/RegimeBoundary.lean, attraction-verification.json at /sources/RegimeAttraction.lean) rather than the helper's market-instances receipt, which lists no declarations for these modules. Dependency market-protected-continuation (formal-reuse: safe_history_never_fails). The 05 statement-reference hash is the current bytes 94bbe144...; rebind it after the chapter edits. Lint: 0 findings. research.py check: the only errors naming this id are render-pending (missing link in RESULTS.md, THEORY-GRAPH.md and record pages; generated view differs), which make research-render clears; no source drift. The history says \"study section DF_N\" for the lander to fill in."
+  },
+  {
+   "id": "joint-plans-from-a-supported-start",
+   "rows": "195",
+   "file": "theories/becoming/results/records/joint-plans-from-a-supported-start.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md, ## 11. Joint plans and applications",
+   "anchor_before": "**Theorem** (any process; periphery module [`SeededContinuation`]",
+   "regions": {
+    "region": "collective",
+    "base": "periphery",
+    "note": "SeededContinuation: seeded joint plans, empty promises, ignition"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "`propext` and `Quot.sound` reported; no record). With faithful joint-to-local",
+     "new": "`propext` and `Quot.sound` reported). With faithful joint-to-local",
+     "why": "The record now exists."
+    },
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "one circular dependence can be maintenance running or a wait no one can begin.",
+     "new": "one circular dependence can be maintenance running or a wait no one can begin. ([record](../results/records/joint-plans-from-a-supported-start.md))",
+     "why": "Link the home section to its record."
+    },
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "- Records for the two-roles, correction-reconfiguration, market-model, alignment-succession and seeded-continuation results; whether enshittification",
+     "new": "- Whether enshittification",
+     "why": "The first half of the Open item is done once the five 05 records land (two-roles, correction-reconfiguration, market-model, alignment-succession, seeded-continuation). Apply this edit with the last of them."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "The anchor goes on its own line between the existing <a id=\"grounded-start\"></a> (kept, because 05 §5 links to it) and the paragraph. The bound receipt seeded-continuation-verification.json is modified and uncommitted in the worktree. It is a rerun (checked 2026-10-26T13:44:58Z, passed, receipt sha 7ca0d9e3...) that binds the current source bytes b20d6a9d...; these differ from the committed receipt's 05ae4037... only by a comment on the import line. Its frozen copy sources/SeededContinuation.lean changed with it. Commit both with the record. mutual_history is the spine's Invariant.run for the conjunction (MODULE-CLASSIFICATION). Axioms: propext on six theorems, plus Quot.sound on absent_reserve_blocks_ignition. Lint: 0 findings. research.py check: the only errors naming this id are render-pending (missing link in RESULTS.md, THEORY-GRAPH.md and record pages; generated view differs), which make research-render clears; no source drift. The history says \"study section DF_N\" for the lander to fill in. Rebind the 05 statement-reference hash once the chapter edits land."
+  },
+  {
+   "id": "a-swap-symmetric-assignment-singles-out-none",
+   "rows": "196",
+   "file": "theories/becoming/results/records/a-swap-symmetric-assignment-singles-out-none.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md, ## 9. Shared codes",
+   "anchor_before": "**Theorem** (two roles; periphery module [`PracticalPriorityIdentification`]",
+   "regions": {
+    "region": "collective",
+    "base": "periphery",
+    "note": "PracticalPriorityIdentification: swap-symmetric assignment, empty axiom reports"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "the cited theorems with empty axiom reports; no record). The same obstruction holds of roles.",
+     "new": "the cited theorems with empty axiom reports). The same obstruction holds of roles.",
+     "why": "The record now exists, so the parenthetical drops 'no record'."
+    },
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "by an actual asymmetry or a procedure, whose warrant is open.",
+     "new": "by an actual asymmetry or a procedure, whose warrant is open. ([record](../results/records/a-swap-symmetric-assignment-singles-out-none.md))",
+     "why": "Link the home section to its record."
+    },
+    {
+     "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "old": "[05's](05-COLLECTIVES.md#shared-codes)",
+     "new": "[05's](05-COLLECTIVES.md#r-a-swap-symmetric-assignment-singles-out-none)",
+     "why": "07's pointer goes to the result's own anchor, not the section."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Receipt priority-identification-checks/20261007T193051.511909Z/verification.json (byte-identical to priority-identification-verification.json), pointer /source_sha256/PracticalPriorityIdentification. The four cited declarations have empty axiom reports. The 07 link edit belongs to this record because 07's sentence points at this result. Lint: 0 findings. research.py check: the only errors naming this id are render-pending (missing link in RESULTS.md, THEORY-GRAPH.md and record pages; generated view differs), which make research-render clears; no source drift. The history says \"study section DF_N\" for the lander to fill in. Rebind the 05 statement-reference hash once the chapter edits land."
+  },
+  {
+   "id": "reviewers-count-by-independent-causes",
+   "rows": "197",
+   "file": "theories/becoming/results/records/reviewers-count-by-independent-causes.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md, ## 9. Shared codes",
+   "anchor_before": "**Theorem** (periphery module [`CorrectionReconfiguration`]",
+   "regions": {
+    "region": "collective",
+    "base": "general",
+    "note": "Reconfiguration: envelopes induced by causes; readiness by causes, not names"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "**Theorem** (periphery module [`CorrectionReconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean), the cited theorems with empty axiom reports; causal fault formulas supplied; witness; no record). Reviewers count by independent causes, not names. With reviewer fault sets computed from causal formulas, three reviewers with distinct single causes are available, and moving two of them under one controller makes availability fail while all three names are kept (`renamed_support_is_not_redundancy`, `causal_readiness_changes`); the old envelope reused after the merger accepts captured supporters, a recomputed one rejects them, and an omitted common cause can still expose the whole roster.",
+     "new": "**Theorem** (periphery module [`CorrectionReconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean), stated in the pure core by [`Reconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean), the cited theorems with empty axiom reports; causal fault formulas supplied; witness). Reviewers count by independent causes, not names. With reviewer fault sets computed from causal formulas, three reviewers with distinct single causes are ready, and moving two of them under one cause makes readiness fail while all three names are kept (`Reconfiguration.readiness_cases`); a formula needing two copies of one cause fails with that cause alone (`Reconfiguration.same_cause_not_redundant`); the old envelope reused after the merger accepts the two merged supporters, a recomputed one rejects them (`Reconfiguration.stale_envelope_accepts_shared`), and a roster can be ready while a cause in every reviewer's formula and in no bound fails every reviewer (`Reconfiguration.omitted_cause_breaks`). ([record](../results/records/reviewers-count-by-independent-causes.md))",
+     "why": "The record binds the core module Becoming.Reconfiguration, which the consolidated receipt lists as stating CorrectionReconfiguration. So the cited names become the core's names and 'available' becomes the core's 'ready'. The omitted cause is described exactly: it is in every formula and in no bound. 'no record' goes and the record is linked."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Moved to the core. The canonical source is becoming/Becoming/Reconfiguration.lean, bound to the consolidated receipt becoming-checks/20261025T212948.819150Z (pointer /source_sha256/Becoming.Reconfiguration); that receipt's superseded_modules lists CorrectionReconfiguration as stated by Becoming.Reconfiguration. The periphery file stays bound to correction-reconfiguration-verification.json as provenance, and its two cited names are aliases. Every law cites core names with empty axiom reports. Checked against the Lean: omitted_cause_breaks is a witness in which every formula contains cause 9 and no bound does. So the record and the chapter edit say 'can be ready while a cause in every formula and in no bound fails every member', not 'a cause the formulas omit'. regions.json lists the module Becoming.Reconfiguration under region knowing; this record's region is collective because its home is 05. Lint: 0 findings. research.py check: the only errors naming this id are render-pending (missing link in RESULTS.md, THEORY-GRAPH.md and record pages; generated view differs), which make research-render clears; no source drift. The history says \"study section DF_N\" for the lander to fill in. Rebind the 05 statement-reference hash once the chapter edits land."
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "rows": "198",
+   "file": "theories/becoming/results/records/succession-on-a-funded-carrier.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md, ## 10. Markets",
+   "anchor_before": "**Theorem** (periphery module `AlignmentSuccession`, `propext`",
+   "regions": {
+    "region": "collective",
+    "base": "periphery",
+    "note": "AlignmentSuccession: carrier refinement of the market step"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "alignment-continuity-verification.json); no record). Selection must fund actual succession.",
+     "new": "alignment-continuity-verification.json)). Selection must fund actual succession.",
+     "why": "The record now exists."
+    },
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "with the fee raised by the migration cost (`exact_market_projection`)",
+     "new": "with the migration added to what correction draws (`exact_market_projection`)",
+     "why": "Optional. It uses the record's wording and drops the market word 'fee' (withMigration adds the migration to the correction draw)."
+    },
+    {
+     "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "fails to pay for migration (`old_funding_certificate_does_not_pay_migration`).",
+     "new": "fails to pay for migration (`old_funding_certificate_does_not_pay_migration`). ([record](../results/records/succession-on-a-funded-carrier.md))",
+     "why": "Link the home section to its record."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Receipt alignment-continuity-checks/20261008T085311.995516Z/verification.json (byte-identical to alignment-continuity-verification.json), pointer /sources/AlignmentSuccession/sha256. The record says 'draw' where the chapter says 'fee' (lint market-word); the second chapter edit brings the chapter in line and is optional. The record adds the shutdown witness (aggregate_shutdown_does_not_force_perpetual_operation), which the chapter does not cite; adding it to the chapter is optional. Linking the module name at the start of the paragraph would change the anchor text, so no edit is proposed for it. Lint: 0 findings. research.py check: the only errors naming this id are render-pending (missing link in RESULTS.md, THEORY-GRAPH.md and record pages; generated view differs), which make research-render clears; no source drift. The history says \"study section DF_N\" for the lander to fill in. Rebind the 05 statement-reference hash once the chapter edits land."
+  },
+  {
+   "id": "finite-agreement-does-not-identify-priority",
+   "rows": "267",
+   "file": "theories/becoming/results/records/finite-agreement-does-not-identify-priority.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md, ## 5. Practical judgment",
+   "anchor_before": "**Theorem** (a history read as a protection status and a count; periphery module",
+   "regions": {
+    "region": "significance",
+    "base": "periphery",
+    "note": "PracticalPriorityIdentification: finite samples fit a weight; no fixed weight is lexical"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "old": "Its evidence is the module's [verification receipt](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/priority-identification-verification.json).",
+     "new": "Its evidence is the module's [verification receipt](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/priority-identification-verification.json). ([record](../results/records/finite-agreement-does-not-identify-priority.md))",
+     "why": "Link the home section to its record."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Same proof file and receipt as the swap record. The cited theorems report at most propext and Quot.sound, as the chapter says. The record adds a third law: the reversing pair lies outside the sample (outside_sample_reversal, reversing_history_unobserved). Lint: 0 findings. research.py check: the only errors naming this id are render-pending (missing link in RESULTS.md, THEORY-GRAPH.md and record pages; generated view differs), which make research-render clears; no source drift. The history says \"study section DF_N\" for the lander to fill in. Rebind the 07 statement-reference hash once the chapter edits land."
+  },
+  {
+   "id": "significance-through-a-common-condition",
+   "rows": "36",
+   "file": "theories/becoming/results/records/significance-through-a-common-condition.json",
+   "status": "recorded-checked",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md, ### 3.1 What living significance says, for any significance",
+   "anchor_before": "**Theorem** (any process; the relational reading of a run; the separate witness)",
+   "regions": {
+    "region": "significance",
+    "base": "frame",
+    "note": "ValuationFrames: connection and transmission through a common condition on runs"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "old": "([record](../results/records/condition-correspondence-discipline.md)) Living on and descent are in [04](04-LIFE.md#r-living-on-and-descent).\n\n<a id=\"yields\"></a>",
+     "new": "([record](../results/records/condition-correspondence-discipline.md)) Living on and descent are in [04](04-LIFE.md#r-living-on-and-descent).\n\n**Theorem** (any process; the relational reading of a run; the separate witness). Read an event of a run (a formation at a step) through its conditions as living where its formation is active then and does not consume in the run, and relate events whose formations take part in a common condition. A condition every living event's formation takes part in connects the whole, and there, given a standpoint and a living event, living significance is exactly a seed with both neutralities (`Conditions.significant_iff_of_common`); two formations active at every step, each depending only on its own condition and drawing nothing, are living and leave the whole unconnected (`Separate.not_connected`), so the reading alone gives no connection. Where a formation consumes, some formation depending on the drawn condition loses its support from some step on, and the two take part in that condition; under relational neutrality a standpoint holding an event of the consumer significant holds significant every living event of that formation (`Conditions.valuing_consumption_reaches`). The transmission runs along co-participation, not through consumption. ([record](../results/records/significance-through-a-common-condition.md))\n\n<a id=\"yields\"></a>",
+     "why": "The result had no home section. 02's renewal reading said only 'Its use for significance is in 07', and 07 states the stepwise correspondence-discipline form, not this whole-run reading. The new paragraph is its home in 07 §3.1, placed before §3.2, and the anchor goes before it."
+    },
+    {
+     "file": "theories/becoming/chapters/02-MAP.md",
+     "old": "a consumer and what it consumes both take part in the drawn condition; ",
+     "new": "",
+     "why": "Found needed. This clause is Conditions.consumption_relates, which is now law 3 of the new record and stated in 07; a result is stated once. Apply it together with the becoming-renewal-reading edits."
+    },
+    {
+     "file": "theories/becoming/chapters/02-MAP.md",
+     "old": "Its use for significance is in [07](07-SIGNIFICANCE.md) ([record]",
+     "new": "Its use for significance is [07's](07-SIGNIFICANCE.md#r-significance-through-a-common-condition) ([record]",
+     "why": "Triage row 36: 02's pointer goes to the new result's anchor."
+    }
+   ],
+   "record_edits": [
+    {
+     "id": "becoming-renewal-reading",
+     "field": "statement.en",
+     "old": "Renewal and consumption are classes of runs; under a correspondence discipline a common condition gives connection, and significance passes along co-participation.",
+     "new": "Renewal and consumption classify runs: each run of any process, read through observables of conditions, is a web to which the classes apply; a natural-number observable never rising from some step on does not fall at arbitrarily late steps; from one configuration one run can renew, another consume.",
+     "why": "Triage row 36. The old statement names connection and transmission, which are now the new record, and says \"under a correspondence discipline\", which the whole-run reading does not use. The new statement says what the record keeps (Conditions.along, falls_not_recurring, and Renewable.class_belongs_to_the_run with the witness read as \"can\") and matches 02 line 105. 298 chars."
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "field": "statement.zh",
+     "old": "更新与消耗是运行的类别；在对应纪律下由共同条件给出连通，意义沿共同参与传递。",
+     "new": "更新与消耗为运行分类：任一过程的每次运行，经条件的可观测量读出，都是这些类所适用之网；自某步起不再上升的自然数可观测量，不在任意晚的步下降；自同一配置，一次运行可以更新，另一次可以消耗。",
+     "why": "It says what the new English says."
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "field": "aliases",
+     "old": "[\"Becoming.falls_not_recurring\", \"Becoming.Run.not_of_depletion\", \"Becoming.no_execution_of_depletion\", \"Becoming.Run.renewal_recurs\", \"Becoming.Conditions.drawdown_not_recurring\", \"Becoming.Renewable.class_belongs_to_the_run\", \"Becoming.Conditions.living_iff_relational\", \"Becoming.Conditions.connected_of_common\", \"Becoming.Conditions.significant_iff_of_common\", \"Becoming.Conditions.consumption_relates\", \"Becoming.Conditions.valuing_consumption_reaches\", \"Becoming.Separate.not_connected\"]",
+     "new": "[\"Becoming.falls_not_recurring\", \"Becoming.Run.not_of_depletion\", \"Becoming.no_execution_of_depletion\", \"Becoming.Run.renewal_recurs\", \"Becoming.Conditions.drawdown_not_recurring\", \"Becoming.Renewable.class_belongs_to_the_run\", \"Becoming.Conditions.living_iff_relational\"]",
+     "why": "Triage row 36: the five declarations the new record states leave this record. Becoming.Conditions.living_iff_relational stays: it is a declaration in history/becoming/Becoming/Bridge.lean:340 and gives the relational reading of living that this record keeps."
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "field": "claim.en",
+     "old": " Reading living formation events relationally and relating events whose formations participate in a common condition, a condition in which every living formation participates makes the whole connected, so living significance is exactly a seed with relational and standpoint neutrality; disjoint conditions can leave it unconnected. A consumer and the formation it consumes participate in the drawn condition, so under relational neutrality a standpoint valuing the consumer's activity holds significant every living event of the formation it consumes; the transmission runs along co-participation and does not use consumption itself.",
+     "new": "",
+     "why": "The claim's last two sentences (connection through a common condition, transmission along co-participation) are the new record's laws 1-3; a result is stated once."
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "field": "claim.zh",
+     "old": "按关系读法取活的形成事件，并以共同参与某一条件为关系：每个活的形成都参与的条件使整体连通，于是生生之意义恰等于种子加关系中立加立场中立；条件互不相交时可不连通。消耗者与被它消耗的形成共同参与被汲取的条件，故在关系中立下，珍视消耗者活动的立场必珍视被它消耗的形成的每个活的事件；传递沿共同参与进行，不用到消耗本身。",
+     "new": "",
+     "why": "The same two sentences in Chinese; after the edit the claim ends at \"另一次消耗。\"."
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "field": "hypotheses[2]",
+     "old": "{\"zh\": \"连通的结论需要一个所有活的形成都参与的共同条件，并依赖关于什么算条件、什么算参与的对应纪律；传递结论需要关系中立，其规范地位不由本结果证明。\", \"en\": \"The connection result needs a condition in which every living formation participates, and depends on a correspondence discipline for what counts as a condition and as participation; the transmission result needs relational neutrality, whose normative standing this result does not prove.\"}",
+     "new": "(remove the item)",
+     "why": "This hypothesis conditions the connection and transmission results, which leave this record. The new record states the same hypotheses: a common condition and a living event, and relational neutrality."
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "field": "counterexamples[0]",
+     "old": "{\"path\": \"experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean\", \"detail\": {\"zh\": \"条件互不相交：两个形成都活着、都不消耗，却不连通（Separate.not_connected）；连通是展开的事实，可以不成立。\", \"en\": \"Disjoint conditions: two formations are living and neither consumes, yet the whole is unconnected (Separate.not_connected); connection is a fact of the unfolding and can fail.\"}}",
+     "new": "(remove the item; optional)",
+     "why": "Separate.not_connected is the new record's law 2. Keeping it here does no harm but states it twice. The ValuationFrames and Metaethics references can stay as context."
+    },
+    {
+     "id": "significance-through-a-common-condition",
+     "field": "aliases",
+     "old": "[\"Significance through a common condition\", \"经共同条件的意义\"]",
+     "new": "[\"Significance through a common condition\", \"经共同条件的意义\", \"Becoming.Conditions.connected_of_common\", \"Becoming.Conditions.significant_iff_of_common\", \"Becoming.Conditions.consumption_relates\", \"Becoming.Conditions.valuing_consumption_reaches\", \"Becoming.Separate.not_connected\"]",
+     "why": "Once the alias drop above is applied, the five declarations this record states can become its aliases, so old links by those names resolve here. Apply only after the becoming-renewal-reading alias edit."
+    }
+   ],
+   "check_clean": true,
+   "notes": "The result had no home section. The first chapter edit inserts it in 07 §3.1, after the correspondence-discipline paragraph and before <a id=\"yields\"></a>. anchor_before is the new paragraph's opening, so the anchor goes on the line before it. The record's only statement reference is 07; 02 keeps just a pointer. Apply the becoming-renewal-reading record edits and the 02 clause removal together. The five declaration aliases can be added to this record only after the alias drop, because aliases are unique across records. Conditions.living_iff_relational stays with becoming-renewal-reading: contrary to the triage's note, it is a declaration (history/becoming/Becoming/Bridge.lean, line 340). Dependencies (formal-reuse): metaethical-core-characterization and becoming-renewal-reading. Lint: 0 findings. research.py check: the only errors naming this id are render-pending (missing link in RESULTS.md, THEORY-GRAPH.md and record pages; generated view differs), which make research-render clears; no source drift. The history says \"study section DF_N\" for the lander to fill in. Rebind the 07 statement-reference hash once the chapter edits land."
+  }
+ ],
+ "not_written": []
+}

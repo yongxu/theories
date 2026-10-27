@@ -1,4 +1,4 @@
-import JointContinuation
+import JointContinuation -- 脊柱上 / On the spine (I4, 2026-10-16): `Becoming.Invariant.run`, `Becoming.Viability.Plan.zip_keeps` — 脊柱的律更一般 / the spine law is more general; MODULE-CLASSIFICATION.md
 
 /-! Seeded mutual continuation within one history. Initial support, one-step
 preservation, joint availability and faithful views are separate obligations. -/

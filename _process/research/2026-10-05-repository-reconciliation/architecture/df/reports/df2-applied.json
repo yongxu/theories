@@ -1,0 +1,962 @@
+[
+ {
+  "tag": "A0",
+  "id": "certificates-sound-and-available",
+  "field": "hypotheses[2].en",
+  "severity": "error"
+ },
+ {
+  "tag": "A1",
+  "id": "certificates-sound-and-available",
+  "field": "hypotheses[2].zh",
+  "severity": "error"
+ },
+ {
+  "tag": "A3",
+  "id": "correction-is-not-calibration",
+  "field": "laws[3].en",
+  "severity": "error"
+ },
+ {
+  "tag": "A4",
+  "id": "correction-is-not-calibration",
+  "field": "laws[3].en",
+  "severity": "style"
+ },
+ {
+  "tag": "A5",
+  "id": "correction-is-not-calibration",
+  "field": "laws[3].zh",
+  "severity": "error"
+ },
+ {
+  "tag": "A6",
+  "id": "correction-is-not-calibration",
+  "field": "laws[3].zh",
+  "severity": "style"
+ },
+ {
+  "tag": "A7",
+  "id": "correction-is-not-calibration",
+  "field": "laws[2].en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A8",
+  "id": "correction-is-not-calibration",
+  "field": "laws[2].zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A9",
+  "id": "what-a-total-keeps",
+  "field": "statement.en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A10",
+  "id": "what-a-total-keeps",
+  "field": "statement.zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A11",
+  "id": "one-move-covering",
+  "field": "laws[5].en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A12",
+  "id": "one-move-covering",
+  "field": "laws[5].zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A13",
+  "id": "learning-a-rule-by-narrowing",
+  "field": "laws[2].en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A14",
+  "id": "learning-a-rule-by-narrowing",
+  "field": "laws[2].zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A15",
+  "id": "learning-a-rule-by-narrowing",
+  "field": "laws[3].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A16",
+  "id": "learning-a-rule-by-narrowing",
+  "field": "laws[3].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A17",
+  "id": "learning-a-rule-by-narrowing",
+  "field": "laws[4].en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A18",
+  "id": "learning-a-rule-by-narrowing",
+  "field": "laws[4].zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "A19",
+  "id": "certificates-sound-and-available",
+  "field": "laws[1].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A20",
+  "id": "certificates-sound-and-available",
+  "field": "laws[1].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A21",
+  "id": "certificates-sound-and-available",
+  "field": "laws[2].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A22",
+  "id": "certificates-sound-and-available",
+  "field": "laws[2].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A23",
+  "id": "certificates-sound-and-available",
+  "field": "laws[6].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A24",
+  "id": "certificates-sound-and-available",
+  "field": "laws[6].en",
+  "severity": "style"
+ },
+ {
+  "tag": "A25",
+  "id": "certificates-sound-and-available",
+  "field": "laws[6].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A26",
+  "id": "certificates-sound-and-available",
+  "field": "laws[3].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A27",
+  "id": "certificates-sound-and-available",
+  "field": "laws[3].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A28",
+  "id": "certificates-sound-and-available",
+  "field": "correspondence.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A29",
+  "id": "certificates-sound-and-available",
+  "field": "correspondence.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A30",
+  "id": "certificates-sound-and-available",
+  "field": "statement.zh",
+  "severity": "style"
+ },
+ {
+  "tag": "A31",
+  "id": "when-to-inquire-and-when-to-respond",
+  "field": "laws[1].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A32",
+  "id": "when-to-inquire-and-when-to-respond",
+  "field": "laws[1].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A33",
+  "id": "when-to-inquire-and-when-to-respond",
+  "field": "hypotheses[1].en",
+  "severity": "missing"
+ },
+ {
+  "tag": "A34",
+  "id": "when-to-inquire-and-when-to-respond",
+  "field": "hypotheses[1].zh",
+  "severity": "missing"
+ },
+ {
+  "tag": "A35",
+  "id": "when-to-inquire-and-when-to-respond",
+  "field": "laws[5].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A36",
+  "id": "when-to-inquire-and-when-to-respond",
+  "field": "laws[5].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A37",
+  "id": "evidence-through-change",
+  "field": "statement.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A38",
+  "id": "evidence-through-change",
+  "field": "statement.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A39",
+  "id": "correction-is-not-calibration",
+  "field": "correspondence.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A40",
+  "id": "correction-is-not-calibration",
+  "field": "correspondence.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A43",
+  "id": "access-yet-to-form",
+  "field": "laws[2].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A44",
+  "id": "access-yet-to-form",
+  "field": "laws[2].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "A45",
+  "id": "access-yet-to-form",
+  "field": "statement.zh",
+  "severity": "style"
+ },
+ {
+  "tag": "A46",
+  "id": "what-a-total-keeps",
+  "field": "hypotheses[1].en",
+  "severity": "style"
+ },
+ {
+  "tag": "A47",
+  "id": "what-a-total-keeps",
+  "field": "hypotheses[1].zh",
+  "severity": "style"
+ },
+ {
+  "tag": "A48",
+  "id": "what-a-total-keeps",
+  "field": "validation_scope.en",
+  "severity": "style"
+ },
+ {
+  "tag": "A49",
+  "id": "what-a-total-keeps",
+  "field": "validation_scope.zh",
+  "severity": "style"
+ },
+ {
+  "tag": "B0",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "correspondence.en",
+  "severity": "error"
+ },
+ {
+  "tag": "B1",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "correspondence.zh",
+  "severity": "error"
+ },
+ {
+  "tag": "B2",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "statement.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B3",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "statement.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B4",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "laws[1].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B5",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "laws[1].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B6",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "does_not_show[2].en",
+  "severity": "style"
+ },
+ {
+  "tag": "B7",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "does_not_show[2].zh",
+  "severity": "style"
+ },
+ {
+  "tag": "B8",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "related[1].detail.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B9",
+  "id": "stronger-arrangement-formed-by-reconfiguration",
+  "field": "related[1].detail.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B10",
+  "id": "a-selected-template-need-not-raise-structure",
+  "field": "statement.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B11",
+  "id": "a-selected-template-need-not-raise-structure",
+  "field": "statement.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B12",
+  "id": "a-selected-template-need-not-raise-structure",
+  "field": "title.en",
+  "severity": "style"
+ },
+ {
+  "tag": "B13",
+  "id": "a-selected-template-need-not-raise-structure",
+  "field": "aliases[0]",
+  "severity": "style"
+ },
+ {
+  "tag": "B14",
+  "id": "groups-formed-by-bonds-share-a-founder",
+  "field": "correspondence.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B15",
+  "id": "groups-formed-by-bonds-share-a-founder",
+  "field": "correspondence.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B16",
+  "id": "groups-formed-by-bonds-share-a-founder",
+  "field": "hypotheses[2].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B17",
+  "id": "groups-formed-by-bonds-share-a-founder",
+  "field": "hypotheses[2].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B18",
+  "id": "groups-formed-by-bonds-share-a-founder",
+  "field": "laws[2].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B19",
+  "id": "groups-formed-by-bonds-share-a-founder",
+  "field": "laws[2].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B20",
+  "id": "recurrence-without-selector-revision",
+  "field": "correspondence.en",
+  "severity": "style"
+ },
+ {
+  "tag": "B21",
+  "id": "recurrence-without-selector-revision",
+  "field": "correspondence.zh",
+  "severity": "style"
+ },
+ {
+  "tag": "B22",
+  "id": "recurrence-without-selector-revision",
+  "field": "validation_scope.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B23",
+  "id": "recurrence-without-selector-revision",
+  "field": "validation_scope.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B24",
+  "id": "equal-totals-can-hide-what-a-capacity-carries",
+  "field": "hypotheses[1].en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "B25",
+  "id": "equal-totals-can-hide-what-a-capacity-carries",
+  "field": "hypotheses[1].zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "B26",
+  "id": "equal-totals-can-hide-what-a-capacity-carries",
+  "field": "laws[1].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B27",
+  "id": "equal-totals-can-hide-what-a-capacity-carries",
+  "field": "laws[1].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B28",
+  "id": "equal-totals-can-hide-what-a-capacity-carries",
+  "field": "laws[2].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B29",
+  "id": "equal-totals-can-hide-what-a-capacity-carries",
+  "field": "laws[2].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B30",
+  "id": "equal-totals-can-hide-what-a-capacity-carries",
+  "field": "correspondence.en",
+  "severity": "style"
+ },
+ {
+  "tag": "B32",
+  "id": "the-updater-line",
+  "field": "laws[2].en",
+  "severity": "missing"
+ },
+ {
+  "tag": "B33",
+  "id": "the-updater-line",
+  "field": "laws[2].zh",
+  "severity": "missing"
+ },
+ {
+  "tag": "B34",
+  "id": "the-updater-line",
+  "field": "laws[2].declarations and references[2].declarations",
+  "severity": "missing"
+ },
+ {
+  "tag": "B35",
+  "id": "the-updater-line",
+  "field": "laws[3].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B36",
+  "id": "the-updater-line",
+  "field": "laws[3].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B37",
+  "id": "the-updater-line",
+  "field": "laws[4].en",
+  "severity": "missing"
+ },
+ {
+  "tag": "B38",
+  "id": "the-updater-line",
+  "field": "laws[4].zh",
+  "severity": "missing"
+ },
+ {
+  "tag": "B39",
+  "id": "the-updater-line",
+  "field": "laws[4].declarations and references[3].declarations",
+  "severity": "missing"
+ },
+ {
+  "tag": "B40",
+  "id": "the-updater-line",
+  "field": "validation_scope.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B41",
+  "id": "the-updater-line",
+  "field": "validation_scope.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B42",
+  "id": "the-updater-line",
+  "field": "related[0].detail.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B43",
+  "id": "the-updater-line",
+  "field": "related[0].detail.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B45",
+  "id": "same-carrier-need-not-fix-the-response",
+  "field": "related[0].detail.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "B46",
+  "id": "same-carrier-need-not-fix-the-response",
+  "field": "related[0].detail.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C0",
+  "id": "market-model-share-margin-and-ends",
+  "field": "statement.en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "C1",
+  "id": "market-model-share-margin-and-ends",
+  "field": "statement.zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "C2",
+  "id": "market-model-share-margin-and-ends",
+  "field": "correspondence.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C3",
+  "id": "market-model-share-margin-and-ends",
+  "field": "correspondence.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C7",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "statement.en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "C8",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "statement.zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "C9",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "validation_scope.en",
+  "severity": "error"
+ },
+ {
+  "tag": "C10",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "validation_scope.zh",
+  "severity": "error"
+ },
+ {
+  "tag": "C11",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "hypotheses[2].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C12",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "hypotheses[2].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C13",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "laws[1].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C14",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "laws[1].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C15",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "correspondence.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C16",
+  "id": "joint-plans-from-a-supported-start",
+  "field": "correspondence.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C17",
+  "id": "a-swap-symmetric-assignment-singles-out-none",
+  "field": "correspondence.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C18",
+  "id": "a-swap-symmetric-assignment-singles-out-none",
+  "field": "correspondence.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C19",
+  "id": "a-swap-symmetric-assignment-singles-out-none",
+  "field": "related[0].detail.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C20",
+  "id": "a-swap-symmetric-assignment-singles-out-none",
+  "field": "related[0].detail.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C21",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "laws[3].en",
+  "severity": "error"
+ },
+ {
+  "tag": "C22",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "laws[3].en",
+  "severity": "style"
+ },
+ {
+  "tag": "C23",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "laws[3].zh",
+  "severity": "error"
+ },
+ {
+  "tag": "C24",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "laws[2].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C25",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "laws[2].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C27",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "correspondence.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C28",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "correspondence.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C31",
+  "id": "succession-on-a-funded-carrier",
+  "field": "hypotheses[2].en",
+  "severity": "error"
+ },
+ {
+  "tag": "C32",
+  "id": "succession-on-a-funded-carrier",
+  "field": "hypotheses[2].zh",
+  "severity": "error"
+ },
+ {
+  "tag": "C33",
+  "id": "succession-on-a-funded-carrier",
+  "field": "validation_scope.en",
+  "severity": "error"
+ },
+ {
+  "tag": "C34",
+  "id": "succession-on-a-funded-carrier",
+  "field": "validation_scope.zh",
+  "severity": "error"
+ },
+ {
+  "tag": "C35",
+  "id": "succession-on-a-funded-carrier",
+  "field": "statement.en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "C36",
+  "id": "succession-on-a-funded-carrier",
+  "field": "statement.zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "C37",
+  "id": "succession-on-a-funded-carrier",
+  "field": "laws[2].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C38",
+  "id": "succession-on-a-funded-carrier",
+  "field": "laws[2].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C39",
+  "id": "succession-on-a-funded-carrier",
+  "field": "dependencies[0].detail.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "C41",
+  "id": "finite-agreement-does-not-identify-priority",
+  "field": "does_not_show[2].en",
+  "severity": "style"
+ },
+ {
+  "tag": "C42",
+  "id": "finite-agreement-does-not-identify-priority",
+  "field": "does_not_show[2].zh",
+  "severity": "style"
+ },
+ {
+  "tag": "C43",
+  "id": "finite-agreement-does-not-identify-priority",
+  "field": "validation_scope.zh",
+  "severity": "style"
+ },
+ {
+  "tag": "C44",
+  "id": "significance-through-a-common-condition",
+  "field": "statement.en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "C45",
+  "id": "significance-through-a-common-condition",
+  "field": "statement.zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "D0",
+  "id": "reach-from-a-seed",
+  "field": "statement.en",
+  "severity": "error"
+ },
+ {
+  "tag": "D1",
+  "id": "reach-from-a-seed",
+  "field": "statement.zh",
+  "severity": "error"
+ },
+ {
+  "tag": "D2",
+  "id": "reach-from-a-seed",
+  "field": "laws[3].en",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "D3",
+  "id": "reach-from-a-seed",
+  "field": "laws[3].zh",
+  "severity": "overclaim"
+ },
+ {
+  "tag": "D4",
+  "id": "reach-from-a-seed",
+  "field": "correspondence.en",
+  "severity": "error"
+ },
+ {
+  "tag": "D5",
+  "id": "reach-from-a-seed",
+  "field": "correspondence.zh",
+  "severity": "error"
+ },
+ {
+  "tag": "D6",
+  "id": "reach-from-a-seed",
+  "field": "laws[0].en",
+  "severity": "style"
+ },
+ {
+  "tag": "D7",
+  "id": "reach-from-a-seed",
+  "field": "laws[0].zh",
+  "severity": "style"
+ },
+ {
+  "tag": "D13",
+  "id": "what-a-summary-keeps",
+  "field": "related[1].detail.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D14",
+  "id": "what-a-summary-keeps",
+  "field": "related[1].detail.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D15",
+  "id": "what-a-summary-keeps",
+  "field": "references[3].role",
+  "severity": "style"
+ },
+ {
+  "tag": "D16",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "next_delta.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D17",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "next_delta.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D18",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "statement.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D19",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "statement.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D20",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "laws[0].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D21",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "laws[0].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D24",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "title.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D25",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "title.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D30",
+  "id": "contraction-where-duplication-is-reachable",
+  "field": "does_not_show[0].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D31",
+  "id": "contraction-where-duplication-is-reachable",
+  "field": "does_not_show[0].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D32",
+  "id": "contraction-where-duplication-is-reachable",
+  "field": "validation_scope.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D33",
+  "id": "contraction-where-duplication-is-reachable",
+  "field": "validation_scope.zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D36",
+  "id": "self-reference-does-not-certify-itself",
+  "field": "laws[0].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D37",
+  "id": "self-reference-does-not-certify-itself",
+  "field": "laws[0].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D38",
+  "id": "self-reference-does-not-certify-itself",
+  "field": "does_not_show[1].en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D39",
+  "id": "self-reference-does-not-certify-itself",
+  "field": "does_not_show[1].zh",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D40",
+  "id": "self-reference-does-not-certify-itself",
+  "field": "statement.en",
+  "severity": "imprecise"
+ },
+ {
+  "tag": "D41",
+  "id": "self-reference-does-not-certify-itself",
+  "field": "statement.zh",
+  "severity": "imprecise"
+ }
+]

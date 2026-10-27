@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "id": "succession-on-a-funded-carrier",
+  "title": {
+    "en": "Succession on a carrier provided for migration",
+    "zh": "为迁移所备之承载者上的承续"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F06",
+  "reviewed_at_utc": "2026-10-26T16:40:00+00:00",
+  "statement": {
+    "en": "Under a certificate for correction plus migration, a carrier refining the market step, running a command other than shutdown with a part and an authentic credential, steps each generation from a safe start; a safe aggregate can lack a carrier; safety for correction alone need not cover migration.",
+    "zh": "在为纠正加迁移之证书下，细化市场之步之承载者，运行非关机之命令、有部件且凭据真确时，自安全之起点每一代皆走其一步；总量安全时可无承载者；只为纠正之安全未必兼顾迁移。"
+  },
+  "laws": [
+    {
+      "en": "A carrier holds a market state, an identity, replacement parts, a payload (requested command, authority, credential, claims, receipts) and work done. Its next state projects exactly onto the market step with the migration added to what correction draws; it keeps the claims and the command, appends one receipt, uses one part (given one) and adds those arriving, and keeps the balance of work.",
+      "zh": "承载者带市场状态、标识、替换部件、载荷（所请命令、权限、凭据、主张、回执）与所做之工。其下一状态恰投影为纠正所需加上迁移之市场之步；保持主张与命令，附加一条回执，用去一个部件（若有）并加入所到者，工之余额不变。",
+      "declarations": [
+        "AlignmentSuccession.withMigration",
+        "AlignmentSuccession.Payload",
+        "AlignmentSuccession.Carrier",
+        "AlignmentSuccession.next",
+        "AlignmentSuccession.exact_market_projection",
+        "AlignmentSuccession.payload_keeps_claims_and_history",
+        "AlignmentSuccession.carrier_and_work_accounted"
+      ]
+    },
+    {
+      "en": "A step is blocked where the carrier has no part, where its reserve is below correction's draw plus migration, or where the copied payload differs from its own. Under a certificate for the raised draw, from a safe start, under admissible disturbances, with a part, a running carrier, a command other than shutdown and a credential equal to the authority, every generation of the lineage, one part arriving a step, steps.",
+      "zh": "承载者无部件、其储备低于所需加迁移、或所抄载荷异于其本身时，一步受阻。在为提高后所需之证书下，自安全之起点、于容许之扰动下，有部件、承载者运行、命令非关机、凭据等于权限时，世系之每一代（每步到一部件）皆走其一步。",
+      "declarations": [
+        "AlignmentSuccession.step",
+        "AlignmentSuccession.missing_part_blocks_realization",
+        "AlignmentSuccession.migration_funding_blocks_realization",
+        "AlignmentSuccession.corrupted_transfer_blocked",
+        "AlignmentSuccession.lineage",
+        "AlignmentSuccession.every_generation_executes"
+      ]
+    },
+    {
+      "en": "In the financed witness the aggregate is safe while a carrier with no part cannot take its step; the state safe under the original example's parameters cannot take a step with migration one; and serving a requested shutdown completes, the served command state no longer running.",
+      "zh": "在有备之见证中，总量安全而无部件之承载者不能走其一步；在原例参数下安全之状态，迁移为一时不能走一步；所请之关机得到服务而完成，所服务之命令状态不再运行。",
+      "declarations": [
+        "AlignmentSuccession.financed",
+        "AlignmentSuccession.initialCarrier",
+        "AlignmentSuccession.financed_certificate",
+        "AlignmentSuccession.financed_initial_safe",
+        "AlignmentSuccession.aggregate_safe_can_lack_a_carrier",
+        "AlignmentSuccession.old_funding_certificate_does_not_pay_migration",
+        "AlignmentSuccession.aggregate_shutdown_does_not_force_perpetual_operation"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The conversion of reserve to command work (four units a step), incoming parts and the certificate are supplied local laws; authority is a credential equal to the recorded authority, and the command protocol is that of EffectiveCommand.",
+      "zh": "储备化为命令之工（每步四单位）、所到之部件与证书皆为所给之局部律；权限即与所记权限相等之凭据，命令之协议为 EffectiveCommand 之协议。"
+    },
+    {
+      "en": "Rational market states with natural counts of parts and work, one step at a time; the copied payload's physical fidelity is a premise.",
+      "zh": "有理数之市场状态，部件与工为自然数之计数，逐步；所抄载荷之物理保真为前提。"
+    },
+    {
+      "en": "Periphery (imports MarketGenerativity and EffectiveCommand): every cited declaration reports propext, Quot.sound and Classical.choice except the structures Payload and Carrier, whose reports are empty.",
+      "zh": "外围（引入 MarketGenerativity 与 EffectiveCommand）：所引声明除结构 Payload 与 Carrier（公理报告为空）外，皆报告 propext、Quot.sound 与 Classical.choice。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That an actual system is so provided for or carried: the conversion, the parts and the certificate are supplied.",
+      "zh": "实际系统如此有备或如此承载：转换、部件与证书皆为所给。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That a succession is warranted or its command right: the laws compare no command with another.",
+      "zh": "承续有根据或其命令为对：诸律不比较命令。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Succession where parts or work form in the run rather than arrive as supplied.",
+      "zh": "部件或工在运行中形成、而非按所给到来之承续。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by Lean 4.29.1 in the alignment-continuity run (receipt alignment-continuity-checks/20261008T085311.995516Z, the same bytes as alignment-continuity-verification.json), which binds the current bytes of AlignmentSuccession.lean at its live path under market-generativity/meta-attractor; every cited theorem reports propext, Quot.sound and Classical.choice. The record was read against the current Lean; not reviewed by a person.",
+    "zh": "Lean 4.29.1 实查（回执 alignment-continuity-checks/20261008T085311.995516Z，与 alignment-continuity-verification.json 同字节），绑定 AlignmentSuccession.lean 于 meta-attractor 下现行路径之当前字节；所引定理皆报 propext、Quot.sound 与 Classical.choice。本记录对照当前 Lean 读过；未经人审。"
+  },
+  "next_delta": {
+    "en": "Succession where the parts and the conversion of reserve to work are formed in the run, and the carrier as an instance of the spine's laws of change, as MarketInstances gives for the market step.",
+    "zh": "部件与储备化为工之转换皆在运行中形成之承续；以及把承载者作为脊柱之变化律之实例，如 MarketInstances 为市场之步所给者。"
+  },
+  "correspondence": {
+    "en": "Systems: the carrier's step projecting exactly onto the market step is a refinement in the sense of refinement mappings (Abadi and Lamport 1991). Read by the AI: succession is the migration of a running service with its state and its record of commands, where selection that provides for correction alone leaves the migration without support.",
+    "zh": "系统：承载者之步恰投影为市场之步，是精化映射意义上之精化（Abadi 与 Lamport 1991）。依 AI 之读：承续是运行中之服务连同其状态与命令记录之迁移；只为纠正有备之选择，使迁移无所支持。"
+  },
+  "canonical_source": "experiments/market-generativity/meta-attractor/AlignmentSuccession.lean",
+  "aliases": [
+    "Succession on a carrier provided for migration",
+    "为迁移所备之承载者上的承续",
+    "AlignmentSuccession.every_generation_executes",
+    "AlignmentSuccession.exact_market_projection",
+    "AlignmentSuccession.aggregate_safe_can_lack_a_carrier",
+    "AlignmentSuccession.old_funding_certificate_does_not_pay_migration"
+  ],
+  "dependencies": [
+    {
+      "id": "market-protected-continuation",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "every_generation_executes applies MarketGenerativity.rectangle_all_times, the invariance of the safe rectangle under a certificate on which that record's safe_history_never_fails rests, to the market law with migration added to correction's draw.",
+        "zh": "every_generation_executes 把 MarketGenerativity.rectangle_all_times（证书下安全矩形每时皆保）用于所需提高后之市场律。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "market-model-share-margin-and-ends",
+      "detail": {
+        "en": "The share law, margin and two ends of the market step this carrier refines.",
+        "zh": "此承载者所细化之市场之步的份额律、边际与两端。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/AlignmentSuccession.lean",
+      "role": "proof",
+      "declarations": [
+        "AlignmentSuccession.withMigration",
+        "AlignmentSuccession.Payload",
+        "AlignmentSuccession.Carrier",
+        "AlignmentSuccession.next",
+        "AlignmentSuccession.exact_market_projection",
+        "AlignmentSuccession.payload_keeps_claims_and_history",
+        "AlignmentSuccession.carrier_and_work_accounted",
+        "AlignmentSuccession.step",
+        "AlignmentSuccession.missing_part_blocks_realization",
+        "AlignmentSuccession.migration_funding_blocks_realization",
+        "AlignmentSuccession.corrupted_transfer_blocked",
+        "AlignmentSuccession.lineage",
+        "AlignmentSuccession.every_generation_executes",
+        "AlignmentSuccession.financed",
+        "AlignmentSuccession.initialCarrier",
+        "AlignmentSuccession.financed_certificate",
+        "AlignmentSuccession.financed_initial_safe",
+        "AlignmentSuccession.aggregate_safe_can_lack_a_carrier",
+        "AlignmentSuccession.old_funding_certificate_does_not_pay_migration",
+        "AlignmentSuccession.aggregate_shutdown_does_not_force_perpetual_operation"
+      ],
+      "sha256": "0af531d5cd3204bb6297c21f8169a39dbdfcb5a894ede7864f09ba820f11871d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/alignment-continuity-checks/20261008T085311.995516Z/verification.json",
+      "role": "receipt",
+      "sha256": "0479bf1bb448836de2c2ef3e5470c8f48a79d8a2c1d4bf42cd54e269808c2fc5"
+    },
+    {
+      "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "role": "statement",
+      "sha256": "516bad38ebfbf4c632f231b7918cf4c31472564b474c8d18056228476adbcb48"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ALIGNMENT-CONTINUITY.md",
+      "role": "integration",
+      "sha256": "c2ef69b8a252eb82cb17a8e0fd70a1544c96b07e40f473ee9d7a82cf75aa8be3"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/market-generativity/meta-attractor/AlignmentSuccession.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/alignment-continuity-checks/20261008T085311.995516Z/verification.json",
+      "sha256_pointer": "/sources/AlignmentSuccession/sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "27 October 2026: added (DF2), a carrier refining the market step with migration added to correction takes its step in every generation under a certificate for the larger draw, a safe aggregate can lack a carrier, and a state safe for correction alone need not cover migration; from DEFECTS-FOUND (triage row 198); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），于纠正之外加上迁移、细化市场之步之承载者，在为较大所需之证书下每代皆走其一步，总量安全时可无承载者，只为纠正而安全之状态未必能兼顾迁移；出自 DEFECTS-FOUND（分诊第 198 行）；研究第 426 节。"
+    }
+  ]
+}

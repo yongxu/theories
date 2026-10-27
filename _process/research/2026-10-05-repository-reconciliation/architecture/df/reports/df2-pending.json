@@ -1,0 +1,292 @@
+[
+ {
+  "tag": "A2",
+  "why": "'Any type' is false: Domain is Nat, an Envelope is List (List Nat), and the search runs on one inductive Tree. 'Report law and protected monitor' are inputs of the periphery's FaultTolerantCorrection, not of the declarations cited. The row also sits in a table headed 'Pre-spine law', so the label should say it is the core's restatement.",
+  "id": "theories/becoming/chapters/03-KNOWING.md",
+  "field": "chapter_edits[certificates-sound-and-available][0].new",
+  "old": "**Theorem** (any type; roster, fault envelopes, report law and protected monitor supplied; the core's restatements of the correction modules, with empty axiom reports).",
+  "new": "**Theorem** (core restatement of the correction modules: numbered domains, listed envelopes and a supplied tree; roster, fault envelopes, faithfulness outside the actual fault set and coverage of the actual causes supplied; no premise).",
+  "severity": "error",
+  "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean:47-49, 30-34; PooledEnvelopes.lean:40-45; TreeSearch.lean:52-54; 03-KNOWING.md:335-337"
+ },
+ {
+  "tag": "A41",
+  "why": "The module itself also has Quot.sound (exact_inspection reports propext and Quot.sound). Only the cited declarations are propext-only.",
+  "id": "theories/becoming/chapters/03-KNOWING.md",
+  "field": "chapter_edits[adaptive-closure-cannot-resolve][0].new",
+  "old": "`propext` in some declarations, as its receipt reports;",
+  "new": "`propext` in some declarations cited, as its receipt reports;",
+  "severity": "imprecise",
+  "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/normative-activity-checks/20261007T204714.495458Z/verification.json (Generative.NormativeActivity.exact_inspection)"
+ },
+ {
+  "tag": "A42",
+  "why": "The drafter's anchor text is destroyed by its own first chapter edit, so the lander must insert anchors before edits. The shorter text occurs once in 03-KNOWING.md now and survives the edit, so the order of the two scripts no longer matters.",
+  "id": "composition-route",
+  "field": "anchor_before",
+  "old": "Composition route | **Theorem** (periphery: pre-spine CompositionalAcquisition",
+  "new": "Composition route | **Theorem** (",
+  "severity": "imprecise",
+  "evidence": "theories/becoming/chapters/03-KNOWING.md:263 (count of 'Composition route | **Theorem** (' is 1)"
+ },
+ {
+  "tag": "B31",
+  "why": "Drop both optional chapter edits (spent→used, costs→unit work draws). They are a renaming of landed text that states no wrong meaning, which the naming rule does not allow after landing. They also change bytes that other records' statement hashes may bind.",
+  "id": "equal-totals-can-hide-what-a-capacity-carries",
+  "field": "chapter_edits[1].new and chapter_edits[2].new (optional proposals)",
+  "old": "end with equal material, current support, used work, route and context",
+  "new": "end with equal material, current support, spent work, route and context",
+  "severity": "style",
+  "evidence": "AGENTS.md (Proof and naming: a renaming sweep after landing needs a name that states a wrong meaning); 04-LIFE.md:237"
+ },
+ {
+  "tag": "B44",
+  "why": "The calibration clauses come from CalibratedUpdater and CalibrationRenewal. The new record leaves them out and sends them to chapter 03, whose correction-is-not-calibration paragraph is their home, so the home paragraph should point there. Unit A's record should also cover 'a channel change keeping zero and orientation need not invalidate judgment' (CalibrationRenewal.positive_gain_change_preserves_signs), which 03 does not yet state. The old string occurs once.",
+  "id": "theories/becoming/chapters/04-LIFE.md",
+  "field": "§8 paragraph at line 229 (the updater line), calibration clause",
+  "old": "need not invalidate judgment; under bounded drift",
+  "new": "need not invalidate judgment ([03](03-KNOWING.md#correction-is-not-calibration)); under bounded drift",
+  "severity": "imprecise",
+  "evidence": "theories/becoming/chapters/03-KNOWING.md:105-106; 04-LIFE.md:229; CalibrationRenewal.lean:53"
+ },
+ {
+  "tag": "B47",
+  "why": "Inside a parenthetical, every chapter writes the record link lowercase: 12 occurrences of '([record](' in 04 and none of '([Record](' in any chapter. '[Record]' is capitalized only at the start of a sentence. Apply this to all seven proposed link insertions.",
+  "id": "theories/becoming/chapters/04-LIFE.md",
+  "field": "new string of the proposed chapter_edits of all seven records",
+  "old": "([Record](../results/records/",
+  "new": "([record](../results/records/",
+  "severity": "style",
+  "evidence": "theories/becoming/chapters/04-LIFE.md:90-93,174 (grep: '([Record](' occurs 0 times in theories/becoming/chapters)"
+ },
+ {
+  "tag": "C4",
+  "why": "Optional. The record and formal/README call q accountability and θ the accountability floor. The chapter calls q 'exposure', yet its first sentence already uses 'collectible exposure' for fine·q, so one word names two quantities. Apply together with the next edit.",
+  "id": "theories/becoming/chapters/05-COLLECTIVES.md",
+  "field": "§10 market Theorem paragraph",
+  "old": "the threshold is protected at the next step, with correction paid and no quality error, from every exposure `q` with `θ ≤ q ≤ 1`",
+  "new": "the accountability floor is kept at the next step, with correction paid and no error, from every accountability `q` with `θ ≤ q ≤ 1`",
+  "severity": "style",
+  "evidence": "experiments/market-generativity/formal/RegimeBoundary.lean:11-13; experiments/market-generativity/formal/README.md:40"
+ },
+ {
+  "tag": "C5",
+  "why": "Optional, the companion of the edit above.",
+  "id": "theories/becoming/chapters/05-COLLECTIVES.md",
+  "field": "§10 market Theorem paragraph",
+  "old": "influence bound `λ` and threshold `θ`, let `M = α(1 − θ) − βλθ`",
+  "new": "influence bound `λ` and accountability floor `θ`, let `M = α(1 − θ) − βλθ`",
+  "severity": "style",
+  "evidence": "experiments/market-generativity/formal/RegimeBoundary.lean:8-9"
+ },
+ {
+  "tag": "C6",
+  "why": "Optional. Law 5 of the record states the maintenance-end half; the home section states only the low end.",
+  "id": "theories/becoming/chapters/05-COLLECTIVES.md",
+  "field": "§10 market Theorem paragraph",
+  "old": "coupled to the essential support the low end fails in finite time even with correction paid at every step (",
+  "new": "coupled to the essential support the low end fails in finite time even with correction paid at every step, while from the box about the maintenance end with support at least 5 the guarded history never fails (`high_coupled_history_never_fails`) (",
+  "severity": "missing",
+  "evidence": "experiments/market-generativity/formal/RegimeAttraction.lean:532-542"
+ },
+ {
+  "tag": "C26",
+  "why": "Laws 1 and 2 are FaultEnvelopes' soundness and availability applied to the induced envelope. certificates-sound-and-available is DF2 unit A's new record, now in the worktree and still untracked. Land it first or with this record.",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "dependencies",
+  "old": "[]",
+  "new": "[{\"id\": \"certificates-sound-and-available\", \"relation\": \"formal-reuse\", \"detail\": {\"en\": \"induced_certificate_sound and induced_certificate_available apply FaultEnvelopes.certificate_sound and certificate_available to the envelope the bounds induce, ready_separates giving its separation.\", \"zh\": \"induced_certificate_sound 与 induced_certificate_available 把 FaultEnvelopes.certificate_sound 与 certificate_available 用于诸界所导出之包络，其分隔由 ready_separates 给出。\"}}]",
+  "severity": "missing",
+  "evidence": "Reconfiguration.lean:132-136, 177-179"
+ },
+ {
+  "tag": "C29",
+  "why": "The record leads with the general laws (soundness, readiness iff separation, the step's necessary conditions), but the drafted home section states only the witnesses. Every cited name is core with an empty report, so the heading should name the core module first, not 'periphery module'. Domain is Nat (FaultEnvelopes.lean:47), so the heading says 'numbered', not 'any type'. If applied, anchor_before becomes '**Theorem** (pure core, no axiom: members and causes numbered'.",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "chapter_edits[0].new",
+  "old": "**Theorem** (periphery module [`CorrectionReconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean), stated in the pure core by [`Reconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean), the cited theorems with empty axiom reports; causal fault formulas supplied; witness). Reviewers count by independent causes, not names. With reviewer fault sets computed from causal formulas,",
+  "new": "**Theorem** (pure core, no axiom: members and causes numbered, rosters as finite lists, failures Boolean, fault formulas and bounds supplied; the module [`Reconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean), which states the periphery module [`CorrectionReconfiguration`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean); the cases witnesses). Reviewers count by independent causes, not names. With each reviewer failing by a formula over root causes and bounds on the causes that may occur together, a certificate over the induced envelope is sound for every covered set of causes, given faithful reviewers, and readiness (nonempty bounds, every two leaving a reviewer working under both) is exactly a nonempty separated induced envelope (`Reconfiguration.induced_certificate_sound`, `Reconfiguration.ready_iff_nonempty_separated`); a reconfiguration installs a candidate only where the step is opened and the candidate ready (`Reconfiguration.closed_rejected`, `Reconfiguration.unready_rejected`). In the computed cases, with reviewer fault sets computed from causal formulas,",
+  "severity": "missing",
+  "evidence": "Reconfiguration.lean:125-136, 158-166, 363-372; FaultEnvelopes.lean:47"
+ },
+ {
+  "tag": "C30",
+  "why": "Follows the heading change above. Use it only if that edit is applied.",
+  "id": "reviewers-count-by-independent-causes",
+  "field": "anchor_before",
+  "old": "**Theorem** (periphery module [`CorrectionReconfiguration`]",
+  "new": "**Theorem** (pure core, no axiom: members and causes numbered",
+  "severity": "style",
+  "evidence": "theories/becoming/chapters/05-COLLECTIVES.md:269"
+ },
+ {
+  "tag": "C40",
+  "why": "The record's statement says no fixed weight agrees globally (no_fixed_finite_weight_is_lexical); the chapter says only that the sample's weight does not. Align the home section with the record.",
+  "id": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "field": "§5 finite-agreement Theorem paragraph",
+  "old": "and it does not agree on every pair of histories (`PracticalPriorityIdentification.finite_agreement_without_global_identification`)",
+  "new": "and no fixed weight agrees on every pair of histories (`PracticalPriorityIdentification.finite_agreement_without_global_identification`, `PracticalPriorityIdentification.no_fixed_finite_weight_is_lexical`)",
+  "severity": "imprecise",
+  "evidence": "PracticalPriorityIdentification.lean:83-95"
+ },
+ {
+  "tag": "C46",
+  "why": "Participates is requires ∨ draws, with no need. Such an adjoined condition is consumed by no one, so living is unchanged and connected_of_common applies: connection here is cheap. becoming-renewal-reading's correspondence notes this (review Q4); the caveat belongs with the laws now moving here.",
+  "id": "significance-through-a-common-condition",
+  "field": "does_not_show[4]",
+  "old": "",
+  "new": "{\"en\": \"That the connecting condition is used: a dependence at need 0 counts as taking part, so adjoining a condition every formation depends on at need 0 and none draws connects the whole; under interaction, as in condition-correspondence-discipline, it connects nothing.\", \"zh\": \"连通之条件被使用：需要为 0 之依存亦算参与，故加入一个每个形成皆以需要 0 依存、无人汲取之条件即使整体连通；在交互下（如 condition-correspondence-discipline），它不连通任何事物。\", \"kind\": \"non-implication\"}",
+  "severity": "missing",
+  "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean:129-136; ValuationFrames.lean:165-170"
+ },
+ {
+  "tag": "C47",
+  "why": "07 §3.1 never defines the whole-run reading, yet the stepwise paragraph says it 'differs from the whole-run reading both ways'. The correspondence-discipline paragraph narrows the co-participation relation this result introduces. Placed first, the result defines the reading before both use it. 'the separate witness' names a Lean namespace, not a premise.",
+  "id": "significance-through-a-common-condition",
+  "field": "chapter_edits[0]",
+  "old": "",
+  "new": "Insert the paragraph before the stepwise reading rather than after the correspondence discipline. old: `<a id=\"r-becoming-stepwise-reading\"></a>`; new: the drafter's paragraph with its heading changed to `**Theorem** (any process; the whole-run reading of `living`; a witness for the unconnected case).`, its text otherwise unchanged and ending `([record](../results/records/significance-through-a-common-condition.md))`, then a blank line, then `<a id=\"r-becoming-stepwise-reading\"></a>`. anchor_before becomes `**Theorem** (any process; the whole-run reading of`.",
+  "severity": "style",
+  "evidence": "theories/becoming/chapters/07-SIGNIFICANCE.md:124, 127; ValuationFrames.lean:150-157"
+ },
+ {
+  "tag": "D8",
+  "why": "The same overclaim as in law 4, now in the chapter. The Lean shows only that getting the path from no separation, for every process, is equivalent to double-negation elimination.",
+  "id": "reach-from-a-seed",
+  "field": "chapter_edits[0].new",
+  "old": "refuting every separation gives no path, and reaching a configuration needs one",
+  "new": "refuting every separation refutes only that the configuration is unreached, and reaching it needs a path",
+  "severity": "overclaim",
+  "evidence": "SeedReach.lean:122-132, :177-183; theories/becoming/chapters/01-ROOT.md:475"
+ },
+ {
+  "tag": "D9",
+  "why": "Both records are in this batch and state the same no-step law and leastness. GeneratedPaths' Reach has the same definition as the frame's Reach (∃ word, Trace P s word t on Generative.Process).",
+  "id": "reach-from-a-seed",
+  "field": "related",
+  "old": "(no entry for type-formation-gives-no-dynamics)",
+  "new": "append {\"id\": \"type-formation-gives-no-dynamics\", \"detail\": {\"en\": \"The pre-spine form of two of these laws: reachability is the least reflexive-transitive relation containing the steps, and with no steps it is equality (reach_without_steps_iff), the one-seed case of fromSeed_iff_seed_of_no_moves.\", \"zh\": \"其中两律的主干前形式：可达是含诸步的最小自反传递关系，无步时即相等（reach_without_steps_iff），即 fromSeed_iff_seed_of_no_moves 的单种子情形。\"}}",
+  "severity": "missing",
+  "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean:20-21, :87-95; becoming/Becoming/Frame.lean:188; SeedReach.lean:102-107"
+ },
+ {
+  "tag": "D10",
+  "why": "This record keeps an access-model law of its own (law 3: exact_reader_separates, unrestricted_reader_injective). Saying 'the access model ... are knowing's' contradicts that, and would break one result, one record. Only fixed_route_behavior_iff and the Witness belong to access-yet-to-form (triage row 139). This wording matches the record_edit's own related detail.",
+  "id": "what-a-summary-keeps",
+  "field": "chapter_edits[2].new",
+  "old": "The access model and its witness are [knowing's](03-KNOWING.md#r-access-yet-to-form).",
+  "new": "The access model's exact behaviour with the route fixed and its witness are [knowing's](03-KNOWING.md#r-access-yet-to-form).",
+  "severity": "error",
+  "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean:161-166 (row 139), :170-190 (this record); triage.json row 139 laws"
+ },
+ {
+  "tag": "D11",
+  "why": "Law 3 of the record (exact_reader_separates, unrestricted_reader_injective) is not stated anywhere in 08 §4. The record must say what its home section says. Bullet 2 is where the access instance of law 2 belongs.",
+  "id": "what-a-summary-keeps",
+  "field": "chapter_edits (add, apply before edit [0])",
+  "old": "- An exact summary of feasibility cannot identify two configurations that differ on some finite word.",
+  "new": "- An exact summary of feasibility cannot identify two configurations that differ on some finite word (`feasible_difference_implies_projection_difference`). In the access model, a summary from which some reader reads off every word's feasibility separates occupancy throughout the permitted access set (`exact_reader_separates`); with every support permitted and the route fixed, every such encoding of occupancy is one to one (`unrestricted_reader_injective`).",
+  "severity": "missing",
+  "evidence": "ReconfigurableSupportLogic.lean:170-190; theories/becoming/chapters/08-METHOD.md:279"
+ },
+ {
+  "tag": "D12",
+  "why": "With the access-model laws of law 3 in the section, the label 'the access model's laws on propext' is wrong: unrestricted_reader_injective uses propext and Quot.sound. The anchor_before prefix '**Theorem** (any process; the access witness on standard axioms' is kept.",
+  "id": "what-a-summary-keeps",
+  "field": "chapter_edits[0].new",
+  "old": "the access witness on standard axioms, `propext` and `Quot.sound`, and the access model's laws on `propext`)",
+  "new": "the access witness on standard axioms, as is the access model: `propext` and `Quot.sound` in some declarations)",
+  "severity": "imprecise",
+  "evidence": "deeper/reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json /modules/1/standard_axiom_audits: unrestricted_reader_injective [propext, Quot.sound], exact_reader_separates [propext], fixed_route_behavior_iff [propext]"
+ },
+ {
+  "tag": "D22",
+  "why": "Same correction, in the chapter edit.",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "chapter_edits[0].new",
+  "old": "and keeps distinct seeds distinct.",
+  "new": "and the diagonal keeps distinct elements of the seed distinct.",
+  "severity": "imprecise",
+  "evidence": "ProductTower.lean:69-72"
+ },
+ {
+  "tag": "D23",
+  "why": "Over a seed with two elements the tower does have distinct elements. The Lean shows only that the seed's boundary is kept: empty stays empty and at most one stays at most one, in both directions.",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "chapter_edits (add)",
+  "old": "So type formation alone yields no distinction and no occurrence.",
+  "new": "So type formation alone yields no element from an empty seed and no distinction from a seed with at most one element.",
+  "severity": "imprecise",
+  "evidence": "ProductTower.lean:36-67; theories/becoming/chapters/08-METHOD.md:388"
+ },
+ {
+  "tag": "D26",
+  "why": "The aliases repeat the title.",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "aliases",
+  "old": "\"type formation gives no distinction and no dynamics\", \"类型构造不给出区分与动力学\"",
+  "new": "\"type formation keeps the seed's boundary and gives no dynamics\", \"类型构造保持种子之界而不给出动力学\"",
+  "severity": "imprecise",
+  "evidence": "ProductTower.lean:36-67"
+ },
+ {
+  "tag": "D27",
+  "why": "Matches the new title, in the en and zh fields respectively.",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "correspondence",
+  "old": "The reading that type formation gives no distinction and no dynamics is the AI's. | 把类型构造读作不给出区分与动力学，是 AI 的读法。",
+  "new": "The reading that type formation keeps the seed's boundary and gives no dynamics is the AI's. | 把类型构造读作保持种子之界而不给出动力学，是 AI 的读法。",
+  "severity": "imprecise",
+  "evidence": "ProductTower.lean:36-67"
+ },
+ {
+  "tag": "D28",
+  "why": "A file with no import line still gets Init (the prelude). en and zh respectively.",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "hypotheses[0]",
+  "old": "ProductTower imports nothing | ProductTower 不导入任何模块",
+  "new": "ProductTower imports only Lean's prelude | ProductTower 只用 Lean 前奏",
+  "severity": "style",
+  "evidence": "ProductTower.lean:1-9"
+ },
+ {
+  "tag": "D29",
+  "why": "Same law in the core, written in this batch. levels-of-closure is already linked; reach-from-a-seed is the closer match.",
+  "id": "type-formation-gives-no-dynamics",
+  "field": "related",
+  "old": "(no entry for reach-from-a-seed)",
+  "new": "append {\"id\": \"reach-from-a-seed\", \"detail\": {\"en\": \"The core's form: reach from seeds is the least invariant holding at them (fromSeed_iff_invariant), and with no move exactly the seeds are reached (fromSeed_iff_seed_of_no_moves), of which reach_without_steps_iff is the one-seed case.\", \"zh\": \"核心中的形式：自诸种子之所及是在其处成立的最小不变性质（fromSeed_iff_invariant），全无动作时所及恰是诸种子（fromSeed_iff_seed_of_no_moves），reach_without_steps_iff 是其单种子情形。\"}}",
+  "severity": "missing",
+  "evidence": "SeedReach.lean:73-76, :102-107; GeneratedPaths.lean:87-95"
+ },
+ {
+  "tag": "D34",
+  "why": "Same point as validation_scope. en and zh respectively.",
+  "id": "contraction-where-duplication-is-reachable",
+  "field": "hypotheses[2]",
+  "old": "the calculus's declarations have empty axiom reports; | 演算的声明公理报告皆空；",
+  "new": "the calculus's theorems have empty axiom reports (its definitions are not audited); | 演算的定理公理报告皆空（其定义不受审）；",
+  "severity": "style",
+  "evidence": "generated-contraction receipt /modules/2"
+ },
+ {
+  "tag": "D35",
+  "why": "The record says 'take–release' and 'two takes', and the Lean events are take and release. One term in chapter and record.",
+  "id": "contraction-where-duplication-is-reachable",
+  "field": "chapter_edits[1].new",
+  "old": "On one port, acquire–release rounds return it to free for any finite number of rounds, and from free two acquisitions with no release between are infeasible.",
+  "new": "On one port, take–release rounds return it to free for any finite number of rounds, and from free two takes with no release between are infeasible.",
+  "severity": "style",
+  "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContractionMechanisms.lean:143-159"
+ },
+ {
+  "tag": "D42",
+  "why": "Carries, ReflexiveFor and SourceFree are cited, but the receipts audit only theorems. en and zh respectively.",
+  "id": "self-reference-does-not-certify-itself",
+  "field": "hypotheses[0]",
+  "old": "every cited declaration has an empty axiom report in its receipt. | 所引每项声明在其回执中公理报告皆空。",
+  "new": "every cited theorem has an empty axiom report in its receipt; the cited definitions are not audited. | 所引每条定理在其回执中公理报告皆空；所引定义不受审。",
+  "severity": "style",
+  "evidence": "deeper/reflective-identity-checks/20261008T114343.985843Z/receipt.json empty_axiom_audits (11 theorems); deeper/recognitional-binding-checks/20261008T120159.334011Z/receipt.json /modules/2 (7 theorems)"
+ }
+]
