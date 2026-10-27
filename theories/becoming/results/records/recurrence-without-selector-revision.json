@@ -133,8 +133,8 @@
   "proof_bindings": [],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), recurrence without revision of the selector: a process returning after two steps and changing at every step with its operative selector the same at every time; reviewed-scoped, since no passing receipt binds the file's current bytes; from DEFECTS-FOUND (triage rows 148 and 113); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），选择者不修订的复现：一个两步后返回、每步改变而运作的选择者每刻相同的过程；因无通过的回执绑定该文件当前字节，状态为已审定范围；出自 DEFECTS-FOUND（分诊第 148 行与第 113 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), recurrence without revision of the selector: a process returning after two steps and changing at every step with its operative selector the same at every time; reviewed-scoped, since no passing receipt binds the file's current bytes; from DEFECTS-FOUND (triage rows 148 and 113); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），选择者不修订的复现：一个两步后返回、每步改变而运作的选择者每刻相同的过程；因无通过的回执绑定该文件当前字节，状态为已审定范围；出自 DEFECTS-FOUND（分诊第 148 行与第 113 行）；研究第 426 节。"
     }
   ]
 }

@@ -73,7 +73,7 @@ Aliases: `Groups formed by bonds share a founder`, `由键形成的组有共同�
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), groups formed by bonds share a founder: division's inheritance, lineage consistency kept by every history without aggregation and so a common founder for positions connected by bonds, the aggregation counterexample, no bond-free exact predictor, and the developmental witnesses; from DEFECTS-FOUND (triage row 146); study section DF_N.
+- 27 October 2026: added (DF2), groups formed by bonds share a founder: division's inheritance, lineage consistency kept by every history without aggregation and so a common founder for positions connected by bonds, the aggregation counterexample, no bond-free exact predictor, and the developmental witnesses; from DEFECTS-FOUND (triage row 146); study section 426.
 
 </details>
 

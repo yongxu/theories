@@ -71,7 +71,7 @@ Aliases: `Equal totals can hide what a capacity carries`, `相同的总量可隐
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), equal totals can hide what a capacity carries: material and work kept by every finite history, acquisition and withdrawal, the two histories with equal current conditions and different withdrawal, and equal burden carrying different signals; from DEFECTS-FOUND (triage rows 149 and 113); study section DF_N.
+- 27 October 2026: added (DF2), equal totals can hide what a capacity carries: material and work kept by every finite history, acquisition and withdrawal, the two histories with equal current conditions and different withdrawal, and equal burden carrying different signals; from DEFECTS-FOUND (triage rows 149 and 113); study section 426.
 
 </details>
 

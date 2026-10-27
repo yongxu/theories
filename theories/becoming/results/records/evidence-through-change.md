@@ -76,7 +76,7 @@ Aliases: `evidence through change`, `经变化的证据`, `TemporalInspection.la
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), that candidates propagated through admitted change keep the actual world and a pooled certificate sound, the witnesses of unpredicted and understated change, and the tolerance a growing error needs; from DEFECTS-FOUND (triage row 133); study section DF_N.
+- 27 October 2026: added (DF2), that candidates propagated through admitted change keep the actual world and a pooled certificate sound, the witnesses of unpredicted and understated change, and the tolerance a growing error needs; from DEFECTS-FOUND (triage row 133); study section 426.
 
 </details>
 

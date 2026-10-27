@@ -69,7 +69,7 @@ Aliases: `Finite agreement does not identify lexical priority`, `有限一致不
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), every finite sample of histories has a positive weight agreeing with lexical priority on it, and no fixed weight agrees on every pair; from DEFECTS-FOUND (triage row 267); study section DF_N.
+- 27 October 2026: added (DF2), every finite sample of histories has a positive weight agreeing with lexical priority on it, and no fixed weight agrees on every pair; from DEFECTS-FOUND (triage row 267); study section 426.
 
 </details>
 

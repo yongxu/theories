@@ -74,7 +74,7 @@ Aliases: `learning a rule by narrowing`, `经收窄学习规则`, `Becoming.Narr
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), that narrowing keeps exactly the fitting candidates, that the answer of what they agree on is the greatest safe answer, its transport and the witnesses on Boolean rules, in the core; from DEFECTS-FOUND (triage row 135); study section DF_N.
+- 27 October 2026: added (DF2), that narrowing keeps exactly the fitting candidates, that the answer of what they agree on is the greatest safe answer, its transport and the witnesses on Boolean rules, in the core; from DEFECTS-FOUND (triage row 135); study section 426.
 
 </details>
 

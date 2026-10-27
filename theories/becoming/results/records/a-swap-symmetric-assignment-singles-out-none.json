@@ -137,8 +137,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), a predicate on two roles kept by their exchange holds of exactly one of them in no case, while each single assignment does; from DEFECTS-FOUND (triage row 196); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），为两角色之互换所保持之谓词不恰对其一成立，而每一单一指派恰对一者成立；出自 DEFECTS-FOUND（分诊第 196 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), a predicate on two roles kept by their exchange holds of exactly one of them in no case, while each single assignment does; from DEFECTS-FOUND (triage row 196); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），为两角色之互换所保持之谓词不恰对其一成立，而每一单一指派恰对一者成立；出自 DEFECTS-FOUND（分诊第 196 行）；研究第 426 节。"
     }
   ]
 }

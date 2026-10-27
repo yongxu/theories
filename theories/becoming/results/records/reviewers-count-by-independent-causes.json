@@ -200,7 +200,7 @@
     {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "516bad38ebfbf4c632f231b7918cf4c31472564b474c8d18056228476adbcb48"
+      "sha256": "116a52f07be1a4ea815abdfc15249f76fc324134c587194603db73722257ab4f"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CORRECTION-RECONFIGURATION-INTEGRATION.md",
@@ -226,8 +226,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), with reviewer failures computed from causes the induced certificate is sound for covered causes and readiness follows causes, not names, on the core module that states CorrectionReconfiguration; from DEFECTS-FOUND (triage row 197); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），审查者之失效由原因算出时，导出之证书对被覆盖之原因可靠，就绪随因而不随名，陈于陈述 CorrectionReconfiguration 之核心模块；出自 DEFECTS-FOUND（分诊第 197 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), with reviewer failures computed from causes the induced certificate is sound for covered causes and readiness follows causes, not names, on the core module that states CorrectionReconfiguration; from DEFECTS-FOUND (triage row 197); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），审查者之失效由原因算出时，导出之证书对被覆盖之原因可靠，就绪随因而不随名，陈于陈述 CorrectionReconfiguration 之核心模块；出自 DEFECTS-FOUND（分诊第 197 行）；研究第 426 节。"
     }
   ]
 }

@@ -187,7 +187,7 @@
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
-      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
     }
   ],
   "proof_bindings": [
@@ -208,8 +208,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), carry-over exactly where the premise criterion implies the conclusion criterion, the Curry consequence of a fixed point, and the identity forced on closed source-free terms; from DEFECTS-FOUND (triage row 287); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），承载恰在前提标准蕴涵结论标准之处，不动点的 Curry 推论，以及闭的无来源项被迫为恒等；出自 DEFECTS-FOUND（分诊第 287 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), carry-over exactly where the premise criterion implies the conclusion criterion, the Curry consequence of a fixed point, and the identity forced on closed source-free terms; from DEFECTS-FOUND (triage row 287); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），承载恰在前提标准蕴涵结论标准之处，不动点的 Curry 推论，以及闭的无来源项被迫为恒等；出自 DEFECTS-FOUND（分诊第 287 行）；研究第 426 节。"
     }
   ]
 }

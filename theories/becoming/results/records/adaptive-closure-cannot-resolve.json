@@ -161,12 +161,12 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "fd56b1d37f0e44c9819e766477c90d45873236d30ead2ecab5e1b3a0856da4e1"
+      "sha256": "58e42859a9f7ec5720b68d4bc28f43b02e2fc1d24ab766913ed0d56980751ef1"
     },
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
-      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
     }
   ],
   "proof_bindings": [
@@ -180,8 +180,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), that a policy choosing closed moves from a view keeps a changed reference unresolved, that a sound answer abstains, and what repairs it; from DEFECTS-FOUND (triage row 132); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），由所见选择封闭动作的策略使已变参照始终不可分辨，可靠的回答弃答，以及何者修复；出自 DEFECTS-FOUND（分诊第 132 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), that a policy choosing closed moves from a view keeps a changed reference unresolved, that a sound answer abstains, and what repairs it; from DEFECTS-FOUND (triage row 132); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），由所见选择封闭动作的策略使已变参照始终不可分辨，可靠的回答弃答，以及何者修复；出自 DEFECTS-FOUND（分诊第 132 行）；研究第 426 节。"
     }
   ]
 }

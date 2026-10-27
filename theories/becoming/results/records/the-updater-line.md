@@ -80,7 +80,7 @@ Aliases: `The updater line: development, memory, replacement and margins of a le
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), the updater line: the developmental response as a derivative and the Hebbian sign in one step, memory overwritten and restored, an updating rule replaced within finite accounts, and the drift radius, its exact window and the two margin witnesses; from DEFECTS-FOUND (triage rows 150 and 113); study section DF_N.
+- 27 October 2026: added (DF2), the updater line: the developmental response as a derivative and the Hebbian sign in one step, memory overwritten and restored, an updating rule replaced within finite accounts, and the drift radius, its exact window and the two margin witnesses; from DEFECTS-FOUND (triage rows 150 and 113); study section 426.
 
 </details>
 

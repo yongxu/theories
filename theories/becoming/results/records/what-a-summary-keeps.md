@@ -79,7 +79,7 @@ Aliases: `what a summary keeps`, `摘要保留什么`, `Generative.local_exact_i
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), exact summaries by one-step agreement, the distinctions a feasibility-keeping summary must keep, in general and in the access model, and the realization of every prefix-closed language by its histories; from DEFECTS-FOUND (triage row 283); study section DF_N.
+- 27 October 2026: added (DF2), exact summaries by one-step agreement, the distinctions a feasibility-keeping summary must keep, in general and in the access model, and the realization of every prefix-closed language by its histories; from DEFECTS-FOUND (triage row 283); study section 426.
 
 </details>
 

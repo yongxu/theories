@@ -266,7 +266,7 @@
     {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "516bad38ebfbf4c632f231b7918cf4c31472564b474c8d18056228476adbcb48"
+      "sha256": "116a52f07be1a4ea815abdfc15249f76fc324134c587194603db73722257ab4f"
     },
     {
       "path": "experiments/market-generativity/formal/README.md",
@@ -299,8 +299,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), the market model's share law, its margin for the floor on the level q and low certificates, and its two attracting ends and unstable interior state at erosion one half, coupled to support; from DEFECTS-FOUND (triage row 194); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），市场模型之份额律、q 之下限与低之证书之边际，以及侵蚀为二分之一时两端之吸引与内部定态之不稳，并与支持耦合；出自 DEFECTS-FOUND（分诊第 194 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), the market model's share law, its margin for the floor on the level q and low certificates, and its two attracting ends and unstable interior state at erosion one half, coupled to support; from DEFECTS-FOUND (triage row 194); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），市场模型之份额律、q 之下限与低之证书之边际，以及侵蚀为二分之一时两端之吸引与内部定态之不稳，并与支持耦合；出自 DEFECTS-FOUND（分诊第 194 行）；研究第 426 节。"
     }
   ]
 }

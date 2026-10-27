@@ -72,7 +72,7 @@ Aliases: `A stronger arrangement formed by reconfiguration`, `经重组形成的
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), a stronger arrangement formed by reconfiguration: reconstruction counts fixed by the actual output, material and support kept by every admitted history and its length bounded by its support, the two-type recurrence recovered on the slice with no loose carriers, and the witnesses; from DEFECTS-FOUND (triage row 144); study section DF_N.
+- 27 October 2026: added (DF2), a stronger arrangement formed by reconfiguration: reconstruction counts fixed by the actual output, material and support kept by every admitted history and its length bounded by its support, the two-type recurrence recovered on the slice with no loose carriers, and the witnesses; from DEFECTS-FOUND (triage row 144); study section 426.
 
 </details>
 

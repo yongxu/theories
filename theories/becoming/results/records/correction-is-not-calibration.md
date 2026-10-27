@@ -74,7 +74,7 @@ Aliases: `correction is not calibration`, `修正不是校准`, `CalibrationRene
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), that two references recover the report of an affine channel, the exact criterion for signs to transfer, renewal of references, and the failures of one reference, mixed epochs and later change; from DEFECTS-FOUND (triage row 134); study section DF_N.
+- 27 October 2026: added (DF2), that two references recover the report of an affine channel, the exact criterion for signs to transfer, renewal of references, and the failures of one reference, mixed epochs and later change; from DEFECTS-FOUND (triage row 134); study section 426.
 
 </details>
 

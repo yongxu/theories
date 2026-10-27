@@ -71,7 +71,7 @@ Aliases: `Reviewers count by independent causes, not names`, `审查者以独立
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), with reviewer failures computed from causes the induced certificate is sound for covered causes and readiness follows causes, not names, on the core module that states CorrectionReconfiguration; from DEFECTS-FOUND (triage row 197); study section DF_N.
+- 27 October 2026: added (DF2), with reviewer failures computed from causes the induced certificate is sound for covered causes and readiness follows causes, not names, on the core module that states CorrectionReconfiguration; from DEFECTS-FOUND (triage row 197); study section 426.
 
 </details>
 

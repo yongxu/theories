@@ -136,7 +136,7 @@
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "1368f69ece22fe59a1557d20b3af7734b25a82214e9cda03845acd34b57f0db3",
+      "sha256": "629da3b8cb7dc44e52ba9322e918262f52c06288cb06f294c0a7e065452436c0",
       "declarations": []
     },
     {
@@ -169,8 +169,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), the same carrier need not fix the same response: two histories differing only in the timing of sampling give carriers alike, children with different gates and opposite outcomes of one assay, the continuation to a grandchild and its assisted rescue, and the energy balance; from DEFECTS-FOUND (triage rows 151 and 113); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），同样的承载者未必固定同样的回应：只在采样时机上不同的两段历史得到相同的承载者、门不同的子代与同一检测的相反结果，到孙代的延续及其辅助挽救，以及能量平衡；出自 DEFECTS-FOUND（分诊第 151 行与第 113 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), the same carrier need not fix the same response: two histories differing only in the timing of sampling give carriers alike, children with different gates and opposite outcomes of one assay, the continuation to a grandchild and its assisted rescue, and the energy balance; from DEFECTS-FOUND (triage rows 151 and 113); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），同样的承载者未必固定同样的回应：只在采样时机上不同的两段历史得到相同的承载者、门不同的子代与同一检测的相反结果，到孙代的延续及其辅助挽救，以及能量平衡；出自 DEFECTS-FOUND（分诊第 151 行与第 113 行）；研究第 426 节。"
     }
   ]
 }

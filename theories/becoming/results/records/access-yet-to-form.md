@@ -69,7 +69,7 @@ Aliases: `access yet to form`, `尚待形成的存取`, `Generative.Reconfigurab
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), that with the route fixed feasibility is occupancy on the permitted supports, and that a newly permitted probe tells apart a configuration formed alike under old observations; from DEFECTS-FOUND (triage row 139); study section DF_N.
+- 27 October 2026: added (DF2), that with the route fixed feasibility is occupancy on the permitted supports, and that a newly permitted probe tells apart a configuration formed alike under old observations; from DEFECTS-FOUND (triage row 139); study section 426.
 
 </details>
 

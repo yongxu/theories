@@ -68,7 +68,7 @@ Aliases: `Recurrence without revision of the selector`, `选择者不修订的�
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), recurrence without revision of the selector: a process returning after two steps and changing at every step with its operative selector the same at every time; reviewed-scoped, since no passing receipt binds the file's current bytes; from DEFECTS-FOUND (triage rows 148 and 113); study section DF_N.
+- 27 October 2026: added (DF2), recurrence without revision of the selector: a process returning after two steps and changing at every step with its operative selector the same at every time; reviewed-scoped, since no passing receipt binds the file's current bytes; from DEFECTS-FOUND (triage rows 148 and 113); study section 426.
 
 </details>
 

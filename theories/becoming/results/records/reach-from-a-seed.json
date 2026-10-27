@@ -190,7 +190,7 @@
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
-      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
     }
   ],
   "proof_bindings": [
@@ -204,8 +204,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), reach from a seed as the least invariant, separation exactly where unreached, and the double-negation calibration of the converse; from DEFECTS-FOUND (triage row 55); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），自种子之所及为最小不变性质，恰在不可及处被分开，以及逆向之双重否定校准；出自 DEFECTS-FOUND（分诊第 55 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), reach from a seed as the least invariant, separation exactly where unreached, and the double-negation calibration of the converse; from DEFECTS-FOUND (triage row 55); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），自种子之所及为最小不变性质，恰在不可及处被分开，以及逆向之双重否定校准；出自 DEFECTS-FOUND（分诊第 55 行）；研究第 426 节。"
     }
   ]
 }

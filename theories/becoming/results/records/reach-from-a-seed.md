@@ -74,7 +74,7 @@ Aliases: `reach from a seed`, `自种子之所及`, `reach from seeds is the lea
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), reach from a seed as the least invariant, separation exactly where unreached, and the double-negation calibration of the converse; from DEFECTS-FOUND (triage row 55); study section DF_N.
+- 27 October 2026: added (DF2), reach from a seed as the least invariant, separation exactly where unreached, and the double-negation calibration of the converse; from DEFECTS-FOUND (triage row 55); study section 426.
 
 </details>
 

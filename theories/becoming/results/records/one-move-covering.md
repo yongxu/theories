@@ -77,7 +77,7 @@ Aliases: `one-move covering`, `covering of moves`, `一步覆盖`, `Becoming.Mov
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), what one move ensures, covering of moves exactly where every one-move goal is carried, its preorder along revisions, and the witnesses on two configurations, in the core; from DEFECTS-FOUND (triage rows 140 and 284); study section DF_N.
+- 27 October 2026: added (DF2), what one move ensures, covering of moves exactly where every one-move goal is carried, its preorder along revisions, and the witnesses on two configurations, in the core; from DEFECTS-FOUND (triage rows 140 and 284); study section 426.
 
 </details>
 

@@ -75,7 +75,7 @@ Aliases: `A selected template need not increase the successor's structure`, `被
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), a selected template need not raise the successors' structure: the share criterion on successor columns, its agreement with template rows under faithful or balanced transfer, native copying faithful, and the reversal and opposite-access witnesses; from DEFECTS-FOUND (triage row 145); study section DF_N.
+- 27 October 2026: added (DF2), a selected template need not raise the successors' structure: the share criterion on successor columns, its agreement with template rows under faithful or balanced transfer, native copying faithful, and the reversal and opposite-access witnesses; from DEFECTS-FOUND (triage row 145); study section 426.
 
 </details>
 

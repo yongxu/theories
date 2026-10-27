@@ -396,8 +396,8 @@
       "zh": "2026-10-20：35 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4818b4f31d0b826b/normal-forms-need-decided-apartness.json 和 git 中。"
     },
     {
-      "en": "27 October 2026, board item DF2 (study section DF_N): A statement, as 01's home section states the result (rearranges_iff, complete_iff, normalForm_iff); its laws wait for the schema-2 migration.",
-      "zh": "2026年10月27日，工作板条目 DF2（研究第 DF_N 节）：陈述，按 01 的归属一节所述（rearranges_iff、complete_iff、normalForm_iff）；其规律待迁移到第 2 版格式。"
+      "en": "27 October 2026, board item DF2 (study section 426): A statement, as 01's home section states the result (rearranges_iff, complete_iff, normalForm_iff); its laws wait for the schema-2 migration.",
+      "zh": "2026年10月27日，工作板条目 DF2（研究第 426 节）：陈述，按 01 的归属一节所述（rearranges_iff、complete_iff、normalForm_iff）；其规律待迁移到第 2 版格式。"
     }
   ]
 }

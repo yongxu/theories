@@ -174,7 +174,7 @@
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
-      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
     }
   ],
   "proof_bindings": [
@@ -195,8 +195,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), the binary-product tower keeping the seed's emptiness, inhabitation and having at most one element, and reachability as the least reflexive-transitive relation containing the steps; from DEFECTS-FOUND (triage row 285); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），二元积之塔保持种子之空、非空与至多一元，可达为含诸步的最小自反传递关系；出自 DEFECTS-FOUND（分诊第 285 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), the binary-product tower keeping the seed's emptiness, inhabitation and having at most one element, and reachability as the least reflexive-transitive relation containing the steps; from DEFECTS-FOUND (triage row 285); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），二元积之塔保持种子之空、非空与至多一元，可达为含诸步的最小自反传递关系；出自 DEFECTS-FOUND（分诊第 285 行）；研究第 426 节。"
     }
   ]
 }

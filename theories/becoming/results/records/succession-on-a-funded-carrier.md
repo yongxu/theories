@@ -70,7 +70,7 @@ Aliases: `Succession on a carrier provided for migration`, `为迁移所备之�
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), a carrier refining the market step with migration added to correction takes its step in every generation under a certificate for the larger draw, a safe aggregate can lack a carrier, and a state safe for correction alone need not cover migration; from DEFECTS-FOUND (triage row 198); study section DF_N.
+- 27 October 2026: added (DF2), a carrier refining the market step with migration added to correction takes its step in every generation under a certificate for the larger draw, a safe aggregate can lack a carrier, and a state safe for correction alone need not cover migration; from DEFECTS-FOUND (triage row 198); study section 426.
 
 </details>
 

@@ -85,7 +85,7 @@ Aliases: `certificates sound and available`, `可靠且可用的证书`, `Becomi
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), certificate soundness and availability over fault envelopes, pooled models, and the pending verdict of an interrupted search, all in the core; from DEFECTS-FOUND (triage row 131); study section DF_N.
+- 27 October 2026: added (DF2), certificate soundness and availability over fault envelopes, pooled models, and the pending verdict of an interrupted search, all in the core; from DEFECTS-FOUND (triage row 131); study section 426.
 
 </details>
 

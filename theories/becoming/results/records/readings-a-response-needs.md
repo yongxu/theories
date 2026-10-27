@@ -73,7 +73,7 @@ Aliases: `readings a response needs`, `回应所需的读法`, `Becoming.Assuran
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), the regulation band, whose success changes the next move, and the three-route process, which has no coarsest adequate reading, in the core; from DEFECTS-FOUND (triage rows 136 and 96); study section DF_N.
+- 27 October 2026: added (DF2), the regulation band, whose success changes the next move, and the three-route process, which has no coarsest adequate reading, in the core; from DEFECTS-FOUND (triage rows 136 and 96); study section 426.
 
 </details>
 

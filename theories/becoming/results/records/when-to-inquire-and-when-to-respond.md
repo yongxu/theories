@@ -81,7 +81,7 @@ Aliases: `when to inquire and when to respond`, `何时探究，何时回应`, `
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), choice of moves from readings in the core and the periphery, and the dosing witnesses on inquiry and immediate response; from DEFECTS-FOUND (triage row 94); study section DF_N.
+- 27 October 2026: added (DF2), choice of moves from readings in the core and the periphery, and the dosing witnesses on inquiry and immediate response; from DEFECTS-FOUND (triage row 94); study section 426.
 
 </details>
 

@@ -201,7 +201,7 @@
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
-      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
     }
   ],
   "proof_bindings": [
@@ -215,8 +215,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), the regulation band, whose success changes the next move, and the three-route process, which has no coarsest adequate reading, in the core; from DEFECTS-FOUND (triage rows 136 and 96); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），其成功改变下一步的调节带，与没有最粗充分读法的三路线过程，皆在核心；出自 DEFECTS-FOUND（分诊第 136 与 96 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), the regulation band, whose success changes the next move, and the three-route process, which has no coarsest adequate reading, in the core; from DEFECTS-FOUND (triage rows 136 and 96); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），其成功改变下一步的调节带，与没有最粗充分读法的三路线过程，皆在核心；出自 DEFECTS-FOUND（分诊第 136 与 96 行）；研究第 426 节。"
     }
   ]
 }

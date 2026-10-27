@@ -71,7 +71,7 @@ Aliases: `adaptive closure`, `适应性封闭`, `Generative.NormativeActivity.ad
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), that a policy choosing closed moves from a view keeps a changed reference unresolved, that a sound answer abstains, and what repairs it; from DEFECTS-FOUND (triage row 132); study section DF_N.
+- 27 October 2026: added (DF2), that a policy choosing closed moves from a view keeps a changed reference unresolved, that a sound answer abstains, and what repairs it; from DEFECTS-FOUND (triage row 132); study section 426.
 
 </details>
 

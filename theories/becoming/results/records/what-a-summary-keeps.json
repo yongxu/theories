@@ -234,12 +234,12 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "cc50a66e619d5f7cbfa9bec70cd910015a5c4706416858efd4ebb740e339b4e6"
+      "sha256": "fbd270da2f34e03888628b9e54a1cc3491cf30a414a23126f249b09bd7b68ccd"
     },
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
-      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+      "sha256": "57061e5d104107616994b9295e8ac16ddfd14070f3be3038538560ea515ac489"
     }
   ],
   "proof_bindings": [
@@ -267,8 +267,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), exact summaries by one-step agreement, the distinctions a feasibility-keeping summary must keep, in general and in the access model, and the realization of every prefix-closed language by its histories; from DEFECTS-FOUND (triage row 283); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），以一步相同刻画的精确摘要，保持可行性的摘要（一般地与在存取模型中）必须保留的区分，以及每个前缀封闭语言由其历史实现；出自 DEFECTS-FOUND（分诊第 283 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), exact summaries by one-step agreement, the distinctions a feasibility-keeping summary must keep, in general and in the access model, and the realization of every prefix-closed language by its histories; from DEFECTS-FOUND (triage row 283); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），以一步相同刻画的精确摘要，保持可行性的摘要（一般地与在存取模型中）必须保留的区分，以及每个前缀封闭语言由其历史实现；出自 DEFECTS-FOUND（分诊第 283 行）；研究第 426 节。"
     }
   ]
 }

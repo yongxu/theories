@@ -70,7 +70,7 @@ Aliases: `Joint plans from a supported start`, `自受支持之起点的共同�
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), paired local plans are jointly valid from a supported start under one-step joint availability and mutual preservation, mutual eventual promises force nothing, and in a witness ignition needs a stored reserve; from DEFECTS-FOUND (triage row 195); study section DF_N.
+- 27 October 2026: added (DF2), paired local plans are jointly valid from a supported start under one-step joint availability and mutual preservation, mutual eventual promises force nothing, and in a witness ignition needs a stored reserve; from DEFECTS-FOUND (triage row 195); study section 426.
 
 </details>
 

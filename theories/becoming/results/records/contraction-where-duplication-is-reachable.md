@@ -73,7 +73,7 @@ Aliases: `contraction is admissible exactly where duplication is reachable`, `�
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), contraction holding and admissible exactly where duplication is reachable, derivability as reachability, and the witnesses that the context hypothesis is needed; from DEFECTS-FOUND (triage row 286); study section DF_N.
+- 27 October 2026: added (DF2), contraction holding and admissible exactly where duplication is reachable, derivability as reachability, and the witnesses that the context hypothesis is needed; from DEFECTS-FOUND (triage row 286); study section 426.
 
 </details>
 

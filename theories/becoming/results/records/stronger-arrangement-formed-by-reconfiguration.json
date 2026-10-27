@@ -161,7 +161,7 @@
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "1368f69ece22fe59a1557d20b3af7734b25a82214e9cda03845acd34b57f0db3",
+      "sha256": "629da3b8cb7dc44e52ba9322e918262f52c06288cb06f294c0a7e065452436c0",
       "declarations": []
     },
     {
@@ -182,8 +182,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), a stronger arrangement formed by reconfiguration: reconstruction counts fixed by the actual output, material and support kept by every admitted history and its length bounded by its support, the two-type recurrence recovered on the slice with no loose carriers, and the witnesses; from DEFECTS-FOUND (triage row 144); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），经重组形成的更强排列：重构计数由实际产出所定，每段被允许的历史保持物质与支持且其长度以支持为界，在无散置承载者的切片上恢复两类递推，以及诸见证；出自 DEFECTS-FOUND（分诊第 144 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), a stronger arrangement formed by reconfiguration: reconstruction counts fixed by the actual output, material and support kept by every admitted history and its length bounded by its support, the two-type recurrence recovered on the slice with no loose carriers, and the witnesses; from DEFECTS-FOUND (triage row 144); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），经重组形成的更强排列：重构计数由实际产出所定，每段被允许的历史保持物质与支持且其长度以支持为界，在无散置承载者的切片上恢复两类递推，以及诸见证；出自 DEFECTS-FOUND（分诊第 144 行）；研究第 426 节。"
     }
   ]
 }

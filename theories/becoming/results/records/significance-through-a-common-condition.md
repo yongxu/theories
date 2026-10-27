@@ -74,7 +74,7 @@ Aliases: `Significance through a common condition`, `经共同条件的意义`, 
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), separated from becoming-renewal-reading's claim: read through a run's conditions, a common condition connects the whole, so living significance is a seed with both neutralities, and under relational neutrality valuing a consumer reaches a formation whose support the drawing fails; from DEFECTS-FOUND (triage row 36); study section DF_N.
+- 27 October 2026: added (DF2), separated from becoming-renewal-reading's claim: read through a run's conditions, a common condition connects the whole, so living significance is a seed with both neutralities, and under relational neutrality valuing a consumer reaches a formation whose support the drawing fails; from DEFECTS-FOUND (triage row 36); study section 426.
 
 </details>
 

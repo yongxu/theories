@@ -68,7 +68,7 @@ Aliases: `A swap-symmetric assignment singles out no role`, `互换对称之指�
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), a predicate on two roles kept by their exchange holds of exactly one of them in no case, while each single assignment does; from DEFECTS-FOUND (triage row 196); study section DF_N.
+- 27 October 2026: added (DF2), a predicate on two roles kept by their exchange holds of exactly one of them in no case, while each single assignment does; from DEFECTS-FOUND (triage row 196); study section 426.
 
 </details>
 

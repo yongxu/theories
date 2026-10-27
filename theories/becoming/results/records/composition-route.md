@@ -75,7 +75,7 @@ Aliases: `composition route`, `组合路线`, `Becoming.CodeAcquisition.primitiv
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), that three probes identify a compositional code where its primitives differ and the primitives alone do not, and that a fresh record exposes and, with spare parts, repairs a duplicating operation, in the core; from DEFECTS-FOUND (triage row 137); study section DF_N.
+- 27 October 2026: added (DF2), that three probes identify a compositional code where its primitives differ and the primitives alone do not, and that a fresh record exposes and, with spare parts, repairs a duplicating operation, in the core; from DEFECTS-FOUND (triage row 137); study section 426.
 
 </details>
 

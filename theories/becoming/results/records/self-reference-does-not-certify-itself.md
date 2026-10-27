@@ -75,7 +75,7 @@ Aliases: `self-reference does not certify itself`, `自指不自证`, `Generativ
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), carry-over exactly where the premise criterion implies the conclusion criterion, the Curry consequence of a fixed point, and the identity forced on closed source-free terms; from DEFECTS-FOUND (triage row 287); study section DF_N.
+- 27 October 2026: added (DF2), carry-over exactly where the premise criterion implies the conclusion criterion, the Curry consequence of a fixed point, and the identity forced on closed source-free terms; from DEFECTS-FOUND (triage row 287); study section 426.
 
 </details>
 

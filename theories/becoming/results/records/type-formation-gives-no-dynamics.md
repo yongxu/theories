@@ -72,7 +72,7 @@ Aliases: `type formation keeps the seed's boundary and gives no dynamics`, `类�
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), the binary-product tower keeping the seed's emptiness, inhabitation and having at most one element, and reachability as the least reflexive-transitive relation containing the steps; from DEFECTS-FOUND (triage row 285); study section DF_N.
+- 27 October 2026: added (DF2), the binary-product tower keeping the seed's emptiness, inhabitation and having at most one element, and reachability as the least reflexive-transitive relation containing the steps; from DEFECTS-FOUND (triage row 285); study section 426.
 
 </details>
 

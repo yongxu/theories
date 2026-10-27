@@ -72,7 +72,7 @@ Aliases: `The same carrier need not fix the same response`, `同样的承载者�
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), the same carrier need not fix the same response: two histories differing only in the timing of sampling give carriers alike, children with different gates and opposite outcomes of one assay, the continuation to a grandchild and its assisted rescue, and the energy balance; from DEFECTS-FOUND (triage rows 151 and 113); study section DF_N.
+- 27 October 2026: added (DF2), the same carrier need not fix the same response: two histories differing only in the timing of sampling give carriers alike, children with different gates and opposite outcomes of one assay, the continuation to a grandchild and its assisted rescue, and the energy balance; from DEFECTS-FOUND (triage rows 151 and 113); study section 426.
 
 </details>
 

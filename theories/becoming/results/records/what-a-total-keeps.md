@@ -71,7 +71,7 @@ Aliases: `what a total keeps`, `总量保留什么`, `RelationsAcrossScales.no_t
 <a id="history--沿革"></a>
 ### History
 
-- 26 October 2026: added (DF2), the error a total makes for a routing law, the loss an exact total can hide, and threshold verdicts from calibrated readouts; from DEFECTS-FOUND (triage row 138); study section DF_N.
+- 27 October 2026: added (DF2), the error a total makes for a routing law, the loss an exact total can hide, and threshold verdicts from calibrated readouts; from DEFECTS-FOUND (triage row 138); study section 426.
 
 </details>
 

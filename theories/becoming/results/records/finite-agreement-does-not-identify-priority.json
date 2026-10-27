@@ -160,8 +160,8 @@
   ],
   "history": [
     {
-      "en": "26 October 2026: added (DF2), every finite sample of histories has a positive weight agreeing with lexical priority on it, and no fixed weight agrees on every pair; from DEFECTS-FOUND (triage row 267); study section DF_N.",
-      "zh": "2026年10月26日：新增（DF2），每个有限历史样本都有在其上与词典式优先一致的正权重，而无固定权重在每一对上一致；出自 DEFECTS-FOUND（分诊第 267 行）；研究第 DF_N 节。"
+      "en": "27 October 2026: added (DF2), every finite sample of histories has a positive weight agreeing with lexical priority on it, and no fixed weight agrees on every pair; from DEFECTS-FOUND (triage row 267); study section 426.",
+      "zh": "2026年10月27日：新增（DF2），每个有限历史样本都有在其上与词典式优先一致的正权重，而无固定权重在每一对上一致；出自 DEFECTS-FOUND（分诊第 267 行）；研究第 426 节。"
     }
   ]
 }
