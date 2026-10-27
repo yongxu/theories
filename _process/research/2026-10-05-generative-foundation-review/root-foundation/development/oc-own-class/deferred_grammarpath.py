@@ -8,11 +8,10 @@ run; each edit is asserted to apply once, so a part already applied or reworded 
 - OC4 A9: the module doc names `FiniteDescent`, which is no declaration; `FiniteFamilies.one_not_constant` is meant.
 - OC4 A12: `FinerWake.finer_class`, that its finer division is a class, as `FinerOutside.finer_class` is (the chapter's
   "dividing the two outside things apart" assumes it); a new declaration, so its record law cites it.
-- `--root`, only on the PF line owner's yes (OC4's letter (e) covers the README rows, not this bullet): the root
-  module's bullet, "a step with nothing outside the class breaks it" → "an alike occurrence that conditions something
-  but nothing alike to that effect breaks it" (the law concerns constancy up to the net's end and an alike occurrence).
-usage (from the checkout root): python3 -B <kit>/deferred_grammarpath.py [--root]"""
-import sys
+- The root module's bullet, "a step with nothing outside the class breaks it" → "an alike occurrence that conditions
+  something but nothing alike to that effect breaks it" (the law concerns constancy up to the net's end and an alike
+  occurrence): the PF line's owner said yes on 27 October 2026 and chose to defer it with OC3's (g) (study section 425).
+usage (from the checkout root): python3 -B <kit>/deferred_grammarpath.py"""
 from pathlib import Path
 
 PKG = Path.cwd() / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
@@ -37,8 +36,7 @@ edit(GP, "def finer : «际» Occ := fun x y => kind x = kind y\n\n/-- Both divi
      "theorem finer_class : «类» finer := ⟨fun _ => rfl, Eq.symm, Eq.trans⟩\n\n"
      "/-- Both divisions give `m` the same class. -/\n"
      "theorem same_class : ∀ y, finer .m y ↔ «二分» inClass .m y\n  | .m => ⟨fun _ => rfl, fun _ => rfl⟩\n  | .c =>")
-if '--root' in sys.argv[1:]:
-    edit(ROOT_DOC, "and a step with\n  nothing outside the class breaks it (`«出类不随则不至终有常»`, `CleanStep`)",
-         "and an alike\n  occurrence that conditions something but nothing alike to that effect breaks it "
-         "(`«出类不随则不至终有常»`, `CleanStep`)")
-print('deferred GrammarPath edits applied' + (' with the root bullet' if '--root' in sys.argv[1:] else ''))
+edit(ROOT_DOC, "and a step with\n  nothing outside the class breaks it (`«出类不随则不至终有常»`, `CleanStep`)",
+     "and an alike\n  occurrence that conditions something but nothing alike to that effect breaks it "
+     "(`«出类不随则不至终有常»`, `CleanStep`)")
+print('deferred GrammarPath edits applied')

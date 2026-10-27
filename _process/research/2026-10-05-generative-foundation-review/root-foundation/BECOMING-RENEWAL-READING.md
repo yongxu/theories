@@ -19234,3 +19234,27 @@ Output→input: comparing-two-courses-on-what-they-admit, eventual-widening,
 **Decisions at landing.** The chain law both ways for keeping widening by name (`Web.KeepsWidening.chain`, `Web.KeepsWidening.of_chain`, `Web.keepsWidening_iff_chain`), the landed law re-derived from it (`Web.KeepsWidening.not_listed_via_chain`) and the two-run form of a law's runs (`Law.runs_agree`, derived from Branching's `law_run_state`) stay in the leaf until the owners of the definitions they concern move them. The lagged order is built here at any universe of configurations rather than imported from ComparingCourses, whose closure holds L2 modules and whose `strictJoin_trans` is stated at `Type`; formations are at `Type`, as the pigeonhole's lemmas are, and lifting them is for the owners of Prelude and Population. Reading the layers for this leaf found two landed modules in its line labelled L1 that import an L2 module: `Becoming.EventualWideningInstances` imports `Becoming.Weightings`, and `Becoming.ComparingCourses` imports `Becoming.EventualWideningInstances`; their labels in the root and the package README now say L2, through the module named, with no Lean changed. Three more elsewhere, older than UE10, are left for their owners: `Becoming.OverExchange` (L1) imports `Becoming.Direction` (L2), `Becoming.GrammarScope` (L1) imports `Becoming.Weightings`, and `Becoming.GrammarCases` (L1) imports `Becoming.GrammarScope`; and `Becoming.Growth`, `Becoming.JointDraw` and `Becoming.ContinuedClasses` have root bullets but no package README row. The optional branching witness for keeping the possible within a horizon widening was not built.
 
 **Readings** [AI reading, D45]. What a course keeps reachable does not by itself give the second-order direction: compared at the same offsets it implies inclusion of what each configuration admits now, so it never ranks a range that keeps widening above one wider now that starts a course, and on a determined process it is a first-order comparison. Read with a lag, built as comparing two courses builds its lagged order, it ranks some such pairs and not every one, and where same-offset widening is silent C does not choose between the two, so the lag's verdict is a premise beyond C, as the choice between counting early steps and reading only tails is there. What it adds is alternatives: realized and reachable widening rank a pair oppositely on a branching witness, so an account holding both needs a rule of precedence, and covering cannot see when a commitment is made. Within one fixed process nothing is added to the whole possible, so growth of the possible itself would need a process that changes, which no law here states. What carries a course's openings is 07's remaining candidate.
+
+## 425. The PF line's places after the second check (OC4, on its owner's answer)
+
+OC4's review found twelve places in the PF line's texts; its landing proposed them to the line's owner as (a) to (l) and left them with it (§423). The owner answered yes to all twelve, word for word, after checking them against the texts and the Lean: `TwoBlocks` by hand for (c), that P3 follows from P4 in one step for (f), and that `«本类出类随行»` needs only the condition at one's own class for (l). They are applied here, so the findings of §423 that waited on them (A1, A6, A7, A12, B1, B2, B3, B5 and B6) are done as §423 describes. Where §423's last paragraph says the owner's answer "is on OC4's board row", this section records it.
+
+```text
+Result(s): none new; texts corrected.
+Delta: PF2's record what-leaves-a-class-follows-its-line: its third law states its witness as one, its statement names
+       the condition an alike occurrence breaks, what it does not show says that even with two blocks what stays must
+       follow too and with more what leaves must follow as something alike to it, and its correspondence says what
+       passing P2 asks; the package README rows say "every alike occurrence that conditions anything"; in 07 §4.6, P3
+       states what stays a correspondence (the conditions one affects feed other lines), the first question asks of a
+       line that ends while its last stage still conditions something or of a regularity of one's own, under which
+       one's line, once it takes a step, ends only where the net does, the second asks of all of one's effects, the
+       conclusion passes the end of one's organism, the reply to the denial of P4 and step 2's last sentence are said
+       exactly, and the denial of P4 cites «本类出类随行» for a class meeting P2; P-20, its title and the dossier's
+       introduction follow. No law's statement changed.
+Supplied premises / correspondence: none.
+Evidence: as in §423, with the owner's checks named above.
+Boundary: the root module's bullet on what leaves the class waits, with OC3's deferral, for the next landing that
+       rebuilds Becoming.GrammarPath, as the owner chose (development/oc-own-class/deferred_grammarpath.py applies both).
+Output → input: 07 §4.6; PHILOSOPHY.md P-20 and its introduction; the record what-leaves-a-class-follows-its-line; the
+       package README rows.
+```
