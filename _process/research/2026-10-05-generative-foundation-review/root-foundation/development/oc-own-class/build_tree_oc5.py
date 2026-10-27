@@ -1,23 +1,28 @@
 #!/usr/bin/env python3
 """OC5: the crux's structure as laws, in Becoming.GrammarPath (OC4's review proved them in scratch,
-review-oc4/OC4Doubts.lean, sections B, D, D2 and E; study section 423 left them for the next rebuild).
+review-oc4/OC4Doubts.lean, sections B, D, D2 and E; study section 423 left them for the next rebuild), with what
+OC5's own review found (REVIEW-OC5.md, findings 4, 10 and 13).
 
 - «后皆同类则后皆续»: where everything downstream of an occurrence is alike to it, everything downstream lies on its
-  line under the class, with no regularity; «后皆续当且仅当后皆同类»: so everything downstream of a member lies on
-  its line exactly where everything downstream of it is alike to it; «后皆续则所缘同于»: so that reach asks that the
-  class hold the member's effects; «后皆同类当且仅当自与后皆闭»: everything downstream is alike exactly where the
-  class holds the effects of the member and of everything downstream of it. «本类常闭则后皆续» now takes its line
-  from «后皆同类则后皆续» (board rule 9), its statement unchanged: the condition at the class gives the alikeness, and
-  the alikeness the line.
-- OtherLeaves: a class holds a member's effects and everything downstream of it, and fails the condition at its
-  class, where another occurrence alike to it, off its line, conditions only what leaves the class and so does not
-  have its effects held. So the reach does not need the regularity, which Inconstant shows cannot be dropped without
-  it, and the regularity, holding the effects of every alike occurrence, asks more than the reach does.
+  line under the class, with no regularity assumed; «后皆续当且仅当后皆同类»: so everything downstream of a member
+  lies on its line exactly where everything downstream of it is alike to it; «后皆续则所缘同于»: so that reach asks
+  that the class hold the member's effects; «后皆续当且仅当自与线皆闭»: the reach is exactly that the class holds
+  the effects of the member and of each stage of its line; «亡而网续则后不皆续»: so, like the condition at the
+  member's class, the reach excludes a line from the member that ends while its last stage still conditions
+  something. «本类常闭则后皆续» now takes its line from «后皆同类则后皆续» (board rule 9), its statement unchanged:
+  the condition at the class gives the alikeness, and the alikeness the line.
 - «本类常当且仅当与己相随»: where the member conditions something, the condition at its class is that it and each
-  alike occurrence follow each other; «外分唯系己出之同»: so the division of what lies outside bears on the condition
+  alike occurrence follow each other; «外分唯系己出之同»: so how what lies outside is divided bears on the condition
   only through what is alike to the member's own effects that leave the class. «闭则外分无关» is now its corollary
   (board rule 9), its statement unchanged.
-- The module doc names each.
+- FiniteFamilies.member_no_reach: the organism's case of «亡而网续则后不皆续».
+- OtherLeaves, at the end under its own heading: a class holds a member's effects and those of each stage of its
+  line, and fails the condition at its class, where another occurrence alike to it, off its line (other_off_line),
+  conditions only what leaves the class and so does not have its effects held. So the reach does not need the
+  regularity, which the laws above cannot drop (Inconstant), and the regularity, holding the effects of every alike
+  occurrence, asks more than the reach does.
+- The module doc names each, in the bullet at a member's class and in a bullet of OC5's own after the PF line's
+  "Neither premise can be dropped", whose wording stays the PF line's.
 usage: build_tree_oc5.py SOURCE OUT"""
 import sys
 from pathlib import Path
@@ -33,43 +38,38 @@ def edit(old, new):
     text = text.replace(old, new)
 
 
-# the module doc
-edit("""  This is a property of one member, not the constancy of a coarse net that `«闭合当且仅当有常»`
-  calls closure. Under a constant class (`«有常»`), whatever is alike to a member whose effects the
-  class holds conditions only what is alike to it (`«常闭则所缘同类»`), so everything downstream of
-  anything alike to it is alike to it and on a line under the class from there (`«常闭则后皆续»`),
-""", """  This is a property of one member, not the constancy of a coarse net that `«闭合当且仅当有常»`
-  calls closure. With no regularity, everything downstream of an occurrence lies on its line under a
-  class exactly where everything downstream of it is alike to it (`«后皆同类则后皆续»`,
-  `«后皆续当且仅当后皆同类»`), that is, where the class holds the effects of the occurrence and of
-  everything downstream of it (`«后皆同类当且仅当自与后皆闭»`); so that reach asks that the class hold the
-  member's effects (`«后皆续则所缘同于»`). Under a constant class (`«有常»`), whatever is alike to a member whose effects the
-  class holds conditions only what is alike to it (`«常闭则所缘同类»`), so everything downstream of
-  anything alike to it is alike to it and on a line under the class from there (`«常闭则后皆续»`),
-""")
+# the module doc: the division at a member's class, and OC5's own bullet
 edit("""  (`«外分唯系出类之同»`). Where the class holds the effects of a member that conditions something, the
   condition keeps every alike occurrence's effects in the class, so the division is idle
   (`«闭则外分无关»`). Merging what lies outside keeps the condition (`«外合不失本类之常»`), so where a
 """, """  (`«外分唯系出类之同»`). Where the member conditions something, the condition at its class is that the
   member and each alike occurrence follow each other: whatever an alike occurrence conditions is alike to
   something the member conditions, and whatever the member conditions, each alike occurrence that conditions
-  anything conditions something alike to it (`«本类常当且仅当与己相随»`). So only what is alike to the
-  member's own effects that leave the class bears on it (`«外分唯系己出之同»`), and where the class holds
-  those effects, none leaves and the division is idle (`«闭则外分无关»`). Merging what lies outside
-  keeps the condition (`«外合不失本类之常»`), so where a
+  anything conditions something alike to it (`«本类常当且仅当与己相随»`). So how what lies outside is
+  divided bears on it only through what is alike to the member's own effects that leave the class
+  (`«外分唯系己出之同»`), and where the class holds the member's effects, none of them leaves and the division
+  is idle (`«闭则外分无关»`). Merging what lies outside keeps the condition (`«外合不失本类之常»`), so where a
 """)
-edit("""  end at the member's class, a member whose effects it holds need not have what follows them alike to it
-  (`Inconstant`).
-""", """  end at the member's class, a member whose effects it holds need not have what follows them alike to it
-  (`Inconstant`). Holding the member's effects is needed for the reach itself (`«后皆续则所缘同于»`); the
-  regularity is not: a class can hold the effects of a member and of everything downstream of it while
-  failing the condition at its class, where another occurrence alike to it, off its line, conditions only
-  what leaves the class (`OtherLeaves`). Where the member conditions something and the class holds its
-  effects, the condition holds the effects of every alike occurrence (`«本类常闭则所缘同类»`), on the
-  member's line or not, which is more than the reach asks.
-""")
+edit("""  is a one-step instance of `«有常之逐点»`, whose conclusion is alikeness to the member's next stage.
 
-# the reach, with no regularity
+Every declaration has an empty axiom report.""", """  is a one-step instance of `«有常之逐点»`, whose conclusion is alikeness to the member's next stage.
+* **What the reach asks (后皆续当且仅当后皆同类).** With no regularity assumed, everything downstream of
+  an occurrence lies on its line under a class exactly where everything downstream of it is alike to
+  it (`«后皆同类则后皆续»`, `«后皆续当且仅当后皆同类»`), that is, where the class holds the effects of the
+  occurrence and of each stage of its line (`«后皆续当且仅当自与线皆闭»`). So the reach asks that the
+  class hold the occurrence's effects (`«后皆续则所缘同于»`), and, like the condition at its class
+  (`«亡而网续则本类不至终有常»`), it excludes a line from the occurrence that ends while its last stage
+  still conditions something (`«亡而网续则后不皆续»`; the organism's case in
+  `FiniteFamilies.member_no_reach`). The laws above cannot drop the regularity (`Inconstant`), but the
+  reach does not need it: a class can hold the effects of a member and of each stage of its line while
+  failing the condition at its class, where an occurrence alike to the member, off its line, conditions
+  only what leaves the class (`OtherLeaves`). Where the member conditions something and the class holds
+  its effects, the condition holds the effects of every alike occurrence (`«本类常闭则所缘同类»`), on the
+  member's line or not, which is more than the reach asks.
+
+Every declaration has an empty axiom report.""")
+
+# the reach, with no regularity assumed
 edit("""def «所缘同于» (R E : «际» α) (m : α) : Prop := ∀ v, R m v → E m v
 """, """def «所缘同于» (R E : «际» α) (m : α) : Prop := ∀ v, R m v → E m v
 
@@ -85,8 +85,8 @@ theorem «后皆同类则后皆续» {R E : «际» α} (hE : «类» E) {c t : 
     exact .more ⟨step, ab⟩ (ih (fun s rest => hE.trans (hE.symm ab) (all s (.more step rest))))
 
 /-- **Everything downstream of a member lies on its line under a class exactly where everything downstream
-of it is alike to it (后皆续当且仅当后皆同类).** No regularity is assumed: the forward direction is that a
-line under a class stays in it (`«线内同类»`), the backward one `«后皆同类则后皆续»`. -/
+of it is alike to it (后皆续当且仅当后皆同类).** No regularity is assumed: the forward direction is that the
+ends of a line under a class are alike (`«线内同类»`), the backward one `«后皆同类则后皆续»`. -/
 theorem «后皆续当且仅当后皆同类» {R E : «际» α} (hE : «类» E) {m : α} :
     (∀ t, «及» R m t → «所及» R E m t) ↔ (∀ t, «及» R m t → E m t) :=
   ⟨fun reach t down => match reach t down with
@@ -100,17 +100,36 @@ theorem «后皆续则所缘同于» {R E : «际» α} (hE : «类» E) {m : α
     (reach : ∀ t, «及» R m t → «所及» R E m t) : «所缘同于» R E m :=
   fun v step => («后皆续当且仅当后皆同类» hE).mp reach v (.one step)
 
-/-- **Everything downstream of a member is alike to it exactly where the class holds the effects of the member
-and of everything downstream of it (后皆同类当且仅当自与后皆闭).** No regularity is assumed. -/
-theorem «后皆同类当且仅当自与后皆闭» {R E : «际» α} (hE : «类» E) {m : α} :
-    (∀ t, «及» R m t → E m t) ↔ «所缘同于» R E m ∧ ∀ t, «及» R m t → «所缘同于» R E t :=
-  ⟨fun all => ⟨fun v step => all v (.one step),
-     fun t down v step => hE.trans (hE.symm (all t down)) (all v («及之传递» down (.one step)))⟩,
-   fun both t down => by
-     induction down with
-     | one step => exact both.1 _ step
-     | @more a b _ step _ ih =>
-       exact hE.trans (both.1 b step) (ih ⟨both.2 b (.one step), fun s rest => both.2 s (.more step rest)⟩)⟩
+/-- **Everything downstream of a member lies on its line under a class exactly where the class holds the
+effects of the member and of each stage of its line (后皆续当且仅当自与线皆闭).** No regularity is assumed.
+Forward, each stage of the line and what it conditions are alike to the member (`«后皆续当且仅当后皆同类»`);
+backward, each step from the member or from a stage of its line is a step under the class. -/
+theorem «后皆续当且仅当自与线皆闭» {R E : «际» α} (hE : «类» E) {m : α} :
+    (∀ t, «及» R m t → «所及» R E m t) ↔
+      «所缘同于» R E m ∧ ∀ y, «相续» R E m y → «所缘同于» R E y :=
+  ⟨fun reach =>
+     ⟨«后皆续则所缘同于» hE reach,
+      fun y line v step => hE.trans (hE.symm («线内同类» hE line))
+        ((«后皆续当且仅当后皆同类» hE).mp reach v («及之传递» («相续含于及» R E m y line) (.one step)))⟩,
+   fun ⟨held, along⟩ =>
+     have next : ∀ {a b : α}, «所及» R E m a → R a b → «相续» R E m b := fun onLine step =>
+       match onLine with
+       | .inl e => by cases e; exact .one ⟨step, held _ step⟩
+       | .inr line => «及之传递» line (.one ⟨step, along _ line _ step⟩)
+     have go : ∀ {a t : α}, «及» R a t → «所及» R E m a → «相续» R E m t := fun d => by
+       induction d with
+       | one step => exact fun onLine => next onLine step
+       | more step _ ih => exact fun onLine => ih (.inr (next onLine step))
+     fun _ down => .inr (go down (.inl rfl))⟩
+
+/-- **Where a line from a member ends while its last stage still conditions something, not everything
+downstream of the member lies on its line (亡而网续则后不皆续).** Like the condition at the member's class
+(`«亡而网续则本类不至终有常»`), the reach excludes such a line; no regularity is assumed: the reach would hold
+the last stage's effects (`«后皆续当且仅当自与线皆闭»`), so the line would continue from it. -/
+theorem «亡而网续则后不皆续» {R E : «际» α} (hE : «类» E) {m y : α} (line : «相续» R E m y)
+    (ends : «亡» R E y) (goes : ∃ w, R y w) : ¬ ∀ t, «及» R m t → «所及» R E m t := fun reach =>
+  match goes with
+  | ⟨w, hw⟩ => ends ⟨w, hw, ((«后皆续当且仅当自与线皆闭» hE).mp reach).2 y line w hw⟩
 """)
 
 # «本类常闭则后皆续» takes its line from «后皆同类则后皆续»
@@ -214,21 +233,42 @@ theorem «闭则外分无关» {R E F : «际» α} (hE : «类» E) (hF : «类
    fun v step => (same v).mp (held v step)⟩
 """)
 
-# the witness that the reach does not need the regularity
-edit("""   fun e => Bool.noConfusion e⟩
+# the organism's case of the reach excluding an ending line
+edit("""  member_not_constant_at («至终有常则本类至终有常» member_class constant (false, 0))
 
-end Inconstant
-""", """   fun e => Bool.noConfusion e⟩
+/-- Everything the first birth of a family conditions is in its family. -/
+""", """  member_not_constant_at («至终有常则本类至终有常» member_class constant (false, 0))
 
-end Inconstant
+/-- **Under the organism's class, not everything downstream of the first member's birth lies on its line**:
+the line ends at the member's old age, which still conditions the second member's birth
+(`«亡而网续则后不皆续»`). -/
+theorem member_no_reach : ¬ ∀ t, «及» step (false, 0) t → «所及» step member (false, 0) t :=
+  «亡而网续则后不皆续» (m := (false, 0)) (y := (false, 1)) member_class
+    («及».one ⟨⟨rfl, rfl, Nat.lt_succ_of_le (Nat.le_succ_of_le (Nat.le_succ 0))⟩, rfl, rfl⟩)
+    (fun ⟨z, ⟨_, e2, _⟩, ⟨_, d⟩⟩ => by
+      have hz : z.2 = 2 := e2
+      rw [hz] at d
+      exact Bool.noConfusion d)
+    ⟨(false, 2), rfl, rfl, Nat.lt_succ_of_le (Nat.le_succ_of_le (Nat.le_refl 1))⟩
+
+/-- Everything the first birth of a family conditions is in its family. -/
+""")
+
+# the witness that the reach does not need the regularity, at the end under its own heading
+edit("""end UnevenOutside
+
+end Becoming""", """end UnevenOutside
+
+/-! ## What the reach does not need -/
 
 namespace OtherLeaves
 
-/-! A member `m` conditioning `v`, `v` conditioning `w`, and an occurrence `c` alike to `m` conditioning `x`;
-`m`, `v`, `w` and `c` in one class, `x` in another. Everything downstream of the member is alike to it, so lies
-on its line under the class, and the class holds its effects; but `m` conditions `v`, and `c` conditions only
-`x`, which is not alike to `v`, so the class is not constant up to the net's end at the member's class, and
-does not hold `c`'s effects. The regularity cannot be dropped (`Inconstant`) but is not needed for the reach. -/
+/-! A member `m` conditioning `v`, `v` conditioning `w`, an occurrence `c` alike to `m` conditioning `x`, and
+nothing else; `m`, `v`, `w` and `c` in one class, `x` in another. Everything downstream of the member is alike to
+it, so lies on its line under the class, and the class holds its effects; but `m` conditions `v`, and `c`, off
+the member's line, conditions only `x`, which is not alike to `v`, so the class is not constant up to the net's
+end at the member's class, and does not hold `c`'s effects. The laws above cannot drop the regularity
+(`Inconstant`), but the reach does not need it. -/
 
 inductive Occ | m | v | w | c | x
 
@@ -306,6 +346,9 @@ theorem not_constant_at : ¬ «本类至终有常» step («二分» inClass) .m
 theorem other_not_held : «二分» inClass .m .c ∧ ¬ «所缘同于» step («二分» inClass) .c :=
   ⟨rfl, fun held => Bool.noConfusion (held .x trivial)⟩
 
+/-- **The occurrence alike to the member is off its line**: nothing downstream of `m` is `c`. -/
+theorem other_off_line : ¬ «及» step .m .c := fun down => Bool.noConfusion (reached_after down rfl)
+
 /-- **Without the condition at the member's class, the class holds the member's effects and everything
 downstream of it lies on its line.** -/
 theorem reach_without_condition :
@@ -316,7 +359,8 @@ theorem reach_without_condition :
   ⟨not_constant_at, «后皆续则所缘同于» («二分为类» inClass) reach, reach⟩
 
 end OtherLeaves
-""")
+
+end Becoming""")
 
 out.write_text(text, encoding='utf-8')
 print('OC5 laws written to', out)

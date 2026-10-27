@@ -3615,8 +3615,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   member's end (`FiniteSharedCondition`). `Becoming.GrammarCases` derives from `«所经不同则不及»` its
   shared-condition witnesses under "a member or not" and where the members only feed from the
   condition (board item GS6). Under a class constant up to the net's end, what leaves the
-  class at a member follows every alike occurrence that conditions anything (`«出类随行»`, `«出类随线»`), and an alike
-  occurrence that conditions something but nothing alike to that effect breaks it (`«出类不随则不至终有常»`, `CleanStep`); a finite class constant up
+  class at a member follows every alike occurrence that conditions anything (`«出类随行»`, `«出类随线»`), and a step with
+  nothing outside the class breaks it (`«出类不随则不至终有常»`, `CleanStep`); a finite class constant up
   to the net's end can leave a member's effects out (`FiniteWake`; board item PF2). Read at a member's
   class (`«本类至终有常»`), constancy up to the net's end carries these laws, the global forms being
   corollaries, and asks more than that a line end only where the net does (`CleanStep`); how what lies
