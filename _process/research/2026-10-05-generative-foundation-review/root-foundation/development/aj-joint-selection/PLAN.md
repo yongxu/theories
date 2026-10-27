@@ -61,7 +61,7 @@ Whose losses count is the continuation condition, and that widening is better is
 - **MA4b**, the loss read in time by the others, joined to the critical mass ([record](../../../../../../theories/becoming/results/records/loss-read-in-time-by-the-others.md); `8ab22de82`, core receipt `20261025T200926.001323Z`, home 02 §9, study §420). The others among the readers read the loss once it reaches a bound, as `lo'`. Read past the bound, the counts then decide exactly whether the lock is kept or, a step late, turned. Along MA4's course, with the rule read at `N` and `N + 1`, the two laws decide a reading from `N` at every step but at most one, from which the course starts a new round that can go either way. From the first step at which the late reading would favour the shapers every reading keeps the lock, and from a start favouring the shapers strictly a deadline, quadratic in the start's counts, bounds the window.
 
 **Missing:**
-1. A frozen follow-up that tells LA1's two readings of its locked-side failure apart (feedback that barely resolves the best threshold; a restraint the model brings from training).
+1. LA1b, the follow-up that tells LA1's two readings of its locked-side failure apart (feedback that barely resolves the best threshold; a restraint the model brings from training): frozen at `bac7f4ac9` ([`experiments/commons-llm-feedback-resolved/`](../../../../../../experiments/commons-llm-feedback-resolved/README.md)), not run; its run waits on a yes on usage (200 calls of Claude Haiku).
 2. The one page for alignment readers (AJ4's draft, `development/aj4-alignment-readers/DRAFT-ONE-PAGE.md`).
 
 ## 4. The path
