@@ -181,8 +181,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the joint selection's two conditions are independent: here a lock is left in time where control is selected, not the converse.",
-      "zh": "共同选择之二条件相互独立：此处控制被选之处锁定可及时而离，其逆未示。",
+      "en": "That the joint selection's two conditions are independent: a lock is left in time where control is selected, but control unselected with the shapers' capture kept is not shown; below the critical mass the lock is the other way, no capture.",
+      "zh": "共同选择之二条件相互独立：控制被选之处锁定可及时而离，而控制未被选且塑规者之捕获留存者未示；临界量之下锁定在另一向，非捕获。",
       "kind": "non-implication"
     },
     {
@@ -437,6 +437,10 @@
     {
       "en": "26 October 2026: added (MA4b), the others' reading of the loss joined to the critical mass, after one independent review and its fix round; study section 420.",
       "zh": "2026年10月26日：新增（MA4b），他者读损失接于临界量，经一次独立审查及其修订；研究第 420 节。"
+    },
+    {
+      "en": "27 October 2026: the scope item on the joint selection's two conditions names the case not shown, control left unselected with the shapers' capture kept, in place of \"the converse\", which the record shaping-read-by-readers-drawn-from-the-selected uses for the opposite case (the alignment dossier's third review pass, finding F13). The claim is unchanged.",
+      "zh": "2026年10月27日：关于共同选择二条件之范围条目，明言所未示之情形（控制未被选且塑规者之捕获留存），代“其逆”，因记录 shaping-read-by-readers-drawn-from-the-selected 以“其逆”指相反之情形（对齐卷宗第三轮审查，F13）。主张不变。"
     }
   ]
 }
