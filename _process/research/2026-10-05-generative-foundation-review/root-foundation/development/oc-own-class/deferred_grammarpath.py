@@ -17,14 +17,21 @@ word, on 27 October 2026, and asked that they wait for the next rebuild rather t
 - (n) finding 18: "What leaves the class follows each alike step" becomes "... each alike occurrence" in the docstrings
   of `«本类出类随行»` and `«出类随行»`, the glossary's "alike occurrence".
 
-`--more` also applies the two wordings where they recur outside the places the owner answered: the fourth law of the
-record what-a-line-holds-and-a-regularity-takes-in, the apart register's reason for `«出类随行»` and that result's note
-in regions.json. Use it only on the owner's yes, which was asked for on 27 October 2026.
+The two wordings recur in three more places: the fourth law of the record what-a-line-holds-and-a-regularity-takes-in
+(en and zh), the apart register's reason for `«出类随行»` and that result's note in regions.json. The owner said yes to
+these too, word for word, the same day, so that the same wording lands everywhere at once, and asked for a history
+line on that record; the script applies all of them and dates the line by the day it runs. No other live text has the
+old wordings (the record's page, the generated pages and `becoming-verification.json` follow from the render and the
+checker run).
 
-07 is pinned by the record constancy-read-at-a-members-class (its statement reference), so the landing re-points that
-record after this script runs, and renders the generated pages.
-usage (from the checkout root): python3 -B <kit>/deferred_grammarpath.py [--more]"""
+`Becoming.GrammarPath` is pinned by that record among others, and 07 by the record constancy-read-at-a-members-class
+(its statement reference), so after this script and the checker run the landing re-points the records research-check
+names, each change read first (re-pointing writes no history note; the record's change of wording has the one added
+here), and renders the generated pages.
+usage (from the checkout root): python3 -B <kit>/deferred_grammarpath.py"""
+import json
 import sys
+from datetime import date
 from pathlib import Path
 
 ROOT = Path.cwd()
@@ -34,8 +41,8 @@ ROOT_DOC = PKG / 'Becoming.lean'
 CHECKER = PKG / 'check_becoming.py'
 CH7 = ROOT / 'theories/becoming/chapters/07-SIGNIFICANCE.md'
 RF = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation'
-MORE = sys.argv[1:] == ['--more']
-assert MORE or not sys.argv[1:], __doc__
+RECORD = ROOT / 'theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.json'
+assert not sys.argv[1:], __doc__
 
 
 def edit(path, old, new):
@@ -83,13 +90,18 @@ end, where a member conditions something not alike to it, whatever is alike to t
 net's end, where a member conditions something not alike to it, whatever is alike to the member and
 """)
 
-if MORE:
-    record = ROOT / 'theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.json'
-    edit(record, '"Neither premise can be dropped: where a member\'s line runs',
-         '"Neither premise can be dropped from these laws: where a member\'s line runs')
-    edit(record, '"二前提皆不可去：一员之线', '"此诸律二前提皆不可去：一员之线')
-    edit(RF / 'THEOREM-CONNECTIVITY-APART.json', '"what leaves the class follows each alike step, under constancy',
-         '"what leaves the class follows each alike occurrence, under constancy')
-    edit(ROOT / 'theories/becoming/results/data/regions.json',
-         "what leaves the class follows each alike step\"", "what leaves the class follows each alike occurrence\"")
-print('deferred GrammarPath edits applied' + (', with --more' if MORE else ''))
+# both wordings where they recur: the record's fourth law with its history line, the apart register, regions.json
+edit(RECORD, '"Neither premise can be dropped: where a member\'s line runs',
+     '"Neither premise can be dropped from these laws: where a member\'s line runs')
+edit(RECORD, '"二前提皆不可去：一员之线', '"此诸律二前提皆不可去：一员之线')
+record = json.loads(RECORD.read_text(encoding='utf-8'))
+day = date.today()
+record['history'].append({
+    'en': f"{day.day} {day:%B} {day.year}: the fourth law scoped to these laws, as OC5's review found; content unchanged.",
+    'zh': f'{day.year}年{day.month}月{day.day}日：第 4 条规律限于此诸律，如 OC5 之审查所见；内容未变。'})
+RECORD.write_text(json.dumps(record, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+edit(RF / 'THEOREM-CONNECTIVITY-APART.json', '"what leaves the class follows each alike step, under constancy',
+     '"what leaves the class follows each alike occurrence, under constancy')
+edit(ROOT / 'theories/becoming/results/data/regions.json',
+     "what leaves the class follows each alike step\"", "what leaves the class follows each alike occurrence\"")
+print('deferred GrammarPath edits applied')
