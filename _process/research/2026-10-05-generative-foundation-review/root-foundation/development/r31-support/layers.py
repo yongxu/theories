@@ -2,7 +2,8 @@
 """R31, item 5: the layers of the core, computed, and the module tables generated from them.
 
 A module's layer is a checkable property of its source and imports (read by graph.py):
-* L0: the base, `Becoming.World`, `Becoming.Frame` and `Becoming.Prelude` (the foundation
+* L0: the base, `Becoming.World` with every module it imports (Frame, Prelude, and the grammar's Grammar,
+  GrammarMap and GrammarLaws, on which the frame rests; the foundation
   `GenerativeCore`, `InquirySufficiency`, `RelationalRenewal` lies below them);
 * L2: a module whose source, outside comments and imports, names the continuation condition or a
   valuation (`Unrestricted`, `Valuation`), or that imports an L2 module;
@@ -29,7 +30,9 @@ sys.path.insert(0, str(HERE))
 import graph  # noqa: E402
 
 PKG = graph.PKG
-BASE = ["Becoming.World", "Becoming.Frame", "Becoming.Prelude"]
+# The base is computed: the World with every module it imports (board item DF2, 27 October 2026; before the
+# grammar joined it, the same rule gave World, Frame and Prelude).
+BASE = ["Becoming.World"]
 NOTES = json.load(open(HERE / "module-notes.json"))
 GONE = ["Becoming.Order", "Becoming.Naturals", "Becoming.ListTests"]
 
@@ -41,7 +44,7 @@ def layers():
     direct = {m for m in core if graph.CONDITIONAL.search(graph.strip_comments(mods[m]["src"]))}
     layer = {}
     for m in core:
-        if m in BASE:
+        if m in BASE or any(m in clo[b] for b in BASE):
             layer[m] = 0
         elif m in direct or any(i in direct for i in clo[m]):
             layer[m] = 2

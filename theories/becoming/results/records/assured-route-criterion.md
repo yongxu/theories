@@ -40,7 +40,7 @@ Boundary source: [WisdomResponseStructure.lean](../../../../experiments/integrat
 No dependency on another migrated record is asserted; source imports and supplied premises remain in scope.
 
 
-**Used by:** [risk-certificate-outcome-distinction](risk-certificate-outcome-distinction.md)
+**Used by:** [readings-a-response-needs](readings-a-response-needs.md) · [risk-certificate-outcome-distinction](risk-certificate-outcome-distinction.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

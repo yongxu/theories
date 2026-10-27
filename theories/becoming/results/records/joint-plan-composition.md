@@ -42,6 +42,8 @@ Boundary source: [JointContinuation.lean](../../../../experiments/integrated-cor
 - Related, not a proved adapter: [draws-on-a-shared-stock](draws-on-a-shared-stock.md). The shared depletion issue does not establish a proved type translation.
 - Related, not a proved adapter: [exclusive-footprint-support](exclusive-footprint-support.md). Joint plans have timing and observation conditions not automatically supplied by static leaf support.
 
+**Used by:** [joint-plans-from-a-supported-start](joint-plans-from-a-supported-start.md)
+
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts
 

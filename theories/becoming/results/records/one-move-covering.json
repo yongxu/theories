@@ -223,12 +223,12 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "7ad2ce705d4a13954af8467cdb225535f50db50a16d0ef5bcc846310ebd0606f"
+      "sha256": "cc50a66e619d5f7cbfa9bec70cd910015a5c4706416858efd4ebb740e339b4e6"
     },
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "d1617cd81aa353304cae97d6510da26c335e4498b8a3dfced1cff6143c342d04"
+      "sha256": "fd56b1d37f0e44c9819e766477c90d45873236d30ead2ecab5e1b3a0856da4e1"
     },
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",

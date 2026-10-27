@@ -21,3 +21,10 @@ DF1b (study §422) took ten weak points UE8's sciences dossier found ([DEFECTS-F
 - `land_df1b.py`: the landing texts after a passing periphery checker (study section, history notes, DEFECTS-FOUND's marks, the board's RA row).
 
 Every changed sentence was checked against the current Lean statement by its editor and by a reviewer; the Lean changes are comments only (the code with comments removed is unchanged in all 14 files), and the core checker reran every affected step.
+
+DF2 made the records still missing ([LEFT](LEFT.md) says what it leaves):
+
+- [`DF2-PLAN.md`](DF2-PLAN.md): the four units, the rows each takes and the lander's part.
+- `workflows/8-df2-records.js`: the four drafters and four reviewers, as run; [`reports/df2-draft-*.json`](reports/) the drafters' records, anchors, regions and proposed edits, [`reports/df2-review-*.json`](reports/) the reviews (189 edits), [`reports/df2-applied.json`](reports/df2-applied.json) and [`reports/df2-pending.json`](reports/df2-pending.json) which edits went to the records by field and which the lander placed.
+- `df2_rest.py` (two statements, D69 and 01's labels), `df2_apply_records.py` and `df2_apply_records2.py` (the reviewers' record edits), `df2_chapters.py` (the chapter edits with the reviewers' corrections, the anchors, the record edits outside a unit's own records, regions.json), `df2_closing.py` (Closing.lean's header), `df2_layers.py` (the layer labels, recomputed and asserted), `df2_fix_check.py` (two errors check found), as applied; [`reports/recheck-df2.json`](reports/recheck-df2.json) the cold read of the applied state.
+- `land_df2.py`: the landing texts after a passing core checker (study section, history notes, DEFECTS-FOUND's marks, the board).

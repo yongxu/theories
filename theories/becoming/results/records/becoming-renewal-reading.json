@@ -10,12 +10,12 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-13T09:54:07+00:00",
   "statement": {
-    "zh": "更新与消耗是运行的类别；在对应纪律下由共同条件给出连通，意义沿共同参与传递。",
-    "en": "Renewal and consumption are classes of runs; under a correspondence discipline a common condition gives connection, and significance passes along co-participation."
+    "zh": "更新与消耗为运行分类：任一过程的每次运行，经条件的可观测量读出，都是这些类所适用之网；自某步起不再上升的自然数可观测量，不在任意晚的步下降；自同一配置，一次运行可以更新，另一次可以消耗。",
+    "en": "Renewal and consumption classify runs: each run of any process, read through observables of conditions, is a web to which the classes apply; a natural-number observable never rising from some step on does not fall at arbitrarily late steps; from one configuration one run can renew, another consume."
   },
   "claim": {
-    "zh": "任一过程的任一运行，经条件的可观测量读出，都是一个关系展开，更新／消耗分类适用于它。从某步起不再上升的自然数可观测量不在任意晚的步下降，耗竭、自然数秩的复现更新与无更新汲取都是这一原则的情形。分类属于运行：同一过程、同一初始配置下，焦点形成每步都活跃，一次运行更新，另一次消耗。按关系读法取活的形成事件，并以共同参与某一条件为关系：每个活的形成都参与的条件使整体连通，于是生生之意义恰等于种子加关系中立加立场中立；条件互不相交时可不连通。消耗者与被它消耗的形成共同参与被汲取的条件，故在关系中立下，珍视消耗者活动的立场必珍视被它消耗的形成的每个活的事件；传递沿共同参与进行，不用到消耗本身。",
-    "en": "Every run of every process, read through observables of conditions, is one relational unfolding to which the renewing/consuming classification applies. A natural-number observable that never rises from some step on does not fall at arbitrarily late steps; depletion, recurrent renewal under a natural rank and unrenewed drawdown are its cases. The class belongs to the run: in one process from one configuration, with the focal formation active at every step, one run renews and another consumes. Reading living formation events relationally and relating events whose formations participate in a common condition, a condition in which every living formation participates makes the whole connected, so living significance is exactly a seed with relational and standpoint neutrality; disjoint conditions can leave it unconnected. A consumer and the formation it consumes participate in the drawn condition, so under relational neutrality a standpoint valuing the consumer's activity holds significant every living event of the formation it consumes; the transmission runs along co-participation and does not use consumption itself."
+    "zh": "任一过程的任一运行，经条件的可观测量读出，都是一个关系展开，更新／消耗分类适用于它。从某步起不再上升的自然数可观测量不在任意晚的步下降，耗竭、自然数秩的复现更新与无更新汲取都是这一原则的情形。分类属于运行：同一过程、同一初始配置下，焦点形成每步都活跃，一次运行更新，另一次消耗。",
+    "en": "Every run of every process, read through observables of conditions, is one relational unfolding to which the renewing/consuming classification applies. A natural-number observable that never rises from some step on does not fall at arbitrarily late steps; depletion, recurrent renewal under a natural rank and unrenewed drawdown are its cases. The class belongs to the run: in one process from one configuration, with the focal formation active at every step, one run renews and another consumes."
   },
   "hypotheses": [
     {
@@ -25,10 +25,6 @@
     {
       "zh": "living 取整段运行上的关系读法（活跃且不消耗），related 取共同参与某一条件；两者都是公开的读法选择，不是被证明的对应。",
       "en": "`living` is the whole-run relational reading (active and not consuming) and `related` is participation in a common condition; both are disclosed reading choices, not proved correspondences."
-    },
-    {
-      "zh": "连通的结论需要一个所有活的形成都参与的共同条件，并依赖关于什么算条件、什么算参与的对应纪律；传递结论需要关系中立，其规范地位不由本结果证明。",
-      "en": "The connection result needs a condition in which every living formation participates, and depends on a correspondence discipline for what counts as a condition and as participation; the transmission result needs relational neutrality, whose normative standing this result does not prove."
     }
   ],
   "correspondence": {
@@ -43,12 +39,7 @@
     "Becoming.Run.renewal_recurs",
     "Becoming.Conditions.drawdown_not_recurring",
     "Becoming.Renewable.class_belongs_to_the_run",
-    "Becoming.Conditions.living_iff_relational",
-    "Becoming.Conditions.connected_of_common",
-    "Becoming.Conditions.significant_iff_of_common",
-    "Becoming.Conditions.consumption_relates",
-    "Becoming.Conditions.valuing_consumption_reaches",
-    "Becoming.Separate.not_connected"
+    "Becoming.Conditions.living_iff_relational"
   ],
   "dependencies": [
     {
@@ -153,13 +144,6 @@
     }
   ],
   "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
-      "detail": {
-        "zh": "条件互不相交：两个形成都活着、都不消耗，却不连通（Separate.not_connected）；连通是展开的事实，可以不成立。",
-        "en": "Disjoint conditions: two formations are living and neither consumes, yet the whole is unconnected (Separate.not_connected); connection is a fact of the unfolding and can fail."
-      }
-    },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean",
       "detail": {
@@ -582,6 +566,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired labels replaced by the current terms in a hypothesis, a dependency, a related detail and the limitations: G0, S0, N_rel and N_std by living significance, self-significance and relational and standpoint neutrality, and in the limitations S0, N and J by self-significance, both neutralities and J1–J4, its clause on rejecting positions reworded to keep the field within its cap. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条前提、一项依赖、一条相关说明与局限中的退役标签改为现行术语：G0、S0、N_rel、N_std 改为生生之意义、自身意义、关系中立与立场中立；局限中 S0、N、J 改为自身意义、关系与立场中立、J1–J4。规律未变。"
+    },
+    {
+      "en": "27 October 2026, board item DF2 (study section DF_N): the statement says what the record keeps, the run-class laws (every run a web the classes apply to, a falling natural observable does not recur, and from one configuration one run can renew and another consume); connection through a common condition and transmission along co-participation, with their hypothesis, counterexample and five aliases, moved to significance-through-a-common-condition, at home in 07 §3.1. The run-class laws are unchanged.",
+      "zh": "2026年10月27日，工作板条目 DF2（研究第 DF_N 节）：陈述改为本记录所保留的运行类律（每次运行都是这些类所适用之网，下降的自然数可观测量不再复现，自同一配置一次运行可以更新、另一次可以消耗）；经共同条件的连通与沿共同参与的传递，连同其假设、反例与五个别名，移至 significance-through-a-common-condition，其家在 07 §3.1。运行类律不变。"
     }
   ]
 }

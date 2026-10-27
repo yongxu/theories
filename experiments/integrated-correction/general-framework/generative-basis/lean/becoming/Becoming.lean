@@ -339,7 +339,9 @@ standing-and-exchange reading of a run, by definition; the labelled process and 
 read from the world's side in `Becoming.Labelled`.
 
 Each note gives its module's layer, computed (`development/r31-support/layers.py` in the R31 kit):
-L0 is the base, `Becoming.World`, `Becoming.Frame` and `Becoming.Prelude`; L2 holds the modules
+L0 is the base, `Becoming.World` with every module it imports: `Becoming.Frame`, `Becoming.Prelude`
+and the grammar's `Becoming.Grammar`, `Becoming.GrammarMap` and `Becoming.GrammarLaws`, on which the
+frame rests; L2 holds the modules
 whose source states the continuation condition or a valuation (`Unrestricted`, `Valuation`) and
 every module importing one of them; L1 holds the rest. No module imports one of a higher layer.
 
@@ -1254,7 +1256,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one giver with every admission the same (`OpeningChain.carried`), a closed cycle is opened by the
   opened with no widening (`ClosedCycle.cycle`), and ranking by it reverses widening
   (`Saturated.reverses`). A leaf: an instance module and models (board item UE4).
-* `Becoming.KeepingWidening` (L2, through `Becoming.MapInstances`): what a range that keeps
+* `Becoming.KeepingWidening` (L2, through `Becoming.EventualWideningInstances`): what a range that keeps
   widening needs, and what carries it. A course keeping widening by name on the actual levels, what
   its formations require fixed within a finite family, lists steps with pairwise distinct
   configurations of every length (`Web.KeepsWidening.distinct_configs`), so by Novelty's list form
@@ -2547,7 +2549,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Becoming.Identity`, `Becoming.Persistence`, `Becoming.ContinuedClasses`,
   `Becoming.PatternPassing`), as do `Becoming.GrammarReadings`, `Becoming.GrammarMap`,
   `Becoming.GrammarPath` and `Becoming.GrammarTesting`.
-* `Becoming.GrammarReadings` (L0): the corpus's definitions in the grammar. The 墨经's and the
+* `Becoming.GrammarReadings` (L1): the corpus's definitions in the grammar. The 墨经's and the
   荀子's 化 are one form, alteration (`«化之二说同形»`), and 化 is the 金师子章's 成坏 along 缘
   (`«化为有缘之成坏»`); the 墨经's 同 is a class where each belongs to one and one only (sufficient,
   `«同于为类»`) and otherwise need not be transitive (`«同于不必传递»`); a returning occurrence
@@ -2573,7 +2575,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`«阶生成»`); renewal without end and ceasing are going on along some branch and ending on every
   branch of renewing into (`«生生即延»`, `«息即尽»`). Imported by `Becoming.GrammarLaws`,
   `Becoming.GrammarScope`, `Becoming.GrammarPath` and `Becoming.MapInstances`.
-* `Becoming.MapInstances` (L2): the old base's regimes on the map, with occurrences as pairs of a
+* `Becoming.MapInstances` (L1): the old base's regimes on the map, with occurrences as pairs of a
   step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
   alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
   did not carry on as itself (`Web.carries_iff`); under passing, generation makes carriers arise at
@@ -2582,13 +2584,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   still held, a family drawn beyond renewal and passing that stops refute going on every branch
   (`Web.consumed_held_not_endless`, `Web.family_excess_not_endless`, `Web.stopped_not_endless`);
   the relay renews and still ends (`Map.relay_renews_and_ends`). A leaf.
-* `Becoming.GrammarTesting` (L0): testing within the net (验). The core of a class is approximated
+* `Becoming.GrammarTesting` (L1): testing within the net (验). The core of a class is approximated
   by stages (`«层»`), and the core lies in every stage (`«核在每层之内»`), so what a finite stage tells
   apart is not in the core (`«可分则不在核»`); the converse, the Hennessy–Milner direction, is a
   calibration and is not stated. A room in balance and a room held by a thermostat share a core
   class while no window opens and are told apart once the window's opening is in the net
   (`«恒温与平衡»`): no intervener outside the net. Imported by `Becoming.GrammarCases`.
-* `Becoming.GrammarCandidates` (L0): the corpus's 59 candidate theorems of the grammar, tested
+* `Becoming.GrammarCandidates` (L1): the corpus's 59 candidate theorems of the grammar, tested
   (the OU2c kit's `outcomes.tsv`: 38 proved, 15 needing a premise, 3
   refuted, 2 misclassified, 1 not expressible). Correlatives that are the two ends of one relation
   are had together (`«能所相待»`, `«三法相因待»`); a mark gives its complement a mark, and the way
@@ -2960,7 +2962,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   failed by another; with the rest counted, embodiment is closure and no dormancy. Requirement read
   as necessary response over a relation leaving several exchanges open gives activity needing
   support on every run; read as possible response it does not.
-* `Becoming.OverExchange` (L1): the central laws over every relation of exchange, with the four
+* `Becoming.OverExchange` (L2, through `Becoming.Direction`): the central laws over every relation of exchange, with the four
   tying premises discharged by the reading. Every central law needing balance and the two activity
   premises holds of every world with its rest counted; the comparisons of two courses hold of every
   two worlds of one kind of relatum with their rests counted, under every law of exchange over the
@@ -3567,7 +3569,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   while every step alters the loss (`ClosedCapture.lock_line`); a reading that turns against
   favouring past a loss bound leaves the line under favouring not unending
   (`ClosedCapture.loss_ends_line`).
-* `Becoming.GrammarScope` (L1): the continuation condition on the root, structurally (board item
+* `Becoming.GrammarScope` (L2): the continuation condition on the root, structurally (board item
   GS2): the condition that every occurrence lies on every center's line under a class
   (`«续无外»`), or in its family (`«族无外»`), either at a class giving it at every coarser class.
   Lying within a closure along a relation is being reached on a line under the one of it
@@ -3580,7 +3582,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`LineOfDescent`). The class of being joined by 缘 read either way has 缘 as its continuation, is
   the finest class that does, and is constant where every occurrence conditions something
   (`«续即缘当且仅当含族»`, `«遍有后则族有常»`; board item GS5).
-* `Becoming.GrammarCases` (L1): test systems of the source texts as small witnesses of the grammar
+* `Becoming.GrammarCases` (L2, through `Becoming.GrammarScope`): test systems of the source texts as small witnesses of the grammar
   (board item GS3), the behaviour in question supplied in each net. Decay: an alteration in a net with
   no cycle; in the net of possibilities "intact or not" is constant, so the step is not in its
   regularity, while a history within that net has the time left before the decay in it (`Decay`).

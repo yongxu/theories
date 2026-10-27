@@ -79,8 +79,8 @@
       "zh": "存取模型的许可集合、路线与支撑为给定，支撑之同一已判定。"
     },
     {
-      "en": "Axioms: the GenerativeCore and HistoryLanguages declarations have empty axiom reports, as do HistoryRealization's; in the access model exact_reader_separates uses propext and unrestricted_reader_injective propext and Quot.sound, as its receipt reports.",
-      "zh": "公理：GenerativeCore 与 HistoryLanguages 的声明公理报告皆空，HistoryRealization 的亦然；存取模型中 exact_reader_separates 用 propext，unrestricted_reader_injective 用 propext 与 Quot.sound，如其回执所报。"
+      "en": "Axioms: the GenerativeCore and HistoryLanguages declarations have empty axiom reports; in the access model exact_reader_separates uses propext and unrestricted_reader_injective propext and Quot.sound, as its receipt reports.",
+      "zh": "公理：GenerativeCore 与 HistoryLanguages 的声明公理报告皆空；存取模型中 exact_reader_separates 用 propext，unrestricted_reader_injective 用 propext 与 Quot.sound，如其回执所报。"
     }
   ],
   "does_not_show": [
@@ -111,8 +111,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked (Lean 4.29.1): GenerativeCore and Becoming.HistoryLanguages by the consolidated checker (receipt 20261025T212948.819150Z), empty axiom reports; HistoryRealization by the package checker of 6 October (empty); ReconfigurableSupportLogic by its own checker (receipt 20261008T105809.742208Z), propext and Quot.sound where named; current bytes bound. Read against the Lean for this record; not independently reviewed.",
-    "zh": "Lean 4.29.1 实查：GenerativeCore 与 Becoming.HistoryLanguages 经合并检查器（回执 20261025T212948.819150Z），公理报告皆空；HistoryRealization 经 10 月 6 日之包检查器（皆空）；ReconfigurableSupportLogic 经其自身检查器（回执 20261008T105809.742208Z），所列处用 propext 与 Quot.sound；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+    "en": "Machine-checked (Lean 4.29.1): GenerativeCore and Becoming.HistoryLanguages by the consolidated checker (receipt 20261025T212948.819150Z), empty axiom reports (the latter supersedes HistoryRealization, cited as provenance); ReconfigurableSupportLogic by its own checker (receipt 20261008T105809.742208Z), propext and Quot.sound where named; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 实查：GenerativeCore 与 Becoming.HistoryLanguages 经合并检查器（回执 20261025T212948.819150Z），公理报告皆空，后者所取代之 HistoryRealization 作来源；ReconfigurableSupportLogic 经其自身检查器（回执 20261008T105809.742208Z），所列处用 propext 与 Quot.sound；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
   },
   "next_delta": {
     "en": "Join the access model to the spine: state the exact summary of feasibility under a changing permitted set on the core's processes, so that what a current summary may forget is read off the access relations that can still form.",
@@ -153,6 +153,13 @@
       "detail": {
         "en": "Its instance for the image process: the image through a projection represents every finite path exactly, in projection_exact_iff's sense, exactly where configurations alike under it match each other's steps (image_exact_iff).",
         "zh": "其对像过程的实例：经投影之像在 projection_exact_iff 的意义上精确表示每条有限路径，恰在经它相同的构形相互匹配步之处（image_exact_iff）。"
+      }
+    },
+    {
+      "id": "access-yet-to-form",
+      "detail": {
+        "en": "The access model's exact behaviour with the route fixed and the newly admitted probe that tells apart configurations every old observation identifies.",
+        "zh": "路线固定时存取模型的精确行为，以及把每个旧观察都无别的构形分开的新允许探测。"
       }
     }
   ],
@@ -227,7 +234,7 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "7ad2ce705d4a13954af8467cdb225535f50db50a16d0ef5bcc846310ebd0606f"
+      "sha256": "cc50a66e619d5f7cbfa9bec70cd910015a5c4706416858efd4ebb740e339b4e6"
     },
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
@@ -256,13 +263,6 @@
       "sha256_pointer": "/modules/1/sha256",
       "success_pointer": "/passed",
       "success_value": true
-    },
-    {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/HistoryRealization.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
-      "sha256_pointer": "/modules/7/source_sha256",
-      "success_pointer": "/status",
-      "success_value": "passed"
     }
   ],
   "history": [

@@ -144,6 +144,13 @@
         "en": "Its procedure bit runs this line's responsive or continual rule (LearnedProcedureTransmission.constructed_responsive, constructed_continual), its networks reconstructed through actual performance; this line's carrier replacement history is not yet joined to that reconstruction.",
         "zh": "其更新控制位运行此一线的回应或持续规则（LearnedProcedureTransmission.constructed_responsive、constructed_continual），其网络经实际表现而重构；此一线的承载者替换历史尚未接到该重构。"
       }
+    },
+    {
+      "id": "correction-is-not-calibration",
+      "detail": {
+        "en": "References renewed after calibration repair the overwritten matrix of these updater constructions; correction without a reference is not calibration.",
+        "zh": "校准之后更新的参照修复这些更新者构造中被覆盖的矩阵；无参照的修正不是校准。"
+      }
     }
   ],
   "references": [
@@ -210,7 +217,7 @@
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "cd96b77644496fc24740b20da069c1834c7cdc3e902e77cf21ed166cc4db3a28",
+      "sha256": "1368f69ece22fe59a1557d20b3af7734b25a82214e9cda03845acd34b57f0db3",
       "declarations": []
     },
     {

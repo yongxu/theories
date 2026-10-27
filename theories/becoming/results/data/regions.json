@@ -86,6 +86,11 @@
    "base": "old-base",
    "note": "DrawnBeyond: rise bounded by inflow plus draw beyond"
   },
+  "a-selected-template-need-not-raise-structure": {
+   "region": "life",
+   "base": "periphery",
+   "note": "ConsequenceTransmission"
+  },
   "a-source-before-a-juncture": {
    "region": "map",
    "base": "frame",
@@ -95,6 +100,11 @@
    "region": "collective",
    "base": "old-base",
    "note": "Optimum: per-step coupling keeps dependence (SG7)"
+  },
+  "a-swap-symmetric-assignment-singles-out-none": {
+   "region": "collective",
+   "base": "periphery",
+   "note": "PracticalPriorityIdentification: swap-symmetric assignment, empty axiom reports"
   },
   "a-weighting-faster-than-renewal-ends-the-base": {
    "region": "collective",
@@ -111,6 +121,11 @@
    "base": "old-base",
    "note": "Wholes: AllWhole, graded whole (WH1)"
   },
+  "access-yet-to-form": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "ReconfigurableSupportLogic (pre-spine)"
+  },
   "acquired-binding-compositional-use": {
    "region": "knowing",
    "base": "general",
@@ -120,6 +135,11 @@
    "region": "knowing",
    "base": "general",
    "note": "CommonTaskRevision: goal revision of pending task"
+  },
+  "adaptive-closure-cannot-resolve": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "NormativeActivity: closed policy cannot resolve"
   },
   "additive-part-of-offspring-variance": {
    "region": "life",
@@ -286,6 +306,11 @@
    "base": "old-base",
    "note": "OverExchange: 33 central laws over any exchange relation"
   },
+  "certificates-sound-and-available": {
+   "region": "knowing",
+   "base": "general",
+   "note": "FaultEnvelopes, PooledEnvelopes, TreeSearch: certificates sound, available where separated"
+  },
   "chinese-sources-on-the-spine": {
    "region": "classical",
    "base": "none",
@@ -365,6 +390,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "comparison decided within reach"
+  },
+  "composition-route": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "CodeAcquisition, RouteFormation (core ports of CompositionalAcquisition, CompositionalFormation)"
   },
   "condition-correspondence-discipline": {
    "region": "significance",
@@ -451,6 +481,11 @@
    "base": "old-base",
    "note": "Tower: time scales as discrete readings"
   },
+  "contraction-where-duplication-is-reachable": {
+   "region": "method",
+   "base": "frame",
+   "note": "GeneratedContraction: admissible contraction iff duplicate reachable"
+  },
   "control-coherence-loss": {
    "region": "map",
    "base": "general",
@@ -470,6 +505,11 @@
    "region": "life",
    "base": "general",
    "note": "Copying: b-fold rounds within stock"
+  },
+  "correction-is-not-calibration": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "CalibratedUpdater, CalibrationRenewal"
   },
   "counterfactual-is-the-course": {
    "region": "map",
@@ -606,6 +646,11 @@
    "base": "old-base",
    "note": "Entropy R5: history monotone, record"
   },
+  "equal-totals-can-hide-what-a-capacity-carries": {
+   "region": "life",
+   "base": "periphery",
+   "note": "OrganizedScaleLoop (Mathlib)"
+  },
   "eventual-widening": {
    "region": "significance",
    "base": "old-base",
@@ -620,6 +665,11 @@
    "region": "root",
    "base": "frame",
    "note": "Gated/LivingOrganization: origin passes gate"
+  },
+  "evidence-through-change": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "TemporalInspection, ChangingDependency"
   },
   "evolution-on-descent": {
    "region": "life",
@@ -690,6 +740,11 @@
    "region": "significance",
    "base": "frame",
    "note": "reviewed-scoped FR aggregation proposal"
+  },
+  "finite-agreement-does-not-identify-priority": {
+   "region": "significance",
+   "base": "periphery",
+   "note": "PracticalPriorityIdentification: finite samples fit a weight; no fixed weight is lexical"
   },
   "finite-basis-common-interpretation": {
    "region": "method",
@@ -805,6 +860,11 @@
    "region": "significance",
    "base": "general",
    "note": "Weightings IV2: invariant grades"
+  },
+  "groups-formed-by-bonds-share-a-founder": {
+   "region": "life",
+   "base": "periphery",
+   "note": "DevelopmentalAssociation"
   },
   "groups-formed-by-descent": {
    "region": "life",
@@ -951,6 +1011,11 @@
    "base": "general",
    "note": "JointContinuation: joint continuation of local plans"
   },
+  "joint-plans-from-a-supported-start": {
+   "region": "collective",
+   "base": "periphery",
+   "note": "SeededContinuation: seeded joint plans, empty promises, ignition"
+  },
   "joint-practice-forms-continuation": {
    "region": "collective",
    "base": "periphery",
@@ -1001,6 +1066,11 @@
    "base": "periphery",
    "note": "LearnedProcedureTransmission: reconstruction"
   },
+  "learning-a-rule-by-narrowing": {
+   "region": "knowing",
+   "base": "general",
+   "note": "Narrowing (ported from StandardsBridge)"
+  },
   "learning-by-refutation": {
    "region": "knowing",
    "base": "frame",
@@ -1019,7 +1089,7 @@
   "least-loss-from-entropy-production": {
    "region": "map",
    "base": "periphery",
-   "note": "T1 EntropyProduction: second law as first law"
+   "note": "T1 EntropyProduction: the second law gives the spine's first law"
   },
   "least-loss-rest": {
    "region": "map",
@@ -1095,6 +1165,11 @@
    "region": "collective",
    "base": "frame",
    "note": "general drain law; market only an instance"
+  },
+  "market-model-share-margin-and-ends": {
+   "region": "collective",
+   "base": "periphery",
+   "note": "MarketGenerativity, RegimeBoundary, RegimeAttraction: share law, margin M, two ends"
   },
   "market-partial-correction-boundary": {
    "region": "collective",
@@ -1195,6 +1270,11 @@
    "region": "knowing",
    "base": "old-base",
    "note": "P125 Observation"
+  },
+  "one-move-covering": {
+   "region": "method",
+   "base": "frame",
+   "note": "MoveOutcomeProcesses: covering iff every one-move goal carried; PracticalReach's core form"
   },
   "one-reader-several-conditions": {
    "region": "knowing",
@@ -1361,6 +1441,11 @@
    "base": "old-base",
    "note": "DrawnBeyond"
   },
+  "reach-from-a-seed": {
+   "region": "root",
+   "base": "frame",
+   "note": "SeedReach: reach from seeds = least invariant; DNE calibration"
+  },
   "reach-past-ones-own-end": {
    "region": "significance",
    "base": "grammar",
@@ -1391,6 +1476,11 @@
    "base": "general",
    "note": "Pace"
   },
+  "readings-a-response-needs": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "AssurancePlans Regulation and Routes"
+  },
   "readings-within-what-they-read": {
    "region": "knowing",
    "base": "general",
@@ -1410,6 +1500,11 @@
    "region": "root",
    "base": "general",
    "note": "merge-free = returning"
+  },
+  "recurrence-without-selector-revision": {
+   "region": "life",
+   "base": "periphery",
+   "note": "BoundaryModels FixedSelector (pre-spine, empty axiom report)"
   },
   "recurrent-chain-assembly": {
    "region": "life",
@@ -1566,6 +1661,11 @@
    "base": "frame",
    "note": "Branching returning"
   },
+  "reviewers-count-by-independent-causes": {
+   "region": "collective",
+   "base": "general",
+   "note": "Reconfiguration: envelopes induced by causes; readiness by causes, not names"
+  },
   "revision-comes-to-drawing-everything": {
    "region": "retire",
    "base": "general",
@@ -1610,6 +1710,11 @@
    "region": "root",
    "base": "old-base",
    "note": "OneStep continuity"
+  },
+  "same-carrier-need-not-fix-the-response": {
+   "region": "life",
+   "base": "periphery",
+   "note": "DevelopedResponse"
   },
   "scientific-inquiry-foundation": {
    "region": "knowing",
@@ -1671,6 +1776,11 @@
    "base": "old-base",
    "note": "IV2 de se Weightings"
   },
+  "self-reference-does-not-certify-itself": {
+   "region": "method",
+   "base": "general",
+   "note": "ReflectiveIdentity, RecognitionalBinding: carry-over, Curry, source-free identity"
+  },
   "sensitivity-is-the-least-coupling": {
    "region": "knowing",
    "base": "old-base",
@@ -1701,6 +1811,11 @@
    "base": "old-base",
    "note": "Retaining preorder"
   },
+  "significance-through-a-common-condition": {
+   "region": "significance",
+   "base": "frame",
+   "note": "ValuationFrames: connection and transmission through a common condition on runs"
+  },
   "situated-recovery-empirical-correspondence": {
    "region": "knowing",
    "base": "none",
@@ -1726,10 +1841,20 @@
    "base": "old-base",
    "note": "ST1"
   },
+  "stronger-arrangement-formed-by-reconfiguration": {
+   "region": "life",
+   "base": "periphery",
+   "note": "GeneratedSelectionRecurrence"
+  },
   "substitution-preserves-consumption": {
    "region": "map",
    "base": "old-base",
    "note": "Substitution"
+  },
+  "succession-on-a-funded-carrier": {
+   "region": "collective",
+   "base": "periphery",
+   "note": "AlignmentSuccession: carrier refinement of the market step"
   },
   "sum-over-histories-exact": {
    "region": "root",
@@ -1846,6 +1971,11 @@
    "base": "old-base",
    "note": "R1 Interleavings"
   },
+  "the-updater-line": {
+   "region": "life",
+   "base": "periphery",
+   "note": "ConnectionistRecovery, DevelopmentalMemory, UpdaterConsequences, DriftMargins"
+  },
   "the-world-an-interleaving-builds": {
    "region": "root",
    "base": "old-base",
@@ -1915,6 +2045,11 @@
    "region": "map",
    "base": "old-base",
    "note": "Regulation late band"
+  },
+  "type-formation-gives-no-dynamics": {
+   "region": "method",
+   "base": "general",
+   "note": "ProductTower, GeneratedPaths: product tower keeps the seed's boundary; reach least closure"
   },
   "typicality-by-counting": {
    "region": "knowing",
@@ -2041,6 +2176,16 @@
    "base": "old-base",
    "note": "SetPointOptimum UE1b: what an order with a set point does beyond what couples in"
   },
+  "what-a-summary-keeps": {
+   "region": "method",
+   "base": "frame",
+   "note": "GenerativeCore, HistoryLanguages, ReconfigurableSupportLogic: exact summaries, what feasibility keeps, history realization"
+  },
+  "what-a-total-keeps": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "RelationsAcrossScales (Mathlib)"
+  },
   "what-an-extrapolation-given-nothing-fixes": {
    "region": "knowing",
    "base": "general",
@@ -2125,6 +2270,11 @@
    "region": "method",
    "base": "general",
    "note": "Settling, LPO limit"
+  },
+  "when-to-inquire-and-when-to-respond": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "InquiryChoice; core GuardHorizon choice from readings"
   },
   "where-a-formations-acts-return": {
    "region": "knowing",

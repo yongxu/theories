@@ -41,7 +41,7 @@ No dependency on another migrated record is asserted; source imports and supplie
 
 - Related, not a proved adapter: [becoming-spine-instances](becoming-spine-instances.md). The bridge transports a frame's joint-continuation bundles by trace_map (Frame.map_preserves_bundles).
 
-**Used by:** [a-law-through-a-projection-along-one-run](a-law-through-a-projection-along-one-run.md) · [becoming-context-coherence](becoming-context-coherence.md) · [derived-history-law-exactness](derived-history-law-exactness.md) · [residual-continuation-correspondence](residual-continuation-correspondence.md) · [trace-law-equivalence](trace-law-equivalence.md)
+**Used by:** [a-law-through-a-projection-along-one-run](a-law-through-a-projection-along-one-run.md) · [becoming-context-coherence](becoming-context-coherence.md) · [derived-history-law-exactness](derived-history-law-exactness.md) · [residual-continuation-correspondence](residual-continuation-correspondence.md) · [trace-law-equivalence](trace-law-equivalence.md) · [what-a-summary-keeps](what-a-summary-keeps.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

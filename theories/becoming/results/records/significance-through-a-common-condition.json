@@ -108,7 +108,12 @@
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
   "aliases": [
     "Significance through a common condition",
-    "经共同条件的意义"
+    "经共同条件的意义",
+    "Becoming.Conditions.connected_of_common",
+    "Becoming.Conditions.significant_iff_of_common",
+    "Becoming.Conditions.consumption_relates",
+    "Becoming.Conditions.valuing_consumption_reaches",
+    "Becoming.Separate.not_connected"
   ],
   "dependencies": [
     {
