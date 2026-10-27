@@ -4892,6 +4892,18 @@
    "page": "theories/becoming/results/records/target-capture.md"
   },
   {
+   "id": "record:tasks-and-what-performs-them",
+   "type": "result",
+   "record": "tasks-and-what-performs-them",
+   "title": "Tasks and what performs them",
+   "title_zh": "任务与执行之者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "frame",
+   "page": "theories/becoming/results/records/tasks-and-what-performs-them.md"
+  },
+  {
    "id": "record:testing-within-couplings",
    "type": "result",
    "record": "testing-within-couplings",
@@ -7116,6 +7128,17 @@
    "name": "Becoming.HeldPossible",
    "level": "L1",
    "theorems": 81,
+   "region": "significance",
+   "base": "frame",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.Tasks",
+   "type": "module",
+   "name": "Becoming.Tasks",
+   "level": "L1",
+   "theorems": 128,
    "region": "significance",
    "base": "frame",
    "on_grammar": true,
@@ -29254,6 +29277,12 @@
    "anchor": "r-where-the-possible-grows"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-tasks-and-what-performs-them",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-tasks-and-what-performs-them"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-content-under-regrouping",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -33001,6 +33030,11 @@
   {
    "from": "module:Becoming.Tail",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Tasks",
+   "to": "module:Becoming.HeldPossible",
    "type": "imports"
   },
   {
@@ -49774,6 +49808,66 @@
    "type": "related"
   },
   {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "module:Becoming.HeldPossible",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "module:Becoming.Horizon",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "module:Becoming.ReachableRanges",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "module:Becoming.Tasks",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "related"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "record:where-a-run-goes-on",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "record:where-the-possible-grows",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:tasks-and-what-performs-them",
+   "to": "record:where-the-possible-grows",
+   "type": "related"
+  },
+  {
    "from": "record:testing-within-couplings",
    "to": "module:Becoming.Admission",
    "type": "proved-in"
@@ -51705,6 +51799,11 @@
   },
   {
    "from": "record:what-a-course-keeps-reachable",
+   "to": "record:tasks-and-what-performs-them",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
    "to": "record:what-keeping-widening-needs",
    "type": "related"
   },
@@ -53526,6 +53625,11 @@
   {
    "from": "record:where-the-possible-grows",
    "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:tasks-and-what-performs-them",
    "type": "related"
   },
   {
@@ -56691,6 +56795,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-support-from-the-supported",
    "to": "record:support-from-the-supported",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-tasks-and-what-performs-them",
+   "to": "record:tasks-and-what-performs-them",
    "type": "states"
   },
   {

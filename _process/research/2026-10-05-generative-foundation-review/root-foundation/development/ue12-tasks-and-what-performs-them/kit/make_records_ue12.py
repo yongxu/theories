@@ -1,0 +1,597 @@
+#!/usr/bin/env python3
+"""UE12 records: write tasks-and-what-performs-them (every declaration of Becoming.Tasks, in thirty-four law groups),
+and relate what-a-course-keeps-reachable and where-the-possible-grows to it, each with a related entry and a history
+note; neither's statement, next step or declarations change. Asserts the receipt's hash and empty axiom reports for the
+module, and the style caps (tools/research/style.py) on every field written. Mirrors UE11's make_records_ue11.py; no
+landed module changes, so no record is re-pointed for Lean.
+usage (from the checkout root, after texts_ue12.py): python3 -B make_records_ue12.py RECEIPT N
+       python3 -B make_records_ue12.py --caps  (the caps and the declaration cover against the kit's scratch audit;
+                                                writes nothing)"""
+import datetime
+import hashlib
+import json
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path.cwd()
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT))
+from tools.research import style  # noqa: E402
+
+CAPS_ONLY = sys.argv[1] == '--caps'
+RECEIPT_ID, N = ('20261027T000000.000000Z', 430) if CAPS_ONLY else (sys.argv[1], int(sys.argv[2]))
+PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation/'
+STUDY = RF + 'BECOMING-RENEWAL-READING.md'
+KITD = RF + 'development/ue12-tasks-and-what-performs-them/'
+NOTE, REVIEW, RECHECK = KITD + 'NOTE.md', KITD + 'REVIEW-UE12.md', KITD + 'RECHECK-UE12.md'
+CH7 = 'theories/becoming/chapters/07-SIGNIFICANCE.md'
+LEAN = {m: f'{PKG}/Becoming/{m}.lean' for m in
+        ('Tasks', 'HeldPossible', 'ReachableRanges', 'Horizon', 'Grammar', 'Frame')}
+RECEIPT = f'{PKG}/becoming-checks/{RECEIPT_ID}/verification.json'
+RECORDS = ROOT / 'theories/becoming/results/records'
+RID = 'tasks-and-what-performs-them'
+RID10 = 'what-a-course-keeps-reachable'
+RID11 = 'where-the-possible-grows'
+NOW = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
+TODAY = datetime.date.today()
+DATE_EN, DATE_ZH = f'{TODAY.day} {TODAY:%B} {TODAY.year}', f'{TODAY.year}年{TODAY.month}月{TODAY.day}日'
+COUNT = 167
+
+
+def sha(path):
+    return hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
+
+
+def capped(field, pair, item=False):
+    caps = style.ITEM_CAPS_V2 if item else style.CAPS_V2
+    en, zh = caps[field][:2]
+    assert len(pair['en']) <= en and len(pair['zh']) <= zh, (field, len(pair['en']), en, len(pair['zh']), zh, pair['en'][:60])
+    return pair
+
+
+if CAPS_ONLY:
+    audit = (HERE.parent / 'tree/.build/BecomingTasksAxiomAudit.lean').read_text(encoding='utf-8')
+    names = set(re.findall(r'^#print axioms (\S+)$', audit, re.M))
+else:
+    core = json.loads((ROOT / RECEIPT).read_text())
+    assert core['status'] == 'passed'
+    module = 'Becoming.Tasks'
+    assert core['source_sha256'][module] == sha(LEAN['Tasks']), module
+    mod = next(x for x in core['modules'] if x['module'] == module)
+    assert not any(mod['axiom_dependencies'].values()), module
+    names = {d['name'] for d in mod['declarations']}
+assert len(names) == COUNT, len(names)
+
+
+def D(*short):
+    out = ['Becoming.' + s for s in short]
+    missing = [n for n in out if n not in names]
+    assert not missing, missing
+    return out
+
+
+def T(*short):
+    return D(*('Tasks.' + s for s in short))
+
+
+groups = [
+    ("What performs a task. A task is a relation on the substrate, its domain the legitimate inputs. A region K of the "
+     "performing part performs it where K is presented with it, each state of the part in K had with every input, and "
+     "delivers it: from every configuration with the part in K and the substrate an input, the process reaches an "
+     "output with the part in K. The task is possible where some region performs it.",
+     "执行一任务者。任务为基底上之关系，其定义域为合法输入。执行之部分之区域 K 执行之，谓 K 呈以之（K 中该部分之每一状态皆与每一输入共有），"
+     "且交付之：自该部分在 K 中、基底为一输入之每一构型，过程达一输出，而该部分复在 K 中。某区域执行之，则该任务可能。",
+     T('Input', 'Presented', 'Delivers', 'Performs', 'Possible')),
+    ("Possible from what is there naturally. A task is possible from natural configurations where some region performs "
+     "it and, from some configuration counted natural, the process reaches one with the part in that region: "
+     "constructor theory's pharaonic reading, relative to which configurations are natural. Such a task is possible.",
+     "可自自然者而为。某区域执行一任务，且自某一被计为自然之构型过程达该部分在此区域中之构型，则该任务可自自然构型而为："
+     "构造子理论之法老式读法，相对于何者为自然。此种任务可能。",
+     T('PossibleFrom', 'PossibleFrom.possible')),
+    ("Delivering is having an output possible. K delivers a task exactly where, from every configuration with the part "
+     "in K and the substrate a legitimate input, some output of that input is possible with the part in K: UE10's "
+     "possible, with what a configuration admits read as its substrate with the part in K.",
+     "交付即有一输出可能。K 交付一任务，当且仅当自该部分在 K 中、基底为合法输入之每一构型，该输入之某一输出于该部分在 K 中时可能："
+     "即 UE10 之可能，构型所纳读作该部分在 K 中时之基底。",
+     T('delivers_iff_possible')),
+    ("Invariable where the successor is fixed, without halting. Where the successor is fixed at what a "
+     "configuration reaches (the grammar's «定后于» on the steps), every course passing a configuration it reaches "
+     "passes the end of every trace from there, so the delivered configuration lies on every course from the one it "
+     "is delivered from. Nothing marks where a delivery ends: constructor theory's halting is not read.",
+     "后继固定时恒然，而无停机。于一构型所达处后继固定时（语法之 «定后于»，于诸步上），经过其所达之一构型之每一进程，"
+     "皆经过自彼出发之每一迹之终点，故所交付之构型可达，且在自其所自交付之构型出发之每一进程上。无物标示交付何时终结：构造子理论之停机未被读入。",
+     T('on_every_run', 'Delivers.invariably')),
+    ("Zero moves and no input. Delivery may take zero moves, so on every process with a configuration a task relating "
+     "each of its inputs to itself is performed with no performing part, wherever each input is had; and a task with "
+     "no legitimate input is possible there.",
+     "零步与无输入。交付可用零步，故于有构型之每一过程上，将其每一输入关联于自身之任务以无执行之部分执行之（每一输入皆有之处）；"
+     "无合法输入之任务于彼亦可能。",
+     T('performs_identity', 'possible_of_no_input')),
+    ("Witness: UE10's climbing process. Every move adds one, so the successor is fixed. Every task each of whose "
+     "inputs has an output at or ahead of it is performed with no performing part, and invariably; so is every task "
+     "taking each count to itself plus an amount, and the identity task is performed though every move changes the "
+     "count. This is what halting excludes.",
+     "见证：UE10 之攀升过程。每步加一，故后继固定。每一输入皆有一输出于其处或其前之每一任务，皆以无执行之部分执行之，且恒然；"
+     "将每一计数映为其自身加一量之任务亦然；每步皆改变计数，而恒等任务仍被执行。此即停机所排除者。",
+     T('ClimbTask.fixed', 'ClimbTask.performs', 'ClimbTask.invariably', 'ClimbTask.performs_function',
+       'ClimbTask.moves_change', 'ClimbTask.performs_identity')),
+    ("Witness: an unmade performer. The present enzyme turns the substrate into the product, and nothing makes an "
+     "enzyme: the task is possible, and not possible from the configurations with no enzyme, which constructor theory "
+     "would count impossible.",
+     "见证：未造之执行者。在场之酶将底物变为产物，无物造酶：该任务可能，而不可自无酶之构型而为，构造子理论当计之为不可能。",
+     T('Unmade.process', 'Unmade.task', 'Unmade.performs', 'Unmade.absent_stays', 'Unmade.possible_not_possibleFrom')),
+    ("Held throughout. What is delivered or performed by the moves holding any relation is delivered or performed, and "
+     "so is what is delivered by the moves holding a weaker relation: instances of UE11's laws of reach under the held "
+     "moves. A task delivered with the part in K at every move is delivered with it in K at the end.",
+     "全程持守。持守任一关系之步所交付或执行者，即被交付或执行；持守较弱关系之步亦然：乃 UE11 持守之步下之达之律之实例。"
+     "每步皆令该部分在 K 中而交付之任务，交付于终时该部分在 K 中。",
+     T('Delivers.of_heldMoves', 'Performs.of_heldMoves', 'Delivers.heldMoves_mono')),
+    ("Witness: a catalytic cycle. The free enzyme binds the substrate, and the bound enzyme releases the product and "
+     "is free again. The free enzyme performs the task, substrate to product, and held free at every move, or held "
+     "unchanged, it delivers nothing: restored at the end, not held. The product stays the product, so the transpose "
+     "is performed by no region of any reading of a performing part.",
+     "见证：催化循环。游离之酶结合底物，结合之酶释放产物而复游离。游离之酶执行底物至产物之任务；每步皆持其游离或持其不变，则无所交付："
+     "终时复得，非全程持守。产物恒为产物，故其转置不为任一执行部分之任一读法之任一区域所执行。",
+     T('Catalysis.process', 'Catalysis.Free', 'Catalysis.task', 'Catalysis.reach_product', 'Catalysis.performs',
+       'Catalysis.not_held', 'Catalysis.not_held_unchanged', 'Catalysis.product_stays',
+       'Catalysis.transpose_not_possible')),
+    ("One region in series. A pair is regular where every output of the first task is a legitimate input of the "
+     "second, the inclusion of constructor theory's clause on serial composition. One region delivering both tasks of "
+     "a regular pair delivers the first then the second («而»), and one performing the first and delivering the second "
+     "performs the composite, with no further premise.",
+     "一区域之串联。第一任务之每一输出皆为第二任务之合法输入，则该对为正则，即构造子理论串联合成之条款中之包含。交付正则对之二任务之一区域，"
+     "交付先一后二（«而»）；执行第一而交付第二者执行其合成，无须他前提。",
+     T('Regular', 'Delivers.serial', 'Performs.serial')),
+    ("One region in turn on two substrates. Where a region delivers one task by the moves holding a second substrate, "
+     "and another task on the second by the moves holding the first, it delivers the two in parallel, one after the "
+     "other. Use at once is not read.",
+     "二基底上一区域之轮流。一区域以持守第二基底之步交付一任务，以持守第一基底之步交付第二基底上之另一任务，则并联交付二者，一先一后。"
+     "同时之使用未被读入。",
+     T('parallel', 'Delivers.parallel_inTurn')),
+    ("The pair region. A reading the same is a class, so what the moves holding it reach keeps it: a task delivered "
+     "by the moves holding another reading is delivered by the pair region, the other reading's region kept, and, "
+     "with another substrate held as well, by the moves holding that substrate.",
+     "对之区域。读法相同为类，故持守之之步所达者保持之：以持守另一读法之步所交付之任务，为对之区域所交付，另一读法之区域得保持；"
+     "另一基底亦被持守时，以持守该基底之步交付。",
+     T('sameReading_class', 'Delivers.pair_left', 'Delivers.pair_right', 'Delivers.pair_left_held',
+       'Delivers.pair_right_held')),
+    ("Two regions. Two regions together deliver a regular pair in series where each delivers by the moves holding the "
+     "other's part, and two tasks on two substrates in parallel where each delivers by the moves holding the other's "
+     "part and substrate: the one-region laws at the pair region.",
+     "二区域。二区域各以持守对方部分之步交付时，合而串联交付一正则对；各以持守对方部分与基底之步交付时，合而并联交付二基底上之二任务："
+     "即对之区域上之一区域之律。",
+     T('Delivers.serial_holding', 'Delivers.parallel_holding')),
+    ("Witness: holding is sufficient, not needed. The free enzyme binds at 0, is released with the count at 1, and "
+     "moves the count from 1 to 2. The first task's only delivery from the free enzyme binds it, so it is not "
+     "delivered by the moves holding the enzyme; yet the trivial part and the free enzyme together perform the first "
+     "task then the second.",
+     "见证：持守充分而非必要。游离之酶于 0 结合，释放时计数为 1，复将计数自 1 移至 2。自游离之酶出发，第一任务唯一之交付结合之，"
+     "故不以持守该酶之步交付；然平凡部分与游离之酶合而执行先一后二。",
+     T('CatalysedSeries.process', 'CatalysedSeries.not_holding', 'CatalysedSeries.performs_pair')),
+    ("Where no performing part is needed. Read with the performing part trivial, a region performing a task can be "
+     "taken as every state of the part, and a regular pair of possible tasks is possible in series.",
+     "无须执行之部分处。以平凡之执行部分读之，执行一任务之区域可取为该部分之全部状态，而一正则对之可能任务串联可能。",
+     T('Performs.unitPart', 'Possible.serial_of_unitPart')),
+    ("Witness: a pair not regular. On a process stepping 0 to 1 and 2 to 3, the task 0 to 1 or 2 and the task 2 to 3 "
+     "are each performed with no performing part; the pair is not regular, and the composite is performed by no region "
+     "of any reading: where no performing part is needed, serial composition still needs the regular pair.",
+     "见证：非正则之对。于 0 至 1、2 至 3 之过程上，0 至 1 或 2 之任务与 2 至 3 之任务各以无执行之部分执行之；该对非正则，"
+     "其合成不为任一读法之任一区域所执行：无须执行之部分处，串联合成仍需正则之对。",
+     T('Unregular.process', 'Unregular.first', 'Unregular.second', 'Unregular.performs_first',
+       'Unregular.performs_second', 'Unregular.stays', 'Unregular.not_regular', 'Unregular.composite_not_possible')),
+    ("Two processes interleaved. A move of the interleaving is a move of one with the other's configuration kept, so "
+     "what each reaches the interleaving reaches by the moves holding the other, as locality asks. Tasks performed in "
+     "the two compose in parallel, and tasks possible in them are possible in parallel, possibility read in each "
+     "process.",
+     "二过程之交错。交错之步为其一之步而另一之构型保持，故各自所达者，交错以持守另一者之步达之，如局域性所求。二者中所执行之任务并联合成，"
+     "其中可能之任务并联可能，可能性于各过程中读之。",
+     T('interleave', 'reach_interleave_left', 'reach_interleave_right', 'Delivers.interleave_left',
+       'Delivers.interleave_right', 'Presented.interleave', 'Performs.parallel_interleave',
+       'Possible.parallel_interleave')),
+    ("Within the interleaving on two substrates. What the interleaving reaches each process reaches on its own, so "
+     "a task is possible in the interleaving with a division read off one process exactly where it "
+     "is possible in that process, given a configuration of the other; tasks possible within the interleaving with "
+     "divisions read off each process are possible in parallel there: the parallel law, read within.",
+     "二基底之交错之内。交错所达者，各过程于其自身之构型上亦达之，故任务以读自一过程之划分于交错中可能，当且仅当其于该过程中可能"
+     "（另一过程有一构型时）；以读自各过程之划分于交错内可能之任务，于彼并联可能，即并联之律读于其内。",
+     T('reach_fst_of_interleave', 'reach_snd_of_interleave', 'Possible.of_interleave_left',
+       'Possible.of_interleave_right', 'Possible.interleave_left', 'Possible.interleave_right',
+       'Possible.parallel_within')),
+    ("Two parts interleaved on one substrate. A move of either part changes its part and the substrate, the other "
+     "part kept, so tasks performed in each, and tasks possible in each, compose in series for a regular pair, "
+     "possibility read in the two processes.",
+     "一基底上二部分之交错。任一部分之步改变其部分与基底，另一部分保持，故各自中所执行或可能之任务，对正则对串联合成，可能性于二过程中读之。",
+     T('interleaveOn', 'reach_interleaveOn_left', 'reach_interleaveOn_right', 'Performs.serial_interleaveOn',
+       'Possible.serial_interleaveOn')),
+    ("Witness: within one interleaving on one substrate, composition fails. An idle part and the resetting process "
+     "are interleaved on one count. The first task is possible with the idle part's division, delivered by the other "
+     "part's moves; the second with the other part's; the pair is regular; the composite is performed by no region of "
+     "any reading. Every move holds the other part.",
+     "见证：一基底上一交错之内合成可失败。静止之部分与重置之过程于一计数上交错：第一任务以静止部分之划分可能，由另一部分之步交付；"
+     "第二任务以另一部分之划分可能；该对正则；合成不为任一读法之任一区域所执行。每步皆持守另一部分。",
+     T('ResettingInterleaved.idle', 'ResettingInterleaved.process', 'ResettingInterleaved.first_possible',
+       'ResettingInterleaved.second_possible', 'ResettingInterleaved.stays', 'ResettingInterleaved.not_two',
+       'ResettingInterleaved.not_possible', 'ResettingInterleaved.composition_fails_within')),
+    ("Witness: a resetting process. The substrate at 0 goes to 1 and sets a second part off; at 1 it goes to 2 with "
+     "the part on. The first task is performed with a trivial part, the second by the part on, the pair is regular, "
+     "and the composite is performed by no region of any reading: every delivery of the first resets the part, which "
+     "that task does not list.",
+     "见证：重置之过程。基底于 0 至 1 并令第二部分关闭；于 1 则在该部分开启时至 2。第一任务以平凡部分执行，第二以开启之部分执行，该对正则，"
+     "而合成不为任一读法之任一区域所执行：第一任务之每次交付皆重置该部分，而该任务未列之。",
+     T('Resetting.process', 'Resetting.first', 'Resetting.second', 'Resetting.On', 'Resetting.performs_first',
+       'Resetting.performs_second', 'Resetting.regular', 'Resetting.stays', 'Resetting.not_two',
+       'Resetting.not_possible', 'Resetting.not_holding', 'Resetting.composition_fails')),
+    ("Listed so, not regular. Constructor theory asks a task to list its unavoidable outputs. With the second part "
+     "listed in each task's states, the first task's output, the part off with the count at 1, is not an input of the "
+     "second, which needs it on: the pair is not regular.",
+     "如是列出则非正则。构造子理论要求任务列出其不可免之输出。于各任务之状态中列出第二部分，则第一任务之输出（该部分关闭、计数为 1）"
+     "非第二任务之输入，后者需其开启：该对非正则。",
+     T('Resetting.firstListed', 'Resetting.secondListed', 'Resetting.listed_not_regular')),
+    ("One part under two regions. The second part performs the first task with every state and the second task when "
+     "on; the pair is regular, and the composite is performed by no region of that part.",
+     "一部分之二区域。第二部分以其全部状态执行第一任务，以开启执行第二任务；该对正则，而合成不为该部分之任一区域所执行。",
+     T('Resetting.performs_first_by_part', 'Resetting.one_part_two_regions')),
+    ("Witness: a possible whole of impossible parts. Two substrates each hold a unit or none, and a move passes the "
+     "unit between them. Raising the first is performed by no region of any reading of the second, lowering the second "
+     "by none of any reading of the first, and no reading of a substrate itself performs raising or lowering it; the "
+     "two in parallel are performed with a trivial part.",
+     "见证：不可能之部分之可能整体。二基底各持一单位或无，一步于其间传递该单位。提升第一者不为第二者之任一读法之任一区域所执行，"
+     "降低第二者亦不为第一者之任一读法所执行，任一基底自身之读法皆不执行其提升或降低；二者并联则以平凡部分执行。",
+     T('Conserved.process', 'Conserved.raise', 'Conserved.lower', 'Conserved.empty_stays', 'Conserved.full_stays',
+       'Conserved.unit_stays', 'Conserved.second_empty_of_raised', 'Conserved.first_full_of_lowered',
+       'Conserved.performs_both', 'Conserved.not_raise', 'Conserved.not_lower', 'Conserved.not_raise_alone',
+       'Conserved.not_lower_alone', 'Conserved.not_lower_first_alone', 'Conserved.not_raise_second_alone',
+       'Conserved.whole_of_impossible_parts')),
+    ("The additive pattern. With each substrate's change performed by readings of the other, raising either "
+     "substrate and lowering either are impossible, while lowering the first with raising the second, and raising "
+     "the first with lowering the second, are possible: constructor theory's pattern for an additive conservation "
+     "law.",
+     "可加之模式。各基底之改变由另一基底之读法执行时，提升或降低任一基底皆不可能，而降低第一并提升第二、提升第一并降低第二皆可能："
+     "即构造子理论可加守恒律之模式。",
+     T('Conserved.second_full_of_emptied', 'Conserved.first_empty_of_raised_second', 'Conserved.not_lower_first',
+       'Conserved.not_raise_second', 'Conserved.performs_lower_raise', 'Conserved.additive_pattern')),
+    ("The division. With the performing part read as whether the two together hold one unit, each of the four single "
+     "tasks is performed. That reading is their exclusive or, every move keeps it, and with the first substrate it "
+     "recodes the configuration one to one: an invariant of the process read as the performer is never consumed.",
+     "划分。执行之部分读作二者合计是否持一单位时，四个单一任务皆被执行。此读法即二者之异或，每步皆保持之，与第一基底合则一一重编构型："
+     "过程之不变量读作执行者，从不被耗。",
+     T('Conserved.holdsOne', 'Conserved.holdsOne_eq_xor', 'Conserved.holdsOne_recodes', 'Conserved.holdsOne_kept',
+       'Conserved.performs_with_one', 'Conserved.performs_lower_first_with_one',
+       'Conserved.performs_raise_second_with_one', 'Conserved.performs_lower_second_with_one')),
+    ("The regress within one delivery. On a tower of performers with no top, the move k + 1 changing the performer "
+     "at level k as the one at level k + 1 allows, what is reached is reached with the performers from some level up "
+     "held, so every delivery is had with them held, and conversely: a regress within one performance, finite because "
+     "a delivery is.",
+     "一次交付之内之回归。于无顶之执行者之塔上（步 k + 1 依层 k + 1 之执行者所允改变层 k 之执行者），所达者皆于持守某层以上之执行者时达之，"
+     "故每次交付皆于持守之时得之，反之亦然：一次执行之内之回归，因交付有限而有限。",
+     T('tower_reach_held', 'tower_delivers_iff_held')),
+    ("Making the performer. That the performer can be made from a natural configuration is PossibleFrom, the "
+     "hypothesis, which reads constructor theory's requirement on chains of construction. On the tower such a "
+     "performer is made with the performers from some level up held as the natural configuration has them, UE11's "
+     "tower law at the made performer: such a chain constructs only finitely many levels.",
+     "造就执行者。执行者可自一自然构型造就，即 PossibleFrom，为前提，读构造子理论对构造链之要求。于塔上，此种执行者于持守某层以上之执行者、"
+     "如自然构型所有时被造，即 UE11 之塔之律于所造之执行者：此种链仅构造有限多层。",
+     T('tower_made_held')),
+    ("Witness: a tower changing every level at once. At every move the substrate and the performer at every level "
+     "flip; the performers alike perform the task, and no delivery holds the performers from any level up: the "
+     "delivery form of UE11's Synchronous.tower_law_fails.",
+     "见证：每层同时改变之塔。每步基底与每层之执行者皆翻转；诸执行者相同时执行该任务，而无一交付持守任一层以上之执行者："
+     "即 UE11 之 Synchronous.tower_law_fails 之交付形式。",
+     T('FlipTower.process', 'FlipTower.Alike', 'FlipTower.task', 'FlipTower.performs', 'FlipTower.not_held')),
+    ("What can be done with the part held: the substrate states reached by the moves holding the performing part "
+     "unchanged, UE11's held possible at the part's sameness. Where a task is delivered by those moves, some output "
+     "of each input can be done with the part held.",
+     "持守该部分时所能为者：以不变地持守执行之部分之步所达之基底状态，即 UE11 于该部分之同一处之持守时之可能。任务以此种步交付时，"
+     "每一输入之某一输出可于持守该部分时为之。",
+     T('PossibleWithPartHeld', 'Delivers.possibleWithPartHeld')),
+    ("Where it grows. Along a course it grows only across steps changing the part; nothing is added from the step at "
+     "which the part stays for good; it keeps widening only where from every step some bounded stretch does not keep "
+     "the part throughout, and not where a list holds the substrate states reachable from the start. Instances of "
+     "UE11's held laws.",
+     "于何处增长。沿一进程，仅于改变该部分之步上增长；自该部分永住之步起无所增；仅当自每一步起总有一有界之段不全保持该部分时持续扩大，"
+     "有列表持自起点可达之基底状态时则否。乃 UE11 持守之律之实例。",
+     T('changes_of_partHeldGrows', 'possibleWithPartHeld_of_stays', 'changes_of_partHeldKeepsWidening',
+       'not_partHeldKeepsWidening_of_listed')),
+    ("Reach and lagged covering. A configuration covers, with a lag the trace's length, every configuration a trace "
+     "from it reaches: what a course from the end admits, the course from the start with the trace prefixed admits "
+     "that many steps later. So widening with a lag never ranks what a configuration reaches above it, and UE10's "
+     "lagged order ranks it above exactly where same-offset widening does.",
+     "可达与滞后覆盖。一构型以迹之长为滞后，覆盖自其出发之迹所达之每一构型：自终点出发之进程所纳者，冠以该迹之自起点出发之进程迟若干步亦纳之。"
+     "故带滞后之扩大从不将一构型所达者排于其上，UE10 之滞后之序排之于上恰当同偏移之扩大如此。",
+     D('Reaching.coversLater_of_trace', 'Reaching.not_widensWithLag_of_reach', 'Reaching.widensOrLater_iff_of_reach')),
+    ("A delivery adds nothing to the whole possible. From every configuration with the part in K and the substrate a "
+     "legitimate input, the process reaches one with an output, from which nothing is possible that is not possible "
+     "from the first, and which the first covers with a lag.",
+     "交付不给全部可能增添任何东西。自该部分在 K 中、基底为合法输入之每一构型，过程达一有输出之构型，自彼可能者自起初者亦可能，且起初者以滞后覆盖之。",
+     T('Delivers.adds_nothing')),
+    ("Strictly, on the catalytic cycle. The substrate is possible from the free enzyme with the substrate, and not "
+     "from the free enzyme with the product, which the delivery reaches.",
+     "于催化循环上则严格。自游离之酶与底物处底物可能，自交付所达之游离之酶与产物处则否。",
+     T('Catalysis.narrows')),
+    ("Covering is silent where no course starts. Every move of the catalytic cycle ends bound with the substrate or "
+     "free with the product, and nothing moves from the latter, so no configuration starts a course: every "
+     "configuration covers every other with every lag, and UE10's lagged order ranks nothing there, while the whole "
+     "possible narrows strictly.",
+     "无进程起始处覆盖无言。催化循环之每步皆终于与底物结合或游离而有产物，后者处无步，故无构型起始一进程：每一构型以每一滞后覆盖其他每一构型，"
+     "UE10 之滞后之序于彼无所排，而全部可能严格收窄。",
+     T('Catalysis.into', 'Catalysis.stuck', 'Catalysis.no_course', 'Catalysis.coversLater_all',
+       'Catalysis.not_widensOrLater')),
+    ("Widening can rank the output above the input. On UE10's rising process, every step leading to true, the task "
+     "false to true is performed with a trivial part, its output widens its input at the same offsets, and its input "
+     "covers it with a lag, so UE10's lagged order ranks the output above.",
+     "扩大可排输出于输入之上。于 UE10 之上升过程（每步皆至 true），false 至 true 之任务以平凡部分执行，其输出于同偏移处扩大其输入，"
+     "其输入以滞后覆盖之，故 UE10 之滞后之序排输出于上。",
+     T('RiseTask.task', 'RiseTask.widens')),
+    ("Or the input above the output. On the process where every step leads to false, read with UE10's rising "
+     "admission, the task true to false is performed with a trivial part, and its input widens its output at the same "
+     "offsets, so UE10's lagged order ranks the input above: widening follows deliveries in neither direction.",
+     "或排输入于输出之上。于每步皆至 false 之过程上，以 UE10 上升之所纳读之，true 至 false 之任务以平凡部分执行，其输入于同偏移处扩大其输出，"
+     "故 UE10 之滞后之序排输入于上：扩大于两向皆不随交付。",
+     T('FallTask.process', 'FallTask.task', 'FallTask.fallen', 'FallTask.stays', 'FallTask.admits_zero',
+       'FallTask.widens_back')),
+]
+cited = [n for _, _, ds in groups for n in ds]
+assert len(cited) == len(set(cited)), [n for n in cited if cited.count(n) > 1]
+assert set(cited) == names, (sorted(names - set(cited)), sorted(set(cited) - names))
+laws = [capped('laws', {'en': en, 'zh': zh, 'declarations': ds}, item=True) for en, zh, ds in groups]
+assert len(laws) <= style.ITEM_CAPS_V2['laws'][2], len(laws)
+
+title = capped('title', {'en': 'Tasks and what performs them', 'zh': '任务与执行之者'})
+statement = capped('statement', {
+    'en': "What performs a task is a region of the performing part each delivery ends in, held throughout or only "
+          "restored. Composition holds where deliveries hold or restore what others use and can fail where one changes "
+          "what its task omits. Deliveries carry inclusion of the whole possible, not widening.",
+    'zh': '执行一任务者，乃执行之部分之一区域，每次交付皆终于其中，或全程持守，或仅终时复得。各交付持守或复得他者所用者时合成成立，'
+          '某交付改变其任务所未列者时可失败。交付所带者为全部可能之包含，而非扩大。'})
+hypotheses = [capped('hypotheses', x, item=True) for x in (
+    {'en': "No axiom. Each law holds on every process divided by two readings, the performing part and the substrate, "
+           "or on a witness; the invariable form takes the successor fixed where the presented configuration reaches; the "
+           "composition laws take a "
+           "regular pair and delivery by the moves holding what the other uses; the projections take a division read "
+           "off one process.",
+     'zh': '不加公理。每一律于以二读法（执行之部分与基底）划分之每一过程上或于一见证上成立；恒然之形需所呈构型所达处后继固定；'
+           '合成之律需正则对，及以持守对方所用者之步交付；投影需读自一过程之划分。'},
+    {'en': "Modelling choices: discrete steps; delivery existential and exact, possibly at zero moves, with nothing "
+           "marking where it ends; presentation as co-occurrence in the configurations; a task a relation on one "
+           "substrate type; possibility relative to a division; Possible not pharaonic, PossibleFrom relative to "
+           "which configurations are counted natural.",
+     'zh': '建模之选：离散之步；交付为存在式且精确，可用零步，无物标示其终；呈现为构型中之共现；任务为一基底类型上之关系；'
+           '可能性相对于划分；Possible 非法老式，PossibleFrom 相对于何者被计为自然。'})]
+does_not_show = [capped('does_not_show', x, item=True) for x in (
+    {'en': "That constructor theory's possible is the possible relative to a held part: holding the part throughout is "
+           "sufficient and not needed, as on the catalytic cycle.",
+     'zh': '构造子理论之可能即相对于持守之部分之可能：全程持守该部分充分而非必要，如于催化循环上。', 'kind': 'non-implication'},
+    {'en': "A counterexample to the composition principle as Deutsch states it: his tasks list their unavoidable "
+           "outputs, and listed so the resetting pair is not regular.",
+     'zh': '对 Deutsch 所陈之合成原理之反例：其任务列出不可免之输出，如是列出则重置之对非正则。', 'kind': 'non-implication'},
+    {'en': "Halting and synchronisation, use of one constructor by two tasks at once, networks beyond pairs, and "
+           "invariable delivery where several courses are admitted.",
+     'zh': '停机与同步、一构造子同时为二任务所用、多于一对之网络，以及容许多条进程时之恒然交付。', 'kind': 'scope'},
+    {'en': "The approximate form: constructor theory's possible as a limit, short of perfection, of constructors whose "
+           "errors go to zero, which needs amounts of error.",
+     'zh': '近似之形：构造子理论之可能为误差趋零之构造子之极限（不及完美），需误差之量。', 'kind': 'scope'},
+    {'en': "That the laws fix the division into performing part and substrate: which tasks are possible depends on it.",
+     'zh': '律确定执行之部分与基底之划分：何任务可能依赖于此划分。', 'kind': 'non-implication'},
+    {'en': "Keeping the ability under loss: constructors deteriorate without maintenance, a later step on the World, "
+           "where zero-move delivery does not read whether a state can be kept against change.",
+     'zh': '损耗下之能力保持：构造子无维护则渐坏，为世界上之后续一步；零步交付不读一状态能否抵御改变而保持。', 'kind': 'scope'},
+    {'en': "That widening, or reach, is better: ranking needs C, and the reading here is an AI reading.",
+     'zh': '扩大或可达更好：排序需要 C，此处之读为 AI 之读。', 'kind': 'non-implication'},
+    {'en': "A result no neighbouring field states: the composition laws restate Gogioso and others' process-theoretic "
+           "reading for pairs on processes, and the tower laws are UE11's read at the performer.",
+     'zh': '近邻领域无人陈述之结果：合成之律于过程上就对重述 Gogioso 等之过程理论读法，塔之律乃 UE11 之律读于执行者。',
+     'kind': 'correspondence'})]
+validation_scope = capped('validation_scope', {
+    'en': f'Machine-checked by the consolidated Lean 4.29.1 checker (receipt {RECEIPT_ID}): Becoming.Tasks, '
+          f'{len(names)} declarations, each with an empty axiom report, all cited here; four laws on UE10\'s and '
+          f'UE11\'s definitions sit in the leaf until their owners move them. Built in one session; an independent '
+          f'read-only review by another AI agent (REVIEW-UE12) and a re-check (RECHECK-UE12), its findings '
+          f'taken without a third reading, in study section {N}; not reviewed by a person. Many laws are instances of '
+          f'UE10\'s and UE11\'s (the part-held and tower laws, adds_nothing), so the count is not of results.',
+    'zh': f'Lean 4.29.1 合并检查器实查（回执 {RECEIPT_ID}）：Becoming.Tasks 之 {len(names)} 项声明，公理报告皆空，本记录全引；'
+          f'涉 UE10、UE11 之定义之四律暂居此叶，待其主移之。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE12）并复查'
+          f'（RECHECK-UE12），其所见皆取而未再读，见研究第 {N} 节；未经人审。诸多律乃 UE10、UE11 之律之实例（持守该部分之律、塔之律、adds_nothing），'
+          f'故其数非结果之数。'})
+next_delta = capped('next_delta', {
+    'en': "Keeping the ability under loss on the World, where every state of the performing part decays unless "
+          "renewed; halting; networks beyond pairs; the approximate form; review by a person.",
+    'zh': '世界上损耗下之能力保持（执行之部分之每一状态不更新则衰）；停机；多于一对之网络；近似之形；人之审查。'})
+correspondence = capped('correspondence', {
+    'en': "Deutsch's constructor theory (2013) read on processes: its task, constructor and possible, with delivery "
+          "existential, exact and without halting, Possible not pharaonic and PossibleFrom reading the pharaonic "
+          "requirement; its catalysis, impossible transpose, equal and opposite amounts, additive pattern and regress "
+          "become theorems or witnesses. Gogioso and others (2023) read tasks as "
+          "relations with the attribute preserved in every outcome and the possible tasks as a sub-SMC of Rel; here "
+          "delivery is existential, the parallel case holds on interleavings for pairs, and reuse of one constructor, "
+          "which they leave open, holds for one region in series and in turn. Deutsch and Marletto's locality (2025) "
+          "gives the holding premise for deliveries on their own performer and substrate. Marletto's second law (2016) "
+          "has the shape of the impossible transpose. Graded section by section in UE12's NOTE.",
+    'zh': 'Deutsch 之构造子理论（2013）读于过程之上：其任务、构造子与可能，交付为存在式、精确而无停机，Possible 非法老式，'
+          'PossibleFrom 读其法老式之要求；其催化、不可能之转置、等量相反之量、可加之模式与回归为定理或见证。'
+          'Gogioso 等（2023）以关系读任务，属性于每一结果中保持，可能之任务为 Rel 之子 SMC；此处交付为存在式，并联之情形就对于交错上成立，'
+          '彼所留之一构造子之重用，对一区域串联与轮流成立。Deutsch 与 Marletto 之局域性（2025）给出于自身执行者与基底上之交付之持守前提。'
+          'Marletto 之第二定律（2016）具不可能转置之形。逐节之分级见 UE12 之 NOTE。'})
+counterexamples_text = [
+    {'en': 'The free enzyme performs the task, yet held free at every move, or held unchanged, it delivers nothing '
+           '(Catalysis.not_held, Catalysis.not_held_unchanged).',
+     'zh': '游离之酶执行该任务，然每步皆持其游离或持其不变，则无所交付（Catalysis.not_held、Catalysis.not_held_unchanged）。'},
+    {'en': 'A possible task whose transpose is performed by no region of any reading of a performing part '
+           '(Catalysis.transpose_not_possible).',
+     'zh': '一可能之任务，其转置不为任一执行部分之任一读法之任一区域所执行（Catalysis.transpose_not_possible）。'},
+    {'en': 'A regular pair of possible tasks whose composite is performed by no region of any reading '
+           '(Resetting.composition_fails), also within one interleaving on one substrate '
+           '(ResettingInterleaved.composition_fails_within), and under one part with two regions '
+           '(Resetting.one_part_two_regions).',
+     'zh': '一正则对之可能任务，其合成不为任一读法之任一区域所执行（Resetting.composition_fails）；于一基底上一交错之内亦然'
+           '（ResettingInterleaved.composition_fails_within）；一部分之二区域亦然（Resetting.one_part_two_regions）。'},
+    {'en': 'The holding premise fails, yet the composite is performed (CatalysedSeries.not_holding, '
+           'CatalysedSeries.performs_pair).',
+     'zh': '持守之前提不成立，然合成被执行（CatalysedSeries.not_holding、CatalysedSeries.performs_pair）。'},
+    {'en': 'A possible task not possible from the configurations with no enzyme (Unmade.possible_not_possibleFrom).',
+     'zh': '一可能之任务，不可自无酶之构型而为（Unmade.possible_not_possibleFrom）。'},
+    {'en': 'A task performed with no delivery holding the performers from any level up (FlipTower.not_held).',
+     'zh': '一被执行之任务，无一交付持守任一层以上之执行者（FlipTower.not_held）。'},
+    {'en': 'Raising a substrate, impossible for every reading of the other, is performed with an invariant of the '
+           'process read as the performer (Conserved.performs_with_one).',
+     'zh': '提升一基底，于另一基底之每一读法皆不可能，以过程之不变量读作执行者则被执行（Conserved.performs_with_one）。'},
+    {'en': "Every task each of whose inputs has an output at or ahead of it is performed invariably on UE10's climbing "
+           "process, and the identity task though every move changes the count (ClimbTask.invariably, "
+           "ClimbTask.performs_identity).",
+     'zh': '于 UE10 之攀升过程上，每一输入皆有一输出于其处或其前之每一任务皆恒然被执行；每步皆改变计数，恒等任务仍被执行'
+           '（ClimbTask.invariably、ClimbTask.performs_identity）。'},
+    {'en': 'Two tasks possible with no performing part, not a regular pair, whose composite no reading performs '
+           '(Unregular.composite_not_possible).',
+     'zh': '二任务皆以无执行之部分可能，非正则之对，其合成不为任一读法所执行（Unregular.composite_not_possible）。'},
+    {'en': "A delivered input ranked above its output by same-offset widening, and so by UE10's lagged order "
+           "(FallTask.widens_back).",
+     'zh': '所交付之输入为同偏移之扩大、从而为 UE10 之滞后之序排于其输出之上（FallTask.widens_back）。'},
+    {'en': "On the catalytic cycle the whole possible narrows strictly while UE10's lagged order ranks nothing "
+           "(Catalysis.narrows, Catalysis.not_widensOrLater).",
+     'zh': '于催化循环上，全部可能严格收窄，而 UE10 之滞后之序无所排（Catalysis.narrows、Catalysis.not_widensOrLater）。'}]
+history_entry = {
+    'en': f'{DATE_EN}: added (UE12), tasks and what performs them: constructor theory read on processes; what performs '
+          f'a task is a region restored at the end of each delivery, holding throughout sufficient and not needed; '
+          f'composition by one region, by two under holding, and on interleavings, failing within one interleaving and '
+          f'where a delivery changes what its task does not list; a whole of impossible parts, the additive pattern and '
+          f'the division; the regress within a delivery and in making the performer; deliveries carry inclusion of the '
+          f'whole possible, and widening follows them in neither direction; near-definitional; after a review and a '
+          f're-check; study section {N}.',
+    'zh': f'{DATE_ZH}：新增（UE12），任务与执行之者：构造子理论读于过程之上；执行一任务者为于每次交付之末复得之区域，全程持守充分而非必要；'
+          f'一区域之合成、持守下二区域之合成、交错上之合成，于一交错之内及交付改变其任务所未列者时失败；不可能之部分之可能整体、可加之模式与划分；'
+          f'一次交付之内及造就执行者时之回归；交付所带者为全部可能之包含，扩大于两向皆不随交付；近乎定义；经审查与复查；研究第 {N} 节。'}
+
+
+def lint_errors(rec):
+    found = style.lint(rec)
+    for f in found:
+        print('lint:', f['severity'], f['field'], f['rule'], f['detail'])
+    return [f for f in found if f['severity'] == 'error']
+
+
+# the record's lint (tools/research/style.py), hard rules and warnings, on every text field before anything is written
+assert not lint_errors({'schema_version': 2, 'id': RID, 'title': title, 'statement': statement, 'laws': laws,
+                        'hypotheses': hypotheses, 'does_not_show': does_not_show,
+                        'counterexamples': [{'detail': x} for x in counterexamples_text],
+                        'validation_scope': validation_scope, 'next_delta': next_delta,
+                        'correspondence': correspondence})
+
+if CAPS_ONLY:
+    print('caps: ok;', len(names), 'declarations in', len(groups), 'laws; statement', len(statement['en']),
+          len(statement['zh']), '; validation', len(validation_scope['en']), len(validation_scope['zh']),
+          '; next', len(next_delta['en']), len(next_delta['zh']), '; correspondence', len(correspondence['en']),
+          len(correspondence['zh']), '; laws max', max(len(x['en']) for x in laws), max(len(x['zh']) for x in laws))
+    raise SystemExit(0)
+
+record = {
+    'schema_version': 2,
+    'id': RID,
+    'title': title,
+    'kind': 'theorem',
+    'status': 'recorded-checked',
+    'family': 'F07',
+    'reviewed_at_utc': NOW,
+    'statement': statement,
+    'laws': laws,
+    'hypotheses': hypotheses,
+    'does_not_show': does_not_show,
+    'counterexamples': [{'path': LEAN['Tasks'], 'detail': x} for x in counterexamples_text],
+    'standard_boundaries': ['no-ethical-premise', 'no-evaluation', 'discrete-steps', 'formal-not-empirical',
+                            'names-provisional', 'omission-not-refutation'],
+    'validation_scope': validation_scope,
+    'next_delta': next_delta,
+    'correspondence': correspondence,
+    'canonical_source': LEAN['Tasks'],
+    'aliases': ['Tasks and what performs them', '任务与执行之者', 'constructor theory read on processes',
+                'what performs a task', 'Becoming.Tasks.Performs', 'Becoming.Tasks.Possible',
+                'Becoming.Tasks.Delivers.adds_nothing'],
+    'dependencies': [
+        {'id': RID10, 'relation': 'formal-reuse',
+         'detail': {'en': 'Reaching.Possible, Reaching.Possible.of_reach, Reaching.CoversLater, Reaching.WidensWithLag, '
+                          'Reaching.Widens, Reaching.KeepsWidening and the Rise witness: the possible, lagged covering '
+                          'and widening at the same offsets.',
+                    'zh': 'Reaching.Possible、Reaching.Possible.of_reach、Reaching.CoversLater、Reaching.WidensWithLag、'
+                          'Reaching.Widens、Reaching.KeepsWidening 与 Rise 见证：可能者、滞后覆盖与同偏移之扩大。'}},
+        {'id': RID11, 'relation': 'formal-reuse',
+         'detail': {'en': 'Reaching.heldMoves, Reaching.PossibleHeld, Reach.of_heldMoves, Reach.heldMoves_mono, '
+                          'Reach.same_of_heldMoves, Reaching.reach_held_of_sequence, RuleTower and its held laws, and '
+                          'the four held laws along a course: holding, the tower and the held possible.',
+                    'zh': 'Reaching.heldMoves、Reaching.PossibleHeld、Reach.of_heldMoves、Reach.heldMoves_mono、'
+                          'Reach.same_of_heldMoves、Reaching.reach_held_of_sequence、RuleTower 及其持守之律，与沿进程之四条持守之律：'
+                          '持守、塔与持守时之可能。'}},
+        {'id': 'continuation-relative-to-a-class', 'relation': 'formal-reuse',
+         'detail': {'en': '«而», «逆» and «类»: serial composition and the transpose as the grammar\'s, and a reading '
+                          'the same as a class.',
+                    'zh': '«而»、«逆» 与 «类»：串联合成与转置即语法之所有，读法相同为类。'}},
+        {'id': 'where-a-run-goes-on', 'relation': 'formal-reuse',
+         'detail': {'en': 'Run.cons: a course with a step prefixed, behind lagged covering along a trace.',
+                    'zh': 'Run.cons：前缀一步之进程，沿迹之滞后覆盖所依。'}}],
+    'related': [
+        {'id': RID10,
+         'detail': {'en': 'Its lagged covering extended from a step to reach, so a delivery\'s output is never ranked '
+                          'above its input by widening with a lag, and its lagged order there is same-offset widening, '
+                          'which ranks a delivered output above its input on one witness and below on another.',
+                    'zh': '其滞后覆盖自一步推至可达，故带滞后之扩大从不将交付之输出排于其输入之上；其滞后之序于彼即同偏移之扩大，'
+                          '于一见证上排交付之输出于其输入之上，于另一见证上排于其下。'}},
+        {'id': RID11,
+         'detail': {'en': 'The possible relative to a held part is sufficient for constructor theory\'s performance and '
+                          'not needed: what performs is restored at the end of each delivery; it gives the premise of '
+                          'composition, and what can be done with the part held grows only where the part changes.',
+                    'zh': '相对于持守之部分之可能，于构造子理论之执行充分而非必要：执行者于每次交付之末复得；它给出合成之前提，'
+                          '持守该部分时所能为者仅于该部分改变处增长。'}}],
+    'references': [{'path': LEAN['Tasks'], 'role': 'proof', 'declarations': sorted(names),
+                    'sha256': sha(LEAN['Tasks'])}]
+                  + [{'path': LEAN[m], 'role': 'proof', 'sha256': sha(LEAN[m])}
+                     for m in ('HeldPossible', 'ReachableRanges', 'Horizon', 'Grammar', 'Frame')]
+                  + [{'path': RECEIPT, 'role': 'receipt', 'sha256': sha(RECEIPT)},
+                     {'path': STUDY, 'role': 'integration', 'sha256': sha(STUDY)},
+                     {'path': NOTE, 'role': 'integration', 'sha256': sha(NOTE)},
+                     {'path': REVIEW, 'role': 'integration', 'sha256': sha(REVIEW)},
+                     {'path': RECHECK, 'role': 'integration', 'sha256': sha(RECHECK)},
+                     {'path': CH7, 'role': 'statement', 'sha256': sha(CH7)}],
+    'proof_bindings': [{'source': LEAN['Tasks'], 'receipt': RECEIPT,
+                        'sha256_pointer': '/source_sha256/Becoming.Tasks',
+                        'success_pointer': '/status', 'success_value': 'passed'}],
+    'history': [history_entry],
+}
+deps = [x['id'] for x in record['dependencies']] + [x['id'] for x in record['related']]
+for rid in deps:
+    assert (RECORDS / f'{rid}.json').exists(), rid
+path = RECORDS / f'{RID}.json'
+assert not path.exists()
+path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+print('record:', RID, len(names), 'declarations in', len(groups), 'laws')
+
+
+def load(rid):
+    return json.loads((RECORDS / f'{rid}.json').read_text(encoding='utf-8'))
+
+
+def save(rid, d):
+    (RECORDS / f'{rid}.json').write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+def history(d, en, zh):
+    d['history'].append({'en': f'{DATE_EN}, board item UE12 (study section {N}): {en}',
+                         'zh': f'{DATE_ZH}，工作板条目 UE12（研究第 {N} 节）：{zh}'})
+
+
+# what a course keeps reachable, and where the possible grows: related to the new record
+RELATED = {
+    RID10: {'en': 'Tasks and what performs them: lagged covering extended from a step to reach, so a delivery adds '
+                  'nothing to the whole possible, and on what a configuration reaches the lagged order is same-offset '
+                  'widening, which follows deliveries in neither direction.',
+            'zh': '任务与执行之者：滞后覆盖自一步推至可达，故交付不给全部可能增添任何东西；于一构型所达者上，滞后之序即同偏移之扩大，'
+                  '其于两向皆不随交付。'},
+    RID11: {'en': 'Tasks and what performs them: holding the performing part throughout is sufficient for constructor '
+                  'theory\'s performance and not needed, and the held possible gives the premise of composition.',
+            'zh': '任务与执行之者：全程持守执行之部分于构造子理论之执行充分而非必要，持守时之可能给出合成之前提。'}}
+for rid, detail in RELATED.items():
+    d = load(rid)
+    assert RID not in [x['id'] for x in d['related']]
+    d['related'].append({'id': RID, 'detail': detail})
+    history(d, f'related to {RID}; no statement, next step or declaration changed.',
+            f'与 {RID} 相关联；无一陈述、下一步或声明改变。')
+    save(rid, d)
+print('records related here:', RID10, RID11)

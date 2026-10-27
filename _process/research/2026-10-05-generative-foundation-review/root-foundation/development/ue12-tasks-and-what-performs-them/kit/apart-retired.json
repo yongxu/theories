@@ -1,0 +1,10 @@
+{
+ "about": "Apart-register entries retired by UE12 (27 October 2026): Tasks.ClimbTask.fixed uses them on the base, so they are no longer apart roots. Bytes as they stood in THEOREM-CONNECTIVITY-APART.json.",
+ "roots": {
+  "Becoming.«定后之逐点»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
+  }
+ }
+}

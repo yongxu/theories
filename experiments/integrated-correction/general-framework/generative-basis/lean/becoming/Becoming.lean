@@ -96,6 +96,7 @@ import Becoming.EventualWideningInstances
 import Becoming.ComparingCourses
 import Becoming.ReachableRanges
 import Becoming.HeldPossible
+import Becoming.Tasks
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1394,6 +1395,46 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`RaisedRule.ceases`, `CopyDown.ceases`); with the rule raised at every other step, renewal without
   end holds as well (`RaisedEveryOther.both`). Each law is near-definitional or a witness. A leaf
   (board item UE11).
+* `Becoming.Tasks` (L1): constructor theory's tasks and what performs them, read on any process
+  divided into a performing part (`part`) and a substrate (`sub`), a task a relation on the
+  substrate (`Tasks.Input`). A region `K` of the part performs a task (`Tasks.Performs`) where it is
+  presented with every legitimate input (`Tasks.Presented`) and the process reaches from each such
+  configuration an output with the part in `K` again (`Tasks.Delivers`), which is having an output
+  possible with the part in `K` (`Tasks.delivers_iff_possible`), invariable where the successor is
+  fixed at what the presented configuration reaches, with no halting (`Tasks.Delivers.invariably`,
+  `Tasks.ClimbTask.invariably`); a task is possible where some region performs it (`Tasks.Possible`),
+  and possible from natural configurations where the performer can also be made from one
+  (`Tasks.PossibleFrom`, `Tasks.Unmade.possible_not_possibleFrom`). Delivered by the moves holding
+  any relation, a task is delivered (`Tasks.Delivers.of_heldMoves`), not conversely: on a catalytic
+  cycle what performs is restored at the end, not held (`Tasks.Catalysis.not_held`,
+  `Tasks.Catalysis.not_held_unchanged`), and the task's transpose `«逆»` is performed by no region of
+  any reading of a performing part (`Tasks.Catalysis.transpose_not_possible`). One region delivers a
+  regular pair in series, the grammar's `«而»` (`Tasks.Delivers.serial`, `Tasks.Performs.serial`),
+  and the pair must be regular (`Tasks.Unregular.composite_not_possible`); two regions together
+  deliver where each delivers by the moves holding what the other uses
+  (`Tasks.Delivers.serial_holding`, `Tasks.Delivers.parallel_holding`), sufficient and not needed
+  (`Tasks.CatalysedSeries.performs_pair`), which interleaving gives, possibility read in each process
+  (`Tasks.Possible.serial_interleaveOn`, `Tasks.Possible.parallel_interleave`,
+  `Tasks.Possible.parallel_within`); within one interleaving on one substrate, and where a delivery
+  changes what its task does not list, composition fails by any means
+  (`Tasks.ResettingInterleaved.composition_fails_within`, `Tasks.Resetting.composition_fails`,
+  `Tasks.Resetting.listed_not_regular`). On two substrates passing a unit the additive pattern of a
+  conservation law holds for readings of the other substrate, and an invariant read as the performer
+  performs each single task (`Tasks.Conserved.additive_pattern`,
+  `Tasks.Conserved.performs_with_one`). On a tower of performers with no top what is reached is
+  reached with the performers from some level up held (`Tasks.tower_reach_held`), so every delivery,
+  and every making of a performer from a natural configuration, is had with them held
+  (`Tasks.tower_delivers_iff_held`, `Tasks.tower_made_held`), not so on a tower changing every level
+  at once (`Tasks.FlipTower.not_held`). What can be done with the part held
+  (`Tasks.PossibleWithPartHeld`) grows only across steps changing the part
+  (`Tasks.changes_of_partHeldGrows`). A delivery adds nothing to the whole possible
+  (`Tasks.Delivers.adds_nothing`), strictly narrowing it on the catalytic cycle
+  (`Tasks.Catalysis.narrows`), while widening what can be reached follows deliveries in neither
+  direction: on what a configuration reaches the lagged order is same-offset widening
+  (`Reaching.widensOrLater_iff_of_reach`), which ranks a delivered output above its input
+  (`Tasks.RiseTask.widens`) or below it (`Tasks.FallTask.widens_back`), and where no course starts
+  covering ranks nothing (`Tasks.Catalysis.not_widensOrLater`). Each law is near-definitional or a
+  witness. A leaf (board item UE12).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

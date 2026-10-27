@@ -75,7 +75,7 @@ Ren, 12 October 2026, the goal: “move towards 100%, you can spawn a few agents
 - related, not a proved adapter: [lifting-where-branching-is-finite](lifting-where-branching-is-finite.md). Answers its next step, a run without a selection: within finitely many configurations none is needed, where a test recognizes the moves a run is built by search, and in general it is exactly dependent choice.
 - related, not a proved adapter: [what-a-law-of-the-whole-and-no-part-takes](what-a-law-of-the-whole-and-no-part-takes.md). Likewise fixes the exact place of a principle of reasoning: there a counterexample is exactly the weak limited principle as a rule; here a run is exactly dependent choice.
 
-**Used by:** [conditions-kept-together](conditions-kept-together.md) · [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) · [where-the-possible-grows](where-the-possible-grows.md)
+**Used by:** [conditions-kept-together](conditions-kept-together.md) · [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [tasks-and-what-performs-them](tasks-and-what-performs-them.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) · [where-the-possible-grows](where-the-possible-grows.md)
 
 <a id="sources--来源"></a>
 ### Sources

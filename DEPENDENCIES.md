@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-475 registered results: 444 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1082 curated edges join 403 results to the results they draw on.
+476 registered results: 445 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1086 curated edges join 404 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -333,6 +333,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [synonyms-and-coined-forms][] ← <a id="synonyms-and-coined-forms--a-code-formed-between-formations"></a>[a-code-formed-between-formations][]
 - [taking-what-most-hold][] ← <a id="taking-what-most-hold--a-code-formed-between-formations"></a>[a-code-formed-between-formations][]
 - [target-capture][] ← <a id="target-capture--evolution-on-descent"></a>[evolution-on-descent][] · <a id="target-capture--laws-of-one-step"></a>[laws-of-one-step][] · <a id="target-capture--recurrence-without-premise"></a>[recurrence-without-premise][]
+- [tasks-and-what-performs-them][] ← <a id="tasks-and-what-performs-them--what-a-course-keeps-reachable"></a>[what-a-course-keeps-reachable][] · <a id="tasks-and-what-performs-them--where-the-possible-grows"></a>[where-the-possible-grows][] · <a id="tasks-and-what-performs-them--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="tasks-and-what-performs-them--where-a-run-goes-on"></a>[where-a-run-goes-on][]
 - [testing-within-couplings][] ← <a id="testing-within-couplings--feedback-and-reach"></a>[feedback-and-reach][] · <a id="testing-within-couplings--levels-of-closure"></a>[levels-of-closure][] · <a id="testing-within-couplings--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="testing-within-couplings--four-cases-of-a-part"></a>[four-cases-of-a-part][]
 - [testing-within-the-net][] ← <a id="testing-within-the-net--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
 - [tests-fix-likeness-where-determined][] ← <a id="tests-fix-likeness-where-determined--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="tests-fix-likeness-where-determined--identification-where-bounded"></a>[identification-where-bounded][]
@@ -768,6 +769,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [synonyms-and-coined-forms]: theories/becoming/results/records/synonyms-and-coined-forms.md
 [taking-what-most-hold]: theories/becoming/results/records/taking-what-most-hold.md
 [target-capture]: theories/becoming/results/records/target-capture.md
+[tasks-and-what-performs-them]: theories/becoming/results/records/tasks-and-what-performs-them.md
 [testing-within-couplings]: theories/becoming/results/records/testing-within-couplings.md
 [testing-within-the-net]: theories/becoming/results/records/testing-within-the-net.md
 [tests-fix-likeness-where-determined]: theories/becoming/results/records/tests-fix-likeness-where-determined.md

@@ -484,6 +484,13 @@
         "en": "Rules that change themselves read in the grammar's regularity; here read on what each configuration admits: the possible with the rule held grows only where the rule changes.",
         "zh": "于语法之常性中读自身改变之规则；此处读于各构型所纳：持守规则时之可能仅于规则改变处增长。"
       }
+    },
+    {
+      "id": "tasks-and-what-performs-them",
+      "detail": {
+        "en": "Tasks and what performs them: holding the performing part throughout is sufficient for constructor theory's performance and not needed, and the held possible gives the premise of composition.",
+        "zh": "任务与执行之者：全程持守执行之部分于构造子理论之执行充分而非必要，持守时之可能给出合成之前提。"
+      }
     }
   ],
   "references": [
@@ -703,6 +710,10 @@
     {
       "en": "27 October 2026: added (UE11), where the possible grows: a move adds nothing to the possible under its process; the possible relative to what is held grows only across a step changing what is held and keeps widening only where it changes without end, which does not suffice and which a course that only returns never has; a rule changing its own rule and a tower of rules with no top add nothing to the whole possible, every possibility of the tower had below some height, on the root as reach over a sequence growing coarser; growth relative to what is held and renewal without end are different relations; near-definitional; after a review and a re-check; study section 429.",
       "zh": "2026年10月27日：新增（UE11），可能者于何处增长：一步不给其过程下之可能增添任何东西；相对于所持守者之可能仅于改变所持守者之步上增长，仅当该部分无尽地改变时持续扩大，而此不足，只回返之进程亦从无之；改变自身规则之规则与无顶之规则塔皆不给全部可能增添任何东西，塔之每一可能皆于某高度之下得之，于根上即渐粗之列上之及；相对于所持守者之增长与生生为不同之关系；近乎定义；经审查与复查；研究第 429 节。"
+    },
+    {
+      "en": "28 October 2026, board item UE12 (study section 430): related to tasks-and-what-performs-them; no statement, next step or declaration changed.",
+      "zh": "2026年10月28日，工作板条目 UE12（研究第 430 节）：与 tasks-and-what-performs-them 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

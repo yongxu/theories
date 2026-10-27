@@ -1896,6 +1896,11 @@
    "base": "old-base",
    "note": "P62 Capture"
   },
+  "tasks-and-what-performs-them": {
+   "region": "significance",
+   "base": "frame",
+   "note": "Tasks UE12: constructor theory read on processes (a region of the performing part restored at the end of each delivery, holding sufficient and not needed; composition by one region, by two under holding and on interleavings, failing within one interleaving and where a delivery changes what its task does not list; the additive pattern and the division; the regress; a delivery adds nothing to the whole possible, and widening follows deliveries in neither direction)"
+  },
   "testing-within-couplings": {
    "region": "knowing",
    "base": "old-base",
@@ -3887,6 +3892,11 @@
    "region": "method",
    "base": "old-base",
    "note": "law of whole and no part; WLPO calibration (P126)"
+  },
+  "Becoming.Tasks": {
+   "region": "significance",
+   "base": "frame",
+   "note": "UE12 tasks and what performs them"
   },
   "Becoming.Testing": {
    "region": "knowing",

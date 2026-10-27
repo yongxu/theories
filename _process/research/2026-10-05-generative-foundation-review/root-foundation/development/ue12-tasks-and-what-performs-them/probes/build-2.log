@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue12-tasks-and-what-performs-them/probes/tree",
+  "modules": 76,
+  "ran": [
+    "Becoming.TasksProbe",
+    "BecomingTasksProbeAxiomAudit"
+  ],
+  "reused": 75,
+  "unclean": [],
+  "audits": {
+    "Becoming.TasksProbe": {
+      "theorems": 39,
+      "declarations": 47,
+      "with_axioms": {}
+    }
+  }
+}

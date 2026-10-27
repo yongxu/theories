@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/ue12clash3",
+  "modules": 335,
+  "ran": [
+    "Becoming",
+    "BecomingAxiomAudit"
+  ],
+  "reused": 334,
+  "unclean": [],
+  "audits": {
+    "Becoming": {
+      "theorems": 0,
+      "declarations": 0,
+      "with_axioms": {}
+    }
+  }
+}

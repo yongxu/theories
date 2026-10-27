@@ -2,6 +2,14 @@
 
 27 October 2026. An AI-written design for item 5 of the [UE plan](../ue-unified-explanation/PLAN.md), constructor theory. Claimed on the board on 27 October 2026, after UE11 landed (`e561ca2b5`). Quotations are checked against the text of Deutsch's paper (arXiv:1210.7439v2, revised December 2012) and of Gogioso and others (arXiv:2401.05364v1).
 
+**Superseded in part (27 October 2026).** Where this design and the [note](NOTE.md) differ, the note holds, after the [independent review](REVIEW-UE12.md):
+- What performs a task is restored at the end of each delivery, not held, so §1's first question is answered no. Holding is sufficient and not needed, for performing and for composition (T1–T4).
+- The coupled witness, renamed `Resetting`, shows composition failing where a delivery changes what its task does not list. It is not a premise about which processes are the laws (T4).
+- The tower law is a regress within one delivery; the pharaonic requirement is read by `PossibleFrom` (T6).
+- T6's `RuleTower.possible_iff_held` is `Tasks.tower_delivers_iff_held` here, and §6's `Tasks.Doable` is `Tasks.PossibleWithPartHeld`.
+- §4's "calibration" is not the glossary's sense, and the note does not use it.
+- The order possible tasks carry is the inclusion of the whole possible, which a delivery never enlarges, not widening, which follows deliveries in neither direction (the [re-check](RECHECK-UE12.md)'s R1).
+
 ## 1. The question
 
 Constructor theory states the laws of physics as statements about which tasks are possible, which are impossible, and why (Deutsch 2013, arXiv:1210.7439, *Synthese* 190:4331–4359).

@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue12-tasks-and-what-performs-them/clash",
+  "modules": 335,
+  "ran": [
+    "Becoming",
+    "BecomingAxiomAudit"
+  ],
+  "reused": 334,
+  "unclean": [],
+  "audits": {
+    "Becoming": {
+      "theorems": 0,
+      "declarations": 0,
+      "with_axioms": {}
+    }
+  }
+}

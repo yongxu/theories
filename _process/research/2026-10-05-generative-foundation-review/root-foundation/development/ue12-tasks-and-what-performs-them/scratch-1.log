@@ -1,0 +1,46 @@
+Becoming/Tasks.lean:247:76: error: Application type mismatch: The argument
+  outT'
+has type
+  T' (sub' t) (sub' u)
+but is expected to have type
+  T' (Prod.snd (?m.294 s inKL x✝ w✝ out out' t reach inK outT kept u reach' inL outT' kept')) (sub' u)
+in the application
+  Eq.subst (congrArg Prod.snd ?m.215) outT'
+Becoming/Tasks.lean:394:14: error: Application type mismatch: The argument
+  T
+has type
+  X → X → Prop
+of sort `Type` but is expected to have type
+  Performs ?m.42 ?m.43 ?m.44 ?m.45 ?m.46
+of sort `Prop` in the application
+  serial T
+Becoming/Tasks.lean:521:7: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/Tasks.lean:580:4: error: Type mismatch
+  Nat.succ_ne_zero 0 (Eq.trans (Eq.symm (congrArg Prod.snd atOne)) atZero)
+has type
+  False
+but is expected to have type
+  (fun s => s.snd = 0 ∨ s = (false, 1)) x✝
+Becoming/Tasks.lean:765:59: error: Invalid pattern: Not enough arguments to `isFalse`; expected 1 explicit argument
+
+Hint: To ignore all remaining arguments, use the ellipsis notation `..`
+Becoming/Tasks.lean:767:19: error: Invalid pattern: Not enough arguments to `isFalse`; expected 1 explicit argument
+
+Hint: To ignore all remaining arguments, use the ellipsis notation `..`
+Becoming/Tasks.lean:777:27: error: Invalid pattern: Not enough arguments to `isTrue`; expected 1 explicit argument
+
+Hint: To ignore all remaining arguments, use the ellipsis notation `..`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue12-tasks-and-what-performs-them/tree",
+  "modules": 75,
+  "ran": [
+    "Becoming.Tasks"
+  ],
+  "reused": 74,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Tasks"
+}

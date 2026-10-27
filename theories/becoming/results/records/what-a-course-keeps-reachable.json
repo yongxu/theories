@@ -628,6 +628,13 @@
         "en": "Where the possible grows: its third law read on a part held, a rule changing its own rule and a tower of rules with no top; the possible relative to what is held grows only where what is held changes.",
         "zh": "可能者于何处增长：其第三律读于持守之部分、改变自身规则之规则与无顶之规则塔；相对于所持守者之可能仅于所持守者改变处增长。"
       }
+    },
+    {
+      "id": "tasks-and-what-performs-them",
+      "detail": {
+        "en": "Tasks and what performs them: lagged covering extended from a step to reach, so a delivery adds nothing to the whole possible, and on what a configuration reaches the lagged order is same-offset widening, which follows deliveries in neither direction.",
+        "zh": "任务与执行之者：滞后覆盖自一步推至可达，故交付不给全部可能增添任何东西；于一构型所达者上，滞后之序即同偏移之扩大，其于两向皆不随交付。"
+      }
     }
   ],
   "references": [
@@ -952,6 +959,10 @@
     {
       "en": "27 October 2026, board item UE11 (study section 429): related to where-the-possible-grows; no statement, next step or declaration changed.",
       "zh": "2026年10月27日，工作板条目 UE11（研究第 429 节）：与 where-the-possible-grows 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "28 October 2026, board item UE12 (study section 430): related to tasks-and-what-performs-them; no statement, next step or declaration changed.",
+      "zh": "2026年10月28日，工作板条目 UE12（研究第 430 节）：与 tasks-and-what-performs-them 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

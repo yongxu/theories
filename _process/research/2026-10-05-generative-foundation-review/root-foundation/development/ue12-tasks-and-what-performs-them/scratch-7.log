@@ -1,0 +1,14 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue12-tasks-and-what-performs-them/tree",
+  "modules": 75,
+  "ran": [],
+  "reused": 76,
+  "unclean": [],
+  "audits": {
+    "Becoming.Tasks": {
+      "theorems": 128,
+      "declarations": 167,
+      "with_axioms": {}
+    }
+  }
+}

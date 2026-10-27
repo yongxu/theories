@@ -4322,11 +4322,6 @@
    "category": "support",
    "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
   },
-  "Becoming.«定后之逐点»": {
-   "module": "Becoming.GrammarLaws",
-   "category": "support",
-   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
-  },
   "Becoming.«定后环则所及皆返»": {
    "module": "Becoming.GrammarLaws",
    "category": "general-structure",
@@ -4426,6 +4421,26 @@
    "module": "Becoming.GrammarPath",
    "category": "general-structure",
    "reason": "how what lies outside is divided bears on the condition at a member's class only through what is alike to an effect that leaves the class, with no hypothesis that the member conditions something; «闭则外分无关» now follows from the own form, «外分唯系己出之同» (rule 9), which needs it to: a law of every relation and class on any carrier"
+  },
+  "Becoming.Tasks.Conserved.holdsOne_eq_xor": {
+   "module": "Becoming.Tasks",
+   "category": "model-witness",
+   "reason": "whether the two substrates of the conserved-amount witness together hold one unit is their exclusive or, case by case, naming no process: a witness of Becoming.Tasks (UE12), whose process keeps that reading at every move (Conserved.holdsOne_kept)"
+  },
+  "Becoming.Tasks.Conserved.holdsOne_recodes": {
+   "module": "Becoming.Tasks",
+   "category": "model-witness",
+   "reason": "with the first substrate, whether the two substrates of the conserved-amount witness together hold one unit recodes their configuration one to one, case by case, naming no process: a witness of Becoming.Tasks (UE12), whose division performs the four single tasks (Conserved.performs_with_one)"
+  },
+  "Becoming.Tasks.Resetting.listed_not_regular": {
+   "module": "Becoming.Tasks",
+   "category": "model-witness",
+   "reason": "the resetting witness's two tasks, listed with the second part that every delivery of the first sets off, are not a regular pair, naming only the tasks: a witness of Becoming.Tasks (UE12), whose process is in Resetting.not_holding and Resetting.composition_fails"
+  },
+  "Becoming.Tasks.Unregular.not_regular": {
+   "module": "Becoming.Tasks",
+   "category": "model-witness",
+   "reason": "the unregular witness's two tasks, 0 to 1 or 2 and 2 to 3, are not a regular pair, naming only the tasks: a witness of Becoming.Tasks (UE12), whose process is in Unregular.composite_not_possible"
   }
  },
  "instances": {
