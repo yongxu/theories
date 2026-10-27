@@ -88,6 +88,8 @@ Closure is the reflexive-transitive closure of a relation read as the least clos
 - **formal-reuse**: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). Weighting.IncludesOn, ExceedsOn, WidensOn and MixedOn, read as the grammar's over the listed items.
 - related, not a proved adapter: [balance-from-conservation-along-a-relation](balance-from-conservation-along-a-relation.md). Transfers along a relation balance a step exactly where the total is conserved on every family it closes: where a derivation of balance under a relation other than the one would begin.
 
+**Used by:** [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

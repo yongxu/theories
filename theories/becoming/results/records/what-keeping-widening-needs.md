@@ -56,7 +56,7 @@ Canonical source: [KeepingWidening.lean](../../../../experiments/integrated-corr
 <a id="next--下一步"></a>
 ## Next
 
-Comparing two courses on admitted ranges is done (comparing-two-courses-on-what-they-admit), what a course keeps reachable and what carries its openings remaining; growth by kinds not given in advance; a reading on which 全生成 and keeping widening hold together; review by a person.
+Comparing two courses on admitted ranges and on what they keep reachable is done (comparing-two-courses-on-what-they-admit, what-a-course-keeps-reachable), what carries their openings remaining; growth by kinds not given in advance; a reading on which 全生成 and keeping widening hold together; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -81,6 +81,7 @@ Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evoluti
 - **formal-reuse**: [loops-within-what-a-law-reads](loops-within-what-a-law-reads.md). Thresholds.le_of_not_not.
 - related, not a proved adapter: [eventual-widening](eventual-widening.md). Its first carrier form is superseded by the recency form here; its witnesses are restated for it.
 - related, not a proved adapter: [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md). Comparing two courses on what they admit, which no law here does.
+- related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). What a course keeps reachable: covering implies inclusion now, so it ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -113,6 +114,7 @@ Aliases: `What keeping widening needs, and what carries it`, `持续扩大需要
 - 26 October 2026, board item UE9 (study section 421): the next step updated: two courses are compared on admitted ranges in comparing-two-courses-on-what-they-admit; no declaration changed.
 - 26 October 2026, board item UE9 (study section 421): the passing laws stated with requirements never loosening, a hypothesis beside the World premises, as UE8's first review found (the statement, law 9 and the premises, with 07 §2 and the Open items of 07 and 02); the statement's last sentence, none compares two courses, left to the first does-not-show item for the length cap; no declaration changed.
 - 26 October 2026, board item DF1b (study section 422): Food-generated autocatalytic sets cited to their formalization, Steel 2000 and Hordijk and Steel 2004 (Journal of Theoretical Biology 227:451-461); the 2012 papers extend it.
+- 27 October 2026, board item UE10 (study section 424): the next step updated: what a course keeps reachable is read in what-a-course-keeps-reachable; no declaration changed.
 
 </details>
 

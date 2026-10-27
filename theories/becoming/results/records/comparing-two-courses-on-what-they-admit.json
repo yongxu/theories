@@ -491,8 +491,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T212948.819150Z）：Becoming.ComparingCourses 之 244 项声明，公理报告皆空，本记录全引；Web.Linked.append 推广已落地之 Web.Linked.snoc，移至下层前与之并存。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE9），其所见皆采，并作复查（RECHECK-UE9），其所见除一项外皆采，见研究第 421 节；未经人审。"
   },
   "next_delta": {
-    "en": "07's other two candidates, what a course keeps reachable and what carries its openings; a reason, or a premise, for counting early steps or reading only tails; review by a person.",
-    "zh": "07 的另两个候选：进程保持可达者与承载其开出者；计早期之步或只读尾的理由或前提；人之审查。"
+    "en": "What a course keeps reachable is read (what-a-course-keeps-reachable): with a lag it is built as this record's lagged order is, on families of courses; what carries a course's openings remains; a reason, or a premise, for counting early steps or reading only tails; review by a person.",
+    "zh": "进程保持可达者已读（what-a-course-keeps-reachable）：带滞后时如本记录之滞后之序那样构于进程之族；承载进程之开出者仍待；计早期之步或只读尾的理由或前提；人之审查。"
   },
   "correspondence": {
     "en": "Infinite ethics and social choice: law 1's one-pair form has the shape of Askell's (2018) incomparability argument, in which Pareto, transitivity, permutability and invariance across qualitative duplicates force incomparability between infinite worlds, here in one direction only; the exchange is an instance of relative anonymity, or permutation invariance (Sen 1984; Asheim, d'Aspremont and Banerjee 2010; Goodman and Lederman 2024); Diamond (1965) and Basu and Mitra (2003) are distant; ranking by the number of options (Pattanaik and Xu 1990) is the neighbour for counting scale. Suzumura consistency (1976) and Szpilrajn's extension theorem (1930) are vocabulary only. Read by the AI, eventual widening is decided by tails, like a dictatorship of the future (Chichilnisky 1996). Delayed simulation for Büchi automata (Etessami, Wilke and Schuller 2001; 2005) is the analogue of a lag for each admission, delay games with bounded lookahead (Hosch and Landweber 1972; Holtmann, Kaiser and Thomas 2012) of a uniform lag; overtaking and catching up (Atsumi 1965; von Weizsäcker 1965; Gale 1967; Brock 1970) are scalar and distant. Graded in UE9's NOTE and REVIEW-UE9; the readings are the AI's.",
@@ -578,6 +578,13 @@
       "detail": {
         "en": "C read as widening; no order here is adopted by C, and choosing one is a further premise.",
         "zh": "读作扩大的 C；此处无一序为 C 所采，选取其一是又一前提。"
+      }
+    },
+    {
+      "id": "what-a-course-keeps-reachable",
+      "detail": {
+        "en": "What a course keeps reachable: same-offset covering implies inclusion now, and the lagged order built on families of courses decides one witness's pair, not every such pair.",
+        "zh": "进程保持可达者：同偏移之覆盖蕴含当下之包含，构于进程之族之滞后之序判定一见证之对，非每一此种对。"
       }
     }
   ],
@@ -917,6 +924,10 @@
     {
       "en": "26 October 2026: added (UE9), comparing two courses on what they admit: the cycle of crossed rankings on the two-sided web and its scope, widening with a lag and the tail order, which decide UE4's lag, the first ranking a pair opposite to eventual widening, and keeping what the other keeps; near-definitional; after a review and a re-check; study section 421.",
       "zh": "2026年10月26日：新增（UE9），就所纳比较两个进程：交叉排序之环及其范围，带滞后的扩大与尾序（二者判定 UE4 之滞后，前者对一对进程之排序与最终扩大相反），以及保有对方所保有者；近乎定义；经审查与复查；研究第 421 节。"
+    },
+    {
+      "en": "27 October 2026, board item UE10 (study section 424): the next step updated: what a course keeps reachable is read in what-a-course-keeps-reachable; no declaration changed.",
+      "zh": "2026年10月27日，工作板条目 UE10（研究第 424 节）：下一步随之更新：进程保持可达者于 what-a-course-keeps-reachable 中得读；无一声明改变。"
     }
   ]
 }

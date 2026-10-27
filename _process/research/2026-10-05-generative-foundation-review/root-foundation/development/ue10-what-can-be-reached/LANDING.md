@@ -45,7 +45,15 @@ All commands run from the landing worktree's root, with `K=_process/research/202
 
 ## What the run showed
 
-To be filled from the run.
+27 October 2026, in the landing worktree from main at `f7f408b3f`, the commit that claimed the head of the queue.
+- `integrate_ue10.py`: every edit applied once.
+- The core checker: receipt `20261027T050540.882212Z`, passed, 333 modules; `Becoming.ReachableRanges` in the core layer with 135 theorems in 196 declarations, every axiom report empty.
+- Connectivity: `--check` and `--write` passed.
+- `texts_ue10.py`: study section 424, since OC4 took 423; 08's receipt counts recounted from the receipt.
+- `make_records_ue10.py`: the new record cites all 196 declarations in 23 laws; the three records pointed to it.
+- `repoint_ue10.py`: no record drifted from UE10's edits, so nothing was re-pointed.
+- `board_ue10.py`: UE10's row moved to the history file, the queue entry written in front and the latest receipt named.
+- `make research-render research-check research-links research-test`: no errors and no source drift, 0 broken links, the tests OK (one skipped). The check's 99 reading-drift entries are main's own (the same count on `f7f408b3f`).
 
 ## After landing
 

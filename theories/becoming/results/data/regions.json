@@ -1991,6 +1991,11 @@
    "base": "general",
    "note": "symmetry; hexagram instance"
   },
+  "what-a-course-keeps-reachable": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReachableRanges UE10: what a course keeps reachable (covering implies inclusion now, the lagged order on families of courses, nothing added to the whole possible, realized and reachable widening opposed, covering as the lower preorder)"
+  },
   "what-a-cut-loses": {
    "region": "map",
    "base": "old-base",
@@ -3337,6 +3342,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "what C ranks: sharing over consumption, restraint over overdraw"
+  },
+  "Becoming.ReachableRanges": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "UE10 what a course keeps reachable"
   },
   "Becoming.ReadInTime": {
    "region": "map",

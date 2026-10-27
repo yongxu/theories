@@ -67,7 +67,7 @@ Canonical source: [ComparingCourses.lean](../../../../experiments/integrated-cor
 <a id="next--下一步"></a>
 ## Next
 
-07's other two candidates, what a course keeps reachable and what carries its openings; a reason, or a premise, for counting early steps or reading only tails; review by a person.
+What a course keeps reachable is read (what-a-course-keeps-reachable): with a lag it is built as this record's lagged order is, on families of courses; what carries a course's openings remains; a reason, or a premise, for counting early steps or reading only tails; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -88,6 +88,9 @@ Infinite ethics and social choice: law 1's one-pair form has the shape of Askell
 - related, not a proved adapter: [eventual-widening](eventual-widening.md). Its lag is decided here, by widening with a lag and by the tail order, which contains eventual widening; the two rank a pair oppositely.
 - related, not a proved adapter: [what-keeping-widening-needs](what-keeping-widening-needs.md). What one course keeping widening needs; here two courses are compared on what they admit.
 - related, not a proved adapter: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). C read as widening; no order here is adopted by C, and choosing one is a further premise.
+- related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). What a course keeps reachable: same-offset covering implies inclusion now, and the lagged order built on families of courses decides one witness's pair, not every such pair.
+
+**Used by:** [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -116,6 +119,7 @@ Aliases: `Comparing two courses on what they admit`, `就所纳比较两个进�
 ### History
 
 - 26 October 2026: added (UE9), comparing two courses on what they admit: the cycle of crossed rankings on the two-sided web and its scope, widening with a lag and the tail order, which decide UE4's lag, the first ranking a pair opposite to eventual widening, and keeping what the other keeps; near-definitional; after a review and a re-check; study section 421.
+- 27 October 2026, board item UE10 (study section 424): the next step updated: what a course keeps reachable is read in what-a-course-keeps-reachable; no declaration changed.
 
 </details>
 

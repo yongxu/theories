@@ -94,6 +94,7 @@ import Becoming.Regions
 import Becoming.EventualWidening
 import Becoming.EventualWideningInstances
 import Becoming.ComparingCourses
+import Becoming.ReachableRanges
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1236,7 +1237,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   what it admits at some step (`Web.KeepsWidening.eventually_widens_of_within`). Near-definitional.
   A leaf: a tool, the long-run reading of widening, until a gain or giver law imports it (board
   item UE4).
-* `Becoming.EventualWideningInstances` (L1): eventual widening's instances and witnesses, and what
+* `Becoming.EventualWideningInstances` (L2, through `Becoming.Weightings`): eventual widening's
+  instances and witnesses, and what
   carries a widening. Read on the sequences of levels, where some course eventually widens a second,
   eventually widening it and its complement are dense (the first course varied, the second fixed),
   so the verdict is neither verifiable nor refutable and a practice fixed by the record can keep it
@@ -1275,7 +1277,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Loosening`, `Source`, `Saturated`). Each law is a restatement or near-definitional, and none
   compares two courses. A leaf: it joins EventualWidening with Gain, Flow and the map, which no
   landed module joins (board item UE7).
-* `Becoming.ComparingCourses` (L1): what a comparison of two courses can be on what they admit.
+* `Becoming.ComparingCourses` (L2, through `Becoming.EventualWideningInstances`): what a
+  comparison of two courses can be on what they admit.
   Two rankings crossed by widening close a cycle (`Web.ranks_self_of_crossed`). On a web of
   formations on two sides (`Sides.web`), no strict partial order containing widening ranks every
   course keeping widening by name from the first step above every course that admits alike from
@@ -1305,6 +1308,49 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   pair unranked both ways (`Sides.keeping_reading`). Each law is near-definitional. A leaf:
   alternative comparisons and their witnesses, which no module uses and C's order does not adopt
   (board item UE9).
+* `Becoming.ReachableRanges` (L1): what a course keeps reachable, read on any process through what
+  each configuration admits. Covering (`Reaching.Covers`) is a preorder and widening what can be
+  reached (`Reaching.Widens`) is irreflexive, transitive and not covered back
+  (`Reaching.Widens.trans`, `Reaching.widens_not_covered`). Covering implies inclusion now
+  (`Reaching.Covers.now`), so widening what can be reached never ranks a configuration above one
+  that starts a course and admits now what it does not (`Reaching.not_widens_of_wider_now`; the
+  premise needed, `EndsNow.keeps_widening_above_wider_now`), nor, with the realized courses starting
+  at their configurations, does the lexical order (`Reaching.not_above_wider_now`); on a determined
+  process widening what can be reached is the strict part of range inclusion of the two courses
+  (`Reaching.widens_iff_of_unique`). With a lag (`Reaching.CoversLater`, `Reaching.WidensWithLag`),
+  widening what can be reached or widening it with a lag (`Reaching.WidensOrLater`), built as UE9's
+  lagged order is, is a strict partial order containing it that never ranks a configuration above
+  one covering it (`Reaching.WidensOrLater.trans`, `Reaching.WidensOrLater.not_covered`), and along
+  a course it ranks a successor above its predecessor exactly where same-offset widening does
+  (`Run.widensOrLater_next_iff`). It decides one witness's pair where same-offset covering is silent
+  (`WiderNow.silent`, `WiderNow.decided`), not every such pair (`WiderNow.TwoSided.silent`); where
+  the configuration wider now also widens what can be reached over the climb, it ranks that
+  configuration above, as it must (`WiderNow.Full.not_silent`,
+  `Reaching.WidensOrLater.not_reversed`). Both orders satisfy C on the frame of reachable ranges and
+  differ on the first witness, so its verdict there is a premise beyond C
+  (`Reaching.comparison_widens`, `Reaching.comparison_widensOrLater`,
+  `WiderNow.comparison_undecided`). The whole possible is realizability within moves
+  (`Reaching.possible_iff_withinMoves`); along a course nothing is added to it
+  (`Run.possible_of_next`), and where reachable configurations start courses covering carries it
+  (`Reaching.Covers.possible`; the premise needed, `NoCourse.widens_reversed`). With a lag of one
+  step every configuration of a course covers its successor (`Run.coversLater_next`), and on a
+  determined process a rise is the course one step on strictly including the course
+  (`Reaching.widens_next_iff_rising`). A chain keeping widening is held by no list
+  (`Reaching.KeepsWidening.not_listed`; by name, `Web.keepsWidening_iff_chain`), so along a course
+  the possible within a horizon keeps widening only where no list holds the whole possible
+  (`Reaching.not_keepsWidening_of_listed`), which does not suffice (`AllAtOnce.converse_fails`). On
+  a branching witness realized widening and widening what can be reached rank a pair oppositely
+  (`KeptAlternative.no_order_contains_both`, `KeptAlternative.no_comparison_both`); the lexical
+  order (`Reaching.Lexical`) lies inside the two-tier `Lexical.Above` (`Reaching.lexical_above`,
+  `Reaching.lexical_of_above_decided`). Covering is the lower preorder of the families of course
+  ranges (`Reaching.covers_iff_included`, `Reaching.covers_iff_criteria`,
+  `Reaching.covers_iff_carries`), and widening what can be reached is extension on the frame of
+  reachable ranges (`Reaching.widens_iff_extension`); covering cannot see when a commitment is made
+  (`DeferredBranching.cover_both`, `DeferredBranching.early_not_simulating_late`), and on a witness
+  the bundles realizable within every bound do not determine what can be reached together
+  (`KeptTogether.no_comparison_through_bundles`). Each law is near-definitional or a witness. A
+  leaf: alternative comparisons and their witnesses, which no module uses and C's order does not
+  adopt (board item UE10).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

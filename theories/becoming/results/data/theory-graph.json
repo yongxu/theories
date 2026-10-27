@@ -5120,6 +5120,18 @@
    "page": "theories/becoming/results/records/what-a-commuting-law-keeps-apart.md"
   },
   {
+   "id": "record:what-a-course-keeps-reachable",
+   "type": "result",
+   "record": "what-a-course-keeps-reachable",
+   "title": "What a course keeps reachable",
+   "title_zh": "进程保持可达者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/what-a-course-keeps-reachable.md"
+  },
+  {
    "id": "record:what-a-cut-loses",
    "type": "result",
    "record": "what-a-cut-loses",
@@ -6697,7 +6709,7 @@
    "id": "module:Becoming.EventualWideningInstances",
    "type": "module",
    "name": "Becoming.EventualWideningInstances",
-   "level": "L1",
+   "level": "L2, through `Becoming.Weightings`",
    "theorems": 82,
    "region": "significance",
    "base": "old-base",
@@ -6708,11 +6720,22 @@
    "id": "module:Becoming.ComparingCourses",
    "type": "module",
    "name": "Becoming.ComparingCourses",
-   "level": "L1",
+   "level": "L2, through `Becoming.EventualWideningInstances`",
    "theorems": 191,
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ReachableRanges",
+   "type": "module",
+   "name": "Becoming.ReachableRanges",
+   "level": "L1",
+   "theorems": 135,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -28698,6 +28721,12 @@
    "anchor": "r-comparing-two-courses-on-what-they-admit"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-a-course-keeps-reachable",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-a-course-keeps-reachable"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-content-under-regrouping",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -31553,6 +31582,56 @@
   {
    "from": "module:Becoming.Ranking",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.Admission",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.Bundles",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.EventualWidening",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.Extension",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.Horizon",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.Labelled",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.LawAlongRun",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.Lexical",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.Onward",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReachableRanges",
+   "to": "module:Becoming.Population",
    "type": "imports"
   },
   {
@@ -35712,6 +35791,11 @@
   },
   {
    "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "related"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
    "to": "record:what-keeping-widening-needs",
    "type": "related"
   },
@@ -38178,6 +38262,11 @@
   {
    "from": "record:eventual-widening",
    "to": "record:support-passed-on",
+   "type": "related"
+  },
+  {
+   "from": "record:eventual-widening",
+   "to": "record:what-a-course-keeps-reachable",
    "type": "related"
   },
   {
@@ -50501,6 +50590,151 @@
    "type": "related"
   },
   {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Branching",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Bundles",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.EventualWidening",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Extension",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Labelled",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.LawAlongRun",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Lexical",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Onward",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "module:Becoming.ReachableRanges",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:a-law-through-a-projection-along-one-run",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:becoming-spine-instances",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:bounded-census-keeps-pace",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:comparing-two-courses-on-what-they-admit",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:comparing-two-courses-on-what-they-admit",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:effective-capacity-and-eventual-reachability",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:eventual-widening",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:eventual-widening",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:four-cases-of-a-part",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:relational-generative-comparison",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:what-keeping-widening-needs",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:where-a-run-goes-on",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
+   "to": "record:widening-as-what-every-weighting-ranks",
+   "type": "related"
+  },
+  {
    "from": "record:what-a-cut-loses",
    "to": "module:Becoming.Counterfactual",
    "type": "proved-in"
@@ -51299,6 +51533,11 @@
    "from": "record:what-keeping-widening-needs",
    "to": "record:support-passed-on",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "related"
   },
   {
    "from": "record:what-keeping-widening-needs",
@@ -55193,6 +55432,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it",
    "to": "record:weights-within-a-ratio-agree-past-it",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-a-course-keeps-reachable",
+   "to": "record:what-a-course-keeps-reachable",
    "type": "states"
   },
   {
