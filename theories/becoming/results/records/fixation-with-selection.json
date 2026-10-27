@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-22T14:52:46+00:00",
   "statement": {
-    "en": "With replacement one at a time, up with weight a and down with b, the fixation share tends to a potential's ratio: the starting share where a = b, above it from every mixed start where b < a, and the favoured kind lost with weight at least b^i.",
-    "zh": "一次替换一个、上升权重 a、下降 b 时，固定份额趋于势之比：a = b 时为起始份额，b < a 时自每个混合起点高于它，受青睐的一类以至少 b^i 的权重失去。"
+    "en": "Replacing one of M + 1 at a time, up with weight a and down with b, after (M + 1) m steps the fixing share is at most a potential's ratio and at least it less (1 − (a/(a + b))^(M + 1))^m, so for positive a tends to it: the starting share where a = b, above it from every mixed start where b < a.",
+    "zh": "M + 1 个成员中一次替换一个、上升权重 a、下降 b 时，(M + 1) m 步后固定份额至多为势之比，至少为它减 (1 − (a/(a + b))^(M + 1))^m，故 a 为正时趋于此比：a = b 时为起始份额，b < a 时自每个混合起点高于它。"
   },
   "laws": [
     {
@@ -47,8 +47,8 @@
       ]
     },
     {
-      "en": "The histories fixing the first kind weigh, times the potential at the top, at most the whole weight times the potential at the start, and with the varied ones at least it; the varied ones vanish geometrically, so the fixation share tends to the potential's ratio.",
-      "zh": "固定第一类的历史乘顶端之势，至多为总权重乘起点之势，加上仍有差异者则至少为它；仍有差异者几何地消失，故固定份额趋于势之比。",
+      "en": "The histories fixing the first kind weigh, times the potential at the top, at most the whole weight times the potential at the start, and with the varied ones at least it; after (M + 1) m steps the varied ones weigh at most r^m, with r + a^(M + 1) = (a + b)^(M + 1), so for positive a the fixation share tends to the potential's ratio.",
+      "zh": "固定第一类的历史乘顶端之势，至多为总权重乘起点之势，加上仍有差异者则至少为它；(M + 1) m 步后仍有差异者至多重 r^m（r + a^(M + 1) = (a + b)^(M + 1)），故 a 为正时固定份额趋于势之比。",
       "declarations": [
         "Becoming.Drift.Replacement.fixed",
         "Becoming.Drift.Replacement.lost",
@@ -153,8 +153,8 @@
       "id": "fixation-by-drift",
       "relation": "formal-reuse",
       "detail": {
-        "en": "The neutral case: with a = b the share is the starting share, as for sampled generations.",
-        "zh": "中性情形：a = b 时份额即起始份额，与多代抽样相同。"
+        "en": "The neutral case: with a = b the potential's ratio is the starting share, to which sampled generations' bounds also close.",
+        "zh": "中性情形：a = b 时势之比即起始份额，多代抽样的界亦向它收紧。"
       },
       "interface": {
         "output": {
@@ -177,8 +177,8 @@
     {
       "id": "fixation-by-drift",
       "detail": {
-        "en": "Drift alone, fixing each kind with its starting share.",
-        "zh": "单凭漂变，以起始份额固定各类。"
+        "en": "Drift alone: the share fixing the first kind at most its starting share and within a geometrically falling bound of it.",
+        "zh": "单凭漂变：固定第一类的份额至多为其起始份额，与之之差有按几何下降之界。"
       }
     },
     {
@@ -326,6 +326,10 @@
     {
       "en": "22 October 2026: added (EV13), fixation with selection in the draw; study section 368.",
       "zh": "2026年10月22日：新增（EV13），抽取中有选择时的固定；研究第 368 节。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section DF_N): The Lean gives finite two-sided bounds after (M + 1) m steps (Drift.Replacement.fixation, Drift.Replacement.varied_vanishes); the statement and law 3 give them and read the limit from them. The favoured kind lost with weight at least b^i stays in law 4 and the counterexample. The statement names the population of M + 1; the related note on drift and the neutral case give drift's bounds, not a limit.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：Lean 给出 (M + 1) m 步之后有限的双侧界（Drift.Replacement.fixation、Drift.Replacement.varied_vanishes）；陈述与第 3 条规律给出这些界并由之读出极限。受青睐的一类以至少 b^i 的权重失去，仍见于第 4 条规律与反例。陈述写明 M + 1 个成员的种群；关于漂变的相关说明与中性情形给出漂变的界，而非极限。"
     }
   ]
 }

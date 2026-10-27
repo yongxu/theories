@@ -259,8 +259,8 @@
     {
       "id": "how-loops-form",
       "detail": {
-        "zh": "这里失控的断裂在其前不耦合入；那里使之失控的回路的形成也不在它所携带的量中显出，能承载它的是耦合入耦合本身者。",
-        "en": "Here a runaway's break does not couple in before it; there the formation of the loop that runs away does not show in the amounts it carries either: what carries it is what the couplings themselves couple into."
+        "zh": "这里失控的断裂在其前不耦合入；那里使之失控的回路的形成也未必在它所携带的量中显出，能承载它的是耦合入耦合本身者。",
+        "en": "Here a runaway's break does not couple in before it; there the formation of the loop that runs away need not show in the amounts it carries either: what carries it is what the couplings themselves couple into."
       }
     },
     {
@@ -592,6 +592,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the correspondence names the record by its current id, testing-within-couplings, for its former id; nothing else changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应以现行编号 testing-within-couplings 称该记录，取代其旧编号；别无改变。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section DF_N): The related note on how-loops-form reads its witness (Closing.Onset.unforeseen) as one: the formation need not show in the amounts.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：关于 how-loops-form 的相关说明把其见证（Closing.Onset.unforeseen）读作见证：形成未必显示在量中。"
     }
   ],
   "text_versions": [

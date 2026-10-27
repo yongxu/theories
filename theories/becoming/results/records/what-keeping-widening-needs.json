@@ -337,8 +337,8 @@
     "zh": "在所纳范围上比较两个进程已成（comparing-two-courses-on-what-they-admit），进程保持可达者与承载其开出者仍待；非预先给定之种类的增长；全生成与持续扩大可并立的读法；人之审查。"
   },
   "correspondence": {
-    "en": "Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evolution measured against an isolated system's recurrence (Bedau and others 2000; Adams and others 2017); the TAP equation (Cortês and others), whose logistic variant limits innovation, and assembly theory (Sharma and others 2023), which notes mass constraints, so the gain bridge is the conservation they leave out as stated; autocatalytic sets, food-generated (Hordijk and Steel 2012; Vasas and others 2012); maintenance and depreciation, break-even investment (Solow 1956) and the maintenance coefficient (Pirt 1965), which semi-endogenous growth (Jones 1995) leaves out as stated; demography with a maximal lifespan for the uniform form; biogenesis for the exclusion. Graded in development/ue7-what-keeps-widening/NOTE.md and REVIEW-UE7.md; the readings are the AI's.",
-    "zh": "开放系统（Prigogine；Schrödinger）与有限回复；以孤立系统之回复衡量的开放式演化（Bedau 等 2000；Adams 等 2017）；TAP 方程（Cortês 等），其逻辑斯谛变体限制创新，与组装理论（Sharma 等 2023），其注意到质量约束，故增益之桥即其所述略去之守恒；自催化集，由食物生成（Hordijk 与 Steel 2012；Vasas 等 2012）；维持与折旧，收支平衡之投资（Solow 1956）与维持系数（Pirt 1965），半内生增长（Jones 1995）所述略去之；一致形式对应有最大寿命的人口学；排除律对应生源说。分级见 development/ue7-what-keeps-widening/NOTE.md 与 REVIEW-UE7.md；读法皆 AI 之读。"
+    "en": "Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evolution measured against an isolated system's recurrence (Bedau and others 2000; Adams and others 2017); the TAP equation (Cortês and others), whose logistic variant limits innovation, and assembly theory (Sharma and others 2023), which notes mass constraints, so the gain bridge is the conservation they leave out as stated; autocatalytic sets, food-generated (Steel 2000; Hordijk and Steel 2004; Vasas and others 2012); maintenance and depreciation, break-even investment (Solow 1956) and the maintenance coefficient (Pirt 1965), which semi-endogenous growth (Jones 1995) leaves out as stated; demography with a maximal lifespan for the uniform form; biogenesis for the exclusion. Graded in development/ue7-what-keeps-widening/NOTE.md and REVIEW-UE7.md; the readings are the AI's.",
+    "zh": "开放系统（Prigogine；Schrödinger）与有限回复；以孤立系统之回复衡量的开放式演化（Bedau 等 2000；Adams 等 2017）；TAP 方程（Cortês 等），其逻辑斯谛变体限制创新，与组装理论（Sharma 等 2023），其注意到质量约束，故增益之桥即其所述略去之守恒；自催化集，由食物生成（Steel 2000；Hordijk 与 Steel 2004；Vasas 等 2012）；维持与折旧，收支平衡之投资（Solow 1956）与维持系数（Pirt 1965），半内生增长（Jones 1995）所述略去之；一致形式对应有最大寿命的人口学；排除律对应生源说。分级见 development/ue7-what-keeps-widening/NOTE.md 与 REVIEW-UE7.md；读法皆 AI 之读。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
   "aliases": [
@@ -726,6 +726,10 @@
     {
       "en": "26 October 2026, board item UE9 (study section 421): the passing laws stated with requirements never loosening, a hypothesis beside the World premises, as UE8's first review found (the statement, law 9 and the premises, with 07 §2 and the Open items of 07 and 02); the statement's last sentence, none compares two courses, left to the first does-not-show item for the length cap; no declaration changed.",
       "zh": "2026年10月26日，工作板条目 UE9（研究第 421 节）：支撑传递诸律陈明需求永不放松，此为世界前提之外的假设，如 UE8 首审所见（陈述、律九与前提，连同 07 §2 及 07、02 之未决项）；陈述末句“无一比较两个进程”因长度上限留于首条“未示”；无一声明改变。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section DF_N): Food-generated autocatalytic sets cited to their formalization, Steel 2000 and Hordijk and Steel 2004 (Journal of Theoretical Biology 227:451-461); the 2012 papers extend it.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：由食物生成的自催化集引其形式化，Steel 2000 及 Hordijk 与 Steel 2004（Journal of Theoretical Biology 227:451-461）；2012 年论文为扩展。"
     }
   ]
 }

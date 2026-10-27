@@ -124,7 +124,7 @@
     },
     {
       "en": "That amounts, not differences, grow exponentially under the first law: the lower bounds are of the carried amount, attained under a law that creates amounts, and a finite whole to which the rest gives nothing net stays within its stock.",
-      "zh": "在第一定律下按指数增长的是量而不是差：下界是所携带的量的，在创造量的律下达到；其余不净给予的有限整体保持在其存量之内。",
+      "zh": "在第一律下按指数增长的是量而不是差：下界是所携带的量的，在创造量的律下达到；其余不净给予的有限整体保持在其存量之内。",
       "kind": "scope"
     },
     {
@@ -534,6 +534,10 @@
     {
       "en": "2026-10-20: 13 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/0c29a783df44e28e/mutual-dependence-and-its-pace.json and in git.",
       "zh": "2026-10-20：13 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/0c29a783df44e28e/mutual-dependence-and-its-pace.json 和 git 中。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section DF_N): The Chinese edition writes the spine's first law (Flow.Gainless) 第一律, as the account does, not 第一定律, which names thermodynamics' first law.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：中文版把脊柱的第一律（Flow.Gainless）写作第一律，与本说明一致，而不写作第一定律，后者指热力学第一定律。"
     }
   ],
   "text_versions": [

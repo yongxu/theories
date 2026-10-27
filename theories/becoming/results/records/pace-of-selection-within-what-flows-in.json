@@ -129,8 +129,8 @@
       ]
     },
     {
-      "en": "In a population not shrinking the share then multiplies by at most k ^ T, and a final total reaching the final size needs the first size to be at most k ^ T times the first total: one substitution from c carriers among N takes T ≥ log_k (N / c) steps, the form behind the reproductive-excess limit of Nei and Felsenstein (1971), in counts.",
-      "zh": "群不缩时，份额至多乘 k ^ T；终之总及于终代之数，需首代之数至多为 k ^ T 乘始之总：自 N 中 c 个携带者起，一次替代需 T ≥ log_k (N / c) 步，即 Nei 与 Felsenstein（1971）繁殖盈余之限所本之形式，以计数陈述。",
+      "en": "In a population not shrinking the share then multiplies by at most k ^ T, and a final total reaching the final size needs the first size to be at most k ^ T times the first total: one substitution from c carriers among N takes T ≥ log_k (N / c) steps, the form behind the reproductive-excess limit of Nei (1971) and Felsenstein (1971), in counts.",
+      "zh": "群不缩时，份额至多乘 k ^ T；终之总及于终代之数，需首代之数至多为 k ^ T 乘始之总：自 N 中 c 个携带者起，一次替代需 T ≥ log_k (N / c) 步，即 Nei（1971）与 Felsenstein（1971）繁殖盈余之限所本之形式，以计数陈述。",
       "declarations": [
         "Becoming.SelectionPace.share_within_power",
         "Becoming.SelectionPace.whole_within_power"
@@ -872,6 +872,10 @@
     {
       "en": "25 October 2026: added (UE5), the first candidate of UE0's audit of third parts: the natural statement false, the pace bounded by what flows into the carrying lineages, a third part against Price and Fisher, yes and weak; study section 416.",
       "zh": "2026年10月25日：新增（UE5），UE0 第三部分稽核之首一候选：自然之陈述不成立，速度受流入携带者谱系者之界，对 Price 与 Fisher 之第三部分，成立而弱；研究第 416 节。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section DF_N): Nei (1971) and Felsenstein (1971) cited as the two works they are, as the correspondence does.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：Nei（1971）与 Felsenstein（1971）作为两篇著作引用，与对应一致。"
     }
   ]
 }

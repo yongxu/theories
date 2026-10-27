@@ -152,7 +152,7 @@
     "zh": "对只在有界邻域内读取的规律，选取局部的通量（只依赖每对相关关系项附近的水平），如格点上的元胞自动机；以及在规律移动单位处，不超过来源所立者的转移，如粒子位移表示。"
   },
   "correspondence": {
-    "en": "Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component; balancing_iff is that fact stated with the spine's families and computed. Cellular automata: a conserved additive quantity of a local rule on a lattice has a flux depending on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and two (Kari and Taati 2008). Physics: the continuity equation of a locally conserved quantity, of which FL1's first law with locality is the energy case."
+    "en": "Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component; balancing_iff is that fact stated with the spine's families and computed. Cellular automata: a conserved additive quantity of a local rule on a lattice has a flux depending on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and two (Kari and Taati 2008). Physics: the continuity equation of a locally conserved quantity, of which thermodynamics' first law with locality (FL1) is the energy case."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
   "aliases": [
@@ -202,8 +202,8 @@
       "id": "balance-from-the-first-law",
       "relation": "interpretive",
       "detail": {
-        "en": "FL1 reads balance as the first law with locality, stating locality as one transfer per exchange and store; here the transfers are derived from conservation on every closed family, and locality is a property of the law.",
-        "zh": "FL1 把平衡读作带局部性的第一定律，把局部性陈述为每对交换与储存一个转移；这里转移由每个封闭家族上的守恒推出，局部性是规律的性质。"
+        "en": "FL1 reads balance as thermodynamics' first law with locality, stating locality as one transfer per exchange and store; here the transfers are derived from conservation on every closed family, and locality is a property of the law.",
+        "zh": "FL1 把平衡读作带局部性的热力学第一定律，把局部性陈述为每对交换与储存一个转移；这里转移由每个封闭家族上的守恒推出，局部性是规律的性质。"
       }
     }
   ],
@@ -318,6 +318,10 @@
     {
       "en": "22 October 2026, board item FL2 (study section 354): added after FL1, for the question whether balance can be more than a premise about transfers; the literature on conserved quantities of cellular automata checked first.",
       "zh": "2026年10月22日，工作板条目 FL2（研究第 354 节）：继 FL1 之后，为“平衡能否不止是关于转移的前提”之问而加；先查了元胞自动机守恒量的文献。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section DF_N): Thermodynamics' first law named in full in the correspondence and a dependency, apart from the spine's first law.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：对应与一项依赖中的热力学第一定律写出全名，与脊柱的第一律分开。"
     }
   ]
 }

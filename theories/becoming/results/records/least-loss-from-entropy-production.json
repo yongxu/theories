@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-22T11:00:00+00:00",
   "statement": {
-    "zh": "读作可用功，第二定律是脊柱的第一律，被毁的㶲是记录；单靠它不给出耗散。每次取用都不可逆且量为整单位，或被毁㶲有不小于单位的下限（Landauer），就给出耗散；只在期望中的耗散几乎必然给出取用不复现。",
-    "en": "Read in available work, the second law is the spine's first law and destroyed exergy is the record; alone it gives no dissipation. Irreversible taking with whole units, or a floor of destruction at least the unit (Landauer), gives it; dissipation in expectation gives rest almost surely."
+    "zh": "读作可用功，第二定律给出脊柱的第一律，被毁的㶲是记录；单靠它不给出耗散。每次取用都不可逆且量为整单位，或被毁㶲有不小于单位的下限，就给出耗散；只在期望中的耗散几乎必然给出取用不复现。",
+    "en": "Read in available work, the second law gives the spine's first law and destroyed exergy is the record; alone it gives no dissipation. Irreversible taking with whole units, or a floor of destroyed exergy at least the unit, gives it; dissipation in expectation gives rest almost surely."
   },
   "laws": [
     {
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "en": "Under the exergy balance and the second law, nothing comes from nothing at the unit: the second law read in available work is the spine's first law, and the exergy destroyed is the residue counted in units, the record of Flow.dissipatesOn_iff_conserved.",
+      "en": "Under the exergy balance and the second law, nothing comes from nothing at the unit: the second law read in available work gives the spine's first law, and the exergy destroyed is the residue counted in units, the record of Flow.dissipatesOn_iff_conserved.",
       "declarations": [
         "Becoming.EntropyProduction.ExergyBalance.give_le",
         "Becoming.EntropyProduction.gainless_of_secondLaw",
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "en": "Where every exchange that takes destroys at least s, the loss counted at the unit u is at least every whole n with n u ≤ s, the flow is dissipative at every unit within s, and at an r-fold finer unit the loss is at least r units: a floor in energy, as Landauer's kT ln 2 per merged bit, survives refinement.",
+      "en": "Where every exchange that takes destroys at least s, the loss counted at the unit u is at least every whole n with n u ≤ s, the flow is dissipative at every unit within s, and at an r-fold finer unit the loss is at least r units: a floor in energy survives refinement.",
       "declarations": [
         "Becoming.EntropyProduction.DestroysAtLeast",
         "Becoming.EntropyProduction.loss_of_floor",
@@ -111,7 +111,7 @@
   ],
   "does_not_show": [
     {
-      "en": "That any actual system's amounts are available work, that its exchanges meet these premises, or Landauer's bound itself: the step from physics to the Lean is a stated correspondence.",
+      "en": "That any actual system's amounts are available work, that its exchanges meet these premises, or any floor of destroyed exergy: the step from physics to the Lean is a stated correspondence.",
       "kind": "correspondence"
     },
     {
@@ -153,11 +153,11 @@
     "en": "Checked by the periphery checker with Lean 4.30.0-rc2 and the pinned Mathlib: the 33 declarations it cites, of EntropyProduction's 74, each depending only on propext, Classical.choice and Quot.sound through Mathlib's reals and measures; the core modules it imports match passed receipts. The core does not import it. No independent review."
   },
   "next_delta": {
-    "en": "A core form with rational amounts and no Mathlib for the deterministic laws; the exchange-level Landauer bound from the count now in the core (record merge-of-a-part-kept-by-the-rest) with a reading of count as energy. Finite-time floors and the uncertainty relation as instances of DestroysAtLeast would restate known physics (the significance review's least-loss check) and are not planned.",
-    "zh": "确定性规律在核心中以有理量、不用 Mathlib 的形式；由现已在核心中的计数（记录 merge-of-a-part-kept-by-the-rest）加上把计数读作能量，得出交换层面的 Landauer 下限。把有限时间的下限与不确定性关系作为 DestroysAtLeast 的实例，只会重述已知物理（意义审查的最小损失检查），不在计划中。"
+    "en": "A core form (rational amounts, no Mathlib) for the deterministic laws; an exchange-level Landauer bound on exported heat, from the core's count (merge-of-a-part-kept-by-the-rest) read as energy, by itself no floor of destroyed exergy. Finite-time floors and the uncertainty relation as instances of DestroysAtLeast restate known physics (the significance review's least-loss check): not planned.",
+    "zh": "确定性规律在核心中以有理量、不用 Mathlib 的形式；由核心中的计数（merge-of-a-part-kept-by-the-rest）读作能量，得出交换层面对导出之热的 Landauer 下限，它本身不是被毁之㶲的下限。把有限时间的下限与不确定性关系作为 DestroysAtLeast 的实例，只会重述已知物理（意义审查的最小损失检查），不在计划中。"
   },
   "correspondence": {
-    "en": "Physics read onto the spine. Gouy–Stodola: exergy destroyed is T0 times the entropy generated, never negative, so the second law in available work is the spine's first law and the destroyed exergy is the record of Flow.dissipatesOn_iff_conserved; Kelvin–Planck says no exchange draws that record back. Landauer (confirmed by Bérut et al. 2012 and Jun, Gavrilov and Bechhoefer 2014; its general derivation disputed by Norton): erasing a bit at temperature T destroys at least kT ln 2 in expectation, a floor for DestroysAtLeast wherever each taking exchange merges what it held. Whole units: carriers of one free energy each, as ATP or photons of one frequency. Fluctuation theorems (Jarzynski, Crooks, Seifert; observed by Wang et al. 2002 and Collin et al. 2005): single small runs gain, so the premise there is dissipation in expectation. Isolated reversible dynamics (Liouville; Poincaré recurrence) is Passing."
+    "en": "Physics read onto the spine. Gouy–Stodola: exergy destroyed is T0 times the entropy generated, never negative, so the second law in available work gives the spine's first law and the destroyed exergy is the record of Flow.dissipatesOn_iff_conserved; Kelvin–Planck says no exchange draws that record back. Landauer (confirmed by Bérut et al. 2012 and Jun, Gavrilov and Bechhoefer 2014; its general derivation disputed by Norton): erasing a bit at temperature T exports at least kT ln 2 of heat in expectation, which is not exergy destroyed: erasure can be thermodynamically reversible (Bennett 2003; Sagawa 2014), so it is no DestroysAtLeast floor alone. Whole units: carriers of one free energy each, as ATP or photons of one frequency. Fluctuation theorems (Jarzynski, Crooks, Seifert; observed by Wang et al. 2002 and Collin et al. 2005): single small runs gain, so the premise there is dissipation in expectation. Isolated reversible dynamics (Liouville; Poincaré recurrence) is Passing."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
   "aliases": [
@@ -234,15 +234,15 @@
     {
       "id": "merge-of-a-part-kept-by-the-rest",
       "detail": {
-        "en": "Landauer's floor, here a physical premise, has its count as a core law there.",
-        "zh": "这里作为物理前提的 Landauer 下限，其计数在那里是核心规律。"
+        "en": "The floor of destroyed exergy, here a physical premise, is not Landauer's bound alone; Landauer's count is a core law there.",
+        "zh": "这里作为物理前提的被毁㶲下限，单靠 Landauer 下限给不出；Landauer 的计数在那里是核心规律。"
       }
     },
     {
       "id": "balance-from-the-first-law",
       "detail": {
-        "en": "The exergy balance, a premise here, is derived there from the first law and the entropy balance at each exchange, in the same reading that gives the levels' balance.",
-        "zh": "这里作为前提的㶲平衡，在那里由每个交换处的第一定律与熵平衡推出，与给出水平平衡的是同一读法。"
+        "en": "The exergy balance, a premise here, is derived there from thermodynamics' first law and the entropy balance at each exchange, in the same reading that gives the levels' balance.",
+        "zh": "这里作为前提的㶲平衡，在那里由每个交换处的热力学第一定律与熵平衡推出，与给出水平平衡的是同一读法。"
       }
     }
   ],
@@ -373,6 +373,10 @@
     {
       "en": "22 October 2026, FL1: the module now also derives balance and this record's exergy balance from the first law and the entropy balance (record balance-from-the-first-law); the validation scope counts the declarations this record cites, and the new record is related. The claim is unchanged.",
       "zh": "2026年10月22日，FL1：该模块现在也由第一定律与熵平衡推出平衡与本记录的㶲平衡（记录 balance-from-the-first-law）；验证范围计本记录所引的声明，并关联新记录。论断不变。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section DF_N): Landauer's bound is not a floor of destroyed exergy by itself: it bounds the heat an erasure exports, and erasure can be thermodynamically reversible (Bennett 2003; Sagawa 2014; UE6's first round); statement, law 5, correspondence, a limit, a related note and the next step say so. Thermodynamics' first law is named in full in a related note. The second law read in available work gives the spine's first law (statement, law 2, correspondence): no converse is proved.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：Landauer 下限本身不是被毁㶲的下限：它界定擦除所导出的热，而擦除可以在热力学上可逆（Bennett 2003；Sagawa 2014；UE6 第一轮）；陈述、第 5 条规律、对应、一条限度、一条相关说明与下一步据此改写。一条相关说明中的热力学第一定律写出全名。以可用功读出，第二定律给出脊柱的第一律（陈述、第 2 条规律、对应）：未证其逆。"
     }
   ],
   "text_versions": [

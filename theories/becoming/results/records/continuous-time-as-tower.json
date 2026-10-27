@@ -29,7 +29,7 @@
   ],
   "correspondence": {
     "zh": "Ren 2026-10-12 决定：连续时间在核心中构造为越来越细的离散读法之塔，连续时间的规律即塔的每一层上的规律，实数时间以后作为外围的对应。本结果给出塔与其第一条规律：变化不因时间分得更细而增加。依据是一步的规律（Flow.runsDown_bounds_change）与每次交换的最小损失，不加前提。",
-    "en": "Ren decided on 12 October that continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence. This result gives the tower and its first law: dividing time more finely adds no change. It rests on the laws of one step (Flow.runsDown_bounds_change) and the least loss per exchange, with no premise added."
+    "en": "Ren decided on 12 October that continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence. This result gives the tower and the first of its laws: dividing time more finely adds no change. It rests on the laws of one step (Flow.runsDown_bounds_change) and the least loss per exchange, with no premise added."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tower.lean",
   "aliases": [
@@ -300,6 +300,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement names the census of what stands that the bound on falls takes; the representation premise gives the reading without naming who chose it (the decision stays in the correspondence as provenance).",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明下降次数之界所需的所立者普查；表示前提只陈述读法，不再写选定者（该决定作为来历留在对应中）。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section DF_N): The first of the tower's laws is not called its first law, the spine's name for Flow.Gainless.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：英文版中塔的第一条规律不称为 first law，那是脊柱对 Flow.Gainless 的称呼。"
     }
   ]
 }

@@ -44,7 +44,7 @@ TIMEOUT = int(os.environ.get("LEAN_TIMEOUT", "900"))
 SCOPE = (
     "On the Becoming core's flows: a quantity carried only by the exchanges taking part balances the levels it "
     "is read on exactly where no condition produces it, and conservation of the total alone does not give "
-    "balance; read in available work relative to an environment at T0 > 0, the first law and the entropy "
+    "balance; read in available work relative to an environment at T0 > 0, thermodynamics' first law and the entropy "
     "balance at each store give Flow.Balances exactly where no store generates entropy, and at each exchange "
     "give the exergy balance with T0 times the generated entropy destroyed, so balance, Flow.Gainless and "
     "Flow.Dissipative come from one reading (premises jointly met in Burning). An exergy balance with the second law (no exchange destroys negative "
@@ -55,8 +55,8 @@ SCOPE = (
     "the summed probabilities of taking by the expected stock, and taking does not recur almost surely; "
     "Fluctuation gains on one run while dissipated on in expectation; the integral fluctuation theorem "
     "gives a non-negative expected entropy production and an exponential bound on gains. That a physical "
-    "system's amounts are available work, that its stores and exchanges meet these premises, and Landauer's "
-    "bound itself are correspondences, not checked."
+    "system's amounts are available work, that its stores and exchanges meet these premises, and any floor "
+    "of destroyed exergy are correspondences, not checked."
 )
 
 
