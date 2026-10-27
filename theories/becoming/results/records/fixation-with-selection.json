@@ -328,8 +328,8 @@
       "zh": "2026年10月22日：新增（EV13），抽取中有选择时的固定；研究第 368 节。"
     },
     {
-      "en": "26 October 2026, board item DF1b (study section DF_N): The Lean gives finite two-sided bounds after (M + 1) m steps (Drift.Replacement.fixation, Drift.Replacement.varied_vanishes); the statement and law 3 give them and read the limit from them. The favoured kind lost with weight at least b^i stays in law 4 and the counterexample. The statement names the population of M + 1; the related note on drift and the neutral case give drift's bounds, not a limit.",
-      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：Lean 给出 (M + 1) m 步之后有限的双侧界（Drift.Replacement.fixation、Drift.Replacement.varied_vanishes）；陈述与第 3 条规律给出这些界并由之读出极限。受青睐的一类以至少 b^i 的权重失去，仍见于第 4 条规律与反例。陈述写明 M + 1 个成员的种群；关于漂变的相关说明与中性情形给出漂变的界，而非极限。"
+      "en": "26 October 2026, board item DF1b (study section 422): The Lean gives finite two-sided bounds after (M + 1) m steps (Drift.Replacement.fixation, Drift.Replacement.varied_vanishes); the statement and law 3 give them and read the limit from them. The favoured kind lost with weight at least b^i stays in law 4 and the counterexample. The statement names the population of M + 1; the related note on drift and the neutral case give drift's bounds, not a limit.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Lean 给出 (M + 1) m 步之后有限的双侧界（Drift.Replacement.fixation、Drift.Replacement.varied_vanishes）；陈述与第 3 条规律给出这些界并由之读出极限。受青睐的一类以至少 b^i 的权重失去，仍见于第 4 条规律与反例。陈述写明 M + 1 个成员的种群；关于漂变的相关说明与中性情形给出漂变的界，而非极限。"
     }
   ]
 }

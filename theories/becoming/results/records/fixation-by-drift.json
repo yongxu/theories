@@ -344,8 +344,8 @@
       "zh": "2026年10月22日，EV13-EV16：加入相关记录 fixation-with-selection（研究第 368 节）；定律及其陈述不变。"
     },
     {
-      "en": "26 October 2026, board item DF1b (study section DF_N): The Lean gives finite two-sided bounds after k generations (Drift.fixation, Drift.varied_vanishes); the limit is read from them, as chapter 04 says. The statement gives the bounds, law 5 marks the limit as their reading, and the related note on selection gives its bound. The statement names the first kind, as Drift.fixation does, and the bound with selection falls geometrically where a is positive.",
-      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：Lean 给出 k 代之后有限的双侧界（Drift.fixation、Drift.varied_vanishes）；极限由之读出，如第 04 章所说。陈述给出这些界，第 5 条规律把极限标为其读法，关于选择的相关说明给出其界。陈述写明第一类，与 Drift.fixation 一致；有选择时的界在 a 为正时按几何下降。"
+      "en": "26 October 2026, board item DF1b (study section 422): The Lean gives finite two-sided bounds after k generations (Drift.fixation, Drift.varied_vanishes); the limit is read from them, as chapter 04 says. The statement gives the bounds, law 5 marks the limit as their reading, and the related note on selection gives its bound. The statement names the first kind, as Drift.fixation does, and the bound with selection falls geometrically where a is positive.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Lean 给出 k 代之后有限的双侧界（Drift.fixation、Drift.varied_vanishes）；极限由之读出，如第 04 章所说。陈述给出这些界，第 5 条规律把极限标为其读法，关于选择的相关说明给出其界。陈述写明第一类，与 Drift.fixation 一致；有选择时的界在 a 为正时按几何下降。"
     }
   ]
 }

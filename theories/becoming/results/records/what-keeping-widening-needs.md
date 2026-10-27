@@ -63,7 +63,7 @@ Comparing two courses on admitted ranges is done (comparing-two-courses-on-what-
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evolution measured against an isolated system's recurrence (Bedau and others 2000; Adams and others 2017); the TAP equation (Cortês and others), whose logistic variant limits innovation, and assembly theory (Sharma and others 2023), which notes mass constraints, so the gain bridge is the conservation they leave out as stated; autocatalytic sets, food-generated (Hordijk and Steel 2012; Vasas and others 2012); maintenance and depreciation, break-even investment (Solow 1956) and the maintenance coefficient (Pirt 1965), which semi-endogenous growth (Jones 1995) leaves out as stated; demography with a maximal lifespan for the uniform form; biogenesis for the exclusion. Graded in development/ue7-what-keeps-widening/NOTE.md and REVIEW-UE7.md; the readings are the AI's.
+Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evolution measured against an isolated system's recurrence (Bedau and others 2000; Adams and others 2017); the TAP equation (Cortês and others), whose logistic variant limits innovation, and assembly theory (Sharma and others 2023), which notes mass constraints, so the gain bridge is the conservation they leave out as stated; autocatalytic sets, food-generated (Steel 2000; Hordijk and Steel 2004; Vasas and others 2012); maintenance and depreciation, break-even investment (Solow 1956) and the maintenance coefficient (Pirt 1965), which semi-endogenous growth (Jones 1995) leaves out as stated; demography with a maximal lifespan for the uniform form; biogenesis for the exclusion. Graded in development/ue7-what-keeps-widening/NOTE.md and REVIEW-UE7.md; the readings are the AI's.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -112,6 +112,7 @@ Aliases: `What keeping widening needs, and what carries it`, `持续扩大需要
 - 26 October 2026: added (UE7), what keeping widening needs and what carries it: the gain bridge and renewers multiplying, restatements; the recency form of opened by the opened, the map law and the exclusion along passing of support, near-definitional; none compares two courses; study section 419.
 - 26 October 2026, board item UE9 (study section 421): the next step updated: two courses are compared on admitted ranges in comparing-two-courses-on-what-they-admit; no declaration changed.
 - 26 October 2026, board item UE9 (study section 421): the passing laws stated with requirements never loosening, a hypothesis beside the World premises, as UE8's first review found (the statement, law 9 and the premises, with 07 §2 and the Open items of 07 and 02); the statement's last sentence, none compares two courses, left to the first does-not-show item for the length cap; no declaration changed.
+- 26 October 2026, board item DF1b (study section 422): Food-generated autocatalytic sets cited to their formalization, Steel 2000 and Hordijk and Steel 2004 (Journal of Theoretical Biology 227:451-461); the 2012 papers extend it.
 
 </details>
 

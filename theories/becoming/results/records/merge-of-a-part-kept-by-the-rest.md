@@ -39,7 +39,7 @@ Canonical source: [LeastLoss.lean](../../../../experiments/integrated-correction
 <a id="next--下一步"></a>
 ## Next
 
-A reading of count as energy, so that the periphery's floor (DestroysAtLeast at kT ln 2) follows from this count with only that reading supplied; an independent review.
+A reading of count as energy, so that Landauer's bound on the heat an erasure exports follows from this count with only that reading supplied (a DestroysAtLeast floor needs irreversibility as well: heat exported is not exergy destroyed); an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -56,7 +56,7 @@ Landauer (1961): a logically irreversible step compresses the phase space of the
   - Input: Possibilities kept apart, counted in a product of lists; every configuration after a step.
   - Preserved conditions: The law merges nothing. [Recurrence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean)
 - related, not a proved adapter: [least-loss-rest](least-loss-rest.md). The converse of Law.loss_needs_merge there: a loss needs a merge, and inside a whole that merges nothing a part's merge needs room in the rest.
-- related, not a proved adapter: [least-loss-from-entropy-production](least-loss-from-entropy-production.md). There Landauer's floor is a physical premise (DestroysAtLeast); here its count is a core law.
+- related, not a proved adapter: [least-loss-from-entropy-production](least-loss-from-entropy-production.md). There a floor of destroyed exergy is a physical premise (DestroysAtLeast), not Landauer's bound alone; here Landauer's count is a core law.
 - related, not a proved adapter: [rest-from-a-finite-reading](rest-from-a-finite-reading.md). The other half of LC1: rest with no least loss over a finite reading.
 
 <a id="sources--来源"></a>
@@ -82,6 +82,7 @@ Aliases: `a part's merge kept by the rest`, `部分的合并由其余部分承�
 ### History
 
 - 20 October 2026: added (LC1), section 8.1 item 6: the converse of Law.loss_needs_merge in a whole that merges nothing; study section 255.
+- 26 October 2026, board item DF1b (study section 422): The related note and the next step no longer read Landauer's bound as DestroysAtLeast's floor: it is on heat exported, not on exergy destroyed (Bennett 2003; Sagawa 2014).
 
 </details>
 

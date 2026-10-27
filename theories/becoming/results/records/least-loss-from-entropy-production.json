@@ -250,7 +250,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
       "role": "proof",
-      "sha256": "f5e20ab3ee5a6fa8c37e2a82f1bddc84ad49c8bc68d0fd9718a1caa61b1120c3",
+      "sha256": "0088cf4ea491d8896abf8b2be827495c0a03f6e60883e43390f4a6189a847a40",
       "declarations": [
         "Becoming.EntropyProduction.ExergyBalance",
         "Becoming.EntropyProduction.SecondLaw",
@@ -295,7 +295,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/check_entropy_production.py",
       "role": "integration",
-      "sha256": "e2ab6913181423c16b4da1a496e5048dbb2d028cefbda0a273b673fac38c5cce"
+      "sha256": "962ba8afca9d2017377f25587f83c9761713de9b9ded4c4361f96bc83f67ab24"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
@@ -339,12 +339,18 @@
       "role": "receipt",
       "sha256": "fd780afc4bf1144cc3ebc96855836de1d12bd3920771d6ef6c5a6d980bff5d83",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261027T042508.827829Z/verification.json",
+      "role": "receipt",
+      "sha256": "ac2bb52f04839913b4d30c12a8a63091c2ee26a9993a5f650a20bb9d327a07bb",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261022T103802.432439Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261027T042508.827829Z/verification.json",
       "sha256_pointer": "/source_sha256/EntropyProduction",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -375,8 +381,8 @@
       "zh": "2026年10月22日，FL1：该模块现在也由第一定律与熵平衡推出平衡与本记录的㶲平衡（记录 balance-from-the-first-law）；验证范围计本记录所引的声明，并关联新记录。论断不变。"
     },
     {
-      "en": "26 October 2026, board item DF1b (study section DF_N): Landauer's bound is not a floor of destroyed exergy by itself: it bounds the heat an erasure exports, and erasure can be thermodynamically reversible (Bennett 2003; Sagawa 2014; UE6's first round); statement, law 5, correspondence, a limit, a related note and the next step say so. Thermodynamics' first law is named in full in a related note. The second law read in available work gives the spine's first law (statement, law 2, correspondence): no converse is proved.",
-      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：Landauer 下限本身不是被毁㶲的下限：它界定擦除所导出的热，而擦除可以在热力学上可逆（Bennett 2003；Sagawa 2014；UE6 第一轮）；陈述、第 5 条规律、对应、一条限度、一条相关说明与下一步据此改写。一条相关说明中的热力学第一定律写出全名。以可用功读出，第二定律给出脊柱的第一律（陈述、第 2 条规律、对应）：未证其逆。"
+      "en": "26 October 2026, board item DF1b (study section 422): Landauer's bound is not a floor of destroyed exergy by itself: it bounds the heat an erasure exports, and erasure can be thermodynamically reversible (Bennett 2003; Sagawa 2014; UE6's first round); statement, law 5, correspondence, a limit, a related note and the next step say so. Thermodynamics' first law is named in full in a related note. The second law read in available work gives the spine's first law (statement, law 2, correspondence): no converse is proved.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Landauer 下限本身不是被毁㶲的下限：它界定擦除所导出的热，而擦除可以在热力学上可逆（Bennett 2003；Sagawa 2014；UE6 第一轮）；陈述、第 5 条规律、对应、一条限度、一条相关说明与下一步据此改写。一条相关说明中的热力学第一定律写出全名。以可用功读出，第二定律给出脊柱的第一律（陈述、第 2 条规律、对应）：未证其逆。"
     }
   ],
   "text_versions": [

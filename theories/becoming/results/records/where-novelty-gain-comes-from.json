@@ -779,8 +779,8 @@
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Population.lean 到 Prelude.lean：Distinct；从 World.lean 到 Prelude.lean：total。证明绑定（Arising.lean、Dependence.lean、Entropy.lean、Flow.lean、Population.lean、Prelude.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Arising.lean、Dependence.lean、Entropy.lean、Flow.lean、Population.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
     },
     {
-      "en": "26 October 2026, board item DF1b (study section DF_N): The Chinese edition writes the spine's first law (Flow.Gainless) 第一律, as the account does, not 第一定律, which names thermodynamics' first law.",
-      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：中文版把脊柱的第一律（Flow.Gainless）写作第一律，与本说明一致，而不写作第一定律，后者指热力学第一定律。"
+      "en": "26 October 2026, board item DF1b (study section 422): The Chinese edition writes the spine's first law (Flow.Gainless) 第一律, as the account does, not 第一定律, which names thermodynamics' first law.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：中文版把脊柱的第一律（Flow.Gainless）写作第一律，与本说明一致，而不写作第一定律，后者指热力学第一定律。"
     }
   ],
   "text_versions": [

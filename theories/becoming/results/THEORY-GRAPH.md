@@ -57,7 +57,7 @@ Results (77):
 - [A negation's change, and cases into a stable conclusion](records/negation-change-and-stable-cases.md) (recorded-checked)
 - [A regularity kept and left along its own line](records/a-regularity-kept-and-changed.md) (recorded-checked)
 - [Balance from conservation along a relation](records/balance-from-conservation-along-a-relation.md) (recorded-checked)
-- [Balance from the first law](records/balance-from-the-first-law.md) (recorded-checked)
+- [Balance from thermodynamics' first law](records/balance-from-the-first-law.md) (recorded-checked)
 - [Ceasing needs arising](records/ceasing-needs-arising.md) (recorded-checked)
 - [Coherent histories across retained and changing contexts](records/becoming-context-coherence.md) (recorded-checked)
 - [Coming to be and ceasing to be keep pace](records/coming-and-ceasing-keep-pace.md) (recorded-checked)

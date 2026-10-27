@@ -52,12 +52,12 @@ A flux chosen local, depending only on the levels near each related pair, for la
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component; balancing_iff is that fact stated with the spine's families and computed. Cellular automata: a conserved additive quantity of a local rule on a lattice has a flux depending on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and two (Kari and Taati 2008). Physics: the continuity equation of a locally conserved quantity, of which FL1's first law with locality is the energy case.
+Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component; balancing_iff is that fact stated with the spine's families and computed. Cellular automata: a conserved additive quantity of a local rule on a lattice has a flux depending on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and two (Kari and Taati 2008). Physics: the continuity equation of a locally conserved quantity, of which thermodynamics' first law with locality (FL1) is the energy case.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **interpretive**: [balance-from-the-first-law](balance-from-the-first-law.md). FL1 reads balance as the first law with locality, stating locality as one transfer per exchange and store; here the transfers are derived from conservation on every closed family, and locality is a property of the law.
+- **interpretive**: [balance-from-the-first-law](balance-from-the-first-law.md). FL1 reads balance as thermodynamics' first law with locality, stating locality as one transfer per exchange and store; here the transfers are derived from conservation on every closed family, and locality is a property of the law.
 - related, not a proved adapter: [premises-read-off-the-exchange](premises-read-off-the-exchange.md). There balance holds by reading a world off an exchange, with the rest counted; here balance along a given relation is equivalent to conservation on the families it closes.
 
 <a id="sources--来源"></a>
@@ -75,6 +75,7 @@ Aliases: `Becoming.Continuity.Balancing`, `Becoming.Continuity.Closes`, `Becomin
 ### History
 
 - 22 October 2026, board item FL2 (study section 354): added after FL1, for the question whether balance can be more than a premise about transfers; the literature on conserved quantities of cellular automata checked first.
+- 26 October 2026, board item DF1b (study section 422): Thermodynamics' first law named in full in the correspondence and a dependency, apart from the spine's first law.
 
 </details>
 

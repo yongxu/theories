@@ -5,14 +5,14 @@
 
 `fixation-with-selection` · **recorded-checked** · theorem · F01 · [record](fixation-with-selection.json) · [register](../../../../RESULTS.md)
 
-> With replacement one at a time, up with weight a and down with b, the fixation share tends to a potential's ratio: the starting share where a = b, above it from every mixed start where b < a, and the favoured kind lost with weight at least b^i.
+> Replacing one of M + 1 at a time, up with weight a and down with b, after (M + 1) m steps the fixing share is at most a potential's ratio and at least it less (1 − (a/(a + b))^(M + 1))^m, so for positive a tends to it: the starting share where a = b, above it from every mixed start where b < a.
 
 <a id="laws--规律"></a>
 ## Laws
 
 1. Replacement one at a time among M + 1: from a mixed population the count goes up with weight a and down with b, a population of one kind staying; the histories are counted step by step and compose. (`Becoming.Drift.Replacement.Mixed`, `Becoming.Drift.Replacement.value`, `Becoming.Drift.Replacement.value_mixed`, `Becoming.Drift.Replacement.value_one_kind`, `Becoming.Drift.Replacement.value_stays`, `Becoming.Drift.Replacement.value_add`, `Becoming.Drift.Replacement.value_mul`, `Becoming.Drift.Replacement.value_le`, `Becoming.Drift.Replacement.value_const`, `Becoming.Drift.Replacement.value_comp`, `Becoming.Drift.Replacement.value_congr`)
 2. The potential with steps b^j a^(M - j) is harmonic for the steps, a times a step being b times the one below, so it keeps its weighted value over any number of steps. (`Becoming.Drift.Replacement.rise`, `Becoming.Drift.Replacement.potential`, `Becoming.Drift.Replacement.rise_step`, `Becoming.Drift.Replacement.potential_harmonic`, `Becoming.Drift.Replacement.value_potential`, `Becoming.Drift.Replacement.potential_le_succ`, `Becoming.Drift.Replacement.potential_mono`, `Becoming.Drift.Replacement.potential_beyond`, `Becoming.Drift.Replacement.potential_le_top`)
-3. The histories fixing the first kind weigh, times the potential at the top, at most the whole weight times the potential at the start, and with the varied ones at least it; the varied ones vanish geometrically, so the fixation share tends to the potential's ratio. (`Becoming.Drift.Replacement.fixed`, `Becoming.Drift.Replacement.lost`, `Becoming.Drift.Replacement.varied`, `Becoming.Drift.Replacement.partition`, `Becoming.Drift.Replacement.value_partition`, `Becoming.Drift.Replacement.fixed_below`, `Becoming.Drift.Replacement.potential_within`, `Becoming.Drift.Replacement.fixation_bounds`, `Becoming.Drift.Replacement.climbs`, `Becoming.Drift.Replacement.varied_step`, `Becoming.Drift.Replacement.varied_vanishes`, `Becoming.Drift.Replacement.fixation`)
+3. The histories fixing the first kind weigh, times the potential at the top, at most the whole weight times the potential at the start, and with the varied ones at least it; after (M + 1) m steps the varied ones weigh at most r^m, with r + a^(M + 1) = (a + b)^(M + 1), so for positive a the fixation share tends to the potential's ratio. (`Becoming.Drift.Replacement.fixed`, `Becoming.Drift.Replacement.lost`, `Becoming.Drift.Replacement.varied`, `Becoming.Drift.Replacement.partition`, `Becoming.Drift.Replacement.value_partition`, `Becoming.Drift.Replacement.fixed_below`, `Becoming.Drift.Replacement.potential_within`, `Becoming.Drift.Replacement.fixation_bounds`, `Becoming.Drift.Replacement.climbs`, `Becoming.Drift.Replacement.varied_step`, `Becoming.Drift.Replacement.varied_vanishes`, `Becoming.Drift.Replacement.fixation`)
 4. With a = b the share is the starting share; with b <= a at least it; with b < a strictly above it from every mixed start; and the favoured kind is lost with weight at least b^i. (`Becoming.Drift.Replacement.rise_neutral`, `Becoming.Drift.Replacement.potential_neutral`, `Becoming.Drift.Replacement.neutral_share`, `Becoming.Drift.Replacement.rise_antitone`, `Becoming.Drift.Replacement.rise_antitone_le`, `Becoming.Drift.Replacement.potential_above`, `Becoming.Drift.Replacement.potential_from`, `Becoming.Drift.Replacement.favoured_share`, `Becoming.Drift.Replacement.favoured_share_above`, `Becoming.Drift.Replacement.lost_ge`)
 5. Witness: two members, up two and down one, the first kind fixing with share two of three. (`Becoming.Drift.Favoured.two_members`)
 
@@ -53,11 +53,11 @@ The Moran process with selection (Moran 1958): fixation probability (1 - (b/a)^i
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [fixation-by-drift](fixation-by-drift.md). The neutral case: with a = b the share is the starting share, as for sampled generations.
+- **formal-reuse**: [fixation-by-drift](fixation-by-drift.md). The neutral case: with a = b the potential's ratio is the starting share, to which sampled generations' bounds also close.
   - Output: The neutral fixation share.
   - Input: The fixation share with selection.
   - Preserved conditions: Two kinds. [Drift.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean)
-- related, not a proved adapter: [fixation-by-drift](fixation-by-drift.md). Drift alone, fixing each kind with its starting share.
+- related, not a proved adapter: [fixation-by-drift](fixation-by-drift.md). Drift alone: the share fixing the first kind at most its starting share and within a geometrically falling bound of it.
 - related, not a proved adapter: [drift-offspring-sampled](drift-offspring-sampled.md). One sampled generation undoing selection.
 
 <a id="sources--来源"></a>
@@ -77,6 +77,7 @@ Aliases: `fixation with selection`, `Moran fixation probability`, `replacement o
 ### History
 
 - 22 October 2026: added (EV13), fixation with selection in the draw; study section 368.
+- 26 October 2026, board item DF1b (study section 422): The Lean gives finite two-sided bounds after (M + 1) m steps (Drift.Replacement.fixation, Drift.Replacement.varied_vanishes); the statement and law 3 give them and read the limit from them. The favoured kind lost with weight at least b^i stays in law 4 and the counterexample. The statement names the population of M + 1; the related note on drift and the neutral case give drift's bounds, not a limit.
 
 </details>
 

@@ -20,7 +20,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- No axiom and no premise beyond each law's own: for every carrier, relation and class; the region in the first law decided; the witnesses' nets supplied, with discrete steps and equality on their carriers.
+- No axiom and no premise beyond each law's own: for every carrier, relation and class; the region in law 1 decided; the witnesses' nets supplied, with discrete steps and equality on their carriers.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -55,7 +55,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 ### Dependencies
 
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «续», «相续», «及», «类», «有常», «有常之逐点», «亡», «线内同类», «一»; «所及» from the map.
-- related, not a proved adapter: [reach-through-a-shared-condition](reach-through-a-shared-condition.md). Its affecting_member_outside and fed_outside are proved from the first law (GS6).
+- related, not a proved adapter: [reach-through-a-shared-condition](reach-through-a-shared-condition.md). Its affecting_member_outside and fed_outside are proved from law 1 (GS6).
 - related, not a proved adapter: [the-class-of-being-joined](the-class-of-being-joined.md). ThirdFed there is a one-step instance of constancy; the second law adds what holding a member's effects carries on.
 - related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). A line past a member's end; here the class that carries it, in a finite net too.
 
@@ -82,6 +82,7 @@ Aliases: `What a line must hold, and what a regularity takes in`, `线所必含�
 
 - 25 October 2026: added (PF), finishing 07 §4.6's steps 3 and 4; study section 402.
 - 25 October 2026: SharedCondition.affecting_member_outside and fed_outside proved from «所经不同则不及» in Becoming.GrammarCases, which now imports this module (GS6); the corollary leaves the next step; study section 404.
+- 26 October 2026, board item DF1b (study section 422): Law 1 is not called the first law, the spine's name for Flow.Gainless (English only; the Chinese has 首律).
 
 </details>
 

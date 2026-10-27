@@ -36,7 +36,7 @@
 - That eventual widening is better: calling it better is a premise beyond C (C∞ in the study), named and not asserted. It would discount every loss confined to a finite stretch, its verdicts can be insulated against every record, and it is the unlimited continuation priority that the priority of basic conditions rejects.
 - That keeping widening or being opened by the opened is 生生, a direction or a ranking: ranking by either runs against widening (OwnCondition.not_monotone, Saturated.reverses).
 - A law relating 生成 to widening (02 stays open), or any gain, renewal or giver law; comparisons over branching courses; novelty; and that eventual widening entails overtaking as a theorem, which is an argument under finitely many admissions at each step.
-- Which actual courses meet any of these readings; and the first form of opened by the opened is superseded: its first law fixed a recency form (what-keeping-widening-needs).
+- Which actual courses meet any of these readings; and the first form of opened by the opened is superseded: the first of its laws fixed a recency form (what-keeping-widening-needs).
 - **Counterexample:** A lag defeats eventual widening: a course keeping widening, and keeping every formation of another from one step later, is mixed with it in every tail (LagWitness.lag). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean)
 - **Counterexample:** Keeping widening is not kept by widening: a saturated course widens a course that keeps widening and keeps widening from no step (OwnCondition.not_monotone). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean)
 - **Counterexample:** What carries a range is invisible to widening: a relay and a single giver give the same admissions, only the relay opened by the opened (OpeningChain.carried); a closed cycle is opened by the opened with no widening (ClosedCycle.cycle). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean)
@@ -106,6 +106,7 @@ Aliases: `Widening on late tails, and what carries a widening`, `在晚期尾段
 - 25 October 2026: added (UE4), widening on late tails and what carries a widening, near-definitional; the second-order direction of 生生 stays open; study section 410.
 - 26 October 2026, board item UE7 (study section 419): the carrier law's first form marked superseded by the recency form of what-keeping-widening-needs, with the reason (a late single giver); the provisional does-not-show item and the next step updated; the definition and its witnesses are unchanged.
 - 26 October 2026, board item UE9 (study section 421): the next step updated: the lag is decided in comparing-two-courses-on-what-they-admit; the counterexample (a lag defeats eventual widening) stands, and no declaration changed.
+- 26 October 2026, board item DF1b (study section 422): The first of a record's laws is not called its first law, the spine's name for Flow.Gainless.
 
 </details>
 

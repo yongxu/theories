@@ -38,7 +38,7 @@ A frozen test designed from the theory on a deployed pipeline (a prediction of w
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Christiano et al. 2017; Ouyang et al. 2022; Bai et al. 2022; Rafailov et al. 2023; Lightman et al. 2023; Irving, Christiano and Amodei 2018; Tamkin et al. 2024 (constructions). Gao, Schulman and Hilton 2022; Wen et al. 2024; Sharma et al. 2023 (measurements). NIST, 29 August 2024 (pre-deployment testing agreements).
+Christiano et al. 2017; Ouyang et al. 2022; Bai et al. 2022; Rafailov et al. 2023; Lightman et al. 2023; Irving, Christiano and Amodei 2018; Tamkin et al. 2024 (constructions). Gao, Schulman and Hilton 2023; Wen et al. 2024; Sharma et al. 2023 (measurements). NIST, 29 August 2024 (pre-deployment testing agreements).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -60,6 +60,7 @@ Aliases: `CR1`, `coupling closures of training pipelines`
 ### History
 
 - 22 October 2026: added (CR1); study section 358.
+- 26 October 2026, board item DF1b (study section 422): Gao, Schulman and Hilton cited by the published year, 2023 (ICML, PMLR 202; arXiv October 2022), as elsewhere in the account.
 
 </details>
 

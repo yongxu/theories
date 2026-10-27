@@ -755,8 +755,8 @@
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Flow.lean 到 Prelude.lean：steps；从 World.lean 到 Prelude.lean：total。证明绑定（Flow.lean、Loops.lean、Prelude.lean、Propagation.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Flow.lean、Loops.lean、Propagation.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
     },
     {
-      "en": "26 October 2026, board item DF1b (study section DF_N): That the amounts before a loop forms do not show when it forms is a witness (Closing.Onset.unforeseen, which compares a loop forming at T with one forming at any later step), so statement, law 4, the reading in the correspondence and a related note say they need not show it; growth before a loop forms is at most polynomial. The readings' label says the third was revised.",
-      "zh": "2026年10月26日，工作板条目 DF1b（研究第 DF_N 节）：形成之前的量不显示回路何时形成，这是一个见证（Closing.Onset.unforeseen，比较在 T 形成的回路与在任何更晚之步形成的回路），故陈述、第 4 条规律、对应中的读法与一条相关说明改为“未必显示”；回路形成之前的增长至多是多项式。读法的标注写明第三项已修订。"
+      "en": "26 October 2026, board item DF1b (study section 422): That the amounts before a loop forms do not show when it forms is a witness (Closing.Onset.unforeseen, which compares a loop forming at T with one forming at any later step), so statement, law 4, the reading in the correspondence and a related note say they need not show it; growth before a loop forms is at most polynomial. The readings' label says the third was revised.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：形成之前的量不显示回路何时形成，这是一个见证（Closing.Onset.unforeseen，比较在 T 形成的回路与在任何更晚之步形成的回路），故陈述、第 4 条规律、对应中的读法与一条相关说明改为“未必显示”；回路形成之前的增长至多是多项式。读法的标注写明第三项已修订。"
     }
   ],
   "text_versions": [

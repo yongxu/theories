@@ -24,7 +24,7 @@ Canonical source: [Tower.lean](../../../../experiments/integrated-correction/gen
 - No global premise: running down and the census only at the level and fine steps used.
 - Representation: time as a family of discrete readings linked by the reading of Sampling; the core takes no real numbers.
 
-Ren decided on 12 October that continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence. This result gives the tower and its first law: dividing time more finely adds no change. It rests on the laws of one step (Flow.runsDown_bounds_change) and the least loss per exchange, with no premise added.
+Ren decided on 12 October that continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence. This result gives the tower and the first of its laws: dividing time more finely adds no change. It rests on the laws of one step (Flow.runsDown_bounds_change) and the least loss per exchange, with no premise added.
 
 <a id="检验与边界-validation-and-boundaries"></a>
 ## Validation and boundaries
@@ -97,4 +97,5 @@ Aliases: `Becoming.Tower`, `Becoming.Tower.reads`, `Becoming.Tower.web_zero`, `B
 - 19 October 2026, R22 (the names of the nineteenth review): BECOMING-UNIFICATION-PLAN.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: BECOMING-UNIFICATION-PLAN.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the statement names the census of what stands that the bound on falls takes; the representation premise gives the reading without naming who chose it (the decision stays in the correspondence as provenance).
+- 26 October 2026, board item DF1b (study section 422): The first of the tower's laws is not called its first law, the spine's name for Flow.Gainless.
 - 8 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](continuous-time-as-tower.json).

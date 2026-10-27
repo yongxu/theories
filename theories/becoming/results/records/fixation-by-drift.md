@@ -5,7 +5,7 @@
 
 `fixation-by-drift` · **recorded-checked** · theorem · F01 · [record](fixation-by-drift.json) · [register](../../../../RESULTS.md)
 
-> Sampled generation after generation with no selection, a population keeps each count on average, its still-varied histories vanish geometrically, and each kind is fixed with exactly its starting share in the limit.
+> Sampled by drift alone, generation after generation, a population of N keeps each count on average; after k generations its still-varied histories weigh a share at most ((N^N − 2)/N^N)^k, and those fixing the first kind a share at most its starting share and within that of it.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -14,7 +14,7 @@
 2. No direction without selection: summed over the histories the final count is h (N^N)^k, its start times the whole weight. (`Becoming.Drift.weighted_ones`, `Becoming.Drift.sampled_count`)
 3. The ends absorb: from none or from all of the first kind every history stays there. (`Becoming.Drift.from_none`, `Becoming.Drift.from_all`, `Becoming.Drift.sub_self_zero`, `Becoming.Drift.sampled_none`, `Becoming.Drift.sampled_all`)
 4. Drift ends variation: from a varied population the samplings fixing and losing the first kind weigh at least one each, so the histories still varied after k generations weigh at most r^k with r + 2 = N^N. (`Becoming.Drift.whole`, `Becoming.Drift.whole_true`, `Becoming.Drift.whole_false`, `Becoming.Drift.whole_weight`, `Becoming.Drift.varied`, `Becoming.Drift.varied_zero`, `Becoming.Drift.varied_self`, `Becoming.Drift.varied_step`, `Becoming.Drift.one_le_pow`, `Becoming.Drift.varied_vanishes`)
-5. Fixation: N times the histories fixing the first kind is at most h (N^N)^k and with N r^k at least it, so the fixing share tends to h/N, the neutral fixation probability. (`Becoming.Drift.fixed`, `Becoming.Drift.count_le`, `Becoming.Drift.fixed_le`, `Becoming.Drift.fixation`)
+5. Fixation: N times the histories fixing the first kind is at most h (N^N)^k and with N r^k at least it: finite bounds, whose reading is that the fixing share tends to h/N, the neutral fixation probability. (`Becoming.Drift.fixed`, `Becoming.Drift.count_le`, `Becoming.Drift.fixed_le`, `Becoming.Drift.fixation`)
 6. Witness: two members, one of each kind, one generation: of the four histories one fixes, one loses and two stay varied. (`Becoming.Drift.TwoMembers.one_generation`)
 
 <a id="conditions--条件"></a>
@@ -64,7 +64,7 @@ The neutral fixation probability of the Wright-Fisher model (Kimura 1962; Moran 
   - Preserved conditions: Natural weights. [Typicality.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean)
 - related, not a proved adapter: [drift-offspring-sampled](drift-offspring-sampled.md). One generation of sampling, here iterated.
 - related, not a proved adapter: [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md). Ending among groups uses up the differences it acts on; drift uses up variation too.
-- related, not a proved adapter: [fixation-with-selection](fixation-with-selection.md). With selection in the draw, replacement one at a time: the fixation share a potential's ratio.
+- related, not a proved adapter: [fixation-with-selection](fixation-with-selection.md). With selection in the draw, replacement one at a time: the fixing share within a bound of a potential's ratio that falls geometrically where a is positive.
 
 **Used by:** [fixation-with-selection](fixation-with-selection.md)
 
@@ -89,6 +89,7 @@ Aliases: `fixation by drift`, `neutral fixation probability`, `漂变导致的�
 
 - 20 October 2026: added (EV9), fixation by drift over many sampled generations: the count kept, the ends absorbing, variation ending geometrically, the fixing share h/N; study section 278.
 - 22 October 2026, EV13-EV16: related record fixation-with-selection added (study section 368); its laws and their statements are unchanged.
+- 26 October 2026, board item DF1b (study section 422): The Lean gives finite two-sided bounds after k generations (Drift.fixation, Drift.varied_vanishes); the limit is read from them, as chapter 04 says. The statement gives the bounds, law 5 marks the limit as their reading, and the related note on selection gives its bound. The statement names the first kind, as Drift.fixation does, and the bound with selection falls geometrically where a is positive.
 
 </details>
 
