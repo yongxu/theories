@@ -40,7 +40,8 @@
 - A late reading of another form: with its own weight it has another window, and with a weight against the shapers chosen after the share is seen, far enough below theirs, the others could turn the course from any share.
 - The step from which the window is closed: the deadline is a bound, quadratic in the start's counts (24 in the witness and 96 from two to two, both closed from step 4); none is stated for a weakly favouring start or one with no shaper.
 - Courses with noise, readers who learn, readings changing with the share, a loss read before it reaches N, and a general law for the round from the one step between, which goes either way in the witnesses.
-- That the joint selection's two conditions are independent: a lock is left in time where control is selected, but control unselected with the shapers' capture kept is not shown; below the critical mass the lock is the other way, no capture.
+- That the joint selection's two conditions are independent: control left unselected with a lock left in time is not shown, since with two kinds leaving the lock below the critical mass means a rule favouring the shapers.
+- Read for the shapers' capture alone: a lock is left in time where control is selected, but control unselected with the shapers' capture kept is not shown; below the critical mass the lock is the other way, no capture.
 - That a reading in time supports 生生, or that a course turned is better than one kept: no evaluation enters, and ranking courses needs C.
 - **Counterexample:** One step too late in the witness: read from step 3, the late reading still favours the others at the share of step 3 and the rule in force at step 4 favours them, yet the course is not turned for good and is locked in the shapers' favour from step 6 (Window.too_late); the same reading from step 2 turns it (Window.in_time). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean)
 - **Counterexample:** The step between is not always too late: from one shaper to three others, read from the step between, the course is turned for good from step 4 (Between.turned). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean)
@@ -107,6 +108,7 @@ Aliases: `The loss read in time by the others, joined to the critical mass`, `�
 
 - 26 October 2026: added (MA4b), the others' reading of the loss joined to the critical mass, after one independent review and its fix round; study section 420.
 - 27 October 2026: the scope item on the joint selection's two conditions names the case not shown, control left unselected with the shapers' capture kept, in place of "the converse", which the record shaping-read-by-readers-drawn-from-the-selected uses for the opposite case (the alignment dossier's third review pass, finding F13). The claim is unchanged.
+- 27 October 2026, later: the scope item on the joint selection's two conditions reads condition 2 first for any lock that forms, under which the case not shown is control left unselected with a lock left in time, since with two kinds leaving the lock below the critical mass means a rule favouring the shapers; the reading for the shapers' capture alone follows as its own item, worded as before. The claim is unchanged.
 
 </details>
 
