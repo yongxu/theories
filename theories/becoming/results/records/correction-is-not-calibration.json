@@ -1,0 +1,222 @@
+{
+  "schema_version": 2,
+  "id": "correction-is-not-calibration",
+  "title": {
+    "en": "Correction is not calibration: references recover the report, and later change defeats it",
+    "zh": "修正不是校准：参照读数恢复报告，其后的变化使之失效"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "For affine channels of nonzero gain, readings at two references recover the report of success exactly, and signs transfer between epochs exactly where the bias is kept and the gains agree in sign; renewed references repair an overwritten matrix; one reference, mixed epochs and later change fail.",
+    "zh": "对增益非零的仿射通道，两个参照处的读数精确恢复成功之报告；符号在前后时期间转移，恰当偏置不变且两增益同号；更新的参照修复被覆盖的矩阵，而单一参照、混合时期与其后的变化都失败。"
+  },
+  "laws": [
+    {
+      "en": "For an affine channel x ↦ gx + b of nonzero gain, the local report computed from its readings at the references 0 and 1 and at the input p, with sign s, says whether s·p is positive; with zero gain it gives no report. The apparatus of three channels reports success exactly where every local reading does.",
+      "zh": "对增益非零的仿射通道 x ↦ gx + b，由其在参照 0、1 与输入 p 处的读数、以符号 s 算出的局部报告，说出 s·p 是否为正；增益为零时不给报告。三通道的装置报告成功，恰当每个局部读数都如此。",
+      "declarations": [
+        "CalibratedUpdater.Channel",
+        "CalibratedUpdater.raw",
+        "CalibratedUpdater.localReport",
+        "CalibratedUpdater.acquired_local_exact",
+        "CalibratedUpdater.constant_channel_unresolved",
+        "CalibratedUpdater.report_requires_all"
+      ]
+    },
+    {
+      "en": "Two affine channels agree at every input exactly where they agree at 0 and 1; one reference at 0 is blind: the channels (1, 0) and (−1, 0) read 0 alike and 1 differently. Signs transfer from an old channel of nonzero gain to a current one, for every input and sign, exactly where the bias is unchanged and the product of the gains is positive; raising a gain from 1 to 2 keeps every sign.",
+      "zh": "两个仿射通道恰在 0 与 1 处一致时处处一致；只在 0 处的参照是盲的：通道 (1, 0) 与 (−1, 0) 在 0 处读数相同、在 1 处不同。由增益非零的旧通道到当前通道，符号对每个输入与符号都转移，恰当偏置不变且两增益之积为正；增益由 1 升到 2 保持每个符号。",
+      "declarations": [
+        "CalibrationRenewal.two_references_complete",
+        "CalibrationRenewal.zero_reference_blind",
+        "CalibrationRenewal.signal",
+        "CalibrationRenewal.all_signs_transfer_iff",
+        "CalibrationRenewal.positive_gain_change_preserves_signs"
+      ]
+    },
+    {
+      "en": "Witnesses of failure: a reading at 0 from one epoch and at 1 from another can report success where s·p is negative, as can a curved channel agreeing with an affine one at 0 and 1; in the named run, an apparatus calibrated to channels that have since changed leaves the matrix unrevised and the task failing, also when the change follows an inspection.",
+      "zh": "失败的见证：0 处读数取自一个时期、1 处取自另一时期，可在 s·p 为负处报告成功；在 0 与 1 处与仿射通道一致的弯曲通道亦可；在所命名的运行中，装置按此后已变的通道校准时，矩阵不被修订、任务失败，变化发生在一次检查之后亦然。",
+      "declarations": [
+        "CalibrationRenewal.mixed_epoch_false_success",
+        "CalibrationRenewal.nonaffine_reference_alias",
+        "CalibratedUpdater.stale_channel_blocks_actual_repair",
+        "CalibrationRenewal.late_change_still_fails"
+      ]
+    },
+    {
+      "en": "Inspecting the channels with at least seven units, through a connected apparatus and with every gain nonzero, makes the admitted run equal the run with responsive reports, for every network and task list. In the named runs, seven units revise the overwritten matrix within two tasks, one succeeding; six leave it unrevised, none succeeding; without reference renewal it stays as it was after every number of steps.",
+      "zh": "以至少七个单位、经连通的装置且每个增益非零来检查通道，使被允许的运行等于有响应报告的运行，对每个网络与任务列表皆然。在所命名的运行中，七个单位在两个任务内修订被覆盖的矩阵，其一成功；六个单位不修订，无成功；没有参照更新时，矩阵经任意步数都保持原样。",
+      "declarations": [
+        "CalibrationRenewal.renewed_run",
+        "CalibrationRenewal.actual_repair_after_inspection",
+        "CalibrationRenewal.six_units_cannot_revise",
+        "CalibrationRenewal.false_success_stalls"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Channels are affine maps over the real numbers (Mathlib); the apparatus of three channels, the reference inputs 0 and 1, the update law, the network and the tasks are supplied.",
+      "zh": "通道为实数上的仿射映射（Mathlib）；三通道的装置、参照输入 0 与 1、更新律、网络与任务为给定。"
+    },
+    {
+      "en": "Axioms: every CalibratedUpdater and CalibrationRenewal declaration cited uses propext, Quot.sound and Classical.choice, as their receipt reports.",
+      "zh": "公理：所引 CalibratedUpdater 与 CalibrationRenewal 的每个声明都用 propext、Quot.sound 与 Classical.choice，如其回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That no adaptive action, repeated reading or criticism tells a faithful sensor from one reversing success and failure: that is the chapter's argument, without Lean.",
+      "zh": "没有适应性动作、重复读取或批评能把忠实的传感器与颠倒成败者分开：那是本章不含 Lean 的论证。",
+      "kind": "scope"
+    },
+    {
+      "en": "That two references suffice for channels that are not affine: a curved channel agreeing at both references misleads.",
+      "zh": "两个参照对非仿射通道也足够：在两个参照处都一致的弯曲通道会误导。",
+      "kind": "non-implication",
+      "witness": "CalibrationRenewal.nonaffine_reference_alias"
+    },
+    {
+      "en": "That a calibration stays valid: a change of the channels after it defeats the report.",
+      "zh": "校准保持有效：其后通道的变化使报告失效。",
+      "kind": "non-implication",
+      "witness": "CalibrationRenewal.late_change_still_fails"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+      "detail": {
+        "en": "Readings at the two references taken in different epochs report success where s·p = −1 (mixed_epoch_false_success).",
+        "zh": "两个参照处的读数取自不同时期，在 s·p = −1 处报告成功（mixed_epoch_false_success）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.30.0-rc2 with Mathlib): CalibratedUpdater and CalibrationRenewal by their package checker (calibration-renewal-verification.json), propext, Quot.sound and Classical.choice in every declaration cited; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.30.0-rc2 与 Mathlib 实查：CalibratedUpdater 与 CalibrationRenewal 经其包检查器（calibration-renewal-verification.json），所引每个声明用 propext、Quot.sound 与 Classical.choice；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "State calibration on the core's processes: a reference intervention as a move whose outcome the channel's law fixes, so that what two references settle is read off a run that returns to them.",
+    "zh": "在核心的过程上陈述校准：参照干预作为一步，其结果由通道之律确定，使两个参照所定者由回到它们的运行读出。"
+  },
+  "correspondence": {
+    "en": "Fixing an affine channel by readings at two known references is calibration in the sense of the International Vocabulary of Metrology (JCGM 200:2012, 2.39), with two measurement standards. Reading revision without a reference as correction that is not calibration is the AI's reading.",
+    "zh": "以两个已知参照处的读数确定仿射通道，即国际计量学词汇（JCGM 200:2012，2.39）意义上的校准，以两个测量标准为之。把无参照的修订读作不是校准的修正，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "aliases": [
+    "correction is not calibration",
+    "修正不是校准",
+    "CalibrationRenewal.all_signs_transfer_iff",
+    "CalibratedUpdater.acquired_local_exact"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "experiment-needs-return",
+      "detail": {
+        "en": "What one's act would have done otherwise is fixed only where the configuration returns; a reference intervention is such a return.",
+        "zh": "自己的动作本会如何，只在构形回返处确定；参照干预即这样的回返。"
+      }
+    },
+    {
+      "id": "the-updater-line",
+      "detail": {
+        "en": "The updater constructions whose overwritten matrix renewed references repair here.",
+        "zh": "更新者诸构造，其被覆盖的矩阵在此由更新的参照修复。"
+      }
+    },
+    {
+      "id": "selection-under-registration-revision",
+      "detail": {
+        "en": "Selection when the lumping changes, which cites the renewal construction.",
+        "zh": "归并改变时的选择，引用了此更新构造。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibratedUpdater.lean",
+      "role": "proof",
+      "declarations": [
+        "CalibratedUpdater.Channel",
+        "CalibratedUpdater.raw",
+        "CalibratedUpdater.localReport",
+        "CalibratedUpdater.acquired_local_exact",
+        "CalibratedUpdater.constant_channel_unresolved",
+        "CalibratedUpdater.report_requires_all",
+        "CalibratedUpdater.stale_channel_blocks_actual_repair"
+      ],
+      "sha256": "a5b8a3c6defa189009367933defb10fe8d0ea2f39e9df368a5594ada60c993ab"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+      "role": "proof",
+      "declarations": [
+        "CalibrationRenewal.two_references_complete",
+        "CalibrationRenewal.zero_reference_blind",
+        "CalibrationRenewal.signal",
+        "CalibrationRenewal.all_signs_transfer_iff",
+        "CalibrationRenewal.positive_gain_change_preserves_signs",
+        "CalibrationRenewal.mixed_epoch_false_success",
+        "CalibrationRenewal.nonaffine_reference_alias",
+        "CalibrationRenewal.late_change_still_fails",
+        "CalibrationRenewal.renewed_run",
+        "CalibrationRenewal.actual_repair_after_inspection",
+        "CalibrationRenewal.six_units_cannot_revise",
+        "CalibrationRenewal.false_success_stalls"
+      ],
+      "sha256": "87f68ddcd5446dd536c6746aa1258e5637232474d28ebd51158fbdb95145147f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/calibration-renewal-verification.json",
+      "role": "receipt",
+      "sha256": "0739a10c7523aa2e349e78652a5c2bea8863f4dde320f8495ec60a47558f27f3"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "d1617cd81aa353304cae97d6510da26c335e4498b8a3dfced1cff6143c342d04"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibratedUpdater.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/calibration-renewal-verification.json",
+      "sha256_pointer": "/modules/3/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/calibration-renewal-verification.json",
+      "sha256_pointer": "/modules/4/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), that two references recover the report of an affine channel, the exact criterion for signs to transfer, renewal of references, and the failures of one reference, mixed epochs and later change; from DEFECTS-FOUND (triage row 134); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），两个参照恢复仿射通道的报告、符号转移的精确准则、参照的更新，以及单一参照、混合时期与其后变化之失败；出自 DEFECTS-FOUND（分诊第 134 行）；研究第 DF_N 节。"
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "schema_version": 2,
+  "id": "market-model-share-margin-and-ends",
+  "title": {
+    "en": "The market model: the renewing share, the margin and the two ends",
+    "zh": "市场模型：更新之份额、边际与两端"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F06",
+  "reviewed_at_utc": "2026-10-26T16:30:00+00:00",
+  "statement": {
+    "en": "In the market model an interior renewing share rises at a positive selection rate where its private advantage is positive; the accountability floor holds under every admissible influence exactly for a nonnegative margin; at erosion 1/2 both ends attract nearby states, some near the interior leave.",
+    "zh": "在市场模型中，介于零与全之间之更新份额，于选择率为正且私有优势为正处上升；问责之下限在每一容许之影响下得保，恰当边际非负；侵蚀为二分之一时，两端皆吸引其近旁之状态，而任意接近内部定态之状态有离去者。"
+  },
+  "laws": [
+    {
+      "en": "The renewing practice's private return exceeds the extracting one's by exactly the gap: the fine times the accountability, plus the lobbying, less the renewal upkeep. For a share strictly between none and all, a positive selection rate and a positive gap, the share rises at the next step; a share of none stays none, in the original family at every erosion and in a numerical witness of the share law.",
+      "zh": "更新之实践的私有所得比抽取者恰多出差额：罚额乘问责，加游说，减更新之维护。份额严格介于零与全之间、选择率为正、差额为正时，份额下一步上升；份额为零则仍为零，于原参数族在每一侵蚀下，并于份额律之一数值见证中。",
+      "declarations": [
+        "MarketGenerativity.profitR",
+        "MarketGenerativity.profitE",
+        "MarketGenerativity.gap",
+        "MarketGenerativity.shareStep",
+        "MarketGenerativity.profits_difference",
+        "MarketGenerativity.share_strictly_increases",
+        "MarketGenerativity.no_entry_at_zero",
+        "RegimeAttraction.zero_share_remains_zero"
+      ]
+    },
+    {
+      "en": "Write M = α(1 − θ) − βλθ for correction strength α, erosion by influence β, influence bound λ and floor θ. For α, β ≥ 0, α + β ≤ 1, 0 ≤ λ ≤ 1 and 0 < θ ≤ 1, with correction executed and no error, every accountability q in [θ, 1] under every influence w in [0, λ] stays at or above θ at the next step exactly where M ≥ 0.",
+      "zh": "记 M = α(1 − θ) − βλθ（纠正强度 α，影响之侵蚀 β，影响上界 λ，下限 θ）。α、β ≥ 0，α + β ≤ 1，0 ≤ λ ≤ 1，0 < θ ≤ 1，纠正执行且无误差时：凡问责 q ∈ [θ, 1]、影响 w ∈ [0, λ]，下一步 q 不低于 θ，恰当 M ≥ 0。",
+      "declarations": [
+        "MarketGenerativity.qualityStep",
+        "RegimeBoundary.margin",
+        "RegimeBoundary.FloorProtected",
+        "RegimeBoundary.clip_floor_iff",
+        "RegimeBoundary.exact_floor_boundary"
+      ]
+    },
+    {
+      "en": "For α > 0, β ≥ 0, 0 ≤ λ ≤ 1 and 0 < θ < 1, a low certificate (a share strictly between none and all, accountability in [0, θ), influence in [0, 1] and at most λ times the other share, the rise by correction at most the erosion) exists exactly where M < 0; at M = 0, with α + β ≤ 1 and θ ≤ 1, the floor is kept and no low certificate exists.",
+      "zh": "α > 0，β ≥ 0，0 ≤ λ ≤ 1，0 < θ < 1 时，低之证书（份额严格介于零与全之间，问责在 [0, θ)，影响在 [0, 1] 且至多为 λ 乘另一份额，纠正之提升不多于侵蚀）存在，恰当 M < 0；M = 0、α + β ≤ 1 且 θ ≤ 1 时，下限得保而无低之证书。",
+      "declarations": [
+        "RegimeBoundary.LowCertificate",
+        "RegimeBoundary.low_certificate_requires_negative_margin",
+        "RegimeBoundary.negative_margin_has_low_certificate",
+        "RegimeBoundary.exact_low_certificate_boundary",
+        "RegimeBoundary.zero_margin_is_protected_but_has_no_low_certificate"
+      ]
+    },
+    {
+      "en": "In the original family (α = 1/4, λ = 1, θ = 3/8, the example's rates and fine), for 0 < β ≤ 3/4 each physical fixed state is the maintaining end, the depleting end or an interior state. At β = 1/2 each state in the box at the first end scaled by r ≤ 1/32, or at the second by r ≤ 1/48, lies in the box scaled by any ε > 0 from some step on; within every ε of the interior state some state's share later exceeds 1/4.",
+      "zh": "原参数族（α = 1/4，λ = 1，θ = 3/8，原例之率与罚额）中 0 < β ≤ 3/4 时，每一物理定态是维持之端、耗竭之端或一内部定态。β = 1/2 时，维持端处以 r ≤ 1/32、或耗竭端处以 r ≤ 1/48 缩放之盒中每一状态，自某步起入以任一 ε > 0 缩放之盒；内部定态之每一 ε 内，有状态之份额其后超过 1/4。",
+      "declarations": [
+        "RegimeBoundary.OperatingState",
+        "RegimeBoundary.step",
+        "RegimeAttraction.physical",
+        "RegimeAttraction.family",
+        "RegimeAttraction.high",
+        "RegimeAttraction.low",
+        "RegimeAttraction.middle",
+        "RegimeAttraction.fixed_classification",
+        "RegimeAttraction.HighTube",
+        "RegimeAttraction.LowTube",
+        "RegimeAttraction.MiddleTube",
+        "RegimeAttraction.high_approaches",
+        "RegimeAttraction.low_approaches",
+        "RegimeAttraction.middle_unstable"
+      ]
+    },
+    {
+      "en": "Coupled to the support of the original example, floor 5 and no shocks, with correction installed at every step, every start in the box at the depleting end scaled by r ≤ 1/48 takes the support below 5 at some step from every initial stock, so its guarded history fails; from the box at the maintaining end scaled by r ≤ 1/32, with stock at least 5, the guarded history never fails.",
+      "zh": "与原例之支持耦合（下限 5，无冲击），每步装入纠正：耗竭端处以 r ≤ 1/48 缩放之盒中每一起点，自任一初始存量，于某步使支持低于 5，故其守卫之历史失败；自维持端处以 r ≤ 1/32 缩放之盒、存量不低于 5，守卫之历史永不失败。",
+      "declarations": [
+        "RegimeAttraction.stockHistory",
+        "RegimeAttraction.low_support_fails_finitely",
+        "RegimeAttraction.lift",
+        "RegimeAttraction.noShock",
+        "RegimeAttraction.coupled_operating_step",
+        "RegimeAttraction.coupled_eventual_floor_breach",
+        "RegimeAttraction.low_guarded_history_fails",
+        "RegimeAttraction.high_tube_supplies_old_safety",
+        "RegimeAttraction.high_coupled_history_never_fails"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Rational states and parameters, one step at a time; the policy, the fine, the levy, the causal rates, the support laws and the floors are supplied, and correction is an authorized policy installed wherever the beginning reserve covers its fee.",
+      "zh": "有理数之状态与参数，逐步；政策、罚额、征收、因果之率、支持之律与下限皆为所给；纠正是已授权之政策，凡起始储备足其所需即装入。"
+    },
+    {
+      "en": "The floor law takes correction executed and no accountability error; the fixed states are classified in one family of parameters, attraction is shown at β = 1/2, and the coupling uses the original example with no shocks.",
+      "zh": "下限之律取纠正执行且问责无误差；定态于一参数族中分类，吸引示于 β = 1/2，耦合用原例且无冲击。"
+    },
+    {
+      "en": "Periphery (Lean's rationals, imports Std): every cited theorem reports propext, Quot.sound and Classical.choice.",
+      "zh": "外围（Lean 之有理数，引入 Std）：所引每一定理皆报告 propext、Quot.sound 与 Classical.choice。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That an actual market meets the model: parameters, laws and correspondence are supplied.",
+      "zh": "实际市场满足此模型：参数、律与对应皆为所给。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That a negative margin sends every history to the depleting end: it gives a low region, not entry into it.",
+      "zh": "负边际使每一历史趋于耗竭之端：它给出低之区域，而非进入之。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That states leaving the interior state stay away: some move away at some step, which is not shown to last.",
+      "zh": "离开内部定态之状态不复返：只示出有状态于某步离去，未示其持久。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A full basin, a stability classification for every β, a real-valued extension, a bifurcation or an empirical threshold.",
+      "zh": "完整之吸引域、每一 β 之稳定性分类、实数之推广、分岔或经验之阈值。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by Lean 4.29.1 with Std in three receipts, each binding the current bytes of its sources: verification.json (MarketGenerativity, 39 theorems), boundary-verification.json (RegimeBoundary, rebuilding MarketGenerativity) and attraction-verification.json (RegimeAttraction, rebuilding both); every cited theorem reports propext, Quot.sound and Classical.choice. Built 5 to 8 October 2026; the record was read against the current Lean; not reviewed by a person.",
+    "zh": "Lean 4.29.1 实查，三份回执各绑定其源码之当前字节：verification.json（MarketGenerativity）、boundary-verification.json（RegimeBoundary）与 attraction-verification.json（RegimeAttraction，重建前二者）；所引定理皆报 propext、Quot.sound 与 Classical.choice。10月5日至8日构建；本记录对照当前 Lean 读过；未经人审。"
+  },
+  "next_delta": {
+    "en": "The share law, the margin and the two ends as instances of the spine's laws of change, as MarketInstances gives for never leaving, reaching, lasting and draining; a basin or stability law for every β.",
+    "zh": "把份额律、边际与两端作为脊柱之变化律之实例，如 MarketInstances 为不离开、到达、持续与耗竭所给者；每一 β 之吸引域或稳定性之律。"
+  },
+  "correspondence": {
+    "en": "Evolutionary dynamics: the share law is an Euler step, at rate η, of the two-type replicator equation of Taylor and Jonker (1978), ẋ = x(1 − x)(π_R − π_E), the gap being the difference of payoffs. Read by the AI: the two attracting ends with an interior state that nearby states leave are the bistable shape of coordination dynamics, and Akerlof (1970) is the antecedent of the reading that selection draws on what buyers cannot tell.",
+    "zh": "演化动力学：份额律是 Taylor 与 Jonker（1978）之二型复制子方程 ẋ = x(1 − x)(π_R − π_E) 以率 η 所取之欧拉一步，差额即收益之差。依 AI 之读：两端吸引、近旁状态离开内部定态，是协调动力学之双稳之形；Akerlof（1970）是“选择汲取买者所不能分辨者”这一读法之先声。"
+  },
+  "canonical_source": "experiments/market-generativity/formal/RegimeBoundary.lean",
+  "aliases": [
+    "The market model: the renewing share, the margin and the two ends",
+    "市场模型：更新之份额、边际与两端",
+    "MarketGenerativity.share_strictly_increases",
+    "RegimeBoundary.exact_floor_boundary",
+    "RegimeBoundary.exact_low_certificate_boundary",
+    "RegimeAttraction.fixed_classification",
+    "RegimeAttraction.coupled_eventual_floor_breach"
+  ],
+  "dependencies": [
+    {
+      "id": "market-protected-continuation",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "high_coupled_history_never_fails applies MarketGenerativity.safe_history_never_fails, with example_certificate, to the lifted box about the maintaining end (high_tube_supplies_old_safety).",
+        "zh": "high_coupled_history_never_fails 以 example_certificate 把 MarketGenerativity.safe_history_never_fails 用于维持端旁之提升之盒（high_tube_supplies_old_safety）。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "market-partial-correction-boundary",
+      "detail": {
+        "en": "There every physical positive state lands exactly when β ≤ 5/12, the margin at floor 3/8 under the worst influence being nonnegative.",
+        "zh": "彼处每一物理正状态着陆，恰当 β ≤ 5/12，即下限 3/8 在最坏影响下之边际非负。"
+      }
+    },
+    {
+      "id": "market-finite-support-obstruction",
+      "detail": {
+        "en": "There small positive seeds fail by a given step on every admissible schedule; here starts near the depleting end fail at some step with no shocks.",
+        "zh": "彼处小正种子在每一容许之安排下于给定步前失败；此处近耗竭端之起点在无冲击时于某步失败。"
+      }
+    },
+    {
+      "id": "succession-on-a-funded-carrier",
+      "detail": {
+        "en": "A carrier refining the same market step, with migration added to correction.",
+        "zh": "细化同一市场之步、于纠正之外加上迁移之承载者。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/market-generativity/formal/MarketGenerativity.lean",
+      "role": "proof",
+      "declarations": [
+        "MarketGenerativity.profitR",
+        "MarketGenerativity.profitE",
+        "MarketGenerativity.gap",
+        "MarketGenerativity.shareStep",
+        "MarketGenerativity.profits_difference",
+        "MarketGenerativity.share_strictly_increases",
+        "MarketGenerativity.no_entry_at_zero",
+        "MarketGenerativity.qualityStep"
+      ],
+      "sha256": "db7cf7f120e8759aebc1e280e9dc1bbd10b30a6b7004a835015624f85f8d49b1"
+    },
+    {
+      "path": "experiments/market-generativity/formal/RegimeBoundary.lean",
+      "role": "proof",
+      "declarations": [
+        "RegimeBoundary.margin",
+        "RegimeBoundary.FloorProtected",
+        "RegimeBoundary.clip_floor_iff",
+        "RegimeBoundary.exact_floor_boundary",
+        "RegimeBoundary.LowCertificate",
+        "RegimeBoundary.low_certificate_requires_negative_margin",
+        "RegimeBoundary.negative_margin_has_low_certificate",
+        "RegimeBoundary.exact_low_certificate_boundary",
+        "RegimeBoundary.zero_margin_is_protected_but_has_no_low_certificate",
+        "RegimeBoundary.OperatingState",
+        "RegimeBoundary.step"
+      ],
+      "sha256": "74f6a3266258c0df57ec7440c59fe65e8345e6a739f0a0c7b5fecc99a03f7224"
+    },
+    {
+      "path": "experiments/market-generativity/formal/RegimeAttraction.lean",
+      "role": "proof",
+      "declarations": [
+        "RegimeAttraction.zero_share_remains_zero",
+        "RegimeAttraction.physical",
+        "RegimeAttraction.family",
+        "RegimeAttraction.high",
+        "RegimeAttraction.low",
+        "RegimeAttraction.middle",
+        "RegimeAttraction.fixed_classification",
+        "RegimeAttraction.HighTube",
+        "RegimeAttraction.LowTube",
+        "RegimeAttraction.MiddleTube",
+        "RegimeAttraction.high_approaches",
+        "RegimeAttraction.low_approaches",
+        "RegimeAttraction.middle_unstable",
+        "RegimeAttraction.stockHistory",
+        "RegimeAttraction.low_support_fails_finitely",
+        "RegimeAttraction.lift",
+        "RegimeAttraction.noShock",
+        "RegimeAttraction.coupled_operating_step",
+        "RegimeAttraction.coupled_eventual_floor_breach",
+        "RegimeAttraction.low_guarded_history_fails",
+        "RegimeAttraction.high_tube_supplies_old_safety",
+        "RegimeAttraction.high_coupled_history_never_fails"
+      ],
+      "sha256": "a35d0401661cef0533ff2039ca0f3d45cef8b6464f7a7a230e25d41e3c06d978"
+    },
+    {
+      "path": "experiments/market-generativity/formal/verification.json",
+      "role": "receipt",
+      "sha256": "2956874b2e75320856c3c2c62feaa4dc4b79019bf047eafb1672f4c2fdda8f68"
+    },
+    {
+      "path": "experiments/market-generativity/formal/boundary-verification.json",
+      "role": "receipt",
+      "sha256": "a9e23692953616fdce622bffe7b89b60913566936953495032ac616217efd58b"
+    },
+    {
+      "path": "experiments/market-generativity/formal/attraction-verification.json",
+      "role": "receipt",
+      "sha256": "bc1e36c7b7fefff1c8ef77156e2f48536a01a12b324a11277079143d9675e77c"
+    },
+    {
+      "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "role": "statement",
+      "sha256": "94bbe144b0c0b4577d4f4edcf43a039610f94b106c40284ca7eed812b00cf375"
+    },
+    {
+      "path": "experiments/market-generativity/formal/README.md",
+      "role": "integration",
+      "sha256": "d168b9c104444b2f966cc5dd2bbd13c37a6631a52cd0b17305a796da4c77bbea"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/market-generativity/formal/MarketGenerativity.lean",
+      "receipt": "experiments/market-generativity/formal/verification.json",
+      "sha256_pointer": "/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/market-generativity/formal/RegimeBoundary.lean",
+      "receipt": "experiments/market-generativity/formal/boundary-verification.json",
+      "sha256_pointer": "/sources/RegimeBoundary.lean",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/market-generativity/formal/RegimeAttraction.lean",
+      "receipt": "experiments/market-generativity/formal/attraction-verification.json",
+      "sha256_pointer": "/sources/RegimeAttraction.lean",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), the market model's share law, its margin for the accountability floor and low certificates, and its two attracting ends and unstable interior state at erosion one half, coupled to support; from DEFECTS-FOUND (triage row 194); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），市场模型之份额律、问责下限与低之证书之边际，以及侵蚀为二分之一时两端之吸引与内部定态之不稳，并与支持耦合；出自 DEFECTS-FOUND（分诊第 194 行）；研究第 DF_N 节。"
+    }
+  ]
+}

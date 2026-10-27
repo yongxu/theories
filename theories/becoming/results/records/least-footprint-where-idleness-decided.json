@@ -5,6 +5,10 @@
     "zh": "闲置可判定处的最小足迹与最少次序",
     "en": "The least footprint and least order where idleness is decided"
   },
+  "statement": {
+    "en": "Where idleness is decided at every step and relatum, the least footprint touches exactly what is not idle and lies in every containing footprint; with equality of relata decided, a least footprint exists exactly where idleness is decided.",
+    "zh": "每步每个关系项的闲置可判定时，最小足迹恰触及非闲置者，且在每个包含足迹之内；关系项相等可判定时，最小足迹恰在闲置可判定时存在。"
+  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
@@ -314,6 +318,10 @@
     {
       "en": "2026-10-20: 35 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/ef8a3370ef4951a6/least-footprint-where-idleness-decided.json and in git.",
       "zh": "2026-10-20：35 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/ef8a3370ef4951a6/least-footprint-where-idleness-decided.json 和 git 中。"
+    },
+    {
+      "en": "27 October 2026, board item DF2 (study section DF_N): A statement, as 01's home section states the result (Footprinted.least_touch_iff, least_le, least_exists_iff); its laws wait for the schema-2 migration.",
+      "zh": "2026年10月27日，工作板条目 DF2（研究第 DF_N 节）：陈述，按 01 的归属一节所述（Footprinted.least_touch_iff、least_le、least_exists_iff）；其规律待迁移到第 2 版格式。"
     }
   ]
 }

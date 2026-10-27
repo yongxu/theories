@@ -1,0 +1,210 @@
+{
+  "schema_version": 2,
+  "id": "a-selected-template-need-not-raise-structure",
+  "title": {
+    "en": "A selected template need not increase the successor's structure",
+    "zh": "被选的模板未必提高后继的结构"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-26T21:20:00+00:00",
+  "statement": {
+    "en": "Counting one copying event by template and successor, with positive counts and weight, A's mean share rises exactly where a(AH + HH) < h(AA + HA), comparing successor columns, not template rows; faithful or balanced transfer makes the two agree; with all four transfers positive they can disagree.",
+    "zh": "按模板与后继计数一次复制事件，计数与权重为正时，其后 A 的平均份额恰当 a(AH + HH) < h(AA + HA) 时上升，比较的是后继之列而非模板之行；忠实或平衡的转移使二者一致，四种转移皆为正时二者可以不一致。"
+  },
+  "laws": [
+    {
+      "en": "With AA, AH, HA, HH the weights of an event forming an A or H successor from an A or H template, and a, h the counts, the weighted mean of A's share after the next event exceeds a/(a + h) exactly where a(AH + HH) < h(AA + HA), equals it or falls exactly where the sides are equal or reversed: a balance with no subtraction; read by templates or by successors the total event weight is the same.",
+      "zh": "设 AA、AH、HA、HH 为由 A 或 H 模板形成 A 或 H 后继之事件的权重，a、h 为计数：下一事件之后 A 份额的加权平均大于 a/(a + h)，恰当 a(AH + HH) < h(AA + HA)；两边相等或相反时恰相等或下降；这是不作减法的平衡；按模板或按后继读，事件总权重相同。",
+      "declarations": [
+        "ConsequenceTransmission.numerator_balance",
+        "ConsequenceTransmission.strict_increase_iff",
+        "ConsequenceTransmission.neutral_iff",
+        "ConsequenceTransmission.strict_decrease_iff",
+        "ConsequenceTransmission.denominator_positive",
+        "ConsequenceTransmission.transmission_preserves_total_event_weight",
+        "ConsequenceTransmission.transmitted_structure_increase_iff"
+      ]
+    },
+    {
+      "en": "Faithful transmission (AH = HA = 0), or equal transfer both ways (AH = HA), makes the successor weights the template weights, so the share rises under one reading exactly where it rises under the other; copy weights proportional to the counts leave the share unchanged.",
+      "zh": "忠实传递（AH = HA = 0）或双向相等的转移（AH = HA）使后继权重等于模板权重，故份额在一种读法下上升恰当在另一读法下上升；与计数成比例的复制权重使份额不变。",
+      "declarations": [
+        "ConsequenceTransmission.faithful_transmission_matches_template",
+        "ConsequenceTransmission.balanced_transfer_matches_template",
+        "ConsequenceTransmission.faithful_increase_iff_template_increase",
+        "ConsequenceTransmission.shared_access_is_neutral"
+      ]
+    },
+    {
+      "en": "The native copying law is faithful: a positive copy weight of a kind needs an enabled copy reaction of that kind, and every native copy adds one of its template's kind and leaves the other count; in both reached states an enabled damage event keeps both counts, so the no-change weight has a native event.",
+      "zh": "原生复制律是忠实的：某类复制权重为正，需有该类可行的复制反应；每次原生复制加一个模板之类，另一计数不变；两个所达状态中都有保持两计数的可行损伤事件，故不变权重有原生事件可当。",
+      "declarations": [
+        "ConsequenceTransmission.Native.positive_a_weight_has_native_event",
+        "ConsequenceTransmission.Native.positive_h_weight_has_native_event",
+        "ConsequenceTransmission.Native.native_copy_transmits_its_response_structure",
+        "ConsequenceTransmission.Native.reached_neutral_event_is_native"
+      ]
+    },
+    {
+      "en": "Witnesses: with a = h = 1 and transfers (1, 5, 2, 2), all positive, A has the larger template opportunity, 6 to 4, while its mean share falls from 1/2 to 13/30; in two checked histories of the native law, each reaching one A and one H, A's copy weight exceeds H's in one and falls below it in the other.",
+      "zh": "见证：a = h = 1、转移 (1, 5, 2, 2) 皆为正时，A 的模板机会较多，6 比 4，而其平均份额由 1/2 降为 13/30；在原生律的两段检查过的历史中，各达一个 A 与一个 H，A 的复制权重在一段中大于 H 的，在另一段中小于。",
+      "declarations": [
+        "ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission",
+        "ConsequenceTransmission.Native.actual_capture_changes_copy_access",
+        "ConsequenceTransmission.Native.actual_transfer_with_both_structures_present",
+        "ConsequenceTransmission.Native.same_composition_opposite_access"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The stated finite event law: one next event, weighted by supplied natural numbers that are event weights, not fitness or rates, each event copying one kind or changing no count; formation and loss are outside it.",
+      "zh": "所述的有限事件律：一次下一事件，以所给的自然数加权，是事件权重而非适合度或速率；每个事件复制一类或不改变计数；形成与损失不在其内。"
+    },
+    {
+      "en": "The share reading needs positive denominators, a + h > 0 and a positive total weight; the identities hold on the numerators without them.",
+      "zh": "份额之读法需要正的分母，即 a + h > 0 且总权重为正；诸恒等式在分子上无需此条件而成立。"
+    },
+    {
+      "en": "The transfer cells AH and HA extend the event law; they are not mutation in the native copying, which keeps the template's kind. No instance theorem joins the table to Price's equation in counting form.",
+      "zh": "转移格 AH 与 HA 扩展事件律；它们不是原生复制中的突变，原生复制保持模板之类。无实例定理把此表接到计数形式的 Price 方程。"
+    },
+    {
+      "en": "Periphery, a module before the spine on Lean's core library and Std: propext in 13 of its 19 declarations, the other 6 none, as the receipt reports.",
+      "zh": "外围，脊柱之前的模块，基于 Lean 核心库与 Std：其 19 项声明中 13 项用 propext，其余 6 项不用公理，如回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "A continuous-time, fixation or long-run result: one weighted next event is counted.",
+      "zh": "连续时间、固定或长期的结果：只计一次加权的下一事件。",
+      "kind": "scope"
+    },
+    {
+      "en": "Natural event weights or a biological transmission table: the weights are supplied.",
+      "zh": "自然的事件权重或生物的传递表：权重为所给。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That the two reached histories are a controlled pair: they differ in ancestry and initial support as well as in access.",
+      "zh": "两段所达历史是对照之对：它们除通达外，世系与初始支持亦不同。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That faithful transmission is needed for the two readings to agree: equal transfer both ways suffices.",
+      "zh": "两种读法一致须忠实传递：双向相等的转移已足。",
+      "kind": "converse"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 7 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 13 with propext only and 6 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; not reviewed by a person.",
+    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 evolution/verification.json，2026年10月7日通过，新鲜临时构建；绑定当前字节）：ConsequenceTransmission 审计 19 项声明，13 项只用 propext，6 项报告为空，此处引 19 项；发育扩展的回执复查同一字节。内部反审读了源码与回执哈希，未重新编译；未经人审。"
+  },
+  "next_delta": {
+    "en": "An instance theorem joining the transfer table to Price's equation in counting form, with AH and HA as what transmission lowered and raised, and event weights derived from the native law instead of supplied.",
+    "zh": "以实例定理把转移表接到计数形式的 Price 方程，AH 与 HA 为传递所降与所升；事件权重由原生律导出而非给定。"
+  },
+  "correspondence": {
+    "en": "Price's equation with a transmission term: the template rows give the selection part, the successor columns add what transmission changes, and the two agree under faithful or symmetric transfer (Price 1970, Nature 227; Frank 2012, Journal of Evolutionary Biology 25). Reading the two response kinds as chemical roles, neither named better, is the AI's.",
+    "zh": "带传递项的 Price 方程：模板之行给出选择部分，后继之列加上传递所改变者，忠实或对称的转移下二者一致（Price 1970，Nature 227；Frank 2012，Journal of Evolutionary Biology 25）。把两种回应类读作化学角色、二者皆不称为更好，是 AI 的解读。"
+  },
+  "canonical_source": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean",
+  "aliases": [
+    "A selected template need not increase the successor's structure",
+    "被选的模板未必提高后继的结构",
+    "ConsequenceTransmission.transmitted_structure_increase_iff",
+    "ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "evolution-on-descent",
+      "detail": {
+        "en": "Price's equation in counting form; no instance theorem yet joins this module's transfer table to it.",
+        "zh": "计数形式的 Price 方程；尚无实例定理把本模块的转移表接到它。"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "detail": {
+        "en": "Over cohorts a mean moves only through selection proper or transmission; here one next event shows transmission reversing a template advantage.",
+        "zh": "跨世代时均值只经真正的选择或传递而动；此处一次下一事件显示传递反转模板的优势。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean",
+      "role": "proof",
+      "sha256": "6d0cc231a53f910afa0fa9d056aa23be244a800c666f1c51f4f6b50d78c39c07",
+      "declarations": [
+        "ConsequenceTransmission.numerator_balance",
+        "ConsequenceTransmission.strict_increase_iff",
+        "ConsequenceTransmission.neutral_iff",
+        "ConsequenceTransmission.strict_decrease_iff",
+        "ConsequenceTransmission.denominator_positive",
+        "ConsequenceTransmission.transmission_preserves_total_event_weight",
+        "ConsequenceTransmission.transmitted_structure_increase_iff",
+        "ConsequenceTransmission.faithful_transmission_matches_template",
+        "ConsequenceTransmission.balanced_transfer_matches_template",
+        "ConsequenceTransmission.faithful_increase_iff_template_increase",
+        "ConsequenceTransmission.shared_access_is_neutral",
+        "ConsequenceTransmission.Native.positive_a_weight_has_native_event",
+        "ConsequenceTransmission.Native.positive_h_weight_has_native_event",
+        "ConsequenceTransmission.Native.native_copy_transmits_its_response_structure",
+        "ConsequenceTransmission.Native.reached_neutral_event_is_native",
+        "ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission",
+        "ConsequenceTransmission.Native.actual_capture_changes_copy_access",
+        "ConsequenceTransmission.Native.actual_transfer_with_both_structures_present",
+        "ConsequenceTransmission.Native.same_composition_opposite_access"
+      ]
+    },
+    {
+      "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json",
+      "role": "receipt",
+      "sha256": "1798cc32373a8b032996d36194f6c29e616ea17ffd7e58938be860796f013f5c",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/04-LIFE.md",
+      "role": "statement",
+      "sha256": "cd96b77644496fc24740b20da069c1834c7cdc3e902e77cf21ed166cc4db3a28",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LIANGZHI-EVOLUTION-MATH.md",
+      "role": "integration",
+      "sha256": "6040a658f57182c5a63b13bd33fb1b81a6234354c43d4e1d957ca56f2f462658",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LIANGZHI-EVOLUTION-REVIEW.md",
+      "role": "review",
+      "sha256": "20eb793e52315a02225f89b784771552ad30cfd0cf5fd0ccdf1e481ce1f43e3b",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean",
+      "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json",
+      "sha256_pointer": "/modules/3/sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), a selected template need not raise the successors' structure: the share criterion on successor columns, its agreement with template rows under faithful or balanced transfer, native copying faithful, and the reversal and opposite-access witnesses; from DEFECTS-FOUND (triage row 145); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），被选的模板未必提高后继的结构：后继之列上的份额判据、忠实或平衡转移下与模板之行一致、原生复制忠实，以及反转与相反通达的见证；出自 DEFECTS-FOUND（分诊第 145 行）；研究第 DF_N 节。"
+    }
+  ]
+}

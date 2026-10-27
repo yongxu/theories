@@ -1,0 +1,202 @@
+{
+  "schema_version": 2,
+  "id": "type-formation-gives-no-dynamics",
+  "title": {
+    "en": "Type formation keeps the seed's boundary and gives no dynamics",
+    "zh": "类型构造保持种子之界而不给出动力学"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-26T22:00:00+00:00",
+  "statement": {
+    "en": "Iterating the binary product from a seed keeps, both ways, the seed's being empty, inhabited or of at most one element, and the diagonal keeps distinct elements of the seed distinct; reachability is the least reflexive-transitive relation containing the steps, and with no steps it is equality.",
+    "zh": "自种子迭代二元积，双向保持种子之为空、非空或至多一元，对角映射使种子中不同的元素保持不同；可达是含诸步的最小自反传递关系，无步时即相等。"
+  },
+  "laws": [
+    {
+      "en": "The tower T(0) = X, T(n+1) = T(n) × T(n) is inhabited, empty, or of at most one element, at any n, exactly where X is; the diagonal sends X into every level one to one, so distinct elements of the seed stay distinct, and the leaf of an element's diagonal is that element.",
+      "zh": "塔 T(0) = X、T(n+1) = T(n) × T(n) 在任一 n 处非空、为空或至多一元，恰在 X 如此之处；对角映射把 X 一一送入每一层，故种子中不同的元素保持不同，元素之对角的叶即是该元素。",
+      "declarations": [
+        "Generative.Deeper.Tower",
+        "Generative.Deeper.diagonal",
+        "Generative.Deeper.leaf",
+        "Generative.Deeper.leaf_diagonal",
+        "Generative.Deeper.diagonal_injective",
+        "Generative.Deeper.tower_nonempty_iff",
+        "Generative.Deeper.tower_empty_iff",
+        "Generative.Deeper.tower_subsingleton",
+        "Generative.Deeper.tower_subsingleton_iff",
+        "Generative.Deeper.seed_distinction_persists"
+      ]
+    },
+    {
+      "en": "Reachability (some finite trace) is reflexive, transitive and contains the steps, and lies within every relation that is; so it is the least such relation, and every least such relation agrees with it pointwise. A map sending steps into a reflexive-transitive relation sends every reach into it. With no steps, reachability is equality.",
+      "zh": "可达（存在有限迹）自反、传递并包含诸步，且落在每个这样的关系之内；故它是最小的这种关系，每个最小的这种关系都与它逐点相同。把诸步送入一个自反传递关系的映射，把每个可达也送入其中。无步时，可达即相等。",
+      "declarations": [
+        "Generative.Deeper.Reach",
+        "Generative.Deeper.ReflexiveRel",
+        "Generative.Deeper.TransitiveRel",
+        "Generative.Deeper.ContainsSteps",
+        "Generative.Deeper.IsLeastClosure",
+        "Generative.Deeper.reach_refl",
+        "Generative.Deeper.reach_trans",
+        "Generative.Deeper.reach_step",
+        "Generative.Deeper.reach_evaluate",
+        "Generative.Deeper.reach_least",
+        "Generative.Deeper.reach_is_least_closure",
+        "Generative.Deeper.least_closure_unique",
+        "Generative.Deeper.reach_without_steps_iff"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom: every cited theorem has an empty axiom report; ProductTower imports only Lean's prelude and GeneratedPaths only GenerativeCore. Both are pre-spine modules, not on the Becoming spine.",
+      "zh": "不加公理：所引每条定理公理报告皆空；ProductTower 只用 Lean 前奏，GeneratedPaths 只导入 GenerativeCore。二者皆为主干之前的模块，不在 Becoming 主干上。"
+    },
+    {
+      "en": "Any type as the seed; any process for reachability, by finite courses of steps; uniqueness is pointwise, with no extensionality.",
+      "zh": "任一类型为种子；可达对任一过程，经有限步程；唯一性是逐点的，不用外延性。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That construction depth is time: the tower's levels are formal stages, read as time only under a further interpretation.",
+      "zh": "构造深度即时间：塔的层级是形式阶段，只在另一种解释下才读作时间。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Any physical compatibility of composed steps: composing finite courses forms no new primitive step and shows no joint feasibility.",
+      "zh": "所复合之步的任何物理相容：复合有限步程不形成新的原始步，也不表明联合可行。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That paths are kept: reachability forgets the moves and the courses, a least relation and not a free category of paths.",
+      "zh": "路径被保留：可达忘却动作与步程，是最小关系，不是路径的自由范畴。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the package checker of 6 October 2026 (lean/verification.json, Lean 4.29.1, fresh build): ProductTower, 7 theorems, and GeneratedPaths, 9, every one with an empty axiom report and both sources' current bytes bound; GeneratedPaths also in the generated-contraction receipt 20261008T101759.536385Z, 9 of 9 empty. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 包检查器实查（2026 年 10 月 6 日，lean/verification.json，全新构建）：ProductTower 7 条定理、GeneratedPaths 9 条，公理报告皆空，二者当前字节皆绑定；GeneratedPaths 亦见于生成收缩回执 20261008T101759.536385Z，9 条皆空。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Join both modules to the core: ProductTower imports only Lean's prelude and can join as it is, and GeneratedPaths' Reach is by definition the frame's Reach, so its leastness and the law with no steps follow from reach_iff_withinClosure and fromSeed_iff_seed_of_no_moves.",
+    "zh": "把两个模块接入核心：ProductTower 只用 Lean 前奏，可原样接入；GeneratedPaths 的 Reach 按定义即框架的 Reach，故其最小性与无步之律由 reach_iff_withinClosure 与 fromSeed_iff_seed_of_no_moves 得出。"
+  },
+  "correspondence": {
+    "en": "The tower is the iterated cartesian square; that products keep emptiness and subsingletons is elementary type theory. Reachability as the reflexive-transitive closure of a step relation, its leastness and its triviality without steps are standard. The reading that type formation keeps the seed's boundary and gives no dynamics is the AI's.",
+    "zh": "塔即迭代的笛卡尔平方；积保持空与至多一元，是初等类型论。可达作为步关系的自反传递闭包、其最小性及无步时之平凡，皆属标准。把类型构造读作保持种子之界而不给出动力学，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ProductTower.lean",
+  "aliases": [
+    "type formation keeps the seed's boundary and gives no dynamics",
+    "类型构造保持种子之界而不给出动力学",
+    "Generative.Deeper.tower_nonempty_iff",
+    "Generative.Deeper.tower_subsingleton_iff",
+    "Generative.Deeper.reach_is_least_closure",
+    "Generative.Deeper.reach_without_steps_iff"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "levels-of-closure",
+      "detail": {
+        "en": "The core's form of the same leastness: a process's reach is the closure of its steps, the least closed region holding a configuration (reach_iff_withinClosure).",
+        "zh": "同一最小性在核心中的形式：过程之所及是其诸步的闭包，即含某构形的最小封闭区域（reach_iff_withinClosure）。"
+      }
+    },
+    {
+      "id": "reach-from-a-seed",
+      "detail": {
+        "en": "The core's form: reach from seeds is the least invariant holding at them (fromSeed_iff_invariant), and with no move exactly the seeds are reached (fromSeed_iff_seed_of_no_moves), of which reach_without_steps_iff is the one-seed case.",
+        "zh": "核心中的形式：自诸种子之所及是在其处成立的最小不变性质（fromSeed_iff_invariant），全无动作时所及恰是诸种子（fromSeed_iff_seed_of_no_moves），reach_without_steps_iff 是其单种子情形。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ProductTower.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.Deeper.Tower",
+        "Generative.Deeper.diagonal",
+        "Generative.Deeper.leaf",
+        "Generative.Deeper.leaf_diagonal",
+        "Generative.Deeper.diagonal_injective",
+        "Generative.Deeper.tower_nonempty_iff",
+        "Generative.Deeper.tower_empty_iff",
+        "Generative.Deeper.tower_subsingleton",
+        "Generative.Deeper.tower_subsingleton_iff",
+        "Generative.Deeper.seed_distinction_persists"
+      ],
+      "sha256": "68cefbd0cf76251a434b81dee7f4fa8916f25474ff73f66ab6f92aa2393fff54"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.Deeper.Reach",
+        "Generative.Deeper.ReflexiveRel",
+        "Generative.Deeper.TransitiveRel",
+        "Generative.Deeper.ContainsSteps",
+        "Generative.Deeper.IsLeastClosure",
+        "Generative.Deeper.reach_refl",
+        "Generative.Deeper.reach_trans",
+        "Generative.Deeper.reach_step",
+        "Generative.Deeper.reach_evaluate",
+        "Generative.Deeper.reach_least",
+        "Generative.Deeper.reach_is_least_closure",
+        "Generative.Deeper.least_closure_unique",
+        "Generative.Deeper.reach_without_steps_iff"
+      ],
+      "sha256": "c9194672eca9625ef95ece823ef98a7bca46ead33215246dd97ebe3e8cecbbc1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
+      "role": "receipt",
+      "sha256": "362c4eda65deeb23222ed432ef4920d0525da9c6e0b7f101ec71f3e42fff350a"
+    },
+    {
+      "path": "theories/becoming/chapters/08-METHOD.md",
+      "role": "statement",
+      "sha256": "7ad2ce705d4a13954af8467cdb225535f50db50a16d0ef5bcc846310ebd0606f"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ProductTower.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
+      "sha256_pointer": "/modules/4/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
+      "sha256_pointer": "/modules/6/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), the binary-product tower keeping the seed's emptiness, inhabitation and having at most one element, and reachability as the least reflexive-transitive relation containing the steps; from DEFECTS-FOUND (triage row 285); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），二元积之塔保持种子之空、非空与至多一元，可达为含诸步的最小自反传递关系；出自 DEFECTS-FOUND（分诊第 285 行）；研究第 DF_N 节。"
+    }
+  ]
+}

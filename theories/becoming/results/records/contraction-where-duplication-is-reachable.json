@@ -1,0 +1,239 @@
+{
+  "schema_version": 2,
+  "id": "contraction-where-duplication-is-reachable",
+  "title": {
+    "en": "Contraction is admissible exactly where duplication is reachable",
+    "zh": "收缩恰在复制可达之处可容许"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-26T22:00:00+00:00",
+  "statement": {
+    "en": "In an object calculus with identity, primitive steps, cut and framing and no contraction rule, given a left unit and steps kept under every left context, contraction at a holds, and is admissible, exactly where a reaches a ⊗ a; derivability is then reachability.",
+    "zh": "在有恒等、原始步、切与框而无收缩规则的对象演算中，给定左单位且诸步在每个左语境下保持时，a 处的收缩成立且可容许，恰在 a 可达 a ⊗ a 之处；此时可推导即可达。"
+  },
+  "laws": [
+    {
+      "en": "Where every primitive step is kept under every left context (StepFrame), a derivation from identity, primitive steps, cut and framing is sound for reachability; every reach is derivable with no premise; so derivability is reachability.",
+      "zh": "每个原始步在每个左语境下都保持（StepFrame）时，由恒等、原始步、切与框构成的推导对可达可靠；每个可达都可推导，不需前提；故可推导即可达。",
+      "declarations": [
+        "Generative.Logic.StepFrame",
+        "Generative.Logic.Derives",
+        "Generative.Logic.reach_frame",
+        "Generative.Logic.derivation_sound",
+        "Generative.Logic.reach_derivable",
+        "Generative.Logic.derivation_iff_reach"
+      ]
+    },
+    {
+      "en": "Replacement of y by x, every endpoint reached from y in a left context being reached from x in it, follows from x reaching y under StepFrame, and gives it back with a left unit. Contraction at a is replacement of a ⊗ a by a; with a left unit and StepFrame it holds, and so does its admissibility as a rule of derivation, exactly where duplication a ⇝ a ⊗ a is reachable.",
+      "zh": "以 x 替换 y（在左语境中自 y 可达的每个终点自 x 亦可达），在 StepFrame 下由 x 可达 y 得出，有左单位时又还原为它。a 处的收缩即以 a 替换 a ⊗ a；有左单位与 StepFrame 时，它成立，它作为推导规则的可容许性亦然，恰在复制 a ⇝ a ⊗ a 可达之处。",
+      "declarations": [
+        "Generative.Logic.Replacement",
+        "Generative.Logic.replacement_of_reach",
+        "Generative.Logic.reach_of_replacement",
+        "Generative.Logic.replacement_iff_reach",
+        "Generative.Logic.Contraction",
+        "Generative.Logic.contraction_iff_duplicate",
+        "Generative.Logic.AdmissibleContraction",
+        "Generative.Logic.admissible_contraction_of_duplicate",
+        "Generative.Logic.duplicate_of_admissible_contraction",
+        "Generative.Logic.admissible_contraction_iff_duplicate"
+      ]
+    },
+    {
+      "en": "Under StepFrame, duplication gives every finite multiplicity: a reaches the right-nested join of any finite positive number of copies of a; with a left unit, contraction at a replaces each such multiple by a.",
+      "zh": "在 StepFrame 下，复制给出每个有限倍数：a 可达 a 之任意有限正数个副本的右嵌套结合；有左单位时，a 处的收缩以 a 替换每个这样的倍数。",
+      "declarations": [
+        "Generative.Logic.Copies",
+        "Generative.Logic.duplicate_finite",
+        "Generative.Logic.contraction_finite"
+      ]
+    },
+    {
+      "en": "Witness: in a five-state example with a left unit, a context blocks the step, so a standalone duplicate is reachable while contraction fails and the steps are not kept under contexts: StepFrame cannot be dropped.",
+      "zh": "见证：五状态例有左单位，一个语境阻断该步，于是单独的复制可达而收缩不成立，诸步也不在语境下保持：StepFrame 不可去。",
+      "declarations": [
+        "Generative.Logic.Mechanisms.Interference.left_unit",
+        "Generative.Logic.Mechanisms.Interference.standalone_duplicate",
+        "Generative.Logic.Mechanisms.Interference.contextual_contraction_fails",
+        "Generative.Logic.Mechanisms.Interference.primitive_frame_fails"
+      ]
+    },
+    {
+      "en": "Witnesses: counting ready units and provision, with StepFrame and a left unit, one ready unit reaches no duplicate and contraction fails there, while a ready unit with one unit of provision reaches two ready units; on one port, take–release rounds bring it back to free for any finite number of rounds, and from free two takes with no release between are infeasible.",
+      "zh": "见证：计就绪单位与储备，有 StepFrame 与左单位，单个就绪单位不可达其复制，在此收缩不成立，而带一单位储备的就绪单位可达两个就绪单位；同一端口上，取用—释放之轮对任意有限轮数都使端口回到空闲，自空闲起其间不释放而连取两次不可行。",
+      "declarations": [
+        "Generative.Logic.Mechanisms.left_unit",
+        "Generative.Logic.Mechanisms.step_frame",
+        "Generative.Logic.Mechanisms.no_free_duplication",
+        "Generative.Logic.Mechanisms.no_free_contraction",
+        "Generative.Logic.Mechanisms.paid_duplication",
+        "Generative.Logic.Mechanisms.Serial.serial_reuse",
+        "Generative.Logic.Mechanisms.Serial.no_overlapping_takes"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The context operation (a ⊗ b), its left unit and StepFrame are supplied, not derived; no associativity, commutativity or other law of the operation is assumed.",
+      "zh": "语境运算（a ⊗ b）、其左单位与 StepFrame 为给定，非推出；不设该运算的结合、交换或其他律。"
+    },
+    {
+      "en": "Soundness is correspondence with finite endpoint reachability only: configurations serve as resource expressions, not as a propositional language.",
+      "zh": "可靠性只是与有限终点可达的对应：构形充当资源表达式，不是命题语言。"
+    },
+    {
+      "en": "No ethical premise. Axioms: the calculus's theorems have empty axiom reports (its definitions are not audited); of the witnesses, step_frame, the two-unit duplication and the port's have empty reports, the five-state example's and the stock's left unit use propext, and the stock's no-duplication and no-contraction propext and Quot.sound, as the receipt reports.",
+      "zh": "不用伦理前提。公理：演算的定理公理报告皆空（其定义不受审）；见证中，step_frame、两单位之复制与端口的报告为空，五状态例与储备之左单位用 propext，储备之不可复制与不可收缩用 propext 与 Quot.sound，如回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The exponential modality: binary duplication reaches each finite multiple of a separately; no configuration is shown to stand for unboundedly many copies at once.",
+      "zh": "指数模态：二元复制分别可达 a 的每个有限倍数；未表明有构形能同时代表无界多个副本。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Novelty over linear, graded or Petri-net logics: the calculus is a small resource calculus read on a process.",
+      "zh": "相对线性、分级或 Petri 网逻辑的新颖：此演算是在过程上读出的小型资源演算。",
+      "kind": "scope"
+    },
+    {
+      "en": "A physical interference mechanism: the blocking context of the five-state example is stipulated.",
+      "zh": "物理的干涉机制：五状态例中的阻断语境是规定的。",
+      "kind": "correspondence",
+      "witness": "Generative.Logic.Mechanisms.Interference.contextual_contraction_fails"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by its own checker (receipt 20261008T101759.536385Z, Lean 4.29.1): GeneratedContraction 14 of 14 and GeneratedPaths 9 of 9 audited theorems with empty axiom reports (definitions are not audited), ContractionMechanisms 10 of 24, the others on propext or on propext and Quot.sound; the current bytes of both cited sources are bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "经其自身检查器实查（回执 20261008T101759.536385Z，Lean 4.29.1）：GeneratedContraction 14 条、GeneratedPaths 9 条所审定理公理报告皆空（定义不受审），ContractionMechanisms 24 条中 10 条为空，其余用 propext 或 propext 与 Quot.sound；所引两源之当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Join the calculus to the spine: state derivation and contraction on the core's processes, with framing read as a joining of configurations, and prove the equivalence there with empty axiom reports, the witnesses included.",
+    "zh": "把此演算接入主干：在核心的过程上陈述推导与收缩，把框读作构形之结合，并在那里以空公理报告证明此等价，见证亦然。"
+  },
+  "correspondence": {
+    "en": "Contraction is one of the structural rules of the sequent calculus; logics without it are the linear and affine logics, and reading resources by reachability recalls Petri nets and their linear-logic reading. That a rule of logic is here valid exactly where a step of the process is reachable is the AI's reading.",
+    "zh": "收缩是相继式演算的结构规则之一；无收缩的逻辑即线性与仿射逻辑，以可达读资源令人想起 Petri 网及其线性逻辑读法。把逻辑规则读作恰在过程某步可达处有效，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
+  "aliases": [
+    "contraction is admissible exactly where duplication is reachable",
+    "收缩恰在复制可达之处可容许",
+    "Generative.Logic.admissible_contraction_iff_duplicate",
+    "Generative.Logic.contraction_iff_duplicate",
+    "Generative.Logic.derivation_iff_reach"
+  ],
+  "dependencies": [
+    {
+      "id": "type-formation-gives-no-dynamics",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "GeneratedPaths' reachability and its laws (reach_refl, reach_trans, reach_step, reach_evaluate) are the reachability the calculus is sound for; reach_frame and derivation_sound are proved from them.",
+        "zh": "GeneratedPaths 的可达及其律（reach_refl、reach_trans、reach_step、reach_evaluate）即此演算所对之可靠的可达；reach_frame 与 derivation_sound 由之证出。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "self-reference-does-not-certify-itself",
+      "detail": {
+        "en": "Curry's derivation uses its hypothesis twice, the contraction whose admissibility is here a condition of the process.",
+        "zh": "Curry 的推导两次使用其假设，即此处其可容许性为过程之条件的收缩。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.Logic.StepFrame",
+        "Generative.Logic.Derives",
+        "Generative.Logic.reach_frame",
+        "Generative.Logic.derivation_sound",
+        "Generative.Logic.reach_derivable",
+        "Generative.Logic.derivation_iff_reach",
+        "Generative.Logic.Replacement",
+        "Generative.Logic.replacement_of_reach",
+        "Generative.Logic.reach_of_replacement",
+        "Generative.Logic.replacement_iff_reach",
+        "Generative.Logic.Contraction",
+        "Generative.Logic.contraction_iff_duplicate",
+        "Generative.Logic.AdmissibleContraction",
+        "Generative.Logic.admissible_contraction_of_duplicate",
+        "Generative.Logic.duplicate_of_admissible_contraction",
+        "Generative.Logic.admissible_contraction_iff_duplicate",
+        "Generative.Logic.Copies",
+        "Generative.Logic.duplicate_finite",
+        "Generative.Logic.contraction_finite"
+      ],
+      "sha256": "ffa574a7ae94df345084ef54c5dd63485b6675ad256798473a2057faf90759d6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContractionMechanisms.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.Logic.Mechanisms.Interference.left_unit",
+        "Generative.Logic.Mechanisms.Interference.standalone_duplicate",
+        "Generative.Logic.Mechanisms.Interference.contextual_contraction_fails",
+        "Generative.Logic.Mechanisms.Interference.primitive_frame_fails",
+        "Generative.Logic.Mechanisms.left_unit",
+        "Generative.Logic.Mechanisms.step_frame",
+        "Generative.Logic.Mechanisms.no_free_duplication",
+        "Generative.Logic.Mechanisms.no_free_contraction",
+        "Generative.Logic.Mechanisms.paid_duplication",
+        "Generative.Logic.Mechanisms.Serial.serial_reuse",
+        "Generative.Logic.Mechanisms.Serial.no_overlapping_takes"
+      ],
+      "sha256": "5e754b828bb829a48c09e3711c0633c1af9106e4464468a768ba349c4bbf6647"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/generated-contraction-checks/20261008T101759.536385Z/receipt.json",
+      "role": "receipt",
+      "sha256": "36bb98ff82ac94fa4aaeef8311b2bff7cff2cad43626ebe8296439a1d8d6883c"
+    },
+    {
+      "path": "theories/becoming/chapters/08-METHOD.md",
+      "role": "statement",
+      "sha256": "7ad2ce705d4a13954af8467cdb225535f50db50a16d0ef5bcc846310ebd0606f"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/generated-contraction-checks/20261008T101759.536385Z/receipt.json",
+      "sha256_pointer": "/modules/2/sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContractionMechanisms.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/generated-contraction-checks/20261008T101759.536385Z/receipt.json",
+      "sha256_pointer": "/modules/3/sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), contraction holding and admissible exactly where duplication is reachable, derivability as reachability, and the witnesses that the context hypothesis is needed; from DEFECTS-FOUND (triage row 286); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），收缩恰在复制可达之处成立且可容许，可推导即可达，以及表明语境假设不可去的见证；出自 DEFECTS-FOUND（分诊第 286 行）；研究第 DF_N 节。"
+    }
+  ]
+}

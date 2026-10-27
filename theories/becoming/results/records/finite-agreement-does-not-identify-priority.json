@@ -1,0 +1,167 @@
+{
+  "schema_version": 2,
+  "id": "finite-agreement-does-not-identify-priority",
+  "title": {
+    "en": "Finite agreement does not identify lexical priority",
+    "zh": "有限一致不识别词典式优先"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-26T16:20:00+00:00",
+  "statement": {
+    "en": "For every finite sample of histories, each a protection status and a count of secondary realizations, some positive weight agrees with lexical priority on every pair of the sample; no fixed weight agrees with it on every pair of histories.",
+    "zh": "对每个有限的历史样本（每段历史是一个保护状态与次级实现的计数），某个正权重在样本的每一对上与词典式优先一致；没有固定权重在一切历史对上与之一致。"
+  },
+  "laws": [
+    {
+      "en": "A history is a protection status and a count of secondary realizations. Lexical priority, reflexive and transitive, ranks a history without protection below one with it and, at equal status, by count; a weight w scores w for protection plus the count. Where both counts are at most a bound, lexical priority agrees with the score of weight one above the bound.",
+      "zh": "一段历史是一个保护状态与次级实现的计数。词典式优先自反且传递，把无保护者排在有保护者之下，状态相同时按计数排；权重 w 给保护记 w 分再加计数。两个计数都不超过某界时，词典式优先与权重为界加一的评分一致。",
+      "declarations": [
+        "PracticalPriorityIdentification.History",
+        "PracticalPriorityIdentification.LexLe",
+        "PracticalPriorityIdentification.score",
+        "PracticalPriorityIdentification.FiniteLe",
+        "PracticalPriorityIdentification.lex_refl",
+        "PracticalPriorityIdentification.lex_trans",
+        "PracticalPriorityIdentification.bounded_comparison_agreement"
+      ]
+    },
+    {
+      "en": "For every finite sample, the weight one above the sample's largest count is positive and agrees with lexical priority on every pair of the sample; yet no fixed weight w agrees on every pair of histories: it scores the protected history with no secondary realization at most the unprotected one with count w + 1, which lexical priority ranks below it.",
+      "zh": "对每个有限样本，比样本最大计数多一的权重为正，并在样本的每一对上与词典式优先一致；但没有固定权重 w 在一切历史对上一致：它给无次级实现的有保护历史的评分不高于计数为 w + 1 的无保护历史，而词典式优先把后者排在前者之下。",
+      "declarations": [
+        "PracticalPriorityIdentification.secondaryBound",
+        "PracticalPriorityIdentification.member_bounded",
+        "PracticalPriorityIdentification.every_finite_sample_agrees",
+        "PracticalPriorityIdentification.no_fixed_finite_weight_is_lexical",
+        "PracticalPriorityIdentification.finite_agreement_without_global_identification"
+      ]
+    },
+    {
+      "en": "The pair that reverses lies outside the sample: the unprotected history with two more than the sample's largest count is lexically below the protected one with none, and not above it, yet the sample's weight scores it higher, and it is not in the sample.",
+      "zh": "反转的那一对在样本之外：计数比样本最大计数多二的无保护历史，在词典式上低于无次级实现的有保护历史而不高于它，样本的权重却给它更高的评分，而它不在样本中。",
+      "declarations": [
+        "PracticalPriorityIdentification.outside_sample_reversal",
+        "PracticalPriorityIdentification.reversing_history_unobserved"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Histories are pairs of a Boolean protection status and a natural count; samples are finite lists; both comparators, lexical priority and the weighted score, are supplied, not derived.",
+      "zh": "历史是布尔保护状态与自然数计数之对；样本为有限列表；两种比较，词典式优先与加权评分，皆为所给，非推出。"
+    },
+    {
+      "en": "Periphery, off the spine (the module imports Lean's Std): the cited declarations report at most propext and Quot.sound, the main theorem both; none uses Classical.choice.",
+      "zh": "外围，不在脊柱上（模块引入 Lean 之 Std）：所引声明至多报告 propext 与 Quot.sound，主定理二者皆报；无一用 Classical.choice。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That lexical priority is right, or that a weighted score is: both comparators are supplied.",
+      "zh": "词典式优先为对，或加权评分为对：两种比较皆为所给。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That no evidence beyond pairwise agreement on a finite sample identifies lexical priority: only identification by such agreement is shown to fail.",
+      "zh": "有限样本上逐对一致以外之证据亦不能识别词典式优先：只示出由此种一致之识别不成。",
+      "kind": "scope"
+    },
+    {
+      "en": "Comparators other than a weight on protection plus the count, or histories carrying more than one protected condition.",
+      "zh": "保护之权重加计数以外之比较，或带多于一个受保护条件之历史。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by Lean 4.29.1 (receipt priority-identification-checks/20261007T193051.511909Z, the same bytes as priority-identification-verification.json; module PracticalPriorityIdentification, imports Std): finite_agreement_without_global_identification reports propext and Quot.sound. Built in one session; the record was read against the current Lean; not reviewed by a person.",
+    "zh": "Lean 4.29.1 实查（回执 priority-identification-checks/20261007T193051.511909Z，与 priority-identification-verification.json 同字节；模块 PracticalPriorityIdentification，引入 Std）：finite_agreement_without_global_identification 报告 propext 与 Quot.sound。于一会话中构建；本记录对照当前 Lean 读过；未经人审。"
+  },
+  "next_delta": {
+    "en": "The law on the spine beside the bounded score of the priority of basic conditions, and which evidence beyond pairwise agreement on finite samples, such as agreement on every sample a process can reach, identifies a lexical comparator.",
+    "zh": "于脊柱上、在基本条件优先之有界评分旁陈述此律；并问有限样本上逐对一致以外何种证据（如一过程可达之每一样本上之一致）识别词典式比较。"
+  },
+  "correspondence": {
+    "en": "Decision theory: lexicographic orders and their approximation by weighted sums on bounded domains are surveyed by Fishburn (1974); here every bounded sample has an agreeing natural weight and no fixed one agrees everywhere. Read by the AI, finite observation of comparisons underdetermines a lexical priority, as finite choice data underdetermine preferences in revealed-preference theory.",
+    "zh": "决策论：词典式序及其在有界域上以加权和逼近，见 Fishburn（1974）之综述；此处每一有界样本皆有一致之自然数权重，而无固定权重处处一致。依 AI 之读，有限地观察比较不足以确定词典式优先，正如显示偏好理论中有限选择数据不足以确定偏好。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean",
+  "aliases": [
+    "Finite agreement does not identify lexical priority",
+    "有限一致不识别词典式优先",
+    "PracticalPriorityIdentification.finite_agreement_without_global_identification",
+    "PracticalPriorityIdentification.no_fixed_finite_weight_is_lexical"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "protection-priority-excludes-uniform-aggregation",
+      "detail": {
+        "en": "There no natural-number score satisfying C represents the priority of basic conditions, while a bounded score does; here a weighted score agrees on each finite sample and no fixed weight agrees on every pair.",
+        "zh": "彼处无满足 C 之自然数评分能表示基本条件优先，而有界评分能；此处加权评分在每一有限样本上一致，而无固定权重在每一对上一致。"
+      }
+    },
+    {
+      "id": "a-swap-symmetric-assignment-singles-out-none",
+      "detail": {
+        "en": "The other result of the module PracticalPriorityIdentification.",
+        "zh": "PracticalPriorityIdentification 模块之另一结果。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean",
+      "role": "proof",
+      "declarations": [
+        "PracticalPriorityIdentification.History",
+        "PracticalPriorityIdentification.LexLe",
+        "PracticalPriorityIdentification.score",
+        "PracticalPriorityIdentification.FiniteLe",
+        "PracticalPriorityIdentification.lex_refl",
+        "PracticalPriorityIdentification.lex_trans",
+        "PracticalPriorityIdentification.bounded_comparison_agreement",
+        "PracticalPriorityIdentification.secondaryBound",
+        "PracticalPriorityIdentification.member_bounded",
+        "PracticalPriorityIdentification.every_finite_sample_agrees",
+        "PracticalPriorityIdentification.no_fixed_finite_weight_is_lexical",
+        "PracticalPriorityIdentification.finite_agreement_without_global_identification",
+        "PracticalPriorityIdentification.outside_sample_reversal",
+        "PracticalPriorityIdentification.reversing_history_unobserved"
+      ],
+      "sha256": "d7416c92ea8ff688b72d4f660e5ef592fa45287f1f964a0f52419b2ebf1a99cb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/priority-identification-checks/20261007T193051.511909Z/verification.json",
+      "role": "receipt",
+      "sha256": "94ffadaeb98221d528cc73ccdd3c4ad9b3f111fd4500fdef4df128973848be6d"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "7ace404140e2a9688e51b7147bcc85d8add9774e395f7dbbe802ef13a26c4c4e"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/priority-identification-checks/20261007T193051.511909Z/verification.json",
+      "sha256_pointer": "/source_sha256/PracticalPriorityIdentification",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), every finite sample of histories has a positive weight agreeing with lexical priority on it, and no fixed weight agrees on every pair; from DEFECTS-FOUND (triage row 267); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），每个有限历史样本都有在其上与词典式优先一致的正权重，而无固定权重在每一对上一致；出自 DEFECTS-FOUND（分诊第 267 行）；研究第 DF_N 节。"
+    }
+  ]
+}

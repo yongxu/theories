@@ -1,0 +1,215 @@
+{
+  "schema_version": 2,
+  "id": "self-reference-does-not-certify-itself",
+  "title": {
+    "en": "Self-reference does not certify itself",
+    "zh": "自指不自证"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-26T22:00:00+00:00",
+  "statement": {
+    "en": "Carrying each value unchanged from premise role to conclusion role holds exactly where the premise criterion implies the conclusion criterion; admitting C ↔ (C → Q) yields Q; with one carrier at every atomic index, every closed source-free term of type atom(i) → atom(i) evaluates to the identity.",
+    "zh": "每个值原样从前提角色承载到结论角色，恰在前提标准蕴涵结论标准之处；承认 C ↔ (C → Q) 即得 Q；每个原子指标用同一载体时，类型为原子(i) → 原子(i) 的每个闭的无来源项都求值为恒等。"
+  },
+  "laws": [
+    {
+      "en": "One value carries to another from a premise role to a conclusion role where the first meeting the input criterion gives the second the output criterion; every value carries to itself exactly where the input criterion implies the output one, near-definitional. Two carryings compose through a bridge, at the middle value, from the first output criterion to the second input criterion.",
+      "zh": "一个值从前提角色承载到另一个值的结论角色，指前者满足输入标准即给出后者的输出标准；每个值都自承载，恰在输入标准蕴涵输出标准之处，近乎定义。两次承载经由中间值处从第一输出标准到第二输入标准的桥接而复合。",
+      "declarations": [
+        "Generative.ReflectiveIdentity.Carries",
+        "Generative.ReflectiveIdentity.ReflexiveFor",
+        "Generative.ReflectiveIdentity.reflexive_exact",
+        "Generative.ReflectiveIdentity.same_criterion",
+        "Generative.ReflectiveIdentity.compose_with_bridge"
+      ]
+    },
+    {
+      "en": "On three grades, strict to tolerant carries to itself and tolerant to strict does not; the strict-to-tolerant carrying, reflexive, does not compose: established carries to unsettled and unsettled to absent, but established not to absent.",
+      "zh": "在三个等级上，由严到宽自承载，由宽到严则否；由严到宽的承载虽自反却不复合：已定承载到未定、未定承载到缺失，已定却不承载到缺失。",
+      "declarations": [
+        "Generative.ReflectiveIdentity.strict_to_tolerant_reflexive",
+        "Generative.ReflectiveIdentity.tolerant_to_strict_not_reflexive",
+        "Generative.ReflectiveIdentity.reflexive_assessment_can_fail_composition"
+      ]
+    },
+    {
+      "en": "Curry: admitting C ↔ (C → Q) as a hypothesis yields Q, for any propositions C and Q; so no proposition C has C ↔ (C → False).",
+      "zh": "Curry：以 C ↔ (C → Q) 为假设即得 Q，对任意命题 C 与 Q；故没有命题 C 满足 C ↔ (C → False)。",
+      "declarations": [
+        "Generative.ReflectiveIdentity.curry_fixed_point",
+        "Generative.ReflectiveIdentity.no_false_curry_fixed_point"
+      ]
+    },
+    {
+      "en": "In the typed term fragment with no source constants (use of the context, pairs, projections, abstraction and application), every term sends related context grounds to related values, for every family of relations. So no closed source-free term has an atomic type, and with one carrier at every atomic index every closed source-free term of type atom(i) → atom(i) evaluates to the identity and keeps every criterion.",
+      "zh": "在无来源常项的类型化项片段中（用语境、对、投影、抽象与应用），每个项都把相关的语境根据送到相关的值，对每族关系皆然。故没有闭的无来源项具原子类型；每个原子指标用同一载体时，类型为原子(i) → 原子(i) 的每个闭的无来源项都求值为恒等并保持每个标准。",
+      "declarations": [
+        "Generative.RecognitionalBinding.SourceFree",
+        "Generative.RecognitionalBinding.source_free_related",
+        "Generative.RecognitionalBinding.no_closed_source_free_atom",
+        "Generative.RecognitionalBinding.closed_identity_forced",
+        "Generative.RecognitionalBinding.closed_identity_preserves"
+      ]
+    },
+    {
+      "en": "Witnesses: a source-free term with a further ground in its context returns that ground in place of its argument, and a closed term introducing a source returns a new ground, so the arrow type alone does not ensure carry-over.",
+      "zh": "见证：语境中另有根据的无来源项返回该根据而非其自变量，引入来源的闭项返回一个新根据，故仅凭箭头类型不保证承载。",
+      "declarations": [
+        "Generative.RecognitionalBinding.ambient_ground_can_replace",
+        "Generative.RecognitionalBinding.introduced_ground_can_replace"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom: every cited theorem has an empty axiom report in its receipt; the cited definitions are not audited. Both modules are pre-spine: ReflectiveIdentity imports Std, RecognitionalBinding the term language of InferentialGrounds and GroundRelationTransport.",
+      "zh": "不加公理：所引每条定理在其回执中公理报告皆空；所引定义不受审。二者皆为主干之前的模块：ReflectiveIdentity 导入 Std，RecognitionalBinding 导入 InferentialGrounds 与 GroundRelationTransport 的项语言。"
+    },
+    {
+      "en": "Relative to Lean's type theory, the explicit criteria and the supplied finite typed-term language; the fixed-point equivalence is a hypothesis, and no self-referential sentence or truth predicate is postulated.",
+      "zh": "相对于 Lean 的类型论、明示的标准与所给的有限类型化项语言；不动点等价是假设，不设自指语句或真谓词。"
+    },
+    {
+      "en": "The identity result takes a closed term and one carrier at every atomic index, with no ground sources, ambient grounds, inspection of grounds or recursive term constructors.",
+      "zh": "恒等之结果取闭项且每个原子指标用同一载体，无根据来源、语境中的其他根据、对根据的检视或递归的项构造子。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "A metalogic without presuppositions, or a grounding of the syntax and the metatheory: the results are relative to them.",
+      "zh": "无预设的元逻辑，或句法与元理论的奠基：诸结果相对于它们。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a carrying reflexive for every value is transitive: strict to tolerant carries every value to itself, established to unsettled and unsettled to absent, but not established to absent.",
+      "zh": "对每个值自反的承载是传递的：由严到宽使每个值自承载，已定到未定、未定到缺失皆承载，已定到缺失却不承载。",
+      "kind": "non-implication",
+      "witness": "Generative.ReflectiveIdentity.reflexive_assessment_can_fail_composition"
+    },
+    {
+      "en": "That the grades and criteria model recognition by an actual reasoner: they are supplied.",
+      "zh": "诸等级与标准刻画实际推理者的认可：它们是给定的。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by two checkers (Lean 4.29.1): ReflectiveIdentity, receipt 20261008T114343.985843Z, 11 theorems with empty axiom reports; RecognitionalBinding, receipt 20261008T120159.334011Z, 7 with empty reports, with 14 more of InferentialGrounds and GroundRelationTransport; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "经两个检查器实查（Lean 4.29.1）：ReflectiveIdentity，回执 20261008T114343.985843Z，11 条定理公理报告皆空；RecognitionalBinding，回执 20261008T120159.334011Z，7 条为空，另有 InferentialGrounds 与 GroundRelationTransport 的 14 条；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Prove the source-free identity law for a richer fragment, with recursive constructors or several carriers, or show where it fails, so that the reach of carry-over by type is measured beyond this fragment.",
+    "zh": "在更丰富的片段（含递归构造子或多个载体）中证明无来源之恒等律，或指出其失效处，以度量凭类型之承载在此片段之外的所及。"
+  },
+  "correspondence": {
+    "en": "Curry's paradox (Curry 1942) derives any Q from C ↔ (C → Q) by using a hypothesis twice; the source-free identity result is a logical-relations (parametricity) argument in the sense of Reynolds (1983); the strict and tolerant criteria recall strict-tolerant logic (Cobreros, Égré, Ripley and van Rooij 2012). The reading that self-reference does not certify itself, and that the reference back of a bound use is stipulated, is the AI's.",
+    "zh": "Curry 悖论（Curry 1942）两次使用假设，由 C ↔ (C → Q) 推出任意 Q；无来源之恒等结果是 Reynolds（1983）意义上的逻辑关系（参数性）论证；严与宽两种标准令人想起严宽逻辑（Cobreros、Égré、Ripley 与 van Rooij 2012）。把它读作自指不自证、约束使用之回指是规定而非推出，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean",
+  "aliases": [
+    "self-reference does not certify itself",
+    "自指不自证",
+    "Generative.RecognitionalBinding.closed_identity_forced",
+    "Generative.RecognitionalBinding.source_free_related"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "constitutive-binding-assessment",
+      "detail": {
+        "en": "The stronger claim, that binding is constituted by its introduction, and the limits of a presuppositionless promotion are assessed there.",
+        "zh": "更强的主张（绑定由其引入而构成）以及无前提推广的限度，在该处评估。"
+      }
+    },
+    {
+      "id": "binding-preserving-substitution",
+      "detail": {
+        "en": "The same typed-term language of InferentialGrounds: there substitution keeps grounds at each position, here source-free terms keep every relation of grounds.",
+        "zh": "同一 InferentialGrounds 的类型化项语言：该处代入在每个位置保持根据，此处无来源项保持根据的每种关系。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.ReflectiveIdentity.Carries",
+        "Generative.ReflectiveIdentity.ReflexiveFor",
+        "Generative.ReflectiveIdentity.reflexive_exact",
+        "Generative.ReflectiveIdentity.same_criterion",
+        "Generative.ReflectiveIdentity.compose_with_bridge",
+        "Generative.ReflectiveIdentity.strict_to_tolerant_reflexive",
+        "Generative.ReflectiveIdentity.tolerant_to_strict_not_reflexive",
+        "Generative.ReflectiveIdentity.reflexive_assessment_can_fail_composition",
+        "Generative.ReflectiveIdentity.curry_fixed_point",
+        "Generative.ReflectiveIdentity.no_false_curry_fixed_point"
+      ],
+      "sha256": "e7464670584780a38222ec0f406599c525e6243aed58efdb8589bd4ad0e669f6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RecognitionalBinding.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.RecognitionalBinding.SourceFree",
+        "Generative.RecognitionalBinding.source_free_related",
+        "Generative.RecognitionalBinding.no_closed_source_free_atom",
+        "Generative.RecognitionalBinding.closed_identity_forced",
+        "Generative.RecognitionalBinding.closed_identity_preserves",
+        "Generative.RecognitionalBinding.ambient_ground_can_replace",
+        "Generative.RecognitionalBinding.introduced_ground_can_replace"
+      ],
+      "sha256": "94c770bd95a8b19c13c8e74dd95b19ac01884f8f261e5284e23034eb2c4c95bc"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reflective-identity-checks/20261008T114343.985843Z/receipt.json",
+      "role": "receipt",
+      "sha256": "d11f16b8667017d1513994aefd00bc57320a6adc7456ca7c0bc4949fc8fc79ee"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/recognitional-binding-checks/20261008T120159.334011Z/receipt.json",
+      "role": "receipt",
+      "sha256": "54433618b963ad102e467a5ff0f5410a884daa9ad707bb7d47b0521fe53d99d3"
+    },
+    {
+      "path": "theories/becoming/chapters/08-METHOD.md",
+      "role": "statement",
+      "sha256": "7ad2ce705d4a13954af8467cdb225535f50db50a16d0ef5bcc846310ebd0606f"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reflective-identity-checks/20261008T114343.985843Z/receipt.json",
+      "sha256_pointer": "/source_sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RecognitionalBinding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/recognitional-binding-checks/20261008T120159.334011Z/receipt.json",
+      "sha256_pointer": "/modules/2/sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), carry-over exactly where the premise criterion implies the conclusion criterion, the Curry consequence of a fixed point, and the identity forced on closed source-free terms; from DEFECTS-FOUND (triage row 287); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），承载恰在前提标准蕴涵结论标准之处，不动点的 Curry 推论，以及闭的无来源项被迫为恒等；出自 DEFECTS-FOUND（分诊第 287 行）；研究第 DF_N 节。"
+    }
+  ]
+}

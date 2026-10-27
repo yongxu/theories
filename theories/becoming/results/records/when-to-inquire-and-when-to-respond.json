@@ -1,0 +1,287 @@
+{
+  "schema_version": 2,
+  "id": "when-to-inquire-and-when-to-respond",
+  "title": {
+    "en": "When to inquire and when to respond",
+    "zh": "何时探究，何时回应"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F02",
+  "reviewed_at_utc": "2026-10-26T23:00:00+00:00",
+  "statement": {
+    "en": "Given a choice over the readings, good moves chosen from readings exist exactly where each reading has one move good at every configuration giving it. Inquiry can resolve a conflict within a reading but changes the history the response occurs in, as the checked dosing case shows.",
+    "zh": "在读数上有选择时，由读数选出的好动作存在，恰当每个读数都有一个在给出它的每个构形上都好的动作。探究能化解一个读数之内的冲突，却改变回应所在的历史，如所检查的给药例所示。"
+  },
+  "laws": [
+    {
+      "en": "A choice of good moves made from a reading of the configurations always gives each reading one move good at every configuration giving it, with no premise; given a choice over the readings, the converse holds, so the two are equivalent. Finitely many listed readings have that choice with no premise.",
+      "zh": "由构形之读数作出的好动作之选择，总给每个读数一个在给出它的每个构形上都好的动作，无需前提；在读数上有选择时逆命题成立，二者等价。有限多个列出的读数无需前提即有此选择。",
+      "declarations": [
+        "Becoming.GuardHorizon.UniformPolicy",
+        "Becoming.GuardHorizon.FiberFeasible",
+        "Becoming.GuardHorizon.fiber_of_uniform",
+        "Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible",
+        "Becoming.Viability.ChoiceOver",
+        "Becoming.Viability.choiceOver_fin"
+      ]
+    },
+    {
+      "en": "Moves good configuration by configuration need not be such a choice: in the witness of two configurations under one reading, each good only with its own move, no choice from that reading is good at both, while the reading telling them apart has one; a choice from a reading gives one from every finer reading compatible with it.",
+      "zh": "逐构形都好的动作未必构成这样的选择：在两个构形共一个读数、各只以自己的动作为好的见证中，由该读数作出的选择不能两处都好，而分辨二者的读数有之；由某读数作出的选择，给出与之相容的每个更细读数上的选择。",
+      "declarations": [
+        "Becoming.GuardHorizon.statewise_not_uniform",
+        "Becoming.GuardHorizon.discriminating_reading_uniform",
+        "Becoming.GuardHorizon.uniform_finer"
+      ]
+    },
+    {
+      "en": "For keeping a guard n more steps, given a choice over the readings, a choice from readings of admissible moves exists exactly where each reading has one move admissible at every configuration giving it; such a choice keeps the guard n + 1 steps from every configuration within it.",
+      "zh": "就使守护条件再保持 n 步而言，在读数上有选择时，由读数作出的可容许动作之选择存在，恰当每个读数都有一个在给出它的每个构形上都可容许的动作；这样的选择从守护条件内的每个构形起使之保持 n + 1 步。",
+      "declarations": [
+        "Becoming.GuardHorizon.Admissible",
+        "Becoming.GuardHorizon.uniform_iff",
+        "Becoming.GuardHorizon.uniform_viable"
+      ]
+    },
+    {
+      "en": "Periphery, for any types and a nonempty type of actions: a policy reading an observation is allowed on every represented history exactly where every observation class admits a common allowed action; two histories alike under the observation with no common allowed action admit no such policy.",
+      "zh": "外围，对任意类型且动作类型非空：读取观察的策略在每个被表示的历史上都被允许，恰当每个观察类都允许一个共同的动作；在观察下相同而无共同被允许动作的两个历史，不容这样的策略。",
+      "declarations": [
+        "InquiryChoice.observed_class_policy_iff",
+        "InquiryChoice.indistinguishable_conflict"
+      ]
+    },
+    {
+      "en": "Dosing case (level 8, a loss of 1 or 3 a step over two steps, the end to lie between 7 and 8, at most 5 to give): no immediate dose is admissible for both losses, while inquiry, dosing from the recorded loss, ends at 7 for each. From level 2 with loss 3 and a target of 1, the reading step takes the level to −1 before any response, where an immediate dose of 5 ends at 1.",
+      "zh": "给药例（水平 8，每步损失 1 或 3，共两步，终值须在 7 与 8 之间，至多可给 5）：没有即时剂量对两种损失都可容许，而探究按所记录的损失给药，两种情形都终于 7。从水平 2、损失 3、目标 1 出发，读取一步在任何回应之前使水平降到 −1，而即时给 5 终于 1。",
+      "declarations": [
+        "InquiryChoice.two_losses_have_no_common_immediate_dose",
+        "InquiryChoice.low_loss_inquiry",
+        "InquiryChoice.high_loss_inquiry",
+        "InquiryChoice.inquiry_can_cross_floor_before_response",
+        "InquiryChoice.early_response_keeps_floor"
+      ]
+    },
+    {
+      "en": "The supplied route selector chooses inquiry in the dosing case and, with the lower end at 3, the immediate dose 1, admissible for both losses and with loss 3 using 1044 units of work, against the 2088 of each inquiry run above; with only 4 to give it still chooses inquiry, whose run with loss 3 stops at level 2.",
+      "zh": "所给的路线选择器在给药例中选择探究；下端为 3 时选择即时剂量 1，它对两种损失都可容许，在损失 3 下所用功为 1044 单位，上述每次探究运行为 2088；只有 4 可给时它仍选择探究，其在损失 3 下的运行停在水平 2。",
+      "declarations": [
+        "InquiryChoice.shared_evidence_selects_inquiry",
+        "InquiryChoice.wide_tolerance_selects_immediate",
+        "InquiryChoice.immediate_is_robust_with_wider_tolerance",
+        "InquiryChoice.immediate_uses_less_work",
+        "InquiryChoice.selected_inquiry_can_lack_support"
+      ]
+    },
+    {
+      "en": "A second guard, checking that the dose the largest loss needs can be given, keeps the useful inquiry and refuses the one that stops; an immediate dose it selects is admissible for every loss in the range, and where it selects inquiry every loss in the range has an admissible dose and the level stays nonnegative through the reading step.",
+      "zh": "第二道守护检查最大损失所需的剂量能否给出，它保留有用的探究而拒绝会停下的那次；它所选的即时剂量对范围内每个损失都可容许；它选择探究时，范围内每个损失都有可容许的剂量，且水平经读取一步仍不为负。",
+      "declarations": [
+        "InquiryChoice.guarded_inquiry_has_feasible_correction",
+        "InquiryChoice.guarded_immediate_is_robust",
+        "InquiryChoice.repaired_selection_retains_useful_inquiry",
+        "InquiryChoice.repaired_selection_rejects_insufficient_support"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The process, the readings, the guard, the horizon and which moves are good are supplied; the core equivalence takes a choice over the readings as a named hypothesis (ChoiceOver).",
+      "zh": "过程、读数、守护条件、时域与哪些动作为好均为给定；核心的等价以读数上的选择为具名假设（ChoiceOver）。"
+    },
+    {
+      "en": "The dosing model is supplied: a constant loss per step, recorded exactly by the reading step, an additive dose bounded by what is left to give, a two-step horizon, the target and the work each step draws; the selectors are supplied rules, and selecting draws no work.",
+      "zh": "给药模型为给定：每步损失恒定且由读取一步精确记录，剂量相加且以剩余可给者为界，时域两步，目标与每步所用之功；选择器为给定规则，选择本身不用功。"
+    },
+    {
+      "en": "Axioms: the GuardHorizon and Keeping declarations have empty axiom reports; in InquiryChoice indistinguishable_conflict has none, observed_class_policy_iff uses Classical.choice, and the real-number witnesses use propext, Quot.sound and Classical.choice, as its receipt reports.",
+      "zh": "公理：GuardHorizon 与 Keeping 的声明公理报告皆空；InquiryChoice 中 indistinguishable_conflict 无公理，observed_class_policy_iff 用 Classical.choice，实数见证用 propext、Quot.sound 与 Classical.choice，如其回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "How to acquire the observation classes or a choice over infinitely many readings: the equivalence assumes the choice, and existence of a policy is not an algorithm for it.",
+      "zh": "如何取得观察类，或无穷多读数上的选择：等价以该选择为前提，策略之存在不是求得它的算法。",
+      "kind": "scope"
+    },
+    {
+      "en": "That inquiry is better than immediate response, or the reverse: each wins in one checked case, and the selector that picks between them can pick an inquiry that stops.",
+      "zh": "探究优于即时回应，或反之：各在一个所查例中胜出，在二者间挑选的选择器可能挑中会停下的探究。",
+      "kind": "non-implication",
+      "witness": "InquiryChoice.selected_inquiry_can_lack_support"
+    },
+    {
+      "en": "Anything about other losses, horizons or dose laws: the dosing results are witnesses on named numbers.",
+      "zh": "关于其他损失、时域或剂量律的任何结论：给药结果是具名数值上的见证。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean",
+      "detail": {
+        "en": "The first selector chooses inquiry with only 4 to give, and the run stops at level 2, below the target (selected_inquiry_can_lack_support); the second guard refuses it.",
+        "zh": "第一个选择器在只有 4 可给时选择探究，运行停在低于目标的水平 2（selected_inquiry_can_lack_support）；第二道守护拒绝它。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
+      "detail": {
+        "en": "One reading of two configurations, each needing a different move: each has a good move and no choice from the reading is good at both (statewise_not_uniform).",
+        "zh": "两个构形共一个读数，各需不同动作：各有好动作，而由该读数作出的选择不能两处都好（statewise_not_uniform）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: GuardHorizon and Keeping by the consolidated core checker (Lean 4.29.1, receipt 20261025T212948.819150Z), empty axiom reports; InquiryChoice by its package checker (Lean 4.30.0-rc2 with Mathlib), axioms as named; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 实查：GuardHorizon 与 Keeping 经合并核心检查器（Lean 4.29.1，回执 20261025T212948.819150Z），公理报告皆空；InquiryChoice 经其包检查器（Lean 4.30.0-rc2 与 Mathlib），公理如所列；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "State the dosing case on the core: inquiry as a move of a process whose readings are formed by its own steps, so that when inquiry serves the response is read from the reachable readings rather than from named numbers.",
+    "zh": "在核心上陈述给药例：探究作为一个过程的动作，其读数由其自身之步形成，使探究何时有助于回应由可达读数读出，而非由具名数值。"
+  },
+  "correspondence": {
+    "en": "Choosing from observation classes is an observation-based (memoryless) policy for a partially observed system; that probing changes what the later response meets is the dual effect of control (Feldbaum 1960). Reading inquiry as a move within the same unfolding is the AI's reading.",
+    "zh": "由观察类作出选择，是部分可观系统中基于观察（无记忆）的策略；探测改变后来回应之所遇，是控制的对偶效应（Feldbaum 1960）。把探究读作同一展开中的一步，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean",
+  "aliases": [
+    "when to inquire and when to respond",
+    "何时探究，何时回应",
+    "Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible",
+    "InquiryChoice.observed_class_policy_iff"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "finite-continuation-plans",
+      "detail": {
+        "en": "Viability for n steps is a plan branching on observations, and given a choice over observations the equivalence holds for any type; here the one-step choice from readings and its use for a guard.",
+        "zh": "保持 n 步即依观察分支之计划，在观察上有选择时等价对任意类型成立；此处为由读数作一步选择及其对守护条件之用。"
+      }
+    },
+    {
+      "id": "testing-within-couplings",
+      "detail": {
+        "en": "The judgment that a distinction matters where histories compatible with the evidence need incompatible responses.",
+        "zh": "证据相容之诸历史需不相容之回应处，区分方为要紧，此判断在彼处。"
+      }
+    },
+    {
+      "id": "risk-certificate-outcome-distinction",
+      "detail": {
+        "en": "A judgment through a projection is right only where it does not merge what must be told apart; here the same limit for choosing moves.",
+        "zh": "经投影之判断，只在不合并须分辨者处为对；此处是选择动作的同一界限。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.GuardHorizon.UniformPolicy",
+        "Becoming.GuardHorizon.FiberFeasible",
+        "Becoming.GuardHorizon.fiber_of_uniform",
+        "Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible",
+        "Becoming.GuardHorizon.statewise_not_uniform",
+        "Becoming.GuardHorizon.discriminating_reading_uniform",
+        "Becoming.GuardHorizon.uniform_finer",
+        "Becoming.GuardHorizon.Admissible",
+        "Becoming.GuardHorizon.uniform_iff",
+        "Becoming.GuardHorizon.uniform_viable"
+      ],
+      "sha256": "1043c114b33c1217dd61f0aa5a64ba30345ca787fd7da00963559fad9a47ac9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Viability.ChoiceOver",
+        "Becoming.Viability.choiceOver_fin"
+      ],
+      "sha256": "8911dc0d19d975ee30a0b1a2dbc4d013fe9fe5db846abc88e4d49219f12983b4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean",
+      "role": "proof",
+      "declarations": [
+        "InquiryChoice.observed_class_policy_iff",
+        "InquiryChoice.indistinguishable_conflict",
+        "InquiryChoice.two_losses_have_no_common_immediate_dose",
+        "InquiryChoice.low_loss_inquiry",
+        "InquiryChoice.high_loss_inquiry",
+        "InquiryChoice.inquiry_can_cross_floor_before_response",
+        "InquiryChoice.early_response_keeps_floor",
+        "InquiryChoice.shared_evidence_selects_inquiry",
+        "InquiryChoice.wide_tolerance_selects_immediate",
+        "InquiryChoice.immediate_is_robust_with_wider_tolerance",
+        "InquiryChoice.immediate_uses_less_work",
+        "InquiryChoice.selected_inquiry_can_lack_support",
+        "InquiryChoice.guarded_inquiry_has_feasible_correction",
+        "InquiryChoice.guarded_immediate_is_robust",
+        "InquiryChoice.repaired_selection_retains_useful_inquiry",
+        "InquiryChoice.repaired_selection_rejects_insufficient_support"
+      ],
+      "sha256": "2a2c6571d43f13774a8d27ff473bda6f7c363cdb0e972ecb7ebff3a23a238707"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/inquiry-choice-verification.json",
+      "role": "receipt",
+      "sha256": "b1eababbdde2068494f202cc8ca12c44be95929c98a12355ef140255ee39a4f2"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "d1617cd81aa353304cae97d6510da26c335e4498b8a3dfced1cff6143c342d04"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GuardHorizon",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Keeping",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/inquiry-choice-verification.json",
+      "sha256_pointer": "/modules/5/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), choice of moves from readings in the core and the periphery, and the dosing witnesses on inquiry and immediate response; from DEFECTS-FOUND (triage row 94); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），核心与外围中由读数选择动作，以及关于探究与即时回应的给药见证；出自 DEFECTS-FOUND（分诊第 94 行）；研究第 DF_N 节。"
+    }
+  ]
+}

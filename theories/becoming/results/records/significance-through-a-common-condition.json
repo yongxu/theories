@@ -1,0 +1,206 @@
+{
+  "schema_version": 2,
+  "id": "significance-through-a-common-condition",
+  "title": {
+    "en": "Significance through a common condition",
+    "zh": "经共同条件的意义"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-26T17:10:00+00:00",
+  "statement": {
+    "en": "Through a run's conditions, a condition all living formations take part in connects the whole; with a living event, living significance is exactly a seed with both neutralities; under relational neutrality valuing a consumer's event reaches each living event of some formation it leaves unsupported.",
+    "zh": "经一次运行之条件，每个活的形成都参与之条件使整体连通；有一活的事件时，生生之意义恰为种子加两种中立；在关系中立下，珍视消耗者之事件，及于其使之失去支持之某一形成的每个活的事件。"
+  },
+  "laws": [
+    {
+      "en": "Read an event (a formation at a step) of a run through its conditions as living where the formation is active then and does not consume in the run, and relate events whose formations take part in a common condition. A condition every living event's formation takes part in connects the whole; there, given a standpoint and a living event, living significance is exactly a seed with both neutralities.",
+      "zh": "经条件读出一次运行之事件（某步之形成）：其形成此时活跃且在运行中不消耗者为活，两事件之形成共同参与某一条件者相关。每个活的事件之形成都参与之条件使整体连通；此处，给定一立场与一活的事件，生生之意义恰为种子加关系中立与立场中立。",
+      "declarations": [
+        "Becoming.Conditions.valuation",
+        "Becoming.Conditions.connected_of_common",
+        "Becoming.Conditions.significant_iff_of_common",
+        "Becoming.Valuation.Connected",
+        "Becoming.Valuation.Grounds",
+        "Becoming.Valuation.Significant"
+      ]
+    },
+    {
+      "en": "Two formations active at every step, each depending only on its own condition and nothing drawn, are both living and leave the whole unconnected: the reading alone gives no connection.",
+      "zh": "两个每步皆活跃、各只依存于自身条件且无所汲取之形成，皆为活而使整体不连通：单凭读法不给出连通。",
+      "declarations": [
+        "Becoming.Separate.conditions",
+        "Becoming.Separate.not_connected"
+      ]
+    },
+    {
+      "en": "Where a formation consumes, some formation depending on the drawn condition loses its support from some step on, and the two take part in that condition, so their events are related at every pair of steps; under relational neutrality a standpoint holding an event of the consumer significant holds significant every living event of that formation. The transmission runs along co-participation, not through consumption.",
+      "zh": "形成消耗时，有依存于被汲取条件之形成自某步起失去支持，二者共同参与该条件，故其事件在每一对步上相关；在关系中立下，认为消耗者某事件有意义之立场，认为该形成的每个活的事件都有意义。传递沿共同参与进行，不经消耗本身。",
+      "declarations": [
+        "Becoming.Conditions.consumption_relates",
+        "Becoming.Conditions.valuing_consumption_reaches",
+        "Becoming.Valuation.transmits"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom: the cited declarations have empty axiom reports (core modules Becoming.ValuationFrames and Becoming.Metaethics).",
+      "zh": "不加公理：所引声明之公理报告皆空（核心模块 Becoming.ValuationFrames 与 Becoming.Metaethics）。"
+    },
+    {
+      "en": "The relational reading of living (active and not consuming in the run) and relation as taking part in a common condition are disclosed reading choices, not proved correspondences; standpoints, their regions and significance are supplied.",
+      "zh": "活之关系读法（活跃且在运行中不消耗）与以共同参与某一条件为关系，皆为公开之读法选择，非所证之对应；立场、其区域与意义皆为所给。"
+    },
+    {
+      "en": "The characterization needs a common condition and some living event; the transmission needs relational neutrality, a hypothesis whose normative standing is a separate question.",
+      "zh": "刻画需要一个共同条件与某一活的事件；传递需要关系中立，此为假设，其规范地位另是一问。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "A seed or either neutrality: it binds no standpoint that rejects them.",
+      "zh": "种子或任一中立：它不约束拒绝它们之立场。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the relational reading is the reading of 生生: it is one disclosed reading among others.",
+      "zh": "关系读法即生生之读法：它只是诸公开读法之一。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That some standpoint values the consumer's events: on this reading they are not living, so self-significance supplies no such valuation.",
+      "zh": "有立场珍视消耗者之事件：依此读法它们不是活的，故自身意义不提供此种珍视。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Connection under a relation narrower than co-participation, such as interaction, under which an idle condition connects nothing.",
+      "zh": "较共同参与为窄之关系（如交互）下之连通；在交互下，惰性条件不连通任何事物。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the connecting condition is used: a dependence at need 0 counts as taking part, so adjoining a condition every formation depends on at need 0 and none draws connects the whole; under interaction, as in condition-correspondence-discipline, it connects nothing.",
+      "zh": "连通之条件被使用：需要为 0 之依存亦算参与，故加入一个每个形成皆以需要 0 依存、无人汲取之条件即使整体连通；在交互下（如 condition-correspondence-discipline），它不连通任何事物。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): the cited declarations of Becoming.ValuationFrames and Becoming.Metaethics have empty axiom reports; core purity verified. The laws were first registered within becoming-renewal-reading's claim; the record was read against the current Lean; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T212948.819150Z）：Becoming.ValuationFrames 与 Becoming.Metaethics 中所引声明公理报告皆空；核心纯净已核对。诸律先登于 becoming-renewal-reading 之主张中；本记录对照当前 Lean 读过；未经人审。"
+  },
+  "next_delta": {
+    "en": "The same laws under a time-ordered or amount-bearing relation between events, and a reading of living that includes further generation.",
+    "zh": "在事件间有时序或带数量之关系下之同样诸律，以及包含继续生成之活之读法。"
+  },
+  "correspondence": {
+    "en": "Read by the AI: the common condition is the shared resource of a commons (Ostrom 1990), and the law says that, under relational neutrality, valuing one user of a drawn resource reaches every living event of a user whose support the drawing fails; the transmission is the closure of significance under a relation, as in the characterization of living significance on a connected whole.",
+    "zh": "依 AI 之读：共同条件即公地之共享资源（Ostrom 1990）；此律说，在关系中立下，珍视被汲取资源之一使用者，及于因之失去支持之使用者的每个活的事件；传递是意义在一关系下之闭包，如连通整体上生生之意义之刻画。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+  "aliases": [
+    "Significance through a common condition",
+    "经共同条件的意义"
+  ],
+  "dependencies": [
+    {
+      "id": "metaethical-core-characterization",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Conditions.significant_iff_of_common discharges Valuation.significant_iff's connection premise by Conditions.connected_of_common; Conditions.valuing_consumption_reaches uses the rule of relational neutrality, transmits.",
+        "zh": "Conditions.significant_iff_of_common 以 Conditions.connected_of_common 满足 Valuation.significant_iff 之连通前提；Conditions.valuing_consumption_reaches 用关系中立之规则 transmits。"
+      }
+    },
+    {
+      "id": "becoming-renewal-reading",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Conditions.valuation reads a run through Conditions.along, the web of conditions that record classifies, and takes its living events as those not consuming in the run.",
+        "zh": "Conditions.valuation 经 Conditions.along 读一次运行，即该记录所分类之条件之网，并以运行中不消耗者为活的事件。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "becoming-stepwise-reading",
+      "detail": {
+        "en": "The same laws for the stepwise reading on webs (Web.connected_of_common, Web.significant_iff_of_common, Web.valuing_breaking_reaches).",
+        "zh": "逐步读法在依存网上之同样诸律（Web.connected_of_common、Web.significant_iff_of_common、Web.valuing_breaking_reaches）。"
+      }
+    },
+    {
+      "id": "condition-correspondence-discipline",
+      "detail": {
+        "en": "Narrows the relation to interaction, so that an idle condition connects nothing and connection is made by living use.",
+        "zh": "把关系收窄为交互，使惰性条件不连通任何事物，连通由活的使用造成。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Conditions.valuation",
+        "Becoming.Conditions.connected_of_common",
+        "Becoming.Conditions.significant_iff_of_common",
+        "Becoming.Valuation.Connected",
+        "Becoming.Separate.not_connected",
+        "Becoming.Conditions.consumption_relates",
+        "Becoming.Conditions.valuing_consumption_reaches"
+      ],
+      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Valuation.Grounds",
+        "Becoming.Valuation.Significant",
+        "Becoming.Separate.conditions",
+        "Becoming.Valuation.transmits"
+      ],
+      "sha256": "659164aee82f74c802700e5e7e4118721400cf4b09233a743c2f9250b3d83584"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "7ace404140e2a9688e51b7147bcc85d8add9774e395f7dbbe802ef13a26c4c4e"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Metaethics",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), separated from becoming-renewal-reading's claim: read through a run's conditions, a common condition connects the whole, so living significance is a seed with both neutralities, and under relational neutrality valuing a consumer reaches a formation whose support the drawing fails; from DEFECTS-FOUND (triage row 36); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），自 becoming-renewal-reading 之主张分出：经运行之条件读出，共同条件使整体连通，故生生之意义为种子加两种中立；在关系中立下，珍视消耗者及于其支持被汲取所失之形成；出自 DEFECTS-FOUND（分诊第 36 行）；研究第 DF_N 节。"
+    }
+  ]
+}

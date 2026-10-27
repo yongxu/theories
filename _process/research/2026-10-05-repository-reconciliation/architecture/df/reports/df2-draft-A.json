@@ -1,0 +1,331 @@
+{
+ "records": [
+  {
+   "id": "when-to-inquire-and-when-to-respond",
+   "rows": "94",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/when-to-inquire-and-when-to-respond.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §9 Inquiry, \"Responding\" (paragraph *when to inquire and when to respond*)",
+   "anchor_before": "**Theorem** (periphery over the reals; `Classical.choice`, `Quot.sound`, `propext`), *when to inquire",
+   "regions": {
+    "region": "knowing",
+    "base": "periphery",
+    "note": "InquiryChoice; core GuardHorizon choice from readings"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "Lean: `InquiryChoice.observed_class_policy_iff`, `InquiryChoice.two_losses_have_no_common_immediate_dose`, `InquiryChoice.inquiry_can_cross_floor_before_response` ([source](../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean)).",
+     "new": "Lean: `InquiryChoice.observed_class_policy_iff` (in the core, given a choice over the readings, `GuardHorizon.uniform_policy_iff_fiber_feasible`, with an empty axiom report), `InquiryChoice.two_losses_have_no_common_immediate_dose`, `InquiryChoice.inquiry_can_cross_floor_before_response`; [record](../results/records/when-to-inquire-and-when-to-respond.md).",
+     "why": "Record link in place of the source link, and the core form of the first law (GuardHorizon, choice over the readings as a named hypothesis) beside the periphery one (triage row 94)."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Laws 1-3 are the core GuardHorizon/Keeping form (choice over the readings a named hypothesis; finitely many listed readings need none); laws 4-7 the periphery InquiryChoice dosing case (Lean 4.30.0-rc2, Mathlib). Bound to the core receipt and inquiry-choice-verification.json (/modules/5/source_sha256)."
+  },
+  {
+   "id": "certificates-sound-and-available",
+   "rows": "131",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/certificates-sound-and-available.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §9 Inquiry, pre-spine table row \"Availability and soundness\"",
+   "anchor_before": "<a id=\"availability-and-soundness\"></a>Availability and soundness",
+   "regions": {
+    "region": "knowing",
+    "base": "general",
+    "note": "FaultEnvelopes, PooledEnvelopes, TreeSearch: certificates sound, available where separated"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "**Theorem** (periphery: correction modules; `propext`, `Quot.sound` and, in one declaration, `Classical.choice`, as their receipt reports; roster, fault envelopes, report law and protected monitor supplied).",
+     "new": "**Theorem** (any type; roster, fault envelopes, report law and protected monitor supplied; the core's restatements of the correction modules, with empty axiom reports).",
+     "why": "The core restates the correction modules with empty axiom reports (FaultEnvelopes, PooledEnvelopes, TreeSearch); the label named the periphery's axioms (triage row 131)."
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "an exhausted inquiry budget returns *pending*, not absence ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVIDENCE-QUALIFIED-CORRECTION-INTEGRATION.md)). |",
+     "new": "an exhausted inquiry budget returns *pending*, not absence. Lean: `FaultEnvelopes.availability_iff_separated`, `PooledEnvelopes.pooled_certificate_sound`, `PooledEnvelopes.every_candidate_ready_pool_not`, `TreeSearch.interrupted_pending`; [record](../results/records/certificates-sound-and-available.md) ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVIDENCE-QUALIFIED-CORRECTION-INTEGRATION.md)). |",
+     "why": "Lean names and the record link (triage row 131)."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "All core (empty axiom reports); the periphery correction modules are provenance references. duplicated_roster_same is left to copied-witnesses-change-nothing."
+  },
+  {
+   "id": "adaptive-closure-cannot-resolve",
+   "rows": "132",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/adaptive-closure-cannot-resolve.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §9 Inquiry, pre-spine table row \"Adaptive closure\"",
+   "anchor_before": "Adaptive closure | **Theorem** (periphery: NormativeActivity",
+   "regions": {
+    "region": "knowing",
+    "base": "periphery",
+    "note": "NormativeActivity: closed policy cannot resolve"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "**Theorem** (periphery: NormativeActivity; `propext`, `Quot.sound`, `Classical.choice` imported).",
+     "new": "**Theorem** (periphery: NormativeActivity; `propext` in some declarations, as its receipt reports; the two histories, the moves and their local closure supplied).",
+     "why": "The receipt reports propext only (in ClosedLocal, the two adaptation laws, closed_continuations_remain_unresolved and historical_truth_present_error), not Quot.sound or Classical.choice; the supplied model is named."
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "A record can stay true of its sample while reusing it for the present question is wrong. |",
+     "new": "A record can stay true of its sample while reusing it for the present question is wrong. Lean: `NormativeActivity.sound_closed_answer_abstains`, `NormativeActivity.historical_truth_present_error`, `NormativeActivity.reopening_and_inspection_repair`; [record](../results/records/adaptive-closure-cannot-resolve.md). |",
+     "why": "Lean names for the abstention and the record sentence, and the record link (triage row 132)."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Correction to the chapter label: the receipt (normative-activity-checks/20261007T204714.495458Z) reports only propext, not Quot.sound or Classical.choice. No core port exists."
+  },
+  {
+   "id": "evidence-through-change",
+   "rows": "133",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/evidence-through-change.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §9 Inquiry, pre-spine table row \"Evidence through change\"",
+   "anchor_before": "Evidence through change | **Theorem** (periphery modules",
+   "regions": {
+    "region": "knowing",
+    "base": "periphery",
+    "note": "TemporalInspection, ChangingDependency"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "a certificate covering the uncertainty interval needs 2ρt ≤ B − L − 2σ ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/TEMPORAL-INSPECTION-INTEGRATION.md)). |",
+     "new": "a certificate covering the uncertainty interval needs 2ρt ≤ B − L − 2σ. Lean: `TemporalInspection.lawful_history_preserves_known`, `TemporalInspection.predicting_change_reopens_relevant_alternatives`, `TemporalInspection.understated_change_can_leave_false_confidence`, `ChangingDependency.error_growth_budget`; [record](../results/records/evidence-through-change.md) ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/TEMPORAL-INSPECTION-INTEGRATION.md)). |",
+     "why": "Lean names and the record link (triage row 133); the label's axioms stay right for the names cited (Classical.choice only in error_growth_budget)."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Bound to temporal-inspection-checks/20261008T114957.579255Z (/sources/TemporalInspection/sha256) and changing-dependency-verification.json (/modules/6/source_sha256). ChangingDependency.certified is a def the receipt does not audit; check passes."
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "rows": "134",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/correction-is-not-calibration.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §3, paragraph at <a id=\"correction-is-not-calibration\"> (its theorem part)",
+   "anchor_before": "<a id=\"correction-is-not-calibration\"></a>\n**Assessment** (argument without Lean)",
+   "regions": {
+    "region": "knowing",
+    "base": "periphery",
+    "note": "CalibratedUpdater, CalibrationRenewal"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "change after calibration remain failures ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-CALIBRATION-RENEWAL.md)).",
+     "new": "change after calibration remain failures. Lean: `CalibratedUpdater.acquired_local_exact`, `CalibrationRenewal.all_signs_transfer_iff`, `CalibrationRenewal.renewed_run`, `CalibrationRenewal.late_change_still_fails`; [record](../results/records/correction-is-not-calibration.md) ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-CALIBRATION-RENEWAL.md)).",
+     "why": "Lean names and the record link for the theorem part; the Assessment part stays an argument without Lean (triage row 134)."
+    }
+   ],
+   "record_edits": [
+    {
+     "id": "the-updater-line",
+     "field": "related",
+     "old": "[{\"id\": \"learned-procedure-transmission\", \"detail\": {\"en\": \"Its networks and procedure bit are reconstructed through actual performance; this line gives how such a network develops, remembers, is replaced and is checked.\", \"zh\": \"其网络与更新控制位经实际表现而重构；此一线给出此种网络如何发育、记忆、被替换与被检查。\"}}]",
+     "new": "[{\"id\": \"learned-procedure-transmission\", \"detail\": {\"en\": \"Its networks and procedure bit are reconstructed through actual performance; this line gives how such a network develops, remembers, is replaced and is checked.\", \"zh\": \"其网络与更新控制位经实际表现而重构；此一线给出此种网络如何发育、记忆、被替换与被检查。\"}}, {\"id\": \"correction-is-not-calibration\", \"detail\": {\"en\": \"References renewed after calibration repair the overwritten matrix of these updater constructions; correction without a reference is not calibration.\", \"zh\": \"校准之后更新的参照修复这些更新者构造中被覆盖的矩阵；无参照的修正不是校准。\"}}]",
+     "why": "Triage row 134: the updater-line record links to correction-is-not-calibration. Apply only if the-updater-line keeps this related list when it lands."
+    }
+   ],
+   "check_clean": true,
+   "notes": "The Assessment part stays an argument without Lean (a does_not_show entry says so). Related links: experiment-needs-return, the-updater-line (another unit's new record), selection-under-registration-revision (to be renamed by DF2 to selection-when-the-lumping-changes; rename-id rewrites live references). The triage asks the updater-line record to link here: proposed as a record_edit; that record is another unit's uncommitted file, so its owner or the lander applies it."
+  },
+  {
+   "id": "learning-a-rule-by-narrowing",
+   "rows": "135",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/learning-a-rule-by-narrowing.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §9 Inquiry, \"What knowing is\", the *three forces* assessment",
+   "anchor_before": "**Assessment**, *three forces*. Accuracy, epistemic support and obligation",
+   "regions": {
+    "region": "knowing",
+    "base": "general",
+    "note": "Narrowing (ported from StandardsBridge)"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "A pre-spine check (StandardsBridge; `propext`, `Quot.sound`, `Classical.choice` in some declarations): on a nonempty candidate range a definite answer is error-free across the range only where every candidate agrees, so a repertoire omitting the actual rule can answer confidently and falsely.",
+     "new": "A core law (`Becoming.Narrowing`, ported from StandardsBridge; empty axiom reports): on a nonempty candidate list a definite answer is error-free across the list only where every candidate agrees, so a repertoire omitting the actual rule can answer confidently and falsely. Lean: `Narrowing.answer_iff`, `Narrowing.safe_definite_requires_agreement`, `Narrowing.wrong_model_class_can_be_confidently_wrong`; [record](../results/records/learning-a-rule-by-narrowing.md).",
+     "why": "The core port Becoming.Narrowing states it with empty axiom reports; Lean names and the record link (triage row 135)."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "All core (empty axiom reports); StandardsBridge is a provenance reference. Aliases avoid after_observe_iff and revise_is_after (held by becoming-spine-instances)."
+  },
+  {
+   "id": "readings-a-response-needs",
+   "rows": "136, 96",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/readings-a-response-needs.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §9 Inquiry, \"Responding\", paragraph at <a id=\"no-coarsest-description\">; the *success changes the next response* paragraph is law 2 and links to it",
+   "anchor_before": "<a id=\"no-coarsest-description\"></a>\n**Theorem** (",
+   "regions": {
+    "region": "knowing",
+    "base": "frame",
+    "note": "AssurancePlans Regulation and Routes"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "**Theorem** (periphery: pre-spine module WisdomResponseStructure; `propext`, and `Quot.sound` in one declaration; witness). In a three-route process",
+     "new": "**Theorem** (named three-route process; witness). In a three-route process",
+     "why": "The core restates it with empty axiom reports (AssurancePlans.Routes) (triage row 136)."
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "no sufficient description lies below every sufficient binary one (`no_coarsest_adequate_description`).",
+     "new": "no sufficient description lies below every sufficient binary one (`AssurancePlans.Routes.no_coarsest_adequate`; the pre-spine `no_coarsest_adequate_description` its provenance; [record](../results/records/readings-a-response-needs.md)).",
+     "why": "Core Lean name and the record link (triage row 136)."
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "**Theorem** (periphery; `propext`, `Quot.sound`; witness), *success changes the next response*.",
+     "new": "**Theorem** (named regulation band; witness), *success changes the next response*.",
+     "why": "The core restates it with an empty axiom report (AssurancePlans.Regulation.next_move_changes) (triage row 96)."
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "Lean: `ContextualWisdom.success_changes_next_response`. Not evidence",
+     "new": "Lean: `AssurancePlans.Regulation.next_move_changes` (the pre-spine `ContextualWisdom.success_changes_next_response` its provenance); [record](../results/records/readings-a-response-needs.md). Not evidence",
+     "why": "Core Lean name and the record link; this paragraph is law 2 of the record (triage row 96)."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Row 96 is law 2 (next_move_changes). Correction to the triage: adequate_merges_outcomes is proved for the left reading only, and the law says so. Dependency formal-reuse on assured-route-criterion (completes_ofMap_single, completes_ofMap_iff are used in the proofs). Periphery names are aliases with the suffix \" (periphery module)\"."
+  },
+  {
+   "id": "composition-route",
+   "rows": "137",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/composition-route.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §8, \"Acquired composition\" table row \"Composition route\"",
+   "anchor_before": "Composition route | **Theorem** (periphery: pre-spine CompositionalAcquisition",
+   "regions": {
+    "region": "knowing",
+    "base": "frame",
+    "note": "CodeAcquisition, RouteFormation (core ports of CompositionalAcquisition, CompositionalFormation)"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "**Theorem** (periphery: pre-spine CompositionalAcquisition and CompositionalFormation; witnesses; `propext` in some declarations cited; grammar, connectors, query choice and search supplied).",
+     "new": "**Theorem** (named codes and formation courses; witnesses; grammar, probes, connectors, order of proposals, samples and draws supplied).",
+     "why": "The core ports CodeAcquisition and RouteFormation state the five laws with empty axiom reports; the pre-spine names stay as the record's aliases (triage row 137, corrected: core ports exist)."
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "and without spare parts the error is recorded, not repaired. ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/COMPOSITIONAL-FORMATION-INTEGRATION.md)) | `primitive_readings_do_not_resolve_order`, `changed_order_invalidates_transfer`, `old_record_can_admit_wrong_constructed_operation`, `fresh_record_changes_actual_reconstruction`, `discrepancy_alone_does_not_supply_repair_parts` |",
+     "new": "and without spare parts the error is recorded, not repaired. [record](../results/records/composition-route.md) ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/COMPOSITIONAL-FORMATION-INTEGRATION.md)) | `CodeAcquisition.primitives_no_exact`, `CodeAcquisition.wrong_order_fails_transfer`, `RouteFormation.old_records_admit_duplicate`, `RouteFormation.novel_record_separates`, `RouteFormation.repair_course_rebuilds`, `RouteFormation.repair_course_no_parts` |",
+     "why": "Core Lean names in place of the pre-spine ones, and the record link."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Correction to the triage: core ports exist (CodeAcquisition, RouteFormation, empty axiom reports), so the record and the chapter edit use them; base frame, not periphery; the five pre-spine names are aliases with \" (periphery module)\" and provenance references. Insert this anchor before applying the chapter edits: the first edit rewrites the label inside the anchor text; after the edits the row starts \"Composition route | **Theorem** (named codes and formation courses\". Simulated: anchors then edits apply cleanly to both chapters."
+  },
+  {
+   "id": "what-a-total-keeps",
+   "rows": "138",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/what-a-total-keeps.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §9 Inquiry, \"Questions across scales\" table row \"Totals\"",
+   "anchor_before": "Totals | **Theorem** (periphery, Mathlib; `propext`, `Quot.sound`, `Classical.choice`)",
+   "regions": {
+    "region": "knowing",
+    "base": "periphery",
+    "note": "RelationsAcrossScales (Mathlib)"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "no predictor reading only a + b has error below c on equal-total states;",
+     "new": "no predictor reading only a + b has error below c at both of the equal-total states (2, 0) and (0, 2);",
+     "why": "routing_defect_lower_bound is proved for the two states (2, 0) and (0, 2), not for equal-total states in general."
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "With calibrated readouts a threshold verdict follows only outside the error margin. ([source](../history/RELATIONS-ACROSS-SCALES.md)) | pre-spine |",
+     "new": "With a calibrated readout a verdict follows where the estimate plus the error is below the threshold, and an estimate at the threshold fits actual values on either side. [record](../results/records/what-a-total-keeps.md) ([source](../history/RELATIONS-ACROSS-SCALES.md)) | `RelationsAcrossScales.routing_defect_lower_bound`, `exact_total_can_hide_loss`, `no_total_only_protection`, `violation_certificate`, `threshold_ambiguity` |",
+     "why": "The Lean shows the verdict outside the margin (violation_certificate) and ambiguity for an estimate at the threshold (threshold_ambiguity), not ambiguity everywhere inside the margin; Lean names and the record link in place of 'pre-spine' (triage row 138)."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Bound to scales-verification.json (/modules/2/source_sha256). The chapter edits correct two overstatements: the routing bound is proved at (2, 0) and (0, 2), and ambiguity is proved for an estimate at the threshold, not everywhere inside the margin."
+  },
+  {
+   "id": "access-yet-to-form",
+   "rows": "139",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/access-yet-to-form.json",
+   "status": "recorded-checked",
+   "home": "03-KNOWING.md §9 Inquiry, \"Questions across scales\" table row \"Access yet to form\"",
+   "anchor_before": "Access yet to form | **Theorem** (periphery: pre-spine ReconfigurableSupportLogic",
+   "regions": {
+    "region": "knowing",
+    "base": "periphery",
+    "note": "ReconfigurableSupportLogic (pre-spine)"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "([source](../history/GENERATED-LOGIC.md)) | `hidden_formed`, `refreshed_view` |",
+     "new": "[record](../results/records/access-yet-to-form.md) ([source](../history/GENERATED-LOGIC.md)) | `fixed_route_behavior_iff`, `hidden_formed`, `new_probe_separates`, `no_blind_redirect_update`, `refreshed_view` |",
+     "why": "The record link, and the Lean of the first and third claims beside the two names cited (triage row 139)."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "Bound to reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json (/modules/1/sha256, success /passed true). Shares the module with what-a-summary-keeps (law 3 there: exact_reader_separates, unrestricted_reader_injective); aliases do not collide."
+  },
+  {
+   "id": "one-move-covering",
+   "rows": "140, 284",
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2/theories/becoming/results/records/one-move-covering.json",
+   "status": "recorded-checked",
+   "home": "08-METHOD.md §4, at <a id=\"covering\"> (home: \"These laws are stated here\"); 03-KNOWING.md §9 row \"Covering of moves\" links to it",
+   "anchor_before": "<a id=\"covering\"></a>\n**Theorem** (any process).",
+   "regions": {
+    "region": "method",
+    "base": "frame",
+    "note": "MoveOutcomeProcesses: covering iff every one-move goal carried; PracticalReach's core form"
+   },
+   "chapter_edits": [
+    {
+     "file": "theories/becoming/chapters/08-METHOD.md",
+     "old": "These laws are stated here; their Lean is the pure core's [Becoming.MoveOutcomeProcesses](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean).",
+     "new": "These laws are stated here; their Lean is the pure core's [Becoming.MoveOutcomeProcesses](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean); [record](../results/records/one-move-covering.md).",
+     "why": "The record link at the home section (triage row 284)."
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "(naming the lost goal takes double-negation elimination)",
+     "new": "(a lost goal is named under double-negation elimination, a hypothesis; that it is needed is not shown)",
+     "why": "lost_goal_of_not_covers_of_dne shows that double-negation elimination suffices; that it is needed is a docstring remark, not a theorem (triage row 140)."
+    },
+    {
+     "file": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "goals ensured separately need not be ensured jointly; a summary can hide a loss. | `MoveOutcomeProcesses.covers_iff`",
+     "new": "goals ensured separately need not be ensured jointly; a summary can hide a loss. Stated in [08](08-METHOD.md#r-one-move-covering); [record](../results/records/one-move-covering.md). | `MoveOutcomeProcesses.covers_iff`",
+     "why": "One record for rows 140 and 284, at home in 08 where the theorem is stated in full; this row links to it."
+    }
+   ],
+   "record_edits": [],
+   "check_clean": true,
+   "notes": "One record for rows 140 (covering-of-moves, 03) and 284 (08); home in 08, where the theorem is stated in full and the chapter says the laws are stated there; the 03 row gets no anchor, only links. Law 3 states only what lost_goal_of_not_covers_of_dne types (a goal one ensures and the other does not); that double-negation elimination is needed is a does_not_show entry of kind converse."
+  }
+ ],
+ "not_written": []
+}

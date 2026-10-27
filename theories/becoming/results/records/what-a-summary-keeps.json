@@ -1,0 +1,274 @@
+{
+  "schema_version": 2,
+  "id": "what-a-summary-keeps",
+  "title": {
+    "en": "What a summary keeps",
+    "zh": "摘要保留什么"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-26T22:00:00+00:00",
+  "statement": {
+    "en": "A summary map represents finite histories exactly where projected one-step possibilities agree, then keeping every word's feasibility; a summary keeping feasibility separates configurations differing on a word; the history so far carries each prefix-closed language holding the empty word.",
+    "zh": "摘要映射精确表示有限历史，恰在投影后的一步可能相同之处，此时保持每个词的可行性；保持可行性的摘要区分在某个词上不同的构形；迄今之历史承载每个含空词的前缀封闭语言。"
+  },
+  "laws": [
+    {
+      "en": "Exactness, the summary traces from a configuration's image being exactly the images of its traces, endpoints included, is equivalently agreement of projected one-step possibilities: the summary steps from the image are exactly the images of the configuration's steps. Preservation and lifting keep what is enabled and the feasibility of every finite word, and for a one-to-one map traces correspond end to end.",
+      "zh": "精确性（从某构形之像出发的摘要迹恰是其诸迹的像，含端点）等价于投影后一步可能的相同：从像出发的摘要步恰是该构形诸步的像。保持与提升使可启用者与每个有限词的可行性不变；映射为单射时，迹首尾一一对应。",
+      "declarations": [
+        "Generative.Trace",
+        "Generative.projected_trace_iff",
+        "Generative.local_exact_iff_trace_exact",
+        "Generative.enabled_projection_iff",
+        "Generative.feasible_projection_iff",
+        "Generative.trace_faithful_iff"
+      ]
+    },
+    {
+      "en": "Where a summary keeps the feasibility of every finite word from every configuration, two configurations of which one can perform some word and the other cannot have different summaries.",
+      "zh": "摘要在每个构形处保持每个有限词的可行性时，一个能执行某词、另一个不能的两个构形，其摘要不同。",
+      "declarations": [
+        "Generative.Feasible",
+        "Generative.feasible_difference_implies_projection_difference"
+      ]
+    },
+    {
+      "en": "In the access model (a route, the occupancy of supports, and steps that redirect, take and release within a permitted set), every summary from which some reader reads off the feasibility of every word separates occupancy throughout the permitted set; with every support permitted and the route fixed, every such encoding of occupancy is one to one.",
+      "zh": "在存取模型中（一条路线、诸支撑的占用，以及在许可集合内改道、取用与释放之步），凡有读者能从中读出每个词之可行性的摘要，都区分整个许可集合上的占用；一切支撑皆许可且路线固定时，每个这样的占用编码都是单射。",
+      "declarations": [
+        "Generative.ReconfigurableSupportLogic.Configuration",
+        "Generative.ReconfigurableSupportLogic.process",
+        "Generative.ReconfigurableSupportLogic.OccupancyAgrees",
+        "Generative.ReconfigurableSupportLogic.exact_reader_separates",
+        "Generative.ReconfigurableSupportLogic.unrestricted_reader_injective"
+      ]
+    },
+    {
+      "en": "Every prefix-closed language admitting the empty word is exactly the words feasible from the empty history under the law that extends a history by one move where the extension is admitted. The feasible words of every process from a configuration form such a language, so every process's language is realized by its histories, with no finite-memory premise.",
+      "zh": "每个含空词的前缀封闭语言，恰是这样一条律从空历史出发可行的词：历史延长一步，而延长被接纳时即行。每个过程从某构形出发的可行词构成这样的语言，故每个过程的语言都由其历史实现，无需有限记忆之前提。",
+      "declarations": [
+        "Becoming.HistoryLanguages.PrefixClosed",
+        "Becoming.HistoryLanguages.law",
+        "Becoming.HistoryLanguages.feasible_iff",
+        "Becoming.HistoryLanguages.feasible_prefixClosed",
+        "Becoming.HistoryLanguages.feasible_nil",
+        "Becoming.HistoryLanguages.realizes_feasible",
+        "Generative.Deeper.history_feasible_iff",
+        "Generative.Deeper.process_language_exact_history_realization"
+      ]
+    },
+    {
+      "en": "Witness: the language of courses of at most one move is the language of no process on a single configuration, while its histories realize it.",
+      "zh": "见证：至多一步之程的语言不是单一构形上任何过程的语言，而其历史实现它。",
+      "declarations": [
+        "Becoming.HistoryLanguages.Bounded.lang",
+        "Becoming.HistoryLanguages.Bounded.no_one_point_law",
+        "Becoming.HistoryLanguages.Bounded.history_realizes"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Finite words of moves only: no probabilities, observed labels, policies or infinite paths; the summary process and the map are supplied, and the languages realized admit the empty word.",
+      "zh": "只涉有限动作词：无概率、观测标签、策略或无穷路径；摘要过程与映射为给定，所实现的语言含空词。"
+    },
+    {
+      "en": "The access model's permitted set, routes and supports are supplied, with identity of supports decided.",
+      "zh": "存取模型的许可集合、路线与支撑为给定，支撑之同一已判定。"
+    },
+    {
+      "en": "Axioms: the GenerativeCore and HistoryLanguages declarations have empty axiom reports, as do HistoryRealization's; in the access model exact_reader_separates uses propext and unrestricted_reader_injective propext and Quot.sound, as its receipt reports.",
+      "zh": "公理：GenerativeCore 与 HistoryLanguages 的声明公理报告皆空，HistoryRealization 的亦然；存取模型中 exact_reader_separates 用 propext，unrestricted_reader_injective 用 propext 与 Quot.sound，如其回执所报。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a summary smaller than the history answers a given question: each needs its own proof, and a single configuration can fail.",
+      "zh": "比历史更小的摘要能回答某一问题：每个都需其自身的证明，单一构形可以不行。",
+      "kind": "scope",
+      "witness": "Becoming.HistoryLanguages.Bounded.no_one_point_law"
+    },
+    {
+      "en": "That the realization keeps the original configurations, branches, interventions or probabilities: it keeps the feasibility of words only.",
+      "zh": "该实现保留原来的构形、分支、干预或概率：它只保留词的可行性。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which distinctions outside the permitted set, or of the route, a summary must keep: the access model's law concerns occupancy within the permitted set.",
+      "zh": "摘要须保留许可集合之外或路线上的哪些区分：存取模型之律只涉许可集合内的占用。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked (Lean 4.29.1): GenerativeCore and Becoming.HistoryLanguages by the consolidated checker (receipt 20261025T212948.819150Z), empty axiom reports; HistoryRealization by the package checker of 6 October (empty); ReconfigurableSupportLogic by its own checker (receipt 20261008T105809.742208Z), propext and Quot.sound where named; current bytes bound. Read against the Lean for this record; not independently reviewed.",
+    "zh": "Lean 4.29.1 实查：GenerativeCore 与 Becoming.HistoryLanguages 经合并检查器（回执 20261025T212948.819150Z），公理报告皆空；HistoryRealization 经 10 月 6 日之包检查器（皆空）；ReconfigurableSupportLogic 经其自身检查器（回执 20261008T105809.742208Z），所列处用 propext 与 Quot.sound；当前字节皆绑定。为本记录对照 Lean 审读；未经独立审查。"
+  },
+  "next_delta": {
+    "en": "Join the access model to the spine: state the exact summary of feasibility under a changing permitted set on the core's processes, so that what a current summary may forget is read off the access relations that can still form.",
+    "zh": "把存取模型接入主干：在核心的过程上陈述许可集合变化时可行性的精确摘要，使当前摘要可忘却者由仍可形成的存取关系读出。"
+  },
+  "correspondence": {
+    "en": "Exact abstraction by one-step preservation and fibrewise lifting is the bisimulation-style criterion for a quotient to keep a transition system's finite traces; that a summary keeping word feasibility must separate configurations with different futures is the Myhill–Nerode-style lower bound on states; the history process of a prefix-closed language is its prefix-tree automaton. Reading the access model as access relations that can still form is the AI's reading.",
+    "zh": "以一步保持与逐纤维提升刻画精确抽象，是商系统保持迁移系统有限迹的互模拟式准则；保持词可行性的摘要必须区分未来不同的构形，是 Myhill–Nerode 式的状态下界；前缀封闭语言的历史过程即其前缀树自动机。把存取模型读作仍可形成的存取关系，是 AI 的读法。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+  "aliases": [
+    "what a summary keeps",
+    "摘要保留什么",
+    "Generative.local_exact_iff_trace_exact",
+    "Generative.feasible_difference_implies_projection_difference",
+    "Becoming.HistoryLanguages.realizes_feasible"
+  ],
+  "dependencies": [
+    {
+      "id": "finite-trace-transport",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "local_exact_iff_trace_exact is proved from projection_exact_iff, the exactness criterion stated there (every step preserved, every summary step lifting from each configuration with that image); here its pointwise form and what exactness keeps.",
+        "zh": "local_exact_iff_trace_exact 由 projection_exact_iff 证出，即该处陈述的精确性准则（每一步被保持，每个摘要步从具此像的每个构形提升）；此处给出其逐点形式及精确性所保持者。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "derived-history-law-exactness",
+      "detail": {
+        "en": "A law derived through a summary keeps every finite continuation exactly where the configurations it merges have the same futures; the history itself is the summary that always does.",
+        "zh": "经摘要导出的律保留每个有限接续，恰在其所合并的构形有相同未来之处；历史本身是总能如此的摘要。"
+      }
+    },
+    {
+      "id": "a-law-through-a-projection-along-one-run",
+      "detail": {
+        "en": "Its instance for the image process: the image through a projection represents every finite path exactly, in projection_exact_iff's sense, exactly where configurations alike under it match each other's steps (image_exact_iff).",
+        "zh": "其对像过程的实例：经投影之像在 projection_exact_iff 的意义上精确表示每条有限路径，恰在经它相同的构形相互匹配步之处（image_exact_iff）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.Trace",
+        "Generative.projected_trace_iff",
+        "Generative.local_exact_iff_trace_exact",
+        "Generative.enabled_projection_iff",
+        "Generative.feasible_projection_iff",
+        "Generative.trace_faithful_iff",
+        "Generative.Feasible",
+        "Generative.feasible_difference_implies_projection_difference"
+      ],
+      "sha256": "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryLanguages.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.HistoryLanguages.PrefixClosed",
+        "Becoming.HistoryLanguages.law",
+        "Becoming.HistoryLanguages.feasible_iff",
+        "Becoming.HistoryLanguages.feasible_prefixClosed",
+        "Becoming.HistoryLanguages.feasible_nil",
+        "Becoming.HistoryLanguages.realizes_feasible",
+        "Becoming.HistoryLanguages.Bounded.lang",
+        "Becoming.HistoryLanguages.Bounded.no_one_point_law",
+        "Becoming.HistoryLanguages.Bounded.history_realizes"
+      ],
+      "sha256": "3187b29c6d22fc9483fc3ae9fa6beaea3354f178ba07cb1f20dee36860323b53"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean",
+      "role": "proof",
+      "declarations": [
+        "Generative.ReconfigurableSupportLogic.Configuration",
+        "Generative.ReconfigurableSupportLogic.process",
+        "Generative.ReconfigurableSupportLogic.OccupancyAgrees",
+        "Generative.ReconfigurableSupportLogic.exact_reader_separates",
+        "Generative.ReconfigurableSupportLogic.unrestricted_reader_injective"
+      ],
+      "sha256": "ba6511391b9ec50b9e96604982c84c3a3fc9a0dc2cb931acbb7979bfbd874911"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/HistoryRealization.lean",
+      "role": "provenance",
+      "declarations": [
+        "Generative.Deeper.history_feasible_iff",
+        "Generative.Deeper.process_language_exact_history_realization"
+      ],
+      "sha256": "22785f31280a7bbac5f89d7754cb6896830a6dc2d81949b9f3adfabd126e8fa9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "role": "receipt",
+      "sha256": "2c868b8bca708d40b76b330ba53a78ff4facb64bb0faa52bf75f76aeb1940eb1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json",
+      "role": "receipt",
+      "sha256": "2b53c3994335fa24df27b90e8c83bd7e9f9c626d3486e02ee8d8ff4b6006e78a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
+      "role": "receipt",
+      "sha256": "362c4eda65deeb23222ed432ef4920d0525da9c6e0b7f101ec71f3e42fff350a"
+    },
+    {
+      "path": "theories/becoming/chapters/08-METHOD.md",
+      "role": "statement",
+      "sha256": "7ad2ce705d4a13954af8467cdb225535f50db50a16d0ef5bcc846310ebd0606f"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "role": "integration",
+      "sha256": "a552b411ad89dab6ce02264bc391f0496444825eb2e2e1e39b72f2996db947ab"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/GenerativeCore",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryLanguages.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.HistoryLanguages",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json",
+      "sha256_pointer": "/modules/1/sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/HistoryRealization.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
+      "sha256_pointer": "/modules/7/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "26 October 2026: added (DF2), exact summaries by one-step agreement, the distinctions a feasibility-keeping summary must keep, in general and in the access model, and the realization of every prefix-closed language by its histories; from DEFECTS-FOUND (triage row 283); study section DF_N.",
+      "zh": "2026年10月26日：新增（DF2），以一步相同刻画的精确摘要，保持可行性的摘要（一般地与在存取模型中）必须保留的区分，以及每个前缀封闭语言由其历史实现；出自 DEFECTS-FOUND（分诊第 283 行）；研究第 DF_N 节。"
+    }
+  ]
+}

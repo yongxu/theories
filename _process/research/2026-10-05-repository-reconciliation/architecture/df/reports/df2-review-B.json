@@ -1,0 +1,474 @@
+{
+ "edits": [
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "correspondence.en",
+   "old": "Evolved cluster organization in yeast under predation (Herron et al. 2019, Scientific Reports 9)",
+   "new": "Multicellular organization evolved in Chlamydomonas under predation by Paramecium (Herron et al. 2019, Scientific Reports 9:2328)",
+   "severity": "error",
+   "why": "Herron et al. 2019 studied the green alga Chlamydomonas reinhardtii under Paramecium predation, not yeast. The repository's own source assessment says so.",
+   "evidence": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RECURSIVE-SELECTION-FORMATION-SOURCES.md:23-29"
+  },
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "correspondence.zh",
+   "old": "捕食下酵母簇组织的演化（Herron 等 2019，Scientific Reports 9）",
+   "new": "衣藻在草履虫捕食下演化出的多细胞组织（Herron 等 2019，Scientific Reports 9:2328）",
+   "severity": "error",
+   "why": "Same correction in Chinese: the organism is Chlamydomonas, not yeast.",
+   "evidence": "RECURSIVE-SELECTION-FORMATION-SOURCES.md:27"
+  },
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "statement.en",
+   "old": "In a declared history a stronger arrangement absent at the start can form by reconfiguring an existing one, keeping its carriers; reconstruction rebuilds as many daughters as the actual output allows; every admitted history keeps material and support and is no longer than its starting support.",
+   "new": "In a declared history a stronger arrangement absent at the start can form by reconfiguring an existing one; reconstruction, where it runs, rebuilds as many daughters as the actual output allows; every admitted history keeps material and total support and is no longer than its starting support.",
+   "severity": "imprecise",
+   "why": "reconstruction_counts takes `reconstruct s = some next`. Reconstruction runs only when support covers the whole batch (reconstruct_enabled_iff) and otherwise rebuilds none, so 'rebuilds as many as allowed' needs 'where it runs'. 'Keeps support' reads as if no support is used. What run_accounts keeps is available plus used support. 'Keeping its carriers' moves to law 2, which already states it, to stay under 300 characters (the new text is 294).",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GeneratedSelectionRecurrence.lean:58-61,75-77,179-181"
+  },
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "statement.zh",
+   "old": "形成，并保留其承载者；重构按实际产出所容许的数目重建子代；每段被允许的历史保持物质与支持，其长度不超过起始的支持。",
+   "new": "形成；重构进行时按实际产出所容许的数目重建子代；每段被允许的历史保持物质与支持总量，其长度不超过起始的可用支持。",
+   "severity": "imprecise",
+   "why": "Keeps the Chinese in line with the corrected English.",
+   "evidence": "GeneratedSelectionRecurrence.lean:58-61,75-77,179-198"
+  },
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "laws[1].en",
+   "old": "one support unit per change, keeping every carrier",
+   "new": "drawing one support unit per change by its definition and keeping every carrier",
+   "severity": "imprecise",
+   "why": "reconfiguration_accounts proves only that material is kept, that available plus used support is kept, and that available support falls strictly. The one-unit-per-change draw comes from the definition of `reconfigure`, not from a theorem. The new text is 405 characters.",
+   "evidence": "GeneratedSelectionRecurrence.lean:30-38,115-119"
+  },
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "laws[1].zh",
+   "old": "每次改变用一单位支持，保留每个承载者",
+   "new": "按其定义每次改变用一单位支持，保留每个承载者",
+   "severity": "imprecise",
+   "why": "Keeps the Chinese in line with the English.",
+   "evidence": "GeneratedSelectionRecurrence.lean:30-38"
+  },
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "does_not_show[2].en",
+   "old": "That a stronger cooperative organization must fail",
+   "new": "That a stronger arrangement must fail",
+   "severity": "style",
+   "why": "'Cooperative' is a social word that the model does not use. The strong arrangement is the eight-carrier coupling with strength 3. The record's own term is 'arrangement'.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecursiveSelectionInheritance.lean:6-9"
+  },
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "does_not_show[2].zh",
+   "old": "更强的合作组织必然失败",
+   "new": "更强的排列必然失败",
+   "severity": "style",
+   "why": "Matches the English.",
+   "evidence": "RecursiveSelectionInheritance.lean:6-9"
+  },
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "related[1].detail.en",
+   "old": "Another copying instance in which rounds run only as far as the support covers.",
+   "new": "A copying instance joined to the core's doubling law, its rounds running exactly where the support covers; this module has no such instance theorem.",
+   "severity": "imprecise",
+   "why": "'Another copying instance' implies that this module is an instance of the core copying law. It is not: it imports only RecursiveSelectionInheritance and has no instance theorem. recurrent-chain-assembly is joined to the core law by rounds_follow_doubling.",
+   "evidence": "GeneratedSelectionRecurrence.lean:1; theories/becoming/chapters/04-LIFE.md:93"
+  },
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "field": "related[1].detail.zh",
+   "old": "另一复制实例，其轮次只在支持所及处进行。",
+   "new": "接到核心加倍律的复制实例，其轮次恰在支持所及处进行；本模块无此种实例定理。",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "04-LIFE.md:93"
+  },
+  {
+   "id": "a-selected-template-need-not-raise-structure",
+   "field": "statement.en",
+   "old": "Counting the next copying event by template and by successor, A's mean share after it rises exactly where a(AH + HH) < h(AA + HA), a comparison of successor columns, not of template rows; faithful or balanced transfer makes the two agree, and with all four transfers positive they can disagree.",
+   "new": "Counting one copying event by template and successor, with positive counts and weight, A's mean share rises exactly where a(AH + HH) < h(AA + HA), comparing successor columns, not template rows; faithful or balanced transfer makes the two agree; with all four transfers positive they can disagree.",
+   "severity": "imprecise",
+   "why": "The theorem compares numerators. Reading them as A's share needs a + h > 0 and a positive total weight (denominator_positive), and the home section says 'positive denominators'. The leading statement must name this hypothesis. The new text is 297 characters.",
+   "evidence": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean:29-41,50-53,89-91,243-246; theories/becoming/chapters/04-LIFE.md:112"
+  },
+  {
+   "id": "a-selected-template-need-not-raise-structure",
+   "field": "statement.zh",
+   "old": "按模板与后继计数下一次复制事件，其后 A 的平均份额",
+   "new": "按模板与后继计数一次复制事件，计数与权重为正时，其后 A 的平均份额",
+   "severity": "imprecise",
+   "why": "Keeps the Chinese in line with the English.",
+   "evidence": "ConsequenceTransmission.lean:89-91"
+  },
+  {
+   "id": "a-selected-template-need-not-raise-structure",
+   "field": "title.en",
+   "old": "A selected template need not raise the successors' structure",
+   "new": "A selected template need not increase the successor's structure",
+   "severity": "style",
+   "why": "The home section names the result '*A selected template need not increase the successor's structure.*'. Elsewhere in 04 the italic name equals the record title (Copying b-fold; Groups formed by bonds share a founder). Change aliases[0] to match. The alternative is to edit the chapter's italic name to the record's wording.",
+   "evidence": "theories/becoming/chapters/04-LIFE.md:112"
+  },
+  {
+   "id": "a-selected-template-need-not-raise-structure",
+   "field": "aliases[0]",
+   "old": "A selected template need not raise the successors' structure",
+   "new": "A selected template need not increase the successor's structure",
+   "severity": "style",
+   "why": "Follows the title.",
+   "evidence": "04-LIFE.md:112"
+  },
+  {
+   "id": "groups-formed-by-bonds-share-a-founder",
+   "field": "correspondence.en",
+   "old": "Aggregative multicellularity is the case aggregation_breaks_clonal_conclusion leaves outside.",
+   "new": "Aggregative multicellularity falls under the excluded case, where aggregation_breaks_clonal_conclusion shows the common founder can fail.",
+   "severity": "imprecise",
+   "why": "The direction is inverted. aggregation_breaks_clonal_conclusion is the counterexample that realizes the aggregative case. What leaves that case outside is the NoAggregation hypothesis of developed_groups_have_common_origin.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/DevelopmentalAssociation.lean:235-238,280-282"
+  },
+  {
+   "id": "groups-formed-by-bonds-share-a-founder",
+   "field": "correspondence.zh",
+   "old": "聚合型多细胞性是 aggregation_breaks_clonal_conclusion 所排除之例。",
+   "new": "聚合型多细胞性属于被排除的情形，aggregation_breaks_clonal_conclusion 显示其中共同始祖可以不成立。",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "DevelopmentalAssociation.lean:280-282"
+  },
+  {
+   "id": "groups-formed-by-bonds-share-a-founder",
+   "field": "hypotheses[2].en",
+   "old": "on the earlier generative core and Lean's core library",
+   "new": "on the earlier generative core, which imports Std",
+   "severity": "imprecise",
+   "why": "GenerativeCore imports Std, so the base is not Lean's core library alone. The sibling records on the same core say 'Lean's core library and Std'.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean:1"
+  },
+  {
+   "id": "groups-formed-by-bonds-share-a-founder",
+   "field": "hypotheses[2].zh",
+   "old": "基于较早的生成核心与 Lean 核心库",
+   "new": "基于较早的生成核心（其导入 Std）",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "GenerativeCore.lean:1"
+  },
+  {
+   "id": "groups-formed-by-bonds-share-a-founder",
+   "field": "laws[2].en",
+   "old": "Aggregating two positions of different founders joins them by a bond, the counterexample",
+   "new": "In a seed of two founders, aggregating positions 0 and 1 joins positions of different founders by a bond, the counterexample",
+   "severity": "imprecise",
+   "why": "aggregation_breaks_clonal_conclusion is a witness on `seed 2` with positions 0 and 1, not a law over all pairs of founders. It should read as a witness. The new text is 414 characters.",
+   "evidence": "DevelopmentalAssociation.lean:278-282"
+  },
+  {
+   "id": "groups-formed-by-bonds-share-a-founder",
+   "field": "laws[2].zh",
+   "old": "聚合两个不同始祖的位置以一条键连接它们",
+   "new": "在两个始祖的种子中，聚合位置 0 与 1 以一条键连接不同始祖的位置",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "DevelopmentalAssociation.lean:278-282"
+  },
+  {
+   "id": "recurrence-without-selector-revision",
+   "field": "correspondence.en",
+   "old": "The reading that periodic behaviour is no evidence of adaptation without a change of rule is the AI's.",
+   "new": "Both readings, of the selector as such a parameter and of periodic behaviour as no evidence of adaptation without a change of rule, are the AI's.",
+   "severity": "style",
+   "why": "Mapping the Boolean selector onto Ashby's step-function parameter is also an interpretation, not something the literature or the Lean shows. It needs the AI label too.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/BoundaryModels.lean (FixedSelector.advance)"
+  },
+  {
+   "id": "recurrence-without-selector-revision",
+   "field": "correspondence.zh",
+   "old": "无规则之改变则周期行为不是适应之证据，此读法是 AI 的。",
+   "new": "把选择者读作此种参数，以及无规则之改变则周期行为不是适应之证据，两种读法皆是 AI 的。",
+   "severity": "style",
+   "why": "Matches the English.",
+   "evidence": "BoundaryModels.lean (FixedSelector)"
+  },
+  {
+   "id": "recurrence-without-selector-revision",
+   "field": "validation_scope.en",
+   "old": "Reviewed in LEAN-CORE-REVIEW, which made the selector operative after its first finding;",
+   "new": "Reviewed in LEAN-CORE-REVIEW, whose first finding had the selector made operative and whose reinspection accepted the non-implication;",
+   "severity": "imprecise",
+   "why": "The review did not change the source. It requested that the selector be made operative, the source was revised, and the reinspection accepted the non-implication.",
+   "evidence": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/LEAN-CORE-REVIEW.md:23,37"
+  },
+  {
+   "id": "recurrence-without-selector-revision",
+   "field": "validation_scope.zh",
+   "old": "经 LEAN-CORE-REVIEW 审查，其首项发现之后选择者改为运作；",
+   "new": "经 LEAN-CORE-REVIEW 审查：其首项发现促使选择者改为运作，复查接受此非蕴含；",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "LEAN-CORE-REVIEW.md:23,37"
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "field": "hypotheses[1].en",
+   "old": "and the states they use are reached from one state.",
+   "new": "the first uses two histories from one state, the second two states that differ only in where one unit lies.",
+   "severity": "overclaim",
+   "why": "This holds only for no_memoryless_choice_readout, whose untrained and trained states are evolved from `initial`. frontLoaded and backLoaded are `{ initial with anterior/posterior := 1 }` and are not evolved. Their material is 4 against initial's 3, so by material_step they cannot be reached from initial, and no theorem reaches them from a common state.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/OrganizedScaleLoop.lean:130-151,228-230,259-268"
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "field": "hypotheses[1].zh",
+   "old": "其所用状态由同一状态到达。",
+   "new": "前者用由同一状态出发的两段历史，后者用只在一单位所在上不同的两个状态。",
+   "severity": "overclaim",
+   "why": "Matches the English.",
+   "evidence": "OrganizedScaleLoop.lean:228-230,259-260"
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "field": "laws[1].en",
+   "old": "with two work units",
+   "new": "with at least two work units",
+   "severity": "imprecise",
+   "why": "acquisition_withdrawal and withdrawal_changes_next_exposure take `2 ≤ s.fuel`, a lower bound, not exactly two units.",
+   "evidence": "OrganizedScaleLoop.lean:202-211"
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "field": "laws[1].zh",
+   "old": "有两单位功",
+   "new": "有至少两单位功",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "OrganizedScaleLoop.lean:203"
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "field": "laws[2].en",
+   "old": "yet withdrawal keeps contact",
+   "new": "yet withdrawal at threshold 1 keeps contact",
+   "severity": "imprecise",
+   "why": "history_changes_choice and no_memoryless_choice_readout fix the threshold at 1 (`withdraw 1`, `step 1`). The law must name this hypothesis.",
+   "evidence": "OrganizedScaleLoop.lean:229-230,242-250"
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "field": "laws[2].zh",
+   "old": "而撤回在一者中",
+   "new": "而阈值为 1 的撤回在一者中",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "OrganizedScaleLoop.lean:242-250"
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "field": "correspondence.en",
+   "old": "retention law and costs are not theirs",
+   "new": "retention law and draws are not theirs",
+   "severity": "style",
+   "why": "The Chinese already says 取用 (draws), and 'draw' is the glossary term. The drafter dropped the market word everywhere else in the record.",
+   "evidence": "GLOSSARY.md:32"
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "field": "chapter_edits[1].new and chapter_edits[2].new (optional proposals)",
+   "old": "end with equal material, current support, used work, route and context",
+   "new": "end with equal material, current support, spent work, route and context",
+   "severity": "style",
+   "why": "Drop both optional chapter edits (spent→used, costs→unit work draws). They are a renaming of landed text that states no wrong meaning, which the naming rule does not allow after landing. They also change bytes that other records' statement hashes may bind.",
+   "evidence": "AGENTS.md (Proof and naming: a renaming sweep after landing needs a name that states a wrong meaning); 04-LIFE.md:237"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "laws[2].en",
+   "old": "the responsive rule keeps it through any tasks, and the next task's update differs between the two rules. In the finite carrier history every exposure and installation keeps the total of stock, source, used and waste.",
+   "new": "the responsive rule keeps it through any tasks, their updates there differ at a task of the second kind, and over one cycle it succeeds four times, the continual rule three. Every exposure and installation of the carrier history keeps the total of stock, source, used and waste.",
+   "severity": "missing",
+   "why": "routes_differ_after_failure is stated at task .c only, not at 'the next task'. changed_route_cycle (4 against 3 successes on the repaired network) is the comparison that does_not_show[2] relies on, and the drafter's notes say it is cited, but it is absent. The new text is 420 characters.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/UpdaterConsequences.lean:165-177"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "laws[2].zh",
+   "old": "回应规则在任何任务下都保持它，下一任务的更新在两规则间不同。在有限的承载者历史中，每次接触与安装都保持存量、来源、已用与废弃之和。",
+   "new": "回应规则在任何任务下都保持它，两规则在第二类任务上的更新不同，一个循环中回应规则成功四次、持续规则三次。承载者历史的每次接触与安装都保持存量、来源、已用与废弃之和。",
+   "severity": "missing",
+   "why": "Matches the English.",
+   "evidence": "UpdaterConsequences.lean:165-177"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "laws[2].declarations and references[2].declarations",
+   "old": "UpdaterConsequences.responsive_after_failure",
+   "new": "UpdaterConsequences.responsive_after_failure, UpdaterConsequences.changed_route_cycle",
+   "severity": "missing",
+   "why": "Add the declaration the revised law cites, in both the law and the UpdaterConsequences proof reference. The receipt reports propext, Classical.choice and Quot.sound for it, which matches hypotheses[2].",
+   "evidence": "UpdaterConsequences.lean:172-177; drift-margins-checks/20261008T114955.171898Z/verification.json nonempty_audits"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "laws[3].en",
+   "old": "reinstalling the continual rule instead fails again",
+   "new": "reinstalling the continual rule instead renews once and then fails again",
+   "severity": "imprecise",
+   "why": "After installation, stock 1 plus 3 returns covers the first maintenance, so the run renews once. The second cycle returns 3, which is below 4, and the rule is retired. The end state's used units are 6: 2 for installation and 4 for one renewal.",
+   "evidence": "UpdaterConsequences.lean:121-136,205-230,314-316"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "laws[3].zh",
+   "old": "改为重装持续规则则再次失败",
+   "new": "改为重装持续规则则更新一次后再次失败",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "UpdaterConsequences.lean:314-316"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "laws[4].en",
+   "old": "errs by at most (n(a + b) + e)/|gain|; with a + b > 0, twice that radius is below a margin exactly at ages below (|gain|·margin/2 − e)/(a + b).",
+   "new": "errs by at most r = (n(a + b) + e)/|gain|; with a + b > 0, 2r is below a margin exactly at ages below (|gain|·margin/2 − e)/(a + b), and an estimate within r of a value beyond 2r in size reports its sign.",
+   "severity": "missing",
+   "why": "The statement says reference readings 'decide a margin'. assurance_window proves only the inequality on 2r. That an estimate within r of a value larger than 2r gets the right verdict is separated_verdict, which is not cited. Without it the statement's 'decide' is unsupported. The new text is 399 characters.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/DriftMargins.lean:84-86,101-104,160-162"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "laws[4].zh",
+   "old": "误差至多 (n(a + b) + e)/|增益|；a + b > 0 时，此半径的两倍小于余量，恰在年龄小于 (|增益|·余量/2 − e)/(a + b) 时。",
+   "new": "误差至多 r = (n(a + b) + e)/|增益|；a + b > 0 时，2r 小于余量恰在年龄小于 (|增益|·余量/2 − e)/(a + b) 时；与某值相差不过 r 的估计，在该值大小超过 2r 时报告其号。",
+   "severity": "missing",
+   "why": "Matches the English (182 characters).",
+   "evidence": "DriftMargins.lean:160-162"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "laws[4].declarations and references[3].declarations",
+   "old": "DriftMargins.assurance_window",
+   "new": "DriftMargins.assurance_window, DriftMargins.separated_verdict",
+   "severity": "missing",
+   "why": "Add separated_verdict to the law and to the DriftMargins proof reference. Its axioms are propext, Classical.choice and Quot.sound, as hypotheses[2] says.",
+   "evidence": "DriftMargins.lean:160; drift-margins receipt nonempty_audits"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "validation_scope.en",
+   "old": "fresh build of six modules",
+   "new": "six modules rebuilt against a pinned Mathlib cache",
+   "severity": "imprecise",
+   "why": "This receipt has no fresh_temporary_build flag. It says the repository import closure was rebuilt on a pinned existing Mathlib cache.",
+   "evidence": "drift-margins-checks/20261008T114955.171898Z/verification.json (upstream_scope)"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "validation_scope.zh",
+   "old": "新鲜构建六个模块",
+   "new": "六个模块以固定的 Mathlib 缓存重建",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "drift-margins receipt upstream_scope"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "related[0].detail.en",
+   "old": "Its networks and procedure bit are reconstructed through actual performance; this line gives how such a network develops, remembers, is replaced and is checked.",
+   "new": "Its procedure bit runs this line's responsive or continual rule (LearnedProcedureTransmission.constructed_responsive, constructed_continual), its networks reconstructed through actual performance; this line's carrier replacement history is not yet joined to that reconstruction.",
+   "severity": "imprecise",
+   "why": "LearnedProcedureTransmission imports this line through CalibrationRenewal and proves that its constructed networks run UpdaterConsequences.run .responsive or .continual. The relation is formal reuse of this line's rules, which the detail should state. Only the Carrier replacement history remains unjoined, which next_delta names.",
+   "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearnedProcedureTransmission.lean:1,30,59-76"
+  },
+  {
+   "id": "the-updater-line",
+   "field": "related[0].detail.zh",
+   "old": "其网络与更新控制位经实际表现而重构；此一线给出此种网络如何发育、记忆、被替换与被检查。",
+   "new": "其更新控制位运行此一线的回应或持续规则（LearnedProcedureTransmission.constructed_responsive、constructed_continual），其网络经实际表现而重构；此一线的承载者替换历史尚未接到该重构。",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "LearnedProcedureTransmission.lean:59-76"
+  },
+  {
+   "id": "theories/becoming/chapters/04-LIFE.md",
+   "field": "§8 paragraph at line 229 (the updater line), calibration clause",
+   "old": "need not invalidate judgment; under bounded drift",
+   "new": "need not invalidate judgment ([03](03-KNOWING.md#correction-is-not-calibration)); under bounded drift",
+   "severity": "imprecise",
+   "why": "The calibration clauses come from CalibratedUpdater and CalibrationRenewal. The new record leaves them out and sends them to chapter 03, whose correction-is-not-calibration paragraph is their home, so the home paragraph should point there. Unit A's record should also cover 'a channel change keeping zero and orientation need not invalidate judgment' (CalibrationRenewal.positive_gain_change_preserves_signs), which 03 does not yet state. The old string occurs once.",
+   "evidence": "theories/becoming/chapters/03-KNOWING.md:105-106; 04-LIFE.md:229; CalibrationRenewal.lean:53"
+  },
+  {
+   "id": "same-carrier-need-not-fix-the-response",
+   "field": "related[0].detail.en",
+   "old": "The module this one extends; its transfer table is read here after the descendants' assays.",
+   "new": "The module this one extends: DevelopedResponse wraps its native reactions, and the module also reuses its successor-column law on a table read off the two assays (developed_table_comes_from_operating_assays, transmission_formula_applies_to_developed_table), which this record does not cite.",
+   "severity": "imprecise",
+   "why": "'Read here' refers to the two transfer-table theorems, which none of the record's laws cites. Either say so, or add a law citing both and move the link to dependencies as formal-reuse. Both theorems use propext only.",
+   "evidence": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean:1,323-358"
+  },
+  {
+   "id": "same-carrier-need-not-fix-the-response",
+   "field": "related[0].detail.zh",
+   "old": "本模块所扩展者；其转移表在此于后代检测之后读出。",
+   "new": "本模块所扩展者：DevelopedResponse 包裹其原生反应，该模块并把其后继之列律用于由两次检测读出的表（developed_table_comes_from_operating_assays、transmission_formula_applies_to_developed_table），本记录未引之。",
+   "severity": "imprecise",
+   "why": "Matches the English.",
+   "evidence": "DevelopedResponse.lean:323-358"
+  },
+  {
+   "id": "theories/becoming/chapters/04-LIFE.md",
+   "field": "new string of the proposed chapter_edits of all seven records",
+   "old": "([Record](../results/records/",
+   "new": "([record](../results/records/",
+   "severity": "style",
+   "why": "Inside a parenthetical, every chapter writes the record link lowercase: 12 occurrences of '([record](' in 04 and none of '([Record](' in any chapter. '[Record]' is capitalized only at the start of a sentence. Apply this to all seven proposed link insertions.",
+   "evidence": "theories/becoming/chapters/04-LIFE.md:90-93,174 (grep: '([Record](' occurs 0 times in theories/becoming/chapters)"
+  }
+ ],
+ "verdicts": [
+  {
+   "id": "stronger-arrangement-formed-by-reconfiguration",
+   "verdict": "sound-after-edits",
+   "note": "All 16 cited theorems exist and match. The arithmetic checks: pooled 1 1 = (28,30), pooled 1 3 = (68,66), floor(33g/2), 49/264 and 161/0. Axioms per the receipt are exact. The binding passes (check: render errors only; lint 0). One factual error: the Herron 2019 organism is Chlamydomonas, not yeast. The statement needs 'where it runs' and 'total support'. Remaining fixes: the 'cooperative' word, and the related detail that implies an instance theorem. Base periphery and F10 are consistent with recurrent-chain-assembly and regions usage."
+  },
+  {
+   "id": "a-selected-template-need-not-raise-structure",
+   "verdict": "sound-after-edits",
+   "note": "All 19 declarations exist. The receipt's 13 propext and 6 empty reports match. captured lies on the paid_formation_to_copy trace (FormedSelection.lean:405-412), so 'two checked histories' holds, and the fuel 4 against 6 difference supports 'initial support'. The statement must name positive denominators, as the chapter does. The title differs from the chapter's italic name. The drafter's note on the short name same_composition_opposite_access is right."
+  },
+  {
+   "id": "groups-formed-by-bonds-share-a-founder",
+   "verdict": "sound-after-edits",
+   "note": "Laws match the Lean: Connected is undirected and transitive, and NoAggregation and LineageConsistent are as stated. The receipt reports 41 audits and 19 theorems, with connected_same_founder empty and division_inherits and changed_state_governs_division propext only. Fix the inverted correspondence sentence on aggregation, the 'Lean's core library' base (GenerativeCore imports Std) and the general reading of the aggregation witness. The drafter's note says the Ratcliff correspondence was kept out, but the record does carry it in correspondence. That is acceptable (Ratcliff et al. 2015, Nat Commun 6:6102, verifiable), but the note is wrong."
+  },
+  {
+   "id": "recurrence-without-selector-revision",
+   "verdict": "sound-after-edits",
+   "note": "reviewed-scoped is right. The live bytes (3ca0b210) differ from the checked snapshot (a9c171e4) only on line 1 (diff), and no receipt binds the live bytes. The FixedSelector laws match: 'changes at every step' follows from changes_phase_every_step with selector_unchanged_at_every_time, both cited. Advice to the lander: do not bind the snapshot as the proof source, since the canonical source would then be a frozen copy. A fresh BoundaryModels receipt in its own run folder, not an overwrite of lean/verification.json, which 16 modules share, is the clean path to recorded-checked. Only small fixes: the review wording and an AI label on the Ashby mapping."
+  },
+  {
+   "id": "equal-totals-can-hide-what-a-capacity-carries",
+   "verdict": "sound-after-edits",
+   "note": "The 12 cited declarations exist. The axiom split per receipt 20261007T222003.863783Z is exact, and the receipt is byte-identical to organized-scale-verification.json. One overclaim: the burden witness states are not reached from one state (material 4 against 3). Name threshold 1 and the 'at least two' work units. The optional chapter wording edits should be dropped under the naming rule."
+  },
+  {
+   "id": "the-updater-line",
+   "verdict": "sound-after-edits",
+   "note": "All four bindings pass (receipt fb69aa5b, modules 0/1/2/5, current bytes), and every cited theorem reports all three axioms. Theorem counts 29/28/36/42 match. The inherited list order (head most recent) supports the memory law's order. Contrary to the drafter's note, changed_route_cycle is not cited; add it. 'Decide a margin' needs separated_verdict. Reinstalling the continual rule renews once before failing. The chapter's calibration clause should point to its 03 home, and unit A's record must cover the channel-change witness. The related link to learned-procedure-transmission is formal reuse through constructed_responsive and constructed_continual."
+  },
+  {
+   "id": "same-carrier-need-not-fix-the-response",
+   "verdict": "sound-after-edits",
+   "note": "All 9 declarations match their exact statements (cores equal, paired cues differ, fuel 9 and 7, intact true/false, not Enabled capture or copy, rescue reaches gate some false). The receipt reports 15 propext-only and 2 energy laws with Quot.sound, 107 audits, fresh build. The literature (Francis 1999, Ben-Ami Bartal 2014, Burkart 2014) is verifiable. Only the related detail overstates, since it refers to transfer-table theorems the record does not cite."
+  }
+ ],
+ "checked": "Worktree /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df2 at 04c7f93ae. I read all seven record files in full. I compared every cited declaration with its exact Lean statement and docstring at the current bytes, all of whose hashes I recomputed: GeneratedSelectionRecurrence (and the RecursiveSelectionInheritance/RecursiveGenerativeSelection definitions it uses), ConsequenceTransmission (and FormedSelection's witness trace), DevelopmentalAssociation, BoundaryModels FixedSelector (diffed against the checked snapshot), OrganizedScaleLoop, ConnectionistRecovery, DevelopmentalMemory, UpdaterConsequences, DriftMargins, LearnedProcedureTransmission's imports, and DevelopedResponse. I read each receipt's axiom report for every cited declaration, its audit and theorem counts, and its fresh-build flags. I ran research.py check, saved to /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/unitB-review-check.json: for these ids it shows only render errors (missing link and generated view differs) and no source drift. I ran research.py lint --ids for all seven ids: 0 findings. I ran make research-find for selector, founder, Hebbian, reconfiguration, withdrawal, developmental sampling and template, and grepped the records for each module name: no existing record states these results. I confirmed that every anchor_before string and every proposed old string occurs exactly once in 04-LIFE.md (sha cd96b776, unchanged). I checked the link-case convention in the chapters, the families and regions bases against neighbouring records and regions.json usage (pre-spine non-Mathlib modules are listed as periphery), the study texts for the review claims and the literature (Herron's organism from RECURSIVE-SELECTION-FORMATION-SOURCES.md), 03-KNOWING's correction-is-not-calibration paragraph, triage rows 113, 144-146 and 148-151, and the character caps of every proposed replacement. I edited no file."
+}
