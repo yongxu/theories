@@ -54,8 +54,8 @@ there.
   and lags add (`Reaching.CoversLater.zero`, `Reaching.CoversLater.trans`). Widening what can be
   reached with a lag is covering with some lag and covered back with none
   (`Reaching.WidensWithLag`), and the lagged order is widening what can be reached or widening it
-  with a lag (`Reaching.WidensOrLater`), the join of UE9's order read on families of courses. It is
-  a strict partial order containing widening what can be reached, and it never ranks a
+  with a lag (`Reaching.WidensOrLater`), joined as UE9 joins widening and widening with a lag. It
+  is a strict partial order containing widening what can be reached, and it never ranks a
   configuration above one covering it, so it never reverses widening what can be reached
   (`Reaching.WidensOrLater.irrefl`, `Reaching.WidensOrLater.trans`,
   `Reaching.WidensOrLater.not_covered`, `Reaching.WidensOrLater.not_reversed`). On a determined
@@ -66,12 +66,15 @@ there.
   the other, same-offset widening of what can be reached and the lexical order are silent both
   ways (`WiderNow.silent`), and the lagged order ranks the climb above `none` and not conversely
   (`WiderNow.decided`). It does not decide every such pair: with other admissions on the same
-  process it is silent both ways (`WiderNow.TwoSided.silent`), or ranks the configuration wider now
-  above the climb, as same-offset widening does (`WiderNow.Full.not_silent`). Both orders satisfy C
-  on the frame of reachable ranges (`Reaching.comparison_widens`,
+  process, each course still exceeding the other, it is silent both ways
+  (`WiderNow.TwoSided.silent`). Where the configuration wider now also widens what can be reached
+  over the climb, the lagged order ranks it above the climb, as it must (`WiderNow.Full.not_silent`,
+  `Reaching.WidensOrLater.not_reversed`). Both orders satisfy C on the frame of reachable ranges
+  (`Reaching.comparison_widens`,
   `Reaching.comparison_widensOrLater`), and on `WiderNow` they differ on the climb against `none`
   (`WiderNow.comparison_undecided`), so ranking that pair is a premise beyond C.
-* **Nothing is added to the whole possible along a course, and the rise is the course's delay.**
+* **Nothing is added to the whole possible along a course; on a determined process a rise is the
+  course one step on strictly including it.**
   What some configuration reachable from a configuration admits is its whole possible
   (`Reaching.Possible`), realizability of one formation within some bound
   (`Reaching.possible_iff_withinMoves`); what some configuration reached in at most `k` steps
@@ -111,7 +114,8 @@ there.
   `Reaching.listed_along_of_listed`, `Reaching.not_keepsWidening_of_listed`). Keeping widening by
   name on a web is exactly keeping widening of its chain (`Web.KeepsWidening.chain`,
   `Web.KeepsWidening.of_chain`, `Web.keepsWidening_iff_chain`), so the web's law over a listed
-  type, `Web.KeepsWidening.not_listed`, follows from the chain's. On the climb the possible within
+  type, `Web.KeepsWidening.not_listed`, follows from the chain's
+  (`Web.KeepsWidening.not_listed_via_chain`). On the climb the possible within
   every horizon keeps widening and no list holds the whole possible (`Climb.keeps`,
   `Climb.not_listed`). The converse fails: from one configuration admitting every formation no
   list holds the whole possible, and the possible within no horizon keeps widening
@@ -701,7 +705,8 @@ variable {F C : Type} {W : Web F C} {l : Nat → C → Nat}
 
 /-- **Keeping widening by name gives keeping widening of a chain**: from `T`, what the levels admit
 at the steps from `T` on keeps widening in 07's form. With `Reaching.KeepsWidening.not_listed` it
-gives `Web.KeepsWidening.not_listed`: over a listed type no level path keeps widening by name. -/
+gives `Web.KeepsWidening.not_listed` (`Web.KeepsWidening.not_listed_via_chain`): over a listed
+type no level path keeps widening by name. -/
 theorem Web.KeepsWidening.chain {T : Nat} (keeps : W.KeepsWidening Web.itself l T) :
     Reaching.KeepsWidening (fun n f => W.Admits (l (T + n)) (T + n) f) :=
   ⟨fun n d f admitted =>
@@ -743,6 +748,13 @@ theorem Web.keepsWidening_iff_chain {T : Nat} :
     W.KeepsWidening Web.itself l T ↔
       Reaching.KeepsWidening (fun n f => W.Admits (l (T + n)) (T + n) f) :=
   ⟨Web.KeepsWidening.chain, Web.KeepsWidening.of_chain⟩
+
+/-- **The landed law over a listed type, re-derived from the chain law**: over a listed type of
+formations no level path keeps widening by name (`Web.KeepsWidening.not_listed`), from
+`Web.KeepsWidening.chain` and the chain's pigeonhole, `Reaching.KeepsWidening.not_listed`. -/
+theorem Web.KeepsWidening.not_listed_via_chain {fs : List F} (every : ∀ f, f ∈ fs) {T : Nat} :
+    ¬ W.KeepsWidening Web.itself l T :=
+  fun keeps => keeps.chain.not_listed ⟨fs, fun _ f _ => every f⟩
 
 end Chains
 
@@ -935,8 +947,9 @@ def Reaching.realizedFrame (P : Process S A) (adm : S → X → Prop) (course : 
   ⟨P, Reaching.realizedClaims course adm⟩
 
 /-- **The lexical order lies inside the package's two-tier lexical order** (`Lexical.Above`), read
-on the realized claims and then the reachable ranges. The converse needs the inclusions decided,
-since `Above` reads the negation of inclusion where the lexical order reads exceeding. -/
+on the realized claims and then the reachable ranges. The converse holds where the inclusions are
+decided (`Reaching.lexical_of_above_decided`): `Above` reads the negation of inclusion where the
+lexical order reads exceeding. -/
 theorem Reaching.lexical_above {course : S → Run P} {s s' : S}
     (lexical : Reaching.Lexical P adm course s s') :
     Lexical.Above (Reaching.realizedClaims course adm) (Reaching.reachableRanges P adm) s s' :=
@@ -1531,9 +1544,10 @@ theorem inclusion_now_not_covering :
           (includes 2 2 (Nat.le_refl 2)))⟩
 
 /-- **C leaves the pair undecided**: widening what can be reached and the lagged order are strict
-partial orders satisfying C on the frame of reachable ranges (`Reaching.comparison_widens`,
-`Reaching.comparison_widensOrLater`); here the first does not rank the climb above `none` and the
-second does. So ranking the pair is a premise beyond C. -/
+partial orders (`Reaching.Widens.irrefl`, `Reaching.Widens.trans`, `Reaching.WidensOrLater.irrefl`,
+`Reaching.WidensOrLater.trans`) satisfying C on the frame of reachable ranges
+(`Reaching.comparison_widens`, `Reaching.comparison_widensOrLater`); here the first does not rank
+the climb above `none` and the second does. So ranking the pair is a premise beyond C. -/
 theorem comparison_undecided :
     Comparison (Reaching.reachFrame process adm) (fun _ => True)
         (fun a b => Reaching.Widens process adm b a) ∧
@@ -1542,7 +1556,9 @@ theorem comparison_undecided :
       ¬ Reaching.Widens process adm (some 0) none ∧ Reaching.WidensOrLater process adm (some 0) none :=
   ⟨Reaching.comparison_widens, Reaching.comparison_widensOrLater, silent.2.2.2.1, decided.1⟩
 
-/-! Other admissions on the same process: the lagged order need not decide such a pair. -/
+/-! Other admissions on the same process: where each course still exceeds the other the lagged order
+can be silent both ways (`TwoSided`), and where the configuration wider now also widens what can be
+reached over the climb it ranks that configuration above (`Full`). -/
 
 namespace TwoSided
 
@@ -1555,12 +1571,14 @@ def adm : Option Nat → Sum Nat Nat → Prop
   | some _, .inr _ => False
 
 /-- **The lagged order can be silent both ways**: what the climb from `some 0` admits keeps
-widening in 07's form and `none` admits now what the climb does not, yet neither is above the other
-in the lagged order, since neither covers the other at any lag (UE9's `Sides.silent` read on
-courses). -/
+widening in 07's form, `none` admits now what the climb does not and each course exceeds the
+other, yet neither is above the other in the lagged order, since neither covers the other at any
+lag (UE9's `Sides.silent` read on courses). -/
 theorem silent :
     Reaching.KeepsWidening (fun n => adm ((course (some 0)).state n)) ∧
       adm none (.inr 0) ∧ ¬ adm (some 0) (.inr 0) ∧
+      (course none).RangeExceeds adm (course (some 0)) ∧
+      (course (some 0)).RangeExceeds adm (course none) ∧
       ¬ Reaching.WidensOrLater process adm (some 0) none ∧
       ¬ Reaching.WidensOrLater process adm none (some 0) :=
   ⟨⟨fun n d x admitted => match x, admitted with
@@ -1568,6 +1586,7 @@ theorem silent :
       | .inr _, no => no.elim,
     fun n => ⟨1, .inl (0 + n + 1), Nat.le_refl _, Nat.not_succ_le_self (0 + n)⟩⟩,
    trivial, id,
+   ⟨0, .inr 0, trivial, id⟩, ⟨1, .inl 1, Nat.le_refl _, fun same => Nat.noConfusion same⟩,
    fun
     | .inl widens => widens.1.now (r' := course none) rfl (x := .inr 0) trivial
     | .inr ⟨⟨_, later⟩, _⟩ => match later (course none) rfl with

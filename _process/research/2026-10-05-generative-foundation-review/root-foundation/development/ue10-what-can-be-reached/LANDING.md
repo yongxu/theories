@@ -1,10 +1,10 @@
 # UE10: landing what a course keeps reachable
 
-26 October 2026, revised 27 October after the re-check. AI-written landing note for board item UE10. It says what lands, the decisions taken at landing, the exact command sequence and what the run showed. The scripts are in [kit/](kit/).
+26 October 2026, revised 27 October after the re-check and the second re-check. AI-written landing note for board item UE10. It says what lands, the decisions taken at landing, the exact command sequence and what the run showed. The scripts are in [kit/](kit/).
 
 ## What lands
 
-**Lean.** `Becoming.ReachableRanges` (from [tree/Becoming/](tree/Becoming/)) is a new core module, a leaf at L1 importing Horizon, Labelled, Onward, Population, Admission, LawAlongRun, Extension, Lexical, Bundles and EventualWidening, with 68 modules in its closure and none of them L2; it has 134 theorems in 195 declarations after the fix round and the re-check (NOTE §6). No landed declaration changes. The module is added:
+**Lean.** `Becoming.ReachableRanges` (from [tree/Becoming/](tree/Becoming/)) is a new core module, a leaf at L1 importing Horizon, Labelled, Onward, Population, Admission, LawAlongRun, Extension, Lexical, Bundles and EventualWidening, with 68 modules in its closure and none of them L2; it has 135 theorems in 196 declarations after the fix round and the two re-checks (NOTE §6). No landed declaration changes. The module is added:
 - to `CORE` in `check_becoming.py`, after `Becoming.ComparingCourses`, and to its scope text;
 - to the root `Becoming.lean`, as an import and an L1 bullet (it names no ethical predicate and no module in its closure is L2);
 - to the package README rows (EN, ZH), after ComparingCourses'.
@@ -24,7 +24,7 @@
 ## Decisions
 
 - **A leaf.** The comparisons are alternatives with their witnesses, which no module below uses and C's order does not adopt, so nothing imports the module.
-- **Declarations beside other modules' definitions.** `Web.KeepsWidening.chain`, `Web.KeepsWidening.of_chain` and `Web.keepsWidening_iff_chain` connect EventualWidening's keeping widening by name to the chain law, both ways, and `Law.runs_agree` is the two-run form of Branching's `law_run_state`, derived from it. They stay in the leaf until the owners of those definitions move them.
+- **Declarations beside other modules' definitions.** `Web.KeepsWidening.chain`, `Web.KeepsWidening.of_chain` and `Web.keepsWidening_iff_chain` connect EventualWidening's keeping widening by name to the chain law, both ways, `Web.KeepsWidening.not_listed_via_chain` re-derives its law over a listed type from the chain law, and `Law.runs_agree` is the two-run form of Branching's `law_run_state`, derived from it. They stay in the leaf until the owners of those definitions move them.
 - **The lagged order proved here.** Importing `Becoming.ComparingCourses` for `strictJoin_trans` would put an L2 module in the closure, through `Becoming.EventualWideningInstances`, so the lagged order's laws are proved directly, with configurations at any universe.
 - **Universes.** Configurations `S : Type u`, the lagged order included; formations are at `Type`, as the pigeonhole's lemmas are.
 - **Not built.** The optional branching witness for keeping the possible within a horizon widening, the order on two chosen courses and `X : Type w` (NOTE §3, §6).
@@ -49,4 +49,4 @@ To be filled from the run.
 
 ## After landing
 
-Remove `tree/.build`, `probes/tree/.build` and `recheck/tree/.build` (build output, not data) and the landing worktree once no session uses them.
+Remove `tree/.build`, `probes/tree/.build`, `recheck/tree/.build` and `recheck2/tree/.build` (build output, not data) and the landing worktree once no session uses them. The untracked `probes/tree/Becoming/ComparingCourses.lean` is a byte-identical copy of the landed `Becoming.ComparingCourses` (sha256 `e5d2cb98…`), redundant once no session uses it.

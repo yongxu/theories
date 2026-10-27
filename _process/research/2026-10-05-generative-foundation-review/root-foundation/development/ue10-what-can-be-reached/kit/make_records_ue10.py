@@ -20,12 +20,13 @@ sys.path.insert(0, str(ROOT))
 from tools.research import style  # noqa: E402
 
 CAPS_ONLY = sys.argv[1] == '--caps'
-RECEIPT_ID, N = ('RECEIPT', 0) if CAPS_ONLY else (sys.argv[1], int(sys.argv[2]))
+RECEIPT_ID, N = ('20261027T000000.000000Z', 423) if CAPS_ONLY else (sys.argv[1], int(sys.argv[2]))
 PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation/'
 STUDY = RF + 'BECOMING-RENEWAL-READING.md'
 KITD = RF + 'development/ue10-what-can-be-reached/'
-NOTE, REVIEW, RECHECK = KITD + 'NOTE.md', KITD + 'REVIEW-UE10.md', KITD + 'RECHECK-UE10.md'
+NOTE, REVIEW, RECHECK, RECHECK2 = (KITD + 'NOTE.md', KITD + 'REVIEW-UE10.md', KITD + 'RECHECK-UE10.md',
+                                   KITD + 'RECHECK2-UE10.md')
 CH7 = 'theories/becoming/chapters/07-SIGNIFICANCE.md'
 LEAN = {m: f'{PKG}/Becoming/{m}.lean' for m in
         ('ReachableRanges', 'Frame', 'Labelled', 'Onward', 'Extension', 'Lexical', 'Bundles', 'EventualWidening',
@@ -61,7 +62,7 @@ else:
     mod = next(x for x in core['modules'] if x['module'] == module)
     assert not any(mod['axiom_dependencies'].values()), module
     names = {d['name'] for d in mod['declarations']}
-assert len(names) == 195, len(names)
+assert len(names) == 196, len(names)
 
 
 def D(*short):
@@ -140,12 +141,12 @@ groups = [
      "同偏移之扩大与字典序两向皆默，滞后之序把攀升排在 none 之上而非反之。",
      D('WiderNow.next', 'WiderNow.process', 'WiderNow.adm', 'WiderNow.course', 'WiderNow.course_start',
        'WiderNow.silent', 'WiderNow.decided')),
-    ("On WiderNow's process, with none admitting the first formation of "
-     "one side and every formation of the other, the lagged order is silent both ways; with none admitting every "
-     "formation, it ranks none above the climb. Widening what can be reached and the lagged order both satisfy C on the "
-     "frame of reachable ranges, and on WiderNow they differ: the lag's verdict is a premise beyond C.",
-     "WiderNow 之过程上，none 纳一侧之首构成与另一侧之每一构成时，滞后之序两向皆默；none 纳每一构成时，它把 none "
-     "排在攀升之上。可达之扩大与滞后之序皆于可达范围之框上满足 C，而于 WiderNow 上相异：滞后之判定是 C 之外之前提。",
+    ("On WiderNow's process, with none admitting one side's first formation and every formation of the other, each "
+     "course exceeds the other and the lagged order is silent both ways; with none admitting every formation, it ranks "
+     "none above the climb, as it must. Widening what can be reached and the lagged order satisfy C on the frame of "
+     "reachable ranges and differ on WiderNow: the lag's verdict is a premise beyond C.",
+     "WiderNow 之过程上，none 纳一侧之首构成与另一侧之每一构成时，二进程互相超出而滞后之序两向皆默；none 纳每一构成时，它把 none "
+     "排在攀升之上，理当如此。可达之扩大与滞后之序皆于可达范围之框上满足 C，而于 WiderNow 上相异：滞后之判定是 C 之外之前提。",
      D('WiderNow.TwoSided.adm', 'WiderNow.TwoSided.silent', 'WiderNow.Full.adm', 'WiderNow.Full.not_silent',
        'Reaching.comparison_widens', 'Reaching.comparison_widensOrLater', 'WiderNow.comparison_undecided')),
     ("The possible. The whole possible from s is what some configuration reachable from s admits; the possible within "
@@ -179,24 +180,24 @@ groups = [
      "自 true 无一可能：覆盖承载可能需其前提。",
      D('NoCourse.process', 'NoCourse.adm', 'NoCourse.stay', 'NoCourse.no_course', 'NoCourse.from_true',
        'NoCourse.widens_reversed')),
-    ("The rise is the course's delay: with a lag of one step each configuration of a course covers its successor; on "
-     "a determined process the next configuration widens what can be reached over the present one exactly when what "
-     "the course admits at each offset it admits one later, and not conversely. On Rise's rising step it rises while "
-     "the whole possible and the possible within each horizon past the present stay the same.",
-     "上升即进程之延迟。滞后一步时，进程之每一构型覆盖其后继；决定性过程上，下一构型扩大可达者于当下者之上，恰当进程于每一偏移所纳者于晚一偏移亦纳"
-     "而非反之。Rise 之上升步上，可达之扩大上升，而全部可能及当下以外每一视界内之可能皆不变。",
+    ("The rise. With a lag of one step each configuration of a course covers its successor; on a determined process "
+     "the next configuration widens what can be reached over the present one exactly when the course one step on "
+     "strictly includes the course. On Rise's rising step it rises while the whole possible and the possible within "
+     "each horizon past the present stay the same.",
+     "上升。滞后一步时，进程之每一构型覆盖其后继；决定性过程上，下一构型扩大可达者于当下者之上，恰当后移一步之进程严格包含进程本身。"
+     "Rise 之上升步上，可达之扩大上升，而全部可能及当下以外每一视界内之可能皆不变。",
      D('Run.coversLater_next', 'Reaching.widens_next_iff_rising', 'Rise.process', 'Rise.process_eq_law', 'Rise.adm',
        'Rise.stay', 'Rise.course', 'Rise.adm_le', 'Rise.rises', 'Rise.possible_same', 'Rise.possibleWithin_same')),
-    ("Keeping widening needs an unlisted range. A chain keeps widening where nothing held is lost later and after "
-     "every step something not held is held later, 07's form from its first step; it gathers n distinct members at one "
-     "step for every n, so no list holds it. Along a course the possible within k does not keep widening where a list "
-     "holds it, or the whole possible. Keeping widening by name is exactly such a chain.",
+    ("Keeping widening needs an unlisted range. A chain keeps widening (07's form) where nothing held is lost and "
+     "after every step something not held is held later; it gathers n distinct members at one step for every "
+     "n, so no list holds it. Along a course the possible within k does not keep widening where a list holds it or "
+     "the whole possible. By name, keeping widening is exactly such a chain, which gives its law by name.",
      "持续扩大需无列表之范围。一链持续扩大，若所持无一后失，且每步之后有未持者后被持，即自首步起之 07 形式；它对每一 n 于一步聚 n 个不同成员，"
-     "故无列表持之。沿一进程，有列表持 k 内之可能或全部可能时，k 内之可能不持续扩大。按名持续扩大恰为此种链。",
+     "故无列表持之。沿一进程，有列表持 k 内之可能或全部可能时，k 内之可能不持续扩大。按名持续扩大恰为此种链，由之得其按名之律。",
      D('Reaching.KeepsWidening', 'Reaching.KeepsWidening.gathers', 'Reaching.KeepsWidening.not_listed',
        'Reaching.not_keepsWidening_of_listed_along', 'Reaching.listed_along_of_listed',
        'Reaching.not_keepsWidening_of_listed', 'Web.KeepsWidening.chain', 'Web.KeepsWidening.of_chain',
-       'Web.keepsWidening_iff_chain')),
+       'Web.keepsWidening_iff_chain', 'Web.KeepsWidening.not_listed_via_chain')),
     ("Witnesses. On Climb, the determined law of the successor with n admitting the formations up to n, the possible "
      "within every horizon keeps widening and no list holds the whole possible. The converse fails: from AllAtOnce's "
      "one configuration, admitting every formation, no list holds the whole possible, and along no course does the "
@@ -299,9 +300,10 @@ does_not_show = [capped('does_not_show', x, item=True) for x in (
            "course better: ranking needs C, and the lag's verdict, which C leaves open, or a rule of precedence is a "
            "further premise.",
      'zh': '滞后之序、字典序或此处任一序即生生的二阶方向或把进程排得更好：排序需要 C，而 C 不定之滞后判定或优先之规则是又一前提。', 'kind': 'non-implication'},
-    {'en': "That read with a lag covering decides every pair of a range that keeps widening and one wider now: it "
-           "decides one witness's pair, and on others it is silent both ways or ranks the wider one above.",
-     'zh': '带滞后读时覆盖判定每一持续扩大之范围与当下更宽者之对：它判定一见证之对，于他处两向皆默或把更宽者排在上。', 'kind': 'non-implication'},
+    {'en': "That read with a lag covering decides every pair of a range that keeps widening and one wider now that "
+           "starts a course: it decides one witness's pair, and on another, each course exceeding the other, it is "
+           "silent both ways.",
+     'zh': '带滞后读时覆盖判定每一持续扩大之范围与起进程且当下更宽者之对：它判定一见证之对，于另一处（二进程互相超出）两向皆默。', 'kind': 'non-implication'},
     {'en': "That the lagged order is UE9's: it is built as UE9's is, on families of courses, and UE9's laws on its order "
            "(names read across steps, the conflict with eventual widening) are not proved of it.",
      'zh': '滞后之序即 UE9 之序：它如 UE9 之序那样构于进程之族，UE9 关于其序之律（跨步读名、与最终扩大之冲突）未对其证明。', 'kind': 'scope'},
@@ -321,12 +323,12 @@ does_not_show = [capped('does_not_show', x, item=True) for x in (
 validation_scope = capped('validation_scope', {
     'en': f'Machine-checked by the consolidated Lean 4.29.1 checker (receipt {RECEIPT_ID}): Becoming.ReachableRanges, '
           f'{len(names)} declarations, every one with an empty axiom report, all cited here; Web.KeepsWidening.chain, '
-          f'Web.KeepsWidening.of_chain, Web.keepsWidening_iff_chain and Law.runs_agree sit in the leaf until the owners '
+          f'.of_chain, .not_listed_via_chain, Web.keepsWidening_iff_chain and Law.runs_agree sit in the leaf until the owners '
           f'of the definitions they concern move them. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE10) and '
-          f'a re-check (RECHECK-UE10), in study section {N}; not reviewed by a person.',
+          f'two re-checks (RECHECK-UE10, RECHECK2-UE10), in study section {N}; not reviewed by a person.',
     'zh': f'Lean 4.29.1 合并检查器实查（回执 {RECEIPT_ID}）：Becoming.ReachableRanges 之 {len(names)} 项声明，公理报告皆空，本记录全引；'
-          f'Web.KeepsWidening.chain、Web.KeepsWidening.of_chain、Web.keepsWidening_iff_chain 与 Law.runs_agree 暂居此叶，待其所涉定义之主移之。于一会话中构建；另一 AI '
-          f'代理作独立只读审查（REVIEW-UE10）并复查（RECHECK-UE10），见研究第 {N} 节；未经人审。'})
+          f'按名持续扩大之链之律诸定理与 Law.runs_agree 暂居此叶，待其所涉定义之主移之。于一会话中构建；另一 AI '
+          f'代理作独立只读审查（REVIEW-UE10）并两次复查（RECHECK-UE10、RECHECK2-UE10），见研究第 {N} 节；未经人审。'})
 next_delta = capped('next_delta', {
     'en': "What carries a course's openings, 07's remaining candidate; a branching witness for keeping the possible "
           "within a horizon widening; a reason, or a premise, for a rule of precedence between realized and reachable "
@@ -354,9 +356,11 @@ counterexamples_text = [
     {'en': 'Same-offset covering is silent on a climb that keeps widening against a configuration wider now '
            '(WiderNow.silent), which the lagged order decides (WiderNow.decided).',
      'zh': '同偏移之覆盖对持续扩大之攀升与当下更宽之构型沉默（WiderNow.silent），滞后之序判定之（WiderNow.decided）。'},
-    {'en': 'With other admissions on the same process the lagged order is silent both ways (WiderNow.TwoSided.silent), '
-           'or ranks the configuration wider now above the climb (WiderNow.Full.not_silent).',
-     'zh': '同一过程上换一种所纳，滞后之序两向皆默（WiderNow.TwoSided.silent），或把当下更宽之构型排在攀升之上（WiderNow.Full.not_silent）。'},
+    {'en': 'With other admissions on the same process, each course exceeding the other, the lagged order is silent '
+           'both ways (WiderNow.TwoSided.silent); where the configuration wider now also widens what can be reached '
+           'over the climb, it ranks that configuration above (WiderNow.Full.not_silent).',
+     'zh': '同一过程上换一种所纳，二进程互相超出，滞后之序两向皆默（WiderNow.TwoSided.silent）；当下更宽之构型亦扩大可达者于攀升之上时，'
+           '它把该构型排在上（WiderNow.Full.not_silent）。'},
     {'en': 'Where the configuration wider now starts no course, widening what can be reached ranks a climb that keeps '
            'widening above it (EndsNow.keeps_widening_above_wider_now).',
      'zh': '当下更宽之构型不起进程时，可达之扩大把持续扩大之攀升排在其上（EndsNow.keeps_widening_above_wider_now）。'},
@@ -384,11 +388,11 @@ history_entry = {
           f'configuration above one that starts a course and admits now what it does not; the lagged order on families '
           f'of courses decides one witness\'s pair, not every such pair, a verdict C leaves open; nothing is added to the '
           f'whole possible along a course; realized and reachable widening rank a pair '
-          f'oppositely on a branching witness; covering is the lower preorder; near-definitional; after a review and a '
-          f're-check; study section {N}.',
+          f'oppositely on a branching witness; covering is the lower preorder; near-definitional; after a review and two '
+          f're-checks; study section {N}.',
     'zh': f'{DATE_ZH}：新增（UE10），进程保持可达者：覆盖蕴含当下之包含，故从不把一构型排在起进程且当下纳其所不纳者之上；进程之族上之滞后之序判定一见证之对，'
           f'非每一此种对，此判定 C 不定；'
-          f'沿一进程全部可能无所增；在一分支见证上实现与可达之扩大对一对排序相反；覆盖即下预序；近乎定义；经审查与复查；研究第 {N} 节。'}
+          f'沿一进程全部可能无所增；在一分支见证上实现与可达之扩大对一对排序相反；覆盖即下预序；近乎定义；经审查与两次复查；研究第 {N} 节。'}
 
 # the three records pointed here
 C9_ND = capped('next_delta', {
@@ -398,10 +402,10 @@ C9_ND = capped('next_delta', {
     'zh': f'进程保持可达者已读（{RID}）：带滞后时如本记录之滞后之序那样构于进程之族；承载进程之开出者仍待；计早期之步或只读尾的理由或前提；人之审查。'})
 EW_ND = capped('next_delta', {
     'en': "The lag is decided by widening with a lag and by a tail order containing eventual widening, which rank a pair "
-          f"oppositely, so choosing is a premise ({RID9}); what a course keeps reachable ranks such a pair only with a "
-          f"lag ({RID}); the gain bridge and the givers law are restatements (what-keeping-widening-needs); review by a "
+          f"oppositely, so choosing is a premise ({RID9}); what a course keeps reachable is read: a lag decides one "
+          f"witness's pair ({RID}); the gain bridge and the givers law are restatements (what-keeping-widening-needs); review by a "
           "person.",
-    'zh': f'滞后由带滞后的扩大与包含最终扩大的尾序判定，二者对一对排序相反，故作选择是前提（{RID9}）；进程保持可达者仅带滞后时排此种对（{RID}）；'
+    'zh': f'滞后由带滞后的扩大与包含最终扩大的尾序判定，二者对一对排序相反，故作选择是前提（{RID9}）；进程保持可达者已读：滞后定一见证之对（{RID}）；'
           '增益之桥与给予者之律为重述（what-keeping-widening-needs）；人之审查。'})
 EW_OLD_START = ('The lag is decided by widening with a lag and by a tail order containing eventual widening; the first ranks '
                 'a pair opposite to eventual widening, so choosing is a premise ')
@@ -459,9 +463,11 @@ record = {
                           'and covering with a lag reads Web.IncludesLater on courses; the module does not import it.',
                     'zh': '滞后之序如其带滞后或不带之扩大那样构于进程之族，带滞后之覆盖把 Web.IncludesLater 读于进程；本模块不引入之。'}},
         {'id': 'eventual-widening', 'relation': 'formal-reuse',
-         'detail': {'en': 'Web.KeepsWidening and Web.KeepsWidening.not_listed, of which the chain law gives an instance '
-                          'and a derivation.',
-                    'zh': 'Web.KeepsWidening 与 Web.KeepsWidening.not_listed，链之律给出其实例与推导。'}},
+         'detail': {'en': 'Web.KeepsWidening and Web.KeepsWidening.not_listed: the chain law reads the first both '
+                          'ways (Web.keepsWidening_iff_chain) and re-derives the second '
+                          '(Web.KeepsWidening.not_listed_via_chain).',
+                    'zh': 'Web.KeepsWidening 与 Web.KeepsWidening.not_listed：链之律双向读前者（Web.keepsWidening_iff_chain），'
+                          '并重新推出后者（Web.KeepsWidening.not_listed_via_chain）。'}},
         {'id': 'effective-capacity-and-eventual-reachability', 'relation': 'formal-reuse',
          'detail': {'en': 'WithinMoves, withinMoves_iff_reach, together_after_reach, lost_together_not_returns and '
                           'WithinMoves.before: the possible as realizability of one formation, and nothing added from them.',
@@ -501,8 +507,9 @@ record = {
                     'zh': '其滞后之序重构于进程之族，判定同偏移之覆盖沉默之一见证之对；所纳范围不带替代，覆盖添之。'}},
         {'id': 'eventual-widening',
          'detail': {'en': "Eventual widening's second order: covering implies inclusion now, so what a course keeps "
-                          'reachable ranks such a pair only with a lag.',
-                    'zh': '最终扩大之二阶：覆盖蕴含当下之包含，故进程保持可达者仅带滞后时排这样一对。'}},
+                          'reachable ranks a range that keeps widening above one wider now that starts a course only '
+                          'with a lag, and not every such pair.',
+                    'zh': '最终扩大之二阶：覆盖蕴含当下之包含，故进程保持可达者仅带滞后时把持续扩大之范围排在起进程且当下更宽者之上，且非每一此种对。'}},
         {'id': 'what-keeping-widening-needs',
          'detail': {'en': 'What one course keeping widening needs; here the possible within a horizon keeping widening '
                           'needs an unlisted range, by the same pigeonhole.',
@@ -521,6 +528,7 @@ record = {
                      {'path': NOTE, 'role': 'integration', 'sha256': sha(NOTE)},
                      {'path': REVIEW, 'role': 'integration', 'sha256': sha(REVIEW)},
                      {'path': RECHECK, 'role': 'integration', 'sha256': sha(RECHECK)},
+                     {'path': RECHECK2, 'role': 'integration', 'sha256': sha(RECHECK2)},
                      {'path': CH7, 'role': 'statement', 'sha256': sha(CH7)}],
     'proof_bindings': [{'source': LEAN['ReachableRanges'], 'receipt': RECEIPT,
                         'sha256_pointer': '/source_sha256/Becoming.ReachableRanges',
@@ -576,8 +584,8 @@ for rid in ('eventual-widening', 'what-keeping-widening-needs'):
     assert RID not in [x['id'] for x in d['related']]
     d['related'].append({'id': RID, 'detail': {
         'en': 'What a course keeps reachable: covering implies inclusion now, so it ranks a range that keeps '
-              'widening above one wider now only with a lag.',
-        'zh': '进程保持可达者：覆盖蕴含当下之包含，故仅带滞后时把持续扩大之范围排在当下更宽者之上。'}})
+              'widening above one wider now that starts a course only with a lag, and not every such pair.',
+        'zh': '进程保持可达者：覆盖蕴含当下之包含，故仅带滞后时把持续扩大之范围排在起进程且当下更宽者之上，且非每一此种对。'}})
     history(d, f'the next step updated: what a course keeps reachable is read in {RID}; no declaration changed.',
             f'下一步随之更新：进程保持可达者于 {RID} 中得读；无一声明改变。')
     save(rid, d)
