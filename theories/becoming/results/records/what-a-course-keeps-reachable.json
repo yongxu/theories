@@ -635,6 +635,13 @@
         "en": "Tasks and what performs them: lagged covering extended from a step to reach, so a delivery adds nothing to the whole possible, and on what a configuration reaches the lagged order is same-offset widening, which follows deliveries in neither direction.",
         "zh": "任务与执行之者：滞后覆盖自一步推至可达，故交付不给全部可能增添任何东西；于一构型所达者上，滞后之序即同偏移之扩大，其于两向皆不随交付。"
       }
+    },
+    {
+      "id": "what-can-be-born-next",
+      "detail": {
+        "en": "What can be born next against what continues: on causal-set growth, including what can be born next at the same offsets is having precedence included, and every course from a causal set keeps widening it.",
+        "zh": "次可生者与相续：于因果集之生长上，于同偏移处含次可生者即先后被含，自因果集起之每一历程皆使之不断扩大。"
+      }
     }
   ],
   "references": [
@@ -963,6 +970,10 @@
     {
       "en": "28 October 2026, board item UE12 (study section 430): related to tasks-and-what-performs-them; no statement, next step or declaration changed.",
       "zh": "2026年10月28日，工作板条目 UE12（研究第 430 节）：与 tasks-and-what-performs-them 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "28 October 2026, board item UE13 (study section 431): related to what-can-be-born-next; no statement, next step or declaration changed.",
+      "zh": "2026年10月28日，工作板条目 UE13（研究第 431 节）：与 what-can-be-born-next 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

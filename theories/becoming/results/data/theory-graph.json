@@ -3668,6 +3668,18 @@
    "page": "theories/becoming/results/records/practical-judgment-under-living-significance.md"
   },
   {
+   "id": "record:precedence-and-its-links",
+   "type": "result",
+   "record": "precedence-and-its-links",
+   "title": "Precedence and its links",
+   "title_zh": "先后与其覆盖",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/precedence-and-its-links.md"
+  },
+  {
    "id": "record:prefix-observation-loss",
    "type": "result",
    "record": "prefix-observation-loss",
@@ -5636,6 +5648,18 @@
    "page": "theories/becoming/results/records/what-bounds-offspring-numbers.md"
   },
   {
+   "id": "record:what-can-be-born-next",
+   "type": "result",
+   "record": "what-can-be-born-next",
+   "title": "What can be born next against what continues",
+   "title_zh": "次可生者与相续",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "frame",
+   "page": "theories/becoming/results/records/what-can-be-born-next.md"
+  },
+  {
    "id": "record:what-dependence-alone-carries-of-a-level",
    "type": "result",
    "record": "what-dependence-alone-carries-of-a-level",
@@ -7139,6 +7163,17 @@
    "name": "Becoming.Tasks",
    "level": "L1",
    "theorems": 128,
+   "region": "significance",
+   "base": "frame",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.CausalGrowth",
+   "type": "module",
+   "name": "Becoming.CausalGrowth",
+   "level": "L1",
+   "theorems": 161,
    "region": "significance",
    "base": "frame",
    "on_grammar": true,
@@ -26937,6 +26972,12 @@
    "region": "classical"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-precedence-and-its-links",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-precedence-and-its-links"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -29283,6 +29324,12 @@
    "anchor": "r-tasks-and-what-performs-them"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-can-be-born-next",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-can-be-born-next"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-content-under-regrouping",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -30000,6 +30047,11 @@
   {
    "from": "module:Becoming.Carriers",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CausalGrowth",
+   "to": "module:Becoming.HeldPossible",
    "type": "imports"
   },
   {
@@ -45583,6 +45635,26 @@
    "type": "related"
   },
   {
+   "from": "record:precedence-and-its-links",
+   "to": "module:Becoming.CausalGrowth",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:precedence-and-its-links",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:precedence-and-its-links",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:precedence-and-its-links",
+   "to": "record:what-can-be-born-next",
+   "type": "related"
+  },
+  {
    "from": "record:prefix-observation-loss",
    "to": "module:Becoming.Granularity",
    "type": "proved-in"
@@ -51804,6 +51876,11 @@
   },
   {
    "from": "record:what-a-course-keeps-reachable",
+   "to": "record:what-can-be-born-next",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
    "to": "record:what-keeping-widening-needs",
    "type": "related"
   },
@@ -52465,6 +52542,61 @@
   {
    "from": "record:what-bounds-offspring-numbers",
    "to": "record:selection-term-over-generations",
+   "type": "related"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "module:Becoming.CausalGrowth",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "module:Becoming.HeldPossible",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "module:Becoming.ReachableRanges",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "record:precedence-and-its-links",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "related"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "record:where-the-possible-grows",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "record:where-the-possible-grows",
    "type": "related"
   },
   {
@@ -53640,6 +53772,11 @@
   {
    "from": "record:where-the-possible-grows",
    "to": "record:what-a-course-keeps-reachable",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:what-can-be-born-next",
    "type": "related"
   },
   {
@@ -54895,6 +55032,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-place-transition-nets-on-the-spine",
    "to": "record:place-transition-nets-on-the-spine",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-precedence-and-its-links",
+   "to": "record:precedence-and-its-links",
    "type": "states"
   },
   {
@@ -56845,6 +56987,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-a-line-holds-and-a-regularity-takes-in",
    "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-can-be-born-next",
+   "to": "record:what-can-be-born-next",
    "type": "states"
   },
   {

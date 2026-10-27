@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-476 registered results: 445 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1086 curated edges join 404 results to the results they draw on.
+478 registered results: 447 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1091 curated edges join 406 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -244,6 +244,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [place-transition-nets-on-the-spine][] ← <a id="place-transition-nets-on-the-spine--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="place-transition-nets-on-the-spine--rising-and-falling-in-one-exchange"></a>[rising-and-falling-in-one-exchange][] · <a id="place-transition-nets-on-the-spine--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="place-transition-nets-on-the-spine--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="place-transition-nets-on-the-spine--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][]
 - [positioned-positive-reason][] ← <a id="positioned-positive-reason--positive-ground-open-futures"></a>[positive-ground-open-futures][]
 - [practical-judgment-under-living-significance][] ← <a id="practical-judgment-under-living-significance--becoming-return-grades"></a>[becoming-return-grades][] *(interpretive)* · <a id="practical-judgment-under-living-significance--substitution-preserves-consumption"></a>[substitution-preserves-consumption][] *(interpretive)*
+- [precedence-and-its-links][] ← <a id="precedence-and-its-links--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
 - [prefix-observation-loss][] ← <a id="prefix-observation-loss--finite-granularity-question-recovery"></a>[finite-granularity-question-recovery][]
 - [premises-read-off-the-exchange][] ← <a id="premises-read-off-the-exchange--imbalance-as-relatum"></a>[imbalance-as-relatum][] · <a id="premises-read-off-the-exchange--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [premises-that-are-states-of-the-law][] ← <a id="premises-that-are-states-of-the-law--premises-read-off-the-exchange"></a>[premises-read-off-the-exchange][] · <a id="premises-that-are-states-of-the-law--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="premises-that-are-states-of-the-law--map-of-premises"></a>[map-of-premises][]
@@ -385,6 +386,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-a-summary-keeps][] ← <a id="what-a-summary-keeps--finite-trace-transport"></a>[finite-trace-transport][]
 - [what-an-optimum-does-beyond-what-couples-in][] ← <a id="what-an-optimum-does-beyond-what-couples-in--what-a-rise-draws-from-beyond"></a>[what-a-rise-draws-from-beyond][] · <a id="what-an-optimum-does-beyond-what-couples-in--selection-through-couplings"></a>[selection-through-couplings][]
 - [what-bounds-offspring-numbers][] ← <a id="what-bounds-offspring-numbers--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="what-bounds-offspring-numbers--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][]
+- [what-can-be-born-next][] ← <a id="what-can-be-born-next--precedence-and-its-links"></a>[precedence-and-its-links][] · <a id="what-can-be-born-next--what-a-course-keeps-reachable"></a>[what-a-course-keeps-reachable][] · <a id="what-can-be-born-next--where-the-possible-grows"></a>[where-the-possible-grows][] · <a id="what-can-be-born-next--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
 - [what-dependence-alone-carries-of-a-level][] ← <a id="what-dependence-alone-carries-of-a-level--where-a-level-couples"></a>[where-a-level-couples][]
 - [what-discrete-steps-and-whole-amounts-represent][] ← <a id="what-discrete-steps-and-whole-amounts-represent--rest-theorem-in-any-amounts"></a>[rest-theorem-in-any-amounts][]
 - [what-keeping-widening-needs][] ← <a id="what-keeping-widening-needs--eventual-widening"></a>[eventual-widening][] · <a id="what-keeping-widening-needs--returning-novelty-forgetting-on-levels"></a>[returning-novelty-forgetting-on-levels][] · <a id="what-keeping-widening-needs--where-novelty-gain-comes-from"></a>[where-novelty-gain-comes-from][] · <a id="what-keeping-widening-needs--more-needs-renewers"></a>[more-needs-renewers][] · <a id="what-keeping-widening-needs--support-passed-on"></a>[support-passed-on][] · <a id="what-keeping-widening-needs--support-from-the-supported"></a>[support-from-the-supported][] · <a id="what-keeping-widening-needs--a-pattern-lasts-through-passing"></a>[a-pattern-lasts-through-passing][] · <a id="what-keeping-widening-needs--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="what-keeping-widening-needs--classes-along-a-continuation"></a>[classes-along-a-continuation][] · <a id="what-keeping-widening-needs--widening-along-a-reading"></a>[widening-along-a-reading][] · <a id="what-keeping-widening-needs--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][]
@@ -674,6 +676,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [positioned-positive-reason]: theories/becoming/results/records/positioned-positive-reason.md
 [positive-ground-open-futures]: theories/becoming/results/records/positive-ground-open-futures.md
 [practical-judgment-under-living-significance]: theories/becoming/results/records/practical-judgment-under-living-significance.md
+[precedence-and-its-links]: theories/becoming/results/records/precedence-and-its-links.md
 [prefix-observation-loss]: theories/becoming/results/records/prefix-observation-loss.md
 [premises-read-off-the-exchange]: theories/becoming/results/records/premises-read-off-the-exchange.md
 [premises-that-are-states-of-the-law]: theories/becoming/results/records/premises-that-are-states-of-the-law.md
@@ -826,6 +829,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-a-summary-keeps]: theories/becoming/results/records/what-a-summary-keeps.md
 [what-an-optimum-does-beyond-what-couples-in]: theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.md
 [what-bounds-offspring-numbers]: theories/becoming/results/records/what-bounds-offspring-numbers.md
+[what-can-be-born-next]: theories/becoming/results/records/what-can-be-born-next.md
 [what-dependence-alone-carries-of-a-level]: theories/becoming/results/records/what-dependence-alone-carries-of-a-level.md
 [what-discrete-steps-and-whole-amounts-represent]: theories/becoming/results/records/what-discrete-steps-and-whole-amounts-represent.md
 [what-keeping-widening-needs]: theories/becoming/results/records/what-keeping-widening-needs.md

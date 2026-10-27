@@ -1,0 +1,23 @@
+Becoming/CausalGrowthRecheck.lean:508:10: warning: unused variable `r`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/probes2/tree",
+  "modules": 76,
+  "ran": [
+    "Becoming.CausalGrowthRecheck",
+    "BecomingCausalGrowthRecheckAxiomAudit"
+  ],
+  "reused": 75,
+  "unclean": [
+    "Becoming.CausalGrowthRecheck"
+  ],
+  "audits": {
+    "Becoming.CausalGrowthRecheck": {
+      "theorems": 53,
+      "declarations": 69,
+      "with_axioms": {}
+    }
+  }
+}

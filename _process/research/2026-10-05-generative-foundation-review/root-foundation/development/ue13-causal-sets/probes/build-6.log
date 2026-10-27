@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/probes/tree",
+  "modules": 76,
+  "ran": [
+    "Becoming.CausalGrowthProbe",
+    "BecomingCausalGrowthProbeAxiomAudit"
+  ],
+  "reused": 75,
+  "unclean": [],
+  "audits": {
+    "Becoming.CausalGrowthProbe": {
+      "theorems": 46,
+      "declarations": 59,
+      "with_axioms": {}
+    }
+  }
+}

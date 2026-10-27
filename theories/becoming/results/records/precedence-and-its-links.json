@@ -1,0 +1,289 @@
+{
+  "schema_version": 2,
+  "id": "precedence-and-its-links",
+  "title": {
+    "en": "Precedence and its links",
+    "zh": "先后与其覆盖"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-27T20:05:52+00:00",
+  "statement": {
+    "en": "A link of the root's reach is a step, so every net whose reach is a relation contains its links. On a naturally labelled transitive relation with decidable precedence, as on causal sets, precedence is the reach of its links; the decision cannot be dropped, and on ω + 1 the links never reach the top.",
+    "zh": "根之及之覆盖即一步，故凡其及为一关系之网皆含其覆盖。于自然编号、可传递且先后可判定之关系（因果集在其中），先后即其覆盖之及；此判定不可去，于 ω + 1 覆盖永不及顶。"
+  },
+  "laws": [
+    {
+      "en": "Links. The links of a relation, causal set theory's term, are the pairs it relates with nothing it relates between (links, links_le); relations with the same pairs have the same links (links_of_iff). A link of the root's reach «及» R is a step of R, since a chain of two or more steps has a point between (link_of_reach), so every net whose reach is a relation contains its links, on any carrier (links_least).",
+      "zh": "覆盖。一关系之覆盖（因果集理论称 link）谓其所关联而其间无其所关联者之对（links、links_le）；关联相同则覆盖相同（links_of_iff）。根之及 «及» R 之覆盖即 R 之一步，因二步以上之链有居间之点（link_of_reach）；故凡其及为一关系之网，皆含其覆盖，于任何载体（links_least）。",
+      "declarations": [
+        "Becoming.CausalGrowth.links",
+        "Becoming.CausalGrowth.links_le",
+        "Becoming.CausalGrowth.links_of_iff",
+        "Becoming.CausalGrowth.link_of_reach",
+        "Becoming.CausalGrowth.links_least"
+      ]
+    },
+    {
+      "en": "Every pair is reached by links on a relation on the numbers in which each element is preceded only by smaller labels, with precedence decidable (reach_links): induction on the gap between labels with a bounded search for an element between (searchBelow, reach_links_within). No finiteness is needed: on all the numbers in their order every pair is reached by links (nat_reach_links).",
+      "zh": "于数上之关系，每元仅为较小标号者所先，且先后可判定，则每一对皆由覆盖及之（reach_links）：以标号之差归纳，并有界搜索居间之元（searchBelow、reach_links_within）。无需有限：于依其序之全体自然数，每一对皆由覆盖及之（nat_reach_links）。",
+      "declarations": [
+        "Becoming.CausalGrowth.searchBelow",
+        "Becoming.CausalGrowth.reach_links_within",
+        "Becoming.CausalGrowth.reach_links",
+        "Becoming.CausalGrowth.nat_reach_links"
+      ]
+    },
+    {
+      "en": "With transitivity precedence is exactly the reach of its links (reach_links_le, reach_links_iff), so the links are the least net whose reach it is. Without transitivity only one inclusion holds: the links of the path 0 → 1 → 2 reach (0, 2), which it does not relate (path, path_not_reach_of_links).",
+      "zh": "加以可传递，先后恰为其覆盖之及（reach_links_le、reach_links_iff），故覆盖为其及即先后之最小之网。无可传递则仅一向包含成立：路 0 → 1 → 2 之覆盖及于 (0, 2)，而路不关联之（path、path_not_reach_of_links）。",
+      "declarations": [
+        "Becoming.CausalGrowth.reach_links_le",
+        "Becoming.CausalGrowth.reach_links_iff",
+        "Becoming.CausalGrowth.path",
+        "Becoming.CausalGrowth.path_not_reach_of_links"
+      ]
+    },
+    {
+      "en": "Deciding what lies between suffices: where, for each pair and each element, whether the element lies between them is decided, every pair is reached by links, with no Decidable instance (searchBelow_or, reach_links_within_of_decided, reach_links_of_decided).",
+      "zh": "判定居间者即足：凡于每一对与每一元，判定该元是否居其间，则每一对皆由覆盖及之，无需 Decidable 实例（searchBelow_or、reach_links_within_of_decided、reach_links_of_decided）。",
+      "declarations": [
+        "Becoming.CausalGrowth.searchBelow_or",
+        "Becoming.CausalGrowth.reach_links_within_of_decided",
+        "Becoming.CausalGrowth.reach_links_of_decided"
+      ]
+    },
+    {
+      "en": "It cannot be dropped: that every pair of every causal set is reached by links is excluded middle (reach_links_all_iff_em), already on three elements whose relations through the middle are a proposition (Undecided: third, third_ordered, third_not_from_two, third_no_reach_from_two, em_of_reach_third). Telling a link, a direct condition, from a longer chain is deciding whether anything lies between.",
+      "zh": "此判定不可去：每一因果集之每一对皆由覆盖及之，即排中律（reach_links_all_iff_em）；三元、其经中间者之关系为一命题时已然（Undecided：third 等）。分辨覆盖（直接之缘）与较长之链，即判定其间有无居间者。",
+      "declarations": [
+        "Becoming.CausalGrowth.Undecided.third",
+        "Becoming.CausalGrowth.Undecided.third_ordered",
+        "Becoming.CausalGrowth.Undecided.third_not_from_two",
+        "Becoming.CausalGrowth.Undecided.third_no_reach_from_two",
+        "Becoming.CausalGrowth.Undecided.em_of_reach_third",
+        "Becoming.CausalGrowth.reach_links_all_iff_em"
+      ]
+    },
+    {
+      "en": "Causal sets. A configuration is a labelled finite causal set: precedence transitive, within its elements, each preceded only by smaller labels (Causet, Causet.Ordered). Reach along a naturally labelled relation raises the label (labelled_of_reach), so its precedence is irreflexive and acyclic (Causet.Ordered.irrefl, Causet.Ordered.acyclic), and, decidable, the reach of its links (ordered_reach_links_iff).",
+      "zh": "构型为有标号之有限因果集：先后可传递，在元之内，每元仅为较小标号者所先（Causet、Causet.Ordered）。沿自然编号之关系之及使标号升高（labelled_of_reach），故先后非自反且无环（Causet.Ordered.irrefl、Causet.Ordered.acyclic），可判定时即其覆盖之及（ordered_reach_links_iff）。",
+      "declarations": [
+        "Becoming.CausalGrowth.Causet",
+        "Becoming.CausalGrowth.Causet.Ordered",
+        "Becoming.CausalGrowth.labelled_of_reach",
+        "Becoming.CausalGrowth.Causet.Ordered.irrefl",
+        "Becoming.CausalGrowth.Causet.Ordered.acyclic",
+        "Becoming.CausalGrowth.ordered_reach_links_iff"
+      ]
+    },
+    {
+      "en": "Not on ω + 1. On the numbers with a top above them all the order is strict and every positive number lies between some 0 and the top; no link ends at the top and every reach of links ends at a number, so some 0 precedes the top and the links never reach it. The links reading can fail where an interval is infinite.",
+      "zh": "于 ω + 1 则否。于其上有顶之数，序为严格，每一正数皆居 some 0 与顶之间；无覆盖终于顶，覆盖之及皆终于一数，故 some 0 先于顶而覆盖永不及之。区间无穷处，覆盖之读可失效。",
+      "declarations": [
+        "Becoming.CausalGrowth.OmegaPlusOne.prec",
+        "Becoming.CausalGrowth.OmegaPlusOne.prec_irrefl",
+        "Becoming.CausalGrowth.OmegaPlusOne.prec_trans",
+        "Becoming.CausalGrowth.OmegaPlusOne.between",
+        "Becoming.CausalGrowth.OmegaPlusOne.no_link_into_top",
+        "Becoming.CausalGrowth.OmegaPlusOne.link_lands",
+        "Becoming.CausalGrowth.OmegaPlusOne.reach_lands",
+        "Becoming.CausalGrowth.OmegaPlusOne.not_reach_top"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. links, link_of_reach and links_least hold on every carrier and relation; reach_links on a relation on the numbers in which each element is preceded only by smaller labels, with precedence decidable, or with what lies between decided (reach_links_of_decided); reach_links_iff adds transitivity, and ordered_reach_links_iff takes a causal set with decidable precedence.",
+      "zh": "不加公理。links、link_of_reach 与 links_least 于每一载体与关系成立；reach_links 于数上每元仅为较小标号者所先、先后可判定之关系，或判定居间者（reach_links_of_decided）；reach_links_iff 另加可传递，ordered_reach_links_iff 取先后可判定之因果集。"
+    },
+    {
+      "en": "Modelling choices: orders on the numbers with a natural labelling, and ω + 1 on Option Nat; precedence Prop-valued; every result pointwise, with no function extensionality.",
+      "zh": "建模之选：数上自然编号之序，ω + 1 取于 Option Nat；先后为命题值；诸结果皆逐点，不用函数外延性。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That reach of links fails on every order that is not locally finite: an order with an infinite interval can be the reach of its links.",
+      "zh": "覆盖之及于每一非局部有限之序皆失效：有无穷区间之序可为其覆盖之及。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That it holds on every locally finite order: classically it does, but the Lean proves the naturally labelled case, and orders such as the integers are not covered.",
+      "zh": "其于每一局部有限之序皆成立：经典上然，然 Lean 只证自然编号之情形，整数之类之序不在其内。",
+      "kind": "scope"
+    },
+    {
+      "en": "That precedence on ω + 1 is the reach of no condition relation: a transitive relation is its own reach; only the links fail.",
+      "zh": "ω + 1 上之先后非任何缘关系之及：可传递之关系即其自身之及；失效者仅为覆盖。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
+      "detail": {
+        "en": "On ω + 1 some 0 precedes the top and no reach of links reaches it (OmegaPlusOne.not_reach_top).",
+        "zh": "于 ω + 1，some 0 先于顶，而无覆盖之及至之（OmegaPlusOne.not_reach_top）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
+      "detail": {
+        "en": "The links of the path 0 → 1 → 2 reach (0, 2), which the path does not relate (path_not_reach_of_links).",
+        "zh": "路 0 → 1 → 2 之覆盖及于 (0, 2)，而路不关联之（path_not_reach_of_links）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
+      "detail": {
+        "en": "Three elements whose relations through the middle are a proposition P: the links reach 2 from 0 only where P is decided (Undecided.em_of_reach_third), so reaching every pair by links is excluded middle (reach_links_all_iff_em).",
+        "zh": "三元，其经中间者之关系为命题 P：唯 P 可判定时覆盖自 0 及于 2（Undecided.em_of_reach_third），故每一对皆由覆盖及之即排中律（reach_links_all_iff_em）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T195912.152773Z): 36 of Becoming.CausalGrowth's 212 declarations, each with an empty axiom report, cited here, the others by what-can-be-born-next. Built in one session; an independent read-only review by another AI agent (REVIEW-UE13) and a re-check (RECHECK-UE13), study section 431; not reviewed by a person. Many laws restate known order theory.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261027T195912.152773Z）：Becoming.CausalGrowth 之 212 项声明中 36 项，公理报告皆空，本记录引之，余者为 what-can-be-born-next 所引。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE13）并复查（RECHECK-UE13），见研究第 431 节；未经人审。诸多律重述已知之序论。"
+  },
+  "next_delta": {
+    "en": "The locally finite case without a natural labelling, with intervals decided, and which nets of the models are the links of their precedence; review by a person.",
+    "zh": "无自然编号而区间可判定之局部有限情形，以及诸模型中何网为其先后之覆盖；人之审查。"
+  },
+  "correspondence": {
+    "en": "Causal set theory (Bombelli, Lee, Meyer and Sorkin 1987; Surya 2019): its links are the covering pairs, and that a locally finite order is the transitive closure of its covering relation is known, failing where an interval is infinite, as on ω + 1. The calibration, excluded middle for reaching every pair, is a lemma of the law: telling a direct condition from a longer chain is deciding whether anything lies between. It answers in part the logic review's question whether precedence as the reach of a condition relation is a sound order of time (L-02). Graded in UE13's NOTE.",
+    "zh": "因果集理论（Bombelli、Lee、Meyer、Sorkin 1987；Surya 2019）：其 link 即覆盖之对；局部有限之序为其覆盖关系之传递闭包为已知，区间无穷处则否，如 ω + 1。校准（每一对皆由覆盖及之即排中律）为此律之引理：分辨直接之缘与较长之链，即判定其间有无居间者。此部分回答逻辑审查之问：以缘关系之及为先后，是否为时间之可靠之序（L-02）。分级见 UE13 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
+  "aliases": [
+    "Precedence and its links",
+    "先后与其覆盖",
+    "links of a causal set",
+    "covering relation as conditions",
+    "Becoming.CausalGrowth.reach_links",
+    "Becoming.CausalGrowth.links_least",
+    "Becoming.CausalGrowth.reach_links_all_iff_em"
+  ],
+  "dependencies": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«际», «及», «则», «及之传递» and «无环»: relations, reach and cycles.",
+        "zh": "«际»、«及»、«则»、«及之传递» 与 «无环»：关系、及与环。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-can-be-born-next",
+      "detail": {
+        "en": "The configurations of causal-set growth are the causal sets here, on which precedence is the reach of its links where it is decidable.",
+        "zh": "因果集生长之构型即此处之因果集；先后可判定时，其先后即其覆盖之及。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.CausalGrowth.Causet",
+        "Becoming.CausalGrowth.Causet.Ordered",
+        "Becoming.CausalGrowth.Causet.Ordered.acyclic",
+        "Becoming.CausalGrowth.Causet.Ordered.irrefl",
+        "Becoming.CausalGrowth.OmegaPlusOne.between",
+        "Becoming.CausalGrowth.OmegaPlusOne.link_lands",
+        "Becoming.CausalGrowth.OmegaPlusOne.no_link_into_top",
+        "Becoming.CausalGrowth.OmegaPlusOne.not_reach_top",
+        "Becoming.CausalGrowth.OmegaPlusOne.prec",
+        "Becoming.CausalGrowth.OmegaPlusOne.prec_irrefl",
+        "Becoming.CausalGrowth.OmegaPlusOne.prec_trans",
+        "Becoming.CausalGrowth.OmegaPlusOne.reach_lands",
+        "Becoming.CausalGrowth.Undecided.em_of_reach_third",
+        "Becoming.CausalGrowth.Undecided.third",
+        "Becoming.CausalGrowth.Undecided.third_no_reach_from_two",
+        "Becoming.CausalGrowth.Undecided.third_not_from_two",
+        "Becoming.CausalGrowth.Undecided.third_ordered",
+        "Becoming.CausalGrowth.labelled_of_reach",
+        "Becoming.CausalGrowth.link_of_reach",
+        "Becoming.CausalGrowth.links",
+        "Becoming.CausalGrowth.links_le",
+        "Becoming.CausalGrowth.links_least",
+        "Becoming.CausalGrowth.links_of_iff",
+        "Becoming.CausalGrowth.nat_reach_links",
+        "Becoming.CausalGrowth.ordered_reach_links_iff",
+        "Becoming.CausalGrowth.path",
+        "Becoming.CausalGrowth.path_not_reach_of_links",
+        "Becoming.CausalGrowth.reach_links",
+        "Becoming.CausalGrowth.reach_links_all_iff_em",
+        "Becoming.CausalGrowth.reach_links_iff",
+        "Becoming.CausalGrowth.reach_links_le",
+        "Becoming.CausalGrowth.reach_links_of_decided",
+        "Becoming.CausalGrowth.reach_links_within",
+        "Becoming.CausalGrowth.reach_links_within_of_decided",
+        "Becoming.CausalGrowth.searchBelow",
+        "Becoming.CausalGrowth.searchBelow_or"
+      ],
+      "sha256": "8a1c8e9c9d9ed0dc9ec7955424905c901747756302354b6048d2ffe56e5b3726"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "role": "proof",
+      "sha256": "597036b7017d77d548b949ca29aeb036379904c8b7d8fd7be8329e4df400c940"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "role": "receipt",
+      "sha256": "18d5d8f742017f011cc1df59d6be80b1b3e0a46441e7127a0d784dfed1a5fd0b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "c0e3c51a61e2e060ac2da14e5dd889fe63c755905268872f31319ff56431c871"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/NOTE.md",
+      "role": "integration",
+      "sha256": "4257cda667e12a35a8b7925d6d6b4219b395072ccb1550b95b832add2a4ec9d7"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/REVIEW-UE13.md",
+      "role": "integration",
+      "sha256": "4f8c7cf6f1aef93c50c1fd03f75dc31e6564bde58357c5f24fe2ba2db1c25730"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/RECHECK-UE13.md",
+      "role": "integration",
+      "sha256": "8c265f6a7067d3dc0af47896f92705ef6d30e14963607b13c7d69988ff5aab4e"
+    },
+    {
+      "path": "theories/becoming/chapters/01-ROOT.md",
+      "role": "statement",
+      "sha256": "f2841cf4108b3a299f501e7af1fee40efd79008ef5c67d6a783390439a54ba65"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.CausalGrowth",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "28 October 2026: added (UE13), precedence and its links: a link of the root's reach is a step, so every net whose reach is a relation contains its links; on a naturally labelled transitive relation with decidable precedence, precedence is the reach of its links, with no finiteness; deciding what lies between cannot be dropped (excluded middle); not on ω + 1; after a review and a re-check; study section 431.",
+      "zh": "2026年10月28日：新增（UE13），先后与其覆盖：根之及之覆盖即一步，故凡其及为一关系之网皆含其覆盖；于自然编号、可传递且先后可判定之关系，先后即其覆盖之及，无需有限；居间之判定不可去（排中律）；于 ω + 1 则否；经审查与复查；研究第 431 节。"
+    }
+  ]
+}

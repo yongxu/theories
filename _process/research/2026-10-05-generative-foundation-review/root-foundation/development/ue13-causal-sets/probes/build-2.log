@@ -1,0 +1,23 @@
+Becoming/CausalGrowthProbe.lean:185:30: warning: unused variable `start`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/probes/tree",
+  "modules": 76,
+  "ran": [
+    "Becoming.CausalGrowthProbe",
+    "BecomingCausalGrowthProbeAxiomAudit"
+  ],
+  "reused": 75,
+  "unclean": [
+    "Becoming.CausalGrowthProbe"
+  ],
+  "audits": {
+    "Becoming.CausalGrowthProbe": {
+      "theorems": 42,
+      "declarations": 54,
+      "with_axioms": {}
+    }
+  }
+}

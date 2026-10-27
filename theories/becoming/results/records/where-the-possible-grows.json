@@ -491,6 +491,13 @@
         "en": "Tasks and what performs them: holding the performing part throughout is sufficient for constructor theory's performance and not needed, and the held possible gives the premise of composition.",
         "zh": "任务与执行之者：全程持守执行之部分于构造子理论之执行充分而非必要，持守时之可能给出合成之前提。"
       }
+    },
+    {
+      "id": "what-can-be-born-next",
+      "detail": {
+        "en": "What can be born next against what continues: internal temporality is holding the past, so on causal-set growth the held possible is the whole possible.",
+        "zh": "次可生者与相续：内在时间性即持守过去，故于因果集之生长上持守之可能即全部可能。"
+      }
     }
   ],
   "references": [
@@ -714,6 +721,10 @@
     {
       "en": "28 October 2026, board item UE12 (study section 430): related to tasks-and-what-performs-them; no statement, next step or declaration changed.",
       "zh": "2026年10月28日，工作板条目 UE12（研究第 430 节）：与 tasks-and-what-performs-them 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "28 October 2026, board item UE13 (study section 431): related to what-can-be-born-next; no statement, next step or declaration changed.",
+      "zh": "2026年10月28日，工作板条目 UE13（研究第 431 节）：与 what-can-be-born-next 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

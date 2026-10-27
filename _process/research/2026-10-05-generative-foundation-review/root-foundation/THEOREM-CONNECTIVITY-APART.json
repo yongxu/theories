@@ -4441,6 +4441,86 @@
    "module": "Becoming.Tasks",
    "category": "model-witness",
    "reason": "the unregular witness's two tasks, 0 to 1 or 2 and 2 to 3, are not a regular pair, naming only the tasks: a witness of Becoming.Tasks (UE12), whose process is in Unregular.composite_not_possible"
+  },
+  "Becoming.CausalGrowth.links_le": {
+   "module": "Becoming.CausalGrowth",
+   "category": "support",
+   "reason": "a link of a relation is a pair of it: a one-line unpacking of the module's definition of links, on any carrier"
+  },
+  "Becoming.CausalGrowth.links_least": {
+   "module": "Becoming.CausalGrowth",
+   "category": "general-structure",
+   "reason": "every net whose reach is a relation contains that relation's links: a law of every relation on any carrier; the base supplies no reading of links, which UE13 reads on the configurations of causal-set growth"
+  },
+  "Becoming.CausalGrowth.nat_reach_links": {
+   "module": "Becoming.CausalGrowth",
+   "category": "model-witness",
+   "reason": "on all the numbers in their order every pair is reached by links: a fact about one infinite naturally labelled order, the limit of the chain, showing that reaching by links needs no finiteness; a witness of Becoming.CausalGrowth (UE13)"
+  },
+  "Becoming.CausalGrowth.path_not_reach_of_links": {
+   "module": "Becoming.CausalGrowth",
+   "category": "model-witness",
+   "reason": "on the path 0 to 1 to 2 the links reach the pair (0, 2), which the path does not relate: a fact about one constructed relation, showing that without transitivity only one inclusion holds; a witness of Becoming.CausalGrowth (UE13)"
+  },
+  "Becoming.CausalGrowth.OmegaPlusOne.prec_irrefl": {
+   "module": "Becoming.CausalGrowth",
+   "category": "model-witness",
+   "reason": "the order of ω + 1 is irreflexive: a fact about one constructed order, the witness of OmegaPlusOne.not_reach_top"
+  },
+  "Becoming.CausalGrowth.OmegaPlusOne.prec_trans": {
+   "module": "Becoming.CausalGrowth",
+   "category": "model-witness",
+   "reason": "the order of ω + 1 is transitive: a fact about one constructed order, the witness of OmegaPlusOne.not_reach_top"
+  },
+  "Becoming.CausalGrowth.OmegaPlusOne.between": {
+   "module": "Becoming.CausalGrowth",
+   "category": "model-witness",
+   "reason": "every positive number lies between 0 and the top of ω + 1, so the interval is infinite: a fact about one constructed order, the witness of OmegaPlusOne.not_reach_top"
+  },
+  "Becoming.CausalGrowth.OmegaPlusOne.not_reach_top": {
+   "module": "Becoming.CausalGrowth",
+   "category": "model-witness",
+   "reason": "on ω + 1, 0 precedes the top and the links never reach it: a fact about one constructed order, naming no process, showing that precedence need not be the reach of its links where an interval is infinite; a witness of Becoming.CausalGrowth (UE13)"
+  },
+  "Becoming.CausalGrowth.Causet.Ordered.acyclic": {
+   "module": "Becoming.CausalGrowth",
+   "category": "support",
+   "reason": "a causal set's precedence has no cycle (the root's «无环»), by its natural labelling (labelled_of_reach): an unpacking of the module's definition of a causal set, whose reach is then a strict order by the root's «无环则及为序»; every configuration the growth reaches from a causal set is one (birth_ordered)"
+  },
+  "Becoming.CausalGrowth.ordered_reach_links_iff": {
+   "module": "Becoming.CausalGrowth",
+   "category": "general-structure",
+   "reason": "on every causal set with decided precedence, precedence is the reach of its links: reach_links_iff, a law of every transitive naturally labelled relation on the numbers, read on the module's causal sets; the statement concerns one configuration and names no process, and the course form is reach_links_courses_iff_em"
+  },
+  "Becoming.CausalGrowth.reach_links_all_iff_em": {
+   "module": "Becoming.CausalGrowth",
+   "category": "calibration",
+   "reason": "that every pair of every causal set is reached by links is exactly excluded middle (the witness Undecided.third): telling a link, a direct condition, from a longer chain is deciding whether anything lies between; the base asserts no decided precedence, so this is a lemma of UE13's law on links, whose course form is reach_links_courses_iff_em"
+  },
+  "Becoming.CausalGrowth.birth_maximal": {
+   "module": "Becoming.CausalGrowth",
+   "category": "support",
+   "reason": "a birth's new element precedes nothing: a one-line unpacking of the module's definition of a birth, the move of the growth"
+  },
+  "Becoming.CausalGrowth.not_stem_all_birth": {
+   "module": "Becoming.CausalGrowth",
+   "category": "support",
+   "reason": "all the elements after a birth are not a stem before it, since the new element is not yet there: a one-line unpacking of the module's definitions of a stem and a birth"
+  },
+  "Becoming.CausalGrowth.ordered_not_renews": {
+   "module": "Becoming.CausalGrowth",
+   "category": "general-structure",
+   "reason": "no causal set's precedence, nor its links, renews without end (the root's «生生») in any class: a law of every naturally labelled order on the numbers, through the root's renewal, on one configuration and naming no process; every configuration the growth reaches from a causal set is one (birth_ordered)"
+  },
+  "Becoming.CausalGrowth.Halves.pairs_class": {
+   "module": "Becoming.CausalGrowth",
+   "category": "model-witness",
+   "reason": "the relation pairing 2m with 2m + 1 is a class: a fact about one constructed relation, the class in which the chain's limit renews without end (chainLimit_renews)"
+  },
+  "Becoming.CausalGrowth.Finer.classOf_class": {
+   "module": "Becoming.CausalGrowth",
+   "category": "model-witness",
+   "reason": "the relation telling 1 from the other elements is a class: a fact about one constructed relation, the class on which widening gains continuation read on links (Finer.widens, Finer.continues, Finer.not_continues) and loses it (Finer.loses)"
   }
  },
  "instances": {

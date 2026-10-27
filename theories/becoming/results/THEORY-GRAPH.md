@@ -2,17 +2,17 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3041 nodes, 5472 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3046 nodes, 5492 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
-| The root: relation, condition, class, continuation, core | 31 | 78 | 64 | 0 |
+| The root: relation, condition, class, continuation, core | 31 | 79 | 64 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 74 | 0 |
 | Knowing and testing | 0 | 89 | 72 | 0 |
 | Life and evolution | 0 | 42 | 17 | 0 |
 | Collectives and selection | 0 | 59 | 16 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
-| Significance and alignment | 0 | 76 | 55 | 0 |
+| Significance and alignment | 0 | 77 | 56 | 0 |
 | Method and the formal core | 0 | 19 | 23 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 | Not yet assigned | 0 | 0 | 1 | 0 |
@@ -51,7 +51,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 
 ## The root: relation, condition, class, continuation, core
 
-Results (78):
+Results (79):
 
 - [A configuration is how it relates](records/configurations-alike-by-relation.md) (recorded-checked)
 - [A negation's change, and cases into a stable conclusion](records/negation-change-and-stable-cases.md) (recorded-checked)
@@ -93,6 +93,7 @@ Results (78):
 - [One unfolding, read in context](records/unity-of-readings.md) (recorded-checked)
 - [Only the order of change shows](records/only-the-order-of-change-shows.md) (recorded-checked)
 - [Place/transition nets on the spine](records/place-transition-nets-on-the-spine.md) (recorded-checked)
+- [Precedence and its links](records/precedence-and-its-links.md) (recorded-checked)
 - [Premises read off the exchange](records/premises-read-off-the-exchange.md) (recorded-checked)
 - [Process and frame as readings of one unfolding](records/process-and-frame-as-readings.md) (recorded-checked)
 - [Reach from a seed](records/reach-from-a-seed.md) (recorded-checked)
@@ -473,7 +474,7 @@ Modules (9, 3 stated on the grammar): `GrammarCandidates`, `GrammarCourse`, `Gra
 
 ## Significance and alignment
 
-Results (76):
+Results (77):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -538,6 +539,7 @@ Results (76):
 - [Weights within a ratio agree past it](records/weights-within-a-ratio-agree-past-it.md) (recorded-checked)
 - [What a course keeps reachable](records/what-a-course-keeps-reachable.md) (recorded-checked)
 - [What a line must hold, and what a regularity takes in](records/what-a-line-holds-and-a-regularity-takes-in.md) (recorded-checked)
+- [What can be born next against what continues](records/what-can-be-born-next.md) (recorded-checked)
 - [What comparison principle C ranks under each reading](records/ranking-under-readings.md) (recorded-checked)
 - [What keeping widening needs, and what carries it](records/what-keeping-widening-needs.md) (recorded-checked)
 - [What leaves a class follows its line](records/what-leaves-a-class-follows-its-line.md) (recorded-checked)
@@ -552,7 +554,7 @@ Results (76):
 - [Widening as what every weighting ranks](records/widening-as-what-every-weighting-ranks.md) (recorded-checked)
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)
 
-Modules (55, 6 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `ReachableRanges`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
+Modules (56, 7 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `CausalGrowth`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `ReachableRanges`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`
 
 
 ## Method and the formal core
@@ -602,4 +604,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-296 of 331 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+296 of 332 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

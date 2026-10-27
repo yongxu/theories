@@ -97,6 +97,7 @@ import Becoming.ComparingCourses
 import Becoming.ReachableRanges
 import Becoming.HeldPossible
 import Becoming.Tasks
+import Becoming.CausalGrowth
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1435,6 +1436,38 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`Tasks.RiseTask.widens`) or below it (`Tasks.FallTask.widens_back`), and where no course starts
   covering ranks nothing (`Tasks.Catalysis.not_widensOrLater`). Each law is near-definitional or a
   witness. A leaf (board item UE12).
+* `Becoming.CausalGrowth` (L1): causal sets read on the root and on processes. The links of a
+  relation, causal set theory's term, are the pairs it relates with nothing it relates between
+  (`CausalGrowth.links`); a link of the root's reach `«及» R` is a step of `R`
+  (`CausalGrowth.link_of_reach`), so every net whose reach is a relation contains its links
+  (`CausalGrowth.links_least`). On a naturally labelled relation with decidable precedence every pair
+  is reached by links (`CausalGrowth.reach_links`), and with transitivity precedence is the reach of
+  its links (`CausalGrowth.reach_links_iff`); deciding what lies between cannot be dropped
+  (`CausalGrowth.reach_links_all_iff_em`), and on `ω + 1` the top is preceded and never reached by
+  links (`CausalGrowth.OmegaPlusOne.not_reach_top`). Sequential growth is a process
+  (`CausalGrowth.process`): a move chooses a stem, a set of elements closed downward
+  (`CausalGrowth.Stem`), and gives birth to a new maximal element preceded exactly by it
+  (`CausalGrowth.birth`, `CausalGrowth.birth_maximal`); every move holds the past
+  (`CausalGrowth.step_holdsPast`), so the possible with the past held is the whole possible
+  (`CausalGrowth.possibleHeld_iff`), and on every course from a causal set what can be born next
+  keeps widening (`CausalGrowth.keepsWidening`). Of two configurations of one size every stem of the
+  first is a stem of the second exactly where the second's precedence is included in the first's
+  (`CausalGrowth.stems_included_iff`), so of two courses from the empty set one includes the other's
+  stems at every offset exactly where its precedence is included in the other's
+  (`CausalGrowth.rangeIncludes_iff`), finding the pair a widening loses being excluded middle
+  (`CausalGrowth.pair_converse_iff_em`), and widening adds no continuation of any class read on
+  precedence (`CausalGrowth.continuation_of_rangeIncludes`); most of these comparisons fail without
+  the empty start (`CausalGrowth.Starts.strict_needs_starts`). Read on what continues within the one
+  class the inclusion reverses (`CausalGrowth.rangeIncludes_continuing_iff`), and no strict order
+  contains both widenings (`CausalGrowth.no_order_contains_both`); read on both, courses differing by
+  a pair are mixed (`CausalGrowth.mixed_of_pair`). No configuration renews without end
+  (`CausalGrowth.ordered_not_renews`), and of the extremes' limits only the chain's does
+  (`CausalGrowth.antichainLimit_not_renews`, `CausalGrowth.chainLimit_renews`). Read on links a finer
+  class can gain or lose continuation by widening (`CausalGrowth.Finer.continues`,
+  `CausalGrowth.Finer.not_continues`, `CausalGrowth.Finer.loses`), and up to relabelling the kinds of
+  birth do not reverse precedence (`CausalGrowth.Kinds.not_included_antichain_chain`,
+  `CausalGrowth.Kinds.not_included_chain_antichain`). Each law is near-definitional, a witness or a
+  calibration. A leaf (board item UE13).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

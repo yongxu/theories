@@ -1,0 +1,102 @@
+n = 1: 1 causal sets up to isomorphism; kinds of birth: max 2, min 2 (n + 1 = 2); classes at the min: 1
+   kinds  2  stems  2  pairs  0  automorphisms   1  [] antichain
+   at the max: [] with 1 automorphism(s)
+   classes with no symmetry: 1, their kinds: [2]
+n = 2: 2 causal sets up to isomorphism; kinds of birth: max 3, min 3 (n + 1 = 3); classes at the min: 2
+   kinds  3  stems  4  pairs  0  automorphisms   2  [] antichain
+   kinds  3  stems  3  pairs  1  automorphisms   1  [(0, 1)] chain
+   at the max: [] with 2 automorphism(s); [(0, 1)] with 1 automorphism(s)
+   classes with no symmetry: 1, their kinds: [3]
+n = 3: 5 causal sets up to isomorphism; kinds of birth: max 6, min 4 (n + 1 = 4); classes at the min: 4
+   kinds  6  stems  6  pairs  1  automorphisms   1  [(0, 2)] 
+   kinds  4  stems  8  pairs  0  automorphisms   6  [] antichain
+   kinds  4  stems  5  pairs  2  automorphisms   2  [(0, 2), (1, 2)] 
+   kinds  4  stems  5  pairs  2  automorphisms   2  [(0, 1), (0, 2)] 
+   kinds  4  stems  4  pairs  3  automorphisms   1  [(0, 1), (0, 2), (1, 2)] chain
+   at the max: [(0, 2)] with 1 automorphism(s)
+   classes with no symmetry: 2, their kinds: [6, 4]
+n = 4: 16 causal sets up to isomorphism; kinds of birth: max 9, min 5 (n + 1 = 5); classes at the min: 8
+   kinds  9  stems 12  pairs  1  automorphisms   2  [(0, 3)] 
+   kinds  8  stems 10  pairs  2  automorphisms   2  [(0, 3), (1, 3)] 
+   kinds  8  stems 10  pairs  2  automorphisms   2  [(0, 2), (0, 3)] 
+   kinds  8  stems  8  pairs  3  automorphisms   1  [(0, 2), (0, 3), (1, 3)] 
+   kinds  8  stems  8  pairs  3  automorphisms   1  [(0, 2), (0, 3), (2, 3)] 
+   kinds  7  stems  7  pairs  4  automorphisms   1  [(0, 2), (0, 3), (1, 3), (2, 3)] 
+   kinds  7  stems  7  pairs  4  automorphisms   1  [(0, 1), (0, 2), (0, 3), (1, 3)] 
+   kinds  6  stems  9  pairs  2  automorphisms   2  [(0, 2), (1, 3)] 
+   kinds  5  stems 16  pairs  0  automorphisms  24  [] antichain
+   kinds  5  stems  9  pairs  3  automorphisms   6  [(0, 3), (1, 3), (2, 3)] 
+   kinds  5  stems  9  pairs  3  automorphisms   6  [(0, 1), (0, 2), (0, 3)] 
+   kinds  5  stems  7  pairs  4  automorphisms   4  [(0, 2), (0, 3), (1, 2), (1, 3)] 
+   kinds  5  stems  6  pairs  5  automorphisms   2  [(0, 2), (0, 3), (1, 2), (1, 3), (2, 3)] 
+   kinds  5  stems  6  pairs  5  automorphisms   2  [(0, 1), (0, 2), (0, 3), (1, 3), (2, 3)] 
+   kinds  5  stems  6  pairs  5  automorphisms   2  [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3)] 
+   kinds  5  stems  5  pairs  6  automorphisms   1  [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)] chain
+   at the max: [(0, 3)] with 2 automorphism(s)
+   classes with no symmetry: 5, their kinds: [8, 8, 7, 7, 5]
+n = 5: 63 causal sets up to isomorphism; kinds of birth: max 16, min 6 (n + 1 = 6); classes at the min: 16
+   kinds 16  stems 16  pairs  3  automorphisms   1  [(0, 3), (0, 4), (1, 4)] 
+   kinds 14  stems 14  pairs  4  automorphisms   1  [(0, 3), (0, 4), (1, 4), (3, 4)] 
+   kinds 14  stems 14  pairs  4  automorphisms   1  [(0, 2), (0, 3), (0, 4), (2, 4)] 
+   kinds 12  stems 24  pairs  1  automorphisms   6  [(0, 4)] 
+   kinds 12  stems 20  pairs  2  automorphisms   4  [(0, 4), (1, 4)] 
+   kinds 12  stems 20  pairs  2  automorphisms   4  [(0, 3), (0, 4)] 
+   kinds 12  stems 18  pairs  2  automorphisms   2  [(0, 3), (1, 4)] 
+   kinds 12  stems 16  pairs  3  automorphisms   2  [(0, 3), (0, 4), (3, 4)] 
+   kinds 12  stems 15  pairs  3  automorphisms   2  [(0, 3), (1, 4), (2, 4)] 
+   kinds 12  stems 15  pairs  3  automorphisms   2  [(0, 2), (0, 3), (1, 4)] 
+   kinds 12  stems 12  pairs  4  automorphisms   1  [(0, 2), (0, 4), (1, 3), (2, 4)] 
+   kinds 12  stems 12  pairs  5  automorphisms   1  [(0, 2), (0, 3), (0, 4), (1, 4), (2, 4)] 
+   kinds 11  stems 14  pairs  4  automorphisms   2  [(0, 3), (0, 4), (1, 4), (2, 4)] 
+   kinds 11  stems 14  pairs  4  automorphisms   2  [(0, 2), (0, 3), (0, 4), (1, 4)] 
+   kinds 11  stems 11  pairs  5  automorphisms   1  [(0, 2), (0, 4), (1, 3), (1, 4), (2, 4)] 
+   kinds 11  stems 11  pairs  5  automorphisms   1  [(0, 2), (0, 3), (0, 4), (1, 3), (2, 4)] 
+   kinds 10  stems 18  pairs  3  automorphisms   6  [(0, 4), (1, 4), (2, 4)] 
+   kinds 10  stems 18  pairs  3  automorphisms   6  [(0, 2), (0, 3), (0, 4)] 
+   kinds 10  stems 14  pairs  4  automorphisms   4  [(0, 3), (0, 4), (1, 3), (1, 4)] 
+   kinds 10  stems 13  pairs  5  automorphisms   2  [(0, 3), (0, 4), (1, 4), (2, 4), (3, 4)] 
+   kinds 10  stems 12  pairs  5  automorphisms   2  [(0, 3), (0, 4), (1, 3), (1, 4), (2, 4)] 
+   kinds 10  stems 12  pairs  5  automorphisms   2  [(0, 3), (0, 4), (1, 3), (1, 4), (3, 4)] 
+   kinds 10  stems 12  pairs  5  automorphisms   2  [(0, 2), (0, 3), (0, 4), (2, 4), (3, 4)] 
+   kinds 10  stems 12  pairs  5  automorphisms   2  [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4)] 
+   kinds 10  stems 12  pairs  5  automorphisms   2  [(0, 2), (0, 3), (0, 4), (2, 3), (2, 4)] 
+   kinds 10  stems 13  pairs  5  automorphisms   2  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 4)] 
+   kinds 10  stems 10  pairs  6  automorphisms   1  [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 4)] 
+   kinds 10  stems 10  pairs  6  automorphisms   1  [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (3, 4)] 
+   kinds 10  stems 10  pairs  6  automorphisms   1  [(0, 2), (0, 3), (0, 4), (1, 4), (2, 3), (2, 4)] 
+   kinds 10  stems 10  pairs  6  automorphisms   1  [(0, 2), (0, 3), (0, 4), (2, 3), (2, 4), (3, 4)] 
+   kinds  9  stems 13  pairs  4  automorphisms   2  [(0, 3), (0, 4), (1, 3), (2, 4)] 
+   kinds  9  stems 13  pairs  4  automorphisms   2  [(0, 2), (0, 4), (1, 3), (1, 4)] 
+   kinds  9  stems 11  pairs  6  automorphisms   2  [(0, 3), (0, 4), (1, 3), (1, 4), (2, 4), (3, 4)] 
+   kinds  9  stems 11  pairs  6  automorphisms   2  [(0, 2), (0, 3), (0, 4), (1, 4), (2, 4), (3, 4)] 
+   kinds  9  stems 11  pairs  6  automorphisms   2  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (2, 4)] 
+   kinds  9  stems 11  pairs  6  automorphisms   2  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (1, 4)] 
+   kinds  9  stems  9  pairs  7  automorphisms   1  [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 4), (3, 4)] 
+   kinds  9  stems  9  pairs  7  automorphisms   1  [(0, 2), (0, 3), (0, 4), (1, 4), (2, 3), (2, 4), (3, 4)] 
+   kinds  9  stems  9  pairs  7  automorphisms   1  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 4)] 
+   kinds  9  stems  9  pairs  7  automorphisms   1  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (3, 4)] 
+   kinds  8  stems  9  pairs  7  automorphisms   2  [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4)] 
+   kinds  8  stems  9  pairs  7  automorphisms   2  [(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 4)] 
+   kinds  8  stems  8  pairs  8  automorphisms   1  [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)] 
+   kinds  8  stems  8  pairs  8  automorphisms   1  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 4), (3, 4)] 
+   kinds  8  stems  8  pairs  8  automorphisms   1  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 4)] 
+   kinds  7  stems 10  pairs  6  automorphisms   2  [(0, 2), (0, 4), (1, 3), (1, 4), (2, 4), (3, 4)] 
+   kinds  7  stems 10  pairs  6  automorphisms   2  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (2, 4)] 
+   kinds  6  stems 32  pairs  0  automorphisms 120  [] antichain
+   kinds  6  stems 17  pairs  4  automorphisms  24  [(0, 4), (1, 4), (2, 4), (3, 4)] 
+   kinds  6  stems 17  pairs  4  automorphisms  24  [(0, 1), (0, 2), (0, 3), (0, 4)] 
+   kinds  6  stems 11  pairs  6  automorphisms  12  [(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4)] 
+   kinds  6  stems 11  pairs  6  automorphisms  12  [(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)] 
+   kinds  6  stems 10  pairs  7  automorphisms   6  [(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)] 
+   kinds  6  stems 10  pairs  7  automorphisms   6  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (2, 4), (3, 4)] 
+   kinds  6  stems 10  pairs  7  automorphisms   6  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)] 
+   kinds  6  stems  8  pairs  8  automorphisms   4  [(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 4), (3, 4)] 
+   kinds  6  stems  8  pairs  8  automorphisms   4  [(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4)] 
+   kinds  6  stems  8  pairs  8  automorphisms   4  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4)] 
+   kinds  6  stems  7  pairs  9  automorphisms   2  [(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)] 
+   kinds  6  stems  7  pairs  9  automorphisms   2  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)] 
+   kinds  6  stems  7  pairs  9  automorphisms   2  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 4), (3, 4)] 
+   kinds  6  stems  7  pairs  9  automorphisms   2  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4)] 
+   kinds  6  stems  6  pairs 10  automorphisms   1  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)] chain
+   at the max: [(0, 3), (0, 4), (1, 4)] with 1 automorphism(s)
+   classes with no symmetry: 19, their kinds: [16, 14, 14, 12, 12, 11, 11, 10, 10, 10, 10, 9, 9, 9, 9, 8, 8, 8, 6]

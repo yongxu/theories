@@ -1386,6 +1386,11 @@
    "base": "frame",
    "note": "reviewed-scoped candidate"
   },
+  "precedence-and-its-links": {
+   "region": "root",
+   "base": "grammar",
+   "note": "CausalGrowth UE13: precedence the reach of its links on naturally labelled orders with decided precedence, the links the least such net; deciding what lies between not droppable (excluded middle); not on omega + 1"
+  },
   "prefix-observation-loss": {
    "region": "knowing",
    "base": "frame",
@@ -2206,6 +2211,11 @@
    "base": "old-base",
    "note": "Reproduction"
   },
+  "what-can-be-born-next": {
+   "region": "significance",
+   "base": "frame",
+   "note": "CausalGrowth UE13: sequential growth holding the past, what can be born next keeping widening; the stems reverse the inclusion of precedence, labelled or up to relabelling, so widening adds no continuation; finding the lost pair excluded middle; read on what continues the order reverses, no strict order holds both; no configuration renews without end; a finer class on links; kinds of birth not so ordered"
+  },
   "what-dependence-alone-carries-of-a-level": {
    "region": "root",
    "base": "old-base",
@@ -2477,6 +2487,11 @@
    "region": "root",
    "base": "frame",
    "note": "one carrier, several laws; symmetry does not fix law"
+  },
+  "Becoming.CausalGrowth": {
+   "region": "significance",
+   "base": "frame",
+   "note": "UE13 causal sets: precedence and its links (01 §1), and what can be born next against what continues (07 §2)"
   },
   "Becoming.CensusBinding": {
    "region": "root",

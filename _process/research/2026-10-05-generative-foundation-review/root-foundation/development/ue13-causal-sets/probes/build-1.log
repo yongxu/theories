@@ -1,0 +1,70 @@
+Becoming/CausalGrowthProbe.lean:34:3: error: Application type mismatch: The argument
+  reach_links_le fun {i j k} => trans
+has type
+  «及» (links fun {i j} => O ?m.24 ?m.24) ?m.25 ?m.26 → O ?m.24 ?m.24
+but is expected to have type
+  «及» (links O) i j → O i j
+in the application
+  Iff.intro (reach_links_le fun {i j k} => trans)
+Becoming/CausalGrowthProbe.lean:38:2: error: Type mismatch
+  reach_links_iff (fun {i j k} => ordered.trans) fun {i j} => ?m.21
+has type
+  «及» (links fun {i j} => c.prec ?m.16 ?m.16) ?m.23 ?m.24 ↔ c.prec ?m.16 ?m.16
+but is expected to have type
+  «及» (links c.prec) i j ↔ c.prec i j
+Becoming/CausalGrowthProbe.lean:50:25: error: Missing cases:
+_
+Becoming/CausalGrowthProbe.lean:50:10: error: Type mismatch
+  fun h => ?m.296
+has type
+  (h : ?m.294) → ?m.297 h
+but is expected to have type
+  False
+Becoming/CausalGrowthProbe.lean:88:37: error: Expected type must not contain free variables
+  2 < (third P).size
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Becoming/CausalGrowthProbe.lean:89:47: error: Expected type must not contain free variables
+  1 < (third P).size
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Becoming/CausalGrowthProbe.lean:90:47: error: Expected type must not contain free variables
+  2 < (third P).size
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Becoming/CausalGrowthProbe.lean:193:12: error: Application type mismatch: The argument
+  none
+has type
+  Option ?m.90
+of sort `Type ?u.1710.281` but is expected to have type
+  ¬∃ z, z < t ∧ ∃ i, i < z ∧ (r'.state t).prec i z ∧ ¬(r.state t).prec i z
+of sort `Prop` in the application
+  isFalse none
+Becoming/CausalGrowthProbe.lean:268:11: warning: unused variable `j`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/CausalGrowthProbe.lean:436:76: error: Expected type must not contain metavariables
+  ?m.145 x✝ above irrefl trans stems lines < 2
+Becoming/CausalGrowthProbe.lean:436:87: error: Expected type must not contain metavariables
+  ?m.144 x✝ above irrefl trans stems lines < ?m.145 x✝ above irrefl trans stems lines
+Becoming/CausalGrowthProbe.lean:459:5: error: Application type mismatch: The argument
+  (grown_prec_iff Finer.widePast 3).mpr ⟨?m.46, ⟨rfl, rfl⟩⟩
+has type
+  (grown Finer.widePast 3).prec 0 2
+but is expected to have type
+  (Finer.wide.state ?m.35).prec ?m.36 ?m.37
+in the application
+  antichain_rangeWidens rfl ((grown_prec_iff Finer.widePast 3).mpr ⟨?m.46, ⟨rfl, rfl⟩⟩)
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/probes/tree",
+  "modules": 76,
+  "ran": [
+    "Becoming.CausalGrowth",
+    "Becoming.CausalGrowthProbe"
+  ],
+  "reused": 74,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.CausalGrowthProbe"
+}

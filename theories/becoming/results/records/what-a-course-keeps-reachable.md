@@ -103,8 +103,9 @@ Covering is the lower (Hoare) preorder of the families of course ranges, exactly
 - related, not a proved adapter: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). C read as widening; widening what can be reached is C's extension on the frame of reachable ranges, and no order here is adopted by C.
 - related, not a proved adapter: [where-the-possible-grows](where-the-possible-grows.md). Where the possible grows: its third law read on a part held, a rule changing its own rule and a tower of rules with no top; the possible relative to what is held grows only where what is held changes.
 - related, not a proved adapter: [tasks-and-what-performs-them](tasks-and-what-performs-them.md). Tasks and what performs them: lagged covering extended from a step to reach, so a delivery adds nothing to the whole possible, and on what a configuration reaches the lagged order is same-offset widening, which follows deliveries in neither direction.
+- related, not a proved adapter: [what-can-be-born-next](what-can-be-born-next.md). What can be born next against what continues: on causal-set growth, including what can be born next at the same offsets is having precedence included, and every course from a causal set keeps widening it.
 
-**Used by:** [tasks-and-what-performs-them](tasks-and-what-performs-them.md) · [where-the-possible-grows](where-the-possible-grows.md)
+**Used by:** [tasks-and-what-performs-them](tasks-and-what-performs-them.md) · [what-can-be-born-next](what-can-be-born-next.md) · [where-the-possible-grows](where-the-possible-grows.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -141,6 +142,7 @@ Aliases: `What a course keeps reachable`, `进程保持可达者`, `covering`, `
 - 27 October 2026: added (UE10), what a course keeps reachable: covering implies inclusion now, so it never ranks a configuration above one that starts a course and admits now what it does not; the lagged order on families of courses decides one witness's pair, not every such pair, a verdict C leaves open; nothing is added to the whole possible along a course; realized and reachable widening rank a pair oppositely on a branching witness; covering is the lower preorder; near-definitional; after a review and two re-checks; study section 424.
 - 27 October 2026, board item UE11 (study section 429): related to where-the-possible-grows; no statement, next step or declaration changed.
 - 28 October 2026, board item UE12 (study section 430): related to tasks-and-what-performs-them; no statement, next step or declaration changed.
+- 28 October 2026, board item UE13 (study section 431): related to what-can-be-born-next; no statement, next step or declaration changed.
 
 </details>
 

@@ -95,8 +95,9 @@ The held law restates open-ended novelty's innovation, novelty that changes the 
 - related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). Its third law, nothing added to the whole possible along a course of one process, read on a part held, a rule changing its own rule and a tower of rules with no top.
 - related, not a proved adapter: [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md). Rules that change themselves read in the grammar's regularity; here read on what each configuration admits: the possible with the rule held grows only where the rule changes.
 - related, not a proved adapter: [tasks-and-what-performs-them](tasks-and-what-performs-them.md). Tasks and what performs them: holding the performing part throughout is sufficient for constructor theory's performance and not needed, and the held possible gives the premise of composition.
+- related, not a proved adapter: [what-can-be-born-next](what-can-be-born-next.md). What can be born next against what continues: internal temporality is holding the past, so on causal-set growth the held possible is the whole possible.
 
-**Used by:** [tasks-and-what-performs-them](tasks-and-what-performs-them.md)
+**Used by:** [tasks-and-what-performs-them](tasks-and-what-performs-them.md) · [what-can-be-born-next](what-can-be-born-next.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -129,6 +130,7 @@ Aliases: `Where the possible grows`, `可能者于何处增长`, `the held possi
 
 - 27 October 2026: added (UE11), where the possible grows: a move adds nothing to the possible under its process; the possible relative to what is held grows only across a step changing what is held and keeps widening only where it changes without end, which does not suffice and which a course that only returns never has; a rule changing its own rule and a tower of rules with no top add nothing to the whole possible, every possibility of the tower had below some height, on the root as reach over a sequence growing coarser; growth relative to what is held and renewal without end are different relations; near-definitional; after a review and a re-check; study section 429.
 - 28 October 2026, board item UE12 (study section 430): related to tasks-and-what-performs-them; no statement, next step or declaration changed.
+- 28 October 2026, board item UE13 (study section 431): related to what-can-be-born-next; no statement, next step or declaration changed.
 
 </details>
 

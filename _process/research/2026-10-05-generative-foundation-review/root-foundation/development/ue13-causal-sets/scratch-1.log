@@ -1,0 +1,29 @@
+Becoming/CausalGrowth.lean:94:14: error: Application type mismatch: The argument
+  none
+has type
+  Option ?m.78
+of sort `Type ?u.566` but is expected to have type
+  ¬∃ z, z < n ∧ p z
+of sort `Prop` in the application
+  isFalse none
+Becoming/CausalGrowth.lean:171:71: error: Type mismatch
+  Option.noConfusion ?m.27
+has type
+  ?m.24 ≍ ?m.26 → Option.noConfusionType ?m.22 ?m.24 ?m.26
+but is expected to have type
+  False
+Becoming/CausalGrowth.lean:493:58: warning: unused variable `z`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/tree",
+  "modules": 75,
+  "ran": [
+    "Becoming.CausalGrowth"
+  ],
+  "reused": 74,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.CausalGrowth"
+}
