@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2003,
-    "distinct_byte_contents": 1578,
+    "lean_paths": 2004,
+    "distinct_byte_contents": 1579,
     "byte_identical_duplicate_groups": 162,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1057,
+      "development-attempt": 1058,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 907
@@ -5803,6 +5803,15 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue10-what-can-be-reached/RECHECK2-UE10.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue10-what-can-be-reached/REVIEW-UE10.md"
       ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue11-where-the-possible-grows/tree/Becoming/HeldPossible.lean",
+      "sha256": "1dc33ceee6198c49d2c4eefc246833bf2bbfcc4d95c78e057f6ab43714eab8da",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -79956,6 +79965,226 @@
         "inductive": 5,
         "structure": 2,
         "theorem": 30
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "1dc33ceee6198c49d2c4eefc246833bf2bbfcc4d95c78e057f6ab43714eab8da": {
+      "byte_size": 20473,
+      "line_count": 361,
+      "imports": [
+        "Becoming.ReachableRanges",
+        "Becoming.Mechanism"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "Reaching.not_reach_of_grows",
+          "qualified_name_hint": "Becoming.Reaching.not_reach_of_grows",
+          "line": 83
+        },
+        {
+          "kind": "theorem",
+          "name": "Reaching.not_step_of_grows",
+          "qualified_name_hint": "Becoming.Reaching.not_step_of_grows",
+          "line": 88
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.possible_of_stretch",
+          "qualified_name_hint": "Becoming.Run.possible_of_stretch",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.departs_of_keepsWidening",
+          "qualified_name_hint": "Becoming.Run.departs_of_keepsWidening",
+          "line": 114
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.not_keepsWidening_of_within",
+          "qualified_name_hint": "Becoming.Run.not_keepsWidening_of_within",
+          "line": 122
+        },
+        {
+          "kind": "def",
+          "name": "keeping",
+          "qualified_name_hint": "Becoming.keeping",
+          "line": 138
+        },
+        {
+          "kind": "def",
+          "name": "Reaching.PossibleHeld",
+          "qualified_name_hint": "Becoming.Reaching.PossibleHeld",
+          "line": 143
+        },
+        {
+          "kind": "theorem",
+          "name": "Reach.of_keeping",
+          "qualified_name_hint": "Becoming.Reach.of_keeping",
+          "line": 150
+        },
+        {
+          "kind": "theorem",
+          "name": "Reach.keeping_mono",
+          "qualified_name_hint": "Becoming.Reach.keeping_mono",
+          "line": 154
+        },
+        {
+          "kind": "theorem",
+          "name": "Reaching.PossibleHeld.possible",
+          "qualified_name_hint": "Becoming.Reaching.PossibleHeld.possible",
+          "line": 160
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.changes_of_heldGrows",
+          "qualified_name_hint": "Becoming.Run.changes_of_heldGrows",
+          "line": 166
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.changes_of_heldKeepsWidening",
+          "qualified_name_hint": "Becoming.Run.changes_of_heldKeepsWidening",
+          "line": 175
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.not_heldKeepsWidening_of_stays",
+          "qualified_name_hint": "Becoming.Run.not_heldKeepsWidening_of_stays",
+          "line": 183
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.not_heldKeepsWidening_of_listed",
+          "qualified_name_hint": "Becoming.Run.not_heldKeepsWidening_of_listed",
+          "line": 190
+        },
+        {
+          "kind": "theorem",
+          "name": "adaptive_keeps_rule_iff",
+          "qualified_name_hint": "Becoming.adaptive_keeps_rule_iff",
+          "line": 207
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.adaptive_rule_changes_of_keepsWidening",
+          "qualified_name_hint": "Becoming.Run.adaptive_rule_changes_of_keepsWidening",
+          "line": 215
+        },
+        {
+          "kind": "def",
+          "name": "process",
+          "qualified_name_hint": "Becoming.RuleTower.process",
+          "line": 237
+        },
+        {
+          "kind": "def",
+          "name": "SameFrom",
+          "qualified_name_hint": "Becoming.RuleTower.SameFrom",
+          "line": 244
+        },
+        {
+          "kind": "theorem",
+          "name": "SameFrom.mono",
+          "qualified_name_hint": "Becoming.RuleTower.SameFrom.mono",
+          "line": 247
+        },
+        {
+          "kind": "theorem",
+          "name": "step_sameFrom",
+          "qualified_name_hint": "Becoming.RuleTower.step_sameFrom",
+          "line": 255
+        },
+        {
+          "kind": "theorem",
+          "name": "trace_held",
+          "qualified_name_hint": "Becoming.RuleTower.trace_held",
+          "line": 262
+        },
+        {
+          "kind": "theorem",
+          "name": "possible_iff_held",
+          "qualified_name_hint": "Becoming.RuleTower.possible_iff_held",
+          "line": 272
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.ruleTower_not_keepsWidening_of_top",
+          "qualified_name_hint": "Becoming.Run.ruleTower_not_keepsWidening_of_top",
+          "line": 288
+        },
+        {
+          "kind": "def",
+          "name": "process",
+          "qualified_name_hint": "Becoming.Climbing.process",
+          "line": 303
+        },
+        {
+          "kind": "def",
+          "name": "adm",
+          "qualified_name_hint": "Becoming.Climbing.adm",
+          "line": 307
+        },
+        {
+          "kind": "def",
+          "name": "Same",
+          "qualified_name_hint": "Becoming.Climbing.Same",
+          "line": 310
+        },
+        {
+          "kind": "def",
+          "name": "course",
+          "qualified_name_hint": "Becoming.Climbing.course",
+          "line": 313
+        },
+        {
+          "kind": "theorem",
+          "name": "rule_changes",
+          "qualified_name_hint": "Becoming.Climbing.rule_changes",
+          "line": 316
+        },
+        {
+          "kind": "theorem",
+          "name": "held_trace",
+          "qualified_name_hint": "Becoming.Climbing.held_trace",
+          "line": 321
+        },
+        {
+          "kind": "theorem",
+          "name": "held_iff",
+          "qualified_name_hint": "Becoming.Climbing.held_iff",
+          "line": 333
+        },
+        {
+          "kind": "theorem",
+          "name": "held_keeps_widening",
+          "qualified_name_hint": "Becoming.Climbing.held_keeps_widening",
+          "line": 341
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_raise",
+          "qualified_name_hint": "Becoming.Climbing.reach_raise",
+          "line": 349
+        },
+        {
+          "kind": "theorem",
+          "name": "whole_every",
+          "qualified_name_hint": "Becoming.Climbing.whole_every",
+          "line": 355
+        }
+      ],
+      "declaration_counts": {
+        "def": 8,
+        "theorem": 25
       },
       "textual_markers": {
         "sorry": [],
