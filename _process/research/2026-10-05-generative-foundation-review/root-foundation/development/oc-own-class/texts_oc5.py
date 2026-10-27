@@ -27,7 +27,7 @@ def edit(path, old, new):
 
 # 07 §4.6, the home section: its title names what the reach asks of the class (the record's title follows)
 edit(CH7, """**Theorem** (root; any type, and witnesses). *Constancy read at a member's class, and how what lies outside it is divided.*""",
-     """**Theorem** (root; any type, and witnesses). *Constancy read at a member's class, what the reach asks of the class, and how what lies outside it is divided.*""")
+     """**Theorem** (root; any type, and witnesses). *Constancy read at a member's class, what the reach asks, and how what lies outside it is divided.*""")
 
 # 07 §4.6, the home section: what the reach asks of the class
 edit(CH7, """the class of `Inconstant`, which holds the member's effects, fails it at the member (`Inconstant.not_constant_at`).

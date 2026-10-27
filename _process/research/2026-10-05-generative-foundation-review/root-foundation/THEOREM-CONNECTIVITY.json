@@ -1,11 +1,11 @@
 {
- "commit": "f7f408b3ffa6babd6befde6955f6d4b1fbe3e255",
+ "commit": "c50e1eb9262945e5c8d913d994e9e9fcb1b8e248",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261025T212948.819150Z",
+ "core_receipt_at_commit": "20261027T062303.627894Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 333,
- "constants": 47179,
- "spine_theorems": 15849,
+ "constants": 47243,
+ "spine_theorems": 15865,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 191,
   "used by a theorem on the base": 5481,
   "instance on the base recorded": 155,
-  "apart: own vocabulary": 1396,
+  "apart: own vocabulary": 1412,
   "apart: prelude-only statement": 103
  },
- "apart": 1499,
- "apart_general_structure_by_design": 629,
- "apart_otherwise": 870,
+ "apart": 1515,
+ "apart_general_structure_by_design": 631,
+ "apart_otherwise": 884,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 111,
   "of them on the base": 74,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 878,
- "apart_roots": 878,
+ "apart_used_by_nothing": 883,
+ "apart_roots": 883,
  "apart_roots_by_category": {
-  "model-witness": 392,
+  "model-witness": 396,
   "support": 128,
-  "general-structure": 324,
+  "general-structure": 325,
   "restates": 13,
   "logical-strength": 12,
   "calibration": 9
@@ -164,13 +164,13 @@
    103,
    397
   ],
+  "Becoming.GrammarPath": [
+   102,
+   102
+  ],
   "Becoming.ConditionalWeights": [
    93,
    93
-  ],
-  "Becoming.GrammarPath": [
-   86,
-   86
   ],
   "Becoming.Drift": [
    70,
@@ -720,8 +720,8 @@
  "rings": {
   "core": {
    "modules": 317,
-   "theorems": 15089,
-   "apart": 1405,
+   "theorems": 15105,
+   "apart": 1421,
    "classes": {
     "statement on both families": 1048,
     "statement on Process/Frame/Run/Trace": 2957,
@@ -730,7 +730,7 @@
     "proof through a base family": 180,
     "used by a theorem on the base": 5122,
     "instance on the base recorded": 155,
-    "apart: own vocabulary": 1303,
+    "apart: own vocabulary": 1319,
     "apart: prelude-only statement": 102
    }
   },
@@ -841,12 +841,12 @@
   "theorems_outside_the_main_component": []
  },
  "records_by_best_alias_class": {
-  "statement on both families": 77,
-  "statement on Process/Frame/Run/Trace": 148,
+  "statement on both families": 78,
+  "statement on Process/Frame/Run/Trace": 157,
   "statement on World/Flow/Web": 132,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 4,
-  "used by a theorem on the base": 10,
+  "used by a theorem on the base": 11,
   "instance on the base recorded": 3,
   "apart: own vocabulary": 31
  },
@@ -16819,6 +16819,11 @@
   "Becoming.Belief.rate_read_in_regularity": "statement on Process/Frame/Run/Trace",
   "Becoming.«所经必同»": "apart: own vocabulary",
   "Becoming.«所经不同则不及»": "apart: own vocabulary",
+  "Becoming.«后皆同类则后皆续»": "apart: own vocabulary",
+  "Becoming.«后皆续当且仅当后皆同类»": "apart: own vocabulary",
+  "Becoming.«后皆续则所缘同于»": "apart: own vocabulary",
+  "Becoming.«后皆续当且仅当自与线皆闭»": "apart: own vocabulary",
+  "Becoming.«亡而网续则后不皆续»": "apart: own vocabulary",
   "Becoming.«有常则至终有常»": "apart: own vocabulary",
   "Becoming.«至终有常则本类至终有常»": "apart: own vocabulary",
   "Becoming.«至终有常之逐类»": "apart: own vocabulary",
@@ -16845,6 +16850,8 @@
   "Becoming.«常类之闭当且仅当后皆同类»": "apart: own vocabulary",
   "Becoming.«外合不失本类之常»": "apart: own vocabulary",
   "Becoming.«外分唯系出类之同»": "apart: own vocabulary",
+  "Becoming.«本类常当且仅当与己相随»": "apart: own vocabulary",
+  "Becoming.«外分唯系己出之同»": "apart: own vocabulary",
   "Becoming.«闭则外分无关»": "apart: own vocabulary",
   "Becoming.«二分为类»": "apart: own vocabulary",
   "Becoming.«异三则同»": "apart: prelude-only statement",
@@ -16864,6 +16871,7 @@
   "Becoming.FiniteFamilies.member_class": "apart: own vocabulary",
   "Becoming.FiniteFamilies.member_not_constant_at": "apart: own vocabulary",
   "Becoming.FiniteFamilies.member_not_constant_to_end": "apart: own vocabulary",
+  "Becoming.FiniteFamilies.member_no_reach": "apart: own vocabulary",
   "Becoming.FiniteFamilies.first_birth_held": "apart: own vocabulary",
   "Becoming.FiniteFamilies.family_takes_in_all": "apart: own vocabulary",
   "Becoming.FiniteFamilies.other_family_outside": "apart: own vocabulary",
@@ -16893,6 +16901,7 @@
   "Becoming.FinerOutside.split_constant_at": "apart: own vocabulary",
   "Becoming.FinerOutside.not_held": "apart: own vocabulary",
   "Becoming.FinerOutside.finer_not_constant_at": "apart: own vocabulary",
+  "Becoming.FinerWake.finer_class": "apart: own vocabulary",
   "Becoming.FinerWake.same_class": "apart: own vocabulary",
   "Becoming.FinerWake.both": "apart: own vocabulary",
   "Becoming.FinerWake.split_constant_at": "apart: own vocabulary",
@@ -16903,6 +16912,13 @@
   "Becoming.UnevenOutside.held": "apart: own vocabulary",
   "Becoming.UnevenOutside.split_not_constant_to_end": "apart: own vocabulary",
   "Becoming.UnevenOutside.finer_constant_to_end": "apart: own vocabulary",
+  "Becoming.OtherLeaves.reached_step": "apart: own vocabulary",
+  "Becoming.OtherLeaves.reached_after": "apart: own vocabulary",
+  "Becoming.OtherLeaves.all_alike": "apart: own vocabulary",
+  "Becoming.OtherLeaves.not_constant_at": "apart: own vocabulary",
+  "Becoming.OtherLeaves.other_not_held": "apart: own vocabulary",
+  "Becoming.OtherLeaves.other_off_line": "apart: own vocabulary",
+  "Becoming.OtherLeaves.reach_without_condition": "apart: own vocabulary",
   "Becoming.Hexagram.same_eq": "used by a theorem on the base",
   "Becoming.Hexagram.same_self": "used by a theorem on the base",
   "Becoming.Hexagram.eq_of_eqb": "used by a theorem on the base",

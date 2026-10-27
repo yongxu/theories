@@ -74,6 +74,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T133822.941968Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T140233.595881Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T160649.851818Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T133815.484194Z/verification.json) | — |
 
 Aliases: `What a line must hold, and what a regularity takes in`, `线所必含，与理之所纳`, `Becoming.«常闭则后皆续»`, `Becoming.«所经必同»`, `Becoming.«至终有常»`
 

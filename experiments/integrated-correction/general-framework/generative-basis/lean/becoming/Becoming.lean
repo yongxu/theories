@@ -3617,8 +3617,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   member's end (`FiniteSharedCondition`). `Becoming.GrammarCases` derives from `«所经不同则不及»` its
   shared-condition witnesses under "a member or not" and where the members only feed from the
   condition (board item GS6). Under a class constant up to the net's end, what leaves the
-  class at a member follows every alike occurrence that conditions anything (`«出类随行»`, `«出类随线»`), and a step with
-  nothing outside the class breaks it (`«出类不随则不至终有常»`, `CleanStep`); a finite class constant up
+  class at a member follows every alike occurrence that conditions anything (`«出类随行»`, `«出类随线»`), and an alike
+  occurrence that conditions something but nothing alike to that effect breaks it (`«出类不随则不至终有常»`, `CleanStep`); a finite class constant up
   to the net's end can leave a member's effects out (`FiniteWake`; board item PF2). Read at a member's
   class (`«本类至终有常»`), constancy up to the net's end carries these laws, the global forms being
   corollaries, and asks more than that a line end only where the net does (`CleanStep`); how what lies
@@ -3627,7 +3627,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   something (`«闭则外分无关»`); where a predicate decides the member's class, the split of it from the rest
   asks least, exactly that what stays and what leaves follow every alike occurrence that conditions
   anything (`«二分本类常当且仅当内外皆随»`, `«内外皆缘则二分本类常»`; `FinerOutside`, `FinerWake`,
-  `UnevenOutside`; board items OC1, OC2).
+  `UnevenOutside`; board items OC1, OC2). With no regularity assumed, everything downstream of a member
+  lies on its line under a class exactly where everything downstream of it is alike to it, that is,
+  where the class holds the effects of the member and of each stage of its line; so this reach asks
+  that the class hold the member's effects, excludes a line that ends while its last stage still
+  conditions something, and does not need the condition at the member's class
+  (`«后皆续当且仅当后皆同类»`, `«后皆续当且仅当自与线皆闭»`, `«后皆续则所缘同于»`, `«亡而网续则后不皆续»`,
+  `OtherLeaves`). Where the member conditions something, that condition is that it and each alike
+  occurrence follow each other, so how what lies outside is divided bears on it only through what is
+  alike to the member's own effects that leave the class (`«本类常当且仅当与己相随»`,
+  `«外分唯系己出之同»`; board item OC5).
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

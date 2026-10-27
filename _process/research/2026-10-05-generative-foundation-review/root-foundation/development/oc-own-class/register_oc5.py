@@ -39,8 +39,8 @@ KNOWN = {
                                                                         "the member's class")),
     'Becoming.OtherLeaves.other_not_held': ('model-witness', w("the occurrence alike to the member, off its line, does "
                                                                "not have its effects held")),
-    'Becoming.OtherLeaves.other_off_line': ('model-witness', w("the occurrence alike to the member lies off its line: "
-                                                               "nothing downstream of the member is that occurrence")),
+    'Becoming.OtherLeaves.other_off_line': ('model-witness', w("the occurrence alike to the member lies off its line, "
+                                                               "nothing downstream of the member being that occurrence")),
     'Becoming.FiniteFamilies.member_no_reach': ('model-witness', w("under the organism's class not everything downstream "
                                                                    "of the first member's birth lies on its line, which "
                                                                    "ends at old age while that stage still conditions "

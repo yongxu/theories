@@ -488,7 +488,7 @@ Results (74):
 - [Comparison where the rest responds](records/comparison-where-the-rest-responds.md) (recorded-checked)
 - [Comparison within reach](records/comparison-within-reach.md) (recorded-checked)
 - [Completion of an in-flight request along its retained route](records/versioned-request-completion.md) (recorded-checked)
-- [Constancy read at a member's class, and how what lies outside it is divided](records/constancy-read-at-a-members-class.md) (recorded-checked)
+- [Constancy read at a member's class, what the reach asks, and how what lies outside it is divided](records/constancy-read-at-a-members-class.md) (recorded-checked)
 - [Decomposition of the continuation condition](records/continuation-condition-decomposition.md) (recorded-checked)
 - [Evidence recovery and the limits of stop access after interrupted change](records/recoverable-mediated-change.md) (recorded-checked)
 - [Executed instructions transport candidate evidence](records/mediated-evidence-transport.md) (recorded-checked)

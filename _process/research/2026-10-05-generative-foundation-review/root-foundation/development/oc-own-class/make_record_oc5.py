@@ -57,8 +57,7 @@ assert [len(x['declarations']) for x in r['laws']] == [3, 7, 8, 2, 7, 19, 11]
 
 r['reviewed_at_utc'] = NOW
 assert r['title']['en'] == "Constancy read at a member's class, and how what lies outside it is divided"
-r['title'] = {'en': "Constancy read at a member's class, what the reach asks of the class, and how what lies outside it "
-                    "is divided",
+r['title'] = {'en': "Constancy read at a member's class, what the reach asks, and how what lies outside it is divided",
               'zh': '于员之类之至终有常，此及所须，与类外之分'}
 r['statement'] = {
     'en': "Constancy up to the net's end at a member's class carries the path's laws; the reach needs only that the class "
@@ -97,15 +96,13 @@ dns.append({'en': "That the class of an actual agent's line holds the effects of
                   "without it (a correspondence).",
             'zh': '实际行动者之线之类，有此理或无之，皆持其线之每一阶之所缘（一对应）。', 'kind': 'non-implication'})
 r['next_delta'] = {
-    'en': "A correspondence: whether every occurrence alike to an actual agent that conditions anything both conditions "
-          "something in the class of its line and leaves something outside it, so that P2, read with the split of that "
-          "class from the rest, passes a self drawn by intention in actual nets; and whether the class of an actual "
-          "agent's line holds the effects of each stage of its line, which is what the path needs, with P2 or without "
-          "it. Whether one presupposes P2, or only what the path needs, is put to philosophers (P-20, question 6); so is "
-          "the crux, P4 (question 2).",
-    'zh': '一对应：实际行动者之每一有所缘之同类者，是否皆既缘其线之类内者又有出其类者，从而以此类与其余二分读之之 P2 '
-          '于实际之网中通过以所意划之自；及实际行动者之线之类，有此理或无之，是否持其线之每一阶之所缘，此即此路所须。'
-          '所预设者为 P2 抑或仅此路所须，交哲学家（P-20 第 6 问）；关键 P4 亦交之（第 2 问）。'}
+    'en': "Correspondences: whether actual agents meet P2 read with the split (each alike occurrence that conditions "
+          "anything conditions something in the class and leaves something outside), and whether the class of an agent's "
+          "line holds the effects of each stage of that line, as the path needs. Whether one presupposes P2 or only that, "
+          "and the crux P4, are put to philosophers (P-20, questions 6 and 2).",
+    'zh': '二对应：实际行动者是否满足以二分读之之 P2（每一有所缘之同类者皆既缘类内者又有出类者），及行动者之线之类是否持该线每一阶之'
+          '所缘，此即此路所须。所预设者为 P2 抑或仅此，及关键 P4，交哲学家（P-20 第 6、2 问）。'}
+assert len(r['next_delta']['en']) <= 400 and len(r['next_delta']['zh']) <= 180
 corr = r['correspondence']
 assert corr['en'].endswith(' The reading is the AI\'s.') and corr['zh'].endswith('读法为 AI 之。')
 corr['en'] = corr['en'][:-len(' The reading is the AI\'s.')] + (
@@ -120,14 +117,13 @@ if not DRAFT:
         'en': f'Machine-checked by the consolidated Lean 4.29.1 checker (receipt {RECEIPT_ID}): Becoming.GrammarPath, '
               f'every declaration with an empty axiom report; this record cites the 57 declarations OC1 and OC2 added and '
               f'the 20 OC5 added. PF\'s and PF2\'s statements are unchanged, their proofs now through the forms at a '
-              f'member\'s class; «本类常闭则后皆续» takes its line from «后皆同类则后皆续», and «闭则外分无关» follows '
-              f'from «外分唯系己出之同», their statements unchanged. Author review in study section 408; an independent '
-              f'review (one reviewer, read-only) and its fixes in study section 411; OC5\'s laws and texts reviewed the '
-              f'same way before landing, study section {N}.',
+              f'member\'s class; «本类常闭则后皆续» and «闭则外分无关» are derived from OC5\'s laws, their statements '
+              f'unchanged. OC1\'s laws were reviewed independently after landing (OC2) and OC5\'s before it, one '
+              f'read-only reviewer each; the history names the study sections.',
         'zh': f'Lean 4.29.1 合并检查器实查（回执 {RECEIPT_ID}）：Becoming.GrammarPath，公理报告皆空；本记录引 OC1 与 OC2 所增之 57 项'
-              f'及 OC5 所增之 20 项。PF 与 PF2 之陈述未变，其证明今经于员之类之形；«本类常闭则后皆续» 之线取自 «后皆同类则后皆续»，'
-              f'«闭则外分无关» 由 «外分唯系己出之同» 得，陈述皆未变。作者审查见研究第 408 节；独立审查（一审者，只读）及其修正见研究第 '
-              f'411 节；OC5 之律与文于落地前同样审查，见研究第 {N} 节。'}
+              f'及 OC5 所增之 20 项。PF 与 PF2 之陈述未变，其证明今经于员之类之形；«本类常闭则后皆续» 与 «闭则外分无关» 由 OC5 之律得，'
+              f'陈述未变。OC1 之律落地后经独立审查（OC2），OC5 之律落地前经之，各一审者，只读；研究节次见沿革。'}
+    assert len(r['validation_scope']['en']) <= 600 and len(r['validation_scope']['zh']) <= 260
     refs = r['references']
     assert [x['role'] for x in refs][:3] == ['proof', 'receipt', 'integration'], [x['role'] for x in refs]
     refs[0] = {'path': PATH, 'role': 'proof', 'declarations': sorted(before | new), 'sha256': sha(PATH)}

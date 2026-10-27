@@ -1,6 +1,6 @@
 # Review of OC5 before landing
 
-*Kept by the lander.* One independent, read-only review of OC5 (board item OC5, the crux's structure as laws), by a separate AI agent given the worktree at `1bfaf23b5` and the drafts of the record and the study section, before the core checker's run. It could not write in the repository, so it returned its report as text. The report follows verbatim from its heading (a note on how it was delivered, before the heading, is left out), with two changes: its `>` characters, escaped in transit, are restored, and its scratch paths name `review-oc5/` beside this report, where its files are kept. "R" in the report is the reviewer's scratch folder for the drafts. The lander's verification of each finding, and what was done, follow the report.
+*Kept by the lander.* One independent, read-only review of OC5 (board item OC5, the crux's structure as laws), by a separate AI agent given the worktree at `1bfaf23b5` and the drafts of the record and the study section, before the core checker's run. It could not write in the repository, so it returned its report as text. The report follows verbatim from its heading (a note on how it was delivered, before the heading, is left out), with three changes: its `>` characters, escaped in transit, are restored; its scratch paths name `review-oc5/` beside this report, where its files are kept; and the one link in its proposed chapter text (finding 8), which points into the chapter, is set as code. "R" in the report is the reviewer's scratch folder for the drafts. The lander's verification of each finding, and what was done, follow the report.
 
 ---
 
@@ -202,7 +202,7 @@ Where one acts, the condition is that oneself and each occurrence alike to onese
 **Replacement.**
 - GP l.91: "* **Neither premise can be dropped from these laws; only one is needed for the reach.** Where a member's line runs through a condition but the member's"
 - GP l.586: "/-! ## Witnesses -/"
-- 07 l.331: "- **Witnesses.** Neither premise can be dropped from these laws, though only holding the member's effects is needed for the reach itself ([below](#r-constancy-read-at-a-members-class)):"
+- 07 l.331: "- **Witnesses.** Neither premise can be dropped from these laws, though only holding the member's effects is needed for the reach itself (`[below](#r-constancy-read-at-a-members-class)`):"
 - `Becoming.lean` l.3610:
   ```text
   Witnesses that neither premise can be dropped from these laws (`Unclosed`, `Inconstant`),

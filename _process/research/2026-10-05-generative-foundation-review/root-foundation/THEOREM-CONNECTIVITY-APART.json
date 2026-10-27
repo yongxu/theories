@@ -3942,11 +3942,6 @@
    "category": "model-witness",
    "reason": "the split is not constant up to the net's end: a witness of Becoming.GrammarPath (OC1)"
   },
-  "Becoming.«二分为类»": {
-   "module": "Becoming.GrammarPath",
-   "category": "support",
-   "reason": "a one-line check that the split by a predicate is a class"
-  },
   "Becoming.«亡而网续则不至终有常»": {
    "module": "Becoming.GrammarPath",
    "category": "general-structure",
@@ -4406,6 +4401,36 @@
    "module": "Becoming.GrammarLaws",
    "category": "support",
    "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
+  },
+  "Becoming.FinerWake.finer_class": {
+   "module": "Becoming.GrammarPath",
+   "category": "support",
+   "reason": "a one-line check that the finer witness's relation is a class"
+  },
+  "Becoming.FiniteFamilies.member_no_reach": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "under the organism's class not everything downstream of the first member's birth lies on its line, which ends at old age while that stage still conditions the second member's birth: a witness of Becoming.GrammarPath (OC5)"
+  },
+  "Becoming.OtherLeaves.other_not_held": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the occurrence alike to the member, off its line, does not have its effects held: a witness of Becoming.GrammarPath (OC5)"
+  },
+  "Becoming.OtherLeaves.other_off_line": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the occurrence alike to the member lies off its line, nothing downstream of the member being that occurrence: a witness of Becoming.GrammarPath (OC5)"
+  },
+  "Becoming.OtherLeaves.reach_without_condition": {
+   "module": "Becoming.GrammarPath",
+   "category": "model-witness",
+   "reason": "the class holds the member's effects and everything downstream of the member lies on its line, while the class fails the condition at the member's class: a witness of Becoming.GrammarPath (OC5)"
+  },
+  "Becoming.«外分唯系出类之同»": {
+   "module": "Becoming.GrammarPath",
+   "category": "general-structure",
+   "reason": "how what lies outside is divided bears on the condition at a member's class only through what is alike to an effect that leaves the class, with no hypothesis that the member conditions something; «闭则外分无关» now follows from the own form, «外分唯系己出之同» (rule 9), which needs it to: a law of every relation and class on any carrier"
   }
  },
  "instances": {
