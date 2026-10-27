@@ -621,6 +621,13 @@
         "en": "C read as widening; widening what can be reached is C's extension on the frame of reachable ranges, and no order here is adopted by C.",
         "zh": "读作扩大的 C；可达之扩大即 C 于可达范围之框上之延展，此处无一序为 C 所采。"
       }
+    },
+    {
+      "id": "where-the-possible-grows",
+      "detail": {
+        "en": "Where the possible grows: its third law read on a part held, a rule changing its own rule and a tower of rules with no top; the possible relative to what is held grows only where what is held changes.",
+        "zh": "可能者于何处增长：其第三律读于持守之部分、改变自身规则之规则与无顶之规则塔；相对于所持守者之可能仅于所持守者改变处增长。"
+      }
     }
   ],
   "references": [
@@ -941,6 +948,10 @@
     {
       "en": "27 October 2026: added (UE10), what a course keeps reachable: covering implies inclusion now, so it never ranks a configuration above one that starts a course and admits now what it does not; the lagged order on families of courses decides one witness's pair, not every such pair, a verdict C leaves open; nothing is added to the whole possible along a course; realized and reachable widening rank a pair oppositely on a branching witness; covering is the lower preorder; near-definitional; after a review and two re-checks; study section 424.",
       "zh": "2026年10月27日：新增（UE10），进程保持可达者：覆盖蕴含当下之包含，故从不把一构型排在起进程且当下纳其所不纳者之上；进程之族上之滞后之序判定一见证之对，非每一此种对，此判定 C 不定；沿一进程全部可能无所增；在一分支见证上实现与可达之扩大对一对排序相反；覆盖即下预序；近乎定义；经审查与两次复查；研究第 424 节。"
+    },
+    {
+      "en": "27 October 2026, board item UE11 (study section 429): related to where-the-possible-grows; no statement, next step or declaration changed.",
+      "zh": "2026年10月27日，工作板条目 UE11（研究第 429 节）：与 where-the-possible-grows 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

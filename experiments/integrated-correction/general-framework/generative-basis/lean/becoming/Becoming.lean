@@ -95,6 +95,7 @@ import Becoming.EventualWidening
 import Becoming.EventualWideningInstances
 import Becoming.ComparingCourses
 import Becoming.ReachableRanges
+import Becoming.HeldPossible
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1353,6 +1354,46 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`KeptTogether.no_comparison_through_bundles`). Each law is near-definitional or a witness. A
   leaf: alternative comparisons and their witnesses, which no module uses and C's order does not
   adopt (board item UE10).
+* `Becoming.HeldPossible` (L1): where the possible grows, read on any process through what each
+  configuration admits. A move adds nothing to the possible under its process
+  (`Reaching.not_reach_of_grows`, `Reaching.not_step_of_grows`), so where it keeps widening along a
+  course, from every step some bounded stretch is not made of the process's moves
+  (`Run.possible_of_stretch`, `Run.departs_of_keepsWidening`), and along a course that comes back to
+  one configuration without end nothing keeps widening (`Run.not_keepsWidening_of_returns`). With a
+  part held, read through the moves holding it (`Reaching.heldMoves`, `Reaching.PossibleHeld`;
+  Onward's `within` and Branching's `keeping` are instances), the possible is included in the whole
+  possible (`Reaching.PossibleHeld.possible`), grows only across a step changing the part
+  (`Run.changes_of_heldGrows`), gains nothing from the step at which the part stays for good
+  (`Run.possibleHeld_of_stays`), and keeps widening only where the part changes without end
+  (`Run.changes_of_heldKeepsWidening`; located where holding is decided,
+  `Run.held_change_recurs_of_keepsWidening`) and no list holds the whole possible
+  (`Run.not_heldKeepsWidening_of_listed`), which does not suffice (`Oscillating.converse_fails`); a
+  course that only returns has the whole possible exceeding the actual and the held possible
+  widening across a step, and does not keep it widening (`Oscillating.returning_has_both`). On the
+  root the moves holding a relation are its continuations, what they reach is the start or its line
+  (`Reaching.reach_heldMoves_iff`), and the possible with it held is what the line admits
+  (`Reaching.possibleHeld_iff_line`); for a class, holding it move by move is holding it as at the
+  start, both ways (`Reach.heldMoves_iff_sameAsStart`), not in general (`AdjacentHeld.differs`,
+  `OrderHeld.differs`); and where it keeps widening, from no moment is the course's line under the
+  part unending and, where holding is decided, lines under it begin after every moment
+  (`Run.not_unending_of_heldKeepsWidening`, `Run.begins_of_heldKeepsWidening`). A rule changing its own rule keeps it exactly where the rule
+  leaves it (`adaptive_keeps_rule_iff`), so the possible with the rule held keeps widening only where
+  the rule changes without end (`Run.adaptive_rule_changes_of_keepsWidening`). Reach over a sequence
+  of relations growing coarser that each step meets lies on a line under one of them
+  (`«及在渐粗列之相续»`), so every possibility of a process whose moves each hold some member is had
+  with some member held (`Reaching.possible_iff_held_of_sequence`): on a tower of rules with no top
+  (`RuleTower.process`), each is had by changing only the state and the rules below some height
+  (`RuleTower.possible_iff_held`), while a tower changing every rule at once has one needing the
+  whole tower (`Synchronous.tower_law_fails`). Where the possible with the rules from height `n` up
+  held keeps widening, moves above `n`, the only moves that can change a rule from height `n` up,
+  recur (`Run.ruleTower_move_above_recurs_of_keepsWidening`), and every origin of it passes such a
+  move (`RuleTower.held_origin`, from `Gated.origin`). On witnesses the possible relative to a raised
+  rule (`RaisedRule.held_keeps_widening`), and relative to every height of a tower copying down
+  (`CopyDown.held_keeps_widening`), keeps widening while every formation stays possible
+  (`RaisedRule.whole_every`, `CopyDown.whole_every`) and every moment ceases under what is held
+  (`RaisedRule.ceases`, `CopyDown.ceases`); with the rule raised at every other step, renewal without
+  end holds as well (`RaisedEveryOther.both`). Each law is near-definitional or a witness. A leaf
+  (board item UE11).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

@@ -58,6 +58,8 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
   - Input: Keeping read as preserving or reflecting every value.
   - Preserved conditions: None. [Gated.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gated.lean)
 
+**Used by:** [where-the-possible-grows](where-the-possible-grows.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

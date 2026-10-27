@@ -5888,6 +5888,18 @@
    "page": "theories/becoming/results/records/where-novelty-gain-comes-from.md"
   },
   {
+   "id": "record:where-the-possible-grows",
+   "type": "result",
+   "record": "where-the-possible-grows",
+   "title": "Where the possible grows",
+   "title_zh": "可能者于何处增长",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "frame",
+   "page": "theories/becoming/results/records/where-the-possible-grows.md"
+  },
+  {
    "id": "record:where-two-courses-rejoin",
    "type": "result",
    "record": "where-two-courses-rejoin",
@@ -7095,6 +7107,17 @@
    "theorems": 135,
    "region": "significance",
    "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.HeldPossible",
+   "type": "module",
+   "name": "Becoming.HeldPossible",
+   "level": "L1",
+   "theorems": 81,
+   "region": "significance",
+   "base": "frame",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -29225,6 +29248,12 @@
    "anchor": "r-what-a-course-keeps-reachable"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-where-the-possible-grows"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-content-under-regrouping",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -30967,6 +30996,26 @@
   {
    "from": "module:Becoming.Handoff",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.HeldPossible",
+   "to": "module:Becoming.Gated",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.HeldPossible",
+   "to": "module:Becoming.Junctures",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.HeldPossible",
+   "to": "module:Becoming.Mechanism",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.HeldPossible",
+   "to": "module:Becoming.ReachableRanges",
    "type": "imports"
   },
   {
@@ -48210,6 +48259,11 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:rules-that-change-themselves-in-the-grammar",
+   "to": "record:where-the-possible-grows",
+   "type": "related"
+  },
+  {
    "from": "record:runaway-distance-uncoupled",
    "to": "module:Becoming.Dependence",
    "type": "proved-in"
@@ -51661,6 +51715,11 @@
   },
   {
    "from": "record:what-a-course-keeps-reachable",
+   "to": "record:where-the-possible-grows",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-course-keeps-reachable",
    "to": "record:widening-as-what-every-weighting-ranks",
    "type": "related"
   },
@@ -53368,6 +53427,121 @@
    "from": "record:where-novelty-gain-comes-from",
    "to": "record:whole-persists-through-generation",
    "type": "related"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.Amounts",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.Arising",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.Change",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.Gated",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.HeldPossible",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.Junctures",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.Mechanism",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.Onward",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "module:Becoming.ReachableRanges",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:every-loss-passes-a-juncture",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:every-origin-passes-the-gate",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:levels-of-closure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:projection-carrying-a-law",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:rest-by-balance",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:where-a-run-goes-on",
+   "type": "formal-reuse"
   },
   {
    "from": "record:where-two-courses-rejoin",
@@ -56597,6 +56771,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
    "to": "record:what-training-installs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+   "to": "record:where-the-possible-grows",
    "type": "states"
   },
   {

@@ -101,6 +101,9 @@ Covering is the lower (Hoare) preorder of the families of course ranges, exactly
 - related, not a proved adapter: [eventual-widening](eventual-widening.md). Eventual widening's second order: covering implies inclusion now, so what a course keeps reachable ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.
 - related, not a proved adapter: [what-keeping-widening-needs](what-keeping-widening-needs.md). What one course keeping widening needs; here the possible within a horizon keeping widening needs an unlisted range, by the same pigeonhole.
 - related, not a proved adapter: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). C read as widening; widening what can be reached is C's extension on the frame of reachable ranges, and no order here is adopted by C.
+- related, not a proved adapter: [where-the-possible-grows](where-the-possible-grows.md). Where the possible grows: its third law read on a part held, a rule changing its own rule and a tower of rules with no top; the possible relative to what is held grows only where what is held changes.
+
+**Used by:** [where-the-possible-grows](where-the-possible-grows.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -135,6 +138,7 @@ Aliases: `What a course keeps reachable`, `进程保持可达者`, `covering`, `
 ### History
 
 - 27 October 2026: added (UE10), what a course keeps reachable: covering implies inclusion now, so it never ranks a configuration above one that starts a course and admits now what it does not; the lagged order on families of courses decides one witness's pair, not every such pair, a verdict C leaves open; nothing is added to the whole possible along a course; realized and reachable widening rank a pair oppositely on a branching witness; covering is the lower preorder; near-definitional; after a review and two re-checks; study section 424.
+- 27 October 2026, board item UE11 (study section 429): related to where-the-possible-grows; no statement, next step or declaration changed.
 
 </details>
 

@@ -62,6 +62,7 @@ Majority aggregation: a minority distinction is outvoted (Condorcet-style aggreg
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T140440.478623Z/verification.json) | — |
 
 Aliases: `A pool read by its majority`, `按多数读取之池`, `Becoming.Web.holdsCount`
 

@@ -2311,6 +2311,11 @@
    "base": "old-base",
    "note": "first law gain"
   },
+  "where-the-possible-grows": {
+   "region": "significance",
+   "base": "frame",
+   "note": "HeldPossible UE11: where the possible grows (relative to what is held, across steps changing it; a rule changing its own rule; a tower of rules with no top, every possibility had below some height, on the root as reach over a sequence growing coarser; witnesses with the whole possible fixed)"
+  },
   "where-two-courses-rejoin": {
    "region": "map",
    "base": "old-base",
@@ -2957,6 +2962,11 @@
    "region": "significance",
    "base": "frame",
    "note": "remaining-step certificate across revised rules; OpenFutureRevision port"
+  },
+  "Becoming.HeldPossible": {
+   "region": "significance",
+   "base": "frame",
+   "note": "UE11 where the possible grows"
   },
   "Becoming.HexagramCommuting": {
    "region": "classical",

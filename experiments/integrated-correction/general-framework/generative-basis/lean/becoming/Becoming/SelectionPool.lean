@@ -511,7 +511,7 @@ theorem SelectsThroughAll.reads
 couplings up to `t` is one through `o`'s, under any coupling by level `obs'` for `o`, exactly when
 whatever `o` couples alike up to `t` `a` couples alike. Knowing a law is no coupling: what `o` can
 anticipate of `a`, under any law reading through `a`'s couplings, is fixed by this
-(`Revision.web_keeps_iff` is the case of one formation at two steps). -/
+(`Registration.web_keeps_iff` is the case of one formation at two steps). -/
 theorem anticipates_iff {obs' : F → C → Prop} :
     (∀ select, W.SelectsThrough obs a t select → W.SelectsThrough obs' o t select) ↔
       ∀ l l', W.AlikeThroughUpTo obs' o l l' t → W.AlikeThroughUpTo obs a l l' t :=

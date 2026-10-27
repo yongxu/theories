@@ -164,7 +164,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "where-the-possible-grows",
+      "detail": {
+        "en": "Where the possible grows: read on what each configuration admits, the possible with the rule held grows only where the rule changes, and a tower of rules with no top is one process with a fixed scheme.",
+        "zh": "可能者于何处增长：读于各构型所纳，持守规则时之可能仅于规则改变处增长，无顶之规则塔为方案固定之一过程。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
@@ -228,6 +236,10 @@
     {
       "en": "24 October 2026: added (GS1), from the review of the root against its two source texts; study section 390.",
       "zh": "2026年10月24日：新增（GS1），出自根与其二篇来源之对照审查；研究第 390 节。"
+    },
+    {
+      "en": "27 October 2026, board item UE11 (study section 429): related to where-the-possible-grows; no statement, next step or declaration changed.",
+      "zh": "2026年10月27日，工作板条目 UE11（研究第 429 节）：与 where-the-possible-grows 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

@@ -69,6 +69,8 @@ The whole-number, decided form of the least-loss law of rest, stated through bal
 - related, not a proved adapter: [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md). Its fall below the point under adjusting giving is a case of this law.
 - related, not a proved adapter: [rest-on-coupled-webs](rest-on-coupled-webs.md). Its rest of a coupled web within a band is a case of this law.
 
+**Used by:** [where-the-possible-grows](where-the-possible-grows.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

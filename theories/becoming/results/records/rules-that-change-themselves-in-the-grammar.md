@@ -59,6 +59,7 @@ The root chapter's open item on self-changing conditions, narrowed: a rule chang
 - **formal-reuse**: [wen-in-the-grammar](wen-in-the-grammar.md). sameValue, sameValue_class, Law.step, Law.constant_iff_keeps.
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «有常之逐点», «类有常当且仅当含于核».
 - **formal-reuse**: [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md). Law.unending_iff_steps, Law.unending_alike.
+- related, not a proved adapter: [where-the-possible-grows](where-the-possible-grows.md). Where the possible grows: read on what each configuration admits, the possible with the rule held grows only where the rule changes, and a tower of rules with no top is one process with a fixed scheme.
 
 **Used by:** [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [the-source-texts-test-systems](the-source-texts-test-systems.md)
 
@@ -79,6 +80,7 @@ Aliases: `Rules that change themselves, read in the grammar`, `自改其则者�
 ### History
 
 - 24 October 2026: added (GS1), from the review of the root against its two source texts; study section 390.
+- 27 October 2026, board item UE11 (study section 429): related to where-the-possible-grows; no statement, next step or declaration changed.
 
 </details>
 
