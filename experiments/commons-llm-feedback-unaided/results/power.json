@@ -1,0 +1,3261 @@
+{
+ "reps": 2000,
+ "sources": {
+  "agent.py": "e74dcd3232686c5e4163b5fc780acd5dc2d6c05a39f4ed8d191c7a4d93fab6a4",
+  "analyze.py": "e45d0aeea1fcbb2f9c6bf4ac981bb1387ca191e07f8f2f5ea576ba1587304155",
+  "game.py": "4c708d0ffd69da02f65286df1af084592d2ea5cc993638514e7ec1dc1c3b24c4",
+  "run.py": "c745abd86eacd81bb7f61bf96184f7e0153cab31282dae3558eb13567059fd5b",
+  "scripted.py": "8718142dab56cc4c06b06cdede6c12418ac8774d47c7c8adce179712a701be18",
+  "power.py": "b13823eebff7e263f7dfd5219cca21b258f846728b33c2c5880221cd756f37d0",
+  "../commons-llm-feedback-resolved/game.py": "bb626b504db32aea975bebb05d8140ce4fa930fff53c4276f4c08bbb65c43ece",
+  "../commons-llm-feedback-resolved/agent.py": "568f122e126b5ee7fe49d97b69ba552f06624a84fb797d370402d737bb8ae0d0",
+  "../commons-llm-feedback-resolved/results/values.json": "8027f31139baa160fb49994476188df64502ec1daf52a74fad84f7e348558e72",
+  "../commons-llm-feedback-resolved/results/calls.jsonl": "9413fa404e3113cc7029ea09a557b0809c04ae715796cc91e9db1cd7c45009c4",
+  "../commons-llm-feedback/values.py": "efda57ead0e38ab3e1fc6cb95d859cca4369cb38531d190f74b8cf663cfab08d",
+  "../commons-llm-feedback/agent.py": "9e38bf793754f78b523e65474a770202e3b7b454e2ec581f021062cefa3f73d7",
+  "../commons-llm-feedback/results/calls.jsonl": "e45201a24e703abe7620d82c8323fd771584f0585047ac3c2f398b74d592ecd8",
+  "../commons-llm-feedback/results/runs.json": "d5ddc1f1e792cfb219413353dc030bfa92771a1533f00b628284b3335ae6b940",
+  "../commons-gated-renewal/commons.py": "bd51b4bfb32052c50ea171c71f5e7d44f6fde57bb1c6f83e785e63dcd3c86ae5",
+  "../commons-outrun/calibrate.py": "28223e72648b4bd4b7ddf11abf99c2d99b24eed6ff3aa1be1d982a88737d63f8"
+ },
+ "neighbours": {
+  "k3s1": [
+   {
+    "pair": [
+     0,
+     1
+    ],
+    "better": 0,
+    "z": 20.079002304663526,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     1,
+     2
+    ],
+    "better": 1,
+    "z": 15.969664607624047,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     2,
+     3
+    ],
+    "better": 2,
+    "z": 150.9347084794219,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     3,
+     4
+    ],
+    "better": 3,
+    "z": 49.31689569601906,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     4,
+     5
+    ],
+    "better": 4,
+    "z": 19.273876641902042,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     5,
+     6
+    ],
+    "better": 5,
+    "z": 201.8269942827685,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     6,
+     7
+    ],
+    "better": 6,
+    "z": 42.78448150948423,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     7,
+     8
+    ],
+    "better": 7,
+    "z": 9.774285363602404,
+    "wrong_order": 0.011984170570422892
+   },
+   {
+    "pair": [
+     8,
+     9
+    ],
+    "better": 8,
+    "z": 3875.4963268881115,
+    "wrong_order": 0.0
+   }
+  ],
+  "k3s1_lam32": [
+   {
+    "pair": [
+     0,
+     1
+    ],
+    "better": 0,
+    "z": 20.75564356583941,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     1,
+     2
+    ],
+    "better": 1,
+    "z": 17.42811174476911,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     2,
+     3
+    ],
+    "better": 2,
+    "z": 152.37849313357387,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     3,
+     4
+    ],
+    "better": 3,
+    "z": 49.59221057403955,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     4,
+     5
+    ],
+    "better": 4,
+    "z": 18.51206414026891,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     5,
+     6
+    ],
+    "better": 5,
+    "z": 200.65854201801088,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     6,
+     7
+    ],
+    "better": 6,
+    "z": 43.23744617835711,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     7,
+     8
+    ],
+    "better": 7,
+    "z": 10.687739810858728,
+    "wrong_order": 0.006781693490566343
+   },
+   {
+    "pair": [
+     8,
+     9
+    ],
+    "better": 8,
+    "z": 3164.8573724386147,
+    "wrong_order": 0.0
+   }
+  ],
+  "k2s1": [
+   {
+    "pair": [
+     0,
+     1
+    ],
+    "better": 0,
+    "z": 39.77492421008769,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     1,
+     2
+    ],
+    "better": 1,
+    "z": 53.517943458875635,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     2,
+     3
+    ],
+    "better": 2,
+    "z": 101.18311056863895,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     3,
+     4
+    ],
+    "better": 3,
+    "z": 52.9116373127897,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     4,
+     5
+    ],
+    "better": 4,
+    "z": 122.00016405870392,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     5,
+     6
+    ],
+    "better": 5,
+    "z": 53.67711664693002,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     6,
+     7
+    ],
+    "better": 6,
+    "z": 191.11144554800097,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     7,
+     8
+    ],
+    "better": 7,
+    "z": 42.552067570044315,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     8,
+     9
+    ],
+    "better": 8,
+    "z": 1157.4029588642882,
+    "wrong_order": 0.0
+   }
+  ],
+  "k3s8": [
+   {
+    "pair": [
+     0,
+     1
+    ],
+    "better": 0,
+    "z": 5.01925251204555,
+    "wrong_order": 4.8010012397847746e-06
+   },
+   {
+    "pair": [
+     1,
+     2
+    ],
+    "better": 1,
+    "z": 16.42140208393556,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     2,
+     3
+    ],
+    "better": 2,
+    "z": 20.0232099385885,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     3,
+     4
+    ],
+    "better": 3,
+    "z": 24.631250951874126,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     4,
+     5
+    ],
+    "better": 4,
+    "z": 25.656426531365344,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     5,
+     6
+    ],
+    "better": 5,
+    "z": 25.59774467953691,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     6,
+     7
+    ],
+    "better": 6,
+    "z": 24.257056397206945,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     7,
+     8
+    ],
+    "better": 7,
+    "z": 41.40233358581583,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     8,
+     9
+    ],
+    "better": 8,
+    "z": 154.62230008247914,
+    "wrong_order": 0.0
+   }
+  ],
+  "k2s8": [
+   {
+    "pair": [
+     0,
+     1
+    ],
+    "better": 0,
+    "z": 2.033994180016206,
+    "wrong_order": 0.02741292221957109
+   },
+   {
+    "pair": [
+     1,
+     2
+    ],
+    "better": 1,
+    "z": 6.402870789908877,
+    "wrong_order": 1.6118695267408611e-10
+   },
+   {
+    "pair": [
+     2,
+     3
+    ],
+    "better": 2,
+    "z": 6.214801708340228,
+    "wrong_order": 5.355083598779231e-10
+   },
+   {
+    "pair": [
+     3,
+     4
+    ],
+    "better": 4,
+    "z": 9.688728867329969,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     4,
+     5
+    ],
+    "better": 5,
+    "z": 48.57753053030584,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     5,
+     6
+    ],
+    "better": 6,
+    "z": 97.51037153525037,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     6,
+     7
+    ],
+    "better": 7,
+    "z": 34.751450630157485,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     7,
+     8
+    ],
+    "better": 7,
+    "z": 54.23060467601496,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     8,
+     9
+    ],
+    "better": 8,
+    "z": 363.7247509554919,
+    "wrong_order": 0.0
+   }
+  ],
+  "k3s16": [
+   {
+    "pair": [
+     0,
+     1
+    ],
+    "better": 0,
+    "z": 0.21703556660954626,
+    "wrong_order": 0.4300466061504569
+   },
+   {
+    "pair": [
+     1,
+     2
+    ],
+    "better": 1,
+    "z": 1.0923020516600908,
+    "wrong_order": 0.1461562987514229
+   },
+   {
+    "pair": [
+     2,
+     3
+    ],
+    "better": 2,
+    "z": 1.5188121824157121,
+    "wrong_order": 0.06955825673758093
+   },
+   {
+    "pair": [
+     3,
+     4
+    ],
+    "better": 3,
+    "z": 1.6099460985860958,
+    "wrong_order": 0.05827903765138104
+   },
+   {
+    "pair": [
+     4,
+     5
+    ],
+    "better": 5,
+    "z": 18.09167267180893,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     5,
+     6
+    ],
+    "better": 6,
+    "z": 88.56586266365171,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     6,
+     7
+    ],
+    "better": 7,
+    "z": 71.3310618446452,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     7,
+     8
+    ],
+    "better": 7,
+    "z": 72.92422579720227,
+    "wrong_order": 0.0
+   },
+   {
+    "pair": [
+     8,
+     9
+    ],
+    "better": 8,
+    "z": 642.0819207760778,
+    "wrong_order": 0.0
+   }
+  ]
+ },
+ "normality": {
+  "condition": "k3s16",
+  "thresholds": [
+   3,
+   4
+  ],
+  "episodes": 500,
+  "pairs": 1000,
+  "simulated": 0.338,
+  "normal": 0.3594254768481706
+ },
+ "agents": {
+  "follower_0.5": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 0.49,
+    "k3s1_lam32": 0.0405,
+    "k2s1": 0.357,
+    "k3s8": 0.069,
+    "k2s8": 0.319,
+    "k3s16": 0.745
+   },
+   "at_best": {
+    "k3s1": 3.393,
+    "k3s1_lam32": 1.587,
+    "k2s1": 3.0515,
+    "k3s8": 5.886,
+    "k2s8": 1.459,
+    "k3s16": 1.6435
+   },
+   "on_hill": {
+    "k2s8": 2.1785,
+    "k3s16": 2.094
+   },
+   "contrasts": {
+    "L1_locked_side": 0.001,
+    "L2_open_side": 0.2365,
+    "L3_end_weight_does_not_open": 0.0185,
+    "L4_boundary_is_the_rest": 0.0215
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "still_descending": 0.969,
+     "stopped_short": 0.0,
+     "unresolved": 0.031
+    },
+    "open": {
+     "found": 0.0005,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.004,
+     "not_reached": 0.884,
+     "unresolved": 0.1115
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.969,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.9995,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 0.8845,
+     "not_reached": 0.0045,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "no kind of locked miss makes two thirds of them": 0.031
+    },
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.1115
+    }
+   },
+   "means": {
+    "R": 16.0825,
+    "R_left": 0.0,
+    "R_descending": 13.3655,
+    "R_stopped": 2.717,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.3475,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.526,
+    "locked_best_played": 13.9175,
+    "open_miss": 6.8975,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 1.17,
+    "O_valley": 5.7275,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.1025,
+    "open_on_hill": 4.2725,
+    "open_at_0": 3.0415
+   }
+  },
+  "follower_1": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 0.5455,
+    "k2s1": 1.0,
+    "k3s8": 0.9775,
+    "k2s8": 0.2585,
+    "k3s16": 0.524
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 3.5415,
+    "k2s1": 5.0,
+    "k3s8": 14.237,
+    "k2s8": 2.759,
+    "k3s16": 2.3655
+   },
+   "on_hill": {
+    "k2s8": 2.759,
+    "k3s16": 2.3655
+   },
+   "contrasts": {
+    "L1_locked_side": 0.5345,
+    "L2_open_side": 0.128,
+    "L3_end_weight_does_not_open": 0.5455,
+    "L4_boundary_is_the_rest": 0.252
+   },
+   "readings": {
+    "locked": {
+     "found": 0.328,
+     "best_not_kept": 0.0,
+     "still_descending": 0.3855,
+     "stopped_short": 0.0,
+     "unresolved": 0.2865
+    },
+    "open": {
+     "found": 0.011,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.989
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.3855,
+     "best_not_kept": 1.0,
+     "still_descending": 0.33,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.989,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.011
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "R = 2": 0.2845,
+     "locked_first_at_0 above half the locked seeds": 0.002
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 2.2215,
+    "R_left": 0.0,
+    "R_descending": 2.2215,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.536,
+    "locked_best_played": 27.7785,
+    "open_miss": 4.8755,
+    "O_left": 0.001,
+    "O_left_up": 0.0,
+    "O_left_down": 0.001,
+    "O_hill": 0.0,
+    "O_valley": 4.8745,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 5.1245,
+    "open_on_hill": 5.1245,
+    "open_at_0": 3.7415
+   }
+  },
+  "search1_down": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 0.7475,
+    "k2s1": 1.0,
+    "k3s8": 0.9775,
+    "k2s8": 0.1835,
+    "k3s16": 0.2715
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 4.0225,
+    "k2s1": 5.0,
+    "k3s8": 14.2325,
+    "k2s8": 2.4675,
+    "k3s16": 1.1415
+   },
+   "on_hill": {
+    "k2s8": 2.4675,
+    "k3s16": 1.1415
+   },
+   "contrasts": {
+    "L1_locked_side": 0.7315,
+    "L2_open_side": 0.048,
+    "L3_end_weight_does_not_open": 0.7475,
+    "L4_boundary_is_the_rest": 0.179
+   },
+   "readings": {
+    "locked": {
+     "found": 0.4615,
+     "best_not_kept": 0.0,
+     "still_descending": 0.251,
+     "stopped_short": 0.0,
+     "unresolved": 0.2875
+    },
+    "open": {
+     "found": 0.0005,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.9995
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.251,
+     "best_not_kept": 1.0,
+     "still_descending": 0.4615,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.9995,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0005
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "R = 2": 0.2875
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 1.745,
+    "R_left": 0.0,
+    "R_descending": 1.745,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.524,
+    "locked_best_played": 28.255,
+    "open_miss": 6.391,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 0.0,
+    "O_valley": 6.391,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.609,
+    "open_on_hill": 3.609,
+    "open_at_0": 4.701
+   }
+  },
+  "search1_up": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 0.3405,
+    "k2s1": 1.0,
+    "k3s8": 0.9765,
+    "k2s8": 0.3525,
+    "k3s16": 0.7935
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 2.979,
+    "k2s1": 5.0,
+    "k3s8": 14.265,
+    "k2s8": 3.024,
+    "k3s16": 3.5505
+   },
+   "on_hill": {
+    "k2s8": 3.024,
+    "k3s16": 3.5505
+   },
+   "contrasts": {
+    "L1_locked_side": 0.3305,
+    "L2_open_side": 0.29,
+    "L3_end_weight_does_not_open": 0.3405,
+    "L4_boundary_is_the_rest": 0.347
+   },
+   "readings": {
+    "locked": {
+     "found": 0.183,
+     "best_not_kept": 0.0,
+     "still_descending": 0.5445,
+     "stopped_short": 0.0,
+     "unresolved": 0.2725
+    },
+    "open": {
+     "found": 0.103,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.897
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.5445,
+     "best_not_kept": 1.0,
+     "still_descending": 0.183,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.897,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.103
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "R = 2": 0.2725
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 2.756,
+    "R_left": 0.0,
+    "R_descending": 2.756,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.422,
+    "locked_best_played": 27.244,
+    "open_miss": 3.4255,
+    "O_left": 0.0005,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0005,
+    "O_hill": 0.0,
+    "O_valley": 3.425,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 6.5745,
+    "open_on_hill": 6.5745,
+    "open_at_0": 2.8215
+   }
+  },
+  "search1_random": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 0.542,
+    "k2s1": 1.0,
+    "k3s8": 0.9755,
+    "k2s8": 0.2635,
+    "k3s16": 0.51
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 3.536,
+    "k2s1": 5.0,
+    "k3s8": 14.2365,
+    "k2s8": 2.753,
+    "k3s16": 2.339
+   },
+   "on_hill": {
+    "k2s8": 2.753,
+    "k3s16": 2.339
+   },
+   "contrasts": {
+    "L1_locked_side": 0.5255,
+    "L2_open_side": 0.1325,
+    "L3_end_weight_does_not_open": 0.542,
+    "L4_boundary_is_the_rest": 0.2565
+   },
+   "readings": {
+    "locked": {
+     "found": 0.3075,
+     "best_not_kept": 0.0,
+     "still_descending": 0.389,
+     "stopped_short": 0.0,
+     "unresolved": 0.3035
+    },
+    "open": {
+     "found": 0.0115,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.9885
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.389,
+     "best_not_kept": 1.0,
+     "still_descending": 0.309,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.9885,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0115
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "R = 2": 0.302,
+     "locked_first_at_0 above half the locked seeds": 0.0015
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 2.2275,
+    "R_left": 0.0,
+    "R_descending": 2.2275,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.489,
+    "locked_best_played": 27.7725,
+    "open_miss": 4.908,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 0.0,
+    "O_valley": 4.908,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 5.092,
+    "open_on_hill": 5.092,
+    "open_at_0": 3.804
+   }
+  },
+  "search2_down": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 0.186,
+    "k3s16": 0.1825
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 5.0,
+    "k2s1": 5.0,
+    "k3s8": 15.0,
+    "k2s8": 2.514,
+    "k3s16": 0.98
+   },
+   "on_hill": {
+    "k2s8": 2.514,
+    "k3s16": 0.98
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 0.0335,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.186
+   },
+   "readings": {
+    "locked": {
+     "found": 0.9985,
+     "best_not_kept": 0.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.0,
+     "unresolved": 0.0015
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 1.0
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "locked_first_at_0 above half the locked seeds": 0.0015
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 0.0,
+    "R_left": 0.0,
+    "R_descending": 0.0,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.4705,
+    "locked_best_played": 30.0,
+    "open_miss": 6.506,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 0.0,
+    "O_valley": 6.506,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.494,
+    "open_on_hill": 3.494,
+    "open_at_0": 4.995
+   }
+  },
+  "search2_up": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 0.5185,
+    "k3s16": 0.889
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 5.0,
+    "k2s1": 5.0,
+    "k3s8": 15.0,
+    "k2s8": 3.4925,
+    "k3s16": 4.0005
+   },
+   "on_hill": {
+    "k2s8": 3.4925,
+    "k3s16": 4.0005
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 0.4645,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.5185
+   },
+   "readings": {
+    "locked": {
+     "found": 0.9965,
+     "best_not_kept": 0.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.0,
+     "unresolved": 0.0035
+    },
+    "open": {
+     "found": 0.2345,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.7655
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.7655,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.2345
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "locked_first_at_0 above half the locked seeds": 0.0035
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 0.0,
+    "R_left": 0.0,
+    "R_descending": 0.0,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.5175,
+    "locked_best_played": 30.0,
+    "open_miss": 2.507,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 0.0,
+    "O_valley": 2.507,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 7.493,
+    "open_on_hill": 7.493,
+    "open_at_0": 2.1055
+   }
+  },
+  "extrapolate1_up": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 0.7285,
+    "k2s1": 1.0,
+    "k3s8": 0.98,
+    "k2s8": 0.375,
+    "k3s16": 0.7845
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 3.9885,
+    "k2s1": 5.0,
+    "k3s8": 14.264,
+    "k2s8": 3.046,
+    "k3s16": 3.5055
+   },
+   "on_hill": {
+    "k2s8": 3.046,
+    "k3s16": 3.5055
+   },
+   "contrasts": {
+    "L1_locked_side": 0.713,
+    "L2_open_side": 0.295,
+    "L3_end_weight_does_not_open": 0.7285,
+    "L4_boundary_is_the_rest": 0.369
+   },
+   "readings": {
+    "locked": {
+     "found": 0.4625,
+     "best_not_kept": 0.0,
+     "still_descending": 0.2485,
+     "stopped_short": 0.0,
+     "unresolved": 0.289
+    },
+    "open": {
+     "found": 0.0875,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.912,
+     "unresolved": 0.0005
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.2485,
+     "best_not_kept": 1.0,
+     "still_descending": 0.4635,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.9125,
+     "best_not_kept": 0.9995,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0875,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "R = 2": 0.288,
+     "locked_first_at_0 above half the locked seeds": 0.001
+    },
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.0005
+    }
+   },
+   "means": {
+    "R": 1.7475,
+    "R_left": 0.0,
+    "R_descending": 1.7475,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 1.7475,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.396,
+    "locked_best_played": 27.2425,
+    "open_miss": 3.4485,
+    "O_left": 0.0005,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0005,
+    "O_hill": 0.0,
+    "O_valley": 3.448,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 6.5515,
+    "open_on_hill": 6.5515,
+    "open_at_0": 2.845
+   }
+  },
+  "confirm_1": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 0.52,
+    "k3s1_lam32": 0.0295,
+    "k2s1": 0.3405,
+    "k3s8": 0.08,
+    "k2s8": 0.1895,
+    "k3s16": 0.777
+   },
+   "at_best": {
+    "k3s1": 3.4585,
+    "k3s1_lam32": 1.4605,
+    "k2s1": 2.9935,
+    "k3s8": 5.993,
+    "k2s8": 0.4865,
+    "k3s16": 1.0145
+   },
+   "on_hill": {
+    "k2s8": 2.508,
+    "k3s16": 1.0955
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.149,
+    "L3_end_weight_does_not_open": 0.0135,
+    "L4_boundary_is_the_rest": 0.017
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "still_descending": 1.0,
+     "stopped_short": 0.0
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0015,
+     "not_reached": 0.782,
+     "unresolved": 0.2165
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "still_descending": 0.0,
+     "stopped_short": 1.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 0.782,
+     "not_reached": 0.0015,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {},
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.2165
+    }
+   },
+   "means": {
+    "R": 16.0945,
+    "R_left": 0.0,
+    "R_descending": 16.0945,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.4485,
+    "locked_best_played": 13.9055,
+    "open_miss": 8.499,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 2.1025,
+    "O_valley": 6.3965,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 1.501,
+    "open_on_hill": 3.6035,
+    "open_at_0": 3.388
+   }
+  },
+  "confirm_2": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 0.348,
+    "k3s1_lam32": 0.0265,
+    "k2s1": 0.191,
+    "k3s8": 0.0075,
+    "k2s8": 0.312,
+    "k3s16": 0.859
+   },
+   "at_best": {
+    "k3s1": 3.0395,
+    "k3s1_lam32": 1.4585,
+    "k2s1": 2.5015,
+    "k3s8": 3.019,
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "on_hill": {
+    "k2s8": 0.4975,
+    "k3s16": 0.991
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.271,
+    "L3_end_weight_does_not_open": 0.011,
+    "L4_boundary_is_the_rest": 0.0025
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "still_descending": 1.0,
+     "stopped_short": 0.0
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.9615,
+     "unresolved": 0.0385
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "still_descending": 0.0,
+     "stopped_short": 1.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 0.9615,
+     "not_reached": 0.0,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {},
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.0385
+    }
+   },
+   "means": {
+    "R": 19.9815,
+    "R_left": 0.0,
+    "R_descending": 19.9815,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.5405,
+    "locked_best_played": 10.0185,
+    "open_miss": 10.0,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 1.4885,
+    "O_valley": 8.5115,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 0.0,
+    "open_on_hill": 1.4885,
+    "open_at_0": 2.736
+   }
+  },
+  "spread": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 5.0,
+    "k2s1": 5.0,
+    "k3s8": 15.0,
+    "k2s8": 5.0,
+    "k3s16": 5.0
+   },
+   "on_hill": {
+    "k2s8": 5.0,
+    "k3s16": 5.0
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 1.0
+   },
+   "readings": {
+    "locked": {
+     "found": 0.997,
+     "best_not_kept": 0.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.0,
+     "unresolved": 0.003
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.0
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 1.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "locked_first_at_0 above half the locked seeds": 0.003
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 0.0,
+    "R_left": 0.0,
+    "R_descending": 0.0,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.5215,
+    "locked_best_played": 30.0,
+    "open_miss": 0.0,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 0.0,
+    "O_valley": 0.0,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 10.0,
+    "open_on_hill": 10.0,
+    "open_at_0": 0.0
+   }
+  },
+  "floor_1": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "at_best": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0,
+    "k2s8": 2.4765,
+    "k3s16": 1.1225
+   },
+   "on_hill": {
+    "k2s8": 2.4765,
+    "k3s16": 1.123
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "still_descending": 0.0,
+     "stopped_short": 1.0
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 1.0
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "still_descending": 1.0,
+     "stopped_short": 0.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {},
+    "open": {}
+   },
+   "means": {
+    "R": 30.0,
+    "R_left": 0.0,
+    "R_descending": 2.747,
+    "R_stopped": 27.253,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 0.0,
+    "locked_best_played": 0.0,
+    "open_miss": 6.401,
+    "O_left": 0.0015,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0015,
+    "O_hill": 0.0005,
+    "O_valley": 6.399,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.599,
+    "open_on_hill": 3.5995,
+    "open_at_0": 0.0
+   }
+  },
+  "floor_2": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "at_best": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0,
+    "k2s8": 2.523,
+    "k3s16": 1.14
+   },
+   "on_hill": {
+    "k2s8": 2.523,
+    "k3s16": 1.14
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "still_descending": 0.0,
+     "stopped_short": 1.0
+    },
+    "open": {
+     "found": 0.001,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.999
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "still_descending": 1.0,
+     "stopped_short": 0.0
+    },
+    "open": {
+     "found": 0.999,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.001
+    }
+   },
+   "unresolved_because": {
+    "locked": {},
+    "open": {}
+   },
+   "means": {
+    "R": 30.0,
+    "R_left": 0.0,
+    "R_descending": 1.742,
+    "R_stopped": 28.258,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 0.0,
+    "locked_best_played": 0.0,
+    "open_miss": 6.337,
+    "O_left": 0.001,
+    "O_left_up": 0.0,
+    "O_left_down": 0.001,
+    "O_hill": 0.0,
+    "O_valley": 6.336,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.663,
+    "open_on_hill": 3.663,
+    "open_at_0": 0.0
+   }
+  },
+  "restraint_0.01": {
+   "prediction": {
+    "selection_locked": 0.9995,
+    "selection_open": 1.0,
+    "selection": 0.9995
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 0.7365,
+    "k2s1": 1.0,
+    "k3s8": 0.9775,
+    "k2s8": 0.357,
+    "k3s16": 0.908
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 4.013,
+    "k2s1": 5.0,
+    "k3s8": 14.1785,
+    "k2s8": 2.5315,
+    "k3s16": 1.1495
+   },
+   "on_hill": {
+    "k2s8": 2.5315,
+    "k3s16": 1.1495
+   },
+   "contrasts": {
+    "L1_locked_side": 0.72,
+    "L2_open_side": 0.327,
+    "L3_end_weight_does_not_open": 0.7365,
+    "L4_boundary_is_the_rest": 0.3535
+   },
+   "readings": {
+    "locked": {
+     "found": 0.4465,
+     "best_not_kept": 0.0,
+     "still_descending": 0.279,
+     "stopped_short": 0.0,
+     "unresolved": 0.2745
+    },
+    "open": {
+     "found": 0.0005,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.9995
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.279,
+     "best_not_kept": 0.988,
+     "still_descending": 0.448,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.9995,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0005
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "R = 2": 0.273,
+     "locked_first_at_0 above half the locked seeds": 0.0015
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 1.8085,
+    "R_left": 0.0525,
+    "R_descending": 1.756,
+    "R_stopped": 0.0,
+    "R_seen": 0.0525,
+    "R_left_held": 0.021,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.5145,
+    "locked_best_played": 28.1915,
+    "open_miss": 6.319,
+    "O_left": 0.001,
+    "O_left_up": 0.0,
+    "O_left_down": 0.001,
+    "O_hill": 0.0,
+    "O_valley": 6.318,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.681,
+    "open_on_hill": 3.681,
+    "open_at_0": 2.49
+   }
+  },
+  "restraint_0.03": {
+   "prediction": {
+    "selection_locked": 0.0,
+    "selection_open": 1.0,
+    "selection": 0.0
+   },
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 1.0,
+    "k3s8": 0.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "at_best": {
+    "k3s1": 0.002,
+    "k3s1_lam32": 0.0015,
+    "k2s1": 5.0,
+    "k3s8": 0.0015,
+    "k2s8": 2.464,
+    "k3s16": 1.12
+   },
+   "on_hill": {
+    "k2s8": 2.464,
+    "k3s16": 1.12
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.0
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 1.0
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 0.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {},
+    "open": {}
+   },
+   "means": {
+    "R": 24.995,
+    "R_left": 23.218,
+    "R_descending": 1.777,
+    "R_stopped": 0.0,
+    "R_seen": 23.218,
+    "R_left_held": 16.7485,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.533,
+    "locked_best_played": 5.005,
+    "open_miss": 6.416,
+    "O_left": 0.002,
+    "O_left_up": 0.0,
+    "O_left_down": 0.002,
+    "O_hill": 0.0,
+    "O_valley": 6.414,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.584,
+    "open_on_hill": 3.584,
+    "open_at_0": 0.002
+   }
+  },
+  "restraint_0.10": {
+   "prediction": {
+    "selection_locked": 0.0,
+    "selection_open": 1.0,
+    "selection": 0.0
+   },
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0,
+    "k2s8": 1.0,
+    "k3s16": 1.0
+   },
+   "at_best": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0,
+    "k2s8": 2.482,
+    "k3s16": 1.1625
+   },
+   "on_hill": {
+    "k2s8": 2.482,
+    "k3s16": 1.1625
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 1.0,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.0
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 1.0
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 0.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {},
+    "open": {}
+   },
+   "means": {
+    "R": 30.0,
+    "R_left": 28.25,
+    "R_descending": 1.75,
+    "R_stopped": 0.0,
+    "R_seen": 28.25,
+    "R_left_held": 21.797,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.5565,
+    "locked_best_played": 0.0,
+    "open_miss": 6.3555,
+    "O_left": 0.0015,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0015,
+    "O_hill": 0.0,
+    "O_valley": 6.354,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0005,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.6445,
+    "open_on_hill": 3.6445,
+    "open_at_0": 0.0
+   }
+  },
+  "mixture_0.1": {
+   "prediction": {
+    "selection_locked": 0.2085,
+    "selection_open": 1.0,
+    "selection": 0.2085
+   },
+   "conditions": {
+    "k3s1": 0.924,
+    "k3s1_lam32": 0.5755,
+    "k2s1": 0.924,
+    "k3s8": 0.8395,
+    "k2s8": 0.268,
+    "k3s16": 0.342
+   },
+   "at_best": {
+    "k3s1": 4.501,
+    "k3s1_lam32": 3.609,
+    "k2s1": 4.5175,
+    "k3s8": 12.775,
+    "k2s8": 2.535,
+    "k3s16": 1.1415
+   },
+   "on_hill": {
+    "k2s8": 2.535,
+    "k3s16": 1.1415
+   },
+   "contrasts": {
+    "L1_locked_side": 0.415,
+    "L2_open_side": 0.095,
+    "L3_end_weight_does_not_open": 0.5275,
+    "L4_boundary_is_the_rest": 0.223
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0405,
+     "best_not_kept": 0.435,
+     "still_descending": 0.1365,
+     "stopped_short": 0.0,
+     "unresolved": 0.388
+    },
+    "open": {
+     "found": 0.001,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.999
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.872,
+     "best_not_kept": 0.192,
+     "still_descending": 0.5045,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.999,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.001
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "R = 2": 0.0875,
+     "no kind of locked miss makes two thirds of them": 0.3005
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 4.5975,
+    "R_left": 2.8335,
+    "R_descending": 1.764,
+    "R_stopped": 0.0,
+    "R_seen": 2.8335,
+    "R_left_held": 2.1805,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.4955,
+    "locked_best_played": 25.4025,
+    "open_miss": 6.3235,
+    "O_left": 0.001,
+    "O_left_up": 0.0,
+    "O_left_down": 0.001,
+    "O_hill": 0.0,
+    "O_valley": 6.3225,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.6765,
+    "open_on_hill": 3.6765,
+    "open_at_0": 4.1955
+   }
+  },
+  "mixture_0.2": {
+   "prediction": {
+    "selection_locked": 0.0135,
+    "selection_open": 1.0,
+    "selection": 0.0135
+   },
+   "conditions": {
+    "k3s1": 0.7445,
+    "k3s1_lam32": 0.396,
+    "k2s1": 0.7505,
+    "k3s8": 0.6505,
+    "k2s8": 0.3465,
+    "k3s16": 0.432
+   },
+   "at_best": {
+    "k3s1": 4.022,
+    "k3s1_lam32": 3.1905,
+    "k2s1": 4.025,
+    "k3s8": 11.4075,
+    "k2s8": 2.481,
+    "k3s16": 1.138
+   },
+   "on_hill": {
+    "k2s8": 2.481,
+    "k3s16": 1.1385
+   },
+   "contrasts": {
+    "L1_locked_side": 0.1535,
+    "L2_open_side": 0.1545,
+    "L3_end_weight_does_not_open": 0.2975,
+    "L4_boundary_is_the_rest": 0.233
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0015,
+     "best_not_kept": 0.7875,
+     "still_descending": 0.0135,
+     "stopped_short": 0.0,
+     "unresolved": 0.1975
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 1.0
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.988,
+     "best_not_kept": 0.015,
+     "still_descending": 0.7965,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "no kind of locked miss makes two thirds of them": 0.187,
+     "R = 2": 0.0105
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 7.355,
+    "R_left": 5.6185,
+    "R_descending": 1.7365,
+    "R_stopped": 0.0,
+    "R_seen": 5.6185,
+    "R_left_held": 4.2975,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.569,
+    "locked_best_played": 22.645,
+    "open_miss": 6.381,
+    "O_left": 0.001,
+    "O_left_up": 0.0,
+    "O_left_down": 0.001,
+    "O_hill": 0.0005,
+    "O_valley": 6.3795,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.619,
+    "open_on_hill": 3.6195,
+    "open_at_0": 3.7715
+   }
+  },
+  "ties_0.03": {
+   "prediction": {
+    "selection_locked": 0.0,
+    "selection_open": 0.974,
+    "selection": 0.0
+   },
+   "conditions": {
+    "k3s1": 0.122,
+    "k3s1_lam32": 0.019,
+    "k2s1": 1.0,
+    "k3s8": 0.145,
+    "k2s8": 0.6395,
+    "k3s16": 0.8805
+   },
+   "at_best": {
+    "k3s1": 2.186,
+    "k3s1_lam32": 1.3015,
+    "k2s1": 5.0,
+    "k3s8": 7.1265,
+    "k2s8": 2.5355,
+    "k3s16": 2.333
+   },
+   "on_hill": {
+    "k2s8": 2.5355,
+    "k3s16": 2.357
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0005,
+    "L2_open_side": 0.5605,
+    "L3_end_weight_does_not_open": 0.004,
+    "L4_boundary_is_the_rest": 0.088
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.9345,
+     "still_descending": 0.0,
+     "stopped_short": 0.0,
+     "unresolved": 0.0655
+    },
+    "open": {
+     "found": 0.007,
+     "best_not_kept": 0.0015,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.978,
+     "unresolved": 0.0135
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 0.0,
+     "still_descending": 0.9595,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.993,
+     "best_not_kept": 0.9865,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0085,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "no kind of locked miss makes two thirds of them": 0.0655
+    },
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.0135
+    }
+   },
+   "means": {
+    "R": 14.386,
+    "R_left": 11.703,
+    "R_descending": 2.363,
+    "R_stopped": 0.32,
+    "R_seen": 10.571,
+    "R_left_held": 4.73,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.549,
+    "locked_best_played": 15.614,
+    "open_miss": 5.1315,
+    "O_left": 0.2515,
+    "O_left_up": 0.0,
+    "O_left_down": 0.2515,
+    "O_hill": 0.024,
+    "O_valley": 4.856,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.028,
+    "O_left_new_at_7": 0.0135,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 4.8685,
+    "open_on_hill": 4.8925,
+    "open_at_0": 1.8645
+   }
+  },
+  "ties_held_0.03": {
+   "prediction": {
+    "selection_locked": 0.0,
+    "selection_open": 1.0,
+    "selection": 0.0
+   },
+   "conditions": {
+    "k3s1": 0.189,
+    "k3s1_lam32": 0.0075,
+    "k2s1": 1.0,
+    "k3s8": 0.0055,
+    "k2s8": 0.516,
+    "k3s16": 0.7335
+   },
+   "at_best": {
+    "k3s1": 2.53,
+    "k3s1_lam32": 0.995,
+    "k2s1": 5.0,
+    "k3s8": 3.0045,
+    "k2s8": 2.5455,
+    "k3s16": 3.199
+   },
+   "on_hill": {
+    "k2s8": 2.5455,
+    "k3s16": 3.199
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.3835,
+    "L3_end_weight_does_not_open": 0.001,
+    "L4_boundary_is_the_rest": 0.003
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.0
+    },
+    "open": {
+     "found": 0.025,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.975
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 0.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0
+    },
+    "open": {
+     "found": 0.975,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.025
+    }
+   },
+   "unresolved_because": {
+    "locked": {},
+    "open": {}
+   },
+   "means": {
+    "R": 18.4705,
+    "R_left": 17.713,
+    "R_descending": 0.7575,
+    "R_stopped": 0.0,
+    "R_seen": 12.2155,
+    "R_left_held": 14.7155,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.54,
+    "locked_best_played": 11.5295,
+    "open_miss": 4.2555,
+    "O_left": 0.002,
+    "O_left_up": 0.0,
+    "O_left_down": 0.002,
+    "O_hill": 0.0,
+    "O_valley": 4.2535,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.002,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 5.7445,
+    "open_on_hill": 5.7445,
+    "open_at_0": 2.531
+   }
+  },
+  "compromise": {
+   "prediction": {
+    "selection_locked": 0.0,
+    "selection_open": 0.055,
+    "selection": 0.0
+   },
+   "conditions": {
+    "k3s1": 0.329,
+    "k3s1_lam32": 0.0255,
+    "k2s1": 0.09,
+    "k3s8": 0.005,
+    "k2s8": 0.533,
+    "k3s16": 0.752
+   },
+   "at_best": {
+    "k3s1": 2.9665,
+    "k3s1_lam32": 1.5075,
+    "k2s1": 1.987,
+    "k3s8": 3.0095,
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "on_hill": {
+    "k2s8": 0.489,
+    "k3s16": 1.025
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.4,
+    "L3_end_weight_does_not_open": 0.008,
+    "L4_boundary_is_the_rest": 0.0025
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.0
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.028,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.418,
+     "unresolved": 0.554
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 0.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 0.418,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.028,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {},
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.554
+    }
+   },
+   "means": {
+    "R": 20.5295,
+    "R_left": 20.5295,
+    "R_descending": 0.0,
+    "R_stopped": 0.0,
+    "R_seen": 18.7895,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.4915,
+    "locked_best_played": 9.4705,
+    "open_miss": 10.0,
+    "O_left": 3.815,
+    "O_left_up": 3.688,
+    "O_left_down": 0.127,
+    "O_hill": 0.0,
+    "O_valley": 6.185,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 0.0,
+    "open_on_hill": 1.514,
+    "open_at_0": 2.433
+   }
+  },
+  "ceiling_5": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 0.239,
+    "k3s16": 0.502
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 5.0,
+    "k2s1": 5.0,
+    "k3s8": 15.0,
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "on_hill": {
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 0.1145,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.239
+   },
+   "readings": {
+    "locked": {
+     "found": 0.9975,
+     "best_not_kept": 0.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.0,
+     "unresolved": 0.0025
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 1.0
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "locked_first_at_0 above half the locked seeds": 0.0025
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 0.0,
+    "R_left": 0.0,
+    "R_descending": 0.0,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.5335,
+    "locked_best_played": 30.0,
+    "open_miss": 10.0,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 0.0,
+    "O_valley": 10.0,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 0.0,
+    "open_on_hill": 0.0,
+    "open_at_0": 3.8435
+   }
+  },
+  "last_tried_0.25": {
+   "prediction": {
+    "selection_locked": 0.0025,
+    "selection_open": 0.098,
+    "selection": 0.0005
+   },
+   "conditions": {
+    "k3s1": 0.602,
+    "k3s1_lam32": 0.3825,
+    "k2s1": 0.63,
+    "k3s8": 0.5815,
+    "k2s8": 0.7365,
+    "k3s16": 0.778
+   },
+   "at_best": {
+    "k3s1": 3.6885,
+    "k3s1_lam32": 3.108,
+    "k2s1": 3.733,
+    "k3s8": 10.708,
+    "k2s8": 2.02,
+    "k3s16": 1.7175
+   },
+   "on_hill": {
+    "k2s8": 3.104,
+    "k3s16": 2.656
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0835,
+    "L2_open_side": 0.5775,
+    "L3_end_weight_does_not_open": 0.2325,
+    "L4_boundary_is_the_rest": 0.4295
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0005,
+     "best_not_kept": 0.909,
+     "still_descending": 0.002,
+     "stopped_short": 0.0,
+     "unresolved": 0.0885
+    },
+    "open": {
+     "found": 0.0015,
+     "best_not_kept": 0.3135,
+     "stopped_on_hill": 0.001,
+     "not_reached": 0.1115,
+     "unresolved": 0.5725
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.997,
+     "best_not_kept": 0.0025,
+     "still_descending": 0.911,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.9985,
+     "best_not_kept": 0.189,
+     "stopped_on_hill": 0.9785,
+     "not_reached": 0.4655,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "no kind of locked miss makes two thirds of them": 0.086,
+     "R = 2": 0.0025
+    },
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.5725
+    }
+   },
+   "means": {
+    "R": 8.7625,
+    "R_left": 7.2875,
+    "R_descending": 1.475,
+    "R_stopped": 0.0,
+    "R_seen": 6.485,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 7.2875,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.5395,
+    "locked_best_played": 21.2375,
+    "open_miss": 6.2625,
+    "O_left": 3.391,
+    "O_left_up": 1.7365,
+    "O_left_down": 1.6545,
+    "O_hill": 0.461,
+    "O_valley": 2.4105,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 3.391,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 3.7375,
+    "open_on_hill": 5.76,
+    "open_at_0": 1.9005
+   }
+  },
+  "last_tried_0.5": {
+   "prediction": {
+    "selection_locked": 0.0,
+    "selection_open": 0.003,
+    "selection": 0.0
+   },
+   "conditions": {
+    "k3s1": 0.172,
+    "k3s1_lam32": 0.1175,
+    "k2s1": 0.173,
+    "k3s8": 0.1615,
+    "k2s8": 0.934,
+    "k3s16": 0.9215
+   },
+   "at_best": {
+    "k3s1": 2.3935,
+    "k3s1_lam32": 2.1875,
+    "k2s1": 2.441,
+    "k3s8": 6.931,
+    "k2s8": 1.5395,
+    "k3s16": 1.4375
+   },
+   "on_hill": {
+    "k2s8": 2.814,
+    "k3s16": 2.702
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.861,
+    "L3_end_weight_does_not_open": 0.0185,
+    "L4_boundary_is_the_rest": 0.153
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.9955,
+     "still_descending": 0.0,
+     "stopped_short": 0.0,
+     "unresolved": 0.0045
+    },
+    "open": {
+     "found": 0.0005,
+     "best_not_kept": 0.8665,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.0005,
+     "unresolved": 0.1325
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 0.0,
+     "still_descending": 0.9955,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.9995,
+     "best_not_kept": 0.005,
+     "stopped_on_hill": 0.979,
+     "not_reached": 0.9705,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "no kind of locked miss makes two thirds of them": 0.0045
+    },
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.1325
+    }
+   },
+   "means": {
+    "R": 16.047,
+    "R_left": 14.3775,
+    "R_descending": 1.6695,
+    "R_stopped": 0.0,
+    "R_seen": 12.122,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 14.3775,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.485,
+    "locked_best_played": 13.953,
+    "open_miss": 7.023,
+    "O_left": 5.744,
+    "O_left_up": 3.62,
+    "O_left_down": 2.124,
+    "O_hill": 0.586,
+    "O_valley": 0.693,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 5.744,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 2.977,
+    "open_on_hill": 5.516,
+    "open_at_0": 0.888
+   }
+  },
+  "la1_moves": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 0.68,
+    "k3s1_lam32": 0.153,
+    "k2s1": 0.602,
+    "k3s8": 0.287,
+    "k2s8": 0.51,
+    "k3s16": 0.8645
+   },
+   "at_best": {
+    "k3s1": 3.852,
+    "k3s1_lam32": 2.347,
+    "k2s1": 3.681,
+    "k3s8": 8.508,
+    "k2s8": 1.9825,
+    "k3s16": 2.531
+   },
+   "on_hill": {
+    "k2s8": 2.908,
+    "k3s16": 3.482
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0135,
+    "L2_open_side": 0.436,
+    "L3_end_weight_does_not_open": 0.104,
+    "L4_boundary_is_the_rest": 0.143
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "still_descending": 0.9435,
+     "stopped_short": 0.001,
+     "unresolved": 0.0555
+    },
+    "open": {
+     "found": 0.005,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0865,
+     "not_reached": 0.559,
+     "unresolved": 0.3495
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "still_descending": 0.001,
+     "stopped_short": 0.9435,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 0.995,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 0.564,
+     "not_reached": 0.0915,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "no kind of locked miss makes two thirds of them": 0.0555
+    },
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.3495
+    }
+   },
+   "means": {
+    "R": 11.612,
+    "R_left": 0.0,
+    "R_descending": 9.7885,
+    "R_stopped": 1.8235,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0085,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.51,
+    "locked_best_played": 18.388,
+    "open_miss": 5.4865,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 1.8765,
+    "O_valley": 3.61,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 4.5135,
+    "open_on_hill": 6.39,
+    "open_at_0": 2.2305
+   }
+  },
+  "prior": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 0.176,
+    "k3s1_lam32": 0.0065,
+    "k2s1": 0.092,
+    "k3s8": 0.0085,
+    "k2s8": 0.531,
+    "k3s16": 0.7285
+   },
+   "at_best": {
+    "k3s1": 2.469,
+    "k3s1_lam32": 1.0045,
+    "k2s1": 1.981,
+    "k3s8": 3.046,
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "on_hill": {
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.394,
+    "L3_end_weight_does_not_open": 0.0015,
+    "L4_boundary_is_the_rest": 0.004
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "still_descending": 0.0,
+     "stopped_short": 1.0
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 1.0
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "still_descending": 1.0,
+     "stopped_short": 0.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {},
+    "open": {}
+   },
+   "means": {
+    "R": 21.4995,
+    "R_left": 0.0,
+    "R_descending": 0.0,
+    "R_stopped": 21.4995,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 21.4995,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 8.5005,
+    "locked_best_played": 8.5005,
+    "open_miss": 10.0,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 0.0,
+    "O_valley": 10.0,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 0.0,
+    "open_on_hill": 0.0,
+    "open_at_0": 2.5245
+   }
+  },
+  "greedy": {
+   "prediction": {
+    "selection_locked": 1.0,
+    "selection_open": 1.0,
+    "selection": 1.0
+   },
+   "conditions": {
+    "k3s1": 1.0,
+    "k3s1_lam32": 1.0,
+    "k2s1": 1.0,
+    "k3s8": 1.0,
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "at_best": {
+    "k3s1": 5.0,
+    "k3s1_lam32": 5.0,
+    "k2s1": 5.0,
+    "k3s8": 15.0,
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "on_hill": {
+    "k2s8": 0.0,
+    "k3s16": 0.0
+   },
+   "contrasts": {
+    "L1_locked_side": 1.0,
+    "L2_open_side": 0.0,
+    "L3_end_weight_does_not_open": 1.0,
+    "L4_boundary_is_the_rest": 0.0
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "still_descending": 0.0,
+     "stopped_short": 0.0,
+     "unresolved": 1.0
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.0,
+     "not_reached": 1.0
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 1.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 1.0,
+     "stopped_on_hill": 1.0,
+     "not_reached": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "locked_first_at_0 above half the locked seeds": 1.0
+    },
+    "open": {}
+   },
+   "means": {
+    "R": 0.0,
+    "R_left": 0.0,
+    "R_descending": 0.0,
+    "R_stopped": 0.0,
+    "R_seen": 0.0,
+    "R_left_held": 0.0,
+    "R_left_new_at_7": 0.0,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.0,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 30.0,
+    "locked_best_played": 30.0,
+    "open_miss": 10.0,
+    "O_left": 0.0,
+    "O_left_up": 0.0,
+    "O_left_down": 0.0,
+    "O_hill": 0.0,
+    "O_valley": 10.0,
+    "O_valley_named_on_hill": 0.0,
+    "O_left_held": 0.0,
+    "O_left_new_at_7": 0.0,
+    "invalid_open": 0.0,
+    "open_first_at_7": 0.0,
+    "open_best_played": 0.0,
+    "open_on_hill": 0.0,
+    "open_at_0": 10.0
+   }
+  },
+  "uniform": {
+   "prediction": {
+    "selection_locked": 0.0,
+    "selection_open": 0.0,
+    "selection": 0.0
+   },
+   "conditions": {
+    "k3s1": 0.0,
+    "k3s1_lam32": 0.0,
+    "k2s1": 0.0,
+    "k3s8": 0.0005,
+    "k2s8": 0.919,
+    "k3s16": 0.921
+   },
+   "at_best": {
+    "k3s1": 0.5075,
+    "k3s1_lam32": 0.4805,
+    "k2s1": 0.4765,
+    "k3s8": 1.517,
+    "k2s8": 0.494,
+    "k3s16": 0.499
+   },
+   "on_hill": {
+    "k2s8": 1.492,
+    "k3s16": 1.506
+   },
+   "contrasts": {
+    "L1_locked_side": 0.0,
+    "L2_open_side": 0.851,
+    "L3_end_weight_does_not_open": 0.0,
+    "L4_boundary_is_the_rest": 0.0005
+   },
+   "readings": {
+    "locked": {
+     "found": 0.0,
+     "best_not_kept": 0.9995,
+     "still_descending": 0.0,
+     "stopped_short": 0.0,
+     "unresolved": 0.0005
+    },
+    "open": {
+     "found": 0.0,
+     "best_not_kept": 0.986,
+     "stopped_on_hill": 0.0,
+     "not_reached": 0.0,
+     "unresolved": 0.014
+    }
+   },
+   "contradicted": {
+    "locked": {
+     "found": 1.0,
+     "best_not_kept": 0.0,
+     "still_descending": 1.0,
+     "stopped_short": 1.0,
+     "unresolved": 0.0
+    },
+    "open": {
+     "found": 1.0,
+     "best_not_kept": 0.0,
+     "stopped_on_hill": 0.9955,
+     "not_reached": 1.0,
+     "unresolved": 0.0
+    }
+   },
+   "unresolved_because": {
+    "locked": {
+     "no kind of locked miss makes two thirds of them": 0.0005
+    },
+    "open": {
+     "no kind of open miss makes two thirds of them": 0.014
+    }
+   },
+   "means": {
+    "R": 27.0185,
+    "R_left": 24.6085,
+    "R_descending": 0.8725,
+    "R_stopped": 1.5375,
+    "R_seen": 14.1455,
+    "R_left_held": 2.1715,
+    "R_left_new_at_7": 1.252,
+    "R_never_moved": 0.0,
+    "R_named_below": 0.971,
+    "invalid_locked": 0.0,
+    "locked_first_at_0": 3.004,
+    "locked_best_played": 1.5125,
+    "open_miss": 9.007,
+    "O_left": 8.0665,
+    "O_left_up": 6.5255,
+    "O_left_down": 1.541,
+    "O_hill": 0.6355,
+    "O_valley": 0.305,
+    "O_valley_named_on_hill": 0.1615,
+    "O_left_held": 0.65,
+    "O_left_new_at_7": 0.4285,
+    "invalid_open": 0.0,
+    "open_first_at_7": 1.053,
+    "open_best_played": 0.513,
+    "open_on_hill": 2.998,
+    "open_at_0": 0.999
+   }
+  }
+ }
+}
