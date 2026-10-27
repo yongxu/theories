@@ -46,6 +46,8 @@ No dependency on another migrated record is asserted; source imports and supplie
 - Related, not a proved adapter: [relational-generative-comparison](relational-generative-comparison.md). Uses the same inherited joint-activation law. That record connects bundles to explicit normative comparison; this one accounts for actual prefixes and event bounds. Neither is a new proof input to the other.
 - Related, not a proved adapter: [wisdom-root](wisdom-root.md). Interpretive connection to judgments of becoming: preparation, loss and actual exercise belong in the relevant scope; this local bound does not establish the full root of wisdom.
 
+**Used by:** [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md)
+
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts
 

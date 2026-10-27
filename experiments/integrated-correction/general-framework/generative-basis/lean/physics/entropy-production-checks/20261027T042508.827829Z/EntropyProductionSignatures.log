@@ -1,0 +1,258 @@
+@Becoming.EntropyProduction.ExergyBalance.give_le : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ} {σ : ℕ → F → ℝ},
+  Becoming.EntropyProduction.ExergyBalance L u σ →
+    Becoming.EntropyProduction.SecondLaw L σ →
+      0 < u →
+        ∀ {cs : List C} {t : ℕ},
+          Becoming.Distinct cs →
+            L.ClosedAt cs t →
+              ∀ {f : F}, f ∈ L.present t → Becoming.total cs (L.give t f) ≤ Becoming.total cs (L.take t f)
+@Becoming.EntropyProduction.gainless_of_secondLaw : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ} {σ : ℕ → F → ℝ},
+  Becoming.EntropyProduction.ExergyBalance L u σ → Becoming.EntropyProduction.SecondLaw L σ → 0 < u → L.Gainless
+@Becoming.EntropyProduction.ExergyBalance.destroyed_eq_residue : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ}
+  {σ : ℕ → F → ℝ},
+  Becoming.EntropyProduction.ExergyBalance L u σ →
+    Becoming.EntropyProduction.SecondLaw L σ →
+      0 < u →
+        ∀ {cs : List C} {t : ℕ},
+          Becoming.Distinct cs → L.ClosedAt cs t → ∀ {f : F}, f ∈ L.present t → σ t f = u * ↑(L.residue cs t f)
+Becoming.EntropyProduction.passing_balance : ∀ (u : ℝ),
+  (Becoming.EntropyProduction.ExergyBalance Becoming.Passing.flow u fun x x_1 => 0) ∧
+    Becoming.EntropyProduction.SecondLaw Becoming.Passing.flow fun x x_1 => 0
+Becoming.EntropyProduction.secondLaw_not_dissipative : (Becoming.EntropyProduction.ExergyBalance Becoming.Passing.flow 1
+    fun x x_1 => 0) ∧
+  (Becoming.EntropyProduction.SecondLaw Becoming.Passing.flow fun x x_1 => 0) ∧ ¬Becoming.Passing.flow.Dissipative
+@Becoming.EntropyProduction.dissipative_of_irreversible : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ}
+  {σ : ℕ → F → ℝ},
+  Becoming.EntropyProduction.ExergyBalance L u σ →
+    Becoming.EntropyProduction.SecondLaw L σ → Becoming.EntropyProduction.Irreversible L σ → 0 < u → L.Dissipative
+@Becoming.EntropyProduction.loss_of_floor : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ} {σ : ℕ → F → ℝ},
+  Becoming.EntropyProduction.ExergyBalance L u σ →
+    0 < u →
+      ∀ {s : ℝ},
+        Becoming.EntropyProduction.DestroysAtLeast L σ s →
+          ∀ {n : ℕ},
+            ↑n * u ≤ s →
+              ∀ {cs : List C} {t : ℕ},
+                Becoming.Distinct cs →
+                  L.ClosedAt cs t →
+                    ∀ {f : F},
+                      f ∈ L.present t →
+                        0 < Becoming.total cs (L.take t f) →
+                          Becoming.total cs (L.give t f) + n ≤ Becoming.total cs (L.take t f)
+@Becoming.EntropyProduction.dissipative_of_floor : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ} {σ : ℕ → F → ℝ},
+  Becoming.EntropyProduction.ExergyBalance L u σ →
+    Becoming.EntropyProduction.SecondLaw L σ →
+      0 < u → ∀ {s : ℝ}, Becoming.EntropyProduction.DestroysAtLeast L σ s → u ≤ s → L.Dissipative
+@Becoming.EntropyProduction.loss_at_finer_unit : ∀ {F C : Type} {L : Becoming.Flow F C} {σ : ℕ → F → ℝ} {s : ℝ},
+  0 < s →
+    ∀ {r : ℕ},
+      0 < r →
+        Becoming.EntropyProduction.ExergyBalance L (s / ↑r) σ →
+          Becoming.EntropyProduction.DestroysAtLeast L σ s →
+            ∀ {cs : List C} {t : ℕ},
+              Becoming.Distinct cs →
+                L.ClosedAt cs t →
+                  ∀ {f : F},
+                    f ∈ L.present t →
+                      0 < Becoming.total cs (L.take t f) →
+                        Becoming.total cs (L.give t f) + r ≤ Becoming.total cs (L.take t f)
+@Becoming.EntropyProduction.dissipativeBy_of_efficiency : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ}
+  {σ : ℕ → F → ℝ},
+  Becoming.EntropyProduction.ExergyBalance L u σ →
+    0 < u →
+      ∀ {q : ℕ},
+        (∀ (cs : List C) (t : ℕ),
+            Becoming.Distinct cs →
+              L.ClosedAt cs t → ∀ f ∈ L.present t, u * ↑(Becoming.total cs (L.take t f)) ≤ (↑q + 1) * σ t f) →
+          Becoming.Flow.DissipativeBy q
+@Becoming.EntropyProduction.cast_total : ∀ {α : Type} (l : List α) (q : α → ℕ),
+  ↑(Becoming.total l q) = Becoming.EntropyProduction.rtotal l fun a => ↑(q a)
+@Becoming.EntropyProduction.rtotal_combine : ∀ {α : Type} (l : List α) (p q : α → ℝ) (a b : ℝ),
+  (Becoming.EntropyProduction.rtotal l fun x => a * p x + b * q x) =
+    a * Becoming.EntropyProduction.rtotal l p + b * Becoming.EntropyProduction.rtotal l q
+@Becoming.EntropyProduction.rtotal_congr_on : ∀ {α : Type} {l : List α} {p q : α → ℝ},
+  (∀ x ∈ l, p x = q x) → Becoming.EntropyProduction.rtotal l p = Becoming.EntropyProduction.rtotal l q
+@Becoming.EntropyProduction.rtotal_read : ∀ {α : Type} (l : List α) (k g : α → ℕ) (u : ℝ),
+  (Becoming.EntropyProduction.rtotal l fun a => u * (↑(k a) - ↑(g a))) =
+    u * (↑(Becoming.total l k) - ↑(Becoming.total l g))
+@Becoming.EntropyProduction.ReadsTransfers.carried : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ} {x : ℕ → F → C → ℝ},
+  Becoming.EntropyProduction.ReadsTransfers L u x →
+    ∀ (t : ℕ) (c : C),
+      (Becoming.EntropyProduction.rtotal (L.present t) fun f => x t f c) = u * (↑(L.taken t c) - ↑(L.given t c))
+@Becoming.EntropyProduction.LocalBalance.produced : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ}
+  {W : Becoming.Web F C} {q : ℕ → C → ℝ} {x : ℕ → F → C → ℝ} {p : ℕ → C → ℝ},
+  Becoming.EntropyProduction.LocalBalance L q x p →
+    Becoming.EntropyProduction.ReadsLevels W u q →
+      Becoming.EntropyProduction.ReadsTransfers L u x →
+        ∀ (t : ℕ) (c : C), p t c = u * (↑(W.level (t + 1) c + L.taken t c) - ↑(W.level t c + L.given t c))
+@Becoming.EntropyProduction.balances_iff_unproduced : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ}
+  {W : Becoming.Web F C} {q : ℕ → C → ℝ} {x : ℕ → F → C → ℝ} {p : ℕ → C → ℝ},
+  Becoming.EntropyProduction.LocalBalance L q x p →
+    Becoming.EntropyProduction.ReadsLevels W u q →
+      Becoming.EntropyProduction.ReadsTransfers L u x → 0 < u → (L.Balances W ↔ ∀ (t : ℕ) (c : C), p t c = 0)
+@Becoming.EntropyProduction.balances_of_conserved : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ}
+  {W : Becoming.Web F C} {q : ℕ → C → ℝ} {x : ℕ → F → C → ℝ},
+  (Becoming.EntropyProduction.LocalBalance L q x fun x x_1 => 0) →
+    Becoming.EntropyProduction.ReadsLevels W u q →
+      Becoming.EntropyProduction.ReadsTransfers L u x → 0 < u → L.Balances W
+@Becoming.EntropyProduction.StoreLaws.availableWork : ∀ {F C : Type} {L : Becoming.Flow F C} {E S : ℕ → C → ℝ}
+  {e s : ℕ → F → C → ℝ} {g : ℕ → C → ℝ},
+  Becoming.EntropyProduction.StoreLaws L E S e s g →
+    ∀ (T0 : ℝ),
+      Becoming.EntropyProduction.LocalBalance L (fun t c => E t c - T0 * S t c) (fun t f c => e t f c - T0 * s t f c)
+        fun t c => -(T0 * g t c)
+@Becoming.EntropyProduction.balances_iff_stores_generate_nothing : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ}
+  {W : Becoming.Web F C} {E S : ℕ → C → ℝ} {e s : ℕ → F → C → ℝ} {g : ℕ → C → ℝ} {T0 : ℝ},
+  Becoming.EntropyProduction.StoreLaws L E S e s g →
+    (Becoming.EntropyProduction.ReadsLevels W u fun t c => E t c - T0 * S t c) →
+      (Becoming.EntropyProduction.ReadsTransfers L u fun t f c => e t f c - T0 * s t f c) →
+        0 < u → 0 < T0 → (L.Balances W ↔ ∀ (t : ℕ) (c : C), g t c = 0)
+@Becoming.EntropyProduction.stores_within : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ} {W : Becoming.Web F C}
+  {E S : ℕ → C → ℝ} {e s : ℕ → F → C → ℝ} {g : ℕ → C → ℝ} {T0 : ℝ},
+  Becoming.EntropyProduction.StoreLaws L E S e s g →
+    (Becoming.EntropyProduction.ReadsLevels W u fun t c => E t c - T0 * S t c) →
+      (Becoming.EntropyProduction.ReadsTransfers L u fun t f c => e t f c - T0 * s t f c) →
+        0 < u →
+          0 ≤ T0 →
+            (∀ (t : ℕ) (c : C), 0 ≤ g t c) →
+              ∀ (t : ℕ) (c : C), W.level (t + 1) c + L.taken t c ≤ W.level t c + L.given t c
+@Becoming.EntropyProduction.exergyBalance_of_laws : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ} {e s : ℕ → F → C → ℝ}
+  {T0 : ℝ} {Q γ : ℕ → F → ℝ},
+  Becoming.EntropyProduction.ExchangeLaws L T0 e s Q γ →
+    (Becoming.EntropyProduction.ReadsTransfers L u fun t f c => e t f c - T0 * s t f c) →
+      0 < T0 → Becoming.EntropyProduction.ExergyBalance L u fun t f => T0 * γ t f
+@Becoming.EntropyProduction.secondLaw_of_generation : ∀ {F C : Type} {L : Becoming.Flow F C} {T0 : ℝ} {γ : ℕ → F → ℝ},
+  0 ≤ T0 → (∀ (t : ℕ), ∀ f ∈ L.present t, 0 ≤ γ t f) → Becoming.EntropyProduction.SecondLaw L fun t f => T0 * γ t f
+@Becoming.EntropyProduction.irreversible_of_generation : ∀ {F C : Type} {L : Becoming.Flow F C} {T0 : ℝ}
+  {γ : ℕ → F → ℝ},
+  0 < T0 →
+    (∀ (cs : List C) (t : ℕ),
+        Becoming.Distinct cs → L.ClosedAt cs t → ∀ f ∈ L.present t, 0 < Becoming.total cs (L.take t f) → 0 < γ t f) →
+      Becoming.EntropyProduction.Irreversible L fun t f => T0 * γ t f
+@Becoming.EntropyProduction.balance_and_least_loss : ∀ {F C : Type} {L : Becoming.Flow F C} {u : ℝ}
+  {W : Becoming.Web F C} {E S : ℕ → C → ℝ} {e s : ℕ → F → C → ℝ} {g : ℕ → C → ℝ} {T0 : ℝ} {Q γ : ℕ → F → ℝ},
+  Becoming.EntropyProduction.StoreLaws L E S e s g →
+    Becoming.EntropyProduction.ExchangeLaws L T0 e s Q γ →
+      (Becoming.EntropyProduction.ReadsLevels W u fun t c => E t c - T0 * S t c) →
+        (Becoming.EntropyProduction.ReadsTransfers L u fun t f c => e t f c - T0 * s t f c) →
+          0 < u →
+            0 < T0 →
+              (L.Balances W ↔ ∀ (t : ℕ) (c : C), g t c = 0) ∧
+                ((∀ (t : ℕ), ∀ f ∈ L.present t, 0 ≤ γ t f) → L.Gainless) ∧
+                  ((∀ (t : ℕ), ∀ f ∈ L.present t, 0 ≤ γ t f) →
+                    (∀ (cs : List C) (t : ℕ),
+                        Becoming.Distinct cs →
+                          L.ClosedAt cs t → ∀ f ∈ L.present t, 0 < Becoming.total cs (L.take t f) → 0 < γ t f) →
+                      L.Dissipative)
+Becoming.EntropyProduction.Teleport.conserved_not_balanced : (∀ (t : ℕ),
+    Becoming.total [true, false] (Becoming.EntropyProduction.Teleport.web.level t) = 1) ∧
+  ¬Becoming.EntropyProduction.Teleport.flow.Balances Becoming.EntropyProduction.Teleport.web
+@Becoming.EntropyProduction.Burning.family : ∀ {cs : List Unit},
+  Becoming.Distinct cs →
+    ∀ {t : ℕ},
+      Becoming.EntropyProduction.Burning.flow.ClosedAt cs t →
+        () ∈ Becoming.EntropyProduction.Burning.flow.present t → cs = [()]
+Becoming.EntropyProduction.Burning.meets : Becoming.EntropyProduction.StoreLaws Becoming.EntropyProduction.Burning.flow
+    Becoming.EntropyProduction.Burning.energy Becoming.EntropyProduction.Burning.entropy
+    Becoming.EntropyProduction.Burning.energyDrawn Becoming.EntropyProduction.Burning.entropyDrawn
+    Becoming.EntropyProduction.Burning.storeGenerates ∧
+  Becoming.EntropyProduction.ExchangeLaws Becoming.EntropyProduction.Burning.flow 1
+      Becoming.EntropyProduction.Burning.energyDrawn Becoming.EntropyProduction.Burning.entropyDrawn
+      Becoming.EntropyProduction.Burning.heat Becoming.EntropyProduction.Burning.generates ∧
+    (Becoming.EntropyProduction.ReadsLevels Becoming.EntropyProduction.Burning.web 1 fun t c =>
+        Becoming.EntropyProduction.Burning.energy t c - 1 * Becoming.EntropyProduction.Burning.entropy t c) ∧
+      (Becoming.EntropyProduction.ReadsTransfers Becoming.EntropyProduction.Burning.flow 1 fun t f c =>
+          Becoming.EntropyProduction.Burning.energyDrawn t f c -
+            1 * Becoming.EntropyProduction.Burning.entropyDrawn t f c) ∧
+        (∀ (t : ℕ),
+            ∀ f ∈ Becoming.EntropyProduction.Burning.flow.present t,
+              0 ≤ Becoming.EntropyProduction.Burning.generates t f) ∧
+          ∀ (cs : List Unit) (t : ℕ),
+            Becoming.Distinct cs →
+              Becoming.EntropyProduction.Burning.flow.ClosedAt cs t →
+                ∀ f ∈ Becoming.EntropyProduction.Burning.flow.present t,
+                  0 < Becoming.total cs (Becoming.EntropyProduction.Burning.flow.take t f) →
+                    0 < Becoming.EntropyProduction.Burning.generates t f
+Becoming.EntropyProduction.Burning.balanced_and_dissipative : Becoming.EntropyProduction.Burning.flow.Balances
+    Becoming.EntropyProduction.Burning.web ∧
+  Becoming.EntropyProduction.Burning.flow.Dissipative
+Becoming.EntropyProduction.Leaking.energy_conserved_not_balanced : Becoming.EntropyProduction.StoreLaws
+    Becoming.EntropyProduction.Leaking.flow (fun x x_1 => 1) Becoming.EntropyProduction.Leaking.entropy
+    (fun x x_1 x_2 => 0) (fun x x_1 x_2 => 0) Becoming.EntropyProduction.Leaking.storeGenerates ∧
+  (Becoming.EntropyProduction.ReadsLevels Becoming.EntropyProduction.Leaking.web 1 fun t c =>
+      1 - 1 * Becoming.EntropyProduction.Leaking.entropy t c) ∧
+    (Becoming.EntropyProduction.ReadsTransfers Becoming.EntropyProduction.Leaking.flow 1 fun x x_1 x_2 => 0 - 1 * 0) ∧
+      ¬Becoming.EntropyProduction.Leaking.flow.Balances Becoming.EntropyProduction.Leaking.web
+@Becoming.EntropyProduction.ExpectedDissipatesOn.of_pathwise : ∀ {F C Ω : Type} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} {L : Ω → Becoming.Flow F C} {cs : List C} {t : ℕ},
+  (∀ (ω : Ω), (L ω).DissipatesOn cs t) →
+    MeasureTheory.Integrable (fun ω => ↑((L ω).uptake cs t)) μ →
+      MeasureTheory.Integrable (fun ω => ↑((L ω).replenishment cs t)) μ →
+        MeasureTheory.Integrable (fun ω => ↑((L ω).takers cs t)) μ →
+          Becoming.EntropyProduction.ExpectedDissipatesOn μ L cs t
+@Becoming.EntropyProduction.ExpectedDissipatesOn.of_exergy : ∀ {F C : Type} {u : ℝ} {Ω : Type}
+  [inst : MeasurableSpace Ω] {μ : MeasureTheory.Measure Ω} {L : Ω → Becoming.Flow F C} {cs : List C} {t : ℕ}
+  {D : Ω → ℝ},
+  0 < u →
+    (∀ (ω : Ω), u * ↑((L ω).replenishment cs t) + D ω = u * ↑((L ω).uptake cs t)) →
+      u * ∫ (ω : Ω), ↑((L ω).takers cs t) ∂μ ≤ ∫ (ω : Ω), D ω ∂μ →
+        MeasureTheory.Integrable (fun ω => ↑((L ω).replenishment cs t)) μ →
+          MeasureTheory.Integrable D μ → Becoming.EntropyProduction.ExpectedDissipatesOn μ L cs t
+@Becoming.EntropyProduction.expected_runs_down : ∀ {F C Ω : Type} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} {L : Ω → Becoming.Flow F C} {W : Ω → Becoming.Web F C} {cs : List C},
+  (∀ (ω : Ω), (L ω).Balances (W ω)) →
+    ∀ {t : ℕ},
+      Becoming.EntropyProduction.HasExpectations μ L W cs t →
+        MeasureTheory.Integrable (fun ω => ↑((W ω).stock cs (t + 1))) μ →
+          Becoming.EntropyProduction.ExpectedDissipatesOn μ L cs t →
+            ∫ (ω : Ω), ↑((W ω).stock cs (t + 1)) ∂μ + ∫ (ω : Ω), ↑((L ω).takers cs t) ∂μ ≤
+              ∫ (ω : Ω), ↑((W ω).stock cs t) ∂μ
+@Becoming.EntropyProduction.expected_takers_within : ∀ {F C Ω : Type} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} {L : Ω → Becoming.Flow F C} {W : Ω → Becoming.Web F C} {cs : List C} {T : ℕ},
+  (∀ (ω : Ω), (L ω).Balances (W ω)) →
+    (∀ (t : ℕ), Becoming.EntropyProduction.HasExpectations μ L W cs t) →
+      (∀ (t : ℕ), T ≤ t → Becoming.EntropyProduction.ExpectedDissipatesOn μ L cs t) →
+        ∀ (N : ℕ),
+          ∫ (ω : Ω), ↑((W ω).stock cs (T + N)) ∂μ + ∑ i ∈ Finset.range N, ∫ (ω : Ω), ↑((L ω).takers cs (T + i)) ∂μ ≤
+            ∫ (ω : Ω), ↑((W ω).stock cs T) ∂μ
+@Becoming.EntropyProduction.expected_stock_nonneg : ∀ {F C Ω : Type} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} {W : Ω → Becoming.Web F C} {cs : List C} (t : ℕ), 0 ≤ ∫ (ω : Ω), ↑((W ω).stock cs t) ∂μ
+@Becoming.EntropyProduction.taking_probability_le : ∀ {F C Ω : Type} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} {L : Ω → Becoming.Flow F C} {cs : List C} {t : ℕ},
+  MeasureTheory.Integrable (fun ω => ↑((L ω).takers cs t)) μ →
+    μ.real {ω | 0 < (L ω).takers cs t} ≤ ∫ (ω : Ω), ↑((L ω).takers cs t) ∂μ
+@Becoming.EntropyProduction.taking_probability_within : ∀ {F C Ω : Type} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} {L : Ω → Becoming.Flow F C} {W : Ω → Becoming.Web F C} {cs : List C} {T : ℕ},
+  (∀ (ω : Ω), (L ω).Balances (W ω)) →
+    (∀ (t : ℕ), Becoming.EntropyProduction.HasExpectations μ L W cs t) →
+      (∀ (t : ℕ), T ≤ t → Becoming.EntropyProduction.ExpectedDissipatesOn μ L cs t) →
+        ∀ (N : ℕ), ∑ i ∈ Finset.range N, μ.real {ω | 0 < (L ω).takers cs (T + i)} ≤ ∫ (ω : Ω), ↑((W ω).stock cs T) ∂μ
+@Becoming.EntropyProduction.taking_not_recurring_ae : ∀ {F C Ω : Type} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} {L : Ω → Becoming.Flow F C} {W : Ω → Becoming.Web F C} {cs : List C} {T : ℕ}
+  [MeasureTheory.IsFiniteMeasure μ],
+  (∀ (ω : Ω), (L ω).Balances (W ω)) →
+    (∀ (t : ℕ), Becoming.EntropyProduction.HasExpectations μ L W cs t) →
+      (∀ (t : ℕ), T ≤ t → Becoming.EntropyProduction.ExpectedDissipatesOn μ L cs t) →
+        ∀ᵐ (ω : Ω) ∂μ, ∃ N, ∀ (t : ℕ), N ≤ t → (L ω).takers cs t = 0
+Becoming.EntropyProduction.Fluctuation.integral_coin : ∀ (g : Bool → ℝ),
+  ∫ (b : Bool), g b ∂Becoming.EntropyProduction.Fluctuation.coin = 2⁻¹ * (g true + g false)
+Becoming.EntropyProduction.Fluctuation.balances : ∀ (b : Bool),
+  (Becoming.EntropyProduction.Fluctuation.flow b).Balances (Becoming.EntropyProduction.Fluctuation.web b)
+Becoming.EntropyProduction.Fluctuation.closed : ∀ (b : Bool) (t : ℕ),
+  (Becoming.EntropyProduction.Fluctuation.flow b).ClosedAt [()] t
+Becoming.EntropyProduction.Fluctuation.gains_in_one_run : (∀ (t : ℕ),
+    Becoming.EntropyProduction.ExpectedDissipatesOn Becoming.EntropyProduction.Fluctuation.coin
+      Becoming.EntropyProduction.Fluctuation.flow [()] t) ∧
+  (∀ (b : Bool) (t : ℕ), (Becoming.EntropyProduction.Fluctuation.flow b).ClosedAt [()] t) ∧
+    (∀ (b : Bool),
+        (Becoming.EntropyProduction.Fluctuation.flow b).Balances (Becoming.EntropyProduction.Fluctuation.web b)) ∧
+      ¬(Becoming.EntropyProduction.Fluctuation.flow true).GainlessOn [()] 0 ∧
+        ¬(Becoming.EntropyProduction.Fluctuation.flow true).Dissipative
+@Becoming.EntropyProduction.expected_production_nonneg : ∀ {Ω : Type} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} [MeasureTheory.IsProbabilityMeasure μ] {S : Ω → ℝ},
+  MeasureTheory.Integrable S μ →
+    MeasureTheory.Integrable (fun ω => Real.exp (-S ω)) μ → ∫ (ω : Ω), Real.exp (-S ω) ∂μ = 1 → 0 ≤ ∫ (ω : Ω), S ω ∂μ
+@Becoming.EntropyProduction.gain_probability_le : ∀ {Ω : Type} [inst : MeasurableSpace Ω] {μ : MeasureTheory.Measure Ω}
+  {S : Ω → ℝ},
+  MeasureTheory.Integrable (fun ω => Real.exp (-S ω)) μ →
+    ∫ (ω : Ω), Real.exp (-S ω) ∂μ = 1 → ∀ (a : ℝ), μ.real {ω | S ω ≤ -a} ≤ Real.exp (-a)

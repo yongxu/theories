@@ -19027,3 +19027,234 @@ Output→input: eventual-widening, what-keeping-widening-needs, four-cases-of-a-
 **Decisions at landing.** The general lemma (`strictJoin_trans`, `strictJoin_irrefl`) stays in the leaf: it would belong in `Prelude`, and moving it rebuilds every module above. Link composition (`Web.Linked.append`) generalizes the landed `Web.Linked.snoc`; it would belong in `ContinuedClasses`, with `snoc` derived from it, and until its owners move it the general form sits in the leaf beside its special case. UE8's first review found that UE7's passing laws also take requirements never loosening, a hypothesis beside the World premises; 07 §2's theorem and reading, 07's and 02's Open items and the record what-keeping-widening-needs (its statement, law 9 and premises) now say so.
 
 **Readings** [AI reading, D45]. The cycle needs a static course wide enough to include a keeping course of another pair of the class, which no listed static course is. Keeping what the other keeps is closer to "counting neither novelty nor scale" than the exchange: neither novelty nor scale can outweigh a lasting loss. Widening with a lag ranks courses by what each keeps of the other's admissions over time, closer to nothing lost across time than to a range whose widening keeps widening, so the second order, if it is read at all, is read on what a course keeps reachable or on what carries its openings.
+
+## 422. The weak points the sciences dossier found (DF1b)
+
+Board item DF, under RA. Drafting the sciences dossier, UE8 and its two reviews listed what they found wrong in the account ([UE8's kit](development/ue8-sciences-dossier/README.md), "Found in the account while drafting"); ten of the points came to DF. DF1b checks each against main at `04c7f93ae` and corrects it with the instances of the same error elsewhere in the live account. The work is the AI's ([kit](../../2026-10-05-repository-reconciliation/architecture/df/README.md)).
+
+```text
+Result(s): no new result; chapter lines, the overview, OPENING's footnote, the glossary, three tests' accounts, 21
+       records and one periphery module's comments and hypothesis name corrected.
+Delta: (1) MQ6 (§314) counted as it ran: T1's evidence in 02 and 08 gives its 3 of 10 frozen verdicts (the fate
+       reading at the instrument's floor, the predicted need near the fold, the timing of both breaks and three of
+       four level forecasts failed); T2's standing in 08 and the overview (both editions) is 02's, untested outside
+       fisheries, and MQ6's constant group, never past its fold, lies outside T2's refuting settings, its runs past
+       the fold measuring none of T2's forbidden items;
+       (2) witnesses no longer read as laws: Closing.Onset.unforeseen (the amounts up to T need not show when a loop
+       forms; growth before it at most polynomial), RegimeMargin.Notch.no_threshold, Crossing.crosses and
+       Ranking.Immediate.stepwise_ranks_absence, in 02 and five records; onLoop_succ_iff and forms_by_closing
+       cited by name;
+       (3) finite bounds, not limits: fixation-by-drift and fixation-with-selection state the bounds after k and
+       (M + 1) m steps, for the first kind, and read the limit from them, as do three related notes, a dependency's
+       note, 04 §6 and the valuation-development account;
+       (4) Landauer's bound bounds the heat an erasure exports, not the exergy it destroys, and an erasure can be
+       thermodynamically reversible (Bennett 2003; Sagawa 2014): so 02 §4, OPENING's footnote, 08's Open item and
+       two records say; EntropyProduction's expected floor is no longer named `landauer`, and its checker's scope no
+       longer lists Landauer's bound;
+       (5) "first law" in one sense, the spine's Flow.Gainless, which thermodynamics' second law read in available
+       work gives under the exergy balance (EntropyProduction.gainless_of_secondLaw; no converse is proved), so
+       defined in 02 and the glossary and so said in 02 §4, its record and EntropyProduction's comments;
+       thermodynamics' first law named in full where it is meant (01, 08, the overview, OPENING's footnote,
+       EntropyProduction's comments and its checker's scope, three records); the spine's written 第一律 in three
+       records' Chinese, one of which names the rest laws' premises as the Lean has them, balance and
+       dissipation; a first-numbered law no longer called a first law (01, 05, four records);
+       (6) citations: food-generated autocatalytic sets to Steel 2000 and Hordijk and Steel 2004, Nei (1971) and
+       Felsenstein (1971) as two works, Gao, Schulman and Hilton 2023 (also in the alignment dossier's quotation);
+       T1, T2 and T6 linked to their home chapters from two tests' accounts;
+       (7) DEFECTS-FOUND gains the dossier's section, each point ending with what became of it: ten fixed here, one
+       left for owners, one fixed at UE9's landing.
+Premises: none added.
+Evidence: each point checked against main, the Lean and the sources; a skeptical reviewer of every change and a
+       completeness critic over the live account (45 findings, all taken, one in part: SCIENCES.md is re-synced by
+       its owner), then a recheck of the second round and a cold read of the whole change (26 findings, 22 after
+       duplicates, all taken); research check and lint pass on every changed record; periphery receipt `20261027T042508.827829Z` (44 theorems, 74 declarations, the three
+       standard axioms; the code changed only in one hypothesis's name).
+Boundary: SCIENCES.md (UE8) quotes some changed sentences and is re-synced by its owner. Left for owners: 08 §8's
+       table has no row for the evolution line; the packet's checker does not search lean/warning. LeastLoss.lean's
+       comment naming Landauer's bound among candidates for a least change of a stock's energy is kept, since it
+       claims no floor of destroyed exergy. No declaration renamed.
+Output → input: an account whose physics, test counts and citations say what their sources say, for SCIENCES.md's
+       re-sync, DF2 and the readers of the chapters.
+```
+
+## 423. The crux's texts checked a second time (OC4)
+
+One independent reviewer, a separate AI agent working read-only, checked 07 §4.6 again after OC2 and OC3 (§411, §413): its home sections and argument, D64's reading in §4.3, the philosophers' dossier where it quotes or glosses them (P-15, P-18, P-20), the records constancy-read-at-a-members-class and what-leaves-a-class-follows-its-line, and §411 and §413. It read them against `Becoming.GrammarPath` and as a philosopher would ([report](development/oc-own-class/REVIEW-OC4.md)), and tested each doubt in scratch Lean, 14 checks with every axiom report empty. No proof was wrong. It found 2 errors, 8 imprecisions and 2 clarity points against the Lean, and 6 places where a philosopher could not follow the text. Each was verified against the Lean before it was fixed, and each holds; two suggested wordings were narrowed (A7's three-block clause and A8's "only"; the report's section 6). The purpose is the dossier: P-20 is its centre, and it should say what the Lean shows before the packet is frozen.
+
+```text
+Result(s): none new; texts corrected.
+Delta: P2 states its consequence for a line that takes a step, and says that a single moment meets it trivially and
+       that P4, with acting, excludes that; the outside division is said to enter through the effects of every
+       occurrence alike to oneself, as «外分唯系出类之同» asks; the conclusion says that where the regularity fails holding
+       one's effects need give nothing beyond the first step, and that P4 cannot be dropped at all («线内同类»); what a
+       finer division adds is said plainly; step 1 and D64 say need is met there only vacuously; D64's reading says
+       what comes after every present center is reached, if at all, along a line under a class coarser than the
+       organism, continuing past its end, or by the step of invariance; the third law of
+       constancy-read-at-a-members-class describes its witness; P-15, P-18 and P-20 follow. No law's statement
+       changed.
+Supplied premises / correspondence: none.
+Evidence: Becoming.GrammarPath unchanged (core receipt 20261025T160649.851818Z); the review's scratch Lean
+       (development/oc-own-class/review-oc4/OC4Doubts.lean; Lean 4.29.1, Init only, every axiom report empty).
+Boundary: the scratch checks are evidence for the wording, not results, and no text cites them as results; P2's
+       reading at one's own class, with the split, stays argued [AI reading], and P4 stays the crux.
+Output → input: 07 §4.3 and §4.6; PHILOSOPHY.md P-15, P-18 and P-20; the records constancy-read-at-a-members-class and
+       need-and-feeding-read-with-time; D64 in DELEGATED-CHOICES.
+```
+
+**The findings, and what was done.**
+- *A1, error.* PF2's record stated its third law, a witness, as a law: `CleanStep` is finite and without cycles, its class holds the member and part of what follows it, and it is not constant up to the net's end. Left with the PF line's owner.
+- *A2, error.* P-18 glossed P2 by its consequence and for the whole class; §411 (finding 8) had corrected that gloss in 07 and P-20 only. It now states the condition at one's own class and says the condition asks more.
+- *A3, imprecise.* P2's consequence, that one's line ends only where the net does, holds for a line that takes a step: `«亡而网续则本类不至终有常»` needs one, and a single moment meets P2 trivially (the review's `moment_at` and `ZeroStep`). P2 now says so and that P4, with acting, excludes it (the review's `acting_held_continues`); P-20 follows.
+- *A4, imprecise.* "An effect one leaves out" said more than `«外分唯系出类之同»`, whose hypothesis covers the effects of every occurrence alike to the member; the stronger form holds where one acts (the review's `ownOutside`), and no landed Lean states it. Both places now say "an effect that an occurrence alike to oneself leaves out".
+- *A5, imprecise.* The conclusion read two witnesses as laws ("gives nothing"), and said that without P4 the regularity gives nothing beyond the class, which holds with P4 too, since no line leaves its class (`«线内同类»`). It now says "need give nothing" and that P4 cannot be dropped at all. P-20's "If either fails, that scope rests on the step" was too strong for P2: the reach is exactly everything downstream of one's acts being alike to oneself (the review's `reach_iff_downstream_alike`), so P4 is necessary and P2 is not (`NoP2`). It now says what each failure leaves.
+- *A6, imprecise.* P3, "one's line runs through the conditions one affects", follows from P4 (the review's `p3_of_p4`) and does no work in steps 3 and 4. Left with the PF line's owner.
+- *A7, imprecise.* PF2's record: its statement named constancy where the law breaks constancy up to the net's end, and "step" stood for an alike occurrence; what it does not show implied that two blocks suffice, which they do not where what stays fails to follow (the review's `TwoBlocks`), while the three-block net refutes only "something outside follows" (the lander's verification, section 6 of the report); "never clean" was undefined. Left with the PF line's owner. The root module's bullet keeps "a step with nothing outside the class breaks it" until the next landing that rebuilds the module.
+- *A8, imprecise.* D64's reading said that what comes after every present center "is reached by a line under a class that continues past one's end": §4.6 reaches it only under its premises, a line continues, not a class, and "the step" stood among time steps. It now says "is reached, if at all, not along need but along a line under a class coarser than the organism, continuing past the organism's end, or by the step of invariance", in 07, P-15, the record need-and-feeding-read-with-time and D64. The review's "can be reached only" was not taken: no Lean shows that no third route exists.
+- *A9, imprecise.* Step 1 said need is met "only where nothing lets that continuation go on"; the law speaks of flows that let it draw past the stock, and "go on" is 延. It now says "only where no such flow lets that continuation draw past the stock, that is, only vacuously", in 07 and in D64, which had the same words. The module doc names `FiniteDescent`, which is no declaration; `FiniteFamilies.one_not_constant` is meant.
+- *A10, imprecise.* §411 and §413; corrected below.
+- *A11, clarity.* The third law of constancy-read-at-a-members-class was circular ("without the regularity fails it"). It now describes its witness: the class holds the member's effects, and what follows them is not alike to it.
+- *A12, clarity.* The denial of P4 said "constant up to the net's end" where P2 asks the condition only at one's own class. Left with the PF line's owner. `FinerWake` has no lemma that its finer division is a class, as `FinerOutside.finer_class` is.
+- *B1.* The first question asked of "a line that ends", though in a finite net without cycles every line ends, P2's included; what P2 excludes is a line that ends while its last stage still conditions something, and "one's acts keep going" built in P4. Left with the PF line's owner.
+- *B2.* Under P2 one's own line ends only where the net does, so the conclusion's "past one's own end" is the organism's end. Left with the PF line's owner.
+- *B3.* P4 asks the second question of all one's effects, and holding only some is the denial the text offers. Left with the PF line's owner.
+- *B4.* The sentence on finer divisions could not be followed. It now says what a finer division adds: every occurrence alike to oneself that conditions anything must leave something of each kind that any of them leaves, the kinds fixed by how what lies outside oneself is divided.
+- *B5.* The reply to the denial of P4 said "draws its line by the identity in question". Left with the PF line's owner.
+- *B6.* "Kin-shaped" was a metaphor resting on `TwoLines`, where lines share nothing. Left with the PF line's owner.
+
+**Corrections to §411.**
+- It counted "4 errors, 9 imprecisions and 4 clarity points"; the review it reports numbers 10 imprecisions (findings 5 to 14), 18 findings in all. The same count stands in that review's own summary, in the history line of 25 October of constancy-read-at-a-members-class (a line of 27 October now corrects it) and on OC2's board row.
+- Its Delta's "a finer division breaks it even where every alike occurrence both stays and leaves (FinerWake)" means every alike occurrence that conditions anything: in `FinerWake` two alike occurrences condition nothing.
+- In "What it says", the claim that what P2 asks of a self that acts and holds its effects does not depend on how what it leaves out is divided holds, but its reason, "since nothing leaves", holds only where P2 holds. Where P2 fails, it fails under every such division too, since by `«闭则外分无关»` it would otherwise hold under the first.
+
+**Correction to §413.** "In a finite net it still ends, later" holds in a finite net without cycles; on a cycle a line goes on (延) (the review's `FiniteCycle`).
+
+**Left.** The PF line's places ((a), (b), (c), (d), (e), (f), (g), (h), (i), (j), (k), (l)) wait for its owner, whose answer is on OC4's board row. For the next landing that rebuilds `Becoming.GrammarPath`, which applies them: the module doc's first sentence (OC3's deferral), its `FiniteDescent`, the root module's bullet on what leaves the class, and a class lemma for `FinerWake`'s finer division. The review's scratch laws (`ownOutside`, `reach_iff_downstream_alike`, `p4_of_reach`) would let the texts say more where they now say less: that the outside division enters only through one's own leaving effects where one acts, and that P2 is sufficient with P4 for the reach but not necessary. Landing them is a choice for that landing.
+
+## 424. What a course keeps reachable (UE10)
+
+UE, a unified explanation of reality, names the second-order direction of 生生 as its seventh item ([plan](development/ue-unified-explanation/PLAN.md)). 07's open item asks for a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale. UE9 read the comparison on what courses admit, where an admitted range carries no alternatives, and left two candidates ([§421](#421-comparing-two-courses-on-what-they-admit-ue9)). UE10 reads the first, what a course keeps reachable, on any process through what each configuration admits ([note](development/ue10-what-can-be-reached/NOTE.md)).
+
+```text
+Result(s): new record what-a-course-keeps-reachable; comparing-two-courses-on-what-they-admit's, eventual-widening's
+       and what-keeping-widening-needs' next steps pointed to it.
+Delta: (1) covering and widening what can be reached. A configuration covers another where every course from the
+       other is included offset for offset by a course from it (Reaching.Covers), a preorder; it widens what can be
+       reached over it where it covers it and some course from it is included by none from the other
+       (Reaching.Widens), irreflexive, transitive and not covered back (Widens.trans, widens_not_covered). Covering
+       implies inclusion now: a configuration covering one that starts a course admits now all that one admits now
+       (Covers.now), and inclusion now does not give covering (WiderNow.inclusion_now_not_covering). So where a
+       configuration that starts a course admits now what another does not, widening what can be reached does not
+       rank the other above it (not_widens_of_wider_now), nor, with the realized courses starting at their
+       configurations, does the lexical order (not_above_wider_now); the premise is needed: on EndsNow a climb that
+       keeps widening widens what can be reached over a configuration that admits every formation and starts no
+       course (keeps_widening_above_wider_now). Where each configuration has a greatest course widening what can be
+       reached is the strict part of range inclusion of those courses (widens_iff_of_greatest;
+       greatest_not_unique), on a determined process of the two courses (greatest_of_unique, widens_iff_of_unique).
+       Range inclusion and exceeding are the grammar's «则» and «逾» of what courses admit (rangeIncludes_iff,
+       rangeExceeds_iff), with fixed conditions 07's inclusion and widening (rangeIncludes_conditions_iff,
+       rangeWidens_conditions_iff).
+       (2) the lag. Covering with lag d (Reaching.CoversLater; zero, trans) gives widening with a lag, covering with
+       some lag and covered back with none (Reaching.WidensWithLag). Joined to widening what can be reached as UE9
+       joins its orders (Reaching.WidensOrLater), it is a strict partial order containing it that never ranks a
+       configuration above one covering it (irrefl, trans, not_covered, not_reversed), proved here without importing
+       UE9's module. On a determined process covering with lag d is inclusion with lag d of the two courses
+       (coversLater_iff_of_unique), and the lagged order is the strict part of their range inclusion joined to the
+       strict part of their inclusion with some lag (widensOrLater_iff_of_unique). Along a course widening with a
+       lag never ranks a configuration above its predecessor (Run.not_widensWithLag_next), so there the lagged order
+       ranks a successor above it exactly where same-offset widening does (Run.widensOrLater_next_iff). On WiderNow,
+       a determined law, what the climb admits keeps widening and none admits now what it does not: same-offset
+       widening and the lexical order are silent both ways (silent), and the lagged order ranks the climb above none
+       (decided). With other admissions on the same process, each course still exceeding the other, the lagged
+       order is silent both ways (TwoSided: adm, silent), so it does not decide every such pair; where none also
+       widens what can be reached over the climb, it ranks none above it, as it must (Full: adm, not_silent). Both
+       orders satisfy C on the frame of reachable ranges (comparison_widens, comparison_widensOrLater) and differ on
+       WiderNow (comparison_undecided): the lag's verdict is a premise beyond C.
+       (3) the possible. The whole possible and the possible within k are realizability of the one-formation bundle
+       (possible_iff_withinMoves, possibleWithin_iff_withinMoves); along a course nothing is added to the whole
+       possible (Possible.of_reach from together_after_reach; possible_of_next, possible_of_later,
+       possible_from_start), a lost possibility does not return (not_possible_returns from
+       lost_together_not_returns), and the possible within k of the next configuration is within k + 1 of the present
+       (possibleWithin_moves from WithinMoves.before). A trace into a course's start gives a course with the same
+       tail (tail_of_trace, the strong form of Onward.run_of_trace), so where reachable configurations start courses
+       covering carries the whole possible (Covers.possible, possible_same_of_covers_next); the premise is needed
+       (NoCourse.widens_reversed), and a configuration starting no course is covered by every configuration
+       (covers_of_no_course).
+       (4) the rise. Same-offset widening of what can be reached rises on Rise's step while the whole possible and the
+       possible within every horizon past the present stay the same (Rise.rises, possible_same, possibleWithin_same);
+       with a lag of one step every configuration of a course covers its successor (Run.coversLater_next), and on a
+       determined process a rise is the course one step on strictly including the course (widens_next_iff_rising).
+       (5) keeping widening. A chain keeps widening in 07's form (Reaching.KeepsWidening); it gathers distinct members
+       without bound and no list holds it (gathers, not_listed); along a course the possible within k does not keep
+       widening where a list holds it, as a list holding the whole possible does (not_keepsWidening_of_listed_along,
+       listed_along_of_listed, not_keepsWidening_of_listed); keeping widening by name is exactly such a chain
+       (Web.KeepsWidening.chain, Web.KeepsWidening.of_chain, Web.keepsWidening_iff_chain), which re-derives the
+       landed law by name over a listed type (Web.KeepsWidening.not_listed_via_chain). On Climb it keeps widening
+       (keeps, not_listed); the converse fails (AllAtOnce.converse_fails). Rise, Climb and WiderNow are determined
+       (process_eq_law; Law.runs_agree, derived from Branching's law_run_state).
+       (6) alternatives. On KeptAlternative, E's realized course widens k's while k widens what can be reached over E
+       (disagree), so no strict partial order contains both, nor satisfies C on both frames (no_order_contains_both,
+       no_comparison_both); on a determined process, with the realized courses starting at their configurations,
+       realized widening gives widening what can be reached (widens_of_rangeWidens). The lexical order
+       (Reaching.Lexical) is a strict partial order inside Lexical.Above (lexical_above), which gives it back where
+       the inclusions are decided (lexical_of_above_decided), and ranks one of two configurations with the same
+       realized range above the other (tie).
+       (7) instances. Covering is inclusion of the reachable ranges (covers_iff_included), dominance for every
+       upward-closed criterion (covers_iff_criteria) and CarriesProfiles on the frame of courses (covers_iff_carries,
+       covers_iff_preserves); widening what can be reached is Extension on the frame of reachable ranges
+       (widens_iff_extension). Covering is linear-time (DeferredBranching: cover_both, widens_after_one_step,
+       late_simulates_early, early_not_simulating_late), and on a witness the bundles within every bound do not
+       determine what can be reached together (KeptTogether: same_possible, same_bundles, split_courses, widens,
+       no_comparison_through_bundles).
+Premises: no axiom; inclusion now takes the configuration wider now to start a course; covering carrying the
+       possible takes reachable configurations to start courses; the laws on realized courses take each to start at
+       its configuration; discrete steps; infinite courses against finite traces; same offsets or one lag for every
+       offset; formations by name over one fixed type; one fixed process; the realized course a function on
+       configurations.
+Evidence: core receipt 20261027T050540.882212Z; Becoming.ReachableRanges (135 theorems in 196 declarations), every declaration with
+       an empty axiom report; a leaf at L1, no module in its closure of 68 naming the condition or a valuation; no
+       landed declaration changed, and the root's and the package README's layer labels of two landed modules
+       corrected.
+Boundary: none of the orders is the second-order direction of 生生, and none is adopted by C; the lagged order is
+       built as UE9's is, on families of courses, and UE9's laws about its own order are not proved of it; read with
+       a lag covering decides one witness's pair, not every such pair, and the verdict is a premise beyond C; Rise,
+       Climb and WiderNow are determined, so they witness nothing about alternatives; learning and quasi-option
+       value are not captured; one fixed process, so the possible that cannot be prestated is outside; what carries a
+       course's openings remains; each law is near-definitional or a witness.
+Output→input: comparing-two-courses-on-what-they-admit, eventual-widening,
+       effective-capacity-and-eventual-reachability, where-a-run-goes-on, relational-generative-comparison,
+       becoming-spine-instances, four-cases-of-a-part, a-law-through-a-projection-along-one-run,
+       bounded-census-keeps-pace, continuation-relative-to-a-class, master-laws-on-the-grammar →
+       what-a-course-keeps-reachable → 07's open item, UE.
+```
+
+**Its standing.** Covering is the lower (Hoare) preorder of the families of course ranges and, as the AI reads it, the unanimous ordinal form of Kreps's preference for flexibility; with options unordered it is the inclusion that opportunity-set rankings share, and Pattanaik and Xu's ranking counts options. That nothing is added to the whole possible is the irreversibility premise of Arrow and Fisher and of Henry; quasi-option value, which needs learning and deferral, is not captured, since covering is linear-time. The possible within a horizon restates Kauffman's adjacent possible for a prestated space, and that no listed range keeps widening is the pigeonhole of finite recurrence. Each law is near-definitional or a witness.
+
+**The review and the re-checks.** The [review](development/ue10-what-can-be-reached/REVIEW-UE10.md) found the order laws correct with no premise and the module claiming more than its Lean in several places: 21 findings, 8 required before landing, every required item taken. A re-check by a separate AI agent with Lean probes ([re-check](development/ue10-what-can-be-reached/RECHECK-UE10.md)) found the Lean sound and every required item in it, while the sentences meant for 07 still said more than the Lean: 20 findings, 5 required, every one taken. Covering implies inclusion now rather than containing it, and only where the configuration wider now starts a course (EndsNow shows the premise needed); on a determined process widening what can be reached is the strict part of range inclusion of the two courses; read with a lag covering decides one witness's pair, not every such pair, and C leaves that pair unranked; and the leaf no longer imports UE9's module, whose closure is L2, so it stays at L1. The re-checker's probes not folded in stay in its probe tree as evidence. A second re-check by the same agent ([second re-check](development/ue10-what-can-be-reached/RECHECK2-UE10.md)) found the fold-in right in the Lean and five places in the texts still saying more than it: the start premise dropped where 07 and the records point here, covering made the subject of the strict part of inclusion, `WiderNow.Full` cited for a pair it does not leave undecided, a derivation claimed whose Lean had been removed on the first re-check's advice, and the lexical order's start premise dropped in the root bullet. Every one was taken, with the three recommended items: the derivation is back as a theorem (`Web.KeepsWidening.not_listed_via_chain`), and `WiderNow.TwoSided.silent` states that each course exceeds the other.
+
+**Decisions at landing.** The chain law both ways for keeping widening by name (`Web.KeepsWidening.chain`, `Web.KeepsWidening.of_chain`, `Web.keepsWidening_iff_chain`), the landed law re-derived from it (`Web.KeepsWidening.not_listed_via_chain`) and the two-run form of a law's runs (`Law.runs_agree`, derived from Branching's `law_run_state`) stay in the leaf until the owners of the definitions they concern move them. The lagged order is built here at any universe of configurations rather than imported from ComparingCourses, whose closure holds L2 modules and whose `strictJoin_trans` is stated at `Type`; formations are at `Type`, as the pigeonhole's lemmas are, and lifting them is for the owners of Prelude and Population. Reading the layers for this leaf found two landed modules in its line labelled L1 that import an L2 module: `Becoming.EventualWideningInstances` imports `Becoming.Weightings`, and `Becoming.ComparingCourses` imports `Becoming.EventualWideningInstances`; their labels in the root and the package README now say L2, through the module named, with no Lean changed. Three more elsewhere, older than UE10, are left for their owners: `Becoming.OverExchange` (L1) imports `Becoming.Direction` (L2), `Becoming.GrammarScope` (L1) imports `Becoming.Weightings`, and `Becoming.GrammarCases` (L1) imports `Becoming.GrammarScope`; and `Becoming.Growth`, `Becoming.JointDraw` and `Becoming.ContinuedClasses` have root bullets but no package README row. The optional branching witness for keeping the possible within a horizon widening was not built.
+
+**Readings** [AI reading, D45]. What a course keeps reachable does not by itself give the second-order direction: compared at the same offsets it implies inclusion of what each configuration admits now, so it never ranks a range that keeps widening above one wider now that starts a course, and on a determined process it is a first-order comparison. Read with a lag, built as comparing two courses builds its lagged order, it ranks some such pairs and not every one, and where same-offset widening is silent C does not choose between the two, so the lag's verdict is a premise beyond C, as the choice between counting early steps and reading only tails is there. What it adds is alternatives: realized and reachable widening rank a pair oppositely on a branching witness, so an account holding both needs a rule of precedence, and covering cannot see when a commitment is made. Within one fixed process nothing is added to the whole possible, so growth of the possible itself would need a process that changes, which no law here states. What carries a course's openings is 07's remaining candidate.
+
+## 425. The PF line's places after the second check (OC4, on its owner's answer)
+
+OC4's review found twelve places in the PF line's texts; its landing proposed them to the line's owner as (a) to (l) and left them with it (§423). The owner answered yes to all twelve, word for word, after checking them against the texts and the Lean: `TwoBlocks` by hand for (c), that P3 follows from P4 in one step for (f), and that `«本类出类随行»` needs only the condition at one's own class for (l). They are applied here, so the findings of §423 that waited on them (A1, A6, A7, A12, B1, B2, B3, B5 and B6) are done as §423 describes. Where §423's last paragraph says the owner's answer "is on OC4's board row", this section records it.
+
+```text
+Result(s): none new; texts corrected.
+Delta: PF2's record what-leaves-a-class-follows-its-line: its third law states its witness as one, its statement names
+       the condition an alike occurrence breaks, what it does not show says that even with two blocks what stays must
+       follow too and with more what leaves must follow as something alike to it, and its correspondence says what
+       passing P2 asks; the package README rows say "every alike occurrence that conditions anything"; in 07 §4.6, P3
+       states what stays a correspondence (the conditions one affects feed other lines), the first question asks of a
+       line that ends while its last stage still conditions something or of a regularity of one's own, under which
+       one's line, once it takes a step, ends only where the net does, the second asks of all of one's effects, the
+       conclusion passes the end of one's organism, the reply to the denial of P4 and step 2's last sentence are said
+       exactly, and the denial of P4 cites «本类出类随行» for a class meeting P2; P-20, its title and the dossier's
+       introduction follow. No law's statement changed.
+Supplied premises / correspondence: none.
+Evidence: as in §423, with the owner's checks named above.
+Boundary: the root module's bullet on what leaves the class waits, with OC3's deferral, for the next landing that
+       rebuilds Becoming.GrammarPath, as the owner chose (development/oc-own-class/deferred_grammarpath.py applies both).
+Output → input: 07 §4.6; PHILOSOPHY.md P-20 and its introduction; the record what-leaves-a-class-follows-its-line; the
+       package README rows.
+```

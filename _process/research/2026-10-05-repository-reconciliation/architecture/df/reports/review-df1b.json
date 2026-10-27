@@ -1,0 +1,472 @@
+{
+  "item": "DF1b",
+  "round": 1,
+  "workflow": "workflows/6-df1b-review.js",
+  "reviewers": {
+    "skeptic": "every DF1b change against the Lean and its sources",
+    "critic": "remaining instances of the ten errors in the live account"
+  },
+  "findings": [
+    {
+      "file": "theories/becoming/results/records/least-loss-from-entropy-production.json",
+      "where": "next_delta (en and zh), rewritten by DF1b",
+      "severity": "error",
+      "problem": "The rewritten next step goes over research.py lint's hard caps, with severity error: EN 425 > 400 and ZH 181 > 180. On main this record has no length finding, so DF1b introduced both errors.",
+      "evidence": "python3 -B tools/research/research.py lint --ids least-loss-from-entropy-production → {severity: error, field: next_delta, rule: length, detail: 'en 425 chars > 400'} and {severity: error, ..., 'zh 181 chars > 180'}; the same lint run on main 04c7f93ae reports neither.",
+      "fix": "EN (397): \"A core form with rational amounts and no Mathlib for the deterministic laws. Landauer's bound read from the core's count (merge-of-a-part-kept-by-the-rest) bounds heat exported, not exergy destroyed, so it gives no floor without irreversibility. Finite-time floors and the uncertainty relation as instances of DestroysAtLeast would restate known physics (the least-loss check) and are not planned.\" ZH (176): \"确定性规律在核心中以有理量、不用 Mathlib 的形式；由核心中的计数（merge-of-a-part-kept-by-the-rest）读作能量所得的 Landauer 下限，界定的是导出之热而非被毁之㶲，无不可逆则不成下限。把有限时间的下限与不确定性关系作为 DestroysAtLeast 的实例，只会重述已知物理（最小损失检查），不在计划中。\"",
+      "id": "skeptic0",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/SCIENCES.md",
+      "where": "quotations of 02 §4, 04, 08 §9 (T1 and T2 rows), 08's Hordijk citation, and the fixation-by-drift record",
+      "severity": "error",
+      "problem": "DF1b rewrites sentences that UE8's committed dossier quotes word for word, so the dossier no longer matches its sources. The dossier is listed for Ren's day. The packet checker found 0 problems on main and finds 5 on the DF1b tree. A sixth will appear once the records are rendered: S-07 quotes the fixation-by-drift statement \"each kind is fixed with exactly its starting share in the limit.\" Separately, the record .md pages have not been re-rendered in the worktree, so ALIGNMENT.md's new quotation (Gao ... 2023) also fails until `make research-render` runs.",
+      "evidence": "python3 -B .../review-packet/check_dossiers.py .../ue8-sciences-dossier/SCIENCES.md → quotation not found in 02-MAP.md: 「a floor at least the unit, as Landauer's bound, at every fin」; in 04-LIFE.md: 「the reproductive-excess limit of Nei and Felsenstein (1971)」; in 08-METHOD.md: 「passed on held-out yeast regimes (MQ2), a simulated Allee ye」, 「conjectured, on three frozen fish-stock tests and one in yea」, 「autocatalytic sets are food-generated (Hordijk and Steel 201」 (5 problems). check_dossiers.py on theories/becoming/review/*.md → ALIGNMENT.md: quotation not found in coupling-closures-of-training-pipelines.md (that page still reads 2022, line 41).",
+      "fix": "Run `make research-render` before landing. Then, in SCIENCES.md (or as a hand-over on the board to UE8's owner), re-quote the five rewritten sentences and the fixation-by-drift statement from the DF1b text. Mark each matching item in the kit README's \"Found in the account while drafting\" as \"corrected in DF1b\". Rerun check_dossiers.py on SCIENCES.md and on theories/becoming/review/*.md until both report 0 problems.",
+      "id": "skeptic1",
+      "disposition": "taken in part: the record pages are rendered at landing, so ALIGNMENT.md's quotation matches; SCIENCES.md is UE8's committed dossier, and its owner re-syncs its quotations after DF1b lands (told on landing)."
+    },
+    {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "where": "T1 evidence, line 264: \"and five of six verdicts on the time to break failed\"; the same phrase in 08-METHOD.md line 502 (T1 row)",
+      "severity": "error",
+      "problem": "Only two of MQ6's six T-verdicts are on the time to break: T2-DF and T2-SUC, the free-fall onsets, and both failed. The other four (T1a/T1b on each run) are level forecasts. The one that passed, T1a-SUC, is the level forecast away from the break. \"Five of six verdicts on the time to break failed\" therefore implies that one timing verdict passed. §314 says the opposite: the margin \"does not time the break\".",
+      "evidence": "PREDICTIONS-2026-10-21-MQ6.md: \"T1, the regime margin forecasts the level better than the frozen rest\" (T1a, T1b) vs \"T2, the time to break\". §314 Output: \"the regime margin forecasts the level away from the break better than the frozen rest (T1a-SUC; T1a-DF at three days). It does not time the break\". margin-measured README §4: \"Away from the break ... T1a passed\" / \"It does not time the break (T2 failed on both runs)\".",
+      "fix": "02: \"…and of the six forecast and timing verdicts five failed: neither run's break was timed, and the level forecast passed only under falling sucrose.\" 08 T1 evidence: \"past the fold (MQ6: 3 of 10 frozen verdicts passed; the fate reading at the instrument's floor, the predicted need near the fold, the timing of both breaks and three of four level forecasts failed)\".",
+      "id": "skeptic2",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/fixation-by-drift.json",
+      "where": "statement (en, zh); laws[4] (law 5)",
+      "severity": "overclaim",
+      "problem": "The statement now gives the finite bounds, but it still ends on a limit: \"so fixation tends to the starting share\". The Lean proves only the bounds after k generations; the limit is a reading, and 04 marks it as one. Law 5, which DF1b did not touch, keeps the same unmarked limit (\"so the fixing share tends to h/N\"). Three smaller points: (1) N is never introduced in the statement. (2) Removing \"exactly\" from the lead adds a new negation-lead lint warning that main does not have. (3) The ZH \"固定某类的历史在此之内等于其起始份额\" omits 份额 and drops the one-sided bound: Drift.fixation gives a fixing share at most h/N and at least h/N − (r/N^N)^k.",
+      "evidence": "Drift.lean:554 varied_vanishes: sampled N (varied N) k h ≤ r ^ k with r + 2 = N ^ N, out of (N ^ N) ^ k (sampled_one). Drift.lean:616 fixation: N * sampled N (fixed N) k h ≤ h * (N ^ N) ^ k ∧ h * (N ^ N) ^ k ≤ N * sampled … + N * r ^ k. No limit theorem exists. 04-LIFE.md:201: \"finite weighted bounds, whose reading is that the fixing share tends to h/N\". Lint on DF1b: fixation-by-drift statement negation-lead (absent on main).",
+      "fix": "Statement EN (269): \"Sampled by drift alone, generation after generation, a population of N keeps each count on average; after k generations its still-varied histories weigh a share at most ((N^N − 2)/N^N)^k, and those fixing a kind a share at most its starting share and within that of it.\" ZH (95): \"仅由漂变逐代抽样，N 个成员的种群平均保持每个计数；k 代之后仍有差异的历史所占份额至多为 ((N^N − 2)/N^N)^k，固定某类的历史所占份额至多为其起始份额，且与之相差不超过此数。\" Law 5 EN: \"…and with N r^k at least it: finite bounds, whose reading is that the fixing share tends to h/N, the neutral fixation probability.\" ZH: \"……加上 N r^k 则至少为它：有限之界，其读法为固定的份额趋于 h/N，即中性固定概率。\"",
+      "id": "skeptic3",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "GLOSSARY.md",
+      "where": "new row \"first law\": \"read in available work it is thermodynamics' second law\"; 02-MAP.md line 10: \"the spine's name, which read in available work is thermodynamics' second law\"; balance-from-the-first-law.json DF1b history note (\"which is thermodynamics' second law read in available work\")",
+      "severity": "overclaim",
+      "problem": "The new definition makes Flow.Gainless identical to the second law. The Lean proves one direction only: the Gouy–Stodola second law (no present exchange destroys negative exergy, at every step) together with the exergy balance gives Gainless. Gainless constrains only closed families without repetition, so it does not give SecondLaw, and no converse is proved. §4's older phrasing \"the second law ... is the spine's first law\" is a correspondence; promoted into the glossary's one-sense definition, it reads as an equivalence.",
+      "evidence": "EntropyProduction.lean:96 def SecondLaw … := ∀ t f, f ∈ L.present t → 0 ≤ σ t f; :124 theorem gainless_of_secondLaw (balance : ExergyBalance L u σ) (second : SecondLaw L σ) (unit : 0 < u) : L.Gainless. No theorem concludes SecondLaw from Gainless (grep of physics/ and Becoming/).",
+      "fix": "GLOSSARY: \"the spine's name for `Flow.Gainless`: a closed family without repetition gets back at most what is taken from it; read in available work, thermodynamics' second law gives it (`EntropyProduction.gainless_of_secondLaw`). Thermodynamics' first law, the conservation of energy, is always named in full\". 02 line 10: \"…what is taken from it; the spine's name, which thermodynamics' second law gives in available work ([§4](#r-least-loss-from-entropy-production)), while [01's balance theorem](01-ROOT.md#r-balance-from-the-first-law) reads thermodynamics' first law)\". History note EN: \"…apart from the spine's first law (Flow.Gainless), which thermodynamics' second law gives read in available work…\". ZH: \"……与脊柱的第一律（Flow.Gainless，以可用功读出时由热力学第二定律给出）分开……\"",
+      "id": "skeptic4",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/balance-from-the-first-law.json",
+      "where": "does_not_show[3], correspondence (\"First law: …\"), related[1].detail; and balance-from-conservation-along-a-relation.json dependencies[0].detail",
+      "severity": "missed-instance",
+      "problem": "These changed records still use bare \"the first law\" (ZH 第一定律) for thermodynamics' first law. That conflicts with the new glossary rule (\"always named in full\") and with DEFECTS-FOUND's claim that the records are fixed. The history note lists only the fields that were changed.",
+      "evidence": "does_not_show[3].en: \"it is relocated to the first law with locality\"; correspondence.en starts \"First law: the energy of a store changes only by the heat and work…\"; related[1].detail.en: \"here it is the first law with locality.\"; balance-from-conservation…dependencies[0].detail.en: \"FL1 reads balance as the first law with locality, …\" (ZH: 带局部性的第一定律).",
+      "fix": "does_not_show[3] EN: \"That balance is a theorem of the dynamics: it is relocated to thermodynamics' first law with locality, which stays a premise about what is represented.\" ZH: \"平衡是动力学的定理：它被移到带局部性的热力学第一定律上，这仍是关于所表示者的前提。\" Correspondence: \"Thermodynamics' first law: the energy of a store changes only by…\". related[1] EN: \"There balance is a net's firing rule; here it is thermodynamics' first law with locality.\" ZH: \"那里平衡是网的激发规则；这里它是带局部性的热力学第一定律。\" balance-from-conservation dependencies[0] EN: \"FL1 reads balance as thermodynamics' first law with locality, stating locality as one transfer per exchange and store; …\" ZH: \"FL1 把平衡读作带局部性的热力学第一定律，……\". Add these fields to both history notes.",
+      "id": "skeptic5",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
+      "where": "header lines 18 and 22, docstrings lines 237–246, 297, 356, 381–382, 418, 427, 464; hypothesis name `landauer` at line 673",
+      "severity": "missed-instance",
+      "problem": "DF1b edited this file's header comments but left them using \"the first law\" in both senses. Line 18 \"**The first law with locality gives balance.**\" and line 22 \"With the first law and the entropy balance\" mean thermodynamics' first law; line 37 \"The second law is the spine's first law\" means the spine's. The module docstrings at lines 237–464 do the same. In code, ExpectedDissipatesOn.of_exergy still names its expected-destruction floor `landauer`, which the new header bullet says Landauer's bound does not supply. The checker's scope string (check_entropy_production.py:47 and :58, copied into the receipt) still lists \"the first law\" and \"Landauer's bound itself\" as correspondences of this module. The least-loss record's does_not_show[0] likewise still lists \"or Landauer's bound itself\".",
+      "evidence": "EntropyProduction.lean:18 \"* **The first law with locality gives balance.**\"; :22 \"With the first law and the entropy balance at each store\"; :381 \"**Balance from the first law.**\"; :673 \"(landauer : u * ∫ ω, ((L ω).takers cs t : ℝ) ∂μ ≤ ∫ ω, D ω ∂μ)\". The receipt scope reads \"the first law and the entropy balance at each store … and Landauer's bound itself are correspondences, not checked\".",
+      "fix": "Comments: \"* **Thermodynamics' first law with locality gives balance.**\", \"With thermodynamics' first law and the entropy balance at each store\", and \"thermodynamics' first law\" in the docstrings at lines 237–464 (\"## Thermodynamics' first law: balance\", \"**Balance from thermodynamics' first law.**\", \"**The exergy balance from thermodynamics' first law.**\"). Code (needs a recheck): rename the hypothesis `landauer` to `floor`. Checker scope: \"thermodynamics' first law and the entropy balance …\" and \"…meet these premises, and the floor of destroyed exergy are correspondences, not checked\". Record does_not_show[0]: drop \"or Landauer's bound itself\" or say \"or any floor of destroyed exergy\".",
+      "id": "skeptic6",
+      "disposition": "taken: comments name thermodynamics' first law in full; the hypothesis `landauer` renamed `floor` and the periphery checker rerun (receipt 20261025T223932.505689Z); the checker's scope and the record's limit no longer list Landauer's bound."
+    },
+    {
+      "file": "theories/becoming/OPENING.md",
+      "where": "footnote [^conditions] (line 61) and [^present] (line 94); README.md note-conditions (line 69, generated)",
+      "severity": "missed-instance",
+      "problem": "OPENING's AI-written footnotes, which follow the current theory, still contain both defects DF1b fixed elsewhere. [^conditions] presents Landauer's bound as a destroyed-exergy floor (\"as Landauer's bound gives one that erases a bit … (`dissipative_of_floor`)\", \"locality and Landauer's bound are hypotheses\"). It also uses bare \"the first law\" for thermodynamics' first law (\"Balance is the first law with locality\", \"With the first law and the entropy balance\"), while [^present] uses \"under the first law\" in the spine's sense. README.md repeats the same text. DEFECTS-FOUND does not mention OPENING.",
+      "evidence": "OPENING.md:61: \"where each exchange that takes destroys at least a floor, as Landauer's bound gives one that erases a bit, the loss counted at any unit within the floor is at least one unit (`dissipative_of_floor`)\"; \"Balance is the first law with locality\"; OPENING.md:94: \"under the first law a finite whole rises only by what the rest gives it (`Flow.whole_rise_from_rest`)\".",
+      "fix": "[^conditions]: \"Balance is thermodynamics' first law with locality: …\"; \"With thermodynamics' first law and the entropy balance at each store, …\"; \"where each exchange that takes destroys at least a floor of exergy, the loss counted at any unit within the floor is at least one unit (`dissipative_of_floor`) … (Landauer's bound alone is no such floor: it bounds heat exported, not exergy destroyed, and an erasure can be thermodynamically reversible)\"; \"The reading of amounts as available work, locality and any floor of destroyed exergy are hypotheses: …\". Leave [^present]'s spine-sense uses as they are. Re-render README.md, and add OPENING to the DEFECTS entry.",
+      "id": "skeptic7",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "where": "T2 row, evidence: \"in yeast past its fold (MQ6) residuals at constant dilution carry nothing day to day, outside the deteriorating environments that could refute T2\"",
+      "severity": "imprecise",
+      "problem": "(1) L was measured on MQ6's constant group at DF 500, which was never past its fold, so \"in yeast past its fold … at constant dilution\" contradicts itself. (2) T2's refutation clause does not exclude MQ6 as a whole: its deteriorating runs are \"yeast in deteriorating environments\", inside the refuting settings. T2 stays untested there because MQ6 measured none of the three forbidden items, not because of where it ran. The cell mentions only the setting. (3) L shows the level alone carrying the state at constant dilution, which T2's forbid would exclude if it were in a refuting setting. Calling it T2 evidence needs that caveat.",
+      "evidence": "PREDICTIONS-2026-10-21-MQ6.md: \"L … On the constant group\"; §314 \"L passed (the map's one-day residuals at DF 500…)\"; 02 T2 \"Refuted by: … or yeast in deteriorating environments\"; margin-measured README:295 \"MQ6 measured yeast under a changing dilution, but not T2's three forbidden items.\"",
+      "fix": "08 T2 evidence: \"…MQ7 missed its frozen bound (0.39, lower bound 0.00); MQ6 measured none of the three forbidden items: in its constant group (yeast at a constant dilution, never past its fold, outside the settings that could refute T2) residuals carry nothing day to day (L), and its deteriorating runs fitted no three-variable state\". Optional, for 02 T2 (DF1b did not change it): \"In the constant group of the yeast driven past its fold (§314), residuals carry nothing day to day…\".",
+      "id": "skeptic8",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "where": "T1 evidence, line 264: \"(read by the floor, as in §253, the fates separate 97–100%, post hoc), the need predicted from the fitted curve was 0.58 of the need read from fates at the sucrose level nearest the fold\"",
+      "severity": "imprecise",
+      "problem": "(1) The floor reading that §314 applies post hoc is MQ2's (§266), not MQ1's (§253). MQ1 used the floor only post hoc, and its frozen D2 failed at that floor. (2) 0.2% is the held-out level nearest the fold. The fitted levels include 0.16%, which is nearer, so \"the sucrose level nearest the fold\" is ambiguous. \"The fitted curve\" is the odd-level fit.",
+      "evidence": "§314 Post hoc: \"A1 read by the floor (MQ2's reading) … separates 97-100%\"; README §2: \"Read by the floor, as MQ2 read fates\"; PREDICTIONS-MQ6: \"Floor f = 0.01 (10³ cells/µl, MQ2's)\", fit-odd levels \"2.0, 0.8, 0.5, 0.3, 0.16%\", A2 \"0.58 at 0.2%\".",
+      "fix": "\"(read by the floor, as in §266, the fates separate 97–100%, post hoc), the need predicted by the odd-level fit was 0.58 of the need read from fates at 0.2%, the held-out level nearest the fold\"",
+      "id": "skeptic9",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/how-loops-form.json",
+      "where": "statement (en vs zh); 02-MAP.md line 323 \"before a loop forms growth is polynomial,\"",
+      "severity": "imprecise",
+      "problem": "In the statement sentence DF1b edited, EN says growth before a loop forms \"is polynomial\" and \"need not show it will\". ZH says \"至多是多项式\" (at most polynomial) and \"是否将形成\" (whether it will form). The two editions disagree, and the Lean gives only an upper bound: carried_le_polynomial_before says at most a polynomial. 02's edited sentence has the same \"growth is polynomial\". At 300 characters, the EN statement is already at its cap.",
+      "evidence": "Closing.lean header: \"the carried amount at c up to T is at most a polynomial in the steps … (`carried_le_polynomial_before`)\". Record statement EN (300 chars): \"growth before it forms is polynomial and need not show it will\"; ZH: \"形成之前增长至多是多项式，且未必显示它是否将形成\".",
+      "fix": "Statement EN (about 288): \"The loops formed by T + 1 are those formed by T and those through a coupling acting at T closing a chain; with every condition listed, growth before one forms is at most polynomial and need not show whether it will; with strengths read off the course, formation is read off the unfolding.\" ZH unchanged. 02 line 323: \"so before a loop forms growth is at most polynomial, and the amounts need not show whether one will: …\"",
+      "id": "skeptic10",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/balance-from-the-first-law.json",
+      "where": "statement: EN \"…and the exchanges' exergy balance: both from one reading.\" vs ZH \"…也给出交换的㶲平衡：平衡与最小损失出自同一读法。\"",
+      "severity": "imprecise",
+      "problem": "To stay within 300 characters, DF1b shortened the EN ending from \"balance and least loss from one reading\" to \"both from one reading\", where \"both\" means balance and the exergy balance. The ZH still says \"balance and least loss\", so the two editions no longer say the same.",
+      "evidence": "git diff main: en '-…exergy balance: balance and least loss from one reading.' '+…exergy balance: both from one reading.'; zh tail unchanged.",
+      "fix": "Either ZH tail: \"……也给出交换的㶲平衡：两者出自同一读法。\" Or both editions — EN (284): \"A quantity carried only by the exchanges taking part balances the levels exactly where no condition produces it. Read in available work, thermodynamics' first law and the entropy balance give, in one reading, balance where no store generates entropy and the exchanges' exergy balance.\" ZH: \"只由参与的交换携带的量，恰在没有条件产生它之处使水平平衡。读作可用功，热力学第一定律与熵平衡在同一读法中给出没有储存生熵之处的平衡与交换的㶲平衡。\"",
+      "id": "skeptic11",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "where": "line 323: \"the amounts need not show whether one will: a loop forming at `T` and one forming later carry the same amounts up to `T` (`Closing.Onset.unforeseen`, a witness)\"; how-loops-form law 4",
+      "severity": "imprecise",
+      "problem": "Closing.Onset.unforeseen compares self-loops that all form, at T or at any T' ≥ T. It shows that the amounts up to T do not reveal when a loop forms, in particular whether it forms at T. It has no comparison with a loop that never forms. \"Whether one will\" is exact only when read as \"whether one forms at T\". The added gloss supports that reading, but the clause before the colon does not say so. Low confidence; flagged as instructed.",
+      "evidence": "Closing.lean:461 theorem unforeseen {T T' D t : Nat} (later : T ≤ T') (le : t ≤ T) : amount T D t = amount T' D t; strengths T u … = bif Nat.ble T u then SelfLoop.strengths 1 … else 0 (every member forms at its T).",
+      "fix": "02: \"…and the amounts need not show whether one forms at `T`: a loop forming at `T` and one forming at any later step carry the same amounts up to `T` (`Closing.Onset.unforeseen`, a witness).\" Law 4 EN: \"The amounts before a loop forms need not show when it will: …\" ZH: \"形成之前的量未必显示它何时形成：……\"",
+      "id": "skeptic12",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "where": "line 466 \"(Hordijk and Steel 2004)\"; what-keeping-widening-needs.json correspondence \"(Hordijk and Steel 2004; Vasas and others 2012)\"",
+      "severity": "imprecise",
+      "problem": "The new year and journal are correct. But the RAF literature credits the food-generated formalism to Steel 2000 and Hordijk and Steel 2004 together, and the food set itself goes back to Kauffman 1986. Crediting 2004 alone may understate Steel 2000. Low confidence: web search confirmed the joint citation, not which paper first gave the definition.",
+      "evidence": "RAF papers cite \"the catalytic reaction system (CRS) formalism by Steel (2000); Hordijk and Steel (2004)\" and \"formalized as … RAF sets (Steel, 2000; Hordijk & Steel, 2004 …)\" (arXiv 1801.03953; Springer s00285-023-01899-4); Hordijk & Steel 2004, J. Theor. Biol. 227(4):451–461, verified.",
+      "fix": "08: \"autocatalytic sets are food-generated (Steel 2000; Hordijk and Steel 2004)\". Record EN: \"autocatalytic sets, food-generated (Steel 2000; Hordijk and Steel 2004; Vasas and others 2012)\"; ZH: \"自催化集，由食物生成（Steel 2000；Hordijk 与 Steel 2004；Vasas 等 2012）\".",
+      "id": "skeptic13",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "where": "line 209 \"(Sagawa 2014)\"; least-loss correspondence; EntropyProduction.lean header",
+      "severity": "imprecise",
+      "problem": "The physics is right: Landauer bounds the heat an erasure exports, heat exported is not exergy destroyed, and a quasi-static erasure can produce no entropy. Sagawa 2014 (J. Stat. Mech. P03025) does argue this. But Bennett's 2003 notes, which the account already cites in merge-of-a-part-kept-by-the-rest, said earlier that erasing random data is thermodynamically reversible. Sagawa alone is fair but incomplete credit. Low severity.",
+      "evidence": "merge-of-a-part-kept-by-the-rest.json correspondence cites \"Bennett (1973; SHPMP 34, 2003, …)\"; UE6 ASTRA-NOVELTY item 8 cites Sagawa only.",
+      "fix": "\"…can be carried out thermodynamically reversibly (Bennett 2003; Sagawa 2014)\", the same in the least-loss correspondence (\"erasure can be thermodynamically reversible (Bennett 2003; Sagawa 2014)\") and in the EntropyProduction header comment.",
+      "id": "skeptic14",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/01-ROOT.md",
+      "where": "line 49: \"These are the first laws of [continuation relative to a class]\"",
+      "severity": "style",
+      "problem": "A changed file that now defines \"first law\" in one sense still uses \"first laws\" in a third sense: the opening laws of a record.",
+      "evidence": "01-ROOT.md:49 \"…and the family is a class (`«同族为类»`). These are the first laws of [continuation relative to a class](…)\"; GLOSSARY row \"first law | the spine's name for `Flow.Gainless`…\".",
+      "fix": "\"These are the opening laws of [continuation relative to a class](../results/records/continuation-relative-to-a-class.md); its further laws follow in §§3–6…\"",
+      "id": "skeptic15",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/least-loss-from-entropy-production.json",
+      "where": "DF1b history notes in all nine records: \"(study section DF_N)\"; least-loss note: \"…say so. thermodynamics' first law named in full in a related note.\"",
+      "severity": "style",
+      "problem": "Every new history note carries the placeholder DF_N. The script says it is to be filled at landing, and nothing checks that it is. The least-loss note also starts a sentence in lower case.",
+      "evidence": "df1b_edits.py:5 \"with DF_N for the study section filled at landing\"; NOTE = '26 October 2026, board item DF1b (study section DF_N): '.",
+      "fix": "At landing, replace DF_N with the study section number in all nine records (EN \"study section N\", ZH \"研究第 N 节\"), and grep for DF_N before committing. Least-loss note EN: \"…a related note and the next step say so. Thermodynamics' first law is named in full in a related note.\"",
+      "id": "skeptic16",
+      "disposition": "taken at landing: DF_N filled with the study section; the lowercase sentence start fixed."
+    },
+    {
+      "file": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
+      "where": "new section \"Found while drafting the sciences dossier\"",
+      "severity": "style",
+      "problem": "The section lists ten items, but the UE8 kit lists thirteen. It does not record what happened to the other three: 08 §8's table has no row for the evolution line (S-01, S-07); the packet checker does not search lean/warning; and the UE9 item, already corrected at 8548c5896. Its first-law line also claims that thermodynamics' first law is now named in full in the records, which the missed instances above contradict.",
+      "evidence": "ue8-sciences-dossier/README.md lines 131, 136, 137 (items not in DEFECTS-FOUND's new section).",
+      "fix": "Add: \"- 08 §8's table has no row for the evolution line (S-01, S-07), and the packet's checker does not search `lean/warning`. *DF: left for 08's owner and the packet's owner; not in DF1b.* - 07 §2 and what-keeping-widening-needs omitted `Unloosened` (S-22). *Corrected at UE9's landing (`8548c5896`).*\" Change the first-law line once the remaining instances (OPENING footnotes, EntropyProduction.lean comments, the record fields named above) are fixed.",
+      "id": "skeptic17",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "where": "line 212, the T2 row of the theses table (Standing column)",
+      "severity": "missed-instance",
+      "problem": "The overview still counts MQ6 as a test of T2 (error 1). DF1b changed 08's T2 standing to 02's but left the overview row. MQ6's residuals were measured at constant dilution, and T2's refutation clause names yeast only in deteriorating environments. The row also says 'untested on grassland and forests', which is narrower than 02's 'untested outside fisheries'.",
+      "evidence": "Overview: \"conjectured; of three frozen fish-stock tests one passed, as did one in yeast past its fold; untested on grassland and forests\". 02-MAP.md line 267 Standing: \"conjectured, on the three frozen fish-stock tests above; untested outside fisheries\". 08-METHOD.md line 503: \"conjectured, on three frozen fish-stock tests; untested outside fisheries\". DEFECTS-FOUND.md line 266.",
+      "fix": "EN: \"conjectured, on three frozen fish-stock tests, one passed; untested outside fisheries\". ZH (THE-THEORY-OF-BECOMING.zh.md line 214), replace \"猜想；三项冻结的鱼类种群检验中一项通过，越过折点的酵母上的一项检验亦通过；在草地与森林上未经检验\" with \"猜想，依据三项冻结的鱼类种群检验，其中一项通过；在渔业之外未经检验\".",
+      "id": "critic0",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "where": "line 214, the T2 row (Standing column)",
+      "severity": "missed-instance",
+      "problem": "This is the ZH edition of the same row: it counts the yeast result among T2's tests.",
+      "evidence": "\"猜想；三项冻结的鱼类种群检验中一项通过，越过折点的酵母上的一项检验亦通过；在草地与森林上未经检验\"",
+      "fix": "\"猜想，依据三项冻结的鱼类种群检验，其中一项通过；在渔业之外未经检验\"",
+      "id": "critic1",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "where": "line 323, the sentence DF1b edited in §7: \"(`Closing.forms_by_closing`)\"",
+      "severity": "error",
+      "problem": "The cited name does not exist in Lean. `forms_by_closing` is declared inside `section Closing`, which opens no namespace, so its name is `Becoming.forms_by_closing`. This is the only citation in the chapters, apart from field-like names, that resolves to no Lean declaration. It belongs to error 4 (a namespace written as part of a theorem name).",
+      "evidence": "becoming/Becoming/Closing.lean line 316 lies in `section Closing … end Closing`, with no `namespace Closing` around it. The how-loops-form record lists `Becoming.forms_by_closing`.",
+      "fix": "\"(`Closing.forms_by_closing`)\" → \"(`forms_by_closing`)\"",
+      "id": "critic2",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "where": "line 248: \"Unless giving rises with what is left, no level separates the fates (`Notch`)\"",
+      "severity": "overclaim",
+      "problem": "Error 4. This cites a namespace as a general law where the Lean has a witness. `RegimeMargin.Notch.no_threshold` is proved for one giving law, which gives two from one and else nothing. It does not show that every giving that fails to rise with what is left has no separating level.",
+      "evidence": "RegimeMargin.lean lines 1754–1808 define `Notch` as one specific law. The home record's law 5 opens with \"Witness:\".",
+      "fix": "\"Rising with what is left cannot be dropped: in a witness whose giving does not rise with it, no level separates the fates (`RegimeMargin.Notch.no_threshold`)\"",
+      "id": "critic3",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "where": "line 254, the adjusting-giving row: \"otherwise what was given carries a condition across it (`Crossing`)\"",
+      "severity": "overclaim",
+      "problem": "Error 4. `Crossing` is a witness: it shows that the recent-giving side cannot be dropped. It does not show that every giving without that side carries a condition across.",
+      "evidence": "RegimeMargin.lean doc lines 51–55: \"The recent giving's side cannot be dropped: … (`Crossing.crosses`)\". The record's law 4 opens with \"Witnesses\".",
+      "fix": "\"otherwise what was given can carry a condition across it (`Crossing.crosses`, a witness)\"",
+      "id": "critic4",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/how-loops-form.json",
+      "where": "correspondence (en, zh) and related[0].detail (en, zh)",
+      "severity": "missed-instance",
+      "problem": "DF1b changed this record's statement and law 4 to 'need not be foreseen' (`Closing.Onset.unforeseen`, a witness). Two fields still state unforeseeability as a general law (error 4).",
+      "evidence": "correspondence.en: \"a loop's formation is not foreseen from the amounts before it\". correspondence.zh: \"回路的形成不从它之前的量预见\". related[0].detail.en: \"here the formation of the loop that runs away does not show in the amounts it carries either\". related[0].detail.zh: \"这里使之失控的回路的形成也不在它所携带的量中显出\".",
+      "fix": "correspondence.en: \"a loop's formation need not be foreseen from the amounts before it\". correspondence.zh: \"回路的形成未必能从它之前的量预见\". related[0].detail.en: \"here the formation of the loop that runs away need not show in the amounts it carries either\". related[0].detail.zh: \"这里使之失控的回路的形成也未必在它所携带的量中显出\".",
+      "id": "critic5",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/runaway-distance-uncoupled.json",
+      "where": "related[3].detail (en, zh), the reciprocal of how-loops-form",
+      "severity": "missed-instance",
+      "problem": "This is the mirror of how-loops-form's related detail, and it still reads the Onset witness as a general law (error 4).",
+      "evidence": "EN: \"there the formation of the loop that runs away does not show in the amounts it carries either\". ZH: \"那里使之失控的回路的形成也不在它所携带的量中显出\".",
+      "fix": "EN: \"there the formation of the loop that runs away need not show in the amounts it carries either\". ZH: \"那里使之失控的回路的形成也未必在它所携带的量中显出\".",
+      "id": "critic6",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/fixation-with-selection.json",
+      "where": "statement (en, zh)",
+      "severity": "missed-instance",
+      "problem": "Error 5. The statement asserts a limit, but the Lean proves only finite two-sided bounds after (M + 1) m steps. DF1b fixed the sibling fixation-by-drift statement in the accepted style (bounds first, then the limit read from them) but left this one.",
+      "evidence": "Current EN: \"the fixation share tends to a potential's ratio: …\". Drift.lean `Replacement.fixation` proves P_top·fixed ≤ (a+b)^((M+1)m)·P_i ≤ P_top·fixed + P_top·r^m, with r + a^(M+1) = (a+b)^(M+1). No limit is proved.",
+      "fix": "EN (295 chars): \"Replacing one at a time, up with weight a and down with b, after (M + 1) m steps the fixing share is at most a potential's ratio and at least it less (1 − (a/(a + b))^(M + 1))^m, so for positive a it tends to the ratio: the starting share where a = b, above it from every mixed start where b < a.\" ZH (about 121 chars): \"一次替换一个、上升权重 a、下降 b 时，(M + 1) m 步后固定份额至多为势之比，至少为它减 (1 − (a/(a + b))^(M + 1))^m，故 a 为正时趋于此比：a = b 时为起始份额，b < a 时自每个混合起点高于它。\" The favoured-kind-loss clause, dropped for the cap, remains in laws[3] and counterexamples[0].",
+      "id": "critic7",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/fixation-with-selection.json",
+      "where": "laws[2] (en, zh)",
+      "severity": "missed-instance",
+      "problem": "Error 5. 'The varied ones vanish geometrically' claims a limit. The Lean bounds their weight by r^m after (M + 1) m steps.",
+      "evidence": "laws[2].en: \"…the varied ones vanish geometrically\". Drift.lean `Replacement.fixation` gives the r^m bound with r + a^(M+1) = (a+b)^(M+1).",
+      "fix": "EN (335): \"…and with the varied ones at least it; after (M + 1) m steps the varied ones weigh at most r^m, with r + a^(M + 1) = (a + b)^(M + 1), so for positive a the fixation share tends to the potential's ratio.\" ZH (114): \"固定第一类的历史乘顶端之势，至多为总权重乘起点之势，加上仍有差异者则至少为它；(M + 1) m 步后仍有差异者至多重 r^m（r + a^(M + 1) = (a + b)^(M + 1)），故 a 为正时固定份额趋于势之比。\"",
+      "id": "critic8",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/drift-offspring-sampled.json",
+      "where": "related[3].detail (en, zh)",
+      "severity": "missed-instance",
+      "problem": "Error 5. The detail says 'variation ending' and 'each kind fixed with its starting share', but fixation-by-drift proves finite bounds only.",
+      "evidence": "EN: \"Many generations of sampling: the count kept, variation ending, each kind fixed with its starting share.\" ZH: \"多代抽样：计数保持、差异终结、各类以其起始份额被固定。\" Drift.lean `fixation` proves two-sided bounds with ((N^N − 2)/N^N)^k.",
+      "fix": "EN: \"Many generations of sampling: the count kept, the still-varied histories bounded by a share falling geometrically, and the fixing share within that of the starting share.\" ZH: \"多代抽样：计数保持，仍有差异的历史之份额有按几何下降之界，固定的份额在此界内等于起始份额。\"",
+      "id": "critic9",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/fixation-by-drift.json",
+      "where": "related[2].detail (en, zh)",
+      "severity": "imprecise",
+      "problem": "Error 5. The related note on fixation-with-selection gives the share as exactly a potential's ratio, but the Lean only bounds the share around it.",
+      "evidence": "EN: \"…the fixation share a potential's ratio.\" ZH: \"…固定份额为势之比\".",
+      "fix": "EN: \"With selection in the draw, replacement one at a time: the fixing share within a geometrically falling bound of a potential's ratio.\" ZH: \"固定份额为势之比\" → \"固定份额与势之比之差有按几何下降之界\".",
+      "id": "critic10",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/04-LIFE.md",
+      "where": "line 196, §6 'What happens'",
+      "severity": "imprecise",
+      "problem": "Error 5. The prose reads a limit ('falls toward none'). The proved content is a geometric bound after finitely many cohorts. Rows 201–202 already say 'finite weighted bounds'.",
+      "evidence": "\"over many cohorts of drawing the weight of the histories still mixed falls toward none, each kind fixed with a share the laws give\"",
+      "fix": "\"over many cohorts of drawing the weight of the histories still mixed is bounded by a share falling geometrically, within which the histories fixing each kind take a share the laws give\"",
+      "id": "critic11",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/merge-of-a-part-kept-by-the-rest.json",
+      "where": "next_delta (en, zh)",
+      "severity": "missed-instance",
+      "problem": "Error 7. This reads Landauer's kT ln 2 as a DestroysAtLeast floor (exergy destroyed). DF1b fixed this record's related[1] and least-loss-from-entropy-production's next_delta, but not this field, so the record now contradicts itself.",
+      "evidence": "EN: \"A reading of count as energy, so that the periphery's floor (DestroysAtLeast at kT ln 2) follows from this count with only that reading supplied; an independent review.\" ZH: \"把计数读作能量，使外围的下限（kT ln 2 处的 DestroysAtLeast）只需给出这一读法即由此计数推出；独立审查。\" DF1b's least-loss next_delta and the EntropyProduction.lean header say heat exported is not exergy destroyed (Sagawa 2014).",
+      "fix": "EN (260, under 400): \"A reading of count as energy, so that Landauer's bound on the heat an erasure exports follows from this count with only that reading supplied (a DestroysAtLeast floor needs irreversibility as well: heat exported is not exergy destroyed); an independent review.\" ZH (89, under 180): \"把计数读作能量，使 Landauer 关于擦除所导出之热的下限只需给出这一读法即由此计数推出（DestroysAtLeast 的下限还需不可逆：导出之热不是被毁之㶲）；独立审查。\"",
+      "id": "critic12",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "where": "line 632, Open item on least loss",
+      "severity": "imprecise",
+      "problem": "This touches error 7. The open item says that a least loss in energy from the core needs only a reading of count as energy. After DF1b, Landauer's count, read as energy, bounds heat exported, not exergy destroyed, so irreversibility is needed too.",
+      "evidence": "\"*Open:* a least loss in energy from the pure core, which needs a reading of count as energy\"",
+      "fix": "\"*Open:* a least loss in energy from the pure core, which needs a reading of count as energy and, since Landauer's count so read bounds heat exported rather than exergy destroyed, irreversibility as well\"",
+      "id": "critic13",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/balance-from-the-first-law.json",
+      "where": "does_not_show[3] (en, zh), related[1].detail (en, zh), correspondence.en opening",
+      "severity": "missed-instance",
+      "problem": "Error 8. In these fields 'first law' means thermodynamics' first law, but they do not say so. The record's own title uses the term in that sense, so the spine's Flow.Gainless sense could be read instead. DF1b qualified other records but not these fields.",
+      "evidence": "does_not_show[3].en: \"it is relocated to the first law with locality\". zh: \"它被移到带局部性的第一定律上\". related[1].detail.en: \"here it is the first law with locality\". zh: \"这里它是带局部性的第一定律\". correspondence.en: \"First law: the energy of a store changes only by the heat and work crossing its boundary…\"",
+      "fix": "does_not_show[3].en (151 chars): \"it is relocated to thermodynamics' first law with locality\"; .zh: \"它被移到带局部性的热力学第一定律上\". related[1].detail.en: \"here it is thermodynamics' first law with locality\"; .zh: \"这里它是带局部性的热力学第一定律\". correspondence.en (808 chars, under 1200; no zh): \"Thermodynamics' first law: the energy of a store changes only by the heat and work crossing its boundary…\".",
+      "id": "critic14",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/balance-from-conservation-along-a-relation.json",
+      "where": "dependencies[0].detail (en, zh)",
+      "severity": "missed-instance",
+      "problem": "Error 8. 'The first law' here means thermodynamics' first law (FL1's reading), but it is not named.",
+      "evidence": "EN: \"FL1 reads balance as the first law with locality\". ZH: \"FL1 把平衡读作带局部性的第一定律\".",
+      "fix": "EN: \"FL1 reads balance as thermodynamics' first law with locality\". ZH: \"FL1 把平衡读作带局部性的热力学第一定律\".",
+      "id": "critic15",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/recurrence-without-premise.json",
+      "where": "correspondence.zh (two places), related[1].detail.zh",
+      "severity": "imprecise",
+      "problem": "The ZH says something different from the EN. Here the EN 'first law' is the spine's first law (Flow.Gainless, with dissipation). The ZH writes 第一定律, which elsewhere in the account means thermodynamics' first law (热力学第一定律). The spine's term is 第一律.",
+      "evidence": "correspondence.zh: \"以第一定律与耗散为前提\"; \"第一定律之下被围住的家族\". related[1].detail.zh: \"在第一定律与耗散之下\".",
+      "fix": "\"以第一律与耗散为前提\"; \"第一律之下被围住的家族\"; \"在第一律与耗散之下\"",
+      "id": "critic16",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/mutual-dependence-and-its-pace.json",
+      "where": "does_not_show[1].zh",
+      "severity": "imprecise",
+      "problem": "The ZH uses 第一定律 for the spine's first law. The EN means Flow.Gainless.",
+      "evidence": "\"在第一定律下按指数增长的是量而不是差\"",
+      "fix": "\"在第一律下按指数增长的是量而不是差\"",
+      "id": "critic17",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/where-novelty-gain-comes-from.json",
+      "where": "correspondence.zh",
+      "severity": "imprecise",
+      "problem": "The ZH uses 第一定律 for the spine's first law. The EN means Flow.Gainless.",
+      "evidence": "\"在第一定律下它需要来自每个有界部分之外的流入\"",
+      "fix": "\"在第一律下它需要来自每个有界部分之外的流入\"",
+      "id": "critic18",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/becoming-stepwise-reading.json",
+      "where": "related[3].detail (en, zh)",
+      "severity": "imprecise",
+      "problem": "Error 4. The detail cites the namespace `Ranking.Immediate` as if the stepwise reading ranks the absence higher whenever no focal event is included. The theorem is proved for Immediate's one law.",
+      "evidence": "EN: \"and without such an event it still does (Ranking.Immediate)\". ZH: \"没有这样的事件时仍排得更高（Ranking.Immediate）\". Ranking.lean states `stepwise_ranks_absence` for `Immediate.law` only and has no general converse of `withheld_of_extends`.",
+      "fix": "EN: \"and in a law with no such event it still does (Ranking.Immediate.stepwise_ranks_absence, a witness)\". ZH: \"在一个没有这样事件的律中仍排得更高（Ranking.Immediate.stepwise_ranks_absence，见证）\".",
+      "id": "critic19",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/ranking-under-readings.json",
+      "where": "counterexamples[1].detail (en, zh)",
+      "severity": "overclaim",
+      "problem": "Error 4. A witness is read as a general law. 'When no focal event is included, the stepwise reading too ranks the absence higher' generalizes from Immediate. From that it concludes that what the stepwise reading gives up 'concerns only' formations with an included event, and that is not proved.",
+      "evidence": "EN: \"When no focal event is included, the stepwise reading too ranks the absence higher (Ranking.Immediate.stepwise_ranks_absence): a formation whose first step already crosses support ranks below its absence under both readings, so what the stepwise reading gives up concerns only formations with an included event before the loss.\" The ZH begins \"没有被记入的焦点事件时，逐步读法同样把不在场排得更高…\".",
+      "fix": "EN: \"In Immediate, whose focal formation's first step already crosses support, no focal event is included and the stepwise reading too ranks the absence higher (Ranking.Immediate.stepwise_ranks_absence, a witness), so what the stepwise reading gives up need not reach formations with no included event.\" ZH: \"在 Immediate 中，焦点形成的第一步已越过支持，没有被记入的焦点事件，逐步读法同样把不在场排得更高（Ranking.Immediate.stepwise_ranks_absence，见证），故逐步读法所放弃者未必及于没有被记入事件的形成。\"",
+      "id": "critic20",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "where": "line 267, T2 Evidence: \"In yeast past its fold (§314), residuals at constant dilution carry nothing day to day (lag-1 −0.14, passed)\"",
+      "severity": "imprecise",
+      "problem": "This touches error 1. 02's T2 evidence still marks the constant-dilution yeast result as 'passed' and does not say it lies outside T2's refuting settings, so it can be read as a test of T2. DF1b gave 08's evidence the qualifier but not 02's, which is the canonical text.",
+      "evidence": "08-METHOD.md T2 row: \"yeast past its fold (MQ6) residuals at constant dilution carry nothing day to day, outside the deteriorating environments that could refute T2\". 02's Refuted-by clause: \"…or yeast in deteriorating environments\".",
+      "fix": "\"In yeast past its fold (§314), residuals at constant dilution carry nothing day to day (lag-1 −0.14, passed, outside the deteriorating environments that could refute T2)\"",
+      "id": "critic21",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "experiments/margin-measured/README.md",
+      "where": "line 70: \"This is thesis T2, conjectured and supported, and untested outside fisheries.\"",
+      "severity": "imprecise",
+      "problem": "This touches error 1. 'Supported' is a separate standing in 08 §9 ('supported by frozen tests'). Combined with 'conjectured', it gives T2 more than 02's standing, which is conjectured on three fish-stock tests, one passed.",
+      "evidence": "08-METHOD.md line 498: \"standing is how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)\". 02 line 267: \"Standing: conjectured, on the three frozen fish-stock tests above; untested outside fisheries\".",
+      "fix": "\"This is thesis T2, conjectured on three frozen fish-stock tests (one passed) and untested outside fisheries.\"",
+      "id": "critic22",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "experiments/valuation-development/README.md",
+      "where": "line 20: \"a noisy witness in which greedy lock-in tends to certainty\"",
+      "severity": "imprecise",
+      "problem": "Error 5, minor. The Lean proves a finite bound, probability at least 1 − (2/3)^n. 'Tends to certainty' is read from that bound, and the bound is not stated.",
+      "evidence": "ValuationBridges.lean lines 16–18 and 432–436: `noisy_greedy_locks` gives probability at least 1 − (2/3)^n.",
+      "fix": "\"a noisy witness in which greedy lock-in has probability at least 1 - (2/3)^n, so tends to certainty\"",
+      "id": "critic23",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "where": "line 14: \"the first law says when a part makes the difference to a loss, the rest what joint drawing does\"",
+      "severity": "style",
+      "problem": "Error 8, a third sense. Here 'first law' means 'the first of these laws', which collides with the spine's first law (Flow.Gainless) that the GLOSSARY now defines.",
+      "evidence": "GLOSSARY.md has the 'first law' entry added by DF1b (the spine's Flow.Gainless).",
+      "fix": "\"the first of these laws says when a part makes the difference to a loss, the others what joint drawing does\"",
+      "id": "critic24",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/eventual-widening.json",
+      "where": "does_not_show[4] (en, zh)",
+      "severity": "style",
+      "problem": "Error 8, a third sense. The EN means 'the first of its laws'. The ZH 第一律 is exactly the spine's term for Flow.Gainless.",
+      "evidence": "EN: \"its first law fixed a recency form\". ZH: \"其第一律定出近期形式\".",
+      "fix": "EN (180 chars): \"the first of its laws fixed a recency form\". ZH (69): \"其第一条规律定出近期形式\".",
+      "id": "critic25",
+      "disposition": "taken (df1b_edits2.py)"
+    },
+    {
+      "file": "theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.json",
+      "where": "hypotheses[0].en and related[0].detail.en (the ZH uses 首律, which is fine); also derived-history-law-exactness.json claim.en",
+      "severity": "style",
+      "problem": "Error 8, a third sense, EN only. 'The first law' means the record's law 1, which can be confused with the spine's first law.",
+      "evidence": "what-a-line-holds…: \"the region in the first law decided\"; \"proved from the first law (GS6)\". derived-history-law-exactness claim.en: \"in the core an instance of the first law\".",
+      "fix": "\"the region in the record's first law decided\"; \"proved from law 1 (GS6)\"; derived-history-law-exactness: \"in the core an instance of its first law\".",
+      "id": "critic26",
+      "disposition": "taken (df1b_edits2.py)"
+    }
+  ],
+  "not_taken": [
+    {
+      "from": "critic, outside the live scope",
+      "what": "becoming/Becoming/LeastLoss.lean's comment lists Landauer's bound among candidates for a least loss per change",
+      "why": "left: it names candidates for a least change of a stock's energy, which heat exported per erasure can be; it does not call it a floor of destroyed exergy, and a core comment change would rerun the core for no change of claim."
+    }
+  ],
+  "checked": {
+    "skeptic": "Checked against main 04c7f93ae with git diff main, research.py lint, research.py links and the packet's check_dossiers.py.\n\nWhat holds:\n\n(a) The MQ6 numbers in 02 and 08 match study §314 and the README ledger:\n- 3 of 10 frozen verdicts passed (T1a-SUC, C1, L).\n- A1 failed on the frozen fate reading (21–26% of low starters \"survive\"); read by the floor post hoc, the fates separate 97–100%.\n- A2's ratios are 0.86 and 0.72, then 0.58 at 0.2%, which is 1.7 times too low.\n- L is −0.14 over 300 pairs on the constant group.\n- T2's standing in 08 (\"untested outside fisheries\") now agrees with 02 and with README line 295.\n- The MQ6 test labels T1/T2 are not confused with the theses in the live text.\n\n(b) Closing.Onset.unforeseen is exactly: for T ≤ T' and t ≤ T, amount T D t = amount T' D t. 02's new gloss (\"a loop forming at T and one forming later carry the same amounts up to T, a witness\") is exact.\n\n(c) Drift.varied_vanishes (≤ r^k out of (N^N)^k, with r + 2 = N^N) gives the share ((N^N − 2)/N^N)^k exactly. Drift.fixation gives a fixing share in [h/N − (r/N^N)^k, h/N], so \"to within that\" is exact; only the closing limit is not proved.\n\n(d) The physics is correct and the attribution fair:\n- Landauer's bound is on the heat exported.\n- Heat exported is not exergy destroyed.\n- A reversible erasure is possible (Sagawa 2014, J. Stat. Mech. P03025).\n- The new EntropyProduction header bullet matches DestroysAtLeast, loss_of_floor, dissipative_of_floor and loss_at_finer_unit.\n- The new receipt's source sha256 equals the edited file's (6c5df503…), with status passed.\n\n(e) Spine-sense uses are consistent: 02 §4 and its Theorem lines 212 and 221, 07, the least-loss statement and laws, and what-keeping-widening-needs. The overview edits are one word each in EN and ZH (热力学 added). The 01 and 08 edits are correct.\n\n(f) Citations:\n- Hordijk and Steel 2004, J. Theor. Biol. 227:451–461: correct.\n- Nei 1971 (Genetics 68:169–184) and Felsenstein 1971 (Am. Nat. 105:1–11), now cited as two works in 04 and in law 14 EN and ZH.\n- Gao, Schulman and Hilton 2023 (ICML, PMLR 202; arXiv 2210.10760, October 2022), now consistent in the record, ALIGNMENT.md, 05 and alignment-approaches.\n\n(g) Lint: apart from the next_delta errors and the new negation-lead warning reported, the nine records show only warnings that already exist on main. EN and ZH agree in the edited fields except where reported.\n\n(h) Links: research.py links reports 1 broken link in 1510 files. It is _process/BECOMING-WORKBOARD.md:56, pointing to UE10's REVIEW, not a DF1b file. Every changed file's links resolve, including:\n- 02#t1 and #t2;\n- 03#break-seen-coming (T6's home, as 08 links it);\n- 02#how-to-read and #r-least-loss-from-entropy-production;\n- 01#r-balance-from-the-first-law.\n\nNo other live thesis link points to the history overview except the frozen EW2 predictions file. The ZH overview change is a single insertion.\n\nThe record .md pages and generated indexes (RESULTS, THEORY-GRAPH, DEPENDENCIES) are not re-rendered in the worktree. That is expected before landing, but it is why ALIGNMENT.md's new quotation fails check_dossiers.py.",
+    "critic": "All work was read-only in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df (branch df1b). I reviewed `git diff main` against the last section of DEFECTS-FOUND.md. I searched theories/becoming/ONE-PAGE(.zh).md, THE-THEORY-OF-BECOMING(.zh).md, chapters/*.md (CLAIMS and README included), review/*.md, GLOSSARY.md, the experiments/*/README.md files, and every record field except history and references, dumped by script to /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/df1b-review/records.tsv. I checked the citations against the Lean: Closing.lean, Drift.lean, RegimeMargin.lean (Notch, Crossing, Alternation), Ranking.lean (Immediate), LeastLoss.lean, physics/EntropyProduction.lean and ValuationBridges.lean.\n\nSearched and found clean:\n- Error 3 (Hordijk and Steel): only 08 and what-keeping-widening-needs cite it, both now 2004.\n- Error 6 (Nei and Felsenstein): 04, 08 and pace-of-selection cite the two 1971 works apart.\n- Error 9 (history thesis links): no live links to history/THE-THEORY-OF-BECOMING.md for T1–T8. The only hits are chapters/README.md lines 233–238, a table of moved files, which is correct, and the frozen PREDICTIONS file.\n- Error 10 (Gao, Schulman and Hilton): every citation is 2023 (05 line 203, review/ALIGNMENT.md line 165, coupling-closures-of-training-pipelines, alignment-approaches).\n- Error 2 (T1's MQ6 evidence): the T1 rows in 02 and 08 are fixed. The overview's T1 row ('three tests passed, four failed') is consistent. margin-of-a-regime's does_not_show[3] names only the timing, which is right under 'That a margin times a break'.\n- Errors 1–3 and 6–10 do not occur in ONE-PAGE (both editions), GLOSSARY, the review dossiers or the experiments READMEs. The 'T2' labels in margin-measured's verdict tables are test labels, not the thesis.\n- The overview's §10 'T2 on grassland and forests' agrees with 02's open item.\n- 04's drift rows 201–202 and the overview's line 106 already say 'finite weighted bounds'.\n- Witness citations worded with 'can', 'in X' or 'need not' are fine (Lone, Clearing, Shuttle, Alternation, Momentum, Unclosed, Inconstant). Gauged is not flagged, because runaway-distance-uncoupled's law 4 is general for level coupling.\n- loops-within-what-a-law-reads is clean.\n\nCap lengths are checked: the fixation-with-selection statement is 295 EN / about 121 ZH and laws[2] is 335 / 114; the merge next_delta is 260 / 89; balance-from-the-first-law's does_not_show[3] is 151 and its correspondence 808; eventual-widening's does_not_show[4] is 180 / 69.\n\nOutside the live scope but worth the owners' notice:\n- The core comment at becoming/Becoming/LeastLoss.lean line 91 still lists \"Landauer's bound `kT ln 2` per erased bit\" among candidates for a least loss per change (exergy), against DF1b's reading.\n- DF1b's new history entries carry the placeholder \"(study section DF_N)\".\n- The least-loss history entry has a lowercase \"thermodynamics'\" after a full stop."
+  }
+}

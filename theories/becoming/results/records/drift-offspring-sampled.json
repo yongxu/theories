@@ -228,8 +228,8 @@
     {
       "id": "fixation-by-drift",
       "detail": {
-        "en": "Many generations of sampling: the count kept, variation ending, each kind fixed with its starting share.",
-        "zh": "多代抽样：计数保持、差异终结、各类以其起始份额被固定。"
+        "en": "Many generations of sampling: the count kept, the still-varied histories bounded by a share falling geometrically, and the fixing share within that of the starting share.",
+        "zh": "多代抽样：计数保持，仍有差异的历史之份额有按几何下降之界，固定的份额在此界内等于起始份额。"
       }
     }
   ],
@@ -377,6 +377,10 @@
     {
       "en": "20 October 2026, EV9: Becoming.Drift gains many sampled generations (record fixation-by-drift, study section 278): fixation and loss over many generations, this record's first open item, is stated there in the neutral case; this record's laws and their statements are unchanged.",
       "zh": "2026年10月20日，EV9：Becoming.Drift 增加多代抽样（记录 fixation-by-drift，研究第 278 节）：本记录的第一个开放项——多代中的固定与丢失——在那里以中性情形陈述；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section 422): The related note on fixation-by-drift gives its finite bounds, not a limit.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：关于 fixation-by-drift 的相关说明给出其有限之界，而非极限。"
     }
   ]
 }

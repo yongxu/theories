@@ -1,6 +1,6 @@
 OU3b: proposed lines for the one page and the overview (optional; not applied by the kit)
 
-AI-written, 26 October 2026; wording revised at landing so that it claims no more than the measure shows (closure 16 of 16, finite runs 9 of 14, balance 14 of 52, order 1 of 9, lumping 0 of 1). These pages belong to NR, so the kit does not edit them. Each pair gives the exact
+AI-written, 26 October 2026; wording revised at landing so that it claims no more than the measure shows (closure 16 of 16, finite runs 9 of 14, balance 14 of 52, order 1 of 9, lumping 0 of 1). These pages belong to NR, so the kit does not edit them. Applied 26 October 2026, after the landing, with "central declarations" written as "the declarations the master laws rest on", since the pages do not define the former. Each pair gives the exact
 current line (as on main at 21d67b95d) and its proposed replacement; apply a pair only if its old line is still
 there, byte for byte. The link target is the new record's home section, which the kit writes into 01 §7. There is no
 Chinese edition of 01, so the Chinese pages link the English chapter, as they already do for 01.
@@ -9,25 +9,25 @@ Chinese edition of 01, so the Chinese pages link the English chapter, as they al
 OLD:
 - Most laws are proved on the models, not yet restated on the grammar itself.
 NEW:
-- Most laws are proved on the models, not yet restated on the grammar itself. The five master laws are now stated on it. The models' closure laws, and some of their laws of finite runs and order, are proved from them; lumping's law is shown equivalent to its grammar form; balance is represented, not derived. 28 of 127 central declarations reach the grammar ([01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)).
+- Most laws are proved on the models, not yet restated on the grammar itself. The five master laws are now stated on it. The models' closure laws, and some of their laws of finite runs and order, are proved from them; lumping's law is shown equivalent to its grammar form; balance is represented, not derived. 28 of the 127 declarations the master laws rest on reach the grammar ([01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)).
 
 == theories/becoming/ONE-PAGE.zh.md, line 27
 OLD:
 - 多数律是在模型上证明的，尚未在文法本身上重新陈述。
 NEW:
-- 多数律是在模型上证明的，尚未在文法本身上重新陈述。五条主律已在文法上陈述：模型上闭包之律，及有限运行与序之律的一部分，由之证出；归并之律证为与其文法形式等价；平衡只表示、不推出。127 条中心声明中有 28 条通到文法（[01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)）。
+- 多数律是在模型上证明的，尚未在文法本身上重新陈述。五条主律已在文法上陈述：模型上闭包之律，及有限运行与序之律的一部分，由之证出；归并之律证为与其文法形式等价；平衡只表示、不推出。主律所依的 127 条声明中有 28 条通到文法（[01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)）。
 
 == theories/becoming/THE-THEORY-OF-BECOMING.md, line 225
 OLD:
 - **Lifting.** Most laws are proved on the World or on processes and not yet restated on the grammar, which has no amounts yet ([08](chapters/08-METHOD.md#expressible-is-not-derived)).
 NEW:
-- **Lifting.** Most laws are proved on the World or on processes and not yet restated on the grammar, which has no amounts yet ([08](chapters/08-METHOD.md#expressible-is-not-derived)). The five master laws are restated on it: the closure laws and some laws of finite runs and order are proved from them, lumping is shown equivalent, and balance is represented by pairing units, not derived; 28 of 127 central declarations reach the grammar ([01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)).
+- **Lifting.** Most laws are proved on the World or on processes and not yet restated on the grammar, which has no amounts yet ([08](chapters/08-METHOD.md#expressible-is-not-derived)). The five master laws are restated on it: the closure laws and some laws of finite runs and order are proved from them, lumping is shown equivalent, and balance is represented by pairing units, not derived; 28 of the 127 declarations the master laws rest on reach the grammar ([01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)).
 
 == theories/becoming/THE-THEORY-OF-BECOMING.zh.md, line 227
 OLD:
 - **提升。** 多数律是在世界模型或过程上证明的，尚未在文法上重新陈述，而文法还没有量（[08](chapters/08-METHOD.md#expressible-is-not-derived)）。
 NEW:
-- **提升。** 多数律是在世界模型或过程上证明的，尚未在文法上重新陈述，而文法还没有量（[08](chapters/08-METHOD.md#expressible-is-not-derived)）。五条主律已在文法上重新陈述：闭包之律及有限运行与序之律的一部分由之证出，归并证为等价，平衡以单位之配对表示，不推出；127 条中心声明中有 28 条通到文法（[01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)）。
+- **提升。** 多数律是在世界模型或过程上证明的，尚未在文法上重新陈述，而文法还没有量（[08](chapters/08-METHOD.md#expressible-is-not-derived)）。五条主律已在文法上重新陈述：闭包之律及有限运行与序之律的一部分由之证出，归并证为等价，平衡以单位之配对表示，不推出；主律所依的 127 条声明中有 28 条通到文法（[01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)）。
 
 Records citing these pages will drift where a line they cite changes; read them and re-point with
 tools/research/repoint.py --paths <the page> --ids <the records>, as for any text change.

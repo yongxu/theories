@@ -85,8 +85,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T104831.571462Z）：Becoming.LeastLoss 的声明公理报告为空；检查器核验核心的纯粹性。在一个会话中构建与审查，没有另外的审查者；作者自审见研究第 255 节；构建之前的文献检查是意义审查的最小损失一节；未经人独立审查。"
   },
   "next_delta": {
-    "en": "A reading of count as energy, so that the periphery's floor (DestroysAtLeast at kT ln 2) follows from this count with only that reading supplied; an independent review.",
-    "zh": "把计数读作能量，使外围的下限（kT ln 2 处的 DestroysAtLeast）只需给出这一读法即由此计数推出；独立审查。"
+    "en": "A reading of count as energy, so that Landauer's bound on the heat an erasure exports follows from this count with only that reading supplied (a DestroysAtLeast floor needs irreversibility as well: heat exported is not exergy destroyed); an independent review.",
+    "zh": "把计数读作能量，使 Landauer 关于擦除所导出之热的下限只需给出这一读法即由此计数推出（DestroysAtLeast 的下限还需不可逆：导出之热不是被毁之㶲）；独立审查。"
   },
   "correspondence": {
     "en": "Landauer (1961): a logically irreversible step compresses the phase space of the information-bearing degrees of freedom, and Liouville's theorem makes the rest expand. Bennett (1973; SHPMP 34, 2003, \"in a sense ... a restatement of the Second Law\"); Ladyman, Presnell, Short and Groisman (SHPMP 38, 2007; disputed by Norton). The finite-rest floor is the counting shadow of Reeb and Wolf's finite-bath correction (NJP 16, 2014) and Masanes and Oppenheim's unattainability (Nat. Commun. 8, 2017). Reading (the AI's): a part that keeps itself narrow, as an organized system does, passes the distinctions it loses into its surroundings, and in a finite world it can do so only so far.",
@@ -139,8 +139,8 @@
     {
       "id": "least-loss-from-entropy-production",
       "detail": {
-        "en": "There Landauer's floor is a physical premise (DestroysAtLeast); here its count is a core law.",
-        "zh": "那里 Landauer 的下限是物理前提（DestroysAtLeast）；这里其计数是核心规律。"
+        "en": "There a floor of destroyed exergy is a physical premise (DestroysAtLeast), not Landauer's bound alone; here Landauer's count is a core law.",
+        "zh": "那里被毁㶲的下限是物理前提（DestroysAtLeast），单靠 Landauer 下限给不出；这里 Landauer 的计数是核心规律。"
       }
     },
     {
@@ -235,6 +235,10 @@
     {
       "en": "20 October 2026: added (LC1), section 8.1 item 6: the converse of Law.loss_needs_merge in a whole that merges nothing; study section 255.",
       "zh": "2026年10月20日：新增（LC1），第 8.1 节第 6 项：在不合并的整体中 Law.loss_needs_merge 的反面；研究第 255 节。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section 422): The related note and the next step no longer read Landauer's bound as DestroysAtLeast's floor: it is on heat exported, not on exergy destroyed (Bennett 2003; Sagawa 2014).",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：相关说明与下一步不再把 Landauer 下限读作 DestroysAtLeast 的下限：它关乎导出之热，而非被毁之㶲（Bennett 2003；Sagawa 2014）。"
     }
   ]
 }

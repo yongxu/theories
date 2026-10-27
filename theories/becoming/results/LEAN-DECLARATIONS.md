@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 319 | 15,028 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 320 | 15,163 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -686,6 +686,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PurposeCorrectionHistory.lean](lean-declarations/concern.md#module-41ff61a5ae5b) | Concern and shared activity |
 | [Quantum.lean](lean-declarations/becoming-core.md#module-ba93c076fc78) | Becoming pure core |
 | [Ranking.lean](lean-declarations/becoming-core.md#module-fbc6f2c56a91) | Becoming pure core |
+| [ReachableRanges.lean](lean-declarations/becoming-core.md#module-2ede4c2bfdff) | Becoming pure core |
 | [ReachedInquiryComposition.lean](lean-declarations/inquiry.md#module-c8393ae20838) | Attainable inquiry, contact and process laws |
 | [ReadInTime.lean](lean-declarations/becoming-core.md#module-ecee224bb970) | Becoming pure core |
 | [Reading.lean](lean-declarations/becoming-core.md#module-99e970c01029) | Becoming pure core |

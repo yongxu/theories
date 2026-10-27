@@ -108,7 +108,7 @@ The chapter's open programme (section 8.2) named a constructive criterion along 
 - related, not a proved adapter: [experiment-needs-return](experiment-needs-return.md). There the record fixes a move's outcome only where taken; here the record read through a description is the least candidate law, a law exactly where it is consistent.
 - related, not a proved adapter: [differences-below-threshold](differences-below-threshold.md). There a difference below a threshold does not couple in; here a level outside what a formation couples into decides its next coupling along a run.
 
-**Used by:** [a-law-through-coupling-along-one-run](a-law-through-coupling-along-one-run.md)
+**Used by:** [a-law-through-coupling-along-one-run](a-law-through-coupling-along-one-run.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md)
 
 **Law family:** A law along one run (lead: this record). Under an equivalence, a law admits a run's steps up to a step exactly where steps alike under it, by the same move, end alike, and failure persists. The lead states it once; the law through what a formation couples into and the law through coupling that changes along the run were recorded first, are superseded by the lead and are its readings. Members: [a-law-through-coupling-along-one-run](a-law-through-coupling-along-one-run.md) · [a-law-through-changing-coupling-along-one-run](a-law-through-changing-coupling-along-one-run.md).
 

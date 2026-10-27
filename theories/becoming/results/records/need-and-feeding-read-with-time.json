@@ -64,8 +64,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That nothing reaches successors: what comes after every present center's end is reached by a line under a class that continues past it, or by the step of invariance.",
-      "zh": "无物达到后来者：凡在一切现存中心终结之后者，由过其终结而续的一类下之线达到，或由不变之步达到。",
+      "en": "That nothing reaches successors: what comes after every present center's end can be reached along a line under a class coarser than the organism, continuing past that end, or by the step of invariance.",
+      "zh": "无物达到后来者：凡在一切现存中心终结之后者，可由比个体更粗之类下、过其终结而续之线达到，或由不变之步达到。",
       "kind": "non-implication"
     },
     {
@@ -144,8 +144,8 @@
     {
       "id": "reach-past-ones-own-end",
       "detail": {
-        "en": "Where the reach past one's own end comes from instead: a line under a class that continues past it.",
-        "zh": "过己之终的所及另有来处：过其终而续的一类下之线。"
+        "en": "Where the reach past one's own end comes from instead: a line under a class coarser than the organism, continuing past it.",
+        "zh": "过己之终的所及另有来处：比个体更粗之一类下、过其终而续之线。"
       }
     }
   ],
@@ -239,6 +239,10 @@
     {
       "en": "26 October 2026: \"goes on past\" (延 in the glossary, going on without end) replaced by \"continues past\", the sense of «过亡而续», in what it does not show and its related entry (OC3); content unchanged; study section 413.",
       "zh": "2026年10月26日：其所不示与相关项之英文 goes on past（词表中为延，无尽而行）改为 continues past，即«过亡而续»之义（OC3）；内容未变；研究第 413 节。"
+    },
+    {
+      "en": "27 October 2026: what it does not show and its related entry say that the line, under a class coarser than the organism, continues past the end (a line continues, not a class), and that successors can be reached so (OC4); content unchanged; study section 423.",
+      "zh": "2026年10月27日：其所不示与相关项言，过终而续者为比个体更粗之类下之线（续者为线，非类），后来者可由此达到（OC4）；内容未变；研究第 423 节。"
     }
   ]
 }

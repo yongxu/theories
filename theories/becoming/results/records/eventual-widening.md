@@ -36,7 +36,7 @@
 - That eventual widening is better: calling it better is a premise beyond C (C∞ in the study), named and not asserted. It would discount every loss confined to a finite stretch, its verdicts can be insulated against every record, and it is the unlimited continuation priority that the priority of basic conditions rejects.
 - That keeping widening or being opened by the opened is 生生, a direction or a ranking: ranking by either runs against widening (OwnCondition.not_monotone, Saturated.reverses).
 - A law relating 生成 to widening (02 stays open), or any gain, renewal or giver law; comparisons over branching courses; novelty; and that eventual widening entails overtaking as a theorem, which is an argument under finitely many admissions at each step.
-- Which actual courses meet any of these readings; and the first form of opened by the opened is superseded: its first law fixed a recency form (what-keeping-widening-needs).
+- Which actual courses meet any of these readings; and the first form of opened by the opened is superseded: the first of its laws fixed a recency form (what-keeping-widening-needs).
 - **Counterexample:** A lag defeats eventual widening: a course keeping widening, and keeping every formation of another from one step later, is mixed with it in every tail (LagWitness.lag). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean)
 - **Counterexample:** Keeping widening is not kept by widening: a saturated course widens a course that keeps widening and keeps widening from no step (OwnCondition.not_monotone). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean)
 - **Counterexample:** What carries a range is invisible to widening: a relay and a single giver give the same admissions, only the relay opened by the opened (OpeningChain.carried); a closed cycle is opened by the opened with no widening (ClosedCycle.cycle). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWideningInstances.lean)
@@ -53,7 +53,7 @@ Canonical source: [EventualWidening.lean](../../../../experiments/integrated-cor
 <a id="next--下一步"></a>
 ## Next
 
-The lag is decided by widening with a lag and by a tail order containing eventual widening; the first ranks a pair opposite to eventual widening, so choosing is a premise (comparing-two-courses-on-what-they-admit); the gain bridge and the givers law are proved, as restatements (what-keeping-widening-needs); widening of what can be reached over branching courses (UE10); review by a person.
+The lag is decided by widening with a lag and by a tail order containing eventual widening, which rank a pair oppositely, so choosing is a premise (comparing-two-courses-on-what-they-admit); what a course keeps reachable is read: a lag decides one witness's pair (what-a-course-keeps-reachable); the gain bridge and the givers law are restatements (what-keeping-widening-needs); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -77,8 +77,9 @@ A tail criterion in inclusion form: a criterion reading only tails is a dictator
 - related, not a proved adapter: [renewing-consuming-formation](renewing-consuming-formation.md). A comparison in the long run in counts, under a supplied wear law: consuming forms more at first, renewing more past a bound.
 - related, not a proved adapter: [what-keeping-widening-needs](what-keeping-widening-needs.md). What keeping widening needs: the gain bridge, renewers multiplying, the recency form of opened by the opened with this record's witnesses restated, the map law and the exclusion along passing of support.
 - related, not a proved adapter: [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md). Comparing two courses on what they admit: widening with a lag decides the lag, as does a tail order, and widening with a lag and eventual widening rank a pair oppositely.
+- related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). What a course keeps reachable: covering implies inclusion now, so it ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.
 
-**Used by:** [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
+**Used by:** [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -106,6 +107,8 @@ Aliases: `Widening on late tails, and what carries a widening`, `在晚期尾段
 - 25 October 2026: added (UE4), widening on late tails and what carries a widening, near-definitional; the second-order direction of 生生 stays open; study section 410.
 - 26 October 2026, board item UE7 (study section 419): the carrier law's first form marked superseded by the recency form of what-keeping-widening-needs, with the reason (a late single giver); the provisional does-not-show item and the next step updated; the definition and its witnesses are unchanged.
 - 26 October 2026, board item UE9 (study section 421): the next step updated: the lag is decided in comparing-two-courses-on-what-they-admit; the counterexample (a lag defeats eventual widening) stands, and no declaration changed.
+- 26 October 2026, board item DF1b (study section 422): The first of a record's laws is not called its first law, the spine's name for Flow.Gainless.
+- 27 October 2026, board item UE10 (study section 424): the next step updated: what a course keeps reachable is read in what-a-course-keeps-reachable; no declaration changed.
 
 </details>
 

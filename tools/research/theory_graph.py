@@ -99,7 +99,8 @@ def concepts():
 def modules(region_of):
     root = _read(f'{PKG}/Becoming.lean') or ''
     names = re.findall(r'^import (Becoming\.\S+)', root, re.M)
-    level = dict(re.findall(r'^\* `(Becoming\.[^`]+)` \(([^)]*)\)', root, re.M))
+    # A root bullet's note opens with its layer ("L2, through `Becoming.X`"); the level is that layer alone.
+    level = dict(re.findall(r'^\* `(Becoming\.[^`]+)` \((L\d)\b[^)]*\)', root, re.M))
     nodes, imports, sources = {}, {}, {}
     for n in names:
         text = _read(f'{PKG}/Becoming/{n.split(".", 1)[1].replace(".", "/")}.lean') or ''

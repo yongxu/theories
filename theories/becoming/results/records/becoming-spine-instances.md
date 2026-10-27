@@ -57,7 +57,7 @@ Adds no normative content: bridges transport theorems without proving their prem
 - Related, not a proved adapter: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). The bridge's Discharge section belongs there: under the continuation condition the periphery's G0 holds for every inventory, and three of the periphery's theorems follow from the continuation condition.
 - Related, not a proved adapter: [open-form-realization-under-revision](open-form-realization-under-revision.md). The four checked adapters belong to that existing result, with no new result identity.
 
-**Used by:** [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md) · [finite-aggregation-within-restorable-basic-losses](finite-aggregation-within-restorable-basic-losses.md) · [levels-of-closure](levels-of-closure.md)
+**Used by:** [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md) · [finite-aggregation-within-restorable-basic-losses](finite-aggregation-within-restorable-basic-losses.md) · [levels-of-closure](levels-of-closure.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

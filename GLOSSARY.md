@@ -32,6 +32,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 | margin, draw, giving | how far a level lies above a need; what is taken; what is given | [02](theories/becoming/chapters/02-MAP.md#margin) |
 | juncture (机) | where a loss passes | [02](theories/becoming/chapters/02-MAP.md#return) |
 | loop, coupling, carried amount | a closed route of influence; how strongly one level responds to another; what a difference carries along a route | [02](theories/becoming/chapters/02-MAP.md#loops) |
+| first law | the spine's name for `Flow.Gainless`: a closed family without repetition gets back at most what is taken from it; under the exergy balance, thermodynamics' second law read in available work gives it (`EntropyProduction.gainless_of_secondLaw`). Thermodynamics' first law, the conservation of energy, is always named in full | [02](theories/becoming/chapters/02-MAP.md#how-to-read) |
 | meta-attractor (元吸引子) | closed capture: a lock through the rule that outlives its loss | [02](theories/becoming/chapters/02-MAP.md#capture) |
 
 ## Knowing

@@ -403,8 +403,8 @@
     {
       "id": "ranking-under-readings",
       "detail": {
-        "zh": "该结果证明：以本读法作为 C 所比较的 living，C 仍把共享排在以消耗取胜之上；过度汲取者有一个使每个所需仍被满足的事件时，C 不再把它的不在场排在其在场之上，没有这样的事件时仍排得更高（Ranking.Immediate）。",
-        "en": "That result proves that with this reading as the living C compares, C still ranks sharing above winning by consumption; when the overdrawing formation has an event whose step leaves every need met, C no longer ranks its absence above its occurrence, and without such an event it still does (Ranking.Immediate)."
+        "zh": "该结果证明：以本读法作为 C 所比较的 living，C 仍把共享排在以消耗取胜之上；过度汲取者有一个使每个所需仍被满足的事件时，C 不再把它的不在场排在其在场之上，在一个没有这样事件的律中仍排得更高（Ranking.Immediate.stepwise_ranks_absence，见证）。",
+        "en": "That result proves that with this reading as the living C compares, C still ranks sharing above winning by consumption; when the overdrawing formation has an event whose step leaves every need met, C no longer ranks its absence above its occurrence, and in a law with no such event it still does (Ranking.Immediate.stepwise_ranks_absence, a witness)."
       }
     },
     {
@@ -775,6 +775,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired labels in a hypothesis, a boundary and a dependency named in current terms: N_rel and N_std as relational and standpoint neutrality, G0 as living significance, and N and J as the two neutralities and the practical commitments; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：假设、一条边界与一条依赖中的退役标签按现行术语称之：N_rel、N_std 为关系中立、立场中立，G0 为生生之意义，N 与 J 为两种中立与实践承诺；主张不变。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section 422): Ranking.Immediate is one law, a witness: the related note says so instead of reading it for every law without such an event.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Ranking.Immediate 是一个律，即见证：相关说明如此说，而不把它读作对每个没有这样事件之律成立。"
     }
   ],
   "text_versions": [

@@ -2,16 +2,16 @@
   "schema_version": 2,
   "id": "balance-from-the-first-law",
   "title": {
-    "en": "Balance from the first law",
-    "zh": "第一定律给出的平衡"
+    "en": "Balance from thermodynamics' first law",
+    "zh": "热力学第一定律给出的平衡"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
   "reviewed_at_utc": "2026-10-22T18:00:00+00:00",
   "statement": {
-    "en": "A quantity carried only by the exchanges taking part balances the levels exactly where no condition produces it. Read in available work, the first law and the entropy balance give balance where no store generates entropy, and the exchanges' exergy balance: balance and least loss from one reading.",
-    "zh": "只由参与的交换携带的量，恰在没有条件产生它之处使水平平衡。读作可用功，第一定律与熵平衡在没有储存生熵之处给出平衡，也给出交换的㶲平衡：平衡与最小损失出自同一读法。"
+    "en": "A quantity carried only by the exchanges taking part balances the levels exactly where no condition produces it. Read in available work, thermodynamics' first law and the entropy balance give balance where no store generates entropy, and the exchanges' exergy balance: both from one reading.",
+    "zh": "只由参与的交换携带的量，恰在没有条件产生它之处使水平平衡。读作可用功，热力学第一定律与熵平衡在没有储存生熵之处给出平衡，也给出交换的㶲平衡：两者出自同一读法。"
   },
   "laws": [
     {
@@ -43,8 +43,8 @@
       ]
     },
     {
-      "en": "With the first law and the entropy balance at each store, available work relative to an environment at T0 is carried as e − T0 s and destroyed within a store as T0 times the entropy it generates. With T0 > 0 the levels balance exactly where no store generates entropy, and where none generates negative entropy no level rises beyond what the exchanges bring.",
-      "zh": "每个储存满足第一定律与熵平衡时，相对于温度 T0 的环境的可用功以 e − T0 s 被携带，在储存内部以 T0 乘其所生之熵被毁。T0 > 0 时，恰在没有储存生熵之处水平平衡；在没有储存生负熵之处，没有水平超出交换所带来的而上升。",
+      "en": "With thermodynamics' first law and the entropy balance at each store, available work relative to an environment at T0 is carried as e − T0 s and destroyed within a store as T0 times the entropy it generates. With T0 > 0 the levels balance exactly where no store generates entropy, and where none generates negative entropy no level rises beyond what the exchanges bring.",
+      "zh": "每个储存满足热力学第一定律与熵平衡时，相对于温度 T0 的环境的可用功以 e − T0 s 被携带，在储存内部以 T0 乘其所生之熵被毁。T0 > 0 时，恰在没有储存生熵之处水平平衡；在没有储存生负熵之处，没有水平超出交换所带来的而上升。",
       "declarations": [
         "Becoming.EntropyProduction.StoreLaws",
         "Becoming.EntropyProduction.StoreLaws.availableWork",
@@ -53,8 +53,8 @@
       ]
     },
     {
-      "en": "With the first law and the entropy balance at each exchange, which holds nothing across its step and passes heat to the environment, each exchange meets the exergy balance, the exergy it destroys being T0 times the entropy it generates. Generation never negative gives the second law there, and generation whenever it takes gives irreversibility.",
-      "zh": "每个交换满足第一定律与熵平衡、一步之中不持有任何量、把热交给环境时，每个交换满足㶲平衡，其所毁之㶲为 T0 乘其所生之熵。生熵从不为负，在那里给出第二定律；凡取用即生熵，给出不可逆。",
+      "en": "With thermodynamics' first law and the entropy balance at each exchange, which holds nothing across its step and passes heat to the environment, each exchange meets the exergy balance, the exergy it destroys being T0 times the entropy it generates. Generation never negative gives the second law there, and generation whenever it takes gives irreversibility.",
+      "zh": "每个交换满足热力学第一定律与熵平衡、一步之中不持有任何量、把热交给环境时，每个交换满足㶲平衡，其所毁之㶲为 T0 乘其所生之熵。生熵从不为负，在那里给出第二定律；凡取用即生熵，给出不可逆。",
       "declarations": [
         "Becoming.EntropyProduction.ExchangeLaws",
         "Becoming.EntropyProduction.exergyBalance_of_laws",
@@ -130,8 +130,8 @@
       "witness": "Becoming.EntropyProduction.Leaking.energy_conserved_not_balanced"
     },
     {
-      "en": "That balance is a theorem of the dynamics: it is relocated to the first law with locality, which stays a premise about what is represented.",
-      "zh": "平衡是动力学的定理：它被移到带局部性的第一定律上，这仍是关于所表示者的前提。",
+      "en": "That balance is a theorem of the dynamics: it is relocated to thermodynamics' first law with locality, which stays a premise about what is represented.",
+      "zh": "平衡是动力学的定理：它被移到带局部性的热力学第一定律上，这仍是关于所表示者的前提。",
       "kind": "scope"
     },
     {
@@ -174,7 +174,7 @@
     "zh": "以有理量、不用 Mathlib 的核心形式，使由局部守恒得出的平衡有空的公理报告；以及在可稠密的量（Becoming.Amounts）上的读法，那里储存的可用功不必是整数个单位。"
   },
   "correspondence": {
-    "en": "First law: the energy of a store changes only by the heat and work crossing its boundary; locality, the continuity equation of energy, places that crossing at the exchanges taking part. Entropy balance (Clausius): dS = δQ/T + S_gen, with S_gen ≥ 0 by the second law. Available work relative to an environment at T0, at fixed volume and composition, is E − T0 S measured from the dead state; heat Q at temperature T carries Q(1 − T0/T) = e − T0 s of it and work carries all of it; Gouy–Stodola: the exergy destroyed is T0 S_gen. A store that spoils, leaks heat or mixes within itself generates entropy and is counted, on the spine, as an exchange. The same local balance holds of the mass of each element in chemistry, and of a count of individuals with births and deaths counted as exchanges."
+    "en": "Thermodynamics' first law: the energy of a store changes only by the heat and work crossing its boundary; locality, the continuity equation of energy, places that crossing at the exchanges taking part. Entropy balance (Clausius): dS = δQ/T + S_gen, with S_gen ≥ 0 by the second law. Available work relative to an environment at T0, at fixed volume and composition, is E − T0 S measured from the dead state; heat Q at temperature T carries Q(1 − T0/T) = e − T0 s of it and work carries all of it; Gouy–Stodola: the exergy destroyed is T0 S_gen. A store that spoils, leaks heat or mixes within itself generates entropy and is counted, on the spine, as an exchange. The same local balance holds of the mass of each element in chemistry, and of a count of individuals with births and deaths counted as exchanges."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
   "aliases": [
@@ -225,8 +225,8 @@
       "id": "least-loss-from-entropy-production",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Reuses ExergyBalance, SecondLaw, Irreversible, gainless_of_secondLaw and dissipative_of_irreversible: exergyBalance_of_laws gives that record's exergy-balance premise from the first law and the entropy balance at each exchange, with the destroyed exergy T0 times the generated entropy.",
-        "zh": "复用 ExergyBalance、SecondLaw、Irreversible、gainless_of_secondLaw 与 dissipative_of_irreversible：exergyBalance_of_laws 由每个交换处的第一定律与熵平衡给出那条记录的㶲平衡前提，所毁之㶲为 T0 乘所生之熵。"
+        "en": "Reuses ExergyBalance, SecondLaw, Irreversible, gainless_of_secondLaw and dissipative_of_irreversible: exergyBalance_of_laws gives that record's exergy-balance premise from thermodynamics' first law and the entropy balance at each exchange, with the destroyed exergy T0 times the generated entropy.",
+        "zh": "复用 ExergyBalance、SecondLaw、Irreversible、gainless_of_secondLaw 与 dissipative_of_irreversible：exergyBalance_of_laws 由每个交换处的热力学第一定律与熵平衡给出那条记录的㶲平衡前提，所毁之㶲为 T0 乘所生之熵。"
       }
     }
   ],
@@ -241,15 +241,15 @@
     {
       "id": "place-transition-nets-on-the-spine",
       "detail": {
-        "en": "There balance is a net's firing rule; here it is the first law with locality.",
-        "zh": "那里平衡是网的激发规则；这里它是带局部性的第一定律。"
+        "en": "There balance is a net's firing rule; here it is thermodynamics' first law with locality.",
+        "zh": "那里平衡是网的激发规则；这里它是带局部性的热力学第一定律。"
       }
     },
     {
       "id": "entropy-history-and-record",
       "detail": {
-        "en": "There least loss is the first law plus a record held in the conserved amount; here the physical first law with locality gives balance, and with the entropy balance the record.",
-        "zh": "那里最小损失是第一律加上守恒量中所持的记录；这里物理的第一定律加局部性给出平衡，加上熵平衡给出记录。"
+        "en": "There least loss is the spine's first law plus a record held in the conserved amount; here thermodynamics' first law with locality gives balance, and with the entropy balance the record.",
+        "zh": "那里最小损失是第一律加上守恒量中所持的记录；这里热力学第一定律加局部性给出平衡，加上熵平衡给出记录。"
       }
     },
     {
@@ -264,7 +264,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
       "role": "proof",
-      "sha256": "f5e20ab3ee5a6fa8c37e2a82f1bddc84ad49c8bc68d0fd9718a1caa61b1120c3",
+      "sha256": "0088cf4ea491d8896abf8b2be827495c0a03f6e60883e43390f4a6189a847a40",
       "declarations": [
         "Becoming.EntropyProduction.rtotal",
         "Becoming.EntropyProduction.cast_total",
@@ -322,7 +322,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/check_entropy_production.py",
       "role": "integration",
-      "sha256": "e2ab6913181423c16b4da1a496e5048dbb2d028cefbda0a273b673fac38c5cce"
+      "sha256": "962ba8afca9d2017377f25587f83c9761713de9b9ded4c4361f96bc83f67ab24"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
@@ -350,12 +350,18 @@
       "declarations": [
         "Becoming.Flow.Gainless"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261027T042508.827829Z/verification.json",
+      "role": "receipt",
+      "sha256": "ac2bb52f04839913b4d30c12a8a63091c2ee26a9993a5f650a20bb9d327a07bb",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261022T103802.432439Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261027T042508.827829Z/verification.json",
       "sha256_pointer": "/source_sha256/EntropyProduction",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -369,6 +375,10 @@
     {
       "en": "22 October 2026, FL2 (study section 354): related to balance-from-conservation-along-a-relation, which derives the transfers this record assumes. The claim is unchanged.",
       "zh": "2026年10月22日，FL2（研究第 354 节）：关联 balance-from-conservation-along-a-relation，它推出本记录所假设的转移。论断不变。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section 422): 'The first law' here is thermodynamics' first law, named in full apart from the spine's first law (Flow.Gainless), which thermodynamics' second law gives read in available work; title, statement, laws 4 and 5, a limit, the correspondence, a dependency and two related notes. Where a related note means the spine's first law, it says so.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：这里的“第一定律”是热力学第一定律，与脊柱的第一律（Flow.Gainless，以可用功读出时由热力学第二定律给出）分开，写出全名；标题、陈述、第 4、5 条规律、一条限度、对应、一项依赖与两条相关说明。一条相关说明的英文版中指脊柱之第一律处写明为脊柱的。"
     }
   ]
 }

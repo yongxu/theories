@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-20T16:52:16+00:00",
   "statement": {
-    "en": "Sampled generation after generation with no selection, a population keeps each count on average, its still-varied histories vanish geometrically, and each kind is fixed with exactly its starting share in the limit.",
-    "zh": "无选择地逐代抽样，种群平均保持每个计数，仍有差异的历史按几何速率消失，各类在极限中恰以其起始份额被固定。"
+    "en": "Sampled by drift alone, generation after generation, a population of N keeps each count on average; after k generations its still-varied histories weigh a share at most ((N^N − 2)/N^N)^k, and those fixing the first kind a share at most its starting share and within that of it.",
+    "zh": "仅由漂变逐代抽样，N 个成员的种群平均保持每个计数；k 代之后仍有差异的历史所占份额至多为 ((N^N − 2)/N^N)^k，固定第一类的历史所占份额至多为其起始份额，且与之相差不超过此数。"
   },
   "laws": [
     {
@@ -63,8 +63,8 @@
       ]
     },
     {
-      "en": "Fixation: N times the histories fixing the first kind is at most h (N^N)^k and with N r^k at least it, so the fixing share tends to h/N, the neutral fixation probability.",
-      "zh": "固定：N 乘固定第一类的历史至多为 h (N^N)^k，加上 N r^k 则至少为它，故固定的份额趋于 h/N，即中性固定概率。",
+      "en": "Fixation: N times the histories fixing the first kind is at most h (N^N)^k and with N r^k at least it: finite bounds, whose reading is that the fixing share tends to h/N, the neutral fixation probability.",
+      "zh": "固定：N 乘固定第一类的历史至多为 h (N^N)^k，加上 N r^k 则至少为它：有限之界，其读法为固定的份额趋于 h/N，即中性固定概率。",
       "declarations": [
         "Becoming.Drift.fixed",
         "Becoming.Drift.count_le",
@@ -208,8 +208,8 @@
     {
       "id": "fixation-with-selection",
       "detail": {
-        "en": "With selection in the draw, replacement one at a time: the fixation share a potential's ratio.",
-        "zh": "抽取中有选择时，一次替换一个：固定份额为势之比。"
+        "en": "With selection in the draw, replacement one at a time: the fixing share within a bound of a potential's ratio that falls geometrically where a is positive.",
+        "zh": "抽取中有选择时，一次替换一个：固定份额与势之比之差有界，a 为正时按几何下降。"
       }
     }
   ],
@@ -342,6 +342,10 @@
     {
       "en": "22 October 2026, EV13-EV16: related record fixation-with-selection added (study section 368); its laws and their statements are unchanged.",
       "zh": "2026年10月22日，EV13-EV16：加入相关记录 fixation-with-selection（研究第 368 节）；定律及其陈述不变。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section 422): The Lean gives finite two-sided bounds after k generations (Drift.fixation, Drift.varied_vanishes); the limit is read from them, as chapter 04 says. The statement gives the bounds, law 5 marks the limit as their reading, and the related note on selection gives its bound. The statement names the first kind, as Drift.fixation does, and the bound with selection falls geometrically where a is positive.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Lean 给出 k 代之后有限的双侧界（Drift.fixation、Drift.varied_vanishes）；极限由之读出，如第 04 章所说。陈述给出这些界，第 5 条规律把极限标为其读法，关于选择的相关说明给出其界。陈述写明第一类，与 Drift.fixation 一致；有选择时的界在 a 为正时按几何下降。"
     }
   ]
 }

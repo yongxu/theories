@@ -44,7 +44,7 @@ No dependency on another migrated record is asserted; source imports and supplie
 - Related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). Interpretive connection: the established conditional alignment route explains C's practical role; this record is not a direct Lean input to the composition.
 - Related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Interpretive connection: the cross-intelligence direction likewise must retain actual relations and losses; deployment reliability and behavioral convergence are not proved here.
 
-**Used by:** [classification-robust-generative-comparison](classification-robust-generative-comparison.md) · [wisdom-root](wisdom-root.md) (interpretive)
+**Used by:** [classification-robust-generative-comparison](classification-robust-generative-comparison.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) · [wisdom-root](wisdom-root.md) (interpretive)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

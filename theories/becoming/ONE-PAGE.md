@@ -24,7 +24,7 @@
 
 **What is not yet done.**
 
-- Most laws are proved on the models, not yet restated on the grammar itself.
+- Most laws are proved on the models, not yet restated on the grammar itself. The five master laws are now stated on it. The models' closure laws, and some of their laws of finite runs and order, are proved from them; lumping's law is shown equivalent to its grammar form; balance is represented, not derived. 28 of the 127 declarations the master laws rest on reach the grammar ([01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)).
 - The root and the ethics are one account only in part: held de se along a relation, the continuation condition is the root's condition that nothing lies outside every center's line under the full class of that relation, and along a net with no cycle it holds only with one center ([significance](chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root)). The free significance is not lifted onto the root, and which class a center's own line runs under is open.
 - Whether either premise of the ethics can be warranted is open.
 - The test systems the theory should meet first (radioactive decay, an organism, an institution, a belief system) have no models yet.

@@ -68,7 +68,7 @@ Wright-Fisher sampling (Fisher 1930; Wright 1931): binomial sampling of a two-al
 - related, not a proved adapter: [typicality-by-counting](typicality-by-counting.md). Its courses and spread, read as samplings of a next generation.
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The step of selection a sampled generation can undo.
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). A rise by ending among groups, subject to drift.
-- related, not a proved adapter: [fixation-by-drift](fixation-by-drift.md). Many generations of sampling: the count kept, variation ending, each kind fixed with its starting share.
+- related, not a proved adapter: [fixation-by-drift](fixation-by-drift.md). Many generations of sampling: the count kept, the still-varied histories bounded by a share falling geometrically, and the fixing share within that of the starting share.
 
 **Used by:** [fixation-by-drift](fixation-by-drift.md)
 
@@ -97,6 +97,7 @@ Aliases: `drift`, `genetic drift`, `Wright-Fisher sampling`, `漂变`, `offsprin
 
 - 20 October 2026: added (EV8), one generation of offspring sampled rather than listed: unbiased, the spread exact, falling back bounded above and below, over listed generations and on the base; study section 276.
 - 20 October 2026, EV9: Becoming.Drift gains many sampled generations (record fixation-by-drift, study section 278): fixation and loss over many generations, this record's first open item, is stated there in the neutral case; this record's laws and their statements are unchanged.
+- 26 October 2026, board item DF1b (study section 422): The related note on fixation-by-drift gives its finite bounds, not a limit.
 
 </details>
 

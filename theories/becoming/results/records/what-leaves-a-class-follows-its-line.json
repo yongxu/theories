@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-25T13:41:26+00:00",
   "statement": {
-    "en": "Under a class constant up to the net's end, what leaves the class at a member follows every alike occurrence that conditions anything, and a step with nothing outside breaks constancy; such a class can leave a member's effects out.",
-    "zh": "于至网之终有常之类下，一员处出类者随每一同类而有所缘之步，无类外者之步破其有常；此类可不持一员之所缘。"
+    "en": "Under a class constant up to the net's end, what leaves the class at a member follows every alike occurrence that conditions anything, and one that conditions something but nothing alike to that effect breaks the condition; such a class can leave a member's effects out.",
+    "zh": "于至网之终有常之类下，一员处出类者随每一有所缘之同类者；有所缘而无与该效同类者之同类者破此条件；此类可不持一员之所缘。"
   },
   "laws": [
     {
@@ -36,8 +36,8 @@
       ]
     },
     {
-      "en": "In a finite net without cycles, a class holding a member and part of what follows it is constant up to the net's end though not constant, does not hold the member's effects, and something outside it follows every step of its line that conditions anything.",
-      "zh": "于无环之有限之网中，含一员及其后之一部之类，至网之终有常而非有常，不持此员之所缘，其线上每一有所缘之步皆有类外者随之。",
+      "en": "In a finite net without cycles, a class holding a member and part of what follows it can be constant up to the net's end though not constant, not holding the member's effects, while something outside it follows every occurrence on its line that conditions anything; a witness.",
+      "zh": "于无环之有限之网中，含一员及其后之一部之类，可至网之终有常而非有常，不持此员之所缘，而其线上每一有所缘者皆有类外者随之；有见证。",
       "declarations": [
         "Becoming.FiniteWake.Occ",
         "Becoming.FiniteWake.constant_to_end",
@@ -69,8 +69,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the necessary condition suffices for constancy up to the net's end: for a class with more than two blocks it does not (a three-block net, checked in the IV3 line's review of PF2).",
-      "zh": "此必要条件足以至网之终有常：类多于二块时不足（三块之网，见 IV3 线对 PF2 之审查）。",
+      "en": "That the necessary condition suffices for constancy up to the net's end: even with two blocks what stays in the class must follow too (a two-block net, checked in OC4's review), and with more than two what leaves must follow as something alike to it, not only as something outside (a three-block net, checked in the IV3 line's review of PF2).",
+      "zh": "此必要条件足以至网之终有常：即使二块，留于类内者亦须随之（二块之网，见 OC4 之审查）；多于二块时，出类者须以与之同类者随之，非仅以类外者（三块之网，见 IV3 线对 PF2 之审查）。",
       "kind": "converse"
     },
     {
@@ -96,8 +96,8 @@
     "zh": "P2 之问于 constancy-read-at-a-members-class（OC1，OC2 复审）得答：读于自之类、取二分（一谓词判其类时所问最少），P2 所问恰为留者与出者皆随每一有所缘之同类者。如此读 P2 乃论之，非证得；实际行动者是否合之为一对应；P4 之问交哲学家。"
   },
   "correspondence": {
-    "en": "Read with a class drawn by what a member intends, the agential self of the path: it can pass P2, and then is never clean, so P2 does not exclude it and P4 carries the crux. A second round of philosophical work is in the PF2 study.",
-    "zh": "以所意划之类读之，即此路之行动者之自：可过 P2，过则必不净，故 P2 不排除之，关键在 P4。哲学之第二轮工作见 PF2 之研究。"
+    "en": "Read with a class drawn by what a member intends, the agential self of the path: it can pass P2, and then, leaving some of its effects out, leaves something outside at every alike occurrence that conditions anything, so P2 does not exclude it and P4 carries the crux. A second round of philosophical work is in the PF2 study.",
+    "zh": "以所意划之类读之，即此路之行动者之自：可过 P2，过则因遗其所缘之一部，每一有所缘之同类者皆有所遗于类外，故 P2 不排除之，关键在 P4。哲学之第二轮工作见 PF2 之研究。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
   "aliases": [
@@ -209,6 +209,10 @@
     {
       "en": "26 October 2026: \"goes on\" (延, coinductive in the glossary) replaced by \"conditions anything\" in the statement and the third law, as OC2 found; content unchanged.",
       "zh": "2026年10月26日：英文陈述与第三律中之 goes on（延，词表中为余归纳）改为 conditions anything，依 OC2 之所见；内容未变。"
+    },
+    {
+      "en": "27 October 2026: checked a second time (OC4), on its owner's answer: its third law, its statement, what it does not show, its correspondence made exact (the third law states its witness as one; the statement names the condition an alike occurrence breaks; even with two blocks what stays must follow, and with more what leaves must follow as something alike to it; passing P2 said in place of \"never clean\"); content otherwise unchanged; study section 425.",
+      "zh": "2026年10月27日：经第二次审查（OC4），依其主之答：第三律、陈述、其所不示、对应项改精确；内容余皆未变；研究第 425 节。"
     }
   ]
 }

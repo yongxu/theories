@@ -28,8 +28,8 @@
     }
   ],
   "correspondence": {
-    "zh": "这是 Ren 2026-10-11 所问“if \"lossless exist\", can we find a path, to figure out, and prove along the way?”的一条路径，按“zero-premise, zero axiom(we are not physics, we derive further)”不加前提。脊柱的停息规律（continued-change-needs-openness）以第一定律与耗散为前提；本结果在其下一层：有限多构型中，无损即回返，箭头需要合并，不重访需要开放。第一定律之下被围住的家族的构型有限多个，变化是构型的函数时本结果作用于它（熵的会话的 Web.Determined；实例定理待两边落地）。AI 的读法：无损的交换恰在两处存在，有限多构型中的回返与保留其历史的生成（后者需要开放）；物理学设为前提的低熵开端是保留的历史的开端，是推出的；熵读作有限当下的遗忘。这些读法不是物理推导。",
-    "en": "This is one path for Ren's question of 11 October 2026, ‘if \"lossless exist\", can we find a path, to figure out, and prove along the way?’, taken with no premise as Ren asked (‘zero-premise, zero axiom(we are not physics, we derive further)’). The spine's rest laws (continued-change-needs-openness) take the first law and dissipation as premises; this result lies a level below: within finitely many configurations, losing nothing is returning, an arrow needs a merge, and never revisiting needs openness. Under the first law an enclosed family has finitely many configurations, and where change is a function of the configuration this result applies to it (the entropy session's Web.Determined; the instance theorems wait for both to land). On the AI's reading lossless exchange exists in exactly two places, return within finitely many configurations and becoming that keeps its history, the latter needing openness; the low-entropy beginning physics supplies is the beginning of the kept history, and is derived; entropy reads as the forgetting of a finite present. These readings are not physical derivations."
+    "zh": "这是 Ren 2026-10-11 所问“if \"lossless exist\", can we find a path, to figure out, and prove along the way?”的一条路径，按“zero-premise, zero axiom(we are not physics, we derive further)”不加前提。脊柱的停息规律（continued-change-needs-openness）以平衡与耗散为前提；本结果在其下一层：有限多构型中，无损即回返，箭头需要合并，不重访需要开放。平衡与第一律之下被围住的家族的构型有限多个，变化是构型的函数时本结果作用于它（熵的会话的 Web.Determined；实例定理待两边落地）。AI 的读法：无损的交换恰在两处存在，有限多构型中的回返与保留其历史的生成（后者需要开放）；物理学设为前提的低熵开端是保留的历史的开端，是推出的；熵读作有限当下的遗忘。这些读法不是物理推导。",
+    "en": "This is one path for Ren's question of 11 October 2026, ‘if \"lossless exist\", can we find a path, to figure out, and prove along the way?’, taken with no premise as Ren asked (‘zero-premise, zero axiom(we are not physics, we derive further)’). The spine's rest laws (continued-change-needs-openness) take balance and dissipation as premises; this result lies a level below: within finitely many configurations, losing nothing is returning, an arrow needs a merge, and never revisiting needs openness. Under balance and the first law an enclosed family has finitely many configurations, and where change is a function of the configuration this result applies to it (the entropy session's Web.Determined; the instance theorems wait for both to land). On the AI's reading lossless exchange exists in exactly two places, return within finitely many configurations and becoming that keeps its history, the latter needing openness; the low-entropy beginning physics supplies is the beginning of the kept history, and is derived; entropy reads as the forgetting of a finite present. These readings are not physical derivations."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
   "aliases": [
@@ -65,8 +65,8 @@
     {
       "id": "continued-change-needs-openness",
       "detail": {
-        "zh": "零前提的对应：有标记的变化在有限多构型中不复现，不重访需要开放；脊柱的停息定理在第一定律与耗散之下，以存量为标记。实例定理是下一步。",
-        "en": "The zero-premise counterpart: a marked change does not recur within finitely many configurations, and never revisiting needs openness; the spine's rest theorem, under the first law and dissipation, has the stock as its mark. The instance theorems are a next step."
+        "zh": "零前提的对应：有标记的变化在有限多构型中不复现，不重访需要开放；脊柱的停息定理在平衡与耗散之下，以存量为标记。实例定理是下一步。",
+        "en": "The zero-premise counterpart: a marked change does not recur within finitely many configurations, and never revisiting needs openness; the spine's rest theorem, under balance and dissipation, has the stock as its mark. The instance theorems are a next step."
       }
     },
     {
@@ -437,6 +437,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label Part I in a related detail replaced by the theory without the condition. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条相关说明中的退役标签“第一部分”改为不含条件的理论。规律未变。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section 422): The rest laws' premises are named as the Lean has them, balance and dissipation (World.comes_to_rest_unrefuted), and an enclosed family's finitely many configurations need balance beside the spine's first law; the Chinese writes that law (Flow.Gainless) 第一律, not 第一定律, which names thermodynamics' first law.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：停息规律的前提按 Lean 写作平衡与耗散（World.comes_to_rest_unrefuted），被围住的家族构型有限多个，除脊柱的第一律外还需要平衡；中文把该律（Flow.Gainless）写作第一律，而不写作第一定律，后者指热力学第一定律。"
     }
   ]
 }

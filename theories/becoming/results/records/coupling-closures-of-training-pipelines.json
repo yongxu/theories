@@ -20,8 +20,8 @@
     }
   ],
   "correspondence": {
-    "en": "Christiano et al. 2017; Ouyang et al. 2022; Bai et al. 2022; Rafailov et al. 2023; Lightman et al. 2023; Irving, Christiano and Amodei 2018; Tamkin et al. 2024 (constructions). Gao, Schulman and Hilton 2022; Wen et al. 2024; Sharma et al. 2023 (measurements). NIST, 29 August 2024 (pre-deployment testing agreements).",
-    "zh": "Christiano 等 2017；Ouyang 等 2022；Bai 等 2022；Rafailov 等 2023；Lightman 等 2023；Irving、Christiano 与 Amodei 2018；Tamkin 等 2024（构造）。Gao、Schulman 与 Hilton 2022；Wen 等 2024；Sharma 等 2023（测量）。NIST，2024年8月29日（部署前检测协议）。"
+    "en": "Christiano et al. 2017; Ouyang et al. 2022; Bai et al. 2022; Rafailov et al. 2023; Lightman et al. 2023; Irving, Christiano and Amodei 2018; Tamkin et al. 2024 (constructions). Gao, Schulman and Hilton 2023; Wen et al. 2024; Sharma et al. 2023 (measurements). NIST, 29 August 2024 (pre-deployment testing agreements).",
+    "zh": "Christiano 等 2017；Ouyang 等 2022；Bai 等 2022；Rafailov 等 2023；Lightman 等 2023；Irving、Christiano 与 Amodei 2018；Tamkin 等 2024（构造）。Gao、Schulman 与 Hilton 2023；Wen 等 2024；Sharma 等 2023（测量）。NIST，2024年8月29日（部署前检测协议）。"
   },
   "canonical_source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md",
   "aliases": [
@@ -97,6 +97,10 @@
     {
       "en": "22 October 2026: added (CR1); study section 358.",
       "zh": "2026年10月22日：新增（CR1）；研究第 358 节。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section 422): Gao, Schulman and Hilton cited by the published year, 2023 (ICML, PMLR 202; arXiv October 2022), as elsewhere in the account.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Gao、Schulman 与 Hilton 按发表年份 2023 引用（ICML，PMLR 202；arXiv 2022 年 10 月），与本说明他处一致。"
     }
   ]
 }

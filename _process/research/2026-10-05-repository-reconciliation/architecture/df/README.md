@@ -12,4 +12,12 @@ What is here, in the order the work went:
 - [`workflows/`](workflows/): the orchestration scripts, as run (the agents' briefs are in them).
 - `land_df1.py`: the landing texts after a passing core checker (study section, history notes, the board's RA row).
 
+DF1b (study §422) took ten weak points UE8's sciences dossier found ([DEFECTS-FOUND](../DEFECTS-FOUND.md), "Found while drafting the sciences dossier"):
+
+- `df1b_edits.py`, `df1b_edits2.py`, `df1b_edits3.py`: the three rounds of corrections, as applied (each replacement asserted once).
+- [`reports/review-df1b.json`](reports/review-df1b.json): the skeptical review of the first round and the completeness critic, 45 findings with what became of each; [`reports/recheck-df1b.txt`](reports/recheck-df1b.txt): the recheck of the second round and the cold read of the whole change, 26 findings, all taken in the third round.
+- `workflows/6-df1b-review.js`, `workflows/7-df1b-recheck.js`: the two review runs.
+- `binding_for.py`: the receipt that binds a Lean source's current bytes, for a record's references and proof binding.
+- `land_df1b.py`: the landing texts after a passing periphery checker (study section, history notes, DEFECTS-FOUND's marks, the board's RA row).
+
 Every changed sentence was checked against the current Lean statement by its editor and by a reviewer; the Lean changes are comments only (the code with comments removed is unchanged in all 14 files), and the core checker reran every affected step.

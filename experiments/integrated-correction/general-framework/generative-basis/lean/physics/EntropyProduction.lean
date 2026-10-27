@@ -15,11 +15,11 @@ second, in one reading of amounts as available work, and proves each step from t
 premises to the spine. That the premises hold of a given system is physics; the
 correspondence of a flow's amounts to available work is stated, not proved.
 
-* **The first law with locality gives balance.** A quantity carried only by the exchanges
+* **Thermodynamics' first law with locality gives balance.** A quantity carried only by the exchanges
   taking part (`LocalBalance`) balances the levels it is read on exactly where no condition
   produces any of it (`balances_iff_unproduced`); conserved locally, as energy is, it
   balances (`balances_of_conserved`). Conservation of the total alone does not give balance
-  (`Teleport.conserved_not_balanced`). With the first law and the entropy balance at each
+  (`Teleport.conserved_not_balanced`). With thermodynamics' first law and the entropy balance at each
   store, available work relative to an environment at `T0` is destroyed in a store exactly
   where it generates entropy (`StoreLaws.availableWork`), so the levels balance exactly
   where no store generates entropy (`balances_iff_stores_generate_nothing`); a store that
@@ -34,7 +34,7 @@ correspondence of a flow's amounts to available work is stated, not proved.
   that over a closed family the formation gives, with what it destroys, exactly what it
   takes. The destroyed exergy is the record of `Flow.dissipatesOn_iff_conserved`, counted
   in units (`ExergyBalance.destroyed_eq_residue`).
-* **The second law is the spine's first law.** Where no exchange destroys negative exergy
+* **The second law gives the spine's first law.** Where no exchange destroys negative exergy
   (`SecondLaw`, the Gouy–Stodola form of the second law), nothing comes from nothing at the
   unit (`gainless_of_secondLaw`). The second law alone does not give dissipation: in
   `Passing` no exergy is destroyed, the second law holds, and the flow is not dissipative
@@ -44,10 +44,12 @@ correspondence of a flow's amounts to available work is stated, not proved.
   is dissipative (`dissipative_of_irreversible`): with whole units of amount, giving back
   strictly less is giving back at least one unit less.
 * **A floor in energy survives refinement.** Where every exchange that takes destroys at
-  least `s` (Landauer's `kT ln 2` per bit merged), the loss counted at the unit `u` is at
+  least `s` of exergy, the loss counted at the unit `u` is at
   least every whole `n` with `n * u ≤ s` (`loss_of_floor`), and the flow is dissipative at
   every unit `u ≤ s` (`dissipative_of_floor`), so at an `r`-fold finer unit the loss is at
-  least `r` units (`loss_at_finer_unit`).
+  least `r` units (`loss_at_finer_unit`). Landauer's `kT ln 2` per bit merged is no such floor
+  by itself: it bounds the heat an erasure exports, not the exergy it destroys, and an erasure
+  can be thermodynamically reversible (Bennett 2003; Sagawa 2014).
 * **Bounded efficiency gives loss in proportion.** Where every exchange that takes destroys
   at least a `(q + 1)`th of the exergy it takes, the flow is dissipative in proportion `q`
   (`dissipativeBy_of_efficiency`), whatever the unit.
@@ -118,7 +120,7 @@ theorem ExergyBalance.give_le (balance : ExergyBalance L u σ) (second : SecondL
   have : u * (total cs (L.give t f) : ℝ) ≤ u * (total cs (L.take t f) : ℝ) := by linarith
   exact_mod_cast le_of_mul_le_mul_left this unit
 
-/-- The second law is the spine's first law at the unit: nothing comes from nothing. -/
+/-- The second law gives the spine's first law at the unit: nothing comes from nothing. -/
 theorem gainless_of_secondLaw (balance : ExergyBalance L u σ) (second : SecondLaw L σ)
     (unit : 0 < u) : L.Gainless :=
   fun _ _ distinct closed _ present => balance.give_le second unit distinct closed present
@@ -232,16 +234,16 @@ theorem dissipativeBy_of_efficiency (balance : ExergyBalance L u σ) (unit : 0 <
     push_cast; nlinarith
   exact_mod_cast le_of_mul_le_mul_left this unit
 
-/-! ## The first law: balance
+/-! ## Thermodynamics' first law: balance
 
 The spine's balance (`Flow.Balances`) says that every change of a condition's level is what
-the formations taking part take from it and give to it. Read physically, it is the first
-law with locality: a quantity carried only by the exchanges taking part balances exactly
+the formations taking part take from it and give to it. Read physically, it is thermodynamics'
+first law with locality: a quantity carried only by the exchanges taking part balances exactly
 where the conditions produce none of it themselves (`balances_iff_unproduced`), so a
 quantity conserved locally, as energy and mass are, balances (`balances_of_conserved`).
 Conservation of the total without locality does not give it (`Teleport.conserved_not_balanced`).
-Read in available work relative to one environment, as the least loss is read above, the
-first law and the entropy balance at each store give available work a local balance whose
+Read in available work relative to one environment, as the least loss is read above,
+thermodynamics' first law and the entropy balance at each store give available work a local balance whose
 source is the exergy the store destroys (`StoreLaws.availableWork`), so the levels balance
 exactly where no store generates entropy (`balances_iff_stores_generate_nothing`); the same
 two laws at each exchange give `ExergyBalance`, with the destroyed exergy `T0` times the
@@ -292,7 +294,7 @@ variable {W : Web F C} {q : Nat → C → ℝ} {x : Nat → F → C → ℝ} {p 
 /-- A quantity held on the conditions is carried only by the exchanges taking part: across
 the step from `t`, what stands on `c` changes by what the formations present carry out of it,
 `x t f c`, and by what `c` itself produces of it, `p t c`. With `p` zero the quantity is
-conserved locally, as energy is by the first law; otherwise `p` is its source, as entropy
+conserved locally, as energy is by thermodynamics' first law; otherwise `p` is its source, as entropy
 generated within a store is. -/
 def LocalBalance (L : Flow F C) (q : Nat → C → ℝ) (x : Nat → F → C → ℝ) (p : Nat → C → ℝ) :
     Prop :=
@@ -351,7 +353,7 @@ theorem balances_of_conserved (bal : LocalBalance L q x (fun _ _ => 0))
     L.Balances W :=
   (balances_iff_unproduced bal levels transfers unit).mpr fun _ _ => rfl
 
-/-- The first law and the entropy balance at each condition, read as a store: across the step
+/-- Thermodynamics' first law and the entropy balance at each condition, read as a store: across the step
 from `t`, its energy `E` changes only by the energy `e t f c` the exchanges taking part draw
 from it, and its entropy `S` by the entropy `s t f c` they draw from it and the entropy
 `g t c` it generates within itself. -/
@@ -376,8 +378,8 @@ theorem StoreLaws.availableWork (h : StoreLaws L E S e s g) (T0 : ℝ) :
     funext fun f => by ring, split, hE, hS]
   ring
 
-/-- **Balance from the first law.** Read in available work relative to an environment at
-`T0 > 0`, with the first law and the entropy balance at every store and each exchange's
+/-- **Balance from thermodynamics' first law.** Read in available work relative to an environment at
+`T0 > 0`, with thermodynamics' first law and the entropy balance at every store and each exchange's
 transfers read at the unit, the levels balance exactly where no store generates entropy. -/
 theorem balances_iff_stores_generate_nothing (stores : StoreLaws L E S e s g)
     (levels : ReadsLevels W u (fun t c => E t c - T0 * S t c))
@@ -413,7 +415,7 @@ theorem stores_within (stores : StoreLaws L E S e s g)
     linarith
   exact_mod_cast this
 
-/-- The first law and the entropy balance at each exchange, which holds nothing across its
+/-- Thermodynamics' first law and the entropy balance at each exchange, which holds nothing across its
 step: over a family closed across the step, the energy it draws from the family leaves as
 heat `Q t f` to the environment at temperature `T0`, and the entropy it draws from the
 family, with the entropy `γ t f` it generates, leaves with that heat. -/
@@ -422,7 +424,7 @@ def ExchangeLaws (L : Flow F C) (T0 : ℝ) (e s : Nat → F → C → ℝ) (Q γ
   ∀ cs t, Distinct cs → L.ClosedAt cs t → ∀ f, f ∈ L.present t →
     rtotal cs (e t f) = Q t f ∧ rtotal cs (s t f) + γ t f = Q t f / T0
 
-/-- **The exergy balance from the first law.** With the first law and the entropy balance at
+/-- **The exergy balance from thermodynamics' first law.** With thermodynamics' first law and the entropy balance at
 each exchange and its transfers read at the unit, each exchange meets the exergy balance,
 the exergy it destroys being `T0` times the entropy it generates. -/
 theorem exergyBalance_of_laws (exchanges : ExchangeLaws L T0 e s Q γ)
@@ -459,7 +461,7 @@ theorem irreversible_of_generation (warm : 0 < T0)
     mul_pos warm (strict cs t distinct closed f present takes)
 
 /-- **Balance and least loss from one reading.** Read each unit of amount as `u` of available
-work relative to one environment at `T0 > 0`, with the first law and the entropy balance at
+work relative to one environment at `T0 > 0`, with thermodynamics' first law and the entropy balance at
 every store and every exchange, and the transfers between them read at the unit. Then the
 levels balance exactly where no store generates entropy; where no exchange generates
 negative entropy, nothing comes from nothing at the unit; and where, besides, every exchange
@@ -668,7 +670,7 @@ each formation that takes, the family is dissipated on in expectation. -/
 theorem ExpectedDissipatesOn.of_exergy {L : Ω → Flow F C} {cs : List C} {t : Nat}
     {D : Ω → ℝ} (unit : 0 < u)
     (balance : ∀ ω, u * ((L ω).replenishment cs t : ℝ) + D ω = u * ((L ω).uptake cs t : ℝ))
-    (landauer : u * ∫ ω, ((L ω).takers cs t : ℝ) ∂μ ≤ ∫ ω, D ω ∂μ)
+    (floor : u * ∫ ω, ((L ω).takers cs t : ℝ) ∂μ ≤ ∫ ω, D ω ∂μ)
     (replenishment : Integrable (fun ω => ((L ω).replenishment cs t : ℝ)) μ)
     (destroyed : Integrable D μ) :
     ExpectedDissipatesOn μ L cs t := by

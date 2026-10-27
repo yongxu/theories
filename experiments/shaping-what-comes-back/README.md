@@ -4,7 +4,7 @@ Board item AJ3, 25 October 2026. AI-written (a Claude Code session). Claude Haik
 
 ## Failures and limits, first
 
-- **K2 and K4 failed, each where the agent never tried shaping.** By the frozen rules `s2p0` failed (2 of 5 seeds ended on S) and so did `m2n1_p5` (3 of 5), so K2 and K4 failed; K1 and K3 passed.
+- **K2 and K4 failed; every seed that missed never tried shaping.** By the frozen rules `s2p0` failed (2 of 5 seeds ended on S) and so did `m2n1_p5` (3 of 5), so K2 and K4 failed; K1 and K3 passed.
   - Every seed that missed the prediction never played S, in a condition where S scores higher.
   - H1-LA3 is low in both failed conditions, and in `m2n1_p0`, which passed.
   - The predictions file reads this outcome for K4: "K1 or K4 failing with H1-LA3 low says that this trained system, selecting in context, did not come to the policy its own scores favour. The law stands, but its reading for trained systems is not supported by this case." K2 is not named there, and its failure is of the same kind.
@@ -38,7 +38,7 @@ Scored by the frozen [`analyze.py`](analyze.py) ([`results/VERDICTS.json`](resul
 
 - Started on 25 October 2026 at 23:00 (+08), from the frozen commit, outside the shell's sandbox. The desktop app was quit at 23:10, which stopped the run after 7 calls.
 - It was resumed at 23:29 from `results/calls.jsonl`, whose answers are reused by condition, seed and round as the protocol provides, and finished at 00:41 on 26 October ([`results/run-2026-10-25.log`](results/run-2026-10-25.log)). No deviation from the frozen protocol.
-- 180 calls. Four answers gave no valid policy and were asked again once, each then giving one. No round was assigned, and no final choice was invalid.
+- 184 calls for 180 answers. Four answers gave no valid policy and were asked again once, each then giving one; the cache keeps the last call of each. No round was assigned, and no final choice was invalid.
 
 ## Post hoc (the AI's reading, not frozen)
 
@@ -62,4 +62,4 @@ Scored by the frozen [`analyze.py`](analyze.py) ([`results/VERDICTS.json`](resul
 | [results/calls.jsonl](results/calls.jsonl), [results/runs.json](results/runs.json), [results/VERDICTS.json](results/VERDICTS.json), [results/run-2026-10-25.log](results/run-2026-10-25.log) | The run: every answer with its prompt, the seeds' choices and scores, the verdicts and the run's log |
 | [posthoc.py](posthoc.py), [results/POSTHOC.json](results/POSTHOC.json) | Post hoc, not frozen: round-0 choices and framing, when the other policy was first played, the bridge counted over all seeds |
 
-**Status.** Run from the frozen commit on 25 and 26 October 2026 (180 calls of Claude Haiku), outside the shell's sandbox: `python3 run.py all`, then `python3 analyze.py`; `python3 posthoc.py` gives the post hoc readings.
+**Status.** Run from the frozen commit on 25 and 26 October 2026 (184 calls of Claude Haiku, for 180 answers), outside the shell's sandbox: `python3 run.py all`, then `python3 analyze.py`; `python3 posthoc.py` gives the post hoc readings.
