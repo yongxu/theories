@@ -132,6 +132,7 @@ P118's third reading as Ren took it on 16 October 2026, and P122, left open “w
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T054107.195569Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T062303.627894Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
 
 Aliases: `loops within what a law reads`, `回路在律所读之内`, `what a law reads`, `律所读`, `reading bounds coupling`, `读限制耦合`, `the break`, `断裂`, `standing law`, `立律`, `stock read only below a threshold`, `只在低于阈值时才读的储量`, `distance to the break carried nowhere`, `断裂还有多远不被带到任何处`, `draw witness`, `汲取的见证`
 

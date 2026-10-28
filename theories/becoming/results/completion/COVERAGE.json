@@ -206,17 +206,12 @@
         "Becoming.Web.roles_supported",
         "Becoming.Dependence.differenceOnlyTogether_iff",
         "Becoming.counterfactual_is_course",
-        "Becoming.partForms_iff"
+        "Becoming.PartForms.goAlike"
       ],
       "status": "proved",
       "open_items": [
         7
-      ],
-      "instances": {
-        "Becoming.partForms_iff": [
-          "Becoming.MoveRuns.part_policy"
-        ]
-      }
+      ]
     },
     {
       "id": "patient",

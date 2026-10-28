@@ -68,6 +68,15 @@
       ]
     },
     {
+      "zh": "以活动读，于网上，不假定可判定而计数：任一段上，凡列出之家族之生起与止息有计数处，二者之差至多为其成员数（CensusWebs.keep_pace）；一段上所计之来与止亦然（CountsAcross.keep_pace）；二者皆出于段上计数之普查（Counts.over_stretch），即计数之跨段平衡。",
+      "en": "Read of activity on a web and counted, with no decidedness assumed: over any stretch, wherever a listed family's arisings and ceasings are counted, they differ by at most its members (CensusWebs.keep_pace), as comings and ceasings counted across a stretch do (CountsAcross.keep_pace); both follow from the counted census over the stretch (Counts.over_stretch), the stretch balance of the count.",
+      "declarations": [
+        "Becoming.CensusWebs.keep_pace",
+        "Becoming.CountsAcross.keep_pace",
+        "Becoming.Counts.over_stretch"
+      ]
+    },
+    {
       "zh": "平衡对每个世界有局部形式，局部条件写在规律之内：一步的平衡只用该步两端的列出；一段上的平衡只用该段内每步的平衡或列出；读于活动、依存与水平亦然。原来的形式是它们的推论。",
       "en": "The balance holds of every world in a local form, the local condition inside the law: across a step, only the listings at the step's two ends; over a stretch, only balance or the listings at each step of the stretch; and so read of activity, dependence and standing. The earlier forms are their corollaries.",
       "declarations": [
@@ -362,7 +371,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "88cfbe49dcc3e30dcca82c262af37063d1ec8b7c7c7b3d900f01be07d7d46641",
+      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
       "declarations": [
         "Becoming.total_add",
         "Becoming.total_ones",
@@ -508,6 +517,29 @@
       "role": "receipt",
       "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean",
+      "role": "proof",
+      "sha256": "7a7e1d52082da79408bdb6d9a7ccae0b2612e8bd17f8b4f2885b748bc64cf19c",
+      "declarations": [
+        "Becoming.CensusWebs.keep_pace"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
+      "role": "proof",
+      "sha256": "0a90c1135ccab9ae2fe35c076f132ec7fd2aa7feb49f6e2bac9ea16329a81215",
+      "declarations": [
+        "Becoming.CountsAcross.keep_pace",
+        "Becoming.Counts.over_stretch"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "role": "receipt",
+      "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -548,7 +580,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -571,6 +603,20 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Listing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Decidedness",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -676,6 +722,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument)' reads 'a reading (the AI's)'; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证）”改为“读法（AI 的）”；主张不变。"
+    },
+    {
+      "en": "28 October 2026, EC6d (EC6's audit): a law added, the census read of activity on a web, counted with no decidedness (CensusWebs.keep_pace, CountsAcross.keep_pace, Counts.over_stretch), so that COVERAGE's dissolution row cites a declaration this record states; Counts.over_stretch now follows from the prelude's stretch balance (EC6b). The statement is unchanged.",
+      "zh": "2026年10月28日，EC6d（EC6 之审计）：增一律，即网上以活动读、不假定可判定而计数之普查（CensusWebs.keep_pace、CountsAcross.keep_pace、Counts.over_stretch），使 COVERAGE 之止息行所引之声明为本记录所述；Counts.over_stretch 今出于序章之跨段平衡（EC6b）。陈述不变。"
     }
   ],
   "text_versions": [

@@ -6591,7 +6591,7 @@
    "type": "module",
    "name": "Becoming.Flow",
    "level": "L1",
-   "theorems": 102,
+   "theorems": 103,
    "region": "map",
    "base": "old-base",
    "on_grammar": true,
@@ -35570,12 +35570,22 @@
   },
   {
    "from": "record:census-balance",
+   "to": "module:Becoming.Decidedness",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:census-balance",
    "to": "module:Becoming.Dependence",
    "type": "proved-in"
   },
   {
    "from": "record:census-balance",
    "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:census-balance",
+   "to": "module:Becoming.Listing",
    "type": "proved-in"
   },
   {

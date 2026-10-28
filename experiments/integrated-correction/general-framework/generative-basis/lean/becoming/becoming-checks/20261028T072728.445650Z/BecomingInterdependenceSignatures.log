@@ -1,0 +1,98 @@
+@Becoming.Flow.WithinFeeding.refl : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (f : F),
+  L.WithinFeeding W f f
+@Becoming.Flow.WithinFeeding.trans : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g h : F},
+  L.WithinFeeding W f g → L.WithinFeeding W g h → L.WithinFeeding W f h
+@Becoming.Flow.WithinFeeding.of_fedBy : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {e e' : F × Nat},
+  L.FedBy W e e' → L.WithinFeeding W e.fst e'.fst
+@Becoming.Flow.fedClosed_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (f : F),
+  L.FedClosed W (L.WithinFeeding W f)
+@Becoming.Flow.beyond_gives_nothing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g h : F},
+  L.WithinFeeding W f g →
+    ¬L.WithinFeeding W f h → ∀ {t : Nat} {c : C}, W.requires t g c → h ∈ L.present t → L.give t h c = 0
+@Becoming.Flow.unfed_consumption_ends_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {g : F}
+  {T : Nat},
+  (∀ (t : Nat) (f : F), T ≤ t → W.active t g → f ∈ L.present t → W.Supported t f → L.give t f c = 0) →
+    (∀ (t : Nat), T ≤ t → W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) →
+      ∀ (n : Nat),
+        (∀ (k : Nat), k < n → L.BalancesOn W [c] (T + k)) →
+          (∀ (k : Nat), k < n → L.GiversSupported W (T + k) c) →
+            (∀ (k : Nat), k < n → W.active (T + k) g) → n ≤ W.level T c
+@Becoming.Flow.Balances.unfed_consumption_ends : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {g : F} {T : Nat},
+          (∀ (t : Nat) (f : F), T ≤ t → W.active t g → f ∈ L.present t → W.Supported t f → L.give t f c = 0) →
+            (∀ (t : Nat), T ≤ t → W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) →
+              ∀ (n : Nat), (∀ (k : Nat), k < n → W.active (T + k) g) → n ≤ W.level T c
+@Becoming.Flow.Balances.unfed_consumption_not_continuing : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {g : F} {T : Nat},
+          (∀ (t : Nat) (f : F), T ≤ t → W.active t g → f ∈ L.present t → W.Supported t f → L.give t f c = 0) →
+            (∀ (t : Nat), T ≤ t → W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) → ¬∀ (k : Nat), W.active (T + k) g
+@Becoming.Flow.unfed_of_feeders_unsupported : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {g : F} {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.active t g → W.requires t g c) →
+    (∀ (t : Nat) (f : F), T ≤ t → L.FedBy W (g, t) (f, t) → ¬W.Supported t f) →
+      ∀ (t : Nat) (f : F), T ≤ t → W.active t g → f ∈ L.present t → W.Supported t f → L.give t f c = 0
+@Becoming.Flow.consumption_ends_with_feeders_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {g : F} {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.active t g → W.requires t g c) →
+    (∀ (t : Nat) (f : F), T ≤ t → L.FedBy W (g, t) (f, t) → ¬W.Supported t f) →
+      (∀ (t : Nat), T ≤ t → W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) →
+        ∀ (n : Nat),
+          (∀ (k : Nat), k < n → L.BalancesOn W [c] (T + k)) →
+            (∀ (k : Nat), k < n → L.GiversSupported W (T + k) c) →
+              (∀ (k : Nat), k < n → W.active (T + k) g) → n ≤ W.level T c
+@Becoming.Flow.Balances.consumption_ends_with_feeders : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {g : F} {T : Nat},
+          (∀ (t : Nat), T ≤ t → W.active t g → W.requires t g c) →
+            (∀ (t : Nat) (f : F), T ≤ t → L.FedBy W (g, t) (f, t) → ¬W.Supported t f) →
+              (∀ (t : Nat), T ≤ t → W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) →
+                ∀ (n : Nat), (∀ (k : Nat), k < n → W.active (T + k) g) → n ≤ W.level T c
+@Becoming.Web.retains_bounded_iff_includes : ∀ {F C Pos : Type} {W : Becoming.Web F C} {region : Pos → F → Prop}
+  {p : Pos} {l l' : Nat → C → Nat},
+  (∀ (t : Nat) (f : F), W.Admits (l' t) t f → region p f ∨ W.Admits (l t) t f) →
+    (W.Retains (Becoming.bounded region) p l l' ↔ W.Includes l l')
+Becoming.Overshoot.balances : Becoming.Overshoot.flow.Balances Becoming.Overshoot.web
+Becoming.Overshoot.acting : Becoming.Overshoot.flow.Acting Becoming.Overshoot.web
+Becoming.Overshoot.taking : Becoming.Overshoot.flow.Taking Becoming.Overshoot.web
+Becoming.Overshoot.dependent : Becoming.Overshoot.web.Dependent
+Becoming.Overshoot.closure_whole : ∀ (f g : Bool), Becoming.Overshoot.flow.WithinFeeding Becoming.Overshoot.web f g
+Becoming.Overshoot.ends_through_feeder : Becoming.Overshoot.flow.Balances Becoming.Overshoot.web ∧
+  Becoming.Overshoot.flow.Acting Becoming.Overshoot.web ∧
+    Becoming.Overshoot.flow.Taking Becoming.Overshoot.web ∧
+      Becoming.Overshoot.web.Dependent ∧
+        Becoming.Overshoot.web.RenewingOver (Becoming.Overshoot.web.requires 0 true) 0 true ∧
+          Becoming.Overshoot.web.Supported 1 true ∧
+            Becoming.Web.UnderminingAt 0 true ∧
+              Becoming.Overshoot.flow.FedBy Becoming.Overshoot.web (true, 0) (false, 0) ∧
+                (∀ (t : Nat), 1 ≤ t → ¬Becoming.Overshoot.web.Supported t false) ∧
+                  (∀ (n : Nat), (∀ (k : Nat), k < n → Becoming.Overshoot.web.active (1 + k) true) → n ≤ 1) ∧
+                    ∀ (t : Nat) (f : Bool), 2 ≤ t → ¬Becoming.Overshoot.web.Supported t f
+Becoming.Overshoot.steady_continues : Becoming.Overshoot.steadyFlow.Balances Becoming.Overshoot.steadyWeb ∧
+  Becoming.Overshoot.steadyFlow.Acting Becoming.Overshoot.steadyWeb ∧
+    Becoming.Overshoot.steadyFlow.Taking Becoming.Overshoot.steadyWeb ∧
+      Becoming.Overshoot.steadyWeb.Dependent ∧
+        ∀ (t : Nat) (f : Bool), Becoming.Overshoot.steadyWeb.active t f ∧ Becoming.Overshoot.steadyWeb.Supported t f
+Becoming.Clearing.fedClosed : Becoming.Clearing.flow.FedClosed Becoming.Clearing.web Becoming.Clearing.alongDependence
+Becoming.Clearing.dependenceRegion_closed : ∀ (p : Becoming.Clearing.Formation),
+  Becoming.Clearing.flow.FedClosed Becoming.Clearing.web (Becoming.Clearing.dependenceRegion p)
+Becoming.Clearing.dependenceRegion_self : ∀ (p : Becoming.Clearing.Formation), Becoming.Clearing.dependenceRegion p p
+Becoming.Clearing.dependenceRegion_iff : ∀ (p f : Becoming.Clearing.Formation),
+  Becoming.Clearing.dependenceRegion p f ↔ Becoming.Clearing.flow.WithinFeeding Becoming.Clearing.web p f
+Becoming.Clearing.dweller_beyond : ¬Becoming.Clearing.flow.WithinFeeding Becoming.Clearing.web
+    Becoming.Clearing.Formation.clearer Becoming.Clearing.Formation.dweller
+Becoming.Clearing.closure_supported : (∀ (t : Nat) (f : Becoming.Clearing.Formation),
+    Becoming.Clearing.flow.WithinFeeding Becoming.Clearing.web Becoming.Clearing.Formation.clearer f →
+      Becoming.Clearing.web.Supported t f) ∧
+  (∀ (t : Nat), Becoming.Clearing.web.active t Becoming.Clearing.Formation.clearer) ∧
+    (∀ (n : Nat), ¬Becoming.Clearing.web.Supported (n + 2) Becoming.Clearing.Formation.dweller) ∧
+      ¬Becoming.Clearing.flow.WithinFeeding Becoming.Clearing.web Becoming.Clearing.Formation.clearer
+          Becoming.Clearing.Formation.dweller

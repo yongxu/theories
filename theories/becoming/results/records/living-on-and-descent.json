@@ -436,7 +436,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "88cfbe49dcc3e30dcca82c262af37063d1ec8b7c7c7b3d900f01be07d7d46641",
+      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
       "declarations": [
         "Becoming.Web.ComesToStand",
         "Becoming.Flow.Balances",

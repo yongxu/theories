@@ -24,7 +24,8 @@ it (`REASONS`); `balance, represented`; and, for a declaration on no master law,
 gives it (`NO_LAW`, ../ec6-no-master-law/AUDIT.md): `premise of the account` (support, dissipation),
 `counting identity` (Price's), `law of its model`, `single application` or `definitional or
 representational`, none a gap; or `derivation pending`, a case of a master law whose derivation is a
-named item (EC6b, EC6c, OU3d). The headline counts what is a gap, among distinct declarations (nine
+named item (EC6b, EC6c, OU3d), or, on another master law's anchor, a case of the grammar's law not yet
+derived (`PENDING_ANCHOR`). The headline counts what is a gap, among distinct declarations (nine
 stand in two rows of COVERAGE): `derivation pending`, and any declaration with no reason given. A
 pending derivation that lands moves its row to `master law` with no change here.
 """
@@ -70,9 +71,9 @@ NO_LAW = {
     'Becoming.CensusWebs.keep_pace': (PENDING, "balance, the census's stretch balance (EC6b)"),
     'Becoming.Optimum.optimum_beyond': (PENDING, "balance, Outcome's clause named once (EC6c)"),
     'Becoming.Optimum.mutual_beyond': (PENDING, "balance, Outcome's clause named once (EC6c)"),
-    'Becoming.Withholding.withholding_spreads': (PENDING, 'reaching within n steps, stated on the grammar (OU3d)'),
-    'Becoming.Tolerance.answers_restores_iff': (PENDING, 'reaching in n steps, stated on the grammar (OU3d)'),
-    'Becoming.WithinMoves.after_course': (PENDING, 'reaching within n steps, stated on the grammar (OU3d)'),
+    'Becoming.Withholding.withholding_spreads': (PENDING, "reaching within n steps: OU3d's law, and its bridge from here"),
+    'Becoming.Tolerance.answers_restores_iff': (PENDING, "reaching in n steps: OU3d's law, and its bridge from here"),
+    'Becoming.WithinMoves.after_course': (PENDING, "reaching within n steps: OU3d's law, and its bridge from here"),
     'Becoming.Flow.selected_le': ('premise of the account', 'support: only the active give, the active are supported'),
     'Becoming.Flow.selection_within': ('premise of the account', 'support, with the counting form of Price'),
     'Becoming.Flow.transmitted_supported': ('premise of the account', 'support, with inheritance within the bound'),
@@ -110,6 +111,12 @@ NO_LAW = {
     'Becoming.Web.roles_alive': ('definitional or representational', 'the one-kind reading keeps living'),
     'Becoming.Web.significance_undetermined': ('definitional or representational', 'a free slot shown free'),
     'Becoming.ExchangeLaw.response_not_fixed_by_coupling': ('definitional or representational', 'two laws through one coupling'),
+}
+# A declaration on another master law's anchor that is a case of the grammar's law, its derivation not yet given
+# (EC6d, 28 October 2026: the actor row cites the law PartForms.goAlike in place of partForms_iff).
+PENDING_ANCHOR = {
+    'Becoming.PartForms.goAlike': "lumping on the grammar: constancy with a fixed successor («有常定后则同行») at the "
+                                  "coupled step, with the part's sameness",
 }
 NO_REASON = 'no reason given'
 CATEGORIES = ('master law', 'balance, represented', 'premise of the account', 'counting identity', 'law of its model',
@@ -156,8 +163,8 @@ def main():
             elif dependence == 'balance, represented':
                 category = 'balance, represented'
             elif dependence == 'anchor, not reached':
-                category = 'master law' if dn in REASONS else NO_REASON
-                row['reason'] = REASONS.get(dn, 'NO REASON GIVEN')
+                category = 'master law' if dn in REASONS else PENDING if dn in PENDING_ANCHOR else NO_REASON
+                row['reason'] = REASONS.get(dn, PENDING_ANCHOR.get(dn, 'NO REASON GIVEN'))
             else:
                 category, reason = NO_LAW.get(dn, (NO_REASON, 'NO REASON GIVEN'))
                 row['reason'] = reason
@@ -167,14 +174,14 @@ def main():
     by_dependence = {c: sum(1 for v in dependences.values() if v == c)
                      for c in ('grammar', 'balance, represented', 'anchor, not reached', 'no master law')}
     by_category = {c: sum(1 for v in categories.values() if v == c) for c in CATEGORIES}
-    pending = {dn: NO_LAW[dn][1] for dn, c in categories.items() if c == PENDING}
+    pending = {dn: NO_LAW[dn][1] if dn in NO_LAW else PENDING_ANCHOR[dn] for dn, c in categories.items() if c == PENDING}
     report = {'central_declarations': total, 'reaching_the_grammar': len(reach),
               'distinct_central_declarations': len(categories), 'distinct_by_dependence': by_dependence,
               'distinct_by_category': by_category,
               'distinct_gaps': by_category[PENDING] + by_category[NO_REASON],
               'pending_derivations': pending,
-              'anchor_not_reached_reasons': {dn: REASONS.get(dn, 'NO REASON GIVEN') for dn, c in categories.items()
-                                             if c == 'anchor, not reached'},
+              'anchor_not_reached_reasons': {dn: REASONS.get(dn, PENDING_ANCHOR.get(dn, 'NO REASON GIVEN'))
+                                             for dn, c in dependences.items() if c == 'anchor, not reached'},
               'by_master_law_resting_and_reaching_grammar': by_law, 'anchors_reach_grammar': anchor_reach,
               'rows': rows}
     if '--json' in sys.argv:

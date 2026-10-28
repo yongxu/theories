@@ -1,0 +1,109 @@
+@Becoming.Web.WidensWithin.exceeds : ∀ {F C : Type} {W : Becoming.Web F C} {region : F → Bool} {l l' : Nat → C → Nat},
+  W.WidensWithin region l l' → W.Exceeds l l'
+@Becoming.Web.WidensWithin.not_keeps : ∀ {F C : Type} {W : Becoming.Web F C} {region : F → Bool} {l l' : Nat → C → Nat},
+  W.WidensWithin region l l' → ¬W.Keeps l l'
+@Becoming.Web.WidensWithin.not_narrowed : ∀ {F C : Type} {W : Becoming.Web F C} {region : F → Bool}
+  {l l' : Nat → C → Nat}, W.WidensWithin region l l' → ¬W.Widens l' l
+@Becoming.Web.admits_reachWeb_iff : ∀ {F : Type} (reach : Nat → F → Bool) (t : Nat) (f : F),
+  (Becoming.Web.reachWeb reach).Admits ((Becoming.Web.reachWeb reach).level t) t f ↔ reach t f = true
+@Becoming.Flow.Balances.includes_iff_beyond_within : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {region : F → Bool},
+          (∀ (t : Nat), W.AdmitsWithin (fun f => region f = true) (W.level t) (l t) t) →
+            (W.Includes W.level l ↔
+              ∀ (t : Nat) (f : F),
+                region f = false →
+                  W.Admits (l t) t f →
+                    ∀ (c : C),
+                      W.requires t f c →
+                        (W.need t f c + Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) ≤
+                          l t c + Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c)
+@Becoming.Flow.Balances.widens_iff_others_within : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {own : F → Bool},
+          W.WidensWithin own W.level l →
+            (W.Widens W.level l ↔
+              ∀ (t : Nat) (f : F),
+                own f = false →
+                  W.Admits (l t) t f →
+                    ∀ (c : C),
+                      W.requires t f c →
+                        (W.need t f c + Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) ≤
+                          l t c + Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c)
+@Becoming.Flow.Balances.mixed_iff_other_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {own : F → Bool},
+          W.WidensWithin own W.level l →
+            (W.Mixed W.level l ↔
+              ∃ t f,
+                own f = false ∧
+                  W.Admits (l t) t f ∧
+                    ¬∀ (c : C),
+                        W.requires t f c →
+                          (W.need t f c + Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) ≤
+                            l t c + Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c)
+@Becoming.Flow.Balances.mixed_of_tight : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {own : F → Bool},
+          W.WidensWithin own W.level l →
+            ∀ {t : Nat} {g : F} {c : C},
+              own g = false →
+                W.Admits (l t) t g →
+                  W.requires t g c →
+                    W.need t g c = l t c →
+                      ((Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c) <
+                          Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) →
+                        W.Mixed W.level l
+@Becoming.Flow.Balances.widens_of_untaken_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {own : F → Bool},
+          W.WidensWithin own W.level l →
+            (∀ (t : Nat) (f : F) (c : C),
+                own f = false →
+                  W.Admits (l t) t f →
+                    W.requires t f c →
+                      (Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) ≤
+                        Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c) →
+              W.Widens W.level l
+@Becoming.Flow.Balances.widens_yet_own_changed : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {own : F → Bool},
+          W.WidensWithin own W.level l →
+            (∀ (t : Nat) (f : F),
+                own f = false →
+                  W.Admits (l t) t f →
+                    ∀ (c : C),
+                      W.requires t f c →
+                        (W.need t f c + Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) ≤
+                          l t c + Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c) →
+              W.Widens W.level l ∧ ∃ t, ¬W.AdmitsWithin (fun f => own f = true) (l t) (W.level t) t
+Becoming.OwnDrawing.balances : ∀ (n : Nat), Becoming.OwnDrawing.flow.Balances (Becoming.OwnDrawing.web n)
+Becoming.OwnDrawing.withheld : ∀ (n : Nat),
+  Becoming.OwnDrawing.flow.WithheldLevels Becoming.OwnDrawing.drawerPart (Becoming.OwnDrawing.web n)
+    (Becoming.OwnDrawing.withheldLevel n)
+Becoming.OwnDrawing.own_widens : ∀ (n : Nat),
+  (Becoming.OwnDrawing.web n).WidensWithin Becoming.OwnDrawing.own (Becoming.OwnDrawing.web n).level
+    (Becoming.OwnDrawing.withheldLevel n)
+Becoming.OwnDrawing.ample_widens : ∀ (n : Nat),
+  (Becoming.OwnDrawing.web (n + 1)).Widens (Becoming.OwnDrawing.web (n + 1)).level
+    (Becoming.OwnDrawing.withheldLevel (n + 1))
+Becoming.OwnDrawing.tight_mixed : (Becoming.OwnDrawing.web 0).Mixed (Becoming.OwnDrawing.web 0).level
+  (Becoming.OwnDrawing.withheldLevel 0)

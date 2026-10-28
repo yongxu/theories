@@ -918,7 +918,7 @@
         "Becoming.Flow.Balances.rise_given",
         "Becoming.Flow.Balances.fall_taken"
       ],
-      "sha256": "88cfbe49dcc3e30dcca82c262af37063d1ec8b7c7c7b3d900f01be07d7d46641"
+      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8"
     },
     {
       "path": "theories/becoming/history/YI-ZHUAN-AND-BECOMING.md",
@@ -1117,6 +1117,12 @@
       "role": "receipt",
       "sha256": "3ab06c01fa4f143b64d67ef44d50d6e47ea19b78b384a03815df8e64ade0f020",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "role": "receipt",
+      "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1220,7 +1226,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"

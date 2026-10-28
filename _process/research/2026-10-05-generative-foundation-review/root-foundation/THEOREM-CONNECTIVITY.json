@@ -1,11 +1,11 @@
 {
- "commit": "c509211dfee583f405515f56ff49f626ffbc3ac1",
+ "commit": "c68218749b01c15b814895ce2f144e6761f2aea9",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261028T061626.538602Z",
+ "core_receipt_at_commit": "20261028T070053.995027Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 337,
- "constants": 48651,
- "spine_theorems": 16411,
+ "constants": 48653,
+ "spine_theorems": 16412,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,7 +28,7 @@
  "classes": {
   "statement on both families": 1062,
   "statement on Process/Frame/Run/Trace": 3470,
-  "statement on World/Flow/Web": 4032,
+  "statement on World/Flow/Web": 4033,
   "statement on the base only through a law of its own module": 263,
   "proof through a base family": 213,
   "used by a theorem on the base": 5602,
@@ -646,7 +646,7 @@
   ],
   "Becoming.Flow": [
    1,
-   102
+   103
   ],
   "Becoming.Population": [
    1,
@@ -732,12 +732,12 @@
  "rings": {
   "core": {
    "modules": 321,
-   "theorems": 15651,
+   "theorems": 15652,
    "apart": 1516,
    "classes": {
     "statement on both families": 1048,
     "statement on Process/Frame/Run/Trace": 3259,
-    "statement on World/Flow/Web": 4007,
+    "statement on World/Flow/Web": 4008,
     "statement on the base only through a law of its own module": 217,
     "proof through a base family": 202,
     "used by a theorem on the base": 5243,
@@ -1053,12 +1053,12 @@
  ],
  "master_laws": {
   "central_declarations": 127,
-  "resting_on_no_master_law": 42,
+  "resting_on_no_master_law": 41,
   "by_law": {
    "closure": 27,
    "balance": 53,
    "return": 13,
-   "lumping": 1,
+   "lumping": 2,
    "order": 9
   },
   "rows": [
@@ -1348,8 +1348,10 @@
       ]
      },
      {
-      "declaration": "Becoming.partForms_iff",
-      "laws": []
+      "declaration": "Becoming.PartForms.goAlike",
+      "laws": [
+       "lumping"
+      ]
      }
     ]
    },
@@ -4116,6 +4118,7 @@
   "Becoming.Web.ComesToStand.rises": "statement on World/Flow/Web",
   "Becoming.Web.rising_of_coming": "statement on World/Flow/Web",
   "Becoming.lt_iff_pos": "used by a theorem on the base",
+  "Becoming.Flow.balances_iff_between": "statement on World/Flow/Web",
   "Becoming.Flow.Acting.giversSupported": "statement on World/Flow/Web",
   "Becoming.Flow.balances_iff_units": "statement on World/Flow/Web",
   "Becoming.Flow.balances_of_matched": "statement on World/Flow/Web",

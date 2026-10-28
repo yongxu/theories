@@ -266,6 +266,16 @@ and give to it. -/
 def Balances (W : Web F C) : Prop :=
   ∀ t c, W.level (t + 1) c + L.taken t c = W.level t c + L.given t c
 
+/-- **The flow balances between two levels across a step**: each condition's level after the step
+from `t`, `o`, with what is taken from it, is its level before, `l`, with what is given to it. -/
+def BalancesBetween (l o : C → Nat) (t : Nat) : Prop :=
+  ∀ c, o c + L.taken t c = l c + L.given t c
+
+/-- A flow balances on a web exactly where, at every step, it balances between the web's levels. -/
+theorem balances_iff_between {W : Web F C} :
+    L.Balances W ↔ ∀ t, L.BalancesBetween (W.level t) (W.level (t + 1)) t :=
+  Iff.rfl
+
 /-- Only active formations give. -/
 def Acting (W : Web F C) : Prop :=
   ∀ t f c, f ∈ L.present t → 0 < L.give t f c → W.active t f

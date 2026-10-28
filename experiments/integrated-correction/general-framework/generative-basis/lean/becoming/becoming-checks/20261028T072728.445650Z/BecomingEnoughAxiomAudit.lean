@@ -1,0 +1,20 @@
+import Becoming.Enough
+#print axioms Becoming.Enough.RestsFrom
+#print axioms Becoming.Enough.Rests
+#print axioms Becoming.Enough.Stays
+#print axioms Becoming.Enough.stayAt
+#print axioms Becoming.Enough.prependState
+#print axioms Becoming.Enough.prependAct
+#print axioms Becoming.Enough.prepend
+#print axioms Becoming.Enough.trace_then_stay
+#print axioms Becoming.Enough.possibly_rests_iff
+#print axioms Becoming.Enough.assured_stays_meet
+#print axioms Becoming.Enough.Settles
+#print axioms Becoming.Enough.settled_at
+#print axioms Becoming.Enough.assured_iff
+#print axioms Becoming.Enough.Free.process
+#print axioms Becoming.Enough.Free.alternate
+#print axioms Becoming.Enough.Free.alternating
+#print axioms Becoming.Enough.Free.stays_meet_not_assured
+#print axioms Becoming.Enough.law_possibly_iff
+#print axioms Becoming.Enough.law_possibly_iff_assured
