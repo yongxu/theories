@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2054,
-    "distinct_byte_contents": 1619,
+    "lean_paths": 2055,
+    "distinct_byte_contents": 1620,
     "byte_identical_duplicate_groups": 170,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1103,
+      "development-attempt": 1104,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 912
@@ -6640,6 +6640,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/check/tree/Becoming/WRTCheck.lean",
       "sha256": "fbefc617ad0f561e26cb0399a280ff9654d7082f86d7cd8b204ee80751107a57",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/DESIGN.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/check/tree/Becoming/WRTCheck2.lean",
+      "sha256": "bce688aa0eb0059c06a94027fa0917cd2f679b675b2d011bd257bd4a4b779469",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -371296,6 +371307,162 @@
       "declaration_counts": {
         "def": 15,
         "theorem": 38
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "bce688aa0eb0059c06a94027fa0917cd2f679b675b2d011bd257bd4a4b779469": {
+      "byte_size": 13019,
+      "line_count": 239,
+      "imports": [
+        "Becoming.Persistence",
+        "Becoming.Amounts",
+        "Becoming.Diagonal"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "jin_pullback",
+          "qualified_name_hint": "Becoming.WRTCheck2.jin_pullback",
+          "line": 22
+        },
+        {
+          "kind": "def",
+          "name": "falling",
+          "qualified_name_hint": "Becoming.WRTCheck2.falling",
+          "line": 38
+        },
+        {
+          "kind": "theorem",
+          "name": "falls_exhaust",
+          "qualified_name_hint": "Becoming.WRTCheck2.falls_exhaust",
+          "line": 43
+        },
+        {
+          "kind": "theorem",
+          "name": "falls_not_endless",
+          "qualified_name_hint": "Becoming.WRTCheck2.falls_not_endless",
+          "line": 61
+        },
+        {
+          "kind": "theorem",
+          "name": "conserves_decided",
+          "qualified_name_hint": "Becoming.WRTCheck2.conserves_decided",
+          "line": 67
+        },
+        {
+          "kind": "theorem",
+          "name": "conservation_iff_decided",
+          "qualified_name_hint": "Becoming.WRTCheck2.conservation_iff_decided",
+          "line": 75
+        },
+        {
+          "kind": "def",
+          "name": "standingAt",
+          "qualified_name_hint": "Becoming.WRTCheck2.standingAt",
+          "line": 91
+        },
+        {
+          "kind": "theorem",
+          "name": "standingAt_alike",
+          "qualified_name_hint": "Becoming.WRTCheck2.standingAt_alike",
+          "line": 96
+        },
+        {
+          "kind": "def",
+          "name": "withinStep",
+          "qualified_name_hint": "Becoming.WRTCheck2.withinStep",
+          "line": 117
+        },
+        {
+          "kind": "theorem",
+          "name": "withinStep_carried",
+          "qualified_name_hint": "Becoming.WRTCheck2.withinStep_carried",
+          "line": 120
+        },
+        {
+          "kind": "theorem",
+          "name": "requires_carried",
+          "qualified_name_hint": "Becoming.WRTCheck2.requires_carried",
+          "line": 130
+        },
+        {
+          "kind": "theorem",
+          "name": "present_carried",
+          "qualified_name_hint": "Becoming.WRTCheck2.present_carried",
+          "line": 137
+        },
+        {
+          "kind": "theorem",
+          "name": "no_injection",
+          "qualified_name_hint": "Becoming.WRTCheck2.no_injection",
+          "line": 143
+        },
+        {
+          "kind": "def",
+          "name": "ofLabels",
+          "qualified_name_hint": "Becoming.WRTCheck2.ofLabels",
+          "line": 152
+        },
+        {
+          "kind": "theorem",
+          "name": "ofLabels_conserves",
+          "qualified_name_hint": "Becoming.WRTCheck2.ofLabels_conserves",
+          "line": 160
+        },
+        {
+          "kind": "def",
+          "name": "ofExchange",
+          "qualified_name_hint": "Becoming.WRTCheck2.ofExchange",
+          "line": 176
+        },
+        {
+          "kind": "theorem",
+          "name": "ofExchange_conserves",
+          "qualified_name_hint": "Becoming.WRTCheck2.ofExchange_conserves",
+          "line": 183
+        },
+        {
+          "kind": "structure",
+          "name": "Corr",
+          "qualified_name_hint": "Becoming.WRTCheck2.Corr",
+          "line": 195
+        },
+        {
+          "kind": "theorem",
+          "name": "carries_iff_image",
+          "qualified_name_hint": "Becoming.WRTCheck2.carries_iff_image",
+          "line": 204
+        },
+        {
+          "kind": "def",
+          "name": "reidentifyAt",
+          "qualified_name_hint": "Becoming.WRTCheck2.reidentifyAt",
+          "line": 223
+        },
+        {
+          "kind": "def",
+          "name": "reidentifyOcc",
+          "qualified_name_hint": "Becoming.WRTCheck2.reidentifyOcc",
+          "line": 227
+        },
+        {
+          "kind": "theorem",
+          "name": "along_iff_itself",
+          "qualified_name_hint": "Becoming.WRTCheck2.along_iff_itself",
+          "line": 233
+        }
+      ],
+      "declaration_counts": {
+        "def": 7,
+        "structure": 1,
+        "theorem": 14
       },
       "textual_markers": {
         "sorry": [],
