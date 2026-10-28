@@ -1297,7 +1297,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   does not suffice (`AllOrSegment.unlisted_consistent`), and along a merging continuation listed
   static courses close the cycle (`AlongMerging.no_order_ranks_along_listed`). Widening with a lag
   (`Web.IncludesLater`, `Web.WidensWithLag`): a transitive relation joined to the strict part of a
-  transitive relation containing it is transitive (`strictJoin_trans`), so widening or widening
+  transitive relation containing it is transitive (`strictJoin_trans`, a law of any two relations
+  in `Becoming.GrammarLaws`), so widening or widening
   with a lag is a strict partial order containing widening (`Web.strictJoin_order`,
   `Web.WidensOrWithLag.irrefl`, `Web.WidensOrWithLag.trans`), as are the orders of the other lags
   (`Web.widensOrWithFormationLag_order`, `Web.widensOrEachLater_order`). It reads names across
@@ -2766,13 +2767,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike
   (`«像定后当且仅当同行»`). Order: widening of relations is irreflexive, one-way and transitive and
-  excludes keeping and being mixed (`«广不可逆»`, `«广之传递»`). It imports the grammar, its map
+  excludes keeping and being mixed (`«广不可逆»`, `«广之传递»`); a transitive relation joined to the
+  strict part of a transitive relation containing it is transitive, and irreflexive where the first
+  is (`strictJoin_trans`, `strictJoin_irrefl`). It imports the grammar, its map
   and the prelude only, and `Becoming.Frame` imports it, so every model lies above it: closure is
-  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`; finite runs in
-  `Becoming.Recurrence`, `Becoming.Attraction` and `Becoming.Amounts`; lumping, bridged in
-  `Becoming.Laws`, in `Becoming.Mechanism`, `Becoming.GrammarRegularity` and
-  `Becoming.IdentificationRuns`; order in `Becoming.Admission`, `Becoming.Regions` and
-  `Becoming.Weightings`. Balance is represented both ways in `Becoming.Flow`
+  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`, and so is the step back of a
+  returning configuration in `Becoming.Junctures`; finite runs in `Becoming.Recurrence`,
+  `Becoming.Attraction` and `Becoming.Amounts`, and the lasso of a world a list holds in
+  `Becoming.Learning`; lumping, bridged in
+  `Becoming.Laws`, in `Becoming.Mechanism`, `Becoming.GrammarRegularity`,
+  `Becoming.IdentificationRuns` and `Becoming.LearningRuns`; order in `Becoming.Admission`,
+  `Becoming.Regions` and `Becoming.Weightings`, and the lagged orders of `Becoming.ComparingCourses`
+  and `Becoming.ReachableRanges` by `strictJoin_trans` (board item OU3c). Balance is represented both ways in `Becoming.Flow`
   (`Flow.balances_iff_units`) and not derived: its consumers need only the count, so their proofs
   stay arithmetic (board item OU3b).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order

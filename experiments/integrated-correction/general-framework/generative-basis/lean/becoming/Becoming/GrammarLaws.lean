@@ -12,9 +12,13 @@ successor everywhere, merging nothing everywhere, a successor everywhere, a list
 carrier), it is a corollary of a local one stated beside it. This module imports only the grammar,
 its map (`Becoming.GrammarMap`, for `«尽»`) and the prelude, so it sits below every model:
 `Becoming.Frame` imports it, and the models' laws that are cases of these are proved from them in
-their own modules (closure in `Frame` and `GrammarScope`; finite runs in `Recurrence`, `Attraction`
-and `Amounts`; lumping bridged in `Laws` and proved from them in `Mechanism`, `GrammarRegularity`
-and `IdentificationRuns`; order in `Admission`, `Regions` and `Weightings`). Balance alone is
+their own modules (closure in `Frame`, `GrammarScope` and `Junctures`; finite runs in `Recurrence`,
+`Attraction`, `Amounts` and `Learning`; lumping bridged in `Laws` and proved from them in `Mechanism`,
+`GrammarRegularity`, `IdentificationRuns` and `LearningRuns`; order in `Admission`, `Regions` and
+`Weightings`, and the lagged orders of `ComparingCourses` and `ReachableRanges` from the two relation
+laws beside widening's). Those two (`strictJoin_trans`, `strictJoin_irrefl`) are laws of any two
+relations, stated on `α → α → Prop` rather than `«际» α`: lemmas the orders use, not statements of
+the grammar. Balance alone is
 represented, not derived: `Flow.Balances`, `Flow.BalancesOn`, `Flow.Balances.over` and
 `balance_over_stretch_on` are each read on the grammar both ways (`Flow.balances_iff_units`,
 `Flow.balancesOn_iff_units`, `Flow.over_iff_units`, `«程守数当且仅当可对»`), and their proofs and
@@ -1200,6 +1204,27 @@ theorem «四比之周» {R S : «际» α} (one : «则» R S ∨ «逾» R S) 
   | .inl rs, .inr sr => .inr (.inl ⟨rs, sr⟩)
   | .inr rs, .inl sr => .inl ⟨sr, rs⟩
   | .inr rs, .inr sr => .inr (.inr (.inr ⟨rs, sr⟩))
+
+/-- **A transitive relation joined to the strict part of a transitive relation containing it is
+transitive.** A law of any two relations on any carrier, read on the ordering of courses
+(`ComparingCourses`: widening or widening with a lag) and of what can be reached
+(`ReachableRanges`: the lagged order). -/
+theorem strictJoin_trans {α : Type u} {S P : α → α → Prop}
+    (sTrans : ∀ {a b c}, S a b → S b c → S a c) (pTrans : ∀ {a b c}, P a b → P b c → P a c)
+    (within : ∀ {a b}, S a b → P a b) {a b c : α} :
+    (S a b ∨ (P a b ∧ ¬ P b a)) → (S b c ∨ (P b c ∧ ¬ P c b)) → (S a c ∨ (P a c ∧ ¬ P c a))
+  | .inl first, .inl second => .inl (sTrans first second)
+  | .inl first, .inr ⟨p, np⟩ =>
+      .inr ⟨pTrans (within first) p, fun back => np (pTrans back (within first))⟩
+  | .inr ⟨p, np⟩, .inl second =>
+      .inr ⟨pTrans p (within second), fun back => np (pTrans (within second) back)⟩
+  | .inr ⟨p, np⟩, .inr ⟨q, _⟩ => .inr ⟨pTrans p q, fun back => np (pTrans q back)⟩
+
+/-- The strict part of a relation, joined to an irreflexive one, is irreflexive. -/
+theorem strictJoin_irrefl {α : Type u} {S P : α → α → Prop} {a : α} (irrefl : ¬ S a a) :
+    ¬ (S a a ∨ (P a a ∧ ¬ P a a))
+  | .inl same => irrefl same
+  | .inr ⟨p, np⟩ => np p
 
 /-- **Deciding inclusion against exceeding for every pair of relations is exactly excluded
 middle.** -/

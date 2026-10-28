@@ -242,26 +242,28 @@
       ]
     },
     {
-      "en": "Order. Widening of relations (including and exceeding) is irreflexive, one-way and transitive and excludes keeping the same and being mixed; keeping is pointwise equivalence and symmetric, mixed symmetric. Where inclusion or exceeding is decided both ways one of the four cases holds, and deciding it for every pair of relations is exactly excluded middle.",
-      "zh": "序：关系之扩大（包含且逾越）非自反、单向、可传递，排除保持相同与相杂；保持相同即逐点等价且对称，相杂对称。包含或逾越两向可判定之处，四种情形之一成立；对每一对关系皆可判定，恰是排中律。",
+      "en": "Order. Widening of relations (including and exceeding) is irreflexive, one-way and transitive and excludes keeping the same and being mixed; keeping is pointwise equivalence and symmetric, mixed symmetric. Where inclusion or exceeding is decided both ways one of the four cases holds, and deciding it for every pair of relations is exactly excluded middle. For any two relations, a transitive relation joined to the strict part of a transitive relation containing it is transitive, and irreflexive where the first is.",
+      "zh": "序：关系之扩大（包含且逾越）非自反、单向、可传递，排除保持相同与相杂；保持相同即逐点等价且对称，相杂对称。包含或逾越两向可判定之处，四种情形之一成立；对每一对关系皆可判定，恰是排中律。任两关系：传递关系并入含之之传递关系之严格部分，仍传递；前者非自反处亦非自反。",
       "declarations": [
-        "Becoming.«逾»",
+        "Becoming.strictJoin_irrefl",
+        "Becoming.strictJoin_trans",
+        "Becoming.«则逾之定当且仅当排中»",
+        "Becoming.«四比之周»",
         "Becoming.«广»",
-        "Becoming.«齐»",
-        "Becoming.«杂»",
-        "Becoming.«逾则不则»",
-        "Becoming.«广则不则»",
-        "Becoming.«广非自»",
         "Becoming.«广不可逆»",
         "Becoming.«广之传递»",
-        "Becoming.«齐即谓»",
-        "Becoming.«齐之对称»",
-        "Becoming.«杂之对称»",
-        "Becoming.«广则非齐»",
+        "Becoming.«广则不则»",
         "Becoming.«广则非杂»",
+        "Becoming.«广则非齐»",
+        "Becoming.«广非自»",
+        "Becoming.«杂»",
+        "Becoming.«杂之对称»",
+        "Becoming.«逾»",
+        "Becoming.«逾则不则»",
+        "Becoming.«齐»",
+        "Becoming.«齐之对称»",
         "Becoming.«齐则非杂»",
-        "Becoming.«四比之周»",
-        "Becoming.«则逾之定当且仅当排中»"
+        "Becoming.«齐即谓»"
       ]
     },
     {
@@ -284,56 +286,62 @@
       ]
     },
     {
-      "en": "The models' laws of closure, return, being drawn, rest at amounts, lumping and order are proved from these in their own modules, each keeping its name and statement: board rule 9, the general law below proving the special one, with no second proof left beside it. The list lemmas the models held, pigeonhole among them, are now names of the grammar's one proof.",
-      "zh": "模型上闭包、返、入、量上之止、归并与序之律，皆在其本模块中由此诸律证出，各保其名与陈述：即板规九，下层之通律证其特例，旁无第二证明。模型原有之列表引理（鸽笼在内）今为文法唯一证明之别名。",
+      "en": "The models' laws of closure, return, being drawn, rest at amounts, lumping and order are proved from these in their own modules, each keeping its name and statement: board rule 9, the general law below proving the special one, with no second proof left beside it. The list lemmas the models held, pigeonhole among them, are now names of the grammar's one proof. Among them: structure and change are one lumping, the image law on a determined law's one move; the case split of the step back of a returning configuration, the grammar's decomposition of reach, by which every loss passes a juncture; the repetition of the lasso of a world a list holds, a loop then d steps leading where d steps lead under a fixed successor, its bound pigeonhole; and the lagged orders of courses and of what can be reached, from the relation laws.",
+      "zh": "模型上闭包、返、入、量上之止、归并与序之律，皆在其本模块中由此诸律证出，各保其名与陈述：即板规九，下层之通律证其特例，旁无第二证明。模型原有之列表引理（鸽笼在内）今为文法唯一证明之别名。其中：结构与变化同为一种归并，即像之律施于定律之一步；返者之退一步之分情，即文法对所及之分解，由之每一失皆经一岔口；列表所持之世之套索之重复：定后之下，一环之后 d 步至于 d 步所至，其界则为鸽笼；进程与所可及者之滞后之序，出自关系之律。",
       "declarations": [
-        "Becoming.WithinClosure.refl",
-        "Becoming.WithinClosure.trans",
-        "Becoming.WithinClosure.of_rel",
-        "Becoming.WithinClosure.mono",
-        "Becoming.WithinClosure.symm",
-        "Becoming.WithinClosure.not_rel",
-        "Becoming.closedUnder_withinClosure",
-        "Becoming.closure_iff_certified",
-        "Becoming.not_within_of_closed",
-        "Becoming.withinClosure_iff_reached",
-        "Becoming.withinClosure_of_line",
-        "Becoming.Law.lossless_iff_returns",
-        "Becoming.Law.Lossless.returns",
-        "Becoming.Law.lossless_of_returns",
-        "Becoming.Law.Lossless.cancel",
-        "Becoming.Law.returns_of_reachable",
-        "Becoming.Law.orbit_mul",
-        "Becoming.Branching.Lossless.returns",
+        "Becoming.Amounts.rests_unrefuted",
         "Becoming.Branching.Lossless.cancel",
         "Becoming.Branching.Lossless.comes_back",
-        "Becoming.Law.drawn_iff_not_returns",
+        "Becoming.Branching.Lossless.returns",
+        "Becoming.Branching.step_back",
         "Becoming.Law.Drawn.not_returns",
-        "Becoming.Amounts.rests_unrefuted",
-        "Becoming.image_determined_iff",
-        "Becoming.constant_of_goAlike",
-        "Becoming.goAlike_of_constant",
+        "Becoming.Law.Lossless.cancel",
+        "Becoming.Law.Lossless.returns",
+        "Becoming.Law.drawn_iff_not_returns",
+        "Becoming.Law.lossless_iff_returns",
+        "Becoming.Law.lossless_of_returns",
+        "Becoming.Law.orbit_mul",
+        "Becoming.Law.returns_of_reachable",
         "Becoming.Law.sameFuture_of_goAlike",
+        "Becoming.Learning.goAlike_iff_lumped",
+        "Becoming.Learning.lasso_of_held",
+        "Becoming.Learning.lumped_iff_fixed_image",
+        "Becoming.Reaching.WidensOrLater.irrefl",
+        "Becoming.Reaching.WidensOrLater.trans",
+        "Becoming.Web.Includes.not_exceeded",
         "Becoming.Web.Includes.refl",
         "Becoming.Web.Includes.trans",
-        "Becoming.Web.Includes.not_exceeded",
-        "Becoming.Web.Widens.not_reverse",
-        "Becoming.Web.Widens.trans",
-        "Becoming.Web.Widens.not_keeps",
-        "Becoming.Web.Widens.not_mixed",
         "Becoming.Web.Keeps.not_mixed",
         "Becoming.Web.Keeps.symm",
         "Becoming.Web.Mixed.symm",
-        "Becoming.le_succ_cases",
+        "Becoming.Web.Widens.not_keeps",
+        "Becoming.Web.Widens.not_mixed",
+        "Becoming.Web.Widens.not_reverse",
+        "Becoming.Web.Widens.trans",
+        "Becoming.WithinClosure.mono",
+        "Becoming.WithinClosure.not_rel",
+        "Becoming.WithinClosure.of_rel",
+        "Becoming.WithinClosure.refl",
+        "Becoming.WithinClosure.symm",
+        "Becoming.WithinClosure.trans",
+        "Becoming.closedUnder_withinClosure",
+        "Becoming.closure_iff_certified",
+        "Becoming.constant_of_goAlike",
         "Becoming.gap_of_lt",
+        "Becoming.goAlike_of_constant",
+        "Becoming.image_determined_iff",
+        "Becoming.le_succ_cases",
         "Becoming.mem_cons_split",
+        "Becoming.not_within_of_closed",
+        "Becoming.revisits_within",
         "Becoming.skipAt",
-        "Becoming.skipAt_ne",
         "Becoming.skipAt_le",
         "Becoming.skipAt_lt",
+        "Becoming.skipAt_ne",
         "Becoming.split_at_head",
-        "Becoming.revisits_within",
-        "Becoming.total_congr"
+        "Becoming.total_congr",
+        "Becoming.withinClosure_iff_reached",
+        "Becoming.withinClosure_of_line"
       ]
     }
   ],
@@ -379,6 +387,26 @@
       "en": "The models' other laws on the grammar: they are proved on their models and not yet restated on it.",
       "zh": "诸模型之其他律在文法上：它们在其模型上证明，尚未在文法上重述。",
       "kind": "scope"
+    },
+    {
+      "en": "That the anchors Branching.Returns, Branching.Lossless, GoAlikeUnder, Web.Widens and Weighting.WidensOn are their grammar terms by definition: each is equivalent to its grammar term by a representation theorem, not equal to it by rfl, and none is redefined (OU3c's audit).",
+      "zh": "锚 Branching.Returns、Branching.Lossless、GoAlikeUnder、Web.Widens 与 Weighting.WidensOn 以定义即其文法之项：各以表示定理与其文法之项等价，而非依 rfl 相等，亦无一被重定义（OU3c 之审查）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That C's extension on the paths of a web is a case of the grammar's widening (Web.paths_extension_iff_widens, Direction.extension_iff_widens, Web.paths_comparison_widens, and Web.paths_one_object, which also takes the next item): its content is a reindexing of claims, (formation, step), to admissions, (step, formation), with every claim counted; widening enters by its definition, and reaching the grammar would need a transport of «广» along the swap of a pair, adding machinery and no content.",
+      "zh": "网之诸路上 C 之扩展为文法之扩大之例（Web.paths_extension_iff_widens、Direction.extension_iff_widens、Web.paths_comparison_widens，及兼取下一条之 Web.paths_one_object）：其内容为把主张（构成、步）重排为所纳（步、构成），每一主张皆计；扩大只以其定义入，及于文法须沿对之交换移运 «广»，徒增工具而无内容。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the reduction of what has significance to what can form under the continuation condition is a law of the grammar (Web.widens_iff_retains_adds): the free significance is not lifted to the root.",
+      "zh": "在延续条件下，把有意义者归约为可成形者，为文法之律（Web.widens_iff_retains_adds）：自由之意义未升至根。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That widening being what every positive weighting ranks higher is a law of the grammar (Weighting.widens_iff_every_positive): the grammar has no weights.",
+      "zh": "扩大即每一正权重皆排之更高者，为文法之律（Weighting.widens_iff_every_positive）：文法无权重。",
+      "kind": "non-implication"
     }
   ],
   "counterexamples": [
@@ -411,8 +439,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T182341.971697Z): Becoming.GrammarLaws, 113 theorems in 133 declarations, and 40 representation and bridge declarations in fourteen model modules, every one with an empty axiom report, all cited; every theorem of the fourteen keeps its printed statement. Three independent read-only AI reviews, every finding taken, in study section 417; not reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T182341.971697Z）：Becoming.GrammarLaws，133 项声明中 113 条定理，及十四个模型模块中 40 项表示与桥接声明，公理报告皆空，本记录全引；十四模块之每条定理其所印陈述不变。三次独立只读 AI 审查，所见皆采，见研究第 417 节；未经人审。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T061626.538602Z): Becoming.GrammarLaws, 115 theorems in 135 declarations, the 40 representation and bridge declarations in fourteen model modules, and OU3c's derivations in four more, every axiom report empty, all cited; every changed module's theorems keep their printed statements, but for the two relation laws moved into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b (study section 417), one of OU3c (433); not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261028T061626.538602Z）：Becoming.GrammarLaws，135 项声明中 115 条定理，十四个模型模块中 40 项表示与桥接声明，及另四模块中 OU3c 之推导，公理报告皆空，本记录全引；诸改动模块之每条定理其所印陈述不变，唯移入文法之二关系律推广至任一宇宙。OU3b 经三次独立只读 AI 审查，所见皆采，见研究第 417 节；OU3c 经一次，见研究第 433 节；未经人审。"
   },
   "next_delta": {
     "en": "A derivation of balance where a model's balance is read under a relation other than the one, pairings composing along a supplied conditioning; the models' other central laws restated on the grammar; a converse of the law of rest with the step relations it compares and its logic stated; review by a person.",
@@ -584,6 +612,8 @@
         "Becoming.GrammarLaws.split_append",
         "Becoming.GrammarLaws.split_at_head",
         "Becoming.GrammarLaws.total_congr",
+        "Becoming.strictJoin_irrefl",
+        "Becoming.strictJoin_trans",
         "Becoming.«一之对»",
         "Becoming.«像»",
         "Becoming.«像定后当且仅当同行»",
@@ -704,7 +734,7 @@
         "Becoming.«齐则非杂»",
         "Becoming.«齐即谓»"
       ],
-      "sha256": "8ea6d1471e1b5bc1334fc16344d02c5430890387aac3a057f8174317739a3964"
+      "sha256": "af3ac5562c213f36fe6e2c286583c611e10c4734f3ca1290bc02583829a9f6ed"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -892,6 +922,40 @@
       "sha256": "74d266546171417e4f28365a50c8e9f11b71e3b10c2cd2025681349e653a32ea"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Learning.goAlike_iff_lumped",
+        "Becoming.Learning.lumped_iff_fixed_image"
+      ],
+      "sha256": "7932aa5eba257c8024df99da600533633a4c685a86b6c466db17bcb763706d4d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Learning.lasso_of_held"
+      ],
+      "sha256": "3f65e832ea3a9fb9359d3a6d77a45ac039ea86bfb93ac5207fbc857fac1adf74"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Branching.step_back"
+      ],
+      "sha256": "4e2258585165575d20e66d1b8fde6b648e5acbf93bdc17f053a6a0070c9dcfd5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Reaching.WidensOrLater.irrefl",
+        "Becoming.Reaching.WidensOrLater.trans"
+      ],
+      "sha256": "aade1c4983cb7c819f216557b66b2be6c08420caa59443ba0f564f9ac3499d87"
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d"
@@ -942,12 +1006,27 @@
       "role": "receipt",
       "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3c-anchors-on-the-grammar/AUDIT.md",
+      "role": "integration",
+      "sha256": "1e881cc858c54d5539633de1920d1c542898ec6bdf7c0c306cc08a7ec154938b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3c-anchors-on-the-grammar/REVIEW-OU3c.md",
+      "role": "review",
+      "sha256": "97dbfcad6db8a0e3cd12bb138adbfaff3ecfdd0847f7411a0089c2e681452c44"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
+      "role": "receipt",
+      "sha256": "3ab06c01fa4f143b64d67ef44d50d6e47ea19b78b384a03815df8e64ade0f020"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1049,12 +1128,44 @@
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LearningRuns",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Learning",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Junctures",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReachableRanges",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
   "history": [
     {
       "en": "26 October 2026: added (OU3b, with OU3b-2 and OU3b-3), the five master laws on the grammar and the models' laws proved from them, balance represented and not derived; three independent reviews taken; study section 417.",
       "zh": "2026年10月26日：新增（OU3b，含 OU3b-2 与 OU3b-3），文法上之五条主律，模型之律由之证出，平衡表示而不推出；三次独立审查皆采；研究第 417 节。"
+    },
+    {
+      "en": "28 October 2026 (OU3c, study section 433): the two relation laws moved into the grammar and the lagged orders proved from them; structure and change as one lumping proved from the image law, the case split of the step back of a returning configuration from the decomposition of reach, and the repetition of a lasso from the laws of steps. No anchor is its grammar term by rfl, so each keeps its definition; the reasons for the other consumers are in OU3c's audit.",
+      "zh": "2026年10月28日（OU3c，研究第 433 节）：二关系律移入文法，滞后之序由之证出；结构与变化同为一种归并由像之律证出，返者之退一步之分情由所及之分解证出，套索之重复由步之律证出。无一锚依 rfl 即其文法之项，故各保其定义；其余依之者之理由见 OU3c 之审查。"
     }
   ]
 }

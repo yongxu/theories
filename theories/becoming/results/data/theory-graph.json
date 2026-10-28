@@ -6162,7 +6162,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 113,
+   "theorems": 115,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7141,7 +7141,7 @@
    "type": "module",
    "name": "Becoming.ComparingCourses",
    "level": "L2",
-   "theorems": 191,
+   "theorems": 189,
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
@@ -7628,7 +7628,7 @@
    "theorems": 80,
    "region": "knowing",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -7837,7 +7837,7 @@
    "theorems": 51,
    "region": "map",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -9176,10 +9176,10 @@
    "type": "module",
    "name": "Becoming.LearningRuns",
    "level": "L1",
-   "theorems": 29,
+   "theorems": 30,
    "region": "knowing",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -36535,6 +36535,11 @@
   },
   {
    "from": "record:comparing-two-courses-on-what-they-admit",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparing-two-courses-on-what-they-admit",
    "to": "module:Becoming.Growth",
    "type": "proved-in"
   },
@@ -43865,12 +43870,32 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Junctures",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Laws",
    "type": "proved-in"
   },
   {
    "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Learning",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.LearningRuns",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Mechanism",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.ReachableRanges",
    "type": "proved-in"
   },
   {

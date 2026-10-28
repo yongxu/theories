@@ -1,0 +1,5 @@
+import Becoming.SensitivityWebs
+#print axioms Becoming.SensitivityWebs.exchange_alike_of_insensitiveAt
+#print axioms Becoming.SensitivityWebs.exchange_alike_of_insensitive
+#print axioms Becoming.SensitivityWebs.wholeLaw_not_through
+#print axioms Becoming.SensitivityWebs.tailLaw_courseWorld_balanced_iff

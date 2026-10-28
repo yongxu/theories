@@ -1,0 +1,230 @@
+@Becoming.«所闭之自反» : ∀ {α : Type u_1} (R : Becoming.«际» α) (x : α), Becoming.«所闭» R x x
+@Becoming.«所闭之传递» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y z : α},
+  Becoming.«所闭» R x y → Becoming.«所闭» R y z → Becoming.«所闭» R x z
+@Becoming.«缘在所闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y : α}, R x y → Becoming.«所闭» R x y
+@Becoming.«所闭之闭» : ∀ {α : Type u_1} (R : Becoming.«际» α) (x : α), Becoming.«闭» R (Becoming.«所闭» R x)
+@Becoming.«所闭之单调» : ∀ {α : Type u_1} {R S : Becoming.«际» α},
+  Becoming.«则» R S → Becoming.«则» (Becoming.«所闭» R) (Becoming.«所闭» S)
+@Becoming.«所闭之对称» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«则» R (Becoming.«逆» R) → Becoming.«则» (Becoming.«所闭» R) (Becoming.«逆» (Becoming.«所闭» R))
+@Becoming.«所闭之界» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y z : α},
+  Becoming.«所闭» R x y → ¬Becoming.«所闭» R x z → ¬R y z
+@Becoming.«闭含所闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {P : α → Prop},
+  Becoming.«闭» R P → ∀ {x y : α}, P x → Becoming.«所闭» R x y → P y
+@Becoming.«所闭之证» : ∀ {α : Type u_1} {R : Becoming.«际» α} {P : α → Prop} {x : α},
+  (∀ (y : α), P y ↔ Becoming.«所闭» R x y) ↔ P x ∧ Becoming.«闭» R P ∧ ∀ (y : α), P y → Becoming.«所闭» R x y
+@Becoming.«闭而外则不所闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {P : α → Prop} {x y : α},
+  Becoming.«闭» R P → P x → ¬P y → ¬Becoming.«所闭» R x y
+@Becoming.«闭之及» : ∀ {α : Type u_1} {R : Becoming.«际» α} {P : α → Prop},
+  Becoming.«闭» R P → ∀ {x y : α}, P x → Becoming.«及» R x y → P y
+@Becoming.«及之所闭» : ∀ {α : Type u_1} {R : Becoming.«际» α}, Becoming.«则» (Becoming.«及» R) (Becoming.«所闭» R)
+@Becoming.«所闭当且仅当同一或及» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y : α},
+  Becoming.«所闭» R x y ↔ x = y ∨ Becoming.«及» R x y
+@Becoming.«及当且仅当一步而所闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x z : α},
+  Becoming.«及» R x z ↔ ∃ y, R x y ∧ Becoming.«所闭» R y z
+@Becoming.GrammarLaws.length_insert : ∀ {α : Type u_1} (b₁ : List α) (y : α) (b₂ : List α),
+  (b₁ ++ y :: b₂).length = (b₁ ++ b₂).length + 1
+@Becoming.GrammarLaws.length_replicate : ∀ {α : Type u_1} (x : α) (n : Nat), (List.replicate n x).length = n
+@Becoming.GrammarLaws.le_succ_cases : ∀ {n K : Nat}, n ≤ K + 1 → n ≤ K ∨ n = K + 1
+@Becoming.GrammarLaws.gap_of_lt : ∀ {i j : Nat}, i < j → ∃ d, j = i + (d + 1)
+@Becoming.GrammarLaws.mem_cons_split : ∀ {α : Type u_1} {x a : α} {l : List α}, x ∈ a :: l → x = a ∨ x ∈ l
+Becoming.GrammarLaws.skipAt_ne : ∀ (m n : Nat), Becoming.GrammarLaws.skipAt m n ≠ m
+Becoming.GrammarLaws.skipAt_le : ∀ (m n : Nat), Becoming.GrammarLaws.skipAt m n ≤ n + 1
+Becoming.GrammarLaws.skipAt_lt : ∀ (m : Nat) {i j : Nat},
+  i < j → Becoming.GrammarLaws.skipAt m i < Becoming.GrammarLaws.skipAt m j
+@Becoming.GrammarLaws.split_at_head : ∀ {α : Type u_1} {g : Nat → α} {a : α} {l : List α} (K : Nat),
+  (∀ (n : Nat), n ≤ K → g n = a ∨ g n ∈ l) →
+    (∃ i j, i < j ∧ j ≤ K ∧ g i = g j) ∨
+      (∀ (n : Nat), n ≤ K → g n ∈ l) ∨ ∃ m, m ≤ K ∧ g m = a ∧ ∀ (n : Nat), n ≤ K → n ≠ m → g n ∈ l
+@Becoming.GrammarLaws.revisits_within : ∀ {α : Type u_1} (l : List α) (g : Nat → α),
+  (∀ (n : Nat), n ≤ l.length → g n ∈ l) → ∃ i j, i < j ∧ j ≤ l.length ∧ g i = g j
+@Becoming.GrammarLaws.split_append : ∀ {α : Type u_1} (d₁ : List α) {d₂ e₁ e₂ : List α} {z : α},
+  d₁ ++ d₂ = e₁ ++ z :: e₂ → (∃ f, d₁ = e₁ ++ z :: f ∧ e₂ = f ++ d₂) ∨ ∃ f, e₁ = d₁ ++ f ∧ d₂ = f ++ z :: e₂
+@Becoming.«对之长» : ∀ {α : Type u_1} {R : Becoming.«际» α} {a b : List α}, Becoming.«对» R a b → a.length = b.length
+@Becoming.«等长则一对» : ∀ {α : Type u_1} (a b : List α), a.length = b.length → Becoming.«对» Becoming.«一» a b
+@Becoming.«一之对» : ∀ {α : Type u_1} {a b : List α}, Becoming.«对» Becoming.«一» a b ↔ a.length = b.length
+@Becoming.«对之单调» : ∀ {α : Type u_1} {R S : Becoming.«际» α},
+  Becoming.«则» R S → ∀ {a b : List α}, Becoming.«对» R a b → Becoming.«对» S a b
+@Becoming.«对之自反» : ∀ {α : Type u_1} {R : Becoming.«际» α}, (∀ (x : α), R x x) → ∀ (a : List α), Becoming.«对» R a a
+@Becoming.«对之左插» : ∀ {α : Type u_1} {S : Becoming.«际» α} {y x : α},
+  S y x → ∀ (l₁ : List α) {l₂ m : List α}, Becoming.«对» S (l₁ ++ l₂) m → Becoming.«对» S (l₁ ++ y :: l₂) (x :: m)
+@Becoming.«对之逆» : ∀ {α : Type u_1} {R : Becoming.«际» α} {a b : List α},
+  Becoming.«对» R a b → Becoming.«对» (Becoming.«逆» R) b a
+@Becoming.«对则守数» : ∀ {α : Type u_1} {R : Becoming.«际» α} {before given after taken : List α},
+  Becoming.«对» R (before ++ given) (after ++ taken) → after.length + taken.length = before.length + given.length
+@Becoming.«守数当且仅当可对» : ∀ {p q r s : Nat},
+  r + s = p + q ↔
+    ∃ before given after taken,
+      before.length = p ∧
+        given.length = q ∧
+          after.length = r ∧ taken.length = s ∧ Becoming.«对» Becoming.«一» (before ++ given) (after ++ taken)
+Becoming.«等长而不对之例» : ∃ R a b, a.length = b.length ∧ ¬Becoming.«对» R a b
+@Becoming.«对之取» : ∀ {α : Type u_1} {S : Becoming.«际» α} {l c : List α},
+  Becoming.«对» S l c →
+    ∀ (b₁ : List α) {y : α} {b₂ : List α},
+      l = b₁ ++ y :: b₂ → ∃ c₁ z c₂, c = c₁ ++ z :: c₂ ∧ S y z ∧ Becoming.«对» S (b₁ ++ b₂) (c₁ ++ c₂)
+@Becoming.«对之接» : ∀ {α : Type u_1} {R S : Becoming.«际» α} {a b : List α},
+  Becoming.«对» R a b → ∀ {c : List α}, Becoming.«对» S b c → Becoming.«对» (Becoming.«而» R S) a c
+@Becoming.«对之传» : ∀ {α : Type u_1} {T : Becoming.«际» α},
+  (∀ (x y z : α), T x y → T y z → T x z) →
+    ∀ {a b c : List α}, Becoming.«对» T a b → Becoming.«对» T b c → Becoming.«对» T a c
+@Becoming.«对之并» : ∀ {α : Type u_1} {R : Becoming.«际» α} {a₁ b₁ : List α},
+  Becoming.«对» R a₁ b₁ → ∀ {a₂ b₂ : List α}, Becoming.«对» R a₂ b₂ → Becoming.«对» R (a₁ ++ a₂) (b₁ ++ b₂)
+@Becoming.«对之换» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  (∀ (x : α), R x x) → ∀ (a b : List α), Becoming.«对» R (a ++ b) (b ++ a)
+@Becoming.«对之族» : ∀ {α : Type u_1} {ι : Type u_2} {R : Becoming.«际» α} {a b : ι → List α} (is : List ι),
+  (∀ (i : ι), i ∈ is → Becoming.«对» R (a i) (b i)) → Becoming.«对» R (Becoming.«聚» a is) (Becoming.«聚» b is)
+@Becoming.«对之程» : ∀ {α : Type u_1} {R : Becoming.«际» α} {L G K : Nat → List α} (S n : Nat),
+  (∀ (t : Nat), S ≤ t → t < S + n → Becoming.«对» R (L t ++ G t) (L (t + 1) ++ K t)) →
+    Becoming.«对» (Becoming.«所闭» R) (L S ++ Becoming.«聚» G (Becoming.steps S n))
+      (L (S + n) ++ Becoming.«聚» K (Becoming.steps S n))
+@Becoming.«聚之长» : ∀ {α : Type u_1} {ι : Type} (f : ι → List α) (is : List ι),
+  (Becoming.«聚» f is).length = Becoming.total is fun i => (f i).length
+@Becoming.GrammarLaws.total_congr : ∀ {ι : Type} {p q : ι → Nat},
+  (∀ (i : ι), p i = q i) → ∀ (is : List ι), Becoming.total is p = Becoming.total is q
+@Becoming.«程守数当且仅当可对» : ∀ {q x y : Nat → Nat} {S n : Nat},
+  q (S + n) + Becoming.total (Becoming.steps S n) x = q S + Becoming.total (Becoming.steps S n) y ↔
+    ∃ level lost gained,
+      (∀ (t : Nat), (level t).length = q t) ∧
+        (∀ (t : Nat), (lost t).length = x t) ∧
+          (∀ (t : Nat), (gained t).length = y t) ∧
+            Becoming.«对» Becoming.«一» (level S ++ Becoming.«聚» gained (Becoming.steps S n))
+              (level (S + n) ++ Becoming.«聚» lost (Becoming.steps S n))
+@Becoming.«定后之逐点» : ∀ {α : Type u_1} {R : Becoming.«际» α}, Becoming.«定后» R ↔ ∀ (x y z : α), R x y → R x z → y = z
+@Becoming.«定前之逐点» : ∀ {α : Type u_1} {R : Becoming.«际» α}, Becoming.«定前» R ↔ ∀ (x y z : α), R x z → R y z → x = y
+@Becoming.«定前即逆之定后» : ∀ {α : Type u_1} {R : Becoming.«际» α}, Becoming.«定前» R ↔ Becoming.«定后» (Becoming.«逆» R)
+@Becoming.«迭则及» : ∀ {α : Type u_1} {R : Becoming.«际» α} (n : Nat) {x y : α},
+  Becoming.«迭» R (n + 1) x y → Becoming.«及» R x y
+@Becoming.«及即迭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y : α}, Becoming.«及» R x y ↔ ∃ n, Becoming.«迭» R (n + 1) x y
+@Becoming.«迭之接» : ∀ {α : Type u_1} {R : Becoming.«际» α} (a b : Nat) {x y z : α},
+  Becoming.«迭» R a x y → Becoming.«迭» R b y z → Becoming.«迭» R (b + a) x z
+@Becoming.«迭之周» : ∀ {α : Type u_1} {R : Becoming.«际» α} {p : Nat} {x : α},
+  Becoming.«迭» R p x x → ∀ (k : Nat), Becoming.«迭» R (p * k) x x
+@Becoming.«定后则定后于» : ∀ {α : Type u_1} {R : Becoming.«际» α}, Becoming.«定后» R → ∀ (x : α), Becoming.«定后于» R x
+@Becoming.«定后于之后» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y : α},
+  Becoming.«定后于» R x → Becoming.«所闭» R x y → Becoming.«定后于» R y
+@Becoming.«迭之定于» : ∀ {α : Type u_1} {R : Becoming.«际» α} (n : Nat) {x y z : α},
+  Becoming.«定后于» R x → Becoming.«迭» R n x y → Becoming.«迭» R n x z → y = z
+@Becoming.«迭之定» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«定后» R → ∀ (n : Nat) {x y z : α}, Becoming.«迭» R n x y → Becoming.«迭» R n x z → y = z
+@Becoming.«迭之定前» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«定前» R → ∀ (n : Nat) {x y z : α}, Becoming.«迭» R n x z → Becoming.«迭» R n y z → x = y
+@Becoming.«入当且仅当有不返» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x : α},
+  Becoming.«入» R x ↔ ∃ y, Becoming.«及» R x y ∧ ¬Becoming.«及» R y x
+@Becoming.«定后于环则所及皆返» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x : α},
+  Becoming.«定后于» R x → Becoming.«及» R x x → ∀ {y : α}, Becoming.«及» R x y → Becoming.«及» R y x
+@Becoming.«定后环则所及皆返» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«定后» R → ∀ {x : α}, Becoming.«及» R x x → ∀ {y : α}, Becoming.«及» R x y → Becoming.«及» R y x
+@Becoming.«定后于则返者不入» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x : α},
+  Becoming.«定后于» R x → Becoming.«及» R x x → ¬Becoming.«入» R x
+@Becoming.«定后则返者不入» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«定后» R → ∀ {x : α}, Becoming.«及» R x x → ¬Becoming.«入» R x
+@Becoming.«有后不返则入» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y : α}, R x y → ¬Becoming.«及» R x x → Becoming.«入» R x
+@Becoming.«定后于有后则入当且仅当不返» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x : α},
+  Becoming.«定后于» R x → (∃ y, R x y) → (Becoming.«入» R x ↔ ¬Becoming.«及» R x x)
+@Becoming.«定后有后则入当且仅当不返» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«定后» R → ∀ {x : α}, (∃ y, R x y) → (Becoming.«入» R x ↔ ¬Becoming.«及» R x x)
+@Becoming.«无后者不入亦不返» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x : α},
+  (∀ (y : α), ¬R x y) → ¬Becoming.«入» R x ∧ ¬Becoming.«及» R x x
+Becoming.«入而返之例» : ∃ R x, Becoming.«入» R x ∧ Becoming.«及» R x x
+Becoming.«非定后返而不入之例» : ∃ R, ¬Becoming.«定后» R ∧ Becoming.«及» R none none ∧ ¬Becoming.«入» R none
+@Becoming.«遍后则有线» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  (∀ (x : α), ∃ y, R x y) → ∀ (n : Nat) (x : α), ∃ g, g 0 = x ∧ ∀ (i : Nat), i < n → R (g i) (g (i + 1))
+@Becoming.«定前则线不并» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«定前» R → ∀ (g : Nat → α) (N : Nat), Becoming.«线不并» R g N
+@Becoming.«线不并则可退» : ∀ {α : Type u_1} {R : Becoming.«际» α} {g : Nat → α} {N : Nat},
+  Becoming.«线不并» R g N →
+    (∀ (i : Nat), i < N → R (g i) (g (i + 1))) → ∀ (i d : Nat), i + d ≤ N → g i = g (i + d) → g 0 = g d
+@Becoming.«定前则线可退» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«定前» R →
+    ∀ {g : Nat → α} {N : Nat},
+      (∀ (i : Nat), i < N → R (g i) (g (i + 1))) → ∀ (i d : Nat), i + d ≤ N → g i = g (i + d) → g 0 = g d
+@Becoming.«线则及» : ∀ {α : Type u_1} {R : Becoming.«际» α} {g : Nat → α} {N : Nat},
+  (∀ (i : Nat), i < N → R (g i) (g (i + 1))) → ∀ (k m : Nat), m + (k + 1) ≤ N → Becoming.«及» R (g m) (g (m + (k + 1)))
+@Becoming.«线则所闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {g : Nat → α} {N : Nat},
+  (∀ (i : Nat), i < N → R (g i) (g (i + 1))) → ∀ (m : Nat), m ≤ N → Becoming.«所闭» R (g 0) (g m)
+@Becoming.«线有限不并则回» : ∀ {α : Type u_1} {R : Becoming.«际» α} {l : List α} {g : Nat → α},
+  Becoming.«线不并» R g l.length →
+    (∀ (i : Nat), i < l.length → R (g i) (g (i + 1))) →
+      (∀ (n : Nat), n ≤ l.length → g n ∈ l) → ∃ d, 0 < d ∧ d ≤ l.length ∧ g d = g 0
+@Becoming.«线有限不并则返» : ∀ {α : Type u_1} {R : Becoming.«际» α} {l : List α} {g : Nat → α},
+  Becoming.«线不并» R g l.length →
+    (∀ (i : Nat), i < l.length → R (g i) (g (i + 1))) →
+      (∀ (n : Nat), n ≤ l.length → g n ∈ l) → Becoming.«及» R (g 0) (g 0)
+@Becoming.«线有限定前则返» : ∀ {α : Type u_1} {R : Becoming.«际» α} {l : List α},
+  Becoming.«定前» R →
+    ∀ {g : Nat → α},
+      (∀ (i : Nat), i < l.length → R (g i) (g (i + 1))) →
+        (∀ (n : Nat), n ≤ l.length → g n ∈ l) → Becoming.«及» R (g 0) (g 0)
+@Becoming.«定后于线有限则末返» : ∀ {α : Type u_1} {R : Becoming.«际» α} {l : List α} {g : Nat → α},
+  Becoming.«定后于» R (g 0) →
+    (∀ (i : Nat), i < l.length → R (g i) (g (i + 1))) →
+      (∀ (n : Nat), n ≤ l.length → g n ∈ l) → Becoming.«及» R (g l.length) (g l.length)
+@Becoming.«有限遍后定前则皆返» : ∀ {α : Type u_1} {R : Becoming.«际» α} {all : List α},
+  (∀ (x : α), x ∈ all) → (∀ (x : α), ∃ y, R x y) → Becoming.«定前» R → ∀ (x : α), Becoming.«及» R x x
+@Becoming.«定后于二返则不并» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y z : α},
+  Becoming.«定后于» R x → Becoming.«定后于» R y → Becoming.«及» R x x → Becoming.«及» R y y → R x z → R y z → x = y
+@Becoming.«皆返定后则定前» : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«定后» R → (∀ (x : α), Becoming.«及» R x x) → Becoming.«定前» R
+@Becoming.«有限遍后定后则定前当且仅当皆返» : ∀ {α : Type u_1} {R : Becoming.«际» α} {all : List α},
+  (∀ (x : α), x ∈ all) → (∀ (x : α), ∃ y, R x y) → Becoming.«定后» R → (Becoming.«定前» R ↔ ∀ (x : α), Becoming.«及» R x x)
+@Becoming.«屡则或屡» : ∀ {α : Type u_1} {F : Becoming.«际» α} {g : Nat → α},
+  Becoming.«屡» F g → ∀ (T : Nat), Becoming.«或屡» F g T
+@Becoming.«线或在所闭» : ∀ {α : Type u_1} {Q : Becoming.«际» α} {g : Nat → α} {T : Nat},
+  (∀ (t : Nat), T ≤ t → ¬¬Q (g t) (g (t + 1))) → ∀ (k : Nat), ¬¬Becoming.«所闭» Q (g T) (g (T + k))
+@Becoming.«尽则不或屡» : ∀ {α : Type u_1} {Q F : Becoming.«际» α} {g : Nat → α} {T : Nat},
+  (∀ (t : Nat), T ≤ t → ¬¬Q (g t) (g (t + 1))) →
+    Becoming.«尽» (Becoming.«而» (Becoming.«所闭» Q) F) Becoming.«一» (g T) → ¬Becoming.«或屡» F g T
+@Becoming.«尽则不屡» : ∀ {α : Type u_1} {Q F : Becoming.«际» α} {g : Nat → α} {T : Nat},
+  (∀ (t : Nat), T ≤ t → Q (g t) (g (t + 1))) →
+    Becoming.«尽» (Becoming.«而» (Becoming.«所闭» Q) F) Becoming.«一» (g T) → ¬Becoming.«屡» F g
+Becoming.«止而不入之例» : ∃ Q F g,
+  (∀ (t : Nat), Q (g t) (g (t + 1))) ∧
+    Becoming.«尽» (Becoming.«而» (Becoming.«所闭» Q) F) Becoming.«一» (g 0) ∧ ¬Becoming.«屡» F g ∧ ¬Becoming.«入» Q (g 0)
+Becoming.«入而屡之例» : ∃ Q F g, (∀ (t : Nat), Q (g t) (g (t + 1))) ∧ Becoming.«屡» F g ∧ Becoming.«入» Q (g 0)
+@Becoming.«同行之逐点» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«同行» R E ↔ ∀ (x x' : α), E x x' → ∀ (y y' : α), R x y → R x' y' → E y y'
+@Becoming.«有常局定后则同行» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«有常» R E → (∀ (x x' : α), E x x' → ∀ (v w : α), R x' v → R x' w → v = w) → Becoming.«同行» R E
+@Becoming.«有常定后则同行» : ∀ {α : Type u_1} {R E : Becoming.«际» α}, Becoming.«有常» R E → Becoming.«定后» R → Becoming.«同行» R E
+@Becoming.«有常则可续» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«有常» R E → ∀ (u u' v : α), E u u' → R u v → ∃ v', R u' v'
+@Becoming.«同行可续则有常» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«同行» R E → (∀ (u u' v : α), E u u' → R u v → ∃ v', R u' v') → Becoming.«有常» R E
+@Becoming.«同行遍后则有常» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«同行» R E → (∀ (x : α), ∃ y, R x y) → Becoming.«有常» R E
+@Becoming.«局定后则有常当且仅当同行可续» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  (∀ (x x' : α), E x x' → ∀ (v w : α), R x' v → R x' w → v = w) →
+    (Becoming.«有常» R E ↔ Becoming.«同行» R E ∧ ∀ (u u' v : α), E u u' → R u v → ∃ v', R u' v')
+@Becoming.«同行当且仅当有常» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«定后» R → (∀ (x : α), ∃ y, R x y) → (Becoming.«同行» R E ↔ Becoming.«有常» R E)
+@Becoming.«类同行遍后则含于核» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E → Becoming.«同行» R E → (∀ (x : α), ∃ y, R x y) → Becoming.«则» E (Becoming.«核» R E)
+@Becoming.«同行之迭» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«同行» R E → ∀ (n : Nat) {x x' y y' : α}, E x x' → Becoming.«迭» R n x y → Becoming.«迭» R n x' y' → E y y'
+@Becoming.«同行于迭» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«同行» R E → ∀ (n : Nat), Becoming.«同行» (Becoming.«迭» R n) E
+@Becoming.«像定后当且仅当同行» : ∀ {α : Type u_1} {κ : Type u_2} {π : α → κ} {R : Becoming.«际» α},
+  Becoming.«定后» (Becoming.«像» π R) ↔ Becoming.«同行» R fun s s' => π s = π s'
+@Becoming.«逾则不则» : ∀ {α : Type u_1} {R S : Becoming.«际» α}, Becoming.«逾» R S → ¬Becoming.«则» R S
+@Becoming.«广则不则» : ∀ {α : Type u_1} {R S : Becoming.«际» α}, Becoming.«广» R S → Becoming.«则» S R ∧ ¬Becoming.«则» R S
+@Becoming.«广非自» : ∀ {α : Type u_1} (R : Becoming.«际» α), ¬Becoming.«广» R R
+@Becoming.«广不可逆» : ∀ {α : Type u_1} {R S : Becoming.«际» α}, Becoming.«广» R S → ¬Becoming.«广» S R
+@Becoming.«广之传递» : ∀ {α : Type u_1} {R S T : Becoming.«际» α}, Becoming.«广» R S → Becoming.«广» S T → Becoming.«广» R T
+@Becoming.«齐即谓» : ∀ {α : Type u_1} {R S : Becoming.«际» α}, Becoming.«齐» R S ↔ Becoming.«谓» R S
+@Becoming.«齐之对称» : ∀ {α : Type u_1} {R S : Becoming.«际» α}, Becoming.«齐» R S → Becoming.«齐» S R
+@Becoming.«杂之对称» : ∀ {α : Type u_1} {R S : Becoming.«际» α}, Becoming.«杂» R S → Becoming.«杂» S R
+@Becoming.«广则非齐» : ∀ {α : Type u_1} {R S : Becoming.«际» α}, Becoming.«广» R S → ¬Becoming.«齐» R S
+@Becoming.«广则非杂» : ∀ {α : Type u_1} {R S : Becoming.«际» α}, Becoming.«广» R S → ¬Becoming.«杂» R S
+@Becoming.«齐则非杂» : ∀ {α : Type u_1} {R S : Becoming.«际» α}, Becoming.«齐» R S → ¬Becoming.«杂» R S
+@Becoming.«四比之周» : ∀ {α : Type u_1} {R S : Becoming.«际» α},
+  Becoming.«则» R S ∨ Becoming.«逾» R S →
+    Becoming.«则» S R ∨ Becoming.«逾» S R → Becoming.«广» R S ∨ Becoming.«广» S R ∨ Becoming.«齐» R S ∨ Becoming.«杂» R S
+@Becoming.strictJoin_trans : ∀ {α : Type u_1} {S P : α → α → Prop},
+  (∀ {a b c : α}, S a b → S b c → S a c) →
+    (∀ {a b c : α}, P a b → P b c → P a c) →
+      (∀ {a b : α}, S a b → P a b) →
+        ∀ {a b c : α}, S a b ∨ P a b ∧ ¬P b a → S b c ∨ P b c ∧ ¬P c b → S a c ∨ P a c ∧ ¬P c a
+@Becoming.strictJoin_irrefl : ∀ {α : Type u_1} {S P : α → α → Prop} {a : α}, ¬S a a → ¬(S a a ∨ P a a ∧ ¬P a a)
+Becoming.«则逾之定当且仅当排中» : (∀ (α : Type) (R S : Becoming.«际» α), Becoming.«则» R S ∨ Becoming.«逾» R S) ↔
+  ∀ (P : Prop), P ∨ ¬P

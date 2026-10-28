@@ -1,0 +1,143 @@
+@Becoming.GuardHorizon.viable_succ_iff : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop) (n : Nat)
+  (s : S),
+  Becoming.GuardHorizon.Viable P guard (n + 1) s ↔ guard s ∧ ∃ a, Becoming.GuardHorizon.Admissible P guard n s a
+@Becoming.GuardHorizon.viable_guard : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop) {n : Nat} {s : S},
+  Becoming.GuardHorizon.Viable P guard n s → guard s
+@Becoming.GuardHorizon.not_enabled_not_admissible : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop)
+  {n : Nat} {s : S} {a : A}, ¬Generative.Enabled P s a → ¬Becoming.GuardHorizon.Admissible P guard n s a
+@Becoming.GuardHorizon.shielded_choice : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop) {n : Nat}
+  {s : S} {q : A → Int} {lift : Int},
+  0 < lift →
+    ∀ {x : A × Bool},
+      Becoming.Acceptance.Best (fun y => Becoming.GuardHorizon.Admissible P guard n s y.fst)
+          (Becoming.Acceptance.AcceptScore q lift) x →
+        x.snd = true ∧
+          Generative.Enabled P s x.fst ∧
+            (∀ (t : S), P.step s x.fst t → Becoming.GuardHorizon.Viable P guard n t) ∧
+              ∀ (a : A), Becoming.GuardHorizon.Admissible P guard n s a → q a ≤ q x.fst
+@Becoming.GuardHorizon.closed_viable : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop) {K : S → Prop},
+  Becoming.GuardHorizon.Closed P guard K → ∀ (n : Nat) (s : S), K s → Becoming.GuardHorizon.Viable P guard n s
+@Becoming.GuardHorizon.certificate_closed : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop)
+  {K : S → Prop},
+  Becoming.Viability.Certificate P guard K →
+    (∀ (s : S), K s → ∃ a, Generative.Enabled P s a) → Becoming.GuardHorizon.Closed P guard K
+@Becoming.GuardHorizon.certificate_viable : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop)
+  {K : S → Prop},
+  Becoming.Viability.Certificate P guard K →
+    (∀ (s : S), K s → ∃ a, Generative.Enabled P s a) →
+      ∀ (n : Nat) (s : S), K s → Becoming.GuardHorizon.Viable P guard n s
+@Becoming.GuardHorizon.kernel_viable : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop) {s : S},
+  Becoming.Viability.Kernel P guard s →
+    (∀ (t : S), Becoming.Reach P s t → ∃ a, Generative.Enabled P t a) →
+      ∀ (n : Nat), Becoming.GuardHorizon.Viable P guard n s
+@Becoming.GuardHorizon.pathSafe_dViable : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S) (policy : Nat → S → A)
+  (n : Nat) (s : S), Becoming.GuardHorizon.PathSafe guard next policy n s → Becoming.GuardHorizon.DViable guard next n s
+@Becoming.GuardHorizon.bellman_bounds_safe : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S) (reward : S → A → Int)
+  (V : Nat → S → Int),
+  Becoming.GuardHorizon.Bellman guard next reward V →
+    ∀ (policy : Nat → S → A) (n : Nat) (s : S),
+      Becoming.GuardHorizon.PathSafe guard next policy n s → Becoming.GuardHorizon.Return next reward policy n s ≤ V n s
+@Becoming.GuardHorizon.recomputed_composition : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S)
+  (reward : S → A → Int) (V : Nat → S → Int),
+  Becoming.GuardHorizon.Bellman guard next reward V →
+    ∀ (lift : Int),
+      0 < lift →
+        ∀ (choose : Nat → S → A × Bool),
+          (∀ (n : Nat) (s : S),
+              Becoming.GuardHorizon.DViable guard next (n + 1) s →
+                Becoming.Acceptance.Best (fun x => Becoming.GuardHorizon.DAllowed guard next n s x.fst)
+                  (Becoming.Acceptance.AcceptScore (fun a => reward s a + V n (next s a)) lift) (choose n s)) →
+            ∀ (n : Nat) (s : S),
+              Becoming.GuardHorizon.DViable guard next n s →
+                Becoming.GuardHorizon.PathSafe guard next (fun k t => (choose k t).fst) n s ∧
+                  Becoming.GuardHorizon.Return next reward (fun k t => (choose k t).fst) n s = V n s
+@Becoming.GuardHorizon.recomputed_choice_accepts : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S)
+  (reward : S → A → Int) (V : Nat → S → Int) (lift : Int),
+  0 < lift →
+    ∀ (choose : Nat → S → A × Bool) (n : Nat) (s : S),
+      Becoming.Acceptance.Best (fun x => Becoming.GuardHorizon.DAllowed guard next n s x.fst)
+          (Becoming.Acceptance.AcceptScore (fun a => reward s a + V n (next s a)) lift) (choose n s) →
+        (choose n s).snd = true
+@Becoming.GuardHorizon.dViable_iff : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S) (n : Nat) (s : S),
+  Becoming.GuardHorizon.DViable guard next n s ↔
+    Becoming.GuardHorizon.Viable (Becoming.Viability.disturbed next fun x => True) guard n s
+@Becoming.GuardHorizon.safe_path_viable : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S) (policy : Nat → S → A)
+  (n : Nat) (s : S),
+  Becoming.GuardHorizon.PathSafe guard next policy n s →
+    Becoming.GuardHorizon.Viable (Becoming.Viability.disturbed next fun x => True) guard n s
+@Becoming.GuardHorizon.Kept.trace : ∀ {S A : Type} {P : Generative.Process S A} {guard : S → Prop} {s t : S}
+  {as : List A}, Becoming.GuardHorizon.Kept P guard s as t → Generative.Trace P s as t
+@Becoming.GuardHorizon.Kept.start : ∀ {S A : Type} {P : Generative.Process S A} {guard : S → Prop} {s t : S}
+  {as : List A}, Becoming.GuardHorizon.Kept P guard s as t → guard s
+@Becoming.GuardHorizon.pathSafe_iff : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S) (policy : Nat → S → A)
+  (n : Nat) (s : S),
+  Becoming.GuardHorizon.PathSafe guard next policy n s ↔
+    Becoming.GuardHorizon.Kept (Becoming.Viability.disturbed next fun x => True) guard s
+      (Becoming.GuardHorizon.moves next policy n s) (Becoming.GuardHorizon.last next policy n s)
+@Becoming.GuardHorizon.kept_return_le : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S) {reward : S → A → Int}
+  {V : Nat → S → Int},
+  Becoming.GuardHorizon.Bellman guard next reward V →
+    ∀ (policy : Nat → S → A) {n : Nat} {s : S},
+      Becoming.GuardHorizon.Kept (Becoming.Viability.disturbed next fun x => True) guard s
+          (Becoming.GuardHorizon.moves next policy n s) (Becoming.GuardHorizon.last next policy n s) →
+        Becoming.GuardHorizon.Return next reward policy n s ≤ V n s
+@Becoming.GuardHorizon.recomputed_kept : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S) {reward : S → A → Int}
+  {V : Nat → S → Int},
+  Becoming.GuardHorizon.Bellman guard next reward V →
+    ∀ {lift : Int},
+      0 < lift →
+        ∀ (choose : Nat → S → A × Bool),
+          (∀ (n : Nat) (s : S),
+              Becoming.GuardHorizon.DViable guard next (n + 1) s →
+                Becoming.Acceptance.Best (fun x => Becoming.GuardHorizon.DAllowed guard next n s x.fst)
+                  (Becoming.Acceptance.AcceptScore (fun a => reward s a + V n (next s a)) lift) (choose n s)) →
+            ∀ {n : Nat} {s : S},
+              Becoming.GuardHorizon.Viable (Becoming.Viability.disturbed next fun x => True) guard n s →
+                Becoming.GuardHorizon.Kept (Becoming.Viability.disturbed next fun x => True) guard s
+                    (Becoming.GuardHorizon.moves next (fun k t => (choose k t).fst) n s)
+                    (Becoming.GuardHorizon.last next (fun k t => (choose k t).fst) n s) ∧
+                  Becoming.GuardHorizon.Return next reward (fun k t => (choose k t).fst) n s = V n s
+@Becoming.GuardHorizon.recomputed_accepts : ∀ {S A : Type} (guard : S → Prop) (next : S → A → S) {reward : S → A → Int}
+  {V : Nat → S → Int} {lift : Int},
+  0 < lift →
+    ∀ (choose : Nat → S → A × Bool) {n : Nat} {s : S},
+      Becoming.Acceptance.Best
+          (fun x =>
+            Becoming.GuardHorizon.Viable (Becoming.Viability.disturbed next fun x => True) guard n (next s x.fst))
+          (Becoming.Acceptance.AcceptScore (fun a => reward s a + V n (next s a)) lift) (choose n s) →
+        (choose n s).snd = true
+@Becoming.GuardHorizon.fiber_of_uniform : ∀ {S A O : Type} (obs : S → O) (good : S → A → Prop),
+  Becoming.GuardHorizon.UniformPolicy obs good → Becoming.GuardHorizon.FiberFeasible obs good
+@Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible : ∀ {S A O : Type},
+  Becoming.Viability.ChoiceOver O A →
+    ∀ (obs : S → O) (good : S → A → Prop),
+      Becoming.GuardHorizon.UniformPolicy obs good ↔ Becoming.GuardHorizon.FiberFeasible obs good
+Becoming.GuardHorizon.statewise_not_uniform : (∀ (s : Bool), ∃ a, a = s) ∧
+  ¬Becoming.GuardHorizon.UniformPolicy (fun x => ()) fun s a => a = s
+Becoming.GuardHorizon.discriminating_reading_uniform : Becoming.GuardHorizon.UniformPolicy (fun s => s) fun s a => a = s
+@Becoming.GuardHorizon.uniform_finer : ∀ {S A O R : Type} (coarse : S → O) (fine : S → R) (forget : R → O),
+  (∀ (s : S), forget (fine s) = coarse s) →
+    ∀ (good : S → A → Prop),
+      Becoming.GuardHorizon.UniformPolicy coarse good → Becoming.GuardHorizon.UniformPolicy fine good
+@Becoming.GuardHorizon.uniform_viable : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop) {O : Type}
+  {read : S → O} {n : Nat},
+  Becoming.GuardHorizon.UniformPolicy read (Becoming.GuardHorizon.Admissible P guard n) →
+    ∀ {s : S}, guard s → Becoming.GuardHorizon.Viable P guard (n + 1) s
+@Becoming.GuardHorizon.uniform_iff : ∀ {S A : Type} (P : Generative.Process S A) (guard : S → Prop) {O : Type},
+  Becoming.Viability.ChoiceOver O A →
+    ∀ (read : S → O) (n : Nat),
+      Becoming.GuardHorizon.UniformPolicy read (Becoming.GuardHorizon.Admissible P guard n) ↔
+        ∀ (o : O), ∃ a, ∀ (s : S), read s = o → Becoming.GuardHorizon.Admissible P guard n s a
+Becoming.GuardHorizon.empty_requirement_hides_loss : (Becoming.GuardHorizon.Covers (fun x => False) fun x => False) ∧
+  ¬Becoming.GuardHorizon.Covers (fun x => True) fun x => False
+@Becoming.GuardHorizon.coverage_transports : ∀ {I J : Type} (old : I → Prop) (new available : J → Prop)
+  (translate : I → J),
+  (∀ (i : I), old i → new (translate i)) →
+    Becoming.GuardHorizon.Covers new available → ∀ (i : I), old i → available (translate i)
+Becoming.GuardHorizon.endpoint_access_hides_gap : Becoming.GuardHorizon.RouteAccess (true, false) ∧
+  Becoming.GuardHorizon.RouteAccess (false, true) ∧
+    ¬Becoming.GuardHorizon.PrefixAccess [(true, false), (false, false), (false, true)]
+Becoming.GuardHorizon.overlapping_handoff_keeps_access : Becoming.GuardHorizon.PrefixAccess
+  [(true, false), (true, true), (false, true)]
+Becoming.GuardHorizon.route_retirement_allowed : Becoming.GuardHorizon.RouteAccess (false, true) ∧
+  (false, true).fst ≠ true

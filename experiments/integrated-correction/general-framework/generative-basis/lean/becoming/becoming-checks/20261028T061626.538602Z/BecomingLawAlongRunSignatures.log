@@ -1,0 +1,168 @@
+@Becoming.Run.recordUnder_steps : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {E : S → S → Prop},
+  (∀ (x : S), E x x) → ∀ (t n : Nat), n < t → (r.recordUnder E t).step (r.state n) (r.act n) (r.state (n + 1))
+@Becoming.Run.recordUnder_goAlike : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {E : S → S → Prop},
+  Equivalence E → ∀ {t : Nat}, r.ConsistentUnder E t → Becoming.GoAlikeUnder (r.recordUnder E t) id E
+@Becoming.Run.law_under_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {E : S → S → Prop},
+  Equivalence E →
+    ∀ (t : Nat),
+      (∃ Q, Becoming.GoAlikeUnder Q id E ∧ ∀ (n : Nat), n < t → Q.step (r.state n) (r.act n) (r.state (n + 1))) ↔
+        r.ConsistentUnder E t
+@Becoming.Run.ConsistentUnder.earlier : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {r : Becoming.Run P} {E : S → S → Prop} {t t' : Nat}, r.ConsistentUnder E t' → t ≤ t' → r.ConsistentUnder E t
+@Becoming.Run.no_law_under_later : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {E : S → S → Prop},
+  Equivalence E →
+    ∀ {t t' : Nat},
+      t ≤ t' →
+        (¬∃ Q, Becoming.GoAlikeUnder Q id E ∧ ∀ (n : Nat), n < t → Q.step (r.state n) (r.act n) (r.state (n + 1))) →
+          ¬∃ Q, Becoming.GoAlikeUnder Q id E ∧ ∀ (n : Nat), n < t' → Q.step (r.state n) (r.act n) (r.state (n + 1))
+@Becoming.Run.consistentUnder_of_goAlikeUnder : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run P) {E : S → S → Prop}, Becoming.GoAlikeUnder P id E → ∀ (t : Nat), r.ConsistentUnder E t
+@Becoming.Run.consistentUnder_congr : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {E E' : S → S → Prop} {t : Nat},
+  (∀ (n m : Nat), n ≤ t → m ≤ t → (E (r.state n) (r.state m) ↔ E' (r.state n) (r.state m))) →
+    (r.ConsistentUnder E t ↔ r.ConsistentUnder E' t)
+@Becoming.Run.consistentUnder_eq_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {D : Type u_3}
+  (r : Becoming.Run P) (π : S → D) (t : Nat), r.ConsistentUnder (fun x y => π x = π y) t ↔ r.ConsistentThrough π t
+@Becoming.Run.stepsThrough_record : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) (π : S → K) (t : Nat), r.StepsThrough π (r.recordThrough π t) t
+@Becoming.Run.record_least : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {π : S → K} {Q : Generative.Process K A} {t : Nat},
+  r.StepsThrough π Q t → ∀ {k : K} {a : A} {κ : K}, (r.recordThrough π t).step k a κ → Q.step k a κ
+@Becoming.Run.record_determined_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) (π : S → K) (t : Nat), Becoming.Determined (r.recordThrough π t) ↔ r.ConsistentThrough π t
+@Becoming.Run.law_through_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) (π : S → K) (t : Nat),
+  (∃ Q, Becoming.Determined Q ∧ r.StepsThrough π Q t) ↔ r.ConsistentThrough π t
+@Becoming.Run.ConsistentThrough.earlier : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {r : Becoming.Run P} {π : S → K} {t t' : Nat}, r.ConsistentThrough π t' → t ≤ t' → r.ConsistentThrough π t
+@Becoming.Run.no_law_later : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {π : S → K} {t t' : Nat},
+  t ≤ t' → (¬∃ Q, Becoming.Determined Q ∧ r.StepsThrough π Q t) → ¬∃ Q, Becoming.Determined Q ∧ r.StepsThrough π Q t'
+@Becoming.Run.consistent_id_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P),
+  (∀ (t : Nat), r.ConsistentThrough id t) ↔ Becoming.Consistent r.state r.act
+@Becoming.Run.consistent_of_goAlike : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {π : S → K}, Becoming.GoAlike P π → ∀ (t : Nat), r.ConsistentThrough π t
+@Becoming.image_exact_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A} {π : S → K},
+  (∀ (s : S) (as : List A) (r : K),
+      Generative.Trace (Becoming.Image P π) (π s) as r ↔ ∃ t, Generative.Trace P s as t ∧ π t = r) ↔
+    Becoming.MatchesThrough P π
+@Becoming.exact_law_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A} {π : S → K},
+  (∃ Q,
+      Becoming.Determined Q ∧
+        Becoming.FactorsThrough P π Q ∧ ∀ (s : S) (a : A) (r : K), Q.step (π s) a r → ∃ t, P.step s a t ∧ π t = r) ↔
+    Becoming.GoAlike P π ∧ Becoming.MatchesThrough P π
+@Becoming.Dependence.alikeAt_equivalence : ∀ {S : Type u_1} {F C : Type} (D : Becoming.Dependence S F C)
+  (obs : F → C → Prop) (g : F), Equivalence (D.AlikeAt obs g)
+@Becoming.Web.admits_own_iff : ∀ {F C : Type} {W : Becoming.Web F C} {g : F} {n t : Nat},
+  (∀ (c : C), W.requires n g c ↔ W.requires t g c) →
+    (∀ (c : C), W.need n g c = W.need t g c) → (W.Admits (W.level n) n g ↔ W.Admits (W.level n) t g)
+@Becoming.Web.alikeAcross_iff_alikeThrough : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {n m t : Nat},
+  (∀ (c : C), W.requires n g c ↔ W.requires t g c) →
+    (∀ (c : C), W.need n g c = W.need t g c) →
+      (∀ (c : C), W.requires m g c ↔ W.requires t g c) →
+        (∀ (c : C), W.need m g c = W.need t g c) →
+          (W.AlikeAcross obs g n m ↔ W.AlikeThrough obs g (fun x => W.level n) (fun x => W.level m) t)
+@Becoming.Dependence.alikeAt_iff_alikeAcross : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (D : Becoming.Dependence S F C) {P : Generative.Process S A} (r : Becoming.Run P) (obs : F → C → Prop) (g : F)
+  (n m : Nat), D.AlikeAt obs g (r.state n) (r.state m) ↔ (D.along r).AlikeAcross obs g n m
+@Becoming.Run.law_through_dependence_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {F C : Type}
+  (D : Becoming.Dependence S F C) (r : Becoming.Run P) (obs : F → C → Prop) (g : F) (t : Nat),
+  (∃ Q,
+      Becoming.GoAlikeUnder Q id (D.AlikeAt obs g) ∧
+        ∀ (n : Nat), n < t → Q.step (r.state n) (r.act n) (r.state (n + 1))) ↔
+    r.ConsistentUnder (D.AlikeAt obs g) t
+@Becoming.Conditions.alikeAt_equivalence : ∀ {S : Type u_1} {F C : Type} (K : Becoming.Conditions S F C)
+  (obs : F → C → Prop) (g : F), Equivalence (K.AlikeAt obs g)
+@Becoming.Conditions.alikeThrough_iff : ∀ {S : Type u_1} {A : Type u_2} {F C : Type} (K : Becoming.Conditions S F C)
+  {P : Generative.Process S A} (r r' : Becoming.Run P) (obs : F → C → Prop) (g : F) (t : Nat),
+  (K.dependence.along r).AlikeThrough obs g (K.dependence.along r).level (K.dependence.along r').level t ↔
+    K.AlikeAt obs g (r.state t) (r'.state t)
+@Becoming.Conditions.alikeAt_iff_alikeThrough : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (K : Becoming.Conditions S F C) {P : Generative.Process S A} (r : Becoming.Run P) (obs : F → C → Prop) (g : F)
+  (n m t : Nat),
+  K.AlikeAt obs g (r.state n) (r.state m) ↔
+    (K.dependence.along r).AlikeThrough obs g (fun x => K.level (r.state n)) (fun x => K.level (r.state m)) t
+@Becoming.Dependence.alikeThrough_iff_fixedAt : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (D : Becoming.Dependence S F C) {P : Generative.Process S A} (r : Becoming.Run P) (obs : F → C → Prop) (g : F)
+  (n m t : Nat),
+  (D.along r).AlikeThrough obs g (fun x => D.level (r.state n)) (fun x => D.level (r.state m)) t ↔
+    (D.fixedAt (r.state t)).AlikeAt obs g (r.state n) (r.state m)
+@Becoming.Dependence.admitsAt_fixedAt_iff : ∀ {S : Type u_1} {F C : Type} (D : Becoming.Dependence S F C) {g : F}
+  {x x₀ : S}, D.SameFor g x x₀ → (D.AdmitsAt x g ↔ (D.fixedAt x₀).AdmitsAt x g)
+@Becoming.Dependence.conditions_alikeAt_iff : ∀ {S : Type u_1} {F C : Type} (K : Becoming.Conditions S F C)
+  (obs : F → C → Prop) (g : F) (x y : S), K.dependence.AlikeAt obs g x y ↔ K.AlikeAt obs g x y
+@Becoming.Run.law_through_coupling_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {F C : Type}
+  (K : Becoming.Conditions S F C) (r : Becoming.Run P) (obs : F → C → Prop) (g : F) (t : Nat),
+  (∃ Q,
+      Becoming.GoAlikeUnder Q id (K.AlikeAt obs g) ∧
+        ∀ (n : Nat), n < t → Q.step (r.state n) (r.act n) (r.state (n + 1))) ↔
+    r.ConsistentUnder (K.AlikeAt obs g) t
+@Becoming.Run.consistent_conditions_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {F C : Type}
+  (K : Becoming.Conditions S F C) (r : Becoming.Run P) (obs : F → C → Prop) (g : F) (t : Nat),
+  r.ConsistentUnder (K.dependence.AlikeAt obs g) t ↔ r.ConsistentUnder (K.AlikeAt obs g) t
+@Becoming.Run.consistent_unchanged_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {F C : Type}
+  (D : Becoming.Dependence S F C) (r : Becoming.Run P) (obs : F → C → Prop) {g : F} {k t : Nat},
+  D.Unchanged r g k t →
+    (r.ConsistentUnder (D.AlikeAt obs g) t ↔ r.ConsistentUnder ((D.fixedAt (r.state k)).AlikeAt obs g) t)
+Becoming.Constant.consistent : ∀ (t : Nat), Becoming.Constant.run.ConsistentThrough id t
+Becoming.Constant.not_goAlike : ¬Becoming.GoAlike Becoming.Constant.process id
+Becoming.Switching.inconsistent : ¬Becoming.Switching.run.ConsistentThrough Prod.fst 2
+Becoming.Stuck.goAlike_not_matches : (Becoming.GoAlike Becoming.Stuck.process fun x => ()) ∧
+  ¬Becoming.MatchesThrough Becoming.Stuck.process fun x => ()
+Becoming.Coarse.matching : Becoming.MatchesThrough Becoming.Coarse.process Prod.fst
+Becoming.Coarse.exact_law : ∃ Q,
+  Becoming.Determined Q ∧
+    Becoming.FactorsThrough Becoming.Coarse.process Prod.fst Q ∧
+      ∀ (s : Bool × Bool) (a : Unit) (r : Bool), Q.step s.fst a r → ∃ t, Becoming.Coarse.process.step s a t ∧ t.fst = r
+Becoming.Unseen.determined : Becoming.Determined Becoming.Unseen.process
+@Becoming.Unseen.admits : ∀ {x : Nat × Nat}, 1 ≤ x.fst → Becoming.Unseen.conditions.AdmitsAt x ()
+Becoming.Unseen.not_admits_zero : ¬Becoming.Unseen.conditions.AdmitsAt (0, 0) ()
+Becoming.Unseen.inconsistent : ¬Becoming.Unseen.run.ConsistentUnder
+    (Becoming.Unseen.conditions.AlikeAt Becoming.thresholdOnly ()) 2
+@Becoming.Unseen.no_law : ∀ {t : Nat},
+  2 ≤ t →
+    ¬∃ Q,
+        Becoming.GoAlikeUnder Q id (Becoming.Unseen.conditions.AlikeAt Becoming.thresholdOnly ()) ∧
+          ∀ (n : Nat),
+            n < t → Q.step (Becoming.Unseen.run.state n) (Becoming.Unseen.run.act n) (Becoming.Unseen.run.state (n + 1))
+Becoming.Unseen.first_apart : ∀ (m : Nat),
+  ¬Becoming.Unseen.conditions.AlikeAt Becoming.Unseen.observing () (1, 1) (Becoming.Unseen.state (m + 1))
+Becoming.Unseen.consistent_observing : ∀ (t : Nat),
+  Becoming.Unseen.run.ConsistentUnder (Becoming.Unseen.conditions.AlikeAt Becoming.Unseen.observing ()) t
+Becoming.Changing.determined : Becoming.Determined Becoming.Changing.process
+Becoming.Changing.dissolves : (Becoming.Changing.dissolving.along Becoming.Changing.run).Dissolves 0 () ()
+Becoming.Changing.forms : (Becoming.Changing.forming.along Becoming.Changing.run).Forms 0 () ()
+Becoming.Changing.dissolving_not_admits_zero : ¬Becoming.Changing.dissolving.AdmitsAt 0 ()
+Becoming.Changing.dissolving_admits_succ : ∀ (n : Nat), Becoming.Changing.dissolving.AdmitsAt (n + 1) ()
+Becoming.Changing.dissolving_consistent : ∀ (t : Nat),
+  Becoming.Changing.run.ConsistentUnder (Becoming.Changing.dissolving.AlikeAt Becoming.thresholdOnly ()) t
+Becoming.Changing.dissolving_fixed_inconsistent : ¬Becoming.Changing.run.ConsistentUnder
+    ((Becoming.Changing.dissolving.fixedAt (Becoming.Changing.run.state 0)).AlikeAt Becoming.thresholdOnly ()) 2
+Becoming.Changing.forming_admits_zero : Becoming.Changing.forming.AdmitsAt 0 ()
+Becoming.Changing.forming_not_admits_one : ¬Becoming.Changing.forming.AdmitsAt 1 ()
+Becoming.Changing.forming_admits_three : Becoming.Changing.forming.AdmitsAt 3 ()
+Becoming.Changing.forming_inconsistent : ¬Becoming.Changing.run.ConsistentUnder
+    (Becoming.Changing.forming.AlikeAt Becoming.thresholdOnly ()) 3
+Becoming.Changing.forming_fixed_consistent : ∀ (t : Nat),
+  Becoming.Changing.run.ConsistentUnder
+    ((Becoming.Changing.forming.fixedAt (Becoming.Changing.run.state 0)).AlikeAt Becoming.thresholdOnly ()) t
+@Becoming.Changing.forming_no_law : ∀ {t : Nat},
+  3 ≤ t →
+    ¬∃ Q,
+        Becoming.GoAlikeUnder Q id (Becoming.Changing.forming.AlikeAt Becoming.thresholdOnly ()) ∧
+          ∀ (n : Nat),
+            n < t →
+              Q.step (Becoming.Changing.run.state n) (Becoming.Changing.run.act n) (Becoming.Changing.run.state (n + 1))
+@Becoming.Changing.dissolving_fixed_no_law : ∀ {t : Nat},
+  2 ≤ t →
+    ¬∃ Q,
+        Becoming.GoAlikeUnder Q id
+            ((Becoming.Changing.dissolving.fixedAt (Becoming.Changing.run.state 0)).AlikeAt Becoming.thresholdOnly ()) ∧
+          ∀ (n : Nat),
+            n < t →
+              Q.step (Becoming.Changing.run.state n) (Becoming.Changing.run.act n) (Becoming.Changing.run.state (n + 1))

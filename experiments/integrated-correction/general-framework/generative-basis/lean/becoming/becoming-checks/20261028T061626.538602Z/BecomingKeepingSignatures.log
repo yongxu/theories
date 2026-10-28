@@ -1,0 +1,134 @@
+@Becoming.Viability.seen_eq_after : ∀ {S : Type u_1} {A : Type u_2} {k : Nat} (P : Generative.Process S A)
+  (sense : S → A → S → Fin k) (B : S → Prop) (a : A) (o : Fin k),
+  Becoming.Viability.Seen P sense B a o = Generative.InquirySufficiency.After P sense B a o
+@Becoming.Viability.Plan.Keeps.within : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {n : Nat} {p : Becoming.Viability.Plan A O n}
+  {B : S → Prop}, Becoming.Viability.Plan.Keeps P sense guard allowed p B → ∀ (s : S), B s → guard s
+@Becoming.Viability.Plan.Keeps.usable_first : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3}
+  {P : Generative.Process S A} {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {n : Nat}
+  {p : Becoming.Viability.Plan A O (n + 1)} {B : S → Prop},
+  Becoming.Viability.Plan.Keeps P sense guard allowed p B → Becoming.Viability.Usable P allowed B p.first
+@Becoming.Viability.Plan.Keeps.rest : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {n : Nat}
+  {p : Becoming.Viability.Plan A O (n + 1)} {B : S → Prop},
+  Becoming.Viability.Plan.Keeps P sense guard allowed p B →
+    ∀ (o : O),
+      Becoming.Viability.Plan.Keeps P sense guard allowed (p.rest o) (Becoming.Viability.Seen P sense B p.first o)
+@Becoming.Viability.Plan.Keeps.keptFor : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {n : Nat} {p : Becoming.Viability.Plan A O n}
+  {B : S → Prop},
+  Becoming.Viability.Plan.Keeps P sense guard allowed p B → Becoming.Viability.KeptFor P sense guard allowed n B
+@Becoming.Viability.choiceOver_fin : ∀ {k : Nat} {α : Type u_1}, Becoming.Viability.ChoiceOver (Fin k) α
+@Becoming.Viability.KeptFor.plan_of_choice : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop},
+  (∀ (n : Nat), Becoming.Viability.ChoiceOver O (Becoming.Viability.Plan A O n)) →
+    ∀ (n : Nat) {B : S → Prop},
+      Becoming.Viability.KeptFor P sense guard allowed n B →
+        ∃ p, Becoming.Viability.Plan.Keeps P sense guard allowed p B
+@Becoming.Viability.keptFor_iff_plan_of_choice : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3}
+  {P : Generative.Process S A} {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop},
+  (∀ (n : Nat), Becoming.Viability.ChoiceOver O (Becoming.Viability.Plan A O n)) →
+    ∀ {n : Nat} {B : S → Prop},
+      Becoming.Viability.KeptFor P sense guard allowed n B ↔
+        ∃ p, Becoming.Viability.Plan.Keeps P sense guard allowed p B
+@Becoming.Viability.keptFor_iff_plan : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {guard : S → Prop}
+  {allowed : S → A → Prop} {k : Nat} {listed : S → A → S → Fin k} {n : Nat} {B : S → Prop},
+  Becoming.Viability.KeptFor P listed guard allowed n B ↔ ∃ p, Becoming.Viability.Plan.Keeps P listed guard allowed p B
+@Becoming.Viability.get_of_eq_some : ∀ {β : Type u_1} {a : Option β} (h : a.isSome = true) {x : β},
+  a = some x → a.get h = x
+@Becoming.Viability.Answering.kept : ∀ {O α : Type u_1} (R : O → α → Prop),
+  (∀ (o : O), ∃ x, R o x) →
+    Becoming.Viability.KeptFor Becoming.Viability.Answering.process Becoming.Viability.Answering.keeps (fun x => True)
+      (Becoming.Viability.Answering.admits R) 2 Becoming.Viability.Answering.start
+@Becoming.Viability.Answering.related : ∀ {O α : Type u_1} {R : O → α → Prop}
+  {p : Becoming.Viability.Plan (Option α) O 2},
+  Becoming.Viability.Plan.Keeps Becoming.Viability.Answering.process Becoming.Viability.Answering.keeps (fun x => True)
+      (Becoming.Viability.Answering.admits R) p Becoming.Viability.Answering.start →
+    ∀ (o : O), ∃ x, (p.rest o).first = some x ∧ R o x
+@Becoming.Viability.Answering.answered : ∀ {O α : Type u_1} {R : O → α → Prop}
+  {p : Becoming.Viability.Plan (Option α) O 2},
+  Becoming.Viability.Plan.Keeps Becoming.Viability.Answering.process Becoming.Viability.Answering.keeps (fun x => True)
+      (Becoming.Viability.Answering.admits R) p Becoming.Viability.Answering.start →
+    ∀ (o : O), (p.rest o).first.isSome = true
+@Becoming.Viability.plans_iff_choice : ∀ {O : Type u_1},
+  (∀ (S A : Type u_1) (P : Generative.Process S A) (sense : S → A → S → O) (guard : S → Prop) (allowed : S → A → Prop)
+      (n : Nat) (B : S → Prop),
+      Becoming.Viability.KeptFor P sense guard allowed n B →
+        ∃ p, Becoming.Viability.Plan.Keeps P sense guard allowed p B) ↔
+    ∀ (α : Type u_1), Becoming.Viability.ChoiceOver O α
+@Becoming.Viability.Seen.mono : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {B C : S → Prop},
+  (∀ (s : S), B s → C s) →
+    ∀ {a : A} {o : O} {t : S}, Becoming.Viability.Seen P sense B a o t → Becoming.Viability.Seen P sense C a o t
+@Becoming.Viability.KeptFor.mono : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {n : Nat} {B C : S → Prop},
+  (∀ (s : S), B s → C s) →
+    Becoming.Viability.KeptFor P sense guard allowed n C → Becoming.Viability.KeptFor P sense guard allowed n B
+@Becoming.Viability.KeptFor.shorter : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {n : Nat} {B : S → Prop},
+  Becoming.Viability.KeptFor P sense guard allowed (n + 1) B → Becoming.Viability.KeptFor P sense guard allowed n B
+@Becoming.Viability.KeptFor.finer : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {F : Type u_4} {fine : S → A → S → F}
+  (forget : F → O),
+  (∀ (s : S) (a : A) (t : S), forget (fine s a t) = sense s a t) →
+    ∀ {n : Nat} {B : S → Prop},
+      Becoming.Viability.KeptFor P sense guard allowed n B → Becoming.Viability.KeptFor P fine guard allowed n B
+@Becoming.Viability.keptFor_empty : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} (a : A) (n : Nat),
+  Becoming.Viability.KeptFor P sense guard allowed n fun x => False
+@Becoming.Viability.keptFor_of_closed : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} (family : (S → Prop) → Prop),
+  (∀ (B : S → Prop), family B → ∀ (s : S), B s → guard s) →
+    (∀ (B : S → Prop),
+        family B →
+          ∃ a, Becoming.Viability.Usable P allowed B a ∧ ∀ (o : O), family (Becoming.Viability.Seen P sense B a o)) →
+      ∀ (n : Nat) {B : S → Prop}, family B → Becoming.Viability.KeptFor P sense guard allowed n B
+@Becoming.Viability.Certificate.keptFor : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {K : S → Prop},
+  Becoming.Viability.Certificate P guard K →
+    ∀ {a : A},
+      Becoming.Viability.Usable P allowed K a →
+        ∀ (n : Nat) {B : S → Prop}, (∀ (s : S), B s → K s) → Becoming.Viability.KeptFor P sense guard allowed n B
+@Becoming.Viability.Kernel.keptFor : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop} {a : A},
+  Becoming.Viability.Usable P allowed (Becoming.Viability.Kernel P guard) a →
+    ∀ (n : Nat) {B : S → Prop},
+      (∀ (s : S), B s → Becoming.Viability.Kernel P guard s) → Becoming.Viability.KeptFor P sense guard allowed n B
+Becoming.Viability.Matching.step_matched : ∀ (b : Bool),
+  Becoming.Viability.Matching.step (Becoming.Viability.Matching.Stage.need b) b = Becoming.Viability.Matching.Stage.done
+Becoming.Viability.Matching.step_unmatched : ∀ (a : Bool),
+  Becoming.Viability.Matching.step (Becoming.Viability.Matching.Stage.need !a) a =
+    Becoming.Viability.Matching.Stage.lost
+@Becoming.Viability.Matching.seen_start : ∀ {a o : Bool} {t : Becoming.Viability.Matching.Stage},
+  Becoming.Viability.Seen Becoming.Viability.Matching.process Becoming.Viability.Matching.keepsBit
+      Becoming.Viability.Matching.starts a o t →
+    t = Becoming.Viability.Matching.Stage.need o
+Becoming.Viability.Matching.keepsBit_kept : Becoming.Viability.KeptFor Becoming.Viability.Matching.process
+  Becoming.Viability.Matching.keepsBit Becoming.Viability.Matching.safe (fun x x_1 => True) 2
+  Becoming.Viability.Matching.starts
+Becoming.Viability.Matching.keepsNothing_not_kept : ¬Becoming.Viability.KeptFor Becoming.Viability.Matching.process
+    Becoming.Viability.Matching.keepsNothing Becoming.Viability.Matching.safe (fun x x_1 => True) 2
+    Becoming.Viability.Matching.starts
+Becoming.Viability.Matching.keeping_matters : Becoming.Viability.KeptFor Becoming.Viability.Matching.process
+    Becoming.Viability.Matching.keepsBit Becoming.Viability.Matching.safe (fun x x_1 => True) 2
+    Becoming.Viability.Matching.starts ∧
+  ¬Becoming.Viability.KeptFor Becoming.Viability.Matching.process Becoming.Viability.Matching.keepsNothing
+      Becoming.Viability.Matching.safe (fun x x_1 => True) 2 Becoming.Viability.Matching.starts
+@Becoming.Viability.Plan.zip_keeps : ∀ {S X Y : Type u_1} {M N : Type u_2} {Q R : Type u_3}
+  {P : Generative.Process S (M × N)} {PX : Generative.Process X M} {PY : Generative.Process Y N} {πX : S → X}
+  {πY : S → Y} {left : X → M → X → Q} {right : Y → N → Y → R} {guardX : X → Prop} {guardY : Y → Prop}
+  {allowedX : X → M → Prop} {allowedY : Y → N → Prop} {allowed : S → M × N → Prop},
+  (∀ (s : S) (m : M × N) (t : S), P.step s m t → PX.step (πX s) m.fst (πX t) ∧ PY.step (πY s) m.snd (πY t)) →
+    ∀ {n : Nat} {p : Becoming.Viability.Plan M Q n} {q : Becoming.Viability.Plan N R n} {C : S → Prop} {CX : X → Prop}
+      {CY : Y → Prop},
+      (∀ (s : S), C s → CX (πX s) ∧ CY (πY s)) →
+        Becoming.Viability.Plan.Keeps PX left guardX allowedX p CX →
+          Becoming.Viability.Plan.Keeps PY right guardY allowedY q CY →
+            Becoming.Viability.Plan.Compatible P (Becoming.Viability.jointSense left right πX πY) allowed p q C →
+              Becoming.Viability.Plan.Keeps P (Becoming.Viability.jointSense left right πX πY)
+                (fun s => guardX (πX s) ∧ guardY (πY s)) allowed (p.zip q) C
+@Becoming.Viability.Plan.compatible_of_zip_keeps : ∀ {S : Type u_1} {M N : Type u_2} {Q R : Type u_3}
+  {P : Generative.Process S (M × N)} {sense : S → M × N → S → Q × R} {guard : S → Prop} {allowed : S → M × N → Prop}
+  {n : Nat} {p : Becoming.Viability.Plan M Q n} {q : Becoming.Viability.Plan N R n} {C : S → Prop},
+  Becoming.Viability.Plan.Keeps P sense guard allowed (p.zip q) C →
+    Becoming.Viability.Plan.Compatible P sense allowed p q C

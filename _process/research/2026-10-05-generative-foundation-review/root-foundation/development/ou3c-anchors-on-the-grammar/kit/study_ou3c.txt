@@ -32,7 +32,8 @@ Delta: (1) the bodies. None of the six anchors is its grammar term by rfl: each 
        (5) the measure. measure_grammar.py gives each central declaration one category: grammar, balance represented,
        anchor not reached, or no master law. Of the 118 distinct central declarations: {G} reach the grammar, {B} rest
        on balance (represented), {AN} rest on an anchor without reaching it, {NM} on no master law; the gap is {GAP}.
-       Of the 127 rows, {REACH} reach the grammar.
+       Of the 127 rows, {REACH} reach the grammar. One change since OU3b's measure is not this landing's:
+       Flow.new_beyond_every no longer rests on a finite-runs anchor, through main's changes since OU3b, before OU3c.
        (6) texts. 01 §7's closure, lumping and order bullets; 08 §7's measure sentence; 08's counts; the root module's
        GrammarLaws and ComparingCourses bullets, the checker's scope, the package README rows (EN, ZH).
 Supplied premises / correspondence: none new.

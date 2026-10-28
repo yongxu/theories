@@ -1,0 +1,24 @@
+import Becoming.SituationTraces
+#print axioms Becoming.SituationTraces.distinct_map
+#print axioms Becoming.SituationTraces.distinct_joinMap
+#print axioms Becoming.SituationTraces.distinct_upto
+#print axioms Becoming.SituationTraces.occ_pos
+#print axioms Becoming.SituationTraces.distinct_of_occ
+#print axioms Becoming.SituationTraces.distinct_openSteps
+#print axioms Becoming.SituationTraces.distinct_finerSteps
+#print axioms Becoming.SituationTraces.distinct_finer
+#print axioms Becoming.SituationTraces.FinerTrace
+#print axioms Becoming.SituationTraces.Traces
+#print axioms Becoming.SituationTraces.finer_traces
+#print axioms Becoming.SituationTraces.TwoTraces
+#print axioms Becoming.SituationTraces.finer_twoTraces
+#print axioms Becoming.SituationTraces.traces_count
+#print axioms Becoming.SituationTraces.course_traces
+#print axioms Becoming.SituationTraces.traces_typical
+#print axioms Becoming.SituationTraces.event_traces_count
+#print axioms Becoming.SituationTraces.event_traces_typical
+#print axioms Becoming.SituationTraces.event_traces_concentrated
+#print axioms Becoming.SituationTraces.course_traces_listed
+#print axioms Becoming.SituationTraces.signed_traces
+#print axioms Becoming.SituationTraces.cancels_traces
+#print axioms Becoming.SituationTraces.cancels_counts

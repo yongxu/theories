@@ -834,11 +834,18 @@
         "Becoming.Web.widensOrWithLagAlong_order",
         "Becoming.Web.widensOrWithLagAlong_reidentify",
         "Becoming.Web.widensOrWithLag_rename",
-        "Becoming.Web.widens_reidentify",
+        "Becoming.Web.widens_reidentify"
+      ],
+      "sha256": "0a0383a92a7706188f0792e9187855419349a8c29875ab88c1fe44abc1d07a0d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "declarations": [
         "Becoming.strictJoin_irrefl",
         "Becoming.strictJoin_trans"
       ],
-      "sha256": "e5d2cb98205f84165d0cefda8f65540d21379b3a3d34dcee65f987c3af632ee6"
+      "sha256": "af3ac5562c213f36fe6e2c286583c611e10c4734f3ca1290bc02583829a9f6ed"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
@@ -909,13 +916,25 @@
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
       "sha256": "7ace404140e2a9688e51b7147bcc85d8add9774e395f7dbbe802ef13a26c4c4e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
+      "role": "receipt",
+      "sha256": "3ab06c01fa4f143b64d67ef44d50d6e47ea19b78b384a03815df8e64ade0f020"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ComparingCourses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -928,6 +947,10 @@
     {
       "en": "27 October 2026, board item UE10 (study section 424): the next step updated: what a course keeps reachable is read in what-a-course-keeps-reachable; no declaration changed.",
       "zh": "2026年10月27日，工作板条目 UE10（研究第 424 节）：下一步随之更新：进程保持可达者于 what-a-course-keeps-reachable 中得读；无一声明改变。"
+    },
+    {
+      "en": "28 October 2026 (OU3c, study section 433): strictJoin_trans and strictJoin_irrefl moved into Becoming.GrammarLaws, beside widening's laws, by the decision of this record's owner; names and statements kept, but generalised to any universe; their proof reference and binding moved with them.",
+      "zh": "2026年10月28日（OU3c，研究第 433 节）：经本记录之主决定，strictJoin_trans 与 strictJoin_irrefl 移入 Becoming.GrammarLaws，置于扩大之律旁；名与陈述不变，唯推广至任一宇宙；其证明之引用与绑定随之移动。"
     }
   ]
 }
