@@ -1,0 +1,19 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3e-step-indexed-bridges/tree",
+  "modules": 17,
+  "ran": [],
+  "reused": 19,
+  "unclean": [],
+  "audits": {
+    "Becoming.Labelled": {
+      "theorems": 69,
+      "declarations": 108,
+      "with_axioms": {}
+    },
+    "Becoming.Withholding": {
+      "theorems": 40,
+      "declarations": 52,
+      "with_axioms": {}
+    }
+  }
+}

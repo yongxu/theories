@@ -1,0 +1,21 @@
+Becoming/Labelled.lean:938:52: error(lean.invalidField): Invalid field `steps`: The environment does not contain `Generative.Trace.steps`, so it is not possible to project the field `steps` from an expression
+  path
+of type `Trace P m✝ as✝ x✝`
+Becoming/Labelled.lean:950:70: error(lean.invalidField): Invalid field `steps`: The environment does not contain `Generative.Trace.steps`, so it is not possible to project the field `steps` from an expression
+  path
+of type `Trace P s word t`
+Becoming/Labelled.lean:962:71: error(lean.invalidField): Invalid field `steps`: The environment does not contain `Generative.Trace.steps`, so it is not possible to project the field `steps` from an expression
+  path
+of type `Trace P s✝ xs✝ t✝`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3e-step-indexed-bridges/build-tree",
+  "modules": 17,
+  "ran": [
+    "Becoming.Labelled"
+  ],
+  "reused": 15,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Labelled"
+}
