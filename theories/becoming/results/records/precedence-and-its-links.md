@@ -60,8 +60,9 @@ Causal set theory (Bombelli, Lee, Meyer and Sorkin 1987; Surya 2019): its links 
 
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «际», «及», «则», «及之传递» and «无环»: relations, reach and cycles.
 - related, not a proved adapter: [what-can-be-born-next](what-can-be-born-next.md). The configurations of causal-set growth are the causal sets here, on which precedence is the reach of its links where it is decidable.
+- related, not a proved adapter: [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md). The present on causal-set growth: a condition is present at the birth of what it conditions on some course exactly where it is a link below it (precedence weakly decided), and on every course exactly where that is the one element it is linked to.
 
-**Used by:** [what-can-be-born-next](what-can-be-born-next.md)
+**Used by:** [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md) · [what-can-be-born-next](what-can-be-born-next.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -83,6 +84,7 @@ Aliases: `Precedence and its links`, `先后与其覆盖`, `links of a causal se
 ### History
 
 - 28 October 2026: added (UE13), precedence and its links: a link of the root's reach is a step, so every net whose reach is a relation contains its links; on a naturally labelled transitive relation with decidable precedence, precedence is the reach of its links, with no finiteness; deciding what lies between cannot be dropped (excluded middle); not on ω + 1; after a review and a re-check; study section 431.
+- 28 October 2026, board item UE14 (study section 432): related to the-present-on-causal-set-growth; no statement, next step or declaration changed.
 
 </details>
 

@@ -98,6 +98,7 @@ import Becoming.ReachableRanges
 import Becoming.HeldPossible
 import Becoming.Tasks
 import Becoming.CausalGrowth
+import Becoming.Presence
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1296,7 +1297,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   does not suffice (`AllOrSegment.unlisted_consistent`), and along a merging continuation listed
   static courses close the cycle (`AlongMerging.no_order_ranks_along_listed`). Widening with a lag
   (`Web.IncludesLater`, `Web.WidensWithLag`): a transitive relation joined to the strict part of a
-  transitive relation containing it is transitive (`strictJoin_trans`), so widening or widening
+  transitive relation containing it is transitive (`strictJoin_trans`, a law of any two relations
+  in `Becoming.GrammarLaws`), so widening or widening
   with a lag is a strict partial order containing widening (`Web.strictJoin_order`,
   `Web.WidensOrWithLag.irrefl`, `Web.WidensOrWithLag.trans`), as are the orders of the other lags
   (`Web.widensOrWithFormationLag_order`, `Web.widensOrEachLater_order`). It reads names across
@@ -1468,6 +1470,32 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   birth do not reverse precedence (`CausalGrowth.Kinds.not_included_antichain_chain`,
   `CausalGrowth.Kinds.not_included_chain_antichain`). Each law is near-definitional, a witness or a
   calibration. A leaf (board item UE13).
+* `Becoming.Presence` (L1): the present on causal-set growth, read as the maximal elements of what a
+  course has born (`Presence.MaximalBorn`, the grammar's ending on what is born:
+  `Presence.maximalBorn_iff_ends`). The renumberings of a causal set keeping precedence
+  (`Presence.NaturalLabelling`) are exactly the orders of birth of the courses growing a configuration
+  of its kind (`Presence.natural_iff_course`), and births of unrelated elements commute and only they
+  (`Presence.rearranges_iff_natural`, the core's `rearranges_iff`). With precedence decided, an element
+  is born before another on every course exactly where it precedes it (`Presence.prec_iff_every`), so
+  what is born no later than an element on every course is its past with itself, the largest relation
+  every course respects (`Presence.past_every_iff`, `Presence.past_largest`); with precedence weakly
+  decided, on some course exactly where the two differ and it is not preceded by the other
+  (`Presence.before_some_iff`), and two different unrelated elements are born in either order
+  (`Presence.either_order`). The present at a stage is an antichain (`Presence.maximalBorn_unrelated`),
+  and with precedence weakly decided every antichain given by a test is one
+  (`Presence.antichain_present`); two elements are present together on some course exactly where
+  unrelated (`Presence.together_some_iff`) and, precedence decided, on every course exactly where they
+  have the same future (`Presence.together_every_iff`); a condition is present at the birth of what it
+  conditions on some course exactly where it is a link below it (`Presence.present_some_iff_link`), and
+  on every course, with no decision, exactly where that is the one element it is linked to
+  (`Presence.present_every_iff_only_link`). Asked of every causal set, each calibrated decision is
+  exactly excluded middle or its weak form (`Presence.every_iff_em`, `Presence.present_some_iff_weakly`). On
+  Wüthrich and Callender's four elements their relation, kept by every automorphism, is the past with
+  the pair present together on every course (`Presence.Diamond.pastOrPair_kept`,
+  `Presence.Diamond.pastOrPair_iff_together`), and elsewhere that join need not be transitive
+  (`Presence.SameFuture.pastOrTogether_not_trans`). Each main law is also stated on the courses of the
+  growth themselves (`Presence.every_course_iff`, `Presence.present_every_course_only_link`). Each law is
+  near-definitional, a lemma, a witness or a calibration. A leaf (board item UE14).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'
@@ -2739,13 +2767,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike
   (`«像定后当且仅当同行»`). Order: widening of relations is irreflexive, one-way and transitive and
-  excludes keeping and being mixed (`«广不可逆»`, `«广之传递»`). It imports the grammar, its map
+  excludes keeping and being mixed (`«广不可逆»`, `«广之传递»`); a transitive relation joined to the
+  strict part of a transitive relation containing it is transitive, and irreflexive where the first
+  is (`strictJoin_trans`, `strictJoin_irrefl`). It imports the grammar, its map
   and the prelude only, and `Becoming.Frame` imports it, so every model lies above it: closure is
-  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`; finite runs in
-  `Becoming.Recurrence`, `Becoming.Attraction` and `Becoming.Amounts`; lumping, bridged in
-  `Becoming.Laws`, in `Becoming.Mechanism`, `Becoming.GrammarRegularity` and
-  `Becoming.IdentificationRuns`; order in `Becoming.Admission`, `Becoming.Regions` and
-  `Becoming.Weightings`. Balance is represented both ways in `Becoming.Flow`
+  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`, and so is the step back of a
+  returning configuration in `Becoming.Junctures`; finite runs in `Becoming.Recurrence`,
+  `Becoming.Attraction` and `Becoming.Amounts`, and the lasso of a world a list holds in
+  `Becoming.Learning`; lumping, bridged in
+  `Becoming.Laws`, in `Becoming.Mechanism`, `Becoming.GrammarRegularity`,
+  `Becoming.IdentificationRuns` and `Becoming.LearningRuns`; order in `Becoming.Admission`,
+  `Becoming.Regions` and `Becoming.Weightings`, and the lagged orders of `Becoming.ComparingCourses`
+  and `Becoming.ReachableRanges` by `strictJoin_trans` (board item OU3c). Balance is represented both ways in `Becoming.Flow`
   (`Flow.balances_iff_units`) and not derived: its consumers need only the count, so their proofs
   stay arithmetic (board item OU3b).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order

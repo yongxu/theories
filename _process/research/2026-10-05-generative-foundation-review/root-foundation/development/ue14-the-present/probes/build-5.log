@@ -1,0 +1,19 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/probes/tree",
+  "modules": 84,
+  "ran": [],
+  "reused": 86,
+  "unclean": [],
+  "audits": {
+    "Becoming.Presence": {
+      "theorems": 99,
+      "declarations": 120,
+      "with_axioms": {}
+    },
+    "Becoming.PresenceProbe": {
+      "theorems": 57,
+      "declarations": 63,
+      "with_axioms": {}
+    }
+  }
+}

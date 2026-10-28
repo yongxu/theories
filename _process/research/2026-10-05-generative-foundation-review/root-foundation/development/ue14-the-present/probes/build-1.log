@@ -1,0 +1,193 @@
+pure.elim`
+  • `Lean.Parser.Tactic.MCasesPat.stateful.elim`
+  • `Lean.Parser.Tactic.MCasesPat.tuple.elim`
+  • `Lean.Parser.Tactic.MRefinePat.hole.elim`
+  • `Lean.Parser.Tactic.MRefinePat.one.elim`
+  • `Lean.Parser.Tactic.MRefinePat.pure.elim`
+  • `Lean.Parser.Tactic.MRefinePat.stateful.elim`
+  • `Lean.Parser.Tactic.MRefinePat.tuple.elim`
+  • `Std.DHashMap.Internal.AssocList.cons.elim`
+  • `Std.DHashMap.Internal.AssocList.nil.elim`
+  • `Std.DTreeMap.Internal.Impl.inner.elim`
+  • `Std.DTreeMap.Internal.Impl.leaf.elim`
+  • `Std.DTreeMap.Internal.Zipper.cons.elim`
+  • `Std.DTreeMap.Internal.Zipper.done.elim`
+  • `Std.Internal.Parsec.Error.eof.elim`
+  • `Std.Internal.Parsec.Error.other.elim`
+  • `Std.Internal.Parsec.ParseResult.error.elim`
+  • `Std.Internal.Parsec.ParseResult.success.elim`
+  • `Std.Sat.AIG.Decl.atom.elim`
+  • `Std.Sat.AIG.Decl.false.elim`
+  • `Std.Sat.AIG.Decl.gate.elim`
+  • `Std.Tactic.BVDecide.BVBinOp.add.elim`
+  • `Std.Tactic.BVDecide.BVBinOp.and.elim`
+  • `Std.Tactic.BVDecide.BVBinOp.mul.elim`
+  • `Std.Tactic.BVDecide.BVBinOp.or.elim`
+  • `Std.Tactic.BVDecide.BVBinOp.udiv.elim`
+  • `Std.Tactic.BVDecide.BVBinOp.umod.elim`
+  • `Std.Tactic.BVDecide.BVBinOp.xor.elim`
+  • `Std.Tactic.BVDecide.BVBinPred.eq.elim`
+  • `Std.Tactic.BVDecide.BVBinPred.ult.elim`
+  • `Std.Tactic.BVDecide.BVExpr.append.elim`
+  • `Std.Tactic.BVDecide.BVExpr.arithShiftRight.elim`
+  • `Std.Tactic.BVDecide.BVExpr.bin.elim`
+  • `Std.Tactic.BVDecide.BVExpr.const.elim`
+  • `Std.Tactic.BVDecide.BVExpr.extract.elim`
+  • `Std.Tactic.BVDecide.BVExpr.replicate.elim`
+  • `Std.Tactic.BVDecide.BVExpr.shiftLeft.elim`
+  • `Std.Tactic.BVDecide.BVExpr.shiftRight.elim`
+  • `Std.Tactic.BVDecide.BVExpr.un.elim`
+  • `Std.Tactic.BVDecide.BVExpr.var.elim`
+  • `Std.Tactic.BVDecide.BVPred.bin.elim`
+  • `Std.Tactic.BVDecide.BVPred.getLsbD.elim`
+  • `Std.Tactic.BVDecide.BVUnOp.arithShiftRightConst.elim`
+  • `Std.Tactic.BVDecide.BVUnOp.clz.elim`
+  • `Std.Tactic.BVDecide.BVUnOp.not.elim`
+  • `Std.Tactic.BVDecide.BVUnOp.reverse.elim`
+  • `Std.Tactic.BVDecide.BVUnOp.rotateLeft.elim`
+  • `Std.Tactic.BVDecide.BVUnOp.rotateRight.elim`
+  • `Std.Tactic.BVDecide.BoolExpr.const.elim`
+  • `Std.Tactic.BVDecide.BoolExpr.gate.elim`
+  • `Std.Tactic.BVDecide.BoolExpr.ite.elim`
+  • `Std.Tactic.BVDecide.BoolExpr.literal.elim`
+  • `Std.Tactic.BVDecide.BoolExpr.not.elim`
+  • `Std.Tactic.BVDecide.Gate.and.elim`
+  • `Std.Tactic.BVDecide.Gate.beq.elim`
+  • `Std.Tactic.BVDecide.Gate.or.elim`
+  • `Std.Tactic.BVDecide.Gate.xor.elim`
+  • `Std.Time.TimeZone.StdWall.standard.elim`
+  • `Std.Time.TimeZone.StdWall.wall.elim`
+  • `Std.Time.TimeZone.UTLocal.local.elim`
+  • `Std.Time.TimeZone.UTLocal.ut.elim`
+  • `Std.Time.Year.Era.bce.elim`
+  • `Std.Time.Year.Era.ce.elim`
+  • `String.Slice.Pattern.ForwardSliceSearcher.atEnd.elim`
+  • `String.Slice.Pattern.ForwardSliceSearcher.emptyAt.elim`
+  • `String.Slice.Pattern.ForwardSliceSearcher.emptyBefore.elim`
+  • `String.Slice.Pattern.ForwardSliceSearcher.proper.elim`
+  • `String.Slice.Pattern.SearchStep.matched.elim`
+  • `String.Slice.Pattern.SearchStep.rejected.elim`
+  • `Std.DTreeMap.Internal.Impl.ExplorationStep.eq.elim`
+  • `Std.DTreeMap.Internal.Impl.ExplorationStep.gt.elim`
+  • `Std.DTreeMap.Internal.Impl.ExplorationStep.lt.elim`
+  • `Std.Internal.IO.Async.MaybeTask.ofTask.elim`
+  • `Std.Internal.IO.Async.MaybeTask.pure.elim`
+  • `Std.Internal.IO.Async.Signal.sigabrt.elim`
+  • `Std.Internal.IO.Async.Signal.sigalrm.elim`
+  • `Std.Internal.IO.Async.Signal.sigchld.elim`
+  • `Std.Internal.IO.Async.Signal.sigcont.elim`
+  • `Std.Internal.IO.Async.Signal.sigemt.elim`
+  • `Std.Internal.IO.Async.Signal.sighup.elim`
+  • `Std.Internal.IO.Async.Signal.siginfo.elim`
+  • `Std.Internal.IO.Async.Signal.sigint.elim`
+  • `Std.Internal.IO.Async.Signal.sigio.elim`
+  • `Std.Internal.IO.Async.Signal.sigprof.elim`
+  • `Std.Internal.IO.Async.Signal.sigquit.elim`
+  • `Std.Internal.IO.Async.Signal.sigsys.elim`
+  • `Std.Internal.IO.Async.Signal.sigterm.elim`
+  • `Std.Internal.IO.Async.Signal.sigtrap.elim`
+  • `Std.Internal.IO.Async.Signal.sigtstp.elim`
+  • `Std.Internal.IO.Async.Signal.sigttin.elim`
+  • `Std.Internal.IO.Async.Signal.sigttou.elim`
+  • `Std.Internal.IO.Async.Signal.sigurg.elim`
+  • `Std.Internal.IO.Async.Signal.sigusr1.elim`
+  • `Std.Internal.IO.Async.Signal.sigusr2.elim`
+  • `Std.Internal.IO.Async.Signal.sigvtalrm.elim`
+  • `Std.Internal.IO.Async.Signal.sigwinch.elim`
+  • `Std.Internal.IO.Async.Signal.sigxcpu.elim`
+  • `Std.Internal.IO.Async.Signal.sigxfsz.elim`
+  • `Std.Tactic.BVDecide.LRAT.Action.addEmpty.elim`
+  • `Std.Tactic.BVDecide.LRAT.Action.addRat.elim`
+  • `Std.Tactic.BVDecide.LRAT.Action.addRup.elim`
+  • `Std.Tactic.BVDecide.LRAT.Action.del.elim`
+  • `Lean.Elab.Tactic.BVDecide.Frontend.SolverMode.counterexample.elim`
+  • `Lean.Elab.Tactic.BVDecide.Frontend.SolverMode.default.elim`
+  • `Lean.Elab.Tactic.BVDecide.Frontend.SolverMode.proof.elim`
+  • `Std.Internal.IO.Async.UDP.Membership.enterGroup.elim`
+  • `Std.Internal.IO.Async.UDP.Membership.leaveGroup.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.Assignment.both.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.Assignment.neg.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.Assignment.pos.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.Assignment.unassigned.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.ReduceResult.encounteredBoth.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.ReduceResult.reducedToEmpty.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.ReduceResult.reducedToNonunit.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.ReduceResult.reducedToUnit.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.Result.outOfProof.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.Result.rupFailure.elim`
+  • `Std.Tactic.BVDecide.LRAT.Internal.Result.success.elim`
+Becoming/PresenceProbe.lean:309:27: error: Application type mismatch: The argument
+  spec j (ordered.within pair)
+has type
+  w✝ j = true ↔ (fun x => c.prec x k ∨ x = k) j
+but is expected to have type
+  w✝ j = true ↔ ?m.124 pair after k link ne x✝ w✝ spec j
+in the application
+  table_false (spec j (ordered.within pair))
+Becoming/PresenceProbe.lean:409:47: error: Function expected at
+  outside
+but this term has type
+  ?m.142 w✝ spec y
+
+Note: Expected a function because this term is being applied to the argument
+  (.inl rfl)
+Becoming/PresenceProbe.lean:409:20: error: Application type mismatch: The argument
+  spec y hy
+has type
+  w✝ y = true ↔ (fun z => ¬(z = y ∨ c.prec y z)) y
+but is expected to have type
+  w✝ y = true ↔ ?m.142 w✝ spec y
+in the application
+  table_false (spec y hy)
+Becoming/PresenceProbe.lean:468:65: error: Function expected at
+  outside
+but this term has type
+  ?m.200 f spec passes k pair k
+
+Note: Expected a function because this term is being applied to the argument
+  (.inl pair)
+Becoming/PresenceProbe.lean:470:65: error: Function expected at
+  outside
+but this term has type
+  ?m.203 f spec passes k pair k
+
+Note: Expected a function because this term is being applied to the argument
+  (.inr pair)
+Becoming/PresenceProbe.lean:470:19: error: Application type mismatch: The argument
+  spec k (ordered.within pair)
+has type
+  f k = true ↔ (fun z => ¬(c.prec x z ∨ c.prec y z)) k
+but is expected to have type
+  f k = true ↔ ?m.203 f spec passes k pair k
+in the application
+  table_false (spec k (ordered.within pair))
+Becoming/PresenceProbe.lean:530:76: error: Function expected at
+  nn
+but this term has type
+  ?m.265 f spec x qx k pair k
+
+Note: Expected a function because this term is being applied to the argument
+  fun ⟨y, qy, hky⟩ =>
+    match hky with
+    | .inl e => apart qx qy (Eq.subst (motive := fun w => c.prec x w) e pair)
+    | .inr p => apart qx qy (ordered.trans pair p)
+Becoming/PresenceProbe.lean:530:35: error: Application type mismatch: The argument
+  spec k (ordered.within pair)
+has type
+  f k = true ↔ (fun z => ¬¬∃ y, q y = true ∧ (z = y ∨ c.prec z y)) k
+but is expected to have type
+  f k = true ↔ ?m.265 f spec x qx k pair k
+in the application
+  table_false (spec k (ordered.within pair))
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/probes/tree",
+  "modules": 84,
+  "ran": [
+    "Becoming.PresenceProbe"
+  ],
+  "reused": 84,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.PresenceProbe"
+}

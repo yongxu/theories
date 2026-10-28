@@ -115,12 +115,14 @@ theorem Juncture.returns {x : S} (from_s : Reach P s x) (juncture : Juncture P s
   match juncture.1 with
   | ⟨a, y, step, back⟩ => ⟨a, y, step, back.trans from_s⟩
 
-/-- Where `s` returns, a configuration that can have `s` has a step after which it still can. -/
-theorem step_back (returns : Returns P s) {x : S} : Reach P x s → ∃ a y, P.step x a y ∧ Reach P y s
-  | ⟨[], path⟩ => by
-    cases path
-    exact returns
-  | ⟨_ :: as, .cons step rest⟩ => ⟨_, _, step, as, rest⟩
+/-- Where `s` returns, a configuration that can have `s` has a step after which it still can: on
+the steps of `P`, the grammar's closure is identity or reach (`«所闭当且仅当同一或及»`) and reach is a
+step and then the closure (`«及当且仅当一步而所闭»`); at `s` itself the step is the return. -/
+theorem step_back (returns : Returns P s) {x : S} : Reach P x s → ∃ a y, P.step x a y ∧ Reach P y s :=
+  fun back => match «所闭当且仅当同一或及».mp (reach_iff_withinClosure.mp back) with
+  | .inl same => Eq.subst (motive := fun z => ∃ a y, P.step z a y ∧ Reach P y s) same.symm returns
+  | .inr reach => match «及当且仅当一步而所闭».mp reach with
+    | ⟨y, ⟨a, step⟩, within⟩ => ⟨a, y, step, reach_iff_withinClosure.mpr within⟩
 
 /-! ## Every loss passes a juncture -/
 

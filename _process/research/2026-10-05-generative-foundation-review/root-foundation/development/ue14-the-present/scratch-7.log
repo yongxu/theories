@@ -1,0 +1,27 @@
+Becoming/Presence.lean:170:39: error: Expected type must not contain free variables
+  ¬(false && x✝) = true
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Becoming/Presence.lean:696:13: warning: unused variable `k`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/Presence.lean:784:10: error: Application type mismatch: The argument
+  CausalGrowth.reach_links_le (fun {i j k} => ordered.trans) ?m.111
+has type
+  c.prec ?m.108 ?m.108
+but is expected to have type
+  c.prec y✝ k
+in the application
+  Eq.subst (only y✝ step) (CausalGrowth.reach_links_le (fun {i j k} => ordered.trans) ?m.111)
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/tree",
+  "modules": 82,
+  "ran": [
+    "Becoming.Presence"
+  ],
+  "reused": 81,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Presence"
+}

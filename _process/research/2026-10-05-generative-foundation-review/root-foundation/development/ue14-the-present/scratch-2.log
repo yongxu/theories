@@ -1,0 +1,17 @@
+Becoming/Presence.lean:476:33: error: Expected type must not contain free variables
+  1 < (onlyIf P).size
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/tree",
+  "modules": 82,
+  "ran": [
+    "Becoming.Presence"
+  ],
+  "reused": 81,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Presence"
+}
+exit 1

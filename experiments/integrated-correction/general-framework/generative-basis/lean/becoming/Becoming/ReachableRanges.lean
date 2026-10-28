@@ -777,24 +777,23 @@ never ranks a configuration above one covering it. It decides `WiderNow`'s pair
 def Reaching.WidensOrLater (P : Process S A) (adm : S → X → Prop) (s s' : S) : Prop :=
   Reaching.Widens P adm s s' ∨ Reaching.WidensWithLag P adm s s'
 
-theorem Reaching.WidensOrLater.irrefl (s : S) : ¬ Reaching.WidensOrLater P adm s s
-  | .inl widens => Reaching.Widens.irrefl s widens
-  | .inr ⟨later, notBack⟩ => notBack later
+/-- The lagged order is irreflexive: widening what can be reached is, and the strict part of
+covering with some lag joined to it is (`strictJoin_irrefl`, a law of any two relations in the
+grammar's laws). -/
+theorem Reaching.WidensOrLater.irrefl (s : S) : ¬ Reaching.WidensOrLater P adm s s :=
+  strictJoin_irrefl (S := Reaching.Widens P adm) (P := fun a b => ∃ d, Reaching.CoversLater P adm d a b)
+    (Reaching.Widens.irrefl s)
 
-/-- **The lagged order is transitive**, proved directly as UE9's `strictJoin_trans` is, at
-configurations of any universe. -/
+/-- **The lagged order is transitive**: widening what can be reached is transitive, covering with
+some lag is, and what widens covers with lag zero, so the join is (`strictJoin_trans`, a law of any
+two relations in the grammar's laws). -/
 theorem Reaching.WidensOrLater.trans {s s' s'' : S} :
     Reaching.WidensOrLater P adm s s' → Reaching.WidensOrLater P adm s' s'' →
-      Reaching.WidensOrLater P adm s s''
-  | .inl first, .inl second => .inl (first.trans second)
-  | .inl first, .inr ⟨⟨e, later⟩, notBack⟩ =>
-    .inr ⟨⟨e + 0, (Reaching.CoversLater.zero.mpr first.1).trans later⟩,
-      fun ⟨d, back⟩ => notBack ⟨0 + d, back.trans (Reaching.CoversLater.zero.mpr first.1)⟩⟩
-  | .inr ⟨⟨d, later⟩, notBack⟩, .inl second =>
-    .inr ⟨⟨0 + d, later.trans (Reaching.CoversLater.zero.mpr second.1)⟩,
-      fun ⟨e, back⟩ => notBack ⟨e + 0, (Reaching.CoversLater.zero.mpr second.1).trans back⟩⟩
-  | .inr ⟨⟨d, later⟩, notBack⟩, .inr ⟨⟨e, later'⟩, _⟩ =>
-    .inr ⟨⟨e + d, later.trans later'⟩, fun ⟨f, back⟩ => notBack ⟨f + e, later'.trans back⟩⟩
+      Reaching.WidensOrLater P adm s s'' :=
+  strictJoin_trans (S := Reaching.Widens P adm) (P := fun a b => ∃ d, Reaching.CoversLater P adm d a b)
+    (fun first second => first.trans second)
+    (fun ⟨d, later⟩ ⟨e, later'⟩ => ⟨e + d, later.trans later'⟩)
+    (fun widens => ⟨0, Reaching.CoversLater.zero.mpr widens.1⟩)
 
 /-- **The lagged order never ranks a configuration above one covering it.** -/
 theorem Reaching.WidensOrLater.not_covered {s s' : S} (above : Reaching.WidensOrLater P adm s s') :

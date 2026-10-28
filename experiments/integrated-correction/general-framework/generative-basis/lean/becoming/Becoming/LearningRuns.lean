@@ -57,10 +57,11 @@ identity (`Parting.freeRun`), and every run of a determined law is its orbit
 No ethical predicate, ranking or axiom occurs.
 
 Declarations moved here unchanged, with their names, from `Becoming.Learning` (board item W): see
-the sections so headed.
+the sections so headed. In the first, `lumped_iff_fixed_image` is new and `goAlike_iff_lumped` is
+proved from the grammar's law of the image (board item OU3c).
 -/
 
-/-! ## Going alike, at a step and lumped (moved from `Becoming.Learning`) -/
+/-! ## Going alike, at a step and lumped (moved from `Becoming.Learning`; `lumped_iff_fixed_image` new) -/
 
 namespace Becoming
 
@@ -95,13 +96,25 @@ theorem transfer_right_iff {P : Process S A} {π : S → K} (determined : Determ
     (congrArg π (determined s₀ a u₁ u₀ step₁ observed)).trans (transfer u step).symm,
    fun alike u step => (alike u₀ u observed step).symm⟩
 
+/-- The next configuration of a determined law, read through a map, goes alike across what the map
+lumps exactly where the image of the law along the map has a fixed successor (`«定后»`). -/
+theorem lumped_iff_fixed_image {next : S → S} {π : S → K} :
+    Lumped π (fun s => π (next s)) ↔ «定后» («像» π (fun s t => (Law.process next).step s () t)) :=
+  ⟨fun lumped _ _ ⟨_, ⟨s, _, at_k, step, to⟩, ⟨s', _, at_k', step', to'⟩⟩ =>
+    to.symm.trans ((congrArg π step).trans ((lumped s s' (at_k.trans at_k'.symm)).trans
+      ((congrArg π step').symm.trans to'))),
+   fun fixed s s' same => fixed (π (next s)) (π (next s'))
+      ⟨π s, ⟨s, next s, rfl, rfl, rfl⟩, ⟨s', next s', same.symm, rfl, rfl⟩⟩⟩
+
 /-- **Structure and change are one lumping.** A determined law goes alike under `π` exactly
-where the next configuration, read through `π`, goes alike across what `π` lumps. -/
+where the next configuration, read through `π`, goes alike across what `π` lumps: the grammar's law
+of the image (`«像定后当且仅当同行»`) on the law's one move, going alike being the grammar's
+(`goAlikeUnder_iff_alike`) and the lumping the image's fixed successor (`lumped_iff_fixed_image`). -/
 theorem goAlike_iff_lumped {next : S → S} {π : S → K} :
     GoAlike (Law.process next) π ↔ Lumped π (fun s => π (next s)) :=
-  ⟨fun alike s s' same => alike s s' () (next s) (next s') same rfl rfl,
-   fun lumped s s' _ _ _ same step step' =>
-    (congrArg π step).trans ((lumped s s' same).trans (congrArg π step').symm)⟩
+  goAlikeUnder_iff_alike.trans
+    ⟨fun alike => lumped_iff_fixed_image.mpr («像定后当且仅当同行».mpr (alike ())),
+     fun lumped _ => «像定后当且仅当同行».mp (lumped_iff_fixed_image.mp lumped)⟩
 
 end Change
 

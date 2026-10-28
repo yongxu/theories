@@ -524,6 +524,13 @@
         "en": "Internal temporality read as holding the past, so the held possible is the whole possible on causal-set growth.",
         "zh": "内在时间性读作持守过去，故于因果集之生长上持守之可能即全部可能。"
       }
+    },
+    {
+      "id": "the-present-on-causal-set-growth",
+      "detail": {
+        "en": "The present on causal-set growth: the natural labellings of a causal set are exactly the orders of birth of the courses from the empty set growing a configuration of its kind.",
+        "zh": "因果集生长上之现在：一因果集之自然编号，恰为自空集起生同种构型之诸历程之生序。"
+      }
     }
   ],
   "references": [
@@ -718,7 +725,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
       "role": "proof",
-      "sha256": "e3f529f6899b77eb1691c2fd60acc38e228a697e1628345b928a17e9a32a2e83"
+      "sha256": "aade1c4983cb7c819f216557b66b2be6c08420caa59443ba0f564f9ac3499d87"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
@@ -774,6 +781,10 @@
     {
       "en": "28 October 2026: added (UE13), what can be born next against what continues: sequential growth a process holding the past, on whose every course from a causal set what can be born next keeps widening; the stems reverse the inclusion of precedence, labelled or up to relabelling, so widening adds no continuation; read on what continues the order reverses and no strict order contains both; finding the pair a widening loses is excluded middle; most comparisons need the empty start; no configuration renews without end; a finer class on links; kinds of birth not so ordered; after a review and a re-check; study section 431.",
       "zh": "2026年10月28日：新增（UE13），次可生者与相续：序贯生长为持守过去之过程，自因果集起之每一历程上次可生者不断扩大；茎反转先后之包含（有标号或重编号下皆然），故扩大不增相续；读于相续则序反转，无一严格之序兼含二者；求扩大所失之对即排中律；多数比较需自空集起；无构型生生不息；读于覆盖之较细之类；生之种类不如是排序；经审查与复查；研究第 431 节。"
+    },
+    {
+      "en": "28 October 2026, board item UE14 (study section 432): related to the-present-on-causal-set-growth; no statement, next step or declaration changed.",
+      "zh": "2026年10月28日，工作板条目 UE14（研究第 432 节）：与 the-present-on-causal-set-growth 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

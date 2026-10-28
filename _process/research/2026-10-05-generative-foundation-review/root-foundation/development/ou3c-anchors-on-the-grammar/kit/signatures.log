@@ -1,0 +1,33 @@
+{
+ "old_receipt": "20261028T054831.888463Z",
+ "new_receipt": "20261028T061626.538602Z",
+ "declarations_old": 599,
+ "declarations_new": 600,
+ "changed": [
+  "Becoming.strictJoin_irrefl",
+  "Becoming.strictJoin_trans"
+ ],
+ "gone": [],
+ "added": [
+  "Becoming.Learning.lumped_iff_fixed_image"
+ ],
+ "definitions_rewritten": [],
+ "definitions_gone": []
+}
+--- Becoming.strictJoin_irrefl 
+old: @Becoming.strictJoin_irrefl : ∀ {α : Type} {S P : α → α → Prop} {a : α}, ¬S a a → ¬(S a a ∨ P a a ∧ ¬P a a) 
+new: @Becoming.strictJoin_irrefl : ∀ {α : Type u_1} {S P : α → α → Prop} {a : α}, ¬S a a → ¬(S a a ∨ P a a ∧ ¬P a a)
+--- Becoming.strictJoin_trans 
+old: @Becoming.strictJoin_trans : ∀ {α : Type} {S P : α → α → Prop},
+  (∀ {a b c : α}, S a b → S b c → S a c) →
+    (∀ {a b c : α}, P a b → P b c → P a c) →
+      (∀ {a b : α}, S a b → P a b) →
+        ∀ {a b c : α}, S a b ∨ P a b ∧ ¬P b a → S b c ∨ P b c ∧ ¬P c b → S a c ∨ P a c ∧ ¬P c a 
+new: @Becoming.strictJoin_trans : ∀ {α : Type u_1} {S P : α → α → Prop},
+  (∀ {a b c : α}, S a b → S b c → S a c) →
+    (∀ {a b c : α}, P a b → P b c → P a c) →
+      (∀ {a b : α}, S a b → P a b) →
+        ∀ {a b c : α}, S a b ∨ P a b ∧ ¬P b a → S b c ∨ P b c ∧ ¬P c b → S a c ∨ P a c ∧ ¬P c a
+deliberate change (the one): Becoming.strictJoin_trans and Becoming.strictJoin_irrefl, moved from ComparingCourses to GrammarLaws and generalised from Type to Type u: the statement now covers more, every earlier use an instance: ['Becoming.strictJoin_irrefl', 'Becoming.strictJoin_trans']
+statements otherwise unchanged in the six modules; one new declaration: ['Becoming.Learning.lumped_iff_fixed_image']
+OK

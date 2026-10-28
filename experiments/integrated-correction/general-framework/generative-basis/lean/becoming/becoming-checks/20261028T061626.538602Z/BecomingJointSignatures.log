@@ -1,0 +1,185 @@
+@Becoming.Dependence.keeps_not_breaks : ∀ {S : Type u_1} {F C : Type} {K : Becoming.Dependence S F C} {s t : S} {g : F}
+  {c : C}, K.Keeps s t g c → ¬K.Breaks s t g c
+@Becoming.Dependence.along_kept : ∀ {S : Type u_1} {A : Type u_2} {F C : Type} {K : Becoming.Dependence S F C}
+  {P : Generative.Process S A} (r : Becoming.Run P) (n : Nat) (g : F) (c : C),
+  (K.along r).Kept n g c ↔ K.Keeps (r.state n) (r.state (n + 1)) g c
+@Becoming.Dependence.along_broken : ∀ {S : Type u_1} {A : Type u_2} {F C : Type} {K : Becoming.Dependence S F C}
+  {P : Generative.Process S A} (r : Becoming.Run P) (n : Nat) (g : F) (c : C),
+  (K.along r).Broken n g c ↔ K.Breaks (r.state n) (r.state (n + 1)) g c
+@Becoming.Dependence.Overdetermined.no_difference : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  {K : Becoming.Dependence S F C} {P : Generative.Process S A} {withhold : F → S → S} {s : S} {a : A} {g : F} {c : C},
+  K.Overdetermined P withhold s a g c → ∀ (f : F), ¬K.MakesDifference P withhold f s a g c
+@Becoming.Dependence.determined_dichotomy : ∀ {S : Type u_1} {A : Type u_2} {F C : Type} {K : Becoming.Dependence S F C}
+  {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ {withhold : F → S → S} {f : F} {s : S} {a : A} {g : F} {c : C},
+      K.BreaksBy P s a g c →
+        ∀ {t₀ : S},
+          P.step (withhold f s) a t₀ →
+            K.requires (withhold f s) g c →
+              K.need (withhold f s) g c ≤ K.level (withhold f s) c →
+                K.MakesDifference P withhold f s a g c ∨ K.BreaksBy P (withhold f s) a g c
+@Becoming.Dependence.makesDifference_iff_together : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  {K : Becoming.Dependence S F C} {P : Generative.Process S A} {withhold : F → S → S} {f : F} {s : S} {a : A} {g : F}
+  {c : C}, K.MakesDifference P withhold f s a g c ↔ K.MakesDifferenceTogether P withhold [f] s a g c
+@Becoming.Dependence.keeps_iff_not_breaks : ∀ {S : Type u_1} {A : Type u_2} {F C : Type} {K : Becoming.Dependence S F C}
+  {P : Generative.Process S A} {r : S} {a : A} {g : F} {c : C},
+  K.requires r g c → K.need r g c ≤ K.level r c → ((∀ (t : S), P.step r a t → K.Keeps r t g c) ↔ ¬K.BreaksBy P r a g c)
+@Becoming.Dependence.makesDifference_iff : ∀ {S : Type u_1} {A : Type u_2} {F C : Type} {K : Becoming.Dependence S F C}
+  {P : Generative.Process S A} {withhold : F → S → S} {f : F} {s : S} {a : A} {g : F} {c : C},
+  K.BreaksBy P s a g c →
+    (∃ t, P.step (withhold f s) a t) →
+      K.requires (withhold f s) g c →
+        K.need (withhold f s) g c ≤ K.level (withhold f s) c →
+          (K.MakesDifference P withhold f s a g c ↔ ¬K.BreaksBy P (withhold f s) a g c)
+@Becoming.Dependence.breaksBy_iff_level : ∀ {S : Type u_1} {A : Type u_2} {F C : Type} {K : Becoming.Dependence S F C}
+  {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ {r t₀ : S} {a : A} {g : F} {c : C},
+      P.step r a t₀ →
+        K.requires r g c → K.need r g c ≤ K.level r c → (K.BreaksBy P r a g c ↔ K.level t₀ c < K.need r g c)
+@Becoming.Dependence.DifferenceOnlyTogether.of_breaks : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  {K : Becoming.Dependence S F C} {P : Generative.Process S A} {withhold : F → S → S} {fs : List F} {s : S} {a : A}
+  {g : F} {c : C},
+  K.MakesDifferenceTogether P withhold fs s a g c →
+    (∀ (f : F), f ∈ fs → K.BreaksBy P (withhold f s) a g c) → K.DifferenceOnlyTogether P withhold fs s a g c
+@Becoming.Dependence.Overdetermined.only_together : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  {K : Becoming.Dependence S F C} {P : Generative.Process S A} {withhold : F → S → S} {fs : List F} {s : S} {a : A}
+  {g : F} {c : C},
+  K.Overdetermined P withhold s a g c →
+    K.MakesDifferenceTogether P withhold fs s a g c → K.DifferenceOnlyTogether P withhold fs s a g c
+@Becoming.Dependence.differenceOnlyTogether_iff : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  {K : Becoming.Dependence S F C} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ {withhold : F → S → S} {fs : List F} {s : S} {a : A} {g : F} {c : C},
+      (∀ (f : F), f ∈ fs → ∃ t, P.step (withhold f s) a t) →
+        (∀ (f : F), f ∈ fs → K.requires (withhold f s) g c) →
+          (∀ (f : F), f ∈ fs → K.need (withhold f s) g c ≤ K.level (withhold f s) c) →
+            (K.DifferenceOnlyTogether P withhold fs s a g c ↔
+              K.MakesDifferenceTogether P withhold fs s a g c ∧ ∀ (f : F), f ∈ fs → K.BreaksBy P (withhold f s) a g c)
+@Becoming.Dependence.DifferenceOnlyTogether.two_le_length : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  {K : Becoming.Dependence S F C} {P : Generative.Process S A} {withhold : F → S → S} {fs : List F} {s : S} {a : A}
+  {g : F} {c : C}, K.DifferenceOnlyTogether P withhold fs s a g c → 2 ≤ fs.length
+Becoming.Shock.determined : Becoming.Determined Becoming.Shock.process
+Becoming.Shock.move_decides : Becoming.Shock.dependence.MakesDifference Becoming.Shock.process Becoming.Shock.withhold
+    Becoming.Shock.Formation.drawer Becoming.Shock.start (Becoming.Shock.Move.calm 2)
+    Becoming.Shock.Formation.sustaining () ∧
+  Becoming.Shock.dependence.Overdetermined Becoming.Shock.process Becoming.Shock.withhold Becoming.Shock.start
+      Becoming.Shock.Move.shock Becoming.Shock.Formation.sustaining () ∧
+    ¬Becoming.Shock.dependence.MakesDifference Becoming.Shock.process Becoming.Shock.withhold
+        Becoming.Shock.Formation.drawer Becoming.Shock.start Becoming.Shock.Move.shock
+        Becoming.Shock.Formation.sustaining ()
+Becoming.Hidden.shock_in_the_step : ¬Becoming.Determined Becoming.Hidden.process ∧
+  Becoming.Shock.dependence.Overdetermined Becoming.Hidden.process Becoming.Shock.withhold Becoming.Shock.start ()
+      Becoming.Shock.Formation.sustaining () ∧
+    ¬Becoming.Shock.dependence.MakesDifference Becoming.Hidden.process Becoming.Shock.withhold
+          Becoming.Shock.Formation.drawer Becoming.Shock.start () Becoming.Shock.Formation.sustaining () ∧
+      Becoming.Hidden.process.step (Becoming.Shock.withhold Becoming.Shock.Formation.drawer Becoming.Shock.start) ()
+          { level := 2, taking := 0 } ∧
+        Becoming.Shock.dependence.Keeps (Becoming.Shock.withhold Becoming.Shock.Formation.drawer Becoming.Shock.start)
+          { level := 2, taking := 0 } Becoming.Shock.Formation.sustaining ()
+Becoming.Pool.determined : Becoming.Determined Becoming.Pool.process
+Becoming.Pool.breaks_from_one : ∀ (d next : Becoming.Pool.Draw),
+  1 + 1 - d.total = 0 →
+    Becoming.Pool.dependence.BreaksBy Becoming.Pool.process { level := 1, drawing := d } next
+      Becoming.Pool.Formation.sustaining ()
+Becoming.Pool.steady_consumed : ∀ (d : Becoming.Pool.Draw)
+  (steps : ∀ (n : Nat), Becoming.Pool.process.step (Becoming.Pool.steady d n) d (Becoming.Pool.steady d (n + 1))),
+  (Becoming.Pool.dependence.along { state := Becoming.Pool.steady d, act := fun x => d, step := steps }).Consumed ()
+Becoming.Pool.all_overdetermined : Becoming.Pool.dependence.Overdetermined Becoming.Pool.process Becoming.Pool.withhold
+  { level := 1, drawing := Becoming.Pool.all } Becoming.Pool.all Becoming.Pool.Formation.sustaining ()
+Becoming.Pool.difference_belongs_to_the_joint : (Becoming.Pool.pairRun.state 0).level =
+    (Becoming.Pool.allRun.state 0).level ∧
+  (Becoming.Pool.pairRun.state 0).drawing.first = (Becoming.Pool.allRun.state 0).drawing.first ∧
+    Becoming.Pool.dependence.MakesDifference Becoming.Pool.process Becoming.Pool.withhold Becoming.Pool.Formation.first
+        (Becoming.Pool.pairRun.state 0) (Becoming.Pool.pairRun.act 0) Becoming.Pool.Formation.sustaining () ∧
+      Becoming.Pool.dependence.Overdetermined Becoming.Pool.process Becoming.Pool.withhold
+          (Becoming.Pool.allRun.state 0) (Becoming.Pool.allRun.act 0) Becoming.Pool.Formation.sustaining () ∧
+        ¬Becoming.Pool.dependence.MakesDifference Becoming.Pool.process Becoming.Pool.withhold
+              Becoming.Pool.Formation.first (Becoming.Pool.allRun.state 0) (Becoming.Pool.allRun.act 0)
+              Becoming.Pool.Formation.sustaining () ∧
+          (∀ (a : Becoming.Pool.Draw) (t : Becoming.Pool.State),
+              Becoming.Pool.process.step
+                  (Becoming.Pool.withhold Becoming.Pool.Formation.second
+                    (Becoming.Pool.withhold Becoming.Pool.Formation.first (Becoming.Pool.allRun.state 0)))
+                  a t →
+                Becoming.Pool.dependence.Keeps
+                  (Becoming.Pool.withhold Becoming.Pool.Formation.second
+                    (Becoming.Pool.withhold Becoming.Pool.Formation.first (Becoming.Pool.allRun.state 0)))
+                  t Becoming.Pool.Formation.sustaining ()) ∧
+            (Becoming.Pool.dependence.along Becoming.Pool.pairRun).ConsumingIn Becoming.Pool.Formation.first ∧
+              ¬(Becoming.Pool.dependence.along Becoming.Pool.pairRun).ConsumingIn Becoming.Pool.Formation.third ∧
+                (Becoming.Pool.dependence.along Becoming.Pool.allRun).ConsumingIn Becoming.Pool.Formation.first
+Becoming.Pool.first_two_only_together : Becoming.Pool.dependence.DifferenceOnlyTogether Becoming.Pool.process
+  Becoming.Pool.withhold [Becoming.Pool.Formation.first, Becoming.Pool.Formation.second]
+  { level := 1, drawing := Becoming.Pool.all } Becoming.Pool.all Becoming.Pool.Formation.sustaining ()
+Becoming.Pool.within_share_undermines : Becoming.Pool.dependence.MakesDifference Becoming.Pool.process
+    Becoming.Pool.withhold Becoming.Pool.Formation.second (Becoming.Pool.mixedRun.state 0)
+    (Becoming.Pool.mixedRun.act 0) Becoming.Pool.Formation.sustaining () ∧
+  ¬Becoming.Pool.dependence.MakesDifference Becoming.Pool.process Becoming.Pool.withhold Becoming.Pool.Formation.first
+        (Becoming.Pool.mixedRun.state 0) (Becoming.Pool.mixedRun.act 0) Becoming.Pool.Formation.sustaining () ∧
+    Becoming.Web.UnderminingAt 0 Becoming.Pool.Formation.first
+Becoming.Tagged.move_unavailable : Becoming.Determined Becoming.Tagged.process ∧
+  Becoming.Pool.dependence.BreaksBy Becoming.Tagged.process Becoming.Tagged.start Becoming.Tagged.start
+      Becoming.Pool.Formation.sustaining () ∧
+    (∀ (f : Becoming.Pool.Formation) (t : Becoming.Pool.State),
+        f ≠ Becoming.Pool.Formation.sustaining →
+          ¬Becoming.Tagged.process.step (Becoming.Pool.withhold f Becoming.Tagged.start) Becoming.Tagged.start t) ∧
+      (∀ (f : Becoming.Pool.Formation),
+          ¬Becoming.Pool.dependence.MakesDifference Becoming.Tagged.process Becoming.Pool.withhold f
+              Becoming.Tagged.start Becoming.Tagged.start Becoming.Pool.Formation.sustaining ()) ∧
+        ¬Becoming.Pool.dependence.Overdetermined Becoming.Tagged.process Becoming.Pool.withhold Becoming.Tagged.start
+              Becoming.Tagged.start Becoming.Pool.Formation.sustaining () ∧
+          Becoming.Pool.dependence.Overdetermined Becoming.Pool.process Becoming.Pool.withhold Becoming.Tagged.start
+            Becoming.Pool.all Becoming.Pool.Formation.sustaining ()
+Becoming.Blocked.determined : Becoming.Determined Becoming.Blocked.process
+Becoming.Blocked.only_together_unbroken : Becoming.Determined Becoming.Blocked.process ∧
+  Becoming.Pool.dependence.DifferenceOnlyTogether Becoming.Blocked.process Becoming.Pool.withhold
+      [Becoming.Pool.Formation.first, Becoming.Pool.Formation.second] { level := 1, drawing := Becoming.Pool.all }
+      Becoming.Pool.all Becoming.Pool.Formation.sustaining () ∧
+    ¬Becoming.Pool.dependence.BreaksBy Becoming.Blocked.process
+          (Becoming.Pool.withhold Becoming.Pool.Formation.first { level := 1, drawing := Becoming.Pool.all })
+          Becoming.Pool.all Becoming.Pool.Formation.sustaining () ∧
+      ¬Becoming.Pool.dependence.BreaksBy Becoming.Blocked.process
+          (Becoming.Pool.withhold Becoming.Pool.Formation.second { level := 1, drawing := Becoming.Pool.all })
+          Becoming.Pool.all Becoming.Pool.Formation.sustaining ()
+Becoming.NeedRises.only_together_unmet : Becoming.Determined Becoming.Pool.process ∧
+  (∀ (f : Becoming.Pool.Formation),
+      ∃ t,
+        Becoming.Pool.process.step (Becoming.Pool.withhold f { level := 1, drawing := Becoming.Pool.all })
+          Becoming.Pool.all t) ∧
+    Becoming.NeedRises.dependence.DifferenceOnlyTogether Becoming.Pool.process Becoming.Pool.withhold
+        [Becoming.Pool.Formation.first, Becoming.Pool.Formation.second] { level := 1, drawing := Becoming.Pool.all }
+        Becoming.Pool.all Becoming.Pool.Formation.sustaining () ∧
+      ¬Becoming.NeedRises.dependence.BreaksBy Becoming.Pool.process
+            (Becoming.Pool.withhold Becoming.Pool.Formation.first { level := 1, drawing := Becoming.Pool.all })
+            Becoming.Pool.all Becoming.Pool.Formation.sustaining () ∧
+        ¬Becoming.NeedRises.dependence.BreaksBy Becoming.Pool.process
+            (Becoming.Pool.withhold Becoming.Pool.Formation.second { level := 1, drawing := Becoming.Pool.all })
+            Becoming.Pool.all Becoming.Pool.Formation.sustaining ()
+Becoming.sub_self_add : ∀ (n m : Nat), n - (n + m) = 0
+Becoming.Renewable.overdraw_lowers : ∀ (s a : Nat), 2 ≤ a → s + 1 - a ≤ s.pred
+@Becoming.Renewable.drains : ∀ {start : Nat} {draw : Nat → Nat} {N : Nat},
+  (∀ (t : Nat), N ≤ t → 2 ≤ draw t) →
+    ∀ (k : Nat), Becoming.Renewable.levels start draw (N + k) ≤ Becoming.Renewable.levels start draw N - k
+@Becoming.Renewable.overdraw_consumes : ∀ {start : Nat} {draw : Nat → Nat} {N : Nat},
+  (∀ (t : Nat), N ≤ t → 2 ≤ draw t) →
+    (Becoming.Renewable.conditions.dependence.along (Becoming.Renewable.drawing start draw)).Consumed ()
+Becoming.Renewable.depletion_is_joint : (Becoming.Renewable.conditions.dependence.along
+        Becoming.Renewable.depleting).ConsumingIn
+    Becoming.Renewable.Formation.focal ∧
+  (∀ (p : Nat),
+      0 < p →
+        ¬(Becoming.Renewable.conditions.dependence.along Becoming.Renewable.depleting).UnderminingFor p 0
+            Becoming.Renewable.Formation.focal) ∧
+    ∀ (n : Nat), (Becoming.Renewable.conditions.dependence.along (Becoming.Renewable.withheld n)).Consumed ()
+Becoming.Renewable.no_finite_segment_makes_difference : ∀ (N : Nat),
+  (Becoming.Renewable.conditions.dependence.along
+        (Becoming.Renewable.drawing 2 fun t => if t < N then 0 else 2)).Consumed
+    ()
+Becoming.Renewable.breaking_event_makes_step_difference : Becoming.Renewable.depleting.state 1 = 1 ∧
+  Becoming.Renewable.depleting.act 1 = 2 ∧
+    Becoming.Renewable.conditions.dependence.Breaks (Becoming.Renewable.depleting.state 1)
+        (Becoming.Renewable.depleting.state 2) Becoming.Renewable.Formation.sustaining () ∧
+      Becoming.Renewable.process.step 1 0 2 ∧
+        Becoming.Renewable.conditions.dependence.Keeps 1 2 Becoming.Renewable.Formation.sustaining ()

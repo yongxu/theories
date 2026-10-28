@@ -1,0 +1,124 @@
+@Becoming.ceases_at_a_step : ∀ {p : Nat → Prop} {T t : Nat},
+  T ≤ t → p T → ¬p t → ¬∀ (s : Nat), T ≤ s → s < t → ¬(p s ∧ ¬p (s + 1))
+@Becoming.arises_at_a_step : ∀ {p : Nat → Prop} {T t : Nat},
+  T ≤ t → ¬p T → p t → ¬∀ (s : Nat), T ≤ s → s < t → ¬(¬p s ∧ p (s + 1))
+@Becoming.Web.static_supported : ∀ {F C : Type} (U : RelationalRenewal.Unfolding F C) (t : Nat) (f : F),
+  (Becoming.Web.static U).Supported t f ↔ RelationalRenewal.Supported U t f
+@Becoming.Web.static_dependent : ∀ {F C : Type} (U : RelationalRenewal.Unfolding F C),
+  (Becoming.Web.static U).Dependent ↔ RelationalRenewal.Dependent U
+@Becoming.Web.static_renewed : ∀ {F C : Type} (U : RelationalRenewal.Unfolding F C) (c : C),
+  (Becoming.Web.static U).Renewed c ↔ RelationalRenewal.Renewed U c
+@Becoming.Web.static_consumed : ∀ {F C : Type} (U : RelationalRenewal.Unfolding F C) (c : C),
+  (Becoming.Web.static U).Consumed c ↔ RelationalRenewal.Consumed U c
+@Becoming.Web.static_renewingIn : ∀ {F C : Type} (U : RelationalRenewal.Unfolding F C) (f : F),
+  (Becoming.Web.static U).RenewingIn f ↔ RelationalRenewal.RenewingIn U f
+@Becoming.Web.static_consumingIn : ∀ {F C : Type} (U : RelationalRenewal.Unfolding F C) (f : F),
+  (Becoming.Web.static U).ConsumingIn f ↔ RelationalRenewal.ConsumingIn U f
+@Becoming.Web.renewed_not_consumed : ∀ {F C : Type} {W : Becoming.Web F C} {c : C}, W.Renewed c → ¬W.Consumed c
+@Becoming.Web.renewing_not_consuming : ∀ {F C : Type} {W : Becoming.Web F C} {f : F}, W.RenewingIn f → ¬W.ConsumingIn f
+@Becoming.Web.renewing_keeps_support : ∀ {F C : Type} {W : Becoming.Web F C} {f : F},
+  W.RenewingIn f → ∀ (t : Nat), W.Supported t f
+@Becoming.Web.lost_consumed : ∀ {F C : Type} {W : Becoming.Web F C} {c : C}, W.Lost c → W.Consumed c
+@Becoming.Web.kept_or_broken : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {c : C},
+  W.requires t g c → W.need t g c ≤ W.level t c → W.Kept t g c ∨ W.Broken t g c
+@Becoming.Web.kept_not_broken : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {c : C},
+  W.Kept t g c → ¬W.Broken t g c
+@Becoming.Web.continuing_restores_at : ∀ {F C : Type} {W : Becoming.Web F C} {T t : Nat} {g : F} {c : C},
+  W.Supported t g → W.requires t g c → W.need T g c ≤ W.need t g c → W.need T g c ≤ W.level t c
+@Becoming.Web.continuing_restores : ∀ {F C : Type} {W : Becoming.Web F C},
+  W.Dependent →
+    ∀ {T t : Nat} {g : F} {c : C},
+      W.active t g → W.requires t g c → W.need T g c ≤ W.need t g c → W.need T g c ≤ W.level t c
+@Becoming.Web.consumed_continues_transformed_at : ∀ {F C : Type} {W : Becoming.Web F C} {T : Nat} {g : F} {c : C},
+  (∀ (t : Nat), T < t → W.level t c < W.need T g c) →
+    ∀ {t : Nat}, T < t → W.Supported t g → ¬(W.requires t g c ∧ W.need T g c ≤ W.need t g c)
+@Becoming.Web.consumed_continues_transformed : ∀ {F C : Type} {W : Becoming.Web F C},
+  W.Dependent →
+    ∀ {T : Nat} {g : F} {c : C},
+      (∀ (t : Nat), T < t → W.level t c < W.need T g c) →
+        ∀ {t : Nat}, T < t → W.active t g → ¬(W.requires t g c ∧ W.need T g c ≤ W.need t g c)
+@Becoming.Web.consumed_ends_when_fixed_at : ∀ {F C : Type} {W : Becoming.Web F C} {T t : Nat} {g : F} {c : C},
+  (W.active t g → W.Supported t g) →
+    W.requires t g c ∧ W.need T g c ≤ W.need t g c → W.level t c < W.need T g c → ¬W.active t g
+@Becoming.Web.consumed_ends_when_fixed : ∀ {F C : Type} {W : Becoming.Web F C},
+  W.Dependent →
+    ∀ {T : Nat} {g : F} {c : C},
+      (∀ (t : Nat), T < t → W.requires t g c ∧ W.need T g c ≤ W.need t g c) →
+        (∀ (t : Nat), T < t → W.level t c < W.need T g c) → ∀ (t : Nat), T < t → ¬W.active t g
+@Becoming.Web.MetAbove.now : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {c : C} {m : Nat},
+  W.requires t g c → W.need t g c ≤ W.level t c → m < W.need t g c → Becoming.Web.MetAbove t g c m
+@Becoming.Web.BreakingOn.undermining : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F} {c : C},
+  Becoming.Web.BreakingOn t f c → Becoming.Web.UnderminingOn t f c
+@Becoming.Web.RenewingAt.not_undermining : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  Becoming.Web.RenewingAt t f → ¬Becoming.Web.UnderminingAt t f
+@Becoming.Web.RenewingAt.not_breaking : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  Becoming.Web.RenewingAt t f → ¬Becoming.Web.BreakingAt t f
+@Becoming.Web.renewing_at_active : ∀ {F C : Type} {W : Becoming.Web F C} {f : F},
+  W.RenewingIn f → ∀ {t : Nat}, W.active t f → Becoming.Web.RenewingAt t f
+@Becoming.Web.not_renewing_at_of_broken : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f g : F} {c : C},
+  W.Participates t f c → W.Broken t g c → ¬Becoming.Web.RenewingAt t f
+Becoming.Unmet.consumed_without_loss : Becoming.Unmet.web.Dependent ∧
+  (∀ (t : Nat) (g : Becoming.Unmet.Formation), ¬Becoming.Unmet.web.Broken t g ()) ∧
+    Becoming.Unmet.web.Consumed () ∧
+      ¬Becoming.Unmet.web.Lost () ∧
+        Becoming.Unmet.web.ConsumingIn Becoming.Unmet.Formation.drawer ∧
+          ∀ (t : Nat), ¬Becoming.Web.UnderminingAt t Becoming.Unmet.Formation.drawer
+@Becoming.NewNeed.level_late : ∀ {t : Nat}, 5 ≤ t → Becoming.NewNeed.web.level t () = 0
+Becoming.NewNeed.never_met_not_undermining : Becoming.NewNeed.web.Dependent ∧
+  (∀ (t : Nat),
+      Becoming.NewNeed.web.requires t Becoming.NewNeed.Formation.late () →
+        Becoming.NewNeed.web.level t () < Becoming.NewNeed.web.need t Becoming.NewNeed.Formation.late ()) ∧
+    (∀ (t : Nat),
+        5 ≤ t →
+          (∃ s,
+              s ≤ t ∧
+                Becoming.NewNeed.web.need t Becoming.NewNeed.Formation.late () ≤ Becoming.NewNeed.web.level s ()) ∧
+            ∀ (m : Nat), ¬Becoming.Web.MetAbove t Becoming.NewNeed.Formation.late () m) ∧
+      (∀ (t : Nat), ¬Becoming.Web.UnderminingAt t Becoming.NewNeed.Formation.drawer) ∧
+        Becoming.NewNeed.web.ConsumingIn Becoming.NewNeed.Formation.drawer
+@Becoming.FallingNeed.need_late : ∀ {t : Nat},
+  5 ≤ t → Becoming.FallingNeed.web.need t Becoming.FallingNeed.Formation.late () = 1
+Becoming.FallingNeed.need_pos : ∀ (t : Nat), 1 ≤ Becoming.FallingNeed.web.need t Becoming.FallingNeed.Formation.late ()
+Becoming.FallingNeed.unmet : ∀ (t : Nat),
+  Becoming.FallingNeed.web.level t () < Becoming.FallingNeed.web.need t Becoming.FallingNeed.Formation.late ()
+Becoming.FallingNeed.never_met_not_undermining : Becoming.FallingNeed.web.Dependent ∧
+  (∀ (t : Nat),
+      Becoming.FallingNeed.web.level t () < Becoming.FallingNeed.web.need t Becoming.FallingNeed.Formation.late ()) ∧
+    (∀ (t : Nat),
+        5 ≤ t →
+          Becoming.FallingNeed.web.need t Becoming.FallingNeed.Formation.late () ≤
+            Becoming.FallingNeed.web.level 0 ()) ∧
+      (∀ (t : Nat), ¬Becoming.Web.UnderminingAt t Becoming.FallingNeed.Formation.drawer) ∧
+        Becoming.FallingNeed.web.ConsumingIn Becoming.FallingNeed.Formation.drawer
+@Becoming.RisingNeed.need_early : ∀ {t : Nat},
+  t < 5 → Becoming.RisingNeed.web.need t Becoming.RisingNeed.Formation.grower () = 1
+@Becoming.RisingNeed.need_grown : ∀ {t : Nat},
+  5 ≤ t → Becoming.RisingNeed.web.need t Becoming.RisingNeed.Formation.grower () = 2
+Becoming.RisingNeed.level_pos : ∀ (t : Nat), 1 ≤ Becoming.RisingNeed.web.level t ()
+@Becoming.RisingNeed.level_late : ∀ {t : Nat}, 5 ≤ t → Becoming.RisingNeed.web.level t () = 1
+Becoming.RisingNeed.grown_need_not_met : Becoming.RisingNeed.web.Dependent ∧
+  (∀ (t : Nat),
+      t < 5 →
+        Becoming.RisingNeed.web.need t Becoming.RisingNeed.Formation.grower () ≤ Becoming.RisingNeed.web.level t ()) ∧
+    (∀ (t : Nat),
+        5 ≤ t →
+          Becoming.RisingNeed.web.level t () < Becoming.RisingNeed.web.need t Becoming.RisingNeed.Formation.grower ()) ∧
+      (∀ (t : Nat),
+          5 ≤ t →
+            Becoming.RisingNeed.web.need t Becoming.RisingNeed.Formation.grower () ≤
+              Becoming.RisingNeed.web.level 0 ()) ∧
+        ∀ (t : Nat), ¬Becoming.Web.UnderminingAt t Becoming.RisingNeed.Formation.drawer
+Becoming.Stunted.level_le_one : ∀ (t : Nat), Becoming.Stunted.web.level t () ≤ 1
+Becoming.Stunted.stunting_undermines : Becoming.Stunted.web.Dependent ∧
+  (∀ (t : Nat), ¬Becoming.Web.BreakingAt t Becoming.Stunted.Formation.drawer) ∧
+    ∀ (t : Nat), 1 ≤ t → Becoming.Web.UnderminingAt t Becoming.Stunted.Formation.drawer
+@Becoming.Gap.levels_high : ∀ {t : Nat}, t < 4 → Becoming.Gap.levels t = 2
+@Becoming.Gap.levels_low : ∀ {t : Nat}, 4 ≤ t → Becoming.Gap.levels t = 0
+Becoming.Gap.lapse_starts_afresh : (∀ (t : Nat), ¬Becoming.Web.UnderminingAt t Becoming.Gap.Formation.drawer) ∧
+  Becoming.Gap.away.ConsumingIn Becoming.Gap.Formation.drawer ∧
+    ∀ (t : Nat), 3 ≤ t → Becoming.Web.UnderminingAt t Becoming.Gap.Formation.drawer
+Becoming.Dip.renewing_at_each_step_not_in_run : Becoming.Dip.web.Dependent ∧
+  (∀ (t : Nat),
+      Becoming.Dip.web.active t Becoming.Dip.Formation.dependent →
+        Becoming.Web.RenewingAt t Becoming.Dip.Formation.dependent) ∧
+    ¬Becoming.Dip.web.RenewingIn Becoming.Dip.Formation.dependent

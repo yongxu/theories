@@ -52,8 +52,8 @@ there.
   includes it with none (`Web.WidensWithLag`). Widening or widening with a lag
   (`Web.WidensOrWithLag`):
   - is a strict partial order containing widening by one order lemma, a transitive relation joined
-    to the strict part of a transitive relation containing it (`strictJoin_trans`,
-    `Web.strictJoin_order`); so are the orders of a lag varying with the formation and of a lag
+    to the strict part of a transitive relation containing it (`strictJoin_trans`, a law of any
+    two relations in `Becoming.GrammarLaws`; `Web.strictJoin_order`); so are the orders of a lag varying with the formation and of a lag
     for each admission (`Web.widensOrWithFormationLag_order`, `Web.widensOrEachLater_order`);
   - is unchanged by every renaming constant across steps (`Web.widensOrWithLag_rename`) and by
     exchanging the sides (`Sides.widensOrWithLag_swap`), but compares formations across steps by
@@ -96,25 +96,6 @@ steps; no choice enters, and the decisions come from structural recursion.
 namespace Becoming
 
 variable {F F' C : Type}
-
-/-- **A transitive relation joined to the strict part of a transitive relation containing it is
-transitive.** -/
-theorem strictJoin_trans {α : Type} {S P : α → α → Prop}
-    (sTrans : ∀ {a b c}, S a b → S b c → S a c) (pTrans : ∀ {a b c}, P a b → P b c → P a c)
-    (within : ∀ {a b}, S a b → P a b) {a b c : α} :
-    (S a b ∨ (P a b ∧ ¬ P b a)) → (S b c ∨ (P b c ∧ ¬ P c b)) → (S a c ∨ (P a c ∧ ¬ P c a))
-  | .inl first, .inl second => .inl (sTrans first second)
-  | .inl first, .inr ⟨p, np⟩ =>
-      .inr ⟨pTrans (within first) p, fun back => np (pTrans back (within first))⟩
-  | .inr ⟨p, np⟩, .inl second =>
-      .inr ⟨pTrans p (within second), fun back => np (pTrans (within second) back)⟩
-  | .inr ⟨p, np⟩, .inr ⟨q, _⟩ => .inr ⟨pTrans p q, fun back => np (pTrans q back)⟩
-
-/-- The strict part of a relation, joined to an irreflexive one, is irreflexive. -/
-theorem strictJoin_irrefl {α : Type} {S P : α → α → Prop} {a : α} (irrefl : ¬ S a a) :
-    ¬ (S a a ∨ (P a a ∧ ¬ P a a))
-  | .inl same => irrefl same
-  | .inr ⟨p, np⟩ => np p
 
 namespace Web
 

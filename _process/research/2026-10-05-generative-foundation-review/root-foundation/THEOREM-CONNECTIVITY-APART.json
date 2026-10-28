@@ -4487,11 +4487,6 @@
    "category": "support",
    "reason": "a causal set's precedence has no cycle (the root's «无环»), by its natural labelling (labelled_of_reach): an unpacking of the module's definition of a causal set, whose reach is then a strict order by the root's «无环则及为序»; every configuration the growth reaches from a causal set is one (birth_ordered)"
   },
-  "Becoming.CausalGrowth.ordered_reach_links_iff": {
-   "module": "Becoming.CausalGrowth",
-   "category": "general-structure",
-   "reason": "on every causal set with decided precedence, precedence is the reach of its links: reach_links_iff, a law of every transitive naturally labelled relation on the numbers, read on the module's causal sets; the statement concerns one configuration and names no process, and the course form is reach_links_courses_iff_em"
-  },
   "Becoming.CausalGrowth.reach_links_all_iff_em": {
    "module": "Becoming.CausalGrowth",
    "category": "calibration",
@@ -4521,6 +4516,121 @@
    "module": "Becoming.CausalGrowth",
    "category": "model-witness",
    "reason": "the relation telling 1 from the other elements is a class: a fact about one constructed relation, the class on which widening gains continuation read on links (Finer.widens, Finer.continues, Finer.not_continues) and loses it (Finer.loses)"
+  },
+  "Becoming.Presence.Vee.link": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "on the vee, 0 below 1 and 2, 0 is a link below 2, by its presence at 2's birth on one course: a fact about one constructed causal set; a witness of Becoming.Presence (UE14)"
+  },
+  "Becoming.Presence.Vee.not_least": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "on the vee, 2 is not the least element above 0: were it, 0 would be present at 2's birth on every course (present_every_iff), and on the labels as they are it is not; a fact about one constructed causal set, showing that presence on some course does not give presence on every course; a witness of Becoming.Presence (UE14)"
+  },
+  "Becoming.Presence.Vee.maximal_after_two_identity": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "on the vee, the present after two births on the labels as they are is exactly 1: a fact about one constructed causal set and one of its natural labellings, the witness that the present at a stage is a choice of course; a witness of Becoming.Presence (UE14)"
+  },
+  "Becoming.Presence.Vee.maximal_after_two_swap": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "on the vee, with the births of 1 and 2 exchanged, the present after two births is exactly 2: a fact about one constructed causal set and one of its natural labellings, the witness that the present at a stage is a choice of course; a witness of Becoming.Presence (UE14)"
+  },
+  "Becoming.Presence.Diamond.pastOrPair_refl": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "Wüthrich and Callender's relation on their four elements is reflexive: a fact about one constructed relation, one of the conditions of Stein's theorem it meets"
+  },
+  "Becoming.Presence.Diamond.pastOrPair_trans": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "Wüthrich and Callender's relation on their four elements is transitive: a fact about one constructed relation, by cases on the elements, one of the conditions of Stein's theorem it meets"
+  },
+  "Becoming.Presence.Diamond.courses_disagree": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "on the diamond, exchanging the births of 1 and 2 is a natural labelling bearing 2 before 1: a fact about one constructed causal set, the witness that the courses disagree on the order of births of that pair; a witness of Becoming.Presence (UE14)"
+  },
+  "Becoming.Presence.Diamond.kept_not_agreed": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "on the diamond, Wüthrich and Callender's relation is kept by every automorphism and is not what every course has born by a birth: a fact about one constructed causal set and relation, showing that invariance under automorphisms admits a relation beyond the past; a witness of Becoming.Presence (UE14)"
+  },
+  "Becoming.Presence.Diamond.pastOrTogether_iff": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "on the diamond, the past joined with being present together on every course is exactly Wüthrich and Callender's relation: a fact about one constructed causal set, by pastOrPair_iff_together; a witness of Becoming.Presence (UE14)"
+  },
+  "Becoming.Presence.SameFuture.together_different_pasts": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "on four elements, 0 below 1 and 3, 1 and 2 below 3, the elements 1 and 2 are present together on every course with different pasts: a fact about one constructed causal set, showing that being present together on every course needs only the same future; a witness of Becoming.Presence (UE14)"
+  },
+  "Becoming.Presence.SameFuture.pastOrTogether_not_trans": {
+   "module": "Becoming.Presence",
+   "category": "model-witness",
+   "reason": "on the same four elements, the past joined with being present together on every course is not transitive: a fact about one constructed causal set, showing that off Wüthrich and Callender's four elements the join need not be their relation; a witness of Becoming.Presence (UE14)"
+  },
+  "Becoming.Presence.past_every_iff_em": {
+   "module": "Becoming.Presence",
+   "category": "calibration",
+   "reason": "that what is born no later than an element in every natural labelling is its past, asked of every causal set, is exactly excluded middle: agreement across all courses settles precedence only up to double negation, and asserting it is deciding; the base asserts no decided precedence, so this is a lemma of UE14's law, whose course form past_every_course is on the base"
+  },
+  "Becoming.Presence.together_every_iff_em": {
+   "module": "Becoming.Presence",
+   "category": "calibration",
+   "reason": "that two elements present together in every natural labelling share their future, asked of every causal set, is exactly excluded middle; a lemma of UE14's law, whose course form together_every_course is on the base"
+  },
+  "Becoming.Presence.only_link_least_iff_em": {
+   "module": "Becoming.Presence",
+   "category": "calibration",
+   "reason": "that the one link of a condition is the least element above it, asked of every causal set, is exactly excluded middle: settling everything a condition precedes from its links alone is deciding; a lemma of UE14's law on presence on every course, whose course form present_every_course_only_link needs no decision and is on the base"
+  },
+  "Becoming.Presence.before_some_iff_weakly": {
+   "module": "Becoming.Presence",
+   "category": "calibration",
+   "reason": "that two different elements, the second not preceding the first, are born in that order in some natural labelling, asked of every causal set, is exactly weak excluded middle: finding the course is deciding only whether a precedence fails; a lemma of UE14's law, whose course form before_some_course is on the base"
+  },
+  "Becoming.Presence.antichain_present_iff_weakly": {
+   "module": "Becoming.Presence",
+   "category": "calibration",
+   "reason": "that every antichain given by a test is the present of some natural labelling at some stage, asked of every causal set, is exactly weak excluded middle; a lemma of UE14's law, whose course form antichain_present_course is on the base"
+  },
+  "Becoming.Presence.present_some_iff_weakly": {
+   "module": "Becoming.Presence",
+   "category": "calibration",
+   "reason": "that every link is present at the birth of what it conditions in some natural labelling, asked of every causal set, is exactly weak excluded middle; a lemma of UE14's law, whose course form present_some_course is on the base"
+  },
+  "Becoming.Presence.every_congr": {
+   "module": "Becoming.Presence",
+   "category": "general-structure",
+   "reason": "whatever holds in every natural labelling of a causal set depends only on its size and precedence: a law of the linear extensions of every finite order, naming no process; the courses read it through every_course_iff"
+  },
+  "Becoming.Presence.some_congr": {
+   "module": "Becoming.Presence",
+   "category": "general-structure",
+   "reason": "whatever holds in some natural labelling of a causal set depends only on its size and precedence: a law of the linear extensions of every finite order, naming no process; the courses read it through some_course_iff"
+  },
+  "Becoming.Presence.least_iff_only_link": {
+   "module": "Becoming.Presence",
+   "category": "general-structure",
+   "reason": "with precedence decided, the least element above a condition is exactly the one element it is linked to: a law of every transitive naturally labelled relation on the numbers, by UE13's ordered_reach_links_iff (precedence the reach of its links, with reach_links_courses_iff_em its calibration on courses), on one configuration and naming no process"
+  },
+  "Becoming.Presence.maximalBorn_iff_ends": {
+   "module": "Becoming.Presence",
+   "category": "restates",
+   "reason": "MaximalBorn read on the grammar: an element is in the present at a stage exactly where the grammar's ending, «亡» under the one class «一», holds on what has been born"
+  },
+  "Becoming.Presence.present_iff_maximalBorn": {
+   "module": "Becoming.Presence",
+   "category": "support",
+   "reason": "in a natural labelling, presence at a birth is precedence with being maximal among what is born by that birth's stage: an unpacking of the definitions of PresentAt and MaximalBorn"
+  },
+  "Becoming.Presence.born_stem": {
+   "module": "Becoming.Presence",
+   "category": "support",
+   "reason": "what a natural labelling has born by a stage is a stem: an unpacking of the definitions of a stem and of a natural labelling (born_closed); its course reading, every stem with decided membership born first, is stem_born_first_course, on the base"
   }
  },
  "instances": {

@@ -50,7 +50,7 @@ The footprint in this record is supplied; P88 gives the least footprint with dec
 - Related, not a proved adapter: [normal-forms-need-decided-apartness](normal-forms-need-decided-apartness.md). P88 selects a lexicographic form on a named finite stretch with decided apartness; a complete finite Nat-valued invariant needs exactly that decision.
 - Related, not a proved adapter: [least-footprint-where-idleness-decided](least-footprint-where-idleness-decided.md). P88 reads off the least footprint with decided idleness; its joining and order lie within every containing footprint’s.
 
-**Used by:** [least-footprint-where-idleness-decided](least-footprint-where-idleness-decided.md) · [normal-forms-need-decided-apartness](normal-forms-need-decided-apartness.md) · [the-world-an-interleaving-builds](the-world-an-interleaving-builds.md)
+**Used by:** [least-footprint-where-idleness-decided](least-footprint-where-idleness-decided.md) · [normal-forms-need-decided-apartness](normal-forms-need-decided-apartness.md) · [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md) · [the-world-an-interleaving-builds](the-world-an-interleaving-builds.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

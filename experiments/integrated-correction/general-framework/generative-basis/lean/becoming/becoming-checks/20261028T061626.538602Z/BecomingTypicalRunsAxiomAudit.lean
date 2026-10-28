@@ -1,0 +1,26 @@
+import Becoming.TypicalRuns
+#print axioms Becoming.TypicalRuns.Listing
+#print axioms Becoming.TypicalRuns.split_of_mem
+#print axioms Becoming.TypicalRuns.mem_of_mem_drop
+#print axioms Becoming.TypicalRuns.mem_drop_or
+#print axioms Becoming.TypicalRuns.distinct_drop
+#print axioms Becoming.TypicalRuns.sum_listing
+#print axioms Becoming.TypicalRuns.sum_listed
+#print axioms Becoming.TypicalRuns.length_listed
+#print axioms Becoming.TypicalRuns.total_eq_sum
+#print axioms Becoming.TypicalRuns.total_listing
+#print axioms Becoming.TypicalRuns.ofRecord
+#print axioms Becoming.TypicalRuns.record_ofRecord
+#print axioms Becoming.TypicalRuns.record
+#print axioms Becoming.TypicalRuns.mem_courses_iff
+#print axioms Becoming.TypicalRuns.distinct_extend
+#print axioms Becoming.TypicalRuns.distinct_courses
+#print axioms Becoming.TypicalRuns.Records
+#print axioms Becoming.TypicalRuns.courses_records
+#print axioms Becoming.TypicalRuns.records_count
+#print axioms Becoming.TypicalRuns.records_weight
+#print axioms Becoming.TypicalRuns.histories_records
+#print axioms Becoming.TypicalRuns.records_spread
+#print axioms Becoming.TypicalRuns.records_typical
+#print axioms Becoming.TypicalRuns.records_concentrated
+#print axioms Becoming.TypicalRuns.records_few_far_ahead

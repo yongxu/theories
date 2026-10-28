@@ -1,0 +1,48 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/tree",
+  "modules": 82,
+  "ran": [
+    "Becoming.Presence",
+    "BecomingPresenceAxiomAudit"
+  ],
+  "reused": 81,
+  "unclean": [],
+  "audits": {
+    "Becoming.Presence": {
+      "theorems": 74,
+      "declarations": 91,
+      "with_axioms": {
+        "Becoming.Presence.front_inj": [
+          "propext"
+        ],
+        "Becoming.Presence.front_reindexes": [
+          "propext"
+        ],
+        "Becoming.Presence.front_natural": [
+          "propext"
+        ],
+        "Becoming.Presence.stem_born_first": [
+          "propext"
+        ],
+        "Becoming.Presence.downTo_before": [
+          "propext"
+        ],
+        "Becoming.Presence.prec_iff_every": [
+          "propext"
+        ],
+        "Becoming.Presence.present_some_iff_link": [
+          "propext"
+        ],
+        "Becoming.Presence.present_every_iff": [
+          "propext"
+        ],
+        "Becoming.Presence.Vee.link": [
+          "propext"
+        ],
+        "Becoming.Presence.Vee.not_through": [
+          "propext"
+        ]
+      }
+    }
+  }
+}
