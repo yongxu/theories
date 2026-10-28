@@ -6229,10 +6229,10 @@
    "type": "module",
    "name": "Becoming.Labelled",
    "level": "L1",
-   "theorems": 66,
+   "theorems": 69,
    "region": "root",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -7725,10 +7725,10 @@
    "type": "module",
    "name": "Becoming.Withholding",
    "level": "L1",
-   "theorems": 38,
+   "theorems": 40,
    "region": "collective",
    "base": "general",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -43929,6 +43929,11 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Labelled",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Laws",
    "type": "proved-in"
   },
@@ -43965,6 +43970,11 @@
   {
    "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Weightings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Withholding",
    "type": "proved-in"
   },
   {

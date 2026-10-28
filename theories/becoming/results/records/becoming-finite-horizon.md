@@ -106,6 +106,7 @@ This is an existence result: one process suffices to show that a finite prefix d
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
 
 Aliases: `Becoming.Renewable.prefix_does_not_decide`, `Becoming.Renewable.finite_reading_includes_consumption`, `Becoming.Renewable.whole_run_includes_overdraw`, `Becoming.Renewable.amount_reading`, `Becoming.Renewable.cycle_reading_not_finite`, `Becoming.Feedback.prefix_does_not_decide`, `Becoming.Renewable.no_exact_finite_reading`, `Becoming.Renewable.finite_reading_withholds_renewal`
 
