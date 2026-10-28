@@ -51,6 +51,28 @@ The gaps are 5, down from 13: OU3d's 3 (step-indexed reaching, drafted and under
 
 `Flow` and `COVERAGE.json` have no active owners, so these were decided under rule 3's fallback. EC6c's clause is named once in `Flow.lean`, beside `Flow.Balances`, which is shown its case by `Iff.rfl` and not redefined. EC6d, `COVERAGE.json`'s citations, goes to EC6's owner, changing no row's statement without its record's owner.
 
+## The measure with no gap (28 October 2026)
+
+OU3d (`4fcfc7011`, study §437) stated step-indexed reaching on the grammar, and OU3e (`406ed1303`, study §439) proved the three step-indexed rows from it through bridges, each only its own induction. On `406ed1303` the measure reports no gap. Every one of the 118 distinct central declarations either follows from a master law or is named with the reason it follows from none:
+
+| Category | Declarations |
+|---|---:|
+| Master law (43 of them reach the grammar; the other 7 rest on an anchor, each with a reason) | 50 |
+| Balance, represented | 32 |
+| Definitional or representational | 13 |
+| Premise of the account (support, dissipation) | 9 |
+| Law of its model | 7 |
+| Single application | 4 |
+| Counting identity (Price) | 3 |
+| **Total** | **118** |
+
+44 of the 127 rows reach the grammar (28 when this note was written), and 88 rest on a master law (77). In EC's sense this is the measure met. The laws are stated once at the lowest layer that can hold them, and the reason for each special result is the general law, or a named premise, identity or model. No law was added to raise a count. Two attempts that would only have raised it were declined: anchors redefined through the bridges, and `PartForms.goAlike` through an image law applied and then undone.
+
+What it does not settle:
+- The World's representation theorem, both ways or its failure written down (OU's criterion 7). Its design (WRT) is under review.
+- The chapters' other laws beyond the central declarations (OU plan §八 steps 5–10).
+- Whether the categories themselves are the right ones. Each is argued in EC6's audit and open to revision on the board.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
