@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/tree",
+  "modules": 4,
+  "ran": [
+    "Becoming.GrammarLaws",
+    "BecomingGrammarLawsAxiomAudit"
+  ],
+  "reused": 3,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarLaws": {
+      "theorems": 120,
+      "declarations": 143,
+      "with_axioms": {}
+    }
+  }
+}

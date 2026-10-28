@@ -1,0 +1,35 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/check-tree",
+  "modules": 5,
+  "ran": [
+    "Becoming.OU3dBridgeCheck",
+    "BecomingOU3dBridgeCheckAxiomAudit"
+  ],
+  "reused": 5,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarLaws": {
+      "theorems": 120,
+      "declarations": 143,
+      "with_axioms": {}
+    },
+    "Becoming.OU3dBridgeCheck": {
+      "theorems": 5,
+      "declarations": 10,
+      "with_axioms": {
+        "Becoming.OU3dBridgeCheck.chain_iff": [
+          "propext"
+        ],
+        "Becoming.OU3dBridgeCheck.within_iff": [
+          "propext"
+        ],
+        "Becoming.OU3dBridgeCheck.answers_closed": [
+          "propext"
+        ],
+        "Becoming.OU3dBridgeCheck.waitsAll_closed": [
+          "propext"
+        ]
+      }
+    }
+  }
+}
