@@ -1,28 +1,64 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "trace-law-equivalence",
   "title": {
     "zh": "逐步规律与端点历史等价",
     "en": "Step laws and endpoint traces"
   },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-28T05:36:58+00:00",
   "statement": {
     "en": "Two processes on the same configurations and moves take the same steps exactly when they have the same finite traces with both endpoints kept; traces of one move suffice. Feasible words alone lose the law.",
     "zh": "同一构形与动作上的两个过程取相同之步，恰当它们有两端都保留的相同有限迹；一个动作的迹即足够。只看可行之词会失去规律。"
   },
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "en": "A law is fixed by its traces: two processes on the same configurations and moves take the same steps exactly when they have the same finite traces with both endpoints kept, traces of one move sufficing. Forgetting endpoints loses the law: the process that stays put and the one that flips a bit take the same words from every configuration and end differently after one move, so they do not take the same steps.",
-    "zh": "规律由其迹确定：同一构形与动作上的两个过程取相同之步，恰当它们有两端都保留的相同有限迹，一个动作的迹即足够。忘掉端点就失去规律：静止的过程与翻转一位的过程从每个构形取相同之词，一个动作后终点不同，故不取相同之步。"
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "同一 State、Action 类型与给定 Process.step；使用既有 Trace 定义。",
-      "en": "Common State and Action types, supplied Process.step relations, and the existing Trace definition."
+      "en": "Two processes on the same configurations and moves take the same steps exactly when they have the same finite traces, both endpoints kept, from every configuration; a trace of one move is exactly a step, so traces of one move suffice.",
+      "zh": "同一构形与动作上的两个过程取相同之步，恰当它们从每个构形出发有两端都保留的相同有限迹；一个动作的迹恰是一步，故一个动作的迹即足够。",
+      "declarations": [
+        "Becoming.same_steps_iff_traces",
+        "Generative.trace_singleton_iff"
+      ]
+    },
+    {
+      "en": "Forgetting endpoints loses the law: on two configurations with one move, static keeps the configuration and toggle flips it; they take the same words from every configuration, static goes from false to false in one move and toggle does not, so they do not take the same steps.",
+      "zh": "忘掉端点就失去规律：在两个构形与一个动作上，static 保持构形而 toggle 翻转它；二者从每个构形取相同之词，一个动作中 static 由 false 到 false 而 toggle 不然，故不取相同之步。",
+      "declarations": [
+        "Becoming.Carriers.static",
+        "Becoming.Carriers.toggle",
+        "Becoming.Carriers.word_feasibility_does_not_determine_endpoints",
+        "Becoming.Carriers.static_toggle_not_same_steps"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "Two supplied processes on one type of configurations and one type of moves, of any kind, with no premise on either; traces are the finite traces of the core's foundation, every intermediate configuration carried.",
+      "zh": "同一构形类型与动作类型（可为任意类型）上的两个给定过程，对二者无前提；迹是核心基础中的有限迹，携带每个中间构形。"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Carriers.lean",
+      "detail": {
+        "zh": "只保留可行动作串会丢失规律；静止和翻转过程给出反例。",
+        "en": "Word feasibility alone loses law information; static and toggle processes supply the counterexample."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Labelled and Becoming.Carriers are bound to a core receipt under becoming-checks, and those of GenerativeCore to the newest core receipt; every cited core declaration has an empty axiom report. DynamicConsequences, GenerativeModel and the retired Bridge are provenance or integration; the module receipt beside GenerativeCore keeps its earlier scope, and the source-reuse checks are a review.",
+    "zh": "Lean 4.29.1 合并检查器实查：Becoming.Labelled 与 Becoming.Carriers 的当前字节绑定 becoming-checks 下的一个核心回执，GenerativeCore 绑定最新的核心回执；所引核心声明的公理报告均为空。DynamicConsequences、GenerativeModel 与退役的 Bridge 是来源或集成；GenerativeCore 旁的模块回执保持原范围，来源复用核对是审查。"
+  },
+  "next_delta": {
+    "en": "For observations weaker than traces with both endpoints, such as feasible words or traces with one endpoint, state which conditions on the processes let them fix the law.",
+    "zh": "对弱于两端都保留之迹的观察（如可行之词、只保留一端之迹），陈述过程满足哪些条件时它们确定规律。"
+  },
   "correspondence": {
     "zh": "端点、动作和步骤的实际含义另需对应。",
     "en": "The actual interpretation of states, actions and steps remains supplied."
@@ -57,23 +93,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Carriers.lean",
-      "detail": {
-        "zh": "只保留可行动作串会丢失规律；静止和翻转过程给出反例。",
-        "en": "Word feasibility alone loses law information; static and toggle processes supply the counterexample."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只保留可行动作串会丢失规律；静止和翻转过程给出反例。",
-    "en": "Word feasibility alone loses law information; static and toggle processes supply the counterexample."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/DynamicConsequences.lean",
@@ -214,6 +233,19 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "role": "proof",
+      "sha256": "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8",
+      "declarations": [
+        "Generative.trace_singleton_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "role": "receipt",
+      "sha256": "18d5d8f742017f011cc1df59d6be80b1b3e0a46441e7127a0d784dfed1a5fd0b"
     }
   ],
   "proof_bindings": [
@@ -237,12 +269,15 @@
       "sha256_pointer": "/source_sha256/Becoming.Carriers",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "sha256_pointer": "/source_sha256/GenerativeCore",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "直接引用原定理或已有公开包装；更弱观察范围需另证。",
-    "en": "Reuse the original theorem or its existing public wrapper; weaker observational scope needs a separate result."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -286,6 +321,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws (a law fixed by its traces, traces of one move sufficing; the same words with different ends); the counterexample and the trace-transport interface re-pointed from the periphery file to the core (Carriers, Labelled); aliases reduced to the core name, the retired Generative.Model.laws_iff_endpoint_histories and Bridge name and the periphery Generative.Deeper.same_steps_iff_endpoint_traces dropped (their files stay referenced). No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述（规律由其迹确定、一个动作的迹即足够；相同之词而终点不同）；反例与迹传递接口由外围文件改指核心（Carriers、Labelled）；别名只留核心名称，删去退役的 Generative.Model.laws_iff_endpoint_histories 与 Bridge 名称及外围的 Generative.Deeper.same_steps_iff_endpoint_traces（其文件仍被引用）。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): title, statement, correspondence and counterexample kept; the claim split into two laws, each read against its declarations in Labelled.lean, Carriers.lean and GenerativeCore.lean; the clause that traces of one move suffice now cites Generative.trace_singleton_iff (a trace of one move is exactly a step), added with GenerativeCore.lean's reference, its newest core receipt and binding; the limitation, the same sentence as the counterexample, kept there; the hypothesis restated; the shared boundary no-ethical-premise cited; no premise, status or source hash changed. Every earlier sentence is mapped in [trace-law-equivalence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/trace-law-equivalence.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：标题、陈述、对应与反例保留；主张拆为两条规律，各条对照 Labelled.lean、Carriers.lean 与 GenerativeCore.lean 中的声明核读；“一个动作的迹即足够”一句改引 Generative.trace_singleton_iff（一个动作的迹恰是一步），并加入 GenerativeCore.lean 的引用及其最新核心回执与绑定；限制与反例是同一句，留在反例中；前提改写；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变。每句旧文本的去向见 [trace-law-equivalence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/trace-law-equivalence.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/0160e5cbd634fcbe/trace-law-equivalence.json",
+      "sha256": "0160e5cbd634fcbeb36d978042dbc9e1d29e0df16a104321a040e660151014c7",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/ec76bf2019ef86b3/trace-law-equivalence.json",
+      "sha256": "ec76bf2019ef86b358e5da084889ac2ec4385f5f5e160283ab9b74fa1456a443",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

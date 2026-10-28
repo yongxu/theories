@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "recoverable-mediated-change",
   "title": {
     "zh": "中断改变后的证据恢复与停止入口的界",
@@ -8,7 +8,179 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F05",
-  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "reviewed_at_utc": "2026-10-28T05:21:42+00:00",
+  "statement": {
+    "en": "Admitted courses keep a property exactly when each admitted step does, and counted work ends in work + 1 ticks exactly when fuel lasts; the recoverable device stays safe when interrupted, and n pending writes publish in n + 1 uninterrupted steps exactly when reserve and deadline suffice.",
+    "zh": "被允许的进程保持一个性质，恰当每个被允许的步都保持它；计数的工作恰当燃料足够时在工作加一个时刻内完成。可恢复装置经中断仍保持安全，n 次待办写入恰当储备与期限足够时在 n + 1 个不中断的步内发布。"
+  },
+  "laws": [
+    {
+      "en": "For a partial law and an admission on configurations of any type, the admitted steps are those where the admission allows a move and the law takes it; a property holds after every admitted course from every start where it holds exactly when every admitted step keeps it.",
+      "zh": "对任意类型配置上的一个部分律与一个允许：被允许之步是允许放行某一动作、且律执行它的步；一个性质在每个被允许之程后从其成立的每个起点都成立，恰当每个被允许之步都保持它。",
+      "declarations": [
+        "Becoming.Countdown.admitted",
+        "Becoming.Countdown.admitted_invariant_iff"
+      ]
+    },
+    {
+      "en": "Counted work: for a partial tick that, while a task is pending, does one unit of remaining work for one unit of fuel, finishes when no work remains and fuel is left, and stalls without fuel, work + 1 ticks from a pending configuration finish the task exactly when the fuel covers work + 1 units; every run of at most work ticks leaves it pending with the work lowered by the ticks taken.",
+      "zh": "计数的工作：对一个部分的时刻步，若任务待办时它以一个单位燃料做一个单位剩余工作，无剩余工作而有燃料时完成，无燃料时停滞，则自待办配置起 work + 1 个时刻完成任务，恰当燃料覆盖 work + 1 个单位；至多 work 个时刻的每次运行都使任务仍待办，工作按所取时刻数减少。",
+      "declarations": [
+        "Becoming.Countdown.CountedWork",
+        "Becoming.Countdown.completes_iff",
+        "Becoming.Countdown.pending_before"
+      ]
+    },
+    {
+      "en": "Where pending and finished exclude each other, counted work finishes at no tick before work + 1.",
+      "zh": "待办与完成互斥时，计数的工作在 work + 1 之前的任何时刻都不完成。",
+      "declarations": [
+        "Becoming.Countdown.not_done_before"
+      ]
+    },
+    {
+      "en": "In the recoverable device, whose pending description is durable and protected, whose writes and publication are atomic and which has no extra writer, the histories, crashes included, are exactly the courses of the admitted steps, so safety (coherent evidence while incomplete, actual candidate coverage when ready) holds along every history from a safe start, because every admitted step keeps it.",
+      "zh": "可恢复装置中（待办描述持久且受保护，写入与发布原子，无额外写者），历史（含崩溃）恰是被允许之步的程，所以安全（未完成时证据相容、就绪时实际候选覆盖）沿自安全起点的每段历史成立，因为每个被允许之步都保持它。",
+      "declarations": [
+        "Becoming.ProtocolInstances.recoverable",
+        "Becoming.ProtocolInstances.recoverable_history_iff",
+        "Becoming.ProtocolInstances.safety_along",
+        "Becoming.ProtocolInstances.interrupted_history_instance",
+        "RecoverableControl.interrupted_history_preserves_safety"
+      ]
+    },
+    {
+      "en": "A pending recovery is counted work, each tick doing one remaining write, or the publication, for one unit of reserve and one of time; so n remaining writes and the publication complete in n + 1 resumed steps exactly when the reserve covers n + 1 units and the deadline lies at least n + 1 steps ahead, and every resumption of at most n steps leaves the device pending, its writes lowered by the steps taken.",
+      "zh": "待办恢复是计数的工作：每个时刻以一个单位储备和一个单位时间做一次剩余写入或发布；所以剩余 n 次写入与发布在 n + 1 个恢复步内完成，恰当储备覆盖 n + 1 个单位且期限至少在 n + 1 步之后；至多 n 步的每次恢复都使装置仍待办，写入按所取步数减少。",
+      "declarations": [
+        "Becoming.ProtocolInstances.counts",
+        "Becoming.ProtocolInstances.publishes_iff",
+        "Becoming.ProtocolInstances.pending_until_published"
+      ]
+    },
+    {
+      "en": "From a coherent pending recovery whose reserve and deadline cover its n remaining writes and the publication, n + 1 resumed steps publish a state with actual candidate coverage, the target's actual configuration, and the units drawn and the time each raised by exactly n + 1.",
+      "zh": "自一个相容的待办恢复起，若储备与期限覆盖其 n 次剩余写入与发布，n + 1 个恢复步发布一个状态：有实际候选覆盖，实际配置为目标的配置，已汲取的单位与时间各恰增加 n + 1。",
+      "declarations": [
+        "RecoverableControl.funded_suffix_publishes"
+      ]
+    },
+    {
+      "en": "Where a history from a safe start ends published, a current certificate over the pooled candidate models that accepts yields every conclusion that each supported domain of the published roster, not failed by the command's roots, yields.",
+      "zh": "自安全起点的历史以发布告终时，对汇集的候选模型所作的当前认证若接受，就给出每个这样的结论：发布名册中每个受支持、未被命令根所破的域都给出它。",
+      "declarations": [
+        "RecoverableControl.published_history_to_current_certificate"
+      ]
+    },
+    {
+      "en": "A crash keeps the units already drawn, adds its delay to the time, and restarts the pending writes from the program with the actual configuration kept.",
+      "zh": "崩溃保留已汲取的单位，把延迟加到时间上，并从程序重新开始待办写入，实际配置保留。",
+      "declarations": [
+        "RecoverableControl.crash_retains_consumption",
+        "RecoverableControl.crash_keeps_pending"
+      ]
+    },
+    {
+      "en": "In the device's runs, without a crash 22 units and a 22-step deadline carry the change and the shutdown through, and with one crash 23 units and a 24-step deadline do, while 22 units, or a 23-step deadline, leave the shutdown uncompleted.",
+      "zh": "装置的运行中：无崩溃时 22 个单位与 22 步期限使改变与停机都完成；一次崩溃时 23 个单位与 24 步期限亦然，而 22 个单位或 23 步期限使停机未完成。",
+      "declarations": [
+        "RecoverableControl.staged_change_then_actual_shutdown",
+        "RecoverableControl.interrupted_change_then_actual_shutdown",
+        "RecoverableControl.interruption_can_exhaust_execution_capacity",
+        "RecoverableControl.interruption_delay_can_miss_deadline"
+      ]
+    },
+    {
+      "en": "With nine units, recovery is exhausted after the first actual write: nothing is published, no tick follows, the shutdown command is refused and the activity still runs; and deleting the pending marker of a partly changed device publishes old bookkeeping whose candidates exclude the actual configuration, while a certificate over them accepts.",
+      "zh": "九个单位时，恢复在第一次实际写入后耗尽：无发布，无后续时刻，停机命令被拒，活动仍在运行；删去部分改变的装置的待办标记，会发布旧的记录，其候选不含实际配置，而对它们的认证仍接受。",
+      "declarations": [
+        "RecoverableControl.exhausted_recovery_blocks_shutdown",
+        "RecoverableControl.losing_pending_marker_exposes_false_certificate"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "zh": "起始证据覆盖及当前读取规律；准备目标来自原权限／代次检查的 commit；待恢复描述、消耗账及门控持久且受保护。",
+      "en": "Initial evidence coverage and current read law; the prepared target comes from the preceding permission/generation-checked commit; pending description, consumption state and gate are durable and protected."
+    },
+    {
+      "zh": "覆盖写入语义、单次写入／消耗原子性、准备及发布原子性、无额外写入或并行权限改变；中断保持已经发生的改变并带入明示延迟。",
+      "en": "Overwrite semantics, atomic individual write/consumption steps, atomic preparation/publication, no extra writer or concurrent grant change; interruptions retain completed effects and add a specified delay."
+    },
+    {
+      "zh": "完成定理另需足够剩余资源、截止期及一个无中断后缀；一致性本身不保证这些条件。",
+      "en": "The completion theorem additionally requires sufficient remaining resources, deadline and an uninterrupted suffix; consistency alone does not ensure them."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Safety here is coherence of evidence, not harmless activity or an always-available shutdown: in a witness ordinary shutdown is refused while the recovery is exhausted.",
+      "zh": "此处的安全是证据相容，不是活动无害，也不是停机总可用：见证中恢复耗尽时普通停机被拒。",
+      "kind": "correspondence",
+      "witness": "RecoverableControl.exhausted_recovery_blocks_shutdown"
+    },
+    {
+      "en": "The laws are local recovery and evidential inference in a model; they verify no hardware, compiler or persistence barrier, no arbitrary irreversible effect, no independent emergency stop and no ethical adequacy.",
+      "zh": "这些规律是模型中的局部恢复与证据推论；不验证硬件、编译器或持久屏障，不验证任意不可逆效果、独立的紧急停止或伦理充分性。",
+      "kind": "scope"
+    },
+    {
+      "en": "The harm done while a change is under way is not modelled.",
+      "zh": "改变进行之中的损害没有建模。",
+      "kind": "scope"
+    },
+    {
+      "en": "Completion needs enough remaining reserve, a deadline far enough ahead and an uninterrupted suffix; coherence alone does not supply them.",
+      "zh": "完成需要足够的剩余储备、足够远的期限与一段不中断的后缀；仅有相容不提供这些。",
+      "kind": "non-implication",
+      "witness": "RecoverableControl.interruption_can_exhaust_execution_capacity"
+    },
+    {
+      "en": "This protocol reserves no stop, so its exhaustion counterexample stands: with the recovery exhausted, ordinary shutdown is refused.",
+      "zh": "此协议不预留停止，所以其耗尽反例成立：恢复耗尽时普通停机被拒。",
+      "kind": "scope",
+      "witness": "RecoverableControl.exhausted_recovery_blocks_shutdown"
+    },
+    {
+      "en": "No universal convergence follows.",
+      "zh": "不推出普遍趋同。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControl.lean",
+      "detail": {
+        "zh": "九单位时第一次实际写入后恢复耗尽，活动仍在运行且普通停止被阻；删去持久标记又可暴露失实认证。",
+        "en": "With nine units, recovery exhausts after the first actual write while activity remains running and ordinary shutdown is blocked; losing the durable marker can instead expose a false certificate."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControl.lean",
+      "detail": {
+        "zh": "重复写入或中断延迟使22单位或23时限不足；此前消耗保留。",
+        "en": "Repeated writes or crash delay make 22 units or a 23-step deadline insufficient; prior consumption remains."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "formal-not-empirical",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1: RecoverableControl and MediatedControl by the receipt recoverable-control-verification.json, which also records 27,888 finite comparisons by the same author; the core laws (Becoming.Countdown, empty axiom reports) by a core receipt in becoming-checks; the device's instances of them (ProtocolInstances) by a receipt in protocol-instances-checks. The cited periphery declarations use at most propext, Quot.sound and Classical.choice, some none. There is no independent acceptance and no hardware trial.",
+    "zh": "以 Lean 4.29.1 实查：装置模块由 recoverable-control-verification.json（另记同一作者的 27,888 项有限比较）；核心 Becoming.Countdown（公理报告为空）由 becoming-checks；其实例 ProtocolInstances 由 protocol-instances-checks。所引外围声明至多用 propext、Quot.sound 与 Classical.choice，部分不用。无独立验收与硬件试验。"
+  },
+  "next_delta": {
+    "en": "Give evidence, for an identified installation, of real persistence, of no bypass and of a protected stop channel.",
+    "zh": "对一个指定的安装，给出真实持久、无旁路与受保护停止通道的证据。"
+  },
+  "correspondence": {
+    "zh": "实际改变、保留的恢复根据及行动访问是同一历史中的分化；Safe 仅表示证据相容，不表示活动无害或停止入口总是可用。",
+    "en": "Actual change, retained recovery grounds and access to action differentiate within one history; Safe denotes evidence coherence, not harmless activity or always-available shutdown."
+  },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControl.lean",
   "aliases": [
     "RecoverableControl.interrupted_history_preserves_safety",
@@ -51,6 +223,13 @@
         "zh": "解释关联：复用条件对齐路线上已完成的方向；实现条件不独自证明权限及目的正当。",
         "en": "Interpretive connection: reuses the completed direction of the conditional alignment route; implementation conditions do not independently justify permissions or ends."
       }
+    },
+    {
+      "id": "reserved-shutdown-during-recovery",
+      "detail": {
+        "en": "Supported stopping while a recovery is incomplete: the reserved exit gives the shutdown that this protocol's exhausted recovery refuses.",
+        "zh": "恢复未完成期间有支持的停止：预留的出口给出此协议中恢复耗尽时被拒的停机。"
+      }
     }
   ],
   "references": [
@@ -61,7 +240,15 @@
       "declarations": [
         "RecoverableControl.interrupted_history_preserves_safety",
         "RecoverableControl.funded_suffix_publishes",
-        "RecoverableControl.published_history_to_current_certificate"
+        "RecoverableControl.published_history_to_current_certificate",
+        "RecoverableControl.staged_change_then_actual_shutdown",
+        "RecoverableControl.interrupted_change_then_actual_shutdown",
+        "RecoverableControl.interruption_can_exhaust_execution_capacity",
+        "RecoverableControl.interruption_delay_can_miss_deadline",
+        "RecoverableControl.exhausted_recovery_blocks_shutdown",
+        "RecoverableControl.losing_pending_marker_exposes_false_certificate",
+        "RecoverableControl.crash_retains_consumption",
+        "RecoverableControl.crash_keeps_pending"
       ]
     },
     {
@@ -124,7 +311,8 @@
         "Becoming.Countdown.admitted_invariant_iff",
         "Becoming.Countdown.CountedWork",
         "Becoming.Countdown.completes_iff",
-        "Becoming.Countdown.pending_before"
+        "Becoming.Countdown.pending_before",
+        "Becoming.Countdown.not_done_before"
       ]
     },
     {
@@ -137,7 +325,8 @@
         "Becoming.ProtocolInstances.interrupted_history_instance",
         "Becoming.ProtocolInstances.counts",
         "Becoming.ProtocolInstances.publishes_iff",
-        "Becoming.ProtocolInstances.pending_until_published"
+        "Becoming.ProtocolInstances.pending_until_published",
+        "Becoming.ProtocolInstances.recoverable"
       ]
     },
     {
@@ -213,60 +402,6 @@
       "success_value": "passed"
     }
   ],
-  "statement": {
-    "en": "Admitted courses keep a property exactly when each admitted step does, and counted work ends in work + 1 ticks exactly when fuel lasts; the recoverable device stays safe when interrupted, and n pending writes publish in n + 1 uninterrupted steps exactly when reserve and deadline suffice.",
-    "zh": "被允许的进程保持一个性质，恰当每个被允许的步都保持它；计数的工作恰当燃料足够时在工作加一个时刻内完成。可恢复装置经中断仍保持安全，n 次待办写入恰当储备与期限足够时在 n + 1 个不中断的步内发布。"
-  },
-  "claim": {
-    "zh": "对每条部分律与容许条件：性质在每段被允许的进程后、从它成立的每个起点都成立，恰当每个被允许的步保持它；计数的工作在 work + 1 次中完成恰当燃料够用，更短的运行不完成。可恢复设备是二者的实例。其历史（含中断）恰是被允许步的进程，所以持久的待完成描述与顺序覆写步在未完成时保持一致、发布时保持实际候选覆盖，跨每段有限的被允许中断历史成立，恰因每个被允许的步如此。待完成的恢复是计数的工作：n 次剩余写入与发布在 n + 1 次不中断步中完成，恰当储备够 n + 1 单位且期限够 n + 1 步；更短的恢复不发布。",
-    "en": "For every partial law and admission, a property holds after every admitted course from every start where it holds exactly when every admitted step keeps it; and counted work finishes in work + 1 ticks exactly when the fuel covers them, no shorter run finishing. The recoverable device is an instance of both. Its histories, interruptions included, are the courses of its admitted steps, so a durable pending description and sequential overwrite steps preserve coherence while incomplete and actual candidate coverage when published across every finite admitted interruption history, exactly because each admitted step does. A pending recovery is counted work: n remaining writes plus publication complete in n + 1 uninterrupted steps exactly when the reserve covers n + 1 units and the deadline n + 1 more steps, and no shorter resumption publishes."
-  },
-  "hypotheses": [
-    {
-      "zh": "起始证据覆盖及当前读取规律；准备目标来自原权限／代次检查的 commit；待恢复描述、消耗账及门控持久且受保护。",
-      "en": "Initial evidence coverage and current read law; the prepared target comes from the preceding permission/generation-checked commit; pending description, consumption state and gate are durable and protected."
-    },
-    {
-      "zh": "覆盖写入语义、单次写入／消耗原子性、准备及发布原子性、无额外写入或并行权限改变；中断保持已经发生的改变并带入明示延迟。",
-      "en": "Overwrite semantics, atomic individual write/consumption steps, atomic preparation/publication, no extra writer or concurrent grant change; interruptions retain completed effects and add a specified delay."
-    },
-    {
-      "zh": "完成定理另需足够剩余资源、截止期及一个无中断后缀；一致性本身不保证这些条件。",
-      "en": "The completion theorem additionally requires sufficient remaining resources, deadline and an uninterrupted suffix; consistency alone does not ensure them."
-    }
-  ],
-  "correspondence": {
-    "zh": "实际改变、保留的恢复根据及行动访问是同一历史中的分化；Safe 仅表示证据相容，不表示活动无害或停止入口总是可用。",
-    "en": "Actual change, retained recovery grounds and access to action differentiate within one history; Safe denotes evidence coherence, not harmless activity or always-available shutdown."
-  },
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControl.lean",
-      "detail": {
-        "zh": "九单位时第一次实际写入后恢复耗尽，活动仍在运行且普通停止被阻；删去持久标记又可暴露失实认证。",
-        "en": "With nine units, recovery exhausts after the first actual write while activity remains running and ordinary shutdown is blocked; losing the durable marker can instead expose a false certificate."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControl.lean",
-      "detail": {
-        "zh": "重复写入或中断延迟使22单位或23时限不足；此前消耗保留。",
-        "en": "Repeated writes or crash delay make 22 units or a 23-step deadline insufficient; prior consumption remains."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "局部恢复及证据推论，不是硬件、编译器、持久屏障、任意不可逆效果、独立紧急停止或伦理充分性的验证。实际全部损害并未建模；不证明普遍趋同或零实质公理。",
-    "en": "Local recovery and evidential inference, not verification of hardware, compiler, persistence barriers, arbitrary irreversible effects, an independent emergency stop or ethical adequacy. Full intermediate harm is not modeled; universal convergence and zero substantive axioms are not proved."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 新查22项定理／48项显式审计（17空、22仅propext、8另含Quot.sound、1再含Classical.choice）；九个继承证明模块及一个案例辅助模块另重编。27,888项同作者有限核对通过；完整签名、依赖及冻结哈希保留，无独立验收或硬件试验。一般律已由检查器回执绑定。",
-    "en": "Lean 4.29.1 checked 22 new theorems / 48 explicit audits (17 empty, 22 propext only, 8 also Quot.sound, 1 additionally Classical.choice); nine inherited proof modules and one case helper were separately rebuilt. 27,888 same-author finite comparisons passed; full signatures, dependencies and frozen hashes remain, without independent acceptance or hardware trials. General laws: checker receipts bound."
-  },
-  "next_delta": {
-    "zh": "reserved-shutdown-during-recovery 已接通未完成期间的有支持停止；原恢复反例仍成立于旧协议。真实持久实现、无旁路及受保护停止通道另需指定安装证据。",
-    "en": "reserved-shutdown-during-recovery now supplies supported stopping while incomplete; the old recovery counterexample remains valid for the old protocol. Real persistence, no bypass and the protected stop channel separately require evidence for an identified installation."
-  },
   "history": [
     {
       "zh": "2026-10-09：接入逐项写入与重复中断后的恢复；保留耗尽运行、期限失败及标记丢失反例。原27项指令接续证明不重算为新增。",
@@ -297,6 +432,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added, from the claim, which already states the core laws (admitted invariance, counted work) and their instance in the recoverable device exactly; then the retired label G0/J in a related note replaced by the conditional alignment route.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，取自主张；主张已精确陈述核心规律（被允许之不变性、计数的工作）及其在可恢复装置中的实例；随后一条相关说明中已退役的标签 G0/J 改为条件对齐路线。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): the statement kept; the claim split into ten laws, each read against its declarations in Becoming.Countdown, ProtocolInstances and RecoverableControl (the device's modelling conditions written into the device laws, the exclusion of pending and finished into the law on no earlier finish); the limitations and the evidential part of the correspondence became six does-not-show items and the standard boundaries no-ethical-premise-core-axiom-free, formal-not-empirical and zero-axiom-target-open; the hypotheses kept; the completed connection in the next step became a related entry for reserved-shutdown-during-recovery and a does-not-show item; Countdown.not_done_before, ProtocolInstances.recoverable and eight RecoverableControl declarations (the device runs behind the counterexamples and the two crash laws) added to the references of their files; no premise, status or source hash changed. Every earlier sentence is mapped in [recoverable-mediated-change.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recoverable-mediated-change.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, the evidence paragraph, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：陈述保留；主张拆为十条规律，各条对照其在 Becoming.Countdown、ProtocolInstances 与 RecoverableControl 中的声明核读（装置的建模条件写入装置的规律，待办与完成互斥写入不更早完成的规律）；限制与对应中关于证据的部分成为六条“未表明”与通用边界 no-ethical-premise-core-axiom-free、formal-not-empirical、zero-axiom-target-open；前提保留；下一步中已完成的连接成为 reserved-shutdown-during-recovery 的相关条目与一条“未表明”；Countdown.not_done_before、ProtocolInstances.recoverable 与 RecoverableControl 的八个声明（反例背后的装置运行与两条崩溃规律）加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [recoverable-mediated-change.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recoverable-mediated-change.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项、证据段，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/7dba466f00abc31d/recoverable-mediated-change.json",
+      "sha256": "7dba466f00abc31d31675e350bf7e7605ea1a1f71cfcaebf5a702bff49e9748e",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/d3f0caac7b00e10f/recoverable-mediated-change.json",
+      "sha256": "d3f0caac7b00e10f01608b68c906c183bb1988475707badd9458869e36e946fb",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

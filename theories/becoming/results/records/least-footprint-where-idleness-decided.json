@@ -1,22 +1,81 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "least-footprint-where-idleness-decided",
   "title": {
     "zh": "闲置可判定处的最小足迹与最少次序",
     "en": "The least footprint and least order where idleness is decided"
   },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-28T05:47:54+00:00",
   "statement": {
     "en": "Where idleness is decided at every step and relatum, the least footprint touches exactly what is not idle and lies in every containing footprint; with equality of relata decided, a least footprint exists exactly where idleness is decided.",
     "zh": "每步每个关系项的闲置可判定时，最小足迹恰触及非闲置者，且在每个包含足迹之内；关系项相等可判定时，最小足迹恰在闲置可判定时存在。"
   },
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
-  "claim": {
-    "zh": "给出每步每个关系项的闲置布尔判定（DecidesIdle：不参与该交换且跨步 Unmoved），Footprinted.least 触及恰非闲置的关系项，包含交换且被任何包含足迹包含（least_touch_iff、least_contains、least_le）。其 Joined 与 Precedes 被所有包含足迹的相应关系包含（least_joined、least_precedes），其他包含足迹保持的重新编号也被它保持（least_keeps），经 sorts_iff 接到可达安排。若关系项相等可判定，则存在最小布尔包含足迹恰在存在闲置判定时（least_exists_iff）；此时参与由列表成员关系判定，闲置可判定恰在不参与者跨步不变可判定时（decidesIdle_iff）。",
-    "en": "Given a Boolean decision of idleness at every step and relatum (DecidesIdle: taking no part and being Unmoved), Footprinted.least touches exactly what is not idle, contains the exchanges, and is contained in every containing footprint (least_touch_iff, least_contains, least_le). Its Joined and Precedes are contained in the corresponding relations of every containing footprint (least_joined, least_precedes); every renumbering those footprints keep is also kept by it (least_keeps), connected to reachable arrangements by sorts_iff. With decidable equality of relata, a least Boolean containing footprint exists exactly where an idleness decision exists (least_exists_iff). Participation is then decided by list membership, and idleness is decided exactly where being unmoved is decided for nonparticipants (decidesIdle_iff)."
-  },
+  "laws": [
+    {
+      "en": "For a flow and a web on the same relata, idleness is decided where a Boolean marks, at every step and relatum, exactly the relata taking no part in that step's exchange and unmoved across it; the least footprint touches each relatum not so marked, and so touches a relatum exactly where it is not idle.",
+      "zh": "对同一关系项上的流与网，闲置可判定，是指有布尔标记在每步每个关系项处恰标出不参与该步交换且跨步不变的关系项；最小足迹触及每个未被标出的关系项，故恰在关系项不闲置处触及它。",
+      "declarations": [
+        "Becoming.Footprinted.DecidesIdle",
+        "Becoming.Footprinted.least",
+        "Becoming.Footprinted.least_touch_iff",
+        "Becoming.Web.Unmoved"
+      ]
+    },
+    {
+      "en": "A footprint contains the exchanges where every relatum it leaves untouched takes no part and is unmoved. With idleness decided, the least footprint contains them and is least: every footprint on the same flow and web that contains them touches whatever the least footprint touches.",
+      "zh": "足迹包含交换，是指它未触及的每个关系项都不参与且不变。闲置可判定时，最小足迹包含交换且为最小：同一流与网上每个包含交换的足迹，都触及最小足迹所触及者。",
+      "declarations": [
+        "Becoming.Footprinted",
+        "Becoming.Footprinted.Contains",
+        "Becoming.Footprinted.least_contains",
+        "Becoming.Footprinted.least_le"
+      ]
+    },
+    {
+      "en": "With idleness decided, the least footprint joins and orders least: exchanges it joins, or orders one before another, are joined or so ordered under every containing footprint, as joining and order grow with what a footprint touches; and every renumbering of a stretch that keeps the order of joined exchanges under a containing footprint keeps it under the least.",
+      "zh": "闲置可判定时，最小足迹相连最少、定序最少：它所相连或定序的交换，在每个包含足迹下也相连或如此定序，因为相连与次序随足迹所触及者增长；在包含足迹下保持相连交换之次序的区段重新编号，在最小足迹下也保持。",
+      "declarations": [
+        "Becoming.Footprinted.Joined",
+        "Becoming.Footprinted.Precedes",
+        "Becoming.Footprinted.Joined.mono",
+        "Becoming.Footprinted.Precedes.mono",
+        "Becoming.Footprinted.least_joined",
+        "Becoming.Footprinted.least_precedes",
+        "Becoming.Footprinted.Keeps",
+        "Becoming.Footprinted.least_keeps"
+      ]
+    },
+    {
+      "en": "Under a containing footprint, a renumbering of a stretch among itself, its inverse given, is reached by commuting, within the stretch, exchanges not joined exactly where it keeps the order of joined exchanges; so, with idleness decided, every renumbering reached under a containing footprint is reached under the least footprint, which contains the exchanges.",
+      "zh": "在包含足迹下，区段内部的重新编号（其逆给定）可由在区段内交换互不相连的交换而达到，恰当它保持相连交换的次序；故闲置可判定时，在包含足迹下达到的每个重新编号，在最小足迹下也达到，因最小足迹包含交换。",
+      "declarations": [
+        "Becoming.Footprinted.sorts_iff",
+        "Becoming.Footprinted.Independent",
+        "Becoming.Reindexes",
+        "Becoming.Footprinted.least_keeps",
+        "Becoming.Footprinted.least_contains"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, the exchanges of a flow and web have a least containing footprint, one every containing footprint includes, exactly where idleness is decided.",
+      "zh": "关系项相等可判定时，流与网的交换有最小包含足迹（每个包含足迹都含之），恰当闲置可判定。",
+      "declarations": [
+        "Becoming.Footprinted.least_exists_iff"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, taking part is decided by membership in the list of present relata, and idleness is decided exactly where being unmoved is decided for the relata taking no part.",
+      "zh": "关系项相等可判定时，参与由在场关系项列表中的成员关系判定；闲置可判定，恰当对不参与的关系项，跨步不变可判定。",
+      "declarations": [
+        "Becoming.Footprinted.inList",
+        "Becoming.Footprinted.inList_iff",
+        "Becoming.Footprinted.decidesIdle_iff"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "同一 Flow X X 与 Web X X；足迹为 Nat → X → Bool，包含按未触及者不参与且 Unmoved 定义。",
@@ -31,9 +90,55 @@
       "en": "least_exists_iff and decidesIdle_iff additionally require [DecidableEq X]; the forward construction does not."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "No law here gives idleness decided in every world, and without the decision no least Boolean footprint is built.",
+      "zh": "这里没有规律给出任意世界中闲置可判定；无此判定，也没有构造最小布尔足迹。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The decision's necessity is the equivalence under decided equality of relata; no world with undecidable idleness is given.",
+      "zh": "判定的必要性是关系项相等可判定之下的等价；未给闲置不可判定的具体世界。",
+      "kind": "scope",
+      "witness": "Becoming.Footprinted.least_exists_iff"
+    },
+    {
+      "en": "Leastness is among the Boolean footprints containing the exchanges, as defined, on one flow and web.",
+      "zh": "最小性是相对于既有定义下、同一流与网上包含交换的布尔足迹。",
+      "kind": "scope"
+    },
+    {
+      "en": "Each swap of a reordering still takes its sides as supplied; the least footprint does not remove them.",
+      "zh": "重排的每次交换仍以给定的两侧为前提；最小足迹不消除它们。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+      "detail": {
+        "zh": "没有从任意世界推出闲置可判定，也没有无此判定的最小布尔足迹构造；必要性是带 DecidableEq 的等价，未给不可判定闲置的具体世界。最小性相对于既有布尔足迹与 Contains；不消除 Reorders 给定的两侧，也不推出伦理排序。",
+        "en": "Idleness is not derived decidable for every world, and no least Boolean footprint is constructed without that decision. Necessity is the equivalence under DecidableEq, not a concrete undecidable-idleness world. Leastness is relative to the existing Boolean footprint and Contains definitions; it does not eliminate the supplied sides of Reorders or give an ethical ranking."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "decidability",
+    "no-ethical-premise",
+    "no-evaluation",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker: Becoming.OrderNormal, Becoming.Reordering and Becoming.Prelude are bound to receipts in becoming/becoming-checks; every cited declaration has an empty axiom report, and core purity is verified. Author counterreview in the integration note; there is no independent review yet.",
+    "zh": "合并核心检查器实查：Becoming.OrderNormal、Becoming.Reordering 与 Becoming.Prelude 绑定 becoming/becoming-checks 中的回执；所引声明公理报告全空，检查器并核对核心纯净。作者反审见整合文档；尚无独立审查。"
+  },
+  "next_delta": {
+    "zh": "具体不可判定闲置的边界世界；非布尔足迹与连续时间对应。",
+    "en": "A concrete boundary world with undecidable idleness, non-Boolean footprints and continuous-time correspondence."
+  },
   "correspondence": {
-    "zh": "P88 将 P78/P78b 的给定足迹接到世界的闲置关系：先刻画关系怎样跨步不变，再由判定读出最小触及范围。不是从形式条件推出实际世界必然可判定。读法由 AI 提出，依 Ren 的交托采用；见整合文档 §109。",
-    "en": "P88 connects P78/P78b’s supplied footprint to idleness in the world: first state how relations remain unmoved across a step, then use the decision to read off the least touched region. The formal condition does not establish that actual worlds have this decision. The reading is AI-authored, adopted on Ren's delegation; see integration §109."
+    "en": "This result connects the footprint supplied in the laws of the order of exchanges (exchanges-commute-unless-joined, order-of-exchanges-is-the-invariant) to idleness in the world: first state how relations remain unmoved across a step, then use the decision to read off the least touched region. The formal condition does not establish that actual worlds have this decision. The reading is the AI's.",
+    "zh": "本结果把交换次序之律（exchanges-commute-unless-joined、order-of-exchanges-is-the-invariant）中给定的足迹接到世界的闲置关系：先刻画关系怎样跨步不变，再由判定读出最小触及范围。不是从形式条件推出实际世界必然可判定。读法由 AI 提出。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
   "aliases": [
@@ -84,23 +189,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
-      "detail": {
-        "zh": "没有从任意世界推出闲置可判定，也没有无此判定的最小布尔足迹构造；必要性是带 DecidableEq 的等价，未给不可判定闲置的具体世界。最小性相对于既有布尔足迹与 Contains；不消除 Reorders 给定的两侧，也不推出伦理排序。",
-        "en": "Idleness is not derived decidable for every world, and no least Boolean footprint is constructed without that decision. Necessity is the equivalence under DecidableEq, not a concrete undecidable-idleness world. Leastness is relative to the existing Boolean footprint and Contains definitions; it does not eliminate the supplied sides of Reorders or give an ethical ranking."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "没有从任意世界推出闲置可判定，也没有无此判定的最小布尔足迹构造；必要性是带 DecidableEq 的等价，未给不可判定闲置的具体世界。最小性相对于既有布尔足迹与 Contains；不消除 Reorders 给定的两侧，也不推出伦理排序。",
-    "en": "Idleness is not derived decidable for every world, and no least Boolean footprint is constructed without that decision. Necessity is the equivalence under DecidableEq, not a concrete undecidable-idleness world. Leastness is relative to the existing Boolean footprint and Contains definitions; it does not eliminate the supplied sides of Reorders or give an ethical ranking."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.OrderNormal 的 101 项定理全部空依赖，其中含 Footprinted.least_contains、Footprinted.least_touch_iff、Footprinted.least_le、Footprinted.least_joined、Footprinted.least_precedes、Footprinted.least_keeps、Footprinted.least_exists_iff与 Footprinted.decidesIdle_iff；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §109；尚无独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 101 theorems of Becoming.OrderNormal all have empty axiom reports, among them Footprinted.least_contains, Footprinted.least_touch_iff, Footprinted.least_le, Footprinted.least_joined, Footprinted.least_precedes, Footprinted.least_keeps, Footprinted.least_exists_iff and Footprinted.decidesIdle_iff. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §109 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
@@ -142,7 +230,11 @@
         "Becoming.Footprinted.Joined.mono",
         "Becoming.Footprinted.Precedes.mono",
         "Becoming.Footprinted.Keeps",
-        "Becoming.Footprinted.sorts_iff"
+        "Becoming.Footprinted.sorts_iff",
+        "Becoming.Footprinted.Joined",
+        "Becoming.Footprinted.Precedes",
+        "Becoming.Footprinted.Independent",
+        "Becoming.Reindexes"
       ]
     },
     {
@@ -253,10 +345,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "具体不可判定闲置的边界世界；非布尔足迹与连续时间对应。",
-    "en": "A concrete boundary world with undecidable idleness, non-Boolean footprints and continuous-time correspondence."
-  },
   "history": [
     {
       "zh": "2026-10-13：接管时保存并整合 Claude P88 既有草稿；原字节与出处保留，不新增证明；见整合文档 §109。",
@@ -322,6 +410,28 @@
     {
       "en": "27 October 2026, board item DF2 (study section 426): A statement, as 01's home section states the result (Footprinted.least_touch_iff, least_le, least_exists_iff); its laws wait for the schema-2 migration.",
       "zh": "2026年10月27日，工作板条目 DF2（研究第 426 节）：陈述，按 01 的归属一节所述（Footprinted.least_touch_iff、least_le、least_exists_iff）；其规律待迁移到第 2 版格式。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): statement and hypotheses kept; the claim split into six laws, each read against its declarations in Becoming.OrderNormal and Becoming.Reordering, the connection to reachable arrangements (sorts_iff) now a law of its own; limitations to four does-not-show items and the standard boundaries decidability, no-ethical-premise, no-evaluation and names-provisional; Footprinted.Joined, Footprinted.Precedes, Footprinted.Independent and Reindexes added to the references; the correspondence names the records the round labels stood for, and its reading keeps the AI's label, the delegation and the integration-note section staying in the earlier history entries; validation scope rewritten on the bound core receipts, the counts of earlier receipts left to them and the earlier record. No premise, status or source hash changed. Every earlier sentence is mapped in [least-footprint-where-idleness-decided.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/least-footprint-where-idleness-decided.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：陈述与前提保留；主张拆为六条规律，各条对照其在 Becoming.OrderNormal 与 Becoming.Reordering 中的声明核读，与可达安排的连接（sorts_iff）单列为一条规律；限制分入四条“未表明”与通用边界 decidability、no-ethical-premise、no-evaluation、names-provisional；引用中加入 Footprinted.Joined、Footprinted.Precedes、Footprinted.Independent 与 Reindexes；对应写出轮次标签所指的记录，读法保留 AI 标注，交托与整合文档节号留在此前的沿革中；检查范围按所绑核心回执改写，早先回执的计数留在其回执与迁移前的记录中。前提、状态与来源哈希均未改变。每句旧文本的去向见 [least-footprint-where-idleness-decided.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/least-footprint-where-idleness-decided.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/cad0984e279b9957/least-footprint-where-idleness-decided.json",
+      "sha256": "cad0984e279b9957d2898074ff3d3be3790fdd5089f4b06f28aedf7b72731a3e",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/ef8a3370ef4951a6/least-footprint-where-idleness-decided.json",
+      "sha256": "ef8a3370ef4951a6c4c8e7bb3ff8025de26b6f3ffc6a468619c2c2fe696a36a4",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

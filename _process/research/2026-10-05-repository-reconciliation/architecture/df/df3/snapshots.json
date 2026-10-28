@@ -1,0 +1,361 @@
+{
+"only-the-order-of-change-shows": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/2fd516ac40e5ccf2/only-the-order-of-change-shows.json",
+    "sha256": "2fd516ac40e5ccf2c8897a5f74440e0eb8c604d455280f328f6156f136595988",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"normal-forms-need-decided-apartness": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/32b1ad4270c6937b/normal-forms-need-decided-apartness.json",
+    "sha256": "32b1ad4270c6937bbe21e1029e41c05c11fa18459ca24fefd972d963572bfe89",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"continuous-time-as-tower": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/294668882e74f97f/continuous-time-as-tower.json",
+    "sha256": "294668882e74f97ff56bfaffa02fb31f515df0245df80fff783917e3bc02b4a0",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"trace-law-equivalence": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/0160e5cbd634fcbe/trace-law-equivalence.json",
+    "sha256": "0160e5cbd634fcbeb36d978042dbc9e1d29e0df16a104321a040e660151014c7",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"joint-code-plan-lifting": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/3a1ec364be2a36c7/joint-code-plan-lifting.json",
+    "sha256": "3a1ec364be2a36c7d44edbb5714782f310c63d2dc1c17022e329dc725fb7780a",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"finite-trace-transport": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/5a7a222484debc22/finite-trace-transport.json",
+    "sha256": "5a7a222484debc22b2761f4fd1373af507678ea261f438483e45e35369986a65",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"becoming-context-coherence": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/4fb6c5073a10192a/becoming-context-coherence.json",
+    "sha256": "4fb6c5073a10192a9eda3aec699f5d1b70d0ad6b99e74b1c98002b4d17b4519d",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"joint-correlation-reduced-dynamics": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/3fc423f9c6890593/joint-correlation-reduced-dynamics.json",
+    "sha256": "3fc423f9c6890593952077e3db3ec5bf53b5ed5b137419f8a7b1bd4741838cfb",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"derived-history-law-exactness": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/48e5348ed1d2f150/derived-history-law-exactness.json",
+    "sha256": "48e5348ed1d2f150345190376341678cfd1bab6b1c6c82d49a6d2b00426e2c60",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"least-footprint-where-idleness-decided": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/cad0984e279b9957/least-footprint-where-idleness-decided.json",
+    "sha256": "cad0984e279b9957d2898074ff3d3be3790fdd5089f4b06f28aedf7b72731a3e",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"joint-decomposition-lifting": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/5f20a3815242fd71/joint-decomposition-lifting.json",
+    "sha256": "5f20a3815242fd719b28794ce02539e58b2a24950851d81739d43a855915ecd5",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"finite-joining-tree-lifting": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/8409d21f98c83e3b/finite-joining-tree-lifting.json",
+    "sha256": "8409d21f98c83e3b6f72c1077d3fd5c3996c13b791fc6f36f5b18dd94c4065a9",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"exclusive-footprint-support": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/eba02b611d352854/exclusive-footprint-support.json",
+    "sha256": "eba02b611d35285449d9fc9afa85d9946fe71c08948bbea74f5ceff6df2a31b5",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"market-partial-correction-boundary": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/dc0b3719c391e6a8/market-partial-correction-boundary.json",
+    "sha256": "dc0b3719c391e6a80bf7e39d408708b469700a75dd5ffb6770d9501026ab4150",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"market-supported-finite-transition": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/0f1d8492393f6ea8/market-supported-finite-transition.json",
+    "sha256": "0f1d8492393f6ea8c3768d4578e93c9f009e579f6eb6bc0742a28c5f9f5b3f88",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"market-finite-support-obstruction": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/15828cbd7beb5353/market-finite-support-obstruction.json",
+    "sha256": "15828cbd7beb5353d31a7a3086851410501fbaf9f57b5c69b11cbaf01d65b4e4",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"market-protected-continuation": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/e41907ebbf4c9b9b/market-protected-continuation.json",
+    "sha256": "e41907ebbf4c9b9bf41eb2b7f670bb3284ba92503c99239cc3d7a4ac4256bdb9",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"joint-plan-composition": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/63ad0aeafa213e09/joint-plan-composition.json",
+    "sha256": "63ad0aeafa213e09e05f141c98b693b410789cdaafde5e419f559262edcfa5d9",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"draws-on-a-shared-stock": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/5c832183c236a87d/draws-on-a-shared-stock.json",
+    "sha256": "5c832183c236a87daf00f735680bb3bb58d4720dcc2fafe7fab2de10494b821b",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"growth-constrained-fragmentation": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/312c13a57972a383/growth-constrained-fragmentation.json",
+    "sha256": "312c13a57972a383fc22c8f3f199922665851cd6ae03cfbd0b882c824e3d1e77",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"renewing-consuming-formation": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/5e9452278e388899/renewing-consuming-formation.json",
+    "sha256": "5e9452278e388899dc85e8ee8dda03fd53f749a668c8af229505d53821fb0e80",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"control-coherence-loss": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/10744af2a6616495/control-coherence-loss.json",
+    "sha256": "10744af2a661649580bc251b6d070b50eff425a67e0dafe1be3ba9f578749aa9",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"effective-capacity-and-eventual-reachability": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/1c37528af1087035/effective-capacity-and-eventual-reachability.json",
+    "sha256": "1c37528af108703575183cbecc09880f377d9899ddff28fc2143063866d4b0c7",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"classification-robust-generative-comparison": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/f25818bcafaa6962/classification-robust-generative-comparison.json",
+    "sha256": "f25818bcafaa6962fecdf4437dc64fcb0f75cc4f7382cc48cec1edfbb80201fc",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"significance-retained-within-margin": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/1f9665ebf3fead51/significance-retained-within-margin.json",
+    "sha256": "1f9665ebf3fead510e44d6ff341aa7afe20655e21b5ec780e99e6f24e68cb14c",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"metaethical-core-characterization": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/34c0c832f57c256f/metaethical-core-characterization.json",
+    "sha256": "34c0c832f57c256f5d557eaf160f17a25e6cd50f51753b901f1110ce8e0af6db",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"pending-task-context-applicability": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/9e196f1f9b1848df/pending-task-context-applicability.json",
+    "sha256": "9e196f1f9b1848df8caba17812dae717377384f7d928871256145cdb0bc5b4d2",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"recoverable-mediated-change": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/7dba466f00abc31d/recoverable-mediated-change.json",
+    "sha256": "7dba466f00abc31d31675e350bf7e7605ea1a1f71cfcaebf5a702bff49e9748e",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"derivation-soundness": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/33a9b49367ea6262/derivation-soundness.json",
+    "sha256": "33a9b49367ea626216fa4df0b206565ba620a9010b9902f3709468250013c11b",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+,
+"finite-basis-common-interpretation": {
+  "text_versions_entry": {
+    "path": "_process/architecture/history/4167526f2f4008dd/finite-basis-common-interpretation.json",
+    "sha256": "4167526f2f4008dddec5df81320c68ced575e5fa6d7e11cc40b76fde81b4ee05",
+    "note": {
+      "zh": "迁移前的记录原始字节（schema 1）。",
+      "en": "Exact record bytes before the migration (schema 1)."
+    }
+  },
+  "next": "Add this entry to the record's text_versions, map every earlier sentence, and add a history note."
+}
+}

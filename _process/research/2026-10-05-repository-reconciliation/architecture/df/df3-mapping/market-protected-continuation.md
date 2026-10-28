@@ -1,0 +1,29 @@
+# Migration map: market-protected-continuation
+
+Old record sha256 `e41907ebbf4c9b9bf41eb2b7f670bb3284ba92503c99239cc3d7a4ac4256bdb9`; snapshot `_process/architecture/history/e41907ebbf4c9b9b/market-protected-continuation.json`.
+
+Labels number the old English sentences and clauses (split at full stops and semicolons outside parentheses): T title, S statement, C claim, L limitations, V validation_scope, R correspondence, N next_delta, H hypotheses, X counterexamples. The Chinese text of each field goes to the same place as its English counterpart; the old Chinese was read alongside, sentence by sentence.
+
+Each law was read against its declarations in `Becoming/Viability.lean` (core), `MarketInstances.lean` and `MarketGenerativity.lean` (periphery, `experiments/market-generativity/formal/`). Every condition the Lean takes is kept: one admissible disturbance given (`never_leaves_iff_certificate`, `guarded_never_fails_iff`, law 2 and 3), a decided guard for guarded histories (`[DecidablePred guard]`, law 3), the protection certificate and a safe start (`safe_closed`, `safe_never_fails`, `safe_within_kernel`, law 6). The market's admissible disturbance is supplied by `worst_admissible` (law 5). `example_certificate`, already among the references, has its own law 7; the old claim did not state it. The receipts report empty axiom lists for every `Becoming.Viability` declaration and only `propext`, `Quot.sound` and `Classical.choice` for the cited periphery declarations (`market-instances-checks/20261020T161917.735916Z`, `transition-verification.json`), so `no-ethical-premise-core-axiom-free` holds.
+
+| Old text | Type | New place |
+|---|---|---|
+| T0 “Continued market operation under a protection certificate” | title | title (unchanged) |
+| S0–S1 “For a law driven by admissible disturbances, given one, no history … ; in the market the safe rectangle is such a set under a valid protection certificate.” | statement | statement (unchanged) |
+| C0 “For every process and guard, no course from a configuration leaves the guard exactly when some certificate contains it: a set within the guard that every step keeps;” | law | law 1 (`Kernel`, `Certificate`, `kernel_iff_certificate`; `kernel_step_iff` added from the referenced declarations) |
+| C1 “the viability kernel is the largest certificate.” | law | law 1 (`kernel_largest`: the kernel is a certificate and contains every other) |
+| C2 “For a law of change driven by admissible disturbances, given one admissible disturbance, no history ever leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance.” | law | law 2 (`never_leaves_iff_certificate`); law 3 gives the guarded form (`guarded_iff`, `guarded_never_fails_iff`, with the decided guard) |
+| C3 “The market law is an instance for every parameter set, bound set and start: no admissible guarded history fails the essential floors exactly when such a set of states exists.” | law (instance) | law 5 (`never_fails_iff`, with `history_eq`, `guardedHistory_eq` and `worst_admissible`, which the instance uses) |
+| C4 “Under a valid protection certificate the safe rectangle is one, so from a safe initial state with admissible disturbances at every step, the guarded history agrees with the operating history at every natural time without support failure.” | law (instance) | law 6 (`safe_closed`, `safe_never_fails`, `safe_within_kernel`, `MarketGenerativity.safe_history_never_fails`); “every natural time” in hypotheses[2] |
+| H0 “All public Certificate, Safe and Admissible conditions …; renewal share alone is insufficient.” | premise | hypotheses[0] (unchanged) |
+| R0–R2 “Quantities represent the specified market relations and supports; essential designates necessary supports. Correct mapping, ethical scope and actual parameters remain separate.” | correspondence | correspondence (unchanged); does_not_show[3] states the compliance part as a typed item |
+| X0 “Low-attractor histories fail with finite support …” | counterexample | counterexamples[0] (unchanged) |
+| X1 “Leaves.within_not_kernel: the guard alone need not be a certificate; needs_admissible: …” | counterexample (witnesses) | counterexamples[1] (unchanged); law 4 states both witnesses |
+| L0 “Conditional nonfailure;” | premise / non-implication | hypotheses[0] and hypotheses[1] (the conditions); does_not_show[2] (no law says a certificate exists; from the Viability module's own boundary “nothing here says that some certificate exists”) |
+| L1 “it does not supply entry from unsafe states, a complete basin or inevitable compliance by real markets.” | non-implication / scope / correspondence | does_not_show[0] (entry from unsafe states), does_not_show[1] (complete basin: the kernel is not computed; witness `safe_within_kernel`), does_not_show[3] (compliance by actual markets) |
+| V0 “Migrates an existing claim from the original 39 results;” | evidence | validation_scope (“The claim comes from the original 39 results”) |
+| V1 “the finite-transition check rebuilds and audits inherited source without counting it as new.” | evidence | validation_scope (unchanged in substance; the receipt named, transition-verification.json) |
+| V2 “General laws: checker receipts bound.” | evidence | validation_scope (the checkers, their receipt folders and the axiom reports named) |
+| N0 “Completed and reusable;” | status | the `status` field (recorded-checked) says it; dropped from public text as a restated status |
+| N1 “new work must actually construct a certificate-satisfying state or establish a different scope.” | next step | next_delta (stated positively, with the two scopes the does-not-show items name) |
+| (new) hypotheses[1], hypotheses[2] | premise | the core laws' conditions as the Lean writes them, and the rational quantities and natural times of the model; standard_boundaries discrete-steps and decidability cite the same |

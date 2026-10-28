@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "classification-robust-generative-comparison",
   "title": {
     "zh": "分类未定时的生成比较与组织要求",
@@ -8,19 +8,129 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T14:26:58+00:00",
-  "claim": {
-    "zh": "固定新内容的实际含义与正面解释时，在 B 是否实现每个新内容、以及在每种分类下 B 是否实现 A 中被分为基本的每个新内容都已判定之处，既有两层比较在所有新内容分类下严格支持 A 胜于 B，恰当且仅当 A 保留 B 的全部新内容、且全列一般增益时 A 仍严格更好；正方向不需判定。同样的判定下，两端点分类的同向严格比较覆盖所有混合分类。校准：这一判据对一切类型与分类成立，恰是排中律；比较须判定的是 B 是否实现该新内容。此输出接成每种分类下的组织形成要求，但不保证同一方案在所有分类下未被击败。",
-    "en": "For fixed meanings and positive interpretation of fresh contents, the existing two-tier comparator strictly prefers A to B under every fresh classification exactly when A retains all fresh contents of B and is better with all fresh contents secondary, where it is decided whether B realizes each fresh content and, at each classification, whether B realizes every fresh content of A classified basic; the forward direction needs no decision. Under the same decisions, strict agreement at both extreme assignments covers every mixed assignment. Calibration: that the criterion holds over every type and classification is exactly excluded middle; what the comparison must decide is whether B realizes the fresh content. This supplies required formation under each classification, without ensuring a common undefeated implementation."
+  "reviewed_at_utc": "2026-10-28T05:21:42+00:00",
+  "statement": {
+    "en": "With fresh contents' tiers unsettled, one alternative is above another under every classification exactly when it retains the other's fresh contents and is above with them as gains, where the realizations compared are decided; over every type, that criterion is exactly excluded middle.",
+    "zh": "新内容的层次未定时，一个方案在每种分类下都高于另一个，恰当它保留另一个的新内容、且把新内容全列为增益时仍高于它，前提是所比较的实现已判定；对一切类型，这一判据恰是排中律。"
   },
+  "laws": [
+    {
+      "en": "For alternatives and two tiers of claims, one alternative is lexically above another when it strictly includes the other's basic claims, or holds exactly its basic claims and strictly includes its gains; the order is irreflexive and transitive and asserts no comparison.",
+      "zh": "对若干方案与两层主张：一个方案在字典序上高于另一个，是指它严格包含另一个的基本主张，或恰持有其基本主张而严格包含其增益；此序反自反且传递，不断言任何比较。",
+      "declarations": [
+        "Becoming.Lexical.Included",
+        "Becoming.Lexical.StrictIncluded",
+        "Becoming.Lexical.Above",
+        "Becoming.Lexical.Above.irrefl",
+        "Becoming.Lexical.Above.trans"
+      ]
+    },
+    {
+      "en": "A comparison meets basic priority when it compares exactly as the lexical order; under that condition it is irreflexive and transitive, retaining the other's basic claims and one more puts an alternative above whatever the gains, and losing a basic claim the other holds keeps it from being above whatever the number of gains.",
+      "zh": "比较满足基本优先，是指它恰按字典序比较；在此条件下它反自反且传递，保留另一个的基本主张并多一个者在任何增益下都更高，失去另一个所持的基本主张者在任何增益数目下都不更高。",
+      "declarations": [
+        "Becoming.Lexical.BasicPriority",
+        "Becoming.Lexical.BasicPriority.irrefl",
+        "Becoming.Lexical.BasicPriority.trans",
+        "Becoming.Lexical.BasicPriority.anchor",
+        "Becoming.Lexical.BasicPriority.no_trade",
+        "Becoming.Lexical.Above.anchor",
+        "Becoming.Lexical.Above.no_trade"
+      ]
+    },
+    {
+      "en": "Fresh contents classified by a classification join the basic claims where it holds and the gains where it fails; with none basic the comparison is the lexical order with the fresh contents adjoined as gains, and with all basic being above retains every fresh content of the alternative below.",
+      "zh": "按某一分类，新内容在分类成立处并入基本主张，在不成立处并入增益；无一为基本时，比较就是把新内容并作增益的字典序；全为基本时，更高者保留下方方案的每个新内容。",
+      "declarations": [
+        "Becoming.Lexical.adjoin",
+        "Becoming.Lexical.classifiedBasic",
+        "Becoming.Lexical.classifiedGain",
+        "Becoming.Lexical.classified",
+        "Becoming.Lexical.classified_none_iff",
+        "Becoming.Lexical.classified_all_retains"
+      ]
+    },
+    {
+      "en": "An alternative a is above b under every classification exactly when a retains every fresh content of b and is above b with the fresh contents as gains, where it is decided whether b holds each fresh content and, at each classification, whether b holds every fresh content of a classified basic; the forward direction needs no decision.",
+      "zh": "方案 a 在每种分类下都高于 b，恰当 a 保留 b 的每个新内容、且把新内容并作增益时高于 b；前提是已判定 b 是否持有每个新内容，并在每种分类下已判定 b 是否持有 a 中被分为基本的每个新内容。正方向不需判定。",
+      "declarations": [
+        "Becoming.Lexical.classified_robust_iff_of_decided",
+        "Becoming.Lexical.classified_of_decided",
+        "Becoming.Lexical.classified_all_retains",
+        "Becoming.Lexical.classified_none_iff"
+      ]
+    },
+    {
+      "en": "Under the same decisions, being above at the two extreme classifications, none basic and all basic, is being above under every classification; with excluded middle named, the criterion holds with no further decision.",
+      "zh": "在同样的判定下，在两个端点分类（无一为基本、全为基本）下都更高，就是在每种分类下都更高；以排中律为名义假设时，判据无需另外判定即成立。",
+      "declarations": [
+        "Becoming.Lexical.classified_extremes_iff_of_decided",
+        "Becoming.Lexical.classified_robust_iff_of_em"
+      ]
+    },
+    {
+      "en": "Calibration: that the criterion holds for every type of alternatives and contents and every two alternatives is equivalent to excluded middle; with one fresh content, whether the alternative below holds it is the proposition the comparison must decide.",
+      "zh": "校准：判据对一切类型的方案与内容、对任两个方案都成立，等价于排中律；只有一个新内容时，比较须判定的命题就是下方方案是否持有它。",
+      "declarations": [
+        "Becoming.Lexical.classified_robust_iff_iff_em"
+      ]
+    },
+    {
+      "en": "With no decision, strictly improving the old basic claims with the fresh contents retained is above under every classification; a fresh enrichment with the old contents kept is above under every classification with the criterion's decisions; and along a generative extension on a frame, being above under every classification is exactly keeping the fresh contents.",
+      "zh": "无需判定：在保留新内容的同时严格改善旧基本主张者，在每种分类下都更高；保持旧内容的新增富集，在判据的判定下于每种分类下都更高；沿框架上的生成扩展，在每种分类下都更高恰是保持新内容。",
+      "declarations": [
+        "Becoming.Lexical.classified_of_basic",
+        "Becoming.Lexical.classified_of_fresh",
+        "Becoming.Lexical.Frame.classified_of_extension",
+        "Becoming.Lexical.Frame.classified_extension_iff"
+      ]
+    },
+    {
+      "en": "On a nonempty listed menu, with the comparisons weakly decided, formation decided and the criterion's decisions, where every eligible alternative lacking a formation is bettered, with the fresh contents as gains, by one retaining its fresh contents, the formation is required of the frontier under every classification.",
+      "zh": "在一个非空的列出菜单上，比较弱判定、形成已判定、并有判据的判定时：若每个缺少某一形成的合格方案都被一个保留其新内容者（新内容并作增益）超过，则在每种分类下前沿都要求该形成。",
+      "declarations": [
+        "Becoming.Requirement.Frontier",
+        "Becoming.Requirement.Required",
+        "Becoming.Requirement.required_under_every_classification"
+      ]
+    },
+    {
+      "en": "Under one event law, retaining a coupling realizes strictly more fresh joint possibilities than releasing it, and, with no other basic or gain content, retaining is above releasing under every classification of the fresh bundles, where it is decided whether the classification makes a fresh bundle basic.",
+      "zh": "在同一事件律下，保持一个耦合比释放它实现严格更多的新的共同可能；在没有其他基本或增益内容时，在对新组合的每种分类下保持都高于释放，前提是已判定分类是否使某个新组合成为基本。",
+      "declarations": [
+        "Becoming.Regimes.freshJoint",
+        "Becoming.Regimes.joint_enrichment_strict",
+        "Becoming.Regimes.joint_enrichment_classified"
+      ]
+    },
+    {
+      "en": "In the three-route witness, absence and two routes each opening one fresh content: under every classification decided content by content a formed route is required; making the left content basic puts left above right and making the right one basic puts right above left; and no route is on the frontier under every classification.",
+      "zh": "三路见证（缺席与两条各开出一个新内容的路线）：在逐内容判定的每种分类下，都要求一条已形成的路线；使左内容为基本则左高于右，使右内容为基本则右高于左；没有一条路线在每种分类下都在前沿上。",
+      "declarations": [
+        "Becoming.Requirement.Routes.Route",
+        "Becoming.Requirement.Routes.fresh",
+        "Becoming.Requirement.Routes.formed",
+        "Becoming.Requirement.Routes.required",
+        "Becoming.Requirement.Routes.opposite_routes",
+        "Becoming.Requirement.Routes.none_robust"
+      ]
+    },
+    {
+      "en": "In a reorganization that loses an old occasion and opens a new content, the new content classified as a gain leaves the two alternatives incomparable, and classified basic puts the reorganization above.",
+      "zh": "在失去一个旧机会而开出一个新内容的重组中：新内容分为增益时两个方案不可比，分为基本时重组更高。",
+      "declarations": [
+        "Becoming.Lexical.Reorganizing.classification_matters"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "同一展开中的旧、新内容、其实际实现与损失有稳定对应；新内容的意义依生生之意义读出，仅优先层次未定。",
       "en": "Old and fresh contents, their realization and losses have stable correspondence within one unfolding. Fresh content's significance is read through living significance; only its priority tier varies."
     },
     {
-      "zh": "比较明确采用既有 J1/J2 的基本保护严格包含，或基本相同而一般增益严格包含；旧分类固定，一次比较中同一新内容的分类一致。",
-      "en": "The comparator explicitly uses existing J1/J2: strict basic inclusion, or strict gain inclusion at equal basic profiles. Old tiers remain fixed and a fresh classification is consistent across the comparison."
+      "zh": "比较是实践承诺中基本优先的字典序：基本保护严格包含，或基本相同而一般增益严格包含；旧分类固定，一次比较中同一新内容的分类一致。",
+      "en": "The comparator is the lexical order of the practical commitment of basic priority: strict basic inclusion, or strict gain inclusion at equal basic profiles. Old tiers remain fixed and a fresh classification is consistent across the comparison."
     },
     {
       "zh": "组织推论另需有限非空且有实践根据的候选范围，以及每个未形成情形的合格稳健改善见证。",
@@ -31,6 +141,55 @@
       "en": "All classification predicates form a conservative mathematical test family; arbitrary assignments are not presumed ethically warranted in reality."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "It tests the priority classification of fresh contents, not their universal recognition as basic.",
+      "zh": "只检验新内容的优先分类，不是对其基本地位的普遍识别。",
+      "kind": "scope"
+    },
+    {
+      "en": "It shows no real common best plan, no premise-free living significance or practical commitments, and no inevitable compliance.",
+      "zh": "不表明现实的共同最佳方案，不证明无前提的生生之意义或实践承诺，也不表明必然服从。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Robust strictness is sufficient, not necessary for every justified action.",
+      "zh": "稳健的严格比较是充分根据，不是一切合理行动的必要条件。",
+      "kind": "converse"
+    },
+    {
+      "en": "Formation is required under each classification without a common undefeated implementation: in the three-route witness no route is on the frontier under every classification.",
+      "zh": "每种分类下都要求形成，但没有共同的未被击败方案：三路见证中没有一条路线在每种分类下都在前沿上。",
+      "kind": "non-implication",
+      "witness": "Becoming.Requirement.Routes.none_robust"
+    },
+    {
+      "en": "The three-route example does not show that full living relations allow arbitrary classifications.",
+      "zh": "三路例子不证明完整的生活关系允许任意分类。",
+      "kind": "scope",
+      "witness": "Becoming.Requirement.Routes.opposite_routes"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean",
+      "detail": {
+        "zh": "classification_can_matter_with_real_loss 保留新增与真实旧机会损失；三路构造同时满足各分类下的形成要求而不存在共同未被击败方案。",
+        "en": "classification_can_matter_with_real_loss retains a new gain and actual old opportunity loss; the three-route construction requires formation under each classification yet has no common undefeated option."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.Lexical, Frontier, FrontierFrames, Bundles, Alternatives, Inquiry, ValuationFrames and Extension are bound to passing core receipts in becoming-checks, which report an empty axiom list for every cited declaration. The periphery modules the laws were ported from (ClassificationRobustJudgment and its sources) and their receipt are provenance, their audit superseded. Author counterreview; no new empirical validation or independent acceptance.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Lexical、Frontier、FrontierFrames、Bundles、Alternatives、Inquiry、ValuationFrames 与 Extension 的当前字节绑定到 becoming-checks 中通过的回执，所引声明的公理报告皆为空。规律所移自的外围模块（ClassificationRobustJudgment 及其来源）与回执为来源，其审计已被取代。作者反审；无新经验验证或独立验收。"
+  },
+  "next_delta": {
+    "en": "Where an implementation depends on classifications still warranted, establish the decision-relevant living roles, alternatives and actual losses, building on the robust comparison and the role requirements.",
+    "zh": "具体方案确实随尚有根据的分类改变时，在分类稳健比较与作用要求之上，辨明会改变决定的生活作用、替代与真实损失。"
+  },
   "correspondence": {
     "zh": "旧／新是同一生成内容被辨明的先后；基本／一般为已有实践承诺中的作用差异，不是两类本体或独立所有者。共同能力的应用直接取既有同一事件法则的共同组合扩展；其正面意义与成本覆盖仍明示。",
     "en": "Old/new tracks recognition of contents in one unfolding; basic/secondary tracks their roles under existing practical commitments, not two ontologies or independent owners. The joint-capacity application directly consumes a joint-bundle extension under the existing single event law; positive significance and cost coverage remain explicit."
@@ -76,8 +235,8 @@
           "en": "Comparison in classification_robust_iff and strict-order inputs to formation_required_without_fixed_classification."
         },
         "conditions": {
-          "zh": "生生之意义、J 与实际对应仍须有根据；不是逻辑公理审计所取得。",
-          "en": "Living significance, J and actual correspondence retain their substantive warrant, not supplied by logical axiom auditing."
+          "zh": "生生之意义、实践承诺与实际对应仍须有根据；不是逻辑公理审计所取得。",
+          "en": "Living significance, the practical commitments and actual correspondence retain their substantive warrant, not supplied by logical axiom auditing."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean"
       }
@@ -133,28 +292,11 @@
     {
       "id": "positive-ground-open-futures",
       "detail": {
-        "zh": "复用其已完成的正面理由地位；本轮较强的比较条件不能成为该结果或一切行动的新门槛。",
+        "zh": "复用其已完成的正面理由地位；这一较强的比较条件不能成为该结果或一切行动的新门槛。",
         "en": "Credits its completed positive-ground result; this stronger comparison criterion is not a new gate for that result or all action."
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean",
-      "detail": {
-        "zh": "classification_can_matter_with_real_loss 保留新增与真实旧机会损失；三路构造同时满足各分类下的形成要求而不存在共同未被击败方案。",
-        "en": "classification_can_matter_with_real_loss retains a new gain and actual old opportunity loss; the three-route construction requires formation under each classification yet has no common undefeated option."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只检验已辨明正面内容的优先分类；不是新生活的一般基本地位识别、现实统一最佳方案、生生之意义或 J 的无前提证明或必然服从。稳健严格比较为充分根据，不是一切合理行动的必要条件；三路反例不证明完整生活关系允许任意分类。",
-    "en": "Tests priority classification of positively understood contents, not universal basic-status recognition, a real common best plan, premise-free living significance or J or inevitable compliance. Robust strictness is sufficient, not necessary for every justified action; the three-route example does not show that full living relations allow arbitrary classifications."
-  },
-  "validation_scope": {
-    "zh": "外围实查（13项新定理／25项审计：15项空依赖、2项 propext/Quot.sound、8项另含 Classical.choice）已被取代：核心 Becoming.Lexical 陈述该判据及其校准，公理报告全空。作者反审；无新经验验证或独立 agent 验收。",
-    "en": "The periphery check (13 new theorems/25 audits: 15 empty, 2 propext/Quot.sound, 8 also Classical.choice) is superseded: the core Becoming.Lexical states the criterion and its calibration with every axiom report empty. Author counterreview, with no new empirical validation or independent-agent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalJudgment.lean",
@@ -394,7 +536,15 @@
         "Becoming.Lexical.classified_of_fresh",
         "Becoming.Lexical.Reorganizing.classification_matters",
         "Becoming.Lexical.classified_none_above",
-        "Becoming.Lexical.classified_of_decided"
+        "Becoming.Lexical.classified_of_decided",
+        "Becoming.Lexical.Included",
+        "Becoming.Lexical.StrictIncluded",
+        "Becoming.Lexical.Above",
+        "Becoming.Lexical.BasicPriority",
+        "Becoming.Lexical.adjoin",
+        "Becoming.Lexical.classifiedBasic",
+        "Becoming.Lexical.classifiedGain",
+        "Becoming.Lexical.classified"
       ]
     },
     {
@@ -435,7 +585,12 @@
         "Becoming.Requirement.required_under_every_classification",
         "Becoming.Requirement.Routes.required",
         "Becoming.Requirement.Routes.opposite_routes",
-        "Becoming.Requirement.Routes.none_robust"
+        "Becoming.Requirement.Routes.none_robust",
+        "Becoming.Requirement.Frontier",
+        "Becoming.Requirement.Required",
+        "Becoming.Requirement.Routes.Route",
+        "Becoming.Requirement.Routes.fresh",
+        "Becoming.Requirement.Routes.formed"
       ]
     },
     {
@@ -464,7 +619,8 @@
         "Becoming.Regimes.joint_separates",
         "Becoming.Regimes.possibility_not_realization",
         "Becoming.Regimes.joint_enrichment_strict",
-        "Becoming.Regimes.joint_enrichment_classified"
+        "Becoming.Regimes.joint_enrichment_classified",
+        "Becoming.Regimes.freshJoint"
       ]
     },
     {
@@ -633,10 +789,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用已完成的分类稳健比较与作用要求；具体方案确实随尚有根据的分类改变时，辨明会改变决定的生活作用、替代与真实损失，不重开一般分类、正面理由或机构授权之墙。",
-    "en": "Reuse completed robust comparison and role requirements. Where implementation really depends on still-warranted classifications, establish decision-relevant living roles, alternatives and actual losses rather than reopening universal classification, positive ground or the authority wall."
-  },
   "history": [
     {
       "zh": "2026-10-08：依据更新后的仓库接续一元关系路线，新增分类精确判准与形式组合，再以三路例检验更强共同方案推论；旧结果与回执保持范围。",
@@ -692,6 +844,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): claim made exact to the core criterion: the equivalence holds where it is decided whether B realizes each fresh content and, at each classification, whether B realizes every fresh content of A classified basic (the forward direction needs no decision), the two extremes suffice under the same decisions, and that the criterion holds over every type is exactly excluded middle; the three core laws added as aliases; the evidence names the core statement with empty axiom reports in place of the superseded periphery audit; G0 replaced by living significance in the premise, limitation and dependency condition.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张依核心判据改精确：等价在 B 是否实现每个新内容、以及在每种分类下 B 是否实现 A 中被分为基本的每个新内容都已判定之处成立（正方向不需判定），同样判定下两端点足矣，而判据对一切类型成立恰是排中律；三条核心定律加为别名；证据以公理报告全空的核心陈述代替已被取代的外围审计；前提、限度与依存条件中的 G0 改为生生之意义。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): a statement written from the home section; the claim split into eleven laws, each read against its declarations in Becoming.Lexical, Becoming.Frontier, Becoming.FrontierFrames and Becoming.Bundles (the comparator read as the lexical order Above, which the practical commitment of basic priority makes a comparison; the decisions, the weakly decided comparisons and the listed menu written in); the limitations and the claim's last clause to five does-not-show items and the standard boundary names-provisional; in the second hypothesis the label \"existing J1/J2\" replaced by the practical commitment of basic priority, the other hypotheses kept; the next step's instruction not to reopen settled questions left to the snapshot; Lexical.Included, StrictIncluded, Above, BasicPriority, adjoin, classifiedBasic, classifiedGain, classified, Requirement.Frontier, Required, Routes.Route, Routes.fresh, Routes.formed and Regimes.freshJoint added to the references of their files; no premise's content, status or source hash changed. Every earlier sentence is mapped in [classification-robust-generative-comparison.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/classification-robust-generative-comparison.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, a related entry, a dependency interface, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：依主章写出陈述；主张拆为十一条规律，各条对照其在 Becoming.Lexical、Frontier、FrontierFrames 与 Bundles 中的声明核读（比较读作字典序 Above，由实践承诺中的基本优先使之成为比较；判定、弱判定的比较与列出的菜单写入规律）；限制与主张末句分入五条“未表明”与通用边界 names-provisional；第二条前提中的标签“既有 J1/J2”改为实践承诺中的基本优先，其余前提保留；下一步中不重开已定问题的指示留在快照中；Lexical.Included、StrictIncluded、Above、BasicPriority、adjoin、classifiedBasic、classifiedGain、classified、Requirement.Frontier、Required、Routes.Route、Routes.fresh、Routes.formed 与 Regimes.freshJoint 加入其文件的引用；前提内容、状态与来源哈希均未改变。每句旧文本的去向见 [classification-robust-generative-comparison.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/classification-robust-generative-comparison.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、相关条目、依赖接口，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/f25818bcafaa6962/classification-robust-generative-comparison.json",
+      "sha256": "f25818bcafaa6962fecdf4437dc64fcb0f75cc4f7382cc48cec1edfbb80201fc",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/75c96775a8e7ebb7/classification-robust-generative-comparison.json",
+      "sha256": "75c96775a8e7ebb781ce1e6dab0f357c8f31d9688966c7cd958ce8b9125a43d0",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1799,8 +1799,8 @@
    "id": "record:draws-on-a-shared-stock",
    "type": "result",
    "record": "draws-on-a-shared-stock",
-   "title": "Draws on one shared stock: every combination fits exactly when the total does",
-   "title_zh": "共享存量上的汲取：每种组合都在存量之内，当且仅当总和在内",
+   "title": "Draws on one shared stock",
+   "title_zh": "共享存量上的汲取",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "collective",
@@ -41961,6 +41961,11 @@
   },
   {
    "from": "record:joint-code-plan-lifting",
+   "to": "module:Becoming.Likeness",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:joint-code-plan-lifting",
    "to": "record:joint-decomposition-lifting",
    "type": "formal-reuse"
   },
@@ -41997,6 +42002,11 @@
   {
    "from": "record:joint-decomposition-lifting",
    "to": "module:Becoming.JointCorrespondence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:joint-decomposition-lifting",
+   "to": "module:Becoming.Likeness",
    "type": "proved-in"
   },
   {
@@ -46690,6 +46700,11 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:recoverable-mediated-change",
+   "to": "record:reserved-shutdown-during-recovery",
+   "type": "related"
+  },
+  {
    "from": "record:recurrence-without-decidedness",
    "to": "module:Becoming.Change",
    "type": "proved-in"
@@ -49338,6 +49353,11 @@
    "from": "record:significance-retained-within-margin",
    "to": "record:four-cases-of-a-part",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:significance-retained-within-margin",
+   "to": "record:the-run-classes-and-widening",
+   "type": "related"
   },
   {
    "from": "record:significance-through-a-common-condition",

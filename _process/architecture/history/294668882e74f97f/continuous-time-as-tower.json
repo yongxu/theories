@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "id": "continuous-time-as-tower",
+  "title": {
+    "zh": "时间尺度作为离散读法之塔",
+    "en": "Time scales as a tower of discrete readings"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "zh": "每一层是更细一层在严格递增的时刻读出；平衡（每个关系项只列出一次）与耗散由更细一层传到更粗一层。一段最粗的步在任何一层读出时，在该层所立者的普查之下，所立者在其中各细步不被否定地下降，则总水平下降的细步数不多于最粗一层段首的总水平，与层无关。",
+    "en": "Each level reads the next finer at strictly increasing times; balance (relata listed once) and dissipation pass to coarser ones. At any level, under a census of what stands and running down not refuted at each fine step, a coarsest stretch has no more falls of total standing than its starting total."
+  },
+  "claim": {
+    "zh": "塔（Tower）：每一层有一个网与一个流，第 n 层是第 n+1 层在严格递增的时刻 refine n 读出（web_sample、flow_sample）。最粗一层的步 s 是第 n 层的 reads n s；最粗一层是第 n 层在这些时刻读出（Tower.web_zero、Tower.level_zero），这些时刻严格递增（Tower.reads_strict）。每一层的规律：每个关系项只列出一次的平衡与耗散传到更粗一层（Tower.balances_coarser、Tower.dissipative_coarser）。分得再细，变化也有界：最粗一层从 S 起 N 步的一段在第 n 层读出，第 n 层有所立者的普查、所立者在其中各细步不被否定地下降时，总水平下降的细步（即有水平改变的步）不多于最粗一层在 S 的总水平（Tower.changes_within），界与 n 无关。",
+    "en": "A tower (Tower): at each level a web and a flow, level n being level n+1 read at the strictly increasing times refine n (web_sample, flow_sample). Step s of the coarsest level is step reads n s of level n; the coarsest level is level n read at those times (Tower.web_zero, Tower.level_zero), which are strictly increasing (Tower.reads_strict). Laws at every level: balance with each relatum listed once, and dissipation, pass to the coarser level (Tower.balances_coarser, Tower.dissipative_coarser). Change bounded however finely divided: a stretch of N steps of the coarsest level from S, read at level n, under a census of what stands at level n and with what stands not refuted to run down at each of its fine steps, has at most as many fine steps at which the total standing falls, the steps at which some standing changes, as the coarsest level's total standing at S (Tower.changes_within); the bound does not depend on n."
+  },
+  "hypotheses": [
+    {
+      "zh": "无全局前提：下降与普查只在所用的层与所用的细步上。",
+      "en": "No global premise: running down and the census only at the level and fine steps used."
+    },
+    {
+      "zh": "表示：时间为一族离散读法，由 Sampling 的读出相连；核心不取实数。",
+      "en": "Representation: time as a family of discrete readings linked by the reading of Sampling; the core takes no real numbers."
+    }
+  ],
+  "correspondence": {
+    "zh": "Ren 2026-10-12 决定：连续时间在核心中构造为越来越细的离散读法之塔，连续时间的规律即塔的每一层上的规律，实数时间以后作为外围的对应。本结果给出塔与其第一条规律：变化不因时间分得更细而增加。依据是一步的规律（Flow.runsDown_bounds_change）与每次交换的最小损失，不加前提。",
+    "en": "Ren decided on 12 October that continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence. This result gives the tower and the first of its laws: dividing time more finely adds no change. It rests on the laws of one step (Flow.runsDown_bounds_change) and the least loss per exchange, with no premise added."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tower.lean",
+  "aliases": [
+    "Becoming.Tower",
+    "Becoming.Tower.reads",
+    "Becoming.Tower.web_zero",
+    "Becoming.Tower.balances_coarser",
+    "Becoming.Tower.dissipative_coarser",
+    "Becoming.Tower.changes_within"
+  ],
+  "dependencies": [
+    {
+      "id": "laws-at-coarser-steps",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用读出（Web.sample、Flow.sample）与平衡、耗散的合成（Flow.sample_balances、Flow.sample_dissipative）。",
+        "en": "Reuses the reading (Web.sample, Flow.sample) and the composition of balance and dissipation (Flow.sample_balances, Flow.sample_dissipative)."
+      },
+      "interface": {
+        "output": {
+          "zh": "一个粗步上由细步合成的平衡与耗散。",
+          "en": "Balance and dissipation at a coarse step composed from its fine steps."
+        },
+        "input": {
+          "zh": "塔的相邻两层之间。",
+          "en": "Between adjacent levels of the tower."
+        },
+        "conditions": {
+          "zh": "平衡要只列出一次。",
+          "en": "Balance asks listing once."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean"
+      }
+    },
+    {
+      "id": "laws-of-one-step",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用下降约束变化（Flow.runsDown_bounds_change）。",
+        "en": "Reuses running down bounding change (Flow.runsDown_bounds_change)."
+      },
+      "interface": {
+        "output": {
+          "zh": "下降的各步上，有改变的步不多于首步的总水平。",
+          "en": "Across steps that run down, the steps of change are within the total at the first."
+        },
+        "input": {
+          "zh": "在任何一层读出最粗一层的一段。",
+          "en": "Applied at any level to a stretch of the coarsest level."
+        },
+        "conditions": {
+          "zh": "所立者的普查。",
+          "en": "A census of what stands."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "laws-at-finer-units",
+      "detail": {
+        "zh": "量的单位的细分；本结果细分时间。",
+        "en": "Refining the unit of amounts; this result refines time."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "detail": {
+        "zh": "边界：界要所立者在各细步下降。Strobe 中一个关系项在每个粗步内的细步上生起又不再活跃，而在读出时刻都安静（Strobe.converse_fails）：不加下降时，更细的一层可显示更粗的一层看不到的、无界的变化。",
+        "en": "Boundary: the bound needs what stands to run down at the fine steps. In Strobe a relatum arises and ceases at fine steps inside every coarse step while every sampling time is quiet (Strobe.converse_fails): without running down, a finer level can show unbounded change that a coarser one does not."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "未做：实数时间（外围对应）；没有最粗一层的塔；界在层细化时的确切形式。计数用普查；下降是该层上的条件。名称（Tower、reads、refine）是 AI 所选。",
+    "en": "Not done: real-valued time (a periphery correspondence); towers with no coarsest level; the exact form of the bound as levels refine. The count uses a census; running down is a condition at the level used. The names (Tower, reads, refine) are the AI's."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：新核心模块 Becoming.Tower 的 6 项定理全部空依赖；同一回执覆盖包内 75 个模块，共 4518 项定理／6370 项声明审计；外围回执 20261013T095049.338744Z 通过。先在暂存树中从前导编译，无警告，逐条 #print axioms 全部为空。核心闭包 49 个模块。尚无独立审查，作者反审见整合文档 §82。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 6 theorems of the new core module Becoming.Tower all have empty axiom reports; the same receipt covers the package's 75 modules with 4518 theorems/6370 declaration audits; periphery receipt 20261013T095049.338744Z passed. It was first compiled from the prelude in a scratch tree, with no warnings and every #print axioms empty. The core closure is 49 modules. There is no independent review yet; the author's counterreview is in §82 of the integration note."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tower.lean",
+      "role": "proof",
+      "sha256": "0431ef99ed2a930dddd46ad87acda128b3b2c23df6b11ef4493b58f6ba285bb8",
+      "declarations": [
+        "Becoming.Tower",
+        "Becoming.Tower.reads",
+        "Becoming.Tower.web_zero",
+        "Becoming.Tower.level_zero",
+        "Becoming.Tower.reads_strict",
+        "Becoming.Tower.balances_coarser",
+        "Becoming.Tower.dissipative_coarser",
+        "Becoming.Tower.changes_within"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "role": "proof",
+      "sha256": "9d27490407360695af1bbbf9008b20ed9c42eeae3c749a38d9a53cb4480c7744",
+      "declarations": [
+        "Becoming.Web.sample",
+        "Becoming.Flow.sample_balances",
+        "Becoming.Flow.sample_dissipative"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "role": "proof",
+      "sha256": "236b6eb72050fd5c70c720cd5ccd82d732b7c90f423fe12b9f10849cdc4b2ea8",
+      "declarations": [
+        "Becoming.Flow.runsDown_bounds_change"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md",
+      "role": "integration",
+      "sha256": "39481677948c2c7701b1fd6b9c942dabc0003e06f66fc83b9f85912566f87593"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ZERO-PREMISE-PLAN.md",
+      "role": "integration",
+      "sha256": "4f425c33ebb1e6f733cc7232f28ff35ae37409f1732b123dc92868e6ebbe55fb"
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-11-one-unified-theory-together.md",
+      "role": "provenance",
+      "sha256": "b5672472cda81561e7099252fca54138edfe2df107a673f16bd82c1e2d2baa7f"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-unit-of-need-and-tower-of-time.md",
+      "role": "provenance",
+      "sha256": "e80330f6de5b48b0b8df91df1a5f66a528861a9cc3325dba163d86eab8ea2172"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tower.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Tower",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Sampling",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Locality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "更多规律在塔的每一层的形式（依存、储备与支持；生起需要活跃的给予者）；同时细分时间与单位；实数时间的外围对应。",
+    "en": "More laws at every level of the tower (dependence, reserve and support; arising needing an active giver); refining time and the unit together; the periphery correspondence to real-valued time."
+  },
+  "history": [
+    {
+      "zh": "2026-10-12 Tower：新增，按 Ren 2026-10-12 的决定（连续时间作为核心中的塔）；新核心模块 Becoming.Tower（导入 Becoming.Sampling），由“0 axiom completeness”会话起草并验证，按工作板认领；见整合文档 §82。",
+      "en": "2026-10-12 Tower: added, following Ren's decision of 12 October (continuous time as a tower in the core); new core module Becoming.Tower (importing Becoming.Sampling), drafted and verified by the session ‘0 axiom completeness’ and claimed through the work board; see §82 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“连续时间作为越来越细的离散读法之塔：每一层是更细一层在严格递增的时刻读出；平衡（每个关系项只列出一次）与耗散由更细一层传到更粗一层；一段最粗的步在任何一层读出时，所立者在其中各细步不被否定地下降，则总水平下降的细步数不多于最粗一层段首的总水平，与层无关”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “Continuous time as a tower of ever-finer discrete readings: each level is the next finer one read at strictly increasing times; balance (each relatum listed once) and dissipation pass from each level to the coarser one; a stretch of the coarsest level read at any level, with what stands not refuted to run down at each of its fine steps, has at most as many fine steps at which the total standing falls as the coarsest level's total standing at its start, whatever the level”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；统一计划只在 §10 的 P36 对照表后加入 2026-10-14 的对照表；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; the unification plan only adds the 14 October 2026 rename table after the P36 table in section 10; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026年10月17日，全库审查（2026年10月16–17日，CHANGES.md）第 records-a-l-15 项：标题原为“连续时间作为离散读法之塔”；Becoming.Tower 只证离散步长之塔上的规律，实数时间未形式化（限制已写），标题改为“时间尺度作为离散读法之塔”；id 不变。schema 1，无 text_versions；原文见 git。",
+      "en": "17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), item records-a-l-15: the title was \"Continuous time as a tower of discrete readings\"; Becoming.Tower proves laws across a tower of discrete step sizes and real-valued time is not formalized (as the limitations say), so the title is now \"Time scales as a tower of discrete readings\"; the id is unchanged. Schema 1, no text_versions; earlier text in git."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): THE-THEORY-OF-BECOMING.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "19 October 2026, R22 (the names of the nineteenth review): BECOMING-UNIFICATION-PLAN.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: BECOMING-UNIFICATION-PLAN.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月19日，R22（第十九次审查的名称）：BECOMING-UNIFICATION-PLAN.md 重新指向。自所审哈希以来，所引文件只在 R22 改名之处改动：BECOMING-UNIFICATION-PLAN.md，只改名称（第十九次审查 N1、N2；对照表见 development/r22-names/RENAME-TABLE.json）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 73 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/20db001509c7d5d6/continuous-time-as-tower.json and in git.",
+      "zh": "2026-10-20：73 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/20db001509c7d5d6/continuous-time-as-tower.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement names the census of what stands that the bound on falls takes; the representation premise gives the reading without naming who chose it (the decision stays in the correspondence as provenance).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明下降次数之界所需的所立者普查；表示前提只陈述读法，不再写选定者（该决定作为来历留在对应中）。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section 422): The first of the tower's laws is not called its first law, the spine's name for Flow.Gainless.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：英文版中塔的第一条规律不称为 first law，那是脊柱对 Flow.Gainless 的称呼。"
+    }
+  ]
+}

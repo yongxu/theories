@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "id": "becoming-context-coherence",
+  "title": {
+    "en": "Coherent histories across retained and changing contexts",
+    "zh": "保留与变化情境中的相容历史"
+  },
+  "statement": {
+    "en": "Pooling the steps of an inhabited family of processes runs exactly the courses of single processes exactly where those courses compose; retaining the context runs exactly them, and forgetting a context that changes with the step is exact precisely where every context can follow each forgotten step.",
+    "zh": "合并有成员之过程族的步，恰行单一过程之程，恰当这些程可复合；保留情境恰行这些程；忘掉随步而变的情境，恰在每个情境都能跟随每个被忘之步时精确。"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "claim": {
+    "en": "For an inhabited family of processes on common configurations, the pooled law (a step some member takes, the context forgotten) runs exactly the courses some single member runs exactly where courses of single members compose: a course of one context followed by a course of one context is a course of one context. Retaining the context, each configuration carrying its context and each step keeping it, runs exactly the courses of that context, and so realizes exactly the courses of single contexts. Where context and configuration change together by one relation, forgetting the context is exact from every context exactly where every context can follow each forgotten step; the contexts a course arrives in are those its last step advances to from the contexts its earlier part arrives in. Witnesses: one context steps 0 to 1 and another 1 to 2; pooling runs 0 to 2, which no single context runs, so the family is not closed under joining and retaining the context excludes the crossing; a context changing with the step joins the two in one course, which ends at 2, and the forgotten law takes a step the given context cannot follow.",
+    "zh": "对共同构形上有成员的过程族，合并律（某成员所取之步，忘掉情境）恰行某单一成员所行之程，恰当单一成员之程可复合：一个情境的程接一个情境的程，仍是一个情境的程。保留情境（构形带着其情境，每步保持之）恰行该情境之程，故恰实现单一情境之程。情境与构形由一个关系一同变化时，忘掉情境自每个情境精确，恰当每个情境都能跟随每个被忘之步；一程所到达的情境，是其末步从其前段所到达之情境推进到的情境。见证：一个情境由 0 步到 1，另一个由 1 步到 2；合并行 0 到 2，无单一情境行之，故该族对接合不封闭，保留情境排除此跨越；随步而变的情境把二者连为一程，此程止于 2，而被忘之律取一个所给情境不能跟随之步。"
+  },
+  "hypotheses": [
+    {
+      "en": "Common state and event interpretations, a nonempty process family for the pooling equivalence, finite inductive Trace and actual boundary matching.",
+      "zh": "共同状态、事件解释；合并等价需要非空过程族、有限归纳 Trace 与实际边界匹配。"
+    },
+    {
+      "en": "The evolving construction supplies a joint relation on context and displayed conditions. Logical framework and correspondence remain explicit; no normative, totality or favorable-direction premise.",
+      "zh": "变化构造给定情境与所显示条件的共同关系。逻辑及实际对应公开；不含规范、全定义性或有利方向前提。"
+    }
+  ],
+  "correspondence": {
+    "en": "Context denotes consequential relations within one unfolding, not an independently constituted controller. Semantic support need not be an implemented observer belief.",
+    "zh": "情境表示同一展开中的作用关系，不表示独立控制者；语义支持不必是已实现的观察者信念。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
+  "aliases": [
+    "Becoming.pooledLaw_exact_iff_joinClosed",
+    "Becoming.retainedLaw_realizes_inOne",
+    "Becoming.erasedLaw_exact_iff_lifts",
+    "Becoming.arrives_snoc"
+  ],
+  "dependencies": [
+    {
+      "id": "finite-trace-transport",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The original trace_map carries member histories into pooled and retained representations; inherited composition and lifting are credited separately.",
+        "zh": "既有 trace_map 将成员历史送入合并或保留表示；继承的组合及提升定理分别记功。"
+      },
+      "interface": {
+        "output": {
+          "en": "A finite target trace preserving mapped endpoints.",
+          "zh": "保留映射端点的有限目标历史。"
+        },
+        "input": {
+          "en": "The member-step witness supplies the pooled step; a fixed tag supplies the retained step.",
+          "zh": "成员步骤见证提供合并步骤；固定标签提供保留步骤。"
+        },
+        "conditions": {
+          "en": "Same event labels and stated maps; no physical equivalence is inferred.",
+          "zh": "相同事件标签及明示映射；不推定物理等价。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/BecomingCompatibility.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "trace-law-equivalence",
+      "detail": {
+        "en": "Endpoint distinctions remain essential; its theorem is interpreted, not imported or re-proved here.",
+        "zh": "端点区别仍必要；这里解释复用该定理，不另导入或重证。"
+      }
+    },
+    {
+      "id": "conditional-foundation-assessment",
+      "detail": {
+        "en": "The new coherence constraint advances the stronger inclusive foundation without reopening the accepted conditional candidate.",
+        "zh": "新相容性限制推进更强的包容基础，不重开已验收条件候选。"
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContextArrivalTraces.lean",
+      "detail": {
+        "en": "Pooling 0→1 from one context and 1→2 from another runs 0→2, which no single context runs, so pooling is not exact there. A context changing with the step joins the two in one course, which ends at 2.",
+        "zh": "合并一个情境的0→1与另一情境的1→2会行0→2，无单一情境行之，故合并在此不精确。随步而变的情境把二者连为一程，此程止于2。"
+      }
+    }
+  ],
+  "limitations": {
+    "en": "Finite conditional coherence, not universal actual law, physical mechanism, infinite-path coverage, ethical warrant or zero-substantive-axiom grounding. The lifting criterion has a stronger specified-initial-context scope than family-union exactness. Existential context support is not quantum control coherence; no operational correspondence to the switch comparison is proved.",
+    "zh": "有限有条件相容性，不是普遍实际规律、物理机制、无限路径覆盖、伦理根据或零实质公理基础。提升条件针对指定初始情境，比过程族并集的精确性更强。 存在性的情境支持不等于量子控制相干性；未证明量子开关比较的操作对应。"
+  },
+  "validation_scope": {
+    "en": "Machine-checked in the core: every cited declaration of Becoming.ContextArrivalTraces and Becoming.Context, the ending included, has an empty axiom report in the bound receipts. The periphery's earlier form (BecomingCompatibility) used propext for the ending.",
+    "zh": "核心中实查：所引核心声明（含终止）在所绑回执中公理报告全空。外围的早先形式（BecomingCompatibility）终止证明含 propext。"
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/BecomingCompatibility.lean",
+      "role": "provenance",
+      "sha256": "dceaf62eccf3718a03df54ce9767c12cd1317641f5052f7c5fc8c61952c4f1f8",
+      "declarations": [
+        "Generative.BecomingCompatibility.pooling_exact_iff_join_closed",
+        "Generative.BecomingCompatibility.retained_realizes_union",
+        "Generative.BecomingCompatibility.arrivals_append",
+        "Generative.BecomingCompatibility.arrivals_snoc",
+        "Generative.BecomingCompatibility.no_single_context_supports_crossing",
+        "Generative.BecomingCompatibility.actual_context_change_joins_history",
+        "Generative.BecomingCompatibility.changed_history_really_ends"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "role": "proof",
+      "sha256": "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8",
+      "declarations": [
+        "Generative.trace_map",
+        "Generative.trace_lift",
+        "Generative.trace_append_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/becoming-compatibility-checks/20261008T181443.483379Z/verification.json",
+      "role": "receipt",
+      "sha256": "e65455d516b7a25086c50adc4680e7204b0974d17fe3f5b6960b083870e264ae",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GROUNDING-INFERENCE-AND-PRESENTATION.md",
+      "role": "integration",
+      "sha256": "0c0674eb1cf575c62a8338b7e8f3141547d4c3c5c5f8a9d278b438a622f65f7e",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/BECOMING-FOUNDATION.md",
+      "role": "statement",
+      "sha256": "d629319ff3f1e3d0235e98ea3a3f962e824bd30d5e4519fe197c4eeec6552324",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/check_becoming_compatibility.py",
+      "role": "review",
+      "sha256": "8f624b79d8629ce07fe27f8c2f962831764a6033b89bb50b8a1480b922f60f94",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-continuation.md",
+      "role": "provenance",
+      "sha256": "47166d4fce1d3d1b6b7bd879679e07f142293fabbab83d8be632ef65e3fca8d3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
+      "role": "proof",
+      "sha256": "5c9abd8e7826e62410c02e25f3c2f329415875898d183373e8328d172db28758",
+      "declarations": [
+        "Becoming.ChangingContext.ends"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContextArrivalTraces.lean",
+      "role": "proof",
+      "sha256": "148c199ecf828c70d11f0050c4ffcd4e18cfb3a46bf00f74e96f9ca66e9735ef",
+      "declarations": [
+        "Becoming.pooledLaw",
+        "Becoming.InOne",
+        "Becoming.JoinClosed",
+        "Becoming.InOne.pooled",
+        "Becoming.JoinClosed.inOne",
+        "Becoming.pooledLaw_exact_iff_joinClosed",
+        "Becoming.retainedLaw",
+        "Becoming.retainedLaw_trace_iff",
+        "Becoming.retainedLaw_realizes_inOne",
+        "Becoming.evolvingLaw",
+        "Becoming.erasedLaw",
+        "Becoming.erasedLaw_exact_iff_lifts",
+        "Becoming.Arrives",
+        "Becoming.arrives_append",
+        "Becoming.arrives_snoc",
+        "Becoming.CrossingContexts.pooled_crosses",
+        "Becoming.CrossingContexts.not_inOne",
+        "Becoming.CrossingContexts.not_joinClosed",
+        "Becoming.CrossingContexts.retained_excludes",
+        "Becoming.ChangingContext.joins",
+        "Becoming.ChangingContext.arrives",
+        "Becoming.ChangingContext.erased_not_lifted",
+        "Becoming.ContextArrivalTraces.step_arrives",
+        "Becoming.ContextArrivalTraces.empty_support_no_arrival",
+        "Becoming.ContextArrivalTraces.changed_context_arrives"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
+      "role": "provenance",
+      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
+      "declarations": [
+        "Becoming.pooling_exact_iff_join_closed_by_core",
+        "Becoming.retained_realizes_union_by_core",
+        "Becoming.erasure_exact_iff_context_lifting_by_core",
+        "Becoming.arrivals_append_by_core",
+        "Becoming.arrivals_snoc_by_core",
+        "Becoming.no_single_context_supports_crossing_by_core",
+        "Becoming.actual_context_change_joins_history_by_core",
+        "Becoming.changed_history_really_ends_by_core"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T191422.542444Z/verification.json",
+      "role": "receipt",
+      "sha256": "d87f0ffbdb0bafc510a5b95de2dd83714570dfc1ed7f1a6261578f8cb9125a79",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "sha256_pointer": "/source_sha256/GenerativeCore",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContextArrivalTraces.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ContextArrivalTraces",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Context",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "en": "Use the coherence constraint in the constitutive argument for actual formation and its continuing effects; warrant the common law and interpretation rather than adding another equivalent encoding.",
+    "zh": "将相容性限制用于实际形成及持续后果的构成论证；说明共同法则及解释的根据，不另造等价编码。"
+  },
+  "history": [
+    {
+      "en": "9 October 2026: checked inclusive-scope connection with an explicit failed pooling control and positive changing-context repair. Helpers are not counted as independent foundational achievements.",
+      "zh": "2026年10月9日：检查包容范围连接，保留失败的合并控制及真实情境变化的正面修复；辅助声明不计为独立基础成果。"
+    },
+    {
+      "en": "9 October 2026: reconciled Ren’s whole/manifold correction. The necessity target is Becoming as a whole, with generativity within it. Earlier chapter/study content and proof sources are preserved; no new theorem or axiom.",
+      "zh": "2026年10月9日：接入Ren关于整体／manifold的修正。必然性对象是Becoming整体，生成性位于其中。保留此前理论、研究及证明源码；无新增定理或公理。"
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Context.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "2026-10-20: 15 bookkeeping notes condensed from 9 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/c67d9dc790436a3e/becoming-context-coherence.json and in git.",
+      "zh": "2026-10-20：15 条记账性说明合并（9 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/c67d9dc790436a3e/becoming-context-coherence.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (BecomingCompatibility and Bridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Context, Becoming.ContextArrivalTraces and GenerativeCore). 1 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（BecomingCompatibility and Bridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Context, Becoming.ContextArrivalTraces and GenerativeCore）。1 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws (pooling exact where single-context courses compose, retaining the context, forgetting a changing context, arrival), with the core witnesses as counterexample; the GenerativeCore binding moved from the periphery receipt to a core receipt the record cites; aliases now the core names, the retired Bridge name and the periphery names Generative.BecomingCompatibility.pooling_exact_iff_join_closed, retained_realizes_union, arrivals_append and arrivals_snoc dropped (the periphery file stays a provenance reference). The validation scope says the core's ending has an empty axiom report. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述（单一情境之程可复合处合并精确、保留情境、忘掉变化的情境、到达），反例改为核心见证；GenerativeCore 的绑定由外围回执移到本记录已引的核心回执；别名改为核心名称，删去退役的 Bridge 名称与外围名称 Generative.BecomingCompatibility.pooling_exact_iff_join_closed、retained_realizes_union、arrivals_append、arrivals_snoc（外围文件仍为来源引用）。验证范围说明核心中的终止公理报告为空。规律未变。"
+    }
+  ]
+}

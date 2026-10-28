@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "finite-joining-tree-lifting",
   "title": {
     "zh": "有限接合树从指定片段提升",
@@ -8,21 +8,95 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F22",
-  "reviewed_at_utc": "2026-10-25T14:32:06+00:00",
+  "reviewed_at_utc": "2026-10-28T05:47:54+00:00",
   "statement": {
     "en": "A description lifts a joining exactly where having one code is a bisimulation of its frame, with no premise, and then every finite joining tree lifts with its own leaves; with excluded middle as a hypothesis, a code reading the branching tests exactly and reducedly lifts one with listed outcomes.",
     "zh": "一个描述提升一个接合，恰当具有同一编码是该接合之框的互模拟，不加前提；凡它提升之处，每个有限接合树以其自身的叶提升。以排中律为假设，精确且约化地读出分支检验的编码，提升每对都接合为列出片段的接合。"
   },
-  "claim": {
-    "zh": "经描述读出，凡有具这些编码的片段接合为具该编码者，诸编码即接合。描述提升接合（两片段之编码的每个接合都来自片段自身的接合），恰当具同一编码是接合之框的互模拟；不加前提。凡它提升之处，编码之接合恰是具这些编码的任何片段之接合的编码，且每个有限二叉接合树皆提升：叶经描述读出的树接合为一个编码，恰当以自身之叶的树接合为具该编码的片段；叶始终是所给的片段。编码即通过相同分支检验时，描述提升接合，恰当通过相同分支检验是其框的互模拟；以排中律为假设，凡每对都接合为列出的片段，精确且约化地读出分支检验的呈现提升该接合。",
-    "en": "Read through a description, codes join where fragments with those codes join into one with that code. The description lifts the joining, every joining of the codes of two fragments coming from a joining of the fragments themselves, exactly where having one code is a bisimulation of the joining's frame; no premise. Where it lifts, a joining of codes is exactly the code of a joining of any fragments having them, and every finite binary tree of joinings lifts: the tree with its leaves read through the description joins into a code exactly where the tree with its own leaves joins into a fragment with that code; the leaves stay the given fragments. Where codes are passing the same branching tests, the description lifts the joining exactly where passing the same branching tests is a bisimulation of its frame; with excluded middle as a hypothesis, where each pair joins into listed fragments, a presentation reading the branching tests exactly and reducedly lifts the joining."
-  },
+  "laws": [
+    {
+      "en": "A joining relates two fragments to what they join into; read through a description, codes join where fragments with those codes join into one with that code. The description lifts the joining, every joining of the codes of two fragments coming from a joining of those fragments, exactly where having one code is a bisimulation of the joining's frame, whose moves join a partner on either side; no premise.",
+      "zh": "接合把两个片段关联到它们接合所成者；经描述读出，凡有具这些编码的片段接合为具该编码者，诸编码即接合。描述提升接合（两片段之编码的每个接合都来自这两片段的接合），恰当具同一编码是接合之框的互模拟，框之动是在任一侧接合一个伙伴；不加前提。",
+      "declarations": [
+        "Becoming.Joining.frame",
+        "Becoming.Joining.image",
+        "Becoming.Joining.Lifts",
+        "Becoming.Joining.lifts_iff"
+      ]
+    },
+    {
+      "en": "Where it lifts, a joining of codes is exactly the code of a joining of any fragments having them; a description identifying exactly the alike fragments of the joining's frame lifts it.",
+      "zh": "凡它提升之处，编码之接合恰是具这些编码的任何片段之接合的编码；恰认同接合之框中相似片段的描述提升该接合。",
+      "declarations": [
+        "Becoming.Joining.image_iff",
+        "Becoming.Joining.lifts_of_identifiesAlike"
+      ]
+    },
+    {
+      "en": "Where a description lifts a joining, every finite binary tree of joinings lifts: the tree with its leaves read through the description joins into a code exactly where the tree with its own leaves joins into a fragment with that code, the leaves staying the given fragments.",
+      "zh": "凡描述提升一个接合，每个有限二叉接合树皆提升：叶经描述读出的树接合为一个编码，恰当以自身之叶的树接合为具该编码的片段；叶始终是所给的片段。",
+      "declarations": [
+        "Becoming.Joining.Tree",
+        "Becoming.Joining.Tree.map",
+        "Becoming.Joining.Tree.Realizes",
+        "Becoming.Joining.tree_lifts"
+      ]
+    },
+    {
+      "en": "Where having one code is passing the same branching tests, the description lifts the joining exactly where passing the same branching tests is a bisimulation of its frame.",
+      "zh": "具同一编码即通过相同分支检验时，描述提升接合，恰当通过相同分支检验是其框的互模拟。",
+      "declarations": [
+        "Becoming.Joining.lifts_iff_sameBranchingTests"
+      ]
+    },
+    {
+      "en": "With excluded middle as a hypothesis, where each pair of fragments joins into a listed set of fragments, a presentation reading the branching tests of the joining's frame exactly and giving fragments passing the same tests one code lifts the joining.",
+      "zh": "以排中律为假设，凡每对片段都接合为一组列出的片段，精确读出接合之框的分支检验、并给通过相同检验之片段同一编码的呈现，提升该接合。",
+      "declarations": [
+        "Becoming.Joining.FiniteOutcomes",
+        "Becoming.Joining.FiniteOutcomes.lifts_of_exact"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "lifts_iff 与 tree_lifts 不加前提。FiniteOutcomes.lifts_of_exact 以排中律为具名假设（不是公理），每对接合为列出的片段（FiniteOutcomes），以及接合之框的分支检验（否定、合取、左右接合之动，无原子主张）的一个 Exact 且 Reduced 的呈现。",
       "en": "No premise for lifts_iff and tree_lifts. FiniteOutcomes.lifts_of_exact takes excluded middle as a named hypothesis (not an axiom), each pair joining into listed fragments (FiniteOutcomes), and a presentation of the branching tests of the joining's frame (negation, conjunction and the left and right joining moves, no atomic claims) that is Exact and Reduced."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The laws cover finite binary trees of joinings: no shared nodes, cycles or infinite completion.",
+      "zh": "规律只涉及有限二叉接合树：不涵盖共享节点、循环或无限完成。",
+      "kind": "scope",
+      "witness": "Becoming.Joining.Tree"
+    },
+    {
+      "en": "Realizing a tree of joinings does not show that a resource can be copied, and says nothing of actual scheduling.",
+      "zh": "实现接合树并不表明资源可被复制，也不涉及实际调度。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
+      "detail": {
+        "zh": "树形关系实现不授权复制资源，不涵盖共享节点、循环、无限完成或实际调度。",
+        "en": "Tree-shaped relational realization does not authorize resource copying or cover shared nodes, cycles, infinite completion or actual scheduling."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker: Becoming.Joining and Becoming.JoiningCodes are bound to receipts in becoming/becoming-checks, and every cited declaration has an empty axiom report, excluded middle entering only as a named hypothesis. The periphery's earlier form (deeper/ExplanatoryJoiningBranches, its receipt in deeper/explanatory-joining-branches-checks) is a provenance reference.",
+    "zh": "合并核心检查器实查：Becoming.Joining 与 Becoming.JoiningCodes 绑定 becoming/becoming-checks 中的回执，所引声明公理报告全空，排中律只作为具名假设出现。外围的早先形式（deeper/ExplanatoryJoiningBranches，其回执在 deeper/explanatory-joining-branches-checks）为来源引用。"
+  },
+  "next_delta": {
+    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
+    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
+  },
   "correspondence": {
     "zh": "片段、接合及其检验解释同一活动内的关系；数学语义不等于所有问题已被实际取得。",
     "en": "Fragments, joining and its questions interpret relations within the same activity; mathematical semantics does not establish acquired access to every answer."
@@ -95,23 +169,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
-      "detail": {
-        "zh": "树形关系实现不授权复制资源，不涵盖共享节点、循环、无限完成或实际调度。",
-        "en": "Tree-shaped relational realization does not authorize resource copying or cover shared nodes, cycles, infinite completion or actual scheduling."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "树形关系实现不授权复制资源，不涵盖共享节点、循环、无限完成或实际调度。",
-    "en": "Tree-shaped relational realization does not authorize resource copying or cover shared nodes, cycles, infinite completion or actual scheduling."
-  },
-  "validation_scope": {
-    "zh": "所列 Lean 源码与成功冻结回执逐字哈希绑定；本轮223项审计含26项新声明。旧功能性定理信用此前166项回执，未冒充新证明。",
-    "en": "Listed Lean sources bind by exact hash to successful frozen receipts. This round checks 223 declarations including 26 new ones. The older functional theorem credits its previous 166-audit receipt, not a new proof."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranches.lean",
@@ -156,7 +213,8 @@
         "Becoming.Joining.Tree.Realizes",
         "Becoming.Joining.tree_lifts",
         "Becoming.Joining.lifts_iff_sameBranchingTests",
-        "Becoming.Joining.FiniteOutcomes"
+        "Becoming.Joining.FiniteOutcomes",
+        "Becoming.Joining.frame"
       ]
     },
     {
@@ -213,13 +271,6 @@
       "success_value": "passed"
     },
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.Joining",
-      "success_pointer": "/status",
-      "success_value": "passed"
-    },
-    {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.JoiningCodes",
@@ -227,10 +278,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
-  },
   "history": [
     {
       "zh": "2026-10-08：在既有接合情境研究中接续；已完成结果分别迁移，新连接与复用分列。",
@@ -263,6 +310,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws: a description lifts a joining exactly where having one code is a bisimulation of its frame, with no premise, and every finite tree then lifts; with excluded middle as a named hypothesis, an exact reduced presentation of the branching tests lifts a joining with listed outcomes. The premises restated accordingly (they named the periphery target of finite negation, conjunction and joining-successor questions; earlier: One partial joining relation J; each input pair has a finite outcome set. | The target contains all finite negation, conjunction and left/right joining-successor questions, with no independent atomic predicates. | Exact supplies complete truthful answers; Reduced is used for minimal codes and lifting output codes.). Aliases now the core names; the earlier ones Generative.ExplanatoryJoiningBranches.tree_lifts (retired module) and Becoming.Joining.tree_lifts_of_em (retired module) are recorded here (their declarations stay in the provenance references); the retired operation_lifts no longer named in the dependency interface.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，主张依核心定律重述：描述提升接合恰当具同一编码是其框的互模拟，不加前提，此时每个有限树皆提升；以排中律为具名假设，分支检验的精确约化呈现提升有列出结果的接合。前提随之重述（原列外围之目标：有限否定、合取与接合后继问题）。别名改为核心之名；原别名 Generative.ExplanatoryJoiningBranches.tree_lifts (retired module) 与 Becoming.Joining.tree_lifts_of_em (retired module) 记于此（其声明仍在来历引用中）；依存接口不再称已退休的 operation_lifts。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): statement and hypotheses kept; the claim split into five laws, each read against its declarations in Becoming.Joining and Becoming.JoiningCodes, the description identifying alike fragments (lifts_of_identifiesAlike) now named in a law; the limitation to two does-not-show items and the standard boundary no-ethical-premise; Joining.frame added to the references; validation scope rewritten on the bound core receipts, the audit counts of earlier receipts left to them and the earlier record. No premise, status or source hash changed. Every earlier sentence is mapped in [finite-joining-tree-lifting.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-joining-tree-lifting.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, a duplicate proof binding (dropped), each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：陈述与前提保留；主张拆为五条规律，各条对照其在 Becoming.Joining 与 Becoming.JoiningCodes 中的声明核读，认同相似片段的描述（lifts_of_identifiesAlike）写入一条规律；限制分入两条“未表明”与通用边界 no-ethical-premise；引用中加入 Joining.frame；检查范围按所绑核心回执改写，早先回执的审计计数留在其回执与迁移前的记录中。前提、状态与来源哈希均未改变。每句旧文本的去向见 [finite-joining-tree-lifting.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-joining-tree-lifting.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项、重复的证明绑定（删去），各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/8409d21f98c83e3b/finite-joining-tree-lifting.json",
+      "sha256": "8409d21f98c83e3b6f72c1077d3fd5c3996c13b791fc6f36f5b18dd94c4065a9",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/b454e7ef6d56f1c7/finite-joining-tree-lifting.json",
+      "sha256": "b454e7ef6d56f1c7260349205e14deb858f0452a7df0545bdba61c0b36715f4a",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1,22 +1,73 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "joint-correlation-reduced-dynamics",
   "title": {
     "zh": "局部状态不变的关系转化与充分约化",
     "en": "Relational transformation with unchanged local states and a sufficient reduction"
   },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-28T05:47:54+00:00",
   "statement": {
     "en": "A determined law on reduced values carries each step exactly where moves keep merged configurations merged. In a two-qubit fragment a phase step keeping both local densities changes a later controlled X's response: the local pair carries no law, a summary with the joint cross term does.",
     "zh": "约化值上有确定的律承载每一步，恰当动作使被合并的构形仍被合并。在两量子位片段中，保持两个局部密度的相位步改变其后受控 X 的回应：局部之对不承载规律，带共同交叉项的摘要承载规律。"
   },
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "zh": "对每条带动作的变化之律与每个约化：约化值上有一条确定的律承载每一步，当且仅当约化合并的构型被每个动作带到它合并的构型；与每个动作交换的约化律与每段动作序列交换。在明示两量子位实振幅片段中，实际相位操作保留双方完整局部密度与联合基底分布，而同一后续受控 X 操作产生不同控制响应；所以局部密度对不承载规律，不能统一给出下一控制状态。保留相应共同交叉项的四整数摘要承载规律，对指定交互与相位操作的任意有限序列给出精确控制密度和响应：两者都是实例。",
-    "en": "For every law of change with moves and every reduction: some determined law on the reduced values carries every step exactly when configurations the reduction merges are taken by each move to configurations it merges; a reduced law that commutes with every move commutes with every course of moves. In the specified two-qubit real-amplitude fragment, an actual phase operation preserves both complete local densities and the joint basis distribution, while the same subsequent controlled-X gives different control responses; so the local density pair carries no law and cannot uniformly determine the next control state. A four-integer summary retaining the relevant joint cross contribution carries one, giving exact control densities and responses for every finite word of the supplied interaction and phase operations: both are instances."
-  },
+  "laws": [
+    {
+      "en": "For any law of change giving the next configuration for each configuration and move, and any reduction, some determined law on the reduced values carries every step exactly when configurations the reduction merges are taken by each move to configurations it merges; a reduced law commuting with every move commutes with every finite course of moves.",
+      "zh": "对任一给出每个构形在每个动作下之下一构形的变化律与任一约化：约化值上有某个确定的律承载每一步，恰当约化所合并的构形被每个动作取到它所合并的构形；与每个动作交换的约化律与每个有限动作之程交换。",
+      "declarations": [
+        "Becoming.Readout.law_through_iff",
+        "Becoming.Readout.foldl_semiconj"
+      ]
+    },
+    {
+      "en": "On a control and a register with integer real amplitudes, the phase step keeps both local densities and the basis masses of the joined configuration and turns the retained cross contribution from 1 to −1; the same later controlled X gives the control the response (4, 0, 4) from the joined configuration and (0, 4, 4) from the changed one.",
+      "zh": "在整数实振幅的控制位与寄存器上，相位步保持合成构形的两个局部密度与基底质量，把保留的交叉贡献由 1 变为 −1；其后同一受控 X 使控制位从合成构形得回应 (4, 0, 4)，从改变后的构形得 (0, 4, 4)。",
+      "declarations": [
+        "Becoming.JointPhase.actual_phase_preserves_both_local_states",
+        "Becoming.JointPhase.actual_phase_preserves_basis_masses",
+        "Becoming.JointPhase.retained_cross_distinguishes_change",
+        "Becoming.JointPhase.same_interaction_distinguishes_relation"
+      ]
+    },
+    {
+      "en": "So no update of the local pair gives the control after the interaction from both configurations, and no determined law on the local pair carries the configuration's law, an instance of the general law above.",
+      "zh": "故没有局部之对的更新能从两个构形都给出交互后的控制位，局部之对上也没有确定的律承载构形之律，这是上面一般规律的实例。",
+      "declarations": [
+        "Becoming.JointPhase.no_local_pair_update",
+        "Becoming.JointPhase.local_pair_carries_no_law"
+      ]
+    },
+    {
+      "en": "The summary of two branch weights and two cross contributions recovers the control density of every configuration and commutes with both moves; so along every finite word it follows the reduced law, again an instance of the general law, and the control's response after every word, and at the end of every trace, is read from it.",
+      "zh": "由两个分支权重与两个交叉贡献组成的摘要恢复每个构形的控制位密度，并与两个动作交换；故沿每个有限词它随约化律而行，亦是一般规律的实例；每个词之后、每条迹末端控制位的回应都可从它读出。",
+      "declarations": [
+        "Becoming.JointPhase.summarize",
+        "Becoming.JointPhase.summary_recovers_control",
+        "Becoming.JointPhase.summary_update_exact",
+        "Becoming.JointPhase.every_finite_word_exact",
+        "Becoming.JointPhase.every_finite_control_response_exact",
+        "Becoming.JointPhase.summary_response"
+      ]
+    },
+    {
+      "en": "The summary still merges two configurations whose register densities differ.",
+      "zh": "该摘要仍合并两个寄存器密度不同的构形。",
+      "declarations": [
+        "Becoming.JointPhase.summary_omits_other_relations"
+      ]
+    },
+    {
+      "en": "In the periphery's earlier statement of the same fragment, the summary carries a determined law of the fragment and, after every course of moves, is the reduced law's course.",
+      "zh": "在外围对同一片段的早先陈述中，该摘要承载片段的一个确定的律，且在每段动作之程后是约化律之程。",
+      "declarations": [
+        "Becoming.MachineInstances.summary_carries_law",
+        "Becoming.MachineInstances.summary_every_word"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "整数实振幅与密度分子；主要物理见证的振幅除以根号2，密度除以2，最终省略见证的范数为1。任意整数输入的一般结论是代数恒等式。",
@@ -27,10 +78,57 @@
       "en": "H preparation, controlled-X, first-coordinate Z, partial trace and measurement interpretation are supplied by the declared quantum framework; actual joint-operation access remains required."
     },
     {
-      "zh": "任意有限词精确性限于两类指定操作及第一坐标响应；复用既有SystemsOrganization的同一状态接续定理。",
-      "en": "All-finite-word exactness is restricted to the two specified operations and first-coordinate responses; it reuses the existing SystemsOrganization theorem preserving reached-state composition."
+      "zh": "沿每个有限词的精确性只针对两个指定动作（交互与相位步）之词及控制位回应；它用一般规律：与每个动作交换的约化律与每段动作之程交换（外围早先的证明复用 SystemsOrganization 保持到达状态复合的定理）。",
+      "en": "Exactness along every finite word is for words of the two specified moves, the interaction and the phase step, and for the control's response; it uses the general law that a reduced law commuting with every move commutes with every course of moves (the periphery's earlier proof reused the SystemsOrganization theorem preserving reached-state composition)."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Only integer real amplitudes of pure configurations are covered; behaviour for arbitrary complex or mixed states is not stated.",
+      "zh": "只涉及纯构形的整数实振幅；任意复数或混合态的行为未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "No minimal summary is shown, for the two specified moves or for every operation.",
+      "zh": "未表明最小摘要：无论对两个指定动作，还是对每个操作。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "No causal nonseparability is shown, and the fragment is one witness that a relation can change while local states stay, not a universal ontology.",
+      "zh": "未表明因果不可分离；该片段是关系可变而局部态不变的一个见证，不是普遍本体。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPhase.lean",
+      "detail": {
+        "zh": "no_local_pair_update保留双方完整局部状态却反驳统一下一步更新；summary_omits_other_relations显示正面摘要仍省略寄存器关系，扩充操作范围需重新验证。",
+        "en": "no_local_pair_update preserves both full local states but refutes a uniform next-step update; summary_omits_other_relations shows the sufficient summary still omits register relations, so enlarged operation scope requires renewed validation."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RELATIONAL-BECOMING-INTEGRATION.md",
+      "detail": {
+        "zh": "完整量子状态与指定操作同样解释全部结果；此次反例针对局部约化，未反驳强的已有量子解释。",
+        "en": "The full quantum state and specified operators explain all results equally; the obstruction targets the local reduction and does not refute the adequate conventional quantum account."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "formal-not-empirical",
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: the core modules Becoming.JointPhase and Becoming.Readout are bound to receipts in becoming/becoming-checks, every cited declaration with an empty axiom report; the periphery's MachineInstances, bound to its receipt in machine-instances-checks, uses propext for its two summary laws. The earlier module RelationalReduction (deeper/relational-reduction-checks, whose receipt also binds GenerativeCore) is a provenance reference. Author counterreview; no independent review.",
+    "zh": "实查：核心 Becoming.JointPhase 与 Becoming.Readout 绑定 becoming/becoming-checks 中的回执，所引声明公理报告全空；外围 MachineInstances 绑定 machine-instances-checks 中的回执，其两条摘要规律用 propext。早先模块 RelationalReduction（deeper/relational-reduction-checks，该回执也绑定 GenerativeCore）为来源引用。作者反审；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Use the relation-retention condition in the constitutive account of Becoming as a whole.",
+    "zh": "将关系保留条件用于 Becoming 整体的构成性说明。"
+  },
   "correspondence": {
     "zh": "同一制备中分化的两个坐标表示操作角色。相位实际改变共同振幅关系，再以相同交互和测量比较后续；summary_update_exact的输出满足旧evolve_semiconjugacy的输入，summary_recovers_control连接测量。标准量子效应及一般约化定理不作为新发现。",
     "en": "Two coordinates differentiate operation roles within one preparation. Phase changes the joint amplitude relation before a common interaction and measurement compare continuations. summary_update_exact supplies the old evolve_semiconjugacy premise, and summary_recovers_control connects its output to measurement. Neither the standard quantum effect nor the general reduction theorem is claimed as a new discovery."
@@ -76,30 +174,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPhase.lean",
-      "detail": {
-        "zh": "no_local_pair_update保留双方完整局部状态却反驳统一下一步更新；summary_omits_other_relations显示正面摘要仍省略寄存器关系，扩充操作范围需重新验证。",
-        "en": "no_local_pair_update preserves both full local states but refutes a uniform next-step update; summary_omits_other_relations shows the sufficient summary still omits register relations, so enlarged operation scope requires renewed validation."
-      }
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RELATIONAL-BECOMING-INTEGRATION.md",
-      "detail": {
-        "zh": "完整量子状态与指定操作同样解释全部结果；此次反例针对局部约化，未反驳强的已有量子解释。",
-        "en": "The full quantum state and specified operators explain all results equally; the obstruction targets the local reduction and does not refute the adequate conventional quantum account."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "未证明任意复数或混合态的全量子行为、所有操作下的最小摘要、物理实验、因果不可分离、普遍本体或伦理权威。Becoming整体的强零实质公理目标保持。",
-    "en": "Does not prove full behavior for arbitrary complex or mixed states, a minimal summary for every operation, hardware realization, causal nonseparability, universal ontology or ethical authority. The strong zero-substantive-axiom goal for Becoming as a whole remains open."
-  },
-  "validation_scope": {
-    "zh": "Lean4.29.1新模块11项定理声明／25项审计通过，21空、4仅propext；继承74项定理／123项审计分列，总148项审计134空14标准。源码、导入闭包、签名与回执绑定；作者反审，无独立代理验收。",
-    "en": "Lean 4.29.1 checks 11 module theorem declarations / 25 audits, 21 empty and four using only propext. Separately credits 74 inherited theorems / 123 audits: total 148, 134 empty and 14 standard. Source, import closure, signatures and receipt bound; author counterreview, no independent-agent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
@@ -298,10 +372,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "将已取得的关系保留条件用于Becoming整体的构成性论证；不重开此已完成操作接口，不要求每次变化都具生成性，也不把另一局部模型当作普遍演绎。",
-    "en": "Use the established relation-retention condition in the constitutive account of Becoming as a whole. Do not reopen this completed operational interface, require every change to be generative, or treat another local model as the universal deduction."
-  },
   "history": [
     {
       "zh": "2026-10-09：在原变化研究第12节接续已查的共同作用模块，给出双方完整局部状态不变的实际转化及任意有限词充分约化；保留首次成功快照和澄清归一化注释后的最终检查。标准物理和继承的约化定理分别署名。",
@@ -333,6 +403,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added, from the claim and the core laws; the core declarations of the summary (the retained cross contribution, recovery of the control, exactness along every finite word, the response at the end of every trace) added to the references, and core names to the aliases; the three aliases naming the retired Instances module (local_pair_no_update, local_pair_carries_no_law, evolve_eq_foldl) dropped, the file staying a provenance reference; the local-reduction counterexample re-pointed from the periphery file to the core. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，取自主张与核心规律；摘要的核心声明（保留的交叉贡献、恢复控制位、沿每个有限词精确、每条迹末端的回应）加入引用，核心名称加入别名；删去三个指向已退役 Instances 模块的别名（local_pair_no_update、local_pair_carries_no_law、evolve_eq_foldl），该文件仍为来源引用；局部约化的反例由外围文件改指核心。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): statement kept; the claim split into six laws, each read against its declarations in Becoming.Readout, Becoming.JointPhase and, for the periphery's form, MachineInstances; limitations to three does-not-show items and the standard boundaries formal-not-empirical, no-ethical-premise-core-axiom-free (MachineInstances' two summary laws use propext), no-evaluation and zero-axiom-target-open; the third hypothesis now names the law the core proof uses (Readout's foldl_semiconj), SystemsOrganization's theorem kept as what the periphery's proof reused; validation scope rewritten on the bound receipts, the counts of the periphery's earlier receipt left to that receipt and the earlier record; the next step's instructions to later sessions left to the earlier record. What the premises require, the status and every source hash are unchanged. Every earlier sentence is mapped in [joint-correlation-reduced-dynamics.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-correlation-reduced-dynamics.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：陈述保留；主张拆为六条规律，各条对照其在 Becoming.Readout、Becoming.JointPhase 及（外围形式）MachineInstances 中的声明核读；限制分入三条“未表明”与通用边界 formal-not-empirical、no-ethical-premise-core-axiom-free（MachineInstances 的两条摘要规律用 propext）、no-evaluation、zero-axiom-target-open；第三条前提改称核心证明所用之律（Readout 的 foldl_semiconj），SystemsOrganization 的定理保留为外围证明所复用者；检查范围按所绑回执改写，外围早先回执的计数留在该回执与迁移前的记录中；下一步中给后续会话的指示留在迁移前的记录中。前提所要求者、状态与每个来源哈希均未改变。每句旧文本的去向见 [joint-correlation-reduced-dynamics.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-correlation-reduced-dynamics.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/3fc423f9c6890593/joint-correlation-reduced-dynamics.json",
+      "sha256": "3fc423f9c6890593952077e3db3ec5bf53b5ed5b137419f8a7b1bd4741838cfb",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/490d8506c2e26266/joint-correlation-reduced-dynamics.json",
+      "sha256": "490d8506c2e26266b64c2c39b1641f25cfaa26c7487c26149c58a9bc67f41952",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

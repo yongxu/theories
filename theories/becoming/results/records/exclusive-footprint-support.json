@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "exclusive-footprint-support",
   "title": {
     "zh": "局部排他支持推至全部叶项",
@@ -8,21 +8,81 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-25T14:33:30+00:00",
+  "reviewed_at_utc": "2026-10-28T05:47:54+00:00",
   "statement": {
     "en": "Where each part's footprint lies within its whole's and the two parts' footprints share nothing, the root's footprint supports what the leaves of a realized plan draw on: nothing repeats, and everything lies within it.",
     "zh": "凡每个部分的足迹在其整体的足迹之内、两个部分的足迹无共同处，根的足迹支持一个被实现计划的诸叶所汲取者：无重复，且皆在其内。"
   },
-  "claim": {
-    "zh": "一个计划在某构形处实现、每片叶都被支持（其列表无重复且在叶构形的足迹之内）时：诸叶所汲取者按序相接，凡每个部分的足迹在其整体的足迹之内，即在根的足迹之内；若两个部分的足迹又无共同处，则无重复；合起来，根的足迹支持它。",
-    "en": "For a plan realized at a configuration with each leaf supported (its list repeating nothing and lying within the leaf configuration's footprint): what its leaves draw on, joined in order, lies within the root's footprint where each part's footprint lies within its whole's, and repeats nothing where moreover the two parts' footprints share nothing; together, the root's footprint supports it."
-  },
+  "laws": [
+    {
+      "en": "A configuration realizes a plan, a finite binary nesting of leaves, where it holds together parts realizing the plan's two sides, down to leaves read at the parts; a footprint supports a list where the list repeats nothing and each member lies within the footprint.",
+      "zh": "一个构形实现一个计划（叶的有限二叉嵌套），是指它把实现计划两侧的部分合在一起，直到在部分处读出的叶；足迹支持一个列表，是指该列表无重复且每个成员都在足迹之内。",
+      "declarations": [
+        "Becoming.JointPlan",
+        "Becoming.JointPlan.Realizes",
+        "Becoming.Supports"
+      ]
+    },
+    {
+      "en": "For a plan realized at a configuration with each leaf's list supported by its leaf configuration's footprint: where each part's footprint lies within its whole's, everything the leaves draw on, joined in order, lies within the root's footprint.",
+      "zh": "一个计划在某构形处实现、每片叶的列表都被其叶构形的足迹支持时：凡每个部分的足迹在其整体的足迹之内，诸叶所汲取者按序相接，皆在根的足迹之内。",
+      "declarations": [
+        "Becoming.PartsWithin",
+        "Becoming.JointPlan.draws",
+        "Becoming.JointPlan.within_of_realizes"
+      ]
+    },
+    {
+      "en": "Where moreover the two parts of each whole share no footprint, what the leaves draw on repeats nothing, so the root's footprint supports it.",
+      "zh": "若每个整体的两个部分的足迹又无共同处，诸叶所汲取者无重复，故根的足迹支持它。",
+      "declarations": [
+        "Becoming.PartsApart",
+        "Becoming.JointPlan.nodup_of_realizes",
+        "Becoming.JointPlan.supports_of_realizes"
+      ]
+    },
+    {
+      "en": "Support at the root does not give realization: where no whole holds any part, the root's footprint supports what a plan of two empty leaves draws on, and the plan is not realized.",
+      "zh": "根处的支持不给出实现：没有整体合持任何部分时，根的足迹支持由两片空叶组成的计划所汲取者，而该计划不被实现。",
+      "declarations": [
+        "Becoming.Unjoined.supports_not_realizes"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "足迹的 PartsWithin 与 PartsApart；计划被实现，每片叶读作 Supports。",
       "en": "PartsWithin and PartsApart of the footprint; the plan realized with each leaf read as Supports."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Support by the root's footprint does not give a realization of the plan; the converse needs more structure.",
+      "zh": "根足迹的支持不给出计划的实现；逆向需要更多结构。",
+      "kind": "converse",
+      "witness": "Becoming.Unjoined.supports_not_realizes"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryFootprints.lean",
+      "detail": {
+        "zh": "这里只从已实现计划推得支持；一般反向实现不能省去额外结构。",
+        "en": "This direction derives support from a realized plan; converse realization cannot omit additional structure."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker: Becoming.JointPlans and Becoming.Composition are bound to receipts in becoming/becoming-checks, and every cited declaration has an empty axiom report. The periphery's earlier form (deeper/ExplanatoryFootprints, its receipt in deeper/explanatory-global-realization-checks) is a provenance reference.",
+    "zh": "合并核心检查器实查：Becoming.JointPlans 与 Becoming.Composition 绑定 becoming/becoming-checks 中的回执，所引声明公理报告全空。外围的早先形式（deeper/ExplanatoryFootprints，其回执在 deeper/explanatory-global-realization-checks）为来源引用。"
+  },
+  "next_delta": {
+    "en": "Reuse for nested exclusive requests, and an account of its own for footprints that are shared or renewed.",
+    "zh": "复用于嵌套的排他请求；可共享、可更新的足迹另作其自身的说明。"
+  },
   "correspondence": {
     "zh": "资源身份与排他性是局部模型前提，不是生成的一般原语。",
     "en": "Resource identity and exclusivity are local model premises, not universal primitives of generativity."
@@ -43,23 +103,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryFootprints.lean",
-      "detail": {
-        "zh": "这里只从已实现计划推得支持；一般反向实现不能省去额外结构。",
-        "en": "This direction derives support from a realized plan; converse realization cannot omit additional structure."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "这里只从已实现计划推得支持；一般反向实现不能省去额外结构。",
-    "en": "This direction derives support from a realized plan; converse realization cannot omit additional structure."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryFootprints.lean",
@@ -101,7 +144,8 @@
         "Becoming.JointPlan.Realizes",
         "Becoming.JointPlan.within_of_realizes",
         "Becoming.JointPlan.nodup_of_realizes",
-        "Becoming.JointPlan.supports_of_realizes"
+        "Becoming.JointPlan.supports_of_realizes",
+        "Becoming.JointPlan"
       ]
     },
     {
@@ -164,13 +208,6 @@
       "success_value": "passed"
     },
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.Composition",
-      "success_pointer": "/status",
-      "success_value": "passed"
-    },
-    {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPlans.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.JointPlans",
@@ -178,10 +215,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "嵌套排他请求复用；更改为可共享、可更新支持时须新说明。",
-    "en": "Reuse for nested exclusive requests; sharing or renewal requires a new account."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -206,6 +239,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws: what the leaves of a realized plan draw on lies within the root's footprint where parts' footprints lie within their whole's, and repeats nothing where the two parts' footprints moreover share nothing. The premise restated in the core names (it named Within, Separate and Supported: Within F J, Separate F J, and Realizes J (Supported F) s p.); the retired aliases Generative.ExplanatoryFootprints.realized_requests_supported (retired module); Becoming.realized_requests_supported_by_core (retired module) dropped (their declarations stay in the provenance references) and the two core steps added.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，主张依核心定律重述：被实现计划的诸叶所汲取者，凡部分的足迹在其整体之内即在根的足迹之内，若两部分的足迹又无共同处则无重复。前提以核心之名重述（原称 Within、Separate 与 Supported）；已退休之别名删去（其声明仍在来历引用中），并加入两个核心步骤。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): statement and hypotheses kept; the claim split into four laws, each read against its declarations in Becoming.JointPlans and Becoming.Composition, the converse's witness (Unjoined.supports_not_realizes, already referenced) now a law; the limitation to one does-not-show item of kind converse and the standard boundary no-ethical-premise; JointPlan added to the references; validation scope rewritten on the bound core receipts, replacing the 8 October migration's note (history entry 0); the next step stated positively. No premise, status or source hash changed. Every earlier sentence is mapped in [exclusive-footprint-support.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/exclusive-footprint-support.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in a duplicate proof binding (dropped), each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：陈述与前提保留；主张拆为四条规律，各条对照其在 Becoming.JointPlans 与 Becoming.Composition 中的声明核读，逆向的见证（Unjoined.supports_not_realizes，已在引用中）列为一条规律；限制改为一条逆向类的“未表明”与通用边界 no-ethical-premise；引用中加入 JointPlan；检查范围按所绑核心回执改写，取代 10 月 8 日迁移的说明（第一条沿革）；下一步以正面陈述。前提、状态与来源哈希均未改变。每句旧文本的去向见 [exclusive-footprint-support.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/exclusive-footprint-support.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及重复的证明绑定（删去），各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/eba02b611d352854/exclusive-footprint-support.json",
+      "sha256": "eba02b611d35285449d9fc9afa85d9946fe71c08948bbea74f5ceff6df2a31b5",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/76503c63461242f8/exclusive-footprint-support.json",
+      "sha256": "76503c63461242f82dda6b3e9c4a4bc7bd357aa325a536e4c278da1b59dcd27c",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

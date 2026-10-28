@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "id": "derivation-soundness",
+  "title": {
+    "zh": "带前提的推导健全性",
+    "en": "Premise-tracked derivation soundness"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
+  "claim": {
+    "zh": "若 Derives basis context p，则每个满足全部 basis 及 context 的解释也满足 p。",
+    "en": "If Derives basis context p, every interpretation satisfying the entire basis and local context satisfies p."
+  },
+  "hypotheses": [
+    {
+      "zh": "使用既有有限推导规则；根基和局部前提的真均为显式输入。",
+      "en": "The existing finite derivation rules are fixed; basis truth and local assumptions are explicit inputs."
+    }
+  ],
+  "correspondence": {
+    "zh": "形式健全性不提供根基本身的实际真或规范权威。",
+    "en": "Formal soundness supplies neither actual basis truth nor normative authority."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Derivation.lean",
+  "aliases": [
+    "InquiryRoot.derivation_sound",
+    "InquiryRoot.WholeDischarge.derivation_sound_constructively"
+  ],
+  "dependencies": [],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/GenerativeClosure.lean",
+      "detail": {
+        "zh": "任意新增局部前提可以推出条件句，不能据此抹去前提。",
+        "en": "Adding a local premise supports a conditional derivation, not discharge of that premise."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "任意新增局部前提可以推出条件句，不能据此抹去前提。",
+    "en": "Adding a local premise supports a conditional derivation, not discharge of that premise."
+  },
+  "validation_scope": {
+    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
+    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/GenerativeClosure.lean",
+      "role": "provenance",
+      "sha256": "d0a79987bd15c3de39f4c109d1d61703df50d3e9b3236c4e46acdd1854ec22ed",
+      "declarations": [
+        "InquiryRoot.derivation_sound",
+        "InquiryRoot.extra_claim_not_closed_derivable"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Derivation.lean",
+      "role": "proof",
+      "sha256": "ea2c3feb81457ffeee9eedceb1042fe91faab3227a89bb33345d8b3f121dad40",
+      "declarations": [
+        "Becoming.Derivation.Derives.sound",
+        "Becoming.Derivation.claim_not_closed",
+        "Becoming.Derivation.closed_throughout",
+        "Becoming.Derivation.closure_throughout_iff",
+        "Becoming.Derivation.Scope.goal_closure"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/joint-interpretation-verification.json",
+      "role": "receipt",
+      "sha256": "84ccd8f9cfbc584fdd568815f1d39f8bccf671420ec5de493a5d4492488f607a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/WholeTheoryDischarge.lean",
+      "role": "integration",
+      "sha256": "f835741c8d9efc49eabb6f4d82db0488e5f46f308fd0f1500bd8692a62590893",
+      "declarations": [
+        "InquiryRoot.WholeDischarge.derivation_sound_constructively"
+      ]
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/SESSION-PROOF-REUSE-SOURCE-CHECKS.json",
+      "role": "review",
+      "sha256": "9126a57e70b9c5e3647c77906d0b8712a86a0acc2f567ddf9f274f64f24641cf",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md",
+      "role": "provenance",
+      "sha256": "a896df0f8f85139ab323dcb97878b86b2ab3d4c897e4587e15f4ca8b8f7e9017",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
+      "role": "provenance",
+      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
+      "declarations": [
+        "Becoming.derivation_sound_on_scope",
+        "Becoming.closure_over_scope_iff_basis",
+        "Becoming.sound_goal_closure"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T204907.920360Z/verification.json",
+      "role": "receipt",
+      "sha256": "75429d3bd34fa847dd885fcb4195ab1935845952cc8e0d8f8ddb9c32ae35f2f9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Derivation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Derivation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "继续复用健全性；新研究须说明如何取得或解除实质前提。",
+    "en": "Reuse soundness; a new contribution must explain acquisition or discharge of substantive premises."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
+      "en": "2026-10-08: migrated existing result identity and scope; no new theorem or relocated source."
+    },
+    {
+      "zh": "2026-10-14，整合 I3b（Ren：“a lot proofs are probably not integrated”）：由脊柱运行编译并接到核心。桥接自此导入 GenerativeClosure，其各定理在脊柱运行中公理报告为空。读作核心的 Scope（策略的实际执行自信念所达的配置），探究谓词由动态确定：自在 Scope 上成立的根基推出的主张在 Scope 上成立，整个闭包恰在根基成立处成立（derivation_sound_on_scope、closure_over_scope_iff_basis）；自健全策略的目标推出的每一主张在其 Scope 上成立（sound_goal_closure）。健全性本身仍是外围的定理，不在核心中重述。（草稿构建；回执随落地）",
+      "en": "14 October 2026, integration I3b (Ren: “a lot proofs are probably not integrated”): compiled by the spine run and connected to the core. The bridge now imports GenerativeClosure, whose theorems have empty axiom reports in the spine run. Read as the core’s Scope, the configurations a policy’s actual executions reach from a belief, the inquiry predicate is fixed by the dynamics: a claim derived from a basis holding over the scope holds over it, and the whole closure does exactly where the basis does (derivation_sound_on_scope, closure_over_scope_iff_basis); every claim derived from a sound policy’s goal holds over its scope (sound_goal_closure). Soundness itself stays the periphery’s theorem and is not restated in the core. (scratch build; the receipt comes with the landing)"
+    },
+    {
+      "en": "18 October 2026, F3Q, the port of the inquiry and composition family into the core (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): the core statements of the cited declarations are added beside them (Derivation; verdicts in port-q.md), with core receipt 20261018T204907.920360Z as a reference and no binding (its alias `InquiryRoot.WholeDischarge.derivation_sound_constructively` names a declaration of `WholeTheoryDischarge`, which is not in the run; a binding would make the registry require the core receipt, which lists the `InquiryRoot` namespace, to list it too. As before, the core receipt is a reference, not a binding), and the canonical source is the core module. Every core statement has an empty axiom report; where the periphery proof was classical, the core proof is constructive or names its hypothesis (port-q.md). The periphery references stay until the sweep retires their modules. No new result; the claim is unchanged.",
+      "zh": "2026年10月18日，F3Q 将探究与组合族移入核心：所引声明旁加上核心陈述（Derivation），绑定到核心回执；核心陈述的公理报告皆为空，外围经典证明处核心证明为构造性或明示其假设；外围引用保留到清扫退役其模块。无新结果，论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: Derivation.Scope.closed (now Derivation.closed_throughout); Derivation.Scope.closure_iff (now Derivation.closure_throughout_iff). Re-pointed after reading the change: Derivation.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：作为纯转发删去（各自只把一条律应用于自己的约束变量），改提该律：Derivation.Scope.closed（现为 Derivation.closed_throughout）；Derivation.Scope.closure_iff（现为 Derivation.closure_throughout_iff）。读过改动后重新指向：Derivation.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 6 bookkeeping notes condensed from 15 October 2026 to 19 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/ac670179d1e2a668/derivation-soundness.json and in git.",
+      "zh": "2026-10-20：6 条记账性说明合并（15 October 2026 至 19 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/ac670179d1e2a668/derivation-soundness.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and GenerativeClosure) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Derivation). Becoming.Derivation is bound to the current core receipt. The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and GenerativeClosure）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Derivation）。Becoming.Derivation 绑定到当前核心回执。主张不变。"
+    }
+  ]
+}

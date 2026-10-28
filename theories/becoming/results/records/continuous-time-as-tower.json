@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "continuous-time-as-tower",
   "title": {
     "zh": "时间尺度作为离散读法之塔",
@@ -8,15 +8,45 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-28T05:38:08+00:00",
   "statement": {
     "zh": "每一层是更细一层在严格递增的时刻读出；平衡（每个关系项只列出一次）与耗散由更细一层传到更粗一层。一段最粗的步在任何一层读出时，在该层所立者的普查之下，所立者在其中各细步不被否定地下降，则总水平下降的细步数不多于最粗一层段首的总水平，与层无关。",
     "en": "Each level reads the next finer at strictly increasing times; balance (relata listed once) and dissipation pass to coarser ones. At any level, under a census of what stands and running down not refuted at each fine step, a coarsest stretch has no more falls of total standing than its starting total."
   },
-  "claim": {
-    "zh": "塔（Tower）：每一层有一个网与一个流，第 n 层是第 n+1 层在严格递增的时刻 refine n 读出（web_sample、flow_sample）。最粗一层的步 s 是第 n 层的 reads n s；最粗一层是第 n 层在这些时刻读出（Tower.web_zero、Tower.level_zero），这些时刻严格递增（Tower.reads_strict）。每一层的规律：每个关系项只列出一次的平衡与耗散传到更粗一层（Tower.balances_coarser、Tower.dissipative_coarser）。分得再细，变化也有界：最粗一层从 S 起 N 步的一段在第 n 层读出，第 n 层有所立者的普查、所立者在其中各细步不被否定地下降时，总水平下降的细步（即有水平改变的步）不多于最粗一层在 S 的总水平（Tower.changes_within），界与 n 无关。",
-    "en": "A tower (Tower): at each level a web and a flow, level n being level n+1 read at the strictly increasing times refine n (web_sample, flow_sample). Step s of the coarsest level is step reads n s of level n; the coarsest level is level n read at those times (Tower.web_zero, Tower.level_zero), which are strictly increasing (Tower.reads_strict). Laws at every level: balance with each relatum listed once, and dissipation, pass to the coarser level (Tower.balances_coarser, Tower.dissipative_coarser). Change bounded however finely divided: a stretch of N steps of the coarsest level from S, read at level n, under a census of what stands at level n and with what stands not refuted to run down at each of its fine steps, has at most as many fine steps at which the total standing falls, the steps at which some standing changes, as the coarsest level's total standing at S (Tower.changes_within); the bound does not depend on n."
-  },
+  "laws": [
+    {
+      "en": "A tower has at each level n a web and a flow, level n being level n + 1 read at the strictly increasing times refine n; step s of the coarsest level is read at step reads n s of level n, those times are strictly increasing, and the coarsest level's web is level n's read at them, so each condition's standing at step s is its standing there.",
+      "zh": "塔在每一层 n 有一个网与一个流，第 n 层是第 n+1 层在严格递增的时刻 refine n 读出；最粗一层的步 s 在第 n 层的步 reads n s 读出，这些时刻严格递增，最粗一层的网是第 n 层在这些时刻读出，故每个条件在步 s 的水平即它在那里的水平。",
+      "declarations": [
+        "Becoming.Tower",
+        "Becoming.Tower.reads",
+        "Becoming.Tower.reads_strict",
+        "Becoming.Tower.web_zero",
+        "Becoming.Tower.level_zero",
+        "Becoming.Strict",
+        "Becoming.Web.sample"
+      ]
+    },
+    {
+      "en": "Where the flow of level n + 1 lists each relatum once at every step and balances on its web, the flow of level n balances on its web; where the flow of level n + 1 dissipates, so does that of level n. Both come from reading a flow at coarser steps: at strictly increasing times it keeps balance where each relatum is listed once at every fine step, and at any times it keeps dissipation.",
+      "zh": "第 n+1 层的流在每一步每个关系项只列一次且在其网上平衡时，第 n 层的流在其网上平衡；第 n+1 层的流耗散时，第 n 层的流也耗散。二者都来自在较粗的步读出流：在严格递增的时刻、每个细步每个关系项只列一次时它保持平衡；在任意时刻它保持耗散。",
+      "declarations": [
+        "Becoming.Tower.balances_coarser",
+        "Becoming.Tower.dissipative_coarser",
+        "Becoming.Flow.Once",
+        "Becoming.Flow.sample_balances",
+        "Becoming.Flow.sample_dissipative"
+      ]
+    },
+    {
+      "en": "A stretch of N steps of the coarsest level from step S, read at level n: under a census of what stands at level n, each condition standing at a step listed once, and with what stands not refuted to run down across each fine step of it, the fine steps at which the total standing falls number at most the coarsest level's total standing at S; the bound is the same at every level.",
+      "zh": "最粗一层从步 S 起 N 步的一段在第 n 层读出：在第 n 层所立者的普查之下（每一步所立的条件各列一次），所立者在其中各细步不被否定地下降时，总水平下降的细步数不多于最粗一层在 S 的总水平；界在每一层相同。",
+      "declarations": [
+        "Becoming.Tower.changes_within",
+        "Becoming.Web.StandingCensus"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "无全局前提：下降与普查只在所用的层与所用的细步上。",
@@ -25,11 +55,57 @@
     {
       "zh": "表示：时间为一族离散读法，由 Sampling 的读出相连；核心不取实数。",
       "en": "Representation: time as a family of discrete readings linked by the reading of Sampling; the core takes no real numbers."
+    },
+    {
+      "en": "Equality of relata is decided (DecidableEq on the type of relata), as reading a flow at coarser steps asks.",
+      "zh": "关系项之相等可判定（关系项类型上的 DecidableEq），这是在较粗的步读出流所需。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Real-valued time is outside the theorems: every level is a discrete reading, and a correspondence to real-valued time belongs to the periphery.",
+      "zh": "实数时间在定理之外：每一层都是离散读法，与实数时间的对应属于外围。",
+      "kind": "scope"
+    },
+    {
+      "en": "Every tower here has a coarsest level, level 0; towers with no coarsest level are not covered.",
+      "zh": "这里的每个塔都有最粗的一层（第 0 层）；没有最粗一层的塔不在其内。",
+      "kind": "scope",
+      "witness": "Becoming.Tower"
+    },
+    {
+      "en": "The bound is the same at every level; how the count of falls behaves as the levels refine, beyond that bound, is not stated.",
+      "zh": "界在每一层相同；层细化时下降次数如何变化，在该界之外没有陈述。",
+      "kind": "non-implication",
+      "witness": "Becoming.Tower.changes_within"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "detail": {
+        "en": "Boundary: in Strobe a relatum arises and ceases at fine steps inside every coarse step while every sampling time is quiet (Strobe.converse_fails): a finer level can show unbounded arising and ceasing that a coarser one does not show. The tower's bound counts the falls of total standing where what stands is not refuted to run down; it does not bound changes of activity.",
+        "zh": "边界：Strobe 中一个关系项在每个粗步内的细步上生起又止息，而在读出时刻都安静（Strobe.converse_fails）：更细的一层可显示更粗的一层看不到的、无界的生起与止息。塔的界计的是所立者不被否定地下降时总水平的下降次数，不约束活动的变化。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps",
+    "decidability",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Tower, Becoming.Sampling and Becoming.Locality are bound to core receipts under becoming-checks, every cited declaration has an empty axiom report, and the checker verifies core purity. The module was first compiled from the prelude in a scratch tree, with no warnings. The author's counterreview is in the integration note; there is no independent review yet.",
+    "zh": "Lean 4.29.1 合并检查器实查：Becoming.Tower、Becoming.Sampling 与 Becoming.Locality 的当前字节绑定 becoming-checks 下的核心回执，所引声明的公理报告均为空，检查器并核对核心纯净。该模块先在暂存树中从前导编译，无警告。作者反审见整合文档；尚无独立审查。"
+  },
+  "next_delta": {
+    "zh": "更多规律在塔的每一层的形式（依存、储备与支持；生起需要活跃的给予者）；同时细分时间与单位；实数时间的外围对应。",
+    "en": "More laws at every level of the tower (dependence, reserve and support; arising needing an active giver); refining time and the unit together; the periphery correspondence to real-valued time."
+  },
   "correspondence": {
-    "zh": "Ren 2026-10-12 决定：连续时间在核心中构造为越来越细的离散读法之塔，连续时间的规律即塔的每一层上的规律，实数时间以后作为外围的对应。本结果给出塔与其第一条规律：变化不因时间分得更细而增加。依据是一步的规律（Flow.runsDown_bounds_change）与每次交换的最小损失，不加前提。",
-    "en": "Ren decided on 12 October that continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence. This result gives the tower and the first of its laws: dividing time more finely adds no change. It rests on the laws of one step (Flow.runsDown_bounds_change) and the least loss per exchange, with no premise added."
+    "en": "Ren decided that continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence. This result gives the tower and the first of its laws: where what stands is not refuted to run down, dividing time more finely adds no fall of total standing. It rests on the laws of one step (Flow.runsDown_bounds_change) and the least loss per exchange, with no premise added.",
+    "zh": "Ren 决定：连续时间在核心中构造为越来越细的离散读法之塔，连续时间的规律即塔的每一层上的规律，实数时间以后作为外围的对应。本结果给出塔与其第一条规律：所立者不被否定地下降时，总水平的下降不因时间分得更细而增加。依据是一步的规律（Flow.runsDown_bounds_change）与每次交换的最小损失，不加前提。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tower.lean",
   "aliases": [
@@ -97,23 +173,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
-      "detail": {
-        "zh": "边界：界要所立者在各细步下降。Strobe 中一个关系项在每个粗步内的细步上生起又不再活跃，而在读出时刻都安静（Strobe.converse_fails）：不加下降时，更细的一层可显示更粗的一层看不到的、无界的变化。",
-        "en": "Boundary: the bound needs what stands to run down at the fine steps. In Strobe a relatum arises and ceases at fine steps inside every coarse step while every sampling time is quiet (Strobe.converse_fails): without running down, a finer level can show unbounded change that a coarser one does not."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "未做：实数时间（外围对应）；没有最粗一层的塔；界在层细化时的确切形式。计数用普查；下降是该层上的条件。名称（Tower、reads、refine）是 AI 所选。",
-    "en": "Not done: real-valued time (a periphery correspondence); towers with no coarsest level; the exact form of the bound as levels refine. The count uses a census; running down is a condition at the level used. The names (Tower, reads, refine) are the AI's."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：新核心模块 Becoming.Tower 的 6 项定理全部空依赖；同一回执覆盖包内 75 个模块，共 4518 项定理／6370 项声明审计；外围回执 20261013T095049.338744Z 通过。先在暂存树中从前导编译，无警告，逐条 #print axioms 全部为空。核心闭包 49 个模块。尚无独立审查，作者反审见整合文档 §82。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 6 theorems of the new core module Becoming.Tower all have empty axiom reports; the same receipt covers the package's 75 modules with 4518 theorems/6370 declaration audits; periphery receipt 20261013T095049.338744Z passed. It was first compiled from the prelude in a scratch tree, with no warnings and every #print axioms empty. The core closure is 49 modules. There is no independent review yet; the author's counterreview is in §82 of the integration note."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tower.lean",
@@ -137,7 +196,9 @@
       "declarations": [
         "Becoming.Web.sample",
         "Becoming.Flow.sample_balances",
-        "Becoming.Flow.sample_dissipative"
+        "Becoming.Flow.sample_dissipative",
+        "Becoming.Strict",
+        "Becoming.Flow.Once"
       ]
     },
     {
@@ -145,7 +206,8 @@
       "role": "proof",
       "sha256": "236b6eb72050fd5c70c720cd5ccd82d732b7c90f423fe12b9f10849cdc4b2ea8",
       "declarations": [
-        "Becoming.Flow.runsDown_bounds_change"
+        "Becoming.Flow.runsDown_bounds_change",
+        "Becoming.Web.StandingCensus"
       ]
     },
     {
@@ -231,10 +293,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "更多规律在塔的每一层的形式（依存、储备与支持；生起需要活跃的给予者）；同时细分时间与单位；实数时间的外围对应。",
-    "en": "More laws at every level of the tower (dependence, reserve and support; arising needing an active giver); refining time and the unit together; the periphery correspondence to real-valued time."
-  },
   "history": [
     {
       "zh": "2026-10-12 Tower：新增，按 Ren 2026-10-12 的决定（连续时间作为核心中的塔）；新核心模块 Becoming.Tower（导入 Becoming.Sampling），由“0 axiom completeness”会话起草并验证，按工作板认领；见整合文档 §82。",
@@ -304,6 +362,28 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): The first of the tower's laws is not called its first law, the spine's name for Flow.Gainless.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：英文版中塔的第一条规律不称为 first law，那是脊柱对 Flow.Gainless 的称呼。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): title, statement, hypotheses and next step kept; the claim split into three laws, each read against its declarations in Tower.lean, Sampling.lean and Locality.lean (the tower, balance and dissipation passing to the coarser level, the bound on falls); the limitations to three does-not-show items and the shared boundary names-provisional; a hypothesis added for the decided equality of relata the tower takes, with the boundaries decidability, discrete-steps and no-ethical-premise; Strict, Flow.Once and Web.StandingCensus added to their files' references; the counterexample narrowed: Strobe shows unbounded arising and ceasing at fine steps, not that the bound on falls needs running down, since nothing stands in Strobe; the date left the correspondence, which keeps the decision as provenance; no premise, status or source hash changed. Every earlier sentence is mapped in [continuous-time-as-tower.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/continuous-time-as-tower.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the correspondence, the counterexample (moved to a does-not-show item), laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：标题、陈述、前提与下一步保留；主张拆为三条规律，各条对照 Tower.lean、Sampling.lean 与 Locality.lean 中的声明核读（塔、平衡与耗散传到更粗一层、下降次数之界）；限制分入三条“未表明”与通用边界 names-provisional；新增一条前提，写明塔所取的关系项相等可判定，并引用通用边界 decidability、discrete-steps 与 no-ethical-premise；Strict、Flow.Once 与 Web.StandingCensus 加入其文件的引用；反例收窄：Strobe 显示的是细步上无界的生起与止息，而不是下降次数之界需要下降，因 Strobe 中无物所立；对应去掉日期，决定作为来历保留；前提、状态与来源哈希均未改变。每句旧文本的去向见 [continuous-time-as-tower.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/continuous-time-as-tower.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及对应、反例（移入“未表明”）、规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/294668882e74f97f/continuous-time-as-tower.json",
+      "sha256": "294668882e74f97ff56bfaffa02fb31f515df0245df80fff783917e3bc02b4a0",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/20db001509c7d5d6/continuous-time-as-tower.json",
+      "sha256": "20db001509c7d5d6ed59c38ab2e6d3b84447a71c38df525a72830756784e65f2",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

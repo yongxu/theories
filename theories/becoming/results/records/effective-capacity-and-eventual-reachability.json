@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "effective-capacity-and-eventual-reachability",
   "title": {
     "zh": "共同实现的准备步骤界与实际变化",
@@ -8,15 +8,51 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "reviewed_at_utc": "2026-10-28T05:59:58+00:00",
   "statement": {
     "zh": "一程携带共同实现一束的每个界，计入它自身的动作。在激活律中，一个预备步改变当前容量，释放失去本来终可到达者，已预备的构形仍可单边终止。",
     "en": "A course carries every bound on realizing a bundle together, its own moves counted. In the activation law one preparation step changes the current capacity, the release loses what was eventually reachable, and a prepared configuration can still end one-sided."
   },
-  "claim": {
-    "zh": "在固定关系法则与实现含义下，实际前缀后的 n 步共同实现，可沿同一中间配置接成前缀长度加 n 步的共同实现。旧共同激活规律给出一步准备改变当前一步能力、解除共同条件后任何有限步均不能共同实现，以及能力未被实际使用的路径。无界可达的回溯复用已有推论，不另计成果。",
-    "en": "Under a fixed relational law and realization interpretation, joint realization within n steps after an actual prefix is reachable through the same intermediate configuration within prefix length plus n steps. The existing joint-activation law supplies changed one-step capacity after preparation, loss of joint realization at every finite horizon after release, and a path leaving available joint capacity unused. Unbounded backward reachability repeats the established inference and is not counted as another result."
-  },
+  "laws": [
+    {
+      "en": "For every process and reading of claims, a bundle is realized within n moves from a configuration where some course of at most n moves ends at a configuration realizing every claim of it; one step before adds one move to the bound, and a course carries every bound, its own moves counted: what is realizable within n after it is realizable from its start within its length plus n.",
+      "zh": "对每个过程与主张的读法：一束在某构型 n 步之内被实现，是指有至多 n 步的历程终于实现其每个主张的构型；前面多一步，界加一；一程携带每个界，计入其自身的动作：在它之后 n 步之内可实现者，从其起点在其长度加 n 步之内可实现。",
+      "declarations": [
+        "Becoming.WithinMoves",
+        "Becoming.WithinMoves.before",
+        "Becoming.WithinMoves.after_course"
+      ]
+    },
+    {
+      "en": "Realizable together within some bound is a reachable configuration realizing the bundle; so along a course nothing becomes realizable together that was not before, and a bundle no longer realizable together marks a course with no way back. Two courses concatenate exactly where they share their boundary configuration.",
+      "zh": "在某个界内可共同实现，就是有可到达的构型实现该束；所以沿一程没有什么变得可共同实现而此前不可；不再可共同实现的束标志一条无路可回的历程。两条历程可以相接，恰当它们共有交界的构型。",
+      "declarations": [
+        "Becoming.withinMoves_iff_reach",
+        "Becoming.together_after_reach",
+        "Becoming.lost_together_not_returns",
+        "Generative.trace_append_iff"
+      ]
+    },
+    {
+      "en": "In the activation law, a configuration realizes both claims exactly when both sides are active; the joint content is realizable within one move from the coupled configuration and not from the initial one, and within two from the initial one with the preparation counted, so one preparation step changes the current capacity.",
+      "zh": "在激活律中，一个构型实现两个主张，恰当两侧都活跃；共同内容从耦合构型一步之内可实现，从初始构型则不可，计入预备则从初始构型两步之内可实现；所以一个预备步改变当前容量。",
+      "declarations": [
+        "Becoming.ActivationCapacity.joint_iff",
+        "Becoming.ActivationCapacity.coupled_within_one",
+        "Becoming.ActivationCapacity.initial_not_within_one",
+        "Becoming.ActivationCapacity.preparation_changes_capacity"
+      ]
+    },
+    {
+      "en": "After the release no number of moves realizes the joint content, so the actual release loses what was eventually reachable from the initial configuration; and the prepared configuration can end with one side active, the other claim unrealized and no move left.",
+      "zh": "释放之后任何步数都不实现共同内容，故实际的释放失去从初始构型本来终可到达者；已预备的构形可以一侧活跃、另一主张未实现、无步可走而终止。",
+      "declarations": [
+        "Becoming.ActivationCapacity.released_not_joint",
+        "Becoming.ActivationCapacity.release_loses_joint",
+        "Becoming.ActivationCapacity.prepared_can_end_one_sided"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "同一固定过程、稳定的端点实现含义和一条实际可行有限前缀；每个组合由同一条历史的同一端点共同实现。",
@@ -35,6 +71,59 @@
       "en": "Logic, representation and the existential interpretation remain explicit; no probability, optimal policy, infinite continuation or input from living significance and the practical commitments is supplied."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The bound is for a fixed law, fixed endpoint meanings, existential finite paths and the count of moves, which is not elapsed time unless calibrated.",
+      "zh": "此界针对固定规律、固定的端点含义、存在性的有限路径与步数计量；步数未经校准不是经过的时间。",
+      "kind": "scope"
+    },
+    {
+      "en": "Possibilities need not expand: a preparation adds no eventually reachable bundle, and the release loses one.",
+      "zh": "可能性未必扩大：预备不增加终可到达的束，释放则失去一束。",
+      "kind": "non-implication",
+      "witness": "Becoming.ActivationCapacity.release_loses_joint"
+    },
+    {
+      "en": "The bounds a course carries do not make its steps idle: a preparation step actually changes the current capacity.",
+      "zh": "一程所携带的界不使其步无所作为：预备步实际地改变当前容量。",
+      "kind": "non-implication",
+      "witness": "Becoming.ActivationCapacity.preparation_changes_capacity"
+    },
+    {
+      "en": "It is one local bound and its application, not the full explanation of change.",
+      "zh": "它是一个局部的界及其应用，不是变化的完整解释。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalBecoming.lean",
+      "detail": {
+        "zh": "actual_release_loses_eventual_joint 保留真实共同可能丧失；prepared_capacity_can_end_without_joint_realization 保留有能力而未实际共同实现的终末路径。",
+        "en": "actual_release_loses_eventual_joint retains genuine loss of a joint possibility; prepared_capacity_can_end_without_joint_realization retains a terminal path with available but unexercised joint capacity."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RELATIONAL-BECOMING-INTEGRATION.md",
+      "detail": {
+        "zh": "这是旧有限机会的准备，不解释耦合首次形成、维持所需或恢复；无界推论已有旧证明，不重复声称发现。",
+        "en": "This is preparation within the inherited finite opportunity, not the coupling’s first formation, what maintaining it takes, or its recovery. The unbounded inference already has an earlier proof and is not claimed as a new discovery."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the core modules Becoming.ActivationCapacity, Becoming.Labelled, Becoming.Bundles and GenerativeCore (receipts under becoming-checks/ and relational-becoming-checks/), every cited declaration with an empty axiom report. They restate the earlier periphery RelationalBecoming check (12 theorems, 18 audits: 9 empty, 9 with propext and/or Quot.sound), now provenance. Unbounded backward reachability repeats an earlier inference and is not counted as another result. Author counterreview; no independent acceptance.",
+    "zh": "Lean 4.29.1 合并检查器实查：核心 ActivationCapacity、Labelled、Bundles 与 GenerativeCore（becoming-checks/、relational-becoming-checks/），所引声明公理报告皆空。它们重述此前外围 RelationalBecoming 的检查（定理12、审计18：9项空、9项含 propext 和／或 Quot.sound），现为来源。无界回溯可达重复已有推论，不另计成果。作者反审；无独立验收。"
+  },
+  "next_delta": {
+    "en": "Test the necessity of the common constitutive claim over its intended scope, using the completed connection of actual formation, production and material regeneration.",
+    "zh": "以已完成的实际形成、生产与材料再形成的连接，检验共同构成性论断在其目标范围内是否必要。"
+  },
   "correspondence": {
     "zh": "同一活动中准备、共同激活和解除条件形成不同后续。Trace 拼接携带同一实际中间配置；twoSteps_meaning 保持旧历史的实现含义。当前新增量是有界细化及旧共同活动应用，祖先可达／当前形成／行使的区分与原接触形成证据由既有可能性接口保留。",
     "en": "Preparation, joint activation and release differentiate continuations within one activity. Trace concatenation retains the same intermediate configuration; twoSteps_meaning preserves the original realization semantics. The delta is a bounded refinement and application to an existing common activity. The prior possibility interface retains the ancestral-reachability/formed-condition/exercise distinction and its actual contact-formation evidence."
@@ -65,30 +154,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalBecoming.lean",
-      "detail": {
-        "zh": "actual_release_loses_eventual_joint 保留真实共同可能丧失；prepared_capacity_can_end_without_joint_realization 保留有能力而未实际共同实现的终末路径。",
-        "en": "actual_release_loses_eventual_joint retains genuine loss of a joint possibility; prepared_capacity_can_end_without_joint_realization retains a terminal path with available but unexercised joint capacity."
-      }
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RELATIONAL-BECOMING-INTEGRATION.md",
-      "detail": {
-        "zh": "这是旧有限机会的准备，不解释耦合首次形成、维持成本或恢复；无界推论已有旧证明，不重复声称发现。",
-        "en": "This is preparation within the inherited finite opportunity, not the coupling’s first formation, maintenance costs or recovery. The unbounded inference already has an earlier proof and is not claimed as a new discovery."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "范围限于固定规律、端点含义、存在性有限路径及明示步骤计量。不证明全体可能性随生成严格增大，不推出善、不抹去实际变化，也不完成零附加实质公理或整个变化解释。",
-    "en": "Limited to a fixed law, endpoint meanings, existential finite paths and the stated event-count measure. It establishes neither universal expansion of possibilities, ethical worth, absence of actual becoming, zero substantive axioms nor the full explanation of change."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 实查12项本模块定理／18项声明审计，9项空依赖、9项仅 propext 和／或 Quot.sound；部分为旧推论的重述，不是12项新成果。继承28项定理／49项空审计分列，总67项审计；作者反审与来源对应，未声称独立代理验收。",
-    "en": "Lean 4.29.1 checked this module’s 12 theorem declarations and 18 declaration audits: 9 empty and 9 using only propext and/or Quot.sound. Some restate prior inferences; these are not 12 new results. Separately credits 28 inherited theorems and 49 empty audits, 67 audits total. Includes author counterreview and source correspondence, without claiming independent-agent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalBecoming.lean",
@@ -110,7 +175,10 @@
         "Becoming.ActivationCapacity.preparation_changes_capacity",
         "Becoming.ActivationCapacity.released_not_joint",
         "Becoming.ActivationCapacity.release_loses_joint",
-        "Becoming.ActivationCapacity.prepared_can_end_one_sided"
+        "Becoming.ActivationCapacity.prepared_can_end_one_sided",
+        "Becoming.ActivationCapacity.joint_iff",
+        "Becoming.ActivationCapacity.coupled_within_one",
+        "Becoming.ActivationCapacity.initial_not_within_one"
       ]
     },
     {
@@ -285,10 +353,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用已完成的实际形成、生产与材料再形成连接，检验其支持的共同构成性论断在目标范围内是否必要；不将旧因果组合重新列为待完成，也不把新的表示适配当作普遍奠基。",
-    "en": "Reuse the completed actual formation, production and material-regeneration connection to test the necessity of the common constitutive claim over the intended scope. Do not reopen the old causal composition or treat another representation adapter as universal grounding."
-  },
   "history": [
     {
       "zh": "2026-10-09：登记准备步骤的有界细化和旧共同激活应用；明确信用 GenerativePossibility 的已有无界推论与实际形成见证。保留首次检查失败和随后成功回执，不把重复推论计作独立发现。",
@@ -317,6 +381,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added (a course carries every bound on joint realization, its moves counted; in the activation law preparation changes the current capacity, the release loses what was eventually reachable, and a prepared configuration can end one-sided); the retired module name dropped from the aliases, kept in its provenance reference; then the retired label G0/J in a premise replaced by living significance and the practical commitments; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（一程携带共同实现的每个界，计入其动作；在激活律中预备改变当前容量，释放失去本来终可到达者，已预备的构形可单边终止）；已退役模块之名从别名中移除，保留在其来历引用中；随后一条前提中已退役的标签 G0/J 改为生生之意义与实践承诺；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): title and statement kept; the claim split into 4 laws, each read against its declarations in Becoming.Labelled, Becoming.ActivationCapacity and GenerativeCore; ActivationCapacity.joint_iff, coupled_within_one and initial_not_within_one, which the statement's preparation law uses, added to the ActivationCapacity reference's declarations; the claim's sentence on unbounded backward reachability moved to the evidence paragraph; the limitations became four does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and zero-axiom-target-open; the next step stated positively, its instruction not to reopen earlier work left to the board; in a counterexample's detail \"maintenance costs\" reads \"what maintaining it takes\"; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [effective-capacity-and-eventual-reachability.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/effective-capacity-and-eventual-reachability.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：标题与陈述不变；主张拆为 4 条规律，各条对照其在 Becoming.Labelled、Becoming.ActivationCapacity 与 GenerativeCore 中的声明核读；陈述中的预备律所用的 ActivationCapacity.joint_iff、coupled_within_one 与 initial_not_within_one 加入 ActivationCapacity 引用的声明；主张中关于无界回溯可达的一句移入证据段；限制改为四条“未表明”与通用边界 no-ethical-premise、no-evaluation、zero-axiom-target-open；下一步以正面陈述，其“不要重开”的指示留给工作板；一条反例说明中的“维持成本”改为“维持所需”；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [effective-capacity-and-eventual-reachability.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/effective-capacity-and-eventual-reachability.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/1c37528af1087035/effective-capacity-and-eventual-reachability.json",
+      "sha256": "1c37528af108703575183cbecc09880f377d9899ddff28fc2143063866d4b0c7",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/6b462eb3c6798700/effective-capacity-and-eventual-reachability.json",
+      "sha256": "6b462eb3c6798700b01575d3bafa9fa85bb1eea0b7843511f61bc4798142ed6e",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

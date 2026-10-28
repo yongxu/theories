@@ -1,28 +1,63 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "finite-trace-transport",
   "title": {
     "zh": "保步映射传递有限历史",
     "en": "Step-preserving maps transport finite traces"
   },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-28T05:33:37+00:00",
   "statement": {
     "en": "A map preserving each step of one process into another sends every finite course to a course with the same moves; the converse, endpoints included, holds exactly where every step from an image lifts from each configuration with that image.",
     "zh": "把一个过程的每一步保持到另一个过程的映射，把每个有限程送到动作相同之程；带端点的逆恰在像上出发的每一步都能从具此像的每个构形提升时成立。"
   },
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "en": "Where a map f takes every step of P to a step of Q with the same move, every finite trace of P from s to t is a trace of Q from f s to f t with the same moves. Through a map q, the traces of Q from q s are exactly the images of the traces of P from s, endpoints included, for every s, exactly where q preserves every step and every step of Q from q s lifts to a step of P from s by the same move into the fiber of its target.",
-    "zh": "映射 f 把 P 的每一步取为 Q 中同一动作之步时，P 从 s 到 t 的每个有限迹都是 Q 从 f s 到 f t、动作相同之迹。经映射 q，对每个 s，Q 从 q s 出发之迹恰是 P 从 s 出发之迹的像（含端点），恰当 q 保持每一步，并且 Q 从 q s 出发的每一步都以同一动作提升为 P 从 s 出发、到其终点纤维中的一步。"
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "给定两个 Process、同一动作类型与逐步保持条件 hstep。",
-      "en": "Two supplied processes, one action type and the pointwise hstep preservation hypothesis."
+      "en": "Where a map f takes every step of P to a step of Q by the same move, every finite trace of P from s to t is a trace of Q from f s to f t with the same moves.",
+      "zh": "映射 f 把 P 的每一步取为 Q 中同一动作之步时，P 从 s 到 t 的每个有限迹都是 Q 从 f s 到 f t、动作相同之迹。",
+      "declarations": [
+        "Generative.trace_map"
+      ]
+    },
+    {
+      "en": "Where, for every s, every step of Q from q s lifts to a step of P from s by the same move into the fiber of its target, every trace of Q from q s to r is the image of a trace of P from s whose end lies in the fiber of r.",
+      "zh": "对每个 s，Q 从 q s 出发的每一步都以同一动作提升为 P 从 s 出发、到其终点纤维中的一步时，Q 从 q s 到 r 的每个迹都是 P 从 s 出发、终点在 r 的纤维中之迹的像。",
+      "declarations": [
+        "Generative.trace_lift"
+      ]
+    },
+    {
+      "en": "Through a map q, the traces of Q from q s are exactly the images of the traces of P from s, endpoints included, for every s, exactly where q preserves every step and every step of Q from q s lifts to a step of P from s by the same move into the fiber of its target.",
+      "zh": "经映射 q，对每个 s，Q 从 q s 出发之迹恰是 P 从 s 出发之迹的像（含端点），恰当 q 保持每一步，并且 Q 从 q s 出发的每一步都以同一动作提升为 P 从 s 出发、到其终点纤维中的一步。",
+      "declarations": [
+        "Generative.projection_exact_iff"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "Two supplied processes on configurations of any kind, with one type of moves; transport takes step preservation (hstep) as its hypothesis, lifting takes the lifting condition (hlift), and the exactness law states both as the condition of its equivalence.",
+      "zh": "两个给定的过程，构形可为任意类型，动作类型相同；传递以保步（hstep）为假设，提升以提升条件（hlift）为假设，精确性规律把两者写成其等价的条件。"
+    },
+    {
+      "en": "Traces are finite: a list of moves with every intermediate configuration carried.",
+      "zh": "迹是有限的：一列动作，每个中间构形都被携带。"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by Lean 4.29.1: GenerativeCore, the foundation the Becoming core builds on, compiles with the core from Lean's prelude alone. Its current bytes are bound to the module's own receipt beside it (lean/verification.json) and to a core checker receipt under becoming-checks, both reporting empty axioms for the three cited declarations.",
+    "zh": "Lean 4.29.1 实查：GenerativeCore 是 Becoming 核心所依的基础，与核心一同只从 Lean 内置前导编译。其当前字节绑定该模块旁的回执（lean/verification.json）与 becoming-checks 下的一个核心检查器回执，两者对所引三项声明报告的公理均为空。"
+  },
+  "next_delta": {
+    "en": "State transport and exact reading through a map for runs without end, and the correspondence of a state map to an actual system, each with its conditions stated as hypotheses.",
+    "zh": "对无终的运行陈述经映射的传递与精确读出，并给出状态映射与实际系统的对应，各自的条件写为假设。"
+  },
   "correspondence": {
     "zh": "状态映射及其实际意义需独立说明；这里只传递已给定历史。",
     "en": "The state map and its actual meaning require correspondence; this only transports a supplied trace."
@@ -42,23 +77,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
-      "detail": {
-        "zh": "保步不独自给出反向提升；反向需要每个起始纤维的步骤可提升条件。",
-        "en": "Step preservation alone does not give converse lifting; lifting needs a condition at every starting fiber."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "保步不独自给出反向提升；反向需要每个起始纤维的步骤可提升条件。",
-    "en": "Step preservation alone does not give converse lifting; lifting needs a condition at every starting fiber."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
@@ -104,10 +122,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "其他有限历史保持证明直接复用 trace_map；额外端点或实际对应另列。",
-    "en": "Reuse trace_map for finite-history preservation; additional endpoint or actual correspondence requirements remain explicit."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -120,6 +134,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added and the claim extended to the converse already proved beside the transport: the traces through a map are exactly the images of the traces, endpoints included, exactly where the map preserves every step and every step from an image lifts, from each configuration with that image, into the fiber of its target; that declaration added to the references and aliases. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张补入与传递并列、已经证明的逆：经映射之迹恰是迹的像（含端点），恰当映射保持每一步且像上出发的每一步都能从具此像的每个构形提升到其终点纤维中；该声明加入引用与别名。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): title, statement, correspondence and counterexample kept; the claim split into three laws, each read against its declaration in GenerativeCore.lean (transport, lifting, exactness; the lifting law is the declaration trace_lift, already referenced); the limitation, the same sentence as the counterexample, kept there; the hypothesis restated to name what each law takes, and a second added that traces are finite; the shared boundary no-ethical-premise cited, the receipts reporting empty axioms; no premise, status or source hash changed. Every earlier sentence is mapped in [finite-trace-transport.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-trace-transport.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the counterexample (moved to a does-not-show item), the next step, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：标题、陈述、对应与反例保留；主张拆为三条规律，各条对照 GenerativeCore.lean 中的声明核读（传递、提升、精确性；提升一条即已被引用的 trace_lift）；限制与反例是同一句，留在反例中；前提改写为写明每条规律所取的条件，并新增一条写明迹是有限的；引用通用边界 no-ethical-premise，回执报告公理为空；前提、状态与来源哈希均未改变。每句旧文本的去向见 [finite-trace-transport.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-trace-transport.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及反例（移入“未表明”）、下一步，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/5a7a222484debc22/finite-trace-transport.json",
+      "sha256": "5a7a222484debc22b2761f4fd1373af507678ea261f438483e45e35369986a65",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Step preservation alone does not give the converse: lifting needs a condition at every configuration of each starting fiber.",
+      "zh": "保步不独自给出逆：提升需要每个起始纤维中每个构形处的条件。",
+      "kind": "converse",
+      "witness": "Generative.projection_exact_iff"
     }
   ]
 }

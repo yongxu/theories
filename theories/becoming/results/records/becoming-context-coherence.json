@@ -1,32 +1,141 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "becoming-context-coherence",
   "title": {
     "en": "Coherent histories across retained and changing contexts",
     "zh": "保留与变化情境中的相容历史"
   },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-28T05:47:54+00:00",
   "statement": {
     "en": "Pooling the steps of an inhabited family of processes runs exactly the courses of single processes exactly where those courses compose; retaining the context runs exactly them, and forgetting a context that changes with the step is exact precisely where every context can follow each forgotten step.",
     "zh": "合并有成员之过程族的步，恰行单一过程之程，恰当这些程可复合；保留情境恰行这些程；忘掉随步而变的情境，恰在每个情境都能跟随每个被忘之步时精确。"
   },
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "en": "For an inhabited family of processes on common configurations, the pooled law (a step some member takes, the context forgotten) runs exactly the courses some single member runs exactly where courses of single members compose: a course of one context followed by a course of one context is a course of one context. Retaining the context, each configuration carrying its context and each step keeping it, runs exactly the courses of that context, and so realizes exactly the courses of single contexts. Where context and configuration change together by one relation, forgetting the context is exact from every context exactly where every context can follow each forgotten step; the contexts a course arrives in are those its last step advances to from the contexts its earlier part arrives in. Witnesses: one context steps 0 to 1 and another 1 to 2; pooling runs 0 to 2, which no single context runs, so the family is not closed under joining and retaining the context excludes the crossing; a context changing with the step joins the two in one course, which ends at 2, and the forgotten law takes a step the given context cannot follow.",
-    "zh": "对共同构形上有成员的过程族，合并律（某成员所取之步，忘掉情境）恰行某单一成员所行之程，恰当单一成员之程可复合：一个情境的程接一个情境的程，仍是一个情境的程。保留情境（构形带着其情境，每步保持之）恰行该情境之程，故恰实现单一情境之程。情境与构形由一个关系一同变化时，忘掉情境自每个情境精确，恰当每个情境都能跟随每个被忘之步；一程所到达的情境，是其末步从其前段所到达之情境推进到的情境。见证：一个情境由 0 步到 1，另一个由 1 步到 2；合并行 0 到 2，无单一情境行之，故该族对接合不封闭，保留情境排除此跨越；随步而变的情境把二者连为一程，此程止于 2，而被忘之律取一个所给情境不能跟随之步。"
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "en": "Common state and event interpretations, a nonempty process family for the pooling equivalence, finite inductive Trace and actual boundary matching.",
-      "zh": "共同状态、事件解释；合并等价需要非空过程族、有限归纳 Trace 与实际边界匹配。"
+      "en": "The pooled law of a family of processes on common configurations and moves takes a step some member takes, the context forgotten, and every course of one member is a pooled course. For a family with a member, the pooled law runs exactly the courses some single member runs exactly where those compose: a course of one member followed by a course of one member is a course of one member.",
+      "zh": "共同构形与动作上的过程族的合并律取某成员所取之步，忘掉情境；一个成员之程都是合并之程。对有成员的族，合并律恰行某单一成员所行之程，恰当这些程可复合：一个成员之程接一个成员之程，仍是一个成员之程。",
+      "declarations": [
+        "Becoming.pooledLaw",
+        "Becoming.InOne",
+        "Becoming.JoinClosed",
+        "Becoming.InOne.pooled",
+        "Becoming.JoinClosed.inOne",
+        "Becoming.pooledLaw_exact_iff_joinClosed"
+      ]
     },
     {
-      "en": "The evolving construction supplies a joint relation on context and displayed conditions. Logical framework and correspondence remain explicit; no normative, totality or favorable-direction premise.",
-      "zh": "变化构造给定情境与所显示条件的共同关系。逻辑及实际对应公开；不含规范、全定义性或有利方向前提。"
+      "en": "The retained law carries the context in the configuration, each step keeping it and taking a step of that context's law. It runs a course from one context and configuration to another exactly where the two contexts are one and that context runs the course, so it runs a course from some context to some context exactly where some single member runs it.",
+      "zh": "保留律把情境带在构形中，每步保持情境并取该情境之律的一步。它自一个情境与构形行一程到另一个，恰当两个情境为一且该情境行此程；故它自某情境行一程到某情境，恰当某单一成员行此程。",
+      "declarations": [
+        "Becoming.retainedLaw",
+        "Becoming.retainedLaw_trace_iff",
+        "Becoming.retainedLaw_realizes_inOne"
+      ]
+    },
+    {
+      "en": "For any relation by which context and configuration change together, the forgotten law takes a step some pair of contexts allows. From every context it runs exactly the courses the evolving law runs from that context, ending in some context, exactly where from every context each forgotten step can be followed into some context.",
+      "zh": "对情境与构形一同变化所依的任一关系，被忘之律取某对情境所允之步。它自每个情境恰行演化律自该情境所行之程（止于某情境），恰当自每个情境，每个被忘之步都能被跟随到某个情境。",
+      "declarations": [
+        "Becoming.evolvingLaw",
+        "Becoming.erasedLaw",
+        "Becoming.erasedLaw_exact_iff_lifts"
+      ]
+    },
+    {
+      "en": "A course arrives in a context where, from a context in the initial support, the evolving law runs it ending in that context; along one step, arrival is advance from the support. Arrival along a joined course is arrival along its second part from the contexts where the first arrives, so a course arrives in the contexts its last step advances to from those its earlier part arrives in.",
+      "zh": "一程到达某情境，是指自初始支持中的某情境，演化律行此程而止于该情境；沿一步，到达即自支持推进。沿接合之程到达，即沿其后段自前段所到达的情境到达；故一程所到达的情境，是其末步自其前段所到达之情境推进到的情境。",
+      "declarations": [
+        "Becoming.Arrives",
+        "Becoming.Advance",
+        "Becoming.arrives_singleton",
+        "Becoming.arrives_append",
+        "Becoming.arrives_snoc"
+      ]
+    },
+    {
+      "en": "A step of the evolving law from a context in the support arrives at its target context; from an empty support no one-step course arrives.",
+      "zh": "自支持中的情境所取的演化律之步到达其目标情境；自空的支持，没有一步之程到达。",
+      "declarations": [
+        "Becoming.ContextArrivalTraces.step_arrives",
+        "Becoming.ContextArrivalTraces.empty_support_no_arrival"
+      ]
+    },
+    {
+      "en": "In a witness where one context steps from 0 to 1 and another from 1 to 2, the pooled law runs from 0 to 2 in two steps, which no single context runs; so the family's courses do not compose, and the retained law runs that crossing in no contexts.",
+      "zh": "见证：一个情境由 0 步到 1，另一个由 1 步到 2；合并律两步由 0 行到 2，无单一情境行之；故该族之程不可复合，保留律在任何情境中都不行此跨越。",
+      "declarations": [
+        "Becoming.CrossingContexts.pooled_crosses",
+        "Becoming.CrossingContexts.not_inOne",
+        "Becoming.CrossingContexts.not_joinClosed",
+        "Becoming.CrossingContexts.retained_excludes"
+      ]
+    },
+    {
+      "en": "Where the context changes with the step (0 to 1 into a second context, then 1 to 2 within it), the evolving law joins both steps in one course from 0 to 2 arriving in the second context, and no step leaves 2 there. The first step alone arrives in a context other than the start's, and the forgotten law steps from 0 to 1 where, from 0 in the second context, the evolving law cannot.",
+      "zh": "情境随步而变时（0 到 1 进入第二个情境，再在其中由 1 到 2），演化律把两步连为自 0 到 2 的一程，到达第二个情境，且在那里没有离开 2 的步。仅第一步即到达异于起始的情境；被忘之律由 0 步到 1，而自第二个情境中的 0，演化律不能取此步。",
+      "declarations": [
+        "Becoming.ChangingContext.joins",
+        "Becoming.ChangingContext.arrives",
+        "Becoming.ChangingContext.ends",
+        "Becoming.ContextArrivalTraces.changed_context_arrives",
+        "Becoming.ChangingContext.erased_not_lifted"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "Processes indexed by contexts on common configurations and moves; the pooling equivalence takes one member of the family (a nonempty family), the other laws none. Courses are finite inductive traces with both endpoints kept, and two courses join where the end of the first is the start of the second.",
+      "zh": "以情境为索引、在共同构形与动作上的过程；合并等价需要族中的一个成员（非空族），其余规律不需要。程是保留两端的有限归纳迹，前一程的终点即后一程的起点时两程接合。"
+    },
+    {
+      "en": "The evolving and forgotten laws take any relation by which context and configuration change together, from a configuration in one context by a move to a configuration in a context, the same or another; no premise of totality or of a favoured direction.",
+      "zh": "演化律与被忘之律取情境与构形一同变化所依的任一关系：自一个情境中的构形经一个动作到某个情境（同一个或另一个）中的构形；不含全定义性或有利方向的前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Only finite courses are covered; unending paths are not.",
+      "zh": "只涉及有限之程，不涉及无尽的路径。",
+      "kind": "scope"
+    },
+    {
+      "en": "Forgetting a changing context is exact from each given starting context, a stronger requirement than the pooled law agreeing with the union of single courses.",
+      "zh": "忘掉变化的情境，要求自每个给定的起始情境精确，比合并律与单一之程的并集相合更强。",
+      "kind": "scope",
+      "witness": "Becoming.erasedLaw_exact_iff_lifts"
+    },
+    {
+      "en": "Support by some context is not quantum control coherence, and no operational correspondence to the quantum switch comparison is shown.",
+      "zh": "存在某情境的支持不等于量子控制相干性；未表明与量子开关比较的操作对应。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContextArrivalTraces.lean",
+      "detail": {
+        "en": "Pooling 0→1 from one context and 1→2 from another runs 0→2, which no single context runs, so pooling is not exact there. A context changing with the step joins the two in one course, which ends at 2.",
+        "zh": "合并一个情境的0→1与另一情境的1→2会行0→2，无单一情境行之，故合并在此不精确。随步而变的情境把二者连为一程，此程止于2。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "formal-not-empirical",
+    "no-ethical-premise",
+    "no-evaluation",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker: the current bytes of Becoming.ContextArrivalTraces are bound to receipt 20261019T160413.543456Z and those of Becoming.Context and GenerativeCore to receipt 20261019T213206.644158Z, in becoming/becoming-checks, and every cited declaration, the ending included, has an empty axiom report. The periphery's earlier form (deeper/BecomingCompatibility) used propext for the ending; it stays a provenance reference.",
+    "zh": "合并核心检查器实查：Becoming.ContextArrivalTraces 的当前字节绑定回执 20261019T160413.543456Z，Becoming.Context 与 GenerativeCore 的绑定回执 20261019T213206.644158Z（均在 becoming/becoming-checks）；所引声明（含终止）公理报告全空。外围的早先形式（deeper/BecomingCompatibility）终止证明含 propext，仍为来源引用。"
+  },
+  "next_delta": {
+    "en": "Use the coherence constraint in the constitutive argument for actual formation and its continuing effects, warranting the common law and interpretation the pooled family takes as given.",
+    "zh": "将相容性限制用于实际形成及其持续后果的构成论证，说明合并之族视为给定的共同法则及解释的根据。"
+  },
   "correspondence": {
     "en": "Context denotes consequential relations within one unfolding, not an independently constituted controller. Semantic support need not be an implemented observer belief.",
     "zh": "情境表示同一展开中的作用关系，不表示独立控制者；语义支持不必是已实现的观察者信念。"
@@ -79,23 +188,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContextArrivalTraces.lean",
-      "detail": {
-        "en": "Pooling 0→1 from one context and 1→2 from another runs 0→2, which no single context runs, so pooling is not exact there. A context changing with the step joins the two in one course, which ends at 2.",
-        "zh": "合并一个情境的0→1与另一情境的1→2会行0→2，无单一情境行之，故合并在此不精确。随步而变的情境把二者连为一程，此程止于2。"
-      }
-    }
-  ],
-  "limitations": {
-    "en": "Finite conditional coherence, not universal actual law, physical mechanism, infinite-path coverage, ethical warrant or zero-substantive-axiom grounding. The lifting criterion has a stronger specified-initial-context scope than family-union exactness. Existential context support is not quantum control coherence; no operational correspondence to the switch comparison is proved.",
-    "zh": "有限有条件相容性，不是普遍实际规律、物理机制、无限路径覆盖、伦理根据或零实质公理基础。提升条件针对指定初始情境，比过程族并集的精确性更强。 存在性的情境支持不等于量子控制相干性；未证明量子开关比较的操作对应。"
-  },
-  "validation_scope": {
-    "en": "Machine-checked in the core: every cited declaration of Becoming.ContextArrivalTraces and Becoming.Context, the ending included, has an empty axiom report in the bound receipts. The periphery's earlier form (BecomingCompatibility) used propext for the ending.",
-    "zh": "核心中实查：所引核心声明（含终止）在所绑回执中公理报告全空。外围的早先形式（BecomingCompatibility）终止证明含 propext。"
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/BecomingCompatibility.lean",
@@ -156,7 +248,8 @@
       "role": "proof",
       "sha256": "5c9abd8e7826e62410c02e25f3c2f329415875898d183373e8328d172db28758",
       "declarations": [
-        "Becoming.ChangingContext.ends"
+        "Becoming.ChangingContext.ends",
+        "Becoming.Advance"
       ]
     },
     {
@@ -188,7 +281,8 @@
         "Becoming.ChangingContext.erased_not_lifted",
         "Becoming.ContextArrivalTraces.step_arrives",
         "Becoming.ContextArrivalTraces.empty_support_no_arrival",
-        "Becoming.ContextArrivalTraces.changed_context_arrives"
+        "Becoming.ContextArrivalTraces.changed_context_arrives",
+        "Becoming.arrives_singleton"
       ]
     },
     {
@@ -260,10 +354,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "en": "Use the coherence constraint in the constitutive argument for actual formation and its continuing effects; warrant the common law and interpretation rather than adding another equivalent encoding.",
-    "zh": "将相容性限制用于实际形成及持续后果的构成论证；说明共同法则及解释的根据，不另造等价编码。"
-  },
   "history": [
     {
       "en": "9 October 2026: checked inclusive-scope connection with an explicit failed pooling control and positive changing-context repair. Helpers are not counted as independent foundational achievements.",
@@ -287,6 +377,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws (pooling exact where single-context courses compose, retaining the context, forgetting a changing context, arrival), with the core witnesses as counterexample; the GenerativeCore binding moved from the periphery receipt to a core receipt the record cites; aliases now the core names, the retired Bridge name and the periphery names Generative.BecomingCompatibility.pooling_exact_iff_join_closed, retained_realizes_union, arrivals_append and arrivals_snoc dropped (the periphery file stays a provenance reference). The validation scope says the core's ending has an empty axiom report. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述（单一情境之程可复合处合并精确、保留情境、忘掉变化的情境、到达），反例改为核心见证；GenerativeCore 的绑定由外围回执移到本记录已引的核心回执；别名改为核心名称，删去退役的 Bridge 名称与外围名称 Generative.BecomingCompatibility.pooling_exact_iff_join_closed、retained_realizes_union、arrivals_append、arrivals_snoc（外围文件仍为来源引用）。验证范围说明核心中的终止公理报告为空。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): statement kept; the claim split into seven laws, each read against its declarations in Becoming.ContextArrivalTraces and Becoming.Context; limitations to three does-not-show items and the standard boundaries formal-not-empirical, no-ethical-premise, no-evaluation and zero-axiom-target-open; the two hypotheses restated in the core's terms (common configurations and moves, one member for the pooling equivalence, joining at the shared endpoint), the no-normative-premise clause now the standard boundary; Becoming.Advance and Becoming.arrives_singleton added to the references for the arrival law; validation scope rewritten on the bound core receipts; next step stated positively. What the premises require, the status and every source hash are unchanged. Every earlier sentence is mapped in [becoming-context-coherence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-context-coherence.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, hypotheses, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：陈述保留；主张拆为七条规律，各条对照其在 Becoming.ContextArrivalTraces 与 Becoming.Context 中的声明核读；限制分入三条“未表明”与通用边界 formal-not-empirical、no-ethical-premise、no-evaluation、zero-axiom-target-open；两条前提按核心的用语重述（共同构形与动作、合并等价需一个成员、在共同端点接合），“无规范前提”改为通用边界；为到达之律在引用中加入 Becoming.Advance 与 Becoming.arrives_singleton；检查范围按所绑核心回执改写；下一步以正面陈述。前提所要求者、状态与每个来源哈希均未改变。每句旧文本的去向见 [becoming-context-coherence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-context-coherence.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、前提，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/4fb6c5073a10192a/becoming-context-coherence.json",
+      "sha256": "4fb6c5073a10192a9eda3aec699f5d1b70d0ad6b99e74b1c98002b4d17b4519d",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/c67d9dc790436a3e/becoming-context-coherence.json",
+      "sha256": "c67d9dc790436a3e3e51ce43b2ad495870e170f75bcb994bfef81f74ae72b04b",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

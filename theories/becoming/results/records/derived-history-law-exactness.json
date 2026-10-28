@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "derived-history-law-exactness",
   "title": {
     "zh": "由历史摘要构造局部规律的精确条件",
@@ -8,24 +8,113 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "en": "The law read through a summary takes a step from one summary value to another where some configuration with the first takes it to one with the second. From the value of each configuration it takes exactly the words the configuration can take, for every configuration, exactly when the configurations the summary merges can take the same words: the nondeterministic counterpart of a determined law carried through a reduction. For histories, the law extending an admitted history by one move takes, from an admitted history of a prefix-closed language, exactly the courses whose extension is admitted; with the admitted histories as the configurations, the law derived from a summary keeps every finite continuation at every admitted history exactly where admitted histories sharing a code admit the same continuations (proved on the periphery's own definitions; in the core an instance of the first of the record's laws, not one declaration). Carrying the futures is not carrying the endpoints: the process extending a history by one entry takes every word from every history, so read through any summary it carries the futures; read through the summary marking only [false], one step under false goes from the empty history's code to false, though the empty history extended by false has the code true.",
-    "zh": "经摘要读出的律从一个摘要值取一步到另一个，凡有具前者的构形取此步到具后者的构形。它从每个构形的值恰取该构形所能取之词，对每个构形，恰当摘要所合并的构形能取相同之词：这是确定律经约化承载的非确定对应。对历史：把被接纳的历史延长一步的律，从前缀封闭语言的被接纳历史，恰取其延长被接纳之程；以被接纳的历史为构形，由摘要导出的律在每个被接纳历史处保留每个有限接续，恰当共享编码的被接纳历史接纳相同接续（外围在其自身定义上证明；核心中是第一条规律的实例，不是单一声明）。携带未来不是携带端点：把历史延长一项的过程从每个历史取每个词，故经任何摘要读出都携带未来；经只标出 [false] 的摘要读出，false 下的一步从空历史的编码到 false，而空历史延长 false 后的编码是 true。"
+  "reviewed_at_utc": "2026-10-28T05:47:54+00:00",
+  "statement": {
+    "en": "Read through a summary, a law takes from each configuration's summary exactly the words that configuration can take, for every configuration, exactly where the configurations the summary merges have the same futures; carrying the futures is not carrying the endpoints.",
+    "zh": "经一个摘要读出，一个律从每个构形的摘要恰取该构形所能取之词，对每个构形，恰当摘要所合并的构形有相同的未来；携带未来不是携带端点。"
   },
+  "laws": [
+    {
+      "en": "The law read through a summary takes a step from one summary value to another where some configuration with the first takes that step to one with the second; every word a configuration can take, the read law can take from its summary.",
+      "zh": "经摘要读出的律从一个摘要值取一步到另一个，凡有具前者的构形取此步到具后者的构形；构形所能取的每个词，读出的律都能从其摘要取。",
+      "declarations": [
+        "Becoming.Image",
+        "Becoming.Readout.image_feasible"
+      ]
+    },
+    {
+      "en": "From the summary of each configuration the read law takes exactly the words that configuration can take, for every configuration, exactly when configurations the summary merges can take the same words; under that condition, every word it takes from a configuration's summary the configuration can take. This is the counterpart, for laws that need not be determined, of a determined law carried through a reduction.",
+      "zh": "读出的律从每个构形的摘要恰取该构形所能取之词，对每个构形，恰当摘要所合并的构形能取相同之词；在此条件下，它从一个构形的摘要所取的每个词，该构形都能取。这是确定律经约化承载在不必确定之律上的对应。",
+      "declarations": [
+        "Becoming.Readout.SameFutures",
+        "Becoming.Readout.feasible_of_image",
+        "Becoming.Readout.futures_through_iff"
+      ]
+    },
+    {
+      "en": "For a prefix-closed language, the law of its histories extends a history by one move where the extension is admitted; from an admitted history it takes exactly the courses whose extension is admitted, each ending at that extension.",
+      "zh": "对前缀封闭的语言，其历史之律在延长被接纳处把历史延长一步；自被接纳的历史，它恰取其延长被接纳之程，每程止于该延长。",
+      "declarations": [
+        "Becoming.HistoryLanguages.PrefixClosed",
+        "Becoming.HistoryLanguages.law",
+        "Becoming.HistoryLanguages.trace_iff"
+      ]
+    },
+    {
+      "en": "For a prefix-closed language, with the admitted histories as the configurations, the law of futures above reads: the law derived through a summary keeps every finite continuation at every admitted history exactly where admitted histories sharing a code admit the same continuations. This instance is stated by no single core declaration.",
+      "zh": "对前缀封闭的语言，以被接纳的历史为构形，上面的未来之律即是：经摘要导出的律在每个被接纳历史处保留每个有限接续，恰当共享编码的被接纳历史接纳相同接续。这一实例不由单一核心声明陈述。",
+      "declarations": [
+        "Becoming.Readout.futures_through_iff",
+        "Becoming.HistoryLanguages.law",
+        "Becoming.HistoryLanguages.trace_iff"
+      ]
+    },
+    {
+      "en": "Carrying the futures is not carrying the endpoints: the process extending a history by one entry can take every word from every history, so read through any summary it carries the futures; read through the summary marking only [false], one step under false goes from the empty history's code to false, though the empty history extended by false has the code true.",
+      "zh": "携带未来不是携带端点：把历史延长一项的过程从每个历史都能取每个词，故经任何摘要读出都携带未来；经只标出 [false] 的摘要读出，false 下的一步从空历史的编码到 false，而空历史延长 false 后的编码是 true。",
+      "declarations": [
+        "Becoming.SummaryFutures.extend",
+        "Becoming.SummaryFutures.every_word",
+        "Becoming.SummaryFutures.futures_through",
+        "Becoming.SummaryFutures.code",
+        "Becoming.SummaryFutures.endpoint_moved"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "en": "Arbitrary configurations, moves and summary type, a process and a total summary; for histories, a prefix-closed language L. No finiteness, decidability or empty-word membership is required.",
       "zh": "任意构形、动作与摘要类型，一个过程及全定义摘要；对历史，前缀封闭语言L。无需有限性、可判定性或L接受空词。"
     },
     {
-      "en": "The equivalence quantifies every configuration (for histories, every admitted history); exactness from only one initial value is a different contract.",
+      "en": "The equivalence quantifies every configuration (for histories, every admitted history); exactness from only one initial value is a different condition.",
       "zh": "充要条件量化每个构形（对历史，每个已接纳历史）；不把只从一个初始值精确当作同一条件。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Only the feasibility of finite words is carried: no endpoint, branch identity, probability or policy.",
+      "zh": "只携带有限词的可行性：不携带端点、分支身份、概率或策略。",
+      "kind": "non-implication",
+      "witness": "Becoming.SummaryFutures.endpoint_moved"
+    },
+    {
+      "en": "For an empty language the condition holds vacuously, with no history occurring.",
+      "zh": "语言为空时条件空真成立，并无历史发生。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SummaryFutures.lean",
+      "detail": {
+        "en": "Every word from every history, read through the summary marking only [false]: all continuations are carried, yet one step under false ends at false while the extended history's code is true.",
+        "zh": "从每个历史取每个词、只把[false]编码为true时，经此摘要读出接续全被携带，而false下的一步止于false，延长后历史的编码却是true。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/DerivedHistoryLaw.lean",
+      "detail": {
+        "en": "Periphery (superseded module): merging histories with distinct continuation profiles produces a witnessed false continuation.",
+        "zh": "外围（已被取代的模块）：错误合并不同接续剖面的历史产生具体虚假接续。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker: Becoming.Readout, Becoming.SummaryFutures, Becoming.HistoryLanguages and Becoming.Mechanism are bound to receipts in becoming/becoming-checks, and every cited declaration has an empty axiom report. The periphery's earlier module DerivedHistoryLaw (deeper/derived-history-law-checks) proved the admitted-history form on its own definitions, with empty audits once explicit constructor cases removed a propext, the failed record kept; it is a provenance reference. Author counterreview; no independent review.",
+    "zh": "核心检查器实查：Becoming 的 Readout、SummaryFutures、HistoryLanguages 与 Mechanism 绑定 becoming/becoming-checks 中的回执，所引声明公理报告全空。外围早先模块 DerivedHistoryLaw（deeper/derived-history-law-checks）在其自身定义上证明被接纳历史的形式，以显式构造子分支去掉 propext 后审计全空，失败记录保留；它为来源引用。作者反审；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Establish the deductive warrant for the universal operative relationship and its actual interpretation; the warrant is for that relationship, not for the necessity of each particular history language.",
+    "zh": "取得普遍作用关系及其实际解释的演绎根据；这一根据针对该关系，不针对每项具体历史语言的必然性。"
+  },
   "correspondence": {
-    "zh": "历史和摘要描述同一展开；L的实际可接纳含义和字母划分保持给定。构造不创造实际可能性，也不证明所有过程都具有这个有限词表示。",
-    "en": "Histories and summaries describe one unfolding; actual admissibility and the event articulation remain supplied. Construction neither creates actual possibilities nor proves that every process has this finite-word representation."
+    "zh": "历史和摘要描述同一展开；L的实际可接纳含义和字母划分保持给定。构造不创造实际可能性；每个过程的可行词都由其历史之律实现，但这一表示保留词，不保留端点或分支。",
+    "en": "Histories and summaries describe one unfolding; actual admissibility and the event articulation remain supplied. Construction does not create actual possibilities; every process's feasible words are realized by the law of its histories, but that representation keeps the words, not the endpoints or branches."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean",
   "aliases": [
@@ -58,30 +147,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SummaryFutures.lean",
-      "detail": {
-        "en": "Every word from every history, read through the summary marking only [false]: all continuations are carried, yet one step under false ends at false while the extended history's code is true.",
-        "zh": "从每个历史取每个词、只把[false]编码为true时，经此摘要读出接续全被携带，而false下的一步止于false，延长后历史的编码却是true。"
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/DerivedHistoryLaw.lean",
-      "detail": {
-        "en": "Periphery (superseded module): merging histories with distinct continuation profiles produces a witnessed false continuation.",
-        "zh": "外围（已被取代的模块）：错误合并不同接续剖面的历史产生具体虚假接续。"
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只保证有限词存在可行性，不保持端点、分支身份、概率或策略。L为空时条件可真而无实际发生；普遍无假设根基仍未证。",
-    "en": "Finite existential word feasibility only: no endpoint, branch-identity, probability or policy guarantee. An empty L permits vacuous validity without occurrence; the universal assumption-free foundation remains unproved."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1实际编译；6项新定理、5项定义，共11项新空审计，另43项继承空审计。首轮对照摘要编译引入propext；显式构造子分支修复后全空，失败记录保留。作者反审，无独立验收。",
-    "en": "Actually compiled with Lean 4.29.1: 6 new theorems and 5 definitions, 11 new empty audits plus 43 inherited empty audits. The first control-summary compilation introduced propext; explicit constructor cases removed it, with the failed record retained. Author counterreview, no independent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/DerivedHistoryLaw.lean",
@@ -217,7 +282,8 @@
       "declarations": [
         "Becoming.HistoryLanguages.PrefixClosed",
         "Becoming.HistoryLanguages.law",
-        "Becoming.HistoryLanguages.trace_iff"
+        "Becoming.HistoryLanguages.trace_iff",
+        "Becoming.HistoryLanguages.realizes_feasible"
       ]
     },
     {
@@ -257,10 +323,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "取得共同作用关系及其实际解释的演绎根据；不要求每项具体历史族必然，也不以另一等价编码代替这一根据。",
-    "en": "Establish deductive warrant for the universal operative relationship and its actual interpretation; do not require every particular history language to be necessary or substitute another equivalent encoding for that warrant."
-  },
   "history": [
     {
       "zh": "2026-10-09：在原演绎根基研究§22接续；新增构造规律的充要条件，复用旧完整历史及静态摘要成果，不宣称较强根基完成。",
@@ -297,10 +359,28 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): The first of the record's laws is not called a first law, the spine's name for Flow.Gainless.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：英文版中本记录的第一条规律不称为 first law，那是脊柱对 Flow.Gainless 的称呼。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): statement kept; the claim split into five laws, each read against its declarations in Becoming.Readout, Becoming.Mechanism, Becoming.HistoryLanguages and Becoming.SummaryFutures, the admitted-history form kept as a law that says it is an instance stated by no single core declaration; limitations to two does-not-show items and the standard boundaries no-ethical-premise and zero-axiom-target-open; in the second hypothesis \"a different contract\" became \"a different condition\" (a structural word, the Chinese already saying so); validation scope rewritten on the bound core receipts, the periphery's earlier counts left to its receipt and the earlier record; the next step stated positively; the correspondence's clause on every process's finite-word representation corrected, since HistoryLanguages.realizes_feasible (added to the references) realizes every process's feasible words by the law of its histories. What the premises require, the status and every source hash are unchanged. Every earlier sentence is mapped in [derived-history-law-exactness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/derived-history-law-exactness.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the correspondence, the references (declarations added), each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：陈述保留；主张拆为五条规律，各条对照其在 Becoming.Readout、Becoming.Mechanism、Becoming.HistoryLanguages 与 Becoming.SummaryFutures 中的声明核读，被接纳历史的形式保留为一条规律，并写明它是不由单一核心声明陈述的实例；限制分入两条“未表明”与通用边界 no-ethical-premise、zero-axiom-target-open；第二条前提英文的 “a different contract” 改为 “a different condition”（结构性用词，中文原已如此）；检查范围按所绑核心回执改写，外围早先的计数留在其回执与迁移前的记录中；下一步以正面陈述；对应中关于每个过程之有限词表示的一句改正：HistoryLanguages.realizes_feasible（加入引用）表明每个过程的可行词都由其历史之律实现。前提所要求者、状态与每个来源哈希均未改变。每句旧文本的去向见 [derived-history-law-exactness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/derived-history-law-exactness.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、对应、引用（增补声明），各条对照所引 Lean 核读。"
     }
   ],
-  "statement": {
-    "en": "Read through a summary, a law takes from each configuration's summary exactly the words that configuration can take, for every configuration, exactly where the configurations the summary merges have the same futures; carrying the futures is not carrying the endpoints.",
-    "zh": "经一个摘要读出，一个律从每个构形的摘要恰取该构形所能取之词，对每个构形，恰当摘要所合并的构形有相同的未来；携带未来不是携带端点。"
-  }
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/48e5348ed1d2f150/derived-history-law-exactness.json",
+      "sha256": "48e5348ed1d2f150345190376341678cfd1bab6b1c6c82d49a6d2b00426e2c60",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/75b9af4fa4074dab/derived-history-law-exactness.json",
+      "sha256": "75b9af4fa4074dabed6e1b0396e762aeb45ec2f9eb6a234f4d57fac98190e39b",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
+    }
+  ]
 }

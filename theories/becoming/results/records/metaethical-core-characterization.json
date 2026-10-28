@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "metaethical-core-characterization",
   "title": {
     "zh": "生成之论脊柱上的生生之意义：由种子与边界中立刻画",
@@ -8,28 +8,227 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
-  "claim": {
-    "zh": "在同一框架（核心过程加已实现的主张）上陈述评价，不另立世界模型。在已形成关系把活的主张连在一起、有某个活的主张与某个立场的整体上，“每个活的主张从每个立场都有意义”（生生之意义在主张层的形式）等价于三项合取：某个活的主张从某个立场有意义（种子；任何持自身意义且有自身活的主张的位置都提供一个）；意义沿已形成关系传到活的主张（关系中立）；活的内容的意义从每个立场都成立（立场中立）。把 D 的理由所对应的内容读作从每个立场都有意义时，位置化表述 D 由外在论表述 A 推出。以种子、两种中立与 A 为前提，在这样的整体上，一个以新的活的内容为目标的 sound 探究，使每个对它有通达的位置都具有支持它的一项理由。种子、关系中立、立场中立、连通与 A 各有一个一致的反模型；其中三个对手规则（只在自身区域内传递、立场相对的意义、只给认同者理由）都是同一规则加上一条已形成的边界（自身区域、自身立场、认同者）：这是对这些反模型的刻画，不是关于一切对手的定理。提升规则 L 只有经由一个可行的中间回应才传递。",
-    "en": "Evaluation is stated over one frame (the core process with realized claims), with no world model of its own. On a whole where formed relations connect the living claims, with some living claim and some standpoint, “every living claim is significant from every standpoint” (living significance at claim level) is equivalent to three conjuncts: some living claim is valued from some standpoint (a seed; any position holding self-significance with an own living claim supplies one); significance passes along formed relations to living claims (relational neutrality); and significance of living content holds from every standpoint (standpoint neutrality). The positioned articulation D follows from the externalist articulation A, with the content D's reason answers to read as significance from every standpoint. With the seed, both neutralities and A as premises, on such a whole a sound inquiry whose goal is new living content gives every position with access a contributory reason for it. Seed, relational neutrality, standpoint neutrality, connection and A each have a consistent countermodel; the three rival rules among them (transmission within the own region, standpoint-relative significance, reasons for endorsers only) are the same rule restricted by a formed boundary (own region, own standpoint, endorsers), a framing of these countermodels and no theorem about all rivals. The lifting rule L is transitive only through a live middle response."
+  "reviewed_at_utc": "2026-10-28T05:21:42+00:00",
+  "statement": {
+    "en": "On a connected whole with a living claim and a standpoint, living significance is equivalent to a seed with relational and standpoint neutrality; with these and A, a sound inquiry for new living content gives each position with access a contributory reason. Each premise is needed.",
+    "zh": "已形成关系把活的主张连在一起、且有一个活的主张与一个立场时，生生之意义等价于种子加关系中立与立场中立；有了这些与 A，以新的活的内容为目标的 sound 探究给每个有通达的位置一项支持理由。每个前提都不可少。"
   },
+  "laws": [
+    {
+      "en": "A valuation gives which claims are living, which are related by formed relations, each standpoint's own region and what has significance from it. A seed is a living claim with significance from some standpoint; relational neutrality, no formed boundary restricting it, passes significance along formed relations to living claims; standpoint neutrality makes it hold from every standpoint.",
+      "zh": "一个估值给出哪些主张是活的、哪些由已形成关系相关、每个立场的自身区域以及从它有意义者。种子是从某个立场有意义的一个活的主张；关系中立（不受任何已形成边界限制）使意义沿已形成关系传到活的主张；立场中立使它从每个立场都成立。",
+      "declarations": [
+        "Becoming.Valuation",
+        "Becoming.Valuation.Seed",
+        "Becoming.Valuation.transmits",
+        "Becoming.Valuation.shares",
+        "Becoming.Valuation.Grounds",
+        "Becoming.Neutral"
+      ]
+    },
+    {
+      "en": "On a whole where formed relations among living claims connect every two living claims, with some living claim and some standpoint, every living claim being significant from every standpoint is equivalent to the seed with both neutralities; from those three to living significance needs only the connection.",
+      "zh": "在已形成关系把任两个活的主张经活的主张连在一起、且有某个活的主张与某个立场的整体上，每个活的主张从每个立场都有意义，等价于种子加两种中立；从这三项到生生之意义只需连通。",
+      "declarations": [
+        "Becoming.Valuation.Significant",
+        "Becoming.Valuation.relations",
+        "Becoming.Valuation.Connected",
+        "Becoming.Valuation.significant_iff",
+        "Becoming.Valuation.significant_of_grounds"
+      ]
+    },
+    {
+      "en": "Under relational neutrality each standpoint's significance is invariant along the formed relations, so it reaches every living claim linked to a valued one; a standpoint holding self-significance with a living claim of its own supplies a seed.",
+      "zh": "关系中立之下，每个立场的意义沿已形成关系不变，所以传到与有意义者相连的每个活的主张；持自身意义且有自身活的主张的立场提供一个种子。",
+      "declarations": [
+        "Becoming.Valuation.transmits_invariant",
+        "Becoming.Valuation.reaches",
+        "Becoming.Valuation.SelfSignificance",
+        "Becoming.Valuation.seed_of_selfSignificance"
+      ]
+    },
+    {
+      "en": "Evaluation is stated over one frame, the core process with realized claims: claim-level living significance gives living significance for the frame, with relevance read as significance from every standpoint.",
+      "zh": "评价在同一框架（核心过程加已实现的主张）上陈述：主张层的生生之意义给出该框架的生生之意义，相关性读作从每个立场都有意义。",
+      "declarations": [
+        "Becoming.Valuation.livingSignificance",
+        "Becoming.LivingSignificance"
+      ]
+    },
+    {
+      "en": "Where A holds unrestricted by any formed boundary, the positioned articulation D follows, with the content D's reason answers to read as significance from every standpoint: every position with access to a response each of whose admitted outcomes holds such content absent before it has a contributory reason for it.",
+      "zh": "A 不受任何已形成边界限制时，位置化表述 D 成立，D 的理由所对应的内容读作从每个立场都有意义：对一个回应有通达、且该回应每个被接纳的结果都持有此前没有的这类内容时，位置就有支持它的一项理由。",
+      "declarations": [
+        "Becoming.articulates",
+        "Becoming.positioned_articulation_of_articulates",
+        "Becoming.PositionedArticulation",
+        "Becoming.SecuresNewContent"
+      ]
+    },
+    {
+      "en": "With the seed, both neutralities and A as premises, on a connected whole, a policy sound for new living content (some living claim realized and absent before) gives every position with access to it a contributory reason for it.",
+      "zh": "以种子、两种中立与 A 为前提，在连通的整体上，一个对新的活的内容（某个活的主张被实现而此前没有）为 sound 的策略，使每个对它有通达的位置都有支持它的一项理由。",
+      "declarations": [
+        "Becoming.universal_reason",
+        "Becoming.Novel"
+      ]
+    },
+    {
+      "en": "The scope of a policy from a belief is the configurations its actual executions reach from believed ones: a sound policy secures its goal on its whole scope and has a nonempty scope from every believed configuration; the scope is reached from the belief by actual paths, and narrowing belief narrows it.",
+      "zh": "策略自某一信念的范围是其实际执行自被相信的配置所达的配置：sound 的策略在整个范围上确保其目标，自每个被相信的配置起范围非空；范围自信念经实际路径到达，信念收窄则范围收窄。",
+      "declarations": [
+        "Becoming.Scope",
+        "Becoming.Scope.secures",
+        "Becoming.Scope.reached",
+        "Becoming.Scope.nonempty",
+        "Becoming.Scope.antitone"
+      ]
+    },
+    {
+      "en": "In a finite model of two standpoints and three lives, with the two linked lives connected: with no seed both neutralities hold vacuously and nothing is significant; a significance of the evaluator's own life only holds self-significance, a seed and standpoint neutrality, transmits inside the evaluator's own region and not beyond it, and leaves the other life without significance.",
+      "zh": "在两个立场、三个生命的有限模型中（两个相连的生命连通）：无种子时两种中立都空洞成立，没有任何东西有意义；只给评价者自身生命意义者持自身意义、种子与立场中立，在评价者自身区域内传递而不及其外，使另一个生命没有意义。",
+      "declarations": [
+        "Becoming.Model.valuation",
+        "Becoming.Model.linked_connected",
+        "Becoming.Model.seed_is_needed",
+        "Becoming.Model.ownRegion",
+        "Becoming.Model.relational_neutrality_is_needed"
+      ]
+    },
+    {
+      "en": "There, significance from the evaluator's standpoint only holds a seed and relational neutrality, shares only with its own standpoint and leaves the bystander none; with a living claim no formed relation enters, the seed and neutralities hold without connection and that claim is not significant; with living significance, a reason for endorsers only is accepted among them and withheld from the bystander with access.",
+      "zh": "在那里，只从评价者立场有意义者持种子与关系中立，只与自身立场共享，使旁观者没有意义；有一个没有已形成关系进入的活的主张时，种子与两种中立都成立而连通不成立，该主张没有意义；生生之意义成立时，只给认同者的理由在认同者之间被接受，而不给有通达的旁观者。",
+      "declarations": [
+        "Becoming.Model.ownStandpoint",
+        "Becoming.Model.standpoint_neutrality_is_needed",
+        "Becoming.Model.no_relation_into_beyond",
+        "Becoming.Model.isolated",
+        "Becoming.Model.connection_is_needed",
+        "Becoming.Model.endorses",
+        "Becoming.Model.articulation_neutrality_is_needed"
+      ]
+    },
+    {
+      "en": "A rule no formed boundary restricts is accepted within every boundary; each of the three rivals above is its rule accepted within a formed boundary, the evaluator's own region, each standpoint's own, or the endorsers.",
+      "zh": "不受任何已形成边界限制的规则在每个边界之内都被接受；上面三个对手都是其规则在一个已形成边界之内被接受：评价者的自身区域、每个立场自身、或认同者。",
+      "declarations": [
+        "Becoming.Within",
+        "Becoming.Neutral.within",
+        "Becoming.Model.relational_neutrality_is_needed",
+        "Becoming.Model.standpoint_neutrality_is_needed",
+        "Becoming.Model.articulation_neutrality_is_needed"
+      ]
+    },
+    {
+      "en": "Lifting better from outcomes to moves, every outcome of one better than every outcome of the other: lifting is transitive for a transitive better where the middle move has an outcome, irreflexive for an irreflexive better where the move has one, and gives some outcome better than some outcome where both moves have one.",
+      "zh": "把“更好”从结果提升到动作（一个的每个结果都好于另一个的每个结果）：“更好”传递且中间动作有结果时提升传递；“更好”反自反且动作有结果时提升反自反；两个动作都有结果时给出某个结果好于某个结果。",
+      "declarations": [
+        "Becoming.LiftBetter",
+        "Becoming.LiftBetter.trans",
+        "Becoming.LiftBetter.irrefl",
+        "Becoming.LiftBetter.some"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "种子、关系中立、立场中立与 A 是公开的规范前提，本结果不证明它们。本结果刻画生生之意义，并不断言它；在延续条件之下，于主张之意义即某形成之延续之意义的读法上，它是定理（continuation-condition-yields-living-significance）。从生生之意义到这些前提的一侧几乎是平凡的，内容在反方向与极小性。",
       "en": "The seed, both neutralities and A are explicit normative premises, not proved here. The result characterizes living significance without asserting it; under the continuation condition, where a claim's significance is a formation's continuation, it is a theorem (continuation-condition-yields-living-significance). Living significance gives the premises nearly at once; the content lies in the converse and minimality."
     },
     {
-      "zh": "A 是关于有贡献理由的外在论表述：在所见范围上确保自身立场下的正面内容、且有通达，即有一项支持理由；不以认同为条件。",
-      "en": "A is an externalist articulation of contributory reasons: securing positive content from one's own standpoint on the response's scope, with access, supplies a contributory reason; endorsement is not a condition."
+      "zh": "A 是关于有贡献理由的外在论表述：在所见范围上确保从自身立场有意义的新内容、且有通达，即有一项支持理由；不以认同为条件。",
+      "en": "A is an externalist articulation of contributory reasons: securing new content significant from one's own standpoint on the response's scope, with access, supplies a contributory reason; endorsement is not a condition."
     },
     {
       "zh": "连通与 sound 是关于展开与探究的条件；所见范围由策略的实际执行定义，不是自由参数。",
       "en": "Connection and soundness are conditions on the unfolding and the inquiry; the visible scope is defined by the policy's actual executions, not a free parameter."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "It proves none of self-significance, the neutralities, A, C, L or the practical commitments, and binds no position that rejects them.",
+      "zh": "不证明自身意义、两种中立、A、C、L 或实践承诺，不约束拒绝它们的立场。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The value of bringing new lives into existence is not treated.",
+      "zh": "不处理使新生命存在的价值。",
+      "kind": "scope"
+    },
+    {
+      "en": "A contributory reason is not a duty or a ranking and predicts no recognition or compliance.",
+      "zh": "一项支持理由不是义务或排序，也不预测认识或遵循。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That each rival is the same rule restricted by a formed boundary frames these countermodels; it is no theorem about all rivals.",
+      "zh": "每个对手都是同一规则加上一条已形成的边界，这是对这些反模型的刻画，不是关于一切对手的定理。",
+      "kind": "scope",
+      "witness": "Becoming.Neutral.within"
+    },
+    {
+      "en": "Sidgwick's dualism of practical reason is not dissolved; it is located at the boundary-neutrality premise.",
+      "zh": "Sidgwick 的实践理性二元论没有被消解，只被定位到边界中立这一前提上。",
+      "kind": "scope"
+    },
+    {
+      "en": "On the Becoming layer the readings of living and related are taken from one run, so connection and the universal reason's application are relative to that run.",
+      "zh": "在 Becoming 层，living 与 related 的读法都取自一次运行，所以连通与普遍理由的应用相对于该运行。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "detail": {
+        "zh": "现时目的（无种子）：两条中立都空洞成立，没有任何东西有意义。",
+        "en": "Present aim (no seed): both neutralities hold vacuously and nothing is significant."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "detail": {
+        "zh": "只在自身区域内传递：持自身意义、种子与立场中立，在自身区域内满足传递规则，却不给相连的他者意义。",
+        "en": "Transmission inside the own region only: holds self-significance, a seed and standpoint neutrality and satisfies the transmission rule inside its own region, yet gives the connected other no significance."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "detail": {
+        "zh": "立场相对：每个立场内传递成立，只与自身立场共享，旁观立场无任何意义。",
+        "en": "Standpoint-relative: transmission holds within each standpoint, significance is shared only with itself, and the bystander's standpoint has none."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "detail": {
+        "zh": "无连通：一切规范前提成立，意义止于已形成关系所及之处；零关系的发生不自动获得意义。",
+        "en": "No connection: every normative premise holds and significance stops where formed relations stop; a zero-relation occurrence gains none automatically."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "detail": {
+        "zh": "内在论：生生之意义完全成立，只给认同者理由的表述与之相容，却不给有通达、不认同的位置理由。",
+        "en": "Internalism: with living significance fully holding, an articulation restricted to endorsers is consistent and withholds the reason from a non-endorsing position with access."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.Metaethics, Becoming.ValuationFrames, Becoming.Extension, Becoming.Inquiry and Becoming.Frame, and of the foundation modules InquirySufficiency and GenerativeCore, are bound to passing receipts in becoming-checks, which report an empty axiom list for every cited declaration and verify that the core compiles from Lean's prelude alone. The review is the author's only; there is no independent review yet.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Metaethics、ValuationFrames、Extension、Inquiry、Frame 与基础模块 InquirySufficiency、GenerativeCore 的当前字节绑定到 becoming-checks 中通过的回执，所引声明的公理报告皆为空，并核对核心只用 Lean 前导即可编译。只有作者的审查，尚无独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review of A's externalist defence and of the neutralities' philosophical warrant; readings of living and related that hold across runs, connected to the universal reason; the philosophical argument for the reading chosen for comparison.",
+    "zh": "独立审查 A 的外在论辩护与两种中立的哲学根据；跨运行成立的 living 与 related 读法，并与普遍理由接通；为比较所选读法的哲学论证。"
+  },
   "correspondence": {
-    "zh": "living 读作生生；对应生生之意义时取更新型形成的关系读法（relational-renewal-classification、relational-reading-comparison），这是对应，不是本模块的 Lean 结果。related 是非零的已形成关系（条件、依存、传承、合作），在应用中须有证据；位置的通达可写成被实现的主张（AccessAt）。有限模型中的两个立场与三个生命只用于极小性。在 Becoming 层，living 与 related 的读法都取自一次运行（becoming-renewal-reading、becoming-stepwise-reading），所以连通与 universal_reason 的应用相对于该运行；不依赖运行的读法尚未给出。",
-    "en": "`living` reads 生生; matching living significance uses the relational reading of renewing formation (relational-renewal-classification, relational-reading-comparison), a correspondence and not a Lean result of this module. `related` is a nonzero formed relation (conditioning, dependence, descent, cooperation) needing evidence in each application; a position's access can be a realized claim (AccessAt). The finite model's two standpoints and three lives serve minimality only. On the Becoming layer, the readings of `living` and `related` are taken from one run (becoming-renewal-reading, becoming-stepwise-reading), so connection and the application of universal_reason are relative to that run; a run-independent reading is not yet given."
+    "zh": "living 读作生生（AI 的读法）；对应生生之意义时取更新型形成的关系读法（relational-renewal-classification、relational-reading-comparison），这是对应，不是本模块的 Lean 结果。related 是非零的已形成关系（条件、依存、传承、合作），在应用中须有证据；位置的通达可写成被实现的主张（AccessAt）。有限模型中的两个立场与三个生命只用于极小性。在 Becoming 层，living 与 related 的读法都取自一次运行（becoming-renewal-reading、becoming-stepwise-reading），所以连通与 universal_reason 的应用相对于该运行；不依赖运行的读法尚未给出。",
+    "en": "`living` reads 生生 (an AI reading); matching living significance uses the relational reading of renewing formation (relational-renewal-classification, relational-reading-comparison), a correspondence and not a Lean result of this module. `related` is a nonzero formed relation (conditioning, dependence, descent, cooperation) needing evidence in each application; a position's access can be a realized claim (AccessAt). The finite model's two standpoints and three lives serve minimality only. On the Becoming layer, the readings of `living` and `related` are taken from one run (becoming-renewal-reading, becoming-stepwise-reading), so connection and the application of universal_reason are relative to that run; a run-independent reading is not yet given."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
   "aliases": [
@@ -96,51 +295,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
-      "detail": {
-        "zh": "现时目的（无种子）：两条中立都空洞成立，没有任何东西有意义。",
-        "en": "Present aim (no seed): both neutralities hold vacuously and nothing is significant."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
-      "detail": {
-        "zh": "只在自身区域内传递：持自身意义、种子与立场中立，在自身区域内满足传递规则，却不给相连的他者意义。",
-        "en": "Transmission inside the own region only: holds self-significance, a seed and standpoint neutrality and satisfies the transmission rule inside its own region, yet gives the connected other no significance."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
-      "detail": {
-        "zh": "立场相对：每个立场内传递成立，只与自身立场共享，旁观立场无任何意义。",
-        "en": "Standpoint-relative: transmission holds within each standpoint, significance is shared only with itself, and the bystander's standpoint has none."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
-      "detail": {
-        "zh": "无连通：一切规范前提成立，意义止于已形成关系所及之处；零关系的发生不自动获得意义。",
-        "en": "No connection: every normative premise holds and significance stops where formed relations stop; a zero-relation occurrence gains none automatically."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
-      "detail": {
-        "zh": "内在论：生生之意义完全成立，只给认同者理由的表述与之相容，却不给有通达、不认同的位置理由。",
-        "en": "Internalism: with living significance fully holding, an articulation restricted to endorsers is consistent and withholds the reason from a non-endorsing position with access."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不证明自身意义、两种中立、A、C、L 或实践承诺，不约束拒绝它们的立场，不处理使新生命存在的价值。一项支持理由不是义务、排序，也不预测认识或遵循。Sidgwick 的实践理性二元论没有被消解，只被定位到边界中立这一前提上。",
-    "en": "Proves none of self-significance, the neutralities, A, C, L or the practical commitments, binds no rejecter, and does not treat the value of bringing new lives into existence. A contributory reason is not a duty or ranking and predicts no recognition or compliance. Sidgwick's dualism of practical reason is not dissolved; it is located at the boundary-neutrality premise."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：本结果所在的 Becoming.Metaethics（不含其后加的读法一节与逐步读法一节，见 becoming-renewal-reading、becoming-stepwise-reading）、Becoming.Inquiry、Becoming.Frame 共有 20、5、11 项定理（Becoming.Inquiry 另有一项判断定理，属 becoming-spine-instances），全部空依赖。检查器要求脊柱模块无任何公理依赖；继承模块的 propext、Quot.sound、Classical.choice 依赖另列，未迁移。控制例不计为新定理；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致。作者自审，尚无独立反审。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): this result's Becoming.Metaethics (excluding the later reading and stepwise-reading sections, see becoming-renewal-reading and becoming-stepwise-reading), Becoming.Inquiry and Becoming.Frame have 20, 5 and 11 theorems (Becoming.Inquiry has one further judgment theorem, recorded in becoming-spine-instances), all with empty axiom reports. The checker requires the spine to have no axiom dependency; inherited propext, Quot.sound and Classical.choice dependencies are listed separately and not migrated. Controls are not counted as new theorems; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts. Author's review only; no independent review yet. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run)."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
@@ -153,7 +307,21 @@
         "Becoming.Model.no_relation_into_beyond",
         "Becoming.Model.articulation_neutrality_is_needed",
         "Becoming.SecuresNewContent",
-        "Becoming.PositionedArticulation"
+        "Becoming.PositionedArticulation",
+        "Becoming.Within",
+        "Becoming.Neutral",
+        "Becoming.Valuation",
+        "Becoming.Valuation.SelfSignificance",
+        "Becoming.Valuation.Seed",
+        "Becoming.Valuation.transmits",
+        "Becoming.Valuation.shares",
+        "Becoming.Valuation.Grounds",
+        "Becoming.Valuation.Significant",
+        "Becoming.articulates",
+        "Becoming.Model.valuation",
+        "Becoming.Model.ownRegion",
+        "Becoming.Model.ownStandpoint",
+        "Becoming.Model.endorses"
       ]
     },
     {
@@ -172,7 +340,9 @@
         "Becoming.Model.relational_neutrality_is_needed",
         "Becoming.Model.standpoint_neutrality_is_needed",
         "Becoming.Model.isolated",
-        "Becoming.Model.connection_is_needed"
+        "Becoming.Model.connection_is_needed",
+        "Becoming.Valuation.relations",
+        "Becoming.Valuation.Connected"
       ]
     },
     {
@@ -183,7 +353,8 @@
         "Becoming.LiftBetter.trans",
         "Becoming.LiftBetter.irrefl",
         "Becoming.LiftBetter.some",
-        "Becoming.LivingSignificance"
+        "Becoming.LivingSignificance",
+        "Becoming.LiftBetter"
       ]
     },
     {
@@ -195,7 +366,8 @@
         "Becoming.Scope.reached",
         "Becoming.Scope.nonempty",
         "Becoming.Scope.antitone",
-        "Becoming.commonResponse_antitone"
+        "Becoming.commonResponse_antitone",
+        "Becoming.Scope"
       ]
     },
     {
@@ -211,7 +383,8 @@
         "Becoming.Invariant.trace",
         "Becoming.Invariant.reach",
         "Becoming.Invariant.run",
-        "Becoming.Novel.mono"
+        "Becoming.Novel.mono",
+        "Becoming.Novel"
       ]
     },
     {
@@ -393,10 +566,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "独立反审 A 的外在论辩护与两种中立的哲学根据；不依赖运行的 living 与 related 读法，并与 universal_reason 接通；为比较所选的读法仍须作出哲学论证。",
-    "en": "Independent review of A's externalist defence and the neutralities' philosophical warrant; run-independent readings of `living` and `related`, connected to universal_reason; the reading chosen for comparison still needs its philosophical argument."
-  },
   "history": [
     {
       "zh": "2026-10-09：应 Ren“你自己全改了吧……先更新好计划，然后再一步步完整完成”新增，作为整合计划 P1–P2。吸收另一会话的 S0+N* 提议并按评估作更正：N 分为承受者、立场两条，受话者一侧另需 A；P+ 写成传递形式以免 S0 冗余。",
@@ -464,6 +633,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): claim made exact to the Lean: connection links the living claims (not further generation), with some living claim and some standpoint; relational neutrality passes significance to living claims; D follows from A with the content its reason answers to read as significance from every standpoint; the universal reason holds on a connected whole; the three rivals restricted by a boundary are named as a framing of the countermodels, not a theorem about all rivals. The first premise item and the correspondence restated in the current terms (living significance, the continuation condition) in place of the retired labels G0, Part I/II and the one axiom; in that premise item S0 reads the seed, as in Valuation.Grounds (a position with self-significance and an own living claim supplies one, seed_of_selfSignificance); S0, N, N_rel and N_std in two related details, the limitations and the next step read as self-significance, the neutralities, relational and standpoint neutrality, and J in the limitations (the English sentence tightened to fit) and a related detail as the practical commitments.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张依 Lean 改精确：连通连的是活的主张（不是进一步的生成），有某个活的主张与某个立场；关系中立把意义传到活的主张；D 的理由所对应的内容读作从每个立场都有意义时 D 由 A 推出；普遍理由在连通的整体上成立；受边界限制的三个对手规则说明为对反模型的刻画，不是关于一切对手的定理。第一条前提与对应以现行之词（生生之意义、延续条件）代替已退休之标签 G0、第一/二部分与那一条公理；该前提中 S0 改为种子，如 Valuation.Grounds 所取（持自身意义且有自身活的主张的位置提供一个，seed_of_selfSignificance）；两条相关说明、限度与下一步中的 S0、N、N_rel、N_std 改为自身意义、两种中立、关系中立、立场中立；限度（英文该句相应收紧）与一条相关说明中的 J 改为实践承诺。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): a statement written from the home section; the claim split into eleven laws, each read against its declarations in Becoming.Metaethics, Becoming.ValuationFrames, Becoming.Extension, Becoming.Inquiry and Becoming.Frame (the lifting rule's transitivity stated, as the Lean proves it, where the middle move has an outcome: that it fails otherwise is not a theorem, so \"only\" is not kept); the limitations and the run-relative correspondence to six does-not-show items and the standard boundaries significance-related-not-asserted and names-provisional; in the second hypothesis \"positive content\" became \"new content significant from one's own standpoint\", as the definition (SecuresNewContent with significance from the standpoint) has it since the R30 rename, the other hypotheses kept; nineteen definitions (Within, Neutral, Valuation and its parts, articulates, the model's parts, Valuation.relations, Valuation.Connected, LiftBetter, Scope, Novel) added to the references of their files; no premise's content, status or source hash changed. Every earlier sentence is mapped in [metaethical-core-characterization.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/metaethical-core-characterization.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, the correspondence, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：依主章写出陈述；主张拆为十一条规律，各条对照其在 Becoming.Metaethics、ValuationFrames、Extension、Inquiry 与 Frame 中的声明核读（提升规则的传递按 Lean 所证写为中间动作有结果时成立：否则不传递不是定理，故不保留“只有”）；限制与对应中相对于运行的一句分入六条“未表明”与通用边界 significance-related-not-asserted、names-provisional；第二条前提中“正面内容”改为“从自身立场有意义的新内容”，与 R30 改名以来的定义（SecuresNewContent，意义取自该立场）一致，其余前提保留；十九个定义（Within、Neutral、Valuation 及其部分、articulates、模型的部分、Valuation.relations、Valuation.Connected、LiftBetter、Scope、Novel）加入其文件的引用；前提内容、状态与来源哈希均未改变。每句旧文本的去向见 [metaethical-core-characterization.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/metaethical-core-characterization.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律、对应，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/34c0c832f57c256f/metaethical-core-characterization.json",
+      "sha256": "34c0c832f57c256f5d557eaf160f17a25e6cd50f51753b901f1110ce8e0af6db",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/3dc86cf4eefbd3fb/metaethical-core-characterization.json",
+      "sha256": "3dc86cf4eefbd3fbe1cf474af193406df06a2a4ae7c2ed985c59294b5df8bd37",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }
