@@ -17,8 +17,12 @@ stated on its run `Law.run next s`, a run of the spine whose states are the cour
 
 A chain of `k` waits from `b` to `a` (`Chain up k b a`) is `k` links, each taken into the formation
 that waits; the chain of length zero leads from `a` to `a`. `Within up k b a` says some chain of at
-most `k` waits leads from `b` to `a`. No premise about `α` or `up` is made: no finiteness, no
-decision of equality and no decision of giving.
+most `k` waits leads from `b` to `a`. A chain of `k` waits is `k` steps of the grammar's `«迭»`
+(`chain_iff_steps`), and within `k` waits is within `k` steps (`within_iff_withinSteps`), so
+both closed forms below are cases of the grammar's laws of taking on read on chains (`«存承之迭»`
+with memory, `«承之迭»` without), whose rounds `waitsAll` and `answers` meet by definition. No
+premise about `α` or `up` is made: no finiteness, no decision of equality and no decision of
+giving.
 
 * **With memory: withholding absorbs.**
   - **Closed form, with memory.** A formation gives at step `n` exactly where every formation
@@ -154,6 +158,20 @@ theorem Within.mono {k n : Nat} {b a : α} (within : Within up k b a) (le : k �
   let ⟨j, jk, ch⟩ := within
   ⟨j, Nat.le_trans jk le, ch⟩
 
+/-- **A chain of `k` waits is `k` steps of the grammar** (`«迭»` of the waits), the chain's last wait
+being the last step (`«迭之末步»`). -/
+theorem chain_iff_steps : ∀ (k : Nat) {b a : α}, Chain up k b a ↔ «迭» up k b a
+  | 0, _, _ => ⟨Chain.zero_eq, fun e => Eq.subst (motive := fun v => Chain up 0 _ v) e (.here _)⟩
+  | k + 1, _, _ => ⟨fun ch => match ch.last with
+      | ⟨_, ch', link⟩ => («迭之末步» k).mpr ⟨_, (chain_iff_steps k).mp ch', link⟩,
+    fun steps => match («迭之末步» k).mp steps with
+      | ⟨_, first, link⟩ => .step ((chain_iff_steps k).mpr first) link⟩
+
+/-- **Within `k` waits is within `k` steps of the grammar** (`«迭内»`). -/
+theorem within_iff_withinSteps {k : Nat} {b a : α} : Within up k b a ↔ «迭内» up k b a :=
+  ⟨fun ⟨j, le, ch⟩ => ⟨j, le, (chain_iff_steps j).mp ch⟩,
+   fun ⟨j, le, steps⟩ => ⟨j, le, (chain_iff_steps j).mpr steps⟩⟩
+
 end Chains
 
 /-! ## With memory: withholding absorbs -/
@@ -163,28 +181,13 @@ section Memory
 variable (up : α → α → Prop) (s : α → Prop)
 
 /-- **Closed form, with memory: a formation gives at step `n` exactly where every formation within
-`n` waits of it gave at the start.** -/
+`n` waits of it gave at the start.** It is the grammar's law of taking on with memory (`«存承之迭»`),
+whose rounds `waitsAll` meets by definition, read on chains of waits (`within_iff_withinSteps`). -/
 theorem waitsAll_closed : ∀ (n : Nat) (a : α),
-    (Law.run (waitsAll up) s).state n a ↔ ∀ b, Within up n b a → s b
-  | 0, a =>
-    ⟨fun gives _ within =>
-      match within with
-      | ⟨0, _, ch⟩ => (Chain.zero_eq ch) ▸ gives
-      | ⟨_ + 1, le, _⟩ => absurd le (Nat.not_succ_le_zero _),
-     fun all => all a ⟨0, Nat.le_refl 0, Chain.here a⟩⟩
-  | n + 1, a =>
-    ⟨fun gives b within =>
-      match within with
-      | ⟨0, _, ch⟩ =>
-        (Chain.zero_eq ch) ▸
-          (waitsAll_closed n a).mp gives.1 a ⟨0, Nat.zero_le n, Chain.here a⟩
-      | ⟨k + 1, le, ch⟩ =>
-        let ⟨c, ch', link⟩ := Chain.last ch
-        (waitsAll_closed n c).mp (gives.2 c link) b ⟨k, Nat.le_of_succ_le_succ le, ch'⟩,
-     fun all =>
-      ⟨(waitsAll_closed n a).mpr fun b ⟨j, le, ch⟩ => all b ⟨j, Nat.le_succ_of_le le, ch⟩,
-       fun c link => (waitsAll_closed n c).mpr fun b ⟨j, le, ch⟩ =>
-         all b ⟨j + 1, Nat.succ_le_succ le, Chain.step ch link⟩⟩⟩
+    (Law.run (waitsAll up) s).state n a ↔ ∀ b, Within up n b a → s b :=
+  fun n a => («存承之迭» (S := (Law.run (waitsAll up) s).state) (fun _ _ => Iff.rfl) n a).trans
+    ⟨fun all b within => all b (within_iff_withinSteps.mp within),
+     fun all b within => all b (within_iff_withinSteps.mpr within)⟩
 
 variable {up s}
 
@@ -242,16 +245,13 @@ section NoMemory
 variable (up : α → α → Prop) (s : α → Prop)
 
 /-- **Closed form, without memory: a formation gives at step `n` exactly where every formation with
-a chain of exactly `n` waits to it gave at the start.** -/
+a chain of exactly `n` waits to it gave at the start.** It is the grammar's law of taking on
+(`«承之迭»`), whose rounds `answers` meets by definition, read on chains of waits
+(`chain_iff_steps`). -/
 theorem answers_closed : ∀ (n : Nat) (a : α),
-    (Law.run (answers up) s).state n a ↔ ∀ b, Chain up n b a → s b
-  | 0, a =>
-    ⟨fun gives _ ch => (Chain.zero_eq ch) ▸ gives, fun all => all a (Chain.here a)⟩
-  | n + 1, _ =>
-    ⟨fun gives b ch =>
-      let ⟨c, ch', link⟩ := Chain.last ch
-      (answers_closed n c).mp (gives c link) b ch',
-     fun all c link => (answers_closed n c).mpr fun b ch => all b (Chain.step ch link)⟩
+    (Law.run (answers up) s).state n a ↔ ∀ b, Chain up n b a → s b :=
+  fun n a => («承之迭» (S := (Law.run (answers up) s).state) (fun _ _ => Iff.rfl) n a).trans
+    ⟨fun all b ch => all b ((chain_iff_steps n).mp ch), fun all b steps => all b ((chain_iff_steps n).mpr steps)⟩
 
 variable {up}
 

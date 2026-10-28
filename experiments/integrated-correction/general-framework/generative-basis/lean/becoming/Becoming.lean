@@ -2767,8 +2767,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `n` is within `m + n` (`«迭内之接»`), and a course of regions each of whose rounds holds what every
   condition held (`«承»`) holds at round `n` exactly where everything reaching in `n` steps held at
   the start (`«承之迭»`), with memory within `n` steps (`«存承之迭»`).
-  `Becoming.Withholding`'s closed forms have these shapes for its chains; their bridges are a
-  second step (board item OU3d).
+  `Becoming.Withholding`'s closed forms are proved from them, its chains of waits read as the
+  grammar's steps, and so is `WithinMoves.after_course` in `Becoming.Labelled`, a trace read as
+  them (board items OU3d, OU3e).
   Lumping: with the successor fixed where `E`
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike

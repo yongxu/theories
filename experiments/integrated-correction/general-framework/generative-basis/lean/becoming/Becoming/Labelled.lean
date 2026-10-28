@@ -932,15 +932,37 @@ theorem WithinMoves.before {s m : S} {a : A} {n : Nat} (step : P.step s a m) :
     WithinMoves P realized m n bundle → WithinMoves P realized s (n + 1) bundle
   | ⟨word, t, path, short, holds⟩ => ⟨a :: word, t, .cons step path, Nat.succ_le_succ short, holds⟩
 
-/-- **A course carries every bound on realizing a bundle together, its own moves counted.** -/
+/-- **A trace of `xs` gives `xs.length` steps of the grammar** (`«迭»` of the process's steps). -/
+theorem trace_steps : ∀ {s t : S} {xs : List A}, Trace P s xs t → «迭» (Steps P) xs.length s t
+  | _, _, _, .nil _ => rfl
+  | _, _, _, .cons step path => ⟨_, ⟨_, step⟩, trace_steps path⟩
+
+/-- **A trace of `k` moves is `k` steps of the grammar** (`«迭»` of the process's steps). -/
+theorem trace_iff_steps : ∀ {k : Nat} {s t : S},
+    (∃ xs : List A, xs.length = k ∧ Trace P s xs t) ↔ «迭» (Steps P) k s t
+  | 0, s, t => ⟨fun ⟨_, len, path⟩ => Eq.subst (motive := fun i => «迭» (Steps P) i s t) len (trace_steps path),
+      fun e => ⟨[], rfl, Eq.subst (motive := fun v => Trace P s [] v) e (.nil s)⟩⟩
+  | k + 1, s, t => ⟨fun ⟨_, len, path⟩ => Eq.subst (motive := fun i => «迭» (Steps P) i s t) len (trace_steps path),
+      fun ⟨_, ⟨a, step⟩, rest⟩ => match (trace_iff_steps (k := k)).mpr rest with
+        | ⟨xs, len, path⟩ => ⟨a :: xs, congrArg (· + 1) len, .cons step path⟩⟩
+
+/-- **Realizable together within `n` moves is a configuration within `n` steps of the grammar
+realizing the bundle** (`«迭内»` of the process's steps). -/
+theorem withinMoves_iff_withinSteps {s : S} {n : Nat} :
+    WithinMoves P realized s n bundle ↔ ∃ t, «迭内» (Steps P) n s t ∧ ∀ c, bundle c → realized t c :=
+  ⟨fun ⟨word, t, path, short, holds⟩ => ⟨t, ⟨word.length, short, trace_steps path⟩, holds⟩,
+   fun ⟨t, ⟨_, le, steps⟩, holds⟩ => match trace_iff_steps.mpr steps with
+    | ⟨xs, len, path⟩ => ⟨xs, t, path, Eq.subst (motive := fun i => i ≤ n) len.symm le, holds⟩⟩
+
+/-- **A course carries every bound on realizing a bundle together, its own moves counted.** A course
+of `m` moves, which `trace_steps` reads as `m` steps of the grammar, and then within `n` is within
+`m + n` (`«迭内之接»`), read on traces by `withinMoves_iff_withinSteps`. -/
 theorem WithinMoves.after_course {n : Nat} :
     ∀ {s t : S} {xs : List A}, Trace P s xs t → WithinMoves P realized t n bundle →
-      WithinMoves P realized s (xs.length + n) bundle
-  | _, _, _, .nil _, within =>
-    Eq.subst (motive := fun k => WithinMoves P realized _ k bundle) (Nat.zero_add n).symm within
-  | _, _, _, .cons step path, within =>
-    Eq.subst (motive := fun k => WithinMoves P realized _ k bundle) (Nat.succ_add _ n).symm
-      (WithinMoves.before step (WithinMoves.after_course path within))
+      WithinMoves P realized s (xs.length + n) bundle :=
+  fun path within => match withinMoves_iff_withinSteps.mp within with
+  | ⟨u, rest, holds⟩ =>
+    withinMoves_iff_withinSteps.mpr ⟨u, «迭内之接» ⟨_, Nat.le_refl _, trace_steps path⟩ rest, holds⟩
 
 /-- **Realizable together within some bound is a reachable configuration realizing the
 bundle.** -/
