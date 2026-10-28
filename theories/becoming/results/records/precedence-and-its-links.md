@@ -62,7 +62,7 @@ Causal set theory (Bombelli, Lee, Meyer and Sorkin 1987; Surya 2019): its links 
 - related, not a proved adapter: [what-can-be-born-next](what-can-be-born-next.md). The configurations of causal-set growth are the causal sets here, on which precedence is the reach of its links where it is decidable.
 - related, not a proved adapter: [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md). The present on causal-set growth: a condition is present at the birth of what it conditions on some course exactly where it is a link below it (precedence weakly decided), and on every course exactly where that is the one element it is linked to.
 
-**Used by:** [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md) · [what-can-be-born-next](what-can-be-born-next.md)
+**Used by:** [reorderings-as-courses-of-growth](reorderings-as-courses-of-growth.md) · [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md) · [what-can-be-born-next](what-can-be-born-next.md)
 
 <a id="sources--来源"></a>
 ### Sources

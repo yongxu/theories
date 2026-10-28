@@ -1,0 +1,500 @@
+{
+  "schema_version": 2,
+  "id": "reorderings-as-courses-of-growth",
+  "title": {
+    "en": "A world's reorderings as courses of growth",
+    "zh": "世界之重排作为生长之历程"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-28T08:36:49+00:00",
+  "statement": {
+    "en": "With a footprint containing the exchanges, the numberings a world's reorderings give its first m steps are exactly the orders of birth of the courses of growth of its order of exchanges, so the laws of presence on that growth hold on the World; presence gives persistence, not conversely.",
+    "zh": "足迹含诸交换时，世界之重排给其前 m 步之编号，恰为其交换之序之生长历程之生序，故该生长上之在之诸律于世界成立；在给出持存，反之不然。"
+  },
+  "laws": [
+    {
+      "en": "The exchanges of a stretch form a causal set: the first m steps, the exchange across i preceding that across j where both lie in the stretch and the order of joined exchanges relates them (exchanges, exchanges_ordered); a reordering of the stretch is a list of commutations within it, each of two exchanges not joined (Reordering).",
+      "zh": "一段之交换成因果集：前 m 步，i 之交换先于 j 之交换，当二者皆在段内且相接交换之序联之（exchanges、exchanges_ordered）；段之重排为段内互换之列，每次互换二不相接之交换（Reordering）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.exchanges",
+        "Becoming.ReorderingGrowth.exchanges_ordered",
+        "Becoming.ReorderingGrowth.Reordering"
+      ]
+    },
+    {
+      "en": "Its natural labellings are the renumberings of the stretch keeping the order of joined exchanges, with no hypothesis on the footprint: increasing along each joined pair, the earlier first, a renumbering increases along every chain of them (keeps_precedes, natural_iff).",
+      "zh": "其自然编号即守相接交换之序之段重编号，足迹无需假设：沿每一相接之对（先者在前）递增之重编号，沿其每一链递增（keeps_precedes、natural_iff）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.keeps_precedes",
+        "Becoming.ReorderingGrowth.natural_iff"
+      ]
+    },
+    {
+      "en": "The numberings a world's reorderings give a stretch are the orders of birth of the courses of growth of its order of exchanges: with the footprint containing the exchanges, a renumbering is a reordering's numbering exactly where it is a natural labelling, and exactly where a course of growth from the empty set relabels the exchanges onto its configuration at the stretch's size (reordering_iff_course).",
+      "zh": "世界之重排给一段之编号，即其交换之序之生长历程之生序：足迹含诸交换时，段之重编号为某重排之编号，恰当其为自然编号，亦恰当某一自空集起之因果集生长历程将诸交换重编于其段长处之构型（reordering_iff_course）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.reordering_iff_course"
+      ]
+    },
+    {
+      "en": "Each reordering is a natural labelling and each natural labelling a reordering's, so what is read on the stretch holds on every natural labelling, or on some, exactly where it holds on every reordering, or on some; where every two consecutive exchanges are joined, the only reordering is the world as it is (reordering_natural and four more).",
+      "zh": "每一重排皆为自然编号，每一自然编号皆为某重排之编号；故段上所读者，于每一（某一）自然编号成立，恰当于每一（某一）重排成立；相邻二交换皆相接时，唯一之重排即世界本身（reordering_natural 等五律）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.reordering_natural",
+        "Becoming.ReorderingGrowth.natural_reordering",
+        "Becoming.ReorderingGrowth.every_reordering_iff",
+        "Becoming.ReorderingGrowth.some_reordering_iff",
+        "Becoming.ReorderingGrowth.reordering_nil"
+      ]
+    },
+    {
+      "en": "A world whose footprint contains its exchanges, taking the stretch's exchanges in the order of a course of growth, with the same footprints and changes and the same start, agrees over the stretch with a reordering (course_converse, by Footprinted.converse).",
+      "zh": "足迹含其交换之世界，依某一生长历程之序取段之交换、足迹与变化相同、起点相同，于段上与某重排相合（course_converse，依 Footprinted.converse）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.course_converse"
+      ]
+    },
+    {
+      "en": "The last link: an exchange precedes a later one exactly where it is joined to it, or precedes an exchange between them joined to it (last_of_precedes, precedes_iff_last).",
+      "zh": "末链：一交换先于后者，恰当其与之相接，或先于二者之间与之相接之交换（last_of_precedes、precedes_iff_last）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.last_of_precedes",
+        "Becoming.ReorderingGrowth.precedes_iff_last"
+      ]
+    },
+    {
+      "en": "Joining decided on the stretch decides the order of exchanges on it, by search over the steps between, and joining weakly decided weakly decides it; precedence weakly decided on the stretch weakly decides that of its causal set (precedes_decided, precedes_weakly and their steps, exchanges_weakly).",
+      "zh": "段上相接可判定，则段上交换之序可判定，依于其间诸步之搜索；相接弱可判定则序弱可判定；段上先后弱可判定，则其因果集之先后弱可判定（precedes_decided、precedes_weakly 及其步、exchanges_weakly）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.precedes_decided_below",
+        "Becoming.ReorderingGrowth.precedes_decided",
+        "Becoming.ReorderingGrowth.precedes_weakly_below",
+        "Becoming.ReorderingGrowth.precedes_weakly",
+        "Becoming.ReorderingGrowth.exchanges_weakly"
+      ]
+    },
+    {
+      "en": "Below an exchange of the stretch, the links of its causal set are the links of the order of exchanges (links_exchanges).",
+      "zh": "段内一交换之下，其因果集之覆盖即交换之序之覆盖（links_exchanges）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.links_exchanges"
+      ]
+    },
+    {
+      "en": "Which of two exchanges a numbering takes first, its present at a stage and presence when an exchange is taken are read on the stretch (before_stretch, maximalBorn_stretch, presentAt_stretch).",
+      "zh": "一编号先取二交换之何者、其某阶段之现在、一交换被取时之在，皆读于段上（before_stretch、maximalBorn_stretch、presentAt_stretch）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.before_stretch",
+        "Becoming.ReorderingGrowth.maximalBorn_stretch",
+        "Becoming.ReorderingGrowth.presentAt_stretch"
+      ]
+    },
+    {
+      "en": "Taken before on every reordering: with no decision, exactly where the precedence is not refuted; with the pair's precedence decided, exactly where it holds (Szpilrajn read on the World), and so with joining decided on the stretch (every_reordering_not_not, precedes_iff_every_reordering, precedes_iff_every_reordering_of_joined).",
+      "zh": "于每一重排皆先取：无判定时，恰当其先后不可否证；该对之先后可判定时，恰当其成立（Szpilrajn 读于世界），段上相接可判定时亦然（every_reordering_not_not、precedes_iff_every_reordering、precedes_iff_every_reordering_of_joined）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.every_reordering_not_not",
+        "Becoming.ReorderingGrowth.precedes_iff_every_reordering",
+        "Becoming.ReorderingGrowth.precedes_iff_every_reordering_of_joined"
+      ]
+    },
+    {
+      "en": "Taken before on some reordering: with precedence weakly decided on the stretch, exactly where the two differ and the other does not precede the one, so two different unrelated exchanges are taken in either order (before_some_reordering, either_order_reordering).",
+      "zh": "于某一重排先取：段上先后弱可判定时，恰当二者相异且他者不先于此者；故二相异而无先后之交换二序皆可取（before_some_reordering、either_order_reordering）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.before_some_reordering",
+        "Becoming.ReorderingGrowth.either_order_reordering"
+      ]
+    },
+    {
+      "en": "The present of any numbering at a stage is an antichain of the order of exchanges; with precedence weakly decided, every antichain given by a test is the present of some reordering, and two exchanges are present together on some reordering exactly where unrelated; with no decision, on every reordering exactly where, doubly negated, they precede the same exchanges of the stretch (present_unrelated and three more).",
+      "zh": "任一编号某阶段之现在为交换之序之反链；先后弱可判定时，以检验给出之每一反链为某重排之现在，二交换于某一重排同处现在恰当其无先后；无判定时，于每一重排同处现在恰当其先于段内同一诸交换不可否证（present_unrelated 等四律）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.present_unrelated",
+        "Becoming.ReorderingGrowth.antichain_present_reordering",
+        "Becoming.ReorderingGrowth.together_some_reordering",
+        "Becoming.ReorderingGrowth.together_every_reordering_not_not"
+      ]
+    },
+    {
+      "en": "An exchange is present when another is taken on some reordering exactly where it is a link below it in the order of exchanges (precedence weakly decided), and on every reordering exactly where it is a link below it and a link below no other exchange of the stretch (no decision) (present_some_reordering, present_every_reordering).",
+      "zh": "一交换于另一交换被取时在：于某一重排，恰当其于交换之序中为其下之覆盖（先后弱可判定）；于每一重排，恰当其为其下之覆盖且不为段内他交换之覆盖（无需判定）（present_some_reordering、present_every_reordering）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.present_some_reordering",
+        "Becoming.ReorderingGrowth.present_every_reordering"
+      ]
+    },
+    {
+      "en": "Presence on the world as it is is precedence with no exchange between joined to the earlier one; so, with the footprint containing the exchanges, an exchange present when another is taken leaves every relatum it touched shown then as right after its own step, on the world and on every reordering where it is present (present_identity_iff, persists_of_present and three more).",
+      "zh": "世界本身之在，即先后且其间无交换与先者相接；故足迹含诸交换时，一交换于另一交换被取时在，则其所触之每一关系项于彼时之显如其本步之后；于世界本身与其在之每一重排皆然（first_of_precedes、present_identity_iff、sameAt_of_unmoved、persists_of_present 及其重排之形）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.first_of_precedes",
+        "Becoming.ReorderingGrowth.present_identity_iff",
+        "Becoming.ReorderingGrowth.sameAt_of_unmoved",
+        "Becoming.ReorderingGrowth.persists_of_present",
+        "Becoming.ReorderingGrowth.persists_of_present_reordering"
+      ]
+    },
+    {
+      "en": "Not conversely, through a dependence: in a world of three exchanges with an empty flow, whose middle exchange touches nothing the first touches and is joined to it through a dependence, what the first touched persists to the last step, yet on no reordering is the first present then (ByDependence and its laws).",
+      "zh": "反之不然，经依赖：三交换之世界，流为空，其中间交换不触首交换所触者，而经依赖与之相接；首交换所触者持存至末步，而于任何重排首交换彼时皆不在（ByDependence 及其律）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.ByDependence.standing",
+        "Becoming.ReorderingGrowth.ByDependence.web",
+        "Becoming.ReorderingGrowth.ByDependence.dependent",
+        "Becoming.ReorderingGrowth.ByDependence.touch",
+        "Becoming.ReorderingGrowth.ByDependence.world",
+        "Becoming.ReorderingGrowth.ByDependence.contains",
+        "Becoming.ReorderingGrowth.ByDependence.joined_first_middle",
+        "Becoming.ReorderingGrowth.ByDependence.joined_first_last",
+        "Becoming.ReorderingGrowth.ByDependence.joined_middle_last",
+        "Becoming.ReorderingGrowth.ByDependence.persists_not_present",
+        "Becoming.ReorderingGrowth.ByDependence.only_reordering"
+      ]
+    },
+    {
+      "en": "Not conversely, with no dependence and the least footprint: in a world of four exchanges each touching only the relatum 0, which rises, rises, falls back and rises, the footprint touches only what moves, every two exchanges are joined, and what the first touched persists to the last step, yet the first is present then on no reordering (MovedBack and its laws).",
+      "zh": "反之不然，无依赖且足迹最小：四交换之世界，各唯触关系项 0，其升、升、回落、升；足迹唯触所动者，任二交换相接；首交换所触者持存至末步，而于任何重排首交换彼时皆不在（MovedBack 及其律）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.MovedBack.standing",
+        "Becoming.ReorderingGrowth.MovedBack.web",
+        "Becoming.ReorderingGrowth.MovedBack.touch",
+        "Becoming.ReorderingGrowth.MovedBack.world",
+        "Becoming.ReorderingGrowth.MovedBack.contains",
+        "Becoming.ReorderingGrowth.MovedBack.touches_moved",
+        "Becoming.ReorderingGrowth.MovedBack.joined",
+        "Becoming.ReorderingGrowth.MovedBack.persists_not_present",
+        "Becoming.ReorderingGrowth.MovedBack.only_reordering"
+      ]
+    },
+    {
+      "en": "The vee as a world: one exchange changing two relata, then one changing each; its order of exchanges is the vee of the present on causal-set growth, commuting the later two is a reordering, and the first is present when the last is taken on that reordering and not on the world as it is, the two numberings being by one course (VeeWorld and its laws).",
+      "zh": "作为世界之叉：一交换改二关系项，继之各改其一者；其交换之序即因果集生长上之现在之叉，互换后二者为一重排，首交换于末交换被取时，于该重排在，于世界本身不在，二编号同属一历程（VeeWorld 及其律）。",
+      "declarations": [
+        "Becoming.ReorderingGrowth.VeeWorld.standing",
+        "Becoming.ReorderingGrowth.VeeWorld.web",
+        "Becoming.ReorderingGrowth.VeeWorld.touch",
+        "Becoming.ReorderingGrowth.VeeWorld.world",
+        "Becoming.ReorderingGrowth.VeeWorld.contains",
+        "Becoming.ReorderingGrowth.VeeWorld.joined_first_second",
+        "Becoming.ReorderingGrowth.VeeWorld.joined_first_third",
+        "Becoming.ReorderingGrowth.VeeWorld.apart",
+        "Becoming.ReorderingGrowth.VeeWorld.not_second_third",
+        "Becoming.ReorderingGrowth.VeeWorld.vee_of_precedes",
+        "Becoming.ReorderingGrowth.VeeWorld.prec_iff_vee",
+        "Becoming.ReorderingGrowth.VeeWorld.natural_iff_vee",
+        "Becoming.ReorderingGrowth.VeeWorld.reordering",
+        "Becoming.ReorderingGrowth.VeeWorld.presence_varies",
+        "Becoming.ReorderingGrowth.VeeWorld.swap_below",
+        "Becoming.ReorderingGrowth.VeeWorld.vee_swap",
+        "Becoming.ReorderingGrowth.VeeWorld.one_course_two_numberings"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The causal set of a stretch, its natural labellings, the last link, the decisions, presence on the world as it is, the present as an antichain and the witnesses take no hypothesis on the footprint; the representation, the laws on reorderings and persistence take the footprint containing the exchanges (Footprinted.Contains).",
+      "zh": "不加公理。段之因果集、其自然编号、末链、诸判定、世界本身之在、现在为反链与诸例，于足迹无需假设；表示、诸重排上之律与持存需足迹含诸交换（Footprinted.Contains）。"
+    },
+    {
+      "en": "Decisions are Prop-valued (the core's Decided and WeaklyDecided): joining decided or weakly decided for the pairs of the stretch gives precedence so decided; the laws on some reordering and on antichains take precedence weakly decided on the stretch; the law on every reordering takes the pair's precedence decided or none.",
+      "zh": "判定取命题值（核心之 Decided、WeaklyDecided）：段内诸对之相接可判定或弱可判定，给出先后之同等判定；于某一重排与反链之律需段上先后弱可判定；于每一重排之律需该对先后可判定，或无需判定。"
+    },
+    {
+      "en": "Modelling choices: the stretch is the first m steps; the footprint is given, decided relatum by relatum, may touch a relatum it does not move, and the order of exchanges is relative to it; presence is read as the present on causal-set growth reads it; antichains are given by a Boolean test; the witnesses' flows are empty; pointwise, with no function extensionality.",
+      "zh": "建模之选：段为前 m 步；足迹给定，逐关系项可判定，可触其不动之关系项，交换之序相对于之；在之读法同因果集生长上之现在；反链以布尔检验给出；诸例之流为空；皆逐点，不用函数外延性。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Anything about processes without a footprint, continuous time, infinite stretches, stretches from another step, or the present of a center.",
+      "zh": "关于无足迹之过程、连续时间、无穷之段、自他步起之段或一中心之现在之任何事。",
+      "kind": "scope"
+    },
+    {
+      "en": "The laws of the present on causal-set growth that take a Decidable instance of the whole precedence, on the World; three of their forms with no decision are instanced, and past_every_iff has none.",
+      "zh": "因果集生长上之现在中需整体先后之 Decidable 实例之律，于世界之形；其无需判定之形三者已实例化，past_every_iff 无此形。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The World's representation theorem of the one-unfolding plan: this is one aspect of it, the interleavings.",
+      "zh": "一体展开计划中世界之表示定理：此为其一面，即交错。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the World gives the footprint: it is supplied, and the order of exchanges is relative to it.",
+      "zh": "足迹由世界给出：其为所给，交换之序相对于之。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which presence or which reordering is better.",
+      "zh": "何种在或何重排更好。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReorderingGrowth.lean",
+      "detail": {
+        "en": "In a world of three exchanges whose middle exchange is joined to the first only through a dependence, what the first touched persists to the last step, yet on no reordering is the first present when the last is taken (ByDependence.persists_not_present).",
+        "zh": "三交换之世界，其中间交换唯经依赖与首交换相接：首交换所触者持存至末步，而于任何重排首交换于末交换被取时皆不在（ByDependence.persists_not_present）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReorderingGrowth.lean",
+      "detail": {
+        "en": "In a world of four exchanges on one relatum, moved and moved back, with no dependence and the least footprint, what the first touched persists to the last step, yet the first is present then on no reordering (MovedBack.persists_not_present).",
+        "zh": "四交换于一关系项之世界，动而复回，无依赖且足迹最小：首交换所触者持存至末步，而于任何重排首交换彼时皆不在（MovedBack.persists_not_present）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReorderingGrowth.lean",
+      "detail": {
+        "en": "On the vee as a world the first exchange is present when the last is taken on one reordering and not on the world as it is, the two numberings being by one course (VeeWorld.presence_varies, VeeWorld.one_course_two_numberings).",
+        "zh": "于作为世界之叉，首交换于末交换被取时，于一重排在，于世界本身不在，二编号同属一历程（VeeWorld.presence_varies、VeeWorld.one_course_two_numberings）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T083434.601834Z): all 76 declarations of Becoming.ReorderingGrowth, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE15) and a re-check, study section 438; not reviewed by a person. Most laws compose landed theorems.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261028T083434.601834Z）：Becoming.ReorderingGrowth 之全部 76 项声明，公理报告皆空。由一 AI 代理起草，会话中审读；另一 AI 代理作独立只读审查（REVIEW-UE15）并复查，见研究第 438 节；未经人审。多数律组合已落地之定理。"
+  },
+  "next_delta": {
+    "en": "Presence on processes without a footprint; stretches from any step and infinite ones; the present of a center; review by a person.",
+    "zh": "无足迹之过程上之在；自任一步起之段与无穷之段；一中心之现在；人之审查。"
+  },
+  "correspondence": {
+    "en": "Trace theory: the linear extensions of a trace's dependence order are exactly its interleavings (Mazurkiewicz 1977; Diekert and Rozenberg 1995), here the World's own form of it (Footprinted.sorts_iff, landed), and the prefixes of a trace correspond to the down-sets of its dependence order, the configurations of its event structure (Nielsen, Plotkin and Winskel 1981). Szpilrajn's extension theorem in Dushnik and Miller's intersection form (1930, 1941) gives the law on every reordering. Causal set theory reads the natural labellings as the paths of sequential growth (Rideout and Sorkin 2000); the composition follows at once from these two facts, and a light search found no paper connecting traces with causal-set growth. Presence giving persistence is an elementary consequence of a footprint containing the exchanges. Graded in UE15's NOTE.",
+    "zh": "迹论：迹之依赖序之线性扩张恰为其交错（Mazurkiewicz 1977；Diekert、Rozenberg 1995），此处为世界自身之形（Footprinted.sorts_iff，已落地）；迹之前缀对应于其依赖序之下集，即其事件结构之构型（Nielsen、Plotkin、Winskel 1981）。Szpilrajn 扩张定理之 Dushnik 与 Miller 交之形（1930、1941）给出于每一重排之律。因果集理论读自然编号为序贯生长之路径（Rideout、Sorkin 2000）；组合由此二事立得，粗略搜索未见连迹论与因果集生长之文。在则持存为足迹含诸交换之浅显推论。分级见 UE15 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReorderingGrowth.lean",
+  "aliases": [
+    "A world's reorderings as courses of growth",
+    "世界之重排作为生长之历程",
+    "interleavings as causal-set growth",
+    "presence on the World",
+    "presence gives persistence",
+    "Becoming.ReorderingGrowth.reordering_iff_course",
+    "Becoming.ReorderingGrowth.persists_of_present",
+    "Becoming.ReorderingGrowth.present_every_reordering",
+    "Becoming.ReorderingGrowth.present_identity_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "order-of-exchanges-is-the-invariant",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Footprinted, Contains, Joined, Precedes, Keeps, sorts, sorts_iff, converse, reorder_shows, precedes_place, place_origin, Web.SameAt and Web.Unmoved: the World's order of exchanges and its reorderings.",
+        "zh": "Footprinted、Contains、Joined、Precedes、Keeps、sorts、sorts_iff、converse、reorder_shows、precedes_place、place_origin、Web.SameAt 与 Web.Unmoved：世界之交换之序及其重排。"
+      }
+    },
+    {
+      "id": "normal-forms-need-decided-apartness",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "reindexes_of_within and Footprinted.reorder_determined: a reordering renumbers its stretch, and reorderings giving one numbering agree over it.",
+        "zh": "reindexes_of_within 与 Footprinted.reorder_determined：一重排重编其段，给同一编号之诸重排于段上相合。"
+      }
+    },
+    {
+      "id": "exchanges-commute-unless-joined",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.Dependent and swapAt: activity needing support, met by the witness, and the exchange of two neighbours; Witnesses.emptyFlow, the empty flow, is cited by no record.",
+        "zh": "Web.Dependent 与 swapAt：活动需支持（例中满足之），及二邻之互换；空流 Witnesses.emptyFlow 无记录引之。"
+      }
+    },
+    {
+      "id": "the-present-on-causal-set-growth",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "NaturalLabelling, natural_iff_course, natural_congr, courseOf, MaximalBorn, PresentAt, the laws on every and some course and Vee.vee: the present on causal-set growth.",
+        "zh": "NaturalLabelling、natural_iff_course、natural_congr、MaximalBorn、PresentAt 及于每一与某一历程之律：因果集生长上之现在。"
+      }
+    },
+    {
+      "id": "precedence-and-its-links",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Causet and links: causal sets and their links.",
+        "zh": "Causet 与 links：因果集与其覆盖。"
+      }
+    },
+    {
+      "id": "what-can-be-born-next",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "process, empty and Kinds.Relabels: the growth and relabelling.",
+        "zh": "process、empty 与 Kinds.Relabels：生长与重编号。"
+      }
+    },
+    {
+      "id": "counts-exist-where-decided",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Decided, Decided.of_not_not and Decided.exists_below: deciding, and searching below a bound.",
+        "zh": "Decided、Decided.of_not_not 与 Decided.exists_below：判定，及于界下搜索。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReorderingGrowth.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReorderingGrowth.ByDependence.contains",
+        "Becoming.ReorderingGrowth.ByDependence.dependent",
+        "Becoming.ReorderingGrowth.ByDependence.joined_first_last",
+        "Becoming.ReorderingGrowth.ByDependence.joined_first_middle",
+        "Becoming.ReorderingGrowth.ByDependence.joined_middle_last",
+        "Becoming.ReorderingGrowth.ByDependence.only_reordering",
+        "Becoming.ReorderingGrowth.ByDependence.persists_not_present",
+        "Becoming.ReorderingGrowth.ByDependence.standing",
+        "Becoming.ReorderingGrowth.ByDependence.touch",
+        "Becoming.ReorderingGrowth.ByDependence.web",
+        "Becoming.ReorderingGrowth.ByDependence.world",
+        "Becoming.ReorderingGrowth.MovedBack.contains",
+        "Becoming.ReorderingGrowth.MovedBack.joined",
+        "Becoming.ReorderingGrowth.MovedBack.only_reordering",
+        "Becoming.ReorderingGrowth.MovedBack.persists_not_present",
+        "Becoming.ReorderingGrowth.MovedBack.standing",
+        "Becoming.ReorderingGrowth.MovedBack.touch",
+        "Becoming.ReorderingGrowth.MovedBack.touches_moved",
+        "Becoming.ReorderingGrowth.MovedBack.web",
+        "Becoming.ReorderingGrowth.MovedBack.world",
+        "Becoming.ReorderingGrowth.Reordering",
+        "Becoming.ReorderingGrowth.VeeWorld.apart",
+        "Becoming.ReorderingGrowth.VeeWorld.contains",
+        "Becoming.ReorderingGrowth.VeeWorld.joined_first_second",
+        "Becoming.ReorderingGrowth.VeeWorld.joined_first_third",
+        "Becoming.ReorderingGrowth.VeeWorld.natural_iff_vee",
+        "Becoming.ReorderingGrowth.VeeWorld.not_second_third",
+        "Becoming.ReorderingGrowth.VeeWorld.one_course_two_numberings",
+        "Becoming.ReorderingGrowth.VeeWorld.prec_iff_vee",
+        "Becoming.ReorderingGrowth.VeeWorld.presence_varies",
+        "Becoming.ReorderingGrowth.VeeWorld.reordering",
+        "Becoming.ReorderingGrowth.VeeWorld.standing",
+        "Becoming.ReorderingGrowth.VeeWorld.swap_below",
+        "Becoming.ReorderingGrowth.VeeWorld.touch",
+        "Becoming.ReorderingGrowth.VeeWorld.vee_of_precedes",
+        "Becoming.ReorderingGrowth.VeeWorld.vee_swap",
+        "Becoming.ReorderingGrowth.VeeWorld.web",
+        "Becoming.ReorderingGrowth.VeeWorld.world",
+        "Becoming.ReorderingGrowth.antichain_present_reordering",
+        "Becoming.ReorderingGrowth.before_some_reordering",
+        "Becoming.ReorderingGrowth.before_stretch",
+        "Becoming.ReorderingGrowth.course_converse",
+        "Becoming.ReorderingGrowth.either_order_reordering",
+        "Becoming.ReorderingGrowth.every_reordering_iff",
+        "Becoming.ReorderingGrowth.every_reordering_not_not",
+        "Becoming.ReorderingGrowth.exchanges",
+        "Becoming.ReorderingGrowth.exchanges_ordered",
+        "Becoming.ReorderingGrowth.exchanges_weakly",
+        "Becoming.ReorderingGrowth.first_of_precedes",
+        "Becoming.ReorderingGrowth.keeps_precedes",
+        "Becoming.ReorderingGrowth.last_of_precedes",
+        "Becoming.ReorderingGrowth.links_exchanges",
+        "Becoming.ReorderingGrowth.maximalBorn_stretch",
+        "Becoming.ReorderingGrowth.natural_iff",
+        "Becoming.ReorderingGrowth.natural_reordering",
+        "Becoming.ReorderingGrowth.persists_of_present",
+        "Becoming.ReorderingGrowth.persists_of_present_reordering",
+        "Becoming.ReorderingGrowth.precedes_decided",
+        "Becoming.ReorderingGrowth.precedes_decided_below",
+        "Becoming.ReorderingGrowth.precedes_iff_every_reordering",
+        "Becoming.ReorderingGrowth.precedes_iff_every_reordering_of_joined",
+        "Becoming.ReorderingGrowth.precedes_iff_last",
+        "Becoming.ReorderingGrowth.precedes_weakly",
+        "Becoming.ReorderingGrowth.precedes_weakly_below",
+        "Becoming.ReorderingGrowth.presentAt_stretch",
+        "Becoming.ReorderingGrowth.present_every_reordering",
+        "Becoming.ReorderingGrowth.present_identity_iff",
+        "Becoming.ReorderingGrowth.present_some_reordering",
+        "Becoming.ReorderingGrowth.present_unrelated",
+        "Becoming.ReorderingGrowth.reordering_iff_course",
+        "Becoming.ReorderingGrowth.reordering_natural",
+        "Becoming.ReorderingGrowth.reordering_nil",
+        "Becoming.ReorderingGrowth.sameAt_of_unmoved",
+        "Becoming.ReorderingGrowth.some_reordering_iff",
+        "Becoming.ReorderingGrowth.together_every_reordering_not_not",
+        "Becoming.ReorderingGrowth.together_some_reordering"
+      ],
+      "sha256": "95542f2ac457ba1543ee71086636304f40df43a4b3eb4dbbb7b02f758be9d98e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+      "role": "proof",
+      "sha256": "e4f148e78595549e6f7f2cc3cb9ef907fbd158cac7aaca8b3eaddf2fe8603189"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
+      "role": "proof",
+      "sha256": "8a1c8e9c9d9ed0dc9ec7955424905c901747756302354b6048d2ffe56e5b3726"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+      "role": "proof",
+      "sha256": "f233c6800d90c4554f572a85d5ce73b7e48107bfc1b9012ec4a8490d6f78f1e1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
+      "role": "proof",
+      "sha256": "72adbc08546ed505f267db376a96975728150ed719f941491095075bfe688f93"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
+      "role": "proof",
+      "sha256": "0a90c1135ccab9ae2fe35c076f132ec7fd2aa7feb49f6e2bac9ea16329a81215"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T083434.601834Z/verification.json",
+      "role": "receipt",
+      "sha256": "bcf8d383c0c6e8db535c5249210428612aae6806cfdab635bb10f83abeb48e3c"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "b94941db7a2d31b79d543df94f711b069cc3efa33bb39d35ecf8a675c22f7f8b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/NOTE.md",
+      "role": "integration",
+      "sha256": "b003ef85825eac4a4b34c80392b0c74e61e629bba37528b015ff921bd7343a4b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/REVIEW-UE15.md",
+      "role": "integration",
+      "sha256": "2c26fe967704740eb0df9d657d9ccddfa2624174005237ad99b44f7e82f055a5"
+    },
+    {
+      "path": "theories/becoming/chapters/01-ROOT.md",
+      "role": "statement",
+      "sha256": "7e581cfdc432443d81d99c743ecbe339e0b9ba43ac0358ffc9b2854f5f91bf92"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReorderingGrowth.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T083434.601834Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReorderingGrowth",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "28 October 2026: added (UE15), a world's reorderings as courses of growth: the exchanges of a stretch a causal set under the order of joined exchanges, its natural labellings the renumberings keeping it, so with the footprint containing the exchanges the reorderings the courses of causal-set growth; the laws of presence on the reorderings by instance, each with its decision; presence on the world as it is precedence with nothing between joined to the earlier exchange, giving persistence of what it touched, not conversely, through a dependence or by moving and moving back; the vee as a world; after a review and a re-check; study section 438.",
+      "zh": "2026年10月28日：新增（UE15），世界之重排作为生长之历程：一段之交换在相接交换之序下成因果集，其自然编号即守此序之重编号，故足迹含诸交换时，诸重排即因果集生长之历程；在之诸律依实例成立于诸重排，各带其判定；世界本身之在即先后且其间无交换与先者相接，给出所触者之持存，反之不然，经依赖或动而复回；作为世界之叉；经审查与复查；研究第 438 节。"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# UE15 draft notes: `Becoming.ReorderingGrowth`
+
+28 October 2026. AI-written notes on the scratch draft [tree/Becoming/ReorderingGrowth.lean](tree/Becoming/ReorderingGrowth.lean) (namespace `Becoming.ReorderingGrowth`, importing only `Becoming.Presence`), for the [design](DESIGN.md). Last scratch build, [scratch-7.log](scratch-7.log): **49 theorems in 60 declarations, every axiom report empty, nothing unclean.** Not landed: no checker receipt, no record, no entry in `check_becoming.py`. `tree/.build/` is scratch build output (gitignored).
+
+## The laws
+
+1. **The exchanges of a stretch form a causal set.** `exchanges r m` (size `m`, precedence `i < m ∧ j < m ∧ r.Precedes i j`), `exchanges_ordered`.
+2. **Its natural labellings are the reorderings.** `keeps_precedes`: a renumbering keeping joined pairs keeps every chain of them (recursion on `Precedes`). `natural_iff`: `NaturalLabelling (exchanges r m) π σ ↔ Reindexes 0 m π σ ∧ r.Keeps 0 m π`, with no `Contains`. `reorderings_are_courses` (one theorem, with `r.Contains` and `Reindexes 0 m π σ`): the left side of `sorts_iff` at `S := 0` holds exactly where `π` is a natural labelling, and exactly where `∃ run : Run process, run.state 0 = empty ∧ Kinds.Relabels (exchanges r m) (run.state m) π σ`. `Reordering r m ts` names a reordering of the stretch (commutations within it, `Independent`); `reordering_natural` and `natural_reordering` pass between the two, and `every_reordering_iff` and `some_reordering_iff` carry anything read on the stretch. `course_converse` composes `converse` cleanly: a world taking the same exchanges in the order of a course agrees with a reordering.
+3. **Decisions.** `last_of_precedes` and `precedes_iff_last` (joined to it, or preceding an exchange between them that is joined to it). `precedes_decided`: joining `Decided` on the stretch (pairs `a < b < m`) decides `r.Precedes i j` for `j < m`, by recursion on a bound with `Decided.exists_below`. `precedes_weakly` is the weak form, through `Presence.weakly_exists_below`. `exchanges_weakly` and `links_exchanges` translate to the causal set.
+4. **The laws of presence on the World.** Each is a `Presence` law on `exchanges r m` composed with the transfer lemmas and stated on reorderings (numbering `place ts`). Every law here needs `r.Contains`, except `present_unrelated`.
+   - `every_reordering_not_not` takes no decision: taken first on every reordering ↔ `¬ ¬ r.Precedes i j` (`every_iff_not_not`). `precedes_iff_every_reordering` decides only the pair, `Decided (r.Precedes i j)`. `precedes_iff_every_reordering_of_joined` decides joining on the stretch.
+   - `before_some_reordering` (`before_some_iff`) and `either_order_reordering` take precedence weakly decided on the stretch.
+   - `present_unrelated` (`maximalBorn_unrelated`) holds for any numbering with no hypotheses. `antichain_present_reordering` (`antichain_present`) and `together_some_reordering` (`together_some_iff`) take the weak decision.
+   - `present_some_reordering` (`present_some_iff_link`, weakly decided) and `present_every_reordering` (`present_every_iff_only_link`, no decision) state their links on `r.Precedes` itself. In the second law, the other exchanges `i` must not be linked to range over the stretch only.
+5. **What presence means on the World.** `present_persists`: with `r.Contains` and `PresentAt (exchanges r m) (fun k => k) i j`, every `x` with `r.touch i x = true` has `r.web.SameAt (i + 1) r.web j x`. It extends to reorderings: `present_persists_reordering` (on a reordering, the reordered world shows `x` at `place ts j` as the world shows it right after `i`). The converse fails in `ByDependence.persists_not_present`, a world containing its exchanges and meeting `Web.Dependent` (`ByDependence.dependent`): exchanges 0 and 2 touch relatum 0, and exchange 1 touches relatum 1, which requires relatum 0, so it is joined to exchange 0 only through that dependence. Relatum 0 is shown at step 2 as at step 1, yet on no reordering is exchange 0 present when exchange 2 is taken.
+6. **The vee as a world.** In `VeeWorld`: `contains`; `apart` (`¬ Joined 1 2`); `reordering` (`[1]` is a reordering); `prec_iff_vee` and `natural_iff_vee` (its order of exchanges is `Presence.Vee.vee`); `presence_varies` (exchange 0 is not present when exchange 2 is taken on `[]`, and is present on `[1]`).
+
+## Deviations
+
+- **Prop-valued decisions.** The hypotheses are `Decided` or `WeaklyDecided` joining on the stretch, not a Boolean or `Decidable` joining. This hypothesis is weaker, since a Boolean or `Decidable` joining gives it. The law on every reordering needs only the pair decided, through `every_iff_not_not`, not `prec_iff_every` (which needs a `Decidable` instance of the whole precedence). As a result, no `Decidable` data is built on `exchanges r m`. The instance-taking laws (`prec_iff_every`, `past_every_iff`, `together_every_iff`, and `present_every_iff` with `LeastAbove`) are therefore not instanced. Their no-decision forms are reachable through the transfer lemmas.
+- **Laws stated on reorderings.** The laws are stated on the World's own reorderings rather than only on natural labellings of `exchanges r m`. The natural-labelling forms are the `Presence` laws applied directly.
+- **Beyond the brief.** `present_persists_reordering`, `either_order_reordering`, `together_some_reordering`, `ByDependence.dependent`, `VeeWorld.natural_iff_vee`.
+- **The design's loose points.** Both follow the brief: the module imports `Becoming.Presence` only, and the present and presence are `Presence.MaximalBorn` and `Presence.PresentAt`.
+
+## Left out
+
+- Stretches from a step `S ≠ 0`, which the brief did not need.
+- Course forms of the World laws. Each follows from `reorderings_are_courses` with Presence's course forms.
+- Reuse of existing witnesses. `Order.Crossing` and `Order.Arising` in `Reordering.lean` have two exchanges and no fixed footprint, and the converse of law 4 needs a third exchange joined to the first through a shared relatum. The two worlds here are new and small, with empty flows (`emptyFlow`): their exchanges change standings only.
+
+The module header states the modelling choices for a record: a finite stretch of the first `m` steps, a given footprint, presence as maximality among the exchanges taken.

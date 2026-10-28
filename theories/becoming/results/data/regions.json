@@ -1571,6 +1571,11 @@
    "base": "periphery",
    "note": "no-recovery wear law"
   },
+  "reorderings-as-courses-of-growth": {
+   "region": "root",
+   "base": "old-base",
+   "note": "ReorderingGrowth UE15: the exchanges of a stretch a causal set under the order of joined exchanges; with the footprint containing the exchanges, the reorderings the courses of causal-set growth, as numberings; the laws of presence on the reorderings by instance; presence on the world as it is gives persistence of what an exchange touched, not conversely; the vee as a world"
+  },
   "repeated-disturbance": {
    "region": "map",
    "base": "old-base",
@@ -3652,6 +3657,11 @@
    "region": "method",
    "base": "old-base",
    "note": "P78/P78b commuting independent exchanges keep premises; modelling test"
+  },
+  "Becoming.ReorderingGrowth": {
+   "region": "root",
+   "base": "old-base",
+   "note": "UE15 a world's reorderings as courses of growth (01 §9.6)"
   },
   "Becoming.Reproduction": {
    "region": "life",

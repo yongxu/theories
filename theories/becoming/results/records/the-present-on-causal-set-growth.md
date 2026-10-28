@@ -94,6 +94,9 @@ Causal set theory: natural labellings as linear extensions, links, partial stems
 - **formal-reuse**: [order-of-exchanges-is-the-invariant](order-of-exchanges-is-the-invariant.md). Reindexes: renumberings of a stretch.
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «际», «亡» and «一»: relations, ending and the one class.
 - **formal-reuse**: [counts-exist-where-decided](counts-exist-where-decided.md). Decided, Decided.of_not_not and not_not_decided: deciding, and that a proposition is decided cannot be refuted; WeaklyDecided, the weak form in the same module, is cited only by chapter 7's records, so no edge is drawn to them.
+- related, not a proved adapter: [reorderings-as-courses-of-growth](reorderings-as-courses-of-growth.md). A world's reorderings as courses of growth: with a footprint containing the exchanges, the laws of presence on causal-set growth hold on a world's reorderings of its first m steps by instance.
+
+**Used by:** [reorderings-as-courses-of-growth](reorderings-as-courses-of-growth.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -118,6 +121,7 @@ Aliases: `The present on causal-set growth`, `因果集生长上之现在`, `pre
 ### History
 
 - 28 October 2026: added (UE14), the present on causal-set growth, read as the maximal elements of what a course has born: natural labellings exactly the orders of birth, births of unrelated elements commuting; born before on every course precedence, the past the largest relation every course respects; every antichain a present; present together on every course the same future; presence at a birth on some course a link, on every course the one link with no decision; each calibrated decision exact; each main law also stated on the courses; Wüthrich and Callender's relation on the diamond and off it; after a review and a re-check; study section 432.
+- 28 October 2026, board item UE15 (study section 438): related to reorderings-as-courses-of-growth; no statement, next step or declaration changed.
 
 </details>
 

@@ -1,0 +1,20 @@
+Becoming/ReorderingGrowth.lean:745:3: error: Application type mismatch: The argument
+  Presence.natural_congr rfl ?m.11
+has type
+  NaturalLabelling ?m.7 ?m.12 ?m.13 → NaturalLabelling ?m.7 ?m.12 ?m.13
+but is expected to have type
+  NaturalLabelling (exchanges world 3) π σ → NaturalLabelling Presence.Vee.vee π σ
+in the application
+  Iff.intro (Presence.natural_congr rfl ?m.11)
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/tree",
+  "modules": 83,
+  "ran": [
+    "Becoming.ReorderingGrowth"
+  ],
+  "reused": 82,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.ReorderingGrowth"
+}

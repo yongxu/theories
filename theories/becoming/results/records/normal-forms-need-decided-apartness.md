@@ -72,7 +72,7 @@ This result reuses the sorting and order of “The order of exchanges as the inv
   - Preserved conditions: Finite stretch; a containing footprint; canonical representative additionally uses the apartness decision. [Reordering.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean)
 - related, not a proved adapter: [least-footprint-where-idleness-decided](least-footprint-where-idleness-decided.md). The least footprint supplies the least reading of joining; its idleness decision differs from this record’s finite-stretch apartness decision.
 
-**Used by:** [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md)
+**Used by:** [reorderings-as-courses-of-growth](reorderings-as-courses-of-growth.md) · [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md)
 
 <a id="sources--来源"></a>
 ### Sources

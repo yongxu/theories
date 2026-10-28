@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/tree",
+  "modules": 83,
+  "ran": [
+    "Becoming.ReorderingGrowth",
+    "BecomingReorderingGrowthAxiomAudit"
+  ],
+  "reused": 82,
+  "unclean": [],
+  "audits": {
+    "Becoming.ReorderingGrowth": {
+      "theorems": 62,
+      "declarations": 76,
+      "with_axioms": {}
+    }
+  }
+}

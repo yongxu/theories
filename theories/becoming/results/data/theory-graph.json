@@ -4112,6 +4112,18 @@
    "page": "theories/becoming/results/records/renewing-consuming-formation.md"
   },
   {
+   "id": "record:reorderings-as-courses-of-growth",
+   "type": "result",
+   "record": "reorderings-as-courses-of-growth",
+   "title": "A world's reorderings as courses of growth",
+   "title_zh": "世界之重排作为生长之历程",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/reorderings-as-courses-of-growth.md"
+  },
+  {
    "id": "record:repeated-disturbance",
    "type": "result",
    "record": "repeated-disturbance",
@@ -7200,6 +7212,17 @@
    "region": "root",
    "base": "frame",
    "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ReorderingGrowth",
+   "type": "module",
+   "name": "Becoming.ReorderingGrowth",
+   "level": "L1",
+   "theorems": 62,
+   "region": "root",
+   "base": "old-base",
+   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -27319,6 +27342,12 @@
    "anchor": "r-order-of-exchanges-is-the-invariant"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-reorderings-as-courses-of-growth",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-reorderings-as-courses-of-growth"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-least-footprint-where-idleness-decided",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -32606,6 +32635,11 @@
   {
    "from": "module:Becoming.Reordering",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReorderingGrowth",
+   "to": "module:Becoming.Presence",
    "type": "imports"
   },
   {
@@ -44964,6 +44998,11 @@
    "type": "related"
   },
   {
+   "from": "record:order-of-exchanges-is-the-invariant",
+   "to": "record:reorderings-as-courses-of-growth",
+   "type": "related"
+  },
+  {
    "from": "record:order-of-exchanges-sharing-a-relatum",
    "to": "module:Becoming.Interleavings",
    "type": "proved-in"
@@ -47317,6 +47356,71 @@
    "from": "record:renewing-consuming-formation",
    "to": "record:theory-of-becoming-foundation",
    "type": "related"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "module:Becoming.CausalGrowth",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "module:Becoming.Decidedness",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "module:Becoming.OrderNormal",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "module:Becoming.Presence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "module:Becoming.Reordering",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "module:Becoming.ReorderingGrowth",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "record:counts-exist-where-decided",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "record:exchanges-commute-unless-joined",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "record:normal-forms-need-decided-apartness",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "record:order-of-exchanges-is-the-invariant",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "record:precedence-and-its-links",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "record:the-present-on-causal-set-growth",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
+   "to": "record:what-can-be-born-next",
+   "type": "formal-reuse"
   },
   {
    "from": "record:repeated-disturbance",
@@ -50452,6 +50556,11 @@
    "from": "record:the-present-on-causal-set-growth",
    "to": "record:precedence-and-its-links",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "record:reorderings-as-courses-of-growth",
+   "type": "related"
   },
   {
    "from": "record:the-present-on-causal-set-growth",
@@ -55236,6 +55345,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
    "to": "record:recurrence-without-premise",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-reorderings-as-courses-of-growth",
+   "to": "record:reorderings-as-courses-of-growth",
    "type": "states"
   },
   {

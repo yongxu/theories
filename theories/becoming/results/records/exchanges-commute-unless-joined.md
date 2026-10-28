@@ -70,7 +70,7 @@ Reading (the AI's, adopted on Ren's delegation): within the order, what shows is
 - related, not a proved adapter: [order-of-exchanges-is-the-invariant](order-of-exchanges-is-the-invariant.md). The partial order of exchanges and the converse are in the other record.
 - related, not a proved adapter: [least-footprint-where-idleness-decided](least-footprint-where-idleness-decided.md). P88 supplies the least footprint with decided idleness; its converse additionally needs decidable equality of relata.
 
-**Used by:** [order-of-exchanges-is-the-invariant](order-of-exchanges-is-the-invariant.md)
+**Used by:** [order-of-exchanges-is-the-invariant](order-of-exchanges-is-the-invariant.md) · [reorderings-as-courses-of-growth](reorderings-as-courses-of-growth.md)
 
 <a id="sources--来源"></a>
 ### Sources
