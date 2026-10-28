@@ -9,7 +9,7 @@ Each law was read against its declarations in `Becoming/Lasting.lean` and `Becom
 | Old text | Type | New place |
 |---|---|---|
 | T0 “Positive seed intervals that finite support cannot rescue in time” | title | title (unchanged) |
-| S0 “For every family of levels the steps drain, from a start below level n no admissible history satisfies the guard at every step through n;” | statement | statement, restated positively (“leaves the guard within n steps on every admissible history”) |
+| S0 “For every family of levels the steps drain, from a start below level n no admissible history satisfies the guard at every step through n;” | statement | statement (“has no admissible history within the guard at every step through n”, the negated universal the Lean proves; the migration's “leaves the guard within n steps” was an existential the guard's decision would be needed for, corrected by the cold read) |
 | S1 “in the market, for every rational C₀ ≥ 5 and integer N > C₀ − 5, every seed 0 < x₀ ≤ (2/3)^N/6 of quality in [0, 1] fails by step N on every admissible schedule.” | statement | statement (unchanged) |
 | C0 “For every law of change with admissible disturbances and every family of levels its steps drain (…), a start below level n leaves the guard within n steps on every admissible history;” | law | law 1 (`Drains`, `Drains.along`, `Drains.leaves`); law 5 on runs (`Drains.leaves_run`) |
 | C1 “being at level n does not suffice.” | law (witness) | law 2 (`Collapse.level_not_lasting`); counterexamples[1] (unchanged) |

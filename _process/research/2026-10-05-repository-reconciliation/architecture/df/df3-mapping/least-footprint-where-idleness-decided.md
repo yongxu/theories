@@ -35,3 +35,5 @@ Each law was read against its declarations in `Becoming/OrderNormal.lean` (the s
 | N0 | next step | next_delta (unchanged) |
 | H0.0–H2.1 | premises | hypotheses[0]–[2] (unchanged) |
 | X0 | counterexample | counterexamples[0] (unchanged; its text repeats the old limitations, now does_not_show[0]–[3]) |
+
+The cold read removed the counterexample, which no declaration witnesses and which does_not_show[0]–[3] and the standard boundaries no-evaluation and no-ethical-premise already carry: X0 goes to those items.

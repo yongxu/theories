@@ -44021,6 +44021,11 @@
   },
   {
    "from": "record:metaethical-core-characterization",
+   "to": "module:Becoming.Lifting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:metaethical-core-characterization",
    "to": "module:Becoming.Metaethics",
    "type": "proved-in"
   },

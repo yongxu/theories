@@ -23,8 +23,8 @@ Each law was read against its declaration in `GenerativeCore.lean` (`Generative.
 | V0 “Credits the linked existing Lean receipt.” | evidence | validation_scope (the two binding receipts named by location) |
 | V1 “This migration reads source and checks declaration presence and receipt hash binding” | evidence (bookkeeping of the 8 October migration) | snapshot; history entry 0 records that migration; the present migration's reading is in this table and the new history entry |
 | V2 “it does not rerun Lean.” | evidence (bookkeeping) | snapshot; the new history entry says no source hash changed |
-| N0 “Reuse trace_map for finite-history preservation” | next step | next_delta (“Transport finite courses by trace_map wherever a map of configurations preserves steps”) |
-| N1 “additional endpoint or actual correspondence requirements remain explicit.” | next step | next_delta (“stating any further endpoint or correspondence condition as a hypothesis”), stated positively; the exactness criterion added as the certification it gives |
+| N0 “Reuse trace_map for finite-history preservation” | next step | next_delta (“State transport and exact reading through a map for runs without end”); reuse of trace_map is shown by the records that depend on it (becoming-context-coherence, trace-law-equivalence, derived-history-law-exactness) |
+| N1 “additional endpoint or actual correspondence requirements remain explicit.” | next step | next_delta (“the correspondence of a state map to an actual system, each with its conditions stated as hypotheses”), stated positively |
 | — | standard boundary | standard_boundaries: no-ethical-premise (the hypotheses hold no ethical premise; both bound receipts report empty axioms for the cited declarations) |
 
 The review moved the old counterexample, which no declaration of GenerativeCore.lean witnesses, to a does-not-show item (converse, witness `Generative.projection_exact_iff`): X0, L0 and L1 now go to that item.

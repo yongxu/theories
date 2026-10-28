@@ -104,8 +104,8 @@
     "en": "More laws at every level of the tower (dependence, reserve and support; arising needing an active giver); refining time and the unit together; the periphery correspondence to real-valued time."
   },
   "correspondence": {
-    "en": "Ren decided that continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence. This result gives the tower and the first of its laws: where what stands is not refuted to run down, dividing time more finely adds no fall of total standing. It rests on the laws of one step (Flow.runsDown_bounds_change) and the least loss per exchange, with no premise added.",
-    "zh": "Ren 决定：连续时间在核心中构造为越来越细的离散读法之塔，连续时间的规律即塔的每一层上的规律，实数时间以后作为外围的对应。本结果给出塔与其第一条规律：所立者不被否定地下降时，总水平的下降不因时间分得更细而增加。依据是一步的规律（Flow.runsDown_bounds_change）与每次交换的最小损失，不加前提。"
+    "en": "Continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence; the representation was Ren's proposal (provenance in the references). This result gives the tower and the first of its laws: where what stands is not refuted to run down, however finely time is divided, the falls of total standing over a coarsest stretch stay within its starting total. It rests on the laws of one step (Flow.runsDown_bounds_change) and the least loss per exchange, with no premise added.",
+    "zh": "连续时间在核心中构造为越来越细的离散读法之塔，连续时间的规律即塔的每一层上的规律，实数时间以后作为外围的对应；这一表示出自 Ren 的提议（来历见引用）。本结果给出塔与其第一条规律：所立者不被否定地下降时，无论时间分得多细，最粗一段上总水平的下降次数都不超过其段首的总水平。依据是一步的规律（Flow.runsDown_bounds_change）与每次交换的最小损失，不加前提。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tower.lean",
   "aliases": [
@@ -198,7 +198,8 @@
         "Becoming.Flow.sample_balances",
         "Becoming.Flow.sample_dissipative",
         "Becoming.Strict",
-        "Becoming.Flow.Once"
+        "Becoming.Flow.Once",
+        "Becoming.Strobe.converse_fails"
       ]
     },
     {
@@ -364,8 +365,8 @@
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：英文版中塔的第一条规律不称为 first law，那是脊柱对 Flow.Gainless 的称呼。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): title, statement, hypotheses and next step kept; the claim split into three laws, each read against its declarations in Tower.lean, Sampling.lean and Locality.lean (the tower, balance and dissipation passing to the coarser level, the bound on falls); the limitations to three does-not-show items and the shared boundary names-provisional; a hypothesis added for the decided equality of relata the tower takes, with the boundaries decidability, discrete-steps and no-ethical-premise; Strict, Flow.Once and Web.StandingCensus added to their files' references; the counterexample narrowed: Strobe shows unbounded arising and ceasing at fine steps, not that the bound on falls needs running down, since nothing stands in Strobe; the date left the correspondence, which keeps the decision as provenance; no premise, status or source hash changed. Every earlier sentence is mapped in [continuous-time-as-tower.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/continuous-time-as-tower.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the correspondence, the counterexample (moved to a does-not-show item), laws, each read against the Lean it cites.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：标题、陈述、前提与下一步保留；主张拆为三条规律，各条对照 Tower.lean、Sampling.lean 与 Locality.lean 中的声明核读（塔、平衡与耗散传到更粗一层、下降次数之界）；限制分入三条“未表明”与通用边界 names-provisional；新增一条前提，写明塔所取的关系项相等可判定，并引用通用边界 decidability、discrete-steps 与 no-ethical-premise；Strict、Flow.Once 与 Web.StandingCensus 加入其文件的引用；反例收窄：Strobe 显示的是细步上无界的生起与止息，而不是下降次数之界需要下降，因 Strobe 中无物所立；对应去掉日期，决定作为来历保留；前提、状态与来源哈希均未改变。每句旧文本的去向见 [continuous-time-as-tower.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/continuous-time-as-tower.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及对应、反例（移入“未表明”）、规律，各条对照所引 Lean 核读。"
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section DF_N): title, statement, hypotheses and next step kept; the claim split into three laws, each read against its declarations in Tower.lean, Sampling.lean and Locality.lean (the tower, balance and dissipation passing to the coarser level, the bound on falls); the limitations to three does-not-show items and the shared boundary names-provisional; a hypothesis added for the decided equality of relata the tower takes, with the boundaries decidability, discrete-steps and no-ethical-premise; Strict, Flow.Once and Web.StandingCensus added to their files' references; the counterexample narrowed: Strobe shows unbounded arising and ceasing at fine steps, not that the bound on falls needs running down, since nothing stands in Strobe; the date left the correspondence, which keeps the decision as provenance; no premise, status or source hash changed. Every earlier sentence is mapped in [continuous-time-as-tower.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/continuous-time-as-tower.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the correspondence, the counterexample (narrowed), laws, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence, the references.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 DF_N 节）：标题、陈述、前提与下一步保留；主张拆为三条规律，各条对照 Tower.lean、Sampling.lean 与 Locality.lean 中的声明核读（塔、平衡与耗散传到更粗一层、下降次数之界）；限制分入三条“未表明”与通用边界 names-provisional；新增一条前提，写明塔所取的关系项相等可判定，并引用通用边界 decidability、discrete-steps 与 no-ethical-premise；Strict、Flow.Once 与 Web.StandingCensus 加入其文件的引用；反例收窄：Strobe 显示的是细步上无界的生起与止息，而不是下降次数之界需要下降，因 Strobe 中无物所立；对应去掉日期，决定作为来历保留；前提、状态与来源哈希均未改变。每句旧文本的去向见 [continuous-time-as-tower.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/continuous-time-as-tower.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及对应、反例（收窄）、规律，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应、引用。"
     }
   ],
   "text_versions": [

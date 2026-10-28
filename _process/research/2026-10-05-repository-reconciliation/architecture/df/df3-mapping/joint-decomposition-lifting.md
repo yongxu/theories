@@ -25,3 +25,5 @@ Each law was read against its declarations in `Becoming/Composition.lean` (the s
 | N0 | next step | next_delta (unchanged) |
 | H0.0–H0.2 | premise | hypotheses[0] (unchanged) |
 | X0 | counterexample | counterexamples[0] (unchanged; its text repeats the old limitation, now does_not_show[0]) |
+
+The cold read removed the counterexample, which no declaration witnesses and which does_not_show[0] (witness `LiftsFromEach`) already carry: X0 goes to those items.

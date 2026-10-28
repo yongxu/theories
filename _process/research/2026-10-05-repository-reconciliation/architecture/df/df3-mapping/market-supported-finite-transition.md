@@ -9,7 +9,7 @@ Each law was read against its declarations in `Becoming/Lasting.lean` and `Becom
 | Old text | Type | New place |
 |---|---|---|
 | T0 “Supported finite correction and protective handoff” | title | title (unchanged) |
-| S0–S1 “A start lasts n steps exactly when some ladder holds it at level n; the market's support cover is such a ladder …, so initial support at least K_N carries every positive state through a finite correction into the original protection.” | statement | statement (unchanged) |
+| S0–S1 “A start lasts n steps exactly when some ladder holds it at level n; the market's support cover is such a ladder …, so initial support at least K_N carries every positive state through a finite correction into the original protection.” | statement | statement, narrowed to the Lean: “for each positive state some N exists at which initial support at least K_N carries it into the original protection” (the horizon depends on the state, `no_uniform_pulse_duration`) |
 | C0 “For every law of change with admissible disturbances and a guard, a start lasts n steps exactly when some ladder holds it at level n (…), and exactly when every necessary family holds it there;” | laws | law 1 (`Lasts`, `Ladder`, `lasts_iff_ladder`), law 2 (`Necessary`, `lasts_iff_necessary`); law 4 the same on courses |
 | C1 “a family that is both is exactly lasting.” | law | law 2 (`lasts_iff_of_exact`) |
 | C2 “The market's support cover K0=5, K(n+1)=(10/9)(K(n)+1+kappa) is a ladder for the essential floor under every correction schedule and every shock at most kappa, and at the worst share it is exact: …” | laws (instance) | law 5 (`covered`, `cover_ladder`, `cover_formula`), law 6 (`worstSupport`, `cover_exact`) |
