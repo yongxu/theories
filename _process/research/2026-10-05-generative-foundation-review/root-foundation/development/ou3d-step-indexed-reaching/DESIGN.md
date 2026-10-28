@@ -1,6 +1,6 @@
 # OU3d: step-indexed reaching on the grammar
 
-AI-written design for board item OU3d, 28 October 2026, on main at `c509211df`. Sources: EC6's proposal 7 ([audit](../ec6-no-master-law/AUDIT.md), *Step-indexed reaching*) and the coordinating session's decision ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), *After EC6's audit*). The decision: this is a real law, it sits beside `«迭»` in `GrammarLaws`' finite-runs section, and it is reviewed before any consumer bridges to it. The bridges are a second step, done with the owners of the consumers' modules. Only `Becoming.GrammarLaws` changes ([tree](tree/Becoming/GrammarLaws.lean)).
+AI-written design for board item OU3d, 28 October 2026, on main at `c509211df`. Sources: EC6's proposal 7 ([audit](../ec6-no-master-law/AUDIT.md), *Step-indexed reaching*) and the coordinating session's decision ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), *After EC6's audit*). The decision: this is a real law, it sits beside `«迭»` in `GrammarLaws`' finite-runs section, and it is reviewed before any consumer bridges to it. The bridges are a second step, done with the owners of the consumers' modules. Only `Becoming.GrammarLaws` changes ([tree](tree/Becoming/GrammarLaws.lean)). The landing also gives the measure's one pending lumping row, `PartForms.goAlike`, its reason (the section *And the part's own law*).
 
 ## What is stated
 
@@ -48,15 +48,36 @@ All 12 declarations have empty axiom reports ([log](scratch-check-3.log)). The r
 
 That work is the second step, for those modules' owners. The bridges this check proves are its evidence, not landed code.
 
+## And the part's own law (`PartForms.goAlike`): a reason, not a derivation
+
+EC6's measure found one lumping row pending: `PartForms.goAlike` (`MoveFormation`), which rests on lumping's anchor (`GoAlike` is `GoAlikeUnder` at `Eq`) without reaching the grammar. COVERAGE's actor row has cited it since EC6d. EC6's owner and the coordinating session offered it to this item, reading its proof as constancy with a fixed successor (`«有常定后则同行»`).
+
+**Not constancy.** At the coupled step, with "same part" as `E`, both premises fail:
+- constancy needs a coupled step from every joint configuration over a stepping one's part, so the rest must step there;
+- the fixed successor, even the local form `«有常局定后则同行»`, needs two coupled steps from one configuration to agree, so the rest must be determined.
+
+The theorem assumes neither, so this route would change its statement.
+
+**Not the image law either.** A re-proof through `«像定后当且仅当同行»` (`image_determined_iff.mp`, applied to the determinacy of the coupled step's image along the part) compiled axiom-free ([tree-mf](tree-mf/Becoming/MoveFormation.lean), [log](scratch-mf-2.log)). The review's second pass found it a rerouting ([REVIEW-OU3d](REVIEW-OU3d.md), *Second pass*): proving the image determined takes the going-alike argument itself, so the term is `image_determined_iff.mp (image_determined_iff.mpr …)` around the old proof, unchanged. It replaces no part of the proof by the law, which is EC6's own test. This differs from `goAlike_iff_lumped`, whose statement is the image law read through two lemmas stated apart.
+
+**The reason.** Its content is the model's premise: the part's law is determined at a move the part alone forms. The image law only reads the conclusion as carrying a law of its own, through `carries_law_iff`, as the module's header already says. So `MoveFormation` is not changed. The measure gives the row its reason in place of the pending entry (`measure_reason_ou3d.py`), the record states it as a does-not-show item, and 08 §7 counts one gap fewer. Lumping stays one of its two central rows reaching the grammar, with no gap.
+
 ## What OU3d does not do
 
-- It bridges no consumer, so the measure does not change: the three step-indexed rows still rest on no master law until bridged.
+- It bridges no step-indexed consumer: the three step-indexed rows stay the measure's pending derivations until bridged.
 - It does not decide whether `Withholding.Within` or `Chain` should be defined from `«迭»`/`«迭内»`; that is for `Withholding`'s owner.
 - It states nothing about step counts on courses with choices (`Trace` over a process with actions); the bridge for `after_course` reads a trace's moves as `«迭»` of the steps that forget the action.
 
 ## Landing
 
-On OU3b's and OU3c's pattern. One changed module (`GrammarLaws`), which sits low in the import graph, so every module above it re-checks. To keep the landing receipt to its changed files, a rehearsal run (`BECOMING_OUT` outside the repository) fills the shared step cache first, as OU3b did; the landing run then reuses those steps. The landing also includes: the signature audit (every old declaration of `GrammarLaws` prints its old statement, and the eight new ones are listed); the connectivity register (the new laws without consumers are apart roots, awaiting their bridges); 01 §7's finite-runs bullet and 08's counts; a study section; and the record master-laws-on-the-grammar extended (finite-runs group).
+On OU3b's and OU3c's pattern. One module changes, `GrammarLaws`, which sits low in the import graph, so every module above it re-checks. To keep the landing receipt to its changed files, a rehearsal run (`BECOMING_OUT` outside the repository) fills the shared step cache first, as OU3b did, and the landing run then reuses those steps. The landing also includes:
+- the signature audit: every old declaration of `GrammarLaws` prints its old statement, and the eight new ones are listed;
+- the connectivity register: the new laws without consumers are apart roots, awaiting their bridges;
+- 01 §7's finite-runs bullet;
+- 08 §7's measure sentence where it changes, and 08's counts;
+- the measure's reason for `PartForms.goAlike` in place of its pending entry;
+- a study section;
+- the record master-laws-on-the-grammar extended (a group of steps counted, two does-not-show items).
 
 ## The review, and what was taken
 
@@ -70,5 +91,7 @@ One independent read-only review by a separate AI agent ([REVIEW-OU3d](REVIEW-OU
    - The closed-forms sentence now says only that `Withholding`'s closed forms have these shapes for its chains, the bridges not shown.
    - The intro names steps counted among the finite runs.
 6. **Nits.** All taken: `«承»`'s and `«承之迭»`'s docstrings, the rewrapped line, and the check's docstring.
+
+7. **Second pass: `PartForms.goAlike`.** The re-proof through the image law is a rerouting (the law applied and undone around the old proof), and constancy does not apply. So it is not landed; the row has its reason (*And the part's own law*).
 
 The optional additions (monotonicity of `«迭内»`; `«所闭»` as some number of steps, with its memory corollary) are not taken: no consumer needs them, and they can come with a bridge that does. The review's check against the real consumers is kept as the second step's evidence.

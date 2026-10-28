@@ -45,3 +45,28 @@ One review, by a separate AI agent working read-only (no file in the repository 
 ## Verdict (the reviewer's)
 
 Not ready to land, but close. Rename `«或静»` and settle `«迭内之接»`'s bound order before landing, since both cost more to change once consumers bridge, and fix the header in the same pass. Findings 3 and 4 are advisable. None of this needs a new proof idea.
+
+## Second pass: the re-proof of `PartForms.goAlike`
+
+The same reviewer, under the same rules (read-only), checked a re-proof of `PartForms.goAlike` (`MoveFormation`) through the image law, at the time proposed for OU3d's landing. Its findings follow, lightly formatted. They were taken: the re-proof is not landed, and the row has its reason instead (DESIGN.md, *And the part's own law*).
+
+1. **It is a rerouting, not a genuine instance.**
+   - The inner term is main's proof word for word, wrapped in `to.symm.trans (…).trans to'` with `same := at_k.trans at_k'.symm`.
+   - That wrapper is `«像定后当且仅当同行»`'s `.mpr` direction, with main's proof in place of `«同行之逐点».mp alike`.
+   - So the proof is `image_determined_iff.mp (image_determined_iff.mpr main)`, with the `.mpr` written out by hand. The reviewer compiled that form to confirm.
+   - The law is applied and then undone, and no part of main's proof is replaced. That fails EC6's test that a derivation replace part of the proof by the law.
+   - `goAlike_iff_lumped` differs: its statement is the image law read through two lemmas stated apart, so the law is its whole content.
+
+   Here the content is the model's premise: `P` is determined at a move the part forms. The image law is how the conclusion reads as "carries a law of its own", through `carries_law_iff`, as main's header says. It is not why the conclusion holds.
+
+   The reviewer agreed that `«有常定后则同行»` does not apply either:
+   - constancy needs a coupled step from every joint configuration sharing a stepping one's part, so the rest must step;
+   - the fixed successor needs `Q` determined, since `coupled_determined` uses both laws;
+   - the local form still needs a fixed successor everywhere, since sameness of part is reflexive.
+
+   So the line in EC6d's study saying that the proof is constancy with a fixed successor is inaccurate. **Recommendation:** keep main's proof and header sentence, and close the measure's pending entry with a reason: a law of its model, read as carrying a law through `carries_law_iff`.
+2. **The new docstring overstated.** "being the part's law at a move the part alone forms" should be "lying within", since an image step needs the rest to step too. The new header sentence dropped main's `carries_law_iff` link.
+3. **No axiom or elaboration risk.**
+   - An independent recompile of `MoveFormation` produced a byte-identical `.olean`.
+   - It had 55 theorems in 78 declarations, all with empty axiom reports, including the generated matcher.
+   - The statement was unchanged, so `parts_agree` and the importers were unaffected.
