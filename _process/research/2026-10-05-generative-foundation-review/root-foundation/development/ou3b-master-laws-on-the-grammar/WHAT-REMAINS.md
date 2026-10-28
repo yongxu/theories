@@ -39,6 +39,18 @@ EC6's audit ([AUDIT](../ec6-no-master-law/AUDIT.md), reviewed twice, every findi
 2. Then, in parallel, on disjoint files: the measure's categories (EC6's owner), then OU3d (OU3c's owner), and EC6b module by module (EC6's owner).
 3. After that comes DF3's owner's computed view of the master laws in records (item 5), and then a design for the World's representation theorem.
 
+## Where it stands after OU3c and EC6b (28 October 2026)
+
+OU3c (`11cb5342c`, study §433) and EC6b (`565601488`, study §434) have landed, and the measure reports every central row by category (`d1df2e096`). 85 of 127 rows rest on a master law (77 before), and 41 reach the grammar (33 before). Of the 118 distinct declarations:
+- 40 reach the grammar;
+- 30 rest on balance, represented;
+- 6 rest on an anchor, each with a stated reason;
+- 42 rest on no master law, each with a reason.
+
+The gaps are 5, down from 13: OU3d's 3 (step-indexed reaching, drafted and under review) and EC6c's 2 (`Optimum`'s balance clause).
+
+`Flow` and `COVERAGE.json` have no active owners, so these were decided under rule 3's fallback. EC6c's clause is named once in `Flow.lean`, beside `Flow.Balances`, which is shown its case by `Iff.rfl` and not redefined. EC6d, `COVERAGE.json`'s citations, goes to EC6's owner, changing no row's statement without its record's owner.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
