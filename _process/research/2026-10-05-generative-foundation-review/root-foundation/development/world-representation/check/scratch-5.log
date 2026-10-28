@@ -1,0 +1,35 @@
+Becoming/WRTCheck2.lean:58:23: error: Application type mismatch: The argument
+  Amounts.whole
+has type
+  Amounts Nat
+but is expected to have type
+  Nat
+in the application
+  Amounts.falls_end Amounts.whole
+Becoming/WRTCheck2.lean:143:43: error: unexpected token '|'; expected '⟩'
+Becoming/WRTCheck2.lean:142:6: error: Invalid alternative name `head`: Expected `refl`
+Becoming/WRTCheck2.lean:183:25: error: Application type mismatch: The argument
+  h
+has type
+  some n = some (level (t + 1) f)
+but is expected to have type
+  some (level (t + 1) f) =
+    some
+      (match some n with
+      | some n => n
+      | none => 0)
+in the application
+  Option.some.inj h
+Becoming/WRTCheck2.lean:217:43: error(lean.unknownIdentifier): Unknown constant `Becoming.Web.itself`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/check/tree",
+  "modules": 38,
+  "ran": [
+    "Becoming.WRTCheck2"
+  ],
+  "reused": 37,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.WRTCheck2"
+}

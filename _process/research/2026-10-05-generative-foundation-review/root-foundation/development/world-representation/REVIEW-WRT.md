@@ -151,3 +151,127 @@ Needs another pass. Before any item is proposed, §1–§3 need three fixes:
 - F1 and "forgets the amounts" are restated against conservation's step, with a faithfulness witness.
 
 Once these are done, the rest follows fairly directly: F3 with its marked predicate, the converse's missing inclusion, decidedness, the joint conditions, and the record structure (WRT1 as lemmas).
+
+## Second pass
+
+The same reviewer, under the same rules (read-only, no builds), read the first revision, the second scratch file and the build log at main `80c4c40d6`. Its report follows, lightly formatted as before. Its D and K2 line numbers are those of the first revision. Every finding is taken, and DESIGN.md §6 says how.
+
+**Overview.** The revision fixes all three blocking problems, the four checked statements named do prove what the design says, and nothing needs restructuring. It is still not ready to propose as written: five statements are false or overreach, and they would go straight into the record and the live text (findings 1–5). All five are local, and only one needs a Lean change and a rebuild.
+
+**Question 2: the checked statements.** All of these state what D says, and scratch-9 audits all 28 theorems with no axioms.
+- `falls_exhaust` (K2:43–60) really does come from `Amounts.falls_end` at `Amounts.whole` with least loss one, through `jin_pullback` (K2:22–33). Each step along the line is a reflexive «所闭» of "no rise" followed by one least fall, and `«尽则非不穷»` then gives `falls_not_endless`.
+- `conservation_iff_decided` (K2:76–87) is exactly D:112.
+- `ofExchange_conserves` (K2:174–188) is exact, given a relatum r₀.
+  - Every World's conservation has the debit–credit form by definition (credit := level + given, debit := taken; L/Persistence.lean:510–511). That half is near-definitional, and should be called so, as balance's is.
+  - The content is the other half: with one relatum exchanging, debit and credit are arbitrary.
+- `withinStep_carried` (K2:118–125) is checked as a general lemma and applied only at requiring (K2:128–131). Drawing, a need met, giving and taking hold by definition (L/Persistence.lean:500–506); D:293 should say so.
+- `present_carried`, `carries_iff_image`, and `no_injection` through `Diagonal.claims_incomplete` are as claimed.
+- `standingAt_alike`'s Lean is what D shows, but its prose is false (finding 1).
+
+**Question 1: findings 1–24.**
+- Taken: 1, 4, 9, 11, 13–18 and 22.
+- Taken, with a new problem:
+  - 2 (findings 2, 6 and 7 below);
+  - 3 (finding 1);
+  - 5 (finding 8);
+  - 6 (finding 4);
+  - 8 (finding 12);
+  - 10 and 20 (finding 13);
+  - 12 (finding 14);
+  - 23 (finding 11);
+  - 24 (finding 9).
+- Dropped or taken only in words, although §6 says every one was taken:
+  - 7: `World.conserves_iff` (L/Persistence.lean:551) is cited nowhere;
+  - 19: relating `Reidentify` to «一一对应» at each step is not done;
+  - 21: "up to correspondence is definitional" appears only in §6 (D:349), never in §1.5.
+
+### New findings
+
+1. **[significant] F1's witness fails when one standing is 0.**
+   - *Where:* D:188, "Every relation and mark of the occurrence model agrees"; also D:37.
+   - *Evidence:* the standing mark `0 < level` is part of the name-free part (D:77), but `standingAt_alike` leaves it out (K2:96–110). For k = 0 and k′ = 1 that mark differs.
+   - *Fix:* require 0 < k and 0 < k′, add the standing conjunct, and rebuild.
+2. **[significant] "Exactly what every re-identification carries" is false** (D:27, D:69, D:336). That wording came from the first verdict, and it was too strong.
+   - *What else is carried:* every field is read through σ.old t (L/Persistence.lean:499–506), so a re-identification also carries:
+     - marks such as "level = k";
+     - the order of two standings within one step;
+     - comparisons between the standings of occurrences on either side of a step;
+     - the step order itself (y.1 = x.1 + 1);
+     - how often a relatum appears in the presence list.
+   - *Why it matters:* F1 and the step-permutation example in the Q55 answer (D:132) hold only because the part leaves these out.
+   - *Fix:* define the part as "reads no name at two steps", which is enough for re-identification to carry it. Then state the selection as a choice: amounts are read only by sign, against a need, and in conservation's equation; the index only through the same-step class.
+3. **[significant] "The World's undecided part is its activity" is false** (D:113).
+   - *Evidence:* requiring and drawing are propositions too (L/World.lean:90, 92). `law_iff_positions` (L/Space.lean:1113) concerns only activity's positions; "exactly excluded middle" is `law_iff_em` (:1017).
+   - *Fix:* name activity, requiring and drawing as the undecided relations. Say that the finite-world law needs activity decided, and that embodiment supplies the decision (`World.Embodied.decided`, L/Standing.lean:107–109).
+4. **[significant] Most of the "existing re-identification laws" are not cases of WRT2's re-identification** (D:102).
+   - `World.balanced_reidentify_iff` is not an invariance law: balance reads the names, and the law says when a re-identification keeps it.
+   - `metAboveAlong_reidentify`, `widensAcross_reidentify` and `rename_*` use `Web.reidentify`, which renames formations only and keeps conditions fixed (L/Identity.lean:183–189). WRT2's re-identification renames both roles.
+   - Only `line_reidentify` and `continuing_reidentify` are cases.
+   - *Fix:* split the list into these three groups.
+5. **[significant] The step index is also a commitment.**
+   - *Evidence:* 01 §9.6 says only the partial order of joined exchanges shows (C/01-ROOT.md:428), and §10 lists the shared index as a commitment (:519). UE15's record (theories/becoming/results/records/reorderings-as-courses-of-growth.md:43) calls the interleavings "one aspect" of this very theorem.
+   - *Fix:* list reorderings and stuttering among the record's boundaries, and add that record (its JSON) to the landing list.
+6. **[minor]** `reidentify_carries` (D:289–293) leaves out the standing mark.
+7. **[minor] The requiring relation points the wrong way.** `withinStep requires` relates (t,f) to (t,c) (K2:115–116). Read as "x is a condition of y" (L/Grammar.lean:31), that reverses D:76's gloss "c a condition of f". Use «逆» of the relation as the 缘, or drop that reading.
+8. **[minor]** D:126's "uses one of these" contradicts D:116's "the listed conditions do not exhaust the image".
+9. **[minor] The build head is misreported.** The build ran at 16:02, after OU3e landed at 16:01, and its `Labelled.lean` equals `406ed1303`'s, not `ef7706a57`'s. No WRT statement depends on it; correct D:5 and D:13.
+10. **[minor] "Mark" clashes** with 01 §3's "the four marks" (C/01-ROOT.md:70; GLOSSARY.md:14). 01 §7 already says "partial identity" (C/01-ROOT.md:164); use that. "Occurrence model" also needs a glossary line.
+11. **[minor] The Q55 answer needs two corrections.**
+    - D:132 should say "a correspondence *of the name-free part*": one that carries the names fixes the index.
+    - D:134's "the three are independent" is not what F3 shows. F3 shows that the three, without the converse, do not make a grammar law.
+12. **[minor] Small inaccuracies.**
+    - D:232's F3 "reads that law" (the rest law); F3 reads `falls_end`.
+    - K2:58–60 re-proves `Amounts.whole_within` (L/Amounts.lean:413) inline; use it.
+    - `ceasingRecurs_iff` comes from `Web.ceases_iff_wang` (L/Change.lean:945), not from `unceasing_iff_late_beginnings` (D:286).
+    - D:87's "the instance theorems use three" classes omits `dependenceClass c`, «一» and `Steps.alike p`.
+    - WRT1's stated criterion (D:269) fits «延» and «复生至» poorly: no module outside the grammar reads them.
+13. **[minor] Record and imports.** The record list (D:306–311) omits F2; add it as a witness to the labelling. Importing `Becoming.Amounts` is redundant (Persistence → Unfolding → Space → InAmounts → Amounts).
+14. **[minor] The landing list misses three things.**
+    - The Lean package README rows for both modules, in both languages. By the computed layers (README.md:361), GrammarTransport is L1, not L0.
+    - The UE15 record (finding 5).
+    - At C/01-ROOT.md:535, only the clause is replaced; the bullet's subject, "That no independent entity exists", stays not shown.
+
+**The other questions.**
+- **Question 3.** Nothing in the name-free part goes uncarried. What is carried but left out is finding 2.
+- **Question 4.** The converse is right and scoped for the relational part: (a) is not checked, but it is immediate from `World.of`, and (c) is exact for an inhabited type of relata. Decidedness is right, but what it is said to show about the unfolding is not (finding 3). The Q55 answer holds once findings 1 and 11 are fixed.
+- **Question 5.** F3 no longer overclaims, apart from finding 12's wording. F1′ is consistent with the model; F1 is not, at k = 0 (finding 1).
+- **Question 6.** One item with WRT1 as its lemmas is the right size. The imports are free of cycles: GrammarLaws imports only Grammar, GrammarMap and Prelude, and both new modules are leaves. The landing list needs finding 14's additions.
+
+### Verdict
+
+Do not propose the item as written, but no third full review is needed. Fix findings 1–5, which correct statements, not structure; only finding 1 changes Lean (the hypotheses and the standing conjunct, then a rebuild). Take the minor findings with them. A read of the changed sentences and the new build log is then enough to propose the item on the board.
+
+## The last read
+
+The same reviewer read the changed sentences and the new build log (`check/scratch-10.log`), as the second pass asked. Its report follows, lightly formatted; its D lines are those of the second revision.
+
+**Confirmed.**
+- The build: the scratch tree's sources match the checkout, the package is unchanged since `80c4c40d6`, and scratch-10 audits 28 theorems in 44 declarations with no axioms.
+- Every finding of the second pass is fixed:
+  - 1: `standingAt_alike` now takes `pos`/`pos'` and has the standing conjunct (K2:96–111); D:40 and D:232 match it.
+  - 2: D:27 and D:72–84 define the part as reading no name at two steps and state the selection.
+  - 3: D:151–153.
+  - 4: D:130–133.
+  - 5: D:88, D:94, D:375 and D:386; `reordering_iff_course` exists (ReorderingGrowth.lean:198).
+  - 6: D:352.
+  - 7: D:91–92 and D:339.
+  - 8: D:166.
+  - 9: D:5 and D:13.
+  - 10: no "mark" is left, and D:387 adds the glossary line.
+  - 11: D:172 and D:174.
+  - 12: D:283, K2:58–59, D:345, D:104–110 and D:322–328.
+  - 13: D:334 and D:368.
+  - 14: D:381, D:386 and D:388.
+- The first review's findings taken only in words are fixed too: 7 at D:148, 19 at D:348 (K2:221–222), and 21 at D:158.
+
+**Still wrong.**
+1. **D:113, "no relation of the model holds … the step order", is false.**
+   - The model includes the names' step, and the step order is the grammar term `«而» («及» Steps.along) sameStep` (`later_iff`, D:206, checked).
+   - The sentence is true only of the name-free part, which is the part the Q55 example (D:172) uses.
+   - *Fix:* "no relation of the name-free part".
+2. **D:234**, "would need one of": the two are examples, not a proved exhaustive list. Write "for instance".
+3. **D:125** puts standing under `withinStep_carried` "by definition". Standing is a partial identity, carried directly by `World.reidentify`'s definition, as D:352 says. Drop it from D:125.
+4. **D:322**: «息» and «生生» are read neither by a World instance theorem nor by WRT2; only HeldPossible reads them (HeldPossible.lean:668). Move them to the rest, or widen the stated criterion.
+5. **D:152**: `law_iff_positions` quantifies over every determination `p` (L/Space.lean:1113–1116), not activity alone. Write "deciding every position along the steps".
+
+**Verdict.** Correct D:113, and the item can be proposed on the board. Fix the nits in the same edit; none of them needs another read.
