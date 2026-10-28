@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-478 registered results: 447 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1091 curated edges join 406 results to the results they draw on.
+479 registered results: 448 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1097 curated edges join 407 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -343,6 +343,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [the-continuation-condition-on-the-root][] ← <a id="the-continuation-condition-on-the-root--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-continuation-condition-on-the-root--what-the-step-across-standpoints-reaches"></a>[what-the-step-across-standpoints-reaches][]
 - [the-gap-for-ones-own-act][] ← <a id="the-gap-for-ones-own-act--selection-through-couplings"></a>[selection-through-couplings][] · <a id="the-gap-for-ones-own-act--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [the-move-alone-underdetermines][] ← <a id="the-move-alone-underdetermines--weights-count-situations"></a>[weights-count-situations][]
+- [the-present-on-causal-set-growth][] ← <a id="the-present-on-causal-set-growth--precedence-and-its-links"></a>[precedence-and-its-links][] · <a id="the-present-on-causal-set-growth--what-can-be-born-next"></a>[what-can-be-born-next][] · <a id="the-present-on-causal-set-growth--normal-forms-need-decided-apartness"></a>[normal-forms-need-decided-apartness][] · <a id="the-present-on-causal-set-growth--order-of-exchanges-is-the-invariant"></a>[order-of-exchanges-is-the-invariant][] · <a id="the-present-on-causal-set-growth--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-present-on-causal-set-growth--counts-exist-where-decided"></a>[counts-exist-where-decided][]
 - [the-rest-outruns-the-renewal][] ← <a id="the-rest-outruns-the-renewal--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="the-rest-outruns-the-renewal--what-taking-all-excludes"></a>[what-taking-all-excludes][]
 - [the-run-classes-and-widening][] ← <a id="the-run-classes-and-widening--four-cases-of-a-part"></a>[four-cases-of-a-part][] · <a id="the-run-classes-and-widening--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="the-run-classes-and-widening--life-as-condition-of-life"></a>[life-as-condition-of-life][]
 - [the-source-texts-test-systems][] ← <a id="the-source-texts-test-systems--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-source-texts-test-systems--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="the-source-texts-test-systems--reach-past-ones-own-end"></a>[reach-past-ones-own-end][] · <a id="the-source-texts-test-systems--rules-that-change-themselves-in-the-grammar"></a>[rules-that-change-themselves-in-the-grammar][]
@@ -782,6 +783,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [the-gap-for-ones-own-act]: theories/becoming/results/records/the-gap-for-ones-own-act.md
 [the-last-change-of-a-run]: theories/becoming/results/records/the-last-change-of-a-run.md
 [the-move-alone-underdetermines]: theories/becoming/results/records/the-move-alone-underdetermines.md
+[the-present-on-causal-set-growth]: theories/becoming/results/records/the-present-on-causal-set-growth.md
 [the-rest-outruns-the-renewal]: theories/becoming/results/records/the-rest-outruns-the-renewal.md
 [the-run-classes-and-widening]: theories/becoming/results/records/the-run-classes-and-widening.md
 [the-source-texts-test-systems]: theories/becoming/results/records/the-source-texts-test-systems.md

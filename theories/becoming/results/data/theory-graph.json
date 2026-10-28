@@ -5036,6 +5036,18 @@
    "page": "theories/becoming/results/records/the-move-alone-underdetermines.md"
   },
   {
+   "id": "record:the-present-on-causal-set-growth",
+   "type": "result",
+   "record": "the-present-on-causal-set-growth",
+   "title": "The present on causal-set growth",
+   "title_zh": "因果集生长上之现在",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "frame",
+   "page": "theories/becoming/results/records/the-present-on-causal-set-growth.md"
+  },
+  {
    "id": "record:the-rest-outruns-the-renewal",
    "type": "result",
    "record": "the-rest-outruns-the-renewal",
@@ -7175,6 +7187,17 @@
    "level": "L1",
    "theorems": 161,
    "region": "significance",
+   "base": "frame",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.Presence",
+   "type": "module",
+   "name": "Becoming.Presence",
+   "level": "L1",
+   "theorems": 164,
+   "region": "root",
    "base": "frame",
    "on_grammar": true,
    "reaches_grammar": true
@@ -26978,6 +27001,12 @@
    "anchor": "r-precedence-and-its-links"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-present-on-causal-set-growth",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-the-present-on-causal-set-growth"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -32182,6 +32211,16 @@
   {
    "from": "module:Becoming.Premises",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Presence",
+   "to": "module:Becoming.CausalGrowth",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Presence",
+   "to": "module:Becoming.OrderNormal",
    "type": "imports"
   },
   {
@@ -45651,6 +45690,11 @@
   },
   {
    "from": "record:precedence-and-its-links",
+   "to": "record:the-present-on-causal-set-growth",
+   "type": "related"
+  },
+  {
+   "from": "record:precedence-and-its-links",
    "to": "record:what-can-be-born-next",
    "type": "related"
   },
@@ -50295,6 +50339,66 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "module:Becoming.CausalGrowth",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "module:Becoming.Decidedness",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "module:Becoming.OrderNormal",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "module:Becoming.Presence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "module:Becoming.Reordering",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "record:counts-exist-where-decided",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "record:normal-forms-need-decided-apartness",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "record:order-of-exchanges-is-the-invariant",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "record:precedence-and-its-links",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "record:what-can-be-born-next",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-rest-outruns-the-renewal",
    "to": "module:Becoming.Continuation",
    "type": "proved-in"
@@ -52578,6 +52682,11 @@
    "from": "record:what-can-be-born-next",
    "to": "record:precedence-and-its-links",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-can-be-born-next",
+   "to": "record:the-present-on-causal-set-growth",
+   "type": "related"
   },
   {
    "from": "record:what-can-be-born-next",
@@ -55107,6 +55216,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-move-alone-underdetermines",
    "to": "record:the-move-alone-underdetermines",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-present-on-causal-set-growth",
+   "to": "record:the-present-on-causal-set-growth",
    "type": "states"
   },
   {

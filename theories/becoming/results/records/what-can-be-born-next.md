@@ -91,6 +91,9 @@ Rideout and Sorkin's classical sequential growth (2000) read as a process: inter
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «及», «续», «相续», «一», «类», «则», «生», «亡», «住», «息», «生生», «生生之展», «生生不息» and «及之单调»: continuation, its positions, ceasing and renewal without end.
 - related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). Its same-offset comparison read on causal-set growth, where including what can be born next is having precedence included, and keeping widening holds on every course from a causal set.
 - related, not a proved adapter: [where-the-possible-grows](where-the-possible-grows.md). Internal temporality read as holding the past, so the held possible is the whole possible on causal-set growth.
+- related, not a proved adapter: [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md). The present on causal-set growth: the natural labellings of a causal set are exactly the orders of birth of the courses from the empty set growing a configuration of its kind.
+
+**Used by:** [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -115,6 +118,7 @@ Aliases: `What can be born next against what continues`, `次可生者与相续`
 ### History
 
 - 28 October 2026: added (UE13), what can be born next against what continues: sequential growth a process holding the past, on whose every course from a causal set what can be born next keeps widening; the stems reverse the inclusion of precedence, labelled or up to relabelling, so widening adds no continuation; read on what continues the order reverses and no strict order contains both; finding the pair a widening loses is excluded middle; most comparisons need the empty start; no configuration renews without end; a finer class on links; kinds of birth not so ordered; after a review and a re-check; study section 431.
+- 28 October 2026, board item UE14 (study section 432): related to the-present-on-causal-set-growth; no statement, next step or declaration changed.
 
 </details>
 

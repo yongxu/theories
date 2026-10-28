@@ -98,6 +98,7 @@ import Becoming.ReachableRanges
 import Becoming.HeldPossible
 import Becoming.Tasks
 import Becoming.CausalGrowth
+import Becoming.Presence
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1468,6 +1469,32 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   birth do not reverse precedence (`CausalGrowth.Kinds.not_included_antichain_chain`,
   `CausalGrowth.Kinds.not_included_chain_antichain`). Each law is near-definitional, a witness or a
   calibration. A leaf (board item UE13).
+* `Becoming.Presence` (L1): the present on causal-set growth, read as the maximal elements of what a
+  course has born (`Presence.MaximalBorn`, the grammar's ending on what is born:
+  `Presence.maximalBorn_iff_ends`). The renumberings of a causal set keeping precedence
+  (`Presence.NaturalLabelling`) are exactly the orders of birth of the courses growing a configuration
+  of its kind (`Presence.natural_iff_course`), and births of unrelated elements commute and only they
+  (`Presence.rearranges_iff_natural`, the core's `rearranges_iff`). With precedence decided, an element
+  is born before another on every course exactly where it precedes it (`Presence.prec_iff_every`), so
+  what is born no later than an element on every course is its past with itself, the largest relation
+  every course respects (`Presence.past_every_iff`, `Presence.past_largest`); with precedence weakly
+  decided, on some course exactly where the two differ and it is not preceded by the other
+  (`Presence.before_some_iff`), and two different unrelated elements are born in either order
+  (`Presence.either_order`). The present at a stage is an antichain (`Presence.maximalBorn_unrelated`),
+  and with precedence weakly decided every antichain given by a test is one
+  (`Presence.antichain_present`); two elements are present together on some course exactly where
+  unrelated (`Presence.together_some_iff`) and, precedence decided, on every course exactly where they
+  have the same future (`Presence.together_every_iff`); a condition is present at the birth of what it
+  conditions on some course exactly where it is a link below it (`Presence.present_some_iff_link`), and
+  on every course, with no decision, exactly where that is the one element it is linked to
+  (`Presence.present_every_iff_only_link`). Asked of every causal set, each calibrated decision is
+  exactly excluded middle or its weak form (`Presence.every_iff_em`, `Presence.present_some_iff_weakly`). On
+  Wüthrich and Callender's four elements their relation, kept by every automorphism, is the past with
+  the pair present together on every course (`Presence.Diamond.pastOrPair_kept`,
+  `Presence.Diamond.pastOrPair_iff_together`), and elsewhere that join need not be transitive
+  (`Presence.SameFuture.pastOrTogether_not_trans`). Each main law is also stated on the courses of the
+  growth themselves (`Presence.every_course_iff`, `Presence.present_every_course_only_link`). Each law is
+  near-definitional, a lemma, a witness or a calibration. A leaf (board item UE14).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

@@ -1,0 +1,821 @@
+{
+  "schema_version": 2,
+  "id": "the-present-on-causal-set-growth",
+  "title": {
+    "en": "The present on causal-set growth",
+    "zh": "因果集生长上之现在"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-28T05:54:17+00:00",
+  "statement": {
+    "en": "On causal-set growth the present, read as the maximal elements of what a course has born, is a choice of course between bounds defined from precedence: a condition is present at a birth on some course exactly where it is a link (precedence weakly decided), on every course exactly at the one link.",
+    "zh": "于因果集之生长上，现在读作一历程所已生者之极大元，则随历程而择，介于由先后定义之二界之间：缘于一生时在现在，于某一历程恰当其为覆盖（先后弱可判定），于每一历程恰当其为唯一之覆盖。"
+  },
+  "laws": [
+    {
+      "en": "Natural labellings. A natural labelling of a causal set renumbers its elements keeping precedence, each placed after what precedes it (NaturalLabelling, NaturalLabelling.at, NaturalLabelling.back, NaturalLabelling.before); the labels as they are form one (natural_identity).",
+      "zh": "自然编号：重编一因果集之元而守先后，每元置于先于之者之后（NaturalLabelling 及其 at、back、before）；原标号即其一（natural_identity）。",
+      "declarations": [
+        "Becoming.Presence.NaturalLabelling",
+        "Becoming.Presence.NaturalLabelling.at",
+        "Becoming.Presence.NaturalLabelling.back",
+        "Becoming.Presence.NaturalLabelling.before",
+        "Becoming.Presence.natural_identity"
+      ]
+    },
+    {
+      "en": "A natural labelling gives a causal set of the kind: reading the label a as the element σ a gives a causal set onto which the labelling carries the first (relabel, relabel_ordered, natural_relabels), and every relabelling onto a causal set of the same size is a natural labelling (natural_of_relabels).",
+      "zh": "自然编号给出同种之因果集：读标号 a 为元 σ a，得一因果集，编号携原者至其上（relabel、relabel_ordered、natural_relabels）；凡至同大小因果集之重编号皆为自然编号（natural_of_relabels）。",
+      "declarations": [
+        "Becoming.Presence.relabel",
+        "Becoming.Presence.relabel_ordered",
+        "Becoming.Presence.natural_relabels",
+        "Becoming.Presence.natural_of_relabels"
+      ]
+    },
+    {
+      "en": "The orders of birth. Every causal set is grown from the empty set, bearing the element t at offset t with its past (pastIn, pastIn_stem, courseOf, courseOf_grows, courseOf_isomorphic), and the natural labellings are exactly the numberings of its elements by a course from the empty set whose configuration at its size is of its kind (natural_iff_course).",
+      "zh": "生之次序：凡因果集皆自空集生，于偏移 t 以其过去生元 t（pastIn、pastIn_stem、courseOf、courseOf_grows、courseOf_isomorphic）；自然编号恰为自空集起、于其大小处构型与之同种之历程对其元之编号（natural_iff_course）。",
+      "declarations": [
+        "Becoming.Presence.pastIn",
+        "Becoming.Presence.pastIn_stem",
+        "Becoming.Presence.courseOf",
+        "Becoming.Presence.courseOf_grows",
+        "Becoming.Presence.courseOf_isomorphic",
+        "Becoming.Presence.natural_iff_course"
+      ]
+    },
+    {
+      "en": "What depends only on precedence: the natural labellings depend only on the size and the precedence (natural_congr), and so does whatever holds on every course or on some course, whatever is read on a course (every_congr, some_congr).",
+      "zh": "唯依先后者：自然编号唯依大小与先后（natural_congr）；凡于每一历程或某一历程成立者亦然，无论于历程上读何（every_congr、some_congr）。",
+      "declarations": [
+        "Becoming.Presence.natural_congr",
+        "Becoming.Presence.every_congr",
+        "Becoming.Presence.some_congr"
+      ]
+    },
+    {
+      "en": "Births of unrelated elements commute, and only they: from a natural labelling, a renumbering is reached by exchanging consecutive births of incomparable elements exactly where it is a natural labelling (Comparable, comparable_symm, natural_orients, rearranges_iff_natural), the core's theorem of Mazurkiewicz read on growth.",
+      "zh": "无先后者之生可互换，且唯其可换：自一自然编号，一重编号由互换相邻不可比元之生而得，恰当其为自然编号（Comparable、comparable_symm、natural_orients、rearranges_iff_natural），即核心之 Mazurkiewicz 定理读于生长。",
+      "declarations": [
+        "Becoming.Presence.Comparable",
+        "Becoming.Presence.comparable_symm",
+        "Becoming.Presence.natural_orients",
+        "Becoming.Presence.rearranges_iff_natural"
+      ]
+    },
+    {
+      "en": "Counting what a Boolean test passes below m, the numbers Frequency.count computes, kept local: what passes is counted before what comes later, two passing numbers with as many passing below each are one, the count takes every value below it, and what passes and what fails make all (count and its laws, two Boolean lemmas).",
+      "zh": "计 m 以下通过一布尔检验者，即 Frequency.count 所计之数，留于本模块：通过者先于其后者计，二通过之数其下通过者同数则为一，计数取其下每一值，通过与不通过者合为全体（count 及其律，二布尔引理）。",
+      "declarations": [
+        "Becoming.Presence.count",
+        "Becoming.Presence.count_succ_of_true",
+        "Becoming.Presence.count_succ_of_false",
+        "Becoming.Presence.count_le_succ",
+        "Becoming.Presence.count_le_add",
+        "Becoming.Presence.count_mono",
+        "Becoming.Presence.count_le",
+        "Becoming.Presence.count_lt_of",
+        "Becoming.Presence.count_inj",
+        "Becoming.Presence.count_reaches",
+        "Becoming.Presence.count_add_not",
+        "Becoming.Presence.not_false_of_true",
+        "Becoming.Presence.bool_absurd"
+      ]
+    },
+    {
+      "en": "A down-set first. The stable partition places what passes first and then the rest, each in label order, its inverse found by bounded search; it is a renumbering of the first n numbers, and where the test is closed downward it keeps the order, so on a causal set it is a natural labelling (front, back and their laws, front_reindexes, front_keeps, front_natural).",
+      "zh": "下集为先：稳定划分置通过者于先、余者于后，各依标号之序，其逆由有界搜索得之；其为前 n 数之重编号，检验向下封闭时守序，故于因果集上为自然编号（front、back 及其律、front_reindexes、front_keeps、front_natural）。",
+      "declarations": [
+        "Becoming.Presence.front",
+        "Becoming.Presence.back",
+        "Becoming.Presence.front_of_true",
+        "Becoming.Presence.front_of_false",
+        "Becoming.Presence.front_lt",
+        "Becoming.Presence.front_true_lt_false",
+        "Becoming.Presence.front_lt_count_iff",
+        "Becoming.Presence.front_inj",
+        "Becoming.Presence.front_onto",
+        "Becoming.Presence.lt_zero_add",
+        "Becoming.Presence.of_lt_zero_add",
+        "Becoming.Presence.front_reindexes",
+        "Becoming.Presence.front_keeps",
+        "Becoming.Presence.front_natural"
+      ]
+    },
+    {
+      "en": "What a course has born by a stage is closed downward, a stem (born_closed, born_stem), and every stem with decided membership is what some course bears first, in as many births as it has elements (stem_born_first): Brightwell and others' characterization of their stem sets, here on finite causal sets.",
+      "zh": "一历程至某阶段所已生者向下封闭，为一茎（born_closed、born_stem）；成员可判定之每一茎，皆为某一历程所先生者，生数等于其元数（stem_born_first），即 Brightwell 等对其茎集之刻画，此处于有限因果集。",
+      "declarations": [
+        "Becoming.Presence.born_closed",
+        "Becoming.Presence.born_stem",
+        "Becoming.Presence.stem_born_first"
+      ]
+    },
+    {
+      "en": "Tables of a test: every test on the first n numbers has a table doubly negated, a decided one has a table, and a table of a test closed downward gives a natural labelling (Tabulates, beq_false_of_ne, table_yes, table_no, table_not_not, table_of, natural_of_table, table_false, down_closed); whether some number below a bound has a property is weakly decided where it is for each (decided_true, weakly_exists_below).",
+      "zh": "检验之表：前 n 数上之每一检验，其有表不可否证，可判定者有表，向下封闭之检验之表给出自然编号（Tabulates、table_yes、table_no、table_not_not、table_of、natural_of_table 等）；界下某数具一性质，各数弱可判定则此亦弱可判定（decided_true、weakly_exists_below）。",
+      "declarations": [
+        "Becoming.Presence.Tabulates",
+        "Becoming.Presence.beq_false_of_ne",
+        "Becoming.Presence.table_yes",
+        "Becoming.Presence.table_no",
+        "Becoming.Presence.table_not_not",
+        "Becoming.Presence.table_of",
+        "Becoming.Presence.natural_of_table",
+        "Becoming.Presence.table_false",
+        "Becoming.Presence.down_closed",
+        "Becoming.Presence.decided_true",
+        "Becoming.Presence.weakly_exists_below"
+      ]
+    },
+    {
+      "en": "Down-sets of an element: bearing first what precedes j, with j, is a natural labelling that bears j before everything not preceding it (downTo, downTo_closed, downTo_self, downTo_other, downTo_before).",
+      "zh": "一元之下集：先生先于 j 者与 j，为一自然编号，生 j 于凡不先于之者之前（downTo、downTo_closed、downTo_self、downTo_other、downTo_before）。",
+      "declarations": [
+        "Becoming.Presence.downTo",
+        "Becoming.Presence.downTo_closed",
+        "Becoming.Presence.downTo_self",
+        "Becoming.Presence.downTo_other",
+        "Becoming.Presence.downTo_before"
+      ]
+    },
+    {
+      "en": "Born before on every course is precedence: with precedence decided, i precedes j exactly where i is born before j in every natural labelling (prec_iff_every), so what is born no later than an element on every course is its past, itself included (past_every_iff), the largest relation every course respects (past_largest).",
+      "zh": "于每一历程皆先生即先后：先后可判定时，i 先于 j 恰当于每一自然编号中 i 生于 j 前（prec_iff_every）；故于每一历程皆不后于一元而生者，即其过去连同其自身（past_every_iff），为诸历程皆守之最大关系（past_largest）。",
+      "declarations": [
+        "Becoming.Presence.prec_iff_every",
+        "Becoming.Presence.past_every_iff",
+        "Becoming.Presence.past_largest"
+      ]
+    },
+    {
+      "en": "With no decision, born before on every course is exactly precedence not refuted (every_not_not, every_iff_not_not).",
+      "zh": "无判定时，于每一历程皆先生恰为先后不可否证（every_not_not、every_iff_not_not）。",
+      "declarations": [
+        "Becoming.Presence.every_not_not",
+        "Becoming.Presence.every_iff_not_not"
+      ]
+    },
+    {
+      "en": "Born before on some course: with precedence weakly decided, i is born before j in some natural labelling exactly where they differ and j does not precede i (before_of_weakly, before_some_iff); two different unrelated elements are born in either order, so no order of birth of unrelated elements is common to all courses (either_order).",
+      "zh": "于某一历程先生：先后弱可判定时，i 于某一自然编号中生于 j 前，恰当二者相异且 j 不先于 i（before_of_weakly、before_some_iff）；二相异而无先后之元二序皆可生，故无先后者之生序非诸历程所共（either_order）。",
+      "declarations": [
+        "Becoming.Presence.before_of_weakly",
+        "Becoming.Presence.before_some_iff",
+        "Becoming.Presence.either_order"
+      ]
+    },
+    {
+      "en": "Asked of every causal set, born before on every course gives precedence exactly under excluded middle, and past_every_iff from left to right is exactly excluded middle too, on two elements whose one precedence is a proposition (pairIf, pairIf_ordered, every_needs_decision, every_iff_em, past_every_needs_decision, past_every_iff_em).",
+      "zh": "问于每一因果集，于每一历程皆先生给出先后恰当排中律，past_every_iff 自左至右亦恰为排中律；二元、其唯一先后为一命题（pairIf、pairIf_ordered、every_needs_decision、every_iff_em、past_every_needs_decision、past_every_iff_em）。",
+      "declarations": [
+        "Becoming.Presence.pairIf",
+        "Becoming.Presence.pairIf_ordered",
+        "Becoming.Presence.every_needs_decision",
+        "Becoming.Presence.every_iff_em",
+        "Becoming.Presence.past_every_needs_decision",
+        "Becoming.Presence.past_every_iff_em"
+      ]
+    },
+    {
+      "en": "Asked of every causal set, either_order and before_some_iff from right to left are each exactly weak excluded middle, through De Morgan's law on three elements whose precedences are propositions (weakly_of_deMorgan, middleIf and its laws, either_order_deMorgan, either_order_iff_weakly, before_some_iff_weakly).",
+      "zh": "问于每一因果集，either_order 与 before_some_iff 自右至左各恰为弱排中律，经三元（其先后为命题）上之德摩根律（weakly_of_deMorgan、middleIf 及其律、either_order_deMorgan、either_order_iff_weakly、before_some_iff_weakly）。",
+      "declarations": [
+        "Becoming.Presence.weakly_of_deMorgan",
+        "Becoming.Presence.middleIf",
+        "Becoming.Presence.middleIf_ordered",
+        "Becoming.Presence.middleIf_not_two_zero",
+        "Becoming.Presence.middleIf_not_zero_two",
+        "Becoming.Presence.either_order_deMorgan",
+        "Becoming.Presence.either_order_iff_weakly",
+        "Becoming.Presence.before_some_iff_weakly"
+      ]
+    },
+    {
+      "en": "The present at a stage: the maximal elements of what a course has born by then (bornBy, MaximalBorn), where the grammar's ending, «亡» under «一», holds on what is born (maximalBorn_iff_ends); two elements of one present are unrelated (maximalBorn_unrelated), and bearing first what a downward-closed test passes, the present after as many births is the passing elements preceding nothing passing (maximalBorn_front).",
+      "zh": "某阶段之现在：一历程至彼时所已生者之极大元（bornBy、MaximalBorn），即文法之亡（«一» 下之 «亡»）于已生者上成立（maximalBorn_iff_ends）；同一现在之二元无先后（maximalBorn_unrelated）；先生向下封闭之检验所通过者，生如数之后，现在即不先于任何通过者之通过元（maximalBorn_front）。",
+      "declarations": [
+        "Becoming.Presence.bornBy",
+        "Becoming.Presence.MaximalBorn",
+        "Becoming.Presence.maximalBorn_iff_ends",
+        "Becoming.Presence.maximalBorn_unrelated",
+        "Becoming.Presence.maximalBorn_front"
+      ]
+    },
+    {
+      "en": "With precedence weakly decided, every antichain given by a Boolean test is the present of some course at some stage (weakly_above, antichain_present), and two elements are in the present at some stage of some course exactly where neither precedes the other (together_some_iff).",
+      "zh": "先后弱可判定时，以布尔检验给出之每一反链，皆为某一历程某阶段之现在（weakly_above、antichain_present）；二元于某一历程某阶段同处一现在，恰当二者互不相先（together_some_iff）。",
+      "declarations": [
+        "Becoming.Presence.weakly_above",
+        "Becoming.Presence.antichain_present",
+        "Becoming.Presence.together_some_iff"
+      ]
+    },
+    {
+      "en": "Present together on every course: with precedence decided, exactly where the two have the same future (future_of_together_every, together_every_iff); with no decision, exactly where the same future holds doubly negated (together_not_not, together_every_iff_not_not).",
+      "zh": "于每一历程同处一现在：先后可判定时，恰当二者其后相同（future_of_together_every、together_every_iff）；无判定时，恰当其后相同不可否证（together_not_not、together_every_iff_not_not）。",
+      "declarations": [
+        "Becoming.Presence.future_of_together_every",
+        "Becoming.Presence.together_every_iff",
+        "Becoming.Presence.together_not_not",
+        "Becoming.Presence.together_every_iff_not_not"
+      ]
+    },
+    {
+      "en": "Asked of every causal set, together_every_iff from left to right is exactly excluded middle (apartIf, apartIf_ordered, together_every_needs_decision, together_every_iff_em), and together_some_iff from right to left and antichain_present are each exactly weak excluded middle (together_some_deMorgan, together_some_iff_weakly, together_of_antichain, antichain_present_iff_weakly).",
+      "zh": "问于每一因果集，together_every_iff 自左至右恰为排中律（together_every_iff_em 等）；together_some_iff 自右至左与 antichain_present 各恰为弱排中律（together_some_iff_weakly、antichain_present_iff_weakly 等）。",
+      "declarations": [
+        "Becoming.Presence.apartIf",
+        "Becoming.Presence.apartIf_ordered",
+        "Becoming.Presence.together_every_needs_decision",
+        "Becoming.Presence.together_every_iff_em",
+        "Becoming.Presence.together_some_deMorgan",
+        "Becoming.Presence.together_some_iff_weakly",
+        "Becoming.Presence.together_of_antichain",
+        "Becoming.Presence.antichain_present_iff_weakly"
+      ]
+    },
+    {
+      "en": "Presence at a birth: i is present at j's birth where i precedes j and nothing i precedes is born before j, on a natural labelling exactly where i precedes j and is in the present at j's stage (PresentAt, present_iff_maximalBorn); present on some course, it is a link below j (link_of_present), and with precedence weakly decided every link is (present_some_iff_link).",
+      "zh": "于其生时在：i 先于 j 且 i 所先者皆不生于 j 前；于自然编号上恰当 i 先于 j 且于 j 之阶段在现在（PresentAt、present_iff_maximalBorn）；于某一历程在，则为 j 下之覆盖（link_of_present）；先后弱可判定时，每一覆盖皆然（present_some_iff_link）。",
+      "declarations": [
+        "Becoming.Presence.PresentAt",
+        "Becoming.Presence.present_iff_maximalBorn",
+        "Becoming.Presence.link_of_present",
+        "Becoming.Presence.present_some_iff_link"
+      ]
+    },
+    {
+      "en": "The least element above: j is the least element above i where i precedes j and everything i precedes is j or above j (LeastAbove), a link (link_of_least); with precedence decided, i is present at j's birth on every course exactly there (present_every_iff), exactly where j is the one element i is linked to (least_iff_only_link).",
+      "zh": "其上之最小元：i 先于 j 且 i 所先者皆为 j 或在 j 之上，则 j 为 i 之上之最小元（LeastAbove），为覆盖（link_of_least）；先后可判定时，i 于每一历程于 j 之生时在恰当于此（present_every_iff），即 j 为 i 唯一之覆盖（least_iff_only_link）。",
+      "declarations": [
+        "Becoming.Presence.LeastAbove",
+        "Becoming.Presence.link_of_least",
+        "Becoming.Presence.present_every_iff",
+        "Becoming.Presence.least_iff_only_link"
+      ]
+    },
+    {
+      "en": "On every course, the one link, with no decision: i is present at j's birth in every natural labelling exactly where j is the one element i is linked to (above_of_only_not_not, present_every_of_only_link, only_link_of_present_every, present_every_iff_only_link); everything i precedes is then at or above j doubly negated (above_of_every_not_not).",
+      "zh": "于每一历程，唯一之覆盖，无需判定：i 于每一自然编号中于 j 之生时在，恰当 j 为 i 唯一之覆盖（present_every_iff_only_link 及其二向）；i 所先者在 j 或其上，不可否证（above_of_every_not_not）。",
+      "declarations": [
+        "Becoming.Presence.above_of_only_not_not",
+        "Becoming.Presence.present_every_of_only_link",
+        "Becoming.Presence.only_link_of_present_every",
+        "Becoming.Presence.present_every_iff_only_link",
+        "Becoming.Presence.above_of_every_not_not"
+      ]
+    },
+    {
+      "en": "Asked of every causal set, passing from presence on every course, or from the one link, to the least element above is exactly excluded middle (leastIf, leastIf_ordered, present_every_needs_decision, present_least_iff_em, only_link_least_iff_em), and present_some_iff_link from right to left is exactly weak excluded middle (linkIf, linkIf_ordered, present_some_deMorgan, present_some_iff_weakly).",
+      "zh": "问于每一因果集，自于每一历程在、或自唯一之覆盖，推至其上之最小元，恰为排中律（present_least_iff_em、only_link_least_iff_em）；present_some_iff_link 自右至左恰为弱排中律（present_some_iff_weakly）。",
+      "declarations": [
+        "Becoming.Presence.leastIf",
+        "Becoming.Presence.leastIf_ordered",
+        "Becoming.Presence.present_every_needs_decision",
+        "Becoming.Presence.present_least_iff_em",
+        "Becoming.Presence.only_link_least_iff_em",
+        "Becoming.Presence.linkIf",
+        "Becoming.Presence.linkIf_ordered",
+        "Becoming.Presence.present_some_deMorgan",
+        "Becoming.Presence.present_some_iff_weakly"
+      ]
+    },
+    {
+      "en": "On three elements, 0 below 1 and 2: 0 is not present at 2's birth on the labels as they are and is with the births of 1 and 2 exchanged, so it is a link below 2 and 2 is not the least element above it; the present after two births is exactly 1 on one course and exactly 2 on another (below_three, swap12, swap12_three, Vee).",
+      "zh": "三元，0 在 1 与 2 之下：依原标号，0 不于 2 之生时在，互换 1 与 2 之生则在，故其为 2 下之覆盖，而 2 非其上之最小元；生二元后之现在，于一历程恰为 1，于另一历程恰为 2（below_three、swap12、swap12_three、Vee）。",
+      "declarations": [
+        "Becoming.Presence.below_three",
+        "Becoming.Presence.swap12",
+        "Becoming.Presence.swap12_three",
+        "Becoming.Presence.Vee.vee",
+        "Becoming.Presence.Vee.ordered",
+        "Becoming.Presence.Vee.natural_swap",
+        "Becoming.Presence.Vee.not_present_identity",
+        "Becoming.Presence.Vee.present_swap",
+        "Becoming.Presence.Vee.link",
+        "Becoming.Presence.Vee.not_least",
+        "Becoming.Presence.Vee.maximal_after_two_identity",
+        "Becoming.Presence.Vee.maximal_after_two_swap"
+      ]
+    },
+    {
+      "en": "Wüthrich and Callender's four elements, 0 below 1 and 2, both below 3: their relation, each element with itself and its past and the two middle elements with each other, is reflexive and transitive and neither the past read reflexively nor universal (Diamond: diamond, prec_below, ordered, PastOrPair and its laws).",
+      "zh": "Wüthrich 与 Callender 之四元，0 在 1 与 2 之下，二者皆在 3 之下：其关系，每元与自身及其过去、二中间元互相，自反且可传递，既非自反之过去，亦非全关系（Diamond：diamond、prec_below、ordered、PastOrPair 及其律）。",
+      "declarations": [
+        "Becoming.Presence.Diamond.diamond",
+        "Becoming.Presence.Diamond.prec_below",
+        "Becoming.Presence.Diamond.ordered",
+        "Becoming.Presence.Diamond.PastOrPair",
+        "Becoming.Presence.Diamond.pastOrPair_refl",
+        "Becoming.Presence.Diamond.pastOrPair_below",
+        "Becoming.Presence.Diamond.pastOrPair_trans",
+        "Becoming.Presence.Diamond.pastOrPair_pair"
+      ]
+    },
+    {
+      "en": "Every automorphism keeps it: an automorphism carries the middle elements, those preceded and preceding, to middle elements one to one (Diamond: Middle, middle_iff, pair_of_middle, middle_of_pair, auto_middle, auto_middle_back, auto_inj, pastOrPair_kept).",
+      "zh": "每一自同构皆守之：自同构一一携中间元（有所先者且先于他者之元）至中间元（Diamond：Middle、middle_iff、pair_of_middle、middle_of_pair、auto_middle、auto_middle_back、auto_inj、pastOrPair_kept）。",
+      "declarations": [
+        "Becoming.Presence.Diamond.Middle",
+        "Becoming.Presence.Diamond.middle_iff",
+        "Becoming.Presence.Diamond.pair_of_middle",
+        "Becoming.Presence.Diamond.middle_of_pair",
+        "Becoming.Presence.Diamond.auto_middle",
+        "Becoming.Presence.Diamond.auto_middle_back",
+        "Becoming.Presence.Diamond.auto_inj",
+        "Becoming.Presence.Diamond.pastOrPair_kept"
+      ]
+    },
+    {
+      "en": "It is not what every course has born by a birth: in it 2 is definite as of 1, while on the labels as they are 2 is born after 1 (below_four, swap12_four, Diamond.courses_disagree, Diamond.kept_not_agreed); on the diamond it is the past joined with being present together on every course, the pair having the same future (PastOrTogether, Diamond.pastOrTogether_iff and two lemmas).",
+      "zh": "其非每一历程于一生时所已生者：其中 2 于 1 为已定，而依原标号 2 生于 1 后（Diamond.kept_not_agreed 等）；于此四元，其即过去并于每一历程同处一现在，此对其后相同（PastOrTogether、Diamond.pastOrTogether_iff 等）。",
+      "declarations": [
+        "Becoming.Presence.below_four",
+        "Becoming.Presence.swap12_four",
+        "Becoming.Presence.Diamond.courses_disagree",
+        "Becoming.Presence.Diamond.kept_not_agreed",
+        "Becoming.Presence.PastOrTogether",
+        "Becoming.Presence.Diamond.future_one_two",
+        "Becoming.Presence.Diamond.pastOrPair_iff_together",
+        "Becoming.Presence.Diamond.pastOrTogether_iff"
+      ]
+    },
+    {
+      "en": "Off the diamond the join need not be their relation: on four elements, 0 below 1 and 3, 1 and 2 below 3, the two have the same future and so are present together on every course with different pasts, and the past joined with being present together on every course is not transitive (SameFuture and its laws).",
+      "zh": "此四元之外，此未必为其关系：四元，0 在 1 与 3 之下，1 与 2 在 3 之下，二者其后相同，故于每一历程同处一现在而其前不同；过去并于每一历程同处一现在不可传递（SameFuture 及其律）。",
+      "declarations": [
+        "Becoming.Presence.SameFuture.sameFuture",
+        "Becoming.Presence.SameFuture.prec_below",
+        "Becoming.Presence.SameFuture.ordered",
+        "Becoming.Presence.SameFuture.future_one_two",
+        "Becoming.Presence.SameFuture.together_different_pasts",
+        "Becoming.Presence.SameFuture.pastOrTogether_not_trans"
+      ]
+    },
+    {
+      "en": "On the courses themselves: what holds in every natural labelling holds on every course of the growth from the empty set, read through a relabelling onto its configuration at c's size, and in some on some (every_course_iff, some_course_iff); so births of unrelated elements commute and only they, and every stem with decided membership is born first, on the courses (rearranges_iff_course, stem_born_first_course).",
+      "zh": "于诸历程本身：于每一自然编号成立者，于自空集起之每一生长历程成立，经由至其于 c 之大小处构型之重编号读之；于某一者，则于某一历程（every_course_iff、some_course_iff）；故无先后者之生可互换且唯其可换，成员可判定之每一茎皆为某历程所先生，皆于诸历程上（rearranges_iff_course、stem_born_first_course）。",
+      "declarations": [
+        "Becoming.Presence.every_course_iff",
+        "Becoming.Presence.some_course_iff",
+        "Becoming.Presence.rearranges_iff_course",
+        "Becoming.Presence.stem_born_first_course"
+      ]
+    },
+    {
+      "en": "Born before on the courses, each with its law's decision: precedence is born before on every course, the past with the element is what is born no later on every course, the largest relation every course respects; with no decision, precedence not refuted; born before on some course is differing and not being preceded, and two different unrelated elements are born in either order (prec_iff_every_course and five more).",
+      "zh": "诸历程上之先生，各带其律之判定：于每一历程皆先生即先后；过去连同该元为于每一历程皆不后生者，为诸历程皆守之最大关系；无判定时，于每一历程皆先生即先后不可否证；于某一历程先生即相异且不为所先；二相异而无先后之元二序皆可生（prec_iff_every_course 等六律）。",
+      "declarations": [
+        "Becoming.Presence.prec_iff_every_course",
+        "Becoming.Presence.past_every_course",
+        "Becoming.Presence.past_largest_course",
+        "Becoming.Presence.every_course_not_not",
+        "Becoming.Presence.before_some_course",
+        "Becoming.Presence.either_order_course"
+      ]
+    },
+    {
+      "en": "Presents and presence on the courses: every antichain given by a test is a present; two elements are present together on some course where unrelated, on every course where they have the same future, with no decision where that holds doubly negated; a condition is present at a birth on some course where it is a link, on every course where it is the one link (antichain_present_course and five more).",
+      "zh": "诸历程上之现在与在：以检验给出之每一反链皆为一现在；二元于某一历程同处现在即无先后，于每一历程即其后相同，无判定时即其后相同不可否证；缘于一生时在，于某一历程即为覆盖，于每一历程即为唯一之覆盖（antichain_present_course 等六律）。",
+      "declarations": [
+        "Becoming.Presence.antichain_present_course",
+        "Becoming.Presence.together_some_course",
+        "Becoming.Presence.together_every_course",
+        "Becoming.Presence.together_every_course_not_not",
+        "Becoming.Presence.present_some_course",
+        "Becoming.Presence.present_every_course_only_link"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The laws on natural labellings, the stable partition, those defining the present at a stage (maximalBorn_iff_ends, maximalBorn_unrelated, maximalBorn_front) and the one link hold on every causal set of the growth (Causet.Ordered) with no decision on precedence, as do every_iff_not_not and together_every_iff_not_not. Each course form takes its law's decision.",
+      "zh": "不加公理。自然编号、稳定划分、界定某阶段之现在者（maximalBorn_iff_ends、maximalBorn_unrelated、maximalBorn_front）与唯一覆盖之律，于每一因果集成立（Causet.Ordered），先后无需判定；every_iff_not_not 与 together_every_iff_not_not 亦然。每一历程形式带其律之判定。"
+    },
+    {
+      "en": "The laws on some course (before_some_iff, either_order, together_some_iff, antichain_present, present_some_iff_link) take precedence weakly decided on the causal set: of any two elements, the one does not precede the other or that it does not is refuted (the core's WeaklyDecided).",
+      "zh": "于某一历程之律（before_some_iff、either_order、together_some_iff、antichain_present、present_some_iff_link）需先后于该因果集弱可判定：任二元，或此不先于彼，或此说被否证（核心之 WeaklyDecided）。"
+    },
+    {
+      "en": "prec_iff_every, past_every_iff, past_largest, together_every_iff, present_every_iff and least_iff_only_link take precedence decided (a Decidable instance); stem_born_first takes membership in the stem decided.",
+      "zh": "prec_iff_every、past_every_iff、past_largest、together_every_iff、present_every_iff 与 least_iff_only_link 需先后可判定（Decidable 实例）；stem_born_first 需茎之成员可判定。"
+    },
+    {
+      "en": "Asked of every causal set, the direction of each law that needs its decision is exactly its principle: excluded middle for prec_iff_every, past_every_iff, together_every_iff, present_every_iff and least_iff_only_link, weak excluded middle for the five laws on some course. Each calibration is a lemma of its law, its meaning for the unfolding stated in UE14's NOTE (law 8).",
+      "zh": "问于每一因果集，每律需判定之一向恰为其原则：prec_iff_every、past_every_iff、together_every_iff、present_every_iff 与 least_iff_only_link 为排中律，于某一历程之五律为弱排中律。每一校准为其律之引理，其于展开之意义见 UE14 之 NOTE（律 8）。"
+    },
+    {
+      "en": "Modelling choices: finite labelled causal sets; natural labellings renumber the first size numbers and leave other values free, so the laws about an element carry its bound; presence read as being among the maximal elements of what has been born; covariance read as relabelling, courses compared by their orders of birth; antichains given by a Boolean test; pointwise, with no function extensionality.",
+      "zh": "建模之选：有限有标号之因果集；自然编号重编前 size 个数，余值自由，故关于一元之律皆带其界；在读作在已生者之极大元中；协变读作重编号，历程以其生序相较；反链以布尔检验给出；皆逐点，不用函数外延性。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Anything about continuous time, the present of a center or of experience, or presence on the theory's other models.",
+      "zh": "关于连续时间、一中心或经验之现在、或本理论其他模型上之在之任何事。",
+      "kind": "scope"
+    },
+    {
+      "en": "Anything about transition probabilities, Bell causality, the continuum limit or infinite causal sets.",
+      "zh": "关于转移概率、贝尔因果性、连续极限或无穷因果集之任何事。",
+      "kind": "scope"
+    },
+    {
+      "en": "That presence must be read so: being in the configuration, Dowker's birth and a maximal antichain of the whole configuration answer without varying with the course, stated in the note, not proved in Lean.",
+      "zh": "在必如此读：在构型中、Dowker 之生、整个构型之极大反链，其答皆不随历程而变，述于 NOTE，未以 Lean 证之。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A uniqueness theorem of Stein's kind: the past is singled out as the largest relation every course respects, not as the only one meeting conditions.",
+      "zh": "Stein 式之唯一性定理：过去被选出为诸历程皆守之最大关系，而非满足诸条件之唯一者。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which presence or which course is better.",
+      "zh": "何种在或何历程更好。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+      "detail": {
+        "en": "On three elements, 0 below 1 and 2, 0 is present at 2's birth on one course and not on another, and the present after two births is exactly 1 on one course and exactly 2 on another (Vee.present_swap, Vee.not_present_identity, Vee.maximal_after_two_identity, Vee.maximal_after_two_swap).",
+        "zh": "三元，0 在 1 与 2 之下：0 于一历程于 2 之生时在，于另一历程不在；生二元后之现在，于一历程恰为 1，于另一历程恰为 2（Vee.present_swap、Vee.not_present_identity、Vee.maximal_after_two_identity、Vee.maximal_after_two_swap）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+      "detail": {
+        "en": "Asked of every causal set, born before, present together and the least element above on every course are each exactly excluded middle in their decided forms, and the laws on some course each exactly weak excluded middle, on witnesses of two and three elements whose precedences are propositions (every_iff_em, past_every_iff_em, together_every_iff_em, present_least_iff_em, either_order_iff_weakly, present_some_iff_weakly).",
+        "zh": "问于每一因果集，于每一历程皆先生、同处现在与其上之最小元，其可判定形式各恰为排中律，于某一历程之律各恰为弱排中律，见于二元、三元其先后为命题之例（every_iff_em、past_every_iff_em、together_every_iff_em、present_least_iff_em、either_order_iff_weakly、present_some_iff_weakly）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+      "detail": {
+        "en": "On Wüthrich and Callender's four elements their relation is kept by every automorphism and is not what every course has born by a birth (Diamond.kept_not_agreed).",
+        "zh": "于 Wüthrich 与 Callender 之四元，其关系为每一自同构所守，而非每一历程于一生时所已生者（Diamond.kept_not_agreed）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+      "detail": {
+        "en": "Off the diamond, two elements with the same future and different pasts are present together on every course, and the past joined with being present together on every course is not transitive (SameFuture.together_different_pasts, SameFuture.pastOrTogether_not_trans).",
+        "zh": "此四元之外，其后相同而其前不同之二元于每一历程同处一现在，过去并于每一历程同处一现在不可传递（SameFuture.together_different_pasts、SameFuture.pastOrTogether_not_trans）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T054831.888463Z): all 190 declarations of Becoming.Presence, each with an empty axiom report. Built in one session; an independent read-only review by another AI agent (REVIEW-UE14, 18 findings, every one taken) and a re-check, study section 432; not reviewed by a person. Most laws restate the order theory of linear extensions.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261028T054831.888463Z）：Becoming.Presence 之全部 190 项声明，公理报告皆空。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE14，十八条，皆已采纳）并复查，见研究第 432 节；未经人审。多数律重述线性扩张之序论。"
+  },
+  "next_delta": {
+    "en": "Presence on the theory's other models, first the order of exchanges the World's interleavings leave; the present of a center; growths whose courses are weighted; review by a person.",
+    "zh": "本理论其他模型上之在，先及世界之交错所留之交换之序；一中心之现在；历程有权重之生长；人之审查。"
+  },
+  "correspondence": {
+    "en": "Causal set theory: natural labellings as linear extensions, links, partial stems with their correspondence to antichains, and discrete general covariance (Rideout and Sorkin 2000); stem sets through the first elements of natural labellings (Brightwell and others 2003), stem_born_first here on finite causal sets; each birth as the passage of time, unrelated births unordered (Dowker 2014), her present a birth, not this module's. Order theory: linear extensions are connected by exchanging adjacent incomparable elements (Mazurkiewicz 1977; the core's theorem), a finite order is the intersection of its linear extensions (Szpilrajn 1930; Dushnik and Miller 1941), and every antichain is the maximal elements of its down-closure; the laws on presence at a birth and on being present together are elementary consequences, not found stated there. Stein's theorem (1968, 1991), in Wüthrich and Callender's form (2017): the past is here the largest relation every course respects, a maximum, not uniqueness; on their four elements their relation is the past joined with being present together on every course, not in general. The calibrations: excluded middle and its weak form. Graded in UE14's NOTE.",
+    "zh": "因果集理论：自然编号即线性扩张、覆盖、偏茎及其与反链之对应，及离散广义协变（Rideout、Sorkin 2000）；经自然编号之首元之茎集（Brightwell 等 2003），此处 stem_born_first 于有限因果集；每一生为时之流逝，无先后者之生无序（Dowker 2014），其现在为一生，非本模块之现在。序论：线性扩张由互换相邻不可比之元相连（Mazurkiewicz 1977，核心之定理），有限之序为其线性扩张之交（Szpilrajn 1930；Dushnik、Miller 1941），每一反链为其下闭包之极大元；于生时在与同处一现在之律为浅显推论，未见于诸源。Stein 定理（1968、1991），依 Wüthrich 与 Callender（2017）之形式：过去于此为诸历程皆守之最大关系，为最大而非其唯一；于其四元，其关系即过去并于每一历程同处一现在，他处未必然。校准为排中律及其弱形式。分级见 UE14 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+  "aliases": [
+    "The present on causal-set growth",
+    "因果集生长上之现在",
+    "presence in time on causal-set growth",
+    "natural labellings as orders of birth",
+    "the past as the largest relation every course respects",
+    "Becoming.Presence.natural_iff_course",
+    "Becoming.Presence.present_some_iff_link",
+    "Becoming.Presence.present_every_iff_only_link",
+    "Becoming.Presence.prec_iff_every",
+    "Becoming.Presence.past_every_iff",
+    "Becoming.Presence.present_every_course_only_link"
+  ],
+  "dependencies": [
+    {
+      "id": "precedence-and-its-links",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Causet, Causet.Ordered, links, reach_links_le and ordered_reach_links_iff: causal sets and their links.",
+        "zh": "Causet、Causet.Ordered、links、reach_links_le 与 ordered_reach_links_iff：因果集与其覆盖。"
+      }
+    },
+    {
+      "id": "what-can-be-born-next",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Stem, grown, course, process, empty, ordered_of_empty, size_of_run, Kinds.Relabels and Kinds.Isomorphic: sequential growth, its courses and relabelling.",
+        "zh": "Stem、grown、course、process、empty、ordered_of_empty、size_of_run、Kinds.Relabels 与 Kinds.Isomorphic：序贯生长、其历程与重编号。"
+      }
+    },
+    {
+      "id": "normal-forms-need-decided-apartness",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "KeepsOrder, Orients, Rearranges and rearranges_iff: arrangements and their commutations (firstWhere, the core's bounded search, is cited by no record).",
+        "zh": "KeepsOrder、Orients、Rearranges 与 rearranges_iff：排列及其互换（firstWhere，核心之有界搜索，无记录引之）。"
+      }
+    },
+    {
+      "id": "order-of-exchanges-is-the-invariant",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reindexes: renumberings of a stretch.",
+        "zh": "Reindexes：一段之重编号。"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«际», «亡» and «一»: relations, ending and the one class.",
+        "zh": "«际»、«亡» 与 «一»：关系、亡与一类。"
+      }
+    },
+    {
+      "id": "counts-exist-where-decided",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Decided, Decided.of_not_not and not_not_decided: deciding, and that a proposition is decided cannot be refuted; WeaklyDecided, the weak form in the same module, is cited only by chapter 7's records, so no edge is drawn to them.",
+        "zh": "Decided、Decided.of_not_not 与 not_not_decided：判定，及一命题可判定不可否证；同模块之弱形式 WeaklyDecided 唯第七章之记录引之，故不连于彼。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Presence.Comparable",
+        "Becoming.Presence.Diamond.Middle",
+        "Becoming.Presence.Diamond.PastOrPair",
+        "Becoming.Presence.Diamond.auto_inj",
+        "Becoming.Presence.Diamond.auto_middle",
+        "Becoming.Presence.Diamond.auto_middle_back",
+        "Becoming.Presence.Diamond.courses_disagree",
+        "Becoming.Presence.Diamond.diamond",
+        "Becoming.Presence.Diamond.future_one_two",
+        "Becoming.Presence.Diamond.kept_not_agreed",
+        "Becoming.Presence.Diamond.middle_iff",
+        "Becoming.Presence.Diamond.middle_of_pair",
+        "Becoming.Presence.Diamond.ordered",
+        "Becoming.Presence.Diamond.pair_of_middle",
+        "Becoming.Presence.Diamond.pastOrPair_below",
+        "Becoming.Presence.Diamond.pastOrPair_iff_together",
+        "Becoming.Presence.Diamond.pastOrPair_kept",
+        "Becoming.Presence.Diamond.pastOrPair_pair",
+        "Becoming.Presence.Diamond.pastOrPair_refl",
+        "Becoming.Presence.Diamond.pastOrPair_trans",
+        "Becoming.Presence.Diamond.pastOrTogether_iff",
+        "Becoming.Presence.Diamond.prec_below",
+        "Becoming.Presence.LeastAbove",
+        "Becoming.Presence.MaximalBorn",
+        "Becoming.Presence.NaturalLabelling",
+        "Becoming.Presence.NaturalLabelling.at",
+        "Becoming.Presence.NaturalLabelling.back",
+        "Becoming.Presence.NaturalLabelling.before",
+        "Becoming.Presence.PastOrTogether",
+        "Becoming.Presence.PresentAt",
+        "Becoming.Presence.SameFuture.future_one_two",
+        "Becoming.Presence.SameFuture.ordered",
+        "Becoming.Presence.SameFuture.pastOrTogether_not_trans",
+        "Becoming.Presence.SameFuture.prec_below",
+        "Becoming.Presence.SameFuture.sameFuture",
+        "Becoming.Presence.SameFuture.together_different_pasts",
+        "Becoming.Presence.Tabulates",
+        "Becoming.Presence.Vee.link",
+        "Becoming.Presence.Vee.maximal_after_two_identity",
+        "Becoming.Presence.Vee.maximal_after_two_swap",
+        "Becoming.Presence.Vee.natural_swap",
+        "Becoming.Presence.Vee.not_least",
+        "Becoming.Presence.Vee.not_present_identity",
+        "Becoming.Presence.Vee.ordered",
+        "Becoming.Presence.Vee.present_swap",
+        "Becoming.Presence.Vee.vee",
+        "Becoming.Presence.above_of_every_not_not",
+        "Becoming.Presence.above_of_only_not_not",
+        "Becoming.Presence.antichain_present",
+        "Becoming.Presence.antichain_present_course",
+        "Becoming.Presence.antichain_present_iff_weakly",
+        "Becoming.Presence.apartIf",
+        "Becoming.Presence.apartIf_ordered",
+        "Becoming.Presence.back",
+        "Becoming.Presence.before_of_weakly",
+        "Becoming.Presence.before_some_course",
+        "Becoming.Presence.before_some_iff",
+        "Becoming.Presence.before_some_iff_weakly",
+        "Becoming.Presence.below_four",
+        "Becoming.Presence.below_three",
+        "Becoming.Presence.beq_false_of_ne",
+        "Becoming.Presence.bool_absurd",
+        "Becoming.Presence.bornBy",
+        "Becoming.Presence.born_closed",
+        "Becoming.Presence.born_stem",
+        "Becoming.Presence.comparable_symm",
+        "Becoming.Presence.count",
+        "Becoming.Presence.count_add_not",
+        "Becoming.Presence.count_inj",
+        "Becoming.Presence.count_le",
+        "Becoming.Presence.count_le_add",
+        "Becoming.Presence.count_le_succ",
+        "Becoming.Presence.count_lt_of",
+        "Becoming.Presence.count_mono",
+        "Becoming.Presence.count_reaches",
+        "Becoming.Presence.count_succ_of_false",
+        "Becoming.Presence.count_succ_of_true",
+        "Becoming.Presence.courseOf",
+        "Becoming.Presence.courseOf_grows",
+        "Becoming.Presence.courseOf_isomorphic",
+        "Becoming.Presence.decided_true",
+        "Becoming.Presence.downTo",
+        "Becoming.Presence.downTo_before",
+        "Becoming.Presence.downTo_closed",
+        "Becoming.Presence.downTo_other",
+        "Becoming.Presence.downTo_self",
+        "Becoming.Presence.down_closed",
+        "Becoming.Presence.either_order",
+        "Becoming.Presence.either_order_course",
+        "Becoming.Presence.either_order_deMorgan",
+        "Becoming.Presence.either_order_iff_weakly",
+        "Becoming.Presence.every_congr",
+        "Becoming.Presence.every_course_iff",
+        "Becoming.Presence.every_course_not_not",
+        "Becoming.Presence.every_iff_em",
+        "Becoming.Presence.every_iff_not_not",
+        "Becoming.Presence.every_needs_decision",
+        "Becoming.Presence.every_not_not",
+        "Becoming.Presence.front",
+        "Becoming.Presence.front_inj",
+        "Becoming.Presence.front_keeps",
+        "Becoming.Presence.front_lt",
+        "Becoming.Presence.front_lt_count_iff",
+        "Becoming.Presence.front_natural",
+        "Becoming.Presence.front_of_false",
+        "Becoming.Presence.front_of_true",
+        "Becoming.Presence.front_onto",
+        "Becoming.Presence.front_reindexes",
+        "Becoming.Presence.front_true_lt_false",
+        "Becoming.Presence.future_of_together_every",
+        "Becoming.Presence.leastIf",
+        "Becoming.Presence.leastIf_ordered",
+        "Becoming.Presence.least_iff_only_link",
+        "Becoming.Presence.linkIf",
+        "Becoming.Presence.linkIf_ordered",
+        "Becoming.Presence.link_of_least",
+        "Becoming.Presence.link_of_present",
+        "Becoming.Presence.lt_zero_add",
+        "Becoming.Presence.maximalBorn_front",
+        "Becoming.Presence.maximalBorn_iff_ends",
+        "Becoming.Presence.maximalBorn_unrelated",
+        "Becoming.Presence.middleIf",
+        "Becoming.Presence.middleIf_not_two_zero",
+        "Becoming.Presence.middleIf_not_zero_two",
+        "Becoming.Presence.middleIf_ordered",
+        "Becoming.Presence.natural_congr",
+        "Becoming.Presence.natural_identity",
+        "Becoming.Presence.natural_iff_course",
+        "Becoming.Presence.natural_of_relabels",
+        "Becoming.Presence.natural_of_table",
+        "Becoming.Presence.natural_orients",
+        "Becoming.Presence.natural_relabels",
+        "Becoming.Presence.not_false_of_true",
+        "Becoming.Presence.of_lt_zero_add",
+        "Becoming.Presence.only_link_least_iff_em",
+        "Becoming.Presence.only_link_of_present_every",
+        "Becoming.Presence.pairIf",
+        "Becoming.Presence.pairIf_ordered",
+        "Becoming.Presence.pastIn",
+        "Becoming.Presence.pastIn_stem",
+        "Becoming.Presence.past_every_course",
+        "Becoming.Presence.past_every_iff",
+        "Becoming.Presence.past_every_iff_em",
+        "Becoming.Presence.past_every_needs_decision",
+        "Becoming.Presence.past_largest",
+        "Becoming.Presence.past_largest_course",
+        "Becoming.Presence.prec_iff_every",
+        "Becoming.Presence.prec_iff_every_course",
+        "Becoming.Presence.present_every_course_only_link",
+        "Becoming.Presence.present_every_iff",
+        "Becoming.Presence.present_every_iff_only_link",
+        "Becoming.Presence.present_every_needs_decision",
+        "Becoming.Presence.present_every_of_only_link",
+        "Becoming.Presence.present_iff_maximalBorn",
+        "Becoming.Presence.present_least_iff_em",
+        "Becoming.Presence.present_some_course",
+        "Becoming.Presence.present_some_deMorgan",
+        "Becoming.Presence.present_some_iff_link",
+        "Becoming.Presence.present_some_iff_weakly",
+        "Becoming.Presence.rearranges_iff_course",
+        "Becoming.Presence.rearranges_iff_natural",
+        "Becoming.Presence.relabel",
+        "Becoming.Presence.relabel_ordered",
+        "Becoming.Presence.some_congr",
+        "Becoming.Presence.some_course_iff",
+        "Becoming.Presence.stem_born_first",
+        "Becoming.Presence.stem_born_first_course",
+        "Becoming.Presence.swap12",
+        "Becoming.Presence.swap12_four",
+        "Becoming.Presence.swap12_three",
+        "Becoming.Presence.table_false",
+        "Becoming.Presence.table_no",
+        "Becoming.Presence.table_not_not",
+        "Becoming.Presence.table_of",
+        "Becoming.Presence.table_yes",
+        "Becoming.Presence.together_every_course",
+        "Becoming.Presence.together_every_course_not_not",
+        "Becoming.Presence.together_every_iff",
+        "Becoming.Presence.together_every_iff_em",
+        "Becoming.Presence.together_every_iff_not_not",
+        "Becoming.Presence.together_every_needs_decision",
+        "Becoming.Presence.together_not_not",
+        "Becoming.Presence.together_of_antichain",
+        "Becoming.Presence.together_some_course",
+        "Becoming.Presence.together_some_deMorgan",
+        "Becoming.Presence.together_some_iff",
+        "Becoming.Presence.together_some_iff_weakly",
+        "Becoming.Presence.weakly_above",
+        "Becoming.Presence.weakly_exists_below",
+        "Becoming.Presence.weakly_of_deMorgan"
+      ],
+      "sha256": "e4f148e78595549e6f7f2cc3cb9ef907fbd158cac7aaca8b3eaddf2fe8603189"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
+      "role": "proof",
+      "sha256": "8a1c8e9c9d9ed0dc9ec7955424905c901747756302354b6048d2ffe56e5b3726"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+      "role": "proof",
+      "sha256": "f233c6800d90c4554f572a85d5ce73b7e48107bfc1b9012ec4a8490d6f78f1e1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
+      "role": "proof",
+      "sha256": "72adbc08546ed505f267db376a96975728150ed719f941491095075bfe688f93"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "role": "proof",
+      "sha256": "597036b7017d77d548b949ca29aeb036379904c8b7d8fd7be8329e4df400c940"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
+      "role": "proof",
+      "sha256": "cb8df8564a4a249f119c84551c84297c31002ba4c57ec992edc6e20a99e62ff3"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T054831.888463Z/verification.json",
+      "role": "receipt",
+      "sha256": "071fcb2a24c184ec75d75de3c5ae90765657aa1ba6158561a6de524321d46726"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "613bdc59e1cb5f4e03c5e99ec6f918bb6f803b721cfe769458d0b329d1e06c6e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/NOTE.md",
+      "role": "integration",
+      "sha256": "4978f4e8ae1a3d331463f9e64a5d7d12dd4ad249ee15a5cac8c987d6e7db5434"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/REVIEW-UE14.md",
+      "role": "integration",
+      "sha256": "3654ceaa2471fa4d1f5a45521fa4a79f904900e94521b50acac30dcbcaea95b8"
+    },
+    {
+      "path": "theories/becoming/chapters/01-ROOT.md",
+      "role": "statement",
+      "sha256": "09b701bd7222b387d4bd0957830e1a45bb2ac3eeb2e1bd25ad106663396825fc"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T054831.888463Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Presence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "28 October 2026: added (UE14), the present on causal-set growth, read as the maximal elements of what a course has born: natural labellings exactly the orders of birth, births of unrelated elements commuting; born before on every course precedence, the past the largest relation every course respects; every antichain a present; present together on every course the same future; presence at a birth on some course a link, on every course the one link with no decision; each calibrated decision exact; each main law also stated on the courses; Wüthrich and Callender's relation on the diamond and off it; after a review and a re-check; study section 432.",
+      "zh": "2026年10月28日：新增（UE14），因果集生长上之现在，读作一历程所已生者之极大元：自然编号恰为生序，无先后者之生可互换；于每一历程皆先生即先后，过去为诸历程皆守之最大关系；每一反链皆为一现在；于每一历程同处一现在即其后相同；于生时在，于某一历程即覆盖，于每一历程即唯一之覆盖，无需判定；每一校准之判定皆确切；每一主律亦述于诸历程之上；Wüthrich 与 Callender 之关系于其四元及其外；经审查与复查；研究第 432 节。"
+    }
+  ]
+}

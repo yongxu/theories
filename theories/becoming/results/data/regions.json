@@ -1956,6 +1956,11 @@
    "base": "general",
    "note": "P117 Situations"
   },
+  "the-present-on-causal-set-growth": {
+   "region": "root",
+   "base": "frame",
+   "note": "Presence UE14: natural labellings exactly the orders of birth; born before on every course precedence, the past the largest relation every course respects; presents antichains, every antichain given by a test a present; present together on every course the same future; a condition present at a birth on some course a link, on every course the one link with no decision; each calibrated decision exact; each main law also on the courses; Wuthrich and Callender on the diamond and off it"
+  },
   "the-rest-outruns-the-renewal": {
    "region": "collective",
    "base": "old-base",
@@ -3487,6 +3492,11 @@
    "region": "root",
    "base": "old-base",
    "note": "map of premises of the old base"
+  },
+  "Becoming.Presence": {
+   "region": "root",
+   "base": "frame",
+   "note": "UE14 the present on causal-set growth (01 §1)"
   },
   "Becoming.Presentations": {
    "region": "root",

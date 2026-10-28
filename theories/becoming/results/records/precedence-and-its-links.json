@@ -189,6 +189,13 @@
         "en": "The configurations of causal-set growth are the causal sets here, on which precedence is the reach of its links where it is decidable.",
         "zh": "因果集生长之构型即此处之因果集；先后可判定时，其先后即其覆盖之及。"
       }
+    },
+    {
+      "id": "the-present-on-causal-set-growth",
+      "detail": {
+        "en": "The present on causal-set growth: a condition is present at the birth of what it conditions on some course exactly where it is a link below it (precedence weakly decided), and on every course exactly where that is the one element it is linked to.",
+        "zh": "因果集生长上之现在：缘于其果之生时在现在，于某一历程恰当其为覆盖（先后弱可判定），于每一历程恰当其为唯一之覆盖。"
+      }
     }
   ],
   "references": [
@@ -284,6 +291,10 @@
     {
       "en": "28 October 2026: added (UE13), precedence and its links: a link of the root's reach is a step, so every net whose reach is a relation contains its links; on a naturally labelled transitive relation with decidable precedence, precedence is the reach of its links, with no finiteness; deciding what lies between cannot be dropped (excluded middle); not on ω + 1; after a review and a re-check; study section 431.",
       "zh": "2026年10月28日：新增（UE13），先后与其覆盖：根之及之覆盖即一步，故凡其及为一关系之网皆含其覆盖；于自然编号、可传递且先后可判定之关系，先后即其覆盖之及，无需有限；居间之判定不可去（排中律）；于 ω + 1 则否；经审查与复查；研究第 431 节。"
+    },
+    {
+      "en": "28 October 2026, board item UE14 (study section 432): related to the-present-on-causal-set-growth; no statement, next step or declaration changed.",
+      "zh": "2026年10月28日，工作板条目 UE14（研究第 432 节）：与 the-present-on-causal-set-growth 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

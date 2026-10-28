@@ -1,0 +1,34 @@
+Becoming/PresenceProbe.lean:404:46: warning: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/PresenceProbe.lean:463:51: warning: unused variable `b`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/PresenceProbe.lean:529:84: warning: unused variable `y`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/probes/tree",
+  "modules": 84,
+  "ran": [
+    "Becoming.PresenceProbe",
+    "BecomingPresenceProbeAxiomAudit"
+  ],
+  "reused": 84,
+  "unclean": [
+    "Becoming.PresenceProbe"
+  ],
+  "audits": {
+    "Becoming.Presence": {
+      "theorems": 99,
+      "declarations": 120,
+      "with_axioms": {}
+    },
+    "Becoming.PresenceProbe": {
+      "theorems": 55,
+      "declarations": 61,
+      "with_axioms": {}
+    }
+  }
+}

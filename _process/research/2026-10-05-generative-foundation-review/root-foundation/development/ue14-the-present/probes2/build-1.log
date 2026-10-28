@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/ue14recheck/tree",
+  "modules": 83,
+  "ran": [
+    "Becoming.RecheckProbe",
+    "BecomingRecheckProbeAxiomAudit"
+  ],
+  "reused": 82,
+  "unclean": [],
+  "audits": {
+    "Becoming.RecheckProbe": {
+      "theorems": 4,
+      "declarations": 5,
+      "with_axioms": {}
+    }
+  }
+}

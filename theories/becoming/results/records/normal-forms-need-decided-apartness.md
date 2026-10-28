@@ -49,6 +49,8 @@ The normal form is relative to given natural-number names and a finite stretch. 
 
 - Related, not a proved adapter: [least-footprint-where-idleness-decided](least-footprint-where-idleness-decided.md). The least footprint supplies the least reading of joining; its idleness decision differs from this record’s finite-stretch apartness decision.
 
+**Used by:** [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md)
+
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts
 

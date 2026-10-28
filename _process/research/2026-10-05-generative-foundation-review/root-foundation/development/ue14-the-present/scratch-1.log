@@ -1,0 +1,96 @@
+Becoming/Presence.lean:206:7: error(lean.unknownIdentifier): Unknown identifier `add_left_cancel`
+Becoming/Presence.lean:218:6: error: Type mismatch
+  Nat.lt_of_add_lt_add_left
+    (Nat.lt_of_le_of_lt (Nat.le_of_eq ?m.85) (Nat.lt_of_lt_of_le below (Nat.le_of_eq (Eq.symm (count_add_not p n)))))
+has type
+  count p n < count (fun x => !p x) n
+but is expected to have type
+  r - count p n < count (fun x => !p x) n
+Becoming/Presence.lean:222:31: error(lean.unknownIdentifier): Unknown identifier `false_of_not`
+Becoming/Presence.lean:219:42: error: Application type mismatch: The argument
+  sum
+has type
+  count p n + (r - count p n) = r
+but is expected to have type
+  count p n + count p n = r
+in the application
+  Nat.le_of_eq sum
+Becoming/Presence.lean:472:33: error: Expected type must not contain free variables
+  1 < (onlyIf P).size
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Becoming/Presence.lean:492:102: error: Application type mismatch: The argument
+  p
+has type
+  ¬¬P
+but is expected to have type
+  P
+in the application
+  ⟨rfl, p⟩
+Becoming/Presence.lean:487:43: error: Expected type must not contain free variables
+  0 < (onlyIf P).size
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Becoming/Presence.lean:488:43: error: Expected type must not contain free variables
+  1 < (onlyIf P).size
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Becoming/Presence.lean:493:52: error: Expected type must not contain free variables
+  0 < (onlyIf P).size
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Becoming/Presence.lean:493:64: error: Expected type must not contain free variables
+  1 < (onlyIf P).size
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Becoming/Presence.lean:724:0: warning: automatically included section variable(s) unused in theorem `Becoming.Presence.Diamond.pair_of_middle`:
+  auto
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit auto in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Becoming/Presence.lean:732:0: warning: automatically included section variable(s) unused in theorem `Becoming.Presence.Diamond.middle_of_pair`:
+  auto
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit auto in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Becoming/Presence.lean:744:43: error: Application type mismatch: The argument
+  m
+has type
+  a = 1 ∧ b = 2 ∨ a = 2 ∧ b = 1
+but is expected to have type
+  CausalGrowth.Kinds.Relabels diamond diamond ?m.41 ?m.42
+in the application
+  @middle_of_pair ?m.41 ?m.42 m
+Becoming/Presence.lean:744:12: error: Invalid `⟨...⟩` notation: The expected type
+  ?m.43 = 1 ∧ ?m.44 = 2 ∨ ?m.43 = 2 ∧ ?m.44 = 1 → Middle ?m.43 ∧ Middle ?m.44 ∧ ?m.43 ≠ ?m.44
+is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+Becoming/Presence.lean:751:43: error: Application type mismatch: The argument
+  m
+has type
+  σ a = 1 ∧ σ b = 2 ∨ σ a = 2 ∧ σ b = 1
+but is expected to have type
+  CausalGrowth.Kinds.Relabels diamond diamond ?m.103 ?m.104
+in the application
+  @middle_of_pair ?m.103 ?m.104 m
+Becoming/Presence.lean:751:12: error: Invalid `⟨...⟩` notation: The expected type
+  ?m.105 = 1 ∧ ?m.106 = 2 ∨ ?m.105 = 2 ∧ ?m.106 = 1 → Middle ?m.105 ∧ Middle ?m.106 ∧ ?m.105 ≠ ?m.106
+is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/tree",
+  "modules": 82,
+  "ran": [
+    "Becoming.Presence"
+  ],
+  "reused": 81,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Presence"
+}
+exit 1
