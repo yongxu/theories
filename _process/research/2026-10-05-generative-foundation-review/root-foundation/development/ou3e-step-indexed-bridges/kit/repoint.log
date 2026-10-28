@@ -1,0 +1,391 @@
+{
+ "records": 44,
+ "apply": true,
+ "by_record": {
+  "a-law-through-a-projection-along-one-run": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "a-law-through-changing-coupling-along-one-run": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "a-law-through-coupling-along-one-run": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "attraction-is-not-returning": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "becoming-dependence-dynamics": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "becoming-finite-horizon": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "becoming-renewal-reading": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "becoming-return-grades": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "becoming-stepwise-reading": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "conditions-kept-together": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ],
+   "rebound": []
+  },
+  "configurations-alike-by-relation": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "counterfactual-is-the-course": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "determinacy-up-to-likeness": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "effective-capacity-and-eventual-reachability": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "endpoint-loss-and-return": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "fixed-places-and-sole-lines": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "generalization-through-lumping": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "giving-that-waits-on-giving": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Withholding.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Withholding.lean"
+   ]
+  },
+  "hexagram-arrangements-and-laws": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "hexagram-world-laws": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "hexagrams-on-the-spine": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "histories-fix-law-up-to-dead-ends": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "identification-where-bounded": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "identification-where-runs-part": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "identity-across-steps": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "joint-difference-making": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "place-relations-in-context": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "process-and-frame-as-readings": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "projection-carrying-a-law": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "recurrence-without-premise": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "relata-counted-up-to-indiscernibility": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "restoring-giving-from-the-worst-start": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Withholding.lean"
+   ],
+   "rebound": []
+  },
+  "retained-reference-joining-recovery": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "returning-where-the-course-branches": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "tests-fix-likeness-where-determined": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "the-split-that-makes-sense": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "thresholds-of-waiting": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Withholding.lean"
+   ],
+   "rebound": []
+  },
+  "trace-law-equivalence": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "unceasing-generation-needs-renewal": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "unity-of-readings": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "what-a-course-keeps-reachable": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ],
+   "rebound": []
+  },
+  "where-a-move-is-formed": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "wisdom-root": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  },
+  "worlds-are-runs": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean"
+   ]
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

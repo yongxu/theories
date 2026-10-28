@@ -1,0 +1,1335 @@
+{
+ "central_declarations": 127,
+ "reaching_the_grammar": 44,
+ "distinct_central_declarations": 118,
+ "distinct_by_dependence": {
+  "grammar": 43,
+  "balance, represented": 32,
+  "anchor, not reached": 7,
+  "no master law": 36
+ },
+ "distinct_by_category": {
+  "master law": 50,
+  "balance, represented": 32,
+  "premise of the account": 9,
+  "counting identity": 3,
+  "law of its model": 7,
+  "single application": 4,
+  "definitional or representational": 13,
+  "derivation pending": 0,
+  "no reason given": 0
+ },
+ "distinct_gaps": 0,
+ "pending_derivations": {},
+ "anchor_not_reached_reasons": {
+  "Becoming.PartForms.goAlike": "a law of its model: the part's law determined at a move the part alone forms; the image law only reads it as carrying a law of its own (carries_law_iff), and a proof through it applies the law and undoes it (OU3d's review)",
+  "Becoming.Web.paths_extension_iff_widens": "C's extension on a web's paths: a reindexing of claims (formation, step) to admissions (step, formation), every claim counted; widening enters by its definition, its order laws already from the grammar",
+  "Becoming.Web.widens_iff_retains_adds": "the reduction of what has significance to what can form under the continuation condition; the free significance is not lifted to the root",
+  "Becoming.Web.paths_comparison_widens": "C's extension on paths, one direction, for every reading of living",
+  "Becoming.Web.paths_one_object": "the conjunction of C's extension on paths, the continuation condition as living significance, and the reduction of significance under the condition",
+  "Becoming.Weighting.widens_iff_every_positive": "weights: widening is what every positive weighting ranks higher; the grammar has no weights",
+  "Becoming.Direction.extension_iff_widens": "C's extension on paths, on the moves' frame (Web.paths_extension_iff_widens)"
+ },
+ "by_master_law_resting_and_reaching_grammar": {
+  "closure": [
+   27,
+   27
+  ],
+  "balance": [
+   55,
+   15
+  ],
+  "return": [
+   13,
+   13
+  ],
+  "order": [
+   9,
+   1
+  ],
+  "lumping": [
+   2,
+   1
+  ]
+ },
+ "anchors_reach_grammar": {
+  "closure": {
+   "Becoming.WithinClosure": true
+  },
+  "balance": {
+   "Becoming.Flow.Balances": false,
+   "Becoming.Flow.BalancesOn": false,
+   "Becoming.Flow.BalancesBetween": false,
+   "Becoming.balance_over_stretch_on": false
+  },
+  "return": {
+   "Becoming.Branching.Returns": false,
+   "Becoming.Branching.Lossless": false,
+   "Becoming.revisits_within": false,
+   "Becoming.Amounts.rests": true,
+   "Becoming.Amounts.FallsStop": false
+  },
+  "order": {
+   "Becoming.Web.Widens": false,
+   "Becoming.Weighting.WidensOn": false
+  },
+  "lumping": {
+   "Becoming.GoAlikeUnder": false
+  }
+ },
+ "rows": [
+  {
+   "row": "generation",
+   "declaration": "Becoming.Web.Unceasing.rises",
+   "grammar": true,
+   "laws": [
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "generation",
+   "declaration": "Becoming.Flow.uptake_needs_replenishment",
+   "grammar": true,
+   "laws": [
+    "balance",
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "generation",
+   "declaration": "Becoming.Web.Embodied.replenishes",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "generation",
+   "declaration": "Becoming.Flow.new_beyond_every",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "generation",
+   "declaration": "Becoming.onLoop_of_closing",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Flow.restores",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Flow.Balances.renewedBy",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Flow.More.replenishment_unbounded",
+   "grammar": true,
+   "laws": [
+    "balance",
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Tolerance.answers_restores_iff",
+   "grammar": true,
+   "laws": [],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Viability.kernel_and_iff",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "logic: for all reached, and",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.Law.drawn_iff_not_returns",
+   "grammar": true,
+   "laws": [
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.Law.lossless_iff_returns",
+   "grammar": true,
+   "laws": [
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.Flow.change_recurs_iff",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.World.balanced_reidentify_iff",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.Pace.rule_until_reading",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.Balances.consumption_ends_with_feeders",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.Dissipative.opens",
+   "grammar": true,
+   "laws": [
+    "balance",
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.continuing_excludes",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.outrun_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Branching.loss_passes_juncture",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RuleCapture.favouring_locks",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.ends_iff_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Adjusted.falls_iff_below",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Drawn.run_shape",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Coupled.threshold_falls",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.course_lost_iff",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_broken",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_breaks_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_keeps_stepwise",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_exhausts",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_rebuilds",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.Amounts.rests",
+   "grammar": true,
+   "laws": [
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.World.comes_to_rest_unrefuted",
+   "grammar": true,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.Web.Carries.active_not_recurring",
+   "grammar": true,
+   "laws": [
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.Listed.coming_of_ceasing",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.CensusWebs.keep_pace",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "actor",
+   "declaration": "Becoming.Web.roles_supported",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "the one-kind reading keeps support",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "actor",
+   "declaration": "Becoming.Dependence.differenceOnlyTogether_iff",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "the dichotomy of a determined process",
+   "category": "law of its model"
+  },
+  {
+   "row": "actor",
+   "declaration": "Becoming.counterfactual_is_course",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "actor",
+   "declaration": "Becoming.PartForms.goAlike",
+   "grammar": false,
+   "laws": [
+    "lumping"
+   ],
+   "dependence": "anchor, not reached",
+   "reason": "a law of its model: the part's law determined at a move the part alone forms; the image law only reads it as carrying a law of its own (carries_law_iff), and a proof through it applies the law and undoes it (OU3d's review)",
+   "category": "master law"
+  },
+  {
+   "row": "patient",
+   "declaration": "Becoming.Web.roles_dependent",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "the one-kind reading keeps dependence",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "patient",
+   "declaration": "Becoming.Flow.beyond_gives_nothing",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "patient",
+   "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "patient",
+   "declaration": "Becoming.responses_le_missBound",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "a bound of propagation",
+   "category": "law of its model"
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.Flow.unexcluded_beyond_coupling",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.Run.not_fixes_of_untaken",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "an untaken move retargeted",
+   "category": "law of its model"
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.Ideals.verifiableBy_iff_interior",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "Iff.rfl",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.Learnable.learnable_iff",
+   "grammar": true,
+   "laws": [
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.apart_only_downstream",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.carried_iff_rising",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "support, as NeedsSupportAt",
+   "category": "premise of the account"
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Valuation.significant_iff",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Valuation.significant_iff_held",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "S0 and N_std unpacked",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Web.selfValuation_significant_iff",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Web.significance_undetermined",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "a free slot shown free",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.Web.renewingAt_iff_over_all",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "a one-line unpacking",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "evaluation",
+   "declaration": "Becoming.forced_iff_center",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.WithinMoves.after_course",
+   "grammar": true,
+   "laws": [],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Renewable.no_exact_finite_reading",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "a prefix reading used once; the open continuation",
+   "category": "single application"
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Web.paths_extension_iff_widens",
+   "grammar": false,
+   "laws": [
+    "order"
+   ],
+   "dependence": "anchor, not reached",
+   "reason": "C's extension on a web's paths: a reindexing of claims (formation, step) to admissions (step, formation), every claim counted; widening enters by its definition, its order laws already from the grammar",
+   "category": "master law"
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Flow.Balances.retains_iff_within_margin",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
+   "grammar": false,
+   "laws": [
+    "balance",
+    "order"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.Flow.act_unselected",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.act_courses_unselected",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.Flow.Balances.comparison_within_response",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.presupposition_scopes",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "responsibility",
+   "declaration": "Becoming.Dependence.Overdetermined.only_together",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "one line from the definitions",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "life",
+   "declaration": "Becoming.Web.roles_alive",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "the one-kind reading keeps living",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "life",
+   "declaration": "Becoming.Web.living_on_reaches",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "N_rel once; its closure form is Valuation.reaches",
+   "category": "single application"
+  },
+  {
+   "row": "life",
+   "declaration": "Becoming.Flow.descent_reaches",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "N_rel once; its closure form is Valuation.reaches",
+   "category": "single application"
+  },
+  {
+   "row": "life",
+   "declaration": "Becoming.Web.Unceasing.activeRenewer_recurs",
+   "grammar": true,
+   "laws": [
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Flow.selection_within",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "support, with the counting form of Price",
+   "category": "premise of the account"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Flow.transmitted_supported",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "support, with inheritance within the bound",
+   "category": "premise of the account"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Flow.selected_le",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "support: only the active give, the active are supported",
+   "category": "premise of the account"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Web.transmits_at_iff",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "transmission unpacked",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Flow.no_new_dependence",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionTerm.covariation",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "Price's covariance, with no premise",
+   "category": "counting identity"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "support, with Price's identity",
+   "category": "premise of the account"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "support, with Price's identity",
+   "category": "premise of the account"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Reproduction.Flow.number_within_take",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "dissipation",
+   "category": "premise of the account"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Reproduction.Flow.lineage_ends",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Reproduction.Flow.closed_lineage_lowered",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionLevels.levels_sized",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "Price's partition among groups",
+   "category": "counting identity"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "Price's partition, read for a rise",
+   "category": "counting identity"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "only the active give, with the partition",
+   "category": "premise of the account"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.family_childless",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.coupled_end_together",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.all_end",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "only the active give",
+   "category": "premise of the account"
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Drift.falls_back",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "a second-moment bound on samplings",
+   "category": "law of its model"
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.Learning.goAlike_iff_lumped",
+   "grammar": true,
+   "laws": [
+    "lumping"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.Learnable.learnable_iff",
+   "grammar": true,
+   "laws": [
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.LearnableRuns.learnable_iff_tracks",
+   "grammar": true,
+   "laws": [
+    "return"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.Limit.identifies_iff_tracks",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "Iff.rfl",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "learning",
+   "declaration": "Becoming.Learning.Training.unselected_beyond_data",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "a selection through the data, used once",
+   "category": "single application"
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.Flow.mutuallyDependent_iff_reach",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.Withholding.withholding_spreads",
+   "grammar": true,
+   "laws": [],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.SharedCodes.run_agrees_every_start_iff",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "copying from an origin",
+   "category": "law of its model"
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.RelativePosition.rise_needs_fall",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "a zero-sum count, by commutativity",
+   "category": "law of its model"
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.RuleCapture.uniform_locks",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.ClosedCapture.lock_outlives_loss",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "collective",
+   "declaration": "Becoming.Web.Whole.family_excess_ends",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.unrestricted_iff_livingSignificance",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "two definitions unpacked",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.Web.widens_iff_retains_adds",
+   "grammar": false,
+   "laws": [
+    "order"
+   ],
+   "dependence": "anchor, not reached",
+   "reason": "the reduction of what has significance to what can form under the continuation condition; the free significance is not lifted to the root",
+   "category": "master law"
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.Web.paths_comparison_widens",
+   "grammar": false,
+   "laws": [
+    "order"
+   ],
+   "dependence": "anchor, not reached",
+   "reason": "C's extension on paths, one direction, for every reading of living",
+   "category": "master law"
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.Web.paths_one_object",
+   "grammar": false,
+   "laws": [
+    "order"
+   ],
+   "dependence": "anchor, not reached",
+   "reason": "the conjunction of C's extension on paths, the continuation condition as living significance, and the reduction of significance under the condition",
+   "category": "master law"
+  },
+  {
+   "row": "significance",
+   "declaration": "Becoming.Weighting.widens_iff_every_positive",
+   "grammar": false,
+   "laws": [
+    "order"
+   ],
+   "dependence": "anchor, not reached",
+   "reason": "weights: widening is what every positive weighting ranks higher; the grammar has no weights",
+   "category": "master law"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.unselected_beyond_coupling",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.optimum_broken_iff",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "the drive to the least level",
+   "category": "law of its model"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Optimum.optimum_beyond",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Optimum.mutual_beyond",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.course_lost_iff",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_broken",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_breaks_below",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_keeps_stepwise",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_exhausts",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_rebuilds",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+   "grammar": false,
+   "laws": [
+    "balance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.unselected_beyond_pool",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.withinCoupling_reads_iff",
+   "grammar": true,
+   "laws": [
+    "closure"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.act_selected_by_pool",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+   "grammar": false,
+   "laws": [],
+   "dependence": "no master law",
+   "reason": "two laws through one coupling",
+   "category": "definitional or representational"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Direction.extension_iff_widens",
+   "grammar": false,
+   "laws": [
+    "order"
+   ],
+   "dependence": "anchor, not reached",
+   "reason": "C's extension on paths, on the moves' frame (Web.paths_extension_iff_widens)",
+   "category": "master law"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Direction.widening_selected_by_pool",
+   "grammar": true,
+   "laws": [
+    "closure",
+    "balance",
+    "order"
+   ],
+   "dependence": "grammar",
+   "category": "master law"
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
+   "grammar": false,
+   "laws": [
+    "balance",
+    "order"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented"
+  }
+ ]
+}

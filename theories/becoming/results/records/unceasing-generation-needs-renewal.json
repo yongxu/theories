@@ -493,7 +493,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
       "role": "proof",
-      "sha256": "f2c55215f94a1ddf795d238cf4a37c041d66540ef56c83ce4a0c3319dfa19d7d",
+      "sha256": "a6fef844c6464152369b1c1117c602f1e6d0ec6c7645fda7d6f60c8930c52def",
       "declarations": [
         "Becoming.Renewable.renewal_without_arising",
         "Becoming.Renewable.withinRenewal"
@@ -693,6 +693,12 @@
       "role": "receipt",
       "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "role": "receipt",
+      "sha256": "4d94c1b82af02e7869351aba40ea8ebaa61b5614423929afa25924281fdda97a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -712,7 +718,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Labelled",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -1,0 +1,32 @@
+{
+ "old_receipt": "20261028T083434.601834Z",
+ "new_receipt": "20261028T085101.429997Z",
+ "declarations_old": 104,
+ "declarations_new": 109,
+ "changed": [],
+ "gone": [],
+ "added": [
+  "Becoming.Withholding.chain_iff_steps",
+  "Becoming.Withholding.within_iff_withinSteps",
+  "Becoming.trace_iff_steps",
+  "Becoming.trace_steps",
+  "Becoming.withinMoves_iff_withinSteps"
+ ],
+ "definitions_rewritten": [],
+ "definitions_gone": [],
+ "definitions_added": []
+}
++++ @Becoming.Withholding.chain_iff_steps : ∀ {α : Type u_1} {up : α → α → Prop} (k : Nat) {b a : α},
+  Becoming.Withholding.Chain up k b a ↔ Becoming.«迭» up k b a
++++ @Becoming.Withholding.within_iff_withinSteps : ∀ {α : Type u_1} {up : α → α → Prop} {k : Nat} {b a : α},
+  Becoming.Withholding.Within up k b a ↔ Becoming.«迭内» up k b a
++++ @Becoming.trace_iff_steps : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {k : Nat} {s t : S},
+  (∃ xs, xs.length = k ∧ Generative.Trace P s xs t) ↔ Becoming.«迭» (Becoming.Steps P) k s t
++++ @Becoming.trace_steps : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S} {xs : List A},
+  Generative.Trace P s xs t → Becoming.«迭» (Becoming.Steps P) xs.length s t
++++ @Becoming.withinMoves_iff_withinSteps : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {P : Generative.Process S A}
+  {realized : S → C → Prop} {bundle : C → Prop} {s : S} {n : Nat},
+  Becoming.WithinMoves P realized s n bundle ↔
+    ∃ t, Becoming.«迭内» (Becoming.Steps P) n s t ∧ ∀ (c : C), bundle c 
+every old statement of Withholding and Labelled unchanged; the new bridges: ['Becoming.Withholding.chain_iff_steps', 'Becoming.Withholding.within_iff_withinSteps', 'Becoming.trace_iff_steps', 'Becoming.trace_steps', 'Becoming.withinMoves_iff_withinSteps'] ; new definitions: []
+OK

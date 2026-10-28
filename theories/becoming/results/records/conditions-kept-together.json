@@ -223,7 +223,7 @@
       "declarations": [
         "Becoming.Renewable.class_belongs_to_the_run"
       ],
-      "sha256": "f2c55215f94a1ddf795d238cf4a37c041d66540ef56c83ce4a0c3319dfa19d7d"
+      "sha256": "a6fef844c6464152369b1c1117c602f1e6d0ec6c7645fda7d6f60c8930c52def"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean",

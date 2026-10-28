@@ -20234,3 +20234,41 @@ Output→input: order-of-exchanges-is-the-invariant, normal-forms-need-decided-a
 **Decisions at landing.** One module, one record, homed at 01 §9.6 after the order of exchanges as the invariant: the record is a theorem on the World's order of exchanges, and 01's open entry on presence in time is extended to it, keeping open presence on processes without a footprint, continuous time, the present of a center and weighted growths. The decisions are Prop-valued (`Decided`, `WeaklyDecided`), weaker than a Boolean or `Decidable` joining, so UE14's laws taking a `Decidable` instance of the whole precedence are not instanced; of their forms with no decision, those for taken before, present together and presence when taken are. The witnesses are three small new worlds with empty flows, since the World's existing witnesses have two exchanges and no fixed footprint. `Becoming.ReorderingGrowth` clashes with no name of the package.
 
 **Readings** [AI reading, D45]. On the World the present of UE14 is the present of a reordering: the exchanges taken by a step that no exchange taken by then follows in the order of joined exchanges. What every interleaving keeps of presence, or some interleaving has, is defined from that order, the one link and the link, and which presence holds between the two bounds is the choice of interleaving the step index makes. What the World adds is what presence means: on the world as it is, an exchange present when another is taken has nothing between joined to it, so it has left everything it touched as it left it; and an exchange can leave all that unchanged without being present, where an exchange between is joined to it while what it touched persists: through a dependence, a touch that does not move it, or a move that a later exchange between undoes. So the UE plan's first aim, one law and not one per model, holds here: the laws of presence are stated once, on causal-set growth, and hold on the World's stretches by instance through one representation, of numberings.
+
+## 439. The step-indexed bridges (OU3e)
+
+OU3d ([§437](#437-step-indexed-reaching-on-the-grammar-and-the-parts-own-law-ou3d)) stated on the grammar the laws that EC6's three step-indexed rows are cases of, before any of them bridged. OU3e proves the three from those laws, by board rule 9, with every statement and name unchanged. Where a bridge needed more than its own induction to say the same thing, the coordinating session asked for a stated reason instead; none did.
+
+```text
+Result(s): record master-laws-on-the-grammar extended (the last group, references, the does-not-show item on the
+       bridges removed, history); no new record.
+Delta: (1) chains of waits. A chain of k waits is k steps of the grammar, the chain's last wait the last step
+       (Withholding.chain_iff_steps, by «迭之末步»), and within k waits is within k steps
+       (Withholding.within_iff_withinSteps). So Withholding.answers_closed is «承之迭», and waitsAll_closed is
+       «存承之迭», each with rounds the law's run meets by definition, read on chains; their inductions go. Through
+       them Withholding.withholding_spreads and Tolerance.answers_restores_iff reach the grammar; Tolerance is
+       unchanged.
+       (2) traces. A trace of k moves is k steps of the process's steps (trace_steps, trace_iff_steps), and so
+       realizing a bundle within n moves is a configuration within n steps realizing it
+       (withinMoves_iff_withinSteps). WithinMoves.after_course is then the composition of within («迭内之接»); the
+       induction along the trace goes.
+       (3) the measure. Of the 127 rows, 44 reach the grammar; of the 118 distinct central declarations, 43
+       reach it and 36 rest on no master law, each with its reason; the measure has no gap.
+       (4) texts. 01 §7's finite-runs bullet; 08 §7's measure sentence and 08's counts; Withholding's header; the
+       root module's GrammarLaws entry; the measure's pending entries for the three rows dropped; the connectivity
+       register drops OU3d's two apart roots, which now have consumers.
+Supplied premises / correspondence: none.
+Evidence: core receipt 20261028T085101.429997Z, every axiom report empty; the signature audit (signatures_ou3e.py) shows every
+       earlier declaration of Withholding and Labelled printing its old statement, and the five new bridges.
+Boundary: Chain, Within and WithinMoves keep their definitions, the bridges being equivalences; the trace bridge sits
+       in Labelled, its only consumer, rather than in Frame.
+Output → input: the record; 01 §7; 08 §7 and its counts; Withholding and Labelled; the root module; the measure; the
+       connectivity register.
+```
+
+**The review, and what was taken.** One independent read-only review by a separate AI agent ([REVIEW-OU3e](development/ou3e-step-indexed-bridges/REVIEW-OU3e.md)); every finding was taken. It found all three re-proofs genuine derivations, the law replacing the old induction rather than applied and undone, each bridge its own induction, and every statement identical to main's.
+- `Withholding`'s header now calls the closed forms cases of the grammar's laws read on chains.
+- `trace_steps` "gives" its one direction, and the two trace bridges became one equivalence, `trace_iff_steps`, in the form other trace modules use.
+- `after_course`'s docstring says the course is `m` moves.
+
+**Self-review.** (1) Each re-proof was checked against OU3d's second review's test: the law replaces the old induction, and only a representation, with its own induction, remains. (2) No row needed a stated reason instead of a bridge. (3) Not done: the items in Boundary.
