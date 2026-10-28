@@ -99,6 +99,7 @@ import Becoming.HeldPossible
 import Becoming.Tasks
 import Becoming.CausalGrowth
 import Becoming.Presence
+import Becoming.ReorderingGrowth
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1496,6 +1497,29 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`Presence.SameFuture.pastOrTogether_not_trans`). Each main law is also stated on the courses of the
   growth themselves (`Presence.every_course_iff`, `Presence.present_every_course_only_link`). Each law is
   near-definitional, a lemma, a witness or a calibration. A leaf (board item UE14).
+* `Becoming.ReorderingGrowth` (L1): a world's reorderings as the growth of its order of exchanges.
+  The exchanges of the first `m` steps, ordered by the order of joined exchanges, form a causal set
+  (`ReorderingGrowth.exchanges`, `ReorderingGrowth.exchanges_ordered`) whose natural labellings are the
+  renumberings keeping the order of joined exchanges (`ReorderingGrowth.natural_iff`); so, where the
+  footprint contains the exchanges, a renumbering of the stretch is the numbering of some reordering
+  exactly where it numbers them by a course of causal-set growth from the empty set
+  (`ReorderingGrowth.reordering_iff_course`; one course carries several numberings where the order has
+  automorphisms, `ReorderingGrowth.VeeWorld.one_course_two_numberings`), and what holds on every or some
+  natural labelling holds on every or some reordering (`ReorderingGrowth.every_reordering_iff`,
+  `ReorderingGrowth.some_reordering_iff`). Joining decided on the stretch decides the order of exchanges
+  (`ReorderingGrowth.precedes_decided`). The laws of presence of `Becoming.Presence` hold on the World's
+  reorderings by instance, each with its decision (`ReorderingGrowth.precedes_iff_every_reordering`,
+  `ReorderingGrowth.before_some_reordering`, `ReorderingGrowth.antichain_present_reordering`,
+  `ReorderingGrowth.present_some_reordering`, `ReorderingGrowth.present_every_reordering`). On the world
+  as it is, an exchange is present when another is taken exactly where it precedes it and no exchange
+  between is joined to it (`ReorderingGrowth.present_identity_iff`), and then, where the footprint
+  contains the exchanges, it leaves every relatum it touched as it left it, on the world and on every
+  reordering on which it is present (`ReorderingGrowth.persists_of_present`,
+  `ReorderingGrowth.persists_of_present_reordering`); not conversely, through a dependence or by moving a
+  relatum and moving it back (`ReorderingGrowth.ByDependence.persists_not_present`,
+  `ReorderingGrowth.MovedBack.persists_not_present`); the vee as a world
+  (`ReorderingGrowth.VeeWorld.presence_varies`). Each law is near-definitional, a composition, a
+  lemma or a witness. A leaf (board item UE15).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

@@ -553,7 +553,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "reorderings-as-courses-of-growth",
+      "detail": {
+        "en": "A world's reorderings as courses of growth: with a footprint containing the exchanges, the laws of presence on causal-set growth hold on a world's reorderings of its first m steps by instance.",
+        "zh": "世界之重排作为生长之历程：足迹含诸交换时，因果集生长上之在之诸律依实例成立于世界前 m 步之诸重排。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
@@ -816,6 +824,10 @@
     {
       "en": "28 October 2026: added (UE14), the present on causal-set growth, read as the maximal elements of what a course has born: natural labellings exactly the orders of birth, births of unrelated elements commuting; born before on every course precedence, the past the largest relation every course respects; every antichain a present; present together on every course the same future; presence at a birth on some course a link, on every course the one link with no decision; each calibrated decision exact; each main law also stated on the courses; Wüthrich and Callender's relation on the diamond and off it; after a review and a re-check; study section 432.",
       "zh": "2026年10月28日：新增（UE14），因果集生长上之现在，读作一历程所已生者之极大元：自然编号恰为生序，无先后者之生可互换；于每一历程皆先生即先后，过去为诸历程皆守之最大关系；每一反链皆为一现在；于每一历程同处一现在即其后相同；于生时在，于某一历程即覆盖，于每一历程即唯一之覆盖，无需判定；每一校准之判定皆确切；每一主律亦述于诸历程之上；Wüthrich 与 Callender 之关系于其四元及其外；经审查与复查；研究第 432 节。"
+    },
+    {
+      "en": "28 October 2026, board item UE15 (study section 438): related to reorderings-as-courses-of-growth; no statement, next step or declaration changed.",
+      "zh": "2026年10月28日，工作板条目 UE15（研究第 438 节）：与 reorderings-as-courses-of-growth 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

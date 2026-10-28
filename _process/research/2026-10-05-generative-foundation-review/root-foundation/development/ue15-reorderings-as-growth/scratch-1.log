@@ -1,0 +1,57 @@
+Becoming/ReorderingGrowth.lean:176:13: warning: unused variable `ts`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/ReorderingGrowth.lean:592:15: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:593:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:594:15: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:596:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:598:15: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:599:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:600:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:601:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:602:23: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:592:55: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:593:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:594:55: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:596:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:598:55: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:599:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:600:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:601:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:602:63: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:683:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:685:15: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:686:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:687:15: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:689:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:690:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:691:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:692:23: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ReorderingGrowth.lean:683:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:685:55: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:686:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:687:55: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:689:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:690:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:691:59: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:692:63: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Becoming/ReorderingGrowth.lean:746:3: error: Application type mismatch: The argument
+  Presence.natural_congr rfl fun a b => ?m.24
+has type
+  NaturalLabelling ?m.17 ?m.26 ?m.27 → NaturalLabelling ?m.17 ?m.26 ?m.27
+but is expected to have type
+  NaturalLabelling Presence.Vee.vee π σ → NaturalLabelling (exchanges world 3) π σ
+in the application
+  { mp := ?m.15, mpr := Presence.natural_congr rfl fun a b => ?m.24 }
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/tree",
+  "modules": 83,
+  "ran": [
+    "Becoming.ReorderingGrowth"
+  ],
+  "reused": 82,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.ReorderingGrowth"
+}

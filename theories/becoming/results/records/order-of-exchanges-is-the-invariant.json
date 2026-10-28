@@ -101,6 +101,13 @@
         "zh": "P88 在闲置可判定时把足迹读到最小，相连与偏序均被所有包含足迹包含。",
         "en": "P88 reads off the least footprint with decided idleness; its joining and order lie within every containing footprint’s."
       }
+    },
+    {
+      "id": "reorderings-as-courses-of-growth",
+      "detail": {
+        "en": "A world's reorderings as courses of growth: the renumberings keeping the order of joined exchanges are the natural labellings of the stretch's causal set, so the orders of birth of causal-set growth.",
+        "zh": "世界之重排作为生长之历程：守相接交换之序之重编号，即段之因果集之自然编号，故即因果集生长之生序。"
+      }
     }
   ],
   "counterexamples": [
@@ -382,6 +389,10 @@
     {
       "en": "2026-10-20: 35 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/5e9ecfd06dff3dc7/order-of-exchanges-is-the-invariant.json and in git.",
       "zh": "2026-10-20：35 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/5e9ecfd06dff3dc7/order-of-exchanges-is-the-invariant.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026, board item UE15 (study section 438): related to reorderings-as-courses-of-growth; no statement, next step or declaration changed.",
+      "zh": "2026年10月28日，工作板条目 UE15（研究第 438 节）：与 reorderings-as-courses-of-growth 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

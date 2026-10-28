@@ -93,7 +93,7 @@ Rideout and Sorkin's classical sequential growth (2000) read as a process: inter
 - related, not a proved adapter: [where-the-possible-grows](where-the-possible-grows.md). Internal temporality read as holding the past, so the held possible is the whole possible on causal-set growth.
 - related, not a proved adapter: [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md). The present on causal-set growth: the natural labellings of a causal set are exactly the orders of birth of the courses from the empty set growing a configuration of its kind.
 
-**Used by:** [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md)
+**Used by:** [reorderings-as-courses-of-growth](reorderings-as-courses-of-growth.md) · [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md)
 
 <a id="sources--来源"></a>
 ### Sources

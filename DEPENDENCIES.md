@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-479 registered results: 448 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1097 curated edges join 407 results to the results they draw on.
+480 registered results: 449 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1104 curated edges join 408 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -274,6 +274,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [relation-level-law-of-easing][] ← <a id="relation-level-law-of-easing--stepwise-law-of-easing"></a>[stepwise-law-of-easing][] · <a id="relation-level-law-of-easing--ranking-under-readings"></a>[ranking-under-readings][]
 - [relational-reading-comparison][] ← <a id="relational-reading-comparison--relational-renewal-classification"></a>[relational-renewal-classification][]
 - [relative-position-is-zero-sum][] ← <a id="relative-position-is-zero-sum--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="relative-position-is-zero-sum--derived-extent-limits"></a>[derived-extent-limits][] · <a id="relative-position-is-zero-sum--whole-first-and-bounded-centers"></a>[whole-first-and-bounded-centers][]
+- [reorderings-as-courses-of-growth][] ← <a id="reorderings-as-courses-of-growth--order-of-exchanges-is-the-invariant"></a>[order-of-exchanges-is-the-invariant][] · <a id="reorderings-as-courses-of-growth--normal-forms-need-decided-apartness"></a>[normal-forms-need-decided-apartness][] · <a id="reorderings-as-courses-of-growth--exchanges-commute-unless-joined"></a>[exchanges-commute-unless-joined][] · <a id="reorderings-as-courses-of-growth--the-present-on-causal-set-growth"></a>[the-present-on-causal-set-growth][] · <a id="reorderings-as-courses-of-growth--precedence-and-its-links"></a>[precedence-and-its-links][] · <a id="reorderings-as-courses-of-growth--what-can-be-born-next"></a>[what-can-be-born-next][] · <a id="reorderings-as-courses-of-growth--counts-exist-where-decided"></a>[counts-exist-where-decided][]
 - [repeated-disturbance][] ← <a id="repeated-disturbance--how-often-couplings-act"></a>[how-often-couplings-act][]
 - [represented-boundary-against-dependence][] ← <a id="represented-boundary-against-dependence--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="represented-boundary-against-dependence--derived-extent-limits"></a>[derived-extent-limits][] · <a id="represented-boundary-against-dependence--support-from-the-supported"></a>[support-from-the-supported][]
 - [requirement-is-the-weakest-sound-reading][] ← <a id="requirement-is-the-weakest-sound-reading--requirement-over-open-exchanges"></a>[requirement-over-open-exchanges][]
@@ -711,6 +712,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [relational-renewal-classification]: theories/becoming/results/records/relational-renewal-classification.md
 [relative-position-is-zero-sum]: theories/becoming/results/records/relative-position-is-zero-sum.md
 [renewing-consuming-formation]: theories/becoming/results/records/renewing-consuming-formation.md
+[reorderings-as-courses-of-growth]: theories/becoming/results/records/reorderings-as-courses-of-growth.md
 [repeated-disturbance]: theories/becoming/results/records/repeated-disturbance.md
 [represented-boundary-against-dependence]: theories/becoming/results/records/represented-boundary-against-dependence.md
 [requirement-is-the-weakest-sound-reading]: theories/becoming/results/records/requirement-is-the-weakest-sound-reading.md
