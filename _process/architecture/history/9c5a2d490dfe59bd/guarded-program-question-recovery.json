@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F22",
+  "reviewed_at_utc": "2026-10-08T18:40:39.196607+00:00",
+  "next_delta": {
+    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
+    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：沿既有接合研究推进；全部新增数学主张、反例与修复条件进入实际 Lean 检查。",
+      "en": "2026-10-09: continued the existing joining study; all new mathematical claims, counterexamples and repair conditions actually checked in Lean."
+    },
+    {
+      "zh": "2026-10-16，整合 I4c（Ren 选择“Add the notes”）：ExplanatoryResumptionCases.lean 的第一行加一条注释，指向脊柱上陈述其主定理的声明；陈述与证明不变，行号不变。其反例引用改用新的哈希；ExplanatoryGuardedPrograms 的证明绑定不变。",
+      "en": "16 October 2026, integration I4c (Ren selected “Add the notes”): the first line of ExplanatoryResumptionCases.lean gains a comment naming the spine declarations that state its main theorem; statements, proofs and line numbers are unchanged. Its counterexample reference takes the new hash; the proof binding of ExplanatoryGuardedPrograms is unchanged."
+    },
+    {
+      "en": "2026-10-20: 9 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/c295bfe845190e3e/guarded-program-question-recovery.json and in git.",
+      "zh": "2026-10-20：9 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/c295bfe845190e3e/guarded-program-question-recovery.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryGuardedPrograms and GranularityBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Granularity). The retired modules' content is also stated in Becoming.Grains, which this record does not cite with declarations. 3 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryGuardedPrograms and GranularityBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Granularity）。退役模块的内容也陈述于 Becoming.Grains，本记录未以声明引用它们。3 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    }
+  ],
+  "validation_scope": {
+    "zh": "Lean 4.29.1：35项新声明／314项闭包审计，279继承另列；新12空、23标准依赖，9含经典选择。新模块autoImplicit false，冻结源码／日志／检查器哈希绑定；作者反审，非独立agent验收。",
+    "en": "Lean 4.29.1: 35 new declarations / 314 closure audits, 279 inherited separate; new 12 empty and 23 standard, 9 with classical choice. New modules use autoImplicit false; frozen sources/logs/checker hashes are bound. Author counterreview, no independent-agent acceptance."
+  },
+  "id": "guarded-program-question-recovery",
+  "title": {
+    "zh": "随到达条件分支的有限展开与问答恢复",
+    "en": "Finite reached-condition branching and question recovery"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean",
+  "aliases": [
+    "Generative.ExplanatoryGuardedPrograms.guarded_history_matches (retired module)",
+    "Generative.ExplanatoryGuardedPrograms.guard_hoisting_sound (retired module)",
+    "Becoming.Recipe.leads_iff_afterAny",
+    "Becoming.Recipe.holds_after_iff_em",
+    "Becoming.guarded_history_matches_of_em (retired module)"
+  ],
+  "claim": {
+    "zh": "有限判断、分支、顺序及提前结束的程序问题精确编译为原生问题。完整翻译问答一致且接收侧有限分支时，不同原生程序的有限宏历史有同测终点的对应。原固定词精确嵌入；前段的每个端点保持判断时，提前判断保真。",
+    "en": "Finite guarded, sequential and choice program questions compile exactly to native questions. Complete translated-answer agreement and receiving-side finite branching match finite macro histories over different native programs, preserving endpoint answers. Fixed words embed exactly; moving a guard earlier is sound if every prefix endpoint preserves it."
+  },
+  "hypotheses": [
+    {
+      "zh": "给定有限无循环Program语法、原生过程、原子问题对应和到达位置上的guard语义。",
+      "en": "Supplied finite loop-free Program syntax, native processes, atomic-question correspondence and guards interpreted at reached positions."
+    },
+    {
+      "zh": "跨程序匹配需初始完整翻译问答一致及接收侧ImageFinite；提前判断的充分条件是全部前段结果保持该判断。",
+      "en": "Cross-program matching requires complete initial translated-answer agreement and receiving-side ImageFinite; safe early testing requires guard preservation at all prefix endpoints."
+    }
+  ],
+  "correspondence": {
+    "zh": "每个执行投到同一过程的原生路径。guard和管理步骤在语义中不另计物理事件，不独自给出传感、学习或资源实施。",
+    "en": "Every execution projects to a native path in the same process. Guards and administrative steps contribute no represented physical events and do not establish sensing, learning or resource implementation."
+  },
+  "dependencies": [
+    {
+      "id": "branching-tests-bisimulation",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "用后继匹配恢复条件程序的边界历史。",
+        "en": "Use successor matching to recover guarded-program boundary histories."
+      },
+      "interface": {
+        "output": {
+          "zh": "same_forces_successor_match 的有限后继恢复。",
+          "en": "Finite successor recovery from same_forces_successor_match."
+        },
+        "input": {
+          "zh": "program_image_finite 供给有限端点；guarded_history_matches 逐步使用同测恢复。",
+          "en": "program_image_finite supplies finite endpoints; guarded_history_matches uses answer recovery stepwise."
+        },
+        "conditions": {
+          "zh": "完整翻译问答一致与接收侧有限性，不推出全部中间位置对应。",
+          "en": "Complete translated-answer agreement and receiving-side finiteness; no general internal-position matching."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryGuardedPrograms.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "finite-granularity-question-recovery",
+      "detail": {
+        "zh": "word_program_exact 将固定有限词嵌入新语法；通用编译被推广，不把历史包装另计独立发现。",
+        "en": "word_program_exact embeds fixed finite words into the new grammar; generic compilation is extended, without recounting historical wrappers as discoveries."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "不涵盖无界循环、实际判断取得、概率、部署终止或任意内部语法的中间位置互译；提前判断条件只证明充分性。",
+    "en": "Does not cover unbounded loops, actual guard acquisition, probabilities, deployment termination or internal-position translation across arbitrary syntax; the early-testing condition is sufficient only."
+  },
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean",
+      "detail": {
+        "zh": "同一过程形成前后canFinish改变；提前测试与到达后测试有不同结果。",
+        "en": "The same process changes canFinish through formation; testing early and after arrival yields different outcomes."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryGuardedPrograms.lean",
+      "role": "provenance",
+      "sha256": "95a0e0b420df43f5d98e182f9325d68078c23a6e01ceb6da4cd02ec6705a3b33",
+      "declarations": [
+        "Generative.ExplanatoryGuardedPrograms.diamond_correct",
+        "Generative.ExplanatoryGuardedPrograms.compile_correct",
+        "Generative.ExplanatoryGuardedPrograms.word_program_exact",
+        "Generative.ExplanatoryGuardedPrograms.execution_has_native_trace",
+        "Generative.ExplanatoryGuardedPrograms.finite_program_endpoints",
+        "Generative.ExplanatoryGuardedPrograms.guarded_history_matches",
+        "Generative.ExplanatoryGuardedPrograms.guard_hoisting_sound"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-resumption-checks/20261008T183544.703004Z/receipt.json",
+      "role": "receipt",
+      "sha256": "48274e139ebf513fc435b9dc3433c04fc31aa9b032f5df951cb5d6e5881bc2cf",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "a78b40420146e1035b468b39f60faf9ac2a768db1df8f63adcdf4b13a3dee56f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean",
+      "role": "counterexample",
+      "sha256": "139eb664804cabc291d9c961a6a421c5307b2be6206d35d4200fae4ef15cda38",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean",
+      "role": "proof",
+      "sha256": "e249c3d2d6c14426148b24bd19ab2a2b7f2ecc52e2008a1ebd533ec73b6d3945",
+      "declarations": [
+        "Becoming.Recipe",
+        "Becoming.Recipe.Leads",
+        "Becoming.Recipe.after",
+        "Becoming.Recipe.holds_after",
+        "Becoming.Recipe.holds_after_iff_em",
+        "Becoming.Recipe.afterAny",
+        "Becoming.Recipe.leads_iff_afterAny",
+        "Becoming.SameBranchingTests.leads_iff",
+        "Becoming.Frame.byRecipes",
+        "Becoming.Frame.holds_byRecipes",
+        "Becoming.Recipe.outcomes",
+        "Becoming.Frame.byRecipes_history_matches_of_em",
+        "Becoming.Recipe.leads_word_iff",
+        "Becoming.Recipe.Leads.trace",
+        "Becoming.Recipe.leads_branch_iff",
+        "Becoming.Recipe.branch_earlier_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/GranularityBridge.lean",
+      "role": "provenance",
+      "sha256": "441e190ce5f748dc5cdf6b925f10276428bf4df4714f5ac46e6d5d1446e677a0",
+      "declarations": [
+        "Becoming.Recipe.ofProgram",
+        "Becoming.Recipe.leads_ofProgram",
+        "Becoming.Recipe.toTest_after",
+        "Becoming.diamond_correct_of_decided",
+        "Becoming.diamond_correct_of_em",
+        "Becoming.diamond_correct_iff_em",
+        "Becoming.program_compile_correct_of_em",
+        "Becoming.word_program_exact_by_core",
+        "Becoming.execution_has_native_trace_by_core",
+        "Becoming.finite_program_endpoints_of_em",
+        "Becoming.guarded_history_matches_of_em",
+        "Becoming.branch_executes_by_core",
+        "Becoming.guard_hoisting_sound_by_core"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T222948.779875Z/verification.json",
+      "role": "receipt",
+      "sha256": "0a2bacf2db996d0f2da49b75bda0b985f74a5b6849be2b50ab6471033917d914",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Granularity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ]
+}

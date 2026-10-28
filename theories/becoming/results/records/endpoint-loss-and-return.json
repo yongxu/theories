@@ -1,22 +1,52 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "endpoint-loss-and-return",
   "title": {
     "en": "Endpoint opportunity loss and return",
     "zh": "端点可能性丧失与返回"
   },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-28T12:22:53+00:00",
   "statement": {
     "en": "What can be had from a configuration is kept from another exactly where the other leads back to it; failing to return loses a possibility, the start itself a witness; and return belongs to the law, not to the change, which a reading that omits the configuration reached can hide.",
     "zh": "从一个构形可得者，从另一构形保有，恰当后者能回到前者；不能回返即失去一个可能，起点本身即为见证；回返属于律而非变化，省略所到构形的读法可以把它遮住。"
   },
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "en": "Every configuration reachable from s is reachable from t exactly when t leads back to s; along a path from s to t, the configurations reachable from both are the same exactly when t leads back to s. t does not lead back to s exactly when some configuration reachable from s is not reachable from t; s itself is one. Witnesses: the dead end and the flip both take false to true; the flip returns from true to false and the dead end does not; read through the constant summary, every question about what the dead end reaches has the same answer from false and from true, though it cannot return.",
-    "zh": "从 s 可达的每个构形从 t 都可达，恰当 t 能回到 s；沿从 s 到 t 之路，二者可达的构形相同，恰当 t 能回到 s。t 不能回到 s，恰当有从 s 可达而从 t 不可达的构形；s 本身即是。见证：死路与翻转都把 false 取为 true；翻转从 true 回到 false，死路不能；经常数摘要读出，关于死路可达什么的每个问题从 false 与从 true 答案相同，它却不能回返。"
-  },
+  "laws": [
+    {
+      "en": "For any process and any configurations s and t, every configuration reachable from s is reachable from t exactly when t leads back to s; and for t reached from s, the configurations reachable from s and from t are the same exactly when t leads back to s.",
+      "zh": "对任意过程与任意构形 s、t：从 s 可达的每个构形从 t 都可达，恰当 t 能回到 s；对从 s 可达的 t，从 s 与从 t 可达的构形相同，恰当 t 能回到 s。",
+      "declarations": [
+        "Becoming.keeps_reach_iff_returns",
+        "Becoming.same_reach_iff_returns"
+      ]
+    },
+    {
+      "en": "For any process and any configurations s and t, t does not lead back to s exactly when some configuration reachable from s is not reachable from t; s itself is one.",
+      "zh": "对任意过程与任意构形 s、t：t 不能回到 s，恰当有从 s 可达而从 t 不可达的构形；s 本身即是。",
+      "declarations": [
+        "Becoming.not_returns_iff_loses"
+      ]
+    },
+    {
+      "en": "Witnesses on two configurations: the dead end has one step, from false into true, with no continuation, and the flip takes each configuration to its negation; both take the change from false to true in one step, and the flip leads back from true to false while the dead end does not.",
+      "zh": "两个构形上的见证：死路只有一步，从 false 到 true，此后无延续；翻转把每个构形取为其否定；两者都以一步把 false 变为 true，翻转能从 true 回到 false，死路不能。",
+      "declarations": [
+        "Becoming.DeadEnd.law",
+        "Becoming.Irreversibility.flip",
+        "Becoming.Irreversibility.deadEnd_no_return",
+        "Becoming.Irreversibility.same_change_different_return"
+      ]
+    },
+    {
+      "en": "Read through the constant summary, every question about what the dead end can reach has the same answer from false and from true, though the dead end cannot lead back from true to false: a reading that omits the configuration reached hides the loss.",
+      "zh": "经常数摘要读出，关于死路可达什么的每个问题，从 false 与从 true 答案相同，而死路不能从 true 回到 false：省略所到构形的读法遮住了这一丧失。",
+      "declarations": [
+        "Becoming.Irreversibility.constant_reading_hides_loss"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "en": "Supplied Process.step, configuration identity, finite Trace and endpoint predicates; an actual forward path for the change interpretation.",
@@ -27,6 +57,45 @@
       "zh": "完整端点测试族是结构刻画，不是可用的全知观察；实际含义须有对应。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The laws concern reachability under one fixed law; where a law comes from, and how laws compare, lies outside them.",
+      "zh": "诸律只及一个固定规律下的可达性；规律从何而来、规律之间如何比较，不在其内。",
+      "kind": "scope"
+    },
+    {
+      "en": "Returning to an equal configuration does not erase the history between: equality of configurations is not identity of histories.",
+      "zh": "回到相同的构形不抹去其间的历史：构形相同不是历史同一。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Physical irreversibility does not follow: the laws are of a represented process, and their correspondence to physics is a separate obligation.",
+      "zh": "推不出物理的不可逆：诸律属于被表示的过程，与物理的对应是另一项责任。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Irreversibility.lean",
+      "detail": {
+        "en": "One occurring step admits both reversible and non-returning declared laws; a constant observation hides non-return. These are weak-description controls, not refutations of a fully specified constitutive account.",
+        "zh": "同一发生步骤容许返回及无返回两种给定规律；常量观察遮蔽无返回。这是弱描述的控制，不反驳完整构成性论述。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Labelled and Becoming.Irreversibility are bound to core receipts under becoming-checks, with an empty axiom report for every cited declaration, and the checker verifies that the core compiles from Lean's prelude alone. The periphery BecomingReversibility, checked with Lean 4.29.1 (becoming-reversibility-verification.json: 10 new theorems, 14 audits, two application examples), and the retired Bridge are provenance. Author counterreview; no independent review or empirical validation.",
+    "zh": "Lean 4.29.1 合并检查器实查：Labelled 与 Irreversibility 的当前字节绑定 becoming-checks 下的核心回执，所引声明的公理报告皆空，检查器并核对核心只用 Lean 前导即可编译。外围 BecomingReversibility（Lean 4.29.1，becoming-reversibility-verification.json：新定理10、审计14、应用例2）与退役的 Bridge 是来源。作者反审；无独立审查或经验验证。"
+  },
+  "next_delta": {
+    "en": "State the restoration of an actual target in an existing formation or reconstruction mechanism, keeping support and history.",
+    "zh": "在已有的形成或重构机制中陈述对实际目标的恢复，保留支持与历史。"
+  },
   "correspondence": {
     "en": "States articulate relations within one unfolding. A return restores precisely the represented configuration; historical harms and distinct projected recovery targets are not erased.",
     "zh": "状态表达同一展开中的关系。返回仅恢复被表示的配置；历史损害及不同的投影恢复目标不被抹除。"
@@ -48,23 +117,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Irreversibility.lean",
-      "detail": {
-        "en": "One occurring step admits both reversible and non-returning declared laws; a constant observation hides non-return. These are weak-description controls, not refutations of a fully specified constitutive account.",
-        "zh": "同一发生步骤容许返回及无返回两种给定规律；常量观察遮蔽无返回。这是弱描述的控制，不反驳完整构成性论述。"
-      }
-    }
-  ],
-  "limitations": {
-    "en": "Fixed-law endpoint reachability only; configuration equality does not erase history. No physical irreversibility, ethical ranking, law origin or zero-substantive-axiom foundation is proved.",
-    "zh": "仅及固定规律下端点可达性；配置相同不抹去历史。未证明物理不可逆、伦理排序、规律起源或零实质公理基础。"
-  },
-  "validation_scope": {
-    "en": "Lean 4.29.1: 10 new theorems / 14 audits, all empty named-axiom dependencies; 23 inherited theorems / 28 audits separately rebuilt. Two application examples. Author counterreview; no independent-agent acceptance or empirical validation.",
-    "zh": "Lean 4.29.1：10项新定理／14项审计，命名公理依赖均空；另重编23项继承定理／28项审计。2项应用例。作者反审，无独立 agent 验收或经验验证。"
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/BecomingReversibility.lean",
@@ -212,10 +264,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "en": "Specify actual target-relative restoration in an existing formation/reconstruction mechanism, preserving support and history; do not reconstruct completed path-composition results.",
-    "zh": "在已有形成／重构机制中落实针对实际目标的恢复，保留支持与历史；不重建已完成的路径组合成果。"
-  },
   "history": [
     {
       "en": "9 October 2026: checked structural connection and author counterreview registered. Helpers and repeated applications are not counted as independent foundational results.",
@@ -240,6 +288,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws (what can be had is kept exactly where the other leads back; not returning loses a possibility, the start a witness; the same change with different returns, hidden by the constant reading); the counterexample re-pointed from the periphery file to the core witnesses; the two retired Bridge aliases replaced by the core names. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述（可得者恰在另一构形能回到它时保有；不能回返即失去可能，起点为见证；同一变化而回返不同，常数读法遮住此点）；反例由外围文件改指核心见证；两个退役的 Bridge 别名改为核心名称。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement kept; the claim split into four laws, each read against its declarations in Labelled.lean and Irreversibility.lean (reach kept and lost, the witnesses, the constant reading); the limitations to three does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and zero-axiom-target-open; hypotheses and the counterexample kept; the next step's instruction not to reconstruct completed results dropped, an instruction to later sessions; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [endpoint-loss-and-return.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/endpoint-loss-and-return.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为四条规律，各条对照 Labelled.lean 与 Irreversibility.lean 中的声明核读（可达的保有与丧失、见证、常数读法）；限制改为三条“未表明”与通用边界 no-ethical-premise、no-evaluation、zero-axiom-target-open；前提与反例保留；下一步中“不重建已完成成果”是对后续会话的指示，删去；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [endpoint-loss-and-return.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/endpoint-loss-and-return.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/32ccdb09f6795566/endpoint-loss-and-return.json",
+      "sha256": "32ccdb09f67955661bfd6e012aed8466439a667c3cb2a3239e6545c6274bfd6e",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/c6d4517c23a99e3a/endpoint-loss-and-return.json",
+      "sha256": "c6d4517c23a99e3a7cea133e59a7551b577111eb2d6537a522bcd7251ec2360e",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

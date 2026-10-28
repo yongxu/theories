@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "id": "losses-of-the-sum-over-histories",
+  "title": {
+    "zh": "历史之和的损失",
+    "en": "Losses of the sum over histories"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "statement": {
+    "zh": "截断恰好漏掉所弃的部分；可抵消时可能性看不见抵消；记忆须保留在配置中；回路使历程倍增。",
+    "en": "A truncation misses exactly what it drops, possibility cannot see a cancellation, memory must be kept in the configuration, and loops double the courses."
+  },
+  "claim": {
+    "zh": "对每个赋权，所留与所弃历程之和是所留之和加所弃之和（Weights.sum_append）；备选只相加之处（计数），截断从下方界定整体（counting_truncation_le）。带符号的计数（signed：一对，所加与所减；备选逐分量相加，减的一步把其后翻转）满足权重的规律。一个配置、两个回到它的动作，一加一减：每个历程都可能，它们的并也可能，而一步的带符号计数是 (1, 1)，所加等于所减（Interference.cancels）；只留第一个历程得 (1, 0)（Interference.truncation_misses_cancellation）；任何保持备选之并、把一个历程标为可能的读法，都把它所进入的每个和标为可能，平衡与否（Interference.unseen），其中包括两个历程平衡的并（Interference.unseen_balanced）。一个配置上要求第二步不同于第一步的两步历程的可能性赋权，不是该配置上任何步权重与终点读法沿历程的权重（Memory.not_of_steps），而在保留上一动作的配置上是（Memory.of_kept）。一个配置、两个回到它的动作，n 步历程的计数是 2^n（Weighted.Loop.courses_double）。不加前提。",
+    "en": "For every weighting, the sum over kept and dropped courses is the sum over those kept added to the sum over those dropped (Weights.sum_append); where alternatives only add (counting), a truncation bounds the whole from below (counting_truncation_le). Signed counts (signed: pairs of what adds and what subtracts, alternatives adding part by part, a subtracting step turning what follows around) satisfy the laws of weights. With one configuration and two moves back to it, one adding and one subtracting, each course is possible and so is their join, while the signed count of the one step is (1, 1), what adds equalling what subtracts (Interference.cancels); keeping the first course alone gives (1, 0) (Interference.truncation_misses_cancellation); and every reading into possibility that keeps the join of alternatives and marks a course possible marks possible every sum the course enters, balanced or not (Interference.unseen), the balanced join of the two courses among them (Interference.unseen_balanced). A possibility weighting of two-step courses on one configuration requiring the second move to differ from the first is not the weight along courses of any step weight and end reading on that configuration (Memory.not_of_steps), and is one on configurations keeping the last move (Memory.of_kept). With one configuration and two moves back to it, the count of courses of n steps is 2^n (Weighted.Loop.courses_double). No premise."
+  },
+  "hypotheses": [
+    {
+      "zh": "带符号的计数是自然数对，按平衡（所加等于所减）比较，不是整数：核心不取商。",
+      "en": "Signed counts are pairs of natural numbers compared by balance (what adds equalling what subtracts), not integers: the core takes no quotient."
+    },
+    {
+      "zh": "抵消、记忆与回路的定理是见证：各在一个给定的小世界上陈述。",
+      "en": "The theorems on cancellation, memory and loops are witnesses: each is stated on one given small world."
+    }
+  ],
+  "correspondence": {
+    "zh": "P82（工作板），回应 Ren 2026-10-12 的问题：“how how accurate can we do that uh what is the limitation do we have losses”。读法（AI 的，依 Ren 的交托采用）：精度的界限就是这四种损失，各是一条定理：截断恰好漏掉所弃者；可能性看不见抵消（振幅可抵消，可能性不能）；依赖来路的权重须把所需保留在配置中，损失在描述而不在展开；回路使历程无界地增多，无界视野上的和没有更多结构就没有有限值。见整合文档 §104。",
+    "en": "P82 (work board), answering Ren's question of 12 October 2026: “how how accurate can we do that uh what is the limitation do we have losses”. Reading (the AI's, adopted on Ren's delegation): the limits of accuracy are these four losses, each a theorem: a truncation misses exactly what it drops; possibility cannot see a cancellation (amplitudes cancel, possibility does not); a weighting that depends on how one came must have what it needs kept in the configuration, the loss being in the description, not the unfolding; loops multiply courses without bound, so a sum over every horizon has no finite value without more structure. See the integration document §104."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+  "aliases": [
+    "Becoming.counting_truncation_le",
+    "Becoming.signed",
+    "Becoming.Interference.cancels",
+    "Becoming.Interference.truncation_misses_cancellation",
+    "Becoming.Interference.unseen",
+    "Becoming.Interference.unseen_balanced",
+    "Becoming.Memory.not_of_steps",
+    "Becoming.Memory.of_kept",
+    "Becoming.Weighted.Loop.courses_double",
+    "interference",
+    "干涉",
+    "cancellation",
+    "抵消",
+    "truncation",
+    "截断",
+    "memory",
+    "记忆",
+    "signed counts",
+    "带符号的计数",
+    "Becoming.Courses.loop_courses_double"
+  ],
+  "dependencies": [
+    {
+      "id": "sum-over-histories-exact",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用权重、转移与可能性；截断由求和的拆分得出。",
+        "en": "Reuses the weights, the transfer and possibility; truncation follows from the splitting of sums."
+      },
+      "interface": {
+        "output": {
+          "zh": "权重、转移、可能性与计数。",
+          "en": "Weights, the transfer, possibility and counting."
+        },
+        "input": {
+          "zh": "损失的见证。",
+          "en": "The witnesses of the losses."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "projection-carrying-a-law",
+      "detail": {
+        "zh": "记忆的损失是描述的损失：保留所需的配置承载规律。",
+        "en": "The loss of memory is a loss of the description: configurations keeping what is needed carry the law."
+      }
+    },
+    {
+      "id": "orders-as-a-sum-over-histories",
+      "detail": {
+        "zh": "所携带的差别是计数权重的历史之和：Becoming.Loops 的 j 阶就是视界 j + 1；每个历史之和按阶展开，j 阶到视界 j 精确。",
+        "en": "The carried difference is a sum over histories of counting weights: order j of Becoming.Loops is horizon j + 1; every sum over histories expands by order, exact up to horizon j."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+      "detail": {
+        "zh": "可能的历程相抵消（Interference.cancels）；依赖来路的赋权不是步的赋权（Memory.not_of_steps）。",
+        "en": "Possible courses cancel (Interference.cancels); a weighting depending on how one came is not one of steps (Memory.not_of_steps)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "见证在小世界上；保留整个历程使每个赋权成为步的赋权，对一般权重没有证明；无界视野上的收敛与重整化没有陈述；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
+    "en": "The witnesses are on small worlds; that keeping the whole course makes every weighting one of steps is not proved for weights in general; convergence and renormalization over an unbounded horizon are not stated; the readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
+  },
+  "validation_scope": {
+    "zh": "2026-10-14：Becoming.Weighted 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Weighted 的 35 项定理全部空依赖，其中含 Weights.truncation、counting_truncation_le、signed、Interference.cancels、Interference.truncation_misses_cancellation、Interference.unseen、Interference.unseen_balanced、Memory.not_of_steps、Memory.of_kept与 Weighted.Loop.courses_double；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §104；尚无独立审查。",
+    "en": "14 October 2026: the current bytes of Becoming.Weighted are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 35 theorems of Becoming.Weighted all have empty axiom reports, among them Weights.truncation, counting_truncation_le, signed, Interference.cancels, Interference.truncation_misses_cancellation, Interference.unseen, Interference.unseen_balanced, Memory.not_of_steps, Memory.of_kept and Weighted.Loop.courses_double. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §104 of the integration note; there is no independent review yet."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+      "role": "proof",
+      "sha256": "0a73e620d493cadc46e730187cf7c02f948df35b1b1ef91e0b78e7d96ee9b81c",
+      "declarations": [
+        "Becoming.Weights.sum_append",
+        "Becoming.counting_truncation_le",
+        "Becoming.pair_eq",
+        "Becoming.swap_middle",
+        "Becoming.pair_assoc",
+        "Becoming.pair_spread",
+        "Becoming.pair_spread_right",
+        "Becoming.signed",
+        "Becoming.Interference.weight",
+        "Becoming.Interference.cancels",
+        "Becoming.Interference.truncation_misses_cancellation",
+        "Becoming.Interference.unseen",
+        "Becoming.Interference.unseen_balanced",
+        "Becoming.Memory.differ",
+        "Becoming.Memory.not_of_steps",
+        "Becoming.Memory.lands",
+        "Becoming.Memory.fresh",
+        "Becoming.Memory.kept",
+        "Becoming.Memory.of_kept",
+        "Becoming.Weighted.Loop.courses",
+        "Becoming.Weighted.Loop.courses_double"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md",
+      "role": "provenance",
+      "sha256": "f3e5885ed960640cf3773813e7e02f6869ca2884b3730a2ea683c0686c03a8f3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T204910.042715Z/verification.json",
+      "role": "receipt",
+      "sha256": "de452d3198d581ac4310c6a92a766e30b2c9bb6b740f970f5fed373b448e6121",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "role": "proof",
+      "sha256": "72fd570fa32c3fc6bd0458f4b0793bb7ce9365f7b1276aaddf323ca05b2afc86",
+      "declarations": [
+        "Becoming.Courses.loop_courses_double",
+        "Becoming.Courses.loop",
+        "Becoming.Courses.loop_trace"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
+      "role": "receipt",
+      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Weighted",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Courses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "对一般权重证明保留历程恢复步的赋权，并在外围给出带相位振幅的抵消实例。",
+    "en": "Prove for weights in general that keeping the course restores a weighting of steps, and give an instance of cancellation with phased amplitudes in the periphery."
+  },
+  "history": [
+    {
+      "zh": "2026-10-13：接续并整合 P82 的现存证明包；见整合文档 §104。",
+      "en": "2026-10-13: resumed and integrated the existing P82 proof package; see §104 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“历史之和的损失：截断恰好漏掉所弃的部分；可抵消时可能性看不见抵消；记忆须保留在配置中；回路使历程倍增”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “The losses of the sum over histories: a truncation misses exactly what it drops, possibility cannot see a cancellation, memory must be kept in the configuration, and loops double the courses”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：按 BECOMING-UNIFICATION-PLAN §10 改名，本记录中 `Interference.truncation_misleads` → `Interference.truncation_misses_cancellation`；陈述、证明与定理数不变；Lean 源：Weighted 只改名（及相应的文档字符串），绑定改为新回执（见检查范围）；研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): renames per BECOMING-UNIFICATION-PLAN §10, in this record `Interference.truncation_misleads` → `Interference.truncation_misses_cancellation`; statements, proofs and theorem counts unchanged; Lean sources: Weighted only renamed (with the matching docstrings); bindings move to the new receipts (see validation scope); the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：一个构型与回到它的两步组成的环（loop）上，历程之和所经过的 n 步历程都是环的历程，共 2 ^ n 条（loop_courses_double）。Becoming.Courses 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
+      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: around the loop of one configuration and two moves back to it (loop), the courses of n moves the sum over histories goes through are courses of the loop, and there are 2 ^ n of them (loop_courses_double). Becoming.Courses is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D30）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D30): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "zh": "2026-10-16 P121 与 P122（携带差别的阶作为历史之和、回路怎样在展开中形成，研究 §155、§156）：related 加 orders-as-a-sum-over-histories：两个积分接合。陈述与证明不变。",
+      "en": "16 October 2026, P121 and P122 (the orders of a carried difference as a sum over histories, how loops form within the unfolding, study sections 155 and 156): related adds orders-as-a-sum-over-histories: the two integrations joined. Statement and proofs unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Courses.lean, THE-THEORY-OF-BECOMING.md. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged; THE-THEORY-OF-BECOMING.md, the sentences citing the removed names cite the kept ones; §9 (layers, import tree, receipt, counts) follows R29. The claim is unchanged.",
+      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Courses.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Courses.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变；THE-THEORY-OF-BECOMING.md，引用删去名称的句子改引保留者；§9（层、导入树、回执、计数）随 R29。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Loop.courses (now Weighted.Loop.courses); Loop.courses_double (now Weighted.Loop.courses_double). Proof bindings (Courses.lean, Weighted.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Weighted.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：Loop.courses（现为 Weighted.Loop.courses）；Loop.courses_double（现为 Weighted.Loop.courses_double）。证明绑定（Courses.lean、Weighted.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Courses.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Weighted.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: Weights.truncation (now Weights.sum_append). The sentences that named removed declarations name the kept ones. Proof bindings (Courses.lean, Weighted.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Courses.lean, takes as its final sections RetrodictionRuns, CandidateRuns, ReducedRuns, the modules reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Weighted.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：作为纯转发删去（各自只把一条律应用于自己的约束变量），改提该律：Weights.truncation（现为 Weights.sum_append）。提到删去之声明的句子改提保留者。证明绑定（Courses.lean、Weighted.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Courses.lean，以末节收入 RetrodictionRuns、CandidateRuns、ReducedRuns（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；Weighted.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 36 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/6a6e15e86a9cf797/losses-of-the-sum-over-histories.json and in git.",
+      "zh": "2026-10-20：36 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/6a6e15e86a9cf797/losses-of-the-sum-over-histories.json 和 git 中。"
+    }
+  ]
+}

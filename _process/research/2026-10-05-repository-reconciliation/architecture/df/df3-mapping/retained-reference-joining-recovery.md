@@ -1,0 +1,34 @@
+# Migration map: retained-reference-joining-recovery
+
+Old record sha256 `c93c2b6075fee1ed9fdbee8063083b11bfa8f70dff9df9111fcc57a55f20e0ac`; snapshot `_process/architecture/history/c93c2b6075fee1ed/retained-reference-joining-recovery.json`.
+
+Labels number the old English sentences and clauses (split at full stops and semicolons outside parentheses): T title, S statement, C claim, L limitations, V validation_scope, R correspondence, N next_delta, H hypotheses, X counterexamples. The Chinese text of each field goes to the same place as its English counterpart; the old Chinese was read alongside, sentence by sentence. The old record had no statement.
+
+Each law was read against its declarations: `retainedFrame`, `retained_extends`, `retained_history_matches`, `FiniteOutcomes`, `retained_history_matches_of_em`, `SelfJoinable`, `retained_apart` and `retained_codes_apart` in `Becoming/Joining.lean`; `Joining.retained_pair_matches_of_em`, `Fragment.passageTrace`, `Fragment.once_self_apart`, `Fragment.once_retained_apart` and `Fragment.once_codes_apart` in `Becoming/JoiningRoles.lean` (`Bisimulation.trace`, `SameBranchingTests.bisimulation_of_em` and `ListTests.length_append`, the cited lemmas of the proofs, read and kept in references without a law). Every condition the Lean takes is kept: likeness and equal slot counts, no other premise (law 2); `FiniteOutcomes` for both joinings, `em : ∀ p : Prop, Decided p` and the same branching tests with equal slot counts (law 3); excluded middle and the second joining's listed outcomes for the pair step (law 4); exactness of the description for the retained tests (laws 5, 6). The old limitation's “general recovery retains standard classical dependencies” described the periphery proof; the core law takes excluded middle as a named hypothesis and the bound receipts report empty axioms for every cited declaration, so hypotheses[0] names it and `no-ethical-premise` is cited. Added to references: `Becoming.Joining.FiniteOutcomes` and `Becoming.Joining.SelfJoinable` (Joining.lean), `Becoming.Fragment.passageTrace` (JoiningRoles.lean), all in the bound receipt. The record's two identical proof bindings of Joining.lean are kept as they were.
+
+| Old text | Type | New place |
+|---|---|---|
+| T0 “Cross-articulation formation matching with retained references” | title | title (unchanged) |
+| — | statement | statement (written from C0, C1 and the home section, with the constructive form the home section names) |
+| C0 “Finite configurations over different fragment carriers with equal initial slot counts and agreement on all retained-reference branch questions match every finite formation command sequence under finite fixed-pair outcomes, preserving the original configuration, final answers and slot alignment.” | law | law 3 (`retained_history_matches_of_em`, with excluded middle the named hypothesis the core takes), law 2 (the constructive form for alike configurations, with no premise beyond likeness and equal slots), law 4 (the pair step), law 1 (the retained frame and its extension); statement, first sentence |
+| C1 “Exact accounts of the same actual process must distinguish its idle and spent histories.” | law | law 6 (the witness of the process that moves once: every code reading the retained tests exactly gives the idle start and the passage different codes), with law 5 the general form (self-joining against not); statement, last sentence, which states the general form |
+| L0 “Does not establish initial question agreement for arbitrary actual articulations” | scope | does_not_show[0] |
+| L0 (continued) “acquired memory, permission to copy resources, probabilities, cycles or changes of primitive joining granularity” | scope | does_not_show[1] |
+| L1 “general recovery retains standard classical dependencies.” | superseded evidence | hypotheses[0] (“excluded middle is a named hypothesis”) and validation_scope (empty axiom reports): the periphery's classical dependencies stay with its provenance receipt |
+| V0 “Lean 4.29.1 checks 43 new declarations and 213 inherited audits, 256 total” | evidence (the 8 October periphery receipt) | snapshot; validation_scope says the superseded periphery modules' receipt keeps its earlier scope |
+| V1 “new 9 empty and 34 standard dependency lists, 7 with classical choice.” | evidence (periphery) | snapshot; validation_scope gives the axiom reports of the cited core declarations (empty) |
+| V2 “Frozen source/logs bind to the receipt” | evidence | validation_scope (the bound receipts named) |
+| V3 “no independent-agent acceptance.” | evidence | validation_scope (unchanged) |
+| R0 “Indices name positions internal to the configuration and can reference earlier formed results” | correspondence | correspondence (unchanged) |
+| R1 “no common native object names are supplied.” | correspondence | correspondence (unchanged) |
+| R2 “Formation-arrangement semantics is not automatically execution with destructive resources.” | correspondence | correspondence (unchanged) |
+| N0 “Reuse finite guarded programs and coherent residual recovery” | instruction | dropped from live fields (an instruction to reuse results); kept in the snapshot |
+| N1 “establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition.” | next step | next_delta (the joining study's next step, as in the related records) |
+| H0.0 “FiniteOutcomes on both sides” | premise | hypotheses[0] (unchanged in substance) |
+| H0.1 “agreement on all finite negation, conjunction and slot-pair continuation questions” | premise | hypotheses[0] (unchanged), with excluded middle named and the constructive alternative (likeness and equal slots) |
+| H0.2 “equal initial slot counts.” | premise | hypotheses[0] (unchanged) |
+| H1.0 “Each step selects two slots in the same configuration and appends a witnessed result while retaining old slots.” | premise | hypotheses[1] (unchanged); law 1 |
+| H1.1 “The concrete unavoidable-distinction theorem only needs Exact, not finiteness or Reduced.” | premise | hypotheses[1] (Lean names in words: exactness, reduction) |
+| X0.0 “Does not establish initial question agreement for arbitrary actual articulations, acquired memory, permission to copy resources, probabilities, cycles or changes of primitive joining granularity” | non-implication (no declaration witnesses it; it repeats L0) | does_not_show[0] and [1]; the counterexample entry goes, since it pointed to the study, not to a witnessing declaration |
+| X0.1 “general recovery retains standard classical dependencies.” | superseded evidence (repeats L1) | as L1 |
+| — | standard boundary | no-ethical-premise (no ethical premise among the hypotheses; every cited declaration is core with an empty axiom report in its bound receipt) |

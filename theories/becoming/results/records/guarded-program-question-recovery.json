@@ -1,39 +1,160 @@
 {
-  "schema_version": 1,
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F22",
-  "reviewed_at_utc": "2026-10-08T18:40:39.196607+00:00",
-  "next_delta": {
-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
-  },
-  "history": [
-    {
-      "zh": "2026-10-09：沿既有接合研究推进；全部新增数学主张、反例与修复条件进入实际 Lean 检查。",
-      "en": "2026-10-09: continued the existing joining study; all new mathematical claims, counterexamples and repair conditions actually checked in Lean."
-    },
-    {
-      "zh": "2026-10-16，整合 I4c（Ren 选择“Add the notes”）：ExplanatoryResumptionCases.lean 的第一行加一条注释，指向脊柱上陈述其主定理的声明；陈述与证明不变，行号不变。其反例引用改用新的哈希；ExplanatoryGuardedPrograms 的证明绑定不变。",
-      "en": "16 October 2026, integration I4c (Ren selected “Add the notes”): the first line of ExplanatoryResumptionCases.lean gains a comment naming the spine declarations that state its main theorem; statements, proofs and line numbers are unchanged. Its counterexample reference takes the new hash; the proof binding of ExplanatoryGuardedPrograms is unchanged."
-    },
-    {
-      "en": "2026-10-20: 9 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/c295bfe845190e3e/guarded-program-question-recovery.json and in git.",
-      "zh": "2026-10-20：9 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/c295bfe845190e3e/guarded-program-question-recovery.json 和 git 中。"
-    },
-    {
-      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryGuardedPrograms and GranularityBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Granularity). The retired modules' content is also stated in Becoming.Grains, which this record does not cite with declarations. 3 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
-      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryGuardedPrograms and GranularityBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Granularity）。退役模块的内容也陈述于 Becoming.Grains，本记录未以声明引用它们。3 个指向退役声明的别名标为“(retired module)”。主张不变。"
-    }
-  ],
-  "validation_scope": {
-    "zh": "Lean 4.29.1：35项新声明／314项闭包审计，279继承另列；新12空、23标准依赖，9含经典选择。新模块autoImplicit false，冻结源码／日志／检查器哈希绑定；作者反审，非独立agent验收。",
-    "en": "Lean 4.29.1: 35 new declarations / 314 closure audits, 279 inherited separate; new 12 empty and 23 standard, 9 with classical choice. New modules use autoImplicit false; frozen sources/logs/checker hashes are bound. Author counterreview, no independent-agent acceptance."
-  },
+  "schema_version": 2,
   "id": "guarded-program-question-recovery",
   "title": {
     "zh": "随到达条件分支的有限展开与问答恢复",
     "en": "Finite reached-condition branching and question recovery"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F22",
+  "reviewed_at_utc": "2026-10-28T11:45:36+00:00",
+  "statement": {
+    "en": "Whether a finite program of moves, tests, sequences and choices leads to where a test holds is a finite alternative of branching tests, premise-free; read as one test it is exact where tests are decided, for every frame exactly under excluded middle; a test can move before a prefix that keeps it.",
+    "zh": "由动作、检验、顺序与选择构成的有限程序能否到达某检验成立之处，恰当有限多个分支检验之一成立，无需前提；读作一个检验时，检验可判定处精确，对每个框架恰在排中律下精确；前段保持某检验时，该检验可移到前段之前。"
+  },
+  "laws": [
+    {
+      "en": "A recipe of a frame's moves is nothing, one move, a branching test at the configuration reached, one recipe after another, or either of two; a word of moves read as a recipe leads exactly where its course does, and every course a recipe leads along is a course of the frame's moves, tests and choices adding no move.",
+      "zh": "框架动作上的配方是：无、一个动作、在所到构型处的分支检验、一个配方接另一个，或二者择一；动作之词读作配方，恰到达其历程所到之处；配方所经的每个历程都是框架动作的历程，检验与选择不增加动作。",
+      "declarations": [
+        "Becoming.Recipe",
+        "Becoming.Recipe.Leads",
+        "Becoming.Recipe.word",
+        "Becoming.Recipe.leads_word_iff",
+        "Becoming.Recipe.Leads.trace"
+      ]
+    },
+    {
+      "en": "For any frame, a recipe leads from s to a configuration where a branching test holds exactly where one of finitely many branching tests, read off the recipe and the test, holds at s, with no premise.",
+      "zh": "对任一框架：配方从 s 到达某分支检验成立的构型，恰当由配方与该检验读出的有限多个分支检验之一在 s 处成立，无需前提。",
+      "declarations": [
+        "Becoming.Recipe.afterAny",
+        "Becoming.Recipe.leads_iff_afterAny"
+      ]
+    },
+    {
+      "en": "For any two frames, configurations passing the same branching tests answer every recipe question alike: a recipe leads from one to where a test holds exactly where it does from the other, with no premise and no finiteness.",
+      "zh": "对任两个框架：通过相同分支检验的构型对每个配方问题回答相同：配方从一方到达某检验成立之处，恰当它从另一方也如此，无需前提，也无需有限性。",
+      "declarations": [
+        "Becoming.SameBranchingTests.leads_iff"
+      ]
+    },
+    {
+      "en": "Read as one branching test through negation and conjunction, the test after a recipe holds wherever the recipe leads to where the test holds, with no premise; where every branching test of the frame is decided at every configuration, it holds exactly there.",
+      "zh": "经否定与合取读作一个分支检验时，配方之后的检验在配方到达该检验成立之处时成立，无需前提；框架的每个分支检验在每个构型都可判定时，它恰在那里成立。",
+      "declarations": [
+        "Becoming.Recipe.after",
+        "Becoming.BranchingTest.either",
+        "Becoming.Recipe.holds_after_of_leads",
+        "Becoming.TestsDecided",
+        "Becoming.TestsDecided.of_em",
+        "Becoming.Recipe.holds_after"
+      ]
+    },
+    {
+      "en": "Reading every recipe as one branching test is exact, for every frame with one configuration, one move and one claim, exactly where every proposition is decided: that exactness is equivalent to excluded middle.",
+      "zh": "把每个配方读作一个分支检验，对每个只有一个构型、一个动作与一个断言的框架都精确，恰当每个命题都可判定：这种精确性等价于排中律。",
+      "declarations": [
+        "Becoming.Recipe.claimFrame",
+        "Becoming.Recipe.holds_after_iff_em"
+      ]
+    },
+    {
+      "en": "In the frame whose steps are recipes, where the finer tests are decided, every test of recipes is one finer test holding at the same configurations; where moreover each move's outcomes are listed, the configurations each recipe leads to from each configuration are listed, with no choice.",
+      "zh": "在以配方为步的框架中，较细的检验可判定时，每个配方检验都是一个在相同构型成立的较细检验；若每个动作的结果还已列出，则每个配方从每个构型所到的构型都已列出，无需选择。",
+      "declarations": [
+        "Becoming.Frame.byRecipes",
+        "Becoming.BranchingTest.byRecipes",
+        "Becoming.Frame.holds_byRecipes",
+        "Becoming.Frame.byRecipes_translates",
+        "Becoming.Recipe.outcomes"
+      ]
+    },
+    {
+      "en": "Under excluded middle, for two frames, each with its own moves and its own recipes for steps named alike, where the second frame's moves have listed outcomes and the readings of every test of recipes agree at s and s', every history of recipes from s is matched by one from s' by the same named steps, ending where the readings agree again.",
+      "zh": "在排中律下，两个框架各有自己的动作及同名步的配方：第二框架的动作结果已列出，且每个配方检验的读法在 s 与 s' 处一致时，从 s 出发的每段配方历史都由从 s' 出发、同名步的一段匹配，终点处读法再次一致。",
+      "declarations": [
+        "Becoming.Frame.byRecipes_history_matches_of_em"
+      ]
+    },
+    {
+      "en": "A branch on a test leads by its first recipe where the test holds and by its second where it fails, with no premise; where a prefix keeps the test unchanged at every configuration it leads to from s, branching after the prefix leads from s exactly where branching first and then running the prefix in each arm does.",
+      "zh": "按检验分支，检验成立时经第一个配方、不成立时经第二个配方到达，无需前提；前段从 s 所到的每个构型都保持该检验不变时，前段之后再分支从 s 到达之处，恰是先分支、再在各支中执行前段所到之处。",
+      "declarations": [
+        "Becoming.Recipe.branch",
+        "Becoming.Recipe.leads_branch_iff",
+        "Becoming.Recipe.branch_earlier_iff"
+      ]
+    },
+    {
+      "en": "In the named model Midway, where begin takes safe to ready and finish can be taken at ready and not at safe, the recipe that begins and then tests whether it can finish reaches done from safe, and the recipe that tests at the start does not: a test the prefix changes can change the result when moved earlier.",
+      "zh": "在命名模型 Midway 中，begin 把 safe 带到 ready，finish 在 ready 可行而在 safe 不可行：先 begin 再检验能否 finish 的配方从 safe 到达 done，在起点检验的配方则不能：前段改变的检验，提前时可以改变结果。",
+      "declarations": [
+        "Becoming.Midway.canFinish",
+        "Becoming.Midway.formation_changes_guard",
+        "Becoming.Midway.adaptive",
+        "Becoming.Midway.earlyCheck",
+        "Becoming.Midway.testing_before_formation_changes_results"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Recipes are finite and loop-free; the frame's configurations, moves and claims are supplied, with tests evaluated at the configuration a course has reached. The earlier program syntax, native processes and atomic-question correspondence of the periphery modules were supplied in the same way.",
+      "zh": "配方有限且无循环；框架的构型、动作与断言是给定的，检验在历程所到构型处求值。外围模块原有的 Program 语法、原生过程与原子问题对应同样是给定的。"
+    },
+    {
+      "en": "Matching histories across two frames takes excluded middle, agreement of every test of recipes at the start and listed outcomes of the receiving frame's moves; moving a test before a prefix takes the prefix keeping it at every configuration it leads to.",
+      "zh": "两个框架之间的历史匹配取排中律、起点处每个配方检验的一致，以及接收侧框架动作结果已列出；把检验移到前段之前，取前段在其所到每个构型都保持该检验。"
+    },
+    {
+      "en": "Excluded middle enters only as a named hypothesis: to match histories, and as what exactness for every frame is equivalent to; decided tests suffice for exactness.",
+      "zh": "排中律只作为明示的前提出现：用于历史匹配，以及作为对每个框架都精确所等价的条件；检验可判定即足以精确。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Recipes have no unbounded loops; probabilities and the termination of a deployed program are outside these laws.",
+      "zh": "配方没有无界循环；概率与部署程序的终止不在这些规律之内。",
+      "kind": "scope"
+    },
+    {
+      "en": "How a formation acquires its tests, and translation of intermediate positions across arbitrary internal syntax, do not follow.",
+      "zh": "构成如何取得其检验，以及任意内部语法之间中间位置的互译，都不由此得出。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the prefix keeps the test is shown sufficient for moving the test earlier; that it is necessary is not shown.",
+      "zh": "前段保持检验被证明足以把检验提前；其必要性未被表明。",
+      "kind": "converse"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean",
+      "detail": {
+        "zh": "同一过程形成前后canFinish改变；提前测试与到达后测试有不同结果。",
+        "en": "The same process changes canFinish through formation; testing early and after arrival yields different outcomes."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "decidability",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1: the core module Becoming.Granularity by the consolidated core checker, bound to becoming-checks/20261020T051144.879480Z, every cited declaration with an empty axiom report. The superseded periphery modules ExplanatoryGuardedPrograms and GranularityBridge are provenance (explanatory-resumption-checks/20261008T183544.703004Z: 314 audits, 127 with standard axioms); that checker's receipt 20261015T180520.693095Z holds the counterexample module's current bytes, its witness reporting propext and Quot.sound. Author counterreview; no independent review.",
+    "zh": "Lean 4.29.1：核心 Granularity 经合并检查器（becoming-checks/20261020T051144.879480Z），公理皆空。外围 ExplanatoryGuardedPrograms、GranularityBridge 为来源（explanatory-resumption-checks/20261008T183544.703004Z）；同检查器回执 20261015T180520.693095Z 绑定反例模块现字节，报 propext、Quot.sound。作者反审；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Translate what remains of a recipe, its tests and the formation it reads between descriptions with different internal syntax, keeping a test's meaning apart from how a formation acquires it.",
+    "zh": "在内部语法不同的说明之间翻译配方的余项、其检验与它所读的形成，并把检验的意义与构成如何取得它分开。"
+  },
+  "correspondence": {
+    "zh": "每个执行投到同一过程的原生路径。guard和管理步骤在语义中不另计物理事件，不独自给出传感、学习或资源实施。",
+    "en": "Every execution projects to a native path in the same process. Guards and administrative steps contribute no represented physical events and do not establish sensing, learning or resource implementation."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean",
   "aliases": [
@@ -43,24 +164,6 @@
     "Becoming.Recipe.holds_after_iff_em",
     "Becoming.guarded_history_matches_of_em (retired module)"
   ],
-  "claim": {
-    "zh": "有限判断、分支、顺序及提前结束的程序问题精确编译为原生问题。完整翻译问答一致且接收侧有限分支时，不同原生程序的有限宏历史有同测终点的对应。原固定词精确嵌入；前段的每个端点保持判断时，提前判断保真。",
-    "en": "Finite guarded, sequential and choice program questions compile exactly to native questions. Complete translated-answer agreement and receiving-side finite branching match finite macro histories over different native programs, preserving endpoint answers. Fixed words embed exactly; moving a guard earlier is sound if every prefix endpoint preserves it."
-  },
-  "hypotheses": [
-    {
-      "zh": "给定有限无循环Program语法、原生过程、原子问题对应和到达位置上的guard语义。",
-      "en": "Supplied finite loop-free Program syntax, native processes, atomic-question correspondence and guards interpreted at reached positions."
-    },
-    {
-      "zh": "跨程序匹配需初始完整翻译问答一致及接收侧ImageFinite；提前判断的充分条件是全部前段结果保持该判断。",
-      "en": "Cross-program matching requires complete initial translated-answer agreement and receiving-side ImageFinite; safe early testing requires guard preservation at all prefix endpoints."
-    }
-  ],
-  "correspondence": {
-    "zh": "每个执行投到同一过程的原生路径。guard和管理步骤在语义中不另计物理事件，不独自给出传感、学习或资源实施。",
-    "en": "Every execution projects to a native path in the same process. Guards and administrative steps contribute no represented physical events and do not establish sensing, learning or resource implementation."
-  },
   "dependencies": [
     {
       "id": "branching-tests-bisimulation",
@@ -92,19 +195,6 @@
       "detail": {
         "zh": "word_program_exact 将固定有限词嵌入新语法；通用编译被推广，不把历史包装另计独立发现。",
         "en": "word_program_exact embeds fixed finite words into the new grammar; generic compilation is extended, without recounting historical wrappers as discoveries."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不涵盖无界循环、实际判断取得、概率、部署终止或任意内部语法的中间位置互译；提前判断条件只证明充分性。",
-    "en": "Does not cover unbounded loops, actual guard acquisition, probabilities, deployment termination or internal-position translation across arbitrary syntax; the early-testing condition is sufficient only."
-  },
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean",
-      "detail": {
-        "zh": "同一过程形成前后canFinish改变；提前测试与到达后测试有不同结果。",
-        "en": "The same process changes canFinish through formation; testing early and after arrival yields different outcomes."
       }
     }
   ],
@@ -161,7 +251,21 @@
         "Becoming.Recipe.leads_word_iff",
         "Becoming.Recipe.Leads.trace",
         "Becoming.Recipe.leads_branch_iff",
-        "Becoming.Recipe.branch_earlier_iff"
+        "Becoming.Recipe.branch_earlier_iff",
+        "Becoming.Recipe.word",
+        "Becoming.BranchingTest.either",
+        "Becoming.Recipe.holds_after_of_leads",
+        "Becoming.TestsDecided",
+        "Becoming.TestsDecided.of_em",
+        "Becoming.Recipe.claimFrame",
+        "Becoming.BranchingTest.byRecipes",
+        "Becoming.Frame.byRecipes_translates",
+        "Becoming.Recipe.branch",
+        "Becoming.Midway.canFinish",
+        "Becoming.Midway.formation_changes_guard",
+        "Becoming.Midway.adaptive",
+        "Becoming.Midway.earlyCheck",
+        "Becoming.Midway.testing_before_formation_changes_results"
       ]
     },
     {
@@ -216,6 +320,46 @@
       "sha256_pointer": "/source_sha256/Becoming.Granularity",
       "success_pointer": "/status",
       "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "zh": "2026-10-09：沿既有接合研究推进；全部新增数学主张、反例与修复条件进入实际 Lean 检查。",
+      "en": "2026-10-09: continued the existing joining study; all new mathematical claims, counterexamples and repair conditions actually checked in Lean."
+    },
+    {
+      "zh": "2026-10-16，整合 I4c（Ren 选择“Add the notes”）：ExplanatoryResumptionCases.lean 的第一行加一条注释，指向脊柱上陈述其主定理的声明；陈述与证明不变，行号不变。其反例引用改用新的哈希；ExplanatoryGuardedPrograms 的证明绑定不变。",
+      "en": "16 October 2026, integration I4c (Ren selected “Add the notes”): the first line of ExplanatoryResumptionCases.lean gains a comment naming the spine declarations that state its main theorem; statements, proofs and line numbers are unchanged. Its counterexample reference takes the new hash; the proof binding of ExplanatoryGuardedPrograms is unchanged."
+    },
+    {
+      "en": "2026-10-20: 9 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/c295bfe845190e3e/guarded-program-question-recovery.json and in git.",
+      "zh": "2026-10-20：9 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/c295bfe845190e3e/guarded-program-question-recovery.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryGuardedPrograms and GranularityBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Granularity). The retired modules' content is also stated in Becoming.Grains, which this record does not cite with declarations. 3 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryGuardedPrograms and GranularityBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Granularity）。退役模块的内容也陈述于 Becoming.Grains，本记录未以声明引用它们。3 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title kept; a statement written from the home section and the claim, saying, as the Lean has it, that a program question is one of finitely many branching tests with no premise, and one test only where tests are decided; the claim split into 9 laws, each read against its declarations in Becoming.Granularity, with the Midway witness of the counterexample as a law; the hypotheses restated in the core's terms (recipes, frames, listed outcomes), with a third naming where excluded middle enters; the limitations to three does-not-show items and the standard boundaries no-ethical-premise, decidability and discrete-steps; the evidence paragraph rewritten from the receipts; the next step's instruction to reuse dropped; 14 declarations added to Granularity.lean's references; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [guarded-program-question-recovery.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/guarded-program-question-recovery.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, the evidence paragraph, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题不变；依主章与主张写出陈述，按 Lean 所证说明程序问题是有限多个分支检验之一、无需前提，只在检验可判定处是一个检验；主张拆为 9 条规律，各条对照 Becoming.Granularity 中的声明核读，反例的 Midway 见证作为一条规律；前提改用核心用语（配方、框架、已列出的结果），第三条说明排中律从何处进入；限制改为三条“未表明”与通用边界 no-ethical-premise、decidability、discrete-steps；证据段按回执重写；删去下一步中复用的指示；14 个声明加入 Granularity.lean 的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [guarded-program-question-recovery.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/guarded-program-question-recovery.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、证据段，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/9c5a2d490dfe59bd/guarded-program-question-recovery.json",
+      "sha256": "9c5a2d490dfe59bdfd4ae43627f01a25bab31f0b1ef4637d62c358c33fcc9f50",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/c295bfe845190e3e/guarded-program-question-recovery.json",
+      "sha256": "c295bfe845190e3efeab14a3ee6f2b45bddc0fc87cc7bbdd842087695102360b",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

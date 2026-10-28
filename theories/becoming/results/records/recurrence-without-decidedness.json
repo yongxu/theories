@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "recurrence-without-decidedness",
   "title": {
     "zh": "不用可判定性的复现",
@@ -8,32 +8,123 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T08:07:06+00:00",
+  "reviewed_at_utc": "2026-10-28T11:46:07+00:00",
   "statement": {
     "zh": "有限家族中开始成立复现时不再成立永不终止，反之亦然；在所寻之处已定时找到那一步，从某步起已定时二者同时复现。",
     "en": "In a finite family, recurring coming to be refutes any end to ceasing, and conversely; decided where it is sought, the step is found, and decided from some step on, the two recur together."
   },
-  "claim": {
-    "zh": "有限家族中，没有东西不再成立时，每个成员至多开始成立一次（comes_once）；没有东西开始成立时，每个成员至多不再成立一次（ceases_once_of）。所以一段中看到成员开始成立、或不再成立的不同步数不多于成员数（coming_steps_within、ceasing_steps_within）。由此，开始成立复现时，从每一步起都有一段，其中有东西不再成立不能被否证（Recurs.ceasing_within），不再成立永不终止：从某步起再没有不再成立被否证（Recurs.ceasing_not_stopping）；反之亦然（Recurs.coming_within、Recurs.coming_not_stopping）。不用可判定性。那一段的状态已定时，那一步被找到（Recurs.ceasing_found、Recurs.coming_found）；从某步起已定时，开始成立复现恰当不再成立复现（coming_recurs_iff_decided），不要判定程序，而 coming_recurs_iff 在每一步都要求判定程序。依存网中形成有限多时亦然（Web.unceasing_iff_decided）。有限世界中，生起复现时止息永不终止，反之亦然，不用可判定性（World.ceasing_not_stopping、World.arising_not_stopping）；从某步起已定时生起复现恰当止息复现（World.arising_iff_ceasing_decided），World.arising_iff_ceasing（Becoming.Space）陈述由判定程序从第一步起已定的情形；有一个列表从某步起覆盖活跃者时亦然，已定只问列表的成员（World.ceasing_not_stopping_covered、World.arising_not_stopping_covered、World.arising_iff_ceasing_covered）。不用伦理前提，也不用 Lean 公理。",
-    "en": "In a finite family, while nothing of it ceases each member comes to be at most once (comes_once), and while nothing comes to be each ceases at most once (ceases_once_of); so no more steps of a stretch see a member come to be, or cease, than the family has members (coming_steps_within, ceasing_steps_within). Hence, where coming to be recurs, from any step there is a stretch in which something ceasing cannot be refuted (Recurs.ceasing_within), and ceasing never stops for good: that from some step on nothing ceases is refuted (Recurs.ceasing_not_stopping); and conversely (Recurs.coming_within, Recurs.coming_not_stopping). No decidedness is used. With the states of that stretch decided, the step is found (Recurs.ceasing_found, Recurs.coming_found); decided from some step on, coming to be recurs exactly where ceasing does (coming_recurs_iff_decided), with no decision procedure, where coming_recurs_iff asks one at every step. The same holds of a web with finitely many formations (Web.unceasing_iff_decided). In a finite world, where arising recurs ceasing never stops for good, and conversely, with no decidedness (World.ceasing_not_stopping, World.arising_not_stopping); decided from some step on, arising recurs exactly when ceasing does (World.arising_iff_ceasing_decided), World.arising_iff_ceasing (Becoming.Space) stating the case decided by a procedure from the first step; with a list covering what is active from some step on the same holds, decidedness asked only of the list's members (World.ceasing_not_stopping_covered, World.arising_not_stopping_covered, World.arising_iff_ceasing_covered). No ethical premise and no Lean axiom is used."
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "不终止的形式：家族有限（一个列表覆盖它），不要求可判定。",
-      "en": "The forms that never stop: the family is finite (a list covers it), with no decidedness."
+      "en": "With no decision: what holds at a step and ceases at none of the n steps from it is not refuted to hold n steps on; and an event recurring in a listed family is seen at any number of distinct steps from any step, all before some later step.",
+      "zh": "不用判定：在某步成立、在自它起的 n 步中没有一步不再成立的，不能被否证在 n 步后成立；在有列表的家族中复现的事件，从任一步起在任意多个不同的步被见到，都在某个更晚的步之前。",
+      "declarations": [
+        "Becoming.holds_on",
+        "Becoming.Recurs.steps_found"
+      ]
     },
     {
-      "zh": "找到一步的形式：所寻那一段的状态已定；同时复现的形式：从某步起已定。",
-      "en": "The forms finding a step: the states of the stretch searched decided; the forms recurring together: decided from some step on."
+      "en": "With no decision: a determination coming to be at one step and ceasing at none strictly between it and a later step does not come to be at the later one, and likewise with ceasing and coming to be exchanged; so where nothing of a listed family ceases across a stretch, no more distinct steps of it see a member come to be than the list has members, and likewise for ceasing where nothing comes to be.",
+      "zh": "不用判定：一个在某步开始成立、在它与更晚一步之间没有一步不再成立的规定，不在那更晚一步再开始成立；不再成立与开始成立互换亦然。所以有列表的家族在一段中没有东西不再成立时，见到成员开始成立的不同步数不多于列表的成员数；没有东西开始成立时，不再成立亦然。",
+      "declarations": [
+        "Becoming.comes_once",
+        "Becoming.ceases_once_of",
+        "Becoming.coming_steps_within",
+        "Becoming.ceasing_steps_within"
+      ]
     },
     {
-      "zh": "离散的步。",
-      "en": "Discrete steps."
+      "en": "With no decision, where coming to be recurs in a listed family: from any step there is a step at or after it such that something of the family ceasing between them cannot be refuted, and no step has nothing of the family cease after it; and conversely, with coming to be and ceasing exchanged.",
+      "zh": "不用判定，有列表的家族中开始成立复现时：从任一步起有不早于它的一步，使家族中有东西在其间不再成立不能被否证；没有一步之后家族中再无东西不再成立；反之亦然，开始成立与不再成立互换。",
+      "declarations": [
+        "Becoming.Recurs.ceasing_within",
+        "Becoming.Recurs.ceasing_not_stopping",
+        "Becoming.Recurs.coming_within",
+        "Becoming.Recurs.coming_not_stopping"
+      ]
+    },
+    {
+      "en": "Where coming to be recurs in a listed family, from any step there is a step at or after it such that, with the states of the family's members decided between them, something of the family ceases between them; and conversely, with coming to be and ceasing exchanged.",
+      "zh": "有列表的家族中开始成立复现时，从任一步起有不早于它的一步，使得其间家族成员的状态已定时，家族中有东西在其间不再成立；反之亦然，开始成立与不再成立互换。",
+      "declarations": [
+        "Becoming.Recurs.ceasing_found",
+        "Becoming.Recurs.coming_found"
+      ]
+    },
+    {
+      "en": "With the states of a listed family's members decided from some step on, coming to be recurs in the family exactly where ceasing does, with no decision procedure, where the form with a procedure asks one at every step; and where a list holds every formation of a web and their activity is decided from some step on, some formation arises at arbitrarily late steps exactly when some ceases at arbitrarily late steps.",
+      "zh": "有列表的家族成员的状态从某步起已定时，家族中开始成立复现恰当不再成立复现，不用判定程序，而此规律用判定程序的形式在每一步都要求判定程序；一个列表包含网的每个形成、其活动从某步起已定时，有形成在任意晚的步生起，恰当有形成在任意晚的步不再活跃。",
+      "declarations": [
+        "Becoming.coming_recurs_iff_decided",
+        "Becoming.coming_recurs_iff",
+        "Becoming.Web.unceasing_iff_decided"
+      ]
+    },
+    {
+      "en": "In a finite world, with no decision: where arising recurs, no step has nothing cease after it, and where ceasing recurs, no step has nothing arise after it; with activity decided from some step on, arising recurs exactly when ceasing does, with no decision procedure, where the form taking a procedure asks activity decided by one at every step.",
+      "zh": "有限世界中，不用判定：生起复现时，没有一步之后再无东西不再活跃；不再活跃复现时，没有一步之后再无东西生起。活动从某步起已定时，生起复现恰当不再活跃复现，不用判定程序，而此规律用判定程序的形式要求活动在每一步由判定程序判定。",
+      "declarations": [
+        "Becoming.World.ceasing_not_stopping",
+        "Becoming.World.arising_not_stopping",
+        "Becoming.World.arising_iff_ceasing_decided",
+        "Becoming.World.arising_iff_ceasing",
+        "Becoming.World.Finite",
+        "Becoming.World.ArisingRecurs",
+        "Becoming.World.CeasingRecurs"
+      ]
+    },
+    {
+      "en": "With a list covering what is active in a world from some step on, with no decision: where arising recurs no step has nothing cease after it, and where ceasing recurs no step has nothing arise after it; with the activity of the list's members decided from some step on, arising recurs exactly when ceasing does, nothing asked of relata off the list.",
+      "zh": "有一个列表从某步起覆盖世界中的活跃者时，不用判定：生起复现时，没有一步之后再无东西不再活跃；不再活跃复现时，没有一步之后再无东西生起。列表成员的活动从某步起已定时，生起复现恰当不再活跃复现，不问列表之外的关系项。",
+      "declarations": [
+        "Becoming.World.ceasing_not_stopping_covered",
+        "Becoming.World.arising_not_stopping_covered",
+        "Becoming.World.arising_iff_ceasing_covered"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "The forms that never stop: the family is finite (a list covers it), with no decidedness.",
+      "zh": "不终止的形式：家族有限（一个列表覆盖它），不要求可判定。"
+    },
+    {
+      "en": "The forms finding a step: the states of the stretch searched decided; the forms recurring together: decided from some step on.",
+      "zh": "找到一步的形式：所寻那一段的状态已定；同时复现的形式：从某步起已定。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The forms that never stop name no step at which something ceases or comes to be; a step is named here only where the states of the stretch searched are decided.",
+      "zh": "不终止的形式不指出在哪一步有东西不再成立或开始成立；这里只在所寻那一段的状态已定时才指出一步。",
+      "kind": "scope",
+      "witness": "Becoming.Recurs.ceasing_found"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "detail": {
+        "zh": "undecided 世界（World.undecided）有限，生起复现（World.undecided_world）；要求每个有限世界中生起复现给出止息复现的规律，在 undecided Q 上判定任一命题 Q（World.law_decides），所以对每个有限世界要求确切的复现规律而不给已定，就是排中律（World.law_iff_em）；不终止的形式不要求已定。这一需要只来自活动是命题，undecided Q 在一步把它设为任意的 Q：这是对表示之逻辑的校准，是已定规律的引理，此外不说变化的任何事。",
+        "en": "The undecided world (World.undecided) is finite, with arising recurring (World.undecided_world); a law giving ceasing recurring from arising recurring in every finite world decides any proposition Q at undecided Q (World.law_decides), so asking the exact recurrence law of every finite world without decidedness is excluded middle (World.law_iff_em); the forms that never stop ask no decidedness. The need comes only from activity being a proposition, which undecided Q sets to an arbitrary Q at one step: a calibration of the representation's logic, a lemma of the decided law, saying nothing further about change."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (check_becoming.py): the current bytes of the core module Becoming.Decidedness are bound to core receipt 20261028T070053.995027Z, and those of Becoming.Change, Becoming.Space, Becoming.World and Becoming.InAmounts to core receipts under becoming-checks/; every cited declaration has an empty axiom report, and the receipts record that the core compiles from Lean's prelude alone. Author counterreview (integration note, section 84); no independent review.",
+    "zh": "Lean 4.29.1 合并检查器（check_becoming.py）实查：核心模块 Becoming.Decidedness 的当前字节绑定核心回执 20261028T070053.995027Z，Change、Space、World 与 InAmounts 绑定 becoming-checks/ 下的核心回执；所引声明的公理报告均为空，回执记录核心只用 Lean 前导即可编译。作者反审（整合文档第 84 节）；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Restate in the forms that never stop the other recurrence laws that use decidedness only in their proofs, as the decidability inventory lists them with each one's reason, and argue for reading these forms as recurrence doubly negated.",
+    "zh": "以不终止的形式重述其余只在证明中用到可判定性的复现规律（可判定性清点页逐条列出理由），并论证把这些形式读作双重否定的复现。"
+  },
   "correspondence": {
-    "zh": "Ren 2026-10-11：“give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”，并以“please”接受 AI 的建议：可判定性局部化，不再是表示的承诺。AI 的读法：不终止的形式是双重否定的复现，不指出在哪一步，但排除“从某步起再没有”；这正是已证的界：不给已定时，命名一步需要有限全知原则（World.lpo_of_finite_ends、Listed.lpo_of_few、Web.lpo_of_ending），对每个有限世界要求复现需要排中律（World.law_iff_em）。读法依 Ren 的交托采用。",
-    "en": "Ren, 11 October 2026: “give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”, and “please” to the AI's suggestion that decidability be made local, no longer a commitment of the representation. The AI's reading: the forms that never stop are recurrence doubly negated, naming no step but excluding “none from some step on”; this is the proved boundary: without decidedness, naming a step needs the limited principle of omniscience (World.lpo_of_finite_ends, Listed.lpo_of_few, Web.lpo_of_ending), and asking recurrence of every finite world needs excluded middle (World.law_iff_em). The reading is adopted on Ren's delegation."
+    "en": "Ren, 11 October 2026: “give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”, and “please” to the proposal that decidability be made local, no longer a commitment of the representation (provenance, not warrant). Reading (an AI reading, D30): the forms that never stop are recurrence doubly negated, naming no step but excluding “none from some step on”; this is the proved boundary: without decidedness, naming a step needs the limited principle of omniscience (World.lpo_of_finite_ends, Listed.lpo_of_few, Web.lpo_of_ending), and asking recurrence of every finite world needs excluded middle (World.law_iff_em).",
+    "zh": "Ren 2026-10-11：“give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”，并以“please”接受把可判定性局部化、不再作为表示之承诺的提议（来源，不是依据）。读法（AI 的读法，D30）：不终止的形式是双重否定的复现，不指出在哪一步，但排除“从某步起再没有”；这正是已证的界：不给已定时，命名一步需要有限全知原则（World.lpo_of_finite_ends、Listed.lpo_of_few、Web.lpo_of_ending），对每个有限世界要求复现需要排中律（World.law_iff_em）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
   "aliases": [
@@ -129,23 +220,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "detail": {
-        "zh": "undecided 世界（World.undecided）有限，生起复现（World.undecided_world）；要求每个有限世界中生起复现给出止息复现的规律，在 undecided Q 上判定任一命题 Q（World.law_decides），所以对每个有限世界要求确切的复现规律而不给已定，就是排中律（World.law_iff_em）；不终止的形式不要求已定。这一需要只来自活动是命题，undecided Q 在一步把它设为任意的 Q：这是对表示之逻辑的校准，是已定规律的引理，此外不说变化的任何事。",
-        "en": "The undecided world (World.undecided) is finite, with arising recurring (World.undecided_world); a law giving ceasing recurring from arising recurring in every finite world decides any proposition Q at undecided Q (World.law_decides), so asking the exact recurrence law of every finite world without decidedness is excluded middle (World.law_iff_em); the forms that never stop ask no decidedness. The need comes only from activity being a proposition, which undecided Q sets to an arbitrary Q at one step: a calibration of the representation's logic, a lemma of the decided law, saying nothing further about change."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不终止的形式不指出在哪一步；命名一步需要所寻之处已定，对每个世界要求复现需要从某步起已定；只对离散步陈述；读法是 AI 的，依 Ren 的交托采用。",
-    "en": "The forms that never stop name no step; naming one needs decidedness where it is sought, and asking recurrence of every world needs decidedness from some step on; stated for discrete steps; the readings are the AI's, adopted on Ren's delegation."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Decidedness 的 55 项定理全部空依赖；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §84；尚未经独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 55 theorems of Becoming.Decidedness all have empty axiom reports; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §84 of the integration note; not yet independently reviewed."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
@@ -383,10 +457,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "以不终止的形式重述其余只在证明中用到可判定性的复现规律（清点页逐条列出理由）；对读法的论证。",
-    "en": "Restating the other recurrence laws that use decidedness only in their proofs in the forms that never stop (the inventory page gives each one's reason); an argument for the reading."
-  },
   "history": [
     {
       "zh": "2026-10-12 P58：新增，按Ren 2026-10-11：“give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”，并以“please”接受 AI 的建议：可判定性局部化，不再是表示的承诺；新核心模块 Becoming.Decidedness，按工作板认领；见整合文档 §84。",
@@ -467,6 +537,28 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Finite to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept; the claim split into seven laws, each read against its declarations in Decidedness.lean, Change.lean and Space.lean (holding on and recurring events, coming at most once, the forms that never stop, the forms finding a step, the decided family and web, finite worlds, covering lists), its last sentence the shared boundary no-ethical-premise; the limitations to one does-not-show item, the counterexample (unchanged), which carries the need for decidedness, the correspondence and the standard boundaries discrete-steps (the hypothesis \"Discrete steps.\") and decidability; the correspondence's attribution of the proposal and its delegation wording restated as provenance and an AI reading; no premise's content, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [recurrence-without-decidedness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-decidedness.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为七条规律，各条对照 Decidedness.lean、Change.lean 与 Space.lean 中的声明核读（持续与复现的事件、至多开始一次、不终止的形式、找到一步的形式、已定的家族与网、有限世界、覆盖列表），其末句即通用边界 no-ethical-premise；限制改为一条“未表明”、承载可判定性之需的反例（不变）、对应说明，以及通用边界 discrete-steps（即前提“离散的步”）与 decidability；对应说明中提议的归属与交托措辞改述为来源与 AI 的读法；前提的内容、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [recurrence-without-decidedness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-decidedness.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/f4df9cd73f7a20c0/recurrence-without-decidedness.json",
+      "sha256": "f4df9cd73f7a20c03eab1e0ea39359a9a80f9a24a0db31838d575eecd470d3b5",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/3c8fe02110371cc3/recurrence-without-decidedness.json",
+      "sha256": "3c8fe02110371cc302053df62fdc548e921f8013ebf3251561ee335e4a50ed7e",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

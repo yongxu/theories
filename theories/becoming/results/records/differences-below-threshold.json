@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "differences-below-threshold",
   "title": {
     "zh": "阈下的差别",
@@ -8,15 +8,108 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-28T12:39:42+00:00",
   "statement": {
     "zh": "交换随形成的耦合时，只经阈耦合入它的储量上的差别保持到两网的支持分岔；储量经水平耦合入则解除它，他者回应储量本身时则不然。",
     "en": "Where the exchange follows a formation's couplings, a difference in a stock coupled into it by threshold only stays until the two webs' support diverges; coupling the stock in by level lifts it, and others responding to the stock itself break it."
   },
-  "claim": {
-    "zh": "设两个流在耦合入形成 g（经阈或经水平）的每个条件上逐步平衡，并且 g 周围的交换随其耦合：凡两个流直到某步经 g 的耦合无别，它们跨过该步在耦合入 g 的每个条件上，对在场的全部形成，取用与给予的总量相同（Flow.ExchangeFollows）。那么经 g 的耦合无别期间，耦合入 g 之条件上的每个差别都保持起始的样子（Flow.difference_kept）。第二个网在耦合入 g 的条件上起始不低、在经水平耦合入 g 的条件上相同时，在第一个网此前每步都支持 g 的每一步，两网都经 g 的耦合无别（Flow.alike_while_supported），可以有任意多个条件不同；差别在某步之前已改变，必有更早的一步，第二个网的水平接纳 g 而第一个网不支持它，活动需要支持时 g 在第一个网中并非此前每步都活跃（Flow.difference_changes_after_divergence）。起始只在只经阈耦合入 g 的一个储量上不同、第二个网中高 d 时，在第一个网此前每步都支持 g 的每一步，储量恰好高 d，耦合入 g 的其余条件相同，两网此前每步都经 g 的耦合无别（Flow.subthreshold_alike）；第一个网每步都支持 g 时每步都如此（Flow.subthreshold_alike_always）。见证：SupportDrawn 中形成需要一个单位、在每个被支持的步取一个单位，交换只随支持，差别保持到第三步，较低的网在第三步不支持它而较高的网支持，第四步差别已变（SupportDrawn.difference_waits）；JointFailure 中两网从第二步起都不支持形成，差别每步都保持（JointFailure.difference_kept）；Gauged 中储量经水平耦合入的形成在第一步取尽需要之上的全部，在较高的网中动用了差别，交换随其耦合而不约束任何东西，只有支持耦合入时交换不随其耦合（Gauged.gauge_changes_difference）；储量划作自身的立着时，量度自身就是量度储量（Gauged.own_is_stock）；Attracting 中被较高的储量招来的取用者使较高的网在第二步就不支持依存者，交换不随其耦合（Attracting.higher_breaks_first）；SelfPrey 中以所需一依存于自身的猎物，咬一个单位时两网经支持每步无别、经量度自身在第二步显出，咬两个单位时经支持在第二步就显出（SelfPrey.threshold_on_oneself）。不用 Lean 公理。",
-    "en": "Let two flows balance at each step on every condition coupled into a formation g (by threshold or by level), and let the exchange around g follow its couplings: wherever the two flows have been alike through g's couplings up to a step, they take from and give to every condition coupled into g alike across that step, in total over every formation present (Flow.ExchangeFollows). Then while the flows are alike through g's couplings, every difference on a condition coupled into g stays as it was at the start (Flow.difference_kept). Where the second web starts at least as high on what couples into g and alike on what couples into it by level, the webs are alike through g's couplings at every step before which the first web supported it (Flow.alike_while_supported), any number of conditions differing; where a difference has changed by a step, at some earlier step the second web's levels admitted g and the first web did not support it, and where activity needs support g was not active in the first web at every earlier step (Flow.difference_changes_after_divergence). Where the starts differ only in one stock coupled into g by threshold only, d higher in the second web, at every step before which the first web supported g at every step the stock stands exactly d higher, every other condition coupled into g stands alike and the webs have been alike through g's couplings (Flow.subthreshold_alike), and at every step where the first web supports g at every step (Flow.subthreshold_alike_always). Witnesses: in SupportDrawn a formation needing one unit draws one unit at each supported step, the exchange following its support only; the difference stands through the third step, where the lower web fails to support it and the higher supports it, and has changed by the fourth (SupportDrawn.difference_waits); in JointFailure both webs fail the formation from the second step and the difference stands at every step (JointFailure.difference_kept); in Gauged a formation into which its stock couples by level draws all of it above its need at the first step and draws on the difference in the higher web, the exchange following its couplings constraining nothing, while with only support coupled in the exchange does not follow its couplings (Gauged.gauge_changes_difference); carving the stock as its own standing, a gauge of oneself is the gauge of the stock (Gauged.own_is_stock); in Attracting a taker drawn by the higher stock makes the higher web fail the dependent at the second step, the exchange not following its couplings (Attracting.higher_breaks_first); in SelfPrey, with the prey depending on its own standing at need one, a bite of one leaves the webs alike through support at every step and shows through a gauge of oneself at the second, and a bite of two shows through support at the second step (SelfPrey.threshold_on_oneself). No Lean axiom is used."
-  },
+  "laws": [
+    {
+      "en": "A condition couples into a formation where the formation depends on it, by the threshold of its support, or it is coupled in by level, a supplied relation that is empty under coupling by threshold only; two level histories are alike through the formation's couplings at a step where their levels admit it alike and stand alike on what couples in by level.",
+      "zh": "一个条件耦合入一个形成，指形成依存于它（经其支持之阈），或它经水平耦合入（给出的关系，只经阈耦合时为空）；两个水平历史在某步经形成的耦合无别，指其水平同样接纳形成，并在经水平耦合入者上相同。",
+      "declarations": [
+        "Becoming.Web.CoupledInto",
+        "Becoming.Web.AlikeThrough",
+        "Becoming.thresholdOnly"
+      ]
+    },
+    {
+      "en": "For two flows with their webs and a formation g, the exchange around g follows its couplings where, wherever the two have been alike through g's couplings up to a step, the flows take from and give to every condition coupled into g alike across that step, in total over every formation present.",
+      "zh": "对两个流与网及形成 g：g 周围的交换随其耦合，指凡两者直到某步经 g 的耦合都无别，两流跨过该步对每个耦合入 g 的条件的取与给（对所有在场形成合计）都相同。",
+      "declarations": [
+        "Becoming.Flow.ExchangeFollows"
+      ]
+    },
+    {
+      "en": "For two flows balanced on what couples into a formation g, their exchange following g's couplings: while they are alike through g's couplings at every earlier step, every difference on a condition coupled into g stays as it was at the start.",
+      "zh": "两个流在耦合入形成 g 者上平衡、其交换随 g 的耦合：只要此前每步经 g 的耦合都无别，每个耦合入 g 的条件上的差别都保持起初的样子。",
+      "declarations": [
+        "Becoming.Flow.difference_kept",
+        "Becoming.Flow.BalancesOn"
+      ]
+    },
+    {
+      "en": "For two flows balanced on what couples into a formation g, their exchange following g's couplings, the second web starting no lower on what couples into g and alike on what couples in by level: where the first web supported g at every step before t, the webs are alike through g's couplings at every step before t, any number of conditions differing.",
+      "zh": "两个流在耦合入形成 g 者上平衡、其交换随 g 的耦合，第二个网起初在每个耦合入 g 的条件上不低、在经水平耦合入者上相同：第一个网在 t 之前每步都支持 g 时，两网在 t 之前每步经 g 的耦合都无别，不论有多少条件不同。",
+      "declarations": [
+        "Becoming.Flow.alike_while_supported"
+      ]
+    },
+    {
+      "en": "For two flows balanced on what couples into a formation g, their exchange following g's couplings, the second web starting no lower on what couples into g and alike on what couples in by level: where a difference coupled into g has changed by step t, not every earlier step at which the second web admits g has g supported in the first, and, where activity needs support, not every earlier step has g active there.",
+      "zh": "两个流在耦合入形成 g 者上平衡、其交换随 g 的耦合，第二个网起初在每个耦合入 g 的条件上不低、在经水平耦合入者上相同：若耦合入 g 的差别到第 t 步已改变，则并非此前第二个网接纳 g 的每步第一个网都支持它；活动需要支持时，并非此前每步 g 在第一个网中都活跃。",
+      "declarations": [
+        "Becoming.Flow.difference_changes_after_divergence"
+      ]
+    },
+    {
+      "en": "For two flows balanced on what couples into g, their exchange following g's couplings, conditions' equality decided, the starts alike on what couples into g but a stock c that g depends on, not coupled in by level, d higher in the second: at each t before which the first web supported g at every step, c stands exactly d higher, all else coupled into g alike, and the webs alike through g's couplings before t.",
+      "zh": "两个流在耦合入形成 g 者上平衡、其交换随 g 的耦合、条件的相等可判定，起初在耦合入 g 者上除储量 c 外都相同（g 依存于 c，c 不经水平耦合入，在第二个网中高 d）：在第一个网于 t 之前每步都支持 g 的每个 t，c 恰高 d，其他耦合入 g 者相同，两网在 t 之前经 g 的耦合都无别。",
+      "declarations": [
+        "Becoming.Flow.subthreshold_alike"
+      ]
+    },
+    {
+      "en": "For two flows balanced on what couples into g, their exchange following g's couplings, conditions' equality decided, the starts alike on what couples into g but a stock c that g depends on, not coupled in by level, d higher in the second: where the first web supports g at every step, c stands exactly d higher and the webs are alike through g's couplings at every step.",
+      "zh": "两个流在耦合入形成 g 者上平衡、其交换随 g 的耦合、条件的相等可判定，起初在耦合入 g 者上除储量 c 外都相同（g 依存于 c，c 不经水平耦合入，在第二个网中高 d）：第一个网每步都支持 g 时，c 每步恰高 d，两网每步经 g 的耦合都无别。",
+      "declarations": [
+        "Becoming.Flow.subthreshold_alike_always"
+      ]
+    },
+    {
+      "en": "Witness: a formation needing one unit of a stock, active while the stock stands and drawing one unit at each supported step, its exchange following its support only, with the stock at two in one web and three in the other: the difference of one stands at steps 0 to 2, at step 2 the lower web fails to support the formation while the higher supports it, and at step 3 the difference has changed.",
+      "zh": "见证：一个形成需要一个单位的储量，储量立着时活跃，每个被支持的步汲取一个单位，其交换只随其支持；储量在一个网中为 2、在另一个网中为 3：一个单位的差别在第 0 到 2 步保持，第 2 步较低的网不支持该形成而较高的网支持，第 3 步差别已改变。",
+      "declarations": [
+        "Becoming.SupportDrawn.difference_waits"
+      ]
+    },
+    {
+      "en": "Witness: where both webs fail a formation from step one, a second requirement being gone, and its exchange follows its support only, the stock stands one higher at every step: a failure of both webs together is not a divergence.",
+      "zh": "见证：两个网从第 1 步起都不支持一个形成（第二个要求已不在），其交换只随其支持，储量每步都高一个单位：两网一同不支持不是分岔。",
+      "declarations": [
+        "Becoming.JointFailure.difference_kept"
+      ]
+    },
+    {
+      "en": "Witness: a formation drawing all of its stock above its need at the first step, the stock coupled into it by level, is supported at every step in webs one and two units above its need, and in the higher it draws on the difference, changed after the first step; the webs are apart through its couplings at the first step, so its exchange follows its couplings, while under coupling by threshold only it does not.",
+      "zh": "见证：一个形成在第一步汲取其储量超出所需的全部，储量经水平耦合入它：在高出所需一个与两个单位的两个网中它每步都被支持，在较高的网中它动用差别，第一步之后差别已改变；两网在第一步经其耦合有别，所以其交换随其耦合，只经阈耦合时则不随。",
+      "declarations": [
+        "Becoming.Gauged.gauge_changes_difference"
+      ]
+    },
+    {
+      "en": "Witness: for a formation whose stock is its own standing, a gauge of its own standing is the gauge of the stock, and under it the webs one and two units above its need are apart through its couplings at the first step.",
+      "zh": "见证：对储量即自身立着的形成，量度自身的立着就是量度储量；在此之下，高出所需一个与两个单位的两个网在第一步经其耦合有别。",
+      "declarations": [
+        "Becoming.Gauged.own_is_stock",
+        "Becoming.ownStanding"
+      ]
+    },
+    {
+      "en": "Witness: a dependent needing one unit of a stock and a taker drawn by a stock of three, which takes two units at the first step: the web starting one unit higher fails the dependent at step one while the lower still supports it; the webs are alike through the dependent's couplings by threshold at step zero and apart at step one, and the exchange does not follow its couplings.",
+      "zh": "见证：一个依存者需要一个单位的储量，一个取用者被三个单位的储量招来，在第一步取两个单位：起初高一个单位的网在第 1 步不支持依存者，较低的网仍支持它；两网在第 0 步经依存者的阈耦合无别，在第 1 步有别，交换不随其耦合。",
+      "declarations": [
+        "Becoming.Attracting.higher_breaks_first"
+      ]
+    },
+    {
+      "en": "Witness: a prey depending on its own standing at need one, two at the start, and bitten at the first step: under a bite of one, its levels are alike with the spared levels through its support at every step and apart through a gauge of its own standing at step one; under a bite of two, they are apart through its support at step one.",
+      "zh": "见证：一个被捕食者以需要 1 依存于自身的立着，起初为 2，第一步被咬：咬一个单位时，它的水平与未被咬的水平经其支持每步都无别，经对自身立着的量度在第 1 步有别；咬两个单位时，经其支持在第 1 步有别。",
+      "declarations": [
+        "Becoming.SelfPrey.threshold_on_oneself"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "平衡只在耦合入的条件上逐步假设（Flow.BalancesOn，单元素家族，不需要有限性）；整体的平衡经 Flow.Balances.on 给出它。",
@@ -39,9 +132,55 @@
       "en": "Discrete steps, counted from step 0; natural-number levels, needs and amounts; decidable equality of conditions (DecidableEq) is used only to split cases on conditions, and no classical reasoning is used."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "That a formation observes anything beyond its support, gauges its own standing or avoids a runaway does not follow from these laws.",
+      "zh": "由诸律推不出形成观察其支持之外的任何东西、量度自身的立着或避免失控。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which actual unfoldings meet the exchange following what couples in is an empirical question; the laws take it as supplied.",
+      "zh": "哪些实际展开满足交换随耦合入者是经验问题；诸律把它作为给出的前提。",
+      "kind": "correspondence",
+      "witness": "Becoming.Attracting.higher_breaks_first"
+    },
+    {
+      "en": "Coupling by level reads levels exactly; observation with error (calibration) is not modelled.",
+      "zh": "经水平耦合是精确地读水平；带误差的观察（校准）不在模型之内。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "detail": {
+        "zh": "他者回应储量本身时，交换不随耦合入者，较高的储量可以先终结依存者：Attracting 中被三个单位的储量招来的取用者使较高的网在第二步就不支持依存者，较低的网仍支持（Attracting.higher_breaks_first）。未加限定的读法“损失直到断裂才显出”对此不成立。",
+        "en": "Where others respond to the stock itself the exchange does not follow what couples in, and a higher stock can end the dependent first: in Attracting a taker drawn by a stock of three makes the higher web fail the dependent at the second step while the lower web still supports it (Attracting.higher_breaks_first). The unqualified reading that losses show only at the break fails here."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "detail": {
+        "zh": "观察储量解除阈下的差别：Gauged 中储量经水平耦合入的形成在两个网中每步都被支持，并在较高的网中动用差别（Gauged.gauge_changes_difference）。",
+        "en": "Observing the stock lifts the blindness below the threshold: in Gauged a formation into which its stock couples by level is supported at every step in both webs and draws on the difference in the higher one (Gauged.gauge_changes_difference)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Testing, Admission, Feedback, Roles and Flow are bound to core receipts under becoming-checks, with an empty axiom report for every cited declaration, and the checker verifies that the core compiles from Lean's prelude alone. The seventeenth independent review (by AI) read it before integration, and its treatment is in the integration note with the author's counterreview; the text after that treatment has no independent review yet.",
+    "zh": "Lean 4.29.1 合并检查器实查：Testing、Admission、Feedback、Roles 与 Flow 的当前字节绑定 becoming-checks 下的核心回执，所引声明的公理报告皆空，检查器并核对核心只用 Lean 前导即可编译。第十七次独立审查（AI）在整合前读过它，其处理与作者反审见整合文档；此后的文本尚无独立审查。"
+  },
+  "next_delta": {
+    "en": "Derive from the dynamics that the exchange follows what couples in, rather than supply it, and model observation with error (calibration).",
+    "zh": "由动力学推出交换随耦合入者，而不是作为前提给出；并为带误差的观察（校准）建模。"
+  },
   "correspondence": {
-    "zh": "Ren 的提议：“can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”，“I think all the wisdoms about wisdoms, how to think, learn, update, are all explained within what we have, if not not proved yet”。AI 的回答提出反馈的三种不见、失控是在其一之中运行的回路、跨过它们的方式、可否证性是被展开纠正的条件，以及 理 的读法；Ren 答：“agree with you, great job, start now. for 4, you can explore which option is better, then make decision”。独立审查收窄了这些读法：三种不见各有其范围（阈下在交换随耦合入者之处，视界之外在延续开放之处，耦合闭包之外在成员只经自己的耦合回应之处）；失控的读法是启发，不是陈述；理 读作对耦合负责的模型（其后依 Ren 读作对结构与变化之规律的建模）。所以记录中的读法是 AI 收窄之后的，依 Ren 的交托采用（D26），不是 Ren 所接受的原文。第 4 问（形成自身的立着是否算作耦合入）由 AI 探索后决定：基础只有支持耦合入（thresholdOnly），一类读法中自身的立着经承担自身（Web.SelfBearing）经阈耦合入，量度自身（ownStanding）是观察前提；理由见整合文档 §70.1。“识”（registers）原作“计入”，与 P42 一致；Ren 认为“计入 is apparently weird, need better word”，AI 先改为“反映”，Ren 定为“识”（“for registers, use 识”），取差别在形成的状态中显出之义（见整合文档 §{SEC}.2）。2026-10-18 的命名决定之后，“registers”改作“耦合入”，识保留给一个形成经其耦合所成之归并的历程。",
-    "en": "Ren's proposal: “can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”, and “I think all the wisdoms about wisdoms, how to think, learn, update, are all explained within what we have, if not not proved yet”. The AI's answer proposed three blindnesses of feedback, a runaway as a loop running inside one of them, the ways across them, falsifiability as the condition of being corrected by the unfolding, and a reading of 理; Ren answered “agree with you, great job, start now. for 4, you can explore which option is better, then make decision”. The independent review narrowed the readings: each blindness has its scope (below a threshold where the exchange follows what couples in, beyond the horizon where the continuation is open, beyond the coupling closure where the members respond only through their own couplings); the runaway reading is a heuristic, not a statement; and 理 is read as a model answerable to coupling (later, following Ren, as the modeling of the laws of structure and change). So the readings recorded here are the AI's narrowed ones, adopted on Ren's delegation (D26), not the wording Ren accepted. Question 4, whether a formation's own standing counts as coupled in, was decided by the AI after exploring the options: only support couples into the base (thresholdOnly); in the one-kind reading own standing couples in by threshold through self-bearing (Web.SelfBearing); and a gauge of oneself (ownStanding) is an observation premise. The reasons are in §70.1 of the integration note. The Chinese for “registers” was 计入, as in P42; Ren found it “apparently weird” and asked for a better word, the AI proposed 反映, and Ren chose 识 (“for registers, use 识”): a difference showing in the formation's state (§70.2 of the integration note). Under the naming decision of 18 October 2026 “registers” became “couples into”, and 识 is kept for a formation's course through the lumping its couplings make."
+    "en": "Ren's proposal (11 October 2026): “can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”. The AI's answer proposed three blindnesses of feedback, a runaway as a loop running inside one of them, the ways across them, falsifiability as the condition of being corrected by the unfolding, and a reading of 理; Ren agreed and left question 4 to the AI to explore and decide. The independent review narrowed the readings: each blindness has its scope, this one below a threshold where the exchange follows what couples in; the runaway reading is a heuristic, not a statement; and 理 is read as a model answerable to coupling. So the readings recorded here are the AI's narrowed ones, adopted on Ren's delegation, not the wording Ren accepted. Question 4, whether a formation's own standing counts as coupled in, was decided by the AI after exploring the options: only support couples into the base (thresholdOnly); in the one-kind reading own standing couples in by threshold through self-bearing (Web.SelfBearing); and a gauge of oneself (ownStanding) is an observation premise.",
+    "zh": "Ren 的提议（2026年10月11日）：“can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”。AI 的回答提出反馈的三种不见、失控是在其一之中运行的回路、跨过它们的方式、可否证性是被展开纠正的条件，以及 理 的读法；Ren 表示同意，并把第 4 问留给 AI 探索后决定。独立审查收窄了这些读法：三种不见各有其范围，这里的一种在交换随耦合入者之处的阈下；失控的读法是启发，不是陈述；理 读作对耦合负责的模型。所以记录中的读法是 AI 收窄之后的，依 Ren 的交托采用，不是 Ren 所接受的原文。第 4 问（形成自身的立着是否算作耦合入）由 AI 探索后决定：基础只有支持耦合入（thresholdOnly），一类读法中自身的立着经承担自身（Web.SelfBearing）经阈耦合入，量度自身（ownStanding）是观察前提。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
   "aliases": [
@@ -183,30 +322,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
-      "detail": {
-        "zh": "他者回应储量本身时，交换不随耦合入者，较高的储量可以先终结依存者：Attracting 中被三个单位的储量招来的取用者使较高的网在第二步就不支持依存者，较低的网仍支持（Attracting.higher_breaks_first）。未加限定的读法“损失直到断裂才显出”对此不成立。",
-        "en": "Where others respond to the stock itself the exchange does not follow what couples in, and a higher stock can end the dependent first: in Attracting a taker drawn by a stock of three makes the higher web fail the dependent at the second step while the lower web still supports it (Attracting.higher_breaks_first). The unqualified reading that losses show only at the break fails here."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
-      "detail": {
-        "zh": "观察储量解除阈下的差别：Gauged 中储量经水平耦合入的形成在两个网中每步都被支持，并在较高的网中动用差别（Gauged.gauge_changes_difference）。",
-        "en": "Observing the stock lifts the blindness below the threshold: in Gauged a formation into which its stock couples by level is supported at every step in both webs and draws on the difference in the higher one (Gauged.gauge_changes_difference)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "形成观察支持之外的任何东西、量度自身的立着或想要避免失控都不推出；交换随耦合入者是给出的假设，哪些展开满足它是经验问题；回路、增益与失控在 how-loops-form、where-novelty-gain-comes-from 与 runaway-distance-uncoupled 中，不在此；观察是精确的，带误差的量度（校准）没有建模；读法是 AI 的，经审查收窄，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "That a formation observes anything beyond its support, gauges its own standing or wants to avoid a runaway is not derived; the exchange following what couples in is a supplied hypothesis, and which unfoldings meet it is empirical; loops, gain and runaway are treated in how-loops-form, where-novelty-gain-comes-from and runaway-distance-uncoupled, not here; observation is exact, and measurement with error (calibration) is not modelled; the readings are the AI's, narrowed by the review, adopted on Ren's delegation; contains no ethical predicate."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Testing 的 92 项定理全部空依赖，其中含Flow.difference_kept、alike_while_supported、difference_changes_after_divergence、subthreshold_alike、SupportDrawn.difference_waits 与 Attracting.higher_breaks_first；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §70.3；整合之前经第十七次独立审查（BECOMING-P49-REVIEW.md，起草时称 P47），其处理见 §70.2；处理之后的文本尚未经独立审查。本记录的局部规律（P57–P61）在同一回执中，公理报告为空。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 92 theorems of Becoming.Testing all have empty axiom reports, among them Flow.difference_kept, alike_while_supported, difference_changes_after_divergence, subthreshold_alike, SupportDrawn.difference_waits and Attracting.higher_breaks_first; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §70.3 of the integration note; reviewed before integration by the seventeenth independent review (BECOMING-P49-REVIEW.md, titled P47), whose treatment is in §70.2; the text after that treatment is not yet independently reviewed. This record's local laws (P57–P61) are in the same receipt, with empty axiom reports."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
@@ -247,7 +362,9 @@
         "Becoming.SelfPrey.within_influence",
         "Becoming.SelfPrey.threshold_on_oneself",
         "Becoming.ownStanding",
-        "Becoming.thresholdOnly"
+        "Becoming.thresholdOnly",
+        "Becoming.Web.CoupledInto",
+        "Becoming.Web.AlikeThrough"
       ]
     },
     {
@@ -483,10 +600,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "由动力学给出交换随耦合入者，而不是假设它；带误差的观察（校准）。",
-    "en": "Give the exchange following what couples in from the dynamics rather than assume it; observation with error (calibration)."
-  },
   "history": [
     {
       "zh": "2026-10-11 P49：新增，按 Ren“agree with you, great job, start now. for 4, you can explore which option is better, then make decision”；起草时编为 P47，因 P47 已是 Becoming.Standing 而改为 P49；统一计划 P49；见整合文档 §70；整合之前经第十七次独立审查，处理见 §70.2。",
@@ -560,6 +673,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the scope note names the record by its current id, runaway-distance-uncoupled, for its former id; the claim is unchanged. The registration words left in the AI text of the correspondence now read in the coupling vocabulary: 理 as a model answerable to coupling (zh 对耦合负责, for 对识负责, 识 then meaning registers) and question 4 as whether own standing counts as coupled in (zh 耦合入, for 被识); Ren's words and the account of the word's history are kept.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：范围说明以现行编号 runaway-distance-uncoupled 称该记录，取代其旧编号；主张不变。对应之 AI 文字中余下的登记之词改用耦合之词：理 读作对耦合负责的模型（原作对识负责，识当时指 registers），第 4 问作自身的立着是否算作耦合入（原作被识）；Ren 的原话与该词来历的叙述保留。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement kept; the claim split into thirteen laws, each read against its declarations in Testing.lean and Flow.lean, each law naming the balance, the exchange following the couplings and the start conditions it takes, the divergence law narrowed to the negated universals the Lean proves (no longer “at some earlier step … did not support it”); the limitations to three does-not-show items and the standard boundaries no-ethical-premise and no-evaluation, the pointer to loops, gain and runaway left to the related entries; Web.CoupledInto and Web.AlikeThrough added to Testing.lean's references; the correspondence brought within its cap: its process markers cut, its account of the Chinese word for the retired “registers”, the review's list of the three scopes and two of Ren's three quoted passages left to the snapshot and the cited source, the third kept verbatim with its date and the answer it received stated as provenance; no premise, status, source hash or proof binding changed. Every earlier sentence is mapped in [differences-below-threshold.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/differences-below-threshold.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为十三条规律，各条对照 Testing.lean 与 Flow.lean 中的声明核读，每条写明它所需的平衡、交换随耦合与起初条件，分岔之律按 Lean 所证的否定全称收窄（不再说“在此前某步……不支持它”）；限制改为三条“未表明”与通用边界 no-ethical-premise、no-evaluation，回路、增益与失控的指引留给相关条目；Web.CoupledInto 与 Web.AlikeThrough 加入 Testing.lean 的引用；对应压到上限之内：删去过程标记，关于退役的“registers”之中文译名的经过、审查列出的三种范围与 Ren 三段原话中的两段留在快照与所引来源中，第三段连同日期逐字保留，所得的回答写为来源；前提、状态、来源哈希与证明绑定均未改变。每句旧文本的去向见 [differences-below-threshold.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/differences-below-threshold.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/f79d7bd5fadbce32/differences-below-threshold.json",
+      "sha256": "f79d7bd5fadbce32f9f6b86cb23c479b04b2577d3b89a816150447efd998f58a",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/29bbd5bec961a5aa/subthreshold-registration.json",
+      "sha256": "29bbd5bec961a5aae7524d9ec6fff53d7c378f5d37a3833b7bc2f0e0ac247b22",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ],
   "former_ids": [

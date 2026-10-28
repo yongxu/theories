@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "assured-route-criterion",
   "title": {
     "zh": "三路线中的保证到达条件",
@@ -8,11 +8,88 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F08",
-  "reviewed_at_utc": "2026-10-14T05:50:00+00:00",
-  "claim": {
-    "zh": "对每个确定的过程（每个动作至多一个后继），一个计划完成——每一步从此前步骤可达的每个构型都可行且安全，每个终点满足目标——当且仅当它运行、其运行安全且终点满足目标；没有安全条件时，当且仅当它运行且每个终点满足目标。对一条变化之律，计划完成恰当目标在律所到之处成立；单步时恰当目标在后继处成立。部分律的轨迹恰是其完成的运行。逆命题在非确定过程中不成立。情境智慧的“保证”即无安全条件的完成。三路线过程是一条变化之律，所以从未到达状态执行路线 a 保证到达，当且仅当 a 不等于唯一不可通行模式 m，这是实例。",
-    "en": "For every determined process (each move has at most one successor), a plan completes — every step possible and safe from every configuration the earlier steps can reach, every endpoint meeting the goal — exactly when it runs, its run is safe and its endpoint meets the goal; with no safety condition, exactly when it runs and every endpoint meets the goal. For a law of change, a plan completes exactly when the goal holds where the law takes it, and for one move exactly when it holds at the successor. A partial law's traces are exactly its completed runs. The converse fails for nondeterministic processes. Contextual wisdom's assurance is completion with no safety condition. The three-route process is a law of change, so taking route a from an unreached state assures arrival exactly when a differs from the uniquely blocked mode m: an instance."
+  "reviewed_at_utc": "2026-10-28T11:52:44+00:00",
+  "statement": {
+    "en": "For every determined process, a plan completes, every step possible and safe from every configuration the earlier steps reach and every endpoint meeting the goal, exactly when it runs, its run is safe and its endpoint meets the goal; a nondeterministic witness runs into the goal without completing.",
+    "zh": "对每个确定的过程，一个计划完成（每一步从此前步骤可达的每个构型都可行且安全，每个终点满足目标），当且仅当它运行、其运行安全且终点满足目标；一个非确定的见证运行到目标却不完成。"
   },
+  "laws": [
+    {
+      "en": "For every process, a plan that completes runs to some endpoint, and every run of it is safe and ends in the goal.",
+      "zh": "对每个过程，完成的计划运行到某个终点，它的每次运行都安全并终于目标。",
+      "declarations": [
+        "Becoming.Assurance.runs_of_completes"
+      ]
+    },
+    {
+      "en": "For a determined process, where a move from a configuration has at most one successor, a plan completes exactly when it runs and every run of it is safe and ends in the goal.",
+      "zh": "对确定的过程（从一个构型出发，一个动作至多有一个后继），计划完成，当且仅当它运行，且它的每次运行都安全并终于目标。",
+      "declarations": [
+        "Becoming.Determined",
+        "Becoming.Assurance.completes_of_runs",
+        "Becoming.Assurance.completes_iff_of_determined"
+      ]
+    },
+    {
+      "en": "With no safety condition, a plan of a determined process completes exactly when it runs and every endpoint meets the goal.",
+      "zh": "没有安全条件时，确定过程的计划完成，当且仅当它运行且每个终点满足目标。",
+      "declarations": [
+        "Becoming.Assurance.free",
+        "Becoming.Assurance.completes_iff_runs"
+      ]
+    },
+    {
+      "en": "In a process where one move from 0 reaches 1 or 2, from 1 reaches 3 and from 2 nothing, the plan of two moves from 0 runs and every endpoint is 3, yet the plan does not complete with goal 3 and no safety condition; the process is not determined.",
+      "zh": "在一个过程中，从 0 出发一个动作到达 1 或 2，从 1 到达 3，从 2 无处可去：从 0 出发的两步计划能运行且每个终点都是 3，但在目标为 3、没有安全条件时计划不完成；该过程不是确定的。",
+      "declarations": [
+        "Becoming.Assurance.Branch.process",
+        "Becoming.Assurance.Branch.runs_not_completes",
+        "Becoming.Assurance.Branch.not_determined"
+      ]
+    },
+    {
+      "en": "A law of change read as a process is determined, and with no safety condition a plan completes exactly when the goal holds where the law takes the configuration; for one move, exactly when it holds at the successor.",
+      "zh": "变化之律读作过程是确定的；没有安全条件时，计划完成，当且仅当目标在律所到的构型成立；单步时，当且仅当它在后继处成立。",
+      "declarations": [
+        "Becoming.Assurance.ofMap",
+        "Becoming.Assurance.ofMap_determined",
+        "Becoming.Assurance.completes_ofMap_iff",
+        "Becoming.Assurance.completes_ofMap_single"
+      ]
+    },
+    {
+      "en": "A partial law read as a process is determined, and its traces are exactly the courses its run completes; with no safety condition a plan completes exactly when its run ends in the goal.",
+      "zh": "部分律读作过程是确定的，其轨迹恰是其运行所完成的进程；没有安全条件时，计划完成，当且仅当其运行终于目标。",
+      "declarations": [
+        "Becoming.Assurance.ofPartial",
+        "Becoming.Assurance.ofPartial_determined",
+        "Becoming.Assurance.runPartial",
+        "Becoming.Assurance.trace_ofPartial_iff",
+        "Becoming.Assurance.completes_ofPartial_iff"
+      ]
+    },
+    {
+      "en": "In the three-route process, a law of change whose configuration is a mode of three with an arrival flag and whose route arrives exactly when it differs from the mode, one route from an unreached configuration completes into arrival, with no safety condition, exactly when it differs from the mode.",
+      "zh": "在三路线过程中（一条变化之律，构型是三种模式之一加到达标志，路线不同于模式时恰到达），没有安全条件时，从未到达构型出发的一条路线完成而到达，当且仅当它不同于模式。",
+      "declarations": [
+        "Becoming.AssurancePlans.Routes.advance",
+        "Becoming.AssurancePlans.Routes.process",
+        "Becoming.AssurancePlans.Routes.Reached",
+        "Becoming.AssurancePlans.Routes.completes_iff"
+      ]
+    },
+    {
+      "en": "Under the law that moves a count up or down by one, the response that adds at or below one and removes above, followed for any number of moves from a count in the band from one to two, completes into the band, with no safety condition.",
+      "zh": "在使计数加一或减一的律下，在一及以下加、在一以上减的回应，从一到二之间带内的计数出发、照做任意多步，都完成而落在带内（没有安全条件）。",
+      "declarations": [
+        "Becoming.AssurancePlans.Regulation.update",
+        "Becoming.AssurancePlans.Regulation.process",
+        "Becoming.AssurancePlans.Regulation.Band",
+        "Becoming.AssurancePlans.Regulation.respond",
+        "Becoming.AssurancePlans.Regulation.kept_along"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "一般律只要求过程确定；变化之律与部分律都是确定的过程。",
@@ -23,6 +100,34 @@
       "en": "Mode and Route are Fin 3; advance retains the mode and records a≠m; Reached is the arrival flag."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Risk weights, the capacity to acquire the mode and ethical grounds for selecting a route are not supplied by the equivalence.",
+      "zh": "风险权重、取得模式的能力和选择路线的伦理根据均不由此等价式提供。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Assurance.lean",
+      "detail": {
+        "zh": "两结果过程 Branch：从 0 出发，计划 [(), ()] 的两步都能运行且每个终点都是 3，但计划不完成，因为第一步可达 2，从那里第二步不可行；它不是确定的过程。",
+        "en": "The two-outcome process Branch: from 0 both moves of [(), ()] run and every endpoint is 3, yet the plan does not complete, because the first step can reach 2, from which the second move is impossible; the process is not determined."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.Assurance, Becoming.AssurancePlans and Becoming.Laws are bound to passing receipts in becoming-checks, which report an empty axiom list for every cited declaration and verify that the core compiles from Lean's prelude alone. The original route theorem, now provenance, passed its own Lean 4.29.1 check (wisdom-fallible-judgment-checks/20261008T122517.399770Z/receipt.json). Author review only.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Assurance、AssurancePlans 与 Laws 的当前字节绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空，核心只用 Lean 前导即可编译。原路线定理（现为来历）通过其自身的 Lean 4.29.1 检查（wisdom-fallible-judgment-checks/20261008T122517.399770Z/receipt.json）。只有作者审查。"
+  },
+  "next_delta": {
+    "en": "A criterion for nondeterministic processes between running safely into the goal and completing, stated on the configurations the earlier steps can reach, and the risk weights and the reading of the mode an application of the routes needs.",
+    "zh": "非确定过程在“安全运行到目标”与“完成”之间的判准，以此前步骤可达的构型陈述；以及路线的应用所需的风险权重与模式的读取。"
+  },
   "correspondence": {
     "zh": "一项给定的单步过程，不是智慧、伦理许可或感知形成的定义。",
     "en": "A supplied one-step process, not a definition of wisdom, ethical permission or sensor formation."
@@ -44,30 +149,6 @@
   ],
   "dependencies": [],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomResponseStructure.lean",
-      "detail": {
-        "zh": "风险权重、取得模式的能力和选择的伦理根据均不由此等价式提供。",
-        "en": "Risk weights, capacity to acquire the mode, and ethical grounds for selection are not supplied by this equivalence."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Assurance.lean",
-      "detail": {
-        "zh": "两结果过程 Branch：从 0 出发，计划 [(), ()] 的两步都能运行且每个终点都是 3，但计划不完成，因为第一步可达 2，从那里第二步不可行；它不是确定的过程。",
-        "en": "The two-outcome process Branch: from 0 both moves of [(), ()] run and every endpoint is 3, yet the plan does not complete, because the first step can reach 2, from which the second move is impossible; the process is not determined."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "风险权重、取得模式的能力和选择的伦理根据均不由此等价式提供。",
-    "en": "Risk weights, capacity to acquire the mode, and ethical grounds for selection are not supplied by this equivalence."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomResponseStructure.lean",
@@ -83,7 +164,14 @@
       "sha256": "86a96eb70b6d92d5b8270810d68eb41fa55c7366d436e9950e4b2962896dcef2",
       "declarations": [
         "Becoming.AssurancePlans.Routes.completes_iff",
-        "Becoming.AssurancePlans.Regulation.kept_along"
+        "Becoming.AssurancePlans.Regulation.kept_along",
+        "Becoming.AssurancePlans.Routes.advance",
+        "Becoming.AssurancePlans.Routes.process",
+        "Becoming.AssurancePlans.Routes.Reached",
+        "Becoming.AssurancePlans.Regulation.update",
+        "Becoming.AssurancePlans.Regulation.process",
+        "Becoming.AssurancePlans.Regulation.Band",
+        "Becoming.AssurancePlans.Regulation.respond"
       ]
     },
     {
@@ -100,7 +188,8 @@
         "Becoming.Assurance.completes_ofMap_single",
         "Becoming.Assurance.completes_ofPartial_iff",
         "Becoming.Assurance.Branch.runs_not_completes",
-        "Becoming.Assurance.Branch.not_determined"
+        "Becoming.Assurance.Branch.not_determined",
+        "Becoming.Assurance.Branch.process"
       ]
     },
     {
@@ -112,7 +201,9 @@
         "Becoming.Assurance.ofMap_determined",
         "Becoming.Assurance.ofPartial",
         "Becoming.Assurance.runPartial",
-        "Becoming.Assurance.trace_ofPartial_iff"
+        "Becoming.Assurance.trace_ofPartial_iff",
+        "Becoming.Determined",
+        "Becoming.Assurance.ofPartial_determined"
       ]
     },
     {
@@ -198,10 +289,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "风险应用对每个确定过程直接复用这个完成判准；非确定的计划须用完整的完成条件。",
-    "en": "Risk applications reuse this completion criterion for every determined process; nondeterministic plans need the full completion condition."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -229,6 +316,28 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 4 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Generative.WisdomResponseStructure.assured_route_iff (periphery module); Becoming.Instances.assured_iff_completes (retired module); Becoming.Instances.routes_assured_iff (retired module); Becoming.Instances.regulation_assured_iff (retired module). The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；4 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Generative.WisdomResponseStructure.assured_route_iff (periphery module)；Becoming.Instances.assured_iff_completes (retired module)；Becoming.Instances.routes_assured_iff (retired module)；Becoming.Instances.regulation_assured_iff (retired module)。论断不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the home section; the claim split into eight laws, each read against its declarations in Becoming.Assurance, Becoming.AssurancePlans and Becoming.Laws (the regulation law, already cited, stated as a law); the claim's sentence that contextual wisdom's assurance is completion with no safety condition went to history, since only the retired bridge, now provenance, proved it and law 3 states completion with no safety condition; the limitation to one does-not-show item and the standard boundaries no-ethical-premise and discrete-steps; the counterexample repeating the limitation, which no declaration witnesses, removed, the does-not-show item carrying it; ten declarations added to the references of their files; no premise, status or source hash changed. Every earlier sentence is mapped in [assured-route-criterion.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/assured-route-criterion.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主章写出陈述；主张拆为八条规律，各条对照其在 Becoming.Assurance、AssurancePlans 与 Laws 中的声明核读（已引用的调节律写作一条规律）；主张中“情境智慧的保证即无安全条件的完成”一句移入沿革，因只有已退休、现为来历的桥接证明它，而第 3 条规律陈述无安全条件的完成；限制改为一条“未表明”与通用边界 no-ethical-premise、discrete-steps；重复限制、没有声明见证的那条反例删去，由“未表明”一项承载；十个声明加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [assured-route-criterion.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/assured-route-criterion.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/7a1cea4e295c7294/assured-route-criterion.json",
+      "sha256": "7a1cea4e295c72940088816563e39998dd08339a475c560b0b2ba0567f3408a5",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/026b536b113ea820/assured-route-criterion.json",
+      "sha256": "026b536b113ea82092e4d32702fcb6ee84a8503bca9ada0d652642824a4c237e",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "material-preparation-output",
   "title": {
     "zh": "材料准备的实际输出",
@@ -8,17 +8,114 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-19T05:28:49+00:00",
-  "claim": {
-    "zh": "对每个目标配方、材料池与路由支持量：route 以空剩余池完成，当且仅当池是配方的一个排列且配方长度不超过支持量，此时剩余支持为支持量减配方长度；实际 routeTrace 对每个输入保留放置与剩余材料，route 恰是它的投影。八单位支持下的指定八槽配方是实例：整池完成恰好要求四 A 四 B。",
-    "en": "For every target recipe, pool and routing support: route completes with an empty residual pool exactly when the pool is a permutation of the recipe and the recipe is no longer than the support, the remaining support then being the support less the recipe's length; the actual routeTrace keeps placed and residual material for every input, and route is its projection. The specified eight-slot recipe under eight support units is an instance: whole-pool completion requires exactly four A and four B."
+  "reviewed_at_utc": "2026-10-28T14:53:09+00:00",
+  "statement": {
+    "en": "A copy leaves nothing in the pool exactly when the pool holds each token exactly as often as the word uses it and the support covers the draws; routing a recipe completes with an empty residual pool exactly when the pool is a permutation of the recipe and the recipe is no longer than the support.",
+    "zh": "复制在池中不留下任何东西，恰当池持有每个记号与词所用的次数恰好相同、且支持覆盖所取；路由一个配方以空的剩余池完成，恰当池是配方的一个排列、且配方长度不超过支持量。"
   },
+  "laws": [
+    {
+      "en": "For every alphabet with decidable equality and every law of draws, a copy of a word completes with nothing left in the pool exactly when the pool holds each token exactly as often as the word uses it and the support covers what its attachments draw. Once a supplied word is taken, the pool holds of each token what it held less what the word used, and a list is empty exactly when it holds no token.",
+      "zh": "对每个有可判定相等的字母表与每条汲取律：词的复制完成且池中一无所余，恰当池持有每个记号与词所用的次数恰好相同、且支持覆盖其接合所取。取走一个被供给的词后，池对每个记号所持为原持减去词所用；一个列表为空，恰当它不持有任何记号。",
+      "declarations": [
+        "Becoming.Copying.empties_iff",
+        "Becoming.Copying.countOf_removeAll",
+        "Becoming.Copying.nil_iff_countOf_zero"
+      ]
+    },
+    {
+      "en": "As a plan of the copy's determined process, whose moves go along its law's orbit, a plan of k moves completing exactly when the goal holds on the orbit at k, the copy completes with nothing pending exactly when the pool supplies the word and the support covers its draws, and leaves nothing in the pool exactly when the pool holds each token exactly as often as the word uses it and the support covers the draws.",
+      "zh": "作为复制之确定过程的计划（诸步沿其律的轨道进行，k 步计划完成恰当目标在轨道第 k 处成立）：复制完成且无待办，恰当池供给该词且支持覆盖其所取；池中一无所余，恰当池持有每个记号与词所用的次数恰好相同、且支持覆盖所取。",
+      "declarations": [
+        "Becoming.Courses.steps_orbit",
+        "Becoming.Courses.completes_units_iff",
+        "Becoming.Courses.copy_completes_iff",
+        "Becoming.Courses.copy_empties_iff"
+      ]
+    },
+    {
+      "en": "Preparation is copying with a unit draw: each attachment draws one unit, so a word uses its length. For Boolean tokens, routing a recipe from a pool with some support completes with a given rest left in the pool and given support left exactly when copying the recipe from that pool and support with unit draws completes with that pool and support left.",
+      "zh": "准备即单位汲取的复制：每次接合取一个单位，所以词用其长度。对布尔记号：以某支持量从某池路由一个配方，完成且池中余下给定部分、余下给定支持，恰当以单位汲取从同一池与支持复制该配方完成且余下同样的池与支持。",
+      "declarations": [
+        "Becoming.PreparationCorrespondence.unit",
+        "Becoming.PreparationCorrespondence.use_unit",
+        "Becoming.PreparationCorrespondence.countOf_eq_count",
+        "Becoming.PreparationCorrespondence.mem_iff_countOf_pos",
+        "Becoming.PreparationCorrespondence.erase_eq_remove",
+        "Becoming.PreparationCorrespondence.route_some_iff"
+      ]
+    },
+    {
+      "en": "For every target recipe, pool and routing support, routing completes with an empty residual pool exactly when the pool is a permutation of the recipe and the recipe is no longer than the support, the support then left being the support less the recipe's length.",
+      "zh": "对每个目标配方、池与路由支持量：路由以空的剩余池完成，恰当池是配方的一个排列、且配方长度不超过支持量；此时剩余支持为支持量减配方长度。",
+      "declarations": [
+        "Becoming.PreparationCorrespondence.preparation_empties_iff",
+        "Becoming.PreparationCorrespondence.preparation_leaves"
+      ]
+    },
+    {
+      "en": "In the routing machine, a routing that completes with a rest and some support left has the pool a permutation of the recipe followed by the rest, and that support with the recipe's length equal to the routing support; a pool that is a permutation of the recipe, the recipe no longer than the support, routes with an empty residual pool and the support less the recipe's length left.",
+      "zh": "在路由机中：完成且余下某部分与某支持的路由，其池是配方接上所余部分的一个排列，所余支持加配方长度等于路由支持量；池是配方的排列、配方不长于支持量时，路由完成且无剩余。",
+      "declarations": [
+        "MaterialMaturation.route_sound",
+        "MaterialMaturation.route_complete"
+      ]
+    },
+    {
+      "en": "For every input the routing trace keeps placed tokens and leftover pool: the pool is a permutation of the placed followed by the leftover, the free support with the number placed is the routing support, and no more is placed than the recipe; routing is the trace's projection, completing exactly where all of the recipe is placed. In a witness a failed routing keeps its partial placement, leftover and unused support.",
+      "zh": "对每个输入，路由的轨迹保留已放置的记号与剩余池：池是已放置者接上剩余者的一个排列，自由支持加放置数等于路由支持量，放置不多于配方；路由是轨迹的投影，恰在配方全部被放置处完成。在一个见证中，失败的路由保留其部分放置、剩余与未用支持。",
+      "declarations": [
+        "MaterialMaturation.routing_trace_accounts",
+        "MaterialMaturation.route_trace_projection",
+        "MaterialMaturation.partial_routing_preserves_unused_components_and_work"
+      ]
+    },
+    {
+      "en": "For the eight-slot recipe of four tokens of each kind, a pool is a permutation of it exactly when it holds four of each, and under eight units of support routing completes with an empty pool and no support left exactly when the pool holds four of each kind.",
+      "zh": "对每类四个记号的八槽配方：池是它的一个排列，恰当池中两类各有四个；在八个单位支持下，路由以空池且不余支持完成，恰当池中两类各有四个。",
+      "declarations": [
+        "MaterialMaturation.canonical_iff_counts",
+        "MaterialMaturation.actual_preparation_iff"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "给定目标配方、按类型取用和移动的能力；完成要求无剩余池，失败保留部分状态。",
       "en": "Supplied target recipe and type-sensitive removal/movement; completion requires no residual pool, while failure retains partial state."
+    },
+    {
+      "en": "The core laws hold for every alphabet with decidable equality and every law of draws; routing's tokens are Boolean, one unit of support per placement, and its counts natural numbers.",
+      "zh": "核心规律对每个有可判定相等的字母表与每条汲取律成立；路由的记号是布尔值，每次放置一个单位支持，计数是自然数。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "How the recipe and the routing capability form, mechanical release and renewed provision do not follow from these laws.",
+      "zh": "由这些规律推不出配方与路由能力怎样形成、机械解离与供给的更新。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A scalar of success does not stand in for the material routing actually places and leaves.",
+      "zh": "成功的标量不能代替路由实际放置与留下的材料。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps",
+    "decidability",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: MaterialMaturation by its folder's check (material-maturation-verification/, Lean 4.29.1: 28 new theorems, 44 new audits, 267 in the import closure) and PreparationCorrespondence by check_preparation_correspondence.py (preparation-correspondence-checks/20261020T161943.503298Z, Lean 4.30.0-rc2), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.",
+    "zh": "核心 Copying、Courses：4.29.1 合并检查器，公理报告为空。外围 MaterialMaturation：目录检查（material-maturation-verification/，4.29.1，新定理28、审计44、闭包267）；PreparationCorrespondence：其检查器（preparation-correspondence-checks/，4.30.0-rc2）；至多 propext、Quot.sound、Classical.choice，有的为空。推论与生物对应分列。"
+  },
+  "next_delta": {
+    "en": "Explain how the recipe and the routing capability form, how release is mechanical, and how the provision routing draws on is renewed.",
+    "zh": "说明配方与路由能力怎样形成、解离怎样是机械的，以及路由所取的供给怎样更新。"
+  },
   "correspondence": {
     "zh": "实际 routeTrace 输出是可复用的材料接口；它未记录承重机械边。",
     "en": "The actual routeTrace output is the reusable material interface; it does not record load-bearing mechanical edges."
@@ -40,25 +137,15 @@
         "zh": "同用 Becoming.Copying 的逐记号复制（steps、use、countOf）：准备即每次接合汲取一单位的复制（PreparationCorrespondence.route_some_iff），池用尽的条件即 Copying.empties_iff。",
         "en": "Uses the same token-by-token copying of Becoming.Copying (steps, use, countOf): preparation is copying with a unit draw per attachment (PreparationCorrespondence.route_some_iff), and emptying the pool is Copying.empties_iff."
       }
-    }
-  ],
-  "counterexamples": [
+    },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/MaterialMaturation.lean",
+      "id": "recurrent-chain-assembly",
       "detail": {
-        "zh": "配方及路由能力的形成、机械解离和供给更新未解释；成功标量不能代替实际材料。",
-        "en": "Recipe/capability formation, mechanical release and renewed provision remain unexplained; a success scalar does not replace actual material."
+        "en": "Takes the routed output into end attachment and repeated chain formation.",
+        "zh": "把路由的输出接入末端接合与重复的链形成。"
       }
     }
   ],
-  "limitations": {
-    "zh": "配方及路由能力的形成、机械解离和供给更新未解释；成功标量不能代替实际材料。",
-    "en": "Recipe/capability formation, mechanical release and renewed provision remain unexplained; a success scalar does not replace actual material."
-  },
-  "validation_scope": {
-    "zh": "所列 Lean 回执绑定实际源码；推论有效性与生物对应分列。",
-    "en": "The cited Lean receipt binds the actual source; inference validity and biological correspondence remain distinct."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/MaterialMaturation.lean",
@@ -69,7 +156,9 @@
         "MaterialMaturation.route_trace_projection",
         "MaterialMaturation.routing_trace_accounts",
         "MaterialMaturation.route_sound",
-        "MaterialMaturation.route_complete"
+        "MaterialMaturation.route_complete",
+        "MaterialMaturation.canonical_iff_counts",
+        "MaterialMaturation.partial_routing_preserves_unused_components_and_work"
       ]
     },
     {
@@ -247,10 +336,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "作为已完成材料接口复用，并接到真实接合和重复结构生成。",
-    "en": "Reuse the completed material interface and connect it to actual attachment and repeated structural formation."
-  },
   "history": [
     {
       "zh": "2026-10-08：按本轮实际审读及所列回执登记范围；原证明和反例保持。",
@@ -278,6 +363,28 @@
     {
       "en": "2026-10-20: 7 bookkeeping notes condensed from 2026-10-14 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/69d360a4ab6b0433/material-preparation-output.json and in git.",
       "zh": "2026-10-20：7 条记账性说明合并（2026-10-14 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/69d360a4ab6b0433/material-preparation-output.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the home section; the claim split into 7 laws, each read against its declarations in Becoming.Copying and Becoming.Courses (core) and MaterialMaturation and PreparationCorrespondence (periphery), with the conditions the Lean takes written in (decidable equality, Boolean tokens and unit draws for routing, the permutation and the bound on length); canonical_iff_counts and partial_routing_preserves_unused_components_and_work added to MaterialMaturation's references (its receipt binds them); the limitations became two does-not-show items, and the counterexample, which repeated the limitations and which no declaration witnesses, goes, its sentences carried by those items; the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps, decidability and formal-not-empirical and one hypothesis added; the next step's instruction to reuse the interface dropped and its connection to repeated formation, which recurrent-chain-assembly makes, became a related entry; no premise's content, status, proof binding or source hash changed. Every earlier sentence is mapped in [material-preparation-output.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/material-preparation-output.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主章写出陈述；主张拆为 7 条规律，各条对照 Becoming.Copying、Becoming.Courses（核心）与 MaterialMaturation、PreparationCorrespondence（外围）中的声明核读，Lean 所取的条件都写入（可判定相等、路由的布尔记号与单位汲取、排列与长度之界）；canonical_iff_counts 与 partial_routing_preserves_unused_components_and_work 加入 MaterialMaturation 的引用（其回执绑定它们）；限制改为两条“未表明”，与限制重复且无声明见证的反例删去，其句由这两条承载；引用通用边界 no-ethical-premise-core-axiom-free、discrete-steps、decidability、formal-not-empirical，加一条前提；下一步中复用接口的指示去掉，其与重复形成的连接（由 recurrent-chain-assembly 完成）改为相关条目；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [material-preparation-output.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/material-preparation-output.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/6540bb12f9b48cb6/material-preparation-output.json",
+      "sha256": "6540bb12f9b48cb6669049a1774170300f64ffd0d5c8d1f3b1ef6af9e1195207",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/69d360a4ab6b0433/material-preparation-output.json",
+      "sha256": "69d360a4ab6b0433e33f6f509c000294c07099a59b474f5e3aef9d66c7032fb1",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

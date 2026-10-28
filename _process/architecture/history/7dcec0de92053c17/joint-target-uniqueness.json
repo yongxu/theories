@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "id": "joint-target-uniqueness",
+  "title": {
+    "zh": "共同实现测试下的目标唯一性",
+    "en": "Target uniqueness for joint tests"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F02",
+  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
+  "claim": {
+    "zh": "若目标由含 together 的测试分离，与同一源位置完全同测的两个目标位置相等。",
+    "en": "If the target is separated by tests including together, two target positions agreeing with one source position on all tests are equal."
+  },
+  "hypotheses": [
+    {
+      "zh": "使用 ExplanatoryJointness 本地 Model、Test、Same 和 Separated。",
+      "en": "Uses the namespace-local ExplanatoryJointness Model, Test, Same and Separated."
+    }
+  ],
+  "correspondence": {
+    "zh": "together 检验整体的成对共同实现；不把分别成立当成共同实现。",
+    "en": "The together test concerns joint realization of a pair within a whole; separate truth is not joint realization."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+  "aliases": [
+    "Generative.ExplanatoryJointness.same_target_unique (retired module)",
+    "Becoming.same_target_unique_by_core (retired module)",
+    "Becoming.SameTestsWith.functional"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "branching-target-uniqueness",
+      "detail": {
+        "zh": "保留不同测试语义，不按相同声明外形合并。",
+        "en": "Retain distinct test semantics rather than merging by header shape."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EXPLANATORY-JOINTNESS-INTEGRATION.md",
+      "detail": {
+        "zh": "完整部分测试轮廓可能不能识别指定部分是否重复使用同一支持。",
+        "en": "Even complete part profiles may fail to identify whether designated parts reuse the same support."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "唯一性小引理不独自证明共同计划恢复或任意指定部分可替换；相关反例保留在研究中。",
+    "en": "This uniqueness lemma alone proves neither joint-plan recovery nor arbitrary substitution of designated parts; the study retains the latter boundary."
+  },
+  "validation_scope": {
+    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
+    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJointness.lean",
+      "role": "provenance",
+      "sha256": "18f745f8ef8bae379e3fadcf059a68c529caa5af4453adc469182148e4fa4e4f",
+      "declarations": [
+        "Generative.ExplanatoryJointness.same_target_unique"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-jointness-checks/20261008T082735.042695Z/receipt.json",
+      "role": "receipt",
+      "sha256": "aa8a37f8bf4539f5d3e90986a1e0a74fdf9568cacc1b1438a2421f3721d6f420",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EXPLANATORY-JOINTNESS-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "3fd90975012d16823b2f972d5bdd5cf0f6ffc1c4b4c967a8dac10371e6351ab7",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md",
+      "role": "provenance",
+      "sha256": "a896df0f8f85139ab323dcb97878b86b2ab3d4c897e4587e15f4ca8b8f7e9017",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+      "role": "proof",
+      "sha256": "08ae38e607c91b205c8b99bbcb49c0678e39f36d89b6cfb9af49bbc602ba4a49",
+      "declarations": [
+        "Becoming.JointFrame"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "role": "proof",
+      "sha256": "c2ce8ed970473ced65a6addb9ef5ff6a0a994f33507d2d24316a7f79888858e1",
+      "declarations": [
+        "Becoming.SameTestsWith.functional"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/CompositionBridge.lean",
+      "role": "provenance",
+      "sha256": "1ebdb280164ae841ad06d7a66afe36cc7d6c3e8d16bef29a8ec9facee98cc798",
+      "declarations": [
+        "Becoming.same_target_unique_by_core"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T154159.148254Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec87bb28ee441900505d1d54b7532223391fd333b7a5894542ac6dc60fc24903",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T222948.779875Z/verification.json",
+      "role": "receipt",
+      "sha256": "0a2bacf2db996d0f2da49b75bda0b985f74a5b6849be2b50ab6471033917d914",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Composition",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Composition",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Likeness",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "使用共同语言时复用；具体部分替换或全局并发另需对应。",
+    "en": "Reuse for the joint language; designated-part substitution or global concurrency requires further correspondence."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
+      "en": "2026-10-08: migrated existing result identity and scope; no new theorem or relocated source."
+    },
+    {
+      "zh": "2026-10-14，整合 I3（Ren：“a lot proofs are probably not integrated”）：在脊柱上陈述。新的核心模块 Becoming.Composition（只导入 Becoming.Likeness）加入一配置把两配置作为部分共同持有的关系（JointFrame），以及联合检验、联合相同、紧致、嵌套计划与足迹；Becoming.CompositionBridge 把 ExplanatoryJointness 与 ExplanatoryFootprints 读作实例。联合检验区分框架之配置处，一配置至多与其中一者通过相同联合检验（SameJointTests.functional）；same_target_unique 即此定律在模型框架上（same_target_unique_by_core），无附加假设，公理报告为空（草稿构建；回执随落地）。外围证明、其回执与共享支持的反例保持原范围。",
+      "en": "14 October 2026, integration I3 (Ren: “a lot proofs are probably not integrated”): stated on the spine. The new core module Becoming.Composition, importing only Becoming.Likeness, adds the relation by which a configuration holds two configurations together as its parts (JointFrame), with joint tests, joint likeness, compactness, nested plans and footprints; Becoming.CompositionBridge reads ExplanatoryJointness and ExplanatoryFootprints as instances. Where joint tests tell a frame's configurations apart, a configuration passes the same joint tests as at most one of them (SameJointTests.functional); same_target_unique is that law on the model's frame (same_target_unique_by_core), with no added hypothesis and empty axiom reports (scratch build; the receipt comes with the landing). The periphery proof, its receipt and the shared-support counterexample keep their scope."
+    },
+    {
+      "en": "2026-10-20: 6 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/56743e345ab50bd3/joint-target-uniqueness.json and in git.",
+      "zh": "2026-10-20：6 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/56743e345ab50bd3/joint-target-uniqueness.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (CompositionBridge and ExplanatoryJointness) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Composition). The retired modules' content is also stated in Becoming.JointCorrespondence, which this record does not cite with declarations. 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（CompositionBridge and ExplanatoryJointness）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Composition）。退役模块的内容也陈述于 Becoming.JointCorrespondence，本记录未以声明引用它们。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): SameJointTests.functional (now SameTestsWith.functional). Proof bindings (Composition.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Composition.lean: the joint frame is the case of one relation: JointTest, JointAlike, JointBisimulation, SameJointTests abbreviations of the general ones, the parallel laws removed; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：SameJointTests.functional（现为 SameTestsWith.functional）。证明绑定（Composition.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Composition.lean：联合框架是一个关系的情形：JointTest、JointAlike、JointBisimulation、SameJointTests 为一般者的缩写，平行的规律删去；保留的陈述不变。论断不变。"
+    }
+  ]
+}

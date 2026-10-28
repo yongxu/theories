@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "id": "comparison-by-widening",
+  "title": {
+    "zh": "读作扩大的比较 C",
+    "en": "Comparison C read as widening"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "statement": {
+    "zh": "在水平路径上，每个主张都算作活的扩展恰是扩大能形成者（按定义：Extension 在此展开为 Widens）；把“更好”读作扩大，C 对 living 的每种读法成立，不用公理；扩大之为更好的根据开放。",
+    "en": "On level paths, an extension in which every claim counts as living is exactly a widening of what can form, by unfolding Extension there into Widens; with “better” read as widening, C holds for every reading of living, with no axiom; that widening is better is an open warrant."
+  },
+  "claim": {
+    "zh": "在依存网的水平路径框架（Web.paths）上，主张是（形成，步），一条水平路径实现它恰当在该步接纳该形成。以每个主张都算作活，水平路径 l 对 l′ 的扩展（Extension：实现 l′ 实现的每个主张，并多实现一个）恰是 l 扩大 l′，即包含且超出它（Web.paths_extension_iff_widens）。对 living 的任何读法，扩展都是以每个主张为活的扩展，所以以“更好”读作扩大，C（每个扩展都更好）成立（Web.paths_comparison_widens），不用公理。在延续条件之下，扩大就是保留且增加有意义者（Web.widens_iff_retains_adds，见 significance-retained-within-margin），所以水平路径上由延续条件推出的 C（Web.paths_livingSignificance_comparison，见 continuation-condition-yields-living-significance）是它在意义上的读法。三者是同一个对象，即接纳（Web.paths_one_object）：延续条件是水平路径上以每个主张为活、以从每个立场的意义为相关的生命意义；C 在那里计入每个主张的延伸就是扩大；在条件之下，扩大就是从任一立场保留并增加有意义者。条件定哪些接纳计入；读作扩大的 C 为它们定次序。",
+    "en": "On the frame of a web's level paths (Web.paths), claims are pairs of a formation and a step, and a level path realizes one exactly when it admits the formation at that step. With every claim counting as living, an extension of l′ by l (Extension: realizing every claim l′ realizes, and one more) is exactly l widening l′, including and exceeding it (Web.paths_extension_iff_widens). For any reading of living, an extension is an extension with every claim living, so with “better” read as widening, C, that every extension is better, holds (Web.paths_comparison_widens), with no axiom. Under the continuation condition, widening is retaining and adding what has significance (Web.widens_iff_retains_adds, see significance-retained-within-margin), so the C the continuation condition gives on level paths (Web.paths_livingSignificance_comparison, see continuation-condition-yields-living-significance) is its reading in significance. The three are one object, admission (Web.paths_one_object): the continuation condition is living significance on level paths with every claim living and significance from every standpoint as the relevance, C's extension there with every claim counted is widening, and under the condition widening is retaining and adding what has significance from any standpoint. The condition fixes which admissions count; C read as widening orders them."
+  },
+  "hypotheses": [
+    {
+      "zh": "水平路径的框架（Web.paths）：主张是（形成，步），水平路径实现它恰当在该步接纳该形成；比较在任意两条水平路径之间。",
+      "en": "The frame of level paths (Web.paths): claims are pairs of a formation and a step, and a level path realizes one exactly when it admits the formation at that step; the comparison is between any two level paths."
+    },
+    {
+      "zh": "“更好”读作扩大能形成者（Web.Widens）；C 在这一读法下是定理，“更好”另作他读或在一般的框架上，C 仍是前提。",
+      "en": "“Better” is read as widening what can form (Web.Widens); C is a theorem on this reading, and remains a premise where “better” is read otherwise or on a general frame."
+    },
+    {
+      "zh": "离散的步；自然数的水平与所需。",
+      "en": "Discrete steps; natural-number levels and needs."
+    }
+  ],
+  "correspondence": {
+    "zh": "Ren 2026-10-11 问：“can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”，并定：“as long as the derivation of the rules doesn't rely on axiom, don't use one”。AI 的读法：扩大读“leads to more futures”，Ren 已确认可能性读作接下来能形成的；当下能形成者是生成的空间，部分在其中扩大它之处是 Ren 那句话所说的区域（D22，经修订由 Ren 2026-10-18 取）。依 Ren 的交托，“flourishes/plurality”由扩大读出，多样性是尚未度量的一面；扩大比较生生的方向，生生是生成者生成新的生成（D1 与 D22，经修订由 Ren 2026-10-18 取）。",
+    "en": "Ren asked on 11 October 2026: “can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”, and decided: “as long as the derivation of the rules doesn't rely on axiom, don't use one”. The AI's reading: widening reads “leads to more futures”, Ren having confirmed that possibilities are what can form next; what can form now is the generative space, and where a part widens it is the region Ren's sentence names (D22, revised and taken by Ren on 18 October 2026). On Ren's delegation “flourishes/plurality” is read by widening, plurality an aspect not yet measured; widening compares the direction of 生生, which is generation generating generation (D1 and D22, revised and taken by Ren on 18 October 2026)."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+  "aliases": [
+    "Becoming.Web.paths_extension_iff_widens",
+    "Becoming.Web.paths_comparison_widens",
+    "Becoming.Web.paths_one_object"
+  ],
+  "dependencies": [
+    {
+      "id": "four-cases-of-a-part",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用扩大（Web.Widens，P56）：包含且超出。",
+        "en": "Reuses widening (Web.Widens, P56): including and exceeding."
+      },
+      "interface": {
+        "output": {
+          "zh": "水平路径之间的扩大、包含与超出。",
+          "en": "Widening, inclusion and exceeding between level paths."
+        },
+        "input": {
+          "zh": "水平路径上的扩展恰是扩大。",
+          "en": "An extension on level paths is exactly a widening."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean"
+      }
+    },
+    {
+      "id": "metaethical-core-characterization",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Extension 与 Comparison 的定义；C 的形式不变。",
+        "en": "Reuses the definitions of Extension and Comparison; the form of C is unchanged."
+      },
+      "interface": {
+        "output": {
+          "zh": "扩展与比较前提 C 的定义。",
+          "en": "The definitions of extension and of the comparison premise C."
+        },
+        "input": {
+          "zh": "在水平路径的框架上，以扩大为“更好”，C 成立。",
+          "en": "On the frame of level paths, with widening as “better”, C holds."
+        },
+        "conditions": {
+          "zh": "“更好”读作扩大。",
+          "en": "“Better” read as widening."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "continuation-condition-yields-living-significance",
+      "detail": {
+        "zh": "那里在延续条件之下，在水平路径上 C 以保留且增加有意义者为“更好”成立（Web.paths_livingSignificance_comparison）；这里不用该条件，以扩大为“更好”，在该条件之下二者相同。",
+        "en": "There, under the continuation condition, C holds on level paths with retaining and adding what has significance as “better” (Web.paths_livingSignificance_comparison); here, without the condition, with widening as “better”, the two being the same under it."
+      }
+    },
+    {
+      "id": "ranking-under-readings",
+      "detail": {
+        "zh": "继续之间以可能性比较（章节 §6.5）；这里在水平路径上，以可能性读的比较本身满足 C。",
+        "en": "Courses are compared on possibilities (chapter section 6.5); here, on level paths, the comparison on possibilities itself satisfies C."
+      }
+    },
+    {
+      "id": "comparison-content-under-regrouping",
+      "detail": {
+        "zh": "P91 已给出多对一分组保留扩展比较的局部条件，并从最低所需取得精确的全水平保真刻画；同一规律生成的混合损失反例保留。",
+        "en": "P91 supplies local conditions preserving extension under many-to-one regrouping, the exact all-level characterization by minimum requirements, and a generated mixed-loss boundary."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "detail": {
+        "zh": "扩大不为每对水平路径定序：输送者的部分使两条路径混合（Transfer.mixed，见 four-cases-of-a-part）。",
+        "en": "Widening does not order every pair of level paths: the conveyor's part leaves the two paths mixed (Transfer.mixed, see four-cases-of-a-part)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "C 在这里按定义在水平路径框架上成立，“更好”读作扩大；在一般的框架上，或“更好”另作他读时，C 仍是前提。扩大是偏序，混合的部分不被定序，定序需要度量。把扩大称作“更好”的规范根据开放（章节 §8）：还原之后，延续条件的不变之步成为称生成的空间为好的内容。把扩大读作 Ren 的“更多的未来”与生生是 AI 的读法，依 Ren 的交托采用。不含伦理谓词。",
+    "en": "C holds here by definition on the frame of level paths, with “better” read as widening; on a general frame, or with “better” read otherwise, C remains a premise. Widening is a partial order: mixed parts are not ordered, and ordering them needs a measure. The normative warrant for calling widening “better” is open (chapter section 8): after the reduction, the continuation condition's step of invariance becomes the content of calling the generative space good. Reading widening as Ren's “more futures” and as 生生 is the AI's reading, adopted on Ren's delegation. No ethical predicate occurs."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Significance 的 37 项定理、Becoming.Regions 的 26 项定理与 Becoming.Metaethics 的 35 项定理全部空依赖；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §78；尚未经独立审查。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 37 theorems of Becoming.Significance, the 26 of Becoming.Regions and the 35 of Becoming.Metaethics all have empty axiom reports; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §78 of the integration note; not yet independently reviewed."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+      "role": "proof",
+      "sha256": "e18ba1c238856a73be60ca86b178d6c1699d8be601f09b16391ddb81529bc946",
+      "declarations": [
+        "Becoming.Web.paths_one_object"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+      "role": "proof",
+      "sha256": "58209f3b2d79084bfbaaccdb95487e2a496aeb5fdd9ddbe8edf0951b59c2bf2b",
+      "declarations": [
+        "Becoming.Web.widens_iff_retains_adds"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "role": "proof",
+      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
+      "declarations": [
+        "Becoming.Web.paths_livingSignificance_comparison"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "role": "proof",
+      "sha256": "4d3afe46d3d4b297acc6a1e6b126ad2e0f2d08dfa9205fdcf2aa32bb7b5bcbf1",
+      "declarations": [
+        "Becoming.Web.paths_extension_iff_widens",
+        "Becoming.Web.paths_comparison_widens",
+        "Becoming.Web.paths",
+        "Becoming.Extension",
+        "Becoming.Comparison"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "role": "proof",
+      "sha256": "42022bafd4ad708f38914393017450031c1ab300bf4d9745bb190d4429b7ad01",
+      "declarations": [
+        "Becoming.Web.Widens"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "sha256": "8353141c372581724c3370927c5cd9ddfed892120cc2a8874053ca83f81f3115",
+      "declarations": [
+        "Becoming.Transfer.mixed"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-11-generative-space-no-axiom.md",
+      "role": "provenance",
+      "sha256": "40d2e217eb9495fe9ac148477302b7175f6a447d8100eefb7638ed9177c1627c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T154159.148254Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec87bb28ee441900505d1d54b7532223391fd333b7a5894542ac6dc60fc24903",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T090457.012800Z/verification.json",
+      "role": "receipt",
+      "sha256": "73da26fa45a43969d573d4f0f79afeaf50f1b40ecd31082bc842b017a49920b4",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T174929.247241Z/verification.json",
+      "role": "receipt",
+      "sha256": "6a2365e24d8c37fa26699dd0f7074bec68cc5eda9894cf09f8c5e8ee21d9f943",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "role": "receipt",
+      "sha256": "14abd1a84b98d3f519c76825b996cbaa902efe22e8948f4963ce691dd910a55e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b95161950a33c0786cd1b0deb2afc0d821998ca4a4420c3a594d048252c57fb",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "role": "receipt",
+      "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Significance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Regions",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Admission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Extension",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Relevance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "在一般的框架上把 C 读作规律需要什么；混合部分的度量；称生成的空间为好的根据。",
+    "en": "What reading C as a law needs on a general frame; a measure for mixed parts; the warrant for calling the generative space good."
+  },
+  "history": [
+    {
+      "zh": "2026-10-11 P56：新增，按 Ren“these are space where generatively happens”与“yes, let's get all of no axiom work enclosed, then we will get into 1 axiom case, as long as the derivation of the rules doesn't rely on axiom, don't use one”；按工作板认领；见整合文档 §78 与章节 §6.13。",
+      "en": "2026-10-11 P56: added, following Ren's “these are space where generatively happens” and “yes, let's get all of no axiom work enclosed, then we will get into 1 axiom case, as long as the derivation of the rules doesn't rely on axiom, don't use one”; claimed on the work board; see §78 of the integration note and chapter section 6.13."
+    },
+    {
+      "zh": "2026-10-13 接手核对：当前合并回执 20261013T094743.528770Z 实含 22 个继承模块；当前验证摘要中沿用的 15 改为 22。历史回执及其当时计数不变；断言、前提与证明不变。",
+      "en": "2026-10-13 takeover reconciliation: current consolidated receipt 20261013T094743.528770Z contains 22 inherited modules; the carried-over count of 15 in the current validation summary is corrected to 22. Historical receipts and their original counts remain unchanged, as do the claim, premises and proofs."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“C 是规律：在水平路径上，每个主张都算作活的扩展恰是扩大能形成者；把“更好”读作扩大，C 对 living 的每种读法成立，不用公理”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “C is a law: on level paths an extension in which every claim counts as living is exactly a widening of what can form; with “better” read as widening, C holds for every reading of living, with no axiom”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D1, D22）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D1, D22): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "zh": "2026年10月17日，全库审查（2026年10月16–17日，CHANGES.md）第 A12 项：“C 是规律”改为按定义成立：Web.paths_extension_iff_widens 与 paths_comparison_widens 在“更好”读作扩大时由展开 Extension 而得（两行），C 的规范内容移到把扩大称作更好，其根据开放。schema 1，无 text_versions；原文见 git。",
+      "en": "17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), item A12: \"C is a law\" becomes \"holds by definition\": Web.paths_extension_iff_widens and paths_comparison_widens follow by unfolding Extension once \"better\" is read as widening (two lines), so C's normative content moves into calling widening better, whose warrant is open. Schema 1, no text_versions; earlier text in git."
+    },
+    {
+      "en": "17 October 2026, wording of the public fields: outdated labels (the axiom) replaced by the current vocabulary (the continuation condition), following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): THE-THEORY-OF-BECOMING.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, A1 (Ren 18 October: \"I take the revised readings of 生生, 生生不息 and \\\"entangled\\\". Record my answer in sources, then apply them with Part B's recommendations, coordinating with N6.\"): the readings of the generative space and of 生生 revised as Ren took them (DELEGATED-CHOICES D1, D22): what can form now is the generative space, and widening compares the direction of 生生. Before: \"the generative space is where a part widens what can form\" and \"widening is the space of 生生 (D22)\". The claim is unchanged.",
+      "zh": "2026年10月18日，A1（Ren 10月18日的回答）：生成的空间与生生的读法按 Ren 所取修订（DELEGATED-CHOICES D1、D22）：当下能形成者是生成的空间，扩大比较生生的方向；原文见英文。论断不变。"
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Web.paths_g0_comparison (now Web.paths_livingSignificance_comparison). Proof bindings (Significance.lean, ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Significance.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：Web.paths_g0_comparison（现为 Web.paths_livingSignificance_comparison）。证明绑定（Significance.lean、ValuationFrames.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Significance.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；ValuationFrames.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 53 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/a25745ef5d371309/comparison-by-widening.json and in git.",
+      "zh": "2026-10-20：53 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/a25745ef5d371309/comparison-by-widening.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R36 (the chapter, once): the canonical chapter was restructured, its 20 October edition frozen in theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md; this record's citations of the old section numbering re-pointed by content (section 6.12 to 6.5). The claim is unchanged.",
+      "zh": "2026年10月20日，R36（本章只陈述一次）：规范章节重排，10月20日版冻结于 theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md；本记录对旧节号的引用按内容重指（§6.12 改为 §6.5）。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): The retired 'the axiom' and the former id one-axiom-yields-g0 replaced by the continuation condition and the current id.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役的“公理”与旧编号 one-axiom-yields-g0 改为延续条件与现行编号。"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "historical-source-binding",
   "title": {
     "zh": "来源历史约束旧内容绑定",
@@ -8,11 +8,140 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F09",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
-  "claim": {
-    "zh": "对每类历史、日期、关系、探测与报告：实际历史总符合其日期化记录，一历史符合这些记录当且仅当它给出相同记录；报告与内容可判定地比较时，以符合记录的族内历史与被允许来源对旧报告包的每个解释都给出实际内容，当且仅当每个以另一内容给出同一报告包的族内对手都被某一日期化控制区分；族含实际历史时，一致读数即实际读数。在日期上，关系之值可判定地比较且含两个不同的值时，区间两端读数相同的控制确定其间每个日期，当且仅当至多允许一次变化或其间无日期；两端所见的变化不被定位。四时刻来源史是实例：在实际历史与扰动覆盖下，各旧记录日期的路径候选接通唯一绑定正确性，不需全程路径不变；一次变化范围内，一致的先前与随后控制确定命名时刻，故后来退化与改善都读对；仅有晚期控制、只有前后控制及遗漏的暂时变化（族外读错，两次变化族内未定）是该律不成立的一侧。",
-    "en": "For every type of histories, dates, relations, probes and reports: the actual history always fits its dated records, and a history fits them exactly when it gives the same records; with reports and contents compared decidedly, every explanation of an earlier packet by a family history fitting the records and an admitted source gives the actual content exactly when every family rival giving the same packet with another content is told apart by some dated control; where the family holds the actual history, an agreed reading is the actual one. Over dates, where the relation's values are compared decidedly and include two distinct ones, controls at both ends of a span that read the same settle every date between exactly when at most one change is admitted or no date lies strictly between, and a change seen at both ends is not located. The four-moment source histories are instances: under actual-history and disturbance coverage, route candidates at each retained packet's date supply unique-binding correctness without global route stability; in the one-change envelope, agreeing prior and following controls settle naming, so later deterioration and improvement are read right, while a late control alone, controls only before and after, and an omitted temporary change (read wrongly outside the family, left open inside the two-change family) are the law's failing side."
+  "reviewed_at_utc": "2026-10-28T11:47:48+00:00",
+  "statement": {
+    "en": "Histories fitting dated records all explain an earlier packet by its actual content exactly where every rival giving it another content is told apart by a dated control; values agreeing at a span's ends settle the dates between exactly where at most one change is admitted or none lies between.",
+    "zh": "以符合日期化记录的历史解释旧报告包，每个解释都给出实际内容，恰当每个以另一内容给出同一包的对手都被某一日期化控制区分；区间两端值相同时，其间每个日期被确定，恰当至多容许一次变化或其间无日期。"
   },
+  "laws": [
+    {
+      "en": "For any types of histories, dates, relations, probes and reports, a history giving a relation at each date: a history fits dated records where at each record's date its relation gives the record's report to the record's probe. The actual history fits the records it gives, and a history fits them exactly where it gives the same records for the same dated probes.",
+      "zh": "对任意类型的历史、日期、关系、探测与报告（历史在每个日期给出一个关系）：一历史符合日期化记录，是指在每条记录的日期，其关系对该记录的探测给出该记录的报告。实际历史符合它给出的记录；一历史符合这些记录，恰当它对相同的日期化探测给出相同的记录。",
+      "declarations": [
+        "Becoming.Retrodiction.Fits",
+        "Becoming.Retrodiction.acquire",
+        "Becoming.Retrodiction.actual_candidate",
+        "Becoming.Retrodiction.fits_iff_same"
+      ]
+    },
+    {
+      "en": "With reports and contents compared decidedly, for a family of histories, admitted sources and the packet the actual relation produced at date d from a hidden source: each explanation of it by a fitting family history and an admitted source gives the actual content exactly where each family history giving that packet with another content through an admitted source is told apart from the actual one by a dated control.",
+      "zh": "报告与内容可判定地比较时，取历史族、被容许来源，以及实际历史在日期 d 的关系由隐藏来源产生的包：以符合实际记录的族内历史与被容许来源所作的每个解释都给出实际内容，恰当每个经被容许来源以另一内容给出同一包的族内历史，都被某一日期化控制与实际历史区分。",
+      "declarations": [
+        "Becoming.Retrodiction.reading_right_iff",
+        "Becoming.Retrodiction.Separated"
+      ]
+    },
+    {
+      "en": "Where the family holds the actual history and its source is admitted, a content all explanations by fitting family histories and admitted sources agree on is the actual one. With reports and read values compared decidedly, every fitting family history agrees with the actual one on what a reading gives of the relation at a date exactly where every family history disagreeing there is told apart by some dated control.",
+      "zh": "族含实际历史且其来源被容许时，符合记录的族内历史与被容许来源的所有解释一致给出的内容就是实际内容。报告与读数可判定地比较时，每个符合记录的族内历史在某日期对关系的读数都与实际历史一致，恰当在该处读数不同的每个族内历史都被某一日期化控制区分。",
+      "declarations": [
+        "Becoming.Retrodiction.agreed_reading_actual",
+        "Becoming.Retrodiction.look_right_iff"
+      ]
+    },
+    {
+      "en": "Over natural-number dates, with the relation's values compared decidedly, the changes of a course over n steps from a count the steps whose value differs from the next. A course back at a + (j + k) to its value at a, and elsewhere at a + j, changes at least twice; for distinct values r and r', the course at r except at date a + 1, where it is at r', changes exactly twice over every span of two or more steps from a.",
+      "zh": "在自然数日期上、关系之值可判定地比较时，一条历程自 a 起 n 步的变化数，计其值与下一步不同的步数。在 a + (j + k) 回到 a 处之值、而在 a + j 处不同的历程至少变化两次；对不同的值 r 与 r'，除日期 a + 1 处为 r' 外都为 r 的历程，在自 a 起两步以上的每个区间恰变化两次。",
+      "declarations": [
+        "Becoming.Retrodiction.changes",
+        "Becoming.Retrodiction.bracket",
+        "Becoming.Retrodiction.excursion_changes"
+      ]
+    },
+    {
+      "en": "Over natural-number dates, with the relation's values compared decidedly and two distinct values: every course with at most k changes over the n steps from a that is back at a + n to its value at a keeps that value at every date between exactly where k < 2 or n < 2.",
+      "zh": "在自然数日期上，关系之值可判定地比较且含两个不同的值时：自 a 起 n 步内至多变化 k 次、在 a + n 回到 a 处之值的每条历程，在其间每个日期都保持该值，恰当 k < 2 或 n < 2。",
+      "declarations": [
+        "Becoming.Retrodiction.bracket_settles_iff"
+      ]
+    },
+    {
+      "en": "Over natural-number dates, with the relation's values compared decidedly and two distinct values r and r': each date strictly between a and a later end holds r' on one course and r on another, both at r at a and at r' at the end and both changing once over the span, so controls at the two ends do not locate the change.",
+      "zh": "在自然数日期上，关系之值可判定地比较且含不同的值 r 与 r' 时：a 与较晚末端之间的每个日期，在一条历程上为 r'、在另一条上为 r，两者都在 a 为 r、在末端为 r'，且在区间内都只变化一次；所以两端的控制不能定位这次变化。",
+      "declarations": [
+        "Becoming.Retrodiction.stepAt",
+        "Becoming.Retrodiction.change_unlocated"
+      ]
+    },
+    {
+      "en": "Taking the runs of any process as histories and the configuration at a date as the relation then holding, with reports, contents and read values compared decidedly: reading an earlier packet right, and reading right what a reading gives of a run's configuration at a date, are each exactly separating every rival run of the family from the actual run by some dated control.",
+      "zh": "以任一过程的运行为历史、以某日期的构型为当时所立的关系，报告、内容与读数可判定地比较时：读对旧报告包，以及读对运行在某日期构型的读数，各自恰是每个族内对手运行都被某一日期化控制与实际运行区分。",
+      "declarations": [
+        "Becoming.Courses.runs_reading_right_iff",
+        "Becoming.Courses.runs_look_right_iff"
+      ]
+    },
+    {
+      "en": "With configurations compared decidedly, on every run of every process, where k < 2 or n < 2, at most k changes over the n steps from a and a return at a + n to the configuration at a keep that configuration at every date between. In the process admitting every change, with two distinct configurations, this holds of all its runs exactly where k < 2 or n < 2.",
+      "zh": "构型可判定地比较时，在每个过程的每个运行上，若 k < 2 或 n < 2，则自 a 起 n 步内至多 k 次变化且在 a + n 回到 a 处构型，便在其间每个日期保持该构型。在容许每种变化的过程中，有两个不同构型时，这对其全部运行成立，恰当 k < 2 或 n < 2。",
+      "declarations": [
+        "Becoming.Courses.run_settles",
+        "Becoming.Courses.anyChange",
+        "Becoming.Courses.anyRun",
+        "Becoming.Courses.runs_settle_iff"
+      ]
+    },
+    {
+      "en": "Four-moment histories (periphery) are core histories, dates and records: families holding the actual history keep it after controls; for each family, moment, admitted disturbances and target, the earlier packet is read right, as is sharing at a moment, exactly where each family history giving the same reports with the other target and an admitted disturbance, or differing there on sharing, is told apart by a control.",
+      "zh": "四时刻史（外围）即核心的历史、日期与记录：含实际历史的族在任何控制下保留它；对每个族、时刻、被容许的扰动与目标，旧报告包被读对，某时刻的共享亦被读对，各自恰当每个以另一目标与被容许扰动给出相同报告、或在该处共享不同的族内历史都被某一控制区分。",
+      "declarations": [
+        "Becoming.RetrodictionInstances.acquire_eq",
+        "Becoming.RetrodictionInstances.fits_iff",
+        "Becoming.RetrodictionInstances.actual_history_retained_from_law",
+        "Becoming.RetrodictionInstances.packet_read_iff",
+        "Becoming.RetrodictionInstances.shares_read_iff"
+      ]
+    },
+    {
+      "en": "In the four-moment histories (periphery), a history's course of sharing the disturbance changes no more often than the history. For an actual history in the one-change envelope whose prior and following routes agree on sharing, every history of that envelope retained by the controls at the prior, following and latest moments agrees with it on sharing at naming; later deterioration and later improvement are instances.",
+      "zh": "在四时刻史中（外围），历史的共享扰动历程变化不多于历史本身。对一次变化范围内、先前与随后路径在共享上一致的实际历史，被先前、随后与最晚时刻的控制保留的该范围内每个历史，在命名时刻的共享上都与它一致；后来退化与后来改善是实例。",
+      "declarations": [
+        "Becoming.RetrodictionInstances.course_changes_le",
+        "Becoming.RetrodictionInstances.controls_settle_naming",
+        "Becoming.RetrodictionInstances.deterioration_settled",
+        "Becoming.RetrodictionInstances.improvement_settled"
+      ]
+    },
+    {
+      "en": "In the four-moment histories (periphery): for later improvement, neither a latest control alone nor controls at the prior and latest moments only make every retained history of the one-change envelope agree with it on sharing at naming. The omitted excursion is the core's excursion course: the one-change envelope, excluding it, agrees on the wrong reading, and the two-change envelope does not settle it.",
+      "zh": "在四时刻史中（外围）：对后来改善，只有最晚时刻的控制，或只有先前与最晚时刻的控制，都不能使一次变化范围内每个被保留的历史在命名时刻的共享上与它一致。遗漏的短暂变化即核心的短暂变化历程：不含它的一次变化范围一致给出错误读数，两次变化范围不能确定读数。",
+      "declarations": [
+        "Becoming.RetrodictionInstances.late_control_reading_fails",
+        "Becoming.RetrodictionInstances.split_controls_reading_fails",
+        "Becoming.RetrodictionInstances.excursion_course",
+        "Becoming.RetrodictionInstances.excursion_agreed_wrong",
+        "Becoming.RetrodictionInstances.excursion_reading_fails"
+      ]
+    },
+    {
+      "en": "In the source-binding model (periphery): where the actual history is in the admitted family, the target is in the lexicon's repertoire, and every packet of the form was produced at its date by the actual route with the target and an admitted disturbance, a unique resolution of the form from the acquired controls names the target; no stability of the route across moments is required.",
+      "zh": "在来源绑定模型中（外围）：实际历史在容许族中、目标在词库的可用操作中、且该形式的每个包都由实际路径在其日期以目标与被容许扰动产生时，由所取得控制对该形式的唯一解析给出目标；不需要路径在各时刻都稳定。",
+      "declarations": [
+        "Generative.HistoricalBinding.acquired_history_supplies_binding_coverage",
+        "Generative.RetrospectiveBinding.covered_packet_preserves_atomic_content",
+        "Generative.AcquiredBinding.unique_resolution_is_correct_under_coverage"
+      ]
+    },
+    {
+      "en": "In the source-binding witnesses (periphery), with the packet disturbance known to be common and the one-change envelope: controls at the prior, following and latest moments bind the naming packet to the actual target after later deterioration and later improvement; a late control alone, or controls at the prior and latest moments only, leave it unbound in both, as does admitting every disturbance after improvement.",
+      "zh": "在来源绑定见证中（外围），包扰动已知为共同、取一次变化范围时：在后来路径退化与后来改善之后，先前、随后与最晚时刻的控制都把命名时刻的包绑定到实际目标；只有晚期控制，或只有先前与最晚控制时，两者都不能绑定；后来改善之后容许每种扰动时也不能绑定。",
+      "declarations": [
+        "Generative.HistoricalBinding.later_deterioration_does_not_invalidate_earlier_content",
+        "Generative.HistoricalBinding.later_improvement_does_not_rehabilitate_earlier_false_reports",
+        "Generative.HistoricalBinding.late_assessment_alone_leaves_the_old_binding_open",
+        "Generative.HistoricalBinding.known_change_without_location_does_not_settle_the_old_binding",
+        "Generative.HistoricalBinding.unknown_packet_disturbance_preserves_uncertainty"
+      ]
+    },
+    {
+      "en": "The omitted excursion, outside the one-change envelope and inside the two-change one, gives the same controls as the constant secure history, and with one target the same naming reports as that history gives with the other: the one-change envelope binds the packet to the constant history's target, and the two-change envelope leaves it unbound (periphery).",
+      "zh": "遗漏的短暂变化在一次变化范围之外、两次变化范围之内，与恒定安全历史给出相同控制，且以一个目标给出的命名报告与后者以另一目标给出的相同：一次变化范围把包绑定到恒定历史的目标，两次变化范围不能绑定（外围）。",
+      "declarations": [
+        "Generative.HistoricalBinding.omitted_temporary_change_defeats_backward_confidence"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "来源身份、四时刻顺序、形式识别、原子操作、解码器与控制可靠性已具备；路径族及变化／扰动范围明示给定。",
@@ -25,11 +154,68 @@
     {
       "zh": "成功见证使用至多一次路径改变及已知共同扰动；这些不是从数据取得的事实。",
       "en": "Successful witnesses use at most one route change and a known common packet disturbance; these are not facts learned from the data."
+    },
+    {
+      "zh": "核心规律对任意类型的历史、日期、关系、探测、报告、包与内容成立；读旧报告包时报告与内容可判定地比较；变化律在自然数日期上，关系之值可判定地比较且含两个不同的值。",
+      "en": "The core laws hold for any types of histories, dates, relations, probes, reports, packets and contents; reading an earlier packet compares reports and contents decidedly, and the change laws run over natural-number dates with the relation's values compared decidedly and two distinct ones."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Developmental formation of source identity, time retention and persistence assumptions is not modelled: they are supplied.",
+      "zh": "不模拟来源身份、时间保持与持续性假设的发育形成：它们是给定的。",
+      "kind": "scope"
+    },
+    {
+      "en": "The binding composition uses four moments; histories of arbitrary length are covered by the core reading and change laws, not by the binding composition.",
+      "zh": "绑定组合用四个时刻；任意长度的历史由核心的读取律与变化律涵盖，不由绑定组合涵盖。",
+      "kind": "scope"
+    },
+    {
+      "en": "What acquiring, storing and computing the controls uses is not counted.",
+      "zh": "取得、储存与计算控制所用的不计入。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "No neural mechanism, consciousness or evolutionary origin is identified.",
+      "zh": "不识别神经机制、意识或演化起源。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Differences between studies' tasks do not identify what moderates transfer, and nonhuman performance does not establish homology or adaptation.",
+      "zh": "研究间任务差异不识别迁移的因果调节因素，非人表现也不证明同源或适应史。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The primary evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history.",
+      "zh": "原典证据约束自动迁移，但不识别唯一机制或演化史。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
+      "detail": {
+        "zh": "未定位变化或未知扰动保持不确定；遗漏暂时改变可使旧内容误绑，扩大变化族后恢复不确定。",
+        "en": "Unlocated change or unknown disturbance preserves uncertainty; an omitted temporary change produces a wrong old binding, while widening the change family restores uncertainty."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1: the core Becoming.Retrodiction and Becoming.Courses by the consolidated core checker (becoming-checks/), with empty axiom reports; the periphery RetrodictionInstances by its instance checker, check_retrodiction_instances.py (retrodiction-instances-checks/), and HistoricalBinding, RetrospectiveBinding and AcquiredBinding by check_historical_binding.py (historical-binding-verification.json), the cited declarations reporting at most propext and Quot.sound. Five primary papers assessed; no empirical reanalysis or independent-agent acceptance.",
+    "zh": "Lean 4.29.1 实查：核心 Retrodiction、Courses 经合并核心检查器（becoming-checks/），公理报告皆空；外围 RetrodictionInstances 经其实例检查器（retrodiction-instances-checks/），HistoricalBinding 等三模块经其检查器（historical-binding-verification.json），所引声明至多用 propext、Quot.sound。评估五篇原典；无经验复算或独立验收。"
+  },
+  "next_delta": {
+    "en": "Identify, in a matched developmental procedure, how formed access and retained source and order information guide actual use, telling present reliance apart from endorsement of old content.",
+    "zh": "在匹配的发育程序中识别已形成的访问及所保留的来源与次序信息如何引导实际使用，区分当前依赖与对旧内容的认可。"
+  },
   "correspondence": {
-    "zh": "同一报告关系改变，旧内容保留而后得证据改变其历史解释。控制探测与儿童熟悉命名不等同；当前信任调整也不识别回溯重释。 发育与比较原典要求区分访问辨别的取得、来源／次序保持及特定任务中的使用；一种成功不验证全部接口。",
-    "en": "Reporting relations change while old contents persist; later evidence changes their historical interpretation. Controlled probes are not equivalent to children’s familiar naming, and present trust adjustment does not identify retrospective reinterpretation. Developmental and comparative primary evidence requires distinguishing acquired access sensitivity, source/order retention and task-specific use; one successful response does not validate every interface."
+    "zh": "同一报告关系改变，旧内容保留而后得证据改变其历史解释。控制探测与儿童熟悉命名不等同；当前信任调整也不识别回溯重释。 发育与比较原典要求区分访问辨别的取得、来源／次序保持及特定任务中的使用；一种成功不验证全部接口。以日期化记录过滤候选历史是标准方法，不是这里的新发明。",
+    "en": "Reporting relations change while old contents persist; later evidence changes their historical interpretation. Controlled probes are not equivalent to children’s familiar naming, and present trust adjustment does not identify retrospective reinterpretation. Developmental and comparative primary evidence requires distinguishing acquired access sensitivity, source/order retention and task-specific use; one successful response does not validate every interface. Filtering candidate histories by dated records is a standard method, not new here."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
   "aliases": [
@@ -89,23 +275,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
-      "detail": {
-        "zh": "未定位变化或未知扰动保持不确定；遗漏暂时改变可使旧内容误绑，扩大变化族后恢复不确定。",
-        "en": "Unlocated change or unknown disturbance preserves uncertainty; an omitted temporary change produces a wrong old binding, while widening the change family restores uncertainty."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不是发育身份／时序保持或持续性假设的形成，不是任意长度史、完整成本账、新神经机制、意识或演化起源；一般过滤并非本项目新发明。 原典任务差异未识别迁移的因果调节因素，非人表现也未证明同源或适应史。",
-    "en": "Does not form developmental identity/time retention or persistence assumptions, prove arbitrary-length histories, provide a complete cost account, or identify neural mechanisms, consciousness or evolutionary origins. General filtering is not a new invention of this project. Cross-study task differences do not identify the causal moderator of transfer, and nonhuman performance does not establish homology or adaptation."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1实查10项新定理／36项声明；继承304项定理／549项声明分列重建。新25项空依赖、11项含propext及Quot.sound；继承闭含Classical.choice。原典比较与作者反审，无新经验复算或独立agent验收。 本次追加五篇原典的方法、结果与相关讨论评估，无新数学或经验复算；原始Lean回执不改写。一般律已由检查器回执绑定。",
-    "en": "Lean 4.29.1 checked 10 new theorems / 36 declarations; 304 inherited theorems / 549 declarations rebuilt separately. New audits: 25 empty, 11 propext and Quot.sound; inherited closure contains Classical.choice. Primary comparison and author counterreview; no empirical reanalysis or independent-agent acceptance. This addition assesses methods, results and relevant discussion in five primary papers, with no new mathematics or empirical reanalysis; original Lean receipts remain unchanged. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
@@ -116,7 +285,9 @@
         "Generative.HistoricalBinding.later_deterioration_does_not_invalidate_earlier_content",
         "Generative.HistoricalBinding.later_improvement_does_not_rehabilitate_earlier_false_reports",
         "Generative.HistoricalBinding.known_change_without_location_does_not_settle_the_old_binding",
-        "Generative.HistoricalBinding.omitted_temporary_change_defeats_backward_confidence"
+        "Generative.HistoricalBinding.omitted_temporary_change_defeats_backward_confidence",
+        "Generative.HistoricalBinding.late_assessment_alone_leaves_the_old_binding_open",
+        "Generative.HistoricalBinding.unknown_packet_disturbance_preserves_uncertainty"
       ]
     },
     {
@@ -152,7 +323,8 @@
         "Becoming.Retrodiction.bracket",
         "Becoming.Retrodiction.excursion_changes",
         "Becoming.Retrodiction.bracket_settles_iff",
-        "Becoming.Retrodiction.change_unlocated"
+        "Becoming.Retrodiction.change_unlocated",
+        "Becoming.Retrodiction.stepAt"
       ]
     },
     {
@@ -336,10 +508,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "既有条件连接保留；下一重点是在匹配发育程序中识别已取得访问及所保留来源／次序如何进入实际使用，分别观察当前依赖与旧内容认可。原典已约束自动迁移，但未识别唯一机制或演化史。",
-    "en": "Preserve the completed conditional connections. Next identify how formed access and retained source/order information guide actual use in a matched developmental procedure, distinguishing present reliance from old-content endorsement. Primary evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history."
-  },
   "history": [
     {
       "zh": "2026-10-09：新增历史到绑定的条件组合，保留全程稳定的早先成果及暂时变化反例；完整认知目标继续。",
@@ -382,6 +550,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the claim names the decidability its laws take (reports and contents compared decidedly for reading an earlier packet right; the relation's values compared decidedly for counting changes) and says the span law needs two distinct values of the relation, not a relation taking only two; the Lean is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张写明其定律所需的可判定性（读对旧报告包需报告与内容可判定地比较；计数变化需关系之值可判定地比较），并说区间律需要关系之值含两个不同的值，而非关系只取两值；Lean 不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the claim and the home section; the claim split into fourteen laws, each read against its declarations in Retrodiction.lean, Courses.lean, RetrodictionInstances.lean, HistoricalBinding.lean, RetrospectiveBinding.lean and AcquiredBinding.lean (the core reading and change laws, their reading on runs, the four-moment instances and the source-binding witnesses); the limitations to five does-not-show items, the remark on filtering to the correspondence; the last sentence of the next step, a boundary of the evidence, to a sixth does-not-show item; the conditions of the core laws (types, decidability, natural-number dates, two distinct values) written as a fourth hypothesis, as the triage proposed and the 25 October note began; stepAt, late_assessment_alone_leaves_the_old_binding_open and unknown_packet_disturbance_preserves_uncertainty, the last witnessing the counterexample's unknown disturbance, added to their files' references; the shared boundaries no-ethical-premise-core-axiom-free and decidability cited; no premise, status or source hash changed. Every earlier sentence is mapped in [historical-source-binding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/historical-source-binding.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章节写出陈述；主张拆为十四条规律，各条对照 Retrodiction.lean、Courses.lean、RetrodictionInstances.lean、HistoricalBinding.lean、RetrospectiveBinding.lean 与 AcquiredBinding.lean 中的声明核读（核心的读取律与变化律、其在运行上的读法、四时刻实例与来源绑定见证）；限制改为五条“未表明”，关于过滤的一句移入对应；下一步的末句（证据的边界）改为第六条“未表明”；核心规律的条件（类型、可判定性、自然数日期、两个不同的值）按分诊建议、接续10月25日的说明，写为第四条前提；stepAt、late_assessment_alone_leaves_the_old_binding_open 与 unknown_packet_disturbance_preserves_uncertainty（后者见证反例中的未知扰动）加入其文件的引用；引用通用边界 no-ethical-premise-core-axiom-free 与 decidability；前提、状态与来源哈希均未改变。每句旧文本的去向见 [historical-source-binding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/historical-source-binding.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/7f1be77356b742da/historical-source-binding.json",
+      "sha256": "7f1be77356b742da2fe988b4744612258a62ab4ee635f0b6817eff6682f10e03",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/724d5d66dcdfab01/historical-source-binding.json",
+      "sha256": "724d5d66dcdfab01425354b66072174660edbd6b27452954029026e4b191e548",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "id": "assured-route-criterion",
+  "title": {
+    "zh": "三路线中的保证到达条件",
+    "en": "Assured arrival in the three-route process"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F08",
+  "reviewed_at_utc": "2026-10-14T05:50:00+00:00",
+  "claim": {
+    "zh": "对每个确定的过程（每个动作至多一个后继），一个计划完成——每一步从此前步骤可达的每个构型都可行且安全，每个终点满足目标——当且仅当它运行、其运行安全且终点满足目标；没有安全条件时，当且仅当它运行且每个终点满足目标。对一条变化之律，计划完成恰当目标在律所到之处成立；单步时恰当目标在后继处成立。部分律的轨迹恰是其完成的运行。逆命题在非确定过程中不成立。情境智慧的“保证”即无安全条件的完成。三路线过程是一条变化之律，所以从未到达状态执行路线 a 保证到达，当且仅当 a 不等于唯一不可通行模式 m，这是实例。",
+    "en": "For every determined process (each move has at most one successor), a plan completes — every step possible and safe from every configuration the earlier steps can reach, every endpoint meeting the goal — exactly when it runs, its run is safe and its endpoint meets the goal; with no safety condition, exactly when it runs and every endpoint meets the goal. For a law of change, a plan completes exactly when the goal holds where the law takes it, and for one move exactly when it holds at the successor. A partial law's traces are exactly its completed runs. The converse fails for nondeterministic processes. Contextual wisdom's assurance is completion with no safety condition. The three-route process is a law of change, so taking route a from an unreached state assures arrival exactly when a differs from the uniquely blocked mode m: an instance."
+  },
+  "hypotheses": [
+    {
+      "zh": "一般律只要求过程确定；变化之律与部分律都是确定的过程。",
+      "en": "The general law assumes only that the process is determined; laws of change and partial laws are."
+    },
+    {
+      "zh": "Mode 与 Route 为 Fin 3，advance 保持模式并记录 a≠m；Reached 为到达标志。",
+      "en": "Mode and Route are Fin 3; advance retains the mode and records a≠m; Reached is the arrival flag."
+    }
+  ],
+  "correspondence": {
+    "zh": "一项给定的单步过程，不是智慧、伦理许可或感知形成的定义。",
+    "en": "A supplied one-step process, not a definition of wisdom, ethical permission or sensor formation."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AssurancePlans.lean",
+  "aliases": [
+    "Generative.WisdomResponseStructure.assured_route_iff (periphery module)",
+    "Becoming.Assurance.completes_iff_of_determined",
+    "Becoming.Assurance.completes_iff_runs",
+    "Becoming.Assurance.runs_of_completes",
+    "Becoming.Assurance.completes_ofMap_iff",
+    "Becoming.Assurance.completes_ofMap_single",
+    "Becoming.Assurance.trace_ofPartial_iff",
+    "Becoming.Assurance.completes_ofPartial_iff",
+    "Becoming.Assurance.Branch.runs_not_completes",
+    "Becoming.Instances.assured_iff_completes (retired module)",
+    "Becoming.Instances.routes_assured_iff (retired module)",
+    "Becoming.Instances.regulation_assured_iff (retired module)"
+  ],
+  "dependencies": [],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomResponseStructure.lean",
+      "detail": {
+        "zh": "风险权重、取得模式的能力和选择的伦理根据均不由此等价式提供。",
+        "en": "Risk weights, capacity to acquire the mode, and ethical grounds for selection are not supplied by this equivalence."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Assurance.lean",
+      "detail": {
+        "zh": "两结果过程 Branch：从 0 出发，计划 [(), ()] 的两步都能运行且每个终点都是 3，但计划不完成，因为第一步可达 2，从那里第二步不可行；它不是确定的过程。",
+        "en": "The two-outcome process Branch: from 0 both moves of [(), ()] run and every endpoint is 3, yet the plan does not complete, because the first step can reach 2, from which the second move is impossible; the process is not determined."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "风险权重、取得模式的能力和选择的伦理根据均不由此等价式提供。",
+    "en": "Risk weights, capacity to acquire the mode, and ethical grounds for selection are not supplied by this equivalence."
+  },
+  "validation_scope": {
+    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
+    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomResponseStructure.lean",
+      "role": "provenance",
+      "sha256": "2760db38cbfb9eaa2b2ad969be9124d8e6c28a1389ed2c5fa7c26223fa7a878c",
+      "declarations": [
+        "Generative.WisdomResponseStructure.assured_route_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AssurancePlans.lean",
+      "role": "proof",
+      "sha256": "86a96eb70b6d92d5b8270810d68eb41fa55c7366d436e9950e4b2962896dcef2",
+      "declarations": [
+        "Becoming.AssurancePlans.Routes.completes_iff",
+        "Becoming.AssurancePlans.Regulation.kept_along"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Assurance.lean",
+      "role": "proof",
+      "sha256": "e1da167a0c28abba8ca37d1d97bce0b0b5e46b8fbf60c96d34c67bf1509610ac",
+      "declarations": [
+        "Becoming.Assurance.free",
+        "Becoming.Assurance.runs_of_completes",
+        "Becoming.Assurance.completes_of_runs",
+        "Becoming.Assurance.completes_iff_of_determined",
+        "Becoming.Assurance.completes_iff_runs",
+        "Becoming.Assurance.completes_ofMap_iff",
+        "Becoming.Assurance.completes_ofMap_single",
+        "Becoming.Assurance.completes_ofPartial_iff",
+        "Becoming.Assurance.Branch.runs_not_completes",
+        "Becoming.Assurance.Branch.not_determined"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean",
+      "role": "proof",
+      "sha256": "4592f6aecfe22717a8b28ae60369687c5c9b2d92f1d69c804e76087f2d8ca4ac",
+      "declarations": [
+        "Becoming.Assurance.ofMap",
+        "Becoming.Assurance.ofMap_determined",
+        "Becoming.Assurance.ofPartial",
+        "Becoming.Assurance.runPartial",
+        "Becoming.Assurance.trace_ofPartial_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Instances.lean",
+      "role": "provenance",
+      "sha256": "b442e896d0ea8ec66adf9104b4777278a4764291a48b33e95f1fdebf61590e83",
+      "declarations": [
+        "Becoming.Instances.assured_iff_completes",
+        "Becoming.Instances.routes_eq",
+        "Becoming.Instances.routes_assured_iff",
+        "Becoming.Instances.regulation_assured_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/wisdom-fallible-judgment-checks/20261008T122517.399770Z/receipt.json",
+      "role": "receipt",
+      "sha256": "d7a472e1d2757c88c16c8678d1d35bfd40bd83aac62f5a8cc2246f471b8ecfa8",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md",
+      "role": "provenance",
+      "sha256": "a896df0f8f85139ab323dcb97878b86b2ab3d4c897e4587e15f4ca8b8f7e9017",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T221720.428753Z/verification.json",
+      "role": "receipt",
+      "sha256": "2feaf131081772f19c21b0a79fc68da63e9df371faec7b37ae0b927d526641d5",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T190110.587858Z/verification.json",
+      "role": "receipt",
+      "sha256": "eaecacb9f82aa5c37e86cc3f0bf8ca3b404b7e9bd82fe75effd9691660cb0a2b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Assurance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Assurance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AssurancePlans.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.AssurancePlans",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Laws",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "风险应用对每个确定过程直接复用这个完成判准；非确定的计划须用完整的完成条件。",
+    "en": "Risk applications reuse this completion criterion for every determined process; nondeterministic plans need the full completion condition."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
+      "en": "2026-10-08: migrated existing result identity and scope; no new theorem or relocated source."
+    },
+    {
+      "zh": "2026-10-14：按 Ren 批准的旧记录一般律审计，主张改为一般律先行：对每个确定的过程，完成恰是安全运行并终于目标（新核心模块 Becoming.Assurance）；三路线过程与调节律经桥接 Becoming.Instances 成为实例，非确定的反例 Branch 加入。scratch_build 实编，公理报告为空；回执由落地运行绑定。原定理、回执与范围不变。",
+      "en": "2026-10-14: under Ren's approved general-law audit of older records, the claim now states the law first: for every determined process, completion is exactly a safe run ending in the goal (new core module Becoming.Assurance); the three-route process and the regulation law become instances through the bridge Becoming.Instances, and the nondeterministic counterexample Branch is added. Built with scratch_build, empty axiom reports; the landing run binds the receipt. The original theorem, receipt and scope are unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 21 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/026b536b113ea820/assured-route-criterion.json and in git.",
+      "zh": "2026-10-20：21 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/026b536b113ea820/assured-route-criterion.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Instances and WisdomResponseStructure) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Assurance, Becoming.AssurancePlans and Becoming.Laws). The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Instances and WisdomResponseStructure）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Assurance, Becoming.AssurancePlans and Becoming.Laws）。主张不变。"
+    },
+    {
+      "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 4 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Generative.WisdomResponseStructure.assured_route_iff (periphery module); Becoming.Instances.assured_iff_completes (retired module); Becoming.Instances.routes_assured_iff (retired module); Becoming.Instances.regulation_assured_iff (retired module). The claim is unchanged.",
+      "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；4 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Generative.WisdomResponseStructure.assured_route_iff (periphery module)；Becoming.Instances.assured_iff_completes (retired module)；Becoming.Instances.routes_assured_iff (retired module)；Becoming.Instances.regulation_assured_iff (retired module)。论断不变。"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "comparison-content-under-regrouping",
   "title": {
     "zh": "比较内容的关系保真：最低所需、分组与真实损失",
@@ -8,11 +8,96 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
-  "claim": {
-    "zh": "同一 Frame 的过程不变，只对主张作多对一分组。逐项恢复原实现恰当同组主张在当前配置中同样成立；两处保真时，既有 Extension 比较保持不变。Web.paths 的同样依存与阈值供给该条件；依存可判定时，在所有水平路径上保真恰当同组形成每一步的最低所需逐项相同。不依存的条件所需为零。继承 Transfer 的搬运／保留两条路径现在由同一初态、同一其余交换律生成，均可行且平衡；它们有真实混合得失，合并两个不同依存的形成却使分组描述相同。",
-    "en": "On one Frame with its process unchanged, claims are regrouped many-to-one. Recovering each original realization is exactly constancy within each group at that configuration; fidelity at both configurations preserves the existing Extension comparison. Equal Web requirements and thresholds supply fidelity; with decidable requirements, fidelity on all level paths holds iff group members have equal pointwise minimum requirements at every step, zero on unrequired conditions. The inherited Transfer moving/withholding paths are generated from one start and one rest-law, both feasible and balanced; real mixed gains and losses remain although merging differently dependent formations makes the grouped readings identical."
+  "reviewed_at_utc": "2026-10-28T12:30:00+00:00",
+  "statement": {
+    "en": "Regrouping keeps a frame's process and merges claims: each realization is recovered exactly where a group's members hold alike, and fidelity at both ends keeps the comparison; with requirements decided, merging is lossless on all level paths exactly when grouped formations share least requirements.",
+    "zh": "重新分组保持框架的过程并合并主张：同组成员同样成立处恰能逐项恢复原实现，两端都保真时比较不变；所需可判定时，合并在所有水平路径上无损，恰当同组形成的最低所需相同。"
   },
+  "laws": [
+    {
+      "en": "Regrouping a frame by a map on its claims keeps its process and realizes a group where some member is realized; at a configuration, each claim's realization is recovered from its group's exactly when, there, a group realized by one member is realized by every member.",
+      "zh": "以主张上的映射重新分组一个框架，保持其过程，某成员实现处其组即实现；在一个构型上，每项主张的实现可由其组的实现恢复，恰当在那里一组只要有一个成员实现，其每个成员都实现。",
+      "declarations": [
+        "Becoming.Frame.regroup",
+        "Becoming.Frame.RespectsAt",
+        "Becoming.Frame.respectsAt_iff"
+      ]
+    },
+    {
+      "en": "Inclusion of realized claims always passes to groups, and a newly realized group always has a newly realized member; with fidelity at the successor, inclusion of groups gives back inclusion of claims, and with fidelity at the baseline, a gain among claims shows as a gain among groups.",
+      "zh": "已实现主张的包含总传给组，新实现的组总有新实现的成员；后继处保真时，组的包含给回主张的包含；基线处保真时，主张中的增益显为组中的增益。",
+      "declarations": [
+        "Becoming.Frame.regroup_retains",
+        "Becoming.Frame.regroup_retains_iff",
+        "Becoming.Frame.regroup_gain_reflects",
+        "Becoming.Frame.regroup_gain_iff"
+      ]
+    },
+    {
+      "en": "With fidelity at both compared configurations, extension with every claim counted (every realized claim kept and some claim gained) holds of the groups exactly when it holds of the claims.",
+      "zh": "两处被比较的构型都保真时，计入每项主张的扩展（保留每项已实现主张并增加某项主张）对组成立，恰当它对主张成立。",
+      "declarations": [
+        "Becoming.Extension",
+        "Becoming.Frame.regroup_extension_iff"
+      ]
+    },
+    {
+      "en": "On a web with each requirement decided, a formation's least required level on a condition is its need where required and zero otherwise: a formation is admitted at a level profile exactly when the profile meets its least levels, and two formations have the same admission under every profile exactly when their least levels are equal.",
+      "zh": "在每项所需都可判定的网上，一个形成在某条件上的最低所需水平，在需要处是其需要量，否则为零：形成在一个水平剖面上被接纳，恰当该剖面达到其最低水平；两个形成在每个剖面下接纳相同，恰当其最低水平相等。",
+      "declarations": [
+        "Becoming.Web.requiredLevel",
+        "Becoming.Web.admits_iff_requiredLevel",
+        "Becoming.Web.admits_requiredLevel",
+        "Becoming.Web.same_admission_iff_requiredLevel"
+      ]
+    },
+    {
+      "en": "With each requirement decided, grouping formations step by step is faithful on every level path exactly when formations in one group have equal least required levels at every step and condition; equal requirements and needs within each group give fidelity on every level path with no decision.",
+      "zh": "每项所需都可判定时，逐步分组形成在每条水平路径上保真，恰当同组形成在每一步、每个条件上的最低所需水平相等；同组内所需与需要量都相同，则不需判定即在每条水平路径上保真。",
+      "declarations": [
+        "Becoming.Web.groupEvent",
+        "Becoming.Web.regroup_faithful_iff_requiredLevel",
+        "Becoming.Web.SameRequirements",
+        "Becoming.Web.SameRequirements.admits",
+        "Becoming.Web.SameRequirements.respects"
+      ]
+    },
+    {
+      "en": "With fidelity at two level paths, grouped extension between them is exactly widening, as extension on level paths is; equal requirements within each group give this for every two level paths.",
+      "zh": "两条水平路径处都保真时，它们之间的分组扩展恰是扩大（widening），与水平路径上的扩展一样；同组所需相同则对任两条水平路径都如此。",
+      "declarations": [
+        "Becoming.Web.paths",
+        "Becoming.Web.paths_extension_iff_widens",
+        "Becoming.Web.regroup_extension_iff_widens",
+        "Becoming.Web.SameRequirements.extension_iff_widens"
+      ]
+    },
+    {
+      "en": "In the conveyor witness, moving or withholding the conveyor under one inactive rest law generates from one start two courses that are nonanticipating, feasible and balanced and follow the same rest law, their levels those of the earlier moving and withheld paths.",
+      "zh": "在传送见证中，在同一不活动的其余律下搬运或扣留传送，自同一初态生成两条路线：二者都不预支、可行且平衡，并遵循同一其余律，其水平即先前搬运与扣留路径的水平。",
+      "declarations": [
+        "Becoming.Transfer.courseLaw",
+        "Becoming.Transfer.courseLaw_nonanticipating",
+        "Becoming.Transfer.move_levels",
+        "Becoming.Transfer.wait_levels",
+        "Becoming.Transfer.courses_feasible",
+        "Becoming.Transfer.courses_balanced",
+        "Becoming.Transfer.courses_follow_same_rest"
+      ]
+    },
+    {
+      "en": "Merging the first and second formations, the conveyor kept apart, is not faithful on the moving path; the two generated courses are mixed, each admitting at some step a formation the other does not, while under the merged reading they realize exactly the same groups.",
+      "zh": "合并第一与第二形成（传送另列）在搬运路径上不保真；两条生成的路线互相混合，各在某一步接纳对方不接纳的形成，而在合并读法下二者实现的组完全相同。",
+      "declarations": [
+        "Becoming.Transfer.merged",
+        "Becoming.Transfer.mixed",
+        "Becoming.Transfer.merged_not_respects",
+        "Becoming.Transfer.move_group_realized",
+        "Becoming.Transfer.wait_group_realized",
+        "Becoming.Transfer.generated_mixed_hidden"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "共享 Frame 及其已给定的主张含义；分组只改读法，不改过程。比较的扩展实例把每项主张均计入。",
@@ -31,9 +116,59 @@
       "en": "The conveyor construction uses the inherited Transfer dependencies and supplied exchange; the rest is inactive in this minimal witness."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Equal least requirements fix admission only: distinct lives, histories and expressions can have equal needs, and a many-to-one description does not make them interchangeable.",
+      "zh": "最低所需相同只固定接纳读法：不同生命、历史与独特表达可以同需，多对一的描述也不使它们可互换。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Admission of each formation does not give joint realizability, which must itself be among the claims if it is compared.",
+      "zh": "单项可接纳不推出共同可实现；若要比较，后者须自身作为主张进入框架。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Fidelity on every level path is stronger than fidelity on the feasible courses compared: the all-level test may include levels no dynamics reaches.",
+      "zh": "在每条水平路径上保真强于在被比较的可行路线上保真：全部水平测试可能包含动力学不可达的水平。",
+      "kind": "scope"
+    },
+    {
+      "en": "It does not determine actual dependencies, a unique complete content language, how changing needs are constituted, or a complete ordering of mixed gains and losses.",
+      "zh": "它不确定实际依存、唯一完整的内容语言、变化中的需要如何构成，或混合得失的完整排序。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "No requirement that every action be lossless, and no default of institutional retreat, follows.",
+      "zh": "不推出一般的无损行动要求，也不推出默认的制度收缩。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regrouping.lean",
+      "detail": {
+        "zh": "generated_mixed_hidden 与 merged_not_respects：同一初态和其余律生成的真实相反得失，在不保真分组中消失为相同。只反驳任意分组都保留比较内容，不反驳完整关系说明。",
+        "en": "generated_mixed_hidden and merged_not_respects: opposed real changes generated from one start and rest-law disappear into equality under unfaithful grouping. The target is arbitrary grouping fidelity, not the full relational account."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "decidability",
+    "omission-not-refutation",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the core modules Becoming.Regrouping, Becoming.Admission, Becoming.Counterfactual, Becoming.Extension and Becoming.ValuationFrames are bound to passing receipts in becoming-checks, with an empty axiom report for every cited declaration; earlier receipts in the references checked the same statements under former names. A periphery compatibility run in correction-inquiry-checks (Lean 4.30.0-rc2 with Mathlib) also compiled the core. The author's counter-review is recorded; there is no independent review.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Regrouping、Admission、Counterfactual、Extension 与 ValuationFrames 绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空；引用中较早的回执以旧名检查同一陈述。correction-inquiry-checks 中的外围兼容运行（Lean 4.30.0-rc2 与 Mathlib）也编译了核心。作者反审已记录；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Content beyond admission, with its correspondence, entering the comparison: joint maintenance of formations, needs that change along the course, or a warranted comparison of mixed gains and losses.",
+    "zh": "让接纳以外的内容连同其对应进入比较：形成的共同维持、沿路线变化的需要，或对混合得失有根据的比较。"
+  },
   "correspondence": {
-    "zh": "AI 对 Ren“请完成”及本会话对齐方向研究的续接：先由共同展开中的支持、给予与取用说明内容，再检验描述和比较。最低所需刻画接纳内容，不把不同生活归约成独立价值所有者，也不等同实际身份或完整生成意义。",
-    "en": "AI continuation of Ren’s request to complete this session’s alignment-direction work: contents are read from support and exchange within one unfolding before description and comparison are tested. Minimum requirements characterize admission, not separate value owners, actual identity or complete generative significance."
+    "en": "Contents are read from support and exchange within one unfolding before description and comparison are tested; minimum requirements characterize admission, not separate value owners, actual identity or complete generative significance (an AI reading).",
+    "zh": "先由共同展开中的支持、给予与取用说明内容，再检验描述和比较；最低所需刻画接纳内容，不把不同生活归约成独立价值所有者，也不等同实际身份或完整生成意义（AI 的读法）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regrouping.lean",
   "aliases": [
@@ -156,23 +291,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regrouping.lean",
-      "detail": {
-        "zh": "generated_mixed_hidden 与 merged_not_respects：同一初态和其余律生成的真实相反得失，在不保真分组中消失为相同。只反驳任意分组都保留比较内容，不反驳完整关系说明。",
-        "en": "generated_mixed_hidden and merged_not_respects: opposed real changes generated from one start and rest-law disappear into equality under unfaithful grouping. The target is arbitrary grouping fidelity, not the full relational account."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "最低所需相同只固定接纳读法；不同生命、历史与独特表达可同需。单项可接纳不推出共同可实现，后者须作为自身内容进入框架。全部水平测试可能包含动力学不可达水平；因此强于特定可行路线上的局部保真。未推导实际依存、唯一完整内容语言、变化中需要的构成、混合得失完整排序或零实质公理规范根据。没有一般无损行动要求、默认制度收缩或新经验验证。",
-    "en": "Equal minimum requirements fix admission only; distinct lives, histories and expressions can have equal needs. Marginal admission does not establish joint realizability, which must itself be represented. All-level tests may include dynamically inaccessible levels and are stronger than local fidelity on feasible courses. Actual dependencies, a unique complete content language, constitution of changing needs, complete mixed-loss ordering and zero-substantive-axiom normative warrant are not derived. No universal lossless-action requirement, institutional-retreat default or new empirical validation is claimed."
-  },
-  "validation_scope": {
-    "zh": "2026-10-14：Becoming.Counterfactual 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 共享 Lean 4.29.1 检查 20261013T104720.812252Z 通过：Regrouping 24 项新定理／33 项源声明审计，公理依赖全空；78 个纯净核心模块从前导编译通过，76 个包模块含 4546 项定理／6407 项源声明审计。24 个继承外围模块另列；12 个 Lean 步骤实际运行、345 个按相同输入复用。作者反审已写，无独立 agent 验收；元数据检查不替代证明。 外围兼容检查 20261013T105346.131772Z 也通过：Lean 4.30.0-rc2／Mathlib 下编译新增核心，原桥接 7 项定理／8 项审计空依赖；运行 6 步、复用 79 步。",
-    "en": "14 October 2026: the current bytes of Becoming.Counterfactual are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Shared Lean 4.29.1 run 20261013T104720.812252Z passed: Regrouping has 24 new theorems/33 source-declaration audits, all axiom-free; the 78-module pure core compiles from the prelude, and 76 package modules contain 4546 theorems/6407 source-declaration audits. Twenty-four inherited peripheral modules are separate; 12 Lean steps ran and 345 reused identical inputs. Author counterreview is recorded, without independent-agent acceptance; metadata checks do not replace proof. Peripheral compatibility run 20261013T105346.131772Z also passed: the added core compiles under Lean 4.30.0-rc2/Mathlib; the existing bridge has 7 theorems/8 axiom-free audits; 6 steps ran and 79 were reused."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regrouping.lean",
@@ -226,7 +344,8 @@
       "sha256": "4d3afe46d3d4b297acc6a1e6b126ad2e0f2d08dfa9205fdcf2aa32bb7b5bcbf1",
       "declarations": [
         "Becoming.Web.paths_extension_iff_widens",
-        "Becoming.Web.paths"
+        "Becoming.Web.paths",
+        "Becoming.Extension"
       ]
     },
     {
@@ -417,10 +536,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "本条局部任务已完成。更强研究须给出接纳以外实际相关的内容及对应，例如共同维持、需要的变化或有根据的混合比较；不再重复改名不变或重造反事实。整体无公理奠基保持原目标与开放状态。",
-    "en": "This local task is complete. Stronger work must specify additional relevant content and its correspondence, such as joint maintenance, changing needs or warranted mixed comparison. Do not repeat renaming invariance or reconstruct the counterfactual again. The strong axiom-free foundation retains its target and open status."
-  },
   "history": [
     {
       "zh": "2026-10-13 P91：工作板先认领，在已有 ETHICAL-LEARNING 研究接续；共同核心新增 Regrouping，正式复用三个既有结果，保留旧定理与反例，不复制另一个世界。",
@@ -467,6 +582,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label G0/J in a related note replaced by the conditional alignment route; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条相关说明中已退役的标签 G0/J 改为条件对齐路线；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the claim and the home section; the claim split into eight laws, each read against its declarations in Becoming.Regrouping, Becoming.Extension and Becoming.Admission (the decisions, the fidelity premises and both directions of each equivalence written out); the limitations to five does-not-show items and the standard boundaries no-ethical-premise, decidability, omission-not-refutation and zero-axiom-target-open; in the correspondence the opening process note (an AI continuation of a request in a session) cut and the AI label kept at the reading's end, the rest unchanged; the hypotheses and counterexample kept; one declaration (Extension) added to its file's references; the next step stated without the completed task, the instruction not to repeat earlier work and the axiom-free target's status; no premise, status or source hash changed. Every earlier sentence is mapped in [comparison-content-under-regrouping.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/comparison-content-under-regrouping.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章写出陈述；主张拆为八条规律，各条对照其在 Becoming.Regrouping、Becoming.Extension 与 Becoming.Admission 中的声明核读（写出判定、保真前提与每个等价的两个方向）；限制分入五条“未表明”与通用边界 no-ethical-premise、decidability、omission-not-refutation、zero-axiom-target-open；对应中删去开头的过程说明（AI 在一次会话中对一项请求的续接），AI 标签保留在读法末尾，其余不变；前提与反例保留；一个声明（Extension）加入其文件的引用；下一步不再写已完成的任务、不重复既有工作的指示与无公理目标的状态；前提、状态与来源哈希均未改变。每句旧文本的去向见 [comparison-content-under-regrouping.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/comparison-content-under-regrouping.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/62be1d0993c00998/comparison-content-under-regrouping.json",
+      "sha256": "62be1d0993c00998d79406ba819491226fc90259806caced2a61e1e0d33ce659",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/6d920962b63373b1/comparison-content-under-regrouping.json",
+      "sha256": "6d920962b63373b1584d23dfd5305a6519c6e10454eb09a19e2f10221a5ca759",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

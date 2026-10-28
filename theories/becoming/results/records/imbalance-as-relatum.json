@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "imbalance-as-relatum",
   "title": {
     "zh": "不平衡作为关系项",
@@ -8,28 +8,118 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-28T11:54:51+00:00",
   "statement": {
     "zh": "算入不平衡，每个流都平衡；平衡恰是新增关系项闲置，两种表示逐步等价。",
     "en": "With the imbalance counted, every flow balances; balance is exactly the added relatum idle, and the two representations are equivalent step by step."
   },
-  "claim": {
-    "zh": "一步上，一个条件的水平按流所给、所取改变，恰当流在那里平衡。不平衡之处，把差额算作又一个关系项 none 的交换：它给每个条件其水平超出流的净交换而升的部分，取其超出而降的部分（Flow.withImbalance，Flow.withImbalance_given、Flow.withImbalance_taken）；依存网照 rest-with-refinement-counted 的细分读入它：从不活跃，不要求任何东西（Web.withRefinement）。于是扩展的流在每一步、每个条件上平衡（Flow.withImbalance_balances），在每个家族上亦然（Flow.withImbalance_balancesOn）。流在一个家族上跨一步平衡，恰当新增的关系项在那里对其成员不给不取（Flow.balancesOn_iff_idle），处处平衡恰当它处处闲置（Flow.balances_iff_idle）。两种表示逐步等价：在一步一个条件上，扩展的流中只有活跃者给予，恰当原流中只有活跃者给予且水平不超出净交换而升（Flow.withImbalance_acting_at_iff）；只有活跃者取、只取其所汲取的，恰当原流如此且水平不超出净交换而降（Flow.withImbalance_taking_at_iff）；所以在一个家族上跨一步，二者在扩展的流上成立，恰当二者在原流上成立且流在那里平衡（Flow.withImbalance_acting_taking_on_iff）；全步全条件的形式是推论（Flow.withImbalance_acting_iff、Flow.withImbalance_taking_iff、Flow.withImbalance_acting_taking_iff）。自然数的截断减法不丢失信息：给与取各取一边的差额，一边为零（sub_eq_zero_of_le、le_of_sub_eq_zero）。不用伦理前提，也不用 Lean 公理。",
-    "en": "Across a step, a condition's level changes by what the flow gives and takes exactly where the flow balances there. Wherever it does not, the difference is counted as the exchange of one more relatum, none: it gives each condition what its level rose beyond the flow's net exchange, and takes what its level fell beyond it (Flow.withImbalance, Flow.withImbalance_given, Flow.withImbalance_taken); the web reads it as the refinement of rest-with-refinement-counted is read, never active and requiring nothing (Web.withRefinement). Then the extended flow balances at every step and condition (Flow.withImbalance_balances), and on every family (Flow.withImbalance_balancesOn). The flow balances on a family across a step exactly where the added relatum neither gives nor takes on its members there (Flow.balancesOn_iff_idle), and everywhere exactly where it is idle everywhere (Flow.balances_iff_idle). The two representations are equivalent step by step: at a step and condition, in the extended flow only active relata give exactly where only active relata give in the flow and the level does not rise beyond the flow's net exchange (Flow.withImbalance_acting_at_iff), and only active relata take, and only what they draw on, exactly where they do so in the flow and the level does not fall beyond it (Flow.withImbalance_taking_at_iff); so on a family across a step both hold of the extended flow exactly where both hold of the flow and it balances there (Flow.withImbalance_acting_taking_on_iff), the forms over every step and condition being corollaries (Flow.withImbalance_acting_iff, Flow.withImbalance_taking_iff, Flow.withImbalance_acting_taking_iff). Truncated subtraction loses nothing: giving and taking each take one side of the difference, the other being zero (sub_eq_zero_of_le, le_of_sub_eq_zero). No ethical premise and no Lean axiom is used."
-  },
+  "laws": [
+    {
+      "en": "A flow balances on a family across a step where each member's level after the step, with what the flow takes from it, is its level before with what the flow gives it. Counting the imbalance adds one relatum, none, giving each condition what its level rose beyond the flow's net exchange and taking what it fell beyond it; the web reads that relatum as never active, requiring and drawing on nothing.",
+      "zh": "流跨一步在一个家族上平衡，是指每个成员步后的水平加上流从它所取，等于步前的水平加上流给它的。算入不平衡，即添一个关系项 none：它给每个条件其水平超出流的净交换而升的部分，取其超出而降的部分；依存网把它读作从不活跃、不要求也不汲取任何东西。",
+      "declarations": [
+        "Becoming.Flow.BalancesOn",
+        "Becoming.Flow.withImbalance",
+        "Becoming.Flow.withImbalance_given",
+        "Becoming.Flow.withImbalance_taken",
+        "Becoming.Web.withRefinement"
+      ]
+    },
+    {
+      "en": "For any flow and web, the flow with the imbalance counted balances at every step and condition on the web read with the added relatum inert, and so on every family across every step.",
+      "zh": "对任意流与依存网，算入不平衡的流在把新增关系项读作惰性的网上，于每一步每个条件处平衡，因而在每个家族上跨每一步平衡。",
+      "declarations": [
+        "Becoming.Flow.Balances",
+        "Becoming.Flow.withImbalance_balances",
+        "Becoming.Flow.withImbalance_balancesOn"
+      ]
+    },
+    {
+      "en": "For any flow and web, the flow balances on a family across a step exactly where the added relatum neither gives to nor takes from any member there, and balances at every step and condition exactly where the added relatum is idle at every step and condition.",
+      "zh": "对任意流与依存网，流在一个家族上跨一步平衡，恰当新增的关系项在那里对其成员不给不取；流在每一步每个条件处平衡，恰当新增的关系项处处闲置。",
+      "declarations": [
+        "Becoming.Flow.balancesOn_iff_idle",
+        "Becoming.Flow.balances_iff_idle"
+      ]
+    },
+    {
+      "en": "For any flow and web, at a step and condition: in the extended flow only active relata give exactly where only active relata give in the flow and the level does not rise beyond the flow's net exchange; only active relata take, and only from what they draw on, exactly where they do so in the flow and the level does not fall beyond it.",
+      "zh": "对任意流与依存网，在一步一个条件上：扩展的流中只有活跃者给予，恰当原流中只有活跃者给予且水平不超出净交换而升；只有活跃者取用、且只从其所汲取者取用，恰当原流如此且水平不超出净交换而降。",
+      "declarations": [
+        "Becoming.Flow.withImbalance_acting_at_iff",
+        "Becoming.Flow.withImbalance_taking_at_iff"
+      ]
+    },
+    {
+      "en": "For any flow and web: on a family across a step, only active relata give and take, taking only from what they draw on, in the extended flow exactly where both hold in the flow and it balances; over every step and condition, giving (taking) by active relata alone holds of the extended flow exactly where it does of the flow and no level rises (falls) beyond the net exchange, both exactly where both do and it balances.",
+      "zh": "对任意流与依存网：在一个家族上跨一步，扩展的流中只有活跃者给予、只有活跃者从其所汲取者取用，恰当原流二者都成立且在那里平衡；在所有步与条件上，只有活跃者给予（取用）对扩展的流成立，恰当它对原流成立且水平不超出净交换而升（降）；二者同时成立，恰当原流二者成立且平衡。",
+      "declarations": [
+        "Becoming.Flow.Acting",
+        "Becoming.Flow.Taking",
+        "Becoming.Flow.withImbalance_acting_taking_on_iff",
+        "Becoming.Flow.withImbalance_acting_iff",
+        "Becoming.Flow.withImbalance_taking_iff",
+        "Becoming.Flow.withImbalance_acting_taking_iff"
+      ]
+    },
+    {
+      "en": "For natural numbers, the truncated difference n − m is zero exactly where n is at most m; the added relatum's giving and taking at a condition are the two truncated differences between the condition's level after the step with what the flow takes and its level before with what the flow gives.",
+      "zh": "对自然数，截断差 n − m 为零，恰当 n 至多为 m；新增关系项在一个条件处的给与取，就是该条件步后水平加流所取与步前水平加流所给之间的两个截断差。",
+      "declarations": [
+        "Becoming.sub_eq_zero_of_le",
+        "Becoming.le_of_sub_eq_zero",
+        "Becoming.Flow.withImbalance"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "任意流与依存网；新增的关系项从不活跃、不要求任何东西。",
       "en": "Any flow and web; the added relatum is never active and requires nothing."
     },
     {
-      "zh": "离散的步；自然数的水平。",
-      "en": "Discrete steps; natural-number levels."
+      "en": "Discrete steps; natural-number levels and amounts, with truncated subtraction.",
+      "zh": "离散的步；自然数的水平与量，用截断减法。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The equivalence says neither which of the two readings is better nor where a world balances.",
+      "zh": "等价不说明两种读法哪一种更好，也不说明世界在哪里平衡。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Counting the imbalance does not remove balance as a premise; it moves it to whether the added relatum is idle.",
+      "zh": "算入不平衡不去掉平衡这一前提，只把它移到新增关系项是否闲置。",
+      "kind": "non-implication",
+      "witness": "Becoming.Flow.balancesOn_iff_idle"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
+      "detail": {
+        "zh": "unbalanced 世界，即没有流的 Shuttle 两侧，满足平衡以外的每个前提（World.unbalanced_but）：平衡是世界在满足其余前提时仍可不满足的前提。",
+        "en": "The unbalanced world, the sides of Shuttle with no flow, meets every premise but balance (World.unbalanced_but): balance is a premise a world can fail while meeting the others."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (check_becoming.py): the current bytes of the core modules Becoming.Imbalance, Becoming.Flow, Becoming.Resolution, Becoming.Premises and Becoming.Prelude are bound to passing receipts in becoming-checks/, which report an empty axiom list for every cited declaration and verify that the core compiles from Lean's prelude alone. The author's counterreview is in the integration note; there is no independent review yet.",
+    "zh": "由 Lean 4.29.1 合并检查器（check_becoming.py）实查：核心模块 Becoming.Imbalance、Flow、Resolution、Premises 与 Prelude 的当前字节绑定到 becoming-checks/ 中通过的回执，所引声明的公理报告皆为空，并核对核心只用 Lean 前导即可编译。作者反审见整合文档；尚无独立审查。"
+  },
+  "next_delta": {
+    "en": "Say what the added relatum is in an actual becoming, its exchange being read off as a difference, not observed; state the existing laws on Flow.BalancesOn as the added relatum idle on the family where that reads better, each equivalent through Flow.balancesOn_iff_idle.",
+    "zh": "说明实际生成中新增关系项是什么（它的交换作为差读出，不是观察）；在读来更好之处把核心现有在 Flow.BalancesOn 上陈述的规律写成新增关系项在该家族上闲置（每条经 Flow.balancesOn_iff_idle 等价）。"
+  },
   "correspondence": {
-    "zh": "Ren 2026-10-11 以“please”接受 AI 的建议：把不平衡算作关系项，先作为与现行表示等价的表示加以证明，是否采用由 Ren 定（零前提计划 §1.4 的重新奠定）；Ren 2026-10-14 采用。AI 的读法：算入不平衡后，平衡是表示的性质，它对世界所说的改由一个关系项的不活跃来说。核心的规律仍以 Flow.BalancesOn 为局部条件。",
-    "en": "Ren, 11 October 2026: “please”, to the AI's suggestion that counting an imbalance as a relatum first be proved as a representation equivalent to the current one, adoption staying with Ren (the re-founding of the zero-premise plan, section 1.4); Ren adopted it on 14 October 2026. The AI's reading: with the imbalance counted, balance is a property of the representation, and what it said of a world is said instead by the inactivity of one relatum. The laws of the core keep Flow.BalancesOn as a local condition."
+    "en": "The construction counts the imbalance as a relatum and first proves it a representation equivalent to the current one. Its provenance: Ren's “please” of 11 October 2026 to the AI's suggestion of that order, for a re-founding the zero-premise plan proposed, and his “please, finish all” of 14 October 2026 to the relation-first re-founding, which adopts it. An AI reading: with the imbalance counted, balance is a property of the representation, and what it said of a world is said instead by the inactivity of one relatum. The laws of the core keep Flow.BalancesOn as a local hypothesis; the equivalence of representations makes reading it as the added relatum idle lossless.",
+    "zh": "构造把不平衡算作关系项，并先证明它是与现行表示等价的表示。来源：Ren 2026-10-11 以“please”接受 AI 的这一次序的建议（零前提计划提出的一项重新奠定），以及 Ren 2026-10-14 对关系优先的重新奠定所说的“please, finish all”，该奠定采用了它。AI 的读法：算入不平衡后，平衡是表示的性质，它对世界所说的改由一个关系项的不活跃来说。核心的规律仍以 Flow.BalancesOn 为局部假设；表示之间的等价使把它读作新增关系项闲置不失信息。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Imbalance.lean",
   "aliases": [
@@ -121,23 +211,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
-      "detail": {
-        "zh": "unbalanced 世界，即没有流的 Shuttle 两侧，满足平衡以外的每个前提（World.unbalanced_but）：平衡是世界在满足其余前提时仍可不满足的条件。算入不平衡不去掉这一条件，只移动它：流在一个家族上跨一步平衡，恰当新增的关系项在那里闲置（Flow.balancesOn_iff_idle）；扩展的流在那里满足活动前提，恰当原流满足它们且在那里平衡（Flow.withImbalance_acting_taking_on_iff）。采用之后，这一条件仍是部分的状态：其余是否闲置（World.withRest_closed_iff）。",
-        "en": "The unbalanced world, the sides of Shuttle with no flow, meets every premise but balance (World.unbalanced_but): balance is a condition a world can fail while meeting the others. Counting the imbalance does not remove the condition but moves it: a flow balances on a family across a step exactly where the added relatum is idle there (Flow.balancesOn_iff_idle), and the extended flow meets the activity premises there exactly where the flow meets them and balances there (Flow.withImbalance_acting_taking_on_iff). Adopted, the condition stays a state of a part: whether the rest is idle (World.withRest_closed_iff)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "这是表示之间的等价，使采用无损：核心的规律仍以平衡为局部条件；等价不说明哪种读法更好，也不说明世界在哪里平衡；只对离散步与自然数的量陈述；读法是 AI 的，依 Ren 的交托采用；尚无独立审查。",
-    "en": "This is an equivalence of representations, which makes the adoption lossless: the laws of the core keep balance as a local condition; the equivalence says neither which reading is better nor where a world balances; stated for discrete steps and natural-number amounts; the readings are the AI's, adopted on Ren's delegation; not yet independently reviewed."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Imbalance 的 15 项定理全部空依赖；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §85；尚未经独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 15 theorems of Becoming.Imbalance all have empty axiom reports; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §85 of the integration note; not yet independently reviewed."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Imbalance.lean",
@@ -215,6 +288,12 @@
       "path": "sources/15-codex-theory-conversations/2026-10-11-decidability-local-imbalance-relatum.md",
       "role": "provenance",
       "sha256": "dca76809fcb74c173dd1f04e06b974c9c40292b8b75dd06cb754d08717552246"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-14-relation-first-refounding.md",
+      "role": "provenance",
+      "sha256": "980885e3829d06e83fd7335ac66ccc451a67417748996d4a79223482a2a5bac3",
+      "declarations": []
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
@@ -326,10 +405,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "核心现有的规律在 Flow.BalancesOn 上的陈述是否改写为其余在该家族上闲置（每条经 Flow.balancesOn_iff_idle 等价）；实际生成中其余是什么（它的交换作为差读出，不是观察）；独立审查。",
-    "en": "Whether the existing laws stated on Flow.BalancesOn are rewritten as the rest idle on the family (each is equivalent through Flow.balancesOn_iff_idle); what the rest is in an actual becoming (its exchange is read off as a difference, not observed); an independent review."
-  },
   "history": [
     {
       "zh": "2026-10-12 P59：新增，按Ren 2026-10-11 以“please”接受 AI 的建议：把不平衡算作关系项，先作为与现行表示等价的表示加以证明，是否采用由 Ren 定；新核心模块 Becoming.Imbalance，按工作板认领；见整合文档 §85。",
@@ -399,6 +474,28 @@
     {
       "en": "2026-10-20: 73 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/38f8c3edb3835a7a/imbalance-as-relatum.json and in git.",
       "zh": "2026-10-20：73 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/38f8c3edb3835a7a/imbalance-as-relatum.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title and statement kept; the claim split into six laws, each read against its declarations in Imbalance.lean, Flow.lean, Resolution.lean and Prelude.lean; the limitations to two does-not-show items, the standard boundaries no-ethical-premise, discrete-steps and names-provisional, the second hypothesis (now with amounts and truncated subtraction) and, for the adoption's losslessness, the correspondence; the counterexample kept to its witnessed first sentence, “condition” there read as premise, as Premises.lean has it, its restatement of two laws carried by laws three and five, “does not remove the condition but moves it” by a does-not-show item (premise for condition), and its last sentence by the related entry premises-read-off-the-exchange; the next step stated positively; “local condition” in the correspondence read as local hypothesis, the glossary keeping condition for a relatum's role; the correspondence's adoption by Ren restated as the construction with his words as provenance, and the source of “please, finish all” added as a provenance reference; no premise's content, status, proof binding or source hash changed. Every earlier sentence is mapped in [imbalance-as-relatum.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/imbalance-as-relatum.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the next step, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题与陈述保留；主张拆为六条规律，各条对照 Imbalance.lean、Flow.lean、Resolution.lean 与 Prelude.lean 中的声明核读；限制改为两条“未表明”、通用边界 no-ethical-premise、discrete-steps、names-provisional、第二条前提（现含量与截断减法），采用无损一句移入对应说明；反例只保留其有见证的第一句（其中“条件”按 Premises.lean 读作前提），其对两条规律的复述由第三、第五条规律承载，“不去掉条件而移动它”由一条“未表明”承载，末句由相关项 premises-read-off-the-exchange 承载；下一步以正面陈述；对应说明中的“局部条件”按词汇表读作局部假设（条件只指关系项的角色）；对应说明中 Ren 的采用改写为构造，以其原话为来源，并为“please, finish all”加入来源引用；前提的内容、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [imbalance-as-relatum.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/imbalance-as-relatum.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、下一步，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/d17ca4b70da3997b/imbalance-as-relatum.json",
+      "sha256": "d17ca4b70da3997b35623adea4ab26c0ed60771c7cc7587662d0ef9230582b4a",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/38f8c3edb3835a7a/imbalance-as-relatum.json",
+      "sha256": "38f8c3edb3835a7a27eb43414ec4bcbc845c2b4ff033e5a9eb1aca4982ea1afe",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

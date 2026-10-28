@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "id": "historical-source-binding",
+  "title": {
+    "zh": "来源历史约束旧内容绑定",
+    "en": "Source histories constrain retained-content binding"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F09",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "claim": {
+    "zh": "对每类历史、日期、关系、探测与报告：实际历史总符合其日期化记录，一历史符合这些记录当且仅当它给出相同记录；报告与内容可判定地比较时，以符合记录的族内历史与被允许来源对旧报告包的每个解释都给出实际内容，当且仅当每个以另一内容给出同一报告包的族内对手都被某一日期化控制区分；族含实际历史时，一致读数即实际读数。在日期上，关系之值可判定地比较且含两个不同的值时，区间两端读数相同的控制确定其间每个日期，当且仅当至多允许一次变化或其间无日期；两端所见的变化不被定位。四时刻来源史是实例：在实际历史与扰动覆盖下，各旧记录日期的路径候选接通唯一绑定正确性，不需全程路径不变；一次变化范围内，一致的先前与随后控制确定命名时刻，故后来退化与改善都读对；仅有晚期控制、只有前后控制及遗漏的暂时变化（族外读错，两次变化族内未定）是该律不成立的一侧。",
+    "en": "For every type of histories, dates, relations, probes and reports: the actual history always fits its dated records, and a history fits them exactly when it gives the same records; with reports and contents compared decidedly, every explanation of an earlier packet by a family history fitting the records and an admitted source gives the actual content exactly when every family rival giving the same packet with another content is told apart by some dated control; where the family holds the actual history, an agreed reading is the actual one. Over dates, where the relation's values are compared decidedly and include two distinct ones, controls at both ends of a span that read the same settle every date between exactly when at most one change is admitted or no date lies strictly between, and a change seen at both ends is not located. The four-moment source histories are instances: under actual-history and disturbance coverage, route candidates at each retained packet's date supply unique-binding correctness without global route stability; in the one-change envelope, agreeing prior and following controls settle naming, so later deterioration and improvement are read right, while a late control alone, controls only before and after, and an omitted temporary change (read wrongly outside the family, left open inside the two-change family) are the law's failing side."
+  },
+  "hypotheses": [
+    {
+      "zh": "来源身份、四时刻顺序、形式识别、原子操作、解码器与控制可靠性已具备；路径族及变化／扰动范围明示给定。",
+      "en": "Source identity, four-moment ordering, form recognition, atomic operations, decoding and faithful controls are available; route family and change/disturbance envelopes are supplied."
+    },
+    {
+      "zh": "一般正确性要求实际历史在候选中，目标在可用操作中，各相关记录对应相同目标并有受覆盖扰动。实际历史与变化点不输入学习器。",
+      "en": "General correctness requires the actual history in the candidate family, target in the available repertoire, and each relevant packet realizing that target with an admitted disturbance. The actual history and change point are not learner inputs."
+    },
+    {
+      "zh": "成功见证使用至多一次路径改变及已知共同扰动；这些不是从数据取得的事实。",
+      "en": "Successful witnesses use at most one route change and a known common packet disturbance; these are not facts learned from the data."
+    }
+  ],
+  "correspondence": {
+    "zh": "同一报告关系改变，旧内容保留而后得证据改变其历史解释。控制探测与儿童熟悉命名不等同；当前信任调整也不识别回溯重释。 发育与比较原典要求区分访问辨别的取得、来源／次序保持及特定任务中的使用；一种成功不验证全部接口。",
+    "en": "Reporting relations change while old contents persist; later evidence changes their historical interpretation. Controlled probes are not equivalent to children’s familiar naming, and present trust adjustment does not identify retrospective reinterpretation. Developmental and comparative primary evidence requires distinguishing acquired access sensitivity, source/order retention and task-specific use; one successful response does not validate every interface."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
+  "aliases": [
+    "Generative.HistoricalBinding.acquired_history_supplies_binding_coverage",
+    "Becoming.Retrodiction.reading_right_iff",
+    "Becoming.Retrodiction.bracket_settles_iff",
+    "Becoming.RetrodictionInstances.controls_settle_naming",
+    "Becoming.Courses.runs_reading_right_iff",
+    "Becoming.Courses.runs_settle_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "retrospective-source-binding",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "直接复用covered_packet_preserves_atomic_content及alternatives，把历史中相应日期的路径候选转为旧内容候选。",
+        "en": "Directly reuses covered_packet_preserves_atomic_content and alternatives to turn dated history projections into old-content candidates."
+      },
+      "interface": {
+        "output": {
+          "zh": "实际历史被保留，故其旧日期路径在投影候选中。",
+          "en": "The actual history is retained, so its route at the old date belongs to the projection."
+        },
+        "input": {
+          "zh": "旧报告到原子候选的覆盖定理需要实际路径与扰动被包含。",
+          "en": "The report-to-atomic-candidate coverage theorem requires actual route and disturbance inclusion."
+        },
+        "conditions": {
+          "zh": "历史族覆盖、忠实日期化控制和旧扰动覆盖。",
+          "en": "History-family coverage, faithful dated controls and old-disturbance coverage."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean"
+      }
+    },
+    {
+      "id": "acquired-binding-compositional-use",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "acquired_history_supplies_binding_coverage调用既有unique_resolution_is_correct_under_coverage。",
+        "en": "acquired_history_supplies_binding_coverage invokes existing unique_resolution_is_correct_under_coverage."
+      },
+      "interface": {
+        "output": {
+          "zh": "每个相关旧记录的候选包含实际原子目标。",
+          "en": "Each relevant old packet’s alternatives contain the actual atomic target."
+        },
+        "input": {
+          "zh": "既有唯一绑定正确性所需的逐记录目标覆盖。",
+          "en": "Per-record target coverage required by existing unique-binding correctness."
+        },
+        "conditions": {
+          "zh": "目标可用、记录实现条件及唯一解成立。",
+          "en": "Available target, packet-realization hypotheses and unique resolution."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
+      "detail": {
+        "zh": "未定位变化或未知扰动保持不确定；遗漏暂时改变可使旧内容误绑，扩大变化族后恢复不确定。",
+        "en": "Unlocated change or unknown disturbance preserves uncertainty; an omitted temporary change produces a wrong old binding, while widening the change family restores uncertainty."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "不是发育身份／时序保持或持续性假设的形成，不是任意长度史、完整成本账、新神经机制、意识或演化起源；一般过滤并非本项目新发明。 原典任务差异未识别迁移的因果调节因素，非人表现也未证明同源或适应史。",
+    "en": "Does not form developmental identity/time retention or persistence assumptions, prove arbitrary-length histories, provide a complete cost account, or identify neural mechanisms, consciousness or evolutionary origins. General filtering is not a new invention of this project. Cross-study task differences do not identify the causal moderator of transfer, and nonhuman performance does not establish homology or adaptation."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1实查10项新定理／36项声明；继承304项定理／549项声明分列重建。新25项空依赖、11项含propext及Quot.sound；继承闭含Classical.choice。原典比较与作者反审，无新经验复算或独立agent验收。 本次追加五篇原典的方法、结果与相关讨论评估，无新数学或经验复算；原始Lean回执不改写。一般律已由检查器回执绑定。",
+    "en": "Lean 4.29.1 checked 10 new theorems / 36 declarations; 304 inherited theorems / 549 declarations rebuilt separately. New audits: 25 empty, 11 propext and Quot.sound; inherited closure contains Classical.choice. Primary comparison and author counterreview; no empirical reanalysis or independent-agent acceptance. This addition assesses methods, results and relevant discussion in five primary papers, with no new mathematics or empirical reanalysis; original Lean receipts remain unchanged. General laws: checker receipts bound."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
+      "role": "proof",
+      "sha256": "d9acb084e22fd2abb430b0ddf1591514ecdf69e8f3281eff8030d8273a7524bd",
+      "declarations": [
+        "Generative.HistoricalBinding.acquired_history_supplies_binding_coverage",
+        "Generative.HistoricalBinding.later_deterioration_does_not_invalidate_earlier_content",
+        "Generative.HistoricalBinding.later_improvement_does_not_rehabilitate_earlier_false_reports",
+        "Generative.HistoricalBinding.known_change_without_location_does_not_settle_the_old_binding",
+        "Generative.HistoricalBinding.omitted_temporary_change_defeats_backward_confidence"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/RetrospectiveBinding.lean",
+      "role": "proof",
+      "sha256": "e573e973b423b48ccd45fbd8dae88b84788b43c03cf39aa18558f6991bb418de",
+      "declarations": [
+        "Generative.RetrospectiveBinding.covered_packet_preserves_atomic_content"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean",
+      "role": "proof",
+      "sha256": "0395ecdcce1d3d4712930497ace63d030279e3fe610a60f945d372e45878946d",
+      "declarations": [
+        "Generative.AcquiredBinding.unique_resolution_is_correct_under_coverage"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retrodiction.lean",
+      "role": "proof",
+      "sha256": "3ba0564c28b3c302efd0c6c0c445fbe315387a8dde982c74ab80d00ba9314a8b",
+      "declarations": [
+        "Becoming.Retrodiction.Fits",
+        "Becoming.Retrodiction.acquire",
+        "Becoming.Retrodiction.Separated",
+        "Becoming.Retrodiction.actual_candidate",
+        "Becoming.Retrodiction.fits_iff_same",
+        "Becoming.Retrodiction.reading_right_iff",
+        "Becoming.Retrodiction.agreed_reading_actual",
+        "Becoming.Retrodiction.look_right_iff",
+        "Becoming.Retrodiction.changes",
+        "Becoming.Retrodiction.bracket",
+        "Becoming.Retrodiction.excursion_changes",
+        "Becoming.Retrodiction.bracket_settles_iff",
+        "Becoming.Retrodiction.change_unlocated"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RetrodictionInstances.lean",
+      "role": "proof",
+      "sha256": "16a534d2e0c78887caab377d4b4b89602eed49b02954bd6e3cbf4b7e53b81d5d",
+      "declarations": [
+        "Becoming.RetrodictionInstances.acquire_eq",
+        "Becoming.RetrodictionInstances.fits_iff",
+        "Becoming.RetrodictionInstances.actual_history_retained_from_law",
+        "Becoming.RetrodictionInstances.packet_read_iff",
+        "Becoming.RetrodictionInstances.shares_read_iff",
+        "Becoming.RetrodictionInstances.course_changes_le",
+        "Becoming.RetrodictionInstances.controls_settle_naming",
+        "Becoming.RetrodictionInstances.deterioration_settled",
+        "Becoming.RetrodictionInstances.improvement_settled",
+        "Becoming.RetrodictionInstances.late_control_reading_fails",
+        "Becoming.RetrodictionInstances.split_controls_reading_fails",
+        "Becoming.RetrodictionInstances.excursion_course",
+        "Becoming.RetrodictionInstances.excursion_agreed_wrong",
+        "Becoming.RetrodictionInstances.excursion_reading_fails"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/historical-binding-verification.json",
+      "role": "receipt",
+      "sha256": "096fedbaed6c761463fc77feef25016d18a56dc547aec74b525eda57bb9ba4f0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ACQUIRED-SEGMENTATION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "af59ef64dfa54c9dad65edbbc5be3da2668f63d7b6154f42e151daca57033c15",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/TEMPORAL-INSPECTION-INTEGRATION.md",
+      "role": "provenance",
+      "sha256": "d8a979b502e4ad9e4a8750eb4b2d34963c746bce4223e98d538d3a7ae76ca898",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T044840.291323Z/verification.json",
+      "role": "receipt",
+      "sha256": "6d4711df073c8ece68a00ef4097ad5b149adb2ef04c8832a145ef90d02b10e98",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261014T045409.164228Z/verification.json",
+      "role": "receipt",
+      "sha256": "a3eb20d4005696835aee35fcba1c7bb8496f15d8e065ba65c8bb74783c42ee4a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "role": "proof",
+      "sha256": "72fd570fa32c3fc6bd0458f4b0793bb7ce9365f7b1276aaddf323ca05b2afc86",
+      "declarations": [
+        "Becoming.Courses.runs_reading_right_iff",
+        "Becoming.Courses.runs_settle_iff",
+        "Becoming.Courses.runs_look_right_iff",
+        "Becoming.Courses.anyChange",
+        "Becoming.Courses.anyRun",
+        "Becoming.Courses.run_settles"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
+      "role": "receipt",
+      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261020T161914.501944Z/verification.json",
+      "role": "receipt",
+      "sha256": "4b89c730c7168ff864626508ab8e838def2fc78c2666d3b07a5eec3f01c25980",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/historical-binding-verification.json",
+      "sha256_pointer": "/source_sha256/HistoricalBinding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/RetrospectiveBinding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/historical-binding-verification.json",
+      "sha256_pointer": "/source_sha256/RetrospectiveBinding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/historical-binding-verification.json",
+      "sha256_pointer": "/source_sha256/AcquiredBinding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retrodiction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Retrodiction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RetrodictionInstances.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261020T161914.501944Z/verification.json",
+      "sha256_pointer": "/source_sha256/RetrodictionInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Courses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "既有条件连接保留；下一重点是在匹配发育程序中识别已取得访问及所保留来源／次序如何进入实际使用，分别观察当前依赖与旧内容认可。原典已约束自动迁移，但未识别唯一机制或演化史。",
+    "en": "Preserve the completed conditional connections. Next identify how formed access and retained source/order information guide actual use in a matched developmental procedure, distinguishing present reliance from old-content endorsement. Primary evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：新增历史到绑定的条件组合，保留全程稳定的早先成果及暂时变化反例；完整认知目标继续。",
+      "en": "2026-10-09: added the conditional history-to-binding composition, preserving the earlier stable-route result and temporary-change failure. The full cognitive goal continues."
+    },
+    {
+      "zh": "2026-10-14：按旧记录一般律审计，主张改为一般律先行（新核心模块 Becoming.Retrodiction）：旧报告包读对恰当每个族内对手被某一日期化控制区分；两端控制确定其间日期恰当至多一次变化，短暂变化是反例。外围 RetrodictionInstances 把四时刻来源史陈述为实例：后来退化与改善由 bracket 读对，晚期控制、前后控制与遗漏短暂变化是失败一侧。scratch_build 实编；回执由落地运行绑定。原定理、回执与反例不变。",
+      "en": "2026-10-14: under the general-law audit of older records, the claim now states the law first (new core module Becoming.Retrodiction): an earlier packet is read right exactly when every family rival is told apart by some dated control; controls at both ends settle the dates between exactly under at most one change, with the excursion as the counterexample. The periphery RetrodictionInstances states the four-moment histories as instances: later deterioration and improvement are read right by bracket, and the late-control, split-control and omitted-excursion cases are the failing side. Built with scratch_build; the landing run binds the receipt. The original theorems, receipt and counterexamples are unchanged."
+    },
+    {
+      "en": "14 October 2026, seventeenth independent review ([BECOMING-GENERAL-LAWS-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-GENERAL-LAWS-REVIEW.md)), finding G4: the bracket law (`bracket_settles_iff`) needs the two end controls to read the same, and the relation to take two values; where the ends differ, one change leaves the dates between unsettled (`change_unlocated`). The claim now states both conditions.",
+      "zh": "2026年10月14日，第十七次独立审查（[BECOMING-GENERAL-LAWS-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-GENERAL-LAWS-REVIEW.md)）发现 G4：区间律（`bracket_settles_iff`）需要两端控制读数相同、关系取两值；两端不同时，一次变化也不能确定其间的日期（`change_unlocated`）。主张现写出这两项条件。"
+    },
+    {
+      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：以过程的运行为历史、以某日期的构型为当时所立的关系：由实际运行与隐藏来源产生的日期 d 的包，一族中符合带日期记录的运行与被容许来源所作的每个解释都给出实际内容，恰当该族中以某被容许来源给出同一包而内容不同的每个运行，都被某个带日期的控制与实际运行分开（runs_reading_right_iff；读一个日期的构型，runs_look_right_iff）。每种变化都被容许、两个构型不同时，两端的控制使每个运行上其间的日期都已定，恰当至多容许一次变化或其间没有日期（runs_settle_iff；对每个过程的充分方向，run_settles）。Becoming.Courses 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
+      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: with the runs of a process as the histories and the configuration at a date as the relation then holding: every explanation of the packet at date d, produced by the actual run and the hidden source, by a family run fitting the dated records and an admitted source gives the actual content exactly when every family run giving the same packet with another content under some admitted source is told apart from the actual run by a dated control (runs_reading_right_iff; reading the configuration at a date, runs_look_right_iff). Where every change is admitted and two configurations differ, controls at both ends settle the dates between on every run exactly when at most one change is admitted or no date lies strictly between (runs_settle_iff; the sufficient direction for every process, run_settles). Becoming.Courses is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Courses.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Courses.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Courses.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Courses.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Courses.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Courses.lean, Retrodiction.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Courses.lean, takes as its final sections RetrodictionRuns, CandidateRuns, ReducedRuns, the modules reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Retrodiction.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Courses.lean、Retrodiction.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Courses.lean，以末节收入 RetrodictionRuns、CandidateRuns、ReducedRuns（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；Retrodiction.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 21 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/724d5d66dcdfab01/historical-source-binding.json and in git.",
+      "zh": "2026-10-20：21 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/724d5d66dcdfab01/historical-source-binding.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the claim names the decidability its laws take (reports and contents compared decidedly for reading an earlier packet right; the relation's values compared decidedly for counting changes) and says the span law needs two distinct values of the relation, not a relation taking only two; the Lean is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张写明其定律所需的可判定性（读对旧报告包需报告与内容可判定地比较；计数变化需关系之值可判定地比较），并说区间律需要关系之值含两个不同的值，而非关系只取两值；Lean 不变。"
+    }
+  ]
+}

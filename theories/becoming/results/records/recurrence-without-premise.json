@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "recurrence-without-premise",
   "title": {
     "zh": "每个变化之律下的复现",
@@ -8,28 +8,204 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-28T12:02:25+00:00",
   "statement": {
-    "zh": "每个变化之律在有限多构型中：不合并即回返即保留每个可能，上升需要合并；保留其历史的生成无损、不回返而需要开放，有限的当下遗忘；不加前提。",
-    "en": "For every law of change within finitely many configurations, merging nothing is returning is keeping every possibility, and a rise needs a merge; becoming that keeps its history loses nothing, never returns and needs openness, and a finite present forgets; no premise is used."
+    "en": "With every configuration listed, a determined law merges nothing exactly where every configuration returns, exactly where it keeps every possibility, and a never-falling quantity that rises rules that out; a kept history merges nothing, never returns and is held by no list; a listed present forgets.",
+    "zh": "有列表持有每个构型时，确定之律不合并，恰当每个构型回返，恰当它保留每个可能，而从不下降的量上升则排除不合并；保留的历史不合并、从不回返、没有列表持有它；列表所持有的当下会遗忘。"
   },
-  "claim": {
-    "zh": "对任意构型上的任意变化之律，不加前提、不用可判定性。鸽巢：一个列表持有一个序列的前 l.length + 1 项时其中两项相同（revisits_within，只用给定的成员关系）；所以列表持有的序列从每一步起都重访（revisits_from），任何过程的任何运行也是（Run.revisits_from），从不重访的序列没有列表持有（unheld_of_new、unlisted_of_new）。构型的量沿序列从不下降、跨每次变化都上升（Marks）时，列表持有的序列的变化不复现（Marks.change_not_recurring、Run.change_not_recurring）。对确定的律 next（Law.orbit）：某步不能到达的构型此后都不能到达（Law.lost_stays；任何过程中沿可行路径失去的可达在每个延续中失去，Reach.lost_stays）；被合并的构型此后不分开（Law.merged_stays）；每个构型都回返时律不合并（Law.lossless_of_returns）；回返的构型每一步都可得（Branching.Returns.reachable，在 Law.process 上）；撤销就是继续（Law.Returns.undo）。列表持有每个构型时：律不合并（Law.Lossless）恰是每个构型都回返（Law.lossless_iff_returns），恰是每个构型在每一步都可得（Law.returns_iff_keeps）；合并永久失去一个可能（Law.Merges.loses）；无损而有构型不回返就没有列表持有每个构型（Law.Lossless.unlisted）；无损时沿轨道从不下降的量不变（Law.Lossless.no_rise），所以从不下降而某步上升的量需要合并（Law.rise_not_lossless）。开放的见证：Nat.succ 不合并、不回返、一步后不能再有 0、每步上升（Law.succ_open）；Nat.pred 合并 0 与 1 而每个数每步都可得（Law.pred_open）。保留历史（Law.withHistory：当下按律继续并进入过去）：每个律都不合并（Law.withHistory_lossless）、不重访（Law.withHistory_new）、不回返（Law.withHistory_never_returns），开端在第一步后不能再有（Law.withHistory_loses_beginning），没有列表持有所保留的历史（Law.withHistory_unlisted）；当下按律本身继续（Law.present_orbit），当下回返时带着另一段历史（Law.return_keeps_history）；展开经过的构型有列表持有时，从每一步起两段不同的历史共有一个当下（Law.present_forgets）。确定的律是脊柱的过程，其轨道是一个运行（Law.process、Law.run）。",
-    "en": "For every law of change on configurations of any kind, with no premise and no decidability. Pigeonhole: a list holding the first l.length + 1 values of a sequence holds two equal ones (revisits_within, using membership as given); so a sequence held by a list revisits from every step on (revisits_from), as does every run of every process (Run.revisits_from), and no list holds a sequence that never revisits (unheld_of_new, unlisted_of_new). Where a quantity of the configuration never falls along a sequence and rises across every change (Marks), the change of a sequence held by a list does not recur (Marks.change_not_recurring, Run.change_not_recurring). Under a determined law next (Law.orbit): a configuration not reachable at a step is not reachable at any later step (Law.lost_stays; for every process, reachability lost along an admissible path is lost along every continuation, Reach.lost_stays); merged configurations are never told apart again (Law.merged_stays); where every configuration returns the law merges nothing (Law.lossless_of_returns); a configuration that returns can be had at every step (Branching.Returns.reachable at Law.process); undoing is going on (Law.Returns.undo). Where a list holds every configuration: the law merges nothing (Law.Lossless) exactly where every configuration returns (Law.lossless_iff_returns), and exactly where every configuration can be had at every step (Law.returns_iff_keeps); a merge loses a possibility for good (Law.Merges.loses); a law merging nothing under which some configuration never returns has no list holding every configuration (Law.Lossless.unlisted); merging nothing, a quantity that never falls along an orbit keeps its value (Law.Lossless.no_rise), so one that never falls and rises at some step needs a merge (Law.rise_not_lossless). Open witnesses: Nat.succ merges nothing, never returns, cannot have 0 again after one step and rises at every step (Law.succ_open); Nat.pred merges 0 and 1, yet every number can be had at every step (Law.pred_open). Keeping its history (Law.withHistory: the present goes on by the law and passes into the past), every law merges nothing (Law.withHistory_lossless), never revisits (Law.withHistory_new) and never returns (Law.withHistory_never_returns); its beginning cannot be had again after the first step (Law.withHistory_loses_beginning), and no list holds the kept history (Law.withHistory_unlisted); the present goes on by the law itself (Law.present_orbit), and where it returns it comes back with another history (Law.return_keeps_history); where a list holds the configurations an unfolding passes through, from every step on two different histories share one present (Law.present_forgets). A determined law is a process of the spine, and its orbit a run of it (Law.process, Law.run)."
-  },
+  "laws": [
+    {
+      "en": "Pigeonhole, with no decidability: for any list l and sequence g with g n in l for every n up to the length of l, some i < j up to that length have g i = g j, membership used as given. A sequence a list holds revisits from every step on, and so does every run of every process whose configurations a list holds.",
+      "zh": "鸽巢，不用可判定性：对任一列表 l 与序列 g，若对每个不超过 l 长度的 n 有 g n 在 l 中，则有 i < j 且 j 不超过该长度使 g i = g j，成员关系按所给使用。列表所持有的序列从每一步起都重访，构型为列表所持有的每个过程的每个运行亦然。",
+      "declarations": [
+        "Becoming.revisits_within",
+        "Becoming.Revisits",
+        "Becoming.revisits_of_held",
+        "Becoming.revisits_from",
+        "Becoming.Run.revisits_from"
+      ]
+    },
+    {
+      "en": "Never revisiting needs openness: a sequence that never meets one configuration twice has, for no list l, all of its first l.length + 1 values in l, and no list holds the sequence.",
+      "zh": "从不重访需要开放：从不两次遇到同一构型的序列，对任何列表 l，它的前 l.length + 1 个值都不全在 l 中；没有列表持有这个序列。",
+      "declarations": [
+        "Becoming.unheld_of_new",
+        "Becoming.unlisted_of_new"
+      ]
+    },
+    {
+      "en": "A quantity marks the changes of a sequence where it never falls along it and rises across every step at which the configuration changes. Where a list holds the configurations of a sequence, or of a run of any process, and a quantity marks its changes, change does not recur: not every step has a later change. While change recurs within a list, no quantity marks it.",
+      "zh": "量标记序列的变化，是指它沿序列从不下降，且在构型改变的每一步上升。列表持有一个序列（或任一过程的一个运行）的构型、且有量标记其变化时，变化不复现：并非每一步之后都还有变化。变化在列表内复现时，没有量标记它。",
+      "declarations": [
+        "Becoming.Marks",
+        "Becoming.Marks.change_not_recurring",
+        "Becoming.Run.change_not_recurring",
+        "Becoming.not_marks"
+      ]
+    },
+    {
+      "en": "A determined law next on configurations of any kind is a process of the spine with one move, the step to next s, and its orbit from s is the run of that process from s.",
+      "zh": "任何类型构型上的确定之律 next 是脊柱的一个过程，只有一个动作，即走到 next s 的一步；它从 s 出发的轨道就是该过程从 s 出发的运行。",
+      "declarations": [
+        "Becoming.Law.process",
+        "Becoming.Law.orbit",
+        "Becoming.Law.run",
+        "Becoming.Law.run_state"
+      ]
+    },
+    {
+      "en": "Under a determined law, a configuration that cannot be had n steps on cannot be had at any later step; for every process, a configuration not reachable from t is not reachable from anything reachable from t; and configurations merged stay merged, their orbits agreeing from the first step on.",
+      "zh": "确定之律下，n 步之后不能有的构型在之后任何一步都不能有；对每个过程，从 t 不可达的构型，从 t 可达的任何构型也都不可达；被合并的构型保持合并，其轨道从第一步起相同。",
+      "declarations": [
+        "Becoming.Law.Reachable",
+        "Becoming.Law.reachable_iff",
+        "Becoming.Law.lost_stays",
+        "Becoming.Reach",
+        "Becoming.Reach.lost_stays",
+        "Becoming.Law.merged_stays"
+      ]
+    },
+    {
+      "en": "A configuration returns where some positive number of steps leads it back to itself. Where every configuration returns, the law merges nothing, two configurations with one successor being equal; for every process a configuration that returns can be had at every step; and where s returns, further steps lead from next s back to s.",
+      "zh": "构型回返，是指某个正的步数把它带回自身。每个构型都回返时，律不合并（后继相同的两个构型相等）；对每个过程，回返的构型在每一步都能有；s 回返时，从 next s 出发的若干步回到 s。",
+      "declarations": [
+        "Becoming.Law.Returns",
+        "Becoming.Law.returns_iff",
+        "Becoming.Law.Lossless",
+        "Becoming.Law.lossless_iff",
+        "Becoming.Law.lossless_of_returns",
+        "Becoming.Branching.Returns.reachable",
+        "Becoming.Law.Returns.undo"
+      ]
+    },
+    {
+      "en": "Where a list holds every configuration, a determined law merges nothing exactly where every configuration returns, and every configuration returns exactly where every configuration can be had at every step.",
+      "zh": "有列表持有每个构型时，确定之律不合并，恰当每个构型都回返；每个构型都回返，恰当每个构型在每一步都能有。",
+      "declarations": [
+        "Becoming.Law.lossless_iff_returns",
+        "Becoming.Law.Lossless.returns",
+        "Becoming.Law.returns_iff_keeps",
+        "Becoming.Law.KeepsPossibilities",
+        "Becoming.Law.keeps_iff"
+      ]
+    },
+    {
+      "en": "Where a list holds every configuration: if every configuration can be had as many steps on as the list is long, the law merges nothing; and a law that merges two configurations does not have every configuration reachable that many steps on.",
+      "zh": "有列表持有每个构型时：若每个构型在列表长度那么多步之后都能有，律就不合并；合并两个构型的律，并非每个构型在那么多步之后都能有。",
+      "declarations": [
+        "Becoming.Law.lossless_of_reachable",
+        "Becoming.Law.Merges",
+        "Becoming.Law.merges_iff",
+        "Becoming.Law.Merges.loses"
+      ]
+    },
+    {
+      "en": "A determined law that merges nothing and under which some configuration does not return has no list holding every configuration.",
+      "zh": "不合并、且某个构型在其下不回返的确定之律，没有列表持有每个构型。",
+      "declarations": [
+        "Becoming.Law.Lossless.unlisted"
+      ]
+    },
+    {
+      "en": "Where a list holds every configuration and the law merges nothing, a quantity that never falls along an orbit keeps its value along it; so, with such a list, where a quantity never falls along an orbit and rises at some step of it, it is not the case that the law merges nothing.",
+      "zh": "有列表持有每个构型且律不合并时，沿轨道从不下降的量沿轨道保持其值；所以有这样的列表时，量沿轨道从不下降而在某一步上升，则并非律不合并。",
+      "declarations": [
+        "Becoming.Law.Lossless.no_rise",
+        "Becoming.Law.rise_not_lossless"
+      ]
+    },
+    {
+      "en": "On the natural numbers the three come apart: under the successor on the natural numbers nothing merges, no number returns, zero cannot be had one step on, and every orbit rises at every step; under the predecessor two numbers merge (zero and one), yet every number can be had at every step.",
+      "zh": "在自然数上三者分开：自然数的后继之下没有合并、没有数回返、零在一步之后不能有、每条轨道每步上升；前驱之下有两个数合并（零与一），而每个数在每一步都能有。",
+      "declarations": [
+        "Becoming.Law.succ_open",
+        "Becoming.Law.pred_open"
+      ]
+    },
+    {
+      "en": "Keeping its history, the present going on by the law and passing into the past, every law merges nothing, never revisits along an orbit and returns no configuration; a kept history with nothing past cannot be had one or more steps on; no list holds a kept history's orbit; and its present goes on by the law itself.",
+      "zh": "保留其历史（当下按律继续并转入过去）时，每个律都不合并，沿轨道从不重访，不让任何构型回返；没有过去的保留历史在一步或更多步之后不能有；没有列表持有保留历史的轨道；其当下按律本身继续。",
+      "declarations": [
+        "Becoming.Law.withHistory",
+        "Becoming.Law.withHistory_lossless",
+        "Becoming.Law.withHistory_new",
+        "Becoming.Law.withHistory_never_returns",
+        "Becoming.Law.withHistory_loses_beginning",
+        "Becoming.Law.withHistory_unlisted",
+        "Becoming.Law.present_orbit"
+      ]
+    },
+    {
+      "en": "Where s returns after p > 0 steps, the kept history from s with any past has, p steps on, the present s again and differs from where it began. Where a list holds the configurations an orbit from s passes through, from every step on two steps of the kept history from s with nothing past share one present and differ in history.",
+      "zh": "s 在 p > 0 步后回返时，从 s 带任意过去出发的保留历史，在 p 步后当下又是 s，而与起点不同。列表持有从 s 出发的轨道所经的构型时，从每一步起，从 s 出发、没有过去的保留历史都有两步当下相同而历史不同。",
+      "declarations": [
+        "Becoming.Law.return_keeps_history",
+        "Becoming.Law.present_forgets"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "无关于展开或变化之律的前提，不用可判定性。“某个列表持有这些构型”不对任何展开假设，作为条件写进用到它的规律之内。",
       "en": "No premise about the unfolding or the law of change, and no decidability. That a list holds the configurations is assumed of no unfolding; it is the condition written into each law that uses it."
     },
     {
-      "zh": "表示的承诺：离散的步。无损、回返与保留可能的等价只对确定的律（next : S → S）陈述；重访、变化停止与失去的可达保持失去对每个过程陈述。",
-      "en": "Commitment of the representation: discrete steps. The equivalence of losing nothing, returning and keeping every possibility is stated for determined laws (next : S → S); revisiting, change stopping and lost reachability staying lost are stated for every process."
+      "en": "Commitment of the representation: discrete steps. The equivalence of merging nothing, returning and keeping every possibility is stated for determined laws (next : S → S); revisiting, change not recurring and lost reachability staying lost are stated for every process.",
+      "zh": "表示的承诺：离散的步。不合并、回返与保留可能的等价只对确定的律（next : S → S）陈述；重访、变化不复现与失去的可达保持失去对每个过程陈述。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Finitely many configurations means that a list holds them, not a cardinality, and no decision of equality comes with it.",
+      "zh": "“有限多构型”指某个列表持有它们，不是基数，也不附带相等的判定。",
+      "kind": "scope"
+    },
+    {
+      "en": "The equivalence of merging nothing, returning and keeping every possibility is shown for determined laws only, not for processes whose course branches.",
+      "zh": "不合并、回返与保留每个可能的等价只对确定的律证明，没有对路径分岔的过程证明。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a rise rules out merging nothing does not exhibit two configurations that merge.",
+      "zh": "上升排除不合并，并不给出两个被合并的构型。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a present forgets is two different kept histories sharing one present; no count of what is forgotten is given, which would need equality of configurations decided.",
+      "zh": "当下遗忘指两段不同的保留历史共有一个当下；没有给出所遗忘者的计数，那需要构型相等可判定。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That change does not recur is a negated recurrence, not a step named after which nothing changes.",
+      "zh": "“变化不复现”是复现的否定，不是指出某步之后不再变化。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "detail": {
+        "zh": "有限多构型这一条件两个方向都需要：Nat.succ 不合并而不回返、失去开端并且每步上升（Law.succ_open），Nat.pred 合并而保留每个可能（Law.pred_open）。",
+        "en": "The condition of finitely many configurations is needed both ways: Nat.succ merges nothing yet never returns, loses its beginning and rises at every step (Law.succ_open), and Nat.pred merges yet keeps every possibility (Law.pred_open)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Recurrence and Becoming.Frame are bound to core receipt becoming-checks/20261025T182341.971697Z, Becoming.Labelled to 20261028T085101.429997Z and Becoming.Prelude to 20261021T133545.845568Z; every cited declaration has an empty axiom report. The mathematics is standard (pigeonhole; an injection of a finite set into itself is a bijection), proved here without decidability. The author's counterreview is in the integration note; there is no independent review.",
+    "zh": "Lean 4.29.1 合并检查器实查：Becoming.Recurrence 与 Becoming.Frame 的当前字节绑定核心回执 becoming-checks/20261025T182341.971697Z，Labelled 绑定 20261028T085101.429997Z，Prelude 绑定 20261021T133545.845568Z；所引声明的公理报告均为空。数学是标准的（鸽巢；有限集到自身的单射是双射），这里不用可判定性证明。作者反审见整合文档；无独立审查。"
+  },
+  "next_delta": {
+    "en": "With equality of configurations decided, count what a finite present forgets as a quantity that never falls along the kept history.",
+    "zh": "在构型相等可判定时，把有限当下所遗忘者计为沿保留历史从不下降的量。"
+  },
   "correspondence": {
-    "zh": "这是 Ren 2026-10-11 所问“if \"lossless exist\", can we find a path, to figure out, and prove along the way?”的一条路径，按“zero-premise, zero axiom(we are not physics, we derive further)”不加前提。脊柱的停息规律（continued-change-needs-openness）以平衡与耗散为前提；本结果在其下一层：有限多构型中，无损即回返，箭头需要合并，不重访需要开放。平衡与第一律之下被围住的家族的构型有限多个，变化是构型的函数时本结果作用于它（熵的会话的 Web.Determined；实例定理待两边落地）。AI 的读法：无损的交换恰在两处存在，有限多构型中的回返与保留其历史的生成（后者需要开放）；物理学设为前提的低熵开端是保留的历史的开端，是推出的；熵读作有限当下的遗忘。这些读法不是物理推导。",
-    "en": "This is one path for Ren's question of 11 October 2026, ‘if \"lossless exist\", can we find a path, to figure out, and prove along the way?’, taken with no premise as Ren asked (‘zero-premise, zero axiom(we are not physics, we derive further)’). The spine's rest laws (continued-change-needs-openness) take balance and dissipation as premises; this result lies a level below: within finitely many configurations, losing nothing is returning, an arrow needs a merge, and never revisiting needs openness. Under balance and the first law an enclosed family has finitely many configurations, and where change is a function of the configuration this result applies to it (the entropy session's Web.Determined; the instance theorems wait for both to land). On the AI's reading lossless exchange exists in exactly two places, return within finitely many configurations and becoming that keeps its history, the latter needing openness; the low-entropy beginning physics supplies is the beginning of the kept history, and is derived; entropy reads as the forgetting of a finite present. These readings are not physical derivations."
+    "zh": "这是 Ren 2026-10-11 所问“if \"lossless exist\", can we find a path, to figure out, and prove along the way?”的一条路径，按“zero-premise, zero axiom(we are not physics, we derive further)”不加前提。脊柱的停息规律（continued-change-needs-openness）以平衡与耗散为前提；本结果在其下一层：有限多构型中，无损即回返，箭头排除不合并，不重访需要开放。平衡与第一律之下被围住的家族的构型有限多个，变化是构型的函数时本结果作用于它（Becoming.Entropy 的 Web.Determined）。AI 的读法：无损的交换恰在两处存在，有限多构型中的回返与保留其历史的生成（后者需要开放）；物理学设为前提的低熵开端是保留的历史的开端，是推出的；熵读作有限当下的遗忘。这些读法不是物理推导。对熵、业与物理学的对应是 AI 的读法。",
+    "en": "This is one path for Ren's question of 11 October 2026, ‘if \"lossless exist\", can we find a path, to figure out, and prove along the way?’, taken with no premise as Ren asked (‘zero-premise, zero axiom(we are not physics, we derive further)’). The spine's rest laws (continued-change-needs-openness) take balance and dissipation as premises; this result lies a level below: within finitely many configurations, losing nothing is returning, an arrow rules out merging nothing, and never revisiting needs openness. Under balance and the first law an enclosed family has finitely many configurations, and where change is a function of the configuration this result applies to it (Web.Determined of Becoming.Entropy). On the AI's reading lossless exchange exists in exactly two places, return within finitely many configurations and becoming that keeps its history, the latter needing openness; the low-entropy beginning physics supplies is the beginning of the kept history, and is derived; entropy reads as the forgetting of a finite present. These readings are not physical derivations. The readings as entropy, as karmic passing and as physics are the AI's."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
   "aliases": [
@@ -65,15 +241,15 @@
     {
       "id": "continued-change-needs-openness",
       "detail": {
-        "zh": "零前提的对应：有标记的变化在有限多构型中不复现，不重访需要开放；脊柱的停息定理在平衡与耗散之下，以存量为标记。实例定理是下一步。",
-        "en": "The zero-premise counterpart: a marked change does not recur within finitely many configurations, and never revisiting needs openness; the spine's rest theorem, under balance and dissipation, has the stock as its mark. The instance theorems are a next step."
+        "zh": "零前提的对应：有标记的变化在有限多构型中不复现，不重访需要开放；脊柱的停息定理在平衡与耗散之下，以存量为标记。",
+        "en": "The zero-premise counterpart: a marked change does not recur within finitely many configurations, and never revisiting needs openness; the spine's rest theorem, under balance and dissipation, has the stock as its mark."
       }
     },
     {
       "id": "theory-of-becoming-foundation",
       "detail": {
-        "zh": "统一计划 R6：不含条件的理论的零前提一线中“对每个变化之律成立的”；这不是无公理的整体演绎。",
-        "en": "Unification plan R6: ‘what holds of every law of change’ in the zero-premise line of the theory without the condition; this is not the deduction of the whole without axioms."
+        "zh": "统一计划：不含条件的理论的零前提一线中“对每个变化之律成立的”；这不是无公理的整体演绎。",
+        "en": "The unification plan: ‘what holds of every law of change’ in the zero-premise line of the theory without the condition; this is not the deduction of the whole without axioms."
       }
     },
     {
@@ -98,23 +274,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
-      "detail": {
-        "zh": "有限多构型这一条件两个方向都需要：Nat.succ 不合并而不回返、失去开端并且每步上升（Law.succ_open），Nat.pred 合并而保留每个可能（Law.pred_open）。",
-        "en": "The condition of finitely many configurations is needed both ways: Nat.succ merges nothing yet never returns, loses its beginning and rises at every step (Law.succ_open), and Nat.pred merges yet keeps every possibility (Law.pred_open)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "离散的步；“有限多构型”指某个列表持有它们，不是基数；无损、回返与保留可能的等价只对确定的律（对每个过程三者分开：保留每个可能不给回返，合并不必失去可能，不合并沿运行给回返，见 returning-where-the-course-branches，P81）；“当下遗忘”指两段不同的历史共有一个当下，遗忘的计数（需要判定构型相等）未陈述；“变化不复现”是复现的否定，不是某步之后不再变化；数学（鸽巢；有限集上的单射是双射，每点回返）是复用的；对熵、业与物理学的对应是 AI 的读法；熵的会话的结果已作为其实例给出（Becoming.Entropy）；不含伦理谓词；尚无独立审查。",
-    "en": "Discrete steps; ‘finitely many configurations’ means that a list holds them, not a cardinality; the equivalence of losing nothing, returning and keeping every possibility is for determined laws (for every process the three come apart: keeping every possibility does not give returning, a merge need not lose a possibility, merging nothing gives returning along runs; see returning-where-the-course-branches, P81); ‘the present forgets’ means that two different histories share one present, and no count of what is forgotten (which needs equality of configurations decided) is stated; ‘change does not recur’ is a negated recurrence, not a step after which nothing changes; the mathematics (pigeonhole; an injection of a finite set into itself is a bijection, every point of which returns) is reused; the readings as entropy, as karmic passing and as physics are the AI's; the entropy session's results are given as its instances (Becoming.Entropy); no ethical predicate; not yet independently reviewed."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Recurrence 的 68 项声明（55 项定理）全部空依赖（先在暂存树中以已提交的核心源从前导编译，逐条 #print axioms）；同一回执覆盖包内 75 个模块，核心闭包 77 个模块，全部源声明的公理报告为空，并核对核心只用 Lean 内置前导即可编译，外围回执 20261013T095049.338744Z 通过。尚无独立审查；作者反审见整合文档 §68。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 68 declarations of Becoming.Recurrence (55 theorems) all have empty axiom reports (first compiled from the prelude in a scratch tree against the committed core sources, each checked with #print axioms); the same receipt covers the 75 modules of the package and a core closure of 77 modules, every source declaration with an empty axiom report, and checks that the core compiles from Lean's prelude alone; periphery receipt 20261013T095049.338744Z passed. Not yet independently reviewed; the author's counterreview is in section 68 of the integration note."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -365,10 +524,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "在可判定相等之下，遗忘的计数作为一个不减的量；独立审查。",
-    "en": "With equality decided, the count of what is forgotten as a quantity that never falls; an independent review."
-  },
   "history": [
     {
       "zh": "2026-10-11：作为统一计划 R6 新增，按 Ren“if \"lossless exist\", can we find a path, to figure out, and prove along the way?”与“please keep advancing, zero-premise, zero axiom(we are not physics, we derive further)”（sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md）；见整合文档 §68。",
@@ -447,6 +602,28 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): The rest laws' premises are named as the Lean has them, balance and dissipation (World.comes_to_rest_unrefuted), and an enclosed family's finitely many configurations need balance beside the spine's first law; the Chinese writes that law (Flow.Gainless) 第一律, not 第一定律, which names thermodynamics' first law.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：停息规律的前提按 Lean 写作平衡与耗散（World.comes_to_rest_unrefuted），被围住的家族构型有限多个，除脊柱的第一律外还需要平衡；中文把该律（Flow.Gainless）写作第一律，而不写作第一定律，后者指热力学第一定律。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement narrowed to determined laws, as the Lean states the equivalence and the home section says, and “a rise needs a merge” to “a rise rules out merging nothing”, Law.rise_not_lossless concluding that the law does not merge nothing, which exhibits no merge; the claim split into thirteen laws, each read against its declarations in Recurrence.lean, Labelled.lean and Frame.lean, negated universals kept as such (unheld_of_new, the change that does not recur, Merges.loses); the limitations to five does-not-show items and the shared boundaries no-evaluation, no-ethical-premise and discrete-steps, the readings' label moved into the correspondence and the reused mathematics into the evidence paragraph; in the hypotheses “change stopping” corrected to “change not recurring”, as the Lean states it; the next step's independent review left to the evidence paragraph; the correspondence's waiting note on the entropy instances, which Becoming.Entropy gives, cut; no premise, status, reference or source hash changed. Every earlier sentence is mapped in [recurrence-without-premise.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-premise.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the statement, the correspondence, does-not-show items, related entries, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述按 Lean 陈述等价的方式并与归属节一致，收窄到确定的律，“上升需要合并”收窄为“上升排除不合并”，因为 Law.rise_not_lossless 的结论是并非律不合并，并不给出合并；主张拆为十三条规律，各条对照 Recurrence.lean、Labelled.lean 与 Frame.lean 中的声明核读，否定的全称保持为否定的全称（unheld_of_new、变化不复现、Merges.loses）；限制改为五条“未表明”与通用边界 no-evaluation、no-ethical-premise、discrete-steps，读法的标注移入对应说明，复用的数学移入证据段；前提中的“变化停止”按 Lean 改正为“变化不复现”；下一步中的独立审查留给证据段；对应说明中关于熵的实例待落地的说明删去（Becoming.Entropy 已给出它们）；前提、状态、引用与来源哈希均未改变。每句旧文本的去向见 [recurrence-without-premise.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-premise.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、陈述、对应、“未表明”各项、相关条目，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/adcad8106a6e3f89/recurrence-without-premise.json",
+      "sha256": "adcad8106a6e3f89535525b2315228498e52e6e9bf8fd1ee231aa270cd610fb5",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/3cd9380cd931b42e/recurrence-without-premise.json",
+      "sha256": "3cd9380cd931b42e4926b1c682c15b055a05369d63f4235c773978cbee1af38f",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

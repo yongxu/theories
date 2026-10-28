@@ -1,47 +1,171 @@
 {
-  "schema_version": 1,
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F22",
-  "reviewed_at_utc": "2026-10-08T18:40:39.196607+00:00",
-  "next_delta": {
-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
-  },
-  "history": [
-    {
-      "zh": "2026-10-09：沿既有接合研究推进；全部新增数学主张、反例与修复条件进入实际 Lean 检查。",
-      "en": "2026-10-09: continued the existing joining study; all new mathematical claims, counterexamples and repair conditions actually checked in Lean."
-    },
-    {
-      "zh": "2026-10-15，整合 I3b（Ren：“a lot proofs are probably not integrated”）：在脊柱上陈述（Becoming.Granularity 的“余项”）。部分执行配方，在路径所在处留下余下的配方（Recipe.Leaves），这一记账是其自身的展开，不加动作（Recipe.Leaves.trace）；续行余项完成配方，执行到底恰是不留余项的部分路径（Recipe.Leaves.resume、Recipe.leads_iff_leaves）。自相同配置出发的部分路径相匹配并保留余项，不加前提（Recipe.Leaves.alike）；自同测配置出发，需列出结果与 em（Recipe.Leaves.same_of_em）。插入的动作与部分路径及续行接成一条路径，而不是配方的一部分（Recipe.Leaves.inserted）。见证 Midway：在到达处检验与在开头检验结果不同；同一起点在同一配置留下不同余项，任何对续行精确的描述都区分它们；插入的一步可使余项失效（Midway.testing_before_formation_changes_results、Midway.remainder_codes_apart、Midway.inserted_can_disable_resumption）。外围的 ExplanatoryGranularityBoundary.unfolding 以带重叠通配分支的匹配定义，编译后用 propext，故 ExplanatoryResumptionCases 的见证在核心的 Midway 框架上重述（同样六个配置、三个动作与六步）。桥接：外围的推进与核心的一一对应（Recipe.advance_ofProgram、Recipe.Advance.toProgram），截断即留下同一程序的部分路径（cut_iff_leaves）；cut_resume、execution_iff_completed_cut、resumption_after_inserted_history 逐字成立，partial_history_matches 以 em 为假设；same_preserves_resumption 不加前提（外围以经典推理把每个续行问题读作单一检验，核心读作有限多个）。公理报告为空（草稿构建；回执随落地）。外围证明及其回执保持原范围。",
-      "en": "15 October 2026, integration I3b (Ren: “a lot proofs are probably not integrated”): stated on the spine (what remains, in Becoming.Granularity). Carrying out a recipe part of the way leaves a recipe remaining where the course stands (Recipe.Leaves), and this bookkeeping is an unfolding of its own that adds no move (Recipe.Leaves.trace); resuming what remains completes the recipe, and carrying it out to the end is a partial course leaving nothing (Recipe.Leaves.resume, Recipe.leads_iff_leaves). Partial courses from alike configurations match, keeping what remains, with no premise (Recipe.Leaves.alike); from configurations passing the same tests they need listed outcomes and em (Recipe.Leaves.same_of_em). Inserted moves join a partial course and its resumption into one course without being part of the recipe (Recipe.Leaves.inserted). The witness Midway: testing where the course has arrived and testing at the start give different results; one start leaves different remainders at one configuration, which every description exact for resumption keeps apart; an inserted move can disable what remains (Midway.testing_before_formation_changes_results, Midway.remainder_codes_apart, Midway.inserted_can_disable_resumption). The periphery’s ExplanatoryGranularityBoundary.unfolding is defined by a match with an overlapping wildcard case and compiles through propext, so the witnesses of ExplanatoryResumptionCases are restated on the core’s Midway frame (the same six configurations, three moves and six steps). In the bridge, the periphery’s advances and the core’s correspond one to one (Recipe.advance_ofProgram, Recipe.Advance.toProgram), and a cut is a partial course leaving the same program (cut_iff_leaves); cut_resume, execution_iff_completed_cut and resumption_after_inserted_history hold as stated, partial_history_matches with em; same_preserves_resumption needs no premise (the periphery reads each continuation question as one test, classically; the core as finitely many). Empty axiom reports (scratch build; the receipt comes with the landing). The periphery proofs and their receipts keep their scope."
-    },
-    {
-      "en": "18 October 2026, F1, the bridge fold, step 3 (Ren: \"please do all\"): the restatement audit of step 0 (development/bridge-fold/RESTATEMENT-AUDIT.md) found ExplanatoryResiduals fully restated by Becoming.Granularity, and its importer ExplanatoryResumptionCases an earlier version whose witnesses Becoming.Midway restates. The canonical source is now the core module; both periphery files keep their path and bytes and stay cited as the earlier statement. The claim is unchanged.",
-      "zh": "2026年10月18日，F1 桥接折叠第 3 步（Ren：“please do all”）：第 0 步的重述审计（development/bridge-fold/RESTATEMENT-AUDIT.md）查明 ExplanatoryResiduals 已由 Becoming.Granularity 完整重述，导入它的 ExplanatoryResumptionCases 是较早版本，其见证由 Becoming.Midway 重述。规范来源改为核心模块；两个外围文件保留路径与字节，仍作为较早的陈述被引用。论断不变。"
-    },
-    {
-      "en": "18 October 2026, F3, the periphery port's sweep (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): ExplanatoryResiduals is registered as superseded and leaves the Becoming run; the eight readings of it in GranularityBridge (Recipe.advance_ofProgram, Recipe.Advance.toProgram, cut_iff_leaves and five restatements) left with it, so the reference to GranularityBridge is dropped and the alias same_preserves_resumption_by_core is replaced by the core law it read, SameBranchingTests.leads_iff. Both periphery files keep their path and bytes, and their receipts stay bound. The claim is unchanged.",
-      "zh": "2026年10月18日，F3 外围移植的清扫：ExplanatoryResiduals 登记为已被取代，离开 Becoming 运行；GranularityBridge 中对它的八条读法随之移除，因此删去对 GranularityBridge 的引用，别名 same_preserves_resumption_by_core 换成它所读的核心定律 SameBranchingTests.leads_iff。两个外围文件保留路径与字节，其收据仍然绑定。论断不变。"
-    },
-    {
-      "en": "2026-10-20: 7 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/94a535e9f1fdc4ed/residual-continuation-correspondence.json and in git.",
-      "zh": "2026-10-20：7 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/94a535e9f1fdc4ed/residual-continuation-correspondence.json 和 git 中。"
-    },
-    {
-      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryResiduals) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Granularity and ExplanatoryResumptionCases). The claim is unchanged.",
-      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryResiduals）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Granularity and ExplanatoryResumptionCases）。主张不变。"
-    }
-  ],
-  "validation_scope": {
-    "zh": "Lean 4.29.1：35项新声明／314项闭包审计，279继承另列；新12空、23标准依赖，9含经典选择。新模块autoImplicit false，冻结源码／日志／检查器哈希绑定；作者反审，非独立agent验收。",
-    "en": "Lean 4.29.1: 35 new declarations / 314 closure audits, 279 inherited separate; new 12 empty and 23 standard, 9 with classical choice. New modules use autoImplicit false; frozen sources/logs/checker hashes are bound. Author counterreview, no independent-agent acceptance."
-  },
+  "schema_version": 2,
   "id": "residual-continuation-correspondence",
   "title": {
     "zh": "保留余项的部分展开与真实位置接续",
     "en": "Partial unfolding with residuals and resumption at reached positions"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F22",
+  "reviewed_at_utc": "2026-10-28T11:47:48+00:00",
+  "statement": {
+    "en": "Carrying out a recipe part of the way leaves a recipe remaining where the course stands: resuming it completes the recipe, and carrying the recipe to the end is a partial course leaving nothing. Moves inserted before resuming join into one course, and can disable what remains.",
+    "zh": "部分执行一个配方，在路径所在处留下余下的配方：续行余项完成配方，执行到底恰是不留余项的部分路径。续行前插入的动作接成一条路径，并可使余项失效。"
+  },
+  "laws": [
+    {
+      "en": "For any frame and recipe (nothing, a move, a test where the course stands, one recipe after another, or a choice of two), one advance takes a move, passes a test, drops a finished first part, advances a sequence's first part or takes one side of a choice. Carrying a recipe out part of the way, a course of advances, leaves a recipe remaining at a configuration, and is a course of the frame's own moves.",
+      "zh": "对任一框架与配方（空配方、一个动作、在路径所在处的一个检验、一个配方接另一个，或二者择一），一次推进是取一个动作、通过一个检验、丢掉已完成的前段、推进序列的前段，或取选择的一侧。部分执行配方（一串推进）在某构型留下余下的配方，且是框架自身动作的一条路径。",
+      "declarations": [
+        "Becoming.Recipe.Advance",
+        "Becoming.Recipe.unfolding",
+        "Becoming.Recipe.Leaves",
+        "Becoming.Recipe.Leaves.trace"
+      ]
+    },
+    {
+      "en": "Resuming what remains from where a partial course stands completes the recipe, and a recipe leads from s to t exactly where carrying it out from s can leave nothing remaining at t.",
+      "zh": "从部分路径所在处续行余项即完成配方；配方从 s 通向 t，恰当从 s 执行它可在 t 处不留余项。",
+      "declarations": [
+        "Becoming.Recipe.Leaves.resume",
+        "Becoming.Recipe.leads_iff_leaves"
+      ]
+    },
+    {
+      "en": "A partial course, moves of the frame inserted from where it stands, and a resumption of what remains from where those moves led join into one course of the frame through their actual boundaries; the inserted moves are not thereby part of the recipe.",
+      "zh": "部分路径、从其所在处插入的框架动作，以及从这些动作所到之处续行余项，经其实际边界接成框架的一条路径；插入的动作并不因此成为配方的一部分。",
+      "declarations": [
+        "Becoming.Recipe.Leaves.inserted"
+      ]
+    },
+    {
+      "en": "A partial course from a configuration is matched from any alike configuration of another frame, leaving the same recipe and ending alike, with no premise; from a configuration passing the same branching tests it is matched, ending where the same tests pass, given excluded middle as a hypothesis and the outcomes of the second frame's moves listed.",
+      "zh": "自某构型的部分路径，自另一框架中任一相似构型被匹配，留下相同配方并相似地结束，不加前提；自通过相同分支检验的构型，在以排中律为假设、第二个框架动作的结果可列举时被匹配，结束于通过相同检验之处。",
+      "declarations": [
+        "Becoming.Recipe.Leaves.alike",
+        "Becoming.Recipe.Leaves.same_of_em"
+      ]
+    },
+    {
+      "en": "Configurations passing the same branching tests answer every recipe question alike: a recipe leads from one to where a test holds exactly where it does from the other, with no premise and no finiteness.",
+      "zh": "通过相同分支检验的构型对每个配方问题回答相同：配方从一者通向某检验成立之处，恰当它从另一者也如此，不加前提，不需有限性。",
+      "declarations": [
+        "Becoming.SameBranchingTests.leads_iff"
+      ]
+    },
+    {
+      "en": "A description of what remains together with where the course stands, exact for resumption (equal codes resume to the same tests), gives different codes to two such configurations that resume differently.",
+      "zh": "对余项连同路径所在处的描述，若对续行精确（相等编码续行到相同检验），则给续行不同的两个这样的构型不同编码。",
+      "declarations": [
+        "Becoming.Recipe.Resumes",
+        "Becoming.Recipe.Resumes.codes_apart"
+      ]
+    },
+    {
+      "en": "In Midway, from safe, the recipe that begins and then finishes where finishing can be taken reaches done, while the recipe testing at the start whether finishing can be taken does not.",
+      "zh": "在 Midway 中，从 safe 出发，先 begin、再在可 finish 处 finish 的配方到达 done，而在开头检验能否 finish 的配方则不能。",
+      "declarations": [
+        "Becoming.Midway.adaptive",
+        "Becoming.Midway.earlyCheck",
+        "Becoming.Midway.testing_before_formation_changes_results"
+      ]
+    },
+    {
+      "en": "In Midway, carrying out the choice of begin then finish, or begin alone, from safe can stand at ready with finish remaining or with nothing remaining; with finish remaining the course can reach where finish cannot be taken, with nothing remaining it cannot, so every description exact for resumption codes the two apart.",
+      "zh": "在 Midway 中，从 safe 执行“begin 后 finish，或只 begin”这一选择，可停在 ready 而余 finish，或停在 ready 而无余项；余 finish 时路径可到达不能 finish 之处，无余项时不能，所以对续行精确的每个描述都以不同编码区分二者。",
+      "declarations": [
+        "Becoming.Midway.pending",
+        "Becoming.Midway.same_start_distinct_remainders",
+        "Becoming.Midway.remainder_changes_continuation",
+        "Becoming.Midway.remainder_codes_apart"
+      ]
+    },
+    {
+      "en": "In Midway, finish inserted at ready reaches done, from where the finish still remaining cannot be taken, so an inserted move can disable what remains; ready and done do not pass the same branching tests.",
+      "zh": "在 Midway 中，在 ready 插入的 finish 到达 done，从那里仍余的 finish 不能进行，所以插入的动作可使余项失效；ready 与 done 不通过相同的分支检验。",
+      "declarations": [
+        "Becoming.Midway.inserted_can_disable_resumption",
+        "Becoming.Midway.inserted_changes_tests"
+      ]
+    },
+    {
+      "en": "The earlier witnesses on the periphery's granularity unfolding: testing before formation changes the result; one start leaves the residuals finish and nothing at one reached position, and every exact presentation of the paused answers codes them apart; and an inserted finish can disable the pending finish.",
+      "zh": "外围粒度展开上的较早见证：在形成之前检验改变结果；同一起点在同一到达位置留下余项 finish 与空余项，暂停答案的每个精确表述都以不同编码区分它们；插入的 finish 可使待用的 finish 失效。",
+      "declarations": [
+        "Generative.ExplanatoryResumptionCases.testing_before_formation_changes_results",
+        "Generative.ExplanatoryResumptionCases.same_start_reaches_distinct_residuals",
+        "Generative.ExplanatoryResumptionCases.exact_paused_accounts_retain_remaining_program",
+        "Generative.ExplanatoryResumptionCases.inserted_activity_can_disable_resumption"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Recipes are finite (moves, tests, sequences and choices), carried out by the supplied advance semantics; a partial course is a finite course of advances. Tests are branching tests of the frame, not physical operations shown to be available.",
+      "zh": "配方是有限的（动作、检验、序列与选择），按给定的推进语义执行；部分路径是有限的推进路径。检验是框架的分支检验，非已证明可用的物理操作。"
+    },
+    {
+      "en": "Matching partial courses takes one recipe on both sides and alike starts, or, with excluded middle as a hypothesis and listed outcomes, starts passing all the same branching tests, stronger than agreement at block boundaries; resumption after inserted moves starts where those moves actually led.",
+      "zh": "匹配部分路径要求两侧同一配方与相似的起点，或在以排中律为假设、结果可列举时，起点通过全部相同的分支检验，强于块边界上的一致；插入动作后的续行从这些动作实际所到之处开始。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Translation of what remains between recipes of different internal syntax is not shown: matched courses carry out one recipe on both sides.",
+      "zh": "不表明内部语法不同的配方之间余项的翻译：被匹配的路径两侧执行同一配方。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "How a formation actually comes to remember or sense what remains is not modelled.",
+      "zh": "不模拟形成实际如何记住或感知余项。",
+      "kind": "scope"
+    },
+    {
+      "en": "Recipes have no iteration, so unbounded iteration is not covered.",
+      "zh": "配方没有迭代，所以不涵盖无界迭代。",
+      "kind": "scope"
+    },
+    {
+      "en": "Concurrent activity and its admission are not modelled: inserted moves are a course of the same frame.",
+      "zh": "不模拟并发活动及其准入：插入的动作是同一框架的路径。",
+      "kind": "scope"
+    },
+    {
+      "en": "No uniqueness of a description of what remains is shown.",
+      "zh": "不表明余项描述的唯一性。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Configurations equal in the frame can differ in what remains; this implies no variable of reality independent of the one unfolding.",
+      "zh": "框架中相同的构型可在余项上不同；这不意味着有独立于同一展开的现实变量。",
+      "kind": "correspondence",
+      "witness": "Becoming.Midway.same_start_distinct_remainders"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean",
+      "detail": {
+        "zh": "同起点同原生到达位置留下不同余项；同一finish插入活动也能禁用待执行finish，而此前历史仍成立。",
+        "en": "One start and native reached position admit different residuals; the same inserted finish activity can disable a pending finish while preserving the preceding history."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1: the core Becoming.Granularity by the consolidated core checker (becoming-checks/20261020T051144.879480Z), every cited declaration with an empty axiom report; the periphery ExplanatoryResumptionCases by check_explanatory_resumption.py (explanatory-resumption-checks/20261015T180520.693095Z), its cited witnesses reporting propext, two of them also Quot.sound. The superseded ExplanatoryResiduals is provenance; its receipt keeps its earlier scope. Author counterreview, no independent-agent acceptance.",
+    "zh": "Lean 4.29.1 实查：核心 Granularity 经合并核心检查器（becoming-checks/），所引声明公理报告皆空；外围 ExplanatoryResumptionCases 经其检查器（explanatory-resumption-checks/），所引见证用 propext，其中两项另用 Quot.sound。已被取代的 ExplanatoryResiduals 是来源，其回执保持原范围。作者反审，无独立验收。"
+  },
+  "next_delta": {
+    "en": "Translate what remains, tests and formation between descriptions with different internal syntax, telling semantic tests apart from tests a formation has actually acquired.",
+    "zh": "在内部语法不同的描述之间翻译余项、检验与形成，区分语义检验与形成实际取得的检验。"
+  },
+  "correspondence": {
+    "zh": "程序余项和原生条件是同一语义展开的分析坐标；不声明独立本体或相同完整物理状态产生不同未来。实际物理组织若已含余项，可不另设坐标。",
+    "en": "Residual recipe and native conditions are analytical coordinates of one semantic unfolding, not independent ontologies or identical complete physical states with different futures. A whole physical representation may already include residual organization."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean",
   "aliases": [
@@ -52,24 +176,6 @@
     "Becoming.SameBranchingTests.leads_iff",
     "Becoming.Midway.remainder_codes_apart"
   ],
-  "claim": {
-    "zh": "剩余程序与到达条件的共同展开有精确完成／接续对应及原生路径投影。共同语法、原生完整同测与接收侧有限分支恢复每个部分历史的余项和到达答案。插入活动后可接实际后段为一条历史，但插入可使原待用接续失效；同一起点产生的余项差异可迫使任何精确说明区分。",
-    "en": "Joint unfolding of residual programs and reached conditions has exact completion/resumption correspondence and native trace projection. Common syntax, complete native-answer agreement and receiving-side finite branching recover residuals and answers along every partial history. Inserted activity and a current-position suffix join into one trace, but insertion can disable a pending continuation; residual differences reached from one start can force distinctions in every exact account."
-  },
-  "hypotheses": [
-    {
-      "zh": "给定有限Program与Advance展开语义；Cut是该展开的有限路径。guard为语义判断，非已证明的物理操作。",
-      "en": "Supplied finite Program/Advance semantics; Cut is a finite operational path. Guards are semantic tests, not proven physical operations."
-    },
-    {
-      "zh": "部分匹配要求同一程序语法和全部原生问题一致，比宏边界问答一致更强；插入后的执行从实际改变后的状态开始。",
-      "en": "Partial matching requires common recipe syntax and all native answers, stronger than macro-boundary agreement; post-insertion execution starts at the actually changed state."
-    }
-  ],
-  "correspondence": {
-    "zh": "程序余项和原生条件是同一语义展开的分析坐标；不声明独立本体或相同完整物理状态产生不同未来。实际物理组织若已含余项，可不另设坐标。",
-    "en": "Residual recipe and native conditions are analytical coordinates of one semantic unfolding, not independent ontologies or identical complete physical states with different futures. A whole physical representation may already include residual organization."
-  },
   "dependencies": [
     {
       "id": "guarded-program-question-recovery",
@@ -150,19 +256,6 @@
       }
     }
   ],
-  "limitations": {
-    "zh": "任意不同内部程序语法、真实记忆／传感形成、无界迭代、并发授权及普遍唯一性未证。相同原生坐标可能遗漏程序组织，不能据此断言完整现实有额外独立变量。",
-    "en": "Arbitrary different internal syntax, actual memory/sensing formation, unbounded iteration, concurrency authorization and universal uniqueness remain unproved. Equal native coordinates can omit program organization without implying an extra independent variable in complete reality."
-  },
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean",
-      "detail": {
-        "zh": "同起点同原生到达位置留下不同余项；同一finish插入活动也能禁用待执行finish，而此前历史仍成立。",
-        "en": "One start and native reached position admit different residuals; the same inserted finish activity can disable a pending finish while preserving the preceding history."
-      }
-    }
-  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResiduals.lean",
@@ -184,7 +277,8 @@
         "Generative.ExplanatoryResumptionCases.same_start_reaches_distinct_residuals",
         "Generative.ExplanatoryResumptionCases.exact_paused_accounts_retain_remaining_program",
         "Generative.ExplanatoryResumptionCases.inserted_activity_can_disable_resumption",
-        "Generative.ExplanatoryResumptionCases.testing_before_formation_changes_results"
+        "Generative.ExplanatoryResumptionCases.testing_before_formation_changes_results",
+        "Generative.ExplanatoryResumptionCases.interrupted_history_retained"
       ]
     },
     {
@@ -220,7 +314,11 @@
         "Becoming.Midway.remainder_changes_continuation",
         "Becoming.Midway.remainder_codes_apart",
         "Becoming.Midway.inserted_can_disable_resumption",
-        "Becoming.Midway.inserted_changes_tests"
+        "Becoming.Midway.inserted_changes_tests",
+        "Becoming.Recipe.Resumes",
+        "Becoming.Midway.adaptive",
+        "Becoming.Midway.earlyCheck",
+        "Becoming.Midway.pending"
       ]
     },
     {
@@ -268,6 +366,54 @@
       "sha256_pointer": "/source_sha256/Becoming.Granularity",
       "success_pointer": "/status",
       "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "zh": "2026-10-09：沿既有接合研究推进；全部新增数学主张、反例与修复条件进入实际 Lean 检查。",
+      "en": "2026-10-09: continued the existing joining study; all new mathematical claims, counterexamples and repair conditions actually checked in Lean."
+    },
+    {
+      "zh": "2026-10-15，整合 I3b（Ren：“a lot proofs are probably not integrated”）：在脊柱上陈述（Becoming.Granularity 的“余项”）。部分执行配方，在路径所在处留下余下的配方（Recipe.Leaves），这一记账是其自身的展开，不加动作（Recipe.Leaves.trace）；续行余项完成配方，执行到底恰是不留余项的部分路径（Recipe.Leaves.resume、Recipe.leads_iff_leaves）。自相同配置出发的部分路径相匹配并保留余项，不加前提（Recipe.Leaves.alike）；自同测配置出发，需列出结果与 em（Recipe.Leaves.same_of_em）。插入的动作与部分路径及续行接成一条路径，而不是配方的一部分（Recipe.Leaves.inserted）。见证 Midway：在到达处检验与在开头检验结果不同；同一起点在同一配置留下不同余项，任何对续行精确的描述都区分它们；插入的一步可使余项失效（Midway.testing_before_formation_changes_results、Midway.remainder_codes_apart、Midway.inserted_can_disable_resumption）。外围的 ExplanatoryGranularityBoundary.unfolding 以带重叠通配分支的匹配定义，编译后用 propext，故 ExplanatoryResumptionCases 的见证在核心的 Midway 框架上重述（同样六个配置、三个动作与六步）。桥接：外围的推进与核心的一一对应（Recipe.advance_ofProgram、Recipe.Advance.toProgram），截断即留下同一程序的部分路径（cut_iff_leaves）；cut_resume、execution_iff_completed_cut、resumption_after_inserted_history 逐字成立，partial_history_matches 以 em 为假设；same_preserves_resumption 不加前提（外围以经典推理把每个续行问题读作单一检验，核心读作有限多个）。公理报告为空（草稿构建；回执随落地）。外围证明及其回执保持原范围。",
+      "en": "15 October 2026, integration I3b (Ren: “a lot proofs are probably not integrated”): stated on the spine (what remains, in Becoming.Granularity). Carrying out a recipe part of the way leaves a recipe remaining where the course stands (Recipe.Leaves), and this bookkeeping is an unfolding of its own that adds no move (Recipe.Leaves.trace); resuming what remains completes the recipe, and carrying it out to the end is a partial course leaving nothing (Recipe.Leaves.resume, Recipe.leads_iff_leaves). Partial courses from alike configurations match, keeping what remains, with no premise (Recipe.Leaves.alike); from configurations passing the same tests they need listed outcomes and em (Recipe.Leaves.same_of_em). Inserted moves join a partial course and its resumption into one course without being part of the recipe (Recipe.Leaves.inserted). The witness Midway: testing where the course has arrived and testing at the start give different results; one start leaves different remainders at one configuration, which every description exact for resumption keeps apart; an inserted move can disable what remains (Midway.testing_before_formation_changes_results, Midway.remainder_codes_apart, Midway.inserted_can_disable_resumption). The periphery’s ExplanatoryGranularityBoundary.unfolding is defined by a match with an overlapping wildcard case and compiles through propext, so the witnesses of ExplanatoryResumptionCases are restated on the core’s Midway frame (the same six configurations, three moves and six steps). In the bridge, the periphery’s advances and the core’s correspond one to one (Recipe.advance_ofProgram, Recipe.Advance.toProgram), and a cut is a partial course leaving the same program (cut_iff_leaves); cut_resume, execution_iff_completed_cut and resumption_after_inserted_history hold as stated, partial_history_matches with em; same_preserves_resumption needs no premise (the periphery reads each continuation question as one test, classically; the core as finitely many). Empty axiom reports (scratch build; the receipt comes with the landing). The periphery proofs and their receipts keep their scope."
+    },
+    {
+      "en": "18 October 2026, F1, the bridge fold, step 3 (Ren: \"please do all\"): the restatement audit of step 0 (development/bridge-fold/RESTATEMENT-AUDIT.md) found ExplanatoryResiduals fully restated by Becoming.Granularity, and its importer ExplanatoryResumptionCases an earlier version whose witnesses Becoming.Midway restates. The canonical source is now the core module; both periphery files keep their path and bytes and stay cited as the earlier statement. The claim is unchanged.",
+      "zh": "2026年10月18日，F1 桥接折叠第 3 步（Ren：“please do all”）：第 0 步的重述审计（development/bridge-fold/RESTATEMENT-AUDIT.md）查明 ExplanatoryResiduals 已由 Becoming.Granularity 完整重述，导入它的 ExplanatoryResumptionCases 是较早版本，其见证由 Becoming.Midway 重述。规范来源改为核心模块；两个外围文件保留路径与字节，仍作为较早的陈述被引用。论断不变。"
+    },
+    {
+      "en": "18 October 2026, F3, the periphery port's sweep (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): ExplanatoryResiduals is registered as superseded and leaves the Becoming run; the eight readings of it in GranularityBridge (Recipe.advance_ofProgram, Recipe.Advance.toProgram, cut_iff_leaves and five restatements) left with it, so the reference to GranularityBridge is dropped and the alias same_preserves_resumption_by_core is replaced by the core law it read, SameBranchingTests.leads_iff. Both periphery files keep their path and bytes, and their receipts stay bound. The claim is unchanged.",
+      "zh": "2026年10月18日，F3 外围移植的清扫：ExplanatoryResiduals 登记为已被取代，离开 Becoming 运行；GranularityBridge 中对它的八条读法随之移除，因此删去对 GranularityBridge 的引用，别名 same_preserves_resumption_by_core 换成它所读的核心定律 SameBranchingTests.leads_iff。两个外围文件保留路径与字节，其收据仍然绑定。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 7 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/94a535e9f1fdc4ed/residual-continuation-correspondence.json and in git.",
+      "zh": "2026-10-20：7 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/94a535e9f1fdc4ed/residual-continuation-correspondence.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryResiduals) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Granularity and ExplanatoryResumptionCases). The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryResiduals）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Granularity and ExplanatoryResumptionCases）。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the claim and the home section; the claim split into ten laws, each read against its declarations in Granularity.lean and ExplanatoryResumptionCases.lean (what remains, resumption, insertion, matching, recipe questions, exact descriptions, the Midway witnesses and the earlier periphery witnesses), the matching law written with excluded middle as the named hypothesis it is in the core; the hypotheses restated in the core's terms (recipes, partial courses, branching tests), with the same conditions; the limitations to six does-not-show items; Recipe.Resumes and Midway.adaptive, earlyCheck and pending, the definitions the laws read, added to Granularity.lean's references, and interrupted_history_retained, which witnesses the counterexample's preserved history, to ExplanatoryResumptionCases.lean's; the shared boundary no-ethical-premise-core-axiom-free cited; no premise, status or source hash changed. Every earlier sentence is mapped in [residual-continuation-correspondence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/residual-continuation-correspondence.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the references, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章节写出陈述；主张拆为十条规律，各条对照 Granularity.lean 与 ExplanatoryResumptionCases.lean 中的声明核读（余项、续行、插入、匹配、配方问题、精确描述、Midway 见证与较早的外围见证），匹配律按核心中的写法以排中律为具名假设；前提以核心的用语（配方、部分路径、分支检验）重述，条件不变；限制改为六条“未表明”；规律所读的定义 Recipe.Resumes 与 Midway.adaptive、earlyCheck、pending 加入 Granularity.lean 的引用，见证反例中前段历史保留的 interrupted_history_retained 加入 ExplanatoryResumptionCases.lean 的引用；引用通用边界 no-ethical-premise-core-axiom-free；前提、状态与来源哈希均未改变。每句旧文本的去向见 [residual-continuation-correspondence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/residual-continuation-correspondence.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、引用，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/3a4d29f232958810/residual-continuation-correspondence.json",
+      "sha256": "3a4d29f232958810dc37afa130011ccd9c2e6f7a715ac3512d149b8b41910e7b",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/94a535e9f1fdc4ed/residual-continuation-correspondence.json",
+      "sha256": "94a535e9f1fdc4edab1ac772f231b13383d1c3f697eb5afa38d648220072d70f",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

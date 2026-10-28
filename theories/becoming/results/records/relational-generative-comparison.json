@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "relational-generative-comparison",
   "title": {
     "zh": "共同生成比较所需的关系信息",
@@ -8,32 +8,133 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
-  "claim": {
-    "zh": "同一事件法则中的保留／解除耦合描述具有相同单项可能性，但前者保留全部所表示共同组合并新增完整共同组合。该结构输出接入明确比较原则 C 后，任何完全由这些单项可能性决定的摘要上的非自反比较都无法实现 C；共同组合描述能区分此例，丰富可能性仍不强迫实际共同实现。",
-    "en": "Under one event law, retaining and releasing a coupling have identical marginal possibilities, while retention preserves every represented joint bundle and adds the full bundle. Feeding this structural output into explicit comparison principle C excludes any irreflexive comparator over a summary fully determined by those marginals. A joint-bundle description distinguishes the case; richer possibility still does not force joint actualization."
+  "reviewed_at_utc": "2026-10-28T11:50:13+00:00",
+  "statement": {
+    "en": "Retaining and releasing a coupling under one event law have the same marginal possibilities, while retaining keeps every joint bundle and adds the full one: under C, comparing them needs relational information, since every irreflexive comparison of a summary the marginals determine fails C.",
+    "zh": "同一事件法则下，保留与解除耦合有相同的单项可能性，而保留保持每个共同组合并新增完整组合：在 C 之下，比较它们需要关系信息，因为对由单项可能性决定的摘要所作的每个非自反比较都不满足 C。"
   },
+  "laws": [
+    {
+      "en": "A bundle of claims is jointly realizable in a region of a frame where one configuration of the region realizes all of it. Every configuration of one region having one in another that realizes all it realizes is equivalent to every bundle jointly realizable in the first being jointly realizable in the second.",
+      "zh": "一组主张在框架的某区域可共同实现，是指该区域的一个配置实现它的全部。一个区域的每个配置在另一区域都有实现其所实现之全部的配置，等价于第一个区域中每个可共同实现的组合在第二个区域中也可共同实现。",
+      "declarations": [
+        "Becoming.Jointly",
+        "Becoming.CarriesProfiles",
+        "Becoming.PreservesBundles",
+        "Becoming.carries_iff_preserves"
+      ]
+    },
+    {
+      "en": "Under an activation law where, from one initial configuration, a retained coupling permits activating the left, the right or both together and a released one only one side, the two-step histories that retain and those that release realize the same claims, and only the retaining ones realize both claims together.",
+      "zh": "在一个激活法则下：从同一初始配置出发，保留的耦合允许激活左、右或两者一起，解除的只允许一侧；保留的两步历史与解除的两步历史实现相同的主张，只有保留的实现两项主张一起。",
+      "declarations": [
+        "Becoming.Activation.Step",
+        "Becoming.Activation.law",
+        "Becoming.Activation.TwoSteps",
+        "Becoming.Activation.retained",
+        "Becoming.Activation.released",
+        "Becoming.Activation.same_marginals_lose_bundle"
+      ]
+    },
+    {
+      "en": "Read as configurations of a frame whose claims are bundles, a regime realizing a bundle where some of its histories realizes it jointly, and with a bundle living where it holds every claim: retaining extends releasing, every released profile being carried by some retained history and the full bundle gained.",
+      "zh": "把两种做法读作一个框架的配置，其主张是组合，某做法在其某段历史共同实现一个组合时实现它，含每项主张的组合是活的：保留扩展解除，每个解除的轮廓都由某段保留的历史承载，并得到完整组合。",
+      "declarations": [
+        "Becoming.Regimes.Regime",
+        "Becoming.Regimes.histories",
+        "Becoming.Regimes.frame",
+        "Becoming.Regimes.living",
+        "Becoming.Regimes.allBundle",
+        "Becoming.Regimes.released_carried",
+        "Becoming.Regimes.extension",
+        "Becoming.Extension"
+      ]
+    },
+    {
+      "en": "The two regimes agree on every marginal possibility, while only retaining realizes the full bundle, so the joint descriptions of the two regimes differ.",
+      "zh": "两种做法在每个单项可能性上一致，而只有保留实现完整组合，所以两者的共同描述不同。",
+      "declarations": [
+        "Becoming.Regimes.marginal",
+        "Becoming.Regimes.marginals_agree",
+        "Becoming.Regimes.joint_separates"
+      ]
+    },
+    {
+      "en": "A comparison read off a description and comparing no description with itself, if it satisfies C, gives every extension a description different from its base. So for any summary of the regimes that identical marginals make identical and any irreflexive comparison of summaries, comparing the regimes by their summaries does not satisfy C.",
+      "zh": "从某一描述读出、且不把任何描述与自身比较的比较，若满足 C，就使每个扩展的描述不同于其基础。所以对任何由相同单项可能性给出相同值的摘要与任何非自反的摘要比较，按摘要比较两种做法不满足 C。",
+      "declarations": [
+        "Becoming.Comparison",
+        "Becoming.Comparison.separates",
+        "Becoming.Regimes.no_comparison_through_marginals"
+      ]
+    },
+    {
+      "en": "A retained history realizes the left claim and not the right, while the retained regime realizes the full bundle as a joint possibility.",
+      "zh": "一段保留的历史实现左边的主张而不实现右边的，而保留的做法把完整组合作为共同可能来实现。",
+      "declarations": [
+        "Becoming.Activation.retainedLeft",
+        "Becoming.Regimes.possibility_not_realization"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "复用 JointContinuationClassification 的共同初始配置、事件法则及稳定的活动含义；这些是局部关系表示，不是从零导出的普遍物理学。",
       "en": "Reuses JointContinuationClassification's common initial configuration, event law and stable claim meanings; these supply a local relational representation, not a universal physics derived from nothing."
     },
     {
-      "zh": "比较阻碍定理明确假定 GenerativeComparison.ComparisonPrinciple C 的此项应用；标为 generative 的仅是含全部两个所表示实现的组合，不能以该标签证明其正面意义。",
-      "en": "The comparison obstruction explicitly assumes this application of GenerativeComparison.ComparisonPrinciple C. Only a bundle containing both represented realizations is marked generative; the label does not warrant its favorable meaning."
+      "zh": "比较阻碍定理明确假定 C 在两种做法之框架上的这一应用（Comparison，外围原本为 GenerativeComparison.ComparisonPrinciple）；只有含全部两个所表示实现的组合在那里是活的，不能以该标签证明其正面意义。",
+      "en": "The comparison obstruction explicitly assumes this application of C on the regimes' frame (Comparison; in the periphery original, GenerativeComparison.ComparisonPrinciple). Only a bundle containing both represented realizations is living there; the label does not warrant its favorable meaning."
     },
     {
       "zh": "摘要仅由全部单项可能性决定，且摘要比较非自反；不要求可加总分、全排序或传递性。",
       "en": "The summary is determined solely by all marginal possibilities and its comparator is irreflexive; additive scores, totality and transitivity are not required."
     },
     {
-      "zh": "伦理应用仍需说明该实际共同能力如何实现生生的正面可能性，并完整涵盖相关成本、损失与其他变化。",
-      "en": "Ethical application still requires warrant that the actual joint capacity realizes a favorable living possibility and adequately covers relevant costs, losses and other changes."
+      "zh": "伦理应用仍需说明该实际共同能力如何实现生生的正面可能性，并完整涵盖相关负担、损失与其他变化。",
+      "en": "Ethical application still requires warrant that the actual joint capacity realizes a favorable living possibility and adequately covers relevant burdens, losses and other changes."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Only irreflexive comparisons through a summary the marginals determine are excluded; scalar evaluations in general and local analyses that keep the relations are not.",
+      "zh": "被排除的只是经由单项可能性所决定之摘要的非自反比较；一般的标量评价与保留关系的局部分析不在其内。",
+      "kind": "scope"
+    },
+    {
+      "en": "It does not show that every coupling should be retained.",
+      "zh": "不表明每个耦合都应保留。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Keeping every bundle possible leaves probability, reliability, burdens and past losses open, and joint realizability does not settle ethical quality.",
+      "zh": "保持每个组合可能，概率、可靠性、负担与既有损失仍未定，共同可实现的结构也不决定伦理质量。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalGrounding.lean",
+      "detail": {
+        "zh": "retainedLeft 是同一法则下实际可行的仅左实现历史；存在共同可能性不强迫实际共同实现。",
+        "en": "retainedLeft is an admissible left-only history under the same law; joint possibility does not force actual joint realization."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.Bundles and Becoming.Extension, and of Becoming.ValuationFrames, cited without declarations, are bound to passing receipts in becoming-checks, which report an empty axiom list for every cited declaration and verify that the core compiles from Lean's prelude alone. The periphery original, now provenance, passed its own Lean 4.29.1 check (relational-grounding-verification.json), and an independent review matched its sources without a second compiler run.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Bundles、Extension 以及不引声明的 ValuationFrames 的当前字节绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空，核心只用 Lean 前导即可编译。外围原本（现为来历）通过其自身的 Lean 4.29.1 检查（relational-grounding-verification.json），独立审查核对其源码，未第二次编译。"
+  },
+  "next_delta": {
+    "en": "The same separation on a web of the World model: a coupling whose retention keeps and adds joint bundles, with the capacity's living content, its actual transformation losses and the comparison that applies stated.",
+    "zh": "在 World 模型的一个网上作同样的区分：一个耦合，其保留保持并新增共同组合，并写明该能力的活的内容、实际的转化损失与适用的比较。"
+  },
   "correspondence": {
-    "zh": "先有同一展开中耦合关系的保留与解除，左／右是其中分化的位置。jointInventory.realized 表示共同能力实际成立而非所有未来结果已经发生。形式组合直接以尚未单独迁移的 JointContinuationClassification 输出，满足尚未单独迁移的 GenerativeComparison 中 C 的输入；并未导入一般实践判断或 AI 方向模块。",
-    "en": "Retention and release concern a coupling within one unfolding; left and right are differentiated positions within it. jointInventory.realized denotes an actually present joint capacity, not all future outcomes having happened. The formal composition directly uses outputs of the unmigrated JointContinuationClassification module as inputs to C in the unmigrated GenerativeComparison module; it does not import the general practical-judgment or AI-direction modules."
+    "zh": "先有同一展开中耦合关系的保留与解除，左／右是其中分化的位置。两种做法之框架上的实现读作实际成立的共同能力，而非所有未来结果已经发生（AI 的读法）。形式组合在同一框架上把激活法则的输出直接作为 C 的输入（核心 Bundles 模块）；并未导入一般实践判断或 AI 方向模块。",
+    "en": "Retention and release concern a coupling within one unfolding; left and right are differentiated positions within it. Realization on the regimes' frame reads an actually present joint capacity, not all future outcomes having happened (an AI reading). The formal composition uses the activation law's output directly as the input to C on the same frame (the core Bundles module); it does not import the general practical-judgment or AI-direction modules."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
   "aliases": [
@@ -62,30 +163,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalGrounding.lean",
-      "detail": {
-        "zh": "retainedLeft 是同一法则下实际可行的仅左实现历史；存在共同可能性不强迫实际共同实现。",
-        "en": "retainedLeft is an admissible left-only history under the same law; joint possibility does not force actual joint realization."
-      }
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RELATIONAL-GROUNDING-INTEGRATION.md",
-      "detail": {
-        "zh": "保留所有组合的存在性不保证概率、可靠性、负担或既有损失不变；不能从任意共同可实现结构直接推出完整生生质量。",
-        "en": "Preserving the existence of all bundles does not guarantee unchanged probability, reliability, burdens or past losses; arbitrary joint-realizability structure does not directly determine complete generative ethical quality."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "仅排除所声明输入摘要的严格比较；不排除所有标量评价或保留关系的局部分析，不证明所有耦合应保留、C 或生生之意义无前提成立或普遍伦理完成。也不要求完备可判定识别算法或所有智能已经认可规范。",
-    "en": "Excludes only strict comparison through the declared summary, not all scalar evaluation or relationally adequate local analysis. It proves neither preservation of every coupling, premise-free C or living significance nor completed universal ethics, and imposes no gate of complete decidable identification or universal recognition."
-  },
-  "validation_scope": {
-    "zh": "复用本轮成功 Lean 4.29.1 回执：6项新定理／12项声明审计，新增依赖全空；16项既有定理／48项审计另列，3项应用控制例不重复计数。独立反审核对3份源码、2份检查辅助及23份工件，未第二次编译；本次登记不重新编译。",
-    "en": "Credits this round's successful Lean 4.29.1 receipt: 6 new theorems/12 declaration audits, all new dependencies empty; 16 inherited theorems/48 audits are separate, and 3 application controls are not recounted. Independent review matched 3 sources, 2 checker helpers and 23 artifacts without a second compiler run. Registration does not recompile."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalGrounding.lean",
@@ -215,7 +292,22 @@
         "Becoming.Regimes.joint_separates",
         "Becoming.Regimes.possibility_not_realization",
         "Becoming.carries_iff_preserves",
-        "Becoming.Activation.same_marginals_lose_bundle"
+        "Becoming.Activation.same_marginals_lose_bundle",
+        "Becoming.Jointly",
+        "Becoming.CarriesProfiles",
+        "Becoming.PreservesBundles",
+        "Becoming.Activation.Step",
+        "Becoming.Activation.law",
+        "Becoming.Activation.TwoSteps",
+        "Becoming.Activation.retained",
+        "Becoming.Activation.released",
+        "Becoming.Activation.retainedLeft",
+        "Becoming.Regimes.Regime",
+        "Becoming.Regimes.histories",
+        "Becoming.Regimes.frame",
+        "Becoming.Regimes.living",
+        "Becoming.Regimes.allBundle",
+        "Becoming.Regimes.marginal"
       ]
     },
     {
@@ -290,10 +382,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用已完成的结构到比较组合；若扩展到新的生命／组织范围，说明共同能力的具体生生内容、真实转化损失及适用比较，不以重复模型、另一摘要或无公理门槛代替该对应。",
-    "en": "Reuse the completed structural-to-comparison adapter. Extension to new life or organizational scopes requires an account of the capacity's generative content, actual transformation losses and applicable comparison, rather than another summary, duplicate model or axiom-free gate."
-  },
   "history": [
     {
       "zh": "2026-10-08：首次登记本轮新的形式组合与明确边界；信用原有两个模块，不把6个支撑声明计作6项独立奠基发现。",
@@ -318,6 +406,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired labels named in current terms: the G0/J route in a related detail as the conditional alignment route, and G0 in the limitations as living significance; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签按现行术语称：一条相关说明中的 G0/J 路线改为条件对齐路线，限度中的 G0 改为生生之意义；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the home section; the claim split into six laws, each read against its declarations in Becoming.Bundles and Becoming.Extension; the limitations to three does-not-show items and the standard boundary zero-axiom-target-open; the counterexample citing the integration note, which no declaration witnesses, became a does-not-show item; the second hypothesis names C as the core states it (Comparison, the bundle living) with the periphery name as provenance, and \"costs\" in the fourth became \"burdens\"; in the correspondence the reading of the periphery's jointInventory.realized is stated on the core frame with its AI label and \"unmigrated\" modules give way to the core module the composition is now in; fifteen declarations added to the references of Bundles; no premise's content, status or source hash changed. Every earlier sentence is mapped in [relational-generative-comparison.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relational-generative-comparison.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主章写出陈述；主张拆为六条规律，各条对照其在 Becoming.Bundles 与 Extension 中的声明核读；限制改为三条“未表明”与通用边界 zero-axiom-target-open；引用整合说明、没有声明见证的那条反例改为一条“未表明”；第二条前提按核心的陈述称 C（Comparison，组合是活的），外围名称作为来历，第四条中的“成本”改为“负担”；对应中对外围 jointInventory.realized 的读法改在核心框架上陈述并加 AI 标签，“尚未迁移”的模块改为组合现在所在的核心模块；十五个声明加入 Bundles 的引用；前提内容、状态与来源哈希均未改变。每句旧文本的去向见 [relational-generative-comparison.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relational-generative-comparison.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/7361374ee310f0a6/relational-generative-comparison.json",
+      "sha256": "7361374ee310f0a6e7b87a03b3be1de9489c9e3f561e2153e0f205765700df67",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/0725fa1aa53f6e89/relational-generative-comparison.json",
+      "sha256": "0725fa1aa53f6e891c754cd02bcabf38633ba59a441bdebd521f9eaaf840d819",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

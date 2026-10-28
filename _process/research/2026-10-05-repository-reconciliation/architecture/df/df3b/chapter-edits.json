@@ -1,0 +1,210 @@
+[
+ {
+  "unit": "A",
+  "record": "seeking-boundary",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "Where what stands runs down from some step on, rises stop by exhaustion, not by enough.",
+  "new": "Where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps: exhaustion, not enough.",
+  "by": "migrator"
+ },
+ {
+  "unit": "A",
+  "record": "binding-preserving-substitution",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "(periphery; a supplied finite typed-term language; `Quot.sound` in six declarations, as the record reports)",
+  "new": "(periphery; a supplied finite typed-term language; `Quot.sound` in nine of the cited declarations, as the receipts report)",
+  "by": "migrator"
+ },
+ {
+  "unit": "A",
+  "record": "retrospective-source-binding",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "the original periphery history uses propext and inherits choice",
+  "new": "the periphery history and its instances use propext and Quot.sound, and modules its receipt inherits use choice",
+  "by": "migrator"
+ },
+ {
+  "unit": "A",
+  "record": "retrospective-source-binding",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "so later calibration resolves earlier records without new naming",
+  "new": "so later calibration can resolve earlier records without new naming",
+  "by": "reviewer"
+ },
+ {
+  "unit": "A",
+  "record": "claims-shown-in-context",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "Some worlds glue nowhere: Specker's three boxes and the two-qubit Mermin–Peres square have no whole, given local possibilities and no context-free reading.",
+  "new": "Some worlds glue nowhere: in Specker's three boxes and the two-qubit Mermin–Peres square the possibilities are local and admit no context-free reading, so no configuration respecting them glues, and they are the parts of no whole.",
+  "by": "reviewer"
+ },
+ {
+  "unit": "A",
+  "record": "joining-questions-survive-encoding",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "Encoding every partner through one account that lifts the joinings",
+  "new": "Encoding every partner through one description that lifts the joinings",
+  "by": "reviewer"
+ },
+ {
+  "unit": "D",
+  "record": "historical-source-binding",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "**Theorem** (any type; values and contents compared decidedly; for the span law, a value type with two distinct values). An explanation of a dated record gives the actual content exactly where every rival is told apart by some dated control.",
+  "new": "**Theorem** (any type; reports, contents and the relation's values compared decidedly; for the span law, two distinct values of the relation). Every explanation of an earlier packet by a family history fitting the dated records and an admitted source gives the actual content exactly where every rival is told apart by some dated control.",
+  "by": "reviewer"
+ },
+ {
+  "unit": "D",
+  "record": "retained-reference-joining-recovery",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "Exact accounts must tell idle from spent histories.",
+  "new": "Exact descriptions must tell an idle start from a passage.",
+  "by": "reviewer"
+ },
+ {
+  "unit": "E",
+  "record": "formed-goal-revision-continuation",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "**Conditional** (the practical commitments J, with interpretation, responsiveness and authority, supplied). Under J the construction's comparison warrants learning over attendance exactly under access loss with kept transition maintenance; the warrant belongs to the construction under J, not to the counting law.",
+  "new": "**Conditional** (the practical commitments, with interpretation, responsiveness and authority, supplied). Under them the construction's comparison warrants learning over attendance exactly under access loss with kept transition maintenance; the warrant belongs to the construction under those commitments, not to the counting law.",
+  "by": "migrator"
+ },
+ {
+  "unit": "E",
+  "record": "joining-open-map-factor",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "Two such refinements' projections have a unique join-preserving map to the equally answering pairs commuting with both.",
+  "new": "Two open maps from one joining have a join-preserving map into the pairs alike in their roles, commuting with both and unique at every fragment.",
+  "by": "migrator"
+ },
+ {
+  "unit": "E",
+  "record": "selection-under-registration-revision",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "Where steps draw only on what is held, a course is executable exactly where each draw is within the stock then standing;",
+  "new": "Where a balanced stock's steps draw only on what is held, each draw along every course is within the stock then standing; a stock run with a process executes a course exactly where each draw is within the stock then standing and the process admits it;",
+  "by": "reviewer"
+ },
+ {
+  "unit": "E",
+  "record": "guarded-program-question-recovery",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "Guarded, sequential and choice program questions are branching tests with no premise;",
+  "new": "Whether a guarded, sequential or choice program leads to where a test holds is a finite alternative of branching tests, with no premise;",
+  "by": "reviewer"
+ },
+ {
+  "unit": "E",
+  "record": "multivalued-joining-common-structure",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "Two accounts whose codes identify exactly the configurations passing the same branching tests",
+  "new": "Two descriptions whose codes identify exactly the configurations passing the same branching tests",
+  "by": "reviewer"
+ },
+ {
+  "unit": "E",
+  "record": "formed-goal-revision-continuation",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "revision completes exactly under access loss with kept transition maintenance, and afterwards n operations run exactly where n ≤ 5, the earlier loss kept.",
+  "new": "revision and reform complete exactly under access loss with kept transition maintenance, and afterwards n operations run exactly where n ≤ 5 (n ≤ 2 without reform), the earlier loss kept.",
+  "by": "reviewer"
+ },
+ {
+  "unit": "F",
+  "record": "laws-of-one-step-complete",
+  "file": "theories/becoming/chapters/01-ROOT.md",
+  "old": "exactly where it obeys the law of every step (something taken has between one and that many takers; something taken or given, an exchange) and, on a family balanced on, running down, closed or both, that hypothesis's law (`OneStep.every_iff` and companions); across runs on one fixed family the passages also chain.",
+  "new": "exactly where it obeys the law of every step (something taken has between one and that many takers; something taken or given, an exchange), the law of the givers (something given has between one and that many givers) and, on a family balanced on, running down, closed or both, that hypothesis's law, running down adding that the givers are at most the takers (`OneStep.every_iff`, `OneStep.every_givers_iff` and companions); across runs on one fixed family the passages also chain.",
+  "by": "migrator"
+ },
+ {
+  "unit": "G",
+  "record": "laws-at-coarser-steps",
+  "file": "theories/becoming/chapters/01-ROOT.md",
+  "old": "At strictly increasing sample times, balance (each relatum listed once at the fine steps inside), dissipation and running down compose over a coarse step, closure exactly; only active giving and taking are relative to the step (`Flow.BalancesOn.sample`).",
+  "new": "At strictly increasing sample times, balance (each relatum listed once at the fine steps inside), dissipation and running down (what stands held at both ends) compose over a coarse step, closure exactly; giving and taking only while active need not compose, nor bounded transmission (`Flow.BalancesOn.sample`).",
+  "by": "migrator"
+ },
+ {
+  "unit": "G",
+  "record": "laws-at-finer-units",
+  "file": "theories/becoming/chapters/01-ROOT.md",
+  "old": "the recurrence law and the bound need the refinement counted as a giving.",
+  "new": "the recurrence law and the bound need the refinement counted as a giving, or the unit fixed from some step on.",
+  "by": "migrator"
+ },
+ {
+  "unit": "G",
+  "record": "order-of-exchanges-is-the-invariant",
+  "file": "theories/becoming/chapters/01-ROOT.md",
+  "old": "With a given footprint containing the exchanges, commuting unjoined exchanges keeps the partial order of joined ones and reaches every renumbering keeping it (`Footprinted.sorts_iff`); conversely, on a finite stretch, the renumbering and its inverse given, a world so ordered agrees with a reordering at every step.",
+  "new": "With a given footprint containing the exchanges, commuting unjoined neighbours keeps the partial order of joined exchanges and, on a finite stretch with the renumbering and its inverse given, reaches every renumbering keeping it (`Footprinted.sorts_iff`); conversely, a world with the same exchanges, footprints and changes so ordered, from a like start, agrees with a reordering at every step of the stretch.",
+  "by": "reviewer"
+ },
+ {
+  "unit": "H",
+  "record": "recurrence-without-premise",
+  "file": "theories/becoming/chapters/01-ROOT.md",
+  "old": "a quantity that never falls rises only under a law that merges (`Law.rise_not_lossless`)",
+  "new": "a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing (`Law.rise_not_lossless`)",
+  "by": "migrator"
+ },
+ {
+  "unit": "H",
+  "record": "runs-on-families-chosen-step-by-step",
+  "file": "theories/becoming/chapters/01-ROOT.md",
+  "old": "Only a hypothesis whose family holds what stands before and after joins one step to the next, and continuity up to order replaces following position by position (`OneStep.step_runsDown_iff`).",
+  "new": "Under no condition, balance or closure, each step's law is the whole law of a run on families chosen step by step; running down, whose family holds what stands before and after its step, adds that what stands continues up to order, which replaces following position by position (`OneStep.step_every_iff`, `OneStep.step_runsDown_iff`).",
+  "by": "migrator"
+ },
+ {
+  "unit": "I",
+  "record": "condition-correspondence-discipline",
+  "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "old": "connects the whole within two interactions, and there living significance is a seed with both neutralities",
+  "new": "connects the whole (`Web.connected_of_renewable`), and there, with some standpoint, living significance is a seed with both neutralities",
+  "by": "reviewer"
+ },
+ {
+  "unit": "I",
+  "record": "condition-correspondence-discipline",
+  "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "old": "so adjoining an idle condition changes no connection (`Web.inert_connects`)",
+  "new": "so adjoining an idle condition changes no connection (`Web.adjoin_connected_iff`; the inert condition, `Web.inert_connects`)",
+  "by": "reviewer"
+ },
+ {
+  "unit": "I",
+  "record": "positive-ground-open-futures",
+  "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "old": "with D it supplies a contributory reason, neither permission nor duty, which a real burden or revisable scope does not erase.",
+  "new": "with a supplied articulation of relevant content into a reason, a positive finite integral whose positively contributing occurrences mean such content gives each admitted continuation a contributory reason, neither permission nor duty (`SecuredContent.certified_integral_reason`); a burden in the same continuation leaves that integral positive while the full signed change is −1 (`SecuredContent.positive_integral_and_adverse_full_change`), and widening the admitted scope to a barren possibility makes the certificate fail (`SecuredContent.wider_scope_can_require_certificate_retraction`).",
+  "by": "reviewer"
+ },
+ {
+  "unit": "I",
+  "record": "positive-ground-open-futures",
+  "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "old": "(living significance, correspondence E; D for the reason)",
+  "new": "(living significance, correspondence E; a supplied articulation for the reason)",
+  "by": "reviewer"
+ },
+ {
+  "unit": "L",
+  "record": "inherited-structural-copying",
+  "file": "theories/becoming/chapters/04-LIFE.md",
+  "old": "| a template strand is copied and released exactly when the pool supplies its tokens and the support covers its draws plus one, for every pool |",
+  "new": "| a nonempty template strand whose bonds are the path on its tokens is copied and released exactly when the pool supplies its tokens and the support covers its draws plus one, for every pool |",
+  "by": "reviewer"
+ },
+ {
+  "unit": "L",
+  "record": "",
+  "file": "theories/becoming/chapters/04-LIFE.md",
+  "old": "ordered access, adjacency costs, release, occurrence order",
+  "new": "ordered access, adjacency draws, release, occurrence order",
+  "by": "reviewer"
+ }
+]

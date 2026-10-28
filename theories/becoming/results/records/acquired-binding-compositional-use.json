@@ -1,19 +1,90 @@
 {
-  "schema_version": 1,
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F09",
-  "reviewed_at_utc": "2026-10-14T05:50:00+00:00",
-  "related": [],
+  "schema_version": 2,
   "id": "acquired-binding-compositional-use",
   "title": {
     "zh": "取得的绑定接通组合使用",
     "en": "Acquired bindings enter compositional use"
   },
-  "claim": {
-    "zh": "对每个逐词读出的读法：分组恢复词之处，读出每个编码序列给出其词义的组合，当且仅当每个词读作其义。对取得的词库：凡转移记录对二词编码成组（六个局部键条件），每个编码序列的解释等于其原子的组合，当且仅当每个词形解析为其原子。指定经历形成分节并由四次各自歧义的接触取得形式到已有操作的绑定，是实例。有限支持下另有实际执行见证。",
-    "en": "For every word-by-word reading: where grouping recovers the words, reading every encoded sequence gives the meanings of its words exactly when each word is read as its meaning. For acquired lexicons: wherever the transition record groups the two-word encoding (six local bond conditions), interpreting every encoded sequence equals the assembly of its atoms exactly when each word form resolves to its atom. The specified history, which forms grouping and acquires form-to-known-operation bindings from four individually ambiguous encounters, is an instance. A separate finite-support witness executes the result."
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F09",
+  "reviewed_at_utc": "2026-10-28T11:55:05+00:00",
+  "statement": {
+    "en": "Where grouping recovers the words, reading every encoded sequence gives its words' meanings exactly where each word is read as its meaning; a history that forms the grouping and acquires its bindings from four individually ambiguous encounters is an instance.",
+    "zh": "凡分组恢复词之处，读出每个编码序列给出其词义，恰当每个词读作其义；一段形成分组、并由四次各自歧义的接触取得绑定的经历是其实例。"
   },
+  "laws": [
+    {
+      "en": "For any alphabet, words, adjacency relation r, reading of groups and meanings: where grouping by r recovers the words of every encoded sequence, reading every encoded sequence group by group gives the meanings of its words exactly where each word is read as its meaning; for any list of words, reading their groups gives their meanings exactly where each word of the list is so read.",
+      "zh": "对任意字母表、词、相邻关系 r、组的读法与词义：凡按 r 分组恢复每个编码序列的词，逐组读出每个编码序列给出其词义，恰当每个词读作其义；对任意词列表，读出其各组给出其词义，恰当列表中每个词如此读出。",
+      "declarations": [
+        "Becoming.Segmentation.readAll",
+        "Becoming.Segmentation.readAll_map_iff",
+        "Becoming.Segmentation.reads_every_iff"
+      ]
+    },
+    {
+      "en": "For any process and configuration s where every word is a course from s back to s: every sequence of words written out is such a course, and, where grouping recovers the words, every course of words is read as its words' meanings exactly where each word is read as its meaning.",
+      "zh": "对任意过程与构形 s，凡每个词是从 s 回到 s 的历程：每个写出的词序列都是这样的历程；凡分组恢复词之处，每个由词构成的历程读作其词义，恰当每个词读作其义。",
+      "declarations": [
+        "Becoming.Courses.encode_course",
+        "Becoming.Courses.course_reads_iff"
+      ]
+    },
+    {
+      "en": "For every acquired lexicon whose transition record bonds a to b and c to d and none of b to a, b to c, d to a and d to c, grouping recovers the two words of every encoded sequence, its reading of forms is the core's reading of groups, and every encoded sequence is interpreted as the assembly of its atoms exactly where each word form resolves to its atom.",
+      "zh": "对每个取得的词库，凡其转移记录使 a 连 b、c 连 d，而 b 到 a、b 到 c、d 到 a、d 到 c 皆不相连：分组恢复每个编码序列的两个词，其词形读法即核心的组读法；每个编码序列解释为其原子的组合，恰当每个词形解析为其原子。",
+      "declarations": [
+        "Becoming.MachineInstances.Groups",
+        "Becoming.MachineInstances.segments_of_groups",
+        "Becoming.MachineInstances.readForms_eq",
+        "Becoming.MachineInstances.interprets_every_iff"
+      ]
+    },
+    {
+      "en": "One encounter offering two operations leaves the form with both candidates, unresolved; the history learned 32, four encounters each offering two operations, records the bonds that group the encoding and resolves both word forms to their atoms, so it interprets every encoded sequence as the assembly of its atoms.",
+      "zh": "一次提供两项操作的接触使词形保留两个候选而不解析；经历 learned 32 由四次各提供两项操作的接触组成，记录使编码成组的连接，并把两个词形都解析为其原子，故它把每个编码序列解释为其原子的组合。",
+      "declarations": [
+        "Generative.AcquiredBinding.single_ambiguous_encounter_does_not_choose_a_meaning",
+        "Generative.AcquiredBinding.actual_encounters_acquire_both_bindings",
+        "Becoming.MachineInstances.learned_groups",
+        "Becoming.MachineInstances.learned_interprets_every",
+        "Generative.AcquiredBinding.acquired_binding_and_grouping_compose"
+      ]
+    },
+    {
+      "en": "For any lexicon, form and target: where the target is in the repertoire and offered in every admitted encounter with the form, a form that resolves uniquely resolves to the target.",
+      "zh": "对任意词库、词形与目标：凡目标在可用范围内、且在该词形每次获准的接触中都被提供，唯一解析的词形解析为该目标。",
+      "declarations": [
+        "Generative.AcquiredBinding.unique_resolution_is_correct_under_coverage"
+      ]
+    },
+    {
+      "en": "Executing the three-word utterance with learned 32 gives the response true, false, true, with its support used up (none left, 25 used in all) and four records; with learned 31 the utterance is interpreted as intended but not executed.",
+      "zh": "以 learned 32 执行三词话语，给出回应真、假、真，支持用尽（剩余为零，共用去 25），记录四条；以 learned 31，话语按所意解释，但不执行。",
+      "declarations": [
+        "Generative.AcquiredBinding.acquired_bindings_reach_actual_compositional_response",
+        "Generative.AcquiredBinding.interpretation_can_outlast_affordable_execution"
+      ]
+    },
+    {
+      "en": "An encounter offering only a wrong operation resolves the form wrongly and executes it; two identical ambiguous encounters leave both candidates; contrary encounters suspend the form instead of relabelling it, and excluding the sound encounters' source then keeps the wrong binding.",
+      "zh": "只提供错误操作的接触使词形被错误解析并执行；两次相同的歧义接触保留两个候选；相反的接触使词形暂停解析而不悄然改标；此后排除可靠接触的来源，保留错误绑定。",
+      "declarations": [
+        "Generative.AcquiredBinding.omitted_target_can_produce_a_wrong_unique_binding",
+        "Generative.AcquiredBinding.repeated_ambiguity_does_not_resolve_reference",
+        "Generative.AcquiredBinding.contrary_encounters_suspend_instead_of_silently_relabeling",
+        "Generative.AcquiredBinding.excluding_the_sound_encounters_preserves_the_wrong_binding"
+      ]
+    },
+    {
+      "en": "After contrary encounters, a supplied judgment excluding the wrong source resolves the form correctly and executes the utterance as intended, with every earlier record kept.",
+      "zh": "相反接触之后，一项给定的排除错误来源的判断使词形被正确解析，话语按所意执行，所有先前记录都保留。",
+      "declarations": [
+        "Generative.AcquiredBinding.corrected_admission_repairs_use_without_erasing_history"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "既有操作、基本分类、分节算法、三项已知操作范围、交集更新和接触安排给定；成功史保留足够支持。",
@@ -24,6 +95,44 @@
       "en": "General correctness requires the target in the repertoire and in each relevant admitted encounter; source-exclusion judgments for correction are separately supplied."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "It derives neither the full meanings of the prior operations, the origins of categories and attention, nor the reliability of source judgments.",
+      "zh": "它不推导已有操作的全部意义、分类与注意的起源，也不推导来源判断的可靠性。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "It explains neither complete semantics, infant neural mechanisms nor evolutionary psychology.",
+      "zh": "它既不解释完整语义、婴儿神经机制，也不解释演化心理。",
+      "kind": "scope"
+    },
+    {
+      "en": "The primary developmental evidence constrains automatic transfer but identifies no unique mechanism or evolutionary history.",
+      "zh": "原始发育证据约束自动迁移，但不识别唯一机制或演化史。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean",
+      "detail": {
+        "zh": "遗漏真实候选可造成错误唯一绑定；重复歧义不辨明意义；误排真实来源保留错误，有限支持可阻断执行。",
+        "en": "Omitting the target can create a wrong unique binding; repeated ambiguity does not identify a meaning; excluding sound evidence preserves error, and finite support can prevent execution."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked; every receipt records Lean 4.29.1. Core: Becoming.Segmentation and Becoming.Courses are bound to receipts under becoming-checks (check_becoming.py), with empty axiom reports. Periphery: AcquiredBinding to its receipt in inquiry-root (check_acquired_binding.py), MachineInstances to its receipt under machine-instances-checks (check_machine_instances.py); the cited declarations use propext, some also Quot.sound. Author counterreview only; no independent review or new experiment.",
+    "zh": "回执皆 Lean 4.29.1。核心 Segmentation、Courses 绑定 becoming-checks（check_becoming.py），公理报告空；外围 AcquiredBinding 绑定 inquiry-root（check_acquired_binding.py），MachineInstances 绑定 machine-instances-checks（check_machine_instances.py），所引用 propext，或加 Quot.sound。作者反审；无独立审查或新实验。"
+  },
+  "next_delta": {
+    "en": "Identify how formed access and retained source and order information guide actual use in a matched developmental procedure, distinguishing present reliance from endorsement of old content.",
+    "zh": "在匹配的发育程序中识别已形成的通达及所保留的来源与次序信息如何引导实际使用，区分当前依赖与对旧内容的认可。"
+  },
   "correspondence": {
     "zh": "取得的是新形式指向已可用操作的关系；场景列表代表实际可取得的候选，需有独立的感知与社会对应。",
     "en": "What is acquired is a new form-to-available-operation relationship; scene lists represent accessible alternatives and require independent perceptual/social correspondence."
@@ -64,23 +173,7 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean",
-      "detail": {
-        "zh": "遗漏真实候选可造成错误唯一绑定；重复歧义不辨明意义；误排真实来源保留错误，有限支持可阻断执行。",
-        "en": "Omitting the target can create a wrong unique binding; repeated ambiguity does not identify a meaning; excluding sound evidence preserves error, and finite support can prevent execution."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "未推导已有操作的全部意义、分类与注意起源，或来源判断的可靠性；不是完整语义、婴儿神经机制或演化心理证明。",
-    "en": "Does not derive the full meanings of prior operations, category/attention origins or source-judgment reliability; not a proof of complete semantics, infant neural mechanisms or evolutionary psychology."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 新编23项定理／41项声明审计，247项继承审计分列。作者反审与原始证据比较；无独立验收或新实验。",
-    "en": "Fresh Lean 4.29.1 build: 23 new theorems / 41 declaration audits, with 247 inherited audits separately rebuilt. Author counterreview and primary-evidence comparison; no independent acceptance or new experiment."
-  },
+  "related": [],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean",
@@ -90,7 +183,14 @@
         "Generative.AcquiredBinding.acquired_binding_and_grouping_compose",
         "Generative.AcquiredBinding.unique_resolution_is_correct_under_coverage",
         "Generative.AcquiredBinding.acquired_bindings_reach_actual_compositional_response",
-        "Generative.AcquiredBinding.excluding_the_sound_encounters_preserves_the_wrong_binding"
+        "Generative.AcquiredBinding.excluding_the_sound_encounters_preserves_the_wrong_binding",
+        "Generative.AcquiredBinding.single_ambiguous_encounter_does_not_choose_a_meaning",
+        "Generative.AcquiredBinding.actual_encounters_acquire_both_bindings",
+        "Generative.AcquiredBinding.interpretation_can_outlast_affordable_execution",
+        "Generative.AcquiredBinding.omitted_target_can_produce_a_wrong_unique_binding",
+        "Generative.AcquiredBinding.repeated_ambiguity_does_not_resolve_reference",
+        "Generative.AcquiredBinding.contrary_encounters_suspend_instead_of_silently_relabeling",
+        "Generative.AcquiredBinding.corrected_admission_repairs_use_without_erasing_history"
       ]
     },
     {
@@ -258,10 +358,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "既有条件连接保留；下一重点是在匹配发育程序中识别已取得访问及所保留来源／次序如何进入实际使用，分别观察当前依赖与旧内容认可。原典已约束自动迁移，但未识别唯一机制或演化史。",
-    "en": "Preserve the completed conditional connections. Next identify how formed access and retained source/order information guide actual use in a matched developmental procedure, distinguishing present reliance from old-content endorsement. Primary evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history."
-  },
   "history": [
     {
       "zh": "2026-10-08：接通取得的分节、由歧义接触形成的绑定和已有组合使用；固定解码被替代，错误与来源判断前提保留。",
@@ -316,6 +412,28 @@
     {
       "en": "2026-10-20: 24 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/6724a62f5ae97ca4/acquired-binding-compositional-use.json and in git.",
       "zh": "2026-10-20：24 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/6724a62f5ae97ca4/acquired-binding-compositional-use.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the home section; the claim split into eight laws, each read against its declarations in Segmentation.lean, Courses.lean, MachineInstances.lean and AcquiredBinding.lean (the reading law, its form on courses, the acquired-lexicon law, the learned history, coverage, execution, the failures and the supplied correction); the limitations to two does-not-show items, the evidence sentence of the next step to a third, and the standard boundaries no-ethical-premise-core-axiom-free and formal-not-empirical; single_ambiguous_encounter_does_not_choose_a_meaning, actual_encounters_acquire_both_bindings, interpretation_can_outlast_affordable_execution, omitted_target_can_produce_a_wrong_unique_binding, repeated_ambiguity_does_not_resolve_reference, contrary_encounters_suspend_instead_of_silently_relabeling and corrected_admission_repairs_use_without_erasing_history added to AcquiredBinding.lean's references (the counterexample's witnesses among them); no premise, status or source hash changed. Every earlier sentence is mapped in [acquired-binding-compositional-use.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/acquired-binding-compositional-use.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依本节写出陈述；主张拆为八条规律，各条对照 Segmentation.lean、Courses.lean、MachineInstances.lean 与 AcquiredBinding.lean 中的声明核读（读出律、其在历程上的形式、取得词库律、学成经历、覆盖、执行、失败情形与给定的纠正）；限制改为两条“未表明”，下一步中的证据一句改为第三条，并引用通用边界 no-ethical-premise-core-axiom-free 与 formal-not-empirical；single_ambiguous_encounter_does_not_choose_a_meaning、actual_encounters_acquire_both_bindings、interpretation_can_outlast_affordable_execution、omitted_target_can_produce_a_wrong_unique_binding、repeated_ambiguity_does_not_resolve_reference、contrary_encounters_suspend_instead_of_silently_relabeling 与 corrected_admission_repairs_use_without_erasing_history 加入 AcquiredBinding.lean 的引用（其中有反例的见证）；前提、状态与来源哈希均未改变。每句旧文本的去向见 [acquired-binding-compositional-use.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/acquired-binding-compositional-use.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/22c3d97e9da5b85d/acquired-binding-compositional-use.json",
+      "sha256": "22c3d97e9da5b85d277956ab02dd6e1a8012d516bbc51afe59bbef3b1d69399b",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/6724a62f5ae97ca4/acquired-binding-compositional-use.json",
+      "sha256": "6724a62f5ae97ca4642cc38ffd17d78afa6673d08a98c8e12b0fc015601b5aad",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

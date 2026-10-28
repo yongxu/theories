@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "id": "multivalued-joining-common-structure",
+  "title": {
+    "zh": "多结果接合的共同关系结构",
+    "en": "Common relational structure for multivalued joining"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F22",
+  "reviewed_at_utc": "2026-10-25T14:32:50+00:00",
+  "claim": {
+    "zh": "有限结果接合的两份精确约简分支说明具有唯一的已用代码对齐，保持所有可能输出类；代码结果可从任意原来指定的同码输入对提升。",
+    "en": "Two exact reduced branch accounts of finite-outcome joining have a unique alignment on used codes preserving all possible outcome classes; each code outcome lifts from any originally specified input pair with those codes."
+  },
+  "hypotheses": [
+    {
+      "zh": "同一部分接合 J；每对输入具有有限结果集合。",
+      "en": "One partial joining relation J; each input pair has a finite outcome set."
+    },
+    {
+      "zh": "目标含全部有限否定、合取、左右接合后继问题，无独立原子谓词。",
+      "en": "The target contains all finite negation, conjunction and left/right joining-successor questions, with no independent atomic predicates."
+    },
+    {
+      "zh": "Exact 给出完整精确答案；Reduced 仅用于最小代码与输出代码的提升。",
+      "en": "Exact supplies complete truthful answers; Reduced is used for minimal codes and lifting output codes."
+    }
+  ],
+  "correspondence": {
+    "zh": "片段、接合及其检验解释同一活动内的关系；数学语义不等于所有问题已被实际取得。",
+    "en": "Fragments, joining and its questions interpret relations within the same activity; mathematical semantics does not establish acquired access to every answer."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
+  "aliases": [
+    "Generative.ExplanatoryJoiningBranches.common_multivalued_structure",
+    "Becoming.Joining.common_multivalued_structure_of_em (retired module)",
+    "Becoming.Joining.common_structure",
+    "Becoming.Joining.operation_lifts_iff (retired module)"
+  ],
+  "dependencies": [
+    {
+      "id": "branching-tests-bisimulation",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "检查过的同一接合到模态模型适配。",
+        "en": "Checked adapter from the same joining to the modal model."
+      },
+      "interface": {
+        "output": {
+          "zh": "same_iff_bisimilar 所用的 same_is_bisimulation：Same 本身构成 Bisimulation。",
+          "en": "same_is_bisimulation, the checked core used by same_iff_bisimilar: Same itself forms a Bisimulation."
+        },
+        "input": {
+          "zh": "branch_same_compatible 经 bisimulation_iff_compatible 接到左右接合，join_result_matches 再替换两个输入。",
+          "en": "branch_same_compatible connects it to left/right joining via bisimulation_iff_compatible; join_result_matches then replaces both inputs."
+        },
+        "conditions": {
+          "zh": "finite_outcomes_image_finite 验证有限纤维；无原子谓词；精确性及约简性另明示。",
+          "en": "finite_outcomes_image_finite verifies finite fibers; no atomic predicates; exactness and reducedness are separately explicit."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranches.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "functional-joining-common-structure",
+      "detail": {
+        "zh": "从单值共同操作接续到多结果关系；并非相同问题集下的无代价弱化。",
+        "en": "Continues from functional common operations to a multivalued relation, not a cost-free weakening for the identical question family."
+      }
+    },
+    {
+      "id": "retained-reference-joining-recovery",
+      "detail": {
+        "zh": "不同载体的保留引用形成对应已在新范围内实查；不是回写本结果的证明范围。",
+        "en": "Retained-reference formation across different carriers is checked at its new scope; it does not rewrite this result’s proof scope."
+      }
+    },
+    {
+      "id": "finite-granularity-question-recovery",
+      "detail": {
+        "zh": "同一研究中的接续成果；具体正式复用另列，关联不自动构成已证转换。",
+        "en": "Continuation result in the same study; formal reuse is listed separately, and this relationship does not itself assert a checked adapter."
+      }
+    },
+    {
+      "id": "prefix-observation-loss",
+      "detail": {
+        "zh": "同一研究中的接续成果；具体正式复用另列，关联不自动构成已证转换。",
+        "en": "Continuation result in the same study; formal reuse is listed separately, and this relationship does not itself assert a checked adapter."
+      }
+    },
+    {
+      "id": "guarded-program-question-recovery",
+      "detail": {
+        "zh": "同一研究的新接续；具体形式复用另列，此关联不独自证明转换。",
+        "en": "New continuation in the same study; formal reuse is specified separately, without a proved adapter inferred from this relation."
+      }
+    },
+    {
+      "id": "residual-continuation-correspondence",
+      "detail": {
+        "zh": "同一研究的新接续；具体形式复用另列，此关联不独自证明转换。",
+        "en": "New continuation in the same study; formal reuse is specified separately, without a proved adapter inferred from this relation."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
+      "detail": {
+        "zh": "有限结果和丰富问答仍是前提；保持结果类而非每个原生三元事实。例子证明共同关系仍可多结果。任意解释的适用性及不同分节的共同对应未证。",
+        "en": "Finite outcomes and rich answers remain premises; outcome classes, not every native ternary fact, are preserved. The witness proves the common relation can remain multivalued. Applicability to every explanation and common correspondence across different articulations remain unproved."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranchWitnesses.lean",
+      "detail": {
+        "zh": "同一规律有可区分的左／右结果；规范共同表示仍非单值，且共享后继不同于分别可行的路径。",
+        "en": "One law has distinguishable left/right outcomes; the canonical account remains nonfunctional, and shared continuation differs from individually feasible paths."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "有限结果和丰富问答仍是前提；保持结果类而非每个原生三元事实。例子证明共同关系仍可多结果。任意解释的适用性及不同分节的共同对应未证。",
+    "en": "Finite outcomes and rich answers remain premises; outcome classes, not every native ternary fact, are preserved. The witness proves the common relation can remain multivalued. Applicability to every explanation and common correspondence across different articulations remain unproved."
+  },
+  "validation_scope": {
+    "zh": "所列 Lean 源码与成功冻结回执逐字哈希绑定；本轮223项审计含26项新声明。旧功能性定理信用此前166项回执，未冒充新证明。",
+    "en": "Listed Lean sources bind by exact hash to successful frozen receipts. This round checks 223 declarations including 26 new ones. The older functional theorem credits its previous 166-audit receipt, not a new proof."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranches.lean",
+      "role": "provenance",
+      "sha256": "4c9c2ff814f1e5d2fbd9948a7466833b438ae8875cd5dcb41a2897aa60c9b3f3",
+      "declarations": [
+        "Generative.ExplanatoryJoiningBranches.common_multivalued_structure",
+        "Generative.ExplanatoryJoiningBranches.bisimulation_iff_compatible",
+        "Generative.ExplanatoryJoiningBranches.join_result_matches",
+        "Generative.ExplanatoryJoiningBranches.operation_lifts",
+        "Generative.ExplanatoryJoiningBranches.every_exact_account_has_canonical_factor"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean",
+      "role": "proof",
+      "sha256": "7bb613cf842d21d353576ccd198eb6596a91da87546b44b3e8bec602e534e7e2",
+      "declarations": [
+        "Becoming.Joining.FiniteOutcomes.joined_sameBranchingTests_of_em",
+        "Becoming.Joining.FiniteOutcomes.lifts_of_exact"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presentations.lean",
+      "role": "proof",
+      "sha256": "2f142d63b722ca50e4231f3b17e8a73b4636f72207a05ca4c58e9eb2ce79848f",
+      "declarations": [
+        "Becoming.Presentations.reduced_exact_kernel",
+        "Becoming.Presentations.canonical_factor",
+        "Becoming.Presentations.relative_unique_correspondence",
+        "Becoming.PresentationFrames.canonical_kernel",
+        "Becoming.Presentations.relation_descends_iff_saturated",
+        "Becoming.Presentations.lift_exact_iff_saturated",
+        "Becoming.Presentations.relational_reading_unique_on_used",
+        "Becoming.Presentations.separating_relation_blocks_descent"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-joining-branches-checks/20261008T130611.816353Z/receipt.json",
+      "role": "receipt",
+      "sha256": "ee0939ec4f4f14674312e91690ccd6bf9d436dca03b0d6664ec00c5fde832533",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "a78b40420146e1035b468b39f60faf9ac2a768db1df8f63adcdf4b13a3dee56f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryBranching.lean",
+      "role": "provenance",
+      "sha256": "ff49f9ef7e458a316898575948fcec763d879ab5412e170c25de56ac94cd7a2e",
+      "declarations": [
+        "Generative.ExplanatoryBranching.same_is_bisimulation"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BranchingCorrespondence.lean",
+      "role": "proof",
+      "sha256": "163d02028f3fd5b4a85dd7990ffaeda47de9151d092608fe473b3f5c0d52c7b0",
+      "declarations": [
+        "Becoming.SameBranchingTests.bisimulation_of_em"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranchWitnesses.lean",
+      "role": "proof",
+      "sha256": "8642814c7270ef08759e57f5c8dec54061f6c29c6b69e461e50317833a20087c",
+      "declarations": [
+        "Generative.ExplanatoryJoiningBranchWitnesses.canonical_operation_still_multivalued"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
+      "role": "proof",
+      "sha256": "21ba2468426712d6c8410ad2d7960675a6e561cfa07d43ab6782cf9ffc2b10a6",
+      "declarations": [
+        "Becoming.Joining.common_structure",
+        "Becoming.Joining.FiniteOutcomes.common_structure",
+        "Becoming.Joining.bisimulation_iff_compatible",
+        "Becoming.Joining.image_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/JoiningBridge.lean",
+      "role": "provenance",
+      "sha256": "07948aff461a1a8a72852689a35dbec9276179ac0eec265d39e8b44a1ecef0c9",
+      "declarations": [
+        "Becoming.Joining.operation_lifts_iff",
+        "Becoming.Joining.operation_lifts_of_em",
+        "Becoming.Joining.common_multivalued_structure_of_em"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T222948.779875Z/verification.json",
+      "role": "receipt",
+      "sha256": "0a2bacf2db996d0f2da49b75bda0b985f74a5b6849be2b50ab6471033917d914",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T092027.048735Z/verification.json",
+      "role": "receipt",
+      "sha256": "de95f96fbdaf4033149b61c99999a701769bbff509915f6fd858b0f6ce24e0f2",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranchWitnesses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-joining-branches-checks/20261008T130611.816353Z/receipt.json",
+      "sha256_pointer": "/modules/13/sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Joining",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Joining",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presentations.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Presentations",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.JoiningCodes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BranchingCorrespondence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T222948.779875Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.BranchingCorrespondence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
+    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：在既有接合情境研究中接续；已完成结果分别迁移，新连接与复用分列。",
+      "en": "2026-10-08: continued the existing joining-context study; migrated completed claims separately and distinguished new connections from reuse."
+    },
+    {
+      "zh": "2026-10-09：复用本成果接通固定有限操作粒度；旧主张、假设与证明绑定不变。新前缀遗漏及继续检验见同一研究第22—26节。",
+      "en": "2026-10-09: reuse this result in finite-granularity continuation; preserve its claim, hypotheses and proof bindings. New prefix omission and resumption testing appear in the same study §§22–26."
+    },
+    {
+      "zh": "2026-10-09接续：研究新增有限条件程序、余项恢复及35项实查声明；原成果的主张、假设和证明绑定保持，见原研究§27—32。",
+      "en": "2026-10-09 continuation: finite guarded programs, residual recovery and 35 checked declarations added in the same study §§27–32; this result retains its claim, assumptions and proof bindings."
+    },
+    {
+      "zh": "2026-10-14，整合 I3（Ren：“a lot proofs are probably not integrated”）：在脊柱上陈述。新的核心模块 Becoming.Joining（只导入 Becoming.Likeness）把片段的结合经伙伴、角色与保留引用读作脊柱的框架；描述提升一结合，恰当同一编码是伙伴框架的互模拟，无前提（Joining.lifts_iff）；Becoming.JoiningBridge 把结合研究读作实例。核相同且为互模拟的两描述在所用编码上一一对齐，对齐把结合的一读法带到另一读法（Joining.common_structure）。精确约化的分支解释提升结合，恰当通过相同分支检验是伙伴框架的互模拟，无有限与判定（Joining.operation_lifts_iff）。外围的 common_multivalued_structure 在脊柱上成立（Joining.common_multivalued_structure_of_em、operation_lifts_of_em），排中律作为具名假设 em : ∀ p : Prop, Decided p，只用于在结果已列出时把通过相同分支检验认同为相同，即外围用经典推理之处；无此假设时，提升恰是同一编码为互模拟（Joining.operation_lifts_iff）。公理报告为空（草稿构建；回执随落地）。外围证明及其回执保持原范围。",
+      "en": "14 October 2026, integration I3 (Ren: “a lot proofs are probably not integrated”): stated on the spine. The new core module Becoming.Joining, importing only Becoming.Likeness, reads a joining of fragments as frames of the spine, through partners, roles and retained references; a description lifts a joining exactly where having one code is a bisimulation of the partner frame, with no premise (Joining.lifts_iff); Becoming.JoiningBridge reads the joining studies as instances. Two descriptions with one kernel that is a bisimulation are aligned one to one on the codes they use, and the alignment carries one reading of the joining onto the other (Joining.common_structure). An exact reduced branch account lifts the joining exactly where passing the same branching tests is a bisimulation of the partner frame, with no finiteness and no decision (Joining.operation_lifts_iff). The periphery's common_multivalued_structure holds on the spine (Joining.common_multivalued_structure_of_em, operation_lifts_of_em): excluded middle is named as the hypothesis em : ∀ p : Prop, Decided p and used only to identify passing the same branching tests with likeness where outcomes are listed, which is where the periphery reasoned classically; without it, lifting is exactly having one code being a bisimulation (Joining.operation_lifts_iff). Empty axiom reports (scratch build; the receipt comes with the landing). The periphery proof and its receipt keep their scope."
+    },
+    {
+      "en": "19 October 2026, U3 (study section 196): the presentation laws this record cites read on a frame (Becoming.PresentationFrames): exact reduced codes of a frame's branching tests correspond one to one, factor through the canonical one, and the joint relation of a joint frame descends to them exactly where saturated. The claim is unchanged.",
+      "zh": "2026年10月19日，U3（研究第 196 节）：本记录所引的呈现规律在框架上读出（Becoming.PresentationFrames）：框架分支检验的精确约简代码一一对应、经典范代码分解，联合框架的联合关系恰在饱和时下降到代码。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Moved with their full names: from PresentationFrames.lean to Presentations.lean, PresentationFrames.canonical_kernel. Removed as pure forwarders (each applied one law to its own binders), the law named instead: PresentationFrames.canonical_factor (now Presentations.canonical_factor); PresentationFrames.correspondence (now Presentations.relative_unique_correspondence); PresentationFrames.joint_blocked (now Presentations.separating_relation_blocks_descent); PresentationFrames.joint_descends_iff (now Presentations.relation_descends_iff_saturated); PresentationFrames.joint_image_iff (now Presentations.lift_exact_iff_saturated); PresentationFrames.joint_reading_unique (now Presentations.relational_reading_unique_on_used). Proof bindings (Joining.lean, JoiningCodes.lean, Presentations.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Joining.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; JoiningCodes.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Presentations.lean, takes as its final section PresentationFrames, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：连同完整名称移动：从 PresentationFrames.lean 到 Presentations.lean：PresentationFrames.canonical_kernel。作为纯转发删去（各自只把一条律应用于自己的约束变量），改提该律：PresentationFrames.canonical_factor（现为 Presentations.canonical_factor）；PresentationFrames.correspondence（现为 Presentations.relative_unique_correspondence）；PresentationFrames.joint_blocked（现为 Presentations.separating_relation_blocks_descent）；PresentationFrames.joint_descends_iff（现为 Presentations.relation_descends_iff_saturated）；PresentationFrames.joint_image_iff（现为 Presentations.lift_exact_iff_saturated）；PresentationFrames.joint_reading_unique（现为 Presentations.relational_reading_unique_on_used）。证明绑定（Joining.lean、JoiningCodes.lean、Presentations.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：Joining.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；JoiningCodes.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；Presentations.lean，以末节收入 PresentationFrames（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 7 bookkeeping notes condensed from 2026-10-08 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/f472b6b55cea5c62/multivalued-joining-common-structure.json and in git.",
+      "zh": "2026-10-20：7 条记账性说明合并（2026-10-08 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/f472b6b55cea5c62/multivalued-joining-common-structure.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryBranching, ExplanatoryJoiningBranches and JoiningBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.BranchingCorrespondence, Becoming.Joining, Becoming.JoiningCodes, Becoming.Presentations and ExplanatoryJoiningBranchWitnesses). The retired modules' content is also stated in Becoming.Granularity, Becoming.Labelled and Becoming.Likeness, which this record does not cite with declarations. The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryBranching, ExplanatoryJoiningBranches and JoiningBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.BranchingCorrespondence, Becoming.Joining, Becoming.JoiningCodes, Becoming.Presentations and ExplanatoryJoiningBranchWitnesses）。退役模块的内容也陈述于 Becoming.Granularity, Becoming.Labelled and Becoming.Likeness，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the aliases Becoming.Joining.operation_lifts_iff and Becoming.Joining.common_multivalued_structure_of_em marked as of a retired module: they are declared only in the history copy of JoiningBridge, which the record cites as provenance; the current proof is Becoming.Joining.common_structure. The claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：别名 Becoming.Joining.operation_lifts_iff 与 Becoming.Joining.common_multivalued_structure_of_em 标为已退休模块之名：它们只在 JoiningBridge 的历史副本中声明，本记录以之为来历；当前证明是 Becoming.Joining.common_structure。主张不变。"
+    }
+  ]
+}

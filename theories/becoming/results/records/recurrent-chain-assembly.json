@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "recurrent-chain-assembly",
   "title": {
     "zh": "材料准备接入重复链状生成",
@@ -8,11 +8,94 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-14T08:40:00+00:00",
-  "claim": {
-    "zh": "对每个字母表与汲取律，一词的复制产生该词，当且仅当池供给该词且支持覆盖其汲取；若每单位自同一存量取 d 并一分为二，则自 k 单位的 n 轮运行当且仅当存量覆盖 d·k(2^n−1)，终于 k·2^n 单位。末端接合是其实例（交替词、单位汲取）：在长度上限内，链按交替词生长（含边），当且仅当池供给该词且支持每记号覆盖一单位；自空链形成成熟链（含边），当且仅当池中两类各至少四个且有八单位空闲支持。自 k 条成熟链、具备各轮材料，n 轮达到 k·2^n 条成熟链，当且仅当支持覆盖 9·k(2^n−1)，即取量为 9 的加倍过程运行 n 轮。先前实际路由输出形成可切分链，其保留内部边的片段在同一接合规律下各自重建。",
-    "en": "For every alphabet and law of draws, a copy of a word produces the word exactly when the pool supplies it and the support covers what it draws; where every unit draws d from one stock and becomes two, n rounds from k units run exactly when the stock covers d·k(2^n−1), ending with k·2^n units. End attachment is the instance with the alternating word and unit draws: within the size limit a chain grows by the alternating word, bonds included, exactly when the pool supplies it and the support covers one unit per token, so the mature chain, bonds included, forms from the empty chain exactly when the pool holds at least four of each kind and eight units are free. From k mature chains with the material for the rounds, n rounds reach k·2^n mature chains exactly when the support covers 9·k(2^n−1), that is, exactly when the doubling process with draw 9 runs n rounds. The previous actual routing output forms the cleavable chain, and its internally connected fragments rebuild under the same attachment law."
+  "reviewed_at_utc": "2026-10-28T14:56:19+00:00",
+  "statement": {
+    "en": "Where every unit draws d from one stock and becomes two, n rounds from k units run exactly when the stock covers d·k(2^n − 1), ending with k·2^n units; from k mature chains with the pool holding the rounds' blocks, n rounds reach k·2^n mature chains exactly when the support covers 9k(2^n − 1).",
+    "zh": "每个单位从同一存量取 d 并一分为二时，自 k 个单位的 n 轮运行，恰当存量覆盖 d·k(2^n − 1)，终于 k·2^n 个单位；自 k 条成熟链、池中有各轮所需组分块时，n 轮达到 k·2^n 条成熟链，恰当支持覆盖 9k(2^n − 1)。"
   },
+  "laws": [
+    {
+      "en": "For every alphabet with decidable equality and every law of draws, a copy of a word makes its product what was built followed by the word exactly when the pool supplies the word and the support covers what its attachments draw.",
+      "zh": "对每个有可判定相等的字母表与每条汲取律：词的复制使产物成为已建者接上该词，恰当池供给该词且支持覆盖其接合所取。",
+      "declarations": [
+        "Becoming.Copying.built_iff"
+      ]
+    },
+    {
+      "en": "Where every unit draws d from one stock and becomes two, n rounds from k units with stock m run exactly when d·k(2^n − 1) ≤ m, ending with k·2^n units and m − d·k(2^n − 1) of the stock, and they run wherever the stock covers that; k(2^n − 1), what the rounds draw for beyond the start, with the k units of the start makes k·2^n.",
+      "zh": "每个单位从同一存量取 d 并一分为二时：自 k 个单位、存量 m 的 n 轮运行，恰当 d·k(2^n − 1) ≤ m，终于 k·2^n 个单位与存量所余 m − d·k(2^n − 1)，存量覆盖它处便运行；轮次在起点之外所取的 k(2^n − 1) 加上起点的 k 个单位为 k·2^n。",
+      "declarations": [
+        "Becoming.Copying.required",
+        "Becoming.Copying.required_add",
+        "Becoming.Copying.doubling",
+        "Becoming.Copying.doubling_iff",
+        "Becoming.Copying.doubling_runs"
+      ]
+    },
+    {
+      "en": "In the chain machine, end attachment of up to eight tokens is the core copy of the alternating word with unit draws: within the size limit a chain grows by the alternating word exactly when the pool supplies that word and the support covers one unit per token; attachment keeps a chain's bonds the path on its tokens, so a chain so bonded grows exactly so, bonds included.",
+      "zh": "在链机中，至多八个记号的末端接合是单位汲取下交替词的核心复制：在长度上限内，链按交替词生长，恰当池供给该词且支持每个记号覆盖一个单位；接合保持链的键为其记号上的路径，所以如此成键的链恰在同样条件下生长（含键）。",
+      "declarations": [
+        "Becoming.CopyingInstances.alternatingFrom",
+        "Becoming.CopyingInstances.grow_view",
+        "Becoming.CopyingInstances.grow_iff",
+        "Becoming.CopyingInstances.attach_path_shaped",
+        "Becoming.CopyingInstances.grow_path_shaped",
+        "Becoming.CopyingInstances.grow_strand_iff"
+      ]
+    },
+    {
+      "en": "From the empty chain the mature chain of eight alternating tokens forms, bonds included, exactly when the pool holds at least four of each kind and at least eight units of support are free.",
+      "zh": "自空链形成八个交替记号的成熟链（含键），恰当池中两类各至少四个且至少八个单位支持空闲。",
+      "declarations": [
+        "Becoming.CopyingInstances.mature_forms_iff",
+        "Becoming.CopyingInstances.mature_strand_iff"
+      ]
+    },
+    {
+      "en": "Each attachment and each cleavage draws one unit, so the support used grows by the tokens added plus the chains added, in one reproduction and over rounds. From k mature chains with the blocks for n rounds in the pool, the rounds reach k·2^n mature chains exactly when the free support covers 9k(2^n − 1), that is, exactly when doubling with draw 9 runs n rounds from k units and the free support.",
+      "zh": "每次接合与每次切分各取一个单位，所以在一次复制与多轮中，所用支持的增加等于所增记号加所增链数。自 k 条成熟链、池中有 n 轮所需组分块时，诸轮达到 k·2^n 条成熟链，恰当自由支持覆盖 9k(2^n − 1)，即恰当取量为 9 的加倍自 k 个单位与该自由支持运行 n 轮。",
+      "declarations": [
+        "Becoming.CopyingInstances.reproduce_used",
+        "Becoming.CopyingInstances.rounds_used",
+        "Becoming.CopyingInstances.rounds_mature_iff",
+        "Becoming.CopyingInstances.rounds_follow_doubling"
+      ]
+    },
+    {
+      "en": "With the blocks for n rounds and any tail in the pool and the free support raised by 9k(2^n − 1), n rounds from k mature chains give k·2^n mature chains, leaving the tail and the free support, the sufficient side; in the machine's own count k(2^n − 1) and k make k·2^n, and every course of rounds keeps the tokens in chains and pool together and the free and used support together.",
+      "zh": "池中有 n 轮所需组分块加任意尾部、自由支持增加 9k(2^n − 1) 时，自 k 条成熟链的 n 轮得到 k·2^n 条成熟链，余下尾部与原自由支持：即充分一侧；按该机自身的计数 k(2^n − 1) 加 k 为 k·2^n；每段轮次进程都保持链与池中记号的总数，以及自由与已用支持之和。",
+      "declarations": [
+        "RecurrentAssembly.supported_rounds",
+        "RecurrentAssembly.required_as_growth",
+        "RecurrentAssembly.rounds_accounts"
+      ]
+    },
+    {
+      "en": "Where routing the eight-slot recipe from a pool completes with nothing left, the routed output with the blocks for n rounds and any tail in the pool and 9(2^n − 1) + 8 more units of free support forms the mature chain and then 2^n mature chains, leaving the tail and the free support.",
+      "zh": "从某池路由八槽配方完成且无剩余时，路由的输出加池中 n 轮所需组分块与任意尾部、再加 9(2^n − 1) + 8 个单位自由支持，先形成成熟链，再形成 2^n 条成熟链，余下尾部与原自由支持。",
+      "declarations": [
+        "RecurrentAssembly.prepared_repeated_generation"
+      ]
+    },
+    {
+      "en": "The mature chain's tokens and bonds are those of the earlier fragmentation chain, and cleaving it at its centre leaves two alternating fragments of four that keep their internal bonds, the earlier chain's cut components.",
+      "zh": "成熟链的记号与键即此前碎裂链的记号与键；在中心切分它，留下两个保留内部键的四记号交替片段，即此前链的切分分量。",
+      "declarations": [
+        "RecurrentAssembly.formed_graph_matches_previous",
+        "RecurrentAssembly.fragments_retain_real_links"
+      ]
+    },
+    {
+      "en": "In witnesses: two rounds from one mature chain with the blocks for three chains and 27 units of support give four mature chains, while with 26 the last successor has seven components, all material kept; and from a pool of eight tokens of one kind with eight units, growth stalls after one token with seven units free.",
+      "zh": "见证：自一条成熟链、有三条链所需组分块与 27 个单位支持的两轮得到四条成熟链；支持为 26 时最后一个后继只有七个组分，材料全部保留；自只含一类八个记号的池与八个单位，生长在一个记号后停滞，七个单位空闲。",
+      "declarations": [
+        "RecurrentAssembly.two_generations_realized",
+        "RecurrentAssembly.partial_failure_keeps_material",
+        "RecurrentAssembly.missing_kind_stalls_with_work_remaining"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "A/B 末端相容、八组分路径的中心切分及操作次序给定；初始已完成路由输出没有未表示承重边。",
@@ -21,8 +104,47 @@
     {
       "zh": "一条完整链继续 g 轮另需 8(2^g−1) 组分和 9(2^g−1) 支持；从路由材料激活结构另需八单位支持。",
       "en": "Continuing one complete chain for g rounds requires 8(2^g−1) additional components and 9(2^g−1) support; structural activation from routed material additionally requires eight support units."
+    },
+    {
+      "en": "The core laws hold for every alphabet with decidable equality and every law of draws; the machine's tokens are Boolean, its chains at most eight tokens long, its counts of tokens and support natural numbers.",
+      "zh": "核心规律对每个有可判定相等的字母表与每条汲取律成立；该机的记号是布尔值，链至多八个记号长，记号与支持的计数是自然数。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Heritable variation of the organizing laws, physical mechanics, an autonomous feed and a broad comparative advantage do not follow from these laws.",
+      "zh": "由这些规律推不出组织规律的可遗传变异、真实力学、自供材料或广泛的比较优势。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The attachment route and the earlier division growth correspond only at the checked endpoint.",
+      "zh": "接合途径与此前的分裂生长只在已核对的端点上对应。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean",
+      "detail": {
+        "zh": "少一单位支持留下真实七组分后继；缺 B 仍有支持也停滞。",
+        "en": "One missing support unit leaves a real seven-component successor; absence of B stalls despite remaining work."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps",
+    "decidability",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Core: Becoming.Copying (becoming-checks/20261022T054058.112616Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: RecurrentAssembly by its folder's check (recurrent-assembly-verification/, Lean 4.29.1: 31 new theorems, 47 new audits, 373 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261020T161910.956874Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.",
+    "zh": "核心 Copying：4.29.1 合并检查器（becoming-checks/），公理报告为空。外围 RecurrentAssembly：目录检查（recurrent-assembly-verification/，4.29.1，新定理31、审计47、闭包373）；CopyingInstances：实例检查（copying-instances-checks/，4.29.1）；至多 propext、Quot.sound、Classical.choice，有的为空。推论有效性与生物对应分列。"
+  },
+  "next_delta": {
+    "en": "Explain the physical discrimination of chain ends, the renewal of the supply the rounds draw on, and how shared provision is divided among chains.",
+    "zh": "说明链端的物理辨别、诸轮所取供给的更新，以及共同供给怎样在链之间划分。"
+  },
   "correspondence": {
     "zh": "结构由实际移入、形成边、过滤旧边及保留片段构成。新接合途径与旧分裂生长仅有已检查的端点对应。",
     "en": "Structure consists of actual token transfers, formed edges, filtered old edges and retained fragments. The new attachment route and old division growth have only the checked endpoint correspondence."
@@ -73,35 +195,33 @@
           "en": "Previous actual chain graph and central-cut member partition."
         },
         "input": {
-          "zh": "本轮接合终点与保留内部连接的片段。",
+          "zh": "新接合终点与保留内部连接的片段。",
           "en": "New attachment endpoint and internally connected fragments."
         },
         "conditions": {
-          "zh": "限于已核对链类及两种形成途径的端点对应；不等同局部规律或成本。",
-          "en": "Only the checked chain class and endpoint correspondence between formation routes; local laws and costs are not identified."
+          "zh": "限于已核对链类及两种形成途径的端点对应；不等同局部规律或汲取。",
+          "en": "Only the checked chain class and endpoint correspondence between formation routes; local laws and draws are not identified."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean"
       }
     }
   ],
-  "related": [],
-  "counterexamples": [
+  "related": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean",
+      "id": "inherited-structural-copying",
       "detail": {
-        "zh": "少一单位支持留下真实七组分后继；缺 B 仍有支持也停滞。未证明组织规律的可遗传变异、真实力学、自供材料或广泛比较优势。",
-        "en": "One missing support unit leaves a real seven-component successor; absence of B stalls despite remaining work. Heritable variation in organizing laws, physical mechanics, autonomous feed and broad comparative advantage are unproved."
+        "en": "Copies a template strand, the fragment this formation leaves, token by token from a shared pool.",
+        "zh": "从共享池逐记号复制模板链，即本形成留下的片段。"
+      }
+    },
+    {
+      "id": "formed-copying-registration",
+      "detail": {
+        "en": "Local contact formation entering that copying.",
+        "zh": "接入该复制的局部接触形成。"
       }
     }
   ],
-  "limitations": {
-    "zh": "少一单位支持留下真实七组分后继；缺 B 仍有支持也停滞。未证明组织规律的可遗传变异、真实力学、自供材料或广泛比较优势。",
-    "en": "One missing support unit leaves a real seven-component successor; absence of B stalls despite remaining work. Heritable variation in organizing laws, physical mechanics, autonomous feed and broad comparative advantage are unproved."
-  },
-  "validation_scope": {
-    "zh": "所列 Lean 回执绑定实际源码；推论有效性与生物对应分列。一般律已由检查器回执绑定。",
-    "en": "The cited Lean receipt binds the actual source; inference validity and biological correspondence remain distinct. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean",
@@ -114,7 +234,9 @@
         "RecurrentAssembly.rounds_accounts",
         "RecurrentAssembly.partial_failure_keeps_material",
         "RecurrentAssembly.formed_graph_matches_previous",
-        "RecurrentAssembly.fragments_retain_real_links"
+        "RecurrentAssembly.fragments_retain_real_links",
+        "RecurrentAssembly.two_generations_realized",
+        "RecurrentAssembly.missing_kind_stalls_with_work_remaining"
       ]
     },
     {
@@ -239,10 +361,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "固定规律重复与附加模板复制已完成，formed-copying-registration 进一步接通局部配准形成；物理辨别、更新供给与共同分配仍待说明。",
-    "en": "Fixed-law recurrence and added template copying are complete; formed-copying-registration further joins local contact formation, leaving physical discrimination, renewed supply and shared allocation to explain."
-  },
   "history": [
     {
       "zh": "2026-10-08：按本轮实际审读及所列回执登记范围；原证明和反例保持。",
@@ -277,6 +395,28 @@
     {
       "en": "2026-10-20: 20 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4911a7b13b9a3394/recurrent-chain-assembly.json and in git.",
       "zh": "2026-10-20：20 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4911a7b13b9a3394/recurrent-chain-assembly.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the home section; the claim split into 9 laws, each read against its declarations in Becoming.Copying (core) and RecurrentAssembly and CopyingInstances (periphery), with the conditions the Lean takes written in (decidable equality, the size limit of eight, a chain bonded by the path, the blocks for the rounds in the pool, a completed routing with nothing left); two_generations_realized and missing_kind_stalls_with_work_remaining, which witness the counterexample, added to RecurrentAssembly's references (its receipt binds them); the limitations, which the counterexample repeated, split: the witnessed sentence stays the counterexample and the rest became a does-not-show item, with one from the correspondence's endpoint sentence, the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps, decidability and formal-not-empirical and one added hypothesis; \"costs\" became \"draws\" in a dependency's conditions and its Chinese input lost the round narration 本轮; the next step's completed part went to two related entries (inherited-structural-copying, formed-copying-registration); no premise's content, status, proof binding or source hash changed. Every earlier sentence is mapped in [recurrent-chain-assembly.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrent-chain-assembly.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主章写出陈述；主张拆为 9 条规律，各条对照 Becoming.Copying（核心）与 RecurrentAssembly、CopyingInstances（外围）中的声明核读，Lean 所取的条件都写入（可判定相等、八的长度上限、以路径成键的链、池中有各轮组分块、路由完成且无剩余）；见证反例的 two_generations_realized 与 missing_kind_stalls_with_work_remaining 加入 RecurrentAssembly 的引用（其回执绑定它们）；与反例重复的限制拆开：有见证的一句留作反例，其余改为一条“未表明”，另由对应中的端点一句改为一条，并引用通用边界 no-ethical-premise-core-axiom-free、discrete-steps、decidability、formal-not-empirical，加一条前提；一条依赖条件中“成本”改为“汲取”，其中文输入去掉过程叙述“本轮”；下一步中已完成者移入两个相关条目（inherited-structural-copying、formed-copying-registration）；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [recurrent-chain-assembly.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrent-chain-assembly.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/2ad0f8dcd2cd0d1c/recurrent-chain-assembly.json",
+      "sha256": "2ad0f8dcd2cd0d1c5656dce506742d50328a09bac6944abc191f173dee365e4d",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/4911a7b13b9a3394/recurrent-chain-assembly.json",
+      "sha256": "4911a7b13b9a33948c2e36c03577fd9ecfe929cad8813c5a9e6c780d07beadd9",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

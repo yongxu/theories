@@ -1,0 +1,54 @@
+# Migration map: returning-where-the-course-branches
+
+Old record sha256 `50615ab018220744839c64a4e41a9127d141f4663dd25308b554ab40d81f512c`; snapshot `_process/architecture/history/50615ab018220744/returning-where-the-course-branches.json`. Before its history was compacted (R35): `_process/architecture/history/1f681195b50de5ba/returning-where-the-course-branches.json`, the second text_versions entry.
+
+Labels number the old English sentences and clauses (split at full stops and semicolons outside parentheses): T title, S statement, C claim, L limitations, V validation_scope, R correspondence, N next_delta, H hypotheses, X counterexamples. The Chinese text of each field goes to the same place as its English counterpart; the old Chinese was read alongside, sentence by sentence.
+
+Each law was read against its declarations: `Branching.Reachable`, `Returns`, `Lossless`, `Merges`, `KeepsPossibilities`, `Merges.not_lossless`, `lost_stays`, `Returns.reachable`, `Lossless.comes_back`, `Lossless.recurs`, `Lossless.returns`, `Lossless.no_rise`, `rise_not_lossless`, `Lossless.unlisted` and `Law.process` in `Becoming/Recurrence.lean`; `keeps_of_returns`, `keeps_iff_fed`, `returns_iff_fed_ahead`, `returns_iff_fedWithin`, `keepsWithin_iff_fedWithin`, `returns_iff_keepsWithin`, `KeepsWithin`, `FedWithin`, the five `law_*_iff` bridges, `Transit.keeps_not_returns`, `Transit.determined`, `OneWay.merge_keeps`, `fork_lossless_not_returns`, `Determined.stays_merged` and `Coarse.meet_and_part` in `Becoming/Branching.lean`. Every condition the Lean takes is kept: the list holding a run's configurations for `comes_back`, `recurs`, `no_rise` and `rise_not_lossless` (laws 5 and 6), the quantity never falling along the run (laws 5 and 6), and, for `Lossless.returns`, a list holding every configuration and a run beginning at the configuration (law 7), which the old claim and hypothesis did not distinguish from the run's list; the `iff`s of law 4 are proved in both directions; the witnesses are read as witnesses (laws 8 to 11). The bound receipts (`becoming-checks/20261020T051144.879480Z` for Branching.lean, `20261025T182341.971697Z` for Recurrence.lean, Frame.lean and Laws.lean, and others named in proof_bindings) report empty axioms for every cited declaration, and the hypotheses hold no ethical premise, so `no-ethical-premise` is cited. `OneWay.merge_keeps` and `law_reachable_iff`, `law_keeps_iff`, `law_returns_iff`, `law_lossless_iff`, `law_merges_iff` (all in namespace `Becoming.Branching`, grep-confirmed in Branching.lean and listed by its bound receipt) are added to Branching.lean's reference; no proof binding changed.
+
+| Old text | Type | New place |
+|---|---|---|
+| T0 “Returning where the course branches” | title | title (unchanged) |
+| S0 “What returns can be had at every step” | statement | statement (unchanged) |
+| S1 “every configuration returns exactly where each region the process stays in keeps all its possibilities.” | statement | statement (unchanged) |
+| S2 “Keeping every possibility does not give returning” | statement | statement (unchanged; law 8 is its witness) |
+| S3 “merging nothing gives it along runs in finitely many configurations, and a merge may lose no possibility.” | statement | statement (unchanged; laws 5, 7 and 9) |
+| C0 “For a process P: a configuration can be had n steps on (Branching.Reachable) where some course of n moves leads to it” | law | law 1 |
+| C1 “it returns (Branching.Returns) where a step from it leads to where it can be had again” | law | law 1 |
+| C2 “a process merges (Branching.Merges, Branching.Lossless) where two distinct configurations step to one.” | law | law 1 (merging nothing and merging both defined; `Merges.not_lossless`) |
+| C3 “Under a determined law each is R6's (law_reachable_iff, law_returns_iff, law_lossless_iff, law_merges_iff, law_keeps_iff).” | law | law 2 (“the law's own notions, by definition”: the bridges are `Iff.rfl`; R6, a plan label, named by the dependency recurrence-without-premise) |
+| C4 “With no premise: a possibility lost stays lost (Branching.lost_stays)” | law | law 3 |
+| C5 “a configuration that returns can be had at every step (Branching.Returns.reachable), so where every configuration returns every possibility is kept (keeps_of_returns)” | law | law 3 |
+| C6 “every possibility is kept exactly where every configuration can be had at the next step (keeps_iff_fed).” | law | law 3 |
+| C7 “The exact condition for returning: a configuration returns exactly where its own course can have it at the next step (returns_iff_fed_ahead)” | law | law 4 (“some configuration reachable from it has it at the next step”, as `returns_iff_fed_ahead` states it) |
+| C8 “every configuration returns exactly where every region the process never leaves keeps every possibility of its own (returns_iff_keepsWithin, returns_iff_fedWithin, keepsWithin_iff_fedWithin), with no finiteness used.” | law | law 4 |
+| C9 “Along runs, within finitely many configurations: where nothing merges every configuration of a run comes back on the run (Lossless.comes_back, Lossless.recurs)” | law | law 5 (a list holding the run's configurations) |
+| C10 “a configuration at which a run begins returns (Branching.Lossless.returns)” | law | law 7, narrowed to what `Lossless.returns` takes: a list holding every configuration, not only the run's |
+| C11 “a quantity nondecreasing along the run is constant (Branching.Lossless.no_rise)” | law | law 5 (a natural-number quantity on configurations) |
+| C12 “and a strict rise of such a quantity contradicts losslessness (Branching.rise_not_lossless, concluding ¬ Lossless P rather than supplying a witness of Merges)” | law | law 6 (“refutes that the process merges nothing; it exhibits no merge”) |
+| C13 “and merging nothing with a configuration that never returns needs openness (Branching.Lossless.unlisted).” | law | law 7 (a run beginning at the configuration refutes every list of all configurations) |
+| C14 “Witnesses: in Transit every configuration can move and every possibility is kept, yet between never returns (Transit.keeps_not_returns)” | law | law 8 (with three listed stages, the process determined, and the middle stage necessarily drawn into the last, which the theorem also states) |
+| C15 “OneWay merges false and true, both return, and every possibility is kept (OneWay.merge_keeps)” | law | law 9 |
+| C16 “Unfolding's Fork merges nothing and its origin never returns, its ends being unable to move, so Lossless.returns needs its run (fork_lossless_not_returns)” | law | law 10 (with the three listed configurations and the origin possibly drawn into the left end, which the theorem states) |
+| C17 “merged stays merged needs determinacy (Determined.stays_merged; Coarse.meet_and_part).” | law | law 11 (the determined law and its witness, read through the first part) |
+| C18 “No premise.” | boundary | standard_boundaries: no-ethical-premise (no ethical premise; empty axiom reports); the laws name each condition they take |
+| H0 “The laws along runs take a run as given: building a run from every configuration that can move needs choosing a continuation at each step, which is a choice.” | premise | hypotheses[0] (unchanged) |
+| H1 “The laws along runs require a list holding the run's configurations (finitely many configurations).” | premise | hypotheses[1], extended: a run's start returning requires a list holding every configuration (`Lossless.returns`) |
+| R0 “P81 (work board), following Ren's “move towards 100%” of 12 October 2026: R6's three-way equivalence fails for laws that are not determined (with a→a, a→b, b→c, c→c, b never returns)” | correspondence | correspondence (the board label cut, a process marker; R6 written as the three-way equivalence of determined change, with the record id recurrence-without-premise; Ren's words verbatim with their date) |
+| R1 “Ren then compared this with Feynman diagrams (see P82).” | correspondence | correspondence (the round label cut) |
+| R2 “This states R6's laws for every process.” | correspondence | correspondence (“those laws”) |
+| R3 “Reading (the AI's, adopted on Ren's delegation): where the course branches, returning asks more than keeping every possibility” | correspondence | correspondence (the AI label kept) |
+| R4 “R6's “losing nothing is returning” is a law of determined change within finitely many configurations, and under every process it holds along each run.” | correspondence | correspondence |
+| R5 “See the integration document §99.” | process marker | cut from the correspondence; the integration note stays a reference |
+| X0 “Transit, OneWay and Fork: keeping does not give returning, a merge need not lose, merging nothing needs a run.” | counterexample | counterexamples[0] (unchanged; witnessed by laws 8 to 10's declarations) |
+| L0 “The laws along runs take the run as given” | premise | hypotheses[0], which says it |
+| L1 “being drawn in within a bound is not stated” | non-implication | does_not_show[0] |
+| L2 “the readings are the AI's, adopted on Ren's delegation” | correspondence | correspondence, whose reading carries the AI label |
+| L3 “no ethical predicate occurs.” | boundary | standard_boundaries: no-evaluation |
+| V0 “14 October 2026: the current bytes of Becoming.Branching, Becoming.Unfolding, Becoming.Joint are bound to consolidated receipt 20261013T221720.428753Z (passed: 91 package modules, …)” | evidence | validation_scope (the bound core receipts named by directory; the bindings have moved to later receipts, listed in proof_bindings) |
+| V1 “Earlier receipts below checked the same statements under the former names, tabulated in plan section 10.” | evidence | validation_scope (“Earlier receipts checked the same statements under former names”; the plan section is in history) |
+| V2 “Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 119 theorems of Becoming.Branching all have empty axiom reports, among them …” | evidence | validation_scope (empty axiom report for every cited declaration; the counts and the receipt time stay in the snapshot) |
+| V3 “The same receipt covers the package's 75 modules … periphery receipt 20261013T095049.338744Z passed.” | evidence (bookkeeping of a superseded receipt) | snapshot |
+| V4 “The checker also verifies core purity: the import closure of the core … compiles from Lean's prelude alone (…).” | evidence | validation_scope (“the checker verifies that the core compiles from Lean's prelude alone”); the module count and the injEq detail stay in the snapshot |
+| V5 “The author's counterreview is in §99 of the integration note; there is no independent review yet.” | evidence | validation_scope (the section number cut) |
+| N0 “Being drawn in within a bound (see limitations).” | next step | next_delta (stated positively) |

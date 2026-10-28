@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "positioned-positive-reason",
   "title": {
     "zh": "面向每个相应位置的正面理由",
@@ -8,25 +8,134 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "zh": "在明示生生之意义、形成对应 E 与位置化直接实践解释 D 下，凡对某回应有实际通达的位置，都具有支持该回应的一项理由，不论其是否认同、属于何种载体或带有何种身份标签。D 所给出的最小理由只由通达关系与正面根据决定，因此通达相同的位置具有相同的这一理由；无通达的位置不从这条路线获得理由。认同无关性是 D 的内容，而非生生之意义与 E 的推论：以认同为条件的实践解释与同一生生之意义及形成事实相容，却不给有通达、不认同的位置这项理由。",
-    "en": "Under explicit living significance, formation correspondence E and a positioned direct articulation D, every position with actual access to a response has a contributory reason for it, whatever its endorsement, substrate or identity labels. The least reason satisfying D is fixed by access and positive ground alone, so positions alike in access are alike in this reason; a position without access receives no reason from this route. Endorsement independence is the content of D, not a consequence of living significance and E: an endorsement-conditional articulation is compatible with the same living significance and formation facts yet withholds the reason from a non-endorsing position with access."
+  "reviewed_at_utc": "2026-10-28T12:20:10+00:00",
+  "statement": {
+    "en": "Where a response realizes in every admitted continuation living content absent before, living significance with the articulation D gives each position with access to it a contributory reason, whatever its endorsement, substrate or identity; the least such reason is access with secured new content.",
+    "zh": "回应在每段被接纳的接续中都实现此前没有的活的内容时，生生之意义加上表述 D，使每个对它有通达的位置都有支持它的一项理由，不论其认同、载体或身份；最小的这种理由是通达加上所确保的新内容。"
   },
+  "laws": [
+    {
+      "en": "A response secures new content where every admitted outcome of it holds relevant content absent before it; the positioned articulation D says that access to a response securing new content supplies a reason for it, endorsement not occurring in it.",
+      "zh": "回应确保新内容，是指它每个被接纳的结果都持有此前没有的相关内容；位置化表述 D 说：对确保新内容的回应有通达，就有支持它的一项理由；认同不出现在 D 中。",
+      "declarations": [
+        "Becoming.SecuresNewContent",
+        "Becoming.PositionedArticulation"
+      ]
+    },
+    {
+      "en": "Where each admitted continuation realizes living content absent before, living significance gives each some relevant content absent before it.",
+      "zh": "每段被接纳的接续都实现此前没有的活的内容时，生生之意义使每段都有某项此前没有的相关内容。",
+      "declarations": [
+        "Becoming.LivingSignificance",
+        "Becoming.SecuredContent.contingent_newContent"
+      ]
+    },
+    {
+      "en": "Under living significance and D, where the response realizes in every admitted continuation living content absent before, every position with access to it has the reason D articulates; no endorsement, culture, identity or substrate hypothesis occurs.",
+      "zh": "在生生之意义与 D 之下，回应在每段被接纳的接续中都实现此前没有的活的内容时，每个对它有通达的位置都有 D 所表述的理由；其中不出现认同、文化、身份或载体的假设。",
+      "declarations": [
+        "Becoming.SecuredContent.every_situated_position_has_reason"
+      ]
+    },
+    {
+      "en": "The route reason, access together with secured new content, satisfies D and is contained in every reason satisfying D; positions alike in access are alike in it, whatever else differs.",
+      "zh": "路线理由（通达加上所确保的新内容）满足 D，并包含于满足 D 的每项理由之中；通达相同的位置在这项理由上相同，无论其他方面如何不同。",
+      "declarations": [
+        "Becoming.SecuredContent.RouteReason",
+        "Becoming.SecuredContent.route_reason_is_least",
+        "Becoming.SecuredContent.route_reason_depends_only_on_access"
+      ]
+    },
+    {
+      "en": "Under the continuation condition, with D read on the relevance that significance gives, the same formation gives every position with access the reason D articulates.",
+      "zh": "在延续条件之下，D 以意义给出的相关性来读时，同样的形成使每个有通达的位置都有 D 所表述的理由。",
+      "declarations": [
+        "Becoming.SecuredContent.every_situated_position_has_reason_of_unrestricted"
+      ]
+    },
+    {
+      "en": "In a witness of one response, two future branches and formation models narrowed by acquired evidence, living significance holds, the barren model is no longer live, every live model is productive, and each admitted continuation of the response realizes a fresh claim absent before.",
+      "zh": "在一个见证中（一个回应、两条未来分支、由取得的证据收窄的形成模型），生生之意义成立，贫瘠模型不再存活，每个存活模型都有产出，回应的每段被接纳接续都实现一项此前没有的新主张。",
+      "declarations": [
+        "Becoming.SecuredContent.wholeFrame",
+        "Becoming.SecuredContent.admittedAfter",
+        "Becoming.SecuredContent.livingSignificance_holds",
+        "Becoming.SecuredContent.barren_not_live",
+        "Becoming.SecuredContent.live_productive",
+        "Becoming.SecuredContent.respond_formation"
+      ]
+    },
+    {
+      "en": "In that witness, a non-endorsing artificial position with access has the route reason, through the same theorem that gives it to every position with access, while an endorsing human position without access does not have it.",
+      "zh": "在该见证中，一个不认同、有通达的人工位置，经由给每个有通达位置以理由的同一定理而有路线理由；一个认同但无通达的人类位置则没有它。",
+      "declarations": [
+        "Becoming.SecuredContent.Position",
+        "Becoming.SecuredContent.access",
+        "Becoming.SecuredContent.nonendorsing_position_with_access_has_reason",
+        "Becoming.SecuredContent.endorsement_without_access_gets_no_route_reason"
+      ]
+    },
+    {
+      "en": "Endorsement independence is D's content: with the same living significance and formation, an endorsement-conditional articulation (access, endorsement and secured new content supply the reason) holds and withholds the reason from the non-endorsing position with access.",
+      "zh": "认同无关性是 D 的内容：在同一生生之意义与形成之下，以认同为条件的表述（通达、认同与所确保的新内容给出理由）成立，却不给不认同、有通达的位置这项理由。",
+      "declarations": [
+        "Becoming.SecuredContent.endorsement_independence_is_supplied_by_articulation"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "生生之意义（LivingSignificance）是假设，也是明确采用的规范前提；E 要求回应在每段被接纳的接续中实现此前没有的活的内容。",
       "en": "Living significance (LivingSignificance) is a hypothesis and an explicit normative premise; E requires the response to realize, in every admitted continuation, living content absent before."
     },
     {
-      "zh": "D 是公开提出的位置化实践解释：通达加上每段接续中的正面根据给出一项支持理由。D 不提及认同、文化、身份或载体；这一点是前提的内容，由边界定理标明。",
-      "en": "D is an explicit positioned practical articulation: access together with positive ground in every continuation supplies a contributory reason. D does not mention endorsement, culture, identity or substrate; the boundary theorem marks this as premise content."
+      "zh": "D 是公开提出的位置化实践解释：通达加上每段被接纳接续中此前没有的相关内容给出一项支持理由。D 不提及认同、文化、身份或载体；这一点是前提的内容，由边界定理标明。",
+      "en": "D is an explicit positioned practical articulation: access together with relevant content absent before in every admitted continuation supplies a contributory reason. D does not mention endorsement, culture, identity or substrate; the boundary theorem marks this as premise content."
     },
     {
       "zh": "位置是同一展开中形成的分化回应位置；通达代表其形成的能力、地位与可得性，不是先于历史的独立行动者。",
       "en": "Positions are differentiated response positions formed within one unfolding; access stands for their formed capacity, standing and availability, not independent agents prior to the history."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "A contributory reason is not permission, duty, an overall ranking or a uniquely optimal action, and predicts no recognition or compliance.",
+      "zh": "一项支持理由不是许可、义务、整体排序或唯一最优动作，也不预测任何位置会认识或遵循它。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The reason's universality rests on D: neither living significance nor D is derived from an agent's own standpoint.",
+      "zh": "理由的普遍性以 D 为前提：不从行动者自身立场推出生生之意义或 D。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean",
+      "detail": {
+        "zh": "以认同为条件的实践解释与同一生生之意义及形成事实相容，却不给有通达、不认同的位置理由；因此认同无关性不能从生生之意义推出。",
+        "en": "An endorsement-conditional articulation is compatible with the same living significance and formation facts yet withholds the reason from a non-endorsing position with access; endorsement independence therefore does not follow from living significance."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean",
+      "detail": {
+        "zh": "认同但无通达的位置不从这条路线获得理由；这不证明它全无理由。",
+        "en": "An endorsing position without access receives no reason from this route; this does not show it has no reason at all."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the core modules Becoming.SecuredContent, Becoming.Metaethics, Becoming.ValuationFrames and Becoming.Extension are bound to passing receipts in becoming-checks, with an empty axiom report for every cited declaration. The periphery module the core was ported from, PositionedPositiveReason, keeps its receipt positioned-positive-reason-verification.json as provenance. There is no independent review yet.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.SecuredContent、Metaethics、ValuationFrames 与 Extension 绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空。核心所移植自的外围模块 PositionedPositiveReason 保留其回执 positioned-positive-reason-verification.json 作为来源。尚无独立审查。"
+  },
+  "next_delta": {
+    "en": "Connect access to formed capacity and authority (the commitments of bounded responsibility and legitimate feasible choice), showing how reasons differentiate into bounded responsibilities; or pursue the route that reduces D toward commitments every evaluator already has.",
+    "zh": "把通达关系接到实际形成的能力与权限（有界责任与正当可行选择的承诺），说明不同位置的理由如何分化为有界责任；或推进从评价者自身已有承诺出发降低 D 的路线。"
+  },
   "correspondence": {
     "zh": "具体见证沿用 PositiveGroundUncertainty 的构造：接续包括所发生的回应、仍活的形成模型与未来分支；所见范围是取得证据后仍活的模型。位置的载体与认同字段只用于显示它们不进入理由。通达与现实能力、权限的对应须在应用中说明。",
     "en": "The concrete witness reuses the PositiveGroundUncertainty construction: a continuation records the response, a surviving formation model and a future branch; the visible scope is the models still live after acquired evidence. Position substrate and endorsement fields appear only to show that they do not enter the reason. Correspondence of access to real capacity and authority must be stated in each application."
@@ -103,30 +212,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean",
-      "detail": {
-        "zh": "以认同为条件的实践解释与同一生生之意义及形成事实相容，却不给有通达、不认同的位置理由；因此认同无关性不能从生生之意义推出。",
-        "en": "An endorsement-conditional articulation is compatible with the same living significance and formation facts yet withholds the reason from a non-endorsing position with access; endorsement independence therefore does not follow from living significance."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean",
-      "detail": {
-        "zh": "认同但无通达的位置不从这条路线获得理由；这不证明它全无理由。",
-        "en": "An endorsing position without access receives no reason from this route; this does not show it has no reason at all."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "一项支持理由不是许可、义务、整体排序或唯一最优动作，也不预测任何位置会认识或遵循它。普遍性以 D 为前提；不从行动者自身立场推出生生之意义或 D，也不完成 universal-practical-warrant。",
-    "en": "A contributory reason is not permission, duty, an overall ranking or a uniquely optimal action, and predicts no recognition or compliance. Universality rests on D; neither living significance nor D is derived from an agent's own standpoint, and universal-practical-warrant is not completed."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 成功实查 10 项新定理／25 项声明审计，全部空依赖；检查器要求本模块无任何公理依赖。继承模块的 propext、Quot.sound 及 Classical.choice 依赖另列，未迁移；2 项应用例不计为新定理。首次运行（8 项定理，3 项依赖 propext 与 Quot.sound）的回执保留于其运行目录。尚无独立反审。",
-    "en": "Successful Lean 4.29.1 check: 10 new theorems/25 declaration audits, all with empty axiom reports; the checker requires this module to have none. Inherited modules' propext, Quot.sound and Classical.choice dependencies are listed separately and not migrated; 2 application examples are not counted as new theorems. The first run (8 theorems, 3 with propext and Quot.sound) remains in its retained run directory. No independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean",
@@ -249,7 +334,12 @@
         "Becoming.SecuredContent.endorsement_without_access_gets_no_route_reason",
         "Becoming.SecuredContent.endorsement_independence_is_supplied_by_articulation",
         "Becoming.SecuredContent.contingent_newContent",
-        "Becoming.SecuredContent.every_situated_position_has_reason_of_unrestricted"
+        "Becoming.SecuredContent.every_situated_position_has_reason_of_unrestricted",
+        "Becoming.SecuredContent.RouteReason",
+        "Becoming.SecuredContent.wholeFrame",
+        "Becoming.SecuredContent.admittedAfter",
+        "Becoming.SecuredContent.Position",
+        "Becoming.SecuredContent.access"
       ]
     },
     {
@@ -337,10 +427,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "把通达关系接到实际形成的能力与权限（有界责任与正当可行选择的承诺），说明不同位置的理由如何分化为有界责任；或推进从评价者自身已有承诺出发降低 D 的路线（见审查 §3.1）。",
-    "en": "Connect access to formed capacity and authority (the commitments of bounded responsibility and legitimate feasible choice), showing how reasons differentiate into bounded responsibilities; or pursue the route that reduces D toward commitments every evaluator already has (review §3.1)."
-  },
   "history": [
     {
       "zh": "2026-10-09：应 Ren 要求补上位置索引的 Lean 定理；检索确认此前无此组合。复用 positive-ground-open-futures，不改其证明与范围。",
@@ -384,6 +470,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label G0 replaced by living significance, a hypothesis and an explicit normative premise, with E stated as the core theorem takes it (in every admitted continuation, living content absent before); the limitation and the related detail likewise, the latter naming the continuation condition for 'the axiom'; the core declaration names added as aliases beside the periphery's; and G0 in the dependency's conditions reads living significance, with the periphery's `G0` named. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签 G0 改为生生之意义，即假设与明确采用的规范前提，E 按核心定理所取陈述（在每段被接纳的接续中，此前没有的活的内容）；局限与相关说明同改，后者把“公理”改称延续条件；核心声明名称加入别名，与外围名称并列；依赖条件中的 G0 改为生生之意义，注明外围的 `G0`。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the claim and the home section, with \"positive ground\" read as secured new content, as the definition (SecuresNewContent) has it since the R30 rename; the claim split into eight laws, each read against its declarations in Becoming.SecuredContent, Becoming.Metaethics and Becoming.Extension; the limitations to two does-not-show items and the standard boundary significance-related-not-asserted, the sentence on universal-practical-warrant's completion left to that related record; in the second premise \"positive ground in every continuation\" became \"relevant content absent before in every admitted continuation\", as PositionedArticulation states D, the other premises kept; the counterexamples and correspondence kept; the review's section number dropped from the next step; five declarations of SecuredContent added to its references; no premise's content, status or source hash changed. Every earlier sentence is mapped in [positioned-positive-reason.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/positioned-positive-reason.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章写出陈述，“正面根据”读作所确保的新内容，与 R30 改名以来的定义（SecuresNewContent）一致；主张拆为八条规律，各条对照其在 Becoming.SecuredContent、Becoming.Metaethics 与 Becoming.Extension 中的声明核读；限制分入两条“未表明”与通用边界 significance-related-not-asserted，关于 universal-practical-warrant 是否完成的一句留给该关联记录；第二条前提中“每段接续中的正面根据”改为“每段被接纳接续中此前没有的相关内容”，与 PositionedArticulation 对 D 的表述一致，其余前提保留；反例与对应保留；下一步中删去审查的节号；SecuredContent 的五个声明加入其引用；前提内容、状态与来源哈希均未改变。每句旧文本的去向见 [positioned-positive-reason.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/positioned-positive-reason.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/5a55955307a6ecc2/positioned-positive-reason.json",
+      "sha256": "5a55955307a6ecc2df0be38ec3a841b3a0d31b828cff0fbe291510789613bd16",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/9facc420d9560791/positioned-positive-reason.json",
+      "sha256": "9facc420d9560791d0e0fa2c8da7c27b3b970099ebf88cc014875a69f2e1f1cf",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "causal-models-as-processes",
   "title": {
     "zh": "作为过程的标准因果模型",
@@ -8,36 +8,132 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-28T11:49:51+00:00",
   "statement": {
-    "zh": "x′ = F(x, u, ε) 是动作为输入与噪声的确定过程。干预是未取的动作，记录不固定它，模型固定它；噪声是未表示的动作，忘掉它时过程恰在噪声不造成差别之处仍确定。",
-    "en": "x′ = F(x, u, ε) is a determined process whose move is the input and the noise. An intervention is a move not taken, unfixed by the record and fixed by the model; noise is a move not represented, and with it forgotten the process stays determined exactly where the noise makes no difference."
+    "zh": "x′ = F(x, u, ε) 是动作为输入与噪声的确定过程。干预是未取的动作，模型固定它，有两个不同配置时记录不固定它；噪声是未表示的动作，忘掉它时过程恰在噪声不造成差别之处仍确定。",
+    "en": "x′ = F(x, u, ε) is a determined process whose move is input and noise. An intervention is a move not taken, fixed by the model and, given two configurations, not by the record; noise is a move not represented, and with it forgotten the process stays determined exactly where it makes no difference."
   },
-  "claim": {
-    "zh": "对任意 F : X → U → E → X，标准模型 inputs F 是配置 X 上、动作为（输入，噪声）的过程：x 以 (u, e) 到达 F x u e；它是确定的（inputs_determined）。trajectory F x₀ u e 是从 x₀ 在输入 u 与噪声 e 之下的轨迹，inputsRun 是它作为运行，动作为 (u n, e n)。对 inputs F 的任一运行，运行在 t 之前没有于 x 取 (u′, e′)、X 有两个不同的元素时，直到 t 的记录不固定 (u′, e′) 在 x 的任何结果（inputs_intervention_unfixed，Run.not_fixes_of_untaken 的实例）；模型把它送到 F x u′ e′，且只送到那里（inputs_model_fixes）。对动作为对的任一过程，forget 忘掉动作的第二部分：u 从 s 到 s′，当某个 e 使 (u, e) 从 s 到 s′；Run.forget 是相应的运行。忘掉噪声后，标准模型确定，恰当对每个 x、u 与 e、e′，F x u e = F x u e′（forget_inputs_determined_iff）。所贴的适应动力学 x′ = F_θ(x)、θ′ = G(θ, x) 是 projection-carrying-a-law 中的 adaptive，联合配置上的确定过程。不用 Lean 公理。",
-    "en": "For any F : X → U → E → X, the standard model inputs F is the process on configurations X with moves (input, noise): x goes by (u, e) to F x u e; it is determined (inputs_determined). trajectory F x₀ u e is the trajectory from x₀ under inputs u and noise e, and inputsRun is it as a run with moves (u n, e n). For any run of inputs F, where the run has not taken (u′, e′) at x before t and X has two different elements, the record up to t fixes no outcome of (u′, e′) at x (inputs_intervention_unfixed, an instance of Run.not_fixes_of_untaken); the model sends it to F x u′ e′ and nowhere else (inputs_model_fixes). For any process whose moves are pairs, forget forgets the second part of the move: u goes from s to s′ where (u, e) does for some e; Run.forget is the corresponding run. With the noise forgotten the standard model is determined exactly where F x u e = F x u e′ for every x, u and e, e′ (forget_inputs_determined_iff). The pasted adaptive dynamics x′ = F_θ(x), θ′ = G(θ, x) is adaptive in projection-carrying-a-law, a determined process on the joint configuration. No Lean axiom is used."
-  },
+  "laws": [
+    {
+      "en": "For any function F : X → U → E → X on any types, the standard model is the process on X whose move is a pair of input and noise, x going by (u, e) to F x u e; it is determined. The trajectory from x₀ under inputs u and noise e is a run of it whose moves are (u n, e n).",
+      "zh": "对任意类型上的任意函数 F : X → U → E → X，标准模型是 X 上动作为（输入，噪声）对的过程：x 以 (u, e) 到达 F x u e；它是确定的。从 x₀ 在输入 u 与噪声 e 之下的轨迹是它的一个运行，动作为 (u n, e n)。",
+      "declarations": [
+        "Becoming.inputs",
+        "Becoming.inputs_determined",
+        "Becoming.trajectory",
+        "Becoming.inputsRun",
+        "Becoming.Determined"
+      ]
+    },
+    {
+      "en": "For any run of the standard model, where the run has not taken (u′, e′) at x before step t and X has two different elements, the record up to t fixes no outcome of (u′, e′) at x: no configuration is where every determined process admitting the run's steps before t sends it. This is the instance of the law that in a determined process a move not taken is not fixed.",
+      "zh": "对标准模型的任一运行，运行在第 t 步之前没有于 x 取 (u′, e′)、X 有两个不同的元素时，直到 t 的记录不固定 (u′, e′) 在 x 的任何结果：没有一个构形是每个容许运行 t 前各步的确定过程都把它送去之处。这是“确定过程中未取的动作不被固定”之律的实例。",
+      "declarations": [
+        "Becoming.inputs_intervention_unfixed",
+        "Becoming.Run.Takes",
+        "Becoming.Run.Fixes",
+        "Becoming.Run.not_fixes_of_untaken"
+      ]
+    },
+    {
+      "en": "The standard model sends (u′, e′) at x to F x u′ e′ and nowhere else, by its definition.",
+      "zh": "标准模型按其定义把 (u′, e′) 在 x 送到 F x u′ e′，且只送到那里。",
+      "declarations": [
+        "Becoming.inputs_model_fixes"
+      ]
+    },
+    {
+      "en": "For any process whose moves are pairs, forgetting the second part gives the process in which u goes from s to s′ where (u, e) does for some e; each run of the process gives a run of it, with the first parts of its moves.",
+      "zh": "对动作为对的任一过程，忘掉动作的第二部分给出这样的过程：u 从 s 到 s′，当某个 e 使 (u, e) 从 s 到 s′；原过程的每个运行给出它的一个运行，动作为原动作的第一部分。",
+      "declarations": [
+        "Becoming.forget",
+        "Becoming.Run.forget"
+      ]
+    },
+    {
+      "en": "With the noise forgotten, the standard model of any F is determined exactly where F x u e = F x u e′ for every x, u, e and e′: both directions hold.",
+      "zh": "忘掉噪声后，任意 F 的标准模型确定，恰当对每个 x、u、e 与 e′ 有 F x u e = F x u e′：两个方向都成立。",
+      "declarations": [
+        "Becoming.forget_inputs_determined_iff"
+      ]
+    },
+    {
+      "en": "In Joint's witnesses, with the shock as a move the process is determined; with the shock written into the step relation rather than the move, the move does not determine the step, and the lone drawer's loss is overdetermined, its part making no difference.",
+      "zh": "在 Joint 的见证中，冲击作为动作时过程确定；冲击写进一步的关系而不写进动作时，动作不决定一步，单独汲取者的损失成为多重决定，其部分不造成差别。",
+      "declarations": [
+        "Becoming.Shock.determined",
+        "Becoming.Hidden.shock_in_the_step"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "不加前提：F 是任意函数，X、U、E 是任意类型；forget_inputs_determined_iff 是双向的。",
       "en": "No premise: F is any function and X, U, E any types; forget_inputs_determined_iff is two-way."
     },
     {
-      "zh": "固定相对于确定性（P53）：inputs_intervention_unfixed 另要运行未取 (u′, e′) 于 x 与 X 中两个不同的元素，写在定理中。",
-      "en": "Fixing is relative to determinacy (P53): inputs_intervention_unfixed further needs (u′, e′) untaken at x and two different elements of X, written into the theorem."
+      "zh": "固定相对于确定性：inputs_intervention_unfixed 另要运行未取 (u′, e′) 于 x 与 X 中两个不同的元素，写在定理中。",
+      "en": "Fixing is relative to determinacy: inputs_intervention_unfixed further needs (u′, e′) untaken at x and two different elements of X, written into the theorem."
     },
     {
       "zh": "干预作用于整个动作 (u′, e′)；只定输入而噪声未表示的动作，是忘掉噪声的过程中的动作，它何时有唯一结果由 forget_inputs_determined_iff 的全局形式界定。",
       "en": "An intervention acts on the whole move (u′, e′); a move fixing the input with the noise unrepresented is a move of the process with the noise forgotten, and when it has a unique outcome is bounded by the global form of forget_inputs_determined_iff."
     },
     {
-      "zh": "离散的步；没有概率；x′ = F(x, u, ε) 的形式取自 Ren 贴入的文字（作者未注明，不是 Ren 的话，也不是前提）。",
-      "en": "Discrete steps; no probabilities; the form x′ = F(x, u, ε) is taken from the text Ren pasted (author not stated, not Ren's wording, not a premise)."
+      "zh": "离散的步；没有概率；x′ = F(x, u, ε) 的形式取自一段作者未注明的贴入说明（来源见对应说明），不是前提。",
+      "en": "Discrete steps; no probabilities; the form x′ = F(x, u, ε) is taken from a pasted explanation whose author is not stated (its provenance is in the correspondence), not a premise."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Structural equations among several variables (graphs), the do-calculus, identification of causes from observational data, probabilities and distributions, and continuous quantities and sensitivity lie outside its laws.",
+      "zh": "多个变量之间的结构方程（图）、do 演算、从观察数据识别因果、概率与分布、连续的量与敏感性都在其规律之外。",
+      "kind": "scope"
+    },
+    {
+      "en": "That input and noise are separable in an actual unfolding does not follow.",
+      "zh": "不推出输入与噪声在实际展开中可分。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Surgery on a state variable corresponds to replacing one structural equation at one configuration and move only as a reading, not by a theorem.",
+      "zh": "对状态变量的手术只在读法上对应于在一个配置与一个动作上替换一条结构方程，不由定理给出。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean",
+      "detail": {
+        "zh": "噪声写进一步的关系而不写进动作时，动作不决定一步，单独汲取者的损失成为多重决定（Hidden.shock_in_the_step）；forget_inputs_determined_iff 对每个 F 刻画这何时发生。",
+        "en": "With the noise written into the step relation rather than the move, the move does not determine the step and the lone drawer's loss is overdetermined (Hidden.shock_in_the_step); forget_inputs_determined_iff characterizes for every F when this happens."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "detail": {
+        "zh": "记录不固定干预：运行没有取过 (u′, e′) 于 x 时，任意两个配置都可以是它的结果而与记录相容（inputs_intervention_unfixed）；只有模型固定它（inputs_model_fixes）。",
+        "en": "The record does not fix an intervention: where the run has not taken (u′, e′) at x, any two configurations can be its outcome compatibly with the record (inputs_intervention_unfixed); only the model fixes it (inputs_model_fixes)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-ethical-premise",
+    "no-evaluation",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker (check_becoming.py, Lean 4.29.1 in each receipt): the current bytes of Becoming.Mechanism, Becoming.Recurrence and Becoming.Laws are bound to receipt becoming-checks/20261025T182341.971697Z, those of Becoming.Experiment to 20261019T231053.882924Z and of Becoming.Joint to 20261019T213206.644158Z; every cited declaration has an empty axiom report, and the core compiles from Lean's prelude alone. The review is the author's only.",
+    "zh": "合并核心检查器（check_becoming.py，各回执记 Lean 4.29.1）：Becoming.Mechanism、Becoming.Recurrence、Becoming.Laws 当前字节绑定 becoming-checks/20261025T182341.971697Z，Becoming.Experiment 绑定 20261019T231053.882924Z，Becoming.Joint 绑定 20261019T213206.644158Z；所引声明公理报告皆空，核心只用前导可编译。仅作者审查。"
+  },
+  "next_delta": {
+    "en": "State structural equations among several variables as products of processes with projections, find when an experiment through a projection identifies F on a class from varied inputs (Run.generalizes), and place undetermined and random processes the same way.",
+    "zh": "把多个变量的结构方程陈述为带投影的过程之积，找出经投影的实验何时从变动的输入识别 F 在一个类上的值（Run.generalizes），并以同样方式安置不确定与随机的过程。"
+  },
   "correspondence": {
-    "zh": "Ren 2026-10-12 问 cause–effect system 与本理论相比如何，贴入作者未注明的说明（其中“changing an input through an intervention can change the resulting state”不是 Ren 的话），对 AI 的五项提议答：“Great, let's finish all of them, you can spawn sub agents in a wise order if needed”。这是第五项，工作板 P68。读法（AI 的，依 Ren 的交托采用）：干预是未取的动作，由模型而不由记录固定；retarget 是在一个配置与一个动作上替换一条结构方程；噪声是未表示的动作；Joint 中冲击作为动作（Shock）与写进步骤（Hidden）的对照，是忘掉噪声的见证；Coarse 可读作噪声被忘掉的过程。见整合文档 §88。",
-    "en": "On 12 October 2026 Ren asked how a cause–effect system compares with the theory, pasted an explanation whose author is not stated (its “changing an input through an intervention can change the resulting state” is not Ren's wording), and to the AI's five proposals answered “Great, let's finish all of them, you can spawn sub agents in a wise order if needed”. This is the fifth proposal, work-board item P68. Readings (the AI's, adopted on Ren's delegation): an intervention is a move not taken, fixed by a model and not by the record; retarget replaces one structural equation at one configuration and move; noise is a move not represented; Joint's contrast between a shock as a move (Shock) and written into the step (Hidden) witnesses forgetting the noise; Coarse reads as a process with its noise forgotten. See §88 of the integration note."
+    "zh": "Ren 2026-10-12 问 cause–effect system 与本理论相比如何，贴入作者未注明的说明（其中“changing an input through an intervention can change the resulting state”不是 Ren 的话），对 AI 的五项提议答：“Great, let's finish all of them, you can spawn sub agents in a wise order if needed”。本记录是其中第五项。读法（AI 的读法）：干预是未取的动作，由模型而不由记录固定；retarget 是在一个配置与一个动作上替换一条结构方程；噪声是未表示的动作；Joint 中冲击作为动作（Shock）与写进步骤（Hidden）的对照，是忘掉噪声的见证；Coarse 可读作噪声被忘掉的过程。",
+    "en": "On 12 October 2026 Ren asked how a cause–effect system compares with the theory, pasted an explanation whose author is not stated (its “changing an input through an intervention can change the resulting state” is not Ren's wording), and to the AI's five proposals answered “Great, let's finish all of them, you can spawn sub agents in a wise order if needed”; this record is the fifth of those proposals. Readings (AI readings): an intervention is a move not taken, fixed by a model and not by the record; retarget replaces one structural equation at one configuration and move; noise is a move not represented; Joint's contrast between a shock as a move (Shock) and written into the step (Hidden) witnesses forgetting the noise; Coarse reads as a process with its noise forgotten."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
   "aliases": [
@@ -130,30 +226,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean",
-      "detail": {
-        "zh": "噪声写进一步的关系而不写进动作时，动作不决定一步，单独汲取者的损失成为多重决定（Hidden.shock_in_the_step）；forget_inputs_determined_iff 对每个 F 刻画这何时发生。",
-        "en": "With the noise written into the step relation rather than the move, the move does not determine the step and the lone drawer's loss is overdetermined (Hidden.shock_in_the_step); forget_inputs_determined_iff characterizes for every F when this happens."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
-      "detail": {
-        "zh": "记录不固定干预：运行没有取过 (u′, e′) 于 x 时，任意两个配置都可以是它的结果而与记录相容（inputs_intervention_unfixed）；只有模型固定它（inputs_model_fixes）。",
-        "en": "The record does not fix an intervention: where the run has not taken (u′, e′) at x, any two configurations can be its outcome compatibly with the record (inputs_intervention_unfixed); only the model fixes it (inputs_model_fixes)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "增量主要是位置：inputs_intervention_unfixed 是 P53 的直接实例，inputs_model_fixes 按定义成立，实质的新陈述是 forget_inputs_determined_iff；多个变量之间的结构方程（图）、do 演算、从观察数据识别因果、概率与分布、连续的量与敏感性都没有陈述；输入与噪声在实际展开中可分不推出；对状态变量的手术只在读法上对应 retarget；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "The delta is mainly placement: inputs_intervention_unfixed is a direct instance of P53 and inputs_model_fixes holds by definition, the substantive new statement being forget_inputs_determined_iff; structural equations among several variables (graphs), the do-calculus, identification of causes from observational data, probabilities and distributions, and continuous quantities and sensitivity are not stated; that input and noise are separable in an actual unfolding is not derived; surgery on a state variable corresponds to retarget only as a reading; the readings are the AI's, adopted on Ren's delegation; contains no ethical predicate."
-  },
-  "validation_scope": {
-    "zh": "2026-10-14：Becoming.Mechanism、Becoming.Joint 的当前字节由合并检查器回执 20261013T221720.428753Z 绑定（通过：包 91 个模块，4983 项定理、7020 项声明审计，源声明公理报告全空；核心闭包 90 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Mechanism 的 30 项定理全部空依赖，其中含 inputs_determined、inputs_intervention_unfixed、inputs_model_fixes与 forget_inputs_determined_iff；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §88；尚无独立审查。",
-    "en": "14 October 2026: the current bytes of Becoming.Mechanism, Becoming.Joint are bound to consolidated receipt 20261013T221720.428753Z (passed: 91 package modules, 4983 theorems, 7020 declaration audits, every source declaration with an empty axiom report; the 90-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 30 theorems of Becoming.Mechanism all have empty axiom reports, among them inputs_determined, inputs_intervention_unfixed, inputs_model_fixes and forget_inputs_determined_iff; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §88 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
@@ -184,14 +256,18 @@
       "sha256": "7634077005d8a36d9d0a9c0f85fc408aa7a13a97aa6db60b43a5c4c722086045",
       "declarations": [
         "Becoming.Run.Fixes",
-        "Becoming.Run.not_fixes_of_untaken"
+        "Becoming.Run.not_fixes_of_untaken",
+        "Becoming.Run.Takes"
       ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean",
       "role": "proof",
       "sha256": "6c54aea85b715cac11048f19fcc0f41cb4219276fb015d6ed12e466e90c8616b",
-      "declarations": []
+      "declarations": [
+        "Becoming.Shock.determined",
+        "Becoming.Hidden.shock_in_the_step"
+      ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean",
@@ -329,10 +405,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "多个变量的结构方程作为过程的积与投影；经投影的实验何时从变动的输入识别 F 在一个类上的值（Run.generalizes）；不确定与随机的过程。",
-    "en": "Structural equations among several variables as products of processes with projections; when an experiment through a projection identifies F on a class from varied inputs (Run.generalizes); undetermined and random processes."
-  },
   "history": [
     {
       "zh": "2026-10-12 P68：新增，按 Ren“Great, let's finish all of them, you can spawn sub agents in a wise order if needed”；来自 AI 对理论与一般因果系统的比较（工作板 P68）；见整合文档 §88。",
@@ -403,6 +475,28 @@
     {
       "en": "2026-10-20: 68 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/2a31db0923c027aa/causal-models-as-processes.json and in git.",
       "zh": "2026-10-20：68 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/2a31db0923c027aa/causal-models-as-processes.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement kept, its intervention clause narrowed to two configurations, as inputs_intervention_unfixed takes, and reworded to fit the cap; the claim split into six laws, each read against its declarations in Mechanism.lean, Recurrence.lean, Experiment.lean, Laws.lean and Joint.lean (the model and its trajectory, the intervention unfixed by the record as an instance of the law for determined processes, the model fixing it by definition, forgetting, the noise criterion in both directions, and Joint's shock witnesses); the claim's sentence on adaptive dynamics left to the related link to projection-carrying-a-law, which carries it; the limitations to three does-not-show items and the standard boundaries discrete-steps, no-ethical-premise, no-evaluation and names-provisional; the round label removed from the second hypothesis and the fourth hypothesis' provenance moved to the correspondence; work-board and section markers cut from the correspondence and its readings labelled AI readings; Run.Takes, Shock.determined and Hidden.shock_in_the_step added to their files' references; no premise, status or source hash changed. Every earlier sentence is mapped in [causal-models-as-processes.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/causal-models-as-processes.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留，其干预一句按 inputs_intervention_unfixed 收窄为有两个不同配置时，并为合于上限改写措辞；主张拆为六条规律，各条对照 Mechanism.lean、Recurrence.lean、Experiment.lean、Laws.lean 与 Joint.lean 中的声明核读（模型及其轨迹、记录不固定干预作为确定过程之律的实例、模型按定义固定它、忘掉、双向的噪声判据、Joint 的冲击见证）；主张中关于适应动力学的一句交给与 projection-carrying-a-law 的相关链接，那里已载明；限制改为三条“未表明”与通用边界 discrete-steps、no-ethical-premise、no-evaluation、names-provisional；删去第二条前提中的轮次标签，第四条前提的来源说明移入对应说明；删去对应说明中的工作板与节号标记，其读法标为 AI 的读法；Run.Takes、Shock.determined 与 Hidden.shock_in_the_step 加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [causal-models-as-processes.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/causal-models-as-processes.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/16165b20cc17f424/causal-models-as-processes.json",
+      "sha256": "16165b20cc17f4243c6e6e50a18f3bb8a309ed998992d53e8395ae137ae3ae2a",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/2a31db0923c027aa/causal-models-as-processes.json",
+      "sha256": "2a31db0923c027aaacc423cef9b9767b07514d2344f4fcb28c5a2d83f2c3f999",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

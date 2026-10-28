@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "joining-questions-survive-encoding",
   "title": {
     "zh": "接合检验随同一编码保真",
@@ -8,25 +8,79 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F22",
-  "reviewed_at_utc": "2026-10-08T13:52:31.763955+00:00",
-  "claim": {
-    "zh": "将问题中每个接合伙伴按同一说明编码后，在诱导多结果接合关系内解释所得问题，答案与原问题相同。",
-    "en": "After encoding every joining partner in a question through the same account, interpreting the translated question in the induced multivalued joining relation gives exactly the original answer."
+  "reviewed_at_utc": "2026-10-28T11:51:25+00:00",
+  "statement": {
+    "en": "Where a description lifts a joining, every branching test of the joining, its partners read through the description, holds at a fragment's code exactly where it holds at the fragment; under excluded middle a presentation reading these tests exactly and reducedly lifts a joining with listed outcomes.",
+    "zh": "凡一个描述提升一个接合，接合的每个分支检验，其伙伴经该描述读出，在片段的编码处成立，恰当它在该片段处成立；在排中律之下，精确且约化地读出这些检验的呈现，提升结果已列出的接合。"
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "同一部分接合 J；每对输入具有有限结果集合。",
-      "en": "One partial joining relation J; each input pair has a finite outcome set."
+      "en": "A joining relates two fragments to what they join into, in several ways, in one or in none. Read through a description, codes a and b join into c where fragments with those codes join into one with code c; the description lifts the joining where every joining of the codes of two fragments comes from a joining of the two fragments themselves into a fragment with that code.",
+      "zh": "接合把两个片段关联到它们接合成者，可有多种、一种或没有。经描述读出，编码 a 与 b 接合成 c，是指有这些编码的片段接合成编码为 c 者；描述提升接合，是指两个片段编码的每个接合，都来自这两个片段本身接合成具有该编码的片段。",
+      "declarations": [
+        "Becoming.Joining",
+        "Becoming.Joining.image",
+        "Becoming.Joining.Lifts"
+      ]
     },
     {
-      "zh": "目标含全部有限否定、合取、左右接合后继问题，无独立原子谓词。",
-      "en": "The target contains all finite negation, conjunction and left/right joining-successor questions, with no independent atomic predicates."
+      "en": "With no premise, a description lifts a joining exactly where having one code is a bisimulation of the joining's frame, the frame in which a fragment moves, with a partner joined on its left or on its right, to what the two join into.",
+      "zh": "不加前提，描述提升接合，恰当“编码相同”是该接合框架的互模拟；在这个框架中，片段与在其左或右接合的伙伴一起，移到二者接合成者。",
+      "declarations": [
+        "Becoming.Joining.frame",
+        "Becoming.Joining.lifts_iff"
+      ]
     },
     {
-      "zh": "Exact 给出完整精确答案；Reduced 仅用于最小代码与输出代码的提升。",
-      "en": "Exact supplies complete truthful answers; Reduced is used for minimal codes and lifting output codes."
+      "en": "Where a description lifts a joining, every branching test of the joining's frame (truth, negation, conjunction, and that joining a named partner on the left or on the right can lead to where a test holds; no atomic claims), its partners read through the description, holds at a fragment's code in the joining read through the description exactly where the test holds at the fragment.",
+      "zh": "凡描述提升接合，接合框架的每个分支检验（真、否定、合取，以及在左或右接合一个指定伙伴可通向检验成立之处；没有原子主张），其伙伴经该描述读出，在经该描述读出的接合中于片段的编码处成立，恰当该检验在片段处成立。",
+      "declarations": [
+        "Becoming.Joining.mapPartners",
+        "Becoming.Joining.holds_image_iff"
+      ]
+    },
+    {
+      "en": "Under excluded middle as a named hypothesis, where each pair of fragments joins into listed fragments, a presentation whose codes read every branching test of the joining's frame exactly, and give one code to fragments passing the same branching tests, lifts the joining.",
+      "zh": "以排中律为具名假设，凡每对片段接合成已列出的片段，编码精确读出接合框架每个分支检验、并给通过相同分支检验的片段同一编码的呈现，提升该接合。",
+      "declarations": [
+        "Becoming.Joining.FiniteOutcomes",
+        "Becoming.Joining.FiniteOutcomes.lifts_of_exact"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "One joining relation on fragments of any type, which may relate a pair to several outcomes, to one or to none.",
+      "zh": "任意类型片段上的一个接合关系，可把一对关联到多个、一个或没有结果。"
+    },
+    {
+      "en": "The questions are the branching tests of the joining's frame: finite negation, conjunction and joining a partner on the left or on the right, with no independent atomic claims.",
+      "zh": "问题是接合框架的分支检验：有限的否定、合取与在左或右接合伙伴，没有独立的原子主张。"
+    },
+    {
+      "en": "For the lifting from a presentation only: each pair joins into a listed finite set of fragments, excluded middle is a named hypothesis, and the presentation is exact (its codes read every test's answer) and reduced (fragments answering alike get one code).",
+      "zh": "只对由呈现得到的提升：每对接合成列出的有限片段集合，排中律为具名假设，呈现精确（编码读出每个检验的答案）且约化（答案相同的片段得同一编码）。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The laws fix the semantics of finite negation, conjunction and continuation; they show neither that an apparatus for these tests forms, nor actual negative evidence, nor access to every answer.",
+      "zh": "这些规律确定有限否定、合取与接续的语义；不表明这些检验的装置会形成，不表明实际的负面证据，也不表明每个答案都可取得。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker check_becoming.py (Lean 4.29.1): the current bytes of Becoming.Joining are bound to core receipt becoming-checks/20261020T051144.879480Z and those of Becoming.JoiningCodes to becoming-checks/20261019T231053.882924Z; every cited declaration has an empty axiom report. The periphery ExplanatoryJoiningBranches, with its receipt under explanatory-joining-branches-checks, and the retired JoiningBridge are provenance and keep their earlier scope.",
+    "zh": "核心检查器 check_becoming.py（Lean 4.29.1）实查：Becoming.Joining 当前字节绑定 becoming-checks/20261020T051144.879480Z，JoiningCodes 绑定 20261019T231053.882924Z；所引声明公理报告均为空。外围 ExplanatoryJoiningBranches（回执在 explanatory-joining-branches-checks）与退役的 JoiningBridge 是来源，保持原范围。"
+  },
+  "next_delta": {
+    "en": "A warranted translation of residuals, guards and formation between descriptions with different internal syntax, telling the semantics of a test apart from the actual acquisition of its answer.",
+    "zh": "在内部语法不同的描述之间给出余项、条件与形成的有据翻译，把检验的语义与其答案的实际取得分开。"
+  },
   "correspondence": {
     "zh": "片段、接合及其检验解释同一活动内的关系；数学语义不等于所有问题已被实际取得。",
     "en": "Fragments, joining and its questions interpret relations within the same activity; mathematical semantics does not establish acquired access to every answer."
@@ -99,23 +153,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
-      "detail": {
-        "zh": "涵盖有限否定、合取及接续的语义，不证明检验装置形成、实际负面证据或所有问题已取得。",
-        "en": "Covers semantics of finite negation, conjunction and continuation; it does not establish apparatus formation, actual negative evidence or acquired access to all questions."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "涵盖有限否定、合取及接续的语义，不证明检验装置形成、实际负面证据或所有问题已取得。",
-    "en": "Covers semantics of finite negation, conjunction and continuation; it does not establish apparatus formation, actual negative evidence or acquired access to all questions."
-  },
-  "validation_scope": {
-    "zh": "所列 Lean 源码与成功冻结回执逐字哈希绑定；本轮223项审计含26项新声明。旧功能性定理信用此前166项回执，未冒充新证明。",
-    "en": "Listed Lean sources bind by exact hash to successful frozen receipts. This round checks 223 declarations including 26 new ones. The older functional theorem credits its previous 166-audit receipt, not a new proof."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranches.lean",
@@ -150,7 +187,14 @@
       "role": "proof",
       "sha256": "21ba2468426712d6c8410ad2d7960675a6e561cfa07d43ab6782cf9ffc2b10a6",
       "declarations": [
-        "Becoming.Joining.holds_image_iff"
+        "Becoming.Joining.holds_image_iff",
+        "Becoming.Joining",
+        "Becoming.Joining.image",
+        "Becoming.Joining.Lifts",
+        "Becoming.Joining.frame",
+        "Becoming.Joining.lifts_iff",
+        "Becoming.Joining.mapPartners",
+        "Becoming.Joining.FiniteOutcomes"
       ]
     },
     {
@@ -223,10 +267,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
-  },
   "history": [
     {
       "zh": "2026-10-08：在既有接合情境研究中接续；已完成结果分别迁移，新连接与复用分列。",
@@ -255,6 +295,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryJoiningBranches and JoiningBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Joining and Becoming.JoiningCodes). The retired modules' content is also stated in Becoming.BranchingCorrespondence, Becoming.Likeness and Becoming.Presentations, which this record does not cite with declarations. 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryJoiningBranches and JoiningBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Joining and Becoming.JoiningCodes）。退役模块的内容也陈述于 Becoming.BranchingCorrespondence, Becoming.Likeness and Becoming.Presentations，本记录未以声明引用它们。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the claim and the home section; the claim split into four laws, each read against its declarations in Joining.lean and JoiningCodes.lean (two of definitions: the joining read through a description, lifting and the joining's frame; the surviving tests; the lifting from an exact and reduced presentation); the limitation, the same sentence as the counterexample, which no declaration witnesses, to one does-not-show item, the counterexample entry removed; the hypotheses split by law, and excluded middle, which the current lifting theorem takes as a named hypothesis, written into the third, finiteness and Exact and Reduced placed there, since the surviving tests need only lifting; Becoming.Joining, image, Lifts, frame, lifts_iff, mapPartners and FiniteOutcomes added to Joining.lean's references; the shared boundary no-ethical-premise cited; no source hash, binding or status changed. Every earlier sentence is mapped in [joining-questions-survive-encoding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joining-questions-survive-encoding.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章写出陈述；主张拆为四条规律，各条对照 Joining.lean 与 JoiningCodes.lean 中的声明核读（两条定义：经描述读出的接合、提升与接合框架；保留答案的检验；由精确且约化的呈现得到的提升）；限制与反例是同一句，无声明见证，改为一条“未表明”，删去反例项；前提按规律分开，当前提升定理以具名假设所取的排中律写入第三条，有限性与 Exact、Reduced 也放在那里，因为检验保留只需提升；Becoming.Joining、image、Lifts、frame、lifts_iff、mapPartners 与 FiniteOutcomes 加入 Joining.lean 的引用；引用通用边界 no-ethical-premise；来源哈希、绑定与状态均未改变。每句旧文本的去向见 [joining-questions-survive-encoding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joining-questions-survive-encoding.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/6e40ccc4dd156fc5/joining-questions-survive-encoding.json",
+      "sha256": "6e40ccc4dd156fc510eeb68e5900f74d69dc828faee4bda37d7e0301dff9b297",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/394e44da140d1063/joining-questions-survive-encoding.json",
+      "sha256": "394e44da140d1063f4e54321a2133e5db07737e170b9345d87785b5fc1a9f3f1",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

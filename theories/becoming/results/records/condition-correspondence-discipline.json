@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "condition-correspondence-discipline",
   "title": {
     "zh": "条件的对应纪律",
@@ -8,15 +8,116 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-09T03:10:36+00:00",
+  "reviewed_at_utc": "2026-10-28T11:35:45+00:00",
   "statement": {
-    "zh": "只有交互才经由条件相关；惰性条件不再免费连通，连通由活的使用造成。",
-    "en": "Interaction alone relates through a condition; idle conditions no longer connect for free, and connection is made by living use."
+    "en": "Interaction alone relates through a condition: one event draws on it and the other depends on it at a positive level. Adjoining an idle condition changes no connection, and connection is made by living use.",
+    "zh": "只有交互经由条件相关：一个事件汲取该条件，另一个以正水平依存于它。加入惰性条件不改变连通，连通由活的使用造成。"
   },
-  "claim": {
-    "zh": "在依存网的逐步读法上，保留 living（活跃且不侵蚀），把 related 从共同参与收窄为交互：两个事件经由某条件相关，仅当一方汲取它、另一方以正水平依存于它，在任何步上（不排定时间，也不问汲取是否改变水平）。没有活动汲取、或没有依存能落空的条件是惰性的：它不构成任何关系，也不使任何事件侵蚀；加入它不改变 living、关系与连通。于是独立审查 Q4 的免费连通被排除：加入人人在水平 0 依存、无人汲取的条件，在共同参与下使每个网连通，在交互下连通不变。每个侵蚀关系都是交互；在关系中立下，珍视一个侵蚀事件的立场，必珍视被侵蚀形成在以正水平依存于该条件的每一步上的活的事件。传递由汲取承担，不由侵蚀承担：珍视任何汲取事件的立场，必珍视以正水平依存于该条件的每个活的事件（drawing_reaches），所以审查 Q5 只有共同依存的一半被排除。一个条件，每个活的事件都汲取它或以正水平依存于它，且有活的汲取者与活的依存者，使整体连通，任意两个活的事件至多经两次交互相连；于是生生之意义在那里恰等于种子加关系中立加立场中立。在一个例子中，两个依存于同一条件的形成，经由维持其支持的使用连通；唯一的使用侵蚀它们时不连通；共同参与在两次运行中都连通它们。加入一个被更新、人人以正水平依存的条件，只要一个活的事件汲取它一次，仍使每个网在交互下连通而不改变 living（one_use_connects）；不需要人人汲取。不用 Lean 公理，不加伦理谓词。",
-    "en": "On the stepwise reading of a web, keep living (active and not undermining) and narrow related from co-participation to interaction: two events are related through a condition only when one draws on it and the other depends on it at a positive level, at any steps (neither order in time nor change of level enters). A condition that no activity draws on, or no dependence on which can fail, is idle: it relates nothing and undermines nothing, and adjoining one leaves living, the relation and connection unchanged. So the free connection of the independent review's Q4 is excluded: adjoining a condition every formation requires at level zero and nothing draws on connects every web under co-participation and leaves connection unchanged under interaction. Every undermining relation is an interaction; under relational neutrality, a standpoint valuing an undermining event holds significant the living events of the formation it undermines at every step where that formation depends on the condition at a positive level. The transmission is carried by drawing, not undermining: a standpoint valuing any drawing event holds significant every living event depending on the condition at a positive level (drawing_reaches), so only the co-dependence half of review Q5 is excluded. A condition that every living event draws on or depends on at a positive level, with a living drawer and a living dependent, connects the whole, any two living events being linked in at most two interactions; living significance there is exactly a seed with relational and standpoint neutrality. In one example two formations depending on one condition are connected through a use that keeps their support, and not when the only use undermines it, while co-participation connects them in both runs. Adjoining a renewed condition on which every formation depends at a positive level, used once by one living event, still connects every web under interaction without changing living (one_use_connects); every formation drawing on it is not needed. No Lean axiom is used and no ethical predicate is added."
-  },
+  "laws": [
+    {
+      "en": "On a web read step by step, a formation bears on a condition at a step where it depends on it at a positive level. Two events interact through a condition when one draws on it and the other bears on it, at any steps, symmetrically; neither the order of the steps nor any change of level enters. A condition that nothing draws on, or that nothing bears on, is idle.",
+      "zh": "逐步读一个网：形成在某步以正水平依存于条件，即在该步承担于其上。两个事件经由条件交互，是指一方汲取它、另一方承担于其上，在任何步上，对称；步的先后与水平的变化都不进入。无物汲取、或无物承担于其上的条件是惰性的。",
+      "declarations": [
+        "Becoming.Web.Bearing",
+        "Becoming.Web.Interacts",
+        "Becoming.Web.Interacts.symm",
+        "Becoming.Web.Idle"
+      ]
+    },
+    {
+      "en": "The interaction valuation of a web keeps the living events of the stepwise reading, active and not undermining, and relates two events only where they interact through some condition. Interacting events co-participate in the condition, so the valuation narrows co-participation with the same living events.",
+      "zh": "网的交互估值保留逐步读法的活的事件（活跃且不侵蚀），只在两个事件经由某条件交互时使之相关。交互的事件共同参与该条件，所以此估值在活的事件不变时收窄共同参与。",
+      "declarations": [
+        "Becoming.Web.interaction",
+        "Becoming.Web.Interacts.participates",
+        "Becoming.Web.interaction_narrows",
+        "Becoming.Web.valuation",
+        "Becoming.Web.Participates"
+      ]
+    },
+    {
+      "en": "An idle condition carries no interaction and no undermining. Every undermining relation is an interaction: a formation undermining a condition at a step interacts there with some formation bearing on the condition at that step.",
+      "zh": "惰性条件不承载交互，也不承载侵蚀。每个侵蚀关系都是交互：在某步侵蚀条件的形成，在该步与某个承担于该条件的形成交互。",
+      "declarations": [
+        "Becoming.Web.Idle.not_interacts",
+        "Becoming.Web.Idle.not_undermining",
+        "Becoming.Web.UnderminingOn.interacts",
+        "Becoming.Web.UnderminingOn"
+      ]
+    },
+    {
+      "en": "Adjoining to a web a condition that is never undermined leaves its living events unchanged, and adjoining an idle one leaves connection under interaction unchanged. The inert condition, required by every formation at level zero and drawn on by nothing, leaves living unchanged and connects every web under co-participation, while connection under interaction stays as it was.",
+      "zh": "给网加入一个从不被侵蚀的条件，活的事件不变；加入惰性条件，交互之下的连通不变。惰性条件（每个形成在水平零上需要它、无物汲取它）使 living 不变，并在共同参与之下使每个网连通，而交互之下的连通保持原样。",
+      "declarations": [
+        "Becoming.Web.Condition",
+        "Becoming.Web.adjoin",
+        "Becoming.Web.adjoin_living",
+        "Becoming.Web.adjoin_connected_iff",
+        "Becoming.Valuation.Connected.transfer",
+        "Becoming.Web.Condition.inert",
+        "Becoming.Web.inert_connects",
+        "Becoming.Web.connected_of_common"
+      ]
+    },
+    {
+      "en": "A condition on which every living event draws or bears, with a living event drawing on it and a living event bearing on it, connects the whole under interaction, the proof linking any two living events through at most two interactions. There, with some standpoint, every living event being significant from every standpoint is equivalent to a seed with relational and standpoint neutrality.",
+      "zh": "每个活的事件都汲取或承担于其上、且有活的汲取者与活的承担者的条件，在交互之下使整体连通，证明以至多两次交互连起任两个活的事件。在那里，有某个立场时，每个活的事件从每个立场都有意义，等价于种子加关系中立与立场中立。",
+      "declarations": [
+        "Becoming.Web.interacts_reach",
+        "Becoming.Web.connected_of_renewable",
+        "Becoming.Web.significant_iff_of_renewable",
+        "Becoming.Valuation.significant_iff"
+      ]
+    },
+    {
+      "en": "Under relational neutrality for the interaction valuation, a standpoint holding a drawing event significant holds significant every living event bearing on that condition at any step, whether or not the drawing undermines; so a standpoint valuing an undermining event holds significant the living events of a formation it undermines, at every step where that formation bears on the condition.",
+      "zh": "交互估值满足关系中立时，认为某个汲取事件有意义的立场，认为在任何步承担于该条件的每个活的事件都有意义，不论汲取是否侵蚀；所以珍视一个侵蚀事件的立场，在被侵蚀形成承担于该条件的每一步上，认为它的活的事件有意义。",
+      "declarations": [
+        "Becoming.Web.drawing_reaches",
+        "Becoming.Web.valuing_undermining_reaches",
+        "Becoming.Neutral",
+        "Becoming.Valuation.transmits"
+      ]
+    },
+    {
+      "en": "Adjoining a condition held at level one, on which every formation depends at level one and which every formation draws on, keeps it renewed, leaves living unchanged and connects every web under interaction. One drawing suffices: for a living event, the same condition drawn on only by that event's formation at its step does the same.",
+      "zh": "加入一个保持在水平一、每个形成都以水平一依存并汲取的条件，它保持被更新，living 不变，并在交互之下使每个网连通。一次汲取就够：对一个活的事件，同一条件只被该事件的形成在其步上汲取，结果相同。",
+      "declarations": [
+        "Becoming.Web.Condition.universal",
+        "Becoming.Web.universal_connects",
+        "Becoming.Web.Condition.single",
+        "Becoming.Web.one_use_connects",
+        "Becoming.Web.Renewed"
+      ]
+    },
+    {
+      "en": "In a witness two formations depend on one condition at level one, active while it meets their need, and a third draws on it at the first step. Where the level stays at one, the whole is connected under interaction; where it falls to zero after the drawing, the drawing undermines, no living event draws, the dependents live at the first step and the whole is unconnected. Co-participation connects both runs.",
+      "zh": "在一个见证中，两个形成以水平一依存于同一条件、在其需要被满足时活跃，第三个在第一步汲取它。水平保持为一时，整体在交互之下连通；汲取之后水平降为零时，汲取侵蚀，没有活的事件汲取，依存者在第一步是活的，整体在交互之下不连通。共同参与在两次运行中都连通。",
+      "declarations": [
+        "Becoming.Shared.Formation",
+        "Becoming.Shared.atStart",
+        "Becoming.Shared.steady",
+        "Becoming.Shared.falling",
+        "Becoming.Shared.web",
+        "Becoming.Shared.dependent",
+        "Becoming.Shared.participates",
+        "Becoming.Shared.user_undermines",
+        "Becoming.Shared.no_living_drawer",
+        "Becoming.Shared.first_isolated",
+        "Becoming.Shared.connection_by_living_use"
+      ]
+    },
+    {
+      "en": "Interaction orders no time and reads no effect. In one witness a drawing at step 5 interacts with, and connects, a dependence held only at step 0; in another the drawer's event interacts with the old dependent though the condition's level is the same at every step whether the drawer takes or rests.",
+      "zh": "交互不排时间，也不读效果。一个见证中，第 5 步的汲取与只在第 0 步成立的依存交互并连通二者；另一个见证中，汲取者的事件与旧依存者交互，虽然汲取者取用或休止时条件的水平每一步都相同。",
+      "declarations": [
+        "Becoming.Later.Formation",
+        "Becoming.Later.web",
+        "Becoming.Later.drawing_connects_earlier",
+        "Becoming.Pinned.drawing_interacts"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "依存网与逐步读法如 becoming-stepwise-reading 所设；draws 不带数量；交互像共同参与一样，不排定两个事件的时间次序，也不问汲取是否改变水平（Later、Pinned.drawing_interacts）。",
@@ -27,9 +128,94 @@
       "en": "The connection result needs a condition on which every living event bears, with a living drawer and a living dependent; the characterization also needs some living event; the transmission result needs relational neutrality, whose normative standing this result does not prove."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Interaction is not one formation's drawing bearing on another's support; that needs a version ordered in time and sensitive to the drawing's effect.",
+      "zh": "交互不是一方的汲取落在另一方的支持上；那需要排定时间、对汲取效果敏感的版本。",
+      "kind": "non-implication",
+      "witness": "Becoming.Later.drawing_connects_earlier"
+    },
+    {
+      "en": "The discipline changes relations, not living: a coarse common condition every formation draws on still withholds the events drawing on it once a dependence on it fails.",
+      "zh": "纪律只改变关系，不改变 living：人人汲取的粗的共同条件，在对它的依存落空时，仍使汲取它的事件不 living。",
+      "kind": "scope",
+      "witness": "Becoming.Web.interaction_narrows"
+    },
+    {
+      "en": "It is stated on the stepwise reading of a web, which a run with fixed dependences gives; the whole-run reading with the same relation is not stated.",
+      "zh": "只在网的逐步读法上陈述，依存不变的运行给出这样的网；整段读法取同一关系的情形没有陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "The discipline is a disclosed correspondence choice, not a consequence of the unfolding; the result does not show that interaction is the right reading of related.",
+      "zh": "纪律是公开的对应选择，不是展开的推论；本结果不表明交互是 related 的正确读法。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "No responsibility or duty follows from it.",
+      "zh": "由它推不出责任或义务。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
+      "detail": {
+        "zh": "纪律排除不了人人汲取并以正水平依存的被更新条件（universal_connects）：加入它，living 不变，每个网都连通。",
+        "en": "The discipline does not exclude a renewed condition that every formation draws on and depends on at a positive level (universal_connects): adjoining one leaves living unchanged and connects every web."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
+      "detail": {
+        "zh": "纪律所省略者（Shared.connection_by_living_use）：唯一的使用侵蚀依存者时，依存者彼此不经由该条件连通，而共同参与连通它们。",
+        "en": "What the discipline omits (Shared.connection_by_living_use): when the only use undermines the dependents, they are not connected to each other through the condition, while co-participation connects them."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
+      "detail": {
+        "zh": "剩余的不经纪律排除的连通只需一次使用（Web.one_use_connects）：对任何有一个活的事件的网，加入一个人人在水平 1 依存、只被该事件的形成在该步汲取一次的条件，条件被更新，living 不变，网在交互下连通。",
+        "en": "The residual connection the discipline does not exclude needs one use, not everyone drawing (Web.one_use_connects): for any web with a living event, adjoining a condition on which every formation depends at level 1, drawn on once by that event's formation at its step, keeps the condition renewed and living unchanged and connects the web under interaction."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
+      "detail": {
+        "zh": "交互不排定时间（Later.drawing_connects_earlier）：第 5 步的汲取与只在第 0 步成立的依存交互，并连通二者，虽然它不能落在那一依存上。",
+        "en": "Interaction does not order time (Later.drawing_connects_earlier): a drawing at step 5 interacts with, and connects, a dependence held only at step 0, which it cannot bear on."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
+      "detail": {
+        "zh": "交互不问效果（Pinned.drawing_interacts）：汲取者的事件与旧依存者交互，虽然汲取与不汲取的两次运行水平处处相同。",
+        "en": "Interaction does not ask about effect (Pinned.drawing_interacts): the drawer's event interacts with the old dependent, though the two runs that draw and rest have the same levels everywhere."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
+      "detail": {
+        "zh": "关系中立下的传递由汲取承担（Web.drawing_reaches）：珍视任何汲取事件的立场，必珍视以正水平依存于该条件的每个活的事件，不论汲取是否侵蚀任何东西；纪律只排除无交互的共同依存所给的关系。",
+        "en": "Under relational neutrality transmission is carried by drawing (Web.drawing_reaches): a standpoint valuing any drawing event holds significant every living event depending on the condition at a positive level, whether or not the drawing undermines anything; the discipline excludes only the relation co-dependence without interaction gave."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.Correspondence, Becoming.Metaethics and Becoming.Dependence are bound to the passing receipt becoming-checks/20261020T051144.879480Z and those of Becoming.ValuationFrames to becoming-checks/20261021T133545.845568Z, which report an empty axiom list for every cited declaration and verify that the core compiles from Lean's prelude alone. Author counterreview; an independent review accepted every declaration under review, and its corrections are taken.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Correspondence、Metaethics、Dependence 的当前字节绑定到通过的回执 becoming-checks/20261020T051144.879480Z，ValuationFrames 绑定到 becoming-checks/20261021T133545.845568Z；所引声明的公理报告皆为空，并核对核心只用 Lean 前导即可编译。作者反审；独立审查接受所审的全部声明，其更正已采纳。"
+  },
+  "next_delta": {
+    "en": "An interaction ordered in time and sensitive to effect (drawing no later than the dependence, with a level that differs with the draw) and its connected class, under which one use would no longer connect every web; the same relation on the whole-run reading; idle conditions excluded at the relation level as well, whose related can also be connected with no use.",
+    "zh": "排定时间、对效果敏感的交互（汲取不晚于依存，且水平随汲取而异）及其连通类，在它之下一次使用不再使每个网连通；对整段读法陈述同一关系；在关系层读法上也排除惰性条件，那里的 related 同样可以不经使用而连通。"
+  },
   "correspondence": {
-    "zh": "纪律是公开的对应选择，不是展开的推论。交互是结构上的共现：一方汲取、另一方以正水平依存于同一个能使之落空的条件，在任何步上；它还不是“一方的汲取落在另一方的支持上”，那需要排定时间、对效果敏感的版本，开放。共同依存，即两个形成依存于同一条件，是纪律所省略的关系（经由共同条件的共同构成），不是没有关系；Shared 显示省略它的代价，应用若要把它算作关系，须写出它。纪律排除的是结构上不能承载交互的条件，不是虚假的汲取或依存声明：一个被更新、人人以正水平依存、被一个活的事件使用一次的条件，在网上与真实的共同条件（例如人人呼吸的空气）无法区分，它给出的连通是一个须由应用检验的事实主张。共同参与这一选择及其后果（Q4）仍保留在核心上；依 Ren 的交托保留交互（D10）。",
-    "en": "The discipline is a disclosed correspondence choice, not a consequence of the unfolding. Interaction is a structural coincidence: one draws on, and the other depends at a positive level on, one condition that can fail it, at any steps. It is not yet one formation's drawing bearing on another's support; that needs an ordered, effect-sensitive version, which is open. Co-dependence, two formations depending on one condition, is a relation the discipline omits (co-constitution through a common condition), not an absence of relation; Shared exhibits the cost of omitting it, and an application that counts it must write it out. The discipline excludes conditions that structurally cannot carry interaction, not false claims of drawing or dependence: a renewed condition on which every formation depends at a positive level, used once by a living event, is indistinguishable on the web from a genuine common condition (say, the air everyone breathes), and the connection it gives is a factual claim that application must check. The co-participation choice and its consequence (Q4) remain on the core; on Ren's delegation interaction is kept (D10)."
+    "zh": "纪律是公开的对应选择，不是展开的推论。交互是结构上的共现：一方汲取、另一方以正水平依存于同一个能使之落空的条件，在任何步上；它还不是“一方的汲取落在另一方的支持上”，那需要排定时间、对效果敏感的版本，开放。共同依存，即两个形成依存于同一条件，是纪律所省略的关系（经由共同条件的共同构成），不是没有关系；Shared 显示省略它所失去的，应用若要把它算作关系，须写出它。纪律排除的是结构上不能承载交互的条件，不是虚假的汲取或依存声明：一个被更新、人人以正水平依存、被一个活的事件使用一次的条件，在网上与真实的共同条件（例如人人呼吸的空气）无法区分，它给出的连通是一个须由应用检验的事实主张。共同参与这一读法及其后果（惰性条件给出的连通）仍并存于核心上；保留的读法是交互（AI 的读法，交托的选择 D10）。",
+    "en": "The discipline is a disclosed correspondence choice, not a consequence of the unfolding. Interaction is a structural coincidence: one draws on, and the other depends at a positive level on, one condition that can fail it, at any steps. It is not yet one formation's drawing bearing on another's support; that needs an ordered, effect-sensitive version, which is open. Co-dependence, two formations depending on one condition, is a relation the discipline omits (co-constitution through a common condition), not an absence of relation; Shared exhibits what omitting it loses, and an application that counts it must write it out. The discipline excludes conditions that structurally cannot carry interaction, not false claims of drawing or dependence: a renewed condition on which every formation depends at a positive level, used once by a living event, is indistinguishable on the web from a genuine common condition (say, the air everyone breathes), and the connection it gives is a factual claim that application must check. Co-participation and its consequence, connection by an inert condition, stay on the core beside it; interaction is the reading kept (an AI reading, delegated choice D10)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
   "aliases": [
@@ -54,8 +240,8 @@
       "id": "becoming-stepwise-reading",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "Web.interaction 的 living 恰是 Web.valuation 的 living；交互蕴含其共同参与；inert_connects 用其 connected_of_common 重述 Q4。",
-        "en": "The living of Web.interaction is exactly that of Web.valuation; interaction implies its co-participation; inert_connects restates Q4 with its connected_of_common."
+        "zh": "Web.interaction 的 living 恰是 Web.valuation 的 living；交互蕴含其共同参与；inert_connects 用其 connected_of_common 重述惰性条件给出的连通。",
+        "en": "The living of Web.interaction is exactly that of Web.valuation; interaction implies its co-participation; inert_connects restates the inert condition's connection with its connected_of_common."
       },
       "interface": {
         "output": {
@@ -127,72 +313,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
-      "detail": {
-        "zh": "纪律排除不了人人汲取并以正水平依存的被更新条件（universal_connects）：加入它，living 不变，每个网都连通。",
-        "en": "The discipline does not exclude a renewed condition that every formation draws on and depends on at a positive level (universal_connects): adjoining one leaves living unchanged and connects every web."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
-      "detail": {
-        "zh": "纪律的代价（Shared.connection_by_living_use）：唯一的使用侵蚀依存者时，依存者彼此不经由该条件连通，而共同参与连通它们。",
-        "en": "The discipline's cost (Shared.connection_by_living_use): when the only use undermines the dependents, they are not connected to each other through the condition, while co-participation connects them."
-      }
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-RENEWAL-READING-REVIEW.md",
-      "detail": {
-        "zh": "审查 Q10 未解决：人人汲取的粗的共同条件在其依存落空时使汲取它的事件不 living；纪律只改变关系，不改变 living。",
-        "en": "Review Q10 is not resolved: a coarse common condition that every formation draws on withholds the events drawing on it once a dependence on it fails; the discipline changes relations, not living."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
-      "detail": {
-        "zh": "剩余的免费连通比“人人汲取”更便宜（Web.one_use_connects）：对任何有一个活的事件的网，加入一个人人在水平 1 依存、只被该事件的形成在该步汲取一次的条件，条件被更新，living 不变，网在交互下连通（独立审查 G8）。",
-        "en": "The residual free connection is cheaper than “everyone draws on it” (Web.one_use_connects): for any web with a living event, adjoining a condition on which every formation depends at level 1, drawn on once by that event's formation at its step, keeps the condition renewed and living unchanged and connects the web under interaction (independent review G8)."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
-      "detail": {
-        "zh": "交互不排定时间（Later.drawing_connects_earlier）：第 5 步的汲取与只在第 0 步成立的依存交互，并连通二者，虽然它不能落在那一依存上（独立审查 G7）。",
-        "en": "Interaction does not order time (Later.drawing_connects_earlier): a drawing at step 5 interacts with, and connects, a dependence held only at step 0, which it cannot bear on (independent review G7)."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
-      "detail": {
-        "zh": "交互不问效果（Pinned.drawing_interacts）：汲取者的事件与旧依存者交互，虽然汲取与不汲取的两次运行水平处处相同（独立审查 G7）。",
-        "en": "Interaction does not ask about effect (Pinned.drawing_interacts): the drawer's event interacts with the old dependent, though the two runs that draw and rest have the same levels everywhere (independent review G7)."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
-      "detail": {
-        "zh": "审查 Q5 只有一半被排除（Web.drawing_reaches）：在关系中立下，珍视任何汲取事件的立场，必珍视以正水平依存于该条件的每个活的事件，不论汲取是否侵蚀任何东西（独立审查 G9）。",
-        "en": "Only half of review Q5 is excluded (Web.drawing_reaches): under relational neutrality a standpoint valuing any drawing event holds significant every living event depending on the condition at a positive level, whether or not the drawing undermines anything (independent review G9)."
-      }
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-P8-P9-P7B-REVIEW.md",
-      "detail": {
-        "zh": "独立审查：所审的全部声明接受，公理报告为空；MetSince 须比较那一步的所需（已修正），依存中断一步即开始新的一段（已披露），but-for 须动作可取（已修正）；散文在逐步读法的代价、节制、替代、交互与剩余的免费连通上强于 Lean（已在整合文档中更正）。",
-        "en": "Independent review: every declaration under review is accepted with empty axiom reports; MetSince had to compare the need at that step (repaired), a one-step lapse starts a new tenure (disclosed), and but-for needs the move to be available (repaired); the prose overclaimed on the stepwise cost, restraint, substitution, interaction and the residual free connection (corrected in the integration note)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只对逐步读法陈述；依存不变时经 K.dependence.along r 适用，整段读法可取同一关系，这里没有做。不处理时间次序与汲取的效果；不改变 living；不选择读法；不推出责任或义务。",
-    "en": "Stated for the stepwise reading only; with fixed dependences it applies through K.dependence.along r, and the whole-run reading could take the same relation, which is not done here. Does not order events in time or ask about the effect of drawing; does not change living; chooses no reading; yields no responsibility or duty."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Correspondence 中本记录的 25 项定理全部空依赖（模块另有 12 项定理属于 life-as-condition-of-life）；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致。作者反审见整合文档 §10；另一 agent（Claude Opus 5.5，未参与撰写）作了独立审查（BECOMING-P8-P9-P7B-REVIEW.md），其更正在整合文档 §12 处理。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 25 theorems of Becoming.Correspondence belonging to this record all have empty axiom reports (the module's other 12 belong to life-as-condition-of-life); the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts. The author's counterreview is in §10 of the integration note; a separate agent (Claude Opus 5.5, not an author) reviewed it independently (BECOMING-P8-P9-P7B-REVIEW.md), and its corrections are handled in §12. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run)."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
@@ -247,7 +367,9 @@
       "role": "proof",
       "sha256": "659164aee82f74c802700e5e7e4118721400cf4b09233a743c2f9250b3d83584",
       "declarations": [
-        "Becoming.Web.valuation"
+        "Becoming.Web.valuation",
+        "Becoming.Neutral",
+        "Becoming.Valuation.transmits"
       ]
     },
     {
@@ -265,7 +387,8 @@
       "sha256": "1c85d21fa7ec00debcac668785b51fdd7cdc3a97a66d50c6700047956cdaf5df",
       "declarations": [
         "Becoming.Web.UnderminingOn",
-        "Becoming.Web.Participates"
+        "Becoming.Web.Participates",
+        "Becoming.Web.Renewed"
       ]
     },
     {
@@ -367,12 +490,22 @@
       "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Metaethics",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Dependence",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "排定时间、对效果敏感的交互（汲取不晚于依存，且水平随汲取而异）及其连通类，它会抬高剩余免费连通的价格；对整段读法陈述同一关系；在关系层读法上排除惰性条件（审查指出关系层的 related 同样可被免费连通）。",
-    "en": "An ordered, effect-sensitive interaction (drawing no later than the dependence, with a level that differs with the draw) and its connected class, which would raise the price of the residual free connection; the same relation for the whole-run reading; excluding idle conditions at the relation level (review notes the relation-level related can also be connected for free)."
-  },
   "history": [
     {
       "zh": "2026-10-09：应 Ren“and after it is elegantly completed, move on to pursue the theory of becoming, and prove the necessary proofs”新增，作为整合计划 P9，承接第一次独立审查列出的第一种会改变其判断的结果。",
@@ -447,6 +580,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired labels N_rel and G0 in a hypothesis and a dependency interface read relational neutrality and living significance; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：假设与一条依赖接口中的退役标签 N_rel、G0 改为关系中立、生生之意义；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement edited to say what the home section says (interaction relates; an idle condition changes no connection; connection by living use), its \"no longer ... for free\" dropped; the claim split into nine laws, each read against its declarations in Becoming.Correspondence, Becoming.Metaethics, Becoming.Dependence and Becoming.ValuationFrames (\"at most two interactions\" stated as the proof's construction, the theorem concluding connection); the limitations to five does-not-show items and the standard boundaries significance-related-not-asserted and discrete-steps; the counterexample of review Q10, which no declaration witnesses, became a does-not-show item, and the review's summary went to validation_scope; review codes and words of exchange left five counterexamples, the correspondence and a dependency detail (Q4, Q5, G7, G8, G9, \"cost\", \"cheaper\"); Web.Renewed, Neutral and Valuation.transmits added to the references of their files; Metaethics.lean and Dependence.lean, whose declarations the laws cite, bound to becoming-checks/20261020T051144.879480Z, which passed at their current bytes; no premise, status or source hash changed. Every earlier sentence is mapped in [condition-correspondence-discipline.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/condition-correspondence-discipline.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the proof bindings, does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述改为主章所说（交互使之相关；惰性条件不改变连通；连通由活的使用造成），去掉“不再”的叙述；主张拆为九条规律，各条对照其在 Becoming.Correspondence、Metaethics、Dependence 与 ValuationFrames 中的声明核读（“至多两次交互”写作证明的构造，定理的结论是连通）；限制改为五条“未表明”与通用边界 significance-related-not-asserted、discrete-steps；没有声明见证的审查 Q10 反例改为一条“未表明”，审查的总结移入 validation_scope；五条反例、对应与一条依赖说明中去掉审查编号与交换之词（Q4、Q5、G7、G8、G9、cost、cheaper）；Web.Renewed、Neutral 与 Valuation.transmits 加入其文件的引用；Metaethics.lean 与 Dependence.lean（规律引用其声明）绑定到在其当前字节上通过的 becoming-checks/20261020T051144.879480Z；前提、状态与来源哈希均未改变。每句旧文本的去向见 [condition-correspondence-discipline.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/condition-correspondence-discipline.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及证明绑定、“未表明”各项，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/8efe2d488bdd52a9/condition-correspondence-discipline.json",
+      "sha256": "8efe2d488bdd52a92caece6143ae15fef8c0662eee15f932dc22f046d21b29da",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/f3af37610a537239/condition-correspondence-discipline.json",
+      "sha256": "f3af37610a53723976bf5c92b1b487c83826e13863cc6086d5b6803f1538fc4f",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

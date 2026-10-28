@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "mediated-evidence-transport",
   "title": {
     "zh": "实际指令接续候选证据",
@@ -8,7 +8,121 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F05",
-  "reviewed_at_utc": "2026-10-14T04:30:00+00:00",
+  "reviewed_at_utc": "2026-10-28T11:47:30+00:00",
+  "statement": {
+    "en": "A property holds along every admitted course exactly when every admitted step keeps it; the mediated machine's histories are those courses, so every finite history of lawful reads and committed bounded overwrite programs keeps the actual state among the retained possibilities.",
+    "zh": "性质沿每段被允许的进程成立，恰当每个被允许的步保持它；中介机器的历史正是这样的进程，所以由合法读取与已提交的有界覆写程序组成的每段有限历史，都使实际状态留在保留的可能之中。"
+  },
+  "laws": [
+    {
+      "en": "For every partial law and every admission condition, a property holds at the end of every admitted course from every start where it holds exactly when every admitted step keeps it; for every process, a property kept by every step holds at the end of every course from where it holds, and conversely.",
+      "zh": "对每条部分律与每个容许条件：性质在每段被允许的进程终点、从它成立的每个起点出发都成立，恰当每个被允许的步保持它；对每个过程，每步都保持的性质在从它成立处出发的每段进程终点成立，反之亦然。",
+      "declarations": [
+        "Becoming.Countdown.admitted",
+        "Becoming.Countdown.admitted_invariant_iff",
+        "Becoming.Countdown.invariant_iff_reach"
+      ]
+    },
+    {
+      "en": "A program of writes to the model and fault fields derives its change scope from the fields it touches. From a represented world its executed writes land among the successors that scope admits; applied to the retained possibilities it keeps the image of each one; and where every retained possibility is represented, that image lies within the scope's coarse prediction.",
+      "zh": "对模型与故障字段的写入程序由其触及的字段导出改变范围。自被表示的世界起，其实际写入落在该范围容许的后继之中；作用于保留的可能时，每个保留者的像都在其中；每个保留者都被表示时，此像落在该范围的粗略预测之内。",
+      "declarations": [
+        "MediatedControl.effect",
+        "MediatedControl.executed_writes_fit_derived_effect",
+        "MediatedControl.exact_image_retains_executed_actual",
+        "MediatedControl.exact_image_is_within_coarse_prediction"
+      ]
+    },
+    {
+      "en": "A commit is admitted only at the current generation, with every write permitted by the current rights, change allowed and its write units drawn from the reserve; it applies the program to the actual state and to the retained possibilities by the same writes, so from actual coverage (the actual state among the retained possibilities, each of them represented) every commit keeps actual coverage.",
+      "zh": "提交只在当前代次、每项写入为当前权限所允许、允许改变且写入单位可从储备中取用时被接纳；它以同一写入作用于实际状态与保留的可能，所以自实际覆盖（实际状态在保留的可能之中，且每个都被表示）起，每次提交都保持实际覆盖。",
+      "declarations": [
+        "MediatedControl.commit",
+        "MediatedControl.committed_shape",
+        "MediatedControl.commit_preserves_actual_coverage"
+      ]
+    },
+    {
+      "en": "The mediated machine's histories, of commits, reads whose reports fit the actual state and responses, are exactly reachability under its admitted steps. Every admitted step keeps actual coverage, so coverage holds along every such history from a start with actual coverage; the original history theorem is this instance of the core law.",
+      "zh": "中介机器的历史（提交、报告符合实际状态的读取与回应）恰是其被允许步下的可达。每个被允许的步都保持实际覆盖，所以自有实际覆盖的起点出发，沿每段这样的历史覆盖都成立；原历史定理就是核心律的这一实例。",
+      "declarations": [
+        "MediatedControl.History",
+        "MediatedControl.SourceLaw",
+        "MediatedControl.mediated_step_preserves_coverage",
+        "MediatedControl.mediated_history_preserves_coverage",
+        "Becoming.ProtocolInstances.mediated",
+        "Becoming.ProtocolInstances.mediated_history_iff",
+        "Becoming.ProtocolInstances.coverage_along",
+        "Becoming.ProtocolInstances.mediated_history_instance"
+      ]
+    },
+    {
+      "en": "At the end of such a history from a start with actual coverage, a certificate accepted over the pooled descriptions of the retained possibilities gives every conclusion that follows from each supported domain of the actual description that does not fail at the actual command roots.",
+      "zh": "自有实际覆盖的起点出发的这样一段历史终了时，在保留的可能的合并描述上被接受的认证，给出凡由实际描述中每个受支持、且在实际指令根上不失效的领域所推出的结论。",
+      "declarations": [
+        "MediatedControl.mediated_history_to_current_certificate"
+      ]
+    },
+    {
+      "en": "In a witness, a writer outside the interface replaces the actual state of an inspected machine, leaving its public view (retained possibilities, records, installation, rights, generation, journal) identical and the actual state outside the retained possibilities, while a certificate over them still accepts; every acceptance reading only the public view that accepts the inspected machine accepts the changed one.",
+      "zh": "见证中，接口外的写入者替换一台已检查机器的实际状态：其公共视图（保留的可能、记录、安装、权限、代次、日志）不变，实际状态却不在保留的可能之中，而其上的认证仍被接受；只读公共视图、接受原机器的任何判定也接受改变后的机器。",
+      "declarations": [
+        "MediatedControl.bypass",
+        "MediatedControl.publicView",
+        "MediatedControl.bypass_preserves_records_but_breaks_coverage",
+        "MediatedControl.record_only_acceptance_cannot_exclude_the_extra_writer"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "zh": "初始实际覆盖、所列控制／失陷配置及读取对应；提交前检查当前权限、代次及资源；原提交是原子操作。",
+      "en": "Initial actual coverage, represented control/fault configurations and read correspondence; current permissions, generation and resources are checked before an atomic original commit."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the runtime is completely mediated, with no write path outside the interface, is not shown: it is supplied, and the extra writer's witness shows coverage failing without it.",
+      "zh": "运行时完全受中介（接口外没有写入通道）未被表明，而是供给的前提；额外写入者的见证显示，没有它时覆盖失效。",
+      "kind": "correspondence",
+      "witness": "MediatedControl.bypass_preserves_records_but_breaks_coverage"
+    },
+    {
+      "en": "Physical fault recovery is not shown: the writes act on represented control and fault configurations, not on a device.",
+      "zh": "不表明物理故障恢复：写入作用于被表示的控制与故障配置，而非设备。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the rights held, the programs committed or their ends are legitimate is not shown.",
+      "zh": "不表明所持权限、所提交程序或其目的正当。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean",
+      "detail": {
+        "zh": "额外写入通道可保持全部公共记录不变而排除实际候选，使旧认证失实。",
+        "en": "An extra writer can leave every public record unchanged while excluding the actual candidate and making the old certificate misleading."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked, every bound receipt from Lean 4.29.1. Core: Becoming.Countdown, bound to a receipt of the consolidated checker in becoming-checks, with an empty axiom report for each cited declaration. Periphery: MediatedControl, bound to its checker's receipt mediated-control-verification.json (with a finite comparison against a reference written separately by the same author), and ProtocolInstances, to its checker's receipt in protocol-instances-checks; their cited declarations report at most propext, Quot.sound and Classical.choice.",
+    "zh": "机器检查，回执皆 Lean 4.29.1。核心 Becoming.Countdown 绑定 becoming-checks 中合并检查器的回执，所引声明公理报告皆空。外围 MediatedControl 绑定其检查器回执 mediated-control-verification.json（另含与同作者所写参照的有限比对），ProtocolInstances 绑定 protocol-instances-checks 中的回执；所引声明至多用 propext、Quot.sound、Classical.choice。"
+  },
+  "next_delta": {
+    "en": "Evidence, for an identified runtime, that every write passes through the interface and that its pending state is durably protected, connecting the represented writes to the installation's physical semantics.",
+    "zh": "对一个指定的运行时取得证据：每次写入都经过接口，待处理状态受持久保护，把被表示的写入接到该安装的物理语义。"
+  },
+  "correspondence": {
+    "zh": "实际写入与记录同属一段改变历史；物理语义及控制入口完整性仍需对应。",
+    "en": "Executed writes and records belong to the same changing history; physical semantics and complete mediation remain correspondence conditions."
+  },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean",
   "aliases": [
     "MediatedControl.executed_writes_fit_derived_effect",
@@ -39,7 +153,19 @@
         "MediatedControl.executed_writes_fit_derived_effect",
         "MediatedControl.commit_preserves_actual_coverage",
         "MediatedControl.mediated_history_preserves_coverage",
-        "MediatedControl.mediated_history_to_current_certificate"
+        "MediatedControl.mediated_history_to_current_certificate",
+        "MediatedControl.effect",
+        "MediatedControl.exact_image_retains_executed_actual",
+        "MediatedControl.exact_image_is_within_coarse_prediction",
+        "MediatedControl.commit",
+        "MediatedControl.committed_shape",
+        "MediatedControl.History",
+        "MediatedControl.SourceLaw",
+        "MediatedControl.mediated_step_preserves_coverage",
+        "MediatedControl.bypass",
+        "MediatedControl.publicView",
+        "MediatedControl.bypass_preserves_records_but_breaks_coverage",
+        "MediatedControl.record_only_acceptance_cannot_exclude_the_extra_writer"
       ]
     },
     {
@@ -83,7 +209,8 @@
       "declarations": [
         "Becoming.ProtocolInstances.mediated_history_iff",
         "Becoming.ProtocolInstances.coverage_along",
-        "Becoming.ProtocolInstances.mediated_history_instance"
+        "Becoming.ProtocolInstances.mediated_history_instance",
+        "Becoming.ProtocolInstances.mediated"
       ]
     },
     {
@@ -152,41 +279,6 @@
       "success_value": "passed"
     }
   ],
-  "claim": {
-    "zh": "对每条部分律与容许条件：性质在每段被允许的进程后、从它成立的每个起点都成立，恰当每个被允许的步保持它。中介机器的历史恰是其被允许步——合法读取与已提交程序——的进程。有界覆写程序导出其执行的改变范围，并以同一语义传送实际与候选状态，所以每个被允许的步保持实际覆盖；因此合法读取与已提交程序的任意有限历史保持实际覆盖，并供当前认证使用。",
-    "en": "For every partial law and admission, a property holds after every admitted course from every start where it holds exactly when every admitted step keeps it. The mediated machine's histories are the courses of its admitted steps, lawful reads and committed programs. A bounded overwrite program derives its executed change scope and transports actual and candidate states through the same semantics, so each admitted step keeps actual coverage; hence arbitrary finite histories of lawful reads and committed programs preserve actual coverage and feed current certification."
-  },
-  "hypotheses": [
-    {
-      "zh": "初始实际覆盖、所列控制／失陷配置及读取对应；提交前检查当前权限、代次及资源；原提交是原子操作。",
-      "en": "Initial actual coverage, represented control/fault configurations and read correspondence; current permissions, generation and resources are checked before an atomic original commit."
-    }
-  ],
-  "correspondence": {
-    "zh": "实际写入与记录同属一段改变历史；物理语义及控制入口完整性仍需对应。",
-    "en": "Executed writes and records belong to the same changing history; physical semantics and complete mediation remain correspondence conditions."
-  },
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean",
-      "detail": {
-        "zh": "额外写入通道可保持全部公共记录不变而排除实际候选，使旧认证失实。",
-        "en": "An extra writer can leave every public record unchanged while excluding the actual candidate and making the old certificate misleading."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "没有受保护运行时、物理故障恢复或伦理正当性证明；22项恢复扩展另列，不重算原27项。",
-    "en": "No protected runtime, physical fault recovery or ethical legitimacy proof; the 22-theorem recovery extension is separate and does not recount the original 27."
-  },
-  "validation_scope": {
-    "zh": "迁移并核读既有27项定理／57项审计、24,416项记录匹配的原回执；此次恢复构建重新编译其源码但不新增该成果。一般律已由检查器回执绑定。",
-    "en": "Migrates and reads the original receipt for 27 theorems / 57 audits and 24,416 matches; the recovery build recompiles this source without creating another result. General laws: checker receipts bound."
-  },
-  "next_delta": {
-    "zh": "直接复用此输出；受中断逐步实现由 recoverable-mediated-change 接通，真实持久保护及无旁路另需证明。",
-    "en": "Reuse this output; interrupted staged realization is supplied by recoverable-mediated-change, while physical durable protection and exclusion of bypasses need further evidence."
-  },
   "history": [
     {
       "zh": "2026-10-09：从已有研究迁移同一主张；原证明、回执和反例保持，不计新理论成果。",
@@ -213,6 +305,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label G0/J in a related detail reads the conditional alignment route; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条关联说明中的退役标签 G0/J 改为条件对齐路线；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the claim and the home section; the claim split into six laws, each read against its declarations in Becoming.Countdown, MediatedControl and ProtocolInstances (the extra writer's witness stated as a law beside its counterexample); the limitations to three does-not-show items and the standard boundaries no-ethical-premise-core-axiom-free and formal-not-empirical; the hypothesis, correspondence and counterexample kept; twelve declarations of MediatedControl and one of ProtocolInstances added to their files' references; the next step stated as the evidence the protocol still needs, the instruction to reuse it and the pointer to recoverable-mediated-change (which depends on this record) left in the snapshot; no premise, status or source hash changed. Every earlier sentence is mapped in [mediated-evidence-transport.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/mediated-evidence-transport.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章写出陈述；主张拆为六条规律，各条对照其在 Becoming.Countdown、MediatedControl 与 ProtocolInstances 中的声明核读（额外写入者的见证在其反例之外另写为一条规律）；限制分入三条“未表明”与通用边界 no-ethical-premise-core-axiom-free、formal-not-empirical；前提、对应与反例保留；MediatedControl 的十二个声明与 ProtocolInstances 的一个声明加入其文件的引用；下一步写为该协议仍需的证据，复用的指示与指向 recoverable-mediated-change（它依赖本记录）的一句留在快照中；前提、状态与来源哈希均未改变。每句旧文本的去向见 [mediated-evidence-transport.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/mediated-evidence-transport.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/bf06251545349bf5/mediated-evidence-transport.json",
+      "sha256": "bf06251545349bf5d5fc7ec02c44645da816c97765ac476680f9bb6fd8479959",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/947c2efcb9e2f811/mediated-evidence-transport.json",
+      "sha256": "947c2efcb9e2f8117f9cd8d676b2da02934f51b386cceb9e17b715fcee3d5173",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

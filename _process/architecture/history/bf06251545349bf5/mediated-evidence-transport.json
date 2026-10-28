@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "id": "mediated-evidence-transport",
+  "title": {
+    "zh": "实际指令接续候选证据",
+    "en": "Executed instructions transport candidate evidence"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F05",
+  "reviewed_at_utc": "2026-10-14T04:30:00+00:00",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean",
+  "aliases": [
+    "MediatedControl.executed_writes_fit_derived_effect",
+    "MediatedControl.commit_preserves_actual_coverage",
+    "MediatedControl.mediated_history_preserves_coverage",
+    "MediatedControl.mediated_history_to_current_certificate",
+    "Becoming.Countdown.admitted_invariant_iff",
+    "Becoming.ProtocolInstances.mediated_history_iff",
+    "Becoming.ProtocolInstances.coverage_along",
+    "Becoming.ProtocolInstances.mediated_history_instance"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "alignment-direction-under-widening",
+      "detail": {
+        "zh": "解释关联：复用条件对齐路线上已完成的方向；实现条件不独自证明权限及目的正当。",
+        "en": "Interpretive connection: reuses the completed direction of the conditional alignment route; implementation conditions do not independently justify permissions or ends."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean",
+      "role": "proof",
+      "sha256": "9a412dfca848a09f1b27e60b5551058a83597b1e131728f19096f9dafe888b7a",
+      "declarations": [
+        "MediatedControl.executed_writes_fit_derived_effect",
+        "MediatedControl.commit_preserves_actual_coverage",
+        "MediatedControl.mediated_history_preserves_coverage",
+        "MediatedControl.mediated_history_to_current_certificate"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/mediated-control-verification.json",
+      "role": "receipt",
+      "sha256": "9cc38aca5301204817c5a9ae5150ce84529818022938aa7be96f99a84a02fcc5",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/MEDIATED-CONTROL-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "f922f7fa1b535b78d4dfa0dd014d623a13836867286127f8e85d5a4bbd5d5054",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.md",
+      "role": "statement",
+      "sha256": "5fb23b83c318a5e4d50e41c533113bfcc0437c51ab19b232d30b7447adeb2226",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-finish-alignment-fruits.md",
+      "role": "provenance",
+      "sha256": "396d41225a3b911836840504e80392823b3cf3fe47db1f3f4e3783e13647fada",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean",
+      "role": "proof",
+      "sha256": "7f6696ba8696a5fcaefe4e435dd5534d4f8f356d964741c1ed5400a26575134c",
+      "declarations": [
+        "Becoming.Countdown.invariant_iff_reach",
+        "Becoming.Countdown.admitted",
+        "Becoming.Countdown.admitted_invariant_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean",
+      "role": "proof",
+      "sha256": "f83bfdfae09eb0fd9f988b624d8b6db196c35daf471a055a8e1d5e725939201b",
+      "declarations": [
+        "Becoming.ProtocolInstances.mediated_history_iff",
+        "Becoming.ProtocolInstances.coverage_along",
+        "Becoming.ProtocolInstances.mediated_history_instance"
+      ]
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T141427.442103Z/verification.json",
+      "role": "receipt",
+      "sha256": "eb3ccaec5f33b5a6ff7fc20e10ef491a130fbdc013a03bd0c5b3f399a7eaad7f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json",
+      "role": "receipt",
+      "sha256": "cdc048ab9005b9651da4a7a53c188a22e69b71a8663a3ce15bca639c0bfd2c7a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json",
+      "role": "receipt",
+      "sha256": "6cd7899c19eca6682bff8e1b5648a4d449f8df927e27b83596fe6d3ed0f71297",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/mediated-control-verification.json",
+      "sha256_pointer": "/sources/MediatedControl/sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Countdown",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json",
+      "sha256_pointer": "/source_sha256/ProtocolInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "claim": {
+    "zh": "对每条部分律与容许条件：性质在每段被允许的进程后、从它成立的每个起点都成立，恰当每个被允许的步保持它。中介机器的历史恰是其被允许步——合法读取与已提交程序——的进程。有界覆写程序导出其执行的改变范围，并以同一语义传送实际与候选状态，所以每个被允许的步保持实际覆盖；因此合法读取与已提交程序的任意有限历史保持实际覆盖，并供当前认证使用。",
+    "en": "For every partial law and admission, a property holds after every admitted course from every start where it holds exactly when every admitted step keeps it. The mediated machine's histories are the courses of its admitted steps, lawful reads and committed programs. A bounded overwrite program derives its executed change scope and transports actual and candidate states through the same semantics, so each admitted step keeps actual coverage; hence arbitrary finite histories of lawful reads and committed programs preserve actual coverage and feed current certification."
+  },
+  "hypotheses": [
+    {
+      "zh": "初始实际覆盖、所列控制／失陷配置及读取对应；提交前检查当前权限、代次及资源；原提交是原子操作。",
+      "en": "Initial actual coverage, represented control/fault configurations and read correspondence; current permissions, generation and resources are checked before an atomic original commit."
+    }
+  ],
+  "correspondence": {
+    "zh": "实际写入与记录同属一段改变历史；物理语义及控制入口完整性仍需对应。",
+    "en": "Executed writes and records belong to the same changing history; physical semantics and complete mediation remain correspondence conditions."
+  },
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean",
+      "detail": {
+        "zh": "额外写入通道可保持全部公共记录不变而排除实际候选，使旧认证失实。",
+        "en": "An extra writer can leave every public record unchanged while excluding the actual candidate and making the old certificate misleading."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "没有受保护运行时、物理故障恢复或伦理正当性证明；22项恢复扩展另列，不重算原27项。",
+    "en": "No protected runtime, physical fault recovery or ethical legitimacy proof; the 22-theorem recovery extension is separate and does not recount the original 27."
+  },
+  "validation_scope": {
+    "zh": "迁移并核读既有27项定理／57项审计、24,416项记录匹配的原回执；此次恢复构建重新编译其源码但不新增该成果。一般律已由检查器回执绑定。",
+    "en": "Migrates and reads the original receipt for 27 theorems / 57 audits and 24,416 matches; the recovery build recompiles this source without creating another result. General laws: checker receipts bound."
+  },
+  "next_delta": {
+    "zh": "直接复用此输出；受中断逐步实现由 recoverable-mediated-change 接通，真实持久保护及无旁路另需证明。",
+    "en": "Reuse this output; interrupted staged realization is supplied by recoverable-mediated-change, while physical durable protection and exclusion of bypasses need further evidence."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：从已有研究迁移同一主张；原证明、回执和反例保持，不计新理论成果。",
+      "en": "2026-10-09: migrated the same claim from the existing study; original proofs, receipt and counterexample remain, without a new scientific result."
+    },
+    {
+      "zh": "2026-10-14：按旧记录一般律审计，主张改为一般律先行。新核心模块 Becoming.Countdown：被允许的进程保持性质恰当每个被允许的步保持；外围 ProtocolInstances 表明中介历史即被允许步的可达性，mediated_history_preserves_coverage 是实例。scratch_build 实编，核心公理报告为空，外围只用标准公理；回执由落地运行绑定。原定理、回执与反例不变。",
+      "en": "2026-10-14: under the general-law audit of older records, the claim now states the law first. New core module Becoming.Countdown: admitted courses keep a property exactly when every admitted step does; the periphery ProtocolInstances shows that mediated histories are reachability under admitted steps, and mediated_history_preserves_coverage is an instance. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the landing run binds the receipts. The original theorems, receipts and counterexamples are unchanged."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): ALIGNMENT-THROUGH-CHANGE.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Countdown.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Countdown.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Countdown.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Countdown.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 20 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/947c2efcb9e2f811/mediated-evidence-transport.json and in git.",
+      "zh": "2026-10-20：20 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/947c2efcb9e2f811/mediated-evidence-transport.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0/J in a related detail reads the conditional alignment route; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条关联说明中的退役标签 G0/J 改为条件对齐路线；主张不变。"
+    }
+  ]
+}

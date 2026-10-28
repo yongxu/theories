@@ -1,31 +1,95 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "code-plan-global-support",
   "title": {
     "zh": "代码共同方案的全局支持",
     "en": "Global support of coded joint plans"
   },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F02",
+  "reviewed_at_utc": "2026-10-28T11:46:07+00:00",
   "statement": {
     "en": "A plan realized at a description is supported at every configuration it describes where configurations the description identifies match parts into configurations it identifies, the leaves are read correctly through it, and footprints are within and apart.",
     "zh": "凡描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读出、足迹在内且相离，一个在描述处被实现的计划在它所描述的每个构形处被支持。"
   },
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F02",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "en": "Where configurations a description identifies match parts into configurations it identifies, the leaves are read correctly through it as support, and the parts' footprints lie within the whole's and apart, a plan realized at the description has what its leaves draw on supported, without repetition, by the footprint of every configuration it describes. For a code, the matching follows from compact joints, stable tests and an exact reduced presentation, as in the code form of joint plan lifting.",
-    "zh": "凡描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读作支持、部分的足迹在整体之内且彼此相离，一个在描述处被实现的计划，其叶所汲取者在它所描述的每个构形处由该构形的足迹无重复地支持。对编码，匹配由紧致的接合、稳定的检验与精确且约化的呈现得出，同联合计划提升的编码形式。"
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "en": "Matching of parts through the description (MatchesParts), footprints of parts within the whole's (PartsWithin) and apart (PartsApart), and leaves read correctly as support (Supports); for codes, the matching follows from the premises of joint-code-plan-lifting's code form.",
-      "zh": "经描述的部分匹配（MatchesParts）、部分足迹在整体之内（PartsWithin）且相离（PartsApart），叶被正确读作支持（Supports）；对编码，匹配由 joint-code-plan-lifting 编码形式的前提得出。"
+      "en": "A configuration's footprint supports a list where the list repeats nothing and each member lies within the footprint; footprints are within where each part a whole holds has its footprint within the whole's, and apart where the two parts a whole holds share nothing of their footprints. What a plan's leaves draw on is joined leaf by leaf, in order.",
+      "zh": "一个构形的足迹支持一个列表，是指该列表不重复，且每个成员都在足迹之内；足迹在内，是指整体所持的每个部分的足迹都在整体的足迹之内；足迹相离，是指整体所持的两个部分的足迹没有共同之处。计划的叶所汲取者按叶依次接合。",
+      "declarations": [
+        "Becoming.Supports",
+        "Becoming.PartsWithin",
+        "Becoming.PartsApart",
+        "Becoming.JointPlan.draws"
+      ]
+    },
+    {
+      "en": "For any ternary joint relation, footprint and description: where configurations the description identifies match parts into ones it identifies, footprints are within and apart, and leaves are read through the description exactly as support, a plan realized at a configuration's description, under the joint relation read through it, has what its leaves draw on supported by that configuration's footprint.",
+      "zh": "对任意三元共同关系、足迹与描述：凡该描述所认同的构形把部分匹配到它所认同的构形、足迹在内且相离、叶经描述恰被读作支持，一个在构形之描述处（经该描述读出的共同关系之下）被实现的计划，其叶所汲取者由该构形的足迹支持。",
+      "declarations": [
+        "Becoming.JointPlan.supports_of_image"
+      ]
+    },
+    {
+      "en": "In a joint frame, through a code reading the joint tests exactly and giving one code to configurations passing the same ones: where the pairs of parts held are compact for the joint tests, each joint test holds wherever it cannot fail, footprints are within and apart, and leaves are read through the code exactly as support, a plan realized at a configuration's code has its leaves' draws supported by its footprint.",
+      "zh": "在共同框架中，经一个精确读出共同检验、并给通过相同检验之构形同一编码的编码：凡所持的部分之对对共同检验紧致、每个共同检验在不能不成立处成立、足迹在内且相离、叶经编码恰被读作支持，一个在构形之编码处被实现的计划，其叶所汲取者由该构形的足迹支持。",
+      "declarations": [
+        "Becoming.JointPlan.supports_of_code",
+        "Becoming.JointFrame.JointCompact",
+        "Becoming.JointFrame.TestsStable"
+      ]
+    },
+    {
+      "en": "Support at the root need not give realization, in a witness: where no whole holds any part, the footprint of the one configuration supports what a plan of two empty leaves draws on, and the plan is not realized.",
+      "zh": "根处的支持不必给出实现，见证：没有整体持有任何部分时，唯一构形的足迹支持一个由两片空叶组成的计划所汲取者，而该计划不被实现。",
+      "declarations": [
+        "Becoming.Unjoined.supports_not_realizes"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "Description form: any ternary joint relation on configurations of any kind, any footprint and any description; matching of parts through the description (MatchesParts), footprints of parts within the whole's (PartsWithin) and apart (PartsApart), and leaves read correctly as support (Supports).",
+      "zh": "描述形式：任意类型构形上的任意三元共同关系、任意足迹与任意描述；经描述的部分匹配（MatchesParts）、部分足迹在整体之内（PartsWithin）且相离（PartsApart），叶被正确读作支持（Supports）。"
+    },
+    {
+      "en": "Code form: a joint frame of the spine and a code of its joint tests, with JointCompact, TestsStable, Exact and Reduced, which give the matching of parts through the code, and PartsWithin, PartsApart and leaves read correctly as support.",
+      "zh": "编码形式：脊柱的共同框架与其共同检验的编码，带 JointCompact、TestsStable、Exact 与 Reduced（它们给出经编码的部分匹配），以及 PartsWithin、PartsApart 与叶被正确读作支持。"
+    },
+    {
+      "en": "Plans are finite binary nestings.",
+      "zh": "计划是有限二叉嵌套。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Support is shown where the two parts a whole holds have footprints apart; where their footprints overlap it is not shown.",
+      "zh": "只在整体所持两个部分的足迹相离时表明支持；足迹重叠时不表明。",
+      "kind": "scope"
+    },
+    {
+      "en": "Support at the root does not give realization: the converse needs conditions beyond footprints within and apart.",
+      "zh": "根处的支持不给出实现：逆方向需要足迹在内且相离之外的条件。",
+      "kind": "converse",
+      "witness": "Becoming.Unjoined.supports_not_realizes"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (check_becoming.py): the current bytes of the core modules Becoming.Composition, Becoming.JointCorrespondence and Becoming.JointPlans are bound to core receipts under becoming-checks/; every cited declaration has an empty axiom report. The periphery ExplanatoryFootprints and the retired CompositionBridge are provenance; their receipt under explanatory-global-realization-checks keeps its earlier scope.",
+    "zh": "Lean 4.29.1 合并检查器（check_becoming.py）实查：核心模块 Composition、JointCorrespondence 与 JointPlans 的当前字节绑定 becoming-checks/ 下的核心回执；所引声明的公理报告均为空。外围 ExplanatoryFootprints 与退役的 CompositionBridge 是来源，其 explanatory-global-realization-checks 回执保持原范围。"
+  },
+  "next_delta": {
+    "en": "State what a realized plan's leaves draw on where the parts' footprints overlap, counted with its repetitions, and find the conditions under which support at the root gives realization.",
+    "zh": "陈述部分足迹重叠时被实现计划的叶所汲取者（连同其重复计数），并找出根处的支持给出实现的条件。"
+  },
   "correspondence": {
-    "zh": "这是同一模型和叶项解释内的实际形式组合，不是可加预算与任意时序模型的通用转换。",
-    "en": "This is formal composition within the same model and leaf interpretation, not a universal adapter to additive budgets or arbitrary temporal models."
+    "en": "This is formal composition within the same model and leaf reading, not a general translation to additive amounts drawn on or to arbitrary temporal models.",
+    "zh": "这是同一模型和叶项读法内的形式组合，不是向可加的被汲取量或任意时序模型的通用转换。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointCorrespondence.lean",
   "aliases": [
@@ -82,23 +146,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryFootprints.lean",
-      "detail": {
-        "zh": "不去掉排他性，也不从可用支持反向推出一般共同实现。",
-        "en": "It removes neither exclusivity nor the additional conditions needed for converse realization."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不去掉排他性，也不从可用支持反向推出一般共同实现。",
-    "en": "It removes neither exclusivity nor the additional conditions needed for converse realization."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryFootprints.lean",
@@ -133,7 +180,21 @@
       "role": "proof",
       "sha256": "08ae38e607c91b205c8b99bbcb49c0678e39f36d89b6cfb9af49bbc602ba4a49",
       "declarations": [
-        "Becoming.JointPlan.supports_of_image"
+        "Becoming.JointPlan.supports_of_image",
+        "Becoming.JointFrame.JointCompact",
+        "Becoming.JointFrame.TestsStable",
+        "Becoming.Unjoined.supports_not_realizes"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPlans.lean",
+      "role": "proof",
+      "sha256": "e79cb339076a2ac8b66cd981991c5287721d707a9c449d622b660e8c495f5145",
+      "declarations": [
+        "Becoming.Supports",
+        "Becoming.PartsWithin",
+        "Becoming.PartsApart",
+        "Becoming.JointPlan.draws"
       ]
     },
     {
@@ -185,6 +246,12 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "role": "receipt",
+      "sha256": "4d94c1b82af02e7869351aba40ea8ebaa61b5614423929afa25924281fdda97a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -201,12 +268,15 @@
       "sha256_pointer": "/source_sha256/Becoming.JointCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPlans.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.JointPlans",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用既有二步组合，不重证叶项支持；应用时明示同一原生关系。",
-    "en": "Reuse the existing two-stage composition instead of reproving leaf support; identify the same native relation in applications."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -235,6 +305,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core law: support of a plan realized at a description needs only matching through the description, footprints within and apart, and leaves read correctly, not every premise of the joint-plan lifting; for codes the matching follows from the code form's premises. The hypothesis lists exactly these premises; the retired bridge alias replaced by the core code form. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述：在描述处被实现之计划的支持只需经描述的匹配、足迹在内且相离以及叶被正确读出，不需联合计划提升的全部前提；对编码，匹配由编码形式的前提得出。假设恰列这些前提；退役的桥接别名改为核心的编码形式。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept; the claim split into four laws, each read against its declarations in JointPlans.lean, Composition.lean and JointCorrespondence.lean (the definitions of support, footprints within and apart and what leaves draw on; the description form; the code form; the witness that support does not give realization); the limitation and the counterexample, the same sentence, which no declaration witnessed, became two does-not-show items, one witnessed by Unjoined.supports_not_realizes; the hypotheses split by form, with the plans' finiteness; the next step, which asked to reuse the result, replaced by the step the boundary leaves; the correspondence's \"additive budgets\" said as \"additive amounts drawn on\"; JointFrame.JointCompact, JointFrame.TestsStable and Unjoined.supports_not_realizes added to the references of Composition.lean, and JointPlans.lean added with Supports, PartsWithin, PartsApart and JointPlan.draws, its core receipt 20261028T085101.429997Z and binding; the shared boundary no-ethical-premise cited; no premise, status or source hash changed, the added hypothesis stating the plans' type as the Lean has it. Every earlier sentence is mapped in [code-plan-global-support.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/code-plan-global-support.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为四条规律，各条对照 JointPlans.lean、Composition.lean 与 JointCorrespondence.lean 中的声明核读（支持、足迹在内与相离、叶所汲取者的定义；描述形式；编码形式；支持不给出实现的见证）；限制与反例是同一句、无声明见证，改为两条“未表明”，其一以 Unjoined.supports_not_realizes 为见证；前提按形式分开，并写出计划的有限性；要求复用结果的下一步，换成边界所留的一步；对应说明中的“可加预算”改为“可加的被汲取量”；JointFrame.JointCompact、JointFrame.TestsStable 与 Unjoined.supports_not_realizes 加入 Composition.lean 的引用，并加入 JointPlans.lean（含 Supports、PartsWithin、PartsApart、JointPlan.draws）及其核心回执 20261028T085101.429997Z 与绑定；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变，所加前提写的是 Lean 中计划的类型。每句旧文本的去向见 [code-plan-global-support.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/code-plan-global-support.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/9abc2c07ae84cf47/code-plan-global-support.json",
+      "sha256": "9abc2c07ae84cf473c6262272b7d471ec6ef0dc343f428e211d20ef0fca01515",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/15883cd9027f1e41/code-plan-global-support.json",
+      "sha256": "15883cd9027f1e41cf134490f15789176fbf05e124a53556aee71ec51d5195d4",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

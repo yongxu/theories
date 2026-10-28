@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "id": "selection-under-registration-revision",
+  "title": {
+    "zh": "归并改变时，哪些选择仍可表达与执行",
+    "en": "Which selections survive and remain executable when the lumping changes"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-13T21:30:54.975650+00:00",
+  "claim": {
+    "zh": "在已有 Process/Trace/Run 上，以每个配置中的关系表示不可分辨。旧关系为等价关系时，所有经旧归并的选择仍能经新归并表达，当且仅当新不可分辨蕴含旧不可分辨；合并一对旧差异，就有一个旧选择失去表达能力。条件沿实际中间配置组合；Web 旧选择定义直接适配。保留实际记录能保留选择并加入新差异，但记录史本身不提供记忆机制。执行由存量的一般规律（Becoming.Stock）给出，对每个过程成立：每步平衡恰是沿每个历程平衡；每步只从已持者汲取时，历程可执行恰当每步的汲取在当时的存量之内，与一个过程联合运行时恰当该过程容许且存量覆盖。Revising 是其实例：它是与其存量联合运行的关联过程（Revising.step_iff、Revising.feasible_iff），消耗支持形成区分关系，补充支持，然后将回应由 false 改为给定目标 true；同一过程允许关闭区分关系。区分、支持与执行作为规律彼此不同：存量覆盖的修正可被关联过程阻断，关联容许的修正可缺存量（Revising.covered_not_enacted、Revising.linked_not_enacted）；区分增长不蕴含行动可执行，支持尚存也不蕴含区分尚存。",
+    "en": "On the existing Process/Trace/Run, relations at configurations describe indistinguishability. Where the old relation is an equivalence, every selection through the old lumping is expressible through the new lumping iff new indistinguishability implies old indistinguishability; a merged old pair supplies a lost choice. Preservation composes through actual intermediate configurations, with a direct adapter to Web selection. Retaining actual records keeps selections and can add distinctions, but the history itself provides no memory mechanism. Execution follows the general laws of stock (Becoming.Stock), for every process: balance at each step is balance along every course; where steps draw only on what is held, a course is executable exactly where each step’s draw is within the stock then standing, and, run jointly with a process, exactly where that process admits it and the stock covers it. Revising is an instance: a link process run jointly with its stock (Revising.step_iff, Revising.feasible_iff), which consumes support to form a distinguishing link, replenishes support, then changes response from false to the supplied target true; the same process permits closing the link. As laws, discrimination, support and enactment are distinct: a correction the stock covers can be blocked by the link process, and one the link admits can lack stock (Revising.covered_not_enacted, Revising.linked_not_enacted); increased discrimination does not entail executable action, and remaining support does not entail remaining discrimination."
+  },
+  "hypotheses": [
+    {
+      "zh": "一般等价条件明示；过程、替代项域与各配置的归并给定。Trace 接续定理要求所述每一步保留区分，不宣称所有修改都如此。",
+      "en": "Old reflexivity, symmetry and transitivity are explicit. The process, alternative domain and the lumping at each configuration are supplied. The trace theorem requires preservation at the stated steps, rather than claiming every revision preserves distinctions."
+    },
+    {
+      "zh": "局部实例给定支持补充、两种重构、装置与读取的对应、目标 true 及偏好重建设备的控制律。全状态中的支持量与装置状态参与控制；控制不是只经把两种重构归为一类的初始读取来选择。",
+      "en": "The instance supplies replenishment, two rebuild modes, apparatus-to-reading correspondence, target true and a controller preferring reconstruction. Stock and apparatus status enter control; reconstruction is not chosen solely through the initial reading, which lumps the two modes."
+    },
+    {
+      "zh": "实际记忆保留、未表示后果与物理对应须另外说明；没有规范前提或普遍正成本假设。",
+      "en": "Actual memory retention, unrepresented effects and physical correspondence require separate accounts. No normative premise or universally positive cost is assumed."
+    }
+  ],
+  "correspondence": {
+    "zh": "P93 接通原共同组织研究与统一主干。归并、选择、支持和回应是同一过程中的分化关系；局部元组只保留所论连接。空 Lean 公理报告不消除构造律和目标等实质前提。作者反审说明为什么形成装置、保留记录、表达选择与实际执行不同。",
+    "en": "P93 connects the existing common-organization study to the unified spine. Lumping, selection, support and response are differentiated relations of one process; the local tuple preserves only the stated connections. Empty Lean axiom reports do not discharge substantive construction laws or the target. Author counterreview separates apparatus formation, retained record, expressible choice and actual execution."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
+  "aliases": [
+    "Becoming.Learning.Training.keeps_through_iff",
+    "Becoming.Learning.Training.lost_choice",
+    "Becoming.Registration.web_keeps_iff",
+    "Becoming.Revising.controlled_revision",
+    "registration revision",
+    "登记关系修订",
+    "Becoming.Revising.feasible_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-through-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "web_keeps_iff 直接适配旧的 SelectsThrough",
+        "en": "web_keeps_iff directly adapts existing SelectsThrough"
+      },
+      "interface": {
+        "output": {
+          "zh": "Web 的经耦合选择及归并等价关系",
+          "en": "Web selection through coupling and lumping equivalence"
+        },
+        "input": {
+          "zh": "web_keeps_iff 直接适配旧的 SelectsThrough",
+          "en": "web_keeps_iff directly adapts existing SelectsThrough"
+        },
+        "conditions": {
+          "zh": "保留给定 Web、观察与时间范围",
+          "en": "Supplied Web, observation and time bounds retained"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean"
+      }
+    },
+    {
+      "id": "generalization-through-lumping",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "在同一 Through 定义上证明归并改变的精确条件",
+        "en": "Proves the exact lumping-change criterion on the same Through definition"
+      },
+      "interface": {
+        "output": {
+          "zh": "Learning.Training.Through",
+          "en": "Learning.Training.Through"
+        },
+        "input": {
+          "zh": "在同一 Through 定义上证明归并改变的精确条件",
+          "en": "Proves the exact lumping-change criterion on the same Through definition"
+        },
+        "conditions": {
+          "zh": "旧关系等价；未重证推广或学习",
+          "en": "Old relation is an equivalence; no reproof of generalization or learning"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean"
+      }
+    },
+    {
+      "id": "process-and-frame-as-readings",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "trace_keeps、run_keeps 与 controlled 复用中间配置",
+        "en": "trace_keeps, run_keeps and controlled reuse actual intermediate configurations"
+      },
+      "interface": {
+        "output": {
+          "zh": "核心 Process、Trace、Run 及窗口的实际历史",
+          "en": "Core Process, Trace, Run and their actual windows"
+        },
+        "input": {
+          "zh": "trace_keeps、run_keeps 与 controlled 复用中间配置",
+          "en": "trace_keeps, run_keeps and controlled reuse actual intermediate configurations"
+        },
+        "conditions": {
+          "zh": "实例转移律给定；不声称它是全部现实",
+          "en": "Instance transition laws supplied; no claim that the instance exhausts reality"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "target-capture",
+      "detail": {
+        "zh": "新增归并损失界限；没有放宽该结果的 rule-only 假设或新增吸引盆地。",
+        "en": "Adds a boundary of what a coarser lumping loses; does not weaken that result’s rule-only hypothesis or add an attraction basin."
+      }
+    },
+    {
+      "id": "learned-procedure-transmission",
+      "detail": {
+        "zh": "已完成学习后重构及后继实际使用；本次核读固定配方边界。与 P93 的连接为解释对应，未宣称新的形式组合。",
+        "en": "Completed reconstruction after learning and actual successor use; the fixed-recipe boundary is reread here. The connection to P93 is interpretive, not a claimed new formal composition."
+      }
+    },
+    {
+      "id": "consequence-revised-reference-plan",
+      "detail": {
+        "zh": "P99 在共同主干接通取得的失配、下一参考计划、新装置及后续回应；P93 的原始定理及固定实例边界保持。",
+        "en": "P99 joins acquired mismatch, the next reference plan, fresh apparatus and later response on the shared spine; P93 retains its original theorems and fixed-instance boundary."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
+      "detail": {
+        "zh": "opens_without_correction：形成区分却耗尽行动支持。closes_choice：支持尚存但关闭关系使旧选择不可表达。old_cannot_select_rebuild：初始读取不能单独区分两个重构模式。 作为规律：covered_not_enacted 是存量覆盖而关联过程阻断的修正，linked_not_enacted 是关联容许而没有存量的修正。",
+        "en": "opens_without_correction gains a distinction while exhausting action support; closes_choice loses an old selection despite remaining stock; old_cannot_select_rebuild shows the initial reading alone cannot distinguish reconstruction modes. As laws: covered_not_enacted is a correction the stock covers and the link process blocks, and linked_not_enacted one the link admits with no stock to cover it."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "精确条件关于保留全部旧选择，强于保留某个有用回应，不是必须永远保留全部差异的伦理要求。没有推导重构偏好、配方自身取得、开放候选发明、真实观察可靠性或目标正当性。未与旧材料模型形成一个新的同历史组合；未证通用渐近吸引、普遍可纠正性或无实质前提根基。 选择可表达不保证实际解码解释正确；旧校准研究已经完成实际参考修订，不能把它重新列作尚无观察修订。",
+    "en": "The exact criterion preserves all old choices, stronger than preserving one useful response, and is no ethical requirement to retain every distinction forever. Reconstruction preference, acquired recipe, open candidate invention, actual observational reliability and target warrant are not derived. No new same-history composition with the older material model, general asymptotic attraction, universal corrigibility or premise-free foundation is proved. Expressibility does not guarantee correctness of the actual decoding. The earlier calibration study already completes reference revision and must not be relisted as absent observation revision."
+  },
+  "validation_scope": {
+    "zh": "2026-10-14：Becoming.Revision、Becoming.Stock 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 共享检查 20261013T113031.597794Z 通过：新模块25项定理、35项源声明公理报告全空；纯净核心79模块从内置前导编译通过，包内共4571项定理／6442项声明审计。12步骤运行、349步骤按相同输入复用。作者反审已写；没有独立代理验收或经验验证。 外围兼容检查 20261013T113252.623598Z 通过：原桥接7项定理／8项审计为空依赖，6步运行、80步复用。",
+    "en": "14 October 2026: the current bytes of Becoming.Revision, Becoming.Stock are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Shared Lean 4.29.1 check 20261013T113031.597794Z passed: 25 new theorems and 35 source declarations, all empty axiom reports; the 79-module pure core compiles from the built-in prelude, with 4571 package theorems/6442 declaration audits. Twelve steps ran and 349 reused identical inputs. Author counterreview is recorded; no independent-agent acceptance or empirical validation. Peripheral compatibility check 20261013T113252.623598Z passed: the existing bridge’s 7 theorems/8 audits remain axiom-free, with 6 steps run and 80 reused."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
+      "role": "proof",
+      "sha256": "364b4b03df4f7c539e5f56bb978962afab2d7797f481a057e136f4ca1e192caf",
+      "declarations": [
+        "Becoming.Learning.Training.keeps_through_iff",
+        "Becoming.Learning.Training.lost_choice",
+        "Becoming.Registration.Keeps",
+        "Becoming.Registration.Keeps.refl",
+        "Becoming.Registration.Keeps.trans",
+        "Becoming.Registration.web_keeps_iff",
+        "Becoming.Registration.trace_keeps",
+        "Becoming.Registration.run_keeps",
+        "Becoming.Registration.AlikeUpTo",
+        "Becoming.Registration.alikeUpTo_keeps",
+        "Becoming.Registration.through_alikeUpTo_later",
+        "Becoming.Registration.retained_keeps",
+        "Becoming.Registration.retained_gains",
+        "Becoming.Revising.State",
+        "Becoming.Revising.Act",
+        "Becoming.Revising.P",
+        "Becoming.Revising.read",
+        "Becoming.Revising.alike",
+        "Becoming.Revising.determined",
+        "Becoming.Revising.rebuild_enabled_iff",
+        "Becoming.Revising.correction_enabled_iff",
+        "Becoming.Revising.opened_keeps",
+        "Becoming.Revising.opened_choice",
+        "Becoming.Revising.closed_loses",
+        "Becoming.Revising.old_cannot_select_rebuild",
+        "Becoming.Revising.rebuild_then_close",
+        "Becoming.Revising.opens_without_correction",
+        "Becoming.Revising.opens_with_correction",
+        "Becoming.Revising.closes_choice",
+        "Becoming.Revising.choose",
+        "Becoming.Revising.next",
+        "Becoming.Revising.chosen_step",
+        "Becoming.Revising.controlled",
+        "Becoming.Revising.controlled_revision",
+        "Becoming.Revising.linkProcess",
+        "Becoming.Revising.draw",
+        "Becoming.Revising.restore",
+        "Becoming.Revising.step_iff",
+        "Becoming.Revising.trace_iff",
+        "Becoming.Revising.stock_balanced_held",
+        "Becoming.Revising.feasible_iff",
+        "Becoming.Revising.covered_not_enacted",
+        "Becoming.Revising.linked_not_enacted"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T161154.555289Z/verification.json",
+      "role": "receipt",
+      "sha256": "167317522f26c16d624f15528c625767b1d0cef1412be1b7fd70f45ee773ca63",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/META-ATTRACTOR-RECONCILIATION.md",
+      "role": "integration",
+      "sha256": "4d67672ab7df1ee71c3cf111d46fb4999bc0fd8ba7e331ad09b75418aa670f03",
+      "declarations": []
+    },
+    {
+      "path": "theories/meta-attractor/COMMON-ORGANIZATION.md",
+      "role": "statement",
+      "sha256": "a2c1f958d84bf7464623dfbdd0065be177556f7801e5055d7cdfc08e04c60f3b",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-meta-attractor-generative-integration.md",
+      "role": "provenance",
+      "sha256": "0618901f07d6e68f918607cf0a6e148af506d2766e3705d084b5de120aa0eb52",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T113252.623598Z/verification.json",
+      "role": "receipt",
+      "sha256": "5c5862acdc051a22378d489fbb2b385ad1795108a903074687d19085872fe731",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+      "role": "integration",
+      "sha256": "87f68ddcd5446dd536c6746aa1258e5637232474d28ebd51158fbdb95145147f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/calibration-renewal-verification.json",
+      "role": "receipt",
+      "sha256": "0739a10c7523aa2e349e78652a5c2bea8863f4dde320f8495ec60a47558f27f3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearnedProcedureTransmission.lean",
+      "role": "integration",
+      "sha256": "820c61626c5cbd5b69d90648bca86dede9ed79d495be1b1543808f0b158231dd",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learned-procedure-transmission-checks/20261008T193434.751521Z/verification.json",
+      "role": "receipt",
+      "sha256": "b3e4813e6cc532f0238847dce40fc36a0ca298d50013a41f69e3f8e46d9a0c2f",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-CALIBRATION-RENEWAL.md",
+      "role": "review",
+      "sha256": "e1bd9d8b7e744efaf0138ab3bf3a2a91849f56616366f2e27544c4cc84f1b246",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T204910.042715Z/verification.json",
+      "role": "receipt",
+      "sha256": "de452d3198d581ac4310c6a92a766e30b2c9bb6b740f970f5fed373b448e6121",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean",
+      "role": "proof",
+      "sha256": "e6ac9fce2643b3238a9832b235c0a3be6d2cb9cac9a108dfce0f748a04971d9f",
+      "declarations": [
+        "Becoming.Stock.Balanced",
+        "Becoming.Stock.DrawsHeld",
+        "Becoming.Stock.balanced_iff",
+        "Becoming.Stock.feasible_iff_covered",
+        "Becoming.Stock.product_feasible_iff",
+        "Becoming.Stock.covered_of_trace"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T062828.251326Z/verification.json",
+      "role": "receipt",
+      "sha256": "0dec8292b9c1b7a85364070084bf7c053486e60608e228f7d1dc0da391e9f6d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Revision",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Stock",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "失配修改下一参考计划、检查安装及再次使用的局部接口已完成。剩余为给定接触／可靠回返／修订原语的实际形成与对应，以及跨旧材料模型的正式交接、通用吸引；不要重开已成接口。",
+    "en": "The local interface from mismatch to the next reference plan, checked installation and repeated use is complete. Remaining questions concern formation/correspondence of supplied contact, faithful return and revision primitives, formal handoffs across older material models, and general attraction; do not reopen the completed local interface."
+  },
+  "history": [
+    {
+      "zh": "P93：实际 Lean 验证后建立登记修订的精确条件和局部执行连接；保留全部既有结果与更强边界。",
+      "en": "P93: records the checked exact revision criterion and local execution interface after actual Lean verification; all prior results and stronger boundaries retained."
+    },
+    {
+      "zh": "P103 完整整合复核：既有主张及冻结证明保持，理论与原研究接通受支持的反复修订；旧未完成表述按日期保留。",
+      "en": "P103 integration review preserves existing claims and frozen proofs while the theory/study connect supported recurring revision; older frontiers remain dated history."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：Lean 源：Revision 另加入把 `Revising` 读作 Stock 实例的定理，绑定改为新回执（见检查范围）；主张改为先陈述存量的一般规律（Becoming.Stock 的 balanced_iff、feasible_iff_covered、product_feasible_iff），原 Revising 例子作为其实例，并以 covered_not_enacted、linked_not_enacted 把区分、支持与执行的分别写成规律；新增 Stock.lean 的证明绑定（回执 20261013T204910.042715Z）。状态不变；主张按一般规律重写，原例子的陈述与证明不变，不记作对原例子的重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): Lean sources: Revision with theorems added that read `Revising` as an instance of Stock; bindings move to the new receipts (see validation scope); the claim now states the general laws of stock first (Becoming.Stock’s balanced_iff, feasible_iff_covered, product_feasible_iff), with the Revising example as their instance and covered_not_enacted and linked_not_enacted making the distinction of discrimination, support and enactment a law; a proof binding for Stock.lean is added (receipt 20261013T204910.042715Z). Status unchanged; the claim is rewritten law-first, and the examples keep their statements and proofs, with no reproof credited to them."
+    },
+    {
+      "en": "17 October 2026, wording: P-numbers removed from public fields, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: Revision.lean. Rebound to core receipt 20261018T062828.251326Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. Changed by the pass, in docstrings or prose only: Revision.lean, Stock.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Registration.History (now Registration.AlikeUpTo); Registration.history_keeps (now Registration.alikeUpTo_keeps); Registration.through_history_later (now Registration.through_alikeUpTo_later). Proof bindings (Revision.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Revision.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：Registration.History（现为 Registration.AlikeUpTo）；Registration.history_keeps（现为 Registration.alikeUpTo_keeps）；Registration.through_history_later（现为 Registration.through_alikeUpTo_later）。证明绑定（Revision.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Revision.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 10 bookkeeping notes condensed from 13 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/94f64dec79f3acc7/selection-under-registration-revision.json and in git.",
+      "zh": "2026-10-20：10 条记账性说明合并（13 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/94f64dec79f3acc7/selection-under-registration-revision.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): The retired registration wording in the dependencies replaced by coupling and lumping, as the Chinese already read.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：依存中退役的登记用语改为耦合与归并，与中文一致。"
+    }
+  ]
+}

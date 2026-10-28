@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "retrospective-source-binding",
   "title": {
     "zh": "后得来源关系接通保留记录的绑定",
@@ -8,12 +8,109 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F09",
-  "reviewed_at_utc": "2026-10-14T09:00:00+00:00",
-  "claim": {
-    "zh": "经一族解释读记录：对每类记录、意义与世界，每条关涉记录都被某个以目标为目标的族内世界解释时，形式解析为目标，恰当不重复候选范围中的其他每个意义，都被某条没有带该意义的族内世界能解释的关涉记录排除。对经取得的来源路径重读的旧命名记录：保留包的记录恰提供以已学路线、被允许扰动产生其报告的世界之原子；对每个记忆、扰动范围、形式与目标，若该形式的每个包都由某个以目标为目标的已学世界产生，绑定视图把形式解析为目标，恰当其他每个意义都被该形式的某个包排除，而没有以该意义为目标的已学世界产生此包；此时唯一绑定正确（既有的覆盖定理由此对每个记录得出）。先命名后校准的经历（retrospective 36）是实例：其两个保留包分离两个原子，故每个有限编码序列的解释是其原子的组合。后期真实路线改变后，较早的包不由任何以其目标为目标的已学世界产生，是失败一侧；另有有限响应见证。",
-    "en": "Records read through a family of explanations: for every type of records, meanings and worlds, where each bearing record is explained by some family world with the target, a form resolves to the target exactly when every other meaning of a repertoire without repeats is ruled out by some bearing record that no family world with that meaning explains. For earlier naming records reread through acquired production routes: a retained packet’s record offers exactly the atoms of the worlds, a learned route under an admitted fault, that produce its reports; for every memory, fault envelope, form and target whose packets of the form are each produced by some learned world with the target, the binding view resolves the form to the target exactly when every other meaning is ruled out by some packet of the form that no learned world with that meaning produces, and unique binding is then correct (the existing coverage theorem follows for every record). The naming-before-calibration history (retrospective 36) is an instance: its two retained packets separate both atoms, so every finite encoded sequence is interpreted as the assembly of its atoms. After a later real route change the earlier packet is produced by no learned world with its target, the failing side; a finite response has a separate witness."
+  "reviewed_at_utc": "2026-10-28T12:08:33+00:00",
+  "statement": {
+    "en": "Where each bearing record of a form is explained by a family world with the target, the form resolves to the target exactly where each other meaning of a repertoire without repeats is ruled out by a bearing record no family world with it explains; so later calibration can resolve earlier records.",
+    "zh": "凡关涉一个形式的每条记录都被某个以目标意义为目标的族内世界解释，形式解析为目标，恰当无重复意义库中其他每个意义都被某条关涉记录排除，而没有以该意义为目标的族内世界解释那条记录；所以较晚的校准能解析较早的记录。"
   },
+  "laws": [
+    {
+      "en": "For records, meanings and worlds of any type, meanings compared decidedly and a record offering a meaning exactly where a family world with that target explains it: with a repertoire without repeats holding t and each bearing record explained by a family world with target t, the candidates are exactly [t] exactly where each other meaning is ruled out by a bearing record no family world with that meaning explains.",
+      "zh": "对任意类型的记录、意义与世界，意义可判定地比较，一条记录提供一个意义，恰当某个以该意义为目标的族内世界解释它：凡意义库无重复且含 t，关涉形式的每条记录都被某个以 t 为目标的族内世界解释，形式的候选恰为 [t]，恰当库中其他每个意义都被某条关涉记录排除，而没有以该意义为目标的族内世界解释它。",
+      "declarations": [
+        "Becoming.CrossSituational.candidates",
+        "Becoming.CrossSituational.resolves_explained_iff"
+      ]
+    },
+    {
+      "en": "For records and meanings of any type, where the target is in the repertoire and every record bearing on the form offers it, any meaning that is the form's only candidate is the target.",
+      "zh": "对任意类型的记录与意义，凡目标在意义库中、关涉形式的每条记录都提供它，形式唯一的候选就是目标。",
+      "declarations": [
+        "Becoming.CrossSituational.resolved_is_target"
+      ]
+    },
+    {
+      "en": "On any run, moves read as records (meanings compared decidedly; a move offers a meaning exactly where a family world with that target explains it), a repertoire without repeats holding t, each bearing move of the first n explained by a family world with target t: the candidates after n moves are exactly [t] exactly where each other meaning is ruled out by such a move that no family world with that meaning explains.",
+      "zh": "沿任意过程的一次运行，把动作读作记录（意义可判定地比较；一个动作提供一个意义，恰当某个以它为目标的族内世界解释该动作）：意义库无重复且含 t、前 n 步中每个关涉的动作都被以 t 为目标的族内世界解释时，n 步后的候选恰为 [t]，恰当其他每个意义都被其中某个关涉动作排除，而没有以该意义为目标的族内世界解释它。",
+      "declarations": [
+        "Becoming.Courses.run_resolves_explained_iff"
+      ]
+    },
+    {
+      "en": "In the periphery's machine of retained naming packets, a retained packet's record offers exactly the atoms of the worlds, each a learned route under an admitted fault, whose reports are the packet's.",
+      "zh": "在外围的保留命名包机器中，一个保留包的记录恰好提供这样的世界的原子：每个世界是一条已学路线加一个被允许的扰动，其报告即该包的报告。",
+      "declarations": [
+        "Becoming.MachineInstances.mem_alternatives"
+      ]
+    },
+    {
+      "en": "In the periphery's machine of retained naming packets, for every memory, fault envelope, form and target b: with a repertoire without repeats holding b's atom and each packet of the form produced by a learned route under an admitted fault with target b, the binding view resolves the form to b's atom exactly where each other meaning is ruled out by a packet of the form no such world with that meaning as atom produces.",
+      "zh": "在外围的保留命名包机器中，对每个记忆、扰动范围、形式与目标 b：凡意义库无重复且含 b 的原子，该形式的每个包都由以 b 为目标、已学路线加被允许扰动的世界产生，绑定视图把形式解析为 b 的原子，恰当其他每个意义都被该形式的某个包排除，而没有以该意义为原子的这类世界产生此包。",
+      "declarations": [
+        "Becoming.MachineInstances.retrospective_resolves_iff"
+      ]
+    },
+    {
+      "en": "In the periphery's route model, learning routes from a calibration acquired through route r retains r wherever r is among the candidate routes, and a world whose route and fault are both admitted is compatible with its own reports.",
+      "zh": "在外围的路线模型中，从经路线 r 取得的校准学习路线，只要 r 在候选路线中就保留 r；路线与扰动都被允许的世界与其自身的报告相容。",
+      "declarations": [
+        "Generative.SourceReliance.actual_route_retained",
+        "Generative.SourceReliance.actual_world_compatible"
+      ]
+    },
+    {
+      "en": "In the periphery's machine of retained naming packets, where the calibration was acquired from the actual route, the target's atom is in the repertoire, and each packet of the form was emitted by that route under an admitted fault, every packet of the form is produced by a learned world with the target, and any resolution of the form is the target's atom.",
+      "zh": "在外围的保留命名包机器中，凡校准取自实际路线、目标的原子在意义库中、该形式的每个包都由该路线在被允许的扰动下发出，该形式的每个包都由以目标为目标的已学世界产生，形式的任何解析都是目标的原子。",
+      "declarations": [
+        "Becoming.MachineInstances.produced_of_calibration",
+        "Becoming.MachineInstances.coverage_from_law",
+        "Generative.RetrospectiveBinding.acquired_routes_supply_binding_coverage"
+      ]
+    },
+    {
+      "en": "In retrospective 36, a history of the machine of retained naming packets with two packets retained before a late calibration through the secure route, the transition record groups the two-word encoding, the two packets reread through the learned route separate both atoms, and every finite encoded sequence is interpreted as the assembly of its atoms, by the original theorem and as an instance of the separation law.",
+      "zh": "在保留命名包机器的历史 retrospective 36 中（两个命名包先于经安全路线的较晚校准被保留），转移记录把两词编码分组，经已学路线重读的两个包分离两个原子，每个有限编码序列都被解释为其原子的组合：由原定理得出，也作为分离律的实例得出。",
+      "declarations": [
+        "Becoming.MachineInstances.retrospective_groups",
+        "Becoming.MachineInstances.retrospective_separated",
+        "Becoming.MachineInstances.retrospective_from_separation",
+        "Becoming.MachineInstances.retrospective_interprets_every",
+        "Generative.RetrospectiveBinding.retrospective_evidence_enters_compositional_use"
+      ]
+    },
+    {
+      "en": "In the history retrospective 36 of the machine of retained naming packets, executing the utterance gives the response [true, false, true], ending with support 0 and 29 units used.",
+      "zh": "在保留命名包机器的历史 retrospective 36 中，执行该话语给出响应 [true, false, true]，结束时支持为 0，已用 29 个单位。",
+      "declarations": [
+        "Generative.RetrospectiveBinding.acquired_reinterpretation_reaches_actual_response"
+      ]
+    },
+    {
+      "en": "In a witness of the machine of retained naming packets where the earlier packet for the form of true came from another route and the later calibration through the secure route, only the secure route is learned, the form resolves to the atom of false, and no learned world with target true produces that packet; the same history arises from the secure route with target false under a common fault.",
+      "zh": "在保留命名包机器的一个见证中，表示 true 的形式的较早包来自另一条路线，较晚校准经安全路线：只学到安全路线，形式解析为 false 的原子，没有以 true 为目标的已学世界产生该包；同一历史也由安全路线在共同扰动下以 false 为目标产生。",
+      "declarations": [
+        "Generative.RetrospectiveBinding.backward_transfer_can_fail_after_a_real_route_change",
+        "Becoming.MachineInstances.changed_route_unproduced",
+        "Generative.RetrospectiveBinding.packet_and_later_calibration_do_not_reveal_the_past_route"
+      ]
+    },
+    {
+      "en": "In witnesses of the machine of retained naming packets: without the retained packets the utterance is not interpreted, nor with a calibration of two probes only; with the two retained reports' channels exchanged, the form of false resolves to true's atom; begun with 35 rather than 36, the utterance is interpreted, not executed; under a joint failure the route family omits, the form of true resolves to false's atom.",
+      "zh": "在保留命名包机器的见证中：去掉保留包，话语不被解释；校准只有两个探测，也不被解释；交换两个保留报告的渠道，表示 false 的形式解析为 true 的原子；以 35 而非 36 起始，话语被解释却不被执行；在路线族遗漏的联合失效下，表示 true 的形式解析为 false 的原子。",
+      "declarations": [
+        "Generative.RetrospectiveBinding.calibration_without_retained_naming_cannot_bind",
+        "Generative.RetrospectiveBinding.partial_calibration_preserves_binding_uncertainty",
+        "Generative.RetrospectiveBinding.channel_identity_matters_to_later_binding",
+        "Generative.RetrospectiveBinding.retained_interpretation_can_exceed_execution_support",
+        "Generative.RetrospectiveBinding.inherited_omitted_route_can_make_reinterpretation_wrong"
+      ]
+    }
+  ],
   "hypotheses": [
+    {
+      "en": "The core law: records, meanings and worlds of any type; meanings compared decidedly; a repertoire without repeats holding the target; a record offers a meaning exactly where some family world with that meaning as target explains it; each bearing record is explained by some family world with the target.",
+      "zh": "核心律：任意类型的记录、意义与世界；意义可判定地比较；含目标且无重复的意义库；一条记录提供一个意义，恰当某个以该意义为目标的族内世界解释它；每条关涉记录都被某个以目标为目标的族内世界解释。"
+    },
     {
       "zh": "已有分节、原子操作、形式识别、渠道身份和报道符号解码已具备；四种路径、校准探测和扰动范围公开给定。",
       "en": "Grouping, atomic operations, form recognition, channel identity and reporting-symbol decoding are available; the four-route family, calibration probes and fault envelope are explicitly supplied."
@@ -23,10 +120,52 @@
       "en": "General correctness requires calibration from the declared route and that same route to cover each relevant earlier naming record, with its actual disturbance admitted. Historical applicability is not a known answer supplied to the learner."
     },
     {
-      "zh": "局部见证保留原分节与组合训练，接收和校准各消耗支持；报道解码器的已有训练成本未新接入，计算和存储维护不另收费。",
-      "en": "The local witness retains prior grouping/composition training and charges reception/calibration. Previously formed reporting-decoder training costs are not newly joined; computation and storage maintenance receive no separate charge."
+      "en": "The local witness keeps the earlier grouping and composition training and draws one support unit for each reception and each calibration record; the support the report decoder's earlier training used is not counted again, and computation and storage upkeep draw none separately.",
+      "zh": "局部见证保留原分节与组合训练，每次接收与每条校准记录各用一个支持单位；报道解码器先前训练所用的支持不再计入，计算和存储维护不另用支持。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "It does not derive all source judgments, natural language, a developmental mechanism, a complete energy model, consciousness or evolutionary psychology.",
+      "zh": "不推出全部来源判断、自然语言、发育机制、完整的能量模型、意识或演化心理。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The earlier selection of movements and the production of reports by others are not composed with it into one history.",
+      "zh": "没有把既有的移动选择与他者产生的报告再与它组合为同一历史。",
+      "kind": "scope"
+    },
+    {
+      "en": "It does not identify this algorithm in children.",
+      "zh": "不认定儿童使用此算法。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The primary evidence constrains automatic transfer but identifies no unique mechanism or evolutionary history.",
+      "zh": "原典证据约束自动迁移，但未识别唯一的机制或演化史。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/RetrospectiveBinding.lean",
+      "detail": {
+        "zh": "缺记录、部分校准、渠道错置、有限支持及继承的遗漏联合作用分别保留失败；真实路径改变使准确晚期校准仍可误解早先内容。",
+        "en": "Missing packets, partial calibration, channel misindexing, finite support and the inherited omitted joint effect preserve distinct failures; a real route change allows accurate late calibration to misinterpret earlier content."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free"
+  ],
+  "validation_scope": {
+    "en": "Core, by check_becoming.py (Lean 4.29.1): Becoming.CrossSituational and Becoming.Courses bound to becoming-checks/20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery, Lean 4.29.1: MachineInstances bound to machine-instances-checks/20261020T161859.257200Z (check_machine_instances.py), RetrospectiveBinding and SourceReliance to inquiry-root/retrospective-binding-verification.json (check_retrospective_binding.py); cited periphery declarations use at most propext and Quot.sound, inherited modules Classical.choice. Primary-source comparison and author counter-review.",
+    "zh": "核心 CrossSituational、Courses（check_becoming.py，Lean 4.29.1，becoming-checks）：所引声明公理为空。外围（Lean 4.29.1）：MachineInstances 回执在 machine-instances-checks，RetrospectiveBinding、SourceReliance 在 inquiry-root；所引外围声明至多用 propext、Quot.sound，继承模块有 Classical.choice。原典比较与作者反审。"
+  },
+  "next_delta": {
+    "en": "How formed access and retained source and order information guide actual use in a matched developmental procedure, telling present reliance apart from endorsement of old content.",
+    "zh": "在匹配的发育程序中识别已形成的通达与所保留的来源、次序信息如何引导实际使用，分开当前依赖与对旧内容的认可。"
+  },
   "correspondence": {
     "zh": "记录内容保留而当前证据作用可改变。实际路线及新词目标不输入bindingView。控制探测不是儿童熟悉命名的同一操作；心理实现、来源身份形成、时间范围及演化起源仍需对应。",
     "en": "Record contents persist while their current evidential role can change. bindingView receives neither the actual route nor the novel target. Controlled probes are not identical to children’s familiar naming; psychological realization, source-identity formation, temporal scope and evolutionary origin need further correspondence."
@@ -73,23 +212,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/RetrospectiveBinding.lean",
-      "detail": {
-        "zh": "缺记录、部分校准、渠道错置、有限支持及继承的遗漏联合作用分别保留失败；真实路径改变使准确晚期校准仍可误解早先内容。",
-        "en": "Missing packets, partial calibration, channel misindexing, finite support and the inherited omitted joint effect preserve distinct failures; a real route change allows accurate late calibration to misinterpret earlier content."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不证明全部来源判断、自然语言、发育机制、完整能量账、意识或演化心理；没有把既有移动选择与社会报告生产再组合为同一史，也不认定儿童使用此算法。",
-    "en": "Does not prove all source judgments, natural language, developmental mechanism, complete energy accounting, consciousness or evolutionary psychology. It does not additionally compose prior movement selection with social report production into one history or identify this algorithm in children."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1：20项新定理／36项声明审计，284项继承定理／513项审计分列；新11空依赖、10仅propext、15含propext和Quot.sound。继承闭包含Classical.choice。原典比较与作者反审，无新经验复算或独立agent验收。",
-    "en": "Lean 4.29.1: 20 new theorems / 36 declaration audits; 284 inherited theorems / 513 audits separately rebuilt. New dependencies: 11 empty, 10 propext only, 15 propext with Quot.sound. Inherited closure includes Classical.choice. Primary-source comparison and author counterreview; no new empirical reanalysis or independent-agent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/RetrospectiveBinding.lean",
@@ -100,7 +222,12 @@
         "Generative.RetrospectiveBinding.retrospective_evidence_enters_compositional_use",
         "Generative.RetrospectiveBinding.acquired_reinterpretation_reaches_actual_response",
         "Generative.RetrospectiveBinding.backward_transfer_can_fail_after_a_real_route_change",
-        "Generative.RetrospectiveBinding.packet_and_later_calibration_do_not_reveal_the_past_route"
+        "Generative.RetrospectiveBinding.packet_and_later_calibration_do_not_reveal_the_past_route",
+        "Generative.RetrospectiveBinding.calibration_without_retained_naming_cannot_bind",
+        "Generative.RetrospectiveBinding.partial_calibration_preserves_binding_uncertainty",
+        "Generative.RetrospectiveBinding.channel_identity_matters_to_later_binding",
+        "Generative.RetrospectiveBinding.retained_interpretation_can_exceed_execution_support",
+        "Generative.RetrospectiveBinding.inherited_omitted_route_can_make_reinterpretation_wrong"
       ]
     },
     {
@@ -134,7 +261,8 @@
       "sha256": "402e2de8c945ee033006718beedc27b76eb7e266050f5b794c7bb51970551a79",
       "declarations": [
         "Becoming.CrossSituational.resolves_explained_iff",
-        "Becoming.CrossSituational.resolved_is_target"
+        "Becoming.CrossSituational.resolved_is_target",
+        "Becoming.CrossSituational.candidates"
       ]
     },
     {
@@ -291,10 +419,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "既有条件连接保留；下一重点是在匹配发育程序中识别已取得访问及所保留来源／次序如何进入实际使用，分别观察当前依赖与旧内容认可。原典已约束自动迁移，但未识别唯一机制或演化史。",
-    "en": "Preserve the completed conditional connections. Next identify how formed access and retained source/order information guide actual use in a matched developmental procedure, distinguishing present reliance from old-content endorsement. Primary evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history."
-  },
   "history": [
     {
       "zh": "2026-10-09：组合已完成来源学习与绑定机制，新增后期校准重释旧记录、有限组合使用及真实路径改变的反例；整体认知目标保持未完成。",
@@ -337,6 +461,28 @@
     {
       "en": "2026-10-20: 22 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/60bab982118ec398/retrospective-source-binding.json and in git.",
       "zh": "2026-10-20：22 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/60bab982118ec398/retrospective-source-binding.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the claim and the home section; the claim split into eleven laws, each read against its declarations in CrossSituational.lean and Courses.lean (the core law, coverage, the run form), MachineInstances.lean, SourceReliance.lean and RetrospectiveBinding.lean (offering, the machine's law, route retention, coverage from the law, the instance, the finite response, the route change, the failure witnesses), the witnesses of the counterexample now named in a law; the limitations and the evidence sentence of the old next step to four does-not-show items; a hypothesis stating the core law's premises added, and the third reworded without words of exchange (support drawn and counted); candidates and the five failure witnesses added to their files' references; the shared boundary no-ethical-premise-core-axiom-free cited; no source hash, binding or status changed. Every earlier sentence is mapped in [retrospective-source-binding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/retrospective-source-binding.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章写出陈述；主张拆为十一条规律，各条对照 CrossSituational.lean 与 Courses.lean（核心律、覆盖、运行形式）、MachineInstances.lean、SourceReliance.lean 与 RetrospectiveBinding.lean（提供、机器的律、路线保留、由律得覆盖、实例、有限响应、路线改变、失败见证）中的声明核读，反例的见证现由一条规律指名；限制与旧下一步中关于证据的一句分入四条“未表明”；新增一条前提写明核心律的前提，第三条前提改写，去掉交换之词（改为所用与计入的支持）；candidates 与五个失败见证加入其文件的引用；引用通用边界 no-ethical-premise-core-axiom-free；来源哈希、绑定与状态均未改变。每句旧文本的去向见 [retrospective-source-binding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/retrospective-source-binding.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/8227b7cf8fe496ca/retrospective-source-binding.json",
+      "sha256": "8227b7cf8fe496cadf79f5aa804af74cab362f19caf30d50451c8946d3e6a68d",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/60bab982118ec398/retrospective-source-binding.json",
+      "sha256": "60bab982118ec398218b03ec58ab8c0b6f47798f2ab21cf71904d6eee6053fca",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

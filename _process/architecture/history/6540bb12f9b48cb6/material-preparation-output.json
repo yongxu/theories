@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "id": "material-preparation-output",
+  "title": {
+    "zh": "材料准备的实际输出",
+    "en": "Actual material preparation output"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F10",
+  "reviewed_at_utc": "2026-10-19T05:28:49+00:00",
+  "claim": {
+    "zh": "对每个目标配方、材料池与路由支持量：route 以空剩余池完成，当且仅当池是配方的一个排列且配方长度不超过支持量，此时剩余支持为支持量减配方长度；实际 routeTrace 对每个输入保留放置与剩余材料，route 恰是它的投影。八单位支持下的指定八槽配方是实例：整池完成恰好要求四 A 四 B。",
+    "en": "For every target recipe, pool and routing support: route completes with an empty residual pool exactly when the pool is a permutation of the recipe and the recipe is no longer than the support, the remaining support then being the support less the recipe's length; the actual routeTrace keeps placed and residual material for every input, and route is its projection. The specified eight-slot recipe under eight support units is an instance: whole-pool completion requires exactly four A and four B."
+  },
+  "hypotheses": [
+    {
+      "zh": "给定目标配方、按类型取用和移动的能力；完成要求无剩余池，失败保留部分状态。",
+      "en": "Supplied target recipe and type-sensitive removal/movement; completion requires no residual pool, while failure retains partial state."
+    }
+  ],
+  "correspondence": {
+    "zh": "实际 routeTrace 输出是可复用的材料接口；它未记录承重机械边。",
+    "en": "The actual routeTrace output is the reusable material interface; it does not record load-bearing mechanical edges."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/MaterialMaturation.lean",
+  "aliases": [
+    "MaterialMaturation.actual_preparation_iff",
+    "MaterialMaturation.route_sound",
+    "MaterialMaturation.route_complete",
+    "Becoming.Copying.empties_iff",
+    "Becoming.Courses.copy_empties_iff",
+    "Becoming.Courses.copy_completes_iff"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "inherited-structural-copying",
+      "detail": {
+        "zh": "同用 Becoming.Copying 的逐记号复制（steps、use、countOf）：准备即每次接合汲取一单位的复制（PreparationCorrespondence.route_some_iff），池用尽的条件即 Copying.empties_iff。",
+        "en": "Uses the same token-by-token copying of Becoming.Copying (steps, use, countOf): preparation is copying with a unit draw per attachment (PreparationCorrespondence.route_some_iff), and emptying the pool is Copying.empties_iff."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/MaterialMaturation.lean",
+      "detail": {
+        "zh": "配方及路由能力的形成、机械解离和供给更新未解释；成功标量不能代替实际材料。",
+        "en": "Recipe/capability formation, mechanical release and renewed provision remain unexplained; a success scalar does not replace actual material."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "配方及路由能力的形成、机械解离和供给更新未解释；成功标量不能代替实际材料。",
+    "en": "Recipe/capability formation, mechanical release and renewed provision remain unexplained; a success scalar does not replace actual material."
+  },
+  "validation_scope": {
+    "zh": "所列 Lean 回执绑定实际源码；推论有效性与生物对应分列。",
+    "en": "The cited Lean receipt binds the actual source; inference validity and biological correspondence remain distinct."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/MaterialMaturation.lean",
+      "role": "proof",
+      "sha256": "129096807280cc6c6a3b3a06f2c70eeca32d108ec16dc145db7cf5222446b915",
+      "declarations": [
+        "MaterialMaturation.actual_preparation_iff",
+        "MaterialMaturation.route_trace_projection",
+        "MaterialMaturation.routing_trace_accounts",
+        "MaterialMaturation.route_sound",
+        "MaterialMaturation.route_complete"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/material-maturation-verification/verification.json",
+      "role": "receipt",
+      "sha256": "f45b6dffcdbec9958f379046dabdc4e2963a0313ca99c1843e6d17ab9cb1e8d5",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/MATERIAL-MATURATION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "facd6207d7dac2a15ab0cbd318f3f9284be27c9924e9550143c16a97a6ceaada",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Copying.lean",
+      "role": "proof",
+      "sha256": "5180c8262e90b5fe78eb2a0c41b7e832553172c8751b149bf2cee5bbc17e505a",
+      "declarations": [
+        "Becoming.Copying.countOf_removeAll",
+        "Becoming.Copying.nil_iff_countOf_zero",
+        "Becoming.Copying.empties_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T161154.555289Z/verification.json",
+      "role": "receipt",
+      "sha256": "167317522f26c16d624f15528c625767b1d0cef1412be1b7fd70f45ee773ca63",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
+      "role": "proof",
+      "sha256": "4766457e81ff53ef8ab94f4b7109e4b62e138f409b8d239e0d9ecb6695565e85",
+      "declarations": [
+        "Becoming.PreparationCorrespondence.unit",
+        "Becoming.PreparationCorrespondence.use_unit",
+        "Becoming.PreparationCorrespondence.countOf_eq_count",
+        "Becoming.PreparationCorrespondence.mem_iff_countOf_pos",
+        "Becoming.PreparationCorrespondence.erase_eq_remove",
+        "Becoming.PreparationCorrespondence.route_some_iff",
+        "Becoming.PreparationCorrespondence.preparation_empties_iff",
+        "Becoming.PreparationCorrespondence.preparation_leaves"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261019T052332.277017Z/verification.json",
+      "role": "receipt",
+      "sha256": "47998617eaed359ca3d520848a0900f516e9367f50c95fe28620262f914d4de6",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261015T161348.626052Z/verification.json",
+      "role": "receipt",
+      "sha256": "d27cc6120230332870127bb8981c8ee0787a4dab09f7e1c65eb5d885fcb414a9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/check_preparation_correspondence.py",
+      "role": "provenance",
+      "sha256": "ea3a13897293cf5492f69ba5a3c5037dc2d60a5298515ea355581b50da98c680",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "role": "proof",
+      "sha256": "72fd570fa32c3fc6bd0458f4b0793bb7ce9365f7b1276aaddf323ca05b2afc86",
+      "declarations": [
+        "Becoming.Courses.copy_empties_iff",
+        "Becoming.Courses.copy_completes_iff",
+        "Becoming.Courses.steps_orbit",
+        "Becoming.Courses.completes_units_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
+      "role": "receipt",
+      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json",
+      "role": "receipt",
+      "sha256": "b32662eb63a0a59c5d91a366f84c1224d18694879c09a6d8281e2e67046648f8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/MaterialMaturation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/material-maturation-verification/verification.json",
+      "sha256_pointer": "/source_sha256/MaterialMaturation.lean",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Copying.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Copying",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json",
+      "sha256_pointer": "/source_sha256/PreparationCorrespondence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Courses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "作为已完成材料接口复用，并接到真实接合和重复结构生成。",
+    "en": "Reuse the completed material interface and connect it to actual attachment and repeated structural formation."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：按本轮实际审读及所列回执登记范围；原证明和反例保持。",
+      "en": "2026-10-08: recorded the actually reviewed scope and cited receipt, preserving original proofs and counterexamples."
+    },
+    {
+      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：作为其确定过程的计划，复制完成而无待处理者，恰当池供给该词且支持覆盖其汲取（copy_completes_iff）；复制的过程使池中无剩余，恰当池中每个记号恰如词所用的次数、且支持覆盖汲取（copy_empties_iff）。Becoming.Courses 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
+      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: as a plan of its determined process, the copy completes with nothing pending exactly when the pool supplies the word and the support covers its draws (copy_completes_iff); the copy's process leaves nothing in the pool exactly when the pool holds each token exactly as often as the word uses it and the support covers the draws (copy_empties_iff). Becoming.Courses is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Copying.lean, Courses.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Courses.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Courses.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Courses.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Courses.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Copying.lean, Courses.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Copying.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Courses.lean, takes as its final sections RetrodictionRuns, CandidateRuns, ReducedRuns, the modules reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Copying.lean、Courses.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：Copying.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；Courses.lean，以末节收入 RetrodictionRuns、CandidateRuns、ReducedRuns（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 7 bookkeeping notes condensed from 2026-10-14 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/69d360a4ab6b0433/material-preparation-output.json and in git.",
+      "zh": "2026-10-20：7 条记账性说明合并（2026-10-14 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/69d360a4ab6b0433/material-preparation-output.json 和 git 中。"
+    }
+  ]
+}

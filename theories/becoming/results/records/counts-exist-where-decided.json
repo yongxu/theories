@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "counts-exist-where-decided",
   "title": {
     "zh": "计数是关系",
@@ -8,15 +8,88 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T08:07:06+00:00",
+  "reviewed_at_utc": "2026-10-28T12:30:49+00:00",
   "statement": {
     "zh": "计数存在恰当所计数者已定，判定程序的标记就是计数；计数之间的普查不用可判定性。",
     "en": "A count exists exactly where what it counts is decided, and a decision procedure's marks are the count; the census between counts needs no decidedness."
   },
-  "claim": {
-    "zh": "一个命题已定（Decided），是指它成立或不成立；判定程序（Decidable）把这一点作为数据给出，核心的逻辑不对每个命题假定它，已定不能被否证（not_not_decided）。一个数指示一个命题（Indicates），是指它为一而命题成立，或为零而命题不成立；一个数计列表中某规定成立的成员（Counts），是指它是这些指示之和；跨一列步，各步的计数相加（CountsAcross）。某数指示一个命题恰当该命题已定（indicates_iff_decided），列表的计数存在恰当每个成员已定（counts_iff_decided）；计数唯一（Counts.unique），不超过成员数（Counts.le_length）；判定程序给出的标记之和就是计数（counts_total、comings_counts、ceasings_counts）。计数之间的普查不用可判定性：一段步上，只要计数存在，终点成立的加其间不再成立的，等于起点成立的加其间开始成立的（Counts.over_stretch），段内各步也不要求已定：段内各步已定时它成立（Counts.over_stretch_decided），有限多个状态都已定不能被否证，而数的等式在其否定被否证处成立。跨一步亦然（Counts.across_step）；开始与不再成立的计数相差不超过成员数（CountsAcross.keep_pace）。成立者在各步被列出、每个一次时，列表本身给出普查，也不用可判定性（Counts.listed_across、Counts.listed_over_stretch）：计数是被计成员列表的长度（Counts.listing），成员相同、不重复的两个列表一样长（length_eq_of_same）。不用伦理前提，也不用 Lean 公理。",
-    "en": "A proposition is decided (Decided) where it holds or fails; a decision procedure (Decidable) gives this as data, the core's logic does not assume it of every proposition, and that a proposition is decided cannot be refuted (not_not_decided). A number indicates a proposition (Indicates) where it is one and the proposition holds, or zero and it fails; a number counts the members of a list of which a determination holds (Counts) where it sums their indicators; across a list of steps, the counts at each step sum (CountsAcross). Something indicates a proposition exactly where the proposition is decided (indicates_iff_decided), and a count of a list exists exactly where each member is decided (counts_iff_decided); a count is one number (Counts.unique), at most the members (Counts.le_length), and where a procedure decides, its marks are the count (counts_total, comings_counts, ceasings_counts). The census between counts needs no decidedness: over a stretch, wherever the counts exist, those holding at the end with those that ceased are those holding at the start with those that came to be (Counts.over_stretch), with no decidedness even at the steps inside the stretch: decided there, the census holds (Counts.over_stretch_decided), that finitely many states are all decided cannot be refuted, and an equation of numbers holds wherever its failure is refuted. Likewise across one step (Counts.across_step), and comings and ceasings differ by at most the members (CountsAcross.keep_pace). Where what holds is listed at each step, each member once, the lists give the census with no decidedness either (Counts.listed_across, Counts.listed_over_stretch): a count is the length of a list of the members counted (Counts.listing), and two lists without repetition with the same members are equally long (length_eq_of_same). No ethical premise and no Lean axiom is used."
-  },
+  "laws": [
+    {
+      "en": "A proposition is decided where it holds or fails, and that it is decided can never be refuted. A number indicates a proposition where it is one and the proposition holds, or zero and it fails; a number counts the members of a list of which a property holds where it sums their indicators, and across a list of steps the counts at each step sum.",
+      "zh": "一个命题已定，是指它成立或不成立；它已定从不能被否证。一个数指示一个命题，是指它为一而命题成立，或为零而命题不成立；一个数计一个列表中某性质成立的成员，是指它是这些指示之和；跨一列步，各步的计数相加。",
+      "declarations": [
+        "Becoming.Decided",
+        "Becoming.not_not_decided",
+        "Becoming.Indicates",
+        "Becoming.Counts",
+        "Becoming.CountsAcross"
+      ]
+    },
+    {
+      "en": "Some number indicates a proposition exactly where the proposition is decided, and a count of a list exists exactly where the property is decided at each member; a decided proposition holds wherever its failure is refuted.",
+      "zh": "某数指示一个命题，恰当该命题已定；一个列表的计数存在，恰当该性质在每个成员处已定；已定的命题在其否定被否证处成立。",
+      "declarations": [
+        "Becoming.indicates_iff_decided",
+        "Becoming.counts_iff_decided",
+        "Becoming.Decided.of_not_not"
+      ]
+    },
+    {
+      "en": "A count of a list is one number and at most the list's length; a positive count has a member of which the property holds, such a member makes the count positive, and where the property holds of no member the count is zero. Where a decision procedure decides the property at every member, the total of its marks is the count.",
+      "zh": "一个列表的计数是一个数，不超过列表长度；正的计数有一个性质成立的成员，这样的成员使计数为正，性质对任何成员都不成立时计数为零。判定程序在每个成员处判定该性质时，其标记之和就是计数。",
+      "declarations": [
+        "Becoming.Counts.unique",
+        "Becoming.Counts.le_length",
+        "Becoming.Counts.exists_of_pos",
+        "Becoming.Counts.pos_of_mem",
+        "Becoming.Counts.eq_zero",
+        "Becoming.counts_total",
+        "Becoming.mark"
+      ]
+    },
+    {
+      "en": "Across one step, for a list and a property of its members at each step, wherever four counts exist (members holding before, holding after, coming to be by failing before and holding after, and ceasing), those holding after with those that ceased equal those holding before with those that came to be. No decidedness is assumed.",
+      "zh": "跨一步：对一个列表及其成员在各步的一个性质，凡四个计数（之前成立、之后成立、开始成立即之前不成立而之后成立、不再成立）存在处，之后成立的加不再成立的，等于之前成立的加开始成立的。不假定可判定性。",
+      "declarations": [
+        "Becoming.Counts.across_step",
+        "Becoming.ComesToBe",
+        "Becoming.CeasesToBe"
+      ]
+    },
+    {
+      "en": "Over a stretch of steps, for a list, wherever the counts at its start and end and the counts of comings and ceasings across it exist, those holding at the end with those that ceased equal those holding at the start with those that came to be, with no decidedness assumed even at the steps inside. With the states decided at every step of the stretch, the same holds by summing its steps.",
+      "zh": "跨一段步：对一个列表，凡段起点与终点的计数及段内开始成立与不再成立的计数存在处，终点成立的加不再成立的，等于起点成立的加开始成立的；段内各步也不假定已定。段内每步状态已定时，同一结论由逐步相加得到。",
+      "declarations": [
+        "Becoming.Counts.over_stretch",
+        "Becoming.Counts.over_stretch_decided"
+      ]
+    },
+    {
+      "en": "Over any stretch, for a list, wherever comings and ceasings across it are counted, each is at most the list's length plus the other. No decidedness is assumed.",
+      "zh": "跨任一段：对一个列表，凡段内开始成立与不再成立被计数处，每一个都不超过列表长度加另一个。不假定可判定性。",
+      "declarations": [
+        "Becoming.CountsAcross.keep_pace"
+      ]
+    },
+    {
+      "en": "Where a property holds of every member of a list, its count is the list's length, and where it holds of none, zero. A count is the length of a list of exactly the members counted, without repetition where the list has none; two lists without repetition with the same members are equally long.",
+      "zh": "性质对列表每个成员成立时，计数是列表长度；对任何成员都不成立时，计数为零。计数是恰含所计成员的一个列表的长度，原列表不重复时它也不重复；成员相同、不重复的两个列表一样长。",
+      "declarations": [
+        "Becoming.Counts.of_all",
+        "Becoming.Counts.of_none",
+        "Becoming.Counts.listing",
+        "Becoming.length_eq_of_same"
+      ]
+    },
+    {
+      "en": "Where what holds is listed at each step of a stretch by a list without repetition, wherever the ceasings over the list before each step and the comings over the list after it are counted, the length of the list at the end with what ceased equals the length at the start with what came to be; likewise across one step. No decidedness is assumed.",
+      "zh": "一段的每步所成立者由一个不重复的列表列出时，凡各步之前列表上的不再成立与之后列表上的开始成立被计数处，终点列表长度加不再成立的，等于起点列表长度加开始成立的；跨一步亦然。不假定可判定性。",
+      "declarations": [
+        "Becoming.Counts.listed_across",
+        "Becoming.Counts.listed_over_stretch"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "计数的规律：计数存在（Counts）；段内各步不要求已定。",
@@ -27,13 +100,59 @@
       "en": "The listed forms: what holds is listed at each step, each member once (Listed)."
     },
     {
-      "zh": "离散的步；有限的列表。",
-      "en": "Discrete steps; finite lists."
+      "en": "Finite lists: every count is over the members of a list.",
+      "zh": "有限的列表：每个计数都是对一个列表的成员。"
+    },
+    {
+      "en": "Decidedness is not assumed of every proposition: a decision procedure (Decidable) gives it as data only where a law takes one.",
+      "zh": "不对每个命题假定已定：判定程序（Decidable）只在规律取用它之处把已定作为数据给出。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "That a count exists only where what it counts is decided is a theorem about counts, not a premise on worlds: no state of an unfolding is assumed decided.",
+      "zh": "计数只在所计数者已定处存在，这是关于计数的定理，不是对世界的前提：不假定展开的任何状态已定。",
+      "kind": "non-implication",
+      "witness": "Becoming.counts_iff_decided"
+    },
+    {
+      "en": "The census does not give the counts' existence: it relates counts wherever they exist, and a count exists only where its members are decided.",
+      "zh": "普查不给出计数的存在：它在计数存在处关联计数，而计数只在成员已定处存在。",
+      "kind": "non-implication",
+      "witness": "Becoming.Counts.over_stretch"
+    },
+    {
+      "en": "Laws stated with a decision procedure's marks keep that procedure as their own condition; they are not restated here with counts as relations.",
+      "zh": "以判定程序的标记陈述的规律保留该程序为自己的条件；这里没有以作为关系的计数重述它们。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "detail": {
+        "zh": "undecided 世界（World.undecided）有限，生起复现（World.undecided_world）；要求每个有限世界中生起复现给出止息复现的规律，在 undecided Q 上判定任一命题 Q（World.law_decides），所以对每个有限世界要求复现的规律而不给已定，就是排中律（World.law_iff_em）：计数之间的规律不用可判定性，复现的确切形式要用。这一需要只来自活动是命题，undecided Q 在一步把它设为任意的 Q：这是对表示之逻辑的校准，是已定规律的引理，此外不说变化的任何事。",
+        "en": "The undecided world (World.undecided) is finite, with arising recurring (World.undecided_world); a law giving ceasing recurring from arising recurring in every finite world decides any proposition Q at undecided Q (World.law_decides), so asking the recurrence law of every finite world without decidedness is excluded middle (World.law_iff_em): the laws between counts need no decidedness, the exact form of recurrence does. The need comes only from activity being a proposition, which undecided Q sets to an arbitrary Q at one step: a calibration of the representation's logic, a lemma of the decided law, saying nothing further about change."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-ethical-premise",
+    "no-evaluation",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Decidedness, Becoming.Change and Becoming.Space are bound to core receipts under becoming-checks (20261028T070053.995027Z, 20261023T035943.256483Z and 20261025T184500.197330Z); every cited declaration has an empty axiom report, and the checker verifies core purity (the core's import closure compiles from Lean's prelude alone). The author's counterreview is in the integration note; there is no independent review yet.",
+    "zh": "Lean 4.29.1 合并检查器实查：Becoming.Decidedness、Becoming.Change 与 Becoming.Space 的当前字节绑定 becoming-checks 下的核心回执（20261028T070053.995027Z、20261023T035943.256483Z 与 20261025T184500.197330Z）；所引声明的公理报告均为空，检查器并核对核心纯净（核心的导入闭包只用 Lean 内置前导即可编译）。作者反审见整合文档；尚无独立审查。"
+  },
+  "next_delta": {
+    "en": "Restate with counts as relations the laws that count by a decision procedure's marks, so that each takes decidedness only at the members it counts.",
+    "zh": "以作为关系的计数重述以判定程序标记计数的规律，使每条只在所计成员处取已定。"
+  },
   "correspondence": {
-    "zh": "Ren 2026-10-11：“give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”，并以“please”接受 AI 的建议：可判定性局部化，不再是表示的承诺（零前提计划 §1.4 (b2)）。AI 的读法：“too dualist”读作强加给生成的是或否之分；“局部”读作只在所计数之处、作为该规律自己的条件。计数之间的规律对任何存在的计数成立，不要求它们存在；需要计数的陈述把已定写作条件，范围是所计数之处。读法依 Ren 的交托采用。",
-    "en": "Ren, 11 October 2026: “give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”, and “please” to the AI's suggestion that decidability be made local, no longer a commitment of the representation (zero-premise plan, section 1.4 (b2)). The AI's reading: “too dualist” is the yes/no split imposed on becoming; “local” is at the states counted only, as that law's own condition. The laws between counts hold of whatever counts exist, without asking that they exist; a statement that needs a count states decidedness as its condition, at what it counts. The reading is adopted on Ren's delegation."
+    "zh": "Ren 2026-10-11：“give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”，并以“please”接受 AI 的建议：可判定性局部化，不再是表示的承诺（零前提计划 §1.4 (b2)）。AI 的读法：“too dualist”读作强加给生成的是或否之分；“局部”读作只在所计数之处、作为该规律自己的条件。计数之间的规律对任何存在的计数成立，不要求它们存在；需要计数的陈述把已定写作条件，范围是所计数之处。",
+    "en": "Ren, 11 October 2026: “give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”, and “please” to the AI's suggestion that decidability be made local, no longer a commitment of the representation (zero-premise plan, section 1.4 (b2)). The AI's reading: “too dualist” is the yes/no split imposed on becoming; “local” is at the states counted only, as that law's own condition. The laws between counts hold of whatever counts exist, without asking that they exist; a statement that needs a count states decidedness as its condition, at what it counts."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
   "aliases": [
@@ -88,12 +207,12 @@
           "en": "Coming to be and ceasing across a step, and their counts by marks."
         },
         "input": {
-          "zh": "判定程序的标记之和就是计数（counts_total、comings_counts、ceasings_counts）；计数作为关系，存在恰当所计数者已定。",
-          "en": "Where a procedure decides, its marks sum to the count (counts_total, comings_counts, ceasings_counts); a count as a relation, existing exactly where what it counts is decided."
+          "zh": "判定程序的标记之和就是计数（counts_total，在开始成立与不再成立处读）；计数作为关系，存在恰当所计数者已定。",
+          "en": "Where a procedure decides, its marks sum to the count (counts_total, read at comings and ceasings); a count as a relation, existing exactly where what it counts is decided."
         },
         "conditions": {
-          "zh": "判定程序（只对 counts_total、comings_counts、ceasings_counts）。",
-          "en": "A decision procedure (counts_total, comings_counts and ceasings_counts only)."
+          "zh": "判定程序（只对 counts_total）。",
+          "en": "A decision procedure (counts_total only)."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean"
       }
@@ -122,23 +241,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "detail": {
-        "zh": "undecided 世界（World.undecided）有限，生起复现（World.undecided_world）；要求每个有限世界中生起复现给出止息复现的规律，在 undecided Q 上判定任一命题 Q（World.law_decides），所以对每个有限世界要求复现的规律而不给已定，就是排中律（World.law_iff_em）：计数之间的规律不用可判定性，复现的确切形式要用。这一需要只来自活动是命题，undecided Q 在一步把它设为任意的 Q：这是对表示之逻辑的校准，是已定规律的引理，此外不说变化的任何事。",
-        "en": "The undecided world (World.undecided) is finite, with arising recurring (World.undecided_world); a law giving ceasing recurring from arising recurring in every finite world decides any proposition Q at undecided Q (World.law_decides), so asking the recurrence law of every finite world without decidedness is excluded middle (World.law_iff_em): the laws between counts need no decidedness, the exact form of recurrence does. The need comes only from activity being a proposition, which undecided Q sets to an arbitrary Q at one step: a calibration of the representation's logic, a lemma of the decided law, saying nothing further about change."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "计数存在要求所计数者已定，这是定理（counts_iff_decided），不是对世界的前提；陈述以 mark 计数的定理仍以判定程序为自己的条件，清点页逐条列出；只对离散步与有限列表陈述；读法是 AI 的，依 Ren 的交托采用。",
-    "en": "A count existing needs what it counts to be decided, a theorem (counts_iff_decided), not a premise on worlds; theorems whose statements count by mark keep a decision procedure as their own condition, listed on the inventory page; stated for discrete steps and finite lists; the readings are the AI's, adopted on Ren's delegation."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Decidedness 的 55 项定理全部空依赖；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §84；尚未经独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 55 theorems of Becoming.Decidedness all have empty axiom reports; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §84 of the integration note; not yet independently reviewed."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
@@ -357,10 +459,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "以 Counts 重述以 mark 计数的定理（清点页的“陈述依赖它”一类）。",
-    "en": "Restating the theorems counted by mark with Counts (the inventory page's class of statements depending on it)."
-  },
   "history": [
     {
       "zh": "2026-10-12 P58：新增，按Ren 2026-10-11：“give me more context, but i intuitively feel decidability is too dualist, also proved solutions and their pro/cons”，并以“please”接受 AI 的建议：可判定性局部化，不再是表示的承诺；新核心模块 Becoming.Decidedness，按工作板认领；见整合文档 §84。",
@@ -434,6 +532,28 @@
     {
       "en": "2026-10-20: 73 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/f422dfabb50df901/counts-exist-where-decided.json and in git.",
       "zh": "2026-10-20：73 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/f422dfabb50df901/counts-exist-where-decided.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title and statement kept; the claim split into eight laws, each read against its declarations in Decidedness.lean and Change.lean (definitions, existence, uniqueness and marks, the census across a step, over a stretch, keeping pace, listing, and listed censuses), comings_counts and ceasings_counts, removed as forwarders of counts_total, no longer named; the limitations became three does-not-show items, a hypothesis on finite lists and the standard boundaries discrete-steps, no-ethical-premise, no-evaluation and names-provisional, with a hypothesis that decidedness is not assumed of every proposition; the dependency's interface no longer names the removed forwarders; the correspondence drops the sentence giving the reading's standing from a delegation, the delegation kept in the history entry of 16 October; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [counts-exist-where-decided.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/counts-exist-where-decided.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题与陈述保留；主张拆为八条规律，各条对照 Decidedness.lean 与 Change.lean 中的声明核读（定义、存在、唯一与标记、跨一步的普查、跨一段的普查、相差有界、列出、列出的普查），作为 counts_total 转发而被移除的 comings_counts 与 ceasings_counts 不再提及；限制改为三条“未表明”、一条关于有限列表的前提与通用边界 discrete-steps、no-ethical-premise、no-evaluation 与 names-provisional，并加一条前提：不对每个命题假定已定；依赖的接口不再提及被移除的转发；对应说明删去以交托给出读法地位的一句，交托保留在 10 月 16 日的历史条目中；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [counts-exist-where-decided.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/counts-exist-where-decided.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/a688c308f9117741/counts-exist-where-decided.json",
+      "sha256": "a688c308f911774109efb08de3a4c74b051312cbb5ce643048c216b5e9422117",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/f422dfabb50df901/counts-exist-where-decided.json",
+      "sha256": "f422dfabb50df9019182a26fa031b299bcbec010f51de13d6b90f87bf4d3fe8b",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

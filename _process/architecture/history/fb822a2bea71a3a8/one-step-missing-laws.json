@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "id": "one-step-missing-laws",
+  "title": {
+    "zh": "所陈述的一步之律所遗漏的",
+    "en": "What the stated laws of one step miss"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "statement": {
+    "zh": "所陈述的一步之律遗漏两条：有所取就有取用者；所取不超过所立加所给。",
+    "en": "The stated laws of one step miss two laws: something taken has a taker, and nothing is taken beyond what stood with what was given."
+  },
+  "claim": {
+    "zh": "从一个家族所取的有取用它的关系项：取用量的符号至多是取用者之数（Flow.sign_uptake_le_takers）。在家族耗减的一步，恰在家族的总量下降时有所取（Flow.RunsDownOn.taken_iff）。在一个跨此步被平衡的条件处，所取不超过步前所立加所给（Flow.BalancesOn.taken_le）。对跨此步耗减并封闭的家族，Locality 中所陈述的律（每个成员平衡、按取用者下降、恰在总量下降时有立的变化与交换）加上“有所取就有取用者”就是全部规律（OneStep.runsDownClosed_iff_stated）；没有后者，它们允许一个条件被取用与被给予相等、无人取用而通过，而没有世界显示它（OneStep.stated_not_realized）。在一个被平衡的条件处，步前层级、所取与所给以及是否来到或停止立，恰在所取不超过所立加所给、来到与停止如 Flow.BalancesOn.comesToStand_iff 与 Flow.BalancesOn.ceasesToStand_iff 所定时一同显示（OneStep.standing_iff）；单凭这些读法允许所取多于所有（OneStep.standing_bound_needed）。不加前提。",
+    "en": "Something taken from a family has a relatum taking it: the sign of the uptake is at most the count of takers (Flow.sign_uptake_le_takers). Across a step at which a family runs down, something is taken from it exactly when its total falls (Flow.RunsDownOn.taken_iff). At a condition balanced across a step, nothing is taken beyond what stood before with what was given (Flow.BalancesOn.taken_le). For a family running down closed across the step, the laws as stated in Locality (balance at each member, the fall by the takers, some standing changing and something exchanging exactly when the total falls) with the law that something taken has a taker are the whole law (OneStep.runsDownClosed_iff_stated); without it they allow a condition taken from and given to alike, passed through with nothing taking from it, which no world shows (OneStep.stated_not_realized). At one balanced condition, its level before, what is taken and given, and whether it comes or ceases to stand are shown together exactly where nothing is taken beyond what stood with what was given and coming and ceasing are as Flow.BalancesOn.comesToStand_iff and Flow.BalancesOn.ceasesToStand_iff fix them (OneStep.standing_iff); the readings alone allow more taken than there was (OneStep.standing_bound_needed). No premise."
+  },
+  "hypotheses": [
+    {
+      "zh": "不加前提。",
+      "en": "No premise."
+    }
+  ],
+  "correspondence": {
+    "zh": "P79（工作板），同上：完备性的证明发现所陈述的一步之律缺两条。读法（AI 的，依 Ren 的交托采用）：有所取就有取用者，以及所取不超过所立加所给，是一步之律的一部分，此前只隐含在定义中。见整合文档 §103。",
+    "en": "P79 (work board), as above: the proof of completeness found two laws missing from those stated of one step. Reading (the AI's, adopted on Ren's delegation): that something taken has a taker, and that nothing is taken beyond what stood with what was given, belong to the laws of one step, and were before only implicit in the definitions. See the integration document §103."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+  "aliases": [
+    "Becoming.Flow.sign_uptake_le_takers",
+    "Becoming.Flow.RunsDownOn.taken_iff",
+    "Becoming.Flow.BalancesOn.taken_le",
+    "Becoming.OneStep.runsDownClosed_iff_stated",
+    "Becoming.OneStep.stated_not_realized",
+    "Becoming.OneStep.standing_iff",
+    "Becoming.OneStep.standing_bound_needed",
+    "a taker for what is taken",
+    "有所取就有取用者"
+  ],
+  "dependencies": [
+    {
+      "id": "laws-of-one-step-complete",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "同一模块的模式与见证世界。",
+        "en": "The same module's patterns and witness world."
+      },
+      "interface": {
+        "output": {
+          "zh": "模式与其实现。",
+          "en": "Patterns and their realization."
+        },
+        "input": {
+          "zh": "遗漏之律的必要性。",
+          "en": "The necessity of the missing laws."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "laws-of-one-step",
+      "detail": {
+        "zh": "Locality 所陈述的一步之律：这里补上两条。",
+        "en": "Locality's stated laws of one step: here two are added."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "detail": {
+        "zh": "模式 [⟨1,1,1,1⟩]、零个取用者、无交换满足所陈述的每条律而没有世界显示它（OneStep.stated_not_realized）。",
+        "en": "The pattern [⟨1,1,1,1⟩] with no taker and nothing exchanging satisfies every stated law and is shown by no world (OneStep.stated_not_realized)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
+    "en": "The readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.OneStep 的 311 项定理全部空依赖，其中含 Flow.sign_uptake_le_takers、Flow.RunsDownOn.taken_iff、Flow.BalancesOn.taken_le、OneStep.runsDownClosed_iff_stated、OneStep.stated_not_realized、OneStep.standing_iff与 OneStep.standing_bound_needed；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §103；尚无独立审查。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 311 theorems of Becoming.OneStep all have empty axiom reports, among them Flow.sign_uptake_le_takers, Flow.RunsDownOn.taken_iff, Flow.BalancesOn.taken_le, OneStep.runsDownClosed_iff_stated, OneStep.stated_not_realized, OneStep.standing_iff and OneStep.standing_bound_needed. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §103 of the integration note; there is no independent review yet."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "role": "proof",
+      "sha256": "a3573dad850874daa486c38d69f7ae02201572aac6f019785653bfdc45a4f10a",
+      "declarations": [
+        "Becoming.Flow.sign_uptake_le_takers",
+        "Becoming.Flow.exchangesAt_of_uptake",
+        "Becoming.Flow.exchangesAt_of_replenishment",
+        "Becoming.Flow.BalancesOn.taken_le",
+        "Becoming.Flow.ExchangesAt.closed",
+        "Becoming.Flow.RunsDownOn.taken_iff",
+        "Becoming.OneStep.Stated",
+        "Becoming.OneStep.runsDownClosed_iff_stated",
+        "Becoming.OneStep.stated_not_realized",
+        "Becoming.OneStep.standing_iff",
+        "Becoming.OneStep.standing_bound_needed"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "role": "proof",
+      "sha256": "236b6eb72050fd5c70c720cd5ccd82d732b7c90f423fe12b9f10849cdc4b2ea8",
+      "declarations": [
+        "Becoming.Flow.BalancesOn.comesToStand_iff",
+        "Becoming.Flow.BalancesOn.ceasesToStand_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md",
+      "role": "provenance",
+      "sha256": "f3e5885ed960640cf3773813e7e02f6869ca2884b3730a2ea683c0686c03a8f3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OneStep",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Locality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "把这两条律并入 Locality 所陈述的一步规律，使一个清单陈述一步的全部规律。",
+    "en": "Join the two laws to Locality's stated laws of one step, so that one list states every law of one step."
+  },
+  "history": [
+    {
+      "zh": "2026-10-13：接续并整合 P79 的现存证明包；见整合文档 §103。",
+      "en": "2026-10-13: resumed and integrated the existing P79 proof package; see §103 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“所陈述的一步之律所遗漏的：有所取就有取用者；所取不超过所立加所给”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “What the stated laws of one step miss: something taken has a taker, and nothing is taken beyond what stood with what was given”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D30）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D30): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "zh": "2026年10月17日，全库审查（2026年10月16–17日，CHANGES.md）第 records-mz-21 项：下一步原是过程指令（“整合时在 Locality 的陈述旁记下这两条律”），改为正面的下一步。schema 1，无 text_versions；原文见 git。",
+      "en": "17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), item records-mz-21: the next step was a process instruction (\"note the two laws beside Locality's statement at integration\"); it is now a positive next step. Schema 1, no text_versions; earlier text in git."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 35 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/a04c6766ca79c103/one-step-missing-laws.json and in git.",
+      "zh": "2026-10-20：35 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/a04c6766ca79c103/one-step-missing-laws.json 和 git 中。"
+    }
+  ]
+}

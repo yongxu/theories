@@ -1,0 +1,470 @@
+{
+  "schema_version": 1,
+  "id": "own-good-to-reachable-living-significance",
+  "title": {
+    "zh": "从立场自身之善到可及的生生之意义",
+    "en": "From a standpoint's own good to reachable living significance"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "statement": {
+    "zh": "立场的自身意义，加上其意义随附于剖面（不受限单调性的形式部分）、沿小步的容差、以及每个可及的活的发生都由这样的小步连到自身的一个，推出立场索引、在其所及者上的生生之意义。",
+    "en": "A standpoint's self-significance, with its significance supervening on profiles (the formal part of unrestricted monotonicity), tolerance along small steps, and each reachable living occurrence linked by them to an own one, gives standpoint-indexed living significance on what it reaches."
+  },
+  "claim": {
+    "zh": "对持自身意义（自身的生及继续生成对自己有提供理由的正面意义）的评价位置：其一，自身意义加上不受限（跨越自他）的单调性（等价于随附性、剖面单调估值与 BI），使任何至少同样相连于某一被珍视的自身继续生成的他者生命具有正面意义；承认“连接程度就是完整根据”的只承认“我的”的对手，一旦自身继续生成分化出这样的他者，就严格不一致。其二，再加容差与分级连通，正面意义及于此位置活动所能及的全部生命与继续生成；所得是生生之意义谓词在此立场、单一历史、可及库存上的实例。超出自身意义的全部内容由容差承担；所采用的不带索引、跨接续的生生之意义，仍需从立场相对意义到规范意义的桥接。",
+    "en": "For an evaluating position holding self-significance (its own living and further generation have reason-giving positive significance): first, self-significance with unrestricted monotonicity across self and other (equivalently supervenience, a profile-monotone valuation and BI) gives positive significance to any living occurrence at least as connected as a valued occurrence of its own further generation, and an own-only rival that grants connection degree as the whole ground is inconsistent once its further generation differentiates into such an occurrence; second, adding tolerance and graded connection, significance reaches all living generation the position's activity can condition, a standpoint-indexed, single-history instance of the living significance predicate on the reachable inventory. Tolerance carries everything beyond self-significance; the adopted unindexed living significance over continuations still needs a bridge from standpoint-relative to normative significance."
+  },
+  "hypotheses": [
+    {
+      "zh": "自身意义与容差都是实质规范前提；自身意义是第一人称的。“继续生成”包括自身的学习与转化；由此活动形成的他者不在自身意义的内容之内。",
+      "en": "Self-significance and tolerance are both substantive normative premises; self-significance is first-personal. Further generation includes the evaluator's own learning and transformation; others formed by its activity are not part of the content of self-significance."
+    },
+    {
+      "zh": "不受限单调性与随附性是规范的结构前提，并非由“无原始所有者”蕴涵；不受限单调性等价于随附性、剖面单调估值与 BI（自我之善的根据剖面不含自身区域坐标），BI 有争议。对手自己的近远原则只限自身发生。",
+      "en": "Unrestricted monotonicity and supervenience are normative structural premises, not entailed by “no primitive owner”; unrestricted monotonicity amounts to supervenience, a profile-monotone valuation and BI (the grounding profile has no own-region coordinate), and BI is contested. A rival's own near-over-far principle ranges over own occurrences only."
+    },
+    {
+      "zh": "第二步另用容差与分级连通；容差只约束正与无之间的跳变，不约束权重。二值全称容差在连通剖面上等价于正面意义为常值，也可把“无”向回传递。",
+      "en": "Step two adds tolerance and graded connection; tolerance constrains only the positive-to-none flip, not weights. Two-valued universal tolerance on a connected profile space makes positive significance constant and carries “none” backward as readily."
+    },
+    {
+      "zh": "不使用生生之意义、D 或实践承诺作为前提；“提供理由”是自身意义的内容，Lean 只传递该谓词。",
+      "en": "Living significance, D and the practical commitments are not premises; reason-giving is the content of self-significance, and Lean only transports the predicate."
+    }
+  ],
+  "correspondence": {
+    "zh": "分化（Diff）是对应前提，适用于分裂、复制、分叉与 AI 后继者，以及以形成性贡献为主导的评价方式；在 profile2 的积序下对任何立场都不成立，加权和序下须形成性贡献权重至少为组织连续性的 7/5。Chain 取在可能剖面上，因此容差也是对仅仅可能的剖面如何估值的主张。有限模型中的程度数字只表示顺序；实际对应须在应用中取得证据。",
+    "en": "Differentiation (Diff) is a correspondence premise in scope for fission, copying, forking and AI successors and for formative-contribution-led evaluation; in profile2 it fails for every standpoint under the product order, and under a weighted sum it needs formative contribution weighted at least 7/5 of organizational continuity. Chain ranges over possible profiles, so tolerance is also a claim about valuing merely possible profiles. Degree numbers are orderings only; actual correspondence needs evidence in each application."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProfileReach.lean",
+  "aliases": [
+    "EvaluatorGrounding.self_good_reaches_at_least_as_connected",
+    "EvaluatorGrounding.strict_indexed_rival_inconsistent",
+    "EvaluatorGrounding.chain_preserves",
+    "EvaluatorGrounding.tolerant_chain_reaches",
+    "EvaluatorGrounding.reach_is_g0",
+    "EvaluatorGrounding.self_good_derives_reachable_g0",
+    "EvaluatorGrounding.formed_other_has_significance",
+    "EvaluatorGrounding.threshold_rival_is_consistent_without_tolerance",
+    "EvaluatorGrounding.tolerant_standpoint_reaches_stranger",
+    "EvaluatorGrounding.present_aim_evaluator_escapes",
+    "EvaluatorGrounding.closed_self_blocks_reach",
+    "EvaluatorGrounding.persistence_rival_escapes_self_transcendence",
+    "Becoming.tolerant_chain_reaches_by_core (retired module)"
+  ],
+  "dependencies": [
+    {
+      "id": "positive-ground-open-futures",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "reach_is_livingSignificance 与 selfSignificance_derives_reachable_livingSignificance 的结论使用同一 GenerativeComparison.G0 谓词；本结果为该谓词在可及库存上的成立提供由自身意义出发的推导，不改变原结果的证明与范围。",
+        "en": "reach_is_livingSignificance and selfSignificance_derives_reachable_livingSignificance conclude the same GenerativeComparison.G0 predicate; this result supplies a derivation from self-significance of that predicate on the reachable inventory, without changing the earlier proof or scope."
+      },
+      "interface": {
+        "output": {
+          "zh": "对持自身意义的位置，可及库存上生生之意义成立，以其意义为正面相关性。",
+          "en": "For a position holding self-significance, living significance holds on the reachable inventory with its significance as positive relevance."
+        },
+        "input": {
+          "zh": "contingent_generation_has_positive_ground 的生生之意义前提（外围的 G0）。",
+          "en": "The living-significance hypothesis (the periphery's G0) of contingent_generation_has_positive_ground."
+        },
+        "conditions": {
+          "zh": "库存限于此位置可及的生命内容，且只有单一历史（Unit），开放未来的多分支结构未被表示；正面相关性取此位置的意义；容差与分级连通成立。",
+          "en": "Inventory restricted to living content reachable by the position, with a single history (Unit), so the branching structure of open futures is not represented; positive relevance is the position's significance; tolerance and graded connection hold."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "positioned-positive-reason",
+      "detail": {
+        "zh": "该结果证明认同无关性来自 D。本路线用对自身意义、容差（及 BI）的认同代替 D，并没有获得与认同无关的约束力：只要一个位置认同自身意义、容差（及 BI），它就承诺了此实例。意义、比较与实践判断的说明把认同无关性定位在外在论表述 A。",
+        "en": "That result shows endorsement independence comes from D. This route replaces D with endorsement of self-significance, tolerance (and BI), so it does not obtain endorsement-independent force: a position is committed to this instance only if it accepts self-significance, tolerance (and BI). The account of significance, comparison and practical judgment locates endorsement independence in the externalist articulation A."
+      }
+    },
+    {
+      "id": "universal-practical-warrant",
+      "detail": {
+        "zh": "推进但未完成：普遍性限于持自身意义的评价者，第二步依赖容差；纯现时目的的评价者不受约束。",
+        "en": "Advances without completing it: universality is limited to evaluators holding self-significance, and step two relies on tolerance; present-aim evaluators are not bound."
+      }
+    },
+    {
+      "id": "alignment-direction-under-widening",
+      "detail": {
+        "zh": "解释关联：以非工具性生成式自我之善为目标一部分的 AI 可被此论证约束；但第一步最先扩展到它自己的复制体与后继者，偏向自身谱系，本身不及人类；正面性不带权重，与对自身谱系的强烈偏倚相容。只工具性自保的系统不受约束，其对齐须靠设计与治理。",
+        "en": "Interpretive connection: an AI with non-instrumental generative self-good as part of its aims is argument-reachable, but step one first extends to its own copies and successors, favouring its lineage and not by itself reaching humans; positivity carries no weight and is compatible with strong lineage bias. A merely instrumentally self-preserving system is not reachable; its alignment rests on design and governance."
+      }
+    },
+    {
+      "id": "metaethical-core-characterization",
+      "detail": {
+        "zh": "审查要求的 P+ 版第二步由该结果的关系中立承担：沿非零已形成关系传递，取在实际关系上而非可能剖面上；BI 是关系中立的实例，立场到规范的桥是立场中立。本结果作为种子的第一人称来源。未建立两模块间的形式转换。",
+        "en": "The P+ version of step two that the review requested is that result's relational neutrality: transmission along nonzero formed relations, over actual relations rather than possible profiles; BI is an instance of relational neutrality and the standpoint-to-normative bridge is standpoint neutrality. This result is the first-personal source of the seed. No formal adapter between the modules is established."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean",
+      "detail": {
+        "zh": "无自身意义的现时目的评价者满足单调性、随附性与容差，却不给任何东西以意义；结论对一切可能评价者不成立。",
+        "en": "A present-aim evaluator without self-significance satisfies monotonicity, supervenience and tolerance yet assigns no significance; the conclusion does not hold for every possible evaluator."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean",
+      "detail": {
+        "zh": "门槛对手满足自身意义、单调性与随附性，到达由此活动形成的他者而不到达陌生人，并恰在其断点违反容差。",
+        "en": "A threshold rival satisfies self-significance, monotonicity and supervenience, reaches the formed other but not the stranger, and violates tolerance exactly at its cut."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean",
+      "detail": {
+        "zh": "封闭自我：即把步关系限于自身正区域的门槛对手；显示 Chain 对那一步关系承担工作，不显示 M1 承担工作。Parfit 式连续性与自创生闭合是同构的一元形成。",
+        "en": "Closed self: the threshold rival with its step relation restricted to its own positive region; it shows Chain carries weight for that step relation, not that M1 does. Parfitian continuity and autopoietic closure are isomorphic monist formations."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean",
+      "detail": {
+        "zh": "在 profile2 加积序下，逃过第一步的是一切立场，平衡的生成式评价者亦然；加权序须 7a ≤ 5b。第一步约束以形成性贡献为主导、接受不受限单调性的生成式自我之善。",
+        "en": "In profile2 with the product order every standpoint escapes step one, including a balanced generative evaluator; a weighted order needs 7a ≤ 5b. Step one binds generative self-good led by formative contribution that accepts unrestricted monotonicity."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVALUATOR-GROUNDING-REVIEW.md",
+      "detail": {
+        "zh": "闭合坐标对手：剖面含已形成的闭合坐标时，自身意义、不受限单调性、随附性与逐步容差都成立，而 Diff 与 Chain 都不成立；它不是伪装的所有者。",
+        "en": "Closure-coordinate rival: with a formed closure coordinate in the profile, self-significance, unrestricted monotonicity, supervenience and stepwise tolerance hold while Diff and Chain fail; it is not ownership in disguise."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVALUATOR-GROUNDING-REVIEW.md",
+      "detail": {
+        "zh": "只限自身的单调性：与自身意义、随附性、只给自身意义及 Diff 一致；第一步的严格不一致只对承认 HUIGEN §7 第一角的对手成立。",
+        "en": "Own-restricted monotonicity is consistent with self-significance, supervenience, own-only significance and Diff; step one's exact inconsistency holds only for a rival granting HUIGEN §7's first horn."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVALUATOR-GROUNDING-REVIEW.md",
+      "detail": {
+        "zh": "连续递减并在有限距离处归零的权重：每步变化有界，却不给远处者意义；断点也不必落在自身边界上。",
+        "en": "A graded weight falling continuously to zero at a finite distance: bounded change per step, yet no significance far away; the cut need not lie at the own boundary."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "所得是正面意义，不是权重、许可、义务或排序，也不预测认识或遵循。普遍性限于持自身意义并接受不受限单调性（含 BI）与容差的评价者；自身意义本身不能对每一可能评价者推出；容差对闭合坐标对手与归零权重对手没有得到辩护。内容范围限于自身意义所及的那类生命，不推出一切组织形成的正面意义，也不处理使新生命存在的价值。",
+    "en": "Yields positive significance, not weight, permission, duty or ranking, and predicts no recognition or compliance. Universality is limited to evaluators holding self-significance, accepting unrestricted monotonicity (with BI) and tolerance; self-significance is not derivable for every possible evaluator; tolerance is undefended against the closure-coordinate and zero-reaching-weight rivals. Content scope is the kind of living self-significance attaches to; positive significance of all organization formation and the value of bringing new lives into existence are not derived."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 成功实查12项新定理／29项声明审计：19项空依赖、8项 propext、2项 propext 与 Quot.sound；无 Classical.choice 或自定义公理；一般定理均为空依赖。3项应用例不计入。独立审查已完成（EVALUATOR-GROUNDING-REVIEW.md）：推论与复核接受，第一步收窄，容差的辩护不被接受；15 项更正已执行，Lean 说明更正后重跑检查器。",
+    "en": "Successful Lean 4.29.1 check: 12 new theorems/29 declaration audits, comprising 19 empty, 8 propext and 2 propext with Quot.sound dependencies; no Classical.choice or custom axiom; the general theorems have empty dependencies. 3 application examples are not counted. Independent review completed (EVALUATOR-GROUNDING-REVIEW.md): inferences and recheck accepted, step one narrowed, tolerance's defence not accepted; its 15 corrections are applied, and the checker was rerun after the Lean documentation was corrected."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean",
+      "role": "provenance",
+      "sha256": "a002d04a7c7334830a30f22d6c16f2ce6d7d918bc077b132281208b847b80b2b",
+      "declarations": [
+        "EvaluatorGrounding.self_good_reaches_at_least_as_connected",
+        "EvaluatorGrounding.strict_indexed_rival_inconsistent",
+        "EvaluatorGrounding.chain_preserves",
+        "EvaluatorGrounding.tolerant_chain_reaches",
+        "EvaluatorGrounding.reach_is_g0",
+        "EvaluatorGrounding.self_good_derives_reachable_g0",
+        "EvaluatorGrounding.formed_other_has_significance",
+        "EvaluatorGrounding.threshold_rival_is_consistent_without_tolerance",
+        "EvaluatorGrounding.tolerant_standpoint_reaches_stranger",
+        "EvaluatorGrounding.present_aim_evaluator_escapes",
+        "EvaluatorGrounding.closed_self_blocks_reach",
+        "EvaluatorGrounding.persistence_rival_escapes_self_transcendence"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GenerativeComparison.lean",
+      "role": "provenance",
+      "sha256": "948d36b4cddc0b2289219604464bd38eb6e607183b157cee1075d50fb9797a03",
+      "declarations": [
+        "GenerativeComparison.G0"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/evaluator-grounding-verification.json",
+      "role": "receipt",
+      "sha256": "1a2ef6339fb5f09b1a6f8707ef69452264c737c8375dce7bb35f8d442a5760d5",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVALUATOR-GROUNDING-ARGUMENT.md",
+      "role": "statement",
+      "sha256": "09657558d612d0c6991bf4431436067874241fbb29492f59843211d4f92e88c5",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-09-monist-evaluator-grounding.md",
+      "role": "provenance",
+      "sha256": "663f6808cc5ad95acdd5ad6782a1ad6c35999fcf14bab03c0268d5c711aa0970",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVALUATOR-GROUNDING-REVIEW.md",
+      "role": "review",
+      "sha256": "e3cb3a8eabf6a15709d4392a2e24d593e3fc4ca1ce0f7c98569f04ead9828039",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-09-one-theory-unification.md",
+      "role": "provenance",
+      "sha256": "054c09c4d17c281d401795a90330f5a7c353827b12ec06f73820dd9055c52b41",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
+      "role": "provenance",
+      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
+      "declarations": [
+        "Becoming.profileValuation",
+        "Becoming.tolerant_iff_neutral",
+        "Becoming.chain_iff_reach_profiles",
+        "Becoming.selfGood_profiles",
+        "Becoming.tolerant_chain_reaches_by_core",
+        "Becoming.chain_iff_reach",
+        "Becoming.g0_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "role": "proof",
+      "sha256": "659164aee82f74c802700e5e7e4118721400cf4b09233a743c2f9250b3d83584",
+      "declarations": [
+        "Becoming.Valuation.SelfSignificance",
+        "Becoming.Valuation.transmits"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "role": "proof",
+      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
+      "declarations": [
+        "Becoming.Valuation.reaches"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "role": "proof",
+      "sha256": "4d3afe46d3d4b297acc6a1e6b126ad2e0f2d08dfa9205fdcf2aa32bb7b5bcbf1",
+      "declarations": [
+        "Becoming.LivingSignificance"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T100026.593496Z/verification.json",
+      "role": "receipt",
+      "sha256": "51b9fd45bff2f533ee783f79a81518580a49255bfda8a38a5859129191b3846e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T163210.426211Z/verification.json",
+      "role": "receipt",
+      "sha256": "20a27676496da965792e40912a2754e4954496525e5641cb7d0708095235734b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProfileReach.lean",
+      "role": "proof",
+      "sha256": "93ed03fc3d8f550a7c00502816d1b981201541cf1bcb75505c572978d8f3b955",
+      "declarations": [
+        "Becoming.ProfileReach.selfSignificance_reaches_at_least_as_connected",
+        "Becoming.ProfileReach.strict_indexed_rival_inconsistent",
+        "Becoming.ProfileReach.chain_preserves",
+        "Becoming.ProfileReach.tolerant_chain_reaches",
+        "Becoming.ProfileReach.reach_is_livingSignificance",
+        "Becoming.ProfileReach.selfSignificance_derives_reachable_livingSignificance",
+        "Becoming.ProfileReach.formed_other_has_significance",
+        "Becoming.ProfileReach.threshold_rival_is_consistent_without_tolerance",
+        "Becoming.ProfileReach.tolerant_standpoint_reaches_stranger",
+        "Becoming.ProfileReach.present_aim_evaluator_escapes",
+        "Becoming.ProfileReach.closed_self_blocks_reach",
+        "Becoming.ProfileReach.persistence_rival_escapes_self_transcendence",
+        "Becoming.ProfileReach.valuation",
+        "Becoming.ProfileReach.tolerant_iff_neutral",
+        "Becoming.ProfileReach.reach_relations_iff",
+        "Becoming.ProfileReach.selfSignificance_valuation"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T210832.866808Z/verification.json",
+      "role": "receipt",
+      "sha256": "f1dbe8ef5d0cea652a1db7e6120da7bf931376f375f0167ba1ee2ee246b5f4d3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T090457.012800Z/verification.json",
+      "role": "receipt",
+      "sha256": "73da26fa45a43969d573d4f0f79afeaf50f1b40ecd31082bc842b017a49920b4",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T162802.564989Z/verification.json",
+      "role": "receipt",
+      "sha256": "2d67544b861ef92ad93c09f3e21c359b69c7713733d831319afaa8bdda8074fd",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Metaethics",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProfileReach.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ProfileReach",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Extension",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "对 BI 与关系中立的哲学根据作独立论证；以真实案例取得分化与分级连通的证据；剖面之间的小步是否展开中已形成的关系，核心在剖面上的关系中立（tolerant_iff_neutral）把这留给对应。",
+    "en": "An independent argument for BI and relational neutrality; evidence for differentiation and graded connection in actual cases; whether small steps between profiles are formed relations of the unfolding, which the core's relational neutrality on profiles (tolerant_iff_neutral) leaves to correspondence."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：应 Ren“沿一元本体那条路，尝试完成它”新增。复用 GenerativeComparison.G0；推进 universal-practical-warrant 而未完成之。",
+      "en": "2026-10-09: added following Ren's “沿一元本体那条路，尝试完成它”. Reuses GenerativeComparison.G0; advances universal-practical-warrant without completing it."
+    },
+    {
+      "zh": "2026-10-09：独立审查后，应 Ren“你自己全改了吧”由整合会话执行审查 §6 的 15 项更正：标题与主张收窄为立场索引的单历史实例；写明不受限单调性、BI 与容差的地位；S0 不含由活动形成的他者；补入 P4、P5、P7 反例；Lean 说明更正并重跑检查器（定理与公理依赖不变）。更正前版本保存在提交 4e7642e1。",
+      "en": "2026-10-09: after the independent review, the unification session applied its 15 corrections following Ren's “你自己全改了吧”: title and claim narrowed to a standpoint-indexed single-history instance; the status of unrestricted monotonicity, BI and tolerance stated; S0 no longer includes others formed by the activity; P4, P5 and P7 added as counterexamples; Lean documentation corrected and the checker rerun (theorems and axiom dependencies unchanged). The pre-correction version is in commit 4e7642e1."
+    },
+    {
+      "zh": "2026-10-10：按 Ren 的要求，标题中的“自我之善”改为“立场自身之善（S0）”，不以独立的自我作框架；主张与证明不变。",
+      "en": "2026-10-10: “Self-good” in the title becomes “a standpoint's own good (S0)”, which does not frame a self apart, at Ren's request; claim and proof unchanged."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“立场自身之善（S0）加不受限单调性与容差，推出立场索引的可及 G0 实例”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “A standpoint's own good (S0), with unrestricted monotonicity and tolerance, gives a standpoint-indexed instance of G0 on reachable generation”"
+    },
+    {
+      "en": "17 October 2026, wording: outdated labels (G0, S0, N_rel/N_std) replaced by the current vocabulary (living significance, self-significance, relational and standpoint neutrality); review-round labels removed from public fields, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, F3J, the port of the judgment and comparison family into the core (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): the core counterparts of the cited periphery and bridge declarations are cited (1 in Becoming.Metaethics), graded in development/bridge-fold/port-j.md; the periphery stays cited until the sweep retires it. A port restates; the claim is unchanged.",
+      "zh": "2026年10月18日，F3J 将判断与比较族移入核心：引用其核心对应声明。移植只是重述，论断不变。"
+    },
+    {
+      "en": "18 October 2026, F3J, the port of the judgment and comparison family into the core (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): the core counterparts of the cited periphery and bridge declarations are cited (16 in Becoming.ProfileReach), graded in development/bridge-fold/port-j.md; the periphery stays cited until the sweep retires it. Canonical source moved from EvaluatorGrounding.lean to ProfileReach.lean. A port restates; the claim is unchanged.",
+      "zh": "2026年10月18日，F3J 将判断与比较族移入核心：引用其核心对应声明，规范来源随之移动。移植只是重述，论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: G0 (now LivingSignificance); ProfileReach.reach_is_g0 (now ProfileReach.reach_is_livingSignificance); ProfileReach.selfGood_valuation (now ProfileReach.selfSignificance_valuation); ProfileReach.self_good_derives_reachable_g0 (now ProfileReach.selfSignificance_derives_reachable_livingSignificance); ProfileReach.self_good_reaches_at_least_as_connected (now ProfileReach.selfSignificance_reaches_at_least_as_connected); Valuation.SelfGood (now Valuation.SelfSignificance); reach_is_g0 (now reach_is_livingSignificance); self_good_derives_reachable_g0 (now selfSignificance_derives_reachable_livingSignificance). Proof bindings (Metaethics.lean, ProfileReach.lean, ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Metaethics.lean, G0 is LivingSignificance, g0_* livingSignificance_*, Valuation.SelfGood Valuation.SelfSignificance, SecuresPositiveGround SecuresNewContent, the binder positive relevance; the module header is structural; statements unchanged; ProfileReach.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：G0（现为 LivingSignificance）；ProfileReach.reach_is_g0（现为 ProfileReach.reach_is_livingSignificance）；ProfileReach.selfGood_valuation（现为 ProfileReach.selfSignificance_valuation）；ProfileReach.self_good_derives_reachable_g0（现为 ProfileReach.selfSignificance_derives_reachable_livingSignificance）；ProfileReach.self_good_reaches_at_least_as_connected（现为 ProfileReach.selfSignificance_reaches_at_least_as_connected）；Valuation.SelfGood（现为 Valuation.SelfSignificance）；reach_is_g0（现为 reach_is_livingSignificance）；self_good_derives_reachable_g0（现为 selfSignificance_derives_reachable_livingSignificance）。证明绑定（Metaethics.lean、ProfileReach.lean、ValuationFrames.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Metaethics.lean，G0 现为 LivingSignificance，g0_* 现为 livingSignificance_*，Valuation.SelfGood 现为 Valuation.SelfSignificance，SecuresPositiveGround 现为 SecuresNewContent，约束变量 positive 现为 relevance；模块标题改为结构性的；陈述不变；ProfileReach.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；ValuationFrames.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 18 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/818db1c4ad02a993/self-good-reachable-g0.json and in git.",
+      "zh": "2026-10-20：18 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/818db1c4ad02a993/self-good-reachable-g0.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, EvaluatorGrounding and GenerativeComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Extension, Becoming.Metaethics, Becoming.ProfileReach and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives, which this record does not cite with declarations. 1 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, EvaluatorGrounding and GenerativeComparison）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Extension, Becoming.Metaethics, Becoming.ProfileReach and Becoming.ValuationFrames）。退役模块的内容也陈述于 Becoming.Alternatives，本记录未以声明引用它们。1 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement said unrestricted monotonicity is used; the Lean takes supervenience on profiles (its formal part), tolerance and a chain of small steps from each reachable living occurrence to an own one, and the statement now names exactly these (it read: \"A standpoint's own good (self-significance), with unrestricted monotonicity and tolerance, gives a standpoint-indexed instance of living significance on reachable generation.\"); G0 in the fourth premise replaced by living significance; then the retired labels S0, N_rel, N_std, J1–J4, the Universal Metaethical Core and G0 (where not the periphery's name) replaced in the premises, the dependency, the related notes and the limitations by self-significance, relational and standpoint neutrality, the practical commitments, the account of significance, comparison and practical judgment and living significance, the limitations' sentence tightened to keep its length (\"and accepting\" now \", accepting\", \"is not defended\" now \"is undefended\", \"cannot be derived\" now \"is not derivable\"); the Lean names (GenerativeComparison.G0, reach_is_g0) kept.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述原说用到不受限单调性；Lean 所取为随附于剖面（其形式部分）、容差，以及每个可及的活的发生连到自身之一的小步之链，陈述今恰列这些；第四条前提中的 G0 改为生生之意义；随后已退役的标签 S0、N_rel、N_std、J1–J4、普遍元伦理核心与 G0（非外围名称处）在前提、依赖、相关说明与局限中改为自身意义、关系中立与立场中立、实践承诺、意义、比较与实践判断的说明及生生之意义，英文局限的句子相应收紧以保持其长度；Lean 名称（GenerativeComparison.G0、reach_is_g0）保留。"
+    }
+  ],
+  "former_ids": [
+    "self-good-reachable-g0"
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "id": "laws-at-finer-units",
+  "title": {
+    "zh": "较细的单位上的一步规律",
+    "en": "Laws of one step at a finer unit"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "statement": {
+    "zh": "一个条件跨过一步开始立着与不再立着的确切条件、上升由给予、下降由取用、生起需要活跃的给予者，在每一分辨率下成立。一次交换的规律在变化按单位读出时成立，按原始计数读出时不成立；规律 1 的复现与规律 3 的界要把细分算作给予。",
+    "en": "The exact conditions of coming and ceasing to stand, a rise given to, a fall taken from, and arising needing an active giver hold at every resolution. The law of one exchange holds with change read in the unit, not raw counts; law 1's recurrence and law 3's bound need refinement counted as giving."
+  },
+  "claim": {
+    "zh": "把单位读为跨过从 t 起的一步分成 r t 个较细的单位（Becoming.Resolution 的 Flow.BalancesAt），并把平衡局部到一个家族与一步（Flow.BalancesAtOn）；变化按单位读出：条件上升指步后的水平超过 r t 乘以步前的水平（Web.RisesAt），下降反之（Web.FallsAt）；r 恒为一时各为原来的概念（Flow.balancesAtOn_one、Web.risesAt_one、Web.fallsAt_one、Flow.runsDownOnAt_one）。不对 r 加任何条件：一个条件在该分辨率下平衡时，开始立着恰当此前立在零且被给的多于被取的，不再立着恰当此前立着且被取的等于它按较细单位所有的连同被给的（Flow.BalancesAtOn.comesToStand_iff、ceasesToStand_iff）；按单位的上升被给予、下降被取用（rise_given、fall_taken）；没有从家族取用时，成员按单位上升恰当有参与者给予它（rises_iff_gives），家族上的耗散排除这一点（Flow.DissipatesOn.still_untaken_at）；体现的关系项只由一个不是它自己的活跃给予者生起（arises_given）；没有什么从无中开始立着（comes_from_standing）。一次交换：家族不重复地包含所立者、在该分辨率下平衡并被耗散时（Flow.RunsDownOnAt），有条件按单位上升或下降，恰当家族步后的总水平低于 r t 乘以步前的总水平（Flow.RunsDownOnAt.changes_iff）。按原始计数读出则不成立：单位一分为二、什么都不交换时，每个水平加倍，原始计数下处处上升，而按单位没有变化、总水平不降（Doubling.raw_reading_fails）。所需按与水平相同的单位读（一种读法）：细分为 r t > 0 时，要求不变、所需与所需的水平都按较细单位读出的形成，步后被支持恰当步前被支持（Web.supported_unchanged_by_split）；跨步比较所需时按单位因子读出（unitFactor、continuing_restores_in_unit、consumed_continues_transformed_in_unit、inactive_below_in_unit）；按单位的上升由被支持者给予（Flow.BalancesAtOn.rise_given_by_supported）。一段上数损失的规律要固定单位：单位每步加倍、无给予者时，一个形成每步取一个较细单位，永远活跃且被支持（Feeding.endless），细分供给了它。",
+    "en": "Read the unit as splitting into r t finer units across the step from t (Flow.BalancesAt of Becoming.Resolution), with balance made local to a family and a step (Flow.BalancesAtOn), and read change in the unit: a condition rises where its level after the step exceeds r t times its level before (Web.RisesAt), and falls where it is below (Web.FallsAt); with r constantly one each is the original notion (Flow.balancesAtOn_one, Web.risesAt_one, Web.fallsAt_one, Flow.runsDownOnAt_one). With no condition on r: with balance at a condition at that resolution, it comes to stand exactly when it stood at nothing and was given more than was taken from it, and ceases to stand exactly when it stood and what was taken from it is all it had in the finer unit with all it was given (Flow.BalancesAtOn.comesToStand_iff, ceasesToStand_iff); a rise in the unit is given to and a fall taken from (rise_given, fall_taken); where nothing is taken from the family, a member rises in the unit exactly when something taking part gives to it (rises_iff_gives), which dissipation on the family excludes (Flow.DissipatesOn.still_untaken_at); an embodied relatum arises only as an active giver other than itself gives to it (arises_given); nothing comes to stand from nothing (comes_from_standing). One exchange: across a step at which a family holding what stands without repetition is balanced at that resolution and dissipated on (Flow.RunsDownOnAt), some condition rises or falls in the unit exactly when the family's total after the step is below r t times its total before (Flow.RunsDownOnAt.changes_iff). Read in raw counts it fails: with the unit splitting in two and nothing exchanged every level doubles, every condition rises in raw counts, and nothing changes in the unit, the total not falling (Doubling.raw_reading_fails). Need is read in the unit of the level (a reading): with the unit splitting into r t > 0, a formation whose requirements stay and whose needs and required levels are read in the finer unit is supported after the step exactly when before (Web.supported_unchanged_by_split); needs compared across steps are read through the unit factor (unitFactor, continuing_restores_in_unit, consumed_continues_transformed_in_unit, inactive_below_in_unit); a rise in the unit is given by a supported formation (Flow.BalancesAtOn.rise_given_by_supported). The laws counting a loss over a stretch need a fixed unit: with the unit doubling at every step and nothing giving, a formation taking one finer unit at every step is active and supported forever (Feeding.endless), fed by the refinement."
+  },
+  "hypotheses": [
+    {
+      "zh": "无全局前提：每条的条件写在规律之内，在所用的一步与家族上。不对细分 r 加任何条件。",
+      "en": "No global premise: the condition of each law is stated inside it, at the step and family used. No condition on the refinement r."
+    },
+    {
+      "zh": "表示：变化按单位读出（Web.RisesAt、Web.FallsAt），这是表示的一项承诺（如何量度变化），不是关于世界的前提。",
+      "en": "Representation: change is read in the unit (Web.RisesAt, Web.FallsAt), a commitment of the representation (how change is measured), not a premise on worlds."
+    }
+  ],
+  "correspondence": {
+    "zh": "零前提计划把整单位列为表示的一项承诺（Ren 的第 4 项），问各条规律在超出整单位的量下是否成立。本结果对一步的规律回答：规律 4 与开始、不再立着在每一分辨率下成立；规律 1 的一次交换在变化按单位读出时成立。这是对表示承诺的检验：结论是变化须按单位量度，不是规律失效。",
+    "en": "The zero-premise plan lists whole units as a commitment of the representation (Ren's item 4) and asks which laws survive amounts finer than them. This result answers for the laws of one step: law 4 and coming and ceasing to stand hold at every resolution; law 1's one exchange holds with change read in the unit. It tests a commitment of the representation: what it finds is that change must be measured in the unit, not that the law fails."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
+  "aliases": [
+    "Becoming.Flow.BalancesAtOn",
+    "Becoming.Web.RisesAt",
+    "Becoming.Web.FallsAt",
+    "Becoming.Flow.BalancesAtOn.comesToStand_iff",
+    "Becoming.Flow.BalancesAtOn.ceasesToStand_iff",
+    "Becoming.Flow.BalancesAtOn.rises_iff_gives",
+    "Becoming.Flow.BalancesAtOn.arises_given",
+    "Becoming.Flow.BalancesAtOn.comes_from_standing",
+    "Becoming.Flow.RunsDownOnAt",
+    "Becoming.Flow.RunsDownOnAt.changes_iff",
+    "Becoming.Doubling.raw_reading_fails",
+    "Becoming.Web.supported_unchanged_by_split",
+    "Becoming.Feeding.endless"
+  ],
+  "dependencies": [
+    {
+      "id": "laws-of-one-step",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用一步的规律的形式与家族上的耗散（Flow.DissipatesOn），在较细单位下重述；r 恒为一时即原规律。",
+        "en": "Reuses the form of the laws of one step and dissipation on a family (Flow.DissipatesOn), restated at a finer unit; with r constantly one they are the original laws."
+      },
+      "interface": {
+        "output": {
+          "zh": "一步、一个家族上的平衡与耗散下的确切规律。",
+          "en": "Exact laws under balance and dissipation on a family across one step."
+        },
+        "input": {
+          "zh": "在单位分成 r t 的一步上陈述同样的规律，变化按单位读出。",
+          "en": "The same laws stated across a step at which the unit splits into r t, with change read in the unit."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean"
+      }
+    },
+    {
+      "id": "rest-at-every-resolution",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用细分的单位（Flow.BalancesAt），把它局部到一个家族与一步。",
+        "en": "Reuses the refining unit (Flow.BalancesAt), made local to a family and a step."
+      },
+      "interface": {
+        "output": {
+          "zh": "跨过每一步单位分成 r t、按较细单位计的平衡。",
+          "en": "Balance counted in a unit splitting into r t across each step."
+        },
+        "input": {
+          "zh": "只在所用的一步与家族上（Flow.BalancesAtOn）；复现与界在细分算作给予时成立（R4，引用）。",
+          "en": "Only at the step and family used (Flow.BalancesAtOn); recurrence and the bound hold with the refinement counted (R4, cited)."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "laws-at-coarser-steps",
+      "detail": {
+        "zh": "时间的承诺由较粗的步检验；本结果检验量的单位。",
+        "en": "The commitment of time is tested at coarser steps; this result tests the unit of amounts."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
+      "detail": {
+        "zh": "Doubling：单位一分为二、什么都不交换，每个水平加倍；原始计数下处处上升，按单位没有变化、总水平不降。所以一次交换的规律是按单位读出的变化的规律。",
+        "en": "Doubling: the unit splits in two and nothing is exchanged, so every level doubles; every condition rises in raw counts while nothing changes in the unit and the total does not fall. So the law of one exchange is a law of change read in the unit."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "规律 1 的复现与规律 3 的界用固定单位中的最小差异：在细分的单位下，细分供给所立者处它们不成立（Becoming.Resolution 的见证，refinement_feeds_witnesses），把细分算作给予时成立（World.rests_unrefuted_refinement_counted、World.arising_opens_refinement_counted），单位自某步起固定时也成立（Flow.taking_not_recurring）；本结果引用，不重证。规律 2 关于成立与否，不关于量，按原样成立。所需按与水平相同的单位读，这是 Ren 2026-10-12 决定的表示承诺（条件 r t > 0），不是关于世界的前提；储备在细分下由细分供给时可永远下降（Becoming.Resolution 的 Web.CarriesIn），一段上数损失的依存规律同样要把细分算作给予。不推出任何前提；不改 Resolution 的任何定义。名称（BalancesAtOn、RisesAt、FallsAt、RunsDownOnAt、Doubling）是 AI 所选。",
+    "en": "The recurrence of law 1 and the bound of law 3 use the least difference in a fixed unit: at a refining unit they fail where the refinement feeds what stands (the witnesses of Becoming.Resolution, refinement_feeds_witnesses), and hold with the refinement counted as a giving (World.rests_unrefuted_refinement_counted, World.arising_opens_refinement_counted) or with the unit fixed from some step on (Flow.taking_not_recurring); these are cited, not reproved. Law 2 concerns what holds, not amounts, and survives as stated. Need is read in the unit of the level, a commitment of the representation Ren decided on 12 October (condition r t > 0), not a premise on worlds; a reserve fed by the refinement may fall forever (Web.CarriesIn of Becoming.Resolution), and the laws of dependence counting a loss over a stretch likewise need the refinement counted as a giving. No premise is derived; no definition of Resolution is changed. The names (BalancesAtOn, RisesAt, FallsAt, RunsDownOnAt, Doubling) are the AI's."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：新核心模块 Becoming.Units 的 31 项定理全部空依赖；同一回执覆盖包内 75 个模块，共 4518 项定理／6370 项声明审计；外围回执 20261013T095049.338744Z 通过。先在暂存树中从前导编译，无警告，逐条 #print axioms 全部为空。核心闭包 49 个模块，每条源声明的公理报告为空，只用 Lean 内置前导即可编译。尚无独立审查，作者反审见整合文档 §81。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 31 theorems of the new core module Becoming.Units all have empty axiom reports; the same receipt covers the package's 75 modules with 4518 theorems/6370 declaration audits; periphery receipt 20261013T095049.338744Z passed. It was first compiled from the prelude in a scratch tree, with no warnings and every #print axioms empty. The core closure is 49 modules, every source declaration in it with an empty axiom report, compiling from Lean's prelude alone. There is no independent review yet; the author's counterreview is in §81 of the integration note."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
+      "role": "proof",
+      "sha256": "c3b36e83d5087ba111fd31340fb7625a70a507d84d323ea618e944cbcdd3c6e9",
+      "declarations": [
+        "Becoming.Flow.BalancesAtOn",
+        "Becoming.Flow.BalancesAt.on",
+        "Becoming.Flow.balancesAtOn_one",
+        "Becoming.Flow.BalancesAtOn.over",
+        "Becoming.Flow.BalancesAtOn.lowers",
+        "Becoming.Web.RisesAt",
+        "Becoming.Web.FallsAt",
+        "Becoming.Web.risesAt_one",
+        "Becoming.Web.fallsAt_one",
+        "Becoming.Flow.BalancesAtOn.comesToStand_iff",
+        "Becoming.Flow.BalancesAtOn.ceasesToStand_iff",
+        "Becoming.Flow.BalancesAtOn.rise_given",
+        "Becoming.Flow.BalancesAtOn.fall_taken",
+        "Becoming.Flow.BalancesAtOn.rises_iff_gives",
+        "Becoming.Flow.DissipatesOn.still_untaken_at",
+        "Becoming.Flow.BalancesAtOn.taking_lowers",
+        "Becoming.Flow.BalancesAtOn.fall_lowers",
+        "Becoming.Flow.BalancesAtOn.rise_lowers",
+        "Becoming.Flow.risesAt_of_comesToStand",
+        "Becoming.Flow.BalancesAtOn.comes_from_standing",
+        "Becoming.Flow.BalancesAtOn.arises_given",
+        "Becoming.Flow.RunsDownOnAt",
+        "Becoming.Flow.runsDownOnAt_one",
+        "Becoming.Flow.RunsDownOnAt.changes_iff",
+        "Becoming.Doubling.double",
+        "Becoming.Doubling.double_pos",
+        "Becoming.Doubling.flow",
+        "Becoming.Doubling.web",
+        "Becoming.Doubling.runsDown",
+        "Becoming.Doubling.raw_reading_fails",
+        "Becoming.unitFactor",
+        "Becoming.unitFactor_one",
+        "Becoming.Web.supported_unchanged_by_split",
+        "Becoming.Web.continuing_restores_in_unit",
+        "Becoming.Web.consumed_continues_transformed_in_unit",
+        "Becoming.Web.inactive_below_in_unit",
+        "Becoming.Flow.BalancesAtOn.rise_given_by_supported",
+        "Becoming.Feeding.flow",
+        "Becoming.Feeding.web",
+        "Becoming.Feeding.endless"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "declarations": [
+        "Becoming.Naturals.two_mul"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "role": "proof",
+      "sha256": "236b6eb72050fd5c70c720cd5ccd82d732b7c90f423fe12b9f10849cdc4b2ea8",
+      "declarations": [
+        "Becoming.Flow.RunsDownOn",
+        "Becoming.Flow.RunsDownOn.changes_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+      "role": "proof",
+      "sha256": "61a9fbb7c3624f887afd09df8c43b59a5ec08209811b3e1b9f20e7efa1e20fbb",
+      "declarations": [
+        "Becoming.Flow.BalancesAt",
+        "Becoming.Flow.BalancesAt.over"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md",
+      "role": "integration",
+      "sha256": "39481677948c2c7701b1fd6b9c942dabc0003e06f66fc83b9f85912566f87593"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ZERO-PREMISE-PLAN.md",
+      "role": "integration",
+      "sha256": "4f425c33ebb1e6f733cc7232f28ff35ae37409f1732b123dc92868e6ebbe55fb"
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-11-zero-premise-laws.md",
+      "role": "provenance",
+      "sha256": "9a9b77159f5aae64310d30cbd3d48a380777613cc3852e517f1a32524dbcc61c"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-11-one-unified-theory-together.md",
+      "role": "provenance",
+      "sha256": "b5672472cda81561e7099252fca54138edfe2df107a673f16bd82c1e2d2baa7f"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-unit-of-need-and-tower-of-time.md",
+      "role": "provenance",
+      "sha256": "e80330f6de5b48b0b8df91df1a5f66a528861a9cc3325dba163d86eab8ea2172"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Units",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Locality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Resolution",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "一段上数损失的依存规律在细分算作给予时的形式（如 rest-with-refinement-counted）；同时改变步与单位的检验，扩展 continuous-time-as-tower；这些规律与 entropy-history-and-record 的 Flow.dissipatesOn_iff_conserved 的联系。",
+    "en": "The laws of dependence counting a loss over a stretch with the refinement counted as a giving (as in rest-with-refinement-counted); a joint test changing both the step and the unit, extending continuous-time-as-tower; the link of these laws to Flow.dissipatesOn_iff_conserved of entropy-history-and-record."
+  },
+  "history": [
+    {
+      "zh": "2026-10-11 Units：新增，按零前提计划的第 4 步（超出整单位的量）；新核心模块 Becoming.Units（导入 Becoming.Resolution，不改其定义），由“0 axiom completeness”会话起草并验证，按工作板认领；是对表示承诺（量的单位）的检验，不是新的前提；见整合文档 §81。",
+      "en": "2026-10-11 Units: added, following step 4 of the zero-premise plan (amounts finer than whole units); new core module Becoming.Units (importing Becoming.Resolution, changing none of its definitions), drafted and verified by the session ‘0 axiom completeness’ and claimed through the work board; a test of a commitment of the representation (the unit of amounts), not a new premise; see §81 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述；末尾的工作项标记 R4 留在沿革中。主张、证明与证据不变。原标题：“较细的单位上的一步规律：一个条件跨过一步开始立着与不再立着的确切条件、上升由给予、下降由取用、生起需要活跃的给予者，在每一分辨率下成立；一次交换的规律在变化按单位读出时成立，按原始计数读出时不成立；规律 1 的复现与规律 3 的界要把细分算作给予（R4）”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement; the work-item label R4 at its end is left to the history. Claim, proof and evidence unchanged. Former title: “The laws of one step at a finer unit: the exact conditions of coming to stand and ceasing to stand, a rise given to, a fall taken from, and arising needing an active giver hold at every resolution; the law of one exchange holds with change read in the unit, not in raw counts; the recurrence of law 1 and the bound of law 3 need the refinement counted as a giving (R4)”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；统一计划只在 §10 的 P36 对照表后加入 2026-10-14 的对照表；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; the unification plan only adds the 14 October 2026 rename table after the P36 table in section 10; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026年10月17日，全库审查（2026年10月16–17日，CHANGES.md）第 B6 项：下一步原等“R5 落地后”与 Flow.dissipatesOn_iff_conserved 的联系，R5 已落地（Becoming.Entropy，entropy-history-and-record），改为直接指向它；“时间之塔”改为指向已落地的 continuous-time-as-tower，剩下的是同时改变步与单位。schema 1，无 text_versions；原文见 git。",
+      "en": "17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), item B6: the next step waited for the link to Flow.dissipatesOn_iff_conserved \"once R5 lands\"; R5 has landed (Becoming.Entropy, entropy-history-and-record), so it now points there directly, and \"the tower of time\" now points to the landed continuous-time-as-tower, what remains being a joint change of step and unit. Schema 1, no text_versions; earlier text in git."
+    },
+    {
+      "en": "17 October 2026, wording of the public fields: the dated attribution “(Ren, 12 October)” replaced by marking the unit of need as a reading, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): THE-THEORY-OF-BECOMING.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "19 October 2026, R22 (the names of the nineteenth review): BECOMING-UNIFICATION-PLAN.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: BECOMING-UNIFICATION-PLAN.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月19日，R22（第十九次审查的名称）：BECOMING-UNIFICATION-PLAN.md 重新指向。自所审哈希以来，所引文件只在 R22 改名之处改动：BECOMING-UNIFICATION-PLAN.md，只改名称（第十九次审查 N1、N2；对照表见 development/r22-names/RENAME-TABLE.json）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Prelude.lean, Resolution.lean, Units.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept; Resolution.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Units.lean, takes as its final section DependenceWebs, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Prelude.lean、Resolution.lean、Units.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Prelude.lean，十二条原先在两个或更多模块中各自陈述的命题，在此以保留的名称陈述一次；Resolution.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；Units.lean，以末节收入 DependenceWebs（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 73 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/c67d14b89f47a579/laws-at-finer-units.json and in git.",
+      "zh": "2026-10-20：73 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/c67d14b89f47a579/laws-at-finer-units.json 和 git 中。"
+    }
+  ]
+}

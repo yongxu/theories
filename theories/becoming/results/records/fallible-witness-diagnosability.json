@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "fallible-witness-diagnosability",
   "title": {
     "zh": "可失实见证的完整辨别条件",
@@ -8,17 +8,154 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F05",
-  "reviewed_at_utc": "2026-10-19T13:38:06+00:00",
-  "claim": {
-    "zh": "两个不同布尔答案在所有完整报告中不可共同相容，当且仅当其允许故障集合族 CrossSeparated。在对每个名册的检视过程上读（Becoming.WitnessRefinementRuns）：答案不同的两个候选，恰在其故障集合族 CrossSeparated 时被完整报告上的每一步分开（diagnosable_iff）；读过一份完整报告后，留下的交叉分离候选在此后每个状态都一致（complete_run_agrees）。",
-    "en": "Two different Boolean answers cannot both be compatible with any complete report iff their admitted fault envelopes are CrossSeparated. Read on the process of inspection for every roster (Becoming.WitnessRefinementRuns), two candidates with different answers are told apart by every step on a complete transcript exactly where their envelopes are CrossSeparated (diagnosable_iff), and once a complete transcript is read, remaining cross-separated candidates agree at every later state (complete_run_agrees)."
+  "reviewed_at_utc": "2026-10-28T11:58:23+00:00",
+  "statement": {
+    "en": "Two different answers cannot both fit a complete report exactly where every admitted fault set of the one and every admitted fault set of the other leave a witness outside both; on the process of inspection, candidates are then told apart by every complete transcript and survivors agree afterward.",
+    "zh": "两个不同答案不能都符合一份完整报告，恰当一方每个被接纳的故障集合与另一方每个被接纳的故障集合都在两者之外留下一个见证；在检视过程上，候选由每份完整记录区分，幸存者此后一致。"
   },
+  "laws": [
+    {
+      "en": "For a listed roster of witnesses of a type compared decidedly and two different two-valued answers, a complete report explains an answer with a fault set where every witness outside it reports that answer; no complete report is explained both by the one answer with one fault set and by the other with a second exactly where some witness of the roster is in neither.",
+      "zh": "对可判定相等类型之见证的所列名册与两个不同的二值答案：一份完整报告以某故障集合解释一个答案，是指该集合外每个见证都报告这个答案；没有完整报告同时被一个答案配一个故障集合、另一答案配第二个集合解释，恰当名册中有某见证不在两者之中。",
+      "declarations": [
+        "Becoming.Readout.Explains",
+        "Becoming.Readout.CommonWitness",
+        "Becoming.Readout.no_common_report_iff"
+      ]
+    },
+    {
+      "en": "With envelopes of admitted fault sets, for witnesses compared decidedly and two different answers, no complete report is explained both by the one answer under a fault set of the first envelope and by the other under one of the second exactly where every two such fault sets leave a common witness outside both.",
+      "zh": "以被接纳故障集合之族，对可判定相等的见证与两个不同答案：没有完整报告同时被一个答案在第一族某集合下、另一答案在第二族某集合下解释，恰当任两个这样的集合都在两者之外留下共同见证。",
+      "declarations": [
+        "Becoming.Readout.no_common_report_envelopes_iff"
+      ]
+    },
+    {
+      "en": "For every process and two-valued map of its configurations, the values a run takes at listed dates are fallible witnesses: where two fault sets of dates leave a common date outside both, no run's values are explained both by one answer with the first set at fault and by the other answer with the second.",
+      "zh": "对每个过程及其构形的二值映射，一次运行在所列日期所取的值是可失实见证：凡两个日期故障集合在两者之外留下共同日期，没有运行的值同时被一个答案（第一集合有故障）与另一答案（第二集合有故障）解释。",
+      "declarations": [
+        "Becoming.Courses.run_reports_apart"
+      ]
+    },
+    {
+      "en": "Over the courses of two-valued configurations in which every change is admitted, for two different answers, no course is explained by both, under two fault sets or under any fault sets of two envelopes, exactly where every such pair of fault sets leaves a common date outside both.",
+      "zh": "在每个变化都被接纳的二值构形历程上，对两个不同答案：没有历程同时被两者解释（在两个故障集合下，或在两族的任何集合下），恰当每对这样的故障集合都在两者之外留下共同日期。",
+      "declarations": [
+        "Becoming.Courses.anyChange",
+        "Becoming.Courses.anyRun",
+        "Becoming.Courses.dates_no_common_report_iff",
+        "Becoming.Courses.dates_no_common_report_envelopes_iff"
+      ]
+    },
+    {
+      "en": "Where witnesses may be silent, a model is compatible with reports when some admitted fault set explains them, each witness outside it silent or giving its answer. On transcripts where every witness of the roster reports, these are the core's explanations, and compatibility with one answer excludes the other exactly where the envelopes are cross-separated: every pair of their fault sets leaves a witness outside both.",
+      "zh": "见证可沉默时，一个模型与报告相容，是指某被接纳故障集合解释它们：集合外每个见证沉默或报告其答案。在名册每个见证都报告的记录上，这即核心的解释；与一个答案相容即排除另一答案，恰当两族交叉分离：两族故障集合的每一对都在两者之外留下见证。",
+      "declarations": [
+        "Becoming.WitnessRefinement.CrossSeparated",
+        "Becoming.WitnessRefinement.complete_diagnosability_iff_cross_separation",
+        "Becoming.WitnessRefinement.explains_complete_iff",
+        "Becoming.WitnessRefinement.compatible_complete_iff"
+      ]
+    },
+    {
+      "en": "For every roster, fault sets and answers of candidate models, inspection is a process on lists of candidates: a transcript steps them to exactly those some admitted fault set of which explains the reports, a silent transcript keeps exactly the candidates admitting some fault set, candidates only narrow along every run, and a certificate after a step needs a remaining candidate.",
+      "zh": "对每个名册、候选模型的故障集合与答案，检视是候选列表上的过程：一份记录把候选推到恰为某被接纳故障集合解释报告者；沉默记录恰保留承认某故障集合的候选；候选沿每次运行只缩小；一步后的证书需要尚存候选。",
+      "declarations": [
+        "Becoming.WitnessRefinementRuns.inspection",
+        "Becoming.WitnessRefinementRuns.mem_step",
+        "Becoming.WitnessRefinementRuns.silent_step",
+        "Becoming.WitnessRefinementRuns.run_narrows",
+        "Becoming.WitnessRefinementRuns.step_certificate_candidate"
+      ]
+    },
+    {
+      "en": "Two candidates with different answers are told apart by every inspection step on a complete transcript, no step keeping the one keeping the other, exactly where their envelopes are cross-separated.",
+      "zh": "答案不同的两个候选被完整记录上的每个检视步区分（没有一步同时保留二者），恰当它们的故障集合族交叉分离。",
+      "declarations": [
+        "Becoming.WitnessRefinementRuns.Complete",
+        "Becoming.WitnessRefinementRuns.diagnosable_iff"
+      ]
+    },
+    {
+      "en": "After an inspection step on a complete transcript, two remaining candidates with cross-separated envelopes give the same answer; along every run of inspection, once a complete transcript has been read, they do so at every later state.",
+      "zh": "完整记录上的一个检视步之后，故障集合族交叉分离的两个尚存候选给出相同答案；沿每次检视运行，一旦读过完整记录，此后每个状态皆然。",
+      "declarations": [
+        "Becoming.WitnessRefinementRuns.complete_step_agrees",
+        "Becoming.WitnessRefinementRuns.complete_run_agrees"
+      ]
+    },
+    {
+      "en": "Witnesses outside a fault set all responding with one answer remove every candidate with the other answer each of whose fault sets leaves one of them outside; two candidates with fault sets covering the roster are both kept by some complete transcript, after which the support of the witnesses outside the first fault set certifies nothing.",
+      "zh": "某故障集合外的见证都以一个答案回应时，移除每个持另一答案、且每个故障集合都在外留下其中一个见证的候选；故障集合覆盖名册的两个候选被某份完整记录同时保留，此后第一集合外见证的支持不证明任何东西。",
+      "declarations": [
+        "Becoming.WitnessRefinementRuns.responsive_step_excludes",
+        "Becoming.WitnessRefinementRuns.covering_step_keeps_both"
+      ]
+    },
+    {
+      "en": "Listing the roster twice changes no inspection step and no certificate. While a candidate admitting the failure of the whole roster is in a run of inspection, it stays, and no certificate over the pool of the candidates' fault sets holds at any later state.",
+      "zh": "把名册列两次不改变任何检视步与证书。只要承认整个名册失败的候选在检视运行中，它就留下，此后任何状态下候选故障集合之池上都没有证书成立。",
+      "declarations": [
+        "Becoming.WitnessRefinementRuns.doubled_roster_same",
+        "Becoming.WitnessRefinementRuns.total_fault_blocks"
+      ]
+    },
+    {
+      "en": "Testing steps candidates to those agreeing with a test's answer: an answer leaving none was no candidate's answer and certifies nothing, and every inspection step of the pooled-envelope inquiry moves its candidates by testing.",
+      "zh": "检验把候选推到与检验答案一致者：不留候选的答案不是任何候选的答案，也不证明任何东西；合并故障族之探究的每个检视步都以检验推动其候选。",
+      "declarations": [
+        "Becoming.WitnessRefinementRuns.testing",
+        "Becoming.WitnessRefinementRuns.test_emptied",
+        "Becoming.WitnessRefinementRuns.inquiry_step_testing"
+      ]
+    },
+    {
+      "en": "After a testing step by the actual model's answer, with that model a candidate, its failure causes covered, the remaining pool separated, the request current, working witnesses reading and approving faithfully, the reserve at least the load plus three and the deadline at least the time plus the load plus three, a guarded transaction succeeds and completes within scope.",
+      "zh": "以实际模型的答案检验一步后，若该模型是候选、其失败原因被覆盖、余下的池分离、请求为当前、未失败的见证忠实地读取与批准，储备不少于负载加三、期限不早于时间加负载加三，受守卫的事务就成功并在范围内完成。",
+      "declarations": [
+        "Becoming.WitnessRefinementRuns.test_step_completes"
+      ]
+    },
+    {
+      "en": "In the computed five-witness audit, an absent fifth report keeps every hypothesis, duplicating the fifth witness's support repairs nothing, and an uncovered correlated failure of witnesses can delete the actual model.",
+      "zh": "在计算的五见证审查中，缺第五份报告则保留每个假设，复制第五见证的支持不修复任何东西，未被覆盖的见证相关失败可删去实际模型。",
+      "declarations": [
+        "Becoming.WitnessRefinement.absent_fifth_keeps_uncertainty",
+        "Becoming.WitnessRefinement.duplicated_fifth_no_repair",
+        "Becoming.WitnessRefinement.uncovered_correlation_deletes_actual"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "给定 roster、两个故障集合族、不同答案及每个所列见证均有报告。",
       "en": "Supplied roster, two fault envelopes, distinct answers, and complete reports on the roster."
+    },
+    {
+      "zh": "见证可判定相等（检视模块中以自然数编号）；完成事务时，未失败见证的忠实与回应、实际原因的覆盖以及储备与期限是给定的。",
+      "en": "Witnesses are compared decidedly (numbered by naturals in the inspection modules); for the completed transaction, the faithfulness and response of the working witnesses, the coverage of the actual causes, and the reserve and deadline are supplied."
     }
   ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FallibleInspection.lean",
+      "detail": {
+        "zh": "重复同一支持不增加独立见证；报告缺失或未覆盖的共同失陷保留不确定性或删去实际候选。",
+        "en": "Duplicating one support does not add an independent witness; missing reports or uncovered joint compromise can retain uncertainty or remove the actual candidate."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker (check_becoming.py), Lean 4.29.1 as its receipts record: the current bytes of Becoming.Readout, Becoming.Courses, Becoming.WitnessRefinement and Becoming.WitnessRefinementRuns are bound to core receipts 20261019T185632.962707Z, 20261020T051144.879480Z, 20261018T234635.457051Z and 20261022T060905.150236Z under becoming-checks, each reporting an empty axiom list for every cited declaration. The periphery FallibleInspection and the retired Bridge are provenance; FallibleInspection's receipt keeps its earlier scope.",
+    "zh": "合并核心检查器实查（Lean 4.29.1）：Readout、Courses、WitnessRefinement、WitnessRefinementRuns 分别绑定 becoming-checks 下的核心回执 20261019T185632.962707Z、20261020T051144.879480Z、20261018T234635.457051Z、20261022T060905.150236Z，所引声明公理报告空。外围 FallibleInspection 与退役的 Bridge 为来源，其回执保持原范围。"
+  },
+  "next_delta": {
+    "en": "Ground an application's admitted fault envelopes: evidence of which witnesses fail together through actual change, and of the capacity to respond once the answers are told apart.",
+    "zh": "为应用的被接纳故障集合族奠基：哪些见证在实际变化中一起失败的证据，以及答案被区分后回应能力的证据。"
+  },
   "correspondence": {
     "zh": "实际见证及共同故障范围需覆盖；存活报告的忠实、身份和记录完整性不由此定理生成。",
     "en": "Actual witnesses and joint failures must be covered; surviving-report fidelity, identity and recorder integrity are not generated by this theorem."
@@ -37,23 +174,6 @@
   ],
   "dependencies": [],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FallibleInspection.lean",
-      "detail": {
-        "zh": "重复同一支持不增加独立见证；报告缺失或未覆盖的共同失陷保留不确定性或删去实际候选。",
-        "en": "Duplicating one support does not add an independent witness; missing reports or uncovered joint compromise can retain uncertainty or remove the actual candidate."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "重复同一支持不增加独立见证；报告缺失或未覆盖的共同失陷保留不确定性或删去实际候选。",
-    "en": "Duplicating one support does not add an independent witness; missing reports or uncovered joint compromise can retain uncertainty or remove the actual candidate."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FallibleInspection.lean",
@@ -75,7 +195,9 @@
         "Becoming.WitnessRefinement.uncovered_correlation_deletes_actual",
         "Becoming.WitnessRefinement.explains_complete_iff",
         "Becoming.WitnessRefinement.compatible_complete_iff",
-        "Becoming.WitnessRefinement.step_candidates"
+        "Becoming.WitnessRefinement.step_candidates",
+        "Becoming.WitnessRefinement.CrossSeparated",
+        "Becoming.WitnessRefinement.absent_fifth_keeps_uncertainty"
       ]
     },
     {
@@ -196,7 +318,9 @@
         "Becoming.WitnessRefinementRuns.total_fault_blocks",
         "Becoming.WitnessRefinementRuns.test_emptied",
         "Becoming.WitnessRefinementRuns.test_step_completes",
-        "Becoming.WitnessRefinementRuns.inquiry_step_testing"
+        "Becoming.WitnessRefinementRuns.inquiry_step_testing",
+        "Becoming.WitnessRefinementRuns.Complete",
+        "Becoming.WitnessRefinementRuns.run_narrows"
       ]
     },
     {
@@ -284,10 +408,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用辨别条件；实际变化中的故障范围和执行能力仍需具体证明。",
-    "en": "Reuse diagnosability; fault coverage through actual change and response capacity need their own evidence."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -319,6 +439,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and FallibleInspection) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Courses, Becoming.Readout, Becoming.WitnessRefinement and Becoming.WitnessRefinementRuns). The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and FallibleInspection）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Courses, Becoming.Readout, Becoming.WitnessRefinement and Becoming.WitnessRefinementRuns）。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the claim and the home section; the claim split into thirteen laws, each read against its declarations in Readout.lean, Courses.lean, WitnessRefinement.lean and WitnessRefinementRuns.lean (the core law of a common witness, with envelopes, on runs and on courses; silent reports and cross-separation; the inspection process, its diagnosability, agreement after a complete transcript, responsive and covering steps, repetition and total fault, testing and the transaction it completes, the computed audit); the limitation, the same sentence as the counterexample, kept there; a hypothesis added naming what the Lean takes (witnesses compared decidedly, and what the completed transaction supplies); CrossSeparated, absent_fifth_keeps_uncertainty, Complete and run_narrows added to their files' references; the shared boundary no-ethical-premise cited; no premise, status or source hash changed. Every earlier sentence is mapped in [fallible-witness-diagnosability.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/fallible-witness-diagnosability.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与所在章节写出陈述；主张拆为十三条规律，各条对照 Readout.lean、Courses.lean、WitnessRefinement.lean 与 WitnessRefinementRuns.lean 中的声明核读（共同见证的核心规律、带故障集合族、运行上与历程上；沉默报告与交叉分离；检视过程、其辨别、完整记录后的一致、回应与覆盖之步、重复与全体故障、检验及其完成的事务、计算的审查）；限制与反例同句，留在反例中；新增一条前提，写明 Lean 所取者（见证可判定相等，及完成事务所需的给定条件）；CrossSeparated、absent_fifth_keeps_uncertainty、Complete 与 run_narrows 加入其文件的引用；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变。每句旧文本的去向见 [fallible-witness-diagnosability.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/fallible-witness-diagnosability.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/b94109c7c632df88/fallible-witness-diagnosability.json",
+      "sha256": "b94109c7c632df889ee3aca5c9272392d1ceb6fb113cb96620ea7a7e6e2cefdc",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/fa057404008ca73b/fallible-witness-diagnosability.json",
+      "sha256": "fa057404008ca73b0a68fe426d440fe031820d3d59cdcf59e38530c7bf36f437",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

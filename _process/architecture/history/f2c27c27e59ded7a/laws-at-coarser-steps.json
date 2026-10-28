@@ -1,0 +1,578 @@
+{
+  "schema_version": 1,
+  "id": "laws-at-coarser-steps",
+  "title": {
+    "zh": "较粗的步上的一步规律",
+    "en": "Laws of one step at coarser steps"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "statement": {
+    "zh": "一个家族上的平衡（每个关系项只列出一次时）、耗散与下降（只在粗步两端包含所立者）跨过粗步内的各细步合成，封闭恰好合成；所以一次交换的规律与开始、不再立着的确切条件在粗步上成立。反方向不合成；只有活跃者给予与取用依步而定。",
+    "en": "Balance (each relatum listed once), dissipation and running down (what stands held at both ends) compose over a coarse step, closure exactly, so one exchange's law and the exact conditions of coming and ceasing to stand hold there. Not conversely; only active giving and taking are step-relative."
+  },
+  "claim": {
+    "zh": "把一个世界在严格递增的时刻 σ 读出，每个粗步是从 σ s 到 σ (s + 1) 之前的一段细步（Strict、span）。各条件都在一个粗步上陈述，假设只在该粗步内的细步上。合成的：家族上的平衡在粗步内各细步每个关系项只列出一次时合成（Flow.BalancesOn.sample，经 balance_over_stretch_on、Flow.sample_taken_on、Flow.sample_given_on）；家族上的耗散无条件合成（Flow.DissipatesOn.sample）；家族跨过粗步封闭恰当它跨过其内每个细步封闭（Flow.sample_closedAt_iff）；下降在家族只在粗步两端包含所立者时合成（Flow.RunsDownOn.sample），每个细步都下降时粗步下降（Flow.RunsDownOn.sample_of_fine）。所以粗步上：有水平改变恰当家族末端的总水平低于始端（Flow.sample_changes_iff）；细步上平衡时，一个条件跨过粗步开始立着恰当此前立在零且细步给它的多于取走的，不再立着恰当此前立着且细步取走它所有的连同所给的（Flow.sample_comesToStand_iff、Flow.sample_ceasesToStand_iff）。网在时刻 σ 读出（Web.sample），活动需要支持、体现与普查在被读出的细步上陈述（Web.sample_dependent、sample_embodied、sample_census、sample_standingCensus）；活动判定时，跨过粗步的生起或不再活跃是跨过其内某细步的生起或不再活跃（Web.sample_arises、Web.sample_ceases）。全局读法是推论（Flow.sample_balances、Flow.sample_dissipative、World.sample_survives、World.sample_rests_unrefuted，后者不用判定程序）。",
+    "en": "Read a world at strictly increasing times σ, each coarse step being the fine steps from σ s to just before σ (s + 1) (Strict, span). Each condition is stated at one coarse step, with hypotheses on the fine steps inside it only. What composes: balance on a family composes where each relatum is listed once at the fine steps inside (Flow.BalancesOn.sample, through balance_over_stretch_on, Flow.sample_taken_on, Flow.sample_given_on); dissipation on a family composes unconditionally (Flow.DissipatesOn.sample); a family is closed across the coarse step exactly when it is closed across each fine step inside (Flow.sample_closedAt_iff); running down composes where the family holds what stands at the two coarse ends only (Flow.RunsDownOn.sample), and running down at every fine step gives it at the coarse step (Flow.RunsDownOn.sample_of_fine). So at the coarse step some standing changes exactly when the family's total at the end is below its total at the start (Flow.sample_changes_iff); with balance at the fine steps a condition comes to stand across the coarse step exactly when it stood at nothing and the fine steps gave it more than they took, and ceases to stand exactly when it stood and they took all it had with all they gave (Flow.sample_comesToStand_iff, Flow.sample_ceasesToStand_iff). The web read at the times σ (Web.sample) states activity needing support, embodiment and a census of the sampled fine step (Web.sample_dependent, sample_embodied, sample_census, sample_standingCensus); with activity decided, arising or ceasing across a coarse step is arising or ceasing across a fine step inside it (Web.sample_arises, Web.sample_ceases). The global readings are corollaries (Flow.sample_balances, Flow.sample_dissipative, World.sample_survives, and World.sample_rests_unrefuted, with no decision procedure)."
+  },
+  "hypotheses": [
+    {
+      "zh": "无全局前提：每条的条件写在规律之内，只在该粗步内的细步上。",
+      "en": "No global premise: the condition of each law is stated inside it, on the fine steps inside the coarse step only."
+    },
+    {
+      "zh": "读法：严格递增的时刻（Strict）；粗步之间的细步视为给定，不细分到细步以下。平衡的合成要求每个关系项在粗步内各细步只列出一次（粗步的计数把一个关系项算一次，细步的计数按列出的次数）。",
+      "en": "The reading: strictly increasing times (Strict); the fine steps between samples are taken as given, with no refinement below them. Balance composes where each relatum is listed once at the fine steps inside (the coarse tally counts a relatum once, the fine tallies as often as it is listed)."
+    }
+  ],
+  "correspondence": {
+    "zh": "零前提计划把离散的步列为表示的一项承诺（Ren 的第 4 项：时间）；Ren 2026-10-11 定下先做较粗的步，再做连续时间。本结果是对这项承诺的检验，不是新的前提：问的是 Becoming.Locality 的局部条件在粗步上是否由粗步内各细步上的条件合成。规律本身对每个世界成立，所以对在粗步上读出的世界也成立；要证的只是条件是否合成。",
+    "en": "The zero-premise plan lists discrete steps as a commitment of the representation (Ren's item 4: time); Ren set on 11 October to do coarser steps first, then continuous time. This result tests that commitment and adds no premise: it asks whether the local conditions of Becoming.Locality at a coarse step compose from those at the fine steps inside it. The laws hold of every world, so of a world read at coarser steps; what has to be shown is whether their conditions compose."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+  "aliases": [
+    "Becoming.Strict",
+    "Becoming.span",
+    "Becoming.Web.sample",
+    "Becoming.Flow.sample",
+    "Becoming.Flow.BalancesOn.sample",
+    "Becoming.Flow.DissipatesOn.sample",
+    "Becoming.Flow.sample_closedAt_iff",
+    "Becoming.Flow.RunsDownOn.sample",
+    "Becoming.Flow.RunsDownOn.sample_of_fine",
+    "Becoming.Flow.sample_changes_iff",
+    "Becoming.Flow.sample_comesToStand_iff",
+    "Becoming.Flow.sample_ceasesToStand_iff",
+    "Becoming.Web.sample_arises",
+    "Becoming.Web.sample_ceases",
+    "Becoming.World.sample_survives",
+    "Becoming.World.sample_rests_unrefuted"
+  ],
+  "dependencies": [
+    {
+      "id": "laws-of-one-step",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用一步的平衡、耗散与下降（Flow.BalancesOn、Flow.DissipatesOn、Flow.RunsDownOn）与它们的一步规律（Flow.RunsDownOn.changes_iff、Flow.BalancesOn.comesToStand_iff、ceasesToStand_iff）。",
+        "en": "Reuses balance, dissipation and running down at a step (Flow.BalancesOn, Flow.DissipatesOn, Flow.RunsDownOn) and their laws of one step (Flow.RunsDownOn.changes_iff, Flow.BalancesOn.comesToStand_iff, ceasesToStand_iff)."
+      },
+      "interface": {
+        "output": {
+          "zh": "一步、一个家族上的平衡、耗散与下降，以及它们的确切规律。",
+          "en": "Balance, dissipation and running down on a family across one step, with their exact laws."
+        },
+        "input": {
+          "zh": "在粗步上陈述这些条件，由粗步内各细步上的条件合成，于是规律在粗步上成立。",
+          "en": "These conditions stated at a coarse step, composed from those at the fine steps inside it, so the laws hold at the coarse step."
+        },
+        "conditions": {
+          "zh": "平衡要每个关系项只列出一次。",
+          "en": "Balance asks each relatum to be listed once."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean"
+      }
+    },
+    {
+      "id": "census-balance",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用一段上的平衡（balance_over_stretch_on）。",
+        "en": "Reuses balance over a stretch (balance_over_stretch_on)."
+      },
+      "interface": {
+        "output": {
+          "zh": "一段之内每步平衡的计数在整段上平衡，段外不作要求。",
+          "en": "A count balanced across each step of a stretch is balanced over the stretch, nothing asked outside it."
+        },
+        "input": {
+          "zh": "粗步上的平衡就是粗步内各细步上平衡之和。",
+          "en": "Balance at a coarse step is the sum of balance at the fine steps inside it."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean"
+      }
+    },
+    {
+      "id": "map-of-premises",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用世界与其前提（World、World.Dependent、Embodied、Counted、Finite）。",
+        "en": "Reuses worlds and their premises (World, World.Dependent, Embodied, Counted, Finite)."
+      },
+      "interface": {
+        "output": {
+          "zh": "世界的前提。",
+          "en": "The premises of a world."
+        },
+        "input": {
+          "zh": "在粗步上读出的世界中，前提在被读出的细步上陈述（World.sample_survives）。",
+          "en": "In a world read at coarser steps the premises are stated of the sampled fine steps (World.sample_survives)."
+        },
+        "conditions": {
+          "zh": "平衡要只列出一次。",
+          "en": "Balance asks listing once."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "rest-at-every-resolution",
+      "detail": {
+        "zh": "分辨率一线细分量的单位；本结果改变的是步的粗细，两者互补。",
+        "en": "The resolution line refines the unit of amounts; this result changes the grain of steps; the two complement each other."
+      }
+    },
+    {
+      "id": "space-and-its-parts",
+      "detail": {
+        "zh": "有限世界在粗步上读出时，从某步起停息仍不能被否证（World.sample_rests_unrefuted）。",
+        "en": "Of a finite world read at a coarser step, that it rests from some step on still cannot be refuted (World.sample_rests_unrefuted)."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "detail": {
+        "zh": "Cancelling 与 Averaging：粗步上平衡与耗散，细步上不然（细步上的不平衡相互抵消；无损给予的细步被后来的细步抵过）。",
+        "en": "Cancelling and Averaging: balance and dissipation hold at the coarse step but not at the fine ones (fine imbalances cancel; a fine step giving without loss is outweighed by a later one)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "detail": {
+        "zh": "Strobe：一个关系项在每个粗步的第二个细步上活跃、给予与取用，在两个读出时刻都不活跃；粗步上只有活跃者给予与取用不成立，细步上的生起与不再活跃复现而粗步上安静。Delay：在接受者开始立着之前于粗步内所作的给予，被读为跨过粗步的降生。",
+        "en": "Strobe: a relatum active at the second fine step of each coarse step gives and takes there and is off at both sampling times; only active relata giving and taking fail at the coarse step, and arising and ceasing recur at the fine steps while the coarse steps are quiet. Delay: a gift made inside a coarse step before the receiver comes to stand is read as a descent across the coarse step."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "反方向不合成：粗步上的平衡与耗散不给出细步上的（Cancelling.coarse_not_fine、Averaging.coarse_not_fine）。只有活跃者给予、只有活跃者取用依步而定（Strobe.acting_taking_step_relative），只在活动于区间内保持时合成（Flow.sample_acting_on、sample_taking_on、Web.held_of_unit、Web.held_of_constant）；有界的依存传递也依步而定（Delay.transmitting_step_relative）。粗步上的复现是细步上的复现，反之不然（Strobe.converse_fails）。未证：实数时间（见时间之塔）；无步的生成能否由离散步表示；平衡的合成能否去掉“只列出一次”。这是粗步上的读法，不是量的单位的细分（Becoming.Resolution）。不推出任何前提。名称（Strict、span、sample、Held 等）是 AI 所选。",
+    "en": "The converse does not compose: balance and dissipation at the coarse step do not give them at the fine steps (Cancelling.coarse_not_fine, Averaging.coarse_not_fine). Only active relata giving and only active relata taking are step-relative (Strobe.acting_taking_step_relative), composing only where activity holds over the interval (Flow.sample_acting_on, sample_taking_on, Web.held_of_unit, Web.held_of_constant); bounded transmission of dependences is step-relative too (Delay.transmitting_step_relative). Recurring at the coarse steps is recurring at the fine ones, not conversely (Strobe.converse_fails). Not shown: real-valued time (beyond the tower of discrete readings); whether a becoming given with no step can be represented by discrete steps; whether listing once can be dropped for balance. This is a reading at a coarser step, not a refinement of the unit of amounts (Becoming.Resolution). No premise is derived. The names (Strict, span, sample, Held and others) are the AI's."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：新核心模块 Becoming.Sampling 的 90 项定理全部空依赖；同一回执覆盖包内 75 个模块，共 4518 项定理／6370 项声明审计；外围回执 20261013T095049.338744Z 通过。先在暂存树中从前导编译，无警告，逐条 #print axioms 全部为空。核心闭包 49 个模块，每条源声明的公理报告为空，只用 Lean 内置前导即可编译。尚无独立审查，作者反审见整合文档 §80。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 90 theorems of the new core module Becoming.Sampling all have empty axiom reports; the same receipt covers the package's 75 modules with 4518 theorems/6370 declaration audits; periphery receipt 20261013T095049.338744Z passed. It was first compiled from the prelude in a scratch tree, with no warnings and every #print axioms empty. The core closure is 49 modules, every source declaration in it with an empty axiom report, compiling from Lean's prelude alone. There is no independent review yet; the author's counterreview is in §80 of the integration note."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "role": "proof",
+      "sha256": "cb019033b8e58f42661a7584a552d646034cbe007e9c7a70545087f37cdea9cb",
+      "declarations": [
+        "Becoming.World.Counted"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "role": "proof",
+      "sha256": "9d27490407360695af1bbbf9008b20ed9c42eeae3c749a38d9a53cb4480c7744",
+      "declarations": [
+        "Becoming.Strict",
+        "Becoming.Strict.le_self",
+        "Becoming.Strict.lt",
+        "Becoming.Strict.comp",
+        "Becoming.span",
+        "Becoming.mem_span",
+        "Becoming.span_mem",
+        "Becoming.last_of_span",
+        "Becoming.Web.sample",
+        "Becoming.Web.sample_sample",
+        "Becoming.Web.sample_dependent",
+        "Becoming.Web.sample_embodied",
+        "Becoming.Web.sample_census",
+        "Becoming.Web.sample_standingCensus",
+        "Becoming.arises_within",
+        "Becoming.ceases_within",
+        "Becoming.Web.sample_arises",
+        "Becoming.Web.sample_ceases",
+        "Becoming.Web.sample_unceasing",
+        "Becoming.Web.sample_ceasing",
+        "Becoming.Strobe.flick",
+        "Becoming.Strobe.twice",
+        "Becoming.Strobe.twice_strict",
+        "Becoming.Strobe.flick_even",
+        "Becoming.Strobe.flick_odd",
+        "Becoming.Strobe.web",
+        "Becoming.Strobe.fine_arises",
+        "Becoming.Strobe.fine_ceases",
+        "Becoming.Strobe.coarse_quiet",
+        "Becoming.Strobe.converse_fails",
+        "Becoming.gateBy",
+        "Becoming.gate",
+        "Becoming.gateBy_of",
+        "Becoming.gateBy_of_not",
+        "Becoming.gateBy_zero",
+        "Becoming.gate_mem",
+        "Becoming.mem_of_gateBy_pos",
+        "Becoming.mem_of_gate_pos",
+        "Becoming.total_gateBy",
+        "Becoming.total_gate",
+        "Becoming.mem_insertNew",
+        "Becoming.mem_adjoin",
+        "Becoming.Flow.unionPresent",
+        "Becoming.Flow.unionPresent_spec",
+        "Becoming.Flow.sample",
+        "Becoming.Flow.Once",
+        "Becoming.Flow.sample_once",
+        "Becoming.Flow.sample_taken_on",
+        "Becoming.Flow.sample_given_on",
+        "Becoming.Flow.sample_taken",
+        "Becoming.Flow.sample_given",
+        "Becoming.Flow.BalancesOn.sample",
+        "Becoming.Flow.sample_balances",
+        "Becoming.Flow.sign_add_le",
+        "Becoming.Flow.total_dissipates",
+        "Becoming.Flow.gateBy_dissipates",
+        "Becoming.Flow.eq_zero_of_le_zero",
+        "Becoming.Flow.pos_of_gated",
+        "Becoming.Flow.sample_closed",
+        "Becoming.Flow.sample_closedAt_iff",
+        "Becoming.Flow.sample_take_total",
+        "Becoming.Flow.sample_give_total",
+        "Becoming.Flow.DissipatesOn.sample",
+        "Becoming.Flow.sample_dissipative",
+        "Becoming.Flow.RunsDownOn.sample",
+        "Becoming.Flow.RunsDownOn.sample_of_fine",
+        "Becoming.Flow.sample_changes_iff",
+        "Becoming.Flow.sample_comesToStand_iff",
+        "Becoming.Flow.sample_ceasesToStand_iff",
+        "Becoming.Web.Held",
+        "Becoming.Web.DrawingHeld",
+        "Becoming.Web.held_of_unit",
+        "Becoming.Web.held_of_constant",
+        "Becoming.Flow.sample_acting_on",
+        "Becoming.Flow.sample_taking_on",
+        "Becoming.Flow.sample_acting",
+        "Becoming.Flow.sample_taking",
+        "Becoming.World.sample",
+        "Becoming.World.sample_dependent",
+        "Becoming.World.sample_balanced",
+        "Becoming.World.sample_dissipative",
+        "Becoming.World.sample_embodied",
+        "Becoming.World.sample_counted",
+        "Becoming.World.sample_finite",
+        "Becoming.World.sample_survives",
+        "Becoming.World.sample_rests_unrefuted",
+        "Becoming.Strobe.bit",
+        "Becoming.Strobe.on_of_bit",
+        "Becoming.Strobe.flow",
+        "Becoming.Strobe.world",
+        "Becoming.Strobe.alive",
+        "Becoming.Strobe.alive_listed",
+        "Becoming.Strobe.once",
+        "Becoming.Strobe.fine",
+        "Becoming.Strobe.coarse_gives",
+        "Becoming.Strobe.acting_taking_step_relative",
+        "Becoming.Delay.first",
+        "Becoming.Delay.lately",
+        "Becoming.Delay.web",
+        "Becoming.Delay.flow",
+        "Becoming.Delay.world",
+        "Becoming.Delay.no_descent",
+        "Becoming.Delay.fine_transmitting",
+        "Becoming.Delay.coarse_descends",
+        "Becoming.Delay.transmitting_step_relative",
+        "Becoming.Cancelling.flow",
+        "Becoming.Cancelling.web",
+        "Becoming.Cancelling.coarse_not_fine",
+        "Becoming.Averaging.flow",
+        "Becoming.Averaging.coarse_not_fine"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "declarations": [
+        "Becoming.between_of_mem_steps",
+        "Becoming.balance_over_stretch_on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "b6dbed19c25ed2c0bb4f66ebfa97c40103fbdbc1892ef16be788350daa2d780e",
+      "declarations": [
+        "Becoming.steps_of_within"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
+      "role": "proof",
+      "sha256": "52d6f776af632644641e01b34bc1e35a64f4c6e37cdf3415fe1d086751ae1728",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "role": "proof",
+      "sha256": "0d89f7c0d8f1f11639e84816fd8696cd924200cc89f55b8c3f937b4ccea2bd83",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "role": "proof",
+      "sha256": "236b6eb72050fd5c70c720cd5ccd82d732b7c90f423fe12b9f10849cdc4b2ea8",
+      "declarations": [
+        "Becoming.Flow.RunsDownOn",
+        "Becoming.Flow.RunsDownOn.changes_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md",
+      "role": "integration",
+      "sha256": "39481677948c2c7701b1fd6b9c942dabc0003e06f66fc83b9f85912566f87593"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ZERO-PREMISE-PLAN.md",
+      "role": "integration",
+      "sha256": "4f425c33ebb1e6f733cc7232f28ff35ae37409f1732b123dc92868e6ebbe55fb"
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-11-zero-premise-laws.md",
+      "role": "provenance",
+      "sha256": "9a9b77159f5aae64310d30cbd3d48a380777613cc3852e517f1a32524dbcc61c"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-11-one-unified-theory-together.md",
+      "role": "provenance",
+      "sha256": "b5672472cda81561e7099252fca54138edfe2df107a673f16bd82c1e2d2baa7f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "role": "receipt",
+      "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "role": "receipt",
+      "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Sampling",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Locality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Change",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Premises",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.InAmounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "离散读法之塔（continuous-time-as-tower）之外的实数时间；平衡的合成能否去掉“只列出一次”；与分辨率一线合并为同时改变步与单位的检验。",
+    "en": "Real-valued time beyond the tower of discrete readings (continuous-time-as-tower); whether listing once can be dropped for balance to compose; a joint test with the resolution line changing both the step and the unit."
+  },
+  "history": [
+    {
+      "zh": "2026-10-11 Sampling：新增，按 Ren 2026-10-11 的顺序“先做更粗的步，再做连续时间”与零前提计划；新核心模块 Becoming.Sampling（导入 Becoming.Locality、Becoming.Premises），由“0 axiom completeness”会话起草并验证，按工作板认领；是对表示承诺（时间）的检验，不是新的前提；见整合文档 §80。",
+      "en": "2026-10-11 Sampling: added, following Ren's order of 11 October, coarser steps first, then continuous time, and the zero-premise plan; new core module Becoming.Sampling (importing Becoming.Locality and Becoming.Premises), drafted and verified by the session ‘0 axiom completeness’ and claimed through the work board; a test of a commitment of the representation (time), not a new premise; see §80 of the integration note."
+    },
+    {
+      "zh": "2026-10-12 P58：World.sample_rests 陈述更强：去掉活动的判定程序（未用到），名称不变（整合者同意在 P58 中一并修改）。见整合文档 §84 与清点页 DECIDABILITY-INVENTORY。",
+      "en": "2026-10-12 P58: World.sample_rests, statement strengthened: the decision procedure on activity dropped (unused); name unchanged (changed in P58, as agreed with the integrator). See §84 of the integration note and the inventory page DECIDABILITY-INVENTORY."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述，并压缩到陈述的长度上限（主张保留每一部分）。主张、证明与证据不变。原标题：“较粗的步上的一步规律：一个家族上的平衡（每个关系项只列出一次时）、耗散与下降（只在粗步两端包含所立者）跨过粗步内的各细步合成，封闭恰好合成；所以一次交换的规律与开始、不再立着的确切条件在粗步上成立；反方向不合成，只有活跃者给予与取用依步而定”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement, condensed to the statement's length limit (the claim keeps every part). Claim, proof and evidence unchanged. Former title: “The laws of one step at coarser steps: balance on a family (with each relatum listed once), dissipation and running down (holding what stands only at the coarse ends) compose across the fine steps inside a coarse step, and closure composes exactly; so the law of one exchange and the exact conditions of coming and ceasing to stand hold at the coarse step; the converse does not compose, and only active relata giving and taking are step-relative”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；统一计划只在 §10 的 P36 对照表后加入 2026-10-14 的对照表；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; the unification plan only adds the 14 October 2026 rename table after the P36 table in section 10; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026年10月17日，全库审查（2026年10月16–17日，CHANGES.md）第 B6 项：下一步与限制原把连续时间列为之后要做，离散读法之塔（continuous-time-as-tower）已落地，改为剩下的实数时间。schema 1，无 text_versions；原文见 git。",
+      "en": "17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), item B6: the next step and the limitations listed continuous time as next; the tower of discrete readings (continuous-time-as-tower) has landed, so they now name what remains, real-valued time. Schema 1, no text_versions; earlier text in git."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): THE-THEORY-OF-BECOMING.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "19 October 2026, A4 (Ren 19 October: \"integrate all, the theory is a whole, not stitched pieces, go ahead\"): The rest family's Chinese term in the live Chinese fields is now 停息 (1 uses), as in the chapter (DELEGATED-CHOICES D45 (4)); the English is unchanged. The claim is unchanged.",
+      "zh": "2026年10月19日，A4（Ren 10月19日的回答：“integrate all, the theory is a whole, not stitched pieces, go ahead”）：中文字段中停息家族的用语由“静止”改为“停息”（1 处），与理论章一致（DELEGATED-CHOICES D45 (4)）；英文不变。论断不变。"
+    },
+    {
+      "en": "19 October 2026, R22 (the names of the nineteenth review): BECOMING-UNIFICATION-PLAN.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: BECOMING-UNIFICATION-PLAN.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月19日，R22（第十九次审查的名称）：BECOMING-UNIFICATION-PLAN.md 重新指向。自所审哈希以来，所引文件只在 R22 改名之处改动：BECOMING-UNIFICATION-PLAN.md，只改名称（第十九次审查 N1、N2；对照表见 development/r22-names/RENAME-TABLE.json）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Premises.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Premises.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Premises.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Premises.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: World.sample_acting (now Flow.sample_acting); World.sample_arisingRecurs (now Web.sample_unceasing); World.sample_ceasingRecurs (now Web.sample_ceasing); World.sample_taking (now Flow.sample_taking). Removed, with the statement kept under one name: mem_steps_of_between (now steps_of_within). Proof bindings (Change.lean, Sampling.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Change.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Sampling.lean, takes as its final section ExchangeFlows, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：作为纯转发删去（各自只把一条律应用于自己的约束变量），改提该律：World.sample_acting（现为 Flow.sample_acting）；World.sample_arisingRecurs（现为 Web.sample_unceasing）；World.sample_ceasingRecurs（现为 Web.sample_ceasing）；World.sample_taking（现为 Flow.sample_taking）。删去，陈述以一个名称保留：mem_steps_of_between（现为 steps_of_within）。证明绑定（Change.lean、Sampling.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Change.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；Sampling.lean，以末节收入 ExchangeFlows（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 73 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/fec1222bf3f1930e/laws-at-coarser-steps.json and in git.",
+      "zh": "2026-10-20：73 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/fec1222bf3f1930e/laws-at-coarser-steps.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Sampling.lean to Prelude.lean, between_of_mem_steps. Proof bindings (Change.lean, Population.lean, Premises.lean, Sampling.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Change.lean, Population.lean, Premises.lean, Sampling.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Sampling.lean 到 Prelude.lean：between_of_mem_steps。证明绑定（Change.lean、Population.lean、Premises.lean、Sampling.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Change.lean、Population.lean、Premises.lean、Sampling.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "21 October 2026, EC2 (study section 312): declarations moved with their full names: balance_over_stretch_on to Becoming.Prelude, the one stretch balance from which the stretch balances of flows, amounts and courses are now derived. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC2（研究第 312 节）：声明以完整名称移动：balance_over_stretch_on 移至 Becoming.Prelude，即唯一的跨段平衡，流、量与过程的跨段平衡现由其导出。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Counted to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    }
+  ]
+}

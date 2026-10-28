@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "fulfillment-chance-floor",
   "title": {
     "zh": "实际履行导出同律机会下界",
@@ -8,17 +8,110 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
-  "claim": {
-    "zh": "有限配对情形中，逐情形覆盖有效需求且旧支持仍工作的目标，推出同一正总权重下的质量下界；对所有自然数权重保持质量等价于覆盖。",
-    "en": "In a finite coupled domain, pointwise coverage of demand with still-working old support yields a mass floor under one positive total weight; preservation for all natural weights characterizes inclusion."
+  "reviewed_at_utc": "2026-10-28T11:56:16+00:00",
+  "statement": {
+    "en": "Where each listed case realizing a demand with still-working old support realizes the new support, the first's mass is at most the second's under every natural weight; with equality decided, every weight keeps one claim's mass within another's exactly when the second holds in each case of the first.",
+    "zh": "凡每个列出的、实现需求且旧支持仍工作的情形都实现新支持，则在每个自然数权重下前者的质量至多为后者的；相等可判定时，每个权重都使一项主张的质量不超过另一项的，恰当后者在前者的每个情形中都实现。"
   },
+  "laws": [
+    {
+      "en": "The mass of an event on a listed domain under a natural weighting of its entries is the total weight of the entries where it holds, an entry listed twice counting twice. Under every weighting mass follows inclusion on the domain, and it rises where an included event lacks an entry of positive weight that the other has.",
+      "zh": "事件在一个列出的域上、在条目的自然数权重下的质量，是它成立的条目的权重之和，列出两次的条目计两次。在每个权重下质量随域上的包含而不降；被包含的事件缺少另一事件所有的一个正权重条目时，质量严格升高。",
+      "declarations": [
+        "Becoming.mass",
+        "Becoming.IncludedOn",
+        "Becoming.mass_mono",
+        "Becoming.mass_lt_of_added"
+      ]
+    },
+    {
+      "en": "With equality of entries decided, every natural weighting keeps one event's mass at most another's exactly when the first is included in the second on the domain, the weightings counting one entry giving the converse.",
+      "zh": "条目的相等可判定时，每个自然数权重都使一个事件的质量至多为另一个的，当且仅当前者在域上包含于后者，反方向由只计一个条目的权重给出。",
+      "declarations": [
+        "Becoming.dirac",
+        "Becoming.every_weighting_iff"
+      ]
+    },
+    {
+      "en": "On a frame whose claims are read at listed configurations by Boolean events: where every listed configuration realizing the demand and the old support realizes the new support, under every natural weight the mass of demand met by old support is at most the new support's, and that at most the whole domain's.",
+      "zh": "在一个框架上，其主张在列出的配置上以布尔事件读取：凡每个实现需求与旧支持的列出配置都实现新支持，则在每个自然数权重下，被旧支持满足的需求的质量至多为新支持的，后者至多为整个域的。",
+      "declarations": [
+        "Becoming.Courses.claims_floor"
+      ]
+    },
+    {
+      "en": "On such a frame, with equality of configurations decided, one claim's mass is at most another's under every natural weight exactly when every listed configuration realizing the first realizes the second.",
+      "zh": "在这样的框架上，配置的相等可判定时，一项主张的质量在每个自然数权重下都至多为另一项的，当且仅当实现前者的每个列出配置都实现后者。",
+      "declarations": [
+        "Becoming.Courses.claims_every_weighting_iff"
+      ]
+    },
+    {
+      "en": "A due protection is the demand together with the old support that still works, and a new route fulfils it where it works at every listed entry where the protection was due. Then, with a positive total weight, the protection's mass is at most the route's, and the route's at most the total.",
+      "zh": "应有的保护是需求连同仍工作的旧支持；新路线在保护应有的每个列出条目都工作，即履行它。这时，总权重为正时，保护的质量至多为路线的，路线的至多为总量。",
+      "declarations": [
+        "Becoming.ChanceFloors.total",
+        "Becoming.ChanceFloors.target",
+        "Becoming.ChanceFloors.Fulfilled",
+        "Becoming.ChanceFloors.fulfillment_gives_chance_floor"
+      ]
+    },
+    {
+      "en": "Repair, the due protection or a candidate, fulfils the protection and covers the candidate; a candidate working at a listed entry of positive weight where the protection was not due gives repair more mass than the protection.",
+      "zh": "修复（应有的保护或一个候选）履行保护并覆盖候选；候选在保护并非应有、权重为正的列出条目上工作时，修复的质量大于保护的。",
+      "declarations": [
+        "Becoming.ChanceFloors.repair",
+        "Becoming.ChanceFloors.repair_covers_target_and_candidate",
+        "Becoming.ChanceFloors.repair_adds_new_protection"
+      ]
+    },
+    {
+      "en": "In a witness of two entries of weight one, a route with the same mass as the due protection, one of a total two, fails at the entry where the protection is due, and so does not fulfil it.",
+      "zh": "在两个权重为一的条目的见证中，一条与应有保护质量相同（总量二中的一）的路线，在保护应有的条目上失败，所以不履行它。",
+      "declarations": [
+        "Becoming.ChanceFloors.positive_chance_can_miss_due_protection"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "有限情形列表、自然数事件权重、目标 demand AND oldWorks 及 Fulfilled；概率解释需正总权重。",
       "en": "Finite event enumeration, natural event weights, target demand AND oldWorks, and Fulfilled; probability interpretation requires positive total weight."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "An event-level definition of repair does not ensure its timely, authorized implementation.",
+      "zh": "以事件定义的修复不保证及时、有权限的实际实施。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Weights are not ethical importance.",
+      "zh": "权重不是伦理重要性。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ChanceAdequacy.lean",
+      "detail": {
+        "zh": "positive_chance_can_miss_due_protection：同一法则下同成功率不代表逐情形履行：一条成功机会为正、总成功与应有保护相同的路线，恰在保护应有之处失败。",
+        "en": "positive_chance_can_miss_due_protection: equal success under one law need not fulfil the undertaking pointwise: a route of positive chance with the due protection's total success fails exactly where the protection was due."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.ChanceFloors, Becoming.Courses and Becoming.Weighted are bound to passing receipts in becoming-checks, which report an empty axiom list for every cited declaration and verify that the core compiles from Lean's prelude alone. The periphery original, now provenance, passed its own Lean 4.29.1 check (chance-adequacy-verification.json). Author review only.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.ChanceFloors、Courses 与 Weighted 的当前字节绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空，核心只用 Lean 前导即可编译。外围原本（现为来历）通过其自身的 Lean 4.29.1 检查（chance-adequacy-verification.json）。只有作者审查。"
+  },
+  "next_delta": {
+    "en": "A due protection read off an actual run: its demand, old support and new route as claims of the run's configurations, with the coupling of entries and the window of support taken from the run, so that the floor holds of an actual takeover.",
+    "zh": "从一次实际运行读出应有的保护：其需求、旧支持与新路线作为运行配置的主张，条目的配对与支持时段取自运行，使下界对实际接管成立。"
+  },
   "correspondence": {
     "zh": "配对、时段、覆盖与旧承担有效性需要证据；权重不是伦理重要性。",
     "en": "Coupling, time window, coverage and validity of the undertaking need evidence; weights are not ethical importance."
@@ -37,28 +130,11 @@
     {
       "id": "practical-judgment-under-living-significance",
       "detail": {
-        "zh": "J3 支持其承担解释；纯质量不等式没有这个规范前提。",
-        "en": "J3 supports the undertaking interpretation; the pure mass inequality does not itself require that normative premise."
+        "zh": "实践承诺中的有界责任支持其承担解释；纯质量不等式没有这个规范前提。",
+        "en": "Bounded responsibility, one of the practical commitments, supports the undertaking interpretation; the pure mass inequality does not itself require that normative premise."
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ChanceAdequacy.lean",
-      "detail": {
-        "zh": "同一法则下同成功率不代表逐情形履行；事件修复的定义不保证及时有权限的实际实施。",
-        "en": "Equal success under one law need not fulfill the undertaking pointwise; an event-level repair definition does not ensure timely authorized implementation."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "同一法则下同成功率不代表逐情形履行；事件修复的定义不保证及时有权限的实际实施。",
-    "en": "Equal success under one law need not fulfill the undertaking pointwise; an event-level repair definition does not ensure timely authorized implementation."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ChanceAdequacy.lean",
@@ -76,7 +152,13 @@
       "sha256": "5c7679475f09fa75d339cc347c68aa62131d4c10e6517760fb565100b2181bbc",
       "declarations": [
         "Becoming.ChanceFloors.fulfillment_gives_chance_floor",
-        "Becoming.ChanceFloors.positive_chance_can_miss_due_protection"
+        "Becoming.ChanceFloors.positive_chance_can_miss_due_protection",
+        "Becoming.ChanceFloors.total",
+        "Becoming.ChanceFloors.target",
+        "Becoming.ChanceFloors.Fulfilled",
+        "Becoming.ChanceFloors.repair",
+        "Becoming.ChanceFloors.repair_covers_target_and_candidate",
+        "Becoming.ChanceFloors.repair_adds_new_protection"
       ]
     },
     {
@@ -250,10 +332,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "接管时复用此桥；新增任务仍须建立真实实施与有效承担。",
-    "en": "Reuse this bridge for takeover; additional tasks still require actual implementation and warranted undertakings."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -285,6 +363,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and ChanceAdequacy) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.ChanceFloors, Becoming.Courses and Becoming.Weighted). 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and ChanceAdequacy）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.ChanceFloors, Becoming.Courses and Becoming.Weighted）。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the home section; the claim split into seven laws, each read against its declarations in Becoming.Weighted, Becoming.Courses and Becoming.ChanceFloors (the claim's \"preservation for all natural weights characterizes inclusion\" with the decided equality the Lean takes); the limitation to two does-not-show items, the witnessed half kept as the counterexample, now naming its declaration, and the standard boundaries no-ethical-premise and decidability; the retired label J3 in the related detail read as bounded responsibility, a practical commitment; six declarations added to the references of ChanceFloors; no premise, status or source hash changed. Every earlier sentence is mapped in [fulfillment-chance-floor.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/fulfillment-chance-floor.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主章写出陈述；主张拆为七条规律，各条对照其在 Becoming.Weighted、Courses 与 ChanceFloors 中的声明核读（主张中“对所有自然数权重保持质量等价于覆盖”加上 Lean 所取的相等可判定）；限制改为两条“未表明”，有见证的一半保留为反例并写明其声明，加通用边界 no-ethical-premise、decidability；相关说明中的已退休标签 J3 读作实践承诺中的有界责任；六个声明加入 ChanceFloors 的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [fulfillment-chance-floor.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/fulfillment-chance-floor.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/89fc94daf5da6139/fulfillment-chance-floor.json",
+      "sha256": "89fc94daf5da6139383553f1f28e85e1530e5717dce34fd44608dc3447a51033",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/b9d1f8d4d39138c2/fulfillment-chance-floor.json",
+      "sha256": "b9d1f8d4d39138c2f617e5b63fba18487bc2508959725ed82b1ac282a8d327e0",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

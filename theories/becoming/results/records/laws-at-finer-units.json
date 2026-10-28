@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "laws-at-finer-units",
   "title": {
     "zh": "较细的单位上的一步规律",
@@ -8,28 +8,163 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-28T11:46:07+00:00",
   "statement": {
-    "zh": "一个条件跨过一步开始立着与不再立着的确切条件、上升由给予、下降由取用、生起需要活跃的给予者，在每一分辨率下成立。一次交换的规律在变化按单位读出时成立，按原始计数读出时不成立；规律 1 的复现与规律 3 的界要把细分算作给予。",
-    "en": "The exact conditions of coming and ceasing to stand, a rise given to, a fall taken from, and arising needing an active giver hold at every resolution. The law of one exchange holds with change read in the unit, not raw counts; law 1's recurrence and law 3's bound need refinement counted as giving."
+    "en": "Exact laws of coming and ceasing to stand, a rise given to, a fall taken from, and arising needing an active giver hold at every resolution. The law of one exchange holds with change read in the unit, not raw counts; the recurrence law and the bound need refinement counted as giving or a fixed unit.",
+    "zh": "一个条件跨过一步开始立着与不再立着的确切条件、上升由给予、下降由取用、生起需要活跃的给予者，在每一分辨率下成立。一次交换的规律在变化按单位读出时成立，按原始计数读出时不成立；复现规律与界要把细分算作给予，或要单位固定。"
   },
-  "claim": {
-    "zh": "把单位读为跨过从 t 起的一步分成 r t 个较细的单位（Becoming.Resolution 的 Flow.BalancesAt），并把平衡局部到一个家族与一步（Flow.BalancesAtOn）；变化按单位读出：条件上升指步后的水平超过 r t 乘以步前的水平（Web.RisesAt），下降反之（Web.FallsAt）；r 恒为一时各为原来的概念（Flow.balancesAtOn_one、Web.risesAt_one、Web.fallsAt_one、Flow.runsDownOnAt_one）。不对 r 加任何条件：一个条件在该分辨率下平衡时，开始立着恰当此前立在零且被给的多于被取的，不再立着恰当此前立着且被取的等于它按较细单位所有的连同被给的（Flow.BalancesAtOn.comesToStand_iff、ceasesToStand_iff）；按单位的上升被给予、下降被取用（rise_given、fall_taken）；没有从家族取用时，成员按单位上升恰当有参与者给予它（rises_iff_gives），家族上的耗散排除这一点（Flow.DissipatesOn.still_untaken_at）；体现的关系项只由一个不是它自己的活跃给予者生起（arises_given）；没有什么从无中开始立着（comes_from_standing）。一次交换：家族不重复地包含所立者、在该分辨率下平衡并被耗散时（Flow.RunsDownOnAt），有条件按单位上升或下降，恰当家族步后的总水平低于 r t 乘以步前的总水平（Flow.RunsDownOnAt.changes_iff）。按原始计数读出则不成立：单位一分为二、什么都不交换时，每个水平加倍，原始计数下处处上升，而按单位没有变化、总水平不降（Doubling.raw_reading_fails）。所需按与水平相同的单位读（一种读法）：细分为 r t > 0 时，要求不变、所需与所需的水平都按较细单位读出的形成，步后被支持恰当步前被支持（Web.supported_unchanged_by_split）；跨步比较所需时按单位因子读出（unitFactor、continuing_restores_in_unit、consumed_continues_transformed_in_unit、inactive_below_in_unit）；按单位的上升由被支持者给予（Flow.BalancesAtOn.rise_given_by_supported）。一段上数损失的规律要固定单位：单位每步加倍、无给予者时，一个形成每步取一个较细单位，永远活跃且被支持（Feeding.endless），细分供给了它。",
-    "en": "Read the unit as splitting into r t finer units across the step from t (Flow.BalancesAt of Becoming.Resolution), with balance made local to a family and a step (Flow.BalancesAtOn), and read change in the unit: a condition rises where its level after the step exceeds r t times its level before (Web.RisesAt), and falls where it is below (Web.FallsAt); with r constantly one each is the original notion (Flow.balancesAtOn_one, Web.risesAt_one, Web.fallsAt_one, Flow.runsDownOnAt_one). With no condition on r: with balance at a condition at that resolution, it comes to stand exactly when it stood at nothing and was given more than was taken from it, and ceases to stand exactly when it stood and what was taken from it is all it had in the finer unit with all it was given (Flow.BalancesAtOn.comesToStand_iff, ceasesToStand_iff); a rise in the unit is given to and a fall taken from (rise_given, fall_taken); where nothing is taken from the family, a member rises in the unit exactly when something taking part gives to it (rises_iff_gives), which dissipation on the family excludes (Flow.DissipatesOn.still_untaken_at); an embodied relatum arises only as an active giver other than itself gives to it (arises_given); nothing comes to stand from nothing (comes_from_standing). One exchange: across a step at which a family holding what stands without repetition is balanced at that resolution and dissipated on (Flow.RunsDownOnAt), some condition rises or falls in the unit exactly when the family's total after the step is below r t times its total before (Flow.RunsDownOnAt.changes_iff). Read in raw counts it fails: with the unit splitting in two and nothing exchanged every level doubles, every condition rises in raw counts, and nothing changes in the unit, the total not falling (Doubling.raw_reading_fails). Need is read in the unit of the level (a reading): with the unit splitting into r t > 0, a formation whose requirements stay and whose needs and required levels are read in the finer unit is supported after the step exactly when before (Web.supported_unchanged_by_split); needs compared across steps are read through the unit factor (unitFactor, continuing_restores_in_unit, consumed_continues_transformed_in_unit, inactive_below_in_unit); a rise in the unit is given by a supported formation (Flow.BalancesAtOn.rise_given_by_supported). The laws counting a loss over a stretch need a fixed unit: with the unit doubling at every step and nothing giving, a formation taking one finer unit at every step is active and supported forever (Feeding.endless), fed by the refinement."
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "无全局前提：每条的条件写在规律之内，在所用的一步与家族上。不对细分 r 加任何条件。",
-      "en": "No global premise: the condition of each law is stated inside it, at the step and family used. No condition on the refinement r."
+      "en": "At a resolution r, the unit splitting into r t finer units across the step from t, a flow balances on a family across the step where each member's level after it with what is taken from it is r t times its level before, plus what is given to it; read in the unit, a condition rises where its level after exceeds r t times its level before, and falls where it is below. With r constantly one each is the spine's notion.",
+      "zh": "在分辨率 r 下，单位跨过从 t 起的一步分成 r t 个较细单位：流在该步平衡于一个家族，是指每个成员步后的水平连同从它取走的，等于 r t 乘以步前的水平、再加上给它的；按单位读出，条件上升指步后的水平超过 r t 乘以步前的水平，下降指低于它。r 恒为一时各为脊柱原来的概念。",
+      "declarations": [
+        "Becoming.Flow.BalancesAtOn",
+        "Becoming.Web.RisesAt",
+        "Becoming.Web.FallsAt",
+        "Becoming.Flow.balancesAtOn_one",
+        "Becoming.Web.risesAt_one",
+        "Becoming.Web.fallsAt_one"
+      ]
     },
     {
-      "zh": "表示：变化按单位读出（Web.RisesAt、Web.FallsAt），这是表示的一项承诺（如何量度变化），不是关于世界的前提。",
-      "en": "Representation: change is read in the unit (Web.RisesAt, Web.FallsAt), a commitment of the representation (how change is measured), not a premise on worlds."
+      "en": "With no condition on r, where a flow balances at resolution r on a family across a step, a member comes to stand exactly when it stood at nothing and was given more than was taken from it, and ceases to stand exactly when it stood and what was taken from it is r t times its level before, plus all it was given.",
+      "zh": "不对 r 加任何条件：流在一步上以分辨率 r 平衡于一个家族时，成员开始立着，恰当此前立在零且被给的多于被取的；不再立着，恰当此前立着且被取的等于 r t 乘以它步前的水平、再加上所被给的。",
+      "declarations": [
+        "Becoming.Flow.BalancesAtOn.comesToStand_iff",
+        "Becoming.Flow.BalancesAtOn.ceasesToStand_iff"
+      ]
+    },
+    {
+      "en": "Where a flow balances at resolution r on a family across a step, a member's rise in the unit is given to and its fall in the unit taken from; where nothing is taken from the family, some member rises in the unit exactly when something taking part gives to some member, and where the flow is also dissipated on the family, no member rises in the unit.",
+      "zh": "流在一步上以分辨率 r 平衡于一个家族时，成员按单位的上升被给予、按单位的下降被取用；没有从家族取用时，有成员按单位上升，恰当有参与者给予某个成员；流又在家族上耗散时，没有成员按单位上升。",
+      "declarations": [
+        "Becoming.Flow.BalancesAtOn.rise_given",
+        "Becoming.Flow.BalancesAtOn.fall_taken",
+        "Becoming.Flow.BalancesAtOn.rises_iff_gives",
+        "Becoming.Flow.DissipatesOn.still_untaken_at"
+      ]
+    },
+    {
+      "en": "Where a flow balances at resolution r on a family across a step: a member standing exactly while active at both ends of the step, given to only by active formations, arises only as an active formation taking part, other than itself, gives to it; and with the flow also dissipated on the family, a member comes to stand only where the family stood at something before.",
+      "zh": "流在一步上以分辨率 r 平衡于一个家族时：一个在该步两端恰在活跃时立着、只被活跃的形成给予的成员，只在一个参与的、不是它自己的活跃形成给予它时生起；流又在家族上耗散时，成员只在家族此前立在某物之处开始立着。",
+      "declarations": [
+        "Becoming.Flow.BalancesAtOn.arises_given",
+        "Becoming.Flow.BalancesAtOn.comes_from_standing"
+      ]
+    },
+    {
+      "en": "Across a step at which a family without repetition holds whatever stands before or after it, and a flow balances on it at resolution r and dissipates on it, some condition rises or falls in the unit exactly when the family's total after the step is below r t times its total before; with r constantly one this running down is the spine's.",
+      "zh": "在一步上，一个不重复的家族包含步前或步后所立的一切、流以分辨率 r 平衡于它并耗散于它时，有条件按单位上升或下降，恰当家族步后的总水平低于 r t 乘以步前的总水平；r 恒为一时，这种下降就是脊柱的下降。",
+      "declarations": [
+        "Becoming.Flow.RunsDownOnAt",
+        "Becoming.Flow.RunsDownOnAt.changes_iff",
+        "Becoming.Flow.runsDownOnAt_one"
+      ]
+    },
+    {
+      "en": "Read in raw counts the law of one exchange fails, in a witness: with the unit splitting in two at every step and nothing exchanged, the family of one condition, standing at one at the first step and doubling at each, runs down at that resolution at every step, while the condition rises in raw counts across every step, nothing rises or falls in the unit, and its total after a step is not below twice its total before.",
+      "zh": "按原始计数读出，一次交换的规律不成立，见证：单位每步一分为二、什么都不交换时，一个在第一步立在一、每步加倍的条件所成的家族在该分辨率下每步都下降，而该条件按原始计数每步都上升，按单位没有上升或下降，步后的总水平也不低于步前的两倍。",
+      "declarations": [
+        "Becoming.Doubling.runsDown",
+        "Becoming.Doubling.raw_reading_fails"
+      ]
+    },
+    {
+      "en": "Across a step at which the unit splits into r t > 0 finer units, a formation whose requirements stay, and each of whose needs and required levels is r t times as large after the step, is supported after the step exactly when it was before.",
+      "zh": "在单位分成 r t > 0 个较细单位的一步上，一个要求不变、每项所需与所需条件的水平在步后都是 r t 倍的形成，步后被支持恰当步前被支持。",
+      "declarations": [
+        "Becoming.Web.supported_unchanged_by_split"
+      ]
+    },
+    {
+      "en": "With the unit factor over k steps from T the product of their splits (one with a fixed unit): a formation supported at T + k, depending there on a condition at a need at least its need at T times the factor, finds the condition at least at that; where the level at T + k is below that, a formation supported there does not both still depend on the condition and keep so large a need.",
+      "zh": "自 T 起 k 步的单位因子是这些步上细分之积（单位固定时为一）：在 T + k 被支持、在那里依存于一个条件且所需至少为 T 时所需乘以因子的形成，见到该条件至少如此；T + k 的水平低于 T 时所需乘以因子时，在 T + k 被支持的形成，不会既仍依存于该条件、又保持至少那样大的所需。",
+      "declarations": [
+        "Becoming.unitFactor",
+        "Becoming.unitFactor_one",
+        "Becoming.Web.continuing_restores_in_unit",
+        "Becoming.Web.consumed_continues_transformed_in_unit"
+      ]
+    },
+    {
+      "en": "Where a formation is active after a step only while supported then, a dependence whose condition after the step is below r t times its need before, persisting after the step at a need at least r t times the need before, belongs to a formation not active after the step.",
+      "zh": "形成在一步之后只在当时被支持时活跃：一个依存，其条件步后的水平低于 r t 乘以步前的所需，步后仍在、所需至少为步前的 r t 倍，则其形成在步后不活跃。",
+      "declarations": [
+        "Becoming.Web.inactive_below_in_unit"
+      ]
+    },
+    {
+      "en": "With a flow balancing at resolution r at a condition across a step, a rise of the condition in the unit is given by a formation taking part; where every formation giving to it there is supported, it is given by a supported formation taking part.",
+      "zh": "流在一步上以分辨率 r 在一个条件处平衡时，该条件按单位的上升由一个参与的形成给予；凡在那里给予它的形成都被支持时，它由一个参与的、被支持的形成给予。",
+      "declarations": [
+        "Becoming.Flow.BalancesAtOn.rise_given_by_supported"
+      ]
+    },
+    {
+      "en": "Consumption with nothing giving need not end at a finer unit, in a witness: with the unit doubling at every step, a formation takes one finer unit from a condition across every step and nothing gives to it, the flow balances at that resolution and dissipates on the condition, and the formation is active and supported at every step.",
+      "zh": "在较细单位下，无给予者的消耗不必终止，见证：单位每步加倍，一个形成每步从一个条件取一个较细单位，没有什么给予它，流在该分辨率下平衡并在该条件上耗散，而该形成每步都活跃且被支持。",
+      "declarations": [
+        "Becoming.Feeding.endless"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "No global premise, and none is derived: the condition of each law is stated inside it, at the step and family used; no condition on the refinement r, except r t > 0 where support across a split is compared.",
+      "zh": "无全局前提，也不推出前提：每条的条件写在规律之内，在所用的一步与家族上；不对细分 r 加任何条件，只在比较跨过细分的支持时要求 r t > 0。"
+    },
+    {
+      "en": "Representation: change is read in the unit (Web.RisesAt, Web.FallsAt), a commitment of the representation (how change is measured), not a premise on worlds.",
+      "zh": "表示：变化按单位读出（Web.RisesAt、Web.FallsAt），这是表示的一项承诺（如何量度变化），不是关于世界的前提。"
+    },
+    {
+      "en": "Need is read in the unit of the level: across a split into r t > 0 finer units, needs and required levels are read r t times over, and needs compared across steps through the unit factor; a commitment of the representation, not a premise on worlds.",
+      "zh": "所需按与水平相同的单位读出：在分成 r t > 0 个较细单位的细分上，所需与所需条件的水平都按 r t 倍读出，跨步比较所需时经单位因子读出；这是表示的承诺，不是关于世界的前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "At a refining unit the recurrence law and the bound on falls are not restated: they use the least difference in a fixed unit, fail in witnesses fed by the refinement, and hold with it counted as a giving or the unit fixed from some step on.",
+      "zh": "在细分的单位下不重述复现规律与下降之界：它们用固定单位中的最小差异，在由细分供给的见证中不成立，在把细分算作给予、或单位自某步起固定时成立。",
+      "kind": "scope",
+      "witness": "Becoming.refinement_feeds_witnesses"
+    },
+    {
+      "en": "Where the refinement feeds what stands, consumption with nothing giving need not end and a reserve may fall forever, so the laws counting a loss over a stretch need a fixed unit or the refinement counted as a giving.",
+      "zh": "细分供给所立者时，无给予者的消耗不必终止，储备可永远下降，所以一段上数损失的规律要固定单位，或把细分算作给予。",
+      "kind": "scope",
+      "witness": "Becoming.Feeding.endless"
+    },
+    {
+      "en": "The law that ceasing needs arising is not restated at a finer unit: it concerns what holds, not amounts, so it holds as stated at every unit.",
+      "zh": "不在较细单位下重述“不再活跃需要生起”：它关于成立与否，不关于量，所以在每一单位下按原样成立。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
+      "detail": {
+        "zh": "Doubling：单位一分为二、什么都不交换，每个水平加倍；原始计数下处处上升，按单位没有变化、总水平不降。所以一次交换的规律是按单位读出的变化的规律。",
+        "en": "Doubling: the unit splits in two and nothing is exchanged, so every level doubles; every condition rises in raw counts while nothing changes in the unit and the total does not fall. So the law of one exchange is a law of change read in the unit."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (check_becoming.py): the current bytes of the core modules Becoming.Units and Becoming.Resolution are bound to core receipt 20261019T231053.882924Z, and those of Becoming.Locality and Becoming.Prelude to core receipts under becoming-checks/; every cited declaration has an empty axiom report, and the receipts record that the core compiles from Lean's prelude alone. Author counterreview (integration note, section 81); no independent review.",
+    "zh": "Lean 4.29.1 合并检查器（check_becoming.py）实查：核心模块 Becoming.Units 与 Resolution 的当前字节绑定核心回执 20261019T231053.882924Z，Locality 与 Prelude 绑定 becoming-checks/ 下的核心回执；所引声明的公理报告均为空，回执记录核心只用 Lean 前导即可编译。作者反审（整合文档第 81 节）；无独立审查。"
+  },
+  "next_delta": {
+    "en": "State the laws of dependence counting a loss over a stretch with the refinement counted as a giving; test a reading that changes the step and the unit together; and connect these laws to the law that a flow dissipates on a family exactly where, with a record counted, the family with its record loses nothing.",
+    "zh": "陈述把细分算作给予时一段上数损失的依存规律；检验同时改变步与单位的读法；把这些规律与“流在家族上耗散，恰当计入某个记录时家族连同其记录一无所失”的规律相连。"
+  },
   "correspondence": {
-    "zh": "零前提计划把整单位列为表示的一项承诺（Ren 的第 4 项），问各条规律在超出整单位的量下是否成立。本结果对一步的规律回答：规律 4 与开始、不再立着在每一分辨率下成立；规律 1 的一次交换在变化按单位读出时成立。这是对表示承诺的检验：结论是变化须按单位量度，不是规律失效。",
-    "en": "The zero-premise plan lists whole units as a commitment of the representation (Ren's item 4) and asks which laws survive amounts finer than them. This result answers for the laws of one step: law 4 and coming and ceasing to stand hold at every resolution; law 1's one exchange holds with change read in the unit. It tests a commitment of the representation: what it finds is that change must be measured in the unit, not that the law fails."
+    "en": "The zero-premise plan lists whole units as a commitment of the representation (Ren's item 4) and asks which laws survive amounts finer than them. This result answers for the laws of one step: law 4 and coming and ceasing to stand hold at every resolution; law 1's one exchange holds with change read in the unit. It tests a commitment of the representation: what it finds is that change must be measured in the unit, not that the law fails. Reading need in the unit of the level, with r t > 0, was a proposal Ren answered with “please agree” on 12 October 2026 (provenance, not warrant). The names (BalancesAtOn, RisesAt, FallsAt, RunsDownOnAt, Doubling) are an AI choice.",
+    "zh": "零前提计划把整单位列为表示的一项承诺（Ren 的第 4 项），问各条规律在超出整单位的量下是否成立。本结果对一步的规律回答：规律 4 与开始、不再立着在每一分辨率下成立；规律 1 的一次交换在变化按单位读出时成立。这是对表示承诺的检验：结论是变化须按单位量度，不是规律失效。所需按与水平相同的单位读（条件 r t > 0），是 Ren 2026-10-12 以“please agree”同意的提议（来源，不是依据）。名称（BalancesAtOn、RisesAt、FallsAt、RunsDownOnAt、Doubling）是 AI 所选。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
   "aliases": [
@@ -104,23 +239,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
-      "detail": {
-        "zh": "Doubling：单位一分为二、什么都不交换，每个水平加倍；原始计数下处处上升，按单位没有变化、总水平不降。所以一次交换的规律是按单位读出的变化的规律。",
-        "en": "Doubling: the unit splits in two and nothing is exchanged, so every level doubles; every condition rises in raw counts while nothing changes in the unit and the total does not fall. So the law of one exchange is a law of change read in the unit."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "规律 1 的复现与规律 3 的界用固定单位中的最小差异：在细分的单位下，细分供给所立者处它们不成立（Becoming.Resolution 的见证，refinement_feeds_witnesses），把细分算作给予时成立（World.rests_unrefuted_refinement_counted、World.arising_opens_refinement_counted），单位自某步起固定时也成立（Flow.taking_not_recurring）；本结果引用，不重证。规律 2 关于成立与否，不关于量，按原样成立。所需按与水平相同的单位读，这是 Ren 2026-10-12 决定的表示承诺（条件 r t > 0），不是关于世界的前提；储备在细分下由细分供给时可永远下降（Becoming.Resolution 的 Web.CarriesIn），一段上数损失的依存规律同样要把细分算作给予。不推出任何前提；不改 Resolution 的任何定义。名称（BalancesAtOn、RisesAt、FallsAt、RunsDownOnAt、Doubling）是 AI 所选。",
-    "en": "The recurrence of law 1 and the bound of law 3 use the least difference in a fixed unit: at a refining unit they fail where the refinement feeds what stands (the witnesses of Becoming.Resolution, refinement_feeds_witnesses), and hold with the refinement counted as a giving (World.rests_unrefuted_refinement_counted, World.arising_opens_refinement_counted) or with the unit fixed from some step on (Flow.taking_not_recurring); these are cited, not reproved. Law 2 concerns what holds, not amounts, and survives as stated. Need is read in the unit of the level, a commitment of the representation Ren decided on 12 October (condition r t > 0), not a premise on worlds; a reserve fed by the refinement may fall forever (Web.CarriesIn of Becoming.Resolution), and the laws of dependence counting a loss over a stretch likewise need the refinement counted as a giving. No premise is derived; no definition of Resolution is changed. The names (BalancesAtOn, RisesAt, FallsAt, RunsDownOnAt, Doubling) are the AI's."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：新核心模块 Becoming.Units 的 31 项定理全部空依赖；同一回执覆盖包内 75 个模块，共 4518 项定理／6370 项声明审计；外围回执 20261013T095049.338744Z 通过。先在暂存树中从前导编译，无警告，逐条 #print axioms 全部为空。核心闭包 49 个模块，每条源声明的公理报告为空，只用 Lean 内置前导即可编译。尚无独立审查，作者反审见整合文档 §81。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 31 theorems of the new core module Becoming.Units all have empty axiom reports; the same receipt covers the package's 75 modules with 4518 theorems/6370 declaration audits; periphery receipt 20261013T095049.338744Z passed. It was first compiled from the prelude in a scratch tree, with no warnings and every #print axioms empty. The core closure is 49 modules, every source declaration in it with an empty axiom report, compiling from Lean's prelude alone. There is no independent review yet; the author's counterreview is in §81 of the integration note."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
@@ -192,7 +310,11 @@
       "sha256": "61a9fbb7c3624f887afd09df8c43b59a5ec08209811b3e1b9f20e7efa1e20fbb",
       "declarations": [
         "Becoming.Flow.BalancesAt",
-        "Becoming.Flow.BalancesAt.over"
+        "Becoming.Flow.BalancesAt.over",
+        "Becoming.World.rests_unrefuted_refinement_counted",
+        "Becoming.World.arising_opens_refinement_counted",
+        "Becoming.Flow.taking_not_recurring",
+        "Becoming.refinement_feeds_witnesses"
       ]
     },
     {
@@ -302,10 +424,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "一段上数损失的依存规律在细分算作给予时的形式（如 rest-with-refinement-counted）；同时改变步与单位的检验，扩展 continuous-time-as-tower；这些规律与 entropy-history-and-record 的 Flow.dissipatesOn_iff_conserved 的联系。",
-    "en": "The laws of dependence counting a loss over a stretch with the refinement counted as a giving (as in rest-with-refinement-counted); a joint test changing both the step and the unit, extending continuous-time-as-tower; the link of these laws to Flow.dissipatesOn_iff_conserved of entropy-history-and-record."
-  },
   "history": [
     {
       "zh": "2026-10-11 Units：新增，按零前提计划的第 4 步（超出整单位的量）；新核心模块 Becoming.Units（导入 Becoming.Resolution，不改其定义），由“0 axiom completeness”会话起草并验证，按工作板认领；是对表示承诺（量的单位）的检验，不是新的前提；见整合文档 §81。",
@@ -374,6 +492,28 @@
     {
       "en": "2026-10-20: 73 bookkeeping notes condensed from 2026-10-12 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/c67d14b89f47a579/laws-at-finer-units.json and in git.",
       "zh": "2026-10-20：73 条记账性说明合并（2026-10-12 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/c67d14b89f47a579/laws-at-finer-units.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept, \"law 1's recurrence and law 3's bound\" named in words and \"or a fixed unit\" added, the other way the cited laws hold, which a does-not-show item states with its witness; the claim split into eleven laws, each read against its declarations in Units.lean (the readings in the unit, coming and ceasing to stand, rises and falls, arising and coming from standing, the law of one exchange, the doubling witness, support across a split, needs through the unit factor, inactivity below need, rises given by the supported, the feeding witness); the limitations to three does-not-show items, a third hypothesis (need read in the unit) and the correspondence (the proposal's provenance and the names); the hypothesis that no condition is put on r narrowed to except r t > 0 for support; rests_unrefuted_refinement_counted, arising_opens_refinement_counted, taking_not_recurring and refinement_feeds_witnesses, which the limitations cited, added to the references of Resolution.lean; the standard boundaries no-ethical-premise and discrete-steps cited; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [laws-at-finer-units.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-at-finer-units.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the correspondence, laws, the statement, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留，“规律 1 的复现与规律 3 的界”改用文字称呼，并补上“或要单位固定”，即所引规律成立的另一途径，由一条“未表明”连同见证写出；主张拆为十一条规律，各条对照 Units.lean 中的声明核读（按单位的读法、开始与不再立着、上升与下降、生起与从所立而来、一次交换的规律、加倍见证、跨细分的支持、经单位因子的所需、低于所需时不活跃、上升由被支持者给予、供给见证）；限制改为三条“未表明”、第三条前提（所需按单位读）与对应说明（提议的来源与名称）；“不对 r 加任何条件”的前提收窄为支持处要求 r t > 0；限制所引的 rests_unrefuted_refinement_counted、arising_opens_refinement_counted、taking_not_recurring 与 refinement_feeds_witnesses 加入 Resolution.lean 的引用；引用通用边界 no-ethical-premise 与 discrete-steps；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [laws-at-finer-units.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-at-finer-units.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及对应、规律、陈述，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/f830e3f499ac1cc9/laws-at-finer-units.json",
+      "sha256": "f830e3f499ac1cc917f96b43ca1115fb8d194f898d62a745bc5bfd00e5a6418a",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/c67d14b89f47a579/laws-at-finer-units.json",
+      "sha256": "c67d14b89f47a579e3a01bcebe84df7a64325c087749eecf6be4260340c42a15",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

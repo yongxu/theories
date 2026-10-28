@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "finite-continuation-plans",
   "title": {
     "zh": "有限接续充分性与分支方案",
@@ -8,17 +8,146 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "zh": "给定转移、观察、目标与许可，观察只取有限多个值（Fin k）时，n 步 viable 等价于存在一个依观察分支且 works 的 n 步方案（不加前提）；观察为任意类型时，在其上有到方案的选择即成立（外围的形式由经典选择取得），对每个过程提问时恰是这一选择。一阶可共同采取的行动不保证第二步。",
-    "en": "For supplied transitions, observations, target and admissibility, where observations take finitely many values (Fin k), being viable for n steps is having an n-step plan branching on observations that works, with no premise; for observations of any type this holds given a choice over them into plans, which the periphery's form takes from classical choice, and asked of every process it is exactly that choice. A common first response need not support the second step."
+  "reviewed_at_utc": "2026-10-28T11:47:48+00:00",
+  "statement": {
+    "en": "Where observations take finitely many values, being viable for n steps under supplied transitions, observations, target and admissibility is having an n-step plan that branches on observations and works; for observations of any type the same holds given a choice over them.",
+    "zh": "观察只取有限多个值时，在给定转移、观察、目标与许可下，n 步 viable 恰是有一个依观察分支且 works 的 n 步方案；观察为任意类型时，有其上的选择即同样成立。"
   },
+  "laws": [
+    {
+      "en": "For any process, map of its steps to the values they keep, guard and condition on moves: a move is usable from a class where it is allowed and enabled at each of its configurations; a class is kept for 0 steps where the guard holds throughout it, and for n + 1 steps where, besides, some usable move leaves, for each value its step keeps, the class seen after it kept for n steps.",
+      "zh": "对任一过程、其步到所保持之值的映射、守卫与动作条件：动作从一类可用，是指它在该类每个构型处都被允许且可行；一类被保持 0 步，是指守卫在其中处处成立，被保持 n + 1 步，是指此外某个可用动作对其步所保持的每个值，使之后所见之类被保持 n 步。",
+      "declarations": [
+        "Becoming.Viability.Seen",
+        "Becoming.Viability.Usable",
+        "Becoming.Viability.KeptFor"
+      ]
+    },
+    {
+      "en": "A plan of n + 1 moves gives a first move and, for each value its step keeps, a plan of n moves; it keeps the guard from a class where the guard holds there, its first move is usable and each continuation keeps the guard from the class seen. A plan that keeps the guard from a class keeps the class for its length, with no premise.",
+      "zh": "n + 1 步的方案给出第一个动作，并对其步所保持的每个值给出一个 n 步方案；它从一类保持守卫，是指守卫在该类成立、第一个动作可用、每个后续方案从所见之类保持守卫。从一类保持守卫的方案使该类被保持其长度的步数，不加前提。",
+      "declarations": [
+        "Becoming.Viability.Plan",
+        "Becoming.Viability.Plan.Keeps",
+        "Becoming.Viability.Plan.Keeps.keptFor"
+      ]
+    },
+    {
+      "en": "Where the values a step keeps are listed (Fin k), they have choice into every type, and a class is kept for n steps exactly where some plan of n moves keeps the guard from it, with no premise.",
+      "zh": "步所保持之值可列举（Fin k）时，它们对每个类型都有选择，一类被保持 n 步，恰当某个 n 步方案从它保持守卫，不加前提。",
+      "declarations": [
+        "Becoming.Viability.choiceOver_fin",
+        "Becoming.Viability.keptFor_iff_plan"
+      ]
+    },
+    {
+      "en": "For values of any type that have choice into plans of every length (every relation giving each value some plan is met by one function), a class is kept for n steps exactly where some plan of n moves keeps the guard from it.",
+      "zh": "对任意类型的值，若它们对每个长度的方案都有选择（每个给每个值以某个方案的关系都被一个函数满足），则一类被保持 n 步，恰当某个 n 步方案从它保持守卫。",
+      "declarations": [
+        "Becoming.Viability.ChoiceOver",
+        "Becoming.Viability.KeptFor.plan_of_choice",
+        "Becoming.Viability.keptFor_iff_plan_of_choice"
+      ]
+    },
+    {
+      "en": "Asked of every process, map of steps, guard and condition on moves in one universe, every kept class having a plan that keeps it holds exactly where the values kept have choice into every type of that universe: assembling one continuation for each possible value is choosing among the values.",
+      "zh": "对同一宇宙中的每个过程、步的映射、守卫与动作条件提问，每个被保持之类都有保持它的方案，恰当所保持之值对该宇宙的每个类型都有选择：为每个可能的值配一个后续，就是在这些值中选择。",
+      "declarations": [
+        "Becoming.Viability.plans_iff_choice"
+      ]
+    },
+    {
+      "en": "In Matching, where a hidden bit must be matched by the second move, the same process, guard and moves keep the starts for two steps where the step keeps the bit, and not where it keeps nothing.",
+      "zh": "在 Matching 中，隐藏的位须由第二个动作匹配：同一过程、守卫与动作，在步保持该位时使起点被保持两步，在步什么都不保持时则不能。",
+      "declarations": [
+        "Becoming.Viability.Matching.keeping_matters"
+      ]
+    },
+    {
+      "en": "A narrower class is kept wherever a wider one is, n + 1 steps of keeping give n, and a finer map of the steps keeps what a coarser one read off it keeps. A family of classes within the guard, each with a usable move leading for every value into the family, keeps each class for every horizon, as does a viability certificate, or the kernel, with one move usable throughout it.",
+      "zh": "较窄之类在较宽之类被保持处被保持，被保持 n + 1 步即被保持 n 步，较细的步映射保持由它读出的较粗映射所保持者。守卫之内的类族，若每类都有对每个值通向族内的可用动作，则每类对每个视野都被保持；viability 证书或核，有一个动作处处可用时亦然。",
+      "declarations": [
+        "Becoming.Viability.KeptFor.mono",
+        "Becoming.Viability.KeptFor.shorter",
+        "Becoming.Viability.KeptFor.finer",
+        "Becoming.Viability.keptFor_of_closed",
+        "Becoming.Viability.Certificate.keptFor",
+        "Becoming.Viability.Kernel.keptFor"
+      ]
+    },
+    {
+      "en": "The earlier finite-continuation model is an instance (periphery): its transitions are a process, observing the configuration reached is a map of steps, its class after a response and an observation is the class seen and its viability is keeping; plans translate both ways, keeping what works, and with observations in Fin k viability for n steps is a working plan with an empty axiom report.",
+      "zh": "较早的有限接续模型是实例（外围）：其转移是过程，观察所到构型是步的映射，回应与观察之后的类即所见之类，其 viable 即被保持；方案双向翻译并保持 works；观察在 Fin k 中时，n 步 viable 即一个 works 的方案，公理报告为空。",
+      "declarations": [
+        "Becoming.ContinuationCorrespondence.processOf",
+        "Becoming.ContinuationCorrespondence.successor",
+        "Becoming.ContinuationCorrespondence.post_eq_seen",
+        "Becoming.ContinuationCorrespondence.viable_iff_keptFor",
+        "Becoming.ContinuationCorrespondence.toPlan",
+        "Becoming.ContinuationCorrespondence.ofPlan",
+        "Becoming.ContinuationCorrespondence.works_iff_keeps",
+        "Becoming.ContinuationCorrespondence.keeps_iff_works",
+        "Becoming.ContinuationCorrespondence.viable_iff_plan_listed"
+      ]
+    },
+    {
+      "en": "In the earlier model (periphery), for observations of any type, n-step viability is equivalent to an observation-branching n-step plan that works, the continuations chosen by classical choice; the same equivalence follows from the core law with the choice over the observations taken from Classical.choice.",
+      "zh": "在较早模型中（外围），观察为任意类型时，n 步 viable 等价于一个依观察分支且 works 的 n 步方案，后续由经典选择取得；同一等价也由核心规律得出，观察上的选择取自 Classical.choice。",
+      "declarations": [
+        "ContinuationAdequacy.viable_iff_plan",
+        "Becoming.ContinuationCorrespondence.viable_iff_plan_by_core"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "有限步数；核心规律取 Fin k 中的观察，一般规律以观察上的选择为具名假设（ChoiceOver）；外围 ContinuationAdequacy 保留其回执所列的逻辑依赖。",
       "en": "Finite horizon; the core law takes observations in Fin k, the general law a choice over the observations as a named hypothesis (ChoiceOver); the periphery ContinuationAdequacy keeps its receipt's logical dependencies."
+    },
+    {
+      "en": "The transitions, what a step keeps (the observations), the guard (the target) and the condition on moves (admissibility) are supplied with each application.",
+      "zh": "转移、步所保持者（观察）、守卫（目标）与动作条件（许可）随每个应用给定。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "For observations of arbitrary type, viability is not shown to give a working plan without a choice over them; asked of every process, that choice is exactly what is needed.",
+      "zh": "观察为任意类型时，不表明 viable 不加选择即给出 works 的方案；对每个过程提问，所需的恰是该选择。",
+      "kind": "converse",
+      "witness": "Becoming.Viability.plans_iff_choice"
+    },
+    {
+      "en": "Keeping a class for every finite horizon does not give one infinite plan.",
+      "zh": "对每个有限视野保持一类，不给出一个无限方案。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "How a step comes to keep sufficient observations is not modelled: what a step keeps is supplied.",
+      "zh": "不模拟步如何取得足够的观察：步所保持者是给定的。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationAdequacy.lean",
+      "detail": {
+        "zh": "一阶可共同采取的行动不保证第二步；所列盲观察例保留失败。",
+        "en": "A common first response need not support the second step; the blind-observation example retains the failure."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked. The core Becoming.Keeping with Lean 4.29.1 by the consolidated core checker (becoming-checks/20261018T235724.886433Z), with empty axiom reports; the periphery with Lean 4.30.0-rc2 and Mathlib, ContinuationAdequacy by check_continuation_adequacy.py (continuation-adequacy-verification.json) and ContinuationCorrespondence by check_continuation_correspondence.py (continuation-correspondence-checks/): the two classical forms of the plan law report Classical.choice, the first also propext, the blind witnesses propext and Quot.sound, the rest none.",
+    "zh": "实查。核心 Keeping 用 Lean 4.29.1 经合并核心检查器（becoming-checks/），公理报告皆空；外围两模块用 Lean 4.30.0-rc2 与 Mathlib，各经其检查器（continuation-adequacy-verification.json、continuation-correspondence-checks/）：方案律的两个经典形式用 Classical.choice（前者另用 propext），盲观察见证用 propext、Quot.sound，其余为空。"
+  },
+  "next_delta": {
+    "en": "State when a class kept for every horizon has one infinite plan keeping it, and model how the values a step keeps are acquired rather than supplied.",
+    "zh": "说明对每个视野都被保持的类何时有一个保持它的无限方案，并模拟步所保持之值如何取得而非给定。"
+  },
   "correspondence": {
     "zh": "模型中的许可不自动是伦理正当性；作用覆盖与观察校准另需根据。",
     "en": "Model admissibility is not automatically ethical permission; effect coverage and observation calibration require warrant."
@@ -32,30 +161,6 @@
   ],
   "dependencies": [],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationAdequacy.lean",
-      "detail": {
-        "zh": "一阶可共同采取的行动不保证第二步；所列盲观察例保留失败。",
-        "en": "A common first response need not support the second step; the blind-observation example retains the failure."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
-      "detail": {
-        "zh": "对任意的值，每个被保持之类在每个进程中都有方案，恰是对所保持之值的选择（plans_iff_choice）：外围 viable_iff_plan 的 choose 在一般情形不能去掉；值可列举时不需要（keptFor_iff_plan）。",
-        "en": "For arbitrary values, kept classes having plans in every process is exactly choice over the values kept (plans_iff_choice): the periphery’s choose in viable_iff_plan cannot be dropped in general, and is not needed where the values are listed (keptFor_iff_plan)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "一阶可共同采取的行动不保证第二步；所列盲观察例保留失败。",
-    "en": "A common first response need not support the second step; the blind-observation example retains the failure."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationAdequacy.lean",
@@ -63,7 +168,8 @@
       "sha256": "674a3a23358ae3d665345c749d3fc5415645e5e7fcc68cb95c173a397ff80266",
       "declarations": [
         "ContinuationAdequacy.viable_iff_plan",
-        "ContinuationAdequacy.blind_second_step_fails"
+        "ContinuationAdequacy.blind_second_step_fails",
+        "ContinuationAdequacy.shared_first_step"
       ]
     },
     {
@@ -181,10 +287,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用有限方案接口；无限接续和实际取得足够观察仍单独研究。",
-    "en": "Reuse the finite-plan interface; infinite continuation and actual acquisition of sufficient observation remain separate."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -203,6 +305,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the claim states the conditions the Lean carries: with finitely many observation values the equivalence of viability and a working branching plan needs no premise; for observations of any type it needs a choice over them into plans, which the periphery takes from classical choice, and asked of every process it is exactly that choice; the first hypothesis names these premises. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张写明 Lean 所带的条件：观察只取有限多个值时，viable 与一个 works 的分支方案等价不加前提；观察为任意类型时需要其上到方案的选择，外围由经典选择取得，对每个过程提问时恰是这一选择；第一条假设写明这些前提。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the claim and the home section; the claim split into nine laws, each read against its declarations in Keeping.lean, ContinuationCorrespondence.lean and ContinuationAdequacy.lean (the definitions of keeping and plans, the listed, chosen and every-process forms, Matching, the order and closure laws, and the periphery's instance and classical form); the limitation, the same sentence as the first counterexample, kept there, shared_first_step, its first half, added to ContinuationAdequacy.lean's references; the second counterexample, a calibration rather than a witnessed case, to the law on every process and a does-not-show item with plans_iff_choice as witness; the next step's separations to two does-not-show items and a positive next step; a second hypothesis names what each application supplies; the shared boundaries no-ethical-premise-core-axiom-free and discrete-steps cited; no premise, status or source hash changed. Every earlier sentence is mapped in [finite-continuation-plans.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-continuation-plans.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章节写出陈述；主张拆为九条规律，各条对照 Keeping.lean、ContinuationCorrespondence.lean 与 ContinuationAdequacy.lean 中的声明核读（保持与方案的定义、可列举形式、选择形式与对每个过程的形式、Matching、次序与封闭律，以及外围的实例与经典形式）；限制与第一条反例是同一句，留在反例中，其前半 shared_first_step 加入 ContinuationAdequacy.lean 的引用；第二条反例是校准而非有见证的情形，改为对每个过程的规律与一条以 plans_iff_choice 为见证的“未表明”；下一步中的区分改为两条“未表明”与一个正面的下一步；第二条前提写明每个应用所给定者；引用通用边界 no-ethical-premise-core-axiom-free 与 discrete-steps；前提、状态与来源哈希均未改变。每句旧文本的去向见 [finite-continuation-plans.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-continuation-plans.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/022ba51bba552fa1/finite-continuation-plans.json",
+      "sha256": "022ba51bba552fa1965a28c5dd73b51cb842a34dec3648f6afc32a9b7d3d5ff5",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/f40bca569ace6298/finite-continuation-plans.json",
+      "sha256": "f40bca569ace6298a1809c11c77d1bdf7c9b48e13f784c118dfb06daf4929f5f",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

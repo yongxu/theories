@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "claims-shown-in-context",
   "title": {
     "zh": "语境中显示的主张",
@@ -8,32 +8,244 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-28T12:08:03+00:00",
   "statement": {
-    "zh": "诸语境所显示者恰在语境相交处一致时粘合，不依语境的主张的框架恰在处处粘合时合；有的世界在任何配置都不粘合（Specker 的盒子；两量子比特的 Mermin–Peres 方阵）。部分失去整体有两种方式：不给回整体，或没有整体。",
-    "en": "What contexts show glues exactly where contexts agree where they meet, and a frame of context-free claims fits exactly where it glues everywhere; some worlds glue nowhere (Specker's boxes; the two-qubit Mermin–Peres square). Parts fail a whole in two ways: they do not give it back, or there is none."
+    "en": "With each claim in a context, what contexts show glues exactly where they agree where they meet, and a frame of context-free claims fits exactly where it glues everywhere; Specker's boxes and the two-qubit Mermin–Peres square glue nowhere. Parts fail a whole by not giving it back or having none.",
+    "zh": "每个主张都在某个语境之内时，诸语境所显示者恰在它们相交处一致时粘合，不依语境的主张的框架恰在处处粘合时合；Specker 的盒子与两量子比特的 Mermin–Peres 方阵在任何配置都不粘合。部分失去整体有两种方式：不给回整体，或没有整体。"
   },
-  "claim": {
-    "zh": "在语境中显示的主张（Contextual S K C V）：within k c 说主张 c 在语境 k 之内，shows s k c 是 k 在配置 s 处显示的 c 的值。在 s 处诸语境所显示者粘合（Contextual.Glues），指有 v : C → V 与每个语境在其内的每个主张上一致；它推出同一主张所在的任意两个语境一致（Contextual.Glues.agree），每个主张在某个语境之内时两者等价（Contextual.glues_iff_agree）。连同语境读，所显示的每一个是框架的主张（Contextual.indexed），以语境为索引的框架合于所显示的每一个（Contextual.indexed_fits）；不依语境的主张的框架合（Contextual.FitsFree），恰当诸语境所显示者在每个配置粘合（Contextual.fitsFree_iff）。语境能显示什么只取决于其内的主张（Local），没有不依语境的读法落在每个语境的可能性之内（NoGlobal）时，没有尊重可能性的配置粘合（Contextual.not_glues），只要一个配置尊重它们，就没有不依语境的主张的框架合（Contextual.no_free_frame）。整体 W 在语境中允许的（restrict）是局部的（restrict_local），W 在其部分粘合成者（Glued）之内（glued_of_whole）；部分给回整体记作 PartsDetermine；可能性非空且没有不依语境的读法时，它们不是任何整体的部分（no_whole）。Specker 的三个盒子与三次打开、打开的两个中恰有一个有宝石：可能性局部（Specker.local_），没有打开强制任何盒子（Specker.unforced），没有放置合于全部（Specker.noGlobal），每次打开都在第一个盒子显示宝石的世界尊重它们（Specker.respects）而不粘合（Specker.not_glues），它们不是任何整体的部分（Specker.no_whole）。Mermin–Peres 方阵：九格三行三列，每行与前两列的奇偶为偶，第三列为奇：可能性局部（Square.local_），没有线强制任何格（Square.unforced），没有赋值合于全部六条线（Square.nine、Square.noGlobal），它们不是任何整体的部分（Square.no_whole）。量子实现（Becoming.Quantum）：两个量子比特上的九个可观测量作为整数矩阵，每个平方为 I（obs_sq），每条线的三个两两对易（line_commute），线的乘积在第三列为 −I、否则为 I（line_product）；非零向量在一条线上共同显示的值有该线的奇偶（line_parity），是该线的一个可能（shows_support），每个可能都由一个明确的整数向量显示（line_realized、support_shown）；所以没有对九格的赋值在每条线上被量子态共同显示（no_context_free_values）。不用 Lean 公理（生成的单射引理 injEq 除外，没有源声明使用它们）。",
-    "en": "Claims shown in contexts (Contextual S K C V): within k c says that claim c lies within context k, and shows s k c is what k shows of c at configuration s. At s what the contexts show glues (Contextual.Glues) when some v : C → V agrees with every context on every claim within it; this gives that any two contexts a claim lies within agree (Contextual.Glues.agree), and where each claim lies within some context the two are equivalent (Contextual.glues_iff_agree). Read with its context, everything shown is a claim of a frame (Contextual.indexed), and the indexed frame fits everything shown (Contextual.indexed_fits); a frame of context-free claims fits (Contextual.FitsFree) exactly where what the contexts show glues at every configuration (Contextual.fitsFree_iff). Where what a context can show depends only on the claims within it (Local) and no context-free reading lies within every context's possibilities (NoGlobal), no configuration respecting the possibilities glues (Contextual.not_glues), and if one configuration respects them no frame of context-free claims fits (Contextual.no_free_frame). What a whole W allows within a context (restrict) is local (restrict_local), and W lies within what its parts glue to (Glued, glued_of_whole); the parts giving the whole back is PartsDetermine; nonempty possibilities with no context-free reading are the parts of no whole (no_whole). Specker's three boxes and three openings, exactly one of the two opened holding the gem: the possibilities are local (Specker.local_), no opening forces a box (Specker.unforced), no placement fits all (Specker.noGlobal), the world showing the gem in each opening's first box respects them (Specker.respects) and does not glue (Specker.not_glues), and they are the parts of no whole (Specker.no_whole). The Mermin–Peres square, nine cells in three rows and three columns, rows and the first two columns of even parity and the third column odd: the possibilities are local (Square.local_), no line forces a cell (Square.unforced), no assignment fits all six lines (Square.nine, Square.noGlobal), and they are the parts of no whole (Square.no_whole). The quantum realization (Becoming.Quantum): the nine two-qubit observables as integer matrices each square to I (obs_sq), the three of each line commute pairwise (line_commute), and a line multiplies to −I in the third column and to I otherwise (line_product); the values a nonzero vector shows jointly on a line have the line's parity (line_parity) and are a possibility of the line (shows_support), and every possibility is shown by an explicit integer vector (line_realized, support_shown); so no assignment to the nine cells is shown jointly on every line by quantum states (no_context_free_values). No Lean axiom is used (except by the generated injectivity lemmas injEq, which no source declaration uses)."
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "不加前提：glues_iff_agree 与 fitsFree_iff 是双向的，要每个主张在一个语境之内（home、covers）。",
-      "en": "No premise: glues_iff_agree and fitsFree_iff are two-way and need a context each claim lies within (home, covers)."
+      "en": "Claims are shown in contexts: which claims lie within each context, and what each context shows of each claim at each configuration. At a configuration what the contexts show glues where one context-free reading agrees with every context on every claim within it, and the contexts agree where every two contexts a claim lies within show it alike.",
+      "zh": "主张在语境中显示：哪些主张在每个语境之内，每个语境在每个配置处显示每个主张的什么。在一个配置处，诸语境所显示者粘合，是指一个不依语境的读法与每个语境在其内的每个主张上一致；诸语境一致，是指同一主张所在的任意两个语境显示它相同。",
+      "declarations": [
+        "Becoming.Contextual",
+        "Becoming.Contextual.Glues",
+        "Becoming.Contextual.Agree"
+      ]
     },
     {
-      "zh": "not_glues 与 no_free_frame 要可能性局部、没有不依语境的读法与一个尊重它们的配置；no_whole 要某个语境允许某物，不用局部性（局部条件）。",
-      "en": "not_glues and no_free_frame need local possibilities, no context-free reading and one configuration respecting them; no_whole needs some context to allow something, and does not use locality (local conditions)."
+      "en": "Where what the contexts show glues at a configuration, they agree there; where each claim lies within some context, they glue at a configuration exactly where they agree there.",
+      "zh": "诸语境所显示者在某配置处粘合时，它们在那里一致；每个主张都在某个语境之内时，它们在某配置处粘合，恰当它们在那里一致。",
+      "declarations": [
+        "Becoming.Contextual.Glues.agree",
+        "Becoming.Contextual.glues_iff_agree"
+      ]
     },
     {
-      "zh": "量子实现只覆盖这个方阵：实矩阵、整数本征向量；希尔伯特空间、测量与 Born 权重没有陈述。",
-      "en": "The quantum realization covers only this square: real matrices and integer eigenvectors; Hilbert space, measurement and Born weights are not stated."
+      "en": "Read with its context, everything shown is a claim of a frame on any process, a context, a claim and a value, realized exactly where the claim lies within the context and the context shows that value. Where each claim lies within some context, some frame of context-free claims, a claim with a value, on a given process fits every context exactly where what the contexts show glues at every configuration.",
+      "zh": "连同语境读，所显示的每一个都是任一过程上框架的主张（语境、主张与值），恰在该主张在该语境之内且该语境显示该值处实现。每个主张都在某个语境之内时，给定过程上有某个不依语境的主张（主张加值）的框架合于每个语境，恰当诸语境所显示者在每个配置都粘合。",
+      "declarations": [
+        "Becoming.Frame",
+        "Becoming.Contextual.indexed",
+        "Becoming.Contextual.indexed_fits",
+        "Becoming.Contextual.FitsFree",
+        "Becoming.Contextual.fitsFree_iff"
+      ]
+    },
+    {
+      "en": "Where what each context can show depends only on the claims within it, no context-free reading lies within every context's possibilities, and what every context shows at a configuration lies within its possibilities, what the contexts show at that configuration does not glue.",
+      "zh": "凡每个语境能显示什么只取决于其内的主张、没有不依语境的读法落在每个语境的可能性之内、且每个语境在某配置处所显示者都在其可能性之内，诸语境在该配置处所显示者不粘合。",
+      "declarations": [
+        "Becoming.Local",
+        "Becoming.NoGlobal",
+        "Becoming.Contextual.Respects",
+        "Becoming.Contextual.not_glues"
+      ]
+    },
+    {
+      "en": "Where what each context can show depends only on the claims within it, no context-free reading lies within every context's possibilities, one configuration respects them, and each claim lies within some context, no frame of context-free claims on a given process fits what the contexts show, while the indexed frame does.",
+      "zh": "凡每个语境能显示什么只取决于其内的主张、没有不依语境的读法落在每个语境的可能性之内、有一个配置尊重它们、每个主张都在某个语境之内，给定过程上没有不依语境的主张的框架合于诸语境所显示者，而以语境为索引的框架合。",
+      "declarations": [
+        "Becoming.Contextual.no_free_frame",
+        "Becoming.Contextual.indexed_fits"
+      ]
+    },
+    {
+      "en": "What a whole of possibilities allows within a context, the readings some possibility agrees with on the claims within it, depends only on those claims, and every possibility of the whole is a reading every context allows; the parts give the whole back where every reading every context allows is a possibility of the whole.",
+      "zh": "一个可能性整体在一个语境中所允许者（某个可能性在其内主张上与之一致的读法）只取决于这些主张，整体的每个可能性都是每个语境都允许的读法；部分给回整体，是指每个语境都允许的每个读法都是整体的可能性。",
+      "declarations": [
+        "Becoming.restrict",
+        "Becoming.restrict_local",
+        "Becoming.Glued",
+        "Becoming.glued_of_whole",
+        "Becoming.PartsDetermine"
+      ]
+    },
+    {
+      "en": "Where no context-free reading lies within every context's possibilities and some context allows some reading, no whole of possibilities allows within each context exactly that context's possibilities; locality is not used.",
+      "zh": "凡没有不依语境的读法落在每个语境的可能性之内、且某个语境允许某个读法，没有可能性整体在每个语境中恰好允许该语境的可能性；不用局部性。",
+      "declarations": [
+        "Becoming.no_whole"
+      ]
+    },
+    {
+      "en": "Specker's three boxes, any two opened together and exactly one of the two holding the gem: the openings' possibilities are local, no opening forces a box (each can show either way in every opening it lies in), and no placement fits every opening, no three two-valued boxes being pairwise different; a world showing the gem in each opening's first box respects them and does not glue, and they are the parts of no whole.",
+      "zh": "Specker 的三个盒子，任意两个一起打开，打开的两个中恰有一个有宝石：各次打开的可能性是局部的，没有打开强制任何盒子（每个盒子在它所在的每次打开中都可两样显示），没有宝石的放置合于每次打开（三个二值的盒子不能两两不同）；在每次打开的第一个盒子显示宝石的世界尊重它们而不粘合，它们不是任何整体的部分。",
+      "declarations": [
+        "Becoming.Unforced",
+        "Becoming.Specker.Box",
+        "Becoming.Specker.Opening",
+        "Becoming.Specker.within",
+        "Becoming.Specker.support",
+        "Becoming.Specker.local_",
+        "Becoming.Specker.unforced",
+        "Becoming.Specker.three_do_not",
+        "Becoming.Specker.noGlobal",
+        "Becoming.Specker.world",
+        "Becoming.Specker.respects",
+        "Becoming.Specker.not_glues",
+        "Becoming.Specker.no_whole"
+      ]
+    },
+    {
+      "en": "The Mermin–Peres square, nine cells in three rows and three columns, each line a context holding its three cells, whose values must have even parity except in the third column, where it is odd: the lines' possibilities are local, no line forces a cell, no assignment of the nine values has every line's parity, and the possibilities are the parts of no whole.",
+      "zh": "Mermin–Peres 方阵：九格三行三列，每条线是持有其三格的语境，其值的奇偶须为偶，第三列为奇：各线的可能性是局部的，没有线强制任何格，没有九个值的赋值使每条线都有其奇偶，这些可能性不是任何整体的部分。",
+      "declarations": [
+        "Becoming.Square.Cell",
+        "Becoming.Square.Line",
+        "Becoming.Square.within",
+        "Becoming.Square.parity",
+        "Becoming.Square.odd",
+        "Becoming.Square.support",
+        "Becoming.Square.local_",
+        "Becoming.Square.unforced",
+        "Becoming.Square.nine",
+        "Becoming.Square.noGlobal",
+        "Becoming.Square.no_whole"
+      ]
+    },
+    {
+      "en": "Two-qubit observables realize the square as explicit integer 4×4 matrices: each squares to the identity, the three of each line commute pairwise, two sharing no line anticommute, and each line multiplies to −I in the third column and to I elsewhere.",
+      "zh": "两量子比特的可观测量以明确的 4×4 整数矩阵实现方阵：每个平方为单位矩阵，每条线的三个两两对易，不共线的两个反对易，每条线的乘积在第三列为 −I，其余为 I。",
+      "declarations": [
+        "Becoming.Square.yy",
+        "Becoming.Square.obs",
+        "Becoming.Square.obs_sq",
+        "Becoming.Square.row_commute",
+        "Becoming.Square.column_commute",
+        "Becoming.Square.line_commute",
+        "Becoming.Square.off_line_anticommute",
+        "Becoming.Square.row_product",
+        "Becoming.Square.column_product",
+        "Becoming.Square.lineProduct",
+        "Becoming.Square.line_product"
+      ]
+    },
+    {
+      "en": "An integer vector shows a value at a cell where the cell's observable sends it to itself with that sign. Wherever a nonzero vector shows values at the three cells of a line, they have the line's parity, so what it shows jointly on a line is a possibility of the line; every possibility of a line is shown jointly by an explicit nonzero integer vector.",
+      "zh": "一个整数向量在某格显示某值，是指该格的可观测量把它送到带该符号的自身。凡非零向量在一条线的三格显示值，这些值有该线的奇偶，所以它在一条线上共同显示者是该线的一个可能；一条线的每个可能都由一个明确的非零整数向量共同显示。",
+      "declarations": [
+        "Becoming.Square.Shows",
+        "Becoming.Square.row_parity",
+        "Becoming.Square.column_parity",
+        "Becoming.Square.line_parity",
+        "Becoming.Square.shows_support",
+        "Becoming.Square.lineWitness",
+        "Becoming.Square.line_realized",
+        "Becoming.Square.support_shown"
+      ]
+    },
+    {
+      "en": "No assignment of values to the nine cells of the square is shown jointly on every line, each line by some nonzero integer state vector.",
+      "zh": "没有对方阵九格的赋值在每条线上被共同显示（每条线由某个非零整数态向量显示）。",
+      "declarations": [
+        "Becoming.Square.no_context_free_values"
+      ]
+    },
+    {
+      "en": "Along a run of any process, what the contexts show glues at a step exactly where the active claims of the world of readings at that step, each a context, a claim and a value, are read off one context-free assignment.",
+      "zh": "沿任意过程的一次运行，诸语境所显示者在某步粘合，恰当该步读法世界中活跃的主张（各为语境、主张与值）都从一个不依语境的赋值读出。",
+      "declarations": [
+        "Becoming.Contextual.FreeAt",
+        "Becoming.Contextual.glues_iff_freeAt"
+      ]
+    },
+    {
+      "en": "A contextual system of the square is quantum at a configuration where each line holds its three cells and what each line shows on them is shown jointly by a nonzero integer vector. Such a system does not glue there; along a run, the world of its readings is not context-free at a step where it is quantum; and no frame of context-free claims on any process fits it.",
+      "zh": "方阵的一个语境系统在某配置处是量子的，是指每条线持有其三格，且每条线在其上所显示者由一个非零整数向量共同显示。这样的系统在那里不粘合；沿一次运行，在它是量子的步上，其读法世界不是不依语境的；任一过程上都没有不依语境的主张的框架合于它。",
+      "declarations": [
+        "Becoming.Square.QuantumAt",
+        "Becoming.Square.QuantumAt.not_glues",
+        "Becoming.Square.QuantumAt.not_freeAt",
+        "Becoming.Square.QuantumAt.no_free_frame"
+      ]
+    },
+    {
+      "en": "A contextual system of the square, each line showing its own possibility, is quantum at every configuration; so along every run of every process its readings are fitted by no frame of context-free claims of that process and are context-free at no step.",
+      "zh": "方阵的一个语境系统（每条线显示它自己的可能）在每个配置处都是量子的；所以沿每个过程的每次运行，其读法不被该过程任何不依语境的主张的框架所合，在任何步上都不是不依语境的。",
+      "declarations": [
+        "Becoming.Square.quantum",
+        "Becoming.Square.quantum_at",
+        "Becoming.Square.quantum_readings"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "No premise beyond the stated ones: gluing as agreement, and a frame of context-free claims fitting as gluing at every configuration, are two-way and need a context each claim lies within.",
+      "zh": "除所述之外不加前提：粘合即一致、不依语境的主张的框架合即处处粘合，两者都是双向的，要每个主张在一个语境之内。"
+    },
+    {
+      "en": "Not gluing needs local possibilities, no context-free reading and one configuration respecting them, and the absence of a context-free frame needs also a context each claim lies within; having no whole needs some context to allow something, and does not use locality.",
+      "zh": "不粘合要可能性局部、没有不依语境的读法与一个尊重它们的配置，没有不依语境的框架另要每个主张在一个语境之内；没有整体要某个语境允许某物，不用局部性。"
+    },
+    {
+      "en": "The quantum realization of the square uses real integer matrices and integer state vectors, values compared entry by entry.",
+      "zh": "方阵的量子实现用实的整数矩阵与整数态向量，值逐项比较。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Only possibilities are stated, not probabilities; no Bell-type inequality is stated.",
+      "zh": "只陈述可能性，不陈述概率；不陈述 Bell 型不等式。",
+      "kind": "scope"
+    },
+    {
+      "en": "General sheaf theory and the Abramsky–Brandenburger framework are not stated; only the gluing of values shown in context is.",
+      "zh": "一般的层论与 Abramsky–Brandenburger 框架没有陈述；只陈述语境中所显示之值的粘合。",
+      "kind": "scope"
+    },
+    {
+      "en": "No general parity obstruction is stated in these laws: the boxes and the square are each checked by evaluation.",
+      "zh": "这些规律不陈述奇偶障碍的一般定理：盒子与方阵各自由求值检查。",
+      "kind": "scope"
+    },
+    {
+      "en": "The quantum realization covers only this square; Hilbert space, measurement and Born weights are not stated.",
+      "zh": "量子实现只覆盖这个方阵；希尔伯特空间、测量与 Born 权重没有陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the parts give a whole back is stated for one type of values.",
+      "zh": "部分给回整体只对一个值的类型陈述。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
+      "detail": {
+        "zh": "Specker 的三个盒子与 Mermin–Peres 方阵：每个语境内一致，没有语境强制任何主张，没有不依语境的读法（Specker.noGlobal、Square.noGlobal）；量子比特实现方阵（Becoming.Quantum 的 no_context_free_values）。",
+        "en": "Specker's three boxes and the Mermin–Peres square: consistent within each context, no context forcing a claim, no context-free reading (Specker.noGlobal, Square.noGlobal); qubits realize the square (no_context_free_values of Becoming.Quantum)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker check_becoming.py (Lean 4.29.1): Becoming.Context is bound to becoming-checks/20261019T213206.644158Z, Becoming.Quantum to 20261019T231053.882924Z, Becoming.ContextArrivalTraces and Becoming.ParityReadings to 20261019T160413.543456Z, Becoming.Frame to 20261025T182341.971697Z and Becoming.Prelude to 20261021T133545.845568Z; every cited declaration has an empty axiom report. The author's counter-review is in §96 of the integration note, with the scope of the independent review.",
+    "zh": "核心检查器 check_becoming.py（Lean 4.29.1）实查：Context、Quantum、ContextArrivalTraces、ParityReadings、Frame 与 Prelude 的当前字节绑定 becoming-checks 下的回执；所引声明的公理报告均为空。作者反审见整合文档 §96；独立审查的范围见同节。"
+  },
+  "next_delta": {
+    "en": "Probabilistic contextuality: weights on what each context shows, and when they come from one weighting of context-free readings.",
+    "zh": "概率的语境性：每个语境所显示者上的权重，以及它们何时来自不依语境的读法上的同一权重。"
+  },
   "correspondence": {
-    "zh": "P72 与 P72q（工作板），按 Ren 2026-10-12 的“push the frontier, as far as possible”，回答 Ren 的“wave/particle”：核心的 Frame 在类型上把主张读作不依语境，这里把它定为表示的承诺并给出它何时合的充要条件；量子测量所显示者属于不粘合的一类（两个量子比特上的 Kochen–Specker，Mermin 1990、Peres 1990）。P72q 由“Cause–effect system theory comparison”（P64–P68 的所有者）写成并检查。部分失去整体的两种方式（不给回：P70 的奇偶；没有整体：no_whole）是可能性上层的唯一与粘合两个条件。读法（AI 的，依 Ren 的交托采用；Ren 同意了包含它们的回答）：波与粒子都是向不依语境的值的投影；值是在语境中显示者，即关系；Ren 推测的“真”是关系的。见整合文档 §96。",
-    "en": "P72 and P72q (work board), following Ren's “push the frontier, as far as possible” of 12 October 2026, answering Ren's “wave/particle”: the core's Frame reads claims as context-free by type; here that is named a commitment of the representation, with the condition under which it fits; what quantum measurements show is of the kind that does not glue (Kochen–Specker for two qubits, Mermin 1990, Peres 1990). P72q was written and checked by “Cause–effect system theory comparison” (the owner of P64–P68). The two ways parts fail a whole (not giving it back: P70's parity; having no whole: no_whole) are the uniqueness and gluing conditions of a sheaf, for possibilities. Readings (the AI's, adopted on Ren's delegation; Ren agreed with the reply containing them): wave and particle are both projections onto context-free values; a value is what a context shows, a relation; the truth of Ren's speculation is relational. See §96 of the integration note."
+    "en": "Following Ren's “push the frontier, as far as possible” of 12 October 2026, answering his “wave/particle” (sources/15-codex-theory-conversations/2026-10-12-framing-and-pairs.md): the core's Frame reads claims as context-free by type; here that is named a commitment of the representation, with the condition under which it fits; what quantum measurements show is of the kind that does not glue (Kochen–Specker for two qubits, Mermin 1990, Peres 1990). The two ways parts fail a whole (not giving it back, as parity on Specker's pairs; having no whole) are the uniqueness and gluing conditions of a sheaf, for possibilities. AI readings: wave and particle are both projections onto context-free values; a value is what a context shows, a relation; the truth of Ren's speculation is relational. See §96 of the integration note.",
+    "zh": "按 Ren 2026-10-12 的“push the frontier, as far as possible”，回答其“wave/particle”（sources/15-codex-theory-conversations/2026-10-12-framing-and-pairs.md）：核心的 Frame 在类型上把主张读作不依语境，这里把它定为表示的承诺并给出它何时合的条件；量子测量所显示者属于不粘合的一类（两个量子比特上的 Kochen–Specker，Mermin 1990、Peres 1990）。部分失去整体的两种方式（不给回：如 Specker 诸对上的奇偶；没有整体）是可能性上层的唯一与粘合两个条件。AI 的读法：波与粒子都是向不依语境的值的投影；值是在语境中显示者，即关系；Ren 推测的“真”是关系的。见整合文档 §96。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
   "aliases": [
@@ -75,8 +287,8 @@
     {
       "id": "unity-of-readings",
       "detail": {
-        "zh": "语境中所显示者总是一个世界的关系项，不用粘合；World 的平衡是所立与交换两种变化读法的粘合。Ren 批准语境中的读法为一般情形。",
-        "en": "What contexts show is always the relata of one world, with no gluing; World's balance is the gluing of the standing's and the exchange's readings of change. Ren approved the readings in context as the general case."
+        "zh": "语境中所显示者总是一个世界的关系项，不用粘合；World 的平衡是所立与交换两种变化读法的粘合。语境中的读法是一般情形。",
+        "en": "What contexts show is always the relata of one world, with no gluing; World's balance is the gluing of the standing's and the exchange's readings of change. The readings in context are the general case."
       }
     },
     {
@@ -87,23 +299,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
-      "detail": {
-        "zh": "Specker 的三个盒子与 Mermin–Peres 方阵：每个语境内一致，没有语境强制任何主张，没有不依语境的读法（Specker.noGlobal、Square.noGlobal）；量子比特实现方阵（Becoming.Quantum 的 no_context_free_values）。",
-        "en": "Specker's three boxes and the Mermin–Peres square: consistent within each context, no context forcing a claim, no context-free reading (Specker.noGlobal, Square.noGlobal); qubits realize the square (no_context_free_values of Becoming.Quantum)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只陈述可能性，不陈述概率（Bell 型不等式）；一般的层论与 Abramsky–Brandenburger 框架没有陈述；奇偶障碍的一般定理没有陈述，三个见证各自由 decide 检查；量子实现只覆盖这个方阵；PartsDetermine 要求一个值的类型；读法是 AI 的；不含伦理谓词。",
-    "en": "Only possibilities are stated, not probabilities (Bell-type inequalities); general sheaf theory and the Abramsky–Brandenburger framework are not stated; the general parity obstruction is not stated, the three witnesses each checked by decide; the quantum realization covers only this square; PartsDetermine needs one type of values; the readings are the AI's; contains no ethical predicate."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Context 的 28 项定理全部空依赖，其中含 Contextual.glues_iff_agree、Contextual.fitsFree_iff、Contextual.indexed_fits、Contextual.not_glues、Contextual.no_free_frame、glued_of_whole、no_whole、Specker.noGlobal、Specker.not_glues、Specker.no_whole、Square.noGlobal与 Square.no_whole；Becoming.Quantum 的 37 项定理全部空依赖，其中含 Square.obs_sq、Square.line_commute、Square.line_product、Square.line_parity、Square.shows_support、Square.support_shown与 Square.no_context_free_values；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §96；独立审查的范围见同节。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 28 theorems of Becoming.Context all have empty axiom reports, among them Contextual.glues_iff_agree, Contextual.fitsFree_iff, Contextual.indexed_fits, Contextual.not_glues, Contextual.no_free_frame, glued_of_whole, no_whole, Specker.noGlobal, Specker.not_glues, Specker.no_whole, Square.noGlobal and Square.no_whole; the 37 theorems of Becoming.Quantum all have empty axiom reports, among them Square.obs_sq, Square.line_commute, Square.line_product, Square.line_parity, Square.shows_support, Square.support_shown and Square.no_context_free_values. the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §96 of the integration note, with the scope of the independent review."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
@@ -433,10 +628,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "零前提计划把不依语境的主张列为粘合的情形（World）的承诺，而不是语境中的读法的承诺（整合者决定）；概率的语境性。",
-    "en": "The zero-premise plan listing context-free claims as a commitment of the glued case (World), not of the readings in context (the integrator decides); probabilistic contextuality."
-  },
   "history": [
     {
       "zh": "2026-10-12 P72、P72q：新增，按 Ren“push the frontier, as far as possible”（对框架失去什么、什么使一对成为一对的回答之后），及其后“keep prove to the deepest, i agree with your last reply”；见整合文档 §96。",
@@ -510,6 +701,28 @@
     {
       "en": "2026-10-20: 50 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/fbcae621772324ac/contextual-registration.json and in git.",
       "zh": "2026-10-20：50 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/fbcae621772324ac/contextual-registration.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement kept, its condition written in (each claim within some context), the examples made the subject of the third clause and the last sentence shortened; the claim split into fifteen laws, each read against its declarations in Context.lean, ContextArrivalTraces.lean, Frame.lean, Quantum.lean and ParityReadings.lean (gluing and agreement, the frames, not gluing, no free frame, wholes, no whole, Specker, the square, the operators, what states show, no context-free values, readings along a run, quantum systems, the quantum readings); the limitations and the third hypothesis's scope sentence to five does-not-show items and the standard boundaries no-evaluation and names-provisional, with no-ethical-premise; the hypotheses reworded without Lean names, the absence of a free frame given its fourth condition (a context each claim lies within), as no_free_frame takes it; the next step's first item, done by unity-of-readings, dropped, and the second stated positively; the correspondence and the related entry on unity-of-readings cut of board item numbers, the session that wrote a module and Ren's approval, his quoted words kept with their source and date; no declaration, reference, source hash, binding or status changed. Every earlier sentence is mapped in [claims-shown-in-context.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/claims-shown-in-context.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留，写入其条件（每个主张在某个语境之内），例子改作第三分句的主语，末句缩短；主张拆为十五条规律，各条对照 Context.lean、ContextArrivalTraces.lean、Frame.lean、Quantum.lean 与 ParityReadings.lean 中的声明核读（粘合与一致、框架、不粘合、无不依语境的框架、整体、无整体、Specker、方阵、算子、态所显示者、无不依语境的值、沿运行的读法、量子系统、量子读法）；限制与第三条前提中的范围句分入五条“未表明”与通用边界 no-evaluation、names-provisional，并引 no-ethical-premise；前提改写，去掉 Lean 名，无不依语境框架补上 no_free_frame 所取的第四个条件（每个主张在一个语境之内）；下一步第一项已由 unity-of-readings 完成，删去，第二项正面陈述；对应与 unity-of-readings 的相关条目删去看板条目编号、写成模块的会话与 Ren 的批准，保留其所引原话及来源与日期；声明、引用、来源哈希、绑定与状态均未改变。每句旧文本的去向见 [claims-shown-in-context.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/claims-shown-in-context.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/00ced8a8948f04f4/claims-shown-in-context.json",
+      "sha256": "00ced8a8948f04f40d0622cc4ba7a3dda1fdc86a0f79dc43d3547141fb438644",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/fbcae621772324ac/contextual-registration.json",
+      "sha256": "fbcae621772324ac9eb0aa54cebfd460a63b76e3a73cd0191cbf7719c7be480d",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ],
   "former_ids": [

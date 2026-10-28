@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "order-of-exchanges-is-the-invariant",
   "title": {
     "zh": "作为不变量的交换次序",
@@ -8,28 +8,133 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-28T11:46:07+00:00",
   "statement": {
-    "zh": "有包含交换的足迹时，交换不相连的交换在重新编号下保持相连交换的偏序，一段上保持它的每个重新编号都可如此达到；以这样的次序有相同交换、足迹与变化、起点相同的世界，每步都与一个重排一致。",
-    "en": "With a footprint containing the exchanges, commuting unjoined exchanges keeps the partial order of joined ones up to renumbering and reaches every order-keeping renumbering. A world with the same exchanges, footprints and changes so ordered, from one start, agrees with a reordering at every step."
+    "en": "With a footprint containing the exchanges, commuting unjoined neighbours keeps the partial order of joined exchanges and reaches every renumbering of a finite stretch keeping it; a world with the same exchanges, footprints and changes so ordered, from one start, agrees stepwise with a reordering.",
+    "zh": "有包含交换的足迹时，交换相邻而不相连的交换，在重新编号下保持相连交换的偏序，并达到有限一段上保持它的每个重新编号；以这样的次序有相同交换、足迹与变化、起点相同的世界，每步都与一个重排一致。"
   },
-  "claim": {
-    "en": "A footprint says which relata each step's exchange touches (Footprinted) and contains the exchanges where every relatum untouched at a step takes no part in it and is unmoved across it (Footprinted.Contains, Web.Unmoved); every world has a containing footprint (Footprinted.contains_everything). Two exchanges are joined where they touch a common relatum or one touches a relatum depending, at the start or end of its step, on a condition the other touches (Footprinted.Joined); Precedes is the order the joins generate, a strict partial order (Footprinted.Precedes.lt, Footprinted.Precedes.irrefl, Footprinted.Precedes.asymm), growing with the footprint (Footprinted.Joined.mono, Footprinted.Precedes.mono, Footprinted.Contains.mono). Commuting two neighbouring exchanges not joined keeps containing and the order up to the renumbering (Footprinted.commute_contains, Footprinted.commute_precedes), and so does any sequence of such commutations, place saying where each step's exchange ends up and origin where it came from (Footprinted.reorder_precedes, Footprinted.Independent.keeps), each a step of Reorders (Footprinted.reorder_reorders). The converse, constructively by bubble sort: within a finite stretch, the renumberings reached by commuting exchanges not joined are exactly those keeping the order of joined exchanges (Footprinted.sorts_iff, with Reindexes and Footprinted.Keeps), and a second world with the same exchanges, footprints and changes on touched relata arranged in such an order, starting the stretch alike, agrees with one of these reorderings, the same exchange at every step and every relatum alike at every step (Footprinted.converse). No decidability of joining is needed, the renumbering being given. No premise.",
-    "zh": "足迹说出每步的交换触及哪些关系项（Footprinted），在每步未被触及的关系项都不参与该步、跨该步不变动之处包含这些交换（Footprinted.Contains、Web.Unmoved）；每个世界都有包含它的足迹（Footprinted.contains_everything）。两个交换在触及共同的关系项、或一个触及的关系项在其步的起点或终点依存于另一个触及的条件之处相连（Footprinted.Joined）；Precedes 是相连生成的次序，是严格偏序（Footprinted.Precedes.lt、Footprinted.Precedes.irrefl、Footprinted.Precedes.asymm），随足迹增大（Footprinted.Joined.mono、Footprinted.Precedes.mono、Footprinted.Contains.mono）。交换两个相邻而不相连的交换，保持包含与重新编号下的次序（Footprinted.commute_contains、Footprinted.commute_precedes），任意一串这样的交换也是，place 说出每步的交换到了哪里，origin 说出它从哪里来（Footprinted.reorder_precedes、Footprinted.Independent.keeps），各是 Reorders 的一步（Footprinted.reorder_reorders）。逆方向，以冒泡排序构造性地：在一段有限的步内，交换不相连的交换所达到的重新编号恰是保持相连交换次序的那些（Footprinted.sorts_iff，以 Reindexes 与 Footprinted.Keeps）；第二个世界以这样的次序有相同的交换、足迹与被触及关系项上的变化，以同样的方式开始这一段，就与其中一个重排一致，每步是同一交换，每步每个关系项相同（Footprinted.converse）。不需要相连可判定，因为重新编号是给定的。不加前提。"
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "足迹是给定的；次序相对于它。",
-      "en": "The footprint is given; the order is relative to it."
+      "en": "A footprint says, at each step and for each relatum, decided true or false, whether the step's exchange touches the relatum; it contains the exchanges where every relatum a step leaves untouched takes no part in its exchange and is shown alike before and after the step. Every world has a containing footprint: every step touching every relatum.",
+      "zh": "足迹在每一步对每个关系项说出（判定为真或假）该步的交换是否触及它；凡每步未触及的关系项都不参与该步的交换、在该步前后显示相同之处，足迹包含这些交换。每个世界都有包含它的足迹：每步触及每个关系项。",
+      "declarations": [
+        "Becoming.Footprinted",
+        "Becoming.Footprinted.Contains",
+        "Becoming.Web.Unmoved",
+        "Becoming.Web.SameAt",
+        "Becoming.Footprinted.contains_everything"
+      ]
     },
     {
-      "zh": "逆方向在有限的一段步上陈述，重新编号及其逆是给定的（Reindexes）。",
-      "en": "The converse is stated on a finite stretch of steps, with the renumbering and its inverse given (Reindexes)."
+      "en": "Two exchanges are joined, symmetrically, where some relatum is touched by both, or a relatum touched by one depends, at the start or the end of its step, on a condition the other touches; the order of exchanges is generated by chains of joined exchanges, each later than the last, and is a strict partial order of the steps: what precedes is earlier, nothing precedes itself, and no two precede each other.",
+      "zh": "两个交换相连（这一关系对称），是指有关系项被二者都触及，或一个所触及的关系项在其步的起点或终点依存于另一个所触及的条件；交换的次序由相连交换之链生成，每个晚于前一个，是步的严格偏序：在前者更早，无物先于自己，没有两个互为先后。",
+      "declarations": [
+        "Becoming.Footprinted.Joined",
+        "Becoming.Footprinted.Joined.symm",
+        "Becoming.Footprinted.Precedes",
+        "Becoming.Footprinted.Precedes.lt",
+        "Becoming.Footprinted.Precedes.irrefl",
+        "Becoming.Footprinted.Precedes.asymm"
+      ]
+    },
+    {
+      "en": "The order is relative to the footprint: a footprint touching at least what another touches joins and orders at least what the other joins and orders, and contains the exchanges where the other does.",
+      "zh": "次序相对于足迹：一个足迹触及的至少包括另一个所触及的，则它所相连与排序的至少包括另一个所相连与排序的；另一个包含交换之处，它也包含。",
+      "declarations": [
+        "Becoming.Footprinted.Joined.mono",
+        "Becoming.Footprinted.Precedes.mono",
+        "Becoming.Footprinted.Contains.mono"
+      ]
+    },
+    {
+      "en": "With a footprint containing the exchanges, taking two neighbouring exchanges that are not joined in the other order, the footprint moving with them, gives a footprint containing the commuted exchanges, in which one exchange precedes another exactly where the exchanges they came from did.",
+      "zh": "有包含交换的足迹时，把两个相邻而不相连的交换按另一顺序进行、足迹随之移动，得到包含交换后交换的足迹；其中一个交换先于另一个，恰当它们所来自的交换如此。",
+      "declarations": [
+        "Becoming.Footprinted.commute_contains",
+        "Becoming.Footprinted.commute_precedes"
+      ]
+    },
+    {
+      "en": "With a footprint containing the exchanges, along any sequence of commutations each of two neighbouring exchanges not joined, one exchange precedes another in the reordering exactly where the exchanges they came from did; so the renumbering keeps the order of joined exchanges, and the reordering is one reached by commuting exchanges that sides split.",
+      "zh": "有包含交换的足迹时，沿任意一串交换、每次交换两个相邻而不相连的交换，重排中一个交换先于另一个，恰当它们所来自的交换如此；所以重新编号保持相连交换的次序，这个重排是由交换两侧所分开的交换而达到的重排。",
+      "declarations": [
+        "Becoming.Footprinted.reorder_precedes",
+        "Becoming.Footprinted.Independent.keeps",
+        "Becoming.Footprinted.reorder_reorders",
+        "Becoming.place",
+        "Becoming.origin"
+      ]
+    },
+    {
+      "en": "With a footprint containing the exchanges and a renumbering of the m steps from S among themselves, its inverse given: some sequence of commutations of neighbouring unjoined exchanges within the stretch takes each exchange where the renumbering does, exactly where the renumbering keeps the order of joined exchanges within the stretch; no decision of joining is used.",
+      "zh": "有包含交换的足迹、给定自 S 起 m 步之间的重新编号及其逆时：段内某一串相邻不相连交换的交换把每个交换带到重新编号所指之处，恰当重新编号保持段内相连交换的次序；不用相连的判定。",
+      "declarations": [
+        "Becoming.Footprinted.sorts_iff",
+        "Becoming.Reindexes",
+        "Becoming.Footprinted.Keeps"
+      ]
+    },
+    {
+      "en": "Given containing footprints for two worlds and a renumbering of a finite stretch, with its inverse, keeping the first's order of joined exchanges: where the second takes at each renumbered step the first's exchange touching what it touches and showing it after as the first does, from a like start, some reordering of the first by unjoined commutations takes the second's exchanges, all relata alike over the stretch.",
+      "zh": "两个世界的足迹各包含其交换、给定有限一段的重新编号及其逆且保持前者相连交换的次序时：凡后者在每个重新编号之步进行前者的交换、触及其所触及者、步后如前者一样显示所触及的关系项、并以同样方式开始这一段，前者经交换不相连交换的某个重排就进行后者的交换，并在这一段的每步把每个关系项显示得相同。",
+      "declarations": [
+        "Becoming.Footprinted.converse"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "The footprint is given, decided relatum by relatum at each step (touch is Boolean); the order is relative to it.",
+      "zh": "足迹是给定的，在每步逐个关系项判定（touch 取布尔值）；次序相对于它。"
+    },
+    {
+      "en": "The converse is stated on a finite stretch of steps, with the renumbering and its inverse given (Reindexes).",
+      "zh": "逆方向在有限的一段步上陈述，重新编号及其逆是给定的（Reindexes）。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The footprint is supplied, not read off the world: the order shown is relative to the footprint chosen.",
+      "zh": "足迹是给定的，不由世界读出：所示的次序相对于所选的足迹。",
+      "kind": "scope",
+      "witness": "Becoming.Footprinted.Precedes.mono"
+    },
+    {
+      "en": "No Foata normal form, of layers of exchanges taken together, is built.",
+      "zh": "不构造 Foata 正规形（同时取的交换之层）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Only neighbouring steps are commuted: a reordering of a stretch is a sequence of such commutations, and those of unjoined neighbours reach exactly the renumberings keeping the order.",
+      "zh": "只交换相邻的步：一段上的重排是一串这样的交换，相邻不相连者的交换恰好达到保持次序的重新编号。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
+      "detail": {
+        "en": "Order.Crossing.reorders_joined and Order.Arising.reorders_joined: commuting by sides alone takes in the other order two exchanges that every containing footprint joins, after which activity needing support (Crossing) or only active relata giving (Arising) fails.",
+        "zh": "Order.Crossing.reorders_joined 与 Order.Arising.reorders_joined：只按两侧交换，就把每个包含足迹都使之相连的两个交换按另一顺序进行，之后活动需要支持（Crossing）或只有活跃者给予（Arising）不成立。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (check_becoming.py): the current bytes of the core modules Becoming.Reordering and Becoming.World are bound to core receipt 20261020T051144.879480Z under becoming-checks/; every cited declaration has an empty axiom report, and the receipt records that the core compiles from Lean's prelude alone. Author counterreview (integration note, section 102); no independent review.",
+    "zh": "Lean 4.29.1 合并检查器（check_becoming.py）实查：核心模块 Becoming.Reordering 与 Becoming.World 的当前字节绑定 becoming-checks/ 下的核心回执 20261020T051144.879480Z；所引声明的公理报告均为空，回执记录核心只用 Lean 前导即可编译。作者反审（整合文档第 102 节）；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Build the Foata normal form of layers of unjoined exchanges taken together, normal forms for stretches without names or without bound, and a correspondence of the order of exchanges to continuous time.",
+    "zh": "构造不相连交换同时取之层的 Foata 正规形、无名或无界之段上的正规形，以及交换次序与连续时间的对应。"
+  },
   "correspondence": {
-    "zh": "P78b（工作板，P78 的延伸），按 Ren 2026-10-12 的“move towards 100%”：把交换的偏序作为对象，并证明逆方向。读法（AI 的，依 Ren 的交托采用）：给定足迹，规律所需的是相连交换的偏序，不是步的序列；这是以足迹为独立关系的 Mazurkiewicz 迹定理。见整合文档 §102。",
-    "en": "P78b (work board, extending P78), following Ren's ‘move towards 100%’ of 12 October 2026: the partial order of exchanges as an object, and the converse. Reading (the AI's, adopted on Ren's delegation): given a footprint, what the laws need is the partial order of joined exchanges, not a sequence of steps; this is Mazurkiewicz's trace theorem with footprints as the independence relation. See the integration document §102."
+    "en": "The partial order of exchanges as an object, and the converse, following Ren's “move towards 100%” of 12 October 2026 (provenance, not warrant). Reading (an AI reading, D30): given a footprint, what the laws need is the partial order of joined exchanges, not a sequence of steps; this is Mazurkiewicz's trace theorem with footprints as the independence relation.",
+    "zh": "把交换的偏序作为对象，并证明逆方向，按 Ren 2026-10-12 的“move towards 100%”（来源，不是依据）。读法（AI 的读法，D30）：给定足迹，规律所需的是相连交换的偏序，不是步的序列；这是以足迹为独立关系的 Mazurkiewicz 迹定理。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
   "aliases": [
@@ -110,23 +215,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
-      "detail": {
-        "zh": "Order.Crossing.reorders_joined 与 Order.Arising.reorders_joined：只给两侧的 Reorders 可交换相连的交换，次序不保持。",
-        "en": "Order.Crossing.reorders_joined and Order.Arising.reorders_joined: Reorders with sides only can commute joined exchanges, and the order is not kept."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "本记录的足迹是给定的；P88 在闲置可判定时给最小足迹，并在有限有名段内以不相连判定给字典序规范代表；Foata 同时层正规形未给；只交换相邻的步，重复它们达到一段内的任意重排；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "The footprint in this record is supplied; P88 gives the least footprint with decided idleness and a lexicographic representative on a finite named stretch with decided apartness. No Foata simultaneous-layer normal form is built; only neighbouring steps are commuted, repeating which reaches any reordering of a stretch; the readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Order 的 266 项定理全部空依赖，其中含 Footprinted.Joined、Footprinted.Precedes、Footprinted.Precedes.lt、Footprinted.Precedes.irrefl、Footprinted.Precedes.asymm、Footprinted.contains_everything、Footprinted.commute_contains、Footprinted.commute_precedes、Footprinted.reorder_precedes、Footprinted.Independent.keeps、Footprinted.reorder_reorders、Footprinted.sorts_iff、Footprinted.converse、Reindexes、Footprinted.Keeps、Web.Unmoved与 Web.SameAt；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §102；尚无独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 266 theorems of Becoming.Order all have empty axiom reports, among them Footprinted.Joined, Footprinted.Precedes, Footprinted.Precedes.lt, Footprinted.Precedes.irrefl, Footprinted.Precedes.asymm, Footprinted.contains_everything, Footprinted.commute_contains, Footprinted.commute_precedes, Footprinted.reorder_precedes, Footprinted.Independent.keeps, Footprinted.reorder_reorders, Footprinted.sorts_iff, Footprinted.converse, Reindexes, Footprinted.Keeps, Web.Unmoved and Web.SameAt. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §102 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
@@ -203,7 +291,11 @@
         "Becoming.Footprinted.Joined.mono",
         "Becoming.Footprinted.Precedes.mono",
         "Becoming.Footprinted.Contains.mono",
-        "Becoming.Footprinted.contains_everything"
+        "Becoming.Footprinted.contains_everything",
+        "Becoming.Order.Crossing.joined",
+        "Becoming.Order.Crossing.reorders_joined",
+        "Becoming.Order.Arising.joined",
+        "Becoming.Order.Arising.reorders_joined"
       ]
     },
     {
@@ -316,10 +408,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "字典序正规形与可判定闲置下的最小足迹已给出（least-footprint-where-idleness-decided）；Foata 同时层正规形、无名或无界正规形及连续时间对应仍开放。",
-    "en": "The lexicographic normal form and the least footprint under decided idleness are given (least-footprint-where-idleness-decided). Foata simultaneous layers, unnamed or unbounded forms, and continuous-time correspondence remain open."
-  },
   "history": [
     {
       "zh": "2026-10-13：接续并整合 P78 的现存证明包；见整合文档 §102。",
@@ -393,6 +481,28 @@
     {
       "en": "28 October 2026, board item UE15 (study section 438): related to reorderings-as-courses-of-growth; no statement, next step or declaration changed.",
       "zh": "2026年10月28日，工作板条目 UE15（研究第 438 节）：与 reorderings-as-courses-of-growth 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept, narrowed to renumberings of a finite stretch and to neighbouring commutations, as the converse is stated; the claim split into seven laws, each read against its declarations in Reordering.lean (footprints and containing, joining and the order, its relativity to the footprint, one commutation, reorderings, the renumberings reached, the converse), with the footprint's decision written in; the limitations to three does-not-show items and the standard boundaries no-ethical-premise, discrete-steps and decidability, the next step's completed part to the related entries; the counterexample narrowed to what Order.Crossing.reorders_joined and Order.Arising.reorders_joined prove, and those two with Order.Crossing.joined and Order.Arising.joined added to the references of Reordering.lean; the correspondence's work-board and section markers moved to history; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [order-of-exchanges-is-the-invariant.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/order-of-exchanges-is-the-invariant.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留，按逆方向的陈述收窄为有限一段的重新编号与相邻的交换；主张拆为七条规律，各条对照 Reordering.lean 中的声明核读（足迹与包含、相连与次序、次序相对于足迹、一次交换、重排、所达到的重新编号、逆方向），写出足迹的判定；限制改为三条“未表明”与通用边界 no-ethical-premise、discrete-steps、decidability，下一步中已完成者移入相关条目；反例收窄为 Order.Crossing.reorders_joined 与 Order.Arising.reorders_joined 所证，这两条连同 Order.Crossing.joined、Order.Arising.joined 加入 Reordering.lean 的引用；对应说明中的工作板与章节标记移入沿革；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [order-of-exchanges-is-the-invariant.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/order-of-exchanges-is-the-invariant.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/d9ae2c82da4fadb7/order-of-exchanges-is-the-invariant.json",
+      "sha256": "d9ae2c82da4fadb70469cea7c53380ddf32e1816470856aa65f4a94705b29b3c",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/5e9ecfd06dff3dc7/order-of-exchanges-is-the-invariant.json",
+      "sha256": "5e9ecfd06dff3dc71e56d498fdc92c642535edb126aa9a06d49594b2a6854693",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

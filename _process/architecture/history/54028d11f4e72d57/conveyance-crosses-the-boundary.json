@@ -1,0 +1,448 @@
+{
+  "schema_version": 1,
+  "id": "conveyance-crosses-the-boundary",
+  "title": {
+    "zh": "输送穿越边界",
+    "en": "Conveyance crosses the boundary"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-10T07:45:00+00:00",
+  "statement": {
+    "zh": "以一类关系项读，输送是一种候选的 related。延续家族的边界不会从某步起再无穿越，其区域不是关系的切口；输送使两个条件相关，交互、以之为生与世系从不如此。",
+    "en": "Read with one kind of relatum, conveyance is a candidate reading of related. A continuing family's boundary is from no step on left uncrossed, so its region is no cut in the relations; conveyance relates two conditions, which interaction, living on and descent never do."
+  },
+  "claim": {
+    "zh": "以一类关系项读，把事件逐步读（living：活跃且不侵蚀），两个同一步的事件在有东西在它们的关系项之间输送时相关（Flow.conveyance）。在某步什么都不被取用、不被给予的关系项，在该步与任何事件都不相关（Flow.conveyance_idle）。没有已形成的关系离开一个区域，称该区域的边界为关系的切口（Flow.Cut）。在平衡与耗散之下，取用复现、从某步起被围住的不重复有限家族，它的边界不会从某步起再无穿越（Flow.boundary_crossed），所以它的区域不是切口（Flow.region_not_a_cut）；在关系中立下，珍视一个关系项的事件，就到达向它输送的那个关系项在该步的活的事件（Flow.valuing_reaches_source）。输送新增的是两个条件之间、沿流入方向的关系：以一类关系项读，两个条件之间的输送使它们的事件相关（Flow.roles_conveyance），而交互、以之为生与世系在任何步上都不使两个条件相关（Flow.roles_conditions_unrelated）；所以清除者的资源每步都被穿越（Clearing.crossed、Clearing.resource_not_cut），该步的燃料与资源只由输送相关（Clearing.conveyance_only）。以之为生之下，清除者以之为生的资源的区域也不是切口（Clearing.resource_not_cut_living_on），所以区域不是切口本身不新；新的是条件之间的关系，region_not_a_cut 的独特之处在方向。不用伦理公理，也不用 Lean 公理；关系中立是假设。",
+    "en": "Read with one kind of relatum, with events read stepwise (living: active and not undermining), two events at a common step are related when something is conveyed between their relata (Flow.conveyance). A relatum nothing is taken from or given to at a step is related to nothing at that step (Flow.conveyance_idle). A region's boundary is a cut in the relations when no formed relation leaves it (Flow.Cut). Under balance and dissipation, the boundary of a finite family without repetition, enclosed around from some step on, from which taking recurs, is from no step on left uncrossed (Flow.boundary_crossed), so its region is not a cut (Flow.region_not_a_cut); under relational neutrality, valuing a relatum's event reaches the living event at that step of what is conveyed into it (Flow.valuing_reaches_source). What conveyance adds is a relation between two conditions, in the direction of inflow: read with one kind of relatum, something conveyed between two conditions relates their events (Flow.roles_conveyance), while interaction, living on and descent relate no two conditions at any steps (Flow.roles_conditions_unrelated); so the clearer's resource is crossed at every step (Clearing.crossed, Clearing.resource_not_cut) and the step's fuel and the resource are related by conveyance alone (Clearing.conveyance_only). Under living on the resource's region, which the clearer lives on, is no cut either (Clearing.resource_not_cut_living_on), so a region being no cut is not itself new; what is new is the relation between conditions, and region_not_a_cut is distinctive in direction. No ethical axiom and no Lean axiom is used; relational neutrality is a hypothesis."
+  },
+  "hypotheses": [
+    {
+      "zh": "输送作为 related 是对应前提：由 AI 决定，它算作关系中立沿之传递的已形成关系，同交互、以之为生与世系。",
+      "en": "Conveyance as related is a correspondence premise: decided by the AI, it counts as a formed relation along which relational neutrality transmits, as interaction, living on and descent do."
+    },
+    {
+      "zh": "一类读法：条件与形成共享索引，哪个条件是哪个关系项由共享的索引给出（见 life-as-condition-of-life）。",
+      "en": "The one-kind reading: conditions and formations share an index, and which condition is which relatum is supplied by it (see life-as-condition-of-life)."
+    },
+    {
+      "zh": "穿越定理需要平衡、耗散、不重复、被围住、取用复现与可判定相等，同 continuing-self-fed-from-beyond。",
+      "en": "The crossing theorems need balance, dissipation, no repetition, enclosure around, recurring taking and decided equality, as in continuing-self-fed-from-beyond."
+    }
+  ],
+  "correspondence": {
+    "zh": "Ren 的提议说，整体依视角而定：“how much does one consider something to be a part of its system dynamics”。continuing-self-fed-from-beyond 说，延续的家族从其外得到供给；本结果把这一输送读作关系：以输送为 related 时，延续家族的边界是形成的、实在的，却不是关系的切口。相比交互（一方汲取、另一方依存）、以之为生（汲取并依存）与世系（给予使其开始作为条件而在），输送关联的是一个形成所携带的两端：它取用的与它给予的。读法（AI 的论证）：一个系统的边界由它所依存者的流穿越，所以以输送为关系时，珍视自身的延续就到达向它输送的来源（在关系中立下）。这是关系的读法，不是公理；它不使无人持有的来源被持有。",
+    "en": "Ren's proposal says that the whole is perspective-dependent: “how much does one consider something to be a part of its system dynamics”. continuing-self-fed-from-beyond says that a continuing family is fed from beyond; this result reads that conveyance as a relation: with conveyance as related, a continuing family's boundary is formed and real but no cut in the relations. Unlike interaction (one draws, the other depends), living on (drawing and depending) and descent (giving as something comes to stand), conveyance relates the two ends a formation carries between: what it takes from and what it gives to. A reading (the AI's argument): a system's boundary is crossed by the flow of what it depends on, so with conveyance as a relation, valuing one's own continuation reaches the source conveyed into it (under relational neutrality). This is a reading of relations, not an axiom; it does not make an unheld source held."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean",
+  "aliases": [
+    "Becoming.Flow.conveyance",
+    "Becoming.Flow.conveyance_idle",
+    "Becoming.Flow.boundary_crossed",
+    "Becoming.Flow.Cut",
+    "Becoming.Flow.region_not_a_cut",
+    "Becoming.Flow.valuing_reaches_source",
+    "Becoming.Flow.roles_conveyance",
+    "Becoming.Flow.roles_conditions_unrelated",
+    "Becoming.Clearing.crossed",
+    "Becoming.Clearing.resource_not_cut",
+    "Becoming.Clearing.conveyance_only",
+    "Becoming.Clearing.resource_not_cut_living_on"
+  ],
+  "dependencies": [
+    {
+      "id": "continuing-self-fed-from-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Conveys 与 fed_from_beyond；穿越定理由它推出。",
+        "en": "Reuses Conveys and fed_from_beyond; the crossing theorems follow from it."
+      },
+      "interface": {
+        "output": {
+          "zh": "延续的家族不能从某步起都没有东西从其外输送入。",
+          "en": "A continuing family cannot from any step on be fed from nothing beyond it."
+        },
+        "input": {
+          "zh": "以输送为 related，其边界不会从某步起再无穿越。",
+          "en": "With conveyance as related, its boundary is from no step on left uncrossed."
+        },
+        "conditions": {
+          "zh": "平衡；耗散；不重复；被围住；取用复现；可判定相等。",
+          "en": "Balance; dissipation; no repetition; enclosure around; recurring taking; decided equality."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean"
+      }
+    },
+    {
+      "id": "life-as-condition-of-life",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用一类读法 Flow.roles、Web.roles 与 inr_not_mem。",
+        "en": "Reuses the one-kind reading Flow.roles, Web.roles and inr_not_mem."
+      },
+      "interface": {
+        "output": {
+          "zh": "两类读法嵌入一类读法；条件不是参与者。",
+          "en": "The two-kind reading embeds in the one-kind reading; conditions do not take part."
+        },
+        "input": {
+          "zh": "先前的读法不使两个条件相关，输送使之相关。",
+          "en": "The earlier readings relate no two conditions; conveyance does."
+        },
+        "conditions": {
+          "zh": "一类读法。",
+          "en": "The one-kind reading."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean"
+      }
+    },
+    {
+      "id": "living-on-and-descent",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用以之为生（Web.sustenance）与世系（Flow.descent）的估值，用于比较。",
+        "en": "Reuses the valuations of living on (Web.sustenance) and descent (Flow.descent) for the comparison."
+      },
+      "interface": {
+        "output": {
+          "zh": "以之为生与世系两种直接关系。",
+          "en": "Living on and descent as two direct relations."
+        },
+        "input": {
+          "zh": "它们都不使两个条件相关。",
+          "en": "Neither relates two conditions."
+        },
+        "conditions": {
+          "zh": "一类读法。",
+          "en": "The one-kind reading."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Descent.lean"
+      }
+    },
+    {
+      "id": "condition-correspondence-discipline",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用交互（Web.Interacts、Web.interaction）用于比较。",
+        "en": "Reuses interaction (Web.Interacts, Web.interaction) for the comparison."
+      },
+      "interface": {
+        "output": {
+          "zh": "交互：一方汲取、另一方以正水平依存。",
+          "en": "Interaction: one draws, the other depends at a positive level."
+        },
+        "input": {
+          "zh": "交互不使两个条件相关。",
+          "en": "Interaction relates no two conditions."
+        },
+        "conditions": {
+          "zh": "一类读法。",
+          "en": "The one-kind reading."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "living-significance-on-held-lives",
+      "detail": {
+        "zh": "连通与关系中立给出另一种补全，并对无人持有的生命仍有作用；输送是一种候选关系。",
+        "en": "Connection and relational neutrality give another completion and keep a role for unheld lives; conveyance is one candidate relation."
+      }
+    },
+    {
+      "id": "metaethical-core-characterization",
+      "detail": {
+        "zh": "关系中立（transmits）与 Neutral 的定义。",
+        "en": "The definitions of relational neutrality (transmits) and Neutral."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean",
+      "detail": {
+        "zh": "先前的读法不使两个条件相关：清除者的燃料与资源只由输送相关（Clearing.conveyance_only）；但以之为生之下，资源的区域也不是切口（Clearing.resource_not_cut_living_on）。",
+        "en": "The earlier readings relate no two conditions: the clearer's fuel and resource are related by conveyance alone (Clearing.conveyance_only); under living on, though, the resource's region is no cut either (Clearing.resource_not_cut_living_on)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean",
+      "detail": {
+        "zh": "闲置的关系项不被输送相关（Flow.conveyance_idle）：输送不是免费的连通。",
+        "en": "An idle relatum is related to nothing by conveyance (Flow.conveyance_idle): conveyance is not free connection."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "输送只关联同一步的事件，不排定时间，也不问所输送的东西是否维持了接受者；它不区分来源是否活着、是否被持有；是 AI 的决定；在关系中立下的到达是延续条件的关系一半，不是想要所要求的；只对逐步读法陈述；名称是 AI 的表述，按 Ren 的命名规则采用（conveyance、Cut 等）。",
+    "en": "Conveyance relates events at a common step only, orders no steps, and does not ask whether what is conveyed sustains the receiver; it does not distinguish a living or held source from another; it is the AI's decision; reaching under relational neutrality is the relational half of the continuation condition, not what the want requires; stated for the stepwise reading only; the names are the AI's wording, adopted under Ren's naming rule (conveyance, Cut and others)."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T221720.428753Z）：Becoming.Standpoints 的 22 项定理全部空依赖；同一回执覆盖包内 91 个模块（含只作导入的根模块与四个桥接模块），共 4983 项定理／7020 项声明审计，39 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。作者反审见整合文档 §47；独立审查（CONTINUATION-GROUNDING-REVIEW.md）接受其 Lean，所提更正在整合文档 §47.1–47.4 处理。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 90 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T221720.428753Z): the 22 theorems of Becoming.Standpoints all have empty axiom reports; the same receipt covers the package's 91 modules (including the import-only root and the four bridge modules) with 4983 theorems/7020 declaration audits, and 39 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The author's counterreview is in §47 of the integration note; the independent review (CONTINUATION-GROUNDING-REVIEW.md) accepts its Lean, and its corrections are handled in §47.1–47.4 of the integration note. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 90 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run)."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean",
+      "role": "proof",
+      "sha256": "5413cf90f54ac4a76bd0e9fef1296e854df95081bbfd2c0c9c72b8241d3813d1",
+      "declarations": [
+        "Becoming.Flow.conveyance",
+        "Becoming.Flow.conveyance_idle",
+        "Becoming.Flow.boundary_crossed",
+        "Becoming.Flow.valuing_reaches_source",
+        "Becoming.Flow.Cut",
+        "Becoming.Flow.region_not_a_cut",
+        "Becoming.Flow.roles_conveyance",
+        "Becoming.Flow.roles_conditions_unrelated",
+        "Becoming.Clearing.crossed",
+        "Becoming.Clearing.resource_not_cut",
+        "Becoming.Clearing.conveyance_only",
+        "Becoming.Clearing.resource_not_cut_living_on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "role": "proof",
+      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439",
+      "declarations": [
+        "Becoming.Flow.Conveys",
+        "Becoming.Flow.fed_from_beyond"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
+      "role": "proof",
+      "sha256": "6e0fdea63dbd3bc1d92d6df2d8e68216436e1a916d1f36ce9872da25c3fe64eb",
+      "declarations": [
+        "Becoming.Flow.roles",
+        "Becoming.Web.roles",
+        "Becoming.inr_not_mem"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Descent.lean",
+      "role": "proof",
+      "sha256": "cbfc20d98db0a3212176293a6f29e4d0b6804041d654e20953effbdc1f8dbec3",
+      "declarations": [
+        "Becoming.Web.sustenance",
+        "Becoming.Web.LivesOn",
+        "Becoming.Flow.descent"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
+      "role": "proof",
+      "sha256": "9ccd67d5006b1b4f5fee9914b6fdad62bfee17fb61cb2c95c41ed8e5436f34de",
+      "declarations": [
+        "Becoming.Web.Interacts",
+        "Becoming.Web.interaction"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CONTINUATION-GROUNDING-PLAN.md",
+      "role": "statement",
+      "sha256": "0c86a8d756b82a62f8d14733e21714fb3ac38a175ea2cabaa645974f61d3b63f"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-10-wanting-continuation-one-axiom.md",
+      "role": "provenance",
+      "sha256": "bf0ff40c2dcd72f581645b6a67d5aa4a1af92958b6ef6248f39881a640c95b37"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CONTINUATION-GROUNDING-REVIEW.md",
+      "role": "review",
+      "sha256": "13da1ebc8b8e4e40008f73616b8c9a55c89e44783542cc148aa62907f7f38f3f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T141427.442103Z/verification.json",
+      "role": "receipt",
+      "sha256": "eb3ccaec5f33b5a6ff7fc20e10ef491a130fbdc013a03bd0c5b3f399a7eaad7f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
+      "role": "receipt",
+      "sha256": "114b5ba1b619d4e81c138d098005583ee56aa8bd6d2295d9fb279cd92c2c3f9a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Standpoints",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Roles",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Descent.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Descent",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Correspondence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "排定时间、对效果敏感的输送；整段读法上的同一关系；输送与以之为生的组合。",
+    "en": "An ordered, effect-sensitive conveyance; the same relation on the whole-run reading; combining conveyance with living on."
+  },
+  "history": [
+    {
+      "zh": "2026-10-10：作为延续奠基计划（CONTINUATION-GROUNDING-PLAN）W2新增，按 Ren“commit them, then start implementation all the way to full completion”；实现 Ren 2026-10-10 的提议（从想要延续者重述普遍元伦理核心）；见整合文档 §47。",
+      "en": "2026-10-10: added as W2 of the continuation-grounding plan (CONTINUATION-GROUNDING-PLAN), following Ren's ‘commit them, then start implementation all the way to full completion’; implements Ren's proposal of 10 October 2026 (restating the Universal Metaethical Core from what wants its continuation); see §47 of the integration note."
+    },
+    {
+      "zh": "2026-10-10 W8：按独立审查（CONTINUATION-GROUNDING-REVIEW.md）更正，见整合文档 §47.1–47.4；验证范围指向合并检查器回执 20261009T231934.987085Z 与外围回执 20261010T073508.393062Z。C8、C9：“先前读法不穿越”改为“先前读法不使两个条件相关”，新增 Totalizer.supply_not_cut_living_on；中文的输送一律用“输送”。",
+      "en": "2026-10-10 W8: corrected after the independent review (CONTINUATION-GROUNDING-REVIEW.md), see §47.1–47.4 of the integration note; validation scope points to consolidated receipt 20261009T231934.987085Z and periphery receipt 20261010T073508.393062Z. C8, C9: ‘the earlier readings do not cross’ becomes ‘the earlier readings relate no two conditions’, and Totalizer.supply_not_cut_living_on is added; the Chinese text uses 输送 for conveying throughout."
+    },
+    {
+      "zh": "2026-10-13 接手核对：当前合并回执 20261013T094743.528770Z 实含 22 个继承模块；当前验证摘要中沿用的 15 改为 22。历史回执及其当时计数不变；断言、前提与证明不变。",
+      "en": "2026-10-13 takeover reconciliation: current consolidated receipt 20261013T094743.528770Z contains 22 inherited modules; the carried-over count of 15 in the current validation summary is corrected to 22. Historical receipts and their original counts remain unchanged, as do the claim, premises and proofs."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“输送穿越边界：以一类关系项读，输送是一种候选的 related；延续家族的边界不会从某步起再无穿越，其区域不是关系的切口；输送使两个条件相关，交互、以之为生与世系从不如此”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “Conveyance crosses the boundary: read with one kind of relatum, conveyance is a candidate reading of related; a continuing family's boundary is from no step on left uncrossed, so its region is no cut in the relations; conveyance relates two conditions, which interaction, living on and descent never do”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D12, D36）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D12, D36): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "en": "17 October 2026, wording of the public fields: outdated labels (N_rel) replaced by the current vocabulary (relational neutrality), following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Continuation.lean, Roles.lean, Standpoints.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Continuation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Roles.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Standpoints.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Continuation.lean、Roles.lean、Standpoints.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Continuation.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Roles.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Standpoints.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Descent.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Descent.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Descent.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Descent.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 60 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4724d1df32589e4c/conveyance-crosses-the-boundary.json and in git.",
+      "zh": "2026-10-20：60 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4724d1df32589e4c/conveyance-crosses-the-boundary.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels replaced by the current terms in a hypothesis, the correspondence, two related details and the limitations: N_rel by relational neutrality and 'the axiom' by the continuation condition; 'the author's reading' labelled as the AI's; and in the hypothesis and the limitations conveyance as a relation is the AI's decision instead of 'decided on' or 'adopted on Ren's delegation'. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条前提、对应、两条相关说明与局限中的退役标签改为现行术语：N_rel 改为关系中立，“公理”改为延续条件；“作者的读法”标为 AI 的读法；前提与局限中以输送为关系是 AI 的决定，不再写“依 Ren 的交托决定”或“依 Ren 的交托采用”。规律未变。"
+    }
+  ]
+}

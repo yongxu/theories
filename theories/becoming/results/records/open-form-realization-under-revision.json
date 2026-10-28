@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "open-form-realization-under-revision",
   "title": {
     "zh": "开放形态下的规则修订与实际生成",
@@ -8,15 +8,96 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "reviewed_at_utc": "2026-10-28T11:47:25+00:00",
   "statement": {
-    "zh": "凡完成可判定、每个未完成之步降低当前规则的证书、修订后的规则接过它而不升高、完成实现新的活的内容，初始证书至多为 B 时，运行至迟在第 B + 1 步实现这样的内容；每条规则保持时都会完成，每步都修订时却可以永不完成。",
-    "en": "Where completion is decided, each unfinished step lowers the current rule's certificate, handoffs do not raise it, and completions realize new living content, a run first certified within B realizes such content by step B + 1; rules each finishing if kept can, revised every step, never complete."
+    "en": "Where completion is decided, unfinished steps lower the current rule's certificate, handoffs keep it from rising and completions realize new living content, a run initially certified at most B realizes such content by step B + 1; rules each finishing if kept can, revised every step, never complete.",
+    "zh": "沿一次运行，证书起初至多为 B，完成可判定，未完成之步降低当前规则的证书，交接使它不升高，完成实现新的活的内容，则至迟在第 B + 1 步实现这样的内容；每条规则保持时都会完成，每步都修订时却可以永不完成。"
   },
-  "claim": {
-    "zh": "沿一个框的运行，凡完成可判定、每个未完成之步降低当前规则的剩余步数证书、在所到阶段每次移交给修订后的规则不升高它、初始证书至多为 B、且每次完成对应新的活的内容，该运行在 B + 1 步之内实现此前没有的活的内容。在延续条件下，所实现的同一内容落在由意义读出的相关性之下；其形式既不预先固定，也不跨运行固定。见证：每条规则保持时两步之内完成，每个未完成之步降低其自身的剩余数，但每步都修订时运行永不完成，每次修订把剩余数从 1 重设为 2；修订可以改变所形成的结果而仍满足移交之界，所实现的形式不必固定。",
-    "en": "Along a run of a frame, where completion is decided, each unfinished step lowers the current rule's remaining-step certificate, each handoff to a revised rule at the stage reached does not raise it, the initial certificate is at most B, and each completion corresponds to new living content, the run realizes, within B + 1 steps, living content absent before. Under the continuation condition the same realized content falls under the relevance read from significance; its form is not fixed in advance or across runs. Witnesses: each rule kept finishes within two steps and each unfinished step lowers its own remaining count, yet revised at every step the run never completes, each revision resetting the remaining count from 1 to 2; a revision can change the formed outcome and still meet the handoff bound, and the realized form need not be fixed."
-  },
+  "laws": [
+    {
+      "en": "Along a sequence of states, with a rank for each step's rule and an event of completion: where each unfinished step lowers the current rule's rank and each handoff to the next rule does not raise it, the handed rank falls at every unfinished step.",
+      "zh": "沿一个状态序列，每步的规则有一个秩，并有完成事件：每个未完成之步降低当前规则的秩、每次交接给下一规则不升高它时，交接后的秩在每个未完成之步都下降。",
+      "declarations": [
+        "Becoming.Handoff.handed_off_progress"
+      ]
+    },
+    {
+      "en": "For a decided event and a rank that falls at every step without the event, a start whose rank is at most B has the event at some step from the start through the start plus B.",
+      "zh": "对一个可判定事件与一个在无事件之步都下降的秩，秩至多为 B 的起点，在从起点到起点加 B 的某一步有该事件。",
+      "declarations": [
+        "Becoming.RenewalBound.renewal_within_rank_bound"
+      ]
+    },
+    {
+      "en": "For admitted histories, each with decided completion, an initial certificate at most B, unfinished steps lowering the current rule's certificate, handoffs not raising it, and each completion corresponding to living content appearing then and absent before: each admitted history forms, at some step through B, living content absent before.",
+      "zh": "对被接纳的历史，各有可判定的完成、至多为 B 的初始证书、降低当前规则证书的未完成之步、不升高它的交接，且每次完成对应当时出现、此前没有的活的内容：每段被接纳的历史在至多第 B 步形成此前没有的活的内容。",
+      "declarations": [
+        "Becoming.Handoff.boundedFrame",
+        "Becoming.Handoff.newContent_by_bound"
+      ]
+    },
+    {
+      "en": "On the frame of contents formed within B, living significance turns content so formed in each admitted history into relevant content absent before. Under the continuation condition such content falls under the relevance read from significance, also directly from decided completion, an initial certificate at most B, local descent, handoffs not raising it and the completion correspondence.",
+      "zh": "在 B 之内所形成内容的框架上，生生之意义把每段被接纳历史中如此形成的内容变为此前没有的相关内容。在延续条件之下，这样的内容落在由意义读出的相关性之下；由可判定的完成、至多为 B 的初始证书、局部下降、不升高证书的交接与完成的对应也直接得到。",
+      "declarations": [
+        "Becoming.Handoff.securesNewContent_by_bound",
+        "Becoming.SecuredContent.contingent_newContent",
+        "Becoming.Handoff.securesNewContent_by_bound_of_unrestricted",
+        "Becoming.Handoff.revised_newContent_by_bound_of_unrestricted"
+      ]
+    },
+    {
+      "en": "Along a run of a frame, with decided completion, an initial certificate at most B, each unfinished step lowering the current rule's certificate, each handoff not raising it, and each completion at step n giving living content realized at step n + 1 and absent before: for some n at most B, such content is realized at step n + 1.",
+      "zh": "沿一个框架的运行，完成可判定、初始证书至多为 B、每个未完成之步降低当前规则的证书、每次交接不升高它、且第 n 步的每次完成给出在第 n + 1 步实现而此前没有的活的内容：对某个至多为 B 的 n，这样的内容在第 n + 1 步实现。",
+      "declarations": [
+        "Becoming.Handoff.Run.novel_by_handoff"
+      ]
+    },
+    {
+      "en": "Along a run of a frame, with decided completion, an initial certificate at most B, each unfinished step lowering the current rule's certificate, each handoff not raising it, each completion at step n giving living content realized at step n + 1 and absent before, and the continuation condition: for some n at most B, content realized at step n + 1 and absent before falls under the relevance read from significance.",
+      "zh": "沿一个框架的运行，完成可判定、初始证书至多为 B、每个未完成之步降低当前规则的证书、每次交接不升高它、第 n 步的每次完成给出在第 n + 1 步实现而此前没有的活的内容，且延续条件成立：对某个至多为 B 的 n，在第 n + 1 步实现而此前没有的内容落在由意义读出的相关性之下。",
+      "declarations": [
+        "Becoming.Handoff.Run.relevance_by_handoff_of_unrestricted"
+      ]
+    },
+    {
+      "en": "In a local arrangement of two unfinished stages and two formed outcomes, each of three rules, kept, finishes within two steps, and each rule's unfinished step lowers its own remaining count.",
+      "zh": "在一个有两个未完成阶段与两个已形成结果的局部安排中，三条规则各自保持时都在两步之内完成，每条规则的未完成之步降低其自身的剩余数。",
+      "declarations": [
+        "Becoming.Handoff.Stage",
+        "Becoming.Handoff.Rule",
+        "Becoming.Handoff.completed",
+        "Becoming.Handoff.advance",
+        "Becoming.Handoff.remaining",
+        "Becoming.Handoff.each_fixed_rule_finishes",
+        "Becoming.Handoff.each_rule_local_progress"
+      ]
+    },
+    {
+      "en": "In the local arrangement of two unfinished stages and two formed outcomes, revising the rule at every step, each executed rule finishes when kept and lowers its own count, yet the run stays unfinished for ever: each revision raises the remaining count from 1 to 2. The same holds along the revising run of the process whose actions are the rules.",
+      "zh": "在有两个未完成阶段与两个已形成结果的局部安排中，每步都修订规则时，每条被执行的规则保持时都会完成并降低其自身的计数，运行却永远不完成：每次修订把剩余数从 1 升为 2。在以规则为动作的过程的修订运行上亦然。",
+      "declarations": [
+        "Becoming.Handoff.restartChoice",
+        "Becoming.Handoff.revisingRun",
+        "Becoming.Handoff.revising_run_stays_unfinished",
+        "Becoming.Handoff.revised_rules_can_fail_forever",
+        "Becoming.Handoff.revision_resets_remaining",
+        "Becoming.Handoff.process",
+        "Becoming.Handoff.revising",
+        "Becoming.Handoff.fails_forever",
+        "Becoming.Handoff.resets_remaining"
+      ]
+    },
+    {
+      "en": "In the local arrangement of two unfinished stages and two formed outcomes, a revision after the first step changes the formed outcome, the direct-right rule forming the right outcome where the left rule forms the left, with its remaining count no greater than the left rule's; from the right-ready stage each of the two rules realizes some outcome, and no outcome is realized after both.",
+      "zh": "在有两个未完成阶段与两个已形成结果的局部安排中，第一步之后的修订改变所形成的结果：直接向右的规则形成右边的结果，而左规则形成左边的结果，其剩余数不大于左规则的；从右就绪阶段出发，两条规则各实现某个结果，而没有一个结果在两者之后都实现。",
+      "declarations": [
+        "Becoming.Handoff.changed_form_with_valid_handoff",
+        "Becoming.Handoff.realizes",
+        "Becoming.Handoff.realized_form_need_not_be_fixed"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "实际索引历史、步骤、自然数证书、可判定完成事件及初值上界明示供应；未完成时的局部下降与同一阶段的交接不增加分别给出。",
@@ -31,6 +112,57 @@
       "en": "Transport from admitted scope to actuality requires actual coverage and execution/support correspondence. Permission, real losses and still-valid specific undertakings require judgment under existing practical principles."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The certificate's rank measures the stated realization bound, not ethical value or complexity; it is no ethical scalar.",
+      "zh": "证书的秩度量所述的实现界限，不是伦理价值或复杂度；它不是伦理标量。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "No universal productive deadline, necessary form of justified exploration, final permission or duty follows from the bound.",
+      "zh": "由这一界限推不出普遍的生产期限、正当探索的必要形式、最终许可或义务。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Executed epistemic openness, physical reliability, unique shares of risk and inevitable compliance by all intelligence are not shown.",
+      "zh": "没有表明实际执行的认识开放通道、物理可靠性、唯一的风险比例或所有智能必然遵循。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Failure of a specified outcome does not establish worthlessness: care, rest or preparation may already have positive meaning, and discovering a real failure may require retracting the certificate.",
+      "zh": "特定成果未形成不推出毫无价值：照护、休息或准备可能已有正面意义，发现真实失败可能要求撤回证书。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
+      "detail": {
+        "zh": "两条分别两步完成的路线可在每步确实推进当前路线的情况下永久切换而不完成；交接把剩余证书从1重置为2。",
+        "en": "Two individually two-step finishing rules can switch forever without completion despite progress under each current rule; handoff resets the remaining certificate from 1 to 2."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
+      "detail": {
+        "zh": "合法证书交接可以形成不同成果；逐分支存在内容不推出所有分支同一内容。终点标签没有伦理替代权。",
+        "en": "A valid certificate handoff can lead to different formed outcomes; per-branch existence does not imply one content common to all branches. Terminal labels confer no ethical substitution authority."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "discrete-steps",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.Handoff, Becoming.RenewalBound and Becoming.SecuredContent are bound to passing receipts in becoming-checks, which report an empty axiom list for every cited declaration and verify that the core compiles from Lean's prelude alone. The periphery original (now provenance) and its producer-consumer control application (Controls.lean) passed their own Lean 4.29.1 check (open-future-revision-verification.json). Seven author counterreviews and a scoped reading of Lamport; no independent review.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Handoff、RenewalBound 与 SecuredContent 的当前字节绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空，核心只用 Lean 前导即可编译。外围原本（现为来历）及其生产端到消费端控制应用（Controls.lean）通过其自身的 Lean 4.29.1 检查（open-future-revision-verification.json）。作者七项反审与对 Lamport 的限定阅读；无独立审查。"
+  },
+  "next_delta": {
+    "en": "An application along an actual run: a named need, undertaking or effect whose completions correspond to new living content, with the certificate, its local descent and its handoffs read off the run.",
+    "zh": "沿一次实际运行的应用：一个具名的需求、承担或作用，其完成对应新的活的内容，并从运行读出证书、其局部下降与交接。"
+  },
   "correspondence": {
     "zh": "阶段、组织路线和修订均是共同活动内的分化，不预设外在操控者或私有价值所有者。证书只证明指定的有限实现界限；若事件编号 n 表示第 n 到 n+1 次转变，0..B的事件范围为至多 B+1次转变。名字为 formed 的终止状态本身不认证现实中的善或履约。",
     "en": "Stages, organizational rules and revisions differentiate within shared activity, without a primitive external controller or private value owners. Certificates support a specified finite realization bound; if event n denotes transition n to n+1, events 0..B comprise at most B+1 transitions. Terminal states named formed do not themselves certify actual goodness or fulfillment."
@@ -57,8 +189,8 @@
       "id": "positive-ground-open-futures",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "securesNewContent_by_bound 直接调用 contingent_generation_has_positive_ground；冻结的 Controls.lean 实际把 newContent_by_bound 输出送入其形成前提。",
-        "en": "securesNewContent_by_bound directly calls contingent_generation_has_positive_ground; frozen Controls.lean passes newContent_by_bound output into its formation premise."
+        "zh": "securesNewContent_by_bound 直接调用 SecuredContent.contingent_newContent（外围原本调用 contingent_generation_has_positive_ground）；冻结的 Controls.lean 实际把 newContent_by_bound 输出送入其形成前提。",
+        "en": "securesNewContent_by_bound directly calls SecuredContent.contingent_newContent (the periphery original called contingent_generation_has_positive_ground); frozen Controls.lean passes newContent_by_bound output into its formation premise."
       },
       "interface": {
         "output": {
@@ -80,13 +212,13 @@
       "id": "continuation-condition-yields-living-significance",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "P89 调用 inventory_g0_of_unrestricted 与 livingSignificance_of_unrestricted，补齐旧正面根据的正式实例与共同运行上的形式。",
-        "en": "P89 calls inventory_g0_of_unrestricted and livingSignificance_of_unrestricted to complete the exact old positive-ground instance and its form on a shared run."
+        "zh": "已退休的桥接调用 inventory_g0_of_unrestricted 与 livingSignificance_of_unrestricted，补齐旧正面根据的正式实例与共同运行上的形式；核心的 Handoff 直接调用 livingSignificance_of_unrestricted。",
+        "en": "The retired bridge called inventory_g0_of_unrestricted and livingSignificance_of_unrestricted to complete the exact old positive-ground instance and its form on a shared run; the core's Handoff calls livingSignificance_of_unrestricted directly."
       },
       "interface": {
         "output": {
-          "zh": "从意义读出的正面相关在 Unrestricted 条件下满足生生之意义（外围的 G0）。",
-          "en": "Relevance read from significance satisfies living significance (the periphery's G0) under Unrestricted."
+          "zh": "从意义读出的正面相关在 Unrestricted 条件下满足生生之意义。",
+          "en": "Relevance read from significance satisfies living significance under Unrestricted."
         },
         "input": {
           "zh": "原 securesNewContent_by_bound 所需的生生之意义，以及共同 Frame 中新实现取得 relevance 的条件。",
@@ -125,8 +257,8 @@
     {
       "id": "acquired-revision-of-pending-task",
       "detail": {
-        "zh": "已有在途工作改写，原历史损失与支持成本保留。",
-        "en": "Existing pending-task rewriting retains historical loss and support costs."
+        "zh": "已有在途工作改写，原历史损失与支持负担保留。",
+        "en": "Existing pending-task rewriting retains historical loss and support burdens."
       }
     },
     {
@@ -137,37 +269,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
-      "detail": {
-        "zh": "两条分别两步完成的路线可在每步确实推进当前路线的情况下永久切换而不完成；交接把剩余证书从1重置为2。",
-        "en": "Two individually two-step finishing rules can switch forever without completion despite progress under each current rule; handoff resets the remaining certificate from 1 to 2."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
-      "detail": {
-        "zh": "合法证书交接可以形成不同成果；逐分支存在内容不推出所有分支同一内容。终点标签没有伦理替代权。",
-        "en": "A valid certificate handoff can lead to different formed outcomes; per-branch existence does not imply one content common to all branches. Terminal labels confer no ethical substitution authority."
-      }
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RISK-CONDITIONING-INTEGRATION.md",
-      "detail": {
-        "zh": "发现真实失败可能要求撤回原证书。照护、休息或准备可已有正面意义，不能由特定成果未形成推出毫无价值。",
-        "en": "Discovery of real failure may require certificate retraction. Care, rest or preparation may already have positive meaning; failure of a specified outcome does not establish worthlessness."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "一项有条件组合及实质反例，非普遍生产期限、必要的正当探索形式、伦理标量、最终许可或义务。未新证实际认识开放通道、物理可靠性、唯一风险比例或所有智能必然遵循。",
-    "en": "A conditional composition with substantive counterexamples, not a universal productive deadline, necessary form of justified exploration, ethical scalar, final permission or duty. It does not newly prove executed epistemic openness, physical reliability, unique risk shares or inevitable compliance by all intelligence."
-  },
-  "validation_scope": {
-    "zh": "2026-10-14：Becoming.Bridge 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 实查10项新定理／19项声明审计：14项空依赖、5项仅 propext；98项继承定理／185项审计分别重编。1个完整生产端到消费端控制应用不另计定理。作者七项反审与 Lamport 原典限定阅读；无独立验收或新经验实验。 P89（2026-10-13）：共享检查器核查四项适配、全部空公理依赖；Bridge 共48项定理／66项源声明审计，75个包模块共4522项定理／6374项审计，另列24个继承模块；77个纯净核心模块的字节及空公理范围保持，实际运行5个Lean步骤、复用348个。无新独立成果或独立验收。",
-    "en": "14 October 2026: the current bytes of Becoming.Bridge are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Lean 4.29.1 checked 10 new theorems/19 declaration audits: 14 empty and 5 propext only; 98 inherited theorems/185 audits separately rebuilt. One complete producer-consumer control application is not an additional theorem. Seven author counterreviews and scoped primary-source reading of Lamport; no independent acceptance or new empirical experiment. P89 (13 October 2026): the shared checker verifies four adapters, all axiom-free. Bridge has 48 theorems/66 source declaration audits; 75 package modules have 4522 theorems/6374 audits, with 24 inherited modules separate. The 77 pure core modules retain their bytes and empty-axiom scope; 5 Lean steps ran and 348 were reused. No new independent result or independent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OpenFutureRevision.lean",
@@ -293,7 +394,18 @@
         "Becoming.Handoff.securesNewContent_by_bound_of_unrestricted",
         "Becoming.Handoff.revised_newContent_by_bound_of_unrestricted",
         "Becoming.Handoff.fails_forever",
-        "Becoming.Handoff.resets_remaining"
+        "Becoming.Handoff.resets_remaining",
+        "Becoming.Handoff.boundedFrame",
+        "Becoming.Handoff.Stage",
+        "Becoming.Handoff.Rule",
+        "Becoming.Handoff.completed",
+        "Becoming.Handoff.advance",
+        "Becoming.Handoff.remaining",
+        "Becoming.Handoff.restartChoice",
+        "Becoming.Handoff.revisingRun",
+        "Becoming.Handoff.process",
+        "Becoming.Handoff.revising",
+        "Becoming.Handoff.realizes"
       ]
     },
     {
@@ -366,10 +478,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "本条的通用有限实现及正式脊柱连接已完成；直接复用既有目的修订、在途改写和复查成果。只有具名实际案例的新需求、有效承担与作用对应才另作应用研究。NP、混合得失排序及更强规范根据不被此结项宣布解决，归统一研究范围。",
-    "en": "The generic finite realization and formal spine connection are complete. Reuse acquired-goal revision, pending-task rewriting and applicability checks. Further application work must name a concrete need, undertaking or effect correspondence. NP, mixed-loss ordering and stronger normative warrant remain in the unified programme and are not settled by this closure."
-  },
   "history": [
     {
       "zh": "2026-10-08：在已完成正面开放成果与有限更新证明之间新增正式组合；保留固定规则都终止而反复修订不终止的反例。包装推论与继承证明不重复记为独立成果。",
@@ -412,6 +520,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added, completion decided among its conditions, and the claim restated on the core laws (realization within B + 1 steps along a run with handed-off certificates; under the continuation condition, the relevance read from significance; the witnesses of revision failing for ever and of a form not fixed); the hypothesis on significance names the continuation condition instead of the retired G0 and round; the four retired Bridge aliases replaced by the core Handoff names; the two Lean counterexamples re-pointed from the periphery file to the core witnesses; then the retired label G0 in the two dependency interfaces replaced by living significance, the periphery's G0 named where the Lean predicate is meant (inventory_g0_of_unrestricted kept). No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（完成可判定列为其条件之一），主张按核心规律重述（移交证书的运行在 B + 1 步之内实现；在延续条件下落在由意义读出的相关性之下；修订永不完成与形式不固定的见证）；关于意义的假设改称延续条件，不再用退役的 G0 与轮次；四个退役的 Bridge 别名改为核心 Handoff 名称；两个 Lean 反例由外围文件改指核心见证；随后两项依赖接口中已退役的标签 G0 改为生生之意义，指 Lean 谓词处写明外围的 G0（inventory_g0_of_unrestricted 保留）。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept in substance, its lead restated positively (handoffs keep the certificate from rising) and \"first certified within B\" as \"first certified at most B\", as the Lean bounds the initial certificate; the claim split into nine laws, each read against its declarations in Becoming.Handoff, Becoming.RenewalBound and Becoming.SecuredContent; the limitations to four does-not-show items and the standard boundaries significance-related-not-asserted, discrete-steps and decidability; the counterexample citing the risk integration note, which no declaration witnesses, became a does-not-show item; \"support costs\" in a related detail read \"support burdens\"; the two dependency details made exact to the core (contingent_newContent is the call) and stripped of the round number P89 and the retired label G0; eleven declarations added to the references of Handoff; no premise, status or source hash changed. Every earlier sentence is mapped in [open-form-realization-under-revision.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/open-form-realization-under-revision.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the evidence paragraph, a dependency, the statement, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述实质保留，其开头改为正面陈述（交接使证书不升高），“首个证书在 B 之内”写作“首个证书至多为 B”，如 Lean 对初始证书的界；主张拆为九条规律，各条对照其在 Becoming.Handoff、RenewalBound 与 SecuredContent 中的声明核读；限制改为四条“未表明”与通用边界 significance-related-not-asserted、discrete-steps、decidability；引用风险整合说明、没有声明见证的那条反例改为一条“未表明”；一条相关说明中的“支持成本”改为“支持负担”；两条依赖说明依核心改精确（所调用的是 contingent_newContent），并去掉轮次编号 P89 与已退休标签 G0；十一个声明加入 Handoff 的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [open-form-realization-under-revision.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/open-form-realization-under-revision.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、证据段、依赖、陈述，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/383cefc360dcdfdb/open-form-realization-under-revision.json",
+      "sha256": "383cefc360dcdfdbe93ecb842bdd4c3194f7d02a20501d16d9eb2d527c3a0d68",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/11b8ff92007a86fb/open-form-realization-under-revision.json",
+      "sha256": "11b8ff92007a86fbdf2d016993892c5a2118cb3531b3d89410ea830481099439",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

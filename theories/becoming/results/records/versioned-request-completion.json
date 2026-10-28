@@ -1,28 +1,111 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "versioned-request-completion",
   "title": {
     "zh": "保留路线的在途请求完成",
     "en": "Completion of an in-flight request along its retained route"
   },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F03",
+  "reviewed_at_utc": "2026-10-28T11:55:10+00:00",
   "statement": {
     "en": "A partial law doing one unit of a pending task's work a tick, and finishing when none is left, finishes it in exactly that work plus one tick, shorter runs leaving it pending; with fuel, exactly when the fuel covers them. Under the bank and queue invariant the versioned queue's head is such a task.",
     "zh": "一个部分律在任务待办时每个时刻做一个单位的工作、无剩余时完成，它恰在该工作加一个时刻时完成任务，更短的运行使任务仍待办；计入燃料时，恰当燃料覆盖这些时刻。在库与队列不变式下，版本化队列之首就是这样的任务。"
   },
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F03",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "zh": "对每条部分律：任务待完成时每次做一单位剩余工作、无剩余时完成，则任务恰在剩余工作加一次中完成，每段更短的运行使它仍待完成、工作减去所走次数；计入燃料时，work + 1 次完成恰当燃料够用。版本化队列的队首就是这样的任务：在库与队列不变量之下每次走其剩余路径的一跳，所以队首在剩余路径长度加一次连续 tick 后完成，发出所请求的值，不改变其余队列、库与当前路线；更短的运行都不交付。",
-    "en": "For every partial law that, while a task is pending, does one unit of its remaining work per tick and finishes when none is left, the task finishes in exactly its remaining work plus one tick, and every shorter run leaves it pending with the work lowered by the ticks taken; with fuel counted, work + 1 ticks finish exactly when the fuel covers them. The versioned queue's head is such a task: under the bank/queue invariant each tick does one hop of its remaining path, so the head completes after its remaining path length plus one consecutive tick, emits its requested value and leaves the remaining queue, banks and active route unchanged, and no shorter drain delivers it."
-  },
+  "laws": [
+    {
+      "en": "For every partial tick that is counted work (while pending, a tick with fuel and work left does one unit of work for one unit of fuel; with no work left and fuel left it finishes; without fuel it stalls): from a pending configuration, work + 1 ticks finish exactly when the fuel covers work + 1, and every run of at most work ticks leaves the task pending, its work lowered by the ticks taken.",
+      "zh": "对每个为计数工作的部分 tick（待办时，有燃料且有剩余工作则以一单位燃料做一单位工作；无剩余工作而有燃料则完成；无燃料则停滞）：自待办构型起，work + 1 次 tick 完成恰当燃料覆盖 work + 1；至多 work 次 tick 的每段运行都使任务仍待办，工作按所走次数减少。",
+      "declarations": [
+        "Becoming.Countdown.CountedWork",
+        "Becoming.Countdown.ticks",
+        "Becoming.Countdown.completes_iff",
+        "Becoming.Countdown.pending_before"
+      ]
+    },
+    {
+      "en": "Work that, with no fuel, advances one unit a tick while pending and finishes when none is left is counted work whose fuel is one more than the work; so from a pending configuration it finishes in work + 1 ticks, and every run of at most work ticks leaves it pending, its work lowered by the ticks taken.",
+      "zh": "无燃料、待办时每次 tick 推进一单位、无剩余时完成的工作，是燃料比工作多一的计数工作；所以自待办构型起它在 work + 1 次 tick 内完成，至多 work 次 tick 的每段运行都使它仍待办，工作按所走次数减少。",
+      "declarations": [
+        "Becoming.Countdown.Advances",
+        "Becoming.Countdown.Advances.countedWork",
+        "Becoming.Countdown.Advances.completes",
+        "Becoming.Countdown.pending_before"
+      ]
+    },
+    {
+      "en": "On the courses of the tick's process: unfuelled work from a pending configuration completes as a plan of work + 1 unit moves, and for counted work every course of at most work moves from a pending configuration ends with the task pending, its work lowered by the moves taken.",
+      "zh": "在 tick 之过程的历程上：无燃料的工作自待办构型起，作为 work + 1 个单位动作的计划完成；对计数工作，自待办构型起至多 work 个动作的每段历程都终于任务仍待办，工作按所走动作数减少。",
+      "declarations": [
+        "Becoming.Courses.Advances.completes_plan",
+        "Becoming.Courses.pending_before_course"
+      ]
+    },
+    {
+      "en": "The versioned queue's head is unfuelled work: while it is pending (route, request, banks and active route kept, its remaining path still delivering the request, nothing more delivered), each tick does one hop of its remaining path, and with no hop left one tick delivers the request and leaves the rest of the queue.",
+      "zh": "版本化队列之首是无燃料的工作：待办时（路线、请求、库与当前路线不变，剩余路径仍交付该请求，未多交付），每次 tick 走剩余路径的一跳；无剩余一跳时，一次 tick 交付请求并留下其余队列。",
+      "declarations": [
+        "Becoming.VersionedTaskInstances.tickOut",
+        "Becoming.VersionedTaskInstances.Pending",
+        "Becoming.VersionedTaskInstances.Delivered",
+        "Becoming.VersionedTaskInstances.head_advances"
+      ]
+    },
+    {
+      "en": "Under the bank and queue invariant (every bank sound, the active bank ready, every packet valid), the head completes after its remaining path length plus one tick, delivering exactly its requested value, the rest of the queue, the banks and the active route unchanged; every drain of at most that length leaves a head of the same route and request before the rest, nothing delivered, its work lowered by the ticks taken.",
+      "zh": "在库与队列不变式下（每个库正确、当前库就绪、每个包有效），队首在其剩余路径长度加一次 tick 后完成，恰交付所请求的值，其余队列、库与当前路线不变；至多该长度的每次排空都留下同一路线与请求的队首在其余队列之前，未交付任何值，工作按所走次数减少。",
+      "declarations": [
+        "CorrectionVersioned.Invariant",
+        "Becoming.VersionedTaskInstances.head_completes",
+        "Becoming.VersionedTaskInstances.valid_head_instance",
+        "Becoming.VersionedTaskInstances.head_pending_before",
+        "CorrectionVersioned.valid_head_completes"
+      ]
+    },
+    {
+      "en": "Where the queue holds at least its capacity, beginning a request leaves the installation unchanged; in a witness, a request begun on a fresh installation and followed by two pauses is still the one packet in the queue.",
+      "zh": "队列已达容量时，开始一个请求使安装不变；见证中，在新安装上开始一个请求、其后两次暂停，它仍是队列中唯一的包。",
+      "declarations": [
+        "CorrectionVersioned.full_request_capacity_blocks_admission",
+        "CorrectionVersioned.pause_is_not_a_progress_guarantee"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "使用既有有限二元转译路线、正确积累摘要、捕获后保留的银行、有效头请求与连续 tick 调度。",
       "en": "Finite binary translation, sound accumulated summaries, captured retained banks, a valid head and consecutive ticks are supplied."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "That the original request is still appropriate once understanding or circumstances change is not shown: completion is a local execution interface, with no assurance through unrestricted change.",
+      "zh": "不表明认知或处境改变后原请求仍然适当：完成只是局部执行接口，不给出贯穿不受限变化的保证。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionVersioned.lean",
+      "detail": {
+        "en": "A queue at capacity leaves the installation unchanged, admitting no new request; and a request followed only by pauses stays pending, since the invariant supplies no scheduler fairness or deadline.",
+        "zh": "队列满时安装不变，不接纳新请求；请求之后只有暂停时它仍待办，因为不变式不提供调度公平或期限。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked. Core: Becoming.Countdown and Becoming.Courses, bound to receipts of the consolidated Lean 4.29.1 checker in becoming-checks, with empty axiom reports for the cited declarations. Periphery, checked with Lean 4.30.0-rc2 and the pinned Mathlib: VersionedTaskInstances, bound to its checker's receipt in versioned-task-instances-checks, and CorrectionVersioned, to common-task-revision-verification.json; their cited declarations report at most propext and Quot.sound.",
+    "zh": "机器检查。核心 Countdown、Courses 绑定 becoming-checks 中合并检查器的 Lean 4.29.1 回执，所引声明公理报告皆空。外围用 Lean 4.30.0-rc2 与固定 Mathlib：VersionedTaskInstances 绑定 versioned-task-instances-checks 的回执，CorrectionVersioned 绑定 common-task-revision-verification.json；所引至多用 propext、Quot.sound。"
+  },
+  "next_delta": {
+    "en": "A scheduling condition weaker than consecutive ticks, such as a tick for the head within every window of bounded length, under which the head's completion has a stated deadline, stated as a law on counted work.",
+    "zh": "一个弱于连续 tick 的调度条件（例如每个有界长度的窗口内队首都得到一次 tick），在其下队首的完成有明确期限，并写成计数工作上的规律。"
+  },
   "correspondence": {
     "zh": "请求与其支持路线属于同一传递历史；正当请求含义、接入权限、写入原子性和物理对应另需成立。本结果是因应转化中的局部执行接口，不说明原请求在认知或处境改变后仍应完成。",
     "en": "Request and supporting route belong to one transmission history; warranted meaning, admission authority, atomic writes and physical correspondence remain conditions. This is a local execution interface within responsive transformation, not a claim that the original request should still be completed after understanding or circumstances change."
@@ -47,30 +130,16 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionVersioned.lean",
-      "detail": {
-        "zh": "不证明原请求现在仍合宜；固定容量可以阻断接入，无任意调度下的实时完成保证。",
-        "en": "Does not show that the original request remains appropriate; finite capacity can block admission and arbitrary scheduling provides no deadline."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不证明原请求现在仍合宜；固定容量可以阻断接入，无任意调度下的实时完成保证。",
-    "en": "Does not show that the original request remains appropriate; finite capacity can block admission and arbitrary scheduling provides no deadline."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.30.0-rc2 实际重建导入闭包并审计；明确区分原成果和新增组合。元数据检查不替代数学证明。一般律已由检查器回执绑定。",
-    "en": "Lean 4.30.0-rc2 actually rebuilt the repository import closure and audited declarations; inherited claims and the new composition remain distinct. Metadata checks do not replace proofs. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionVersioned.lean",
       "role": "proof",
       "sha256": "ed3c9a422b82cd8b76dc229ddd9f3981631b9dd906c9e0f8d6e0dda228144df0",
       "declarations": [
-        "CorrectionVersioned.valid_head_completes"
+        "CorrectionVersioned.valid_head_completes",
+        "CorrectionVersioned.Invariant",
+        "CorrectionVersioned.full_request_capacity_blocks_admission",
+        "CorrectionVersioned.pause_is_not_a_progress_guarantee"
       ]
     },
     {
@@ -101,7 +170,8 @@
         "Becoming.Countdown.pending_before",
         "Becoming.Countdown.Advances",
         "Becoming.Countdown.Advances.countedWork",
-        "Becoming.Countdown.Advances.completes"
+        "Becoming.Countdown.Advances.completes",
+        "Becoming.Countdown.ticks"
       ]
     },
     {
@@ -112,7 +182,10 @@
         "Becoming.VersionedTaskInstances.head_advances",
         "Becoming.VersionedTaskInstances.head_completes",
         "Becoming.VersionedTaskInstances.valid_head_instance",
-        "Becoming.VersionedTaskInstances.head_pending_before"
+        "Becoming.VersionedTaskInstances.head_pending_before",
+        "Becoming.VersionedTaskInstances.tickOut",
+        "Becoming.VersionedTaskInstances.Pending",
+        "Becoming.VersionedTaskInstances.Delivered"
       ]
     },
     {
@@ -239,10 +312,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "直接复用完成接口与 acquired-revision-of-pending-task 已完成的在途任务修订。沿因应转化方向研究根据在认知／处境变化后的适用条件及实践方向；不以无限变化中的无条件保证作为本结果或整个方向的完成门槛。",
-    "en": "Reuse the completion interface and the already completed pending-task revision in acquired-revision-of-pending-task. Investigate applicability conditions and practical direction through changing understanding and circumstances under responsive transformation; unconditional assurance through unrestricted change is not a completion gate for this result or the whole direction."
-  },
   "history": [
     {
       "zh": "2026-10-09：迁移8日既有完成声明，重建时作为导入成果实查；不新增该声明或重算为新成果。",
@@ -281,6 +350,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added, from the claim: the general law of work done one unit a tick and its fuelled form, with the versioned queue's head as the periphery instance under the bank and queue invariant. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，取自主张：每个时刻做一单位工作的一般规律及其计入燃料的形式，以库与队列不变式下的版本化队列之首为外围实例。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept; the claim split into six laws, each read against its declarations in Becoming.Countdown, Becoming.Courses, VersionedTaskInstances and CorrectionVersioned (the invariant's three parts written out, and the shorter drains stated with their bound); the limitation, which the counterexample repeated, split: the appropriateness of the request to one does-not-show item, and the capacity and scheduling cases to the counterexample, now stated as the two witnesses CorrectionVersioned proves (full_request_capacity_blocks_admission, pause_is_not_a_progress_guarantee), with a law; the standard boundaries no-ethical-premise-core-axiom-free and formal-not-empirical; the hypothesis and correspondence kept; seven declarations added to their files' references; the next step stated as a scheduling law; no premise, status or source hash changed. Every earlier sentence is mapped in [versioned-request-completion.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/versioned-request-completion.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为六条规律，各条对照其在 Becoming.Countdown、Becoming.Courses、VersionedTaskInstances 与 CorrectionVersioned 中的声明核读（写出不变式的三部分，更短的排空连同其界一并写出）；与反例重复的限制分开：请求是否适当归入一条“未表明”，容量与调度的情形归入反例，反例现写为 CorrectionVersioned 所证的两个见证（full_request_capacity_blocks_admission、pause_is_not_a_progress_guarantee），并有一条规律；通用边界 no-ethical-premise-core-axiom-free、formal-not-empirical；前提与对应保留；七个声明加入其文件的引用；下一步写为一条调度规律；前提、状态与来源哈希均未改变。每句旧文本的去向见 [versioned-request-completion.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/versioned-request-completion.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/69944b1f1407bc8c/versioned-request-completion.json",
+      "sha256": "69944b1f1407bc8c08b0738d2d96c454e3e303fd7e8f8a87c725d8a0b020951d",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/2e28c3d1c24dfd37/versioned-request-completion.json",
+      "sha256": "2e28c3d1c24dfd37b95df40527adbda86200be491a3e3fda67998dde8c419d1d",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1,0 +1,452 @@
+{
+  "schema_version": 1,
+  "id": "recurrence-without-premise",
+  "title": {
+    "zh": "每个变化之律下的复现",
+    "en": "Recurrence under every law of change"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "statement": {
+    "zh": "每个变化之律在有限多构型中：不合并即回返即保留每个可能，上升需要合并；保留其历史的生成无损、不回返而需要开放，有限的当下遗忘；不加前提。",
+    "en": "For every law of change within finitely many configurations, merging nothing is returning is keeping every possibility, and a rise needs a merge; becoming that keeps its history loses nothing, never returns and needs openness, and a finite present forgets; no premise is used."
+  },
+  "claim": {
+    "zh": "对任意构型上的任意变化之律，不加前提、不用可判定性。鸽巢：一个列表持有一个序列的前 l.length + 1 项时其中两项相同（revisits_within，只用给定的成员关系）；所以列表持有的序列从每一步起都重访（revisits_from），任何过程的任何运行也是（Run.revisits_from），从不重访的序列没有列表持有（unheld_of_new、unlisted_of_new）。构型的量沿序列从不下降、跨每次变化都上升（Marks）时，列表持有的序列的变化不复现（Marks.change_not_recurring、Run.change_not_recurring）。对确定的律 next（Law.orbit）：某步不能到达的构型此后都不能到达（Law.lost_stays；任何过程中沿可行路径失去的可达在每个延续中失去，Reach.lost_stays）；被合并的构型此后不分开（Law.merged_stays）；每个构型都回返时律不合并（Law.lossless_of_returns）；回返的构型每一步都可得（Branching.Returns.reachable，在 Law.process 上）；撤销就是继续（Law.Returns.undo）。列表持有每个构型时：律不合并（Law.Lossless）恰是每个构型都回返（Law.lossless_iff_returns），恰是每个构型在每一步都可得（Law.returns_iff_keeps）；合并永久失去一个可能（Law.Merges.loses）；无损而有构型不回返就没有列表持有每个构型（Law.Lossless.unlisted）；无损时沿轨道从不下降的量不变（Law.Lossless.no_rise），所以从不下降而某步上升的量需要合并（Law.rise_not_lossless）。开放的见证：Nat.succ 不合并、不回返、一步后不能再有 0、每步上升（Law.succ_open）；Nat.pred 合并 0 与 1 而每个数每步都可得（Law.pred_open）。保留历史（Law.withHistory：当下按律继续并进入过去）：每个律都不合并（Law.withHistory_lossless）、不重访（Law.withHistory_new）、不回返（Law.withHistory_never_returns），开端在第一步后不能再有（Law.withHistory_loses_beginning），没有列表持有所保留的历史（Law.withHistory_unlisted）；当下按律本身继续（Law.present_orbit），当下回返时带着另一段历史（Law.return_keeps_history）；展开经过的构型有列表持有时，从每一步起两段不同的历史共有一个当下（Law.present_forgets）。确定的律是脊柱的过程，其轨道是一个运行（Law.process、Law.run）。",
+    "en": "For every law of change on configurations of any kind, with no premise and no decidability. Pigeonhole: a list holding the first l.length + 1 values of a sequence holds two equal ones (revisits_within, using membership as given); so a sequence held by a list revisits from every step on (revisits_from), as does every run of every process (Run.revisits_from), and no list holds a sequence that never revisits (unheld_of_new, unlisted_of_new). Where a quantity of the configuration never falls along a sequence and rises across every change (Marks), the change of a sequence held by a list does not recur (Marks.change_not_recurring, Run.change_not_recurring). Under a determined law next (Law.orbit): a configuration not reachable at a step is not reachable at any later step (Law.lost_stays; for every process, reachability lost along an admissible path is lost along every continuation, Reach.lost_stays); merged configurations are never told apart again (Law.merged_stays); where every configuration returns the law merges nothing (Law.lossless_of_returns); a configuration that returns can be had at every step (Branching.Returns.reachable at Law.process); undoing is going on (Law.Returns.undo). Where a list holds every configuration: the law merges nothing (Law.Lossless) exactly where every configuration returns (Law.lossless_iff_returns), and exactly where every configuration can be had at every step (Law.returns_iff_keeps); a merge loses a possibility for good (Law.Merges.loses); a law merging nothing under which some configuration never returns has no list holding every configuration (Law.Lossless.unlisted); merging nothing, a quantity that never falls along an orbit keeps its value (Law.Lossless.no_rise), so one that never falls and rises at some step needs a merge (Law.rise_not_lossless). Open witnesses: Nat.succ merges nothing, never returns, cannot have 0 again after one step and rises at every step (Law.succ_open); Nat.pred merges 0 and 1, yet every number can be had at every step (Law.pred_open). Keeping its history (Law.withHistory: the present goes on by the law and passes into the past), every law merges nothing (Law.withHistory_lossless), never revisits (Law.withHistory_new) and never returns (Law.withHistory_never_returns); its beginning cannot be had again after the first step (Law.withHistory_loses_beginning), and no list holds the kept history (Law.withHistory_unlisted); the present goes on by the law itself (Law.present_orbit), and where it returns it comes back with another history (Law.return_keeps_history); where a list holds the configurations an unfolding passes through, from every step on two different histories share one present (Law.present_forgets). A determined law is a process of the spine, and its orbit a run of it (Law.process, Law.run)."
+  },
+  "hypotheses": [
+    {
+      "zh": "无关于展开或变化之律的前提，不用可判定性。“某个列表持有这些构型”不对任何展开假设，作为条件写进用到它的规律之内。",
+      "en": "No premise about the unfolding or the law of change, and no decidability. That a list holds the configurations is assumed of no unfolding; it is the condition written into each law that uses it."
+    },
+    {
+      "zh": "表示的承诺：离散的步。无损、回返与保留可能的等价只对确定的律（next : S → S）陈述；重访、变化停止与失去的可达保持失去对每个过程陈述。",
+      "en": "Commitment of the representation: discrete steps. The equivalence of losing nothing, returning and keeping every possibility is stated for determined laws (next : S → S); revisiting, change stopping and lost reachability staying lost are stated for every process."
+    }
+  ],
+  "correspondence": {
+    "zh": "这是 Ren 2026-10-11 所问“if \"lossless exist\", can we find a path, to figure out, and prove along the way?”的一条路径，按“zero-premise, zero axiom(we are not physics, we derive further)”不加前提。脊柱的停息规律（continued-change-needs-openness）以平衡与耗散为前提；本结果在其下一层：有限多构型中，无损即回返，箭头需要合并，不重访需要开放。平衡与第一律之下被围住的家族的构型有限多个，变化是构型的函数时本结果作用于它（熵的会话的 Web.Determined；实例定理待两边落地）。AI 的读法：无损的交换恰在两处存在，有限多构型中的回返与保留其历史的生成（后者需要开放）；物理学设为前提的低熵开端是保留的历史的开端，是推出的；熵读作有限当下的遗忘。这些读法不是物理推导。",
+    "en": "This is one path for Ren's question of 11 October 2026, ‘if \"lossless exist\", can we find a path, to figure out, and prove along the way?’, taken with no premise as Ren asked (‘zero-premise, zero axiom(we are not physics, we derive further)’). The spine's rest laws (continued-change-needs-openness) take balance and dissipation as premises; this result lies a level below: within finitely many configurations, losing nothing is returning, an arrow needs a merge, and never revisiting needs openness. Under balance and the first law an enclosed family has finitely many configurations, and where change is a function of the configuration this result applies to it (the entropy session's Web.Determined; the instance theorems wait for both to land). On the AI's reading lossless exchange exists in exactly two places, return within finitely many configurations and becoming that keeps its history, the latter needing openness; the low-entropy beginning physics supplies is the beginning of the kept history, and is derived; entropy reads as the forgetting of a finite present. These readings are not physical derivations."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+  "aliases": [
+    "Becoming.revisits_within",
+    "Becoming.unlisted_of_new",
+    "Becoming.Marks.change_not_recurring",
+    "Becoming.Law.lost_stays",
+    "Becoming.Law.merged_stays",
+    "Becoming.Law.lossless_iff_returns",
+    "Becoming.Law.returns_iff_keeps",
+    "Becoming.Law.Merges.loses",
+    "Becoming.Law.Lossless.no_rise",
+    "Becoming.Law.rise_not_lossless",
+    "Becoming.Law.succ_open",
+    "Becoming.Law.pred_open",
+    "Becoming.Law.withHistory_lossless",
+    "Becoming.Law.withHistory_loses_beginning",
+    "Becoming.Law.withHistory_unlisted",
+    "Becoming.Law.return_keeps_history",
+    "Becoming.Law.present_forgets",
+    "Becoming.Law.Returns.undo",
+    "Becoming.Reach.lost_stays"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "endpoint-loss-and-return",
+      "detail": {
+        "zh": "Reach.lost_stays 是其“损失沿延续保持”（loss_persists_along_continuation）在脊柱上的形式；回返与保留每个可能的等价（Law.returns_iff_keeps）在有限多构型中与其“保持全部终点可能恰当可以回返”相应。概念上的联系，不是已证的转换。",
+        "en": "Reach.lost_stays is the spine's form of its persistence of loss along continuations (loss_persists_along_continuation); the equivalence of returning and keeping every possibility within finitely many configurations (Law.returns_iff_keeps) corresponds to its ‘all endpoint possibilities kept exactly when return is possible’. A conceptual connection, not a proved adapter."
+      }
+    },
+    {
+      "id": "continued-change-needs-openness",
+      "detail": {
+        "zh": "零前提的对应：有标记的变化在有限多构型中不复现，不重访需要开放；脊柱的停息定理在平衡与耗散之下，以存量为标记。实例定理是下一步。",
+        "en": "The zero-premise counterpart: a marked change does not recur within finitely many configurations, and never revisiting needs openness; the spine's rest theorem, under balance and dissipation, has the stock as its mark. The instance theorems are a next step."
+      }
+    },
+    {
+      "id": "theory-of-becoming-foundation",
+      "detail": {
+        "zh": "统一计划 R6：不含条件的理论的零前提一线中“对每个变化之律成立的”；这不是无公理的整体演绎。",
+        "en": "Unification plan R6: ‘what holds of every law of change’ in the zero-premise line of the theory without the condition; this is not the deduction of the whole without axioms."
+      }
+    },
+    {
+      "id": "returning-where-the-course-branches",
+      "detail": {
+        "zh": "对每个过程：返回的精确条件，三方等价在路径分支时分开之处。",
+        "en": "For every process: the exact condition for returning, and where the three-way equivalence comes apart when the course branches."
+      }
+    },
+    {
+      "id": "entropy-history-and-record",
+      "detail": {
+        "zh": "Becoming.Entropy 导入本模块，把 Web.Revisits.recurs、Web.Arrow.marks、Web.Merges.law、Web.Determined.orbit、Flow.Balances.recurs 与 returns_of_conserving 作为本结果的读法证明。",
+        "en": "Becoming.Entropy imports this module and proves Web.Revisits.recurs, Web.Arrow.marks, Web.Merges.law, Web.Determined.orbit, Flow.Balances.recurs and returns_of_conserving as readings of this result."
+      }
+    },
+    {
+      "id": "where-a-run-goes-on",
+      "detail": {
+        "zh": "沿运行的定律：有限多构型之内不用选择，一般地恰是依赖选择。",
+        "en": "Laws along runs: within finitely many configurations no selection is needed, and in general they are exactly dependent choice."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "detail": {
+        "zh": "有限多构型这一条件两个方向都需要：Nat.succ 不合并而不回返、失去开端并且每步上升（Law.succ_open），Nat.pred 合并而保留每个可能（Law.pred_open）。",
+        "en": "The condition of finitely many configurations is needed both ways: Nat.succ merges nothing yet never returns, loses its beginning and rises at every step (Law.succ_open), and Nat.pred merges yet keeps every possibility (Law.pred_open)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "离散的步；“有限多构型”指某个列表持有它们，不是基数；无损、回返与保留可能的等价只对确定的律（对每个过程三者分开：保留每个可能不给回返，合并不必失去可能，不合并沿运行给回返，见 returning-where-the-course-branches，P81）；“当下遗忘”指两段不同的历史共有一个当下，遗忘的计数（需要判定构型相等）未陈述；“变化不复现”是复现的否定，不是某步之后不再变化；数学（鸽巢；有限集上的单射是双射，每点回返）是复用的；对熵、业与物理学的对应是 AI 的读法；熵的会话的结果已作为其实例给出（Becoming.Entropy）；不含伦理谓词；尚无独立审查。",
+    "en": "Discrete steps; ‘finitely many configurations’ means that a list holds them, not a cardinality; the equivalence of losing nothing, returning and keeping every possibility is for determined laws (for every process the three come apart: keeping every possibility does not give returning, a merge need not lose a possibility, merging nothing gives returning along runs; see returning-where-the-course-branches, P81); ‘the present forgets’ means that two different histories share one present, and no count of what is forgotten (which needs equality of configurations decided) is stated; ‘change does not recur’ is a negated recurrence, not a step after which nothing changes; the mathematics (pigeonhole; an injection of a finite set into itself is a bijection, every point of which returns) is reused; the readings as entropy, as karmic passing and as physics are the AI's; the entropy session's results are given as its instances (Becoming.Entropy); no ethical predicate; not yet independently reviewed."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Recurrence 的 68 项声明（55 项定理）全部空依赖（先在暂存树中以已提交的核心源从前导编译，逐条 #print axioms）；同一回执覆盖包内 75 个模块，核心闭包 77 个模块，全部源声明的公理报告为空，并核对核心只用 Lean 内置前导即可编译，外围回执 20261013T095049.338744Z 通过。尚无独立审查；作者反审见整合文档 §68。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 68 declarations of Becoming.Recurrence (55 theorems) all have empty axiom reports (first compiled from the prelude in a scratch tree against the committed core sources, each checked with #print axioms); the same receipt covers the 75 modules of the package and a core closure of 77 modules, every source declaration with an empty axiom report, and checks that the core compiles from Lean's prelude alone; periphery receipt 20261013T095049.338744Z passed. Not yet independently reviewed; the author's counterreview is in section 68 of the integration note."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "role": "proof",
+      "sha256": "536e2a32c187c540f3f86a69742722375bc384831fb2d3f763be1e5f15fb29d0",
+      "declarations": [
+        "Becoming.le_succ_cases",
+        "Becoming.gap_of_lt",
+        "Becoming.mem_cons_split",
+        "Becoming.skipAt",
+        "Becoming.skipAt_ne",
+        "Becoming.skipAt_le",
+        "Becoming.skipAt_lt",
+        "Becoming.split_at_head",
+        "Becoming.revisits_within",
+        "Becoming.Revisits",
+        "Becoming.revisits_of_held",
+        "Becoming.revisits_from",
+        "Becoming.unheld_of_new",
+        "Becoming.unlisted_of_new",
+        "Becoming.Marks",
+        "Becoming.sumOver",
+        "Becoming.le_sumOver",
+        "Becoming.never_falls_over",
+        "Becoming.Marks.mono",
+        "Becoming.Marks.change_not_recurring",
+        "Becoming.not_marks",
+        "Becoming.Law.orbit",
+        "Becoming.Law.orbit_add",
+        "Becoming.Law.orbit_shift",
+        "Becoming.Law.orbit_mul",
+        "Becoming.Law.Lossless",
+        "Becoming.Law.Merges",
+        "Becoming.Law.Returns",
+        "Becoming.Law.Reachable",
+        "Becoming.Law.KeepsPossibilities",
+        "Becoming.Branching.Merges.not_lossless",
+        "Becoming.Branching.Reachable.earlier",
+        "Becoming.Law.lost_stays",
+        "Becoming.Law.merged_stays",
+        "Becoming.Law.Lossless.cancel",
+        "Becoming.Law.lossless_of_returns",
+        "Becoming.Branching.Returns.reachable",
+        "Becoming.Law.Returns.undo",
+        "Becoming.Law.Lossless.returns",
+        "Becoming.Law.returns_of_reachable",
+        "Becoming.Law.Lossless.no_rise",
+        "Becoming.Law.rise_not_lossless",
+        "Becoming.Law.lossless_iff_returns",
+        "Becoming.Law.returns_iff_keeps",
+        "Becoming.Law.lossless_of_reachable",
+        "Becoming.Law.Merges.loses",
+        "Becoming.Law.Lossless.unlisted",
+        "Becoming.Law.succ_orbit",
+        "Becoming.Law.succ_open",
+        "Becoming.Law.pred_orbit",
+        "Becoming.Law.pred_open",
+        "Becoming.Law.withHistory",
+        "Becoming.Law.withHistory_lossless",
+        "Becoming.Law.past_length",
+        "Becoming.Law.present_orbit",
+        "Becoming.Law.withHistory_new",
+        "Becoming.Law.withHistory_never_returns",
+        "Becoming.Law.withHistory_loses_beginning",
+        "Becoming.Law.withHistory_unlisted",
+        "Becoming.Law.present_forgets",
+        "Becoming.Law.return_keeps_history",
+        "Becoming.Law.process",
+        "Becoming.Law.lossless_iff",
+        "Becoming.Law.merges_iff",
+        "Becoming.Law.returns_iff",
+        "Becoming.Law.reachable_iff",
+        "Becoming.Law.keeps_iff",
+        "Becoming.Law.run",
+        "Becoming.Law.run_state"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "declarations": [
+        "Becoming.le_dest"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "role": "proof",
+      "sha256": "a6fef844c6464152369b1c1117c602f1e6d0ec6c7645fda7d6f60c8930c52def",
+      "declarations": [
+        "Becoming.Run.revisits_from",
+        "Becoming.Run.change_not_recurring",
+        "Becoming.Reach.lost_stays"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "role": "proof",
+      "sha256": "ba694373b40b71a95dad4e8b2b3200841047ccd228f731edd5315b8642c4fcf8",
+      "declarations": [
+        "Becoming.Run",
+        "Becoming.Reach",
+        "Becoming.Reach.trans"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md",
+      "role": "integration",
+      "sha256": "39481677948c2c7701b1fd6b9c942dabc0003e06f66fc83b9f85912566f87593",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md",
+      "role": "provenance",
+      "sha256": "efaac8a8ad4deb0ee327f28decda8cf886b66afaeb399bb323b766d1497c5c56",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T150956.178111Z/verification.json",
+      "role": "receipt",
+      "sha256": "795c0b40d7c58facc38f3f95d306c44f29617431e16828b65c1aecc9cd6f7d77",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "role": "receipt",
+      "sha256": "9596c1a0b53bd9a26d9975f2cf00180c6d63402a1459924d1016b3ddbc2edcb6",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "role": "receipt",
+      "sha256": "4d94c1b82af02e7869351aba40ea8ebaa61b5614423929afa25924281fdda97a",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Recurrence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frame",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Labelled",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "在可判定相等之下，遗忘的计数作为一个不减的量；独立审查。",
+    "en": "With equality decided, the count of what is forgotten as a quantity that never falls; an independent review."
+  },
+  "history": [
+    {
+      "zh": "2026-10-11：作为统一计划 R6 新增，按 Ren“if \"lossless exist\", can we find a path, to figure out, and prove along the way?”与“please keep advancing, zero-premise, zero axiom(we are not physics, we derive further)”（sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md）；见整合文档 §68。",
+      "en": "2026-10-11: added as R6 of the unification plan, following Ren's ‘if \"lossless exist\", can we find a path, to figure out, and prove along the way?’ and ‘please keep advancing, zero-premise, zero axiom(we are not physics, we derive further)’ (sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md); see section 68 of the integration note."
+    },
+    {
+      "zh": "2026-10-12 P81：next_delta 中非确定过程的无损与回返一项由 returning-where-the-course-branches 回答；见整合文档 §99。断言不变。",
+      "en": "2026-10-12 P81: the next_delta item on losing nothing and returning for processes that are not determined is answered by returning-where-the-course-branches; see §99 of the integration note. The claim is unchanged."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“每个变化之律保留、失去与回返的，不加前提：有限多构型中不合并即回返即保留每个可能，上升需要合并；保留其历史的生成无损、不回返而需要开放，有限的当下遗忘”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “What every law of change keeps, loses and returns to, with no premise: within finitely many configurations merging nothing is returning is keeping every possibility, and a rise needs a merge; becoming that keeps its history loses nothing, never returns and needs openness, and a finite present forgets”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；统一计划只在 §10 的 P36 对照表后加入 2026-10-14 的对照表；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; the unification plan only adds the 14 October 2026 rename table after the P36 table in section 10; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026年10月17日，全库审查（2026年10月16–17日，CHANGES.md）第 B6、bilingual-10 项：限制与下一步原说熵的会话的实例定理未给出，Becoming.Entropy 已给出，改写并加 entropy-history-and-record 为相关；“对每个能动的构型不加选择地陈述沿运行的定律”已由 where-a-run-goes-on 回答（有限多构型之内不用选择，一般地等价于依赖选择），从下一步删去并加为相关；下一步中“（P81）”的状态说明删去。验证范围英文原说“40 个模块”、两种语言都说核心闭包 42 个，回执 20261013T094743.528770Z 列出 75 个脊柱模块与 77 个核心闭包模块，改正。schema 1，无 text_versions；原文见 git。",
+      "en": "17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), items B6, bilingual-10: the limitations and next step said the entropy session's instance theorems are not given; Becoming.Entropy gives them, so both are rewritten and entropy-history-and-record is added as related; \"the laws along runs for every configuration that can move, without a choice\" is answered by where-a-run-goes-on (no selection within finitely many configurations, dependent choice in general), so it leaves the next step and becomes related; the status note \"(P81)\" leaves the next step. The validation scope said \"40 modules\" in English and a core closure of 42 in both languages, while receipt 20261013T094743.528770Z lists 75 spine modules and a 77-module core closure; corrected. Schema 1, no text_versions; earlier text in git."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "19 October 2026, A4 (Ren 19 October: \"integrate all, the theory is a whole, not stitched pieces, go ahead\"): The rest family's Chinese term in the live Chinese fields is now 停息 (2 uses), as in the chapter (DELEGATED-CHOICES D45 (4)); the English is unchanged. The claim is unchanged.",
+      "zh": "2026年10月19日，A4（Ren 10月19日的回答：“integrate all, the theory is a whole, not stitched pieces, go ahead”）：中文字段中停息家族的用语由“静止”改为“停息”（2 处），与理论章一致（DELEGATED-CHOICES D45 (4)）；英文不变。论断不变。"
+    },
+    {
+      "en": "19 October 2026, R22 (the names of the nineteenth review): BECOMING-UNIFICATION-PLAN.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: BECOMING-UNIFICATION-PLAN.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月19日，R22（第十九次审查的名称）：BECOMING-UNIFICATION-PLAN.md 重新指向。自所审哈希以来，所引文件只在 R22 改名之处改动：BECOMING-UNIFICATION-PLAN.md，只改名称（第十九次审查 N1、N2；对照表见 development/r22-names/RENAME-TABLE.json）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: returns_of_lossless (now returns_of_conserving). Proof bindings (Labelled.lean, Recurrence.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Labelled.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Recurrence.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：returns_of_lossless（现为 returns_of_conserving）。证明绑定（Labelled.lean、Recurrence.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Labelled.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Recurrence.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed, with the statement kept under one name: gap_of_le (now le_dest). Proof bindings (Recurrence.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：删去，陈述以一个名称保留：gap_of_le（现为 le_dest）。证明绑定（Recurrence.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Recurrence.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 83 bookkeeping notes condensed from 2026-10-11 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/3cd9380cd931b42e/recurrence-without-premise.json and in git.",
+      "zh": "2026-10-20：83 条记账性说明合并（2026-10-11 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/3cd9380cd931b42e/recurrence-without-premise.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label Part I in a related detail replaced by the theory without the condition. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条相关说明中的退役标签“第一部分”改为不含条件的理论。规律未变。"
+    },
+    {
+      "en": "26 October 2026, board item DF1b (study section 422): The rest laws' premises are named as the Lean has them, balance and dissipation (World.comes_to_rest_unrefuted), and an enclosed family's finitely many configurations need balance beside the spine's first law; the Chinese writes that law (Flow.Gainless) 第一律, not 第一定律, which names thermodynamics' first law.",
+      "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：停息规律的前提按 Lean 写作平衡与耗散（World.comes_to_rest_unrefuted），被围住的家族构型有限多个，除脊柱的第一律外还需要平衡；中文把该律（Flow.Gainless）写作第一律，而不写作第一定律，后者指热力学第一定律。"
+    }
+  ]
+}

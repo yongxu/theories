@@ -1,0 +1,36 @@
+# Migration map: recurrent-chain-assembly
+
+Old record sha256 `2ad0f8dcd2cd0d1c5656dce506742d50328a09bac6944abc191f173dee365e4d`; snapshot `_process/architecture/history/2ad0f8dcd2cd0d1c/recurrent-chain-assembly.json`.
+
+Labels number the old English sentences and clauses (split at full stops and semicolons outside parentheses): T title, S statement, C claim, L limitations, V validation_scope, R correspondence, N next_delta, H hypotheses, X counterexamples. The Chinese text of each field goes to the same place as its English counterpart; the old Chinese was read alongside, sentence by sentence.
+
+Each law was read against its declarations in `Becoming/Copying.lean` (core) and `RecurrentAssembly.lean` and `generative-capacity/CopyingInstances.lean` (periphery). The conditions the Lean takes are kept: decidable equality and any law of draws (law 1); the stock `m` and the bound `d · required n k ≤ m` (law 2); the size limit `s.cells.length + n ≤ 8` and, for the bonds, a chain whose bonds are the path on its tokens (law 3); the component blocks `blocks (required n k)` with a tail in the pool (laws 5 and 6); a routing of the eight-slot recipe that completes with nothing left (law 7); and the declared pools and support of each witness (law 9). `two_generations_realized` and `missing_kind_stalls_with_work_remaining`, which witness the counterexample (27 units give four chains where 26 fall one short; a pool without the second kind stalls), were added to the references of `RecurrentAssembly.lean`; the bound receipt `recurrent-assembly-verification/verification.json` lists both (`Quot.sound` and `propext`; `propext`). The core receipt reports empty axiom lists for every cited Copying declaration and the periphery receipts at most `propext`, `Quot.sound` and `Classical.choice` (`formed_graph_matches_previous` and `alternatingFrom` none), so `no-ethical-premise-core-axiom-free` holds.
+
+The old record had no statement; the new one says what the home section (04-LIFE, `r-recurrent-chain-assembly`, its core-law and instance cells) says.
+
+| Old text | Type | New place |
+|---|---|---|
+| T0 “Prepared material joins recurrent chain formation” | title | title (unchanged) |
+| (none) | statement | statement, written from the home section |
+| C0 “For every alphabet and law of draws, a copy of a word produces the word exactly when the pool supplies it and the support covers what it draws;” | law | law 1 (with decidable equality) |
+| C1 “where every unit draws d from one stock and becomes two, n rounds from k units run exactly when the stock covers d·k(2^n−1), ending with k·2^n units.” | law | law 2 (`required`, `required_add`, `doubling`, `doubling_iff`, `doubling_runs`, with what the stock has left) |
+| C2 “End attachment is the instance with the alternating word and unit draws: within the size limit a chain grows by the alternating word, bonds included, exactly when …, so the mature chain, bonds included, forms from the empty chain exactly when the pool holds at least four of each kind and eight units are free.” | law | laws 3 (`alternatingFrom`, `grow_view`, `grow_iff`, `attach_path_shaped`, `grow_path_shaped`, `grow_strand_iff`; “bonds included” for a chain bonded by the path, as `grow_strand_iff` takes it) and 4 (`mature_forms_iff`, `mature_strand_iff`) |
+| C3 “From k mature chains with the material for the rounds, n rounds reach k·2^n mature chains exactly when the support covers 9·k(2^n−1), that is, exactly when the doubling process with draw 9 runs n rounds.” | law | law 5 (`reproduce_used`, `rounds_used`, `rounds_mature_iff`, `rounds_follow_doubling`); law 6 its sufficient side and totals (`supported_rounds`, `required_as_growth`, `rounds_accounts`) |
+| C4 “The previous actual routing output forms the cleavable chain, and its internally connected fragments rebuild under the same attachment law.” | law | laws 7 (`prepared_repeated_generation`) and 8 (`formed_graph_matches_previous`, `fragments_retain_real_links`) |
+| H0 “A/B end compatibility, central cleavage of an eight-component path and operation order are supplied; the completed routing output has no unrepresented load-bearing edges.” | premise | hypotheses[0] (unchanged) |
+| H1 “Continuing one complete chain for g rounds requires 8(2^g−1) additional components and 9(2^g−1) support; structural activation from routed material additionally requires eight support units.” | premise | hypotheses[1] (unchanged); law 7 |
+| (new) hypotheses[2] | premise | the core laws' generality and the machine's Boolean tokens, size limit and natural-number counts, as the Lean has them |
+| X0 “One missing support unit leaves a real seven-component successor; absence of B stalls despite remaining work.” | counterexample | counterexamples[0], these two clauses (unchanged); law 9 states the witnesses |
+| X0 (continued) “Heritable variation in organizing laws, physical mechanics, autonomous feed and broad comparative advantage are unproved.” | non-implication | does_not_show[0]: it repeated the limitation and no declaration witnesses it, so it leaves the counterexample |
+| L0 “One missing support unit leaves a real seven-component successor;” | counterexample | counterexamples[0] (the same sentence); law 9 (`partial_failure_keeps_material`) |
+| L1 “absence of B stalls despite remaining work.” | counterexample | counterexamples[0]; law 9 (`missing_kind_stalls_with_work_remaining`) |
+| L2 “Heritable variation in organizing laws, physical mechanics, autonomous feed and broad comparative advantage are unproved.” | non-implication | does_not_show[0] (“do not follow from these laws”, not a status) |
+| V0 “The cited Lean receipt binds the actual source;” | evidence | validation_scope (the bound receipts named, with their checkers, Lean version and counts) |
+| V1 “inference validity and biological correspondence remain distinct.” | evidence | validation_scope |
+| V2 “General laws: checker receipts bound.” | evidence | validation_scope |
+| R0 “Structure consists of actual token transfers, formed edges, filtered old edges and retained fragments.” | correspondence | correspondence (unchanged) |
+| R1 “The new attachment route and old division growth have only the checked endpoint correspondence.” | correspondence | correspondence (unchanged); does_not_show[1] states the same boundary as a correspondence item |
+| N0 “Fixed-law recurrence and added template copying are complete;” | another record's scope | related entry inherited-structural-copying (added); the status field |
+| N1 “formed-copying-registration further joins local contact formation, leaving physical discrimination, renewed supply and shared allocation to explain.” | another record's scope + next step | related entry formed-copying-registration (added); next_delta (the three explanations, stated as the step) |
+| (dependency) conditions of growth-constrained-fragmentation, “local laws and costs are not identified” | wording | “local laws and draws are not identified” (Chinese 成本 → 汲取), a word of exchange in a live field; the relation and interface are otherwise unchanged |
+| (dependency) Chinese input of growth-constrained-fragmentation, 本轮接合终点 (“this round's attachment endpoint”) | wording | 新接合终点, as its English (“New attachment endpoint”) reads: round narration in a live field |

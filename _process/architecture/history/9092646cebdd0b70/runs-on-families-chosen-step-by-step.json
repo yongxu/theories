@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "id": "runs-on-families-chosen-step-by-step",
+  "title": {
+    "zh": "逐步选定的家族",
+    "en": "Families chosen step by step"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "statement": {
+    "zh": "只有持有前后所立者的条件把一步连到下一步，以不计次序的延续代替逐位跟随。",
+    "en": "Only a condition holding what stands before and after joins one step to the next, and continuity up to order replaces following position by position."
+  },
+  "claim": {
+    "en": "Where the family may change at each step (OneStep.StepRealized, with givers; OneStep.StepRunRealized, without), a sequence of patterns is shown by some world under no condition, under balance and under closure exactly when each step obeys its law (OneStep.step_every_iff, OneStep.step_balance_iff, OneStep.step_closed_iff, OneStep.stepRun_balance_iff): these conditions join no step to the next. Running down holds in its family everything standing before and after its step, and there a sequence is shown exactly when each step obeys its law and the passages continue up to order: at each positive level, as many stand there after a step as before the next (OneStep.Continues; OneStep.step_runsDown_iff, OneStep.step_runsDownClosed_iff, OneStep.stepRun_runsDown_iff, OneStep.stepRun_runsDownClosed_iff; OneStep.StepRealized.continues). Following position by position on one family gives continuity (OneStep.Chained.continues) and not conversely: a sequence of two idle conditions in swapped order runs down on families chosen step by step and on no single family (OneStep.steps_not_run), and a sequence shown under balance on chosen families is not shown under running down, its passages not continuing (OneStep.vanishing_steps). No premise.",
+    "zh": "家族可以每步改变时（OneStep.StepRealized，带给予者；OneStep.StepRunRealized，不带），一串模式在无条件、平衡与封闭之下恰在每步遵守其规律时由某个世界显示（OneStep.step_every_iff、OneStep.step_balance_iff、OneStep.step_closed_iff、OneStep.stepRun_balance_iff）：这些条件不把一步连到下一步。耗减在其家族中持有该步之前与之后所立的一切，在那里一串模式恰在每步遵守其规律、且经过不计次序地延续时被显示：在每个正的水平上，一步之后立于那里的与下一步之前一样多（OneStep.Continues；OneStep.step_runsDown_iff、OneStep.step_runsDownClosed_iff、OneStep.stepRun_runsDown_iff、OneStep.stepRun_runsDownClosed_iff；OneStep.StepRealized.continues）。在一个家族上逐位跟随给出延续（OneStep.Chained.continues），反之不然：两个空闲条件次序交换的一串在逐步选定的家族上耗减，在任何单一家族上都不（OneStep.steps_not_run）；在选定家族上于平衡之下显示的一串在耗减之下不显示，其经过不延续（OneStep.vanishing_steps）。不加前提。"
+  },
+  "hypotheses": [
+    {
+      "zh": "延续只对其家族持有一步前后所立者的条件推出（耗减）；只覆盖一侧的条件没有处理。",
+      "en": "Continuity is derived only for conditions whose family holds what stands before and after the step (running down); conditions covering one side only are not treated."
+    }
+  ],
+  "correspondence": {
+    "zh": "P79b（工作板，P79 的延伸），按 Ren 2026-10-12 的“move towards 100%”，回答 laws-of-one-step-complete 的 next_delta。读法（AI 的，依 Ren 的交托采用）：家族不必是固定的；逐步选定时，把一步连到下一步的只是所立者的延续，不是位置。见整合文档 §103。",
+    "en": "P79b (work board, extending P79), following Ren's ‘move towards 100%’ of 12 October 2026, answering the next_delta of laws-of-one-step-complete. Reading (the AI's, adopted on Ren's delegation): a family need not be fixed; chosen step by step, what joins one step to the next is only the continuity of what stands, not position. See the integration document §103."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+  "aliases": [
+    "Becoming.OneStep.StepRealized",
+    "Becoming.OneStep.StepRunRealized",
+    "Becoming.OneStep.Continues",
+    "Becoming.OneStep.step_every_iff",
+    "Becoming.OneStep.step_balance_iff",
+    "Becoming.OneStep.step_closed_iff",
+    "Becoming.OneStep.step_runsDown_iff",
+    "Becoming.OneStep.step_runsDownClosed_iff",
+    "Becoming.OneStep.stepRun_runsDown_iff",
+    "Becoming.OneStep.stepRun_runsDownClosed_iff",
+    "Becoming.OneStep.stepRun_balance_iff",
+    "Becoming.OneStep.StepRealized.continues",
+    "Becoming.OneStep.Chained.continues",
+    "Becoming.OneStep.steps_not_run",
+    "Becoming.OneStep.vanishing_steps",
+    "families chosen step by step",
+    "逐步选定的家族"
+  ],
+  "dependencies": [
+    {
+      "id": "laws-of-one-step-complete",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用模式、条件之律、见证世界与 Chained。",
+        "en": "Reuses the patterns, each condition's law, the witness world and Chained."
+      },
+      "interface": {
+        "output": {
+          "zh": "一步的规律与固定家族上的运行。",
+          "en": "The laws of one step and runs on a fixed family."
+        },
+        "input": {
+          "zh": "逐步选定家族上的运行。",
+          "en": "Runs on families chosen step by step."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "laws-of-one-step",
+      "detail": {
+        "zh": "一步的规律对逐步选定的家族逐步成立。",
+        "en": "The laws of one step hold step by step on families chosen step by step."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "detail": {
+        "zh": "swapped：逐步选定时耗减而在单一家族上不；vanishing：平衡之下显示而耗减之下不。",
+        "en": "swapped: runs down on families chosen step by step and on no single family; vanishing: shown under balance and not under running down."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "只覆盖一侧的条件没有处理；容量与活动在运行上没有陈述；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
+    "en": "Conditions covering one side only are not treated; capacity and activity over runs are not stated; the readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.OneStep 的 311 项定理全部空依赖，其中含 OneStep.StepRealized、OneStep.StepRunRealized、OneStep.Continues、OneStep.step_every_iff、OneStep.step_balance_iff、OneStep.step_closed_iff、OneStep.step_runsDown_iff、OneStep.step_runsDownClosed_iff、OneStep.stepRun_runsDown_iff、OneStep.stepRun_runsDownClosed_iff、OneStep.stepRun_balance_iff、OneStep.StepRealized.continues、OneStep.Chained.continues、OneStep.steps_not_run与 OneStep.vanishing_steps；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §103；尚无独立审查。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 311 theorems of Becoming.OneStep all have empty axiom reports, among them OneStep.StepRealized, OneStep.StepRunRealized, OneStep.Continues, OneStep.step_every_iff, OneStep.step_balance_iff, OneStep.step_closed_iff, OneStep.step_runsDown_iff, OneStep.step_runsDownClosed_iff, OneStep.stepRun_runsDown_iff, OneStep.stepRun_runsDownClosed_iff, OneStep.stepRun_balance_iff, OneStep.StepRealized.continues, OneStep.Chained.continues, OneStep.steps_not_run and OneStep.vanishing_steps. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §103 of the integration note; there is no independent review yet."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "role": "proof",
+      "sha256": "a3573dad850874daa486c38d69f7ae02201572aac6f019785653bfdc45a4f10a",
+      "declarations": [
+        "Becoming.OneStep.Continues",
+        "Becoming.OneStep.Chained.continues",
+        "Becoming.OneStep.Chain.rank_links",
+        "Becoming.OneStep.Chain.rankNext_onward",
+        "Becoming.OneStep.Chain.rankPrev_backward",
+        "Becoming.OneStep.Chain.covered_tally",
+        "Becoming.OneStep.RunRealizedGivers",
+        "Becoming.OneStep.StepRealized",
+        "Becoming.OneStep.RunRealizedGivers.run",
+        "Becoming.OneStep.RunRealizedGivers.steps",
+        "Becoming.OneStep.StepRealized.continues",
+        "Becoming.OneStep.Chain.showsAll",
+        "Becoming.OneStep.Chain.openTaken",
+        "Becoming.OneStep.Chain.openGiven",
+        "Becoming.OneStep.Chain.runningTaken",
+        "Becoming.OneStep.Chain.openTaken_spec",
+        "Becoming.OneStep.Chain.openGiven_spec",
+        "Becoming.OneStep.Chain.runningTaken_spec",
+        "Becoming.OneStep.Chain.realizedSteps",
+        "Becoming.OneStep.Chain.realizedRun",
+        "Becoming.OneStep.run_every_givers_iff",
+        "Becoming.OneStep.run_balance_givers_iff",
+        "Becoming.OneStep.run_runsDown_givers_iff",
+        "Becoming.OneStep.run_closed_givers_iff",
+        "Becoming.OneStep.run_runsDownClosed_givers_iff",
+        "Becoming.OneStep.step_every_iff",
+        "Becoming.OneStep.step_balance_iff",
+        "Becoming.OneStep.step_closed_iff",
+        "Becoming.OneStep.step_runsDown_iff",
+        "Becoming.OneStep.step_runsDownClosed_iff",
+        "Becoming.OneStep.StepRunRealized",
+        "Becoming.OneStep.stepRun_iff_givers",
+        "Becoming.OneStep.givers_sign",
+        "Becoming.OneStep.RunsDown.sign_given_le",
+        "Becoming.OneStep.stepRun_runsDown_iff",
+        "Becoming.OneStep.stepRun_runsDownClosed_iff",
+        "Becoming.OneStep.stepRun_balance_iff",
+        "Becoming.OneStep.swapped",
+        "Becoming.OneStep.swapped_continues",
+        "Becoming.OneStep.swapped_runsDown",
+        "Becoming.OneStep.steps_not_run",
+        "Becoming.OneStep.vanishing",
+        "Becoming.OneStep.vanishing_not_continues",
+        "Becoming.OneStep.vanishing_steps"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md",
+      "role": "provenance",
+      "sha256": "f3e5885ed960640cf3773813e7e02f6869ca2884b3730a2ea683c0686c03a8f3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OneStep",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "只覆盖一侧的条件；容量与活动在运行上的形式。",
+    "en": "Conditions covering one side only; capacity and activity over runs."
+  },
+  "history": [
+    {
+      "zh": "2026-10-13：接续并整合 P79 的现存证明包；见整合文档 §103。",
+      "en": "2026-10-13: resumed and integrated the existing P79 proof package; see §103 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“逐步选定的家族：只有持有前后所立者的条件把一步连到下一步，以不计次序的延续代替逐位跟随”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “Families chosen step by step: only a condition holding what stands before and after joins one step to the next, and continuity up to order replaces following position by position”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D30）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D30): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 35 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/6cc1d57e2cb43191/runs-on-families-chosen-step-by-step.json and in git.",
+      "zh": "2026-10-20：35 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/6cc1d57e2cb43191/runs-on-families-chosen-step-by-step.json 和 git 中。"
+    }
+  ]
+}

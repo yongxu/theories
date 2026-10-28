@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "positive-ground-open-futures",
   "title": {
     "zh": "可见未来中的确定正面根据与开放形态",
@@ -8,11 +8,131 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T14:50:07+00:00",
-  "claim": {
-    "zh": "在明示生生之意义与生成对应下，同一个回应若在每段所接纳的接续中实现此前没有的活的内容，就在每段接续中具有某项正面根据，无须固定同一种新形态。公开的直接实践解释可给出一项支持理由。有限构造同时保留旧共同可能性、不同真实未来分支和进一步证据辨别；有真实负担或所见范围可修订，不删除这个正面结果。",
-    "en": "Under explicit living significance and generative correspondence, one response realizing living content absent before in every admitted continuation has some positive ground in each continuation, without fixing one new form across all of them. Explicit direct practical articulation supplies a contributory reason. The finite construction retains old joint possibilities, distinct real future branches and further evidence discrimination; a real burden or revisable admitted scope does not erase the positive result."
+  "reviewed_at_utc": "2026-10-28T11:43:54+00:00",
+  "statement": {
+    "en": "Where each admitted continuation realizes living content absent before, living significance gives each some relevant content absent before, which may differ between continuations; in a two-branch model one response realizes a fresh claim in each branch and none in both.",
+    "zh": "每段被接纳的接续都实现此前没有的活的内容时，生生之意义给每段某项此前没有的相关内容，各段可以不同；在一个两分支模型中，同一回应在每个分支实现一个新的主张，没有一个在两个分支中都实现。"
   },
+  "laws": [
+    {
+      "en": "The finite signed integral of integer contributions over a listed domain is their sum. A positive integral has some occurrence in the domain contributing positively; what that occurrence means is not read off the sign.",
+      "zh": "整数贡献在一个列出的域上的有限带号积分就是它们的和。正的积分在域中有某个正贡献的发生；该发生意味着什么，不由符号读出。",
+      "declarations": [
+        "Becoming.SecuredContent.finiteIntegral",
+        "Becoming.SecuredContent.pos_or_pos",
+        "Becoming.SecuredContent.positive_integral_has_positive_occurrence"
+      ]
+    },
+    {
+      "en": "Living significance on a frame says that living content realized at a configuration falls under the given relevance there. Where each admitted continuation realizes some living content absent before, living significance gives each some relevant content absent before; which content may differ between continuations.",
+      "zh": "框架上的生生之意义是说：在某配置实现的活的内容落在该处所给的相关性之下。每段被接纳的接续都实现某项此前没有的活的内容时，生生之意义给每段某项此前没有的相关内容；是哪项内容，各段接续可以不同。",
+      "declarations": [
+        "Becoming.LivingSignificance",
+        "Becoming.SecuredContent.contingent_newContent"
+      ]
+    },
+    {
+      "en": "Under living significance, where every admitted continuation has a positive finite integral over a listed domain, each positively contributing occurrence there means living content realized and absent before, and a supplied articulation takes relevant content to a reason, each admitted continuation holds relevant content absent before and has the reason; no comparison or order is among the hypotheses.",
+      "zh": "在生生之意义之下，若每段被接纳的接续在一个列出的域上都有正的有限积分，那里每个正贡献的发生都意味着被实现且此前没有的活的内容，且所给的表述把相关内容带到一项理由，则每段被接纳的接续都持有此前没有的相关内容并有这项理由；前提中没有比较或排序。",
+      "declarations": [
+        "Becoming.SecuredContent.certified_integral_reason"
+      ]
+    },
+    {
+      "en": "In a model of one response, two future branches and formation models of magnitude 0, 1 or 2, where fresh claims form only through the response and a retained prior branch: for every model of positive magnitude the response realizes in each branch a fresh claim absent before, and no fresh claim is realized in both branches.",
+      "zh": "在一个模型中：一个回应、两个未来分支、幅度为 0、1 或 2 的形成模型，新的主张只经由回应与所保留的先前分支形成。对每个幅度为正的模型，回应在每个分支实现一个此前没有的新主张，而没有一个新主张在两个分支中都实现。",
+      "declarations": [
+        "Becoming.SecuredContent.FormationModel",
+        "Becoming.SecuredContent.magnitude",
+        "Becoming.SecuredContent.LivingClaim",
+        "Becoming.SecuredContent.Arrangement",
+        "Becoming.SecuredContent.initial",
+        "Becoming.SecuredContent.respond",
+        "Becoming.SecuredContent.prior",
+        "Becoming.SecuredContent.realizes",
+        "Becoming.SecuredContent.futureFrame",
+        "Becoming.SecuredContent.fresh",
+        "Becoming.SecuredContent.same_response_without_fixed_form"
+      ]
+    },
+    {
+      "en": "In the two-branch model of one response, with occurrences two fresh relations and one burden: each positively contributing occurrence of the duplicate-free positive domain means a fresh claim realized and absent before; for a model of positive magnitude, after the response the positive domain's integral is positive and the duplicate-free full domain's, burden included, is −1, and it is 0 without the response.",
+      "zh": "在一个回应、两个分支的模型中，发生为两个新关系与一个负担：无重复的正域中每个正贡献的发生，都意味着一个被实现且此前没有的新主张；对幅度为正的模型，回应之后正域的积分为正，而含负担的无重复全域积分为 −1，没有回应时为 0。",
+      "declarations": [
+        "Becoming.SecuredContent.Occurrence",
+        "Becoming.SecuredContent.positiveDomain",
+        "Becoming.SecuredContent.fullDomain",
+        "Becoming.SecuredContent.contribution",
+        "Becoming.SecuredContent.occurrenceMeaning",
+        "Becoming.SecuredContent.positive_occurrence_correspondence",
+        "Becoming.SecuredContent.positiveDomain_nodup",
+        "Becoming.SecuredContent.fullDomain_nodup",
+        "Becoming.SecuredContent.positive_integral_and_adverse_full_change"
+      ]
+    },
+    {
+      "en": "A transport sending a region of one frame into a region of another and keeping every realization there preserves every bundle of claims jointly realizable in the first region. In the two-branch model the response so preserves every bundle of claims some branch realizes together before it, and keeps the query channel open.",
+      "zh": "把一个框架的某区域送入另一框架的某区域、并保留那里每项实现的传送，保留第一个区域中每个可共同实现的主张束。在两分支模型中，回应以此保留回应之前某个分支一并实现的每个主张束，并保持查询通道开放。",
+      "declarations": [
+        "Becoming.PreservesBundles",
+        "Becoming.preserves_of_transport",
+        "Becoming.SecuredContent.response_preserves_joint_openness"
+      ]
+    },
+    {
+      "en": "For any listed candidate rules and observations: learning keeps the actual rule where it is listed and fits the observations, evidence acquired from the actual rule fits it, and revising by one observation keeps exactly the rules giving the observed value, the belief after that observation.",
+      "zh": "对任意列出的候选规则与观察：实际规则在列中且符合观察时，学习保留它；从实际规则取得的证据符合它；按一次观察修订恰保留给出所观察值的规则，即该观察之后的信念。",
+      "declarations": [
+        "Becoming.Narrowing.Rule",
+        "Becoming.Narrowing.Observation",
+        "Becoming.Narrowing.Fits",
+        "Becoming.Narrowing.revise",
+        "Becoming.Narrowing.learn",
+        "Becoming.Narrowing.acquire",
+        "Becoming.Narrowing.actual_retained",
+        "Becoming.Narrowing.acquired_evidence_faithful",
+        "Becoming.Narrowing.revise_is_after"
+      ]
+    },
+    {
+      "en": "In the two-branch model, under a supplied reading law, one observation acquired from the magnitude-1 rule leaves magnitudes 1 and 2 live and rules out 0; in every live model and branch the positive integral is positive after the response and 0 without it; the answer to the second query abstains, and observing it separates 1 from 2.",
+      "zh": "在两分支模型中，按所给的读取律，从幅度 1 的规则取得的一次观察使幅度 1 与 2 仍然可行而排除 0；在每个可行模型与分支中，回应之后正积分为正，没有回应时为 0；对第二个查询的回答弃权，观察它则把 1 与 2 分开。",
+      "declarations": [
+        "Becoming.SecuredContent.rule",
+        "Becoming.SecuredContent.repertoire",
+        "Becoming.SecuredContent.firstEvidence",
+        "Becoming.SecuredContent.live",
+        "Becoming.SecuredContent.live_one",
+        "Becoming.SecuredContent.live_two",
+        "Becoming.SecuredContent.barren_not_live",
+        "Becoming.SecuredContent.live_productive",
+        "Becoming.SecuredContent.acquired_evidence_secures_content_and_leaves_both_opennesses",
+        "Becoming.Narrowing.answer"
+      ]
+    },
+    {
+      "en": "In the two-branch model, widening the admitted magnitude models from those the first observation leaves live to those or the barren one makes the certificate fail: not every model of the wider scope has a positive integral after the response in every branch.",
+      "zh": "在两分支模型中，把被接纳的幅度模型从第一次观察后仍可行者放宽到这些或贫瘠者，证书就不成立：放宽后的范围中并非每个模型在每个分支中回应之后都有正积分。",
+      "declarations": [
+        "Becoming.SecuredContent.wider_scope_can_require_certificate_retraction"
+      ]
+    },
+    {
+      "en": "Under the continuation condition, where each admitted continuation realizes living content absent before, each holds content absent before that falls under the relevance read from significance: realized living content whose formation's continuation at its step has significance from every standpoint.",
+      "zh": "在延续条件之下，每段被接纳的接续都实现此前没有的活的内容时，每段都持有此前没有、落在由意义读出的相关性之下的内容：其形成在其步上的延续从每个立场都有意义的、被实现的活的内容。",
+      "declarations": [
+        "Becoming.SecuredContent.contingent_newContent_of_unrestricted"
+      ]
+    },
+    {
+      "en": "For any admissibility and belief, a response is common to a judgment exactly when it is admissible at every believed configuration, and on reachable configurations a map keeping steps and realized claims preserves bundles.",
+      "zh": "对任意可容许性与信念，一个回应对一个判断是共同的，恰当它在每个被相信的配置都可容许；在可达配置上，保留步与已实现主张的映射保留主张束。",
+      "declarations": [
+        "Becoming.commonResponse_judge_iff",
+        "Becoming.Frame.map_preserves"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "生生之意义（LivingSignificance）为明确采用的规范前提；新形成的实际活的关系、同一回应及所接纳的接续须有对应。定理不使用 C、整体无损或 Better。",
@@ -27,10 +147,71 @@
       "en": "The optional finite integral uses local units, addition, duplicate-free occurrence domains and positive-contribution correspondence to actual generative relations; it is neither a sum of privately owned utilities nor a universal ethical total."
     },
     {
-      "zh": "构造采用明确的回应、分支与读取法则；实际覆盖用于把范围内证书传递到实际情形，完整宇宙或无限未来识别不作本轮门槛。",
+      "zh": "构造采用明确的回应、分支与读取法则；实际覆盖用于把范围内证书传递到实际情形，无须识别完整宇宙或无限未来。",
       "en": "The construction supplies explicit response, branching and reading laws. Actual coverage is used for scope-to-actual guarantee, without requiring identification of the whole universe or infinite future."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Securing content in every admitted continuation is a sufficient ground for the reason, not a condition every exploration must meet.",
+      "zh": "在每段被接纳的接续中确保内容是这项理由的充分根据，不是每种探索都须满足的条件。",
+      "kind": "converse"
+    },
+    {
+      "en": "No strict improvement of the whole, global optimality, unconditional permission, integral over the full future or inevitable convergence of behaviour follows.",
+      "zh": "推不出整体的严格改善、全局最优、无条件许可、全未来积分或必然的行为趋同。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A contributory reason is neither final permission nor a duty nor a uniquely optimal action.",
+      "zh": "一项支持理由既不是最终许可，也不是义务或唯一最优的动作。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The certificate holds at the admitted scope; widening the scope to a barren possibility makes it fail.",
+      "zh": "证书在被接纳的范围上成立；把范围放宽到贫瘠的可能，它就不成立。",
+      "kind": "scope",
+      "witness": "Becoming.SecuredContent.wider_scope_can_require_certificate_retraction"
+    },
+    {
+      "en": "The query channel is a field the response keeps; no reading law inspects it, so no executed query channel is shown.",
+      "zh": "查询通道只是回应所保留的字段；没有读取律检查它，所以没有表明一条实际执行的查询通道。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Preserving every represented joint possibility says nothing of unrepresented losses, and the burden stays.",
+      "zh": "保留每个被表示的共同可能，对未被表示的损失什么也没说，负担仍在。",
+      "kind": "scope",
+      "witness": "Becoming.SecuredContent.positive_integral_and_adverse_full_change"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositiveGroundUncertainty.lean",
+      "detail": {
+        "zh": "每个生产模型下没有一个固定新形态出现于全部分支；这不妨碍确定每段分支中都有某种新生成。",
+        "en": "No fixed new form occurs in every branch of a productive model; some new generation nevertheless occurs in each branch."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositiveGroundUncertainty.lean",
+      "detail": {
+        "zh": "正面方面积分为正，含同一继续中负担的全表示净差为 −1。此例保留正面根据，不推荐实施该回应，也不提供得失之间的通用伦理权重。",
+        "en": "The positive-aspect integral is positive while the full represented change including the same continuation's burden is −1. This retains positive ground without recommending the response or supplying universal ethical weights between gains and burdens."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.SecuredContent, Bundles, Narrowing, Inquiry, Extension and ValuationFrames are bound to passing receipts in becoming-checks, which report an empty axiom list for every cited declaration and verify that the core compiles from Lean's prelude alone. The periphery original, now provenance, passed its own Lean 4.29.1 check (positive-ground-uncertainty-verification.json), and an independent review matched its sources and accepted the scope.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 SecuredContent、Bundles、Narrowing、Inquiry、Extension、ValuationFrames 的当前字节绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空，核心只用 Lean 前导即可编译。外围原本（现为来历）通过自身的 Lean 4.29.1 检查（positive-ground-uncertainty-verification.json），独立审查接受其范围。"
+  },
+  "next_delta": {
+    "en": "A reading law that actually uses the query channel the response keeps, so that keeping it is shown to keep further evidence discrimination; and the certificate on a concrete generative relation of the World model, with its visible scope, the living content each continuation realizes and the grounds for revising the scope.",
+    "zh": "一条真正使用回应所保留的查询通道的读取律，以表明保留它即保留进一步的证据辨别；以及在 World 模型的一个具体生成关系上的证书，写明其可见范围、每段接续所实现的活的内容与修订范围的根据。"
+  },
   "correspondence": {
     "zh": "生成内容通过同一活动内已有分支、生产关系与共同回应形成。每个固定生产模型都容许两条真实未来分支；两个仍活的幅度模型另表认识未定。证据过滤不执行回应，认识增强不冒充新增生。已形成感知、预测和探究结果提供可见未来的解释根据；除回执中明确编译的真值保持与范围传递例外，不宣称新完成全部同一历史的机制组合。",
     "en": "New content forms through prior activity, a productive relation and the common response in one unfolding. Each fixed productive model admits two real future branches; two surviving magnitude models separately represent epistemic uncertainty. Evidence filtering does not perform the response, so increased recognition is not new life. Existing formed perception, prediction and inquiry results ground visible futures interpretively; apart from the explicitly compiled truth-retention and scope-transfer examples, no new full same-history mechanism composition is asserted."
@@ -92,37 +273,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositiveGroundUncertainty.lean",
-      "detail": {
-        "zh": "每个生产模型下没有一个固定新形态出现于全部分支；这不妨碍确定每段分支中都有某种新生成。",
-        "en": "No fixed new form occurs in every branch of a productive model; some new generation nevertheless occurs in each branch."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositiveGroundUncertainty.lean",
-      "detail": {
-        "zh": "正面方面积分为正，含同一继续中负担的全表示净差为 −1。此例保留正面根据，不推荐实施该回应，也不提供通用伦理兑换率。",
-        "en": "The positive-aspect integral is positive while the full represented change including the same continuation's burden is −1. This retains positive ground without recommending the response or supplying universal ethical exchange rates."
-      }
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/POSITIVE-GROUND-UNCERTAINTY-PROOF.md",
-      "detail": {
-        "zh": "queryOpen 仅是回应所保留的字段；acquire/rule 不检查它，因此本模块未新证一条实际执行的查询通道。扩大所见范围可使旧证书撤回。",
-        "en": "queryOpen is only a field retained by the response; acquire/rule do not inspect it, so this module does not newly prove an executed query channel. Widening the visible scope may require certificate retraction."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "完成的是有限、有根据且可修订的正面生成原则及相容见证。稳健确定性是充分途径，不是所有探索的必要条件；不证明整体严格改善、全局最优、无条件许可、全未来积分或必然行为趋同。这些不另作本结果完成门槛。",
-    "en": "Completes a finite, grounded, revisable positive-generative principle and a compatibility witness. Robust certainty is sufficient rather than necessary for all exploration. Strict whole improvement, global optimality, unconditional permission, a full-future integral and inevitable behavioral convergence are not proved and are not additional completion gates."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 成功实查9项新定理／30项声明审计：22项空依赖、5项 propext、3项 propext 与 Quot.sound；新增无 Classical.choice 或自定义公理。72项继承定理／133项审计另列，4项应用例不重复计数。独立反审核对5份源码、2份辅助及35份工件并接受范围，未另开第二次编译；登记无新编译。",
-    "en": "Successful Lean 4.29.1 check: 9 new theorems/30 declaration audits, comprising 22 empty, 5 propext and 3 propext with Quot.sound dependencies; no new Classical.choice or custom axiom. The 72 inherited theorems/133 audits and 4 application examples are separate. Independent review matched 5 sources, 2 helpers and 35 artifacts and accepted the scope without a second compiler run; registration does not recompile."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositiveGroundUncertainty.lean",
@@ -260,7 +410,8 @@
       "sha256": "4055d193bbc130905a315a149089f831af9bf49cd5d9b57a8196be531b98634c",
       "declarations": [
         "Becoming.preserves_of_transport",
-        "Becoming.Frame.map_preserves"
+        "Becoming.Frame.map_preserves",
+        "Becoming.PreservesBundles"
       ]
     },
     {
@@ -270,7 +421,14 @@
       "declarations": [
         "Becoming.Narrowing.actual_retained",
         "Becoming.Narrowing.acquired_evidence_faithful",
-        "Becoming.Narrowing.revise_is_after"
+        "Becoming.Narrowing.revise_is_after",
+        "Becoming.Narrowing.Rule",
+        "Becoming.Narrowing.Observation",
+        "Becoming.Narrowing.Fits",
+        "Becoming.Narrowing.revise",
+        "Becoming.Narrowing.learn",
+        "Becoming.Narrowing.acquire",
+        "Becoming.Narrowing.answer"
       ]
     },
     {
@@ -293,7 +451,34 @@
         "Becoming.SecuredContent.response_preserves_joint_openness",
         "Becoming.SecuredContent.acquired_evidence_secures_content_and_leaves_both_opennesses",
         "Becoming.SecuredContent.wider_scope_can_require_certificate_retraction",
-        "Becoming.SecuredContent.contingent_newContent_of_unrestricted"
+        "Becoming.SecuredContent.contingent_newContent_of_unrestricted",
+        "Becoming.SecuredContent.finiteIntegral",
+        "Becoming.SecuredContent.pos_or_pos",
+        "Becoming.SecuredContent.FormationModel",
+        "Becoming.SecuredContent.magnitude",
+        "Becoming.SecuredContent.LivingClaim",
+        "Becoming.SecuredContent.Arrangement",
+        "Becoming.SecuredContent.initial",
+        "Becoming.SecuredContent.respond",
+        "Becoming.SecuredContent.prior",
+        "Becoming.SecuredContent.realizes",
+        "Becoming.SecuredContent.futureFrame",
+        "Becoming.SecuredContent.fresh",
+        "Becoming.SecuredContent.Occurrence",
+        "Becoming.SecuredContent.positiveDomain",
+        "Becoming.SecuredContent.fullDomain",
+        "Becoming.SecuredContent.contribution",
+        "Becoming.SecuredContent.occurrenceMeaning",
+        "Becoming.SecuredContent.positiveDomain_nodup",
+        "Becoming.SecuredContent.fullDomain_nodup",
+        "Becoming.SecuredContent.rule",
+        "Becoming.SecuredContent.repertoire",
+        "Becoming.SecuredContent.firstEvidence",
+        "Becoming.SecuredContent.live",
+        "Becoming.SecuredContent.live_one",
+        "Becoming.SecuredContent.live_two",
+        "Becoming.SecuredContent.barren_not_live",
+        "Becoming.SecuredContent.live_productive"
       ]
     },
     {
@@ -389,10 +574,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用这一已完成的有限正面原则于具体生成关系；新应用说明当前可见范围、实际内容及可修订根据。不要把全未来积分、整体严格改善或重建已完成感知机制重新列为本结果欠缺。",
-    "en": "Reuse the completed finite positive principle for concrete generative relations, identifying the currently visible scope, actual content and revisable grounds. Do not reopen full-future integration, strict whole improvement or reconstruction of completed perception mechanisms as unmet requirements of this result."
-  },
   "history": [
     {
       "zh": "2026-10-08：依 Ren 的正面根据、双重开放和可见未来澄清完成并登记；新增形式组合及见证独立于旧 C 比较结果，旧证明与真实反例原范围保留。",
@@ -464,6 +645,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label G0 replaced by living significance in the first premise, two related notes and the overview summary; the premise now names the admitted continuations and new living relations the theorem takes, and the claim likewise (living content absent before, in every admitted continuation); in the overview evidence the theory without axiom, the 17 October rendering of Part I, reads the theory without the condition, and the old chapter section 6.4 the condition's current home, chapter 7's section on the continuation condition.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条前提、两条相关说明与概览摘要中已退休之标签 G0 改为生生之意义；前提今称定理所取的所接纳之接续与新形成的活的关系，主张亦然（在每段所接纳的接续中此前没有的活的内容）；概览证据中“无公理的理论”（10月17日对第一部分的译名）改为不含条件的理论，旧章节 §6.4 改为条件的现行所在，第 7 章论延续条件之节。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the home section; the claim split into eleven laws, each read against its declarations in Becoming.SecuredContent, Becoming.Extension, Becoming.Bundles, Becoming.Narrowing and Becoming.Inquiry (the reason stated through the supplied direct articulation that certified_integral_reason takes; \"a revisable admitted scope does not erase the positive result\" narrowed to what the Lean shows, that the certificate holds at the admitted scope and fails when the scope is widened to the barren model); the limitations to six does-not-show items and the standard boundary significance-related-not-asserted; the counterexample citing the proof note, which no declaration witnesses, became two does-not-show items; \"exchange rates\" in a counterexample and \"本轮\" in the fourth hypothesis's Chinese replaced; the instruction in the next step left for the snapshot; thirty-five declarations added to the references of SecuredContent, Bundles and Narrowing; no premise, status or source hash changed. Every earlier sentence is mapped in [positive-ground-open-futures.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/positive-ground-open-futures.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主章写出陈述；主张拆为十一条规律，各条对照其在 Becoming.SecuredContent、Extension、Bundles、Narrowing 与 Inquiry 中的声明核读（理由经 certified_integral_reason 所取的所给直接表述写出；“可修订的所见范围不删除正面结果”收窄为 Lean 所示：证书在被接纳的范围上成立，把范围放宽到贫瘠模型时不成立）；限制改为六条“未表明”与通用边界 significance-related-not-asserted；引用证明说明、没有声明见证的那条反例改为两条“未表明”；一条反例中的“exchange rates”与第四条前提中文里的“本轮”改写；下一步中的指示留在快照中；三十五个声明加入 SecuredContent、Bundles 与 Narrowing 的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [positive-ground-open-futures.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/positive-ground-open-futures.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/6c460fcce7fa20de/positive-ground-open-futures.json",
+      "sha256": "6c460fcce7fa20decbe5784d6e4d098693b1f603a47a8b715cce1cf2513291e3",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/ab4b0b89fcaffe2e/positive-ground-open-futures.json",
+      "sha256": "ab4b0b89fcaffe2ee7adc9ee96ef168964486bfac3cd156048b8ed0f6a2ee031",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ],
   "overview": {

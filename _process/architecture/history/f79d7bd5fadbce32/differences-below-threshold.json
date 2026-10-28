@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "id": "differences-below-threshold",
+  "title": {
+    "zh": "阈下的差别",
+    "en": "Differences below the threshold"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "zh": "交换随形成的耦合时，只经阈耦合入它的储量上的差别保持到两网的支持分岔；储量经水平耦合入则解除它，他者回应储量本身时则不然。",
+    "en": "Where the exchange follows a formation's couplings, a difference in a stock coupled into it by threshold only stays until the two webs' support diverges; coupling the stock in by level lifts it, and others responding to the stock itself break it."
+  },
+  "claim": {
+    "zh": "设两个流在耦合入形成 g（经阈或经水平）的每个条件上逐步平衡，并且 g 周围的交换随其耦合：凡两个流直到某步经 g 的耦合无别，它们跨过该步在耦合入 g 的每个条件上，对在场的全部形成，取用与给予的总量相同（Flow.ExchangeFollows）。那么经 g 的耦合无别期间，耦合入 g 之条件上的每个差别都保持起始的样子（Flow.difference_kept）。第二个网在耦合入 g 的条件上起始不低、在经水平耦合入 g 的条件上相同时，在第一个网此前每步都支持 g 的每一步，两网都经 g 的耦合无别（Flow.alike_while_supported），可以有任意多个条件不同；差别在某步之前已改变，必有更早的一步，第二个网的水平接纳 g 而第一个网不支持它，活动需要支持时 g 在第一个网中并非此前每步都活跃（Flow.difference_changes_after_divergence）。起始只在只经阈耦合入 g 的一个储量上不同、第二个网中高 d 时，在第一个网此前每步都支持 g 的每一步，储量恰好高 d，耦合入 g 的其余条件相同，两网此前每步都经 g 的耦合无别（Flow.subthreshold_alike）；第一个网每步都支持 g 时每步都如此（Flow.subthreshold_alike_always）。见证：SupportDrawn 中形成需要一个单位、在每个被支持的步取一个单位，交换只随支持，差别保持到第三步，较低的网在第三步不支持它而较高的网支持，第四步差别已变（SupportDrawn.difference_waits）；JointFailure 中两网从第二步起都不支持形成，差别每步都保持（JointFailure.difference_kept）；Gauged 中储量经水平耦合入的形成在第一步取尽需要之上的全部，在较高的网中动用了差别，交换随其耦合而不约束任何东西，只有支持耦合入时交换不随其耦合（Gauged.gauge_changes_difference）；储量划作自身的立着时，量度自身就是量度储量（Gauged.own_is_stock）；Attracting 中被较高的储量招来的取用者使较高的网在第二步就不支持依存者，交换不随其耦合（Attracting.higher_breaks_first）；SelfPrey 中以所需一依存于自身的猎物，咬一个单位时两网经支持每步无别、经量度自身在第二步显出，咬两个单位时经支持在第二步就显出（SelfPrey.threshold_on_oneself）。不用 Lean 公理。",
+    "en": "Let two flows balance at each step on every condition coupled into a formation g (by threshold or by level), and let the exchange around g follow its couplings: wherever the two flows have been alike through g's couplings up to a step, they take from and give to every condition coupled into g alike across that step, in total over every formation present (Flow.ExchangeFollows). Then while the flows are alike through g's couplings, every difference on a condition coupled into g stays as it was at the start (Flow.difference_kept). Where the second web starts at least as high on what couples into g and alike on what couples into it by level, the webs are alike through g's couplings at every step before which the first web supported it (Flow.alike_while_supported), any number of conditions differing; where a difference has changed by a step, at some earlier step the second web's levels admitted g and the first web did not support it, and where activity needs support g was not active in the first web at every earlier step (Flow.difference_changes_after_divergence). Where the starts differ only in one stock coupled into g by threshold only, d higher in the second web, at every step before which the first web supported g at every step the stock stands exactly d higher, every other condition coupled into g stands alike and the webs have been alike through g's couplings (Flow.subthreshold_alike), and at every step where the first web supports g at every step (Flow.subthreshold_alike_always). Witnesses: in SupportDrawn a formation needing one unit draws one unit at each supported step, the exchange following its support only; the difference stands through the third step, where the lower web fails to support it and the higher supports it, and has changed by the fourth (SupportDrawn.difference_waits); in JointFailure both webs fail the formation from the second step and the difference stands at every step (JointFailure.difference_kept); in Gauged a formation into which its stock couples by level draws all of it above its need at the first step and draws on the difference in the higher web, the exchange following its couplings constraining nothing, while with only support coupled in the exchange does not follow its couplings (Gauged.gauge_changes_difference); carving the stock as its own standing, a gauge of oneself is the gauge of the stock (Gauged.own_is_stock); in Attracting a taker drawn by the higher stock makes the higher web fail the dependent at the second step, the exchange not following its couplings (Attracting.higher_breaks_first); in SelfPrey, with the prey depending on its own standing at need one, a bite of one leaves the webs alike through support at every step and shows through a gauge of oneself at the second, and a bite of two shows through support at the second step (SelfPrey.threshold_on_oneself). No Lean axiom is used."
+  },
+  "hypotheses": [
+    {
+      "zh": "平衡只在耦合入的条件上逐步假设（Flow.BalancesOn，单元素家族，不需要有限性）；整体的平衡经 Flow.Balances.on 给出它。",
+      "en": "Balance is assumed only on the conditions coupled in, at each step (Flow.BalancesOn, singleton families, needing no finiteness); global balance gives it through Flow.Balances.on."
+    },
+    {
+      "zh": "交换随耦合入者（Flow.ExchangeFollows）是给出的假设，不由动力学推出：它是关于 g 周围全部交换的，排除他者对不耦合入 g 者作出回应；Attracting 是它不成立时的反例。",
+      "en": "The exchange following what couples in (Flow.ExchangeFollows) is a supplied hypothesis, not derived from the dynamics: it concerns the whole exchange around g and excludes others responding to what does not couple into g; Attracting is the counterexample where it fails."
+    },
+    {
+      "zh": "耦合：耦合入形成的，是它的支持（水平是否接纳它），经阈，与经水平耦合入它之条件的水平（obs，参数，基础是 thresholdOnly）。活动由表示给出，不算作耦合入者；在 Web.Dependent 之下它不能超出支持。",
+      "en": "Coupling: into a formation couple its support (whether the levels admit it), by threshold, and the levels of the conditions coupled into it by level (obs, a parameter, with thresholdOnly the base). Activity is supplied by the representation and is not counted as coupled in; under Web.Dependent it cannot outrun support."
+    },
+    {
+      "zh": "见证的结论：各见证的流与网（SupportDrawn、JointFailure、Gauged、Attracting、SelfPrey）。",
+      "en": "For the witnesses: their flows and webs (SupportDrawn, JointFailure, Gauged, Attracting, SelfPrey)."
+    },
+    {
+      "zh": "离散的步（从第 0 步计）；自然数的水平、所需与数量；条件上的判定相等（DecidableEq）只在按条件分情形处使用，不用经典推理。",
+      "en": "Discrete steps, counted from step 0; natural-number levels, needs and amounts; decidable equality of conditions (DecidableEq) is used only to split cases on conditions, and no classical reasoning is used."
+    }
+  ],
+  "correspondence": {
+    "zh": "Ren 的提议：“can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”，“I think all the wisdoms about wisdoms, how to think, learn, update, are all explained within what we have, if not not proved yet”。AI 的回答提出反馈的三种不见、失控是在其一之中运行的回路、跨过它们的方式、可否证性是被展开纠正的条件，以及 理 的读法；Ren 答：“agree with you, great job, start now. for 4, you can explore which option is better, then make decision”。独立审查收窄了这些读法：三种不见各有其范围（阈下在交换随耦合入者之处，视界之外在延续开放之处，耦合闭包之外在成员只经自己的耦合回应之处）；失控的读法是启发，不是陈述；理 读作对耦合负责的模型（其后依 Ren 读作对结构与变化之规律的建模）。所以记录中的读法是 AI 收窄之后的，依 Ren 的交托采用（D26），不是 Ren 所接受的原文。第 4 问（形成自身的立着是否算作耦合入）由 AI 探索后决定：基础只有支持耦合入（thresholdOnly），一类读法中自身的立着经承担自身（Web.SelfBearing）经阈耦合入，量度自身（ownStanding）是观察前提；理由见整合文档 §70.1。“识”（registers）原作“计入”，与 P42 一致；Ren 认为“计入 is apparently weird, need better word”，AI 先改为“反映”，Ren 定为“识”（“for registers, use 识”），取差别在形成的状态中显出之义（见整合文档 §{SEC}.2）。2026-10-18 的命名决定之后，“registers”改作“耦合入”，识保留给一个形成经其耦合所成之归并的历程。",
+    "en": "Ren's proposal: “can becoming provide wisdoms to avoid run away feedbacks and the identification of knowledge, learning, and scientific principles like falsifiability”, and “I think all the wisdoms about wisdoms, how to think, learn, update, are all explained within what we have, if not not proved yet”. The AI's answer proposed three blindnesses of feedback, a runaway as a loop running inside one of them, the ways across them, falsifiability as the condition of being corrected by the unfolding, and a reading of 理; Ren answered “agree with you, great job, start now. for 4, you can explore which option is better, then make decision”. The independent review narrowed the readings: each blindness has its scope (below a threshold where the exchange follows what couples in, beyond the horizon where the continuation is open, beyond the coupling closure where the members respond only through their own couplings); the runaway reading is a heuristic, not a statement; and 理 is read as a model answerable to coupling (later, following Ren, as the modeling of the laws of structure and change). So the readings recorded here are the AI's narrowed ones, adopted on Ren's delegation (D26), not the wording Ren accepted. Question 4, whether a formation's own standing counts as coupled in, was decided by the AI after exploring the options: only support couples into the base (thresholdOnly); in the one-kind reading own standing couples in by threshold through self-bearing (Web.SelfBearing); and a gauge of oneself (ownStanding) is an observation premise. The reasons are in §70.1 of the integration note. The Chinese for “registers” was 计入, as in P42; Ren found it “apparently weird” and asked for a better word, the AI proposed 反映, and Ren chose 识 (“for registers, use 识”): a difference showing in the formation's state (§70.2 of the integration note). Under the naming decision of 18 October 2026 “registers” became “couples into”, and 识 is kept for a formation's course through the lumping its couplings make."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+  "aliases": [
+    "Becoming.Flow.ExchangeFollows",
+    "Becoming.Flow.difference_kept",
+    "Becoming.Flow.alike_while_supported",
+    "Becoming.Flow.difference_changes_after_divergence",
+    "Becoming.Flow.subthreshold_alike",
+    "Becoming.Flow.subthreshold_alike_always",
+    "Becoming.SupportDrawn.difference_waits",
+    "Becoming.JointFailure.difference_kept",
+    "Becoming.Gauged.gauge_changes_difference",
+    "Becoming.Attracting.higher_breaks_first",
+    "Becoming.SelfPrey.threshold_on_oneself",
+    "threshold blindness",
+    "阈下不见",
+    "subthreshold registration",
+    "阈下的差别"
+  ],
+  "dependencies": [
+    {
+      "id": "testing-within-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Web.CoupledInto、Web.AlikeThrough、Web.AlikeThroughUpTo、thresholdOnly 与 ownStanding。",
+        "en": "Reuses Web.CoupledInto, Web.AlikeThrough, Web.AlikeThroughUpTo, thresholdOnly and ownStanding."
+      },
+      "interface": {
+        "output": {
+          "zh": "什么耦合入一个形成，两个水平历史何时经其耦合无别。",
+          "en": "What couples into a formation, and when two level histories are alike through its couplings."
+        },
+        "input": {
+          "zh": "交换随耦合入者的假设与阈下差别的规律。",
+          "en": "The hypothesis of the exchange following what couples in, and the laws of differences below the threshold."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean"
+      }
+    },
+    {
+      "id": "closing-needs-net-draw",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Web.Admits：支持就是所需条件的水平接纳形成。",
+        "en": "Reuses Web.Admits: support is admission by the levels of the conditions required."
+      },
+      "interface": {
+        "output": {
+          "zh": "接纳。",
+          "en": "Admission."
+        },
+        "input": {
+          "zh": "第二个网的水平在第一个网支持 g 处接纳 g，所以两网经 g 的支持无别。",
+          "en": "The second web's levels admit g wherever the first web supports it, so the webs are alike through g's support."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+      }
+    },
+    {
+      "id": "levels-of-closure",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Web.DependsOn：g 依存于储量。",
+        "en": "Reuses Web.DependsOn: g depends on the stock."
+      },
+      "interface": {
+        "output": {
+          "zh": "依存。",
+          "en": "Dependence."
+        },
+        "input": {
+          "zh": "耦合入的条件。",
+          "en": "The conditions coupled in."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "reserve-defers-ending",
+      "detail": {
+        "zh": "那里储备推迟终结而不逃脱它；这里交换随耦合入者时，储量上的差别在支持分岔之前不显出。",
+        "en": "There a reserve defers the end and does not escape it; here, where the exchange follows what couples in, a difference in a stock shows only once support diverges."
+      }
+    },
+    {
+      "id": "consumption-ends-with-feeders",
+      "detail": {
+        "zh": "那里只由不被支持的供给者供给的消耗至多持续其所消耗的水平那么多步；这里储量的差别在分岔之前不经支持显出。",
+        "en": "There consumption fed only by unsupported feeders lasts at most as many steps as the level it consumes; here a difference in a stock shows through support only once support diverges."
+      }
+    },
+    {
+      "id": "becoming-finite-horizon",
+      "detail": {
+        "zh": "那里有限的前缀不决定更新还是消耗；这里是经阈的耦合。",
+        "en": "There no finite prefix decides renewal or consumption; here coupling by threshold."
+      }
+    },
+    {
+      "id": "runaway-distance-uncoupled",
+      "detail": {
+        "zh": "在断点之前，没有耦合入的量约束到断点的距离；建立在本结果的 subthreshold_alike_always 上。",
+        "en": "Before the break no quantity that couples in bounds the distance to it; built on this result's subthreshold_alike_always."
+      }
+    },
+    {
+      "id": "how-loops-form",
+      "detail": {
+        "zh": "回路由闭合而形成。",
+        "en": "Loops form by closing."
+      }
+    },
+    {
+      "id": "loops-within-what-a-law-reads",
+      "detail": {
+        "zh": "律所读之内的回路，回路在断点处形成。",
+        "en": "Loops within what a law reads, a loop forming at the break."
+      }
+    },
+    {
+      "id": "where-novelty-gain-comes-from",
+      "detail": {
+        "zh": "增益从何而来。",
+        "en": "Where gain comes from."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "detail": {
+        "zh": "他者回应储量本身时，交换不随耦合入者，较高的储量可以先终结依存者：Attracting 中被三个单位的储量招来的取用者使较高的网在第二步就不支持依存者，较低的网仍支持（Attracting.higher_breaks_first）。未加限定的读法“损失直到断裂才显出”对此不成立。",
+        "en": "Where others respond to the stock itself the exchange does not follow what couples in, and a higher stock can end the dependent first: in Attracting a taker drawn by a stock of three makes the higher web fail the dependent at the second step while the lower web still supports it (Attracting.higher_breaks_first). The unqualified reading that losses show only at the break fails here."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "detail": {
+        "zh": "观察储量解除阈下的差别：Gauged 中储量经水平耦合入的形成在两个网中每步都被支持，并在较高的网中动用差别（Gauged.gauge_changes_difference）。",
+        "en": "Observing the stock lifts the blindness below the threshold: in Gauged a formation into which its stock couples by level is supported at every step in both webs and draws on the difference in the higher one (Gauged.gauge_changes_difference)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "形成观察支持之外的任何东西、量度自身的立着或想要避免失控都不推出；交换随耦合入者是给出的假设，哪些展开满足它是经验问题；回路、增益与失控在 how-loops-form、where-novelty-gain-comes-from 与 runaway-distance-uncoupled 中，不在此；观察是精确的，带误差的量度（校准）没有建模；读法是 AI 的，经审查收窄，依 Ren 的交托采用；不含伦理谓词。",
+    "en": "That a formation observes anything beyond its support, gauges its own standing or wants to avoid a runaway is not derived; the exchange following what couples in is a supplied hypothesis, and which unfoldings meet it is empirical; loops, gain and runaway are treated in how-loops-form, where-novelty-gain-comes-from and runaway-distance-uncoupled, not here; observation is exact, and measurement with error (calibration) is not modelled; the readings are the AI's, narrowed by the review, adopted on Ren's delegation; contains no ethical predicate."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Testing 的 92 项定理全部空依赖，其中含Flow.difference_kept、alike_while_supported、difference_changes_after_divergence、subthreshold_alike、SupportDrawn.difference_waits 与 Attracting.higher_breaks_first；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §70.3；整合之前经第十七次独立审查（BECOMING-P49-REVIEW.md，起草时称 P47），其处理见 §70.2；处理之后的文本尚未经独立审查。本记录的局部规律（P57–P61）在同一回执中，公理报告为空。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 92 theorems of Becoming.Testing all have empty axiom reports, among them Flow.difference_kept, alike_while_supported, difference_changes_after_divergence, subthreshold_alike, SupportDrawn.difference_waits and Attracting.higher_breaks_first; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §70.3 of the integration note; reviewed before integration by the seventeenth independent review (BECOMING-P49-REVIEW.md, titled P47), whose treatment is in §70.2; the text after that treatment is not yet independently reviewed. This record's local laws (P57–P61) are in the same receipt, with empty axiom reports."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "role": "proof",
+      "sha256": "aba84f9ec26501aedb0c4f266c90619fcca2305f268e843a82d5603468d51b44",
+      "declarations": [
+        "Becoming.Web.LevelsAtLeast",
+        "Becoming.Web.alikeThrough_iff_of_levelsAtLeast",
+        "Becoming.Web.admits_iff_supported_of_agree",
+        "Becoming.le_of_add_eq_of_le",
+        "Becoming.eq_of_add_eq_of_eq",
+        "Becoming.Flow.ExchangeFollows",
+        "Becoming.Flow.difference_kept",
+        "Becoming.Flow.levelsAtLeast_while_alike",
+        "Becoming.Flow.alike_while_supported",
+        "Becoming.Flow.difference_changes_after_divergence",
+        "Becoming.Flow.subthreshold_alike",
+        "Becoming.Flow.subthreshold_alike_always",
+        "Becoming.Gauged.flow",
+        "Becoming.Gauged.web",
+        "Becoming.Gauged.stock",
+        "Becoming.Gauged.gauge_changes_difference",
+        "Becoming.Gauged.own_is_stock",
+        "Becoming.SupportDrawn.flow",
+        "Becoming.SupportDrawn.web",
+        "Becoming.SupportDrawn.follows",
+        "Becoming.SupportDrawn.difference_waits",
+        "Becoming.JointFailure.flow",
+        "Becoming.JointFailure.web",
+        "Becoming.JointFailure.difference_kept",
+        "Becoming.Attracting.lowerFlow",
+        "Becoming.Attracting.higherFlow",
+        "Becoming.Attracting.web",
+        "Becoming.Attracting.higher_breaks_first",
+        "Becoming.SelfPrey.flow",
+        "Becoming.SelfPrey.web",
+        "Becoming.SelfPrey.selfBearing",
+        "Becoming.SelfPrey.within_influence",
+        "Becoming.SelfPrey.threshold_on_oneself",
+        "Becoming.ownStanding",
+        "Becoming.thresholdOnly"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "declarations": [
+        "Becoming.Flow.BalancesOn",
+        "Becoming.Flow.Balances.on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "sha256": "8353141c372581724c3370927c5cd9ddfed892120cc2a8874053ca83f81f3115",
+      "declarations": [
+        "Becoming.Web.Admits"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
+      "role": "proof",
+      "sha256": "ddc680f4502c31fbd08f675edf87f279a72b91905f27603d804606f66c7df479",
+      "declarations": [
+        "Becoming.Web.DependsOn"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
+      "role": "proof",
+      "sha256": "6e0fdea63dbd3bc1d92d6df2d8e68216436e1a916d1f36ce9872da25c3fe64eb",
+      "declarations": [
+        "Becoming.Web.SelfBearing"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/REGISTRATION-AND-TESTING-PLAN.md",
+      "role": "integration",
+      "sha256": "425b68476ac8e939315dad002f5222ff51cbd692db09ae614ee4a9d0f9b8627f",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-P49-REVIEW.md",
+      "role": "review",
+      "sha256": "a908cc02d354c2a3a3f3fe67fcf4944506d962d69328f8f1ff0824faa55c700f",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-11-wisdom-from-registration.md",
+      "role": "provenance",
+      "sha256": "4fc423936815ac19535df80e99d3142ff56eda536da9fa6ba55be77ef39a48fd",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T091930.724493Z/verification.json",
+      "role": "receipt",
+      "sha256": "c1e7a979931c19f4cf3649ffd24ae4315c531e5c678b16f9dc452fa4d00ceafb",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T062828.251326Z/verification.json",
+      "role": "receipt",
+      "sha256": "0dec8292b9c1b7a85364070084bf7c053486e60608e228f7d1dc0da391e9f6d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json",
+      "role": "receipt",
+      "sha256": "790a8973dbabe58f9bc5f4c27d39589c8827b6fab3fe08a8d342f6ef02bca4a8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "role": "receipt",
+      "sha256": "9596c1a0b53bd9a26d9975f2cf00180c6d63402a1459924d1016b3ddbc2edcb6",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "role": "receipt",
+      "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "role": "receipt",
+      "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Testing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Admission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Feedback",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Roles",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "由动力学给出交换随耦合入者，而不是假设它；带误差的观察（校准）。",
+    "en": "Give the exchange following what couples in from the dynamics rather than assume it; observation with error (calibration)."
+  },
+  "history": [
+    {
+      "zh": "2026-10-11 P49：新增，按 Ren“agree with you, great job, start now. for 4, you can explore which option is better, then make decision”；起草时编为 P47，因 P47 已是 Becoming.Standing 而改为 P49；统一计划 P49；见整合文档 §70；整合之前经第十七次独立审查，处理见 §70.2。",
+      "en": "2026-10-11 P49: added, following Ren's ‘agree with you, great job, start now. for 4, you can explore which option is better, then make decision’; drafted as P47 and renumbered because P47 is Becoming.Standing; unification plan P49; see §70 of the integration note; reviewed before integration by the seventeenth independent review, handled in §70.2."
+    },
+    {
+      "zh": "2026-10-11：中文的 registers 改为“识”（Ren：“for registers, use 识”），原作“反映”；断言不变。",
+      "en": "2026-10-11: the Chinese for “registers” is now 识 (Ren: “for registers, use 识”), formerly 反映; the claim is unchanged."
+    },
+    {
+      "zh": "2026-10-13 接手核对：当前合并回执 20261013T094743.528770Z 实含 22 个继承模块；当前验证摘要中沿用的 15 改为 22。历史回执及其当时计数不变；断言、前提与证明不变。",
+      "en": "2026-10-13 takeover reconciliation: current consolidated receipt 20261013T094743.528770Z contains 22 inherited modules; the carried-over count of 15 in the current validation summary is corrected to 22. Historical receipts and their original counts remain unchanged, as do the claim, premises and proofs."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“阈下的差别：交换随识时，形成依存而不观察的储量上的差别保持到两网的支持分岔；观察储量解除它，他者回应储量本身时则不然”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “Differences below the threshold: where the exchange follows registration, a difference in a stock a formation depends on and does not observe stays until the two webs' support diverges; observing the stock lifts it, and others responding to the stock itself break it”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D26）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D26): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "zh": "2026年10月17日，全库审查（2026年10月16–17日，CHANGES.md）第 B6 项：限制原说回路、增益与失控“没有定义”，下一步原要定义回路并把失控陈述为定理；Becoming.Runaway（break_not_bounded，用本结果的 subthreshold_alike_always）、Gain、Loops（OnLoop、carried_runaway）与 Thresholds 已落地，限制改为指向相应记录，下一步删去该项，并加四条相关。schema 1，无 text_versions；原文见 git。",
+      "en": "17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), item B6: the limitations said loops, gain and runaway \"are not defined\" and the next step asked to define a loop and state a runaway as a theorem; Becoming.Runaway (break_not_bounded, built on this result's subthreshold_alike_always), Gain, Loops (OnLoop, carried_runaway) and Thresholds have landed, so the limitations point to their records, the next step drops the item, and four related entries are added. Schema 1, no text_versions; earlier text in git."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): THE-THEORY-OF-BECOMING.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. This record's live fields name the declarations by their new names; prose words are unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, Feedback.lean, THE-THEORY-OF-BECOMING.md, Testing.lean. Rebound to core receipt 20261018T062828.251326Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. Changed by the pass, in docstrings or prose only: Feedback.lean, THE-THEORY-OF-BECOMING.md, Testing.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Flow.lean, Roles.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Flow.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Roles.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Flow.lean、Roles.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Flow.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Roles.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 71 bookkeeping notes condensed from 2026-10-11 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/29bbd5bec961a5aa/subthreshold-registration.json and in git.",
+      "zh": "2026-10-20：71 条记账性说明合并（2026-10-11 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/29bbd5bec961a5aa/subthreshold-registration.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the scope note names the record by its current id, runaway-distance-uncoupled, for its former id; the claim is unchanged. The registration words left in the AI text of the correspondence now read in the coupling vocabulary: 理 as a model answerable to coupling (zh 对耦合负责, for 对识负责, 识 then meaning registers) and question 4 as whether own standing counts as coupled in (zh 耦合入, for 被识); Ren's words and the account of the word's history are kept.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：范围说明以现行编号 runaway-distance-uncoupled 称该记录，取代其旧编号；主张不变。对应之 AI 文字中余下的登记之词改用耦合之词：理 读作对耦合负责的模型（原作对识负责，识当时指 registers），第 4 问作自身的立着是否算作耦合入（原作被识）；Ren 的原话与该词来历的叙述保留。"
+    }
+  ],
+  "former_ids": [
+    "subthreshold-registration"
+  ]
+}

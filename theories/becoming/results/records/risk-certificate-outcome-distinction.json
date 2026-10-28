@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "risk-certificate-outcome-distinction",
   "title": {
     "zh": "风险界限与实现结果的区别",
@@ -8,11 +8,71 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F08",
-  "reviewed_at_utc": "2026-10-08T12:38:59.650976+00:00",
-  "claim": {
-    "zh": "在给定三路线过程和两个有限等权事件规律下，正确的三分之一风险界限允许实际失败；不存在只依当前模式／到达结果、对两规律全部允许实现都正确判定该事前界限的判断器。",
-    "en": "In the supplied three-route process with two finite equal-weight event laws, a true one-third risk bound permits actual failure; no judge using only the mode/arrival projection correctly classifies that prior bound for every admitted realization of both laws."
+  "reviewed_at_utc": "2026-10-28T11:56:47+00:00",
+  "statement": {
+    "en": "A judge reading only a reduction is right on a listed family exactly where the reduction merges nothing the judged value tells apart; in a supplied three-route process a true one-third risk bound permits failure, and no judge of the endpoint alone classifies that bound under both event laws.",
+    "zh": "只读一个约化的判断器，在列出的族上恰在约化不合并被判值所区分者时正确；在给定的三路线过程中，正确的三分之一风险界限允许失败，只看终点的判断器不能在两个事件规律下都正确判定该界限。"
   },
+  "laws": [
+    {
+      "en": "For a listed family of any type, a reduction to values compared decidedly and an observable: a judge reading only the reduced value gives the observable at every member exactly where the observable goes alike across every two members the reduction merges. No choice is used: the judge answers with the first listed member of each reduced value.",
+      "zh": "对任意类型的列出族、到可判定相等之值的约化与一个可观察量：只读约化值的判断器在每个成员处给出该可观察量，恰当该可观察量在约化所合并的任两个成员上相同。不用选择：判断器以每个约化值的第一个列出成员作答。",
+      "declarations": [
+        "Becoming.Readout.LumpedOn",
+        "Becoming.Readout.Judges",
+        "Becoming.Readout.judges_iff_lumpedOn",
+        "Becoming.Readout.lumpedOn_of_judges",
+        "Becoming.Readout.firstJudge",
+        "Becoming.Readout.firstJudge_judges"
+      ]
+    },
+    {
+      "en": "For any listed family, reduction and observable, no judge reading only the reduced value gives the observable at every member where the reduction merges two members the observable tells apart.",
+      "zh": "对任意列出族、约化与可观察量：凡约化合并了可观察量所区分的两个成员，就没有只读约化值的判断器在每个成员处给出该可观察量。",
+      "declarations": [
+        "Becoming.Readout.no_judge_of_merged"
+      ]
+    },
+    {
+      "en": "For every process, run and observable, and a reduction to values compared decidedly, a judge reading only the reduced run gives the observable at each of the first n dates exactly when it goes alike at every two of those dates the reduction merges; for values of any type, where the reduction merges two of those dates the observable tells apart, no judge does.",
+      "zh": "对每个过程、运行、可观察量及到可判定相等之值的约化：只读约化运行的判断器在前 n 个日期的每一个给出可观察量，恰当它在约化所合并的这些日期中任两个上相同；对任意类型的值，凡约化合并了可观察量所区分的两个这样的日期，就没有判断器做到。",
+      "declarations": [
+        "Becoming.Courses.reducedRun",
+        "Becoming.Courses.run_judges_iff",
+        "Becoming.Courses.no_run_judge_of_merged"
+      ]
+    },
+    {
+      "en": "In the three-route process where arrival fails exactly when the mode equals the route taken, with the equal-weight event laws [0, 1, 2] and [0, 0, 1, 2]: under the first, every route fails at exactly one of the three modes, within a one-third bound, yet fails at its own mode and so is not assured; under the second, route 0 fails at two of the four entries and the bound fails.",
+      "zh": "在模式等于所走路线时恰不到达的三路线过程中，取等权事件规律 [0, 1, 2] 与 [0, 0, 1, 2]：前者下每条路线恰在三个模式之一失败，在三分之一界内，却在与自身相同的模式失败，因而无保证；后者下路线 0 在四项中的两项失败，界限不成立。",
+      "declarations": [
+        "Generative.WisdomFallibleJudgment.uniform_failure_weight",
+        "Generative.WisdomFallibleJudgment.bounded_risk_without_uniform_completion",
+        "Generative.WisdomFallibleJudgment.biased_bound_fails"
+      ]
+    },
+    {
+      "en": "Mode 1 belongs to both laws and route 0 arrives there, while the one-third bound for route 0 holds under the first law and fails under the second; so no judge reading only the endpoint that a mode reaches with route 0 classifies the bound for every mode of both laws.",
+      "zh": "模式 1 属于两个规律，路线 0 在该处到达，而路线 0 的三分之一界限在前一规律下成立、在后一规律下不成立；所以只读路线 0 在某模式下所达终点的判断器，不能对两个规律的每个模式都正确判定该界限。",
+      "declarations": [
+        "Generative.WisdomFallibleJudgment.matching_realizations_with_different_certificates",
+        "Generative.WisdomFallibleJudgment.no_endpoint_only_prior_certificate"
+      ]
+    },
+    {
+      "en": "Read on the core law, the admitted realizations of a list of event laws (each law with each of its modes) are a listed family, the endpoint a reduction and the bound an observable: the endpoint judge is the core's judge on that family, one exists exactly where realizations reaching one endpoint carry one bound, and the impossibility follows from the core law.",
+      "zh": "在核心规律上读：一列事件规律的被接纳实现（每个规律配其每个模式）是列出族，终点是约化，界限是可观察量；终点判断器即该族上的核心判断器，它存在恰当到达同一终点的实现带同一界限，不可能性由核心规律推出。",
+      "declarations": [
+        "Becoming.JudgingCorrespondence.realizations",
+        "Becoming.JudgingCorrespondence.endpoint",
+        "Becoming.JudgingCorrespondence.certificate",
+        "Becoming.JudgingCorrespondence.mem_realizations",
+        "Becoming.JudgingCorrespondence.judges_iff",
+        "Becoming.JudgingCorrespondence.endpoint_judge_iff",
+        "Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "模式与所选路线相同则不到达，否则到达；给定事件列表[0,1,2]与[0,0,1,2]，每项等权。重复模式来自不同事件，不是重复观察。",
@@ -23,6 +83,46 @@
       "en": "One third is a numerical specification. The endpoint judge receives only the mode/result projection, not the law or full history."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "A local application, not a new theory of probability.",
+      "zh": "局部应用，不是新的概率理论。",
+      "kind": "scope"
+    },
+    {
+      "en": "It shows neither that a risk is ethically acceptable nor how event probabilities are learned.",
+      "zh": "不表明风险在伦理上可接受，也不表明事件概率如何学得。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "It does not establish the whole of wise judgment.",
+      "zh": "不确立智慧判断的全部。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "It does not establish a warranted false belief: the risk statement stays true when the realization fails.",
+      "zh": "不确立有根据的错误信念：实现失败时风险陈述仍为真。",
+      "kind": "non-implication",
+      "witness": "Generative.WisdomFallibleJudgment.bounded_risk_without_uniform_completion"
+    },
+    {
+      "en": "That the endpoint cannot settle the bound does not make outcomes irrelevant to updating.",
+      "zh": "终点不足以判定界限，并不使结果与更新无关。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free"
+  ],
+  "validation_scope": {
+    "en": "Core: the current bytes of Becoming.Readout and Becoming.Courses are bound to receipts becoming-checks/20261019T185632.962707Z and 20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: WisdomFallibleJudgment is bound to its receipt under wisdom-fallible-judgment-checks (Lean 4.29.1; its five theorems use propext only), JudgingCorrespondence to judging-correspondence-checks/20261020T161948.968917Z (Lean 4.30.0-rc2; at most propext and Quot.sound).",
+    "zh": "核心：Readout、Courses 绑定合并核心检查器回执 20261019T185632.962707Z、20261020T051144.879480Z（Lean 4.29.1），公理报告皆空。外围：WisdomFallibleJudgment 回执（Lean 4.29.1）五条定理只用 propext；JudgingCorrespondence 回执 20261020T161948.968917Z（Lean 4.30.0-rc2）至多用 propext、Quot.sound。"
+  },
+  "next_delta": {
+    "en": "Examine the content of wise judgment beyond risk bounds, and the whole of its substantive commitments.",
+    "zh": "考察风险界限之外智慧判断的内容，及其全部实质承诺。"
+  },
   "correspondence": {
     "zh": "继承的assured_route_iff把计数失败与实际不到达相连；概率解释仍需事件权重的实际根据，伦理许可不由界限导出。",
     "en": "Inherited assured_route_iff connects counted failures with failed arrival. A probability interpretation still needs warranted event weights; ethical permission does not follow from the bound."
@@ -61,23 +161,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/WISDOM-FALLIBLE-JUDGMENT.md",
-      "detail": {
-        "zh": "正确的是风险陈述，失败的是目标实现；未证明内容为假的信念有根据。终点不足不表示结果与更新无关。",
-        "en": "The risk statement is true while the target realization fails; warranted false belief is not established. Endpoint insufficiency does not make outcomes irrelevant to updating."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "局部应用，不是新的概率理论。未证明伦理可接受风险、概率学习或整个智慧根基；给定规律与原过程保持公开。",
-    "en": "A local application, not new probability theory. Ethical risk acceptance, probability learning and the complete wisdom root remain unproved; the event laws and process are supplied."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1实际检查5项新应用定理，均仅propext；59项继承审计分列，合计64项，44空／20标准。冻结源码与回执绑定；无全仓库验收。",
-    "en": "Lean 4.29.1 actually checked five new application theorems, each using only propext; 59 inherited audits are separate, 64 overall with 44 empty / 20 standard. Frozen source and receipt are bound; no repository-wide acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomFallibleJudgment.lean",
@@ -258,10 +341,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用这个完成的范围修正；完整根基研究须检验独立智慧内容和全部实质承诺，不能以更多同类风险例替代。",
-    "en": "Reuse this completed scope correction. The full-root study must examine independent wisdom content and the entire substantive core, rather than substitute more risk examples."
-  },
   "history": [
     {
       "zh": "2026-10-08：登记原三路线过程上的新应用／对应；基础概率与信息不足模式保留通常解释的信用，五项证明不计成五套独立理论。",
@@ -289,6 +368,28 @@
     {
       "en": "2026-10-20: 6 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/67359b32d6b3e135/risk-certificate-outcome-distinction.json and in git.",
       "zh": "2026-10-20：6 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/67359b32d6b3e135/risk-certificate-outcome-distinction.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the claim and the home section, the core law it rests on first; the claim split into six laws, each read against its declarations in Readout.lean, Courses.lean, WisdomFallibleJudgment.lean and JudgingCorrespondence.lean (judging through a reduction, its failure, its run form, the three-route laws, the endpoint impossibility, its reading on the core law); the limitations became three does-not-show items; the counterexample, whose source is the study and whose first clause the fourth law now carries, became two more; the hypotheses kept; the shared boundary no-ethical-premise-core-axiom-free cited; no premise, status or source hash changed. Every earlier sentence is mapped in [risk-certificate-outcome-distinction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与所在章节写出陈述，先写其所依的核心规律；主张拆为六条规律，各条对照 Readout.lean、Courses.lean、WisdomFallibleJudgment.lean 与 JudgingCorrespondence.lean 中的声明核读（经约化判断、其失败、其运行形式、三路线规律、终点不可能性、其在核心规律上的读法）；限制改为三条“未表明”；反例的来源是研究文档，其首句现由第四条规律承载，其余改为另两条；前提保留；引用通用边界 no-ethical-premise-core-axiom-free；前提、状态与来源哈希均未改变。每句旧文本的去向见 [risk-certificate-outcome-distinction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/e1684e0682dec099/risk-certificate-outcome-distinction.json",
+      "sha256": "e1684e0682dec09954c00d1cb749ce4a220a058b2593be54f92651b59211332c",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/67359b32d6b3e135/risk-certificate-outcome-distinction.json",
+      "sha256": "67359b32d6b3e1352a9756d1e58eae124f69be5b4cdd77a0b7d6ac56c5fa84ff",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

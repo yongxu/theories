@@ -1,0 +1,581 @@
+{
+  "schema_version": 1,
+  "id": "becoming-renewal-reading",
+  "title": {
+    "zh": "运行上的更新与生生的关系读法",
+    "en": "Renewal on runs and the relational reading of living"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-13T09:54:07+00:00",
+  "statement": {
+    "zh": "更新与消耗为运行分类：任一过程的每次运行，经条件的可观测量读出，都是这些类所适用之网；自某步起不再上升的自然数可观测量，不在任意晚的步下降；自同一配置，一次运行可以更新，另一次可以消耗。",
+    "en": "Renewal and consumption classify runs: each run of any process, read through observables of conditions, is a web to which the classes apply; a natural-number observable never rising from some step on does not fall at arbitrarily late steps; from one configuration one run can renew, another consume."
+  },
+  "claim": {
+    "zh": "任一过程的任一运行，经条件的可观测量读出，都是一个关系展开，更新／消耗分类适用于它。从某步起不再上升的自然数可观测量不在任意晚的步下降，耗竭、自然数秩的复现更新与无更新汲取都是这一原则的情形。分类属于运行：同一过程、同一初始配置下，焦点形成每步都活跃，一次运行更新，另一次消耗。",
+    "en": "Every run of every process, read through observables of conditions, is one relational unfolding to which the renewing/consuming classification applies. A natural-number observable that never rises from some step on does not fall at arbitrarily late steps; depletion, recurrent renewal under a natural rank and unrenewed drawdown are its cases. The class belongs to the run: in one process from one configuration, with the focal formation active at every step, one run renews and another consumes."
+  },
+  "hypotheses": [
+    {
+      "zh": "条件水平、活跃、依存（及其水平）与汲取是配置上的可观测量；依存与汲取不随配置变化。",
+      "en": "Levels of conditions, activity, dependence (with its level) and drawing are observables of configurations; dependence and drawing do not vary with the configuration."
+    },
+    {
+      "zh": "living 取整段运行上的关系读法（活跃且不消耗），是公开的读法选择，不是被证明的对应；经共同条件的关系属 significance-through-a-common-condition。",
+      "en": "`living` is the whole-run relational reading (active and not consuming), a disclosed reading choice, not a proved correspondence; relation through a common condition is significance-through-a-common-condition's."
+    }
+  ],
+  "correspondence": {
+    "zh": "形成与条件是同一展开中的分析角色，不是独立实体或价值所有者。什么算条件、什么算参与决定连通，由 significance-through-a-common-condition 陈述，并附其关于惰性条件之限；过粗的共同条件使 living 变空（独立审查 Q10），condition-correspondence-discipline 不解决此点。读法相对于一次运行。可观测量与实际历史的对应、共同条件（如生物圈、气候）是否真被所有活的形成参与，以及关系读法是否为生生的正确读法，都是应用或哲学上的对应义务。",
+    "en": "Formations and conditions are analytic roles in one unfolding, not independent entities or owners of value. What counts as a condition and as participation decides connection, which significance-through-a-common-condition states with its caveat on idle conditions; a too coarse common condition empties living (independent review Q10), which condition-correspondence-discipline does not resolve. The reading is relative to a run. The correspondence of observables to an actual history, whether a common condition (such as the biosphere or climate) is in fact participated in by every living formation, and whether the relational reading is the right reading of 生生 are application or philosophical duties."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean",
+  "aliases": [
+    "Becoming.falls_not_recurring",
+    "Becoming.Run.not_of_depletion",
+    "Becoming.no_execution_of_depletion",
+    "Becoming.Run.renewal_recurs",
+    "Becoming.Conditions.drawdown_not_recurring",
+    "Becoming.Renewable.class_belongs_to_the_run",
+    "Becoming.Conditions.living_iff_relational"
+  ],
+  "dependencies": [
+    {
+      "id": "relational-renewal-classification",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "Conditions.along 产出该结果的 Unfolding；falls_not_recurring 与 Conditions.drawdown_not_recurring 直接调用 unrenewed_drawdown_finite；分类谓词 ConsumingIn、Participates、Supported 原样使用。",
+        "en": "Conditions.along produces that result's Unfolding; falls_not_recurring and Conditions.drawdown_not_recurring directly call unrenewed_drawdown_finite; the predicates ConsumingIn, Participates and Supported are used as defined."
+      },
+      "interface": {
+        "output": {
+          "zh": "任意展开上的更新／消耗分类与无更新汲取有限界。",
+          "en": "The renewing/consuming classification on arbitrary unfoldings and the finite bound on unrenewed drawdown."
+        },
+        "input": {
+          "zh": "运行经可观测量读出的展开。",
+          "en": "The unfolding read from a run through observables."
+        },
+        "conditions": {
+          "zh": "依存与汲取为静态；水平为自然数。",
+          "en": "Static dependence and drawing; natural-number levels."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean"
+      }
+    },
+    {
+      "id": "relational-reading-comparison",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "桥接层的 living_iff_relational 表明脊柱上的 living 就是该结果的 relationalInventory（取一条延续）；核心不导入该结果。",
+        "en": "The bridge's living_iff_relational shows that the spine's `living` is that result's relationalInventory (for one continuation); the core does not import it."
+      },
+      "interface": {
+        "output": {
+          "zh": "关系读法：活跃且不消耗的形成事件为生成根据。",
+          "en": "The relational reading: active events of non-consuming formations are generative grounds."
+        },
+        "input": {
+          "zh": "Conditions.valuation 的 living。",
+          "en": "`living` of Conditions.valuation."
+        },
+        "conditions": {
+          "zh": "延续族取单一运行。",
+          "en": "The family of continuations is one run."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean"
+      },
+      "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean"
+    },
+    {
+      "id": "metaethical-core-characterization",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "significant_iff_of_common 以 connected_of_common 满足 significant_iff 的连通前提；valuing_consumption_reaches 使用关系中立的规则 transmits。",
+        "en": "significant_iff_of_common discharges significant_iff's connection premise by connected_of_common; valuing_consumption_reaches uses relational neutrality's rule transmits."
+      },
+      "interface": {
+        "output": {
+          "zh": "连通整体上生生之意义 ⇔ 种子 ∧ 关系中立 ∧ 立场中立；关系中立的传递规则。",
+          "en": "On a connected whole, living significance ⇔ seed ∧ relational neutrality ∧ standpoint neutrality; relational neutrality's transmission rule."
+        },
+        "input": {
+          "zh": "由运行的关系读法给出的 Valuation 及其连通。",
+          "en": "The Valuation given by a run's relational reading, with its connection."
+        },
+        "conditions": {
+          "zh": "立场、区域与意义仍外给；需要一个活的事件。",
+          "en": "Standpoints, regions and significance remain supplied; some living event is needed."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "open-form-realization-under-revision",
+      "detail": {
+        "zh": "ContinuationRenewal 的自然数秩复现界是 falls_not_recurring 的情形（Run.renewal_recurs）；其良基形式更一般，不由此导出。",
+        "en": "ContinuationRenewal's natural-rank recurrence bound is a case of falls_not_recurring (Run.renewal_recurs); its well-founded form is more general and is not derived here."
+      }
+    },
+    {
+      "id": "renewing-consuming-formation",
+      "detail": {
+        "zh": "该结果的窄定律类与生生之意义接口独立于本读法；本结果不建立二者间的转换。",
+        "en": "That result's narrower law class and living-significance interface are independent of this reading; no conversion between them is established."
+      }
+    },
+    {
+      "id": "becoming-spine-instances",
+      "detail": {
+        "zh": "分类表中原留给 P3b 的两个模块，由本结果归入运行上的更新界。",
+        "en": "The two modules the classification left to P3b are placed by this result as renewal bounds on runs."
+      }
+    },
+    {
+      "id": "condition-correspondence-discipline",
+      "detail": {
+        "zh": "该结果给出一条条件的对应纪律：只有交互才经由条件相关；惰性条件不再免费连通，在声明的类中连通仍成立。",
+        "en": "That result states a correspondence discipline for conditions: only interaction relates through a condition; idle conditions no longer connect for free, and connection holds for a declared class."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean",
+      "detail": {
+        "zh": "可更新条件的模型没有反馈：超出更新的运行的损失只因汲取持续超出更新而持续；不可逆损失需要 RelationalRenewal 定律族的反馈。",
+        "en": "The renewable model has no feedback: the loss in the run beyond renewal persists only because drawing keeps exceeding renewal; irreversible loss needs the feedback of the RelationalRenewal law family."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "detail": {
+        "zh": "依存是静态的，读法是整段运行上的而非逐步的；两者都继承自既有模块。本结果在此范围内成立；放宽两者的是 becoming-dependence-dynamics 与 becoming-stepwise-reading（整合文档 §6）。",
+        "en": "Dependence is static and the reading is whole-run rather than stepwise; both are inherited from existing modules. This result holds at that scope; becoming-dependence-dynamics and becoming-stepwise-reading relax both (integration note §6)."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-RENEWAL-READING-REVIEW.md",
+      "detail": {
+        "zh": "独立审查：关系读法的哲学根据尚未确立；“消耗本身是一种已形成的关系”已撤回，改为共同参与；“连通由展开给出”改为在对应纪律下由共同条件给出。",
+        "en": "Independent review: the philosophical warrant for the relational reading is not established; “consumption is itself a formed relation” is withdrawn in favour of co-participation, and “connection is given by the unfolding” becomes “given by a common condition under a correspondence discipline”."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "不证明自身意义、关系与立场中立、A、C、L 或 J1–J4，不约束拒绝它们的立场。界的统一是组织性的，不是新数学；ContinuationRenewal 的良基形式不由该原则导出。关系读法是公开的读法选择；它是否为生生的正确读法，不在本结果内。条件的对应纪律只对逐步读法陈述（condition-correspondence-discipline）；读法相对于一次运行，不含继续生成的成分。形成的类（RenewingIn、ConsumingIn）依赖跨步的同一，条件的类不依赖（identity-across-steps）。",
+    "en": "Proves none of self-significance, both neutralities, A, C, L or J1–J4; binds none rejecting them. The unification of bounds is organizational, not new mathematics; ContinuationRenewal's well-founded form is not derived from the principle. The relational reading is a disclosed reading choice; whether it is the right reading of 生生 lies outside this result. The correspondence discipline for conditions is stated for the stepwise reading only (condition-correspondence-discipline); the reading is relative to a run and includes no component of further generation. A formation's class (RenewingIn, ConsumingIn) depends on identity across steps, while a condition's class does not (identity-across-steps)."
+  },
+  "validation_scope": {
+    "zh": "2026-10-14：Becoming.Bridge 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Renewal 6 项定理与 Becoming.Metaethics 读法一节 6 项定理及桥接层的 living_iff_relational 全部空依赖。控制例“有共同条件的运行在关系读法下连通”不计为新定理；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致。作者反审见整合文档 §4、§6；另一 agent（Claude Opus 5.5，未参与撰写）作了独立审查（BECOMING-RENEWAL-READING-REVIEW.md），其更正在整合文档 §7 处理；第四次独立审查（BECOMING-P9B-P10-P11-REVIEW.md）更正对应中的一句，见 §15；第五次独立审查（BECOMING-P11B-P12-REVIEW.md）要求注明形成的类对跨步同一的依赖，见 §19；第六次独立审查（BECOMING-P13-P14-P12B-REVIEW.md）接受这一注明，见 §22。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。 P89（2026-10-13）：Bridge 的旧声明保持，四项新增适配已实查且公理报告为空；本记录的 Bridge 绑定转到本次冻结回执，其余既有证明保留各自原回执，不将适配另计为独立成果。",
+    "en": "14 October 2026: the current bytes of Becoming.Bridge are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): Becoming.Renewal's 6 theorems and the 6 theorems of Becoming.Metaethics' reading section with the bridge's living_iff_relational all have empty axiom reports. The control that a run with a common condition is connected under the relational reading is not counted; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts. The author's counterreview is in §§4 and 6 of the integration note; a separate agent (Claude Opus 5.5, not an author) reviewed it independently (BECOMING-RENEWAL-READING-REVIEW.md), and its corrections are handled in §7; a fourth independent review (BECOMING-P9B-P10-P11-REVIEW.md) corrected one sentence of the correspondence, see §15; a fifth (BECOMING-P11B-P12-REVIEW.md) asked that the dependence of formation classes on identity across steps be noted, see §19; a sixth (BECOMING-P13-P14-P12B-REVIEW.md) accepted that note, see §22. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). P89 (13 October 2026): prior Bridge declarations remain; four added adapters are checked with empty axiom reports. This record binds Bridge to the new frozen receipt while other proofs retain their original receipts; adapters are not independent results."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean",
+      "role": "proof",
+      "sha256": "23efa4c2ed7a38091b2d26cf42aee5a0c6a4c140ed4f67595f5389e8ed6e3382",
+      "declarations": [
+        "Becoming.Conditions",
+        "Becoming.falls_not_recurring"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "role": "proof",
+      "sha256": "a6fef844c6464152369b1c1117c602f1e6d0ec6c7645fda7d6f60c8930c52def",
+      "declarations": [
+        "Becoming.Conditions.along",
+        "Becoming.Run.not_of_depletion",
+        "Becoming.no_execution_of_depletion",
+        "Becoming.Run.renewal_recurs",
+        "Becoming.Conditions.drawdown_not_recurring",
+        "Becoming.Renewable.class_belongs_to_the_run"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "role": "proof",
+      "sha256": "659164aee82f74c802700e5e7e4118721400cf4b09233a743c2f9250b3d83584",
+      "declarations": [
+        "Becoming.Valuation.transmits"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "role": "proof",
+      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
+      "declarations": [
+        "Becoming.Conditions.valuation",
+        "Becoming.Conditions.connected_of_common",
+        "Becoming.Conditions.significant_iff_of_common",
+        "Becoming.Conditions.consumption_relates",
+        "Becoming.Conditions.valuing_consumption_reaches",
+        "Becoming.Separate.not_connected",
+        "Becoming.Valuation.significant_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
+      "role": "provenance",
+      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
+      "declarations": [
+        "Becoming.Conditions.living_iff_relational"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "role": "proof",
+      "sha256": "ba694373b40b71a95dad4e8b2b3200841047ccd228f731edd5315b8642c4fcf8",
+      "declarations": [
+        "Becoming.Run",
+        "Becoming.Invariant.reach"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
+      "role": "proof",
+      "sha256": "b97719c886e3dcd0f143a23db62fb7b8556dac35ec5c312fcdf7e14d47cee1d4",
+      "declarations": [
+        "RelationalRenewal.Unfolding",
+        "RelationalRenewal.unrenewed_drawdown_finite",
+        "RelationalRenewal.ConsumingIn",
+        "RelationalRenewal.RenewingIn",
+        "RelationalRenewal.Participates",
+        "RelationalRenewal.Supported"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RenewalComparison.lean",
+      "role": "provenance",
+      "sha256": "438afd1164e6e594b1e3614c120ec2a20d51df37ba6cffcdab802310b51df133",
+      "declarations": [
+        "RenewalComparison.relationalInventory"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+      "role": "proof",
+      "sha256": "350ef3b2aac032f7d0caaa612264a3cf7278b313e0b4ce26554520ee030cd04f",
+      "declarations": [
+        "Becoming.Ranking.wholeRun"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md",
+      "role": "statement",
+      "sha256": "39481677948c2c7701b1fd6b9c942dabc0003e06f66fc83b9f85912566f87593",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-09-one-theory-unification.md",
+      "role": "provenance",
+      "sha256": "054c09c4d17c281d401795a90330f5a7c353827b12ec06f73820dd9055c52b41",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-09-pure-core.md",
+      "role": "provenance",
+      "sha256": "f7d31d6df74b8d8a5a44d6b9bafcf0d50cadbe56c43c25b1f6667f6b2f40f4ea",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-RENEWAL-READING-REVIEW.md",
+      "role": "review",
+      "sha256": "68ea868722b81b3ea9f52b369b84f7498faa19a8e7f6909df1a38c4dbdcb7fea",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-P9B-P10-P11-REVIEW.md",
+      "role": "review",
+      "sha256": "aa26b8372d8c1b899d6e4dd1caadbddbd92f3f5ba74e49976b4b75e0b19b4ac7"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-P13-P14-P12B-REVIEW.md",
+      "role": "review",
+      "sha256": "d0f676a0375d520738f2e017fc6c2d165b73733c9c8b50057e155bcb00ce66ba",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T163210.426211Z/verification.json",
+      "role": "receipt",
+      "sha256": "20a27676496da965792e40912a2754e4954496525e5641cb7d0708095235734b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T190110.587858Z/verification.json",
+      "role": "receipt",
+      "sha256": "eaecacb9f82aa5c37e86cc3f0bf8ca3b404b7e9bd82fe75effd9691660cb0a2b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T090457.012800Z/verification.json",
+      "role": "receipt",
+      "sha256": "73da26fa45a43969d573d4f0f79afeaf50f1b40ecd31082bc842b017a49920b4",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "role": "receipt",
+      "sha256": "9596c1a0b53bd9a26d9975f2cf00180c6d63402a1459924d1016b3ddbc2edcb6",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
+      "role": "receipt",
+      "sha256": "e7d351156aa286d0b3880ea63e8ad0f843457d75d8b0ef5459454de858b2ed50",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "role": "receipt",
+      "sha256": "14abd1a84b98d3f519c76825b996cbaa902efe22e8948f4963ce691dd910a55e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
+      "role": "receipt",
+      "sha256": "e7b94bb5a47abcf0ee1701b57b77b3ce1ecf6c13919807b5dc068234f4fc4879",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "role": "receipt",
+      "sha256": "4d94c1b82af02e7869351aba40ea8ebaa61b5614423929afa25924281fdda97a",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Renewal",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Metaethics",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frame",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "sha256_pointer": "/source_sha256/RelationalRenewal",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Labelled",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Ranking",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "把条件的对应纪律推广到整段读法；不依赖运行的读法及其与 universal_reason 的接通；共同条件的经验对应。",
+    "en": "Extend the correspondence discipline for conditions to the whole-run reading; a run-independent reading connected to universal_reason; empirical correspondence of common conditions."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：应 Ren“你自己全改了吧……先更新好计划，然后再一步步完整完成，保持代码和整体结构优雅”新增，作为整合计划 P3b，并完成 metaethical-core-characterization 的下一步（living 与 related 的动力学来源）。",
+      "en": "2026-10-09: added following Ren's “你自己全改了吧……先更新好计划，然后再一步步完整完成，保持代码和整体结构优雅”, as P3b of the unification plan, completing the next step of metaethical-core-characterization (a dynamic source for `living` and `related`)."
+    },
+    {
+      "zh": "2026-10-09（P5a）：按 Ren“你说的脊柱，它不能有任何依赖，没有axiom，外围可以用任意你觉得最合适的工具，但是我们的core要优雅 纯净”，核心不再导入伦理模块：G0、C、D 与确保的正面根据在 MetaethicalCore 中陈述，桥接层以 Iff.rfl 证明它们就是既有定义；Frame.inventory、BetterAt 与 living_iff_relational 移入 BecomingInstances。已读差异：本结果的定理陈述与证明内容不变，哈希、位置与计数更新。",
+      "en": "2026-10-09 (P5a): following Ren's “你说的脊柱，它不能有任何依赖，没有axiom，外围可以用任意你觉得最合适的工具，但是我们的core要优雅 纯净”, the core no longer imports ethics modules: G0, C, D and the secured positive ground are stated in MetaethicalCore, and the bridge proves by Iff.rfl that they are the existing definitions; Frame.inventory, BetterAt and living_iff_relational moved to BecomingInstances. Diff read: this result's statements and proof content are unchanged; hashes, locations and counts updated."
+    },
+    {
+      "zh": "2026-10-09：另一 agent（Claude Opus 5.5，未参与撰写）独立审查 P3b–P6（BECOMING-RENEWAL-READING-REVIEW.md）：数学接受，关系读法的哲学根据未确立，要求二十项更正。按审查更正本记录的主张、对应、反例、限制与下一步，并更新到合并回执 20261009T002925.265132Z；所涉 Lean 模块的改动已读并经检查器复核，之后才更新哈希。",
+      "en": "2026-10-09: a separate agent (Claude Opus 5.5, not an author) independently reviewed P3b–P6 (BECOMING-RENEWAL-READING-REVIEW.md): the mathematics was accepted, the philosophical warrant for the relational reading was judged not established, and twenty corrections were requested. This record's claim, correspondence, counterexamples, limitations and next step were corrected accordingly and moved to consolidated receipt 20261009T002925.265132Z; the changed Lean modules were read and rechecked by the checker before hashes were updated."
+    },
+    {
+      "zh": "2026-10-09：P9 新增 condition-correspondence-discipline，给出一条条件的对应纪律并证明在声明的类中连通仍成立，承接本记录的部分下一步；本记录的主张与证明不变，只更新对应、限制、下一步与关联。",
+      "en": "2026-10-09: P9 added condition-correspondence-discipline, which states one correspondence discipline for conditions and proves connection for a declared class, taking up part of this record's next step; this record's claim and proofs are unchanged, and only its correspondence, limitations, next step and links are updated."
+    },
+    {
+      "zh": "2026-10-09：P7b 修正侵蚀与 but-for 的定义并新增见证后，合并检查器重跑（20261009T013859.515931Z），本记录的检验范围改指新回执；主张与证明不变。",
+      "en": "2026-10-09: after P7b corrected the definitions of undermining and but-for and added witnesses, the consolidated checker was rerun (20261009T013859.515931Z) and this record's validation scope now points to the new receipt; its claim and proofs are unchanged."
+    },
+    {
+      "zh": "2026-10-09：P11b 按第四次独立审查 H3 更正对应中的一句，使它与 one_use_connects 一致；主张与证明不变。",
+      "en": "2026-10-09: following H3 of the fourth independent review, P11b corrected one sentence of the correspondence to match one_use_connects; the claim and proofs are unchanged."
+    },
+    {
+      "zh": "2026-10-09：检验范围补记第四次独立审查（BECOMING-P9B-P10-P11-REVIEW.md），P11b 时漏记；主张与证明不变。",
+      "en": "2026-10-09: the validation scope now records the fourth independent review (BECOMING-P9B-P10-P11-REVIEW.md), omitted at P11b; the claim and proofs are unchanged."
+    },
+    {
+      "zh": "2026-10-09：P16b 中第六次独立审查接受第五次审查要求的注明；主张与证明不变。",
+      "en": "2026-10-09: in P16b the sixth independent review accepted the note the fifth review asked for; the claim and proofs are unchanged."
+    },
+    {
+      "zh": "2026-10-13 接手核对：当前合并回执 20261013T094743.528770Z 实含 22 个继承模块；当前验证摘要中沿用的 15 改为 22。历史回执及其当时计数不变；断言、前提与证明不变。",
+      "en": "2026-10-13 takeover reconciliation: current consolidated receipt 20261013T094743.528770Z contains 22 inherited modules; the carried-over count of 15 in the current validation summary is corrected to 22. Historical receipts and their original counts remain unchanged, as do the claim, premises and proofs."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“运行上的更新／消耗与生生的关系读法：在对应纪律下由共同条件给出连通，意义沿共同参与传递”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “Renewal on runs and the relational reading: under a correspondence discipline a common condition gives connection, and significance passes along co-participation”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：Lean 源：Bridge 只改名（及相应的文档字符串），绑定改为新回执（见检查范围）；研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；统一计划只在 §10 的 P36 对照表后加入 2026-10-14 的对照表。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): Lean sources: Bridge only renamed (with the matching docstrings); bindings move to the new receipts (see validation scope); the study only adds section 112 (general laws and renames) and its paragraph in the English summary; the unification plan only adds the 14 October 2026 rename table after the P36 table in section 10. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D1）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D1): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "en": "17 October 2026, wording of the public fields: outdated labels (G0, N_rel/N_std) replaced by the current vocabulary (living significance, relational and standpoint neutrality), following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "19 October 2026, R22 (the names of the nineteenth review): BECOMING-UNIFICATION-PLAN.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: BECOMING-UNIFICATION-PLAN.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月19日，R22（第十九次审查的名称）：BECOMING-UNIFICATION-PLAN.md 重新指向。自所审哈希以来，所引文件只在 R22 改名之处改动：BECOMING-UNIFICATION-PLAN.md，只改名称（第十九次审查 N1、N2；对照表见 development/r22-names/RENAME-TABLE.json）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Labelled.lean, Metaethics.lean, ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Labelled.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Metaethics.lean, G0 is LivingSignificance, g0_* livingSignificance_*, Valuation.SelfGood Valuation.SelfSignificance, SecuresPositiveGround SecuresNewContent, the binder positive relevance; the module header is structural; statements unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Labelled.lean、Metaethics.lean、ValuationFrames.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Labelled.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Metaethics.lean，G0 现为 LivingSignificance，g0_* 现为 livingSignificance_*，Valuation.SelfGood 现为 Valuation.SelfSignificance，SecuresPositiveGround 现为 SecuresNewContent，约束变量 positive 现为 relevance；模块标题改为结构性的；陈述不变；ValuationFrames.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 108 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/7d3648397024ff15/becoming-renewal-reading.json and in git.",
+      "zh": "2026-10-20：108 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/7d3648397024ff15/becoming-renewal-reading.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and RenewalComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Frame, Becoming.Labelled, Becoming.Metaethics, Becoming.Ranking, Becoming.Renewal, Becoming.ValuationFrames and RelationalRenewal). The retired modules' content is also stated in Becoming.ActiveReading, which this record does not cite with declarations. The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and RenewalComparison）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Frame, Becoming.Labelled, Becoming.Metaethics, Becoming.Ranking, Becoming.Renewal, Becoming.ValuationFrames and RelationalRenewal）。退役模块的内容也陈述于 Becoming.ActiveReading，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels replaced by the current terms in a hypothesis, a dependency, a related detail and the limitations: G0, S0, N_rel and N_std by living significance, self-significance and relational and standpoint neutrality, and in the limitations S0, N and J by self-significance, both neutralities and J1–J4, its clause on rejecting positions reworded to keep the field within its cap. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条前提、一项依赖、一条相关说明与局限中的退役标签改为现行术语：G0、S0、N_rel、N_std 改为生生之意义、自身意义、关系中立与立场中立；局限中 S0、N、J 改为自身意义、关系与立场中立、J1–J4。规律未变。"
+    },
+    {
+      "en": "27 October 2026, board item DF2 (study section 426): the statement says what the record keeps, the run-class laws (every run a web the classes apply to, a falling natural observable does not recur, and from one configuration one run can renew and another consume); connection through a common condition and transmission along co-participation, with their hypothesis, counterexample and five aliases, moved to significance-through-a-common-condition, at home in 07 §3.1. The run-class laws are unchanged.",
+      "zh": "2026年10月27日，工作板条目 DF2（研究第 426 节）：陈述改为本记录所保留的运行类律（每次运行都是这些类所适用之网，下降的自然数可观测量不再复现，自同一配置一次运行可以更新、另一次可以消耗）；经共同条件的连通与沿共同参与的传递，连同其假设、反例与五个别名，移至 significance-through-a-common-condition，其家在 07 §3.1。运行类律不变。"
+    }
+  ]
+}
