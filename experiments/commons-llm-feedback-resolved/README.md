@@ -98,3 +98,7 @@ LA1's parse read one of its 210 answers wrong. `k3s1` seed 0's first answer ends
 - LA1's verdicts are unchanged, since every final choice parses the same and that seed ended at m = 0.
 
 LA1's README records it.
+
+## The frozen follow-up
+
+LA1c ([experiment](../commons-llm-feedback-unaided/README.md), frozen and run on 28 October 2026) asked what this run leaves open: whether the model finds the best threshold itself. It played this game, prompt and rounds with no round assigned. Its one prediction, the bridge's selection part, passed on both sides: no seed ended below a threshold it had played that the rounds resolve as better. The model ended at the best threshold in 29 of 30 locked seeds, the one miss still descending when the seven rounds ran out, and in 8 of 10 open seeds; the two open misses never played the hill. LA1b's verdicts above stand as frozen.
