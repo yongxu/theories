@@ -114,6 +114,7 @@ Infinite ethics and social choice: law 1's one-pair form has the shape of Askell
 | integration | [RECHECK-UE9.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/RECHECK-UE9.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T081241.505586Z/verification.json) | — |
 
 Aliases: `Comparing two courses on what they admit`, `就所纳比较两个进程`, `widening with a lag`, `the tail order`, `keeping what the other keeps`, `Becoming.Web.WidensOrWithLag`, `Becoming.Sides.no_order_ranks_keeping_over_alike`
 

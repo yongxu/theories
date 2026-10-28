@@ -6162,7 +6162,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 115,
+   "theorems": 120,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
