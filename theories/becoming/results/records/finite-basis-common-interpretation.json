@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "finite-basis-common-interpretation",
   "title": {
     "zh": "有限根基的共同解释",
@@ -8,17 +8,96 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
-  "claim": {
-    "zh": "有限列表覆盖全部根基指标时，完整闭包逐命题存在可接纳解释，等价于一个可接纳解释满足整个闭包。",
-    "en": "When a finite list covers all basis indices, pointwise admissible interpretation of the full derived closure is equivalent to one admissible interpretation satisfying the entire closure."
+  "reviewed_at_utc": "2026-10-28T05:21:42+00:00",
+  "statement": {
+    "en": "Where a finite list covers the basis, the closure is met claim by claim at admissible configurations exactly when one admissible configuration meets every derived claim; claims met one by one need not be met together.",
+    "zh": "有限列表覆盖根基时，闭包逐个主张在可接纳的配置处得到满足，恰当一个可接纳的配置满足每个推出的主张；逐个得到满足的主张不必同时得到满足。"
   },
+  "laws": [
+    {
+      "en": "The conjunction of a list of basis claims derives with no premise and holds at a configuration exactly where each listed claim does; with a list covering the basis, exactly where the whole basis does.",
+      "zh": "一列根基主张的合取可无前提推出，并恰在每个所列主张成立之处成立；列表覆盖根基时，恰在整个根基成立之处成立。",
+      "declarations": [
+        "Becoming.Derivation.conjunction",
+        "Becoming.Derivation.conjunction_derives",
+        "Becoming.Derivation.conjunction_iff",
+        "Becoming.Derivation.conjunction_iff_basis"
+      ]
+    },
+    {
+      "en": "A configuration meets every claim derived under premises, where those premises hold, exactly when it meets every basis claim; for any admissibility, some admissible configuration meets every claim derived with no premise exactly when some admissible configuration meets every basis claim.",
+      "zh": "一个配置在前提成立处满足在前提下推出的每个主张，恰当它满足每个根基主张；对任一可接纳性，有可接纳的配置满足每个无前提推出的主张，恰当有可接纳的配置满足每个根基主张。",
+      "declarations": [
+        "Becoming.Derivation.basis_iff_relative",
+        "Becoming.Derivation.common_basis_iff_common_closure"
+      ]
+    },
+    {
+      "en": "With a list covering the basis and any admissibility, every claim derived with no premise being met at some admissible configuration is equivalent to one admissible configuration meeting them all, and that configuration also meets every claim derived under premises where those premises hold.",
+      "zh": "列表覆盖根基、可接纳性任给时，每个无前提推出的主张都在某个可接纳的配置处得到满足，等价于一个可接纳的配置满足它们全部；该配置也在前提成立处满足在前提下推出的每个主张。",
+      "declarations": [
+        "Becoming.Derivation.pointwise_iff_common",
+        "Becoming.Derivation.pointwise_common_relative"
+      ]
+    },
+    {
+      "en": "In the witness, the two rows w = false and w = true on the Booleans are each met and never met together, so, with every Boolean admissible, their closure is not met claim by claim.",
+      "zh": "见证：布尔值上的两行 w = false 与 w = true 各自得到满足，却从不同时得到满足；所以在每个布尔值都可接纳时，它们的闭包不能逐个主张得到满足。",
+      "declarations": [
+        "Becoming.Derivation.rows",
+        "Becoming.Derivation.rows_each_met",
+        "Becoming.Derivation.rows_not_together",
+        "Becoming.Derivation.rows_not_pointwise"
+      ]
+    },
+    {
+      "en": "On the scope of a policy from a belief, with a list covering the basis, every derived claim being met at some configuration of the scope is equivalent to one configuration of the scope meeting them all, which also meets every claim derived under premises where they hold.",
+      "zh": "在一个策略自某一信念的范围上，列表覆盖根基时，每个推出的主张都在范围中某个配置处得到满足，等价于范围中一个配置满足它们全部；该配置也在前提成立处满足在前提下推出的每个主张。",
+      "declarations": [
+        "Becoming.Derivation.Scope.common_iff",
+        "Becoming.Derivation.Scope.common_relative"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "既有 Derives、有限覆盖列表与显式 admissible；逐命题覆盖包括全部可导公式。",
       "en": "Existing Derives, a finite covering list and explicit admissible; pointwise coverage includes every derivable formula."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Separate interpretations for individual basis rows may have no common interpretation: each row met somewhere is not enough.",
+      "zh": "只让每一根基行分别有解释，仍可能没有共同解释：每行在某处得到满足并不足够。",
+      "kind": "non-implication",
+      "witness": "Becoming.Derivation.rows_not_together"
+    },
+    {
+      "en": "Admissibility is supplied and is not the truth of the basis; the reduction supplies neither actual admission nor the truth of the basis.",
+      "zh": "可接纳性是给定的，不是根基的真；此归约既不提供实际接纳，也不提供根基的真。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/JointInterpretation.lean",
+      "detail": {
+        "zh": "只让每一根基行分别有解释仍可能没有共同解释。",
+        "en": "Separate interpretations for individual basis rows may have no common interpretation."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core module Becoming.Derivation are bound to a passing core receipt in becoming-checks, which reports an empty axiom list for every declaration of the module. The periphery modules and receipts it replaced (JointInterpretation and its receipt, the history Bridge) stay as provenance.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Derivation 的当前字节绑定到 becoming-checks 中一个通过的核心回执，其中该模块每个声明的公理报告皆为空。它所取代的外围模块与回执（JointInterpretation 及其回执、历史中的 Bridge）保留为来源。"
+  },
+  "next_delta": {
+    "en": "Find the substantive warrant for actual admission and for a common law, reusing the reduction of claim-by-claim to common interpretation.",
+    "zh": "为实际接纳与共同规律寻找实质根据，并复用从逐个主张的解释到共同解释的归约。"
+  },
   "correspondence": {
     "zh": "没有定义 admissible 为根基成立；此归约不提供实际接纳或根基真。",
     "en": "Admissible is not defined as basis truth; the reduction supplies neither actual admission nor root truth."
@@ -53,23 +132,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/JointInterpretation.lean",
-      "detail": {
-        "zh": "只让每一根基行分别有解释仍可能没有共同解释。",
-        "en": "Separate interpretations for individual basis rows may have no common interpretation."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只让每一根基行分别有解释仍可能没有共同解释。",
-    "en": "Separate interpretations for individual basis rows may have no common interpretation."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/JointInterpretation.lean",
@@ -87,7 +149,18 @@
       "declarations": [
         "Becoming.Derivation.pointwise_iff_common",
         "Becoming.Derivation.rows_not_together",
-        "Becoming.Derivation.Scope.common_iff"
+        "Becoming.Derivation.Scope.common_iff",
+        "Becoming.Derivation.conjunction",
+        "Becoming.Derivation.conjunction_derives",
+        "Becoming.Derivation.conjunction_iff",
+        "Becoming.Derivation.conjunction_iff_basis",
+        "Becoming.Derivation.basis_iff_relative",
+        "Becoming.Derivation.common_basis_iff_common_closure",
+        "Becoming.Derivation.pointwise_common_relative",
+        "Becoming.Derivation.rows",
+        "Becoming.Derivation.rows_each_met",
+        "Becoming.Derivation.rows_not_pointwise",
+        "Becoming.Derivation.Scope.common_relative"
       ]
     },
     {
@@ -144,10 +217,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用共同解释归约，进一步研究实际接纳与共同规律的实质根据。",
-    "en": "Reuse the coherence reduction; investigate substantive warrant for actual admission and a common law."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -188,6 +257,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and JointInterpretation) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Derivation). The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and JointInterpretation）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Derivation）。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): a statement written from the home section; the claim split into five laws, each read against its declarations in Becoming.Derivation; the limitation and the correspondence's boundary became two does-not-show items, the hypothesis kept, the standard boundary no-ethical-premise cited (empty axiom reports in the bound receipt); conjunction, conjunction_derives, conjunction_iff, conjunction_iff_basis, basis_iff_relative, common_basis_iff_common_closure, pointwise_common_relative, rows, rows_each_met, rows_not_pointwise and Scope.common_relative added to the Derivation reference; no premise, status or source hash changed. Every earlier sentence is mapped in [finite-basis-common-interpretation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-basis-common-interpretation.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：依主章写出陈述；主张拆为五条规律，各条对照其在 Becoming.Derivation 中的声明核读；限制与对应中的界限成为两条“未表明”，前提保留，引用通用边界 no-ethical-premise（绑定回执的公理报告为空）；conjunction、conjunction_derives、conjunction_iff、conjunction_iff_basis、basis_iff_relative、common_basis_iff_common_closure、pointwise_common_relative、rows、rows_each_met、rows_not_pointwise 与 Scope.common_relative 加入 Derivation 的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [finite-basis-common-interpretation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-basis-common-interpretation.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/4167526f2f4008dd/finite-basis-common-interpretation.json",
+      "sha256": "4167526f2f4008dddec5df81320c68ced575e5fa6d7e11cc40b76fde81b4ee05",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/7e4b46c78be59fe2/finite-basis-common-interpretation.json",
+      "sha256": "7e4b46c78be59fe28d84365deae89bc7071a54336ea25da140c91fa6408dfb2e",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "id": "growth-constrained-fragmentation",
+  "title": {
+    "zh": "生长限制分割及后继组成",
+    "en": "Growth constrains fragmentation and successor composition"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F10",
+  "reviewed_at_utc": "2026-10-25T14:38:14+00:00",
+  "claim": {
+    "zh": "由同一起点的合法分裂历史，链与分支树各长到八个成员，成员、前体、可用与已用物料之数相同（8, 0, 2, 7），亲代摘要相同（4, 4, 7, 7），只在种类与键上不同。切断证书是精确的：证书成立处，去掉一条边后算出的两个分量恰是两端各自连通者，并把成员分开；两树的每个树切断都被证书化，只有链中的 (3,4) 与分支树中的 (0,1) 切成各四的两半。对边作均匀选择时，链的平均切断回报是分支树的三倍，后者为正；最老的切断在链中回报 0，在分支树中回报 6/35，颠倒排序；亲代摘要的任何函数都不能同时给出两个平均回报。一次实际的聚合给链加一条保留边；切断 (3,4) 后加固的链仍是八个成员的一个分量，故证书不成立、切断无回报，切断耗用物料而不碎裂。一般规律在 World 模型上：在依附式生长的世界中，每个接上了一个形成的条件都被需要（which-links-a-closure-needs）。",
+    "en": "By legal division histories from one start the chain and the branched tree each grow to eight members with the same counts of members, precursor, available and used material (8, 0, 2, 7) and the same parent summary (4, 4, 7, 7), differing in kinds and bonds. A cut certificate is exact: where it holds, the two components computed after removing an edge are exactly what each end is connected to, and they split the members; every tree cut of both trees is certified, and only (3,4) in the chain and (0,1) in the branched tree cut into halves of four. Under a uniform choice of edge the chain's mean cut return is three times the branched tree's, which is positive; the oldest cut returns 0 in the chain and 6/35 in the branched tree, reversing the ranking; no function of the parent summary gives both mean returns. An actual aggregation adds a retaining edge to the chain; after cutting (3,4) the reinforced chain stays one component of all eight, so the certificate fails and the cut returns nothing, and the cut uses up material without fragmenting. The general law is on the World model: in a world grown by attachment every condition that attached a formation is needed (which-links-a-closure-needs)."
+  },
+  "hypotheses": [
+    {
+      "zh": "给定局部生长、分化、事件序列、消耗支持的断键、催化对应和共同八槽准备。",
+      "en": "Supplied local growth, differentiation, event sequence, support-consuming cut, catalytic correspondence and common eight-slot preparation."
+    }
+  ],
+  "correspondence": {
+    "zh": "后继由实际剩余连接导出；原链状案例与新接合链的端点结构经 Lean 核对，但形成机制不同。",
+    "en": "Successors derive from actual remaining connections; Lean compares the old chain endpoint with the new assembled chain, while their formation mechanisms differ."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean",
+  "aliases": [
+    "GrownFragmentation.certificate_exact_split",
+    "Becoming.closure_iff_certified",
+    "Becoming.not_within_of_closed",
+    "Becoming.PreparationCorrespondence.bond_cut_separates",
+    "Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff",
+    "GrownFragmentation.every_tree_cut_certified",
+    "GrownFragmentation.only_equal_tree_cuts",
+    "GrownFragmentation.fragmentation_changes_prepared_return",
+    "GrownFragmentation.oldest_cut_reverses_ranking",
+    "GrownFragmentation.no_parent_summary_predictor",
+    "GrownFragmentation.bypass_survives_cut",
+    "GrownFragmentation.cut_spends_without_fragmenting"
+  ],
+  "dependencies": [
+    {
+      "id": "risk-certificate-outcome-distinction",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Becoming.Readout.no_judge_of_merged：组成相同的两个生长图切割回报不同，故亲代摘要的任何函数都不同时给出二者（PreparationCorrespondence.no_parent_summary_predictor_by_core）。",
+        "en": "Reuses Becoming.Readout.no_judge_of_merged: the two grown graphs have the same parent summary and different mean cut returns, so no function of the summary gives both (PreparationCorrespondence.no_parent_summary_predictor_by_core)."
+      }
+    },
+    {
+      "id": "which-links-a-closure-needs",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Cuts.attached_link_separates and Cuts.joined_cut_unchanged_iff: the bonds read both ways are Cuts.Links, division keeps them grown by attachment, so every grown bond separates its ends and the reinforced chain's bypass is the join law (PreparationCorrespondence.bond_cut_separates, aggregate_cut_unchanged_iff).",
+        "zh": "复用 Cuts.attached_link_separates 与 Cuts.joined_cut_unchanged_iff：双向读的键即 Cuts.Links，分裂使它们保持依附式生长，所以每条生长出的键都分开其两端，加固链的绕行即连接规律。"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean",
+      "detail": {
+        "zh": "额外维持边可阻止分裂；原准备产出未重建原发育图，不能独自迭代为增长率。",
+        "en": "An additional retention edge can prevent fragmentation; the old preparation output did not rebuild its developmental graph and cannot by itself be iterated as a growth rate."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "额外维持边可阻止分裂；原准备产出未重建原发育图，不能独自迭代为增长率。",
+    "en": "An additional retention edge can prevent fragmentation; the old preparation output did not rebuild its developmental graph and cannot by itself be iterated as a growth rate."
+  },
+  "validation_scope": {
+    "zh": "回执绑定源码；外围多用 propext、Quot.sound，五条另加选择公理；推论与生物对应分列。",
+    "en": "Bound Lean receipts; most periphery laws use propext and Quot.sound, five also Classical.choice; inference validity and biological correspondence differ."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "role": "proof",
+      "sha256": "ba694373b40b71a95dad4e8b2b3200841047ccd228f731edd5315b8642c4fcf8",
+      "declarations": [
+        "Becoming.ClosedUnder",
+        "Becoming.WithinClosure",
+        "Becoming.closure_iff_certified",
+        "Becoming.not_within_of_closed"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean",
+      "role": "proof",
+      "sha256": "d251c7a1f956b3bedd28d28703118e7e57ddfd091ac8dbe756f17b04c747f8ca",
+      "declarations": [
+        "GrownFragmentation.histories_legal",
+        "GrownFragmentation.grown_observations",
+        "GrownFragmentation.matched_parent_summaries",
+        "GrownFragmentation.certificate_exact_split",
+        "GrownFragmentation.every_tree_cut_certified",
+        "GrownFragmentation.central_cut_pools",
+        "GrownFragmentation.only_equal_tree_cuts",
+        "GrownFragmentation.fragmentation_changes_prepared_return",
+        "GrownFragmentation.oldest_cut_reverses_ranking",
+        "GrownFragmentation.no_parent_summary_predictor",
+        "GrownFragmentation.reinforcement_is_actual",
+        "GrownFragmentation.bypass_survives_cut",
+        "GrownFragmentation.bypass_really_connects",
+        "GrownFragmentation.cut_spends_without_fragmenting"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/grown-fragmentation-verification/verification.json",
+      "role": "receipt",
+      "sha256": "c1ee8dbf73bccb9367dffebe756f476003900901ee022daf513b7662ef377178",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/GROWN-FRAGMENTATION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "d4fff557eb4418961796ba020b4199db29ec1cfda7d4a6e14aeb0fe561e32546",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
+      "role": "proof",
+      "sha256": "ddc680f4502c31fbd08f675edf87f279a72b91905f27603d804606f66c7df479",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
+      "role": "proof",
+      "sha256": "4766457e81ff53ef8ab94f4b7109e4b62e138f409b8d239e0d9ecb6695565e85",
+      "declarations": [
+        "Becoming.PreparationCorrespondence.adjacent",
+        "Becoming.PreparationCorrespondence.connected_of_adjacent",
+        "Becoming.PreparationCorrespondence.connected_iff_within",
+        "Becoming.PreparationCorrespondence.component_is_closure",
+        "Becoming.PreparationCorrespondence.certificate_exact_split_by_core",
+        "Becoming.PreparationCorrespondence.cut_separates",
+        "Becoming.PreparationCorrespondence.returns_differ",
+        "Becoming.PreparationCorrespondence.no_parent_summary_predictor_by_core",
+        "Becoming.PreparationCorrespondence.adjacent_iff_links",
+        "Becoming.PreparationCorrespondence.connected_iff_links",
+        "Becoming.PreparationCorrespondence.AttachedBelow",
+        "Becoming.PreparationCorrespondence.divide_attached",
+        "Becoming.PreparationCorrespondence.develop_attached",
+        "Becoming.PreparationCorrespondence.initial_attached",
+        "Becoming.PreparationCorrespondence.cut_attached",
+        "Becoming.PreparationCorrespondence.bond_cut_separates",
+        "Becoming.PreparationCorrespondence.every_grown_bond_separates",
+        "Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff",
+        "Becoming.PreparationCorrespondence.reinforced_cut_unchanged"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261019T052332.277017Z/verification.json",
+      "role": "receipt",
+      "sha256": "47998617eaed359ca3d520848a0900f516e9367f50c95fe28620262f914d4de6",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261015T161348.626052Z/verification.json",
+      "role": "receipt",
+      "sha256": "d27cc6120230332870127bb8981c8ee0787a4dab09f7e1c65eb5d885fcb414a9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/check_preparation_correspondence.py",
+      "role": "provenance",
+      "sha256": "ea3a13897293cf5492f69ba5a3c5037dc2d60a5298515ea355581b50da98c680",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "role": "proof",
+      "sha256": "72fd570fa32c3fc6bd0458f4b0793bb7ce9365f7b1276aaddf323ca05b2afc86",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
+      "role": "receipt",
+      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T062828.251326Z/verification.json",
+      "role": "receipt",
+      "sha256": "0dec8292b9c1b7a85364070084bf7c053486e60608e228f7d1dc0da391e9f6d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cuts.lean",
+      "role": "proof",
+      "sha256": "3468e1797fb310a4e1fd2d086955d4c6c563ef6d171b5154107b4776b74f4b83",
+      "declarations": [
+        "Becoming.Cuts.attached_link_separates",
+        "Becoming.Cuts.joined_cut_unchanged_iff",
+        "Becoming.Flow.GrownBy.condition_needed"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T055924.801141Z/verification.json",
+      "role": "receipt",
+      "sha256": "9860bab7def57c07ac878f9df94af84b9f9d51753f38fd373c45925adad87554",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T054535.337999Z/verification.json",
+      "role": "receipt",
+      "sha256": "f6f3160528efc7d709a50d0e28acf9b41650e0a103b23d0e0bb516789697c0e6",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T052230.247441Z/verification.json",
+      "role": "receipt",
+      "sha256": "344fec8520c9db87e7a2c4f007e3d1176f10b40a8059cb6cc4bb26d9aa75e4cc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T162802.564989Z/verification.json",
+      "role": "receipt",
+      "sha256": "2d67544b861ef92ad93c09f3e21c359b69c7713733d831319afaa8bdda8074fd",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json",
+      "role": "receipt",
+      "sha256": "b32662eb63a0a59c5d91a366f84c1224d18694879c09a6d8281e2e67046648f8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "role": "receipt",
+      "sha256": "9596c1a0b53bd9a26d9975f2cf00180c6d63402a1459924d1016b3ddbc2edcb6",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/grown-fragmentation-verification/verification.json",
+      "sha256_pointer": "/source_sha256/GrownFragmentation.lean",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Feedback",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json",
+      "sha256_pointer": "/source_sha256/PreparationCorrespondence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Courses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cuts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T162802.564989Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Cuts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frame",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "复用已完成分割；新的链状接续只覆盖一个结构类，变化的生成规律及真实断裂仍待说明。",
+    "en": "Reuse completed fragmentation; the new chain continuation covers one structural class, leaving changing generative laws and actual fracture to explain."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：按本轮实际审读及所列回执登记范围；原证明和反例保持。",
+      "en": "2026-10-08: recorded the actually reviewed scope and cited receipt, preserving original proofs and counterexamples."
+    },
+    {
+      "zh": "2026-10-09：审读同一研究新增模板复制段；原证明和结论保持，端点适配及额外复制前提分列。",
+      "en": "2026-10-09: reviewed the added template-copying section in the same study; original proofs and claims remain, with endpoint correspondence and added copying premises separated."
+    },
+    {
+      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：一个区域是形成 f 的系统（在共同条件中共同参与的闭包，Flow.WithinSystem），恰当它含 f、在共享条件下封闭且在 f 的系统之内（system_iff_certified）；在共享下封闭、含 f 而不含 g 的区域表明 g 不在 f 的系统中（not_within_system_of_closed）。Becoming.Courses 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
+      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: a region is the system of formation f (the closure under taking part in a common condition, Flow.WithinSystem) exactly when it holds f, is closed under sharing a condition and lies within f's system (system_iff_certified); a region closed under sharing that holds f but not g shows g is not in f's system (not_within_system_of_closed). Becoming.Courses is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
+    },
+    {
+      "en": "17 October 2026, wording of the public fields: round narration (本轮) replaced by “new”, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: Feedback.lean. Rebound to core receipt 20261018T062828.251326Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Courses.lean, Feedback.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "19 October 2026, K3 (Ren: \"please finish it\"): Cuts.lean re-pointed after reading the change: Flow.GrownBy.cond_ne now reaches its same-orientation case through Cuts.Attaches.listed_once, so no theorem of Becoming.Cuts stands apart; no statement changed. Core receipt 20261019T055924.801141Z; study section 191 (addendum) and the chapter's sections 8.2 and 9 re-pointed with it. The claim is unchanged.",
+      "zh": "2026年10月19日，K3：读过改动后，Cuts.lean 重新指向：Flow.GrownBy.cond_ne 的同向情形改经 Cuts.Attaches.listed_once，Becoming.Cuts 不再有孤立定理；陈述未变。核心回执 20261019T055924.801141Z；研究第 191 节（补记）与本章第 8.2、9 节随之重新指向。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Courses.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Courses.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Courses.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Courses.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 14 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/9bf8cef640229343/growth-constrained-fragmentation.json and in git.",
+      "zh": "2026-10-20：14 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/9bf8cef640229343/growth-constrained-fragmentation.json 和 git 中。"
+    },
+    {
+      "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: ClosedUnder, WithinClosure, closure_iff_certified, not_within_of_closed to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：ClosedUnder, WithinClosure, closure_iff_certified, not_within_of_closed to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated exactly from the periphery Lean: the two grown trees' matched counts and parent summaries, exact cut certificates and the only halving cuts, the chain's mean cut return three times the branched tree's and its reversal at the oldest cut, no predictor from the parent summary, and the retaining edge that stops fragmentation, with the core law on the World (which-links-a-closure-needs); the cited periphery declarations added to the reference and aliases; the evidence names the periphery axioms.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，主张依外围 Lean 精确重述：两棵生长树相同之计数与亲代摘要、精确之切断证书与唯一的对半切断、链的平均切断回报为分支树三倍及其在最老切断处之颠倒、亲代摘要无预测、以及防止碎裂之保留边，并及 World 上之核心规律（which-links-a-closure-needs）；所引外围声明加入引用与别名；证据注明外围之公理。"
+    }
+  ],
+  "statement": {
+    "en": "Two grown eight-member trees, matched in composition and parent summary, differ in what their single-edge cuts return: the chain's mean return is three times the branched tree's, the oldest cut reverses that, no function of the summary predicts it, and a retaining edge stops fragmentation.",
+    "zh": "两棵组成与亲代摘要相同、各八个成员的生长树，其单边切断的回报不同：链的平均切断回报是分支树的三倍，最老的切断颠倒这一排序，摘要的任何函数都不能预测它，而一条保留边防止碎裂。"
+  }
+}

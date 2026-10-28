@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "control-coherence-loss",
   "title": {
     "en": "Control-response loss and recovery through retained joint relations",
@@ -8,15 +8,67 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:35:54+00:00",
+  "reviewed_at_utc": "2026-10-28T05:58:29+00:00",
   "statement": {
     "en": "An observable read through a reduction is single-valued exactly where it agrees across what the reduction merges, so no map restores two different configurations it merges; a real-amplitude dephasing fragment is an instance, and retaining the joint state with a blank register permits exact reversal.",
     "zh": "可观测量经约化所读出者单值，恰当它在约化所合并者上一致；故没有映射能恢复约化所合并的两个不同构形。一个实振幅退相干片段是其实例；保留与空白寄存器的共同态则可精确逆转。"
   },
-  "claim": {
-    "zh": "对每个约化与观测：观测经约化读出的是单值，恰在观测于约化所合并者之间相同之处；在约化合并的两个构型上，在两处都对的解码器存在恰当观测在那里一致，所以没有映射能恢复它合并的两个不同构型。在明示实振幅片段中，受控 X/Z 次序与完全退相干保留控制分支权重但改变固定测量响应；对角线合并加号响应不同的相干与退化矩阵，故仅凭对角线的解码失败；退相干合并制备与相干矩阵，故没有统一逆映射：两者都是实例。与空白寄存器的可逆交互经约化恰好实现退相干；保留共同状态允许精确反转；沿运行，退相干不是无损的，以后所读的任何东西都不能恢复制备与相干之运行从何处开始。",
-    "en": "For every reduction and observable: what the observable reads through the reduction is single-valued exactly where it agrees across what the reduction merges; on two configurations the reduction merges, a decoder right at both exists exactly when the observable agrees there, so no map restores two different configurations it merges. In the specified real-amplitude fragment, controlled X/Z order and complete dephasing preserve control branch weights while changing a fixed measurement response; the diagonal merges the coherent and degraded matrices, whose plus responses differ, so a diagonal-only decoder fails, and dephasing merges the prepared and coherent matrices, so no uniform inverse exists: both are instances. A reversible interaction with a blank register realizes the dephasing on reduction, and retaining the joint state permits exact reversal; along runs, dephasing is not lossless, and nothing read later restores where the prepared and coherent runs began."
-  },
+  "laws": [
+    {
+      "en": "For every reduction and observable, what the observable reads through the reduction is single-valued exactly where the observable goes alike across what the reduction merges; a decoder of the observable from the reduced value exists only there, and where the reduction has a section, exactly there.",
+      "zh": "对每个约化与可观测量：可观测量经约化所读出者单值，恰当它在约化所合并者上一致；由约化值解出可观测量的解码器只在那里存在，约化有截面时恰在那里存在。",
+      "declarations": [
+        "Becoming.Readout.Reading",
+        "Becoming.Readout.SingleValued",
+        "Becoming.Readout.reading_single_iff",
+        "Becoming.Readout.Decodes",
+        "Becoming.Readout.lumped_of_decodes",
+        "Becoming.Readout.decodes_iff_of_section"
+      ]
+    },
+    {
+      "en": "On two configurations the reduction merges, a decoder right at both exists exactly when the observable agrees there; a reduction has no inverse on two different configurations it merges, and where the reduced runs agree at a date at which the runs differ, no map of the reduced runs restores both runs at every date.",
+      "zh": "在约化所合并的两个构型上，两处都对的解码器存在，恰当可观测量在那里一致；约化在它所合并的两个不同构型上没有逆；约化运行在两运行不同的某日相同时，约化运行的任何映射都不能在每一日还原两次运行。",
+      "declarations": [
+        "Becoming.Readout.decoder_pair_iff",
+        "Becoming.Readout.no_restore",
+        "Becoming.Courses.reducedRun",
+        "Becoming.Courses.runs_no_restore"
+      ]
+    },
+    {
+      "en": "In the integer real-amplitude fragment, the Hadamard step on a control with a blank branch prepares the joint, and switching the order of X and Z negates the control's off-diagonal entries; dephasing keeps the diagonal and the weight, keeps the plus response exactly where the cross terms sum to zero, and keeping the cross-term sum is enough for that response.",
+      "zh": "在整数实振幅片段中，对带空白分支的控制位作 Hadamard 步即制备共同态，X 与 Z 次序互换使控制位的非对角项变号；退相干保持对角与权重，恰当交叉项之和为零时保持正回应，保留交叉项之和即足以给出该回应。",
+      "declarations": [
+        "Becoming.Dephasing.preparation_from_blank",
+        "Becoming.Dephasing.switched_density",
+        "Becoming.Dephasing.dephase_keeps_response_iff",
+        "Becoming.Dephasing.retained_response_exact",
+        "Becoming.Dephasing.dephase_preserves_diagonal",
+        "Becoming.Dephasing.dephase_preserves_mass"
+      ]
+    },
+    {
+      "en": "The coherent and degraded controls have the responses (0, 4, 4) and (2, 2, 4) and the same diagonal, so no decoder of the plus response reads the diagonal; dephasing merges the prepared and coherent controls, so nothing restores both from their dephasing.",
+      "zh": "相干与退化的控制位回应分别为 (0, 4, 4) 与 (2, 2, 4)，对角相同，故没有读对角的正回应解码器；退相干合并预备的与相干的控制位，故没有什么能由其退相干恢复二者。",
+      "declarations": [
+        "Becoming.Dephasing.coherent_response",
+        "Becoming.Dephasing.degraded_response",
+        "Becoming.Dephasing.no_diagonal_response_decoder",
+        "Becoming.Dephasing.no_uniform_dephase_inverse"
+      ]
+    },
+    {
+      "en": "Reducing after a controlled X onto a blank register is dephasing; recording is an involution, so retaining and reversing the joint relation restores the control; along runs, the dephasing process is not lossless, and no reading of a later configuration recovers where the prepared and coherent runs began.",
+      "zh": "对空白寄存器作受控 X 后再约化即是退相干；记录是对合，故保留并逆转共同关系就恢复控制位；沿运行，退相干过程不是无损的，以后任何构型的读法都不能恢复预备与相干之运行从何处开始。",
+      "declarations": [
+        "Becoming.Dephasing.recording_reduces_to_dephase",
+        "Becoming.Dephasing.joint_reversal_restores_control",
+        "Becoming.Dephasing.not_lossless",
+        "Becoming.Dephasing.no_restore_along"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "en": "Integer amplitude and density numerators with explicit normalization; H, X, Z, coherent control, reduction and measurement are specified operations, not derived physical laws. Arbitrary integer matrices are not asserted to be physical states.",
@@ -27,6 +79,51 @@
       "zh": "无逆映射结果要求同一映射仅凭共同约化输出恢复两种原制备；共同反转保留最初空白寄存器及对同一共同操作的控制。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The checked fragment has real integer amplitudes, selected operations and one response.",
+      "zh": "所查片段限于实整数振幅、选定操作及一种回应。",
+      "kind": "scope"
+    },
+    {
+      "en": "Causal nonseparability and arbitrary complex quantum behaviour do not follow from it.",
+      "zh": "由它推不出因果不可分离，也推不出任意复数量子行为。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "No physical implementation of the operations is shown.",
+      "zh": "没有表明这些操作的物理实现。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The loss is at the reduced interface, not universal: retaining the joint relation reverses it.",
+      "zh": "损失在约化接口上，不是普遍的：保留共同关系即可逆转它。",
+      "kind": "non-implication",
+      "witness": "Becoming.Dephasing.joint_reversal_restores_control"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/OperativeCoherence.lean",
+      "detail": {
+        "en": "The prepared, coherent and degraded matrices share diagonal (1,1) but have distinct plus responses. Prepared and coherent matrices dephase to the same matrix, blocking uniform recovery from that matrix alone.",
+        "zh": "已制备、相干与退化矩阵共享对角线(1,1)，但正向响应不同；前两者退相干至同一矩阵，阻断仅凭该矩阵的统一恢复。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the core modules Becoming.Readout, Becoming.Dephasing and Becoming.Courses (receipts under becoming-checks/), every cited declaration with an empty axiom report and constructive proofs. They restate the earlier periphery OperativeCoherence check (operative-coherence-checks/: 27 theorems and 54 declaration audits, 44 empty, 10 with propext, three of those also Quot.sound), now provenance. Author counterreview; no independent acceptance or new empirical result.",
+    "zh": "Lean 4.29.1 合并检查器实查：核心 Readout、Dephasing、Courses（becoming-checks/），所引声明公理报告皆空，证明是构造性的。它们重述此前外围 OperativeCoherence 的检查（operative-coherence-checks/：定理27、审计54，44项空、10项含 propext、其中3项另含 Quot.sound），现为来源。作者反审；无独立验收或新增经验成果。"
+  },
+  "next_delta": {
+    "en": "Use the established difference between local access and retained joint relations in the common constitutive argument. Warrant the universal claim at its full scope instead of promoting this supplied quantum mechanism into universal ontology.",
+    "zh": "将局部可用与保留共同关系的已建立区别用于共同构成论证；取得普遍主张完整范围的根据，不把给定量子机制升格为普遍本体。"
+  },
   "correspondence": {
     "en": "A restricted algebraic instantiation of standard quantum operations with the control coordinate first. Matrix traces and shared response denominators are explicit. This is a state-interface calculation, not a verified implementation of the full higher-order switch or a laboratory run.",
     "zh": "标准量子操作的受限代数实例化，以控制坐标为先；矩阵迹和响应共同分母公开。这是状态接口计算，不是完整高阶开关的已验证实现或实验运行。"
@@ -64,23 +161,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/OperativeCoherence.lean",
-      "detail": {
-        "en": "The prepared, coherent and degraded matrices share diagonal (1,1) but have distinct plus responses. Prepared and coherent matrices dephase to the same matrix, blocking uniform recovery from that matrix alone.",
-        "zh": "已制备、相干与退化矩阵共享对角线(1,1)，但正向响应不同；前两者退相干至同一矩阵，阻断仅凭该矩阵的统一恢复。"
-      }
-    }
-  ],
-  "limitations": {
-    "en": "The checked fragment has real integer amplitudes, selected operations and one response. It proves neither causal nonseparability, arbitrary complex quantum behavior, physical implementation, universal irreversibility, ethical degeneration nor the universal zero-substantive-axiom foundation.",
-    "zh": "所查片段限于实整数振幅、选定操作及一种响应。未证明因果不可分离、任意复数量子行为、物理实现、普遍不可逆、伦理退化或普遍零实质公理根基。"
-  },
-  "validation_scope": {
-    "en": "Fresh Lean 4.29.1 build: 27 theorems and 54 declaration audits. 44 reports empty; 10 use propext, three of those also Quot.sound. No custom postulates or final Classical.choice. Source-bound frozen receipt; author counterreview, no independent acceptance or new empirical result.",
-    "zh": "Lean 4.29.1重新实编27项定理及54项声明审计。44项空，10项含propext，其中3项另含Quot.sound；无自定公理或最终Classical.choice。回执绑定冻结源码；作者反审，无独立验收或新增经验成果。"
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/OperativeCoherence.lean",
@@ -115,7 +195,9 @@
         "Becoming.Dephasing.recording_reduces_to_dephase",
         "Becoming.Dephasing.joint_reversal_restores_control",
         "Becoming.Dephasing.not_lossless",
-        "Becoming.Dephasing.no_restore_along"
+        "Becoming.Dephasing.no_restore_along",
+        "Becoming.Dephasing.dephase_preserves_diagonal",
+        "Becoming.Dephasing.dephase_preserves_mass"
       ]
     },
     {
@@ -289,10 +371,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "en": "Use the established difference between local access and retained joint relations in the common constitutive argument. Warrant the universal claim at its full scope instead of promoting this supplied quantum mechanism into universal ontology.",
-    "zh": "将局部可用与保留共同关系的已建立区别用于共同构成论证；取得普遍主张完整范围的根据，不把给定量子机制升格为普遍本体。"
-  },
   "history": [
     {
       "en": "9 October 2026: §18 derives a concrete formation/loss/reversal interface after §17’s source assessment. Preliminary 21- and 26-theorem builds remain development history; the final 27-theorem package is one scoped result.",
@@ -331,6 +409,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added; the claim adds what the core states along runs (dephasing is not lossless, and nothing read later restores where the prepared and coherent runs began). The aliases naming retired modules (Generative.OperativeCoherence.switched_density (retired module); Generative.OperativeCoherence.dephase_keeps_response_iff (retired module); Generative.OperativeCoherence.no_diagonal_response_decoder (retired module); Generative.OperativeCoherence.no_uniform_dephase_inverse (retired module); Generative.OperativeCoherence.recording_reduces_to_dephase (retired module); Generative.OperativeCoherence.joint_reversal_restores_control (retired module); Becoming.Instances.diagonal_no_decoder (retired module); Becoming.Instances.dephase_no_restore (retired module)) dropped, their declarations staying in the provenance references, and the core Dephasing laws added in their place.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述；主张加入核心沿运行所陈述者（退相干不是无损的，以后所读的任何东西都不能恢复制备与相干之运行从何处开始）。指向已退休模块的别名删去（其声明仍在来历引用中），代以核心 Dephasing 之律。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 5 laws, each read against its declarations in Becoming.Readout, Becoming.Dephasing and Becoming.Courses, the referenced response values, lumping and run reduction stated; the limitations became four does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and zero-axiom-target-open; the evidence paragraph names the core proof and the earlier periphery check as provenance; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [control-coherence-loss.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/control-coherence-loss.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the references (declarations added), each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 5 条规律，各条对照其在 Becoming.Readout、Becoming.Dephasing 与 Becoming.Courses 中的声明核读，已引用的回应值、一致性与运行约化现已陈述；限制改为四条“未表明”与通用边界 no-ethical-premise、no-evaluation、zero-axiom-target-open；证据段写明核心证明，并把此前外围的检查列为来源；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [control-coherence-loss.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/control-coherence-loss.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、引用（增补声明），各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/10744af2a6616495/control-coherence-loss.json",
+      "sha256": "10744af2a661649580bc251b6d070b50eff425a67e0dafe1be3ba9f578749aa9",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/71509e34ad583e54/control-coherence-loss.json",
+      "sha256": "71509e34ad583e54cf54dd0d08aaca1f33d163cad4ba8f6116f63ed2ce09c13a",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "market-supported-finite-transition",
   "title": {
     "zh": "有支持的有限纠正与保护交接",
@@ -8,15 +8,94 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
+  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
   "statement": {
-    "en": "A start lasts n steps exactly when some ladder holds it at level n; the market's support cover is such a ladder for the essential floor, exact at the worst share, so initial support at least K_N carries every positive state through a finite correction into the original protection.",
-    "zh": "一个起点持续 n 步，恰当有某个阶梯在第 n 层容纳它；市场的支持覆盖是必要底线的这样一个阶梯，在最坏份额下恰好，故初始支持至少 K_N 使每个正状态经有限纠正进入原有保护。"
+    "en": "A start lasts n steps exactly when some ladder holds it at level n; the market's support cover is such a ladder for the essential floor, exact at the worst share, so for each positive state some N exists at which initial support at least K_N carries it into the original protection.",
+    "zh": "一个起点持续 n 步，恰当有某个阶梯在第 n 层容纳它；市场的支持覆盖是必要底线的这样一个阶梯，在最坏份额下恰好，故对每个正状态都有某个 N，初始支持至少 K_N 即使它进入原有保护。"
   },
-  "claim": {
-    "zh": "对每条带可容许扰动与守卫的变化之律：起点持续n步，恰当某个梯级族（守卫之内的层，每个可容许步从第k+1级落到第k级）在第n级含有它，也恰当每个必要族在第n级含有它；兼为二者的族恰是持续。市场的支持覆盖K₀=5、K(n+1)=(10/9)(K(n)+1+κ)在每个纠正日程与每个不超过κ的冲击下，是必要底线的梯级族；在最坏份额下它恰好：存量单独在5之上持续n步，恰当它至少为K_n。所以原有理市场模型中每个正维护份额的物理状态都有有限的β=0校正期N（到达律的实例，即着陆一侧β=0的情形）；初始支持高于K_N（含每步额外耗用）使每个脉冲步可执行，撤出后实际到达状态满足原β=1/2的永久保护证书。",
-    "en": "For every law of change with admissible disturbances and a guard, a start lasts n steps exactly when some ladder holds it at level n (levels within the guard, every admissible step from level k+1 landing at level k), and exactly when every necessary family holds it there; a family that is both is exactly lasting. The market's support cover K0=5, K(n+1)=(10/9)(K(n)+1+kappa) is a ladder for the essential floor under every correction schedule and every shock at most kappa, and at the worst share it is exact: the stock alone lasts n steps at or above 5 exactly when it is at least K_n. So every physical state of the original rational market model with positive renewal share has a finite beta=0 correction horizon N (an instance of the reaching law, the case beta=0 of the landing side); initial support above K_N, including extra per-step consumption, makes every pulse step executable and lets the actual arrived state satisfy the original beta=1/2 perpetual protection certificate after withdrawal."
-  },
+  "laws": [
+    {
+      "en": "For a law of change with admissible disturbances and a guard, a start lasts 0 steps where it is within the guard, and n + 1 steps where, besides, every admissible disturbance takes it to one lasting n. A ladder is a family of levels within the guard in which every admissible step from level k + 1 lands at level k; a start lasts n steps exactly when some ladder holds it at level n.",
+      "zh": "对带可容许扰动与守卫的变化之律：起点持续 0 步，是指它在守卫之内；持续 n+1 步，是指此外每个可容许扰动都把它带到持续 n 步者。阶梯是守卫之内的层族，每个可容许步从第 k+1 级落到第 k 级；起点持续 n 步，恰当某个阶梯在第 n 级含有它。",
+      "declarations": [
+        "Becoming.Lasting.Lasts",
+        "Becoming.Lasting.Ladder",
+        "Becoming.Lasting.lasts_iff_ladder"
+      ]
+    },
+    {
+      "en": "A family is necessary when the guard gives level 0 and a configuration within the guard whose admissible successors all lie at level k is at level k + 1; a start lasts n steps exactly when every necessary family holds it at level n, and a family that is both a ladder and necessary is exactly lasting.",
+      "zh": "必要族：守卫给出第 0 级，且守卫之内、可容许后继都在第 k 级的构型在第 k+1 级；起点持续 n 步，恰当每个必要族在第 n 级含有它；兼为阶梯与必要族的族恰是持续。",
+      "declarations": [
+        "Becoming.Lasting.Necessary",
+        "Becoming.Lasting.lasts_iff_necessary",
+        "Becoming.Lasting.lasts_iff_of_exact"
+      ]
+    },
+    {
+      "en": "Given one admissible disturbance, lasting n steps is staying within the guard for the first n steps of every admissible history; with no premise, what no course leaves is what lasts every horizon; and with the guard decided, from within it a guarded history agrees with the history at n exactly when the history stays within the guard up to n.",
+      "zh": "给定一个可容许扰动时，持续 n 步就是在每段可容许历史的前 n 步留在守卫之内；不加前提，没有进程离开者恰是持续每个步数者；守卫可判定时，从守卫之内出发，受守卫历史在第 n 步与历史一致，恰当历史直到第 n 步都留在守卫之内。",
+      "declarations": [
+        "Becoming.Lasting.lasts_iff_histories",
+        "Becoming.Lasting.kernel_iff_lasts",
+        "Becoming.Lasting.guarded_upto_iff"
+      ]
+    },
+    {
+      "en": "On courses: a start lasts n steps exactly when every course of at most n admissible disturbances from it stays within the guard, so every such course stays within the guard exactly when some ladder holds the start at level n, and exactly when every necessary family does.",
+      "zh": "在历程上：起点持续 n 步，恰当从它出发、至多 n 个可容许扰动的每条历程都留在守卫之内；所以这样的历程都留在守卫之内，恰当某个阶梯在第 n 级含起点，也恰当每个必要族如此。",
+      "declarations": [
+        "Becoming.Courses.lasts_iff_courses",
+        "Becoming.Courses.lasts_of_courses",
+        "Becoming.Courses.courses_iff_ladder",
+        "Becoming.Courses.courses_iff_necessary"
+      ]
+    },
+    {
+      "en": "In the market model with the correction strength chosen at each step, for extra support consumption κ ≥ 0, the physical pairs whose stock is at least the cover K for n more steps, with K(0) = 5 and K(n + 1) = (10/9)(K(n) + 1 + κ), form a ladder for the essential floor under every correction schedule and every disturbance whose shock is at most κ; K(n) = (15 + 10κ)(10/9)^n − 10(1 + κ).",
+      "zh": "市场模型中，纠正强度逐步选定；额外支持耗用 κ ≥ 0 时，存量至少为再 n 步覆盖 K 的物理状态对（K(0)=5，K(n+1)=(10/9)(K(n)+1+κ)）在每个纠正日程与每个冲击不超过 κ 的扰动下，构成必要底线的阶梯；K(n)=(15+10κ)(10/9)^n−10(1+κ)。",
+      "declarations": [
+        "Becoming.MarketInstances.covered",
+        "Becoming.MarketInstances.cover_ladder",
+        "RegimeTransition.cover_formula"
+      ]
+    },
+    {
+      "en": "At the worst share, which renews nothing, the cover is exact: the stock alone lasts n steps at or above 5 exactly when it is at least the cover for n steps. From a physical start whose stock covers N steps the pulse runs within the essential floor for its first N steps, for every correction strength; the β = 0 pulse prefix is a case.",
+      "zh": "在不更新任何东西的最坏份额下，覆盖是精确的：存量单独在 5 以上持续 n 步，恰当它至少为 n 步覆盖。从存量覆盖 N 步的物理起点出发，脉冲在前 N 步留在必要底线之内，对每个纠正强度都如此；β=0 的脉冲前缀是其情形。",
+      "declarations": [
+        "Becoming.MarketInstances.worstSupport",
+        "Becoming.MarketInstances.cover_exact",
+        "Becoming.MarketInstances.supported_prefix_instance",
+        "Becoming.MarketInstances.pulse_prefix_instance"
+      ]
+    },
+    {
+      "en": "Every physical state with positive renewal share lands under the β = 0 rescue within finitely many steps, the case β = 0 of the landing side; no single pulse duration lands every positive share, and a share of zero never lands.",
+      "zh": "每个维护份额为正的物理状态在 β=0 的挽救下于有限步内着陆，这是着陆一侧 β=0 的情形；没有一个脉冲时长能使每个正份额都着陆，份额为零者永不着陆。",
+      "declarations": [
+        "RegimeTransition.positive_seed_finite_landing",
+        "Becoming.MarketInstances.rescue_landing_instance",
+        "RegimeTransition.no_uniform_pulse_duration",
+        "RegimeTransition.zero_seed_never_lands"
+      ]
+    },
+    {
+      "en": "For κ ≥ 0 and a physical state with positive share there is N such that, from every initial stock at least the cover for N steps, the guarded β = 0 pulse with consumption κ agrees with the operating history for its first N steps, the state at N is safe for the original parameters (β = 1/2), and from it the original guarded history with no shock never fails.",
+      "zh": "κ ≥ 0 且物理状态份额为正时，有 N 使得：初始存量至少为 N 步覆盖时，耗用 κ 的受守卫 β=0 脉冲在前 N 步与运行历史一致，第 N 步的状态对原参数（β=1/2）安全，由此出发、无冲击的原受守卫历史永不失败。",
+      "declarations": [
+        "RegimeTransition.supported_finite_transition",
+        "RegimeTransition.landing_supplies_safety"
+      ]
+    },
+    {
+      "en": "Support at the floor need not suffice: a physical state with share 1/100 and stock 5 stops at the first guarded pulse step even with no extra consumption.",
+      "zh": "底线处的支持未必够用：份额为 1/100、存量为 5 的物理状态，即使没有额外耗用，也在第一个受守卫的脉冲步停止。",
+      "declarations": [
+        "RegimeTransition.too_late_even_without_extra_cost"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "原 x,q,w 更新律及 x,q,w∈[0,1]、x>0；纠正阶段真实 β=0，其他参数保持原例，随后 β=1/2。",
@@ -25,8 +104,55 @@
     {
       "zh": "每步额外支持耗用 κ≥0；C₀≥K_N，K₀=5、Kₙ₊₁=(10/9)(Kₙ+1+κ)；原货币预算先付后收入，没有其他冲击。",
       "en": "Extra support consumption kappa>=0 per pulse step; C0>=K_N with K0=5 and K(n+1)=(10/9)(K(n)+1+kappa); original monetary funding remains paid before receipts, with no other shocks."
+    },
+    {
+      "en": "The core laws hold for any type of configurations and disturbances; one admissible disturbance is given for the histories form, and the guard is decided for guarded histories, each written into the law that uses it.",
+      "zh": "核心规律对任意类型的构型与扰动成立；历史形式给定一个可容许扰动，受守卫历史要求守卫可判定，各自写在用到它的规律中。"
+    },
+    {
+      "en": "The market model's quantities and parameters are rational numbers, with histories indexed by natural times from 0.",
+      "zh": "市场模型的量与参数是有理数，历史以从 0 起的自然时刻为索引。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Away from the worst share the cover is shown sufficient, not least; no complete recovery region is computed.",
+      "zh": "在最坏份额之外，覆盖只被证明为充分，未被证明为最小；没有算出完整的可恢复区域。",
+      "kind": "scope"
+    },
+    {
+      "en": "Proportional states, the actual change of β, the initial support and new entry each keep their own correspondence obligation.",
+      "zh": "比例状态、β 的实际改变、初始支持与新的进入，各自保留独立的对应义务。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The core laws do not say that the cover is a ladder: that it is one is this market's content.",
+      "zh": "核心规律并不说覆盖是阶梯：覆盖是阶梯，这是这个市场的内容。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/market-generativity/formal/RegimeTransition.lean",
+      "detail": {
+        "zh": "零维护份额不再生；不存在对所有正份额都够用的固定纠正时长；底线支持状态可在有效无额外耗用纠正的第一步失效。",
+        "en": "Zero renewal share does not regenerate; no fixed pulse duration works for all positive shares; floor-level stock can fail on the first effective correction step even without extra consumption."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1. The core modules Becoming.Lasting and Becoming.Courses by the consolidated checker (becoming-checks/), with empty axiom reports; the periphery RegimeTransition by the finite-transition check (transition-verification.json: 27 new theorems, 35 declaration audits; 96 inherited theorems, 118 audits) and MarketInstances by its instance checker (market-instances-checks/), reporting propext, Quot.sound and Classical.choice. Author counterreview integrated; no independent review or empirical calibration.",
+    "zh": "Lean 4.29.1 实查：核心 Lasting、Courses 由合并检查器（becoming-checks/）检查，公理报告皆空；外围 RegimeTransition 由有限转变检查（transition-verification.json：新定理27、审计35，继承定理96、审计118）、MarketInstances 由其实例检查器检查，报告 propext、Quot.sound、Classical.choice。有作者反审；无独立审查或经验校准。"
+  },
+  "next_delta": {
+    "en": "Find the least support for the transition away from the worst share, and connect actually formed changes in provision to the correction the model assumes.",
+    "zh": "求出最坏份额之外转变所需的最小支持，并把实际形成的供给改变接到模型所假设的纠正上。"
+  },
   "correspondence": {
     "zh": "干预是共同运行关系中的有效改变，形成、授权与具体实施尚为给定对应；κ 只覆盖指定支持单位，不是全部生活和制度代价的统一尺度。",
     "en": "Intervention is an effective change in shared operating relations; its formation, authority and implementation remain supplied correspondence. Kappa covers designated support units, not a common scale for every living and institutional cost."
@@ -99,23 +225,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/market-generativity/formal/RegimeTransition.lean",
-      "detail": {
-        "zh": "零维护份额不再生；不存在对所有正份额都够用的固定纠正时长；底线支持状态可在有效无额外耗用纠正的第一步失效。",
-        "en": "Zero renewal share does not regenerate; no fixed pulse duration works for all positive shares; floor-level stock can fail on the first effective correction step even without extra consumption."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "充分的有限转变条件，不是完整可恢复域或最小成本；比例域、真实 β 改变、初始支持及新增进入均保留独立对应义务。",
-    "en": "Sufficient finite-transition conditions, not a complete recovery region or minimal cost; proportional states, actual beta change, initial support and new entry retain separate correspondence obligations."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 实查27项新定理／35项新审计，96项继承定理／118项审计另列；作者反审已整合，无独立 agent 验收、无新经验校准。一般律已由检查器回执绑定。",
-    "en": "Lean 4.29.1 actually checks 27 new theorems / 35 declaration audits, separately rebuilding 96 inherited theorems / 118 audits. Author counterreview is integrated; no independent agent acceptance or new empirical calibration. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/market-generativity/formal/RegimeTransition.lean",
@@ -310,10 +419,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "β=0有限转变已完成，部分纠正与临界等号由 market-partial-correction-boundary 推进；后续形成—市场接口及含误差范围以该条为准。",
-    "en": "The beta=0 finite transition is complete; market-partial-correction-boundary advances partial correction and equality. Follow that record for formation-to-market and error-scope continuations."
-  },
   "history": [
     {
       "zh": "2026-10-08：新增有限持续干预、前缀支持和原保护证书之间的正式组合；保留零余量、期限与支持失败。",
@@ -356,6 +461,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them (the claim is unchanged); the retired label G0/J in a related detail reads living significance and the practical commitments.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述（主张不变）；一条相关说明中的退役标签 G0/J 改为生生之意义与实践承诺。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 9 laws, each read against its declarations in Becoming.Lasting, Becoming.Courses, MarketInstances and RegimeTransition, with the conditions the Lean takes written in (κ ≥ 0, shocks at most κ, the cover, one admissible disturbance, a decided guard); the referenced histories, kernel, course and witness declarations each enter a law; \"initial support above K_N\" reads \"at least the cover for N steps\", as the Lean has it; the limitations became three does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two added hypotheses (the core laws' conditions, the rational quantities); the next step's completed part and pointer went to history and the related entries; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-supported-finite-transition.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-supported-finite-transition.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 9 条规律，各条对照其在 Becoming.Lasting、Becoming.Courses、MarketInstances 与 RegimeTransition 中的声明核读，Lean 所取的条件都写入（κ ≥ 0、冲击不超过 κ、覆盖、一个可容许扰动、守卫可判定）；已引用的历史、生存核、历程与见证声明各入一条规律；“初始支持高于 K_N”依 Lean 读作“至少为 N 步覆盖”；限制改为三条“未表明”，加通用边界 no-ethical-premise-core-axiom-free、discrete-steps 与 decidability，并加两条前提（核心规律的条件、有理数量）；下一步中已完成者与指向移入沿革与相关条目；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-supported-finite-transition.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-supported-finite-transition.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、“未表明”各项，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/0f1d8492393f6ea8/market-supported-finite-transition.json",
+      "sha256": "0f1d8492393f6ea8c3768d4578e93c9f009e579f6eb6bc0742a28c5f9f5b3f88",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/6eb39a520b68465b/market-supported-finite-transition.json",
+      "sha256": "6eb39a520b68465b2eb9ade1fc72e5b14045de6a1189b7f3a402984246bf68f9",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

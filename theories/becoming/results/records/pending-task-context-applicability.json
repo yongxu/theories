@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "pending-task-context-applicability",
   "title": {
     "zh": "在途任务的适用条件与有支持接续",
@@ -8,19 +8,100 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F03",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-28T05:21:42+00:00",
   "statement": {
-    "zh": "对每个存量，一串汲取可执行，恰当每次汲取都在当时所立的存量之内。审查汲取一个工作单位、行动两个时，端点恰当其报告排除相关风险且至少有三个单位时完成二者；报告未排除风险的审查保持损失计数。",
-    "en": "A course of draws on a stock is executable exactly when each draw is within the stock then standing. Review drawing one unit of work and action two, an endpoint completes both exactly when its report clears the relevant risk and it holds at least three units; reviews not cleared keep the loss count."
+    "zh": "对每个存量，一串汲取可执行，恰当每次汲取都在当时所立的存量之内。审查汲取一个工作单位、行动两个时，待办端点恰当其报告排除相关风险且至少有三个单位时完成二者；报告未排除风险的审查保持损失计数。",
+    "en": "A course of draws on a stock is executable exactly when each draw is within the stock then standing. Review drawing one unit and action two, a pending endpoint completes both exactly when its report clears the relevant risk and it holds at least three units; uncleared reviews keep the loss count."
   },
-  "claim": {
-    "zh": "对每个存量，一段取用进程可执行，恰当每次取用都在当时的存量之内。审查取一单位工作、行动取两单位，所以审查与行动的进程恰从三单位当前工作起被覆盖；端点完成审查与行动，恰当报告排除相关风险且其工作覆盖该进程；拒绝或耗尽保留未完成任务及已用的工作。经审查的损失：对每个条件、报告与待完成端点，审查增加一次损失，恰当报告排除相关风险、工作覆盖该进程，而所交付实践的相关风险（其作用规律的损失条件）实际成立；报告未排除相关风险的每次审查都保持损失计数（门控改变之律的实例），由这样的审查组成的每段进程亦然。所以覆盖效果时刻条件的报告防止所表示做法的新增损失。取用一单位工作的相关条件审查消耗实际交付的修订。协议自身给出两条作用规律，因而给出哪种风险相关。学习分支允许另两个情境字段改变；行动保护不蕴含持续的比较根据。",
-    "en": "For every stock, a course of draws is executable exactly when each draw is within the stock then standing. Review draws one unit of work and action two, so the review-and-action course is covered exactly from three current units, and an endpoint completes its review and action exactly when the report clears the relevant risk and its work covers that course; refusal or exhaustion retains the unfinished task and the work already used. Loss through review: for every condition, report and pending endpoint, a review adds one loss exactly when the report clears the relevant risk, the work covers that course and the delivered practice’s relevant risk, its outcome law’s loss condition, actually holds; every review whose report does not clear the relevant risk keeps the loss count (an instance of the gated-change law), and so does every course of such reviews. So a covered report, one covering effect-time conditions, prevents added represented practice loss. Relevant-condition review, using one unit of work, consumes the actually delivered revision. The protocol itself supplies the two outcome laws and so which risk is relevant. The learning branch admits changes to the other two context fields; action protection does not imply continued comparative warrant."
-  },
+  "laws": [
+    {
+      "en": "For every draw and replenishment of each kind of step, the stock process draws what a step draws from what is held and then replenishes; a course of it from a stock is executable exactly when each step's draw is within the stock then standing.",
+      "zh": "对每类步的每种汲取与补充：存量过程从所持者中汲取一步所汲取的，然后补充；它自某一存量起的一串步可执行，恰当每步的汲取都在当时所立的存量之内。",
+      "declarations": [
+        "Becoming.Stock.process",
+        "Becoming.Stock.Covered",
+        "Becoming.Stock.feasible_iff_covered"
+      ]
+    },
+    {
+      "en": "In the pending-task protocol, review draws one unit of work and action two, so their course is covered exactly from three units, and the action runs exactly from two; a pending endpoint with no report yet completes its review and action exactly when its report clears the relevant risk and its work covers that course.",
+      "zh": "在待办任务协议中，审查汲取一个工作单位，行动两个，所以二者之程恰从三个单位起被覆盖，行动恰从两个单位起运行；尚无报告的待办端点恰当其报告排除相关风险、其工作覆盖该程时完成审查与行动。",
+      "declarations": [
+        "Becoming.VersionedTaskInstances.review_course_covered_iff",
+        "Becoming.VersionedTaskInstances.enact_isSome_iff",
+        "Becoming.VersionedTaskInstances.review_completes_iff",
+        "PendingTaskApplicability.reviewAndAct"
+      ]
+    },
+    {
+      "en": "The relevant risk of each delivered practice is its outcome law's loss condition, and an enacted practice adds one loss exactly where that risk holds; for every condition, report and pending endpoint, a review adds one loss exactly when the report clears the action, the work covers the course and the delivered practice's relevant risk holds, and otherwise keeps the loss count.",
+      "zh": "每个所交付实践的相关风险是其作用规律的损失条件，被执行的实践恰在该风险成立处增加一次损失；对每个条件、报告与待办端点，审查恰当报告放行行动、工作覆盖该程、且所交付实践的相关风险成立时增加一次损失，否则保持损失计数。",
+      "declarations": [
+        "PendingTaskApplicability.relevantRisk",
+        "Becoming.VersionedTaskInstances.relevant_risk_eq",
+        "Becoming.VersionedTaskInstances.enact_losses",
+        "Becoming.VersionedTaskInstances.review_losses",
+        "Becoming.VersionedTaskInstances.review_adds_loss_iff"
+      ]
+    },
+    {
+      "en": "As a process of reviews, one report a step, every review whose report does not clear the action keeps the loss count, an instance of the gated-change law, and so does every course of such reviews.",
+      "zh": "作为审查的过程（每步一个报告），报告不放行行动的每次审查都保持损失计数（门控变化律的实例），这样的审查组成的每一程亦然。",
+      "declarations": [
+        "Becoming.VersionedTaskInstances.reviews",
+        "Becoming.VersionedTaskInstances.clears",
+        "Becoming.VersionedTaskInstances.losses_kept",
+        "Becoming.VersionedTaskInstances.losses_kept_along"
+      ]
+    },
+    {
+      "en": "A report that covers the effect, whatever it reports being the delivered practice's relevant risk at the actual effect, makes a review add no loss, for every endpoint.",
+      "zh": "覆盖作用的报告（凡其所报者都等于实际作用时所交付实践的相关风险）使审查不增加损失，对每个端点皆然。",
+      "declarations": [
+        "PendingTaskApplicability.CoversEffect",
+        "PendingTaskApplicability.covered_review_adds_no_practice_loss",
+        "Becoming.VersionedTaskInstances.covered_review_instance"
+      ]
+    },
+    {
+      "en": "With at least three units of work and the delivered practice's relevant risk absent, a review its report clears completes with no added loss, one more record and the total of work, reserve and units drawn kept; for the learning action this needs only that the transition loss be absent, whatever the other two context fields.",
+      "zh": "工作至少三个单位、所交付实践的相关风险不成立时，报告放行的审查完成，不增加损失，多一条记录，工作、储备与已用单位的总量保持；对学习行动，这只需转变损失不成立，另两个情境字段任意。",
+      "declarations": [
+        "PendingTaskApplicability.funded_covered_review",
+        "PendingTaskApplicability.learning_review_covers_changed_context"
+      ]
+    },
+    {
+      "en": "Under the bank and queue invariant, delivering a rewritten pending head removes it from the queue, keeps the rest of the queue, the banks and the active route, and enters review with the revised value as the endpoint's task.",
+      "zh": "在库与队列不变量之下，交付一个被改写的待办队首会把它移出队列，保持其余队列、各库与活动路线，并以修订后的值作为端点的任务进入审查。",
+      "declarations": [
+        "PendingTaskApplicability.revised_delivery_enters_review"
+      ]
+    },
+    {
+      "en": "In the protocol's runs after the revision, the review leaves too little of the inherited work for the action and the task stays pending; one more unit completes it, also with an unrelated change of context; a relevant risk reported, or no report, keeps it unfinished with the work used; and a report that does not cover the effect clears an action that adds a second loss.",
+      "zh": "协议在修订之后的运行中：审查之后继承的工作不足以行动，任务仍待办；多一个单位即完成，情境有无关改变时亦然；报告相关风险或没有报告时，任务未完成而已用的工作保留；不覆盖作用的报告放行的行动增加第二次损失。",
+      "declarations": [
+        "PendingTaskApplicability.check_can_exhaust_action_support",
+        "PendingTaskApplicability.additional_current_support_completes",
+        "PendingTaskApplicability.irrelevant_context_change_can_still_complete",
+        "PendingTaskApplicability.relevant_change_retains_unfinished_task",
+        "PendingTaskApplicability.missing_report_retains_unfinished_task",
+        "PendingTaskApplicability.report_not_covering_effect_can_still_fail"
+      ]
+    },
+    {
+      "en": "In a witness condition where the learning action's relevant risk is absent, learning is not better than attendance under the inherited comparison.",
+      "zh": "见证：在学习行动的相关风险不成立的条件下，按继承的比较，学习并不优于出席。",
+      "declarations": [
+        "PendingTaskApplicability.safe_change_can_remove_comparative_warrant"
+      ]
+    }
+  ],
   "hypotheses": [
     {
-      "zh": "继承两实践作用规律、实际取得的目的状态、版本化路线与同步授权改写；生生之意义、实践承诺 J 及报告的实际对应公开。",
-      "en": "Inherited two-practice outcome law, acquired goal state, versioned route and synchronized authorized rewrite; living significance, the practical commitments J and the report correspondence remain explicit."
+      "zh": "继承两实践作用规律、实际取得的目的状态、版本化路线与同步授权改写；生生之意义、实践承诺及报告的实际对应公开。",
+      "en": "Inherited two-practice outcome law, acquired goal state, versioned route and synchronized authorized rewrite; living significance, the practical commitments and the report correspondence remain explicit."
     },
     {
       "zh": "复查消耗一单位工作，行动开始需要两单位；报告覆盖实际作用时的相关条件。复查／行动为局部抽象步骤，未实现物理隔离或感测器。",
@@ -31,6 +112,58 @@
       "en": "The completion instance supplies one additional current work unit initially, total 19; it neither freely converts reserve nor derives real provision."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Only the two practice protections of the supplied outcome law are covered.",
+      "zh": "只覆盖给定作用规律中的两项实践保护。",
+      "kind": "scope"
+    },
+    {
+      "en": "How reports form, how relevance is acquired or revised, what waiting brings about and how unmet needs actually continue lie outside the laws.",
+      "zh": "报告如何形成、相关性如何取得或修订、等待带来什么、未满足的需求如何实际接续，都在这些规律之外。",
+      "kind": "scope"
+    },
+    {
+      "en": "Correctness at sampling time does not ensure that a report covers the effect: in a witness a report not covering it clears an action that then adds a loss.",
+      "zh": "取样时正确不保证报告覆盖作用：见证中不覆盖作用的报告放行一个随后增加损失的行动。",
+      "kind": "non-implication",
+      "witness": "PendingTaskApplicability.report_not_covering_effect_can_still_fail"
+    },
+    {
+      "en": "Protection of the action does not carry over the comparative reason for preferring the practice.",
+      "zh": "行动受保护，并不延续偏好该实践的比较理由。",
+      "kind": "non-implication",
+      "witness": "PendingTaskApplicability.safe_change_can_remove_comparative_warrant"
+    },
+    {
+      "en": "Retaining a task is not its actual continuation.",
+      "zh": "保留任务不等于实际接续。",
+      "kind": "non-implication",
+      "witness": "PendingTaskApplicability.check_can_exhaust_action_support"
+    },
+    {
+      "en": "No universal degeneration of collective life and no complete corrigibility follows.",
+      "zh": "不推出集体生活的普遍退化，也不推出完整的可纠正性。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean",
+      "detail": {
+        "zh": "check_can_exhaust_action_support 保留复查后无力执行；safe_change_can_remove_comparative_warrant 分开行动保护与比较；report_not_covering_effect_can_still_fail 保留报告与实际作用脱节的损失。",
+        "en": "check_can_exhaust_action_support retains exhaustion after review; safe_change_can_remove_comparative_warrant separates action protection from comparison; report_not_covering_effect_can_still_fail retains loss when the report fails to cover the effect."
+      }
+    }
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: PendingTaskApplicability and the repository modules it imports by Lean 4.30.0-rc2 against pinned Mathlib (receipt pending-task-applicability-verification.json); the protocol's instances of the core laws (VersionedTaskInstances) by a receipt in versioned-task-instances-checks; the core law (Becoming.Stock, empty axiom reports) by a core receipt in becoming-checks. The cited periphery declarations use at most propext and Quot.sound. There is no empirical validation and no independent acceptance.",
+    "zh": "实查：PendingTaskApplicability 及其仓库导入由 Lean 4.30.0-rc2 对固定的 Mathlib 检查（pending-task-applicability-verification.json）；实例 VersionedTaskInstances 由 versioned-task-instances-checks；核心 Becoming.Stock（公理报告为空）由 becoming-checks。所引外围声明至多用 propext 与 Quot.sound。无经验验证与独立验收。"
+  },
+  "next_delta": {
+    "en": "Acquire and revise the correspondence of effect and relevance in a specified common practice, and support the needs that go on while an old method does not apply.",
+    "zh": "在指定的共同实践中取得并修订作用与相关性的对应，并支持旧做法不适用时仍在发生的需求。"
+  },
   "correspondence": {
     "zh": "取得认识、传递、复查与作用是同一共同活动的关系分化。相关性由给定作用规律得出，不把未观察者定义为无关；作用规律的取得和变化仍需解释。",
     "en": "Acquisition, delivery, review and effect are differentiated relations in one common activity. Relevance follows from the supplied outcome law, without defining unseen relations as irrelevant; acquisition and change of that law remain to explain."
@@ -71,23 +204,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean",
-      "detail": {
-        "zh": "check_can_exhaust_action_support 保留复查后无力执行；safe_change_can_remove_comparative_warrant 分开行动保护与比较；report_not_covering_effect_can_still_fail 保留报告与实际作用脱节的损失。",
-        "en": "check_can_exhaust_action_support retains exhaustion after review; safe_change_can_remove_comparative_warrant separates action protection from comparison; report_not_covering_effect_can_still_fail retains loss when the report fails to cover the effect."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只覆盖给定作用规律中的两项实践保护；报告形成、相关性取得与更新、等待的后果及未满足需求的实际接续未证。报告取样时正确不保证覆盖后来作用；不构成普遍社会退化或完整可纠正性定理。",
-    "en": "Covers only two practice protections in the supplied outcome law. Report formation, acquisition/revision of relevance, waiting consequences and actual continuation of unmet needs are unproved. Correctness at sampling does not ensure effect coverage; no universal societal degeneration or complete corrigibility theorem."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.30.0-rc2 实际检查14项新定理／22项新审计；205项继承定理／354项继承审计分列。所有仓库导入重建；上游缓存固定。无经验验证或独立验收。一般律已由检查器回执绑定。",
-    "en": "Lean 4.30.0-rc2 checked 14 new theorems/22 new audits, separately from 205 inherited theorems/354 inherited audits. Repository imports rebuilt; upstream cache pinned. No empirical validation or independent acceptance. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean",
@@ -100,7 +216,14 @@
         "PendingTaskApplicability.learning_review_covers_changed_context",
         "PendingTaskApplicability.safe_change_can_remove_comparative_warrant",
         "PendingTaskApplicability.check_can_exhaust_action_support",
-        "PendingTaskApplicability.report_not_covering_effect_can_still_fail"
+        "PendingTaskApplicability.report_not_covering_effect_can_still_fail",
+        "PendingTaskApplicability.relevantRisk",
+        "PendingTaskApplicability.reviewAndAct",
+        "PendingTaskApplicability.CoversEffect",
+        "PendingTaskApplicability.additional_current_support_completes",
+        "PendingTaskApplicability.irrelevant_context_change_can_still_complete",
+        "PendingTaskApplicability.relevant_change_retains_unfinished_task",
+        "PendingTaskApplicability.missing_report_retains_unfinished_task"
       ]
     },
     {
@@ -133,7 +256,8 @@
       "sha256": "e6ac9fce2643b3238a9832b235c0a3be6d2cb9cac9a108dfce0f748a04971d9f",
       "declarations": [
         "Becoming.Stock.Covered",
-        "Becoming.Stock.feasible_iff_covered"
+        "Becoming.Stock.feasible_iff_covered",
+        "Becoming.Stock.process"
       ]
     },
     {
@@ -251,10 +375,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added (a course of draws is executable exactly where each draw is within the standing stock; with review drawing one unit and action two, an endpoint completes both exactly where its report clears the relevant risk and it holds three units; uncleared reviews keep the loss count); the retired label G0/J in the premises replaced by living significance and the practical commitments; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（一串汲取恰在每次汲取都在当时存量之内时可执行；审查汲取一单位、行动两单位时，端点恰在报告排除相关风险且有三个单位时完成二者；未排除风险的审查保持损失计数）；前提中已退役的标签 G0/J 改为生生之意义与实践承诺；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): the statement kept; the claim split into nine laws, each read against its declarations in Becoming.Stock, VersionedTaskInstances and PendingTaskApplicability; the limitations, the claim's last non-implication and the next step's last clause became six does-not-show items; the hypotheses kept, with the retired label J dropped from \"the practical commitments J\" (the glossary's term is the practical commitments); Stock.process and seven PendingTaskApplicability declarations added to the references of their files; no premise, status or source hash changed. Every earlier sentence is mapped in [pending-task-context-applicability.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/pending-task-context-applicability.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, does-not-show items, the evidence paragraph, each read against the Lean it cites. A cold read of the applied record was taken in laws.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：陈述保留；主张拆为九条规律，各条对照其在 Becoming.Stock、VersionedTaskInstances 与 PendingTaskApplicability 中的声明核读；限制、主张末尾的非蕴涵与下一步的末句成为六条“未表明”；前提保留，“实践承诺 J”去掉已退役的标签 J（术语表的词是实践承诺）；Stock.process 与 PendingTaskApplicability 的七个声明加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [pending-task-context-applicability.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/pending-task-context-applicability.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律、“未表明”各项、证据段，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及规律。"
     }
   ],
-  "next_delta": {
-    "zh": "在指定共同实践中取得并更新作用／相关性对应，并支持旧做法暂不适用时仍在发生的需求；保留任务不等于实际接续。",
-    "en": "Acquire and revise the effect/relevance correspondence in a specified common practice, and support continuing needs while an old method is inapplicable; retaining a task is not actual continuation."
-  }
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/9e196f1f9b1848df/pending-task-context-applicability.json",
+      "sha256": "9e196f1f9b1848df8caba17812dae717377384f7d928871256145cdb0bc5b4d2",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/9b2503fd29568a3e/pending-task-context-applicability.json",
+      "sha256": "9b2503fd29568a3e04f2b249f3b89ecdfa1b97fbc73691bf17d7ef8233e73945",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "only-the-order-of-change-shows",
   "title": {
     "zh": "只有变化的次序显出",
@@ -8,15 +8,160 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-28T05:45:05+00:00",
   "statement": {
-    "zh": "插入空步时，关系项之相等可判定、每一步每个关系项各列一次，前提、复现以及段上的总量与计数不变；在移动之步给定时移除空步，不需这两个条件即保持前提、总量与计数；生起与止息之计数需活动已判定；速率与储备承载多久相对于读法的单位。",
-    "en": "Inserting idle steps, relata compared decidedly and listed once at each step, keeps premises, recurrence, totals and counts over a stretch; removing them, moving steps given, keeps premises, totals and counts with neither; counts of arising or ceasing take activity decided; rates depend on the unit."
+    "zh": "插入空步时，关系项之相等可判定、每一步每个关系项各列一次，前提、复现以及总量与计数不变；在移动之步给定时移除世界在其上空转的空步，不需这两个条件即保持前提、总量与计数；生起与止息之计数需活动已判定；速率与储备承载多久相对于读法的单位。",
+    "en": "Inserting idle steps, relata compared decidedly and listed once per step, keeps premises, recurrence, totals and counts; removing those the world idles at, moving steps given, keeps premises, totals and counts with neither; arising or ceasing counts take activity decided; rates depend on the unit."
   },
-  "claim": {
-    "zh": "一个停顿（Stutter ρ）指 ρ 0 = 0，每步或空（ρ (n+1) = ρ n）或前进一步，且每步都被到达；经 ρ 读用 Sampling 的 sample。空步上没有参与：平衡、耗散与封闭在每个家族上成立，存量耗减在持有所立者的家族上成立（Flow.sample_idle_balancesOn 等）；前进步上各自恰在所读之步上成立时成立（Flow.sample_moves_balancesOn_iff 等）。所以经停顿读的世界恰在原世界满足前提时满足它们（World.stutter_premises_iff）：平衡（每步每个关系项列出一次）、耗散、只有活跃者给予、只有活跃者取用、活动需要支持、体现与有界的传递；与较粗的读法不同，不需要关于活动如何保持的条件。任何段上的总量就是所读之段的总量（stutter_total；Flow.stutter_taken、Flow.stutter_given、stutter_risen、stutter_fallen、stutter_rise_count、stutter_fall_count，以及在已定之处的 stutter_comings、stutter_ceasings）；生起、止息与立的变化恰在原来复现时复现（World.stutter_arisingRecurs_iff、World.stutter_ceasingRecurs_iff、World.stutter_change_recurs_iff）；普查经停顿保留（World.sample_counted），给出每个原步的读法之步时返回（World.stutter_counted_of_section）。停顿改变的是每步所计的：空步出现得任意晚时，没有流无终地更多（Flow.sample_not_more）；扩张无终地更多，每步读两次则不然（Expansion.more_step_relative）；由一份储备承载的世界在每步读两次时需要至少两份（Lapse.reserve_step_relative）。移除空步是一个构造：给出读每个原步的移动之步（Stutter.Moves；每个都存在，Stutter.crosses，且唯一，Stutter.moving_unique），且世界的空步中无参与者、无变动（World.IdleAt），去掉它们的世界（World.withoutIdle）恰在原世界满足每个前提处满足它（World.withoutIdle_premises、World.withoutIdle_transmits），不需要关于列出的条件，因为每步保留自己的交换；恰在原世界有普查处有普查（World.withoutIdle_counted）；在任一段上有相同的所取与所给总量、家族所立的升降及其计数（World.withoutIdle_totals），活动可判定时有相同的生起与止息计数（World.withoutIdle_counts）。不加前提。",
-    "en": "A stuttering (Stutter ρ) has ρ 0 = 0, each step idle (ρ (n+1) = ρ n) or moving by one, and every step reached; it is read with Sampling's sample. At an idle step nothing takes part: balance, dissipation and closure hold on every family, and running down on a family holding what stands (Flow.sample_idle_balancesOn and others); at a moving step each holds exactly where it holds across the step read (Flow.sample_moves_balancesOn_iff and others). So a world read through a stuttering meets the premises exactly where it meets them (World.stutter_premises_iff): balance (each relatum listed once at each step), dissipation, only active relata giving, only active relata taking, activity needing support, embodiment and bounded transmission; unlike a coarser reading, no condition on how activity is held is needed. Over any stretch the totals are those of the stretch read (stutter_total; Flow.stutter_taken, Flow.stutter_given, stutter_risen, stutter_fallen, stutter_rise_count, stutter_fall_count, and where decided stutter_comings, stutter_ceasings); arising, ceasing and change of standing recur exactly where they recurred (World.stutter_arisingRecurs_iff, World.stutter_ceasingRecurs_iff, World.stutter_change_recurs_iff); a census survives a stuttering (World.sample_counted) and returns where a step of the reading is given for each step (World.stutter_counted_of_section). What a stuttering changes is what is counted per step: with idle steps arbitrarily late no flow is more without end (Flow.sample_not_more); the expansion is more without end and, every step read twice, it is not (Expansion.more_step_relative); a world carried by a reserve of one needs a reserve of at least two when every step is read twice (Lapse.reserve_step_relative). Removing idle steps is a construction: given for each step read the moving step reading it (Stutter.Moves; each exists, Stutter.crosses, and is unique, Stutter.moving_unique) and the idle steps of the world empty and unmoved (World.IdleAt), the world without them (World.withoutIdle) meets every premise exactly where the world does (World.withoutIdle_premises, World.withoutIdle_transmits), with no condition on listing since each step keeps its own exchange, has a census exactly where it does (World.withoutIdle_counted), and over any stretch has the same totals taken and given, rises and falls of a family's standing and their counts (World.withoutIdle_totals), and where activity is decided the same counts of arising and ceasing (World.withoutIdle_counts). No premise."
-  },
+  "laws": [
+    {
+      "en": "A stuttering ρ reads step 0 at step 0, at each of its steps either reads again the step it read, an idle step, or reads the next, a moving step, and reads every step; it reads each step at some moving step and no step later than its own. Flows, webs and worlds are read through it by the sampling of coarser readings.",
+      "zh": "停顿 ρ 在第 0 步读第 0 步，在它的每一步或再读所读之步（空步），或读下一步（移动步），并读到每一步；它在某个移动步读每一步，所读之步不晚于它自己的步。流、网与世界经它以较粗读法的取样读出。",
+      "declarations": [
+        "Becoming.Stutter",
+        "Becoming.Stutter.crosses",
+        "Becoming.Stutter.le_self",
+        "Becoming.Flow.sample",
+        "Becoming.Web.sample",
+        "Becoming.World.sample"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, at an idle step of a reading nothing takes part, nothing is taken and nothing given; balance, dissipation and closure hold there on every family, and running down on every family without repetition holding what stands at the step read.",
+      "zh": "关系项之相等可判定时，在读法的空步上无物参与、无物被取、无物被给；平衡、耗散与封闭在每个家族上成立，下降在每个不重复且持有所读之步所立者的家族上成立。",
+      "declarations": [
+        "Becoming.Flow.sample_idle_present",
+        "Becoming.Flow.sample_idle_take",
+        "Becoming.Flow.sample_idle_give",
+        "Becoming.Flow.sample_idle_balancesOn",
+        "Becoming.Flow.sample_idle_dissipatesOn",
+        "Becoming.Flow.sample_idle_closedAt",
+        "Becoming.Flow.sample_idle_runsDownOn"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, at a moving step dissipation, closure, only active relata giving and only active relata taking hold exactly where they hold across the step read, and balance and running down do so where each relatum is listed once at the step read.",
+      "zh": "关系项之相等可判定时，在移动步上耗散、封闭、只有活跃者给予与只有活跃者取用恰在所读之步上成立处成立；平衡与下降在所读之步每个关系项只列一次时也如此。",
+      "declarations": [
+        "Becoming.Flow.sample_moves_dissipatesOn_iff",
+        "Becoming.Flow.sample_moves_closedAt_iff",
+        "Becoming.Flow.sample_moves_acting_iff",
+        "Becoming.Flow.sample_moves_taking_iff",
+        "Becoming.Flow.sample_moves_balancesOn_iff",
+        "Becoming.Flow.sample_moves_runsDownOn_iff"
+      ]
+    },
+    {
+      "en": "With equality of relata decided and each relatum listed once at each step, a world read through a stuttering meets balance, dissipation, only active relata giving, only active relata taking, activity needing support, embodiment and bounded transmission exactly where the world meets them.",
+      "zh": "关系项之相等可判定、每一步每个关系项只列一次时，经停顿读出的世界恰在原世界满足平衡、耗散、只有活跃者给予、只有活跃者取用、活动需要支持、体现与有界传递处满足它们。",
+      "declarations": [
+        "Becoming.World.stutter_premises_iff",
+        "Becoming.Flow.Once"
+      ]
+    },
+    {
+      "en": "Read through a stuttering, with equality of relata decided where a flow is read: balance survives and returns where each relatum is listed once; dissipation and only active giving and taking survive and return with no condition on how activity is held; activity needing support and embodiment survive and return, and transmission within a bound with the same bound.",
+      "zh": "经停顿读出（读出流时关系项之相等可判定）：每个关系项只列一次时平衡保持并返回；耗散、只有活跃者给予与取用保持并返回，不需关于活动如何保持的条件；活动需要支持与体现保持并返回，界内的传递以同一界保持并返回。",
+      "declarations": [
+        "Becoming.Flow.stutter_balances_iff",
+        "Becoming.Flow.stutter_dissipative_iff",
+        "Becoming.Flow.stutter_acting_iff",
+        "Becoming.Flow.stutter_taking_iff",
+        "Becoming.Web.stutter_dependent_iff",
+        "Becoming.Web.stutter_embodied_iff",
+        "Becoming.Flow.stutter_transmitsWithin_iff"
+      ]
+    },
+    {
+      "en": "For a reading whose steps idle or move, a quantity that is nothing at its idle steps and that of the step read at its moving ones totals, over the m steps from N, what it totals over the d steps from ρ N, where ρ N + d = ρ (N + m); so do the rises and falls of any amount, and the counts of steps at which it rises and at which it falls.",
+      "zh": "对每一步或空或移动的读法，一个在空步为零、在移动步为所读之步之值的量，在从 N 起的 m 步上的总和，等于它在从 ρ N 起的 d 步上的总和，其中 ρ N + d = ρ (N + m)；任何量的升降总和及其上升与下降之步的计数也如此。",
+      "declarations": [
+        "Becoming.stutter_total",
+        "Becoming.stutter_risen",
+        "Becoming.stutter_fallen",
+        "Becoming.stutter_rise_count",
+        "Becoming.stutter_fall_count"
+      ]
+    },
+    {
+      "en": "For such a reading, with equality of relata decided and each relatum listed once at each step, what is taken from and given to a condition over a stretch totals what is taken from and given to it over the stretch read; with the family's predicate decided, the members of a finite family coming to be and ceasing to be number those of the stretch read.",
+      "zh": "对这样的读法，关系项之相等可判定、每一步每个关系项只列一次时，一段上从一个条件所取与所给的总量等于所读之段上的总量；家族的谓词可判定时，有限家族中生成与止息的成员数等于所读之段上的数。",
+      "declarations": [
+        "Becoming.Flow.stutter_taken",
+        "Becoming.Flow.stutter_given",
+        "Becoming.stutter_comings",
+        "Becoming.stutter_ceasings"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, read through a stuttering, arising recurs, ceasing recurs, and some standing changes at arbitrarily late steps, each exactly where it does in the world; an event absent at idle steps and occurring at a moving step exactly where it occurs at the step read recurs exactly where it recurs.",
+      "zh": "关系项之相等可判定时，经停顿读出，生起复现、止息复现、某个所立在任意晚的步改变，各恰在原世界如此处如此；在空步不出现、在移动步恰在所读之步出现处出现的事件，恰在原来复现处复现。",
+      "declarations": [
+        "Becoming.World.stutter_arisingRecurs_iff",
+        "Becoming.World.stutter_ceasingRecurs_iff",
+        "Becoming.World.stutter_change_recurs_iff",
+        "Becoming.stutter_recurs_iff"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, a census of what is active survives reading a world at any times, and a world read through a reading has one back where each step is read at a step given for it.",
+      "zh": "关系项之相等可判定时，活跃者的普查在任意时刻读出世界时保留；经读法读出的世界，在每一步都在给定之步被读处，普查返回原世界。",
+      "declarations": [
+        "Becoming.World.sample_counted",
+        "Becoming.World.stutter_counted_of_section"
+      ]
+    },
+    {
+      "en": "What is counted per step changes: with equality of relata decided, read through a reading idle at arbitrarily late steps, no flow is more without end; the expansion is more without end, and read with every step taken twice, a stuttering idle at every even step, it is not.",
+      "zh": "每步所计的会变：关系项之相等可判定时，经在任意晚的步都有空步的读法读出，没有流无终地更多；扩张无终地更多，而每步读两次（在每个偶数步空转的停顿）读出时则不然。",
+      "declarations": [
+        "Becoming.Flow.sample_not_more",
+        "Becoming.Expansion.more_step_relative",
+        "Becoming.Order.Halving.stutter",
+        "Becoming.Order.Halving.idles"
+      ]
+    },
+    {
+      "en": "A reserve read through a reading does not carry across an idle step at which a relatum is active beyond support; the one-relatum world Lapse, active only at the first step and never supported, is carried by a reserve of one, and read with every step taken twice by no reserve below two at the first step.",
+      "zh": "经读法读出的储备，不能跨过一个有关系项超出支持而活跃的空步承载它；单一关系项的世界 Lapse（只在第一步活跃、从不被支持）由一份储备承载，而每步读两次时，没有第一步少于两份的储备能承载它。",
+      "declarations": [
+        "Becoming.Web.sample_idle_not_carries",
+        "Becoming.Lapse.web",
+        "Becoming.Lapse.carried",
+        "Becoming.Lapse.stuttered_reserve",
+        "Becoming.Lapse.reserve_step_relative"
+      ]
+    },
+    {
+      "en": "Given a stuttering ρ and a function σ giving, for each step read, a moving step reading it, which is the only one, a world is idle at the idle steps of ρ where nothing takes part there and every relatum is unmoved; the world without them keeps across step s the exchange across step σ s and reads the web at the times σ.",
+      "zh": "给定停顿 ρ 与函数 σ（对每个所读之步给出读它的移动步，这样的移动步只有一个）：世界在 ρ 的空步上空转，是指那里无物参与且每个关系项不动；去掉空步的世界在第 s 步保留第 σ s 步的交换，并在时刻 σ 读出网。",
+      "declarations": [
+        "Becoming.Stutter.Moves",
+        "Becoming.Stutter.moving_unique",
+        "Becoming.World.IdleAt",
+        "Becoming.World.withoutIdle",
+        "Becoming.Flow.readAt"
+      ]
+    },
+    {
+      "en": "For such ρ and σ and a world idle at the idle steps of ρ, each step of the world shows every relatum as the step of the world without idle steps it is read at, and the two meet balance, dissipation, only active giving and taking, activity needing support and embodiment exactly alike, and bounded transmission with the same bound, with no condition on listing or equality.",
+      "zh": "对这样的 ρ、σ 与在 ρ 的空步上空转的世界，世界的每一步对每个关系项的显示，同于它被读到的去掉空步之世界的那一步；二者恰同样满足平衡、耗散、只有活跃者给予与取用、活动需要支持与体现，并以同一界满足有界传递，不需关于列出或相等的条件。",
+      "declarations": [
+        "Becoming.World.withoutIdle_sameAt",
+        "Becoming.World.withoutIdle_premises",
+        "Becoming.World.withoutIdle_transmits"
+      ]
+    },
+    {
+      "en": "For them, either world has a census of what is active exactly where the other does; over a stretch, what is taken from and given to a condition, the rises and falls of a family's total standing and the counts of steps at which it rises and falls are those of the stretch read, and, with activity decided, the relata of a finite family arising and ceasing.",
+      "zh": "对它们，两个世界中一个有活跃者的普查恰当另一个有；在一段上，从一个条件所取与所给、家族总水平的升降及其上升与下降之步的计数，都等于所读之段上的；活动可判定时，有限家族中生起与止息的关系项也如此。",
+      "declarations": [
+        "Becoming.World.withoutIdle_counted",
+        "Becoming.World.withoutIdle_totals",
+        "Becoming.World.withoutIdle_counts"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "停顿 ρ 是给定的读法；World.withoutIdle 从给定的移动步 σ 构造移除空步的世界，保持结论使用 Stutter.Moves ρ σ 与 World.IdleAt。",
@@ -29,11 +174,57 @@
     {
       "zh": "移除空步把每个原步的移动之步作为给定函数 σ（Stutter.Moves）；每个移动步都存在且唯一，但本模块没有从停顿单独构造这个函数。",
       "en": "Removing idle steps takes the moving step reading each step as a supplied function σ (Stutter.Moves); each moving step exists and is unique, but this module does not construct that function from the stuttering alone."
+    },
+    {
+      "en": "Equality of relata is decided (DecidableEq) wherever a flow or a world is read through a reading; removing idle steps needs no such decision.",
+      "zh": "凡经读法读出流或世界，关系项之相等可判定（DecidableEq）；移除空步不需此判定。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Invariance under stuttering of the significance predicates the continuation condition uses is not shown.",
+      "zh": "延续条件所用的意义谓词在停顿下的不变性没有证明。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Recurrence is proved for inserting idle steps; for removing them the theorems give the premises, the census, the totals and the counts.",
+      "zh": "复现只对插入空步证明；对移除空步，定理给出前提、普查、总量与计数。",
+      "kind": "scope",
+      "witness": "Becoming.World.withoutIdle_premises"
+    },
+    {
+      "en": "Continuous time is not stated.",
+      "zh": "没有陈述连续时间。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean",
+      "detail": {
+        "zh": "每步读两次时扩张不再无终地更多（Expansion.more_step_relative），储备需要加倍（Lapse.reserve_step_relative）。",
+        "en": "Read with every step twice, the expansion is no longer more without end (Expansion.more_step_relative), and the reserve must double (Lapse.reserve_step_relative)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "decidability",
+    "discrete-steps",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Stuttering, Becoming.IdleRemoval, Becoming.Sampling and Becoming.Prelude are bound to core receipts under becoming-checks; every cited declaration has an empty axiom report, and the checker verifies core purity (the core's import closure compiles from Lean's prelude alone). The author's counterreview is in the integration note; there is no independent review yet.",
+    "zh": "Lean 4.29.1 合并检查器实查：Becoming.Stuttering、Becoming.IdleRemoval、Becoming.Sampling 与 Becoming.Prelude 的当前字节绑定 becoming-checks 下的核心回执；所引声明的公理报告均为空，检查器并核对核心纯净（核心的导入闭包只用 Lean 内置前导即可编译）。作者反审见整合文档；尚无独立审查。"
+  },
+  "next_delta": {
+    "en": "Prove that the significance predicates the continuation condition uses are invariant under stuttering; derive the moving steps of a stuttering where activity is decided; state recurrence under removing idle steps.",
+    "zh": "证明延续条件所用的意义谓词在停顿下不变；活动可判定时推出停顿的移动之步；陈述移除空步下的复现。"
+  },
   "correspondence": {
-    "zh": "P78（工作板），按 Ren 2026-10-12 的“move towards 100%”：零前提计划把共享的离散步序号列为表示的承诺，像 P69 对出发点那样重新奠基。这里给出 Sampling 的严格递增读法的逆：插入空步。读法（AI 的，依 Ren 的交托采用）：对一步的规律、段上的总量与计数以及复现，步序号不携带变化次序以外的东西；空步什么也不显出；每步所计的相对于读法的单位，正如较粗的步。见整合文档 §102。",
-    "en": "P78 (work board), following Ren's “move towards 100%” of 12 October 2026: the zero-premise plan lists a shared discrete index of steps among the commitments of the representation, to be re-founded as P69 re-founded the starting point. This gives the converse of Sampling's strictly increasing reading: inserting idle steps. Reading (the AI's, adopted on Ren's delegation): for the laws of one step, the totals and counts over a stretch, and recurrence, the step index carries nothing beyond the order of change; an idle step shows nothing; what is counted per step is relative to the unit of the reading, as with coarser steps. See the integration document §102."
+    "en": "Following Ren's “move towards 100%” of 12 October 2026, the zero-premise plan lists a shared discrete index of steps among the commitments of the representation, to be re-founded as the starting point was. This gives the converse of Sampling's strictly increasing reading: inserting idle steps. Reading (the AI's): for the laws of one step, the totals and counts over a stretch, and recurrence, the step index carries nothing beyond the order of change; an idle step shows nothing; what is counted per step is relative to the unit of the reading, as with coarser steps.",
+    "zh": "按 Ren 2026-10-12 的“move towards 100%”：零前提计划把共享的离散步序号列为表示的承诺，像出发点那样重新奠基。这里给出 Sampling 的严格递增读法的逆：插入空步。读法（AI 的）：对一步的规律、段上的总量与计数以及复现，步序号不携带变化次序以外的东西；空步什么也不显出；每步所计的相对于读法的单位，正如较粗的步。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean",
   "aliases": [
@@ -110,23 +301,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean",
-      "detail": {
-        "zh": "每步读两次时扩张不再无终地更多（Expansion.more_step_relative），储备需要加倍（Lapse.reserve_step_relative）。",
-        "en": "Read with every step twice, the expansion is no longer more without end (Expansion.more_step_relative), and the reserve must double (Lapse.reserve_step_relative)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "移除时每个原步的移动之步是给定的（Stutter.Moves）；意义谓词（§6.4 的条件所用者）的不变性没有证明；连续时间没有陈述；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "The moving step for each step read is supplied for the removal (Stutter.Moves); invariance of the significance predicates (those the condition of section 6.4 uses) is not shown; continuous time is not stated; the readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Order 的 266 项定理全部空依赖，其中含 Stutter、World.stutter_premises_iff、stutter_total、World.stutter_arisingRecurs_iff、World.stutter_counted、Flow.sample_not_more、Expansion.more_step_relative、Lapse.reserve_step_relative、World.withoutIdle、World.IdleAt、Stutter.Moves、Stutter.moving_unique、World.withoutIdle_premises、World.withoutIdle_transmits、World.withoutIdle_counted、World.withoutIdle_totals与 World.withoutIdle_counts；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §102；尚无独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 266 theorems of Becoming.Order all have empty axiom reports, among them Stutter, World.stutter_premises_iff, stutter_total, World.stutter_arisingRecurs_iff, World.stutter_counted, Flow.sample_not_more, Expansion.more_step_relative, Lapse.reserve_step_relative, World.withoutIdle, World.IdleAt, Stutter.Moves, Stutter.moving_unique, World.withoutIdle_premises, World.withoutIdle_transmits, World.withoutIdle_counted, World.withoutIdle_totals and World.withoutIdle_counts. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §102 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdleRemoval.lean",
@@ -259,7 +433,8 @@
         "Becoming.World.sample",
         "Becoming.Flow.BalancesOn.sample",
         "Becoming.Flow.DissipatesOn.sample",
-        "Becoming.World.sample_counted"
+        "Becoming.World.sample_counted",
+        "Becoming.Flow.Once"
       ]
     },
     {
@@ -371,10 +546,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "en": "Prove the invariance of the significance predicates (those the condition of section 6.4 uses) under stuttering; derive the moving steps where activity is decided.",
-    "zh": "证明意义谓词（§6.4 的条件所用者）在停顿下的不变性；活动可判定时推出移动之步。"
-  },
   "history": [
     {
       "zh": "2026-10-13：接续并整合 P78 的现存证明包；见整合文档 §102。",
@@ -453,6 +624,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement names the conditions the Lean takes, which it omitted (for inserting idle steps, relata compared decidedly and listed once at each step; for removing them, the moving steps supplied and neither of those; activity decided for counts of arising and ceasing), and no longer says that removal keeps recurrence, which is proved for insertion only; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明 Lean 所需、此前遗漏的条件（插入空步时关系项之相等可判定且每步各列一次；移除空步时移动之步给定，不需这两个条件；生起与止息之计数需活动已判定），并不再说移除空步保持复现（复现只对插入得证）；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title, statement, hypotheses and counterexample kept; the claim split into fourteen laws, each read against its declarations in Stuttering.lean, IdleRemoval.lean and Sampling.lean, with the decided equality of relata each law about reading a flow or world takes written in (a hypothesis added for it) and each relatum listed once where the theorem takes it; the limitations to three does-not-show items, the hypotheses (the supplied moving steps) and the shared boundaries names-provisional and no-evaluation, with decidability, discrete-steps and no-ethical-premise; a does-not-show item says recurrence is proved for inserting idle steps only; Flow.Once added to Sampling.lean's references; the section number left the limitation and the next step, which gains a third item, stating recurrence under removing idle steps, and the work-item labels and section number the correspondence, where the quotation keeps its date, which names its source; no premise, status or source hash changed. Every earlier sentence is mapped in [only-the-order-of-change-shows.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/only-the-order-of-change-shows.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, the correspondence, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题、陈述、前提与反例保留；主张拆为十四条规律，各条对照 Stuttering.lean、IdleRemoval.lean 与 Sampling.lean 中的声明核读，凡关于读出流或世界的规律写明其所取的关系项相等可判定（并为此新增一条前提），凡定理取每个关系项只列一次处写明；限制分入三条“未表明”、前提（给定的移动步）与通用边界 names-provisional、no-evaluation，并引用 decidability、discrete-steps 与 no-ethical-premise；一条“未表明”写明复现只对插入空步证明；Flow.Once 加入 Sampling.lean 的引用；限制与下一步去掉节号，下一步并增加第三项“陈述移除空步下的复现”，对应去掉工作项标签与节号，引文保留日期以示出处；前提、状态与来源哈希均未改变。每句旧文本的去向见 [only-the-order-of-change-shows.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/only-the-order-of-change-shows.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律、对应，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/2fd516ac40e5ccf2/only-the-order-of-change-shows.json",
+      "sha256": "2fd516ac40e5ccf2c8897a5f74440e0eb8c604d455280f328f6156f136595988",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/5ddf3f3c34e25235/only-the-order-of-change-registers.json",
+      "sha256": "5ddf3f3c34e25235ffc431f2ae7c36edaf712a5b6e61a5d161996a47d6e68e45",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ],
   "former_ids": [

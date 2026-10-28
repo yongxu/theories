@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2048,
-    "distinct_byte_contents": 1616,
+    "lean_paths": 2049,
+    "distinct_byte_contents": 1617,
     "byte_identical_duplicate_groups": 168,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1098,
+      "development-attempt": 1099,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 911
@@ -4985,6 +4985,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/consumers-check/Becoming/OU3dConsumers.lean",
       "sha256": "c6aae6c5374dc5ad018d1f5c5fc3009d2a967ef19bc021645a4c4fb0a1eb139c",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/DESIGN.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/tree-mf/Becoming/MoveFormation.lean",
+      "sha256": "15933ea7179db1f820a495a744dd69777e43f35531ab98d82651ebef6168978c",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -66787,6 +66798,497 @@
         "inductive": 1,
         "structure": 2,
         "theorem": 27
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "15933ea7179db1f820a495a744dd69777e43f35531ab98d82651ebef6168978c": {
+      "byte_size": 50677,
+      "line_count": 957,
+      "imports": [
+        "Becoming.Counterfactual",
+        "Becoming.Readout",
+        "Becoming.Mechanism"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "coupled",
+          "qualified_name_hint": "Becoming.coupled",
+          "line": 139
+        },
+        {
+          "kind": "def",
+          "name": "Run.part",
+          "qualified_name_hint": "Becoming.Run.part",
+          "line": 146
+        },
+        {
+          "kind": "def",
+          "name": "Run.rest",
+          "qualified_name_hint": "Becoming.Run.rest",
+          "line": 150
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.part_act_eq_rest_act",
+          "qualified_name_hint": "Becoming.Run.part_act_eq_rest_act",
+          "line": 155
+        },
+        {
+          "kind": "def",
+          "name": "Run.toClosedBy",
+          "qualified_name_hint": "Becoming.Run.toClosedBy",
+          "line": 161
+        },
+        {
+          "kind": "theorem",
+          "name": "closedBy_formed",
+          "qualified_name_hint": "Becoming.closedBy_formed",
+          "line": 166
+        },
+        {
+          "kind": "def",
+          "name": "Run.ofClosedBy",
+          "qualified_name_hint": "Becoming.Run.ofClosedBy",
+          "line": 174
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.ofClosedBy_toClosedBy",
+          "qualified_name_hint": "Becoming.Run.ofClosedBy_toClosedBy",
+          "line": 181
+        },
+        {
+          "kind": "theorem",
+          "name": "coupled_determined",
+          "qualified_name_hint": "Becoming.coupled_determined",
+          "line": 186
+        },
+        {
+          "kind": "theorem",
+          "name": "lumped_id",
+          "qualified_name_hint": "Becoming.lumped_id",
+          "line": 206
+        },
+        {
+          "kind": "theorem",
+          "name": "lumped_of_finer",
+          "qualified_name_hint": "Becoming.lumped_of_finer",
+          "line": 211
+        },
+        {
+          "kind": "theorem",
+          "name": "lumped_const_iff",
+          "qualified_name_hint": "Becoming.lumped_const_iff",
+          "line": 218
+        },
+        {
+          "kind": "def",
+          "name": "PartForms",
+          "qualified_name_hint": "Becoming.PartForms",
+          "line": 232
+        },
+        {
+          "kind": "def",
+          "name": "RestForms",
+          "qualified_name_hint": "Becoming.RestForms",
+          "line": 235
+        },
+        {
+          "kind": "theorem",
+          "name": "partForms_iff",
+          "qualified_name_hint": "Becoming.partForms_iff",
+          "line": 241
+        },
+        {
+          "kind": "theorem",
+          "name": "restForms_iff",
+          "qualified_name_hint": "Becoming.restForms_iff",
+          "line": 247
+        },
+        {
+          "kind": "theorem",
+          "name": "partForms_and_restForms_iff",
+          "qualified_name_hint": "Becoming.partForms_and_restForms_iff",
+          "line": 254
+        },
+        {
+          "kind": "theorem",
+          "name": "PartForms.goAlike",
+          "qualified_name_hint": "Becoming.PartForms.goAlike",
+          "line": 273
+        },
+        {
+          "kind": "theorem",
+          "name": "PartForms.parts_agree",
+          "qualified_name_hint": "Becoming.PartForms.parts_agree",
+          "line": 284
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.part_trajectory",
+          "qualified_name_hint": "Becoming.Run.part_trajectory",
+          "line": 292
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.rest_trajectory",
+          "qualified_name_hint": "Becoming.Run.rest_trajectory",
+          "line": 304
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.part_orbit",
+          "qualified_name_hint": "Becoming.Run.part_orbit",
+          "line": 317
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.rest_orbit",
+          "qualified_name_hint": "Becoming.Run.rest_orbit",
+          "line": 328
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.rest_driven_by_part",
+          "qualified_name_hint": "Becoming.Run.rest_driven_by_part",
+          "line": 341
+        },
+        {
+          "kind": "def",
+          "name": "wholeNext",
+          "qualified_name_hint": "Becoming.wholeNext",
+          "line": 355
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.whole_orbit",
+          "qualified_name_hint": "Becoming.Run.whole_orbit",
+          "line": 360
+        },
+        {
+          "kind": "def",
+          "name": "clock",
+          "qualified_name_hint": "Becoming.clock",
+          "line": 378
+        },
+        {
+          "kind": "theorem",
+          "name": "clock_determined",
+          "qualified_name_hint": "Becoming.clock_determined",
+          "line": 381
+        },
+        {
+          "kind": "def",
+          "name": "Run.withClock",
+          "qualified_name_hint": "Becoming.Run.withClock",
+          "line": 387
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.withClock_part",
+          "qualified_name_hint": "Becoming.Run.withClock_part",
+          "line": 391
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.withClock_restForms",
+          "qualified_name_hint": "Becoming.Run.withClock_restForms",
+          "line": 396
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.moves_lasso_of_rest_held",
+          "qualified_name_hint": "Becoming.Run.moves_lasso_of_rest_held",
+          "line": 412
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.moves_lasso_of_part_held",
+          "qualified_name_hint": "Becoming.Run.moves_lasso_of_part_held",
+          "line": 427
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.moves_lasso_of_whole_held",
+          "qualified_name_hint": "Becoming.Run.moves_lasso_of_whole_held",
+          "line": 444
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.whole_unheld_of_never_cycles",
+          "qualified_name_hint": "Becoming.Run.whole_unheld_of_never_cycles",
+          "line": 458
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.rest_unheld_of_never_cycles",
+          "qualified_name_hint": "Becoming.Run.rest_unheld_of_never_cycles",
+          "line": 467
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.part_unheld_of_never_cycles",
+          "qualified_name_hint": "Becoming.Run.part_unheld_of_never_cycles",
+          "line": 476
+        },
+        {
+          "kind": "def",
+          "name": "lassoRest",
+          "qualified_name_hint": "Becoming.lassoRest",
+          "line": 486
+        },
+        {
+          "kind": "def",
+          "name": "Run.withLasso",
+          "qualified_name_hint": "Becoming.Run.withLasso",
+          "line": 492
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.withLasso_held",
+          "qualified_name_hint": "Becoming.Run.withLasso_held",
+          "line": 499
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.withLasso_part",
+          "qualified_name_hint": "Becoming.Run.withLasso_part",
+          "line": 504
+        },
+        {
+          "kind": "theorem",
+          "name": "lumped_of_new",
+          "qualified_name_hint": "Becoming.lumped_of_new",
+          "line": 520
+        },
+        {
+          "kind": "theorem",
+          "name": "not_lumped_of_varied",
+          "qualified_name_hint": "Becoming.not_lumped_of_varied",
+          "line": 525
+        },
+        {
+          "kind": "theorem",
+          "name": "lumped_iff_singleValued",
+          "qualified_name_hint": "Becoming.lumped_iff_singleValued",
+          "line": 534
+        },
+        {
+          "kind": "theorem",
+          "name": "reading_le",
+          "qualified_name_hint": "Becoming.reading_le",
+          "line": 543
+        },
+        {
+          "kind": "def",
+          "name": "policyUpto",
+          "qualified_name_hint": "Becoming.policyUpto",
+          "line": 555
+        },
+        {
+          "kind": "theorem",
+          "name": "policyUpto_agrees",
+          "qualified_name_hint": "Becoming.policyUpto_agrees",
+          "line": 559
+        },
+        {
+          "kind": "theorem",
+          "name": "lumped_upto_iff",
+          "qualified_name_hint": "Becoming.lumped_upto_iff",
+          "line": 581
+        },
+        {
+          "kind": "theorem",
+          "name": "throughout_or_fails",
+          "qualified_name_hint": "Becoming.throughout_or_fails",
+          "line": 592
+        },
+        {
+          "kind": "theorem",
+          "name": "policyUpto_taken",
+          "qualified_name_hint": "Becoming.policyUpto_taken",
+          "line": 609
+        },
+        {
+          "kind": "theorem",
+          "name": "no_policy_upto_iff",
+          "qualified_name_hint": "Becoming.no_policy_upto_iff",
+          "line": 627
+        },
+        {
+          "kind": "theorem",
+          "name": "rest_differs_of_varied",
+          "qualified_name_hint": "Becoming.rest_differs_of_varied",
+          "line": 649
+        },
+        {
+          "kind": "theorem",
+          "name": "Run.keepHistory_formed",
+          "qualified_name_hint": "Becoming.Run.keepHistory_formed",
+          "line": 667
+        },
+        {
+          "kind": "theorem",
+          "name": "ExchangeLaw.ofMoves_lumped_stage",
+          "qualified_name_hint": "Becoming.ExchangeLaw.ofMoves_lumped_stage",
+          "line": 687
+        },
+        {
+          "kind": "def",
+          "name": "alt",
+          "qualified_name_hint": "Becoming.MoveFormation.alt",
+          "line": 698
+        },
+        {
+          "kind": "theorem",
+          "name": "alt_ne",
+          "qualified_name_hint": "Becoming.MoveFormation.alt_ne",
+          "line": 702
+        },
+        {
+          "kind": "def",
+          "name": "byPart",
+          "qualified_name_hint": "Becoming.TwoClocks.byPart",
+          "line": 712
+        },
+        {
+          "kind": "def",
+          "name": "byRest",
+          "qualified_name_hint": "Becoming.TwoClocks.byRest",
+          "line": 715
+        },
+        {
+          "kind": "def",
+          "name": "together",
+          "qualified_name_hint": "Becoming.TwoClocks.together",
+          "line": 718
+        },
+        {
+          "kind": "theorem",
+          "name": "one_course_two_laws",
+          "qualified_name_hint": "Becoming.TwoClocks.one_course_two_laws",
+          "line": 725
+        },
+        {
+          "kind": "theorem",
+          "name": "closed_not_own",
+          "qualified_name_hint": "Becoming.TwoClocks.closed_not_own",
+          "line": 740
+        },
+        {
+          "kind": "theorem",
+          "name": "driven",
+          "qualified_name_hint": "Becoming.Still.driven",
+          "line": 755
+        },
+        {
+          "kind": "def",
+          "name": "partCourse",
+          "qualified_name_hint": "Becoming.Parity.partCourse",
+          "line": 765
+        },
+        {
+          "kind": "def",
+          "name": "restCourse",
+          "qualified_name_hint": "Becoming.Parity.restCourse",
+          "line": 773
+        },
+        {
+          "kind": "def",
+          "name": "form",
+          "qualified_name_hint": "Becoming.Parity.form",
+          "line": 781
+        },
+        {
+          "kind": "def",
+          "name": "move",
+          "qualified_name_hint": "Becoming.Parity.move",
+          "line": 788
+        },
+        {
+          "kind": "theorem",
+          "name": "neither_alone",
+          "qualified_name_hint": "Becoming.Parity.neither_alone",
+          "line": 793
+        },
+        {
+          "kind": "theorem",
+          "name": "coupled_formed",
+          "qualified_name_hint": "Becoming.MoveRuns.coupled_formed",
+          "line": 866
+        },
+        {
+          "kind": "theorem",
+          "name": "part_policy",
+          "qualified_name_hint": "Becoming.MoveRuns.part_policy",
+          "line": 871
+        },
+        {
+          "kind": "theorem",
+          "name": "rest_policy",
+          "qualified_name_hint": "Becoming.MoveRuns.rest_policy",
+          "line": 876
+        },
+        {
+          "kind": "theorem",
+          "name": "both_one_move",
+          "qualified_name_hint": "Becoming.MoveRuns.both_one_move",
+          "line": 882
+        },
+        {
+          "kind": "theorem",
+          "name": "rest_differs",
+          "qualified_name_hint": "Becoming.MoveRuns.rest_differs",
+          "line": 888
+        },
+        {
+          "kind": "theorem",
+          "name": "formed_of_finer",
+          "qualified_name_hint": "Becoming.MoveRuns.formed_of_finer",
+          "line": 902
+        },
+        {
+          "kind": "theorem",
+          "name": "ofMoves_formed_stage",
+          "qualified_name_hint": "Becoming.MoveRuns.ofMoves_formed_stage",
+          "line": 918
+        },
+        {
+          "kind": "def",
+          "name": "stillRun",
+          "qualified_name_hint": "Becoming.MoveRuns.stillRun",
+          "line": 931
+        },
+        {
+          "kind": "theorem",
+          "name": "still_driven",
+          "qualified_name_hint": "Becoming.MoveRuns.still_driven",
+          "line": 936
+        },
+        {
+          "kind": "def",
+          "name": "parityRun",
+          "qualified_name_hint": "Becoming.MoveRuns.parityRun",
+          "line": 942
+        },
+        {
+          "kind": "theorem",
+          "name": "parity_neither_alone",
+          "qualified_name_hint": "Becoming.MoveRuns.parity_neither_alone",
+          "line": 947
+        }
+      ],
+      "declaration_counts": {
+        "def": 23,
+        "theorem": 55
       },
       "textual_markers": {
         "sorry": [],

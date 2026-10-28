@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "growth-constrained-fragmentation",
   "title": {
     "zh": "生长限制分割及后继组成",
@@ -8,17 +8,154 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-25T14:38:14+00:00",
-  "claim": {
-    "zh": "由同一起点的合法分裂历史，链与分支树各长到八个成员，成员、前体、可用与已用物料之数相同（8, 0, 2, 7），亲代摘要相同（4, 4, 7, 7），只在种类与键上不同。切断证书是精确的：证书成立处，去掉一条边后算出的两个分量恰是两端各自连通者，并把成员分开；两树的每个树切断都被证书化，只有链中的 (3,4) 与分支树中的 (0,1) 切成各四的两半。对边作均匀选择时，链的平均切断回报是分支树的三倍，后者为正；最老的切断在链中回报 0，在分支树中回报 6/35，颠倒排序；亲代摘要的任何函数都不能同时给出两个平均回报。一次实际的聚合给链加一条保留边；切断 (3,4) 后加固的链仍是八个成员的一个分量，故证书不成立、切断无回报，切断耗用物料而不碎裂。一般规律在 World 模型上：在依附式生长的世界中，每个接上了一个形成的条件都被需要（which-links-a-closure-needs）。",
-    "en": "By legal division histories from one start the chain and the branched tree each grow to eight members with the same counts of members, precursor, available and used material (8, 0, 2, 7) and the same parent summary (4, 4, 7, 7), differing in kinds and bonds. A cut certificate is exact: where it holds, the two components computed after removing an edge are exactly what each end is connected to, and they split the members; every tree cut of both trees is certified, and only (3,4) in the chain and (0,1) in the branched tree cut into halves of four. Under a uniform choice of edge the chain's mean cut return is three times the branched tree's, which is positive; the oldest cut returns 0 in the chain and 6/35 in the branched tree, reversing the ranking; no function of the parent summary gives both mean returns. An actual aggregation adds a retaining edge to the chain; after cutting (3,4) the reinforced chain stays one component of all eight, so the certificate fails and the cut returns nothing, and the cut uses up material without fragmenting. The general law is on the World model: in a world grown by attachment every condition that attached a formation is needed (which-links-a-closure-needs)."
+  "reviewed_at_utc": "2026-10-28T05:53:57+00:00",
+  "statement": {
+    "en": "Two grown eight-member trees, matched in composition and parent summary, differ in what their single-edge cuts return: the chain's mean return is three times the branched tree's, the oldest cut reverses that, no function of the summary predicts it, and a retaining edge can stop fragmentation.",
+    "zh": "两棵组成与亲代摘要相同、各八个成员的生长树，其单边切断的回报不同：链的平均切断回报是分支树的三倍，最老的切断颠倒这一排序，摘要的任何函数都不能预测它，而一条保留边可以防止碎裂。"
   },
+  "laws": [
+    {
+      "en": "By legal division histories from one start, the chain and the branched tree each grow to eight members with the same counts of members, precursor, available and used material (8, 0, 2, 7) and the same parent summary (4, 4, 7, 7: the counts of the two kinds, of bonds and of used material), differing in kinds and bonds.",
+      "zh": "由同一起点的合法分裂历史，链与分支树各长到八个成员，成员、前体、可用与已用物料之数相同（8, 0, 2, 7），亲代摘要也相同（4, 4, 7, 7：两种种类之数、键数与已用物料数），只在种类与键上不同。",
+      "declarations": [
+        "GrownFragmentation.histories_legal",
+        "GrownFragmentation.grown_observations",
+        "GrownFragmentation.matched_parent_summaries"
+      ]
+    },
+    {
+      "en": "A cut certificate is exact: where it holds, the two components computed after removing an edge are exactly what each end is connected to, and they split the members. Every tree cut of both trees is certified; the central cuts give halves {0,1,2,3} and {4,5,6,7} in the chain and {0,2,3,4} and {1,5,6,7} in the branched tree, and only (3,4) and (0,1) cut into halves of four.",
+      "zh": "切断证书是精确的：证书成立处，去掉一条边后算出的两个分量恰是两端各自连通者，并把成员分开。两树的每个树切断都被证书化；中心切断在链中给出 {0,1,2,3} 与 {4,5,6,7}，在分支树中给出 {0,2,3,4} 与 {1,5,6,7}，只有 (3,4) 与 (0,1) 切成各四的两半。",
+      "declarations": [
+        "GrownFragmentation.certificate_exact_split",
+        "GrownFragmentation.every_tree_cut_certified",
+        "GrownFragmentation.central_cut_pools",
+        "GrownFragmentation.only_equal_tree_cuts"
+      ]
+    },
+    {
+      "en": "With each edge's certified cut return averaged over the edges, an uncertified cut counting 0, the chain's mean cut return is three times the branched tree's, which is positive; the oldest cut returns 0 in the chain and 6/35 in the branched tree, reversing the ranking; no function of the parent summary gives both mean returns.",
+      "zh": "把每条边的已证书切断回报对诸边取平均（未证书的切断计 0），链的平均切断回报是分支树的三倍，后者为正；最老的切断在链中回报 0，在分支树中回报 6/35，颠倒排序；亲代摘要的任何函数都不能同时给出两个平均回报。",
+      "declarations": [
+        "GrownFragmentation.fragmentation_changes_prepared_return",
+        "GrownFragmentation.oldest_cut_reverses_ranking",
+        "GrownFragmentation.no_parent_summary_predictor"
+      ]
+    },
+    {
+      "en": "An actual aggregation adds the retaining edge (0,7) to the chain; after cutting (3,4) the reinforced chain stays one component of all eight, so the certificate fails and the cut returns nothing; the cut uses up material without fragmenting, leaving eight members, none available and nine used, against one available and eight used after the same cut in the chain.",
+      "zh": "一次实际的聚合给链加上保留边 (0,7)；切断 (3,4) 后，加固的链仍是八个成员的一个分量，故证书不成立、切断无回报；切断耗用物料而不碎裂：留下八个成员、可用为零、已用为九，而链中同一切断后可用为一、已用为八。",
+      "declarations": [
+        "GrownFragmentation.reinforcement_is_actual",
+        "GrownFragmentation.bypass_survives_cut",
+        "GrownFragmentation.bypass_really_connects",
+        "GrownFragmentation.cut_spends_without_fragmenting"
+      ]
+    },
+    {
+      "en": "Being connected by the bonds is lying within the closure under them, read both ways; a component holding its root and closed on the remaining bonds is the root's closure, and a certified cut leaves its two ends apart; so the exact split, and the absence of a predictor from the parent summary, follow from the core's closure and readout laws.",
+      "zh": "由键连通，就是在其双向读的闭包之内；含其根且对其余各键封闭的分量就是根的闭包，已证书的切断使两端分离；所以精确的分割，以及亲代摘要无从预测，都由核心的闭包律与读出律推出。",
+      "declarations": [
+        "Becoming.PreparationCorrespondence.adjacent",
+        "Becoming.PreparationCorrespondence.connected_of_adjacent",
+        "Becoming.PreparationCorrespondence.connected_iff_within",
+        "Becoming.PreparationCorrespondence.component_is_closure",
+        "Becoming.PreparationCorrespondence.certificate_exact_split_by_core",
+        "Becoming.PreparationCorrespondence.cut_separates",
+        "Becoming.PreparationCorrespondence.returns_differ",
+        "Becoming.PreparationCorrespondence.no_parent_summary_predictor_by_core"
+      ]
+    },
+    {
+      "en": "The bonds read both ways are the core's listed links, and division keeps them grown by attachment, so every bond of every body grown by division from one position separates its ends when cut; after one aggregation, cutting a grown bond changes no connection exactly where the aggregated bond crosses it, and the reinforced chain's bypass at (3,4) is an instance.",
+      "zh": "双向读的键就是核心所列的链接，分裂使它们保持依附式生长；所以由一个位置经分裂长成的每个体，其每条键被切断都使两端分离；一次聚合之后，切断一条生长出的键不改变任何连通，恰当聚合的键跨过它；加固链在 (3,4) 处的绕行是其实例。",
+      "declarations": [
+        "Becoming.PreparationCorrespondence.adjacent_iff_links",
+        "Becoming.PreparationCorrespondence.connected_iff_links",
+        "Becoming.PreparationCorrespondence.AttachedBelow",
+        "Becoming.PreparationCorrespondence.divide_attached",
+        "Becoming.PreparationCorrespondence.develop_attached",
+        "Becoming.PreparationCorrespondence.initial_attached",
+        "Becoming.PreparationCorrespondence.cut_attached",
+        "Becoming.PreparationCorrespondence.bond_cut_separates",
+        "Becoming.PreparationCorrespondence.every_grown_bond_separates",
+        "Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff",
+        "Becoming.PreparationCorrespondence.reinforced_cut_unchanged"
+      ]
+    },
+    {
+      "en": "The core laws: a region is an element's closure under a relation exactly when it holds the element, is closed under the relation and lies within the closure; a closed region holding f but not g puts g outside f's closure; every link of a relation grown by attachment separates its ends; and after one join, cutting a grown link changes no closure exactly where the join crosses it.",
+      "zh": "核心规律：一个区域是某元素在一关系下的闭包，恰当它含该元素、在关系下封闭且在闭包之内；含 f 不含 g 的封闭区域使 g 在 f 的闭包之外；依附式生长的关系，其每条链接都分开其两端；一次连接之后，切断一条生长出的链接不改变任何闭包，恰当连接跨过它。",
+      "declarations": [
+        "Becoming.ClosedUnder",
+        "Becoming.WithinClosure",
+        "Becoming.closure_iff_certified",
+        "Becoming.not_within_of_closed",
+        "Becoming.Cuts.attached_link_separates",
+        "Becoming.Cuts.joined_cut_unchanged_iff"
+      ]
+    },
+    {
+      "en": "On the World model, in a world grown by attachment, the two formations taking part in the condition that attached one to the other lie in one system, and without that condition they lie apart: every grown condition is needed.",
+      "zh": "在 World 模型上，在依附式生长的世界中，参与把一者接到另一者之条件的两个形成同在一个系统中，没有这个条件就彼此分离：每个生长出的条件都被需要。",
+      "declarations": [
+        "Becoming.Flow.GrownBy.condition_needed"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "给定局部生长、分化、事件序列、消耗支持的断键、催化对应和共同八槽准备。",
       "en": "Supplied local growth, differentiation, event sequence, support-consuming cut, catalytic correspondence and common eight-slot preparation."
+    },
+    {
+      "en": "The trees are the module's two division words from one start; the core laws hold for every relation or world, growth by attachment being a hypothesis on the list of links.",
+      "zh": "两棵树是本模块从同一起点的两个分裂词；核心规律对每个关系或世界成立，依附式生长是关于链接列表的假设。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Growth does not fix fragmentation: an additional retaining edge can prevent it.",
+      "zh": "生长不决定碎裂：一条额外的保留边可以阻止它。",
+      "kind": "non-implication",
+      "witness": "GrownFragmentation.bypass_survives_cut"
+    },
+    {
+      "en": "The old preparation output did not rebuild its developmental graph and cannot by itself be iterated as a growth rate.",
+      "zh": "原准备产出未重建原发育图，不能独自迭代为增长率。",
+      "kind": "scope"
+    },
+    {
+      "en": "The laws do not say which links form, which are cut, or when, nor what the parts on either side do after a cut.",
+      "zh": "规律不说明哪些链接形成、哪些被切断、何时切断，也不说明切断后两侧的部分做什么。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The validity of the inference and its biological correspondence are separate: the trees are a model, not a measured organism.",
+      "zh": "推论的有效性与其生物对应是两回事：两棵树是模型，不是测得的生物体。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean",
+      "detail": {
+        "zh": "额外维持边可阻止分裂；原准备产出未重建原发育图，不能独自迭代为增长率。",
+        "en": "An additional retention edge can prevent fragmentation; the old preparation output did not rebuild its developmental graph and cannot by itself be iterated as a growth rate."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: the periphery GrownFragmentation by its check (Lean 4.29.1, grown-fragmentation-verification/), its cited declarations reporting no axiom (three), propext and Quot.sound (six), or these and Classical.choice (five), and PreparationCorrespondence by its checker (Lean 4.30.0-rc2, preparation-correspondence-checks/), reporting at most those three; the core modules Becoming.Frame, Becoming.Cuts, Becoming.Courses and Becoming.Feedback by the consolidated checker (Lean 4.29.1, becoming-checks/), with empty axiom reports.",
+    "zh": "实查：外围 GrownFragmentation（Lean 4.29.1，grown-fragmentation-verification/）所引声明三条无公理、六条报告 propext、Quot.sound，五条另有 Classical.choice；PreparationCorrespondence（Lean 4.30.0-rc2）至多报告这三条；核心 Frame、Cuts、Courses、Feedback 由合并检查器（Lean 4.29.1，becoming-checks/）检查，报告皆空。"
+  },
+  "next_delta": {
+    "en": "Explain changing generative laws and actual fracture beyond the one structural class that the chain continuation covers.",
+    "zh": "在链状接续所覆盖的这一个结构类之外，说明变化的生成规律与实际的断裂。"
+  },
   "correspondence": {
     "zh": "后继由实际剩余连接导出；原链状案例与新接合链的端点结构经 Lean 核对，但形成机制不同。",
     "en": "Successors derive from actual remaining connections; Lean compares the old chain endpoint with the new assembled chain, while their formation mechanisms differ."
@@ -57,23 +194,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean",
-      "detail": {
-        "zh": "额外维持边可阻止分裂；原准备产出未重建原发育图，不能独自迭代为增长率。",
-        "en": "An additional retention edge can prevent fragmentation; the old preparation output did not rebuild its developmental graph and cannot by itself be iterated as a growth rate."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "额外维持边可阻止分裂；原准备产出未重建原发育图，不能独自迭代为增长率。",
-    "en": "An additional retention edge can prevent fragmentation; the old preparation output did not rebuild its developmental graph and cannot by itself be iterated as a growth rate."
-  },
-  "validation_scope": {
-    "zh": "回执绑定源码；外围多用 propext、Quot.sound，五条另加选择公理；推论与生物对应分列。",
-    "en": "Bound Lean receipts; most periphery laws use propext and Quot.sound, five also Classical.choice; inference validity and biological correspondence differ."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -350,10 +470,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用已完成分割；新的链状接续只覆盖一个结构类，变化的生成规律及真实断裂仍待说明。",
-    "en": "Reuse completed fragmentation; the new chain continuation covers one structural class, leaving changing generative laws and actual fracture to explain."
-  },
   "history": [
     {
       "zh": "2026-10-08：按本轮实际审读及所列回执登记范围；原证明和反例保持。",
@@ -399,10 +515,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated exactly from the periphery Lean: the two grown trees' matched counts and parent summaries, exact cut certificates and the only halving cuts, the chain's mean cut return three times the branched tree's and its reversal at the oldest cut, no predictor from the parent summary, and the retaining edge that stops fragmentation, with the core law on the World (which-links-a-closure-needs); the cited periphery declarations added to the reference and aliases; the evidence names the periphery axioms.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，主张依外围 Lean 精确重述：两棵生长树相同之计数与亲代摘要、精确之切断证书与唯一的对半切断、链的平均切断回报为分支树三倍及其在最老切断处之颠倒、亲代摘要无预测、以及防止碎裂之保留边，并及 World 上之核心规律（which-links-a-closure-needs）；所引外围声明加入引用与别名；证据注明外围之公理。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 8 laws, each read against its declarations in GrownFragmentation, PreparationCorrespondence, Becoming.Frame, Becoming.Cuts and Becoming.Flow (Cuts.lean), the referenced central cut pools and the bridge to the core's closure, readout and cut laws now stated; the parent summary written out as what it counts; the limitations, which repeated the counterexample, became two does-not-show items, with two more from the Cuts module's own boundary and the evidence paragraph's correspondence clause; a hypothesis on the division words and growth by attachment added; the standard boundary no-ethical-premise-core-axiom-free; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [growth-constrained-fragmentation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/growth-constrained-fragmentation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the evidence paragraph, each read against the Lean it cites. A cold read of the applied record was taken in the statement.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 8 条规律，各条对照其在 GrownFragmentation、PreparationCorrespondence、Becoming.Frame、Becoming.Cuts 与 Becoming.Flow（Cuts.lean）中的声明核读，已引用的中心切断分量以及通向核心闭包律、读出律与切断律的桥接现已陈述；亲代摘要写明其所计；与反例重复的限制改为两条“未表明”，另据 Cuts 模块自身的边界与证据段的对应分句各加一条；加一条关于分裂词与依附式生长的前提；加通用边界 no-ethical-premise-core-axiom-free；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [growth-constrained-fragmentation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/growth-constrained-fragmentation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及证据段，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及陈述。"
     }
   ],
-  "statement": {
-    "en": "Two grown eight-member trees, matched in composition and parent summary, differ in what their single-edge cuts return: the chain's mean return is three times the branched tree's, the oldest cut reverses that, no function of the summary predicts it, and a retaining edge stops fragmentation.",
-    "zh": "两棵组成与亲代摘要相同、各八个成员的生长树，其单边切断的回报不同：链的平均切断回报是分支树的三倍，最老的切断颠倒这一排序，摘要的任何函数都不能预测它，而一条保留边防止碎裂。"
-  }
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/312c13a57972a383/growth-constrained-fragmentation.json",
+      "sha256": "312c13a57972a383fc22c8f3f199922665851cd6ae03cfbd0b882c824e3d1e77",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/9bf8cef640229343/growth-constrained-fragmentation.json",
+      "sha256": "9bf8cef640229343cf27e982af0e6deda6d49bb1e29adf280674a976b872171e",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
+    }
+  ]
 }

@@ -1,28 +1,89 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "draws-on-a-shared-stock",
   "title": {
-    "zh": "共享存量上的汲取：每种组合都在存量之内，当且仅当总和在内",
-    "en": "Draws on one shared stock: every combination fits exactly when the total does"
+    "zh": "共享存量上的汲取",
+    "en": "Draws on one shared stock"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-25T14:47:38+00:00",
+  "reviewed_at_utc": "2026-10-28T05:51:24+00:00",
   "statement": {
     "en": "Draws on one listed domain fit within a bound in every combination exactly when their total does; each draw fitting alone does not make them fit together.",
     "zh": "一个列出之域上的汲取，每种组合都在界内，恰当其总和在界内；每项单独在内不使它们共同在内。"
   },
-  "claim": {
-    "zh": "前 n 项以自然数给出的汲取中，每一种组合都在存量之内，当且仅当它们的总和在存量之内。",
-    "en": "Of the first n draws, given as natural numbers, every combination fits within the stock exactly when their total does."
-  },
+  "laws": [
+    {
+      "en": "The mass of an event on a listed domain, under a weighting of its entries in the natural numbers, sums the weights of the entries it holds, an entry listed twice counting twice; every event's mass stays within a bound exactly when the whole domain's mass does.",
+      "zh": "在列出之域上，按条目的自然数权重，一个事件的质量是其所含条目之权重的和，列出两次的条目计两次；每个事件的质量都在界内，恰当整个域的质量在界内。",
+      "declarations": [
+        "Becoming.mass",
+        "Becoming.every_event_within_iff"
+      ]
+    },
+    {
+      "en": "Each entry within the bound does not put the entries together within it: two entries of weight two each, against the bound two; in a web witness, two formations are each supported at step 0 while their needs together exceed the condition's level.",
+      "zh": "每个条目在界内，不使条目合起来在界内：两个权重各为二的条目，对界二；在一个网的见证中，两个形成在第 0 步各受支持，而其所需合起来超出条件的水平。",
+      "declarations": [
+        "Becoming.entries_within_not_together",
+        "Becoming.Courses.twoDrawers",
+        "Becoming.Courses.supported_not_together"
+      ]
+    },
+    {
+      "en": "In the source model the first n draws, given as natural numbers, are a listed domain whose selected totals are its masses, so every combination of them fits within the stock exactly when their total does, and two draws of two each fitting a stock of two do not fit it together.",
+      "zh": "在源模型中，以自然数给出的前 n 项汲取是一个列出之域，其选取的总和就是质量；所以它们的每种组合都在存量之内，恰当总和在内；两项各为二、各自容于存量二的汲取，合起来不容于它。",
+      "declarations": [
+        "SharedStockInstances.firstDraws",
+        "SharedStockInstances.selectedTotal_eq_mass",
+        "SharedStockInstances.total_eq_mass",
+        "SharedStockInstances.every_selection_within_iff_total_within",
+        "SharedStockInstances.each_within_alone_not_together",
+        "CorrectionDependence.every_selection_within_iff_total_within",
+        "CorrectionDependence.each_within_alone_not_together"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "汲取是可相加的自然数；存量是它们共同汲取的同一个量。",
       "en": "The draws are natural numbers that add; the stock is the one quantity they all draw on."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Each draw fitting alone does not make them fit together: two draws of two units each can compete for one stock of two.",
+      "zh": "每项单独在内不推出共同在内：两项各为二单位的汲取可以竞争同一个二单位的存量。",
+      "kind": "non-implication",
+      "witness": "Becoming.entries_within_not_together"
+    },
+    {
+      "en": "The law is for draws that add on one stock; a kind of support that does not add needs a stated translation or its own proof.",
+      "zh": "这条规律针对在同一存量上相加的汲取；不相加的支持需要明说的转换或自己的证明。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/CorrectionDependence.lean",
+      "detail": {
+        "zh": "每项单独在内不推出共同在内：两项各为二单位的汲取可以竞争同一个二单位的存量。",
+        "en": "Each draw fitting alone does not make them fit together: two draws of two units each can compete for one stock of two."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: the core modules Becoming.Weighted and Becoming.Courses by the consolidated checker (Lean 4.29.1, becoming-checks/), with empty axiom reports; the periphery SharedStockInstances by its instance checker (Lean 4.30.0-rc2, shared-stock-instances-checks/), with empty reports, and CorrectionDependence by correction-dependence-verification.json (Lean 4.29.1), its two cited theorems reporting propext and Quot.sound. The 8 October migration of this record read the source and checked receipt bindings without rerunning Lean.",
+    "zh": "实查：核心 Weighted、Courses 由合并检查器（Lean 4.29.1，becoming-checks/），公理报告皆空；外围 SharedStockInstances 由实例检查器（Lean 4.30.0-rc2，shared-stock-instances-checks/），亦皆空；CorrectionDependence（Lean 4.29.1）所引两条定理报告 propext、Quot.sound。10月8日的迁移只审读源码与绑定，未重跑 Lean。"
+  },
+  "next_delta": {
+    "zh": "为另一种支持（如支持身份或排他足迹）给出到同一存量上相加之汲取的转换，或为该种支持直接证明此界。",
+    "en": "State a translation from another kind of support, such as support identity or exclusive footprints, into draws that add on one stock, or prove the bound for that kind of support directly."
+  },
   "correspondence": {
     "zh": "在源模型中，每项汲取是一项活动无过渡损失地停止所需的工作，存量是为此留出的部分。这些数不是一般的价值度量；与实际活动和存量的对应需另行核实。",
     "en": "In the source model, each draw is the work an activity needs to stop without its transition loss, and the stock is what is set aside for that work. The numbers are not a general measure of value; their correspondence to actual activities and stocks needs separate evidence."
@@ -52,23 +113,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/market-generativity/meta-attractor/CorrectionDependence.lean",
-      "detail": {
-        "zh": "每项单独在内不推出共同在内：两项各为二单位的汲取可以竞争同一个二单位的存量。",
-        "en": "Each draw fitting alone does not make them fit together: two draws of two units each can compete for one stock of two."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "每项单独在内不推出共同在内：两项各为二单位的汲取可以竞争同一个二单位的存量。",
-    "en": "Each draw fitting alone does not make them fit together: two draws of two units each can compete for one stock of two."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/market-generativity/meta-attractor/CorrectionDependence.lean",
@@ -243,10 +287,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "汲取在同一共享存量上相加之处可直接复用；其他支持类型需明确转换或另证。",
-    "en": "Reuse wherever draws add on one shared stock; other kinds of support need a stated translation or a separate proof."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -286,6 +326,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): canonical source moved from the periphery module (experiments/market-generativity/meta-attractor/CorrectionDependence.lean) to the core law in Becoming.Weighted, which states it for every event of a listed domain; statement added; in the claim \"every selection\" became \"every combination\", as in the statement, selection being the word for what goes through couplings.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：规范来源由外围模块移至 Becoming.Weighted 中的核心规律，后者对列出之域的每个事件陈述它；新增陈述；主张中“每一种选取”改为“每一种组合”，与陈述一致，“选择”一词留给经耦合而行者。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): the title shortened to a name, its earlier text being what the statement says; statement kept; the claim split into 3 laws, each read against its declarations in Becoming.Weighted, Becoming.Courses, SharedStockInstances and CorrectionDependence (the core law, its witnesses, the source model's instance); the limitations, which repeated the counterexample, became a does-not-show item with its witness, and the next step's boundary a scope item; the standard boundary no-ethical-premise-core-axiom-free; the evidence paragraph names the checkers and receipts; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [draws-on-a-shared-stock.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/draws-on-a-shared-stock.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the evidence paragraph, the next step, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题缩为名称，原题文字即陈述所说；陈述不变；主张拆为 3 条规律，各条对照其在 Becoming.Weighted、Becoming.Courses、SharedStockInstances 与 CorrectionDependence 中的声明核读（核心规律、其见证、源模型的实例）；与反例重复的限制改为一条带见证的“未表明”，下一步中的边界改为范围项；加通用边界 no-ethical-premise-core-axiom-free；证据段写明检查器与回执；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [draws-on-a-shared-stock.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/draws-on-a-shared-stock.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及证据段、下一步，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/5c832183c236a87d/draws-on-a-shared-stock.json",
+      "sha256": "5c832183c236a87daf00f735680bb3bb58d4720dcc2fafe7fab2de10494b821b",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/47dc93ea7d0babcc/draws-on-a-shared-stock.json",
+      "sha256": "47dc93ea7d0babcc28204a8732913f1afcf455fc885c89aa5d882d14724b65a5",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

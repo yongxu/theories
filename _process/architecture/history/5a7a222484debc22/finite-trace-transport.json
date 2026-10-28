@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "finite-trace-transport",
+  "title": {
+    "zh": "保步映射传递有限历史",
+    "en": "Step-preserving maps transport finite traces"
+  },
+  "statement": {
+    "en": "A map preserving each step of one process into another sends every finite course to a course with the same moves; the converse, endpoints included, holds exactly where every step from an image lifts from each configuration with that image.",
+    "zh": "把一个过程的每一步保持到另一个过程的映射，把每个有限程送到动作相同之程；带端点的逆恰在像上出发的每一步都能从具此像的每个构形提升时成立。"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "claim": {
+    "en": "Where a map f takes every step of P to a step of Q with the same move, every finite trace of P from s to t is a trace of Q from f s to f t with the same moves. Through a map q, the traces of Q from q s are exactly the images of the traces of P from s, endpoints included, for every s, exactly where q preserves every step and every step of Q from q s lifts to a step of P from s by the same move into the fiber of its target.",
+    "zh": "映射 f 把 P 的每一步取为 Q 中同一动作之步时，P 从 s 到 t 的每个有限迹都是 Q 从 f s 到 f t、动作相同之迹。经映射 q，对每个 s，Q 从 q s 出发之迹恰是 P 从 s 出发之迹的像（含端点），恰当 q 保持每一步，并且 Q 从 q s 出发的每一步都以同一动作提升为 P 从 s 出发、到其终点纤维中的一步。"
+  },
+  "hypotheses": [
+    {
+      "zh": "给定两个 Process、同一动作类型与逐步保持条件 hstep。",
+      "en": "Two supplied processes, one action type and the pointwise hstep preservation hypothesis."
+    }
+  ],
+  "correspondence": {
+    "zh": "状态映射及其实际意义需独立说明；这里只传递已给定历史。",
+    "en": "The state map and its actual meaning require correspondence; this only transports a supplied trace."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+  "aliases": [
+    "Generative.trace_map",
+    "Generative.projection_exact_iff"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "becoming-spine-instances",
+      "detail": {
+        "zh": "桥接以 trace_map 传递框架的共同接续束（Frame.map_preserves_bundles）。",
+        "en": "The bridge transports a frame's joint-continuation bundles by trace_map (Frame.map_preserves_bundles)."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "detail": {
+        "zh": "保步不独自给出反向提升；反向需要每个起始纤维的步骤可提升条件。",
+        "en": "Step preservation alone does not give converse lifting; lifting needs a condition at every starting fiber."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "保步不独自给出反向提升；反向需要每个起始纤维的步骤可提升条件。",
+    "en": "Step preservation alone does not give converse lifting; lifting needs a condition at every starting fiber."
+  },
+  "validation_scope": {
+    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
+    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "role": "proof",
+      "sha256": "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8",
+      "declarations": [
+        "Generative.trace_map",
+        "Generative.trace_lift",
+        "Generative.projection_exact_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
+      "role": "receipt",
+      "sha256": "362c4eda65deeb23222ed432ef4920d0525da9c6e0b7f101ec71f3e42fff350a",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md",
+      "role": "provenance",
+      "sha256": "a896df0f8f85139ab323dcb97878b86b2ab3d4c897e4587e15f4ca8b8f7e9017",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T100026.593496Z/verification.json",
+      "role": "receipt",
+      "sha256": "51b9fd45bff2f533ee783f79a81518580a49255bfda8a38a5859129191b3846e"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
+      "sha256_pointer": "/modules/0/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T100026.593496Z/verification.json",
+      "sha256_pointer": "/source_sha256/GenerativeCore",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "其他有限历史保持证明直接复用 trace_map；额外端点或实际对应另列。",
+    "en": "Reuse trace_map for finite-history preservation; additional endpoint or actual correspondence requirements remain explicit."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
+      "en": "2026-10-08: migrated existing result identity and scope; no new theorem or relocated source."
+    },
+    {
+      "zh": "2026-10-14，整合 I1：GenerativeCore 是 Becoming 核心所依的基础，与核心一同只从 Lean 内置前导编译；脊柱运行 20261014T100026.593496Z 绑定其当前字节，trace_map 公理报告为空。脊柱用它传递可达（Frame.lean 的 Reach.map）与共同接续束（Becoming.Bridge 的 Frame.map_preserves_bundles）。无新定理。",
+      "en": "14 October 2026, integration I1: GenerativeCore is the foundation the Becoming core builds on and compiles with it from Lean's prelude alone; the spine run 20261014T100026.593496Z binds its current bytes and reports trace_map with an empty axiom report. The spine uses it for reach (Reach.map in Frame.lean) and for joint-continuation bundles (Frame.map_preserves_bundles in Becoming.Bridge). No new theorem."
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim extended to the converse already proved beside the transport: the traces through a map are exactly the images of the traces, endpoints included, exactly where the map preserves every step and every step from an image lifts, from each configuration with that image, into the fiber of its target; that declaration added to the references and aliases. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张补入与传递并列、已经证明的逆：经映射之迹恰是迹的像（含端点），恰当映射保持每一步且像上出发的每一步都能从具此像的每个构形提升到其终点纤维中；该声明加入引用与别名。规律未变。"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "id": "finite-basis-common-interpretation",
+  "title": {
+    "zh": "有限根基的共同解释",
+    "en": "Common interpretation of a finite basis"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
+  "claim": {
+    "zh": "有限列表覆盖全部根基指标时，完整闭包逐命题存在可接纳解释，等价于一个可接纳解释满足整个闭包。",
+    "en": "When a finite list covers all basis indices, pointwise admissible interpretation of the full derived closure is equivalent to one admissible interpretation satisfying the entire closure."
+  },
+  "hypotheses": [
+    {
+      "zh": "既有 Derives、有限覆盖列表与显式 admissible；逐命题覆盖包括全部可导公式。",
+      "en": "Existing Derives, a finite covering list and explicit admissible; pointwise coverage includes every derivable formula."
+    }
+  ],
+  "correspondence": {
+    "zh": "没有定义 admissible 为根基成立；此归约不提供实际接纳或根基真。",
+    "en": "Admissible is not defined as basis truth; the reduction supplies neither actual admission nor root truth."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Derivation.lean",
+  "aliases": [
+    "InquiryRoot.JointInterpretation.pointwise_closure_iff_common"
+  ],
+  "dependencies": [
+    {
+      "id": "derivation-soundness",
+      "detail": {
+        "zh": "反向从共同根基到共同闭包使用健全性；局部前提仍保留。",
+        "en": "The common-basis-to-common-closure direction uses soundness; local premises remain explicit."
+      },
+      "relation": "formal-reuse",
+      "interface": {
+        "output": {
+          "zh": "同一解释中根基与局部前提保证推导结论。",
+          "en": "Basis and local assumptions guarantee the derived conclusion in the same interpretation."
+        },
+        "input": {
+          "zh": "共同根基见证扩展为整个闭包共同见证。",
+          "en": "Extend a common basis witness to a common witness for the closure."
+        },
+        "conditions": {
+          "zh": "有限覆盖、可接纳解释和根基真并未由健全性取得。",
+          "en": "Finite coverage, admissibility and basis truth are not acquired by soundness."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/JointInterpretation.lean"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/JointInterpretation.lean",
+      "detail": {
+        "zh": "只让每一根基行分别有解释仍可能没有共同解释。",
+        "en": "Separate interpretations for individual basis rows may have no common interpretation."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "只让每一根基行分别有解释仍可能没有共同解释。",
+    "en": "Separate interpretations for individual basis rows may have no common interpretation."
+  },
+  "validation_scope": {
+    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
+    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/JointInterpretation.lean",
+      "role": "provenance",
+      "sha256": "b8c6fabc4ed4ff3c63898d1660abca7e6e83d446abe2b2df5975568212a16fac",
+      "declarations": [
+        "InquiryRoot.JointInterpretation.pointwise_closure_iff_common",
+        "InquiryRoot.JointInterpretation.separate_rows_have_no_common_interpretation"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Derivation.lean",
+      "role": "proof",
+      "sha256": "ea2c3feb81457ffeee9eedceb1042fe91faab3227a89bb33345d8b3f121dad40",
+      "declarations": [
+        "Becoming.Derivation.pointwise_iff_common",
+        "Becoming.Derivation.rows_not_together",
+        "Becoming.Derivation.Scope.common_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/joint-interpretation-verification.json",
+      "role": "receipt",
+      "sha256": "84ccd8f9cfbc584fdd568815f1d39f8bccf671420ec5de493a5d4492488f607a",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/DEDUCTIVE-FOUNDATION-TEST.md",
+      "role": "integration",
+      "sha256": "6da279324aeb71029fa00d70b4fdba2365f9397a279a525d3fe2bc92ecf15898",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md",
+      "role": "provenance",
+      "sha256": "a896df0f8f85139ab323dcb97878b86b2ab3d4c897e4587e15f4ca8b8f7e9017",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
+      "role": "provenance",
+      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
+      "declarations": [
+        "Becoming.common_on_scope_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T204907.920360Z/verification.json",
+      "role": "receipt",
+      "sha256": "75429d3bd34fa847dd885fcb4195ab1935845952cc8e0d8f8ddb9c32ae35f2f9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Derivation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Derivation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "复用共同解释归约，进一步研究实际接纳与共同规律的实质根据。",
+    "en": "Reuse the coherence reduction; investigate substantive warrant for actual admission and a common law."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
+      "en": "2026-10-08: migrated existing result identity and scope; no new theorem or relocated source."
+    },
+    {
+      "zh": "2026-10-08：架构整理显式登记已有证明的输出—输入对应；无新推论或编译。",
+      "en": "2026-10-08: architecture repair records the existing proof’s output/input correspondence; no new inference or compilation."
+    },
+    {
+      "zh": "2026-10-09：核读同一研究新增§22；原§20及此前全文逐字保留，共同解释主张与证明范围不变。",
+      "en": "2026-10-09: reviewed the appended §22; §20 and all earlier study bytes remain unchanged. The common-interpretation claim and proof scope are preserved."
+    },
+    {
+      "zh": "2026-10-09直接闭合审计：保留此前研究全文和证明；区分普遍作用根据与具体规律必然化，本次未闭合根基且无新定理。",
+      "en": "2026-10-09 direct closure audit: preserves all earlier study bytes and proofs; distinguishes universal operative warrant from making particular laws necessary. No foundational closure or new theorem."
+    },
+    {
+      "zh": "2026-10-09：追加从实际形成活动开始的诊断修正；保留此前研究与证明，未新增结果或闭合根基。",
+      "en": "2026-10-09: appended the activity-first diagnostic correction; preserved earlier study and proofs, with no new result or foundational closure."
+    },
+    {
+      "en": "9 October 2026: reconciled Ren’s whole/manifold correction. The necessity target is Becoming as a whole, with generativity within it. Earlier chapter/study content and proof sources are preserved; no new theorem or axiom.",
+      "zh": "2026年10月9日：接入Ren关于整体／manifold的修正。必然性对象是Becoming整体，生成性位于其中。保留此前理论、研究及证明源码；无新增定理或公理。"
+    },
+    {
+      "en": "18 October 2026, F3Q, the port of the inquiry and composition family into the core (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): the core statements of the cited declarations are added beside them (Derivation; verdicts in port-q.md), bound to core receipt 20261018T204907.920360Z, and the canonical source is the core module. Every core statement has an empty axiom report; where the periphery proof was classical, the core proof is constructive or names its hypothesis (port-q.md). The periphery references stay until the sweep retires their modules. No new result; the claim is unchanged.",
+      "zh": "2026年10月18日，F3Q 将探究与组合族移入核心：所引声明旁加上核心陈述（Derivation），绑定到核心回执；核心陈述的公理报告皆为空，外围经典证明处核心证明为构造性或明示其假设；外围引用保留到清扫退役其模块。无新结果，论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Derivation.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Derivation.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Derivation.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：Derivation.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 7 bookkeeping notes condensed from 14 October 2026 to 19 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/7e4b46c78be59fe2/finite-basis-common-interpretation.json and in git.",
+      "zh": "2026-10-20：7 条记账性说明合并（14 October 2026 至 19 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/7e4b46c78be59fe2/finite-basis-common-interpretation.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and JointInterpretation) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Derivation). The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and JointInterpretation）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Derivation）。主张不变。"
+    }
+  ]
+}

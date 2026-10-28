@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "id": "normal-forms-need-decided-apartness",
+  "title": {
+    "zh": "有名交换的正规形恰需要段内不相连可判定",
+    "en": "Normal forms of named exchanges need exactly decided apartness on the stretch"
+  },
+  "statement": {
+    "en": "With joining symmetric, two arrangements of a finite stretch are connected by commuting unjoined neighbours exactly where they order joined pairs alike; a complete invariant on the stretch exists exactly where apartness of distinct exchanges is decided, the normal form giving one.",
+    "zh": "相连对称时，有限段的两个安排经相邻不相连交换互达，恰当它们对相连之对给出同样先后；段上的完整不变量恰在不同交换的不相连可判定时存在，正规形给出一个。"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "claim": {
+    "zh": "对称相连关系下，有限段的两个安排及其给定逆（Reindexes）经相邻不相连交换互达，恰在它们对相连交换给出同样先后时（rearranges_iff，不用可判定性）。给出段中不同交换不相连的布尔判定（DecidesApart），normalForm 构造可达的字典序最小安排；两个安排互达恰在正规形在段上一致时（normalForm_iff），正规形幂等且在第一个差异处名字最小（normalForm_normal、normalForm_least）。存在以自然数值在有限段上比较的完整不变量（CompleteInvariant），恰在存在这种不相连判定时（complete_iff）；pair_rearranges 与 decides_of_complete 给出必要性。在包含足迹的世界中，normalize 由独立交换达到，双向保持七个世界前提并在重新编号下保持偏序（normalize_premises、normalize_precedes）。以原世界的步命名交换，任意独立重排再正规化都与原正规形有同样交换和逐关系项的 SameAt（normalize_reorder）。",
+    "en": "For a symmetric joining relation, two arrangements and their given inverses of a finite stretch (Reindexes) are connected by adjacent unjoined commutations exactly where they orient joined pairs alike (rearranges_iff, with no decision). Given a Boolean decision of apartness for distinct exchanges of the stretch (DecidesApart), normalForm constructs a reachable lexicographically least arrangement. Two arrangements are reachable exactly where their normal forms agree over the stretch (normalForm_iff); the form is idempotent and least at the first differing position (normalForm_normal, normalForm_least). A complete natural-number-valued invariant compared on the finite stretch (CompleteInvariant) exists exactly where that apartness decision exists (complete_iff); pair_rearranges and decides_of_complete give necessity. For a world with a containing footprint, normalize is reached by independent commutations, preserves the seven world premises both ways and the order under renumbering (normalize_premises, normalize_precedes). Naming exchanges by their steps in the original world, normalizing any independent reordering gives the same exchanges and per-relatum SameAt as the original normal form (normalize_reorder)."
+  },
+  "hypotheses": [
+    {
+      "zh": "有限段 S,m，自然数名字，以及每个安排与逆满足 Reindexes；相连关系对称。",
+      "en": "A finite stretch S,m, natural-number names, and each arrangement and inverse satisfying Reindexes; joining is symmetric."
+    },
+    {
+      "zh": "正规形用 DecidesApart 判定段中不同交换的不相连；不由此断言相连可判定。关系刻画 rearranges_iff 不用此假设。",
+      "en": "The normal form uses DecidesApart to decide not being joined for distinct exchanges of the stretch; decidability of joining is not inferred. The relational characterization rearranges_iff needs no such decision."
+    },
+    {
+      "zh": "CompleteInvariant 的值是 Nat，且只比较有限段；世界正规化还要求包含足迹，normalize_reorder 要求独立重排并保留原世界的名字。",
+      "en": "CompleteInvariant is Nat-valued and compared only on the finite stretch. World normalization additionally requires footprint containment; normalize_reorder requires independent reordering and retains the original naming."
+    }
+  ],
+  "correspondence": {
+    "zh": "P88 接续 P78/P78b 的既有排序与偏序，不重算逆定理为独立成果。产出是有限、有名安排的规范代表与所需判定的精确边界；原世界的关系通过 Footprinted 实例接入。读法由 AI 提出，依 Ren 的交托采用；见整合文档 §109。",
+    "en": "P88 consumes P78/P78b sorting and order, without counting the reused converse as an independent result. Its output is the canonical representative of finite named arrangements and the exact decision boundary, connected to worlds through Footprinted. The reading is AI-authored, adopted on Ren's delegation; see integration §109."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+  "aliases": [
+    "Becoming.Commutes",
+    "Becoming.KeepsOrder",
+    "Becoming.Orients",
+    "Becoming.Rearranges",
+    "Becoming.rearranges_iff",
+    "Becoming.DecidesApart",
+    "Becoming.normalSteps",
+    "Becoming.normalForm",
+    "Becoming.normalForm_iff",
+    "Becoming.normalForm_normal",
+    "Becoming.normalForm_least",
+    "Becoming.CompleteInvariant",
+    "Becoming.complete_iff",
+    "Becoming.decides_of_complete",
+    "Becoming.Footprinted.normalize",
+    "Becoming.Footprinted.normalize_reorder",
+    "Becoming.Triple.not_rearranged",
+    "lexicographic normal form",
+    "字典序正规形"
+  ],
+  "dependencies": [
+    {
+      "id": "order-of-exchanges-is-the-invariant",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用相连交换的偏序、有限重新编号、排序与世界重排。",
+        "en": "Reuses joined-exchange order, finite reindexings, sorting and world reorderings."
+      },
+      "interface": {
+        "output": {
+          "zh": "Footprinted、Reindexes、sorts_iff、converse 与 reorder_premises。",
+          "en": "Footprinted, Reindexes, sorts_iff, converse and reorder_premises."
+        },
+        "input": {
+          "zh": "关系形式的安排与世界正规化。",
+          "en": "Relational arrangements and world normalization."
+        },
+        "conditions": {
+          "zh": "有限段；包含足迹；构造规范代表另给不相连判定。",
+          "en": "Finite stretch; a containing footprint; canonical representative additionally uses the apartness decision."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "least-footprint-where-idleness-decided",
+      "detail": {
+        "zh": "最小足迹固定相连关系的最小读法；其闲置判定不同于本记录的段内不相连判定。",
+        "en": "The least footprint supplies the least reading of joining; its idleness decision differs from this record’s finite-stretch apartness decision."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+      "detail": {
+        "zh": "Triple：三个交换中首末相连，倒序与正序的正规形不同，不能重排互达。",
+        "en": "Triple: the first and last of three exchanges are joined; reversing their order changes the normal form and prevents reachability."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "正规形相对于给定自然数名字，仅在有限段。没有无名、Foata 同时层或无界运行正规形。CompleteInvariant 不是任意值域的抽象不变量。相连只到双重否定；既有关系刻画不要求判定。没有实际连续时间对应或伦理结论。",
+    "en": "The normal form is relative to given natural-number names and a finite stretch. No unnamed, Foata simultaneous-layer or unbounded-run normal form is given. CompleteInvariant is not an abstract invariant in an arbitrary codomain. Joining is known only up to double negation; the existing relational characterization needs no decision. No actual continuous-time correspondence or ethical conclusion follows."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.OrderNormal 的 101 项定理全部空依赖，其中含 rearranges_iff、normalForm_iff、normalForm_normal、normalForm_least、complete_iff、decides_of_complete、Footprinted.normalize_premises、Footprinted.normalize_reorder与 Triple.not_rearranged；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §109；尚无独立审查。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 101 theorems of Becoming.OrderNormal all have empty axiom reports, among them rearranges_iff, normalForm_iff, normalForm_normal, normalForm_least, complete_iff, decides_of_complete, Footprinted.normalize_premises, Footprinted.normalize_reorder and Triple.not_rearranged. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §109 of the integration note; there is no independent review yet."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+      "role": "proof",
+      "sha256": "f233c6800d90c4554f572a85d5ce73b7e48107bfc1b9012ec4a8490d6f78f1e1",
+      "declarations": [
+        "Becoming.Commutes",
+        "Becoming.KeepsOrder",
+        "Becoming.Commutes.of_iff",
+        "Becoming.Commutes.append",
+        "Becoming.Commutes.keeps",
+        "Becoming.KeepsOrder.first_free",
+        "Becoming.lowering_commutes",
+        "Becoming.lowered_keepsOrder",
+        "Becoming.sorts_step_by",
+        "Becoming.sorts_by",
+        "Becoming.sorts_by_iff",
+        "Becoming.Footprinted.independent_iff_commutes",
+        "Becoming.swapAt_within",
+        "Becoming.place_within",
+        "Becoming.origin_within",
+        "Becoming.reindexes_of_within",
+        "Becoming.Reindexes.identity",
+        "Becoming.Reindexes.symm",
+        "Becoming.Reindexes.comp",
+        "Becoming.origin_append",
+        "Becoming.origin_lowering_below",
+        "Becoming.origin_lowering_top",
+        "Becoming.lowering_inside",
+        "Becoming.Orients",
+        "Becoming.Orients.refl",
+        "Becoming.Orients.trans",
+        "Becoming.Orients.symm",
+        "Becoming.Rearranges",
+        "Becoming.commutes_orients",
+        "Becoming.Rearranges.orients",
+        "Becoming.rearranges_iff",
+        "Becoming.Rearranges.symm",
+        "Becoming.Rearranges.trans",
+        "Becoming.Footprinted.keeps_iff_orients",
+        "Becoming.Footprinted.rearranges_iff_independent",
+        "Becoming.DecidesApart",
+        "Becoming.apartBelow",
+        "Becoming.apartBelow_iff",
+        "Becoming.freeAt",
+        "Becoming.freeAt_iff",
+        "Becoming.normalPick",
+        "Becoming.normalNext",
+        "Becoming.normalSteps",
+        "Becoming.normalForm",
+        "Becoming.pick_spec",
+        "Becoming.pick_least",
+        "Becoming.next_spec",
+        "Becoming.normalSteps_spec",
+        "Becoming.normalSteps_stable",
+        "Becoming.normalForm_reindexes",
+        "Becoming.normalForm_rearranges",
+        "Becoming.free_transfer",
+        "Becoming.normalSteps_agree",
+        "Becoming.normalForm_agree",
+        "Becoming.normalForm_iff",
+        "Becoming.normalForm_normal",
+        "Becoming.normalForm_least",
+        "Becoming.agreeFrom",
+        "Becoming.agreeFrom_iff",
+        "Becoming.CompleteInvariant",
+        "Becoming.normalForm_complete",
+        "Becoming.pairFirst",
+        "Becoming.pairSecond",
+        "Becoming.pair_within",
+        "Becoming.pair_rearranges",
+        "Becoming.pairApart",
+        "Becoming.apartOf",
+        "Becoming.decides_of_complete",
+        "Becoming.complete_iff",
+        "Becoming.Footprinted.reorder_determined",
+        "Becoming.Footprinted.normalize",
+        "Becoming.Footprinted.normalize_independent",
+        "Becoming.Footprinted.normalize_premises",
+        "Becoming.Footprinted.normalize_precedes",
+        "Becoming.Footprinted.normalize_reorder",
+        "Becoming.Triple.apart",
+        "Becoming.Triple.joined",
+        "Becoming.Triple.symm",
+        "Becoming.Triple.decides",
+        "Becoming.Triple.reversed",
+        "Becoming.Triple.reversed_reindexes",
+        "Becoming.Triple.reversed_normal",
+        "Becoming.Triple.identity_normal",
+        "Becoming.Triple.not_rearranged"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "declarations": [
+        "Becoming.beq_self"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
+      "role": "proof",
+      "sha256": "72adbc08546ed505f267db376a96975728150ed719f941491095075bfe688f93",
+      "declarations": [
+        "Becoming.Reindexes",
+        "Becoming.Footprinted",
+        "Becoming.Footprinted.Contains",
+        "Becoming.Footprinted.Joined",
+        "Becoming.Footprinted.Precedes",
+        "Becoming.Footprinted.sorts_iff",
+        "Becoming.Footprinted.converse",
+        "Becoming.Footprinted.reorder_premises",
+        "Becoming.Footprinted.reorder_precedes"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md",
+      "role": "provenance",
+      "sha256": "f3e5885ed960640cf3773813e7e02f6869ca2884b3730a2ea683c0686c03a8f3",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-p88-landing/provenance.json",
+      "role": "provenance",
+      "sha256": "def2e1951ad2c3e548043690b2da917c3bc81e91e2ec1379db68bf7f90e1fd89",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-p88-landing/evidence/TASK.md",
+      "role": "provenance",
+      "sha256": "cbfa680e3e97999dcbc863a1296b5418a2e481e6a0bf0474f5752d831134005f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OrderNormal",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reordering",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "无名的规范代表、Foata 同时层形式、无界运行及连续时间对应；本次不开始这些研究。",
+    "en": "Unnamed representatives, Foata layers, unbounded runs and continuous-time correspondence; no such new research begins in this integration."
+  },
+  "history": [
+    {
+      "zh": "2026-10-13：接管时保存并整合 Claude P88 既有草稿；原字节与出处保留，不新增证明；见整合文档 §109。",
+      "en": "2026-10-13: preserved and integrated the existing Claude P88 draft during takeover; original bytes and provenance retained, no proof added; see integration §109."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D30）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D30): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Order.lean, THE-THEORY-OF-BECOMING.md. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Order.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Order.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Order.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Order.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R31 (layers and one prelude: the ethics out of the general import closure, one law module, one prelude, Order split): Moved with their full names: from Order.lean to Reordering.lean, Footprinted, Footprinted.Contains, Footprinted.Joined, Footprinted.Precedes, Footprinted.converse, Footprinted.reorder_precedes, Footprinted.reorder_premises, Footprinted.sorts_iff, Reindexes; from OrderNormal.lean to Prelude.lean, beq_self. Proof bindings (OrderNormal.lean) rebound to core receipt 20261019T213206.644158Z. The evidence and counterexample paths that named Order.lean name Reordering.lean (the split part holding what they cite). Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 222 added; OrderNormal.lean, root list and Boolean lemmas moved to Prelude.lean; copies removed (one name per statement); imports IdleRemoval; THE-THEORY-OF-BECOMING.md, §9 (layers by a checkable property, the module table, receipt, counts) follows R31. The claim is unchanged.",
+      "zh": "2026年10月20日，R31（层与一个前导：伦理移出一般导入闭包、一个律模块、一个前导、Order 拆分）：连同完整名称移动：从 Order.lean 到 Reordering.lean：Footprinted、Footprinted.Contains、Footprinted.Joined、Footprinted.Precedes、Footprinted.converse、Footprinted.reorder_precedes、Footprinted.reorder_premises、Footprinted.sorts_iff、Reindexes；从 OrderNormal.lean 到 Prelude.lean：beq_self。证明绑定（OrderNormal.lean）改到核心回执 20261019T213206.644158Z。提到 Order.lean 的证据与反例路径改提 Reordering.lean（拆分后持有所引内容的部分）。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 222 节；OrderNormal.lean，根命名空间的列表与布尔引理移到 Prelude.lean；副本删去（每个陈述一个名称）；导入 IdleRemoval；THE-THEORY-OF-BECOMING.md，§9（以可检查性质定义的层、模块表、回执、计数）随 R31。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (OrderNormal.lean, Prelude.lean, Reordering.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; OrderNormal.lean, takes as its final section OrderWorlds, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept; Reordering.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（OrderNormal.lean、Prelude.lean、Reordering.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；OrderNormal.lean，以末节收入 OrderWorlds（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；Prelude.lean，十二条原先在两个或更多模块中各自陈述的命题，在此以保留的名称陈述一次；Reordering.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 35 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4818b4f31d0b826b/normal-forms-need-decided-apartness.json and in git.",
+      "zh": "2026-10-20：35 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4818b4f31d0b826b/normal-forms-need-decided-apartness.json 和 git 中。"
+    },
+    {
+      "en": "27 October 2026, board item DF2 (study section 426): A statement, as 01's home section states the result (rearranges_iff, complete_iff, normalForm_iff); its laws wait for the schema-2 migration.",
+      "zh": "2026年10月27日，工作板条目 DF2（研究第 426 节）：陈述，按 01 的归属一节所述（rearranges_iff、complete_iff、normalForm_iff）；其规律待迁移到第 2 版格式。"
+    }
+  ]
+}

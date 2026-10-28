@@ -1,0 +1,461 @@
+{
+  "schema_version": 1,
+  "id": "only-the-order-of-change-shows",
+  "title": {
+    "zh": "只有变化的次序显出",
+    "en": "Only the order of change shows"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "zh": "插入空步时，关系项之相等可判定、每一步每个关系项各列一次，前提、复现以及段上的总量与计数不变；在移动之步给定时移除空步，不需这两个条件即保持前提、总量与计数；生起与止息之计数需活动已判定；速率与储备承载多久相对于读法的单位。",
+    "en": "Inserting idle steps, relata compared decidedly and listed once at each step, keeps premises, recurrence, totals and counts over a stretch; removing them, moving steps given, keeps premises, totals and counts with neither; counts of arising or ceasing take activity decided; rates depend on the unit."
+  },
+  "claim": {
+    "zh": "一个停顿（Stutter ρ）指 ρ 0 = 0，每步或空（ρ (n+1) = ρ n）或前进一步，且每步都被到达；经 ρ 读用 Sampling 的 sample。空步上没有参与：平衡、耗散与封闭在每个家族上成立，存量耗减在持有所立者的家族上成立（Flow.sample_idle_balancesOn 等）；前进步上各自恰在所读之步上成立时成立（Flow.sample_moves_balancesOn_iff 等）。所以经停顿读的世界恰在原世界满足前提时满足它们（World.stutter_premises_iff）：平衡（每步每个关系项列出一次）、耗散、只有活跃者给予、只有活跃者取用、活动需要支持、体现与有界的传递；与较粗的读法不同，不需要关于活动如何保持的条件。任何段上的总量就是所读之段的总量（stutter_total；Flow.stutter_taken、Flow.stutter_given、stutter_risen、stutter_fallen、stutter_rise_count、stutter_fall_count，以及在已定之处的 stutter_comings、stutter_ceasings）；生起、止息与立的变化恰在原来复现时复现（World.stutter_arisingRecurs_iff、World.stutter_ceasingRecurs_iff、World.stutter_change_recurs_iff）；普查经停顿保留（World.sample_counted），给出每个原步的读法之步时返回（World.stutter_counted_of_section）。停顿改变的是每步所计的：空步出现得任意晚时，没有流无终地更多（Flow.sample_not_more）；扩张无终地更多，每步读两次则不然（Expansion.more_step_relative）；由一份储备承载的世界在每步读两次时需要至少两份（Lapse.reserve_step_relative）。移除空步是一个构造：给出读每个原步的移动之步（Stutter.Moves；每个都存在，Stutter.crosses，且唯一，Stutter.moving_unique），且世界的空步中无参与者、无变动（World.IdleAt），去掉它们的世界（World.withoutIdle）恰在原世界满足每个前提处满足它（World.withoutIdle_premises、World.withoutIdle_transmits），不需要关于列出的条件，因为每步保留自己的交换；恰在原世界有普查处有普查（World.withoutIdle_counted）；在任一段上有相同的所取与所给总量、家族所立的升降及其计数（World.withoutIdle_totals），活动可判定时有相同的生起与止息计数（World.withoutIdle_counts）。不加前提。",
+    "en": "A stuttering (Stutter ρ) has ρ 0 = 0, each step idle (ρ (n+1) = ρ n) or moving by one, and every step reached; it is read with Sampling's sample. At an idle step nothing takes part: balance, dissipation and closure hold on every family, and running down on a family holding what stands (Flow.sample_idle_balancesOn and others); at a moving step each holds exactly where it holds across the step read (Flow.sample_moves_balancesOn_iff and others). So a world read through a stuttering meets the premises exactly where it meets them (World.stutter_premises_iff): balance (each relatum listed once at each step), dissipation, only active relata giving, only active relata taking, activity needing support, embodiment and bounded transmission; unlike a coarser reading, no condition on how activity is held is needed. Over any stretch the totals are those of the stretch read (stutter_total; Flow.stutter_taken, Flow.stutter_given, stutter_risen, stutter_fallen, stutter_rise_count, stutter_fall_count, and where decided stutter_comings, stutter_ceasings); arising, ceasing and change of standing recur exactly where they recurred (World.stutter_arisingRecurs_iff, World.stutter_ceasingRecurs_iff, World.stutter_change_recurs_iff); a census survives a stuttering (World.sample_counted) and returns where a step of the reading is given for each step (World.stutter_counted_of_section). What a stuttering changes is what is counted per step: with idle steps arbitrarily late no flow is more without end (Flow.sample_not_more); the expansion is more without end and, every step read twice, it is not (Expansion.more_step_relative); a world carried by a reserve of one needs a reserve of at least two when every step is read twice (Lapse.reserve_step_relative). Removing idle steps is a construction: given for each step read the moving step reading it (Stutter.Moves; each exists, Stutter.crosses, and is unique, Stutter.moving_unique) and the idle steps of the world empty and unmoved (World.IdleAt), the world without them (World.withoutIdle) meets every premise exactly where the world does (World.withoutIdle_premises, World.withoutIdle_transmits), with no condition on listing since each step keeps its own exchange, has a census exactly where it does (World.withoutIdle_counted), and over any stretch has the same totals taken and given, rises and falls of a family's standing and their counts (World.withoutIdle_totals), and where activity is decided the same counts of arising and ceasing (World.withoutIdle_counts). No premise."
+  },
+  "hypotheses": [
+    {
+      "zh": "停顿 ρ 是给定的读法；World.withoutIdle 从给定的移动步 σ 构造移除空步的世界，保持结论使用 Stutter.Moves ρ σ 与 World.IdleAt。",
+      "en": "The stuttering ρ is a given reading; World.withoutIdle constructs the world with idle steps removed from supplied moving steps σ, with preservation proved under Stutter.Moves ρ σ and World.IdleAt."
+    },
+    {
+      "zh": "插入停顿的取用与给予总量要求每个关系项列出一次；withoutIdle 的移除总量不需要这一条件。生起与止息的计数要求活动已定。",
+      "en": "The taken and given totals for inserting a stuttering require each relatum listed once; the withoutIdle removal totals require no such condition. Counts of arising and ceasing require activity decided."
+    },
+    {
+      "zh": "移除空步把每个原步的移动之步作为给定函数 σ（Stutter.Moves）；每个移动步都存在且唯一，但本模块没有从停顿单独构造这个函数。",
+      "en": "Removing idle steps takes the moving step reading each step as a supplied function σ (Stutter.Moves); each moving step exists and is unique, but this module does not construct that function from the stuttering alone."
+    }
+  ],
+  "correspondence": {
+    "zh": "P78（工作板），按 Ren 2026-10-12 的“move towards 100%”：零前提计划把共享的离散步序号列为表示的承诺，像 P69 对出发点那样重新奠基。这里给出 Sampling 的严格递增读法的逆：插入空步。读法（AI 的，依 Ren 的交托采用）：对一步的规律、段上的总量与计数以及复现，步序号不携带变化次序以外的东西；空步什么也不显出；每步所计的相对于读法的单位，正如较粗的步。见整合文档 §102。",
+    "en": "P78 (work board), following Ren's “move towards 100%” of 12 October 2026: the zero-premise plan lists a shared discrete index of steps among the commitments of the representation, to be re-founded as P69 re-founded the starting point. This gives the converse of Sampling's strictly increasing reading: inserting idle steps. Reading (the AI's, adopted on Ren's delegation): for the laws of one step, the totals and counts over a stretch, and recurrence, the step index carries nothing beyond the order of change; an idle step shows nothing; what is counted per step is relative to the unit of the reading, as with coarser steps. See the integration document §102."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean",
+  "aliases": [
+    "Becoming.Stutter",
+    "Becoming.World.stutter_premises_iff",
+    "Becoming.stutter_total",
+    "Becoming.World.stutter_arisingRecurs_iff",
+    "Becoming.Flow.sample_not_more",
+    "Becoming.Expansion.more_step_relative",
+    "Becoming.Lapse.reserve_step_relative",
+    "stuttering",
+    "停顿",
+    "idle step",
+    "空步",
+    "step index",
+    "步序号",
+    "Becoming.World.withoutIdle",
+    "Becoming.World.IdleAt",
+    "Becoming.Stutter.Moves",
+    "Becoming.Stutter.moving_unique",
+    "Becoming.World.withoutIdle_premises",
+    "Becoming.World.withoutIdle_transmits",
+    "Becoming.World.withoutIdle_counted",
+    "Becoming.World.withoutIdle_totals",
+    "Becoming.World.withoutIdle_counts",
+    "removing idle steps",
+    "移除空步"
+  ],
+  "dependencies": [
+    {
+      "id": "laws-at-coarser-steps",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Sampling 的 sample、span 与跨读法之步的一步规律；停顿是它的逆方向。",
+        "en": "Reuses Sampling's sample, span and the laws of one step across a step of the reading; a stuttering is its converse direction."
+      },
+      "interface": {
+        "output": {
+          "zh": "经单调读法读世界。",
+          "en": "Reading a world through a monotone reading."
+        },
+        "input": {
+          "zh": "停顿的读法。",
+          "en": "Stuttering readings."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "laws-of-one-step",
+      "detail": {
+        "zh": "一步的规律：经停顿读时不变。",
+        "en": "The laws of one step: unchanged when read through a stuttering."
+      }
+    },
+    {
+      "id": "continuous-time-as-tower",
+      "detail": {
+        "zh": "连续时间作为越来越细的离散读法之塔；这里是相反方向：插入空步。",
+        "en": "Continuous time as a tower of ever-finer discrete readings; here the other direction: inserting idle steps."
+      }
+    },
+    {
+      "id": "exchanges-commute-unless-joined",
+      "detail": {
+        "zh": "同一模块：相继的独立交换的次序。",
+        "en": "The same module: the order of consecutive independent exchanges."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean",
+      "detail": {
+        "zh": "每步读两次时扩张不再无终地更多（Expansion.more_step_relative），储备需要加倍（Lapse.reserve_step_relative）。",
+        "en": "Read with every step twice, the expansion is no longer more without end (Expansion.more_step_relative), and the reserve must double (Lapse.reserve_step_relative)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "移除时每个原步的移动之步是给定的（Stutter.Moves）；意义谓词（§6.4 的条件所用者）的不变性没有证明；连续时间没有陈述；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
+    "en": "The moving step for each step read is supplied for the removal (Stutter.Moves); invariance of the significance predicates (those the condition of section 6.4 uses) is not shown; continuous time is not stated; the readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Order 的 266 项定理全部空依赖，其中含 Stutter、World.stutter_premises_iff、stutter_total、World.stutter_arisingRecurs_iff、World.stutter_counted、Flow.sample_not_more、Expansion.more_step_relative、Lapse.reserve_step_relative、World.withoutIdle、World.IdleAt、Stutter.Moves、Stutter.moving_unique、World.withoutIdle_premises、World.withoutIdle_transmits、World.withoutIdle_counted、World.withoutIdle_totals与 World.withoutIdle_counts；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §102；尚无独立审查。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 266 theorems of Becoming.Order all have empty axiom reports, among them Stutter, World.stutter_premises_iff, stutter_total, World.stutter_arisingRecurs_iff, World.stutter_counted, Flow.sample_not_more, Expansion.more_step_relative, Lapse.reserve_step_relative, World.withoutIdle, World.IdleAt, Stutter.Moves, Stutter.moving_unique, World.withoutIdle_premises, World.withoutIdle_transmits, World.withoutIdle_counted, World.withoutIdle_totals and World.withoutIdle_counts. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §102 of the integration note; there is no independent review yet."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdleRemoval.lean",
+      "role": "proof",
+      "sha256": "d9f61f76ba9ad70aa0ad453db9f846e177826c43a4a6462a7030f6fc60987fd0",
+      "declarations": [
+        "Becoming.Stutter.moving_unique",
+        "Becoming.Stutter.Moves",
+        "Becoming.Stutter.le_moving",
+        "Becoming.Stutter.idle_before_moving",
+        "Becoming.Stutter.moving_eq",
+        "Becoming.Stutter.every_step",
+        "Becoming.Web.sameAt_of_unmoved",
+        "Becoming.Flow.readAt",
+        "Becoming.World.IdleAt",
+        "Becoming.World.withoutIdle",
+        "Becoming.World.withoutIdle_sameAt",
+        "Becoming.World.withoutIdle_after",
+        "Becoming.World.withoutIdle_premises",
+        "Becoming.World.withoutIdle_transmits",
+        "Becoming.World.withoutIdle_counted",
+        "Becoming.World.withoutIdle_totals",
+        "Becoming.World.withoutIdle_counts"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean",
+      "role": "proof",
+      "sha256": "a5bb713a4cb5f4e7ff653af254484a0a56ef0c1583c60555099c5783b30416de",
+      "declarations": [
+        "Becoming.excess_self",
+        "Becoming.excess_add_right",
+        "Becoming.excess_of_sum",
+        "Becoming.Stutter",
+        "Becoming.Stutter.le_succ",
+        "Becoming.Stutter.mono",
+        "Becoming.Stutter.crossing",
+        "Becoming.Stutter.crosses",
+        "Becoming.Stutter.moving",
+        "Becoming.Stutter.le_self",
+        "Becoming.span_idle",
+        "Becoming.span_moves",
+        "Becoming.not_comesToBe_idle",
+        "Becoming.not_ceasesToBe_idle",
+        "Becoming.comesToBe_moves",
+        "Becoming.ceasesToBe_moves",
+        "Becoming.rise_idle",
+        "Becoming.fall_idle",
+        "Becoming.rise_moves",
+        "Becoming.fall_moves",
+        "Becoming.stutter_total",
+        "Becoming.Flow.taken_nil",
+        "Becoming.Flow.given_nil",
+        "Becoming.Flow.once_of_moves",
+        "Becoming.Flow.sample_idle_present",
+        "Becoming.Flow.sample_idle_take",
+        "Becoming.Flow.sample_idle_give",
+        "Becoming.Flow.sample_moves_mem",
+        "Becoming.Flow.sample_moves_take",
+        "Becoming.Flow.sample_moves_give",
+        "Becoming.Flow.sample_moves_taken",
+        "Becoming.Flow.sample_moves_given",
+        "Becoming.Flow.sample_idle_balancesOn",
+        "Becoming.Flow.sample_idle_dissipatesOn",
+        "Becoming.Flow.sample_idle_closedAt",
+        "Becoming.Flow.sample_idle_enclosed",
+        "Becoming.Flow.sample_idle_runsDownOn",
+        "Becoming.Flow.sample_moves_balancesOn_iff",
+        "Becoming.Flow.sample_moves_dissipatesOn_iff",
+        "Becoming.Flow.sample_moves_closedAt_iff",
+        "Becoming.Flow.sample_moves_runsDownOn_iff",
+        "Becoming.Flow.sample_moves_acting_iff",
+        "Becoming.Flow.sample_moves_taking_iff",
+        "Becoming.Flow.stutter_balances_iff",
+        "Becoming.Flow.stutter_dissipative_iff",
+        "Becoming.Flow.stutter_acting_iff",
+        "Becoming.Flow.stutter_taking_iff",
+        "Becoming.Flow.stutter_taken",
+        "Becoming.Flow.stutter_given",
+        "Becoming.stutter_recurs_iff",
+        "Becoming.stutter_risen",
+        "Becoming.stutter_fallen",
+        "Becoming.stutter_rise_count",
+        "Becoming.stutter_fall_count",
+        "Becoming.stutter_comings",
+        "Becoming.stutter_ceasings",
+        "Becoming.Web.stutter_dependent_iff",
+        "Becoming.Web.stutter_embodied_iff",
+        "Becoming.Flow.sample_idle_not_descends",
+        "Becoming.Flow.sample_moves_descends_iff",
+        "Becoming.Flow.stutter_transmitsWithin_iff",
+        "Becoming.recurs_shape",
+        "Becoming.World.stutter_premises_iff",
+        "Becoming.World.stutter_counted_of_section",
+        "Becoming.World.stutter_arisingRecurs_iff",
+        "Becoming.World.stutter_ceasingRecurs_iff",
+        "Becoming.World.stutter_change_recurs_iff",
+        "Becoming.Flow.sample_idle_takers",
+        "Becoming.Flow.sample_not_more",
+        "Becoming.Web.sample_idle_not_carries",
+        "Becoming.Order.Halving.steps_",
+        "Becoming.Order.Halving.stutter",
+        "Becoming.Order.Halving.idles",
+        "Becoming.Expansion.kind_decided",
+        "Becoming.Expansion.more_step_relative",
+        "Becoming.Lapse.web",
+        "Becoming.Lapse.reserve",
+        "Becoming.Lapse.unsupported",
+        "Becoming.Lapse.carried",
+        "Becoming.Lapse.stuttered_reserve",
+        "Becoming.Lapse.reserve_step_relative"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "declarations": [
+        "Becoming.succ_sub_self",
+        "Becoming.total_steps_add"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "role": "proof",
+      "sha256": "9d27490407360695af1bbbf9008b20ed9c42eeae3c749a38d9a53cb4480c7744",
+      "declarations": [
+        "Becoming.Flow.sample",
+        "Becoming.Web.sample",
+        "Becoming.World.sample",
+        "Becoming.Flow.BalancesOn.sample",
+        "Becoming.Flow.DissipatesOn.sample",
+        "Becoming.World.sample_counted"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md",
+      "role": "provenance",
+      "sha256": "f3e5885ed960640cf3773813e7e02f6869ca2884b3730a2ea683c0686c03a8f3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Sampling",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdleRemoval.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.IdleRemoval",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Stuttering",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "en": "Prove the invariance of the significance predicates (those the condition of section 6.4 uses) under stuttering; derive the moving steps where activity is decided.",
+    "zh": "证明意义谓词（§6.4 的条件所用者）在停顿下的不变性；活动可判定时推出移动之步。"
+  },
+  "history": [
+    {
+      "zh": "2026-10-13：接续并整合 P78 的现存证明包；见整合文档 §102。",
+      "en": "2026-10-13: resumed and integrated the existing P78 proof package; see §102 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“只有变化的次序被登记：插入或移除空步不改变一步的规律、段上的总量与计数以及复现；每步所计的（速率、储备承载多久）相对于读法的单位”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “Only the order of change registers: inserting or removing idle steps leaves the laws of one step, the totals and counts over a stretch, and recurrence unchanged; what is counted per step, rates and how long a reserve carries, is relative to the unit of the reading”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D30）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D30): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "zh": "2026年10月16日，P128（Ren：把第二部分折叠进第一部分，作为生成的空间之后的一个条件小节，[来源](../../../../sources/15-codex-theory-conversations/2026-10-16-fold-part-ii.md)）：此前说“第二部分”断言公理或 G0 为第二部分定理之处，改为“以那一条公理为条件”，指向章节 §6.15；理论不断言这一条件。断言、证明与证据不变。",
+      "en": "16 October 2026, P128 (Ren: fold Part II into Part I as one conditional section after the generative space, [source](../../../../sources/15-codex-theory-conversations/2026-10-16-fold-part-ii.md)): where this record said Part II asserts the axiom or G0 is a theorem of Part II, it now says “with the one axiom as a condition” and points to chapter section 6.15; the theory does not assert the condition. The claim, proofs and evidence are unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. Changed by the pass, in docstrings or prose only: Order.lean, THE-THEORY-OF-BECOMING.md. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Halving.idles (now Order.Halving.idles); Halving.steps_ (now Order.Halving.steps_); Halving.stutter (now Order.Halving.stutter). Proof bindings (Order.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Order.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：Halving.idles（现为 Order.Halving.idles）；Halving.steps_（现为 Order.Halving.steps_）；Halving.stutter（现为 Order.Halving.stutter）。证明绑定（Order.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Order.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R31 (layers and one prelude: the ethics out of the general import closure, one law module, one prelude, Order split): Moved with their full names: from Order.lean to IdleRemoval.lean, Flow.readAt, Stutter.Moves, Stutter.every_step, Stutter.idle_before_moving, Stutter.le_moving, Stutter.moving_eq, Stutter.moving_unique, Web.sameAt_of_unmoved, World.IdleAt, World.withoutIdle, World.withoutIdle_after, World.withoutIdle_counted, World.withoutIdle_counts, World.withoutIdle_premises, World.withoutIdle_sameAt, World.withoutIdle_totals, World.withoutIdle_transmits; from Order.lean to Prelude.lean, succ_sub_self; from Order.lean to Stuttering.lean, Expansion.kind_decided, Expansion.more_step_relative, Flow.given_nil, Flow.once_of_moves, Flow.sample_idle_balancesOn, Flow.sample_idle_closedAt, Flow.sample_idle_dissipatesOn, Flow.sample_idle_enclosed, Flow.sample_idle_give, Flow.sample_idle_not_descends, Flow.sample_idle_present, Flow.sample_idle_runsDownOn, Flow.sample_idle_take, Flow.sample_idle_takers, Flow.sample_moves_acting_iff, Flow.sample_moves_balancesOn_iff, Flow.sample_moves_closedAt_iff, Flow.sample_moves_descends_iff, Flow.sample_moves_dissipatesOn_iff, Flow.sample_moves_give, Flow.sample_moves_given, Flow.sample_moves_mem, Flow.sample_moves_runsDownOn_iff, Flow.sample_moves_take, Flow.sample_moves_taken, Flow.sample_moves_taking_iff, Flow.sample_not_more, Flow.stutter_acting_iff, Flow.stutter_balances_iff, Flow.stutter_dissipative_iff, Flow.stutter_given, Flow.stutter_taken, Flow.stutter_taking_iff, Flow.stutter_transmitsWithin_iff, Flow.taken_nil, Lapse.carried, Lapse.reserve, Lapse.reserve_step_relative, Lapse.stuttered_reserve, Lapse.unsupported, Lapse.web, Order.Halving.idles, Order.Halving.steps_, Order.Halving.stutter, Stutter, Stutter.crosses, Stutter.crossing, Stutter.le_self, Stutter.le_succ, Stutter.mono, Stutter.moving, Web.sample_idle_not_carries, Web.stutter_dependent_iff, Web.stutter_embodied_iff, World.stutter_arisingRecurs_iff, World.stutter_ceasingRecurs_iff, World.stutter_change_recurs_iff, World.stutter_counted, World.stutter_counted_of_section, World.stutter_premises_iff, ceasesToBe_moves, comesToBe_moves, excess_add_right, excess_of_sum, excess_self, fall_idle, fall_moves, not_ceasesToBe_idle, not_comesToBe_idle, recurs_shape, rise_idle, rise_moves, span_idle, span_moves, stutter_ceasings, stutter_comings, stutter_fall_count, stutter_fallen, stutter_recurs_iff, stutter_rise_count, stutter_risen, stutter_total, total_steps_add. The canonical source Order.lean was split; it is now Stuttering.lean. The evidence and counterexample paths that named Order.lean name Stuttering.lean (the split part holding what they cite). Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 222 added; THE-THEORY-OF-BECOMING.md, §9 (layers by a checkable property, the module table, receipt, counts) follows R31. The claim is unchanged.",
+      "zh": "2026年10月20日，R31（层与一个前导：伦理移出一般导入闭包、一个律模块、一个前导、Order 拆分）：连同完整名称移动：从 Order.lean 到 IdleRemoval.lean：Flow.readAt、Stutter.Moves、Stutter.every_step、Stutter.idle_before_moving、Stutter.le_moving、Stutter.moving_eq、Stutter.moving_unique、Web.sameAt_of_unmoved、World.IdleAt、World.withoutIdle、World.withoutIdle_after、World.withoutIdle_counted、World.withoutIdle_counts、World.withoutIdle_premises、World.withoutIdle_sameAt、World.withoutIdle_totals、World.withoutIdle_transmits；从 Order.lean 到 Prelude.lean：succ_sub_self；从 Order.lean 到 Stuttering.lean：Expansion.kind_decided、Expansion.more_step_relative、Flow.given_nil、Flow.once_of_moves、Flow.sample_idle_balancesOn、Flow.sample_idle_closedAt、Flow.sample_idle_dissipatesOn、Flow.sample_idle_enclosed、Flow.sample_idle_give、Flow.sample_idle_not_descends、Flow.sample_idle_present、Flow.sample_idle_runsDownOn、Flow.sample_idle_take、Flow.sample_idle_takers、Flow.sample_moves_acting_iff、Flow.sample_moves_balancesOn_iff、Flow.sample_moves_closedAt_iff、Flow.sample_moves_descends_iff、Flow.sample_moves_dissipatesOn_iff、Flow.sample_moves_give、Flow.sample_moves_given、Flow.sample_moves_mem、Flow.sample_moves_runsDownOn_iff、Flow.sample_moves_take、Flow.sample_moves_taken、Flow.sample_moves_taking_iff、Flow.sample_not_more、Flow.stutter_acting_iff、Flow.stutter_balances_iff、Flow.stutter_dissipative_iff、Flow.stutter_given、Flow.stutter_taken、Flow.stutter_taking_iff、Flow.stutter_transmitsWithin_iff、Flow.taken_nil、Lapse.carried、Lapse.reserve、Lapse.reserve_step_relative、Lapse.stuttered_reserve、Lapse.unsupported、Lapse.web、Order.Halving.idles、Order.Halving.steps_、Order.Halving.stutter、Stutter、Stutter.crosses、Stutter.crossing、Stutter.le_self、Stutter.le_succ、Stutter.mono、Stutter.moving、Web.sample_idle_not_carries、Web.stutter_dependent_iff、Web.stutter_embodied_iff、World.stutter_arisingRecurs_iff、World.stutter_ceasingRecurs_iff、World.stutter_change_recurs_iff、World.stutter_counted、World.stutter_counted_of_section、World.stutter_premises_iff、ceasesToBe_moves、comesToBe_moves、excess_add_right、excess_of_sum、excess_self、fall_idle、fall_moves、not_ceasesToBe_idle、not_comesToBe_idle、recurs_shape、rise_idle、rise_moves、span_idle、span_moves、stutter_ceasings、stutter_comings、stutter_fall_count、stutter_fallen、stutter_recurs_iff、stutter_rise_count、stutter_risen、stutter_total、total_steps_add。规范来源 Order.lean 已拆分，现为 Stuttering.lean。提到 Order.lean 的证据与反例路径改提 Stuttering.lean（拆分后持有所引内容的部分）。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 222 节；THE-THEORY-OF-BECOMING.md，§9（以可检查性质定义的层、模块表、回执、计数）随 R31。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: World.stutter_counted (now World.sample_counted). The sentences that named removed declarations name the kept ones. Proof bindings (Prelude.lean, Sampling.lean, Stuttering.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept; Sampling.lean, takes as its final section ExchangeFlows, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Stuttering.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：作为纯转发删去（各自只把一条律应用于自己的约束变量），改提该律：World.stutter_counted（现为 World.sample_counted）。提到删去之声明的句子改提保留者。证明绑定（Prelude.lean、Sampling.lean、Stuttering.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Prelude.lean，十二条原先在两个或更多模块中各自陈述的命题，在此以保留的名称陈述一次；Sampling.lean，以末节收入 ExchangeFlows（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；Stuttering.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 34 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/5ddf3f3c34e25235/only-the-order-of-change-registers.json and in git.",
+      "zh": "2026-10-20：34 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/5ddf3f3c34e25235/only-the-order-of-change-registers.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R36 (the chapter, once): the canonical chapter was restructured, its 20 October edition frozen in theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md; this record's citations of the old section numbering re-pointed by content (section 6.15 to 6.4). The claim is unchanged.",
+      "zh": "2026年10月20日，R36（本章只陈述一次）：规范章节重排，10月20日版冻结于 theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md；本记录对旧节号的引用按内容重指（§6.15 改为 §6.4）。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Stuttering.lean to Prelude.lean, total_steps_add. Proof bindings (Prelude.lean, Sampling.lean, Stuttering.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged; Sampling.lean, Stuttering.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Stuttering.lean 到 Prelude.lean：total_steps_add。证明绑定（Prelude.lean、Sampling.lean、Stuttering.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变；Sampling.lean、Stuttering.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the statement names the conditions the Lean takes, which it omitted (for inserting idle steps, relata compared decidedly and listed once at each step; for removing them, the moving steps supplied and neither of those; activity decided for counts of arising and ceasing), and no longer says that removal keeps recurrence, which is proved for insertion only; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明 Lean 所需、此前遗漏的条件（插入空步时关系项之相等可判定且每步各列一次；移除空步时移动之步给定，不需这两个条件；生起与止息之计数需活动已判定），并不再说移除空步保持复现（复现只对插入得证）；主张不变。"
+    }
+  ],
+  "former_ids": [
+    "only-the-order-of-change-registers"
+  ]
+}

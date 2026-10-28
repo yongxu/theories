@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "id": "draws-on-a-shared-stock",
+  "title": {
+    "zh": "共享存量上的汲取：每种组合都在存量之内，当且仅当总和在内",
+    "en": "Draws on one shared stock: every combination fits exactly when the total does"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F02",
+  "reviewed_at_utc": "2026-10-25T14:47:38+00:00",
+  "statement": {
+    "en": "Draws on one listed domain fit within a bound in every combination exactly when their total does; each draw fitting alone does not make them fit together.",
+    "zh": "一个列出之域上的汲取，每种组合都在界内，恰当其总和在界内；每项单独在内不使它们共同在内。"
+  },
+  "claim": {
+    "zh": "前 n 项以自然数给出的汲取中，每一种组合都在存量之内，当且仅当它们的总和在存量之内。",
+    "en": "Of the first n draws, given as natural numbers, every combination fits within the stock exactly when their total does."
+  },
+  "hypotheses": [
+    {
+      "zh": "汲取是可相加的自然数；存量是它们共同汲取的同一个量。",
+      "en": "The draws are natural numbers that add; the stock is the one quantity they all draw on."
+    }
+  ],
+  "correspondence": {
+    "zh": "在源模型中，每项汲取是一项活动无过渡损失地停止所需的工作，存量是为此留出的部分。这些数不是一般的价值度量；与实际活动和存量的对应需另行核实。",
+    "en": "In the source model, each draw is the work an activity needs to stop without its transition loss, and the stock is what is set aside for that work. The numbers are not a general measure of value; their correspondence to actual activities and stocks needs separate evidence."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+  "aliases": [
+    "CorrectionDependence.every_selection_within_iff_total_within",
+    "aggregate-exit-funding",
+    "Becoming.every_event_within_iff",
+    "Becoming.entries_within_not_together",
+    "Becoming.Courses.supported_not_together"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "exclusive-footprint-support",
+      "detail": {
+        "zh": "支持身份与可加总量不同，没有已证通用转换。",
+        "en": "Support identity differs from additive quantity; no verified general adapter."
+      }
+    },
+    {
+      "id": "joint-plan-composition",
+      "detail": {
+        "zh": "静态总量条件不提供动态方案的观察与作用覆盖。",
+        "en": "A static total does not supply a dynamic plan’s observation and effect coverage."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/CorrectionDependence.lean",
+      "detail": {
+        "zh": "每项单独在内不推出共同在内：两项各为二单位的汲取可以竞争同一个二单位的存量。",
+        "en": "Each draw fitting alone does not make them fit together: two draws of two units each can compete for one stock of two."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "每项单独在内不推出共同在内：两项各为二单位的汲取可以竞争同一个二单位的存量。",
+    "en": "Each draw fitting alone does not make them fit together: two draws of two units each can compete for one stock of two."
+  },
+  "validation_scope": {
+    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
+    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
+  },
+  "references": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/CorrectionDependence.lean",
+      "role": "proof",
+      "sha256": "617c943602727dc63eb03cf2bf635319749a9420f6c814ac5a1884aff091605c",
+      "declarations": [
+        "CorrectionDependence.every_selection_within_iff_total_within",
+        "CorrectionDependence.each_within_alone_not_together"
+      ]
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/correction-dependence-verification.json",
+      "role": "receipt",
+      "sha256": "5f014fc249209cbfa03c765a4b2a4655687eaa5be40f9bc9ef571e3919d73f60",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md",
+      "role": "provenance",
+      "sha256": "a896df0f8f85139ab323dcb97878b86b2ab3d4c897e4587e15f4ca8b8f7e9017",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+      "role": "proof",
+      "sha256": "0a73e620d493cadc46e730187cf7c02f948df35b1b1ef91e0b78e7d96ee9b81c",
+      "declarations": [
+        "Becoming.mass",
+        "Becoming.every_event_within_iff",
+        "Becoming.entries_within_not_together"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/SharedStockInstances.lean",
+      "role": "proof",
+      "sha256": "c936534c823952bbc76f7f8fbc8fde6d0e71183941cbfc09b05f1f7e5c4b4d2a",
+      "declarations": [
+        "SharedStockInstances.firstDraws",
+        "SharedStockInstances.selectedTotal_eq_mass",
+        "SharedStockInstances.total_eq_mass",
+        "SharedStockInstances.every_selection_within_iff_total_within",
+        "SharedStockInstances.each_within_alone_not_together"
+      ]
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261015T151857.892080Z/verification.json",
+      "role": "receipt",
+      "sha256": "374eeb9102eda60722d4fd72f5683e5b583af740f44f3f55f5c3744819170036",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/check_shared_stock_instances.py",
+      "role": "provenance",
+      "sha256": "bfe2daa6dd403e50b3a35fac92535c15c7db0d35aeae9b6436395201ad6e4336",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "role": "proof",
+      "sha256": "72fd570fa32c3fc6bd0458f4b0793bb7ce9365f7b1276aaddf323ca05b2afc86",
+      "declarations": [
+        "Becoming.Courses.supported_not_together",
+        "Becoming.Courses.twoDrawers"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
+      "role": "receipt",
+      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261020T161930.665727Z/verification.json",
+      "role": "receipt",
+      "sha256": "e457f4ae2a3f763a378e0070b25fc175a9daeb628370f6ac1ee9fd62c5018341",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/market-generativity/meta-attractor/CorrectionDependence.lean",
+      "receipt": "experiments/market-generativity/meta-attractor/correction-dependence-verification.json",
+      "sha256_pointer": "/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Weighted",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/market-generativity/meta-attractor/SharedStockInstances.lean",
+      "receipt": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261020T161930.665727Z/verification.json",
+      "sha256_pointer": "/source_sha256/SharedStockInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Courses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "汲取在同一共享存量上相加之处可直接复用；其他支持类型需明确转换或另证。",
+    "en": "Reuse wherever draws add on one shared stock; other kinds of support need a stated translation or a separate proof."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
+      "en": "2026-10-08: migrated existing result identity and scope; no new theorem or relocated source."
+    },
+    {
+      "zh": "2026-10-10：按 Ren 的要求以描述结构的词重述（原题“可加退出承担的共同资金界”）；主张、证明与回执不变。",
+      "en": "2026-10-10: restated in words that describe the structure, at Ren's request (formerly “Joint funding of additive exit obligations”); claim, proof and receipt unchanged."
+    },
+    {
+      "zh": "2026-10-10：按 Ren 的要求改用描述结构的内部名称：记录 ID 由 aggregate-exit-funding 改为 draws-on-a-shared-stock（旧 ID 留作别名，以便历史检查仍能找到），Lean 定理 all_coalitions_funded_iff_joint_total 与 individually_affordable_exits_can_fail_jointly 改名为 every_selection_within_iff_total_within 与 each_within_alone_not_together，参数 claims、reserve 改为 draws、stock；两项 Lean 检查重新运行并通过，证明内容不变。",
+      "en": "2026-10-10: internal names restated in structural words at Ren's request. The record ID aggregate-exit-funding became draws-on-a-shared-stock, with the old ID kept as an alias so historical checks still resolve; the Lean theorems all_coalitions_funded_iff_joint_total and individually_affordable_exits_can_fail_jointly became every_selection_within_iff_total_within and each_within_alone_not_together, with parameters claims and reserve renamed draws and stock. Both Lean checks were rerun and passed; the proofs are unchanged."
+    },
+    {
+      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：在网的一步，对一个列出的形成家族，每种选取在一个条件上的需要都在该条件水平之内，恰当整个家族的需要在内（selections_within_iff）；网 twoDrawers 中每个形成在步 0 都被支持，两者的需要合起来却超出条件的水平（supported_not_together）。Becoming.Courses 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
+      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: at a step of a web, for a listed family of formations, the needs on one condition of every selection are within the condition's level exactly when the needs of the whole family are (selections_within_iff); in the web twoDrawers each formation is supported at step 0 while their needs together exceed the level (supported_not_together). Becoming.Courses is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Courses.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Courses.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Courses.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean, Weighted.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Weighted.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Courses.lean、Weighted.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Courses.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Weighted.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: Courses.selections_within_iff (now every_event_within_iff). Proof bindings (Courses.lean, Weighted.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Courses.lean, takes as its final sections RetrodictionRuns, CandidateRuns, ReducedRuns, the modules reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Weighted.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：作为纯转发删去（各自只把一条律应用于自己的约束变量），改提该律：Courses.selections_within_iff（现为 every_event_within_iff）。证明绑定（Courses.lean、Weighted.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：Courses.lean，以末节收入 RetrodictionRuns、CandidateRuns、ReducedRuns（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；Weighted.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 7 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/47dc93ea7d0babcc/draws-on-a-shared-stock.json and in git.",
+      "zh": "2026-10-20：7 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/47dc93ea7d0babcc/draws-on-a-shared-stock.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): canonical source moved from the periphery module (experiments/market-generativity/meta-attractor/CorrectionDependence.lean) to the core law in Becoming.Weighted, which states it for every event of a listed domain; statement added; in the claim \"every selection\" became \"every combination\", as in the statement, selection being the word for what goes through couplings.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：规范来源由外围模块移至 Becoming.Weighted 中的核心规律，后者对列出之域的每个事件陈述它；新增陈述；主张中“每一种选取”改为“每一种组合”，与陈述一致，“选择”一词留给经耦合而行者。"
+    }
+  ]
+}

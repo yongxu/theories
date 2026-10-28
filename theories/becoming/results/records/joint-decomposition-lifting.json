@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "joint-decomposition-lifting",
   "title": {
     "zh": "从整体代码提升共同分解",
@@ -8,21 +8,85 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-25T14:30:08+00:00",
+  "reviewed_at_utc": "2026-10-28T05:47:54+00:00",
   "statement": {
     "en": "The parts a description reads together lift from every configuration it describes exactly where configurations it identifies match parts into ones it identifies, with no premise; through a code reading the joint tests exactly and reducedly they lift where pairs of parts are compact and tests stable.",
     "zh": "一个描述合读的诸部分，从它所描述的每个构形提升，恰当它所认同的构形把部分匹配到它所认同的构形，不加前提；经由精确且约化地读出共同检验的编码，在部分之对紧致且检验稳定之处它们提升。"
   },
-  "claim": {
-    "zh": "一个描述把共同关系读作描述之间的关系：凡有如此被描述的构形把如此被描述的部分合在一起。它在一个描述处所读的部分，从它所描述的每个构形、以它同样描述的部分提升，恰当它所认同的构形把部分匹配到它所认同的构形；它所认同的恰是某关系所关联的构形时，恰当该关系匹配部分。不加前提。所以，经由恰认同共同相似构形的描述，诸部分提升，不加前提；经由恰认同通过相同共同检验之构形的描述，在部分之对紧致且检验稳定之处提升；经由精确读出共同检验、并给通过相同检验之构形同一编码的编码，在同样两条下提升，得同一编码的构形于是匹配部分。稳定性正是排中律会给出的：排中律使每个共同检验稳定；而在每个部分之对紧致的框中“通过相同共同检验即匹配部分”恰在排中律下成立。",
-    "en": "A description reads the joint relation among descriptions where some configuration so described holds together parts so described. The parts it reads at a description lift from every configuration it describes, with parts it describes alike, exactly where configurations it identifies match parts into configurations it identifies; where it identifies exactly the configurations some relation relates, exactly where that relation matches parts. No premise. So the parts lift through a description identifying exactly the jointly alike configurations, with no premise; through one identifying exactly the configurations passing the same joint tests, where the pairs of parts are compact and the tests stable; and through a code reading the joint tests exactly and giving configurations passing the same tests one code, under the same two conditions, configurations given one code then matching parts. Stability is what excluded middle would give: excluded middle makes every joint test stable, and that passing the same joint tests matches parts in every frame whose pairs of parts are compact holds exactly under excluded middle."
-  },
+  "laws": [
+    {
+      "en": "A description reads the joint relation among descriptions where some configuration it so describes holds together parts it so describes; the parts lift from every configuration it describes where each pair read at that configuration's description is held together by the configuration with parts it describes alike.",
+      "zh": "一个描述把共同关系读作描述之间的关系：凡有如此被描述的构形把如此被描述的部分合在一起。诸部分从它所描述的每个构形提升，是指在该构形的描述处所读的每对部分，都由该构形以它同样描述的部分合在一起。",
+      "declarations": [
+        "Becoming.jointImage",
+        "Becoming.LiftsFromEach"
+      ]
+    },
+    {
+      "en": "A relation matches parts where, for any two configurations it relates, each pair of parts the first holds together is matched by a pair the second holds together, related part by part. The parts lift through a description exactly where having one description matches parts, and, where it identifies exactly the configurations some relation relates, exactly where that relation matches parts; no premise.",
+      "zh": "一个关系匹配部分，是指对它所关联的任意两个构形，前者合持的每对部分都有后者合持的一对与之逐部分相关。诸部分经一个描述提升，恰当具有同一描述匹配部分；它所认同的恰是某关系所关联的构形时，恰当该关系匹配部分；不加前提。",
+      "declarations": [
+        "Becoming.MatchesParts",
+        "Becoming.liftsFromEach_iff",
+        "Becoming.liftsFromEach_iff_of_kernel"
+      ]
+    },
+    {
+      "en": "Through a description identifying exactly the jointly alike configurations the parts lift, with no premise; through one identifying exactly the configurations passing the same joint tests they lift where the pairs of parts each configuration holds together are compact for pairs of joint tests and every joint test holds wherever it cannot fail.",
+      "zh": "经由恰认同共同相似构形的描述，诸部分提升，不加前提；经由恰认同通过相同共同检验之构形的描述，在每个构形合持的部分之对对共同检验之对紧致、且每个共同检验在不可能不成立处成立时提升。",
+      "declarations": [
+        "Becoming.JointAlike",
+        "Becoming.IdentifiesJointAlike",
+        "Becoming.IdentifiesJointAlike.lifts",
+        "Becoming.SameJointTests",
+        "Becoming.JointFrame.JointCompact",
+        "Becoming.JointFrame.TestsStable",
+        "Becoming.liftsFromEach_of_sameJointTests"
+      ]
+    },
+    {
+      "en": "Under the same two conditions, through a code reading the joint tests exactly and giving configurations passing the same joint tests one code, the parts lift from every configuration it describes, and configurations given one code match parts into configurations given one code.",
+      "zh": "在同样两条下，经由精确读出共同检验、并给通过相同共同检验之构形同一编码的编码，诸部分从它所描述的每个构形提升，得同一编码的构形把部分匹配到得同一编码的构形。",
+      "declarations": [
+        "Becoming.liftsFromEach_of_exact",
+        "Becoming.matchesParts_of_exact"
+      ]
+    },
+    {
+      "en": "Excluded middle makes every joint test stable; and that configurations passing the same joint tests match parts into such configurations, in every joint frame with one move and one claim whose pairs of parts are compact, holds exactly under excluded middle, every proposition decided.",
+      "zh": "排中律使每个共同检验稳定；而在每个只有一个动作与一个主张、部分之对紧致的共同框中，“通过相同共同检验的构形把部分匹配到这样的构形”恰在排中律（每个命题皆可判定）下成立。",
+      "declarations": [
+        "Becoming.JointFrame.TestsStable.of_em",
+        "Becoming.matchesParts_of_compact_iff_em"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "liftsFromEach_iff 与 IdentifiesJointAlike.lifts 不加前提。经共同检验与经编码的形式取 JointCompact（每个构形合持的部分之对对共同检验之对紧致）与 TestsStable（每个共同检验在不可能不成立处成立）；编码形式另取 Exact 与 Reduced。",
       "en": "No premise for liftsFromEach_iff and IdentifiesJointAlike.lifts. The forms through the joint tests and through a code take JointCompact (the pairs of parts each configuration holds together are compact for pairs of joint tests) and TestsStable (every joint test holds wherever it cannot fail); the code forms also take Exact and Reduced."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Lifting gives some parts described alike, not the substitution of designated parts or the duplication of support.",
+      "zh": "提升给出同样被描述的某些部分，不保证任意指定的部分可以替换，也不保证重复使用同一支持。",
+      "kind": "non-implication",
+      "witness": "Becoming.LiftsFromEach"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker: Becoming.Composition, Becoming.JointCorrespondence and Becoming.Likeness are bound to receipts in becoming/becoming-checks, and every cited declaration has an empty axiom report, excluded middle appearing in statements, never as an axiom. The periphery's earlier form (deeper/ExplanatoryJointness, its receipt in deeper/explanatory-jointness-checks) had one sufficient direction; it is a provenance reference.",
+    "zh": "合并核心检查器实查：Becoming.Composition、Becoming.JointCorrespondence 与 Becoming.Likeness 绑定 becoming/becoming-checks 中的回执，所引声明公理报告全空，排中律只出现在陈述中，不作为公理。外围的早先形式（deeper/ExplanatoryJointness，其回执在 deeper/explanatory-jointness-checks）只有一个充分方向；它为来源引用。"
+  },
+  "next_delta": {
+    "en": "Lift decompositions whose parts share or duplicate support, or whose designated parts must be substituted, with the conditions stated as hypotheses.",
+    "zh": "提升部分共享或重复使用支持、或须替换指定部分的分解，其条件写为假设。"
+  },
   "correspondence": {
     "zh": "整体、代码与成对关系的解释是给定的，不假设所有物理实现满足紧致性。",
     "en": "The whole/code/joint interpretation is supplied; universal physical compactness is not assumed."
@@ -40,23 +104,6 @@
   ],
   "dependencies": [],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJointness.lean",
-      "detail": {
-        "zh": "提升存在部分，不保证任意指定的部分可以替换或重复使用同一支持。",
-        "en": "Lifting provides some parts, not arbitrary substitution of designated parts or duplication of support."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "提升存在部分，不保证任意指定的部分可以替换或重复使用同一支持。",
-    "en": "Lifting provides some parts, not arbitrary substitution of designated parts or duplication of support."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJointness.lean",
@@ -102,7 +149,9 @@
         "Becoming.JointFrame.TestsStable",
         "Becoming.liftsFromEach_of_sameJointTests",
         "Becoming.JointFrame.TestsStable.of_em",
-        "Becoming.matchesParts_of_compact_iff_em"
+        "Becoming.matchesParts_of_compact_iff_em",
+        "Becoming.JointAlike",
+        "Becoming.SameJointTests"
       ]
     },
     {
@@ -154,6 +203,20 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "role": "proof",
+      "sha256": "c2ce8ed970473ced65a6addb9ef5ff6a0a994f33507d2d24316a7f79888858e1",
+      "declarations": [
+        "Becoming.MatchesParts"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "role": "receipt",
+      "sha256": "18d5d8f742017f011cc1df59d6be80b1b3e0a46441e7127a0d784dfed1a5fd0b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -170,12 +233,15 @@
       "sha256_pointer": "/source_sha256/Becoming.JointCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Likeness",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "以经描述实现计划（joint-code-plan-lifting）为递归计划的每节点接口。",
-    "en": "Reuse the realization of plans through a description (joint-code-plan-lifting) as the per-node interface for recursive plans."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -200,6 +266,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws: lifting through a description exactly where configurations it identifies match parts, with no premise; through the joint tests and through a code where the pairs of parts are compact and the tests stable (stability was missing from the premises; without it excluded middle is exactly what is needed). Aliases now the core names; the earlier aliases Generative.ExplanatoryJointness.code_joint_lifts_from_whole (periphery module) and Becoming.code_joint_lifts_from_whole_of_stable (retired module) are recorded here (their declarations stay in the provenance references). The next step names the plan lifting.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，主张依核心定律重述：经描述提升恰当它所认同的构形匹配部分，不加前提；经共同检验与经编码，在部分之对紧致且检验稳定之处提升（前提原缺稳定性；无之则恰需排中律）。别名改为核心之名；原别名 Generative.ExplanatoryJointness.code_joint_lifts_from_whole (periphery module) 与 Becoming.code_joint_lifts_from_whole_of_stable (retired module) 记于此（其声明仍在来历引用中）。下一步指向计划之提升。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): statement and hypotheses kept; the claim split into five laws, each read against its declarations in Becoming.Composition, Becoming.JointCorrespondence and Becoming.Likeness; the limitation to one does-not-show item and the standard boundary no-ethical-premise; MatchesParts, which the claim used in words, added with a new reference to Likeness.lean, its receipt 20261027T195912.152773Z (the newest passing receipt binding the file's current bytes) and a proof binding, and JointAlike and SameJointTests added to the Composition.lean reference; validation scope rewritten on the bound core receipts, replacing the 8 October migration's note (history entry 0). No premise, status or existing source hash changed. Every earlier sentence is mapped in [joint-decomposition-lifting.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-decomposition-lifting.md); the exact earlier record is the first text_versions entry. A cold read of the applied record was taken in the next step, the counterexample (removed, as no declaration witnesses it).",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：陈述与前提保留；主张拆为五条规律，各条对照其在 Becoming.Composition、Becoming.JointCorrespondence 与 Becoming.Likeness 中的声明核读；限制改为一条“未表明”与通用边界 no-ethical-premise；主张以文字用到的 MatchesParts 随新引用 Likeness.lean、其回执 20261027T195912.152773Z（绑定该文件当前字节的最新通过回执）与一条证明绑定加入，JointAlike 与 SameJointTests 加入 Composition.lean 的引用；检查范围按所绑核心回执改写，取代 10 月 8 日迁移的说明（第一条沿革）。前提、状态与已有来源哈希均未改变。每句旧文本的去向见 [joint-decomposition-lifting.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-decomposition-lifting.md)；迁移前的完整记录为 text_versions 首项。对已应用记录的通读意见已采纳，涉及下一步、反例（删去，无声明为其见证）。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/5f20a3815242fd71/joint-decomposition-lifting.json",
+      "sha256": "5f20a3815242fd719b28794ce02539e58b2a24950851d81739d43a855915ecd5",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/12b4256f02b2352c/joint-decomposition-lifting.json",
+      "sha256": "12b4256f02b2352c491075db8a42ce4ee6f09c9cb42c4d669684b7cfba5ec467",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

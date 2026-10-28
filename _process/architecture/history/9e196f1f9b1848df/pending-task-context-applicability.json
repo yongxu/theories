@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "id": "pending-task-context-applicability",
+  "title": {
+    "zh": "在途任务的适用条件与有支持接续",
+    "en": "Pending-task applicability and supported continuation"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F03",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "zh": "对每个存量，一串汲取可执行，恰当每次汲取都在当时所立的存量之内。审查汲取一个工作单位、行动两个时，端点恰当其报告排除相关风险且至少有三个单位时完成二者；报告未排除风险的审查保持损失计数。",
+    "en": "A course of draws on a stock is executable exactly when each draw is within the stock then standing. Review drawing one unit of work and action two, an endpoint completes both exactly when its report clears the relevant risk and it holds at least three units; reviews not cleared keep the loss count."
+  },
+  "claim": {
+    "zh": "对每个存量，一段取用进程可执行，恰当每次取用都在当时的存量之内。审查取一单位工作、行动取两单位，所以审查与行动的进程恰从三单位当前工作起被覆盖；端点完成审查与行动，恰当报告排除相关风险且其工作覆盖该进程；拒绝或耗尽保留未完成任务及已用的工作。经审查的损失：对每个条件、报告与待完成端点，审查增加一次损失，恰当报告排除相关风险、工作覆盖该进程，而所交付实践的相关风险（其作用规律的损失条件）实际成立；报告未排除相关风险的每次审查都保持损失计数（门控改变之律的实例），由这样的审查组成的每段进程亦然。所以覆盖效果时刻条件的报告防止所表示做法的新增损失。取用一单位工作的相关条件审查消耗实际交付的修订。协议自身给出两条作用规律，因而给出哪种风险相关。学习分支允许另两个情境字段改变；行动保护不蕴含持续的比较根据。",
+    "en": "For every stock, a course of draws is executable exactly when each draw is within the stock then standing. Review draws one unit of work and action two, so the review-and-action course is covered exactly from three current units, and an endpoint completes its review and action exactly when the report clears the relevant risk and its work covers that course; refusal or exhaustion retains the unfinished task and the work already used. Loss through review: for every condition, report and pending endpoint, a review adds one loss exactly when the report clears the relevant risk, the work covers that course and the delivered practice’s relevant risk, its outcome law’s loss condition, actually holds; every review whose report does not clear the relevant risk keeps the loss count (an instance of the gated-change law), and so does every course of such reviews. So a covered report, one covering effect-time conditions, prevents added represented practice loss. Relevant-condition review, using one unit of work, consumes the actually delivered revision. The protocol itself supplies the two outcome laws and so which risk is relevant. The learning branch admits changes to the other two context fields; action protection does not imply continued comparative warrant."
+  },
+  "hypotheses": [
+    {
+      "zh": "继承两实践作用规律、实际取得的目的状态、版本化路线与同步授权改写；生生之意义、实践承诺 J 及报告的实际对应公开。",
+      "en": "Inherited two-practice outcome law, acquired goal state, versioned route and synchronized authorized rewrite; living significance, the practical commitments J and the report correspondence remain explicit."
+    },
+    {
+      "zh": "复查消耗一单位工作，行动开始需要两单位；报告覆盖实际作用时的相关条件。复查／行动为局部抽象步骤，未实现物理隔离或感测器。",
+      "en": "Review consumes one work unit and starting action needs two; the report covers relevant conditions at the actual effect. Review/action is a local abstract step, without a physical exclusion or sensor implementation."
+    },
+    {
+      "zh": "完成实例开始时额外供给一单位当前工作，总量19；不从储备免费兑换，也不推断其现实供给。",
+      "en": "The completion instance supplies one additional current work unit initially, total 19; it neither freely converts reserve nor derives real provision."
+    }
+  ],
+  "correspondence": {
+    "zh": "取得认识、传递、复查与作用是同一共同活动的关系分化。相关性由给定作用规律得出，不把未观察者定义为无关；作用规律的取得和变化仍需解释。",
+    "en": "Acquisition, delivery, review and effect are differentiated relations in one common activity. Relevance follows from the supplied outcome law, without defining unseen relations as irrelevant; acquisition and change of that law remain to explain."
+  },
+  "canonical_source": "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean",
+  "aliases": [
+    "PendingTaskApplicability.revised_delivery_enters_review",
+    "PendingTaskApplicability.funded_covered_review",
+    "Becoming.Stock.feasible_iff_covered",
+    "Becoming.VersionedTaskInstances.review_course_covered_iff",
+    "Becoming.VersionedTaskInstances.review_completes_iff",
+    "Becoming.VersionedTaskInstances.review_losses",
+    "Becoming.VersionedTaskInstances.losses_kept"
+  ],
+  "dependencies": [
+    {
+      "id": "acquired-revision-of-pending-task",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "revised_delivery_enters_review 直接消费 revised_head_completes 的实际送达值与尾队列；continueReviewed 消费 paidRetarget 的实际状态和开支。",
+        "en": "revised_delivery_enters_review directly consumes revised_head_completes’s delivered value and queue tail; continueReviewed consumes paidRetarget’s actual state and expenditure."
+      },
+      "interface": {
+        "output": {
+          "zh": "任意有效头请求经实际编码改写后送达新值，并保留尾队列、银行和路线。",
+          "en": "Any valid rewritten head delivers the revised value and preserves the tail, banks and active route."
+        },
+        "input": {
+          "zh": "deliverReview 把送达值存为端点任务，reviewAndAct 复查后将该值送入 enact；未执行时继续保留。",
+          "en": "deliverReview stores that value as an endpoint task; reviewAndAct supplies it to enact after review, retaining it when unperformed."
+        },
+        "conditions": {
+          "zh": "保留旧不变量、连续传递、实践解释、权限与改写费用；另加有成本的报告覆盖及可用工作条件。",
+          "en": "Retains the old invariant, consecutive delivery, practice interpretation, authority and rewrite cost; adds paid report coverage and current-work conditions."
+        },
+        "evidence": "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean",
+      "detail": {
+        "zh": "check_can_exhaust_action_support 保留复查后无力执行；safe_change_can_remove_comparative_warrant 分开行动保护与比较；report_not_covering_effect_can_still_fail 保留报告与实际作用脱节的损失。",
+        "en": "check_can_exhaust_action_support retains exhaustion after review; safe_change_can_remove_comparative_warrant separates action protection from comparison; report_not_covering_effect_can_still_fail retains loss when the report fails to cover the effect."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "只覆盖给定作用规律中的两项实践保护；报告形成、相关性取得与更新、等待的后果及未满足需求的实际接续未证。报告取样时正确不保证覆盖后来作用；不构成普遍社会退化或完整可纠正性定理。",
+    "en": "Covers only two practice protections in the supplied outcome law. Report formation, acquisition/revision of relevance, waiting consequences and actual continuation of unmet needs are unproved. Correctness at sampling does not ensure effect coverage; no universal societal degeneration or complete corrigibility theorem."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.30.0-rc2 实际检查14项新定理／22项新审计；205项继承定理／354项继承审计分列。所有仓库导入重建；上游缓存固定。无经验验证或独立验收。一般律已由检查器回执绑定。",
+    "en": "Lean 4.30.0-rc2 checked 14 new theorems/22 new audits, separately from 205 inherited theorems/354 inherited audits. Repository imports rebuilt; upstream cache pinned. No empirical validation or independent acceptance. General laws: checker receipts bound."
+  },
+  "references": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean",
+      "role": "proof",
+      "sha256": "96c66b6c499a11ab255054289c886088baccf684991ec16bb64ecffb181edd89",
+      "declarations": [
+        "PendingTaskApplicability.revised_delivery_enters_review",
+        "PendingTaskApplicability.funded_covered_review",
+        "PendingTaskApplicability.covered_review_adds_no_practice_loss",
+        "PendingTaskApplicability.learning_review_covers_changed_context",
+        "PendingTaskApplicability.safe_change_can_remove_comparative_warrant",
+        "PendingTaskApplicability.check_can_exhaust_action_support",
+        "PendingTaskApplicability.report_not_covering_effect_can_still_fail"
+      ]
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/pending-task-applicability-verification.json",
+      "role": "receipt",
+      "sha256": "d8e5d96c5d0b3798ecf1efcb0afe266ebf4cfd69f3c82c3507b5d20662d40090",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/check_pending_task_applicability.py",
+      "role": "provenance",
+      "sha256": "2551f075adc4d608b36f7d961b95918b66927d9c863a817eacb365f3ca9eaf56",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/COLLECTIVE-DESTRUCTION-INTEGRATION.md",
+      "role": "review",
+      "sha256": "ba42182ab3d2441a713ab3a5c228cd097e998300ad6457d35f6ce92f837783b0",
+      "declarations": []
+    },
+    {
+      "path": "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md",
+      "role": "statement",
+      "sha256": "51defc725df0815360072a98b4094a9d6f50f38b17d4369a50c5ce9e4d96a6d7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean",
+      "role": "proof",
+      "sha256": "e6ac9fce2643b3238a9832b235c0a3be6d2cb9cac9a108dfce0f748a04971d9f",
+      "declarations": [
+        "Becoming.Stock.Covered",
+        "Becoming.Stock.feasible_iff_covered"
+      ]
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+      "role": "proof",
+      "sha256": "19b2584015863898588e6c883ba5df716921c39a13de58311fa8189d1c31dc36",
+      "declarations": [
+        "Becoming.VersionedTaskInstances.review_course_covered_iff",
+        "Becoming.VersionedTaskInstances.enact_isSome_iff",
+        "Becoming.VersionedTaskInstances.review_completes_iff",
+        "Becoming.VersionedTaskInstances.relevant_risk_eq",
+        "Becoming.VersionedTaskInstances.enact_losses",
+        "Becoming.VersionedTaskInstances.review_losses",
+        "Becoming.VersionedTaskInstances.review_adds_loss_iff",
+        "Becoming.VersionedTaskInstances.covered_review_instance",
+        "Becoming.VersionedTaskInstances.reviews",
+        "Becoming.VersionedTaskInstances.clears",
+        "Becoming.VersionedTaskInstances.losses_kept",
+        "Becoming.VersionedTaskInstances.losses_kept_along"
+      ]
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json",
+      "role": "receipt",
+      "sha256": "a96ddf7c21bc027d5eed8b1bd3c7ba6c21731d3b2f9297a5f42f6b649af3ed55",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T161154.555289Z/verification.json",
+      "role": "receipt",
+      "sha256": "167317522f26c16d624f15528c625767b1d0cef1412be1b7fd70f45ee773ca63",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+      "role": "receipt",
+      "sha256": "04603eb9a2886e68a09da9ad1e3015350cd41e5b40d2ea35f2fecfcc1b2f5b3e",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean",
+      "receipt": "experiments/market-generativity/meta-attractor/pending-task-applicability-verification.json",
+      "sha256_pointer": "/modules/7/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+      "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+      "sha256_pointer": "/source_sha256/VersionedTaskInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Stock",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "zh": "2026-10-09：新增局部端点组合与有成本复查，已有目标取得、传递和证据更新成果不重复计数。作者反审及失败尝试保存。",
+      "en": "2026-10-09: adds the local endpoint composition and paid review without recounting acquired-goal, delivery or evidence-update results. Author counterreview and failed attempts are preserved."
+    },
+    {
+      "zh": "2026-10-14：按旧记录一般律审计，主张改为一般律先行。既有核心律 Becoming.Stock：取用进程可执行恰当被覆盖；审查与行动经外围 VersionedTaskInstances 成为实例：进程 [1, 2] 恰从三单位起被覆盖，完成恰当报告排除风险且工作覆盖该进程。scratch_build 实编，核心公理报告为空，外围只用标准公理；回执由落地运行绑定。原定理、回执与反例不变。",
+      "en": "2026-10-14: under the general-law audit of older records, the claim now states the law first. Existing core law Becoming.Stock: a course of draws is executable exactly where it is covered; review and action become an instance through the periphery VersionedTaskInstances: the course [1, 2] is covered exactly from three units, and completion holds exactly when the report clears the risk and the work covers that course. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the landing run binds the receipts. The original theorems, receipts and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-14，开放问题计划（研究第117节）：主张加入经审查的损失律：外围 VersionedTaskInstances 的 review_losses 与 review_adds_loss_iff（对每个条件、报告与待完成端点），未排除相关风险的审查保持损失计数（losses_kept，Gated.KeptBy 的实例）；covered_review_adds_no_practice_loss 由律得出（covered_review_instance）。相关风险即作用规律的损失条件（relevant_risk_eq），两条作用规律仍是协议自身的定义。主张中“已付代价”“付费的相关条件审查”改为“已用的工作”“取用一单位工作的相关条件审查”，意义不变。scratch_build 实编，核心公理报告为空，外围只用标准公理；对 VersionedTaskInstances 的证明绑定仍指先前运行，落地时改指新运行。原定理与反例不变。",
+      "en": "14 October 2026, open-issues plan (study section 117): the claim now adds the law of loss through review: review_losses and review_adds_loss_iff in the periphery VersionedTaskInstances (every condition, report and pending endpoint), and reviews that do not clear the relevant risk keep the loss count (losses_kept, an instance of Gated.KeptBy); covered_review_adds_no_practice_loss follows from the law (covered_review_instance). The relevant risk is the outcome law’s loss condition (relevant_risk_eq), and the two outcome laws stay the protocol’s own definition. In the claim, “paid cost” and “Paid relevant-condition review” now read “the work already used” and “Relevant-condition review, using one unit of work”, meaning unchanged. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the proof binding to VersionedTaskInstances still names the earlier run and is repointed at landing. The original theorems and counterexamples are unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Stock.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 19 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/9b2503fd29568a3e/pending-task-context-applicability.json and in git.",
+      "zh": "2026-10-20：19 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/9b2503fd29568a3e/pending-task-context-applicability.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added (a course of draws is executable exactly where each draw is within the standing stock; with review drawing one unit and action two, an endpoint completes both exactly where its report clears the relevant risk and it holds three units; uncleared reviews keep the loss count); the retired label G0/J in the premises replaced by living significance and the practical commitments; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（一串汲取恰在每次汲取都在当时存量之内时可执行；审查汲取一单位、行动两单位时，端点恰在报告排除相关风险且有三个单位时完成二者；未排除风险的审查保持损失计数）；前提中已退役的标签 G0/J 改为生生之意义与实践承诺；主张不变。"
+    }
+  ],
+  "next_delta": {
+    "zh": "在指定共同实践中取得并更新作用／相关性对应，并支持旧做法暂不适用时仍在发生的需求；保留任务不等于实际接续。",
+    "en": "Acquire and revise the effect/relevance correspondence in a specified common practice, and support continuing needs while an old method is inapplicable; retaining a task is not actual continuation."
+  }
+}

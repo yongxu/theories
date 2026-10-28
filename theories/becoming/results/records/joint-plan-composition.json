@@ -1,32 +1,113 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "joint-plan-composition",
   "title": {
     "zh": "局部方案的共同接续",
     "en": "Joint continuation of local plans"
   },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F02",
+  "reviewed_at_utc": "2026-10-28T05:50:18+00:00",
   "statement": {
     "en": "Two parts' plans run together as one plan of pairs keep both guards where every joint step projects onto a step of each part, the joint class lies over classes the plans keep, and each pair of moves is usable at every branch; every joint plan keeping a guard has its moves usable.",
     "zh": "两部分之方案并为一个成对之方案，若每一共同之步投影为各部分之一步、共同之类在各方案所保持之类之上、每一分支上每对动作皆可用，则保持两项守护；每个保持守护之共同方案，其动作皆可用。"
   },
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F02",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "en": "Two plans of one length run together as one plan of pairs, each part continuing by the value its own step keeps. Where every joint step projects onto a step of each part, the joint class lies over classes the parts' plans keep, and the plans are compatible (each pair of moves usable from the joint class it is made from, at every branch), the joint plan keeps both guards at every stage; every joint plan that keeps a guard is compatible. On the periphery's observation plans, the zipped plan so achieves both endpoint requirements; two locally successful two-step plans on one two-unit reserve fail at the second joint step, a reserve of four repairs them, and four single-unit spends in sequence from two, without renewal, fail.",
-    "zh": "同长之二方案并为一个成对之方案，各部分按其自身之步所保持之值继续。若每一共同之步投影为各部分之一步，共同之类在各部分方案所保持之类之上，且二方案相容（每一分支上，每对动作自其所出之共同之类皆可用），则共同方案在每一阶段保持两项守护；每个保持守护之共同方案皆相容。在外围依观察的方案上，配对方案由此达到两项终点要求；同一二单位储备上两份局部成功之两步方案，在共同之第二步失败，储备为四则修复，无更新而自二起依次四次各耗一单位亦失败。"
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "共同历史 X 的两个投影、同一有限步数；project、初始覆盖、两份 works 及 compatible。",
-      "en": "Two projections of one history X, a common finite horizon, project, initial coverage, both local works hypotheses and compatible."
+      "en": "For every process, map of its steps to the values they keep, guard and condition on moves, a plan of n moves gives a first move and, for each value its step keeps, a plan of the moves after it. It keeps the guard from a class where the guard holds throughout the class and, with moves to go, its first move is usable from the class and each continuation keeps the guard from the class seen.",
+      "zh": "对每个过程、其步到所保持之值的映射、守卫与动作条件：n 步的方案给出第一步，并对其步所保持的每个值给出其后诸步的方案。方案从一个类保持守卫，是指守卫在整个类上成立，且尚有步时第一步从该类可用，每个接续从所见之类保持守卫。",
+      "declarations": [
+        "Becoming.Viability.Plan",
+        "Becoming.Viability.Plan.Keeps"
+      ]
     },
     {
-      "en": "The witnesses are the periphery's: the second-step failure and the repair report propext and Quot.sound, the serialization failure also Classical.choice.",
-      "zh": "见证属外围：第二步失败与修复报告 propext 与 Quot.sound，依次消耗的失败另报告 Classical.choice。"
+      "en": "Two plans of one length run together as one plan of pairs, each part continuing by the value its own step keeps; the two plans are compatible from a joint class where each pair of moves they make together is usable from the joint class it is made from, at every branch.",
+      "zh": "同长的两个方案并为一个成对的方案，各部分按其自身之步所保持的值继续；两个方案从一个共同之类相容，是指在每一分支上，它们一同所作的每对动作从其所出的共同之类都可用。",
+      "declarations": [
+        "Becoming.Viability.Plan.zip",
+        "Becoming.Viability.jointSense",
+        "Becoming.Viability.Plan.Compatible"
+      ]
+    },
+    {
+      "en": "Where every joint step projects onto a step of each part, the joint class lies over classes the parts' plans keep, and the plans are compatible, the joint plan keeps both guards at every stage; and every joint plan that keeps a guard is compatible.",
+      "zh": "若每一共同之步都投影为各部分的一步，共同之类在各部分方案所保持之类之上，且两个方案相容，则共同方案在每一阶段都保持两项守卫；每个保持守卫的共同方案都相容。",
+      "declarations": [
+        "Becoming.Viability.Plan.zip_keeps",
+        "Becoming.Viability.Plan.compatible_of_zip_keeps"
+      ]
+    },
+    {
+      "en": "The periphery's observation plans are the core's plans: their pairing is the core's zip and their recursive joint executability the core's compatibility, so the periphery's composition (under projection, the joint class over kept classes and compatibility, the paired plan meets both parts' requirements at every stage) and its need of compatibility follow from the core laws.",
+      "zh": "外围依观察的方案就是核心的方案：其配对即核心的 zip，其递归的共同可执行性即核心的相容；所以外围的组合（在投影、共同之类在所保持之类之上与相容之下，配对方案在每一阶段满足两部分的要求）及其对相容的需要，都由核心规律推出。",
+      "declarations": [
+        "Becoming.ContinuationCorrespondence.toPlan",
+        "Becoming.ContinuationCorrespondence.toPlan_zip",
+        "Becoming.ContinuationCorrespondence.compatible_iff",
+        "Becoming.ContinuationCorrespondence.joint_plan_composition_by_core",
+        "Becoming.ContinuationCorrespondence.compatibility_necessary_by_core",
+        "JointContinuation.joint_plan_composition"
+      ]
+    },
+    {
+      "en": "On one reserve of two units, where each step of a part draws one unit and a joint step two, each part's two-step plan works alone, yet the paired plan, whose first joint step works, fails at the second joint step; a reserve of four makes it work; and four single-unit draws in sequence from two, without renewal, fail.",
+      "zh": "在同一个两单位的储备上，各部分每步耗用一单位、共同之步耗用两单位时，各部分的两步方案单独可行，配对方案的共同第一步可行，却在共同的第二步失败；储备为四则可行；无更新而自二起依次四次各耗一单位亦失败。",
+      "declarations": [
+        "JointContinuation.each_local_twice",
+        "JointContinuation.joint_first_step",
+        "JointContinuation.joint_second_step_fails",
+        "JointContinuation.sufficient_stock_repairs",
+        "JointContinuation.serialization_without_renewal_fails"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "A joint process with projections onto two parts' processes and plans of one common length; every joint step projects onto a step of each part; the joint class lies over classes the parts' plans keep; each part's plan keeps its guard; and the plans are compatible.",
+      "zh": "共同过程到两部分过程的投影，以及同一有限步数的方案；每一共同之步投影为各部分的一步；共同之类在各部分方案所保持之类之上；各部分方案保持其守卫；两个方案相容。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Joint usability does not follow from the parts' plans: each two-step plan works alone on the two-unit reserve, yet together they fail at the second joint step.",
+      "zh": "共同可用不由各部分的方案推出：两个两步方案在两单位储备上各自可行，合起来却在共同的第二步失败。",
+      "kind": "non-implication",
+      "witness": "JointContinuation.joint_second_step_fails"
+    },
+    {
+      "en": "Serializing the draws does not repair a shared reserve without renewal.",
+      "zh": "把耗用改为先后进行，并不修复无更新的共享储备。",
+      "kind": "non-implication",
+      "witness": "JointContinuation.serialization_without_renewal_fails"
+    },
+    {
+      "en": "An application must establish projection and compatibility for its own joint activity; two local proofs linked together do not supply them.",
+      "zh": "应用须为其自身的共同活动确立投影与相容；把两份局部证明连在一起不提供它们。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/JointContinuation.lean",
+      "detail": {
+        "zh": "同一二单位储备上两份两步局部方案会在共同第二步失败；单独成功和改成先后都不自动修复。",
+        "en": "Two locally successful two-step plans on the same two-unit reserve fail at the second joint step; separate success or serialization alone does not repair this."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: the core module Becoming.Keeping by the consolidated checker (Lean 4.29.1, becoming-checks/), empty axiom reports; the periphery with Lean 4.30.0-rc2 and Mathlib: ContinuationCorrespondence (continuation-correspondence-checks/), at most propext and Quot.sound, and JointContinuation (joint-continuation-verification.json), the second-step failure and the repair propext and Quot.sound, the local plan and the serialization failure also Classical.choice. The 8 October migration of this record read the source and checked receipt bindings without rerunning Lean.",
+    "zh": "实查：核心 Keeping 由合并检查器（Lean 4.29.1，becoming-checks/），公理报告皆空；外围用 Lean 4.30.0-rc2 与 Mathlib：ContinuationCorrespondence 至多 propext、Quot.sound；JointContinuation 的第二步失败与修复为 propext、Quot.sound，局部方案与依次耗用的失败另有 Classical.choice。10月8日的迁移只审读源码与绑定，未重跑 Lean。"
+  },
+  "next_delta": {
+    "en": "Establish projection and compatibility for an actual joint activity, so that the composition applies to it.",
+    "zh": "为一项实际的共同活动确立投影与相容，使组合律适用于它。"
+  },
   "correspondence": {
     "zh": "共同活动造成的实际作用必须仍在局部规律中；每个后续记录分支都需可执行。",
     "en": "Actual joint effects must remain covered by local laws; every subsequent observation branch must be executable."
@@ -63,23 +144,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/JointContinuation.lean",
-      "detail": {
-        "zh": "同一二单位储备上两份两步局部方案会在共同第二步失败；单独成功和改成先后都不自动修复。",
-        "en": "Two locally successful two-step plans on the same two-unit reserve fail at the second joint step; separate success or serialization alone does not repair this."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "同一二单位储备上两份两步局部方案会在共同第二步失败；单独成功和改成先后都不自动修复。",
-    "en": "Two locally successful two-step plans on the same two-unit reserve fail at the second joint step; separate success or serialization alone does not repair this."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/JointContinuation.lean",
@@ -89,7 +153,9 @@
         "JointContinuation.joint_plan_composition",
         "JointContinuation.joint_second_step_fails",
         "JointContinuation.serialization_without_renewal_fails",
-        "JointContinuation.sufficient_stock_repairs"
+        "JointContinuation.sufficient_stock_repairs",
+        "JointContinuation.each_local_twice",
+        "JointContinuation.joint_first_step"
       ]
     },
     {
@@ -196,10 +262,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用一般组合定理；应用需证明实际 project 与 compatible，不能只链接两份局部证明。",
-    "en": "Reuse the composition theorem; applications must establish actual project and compatible, not merely link two local proofs."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -218,6 +280,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): canonical source moved to the core law (Keeping), statement added and the claim restated on it: the joint plan keeps both guards at every stage under projection, a joint class over kept classes and compatibility, and keeping a guard needs compatibility; the periphery's endpoint form and witnesses kept, the repair by a reserve of four added to its references, and the witnesses' reported axioms stated as a hypothesis. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：权威来源改为核心规律（Keeping），增加陈述并按其重述主张：在投影、共同之类在所保持之类之上与相容之下，共同方案在每一阶段保持两项守护，保持守护需要相容；外围的终点形式与见证保留，储备为四的修复加入引用，见证所报告的公理写为假设。规律未变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 5 laws, each read against its declarations in Becoming.Keeping, ContinuationCorrespondence and JointContinuation, with the conditions the Lean takes written in (projection, a joint class over kept classes, compatibility); the periphery's \"endpoint requirements\" read as requirements at every stage, as the periphery's works states them; JointContinuation.each_local_twice, which proves that each local plan works alone, added to the JointContinuation reference's declarations; the limitations, which repeated the counterexample, became two does-not-show items with witnesses and a scope item; the premise on the witnesses' axioms moved to the evidence paragraph and the standard boundary no-ethical-premise-core-axiom-free; the first premise restated on the core's plans; the next step stated positively; no condition of a law, status, proof binding or source hash changed. Every earlier sentence is mapped in [joint-plan-composition.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-plan-composition.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the evidence paragraph, laws, the references (declarations added), each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 5 条规律，各条对照其在 Becoming.Keeping、ContinuationCorrespondence 与 JointContinuation 中的声明核读，Lean 所取的条件都写入（投影、共同之类在所保持之类之上、相容）；外围的“终点要求”依外围 works 读作每一阶段的要求；证明各局部方案单独可行的 JointContinuation.each_local_twice 加入 JointContinuation 引用的声明；与反例重复的限制改为两条带见证的“未表明”与一条范围项；关于见证公理的前提移入证据段与通用边界 no-ethical-premise-core-axiom-free；第一条前提按核心的方案重述；下一步以正面陈述；规律的条件、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [joint-plan-composition.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-plan-composition.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及证据段、规律、引用（增补声明），各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/63ad0aeafa213e09/joint-plan-composition.json",
+      "sha256": "63ad0aeafa213e09e05f141c98b693b410789cdaafde5e419f559262edcfa5d9",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/1e9de9f9cd792eb5/joint-plan-composition.json",
+      "sha256": "1e9de9f9cd792eb5243183f362371cab4b135f217853d662a58c5cae6561a2c7",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

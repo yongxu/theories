@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "derivation-soundness",
   "title": {
     "zh": "带前提的推导健全性",
@@ -8,17 +8,102 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
-  "claim": {
-    "zh": "若 Derives basis context p，则每个满足全部 basis 及 context 的解释也满足 p。",
-    "en": "If Derives basis context p, every interpretation satisfying the entire basis and local context satisfies p."
+  "reviewed_at_utc": "2026-10-28T05:21:42+00:00",
+  "statement": {
+    "en": "A claim derived from a basis under local premises holds wherever the whole basis and the premises hold, so the closure holds throughout a domain exactly where the basis does. A local premise supports a conditional derivation, not its own discharge.",
+    "zh": "自根基在局部前提下推出的主张，在整个根基与这些前提都成立之处成立，所以闭包恰在根基处处成立的域上处处成立。局部前提支持条件推导，而不消去自身。"
   },
+  "laws": [
+    {
+      "en": "A derivation is a finite proof tree from a basis, a family of claims on configurations of any type, under a list of local premises, by introducing and eliminating implication and conjunction and instantiating a claim about every natural number; basis claims and local premises enter by different rules; a list holds where all its claims do, and a claim holds throughout a domain where it holds at all its configurations.",
+      "zh": "推导是自根基（任意类型配置上的一族主张）、在一列局部前提之下的有限证明树，规则为蕴涵与合取的引入和消去，以及对每个自然数之主张的实例化；根基主张与局部前提由不同规则进入。一列主张在某配置处成立，是指其中每一项都成立；主张在一个域上处处成立，是指它在域中每个配置处成立。",
+      "declarations": [
+        "Becoming.Derivation.Derives",
+        "Becoming.Derivation.Holds",
+        "Becoming.Derivation.Throughout"
+      ]
+    },
+    {
+      "en": "Soundness: a claim derived from a basis under local premises holds at every configuration where every basis claim and every premise holds.",
+      "zh": "健全性：自根基在局部前提下推出的主张，在每个根基主张与每个前提都成立的每个配置处成立。",
+      "declarations": [
+        "Becoming.Derivation.Derives.sound"
+      ]
+    },
+    {
+      "en": "Over a domain where every basis claim holds throughout, every claim derived with no premise holds throughout, every claim derived under premises holds at each configuration of the domain where the premises hold, and premises holding throughout the domain are discharged.",
+      "zh": "在每个根基主张都处处成立的域上，无前提推出的每个主张处处成立，在前提下推出的每个主张在域中前提成立的每个配置处成立，在域上处处成立的前提被消去。",
+      "declarations": [
+        "Becoming.Derivation.closed_throughout",
+        "Becoming.Derivation.relative_throughout",
+        "Becoming.Derivation.discharged_throughout"
+      ]
+    },
+    {
+      "en": "Every claim derived with no premise holds throughout a domain exactly when every basis claim does; and where the basis holds throughout, a configuration of the domain at which a claim fails excludes that claim from what derives with no premise.",
+      "zh": "无前提推出的每个主张在一个域上处处成立，恰当每个根基主张在其上处处成立；根基处处成立时，域中使某个主张不成立的配置把该主张排除在无前提可推出者之外。",
+      "declarations": [
+        "Becoming.Derivation.closure_throughout_iff",
+        "Becoming.Derivation.countermodel_excludes"
+      ]
+    },
+    {
+      "en": "In the witness, with the trivial basis on the Booleans, the claim w = true derives with itself as a local premise and, the premise discharged, as an implication with no premise; it fails at false, so it does not hold throughout and does not derive with no premise.",
+      "zh": "见证：布尔值上的平凡根基中，主张 w = true 以自身为局部前提可推出，消去前提后作为无前提的蕴涵可推出；它在 false 处不成立，所以不处处成立，也不能无前提推出。",
+      "declarations": [
+        "Becoming.Derivation.claim_under_itself",
+        "Becoming.Derivation.claim_implies_itself",
+        "Becoming.Derivation.claim_not_throughout",
+        "Becoming.Derivation.claim_not_closed"
+      ]
+    },
+    {
+      "en": "On the scope of a policy, the configurations its actual executions reach from believed configurations: where the policy is sound for a goal, every claim derived from that goal with no premise holds at every configuration of the scope.",
+      "zh": "在一个策略的范围（其实际执行自被相信的配置所达的配置）上：策略对某一目标健全时，自该目标无前提推出的每个主张在范围的每个配置处成立。",
+      "declarations": [
+        "Becoming.Derivation.Scope.goal_closure"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "使用既有有限推导规则；根基和局部前提的真均为显式输入。",
       "en": "The existing finite derivation rules are fixed; basis truth and local assumptions are explicit inputs."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "A local premise supports a conditional derivation, not the discharge of that premise: in the witness a claim derives under itself and not without it.",
+      "zh": "局部前提支持条件推导，不支持消去该前提：见证中，主张以自身为前提可推出，无前提则不可。",
+      "kind": "non-implication",
+      "witness": "Becoming.Derivation.claim_not_closed"
+    },
+    {
+      "en": "Soundness supplies neither the truth of the basis nor any normative authority; the basis and the domain where it holds are supplied.",
+      "zh": "健全性既不提供根基的真，也不提供任何规范权威；根基及其成立的域是给定的。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/GenerativeClosure.lean",
+      "detail": {
+        "zh": "任意新增局部前提可以推出条件句，不能据此抹去前提。",
+        "en": "Adding a local premise supports a conditional derivation, not discharge of that premise."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core module Becoming.Derivation are bound to a passing core receipt in becoming-checks, which reports an empty axiom list for every declaration of the module. The periphery modules and receipts it replaced (GenerativeClosure, WholeTheoryDischarge, the history Bridge, the joint-interpretation receipt) stay as provenance and integration references.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Derivation 的当前字节绑定到 becoming-checks 中一个通过的核心回执，其中该模块每个声明的公理报告皆为空。它所取代的外围模块与回执（GenerativeClosure、WholeTheoryDischarge、历史中的 Bridge、共同解释回执）保留为来源与整合引用。"
+  },
+  "next_delta": {
+    "en": "Explain how a basis and the substantive premises a derivation uses are acquired or discharged, reusing soundness for what follows from them.",
+    "zh": "说明推导所用的根基与实质前提如何取得或消去，并复用健全性得到由它们推出的结论。"
+  },
   "correspondence": {
     "zh": "形式健全性不提供根基本身的实际真或规范权威。",
     "en": "Formal soundness supplies neither actual basis truth nor normative authority."
@@ -30,23 +115,6 @@
   ],
   "dependencies": [],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/GenerativeClosure.lean",
-      "detail": {
-        "zh": "任意新增局部前提可以推出条件句，不能据此抹去前提。",
-        "en": "Adding a local premise supports a conditional derivation, not discharge of that premise."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "任意新增局部前提可以推出条件句，不能据此抹去前提。",
-    "en": "Adding a local premise supports a conditional derivation, not discharge of that premise."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/GenerativeClosure.lean",
@@ -66,7 +134,16 @@
         "Becoming.Derivation.claim_not_closed",
         "Becoming.Derivation.closed_throughout",
         "Becoming.Derivation.closure_throughout_iff",
-        "Becoming.Derivation.Scope.goal_closure"
+        "Becoming.Derivation.Scope.goal_closure",
+        "Becoming.Derivation.Derives",
+        "Becoming.Derivation.Holds",
+        "Becoming.Derivation.Throughout",
+        "Becoming.Derivation.relative_throughout",
+        "Becoming.Derivation.discharged_throughout",
+        "Becoming.Derivation.countermodel_excludes",
+        "Becoming.Derivation.claim_under_itself",
+        "Becoming.Derivation.claim_implies_itself",
+        "Becoming.Derivation.claim_not_throughout"
       ]
     },
     {
@@ -133,10 +210,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "继续复用健全性；新研究须说明如何取得或解除实质前提。",
-    "en": "Reuse soundness; a new contribution must explain acquisition or discharge of substantive premises."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -161,6 +234,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and GenerativeClosure) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Derivation). Becoming.Derivation is bound to the current core receipt. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and GenerativeClosure）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Derivation）。Becoming.Derivation 绑定到当前核心回执。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): a statement written from the home section; the claim split into six laws, each read against its declarations in Becoming.Derivation; the limitation and the correspondence's boundary became two does-not-show items, the hypothesis kept, the standard boundary no-ethical-premise cited (empty axiom reports in the bound receipt); Derives, Holds, Throughout, relative_throughout, discharged_throughout, countermodel_excludes, claim_under_itself, claim_implies_itself and claim_not_throughout added to the Derivation reference; no premise, status or source hash changed. Every earlier sentence is mapped in [derivation-soundness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/derivation-soundness.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：依主章写出陈述；主张拆为六条规律，各条对照其在 Becoming.Derivation 中的声明核读；限制与对应中的界限成为两条“未表明”，前提保留，引用通用边界 no-ethical-premise（绑定回执的公理报告为空）；Derives、Holds、Throughout、relative_throughout、discharged_throughout、countermodel_excludes、claim_under_itself、claim_implies_itself 与 claim_not_throughout 加入 Derivation 的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [derivation-soundness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/derivation-soundness.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/33a9b49367ea6262/derivation-soundness.json",
+      "sha256": "33a9b49367ea626216fa4df0b206565ba620a9010b9902f3709468250013c11b",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/ac670179d1e2a668/derivation-soundness.json",
+      "sha256": "ac670179d1e2a668d31efcacb15b1807eda9fc415478a73604808d9eacc488b4",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

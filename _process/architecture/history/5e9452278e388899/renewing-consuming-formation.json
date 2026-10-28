@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "id": "renewing-consuming-formation",
+  "title": {
+    "zh": "更新与消耗的形成：一个磨损规律类中的动力学区分",
+    "en": "Renewing and consuming formation: a dynamical distinction in one wear-law class"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "statement": {
+    "zh": "更新率只保持或下降，在压力不超过它时保持、在压力超过时（若为正）下降，则在其内的形成每一步都有所形成并保持容量；持续超出当前更新率的形成，连同共享其条件者，总量有界并至一定时刻止息。",
+    "en": "Where the renewal rate only holds or falls, holding under pressure within it and falling (if positive) past it, formation within it forms each step, keeping its capacity; formation persistently beyond the current rate, with all sharing its conditions, forms a bounded total and ends by a fixed time."
+  },
+  "claim": {
+    "zh": "在一个明确的不可恢复磨损规律下，同一展开中的形成若在更新速率之内，便每步都有进一步形成，更新能力保持不变；若压力持续超出当前更新速率，整个展开的累计形成以所持条件加三角更新量为界，并自该时刻起停止，更新能力自第一步超出起永久下降。共享这些条件的形成，无论怎样分配，都随之停止；两个部分各自都在更新之内、只是合起来超出时也是如此。消耗型形成起初可以形成得更多，一步计数把它排在前面；此界之后，每一种更新内的接续都超过每一种超出型接续。以每个形成事件为生成内容的宽读法下，形式生生之意义同时承认两者，无损比较 C 在两者之间不适用。两种形式读法 Ceaseless 与 KeepsCapacity 都把它们分开，且彼此不同。这些区分不含规范谓词，对符号中立；把它们认作生生，是读法与对应。",
+    "en": "Under an explicit no-recovery wear law, formation within the renewal rate continues at every step and keeps its renewal capacity. Formation whose pressure persistently exceeds the current renewal rate has a whole-unfolding total bounded by held conditions plus a triangular renewal bound, ceases from that time, and permanently loses capacity from its first excess. Formation sharing those conditions, under any allocation, ceases with it, including when two parts are each within renewal and only jointly exceed it. Consuming formation can form more at first, so a one-step count ranks it first; beyond that bound, every within-renewal continuation exceeds every beyond-current one. Under the broad reading that counts every formation event as generative, formal living significance recognizes both and the no-loss comparison C does not apply between them. The formal readings Ceaseless and KeepsCapacity each separate them and differ from each other. These distinctions contain no normative predicate and are sign-neutral; identifying them with 生生 is a reading and correspondence question."
+  },
+  "hypotheses": [
+    {
+      "zh": "所给 WearLaw：压力不超过更新时更新组织不变；超过时（且速率为正）速率严格下降；速率从不上升，也不恢复。这是局部规律，不是对一切过程的断言，并承担了区分的大部分内容。",
+      "en": "The supplied WearLaw: pressure within renewal leaves the renewing organization unchanged; pressure beyond it (with positive rate) strictly lowers the rate; the rate never rises or recovers. A local law, not a claim about every process, and it carries much of the distinction's content."
+    },
+    {
+      "zh": "“超出”指每步压力都超过当时的更新速率（BeyondCurrent）；相对初始速率的 BeyondRenewal 更强，其结论作为推论保留。“更新之内”指每步压力在 1 与初始速率之间；KeepsCapacity 的刻画允许压力为 0。",
+      "en": "Beyond means each step's pressure exceeds the then-current rate (BeyondCurrent); BeyondRenewal, relative to the initial rate, is stronger and its results are kept as corollaries. Within renewal means each step's pressure lies between 1 and the initial rate; the KeepsCapacity characterization allows zero pressure."
+    },
+    {
+      "zh": "B 部分明示使用 GenerativeComparison 的 G0 与 C，采用把每个已实现形成事件都算作生成内容的宽读法，以表明这种读法分不开两者；它是 AI 对这一宽读法的形式化，不是理论的生生。Ceaseless 与 KeepsCapacity 是 AI 的形式读法。",
+      "en": "Part B explicitly uses G0 and C from GenerativeComparison with the broad reading that counts every realized formation event as generative, to show what that reading cannot separate; it is the AI's formalization of that broad reading, not the theory's 生生. Ceaseless and KeepsCapacity are the AI's formal readings."
+    }
+  ],
+  "correspondence": {
+    "zh": "stock、renew 与 demand 分别对应同一展开中所持的进一步形成条件、恢复这些条件的组织的速率，以及活动的形成压力；它们是同一历史的分化方面，不是交换资源的独立所有者。哪些真实过程满足磨损规律，须各自取得证据。",
+    "en": "Stock, renew and demand correspond to held conditions of further formation, the rate of the organization restoring them, and the activity's formation pressure in one unfolding; they are differentiated aspects of one history, not independent owners exchanging resources. Which real processes satisfy the wear law requires case-specific evidence."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean",
+  "aliases": [
+    "RenewingFormation.within_renewal_ceaseless",
+    "RenewingFormation.beyond_current_bounded",
+    "RenewingFormation.beyond_current_ceases",
+    "RenewingFormation.beyond_renewal_bounded",
+    "RenewingFormation.beyond_renewal_ceases",
+    "RenewingFormation.joint_excess_ends_shared_formation",
+    "RenewingFormation.shared_formation_ceases",
+    "RenewingFormation.consuming_part_ends_otherwise_ceaseless_formation",
+    "RenewingFormation.jointly_exceeding_parts_end_shared_formation",
+    "RenewingFormation.within_eventually_exceeds_every_beyond",
+    "RenewingFormation.sustained_eventually_exceeds_every_consuming",
+    "RenewingFormation.consuming_forms_more_first",
+    "RenewingFormation.keeps_capacity_iff",
+    "RenewingFormation.beyond_loses_capacity_at_once",
+    "RenewingFormation.rest_keeps_capacity_not_ceaseless",
+    "RenewingFormation.wears_yet_ceaseless",
+    "RenewingFormation.event_reading_recognizes_both",
+    "RenewingFormation.comparison_does_not_apply",
+    "RenewingFormation.event_comparison_ranks_rest_below",
+    "RenewingFormation.ceaseless_separates",
+    "RenewingFormation.capacity_separates",
+    "Becoming.Stock.trace_falls",
+    "Becoming.Stock.exhausted_within"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "positive-ground-open-futures",
+      "detail": {
+        "zh": "解释关联：该结果给出逐项正面根据；本结果说明以每个新组织为生成内容的宽读法分不开更新型与消耗型形成，并在一个规律类中给出能分开它们的描述性区分。未修改其证明。",
+        "en": "Interpretive connection: that result gives per-item positive ground; this one shows that the broad reading counting every new organization as generative cannot separate renewing from consuming formation, and supplies a descriptive distinction that does within one law class. Its proof is unchanged."
+      }
+    },
+    {
+      "id": "theory-of-becoming-foundation",
+      "detail": {
+        "zh": "解释关联：在同一局部规律下，同时给出每步都有形成的形成与自我终止、并终止共享形成的形成，属于生成之论所要解释的生成与退化的分化；不完成其开放目标。",
+        "en": "Interpretive connection: under one local law it exhibits both formation continuing at every step and formation that ends itself and shared formation, a differentiation of generation and degeneration that the Theory of Becoming seeks to explain; it does not complete that open target."
+      }
+    },
+    {
+      "id": "practical-judgment-under-living-significance",
+      "detail": {
+        "zh": "解释关联：终止并未超出更新的共享形成是否构成须回应的损失，仍由 J1/J3 与对应条件判断。",
+        "en": "Interpretive connection: whether ending co-dependent formation that did not exceed renewal is a loss requiring response remains for J1/J3 and correspondence."
+      }
+    },
+    {
+      "id": "alignment-direction-under-widening",
+      "detail": {
+        "zh": "解释关联：一步的形成计数把消耗型接续排在持续形成之前，而在同一规律下这种消耗随后终止共享形成。未形式化任何优化器。",
+        "en": "Interpretive connection: a one-step count of formation ranks a consuming continuation above sustained formation, although under the same law such consumption later ends shared formation. No optimizer is formalized."
+      }
+    },
+    {
+      "id": "relational-renewal-classification",
+      "detail": {
+        "en": "General classification proved independently the same day: renewing or consuming as a relation to the conditions of participated relations, over arbitrary unfoldings, with irreversibility derived from the renewer's dependence and externalizing consumption covered. This record's wear-law bound and its interface with living significance are not part of it. No import either way.",
+        "zh": "同日独立证明的一般分类：按形成与所参与关系条件的关系区分更新与消耗，适用于任意展开；不可逆由更新者的依存推出，并覆盖外部化消耗。本记录的磨损规律界及其与生生之意义的接口不在其中。互不导入。"
+      }
+    },
+    {
+      "id": "relational-reading-comparison",
+      "detail": {
+        "zh": "比较关联：在关系读法下，C 把规律族中每一种超出更新的取用严格排在它不发生的接续之下；在本结果的逐事件宽读法下，C 不适用（comparison_does_not_apply），二者相容。互不导入。",
+        "en": "Comparative connection: under a relational reading, C strictly ranks every overdraw in that law family below the course without it; under this record's broad event reading C does not apply (comparison_does_not_apply), and the two agree. No import either way."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean",
+      "detail": {
+        "zh": "一步计数反转整体比较：只要有所持条件，就有消耗型压力在第一步形成得比持续形成更多。",
+        "en": "A one-step count reverses the whole comparison: with any held stock, some consuming pressure forms more than sustained formation at the first step."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean",
+      "detail": {
+        "zh": "两种读法的反例：休息一步保持能力却不满足 Ceaseless；冲高一次、此后在降低速率内持续，满足 Ceaseless 却永久失去能力（wears_yet_ceaseless）。",
+        "en": "Counterexamples between readings: resting one step keeps capacity but is not Ceaseless; surging once and then continuing at the reduced rate is Ceaseless yet permanently loses capacity (wears_yet_ceaseless)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean",
+      "detail": {
+        "zh": "表示上的限度：逐事件读法下 C 把一次休息严格排在持续形成之下（event_comparison_ranks_rest_below），因为本规律省略了休息的恢复作用。",
+        "en": "Representational limit: under the event reading C ranks a single rest strictly below sustained formation (event_comparison_ranks_rest_below), because this law omits rest's restorative role."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GENERATIVE-DISCRIMINATION-INTEGRATION.md",
+      "detail": {
+        "zh": "本规律中更新组织不恢复、也不增长；“更多”与复杂度上升未被表示。停止本身未被判为坏，有限完成、休息与适当结束仍属生生之意义所承认的生。",
+        "en": "The renewing organization neither recovers nor grows under this law; 更多 and rising complexity are not represented. Ceasing is not judged bad; finite fulfillment, rest and appropriate ending remain within living significance."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "完成的是一个不可恢复磨损规律类中的描述性区分及其与生生之意义、C 的接口；该类只有一个共享条件，消耗者依存于它。区分是所给规律的推论。不覆盖外部化的消耗；不表示恢复、增长或“更多”；不证明形式读法就是生生、真实过程满足该规律、消耗更坏、停止有伦理缺陷，也没有形式化任何优化器。",
+    "en": "Completes a descriptive distinction within one no-recovery wear-law class, with one shared condition on which the consumer depends, and its interface with living significance and C; the distinction follows from the supplied law. It does not cover externalizing consumption, does not represent recovery, growth or 更多, and does not show that the formal readings are 生生, that real processes satisfy the law, that consuming is worse, or that ceasing is defective; no optimizer is formalized."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 检查通过（运行 20261008T192627.406862Z）：RenewingFormation 42项定理／60项声明审计（22项无依赖；1项 propext；25项 propext 与 Quot.sound；12项另含 Classical.choice）；无自定义公理、sorry 或 native_decide；同次编译 GenerativeComparison、PracticalJudgment、ProtectionPriorityRival 与4个控制例。定理数含辅助引理与推论。2026-10-09 独立审查附更正后接受了首版（21项定理），更正已依审查完成并经 Lean 检查，审查者未复审更正版；见 GENERATIVE-DISCRIMINATION-REVIEW。",
+    "en": "Successful Lean 4.29.1 check (run 20261008T192627.406862Z): RenewingFormation 42 theorems/60 declaration audits (22 with no dependency, 1 propext, 25 propext and Quot.sound, 12 also Classical.choice); no custom axiom, sorry or native_decide; the same run compiled GenerativeComparison, PracticalJudgment, ProtectionPriorityRival and 4 controls. Counts include helpers and corollaries. An independent review on 9 October accepted the first version (21 theorems) with corrections; the corrections were made as directed and Lean-checked, but the reviewer did not re-review the corrected version; see GENERATIVE-DISCRIMINATION-REVIEW."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean",
+      "role": "proof",
+      "sha256": "6ec58296e4837aa1aea7b9cb2fdd85df07890be782912f4916548a2489ea8023",
+      "declarations": [
+        "RenewingFormation.within_renewal_ceaseless",
+        "RenewingFormation.beyond_current_bounded",
+        "RenewingFormation.beyond_current_ceases",
+        "RenewingFormation.beyond_renewal_bounded",
+        "RenewingFormation.beyond_renewal_ceases",
+        "RenewingFormation.joint_excess_ends_shared_formation",
+        "RenewingFormation.shared_formation_ceases",
+        "RenewingFormation.consuming_part_ends_otherwise_ceaseless_formation",
+        "RenewingFormation.jointly_exceeding_parts_end_shared_formation",
+        "RenewingFormation.within_eventually_exceeds_every_beyond",
+        "RenewingFormation.sustained_eventually_exceeds_every_consuming",
+        "RenewingFormation.consuming_forms_more_first",
+        "RenewingFormation.keeps_capacity_iff",
+        "RenewingFormation.beyond_loses_capacity_at_once",
+        "RenewingFormation.rest_keeps_capacity_not_ceaseless",
+        "RenewingFormation.wears_yet_ceaseless",
+        "RenewingFormation.event_reading_recognizes_both",
+        "RenewingFormation.comparison_does_not_apply",
+        "RenewingFormation.event_comparison_ranks_rest_below",
+        "RenewingFormation.ceaseless_separates",
+        "RenewingFormation.capacity_separates"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GenerativeComparison.lean",
+      "role": "provenance",
+      "sha256": "948d36b4cddc0b2289219604464bd38eb6e607183b157cee1075d50fb9797a03",
+      "declarations": [
+        "GenerativeComparison.G0"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/generative-discrimination-verification.json",
+      "role": "receipt",
+      "sha256": "77b9642d4336c32d80c9c74d7b9e60790305ab19812fcaefdd40584c48161a07",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GENERATIVE-DISCRIMINATION-INTEGRATION.md",
+      "role": "statement",
+      "sha256": "45428e58b0bac5446a43e8e4da562bba7b34f6c354c00ccb5000203b3886a27e",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/G0-WARRANT.md",
+      "role": "integration",
+      "sha256": "4eca9b3040f3b25cf9981bb43acb3767c818e847d04e1e2d9cc1e1a47a2283d4",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-09-lean-evidence-roles.md",
+      "role": "provenance",
+      "sha256": "368f3e2ab2b1627dc1a7ef0fd53c2ffd3a2173a62e91a582b5741adcb1cb766d",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GENERATIVE-DISCRIMINATION-REVIEW.md",
+      "role": "review",
+      "sha256": "73e9039c26a96b2ff8b6bbbbcf60ec99a9a4741262486d5b56362c574c3825fe",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean",
+      "role": "proof",
+      "sha256": "e6ac9fce2643b3238a9832b235c0a3be6d2cb9cac9a108dfce0f748a04971d9f",
+      "declarations": [
+        "Becoming.Stock.FallsBy",
+        "Becoming.Stock.trace_falls",
+        "Becoming.Stock.falls_iff",
+        "Becoming.Stock.trace_exhausts",
+        "Becoming.Stock.zero_of_add_le",
+        "Becoming.Stock.exhausted_within",
+        "Becoming.Stock.draws_nothing_from_empty"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T161154.555289Z/verification.json",
+      "role": "receipt",
+      "sha256": "167317522f26c16d624f15528c625767b1d0cef1412be1b7fd70f45ee773ca63",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingCorrespondence.lean",
+      "role": "proof",
+      "sha256": "06daa2b84d9abcbefdf37c5646b2b4ca13897cbd2462ff30f9413e3b0675b898",
+      "declarations": [
+        "Becoming.RenewingCorrespondence.beyond",
+        "Becoming.RenewingCorrespondence.formedOf",
+        "Becoming.RenewingCorrespondence.remaining_falls",
+        "Becoming.RenewingCorrespondence.forms_while_held",
+        "Becoming.RenewingCorrespondence.moves",
+        "Becoming.RenewingCorrespondence.path_trace",
+        "Becoming.RenewingCorrespondence.total_moves",
+        "Becoming.RenewingCorrespondence.beyond_current_bounded_by_core",
+        "Becoming.RenewingCorrespondence.beyond_current_ceases_by_core",
+        "Becoming.RenewingCorrespondence.shared_formation_ends_by_core"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261015T161417.899487Z/verification.json",
+      "role": "receipt",
+      "sha256": "0004399ce47516439980a6bf3411afc41c1ce83d4336aec9b2d639bf039992da",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/check_renewing_correspondence.py",
+      "role": "provenance",
+      "sha256": "9b3a7b10f675e8048cd2ad8ccbb10657611206eff53d071ecbb5db54a574896e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "role": "proof",
+      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "role": "proof",
+      "sha256": "4d3afe46d3d4b297acc6a1e6b126ad2e0f2d08dfa9205fdcf2aa32bb7b5bcbf1",
+      "declarations": [
+        "Becoming.LivingSignificance"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T201753.515165Z/verification.json",
+      "role": "receipt",
+      "sha256": "3c40ea48ba97e221d435520ce8abbb1577b04d871cb49bfe7a7e9efd78fe9665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T090457.012800Z/verification.json",
+      "role": "receipt",
+      "sha256": "73da26fa45a43969d573d4f0f79afeaf50f1b40ecd31082bc842b017a49920b4",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261020T161953.940017Z/verification.json",
+      "role": "receipt",
+      "sha256": "cab9783e0df05ddf34dd743d1d1ecf8bf76362dd9ba1fad318f8fd2ed1dd96d2",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/generative-discrimination-verification.json",
+      "sha256_pointer": "/source_sha256/RenewingFormation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Stock",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingCorrespondence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261020T161953.940017Z/verification.json",
+      "sha256_pointer": "/source_sha256/RenewingCorrespondence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Extension",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "把规律类扩展到更新组织可以恢复或增长的情形，表示休息的恢复作用与“更多”，并检查界限怎样改变；为具体过程建立对规律的经验对应；以保留损失的比较与有界责任的承诺判断终止共享形成的损失。",
+    "en": "Extend the law class to recovering or growing renewal, representing rest's restorative role and 更多, and check how the bound changes; establish empirical correspondence for particular processes; assess the loss of ending shared formation under the commitments of comparison with retained losses and of bounded responsibility."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：依 Ren“请把修改做完，Lean 承担有实质内容”新建；回应外部审查 §3.3、§3.5。与 Depletion、ResourceContinuation 的区别：更新由同一展开中的组织产生并可被同一活动磨损，界限因此是内生的。",
+      "en": "2026-10-09: created following Ren's direction that Lean carry substantive content, answering external review §3.3 and §3.5. Unlike Depletion and ResourceContinuation, renewal is produced by an organization in the same unfolding and can be worn by the same activity, so the bound is endogenous."
+    },
+    {
+      "zh": "2026-10-09：G0-WARRANT §2.3 与 §4 第4项新增指向 self-good-reachable-g0 的链接；本结果不变。",
+      "en": "2026-10-09: G0-WARRANT gained a link to self-good-reachable-g0 in §2.3 and §4 item 4; no change to this result."
+    },
+    {
+      "en": "9 October 2026: added the related link to relational-renewal-classification at the authoring session's invitation; claim, sources and hashes unchanged.",
+      "zh": "2026年10月9日：应本记录作者会话之邀，新增指向 relational-renewal-classification 的关联；主张、来源与哈希不变。"
+    },
+    {
+      "zh": "2026-10-09：独立审查附更正后接受（GENERATIVE-DISCRIMINATION-REVIEW）。按审查：假设弱化为超出当前速率（BeyondCurrent），原 beyond_renewal_* 作为推论保留原名；共享形成推广到联合超出；新增 KeepsCapacity 读法及两种读法的反例；新增 comparison_does_not_apply 与 event_comparison_ranks_rest_below；event_reading_favors_both 改名 event_reading_recognizes_both，whole_direction_separates 改名 ceaseless_separates。依 Ren 同日追问，写明宽读法不是 G0。与 ResourceContinuation 的差别改为磨损反馈（该处到达可依赖状态）。首版回执保留于 generative-discrimination-checks/20261008T185033.210526Z。同一 ID：主张的对象不变，范围在首次审查中修正。",
+      "en": "2026-10-09: independently reviewed and accepted with corrections (GENERATIVE-DISCRIMINATION-REVIEW). Per the review, the hypothesis is weakened to excess over the current rate (BeyondCurrent), with the original beyond_renewal_* kept as corollaries under their names; shared formation is generalized to joint excess; the KeepsCapacity reading and counterexamples between readings are added; comparison_does_not_apply and event_comparison_ranks_rest_below are added; event_reading_favors_both is renamed event_reading_recognizes_both and whole_direction_separates ceaseless_separates. Following Ren's follow-up the same day, the broad reading is marked as not G0. The difference from ResourceContinuation is restated as wear feedback (its arrival may depend on state). The first receipt is preserved in generative-discrimination-checks/20261008T185033.210526Z. Same ID: the claim's object is unchanged and its scope was corrected in first review."
+    },
+    {
+      "zh": "2026-10-14，开放问题计划第9项：主张中的“预算”是市场用语（Ren 2026-10-06：付费记录“太市场了，不够基本”），改为“更新量”“此界”；意义不变。",
+      "en": "14 October 2026, open-issues plan item 9: \"budget\" in the claim is a market word (Ren, 6 October 2026, on 付费记录: “太市场了，不够基本”); it becomes \"bound\", meaning unchanged."
+    },
+    {
+      "en": "17 October 2026, wording: outdated labels (G0, J1–J4) replaced by the current vocabulary (living significance, the practical commitments by content), following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): G0-WARRANT.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, F3J, the port of the judgment and comparison family into the core (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): the core counterparts of the cited periphery and bridge declarations are cited (1 in Becoming.Metaethics), graded in development/bridge-fold/port-j.md; the periphery stays cited until the sweep retires it. A port restates; the claim is unchanged.",
+      "zh": "2026年10月18日，F3J 将判断与比较族移入核心：引用其核心对应声明。移植只是重述，论断不变。"
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Stock.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: G0 (now LivingSignificance). Proof bindings (ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; G0-WARRANT.md, names follow the R30 rename table. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：G0（现为 LivingSignificance）。证明绑定（ValuationFrames.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：ValuationFrames.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；G0-WARRANT.md，名称随 R30 改名表。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 13 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/45f312eec4cbb3db/renewing-consuming-formation.json and in git.",
+      "zh": "2026-10-20：13 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/45f312eec4cbb3db/renewing-consuming-formation.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (GenerativeComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Extension, Becoming.Stock, Becoming.ValuationFrames, RenewingCorrespondence and RenewingFormation). The retired modules' content is also stated in Becoming.Alternatives and Becoming.Metaethics, which this record does not cite with declarations. The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（GenerativeComparison）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Extension, Becoming.Stock, Becoming.ValuationFrames, RenewingCorrespondence and RenewingFormation）。退役模块的内容也陈述于 Becoming.Alternatives and Becoming.Metaethics，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added (where the renewal rate only holds or falls, holding under pressure within it and falling (if positive) past it, formation within it forms at every step and keeps its capacity; formation persistently beyond the current rate, with what shares its conditions, forms a bounded total and ends by a fixed time); the premise on the broad event reading no longer names a person; then the retired label G0 in the limitations and a related note replaced by living significance (G0 and C from GenerativeComparison, the periphery's names, kept in the premise); the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（更新率只保持或下降，在压力不超过它时保持、在压力超过时（若为正）下降，则其内的形成每步都有所形成并保持容量；持续超出当前更新率的形成连同共享其条件者总量有界、至一定时刻止息）；关于宽事件读法的前提不再提及个人；随后局限与一条相关说明中已退役的标签 G0 改为生生之意义（前提中 GenerativeComparison 的 G0 与 C 是外围名称，保留）；主张不变。"
+    }
+  ]
+}

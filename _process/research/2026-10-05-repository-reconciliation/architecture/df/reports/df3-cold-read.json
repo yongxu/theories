@@ -1,0 +1,326 @@
+[
+ {
+  "findings": [
+   {
+    "id": "continuous-time-as-tower",
+    "field": "correspondence.en",
+    "old": "where what stands is not refuted to run down, dividing time more finely adds no fall of total standing.",
+    "new": "where what stands is not refuted to run down, however finely time is divided, the falls of total standing over a coarsest stretch stay within its starting total.",
+    "severity": "overclaim",
+    "why": "Tower.changes_within proves a bound only: the number of fine steps at which the total falls is at most the coarsest level's total at S, the same bound at every level. It does not say that finer division adds no fall. A finer level can show more falls than the coarser one, up to the bound: a coarse step from 2 to 0 is one fall, read finely as 2 to 1 to 0 it is two. does_not_show[2] of this same record says that how the count behaves as levels refine is not stated, and the sentence contradicts it.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tower.lean:85; theories/becoming/results/records/continuous-time-as-tower.json:107"
+   },
+   {
+    "id": "continuous-time-as-tower",
+    "field": "correspondence.zh",
+    "old": "所立者不被否定地下降时，总水平的下降不因时间分得更细而增加。",
+    "new": "所立者不被否定地下降时，无论时间分得多细，最粗一段上总水平的下降次数都不超过其段首的总水平。",
+    "severity": "overclaim",
+    "why": "Same overclaim as the English: changes_within gives a level-independent bound, not the claim that the falls do not increase under refinement.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tower.lean:85"
+   },
+   {
+    "id": "continuous-time-as-tower",
+    "field": "history[-1].en (and .zh)",
+    "old": "the counterexample (moved to a does-not-show item), laws",
+    "new": "the counterexample (narrowed), laws",
+    "severity": "imprecise",
+    "why": "The history says the review moved the counterexample to a does-not-show item. It did not: counterexamples[0] (Strobe) is still in counterexamples, narrowed as mapping rows X0 and X1 say, and no does_not_show item is about Strobe. In the zh text the matching change is 反例（移入“未表明”）、规律 → 反例（收窄）、规律.",
+    "evidence": "theories/becoming/results/records/continuous-time-as-tower.json:83,367-368; df3-mapping/continuous-time-as-tower.md:27-28"
+   },
+   {
+    "id": "continuous-time-as-tower",
+    "field": "references[Sampling.lean].declarations",
+    "old": "[\"Becoming.Web.sample\", \"Becoming.Flow.sample_balances\", \"Becoming.Flow.sample_dissipative\", \"Becoming.Strict\", \"Becoming.Flow.Once\"]",
+    "new": "[\"Becoming.Web.sample\", \"Becoming.Flow.sample_balances\", \"Becoming.Flow.sample_dissipative\", \"Becoming.Strict\", \"Becoming.Flow.Once\", \"Becoming.Strobe.converse_fails\"]",
+    "severity": "imprecise",
+    "why": "counterexamples[0] names Strobe.converse_fails as its witness, but that declaration is missing from the references of Sampling.lean. It exists in Sampling.lean (line 275), and the bound core receipt 20261020T051144.879480Z reports it with an empty axiom list.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean:275; theories/becoming/results/records/continuous-time-as-tower.json:193-201"
+   },
+   {
+    "id": "continuous-time-as-tower",
+    "field": "correspondence.en (and .zh)",
+    "old": "Ren decided that continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence.",
+    "new": "Continuous time is built in the core as a tower of ever-finer discrete readings, a law of continuous time being a law at every level, real-valued time a later periphery correspondence; the representation was Ren's proposal (provenance in the references).",
+    "severity": "style",
+    "why": "Live text presents the representation choice as Ren's decision, so his decision serves as its reason. AGENTS asks that live text give the construction and keep Ren's words as provenance only. The source 2026-10-12-unit-of-need-and-tower-of-time.md is already in the references. The matching zh change is 'Ren 决定：连续时间在核心中构造为…实数时间以后作为外围的对应。' → '连续时间在核心中构造为…实数时间以后作为外围的对应；这一表示出自 Ren 的提议（来历见引用）。'",
+    "evidence": "theories/becoming/results/records/continuous-time-as-tower.json:107; AGENTS.md 'Ren's words are provenance, not authority'"
+   },
+   {
+    "id": "renewing-consuming-formation",
+    "field": "laws[3].en",
+    "old": "where the joint pressure exceeds the current rate at every step or another part's pressure exceeds the initial rate at every step, though this part be within renewal and ceaseless alone; it ends so too where two parts, each within renewal and ceaseless alone, together exceed the initial rate.",
+    "new": "where, at every step, the joint pressure exceeds the current rate or another part's pressure exceeds the initial rate, though this part be within renewal and ceaseless alone; it ends so too where two parts, each within renewal and ceaseless alone, together exceed the initial rate at every step.",
+    "severity": "imprecise",
+    "why": "jointly_exceeding_parts_end_shared_formation takes `joint : BeyondRenewal c0 (own + other)`, and BeyondRenewal is `∀ n, c0.renew < demand n`. The last clause leaves out 'at every step', so it reads as if exceeding the rate once were enough. The proposed rewording is 417 characters, within the 420 cap.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean:94-95,370-375"
+   },
+   {
+    "id": "renewing-consuming-formation",
+    "field": "laws[3].zh",
+    "old": "两个各在更新之内、单独不息的部分合起来超过初始更新率时",
+    "new": "两个各在更新之内、单独不息的部分每步合起来都超过初始更新率时",
+    "severity": "imprecise",
+    "why": "Same missing 'at every step' condition (BeyondRenewal is ∀ n).",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean:94-95"
+   },
+   {
+    "id": "growth-constrained-fragmentation",
+    "field": "statement.en",
+    "old": "and a retaining edge stops fragmentation.",
+    "new": "and a retaining edge can stop fragmentation.",
+    "severity": "imprecise",
+    "why": "The statement reads a witness as a law. bypass_survives_cut and cut_spends_without_fragmenting show that one aggregated edge (0,7) on one chain keeps one cut (3,4) from fragmenting it. The record's does_not_show[0] and the home row in 02 both say 'can prevent'. The new text is 293 characters, within the 300 cap.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean:362,375; theories/becoming/chapters/02-MAP.md r-growth-constrained-fragmentation"
+   },
+   {
+    "id": "growth-constrained-fragmentation",
+    "field": "statement.zh",
+    "old": "而一条保留边防止碎裂",
+    "new": "而一条保留边可以防止碎裂",
+    "severity": "imprecise",
+    "why": "Same witness read as a law; this matches dns[0] 「可以阻止它」.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean:362"
+   },
+   {
+    "id": "exclusive-footprint-support",
+    "field": "statement.en",
+    "old": "Where each part's footprint lies within its whole's and the two parts' footprints share nothing, the root's footprint supports what the leaves of a realized plan draw on: nothing repeats, and everything lies within it.",
+    "new": "Where each part's footprint lies within its whole's and the two parts' footprints share nothing, a plan realized with each leaf's draw supported by its own configuration's footprint has all its leaves draw on supported by the root's footprint: nothing repeats, and everything lies within it.",
+    "severity": "imprecise",
+    "why": "supports_of_realizes takes `realizes : JointPlan.Realizes J (Supports footprint) s p`, so every leaf must be supported at its own configuration. That local premise is the one being pushed to the root, and the statement leaves it unnamed: a plan realized under another leaf reading gives nothing. The new text is 291 characters. The matching zh is 凡每个部分的足迹在其整体的足迹之内、两个部分的足迹无共同处，一个以每片叶所汲取者被其自身构形的足迹支持而实现的计划，其诸叶所汲取者皆被根的足迹支持：无重复，且皆在其内。",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPlans.lean:110-113"
+   },
+   {
+    "id": "theories/becoming/chapters/01-ROOT.md",
+    "field": "r-exclusive-footprint-support row",
+    "old": "every realized nested plan's requests are free of repetition and covered by the root's footprint",
+    "new": "every nested plan realized with each leaf's requests supported by its own configuration's footprint has requests free of repetition and covered by the root's footprint",
+    "severity": "imprecise",
+    "why": "The home row leaves out the same premise of supports_of_realizes as the statement (leaves read as Supports footprint). A statement change goes to the record and its home section together.",
+    "evidence": "theories/becoming/chapters/01-ROOT.md:492; JointPlans.lean:110-113"
+   },
+   {
+    "id": "theories/becoming/chapters/01-ROOT.md",
+    "field": "r-joint-correlation-reduced-dynamics paragraph",
+    "old": "**Theorem** (any process; the quantum case a witness). For every law of change with moves and every reduction,",
+    "new": "**Theorem** (any deterministic law; the quantum case a witness). For every law of change giving one next configuration for each configuration and move, and every reduction,",
+    "severity": "home-disagrees",
+    "why": "Readout.law_through_iff is stated for `next : S → A → S` through `ofMap next`, a law with one next configuration for each configuration and move, not for any process. The record's laws[0] says this correctly. The home's '(any process' and 'every law of change with moves' claim more than the Lean proves, so the home is the one to correct.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean:104-106; theories/becoming/chapters/01-ROOT.md:348"
+   },
+   {
+    "id": "joint-decomposition-lifting",
+    "field": "next_delta.en (and .zh)",
+    "old": "Reuse the realization of plans through a description (joint-code-plan-lifting) as the per-node interface for recursive plans.",
+    "new": "Lift decompositions whose parts share or duplicate support, or whose designated parts must be substituted, with the conditions stated as hypotheses.",
+    "severity": "imprecise",
+    "why": "The next step is already done. JointPlan.realizes_image_iff, the law of joint-code-plan-lifting, applies liftsFromEach_iff at every node and inducts on subplans, and that record lists this one as its formal-reuse dependency. The proposed step is the gap does_not_show[0] names. The matching zh is 提升部分共享或重复使用支持、或须替换指定部分的分解，其条件写为假设。",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean:645-655; theories/becoming/results/records/joint-code-plan-lifting.json dependencies[0]"
+   },
+   {
+    "id": "trace-law-equivalence",
+    "field": "validation_scope.en (and .zh)",
+    "old": "and those of GenerativeCore to the newest core receipt;",
+    "new": "and those of GenerativeCore to core receipt 20261027T195912.152773Z;",
+    "severity": "imprecise",
+    "why": "'The newest core receipt' is relative to time and is already false against main, which has core receipts 20261028T054831.888463Z (UE14) and 20261028T061626.538602Z, so it will misreport once landed. The binding names 20261027T195912.152773Z. The matching zh change is GenerativeCore 绑定最新的核心回执 → GenerativeCore 绑定核心回执 20261027T195912.152773Z.",
+    "evidence": "theories/becoming/results/records/trace-law-equivalence.json:54-56; git ls-tree main .../becoming-checks/"
+   },
+   {
+    "id": "joint-code-plan-lifting",
+    "field": "validation_scope.en (and .zh)",
+    "old": "and those of Becoming.Likeness to the newest core receipt;",
+    "new": "and those of Becoming.Likeness to core receipt 20261027T195912.152773Z;",
+    "severity": "imprecise",
+    "why": "The same time-relative phrase as in trace-law-equivalence; main already has newer core receipts. The matching zh change is Becoming.Likeness 绑定最新的核心回执 → Becoming.Likeness 绑定核心回执 20261027T195912.152773Z.",
+    "evidence": "theories/becoming/results/records/joint-code-plan-lifting.json:89-91"
+   },
+   {
+    "id": "only-the-order-of-change-shows",
+    "field": "correspondence.en (and .zh)",
+    "old": "Following Ren's “move towards 100%” of 12 October 2026, the zero-premise plan",
+    "new": "Following Ren's “move towards 100%”, the zero-premise plan",
+    "severity": "style",
+    "why": "The new history note says that 'the work-item labels, date and section number' left the correspondence, and mapping row R0 says the date was dropped as a process marker and is kept in the provenance source. The date is still there in both languages. The matching zh change is 按 Ren 2026-10-12 的“move towards 100%” → 按 Ren 的“move towards 100%”. The same treatment was applied in continuous-time-as-tower.",
+    "evidence": "theories/becoming/results/records/only-the-order-of-change-shows.json:225-227; df3-mapping/only-the-order-of-change-shows.md row R0"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-trace-transport.md",
+    "field": "rows N0, N1",
+    "old": "| next_delta (“Transport finite courses by trace_map wherever a map of configurations preserves steps”) |",
+    "new": "| next_delta (“State transport and exact reading through a map for runs without end”); reuse of trace_map is shown by the records that depend on it (becoming-context-coherence, trace-law-equivalence, derived-history-law-exactness) |",
+    "severity": "imprecise",
+    "why": "The mapping quotes next_delta text that is not in the record. The current next_delta is 'State transport and exact reading through a map for runs without end, and the correspondence of a state map to an actual system, each with its conditions stated as hypotheses.' Row N1 needs the same fix: old '| next_delta (“stating any further endpoint or correspondence condition as a hypothesis”), stated positively; the exactness criterion added as the certification it gives |' → '| next_delta (“the correspondence of a state map to an actual system, each with its conditions stated as hypotheses”), stated positively |'. The closing note fixes only X0, L0 and L1.",
+    "evidence": "df3-mapping/finite-trace-transport.md:26-27; theories/becoming/results/records/finite-trace-transport.json next_delta"
+   },
+   {
+    "id": "least-footprint-where-idleness-decided",
+    "field": "counterexamples[0]",
+    "old": "Idleness is not derived decidable for every world, and no least Boolean footprint is constructed without that decision. Necessity is the equivalence under DecidableEq, not a concrete undecidable-idleness world. Leastness is relative to the existing Boolean footprint and Contains definitions; it does not eliminate the supplied sides of Reorders or give an ethical ranking.",
+    "new": "(remove the entry; \"counterexamples\": [] — does_not_show[0]–[3], no-evaluation and no-ethical-premise carry every clause)",
+    "severity": "style",
+    "why": "Schema-2 counterexamples are witnessed cases. This entry witnesses nothing and even says that no concrete world is given. It repeats the old limitations, which are now does_not_show[0]–[3], so the page shows them twice. DF3's own review moved unwitnessed counterexamples to does-not-show items in finite-trace-transport and joint-code-plan-lifting. Mapping row X0 should follow.",
+    "evidence": "theories/becoming/results/records/least-footprint-where-idleness-decided.json:116-124; df3-mapping/joint-code-plan-lifting.md:32"
+   },
+   {
+    "id": "joint-decomposition-lifting",
+    "field": "counterexamples[0]",
+    "old": "Lifting provides some parts, not arbitrary substitution of designated parts or duplication of support.",
+    "new": "(remove the entry; \"counterexamples\": [] — does_not_show[0], witness LiftsFromEach, carries it)",
+    "severity": "style",
+    "why": "Not a witnessed case. The cited file, deeper/ExplanatoryJointness.lean, has no declaration showing failed substitution or duplication. The text is does_not_show[0] verbatim, so the page shows it twice. This is the same treatment DF3 gave finite-trace-transport and joint-code-plan-lifting. Mapping row X0 should follow.",
+    "evidence": "theories/becoming/results/records/joint-decomposition-lifting.json:78-86; experiments/.../deeper/ExplanatoryJointness.lean (theorem list)"
+   },
+   {
+    "id": "finite-joining-tree-lifting",
+    "field": "counterexamples[0]",
+    "old": "Tree-shaped relational realization does not authorize resource copying or cover shared nodes, cycles, infinite completion or actual scheduling.",
+    "new": "(remove the entry; \"counterexamples\": [] — does_not_show[0] and [1] carry it)",
+    "severity": "style",
+    "why": "The entry points to an integration note, not a witness, and repeats does_not_show[0]–[1], so the page shows it twice. It is the same unwitnessed-counterexample case the review moved in finite-trace-transport and joint-code-plan-lifting. Mapping row X0 should follow.",
+    "evidence": "theories/becoming/results/records/finite-joining-tree-lifting.json:80-88; df3-mapping/finite-joining-tree-lifting.md:30"
+   }
+  ],
+  "sound": [
+   "normal-forms-need-decided-apartness",
+   "becoming-context-coherence",
+   "derived-history-law-exactness"
+  ],
+  "checked": "Cold read of all 15 batch-A records, read only, worktree wt-df3 at d18032c2c. No file was edited. Scratch scripts are in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/coldA/.\n\nFor each record I compared:\n- the migrated JSON and its rendered .md (every law, does-not-show item, statement, next_delta and validation_scope appears in the page);\n- the old snapshot (first text_versions entry) and the df3-mapping table;\n- the home row or paragraph after r-<id> in chapters 01 and 02;\n- the Lean signature, with variable and include blocks, of every declaration cited in laws and does-not-show witnesses.\n\nA script confirmed three things for every cited declaration: it is in the references of its file, it exists in that file, and it has an axiom report in the receipts the proof_bindings name. Every binding's sha256 matches the current bytes and its status is passed. The Lean versions given in the evidence paragraphs match the receipts: 4.29.1 everywhere, and 4.30.0-rc2 for PreparationCorrespondence and RenewingCorrespondence. For growth-constrained-fragmentation, the GrownFragmentation receipt gives exactly 3 declarations with no axioms, 6 with propext and Quot.sound, and 5 with Classical.choice as well, as stated. For renewing-consuming-formation, the counts of 42 theorems and 60 audits match. no-ethical-premise is cited only where every cited declaration has an empty report. The two periphery records cite no-ethical-premise-core-axiom-free, or only discrete-steps, correctly.\n\nAll six DF3 chapter edits agree with the Lean: four in 01 (derived-history, context-coherence, only-the-order, normal-forms) and two in 02 (renewing, growth). A scan of every public field found no process markers, retired labels or registration vocabulary. 'register' in joint-correlation is the qubit register, and receipt timestamps appear only in validation_scope.\n\nLint: the command as given, with comma-separated --ids, lints a single non-existent id. It reports \"records\": 1 and 0 findings, and does not fail on an unknown id. With the ids separated by spaces it lints all 15 records: 0 findings, 0 errors.\n\nLanding notes, not findings:\n- Every migrated record's history still carries the placeholder 'study section DF_N', and df3_apply.py does not replace it. The lander must substitute it, as land_df2.py did.\n- `git diff main -- theories/becoming/chapters` shows UE14's r-the-present-on-causal-set-growth block and its Reading in 01 §1 as deleted, the 'Presence in time' open entry reverted, and 08-METHOD changed. These come from main moving ahead (34e8f9185 after the branch point ba80cb002), not from DF3. DF3's own chapter changes are only the six rows above. Land by merging main and re-rendering, never by copying the branch's 01-ROOT.md or 08-METHOD.md. The same applies to normal-forms-need-decided-apartness.md, whose 'Used by' line on main must be re-rendered.\n\nRecords with findings, all other content read and found sound: only-the-order-of-change-shows, continuous-time-as-tower, trace-law-equivalence, joint-code-plan-lifting, finite-trace-transport (the mapping only), joint-correlation-reduced-dynamics (the home paragraph only), least-footprint-where-idleness-decided, joint-decomposition-lifting, finite-joining-tree-lifting, exclusive-footprint-support, growth-constrained-fragmentation, renewing-consuming-formation."
+ },
+ {
+  "findings": [
+   {
+    "id": "market-finite-support-obstruction",
+    "field": "statement.en / statement.zh",
+    "old": "A start below level n of a family of levels the steps drain leaves the guard within n steps on every admissible history;",
+    "new": "A start below level n of a family of levels the steps drain has no admissible history within the guard at every step through n;",
+    "why": "Drains.leaves concludes ¬ ∀ k, k ≤ n → guard (history f s d k), a negated universal. 'Leaves the guard within n steps' says some step k ≤ n lies outside the guard, an existential that the constructive core gets only where the guard is decided. The core's own dual_needs_decision shows the same gap for reaching. The home section (05 row r-market-finite-support-obstruction: 'no admissible history satisfies the guard at every step through n') and the old statement state it exactly, so by the Lean the home section is right. The mapping row S0 calls the change 'restated positively', but the new wording asserts more. zh: replace '在每段可容许历史上 n 步之内离开守卫' with '没有可容许历史在直到第 n 步的每一步都留在守卫之内'. The new en is 289 characters and the zh 136, both within the caps.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean:332-335 (Drains.leaves: ¬ ∀ k, k ≤ n → guard …), :827 (dual_needs_decision); theories/becoming/chapters/05-COLLECTIVES.md:300",
+    "severity": "imprecise"
+   },
+   {
+    "id": "market-finite-support-obstruction",
+    "field": "laws[0].en / laws[0].zh",
+    "old": "so a start below level n leaves the guard within n steps on every admissible history.",
+    "new": "so from below level n no admissible history stays within the guard through step n.",
+    "why": "Same reason as the statement. The Lean proves ¬ ∀ k ≤ n, guard, not ∃ k ≤ n, ¬ guard, and the guard is not decided here. zh: replace '所以低于第 n 级的起点在每段可容许历史上 n 步之内离开守卫' with '所以从低于第 n 级的起点出发，没有可容许历史直到第 n 步都留在守卫之内'. The new en law is 417 characters.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean:332-335",
+    "severity": "imprecise"
+   },
+   {
+    "id": "market-finite-support-obstruction",
+    "field": "laws[3].en / laws[3].zh",
+    "old": "A start in R, its orbit at n at or below θ, not at level n, leaves the guard within n steps on every admissible history.",
+    "new": "A start in R, its orbit at n at or below θ, not at level n, has no admissible history within the guard through step n.",
+    "why": "Lasting.exhausts concludes ¬ ∀ k, k ≤ n → guard (history f s d k), which is the same negated universal as Drains.leaves. zh: replace '在每段可容许历史上 n 步之内离开守卫' with '没有可容许历史直到第 n 步都留在守卫之内'.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean:407-419 (exhausts … : ¬ ∀ k, k ≤ n → guard …)",
+    "severity": "imprecise"
+   },
+   {
+    "id": "metaethical-core-characterization",
+    "field": "laws[10].en / laws[10].zh (and references, proof_bindings)",
+    "old": "lifting is transitive for a transitive better where the middle move has an outcome, irreflexive",
+    "new": "lifting is transitive for a transitive better where the middle move has an outcome, which is needed (through a move with none both lifts hold vacuously and the composite can fail), irreflexive",
+    "why": "The old claim said 'The lifting rule L is transitive only through a live middle response.' The mapping (row C8) drops 'only' because 'no declaration shows that transitivity fails without an outcome of the middle move'. That reason is false: Becoming.LiftModel.lift_needs_live_middle proves LiftBetter … .low .dead ∧ LiftBetter … .dead .high ∧ ¬ LiftBetter … .low .high. Its receipt reports an empty axiom list, and becoming-spine-instances records it. The edit restores the dropped condition. Add 'Becoming.LiftModel.lift_needs_live_middle' to laws[10].declarations. Add a reference {path: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean, role: proof, sha256: b76af036932ea87c820263922caab79b14852fcda6498d431ac7e6c5ad0bd18e, declarations: [Becoming.LiftModel.lift_needs_live_middle]}, with a proof_binding to becoming-checks/20261019T213206.644158Z/verification.json (pointer /source_sha256/Becoming.Lifting). zh: replace '“更好”传递且中间动作有结果时提升传递；' with '“更好”传递且中间动作有结果时提升传递，而这一结果是需要的（经过没有结果的动作，两次提升都空真成立而复合可以不成立）；'. The new en law is 417 characters and the zh about 135.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean:111-118 (lift_needs_live_middle); becoming-checks/20261019T213206.644158Z/verification.json (source_sha256 Becoming.Lifting = b76af036…, axioms []); snapshot _process/architecture/history/34c0c832f57c256f/metaethical-core-characterization.json claim, last sentence",
+    "severity": "dropped"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/metaethical-core-characterization.md",
+    "field": "row C8 (line 23)",
+    "old": "“only” is not kept, since no declaration shows that transitivity fails without an outcome of the middle move",
+    "new": "“only” is kept: Becoming.LiftModel.lift_needs_live_middle (Lifting.lean, recorded in becoming-spine-instances) shows that through a move with no outcome both lifts hold vacuously while the composite fails; the declaration is added to the law and references",
+    "why": "The mapping justifies dropping a condition with a statement the Lean contradicts. Nothing is to be dropped silently, and a reason that is false is no better than none.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean:111-118",
+    "severity": "error"
+   },
+   {
+    "id": "significance-retained-within-margin",
+    "field": "does_not_show[5].en / does_not_show[5].zh",
+    "old": "Living significance uses no reading of living; this is a chosen reading, open to revision.",
+    "new": "Living significance uses no reading of living; this is an AI reading, open to revision.",
+    "why": "The old limitation said 'by an AI choice, living significance uses no reading of living'. The migrated item keeps the reading but drops who chose it. The mapping (row L5) says the label survives in the correspondence's 'The reading (an AI argument, D16)' and in hypotheses[0]. Those label two other readings: the reading of the condition's sentence, and Unrestricted. Neither labels this one. The repository rule is that every reading keeps its AI label. zh: replace '这是所选的读法，可以修订。' with '这是 AI 的读法，可以修订。'.",
+    "evidence": "_process/architecture/history/1f9665ebf3fead51/significance-retained-within-margin.json limitations; df3-mapping/significance-retained-within-margin.md row L5; AGENTS.md ('Every reading keeps its AI label')",
+    "severity": "dropped"
+   },
+   {
+    "id": "theories/becoming/chapters/05-COLLECTIVES.md",
+    "field": "row r-market-partial-correction-boundary, middle cell (DF3 edit, line 298)",
+    "old": "for `β ≤ 5/12` each such state has a landing time `N`, and initial stock at least `K_N` carries",
+    "new": "for `β ≤ 5/12` each such state has a landing time `N`, and, with extra support consumption `κ ≥ 0` a step, initial stock at least the cover `K_N` carries",
+    "why": "supported_partial_transition takes (hc : 0 ≤ cost), and its stock bound cover cost N depends on κ. The edited row cites the theorem with κ left unnamed, and K_N is defined only in the next row. The record's law (laws[15]) names κ ≥ 0, so the home section says less than the Lean takes.",
+    "evidence": "experiments/market-generativity/formal/PartialRegimeTransition.lean:416-418 (hc : 0 ≤ cost; cover cost N ≤ initial)",
+    "severity": "imprecise"
+   },
+   {
+    "id": "effective-capacity-and-eventual-reachability",
+    "field": "validation_scope.en / validation_scope.zh",
+    "old": "Machine-checked by the consolidated Lean 4.29.1 checker: the core modules Becoming.ActivationCapacity, Becoming.Labelled, Becoming.Bundles and GenerativeCore (receipts under becoming-checks/ and relational-becoming-checks/), every cited declaration with an empty axiom report.",
+    "new": "Machine-checked with Lean 4.29.1: the core modules Becoming.ActivationCapacity, Becoming.Labelled and Becoming.Bundles by the consolidated checker (becoming-checks/), and GenerativeCore by the RelationalBecoming check (relational-becoming-checks/), every cited declaration with an empty axiom report.",
+    "why": "The proof_binding for GenerativeCore (cited for Generative.trace_append_iff) goes to relational-becoming-checks/20261008T181112.046979Z. Its checker is check_relational_becoming.py, not the consolidated checker. That same run is the one the next sentence calls 'now provenance'. The Lean version and the axiom reports are right; only the checker is misattributed. zh: replace 'Lean 4.29.1 合并检查器实查：核心 ActivationCapacity、Labelled、Bundles 与 GenerativeCore（becoming-checks/、relational-becoming-checks/）' with 'Lean 4.29.1 实查：核心 ActivationCapacity、Labelled、Bundles 由合并检查器（becoming-checks/），GenerativeCore 由 RelationalBecoming 检查（relational-becoming-checks/）'.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/relational-becoming-checks/20261008T181112.046979Z/verification.json (checker_sha256: check_relational_becoming.py; GenerativeCore Generative.trace_append_iff axioms [])",
+    "severity": "imprecise"
+   },
+   {
+    "id": "pending-task-context-applicability",
+    "field": "laws[5].en / laws[5].zh (lint: market-word 账户)",
+    "old": "one more record and the account's total (work, reserve and units drawn) kept",
+    "new": "one more record and the total of work, reserve and units drawn kept",
+    "why": "The lint warns: 'zh: 账户; name what the relation does'. The Lean quantity is total a = a.work + a.reserve + a.spent, so the law can name what is kept without the exchange word. zh: replace '多一条记录，账户总量（工作、储备与已用单位）保持' with '多一条记录，工作、储备与已用单位的总量保持'.",
+    "evidence": "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean:69-75 (total out.learning.account = total l.account); GoalFormationRevision.lean:153 (def total (a : Account) := a.work + a.reserve + a.spent)",
+    "severity": "style"
+   },
+   {
+    "id": "significance-retained-within-margin",
+    "field": "correspondence.zh (lint: length, 617 > 500)",
+    "old": "条件的来源是 Ren 的句子“for anything, its continuation into the future has significance(d",
+    "new": "条件的来源是 Ren 的句子“for anything, its continuation into the future has significance(d",
+    "why": "Reported as the lint gave it; no change proposed. Most of the excess is Ren's English words quoted verbatim, which must stay in their original language, as the mapping notes (row R0–R4). The warning does not change the exit status.",
+    "evidence": "python3 -B tools/research/research.py lint --ids … (space-separated): significance-retained-within-margin correspondence, rule length",
+    "severity": "style"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-supported-finite-transition.md",
+    "field": "row S0–S1 (line 12)",
+    "old": "| statement | statement (unchanged) |",
+    "new": "| statement | statement, narrowed to the Lean: “for each positive state some N exists at which initial support at least K_N carries it into the original protection” (the horizon depends on the state, `no_uniform_pulse_duration`) |",
+    "why": "The applied statement is not the old one. 'carries every positive state through a finite correction' became 'for each positive state some N exists'. That correctly fixes a uniform reading of N, but the mapping still says unchanged.",
+    "evidence": "theories/becoming/results/records/market-supported-finite-transition.json statement vs _process/architecture/history/0f1d8492393f6ea8/market-supported-finite-transition.json statement; RegimeTransition.lean:349 (no_uniform_pulse_duration)",
+    "severity": "style"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/metaethical-core-characterization.md",
+    "field": "row R0–R4 (line 39)",
+    "old": "| R0–R4 | correspondence | correspondence (unchanged) |",
+    "new": "| R0–R4 | correspondence | correspondence, with the AI label added to the reading of `living` (“`living` reads 生生 (an AI reading)”), otherwise unchanged |",
+    "why": "The migrated correspondence adds '(an AI reading)' and '（AI 的读法）'. That is a correct change, but the mapping records the field as unchanged.",
+    "evidence": "metaethical-core-characterization.json correspondence vs snapshot _process/architecture/history/34c0c832f57c256f/metaethical-core-characterization.json",
+    "severity": "style"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/pending-task-context-applicability.md",
+    "field": "row S0–S2 (line 12)",
+    "old": "| statement | statement (unchanged) |",
+    "new": "| statement | statement (“an endpoint” read as “a pending endpoint”, as `review_completes_iff` takes it; “reviews not cleared” written “uncleared reviews”) |",
+    "why": "The applied statement differs from the old bytes (en: 'a pending endpoint', 'uncleared reviews'), but the mapping says unchanged.",
+    "evidence": "pending-task-context-applicability.json statement vs snapshot _process/architecture/history/9e196f1f9b1848df/pending-task-context-applicability.json",
+    "severity": "style"
+   }
+  ],
+  "sound": [
+   "market-partial-correction-boundary",
+   "market-supported-finite-transition",
+   "market-protected-continuation",
+   "joint-plan-composition",
+   "draws-on-a-shared-stock",
+   "control-coherence-loss",
+   "classification-robust-generative-comparison",
+   "recoverable-mediated-change",
+   "derivation-soundness",
+   "finite-basis-common-interpretation"
+  ],
+  "checked": "Worktree /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3 at d18032c2c; no file edited. I read all 15 records in full (statement, laws, hypotheses, does_not_show, counterexamples, standard_boundaries, validation_scope, next_delta, correspondence, references, proof_bindings) against their schema-1 snapshots, their df3-mapping tables, their home sections and the Lean of every cited declaration.\n\nLean files read: Lasting, Courses, Recurrence, Viability, Keeping, Weighted, Readout, Dephasing, Labelled, ActivationCapacity, Lexical, Frontier, FrontierFrames, Bundles, Retaining, Significance, Metaethics, ValuationFrames, Extension, Inquiry, Countdown and Derivation (core); MarketInstances, PartialRegimeTransition, RegimeTransition, FiniteSupportObstruction, MarketGenerativity, JointContinuation, ContinuationCorrespondence, SharedStockInstances, CorrectionDependence, PendingTaskApplicability, VersionedTaskInstances, ProtocolInstances and RecoverableControl (periphery).\n\nMechanical checks:\n- Every law declaration exists in its referenced file and is listed in references (my script; 0 missing).\n- Every cited core declaration has an empty axiom report in its bound receipt. Every cited periphery declaration lists only propext, Quot.sound or Classical.choice, so each no-ethical-premise and no-ethical-premise-core-axiom-free key holds.\n- Lean versions in every evidence paragraph match their receipts (4.29.1, and 4.30.0-rc2 with Mathlib for JointContinuation, ContinuationCorrespondence, SharedStockInstances, VersionedTaskInstances and PendingTaskApplicability), as do the receipt counts quoted (26/31/123/153, 27/35/96/118, 17/22/123/153, 27/54 with 44/7/3 for OperativeCoherence, 12/18 with 9/9 for RelationalBecoming, 22/48 and 27,888 comparisons).\n- No process marker or retired label appears in public fields; dates appear only in validation_scope, where they are allowed.\n\nDF3's chapter edits: git diff main also shows changes in 08-METHOD, but they come from main moving ahead after ba80cb002, not from DF3; the merge base shows DF3 changed only 01, 02, 05 and 07. Of the DF3 edits that touch my records, the 05 market rows, the 05 draws row and the 07 rows for significance-retained, metaethical and classification-robust agree with the Lean, except that the market-partial row leaves κ ≥ 0 unnamed (reported). The 02 edits concern other records.\n\nLint: the command as given, with comma-separated --ids, reports \"records: 1\" and 0 findings, because --ids takes space-separated values (nargs='+') and the joined string is read as one id. Run with space-separated ids, lint gives 2 warnings, both reported: pending-task-context-applicability laws[5] market-word 账户, and significance-retained-within-margin correspondence zh 617 > 500. research.py check --ids on the 15 records: no errors, no source drift.\n\nRecords sound as records, though their mapping tables or home rows have findings above: market-partial-correction-boundary (home row) and market-supported-finite-transition (mapping row)."
+ }
+]

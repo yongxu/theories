@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "joint-code-plan-lifting",
   "title": {
     "zh": "提升有限嵌套共同方案",
@@ -8,21 +8,92 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-28T05:35:27+00:00",
   "statement": {
-    "zh": "凡一个描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读出，一个有限计划在一个描述处被实现，恰当它在如此被描述的每个构形处被实现；计划经描述提升，恰当该描述匹配部分。",
-    "en": "Where configurations a description identifies match parts into ones it identifies and leaves are read correctly through it, a finite plan is realized at a description exactly where it is realized at each configuration so described; plans lift through a description exactly where it matches parts."
+    "en": "Where configurations a description identifies match parts into ones it identifies and leaves are read correctly through it, a plan is realized at a description exactly where it is at each configuration so described; plans with descriptions as leaves lift through it exactly where it matches parts.",
+    "zh": "凡一个描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读出，一个计划在一个描述处被实现，恰当它在如此被描述的每个构形处被实现；叶为描述的计划经该描述提升，恰在它匹配部分处。"
   },
-  "claim": {
-    "zh": "描述形式：凡一个描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读出，一个有限嵌套共同计划在一个构形的描述处被实现，恰当它在该构形处被实现；叶为描述的计划经描述提升，恰当该描述所认同的构形匹配部分。编码形式：经精确读出共同检验、并给通过相同检验之构形同一编码的编码，叶被正确读出、部分之对紧致且检验稳定时，编码整体实现一个有限嵌套共同计划，恰当原生整体实现它。",
-    "en": "Description form: where configurations a description identifies match parts into configurations it identifies and the leaves are read correctly through it, a finite nested joint plan is realized at the description of a configuration exactly where it is realized at that configuration; plans whose leaves are descriptions lift through a description exactly where configurations it identifies match parts. Code form: through a code reading the joint tests exactly and giving configurations passing the same tests one code, with the leaves read correctly, the pairs of parts compact and the tests stable, the coded whole realizes a finite nested joint plan exactly where the native whole realizes it."
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "描述形式：经描述的 MatchesParts 与逐叶的正确读出。编码形式：JointCompact、TestsStable、Exact、Reduced 与逐叶的正确读出。计划是有限二叉嵌套。",
-      "en": "Description form: MatchesParts through the description and pointwise leaf correctness. Code form: JointCompact, TestsStable, Exact, Reduced and pointwise leaf correctness. Plans are finite binary nestings."
+      "en": "A joint plan is a finite binary nesting of leaves; a configuration realizes it where it holds together parts realizing its two sides, down to leaves read at the parts, each node with its own witness. Read through a description, the joint relation holds among descriptions where some configuration so described holds together parts so described.",
+      "zh": "共同计划是叶的有限二叉嵌套；一个构形实现它，是指它共同持有实现其两侧的部分，直到在部分处读出的叶，每个节点各有其见证。经描述读出，共同关系在描述之间成立，是指某个如此被描述的构形共同持有如此被描述的部分。",
+      "declarations": [
+        "Becoming.JointPlan",
+        "Becoming.JointPlan.Realizes",
+        "Becoming.jointImage"
+      ]
+    },
+    {
+      "en": "A relation B matches the parts two joint relations hold together where, wherever B relates two configurations, each pair of parts the first holds together under the first relation is matched by a pair the second holds together under the second, related by B part by part.",
+      "zh": "关系 B 匹配两个共同关系所持的部分，是指凡 B 关联两个构形处，前者在第一个关系下共同持有的每对部分，都被后者在第二个关系下共同持有的一对所匹配，逐部分由 B 关联。",
+      "declarations": [
+        "Becoming.MatchesParts"
+      ]
+    },
+    {
+      "en": "For any ternary joint relation and any description: where configurations the description identifies match parts into configurations it identifies, and the leaves are read correctly through it, every plan is realized at the description of a configuration, under the joint relation read through the description, exactly where it is realized at that configuration.",
+      "zh": "对任意三元共同关系与任意描述：凡该描述所认同的构形把部分匹配到它所认同的构形、叶经它被正确读出，每个计划在一个构形的描述处（经该描述读出的共同关系之下）被实现，恰当它在该构形处被实现。",
+      "declarations": [
+        "Becoming.JointPlan.realizes_image_iff"
+      ]
+    },
+    {
+      "en": "Take plans whose leaves are descriptions, a leaf read at a configuration where it is the configuration's description: each is realized at the description of each configuration exactly where it is realized there, exactly where configurations the description identifies match parts into ones it identifies; the direction from description to configuration alone gives matching parts.",
+      "zh": "取叶为描述的计划（叶在一个构形处读出，是指它是该构形的描述）：每个计划在每个构形的描述处被实现恰当它在该构形处被实现，恰当该描述所认同的构形把部分匹配到它所认同的构形；只由描述到构形一个方向即给出部分匹配。",
+      "declarations": [
+        "Becoming.JointPlan.plans_lift_iff",
+        "Becoming.JointPlan.matchesParts_of_lifts"
+      ]
+    },
+    {
+      "en": "In a joint frame, through a code that reads the joint tests exactly and gives configurations passing the same joint tests one code: where the pairs of parts each configuration holds together are compact for the joint tests, every joint test holds wherever it cannot fail, and the leaves are read correctly through the code, every plan is realized at the code of a configuration exactly where it is realized there.",
+      "zh": "在共同框架中，经一个精确读出共同检验、并给通过相同共同检验之构形同一编码的编码：凡每个构形共同持有的部分之对对共同检验紧致、每个共同检验在不能不成立处成立、叶经编码被正确读出，每个计划在一个构形的编码处被实现，恰当它在该构形处被实现。",
+      "declarations": [
+        "Becoming.JointPlan.realizes_code_iff",
+        "Becoming.JointFrame.JointCompact",
+        "Becoming.JointFrame.TestsStable"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "Description form: any ternary joint relation on configurations of any kind and any description; MatchesParts through the description and pointwise leaf correctness.",
+      "zh": "描述形式：任意类型构形上的任意三元共同关系与任意描述；经描述的 MatchesParts 与逐叶的正确读出。"
+    },
+    {
+      "en": "Code form: a joint frame of the spine and a code of its joint tests, with JointCompact, TestsStable, Exact, Reduced and pointwise leaf correctness.",
+      "zh": "编码形式：脊柱的共同框架与其共同检验的编码，带 JointCompact、TestsStable、Exact、Reduced 与逐叶的正确读出。"
+    },
+    {
+      "en": "Plans are finite binary nestings.",
+      "zh": "计划是有限二叉嵌套。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The code form takes the tests' stability as a hypothesis: excluded middle gives it, and without it, matching parts by the joint tests in every joint frame of one move and one claim with compact pairs of parts is exactly excluded middle.",
+      "zh": "编码形式以检验稳定为假设：排中律给出它；没有它时，在每个只有一种动作与一种主张、部分之对紧致的共同框架中以共同检验匹配部分，恰是排中律。",
+      "kind": "scope",
+      "witness": "Becoming.matchesParts_of_compact_iff_em"
+    },
+    {
+      "en": "Existence of a witnessed plan does not make arbitrary designated parts composable.",
+      "zh": "不能把某个计划有见证升级为任意指定部分均能接合。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Composition, Becoming.JointCorrespondence and Becoming.JointPlans are bound to core receipts under becoming-checks, and those of Becoming.Likeness to core receipt 20261027T195912.152773Z; every cited core declaration has an empty axiom report. The periphery ExplanatoryJointness and the retired CompositionBridge are provenance; their receipt under explanatory-jointness-checks keeps its earlier scope.",
+    "zh": "Lean 4.29.1 合并检查器实查：Composition、JointCorrespondence 与 JointPlans 的当前字节绑定 becoming-checks 下的核心回执，Likeness 绑定核心回执 20261027T195912.152773Z；所引核心声明的公理报告均为空。外围的 ExplanatoryJointness 与退役的 CompositionBridge 是来源；explanatory-jointness-checks 下的回执保持原范围。"
+  },
+  "next_delta": {
+    "en": "Supply an application's description and leaf reading and lift its finite nested plans through the description form, or, for a code of the joint tests, through the code form with the stability of the tests stated.",
+    "zh": "给出应用中的描述与叶的读法，经描述形式提升其有限嵌套计划；对共同检验的编码，则经编码形式，并写明检验稳定。"
+  },
   "correspondence": {
     "zh": "每节点共享一个共同见证；叶项身份与跨分支共享不由代码存在自动确定。",
     "en": "Each node retains a common witness; leaf identities and cross-branch sharing are not automatically fixed by code existence."
@@ -59,23 +130,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJointness.lean",
-      "detail": {
-        "zh": "不能把某个计划有见证升级为任意指定部分均能接合。",
-        "en": "Existence of a witnessed plan does not make arbitrary designated parts composable."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不能把某个计划有见证升级为任意指定部分均能接合。",
-    "en": "Existence of a witnessed plan does not make arbitrary designated parts composable."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJointness.lean",
@@ -111,7 +165,13 @@
       "sha256": "08ae38e607c91b205c8b99bbcb49c0678e39f36d89b6cfb9af49bbc602ba4a49",
       "declarations": [
         "Becoming.JointPlan.realizes_image_iff",
-        "Becoming.JointPlan.plans_lift_iff"
+        "Becoming.JointPlan.plans_lift_iff",
+        "Becoming.jointImage",
+        "Becoming.JointPlan.matchesParts_of_lifts",
+        "Becoming.JointFrame.JointCompact",
+        "Becoming.JointFrame.TestsStable",
+        "Becoming.JointFrame.TestsStable.of_em",
+        "Becoming.matchesParts_of_compact_iff_em"
       ]
     },
     {
@@ -119,7 +179,8 @@
       "role": "proof",
       "sha256": "e79cb339076a2ac8b66cd981991c5287721d707a9c449d622b660e8c495f5145",
       "declarations": [
-        "Becoming.JointPlan"
+        "Becoming.JointPlan",
+        "Becoming.JointPlan.Realizes"
       ]
     },
     {
@@ -171,6 +232,19 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "role": "proof",
+      "sha256": "c2ce8ed970473ced65a6addb9ef5ff6a0a994f33507d2d24316a7f79888858e1",
+      "declarations": [
+        "Becoming.MatchesParts"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "role": "receipt",
+      "sha256": "18d5d8f742017f011cc1df59d6be80b1b3e0a46441e7127a0d784dfed1a5fd0b"
     }
   ],
   "proof_bindings": [
@@ -194,12 +268,15 @@
       "sha256_pointer": "/source_sha256/Becoming.JointPlans",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Likeness",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "直接复用 joint_plan_lifts，再提供应用中的叶项对应。",
-    "en": "Reuse joint_plan_lifts and supply the application’s leaf correspondence."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -232,6 +309,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added; the claim states the description form (matching parts and leaves read correctly; plans lift exactly where the description matches parts) and the code form with the stability of the tests it takes, which the earlier claim and premises omitted; no Lean changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述；主张写出描述形式（部分匹配、叶被正确读出；计划恰在描述匹配部分处提升）与编码形式及其所需的检验稳定，此前的主张与前提遗漏了后者；Lean 未改。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): statement kept, its last clause narrowed to plans whose leaves are descriptions, as the Lean has it; the claim split into five laws, each read against its declarations in Composition.lean, JointPlans.lean, JointCorrespondence.lean and Likeness.lean (two of definitions, the description form, plans lifting, the code form); the limitation, the same sentence as the counterexample, kept there; one does-not-show item on the stability the code form takes; the hypotheses split by form; jointImage, matchesParts_of_lifts, JointCompact, TestsStable, TestsStable.of_em, matchesParts_of_compact_iff_em and JointPlan.Realizes added to their files' references, and Likeness.lean added with MatchesParts, its newest core receipt and binding; the shared boundary no-ethical-premise cited; no premise, status or source hash changed. Every earlier sentence is mapped in [joint-code-plan-lifting.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-code-plan-lifting.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, the counterexample (moved to a does-not-show item), each read against the Lean it cites. A cold read of the applied record was taken in the evidence paragraph.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：陈述保留，末一分句按 Lean 收窄为叶为描述的计划；主张拆为五条规律，各条对照 Composition.lean、JointPlans.lean、JointCorrespondence.lean 与 Likeness.lean 中的声明核读（两条定义、描述形式、计划提升、编码形式）；限制与反例是同一句，留在反例中；新增一条“未表明”，说明编码形式所取的检验稳定；前提按形式分开；jointImage、matchesParts_of_lifts、JointCompact、TestsStable、TestsStable.of_em、matchesParts_of_compact_iff_em 与 JointPlan.Realizes 加入其文件的引用，并加入 Likeness.lean（含 MatchesParts）及其最新核心回执与绑定；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变。每句旧文本的去向见 [joint-code-plan-lifting.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-code-plan-lifting.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、反例（移入“未表明”），各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及证据段。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/3a1ec364be2a36c7/joint-code-plan-lifting.json",
+      "sha256": "3a1ec364be2a36c7d44edbb5714782f310c63d2dc1c17022e329dc725fb7780a",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/94532bc0d0f92019/joint-code-plan-lifting.json",
+      "sha256": "94532bc0d0f920196735563ac26d20e4ed2201bf196e2ada95513e9a901c19d2",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

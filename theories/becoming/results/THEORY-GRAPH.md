@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3049 nodes, 5516 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3049 nodes, 5521 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -404,7 +404,7 @@ Results (59):
 - [Difference-making in joint activity](records/joint-difference-making.md) (recorded-checked)
 - [Division by exclusive footprints](records/division-by-exclusive-footprints.md) (recorded-checked)
 - [Drawers in turn](records/drawers-in-turn.md) (recorded-checked)
-- [Draws on one shared stock: every combination fits exactly when the total does](records/draws-on-a-shared-stock.md) (recorded-checked)
+- [Draws on one shared stock](records/draws-on-a-shared-stock.md) (recorded-checked)
 - [Every optimum rebuilds a depleted base](records/optima-rebuild-a-depleted-base.md) (recorded-checked)
 - [Exact arrival boundary under partial correction](records/market-partial-correction-boundary.md) (recorded-checked)
 - [Giving that waits on giving](records/giving-that-waits-on-giving.md) (recorded-checked)

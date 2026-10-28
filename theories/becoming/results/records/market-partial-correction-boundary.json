@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "market-partial-correction-boundary",
   "title": {
     "zh": "部分纠正的精确到达边界",
@@ -8,11 +8,181 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-25T14:42:20+00:00",
-  "claim": {
-    "zh": "对每条带可容许扰动的变化之律与目标：起点在每个可容许扰动下n步内到达目标，恰当某个漏斗族（第0级在目标内；第k+1级在目标内或每个可容许步落到第k级）在第n级含有它，也恰当每个汇聚族在第n级含有它；到达可复合。对确定的律，轨道n步内遇到目标恰当某个漏斗族含起点，目标可判定时也恰当有起点处至多为n、目标外每步下降的数值变式；轨道永不到达目标，恰当某个含起点、避开目标且对律封闭的集合存在，这即目标补集的生存核，目标之外的不动构型就是这样的集合。在原有理市场族中，0≤β≤3/4且无额外责任误差时，每个物理正维护状态在有限时间到达原保护区域，恰当β≤5/12：市场的增益估计（依次为份额、影响、质量）给出通向着陆的漏斗族，这是实例的内容；β>5/12时不动构型是避开着陆的封闭集。等价地，质量3/8、最坏影响1处的余量非负，也恰当没有避开着陆的封闭集含正状态。这包括等号情形，并在继承的初始存量覆盖K_N下执行，撤出后把实际到达状态交给原保护。",
-    "en": "For every law of change with admissible disturbances and every target, a start reaches the target within n steps on every admissible disturbance exactly when some funnel holds it at level n (level 0 in the target; level k+1 in the target or sent by every admissible step to level k), and exactly when every basin does; reaching composes. For a determined law the orbit meets the target within n steps exactly when some funnel holds the start, and, the target decided, exactly when some numeric variant at most n at the start is lowered by every step outside the target; it never reaches the target exactly when some set containing the start avoids the target and is closed under the law, the viability kernel of the target's complement, and a fixed configuration outside the target is such a set. In the original rational market family with 0<=beta<=3/4 and zero extra quality error, every physical positive renewal state reaches the original protection region in finite time exactly when beta<=5/12: the market's gain estimates (share, then influence, then quality) supply the funnels into landing, the instance's content, and above 5/12 the fixed configuration is a closed set avoiding landing. Equivalently, the quality margin at 3/8 under the worst influence 1 is nonnegative, and no closed set avoiding landing contains a positive state. This includes equality and executes under the inherited initial stock cover K_N, handing the actual arrived state to original protection after withdrawal."
+  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
+  "statement": {
+    "en": "A start reaches a target within n steps on every admissible disturbance exactly when a funnel holds it at level n, and for a determined law never does exactly when a closed set off the target holds it; in the error-free market with 0 ≤ β ≤ 3/4 all physical positive states land exactly when β ≤ 5/12.",
+    "zh": "一个起点在每个可容许扰动下 n 步之内到达目标，恰当有某个漏斗在第 n 层容纳它；对确定的律，它永不到达目标，恰当有包含它、避开目标的封闭集合。在无误差的市场中，对 0 ≤ β ≤ 3/4，一切物理正状态皆着陆恰当 β ≤ 5/12。"
   },
+  "laws": [
+    {
+      "en": "For a law of change with admissible disturbances and a target, a start reaches the target within n steps when it is in the target or, with steps left, every admissible disturbance takes it to one reaching it within one step fewer. A funnel has level 0 in the target and level k + 1 in the target or sent to level k by every admissible disturbance; a start reaches within n exactly when some funnel holds it at level n.",
+      "zh": "对带可容许扰动的变化之律与目标：起点 n 步之内到达目标，是指它在目标中，或尚有步数而每个可容许扰动都把它带到少一步之内到达者。漏斗的第 0 级在目标内，第 k+1 级在目标内或被每个可容许扰动带到第 k 级；起点 n 步之内到达，恰当某个漏斗在第 n 级含有它。",
+      "declarations": [
+        "Becoming.Lasting.Reaches",
+        "Becoming.Lasting.Funnel",
+        "Becoming.Lasting.reaches_iff_funnel"
+      ]
+    },
+    {
+      "en": "A basin holds the target at every level, and at level k + 1 whatever every admissible disturbance takes to level k; a start reaches within n exactly when every basin holds it at level n, and a family both a funnel and a basin is exactly reaching. Reaching composes: a start reaching a region within m, each member of which reaches the target within k, reaches it within k + m.",
+      "zh": "汇聚族在每一级都含目标，且凡每个可容许扰动都带到第 k 级者都在第 k+1 级；起点 n 步之内到达，恰当每个汇聚族在第 n 级含有它；兼为漏斗与汇聚族的族恰是到达。到达可复合：m 步之内到达某区域、而区域每个成员 k 步之内到达目标的起点，k+m 步之内到达目标。",
+      "declarations": [
+        "Becoming.Lasting.Basin",
+        "Becoming.Lasting.reaches_iff_basin",
+        "Becoming.Lasting.reaches_iff_of_exact",
+        "Becoming.Lasting.Reaches.trans"
+      ]
+    },
+    {
+      "en": "What reaches within n meets the target within the first n steps of every admissible history; given one admissible disturbance and a decided target, the converse holds; and for one law, that converse asked of a family of targets given by Boolean sequences yields the limited principle of omniscience.",
+      "zh": "n 步之内到达者，在每段可容许历史的前 n 步之内遇到目标；给定一个可容许扰动且目标可判定时，逆命题成立；对一条律，对由布尔序列给出的一族目标都要求这一逆命题，即得有限全知原理。",
+      "declarations": [
+        "Becoming.Lasting.Reaches.histories",
+        "Becoming.Lasting.reaches_iff_histories",
+        "Becoming.Lasting.Search.histories_need_decision"
+      ]
+    },
+    {
+      "en": "A numeric variant for n is a level in the natural numbers such that a configuration at a level at most n is in the target, or at a positive level that every admissible disturbance lowers; a start at a level at most n reaches within n. Where some disturbance is admissible, reaching within n and lasting n steps outside the target exclude each other.",
+      "zh": "n 的数值变式是自然数层级：层级至多为 n 的构型在目标内，或处于正层级且每个可容许扰动都使其下降；层级至多为 n 的起点 n 步之内到达。有可容许扰动时，n 步之内到达与在目标之外持续 n 步互相排斥。",
+      "declarations": [
+        "Becoming.Lasting.Variant",
+        "Becoming.Lasting.Variant.reaches",
+        "Becoming.Lasting.Reaches.not_lasts"
+      ]
+    },
+    {
+      "en": "For a determined law, reaching within n is meeting the target on the orbit within n steps; the orbit meets it within n exactly when some funnel holds the start at level n, with no decision used, and, the target decided, exactly when some level in the natural numbers, at most n at the start, is lowered by every step from a configuration outside the target at a level at most n.",
+      "zh": "对确定的律，n 步之内到达即轨道 n 步之内遇到目标；轨道 n 步之内遇到目标，恰当某个漏斗在第 n 级含起点，不用判定；目标可判定时，也恰当有自然数层级在起点至多为 n，且目标之外、层级至多为 n 的构型每走一步都使它下降。",
+      "declarations": [
+        "Becoming.Lasting.reaches_iff_orbit",
+        "Becoming.Lasting.orbit_reaches_iff_funnel",
+        "Becoming.Lasting.orbit_reaches_iff_variant"
+      ]
+    },
+    {
+      "en": "With the target decided, reaching within n under a determined law is not lasting n steps outside the target. The decisions are needed: if not lasting outside every target gave reaching it with no step, double negation would be eliminated; if every determined law meeting a target within n had a numeric variant, equality of configurations would be decided.",
+      "zh": "目标可判定时，确定的律下 n 步之内到达，就是不在目标之外持续 n 步。这些判定是需要的：若对每个目标，不在其外持续即给出零步之内到达，双重否定即可消去；若每条 n 步之内遇到目标的确定律都有数值变式，构型的相等即可判定。",
+      "declarations": [
+        "Becoming.Lasting.reaches_iff_not_lasts",
+        "Becoming.Lasting.dual_needs_decision",
+        "Becoming.Lasting.numeric_needs_decision"
+      ]
+    },
+    {
+      "en": "A determined law's orbit never reaches a target exactly when some set containing the start avoids the target and is closed under the law, that is, exactly when the start lies in the viability kernel of the target's complement; some seed never reaches it exactly when such a set contains a seed, and no seed avoids it exactly when no such set contains one.",
+      "zh": "确定的律的轨道永不到达目标，恰当有含起点、避开目标且对律封闭的集合，即恰当起点在目标补集的生存核中；某个种子永不到达，恰当这样的集合含某个种子；没有种子避开目标，恰当没有这样的集合含种子。",
+      "declarations": [
+        "Becoming.Lasting.avoids_iff_closed",
+        "Becoming.Lasting.avoids_iff_kernel",
+        "Becoming.Lasting.some_avoids_iff",
+        "Becoming.Lasting.none_avoid_iff"
+      ]
+    },
+    {
+      "en": "Reaching the target from every seed rules out every such closed set containing a seed, and a fixed configuration outside the target is such a set by itself, so its orbit never reaches the target.",
+      "zh": "每个种子都到达目标，就排除了每个含种子的这种封闭集；目标之外的不动构型自身就是这样的集合，所以其轨道永不到达目标。",
+      "declarations": [
+        "Becoming.Lasting.reaches_excludes",
+        "Becoming.Lasting.fixed_avoids"
+      ]
+    },
+    {
+      "en": "On the courses of a determined law's process, what it reaches from a configuration is its orbit; so nothing it reaches from s is in the target exactly when such a closed set contains s, some seed reaches nothing in it exactly when such a set holds a seed, and a fixed configuration outside the target reaches nothing in it.",
+      "zh": "在确定的律之过程的历程上，从一个构型所到达者就是其轨道；所以从 s 所到达者都不在目标中，恰当这样的封闭集含 s；某个种子所到达者都不在其中，恰当这样的集合含种子；目标之外的不动构型到达不了目标中的构型。",
+      "declarations": [
+        "Becoming.Branching.law_reach_iff",
+        "Becoming.Courses.avoids_iff_closed_reach",
+        "Becoming.Courses.some_avoids_iff_reach",
+        "Becoming.Courses.fixed_avoids_reach"
+      ]
+    },
+    {
+      "en": "A course of the determined law's process ends on the orbit at its length, and the orbit at k is where the course of k moves ends; so a course of at most n moves reaches the target exactly when the orbit meets it within n steps, exactly when a funnel holds the start at level n, and, the target decided, exactly when a numeric variant is at most n at the start.",
+      "zh": "确定的律之过程的历程，在其长度处终于轨道上，轨道在第 k 步就是 k 步历程的终点；所以至多 n 步的历程到达目标，恰当轨道 n 步之内遇到目标，恰当某个漏斗在第 n 级含起点；目标可判定时，也恰当某个数值变式在起点至多为 n。",
+      "declarations": [
+        "Becoming.Courses.trace_orbit",
+        "Becoming.Courses.orbit_trace",
+        "Becoming.Courses.course_reaches_iff_orbit",
+        "Becoming.Courses.course_reaches_iff_funnel",
+        "Becoming.Courses.course_reaches_iff_variant"
+      ]
+    },
+    {
+      "en": "What reaches within n, what a funnel holds at level n, and what every basin holds at level n each meet the target within n steps on every run of the disturbed process.",
+      "zh": "n 步之内到达者、漏斗在第 n 级所含者、每个汇聚族在第 n 级所含者，都在受扰过程的每次运行上 n 步之内遇到目标。",
+      "declarations": [
+        "Becoming.Courses.Reaches.runs",
+        "Becoming.Courses.Funnel.runs",
+        "Becoming.Courses.basin_runs"
+      ]
+    },
+    {
+      "en": "In the market model the regime law with correction strength b and no extra quality error is a determined law; some physical seed with positive share never lands exactly when some set closed under the law and avoiding landing contains such a seed; and the quality margin at the fixed quality 3/8 under the worst influence 1 is nonnegative exactly when b ≤ 5/12.",
+      "zh": "市场模型中，纠正强度为 b、无额外品质误差的体制律是确定的律；某个份额为正的物理种子永不着陆，恰当某个对律封闭、避开着陆的集合含这样的种子；固定品质 3/8、最坏影响 1 处的品质余量非负，恰当 b ≤ 5/12。",
+      "declarations": [
+        "Becoming.MarketInstances.path_eq",
+        "Becoming.MarketInstances.never_lands_iff",
+        "Becoming.MarketInstances.margin_iff"
+      ]
+    },
+    {
+      "en": "For 0 ≤ b ≤ 3/4, every physical seed with positive share lands under the regime law exactly when b ≤ 5/12, exactly when that margin is nonnegative, and exactly when no closed set avoiding landing contains such a seed; for 5/12 < b ≤ 3/4 the fixed configuration is a physical seed with positive share that never lands.",
+      "zh": "对 0 ≤ b ≤ 3/4，每个份额为正的物理种子在体制律下着陆，恰当 b ≤ 5/12，恰当该余量非负，也恰当没有避开着陆的封闭集含这样的种子；对 5/12 < b ≤ 3/4，不动构型是份额为正、永不着陆的物理种子。",
+      "declarations": [
+        "PartialRegimeTransition.exact_universal_landing_boundary",
+        "Becoming.MarketInstances.lands_iff_margin",
+        "Becoming.MarketInstances.lands_iff_no_closed",
+        "Becoming.MarketInstances.fixed_point_instance",
+        "Becoming.MarketInstances.landing_boundary_instance"
+      ]
+    },
+    {
+      "en": "For every determined law, a rational quantity at most a top on a region that every step from outside the target keeps, rising there by at least a fixed gain a step, gives a funnel into the target. For 0 ≤ b ≤ 5/12 and 0 ≤ a ≤ 1/2 the settled region for share 2a is kept, and three such funnels (share, then influence, then quality) land every settled configuration within 28 + n steps whenever 7/8 < n·a²/160.",
+      "zh": "对每条确定律，在目标之外每步都保持的区域上至多为某上界、每步至少升高固定增益的有理量，给出通向目标的漏斗。对 0 ≤ b ≤ 5/12 与 0 ≤ a ≤ 1/2，份额 2a 的安定区域被保持；三个这样的漏斗（份额、影响、质量依次）使每个安定构型在 28 + n 步之内着陆，只要 7/8 < n·a²/160。",
+      "declarations": [
+        "Becoming.MarketInstances.rising_funnel",
+        "Becoming.MarketInstances.settled_kept",
+        "Becoming.MarketInstances.settled_reaches_landing"
+      ]
+    },
+    {
+      "en": "For 0 ≤ b ≤ 5/12 every physical seed with positive share comes into the settled region for half its share and so reaches landing; and for every b, every positive physical seed lands exactly when each is held by some funnel into landing.",
+      "zh": "对 0 ≤ b ≤ 5/12，每个份额为正的物理种子都进入其份额一半的安定区域，从而到达着陆；对每个 b，每个正的物理种子都着陆，恰当每个都被某个通向着陆的漏斗所含。",
+      "declarations": [
+        "Becoming.MarketInstances.seed_reaches_settled",
+        "Becoming.MarketInstances.seed_reaches_landing",
+        "Becoming.MarketInstances.landing_side_instance",
+        "Becoming.MarketInstances.lands_iff_funnel"
+      ]
+    },
+    {
+      "en": "With extra support consumption κ ≥ 0 a step, for 0 ≤ b ≤ 5/12 and a physical seed with positive share there is N such that, from every initial stock at least the cover for N steps, the guarded history at correction strength b agrees with the operating history for its first N steps, the state at N is safe for the original parameters, and from it the original guarded history with no shock never fails.",
+      "zh": "每步额外支持耗用 κ ≥ 0 时，对 0 ≤ b ≤ 5/12 与份额为正的物理种子，有 N 使得：初始存量至少为 N 步覆盖时，纠正强度 b 下的受守卫历史在前 N 步与运行历史一致，第 N 步的状态对原参数安全，由此出发、无冲击的原受守卫历史永不失败。",
+      "declarations": [
+        "PartialRegimeTransition.supported_partial_transition",
+        "Becoming.MarketInstances.partial_prefix_instance"
+      ]
+    },
+    {
+      "en": "The cover bounds the support: for κ ≥ 0 it is at least 5 at every horizon; a stock at least the cover for n + 1 steps leaves, after one step of consumption κ at a nonnegative share, at least the cover for n; and a landed state with stock at least 5 is safe for the original parameters.",
+      "zh": "覆盖界定支持：κ ≥ 0 时它在每个步数都至少为 5；至少为 n+1 步覆盖的存量，在非负份额下经一步耗用 κ 后，仍至少为 n 步覆盖；存量至少为 5 的已着陆状态对原参数安全。",
+      "declarations": [
+        "RegimeTransition.cover_floor",
+        "RegimeTransition.cover_step",
+        "RegimeTransition.landing_supplies_safety"
+      ]
+    },
+    {
+      "en": "At the boundary: for 0 ≤ b ≤ 5/12 the share of every physical seed stays at least half its start; for 5/12 < b ≤ 3/4 some certified low box of states, holding states with positive share, never lands; and for every ε > 0 some constant adverse quality error e with 0 < e < ε at b = 5/12 leaves a physical seed with positive share that never lands.",
+      "zh": "在边界处：对 0 ≤ b ≤ 5/12，每个物理种子的份额都至少保持起始的一半；对 5/12 < b ≤ 3/4，某个有低区证书、含正份额状态的状态盒永不着陆；对每个 ε > 0，b = 5/12 时某个常数不利品质误差 0 < e < ε 留下一个份额为正、永不着陆的物理种子。",
+      "declarations": [
+        "PartialRegimeTransition.uniform_seed_floor",
+        "PartialRegimeTransition.supercritical_low_box_never_lands",
+        "PartialRegimeTransition.arbitrarily_small_error_blocks_universal_landing"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "物理有理初态x,q,w∈[0,1]且x>0；有限干预阶段β固定，其余参数沿原例；额外责任误差为零。",
@@ -21,8 +191,66 @@
     {
       "zh": "实际运行另需每步κ≥0额外支持耗用及初始C₀≥K_N；货币预算先付后收入，交接后β=1/2，撤除κ，无其他冲击。",
       "en": "Actual execution additionally requires nonnegative per-step support consumption kappa and C0>=K_N; monetary payment precedes receipts, beta returns to 1/2 after handoff, kappa is withdrawn and there are no other shocks."
+    },
+    {
+      "en": "The core laws hold for any type of configurations and disturbances; a decided target is used only in the laws that name the decision (the converse on histories, the numeric variant, reaching as not lasting); one admissible disturbance is given where a law says so.",
+      "zh": "核心规律对任意类型的构型与扰动成立；目标可判定只用在写明判定的规律中（历史上的逆命题、数值变式、到达即不持续）；给定一个可容许扰动只在规律写明之处。"
+    },
+    {
+      "en": "The market model's quantities and parameters are rational numbers, with histories indexed by natural times from 0.",
+      "zh": "市场模型的量与参数是有理数，历史以从 0 起的自然时刻为索引。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The exact boundary is for the property that every physical positive state lands with zero extra quality error; it is not a complete basin of landing.",
+      "zh": "精确边界针对每个物理正状态在无额外品质误差下着陆这一性质；它不是完整的着陆盆。",
+      "kind": "scope"
+    },
+    {
+      "en": "No bifurcation over all parameters and no recovery range with quality error follow; at the boundary arbitrarily small constant adverse error leaves a positive seed that never lands.",
+      "zh": "推不出全参数分岔，也推不出含品质误差的恢复范围；在边界处，任意小的常数不利误差都留下永不着陆的正种子。",
+      "kind": "non-implication",
+      "witness": "PartialRegimeTransition.arbitrarily_small_error_blocks_universal_landing"
+    },
+    {
+      "en": "The threshold 5/12 is the model's, not a threshold measured in any market.",
+      "zh": "阈值 5/12 属于模型，不是在任何市场中测得的阈值。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The intervention, with β held fixed and the support supplied, is assumed: no entry mechanism and no formation of the intervention follow from the laws.",
+      "zh": "干预（β 固定、支持给定）是假设的：规律推不出进入机制，也推不出干预的形成。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The core laws do not supply the market's funnels: the gain estimates that give them are facts about this one rational law.",
+      "zh": "核心规律不提供市场的漏斗：给出这些漏斗的增益估计是这一条有理律的事实。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/market-generativity/formal/PartialRegimeTransition.lean",
+      "detail": {
+        "zh": "超临界存在正维护固定点及有宽度的未到达低区；临界处任意小持续不利误差有正维护固定反例，未证明其稳定性。",
+        "en": "Above criticality there is a positive fixed obstruction and a positive-width nonarrival box. At criticality arbitrarily small constant adverse error has positive fixed obstructions; their stability is not claimed."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1. The core modules Becoming.Lasting, Becoming.Courses and Becoming.Recurrence by the consolidated checker (becoming-checks/), with empty axiom reports; the periphery PartialRegimeTransition and RegimeTransition by the partial-transition check (partial-transition-verification.json: 26 new theorems, 31 declaration audits; 123 inherited theorems, 153 audits) and MarketInstances by its instance checker (market-instances-checks/), reporting propext, Quot.sound and Classical.choice. Author counterreview integrated; no independent review or new market observation.",
+    "zh": "Lean 4.29.1 实查：核心 Lasting、Courses、Recurrence 由合并检查器（becoming-checks/）检查，公理报告皆空；外围 PartialRegimeTransition 与 RegimeTransition 由部分转变检查（新定理26、审计31，继承定理123、审计153）、MarketInstances 由其实例检查器检查，报告 propext、Quot.sound、Classical.choice。有作者反审；无独立审查或新市场观察。"
+  },
+  "next_delta": {
+    "en": "Connect actually formed changes in provision, dependence or renewal expansion to the model's share and correction strength, and find the recovery ranges under quality error.",
+    "zh": "把实际形成的供给、依存或维护扩展的改变接到模型的份额与纠正强度上，并求出含品质误差时的恢复范围。"
+  },
   "correspondence": {
     "zh": "临界恢复依赖维护活动实际改变后续影响；参数、比例、支持及责任读取的现实对应须核实。现有形成结果尚未正式映射为市场份额或β变化。",
     "en": "Critical recovery depends on renewal actually changing subsequent influence; parameter, share, support and quality-reading correspondence must be established. Existing formation results are not yet formally mapped to market shares or beta change."
@@ -122,23 +350,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/market-generativity/formal/PartialRegimeTransition.lean",
-      "detail": {
-        "zh": "超临界存在正维护固定点及有宽度的未到达低区；临界处任意小持续不利误差有正维护固定反例，未证明其稳定性。",
-        "en": "Above criticality there is a positive fixed obstruction and a positive-width nonarrival box. At criticality arbitrarily small constant adverse error has positive fixed obstructions; their stability is not claimed."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "精确边界针对指定无误差全正初态到达性质；不是完整盆界、全参数分岔、含误差恢复范围、实测阈值或已形成干预／进入的证明。",
-    "en": "The exact boundary concerns the specified zero-error universal positive-state arrival property, not a complete basin, all-parameter bifurcation, noisy recovery range, measured threshold, or formed intervention/entry."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 实际检查26项新定理／31项声明审计，123项继承定理／153项审计分列。作者反审已整合，无独立agent验收或新增市场观察。一般律已由检查器回执绑定。",
-    "en": "Lean 4.29.1 actually checks 26 new theorems / 31 declaration audits and separately 123 inherited theorems / 153 audits. Author counterreview is integrated, without independent agent acceptance or new market observations. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/market-generativity/formal/PartialRegimeTransition.lean",
@@ -400,10 +611,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "部分纠正与临界等号已经完成；market-finite-support-obstruction进一步完成有限支持的全控制失败区间。后续为实际形成输出改变供给、依存或维护扩展的接口，以及其他含误差恢复范围。",
-    "en": "Partial correction and equality are complete; market-finite-support-obstruction adds the all-control finite-support failure interval. Next are actually formed changes in provision, dependence or renewal expansion and other noisy recovery ranges."
-  },
   "history": [
     {
       "zh": "2026-10-08：由β=0足够条件推进至0≤β≤5/12及其精确全初态边界，保留临界误差与超临界反例；旧证书和支持结果直接复用。",
@@ -446,10 +653,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them (the claim is unchanged).",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述（主张不变）。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 18 laws, each read against its declarations in Becoming.Lasting, Becoming.Courses, Becoming.Recurrence, MarketInstances, PartialRegimeTransition and RegimeTransition, with the conditions the Lean takes written in (the decided target where a law uses it, one admissible disturbance, 0 ≤ b ≤ 3/4 or b ≤ 5/12, κ ≥ 0, the cover); the referenced decision calibrations, course and run forms and boundary witnesses each have their law; the limitations became five does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two added hypotheses (the core laws' decisions, the rational quantities); the next step's completed part went to history and the related entry; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-partial-correction-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-partial-correction-boundary.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 18 条规律，各条对照其在 Becoming.Lasting、Becoming.Courses、Becoming.Recurrence、MarketInstances、PartialRegimeTransition 与 RegimeTransition 中的声明核读，Lean 所取的条件都写入（规律用到之处的目标可判定、一个可容许扰动、0 ≤ b ≤ 3/4 或 b ≤ 5/12、κ ≥ 0、覆盖）；已引用的判定校准、历程与运行形式以及边界见证各有其规律；限制改为五条“未表明”，加通用边界 no-ethical-premise-core-axiom-free、discrete-steps 与 decidability，并加两条前提（核心规律的判定、有理数量）；下一步中已完成的部分移入沿革与相关条目；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-partial-correction-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-partial-correction-boundary.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、“未表明”各项，各条对照所引 Lean 核读。"
     }
   ],
-  "statement": {
-    "en": "A start reaches a target within n steps on every admissible disturbance exactly when a funnel holds it at level n, and for a determined law never does exactly when a closed set off the target holds it; in the error-free market with 0 ≤ β ≤ 3/4 all physical positive states land exactly when β ≤ 5/12.",
-    "zh": "一个起点在每个可容许扰动下 n 步之内到达目标，恰当有某个漏斗在第 n 层容纳它；对确定的律，它永不到达目标，恰当有包含它、避开目标的封闭集合。在无误差的市场中，对 0 ≤ β ≤ 3/4，一切物理正状态皆着陆恰当 β ≤ 5/12。"
-  }
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/dc0b3719c391e6a8/market-partial-correction-boundary.json",
+      "sha256": "dc0b3719c391e6a80bf7e39d408708b469700a75dd5ffb6770d9501026ab4150",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/d806134e99e7584a/market-partial-correction-boundary.json",
+      "sha256": "d806134e99e7584a8b9688d948970fa1035bd4dc29f0a563b3d689b5d0ab81b2",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
+    }
+  ]
 }

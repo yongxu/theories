@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "id": "exclusive-footprint-support",
+  "title": {
+    "zh": "局部排他支持推至全部叶项",
+    "en": "Exclusive footprints support all leaves"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F02",
+  "reviewed_at_utc": "2026-10-25T14:33:30+00:00",
+  "statement": {
+    "en": "Where each part's footprint lies within its whole's and the two parts' footprints share nothing, the root's footprint supports what the leaves of a realized plan draw on: nothing repeats, and everything lies within it.",
+    "zh": "凡每个部分的足迹在其整体的足迹之内、两个部分的足迹无共同处，根的足迹支持一个被实现计划的诸叶所汲取者：无重复，且皆在其内。"
+  },
+  "claim": {
+    "zh": "一个计划在某构形处实现、每片叶都被支持（其列表无重复且在叶构形的足迹之内）时：诸叶所汲取者按序相接，凡每个部分的足迹在其整体的足迹之内，即在根的足迹之内；若两个部分的足迹又无共同处，则无重复；合起来，根的足迹支持它。",
+    "en": "For a plan realized at a configuration with each leaf supported (its list repeating nothing and lying within the leaf configuration's footprint): what its leaves draw on, joined in order, lies within the root's footprint where each part's footprint lies within its whole's, and repeats nothing where moreover the two parts' footprints share nothing; together, the root's footprint supports it."
+  },
+  "hypotheses": [
+    {
+      "zh": "足迹的 PartsWithin 与 PartsApart；计划被实现，每片叶读作 Supports。",
+      "en": "PartsWithin and PartsApart of the footprint; the plan realized with each leaf read as Supports."
+    }
+  ],
+  "correspondence": {
+    "zh": "资源身份与排他性是局部模型前提，不是生成的一般原语。",
+    "en": "Resource identity and exclusivity are local model premises, not universal primitives of generativity."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+  "aliases": [
+    "Becoming.JointPlan.supports_of_realizes",
+    "Becoming.JointPlan.within_of_realizes",
+    "Becoming.JointPlan.nodup_of_realizes"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "draws-on-a-shared-stock",
+      "detail": {
+        "zh": "同一共同支持问题的不同表达，不计作已证明的相互推广。",
+        "en": "Different representations of shared support; neither is registered as a proved generalization of the other."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryFootprints.lean",
+      "detail": {
+        "zh": "这里只从已实现计划推得支持；一般反向实现不能省去额外结构。",
+        "en": "This direction derives support from a realized plan; converse realization cannot omit additional structure."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "这里只从已实现计划推得支持；一般反向实现不能省去额外结构。",
+    "en": "This direction derives support from a realized plan; converse realization cannot omit additional structure."
+  },
+  "validation_scope": {
+    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
+    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryFootprints.lean",
+      "role": "provenance",
+      "sha256": "dc6ce537f5fabb729327b28194fc9bc06cf98b47ba76ecf3f32324e00857ecc9",
+      "declarations": [
+        "Generative.ExplanatoryFootprints.realized_requests_supported"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-global-realization-checks/20261008T085919.976102Z/receipt.json",
+      "role": "receipt",
+      "sha256": "873e0ce7f081927642f2629954ab05c6294f57efecf1e5a50a4d889b89335650",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md",
+      "role": "provenance",
+      "sha256": "a896df0f8f85139ab323dcb97878b86b2ab3d4c897e4587e15f4ca8b8f7e9017",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+      "role": "proof",
+      "sha256": "08ae38e607c91b205c8b99bbcb49c0678e39f36d89b6cfb9af49bbc602ba4a49",
+      "declarations": [
+        "Becoming.Unjoined.supports_not_realizes"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPlans.lean",
+      "role": "proof",
+      "sha256": "e79cb339076a2ac8b66cd981991c5287721d707a9c449d622b660e8c495f5145",
+      "declarations": [
+        "Becoming.PartsWithin",
+        "Becoming.PartsApart",
+        "Becoming.Supports",
+        "Becoming.JointPlan.draws",
+        "Becoming.JointPlan.Realizes",
+        "Becoming.JointPlan.within_of_realizes",
+        "Becoming.JointPlan.nodup_of_realizes",
+        "Becoming.JointPlan.supports_of_realizes"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/CompositionBridge.lean",
+      "role": "provenance",
+      "sha256": "1ebdb280164ae841ad06d7a66afe36cc7d6c3e8d16bef29a8ec9facee98cc798",
+      "declarations": [
+        "Becoming.realized_requests_supported_by_core"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T154159.148254Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec87bb28ee441900505d1d54b7532223391fd333b7a5894542ac6dc60fc24903",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T222948.779875Z/verification.json",
+      "role": "receipt",
+      "sha256": "0a2bacf2db996d0f2da49b75bda0b985f74a5b6849be2b50ab6471033917d914",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Composition",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Composition.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Composition",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPlans.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.JointPlans",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "嵌套排他请求复用；更改为可共享、可更新支持时须新说明。",
+    "en": "Reuse for nested exclusive requests; sharing or renewal requires a new account."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
+      "en": "2026-10-08: migrated existing result identity and scope; no new theorem or relocated source."
+    },
+    {
+      "zh": "2026-10-14，整合 I3（Ren：“a lot proofs are probably not integrated”）：在脊柱上陈述。新的核心模块 Becoming.Composition（只导入 Becoming.Likeness）加入一配置把两配置作为部分共同持有的关系（JointFrame），以及联合检验、联合相同、紧致、嵌套计划与足迹；Becoming.CompositionBridge 把 ExplanatoryJointness 与 ExplanatoryFootprints 读作实例。若每一部分的足迹在其整体之内且两部分的足迹不相交，已实现计划的叶所汲取者合起来无重复，且在根的足迹之内（JointPlan.supports_of_realizes）；realized_requests_supported 即此定律（realized_requests_supported_by_core），无附加假设，公理报告为空（草稿构建；回执随落地）。逆向别无所加则不成立：无整体持有部分处，根的足迹可支持每一叶（Unjoined.supports_not_realizes），即本记录之限制在脊柱上的见证。realize_iff_supported 的列表模型与外围回执保持原范围。",
+      "en": "14 October 2026, integration I3 (Ren: “a lot proofs are probably not integrated”): stated on the spine. The new core module Becoming.Composition, importing only Becoming.Likeness, adds the relation by which a configuration holds two configurations together as its parts (JointFrame), with joint tests, joint likeness, compactness, nested plans and footprints; Becoming.CompositionBridge reads ExplanatoryJointness and ExplanatoryFootprints as instances. Where each part's footprint lies within its whole's and the two parts' footprints share nothing, what the leaves of a realized plan draw on, joined, repeats nothing and lies within the root's footprint (JointPlan.supports_of_realizes); realized_requests_supported is that law (realized_requests_supported_by_core), with no added hypothesis and empty axiom reports (scratch build; the receipt comes with the landing). The converse fails with nothing more: the root's footprint can support every leaf where no whole holds any part (Unjoined.supports_not_realizes), the record's limitation witnessed on the spine. The list model of realize_iff_supported and the periphery receipt keep their scope."
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Composition.lean, JointPlans.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Composition.lean, takes as its final section JointPlanFrames, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; JointPlans.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Composition.lean、JointPlans.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：Composition.lean，以末节收入 JointPlanFrames（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；JointPlans.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 5 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/76503c63461242f8/exclusive-footprint-support.json and in git.",
+      "zh": "2026-10-20：5 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/76503c63461242f8/exclusive-footprint-support.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (CompositionBridge and ExplanatoryFootprints) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Composition and Becoming.JointPlans). The retired modules' content is also stated in Becoming.JointCorrespondence and Becoming.ListFootprints, which this record does not cite with declarations. 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（CompositionBridge and ExplanatoryFootprints）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Composition and Becoming.JointPlans）。退役模块的内容也陈述于 Becoming.JointCorrespondence and Becoming.ListFootprints，本记录未以声明引用它们。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws: what the leaves of a realized plan draw on lies within the root's footprint where parts' footprints lie within their whole's, and repeats nothing where the two parts' footprints moreover share nothing. The premise restated in the core names (it named Within, Separate and Supported: Within F J, Separate F J, and Realizes J (Supported F) s p.); the retired aliases Generative.ExplanatoryFootprints.realized_requests_supported (retired module); Becoming.realized_requests_supported_by_core (retired module) dropped (their declarations stay in the provenance references) and the two core steps added.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述，主张依核心定律重述：被实现计划的诸叶所汲取者，凡部分的足迹在其整体之内即在根的足迹之内，若两部分的足迹又无共同处则无重复。前提以核心之名重述（原称 Within、Separate 与 Supported）；已退休之别名删去（其声明仍在来历引用中），并加入两个核心步骤。"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "market-finite-support-obstruction",
   "title": {
     "zh": "有限支持下无法及时恢复的正区间",
@@ -8,15 +8,93 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-25T14:42:20+00:00",
+  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
   "statement": {
-    "en": "For every family of levels the steps drain, from a start below level n no admissible history satisfies the guard at every step through n; in the market, for every rational C₀ ≥ 5 and integer N > C₀ − 5, every seed 0 < x₀ ≤ (2/3)^N/6 of quality in [0, 1] fails by step N on every admissible schedule.",
-    "zh": "对诸步所耗竭的每个层族，从低于第 n 层的起点，没有可容许历史在直到 n 的每一步都满足守卫；在市场中，对每个有理 C₀ ≥ 5 与整数 N > C₀ − 5，每个品质在 [0, 1] 之内的正种子 0 < x₀ ≤ (2/3)^N/6 在每个可容许日程下至迟在第 N 步失败。"
+    "en": "A start below level n of a family of levels the steps drain has no admissible history within the guard at every step through n; in the market, for every rational C₀ ≥ 5 and integer N > C₀ − 5, every seed 0 < x₀ ≤ (2/3)^N/6 of quality in [0, 1] fails by step N on every admissible schedule.",
+    "zh": "低于诸步所耗竭层族第 n 层的起点，没有可容许历史在直到第 n 步的每一步都留在守卫之内；在市场中，对每个有理 C₀ ≥ 5 与整数 N > C₀ − 5，每个品质在 [0, 1] 之内的种子 0 < x₀ ≤ (2/3)^N/6 在每个可容许日程下至迟在第 N 步失败。"
   },
-  "claim": {
-    "zh": "对每条带可容许扰动的变化之律，以及被其步耗竭的每个层族（守卫给出第0级；守卫之内的构型经一个可容许步到第k级，则原在第k+1级），低于第n级的起点在每段可容许历史上n步内离开守卫；处于第n级并不足够。量在每个可容许步上的增长受单调映射约束时，它停在该映射的轨道之下；若量的轨道在第k+1步不超过阈值时，每个可容许步使层级降一，则轨道在第n步不超过阈值、且不在第n级的起点，在每段可容许历史上n步内离开守卫。市场是实例（旧定理由此律证明）：份额每步至多乘3/2，份额轨道不超过1/6时每步使存量在底线5之上少一单位。所以对每个有理C₀≥5及整数N>C₀−5，正维护区间0<x₀≤(2/3)^N/6在任意时变β／责任误差及非负支持冲击下均至迟在N失效。同一正初态在β=0、最佳初始责任和无误差／耗用下，运行投影有限恢复而完整守卫历史终止。",
-    "en": "For every law of change with admissible disturbances and every family of levels its steps drain (within the guard is level 0, and a configuration within the guard that one admissible step takes to level k was at level k+1), a start below level n leaves the guard within n steps on every admissible history; being at level n does not suffice. A quantity whose growth on each admissible step is bounded by a monotone map stays below the map's orbit; where each admissible step lowers the level by one while the quantity's orbit k+1 steps on is at or below a threshold, every start whose orbit at step n is at or below the threshold and which is not at level n leaves the guard within n steps on every admissible history. The market is an instance, the old theorem being proved from the law, the share growing at most by 3/2 a step and each step taking one unit of the stock above the floor 5 while the share's orbit stays at or below 1/6: for every rational C0>=5 and integer N>C0-5, all positive seeds 0<x0<=(2/3)^N/6 fail by N under every time-varying beta/quality-error sequence and nonnegative support shock. The same positive state with beta=0, best initial quality and no error/extra consumption has projected finite recovery but full guarded termination."
-  },
+  "laws": [
+    {
+      "en": "For a law of change with admissible disturbances and a guard, a family of levels is drained when the guard gives level 0 and a configuration within the guard that one admissible step takes to level k was at level k + 1. Along every admissible history within the guard for its first n steps a drained family holds the start at level n, so from below level n no admissible history stays within the guard through step n.",
+      "zh": "对带可容许扰动与守卫的变化之律：层族被耗竭，是指守卫给出第 0 级，且守卫之内经一个可容许步到第 k 级的构型原在第 k+1 级。沿前 n 步都在守卫之内的每段可容许历史，被耗竭的族在第 n 级含起点；所以从低于第 n 级的起点出发，没有可容许历史直到第 n 步都留在守卫之内。",
+      "declarations": [
+        "Becoming.Lasting.Drains",
+        "Becoming.Lasting.Drains.along",
+        "Becoming.Lasting.Drains.leaves"
+      ]
+    },
+    {
+      "en": "Being at level n does not suffice: where every step goes to false, the family 'is true' is drained for the guard 'is true' and holds true at level 1, yet true does not last one step.",
+      "zh": "处于第 n 级并不足够：每一步都到 false 时，“为 true”这一族对守卫“为 true”被耗竭，并在第 1 级含 true，而 true 持续不了一步。",
+      "declarations": [
+        "Becoming.Lasting.Collapse.level_not_lasting"
+      ]
+    },
+    {
+      "en": "For a transitive relation and a monotone map, a sequence starting at or below v whose growth the map bounds stays below the orbit of v; with the relation also reflexive, every such sequence stays at or below θ for its first n steps exactly when the orbit of v does.",
+      "zh": "对传递关系与单调映射：从不超过 v 处开始、增长受映射约束的序列，停在 v 的轨道之下；关系又自反时，每个这样的序列在前 n 步都不超过 θ，恰当 v 的轨道如此。",
+      "declarations": [
+        "Becoming.Lasting.below_orbit",
+        "Becoming.Lasting.stays_below_iff"
+      ]
+    },
+    {
+      "en": "Exhaustion by bounded growth: let admissible steps keep a region R in which a monotone map bounds the growth of a quantity q, let the guard give level 0, and let an admissible step from R within the guard reach level k only from level k + 1 while the orbit of q k + 1 steps on is at or below θ. A start in R, its orbit at n at or below θ, not at level n, has no admissible history within the guard through step n.",
+      "zh": "有界增长下的耗竭：设每个可容许步保持某区域，单调映射约束量在其中的增长；守卫给出第 0 级，且量的轨道在第 k+1 步不超过 θ 时，自区域内守卫之内出发的可容许步只从第 k+1 级到第 k 级。则区域中轨道在第 n 步不超过 θ、且不在第 n 级的起点，没有可容许历史直到第 n 步都留在守卫之内。",
+      "declarations": [
+        "Becoming.Lasting.exhausts"
+      ]
+    },
+    {
+      "en": "With the guard decided, from within it a guarded history stops by n exactly when the history leaves the guard by n. A run of the disturbed process is the admissible history of its moves, every admissible history is a run, and both exhaustion laws hold on every run.",
+      "zh": "守卫可判定时，从守卫之内出发，受守卫历史至迟在第 n 步停止，恰当历史至迟在第 n 步离开守卫。受扰过程的运行就是其动作的可容许历史，每段可容许历史都是运行，两条耗竭律在每次运行上成立。",
+      "declarations": [
+        "Becoming.Lasting.guarded_none_iff",
+        "Becoming.Courses.run_history",
+        "Becoming.Courses.run_admissible",
+        "Becoming.Courses.historyRun",
+        "Becoming.Courses.Drains.leaves_run",
+        "Becoming.Courses.exhausts_run"
+      ]
+    },
+    {
+      "en": "In the market model with the correction strength chosen at each step, the run and the guarded run are the core's history and guarded history, with the essential floor 5 as guard; the β = 0 rescue raises a physical share by at most 3/2, and the share's orbit under growth by 3/2 a step is the share times (3/2)^n.",
+      "zh": "市场模型中，纠正强度逐步选定；运行与受守卫运行就是核心的历史与受守卫历史，以必要底线 5 为守卫；β=0 的挽救使物理份额至多乘 3/2，份额在每步乘 3/2 下的轨道是份额乘 (3/2)^n。",
+      "declarations": [
+        "Becoming.MarketInstances.scheduled",
+        "Becoming.MarketInstances.run_eq",
+        "Becoming.MarketInstances.guarded_eq",
+        "Becoming.MarketInstances.orbit_growth",
+        "RegimeTransition.share_growth_upper"
+      ]
+    },
+    {
+      "en": "For a physical pair with stock at least 5, nonnegative support shocks, share times (3/2)^N at most 1/6 and stock below 5 + N, the guarded run stops by step N under every correction schedule and quality error; equivalently, a guarded run of such a pair lasting N steps needs stock at least 5 + N.",
+      "zh": "对存量至少为 5、支持冲击非负、份额乘 (3/2)^N 至多为 1/6、存量低于 5+N 的物理状态对，受守卫运行在每个纠正日程与品质误差下至迟在第 N 步停止；等价地，这样的状态对的受守卫运行持续 N 步，需要存量至少为 5+N。",
+      "declarations": [
+        "Becoming.MarketInstances.forces_failure_instance",
+        "FiniteSupportObstruction.finite_support_forces_failure",
+        "FiniteSupportObstruction.support_required_for_small_prefix"
+      ]
+    },
+    {
+      "en": "So every stock C₀ ≥ 5 has some N > 0 and a positive seed limit 1/(6(3/2)^N) such that every seed with positive share at most the limit and quality in [0, 1] fails by step N under every correction schedule, quality error and nonnegative support shocks.",
+      "zh": "所以每个存量 C₀ ≥ 5 都有某个 N > 0 与正的种子上限 1/(6(3/2)^N)，使得份额为正且不超过该上限、品质在 [0, 1] 之内的每个种子，在每个纠正日程、品质误差与非负支持冲击下至迟在第 N 步失败。",
+      "declarations": [
+        "FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds",
+        "Becoming.MarketInstances.obstructed_seeds_instance"
+      ]
+    },
+    {
+      "en": "Projection and full history differ: for every stock C₀ ≥ 5 some physical state with positive share lands under the β = 0 rescue with its support coordinate omitted, while its full guarded pulse history stops; and with no shock, under the original parameters, the same stock carries the state of share 1, quality 1 and influence 0 without failure.",
+      "zh": "投影与完整历史不同：对每个存量 C₀ ≥ 5，有份额为正的物理状态在略去支持坐标时于 β=0 挽救下着陆，而其完整的受守卫脉冲历史停止；无冲击时，同一存量在原参数下使份额 1、品质 1、影响 0 的状态永不失败。",
+      "declarations": [
+        "FiniteSupportObstruction.projected_recovery_and_actual_failure",
+        "FiniteSupportObstruction.same_stock_can_support_high_seed",
+        "RegimeTransition.positive_seed_finite_landing"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "原有理State、shareStep与supportStep、必要支持底线5保留；x₀、q₀在[0,1]，原完整守卫逐步执行。",
@@ -25,8 +103,63 @@
     {
       "zh": "β及责任误差允许任意逐期变化，clip限制q；支持冲击非负，没有直接支持注入、进入、扩展速度改变或组织切换。",
       "en": "Beta and quality error may vary arbitrarily each step, with q clipped; stock shocks are nonnegative, with no direct stock injection, entry, change of expansion rate or organizational switch."
+    },
+    {
+      "en": "The core laws hold for any type of configurations and disturbances; the guard is decided only for guarded histories, and the exhaustion law takes a transitive relation and a monotone map, each written into the law.",
+      "zh": "核心规律对任意类型的构型与扰动成立；只有受守卫历史要求守卫可判定，耗竭律取传递关系与单调映射，各自写在规律中。"
+    },
+    {
+      "en": "The market model's quantities are rational numbers, with histories indexed by natural times from 0.",
+      "zh": "市场模型的量是有理数，历史以从 0 起的自然时刻为索引。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The interval 0 < x₀ ≤ (2/3)^N/6 is a conservative obstruction, not shown to be an exact viability boundary.",
+      "zh": "区间 0 < x₀ ≤ (2/3)^N/6 是保守的阻碍，未被证明是精确的生存边界。",
+      "kind": "scope"
+    },
+    {
+      "en": "The obstruction holds without injection, entry or change of expansion; actual provision, change of dependence, entry or faster formation may move it.",
+      "zh": "阻碍在没有注入、进入或扩展速度改变时成立；实际供给、依存改变、进入或更快的形成都可能移动它。",
+      "kind": "scope"
+    },
+    {
+      "en": "No bifurcation, R-tipping classification or physical death follows from the obstruction.",
+      "zh": "由阻碍推不出分岔、R-tipping 分类或现实的死亡。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/market-generativity/formal/FiniteSupportObstruction.lean",
+      "detail": {
+        "zh": "projected_recovery_and_actual_failure保留相同正初态投影恢复而实际终止；same_stock_can_support_high_seed反驳有限支持必然失败。",
+        "en": "projected_recovery_and_actual_failure retains projected recovery and actual termination for the same seed; same_stock_can_support_high_seed refutes inevitable failure from finite stock alone."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+      "detail": {
+        "zh": "Collapse.level_not_lasting：被耗竭的族在第1级含true，而true持续不了一步，所以处于第n级不足以持续。",
+        "en": "Collapse.level_not_lasting: a drained family holds true at level 1, yet true does not last one step, so being at level n does not suffice."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps",
+    "decidability",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1. The core modules Becoming.Lasting and Becoming.Courses by the consolidated checker (becoming-checks/), with empty axiom reports; the periphery FiniteSupportObstruction and RegimeTransition by the finite-support check (finite-support-verification.json: 17 new theorems, 22 declaration audits; 123 inherited theorems, 153 audits) and MarketInstances by its instance checker (market-instances-checks/), reporting propext, Quot.sound and Classical.choice. Author counterreview; no independent review or new market observation.",
+    "zh": "Lean 4.29.1 实查：核心 Lasting、Courses 由合并检查器（becoming-checks/）检查，公理报告皆空；外围 FiniteSupportObstruction、RegimeTransition 由有限支持检查（finite-support-verification.json：新定理17、审计22，继承定理123、审计153）、MarketInstances 由实例检查器检查，报告 propext、Quot.sound、Classical.choice。作者反审；无独立审查或新观察。"
+  },
+  "next_delta": {
+    "en": "Obtain the actual timing, support and uninterrupted conditions at each stage of a specific reorganization, then prove which quantitative boundary it crosses.",
+    "zh": "取得具体改组各阶段的实际时间、支持与不可中断条件，再证明它跨过哪种数量边界。"
+  },
   "correspondence": {
     "zh": "维护与支持是同一步活动的相关坐标；时变控制覆盖已实现反馈所产生的序列，但不解释反馈形成。底线及速率须有现实根据，none仅表示所表示的市场组织停止。",
     "en": "Renewal and stock are related coordinates updated in the same activity. Time-varying control includes sequences produced by realized feedback but does not explain feedback formation. Floors and rates require actual correspondence; none ends the represented market organization only."
@@ -112,30 +245,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/market-generativity/formal/FiniteSupportObstruction.lean",
-      "detail": {
-        "zh": "projected_recovery_and_actual_failure保留相同正初态投影恢复而实际终止；same_stock_can_support_high_seed反驳有限支持必然失败。",
-        "en": "projected_recovery_and_actual_failure retains projected recovery and actual termination for the same seed; same_stock_can_support_high_seed refutes inevitable failure from finite stock alone."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
-      "detail": {
-        "zh": "Collapse.level_not_lasting：被耗竭的族在第1级含true，而true持续不了一步，所以处于第n级不足以持续。",
-        "en": "Collapse.level_not_lasting: a drained family holds true at level 1, yet true does not last one step, so being at level n does not suffice."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "δ_N是保守失败区间而非精确可恢复域；不排除实际供给、依存转化、进入或更快形成改变边界。未证分岔、R-tipping分类、现实死亡或无附加实质公理奠基。",
-    "en": "The delta_N interval is a conservative obstruction, not an exact viability boundary. Actual provision, dependence change, entry or faster formation may alter it. No bifurcation, R-tipping classification, physical death or zero-added-substantive-axiom foundation is proved."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1实际检查17项新定理／22项声明审计；123项继承定理／153项审计另列。保留标准逻辑公理依赖；作者反审，无独立agent或新市场观察。一般律已由检查器回执绑定。",
-    "en": "Lean 4.29.1 checks 17 new theorems / 22 declaration audits, with 123 inherited theorems / 153 audits separately rebuilt. Standard logical axiom dependencies are retained; author counterreview, no independent agent or new market observations. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/market-generativity/formal/FiniteSupportObstruction.lean",
@@ -343,10 +452,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "普遍有限支持阻碍已完成，formed-software-continuation已补一个实际组织形成与分发接口。继续取得具体改组中各阶段的真实时间、支持及不可中断条件，才可证明它跨过哪种数量化边界。",
-    "en": "The universal finite-support obstruction is complete, and formed-software-continuation adds an actual organizational formation/distribution interface. Next obtain real timing, support and uninterrupted conditions at each stage of a specific reorganization before proving which quantitative boundary it crosses."
-  },
   "history": [
     {
       "zh": "2026-10-09：从单一来不及恢复反例推进到每个有限存量的正区间及全时变责任通道；同初态投影／守卫比较与高维护对照均检查。",
@@ -393,6 +498,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them, with the premise that the initial quality is in [0, 1] (the claim is unchanged).",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述，并含初始品质在 [0, 1] 之内这一前提（主张不变）。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title kept; the statement restated positively from Drains.leaves (a start below level n leaves the guard within n steps), its market part unchanged; the claim split into 9 laws, each read against its declarations in Becoming.Lasting, Becoming.Courses, MarketInstances, FiniteSupportObstruction and RegimeTransition, with the conditions the Lean takes written in (a transitive relation and a monotone map, stock at least 5 and below 5 + N, nonnegative shocks, a decided guard); the referenced run forms and witnesses each enter a law; the limitations became three does-not-show items and the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps, decidability and zero-axiom-target-open, with two added hypotheses; the next step's completed part went to history and the related entry; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-finite-support-obstruction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-finite-support-obstruction.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, does-not-show items, each read against the Lean it cites. A cold read of the applied record was taken in the statement, laws.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题不变；陈述依 Drains.leaves 改为正面陈述（低于第 n 层的起点 n 步之内离开守卫），其市场部分不变；主张拆为 9 条规律，各条对照其在 Becoming.Lasting、Becoming.Courses、MarketInstances、FiniteSupportObstruction 与 RegimeTransition 中的声明核读，Lean 所取的条件都写入（传递关系与单调映射、存量至少为 5 且低于 5+N、非负冲击、守卫可判定）；已引用的运行形式与见证各入一条规律；限制改为三条“未表明”与通用边界 no-ethical-premise-core-axiom-free、discrete-steps、decidability、zero-axiom-target-open，并加两条前提；下一步中已完成者移入沿革与相关条目；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-finite-support-obstruction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-finite-support-obstruction.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、“未表明”各项，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及陈述、规律。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/15828cbd7beb5353/market-finite-support-obstruction.json",
+      "sha256": "15828cbd7beb5353d31a7a3086851410501fbaf9f57b5c69b11cbaf01d65b4e4",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/a4730fcd61874780/market-finite-support-obstruction.json",
+      "sha256": "a4730fcd6187478009ba984aaec88208196b9ef3e474f4dc70f34bc173dd184e",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

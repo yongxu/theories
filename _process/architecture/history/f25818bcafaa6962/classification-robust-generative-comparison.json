@@ -1,0 +1,697 @@
+{
+  "schema_version": 1,
+  "id": "classification-robust-generative-comparison",
+  "title": {
+    "zh": "分类未定时的生成比较与组织要求",
+    "en": "Generative comparison and required organization under unsettled classification"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-25T14:26:58+00:00",
+  "claim": {
+    "zh": "固定新内容的实际含义与正面解释时，在 B 是否实现每个新内容、以及在每种分类下 B 是否实现 A 中被分为基本的每个新内容都已判定之处，既有两层比较在所有新内容分类下严格支持 A 胜于 B，恰当且仅当 A 保留 B 的全部新内容、且全列一般增益时 A 仍严格更好；正方向不需判定。同样的判定下，两端点分类的同向严格比较覆盖所有混合分类。校准：这一判据对一切类型与分类成立，恰是排中律；比较须判定的是 B 是否实现该新内容。此输出接成每种分类下的组织形成要求，但不保证同一方案在所有分类下未被击败。",
+    "en": "For fixed meanings and positive interpretation of fresh contents, the existing two-tier comparator strictly prefers A to B under every fresh classification exactly when A retains all fresh contents of B and is better with all fresh contents secondary, where it is decided whether B realizes each fresh content and, at each classification, whether B realizes every fresh content of A classified basic; the forward direction needs no decision. Under the same decisions, strict agreement at both extreme assignments covers every mixed assignment. Calibration: that the criterion holds over every type and classification is exactly excluded middle; what the comparison must decide is whether B realizes the fresh content. This supplies required formation under each classification, without ensuring a common undefeated implementation."
+  },
+  "hypotheses": [
+    {
+      "zh": "同一展开中的旧、新内容、其实际实现与损失有稳定对应；新内容的意义依生生之意义读出，仅优先层次未定。",
+      "en": "Old and fresh contents, their realization and losses have stable correspondence within one unfolding. Fresh content's significance is read through living significance; only its priority tier varies."
+    },
+    {
+      "zh": "比较明确采用既有 J1/J2 的基本保护严格包含，或基本相同而一般增益严格包含；旧分类固定，一次比较中同一新内容的分类一致。",
+      "en": "The comparator explicitly uses existing J1/J2: strict basic inclusion, or strict gain inclusion at equal basic profiles. Old tiers remain fixed and a fresh classification is consistent across the comparison."
+    },
+    {
+      "zh": "组织推论另需有限非空且有实践根据的候选范围，以及每个未形成情形的合格稳健改善见证。",
+      "en": "The formation corollary additionally requires a finite nonempty practically warranted menu and an eligible robust improvement witness for every unformed case."
+    },
+    {
+      "zh": "所有分类谓词组成保守数学检验范围；不假定每种任意分类都有现实伦理根据。",
+      "en": "All classification predicates form a conservative mathematical test family; arbitrary assignments are not presumed ethically warranted in reality."
+    }
+  ],
+  "correspondence": {
+    "zh": "旧／新是同一生成内容被辨明的先后；基本／一般为已有实践承诺中的作用差异，不是两类本体或独立所有者。共同能力的应用直接取既有同一事件法则的共同组合扩展；其正面意义与成本覆盖仍明示。",
+    "en": "Old/new tracks recognition of contents in one unfolding; basic/secondary tracks their roles under existing practical commitments, not two ontologies or independent owners. The joint-capacity application directly consumes a joint-bundle extension under the existing single event law; positive significance and cost coverage remain explicit."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
+  "aliases": [
+    "ClassificationRobustJudgment.all_secondary_iff",
+    "ClassificationRobustJudgment.all_basic_retains_fresh",
+    "ClassificationRobustJudgment.classification_robust_iff",
+    "ClassificationRobustJudgment.two_extremes_suffice",
+    "ClassificationRobustJudgment.known_basic_improvement_is_robust",
+    "ClassificationRobustJudgment.fresh_enrichment_is_robust",
+    "ClassificationRobustJudgment.formation_required_without_fixed_classification",
+    "ClassificationRobustJudgment.joint_enrichment_is_strict",
+    "ClassificationRobustJudgment.joint_enrichment_without_fixed_classification",
+    "ClassificationRobustJudgment.classification_can_matter_with_real_loss",
+    "ClassificationRobustJudgment.every_classification_requires_a_formed_route",
+    "ClassificationRobustJudgment.mixed_classifications_can_favor_opposite_routes",
+    "ClassificationRobustJudgment.no_route_undefeated_under_every_classification",
+    "Becoming.classification_robust_iff_of_em",
+    "Becoming.classification_robust_iff_iff_em",
+    "Becoming.extension_classification_robust_iff",
+    "Becoming.frame_classification_robust_iff_of_em",
+    "Becoming.Lexical.classified_robust_iff_of_decided",
+    "Becoming.Lexical.classified_extremes_iff_of_decided",
+    "Becoming.Lexical.classified_robust_iff_iff_em"
+  ],
+  "dependencies": [
+    {
+      "id": "practical-judgment-under-living-significance",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用比较、非自反性与传递性；不重证规范前提。",
+        "en": "Reuses comparison, irreflexivity and transitivity without re-proving normative premises."
+      },
+      "interface": {
+        "output": {
+          "zh": "Better 的定义以及 better_irrefl、better_trans。",
+          "en": "The Better definition and better_irrefl/better_trans."
+        },
+        "input": {
+          "zh": "classification_robust_iff 的比较及 formation_required_without_fixed_classification 的严格序。",
+          "en": "Comparison in classification_robust_iff and strict-order inputs to formation_required_without_fixed_classification."
+        },
+        "conditions": {
+          "zh": "生生之意义、J 与实际对应仍须有根据；不是逻辑公理审计所取得。",
+          "en": "Living significance, J and actual correspondence retain their substantive warrant, not supplied by logical axiom auditing."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean"
+      }
+    },
+    {
+      "id": "organizational-formation-from-generative-comparison",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "每种 q 的稳健改善见证进入既有组织命题。",
+        "en": "Robust improvement witnesses for each q enter the existing organizational theorem."
+      },
+      "interface": {
+        "output": {
+          "zh": "formation_required_of_improvable_absence 将每个缺失者的改善转成非空 Required。",
+          "en": "formation_required_of_improvable_absence converts improvement of every deficient option into nonvacuous Required."
+        },
+        "input": {
+          "zh": "formation_required_without_fixed_classification 为每种 q 提供该输入并输出作用要求。",
+          "en": "formation_required_without_fixed_classification supplies that input for each q and obtains a required role."
+        },
+        "conditions": {
+          "zh": "有限非空合格范围及真实实践对应；未推出一个跨分类共同方案。",
+          "en": "Finite nonempty eligible scope and actual practical correspondence; no common cross-classification implementation follows."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean"
+      }
+    },
+    {
+      "id": "relational-generative-comparison",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "直接使用其中的结构输出，不把 C 或伦理许可当作自动结果。",
+        "en": "Directly uses its structural output, not C or ethical permission as automatic conclusions."
+      },
+      "interface": {
+        "output": {
+          "zh": "RelationalGrounding.joint_bundle_extension 给出共同组合保留与一项新增生成组合。",
+          "en": "RelationalGrounding.joint_bundle_extension supplies joint-bundle preservation and one new generative bundle."
+        },
+        "input": {
+          "zh": "joint_enrichment_is_strict 构造 freshJoint 的严格包含；joint_enrichment_without_fixed_classification 接入分类命题。",
+          "en": "joint_enrichment_is_strict constructs strict freshJoint inclusion; joint_enrichment_without_fixed_classification applies the classification theorem."
+        },
+        "conditions": {
+          "zh": "共同能力的正面对应、旧基本相同、无所表示旧增益；现实损失覆盖不由事件法则证明。",
+          "en": "Positive joint-capacity correspondence, equal old basic profiles and no represented old gains; the event law does not prove real cost coverage."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "positive-ground-open-futures",
+      "detail": {
+        "zh": "复用其已完成的正面理由地位；本轮较强的比较条件不能成为该结果或一切行动的新门槛。",
+        "en": "Credits its completed positive-ground result; this stronger comparison criterion is not a new gate for that result or all action."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean",
+      "detail": {
+        "zh": "classification_can_matter_with_real_loss 保留新增与真实旧机会损失；三路构造同时满足各分类下的形成要求而不存在共同未被击败方案。",
+        "en": "classification_can_matter_with_real_loss retains a new gain and actual old opportunity loss; the three-route construction requires formation under each classification yet has no common undefeated option."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "只检验已辨明正面内容的优先分类；不是新生活的一般基本地位识别、现实统一最佳方案、生生之意义或 J 的无前提证明或必然服从。稳健严格比较为充分根据，不是一切合理行动的必要条件；三路反例不证明完整生活关系允许任意分类。",
+    "en": "Tests priority classification of positively understood contents, not universal basic-status recognition, a real common best plan, premise-free living significance or J or inevitable compliance. Robust strictness is sufficient, not necessary for every justified action; the three-route example does not show that full living relations allow arbitrary classifications."
+  },
+  "validation_scope": {
+    "zh": "外围实查（13项新定理／25项审计：15项空依赖、2项 propext/Quot.sound、8项另含 Classical.choice）已被取代：核心 Becoming.Lexical 陈述该判据及其校准，公理报告全空。作者反审；无新经验验证或独立 agent 验收。",
+    "en": "The periphery check (13 new theorems/25 audits: 15 empty, 2 propext/Quot.sound, 8 also Classical.choice) is superseded: the core Becoming.Lexical states the criterion and its calibration with every axiom report empty. Author counterreview, with no new empirical validation or independent-agent acceptance."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalJudgment.lean",
+      "role": "provenance",
+      "sha256": "e3e5d866aa755650414eb85f8d3e8a1ba7166914dfc16d2e907f9fa9e0c451af",
+      "declarations": [
+        "PracticalJudgment.included_trans",
+        "PracticalJudgment.strict_included_irrefl",
+        "PracticalJudgment.strict_included_trans",
+        "PracticalJudgment.better_irrefl",
+        "PracticalJudgment.better_trans",
+        "PracticalJudgment.protection_anchor",
+        "PracticalJudgment.no_protection_trade_by_count",
+        "PracticalJudgment.dominated_excluded",
+        "PracticalJudgment.finite_frontier",
+        "PracticalJudgment.required_performed",
+        "PracticalJudgment.alternative_defeats_specific_duty",
+        "PracticalJudgment.impossible_menu_no_duty",
+        "PracticalJudgment.necessary_means_required",
+        "PracticalJudgment.unique_responder_required",
+        "PracticalJudgment.assignment_respects_capacity",
+        "PracticalJudgment.transfer_requires_actual_successor",
+        "PracticalJudgment.no_demand_gap_transfer",
+        "PracticalJudgment.uncovered_demand_is_failure",
+        "PracticalJudgment.settlement_removes_residual",
+        "PracticalJudgment.unfulfilled_unreleased_remains",
+        "PracticalJudgment.robust_at_actual",
+        "PracticalJudgment.robust_under_refinement",
+        "PracticalJudgment.required_under_faithful_redescription",
+        "PracticalJudgment.supplied_ceiling_bounds_optional_gain",
+        "PracticalJudgment.independent_choices_not_joint_capacity",
+        "PracticalJudgment.mixed_repair_anchor",
+        "PracticalJudgment.repair_retains_real_loss",
+        "PracticalJudgment.competing_claims_incomparable",
+        "PracticalJudgment.collective_duty_without_individual_duty",
+        "PracticalJudgment.uncertain_worlds_need_common_plan"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ConcernExtension.lean",
+      "role": "provenance",
+      "sha256": "ee8e0fb64357fe9d428288aac09bb27c4f046e6ae55f50cdc88e2a445fcefc3f",
+      "declarations": [
+        "ConcernExtension.included_extension_iff",
+        "ConcernExtension.strict_extension_transfer_iff",
+        "ConcernExtension.retained_old_new_strict",
+        "ConcernExtension.crossed_extension_is_incomparable",
+        "ConcernExtension.covered_profiles_no_better",
+        "ConcernExtension.positive_extension_changes_judgment",
+        "ConcernExtension.gain_judgment_transfer_iff",
+        "ConcernExtension.new_basic_condition_can_reverse"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalOrganization.lean",
+      "role": "provenance",
+      "sha256": "613cf786d49800159d28adda6f56cded41db542bd54c24f9732f5324ead47c05",
+      "declarations": [
+        "RelationalOrganization.formation_required_of_improvable_absence",
+        "RelationalOrganization.left_formation_retains_basis",
+        "RelationalOrganization.formation_has_a_real_loss",
+        "RelationalOrganization.left_better_than_idle",
+        "RelationalOrganization.left_better_than_overbuild",
+        "RelationalOrganization.every_unformed_continuation_has_a_better_one",
+        "RelationalOrganization.coordination_is_required",
+        "RelationalOrganization.frontier_exactly_the_two_working_routes",
+        "RelationalOrganization.neither_named_route_is_required",
+        "RelationalOrganization.more_construction_can_defeat_its_own_basis",
+        "RelationalOrganization.same_construction_report_different_living_basis",
+        "RelationalOrganization.no_construction_report_only_basis_judge",
+        "RelationalOrganization.amount_sensitive_repair_recovers_the_local_basis"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointContinuationClassification.lean",
+      "role": "provenance",
+      "sha256": "e508683cc80832744a28f44c69f9c2561701cd099219448b75cfdb474c0786ee",
+      "declarations": [
+        "JointContinuationClassification.whole_profile_preservation_iff_joint_bundle_preservation",
+        "JointContinuationClassification.whole_profile_preservation_composes",
+        "JointContinuationClassification.faithful_history_transport_preserves_joint_bundles",
+        "JointContinuationClassification.complement_closed_preservation_excludes_new_realization",
+        "JointContinuationClassification.same_marginal_realizations_can_lose_a_joint_bundle"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GenerativeComparison.lean",
+      "role": "provenance",
+      "sha256": "948d36b4cddc0b2289219604464bd38eb6e607183b157cee1075d50fb9797a03",
+      "declarations": [
+        "GenerativeComparison.new_realization_has_positive_relevance",
+        "GenerativeComparison.generative_extension_irreflexive",
+        "GenerativeComparison.generative_extension_transitive",
+        "GenerativeComparison.comparison_supplies_situated_reason",
+        "GenerativeComparison.coherent_selection_survives_filter",
+        "GenerativeComparison.feasible_restriction_preserves_survivor",
+        "GenerativeComparison.continual_improvement_has_no_survivor",
+        "GenerativeComparison.both_appraisals_respect_all_extensions",
+        "GenerativeComparison.tradeoff_has_opposite_strict_appraisals",
+        "GenerativeComparison.both_tradeoff_options_survive",
+        "GenerativeComparison.each_appraisal_has_a_different_coherent_selection"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalGrounding.lean",
+      "role": "provenance",
+      "sha256": "9b2319e752ee1b93d4245b1c5fe0a9d1e0758b1caf37282623598ea491e84c87",
+      "declarations": [
+        "RelationalGrounding.released_profiles_are_carried",
+        "RelationalGrounding.joint_bundle_extension",
+        "RelationalGrounding.marginals_agree_but_joint_descriptions_differ",
+        "RelationalGrounding.strict_comparison_cannot_factor_through_marginals",
+        "RelationalGrounding.joint_description_separates",
+        "RelationalGrounding.retained_possibility_does_not_force_joint_actualization"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean",
+      "role": "provenance",
+      "sha256": "be41162b292e8ee8037c4c493f19af2171b9b23e3e826e7a039f6448ac5e9494",
+      "declarations": [
+        "ClassificationRobustJudgment.all_secondary_iff",
+        "ClassificationRobustJudgment.all_basic_retains_fresh",
+        "ClassificationRobustJudgment.classification_robust_iff",
+        "ClassificationRobustJudgment.two_extremes_suffice",
+        "ClassificationRobustJudgment.known_basic_improvement_is_robust",
+        "ClassificationRobustJudgment.fresh_enrichment_is_robust",
+        "ClassificationRobustJudgment.formation_required_without_fixed_classification",
+        "ClassificationRobustJudgment.joint_enrichment_is_strict",
+        "ClassificationRobustJudgment.joint_enrichment_without_fixed_classification",
+        "ClassificationRobustJudgment.classification_can_matter_with_real_loss",
+        "ClassificationRobustJudgment.every_classification_requires_a_formed_route",
+        "ClassificationRobustJudgment.mixed_classifications_can_favor_opposite_routes",
+        "ClassificationRobustJudgment.no_route_undefeated_under_every_classification"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/classification-robust-judgment-verification.json",
+      "role": "receipt",
+      "sha256": "2582fef603fe2efe537f5bb0317d518ef53c3382c6174e640696646dd4d10cff",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/check_classification_robust_judgment.py",
+      "role": "provenance",
+      "sha256": "032363658e2f131227b69829d8436fd9de9b4da3712800166d5f29cd38755927",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/ETHICAL-LEARNING.md",
+      "role": "statement",
+      "sha256": "bf220ade443da1bf5f9c87a650b011d8d35525ce20d5b7cff9acd61eb58ab112",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ETHICAL-LEARNING-INTEGRATION.md",
+      "role": "review",
+      "sha256": "1086cc6f52d2b6ccd9286f9307b8b2e1f033fdc451fae798366eeb75f4a82564",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-generative-alignment-priority.md",
+      "role": "provenance",
+      "sha256": "e4971470ddececbd5e6d7800a4fb7ae1f3708e680ab6cef8485820bdf31c61da",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
+      "role": "provenance",
+      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
+      "declarations": [
+        "Becoming.compared_retains",
+        "Becoming.compared_secondary",
+        "Becoming.compared_of_em",
+        "Becoming.classification_robust_iff_of_em",
+        "Becoming.two_extremes_suffice_of_em",
+        "Becoming.classification_robust_iff_iff_em"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/CoursesBridge.lean",
+      "role": "provenance",
+      "sha256": "f1c5fd8ac0f939b317a305255c8d774c8a6e868baec73d2b40120447e13ec466",
+      "declarations": [
+        "Becoming.extension_classification_robust_iff",
+        "Becoming.frame_classification_robust_iff_of_em",
+        "Becoming.extension_classification_robust"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
+      "role": "receipt",
+      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
+      "role": "proof",
+      "sha256": "1c326a77df4cea25bf95130c834195d8d5faa9e809e2f340bf6ceae95634c6db",
+      "declarations": [
+        "Becoming.Lexical.Included.trans",
+        "Becoming.Lexical.StrictIncluded.irrefl",
+        "Becoming.Lexical.StrictIncluded.trans",
+        "Becoming.Lexical.Above.irrefl",
+        "Becoming.Lexical.BasicPriority.irrefl",
+        "Becoming.Lexical.Above.trans",
+        "Becoming.Lexical.BasicPriority.trans",
+        "Becoming.Lexical.Above.anchor",
+        "Becoming.Lexical.BasicPriority.anchor",
+        "Becoming.Lexical.Above.no_trade",
+        "Becoming.Lexical.BasicPriority.no_trade",
+        "Becoming.Lexical.Ceiling.above",
+        "Becoming.Lexical.Repair.above",
+        "Becoming.Lexical.Repair.loss_retained",
+        "Becoming.Lexical.Crossed.incomparable",
+        "Becoming.Lexical.included_adjoin_iff",
+        "Becoming.Lexical.strictIncluded_adjoin_iff",
+        "Becoming.Lexical.strictIncluded_adjoin_of_fresh",
+        "Becoming.Lexical.adjoin_crossed",
+        "Becoming.Lexical.Above.not_of_included",
+        "Becoming.Lexical.Above.adjoin_fresh_gain",
+        "Becoming.Lexical.Above.adjoin_gain_iff",
+        "Becoming.Lexical.Above.adjoin_basic_reverses",
+        "Becoming.Lexical.classified_none_iff",
+        "Becoming.Lexical.classified_all_retains",
+        "Becoming.Lexical.classified_robust_iff_of_decided",
+        "Becoming.Lexical.classified_robust_iff_of_em",
+        "Becoming.Lexical.classified_robust_iff_iff_em",
+        "Becoming.Lexical.classified_extremes_iff_of_decided",
+        "Becoming.Lexical.classified_of_basic",
+        "Becoming.Lexical.classified_of_fresh",
+        "Becoming.Lexical.Reorganizing.classification_matters",
+        "Becoming.Lexical.classified_none_above",
+        "Becoming.Lexical.classified_of_decided"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "role": "proof",
+      "sha256": "bf3ecf28d3d7dd5b196ff64a69e1a8cfc7fcd329c7c35732aa77f650c6648525",
+      "declarations": [
+        "Becoming.Requirement.Frontier.excluded",
+        "Becoming.Requirement.frontier_exists",
+        "Becoming.Requirement.Required.performed",
+        "Becoming.Requirement.Required.defeated",
+        "Becoming.Requirement.Required.impossible",
+        "Becoming.Requirement.Required.means",
+        "Becoming.Requirement.Assigned.unique_required",
+        "Becoming.Requirement.Assigned.capable",
+        "Becoming.Requirement.Served.successor",
+        "Becoming.Requirement.served_of_handover",
+        "Becoming.Requirement.Served.not_of_gap",
+        "Becoming.Requirement.Settled.no_residual",
+        "Becoming.Requirement.residual_of_unfulfilled",
+        "Becoming.Requirement.Required.redescribed",
+        "Becoming.Requirement.separate_not_joint",
+        "Becoming.Requirement.Collective.required",
+        "Becoming.Requirement.Collective.no_common_plan",
+        "Becoming.Requirement.required_of_bettered",
+        "Becoming.Requirement.Formation.left_retains_basis",
+        "Becoming.Requirement.Formation.formation_loses_occasion",
+        "Becoming.Requirement.Formation.left_above_idle",
+        "Becoming.Requirement.Formation.left_above_overbuild",
+        "Becoming.Requirement.Formation.bettered_unformed",
+        "Becoming.Requirement.Formation.required",
+        "Becoming.Requirement.Formation.frontier_iff",
+        "Becoming.Requirement.Formation.no_route_required",
+        "Becoming.Requirement.Formation.overbuilding",
+        "Becoming.Requirement.Formation.same_report_different_basis",
+        "Becoming.Requirement.Formation.no_report_judge",
+        "Becoming.Requirement.Formation.amount_recovers_basis",
+        "Becoming.Requirement.required_under_every_classification",
+        "Becoming.Requirement.Routes.required",
+        "Becoming.Requirement.Routes.opposite_routes",
+        "Becoming.Requirement.Routes.none_robust"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean",
+      "role": "proof",
+      "sha256": "bb00f7eb64a4303964415450dc10611359416c2fb14baceab89f8f73d1bed604",
+      "declarations": [
+        "Becoming.commonResponse_judge_iff",
+        "Becoming.commonResponse_antitone"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
+      "role": "proof",
+      "sha256": "4055d193bbc130905a315a149089f831af9bf49cd5d9b57a8196be531b98634c",
+      "declarations": [
+        "Becoming.carries_iff_preserves",
+        "Becoming.CarriesProfiles.trans",
+        "Becoming.preserves_of_transport",
+        "Becoming.no_new_of_complement",
+        "Becoming.Activation.same_marginals_lose_bundle",
+        "Becoming.Regimes.released_carried",
+        "Becoming.Regimes.extension",
+        "Becoming.Regimes.marginals_agree",
+        "Becoming.Regimes.no_comparison_through_marginals",
+        "Becoming.Regimes.joint_separates",
+        "Becoming.Regimes.possibility_not_realization",
+        "Becoming.Regimes.joint_enrichment_strict",
+        "Becoming.Regimes.joint_enrichment_classified"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Alternatives.lean",
+      "role": "proof",
+      "sha256": "9eadb20600d8c26388141ea7ef7d0f38131828bffe49907e9241180a72b29e5c",
+      "declarations": [
+        "Becoming.LivingSignificance.new_realization",
+        "Becoming.Alternatives.reason_of_extension",
+        "Becoming.Alternatives.survives_of_coherent",
+        "Becoming.Alternatives.survives_restrict",
+        "Becoming.Alternatives.no_survivor",
+        "Becoming.Profiles.both_respect",
+        "Becoming.Profiles.opposite",
+        "Becoming.Profiles.both_survive",
+        "Becoming.Profiles.different_selections"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "role": "proof",
+      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "role": "proof",
+      "sha256": "4d3afe46d3d4b297acc6a1e6b126ad2e0f2d08dfa9205fdcf2aa32bb7b5bcbf1",
+      "declarations": [
+        "Becoming.Extension.irrefl",
+        "Becoming.Extension.trans"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T201753.515165Z/verification.json",
+      "role": "receipt",
+      "sha256": "3c40ea48ba97e221d435520ce8abbb1577b04d871cb49bfe7a7e9efd78fe9665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T090457.012800Z/verification.json",
+      "role": "receipt",
+      "sha256": "73da26fa45a43969d573d4f0f79afeaf50f1b40ecd31082bc842b017a49920b4",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+      "role": "proof",
+      "sha256": "4489746718a276ff4c11dad22b815b702c543d5427f2b153cf6a14b7e70e36d0",
+      "declarations": [
+        "Becoming.FrontierFrames.classifiedOn",
+        "Becoming.Lexical.Frame.classified_extension_iff",
+        "Becoming.Lexical.Frame.classified_of_extension"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T092027.048735Z/verification.json",
+      "role": "receipt",
+      "sha256": "de95f96fbdaf4033149b61c99999a701769bbff509915f6fd858b0f6ce24e0f2",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Lexical",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frontier",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T201753.515165Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Inquiry",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Bundles",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Alternatives.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Alternatives",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FrontierFrames",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Extension",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "复用已完成的分类稳健比较与作用要求；具体方案确实随尚有根据的分类改变时，辨明会改变决定的生活作用、替代与真实损失，不重开一般分类、正面理由或机构授权之墙。",
+    "en": "Reuse completed robust comparison and role requirements. Where implementation really depends on still-warranted classifications, establish decision-relevant living roles, alternatives and actual losses rather than reopening universal classification, positive ground or the authority wall."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：依据更新后的仓库接续一元关系路线，新增分类精确判准与形式组合，再以三路例检验更强共同方案推论；旧结果与回执保持范围。",
+      "en": "2026-10-08: continues the monist relational route using the updated repository; adds an exact classification criterion and formal composition, then tests the stronger common-plan inference with three routes. Earlier results and receipts retain their scope."
+    },
+    {
+      "zh": "2026-10-09：逐项核读共享指示中新增的“接续部分纠正与临界反馈”，并验证此前已审字节完整保留为前缀。新增指示属于市场／元吸引子会话，不改变本成果的 G0/J、分类或组织形成范围。更新该来源的审阅指纹；主张、前提、证明绑定、反例与验证状态保持不变，无新定理或重新验收。",
+      "en": "2026-10-09: reviewed the appended partial-correction and critical-feedback directive and verified that all previously reviewed bytes remain an unchanged prefix. The addition belongs to the market/meta-attractor session and does not change this result’s G0/J, classification or organizational-formation scope. Updated this source-review fingerprint; claims, hypotheses, proof bindings, counterexamples and validation status are unchanged, with no new theorem or renewed scientific acceptance."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13：核读共享研究新增 P95 §85 的及时接续应用；此前全部段落原样保留，本成果主张与冻结证明范围不变。仅更新所读共享来源版本。",
+      "en": "2026-10-13: reviewed appended P95 §85 on timely-continuation application; all earlier sections remain byte-for-byte, and this result’s claim and frozen proof scope are unchanged. Updates only the reviewed shared-source version."
+    },
+    {
+      "zh": "2026-10-14，整合 I3b（Ren：“a lot proofs are probably not integrated”）：在脊柱上陈述，排中律为具名假设，并表明它恰是所需。前向（各分类下严格偏好推出保留新内容、以新内容为次级时更好）不需任何原则（compared_retains、compared_secondary）。反向在外围以经典推理证明；桥接以 em : ∀ p : Prop, Decided p 证明之（classification_robust_iff_of_em、two_extremes_suffice_of_em）。排中律不能去掉：对一切类型成立此反向，恰当每一命题已定（classification_robust_iff_iff_em）；见证取一个新内容，其在 b 处的保留是任意命题 R，使其为基本的分类下的严格偏好即 R 或其否定。比较仍是 PracticalJudgment 的 Better，即核心的 BetterAt。公理报告为空（草稿构建；回执随落地）。外围证明及其回执保持原范围；桥接自此导入 ClassificationRobustJudgment，脊柱运行将其（及 RelationalOrganization、ConcernExtension）作为继承模块编译。",
+      "en": "14 October 2026, integration I3b (Ren: “a lot proofs are probably not integrated”): stated on the spine, with excluded middle a named hypothesis shown to be exactly what is needed. The forward direction, from strict preference under every classification to retaining the fresh contents and being better with them secondary, needs no principle (compared_retains, compared_secondary). The periphery proves the converse classically; the bridge proves it with em : ∀ p : Prop, Decided p (classification_robust_iff_of_em, two_extremes_suffice_of_em). Excluded middle cannot be dropped: the converse holds for all types exactly where every proposition is decided (classification_robust_iff_iff_em); the witness takes one fresh content whose retention at b is an arbitrary proposition R, and strict preference under the classification making it basic is R or its failure. The comparison is still PracticalJudgment’s Better, the core’s BetterAt. Empty axiom reports (scratch build; the receipt comes with the landing). The periphery proof and its receipt keep their scope; the bridge now imports ClassificationRobustJudgment, which the spine run compiles, with RelationalOrganization and ConcernExtension, as inherited modules."
+    },
+    {
+      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：（桥接 Becoming.CoursesBridge）在框架的构型上，基本内容即框架在那里实现者：每种新内容分类下的严格偏好，恰是保留新内容且以之为增益时更好，排中律为具名假设（frame_classification_robust_iff_of_em）；沿生成扩展（a 实现 b 所实现的一切及一个 b 所缺的活内容），不需排中律，a 在每种分类下都被严格偏好，恰当它保留 b 的每个新内容（extension_classification_robust、extension_classification_robust_iff）：排中律只在两边基本内容相同、比较转到增益时才需要。Becoming.CoursesBridge 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
+      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: (bridge Becoming.CoursesBridge) on a frame's configurations, the basic contents being what the frame realizes there: strict preference under every classification of fresh contents is retaining them and being better with them as gains, with excluded middle named (frame_classification_robust_iff_of_em); along a generative extension (a realizes everything b realizes and a living content b lacks) no excluded middle is needed, and a is strictly preferred under every classification exactly when it keeps every fresh content of b (extension_classification_robust, extension_classification_robust_iff): excluded middle is needed only where the basic contents are the same on both sides and the comparison passes to gains. Becoming.CoursesBridge is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): ETHICAL-LEARNING.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, F3J, the port of the judgment and comparison family into the core (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): the core counterparts of the cited periphery and bridge declarations are cited (9 in Becoming.Alternatives; 13 in Becoming.Bundles; 34 in Becoming.Frontier; 2 in Becoming.Inquiry; 36 in Becoming.Lexical; 2 in Becoming.Metaethics), graded in development/bridge-fold/port-j.md; the periphery stays cited until the sweep retires it. Canonical source moved from ClassificationRobustJudgment.lean to Lexical.lean. A port restates; the claim is unchanged.",
+      "zh": "2026年10月18日，F3J 将判断与比较族移入核心：引用其核心对应声明，规范来源随之移动。移植只是重述，论断不变。"
+    },
+    {
+      "en": "19 October 2026, U3 (study section 196): the core laws of comparison under every classification read on a frame of two kinds, old contents compared by tier and fresh contents classified (Becoming.FrontierFrames.classifiedOn_*). The claim is unchanged.",
+      "zh": "2026年10月19日，U3（研究第 196 节）：每种分类下比较的核心规律在两类内容的框架上读出（旧内容按层比较，新内容被分类；Becoming.FrontierFrames.classifiedOn_*）。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: G0.new_realization (now LivingSignificance.new_realization). Proof bindings (Alternatives.lean, Bundles.lean, ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Alternatives.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Bundles.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：G0.new_realization（现为 LivingSignificance.new_realization）。证明绑定（Alternatives.lean、Bundles.lean、ValuationFrames.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Alternatives.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Bundles.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；ValuationFrames.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: FrontierFrames.classifiedOn_extremes_iff_of_decided (now Lexical.classified_extremes_iff_of_decided); FrontierFrames.classifiedOn_none_iff (now Lexical.classified_none_iff); FrontierFrames.classifiedOn_required (now Requirement.required_under_every_classification); FrontierFrames.classifiedOn_robust_iff_of_decided (now Lexical.classified_robust_iff_of_decided); FrontierFrames.classifiedOn_robust_iff_of_em (now Lexical.classified_robust_iff_of_em). Proof bindings (Frontier.lean, FrontierFrames.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Frontier.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; FrontierFrames.lean, takes as its final section AcceptanceFrames, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：作为纯转发删去（各自只把一条律应用于自己的约束变量），改提该律：FrontierFrames.classifiedOn_extremes_iff_of_decided（现为 Lexical.classified_extremes_iff_of_decided）；FrontierFrames.classifiedOn_none_iff（现为 Lexical.classified_none_iff）；FrontierFrames.classifiedOn_required（现为 Requirement.required_under_every_classification）；FrontierFrames.classifiedOn_robust_iff_of_decided（现为 Lexical.classified_robust_iff_of_decided）；FrontierFrames.classifiedOn_robust_iff_of_em（现为 Lexical.classified_robust_iff_of_em）。证明绑定（Frontier.lean、FrontierFrames.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：Frontier.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；FrontierFrames.lean，以末节收入 AcceptanceFrames（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 11 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/75c96775a8e7ebb7/classification-robust-generative-comparison.json and in git.",
+      "zh": "2026-10-20：11 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/75c96775a8e7ebb7/classification-robust-generative-comparison.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, ClassificationRobustJudgment, ConcernExtension, CoursesBridge, GenerativeComparison, JointContinuationClassification, PracticalJudgment, RelationalGrounding and RelationalOrganization) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Alternatives, Becoming.Bundles, Becoming.Extension, Becoming.Frontier, Becoming.FrontierFrames, Becoming.Inquiry, Becoming.Lexical and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Metaethics, which this record does not cite with declarations. The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, ClassificationRobustJudgment, ConcernExtension, CoursesBridge, GenerativeComparison, JointContinuationClassification, PracticalJudgment, RelationalGrounding and RelationalOrganization）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Alternatives, Becoming.Bundles, Becoming.Extension, Becoming.Frontier, Becoming.FrontierFrames, Becoming.Inquiry, Becoming.Lexical and Becoming.ValuationFrames）。退役模块的内容也陈述于 Becoming.Metaethics，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): claim made exact to the core criterion: the equivalence holds where it is decided whether B realizes each fresh content and, at each classification, whether B realizes every fresh content of A classified basic (the forward direction needs no decision), the two extremes suffice under the same decisions, and that the criterion holds over every type is exactly excluded middle; the three core laws added as aliases; the evidence names the core statement with empty axiom reports in place of the superseded periphery audit; G0 replaced by living significance in the premise, limitation and dependency condition.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张依核心判据改精确：等价在 B 是否实现每个新内容、以及在每种分类下 B 是否实现 A 中被分为基本的每个新内容都已判定之处成立（正方向不需判定），同样判定下两端点足矣，而判据对一切类型成立恰是排中律；三条核心定律加为别名；证据以公理报告全空的核心陈述代替已被取代的外围审计；前提、限度与依存条件中的 G0 改为生生之意义。"
+    }
+  ]
+}
