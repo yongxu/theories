@@ -1,9 +1,10 @@
+<!-- The text land_df3.py appended to the chain's index record (NNN: the study section). -->
 <a id="df3-chain-review-28-october-2026"></a>
 ## DF3 迁移的八项记录：复读与两项提议 / The eight records DF3 migrated: read, and two proposals — 28 October 2026
 
 工作板 DF3（研究第 NNN 节）。本链所记的八项记录由 DF3 迁移到 schema 2；GC 把它们的 10 个来源留给 DF3。每个来源都对照链接它的条目（C01、M20、M24、M25、F30）复读。8 个来源相合，记入。另有 2 个暂不记入，所附提议 A4、A5 接在 GC 的 A1–A3 之后，按维护规则不改条目：M20 陈述部分纠正的“当且仅当”时未写 0 ≤ β ≤ 3/4 的范围；陈述两端分类时未写其所需的判定。这是作者复读，不是独立验收。
 
-Board item DF3 (study section NNN). DF3 migrated eight records this chain fingerprints to schema 2, and GC left their ten sources to DF3 ([section above](#gc-chain-review-28-october-2026)). Each source was read at its landed bytes, against the entries that link it.
+Board item DF3 (study section NNN). DF3 migrated eight records this chain fingerprints to schema 2, and GC left their ten sources to DF3 ([GC's section](../../../../2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md#gc-chain-review-28-october-2026)). Each source was read at its landed bytes, against the entries that link it.
 
 **Recorded, 8.** The entries hold as these sources now state them:
 
@@ -19,5 +20,7 @@ Board item DF3 (study section NNN). DF3 migrated eight records this chain finger
 - **A5. The decisions the extreme classifications take** (M20; held: classification-robust-generative-comparison.md). M20 says "strict agreement at the all-secondary and all-basic endpoints covers every mixed assignment". `Lexical.classified_extremes_iff_of_decided` proves it where it is decided whether the alternative below holds each fresh content, and, for each classification, whether it holds every fresh content classified basic. The criterion over every type is exactly excluded middle (the record's sixth law). Proposed: "where the realizations compared are decided, strict agreement at the all-secondary and all-basic endpoints covers every mixed assignment".
 
 Both bear on M20 beside A1, which restates its G0 wording, so they can be applied with A1.
+
+**Left pending, 5.** RESULTS.md (the generated register, which DF3 changes with the thirty statements and other landings since GC changed too) and four sources other landings changed after GC (the pages of organizational-formation-from-generative-comparison, identification-where-runs-part and selection-through-a-model-of-the-options, and Learning.lean) are not DF3's, and are left for the next chain reading.
 
 This is author reading, not independent acceptance, and proves no new claim.

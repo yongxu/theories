@@ -1,9 +1,9 @@
 # What DF leaves, and where it goes
 
-DF2 (27 October 2026) made the 33 missing-record rows into thirty records, gave the two records with no statement their statements, and added decision D69; what DF1 and DF2 leave is below.
+DF2 (27 October 2026) made the 33 missing-record rows into thirty records, gave the two records with no statement their statements, and added decision D69; DF3 (28 October 2026, study §435) migrated the thirty schema-1 records DF1 named to schema 2; what DF leaves is below.
 
 ## For a next landing of DF
-- Schema-2 migrations with laws arrays for the schema-1 records whose rows proposed laws (their content is already in their statements and claims): joint-decomposition-lifting, finite-joining-tree-lifting, exclusive-footprint-support, control-coherence-loss, growth-constrained-fragmentation, recoverable-mediated-change, the four market records, draws-on-a-shared-stock, and the group-0 and group-1 records the editors named (rows 0, 1, 2, 3, 9, 14, 15, 17, 18, 19, 21, 29); least-footprint-where-idleness-decided and normal-forms-need-decided-apartness have statements now and take their laws arrays with them.
+- Batch B of the schema-2 migrations ([plan](DF3-PLAN.md)): the 87 schema-1 records DF3 (study §435) did not take, 46 of them without a statement and 33 fingerprinted by the generativity chain, among them endpoint-loss-and-return, open-form-realization-under-revision, versioned-request-completion and joint-practice-forms-continuation. Batch A (the thirty DF1 named) is migrated.
 - Two id renames whose names state the retired registration sense: selection-under-registration-revision → selection-when-the-lumping-changes, formed-copying-registration → formed-contacts-change-copying-fidelity. `rename_ids.py` refuses both, because the generativity chain's record names them (in its historical evidence); the chain changes only through its maintenance record, so the renames wait on that decision.
 - recurrence-without-selector-revision is reviewed-scoped: no receipt binds BoundaryModels.lean's current bytes (a first-line comment changed after its last check). A rerun of its checker, or a binding to the checked snapshot, would make it recorded-checked.
 
