@@ -1,0 +1,24 @@
+Becoming/WRTCheck.lean:55:40: error(lean.unknownIdentifier): Unknown identifier `Idle.web`
+Becoming/WRTCheck.lean:58:57: error: Application type mismatch: The argument
+  balanced 0 ()
+has type
+  idleTwice.web.level (0 + 1) () + idleTwice.flow.taken 0 () = idleTwice.web.level 0 () + idleTwice.flow.given 0 ()
+but is expected to have type
+  (0 + 1).succ.succ = (0 + 1).succ
+in the application
+  Nat.succ.inj (balanced 0 ())
+Becoming/WRTCheck.lean:91:28: error(lean.unknownIdentifier): Unknown identifier `idle`
+Becoming/WRTCheck.lean:96:43: error(lean.unknownIdentifier): Unknown identifier `idle`
+Becoming/WRTCheck.lean:96:52: error(lean.unknownIdentifier): Unknown identifier `idle_world`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/check/tree",
+  "modules": 34,
+  "ran": [
+    "Becoming.WRTCheck"
+  ],
+  "reused": 33,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.WRTCheck"
+}
