@@ -214,7 +214,7 @@
         "Becoming.Switching.fixed_loses",
         "Becoming.Switching.slow"
       ],
-      "sha256": "6e3ff605c2dc083a3b7a745ce8832dbeea4b4bade11cdfb16d5acfc83c8838b5"
+      "sha256": "d3c6ee771a607581a85ba0b1e20640915466b0721f31cd03a158983d815c3f89"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identification.lean",
@@ -291,12 +291,18 @@
       "role": "receipt",
       "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json",
+      "role": "receipt",
+      "sha256": "d5900bc8b613124282a1b19105136d6be2334131768151b24783f9206f1a54e0",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Pace",
       "success_pointer": "/status",
       "success_value": "passed"

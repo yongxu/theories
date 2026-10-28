@@ -19906,3 +19906,47 @@ Output → input: the record and the record of ComparingCourses; 01 §7; 08 §7 
 **The review, and what was taken.** One independent read-only review by a separate AI agent ([REVIEW-OU3c](development/ou3c-anchors-on-the-grammar/REVIEW-OU3c.md)); every finding taken. The first draft's `step_back` went through `returns_iff_reaches` and back at `s` itself, a round trip that made return look mediated by the grammar: the return is now used as it is, and the juncture law is said to reach the grammar through the closure laws of the case split. The first draft gave rows 3 and 4 a reason that covered only the lasso's bound: its repetition follows from the laws of steps, as `Law.orbit_mul` does, and is now derived, so two more declarations reach the grammar. The record of `ComparingCourses` would have failed the record check: its binding of the moved laws moves to `GrammarLaws`. The new lemma takes the bridges' orientation (`lumped_iff_fixed_image`), a docstring of `ReachableRanges` says only what its proof shows, `GrammarLaws`' header names the relation laws and the new consumers, and a cross-reference was corrected.
 
 **Self-review.** (1) Each derivation was read against the grammar law it uses: the special law's statement is the general law's at the model's relation, and nothing is routed through the grammar that the old proof did not use in substance. (2) Each reason names what the declaration's content is and why no grammar law states it. (3) Not done: the items in Boundary.
+
+## 434. EC6's cases of closure and balance derived (EC6b)
+
+EC6's audit ([AUDIT](development/ec6-no-master-law/AUDIT.md), reviewed twice) found 10 of the 50 central declarations on no master law to be cases of a master law, their own proofs re-proving by induction, chain or count what the law states. The coordinating note ([WHAT-REMAINS](development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), "After EC6's audit") ordered the eight of them in five modules as EC6b: bridges and re-proofs, every statement and definition unchanged, through `WithinClosure` or `balance_over_stretch_on`, so that the rows reach their master law. The other two, in `Optimum`, are EC6c, which waits on `Flow`'s owner.
+
+```text
+Result(s): no new result; eight central declarations derived below their master law (board rule 9).
+Delta:
+  - Closure, invariance along a run.
+    - `Pace.stays`: a region of the paced law's joint state closed under its step holds at every later step
+      of its run. It goes by Invariant.reach with Run.reach, which reaches WithinClosure by
+      reach_iff_withinClosure.
+    - `Pace.stays_turned`: the same read on the two levels.
+    - `Pace.rule_until_reading`: re-proved by `stays`.
+    - RuleCapture's `locked_stays`, `favours_throughout`, `favours_after_reading` and `locked_not_below`:
+      re-proved by `stays_turned`, through `turn_locked` and a new `turn_favours`. So
+      `RuleCapture.favouring_locks`, `uniform_locks` and `ClosedCapture.lock_outlives_loss` reach closure.
+    - `Lasting.orbit_mono`: re-proved by Invariant.reach at the product law, with a new `orbit_pair`. So
+      `RegimeMargin.Drawn.run_shape` reaches closure, and so does every other caller.
+  - Closure along a chain.
+    - `RegimeMargin.Coupled.Indexed.downstream_within`: Downstream is within the closure of the converse of
+      dependence. `ends_downstream` is re-proved from it.
+    - `Upstream.within` (a chain is within the closure of coupling, by «线则所闭») and `Coupled.of_reach` (a
+      reach is a chain). `onLoop_of_closing` is re-proved by «及当且仅当一步而所闭», «所闭当且仅当同一或及»
+      and «及之传递».
+  - Balance.
+    - `Counts.over_stretch_decided`: re-proved from balance_over_stretch_on through `steps_choice` (finite
+      choice on a stretch, no choice principle), `CountsAcross.eq_total` and `Decided.comes`/`ceases`, with
+      Population's `steps_of_within`. So `CensusWebs.keep_pace` reaches balance.
+  - The measure, by category (each declaration counted once): 40 reach the grammar, 30 rest on balance (represented), 6 on another master law's anchor with their reasons, 42 on no master law (from 32, 30, 6 and 50). By what each follows from: master law 46, balance represented 30, premise of the account 9, counting identity 3, law of its model 7, single application 4, definitional or representational 14, derivation pending 5 (OU3d 3, EC6c 2). 41 of the 127 rows reach the grammar (from 33), and 85 rest on at least one master law (from 77).
+Supplied premises / correspondence: none added; every statement is unchanged (statement text compared with the
+       previous bytes, whitespace normalized).
+Evidence: core receipt `20261028T070053.995027Z`; the six modules' declarations, every axiom report empty; the measure's output in
+       development/ec6-no-master-law/measure-after-ec6b.json.
+Standing: rule-9 derivations. The general laws (closure, the stretch balance) become the reasons for these
+       declarations, and their own inductions move into bridges (the product orbit, the chain from a reach,
+       finite choice on a stretch). None of these is a new result.
+Boundary:
+  - EC6c (Optimum's balance clause) waits on Flow's owner.
+  - The three step-indexed rows wait on OU3d.
+  - Weightings' `mem_steps_of_between` is a twin of Population's `steps_of_within`, left with its owner.
+Output → input: the measure's categories and its gaps; 08 §7's counts; COMPLETION's master-law list (generated);
+       the records binding the six modules, rebound to the receipt.
+```

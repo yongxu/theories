@@ -143,6 +143,27 @@ theorem paced_succ (c : S × R) (t : Nat) :
   congrArg (fun n => ((turn f h (reads n) (paced f h reads c t)).1,
     (turn f h (reads n) (paced f h reads c t)).2)) (paced_count c t)
 
+/-! ## Regions the step keeps -/
+
+/-- **A region the step keeps holds from where it holds on.** Where every step of the two levels
+keeps a region of the fast configuration, the rule and the step count, the run of the step, in
+the region at step `t`, is in it at every later step: the region is closed under the law
+(`Invariant`), the run reaches each later state from each earlier one (`Run.reach`), and a closed
+region holds what is reached (`Invariant.reach`, by `reach_iff_withinClosure`). -/
+theorem stays {I : S × R × Nat → Prop} (closed : ∀ p, I p → I (step f h reads p)) (c : S × R)
+    {t : Nat} (holds : I ((Law.run (step f h reads) (c.1, c.2, 0)).state t)) (k : Nat) :
+    I ((Law.run (step f h reads) (c.1, c.2, 0)).state (t + k)) :=
+  Invariant.reach (P := Law.process (step f h reads))
+    (fun p _ _ stepped held => Eq.subst (motive := I) stepped.symm (closed p held))
+    ((Law.run (step f h reads) (c.1, c.2, 0)).reach t k) holds
+
+/-- **A region of the two levels every turn keeps holds from where it holds on**, reading or not:
+`stays`, read on the fast configuration and the rule. -/
+theorem stays_turned {Q : S × R → Prop} (closed : ∀ b p, Q p → Q (turn f h b p)) (c : S × R)
+    {t : Nat} (holds : Q (paced f h reads c t)) (k : Nat) : Q (paced f h reads c (t + k)) :=
+  stays (I := fun p => Q (p.1, p.2.1)) (fun p held => closed (reads p.2.2) (p.1, p.2.1) held) c
+    holds k
+
 /-! ## A rule that never reads -/
 
 /-- **A rule that never reads is kept at every step.** -/
@@ -224,11 +245,14 @@ theorem byRule_reabsorbed (fast : ∀ x x' g, f x g = f x' g) (slow : ∀ x x' g
 
 /-- **Up to and including the first reading step, the rule is the one at the start.** -/
 theorem rule_until_reading {r : Nat} (before : ∀ u, u < r → reads u = false) (c : S × R) :
-    ∀ t, t ≤ r → (paced f h reads c t).2 = c.2
-  | 0, _ => rfl
-  | t + 1, le => by
-    rw [paced_succ, before t (Nat.lt_of_succ_le le)]
-    exact rule_until_reading before c t (Nat.le_of_succ_le le)
+    ∀ t, t ≤ r → (paced f h reads c t).2 = c.2 := fun t le =>
+  have kept := stays (I := fun p => p.2.2 ≤ r → p.2.1 = c.2)
+    (fun p held next => Eq.subst (motive := fun b => (turn f h b (p.1, p.2.1)).2 = c.2)
+      (before p.2.2 next).symm (held (Nat.le_of_succ_le next)))
+    c (t := 0) (fun _ => rfl) t
+  (Eq.subst (motive := fun n => ((Law.run (step f h reads) (c.1, c.2, 0)).state n).2.2 ≤ r →
+      ((Law.run (step f h reads) (c.1, c.2, 0)).state n).2.1 = c.2) (Nat.zero_add t) kept)
+    (Eq.subst (motive := fun n => n ≤ r) (paced_count c t).symm le)
 
 /-- **A fast difference does not reach the rule before the first reading step has passed.** Two
 courses from one rule, whatever their fast configurations, have the same rule at every step up to

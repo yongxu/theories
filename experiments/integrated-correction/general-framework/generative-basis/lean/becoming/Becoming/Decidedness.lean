@@ -336,34 +336,87 @@ theorem Counts.across_step {t : Nat} : ∀ {as : List α} {h h' c d : Nat},
 theorem shift_succ (S n : Nat) : S + (n + 1) = S + 1 + n :=
   (congrArg (S + ·) (Nat.add_comm n 1)).trans (Nat.add_assoc S 1 n).symm
 
+/-- **A stretch's numbers, chosen.** Where each step of a stretch has a number with a property, some
+function gives each step one. The stretch being finite, no choice is used: each step's number is
+set by comparing it with the stretch's first step. -/
+theorem steps_choice {P : Nat → Nat → Prop} : ∀ (S n : Nat),
+    (∀ t, t ∈ steps S n → ∃ k, P t k) → ∃ f : Nat → Nat, ∀ t, t ∈ steps S n → P t (f t)
+  | _, 0, _ => ⟨fun _ => 0, fun _ mem => nomatch mem⟩
+  | S, n + 1, each =>
+    match each S (.head _), steps_choice (S + 1) n fun t mem => each t (.tail S mem) with
+    | ⟨k, first⟩, ⟨f, rest⟩ =>
+      ⟨fun t => bif Nat.ble t S then k else f t, fun t mem => match mem_cons_cases mem with
+        | .inl same => Eq.subst (motive := fun x => P x (bif Nat.ble x S then k else f x)) same.symm
+            (Eq.subst (motive := fun b => P S (bif b then k else f S))
+              (Nat.ble_eq_true_of_le (Nat.le_refl S)).symm first)
+        | .inr later => Eq.subst (motive := fun b => P t (bif b then k else f t))
+            (Naturals.ble_false_of_lt (between_of_mem_steps later).1).symm (rest t later)⟩
+
+/-- **Counted across steps, a total is the total of the steps' counts.** Where `f` gives a count at
+each step of a list, the counts across it total `f` over the list (`Counts.unique`). -/
+theorem CountsAcross.eq_total {fam : Nat → List α} {q : Nat → α → Prop} {f : Nat → Nat} :
+    ∀ {ts : List Nat} {n : Nat}, (∀ t, t ∈ ts → Counts (fam t) (q t) (f t)) →
+      CountsAcross fam q ts n → n = total ts f
+  | [], _, _, zero => zero
+  | t :: _, _, each, ⟨_, m, here, rest, sum⟩ =>
+    sum.trans ((congrArg (· + m) (here.unique (each t (.head _)))).trans
+      (congrArg (f t + ·) (CountsAcross.eq_total (fun u mem => each u (.tail t mem)) rest)))
+
+/-- Coming to be across a step is decided where the determination is decided at both its ends. -/
+theorem Decided.comes {p : Nat → Prop} {t : Nat} (now : Decided (p t)) (next : Decided (p (t + 1))) :
+    Decided (ComesToBe p t) :=
+  match now, next with
+  | .inl holds, _ => .inr fun comes => comes.1 holds
+  | .inr fails, .inl after => .inl ⟨fails, after⟩
+  | .inr _, .inr fails => .inr fun comes => fails comes.2
+
+/-- Ceasing to be across a step is decided where the determination is decided at both its ends. -/
+theorem Decided.ceases {p : Nat → Prop} {t : Nat} (now : Decided (p t)) (next : Decided (p (t + 1))) :
+    Decided (CeasesToBe p t) :=
+  match now, next with
+  | .inr fails, _ => .inr fun ceases => fails ceases.1
+  | .inl holds, .inr after => .inl ⟨holds, after⟩
+  | .inl _, .inl holds => .inr fun ceases => ceases.2 holds
+
 /-- Over a stretch whose states are decided at each of its steps, wherever the counts exist, the
 members holding at the end with those that ceased across it are those holding at the start with
-those that came to be. -/
+those that came to be. It is the stretch balance (`balance_over_stretch_on`) of the count holding:
+decided, the counts at each step exist and are chosen (`steps_choice`), each step balances
+(`Counts.across_step`), and the counts across the stretch total those of its steps
+(`CountsAcross.eq_total`). -/
 theorem Counts.over_stretch_decided {as : List α} : ∀ {S : Nat} (n : Nat) {h h' A D : Nat},
     (∀ a, a ∈ as → ∀ t, t ∈ steps S (n + 1) → Decided (p a t)) →
     Counts as (fun a => p a S) h → Counts as (fun a => p a (S + n)) h' →
     CountsAcross (fun _ => as) (fun t a => ComesToBe (p a) t) (steps S n) A →
     CountsAcross (fun _ => as) (fun t a => CeasesToBe (p a) t) (steps S n) D →
-    h' + D = h + A
-  | _, 0, h, _, _, D, _, start, finish, came, ceased =>
-    (congrArg (· + D) (finish.unique start)).trans (congrArg (h + ·) (ceased.trans came.symm))
-  | S, n + 1, h, h', A, D, decided, start, finish, ⟨c, A', comes, came, sumA⟩,
-      ⟨d, D', ceases, ceased, sumD⟩ =>
-    match (counts_iff_decided (q := fun a => p a (S + 1))).mpr
-        fun a mem => decided a mem (S + 1) (.tail _ (.head _)) with
-    | ⟨h₁, next⟩ =>
-      have step : h₁ + d = h + c := Counts.across_step start next comes ceases
-      have rest : h' + D' = h₁ + A' := Counts.over_stretch_decided (S := S + 1) n
-        (fun a mem t member => decided a mem t (.tail _ member)) next
-        (Eq.subst (motive := fun x => Counts as (fun a => p a x) h') (shift_succ S n) finish)
-        came ceased
-      calc h' + D = h' + (d + D') := congrArg (h' + ·) sumD
-        _ = d + (h' + D') := Nat.add_left_comm h' d D'
-        _ = d + (h₁ + A') := congrArg (d + ·) rest
-        _ = (h₁ + d) + A' := (Nat.add_assoc d h₁ A').symm.trans (congrArg (· + A') (Nat.add_comm d h₁))
-        _ = (h + c) + A' := congrArg (· + A') step
-        _ = h + (c + A') := Nat.add_assoc h c A'
-        _ = h + A := congrArg (h + ·) sumA.symm
+    h' + D = h + A := fun {S} n {h h' _A D} decided start finish came ceased =>
+  have ends : ∀ t, S ≤ t → t < S + n → t ∈ steps S (n + 1) ∧ t + 1 ∈ steps S (n + 1) :=
+    fun _ from_ below => ⟨steps_of_within from_ (Nat.lt_succ_of_lt below),
+      steps_of_within (Nat.le_succ_of_le from_) (Nat.succ_lt_succ below)⟩
+  match steps_choice (P := fun t k => Counts as (fun a => p a t) k) S (n + 1)
+      (fun t mem => counts_iff_decided.mpr fun a ma => decided a ma t mem),
+    steps_choice (P := fun t k => Counts as (fun a => ComesToBe (p a) t) k) S n
+      (fun t mem => match between_of_mem_steps mem with
+        | ⟨from_, below⟩ => counts_iff_decided.mpr fun a ma =>
+          Decided.comes (decided a ma t (ends t from_ below).1)
+            (decided a ma (t + 1) (ends t from_ below).2)),
+    steps_choice (P := fun t k => Counts as (fun a => CeasesToBe (p a) t) k) S n
+      (fun t mem => match between_of_mem_steps mem with
+        | ⟨from_, below⟩ => counts_iff_decided.mpr fun a ma =>
+          Decided.ceases (decided a ma t (ends t from_ below).1)
+            (decided a ma (t + 1) (ends t from_ below).2)) with
+  | ⟨q, holding⟩, ⟨y, comes⟩, ⟨x, ceases⟩ =>
+    have stretch : q (S + n) + total (steps S n) x = q S + total (steps S n) y :=
+      balance_over_stretch_on S n fun t from_ below =>
+        Counts.across_step (holding t (ends t from_ below).1) (holding (t + 1) (ends t from_ below).2)
+          (comes t (steps_of_within from_ below)) (ceases t (steps_of_within from_ below))
+    have first : q S = h := (holding S (.head _)).unique start
+    have last : q (S + n) = h' :=
+      (holding (S + n) (steps_of_within (Nat.le_add_right S n) (Nat.lt_succ_self _))).unique finish
+    ((congrArg (· + D) last.symm).trans (congrArg (q (S + n) + ·)
+      (CountsAcross.eq_total ceases ceased))).trans (stretch.trans
+        ((congrArg (· + total (steps S n) y) first).trans
+          (congrArg (h + ·) (CountsAcross.eq_total comes came).symm)))
 
 /-- The census with no premise. Over a stretch, wherever the counts exist, the members holding at
 the end with those that ceased across it are those holding at the start with those that came to

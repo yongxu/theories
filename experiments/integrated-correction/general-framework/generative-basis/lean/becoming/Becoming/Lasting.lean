@@ -363,11 +363,25 @@ section Growth
 
 variable {V : Type w} {rel : V → V → Prop} {g : V → V}
 
-/-- A monotone map keeps the order along its orbits. -/
+/-- The orbit of a pair under the map applied to both is the pair of orbits. -/
+theorem orbit_pair (a b : V) :
+    ∀ n, Law.orbit (fun p : V × V => (g p.1, g p.2)) (a, b) n = (Law.orbit g a n, Law.orbit g b n)
+  | 0 => rfl
+  | n + 1 => congrArg (fun p : V × V => (g p.1, g p.2)) (orbit_pair a b n)
+
+/-- A monotone map keeps the order along its orbits: the region of ordered pairs is closed under
+the map applied to both (`mono`), so the orbit of an ordered pair stays in it (`Invariant.reach`,
+the closure law), and that orbit is the pair of orbits (`orbit_pair`). -/
 theorem orbit_mono (mono : ∀ a b, rel a b → rel (g a) (g b)) {a b : V} (below : rel a b) :
-    ∀ n, rel (Law.orbit g a n) (Law.orbit g b n)
-  | 0 => below
-  | n + 1 => mono _ _ (orbit_mono mono below n)
+    ∀ n, rel (Law.orbit g a n) (Law.orbit g b n) := fun n =>
+  Eq.subst (motive := fun p : V × V => rel p.1 p.2) (orbit_pair a b n)
+    (Eq.subst (motive := fun m => rel (Law.orbit (fun p : V × V => (g p.1, g p.2)) (a, b) m).1
+        (Law.orbit (fun p : V × V => (g p.1, g p.2)) (a, b) m).2) (Nat.zero_add n)
+      (Invariant.reach (P := Law.process (fun p : V × V => (g p.1, g p.2)))
+        (I := fun p => rel p.1 p.2)
+        (fun p _ _ stepped held => Eq.subst (motive := fun q : V × V => rel q.1 q.2) stepped.symm
+          (mono p.1 p.2 held))
+        ((Law.run (fun p : V × V => (g p.1, g p.2)) (a, b)).reach 0 n) below))
 
 /-- **Growth bounded by a monotone map stays below the map's orbit.** -/
 theorem below_orbit (trans : ∀ a b c, rel a b → rel b c → rel a c)

@@ -2224,15 +2224,23 @@ theorem ends_of_partner {G : ι → (ι → Nat) → Nat} {H : ι → Nat} {i j 
   have ⟨N, gone⟩ := ends
   ⟨_, (ends_after depends (N := N) fun k => Nat.le_trans (Nat.le_of_eq (gone k)) (Nat.zero_le (H j))).2 pos⟩
 
+/-- **Downstream is the closure of depending**: a condition downstream of `k` lies within `k`'s
+closure under the converse of dependence, `j` bearing it to `i` where `i` depends on `j`. -/
+theorem downstream_within {G : ι → (ι → V) → V} :
+    ∀ {i k : ι}, Downstream D G i k → WithinClosure (fun j i => DependsOn D G i j) k i
+  | _, _, .refl i => WithinClosure.refl i
+  | _, _, .dep d chain => (downstream_within chain).trans (WithinClosure.of_rel d)
+
 /-- **The cascade of ends.** In whole numbers, where every condition that depends on another has a
 positive draw, wherever a condition ends every condition downstream of it, through any chain of
-dependence, ends. -/
+dependence, ends: the ended conditions are closed under the converse of dependence
+(`ends_of_partner`), and a downstream condition lies within the closure (`downstream_within`). -/
 theorem ends_downstream {G : ι → (ι → Nat) → Nat} {H : ι → Nat}
     (pos : ∀ i j, DependsOn Drawn.whole G i j → 0 < H i) {s : ι → Nat} :
     ∀ {i k : ι}, Downstream Drawn.whole G i k → Ends Drawn.whole G H (fun w => w k) s →
-      Ends Drawn.whole G H (fun w => w i) s
-  | _, _, .refl _, ends => ends
-  | _, _, .dep d chain, ends => ends_of_partner d (pos _ _ d) (ends_downstream pos chain ends)
+      Ends Drawn.whole G H (fun w => w i) s := fun chain ends =>
+  downstream_within chain (fun j => Ends Drawn.whole G H (fun w => w j) s)
+    (fun _ _ ended depends => ends_of_partner depends (pos _ _ depends) ended) ends
 
 /-- **A dependence cycle ends together.** In whole numbers, where every condition that depends on
 another has a positive draw, two conditions each downstream of the other end together or not at all. -/

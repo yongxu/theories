@@ -177,15 +177,13 @@ theorem turn_locked (raises : Raises P favours f) (monotone : ReadsShare P M h)
     ⟨⟨lock.1, M.trans lock.2 (monotone x (f x g) g g (raises x g lock.1))⟩, raises x g lock.1,
       M.refl g⟩
 
-/-- **A locked configuration stays locked** at every later step of the two-level course. -/
+/-- **A locked configuration stays locked** at every later step of the two-level course: every
+turn keeps the lock (`turn_locked`), so the closure law holds it there (`Pace.stays_turned`). -/
 theorem locked_stays (raises : Raises P favours f) (monotone : ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {c : S × R} {t : Nat}
     (locked : Locked M favours h (paced f h reads c t)) :
-    ∀ k, Locked M favours h (paced f h reads c (t + k))
-  | 0 => locked
-  | k + 1 => Eq.subst (motive := Locked M favours h) (paced_succ c (t + k)).symm
-      (turn_locked raises monotone upper (reads (t + k)) _
-        (locked_stays raises monotone upper locked k)).1
+    ∀ k, Locked M favours h (paced f h reads c (t + k)) :=
+  stays_turned (fun b p lock => (turn_locked raises monotone upper b p lock).1) c locked
 
 /-- **Locked, neither the share nor the rule falls**: across every step from a locked one on,
 reading steps included, neither is lower after the step than before it. -/
@@ -201,17 +199,20 @@ theorem locked_rises (raises : Raises P favours f) (monotone : ReadsShare P M h)
    Eq.subst (motive := fun q : S × R => M.le (paced f h reads c (t + k)).2 q.2)
       (paced_succ c (t + k)).symm turned.2.2⟩
 
-/-- **Locked, the share and the rule are never again below where they were.** -/
+/-- **Locked, the share and the rule are never again below where they were**: every turn keeps
+the region of locked configurations at or above them (`turn_locked`, with the orders'
+transitivity), so the closure law holds it there (`Pace.stays_turned`). -/
 theorem locked_not_below (raises : Raises P favours f) (monotone : ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {c : S × R} {t : Nat}
     (locked : Locked M favours h (paced f h reads c t)) :
     ∀ k, P.le (paced f h reads c t).1 (paced f h reads c (t + k)).1 ∧
-      M.le (paced f h reads c t).2 (paced f h reads c (t + k)).2
-  | 0 => ⟨P.refl _, M.refl _⟩
-  | k + 1 =>
-    have before := locked_not_below raises monotone upper locked k
-    have step := locked_rises raises monotone upper locked k
-    ⟨P.trans before.1 step.1, M.trans before.2 step.2⟩
+      M.le (paced f h reads c t).2 (paced f h reads c (t + k)).2 := fun k =>
+  (stays_turned (Q := fun q => Locked M favours h q ∧ P.le (paced f h reads c t).1 q.1 ∧
+      M.le (paced f h reads c t).2 q.2)
+    (fun b q held =>
+      have turned := turn_locked raises monotone upper b q held.1
+      ⟨turned.1, P.trans held.2.1 turned.2.1, M.trans held.2.2 turned.2.2⟩)
+    c ⟨locked, P.refl _, M.refl _⟩ k).2
 
 end Lock
 
@@ -273,18 +274,19 @@ section Uniform
 variable {P : Ideals.Preorder S} {M : Ideals.Preorder R} {favours : R → Prop}
   {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
 
-/-- Where the reading favours at every share, every rule after a reading step favours. -/
+/-- Where the reading favours at every share, every turn keeps a favouring rule. -/
+theorem turn_favours (uniform : ∀ x g, favours (h x g)) :
+    ∀ (b : Bool) (p : S × R), favours p.2 → favours (turn f h b p).2
+  | true, p, _ => uniform p.1 p.2
+  | false, _, held => held
+
+/-- Where the reading favours at every share, every rule after a reading step favours: the rule
+read there favours, and every turn keeps a favouring rule (`turn_favours`, `Pace.stays_turned`). -/
 theorem favours_after_reading (uniform : ∀ x g, favours (h x g)) {c : S × R} {r : Nat}
-    (at_r : reads r = true) : ∀ k, favours (paced f h reads c (r + 1 + k)).2
-  | 0 => Eq.subst (motive := fun p : S × R => favours p.2)
-      ((paced_succ c r).trans (congrArg (fun b => turn f h b _) at_r)).symm (uniform _ _)
-  | k + 1 =>
-    have now := favours_after_reading uniform at_r k
-    match q : reads (r + 1 + k) with
-    | true => Eq.subst (motive := fun p : S × R => favours p.2)
-        ((paced_succ c (r + 1 + k)).trans (congrArg (fun b => turn f h b _) q)).symm (uniform _ _)
-    | false => Eq.subst (motive := fun p : S × R => favours p.2)
-        ((paced_succ c (r + 1 + k)).trans (congrArg (fun b => turn f h b _) q)).symm now
+    (at_r : reads r = true) : ∀ k, favours (paced f h reads c (r + 1 + k)).2 :=
+  stays_turned (Q := fun q => favours q.2) (turn_favours uniform) c
+    (Eq.subst (motive := fun p : S × R => favours p.2)
+      ((paced_succ c r).trans (congrArg (fun b => turn f h b _) at_r)).symm (uniform _ _))
 
 /-- **Where the reading favours at every share, every course is locked from the step after its
 second reading step**, whatever its start: share and rule perturbed, the rule against the reading,
@@ -304,17 +306,12 @@ theorem uniform_locks (raises : Raises P favours f) (monotone : ReadsShare P M h
     Eq.subst (motive := Locked M favours h) at_next.symm
       ⟨uniform _ _, monotone _ _ _ _ (raises _ _ fav)⟩
 
-/-- Where the start's rule and every rule read favour, every rule of the course favours. -/
+/-- Where the start's rule and every rule read favour, every rule of the course favours: every
+turn keeps a favouring rule (`turn_favours`, `Pace.stays_turned`). -/
 theorem favours_throughout (uniform : ∀ x g, favours (h x g)) {c : S × R} (start : favours c.2) :
-    ∀ t, favours (paced f h reads c t).2
-  | 0 => start
-  | t + 1 =>
-    have now := favours_throughout uniform start t
-    match q : reads t with
-    | true => Eq.subst (motive := fun p : S × R => favours p.2)
-        ((paced_succ c t).trans (congrArg (fun b => turn f h b _) q)).symm (uniform _ _)
-    | false => Eq.subst (motive := fun p : S × R => favours p.2)
-        ((paced_succ c t).trans (congrArg (fun b => turn f h b _) q)).symm now
+    ∀ t, favours (paced f h reads c t).2 := fun t =>
+  Eq.subst (motive := fun n => favours (paced f h reads c n).2) (Nat.zero_add t)
+    (stays_turned (Q := fun q => favours q.2) (turn_favours uniform) c (t := 0) start t)
 
 /-- **Where no rule turns against the reading, the lock comes at the first reading step.** The
 start's rule and every rule read favouring, the share falls at no step from the start, and the
