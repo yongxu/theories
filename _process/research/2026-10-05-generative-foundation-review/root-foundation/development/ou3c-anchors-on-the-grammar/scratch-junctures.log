@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3c-anchors-on-the-grammar/tree",
+  "modules": 47,
+  "ran": [
+    "Becoming.Junctures",
+    "BecomingJuncturesAxiomAudit"
+  ],
+  "reused": 46,
+  "unclean": [],
+  "audits": {
+    "Becoming.Junctures": {
+      "theorems": 51,
+      "declarations": 65,
+      "with_axioms": {}
+    }
+  }
+}
