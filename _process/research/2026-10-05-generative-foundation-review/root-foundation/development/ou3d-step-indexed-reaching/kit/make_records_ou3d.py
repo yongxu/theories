@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """OU3d record: extend master-laws-on-the-grammar with a group of steps counted after the group of steps (the last
-step, within n steps and its composition, a step or staying, what every condition held, and the two laws of taking
+step, within n steps and its composition, staying or a step, what every condition held, and the two laws of taking
 on); the GrammarLaws proof reference gains the eight declarations; the design and the review as integration and
-review references; the receipt; one does-not-show item (the models' step-indexed laws are not yet proved from these);
+review references; the receipt; two does-not-show items (the models' step-indexed laws are not yet proved from these; the part's own law,
+PartForms.goAlike, is a law of its model, not a case of a grammar law);
 the validation scope's counts from the receipt; a history note. The re-pointing that follows (repoint --drift-json
 with --receipt and --lean) rebinds the existing references.
 usage (from the checkout root, after texts_ou3d.py): python3 -B make_records_ou3d.py RECEIPT N"""
@@ -66,22 +67,33 @@ r['does_not_show'].append({
           'Tolerance.answers_restores_iff、WithinMoves.after_course）：其桥接（待之链与迹至文法之步）为第二步，与诸模块之主同为；'
           '律之运行本即区域之程，其轮依定义而成。',
     'kind': 'non-implication'})
+r['does_not_show'].append({
+    'en': "That a part whose law is determined, forming its own move, carries a law of its own by a law of the grammar "
+          "(PartForms.goAlike): its content is the model's premise, the part's law determined at a move the part alone "
+          "forms. The image law only reads the conclusion as carrying a law of its own (carries_law_iff); a proof through "
+          "it applies the law and undoes it, and constancy with a fixed successor would need the rest to step and be "
+          "determined (OU3d's review).",
+    'zh': '定律之部分，自成其动者，依文法之律自有其律（PartForms.goAlike）：其内容为模型之前提，即此部分之律于唯此部分所成之动定后。'
+          '像之律只将结论读为自有其律（carries_law_iff）；经之之证，施此律而复撤之；有常与定后则须他部亦动且定（OU3d 之审查）。',
+    'kind': 'non-implication'})
 
 vs = r['validation_scope']
 vs['en'] = (f"Machine-checked by the consolidated Lean 4.29.1 checker (receipt {RECEIPT_ID}): Becoming.GrammarLaws, "
             f"{gl['theorems']} theorems in {len(gl['declarations'])} declarations, the 40 representation and bridge "
             f"declarations in fourteen model modules, and OU3c's derivations in four more, every axiom report empty, all "
-            f"cited. Read-only AI reviews, every finding taken: three of OU3b (study section 417), one of OU3c (433), "
+            f"cited; every changed module's theorems keep their printed statements, but for the two relation laws moved "
+            f"into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b (study section 417), one of OU3c (433), "
             f"one of OU3d ({N}); not reviewed by a person.")
 vs['zh'] = (f"Lean 4.29.1 合并检查器实查（回执 {RECEIPT_ID}）：Becoming.GrammarLaws，{len(gl['declarations'])} 项声明中 "
-            f"{gl['theorems']} 条定理，十四个模型模块中 40 项表示与桥接声明，及另四模块中 OU3c 之推导，公理报告皆空，本记录全引。"
+            f"{gl['theorems']} 条定理，十四个模型模块中 40 项表示与桥接声明，及另四模块中 OU3c 之推导，公理报告皆空，本记录全引；诸改动模块之定理其所印陈述不变，唯移入文法之二关系律推广至任一宇宙。"
             f"只读 AI 审查，所见皆采：OU3b 三次（研究第 417 节），OU3c 一次（第 433 节），OU3d 一次（第 {N} 节）；未经人审。")
 assert len(vs['en']) <= 600, len(vs['en'])
 r['history'].append({
     'en': f"28 October 2026 (OU3d, study section {N}): steps counted on the grammar, beside n steps: the last step, "
           f"within n steps and its composition, and the laws of taking on without memory and with, the closed forms of "
-          f"the models' step-indexed laws, stated before any of them bridges to them.",
+          f"the models' step-indexed laws, stated before any of them bridges to them; and the part's own law "
+          f"(PartForms.goAlike) given its reason: a law of its model, not a case of a grammar law.",
     'zh': f"2026年10月28日（OU3d，研究第 {N} 节）：于文法上计步，置于 n 步之旁：末一步、n 步以内及其接、无记忆与有记忆之承之律，"
-          f"即诸模型计步之律之闭式，先于其桥接而立。"})
+          f"即诸模型计步之律之闭式，先于其桥接而立；又部分自有其律（PartForms.goAlike）得其理由：为其模型之律，非文法之律之例。"})
 P.write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print('record extended: steps counted,', len(NEW), 'declarations; validation scope', len(vs['en']), 'chars')
