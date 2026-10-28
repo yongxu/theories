@@ -112,13 +112,15 @@ s = s.rstrip('\n') + ('\n\nDF3 migrated to schema 2, with laws arrays, the thirt
 R.write_text(s, encoding='utf-8')
 
 b = BOARD.read_text(encoding='utf-8')
-q = '- **Queue:** '
-assert b.count(q) == 1
+claim = ('DF3 batch A holds the head of the queue (DF, under RA: the thirty schema-1 records DF1 named, migrated to schema 2 '
+         'with laws arrays, and the home sections in 01, 02, 05 and 07 where the Lean says less or more; records and texts '
+         'only, no Lean, no checker run); ')
+assert b.count(claim) == 1
 landed = (f'DF3 batch A landed (the thirty schema-1 records DF1 named, migrated to schema 2 with 224 laws, each read against '
           f'its declarations, and their limitations as typed does-not-show items; the home sections in 01, 02, 05 and 07 '
           f'corrected where the Lean says less or more; the chain\'s eight fingerprinted records read, two pages held for '
           f'proposals A4 and A5 on M20; no Lean, no checker run; study §{N}); ')
-b = b.replace(q, q + landed, 1)
+b = b.replace(claim, landed)
 claim = re.findall(r"\*\*DF3 claimed\*\* \(28 October 2026, \[plan\]\(research/2026-10-05-repository-reconciliation/architecture/df/DF3-PLAN\.md\)\): .*?batch B, the other 87, proposed after A lands\. ", b)
 assert len(claim) == 1, claim
 b = b.replace(claim[0], (f'DF3 batch A landed 28 October 2026 (study §{N}, [plan](research/2026-10-05-repository-reconciliation/architecture/df/DF3-PLAN.md)): '
