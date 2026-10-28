@@ -1,0 +1,703 @@
+re-pointing 86 pairs; left to their owners: []
+{
+ "records": 80,
+ "apply": true,
+ "by_record": {
+  "a-race-for-position-draws-everything": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "a-step-coupling-keeps-at-every-horizon": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "a-weighting-faster-than-renewal-ends-the-base": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "balance-from-conservation-along-a-relation": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "balance-from-the-first-law": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "bounded-census-keeps-pace": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "ceasing-needs-arising": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "census-balance": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "census-balance-under-continuation": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "central-laws-over-every-exchange": {
+   "paths": [
+    "theories/becoming/results/completion/COVERAGE.json"
+   ],
+   "rebound": []
+  },
+  "closing-needs-net-draw": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "coming-and-ceasing-keep-pace": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "comparison-where-the-rest-responds": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "consumption-ends-with-feeders": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "continued-change-needs-openness": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "continuing-self-fed-from-beyond": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "counterfactual-is-the-course": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "counting-under-enclosure": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "differences-below-threshold": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "drawers-in-turn": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "entropy-history-and-record": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "evolution-on-descent": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "exchanges-commute-unless-joined": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "feedback-and-reach": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "generation-is-replenishment": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "gluing-under-parity": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "hexagram-arrangements-and-laws": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "horizon-optima-hold-the-greatest-renewal": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "how-a-carried-difference-grows": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "how-loops-form": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "how-much-difference-arrives": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "how-often-couplings-act": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "identity-across-steps": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "imbalance-as-relatum": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "keeping-forgoes-the-renewal-at-the-need": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "laws-of-one-step": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "laws-of-one-step-complete": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "least-loss-rest": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "life-as-condition-of-life": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "living-on-and-descent": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "loops-within-what-a-law-reads": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "master-laws-on-the-grammar": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "more-needs-renewers": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "no-finite-part-bears-taking": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "observation-is-a-route": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "optima-rebuild-a-depleted-base": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "orders-as-a-sum-over-histories": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "others-drawing-first-end-the-base": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "own-count-misses-joint-excess": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "pace-of-selection-within-what-flows-in": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "premises-read-off-the-exchange": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "process-and-frame-as-readings": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "re-optimizing-above-a-renewal-ends-it": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "represented-boundary-against-dependence": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "reserve-defers-ending": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "rest-at-every-resolution": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "rest-by-balance": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "rest-with-refinement-counted": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "rising-and-falling-in-one-exchange": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "room-read-off-the-exchange": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "runaway-distance-uncoupled": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "selection-term-over-generations": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "several-optimizers-drain-by-their-joint-capacity": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "space-and-its-parts": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "steps-met-again-after-a-fall": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "support-from-the-supported": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "target-capture": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "testing-within-couplings": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "unceasing-generation-needs-renewal": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "valuing-what-is-left-at-any-worth": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "valuing-what-is-left-at-the-horizon": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "what-a-cut-loses": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "what-a-set-point-optimum-does-beyond": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "what-an-optimum-does-beyond-what-couples-in": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "what-dependence-alone-carries-of-a-level": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "where-a-run-of-a-regime-comes-to-rest": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ]
+  },
+  "where-novelty-gain-comes-from": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "where-two-courses-rejoin": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "rebound": []
+  },
+  "whole-law-of-counting": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  },
+  "whole-persists-through-generation": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ]
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

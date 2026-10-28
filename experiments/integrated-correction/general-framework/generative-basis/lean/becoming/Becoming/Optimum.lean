@@ -1025,7 +1025,7 @@ def ActsWithin (cap : F → C → Nat) (cs : List C) (t : Nat) (L' : Flow F C) :
 /-- The outcomes open to a part: the levels after a step within its capacity that balances from
 the levels `l`. -/
 def Outcome (l : C → Nat) (cap : F → C → Nat) (cs : List C) (t : Nat) (o : C → Nat) : Prop :=
-  ∃ L', L.ActsWithin part cap cs t L' ∧ ∀ c, o c + L'.taken t c = l c + L'.given t c
+  ∃ L', L.ActsWithin part cap cs t L' ∧ L'.BalancesBetween l o t
 
 variable {L part}
 
