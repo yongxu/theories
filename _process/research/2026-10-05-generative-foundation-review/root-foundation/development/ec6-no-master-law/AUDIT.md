@@ -12,7 +12,7 @@ The draft (`60a129f25`) was read once by an independent reviewer ([REVIEW-EC6.md
   - **(a)** It is a case of a master law, and the audit names the theorem that would derive it below that law (rule 9).
   - **(b)** It shares a mechanism with others that no master law states: a candidate, written out.
   - **(c)** It is a law of its model, or definitional or representational, with the reason.
-- **The test for (a).** The law must be the declaration's reason, not a dependence added to raise the count (OU plan §十三; WHAT-REMAINS item 1 rejects a definitional mention). A row is (a) only where its proof re-proves, by its own induction, chain or count, what a master law states; the derivation replaces that part by the law. A row that applies a premise or a closed region once is (c).
+- **The test for (a).** The law must be the declaration's reason, not a dependence added to raise the count (OU plan §十三; WHAT-REMAINS item 1 rejects a definitional mention). A row is (a) only where its proof re-proves, by its own induction, chain or count, what a master law states; the derivation replaces that part by the law. A row that applies once a premise no master law states (N_rel, a gate) or a closed region is (c). A row that applies a master law's own clause, inline or by name, is a case of that law, as the 52 rows on `Flow.Balances` are.
 - **Reaching the anchor.** Closure's only anchor in EC's measure is `WithinClosure` (`measure.py`, `LAWS`). So each closure derivation below goes through `WithinClosure`, Frame's name for `«所闭»`, or through `Invariant.reach`, which reaches it by `reach_iff_withinClosure`. A derivation through `«及»` or `«所闭»` directly would reach the grammar but leave the row on "no master law".
 
 ## Summary
@@ -21,7 +21,7 @@ The draft (`60a129f25`) was read once by an independent reviewer ([REVIEW-EC6.md
 |---|---:|---|
 | (a) closure | 7 | Invariance along a run (5); propagation along a chain of a relation (2). |
 | (a) balance | 3 | The census's stretch balance proved apart from the prelude's; balance written inline in `Optimum`. |
-| (b) gating premises | 9 | Only the active give, the active are supported, and what gives takes more: premises of the account, with one-line consequences, named nowhere as a law. |
+| (b) gating premises | 9 | Two premises of the account with one-line consequences, named nowhere as a law: support (only the active give, and the active are supported; 8) and dissipation (what gives takes more; 1). |
 | (b) Price's identity | 3 | The counting form of the selection term and its partition among groups: an identity with no premise. |
 | (b) step-indexed reaching | 3 | Reaching within *n* steps, which needs laws the grammar does not yet state. |
 | (c) laws of their models | 7 | Determined dichotomy, retargeting, copying, a propagation bound, a sampling bound, a zero-sum count, the drive to the least level. |
@@ -31,7 +31,7 @@ The draft (`60a129f25`) was read once by an independent reviewer ([REVIEW-EC6.md
 
 On this reading:
 - **10 of the 50 are cases of the master laws.** Each has a named derivation, and no new law is needed.
-- **15 share three mechanisms that no master law states.** Two are premises with one-line consequences, one is an identity, and one is a step-indexed law the grammar lacks.
+- **15 share mechanisms that no master law states, in three groups.** The first holds two premises with one-line consequences (support, dissipation); the second is an identity; the third is a step-indexed law the grammar lacks.
 - **25 are laws of their models, single applications, definitional or representational.** No derivation would add content to them.
 
 The evolution cluster splits between gating and Price's identity. OU3c's pattern (a pigeonhole bound, then the grammar's laws of steps along the orbit, as in `Learning.lasso_of_held`) fits none of the 50. Only `run_shape` uses `Law.orbit_add`, to re-index an invariant, and none reaches a pigeonhole step.
@@ -48,22 +48,22 @@ The law is in the spine. An invariant is a region closed under the steps (`invar
 |---|---|---|---|---|
 | degeneration | `RuleCapture.favouring_locks` | capture-through-the-rule | Joint states whose rule favours. It is closed under the paced step, by `uniform` at a reading step and kept at the others (`favours_throughout`). | `favours_throughout` by `Invariant.reach` with `Run.reach`. The rest of the row (each step raises; locked after the first reading step) is one step each. |
 | collective | `RuleCapture.uniform_locks` | capture-through-the-rule | The same region from step `r + 1` (`favours_after_reading`). | `favours_after_reading` by `Invariant.reach` with `Run.reach … (r + 1) d`. |
-| collective | `ClosedCapture.lock_outlives_loss` | closed-capture | Joint states that are locked (`locked_stays`), closed by `turn_locked` whatever is read. Joint states at or above a given one and locked (`locked_not_below`), closed by `turn_locked` with the preorders' transitivity. | `locked_stays` and `locked_not_below` by `Invariant.reach` with `Run.reach … t k`. The row's own inductions stay: `join_course` (the joined course is the pair of courses) and `loss_grows` (the loss grows by one a step). |
-| transformation | `Pace.rule_until_reading` | how-fast-a-rule-may-change | Joint states `(s, g, n)` with `n ≤ r → g = c.2`. It is closed under the paced step, since `reads n = false` for `n < r`. | `Invariant.reach` with `Run.reach … 0 t`. |
+| collective | `ClosedCapture.lock_outlives_loss` | closed-capture | Joint states that are locked (`locked_stays`), closed by `turn_locked` whatever is read. Joint states at or above a given one and locked (`locked_not_below`), closed by `turn_locked` with the preorders' transitivity. | `locked_stays` and `locked_not_below` by `Invariant.reach` with `Run.reach … t k`. The row's own inductions stay: `join_course` (the joined course projects onto the share's course) and `loss_grows` (the loss grows by at least one a step). |
+| transformation | `Pace.rule_until_reading` | how-fast-a-rule-may-change | Joint states `(s, g, n)` with `n ≤ r → g = c.2`. It is closed under the paced step, since `reads n = false` for `n < r`. | `Invariant.reach` with `Run.reach … 0 t`, reading the counter as `t` by `paced_count`. |
 | degeneration | `RegimeMargin.Drawn.run_shape` (last two conjuncts) | regime-in-any-amounts | `{(a, b) | rel a b}` under the product law `(a, b) ↦ (g a, g b)`. Its closedness is `mono` (`Lasting.orbit_mono`'s hypothesis), and it takes arbitrary ordered starts, as `falls_of_below` and `run_below` pass. | `Lasting.orbit_mono` from `Invariant.reach` at the product law, with a lemma that the product law's orbit is the pair of orbits. `rising_on` and `falling_on` (the two conjuncts) then move with it, and so do its other callers. The first three conjuncts are the regime's one-step law (c). |
 
 ### Closure: propagation along a chain of a relation
 
 | Row | Declaration | Record | The chain | Derivation |
 |---|---|---|---|---|
-| degeneration | `RegimeMargin.Coupled.Indexed.ends_downstream` | coupled-webs | `Downstream` is an inductive chain: reflexive, or one more dependence. | Bridge `Downstream i k ↔ WithinClosure R k i`, with `R j i := DependsOn i j`, proved by induction over `Downstream` with closure's step and transitivity. With positive draws, the ended conditions are closed under `R` (`ends_of_partner`). The closure law then gives the cascade: a closed region holding `k` holds what lies within `k`'s closure. |
-| generation | `onLoop_of_closing` | how-loops-form | `Upstream` and `OnLoop` are chains written as index vectors (`Coupled`, `Closing.join`). `Upstream` admits the empty chain, so it is `«所闭»`, equality or `«及»`. `OnLoop e` asks for a chain of positive length, `«及» e e`. | Bridges in both directions: `Upstream ↔ WithinClosure` of the coupling (`«线则所闭»` and its converse) and `OnLoop e ↔ «及» e e` (`«线则及»` and its converse); the converses are needed because the conclusion is an index vector. Then the coupling step `d → c` with `Upstream c e` is `«及» d e` (`«及当且仅当一步而所闭»`), and with `Upstream e d`, which is equality or `«及» e d`, it gives `«及» e e` (`«及之传递»`). |
+| degeneration | `RegimeMargin.Coupled.Indexed.ends_downstream` | coupled-webs | `Downstream` is an inductive chain: reflexive, or one more dependence. | Bridge from `Downstream i k` to `WithinClosure R k i` (only that direction is needed), with `R j i := DependsOn i j`, proved by induction over `Downstream` with closure's step and transitivity. With positive draws, the ended conditions are closed under `R` (`ends_of_partner`). The closure law then gives the cascade: a closed region holding `k` holds what lies within `k`'s closure. |
+| generation | `onLoop_of_closing` | how-loops-form | `Upstream` and `OnLoop` are chains written as index vectors (`Coupled`, `Closing.join`). `Upstream` admits the empty chain, so it is `«所闭»`, equality or `«及»`. `OnLoop e` asks for a chain of positive length, `«及» e e`. | Bridges in both directions: `Upstream ↔ WithinClosure` of the coupling (`«线则所闭»` and its converse) and `OnLoop e ↔ «及» e e` (`«线则及»` and its converse); the converses are needed because the conclusion is an index vector. Then the coupling step `d → c` with `Upstream c e` is `«及» d e` (`«及当且仅当一步而所闭»`), and with `Upstream e d`, which is equality or `«及» e d` (`«所闭当且仅当同一或及»`), it gives `«及» e e` (`«及之传递»`). The converse bridges redo the index-vector joins, so the induction moves into them. |
 
 ### Balance
 
 | Row | Declaration | Record | Reason | Derivation |
 |---|---|---|---|---|
-| dissolution | `CensusWebs.keep_pace` | none lists it (COVERAGE's dissolution row cites coming-and-ceasing-keep-pace, which lists `Becoming.keep_pace`, another declaration) | `Counts.over_stretch` (`h' + D = h + A`) is the census form of the stretch balance: the count holding is the level, ceasings are taken and comings are given. `Counts.over_stretch_decided` proves it by its own induction, with `Counts.across_step` as the step. | `Counts.over_stretch_decided` from `balance_over_stretch_on`, which takes count functions, through two bridges. (i) On a stretch decided at each step, the counts exist as functions of the step, by a finite-choice induction over the stretch with `counts_iff_decided`. (ii) `CountsAcross` over the stretch is read as a `total` of the per-step counts. The induction moves into the bridges rather than disappearing. `Listed.over_stretch_on` (Population) is the listed case already derived from the prelude, and the model to follow. The double-negation wrapper that removes decidedness stays. |
+| dissolution | `CensusWebs.keep_pace` | none lists it (COVERAGE's dissolution row cites coming-and-ceasing-keep-pace, which lists `Becoming.keep_pace`, another declaration) | `Counts.over_stretch` (`h' + D = h + A`) is the census form of the stretch balance: the count holding is the level, ceasings are taken and comings are given. `Counts.over_stretch_decided` proves it by its own induction, with `Counts.across_step` as the step. | `Counts.over_stretch_decided` from `balance_over_stretch_on`, which takes count functions, through two bridges. (i) On a stretch decided at each step, the counts exist as functions of the step, by a finite-choice induction over the stretch with `counts_iff_decided`. (ii) `CountsAcross` over the stretch is read as a `total` of the per-step counts, which it also picks as functions; `Counts.unique` identifies them with `h`, `h'`, `A` and `D`. The induction moves into the bridges rather than disappearing. `Listed.over_stretch_on` (Population) is the listed case already derived from the prelude, and the model to follow. The double-negation wrapper that removes decidedness stays. |
 | alignment | `Optimum.optimum_beyond` | room-read-off-the-exchange | `Flow.Outcome` writes the one-step balance inline: `∀ c, o c + L'.taken t c = l c + L'.given t c`. | Name the clause once: the balance of a flow between given levels across a step. Prove that `Flow.Balances` is it at the web's levels at every step; this is a theorem, so `Flow.Balances` keeps its definition and the 52 balance rows and `Flow.balances_iff_units` are untouched. Add the clause to `LAWS['balance']` (EC's owner). `Outcome`'s body is then spelled with it: the same proposition, but a change of the definition's text. |
 | alignment | `Optimum.mutual_beyond` | several-optimizers-drain-by-their-joint-capacity | Its hypothesis `balances : ∀ x, o x + L.taken t x = l x + L.given t x` is the same clause. | The hypothesis spelled with the clause: the same proposition, a change of the statement's text, for Optimum's owner. |
 
@@ -93,9 +93,13 @@ The law is in the spine. An invariant is a region closed under the steps (`invar
 **On the grammar.**
 - **The gate** is relational: the giving relation's sources lie within the active region, and the active region within the supported one. An inclusion of partial identities, statable with no amounts and adding nothing.
 - **The comparison** (need at most level) needs amounts. Like balance, it would be represented, not derived: the need's units paired into the level's.
+- **Dissipation** is an inequality between amounts given and taken. Like balance, it would be represented with amounts.
 
-**Assessment.** Being a premise does not set the gate apart from balance. `COVERAGE.json`'s premises already list "balance" beside "activity needing support", "only active relata give" and "dissipation", each with witnesses that meet and fail it. What sets them apart is consequence. Balance has a derived law that many results share, the stretch balance stated once in the prelude. The gate's only consequence is one line (`DescendsAt.supported_at`), and every row above uses the premises directly. The decision is EC's owner's, with the owners of `Dependence`, `Flow`, `Dissipation`, `Admission` and `LevelCoupling`.
-1. **Anchors of a sixth law, "gating".** `Web.Supported`, `Web.Dependent`, `Flow.Acting`, `ExchangeLaw.NeedsSupportAt` with `Web.Admits`, and `Flow.DissipatesOn`. This would credit 11 of the 50: the nine above, and also `Web.roles_supported` and `Web.roles_dependent`, which reach `Web.Supported` but are representation theorems (c), credited by mention.
+**Assessment.** Being a premise does not set the gate apart from balance. `COVERAGE.json`'s premises already list "balance" beside "activity needing support", "only active relata give" and "dissipation", each with witnesses that meet and fail it. What sets them apart is consequence. Balance has a derived law that many results share, the stretch balance stated once in the prelude. The gate's only consequence is one line (`DescendsAt.supported_at`), and every row above uses the premises directly. The decision is EC's owner's, with the owners of `Dependence`, `Flow`, `Dissipation` and `LevelCoupling`. The two premises are separate candidates: dissipation is an inequality between amounts given and taken, not a gate on who takes part.
+1. **Anchors of sixth laws.**
+   - **Support:** `Web.Supported`, `Web.Dependent`, `Flow.Acting` and `ExchangeLaw.NeedsSupportAt`. This credits 10 of the 50: the eight support rows, and also `Web.roles_supported` and `Web.roles_dependent`, which reach `Web.Supported` but are representation theorems (c), credited by mention.
+   - **Dissipation:** `Flow.DissipatesOn`. This credits 1 of the 50 (`number_within_take`).
+   - **`Web.Admits` is not an anchor.** It is the order law's basis (`Web.Exceeds` is defined from it, and `Web.Widens` reaches it), and as an anchor it would credit two more (c) rows by mention, and 16 of the 77.
 2. **The rows reported as resting on premises of the account.** That is a reason, not a gap, and needs no anchor.
 
 Either way the rows stand: rerouting them changes nothing.
@@ -132,6 +136,8 @@ The three rows below read the *n*-fold composition of a relation. Closure carrie
 | collective | `Withholding.withholding_spreads` | giving-that-waits-on-giving | A bridge `Chain up k ↔ «迭» up k`. `Chain` composes last step last and `«迭»` first step first, so the bridge needs its own induction. |
 | maintenance | `Tolerance.answers_restores_iff` | restoring-giving-from-the-worst-start | The same bridge. Its orbit-monotonicity induction, `KeepsInclusionInto.course`, stays. |
 | capacity | `WithinMoves.after_course` | effective-capacity-and-eventual-reachability | A bridge between `Trace` and `«迭»` of the process's steps. |
+
+The first two also need a bridge from `Law.run`'s orbit to whatever iterate on regions the grammar adds.
 
 Whether the law belongs beside finite runs, where `«迭»` sits, or as a step-indexed form of closure is for OU3b's owner, who holds `GrammarLaws`. It is to be stated and reviewed before `Withholding`, `Tolerance` or `Labelled` consider using it.
 
@@ -191,9 +197,10 @@ Each is a proposal, to be claimed one module at a time with the owner of the mod
 6. **`Optimum`, with `Flow`'s owner and EC's owner** (room-read-off-the-exchange, several-optimizers-drain-by-their-joint-capacity).
    - The balance clause named once, and `Flow.Balances` shown to be its case: a theorem, not a redefinition.
    - The clause added to `LAWS['balance']`.
-   - `Outcome`'s body and `mutual_beyond`'s hypothesis spelled with it. This changes their text but not their meaning, so it is Optimum's owner's to decide.
+   - `Outcome`'s body spelled with it. This changes its text but not its meaning, so it is Optimum's owner's to decide. It credits both rows, since `mutual_beyond` depends on `Outcome` directly. Respelling `mutual_beyond`'s hypothesis is optional; it only states the clause once in that theorem.
+   - Keeping `Flow.Balances` as it is leaves the step balance written twice, in its body and in the clause, linked by an `Iff.rfl` theorem: named once, not stated once. Whether to define `Flow.Balances` from the clause, which means rechecking the 52 rows, is `Flow`'s owner's choice.
 7. **The grammar** (`Becoming.GrammarLaws`, OU3b's owner). The step-indexed candidate, stated and reviewed, before `Withholding`, `Tolerance` and `Labelled` are asked to bridge to it.
-8. **EC's owner, with the owners of `Dependence`, `Flow`, `Dissipation`, `Admission`, `LevelCoupling` and the evolution modules.** The gating question: option 1 (anchors, crediting 11 of the 50, two by mention) or option 2 (reported as premises).
+8. **EC's owner, with the owners of `Dependence`, `Flow`, `Dissipation`, `LevelCoupling` and the evolution modules.** The gating question, for support and dissipation separately: option 1 (anchors; support credits 10 of the 50, two by mention, dissipation 1) or option 2 (reported as premises).
 9. **EC's owner, with the owners of `Evolution`, `SelectionTerm` and `SelectionLevels`.** Price's identity: a master law of counting moved below the models with its dependencies, or a lemma family.
 10. **COVERAGE's owner and the measure's,** after OU3c lands, since `measure_grammar.py` carries OU3c's uncommitted edits.
     - Report the 18 single-application, definitional, representational and witness rows as such, as WHAT-REMAINS item 3 asks for balance.
@@ -205,7 +212,7 @@ Each is a proposal, to be claimed one module at a time with the owner of the mod
 
 1. **Closure's anchor.**
    - **What the derivations need:** they go through `WithinClosure`, so that the rows reach the anchor and not only the grammar.
-   - **Other anchors, not recommended:** adding `ClosedUnder` would credit no current row, since the 12 central rows that reach it all reach `WithinClosure`. Widening the anchor to `«所闭»` would credit 12 return-law rows by mention, since `«定后于»` is defined through it.
+   - **Other anchors, not recommended:** adding `ClosedUnder` would credit no current row, since the 12 central rows that reach it all reach `WithinClosure`. Widening the anchor to `«所闭»` would credit, by mention, 12 rows that reach it through the finite-runs grammar laws (through `«定后于»` 4, through the rest law's ending `«尽»` 8); 9 of them are on return and 3 on balance only.
 2. **Rows of (c).** The measure could report the 18 rows of the last two tables as what they are, so that its headline counts only what is a gap.
 
 ## What this audit does not do
@@ -217,7 +224,7 @@ Each is a proposal, to be claimed one module at a time with the owner of the mod
 ## What the review changed
 
 Every finding of [REVIEW-EC6.md](REVIEW-EC6.md) was taken; each was checked against the Lean before it was taken.
-- **Findings 2–4: nine (a) rows reclassified.** The two `*_reaches` rows apply N_rel once, and its closure form exists (`Valuation.reaches`). The two one-step rows are a definitional mention. The three within-*n* rows need grammar laws no master law states, so they are a (b) candidate. Two of the nine were wrong in detail and stay in (a) with their derivations corrected (5, 6). The tally went from (a) 17, (b) 11, (c) 22 to (a) 10, (b) 15, (c) 25; dissipation joined the gating group (finding 11).
+- **Findings 2–4: seven (a) rows reclassified, two corrected.** The two `*_reaches` rows apply N_rel once, and its closure form exists (`Valuation.reaches`). The two one-step rows are a definitional mention. The three within-*n* rows need grammar laws no master law states, so they are a (b) candidate. Two more were wrong in detail and stay in (a) with their derivations corrected (5, 6). The tally went from (a) 17, (b) 11, (c) 22 to (a) 10, (b) 15, (c) 25; dissipation joined the gating group (finding 11).
 - **Finding 5: `onLoop_of_closing`.** `Upstream` admits the empty chain and is `«所闭»`. The join needs `«及当且仅当一步而所闭»` and `«及之传递»`, with bridges both ways.
 - **Finding 6: `run_shape`.** The product law, not the law of pairs, since `orbit_mono` takes arbitrary ordered starts.
 - **Finding 7: the invariance rows.** They use `Invariant.reach` with `Run.reach` at the joint state from an arbitrary step. `locked_not_below`'s closedness is `turn_locked` with transitivity. `lock_outlives_loss` keeps its own inductions. Re-proving `Invariant.run` alone moves no central row, so that proposal is dropped.
@@ -233,3 +240,10 @@ Every finding of [REVIEW-EC6.md](REVIEW-EC6.md) was taken; each was checked agai
 - **Finding 17:** levels-of-closure is named.
 - **Finding 18:** the counts are over all 127 rows; the stale counts are named in proposal 10, which waits for OU3c.
 - **Finding 1:** `ClosedUnder` is reached by 12 central rows, not 28.
+
+A second pass, by the same reviewer, on the fixes alone: one error and four imprecisions, with two suggestions. It found 17 of the 18 resolved. All were taken:
+- **Error:** `Web.Admits` is dropped from the gating anchors. It is the order law's basis, and as an anchor it would have credited 13 of the 50, not 11.
+- **Imprecisions:** the test for (a) separates a master law's own clause from other premises; the `«所闭»` count is given exactly; support and dissipation are separate candidates; and "seven reclassified, two corrected".
+- **Suggestions:** the Optimum proposal says what respelling credits and what keeping `Flow.Balances` leaves; small completions in the derivations of `onLoop_of_closing`, `ends_downstream`, `rule_until_reading`, `keep_pace`, the step-indexed rows and `lock_outlives_loss`.
+
+Its verdict: proposals 1–7, 9 and 10 may go to module owners now, and 8 after the error's fix, which is made.

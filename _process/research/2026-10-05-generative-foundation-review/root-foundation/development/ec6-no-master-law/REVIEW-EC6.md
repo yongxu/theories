@@ -126,3 +126,72 @@ It needs another pass before the proposals go to module owners.
 - **Needs rework:** nine of the seventeen (a) rows (findings 2–6), measure note 1, and the support gate's "stated once" (finding 10).
 - **Can go after the named fixes:** proposals 2, 3 and 10; proposal 12, once findings 10–12 are fixed.
 - **Should wait for the revision:** proposals 4–9, 11 and 13.
+
+---
+
+## Second pass
+
+The same reviewer, on the fixes alone, of `AUDIT.md` as committed at `c88b74a15`. Verbatim:
+
+**Second pass on the EC6 audit at `c88b74a15`: one error and four imprecisions remain.** I checked only the fixes. Lean paths are relative to `L = /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. Nothing was edited.
+
+**Your three questions:**
+- **The fixes:** 17 of the 18 are resolved. Finding 10 is not: option 1's count is still wrong (finding 1 below).
+  - **`onLoop_of_closing`:** correct. `Upstream` is the closure, the coupling step plus `«及当且仅当一步而所闭»` gives `«及» d e`, and `«及之传递»` closes the loop.
+  - **`run_shape`:** correct. The product law covers the arbitrary ordered starts.
+  - **Invariance rows:** each region is closed under the paced step as stated, and `Run.reach r t k` matches the statements that start at `t + k`.
+  - **`keep_pace`:** the two bridges are right.
+  - **Optimum:** it now adds a clause to `LAWS` and leaves `Flow.Balances` as it is. That works: the only other central row that reaches `Flow.Outcome` is `Web.course_lost_iff`, already on balance.
+- **The two new texts:** the step-indexed candidate matches `answers_closed` and `waitsAll_closed`. The gating assessment is accurate except its count.
+- **The counts:** all 50 are listed exactly once. The tables give 5 + 2 + 3 = 10, 9 + 3 + 3 = 15 and 7 + 4 + 14 = 25, matching the summary.
+
+## Findings
+
+1. **error**: (b) gating, option 1, and proposal 8.
+   - **Claim:** option 1 credits "11 of the 50, two by mention".
+   - **Evidence:** the anchors include `Web.Admits`, which is the order law's basis. `Web.Exceeds` is defined from it (`Admission.lean:392-393`), and the order anchor `Web.Widens` reaches it through `Web.Exceeds`. With `Web.Admits` included, option 1 credits 13 of the 50, four by mention. The two extra rows are both class (c):
+     - `Web.significance_undetermined`, which uses `Web.Admits` directly;
+     - `ExchangeLaw.response_not_fixed_by_coupling`, through `ofClass_take_iff` and `Web.AlikeThrough.refl`.
+     16 of the other 77 rows (the widening and pool-selection rows) reach it as well. With `Web.Admits` removed and `ExchangeLaw.NeedsSupportAt` kept, the count is 11, as the audit states.
+   - **Fix:** drop `Web.Admits` from the anchors, and drop `Admission` from the owners in the assessment and in proposal 8.
+
+2. **imprecision**: Method, the test for (a), against the two Optimum rows.
+   - **Evidence:** the new sentence says "A row that applies a premise or a closed region once is (c)". `optimum_beyond` and `mutual_beyond` apply the balance clause; they do not re-prove it (`Optimum.lean:1547-1558`, `1789-1850`). As worded, the test puts them in (c).
+   - **Fix:** limit the sentence to premises no master law states (N_rel, the gate, a closed region). Add that applying a master law's own clause, inline or by name, is a case of that law, as for the 52 rows on `Flow.Balances`.
+
+3. **imprecision**: Measure note 1, the sentence on widening closure's anchor to `«所闭»`.
+   - **Evidence:** 12 central rows reach `«所闭»` without reaching `WithinClosure`.
+     - 4 get there through `«定后于»`: `Law.drawn_iff_not_returns`, `Law.lossless_iff_returns`, and the two `RegimeMargin.Adjusted` rows.
+     - 8 get there through the rest law's ending, `«尽» («而» («所闭» Q) F) «一»`, for example `Amounts.rests`.
+     - Only 9 of the 12 are on return; `Adjusted.comes_to_rest`, `Adjusted.falls_iff_below` and `World.comes_to_rest_unrefuted` are on balance only.
+   - **Fix:** say "12 rows that reach `«所闭»` through the finite-runs grammar laws (`«定后于»` 4, `«尽»` 8), 9 of them on return".
+
+4. **imprecision**: the Summary sentence, and option 1's single "gating" law.
+   - **Evidence:**
+     - The sentence says 15 rows "share three mechanisms" and then lists four things.
+     - Option 1 folds two premises into one law. Dissipation is an inequality between amounts given and taken (`Dissipation.lean:238-243`), not a gate on who takes part.
+     - The "On the grammar" paragraph covers support only.
+   - **Fix:** write "three groups, the first holding two premises". Offer support and dissipation as separate candidates; support alone credits 10 of the 50. Add one line saying dissipation would be represented with amounts, like balance.
+
+5. **imprecision**: "What the review changed", findings 2–4.
+   - **Claim:** "nine (a) rows reclassified".
+   - **Evidence:** seven were reclassified (2 + 2 + 3). Two were corrected and stayed in (a), as the same paragraph then says.
+   - **Fix:** say "seven reclassified, two corrected".
+
+6. **suggestion**: the Optimum proposal (proposal 6).
+   - **Evidence:**
+     - `mutual_beyond` already depends directly on `Flow.Outcome`, so respelling `Outcome`'s body credits both rows. Respelling `mutual_beyond`'s hypothesis is optional: it only states the clause once in that theorem.
+     - Keeping `Flow.Balances` means the step balance is written twice: in its body and in the new clause, linked by an `Iff.rfl` theorem. It is named once but not stated once.
+   - **Fix:** say both points, and leave to `Flow`'s owner the choice of defining `Flow.Balances` from the clause.
+
+7. **suggestion**: small completions, none of which change a classification.
+   - `onLoop_of_closing`: splitting `Upstream e d` uses `«所闭当且仅当同一或及»` (`GrammarLaws.lean:195`). The converse bridges redo the index-vector joins, so the induction moves into them, as with `keep_pace`.
+   - `ends_downstream`: only the direction from `Downstream` to `WithinClosure` is needed.
+   - `rule_until_reading`: reading the counter as `t` needs `paced_count` (`Pace.lean:124`).
+   - `keep_pace`: bridge (ii) also picks the per-step counts as functions, and `Counts.unique` identifies them with `h`, `h'`, `A` and `D`.
+   - Step-indexed rows: they also need a bridge from `Law.run`'s orbit to whatever iterate on regions the grammar adds.
+   - `lock_outlives_loss`: `join_course` projects the joined course onto the share's course, rather than making it "the pair of courses". `loss_grows` grows by at least one a step, not exactly one.
+
+## Verdict
+
+Yes for most of them. Proposals 1–7, 9 and 10 can go to module owners now. Proposal 8 (gating) should wait until finding 1 is fixed. Fix finding 2 before EC's owner relies on the (a)/(c) split. Findings 3–7 are wording and can be fixed alongside.
