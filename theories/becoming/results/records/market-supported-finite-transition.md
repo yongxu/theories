@@ -97,6 +97,7 @@ Intervention is an effective change in shared operating relations; its formation
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json) | — |
 
 Aliases: `RegimeTransition.supported_finite_transition`, `Becoming.Lasting.lasts_iff_ladder`, `Becoming.Lasting.lasts_iff_necessary`, `Becoming.MarketInstances.cover_ladder`, `Becoming.MarketInstances.supported_prefix_instance`, `Becoming.MarketInstances.cover_exact`, `Becoming.MarketInstances.rescue_landing_instance`, `Becoming.Courses.lasts_iff_courses`, `Becoming.Courses.courses_iff_ladder`, `Becoming.Courses.courses_iff_necessary`
 

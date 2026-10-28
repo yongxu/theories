@@ -239,23 +239,42 @@ theorem Coupled.one {d c : C} (couples : Couples cs part k present d c) :
   | 0, _ => couples
   | i + 1, lt => absurd (Nat.lt_of_succ_lt_succ lt) (Nat.not_lt_zero i)
 
+/-- **Upstream is within the closure of coupling.** Where a chain of couplings leads from `e` to
+`c`, `c` lies within `e`'s closure under coupling (`«线则所闭»`, the chain read as a line). -/
+theorem Upstream.within {e c : C} (up : Upstream cs part k present e c) :
+    WithinClosure (Couples cs part k present) e c :=
+  match up with
+  | ⟨v, j, start, finish, chain⟩ =>
+    Eq.subst (motive := fun x => «所闭» (Couples cs part k present) e x) finish
+      (Eq.subst (motive := fun x => «所闭» (Couples cs part k present) x (v j)) start
+        («线则所闭» (R := Couples cs part k present) chain j (Nat.le_refl j)))
+
+/-- **A reach of couplings is a chain.** Where `x` reaches `y` by couplings, a chain of one
+coupling or more leads from `x` to `y`. -/
+theorem Coupled.of_reach {x y : C} :
+    «及» (Couples cs part k present) x y →
+      ∃ (v : Nat → C) (m : Nat), 0 < m ∧ v 0 = x ∧ v m = y ∧ Coupled cs part k present v m
+  | .one h => ⟨_, 1, Nat.succ_pos 0, rfl, rfl, Coupled.one h⟩
+  | .more h rest => match Coupled.of_reach rest with
+    | ⟨w, m, _, start, finish, chain⟩ =>
+      ⟨Closing.join (fun l => bif Nat.ble l 0 then x else _) w 1, 1 + m,
+        Nat.lt_of_lt_of_le (Nat.succ_pos 0) (Nat.le_add_right 1 m),
+        Closing.join_below (Nat.zero_le 1), (Closing.join_from start.symm m).trans finish,
+        Coupled.append (Coupled.one h) chain start.symm⟩
+
 /-- **A coupling with chains into and out of a condition closes a loop through it.** Where `d` is
-coupled into `c`, a chain leads from `c` to `e` and another from `e` to `d`, `e` lies on a loop. -/
+coupled into `c`, a chain leads from `c` to `e` and another from `e` to `d`, `e` lies on a loop:
+`d` reaches `e`, its coupling into `c` followed by what lies within `c`'s closure
+(`«及当且仅当一步而所闭»`), and `e` is `d` or reaches it (`«所闭当且仅当同一或及»`), so `e`
+reaches itself (`«及之传递»`), and a reach of couplings is a chain (`Coupled.of_reach`). -/
 theorem onLoop_of_closing {d c e : C} (couples : Couples cs part k present d c)
     (into : Upstream cs part k present c e) (outOf : Upstream cs part k present e d) :
     OnLoop cs part k present e :=
-  match into, outOf with
-  | ⟨v₁, j₁, start₁, ends₁, chain₁⟩, ⟨v₂, j₂, start₂, ends₂, chain₂⟩ =>
-    have first : Coupled cs part k present
-        (Closing.join v₂ (fun l => bif Nat.ble l 0 then d else c) j₂) (j₂ + 1) :=
-      Coupled.append chain₂ (Coupled.one couples) ends₂
-    have meet : Closing.join v₂ (fun l => bif Nat.ble l 0 then d else c) j₂ (j₂ + 1) = v₁ 0 :=
-      (Closing.join_from ends₂ 1).trans start₁.symm
-    ⟨_, (j₂ + 1) + j₁,
-      Nat.lt_of_lt_of_le (Nat.succ_pos j₂) (Nat.le_add_right _ _),
-      (Closing.join_below (Nat.zero_le _)).trans ((Closing.join_below (Nat.zero_le _)).trans start₂),
-      (Closing.join_from meet j₁).trans ends₁,
-      Coupled.append first chain₁ meet⟩
+  have reaches : «及» (Couples cs part k present) d e :=
+    «及当且仅当一步而所闭».mpr ⟨c, couples, Upstream.within into⟩
+  Coupled.of_reach (match «所闭当且仅当同一或及».mp (Upstream.within outOf) with
+    | .inl same => Eq.subst (motive := fun x => «及» (Couples cs part k present) x e) same.symm reaches
+    | .inr before => «及之传递» before reaches)
 
 /-- A condition lies upstream of itself. -/
 theorem Upstream.refl (c : C) : Upstream cs part k present c c :=
