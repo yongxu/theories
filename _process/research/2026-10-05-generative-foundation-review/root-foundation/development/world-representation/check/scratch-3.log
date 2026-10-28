@@ -1,0 +1,21 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/check/tree",
+  "modules": 34,
+  "ran": [
+    "Becoming.WRTCheck",
+    "BecomingWRTCheckAxiomAudit"
+  ],
+  "reused": 33,
+  "unclean": [],
+  "audits": {
+    "Becoming.WRTCheck": {
+      "theorems": 14,
+      "declarations": 22,
+      "with_axioms": {
+        "Becoming.WRTCheck.later_iff": [
+          "propext"
+        ]
+      }
+    }
+  }
+}

@@ -19976,6 +19976,10 @@ Delta:
     - `PartForms.goAlike` rests on lumping's anchor and does not reach the grammar. Its proof is constancy
       with a fixed successor, «有常定后则同行», at the coupled step, so the measure reports it as a derivation
       pending (`PENDING_ANCHOR`).
+      Correction, 28 October 2026 (OU3d's review, second pass; §437): this reading is wrong. Constancy would
+      need the rest to step from every joint configuration over the same part, and the fixed successor would
+      need Q determined; the theorem assumes neither. Its content is the model's premise, read as carrying
+      a law through `carries_law_iff`, and the measure gives it that reason (§437).
     - The life row keeps `Web.living_on_reaches` and `Flow.descent_reaches`. N_rel's closure form,
       `Valuation.reaches`, is generic and names no life relation, so it does not state the row's substance;
       the measure's reason points to it.
