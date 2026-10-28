@@ -24,10 +24,12 @@ def edit(path, old, new):
 
 
 # 01 §7
+edit(CH / '01-ROOT.md', """`Law.lossless_iff_returns` and `Law.drawn_iff_not_returns` are proved from these.""",
+     """`Law.lossless_iff_returns` and `Law.drawn_iff_not_returns` are proved from these. A world a list holds has a lasso course, its bound by pigeonhole and its repetition by the grammar's laws of steps, a loop then `d` steps leading where `d` steps lead under a fixed successor (`«迭之接»`, `«迭之定»`; `Learning.lasso_of_held`), so the learnability laws reach the grammar through it.""")
 edit(CH / '01-ROOT.md', """and the frame's closure laws, with `withinClosure_iff_reached`, are proved from the grammar's.""",
-     """and the frame's closure laws, with `withinClosure_iff_reached`, are proved from the grammar's. So is the step back of a returning configuration, the only use the junctures make of return (`Branching.step_back`, for `Branching.loss_passes_juncture`).""")
+     """and the frame's closure laws, with `withinClosure_iff_reached`, are proved from the grammar's. So is the case split of the step back of a returning configuration, the grammar's decomposition of reach (`Branching.step_back`), by which every loss of a returning configuration passes a juncture (`Branching.loss_passes_juncture`).""")
 edit(CH / '01-ROOT.md', """`GoAlikeUnder` is going alike at each move (`goAlikeUnder_iff_alike`), and `image_determined_iff`, so `carries_law_iff`, is proved from the image law.""",
-     """`GoAlikeUnder` is going alike at each move (`goAlikeUnder_iff_alike`), and `image_determined_iff`, so `carries_law_iff`, is proved from the image law, as is the law that structure and change are one lumping, the image law on a determined law's one move (`Learning.goAlike_iff_lumped`, through `Learning.fixed_image_iff_lumped`).""")
+     """`GoAlikeUnder` is going alike at each move (`goAlikeUnder_iff_alike`), and `image_determined_iff`, so `carries_law_iff`, is proved from the image law, as is the law that structure and change are one lumping, the image law on a determined law's one move (`Learning.goAlike_iff_lumped`, through `Learning.lumped_iff_fixed_image`).""")
 edit(CH / '01-ROOT.md', """the order laws of both are proved from the grammar's.""",
      """the order laws of both are proved from the grammar's. A transitive relation joined to the strict part of a transitive relation containing it is transitive, and irreflexive where the first is, for any two relations (`strictJoin_trans`, `strictJoin_irrefl`); the lagged orders of courses and of what can be reached are proved from it.""")
 

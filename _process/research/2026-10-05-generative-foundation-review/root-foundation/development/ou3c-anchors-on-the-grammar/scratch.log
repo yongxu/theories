@@ -96,6 +96,7 @@
     "BecomingComparingCoursesAxiomAudit",
     "BecomingGrammarLawsAxiomAudit",
     "BecomingJuncturesAxiomAudit",
+    "BecomingLearningAxiomAudit",
     "BecomingLearningRunsAxiomAudit",
     "BecomingReachableRangesAxiomAudit"
   ],
@@ -115,6 +116,11 @@
     "Becoming.Junctures": {
       "theorems": 51,
       "declarations": 65,
+      "with_axioms": {}
+    },
+    "Becoming.Learning": {
+      "theorems": 80,
+      "declarations": 114,
       "with_axioms": {}
     },
     "Becoming.LearningRuns": {

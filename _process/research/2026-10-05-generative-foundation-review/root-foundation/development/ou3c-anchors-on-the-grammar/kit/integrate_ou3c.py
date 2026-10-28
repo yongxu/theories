@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""OU3c: copy the five changed modules from the kit tree into the package, after checking that each package file is
+"""OU3c: copy the six changed modules from the kit tree into the package, after checking that each package file is
 still the one the tree was derived from (main at c2dd2c875); then extend the root module's GrammarLaws and
 ComparingCourses bullets, the checker's GrammarLaws scope text and the package README rows (EN, ZH).
 usage (from the checkout root of the landing worktree): python3 -B <kit>/integrate_ou3c.py"""
@@ -17,6 +17,7 @@ BASE = {
     'ReachableRanges': 'e3f529f6899b77eb1691c2fd60acc38e228a697e1628345b928a17e9a32a2e83',
     'LearningRuns': 'e903e39c879952c764c92f844355766dcc9641f6decbd3964c24bb75df274c44',
     'Junctures': '2fafdb411e7b0b9236636f0d11b73eb291cd2c7ebdc5179cf8377c4d71dca544',
+    'Learning': 'aa142f84b784dd1816a650a2c3a35b9e1e261cd3f76c071aa1442cf5296ee9a8',
 }
 
 
@@ -41,9 +42,12 @@ edit(root, """  excludes keeping and being mixed (`«广不可逆»`, `«广之�
      """  excludes keeping and being mixed (`«广不可逆»`, `«广之传递»`); a transitive relation joined to the
   strict part of a transitive relation containing it is transitive, and irreflexive where the first
   is (`strictJoin_trans`, `strictJoin_irrefl`). It imports the grammar, its map""")
-edit(root, """  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`; finite runs in""",
+edit(root, """  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`; finite runs in
+  `Becoming.Recurrence`, `Becoming.Attraction` and `Becoming.Amounts`; lumping, bridged in""",
      """  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`, and so is the step back of a
-  returning configuration in `Becoming.Junctures`; finite runs in""")
+  returning configuration in `Becoming.Junctures`; finite runs in `Becoming.Recurrence`,
+  `Becoming.Attraction` and `Becoming.Amounts`, and the lasso of a world a list holds in
+  `Becoming.Learning`; lumping, bridged in""")
 edit(root, """  `Becoming.Laws`, in `Becoming.Mechanism`, `Becoming.GrammarRegularity` and
   `Becoming.IdentificationRuns`; order in `Becoming.Admission`, `Becoming.Regions` and
   `Becoming.Weightings`.""", """  `Becoming.Laws`, in `Becoming.Mechanism`, `Becoming.GrammarRegularity`,
@@ -65,4 +69,4 @@ edit(PKG / 'README.md', """(`Web.WidensOrWithLag.trans`, from `strictJoin_trans`
      """(`Web.WidensOrWithLag.trans`, from `strictJoin_trans` in `Becoming.GrammarLaws`)""")
 edit(PKG / 'README.zh.md', """（`Web.WidensOrWithLag.trans`，出自 `strictJoin_trans`）""",
      """（`Web.WidensOrWithLag.trans`，出自 `Becoming.GrammarLaws` 之 `strictJoin_trans`）""")
-print('integrated: five modules copied; root bullets, checker scope and README rows extended')
+print('integrated: six modules copied; root bullets, checker scope and README rows extended')

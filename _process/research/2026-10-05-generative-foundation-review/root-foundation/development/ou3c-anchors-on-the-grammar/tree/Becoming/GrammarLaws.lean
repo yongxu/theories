@@ -12,9 +12,13 @@ successor everywhere, merging nothing everywhere, a successor everywhere, a list
 carrier), it is a corollary of a local one stated beside it. This module imports only the grammar,
 its map (`Becoming.GrammarMap`, for `«尽»`) and the prelude, so it sits below every model:
 `Becoming.Frame` imports it, and the models' laws that are cases of these are proved from them in
-their own modules (closure in `Frame` and `GrammarScope`; finite runs in `Recurrence`, `Attraction`
-and `Amounts`; lumping bridged in `Laws` and proved from them in `Mechanism`, `GrammarRegularity`
-and `IdentificationRuns`; order in `Admission`, `Regions` and `Weightings`). Balance alone is
+their own modules (closure in `Frame`, `GrammarScope` and `Junctures`; finite runs in `Recurrence`,
+`Attraction`, `Amounts` and `Learning`; lumping bridged in `Laws` and proved from them in `Mechanism`,
+`GrammarRegularity`, `IdentificationRuns` and `LearningRuns`; order in `Admission`, `Regions` and
+`Weightings`, and the lagged orders of `ComparingCourses` and `ReachableRanges` from the two relation
+laws beside widening's). Those two (`strictJoin_trans`, `strictJoin_irrefl`) are laws of any two
+relations, stated on `α → α → Prop` rather than `«际» α`: lemmas the orders use, not statements of
+the grammar. Balance alone is
 represented, not derived: `Flow.Balances`, `Flow.BalancesOn`, `Flow.Balances.over` and
 `balance_over_stretch_on` are each read on the grammar both ways (`Flow.balances_iff_units`,
 `Flow.balancesOn_iff_units`, `Flow.over_iff_units`, `«程守数当且仅当可对»`), and their proofs and

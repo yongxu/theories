@@ -785,7 +785,7 @@ theorem Reaching.WidensOrLater.irrefl (s : S) : ¬ Reaching.WidensOrLater P adm 
     (Reaching.Widens.irrefl s)
 
 /-- **The lagged order is transitive**: widening what can be reached is transitive, covering with
-some lag is, and widening is covering with lag zero, so the join is (`strictJoin_trans`, a law of any
+some lag is, and what widens covers with lag zero, so the join is (`strictJoin_trans`, a law of any
 two relations in the grammar's laws). -/
 theorem Reaching.WidensOrLater.trans {s s' s'' : S} :
     Reaching.WidensOrLater P adm s s' → Reaching.WidensOrLater P adm s' s'' →

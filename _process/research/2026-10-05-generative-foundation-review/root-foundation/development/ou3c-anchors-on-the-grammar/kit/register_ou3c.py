@@ -19,8 +19,8 @@ REASONS = {
                                   'it), beside the order laws of the grammar; the lagged orders are proved from it'),
     'Becoming.strictJoin_irrefl': ('Becoming.GrammarLaws', 'support', 'a statement using only the prelude: the join of an '
                                    'irreflexive relation with the strict part of any relation is irreflexive'),
-    'Becoming.Learning.fixed_image_iff_lumped': ('Becoming.LearningRuns', 'support', "a one-line unpacking: the image's "
-                                                 'fixed successor of a determined law along a map is its lumping'),
+    'Becoming.Learning.lumped_iff_fixed_image': ('Becoming.LearningRuns', 'support', "a one-line unpacking: a determined "
+                                                 "law's lumping along a map is its image's fixed successor"),
 }
 others = [n for n in unclassified if n not in REASONS]
 assert not others, ('apart roots not OU3c\'s; they belong to their owners', others)
