@@ -1,0 +1,2094 @@
+{
+ "about": "GC (28 October 2026): the generativity chain's sources changed since its last review (A3, 19 October 2026; R35 re-keyed moved paths on 20 October), each read from the version its fingerprint records, found in git history, against every entry that links it. Classified with the A2 classifier (history/root-foundation/development/a2-chain/classify_pending.py, run from the repository root at ba80cb002). decision: refresh = the linked entries' claims and scopes hold, fingerprint recorded with generative_chain.py --record-review; hold = an entry's text would need to change, fingerprint left pending and the change proposed in the index record (proposal A1-A3); left to DF3 = DF3 reviews it at its landing.",
+ "base": "ba80cb002",
+ "sources": {
+  "RESEARCH.md": {
+   "kind": "generated",
+   "entries": [],
+   "recorded_commit": "eb36b95ae98e777ef88b8495284e2c5de61909a3",
+   "recorded_path": "RESEARCH.md",
+   "recorded_sha256": "d2e0586e5cbf481439ccd58ec8feec64f280d584d8f7f47d4eac59087acac826",
+   "current_sha256": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
+   "commits_since": 2,
+   "decision": "refresh",
+   "basis": "Generated navigation page. The change since the recorded version is the shared navigation line: links to the one page, the overview and the chapters added (RA, 0d7a397a5), the dated session map dropped (R35). No entry links it."
+  },
+  "theories/becoming/chapters/CLAIMS.md": {
+   "kind": "generated",
+   "entries": [],
+   "recorded_commit": "eb36b95ae98e777ef88b8495284e2c5de61909a3",
+   "recorded_path": "theories/becoming/chapters/CLAIMS.md",
+   "recorded_sha256": "825d9f855141d017cdf56c75927655c6d6b25e47fc0c1790d4ed760106fe53b9",
+   "current_sha256": "35b41e4b0fdd211b3f26938ac10995c826910f0443b2c481e02e6b876e8facb4",
+   "commits_since": 2,
+   "decision": "refresh",
+   "basis": "Generated navigation page. The change since the recorded version is the shared navigation line: links to the one page, the overview and the chapters added (RA, 0d7a397a5), the dated session map dropped (R35). No entry links it."
+  },
+  "theories/becoming/history/NONDUAL-METHOD.md": {
+   "kind": "other",
+   "entries": [
+    "C01",
+    "C05"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "theories/becoming/chapters/NONDUAL-METHOD.md",
+   "recorded_sha256": "34879a406378f20ea80d3ae58409357c1c21543d07d8d475bff44f4106778da7",
+   "current_sha256": "c589a04a73ea9e928bf8a992151b24ee8d3813d8159756cfbb7ed0ab3b20066d",
+   "commits_since": 2,
+   "decision": "refresh",
+   "basis": "Retired chapter. Heading 'Begin within the one unfolding' with the old anchor kept; 'Formation' now names the forming and transformation of conditions, generative and degenerative alike, and 'Generative' is narrower (a change that widens what can form; generation and degeneration do not overlap); 'generative' dropped from several phrases. C05 holds. C01's claim holds in substance; its 'within generative mechanisms, activity forms and transforms conditions' uses 'generative' in the older sense the source now calls formation: wording proposal B1."
+  },
+  "theories/becoming/history/NONINSTRUMENTAL-CONCERN.md": {
+   "kind": "links-only",
+   "entries": [
+    "M10",
+    "M11"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "theories/becoming/chapters/NONINSTRUMENTAL-CONCERN.md",
+   "recorded_sha256": "95371fc59817b4196f15e48d007f0c588d10a2ccc20f27a968e215a81a52adfe",
+   "current_sha256": "9ba598b45d73005e3cbdd1a2d7786782536f9a0d122b68926a5b7b079080be3f",
+   "commits_since": 2,
+   "move_rewrites": [
+    "R35-B1-chapters"
+   ],
+   "decision": "refresh",
+   "basis": "Links only (R35 batch B1): one link to FORMAL-CORE re-pointed to its history path. M10's and M11's text unchanged."
+  },
+  "theories/becoming/history/PRACTICAL-JUDGMENT.md": {
+   "kind": "split+edits",
+   "entries": [
+    "C17",
+    "C18",
+    "C19",
+    "C23",
+    "C24",
+    "M14",
+    "M20"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
+   "recorded_sha256": "b8050f1365bbd55561f5ef30009d6779ab25af933d08a468de1865cee1965faa",
+   "current_sha256": "1c5b6ee6935ff51231d0b3e689dcb0fb3053e4c8e40f1f4f8a5d5d204ab1306e",
+   "commits_since": 4,
+   "decision": "hold",
+   "basis": "Retired chapter. Its dated note moved to the rounds history (R35, E13), and the premise table's citation of the continuation condition moved from §6.15 to §6.4 (R36 renumbered the canonical chapter, now itself retired; the live home is 07 §3). Its premise table still states living significance as 'living and further generation have positive significance', which R19 corrected elsewhere. C17's claim and C24's scope say G0 is 'now a theorem with the condition of section 6.15': held for proposal A1 (the status clause and the section).",
+   "proposal": "A1"
+  },
+  "theories/becoming/history/MATHEMATICAL-CORE.md": {
+   "kind": "other",
+   "entries": [
+    "F01"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/MATHEMATICAL-CORE.md",
+   "recorded_sha256": "996c4ffe7093d422106e76e04f4e371d1feefb13f8bd32490d27ec897bcf7e8a",
+   "current_sha256": "e59941943cdf39be53b5314d8e01275959ba9fff2cf316c2fee30b13c6407df3",
+   "commits_since": 5,
+   "decision": "refresh",
+   "basis": "Retired chapter. A status line replaces the dated note (R35, E13), and R19 restated the conditional alignment route's starting point as living significance (every living claim has significance from every standpoint, not a positive valence; the direction of 生生 read separately, D1). F01 states no content of living significance and holds."
+  },
+  "theories/becoming/history/THE-THEORY-OF-EVOLUTION.md": {
+   "kind": "other",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+   "recorded_sha256": "17a6ef203209ce19fbf45feb1964513d5e0b144c8d3bf7092dbb8244cba17307",
+   "current_sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708",
+   "commits_since": 13,
+   "decision": "refresh",
+   "basis": "Retired chapter (RA moved it to history). Changes: its 15 dated round notes moved verbatim to the rounds history (R35, E13) with one status line; the formulation restated 20 October from the formal spine: a new section on selection on the spine (Price's equation in counting form with the selection term proper, Fisher's theorem in its exact-transmission case and what bounds offspring numbers, the multilevel form, drift and fixation, selection blind beyond its couplings, what a rise draws from beyond), the completion table's rows extended with those records, and Ren's name dropped from programme sentences. C14's claim and scope do not say these laws are missing, so they hold; the selection laws are listed as an update (B)."
+  },
+  "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md": {
+   "kind": "split+edits",
+   "entries": [
+    "C20",
+    "C26"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+   "recorded_sha256": "182865dc14ceaec645cc70c67ac18d25382f0249663924b9a653730db6475f42",
+   "current_sha256": "da9d61ecc5dfd42f86463924f29165ad9e1ba20b908291f4b8b796d0ce2afd1a",
+   "commits_since": 3,
+   "decision": "refresh",
+   "basis": "Retired chapter. The dated 13 October focus note moved verbatim to the rounds history (R35, E13), replaced by a status line naming the open target universal-practical-warrant. Every section C20 and C26 link is unchanged; they hold."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "C26",
+    "F18",
+    "F23",
+    "F26",
+    "F27",
+    "F28"
+   ],
+   "recorded_commit": "cd34401a38ac508dec232746f34f0e6eb44f6df8",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md",
+   "recorded_sha256": "1fd670e3defe9f199766a0ad411d60d9307d95ff40ab2c60e115768f4398c569",
+   "current_sha256": "af1ea2388032d272ac581b0c725d88218fbd207d24fa48581883009d447f4927",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/becoming/history/KNOWLEDGE.md": {
+   "kind": "split+edits",
+   "entries": [
+    "M15",
+    "M21"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/KNOWLEDGE.md",
+   "recorded_sha256": "d2e97b6bcaa3cee2aff283330a9e1f4947dff67bf42ec2d29ca887eb30b49b5d",
+   "current_sha256": "6bad6ec6e081f03e4817edfbe468c87afee08058f47f7043da7e882d4abbd54c",
+   "commits_since": 4,
+   "decision": "hold",
+   "basis": "Retired chapter (moved to history by R35 and RA). Language separation, then R19 (28a97ad91, 19 October 2026) restated living significance as the Lean shows it: every living claim has significance from every standpoint (Valuation.Significant), which follows under the continuation condition; it gives significance, not a positive valence, and the living readings do not include further generation; the favourable valence and further generation belong to the direction of 生生, read separately by widening what can form (D1). Four passages change accordingly: the inquiry-priorities argument (significance under living significance, and a positive place in the direction of 生生), the ethical direction, the qualified answer to Ren and the pluralist comparison. M15's and M21's status clauses say G0 (the positive significance of life and further generation) 'is now a theorem with the condition of section 6.15', and M21 says that under G0 new living can count positively: held for proposal A1.",
+   "proposal": "A1"
+  },
+  "theories/becoming/README.md": {
+   "kind": "generated",
+   "entries": [],
+   "recorded_commit": "eb36b95ae98e777ef88b8495284e2c5de61909a3",
+   "recorded_path": "theories/becoming/README.md",
+   "recorded_sha256": "6dc89c9dd86777ceb31ea0b6dba0f14bac54f653de67fd2b0d198d5c2ee67a65",
+   "current_sha256": "e996dd3d2edff265cb294f173690f66c90dd2ab08aef02da0f5dc1e4ee8302e2",
+   "commits_since": 2,
+   "decision": "refresh",
+   "basis": "Generated navigation page. The change since the recorded version is the shared navigation line: links to the one page, the overview and the chapters added (RA, 0d7a397a5), the dated session map dropped (R35). No entry links it."
+  },
+  "theories/becoming/history/ALIGNMENT-DIRECTION.md": {
+   "kind": "split+edits",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md",
+   "recorded_sha256": "11467e87a5a3543f0a7d6d704a3f50a974df5c018353c3a7e6441c4f59ece99f",
+   "current_sha256": "b17f797280cb97b927d0b975e77e50c9ca77e4164a2b5f33f96dac505c903654",
+   "commits_since": 5,
+   "decision": "hold",
+   "basis": "Retired chapter. R19 (28a97ad91, 19 October 2026) restated living significance as the Lean shows it: every living claim has significance from every standpoint (Valuation.Significant), which follows under the continuation condition; it gives significance, not a positive valence, and the living readings do not include further generation; the favourable valence and further generation belong to the direction of 生生, read separately by widening what can form (D1). The premise table's first row now says so, and 'correction' reads 'revision' in three places. M20's status clause (G0 'now a theorem with the condition of section 6.15') and its 'G0 positive ground' predate the restatement: held for proposal A1.",
+   "proposal": "A1"
+  },
+  "theories/becoming/history/PHILOSOPHICAL-ACCOUNT.md": {
+   "kind": "other",
+   "entries": [
+    "M21"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/PHILOSOPHICAL-ACCOUNT.md",
+   "recorded_sha256": "98b0e36fa0b8444d8e1c2b7de94c383cc20d63ca4c222195eb41c36b0424f59b",
+   "current_sha256": "e3f6dadbaa9fd4a79cf6d680359ded300bf91f9606591b703bb370402917698b",
+   "commits_since": 2,
+   "decision": "hold",
+   "basis": "Retired chapter. R19 (28a97ad91, 19 October 2026) restated living significance as the Lean shows it: every living claim has significance from every standpoint (Valuation.Significant), which follows under the continuation condition; it gives significance, not a positive valence, and the living readings do not include further generation; the favourable valence and further generation belong to the direction of 生生, read separately by widening what can form (D1). §6 and the closing answer now say the positive valence and further generation belong to the reading with the direction of 生生, not to the formal content. M21's claim and scope state G0's positive content and theorem status in the older form: held for proposal A1.",
+   "proposal": "A1"
+  },
+  "theories/becoming/results/ROADMAP.md": {
+   "kind": "generated",
+   "entries": [],
+   "recorded_commit": "eb36b95ae98e777ef88b8495284e2c5de61909a3",
+   "recorded_path": "theories/becoming/results/ROADMAP.md",
+   "recorded_sha256": "517006ecae7dbe3e47443761c95adb4084f8c49cc2d4b3915a8905dfc909b1af",
+   "current_sha256": "6b5f9af4f87ce591b5e65cc8da6d3665ac01f115b73c7b788731e31c21b51df5",
+   "commits_since": 3,
+   "decision": "refresh",
+   "basis": "Generated register stub: the shared navigation line (RA) and one new row, the Chinese-sources chapter (unmarked). No entry links it; M20's former link points to GOALS.md since A3."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/MAT-HISTORY-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/MAT-HISTORY-INTEGRATION.md",
+   "recorded_sha256": "b05667a58087ca82f7e03776bf59ed4d35814a2e98a64f0ec61e9576ea09dafc",
+   "current_sha256": "b8d7156393a08b1123e3624c8d6ebb7dfaee614c5ca9c785ea071936f4324201",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/CONTEXTUAL-ESTABLISHMENT-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CONTEXTUAL-ESTABLISHMENT-INTEGRATION.md",
+   "recorded_sha256": "6a964a92a6c12ec5cb506bd347cc3a745c12aff8247e51f2efb5c4f4e20dbc4d",
+   "current_sha256": "f6907238e7a5aa14ac8fe7d8ce34c9dbb1be981ac7263540b7bd3891df124f0c",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/MICROSCOPY-CORRESPONDENCE-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/MICROSCOPY-CORRESPONDENCE-INTEGRATION.md",
+   "recorded_sha256": "722ab3f753d902cdebd0c460823457686ed2b77e58cf42257847194ea4757363",
+   "current_sha256": "dfcefb3b4212210e287c3f9e96d408ed039e3713105ccca7b8bff9f7ceae657d",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/meta-attractor/GENERATIVE-REGIMES.md": {
+   "kind": "links-only",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "cd34401a38ac508dec232746f34f0e6eb44f6df8",
+   "recorded_path": "theories/meta-attractor/GENERATIVE-REGIMES.md",
+   "recorded_sha256": "c29f74b82e6c33b368f3671ef0433ad16f63226fc88c861210d7bcf466731f92",
+   "current_sha256": "9856fe60455c91528b7b8ff2ddc6afb9e00d98c82e8a03b94e06bd1d401472b3",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/becoming/history/ETHICAL-LEARNING.md": {
+   "kind": "split+edits",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/ETHICAL-LEARNING.md",
+   "recorded_sha256": "0d0d16fd052ed760abe2b461357b6b517405d7e06e8649097b7f0ca7dba2a8cb",
+   "current_sha256": "bf220ade443da1bf5f9c87a650b011d8d35525ce20d5b7cff9acd61eb58ab112",
+   "commits_since": 5,
+   "decision": "hold",
+   "basis": "Retired chapter. The dated correction note moved to its rounds history (R35, E13); the 8 October correction now gives its reason (an authorization threshold raised local authority premises into a prior judge of the whole) with Ren's words as provenance; R19 (28a97ad91, 19 October 2026) restated living significance as the Lean shows it: every living claim has significance from every standpoint (Valuation.Significant), which follows under the continuation condition; it gives significance, not a positive valence, and the living readings do not include further generation; the favourable valence and further generation belong to the direction of 生生, read separately by widening what can form (D1). Five passages now say where positive significance is the chapter's reading of the direction of 生生. M20's status clause and 'G0 positive ground' predate this: held for proposal A1.",
+   "proposal": "A1"
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/ETHICAL-LEARNING-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ETHICAL-LEARNING-INTEGRATION.md",
+   "recorded_sha256": "7d101ae98c63306d3bf5715144acc474e58bde6346f50c0b70be0706dd617c1e",
+   "current_sha256": "1086cc6f52d2b6ccd9286f9307b8b2e1f033fdc451fae798366eeb75f4a82564",
+   "commits_since": 3,
+   "move_rewrites": [
+    "R35-B1-chapters",
+    "R35-B4-study",
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md": {
+   "kind": "links-only",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "cd34401a38ac508dec232746f34f0e6eb44f6df8",
+   "recorded_path": "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md",
+   "recorded_sha256": "02e94aa880ec7ce48184ac29599825682e64ff9e265d9cc726d96f3e93ee9b5c",
+   "current_sha256": "1b06e1ea52e194f5eb8c8110c848759ec1c46d0a4a821b3b82a4f0be792a3d2f",
+   "commits_since": 2,
+   "move_rewrites": [
+    "R35-B1-chapters",
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/COLLECTIVE-DESTRUCTION-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/COLLECTIVE-DESTRUCTION-INTEGRATION.md",
+   "recorded_sha256": "976d0e6544c3951c8f5d0bf301d79e984cb2416818a10fb9ebdd1eddef4f15b7",
+   "current_sha256": "ba42182ab3d2441a713ab3a5c228cd097e998300ad6457d35f6ce92f837783b0",
+   "commits_since": 1,
+   "move_rewrites": [
+    "R35-B1-chapters"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.md": {
+   "kind": "split+edits",
+   "entries": [
+    "F30",
+    "M25"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/ALIGNMENT-THROUGH-CHANGE.md",
+   "recorded_sha256": "db4e8efd15ea20d9c49030db97d9886613dfc9a32285062b0eb8d74f2698f2ba",
+   "current_sha256": "5fb23b83c318a5e4d50e41c533113bfcc0437c51ab19b232d30b7447adeb2226",
+   "commits_since": 3,
+   "decision": "refresh",
+   "basis": "Retired chapter. Dated note moved (R35, E13); R19 restated the normative starting point as living significance, with the favourable reason for living and further generation this paper's reading with the direction of 生生. F30 states no content of living significance; M25's 'explicit G0/J grounds appraise ends and selectors' uses the retired label (the relabelling proposal of 19 October), not the positive content. Both hold."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ALIGNMENT-CONTINUITY.md": {
+   "kind": "links-only",
+   "entries": [],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ALIGNMENT-CONTINUITY.md",
+   "recorded_sha256": "10638864763642a468efa7432e723b65b7c1f37fb403cf81e405111fe7d86fbd",
+   "current_sha256": "c2ef69b8a252eb82cb17a8e0fd70a1544c96b07e40f473ee9d7a82cf75aa8be3",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/becoming/history/BASIC-CONFLICT-JUDGMENT.md": {
+   "kind": "split+edits",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.md",
+   "recorded_sha256": "884daa2a141ab5baaa288ea2aec1fe0ec2c65f796709aa0f916263fcaaa2adcd",
+   "current_sha256": "dc45dd01c9516a2cbfe83c5cbf2368b33fb3eb34b564a0501c7cab5a74856626",
+   "commits_since": 4,
+   "decision": "hold",
+   "basis": "Retired chapter. Three dated notes moved to the rounds history (R35, E13); FR's statement now cites the continuation condition at §6.4 instead of §6.15. M20's status clause cites section 6.15: held for proposal A1.",
+   "proposal": "A1"
+  },
+  "theories/becoming/history/CHOICE-AND-GENERATIVE-CONTEXT.md": {
+   "kind": "split+edits",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/CHOICE-AND-GENERATIVE-CONTEXT.md",
+   "recorded_sha256": "f5a3790f07f1685825c92326a6b70aa04e65ea597fa02b3646410c8c09565f39",
+   "current_sha256": "60b20bfce9699bf4154369a41c4668747b9c55a68c8ea0d1950e10cebd15c9b0",
+   "commits_since": 4,
+   "decision": "refresh",
+   "basis": "Retired chapter. Dated round notes moved verbatim to the rounds history (R35, E13), replaced by a status line naming the records it is the statement source of; SCIENTIFIC-PHILOSOPHY adds one sentence on the formal side of insulation (what-a-finite-stretch-verifies). Every anchored section M20 links is unchanged; no entry links SCIENTIFIC-PHILOSOPHY. The entries hold."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/CROSSED-CLAIMS-ARGUMENT.md": {
+   "kind": "links-only",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "cd34401a38ac508dec232746f34f0e6eb44f6df8",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CROSSED-CLAIMS-ARGUMENT.md",
+   "recorded_sha256": "dc8511c092a0fec03eaf549938f3c8c851b7fe1bd8acdac11bf9e82c48942776",
+   "current_sha256": "55840b0957632f2c2689534ee1cc4e0c926e820fa893067318de30671122ac56",
+   "commits_since": 1,
+   "move_rewrites": [
+    "F3-sweep"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: F3's final sweep (2f8b4d3b3) moved RepairComparison.lean to the Lean history folder and the move rewrote its one link. M20's claim and scope rest on the unchanged text."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/CROSSED-CLAIMS-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "cd34401a38ac508dec232746f34f0e6eb44f6df8",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CROSSED-CLAIMS-INTEGRATION.md",
+   "recorded_sha256": "cba619a392b4d78e3ea2035a513a24f31d5f81a704a46431b80b0ab37311c867",
+   "current_sha256": "786d4332ed7c908ecb5a98838d4affda6401ab338c0f1e29ba655078e5645062",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/becoming/history/WISDOM-AND-CONTEXT.md": {
+   "kind": "split+edits",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/WISDOM-AND-CONTEXT.md",
+   "recorded_sha256": "b5ba7d8e6b15b4f0519f92289608fd5dcf24c27fce5c53ab7cb0bc0b88d3bed3",
+   "current_sha256": "dc2845cc4c222ebdcb6522688a745e642ee1f34f3bf79b1aa8fd48deb4d92542",
+   "commits_since": 4,
+   "decision": "hold",
+   "basis": "Retired chapter. Ten dated notes moved verbatim to the rounds history (R35, E13) with one status line; the continuation condition is cited at §6.4 instead of §6.15, and g0_of_unrestricted is now livingSignificance_of_unrestricted (R30). M15's status clause cites section 6.15: held for proposal A1.",
+   "proposal": "A1"
+  },
+  "theories/becoming/history/MARKETS-AND-GENERATIVE-REGIMES.md": {
+   "kind": "split+edits",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/MARKETS-AND-GENERATIVE-REGIMES.md",
+   "recorded_sha256": "3b483acfdfcaa141c19af92ce271af61002b2b398ff0825ed86052db8fe239ce",
+   "current_sha256": "1b5e9b2651532c1bd7326dd173010b554d28fa23557a5701237240b399fc4af3",
+   "commits_since": 2,
+   "decision": "refresh",
+   "basis": "Retired chapter. Dated round notes moved verbatim to the rounds history (R35, E13), replaced by a status line naming the records it is the statement source of; SCIENTIFIC-PHILOSOPHY adds one sentence on the formal side of insulation (what-a-finite-stretch-verifies). Every anchored section M20 links is unchanged; no entry links SCIENTIFIC-PHILOSOPHY. The entries hold."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md",
+   "recorded_sha256": "e043436008b4d438013017370fd092cb84ac8181e94c73fef25e4b46f4e93e3f",
+   "current_sha256": "75fee116ec006410ab9f97667b32efecbbb795d56b5ef8f0493ea24bb7ed75e0",
+   "commits_since": 1,
+   "move_rewrites": [
+    "R35-B7-process"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: R35 batch B7 moved a reading note to history/2026-09-consolidation and rewrote its one link. M20's text unchanged."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md": {
+   "kind": "links-only",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md",
+   "recorded_sha256": "3bd675ec507d493c7beaa4cb65c8104be1fa2dd93f779449e30f268d78c0f013",
+   "current_sha256": "ef91a208328b5a12eb5b126ca5f882c90cc0606403eb5897c8f97fd51e705d51",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/GROWN-FRAGMENTATION-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/GROWN-FRAGMENTATION-INTEGRATION.md",
+   "recorded_sha256": "0c2a66dfa4deb7aecd05cfe1f0acc711cdc9d6c6b90784ca54aea02f88b2a06f",
+   "current_sha256": "d4fff557eb4418961796ba020b4199db29ec1cfda7d4a6e14aeb0fe561e32546",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/seeded-continuation-verification.json": {
+   "kind": "other",
+   "entries": [
+    "F20"
+   ],
+   "recorded_commit": "74cba5b135ef9ba5f2fa586a2bf39595ad4136b5",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/seeded-continuation-verification.json",
+   "recorded_sha256": "b01038437418b2589029a85d627411e67a7e3251020fc3d79bd68e70f76b2abc",
+   "current_sha256": "7ca0d9e3432acc3299724c35431328027002405c7e8a8a343804f314f7c6735c",
+   "commits_since": 1,
+   "decision": "refresh",
+   "basis": "Verification receipt rerun on 26 October 2026: status passed, the output hash unchanged; one source hash changed (the source moved or was re-pointed). F20's claim rests on the passed check and holds."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/RISK-CONDITIONING-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RISK-CONDITIONING-INTEGRATION.md",
+   "recorded_sha256": "95efdb9a532d7c261f0be4f6cd84ad5e35d626581c376d3df21eff871c0ee02a",
+   "current_sha256": "00dcf78a080f74a1c8513c038e8ba2e6a3e1a36e8b882f906e6232dc6ba79bb1",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/meta-attractor/COMMON-ORGANIZATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "cd34401a38ac508dec232746f34f0e6eb44f6df8",
+   "recorded_path": "theories/meta-attractor/COMMON-ORGANIZATION.md",
+   "recorded_sha256": "a2c1f958d84bf7464623dfbdd0065be177556f7801e5055d7cdfc08e04c60f3b",
+   "current_sha256": "c617675c9deb2157854f047b0f2b34de67513227a8b6ae1689e55e2da73b31ad",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/SITUATED-RECOVERY-EXPERIMENTAL-EVIDENCE.md": {
+   "kind": "links-only",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/SITUATED-RECOVERY-EXPERIMENTAL-EVIDENCE.md",
+   "recorded_sha256": "a9bbe3bb32a1397fd8228326c78b14f0140f6e5af652aa428d5b6426b506156b",
+   "current_sha256": "6245b63214a3278422754d3a71faa6009591aa0d0c52487bb4fa8249d1083944",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/ACQUIRED-SEGMENTATION-INTEGRATION.md": {
+   "kind": "links-only",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ACQUIRED-SEGMENTATION-INTEGRATION.md",
+   "recorded_sha256": "31dc7e93ed80a14f6a96e18bf18356b3bd6d07e9214a8f76eebf63fc5de02543",
+   "current_sha256": "af59ef64dfa54c9dad65edbbc5be3da2668f63d7b6154f42e151daca57033c15",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/becoming/results/records/transition-grouping-word-partition.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "0217baa3878592d5e0b72a486738ecdf3fd440c7",
+   "recorded_path": "theories/becoming/results/records/transition-grouping-word-partition.json",
+   "recorded_sha256": "bd5340b0dd9fb2d2bd6aa4f1753c80b702e16be9f316594f81b463c8d1095159",
+   "current_sha256": "604a1aeebfecef1ee8bd6f4531a42b77b21a95971235ba544480f2d488f6a9d6",
+   "commits_since": 26,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/acquired-binding-compositional-use.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/acquired-binding-compositional-use.json",
+   "recorded_sha256": "edb834a32e132df9855a128891b676e691280e8a9cb5130b75a9cc8b94f4b5c3",
+   "current_sha256": "22c3d97e9da5b85d277956ab02dd6e1a8012d516bbc51afe59bbef3b1d69399b",
+   "commits_since": 25,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/situated-recovery-empirical-correspondence.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "f583ce6b432f5bc5a3495912956e3c403108059d",
+   "recorded_path": "theories/becoming/results/records/situated-recovery-empirical-correspondence.json",
+   "recorded_sha256": "4cd9e2cf769925bc351c96e83a238689e7f5d39971d75abc80c7dc00d644aa6f",
+   "current_sha256": "aae5e6ca419608533dab0ea6f18155ad8b4a8d815702c806f8a8b9c35b3a889a",
+   "commits_since": 2,
+   "changed_fields": [
+    "history",
+    "references",
+    "text_versions"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/acquired-binding-compositional-use.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/acquired-binding-compositional-use.md",
+   "recorded_sha256": "03188b98fad68e1c6cac1f13116d23c70c9a521ac65f184c5d70094f024952d2",
+   "current_sha256": "af7db270e4f38bf65d11678ed3cdc5613c8e9d5a379874868862e3a664e55bc7",
+   "commits_since": 16,
+   "decision": "refresh",
+   "basis": "Generated record page. Its record's claim, statement, hypotheses and limitations are unchanged since the recorded version; the page changes are the record's added history lines (N6 reading pass, R29, R30 and R32 rebinding, condensed notes), receipts and a new used-by link. M26's claim and scope rest on the unchanged law."
+  },
+  "theories/becoming/results/records/enacted-scene-binding.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/enacted-scene-binding.json",
+   "recorded_sha256": "56858b29661847901a378443d50f626b5a6feaef5613d195da85acd7b6c9d59b",
+   "current_sha256": "30d1f8d98ab57d9223f3ac7f4b6cdb5ae9a49d12bc6d4112e5ca7cd1a0db03d4",
+   "commits_since": 26,
+   "changed_fields": [
+    "claim",
+    "history",
+    "proof_bindings",
+    "references",
+    "reviewed_at_utc"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON no entry links (M26 links its page). DF (study section 418) made the claim exact to the Lean: the decidability its laws take (meanings, or reports, contents and relation values, compared decidedly) and, for the span law, two distinct values. Read; the consequence for M26 is held on the record's page, which M26 links (proposal A2)."
+  },
+  "theories/becoming/results/records/enacted-scene-binding.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/enacted-scene-binding.md",
+   "recorded_sha256": "92cb328f22e7f3bd17c277022d0d8c767d7a0dc5d401a4c961a107c80bdc76ec",
+   "current_sha256": "dd067421bd5554dc6495b781078194620dc77baa14287dab9e43b6451dbe7ee7",
+   "commits_since": 16,
+   "decision": "hold",
+   "basis": "Generated record page M26 links. DF (study section 418, 25 October 2026) made the claim exact to the Lean: the cross-situational law takes meanings compared decidedly (decidable equality) besides a repertoire without repeats. M26 states the law 'for every type of records and histories' without that hypothesis: held for proposal A2.",
+   "proposal": "A2"
+  },
+  "theories/becoming/results/records/market-supported-finite-transition.md": {
+   "kind": "generated",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/market-supported-finite-transition.md",
+   "recorded_sha256": "87e2fd53735b006e96500cb176b801df563b3595fcb97c048b72d23d124fdd53",
+   "current_sha256": "3b4f6a097def656182587793e5837561d882ec433f113a58862ed3ff2f10e6ee",
+   "commits_since": 17,
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "theories/becoming/results/records/open-form-realization-under-revision.json": {
+   "kind": "other",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "502c22b45a9a5b42e5892e7c20658e2793808e0f",
+   "recorded_path": "theories/becoming/results/records/open-form-realization-under-revision.json",
+   "recorded_sha256": "c90e6029e732013b533df88248d2818c7154e67d92de1663e141e4786a044288",
+   "current_sha256": "383cefc360dcdfdbe93ecb842bdd4c3194f7d02a20501d16d9eb2d527c3a0d68",
+   "commits_since": 12,
+   "changed_fields": [
+    "aliases",
+    "claim",
+    "counterexamples",
+    "dependencies",
+    "history",
+    "hypotheses",
+    "proof_bindings",
+    "references",
+    "related",
+    "reviewed_at_utc",
+    "statement"
+   ],
+   "decision": "hold",
+   "basis": "Record JSON M20 links. DF restated the claim on the core laws: along a run of a frame, with completion decided, certificates lowered and not raised by handoffs and initial certificate at most B, the run realizes living content absent before by step B + 1; under the continuation condition that content falls under the relevance read from significance. The hypothesis on significance now names the continuation condition instead of G0. M20 says 'actual generative correspondence feeds G0 positive ground', which the record no longer says: held for proposal A1.",
+   "proposal": "A1"
+  },
+  "theories/becoming/results/records/recurrent-chain-assembly.json": {
+   "kind": "other",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/recurrent-chain-assembly.json",
+   "recorded_sha256": "19200b7ebe01041aec04b9c8c0b2f80f0f4d3964ee71839d786c115781c4450f",
+   "current_sha256": "2ad0f8dcd2cd0d1c5656dce506742d50328a09bac6944abc191f173dee365e4d",
+   "commits_since": 24,
+   "changed_fields": [
+    "history",
+    "next_delta",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON: only the next step's wording changed (registration → contact) and binding history. C14's claim holds."
+  },
+  "theories/becoming/results/records/classification-robust-generative-comparison.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "4f6bc20c89e132081dbf4c6f32138a94467bc6a1",
+   "recorded_path": "theories/becoming/results/records/classification-robust-generative-comparison.json",
+   "recorded_sha256": "c5ed515d0b911c0ed97e38998c717239bc05cb9373bfbf68ba0823a7ab40b562",
+   "current_sha256": "f25818bcafaa6962fecdf4437dc64fcb0f75cc4f7382cc48cec1edfbb80201fc",
+   "commits_since": 20,
+   "changed_fields": [
+    "aliases",
+    "claim",
+    "dependencies",
+    "history",
+    "hypotheses",
+    "limitations",
+    "proof_bindings",
+    "references",
+    "reviewed_at_utc",
+    "validation_scope"
+   ],
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "theories/becoming/results/records/classification-robust-generative-comparison.md": {
+   "kind": "generated",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "35ce2ea296015ad016dafd8fe49257abd82424d7",
+   "recorded_path": "theories/becoming/results/records/classification-robust-generative-comparison.md",
+   "recorded_sha256": "0feaacb62ed033702fc4835fef6d83d9bc94c9009f3e8efb30920533e94023b4",
+   "current_sha256": "328cdb95c05b01326bc946dd793d4abf322ee55bf0066ddea37862c2c5c7303c",
+   "commits_since": 16,
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "theories/becoming/results/records/encounter-selection-and-revision.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/encounter-selection-and-revision.json",
+   "recorded_sha256": "64cef87e57721b96495ab5910b136375085890a2a7b7cc54bdae5e62050cd7a7",
+   "current_sha256": "a80e17bac7b4e7abeedbc302d3c72ebbdf2a6afd84ba00897b4455a32988c000",
+   "commits_since": 25,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/encounter-selection-and-revision.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/encounter-selection-and-revision.md",
+   "recorded_sha256": "0710bf483ed73596fdd11201e0edcdcdadd439c7e00bb2156986cad78439c9e4",
+   "current_sha256": "731e55a35a2da3a65a6c7f2013c0e54d1bd43be6851c5a35746c51e4f436a57d",
+   "commits_since": 15,
+   "decision": "refresh",
+   "basis": "Generated record page. Its record's claim, statement, hypotheses and limitations are unchanged since the recorded version; the page changes are the record's added history lines (N6 reading pass, R29, R30 and R32 rebinding, condensed notes), receipts and a new used-by link. M26's claim and scope rest on the unchanged law."
+  },
+  "theories/becoming/results/records/market-partial-correction-boundary.md": {
+   "kind": "generated",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/market-partial-correction-boundary.md",
+   "recorded_sha256": "9827cd7aaf9e0d147ebc8f63f62f6d9f397cf5e54fa6c7e4f8d9a662307643d8",
+   "current_sha256": "a9a95601d2b8dd89bf7421ad6dfd472b10ddf57c756730bcf3e0cf02c086cabd",
+   "commits_since": 18,
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md": {
+   "kind": "links-only",
+   "entries": [
+    "M15",
+    "M21"
+   ],
+   "recorded_commit": "71edc7b917c0135c270ec21c70e64e9ad0aa1e2a",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md",
+   "recorded_sha256": "26d0c1bc43e6a406b8e5d4e9c15378846f284301adffcbb3546a0cfd6a216e13",
+   "current_sha256": "dc3a549bc748c5830c07fb370506dbd20f060b982a010fee238420f45e76b0ef",
+   "commits_since": 1,
+   "decision": "refresh",
+   "basis": "Links only: R35 step 2(d) (E4, ee8ebc82e) renamed two record ids off the retired registration word (contextual-registration → claims-shown-in-context, testing-within-registration → testing-within-couplings) and re-pointed the two links. M15's and M21's anchors and text unchanged."
+  },
+  "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md": {
+   "kind": "split+edits",
+   "entries": [],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/SCIENTIFIC-PHILOSOPHY.md",
+   "recorded_sha256": "f58f46abc5800cf4b6b7cb43aa89acea0c89f92b5c65161c3ecc2383da167994",
+   "current_sha256": "1803ea46cff814c21f30143c4a2784534a35428d8437a61f663a863127056f1c",
+   "commits_since": 4,
+   "decision": "refresh",
+   "basis": "Retired chapter. Dated round notes moved verbatim to the rounds history (R35, E13), replaced by a status line naming the records it is the statement source of; SCIENTIFIC-PHILOSOPHY adds one sentence on the formal side of insulation (what-a-finite-stretch-verifies). Every anchored section M20 links is unchanged; no entry links SCIENTIFIC-PHILOSOPHY. The entries hold."
+  },
+  "theories/becoming/results/records/scientific-inquiry-foundation.md": {
+   "kind": "generated",
+   "entries": [
+    "M21"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/scientific-inquiry-foundation.md",
+   "recorded_sha256": "e7f79d0a3b8dc76e466cf4c754f21a30350a665ddc43e06900502c94dc2fb8a3",
+   "current_sha256": "fc4a2df5cff2170b2b99192c72032163d6843fdde42e3a4d77ead18b1af3208c",
+   "commits_since": 15,
+   "decision": "refresh",
+   "basis": "Generated record page of an open target. Changes: the spine-correspondence item's vocabulary (registration → coupling, testing-within-couplings, claims-shown-in-context), and an eighth progress item, the formal side of the demarcation comparison (record what-a-finite-stretch-verifies, O1, 19 October 2026); the target, its status and next step are unchanged. M21's claim and scope hold; its 'no universal iff demarcation' remains true, and the new formal side is listed as an update."
+  },
+  "theories/becoming/results/records/naming-attention-coverage.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "b4a01b37dec54ec12311acac963261f9eca63e72",
+   "recorded_path": "theories/becoming/results/records/naming-attention-coverage.md",
+   "recorded_sha256": "845d84c5bf3c69d99fc9579c4334c875f67103125d6de36fba1a29f6ab6827c4",
+   "current_sha256": "233bc729cfbbda4d07507dd6b52d5873ed8116ed6b9c9c6afeac0e6c33cc4b2a",
+   "commits_since": 1,
+   "decision": "refresh",
+   "basis": "Generated record page: only the navigation and the record's text-version and history lines changed (bookkeeping notes condensed, R35 E3); the claim is unchanged. The linked entry's text rests on it unchanged."
+  },
+  "theories/becoming/results/records/organizational-rule-inheritance.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "502c22b45a9a5b42e5892e7c20658e2793808e0f",
+   "recorded_path": "theories/becoming/results/records/organizational-rule-inheritance.json",
+   "recorded_sha256": "6b3a3fd71c0837b02e25c38d3646f7847788588bb3b3be9195066a8c96134dea",
+   "current_sha256": "cbf50b9b273d5b7939666e2b2dd0305ea75ab3314717f888731e7c277dae2fcd",
+   "commits_since": 18,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/encounter-control-and-retention.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "b4a01b37dec54ec12311acac963261f9eca63e72",
+   "recorded_path": "theories/becoming/results/records/encounter-control-and-retention.md",
+   "recorded_sha256": "113a1b18e0e2740844f831c8e2067ddb4d3f324622d23d5c80a870c9fe3b22c3",
+   "current_sha256": "f86c7d00366d6525ce482f236727615c39736f657a9a1c29da1426165bcdd24c",
+   "commits_since": 1,
+   "decision": "refresh",
+   "basis": "Generated record page: only the navigation and the record's text-version and history lines changed (bookkeeping notes condensed, R35 E3); the claim is unchanged. The linked entry's text rests on it unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/inquiry-correspondence/contingent-learning/README.md": {
+   "kind": "links-only",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "87fdbb077d4a062fdd11f1cdf5e68f8c6fba702c",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/inquiry-correspondence/contingent-learning/README.md",
+   "recorded_sha256": "2e258c1bb1e1ed1fe65a74bf232e32e1e37c6f20f6942bbe8359e58dd8b49690",
+   "current_sha256": "5bc3e0f3b68f0c0b764db56cc108602413c1ea62a26699ab0b3ffe4170d0ebd9",
+   "commits_since": 1,
+   "move_rewrites": [
+    "moves-2026-10-23-moves-ra"
+   ],
+   "decision": "refresh",
+   "basis": "Links only: the text is unchanged once link targets are blanked, and the move receipts' recorded rewrites take the fingerprint to the current hash (R35 batches and RA's move of the retired chapters to theories/becoming/history/, moves-2026-10-23-moves-ra). The entries' claims and scopes rest on the unchanged text."
+  },
+  "theories/becoming/results/records/retrospective-source-binding.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/retrospective-source-binding.md",
+   "recorded_sha256": "c83329276418121d036431a1697e3854f13496ba1171716cd135a7cddb1d8ad5",
+   "current_sha256": "53b9538b28d2c56469b77b2f596ba8003ef442f21c45cdb3b768ab09ca7db398",
+   "commits_since": 15,
+   "decision": "refresh",
+   "basis": "Generated record page. Its record's claim, statement, hypotheses and limitations are unchanged since the recorded version; the page changes are the record's added history lines (N6 reading pass, R29, R30 and R32 rebinding, condensed notes), receipts and a new used-by link. M26's claim and scope rest on the unchanged law."
+  },
+  "theories/becoming/results/records/finite-granularity-question-recovery.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "C30",
+    "F22"
+   ],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/finite-granularity-question-recovery.json",
+   "recorded_sha256": "c814ca89daec4796941adee45dd54fdca36c400638972a1d56bb1a29529344b8",
+   "current_sha256": "e82134b764ad29a41f9e68c268a2c5b1a0c32db1d27c9b3c8fd89f6b88d87bd5",
+   "commits_since": 6,
+   "changed_fields": [
+    "aliases",
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/prefix-observation-loss.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "C30",
+    "F22"
+   ],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/prefix-observation-loss.json",
+   "recorded_sha256": "fe4ecc8d55dc0fe1e3ca14f225129223ac68cacc6ef3a0dbc6393b24cc07df20",
+   "current_sha256": "2c4270fb7c53d4c847f66438228897aeb8d29df7ecb6cc0394f1e36c211016ab",
+   "commits_since": 5,
+   "changed_fields": [
+    "aliases",
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/derived-history-law-exactness.json": {
+   "kind": "other",
+   "entries": [
+    "C01"
+   ],
+   "recorded_commit": "2f19bff73b3d60c205196f3d199df7a6d527b2c7",
+   "recorded_path": "theories/becoming/results/records/derived-history-law-exactness.json",
+   "recorded_sha256": "280c8f4fe543f1c73e8a665c6f03859eee13ee7b13a2b62140da6d0141c5a31a",
+   "current_sha256": "48e5348ed1d2f150345190376341678cfd1bab6b1c6c82d49a6d2b00426e2c60",
+   "commits_since": 10,
+   "changed_fields": [
+    "aliases",
+    "claim",
+    "counterexamples",
+    "history",
+    "hypotheses",
+    "proof_bindings",
+    "references",
+    "reviewed_at_utc",
+    "statement"
+   ],
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "theories/becoming/history/BECOMING-FOUNDATION.md": {
+   "kind": "split+edits",
+   "entries": [
+    "C01"
+   ],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/chapters/BECOMING-FOUNDATION.md",
+   "recorded_sha256": "6dfcbffda6ef0f1559a081d1b61f0c1cf2833335d4f831f55b1392462b239eb8",
+   "current_sha256": "d629319ff3f1e3d0235e98ea3a3f962e824bd30d5e4519fe197c4eeec6552324",
+   "commits_since": 5,
+   "decision": "refresh",
+   "basis": "Retired chapter. A status line (19 October) says which parts are live and which are read at their date, a link moved to the theorem map, and §9.1 (XL1, 22 October 2026) argues the passage from inclusion to relation for the determinations the World premises name: read off one exchange, four ties are internal and 33 central laws hold of every world read off an exchange (Becoming.OverExchange), with contingency in the law and differentiation kept; it does not reach every becoming's having such a law, nor the warrant of the readings (locality). C01's scope says the direct inclusion-to-constitution argument remains incomplete, which stays true for every becoming; the new argument is listed as an update (B2)."
+  },
+  "theories/becoming/results/records/finite-joining-tree-lifting.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/finite-joining-tree-lifting.json",
+   "recorded_sha256": "94be453fb0358bb1335df9589676732a6adcdf86009605232f7cc95278257b27",
+   "current_sha256": "8409d21f98c83e3b6f72c1077d3fd5c3996c13b791fc6f36f5b18dd94c4065a9",
+   "commits_since": 8,
+   "changed_fields": [
+    "aliases",
+    "claim",
+    "dependencies",
+    "history",
+    "hypotheses",
+    "proof_bindings",
+    "references",
+    "reviewed_at_utc",
+    "statement"
+   ],
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "theories/becoming/results/records/functional-joining-common-structure.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/functional-joining-common-structure.json",
+   "recorded_sha256": "407ec7e4ce3247b47904b2cde104c4a97839ddcae522a2664e666fe068cb5313",
+   "current_sha256": "05205141b41359bc2d16a28899d4d2b9c47104d960f60d67df2a597ede9c3dbe",
+   "commits_since": 7,
+   "changed_fields": [
+    "aliases",
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/incidence-common-refinement.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "C30",
+    "F22"
+   ],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/incidence-common-refinement.json",
+   "recorded_sha256": "8037a2587ea05c9f88b7ecdec61f8e4e90fa90a4f2295dd4d381d30cadbfa7e7",
+   "current_sha256": "e0ab31cb558b30d382ea358aec4b17d71629038d4011d9c5a63c5a0496de3b75",
+   "commits_since": 7,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/joining-open-map-factor.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/joining-open-map-factor.json",
+   "recorded_sha256": "43237e06975c44f238413b12fbb93cf8efc2b1b8ceaf9bef4b2f160b0cbad9df",
+   "current_sha256": "832f4e6189f0e8f6427673392b06e222228fbd1b123a19fc8ecac7a46f460f2b",
+   "commits_since": 7,
+   "changed_fields": [
+    "aliases",
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/joining-questions-survive-encoding.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/joining-questions-survive-encoding.json",
+   "recorded_sha256": "a1c9ca6914284e0d022046c6d332e201cf53009c3bdab5bbddf5bd7797ad4fbd",
+   "current_sha256": "6e40ccc4dd156fc510eeb68e5900f74d69dc828faee4bda37d7e0301dff9b297",
+   "commits_since": 7,
+   "changed_fields": [
+    "aliases",
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/multivalued-joining-common-structure.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "C30",
+    "F22"
+   ],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/multivalued-joining-common-structure.json",
+   "recorded_sha256": "80a67287fe93a9ff51e06feb79f289a4cececd4058cb46755aced51a19683626",
+   "current_sha256": "f972c0cfd4d41e5e8c6cd842dedee6c8009517b25bcdef38f8f2e3b9c100ed08",
+   "commits_since": 10,
+   "changed_fields": [
+    "aliases",
+    "history",
+    "proof_bindings",
+    "references",
+    "reviewed_at_utc"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/retained-reference-joining-recovery.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "C30",
+    "F22"
+   ],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/retained-reference-joining-recovery.json",
+   "recorded_sha256": "1075152083a9e40076c394e6573b96d245ca9b1de308b5267b20fb3b621ebf2e",
+   "current_sha256": "9822086656f310aad9fca2807687f9992fd625bbe7c16a3ee46afd09f28279c6",
+   "commits_since": 11,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/unanchored-incidence-collapse.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/unanchored-incidence-collapse.json",
+   "recorded_sha256": "9ab78bdd365019ec5551c2c327ced135739bfd08ffa2b64f3d4f571bea031370",
+   "current_sha256": "4879f34b15bdb58a6fcffe7c097211c1abf7985848ed758a530f36d53598433a",
+   "commits_since": 11,
+   "changed_fields": [
+    "aliases",
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/binding-preserving-substitution.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "F01"
+   ],
+   "recorded_commit": "7b32e58d5b029ce23f678b7766cfd6172061875e",
+   "recorded_path": "theories/becoming/results/records/binding-preserving-substitution.json",
+   "recorded_sha256": "7bffdef196518d7a389a3ed0cc66527cb21beaf3cb96236b1e3662c204cf0054",
+   "current_sha256": "b9f306f90c0e2e47936f7878c46e08c6222aa1eafc97e41716b6b0f143f97292",
+   "commits_since": 14,
+   "changed_fields": [
+    "aliases",
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/acquired-revision-of-pending-task.md": {
+   "kind": "generated",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/acquired-revision-of-pending-task.md",
+   "recorded_sha256": "0094d654218b2925401c2e345e23d286dff29fdfe14ca7d682517140098c003e",
+   "current_sha256": "577958d6cbe791eb7d3ea4bc880ad7df6b90bfc96ec57ca460d30be62da09150",
+   "commits_since": 9,
+   "decision": "refresh",
+   "basis": "Generated record page. DF (study section 418) and the rebinding passes changed only vocabulary in hypotheses or validation scope (retired G0/J → living significance and the practical commitments; registration → lumping; canonical source moved to the core module Countdown); each history line states the claim unchanged, and the claim fields agree. M24's, M25's and F30's claims and scopes hold."
+  },
+  "theories/becoming/results/records/context-sensitive-updating-correspondence.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "f583ce6b432f5bc5a3495912956e3c403108059d",
+   "recorded_path": "theories/becoming/results/records/context-sensitive-updating-correspondence.json",
+   "recorded_sha256": "b89fa1ce786bb510510792be3d0313afedaa119979fcd9f658d52c8ed3b28074",
+   "current_sha256": "43e0ab1cb64078c9c2a677676eca83038220e673e6f952afdebbdd87fd3f7f7f",
+   "commits_since": 3,
+   "changed_fields": [
+    "history",
+    "references",
+    "text_versions"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/mediated-evidence-transport.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/mediated-evidence-transport.json",
+   "recorded_sha256": "30bcb2651440d549ee91fde682f5449c5c1df3548bd36155ddcd4ab52ad978ab",
+   "current_sha256": "bf06251545349bf5d5fc7ec02c44645da816c97765ac476680f9bb6fd8479959",
+   "commits_since": 20,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references",
+    "related"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/recoverable-mediated-change.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/recoverable-mediated-change.json",
+   "recorded_sha256": "0909959352d150dbdce703ece2508674878b3904473d9733b3ccdd15718afdd8",
+   "current_sha256": "7dba466f00abc31d31675e350bf7e7605ea1a1f71cfcaebf5a702bff49e9748e",
+   "commits_since": 21,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references",
+    "related",
+    "reviewed_at_utc",
+    "statement",
+    "title"
+   ],
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "theories/becoming/results/records/recoverable-mediated-change.md": {
+   "kind": "generated",
+   "entries": [
+    "F30",
+    "M25"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/recoverable-mediated-change.md",
+   "recorded_sha256": "ba15bf40a4e76262218edf86ac185d75ea47cb3491743cb0f83910d5ecb9c551",
+   "current_sha256": "aafe04ae0da65e946029e1e5618c01e05ac8318f6413ccd4522f2c0d2a7d6a4b",
+   "commits_since": 12,
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "theories/becoming/results/records/naming-attention-coverage.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "f583ce6b432f5bc5a3495912956e3c403108059d",
+   "recorded_path": "theories/becoming/results/records/naming-attention-coverage.json",
+   "recorded_sha256": "f65c811e592b2c478dd609699f1be240cf6076febd08400c80aa3540a04c5c48",
+   "current_sha256": "d9b596ca294766ce3b25fc2daa7f7153e3daa5757756d14fb38ce0f454fb726c",
+   "commits_since": 2,
+   "changed_fields": [
+    "history",
+    "references",
+    "text_versions"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/encounter-control-and-retention.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "f583ce6b432f5bc5a3495912956e3c403108059d",
+   "recorded_path": "theories/becoming/results/records/encounter-control-and-retention.json",
+   "recorded_sha256": "3ddd8617c0306e43d58670271d22db75cc2c49e217cfab8b0168b7175ca6a3b4",
+   "current_sha256": "ba5397a12a2e71d84e29555327a9d401747c140c37f7b6451f1a21cedaeb5e8f",
+   "commits_since": 2,
+   "changed_fields": [
+    "history",
+    "references",
+    "text_versions"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/retrospective-source-binding.json": {
+   "kind": "record-bindings",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/retrospective-source-binding.json",
+   "recorded_sha256": "6dab8abc0daddf0dfc376ffea65bb3b0511381cccba087ca46cb6b3eca9c5445",
+   "current_sha256": "8227b7cf8fe496cadf79f5aa804af74cab362f19caf30d50451c8946d3e6a68d",
+   "commits_since": 25,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/historical-source-binding.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/historical-source-binding.json",
+   "recorded_sha256": "ee8d6ee28a4f788814cae5bf301b337128fabf399019bf971dd25d7f0965de3f",
+   "current_sha256": "7f1be77356b742da2fe988b4744612258a62ab4ee635f0b6817eff6682f10e03",
+   "commits_since": 25,
+   "changed_fields": [
+    "claim",
+    "history",
+    "proof_bindings",
+    "references",
+    "reviewed_at_utc"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON no entry links (M26 links its page). DF (study section 418) made the claim exact to the Lean: the decidability its laws take (meanings, or reports, contents and relation values, compared decidedly) and, for the span law, two distinct values. Read; the consequence for M26 is held on the record's page, which M26 links (proposal A2)."
+  },
+  "theories/becoming/results/records/historical-source-binding.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/historical-source-binding.md",
+   "recorded_sha256": "740e065cce88794cc9674ebe744948e08784c96836163575ff71b801489acb10",
+   "current_sha256": "61a5b92bfe991327f5a5792464df0aa205a1a86e07d4197d11bd25e7a1d73d6d",
+   "commits_since": 16,
+   "decision": "hold",
+   "basis": "Generated record page M26 links. DF made the claim exact: reading an earlier packet right takes reports and contents compared decidedly, counting changes takes the relation's values compared decidedly, and the span law needs two distinct values of the relation; the Lean is unchanged. M26 states the dated-records law without the decidability: held for proposal A2.",
+   "proposal": "A2"
+  },
+  "theories/becoming/results/records/joint-practice-forms-continuation.json": {
+   "kind": "other",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/joint-practice-forms-continuation.json",
+   "recorded_sha256": "f231b9ce36d7ecbfdea5ca5ab7c32ddbf2ef3ef4d390e3bfd48644d86cc3a311",
+   "current_sha256": "19621c4df701bfd0eb68b49a1d35765849d2c681b94900bd9d45edcb210f47f2",
+   "commits_since": 19,
+   "changed_fields": [
+    "canonical_source",
+    "history",
+    "proof_bindings",
+    "references",
+    "reviewed_at_utc",
+    "statement"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON. DF added a statement (a practice round completes exactly where the worker and a rostered reviewer other than the worker are present and the reviewer's recorded method answers as the context does; it then changes only the review, the worker's method and the trial) and moved the canonical source to the module holding the round law; the claim is unchanged. C14's text on joint practice holds."
+  },
+  "theories/becoming/results/records/guarded-program-question-recovery.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "C30",
+    "F22"
+   ],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/guarded-program-question-recovery.json",
+   "recorded_sha256": "eb6e9c6582ec191c46c7b636a63bde19e6e17aeccb39995d7468d5a43fb2f543",
+   "current_sha256": "9c5a2d490dfe59bdfd4ae43627f01a25bab31f0b1ef4637d62c358c33fcc9f50",
+   "commits_since": 6,
+   "changed_fields": [
+    "aliases",
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/residual-continuation-correspondence.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "C30",
+    "F22"
+   ],
+   "recorded_commit": "e652d079e919741eab096d1b4f30e80d4f2c1bd1",
+   "recorded_path": "theories/becoming/results/records/residual-continuation-correspondence.json",
+   "recorded_sha256": "feb681d099a2ba1370d94215932acdd71cd946694ea7af602a70a0f7dccf31c2",
+   "current_sha256": "3a4d29f232958810dc37afa130011ccd9c2e6f7a715ac3512d149b8b41910e7b",
+   "commits_since": 5,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/inherited-structural-copying.json": {
+   "kind": "other",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/inherited-structural-copying.json",
+   "recorded_sha256": "99fae92443a2bf9ea0235a755798460b9b075c7d40b6bd3d86dd9afdd7354f42",
+   "current_sha256": "cefe1fdeb750607f81df20bed586abd8f576e1ce9a0c68b78c5b7a48c245f604",
+   "commits_since": 26,
+   "changed_fields": [
+    "history",
+    "next_delta",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON: only the next step's wording changed (registration → contact) and binding history. C14's claim holds."
+  },
+  "theories/becoming/results/records/constitutive-binding-assessment.json": {
+   "kind": "other",
+   "entries": [
+    "F01"
+   ],
+   "recorded_commit": "b4a01b37dec54ec12311acac963261f9eca63e72",
+   "recorded_path": "theories/becoming/results/records/constitutive-binding-assessment.json",
+   "recorded_sha256": "357173a340323161c23cfaa05766d027e1e2213e031e9dfde4b2fe7291592f2b",
+   "current_sha256": "deda846ce2547454b3788c6788aae60fc73ab3b18c89d78e245962bb2537fd8d",
+   "commits_since": 3,
+   "changed_fields": [
+    "canonical_source",
+    "history",
+    "references",
+    "text_versions"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are the canonical source, references, text versions and history (the canonical source now the core module stating the general law; a retired label in a related note relabelled; notes condensed); the claim is unchanged. F01 (constitutive-binding-assessment) holds; no entry links reserved-shutdown-during-recovery.json."
+  },
+  "theories/becoming/results/records/pending-task-context-applicability.md": {
+   "kind": "generated",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "ebdc971efaadc8df42405b13f71d5a7d37fb786c",
+   "recorded_path": "theories/becoming/results/records/pending-task-context-applicability.md",
+   "recorded_sha256": "bce0242df5a1806b0c0954d2cb522a521e66f270c7517810086232aeebdd9940",
+   "current_sha256": "b4f1c4448d9496b5c5e0f6bb0adc5692e1b878413821bf55e0ef969194739843",
+   "commits_since": 9,
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "theories/becoming/results/records/mediated-evidence-transport.md": {
+   "kind": "generated",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/mediated-evidence-transport.md",
+   "recorded_sha256": "14d202a8ac8231e67c038ee582595f8bf00d1583d34ad4968d1956afa0be1f9c",
+   "current_sha256": "6a6e3dc5c37301f4d8a3a684c7b22d71989984ed75cafa79209891680d52affc",
+   "commits_since": 11,
+   "decision": "refresh",
+   "basis": "Generated record page no entry links (the entries link its JSON or none). Changes read: DF's relabel of a retired label in a related note (mediated-evidence-transport), and the registration vocabulary replaced by coupling with the claim's content unchanged (finite-fallible-inquiry-necessity)."
+  },
+  "theories/becoming/results/records/reserved-shutdown-during-recovery.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/reserved-shutdown-during-recovery.json",
+   "recorded_sha256": "3ffd4bce22e34b0026e14ca1d078beeadd9e46cb495bece73eb5ca434328971a",
+   "current_sha256": "0d9a178f7ce029295c93a94c4a08cce39a0c35d93c2d0b5ef1d1dab166aac189",
+   "commits_since": 29,
+   "changed_fields": [
+    "canonical_source",
+    "history",
+    "proof_bindings",
+    "references",
+    "related",
+    "reviewed_at_utc"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are the canonical source, references, text versions and history (the canonical source now the core module stating the general law; a retired label in a related note relabelled; notes condensed); the claim is unchanged. F01 (constitutive-binding-assessment) holds; no entry links reserved-shutdown-during-recovery.json."
+  },
+  "theories/becoming/results/records/reserved-shutdown-during-recovery.md": {
+   "kind": "generated",
+   "entries": [
+    "F30",
+    "M25"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/reserved-shutdown-during-recovery.md",
+   "recorded_sha256": "819a1e92052abef0ed42cb7af465e482558a8dbeab23613b1e81718cdef12118",
+   "current_sha256": "6bd8a2222fa95d8756fd6895fb94018a2d9047e3c9399182096bcbd1cd6f551b",
+   "commits_since": 17,
+   "decision": "refresh",
+   "basis": "Generated record page. DF (study section 418) and the rebinding passes changed only vocabulary in hypotheses or validation scope (retired G0/J → living significance and the practical commitments; registration → lumping; canonical source moved to the core module Countdown); each history line states the claim unchanged, and the claim fields agree. M24's, M25's and F30's claims and scopes hold."
+  },
+  "theories/becoming/results/records/formed-copying-registration.json": {
+   "kind": "other",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/formed-copying-registration.json",
+   "recorded_sha256": "11f067c8fb953662068479f958f24b2dfaa581a794714db384e654186bec6ac7",
+   "current_sha256": "a8538b25ee29ee1fa4e66eaf415b9aafe93d277fdc05c25eab411a40418870df",
+   "commits_since": 27,
+   "changed_fields": [
+    "claim",
+    "correspondence",
+    "dependencies",
+    "history",
+    "hypotheses",
+    "proof_bindings",
+    "references",
+    "reviewed_at_utc",
+    "title"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON. DF replaced the retired registration word by contact in the Chinese title, claim, hypothesis and correspondence (配准 → 接触) and in the English claim ('its contacts read', 'Contact formation consuming connectors and support'); the claim's content is unchanged and the id keeps the old word until DF's proposed rename. C14 holds in substance; its 'registration' wording and the id's pending rename are listed with the vocabulary proposals."
+  },
+  "theories/becoming/results/records/growth-constrained-fragmentation.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "984137c97768a83617dc4d7773687551b7c70a7e",
+   "recorded_path": "theories/becoming/results/records/growth-constrained-fragmentation.json",
+   "recorded_sha256": "6204b7dff742fa35763ac30ed54cdd264910ab2bf9c74db13f3e8422fa1c249b",
+   "current_sha256": "312c13a57972a383fc22c8f3f199922665851cd6ae03cfbd0b882c824e3d1e77",
+   "commits_since": 20,
+   "changed_fields": [
+    "aliases",
+    "claim",
+    "dependencies",
+    "history",
+    "proof_bindings",
+    "references",
+    "reviewed_at_utc",
+    "statement",
+    "validation_scope"
+   ],
+   "decision": "left to DF3",
+   "basis": "One of the eight records DF3 migrates (DF3-PLAN.md, the generativity chain); DF3 reads the chain entries that cite it against the migrated record and records the review once at its landing. GC records nothing for it."
+  },
+  "theories/becoming/results/records/formed-copying-correction.json": {
+   "kind": "record-bindings",
+   "entries": [
+    "C14"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/formed-copying-correction.json",
+   "recorded_sha256": "6e07f157ecf728773de1be1c7518a9ab3c88775a4febe1ea3e0c19b53f184895",
+   "current_sha256": "97a4210950a10125abc02ec0ddffc81602aa6550575ad0899f185594f03a09a9",
+   "commits_since": 25,
+   "changed_fields": [
+    "history",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON whose changed fields are only bindings, references, aliases, related records, text versions and history: rebinding to new core receipts (R29, R30, R32), superseded periphery modules re-roled as provenance (R35, E8), bookkeeping notes condensed with exact bytes snapshotted (R35, E3), retired-module aliases marked and a retired label in a related note (DF, study section 418). Every history line states the claim unchanged; claim, statement, hypotheses and limitations are byte-identical. The linked entries (C14, C30, F22, F01, or none) rest on the unchanged claims."
+  },
+  "theories/becoming/results/records/learned-procedure-transmission.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "ebdc971efaadc8df42405b13f71d5a7d37fb786c",
+   "recorded_path": "theories/becoming/results/records/learned-procedure-transmission.json",
+   "recorded_sha256": "2730a48c7ad3aa56c7265cf511c2ad37e0b2f2d578b23ffa57c6c120b62d3e30",
+   "current_sha256": "9ba4ff8858d5ad5d0dc346cfe01088665123d5e8d9cbb10531a3658a153fd587",
+   "commits_since": 13,
+   "changed_fields": [
+    "history",
+    "hypotheses",
+    "proof_bindings",
+    "references",
+    "text_versions"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON no entry links (M26 links its page, read above): DF's added hypothesis on where laws 8–10 are proved and their axiom reports (propext, Classical.choice, Quot.sound)."
+  },
+  "theories/becoming/results/records/learned-procedure-transmission.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "ebdc971efaadc8df42405b13f71d5a7d37fb786c",
+   "recorded_path": "theories/becoming/results/records/learned-procedure-transmission.md",
+   "recorded_sha256": "919f4f62203acd5f26abd60c5291d84cdd6b652eed7006bb21d817aaab6cc76f",
+   "current_sha256": "1dd640ee267f715bab325fe1cc932fdf0a7d2f6417947bad453b3a885746e625",
+   "commits_since": 10,
+   "decision": "refresh",
+   "basis": "Generated record page. DF (study section 418) added a hypothesis the record lacked: laws 8–10 are proved in the periphery instance module TransmissionCorrespondence and each uses propext, Classical.choice and Quot.sound. M26 claims no empty axiom report for the transmission laws (its scope counts theorems and dependency audits), so it holds; the axiom note is listed as an update."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regrouping.lean": {
+   "kind": "other",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "8f7734b4132cbded774e51090ec2d83aa5a4e523",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regrouping.lean",
+   "recorded_sha256": "210ecae682f45520052e618c3ffad47d01f93b4779f9160f87dd66b734b4b876",
+   "current_sha256": "db44669cad44018e864d9921184c7887303a4da5a473a81338c5a47cbe06de6f",
+   "commits_since": 2,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean": {
+   "kind": "other",
+   "entries": [
+    "M21"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+   "recorded_sha256": "c1476d86f5b7b67b97aeebff9f416c52640a09a2602c62d64389d5d25bf13b8c",
+   "current_sha256": "84ea8ff9ff91703d1b5e3f9d7cb064dc93481b0a9b732c35b0ede02ddfdbf5b9",
+   "commits_since": 1,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "theories/becoming/results/records/finite-fallible-inquiry-necessity.md": {
+   "kind": "generated",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/finite-fallible-inquiry-necessity.md",
+   "recorded_sha256": "78746f8c2308add9d379cf1df9256815513d9e41ad42db8cc3c0bb0cee78aaa3",
+   "current_sha256": "8b59b5dea967b915b2143ef5bd4f47775bcafe1d307bee827ae80aa90b3aa92d",
+   "commits_since": 6,
+   "decision": "refresh",
+   "basis": "Generated record page no entry links (the entries link its JSON or none). Changes read: DF's relabel of a retired label in a related note (mediated-evidence-transport), and the registration vocabulary replaced by coupling with the claim's content unchanged (finite-fallible-inquiry-necessity)."
+  },
+  "theories/becoming/results/records/selection-under-registration-revision.md": {
+   "kind": "generated",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "ebdc971efaadc8df42405b13f71d5a7d37fb786c",
+   "recorded_path": "theories/becoming/results/records/selection-under-registration-revision.md",
+   "recorded_sha256": "c94b690a8a06657fee89abfd44503515b2de63b043ff8bef47fe38699901edc9",
+   "current_sha256": "6586995f19168400163661edc2bb821154b09b2e93657bf6b08a176cdac4b084",
+   "commits_since": 8,
+   "decision": "refresh",
+   "basis": "Generated record page. DF and the naming passes moved the vocabulary from registration to lumping and the link process (title 'Which selections stay expressible and executable when the lumping changes'); the Lean names and the record id are kept, and the claim's content is unchanged. M24's claim and scope hold; its 'registration' wording and the record id's pending rename (DF's LEFT) are listed with the vocabulary proposals."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean": {
+   "kind": "other",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
+   "recorded_sha256": "f628f4250a3436baafbff809a95c1d0ccdd7f16d966701009a7559c1f40ea454",
+   "current_sha256": "364b4b03df4f7c539e5f56bb978962afab2d7797f481a057e136f4ca1e192caf",
+   "commits_since": 6,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "theories/becoming/results/records/universal-practical-warrant.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+   "recorded_path": "theories/becoming/results/records/universal-practical-warrant.json",
+   "recorded_sha256": "6c4b1d56059400f9e7afb1f49c2c98b1e2a99b2b4494d35fe2ead8bad20f5886",
+   "current_sha256": "1839482aa15bab246ee80aa7aaa0ed9a63ba1a65023781fdf77470689e796227",
+   "commits_since": 8,
+   "changed_fields": [
+    "canonical_source",
+    "history",
+    "references",
+    "related",
+    "reviewed_at_utc",
+    "text_versions",
+    "validation_scope"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON of an open target no entry links: retired labels in related notes relabelled and the registration word replaced by coupling; the target is unchanged."
+  },
+  "theories/becoming/results/records/consequence-revised-reference-plan.md": {
+   "kind": "generated",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "ebdc971efaadc8df42405b13f71d5a7d37fb786c",
+   "recorded_path": "theories/becoming/results/records/consequence-revised-reference-plan.md",
+   "recorded_sha256": "ba5d32e23118281b80f779016e73ff30477f47421ad5b2d0c02eca9026cc271c",
+   "current_sha256": "df5bd4d7c1c496e22a7fa5631d322d5ee8d89df5290cc3950dbaaaf843a6b153",
+   "commits_since": 17,
+   "decision": "refresh",
+   "basis": "Generated record page. DF (study section 418) and the rebinding passes changed only vocabulary in hypotheses or validation scope (retired G0/J → living significance and the practical commitments; registration → lumping; canonical source moved to the core module Countdown); each history line states the claim unchanged, and the claim fields agree. M24's, M25's and F30's claims and scopes hold."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReferencePlan.lean": {
+   "kind": "other",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReferencePlan.lean",
+   "recorded_sha256": "eb01f4c37c477a75727e5d12a7fa0a85c6bcc1783a26fc09d56a72d619dfb165",
+   "current_sha256": "a3462e8741f4992b1056ae6a6a124603e0f9ebad899d6e2e1208a08a67326da1",
+   "commits_since": 5,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "theories/becoming/results/records/timely-response-necessity.md": {
+   "kind": "generated",
+   "entries": [
+    "M21"
+   ],
+   "recorded_commit": "5f878dc3ce82465f3dace1cb55c0e8943191ffab",
+   "recorded_path": "theories/becoming/results/records/timely-response-necessity.md",
+   "recorded_sha256": "31e40b98a29d97e235031e986a99db585d0275d10251d59a4158f477ae6b8521",
+   "current_sha256": "66e848614c227b46f54c59152fcadd8eae28dd8807dffd0d3dbff4abf61eddc1",
+   "commits_since": 11,
+   "decision": "refresh",
+   "basis": "Generated record page: registration → coupling throughout (RegistersAt → CoupledIntoAt), statement content unchanged. M21's claim holds; 'future support cannot count as earlier registration' is listed with the vocabulary proposals."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean": {
+   "kind": "other",
+   "entries": [
+    "M21"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean",
+   "recorded_sha256": "d95c8a9fb4bd48f436ab9c010fe211740ddebad403b6cc56b9864a9fb2c573f9",
+   "current_sha256": "247d0910222d42c9d23862f7828f1b966613e47e1552e40d419dfc9329008a1f",
+   "commits_since": 2,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "theories/becoming/results/records/recurring-reference-revision.md": {
+   "kind": "generated",
+   "entries": [
+    "M24"
+   ],
+   "recorded_commit": "0217baa3878592d5e0b72a486738ecdf3fd440c7",
+   "recorded_path": "theories/becoming/results/records/recurring-reference-revision.md",
+   "recorded_sha256": "50bd8abb075daa47c8fa1cfb158d027369bb5394e163afc26448c5362ae02592",
+   "current_sha256": "5a49b4692ad540fca4e6a45d360f774cab0c4f14d947bc9ce5c9b4dd7788228d",
+   "commits_since": 58,
+   "decision": "refresh",
+   "basis": "Generated record page. DF (study section 418) and the rebinding passes changed only vocabulary in hypotheses or validation scope (retired G0/J → living significance and the practical commitments; registration → lumping; canonical source moved to the core module Countdown); each history line states the claim unchanged, and the claim fields agree. M24's, M25's and F30's claims and scopes hold."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "7117387362565c7bdb05847286b28dd5e60e1fb0",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean",
+   "recorded_sha256": "a6945f150c75540f35e320bc11c75dc15965e439f7592eee33f9411c7aa6776e",
+   "current_sha256": "76859d099381090ca6d3767d948cca91ac6d053667c94af995363eaeaacecf5a",
+   "commits_since": 1,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "theories/meta-attractor/README.md": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "6559896429afdf47a298533d2e51cd0cb2c55fc1",
+   "recorded_path": "theories/meta-attractor/README.md",
+   "recorded_sha256": "e680930d5983bf4e163b4b2c69b85dc017b6caf6d1c0fd35281d27fe5461567d",
+   "current_sha256": "3fdc218da45d1cb5ecff6ba160fbc6aa8e9566ac745c854d9bef207e6e0a1cfc",
+   "commits_since": 7,
+   "decision": "refresh",
+   "basis": "No entry links it. Changes: four dated notes on the spine (RuleCapture and ClosedCapture, RuleShaping, DrawnShaping, ReadInTime, 20-26 October) added at the head, and reading-note paths re-pointed to their history folder (R35 B7)."
+  },
+  "theories/becoming/results/records/scientific-inquiry-foundation.json": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/scientific-inquiry-foundation.json",
+   "recorded_sha256": "63b88f6a92263967ad9ba5f952c35003c82543d566490f221984d8170cb4d3bb",
+   "current_sha256": "94d6e7e25ef70386ca944350201e36f8ed72104bae24f62ae857fc98f0607c28",
+   "commits_since": 22,
+   "changed_fields": [
+    "canonical_source",
+    "correspondence",
+    "dependencies",
+    "history",
+    "progress",
+    "references",
+    "related",
+    "text_versions"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON of an open target no entry links: retired labels in related notes relabelled and the registration word replaced by coupling; the target is unchanged."
+  },
+  "theories/becoming/results/records/finite-fallible-inquiry-necessity.json": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/finite-fallible-inquiry-necessity.json",
+   "recorded_sha256": "c4cd75d022714b2685370aa3bae5d3fb7af23ce6cb51e6a101090e9fdfefb93a",
+   "current_sha256": "40db62f3f536f60dd2a4ec62a6c77f88a224abb7535086d608c1657ab12a6418",
+   "commits_since": 8,
+   "changed_fields": [
+    "claim",
+    "correspondence",
+    "dependencies",
+    "history",
+    "hypotheses",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON M15 links as an original result: the registration vocabulary replaced by coupling throughout (claim, hypotheses, correspondence; RegistersAt → CoupledIntoAt), the law's content unchanged. M15's text holds; M21's use of 'registration' for the same laws is listed with the vocabulary proposals."
+  },
+  "theories/becoming/results/records/timely-response-necessity.json": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+   "recorded_path": "theories/becoming/results/records/timely-response-necessity.json",
+   "recorded_sha256": "58cd402224c012645818c5de629a2c3a3a11971716ad69793f84ee29f4d9158c",
+   "current_sha256": "7aa459028318dd0014e8bfe014b90f669d6321e88eb4b309ef348d96aa30e248",
+   "commits_since": 12,
+   "changed_fields": [
+    "claim",
+    "correspondence",
+    "dependencies",
+    "history",
+    "hypotheses",
+    "proof_bindings",
+    "references"
+   ],
+   "decision": "refresh",
+   "basis": "Record JSON M15 links as an original result: the registration vocabulary replaced by coupling throughout (claim, hypotheses, correspondence; RegistersAt → CoupledIntoAt), the law's content unchanged. M15's text holds; M21's use of 'registration' for the same laws is listed with the vocabulary proposals."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "f36a93aaa8e23ca00d36e6206943cec669e51938",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "recorded_sha256": "aae50d4e1220904e455a8f88f0b616d5ddd0b3c7f5a4b5a934d2db91ee4d022b",
+   "current_sha256": "e18ba1c238856a73be60ca86b178d6c1699d8be601f09b16391ddb81529bc946",
+   "commits_since": 6,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean": {
+   "kind": "other",
+   "entries": [],
+   "recorded_commit": "7117387362565c7bdb05847286b28dd5e60e1fb0",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
+   "recorded_sha256": "48718b1ebbf2c205d78e7175c3b01e4b2cbaf8edba463fca7f3f0c94d00bfe8a",
+   "current_sha256": "40e3a36f79faf60560037490d9b849c89349ba9210c42d96fadcca0252004b7c",
+   "commits_since": 4,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Histories.lean": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "ea31c15c5c738dc35b9c0a76fee1fc53e3e2f1fa",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Histories.lean",
+   "recorded_sha256": "d4cf3c400cb4cbe65a7ede86103571ac37364e82eb6caeec73ff6cfdd59e1f51",
+   "current_sha256": "8c23a374071dcca7da22894475ddc902dcf8e89fdd5a936e5cfee6a79d49f8e9",
+   "commits_since": 1,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Experiment.lean": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "ea31c15c5c738dc35b9c0a76fee1fc53e3e2f1fa",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Experiment.lean",
+   "recorded_sha256": "622ffc32049bf3318fe709473198a88d626207b8cc8c9fecf38b18ae48e35914",
+   "current_sha256": "7634077005d8a36d9d0a9c0f85fc408aa7a13a97aa6db60b43a5c4c722086045",
+   "commits_since": 2,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "595f541fecc837560c17a908749961f7a2189ebb",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+   "recorded_sha256": "ce0cbaa9eae78046d860abeb963b0eab87d8981451044ed9bb85d2fb66ab5b68",
+   "current_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+   "commits_since": 5,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean",
+   "recorded_sha256": "8e285d9a8b1952b58668e2dbd2f51f23598a40cdb6bb2f96271986ab6372a842",
+   "current_sha256": "d9f8d20e13767514c7db803bf7b8cdbd97469049eb0a15fae2f6f2e5a39609a0",
+   "commits_since": 6,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
+   "recorded_sha256": "dabb239082e3ea10b17c9d1054837c36292f01d30d05d5981435526874b4babb",
+   "current_sha256": "c4916cbf4ee72134c14a7573780ac76acbde0d256ca2799012253f5e23d89fd8",
+   "commits_since": 7,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "theories/becoming/history/THE-THEORY-OF-BECOMING.md": {
+   "kind": "split+edits",
+   "entries": [
+    "C01",
+    "C03"
+   ],
+   "recorded_commit": "0217baa3878592d5e0b72a486738ecdf3fd440c7",
+   "recorded_path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+   "recorded_sha256": "3f2b0da5f3361c0a69870cc993c4a63937bd4679a9e9da94bafc790d65a5d18e",
+   "current_sha256": "0f0af9391df4c30ece1f642d21665f06f7128b83663fa60632e58477e6d20878",
+   "commits_since": 218,
+   "decision": "hold",
+   "basis": "Retired canonical chapter (R36 restructured it on 20 October; RA moved it to history on 23 October; 227 commits since the recorded version). The anchor C03 links now opens §6.4, 'The continuation condition', which says the condition fixes scope, gives significance, not a positive valence, and by itself orders nothing, and that it weakens 'positive' to 'has significance'; §6.5 states the two premises, the condition for scope and C for order. C03's scope says G0 'is a theorem with Ren's proposed axiom as its condition (section 6.15)' beside a favourable direction: held for proposal A1. C01 links this file as 'current chapter and formal spine', which the eight chapters now are: proposal B3.",
+   "proposal": "A1"
+  },
+  "theories/becoming/results/records/organizational-formation-from-generative-comparison.md": {
+   "kind": "generated",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "35ce2ea296015ad016dafd8fe49257abd82424d7",
+   "recorded_path": "theories/becoming/results/records/organizational-formation-from-generative-comparison.md",
+   "recorded_sha256": "57859ec00861eb8d22d502f06d9c89aff74440c745b96691cd0c3bb8a73bf962",
+   "current_sha256": "34abb322150d11e2d828938407042d9b344b29824fccfbb5707544678a80e7d2",
+   "commits_since": 15,
+   "decision": "refresh",
+   "basis": "Generated record page. DF (study section 418) restated the record's title and premises in current terms (the comparison C for order, the continuation condition through living significance for scope, J1–J4), named the decidedness the core law takes (an exactly listed range, a weakly decided comparison and a decided relation, both decisions supplied classically in the periphery) and added three laws from declarations already referenced; statement and scope unchanged. M20's sentence that the monist organizational argument derives a formation requirement from whole improvement witnesses still holds; its G0 wording is the general G0 proposal."
+  },
+  "theories/becoming/results/records/situated-recovery-empirical-correspondence.md": {
+   "kind": "generated",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "b4a01b37dec54ec12311acac963261f9eca63e72",
+   "recorded_path": "theories/becoming/results/records/situated-recovery-empirical-correspondence.md",
+   "recorded_sha256": "05e6a312c3e785e829393824d23b1ab3a4798836aa9f7403d8be57836fe600d3",
+   "current_sha256": "b44a3a3da99dc26abf2a0508b8240796e9f56d4167462d7a5dfe6de287e08bef",
+   "commits_since": 1,
+   "decision": "refresh",
+   "basis": "Generated record page: only the navigation and the record's text-version and history lines changed (bookkeeping notes condensed, R35 E3); the claim is unchanged. The linked entry's text rests on it unchanged."
+  },
+  "theories/becoming/results/records/context-sensitive-updating-correspondence.md": {
+   "kind": "generated",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "f583ce6b432f5bc5a3495912956e3c403108059d",
+   "recorded_path": "theories/becoming/results/records/context-sensitive-updating-correspondence.md",
+   "recorded_sha256": "d1984a84fb6d58a538182b86fcf4fd7d35d4aece5e6c489239c3c5e7e72aff69",
+   "current_sha256": "6f2c12f86dd8856df74fbd2543e27b4daa38df45c4000d6b049fa480748f8a63",
+   "commits_since": 1,
+   "decision": "refresh",
+   "basis": "Generated record page: only the navigation and the record's text-version and history lines changed (bookkeeping notes condensed, R35 E3); the claim is unchanged. The linked entry's text rests on it unchanged."
+  },
+  "theories/becoming/results/records/transition-grouping-word-partition.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "0217baa3878592d5e0b72a486738ecdf3fd440c7",
+   "recorded_path": "theories/becoming/results/records/transition-grouping-word-partition.md",
+   "recorded_sha256": "ad317145cfe56c1ddcc967f5a7fe48602dc68cba8b3f5b4527b4852fd459ccd7",
+   "current_sha256": "e3c3f8f72c952077f5c22d6a565af6877e11c915ac4ad3acceb9f4f07e2f44af",
+   "commits_since": 13,
+   "decision": "refresh",
+   "basis": "Generated record page. Its record's claim, statement, hypotheses and limitations are unchanged since the recorded version; the page changes are the record's added history lines (N6 reading pass, R29, R30 and R32 rebinding, condensed notes), receipts and a new used-by link. M26's claim and scope rest on the unchanged law."
+  },
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md": {
+   "kind": "split+edits",
+   "entries": [
+    "M15",
+    "M26"
+   ],
+   "recorded_commit": "eb07a4f17846b46270adc3bd29a83e95ba0bab68",
+   "recorded_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+   "recorded_sha256": "b1f0d504f845ca3e481c65166411cec0fdbccfb0df7589a102ad5b10d8710e63",
+   "current_sha256": "8994ec3581ddbb42ffd2589c62939102726b14ac9c6fd9ed182b3234b23b2165",
+   "commits_since": 64,
+   "decision": "refresh",
+   "basis": "Decision register. The D43 section that M15 and M26 link changed only in two link targets (the decision brief moved to the study's history); the register gained decisions D46–D68 after it. M15's and M26's reading of D43 holds; D45's adoption of where-a-level-couples bears on M26's note on observation and is held on observation-is-a-route.md (proposal A2)."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+   "recorded_sha256": "648576d8bb87dc1097d8ce069daeeae4c2fddd6f912f26d89a1346ca94f38e46",
+   "current_sha256": "aa142f84b784dd1816a650a2c3a35b9e1e261cd3f76c071aa1442cf5296ee9a8",
+   "commits_since": 8,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Observation.lean": {
+   "kind": "other",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Observation.lean",
+   "recorded_sha256": "4f16019d3f1e0f8f39818a0788c8fc6d13ac52aef3bd1cde67e75358c8391139",
+   "current_sha256": "8049282015d17b6c40607a8c56a2cf9d5bc777ae18513e921e9b87883ff3fa72",
+   "commits_since": 3,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean": {
+   "kind": "other",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
+   "recorded_sha256": "a7f50150da6ac47b1f92a5c5f799eca65d47edf2dc01069005c1ab5c744b06d4",
+   "current_sha256": "dd9a9e2b41d072ed0b49d28598e13f4991b7fa9593a010d806fc23ab4b6a08ac",
+   "commits_since": 3,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean": {
+   "kind": "other",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "6913eb2f145ab02bcb6d43e8547f2f3bde8093ec",
+   "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+   "recorded_sha256": "3399211a1a4b5e08592f4bbdd6c5d288b14870e534def29aa447be3b33040d96",
+   "current_sha256": "068eec35f455c8ea1e87b8dad5eb0b15b009767086adef96c7e895156854dc6b",
+   "commits_since": 5,
+   "decision": "refresh",
+   "basis": "Lean source. Changes since the recorded version: docstrings (N6 reading pass, R21), layers and one prelude (R31), one name per notion (R30), pure forwarders and same-statement copies removed (R29, R32, R37), witnesses rebuilt (R37), the run as the one base (R28), and in some files new laws (RL1 in Relevance, EC1 in Selection, ZG1 in Learning, OU3b in Mechanism). No declaration an entry names was removed: every Lean name the chain cites in backticks is declared in the live tree. The entries' claims rest on statements these passes left unchanged."
+  },
+  "theories/becoming/results/records/identification-where-runs-part.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "ebdc971efaadc8df42405b13f71d5a7d37fb786c",
+   "recorded_path": "theories/becoming/results/records/identification-where-runs-part.md",
+   "recorded_sha256": "095b9290781960df841338385d5266510433c0a4eab6dcd4cc0e970042429e70",
+   "current_sha256": "2b3b821208f0e7ec87706f2e093c73327c0346dc40714411ff311f36520a1cb4",
+   "commits_since": 34,
+   "decision": "refresh",
+   "basis": "Generated record page. Vocabulary moved to the current terms (learner → extrapolation, record → prefix, registered → read through the map), and DF made the free-branching law exact (two distinct values, decided values; an extrapolation is right at no step on some run, silence counting as not right). M26 already states the law with 'extrapolation' (Parting.not_right_on_both, Parting.world_right_iff, Parting.leastBound_right) and its scope lists the decidability the converse needs; it holds."
+  },
+  "theories/becoming/results/records/observation-is-a-route.md": {
+   "kind": "generated",
+   "entries": [
+    "M26"
+   ],
+   "recorded_commit": "ebdc971efaadc8df42405b13f71d5a7d37fb786c",
+   "recorded_path": "theories/becoming/results/records/observation-is-a-route.md",
+   "recorded_sha256": "e2467f1b527deaff426120cc200612a260047c5b4c0c76cf1a91e3b23ad670af",
+   "current_sha256": "f20a1e10ebb49d737b4e796b58d48ab1406e55f12517535dd904a6dc7201ffc9",
+   "commits_since": 41,
+   "decision": "hold",
+   "basis": "Generated record page M26 links. The statement now reads in coupling terms (the stock couples into a formation only through levels it reads downstream of the stock; coupling by level is the route of length zero), and the correspondence and next step change the status of 'observation is no second relation beside dependence': in the sense that obs could be derived from dependence it is settled at the step of the exchange (OB1, what-dependence-alone-carries-of-a-level: dependence alone carries exactly the responses rising with a level), and in the sense that both are coupling it holds (where-a-level-couples, adopted in D45); the conjecture left the next step. M26's scope still calls it 'a conjecture': held for proposal A3.",
+   "proposal": "A3"
+  },
+  "theories/becoming/results/records/selection-through-a-model-of-the-options.md": {
+   "kind": "generated",
+   "entries": [
+    "M15"
+   ],
+   "recorded_commit": "56c903573db8d91afc5d98c87967815073881eea",
+   "recorded_path": "theories/becoming/results/records/selection-through-a-model-of-the-options.md",
+   "recorded_sha256": "567881c08b0afe2410e8f04e16f6e2397f1ed99e458e1a7a96dcd6792f7b6d6f",
+   "current_sha256": "bd9b5cc260e7fd5281e265496d34a611b274bee4725bd98dd9724e2d48e4b43f",
+   "commits_since": 37,
+   "decision": "refresh",
+   "basis": "Generated record page: the vocabulary moved from 'model of the options' to 'map of the alternatives' (title, statement, laws); the declarations and the law are unchanged. M15 links it as 'Selection through the model (Relabel)' and its text holds; the wording is listed with the vocabulary proposals."
+  },
+  "RESULTS.md": {
+   "kind": "other",
+   "entries": [
+    "E06"
+   ],
+   "recorded_commit": "7a26c84e0c847d2183763ce52ea61419300421e3",
+   "recorded_path": "RESULTS.md",
+   "recorded_sha256": "37bcc5830dbb15b32d3e4ee79cd10c35a5af408d4220585322118c9fbdbcad2a",
+   "current_sha256": "e9f7fd37c35ed485dda8ac92455f223f8edd4dc63fbfb6e37e84e00ce6a90273",
+   "commits_since": 161,
+   "decision": "refresh",
+   "basis": "Generated register E06 links as its results register: regenerated with the records landed since (161 commits), each line generated from its record. E06's claims about evidential scope rest on the evidence studies it links, which are unchanged; it holds."
+  },
+  "GOALS.md": {
+   "kind": "other",
+   "entries": [
+    "M20"
+   ],
+   "recorded_commit": "a5acc7cbf3d5052ee3c25f60626e6223b58b166d",
+   "recorded_path": "GOALS.md",
+   "recorded_sha256": "2531975efd912dae9d7865d77abd298d0cef8bcd7c013c61c59aa99a4f097574",
+   "current_sha256": "dcf28baeb525401f48c120e83e554452348194fbae1a3cfd767f1d3aeafd6e7e",
+   "commits_since": 27,
+   "decision": "refresh",
+   "basis": "Generated goals page. The generative-alignment section M20 links is rewritten (AJ, 24 October 2026): the goal is the alignment of the joint selection, humans, institutions and trained systems selecting together, with three conditions (shaping capacity not selected; a lock left in time; courses compared by widening, the condition fixing scope and C order), what a selection reaches stated without premise, new records listed and the G0/J record ids renamed (R35, E4). M20 cites this section for active directions and completed results and states none of its wording; it holds. That no chain entry carries the joint selection or what a selection reaches is proposal B5."
+  }
+ }
+}
