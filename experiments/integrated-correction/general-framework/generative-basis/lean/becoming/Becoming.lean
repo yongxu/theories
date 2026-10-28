@@ -2763,7 +2763,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   a list holds, merging nothing at its places, the start reaches itself (`«线有限不并则返»`, by
   pigeonhole with no decidability); where every course of no rise then a least fall ends, the
   falls along a line that does not rise do not recur (`«尽则不或屡»`), and rest is no case of being
-  drawn either way (`«止而不入之例»`, `«入而屡之例»`). Lumping: with the successor fixed where `E`
+  drawn either way (`«止而不入之例»`, `«入而屡之例»`). Steps counted: within `m` steps and then within
+  `n` is within `m + n` (`«迭内之接»`), and a course of regions each of whose rounds holds what every
+  condition held (`«承»`) holds at round `n` exactly where everything reaching in `n` steps held at
+  the start (`«承之迭»`), with memory within `n` steps (`«存承之迭»`).
+  `Becoming.Withholding`'s closed forms have these shapes for its chains; their bridges are a
+  second step (board item OU3d).
+  Lumping: with the successor fixed where `E`
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike
   (`«像定后当且仅当同行»`). Order: widening of relations is irreflexive, one-way and transitive and

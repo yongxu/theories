@@ -54,6 +54,9 @@ REASONS = {
                                             "continuation condition; the free significance is not lifted to the root",
     'Becoming.Weighting.widens_iff_every_positive': "weights: widening is what every positive weighting ranks higher; "
                                                     "the grammar has no weights",
+    'Becoming.PartForms.goAlike': "a law of its model: the part's law determined at a move the part alone forms; the "
+                                  "image law only reads it as carrying a law of its own (carries_law_iff), and a proof "
+                                  "through it applies the law and undoes it (OU3d's review)",
 }
 
 
@@ -114,10 +117,7 @@ NO_LAW = {
 }
 # A declaration on another master law's anchor that is a case of the grammar's law, its derivation not yet given
 # (EC6d, 28 October 2026: the actor row cites the law PartForms.goAlike in place of partForms_iff).
-PENDING_ANCHOR = {
-    'Becoming.PartForms.goAlike': "lumping on the grammar: constancy with a fixed successor («有常定后则同行») at the "
-                                  "coupled step, with the part's sameness",
-}
+PENDING_ANCHOR = {}  # OU3d, 28 October 2026: PartForms.goAlike has its reason in REASONS (a law of its model)
 NO_REASON = 'no reason given'
 CATEGORIES = ('master law', 'balance, represented', 'premise of the account', 'counting identity', 'law of its model',
               'single application', 'definitional or representational', PENDING, NO_REASON)

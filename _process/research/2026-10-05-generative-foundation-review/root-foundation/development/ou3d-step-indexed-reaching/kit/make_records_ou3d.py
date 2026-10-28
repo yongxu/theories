@@ -42,7 +42,7 @@ r['laws'].insert(7, {
     'en': 'Steps counted. n + 1 steps are n steps and then the last. Within m steps and then within n is within m + n, and '
           'within n steps is n steps each of which stays or steps. A course of regions each of whose rounds holds exactly what '
           'every condition held at the round before holds at round n exactly where everything reaching in n steps held '
-          'at the start: n rounds of taking on along a relation are one taking on along its n steps. With memory, each '
+          'at the start: n rounds of taking on along a relation are one taking on along its n steps. With memory, every '
           'round also keeping what it held, it holds exactly where everything reaching within n steps held, the law '
           'without memory under staying or a step.',
     'zh': '计步：n+1 步即 n 步而后一步。m 步以内而后 n 步以内，即 n+m 步以内；n 步以内即「静或缘」之 n 步。区域之程，'
@@ -82,11 +82,11 @@ vs['en'] = (f"Machine-checked by the consolidated Lean 4.29.1 checker (receipt {
             f"{gl['theorems']} theorems in {len(gl['declarations'])} declarations, the 40 representation and bridge "
             f"declarations in fourteen model modules, and OU3c's derivations in four more, every axiom report empty, all "
             f"cited; every changed module's theorems keep their printed statements, but for the two relation laws moved "
-            f"into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b (study section 417), one of OU3c (433), "
-            f"one of OU3d ({N}); not reviewed by a person.")
+            f"into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b, one of OU3c, and one of OU3d with a second "
+            f"pass; not reviewed by a person.")
 vs['zh'] = (f"Lean 4.29.1 合并检查器实查（回执 {RECEIPT_ID}）：Becoming.GrammarLaws，{len(gl['declarations'])} 项声明中 "
             f"{gl['theorems']} 条定理，十四个模型模块中 40 项表示与桥接声明，及另四模块中 OU3c 之推导，公理报告皆空，本记录全引；诸改动模块之定理其所印陈述不变，唯移入文法之二关系律推广至任一宇宙。"
-            f"只读 AI 审查，所见皆采：OU3b 三次（研究第 417 节），OU3c 一次（第 433 节），OU3d 一次（第 {N} 节）；未经人审。")
+            f"只读 AI 审查，所见皆采：OU3b 三次，OU3c 一次，OU3d 一次并复审一遍；未经人审。")
 assert len(vs['en']) <= 600, len(vs['en'])
 r['history'].append({
     'en': f"28 October 2026 (OU3d, study section {N}): steps counted on the grammar, beside n steps: the last step, "

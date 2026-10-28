@@ -6,10 +6,10 @@ import Becoming.Prelude
 # The five master laws on the grammar (主律)
 
 The master laws of the method chapter (08 §7) restated on the grammar of `Becoming.Grammar`, for
-every carrier and every relation: closure, balance, finite runs (return, being drawn and rest),
-lumping and order. Each is stated with what it uses: where a global form uses more (a fixed
-successor everywhere, merging nothing everywhere, a successor everywhere, a list of the whole
-carrier), it is a corollary of a local one stated beside it. This module imports only the grammar,
+every carrier and every relation: closure, balance, finite runs (return, being drawn, rest and
+steps counted), lumping and order. Each is stated with what it uses: where a global form uses more
+(a fixed successor everywhere, merging nothing everywhere, a successor everywhere, a list of the
+whole carrier), it is a corollary of a local one stated beside it. This module imports only the grammar,
 its map (`Becoming.GrammarMap`, for `«尽»`) and the prelude, so it sits below every model:
 `Becoming.Frame` imports it, and the models' laws that are cases of these are proved from them in
 their own modules (closure in `Frame`, `GrammarScope` and `Junctures`; finite runs in `Recurrence`,
@@ -35,6 +35,8 @@ their consumers' stay arithmetic, since each needs only the count.
 | `«线不并»` | merging nothing at the first `N` places of a line |
 | `«入»` | drawn in: a closed region `x` lies outside holds something `x` reaches |
 | `«迭»` | `n` steps: the `n`-fold composition of a relation |
+| `«迭内»`, `«静或缘»` | within `n` steps: some number of steps not more than `n`; staying, or a step of a relation |
+| `«承»` | what every condition held: the occurrences whose every condition under a relation lies in a region |
 | `«屡»`, `«或屡»` | steps of a relation recur along a line; recur as far as can be refuted, from a place on |
 | `«同行»` | `E` goes alike under `R`: `R˘;E;R ⊆ E` |
 | `«像»` | the image of a relation along a map |
@@ -82,6 +84,16 @@ their consumers' stay arithmetic, since each needs only the count.
   and on a listed carrier with a successor everywhere the two are one (`«有限遍后定后则定前当且仅当皆返»`).
   Steps compose and cancel: with the successor fixed at what `x` reaches, `n` steps from `x` lead to
   one place (`«迭之定于»`), and merging nothing, `n` steps to one place come from one (`«迭之定前»`).
+* **Finite runs: steps counted.** `n + 1` steps are `n` steps and then the last (`«迭之末步»`). Within
+  `m` steps and then within `n` is within `m + n` (`«迭内之接»`), and within `n` steps is `n` steps each of
+  which stays or steps (`«迭内即静或缘之迭»`). Let each round of a course of regions hold exactly what
+  every condition held at the round before (`«承»`); then round `n` holds exactly where everything
+  reaching in exactly `n` steps held at the start (`«承之迭»`): `n` rounds of taking on along a
+  relation are one taking on along its `n` steps. With memory, each round also keeping what it held,
+  round `n` holds exactly where everything reaching within `n` steps held (`«存承之迭»`), the law
+  without memory under staying or a step: keeping is counting oneself among one's conditions.
+  `Withholding`'s closed forms (`answers_closed`, `waitsAll_closed`) have these shapes for its chains;
+  the bridges are not shown (below).
 * **Finite runs: rest.** A line is at rest where its steps of `F` (a least fall, say) stop
   recurring (`«屡»`, `«或屡»`) while its steps are steps of `Q` (no rise, say). Where every course
   of `Q` steps then an `F` step ends from the line's place (`«尽» («而» («所闭» Q) F) «一»`, the
@@ -111,7 +123,9 @@ their consumers' stay arithmetic, since each needs only the count.
   partial identity: `Web.admitted`, `Weighting.admittedOn`), so the models' comparisons are these.
 
 What is not shown: that any model's relation is functional, total or listed (the models supply
-these); the n-step lines law for lines of different lengths; that a pairing under continuation
+these); the n-step lines law for lines of different lengths; that the models' step-indexed laws
+(`Withholding`, `Tolerance`, `Labelled`) are proved from the laws of steps counted, through bridges
+from their chains and traces to `«迭»`, a second step; that a pairing under continuation
 (`«对» («续» R E)`) adds anything to equal count, which is not stated; any converse of the law of
 rest, from rest along a line to the ending of the courses: none is established, and one would have
 to say which step relations it compares and on what logic. Every statement is pointwise; no equality of
@@ -663,6 +677,76 @@ theorem «迭之接» {R : «际» α} : ∀ (a b : Nat) {x y z : α}, «迭» R
 theorem «迭之周» {R : «际» α} {p : Nat} {x : α} (loop : «迭» R p x x) : ∀ k, «迭» R (p * k) x x
   | 0 => rfl
   | k + 1 => «迭之接» p (p * k) loop («迭之周» loop k)
+
+/-- `n + 1` steps are `n` steps and then the last (迭之末步): `«迭»` takes the first step first, and
+this reads its last step last, as `«相续之末步»` reads the last step of a line. -/
+theorem «迭之末步» {R : «际» α} : ∀ (n : Nat) {x z : α}, «迭» R (n + 1) x z ↔ ∃ y, «迭» R n x y ∧ R y z
+  | 0, x, z => ⟨fun ⟨_, r, e⟩ => ⟨x, rfl, Eq.subst (motive := R x) e r⟩,
+      fun ⟨_, e, r⟩ => ⟨z, Eq.subst (motive := fun v => R v z) e.symm r, rfl⟩⟩
+  | n + 1, _, _ => ⟨fun ⟨w, r, rest⟩ => match («迭之末步» n).mp rest with
+      | ⟨y, steps, last⟩ => ⟨y, ⟨w, r, steps⟩, last⟩,
+    fun ⟨y, ⟨w, r, steps⟩, last⟩ => ⟨w, r, («迭之末步» n).mpr ⟨y, steps, last⟩⟩⟩
+
+/-- Within `n` steps (迭内): some number of steps not more than `n`. -/
+def «迭内» (R : «际» α) (n : Nat) : «际» α := fun x y => ∃ k, k ≤ n ∧ «迭» R k x y
+
+/-- **Within `m` steps and then within `n` is within `m + n`**, from `«迭之接»`. -/
+theorem «迭内之接» {R : «际» α} {m n : Nat} {x y z : α} :
+    «迭内» R m x y → «迭内» R n y z → «迭内» R (m + n) x z
+  | ⟨k, le, first⟩, ⟨j, le', second⟩ =>
+    ⟨j + k, Nat.le_trans (Nat.add_le_add le' le) (Nat.le_of_eq (Nat.add_comm n m)), «迭之接» k j first second⟩
+
+/-- Staying, or a step (静或缘): `R` with the identity beside it. -/
+def «静或缘» (R : «际» α) : «际» α := fun x y => x = y ∨ R x y
+
+/-- **Within `n` steps is `n` steps each of which stays or steps.** -/
+theorem «迭内即静或缘之迭» {R : «际» α} : ∀ (n : Nat) {x y : α}, «迭内» R n x y ↔ «迭» («静或缘» R) n x y
+  | 0, _, _ => ⟨fun within => match within with
+      | ⟨0, _, e⟩ => e
+      | ⟨_ + 1, le, _⟩ => absurd le (Nat.not_succ_le_zero _),
+    fun e => ⟨0, Nat.le_refl 0, e⟩⟩
+  | n + 1, x, _ => ⟨fun within => match within with
+      | ⟨0, _, e⟩ => ⟨x, .inl rfl, («迭内即静或缘之迭» n).mp ⟨0, Nat.zero_le n, e⟩⟩
+      | ⟨k + 1, le, ⟨w, r, rest⟩⟩ =>
+        ⟨w, .inr r, («迭内即静或缘之迭» n).mp ⟨k, Nat.le_of_succ_le_succ le, rest⟩⟩,
+    fun ⟨w, step, rest⟩ => match step, («迭内即静或缘之迭» n).mpr rest with
+      | .inl same, ⟨k, le, steps⟩ =>
+        ⟨k, Nat.le_succ_of_le le, Eq.subst (motive := fun v => «迭» R k v _) same.symm steps⟩
+      | .inr r, ⟨k, le, steps⟩ => ⟨k + 1, Nat.succ_le_succ le, ⟨w, r, steps⟩⟩⟩
+
+/-- What every condition held (承): the occurrences whose every condition under `R` lies in `P`. In
+the main reading, an occurrence takes `P` on from all its conditions; one with no condition lies in
+it for every region. -/
+def «承» (R : «际» α) (P : α → Prop) : α → Prop := fun a => ∀ b, R b a → P b
+
+/-- **Taking on, over `n` steps (承之迭).** Let each round of a course of regions hold exactly what
+every condition held at the round before. Then round `n` holds exactly where everything reaching
+in exactly `n` steps held at the start: `n` rounds of taking on along `R` are one taking on along
+`n` steps of `R`. -/
+theorem «承之迭» {R : «际» α} {S : Nat → α → Prop} (round : ∀ n a, S (n + 1) a ↔ «承» R (S n) a) :
+    ∀ n a, S n a ↔ «承» («迭» R n) (S 0) a
+  | 0, a => ⟨fun held _ e => Eq.subst (motive := S 0) e.symm held, fun all => all a rfl⟩
+  | n + 1, a => (round n a).trans
+    ⟨fun taken b steps => match («迭之末步» n).mp steps with
+      | ⟨c, first, r⟩ => («承之迭» round n c).mp (taken c r) b first,
+     fun all c r => («承之迭» round n c).mpr fun b first => all b ((«迭之末步» n).mpr ⟨c, first, r⟩)⟩
+
+/-- **With memory, within `n` steps (存承之迭).** Let each round of a course keep what it held and take
+on what every condition held. Then round `n` holds exactly where everything reaching within `n`
+steps held at the start. It is the law without memory under staying or a step (`«承之迭»` at
+`«静或缘» R`, read back by `«迭内即静或缘之迭»`): keeping is counting oneself among one's
+conditions. -/
+theorem «存承之迭» {R : «际» α} {S : Nat → α → Prop}
+    (round : ∀ n a, S (n + 1) a ↔ S n a ∧ «承» R (S n) a) :
+    ∀ n a, S n a ↔ «承» («迭内» R n) (S 0) a :=
+  fun n a =>
+    («承之迭» (R := «静或缘» R) (fun k c => (round k c).trans
+      ⟨fun ⟨kept, taken⟩ b step => match step with
+        | .inl same => Eq.subst (motive := S k) same.symm kept
+        | .inr r => taken b r,
+       fun all => ⟨all c (.inl rfl), fun b r => all b (.inr r)⟩⟩) n a).trans
+    ⟨fun all b within => all b ((«迭内即静或缘之迭» n).mp within),
+     fun all b steps => all b ((«迭内即静或缘之迭» n).mpr steps)⟩
 
 /-- The successor is fixed at what `x` reaches (定后于): two successors of one occurrence within
 `x`'s closure are one. It is `«定后»` read within `«所闭» R x` only, and the laws of return below

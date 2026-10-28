@@ -1,11 +1,11 @@
 {
- "commit": "c68218749b01c15b814895ce2f144e6761f2aea9",
+ "commit": "c57c5adcdc07785d3b3af0b2f1d43111d599d740",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261028T070053.995027Z",
+ "core_receipt_at_commit": "20261028T072728.445650Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 337,
- "constants": 48653,
- "spine_theorems": 16412,
+ "constants": 48677,
+ "spine_theorems": 16417,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,11 +33,11 @@
   "proof through a base family": 213,
   "used by a theorem on the base": 5602,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 1505,
+  "apart: own vocabulary": 1510,
   "apart: prelude-only statement": 105
  },
- "apart": 1610,
- "apart_general_structure_by_design": 638,
+ "apart": 1615,
+ "apart_general_structure_by_design": 643,
  "apart_otherwise": 972,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 116,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 923,
- "apart_roots": 923,
+ "apart_used_by_nothing": 925,
+ "apart_roots": 925,
  "apart_roots_by_category": {
   "model-witness": 419,
   "support": 133,
-  "general-structure": 329,
+  "general-structure": 331,
   "calibration": 16,
   "restates": 14,
   "logical-strength": 12
@@ -200,6 +200,10 @@
    38,
    39
   ],
+  "Becoming.GrammarLaws": [
+   38,
+   120
+  ],
   "Becoming.GrammarScope": [
    38,
    38
@@ -207,10 +211,6 @@
   "Becoming.GrammarCases": [
    38,
    40
-  ],
-  "Becoming.GrammarLaws": [
-   33,
-   115
   ],
   "Becoming.RuleShaping": [
    32,
@@ -732,8 +732,8 @@
  "rings": {
   "core": {
    "modules": 321,
-   "theorems": 15652,
-   "apart": 1516,
+   "theorems": 15657,
+   "apart": 1521,
    "classes": {
     "statement on both families": 1048,
     "statement on Process/Frame/Run/Trace": 3259,
@@ -742,7 +742,7 @@
     "proof through a base family": 202,
     "used by a theorem on the base": 5243,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 1412,
+    "apart: own vocabulary": 1417,
     "apart: prelude-only statement": 104
    }
   },
@@ -2241,6 +2241,11 @@
   "Becoming.«及即迭»": "used by a theorem on the base",
   "Becoming.«迭之接»": "used by a theorem on the base",
   "Becoming.«迭之周»": "used by a theorem on the base",
+  "Becoming.«迭之末步»": "apart: own vocabulary",
+  "Becoming.«迭内之接»": "apart: own vocabulary",
+  "Becoming.«迭内即静或缘之迭»": "apart: own vocabulary",
+  "Becoming.«承之迭»": "apart: own vocabulary",
+  "Becoming.«存承之迭»": "apart: own vocabulary",
   "Becoming.«定后则定后于»": "used by a theorem on the base",
   "Becoming.«定后于之后»": "used by a theorem on the base",
   "Becoming.«迭之定于»": "used by a theorem on the base",

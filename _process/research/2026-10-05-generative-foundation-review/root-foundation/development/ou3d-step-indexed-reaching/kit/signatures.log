@@ -1,0 +1,36 @@
+{
+ "old_receipt": "20261028T072728.445650Z",
+ "new_receipt": "20261028T081241.505586Z",
+ "declarations_old": 115,
+ "declarations_new": 120,
+ "changed": [],
+ "gone": [],
+ "added": [
+  "Becoming.«存承之迭»",
+  "Becoming.«承之迭»",
+  "Becoming.«迭之末步»",
+  "Becoming.«迭内之接»",
+  "Becoming.«迭内即静或缘之迭»"
+ ],
+ "definitions_rewritten": [],
+ "definitions_gone": [],
+ "definitions_added": [
+  "Becoming.«承»",
+  "Becoming.«迭内»",
+  "Becoming.«静或缘»"
+ ]
+}
++++ @Becoming.«存承之迭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {S : Nat → α → Prop},
+  (∀ (n : Nat) (a : α), S (n + 1) a ↔ S n a ∧ Becoming.«承» R (S n) a) →
+    ∀ (n : Nat) (a : α), S n a ↔ Becoming.«承» (Becoming.«迭内» R n) (S 0) a
++++ @Becoming.«承之迭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {S : Nat → α → Prop},
+  (∀ (n : Nat) (a : α), S (n + 1) a ↔ Becoming.«承» R (S n) a) →
+    ∀ (n : Nat) (a : α), S n a ↔ Becoming.«承» (Becoming.«迭» R n) (S 0) a
++++ @Becoming.«迭之末步» : ∀ {α : Type u_1} {R : Becoming.«际» α} (n : Nat) {x z : α},
+  Becoming.«迭» R (n + 1) x z ↔ ∃ y, Becoming.«迭» R n x y ∧ R y z
++++ @Becoming.«迭内之接» : ∀ {α : Type u_1} {R : Becoming.«际» α} {m n : Nat} {x y z : α},
+  Becoming.«迭内» R m x y → Becoming.«迭内» R n y z → Becoming.«迭内» R (m + n) x z
++++ @Becoming.«迭内即静或缘之迭» : ∀ {α : Type u_1} {R : Becoming.«际» α} (n : Nat) {x y : α},
+  Becoming.«迭内» R n x y ↔ Becoming.«迭» (Becoming.«静或缘» R) n x y
+every old statement of GrammarLaws unchanged; the new laws of steps counted: ['Becoming.«存承之迭»', 'Becoming.«承之迭»', 'Becoming.«迭之末步»', 'Becoming.«迭内之接»', 'Becoming.«迭内即静或缘之迭»'] ; the new definitions: ['Becoming.«承»', 'Becoming.«迭内»', 'Becoming.«静或缘»']
+OK

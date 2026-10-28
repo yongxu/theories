@@ -132,6 +132,20 @@
       ]
     },
     {
+      "en": "Steps counted. n + 1 steps are n steps and then the last. Within m steps and then within n is within m + n, and within n steps is n steps each of which stays or steps. A course of regions each of whose rounds holds exactly what every condition held at the round before holds at round n exactly where everything reaching in n steps held at the start: n rounds of taking on along a relation are one taking on along its n steps. With memory, every round also keeping what it held, it holds exactly where everything reaching within n steps held, the law without memory under staying or a step.",
+      "zh": "计步：n+1 步即 n 步而后一步。m 步以内而后 n 步以内，即 n+m 步以内；n 步以内即「静或缘」之 n 步。区域之程，每轮恰持前一轮诸缘皆持者，则第 n 轮恰持于凡 n 步及之者始皆持之处：沿一关系承 n 轮，即沿其 n 步承一次。有记忆者，每轮兼存其所持，则恰持于凡 n 步以内及之者皆持之处，即「静或缘」下无记忆之律。",
+      "declarations": [
+        "Becoming.«迭之末步»",
+        "Becoming.«迭内»",
+        "Becoming.«迭内之接»",
+        "Becoming.«静或缘»",
+        "Becoming.«迭内即静或缘之迭»",
+        "Becoming.«承»",
+        "Becoming.«承之迭»",
+        "Becoming.«存承之迭»"
+      ]
+    },
+    {
       "en": "Being drawn. For every relation, x is drawn in exactly where it reaches something that does not reach back, and with a successor that does not reach itself it is drawn. With the successor fixed at what x reaches, x reaching itself is not drawn, and with some successor drawn is not reaching itself; the global forms follow. Witnesses: neither hypothesis can be omitted, and the global one is more than the law uses.",
       "zh": "入：对每一关系，x 恰在及于不返者时入；有后而不自返则入。于 x 所及处定后，自返之 x 不入；有后时入即不自返；全局之形为推论。见证：二假设皆不可省，全局之假设多于此律所用。",
       "declarations": [
@@ -407,6 +421,16 @@
       "en": "That widening being what every positive weighting ranks higher is a law of the grammar (Weighting.widens_iff_every_positive): the grammar has no weights.",
       "zh": "扩大即每一正权重皆排之更高者，为文法之律（Weighting.widens_iff_every_positive）：文法无权重。",
       "kind": "non-implication"
+    },
+    {
+      "en": "That the models' step-indexed laws are proved from the laws of steps counted (Withholding.answers_closed, Withholding.waitsAll_closed and withholding_spreads, Tolerance.answers_restores_iff, WithinMoves.after_course): their bridges, from a chain of waits and a trace to the grammar's steps, are a second step, with those modules' owners; a law's run is already a course whose rounds hold by definition.",
+      "zh": "诸模型之计步之律由计步之律证出（Withholding.answers_closed、Withholding.waitsAll_closed 与 withholding_spreads、Tolerance.answers_restores_iff、WithinMoves.after_course）：其桥接（待之链与迹至文法之步）为第二步，与诸模块之主同为；律之运行本即区域之程，其轮依定义而成。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a part whose law is determined, forming its own move, carries a law of its own by a law of the grammar (PartForms.goAlike): its content is the model's premise, the part's law determined at a move the part alone forms. The image law only reads the conclusion as carrying a law of its own (carries_law_iff); a proof through it applies the law and undoes it, and constancy with a fixed successor would need the rest to step and be determined (OU3d's review).",
+      "zh": "定律之部分，自成其动者，依文法之律自有其律（PartForms.goAlike）：其内容为模型之前提，即此部分之律于唯此部分所成之动定后。像之律只将结论读为自有其律（carries_law_iff）；经之之证，施此律而复撤之；有常与定后则须他部亦动且定（OU3d 之审查）。",
+      "kind": "non-implication"
     }
   ],
   "counterexamples": [
@@ -439,8 +463,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T061626.538602Z): Becoming.GrammarLaws, 115 theorems in 135 declarations, the 40 representation and bridge declarations in fourteen model modules, and OU3c's derivations in four more, every axiom report empty, all cited; every changed module's theorems keep their printed statements, but for the two relation laws moved into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b (study section 417), one of OU3c (433); not reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261028T061626.538602Z）：Becoming.GrammarLaws，135 项声明中 115 条定理，十四个模型模块中 40 项表示与桥接声明，及另四模块中 OU3c 之推导，公理报告皆空，本记录全引；诸改动模块之每条定理其所印陈述不变，唯移入文法之二关系律推广至任一宇宙。OU3b 经三次独立只读 AI 审查，所见皆采，见研究第 417 节；OU3c 经一次，见研究第 433 节；未经人审。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T081241.505586Z): Becoming.GrammarLaws, 120 theorems in 143 declarations, the 40 representation and bridge declarations in fourteen model modules, and OU3c's derivations in four more, every axiom report empty, all cited; every changed module's theorems keep their printed statements, but for the two relation laws moved into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b, one of OU3c, and one of OU3d with a second pass; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261028T081241.505586Z）：Becoming.GrammarLaws，143 项声明中 120 条定理，十四个模型模块中 40 项表示与桥接声明，及另四模块中 OU3c 之推导，公理报告皆空，本记录全引；诸改动模块之定理其所印陈述不变，唯移入文法之二关系律推广至任一宇宙。只读 AI 审查，所见皆采：OU3b 三次，OU3c 一次，OU3d 一次并复审一遍；未经人审。"
   },
   "next_delta": {
     "en": "A derivation of balance where a model's balance is read under a relation other than the one, pairings composing along a supplied conditioning; the models' other central laws restated on the grammar; a converse of the law of rest with the step relations it compares and its logic stated; review by a person.",
@@ -633,6 +657,7 @@
         "Becoming.«同行当且仅当有常»",
         "Becoming.«同行遍后则有常»",
         "Becoming.«四比之周»",
+        "Becoming.«存承之迭»",
         "Becoming.«守数当且仅当可对»",
         "Becoming.«定前»",
         "Becoming.«定前之逐点»",
@@ -688,6 +713,8 @@
         "Becoming.«所闭之证»",
         "Becoming.«所闭之闭»",
         "Becoming.«所闭当且仅当同一或及»",
+        "Becoming.«承»",
+        "Becoming.«承之迭»",
         "Becoming.«无后者不入亦不返»",
         "Becoming.«有后不返则入»",
         "Becoming.«有常则可续»",
@@ -720,6 +747,10 @@
         "Becoming.«迭之定于»",
         "Becoming.«迭之定前»",
         "Becoming.«迭之接»",
+        "Becoming.«迭之末步»",
+        "Becoming.«迭内»",
+        "Becoming.«迭内之接»",
+        "Becoming.«迭内即静或缘之迭»",
         "Becoming.«迭则及»",
         "Becoming.«逾»",
         "Becoming.«逾则不则»",
@@ -728,13 +759,14 @@
         "Becoming.«闭之及»",
         "Becoming.«闭含所闭»",
         "Becoming.«闭而外则不所闭»",
+        "Becoming.«静或缘»",
         "Becoming.«非定后返而不入之例»",
         "Becoming.«齐»",
         "Becoming.«齐之对称»",
         "Becoming.«齐则非杂»",
         "Becoming.«齐即谓»"
       ],
-      "sha256": "af3ac5562c213f36fe6e2c286583c611e10c4734f3ca1290bc02583829a9f6ed"
+      "sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -1027,12 +1059,27 @@
       "role": "receipt",
       "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/DESIGN.md",
+      "role": "integration",
+      "sha256": "602de70d6a0b93b96f56eb3a918c734193d291c045fff8d8e725533d4afcfdf8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/REVIEW-OU3d.md",
+      "role": "review",
+      "sha256": "ded13897c9af92e99ab45980f1403486f11ceed4b0bf0bc3f5937e788082c272"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T081241.505586Z/verification.json",
+      "role": "receipt",
+      "sha256": "57c3bab24affcd734b578e214ebea8e6b03f61db7674afe3b81244d942d5ea46"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T081241.505586Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1172,6 +1219,10 @@
     {
       "en": "28 October 2026 (OU3c, study section 433): the two relation laws moved into the grammar and the lagged orders proved from them; structure and change as one lumping proved from the image law, the case split of the step back of a returning configuration from the decomposition of reach, and the repetition of a lasso from the laws of steps. No anchor is its grammar term by rfl, so each keeps its definition; the reasons for the other consumers are in OU3c's audit.",
       "zh": "2026年10月28日（OU3c，研究第 433 节）：二关系律移入文法，滞后之序由之证出；结构与变化同为一种归并由像之律证出，返者之退一步之分情由所及之分解证出，套索之重复由步之律证出。无一锚依 rfl 即其文法之项，故各保其定义；其余依之者之理由见 OU3c 之审查。"
+    },
+    {
+      "en": "28 October 2026 (OU3d, study section 437): steps counted on the grammar, beside n steps: the last step, within n steps and its composition, and the laws of taking on without memory and with, the closed forms of the models' step-indexed laws, stated before any of them bridges to them; and the part's own law (PartForms.goAlike) given its reason: a law of its model, not a case of a grammar law.",
+      "zh": "2026年10月28日（OU3d，研究第 437 节）：于文法上计步，置于 n 步之旁：末一步、n 步以内及其接、无记忆与有记忆之承之律，即诸模型计步之律之闭式，先于其桥接而立；又部分自有其律（PartForms.goAlike）得其理由：为其模型之律，非文法之律之例。"
     }
   ]
 }

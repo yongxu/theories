@@ -1,0 +1,45 @@
+{
+  "errors": [
+    "master-laws-on-the-grammar: laws[7]: process-marker:round-narration: en: each round",
+    "master-laws-on-the-grammar: validation_scope: round-accretion: 3 rounds/sections cited: per-round notes belong in history/progress",
+    "master-laws-on-the-grammar: invalid proof receipt binding: declarations not elaborated in Becoming.GrammarLaws: Becoming.«存承之迭», Becoming.«承», Becoming.«承之迭», Becoming.«迭之末步», Becoming.«迭内», Becoming.«迭内之接», Becoming.«迭内即静或缘之迭», Becoming.«静或缘»"
+  ],
+  "source_drift": [
+    {
+      "id": "comparing-two-courses-on-what-they-admit",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "af3ac5562c213f36fe6e2c286583c611e10c4734f3ca1290bc02583829a9f6ed",
+      "current_sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "af3ac5562c213f36fe6e2c286583c611e10c4734f3ca1290bc02583829a9f6ed",
+      "current_sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-a-course-keeps-reachable",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "af3ac5562c213f36fe6e2c286583c611e10c4734f3ca1290bc02583829a9f6ed",
+      "current_sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "where-the-possible-grows",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "af3ac5562c213f36fe6e2c286583c611e10c4734f3ca1290bc02583829a9f6ed",
+      "current_sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    }
+  ]
+}
