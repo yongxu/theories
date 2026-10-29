@@ -44,7 +44,7 @@ GT = B / 'GrammarTransport.lean'
 edit(GL, """  of their own. Three of the models' step-indexed laws are proved
   from the laws of steps counted: `Withholding`'s closed forms from the laws of taking on, a course carrying
   its bounds (`WithinMoves.after_course`) from `«迭内之接»`, and an unending line reaching every later
-  step (`Web.reaches_onward`) from `«不穷则迭»`.""", """  of their own. The models' step-indexed laws are proved from the laws of steps counted:
+  step (`Web.reaches_onward`) from `«不穷则迭»`.""", """  of their own. Of the models' step-indexed laws, these are proved from the laws of steps counted:
   `Withholding`'s closed forms from the laws of taking on, a course carrying its bounds
   (`WithinMoves.after_course`) from `«迭内之接»`, an unending line reaching every later step
   (`Web.reaches_onward`) from `«不穷则迭»`, and the lineage laws of `Becoming.Identity`
@@ -61,7 +61,8 @@ which is board item OU3f's next part; that a pairing under continuation
 edit(GL, """  holds `x`, is closed and lies within the closure (`«所闭之证»`).
 """, """  holds `x`, is closed and lies within the closure (`«所闭之证»`). A region of the steps of time that
   every step keeps holds from where it holds on, the closure at the successor along a line
-  (`kept_onward`); the models' inductions over steps that keep a region are its cases.
+  (`kept_onward`); the models' activity laws that keep a region along the steps by their own
+  induction are its cases.
 """)
 edit(GL, """  | m + 1, le => «所闭之传递» («线则所闭» steps m (Nat.le_of_succ_le le)) («缘在所闭» (steps m le))
 """, """  | m + 1, le => «所闭之传递» («线则所闭» steps m (Nat.le_of_succ_le le)) («缘在所闭» (steps m le))
@@ -90,6 +91,10 @@ edit(CHECKER, """    "GrammarLaws: the five master laws on the grammar, for ever
     "occurrence itself or reached; """, """    "GrammarLaws: the five master laws on the grammar, for every carrier and relation: closure is being the "
     "occurrence itself or reached, and a region of the steps of time every step keeps holds from where it holds "
     "on; """)
+edit(CHECKER, """a map's image has a fixed successor exactly where sameness "
+    "under the map goes alike; widening""", """a map's image has a fixed successor exactly where sameness "
+    "under the map goes alike, and a map preserves a relation exactly where its image lies within the other; "
+    "widening""")
 ROOTMOD = PKG / 'Becoming.lean'
 edit(ROOTMOD, 'import Becoming.KeptOnward\n', '')
 edit(ROOTMOD, """* `Becoming.KeptOnward` (L1): a region every step keeps holds from where it holds on. A region of
@@ -103,9 +108,22 @@ edit(ROOTMOD, """* `Becoming.KeptOnward` (L1): a region every step keeps holds f
 edit(ROOTMOD, """  relation, with no premise. Closure: lying within a closure (`«所闭»`) is being the occurrence
   itself or reached (`«所闭当且仅当同一或及»`).""", """  relation, with no premise. Closure: lying within a closure (`«所闭»`) is being the occurrence
   itself or reached (`«所闭当且仅当同一或及»`), and a region of the steps of time that every step
-  keeps holds from where it holds on (`kept_onward`), the inductions over steps that keep a region
-  in `Becoming.Retaining`, `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`,
-  `Becoming.PatternPassing` and `Becoming.Persistence` being its cases (board items OU3f, HE).""")
+  keeps holds from where it holds on (`kept_onward`), the activity laws of `Becoming.Retaining`,
+  `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`, `Becoming.PatternPassing` and
+  `Becoming.Persistence` that keep a region along the steps by their own induction being its cases
+  (board items OU3f, HE).""")
+README_EDITS = {
+    PKG / 'README.md': [
+        ("(`«所闭当且仅当同一或及»`);", "(`«所闭当且仅当同一或及»`), a region every step keeps holding from where it holds on (`kept_onward`);"),
+        ("sameness under it goes alike (`«像定后当且仅当同行»`);", "sameness under it goes alike (`«像定后当且仅当同行»`), a map preserving a relation exactly where its image lies within the other (`«保之像»`);"),
+        ("; preserving an image lying within (`«保之像»`)", "")],
+    PKG / 'README.zh.md': [
+        ("（`«所闭当且仅当同一或及»`）；", "（`«所闭当且仅当同一或及»`），每步皆守之域自其所守处以后皆守（`kept_onward`）；"),
+        ("（`«像定后当且仅当同行»`）；", "（`«像定后当且仅当同行»`），映射保一关系恰当其像在另一关系之内（`«保之像»`）；"),
+        ("；保即像之所含（`«保之像»`）", "")]}
+for readme, pairs in README_EDITS.items():
+    for old, new in pairs:
+        edit(readme, old, new)
 for readme in (PKG / 'README.md', PKG / 'README.zh.md'):
     lines = text(readme).split('\n')
     rows = [i for i, l in enumerate(lines) if l.startswith('| L1 | [`Becoming.KeptOnward`]')]
@@ -122,6 +140,7 @@ theorem total_eq_of_supports {α : Type} {q : α → Nat} {l m : List α} (dl : 
     total l q = total m q :=
   Nat.le_antisymm (total_le_of_support dl fun a _ pos => lm a pos)
     (total_le_of_support dm fun a _ pos => ml a pos)
+
 
 """, "")
 edit(DISS, """        Nat.le_trans (Nat.add_le_add_left inner (q a)) (Nat.le_of_eq whole.symm)
@@ -141,8 +160,13 @@ theorem total_eq_of_supports {q : α → Nat} {l m : List α} (dl : Distinct l)
 edit(GT, """| `«保之像»` | preserving (保), read through the image: `«则» («像» φ R) R'` exactly where `R x y → R' (φ x) (φ y)`; a map preserving a relation, not a relation kept (守) nor two kept each within the other (齐) |
 """, "")
 edit(GT, """* **Along maps.** A map preserves a relation exactly where the image lies within the other
-  (`«保之像»`), the inclusion counterpart of carrying.""", """* **Along maps.** A map preserves a relation exactly where the image lies within the other
-  (`«保之像»`, stated beside `«像»` in `Becoming.GrammarLaws`), the inclusion counterpart of carrying.""")
+  (`«保之像»`), the inclusion counterpart of carrying. Ending on every branch (`«尽»`) reflects along any
+  map that carries continuation from a region closed under it (`«尽之拉回»`), and going on along some""",
+     """* **Along maps.** A map preserves a relation exactly where the image lies within the other
+  (`«保之像»`, stated beside `«像»` in `Becoming.GrammarLaws`), the inclusion counterpart of
+  carrying. Ending on every branch (`«尽»`) reflects along any map that carries continuation from a
+  region closed under it (`«尽之拉回»`), and going on along some""")
+edit(GT, "/-! ## Along maps: pulled back, and preserving -/", "/-! ## Along maps: pulled back -/")
 edit(GT, """/-- **Preserving, read through the image (保之像).** A map takes every pair `R` relates to a pair `R'`
 relates exactly where the image of `R` along it lies within `R'`. -/
 theorem «保之像» {α : Type u} {κ : Type v} (φ : α → κ) (R : «际» α) (R' : «际» κ) :
@@ -168,8 +192,10 @@ edit(GL, """  goes. Going alike keeps lines of every length alike (`«同行之�
   exactly where the image lies within the other (`«保之像»`).""")
 MECH = B / 'Mechanism.lean'
 edit(MECH, """  read through `π` (`Image`) is the least process the step factors through (`factors_image`,
-  `Image.least`).""", """  read through `π` (`Image`) is the least process the step factors through (`factors_image`,
-  `Image.least`), each a case of preserving read through the image (`«保之像»`).""")
+  `Image.least`). Some determined process on the description admits every step so read if and""",
+     """  read through `π` (`Image`) is the least process the step factors through (`factors_image`,
+  `Image.least`), each a case of preserving read through the image (`«保之像»`). Some determined
+  process on the description admits every step so read if and""")
 edit(MECH, """/-- The step of `P` factors through `π` into its image. -/
 theorem factors_image (P : Process S A) (π : S → K) : FactorsThrough P π (Image P π) :=
   fun s _ u step => ⟨s, u, rfl, step, rfl⟩
@@ -197,14 +223,12 @@ theorem Image.least {P : Process S A} {π : S → K} {Q : Process K A}
 edit(ROOTMOD, """  Along maps, a map preserves a relation exactly where its image lies within the other (`«保之像»`),
   and going on along some branch is pulled back along any map lifting continuation (`«延之拉回»`);""",
      """  Going on along some branch is pulled back along any map lifting continuation (`«延之拉回»`);""")
-edit(ROOTMOD, """  (`«像定后当且仅当同行»`). Order: widening of relations""", """  (`«像定后当且仅当同行»`); a map preserves a relation exactly where its image lies within the other
-  (`«保之像»`), with Mechanism's `factors_image` and `Image.least` its cases. Order: widening of
-  relations""")
+edit(ROOTMOD, """  (`«像定后当且仅当同行»`). Order: widening of relations""", """  (`«像定后当且仅当同行»`); a map preserves a relation exactly where its image lies within the
+  other (`«保之像»`), with Mechanism's `factors_image` and `Image.least` its cases. Order: widening
+  of relations""")
 edit(CHECKER, """closed region, and going on along some branch along any map lifting continuation; a map preserves a relation "
-    "exactly where its image lies within the other; steps, passing""", """closed region, and going on along some branch along any map lifting continuation; steps, passing""")
-edit(CHECKER, """    "occurrence itself or reached, and a region of the steps of time every step keeps holds from where it holds "
-    "on; """, """    "occurrence itself or reached, a map preserves a relation exactly where its image lies within the other, and "
-    "a region of the steps of time every step keeps holds from where it holds on; """)
+    "exactly where its image lies within the other; steps, passing""", """closed region, and going on along some branch along any map lifting continuation; steps, "
+    "passing""")
 
 for path, new in pending.items():
     path.write_text(new, encoding='utf-8')

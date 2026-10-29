@@ -73,4 +73,44 @@ Every import path was checked. KeepingWidening reaches Dissipation, Mechanism re
   - the measure and MV's generator;
   - re-pointing: what-a-line-holds-and-a-regularity-takes-in and constancy-read-at-a-members-class (the GrammarPath script's owner names both), and every record research-check names, each read first;
   - rendering in a clean worktree.
+- **The landing commit names every path the move touches:**
+  - the old and the new path of KeptOnward.lean;
+  - `lean/history/MANIFEST.json` and `lean/history/INDEX.md`;
+  - the move receipt `_process/architecture/moves/HE-history.json`.
+
+## The review, and what was taken
+
+One independent read-only review by a separate AI agent ([REVIEW-HE](review/REVIEW-HE.md), its checks in `review/checks/`).
+- **What it confirmed.**
+  - It rebuilt both builds from the checker's cache and compared every constant of the package, 49,972 before and 49,971 after. Only the three moves happen, one matcher of the old proof is gone, and only `factors_image` and `Image.least` change value.
+  - `#check @` on the 1,366 declarations of the thirteen modules is byte-identical.
+  - Mechanism's two lemmas are genuine cases of «保之像»: the law takes the whole old proof, and nothing is applied and then undone.
+  - Item 1 is applied exactly as its owner's script writes it.
+  - The history move is sound.
+  - No other tool is misled by the docstring line the scanner reads as a definition.
+  - The measure does not move.
+
+Every finding was taken.
+1. **The records script stopped halfway** on a reference with no declaration list. This was fixed before the review ended: the script reads the list with `.get` and writes the three records only at the end.
+2. **Two validation scopes** (master-laws-on-the-grammar, what-keeping-widening-needs) now follow HE: its derivations, its review, KeepingWidening's 306 declarations and Dissipation's lemma. The review is referenced.
+3. **The receipt is referenced** in the two records whose new bindings use it.
+4. **One date for every line,** the day of the landing, as the owner's script does: the records' history lines, the board's latest-receipt sentence and the move plan.
+5. **The land step moves HE's row** to the history file's landed rows, after UE20's, with its links rebased (board rule 4).
+6. **The head step refuses** where another item holds the head (rule 5).
+7. **Board texts.**
+   - OU3f's row says `kept_onward` now stands beside «线则所闭» in GrammarLaws.
+   - "The way now", item 3, saying the PF wording is held for the next rebuild, is the coordinating session's text; it is told.
+8. **GrammarLaws' module doc claims no more than the Lean.**
+   - "Of the models' step-indexed laws, these are proved…", since `Reidentify.old_still` keeps its own induction.
+   - "the models' activity laws that keep a region along the steps by their own induction are its cases", 01 §7's wording, in the root module's bullet too.
+9. **The README rows:** GrammarTransport's row no longer lists «保之像», and GrammarLaws' names «保之像» and `kept_onward`.
+10. **The checker's scope** files «保之像» under lumping.
+11. **The study section** gives the move, the rehearsal, the move receipt and this review.
+12. **GrammarTransport's heading** is now "Along maps: pulled back".
+13. **`he_texts.py`** checks both chapter edits before writing either.
+14. **The history move** is checked by `research.py move --check`. The move script's usage says that it edits the research config even on a dry run, and the landing commit's path list is above.
+15. **The scanner filter's caveat** (a private definition would be filed the same way) does not bite here: the modules have none.
+16. **Wrapping** of the kit's long lines, and KeepingWidening's double blank line.
+
+Findings 8, 12 and 16 changed Lean files, GrammarLaws among them. So the rehearsal is run again on main before the head is claimed, and the landing run reuses it: one rebuild still carries every held edit.
 

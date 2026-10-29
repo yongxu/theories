@@ -21,9 +21,11 @@ def edit(path, old, new):
     path.write_text(text.replace(old, new), encoding='utf-8')
 
 
-edit(CH / '01-ROOT.md',
-     """the image law on a determined law's one move (`Learning.goAlike_iff_lumped`, through `Learning.lumped_iff_fixed_image`).""",
-     """the image law on a determined law's one move (`Learning.goAlike_iff_lumped`, through `Learning.lumped_iff_fixed_image`). A map preserves a relation exactly where its image lies within the other (`«保之像»`), and the image of a step along a projection being the least process the step factors through is its case (`factors_image`, `Image.least`).""")
+ROOT01 = CH / '01-ROOT.md'
+OLD01 = """the image law on a determined law's one move (`Learning.goAlike_iff_lumped`, through `Learning.lumped_iff_fixed_image`)."""
+NEW01 = """the image law on a determined law's one move (`Learning.goAlike_iff_lumped`, through `Learning.lumped_iff_fixed_image`). A map preserves a relation exactly where its image lies within the other (`«保之像»`), and the image of a step along a projection being the least process the step factors through is its case (`factors_image`, `Image.least`)."""
+text01 = ROOT01.read_text(encoding='utf-8')
+assert text01.count(OLD01) == 1, ('01-ROOT.md', text01.count(OLD01))
 
 R = json.loads((ROOT / PKG / 'becoming-checks' / RECEIPT / 'verification.json').read_text())
 assert R['status'] == 'passed'
@@ -53,6 +55,7 @@ s, k = re.subn(r"At core receipt \[`[0-9TZ.]+`\]\([^)]*\) \(Lean 4\.29\.1\), the
                r"them; [\d,]+ declarations were audited; \d+ generated `injEq` lemmas depend on `propext`; \d+ superseded "
                r"modules were kept out of the run\.", lambda m: counts, s)
 assert k == 1, k
+ROOT01.write_text(text01.replace(OLD01, NEW01), encoding='utf-8')
 path.write_text(s, encoding='utf-8')
 
 section = (HERE / 'he_study.txt').read_text(encoding='utf-8')
