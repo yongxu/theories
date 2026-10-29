@@ -691,6 +691,11 @@
    "base": "general",
    "note": "ConditionalWeights UE2: the exit from a margin and what a record of the course says of it"
   },
+  "expected-free-energy-and-its-terms": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "ExpectedFreeEnergyReals UE19: expected free energy as risk plus ambiguity and as the negative of epistemic less pragmatic value, the epistemic value an expected information gain, read only through the lumping the likelihood makes (periphery)"
+  },
   "experiment-needs-return": {
    "region": "knowing",
    "base": "frame",
@@ -1981,6 +1986,11 @@
    "base": "general",
    "note": "settling = LPO calibration"
   },
+  "the-markov-blanket-as-a-coupling-structure": {
+   "region": "knowing",
+   "base": "general",
+   "note": "Blanket UE18: the agent driven by its sensory course on a blanketed law, through what the sensory part reads (lumping); with any model and policy a threshold-read supply unseen before the break, joined to the World for the witness"
+  },
   "the-move-alone-underdetermines": {
    "region": "root",
    "base": "general",
@@ -2301,6 +2311,11 @@
    "base": "general",
    "note": "Unread RF2: what readings fix of the unread; a selected twin where the formation can tell; acts, states and couplings apart"
   },
+  "what-seeking-cannot-separate": {
+   "region": "knowing",
+   "base": "general",
+   "note": "LumpedSeeking UE19: a pair every experiment ties keeps its prior order under every course of seeking, whatever the policy of choice; seeking turns it once an experiment separating it is chosen"
+  },
   "what-self-concern-alone-ranks": {
    "region": "significance",
    "base": "general",
@@ -2320,6 +2335,11 @@
    "region": "significance",
    "base": "general",
    "note": "SD1"
+  },
+  "what-the-existence-claim-forbids": {
+   "region": "knowing",
+   "base": "general",
+   "note": "Blanket UE18: the point weighting is conditioning on the outcome; every course of least surprisal under it; a listed outcome forbidden exactly where its weight is nothing"
   },
   "what-the-step-across-standpoints-reaches": {
    "region": "significance",
@@ -2502,6 +2522,11 @@
    "region": "map",
    "base": "frame",
    "note": "attraction on runs"
+  },
+  "Becoming.Blanket": {
+   "region": "knowing",
+   "base": "general",
+   "note": "UE18 the Markov blanket and the existence claim (03 §1, §6)"
   },
   "Becoming.Boundaries": {
    "region": "significance",
@@ -3392,6 +3417,11 @@
    "region": "significance",
    "base": "frame",
    "note": "strict loss matching contains C"
+  },
+  "Becoming.LumpedSeeking": {
+   "region": "knowing",
+   "base": "general",
+   "note": "UE19 what seeking cannot separate (03 §6)"
   },
   "Becoming.MapInstances": {
    "region": "map",

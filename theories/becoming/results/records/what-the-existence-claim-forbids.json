@@ -1,0 +1,207 @@
+{
+  "schema_version": 2,
+  "id": "what-the-existence-claim-forbids",
+  "title": {
+    "en": "What the existence claim forbids",
+    "zh": "存在之主张所禁者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-29T16:53:52+00:00",
+  "statement": {
+    "en": "The point weighting on an outcome is conditioning on it, under which every listed course is of least surprisal and every event off it weighs nothing; a listed outcome has the share nothing exactly where its weight is nothing.",
+    "zh": "置于一结果之点权重即以之为条件，其下每一列出之历程惊异最小，其外之事件权重为零；列出之结果份额为零，恰当其权重为零。"
+  },
+  "laws": [
+    {
+      "en": "The point weighting on an outcome is the counting weighting restricted to the record of being it: read off a course of a determined law, the existence claim's model is conditioning on the course itself (point, isAt, point_is_restrict).",
+      "zh": "置于一结果之点权重，即限于其记录之计数权重：读自确定律之历程，存在之主张之模型即以该历程本身为条件（point、isAt、point_is_restrict）。",
+      "declarations": [
+        "Becoming.Blanket.point",
+        "Becoming.Blanket.isAt",
+        "Becoming.Blanket.point_is_restrict"
+      ]
+    },
+    {
+      "en": "Under the point weighting a listed outcome weighs something, its share is the whole and no event's is greater, so it is of least surprisal, and every event not holding at it weighs nothing (point_whole, least_surprisal, point_forbids_rest, le_mass_of_mem).",
+      "zh": "于点权重下，列出之结果有权重，其份额即整体，无事件之份额更大，故其惊异最小；凡不于其成立之事件权重为零（point_whole、least_surprisal、point_forbids_rest、le_mass_of_mem）。",
+      "declarations": [
+        "Becoming.Blanket.point_whole",
+        "Becoming.Blanket.least_surprisal",
+        "Becoming.Blanket.point_forbids_rest",
+        "Becoming.Blanket.le_mass_of_mem"
+      ]
+    },
+    {
+      "en": "The occupation weighting read off a run gives every visited, listed state a positive share, ending included, and every unvisited state no weight (visits and four more).",
+      "zh": "读自运行之占据权重，给每一访问且列出之状态正份额（终结亦然），未访问之状态无权重（visits 等五项）。",
+      "declarations": [
+        "Becoming.Blanket.visits",
+        "Becoming.Blanket.visits_le_succ",
+        "Becoming.Blanket.visits_pos",
+        "Becoming.Blanket.visits_zero",
+        "Becoming.Blanket.read_off_admits"
+      ]
+    },
+    {
+      "en": "A listed outcome has the share nothing exactly where its weight is nothing: forbidding a course needs a weighting fixed apart from it (unweighted_share, forbids_iff).",
+      "zh": "列出之结果份额为零，恰当其权重为零：禁一历程需与之无关而定之权重（unweighted_share、forbids_iff）。",
+      "declarations": [
+        "Becoming.Blanket.unweighted_share",
+        "Becoming.Blanket.forbids_iff"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Natural weightings of listed outcomes, equality of outcomes decided; for the occupation weighting, a run's first n states.",
+      "zh": "不加公理。列出之结果之自然数权重，结果之相等可判定；于占据权重，运行之前 n 状态。"
+    },
+    {
+      "en": "Modelling choices: surprisal read as the reciprocal share, with no logarithm; a course's weighting read off it as the point weighting, a steady state's as the occupation weighting.",
+      "zh": "建模之选：惊异读作倒数份额，无对数；历程之权重读作点权重，稳态之权重读作占据权重。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The principle's own density, a steady-state density of a stochastic law, or its Helmholtz decomposition.",
+      "zh": "原理自身之密度、随机律之稳态密度或其 Helmholtz 分解。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the principle is empty: its proponents concede it is not falsifiable alone, and its content lies in the models it is construed with.",
+      "zh": "原理为空：其倡导者承认其单独不可证伪，其内容在其所解释之模型。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The claim's average form, the weighting read off a course maximizing its likelihood, in counting form.",
+      "zh": "主张之平均形式（读自历程之权重使其似然最大）之计数形式。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "detail": {
+        "en": "The ended threshold witness rests at a fixed point of its law (ThresholdDrain.short_rests); read as a steady state with a trivial blanket, the claim's antecedent holds of the ended system too.",
+        "zh": "已终结之阈之例静止于其律之不动点（ThresholdDrain.short_rests）；读作具平凡之毯之稳态，主张之前件于已终结之系统亦成立。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T164943.729811Z): 14 of the 49 declarations of Becoming.Blanket, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE18), whose probe the revision adopted, and a re-check, study section 452; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.Blanket 之 49 项声明中之 14 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE18），修订采其探针，并复查，见研究第 452 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "The average form in counting form, N^N·∏ a^n ≤ A^N·∏ n^n (the bound UE17 states over the reals); review by a person.",
+    "zh": "平均形式之计数形式 N^N·∏ a^n ≤ A^N·∏ n^n（UE17 于实数上所述之界）；人之审查。"
+  },
+  "correspondence": {
+    "en": "The existence claim (Friston 2013; 2019, arXiv:1906.10184): whatever persists appears to minimize free energy. Its proponents class it with principles of stationary action, not falsifiable strictly speaking (Ramstead and others 2023, Interface Focus 13); Andrews (2021) defends it as a formal structure whose content lies in its models; the critics' worry is breadth (Raja and others 2021; Bruineberg and others 2022). The counting form here is near-definitional and conceded. Graded in UE18's NOTE.",
+    "zh": "存在之主张（Friston 2013；2019，arXiv:1906.10184）：凡持存者皆显若最小化自由能。其倡导者归之于驻定作用之原理，严格言之不可证伪（Ramstead 等 2023，Interface Focus 13）；Andrews（2021）辩之为形式结构，其内容在其模型；批评者所忧在其宽泛（Raja 等 2021；Bruineberg 等 2022）。此处之计数形式近乎定义，且为所承认。分级见 UE18 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+  "aliases": [
+    "What the existence claim forbids",
+    "存在之主张所禁者",
+    "existence claim",
+    "as-if reading",
+    "Becoming.Blanket.point_is_restrict",
+    "Becoming.Blanket.forbids_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "conditioning-by-restriction",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "restrict, share, mass_congr, mass_none and share_within: conditioning by restriction and shares.",
+        "zh": "restrict、share、mass_congr、mass_none 与 share_within：以限制为条件与份额。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-markov-blanket-as-a-coupling-structure",
+      "detail": {
+        "en": "The free-energy principle's blanket and existence claim, stated in the same module.",
+        "zh": "同一模块所述之自由能原理之毯与存在之主张。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Blanket.forbids_iff",
+        "Becoming.Blanket.isAt",
+        "Becoming.Blanket.le_mass_of_mem",
+        "Becoming.Blanket.least_surprisal",
+        "Becoming.Blanket.point",
+        "Becoming.Blanket.point_forbids_rest",
+        "Becoming.Blanket.point_is_restrict",
+        "Becoming.Blanket.point_whole",
+        "Becoming.Blanket.read_off_admits",
+        "Becoming.Blanket.unweighted_share",
+        "Becoming.Blanket.visits",
+        "Becoming.Blanket.visits_le_succ",
+        "Becoming.Blanket.visits_pos",
+        "Becoming.Blanket.visits_zero"
+      ],
+      "sha256": "517d21ed20f59fce954e4f007eee54a9342bb1908a487ce9bd1b2d307d390677"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "role": "proof",
+      "sha256": "479c8401487664728e63fd6d247dcfb89b2fd578185097251bcf2055cac0361f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "role": "receipt",
+      "sha256": "90045f08330f2bdf2df1d888eb17d62d7cd9c1d0546ab710bd7f5b14b3b2e7a4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "9e197668e4c87c4ace407a86693dfccf530fb5d9ec81a056ced2dcbb7a6dfd73"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue18-blanket-and-existence/NOTE.md",
+      "role": "integration",
+      "sha256": "b233e55c3eb5d4290006d85e2797e49b6b6081819228920150be148a1cd52075"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue18-blanket-and-existence/REVIEW-UE18.md",
+      "role": "integration",
+      "sha256": "da08b8d41fb4a9b6ef4b964e12e1c922b66ec0748ebead8d2c6c25bfdc9f74e7"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "7a3737d048bbdf649da364ff3a688643fef458f088c6bd4b5b5c04ea874db53f"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Blanket",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "29 October 2026: added (UE18), what the existence claim forbids: the point weighting conditioning on the outcome, every listed course of least surprisal under it and every event off it weighing nothing; the occupation weighting admitting every visited state; a listed outcome forbidden exactly where its weight is nothing; after a review and a re-check; study section 452.",
+      "zh": "2026年10月29日：新增（UE18），存在之主张所禁者：点权重即以结果为条件，其下每一列出之历程惊异最小，其外之事件权重为零；占据权重容纳每一访问之状态；列出之结果被禁恰当其权重为零；经审查与复查；研究第 452 节。"
+    }
+  ]
+}

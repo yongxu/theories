@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-488 registered results: 457 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1138 curated edges join 416 results to the results they draw on.
+492 registered results: 461 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1143 curated edges join 420 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -125,6 +125,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [evolution-on-descent][] ← <a id="evolution-on-descent--living-on-and-descent"></a>[living-on-and-descent][] · <a id="evolution-on-descent--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="evolution-on-descent--more-needs-renewers"></a>[more-needs-renewers][] · <a id="evolution-on-descent--generation-is-replenishment"></a>[generation-is-replenishment][]
 - [exchanges-commute-unless-joined][] ← <a id="exchanges-commute-unless-joined--only-the-order-of-change-shows"></a>[only-the-order-of-change-shows][]
 - [exit-from-a-margin][] ← <a id="exit-from-a-margin--typicality-by-counting"></a>[typicality-by-counting][] · <a id="exit-from-a-margin--fulfillment-chance-floor"></a>[fulfillment-chance-floor][] · <a id="exit-from-a-margin--conditioning-by-restriction"></a>[conditioning-by-restriction][]
+- [expected-free-energy-and-its-terms][] ← <a id="expected-free-energy-and-its-terms--free-energy-bounds-surprisal"></a>[free-energy-bounds-surprisal][]
 - [experiment-needs-return][] ← <a id="experiment-needs-return--joint-difference-making"></a>[joint-difference-making][] · <a id="experiment-needs-return--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="experiment-needs-return--testing-within-couplings"></a>[testing-within-couplings][]
 - [far-conveying-runs-the-family-down][] ← <a id="far-conveying-runs-the-family-down--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][]
 - [feedback-and-reach][] ← <a id="feedback-and-reach--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="feedback-and-reach--levels-of-closure"></a>[levels-of-closure][] · <a id="feedback-and-reach--four-cases-of-a-part"></a>[four-cases-of-a-part][]
@@ -348,6 +349,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [the-class-of-being-joined][] ← <a id="the-class-of-being-joined--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-class-of-being-joined--wen-in-the-grammar"></a>[wen-in-the-grammar][]
 - [the-continuation-condition-on-the-root][] ← <a id="the-continuation-condition-on-the-root--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-continuation-condition-on-the-root--what-the-step-across-standpoints-reaches"></a>[what-the-step-across-standpoints-reaches][]
 - [the-gap-for-ones-own-act][] ← <a id="the-gap-for-ones-own-act--selection-through-couplings"></a>[selection-through-couplings][] · <a id="the-gap-for-ones-own-act--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
+- [the-markov-blanket-as-a-coupling-structure][] ← <a id="the-markov-blanket-as-a-coupling-structure--selection-through-couplings"></a>[selection-through-couplings][] · <a id="the-markov-blanket-as-a-coupling-structure--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [the-move-alone-underdetermines][] ← <a id="the-move-alone-underdetermines--weights-count-situations"></a>[weights-count-situations][]
 - [the-present-on-causal-set-growth][] ← <a id="the-present-on-causal-set-growth--precedence-and-its-links"></a>[precedence-and-its-links][] · <a id="the-present-on-causal-set-growth--what-can-be-born-next"></a>[what-can-be-born-next][] · <a id="the-present-on-causal-set-growth--normal-forms-need-decided-apartness"></a>[normal-forms-need-decided-apartness][] · <a id="the-present-on-causal-set-growth--order-of-exchanges-is-the-invariant"></a>[order-of-exchanges-is-the-invariant][] · <a id="the-present-on-causal-set-growth--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-present-on-causal-set-growth--counts-exist-where-decided"></a>[counts-exist-where-decided][]
 - [the-rest-outruns-the-renewal][] ← <a id="the-rest-outruns-the-renewal--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="the-rest-outruns-the-renewal--what-taking-all-excludes"></a>[what-taking-all-excludes][]
@@ -403,9 +405,11 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-pooled-coupling-reaches][] ← <a id="what-pooled-coupling-reaches--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-pooled-coupling-reaches--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [what-position-reads][] ← <a id="what-position-reads--relative-position-is-zero-sum"></a>[relative-position-is-zero-sum][]
 - [what-readings-fix-of-the-unread][] ← <a id="what-readings-fix-of-the-unread--generalization-through-lumping"></a>[generalization-through-lumping][]
+- [what-seeking-cannot-separate][] ← <a id="what-seeking-cannot-separate--conditioning-by-restriction"></a>[conditioning-by-restriction][]
 - [what-self-concern-alone-ranks][] ← <a id="what-self-concern-alone-ranks--widening-as-what-every-weighting-ranks"></a>[widening-as-what-every-weighting-ranks][] · <a id="what-self-concern-alone-ranks--groups-whose-conditions-are-coupled"></a>[groups-whose-conditions-are-coupled][]
 - [what-the-claims-do-not-read][] ← <a id="what-the-claims-do-not-read--basic-priority-step-by-step"></a>[basic-priority-step-by-step][]
 - [what-the-dynamics-leave-open][] ← <a id="what-the-dynamics-leave-open--rivals-bounded-in-time"></a>[rivals-bounded-in-time][]
+- [what-the-existence-claim-forbids][] ← <a id="what-the-existence-claim-forbids--conditioning-by-restriction"></a>[conditioning-by-restriction][]
 - [what-the-step-across-standpoints-reaches][] ← <a id="what-the-step-across-standpoints-reaches--continuation-condition-decomposition"></a>[continuation-condition-decomposition][] · <a id="what-the-step-across-standpoints-reaches--presupposition-scopes"></a>[presupposition-scopes][]
 - [what-training-installs][] ← <a id="what-training-installs--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="what-training-installs--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-training-installs--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][] · <a id="what-training-installs--the-rest-outruns-the-renewal"></a>[the-rest-outruns-the-renewal][]
 - [where-a-formations-acts-return][] ← <a id="where-a-formations-acts-return--what-a-center-can-know-by-a-step"></a>[what-a-center-can-know-by-a-step][]
@@ -553,6 +557,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [exchanges-commute-unless-joined]: theories/becoming/results/records/exchanges-commute-unless-joined.md
 [exclusive-footprint-support]: theories/becoming/results/records/exclusive-footprint-support.md
 [exit-from-a-margin]: theories/becoming/results/records/exit-from-a-margin.md
+[expected-free-energy-and-its-terms]: theories/becoming/results/records/expected-free-energy-and-its-terms.md
 [experiment-needs-return]: theories/becoming/results/records/experiment-needs-return.md
 [fallible-witness-diagnosability]: theories/becoming/results/records/fallible-witness-diagnosability.md
 [far-conveying-runs-the-family-down]: theories/becoming/results/records/far-conveying-runs-the-family-down.md
@@ -797,6 +802,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [the-continuation-condition-on-the-root]: theories/becoming/results/records/the-continuation-condition-on-the-root.md
 [the-gap-for-ones-own-act]: theories/becoming/results/records/the-gap-for-ones-own-act.md
 [the-last-change-of-a-run]: theories/becoming/results/records/the-last-change-of-a-run.md
+[the-markov-blanket-as-a-coupling-structure]: theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md
 [the-move-alone-underdetermines]: theories/becoming/results/records/the-move-alone-underdetermines.md
 [the-present-on-causal-set-growth]: theories/becoming/results/records/the-present-on-causal-set-growth.md
 [the-rest-outruns-the-renewal]: theories/becoming/results/records/the-rest-outruns-the-renewal.md
@@ -856,10 +862,12 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-pooled-coupling-reaches]: theories/becoming/results/records/what-pooled-coupling-reaches.md
 [what-position-reads]: theories/becoming/results/records/what-position-reads.md
 [what-readings-fix-of-the-unread]: theories/becoming/results/records/what-readings-fix-of-the-unread.md
+[what-seeking-cannot-separate]: theories/becoming/results/records/what-seeking-cannot-separate.md
 [what-self-concern-alone-ranks]: theories/becoming/results/records/what-self-concern-alone-ranks.md
 [what-taking-all-excludes]: theories/becoming/results/records/what-taking-all-excludes.md
 [what-the-claims-do-not-read]: theories/becoming/results/records/what-the-claims-do-not-read.md
 [what-the-dynamics-leave-open]: theories/becoming/results/records/what-the-dynamics-leave-open.md
+[what-the-existence-claim-forbids]: theories/becoming/results/records/what-the-existence-claim-forbids.md
 [what-the-step-across-standpoints-reaches]: theories/becoming/results/records/what-the-step-across-standpoints-reaches.md
 [what-training-installs]: theories/becoming/results/records/what-training-installs.md
 [when-the-runs-of-a-process-settle]: theories/becoming/results/records/when-the-runs-of-a-process-settle.md

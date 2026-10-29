@@ -1,0 +1,278 @@
+{
+  "schema_version": 2,
+  "id": "what-seeking-cannot-separate",
+  "title": {
+    "en": "What seeking cannot separate",
+    "zh": "探求所不能分者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-29T16:55:21+00:00",
+  "statement": {
+    "en": "Two hypotheses every experiment ties keep their prior order under every course of seeking, however each experiment is chosen from the course so far; seeking corrects an order only where some experiment it can choose separates the pair.",
+    "zh": "每一实验皆并之二假设，于每一探求历程下保其先验之序，无论每一实验如何依迄今之历程而选；探求唯于其可选之某一实验分此二者之处，方能纠正其序。"
+  },
+  "laws": [
+    {
+      "en": "Two hypotheses a likelihood ties: its weights agree on them at every value of the record, so every record weighs alike under them (Tied, tied_mass).",
+      "zh": "似然所并之二假设：其权重于记录之每一值皆相同，故每一记录于其下权重相同（Tied、tied_mass）。",
+      "declarations": [
+        "Becoming.LumpedSeeking.Tied",
+        "Becoming.LumpedSeeking.tied_mass"
+      ]
+    },
+    {
+      "en": "Given a record weighing something under a tied pair listed once, the share of one given it is at most the other's exactly where its prior weight is; where the record weighs nothing in the whole, the first's prior weight is nothing and both sides hold (single_le_evidence, posterior_le_iff_prior).",
+      "zh": "记录于列而不重之受并二假设下有权重，则其一于记录下之份额至多为另一之份额，恰当其先验权重至多为之；记录于整体无权重时，前者之先验权重为零，两边皆成立（single_le_evidence、posterior_le_iff_prior）。",
+      "declarations": [
+        "Becoming.LumpedSeeking.single_le_evidence",
+        "Becoming.LumpedSeeking.posterior_le_iff_prior"
+      ]
+    },
+    {
+      "en": "The shares of a tied pair given any record stand as the prior weights do; where the prior weighs the false one strictly above the true one, every record weighing something under them leaves it above (posterior_ratio_kept, order_kept).",
+      "zh": "受并二假设于任一记录下之份额，如其先验权重之比；先验置假者严格高于真者时，每一于其下有权重之记录皆令其仍居上（posterior_ratio_kept、order_kept）。",
+      "declarations": [
+        "Becoming.LumpedSeeking.posterior_ratio_kept",
+        "Becoming.LumpedSeeking.order_kept"
+      ]
+    },
+    {
+      "en": "A course of seeking weighs, at each step, the weight of choosing the experiment, read from the course so far, times the outcome's weight under it; a pair tied under every experiment is tied over every course (seekWeight, seek_tied).",
+      "zh": "探求之历程于每一步之权重，为依迄今之历程选取实验之权重乘以结果于该实验下之权重；每一实验皆并之二假设，于每一历程皆并（seekWeight、seek_tied）。",
+      "declarations": [
+        "Becoming.LumpedSeeking.seekWeight",
+        "Becoming.LumpedSeeking.seek_tied"
+      ]
+    },
+    {
+      "en": "Where every experiment ties the true hypothesis and the false one and the prior weighs the false one strictly above, every record of courses of seeking weighing something under them leaves it above, whatever the policy of choice (seeking_keeps_order).",
+      "zh": "每一实验皆并真假二假设，且先验置假者严格居上，则每一于其下有权重之探求历程之记录皆令其仍居上，无论择取之策略（seeking_keeps_order）。",
+      "declarations": [
+        "Becoming.LumpedSeeking.seeking_keeps_order"
+      ]
+    },
+    {
+      "en": "The witness: three coins, biased toward heads (true), fair and biased toward tails, with prior weights 5, 6 and 7; a model reading only whether two tosses agree ties the biases, its weights totalling sixteen under each (Agree.Bias and eight more).",
+      "zh": "例：三枚硬币，偏正面（真）、均匀、偏反面，先验权重为 5、6、7；唯读两次投掷是否相同之模型并二偏，其权重于每一者之下总和为十六（Agree.Bias 等九项）。",
+      "declarations": [
+        "Becoming.LumpedSeeking.Agree.Bias",
+        "Becoming.LumpedSeeking.Agree.hypotheses",
+        "Becoming.LumpedSeeking.Agree.distinct",
+        "Becoming.LumpedSeeking.Agree.prior",
+        "Becoming.LumpedSeeking.Agree.outcomes",
+        "Becoming.LumpedSeeking.Agree.twoHeads",
+        "Becoming.LumpedSeeking.Agree.agreeing",
+        "Becoming.LumpedSeeking.Agree.ties",
+        "Becoming.LumpedSeeking.Agree.totals"
+      ]
+    },
+    {
+      "en": "Given two heads, the true coin comes above the fair one, the wrong order the model separates turning, while the tails-biased one stays above the true one (Agree.turns_fair, Agree.keeps_tails).",
+      "zh": "两次正面之下，真币升至均匀者之上，模型所分之误序得转；偏反面者仍居真币之上（Agree.turns_fair、Agree.keeps_tails）。",
+      "declarations": [
+        "Becoming.LumpedSeeking.Agree.turns_fair",
+        "Becoming.LumpedSeeking.Agree.keeps_tails"
+      ]
+    },
+    {
+      "en": "With only the experiment reading agreement, a course of two heads keeps the tails-biased coin above the true one (Agree.agreeCourse, Agree.seeking_keeps_tails).",
+      "zh": "唯有读相同与否之实验时，两次正面之历程令偏反面者仍居真币之上（Agree.agreeCourse、Agree.seeking_keeps_tails）。",
+      "declarations": [
+        "Becoming.LumpedSeeking.Agree.agreeCourse",
+        "Becoming.LumpedSeeking.Agree.seeking_keeps_tails"
+      ]
+    },
+    {
+      "en": "With two experiments, reading both tosses or only whether they agree, and a policy choosing the first, the same outcome turns that order (Agree.readBoth, Agree.experiment, Agree.pickReading, Agree.readCourse, Agree.seeking_turns_tails).",
+      "zh": "有二实验，读两次投掷或唯读其相同与否，策略择前者，则同一结果转此序（Agree.readBoth、Agree.experiment、Agree.pickReading、Agree.readCourse、Agree.seeking_turns_tails）。",
+      "declarations": [
+        "Becoming.LumpedSeeking.Agree.readBoth",
+        "Becoming.LumpedSeeking.Agree.experiment",
+        "Becoming.LumpedSeeking.Agree.pickReading",
+        "Becoming.LumpedSeeking.Agree.readCourse",
+        "Becoming.LumpedSeeking.Agree.seeking_turns_tails"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Natural weights; hypotheses listed once and records listed, equality of hypotheses decided; for seeking, experiments and outcomes of any types.",
+      "zh": "不加公理。自然数权重；假设列而不重，记录列出，假设之相等可判定；于探求，实验与结果为任意类型。"
+    },
+    {
+      "en": "The tie is pointwise, the likelihood's weights agreeing on the pair at every value of the record, under every experiment for seeking; the record weighs something under the pair.",
+      "zh": "并为逐点：似然之权重于记录之每一值于此二者皆相同，于探求则于每一实验皆然；记录于此二者下有权重。"
+    },
+    {
+      "en": "Modelling choices: exact posteriors, shares compared by cross-multiplication; Boolean records; a policy of choice as a weight on each experiment read from the course so far; no logarithm and no transitions.",
+      "zh": "建模之选：精确之后验，份额以交叉相乘比较；布尔记录；择取之策略为依迄今之历程置于每一实验之权重；无对数，无转移。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That seeking never corrects: within what some experiment separates it can (Agree.seeking_turns_tails; the principle's T-maze).",
+      "zh": "探求从不纠正：于某一实验所分之内，探求能纠正（Agree.seeking_turns_tails；原理之 T 迷宫）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Expected free energy itself, the softmax over policies, precision, multi-step policies with transitions, or novelty and structure learning.",
+      "zh": "期望自由能本身、策略之 softmax、精度、具转移之多步策略，或新奇与结构之学习。",
+      "kind": "scope"
+    },
+    {
+      "en": "A theorem joining it to the periphery's expected free energy through the share given the record.",
+      "zh": "经记录下之份额与外围之期望自由能相接之定理。",
+      "kind": "scope"
+    },
+    {
+      "en": "That actual agents' likelihoods tie what matters, or that a design built on the epistemic drive fails.",
+      "zh": "实际主体之似然并其所关切者，或基于认知驱动之设计失败。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LumpedSeeking.lean",
+      "detail": {
+        "en": "Given two heads, under the model reading only whether two tosses agree, the tails-biased coin stays above the true one (Agree.keeps_tails), and with only that experiment, so does seeking (Agree.seeking_keeps_tails).",
+        "zh": "两次正面之下，于唯读两次投掷是否相同之模型，偏反面者仍居真币之上（Agree.keeps_tails）；唯有此实验时，探求亦然（Agree.seeking_keeps_tails）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T164943.729811Z): all 27 declarations of Becoming.LumpedSeeking, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE19) and a re-check (RECHECK-UE19), study section 453; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.LumpedSeeking 之全部 27 项声明，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE19）并复查（RECHECK-UE19），见研究第 453 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "A many-step form with lumpable transitions; the join to the periphery's expected free energy through givenShare_eq_posterior; novelty and structure learning as conditioning in a larger model; review by a person.",
+    "zh": "具可归并转移之多步形式；经 givenShare_eq_posterior 与外围之期望自由能相接；新奇与结构之学习作为更大模型中之条件化；人之审查。"
+  },
+  "correspondence": {
+    "en": "Identification (Rothenberg 1971, Econometrica 39) in its Bayesian form (Poirier 1998, Econometric Theory 14): a likelihood flat across parameters leaves their prior ratio unchanged by any data. In active inference the epistemic term draws an agent to the cue of the T-maze, where seeking corrects (Friston, Rigoli, Ognibene, Mathys, FitzGerald and Pezzulo 2015); one proposal reads it as inherent self-verification and self-correction (Wen 2025, arXiv:2508.05766; candidate 7 of UE1's search, graded (b), weak). The law forbids that wording unqualified, not active inference's account, which adds novelty and structure learning (Friston, Lin, Frith, Pezzulo, Hobson and Ondobaka 2017; Da Costa and others 2020). The posterior laws are corollaries of posterior_single and posterior_le_iff; new is the seeking form. Graded in UE19's NOTE.",
+    "zh": "识别（Rothenberg 1971，Econometrica 39）之贝叶斯形式（Poirier 1998，Econometric Theory 14）：似然于诸参数间平坦，则任何数据皆不改其先验之比。于主动推断，认知项引主体至 T 迷宫之提示处，探求于彼纠正（Friston、Rigoli、Ognibene、Mathys、FitzGerald、Pezzulo 2015）；一提议读之为内在之自我验证与自我纠正（Wen 2025，arXiv:2508.05766；UE1 搜索之候选 7，评为 (b)，弱）。此律禁其不加限定之措辞，不禁主动推断之说明，后者另加新奇与结构之学习（Friston、Lin、Frith、Pezzulo、Hobson、Ondobaka 2017；Da Costa 等 2020）。后验之律为 posterior_single 与 posterior_le_iff 之推论；新者为探求之形式。分级见 UE19 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LumpedSeeking.lean",
+  "aliases": [
+    "What seeking cannot separate",
+    "探求所不能分者",
+    "identification under seeking",
+    "epistemic value",
+    "self-correction by seeking information",
+    "Becoming.LumpedSeeking.seeking_keeps_order",
+    "Becoming.LumpedSeeking.order_kept"
+  ],
+  "dependencies": [
+    {
+      "id": "conditioning-by-restriction",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "posterior_le_iff, posterior_single, evidence, mass_single, mass_mono, mass_congr and whole_restrict: shares given a record in a generative model.",
+        "zh": "posterior_le_iff、posterior_single、evidence、mass_single、mass_mono、mass_congr 与 whole_restrict：生成模型中记录下之份额。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "expected-free-energy-and-its-terms",
+      "detail": {
+        "en": "Expected free energy and its terms: the epistemic value over the reals, read only through the lumping the likelihood makes.",
+        "zh": "期望自由能及其诸项：实数上之认知价值，唯经似然所成之归并而读。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LumpedSeeking.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.LumpedSeeking.Agree.Bias",
+        "Becoming.LumpedSeeking.Agree.agreeCourse",
+        "Becoming.LumpedSeeking.Agree.agreeing",
+        "Becoming.LumpedSeeking.Agree.distinct",
+        "Becoming.LumpedSeeking.Agree.experiment",
+        "Becoming.LumpedSeeking.Agree.hypotheses",
+        "Becoming.LumpedSeeking.Agree.keeps_tails",
+        "Becoming.LumpedSeeking.Agree.outcomes",
+        "Becoming.LumpedSeeking.Agree.pickReading",
+        "Becoming.LumpedSeeking.Agree.prior",
+        "Becoming.LumpedSeeking.Agree.readBoth",
+        "Becoming.LumpedSeeking.Agree.readCourse",
+        "Becoming.LumpedSeeking.Agree.seeking_keeps_tails",
+        "Becoming.LumpedSeeking.Agree.seeking_turns_tails",
+        "Becoming.LumpedSeeking.Agree.ties",
+        "Becoming.LumpedSeeking.Agree.totals",
+        "Becoming.LumpedSeeking.Agree.turns_fair",
+        "Becoming.LumpedSeeking.Agree.twoHeads",
+        "Becoming.LumpedSeeking.Tied",
+        "Becoming.LumpedSeeking.order_kept",
+        "Becoming.LumpedSeeking.posterior_le_iff_prior",
+        "Becoming.LumpedSeeking.posterior_ratio_kept",
+        "Becoming.LumpedSeeking.seekWeight",
+        "Becoming.LumpedSeeking.seek_tied",
+        "Becoming.LumpedSeeking.seeking_keeps_order",
+        "Becoming.LumpedSeeking.single_le_evidence",
+        "Becoming.LumpedSeeking.tied_mass"
+      ],
+      "sha256": "2dd8f4c21db56595f934b8939bc58cd2921e08bcce54cdceae9d6e31dcb3aced"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "role": "proof",
+      "sha256": "479c8401487664728e63fd6d247dcfb89b2fd578185097251bcf2055cac0361f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "role": "receipt",
+      "sha256": "90045f08330f2bdf2df1d888eb17d62d7cd9c1d0546ab710bd7f5b14b3b2e7a4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "9e197668e4c87c4ace407a86693dfccf530fb5d9ec81a056ced2dcbb7a6dfd73"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/NOTE.md",
+      "role": "integration",
+      "sha256": "fa4ad43227920bd82372146c81b07ae8e46ec89e8c05e7f667922199b103613b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/REVIEW-UE19.md",
+      "role": "integration",
+      "sha256": "ee1bff41970cf7517ead8da735b00373c4d5bf4842e786ace2de08590f1d1831"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/RECHECK-UE19.md",
+      "role": "integration",
+      "sha256": "ab7bc86a0f9699e14df5f0093124ab11aa5082516f2c3fa09d72e373f8db3b8b"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "7a3737d048bbdf649da364ff3a688643fef458f088c6bd4b5b5c04ea874db53f"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LumpedSeeking.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LumpedSeeking",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "29 October 2026: added (UE19), what seeking cannot separate: a tied pair keeps its prior order given every record, and a pair every experiment ties over every course of seeking, whatever the policy of choice; in the witness, seeking turns the order once an experiment separating it is chosen; after a review and a re-check; study section 453.",
+      "zh": "2026年10月29日：新增（UE19），探求所不能分者：受并之二假设于每一记录下保其先验之序，每一实验皆并之二假设于每一探求历程下亦然，无论择取之策略；于例，一旦择取能分之实验，探求即转其序；经审查与复查；研究第 453 节。"
+    }
+  ]
+}

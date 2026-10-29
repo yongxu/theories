@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T162632.074811Z",
- "core_sources_sha256": "075fad12fcacffbc88724b1c15da15d3b04eb4337383e556114df13647f8c7f1",
+ "core_receipt": "20261029T164943.729811Z",
+ "core_sources_sha256": "9c50ab42efe33e8563661189ab2edb19f68224c931f0858cf25e5411c81f566c",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -56,13 +56,13 @@
   ]
  },
  "counts": {
-  "laws": 3721,
+  "laws": 3749,
   "no_declarations": 9,
-  "outside": 350,
+  "outside": 357,
   "grammar": 739,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1844,
+  "no master law": 1865,
   "vocabulary_only": 59,
   "closure": 476,
   "balance": 815,
@@ -14118,6 +14118,99 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   }
+  ],
+  "expected-free-energy-and-its-terms": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.predicted",
+     "Becoming.ExpectedFreeEnergy.risk",
+     "Becoming.ExpectedFreeEnergy.ambiguity",
+     "Becoming.ExpectedFreeEnergy.expectedFreeEnergy",
+     "Becoming.ExpectedFreeEnergy.pragmatic",
+     "Becoming.ExpectedFreeEnergy.epistemic"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.predicted",
+     "Becoming.ExpectedFreeEnergy.risk",
+     "Becoming.ExpectedFreeEnergy.ambiguity",
+     "Becoming.ExpectedFreeEnergy.expectedFreeEnergy",
+     "Becoming.ExpectedFreeEnergy.pragmatic",
+     "Becoming.ExpectedFreeEnergy.epistemic"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.joint",
+     "Becoming.ExpectedFreeEnergy.product",
+     "Becoming.ExpectedFreeEnergy.epistemic_eq_divergence",
+     "Becoming.ExpectedFreeEnergy.epistemic_nonneg"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.joint",
+     "Becoming.ExpectedFreeEnergy.product",
+     "Becoming.ExpectedFreeEnergy.epistemic_eq_divergence",
+     "Becoming.ExpectedFreeEnergy.epistemic_nonneg"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.gain_term",
+     "Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.gain_term",
+     "Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain"
+    ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.coarse",
+     "Becoming.ExpectedFreeEnergy.sum_through",
+     "Becoming.ExpectedFreeEnergy.predicted_through",
+     "Becoming.ExpectedFreeEnergy.epistemic_through",
+     "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.coarse",
+     "Becoming.ExpectedFreeEnergy.sum_through",
+     "Becoming.ExpectedFreeEnergy.predicted_through",
+     "Becoming.ExpectedFreeEnergy.epistemic_through",
+     "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
+     "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
+     "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped"
+    ]
    }
   ],
   "experiment-needs-return": [
@@ -43465,6 +43558,107 @@
     "dependence": "anchor, not reached"
    }
   ],
+  "the-markov-blanket-as-a-coupling-structure": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Blanket.Blanketed",
+     "Becoming.Blanket.Parts",
+     "Becoming.Blanket.Blanketed.step",
+     "Becoming.Blanket.Blanketed.course",
+     "Becoming.Blanket.congr3"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Blanket.Blanketed.agent_through_sensory",
+     "Becoming.Blanket.Blanketed.world_through_active"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Blanket.Blanketed.BlanketAlike",
+     "Becoming.Blanket.Blanketed.internal_through_blanket",
+     "Becoming.Blanket.Blanketed.external_through_blanket",
+     "Becoming.Blanket.Blanketed.reads_through_blanket"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Blanket.Blanketed.through_reading"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Blanket.Deaf.law",
+     "Becoming.Blanket.Deaf.lumps"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Blanket.ThresholdDrain.law",
+     "Becoming.Blanket.ThresholdDrain.short",
+     "Becoming.Blanket.ThresholdDrain.long",
+     "Becoming.Blanket.ThresholdDrain.reads_threshold",
+     "Becoming.Blanket.ThresholdDrain.alike_before_four",
+     "Becoming.Blanket.ThresholdDrain.sensed_at_break",
+     "Becoming.Blanket.ThresholdDrain.ended",
+     "Becoming.Blanket.ThresholdDrain.ended_rests",
+     "Becoming.Blanket.ThresholdDrain.short_rests"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Blanket.ThresholdDrain.web",
+     "Becoming.Blanket.ThresholdDrain.sensory_is_admission",
+     "Becoming.Blanket.ThresholdDrain.external_course",
+     "Becoming.Blanket.ThresholdDrain.sensory_succ",
+     "Becoming.Blanket.ThresholdDrain.bool_eq_of_iff",
+     "Becoming.Blanket.ThresholdDrain.blanket_iff_through"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.Blanket.ThresholdDrain.modelLaw",
+     "Becoming.Blanket.ThresholdDrain.start",
+     "Becoming.Blanket.ThresholdDrain.sensed_alike",
+     "Becoming.Blanket.ThresholdDrain.blanket_alike",
+     "Becoming.Blanket.ThresholdDrain.any_model",
+     "Becoming.Blanket.ThresholdDrain.sensory_apart_at_four"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
   "the-move-alone-underdetermines": [
    {
     "law": 1,
@@ -51545,6 +51739,107 @@
     "dependence": "no master law"
    }
   ],
+  "what-seeking-cannot-separate": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.LumpedSeeking.Tied",
+     "Becoming.LumpedSeeking.tied_mass"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.LumpedSeeking.single_le_evidence",
+     "Becoming.LumpedSeeking.posterior_le_iff_prior"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.LumpedSeeking.posterior_ratio_kept",
+     "Becoming.LumpedSeeking.order_kept"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.LumpedSeeking.seekWeight",
+     "Becoming.LumpedSeeking.seek_tied"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.LumpedSeeking.seeking_keeps_order"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.LumpedSeeking.Agree.Bias",
+     "Becoming.LumpedSeeking.Agree.hypotheses",
+     "Becoming.LumpedSeeking.Agree.distinct",
+     "Becoming.LumpedSeeking.Agree.prior",
+     "Becoming.LumpedSeeking.Agree.outcomes",
+     "Becoming.LumpedSeeking.Agree.twoHeads",
+     "Becoming.LumpedSeeking.Agree.agreeing",
+     "Becoming.LumpedSeeking.Agree.ties",
+     "Becoming.LumpedSeeking.Agree.totals"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.LumpedSeeking.Agree.turns_fair",
+     "Becoming.LumpedSeeking.Agree.keeps_tails"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.LumpedSeeking.Agree.agreeCourse",
+     "Becoming.LumpedSeeking.Agree.seeking_keeps_tails"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.LumpedSeeking.Agree.readBoth",
+     "Becoming.LumpedSeeking.Agree.experiment",
+     "Becoming.LumpedSeeking.Agree.pickReading",
+     "Becoming.LumpedSeeking.Agree.readCourse",
+     "Becoming.LumpedSeeking.Agree.seeking_turns_tails"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
   "what-self-concern-alone-ranks": [
    {
     "law": 1,
@@ -51754,6 +52049,54 @@
      "Becoming.excludes_rivals_iff",
      "Becoming.unrestricted_iff_not_rival",
      "Becoming.not_rival_unrestricted_iff_stable"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "what-the-existence-claim-forbids": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Blanket.point",
+     "Becoming.Blanket.isAt",
+     "Becoming.Blanket.point_is_restrict"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Blanket.point_whole",
+     "Becoming.Blanket.least_surprisal",
+     "Becoming.Blanket.point_forbids_rest",
+     "Becoming.Blanket.le_mass_of_mem"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Blanket.visits",
+     "Becoming.Blanket.visits_le_succ",
+     "Becoming.Blanket.visits_pos",
+     "Becoming.Blanket.visits_zero",
+     "Becoming.Blanket.read_off_admits"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Blanket.unweighted_share",
+     "Becoming.Blanket.forbids_iff"
     ],
     "master_laws": [],
     "grammar": false,

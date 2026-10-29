@@ -2000,6 +2000,18 @@
    "page": "theories/becoming/results/records/exit-from-a-margin.md"
   },
   {
+   "id": "record:expected-free-energy-and-its-terms",
+   "type": "result",
+   "record": "expected-free-energy-and-its-terms",
+   "title": "Expected free energy and its terms",
+   "title_zh": "期望自由能及其诸项",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/expected-free-energy-and-its-terms.md"
+  },
+  {
    "id": "record:experiment-needs-return",
    "type": "result",
    "record": "experiment-needs-return",
@@ -5096,6 +5108,18 @@
    "page": "theories/becoming/results/records/the-last-change-of-a-run.md"
   },
   {
+   "id": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "result",
+   "record": "the-markov-blanket-as-a-coupling-structure",
+   "title": "The Markov blanket as a coupling structure",
+   "title_zh": "马尔可夫毯作为耦合结构",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md"
+  },
+  {
    "id": "record:the-move-alone-underdetermines",
    "type": "result",
    "record": "the-move-alone-underdetermines",
@@ -5864,6 +5888,18 @@
    "page": "theories/becoming/results/records/what-readings-fix-of-the-unread.md"
   },
   {
+   "id": "record:what-seeking-cannot-separate",
+   "type": "result",
+   "record": "what-seeking-cannot-separate",
+   "title": "What seeking cannot separate",
+   "title_zh": "探求所不能分者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/what-seeking-cannot-separate.md"
+  },
+  {
    "id": "record:what-self-concern-alone-ranks",
    "type": "result",
    "record": "what-self-concern-alone-ranks",
@@ -5910,6 +5946,18 @@
    "region": "significance",
    "base": "general",
    "page": "theories/becoming/results/records/what-the-dynamics-leave-open.md"
+  },
+  {
+   "id": "record:what-the-existence-claim-forbids",
+   "type": "result",
+   "record": "what-the-existence-claim-forbids",
+   "title": "What the existence claim forbids",
+   "title_zh": "存在之主张所禁者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/what-the-existence-claim-forbids.md"
   },
   {
    "id": "record:what-the-step-across-standpoints-reaches",
@@ -7373,6 +7421,28 @@
    "theorems": 67,
    "region": "collective",
    "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.Blanket",
+   "type": "module",
+   "name": "Becoming.Blanket",
+   "level": "L1",
+   "theorems": 33,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.LumpedSeeking",
+   "type": "module",
+   "name": "Becoming.LumpedSeeking",
+   "level": "L1",
+   "theorems": 14,
+   "region": "knowing",
+   "base": "general",
    "on_grammar": false,
    "reaches_grammar": true
   },
@@ -28270,6 +28340,12 @@
    "anchor": "r-selection-right-exactly-where-read"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-markov-blanket-as-a-coupling-structure",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-the-markov-blanket-as-a-coupling-structure"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-observation-is-a-route",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -28466,6 +28542,24 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
    "anchor": "r-free-energy-bounds-surprisal"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-expected-free-energy-and-its-terms",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-expected-free-energy-and-its-terms"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-seeking-cannot-separate",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-seeking-cannot-separate"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-the-existence-claim-forbids",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-the-existence-claim-forbids"
   },
   {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-split-that-makes-sense",
@@ -30237,6 +30331,11 @@
   {
    "from": "module:Becoming.AttractionRuns",
    "to": "module:Becoming.Branching",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Blanket",
+   "to": "module:Becoming.ConditionalWeights",
    "type": "imports"
   },
   {
@@ -32152,6 +32251,11 @@
   {
    "from": "module:Becoming.LossMatching",
    "to": "module:Becoming.Population",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LumpedSeeking",
+   "to": "module:Becoming.ConditionalWeights",
    "type": "imports"
   },
   {
@@ -35781,7 +35885,17 @@
   },
   {
    "from": "record:capture-by-counted-choices",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "related"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
    "to": "record:what-pooled-coupling-reaches",
+   "type": "related"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:what-seeking-cannot-separate",
    "type": "related"
   },
   {
@@ -37432,6 +37546,16 @@
   {
    "from": "record:conditioning-by-restriction",
    "to": "record:weights-count-situations",
+   "type": "related"
+  },
+  {
+   "from": "record:conditioning-by-restriction",
+   "to": "record:what-seeking-cannot-separate",
+   "type": "related"
+  },
+  {
+   "from": "record:conditioning-by-restriction",
+   "to": "record:what-the-existence-claim-forbids",
    "type": "related"
   },
   {
@@ -39870,6 +39994,16 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:expected-free-energy-and-its-terms",
+   "to": "record:free-energy-bounds-surprisal",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:expected-free-energy-and-its-terms",
+   "to": "record:what-seeking-cannot-separate",
+   "type": "related"
+  },
+  {
    "from": "record:experiment-needs-return",
    "to": "module:Becoming.Experiment",
    "type": "proved-in"
@@ -40570,6 +40704,16 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:free-energy-bounds-surprisal",
+   "to": "record:expected-free-energy-and-its-terms",
+   "type": "related"
+  },
+  {
+   "from": "record:free-energy-bounds-surprisal",
+   "to": "record:what-the-existence-claim-forbids",
+   "type": "related"
+  },
+  {
    "from": "record:fulfillment-chance-floor",
    "to": "module:Becoming.ChanceFloors",
    "type": "proved-in"
@@ -40673,6 +40817,11 @@
    "from": "record:generalization-through-lumping",
    "to": "module:Becoming.Selection",
    "type": "proved-in"
+  },
+  {
+   "from": "record:generalization-through-lumping",
+   "to": "record:expected-free-energy-and-its-terms",
+   "type": "related"
   },
   {
    "from": "record:generalization-through-lumping",
@@ -49191,6 +49340,11 @@
   },
   {
    "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "record:expected-free-energy-and-its-terms",
+   "type": "related"
+  },
+  {
+   "from": "record:risk-minimization-on-a-shared-renewal",
    "to": "record:identical-cells-under-a-descent-treating-them-alike",
    "type": "related"
   },
@@ -49408,6 +49562,11 @@
    "from": "record:runaway-distance-uncoupled",
    "to": "record:testing-within-couplings",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:runaway-distance-uncoupled",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "related"
   },
   {
    "from": "record:runs-on-families-chosen-step-by-step",
@@ -49800,6 +49959,11 @@
    "type": "related"
   },
   {
+   "from": "record:selection-through-couplings",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "related"
+  },
+  {
    "from": "record:selection-under-registration-revision",
    "to": "module:Becoming.Revision",
    "type": "proved-in"
@@ -49842,6 +50006,11 @@
   {
    "from": "record:selection-under-registration-revision",
    "to": "record:target-capture",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-under-registration-revision",
+   "to": "record:what-seeking-cannot-separate",
    "type": "related"
   },
   {
@@ -51277,6 +51446,41 @@
   {
    "from": "record:the-last-change-of-a-run",
    "to": "record:where-a-run-of-a-regime-comes-to-rest",
+   "type": "related"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "module:Becoming.Admission",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "module:Becoming.Blanket",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "module:Becoming.Learning",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "module:Becoming.Testing",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "record:generalization-through-lumping",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "record:selection-through-couplings",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "record:what-the-existence-claim-forbids",
    "type": "related"
   },
   {
@@ -54210,6 +54414,26 @@
    "type": "related"
   },
   {
+   "from": "record:what-seeking-cannot-separate",
+   "to": "module:Becoming.ConditionalWeights",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-seeking-cannot-separate",
+   "to": "module:Becoming.LumpedSeeking",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-seeking-cannot-separate",
+   "to": "record:conditioning-by-restriction",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-seeking-cannot-separate",
+   "to": "record:expected-free-energy-and-its-terms",
+   "type": "related"
+  },
+  {
    "from": "record:what-self-concern-alone-ranks",
    "to": "module:Becoming.Weightings",
    "type": "proved-in"
@@ -54293,6 +54517,26 @@
    "from": "record:what-the-dynamics-leave-open",
    "to": "record:rivals-bounded-in-time",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-existence-claim-forbids",
+   "to": "module:Becoming.Blanket",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-the-existence-claim-forbids",
+   "to": "module:Becoming.ConditionalWeights",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-the-existence-claim-forbids",
+   "to": "record:conditioning-by-restriction",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-existence-claim-forbids",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "related"
   },
   {
    "from": "record:what-the-step-across-standpoints-reaches",
@@ -57060,6 +57304,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-expected-free-energy-and-its-terms",
+   "to": "record:expected-free-energy-and-its-terms",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-experiment-needs-return",
    "to": "record:experiment-needs-return",
    "type": "states"
@@ -57310,6 +57559,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-the-markov-blanket-as-a-coupling-structure",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-the-split-that-makes-sense",
    "to": "record:the-split-that-makes-sense",
    "type": "states"
@@ -57382,6 +57636,16 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-readings-fix-of-the-unread",
    "to": "record:what-readings-fix-of-the-unread",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-seeking-cannot-separate",
+   "to": "record:what-seeking-cannot-separate",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-the-existence-claim-forbids",
+   "to": "record:what-the-existence-claim-forbids",
    "type": "states"
   },
   {

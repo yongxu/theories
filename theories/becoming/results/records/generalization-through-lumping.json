@@ -298,6 +298,13 @@
         "en": "propext stated as this lumping: every reading of propositions lumped by interderivability.",
         "zh": "以这一归并陈述的 propext：命题的每个读法按可互推归并。"
       }
+    },
+    {
+      "id": "expected-free-energy-and-its-terms",
+      "detail": {
+        "en": "Expected free energy and its terms: expected free energy reads beliefs only through the lumping its likelihood makes.",
+        "zh": "期望自由能及其诸项：期望自由能唯经其似然所成之归并而读信念。"
+      }
     }
   ],
   "references": [
@@ -721,6 +728,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement no longer claims more than the Lean: the data fix the value where an input is lumped with an observed one, and only there given two values, listed data and lumps compared decidedly; a fit is right there exactly where the world takes the observed value (pointwise, not only where the world goes alike across the lumping); a former record id updated; the laws are unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述不再多于 Lean 所证：输入与观察输入归并处值由数据决定，有两个值、数据为列表、归并之值可判定相等时只在此处；拟合在那里正确，恰当世界在那里取所观察之值（逐点，而非只在世界经归并同去时）；更新一个旧记录编号；定律不变。"
+    },
+    {
+      "en": "29 October 2026, board item UE19 (study section 453): related to expected-free-energy-and-its-terms; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE19（研究第 453 节）：与 expected-free-energy-and-its-terms 相关联；无一陈述、下一步或声明改变。"
     }
   ],
   "text_versions": [
