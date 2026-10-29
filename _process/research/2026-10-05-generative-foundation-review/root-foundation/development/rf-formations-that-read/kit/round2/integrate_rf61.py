@@ -49,9 +49,10 @@ BULLET = """* `Becoming.OpenedCorrection` (L1): a revision of a reading that ope
   process. Correctable at a configuration: a fitting uniform policy exists through the reading in
   force there, its acts acceptable and executable (`OpenedCorrection.Correctable`); a course of the
   process opens a correction where it leads from a configuration lacking one to one with it,
-  acceptability fixed (`OpenedCorrection.OpensAlong`); a reading read off the old through a supplied
-  map, gaining no executability, opens nothing (`OpenedCorrection.coarser_opens_nothing`); on
-  Revising's process, rebuilding the link opens the correction where a unit of stock remains after
+  acceptability fixed (`OpenedCorrection.OpensAlong`); with the readings in one type, a reading read
+  off the old through a supplied map, gaining no executability, opens nothing
+  (`OpenedCorrection.coarser_opens_nothing`); on Revising's process, starting with the link off,
+  rebuilding it opens the correction where a unit of stock remains after
   (`OpenedCorrection.Linked.opens`, `OpenedCorrection.Linked.rebuilt_starved`), and replenishing
   alone opens it where the link is on and the stock is not (`OpenedCorrection.Linked.opens_by_support`).
   An application in the ring (board item RF).
@@ -78,12 +79,12 @@ readme_row(PKG / 'README.md', '| L1 | [`Becoming.GuardHorizon`]',
            "correction, along one process (an application; every axiom report empty; each result under the hypotheses "
            "its theorem states): correctable where a fitting uniform policy exists through the reading in force "
            "(`OpenedCorrection.Correctable`), a course opening one with acceptability fixed "
-           "(`OpenedCorrection.OpensAlong`), on Revising's process where a unit of stock remains after the rebuild "
-           "(`OpenedCorrection.Linked.opens`) |", '[`Becoming.OpenedCorrection`]')
+           "(`OpenedCorrection.OpensAlong`), on Revising's process by rebuilding the link from off where a unit of stock "
+           "remains after (`OpenedCorrection.Linked.opens`) |", '[`Becoming.OpenedCorrection`]')
 readme_row(PKG / 'README.zh.md', '| L1 | [`Becoming.ReflexivePrediction`]',
            "| L1 | [`Becoming.OpenedCorrection`](Becoming/OpenedCorrection.lean) | 沿一过程开一更正之读之修订（一应用；每项公理报告皆空；各结果以各定理所列条件为前提）："
            "经所行之读有合之一致策略处可更正（`OpenedCorrection.Correctable`），一历程于可受者守定时开之（`OpenedCorrection.OpensAlong`），"
-           "于 Revising 之过程重建后尚余一储处（`OpenedCorrection.Linked.opens`） |", '[`Becoming.OpenedCorrection`]')
+           "于 Revising 之过程，初始联断时重建其联而后尚余一储处（`OpenedCorrection.Linked.opens`） |", '[`Becoming.OpenedCorrection`]')
 
 ch3 = CH / '03-KNOWING.md'
 edit(ch3, "Lean: `Learning.Training.keeps_through_iff`, `Learning.Training.lost_choice`, `Stock.feasible_iff_covered`; "
@@ -112,8 +113,8 @@ edit(PLAN, "- **RF6.1** (`Becoming.OpenedCorrection`). Built in the kit and revi
      "Rebuilt along a trace of one process, on Revising's stock-and-link process, re-checked (findings 19 to 26) and "
      "its texts cold-read, it landed on its own after the first landing: a course opens a correction where it leads "
      "from a configuration lacking a fitting uniform policy through the reading in force to one with it, acceptability "
-     "fixed, the gain from the reading, from executability or both; rebuilding the link opens it where a unit of stock "
-     "remains after. The institutional case is read on it; an institution's rule of reading as its own process with "
+     "fixed, the gain from the reading, from executability or both; starting with the link off, rebuilding it opens "
+     "the correction where a unit of stock remains after. The institutional case is read on it; an institution's rule of reading as its own process with "
      "members' acts is not built.")
 edit(PLAN, "2. Round 2, each landing reviewed before it: first RF3, RF-M's mechanism and RF6.3 (§4.6); then RF6.1 with the "
            "institutional case; then RF-M's assistance and preference cases and RF7.",

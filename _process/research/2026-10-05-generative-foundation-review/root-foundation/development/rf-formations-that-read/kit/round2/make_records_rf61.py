@@ -145,8 +145,8 @@ rE = build(
     {'en': 'A revision of a reading that opens a correction, along one process', 'zh': '沿一过程开一更正之读之修订'},
     {'en': "A course of a process opens a correction where it leads to a configuration with a fitting uniform policy "
            "through the reading in force from one lacking it, acceptability fixed; on Revising's process, rebuilding the "
-           "link opens it where a unit of stock remains after.",
-     'zh': '一过程之历程开一更正，当其自经所行之读缺合之一致策略之形态，至有之之形态，可受者守定；于 Revising 之过程，重建其联而后尚余一储处开之。'},
+           "link from off opens it where a unit of stock remains after.",
+     'zh': '一过程之历程开一更正，当其自经所行之读缺合之一致策略之形态，至有之之形态，可受者守定；于 Revising 之过程，初始联断时重建其联而后尚余一储处开之。'},
     [("Correctable at a configuration: through the reading in force there, a uniform policy exists whose act at each "
       "reading is acceptable at every situation giving it and executable there; given choice over the readings, exactly "
       "where each reading has one such act.",
@@ -157,9 +157,11 @@ rE = build(
       "from executability, or both.",
       "一历程开一更正自 x 至 x'，当过程之一迹自 x 至 x'，于 x 无合之一致策略而于 x' 有之，可受者始终同一；所得或来自读，或来自可行，或二者皆是。",
       C(OC, 'OpenedCorrection.OpensAlong')),
-     ("A revision to a reading the old one is read off, losing no executability, closes nothing; one to a reading read "
-      "off the old, gaining no executability, opens nothing.",
-      "修订为旧读所由读出之读，而不失可行者，则无所闭；修订为由旧读读出之读，而不增可行者，则无所开。",
+     ("With readings in one type and a supplied map f between them: where f (reading x' s) = reading x s at every "
+      "situation and every act executable at x stays executable at x', correctability is kept; where "
+      "f (reading x s) = reading x' s at every situation and every act executable at x' was executable at x, nothing "
+      "is opened.",
+      "诸读同属一型，给定映射 f：若每一情形皆 f (reading x' s) = reading x s，且于 x 可行之行于 x' 仍可行，则保持可更正；若每一情形皆 f (reading x s) = reading x' s，且于 x' 可行之行于 x 已可行，则无所开。",
       C(OC, 'OpenedCorrection.finer_keeps', 'OpenedCorrection.coarser_opens_nothing')),
      ("With every act counted acceptable, a configuration with an executable act is correctable already: an opening "
       "counts only with the acceptability fixed.",
@@ -172,10 +174,10 @@ rE = build(
       C(OC, 'OpenedCorrection.Linked.acceptable', 'OpenedCorrection.Linked.executable',
         'OpenedCorrection.Linked.unlinked_uncorrectable', 'OpenedCorrection.Linked.linked_correctable',
         'OpenedCorrection.Linked.starved_uncorrectable')),
-     ("Rebuilding the link from two units opens the correction in one step; from one it does not, the rebuild consuming "
-      "the last unit, though rebuilding then replenishing does; with every act counted acceptable, the unlinked "
-      "configuration is correctable already.",
-      "自二储重建其联，一步而开更正；自一储则否，重建耗尽最后之储，然重建而后补储则开之；凡行皆计为可受，则联断之形态已可更正。",
+     ("Starting with the link off and at least two units, rebuilding it opens the correction in one step; starting with "
+      "it off and one unit, rebuilding alone does not, the rebuild consuming the last unit, though rebuilding then "
+      "replenishing does; with every act counted acceptable, the unlinked configuration is correctable already.",
+      "初始联断且至少有二储时，重建其联一步而开更正；初始联断且仅有一储时，唯重建不能开之，重建耗尽最后之储，然重建而后补储则开之；凡行皆计为可受，则联断之形态已可更正。",
       C(OC, 'OpenedCorrection.Linked.opens', 'OpenedCorrection.Linked.rebuilt_starved',
         'OpenedCorrection.Linked.opens_after_replenishing', 'OpenedCorrection.Linked.widened_unlinked')),
      ("Replenishing alone opens the correction where the link is on and the stock is not: the reading unchanged, the "
@@ -227,8 +229,9 @@ rE = build(
          'GuardHorizon.UniformPolicy 与 uniform_policy_iff_fiber_feasible。'),
      dep('selection-under-registration-revision', "Revising's process P, its reading read and its acts.",
          'Revising 之过程 P、其读 read 与其行。')],
-    [rel('a-reading-kept-by-its-update', "Acts good and enabled for a reading the update keeps; here the reading in "
-         "force itself revised along the course.", '于更新所守之读善且可行之行；此处所行之读本身沿历程而修订。')],
+    [rel('a-reading-kept-by-its-update', "Acts good and enabled for a reading the update keeps; here correctability "
+         "is compared along a course of a process, where the reading in force, executability, or both may change.",
+         '于更新所守之读善且可行之行；此处沿一过程之历程比较可更正性，所行之读、可行者，或二者皆可改变。')],
     [{'path': LEAN['GuardHorizon'], 'role': 'proof', 'sha256': sha(LEAN['GuardHorizon'])},
      {'path': LEAN['Revision'], 'role': 'proof', 'sha256': sha(LEAN['Revision'])}],
     CH3, done('a-revision-that-opens-a-correction', 'a revision of a reading that opens a correction along one '

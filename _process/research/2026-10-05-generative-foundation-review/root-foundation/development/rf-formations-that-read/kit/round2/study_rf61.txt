@@ -8,18 +8,22 @@ Delta:
   - Correctable at a configuration (Becoming.OpenedCorrection): through the reading in force there, a uniform policy
     exists whose act at each reading is acceptable at every situation giving it and executable there; given choice
     over the readings, exactly where for every reading there is an act acceptable and executable at the configuration
-    for every situation giving it, a reading no situation gives asking nothing (Correctable, correctable_iff).
+    for every situation giving it, a reading no situation gives imposing no such condition though the policy still
+    gives it an act (Correctable, correctable_iff).
   - A course of a process opens a correction where a trace leads from a configuration lacking a fitting uniform
     policy to one with it, with one acceptability, the gain from the reading, from executability or both
-    (OpensAlong); a reading the old one is read off, losing no executability, closes nothing, and one read off the
-    old through a supplied map, gaining no executability, opens nothing (finer_keeps, coarser_opens_nothing); with
+    (OpensAlong); with the readings in one type and a supplied map f between them, correctability is kept where
+    f (reading x' s) = reading x s at every situation and every act executable at x stays executable at x', and
+    nothing is opened where f (reading x s) = reading x' s and every act executable at x' was executable at x
+    (finer_keeps, coarser_opens_nothing); with
     every act counted acceptable, a configuration with an executable act is correctable already
     (widened_correctable).
   - On Revising's stock-and-link process (Linked), the correction acceptable where needed and replenishing where
     not, executability the process's enabling: with the link off no configuration is correctable, with it on and a
-    unit of stock every one is, with it on and none none is; rebuilding the link from two units opens the correction
-    in one step, from one it does not, rebuilding then replenishing does, and replenishing alone opens it where the
-    link is on and the stock is not (opens, rebuilt_starved, opens_after_replenishing, opens_by_support).
+    unit of stock every one is, with it on and none none is; starting with the link off and at least two units,
+    rebuilding it opens the correction in one step; starting with it off and one unit, rebuilding alone does not and
+    rebuilding then replenishing does; and replenishing alone opens it where the link is on and the stock is not
+    (opens, rebuilt_starved, opens_after_replenishing, opens_by_support).
 Supplied premises / correspondence: none added beyond each theorem's own hypotheses (one type of readings in force at
        every configuration; acceptability fixed; executability read at the configuration; choice over the readings
        for correctable_iff). Revising's natural-number stock.
