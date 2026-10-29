@@ -156,3 +156,21 @@ Do not read the folder _process/research/2026-10-05-generative-foundation-review
 # Output
 
 A verdict line, then numbered findings, most severe first. Each finding: severity (high: a claim the Lean does not prove, or a rule AGENTS.md states broken; medium: a missing condition or misleading wording; low: a precision fix), location (file and line, or anchor), the quoted text (short), the problem, what the Lean says (declaration and hypotheses), and the replacement text you propose. Report only what you can point to; no style preferences unless they change meaning or break a stated rule. If a part has no problem, say so in one line.
+
+## The re-read (the cross-model reader's session continued, `cx -r`)
+
+Re-read after the fixes, read-only, in the same worktree (/Users/ren/theories/.claude/worktrees/rf-landing; do not edit, create, commit, render, run make or build Lean). Your fourteen findings and the two other readers' findings were all taken; the table "What was taken" at the end of _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md says how, and you may read it now.
+
+What changed, to check against the Lean (the three modules, and Becoming/Learning.lean and Becoming/Grammar.lean as before):
+
+1. theories/becoming/chapters/03-KNOWING.md: §11 whole (anchor `what-the-acts-show` to `does-not-show`), the bases sentence near the top ("testing within the net, 文 and what choices show of an order"), the Open bullet "Formations that read, beyond what their acts show".
+2. theories/becoming/chapters/05-COLLECTIVES.md: the Theorem paragraph at `r-readers-reading-readers`.
+3. theories/becoming/chapters/07-SIGNIFICANCE.md: the pointer sentence "What a reader of a formation's acts fixes of it", and the open row "Which function is learned" in §9.
+4. theories/becoming/chapters/08-METHOD.md: the new bullet "What choices show of an order" under §8's known results (the counts paragraph is rebuilt from the next receipt and is not to be checked).
+5. theories/becoming/THE-THEORY-OF-BECOMING.md: the new paragraphs "What a selection reading a formation's acts fixes of it" (§3) and "Readers reading readers carry no more than" (§5).
+6. experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md and README.zh.md: the rows of Becoming.ShownOrder, Becoming.Unread and Becoming.Cascade; Becoming.lean: their three L1 bullets.
+7. Two new lemmas, with their module-header lines: `ChoiceOccasions.above_in_class_of_every` (Becoming/ShownOrder.lean) and `Learning.determines_iff_not_not` (Becoming/Unread.lean). Both build with empty axiom reports in core receipt 20261029T132755.325449Z.
+8. The record texts as they will be written: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/make_records_rf.py (the build(...) calls for the three records; the record JSON files on disk are the earlier ones, to be rebuilt from this script at landing, so read the script, not the JSON).
+9. The study section template: the same kit folder's study_rf.txt ({N} and {RECEIPT} are filled at landing).
+
+Return: a verdict line; for each of your fourteen findings, one line, taken correctly, partly, or not, with what is missing; then any new problem the changed texts introduce, each with severity, location, quote, the problem against the Lean, and a replacement. Report only what you can point to.

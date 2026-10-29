@@ -53,8 +53,8 @@ relations (`«际»`), and the comparisons shared are its reach (`«及»`).
   positive comparison beyond the shown reach needs information or premises beyond these strict
   choices. That maximal choices force no positive comparison is the degenerate-reward result in
   order form (Ng and Russell 2000). That behaviour fixes a planner and a reward together only under
-  assumptions on the planner (Armstrong and Mindermann 2018) lies outside: accordance fixes the
-  planner here.
+  assumptions on the planner (Armstrong and Mindermann 2018) lies outside: this module assumes strict
+  dominance at the occasions shown and does not represent how the choices are computed.
 - *Revealed preference.* `accorded_iff_noCycle` and `above_in_every_iff_reach` are the order form of
   rationalizing strict choices by a strict partial order, close to Richter's theorem (1966). They are
   not Afriat's theorem, which concerns expenditure data and utility; no total order, utility or

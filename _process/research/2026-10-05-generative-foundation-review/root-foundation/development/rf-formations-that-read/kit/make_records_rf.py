@@ -237,13 +237,13 @@ r1 = build(
            "others 2019) for searches by an order; the kernel on a law's own courses is what training installs. Read "
            "with a helper, what strict choices alone fix of an order: maximal choices force none, the order form of the "
            "degenerate reward (Ng and Russell 2000); that behaviour fixes a planner and a reward together only under "
-           "assumptions on the planner (Armstrong and Mindermann 2018) lies outside, since accordance fixes the "
-           "planner. These are readings, not containments.",
+           "assumptions on the planner (Armstrong and Mindermann 2018) lies outside: the law assumes strict dominance at "
+           "the occasions shown and does not represent how choices are computed. These are readings, not containments.",
      'zh': '以所示者之最小传递关系由严偏序合理化严择，近于 Richter 定理（1966）而无完备：为严偏序而非完备之偏好，故无需扩张之原理（Szpilrajn 1930）；'
            '非 Afriat 定理（1967），彼关支出资料与效用。AI 解读：与训练并读，训练于序不另加限，则所示之及外之比较仍开：目标误泛化为确定其处之可能，非所示'
            '（Langosco 等 2022；Shah 等 2022），内对齐（Hubinger 等 2019）为依序之搜；律自行之迹上之核为训练所装者。与助者并读，为唯严择于序所定者：'
-           '极大之择不迫任何比较，为退化报酬之序形（Ng 与 Russell 2000）；行为唯于择者之设下方合定择者与报酬（Armstrong 与 Mindermann 2018），在外，'
-           '因相合已定择者。皆为读，非包含。'},
+           '极大之择不迫任何比较，为退化报酬之序形（Ng 与 Russell 2000）；行为唯于择者之设下方合定择者与报酬（Armstrong 与 Mindermann 2018），在外：'
+           '此律设所择于所示之时严胜，未表择之所算。皆为读，非包含。'},
     ['what choices show', '所择所示', 'the shown reach', '所示之及', 'revealed order', 'Becoming.ChoiceOccasions.Shown',
      'Becoming.ChoiceOccasions.above_in_every_iff_reach', 'Becoming.ChoiceOccasions.both_ways_of_unreached'],
     [dep('continuation-relative-to-a-class',
@@ -289,9 +289,9 @@ r2 = build(
       "value at x.",
       "故凡经读处之合而选者所选之经归并而读之行律，于每一值皆有所选之孪生，经归并而读，于每一读处与之合，于 x 取此值。",
       C(UN, 'Learning.twin_selected')),
-     ("For a schedule not given as a list, fixing holds up to a double negation: with one occasion, a constant lumping "
-      "and two act values, read exactly where P holds, the readings fix the act exactly where ¬¬P.",
-      "读时不以列给，则所定唯至二重否定：一时、归并恒定、行有二值，P 成立处为读，则读处定此行恰当 ¬¬P。",
+     ("Example, why the exact form takes a list: with one occasion, a constant lumping and two act values, the occasion "
+      "read exactly where P holds, the readings fix the act exactly where ¬¬P, where the exact form would say P.",
+      "例，确形何以需列：一时、归并恒定、行有二值，此时恰于 P 成立时为读，则读处定此行恰当 ¬¬P，而确形当言 P。",
       C(UN, 'Learning.determines_iff_not_not')),
      ("Where acts read a state formed from what couples in, acts that differ at two occasions come from states that "
       "differ, and states that differ from couplings that differ.",
@@ -380,11 +380,11 @@ r2 = build(
         'zh': '所择所示之序：同问于择者之择所出之序。'}}],
     [{'path': LEAN['Learning'], 'role': 'proof', 'sha256': sha(LEAN['Learning'])}],
     CH3,
-    {'en': f'{DATE_EN}: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, fixing '
-           f'up to a double negation where the schedule is not a list, the chain of acts, states and couplings with its '
+    {'en': f'{DATE_EN}: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, a '
+           f'one-occasion example fixed exactly where ¬¬P, the chain of acts, states and couplings with its '
            f'converses failing, and the cue witnesses; after a review of the plan, a review of the Lean and a cold read '
            f'of the texts; study section {N}.',
-     'zh': f'{DATE_ZH}：新增（RF 第一轮），读处所定于未读处者：能分处之孪生，读时不以列给时所定唯至二重否定，行、态、耦合之链及其逆不成，讯之诸例；'
+     'zh': f'{DATE_ZH}：新增（RF 第一轮），读处所定于未读处者：能分处之孪生，一时之例所定恰当 ¬¬P，行、态、耦合之链及其逆不成，讯之诸例；'
            f'经计划之审、Lean 之审与文之冷读；研究第 {N} 节。'})
 
 CA = 'Becoming.Cascade'

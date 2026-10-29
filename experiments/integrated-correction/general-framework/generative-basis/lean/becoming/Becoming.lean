@@ -2112,8 +2112,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   where no read occasion is lumped with `x`, the class going alike across the lumping is free at `x`
   beyond the readings (`Learning.free_lumped`), so every act law reading through the lumping that a
   selection through agreement on the readings selects has, for every value, a selected twin agreeing
-  on every reading and taking that value at `x` (`Learning.twin_selected`); for a schedule not given
-  as a list, fixing holds up to a double negation (`Learning.determines_iff_not_not`); for fixed maps
+  on every reading and taking that value at `x` (`Learning.twin_selected`); in a one-occasion example
+  read where `P` holds, fixed exactly where `¬¬P` (`Learning.determines_iff_not_not`); for fixed maps
   from coupling to state to act, acts apart come from states apart and states apart from couplings
   apart (`Learning.state_apart_of_acts_apart`, `Learning.coupling_apart_of_state_apart`), neither
   converse holding, by a witness (`Learning.Cue.apart_with_content_alike`).

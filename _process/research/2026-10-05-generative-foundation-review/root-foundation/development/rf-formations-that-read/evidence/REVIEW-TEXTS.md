@@ -543,3 +543,70 @@ Readers: **A** the cross-model reader (GPT astra), **E** the exactness reader, *
 | 38 | The study's and the README's twin wording dropped the selection's premise (E10) | both state it |
 
 The two laws added (rows 1 and 34) were built in scratch with empty axiom reports and checked by the core receipt of this landing; they were not re-read by a second reader.
+
+## The re-read
+
+After the fixes, the cross-model reader re-read them in its own session, read-only, against the Lean (the brief is the last section of [BRIEF.md](BRIEF.md)'s cold read, continued with the list of what changed). Its return, verbatim (links made repository-relative, line suffixes dropped):
+
+**Verdict: Thirteen findings were taken correctly; finding 2 is partly resolved. Two issues remain in the revised wording. The two new declarations match the passed receipt and have empty recorded axiom reports.**
+
+1. **Taken correctly:** The added-pair formula now includes both endpoint equality cases, in English and Chinese.
+2. **Partly:** `determines_iff_not_not` proves the original singleton/Boolean claim, but several summaries generalize it to arbitrary unlisted schedules; see 15.
+3. **Taken correctly:** §6 is explicitly identified as the home of the determination and correctness criteria; the new record leads with the twin.
+4. **Taken correctly:** Detection interpretations moved out of the laws, and the correspondence interpretations carry AI labels.
+5. **Taken correctly:** Acyclicity, distinctness and the two directions of non-reach are distinguished correctly.
+6. **Taken correctly:** The record now states the fitting premise; the chapter refers correctness to §6.
+7. **Taken correctly:** The cascade premise includes member `k`, every earlier-act list, and the prefix strictly before `k`.
+8. **Taken correctly:** The cue witness requires selection of the content act; the Chinese summary retains an already-selected law.
+9. **Taken correctly:** The training correspondence states strict accordance, no further restriction, and the limit concerning actual installation.
+10. **Taken correctly:** “Exact form” and “exact kernel” were replaced with qualified readings and explicit unrepresented features.
+11. **Taken correctly:** Armstrong–Mindermann now concerns planner–reward ambiguity, rather than choices among equals; its new explanatory clause has a separate issue below.
+12. **Taken correctly:** The boundary now concerns bounds depending on who reads whom, while acknowledging that ignored earlier acts are representable.
+13. **Taken correctly:** The Chinese search description includes “无则无”.
+14. **Taken correctly:** The chapter and module header no longer require a nonempty menu or an open picked alternative.
+
+15. **High — A singleton witness is presented as a general unlisted-schedule law.**
+
+    Locations: [03-KNOWING.md:436](../../../../../../../theories/becoming/chapters/03-KNOWING.md), [study_rf.txt:22](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/study_rf.txt), [Becoming.lean:2115](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean), and the Unread rows in [README.md:192](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) and [README.zh.md:135](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md). The same general framing occurs in the module header and record script.
+
+    Quote: “for a schedule not given as a list, fixing holds up to a double negation”.
+
+    **Against the Lean:** `Becoming.Learning.determines_iff_not_not` quantifies only over `P : Prop`. Its occasion type is `Unit`, act type is `Bool`, lumping is constant, and read predicate is `fun _ => P`. It proves:
+    ```
+    Determines (Lumped (V := Bool) (fun _ : Unit => ()))
+      (fun _ => P) () ↔ ¬¬P
+    ```
+    It does not establish a double-negation characterization for general occasion types, lumpings, act types or read predicates. The record’s detailed law names the singleton setting, but its introductory clause and history summary still suggest the broader result.
+
+    **Replacement:** “A singleton example shows the double-negation boundary: with Boolean acts, constant lumping and the sole occasion read exactly when `P` holds, its act is determined exactly when `¬¬P` (`Learning.determines_iff_not_not`).”
+
+    Chinese: “单例显示二重否定之界：时为 `Unit`、行为 `Bool`、归并恒定，唯一之时恰于 `P` 成立时为读，则其行被确定恰当 `¬¬P`。”
+
+    Use this scope in the summaries, and label the record’s item as an example.
+
+16. **Medium — Accordance constrains observed choices; it does not fix a planner.**
+
+    Locations: [03-KNOWING.md:433](../../../../../../../theories/becoming/chapters/03-KNOWING.md), [ShownOrder.lean:56](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean), and [make_records_rf.py:240](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/make_records_rf.py), including its Chinese counterpart.
+
+    Quote: “since accordance fixes the planner”.
+
+    **Against the Lean:** `ChoiceOccasions.Accords P` says that each supplied pick stands above every other alternative open at that supplied occasion. It contains no planner function and does not identify how choices are computed or what happens at other occasions. The search algorithm exists separately in the concrete `Untried` witness. The revised literature distinction is appropriate, but this explanation overstates what accordance supplies.
+
+    **Replacement:** “Planner–reward ambiguity lies outside this formalization: it assumes strict dominance at the observed occasions and does not represent the planning algorithm.”
+
+    Chinese: “择法与报酬之合辨不在此形式化中：此处假定所择于已观之时严胜其余开者，未表示择法的算法。”
+
+No further problem found in the class-restriction lemma, revised bases, Open bullet, chapter 07 pointers, known-results placement, or remaining changed summaries. No files were changed and no build or rendering was run.
+
+── cx · ok · session 01a187b1-9af0-7030-8aea-0246a04c9e44 · gpt-6-astra/high · read-only · 268s · 1756.3k tokens · 9 cmds
+continue: cx -r 01a187b1-9af0-7030-8aea-0246a04c9e44 "…"
+log: /Users/ren/.cache/cx/runs/20261029-203605-91050
+
+**What was taken.** Both further problems were taken, everywhere they occurred (kit/reread_rf.py):
+
+| # | Issue | What was done |
+|---|---|---|
+| 15 | The one-occasion example was generalized in some summaries to every schedule not given as a list | the module header, the theorem's doc comment, 03 §11, the root's bullet, the README rows, the record's law and history and the study say "a one-occasion example", fixed exactly where `¬¬P` where the exact form would say `P`, and why the exact form takes a list |
+| 16 | "Accordance fixes the planner" says more than `Accords` | 03 §11, the module header and the record's correspondence say the law assumes strict dominance at the occasions shown and does not represent how the choices are computed |
+
+The two modules' doc comments changed, so the core receipt was run again.
