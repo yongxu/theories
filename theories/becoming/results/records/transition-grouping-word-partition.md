@@ -11,29 +11,29 @@
 ## Laws
 
 1. For any alphabet and any Boolean adjacency relation r, grouping reads a sequence from the right: an element joins the following group where r links it to that group's first element, and opens a new group otherwise; grouping never changes the sequence, the groups joined giving it back. (`Becoming.Segmentation.glue`, `Becoming.Segmentation.chunks`, `Becoming.Segmentation.join`, `Becoming.Segmentation.join_chunks`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Grouping by r returns a list of groups L of the sequence L joins exactly where every group of L is nonempty, linked by r at each adjacent pair inside, and not linked from its last element to the next group's first; a list so grouped that joins to a sequence is the only grouping of it. (`Becoming.Segmentation.LinkedFrom`, `Becoming.Segmentation.Opens`, `Becoming.Segmentation.Grouped`, `Becoming.Segmentation.chunks_eq_iff`, `Becoming.Segmentation.chunks_unique`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. For words that are nonempty, each written as a first element followed by the rest, grouping by r recovers the words of every encoded sequence of words exactly where each word is linked by r inside and no word's last element is linked to any word's first: both are conditions on adjacent pairs. (`Becoming.Segmentation.encode`, `Becoming.Segmentation.Spelled`, `Becoming.Segmentation.encode_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. For elements compared decidedly, a record of observed slots, where a gap breaks adjacency, bonds x to y where more than half the transitions observed from x go to y; such a majority bond links each element to at most one successor. (`Becoming.Segmentation.edges`, `Becoming.Segmentation.departures`, `Becoming.Segmentation.transitions`, `Becoming.Segmentation.bond`, `Becoming.Segmentation.bond_unique`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. For nonempty words over decidedly compared elements and fixed elements x and y ≠ z (two words continuing x differently inside), where every record whose majority bonds link each word inside bonds x both to y and to z, no record's majority bonds group every encoded sequence into its words. (`Becoming.Segmentation.no_record_groups`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. For any process in which every nonempty word is a course from s back to s, every sequence of words written out is such a course, and grouping by r recovers the words of every course of words exactly where each word is linked inside and no word's last move is linked to any word's first; the moves of any course are grouped as L exactly where L is grouped and joins to them. (`Becoming.Courses.encode_course`, `Becoming.Courses.course_words_iff`, `Becoming.Courses.course_chunks_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. Where, in a process, every nonempty word over decidedly compared moves is a course from s back to s, and for fixed moves x and y ≠ z every record whose majority bonds link each word inside bonds x both to y and to z, then for the record of the first n moves of any run of any process, grouping by its majority bonds does not recover the words of all courses of words from s back to s. (`Becoming.Courses.no_run_record_groups`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. With four sounds a, b, c, d and the two words a b and c d, grouping by any relation r recovers the words of every sequence of the two words exactly where r links a to b and c to d and links b to neither a nor c and d to neither a nor c. (`Becoming.LearnedGrouping.Sound`, `Becoming.LearnedGrouping.word`, `Becoming.LearnedGrouping.spelled`, `Becoming.LearnedGrouping.two_word_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. With four sounds a, b, c, d and the words a b and c d, the ideal relation, linking exactly a to b and c to d, recovers every sequence of the two words; after a supplied formation of 28 units receives the context a b a b c d c d a b, the majority bonds of its record are the ideal relation, so every such sequence is grouped into its words. (`Becoming.LearnedGrouping.idealBond`, `Becoming.LearnedGrouping.ideal_two_word`, `Becoming.LearnedGrouping.context`, `Becoming.LearnedGrouping.experienced`, `Becoming.LearnedGrouping.context_forms_bond`, `Becoming.LearnedGrouping.context_groups_words`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. Identical frequencies can hide different transitions: the course a a a b b b c c d d holds every sound as often as the context a b a b c d c d a b, yet its record does not bond a to b where the context's does, and a supplied formation of 28 units that receives it does not parse the utterance c d a b c d. (`Becoming.LearnedGrouping.reordered`, `Becoming.LearnedGrouping.counts_agree`, `Becoming.LearnedGrouping.order_changes_grouping`, `Becoming.LearnedGrouping.utterance`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. Repetition can join across the intended words: the majority bonds of the record a b a b group that sequence as one group, which is not read. A supplied formation of 21 units that receives a b a b and, failing to parse the utterance c d a b c d, receives further slots stops at the record a b a b c d c, which parses the utterance into its intended meaning with no response and does not parse c d c d. (`Becoming.LearnedGrouping.repetition_joins_words`, `Becoming.LearnedGrouping.broaden_one_form`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. In the periphery (propext, Quot.sound), for the sounds a, b, c, d and words a b, c d: the earlier peripheral bond is the core's majority bond, so each record bonds a sound to at most one successor; a record bonding a to b and c to d and neither b nor d to a or c groups every encoded sequence into its words; after the context a b a b c d c d a b the fixed decoder parses each encoded sequence as its atoms assembled. (`Becoming.MachineInstances.edges_all_eq`, `Becoming.MachineInstances.bond_eq`, `Becoming.MachineInstances.bond_functional`, `Becoming.MachineInstances.Groups`, `Becoming.MachineInstances.segments_of_groups`, `Becoming.MachineInstances.experienced_groups`, `Becoming.MachineInstances.experienced_parses_every`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

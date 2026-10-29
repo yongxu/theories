@@ -11,29 +11,29 @@
 ## Laws
 
 1. Let C be a class of functions I → V and D the data (a proposition on inputs). Within C the data fix the value at x (Determines C D x) when two members of C agreeing on D take one value at x; g goes alike across a lumping π : I → K (Lumped π g) when inputs alike under π take one value; C is free at x beyond the data (Free C D x) when every member's values on D combine with every member's value at x. (`Becoming.Learning.Determines`, `Becoming.Learning.Lumped`, `Becoming.Learning.Free`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. With no premise: where an observed input is lumped with x by π, the class of functions going alike across π is determined at x by the data; given two values, data in a list and decided equality on K, this holds exactly where some observed input is lumped with x. (`Becoming.Learning.lumped_determines`, `Becoming.Learning.decideSeen`, `Becoming.Learning.determines_lumped_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. A member g going alike across π and fitting the world f on D is right at an x lumped with an observed d exactly where f d = f x, and is right where f itself goes alike across π. (`Becoming.Learning.lumped_right_iff`, `Becoming.Learning.lumped_world_right`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. A free class is determined at x by the data exactly where its members all agree at x; with decided equality on inputs, the class of every function is free at every input not observed, and with two values the data determine nothing there. (`Becoming.Learning.free_determines_iff`, `Becoming.Learning.every_free`, `Becoming.Learning.every_determines_nothing`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Change: for a process P and a projection π of configurations, going alike under π (GoAlike) is going alike by every move at every two configurations alike under π; where P is determined and the outcome u₀ of a at s₀ is observed, the outcome read through π transfers to every step of a from s exactly where s₀ and s go alike under π by a. (`Becoming.GoAlike`, `Becoming.Learning.GoAlikeAt`, `Becoming.Learning.goAlike_iff_at`, `Becoming.Learning.transfer_right_iff`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 6. Structure and change are one lumping: a determined law next goes alike under π exactly where π ∘ next goes alike across π. (`Becoming.Learning.goAlike_iff_lumped`, `Becoming.Law.process`)
-   - *Master laws:* lumping, reaching the grammar; central declaration `Becoming.Learning.goAlike_iff_lumped`: master law.
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar; the measure counts central declaration `Becoming.Learning.goAlike_iff_lumped` as following from a master law.
 7. Training: a selection through a relation alike selects alike candidates alike; selection through the couplings is exactly a selection through being alike through them up to t, by definition; a loss computed from the values on the data, and every choice made from it, select through agreeing on the data. (`Becoming.Learning.Training.Through`, `Becoming.Learning.Training.AgreeOn`, `Becoming.Web.SelectsThrough`, `Becoming.Learning.Training.web_selectsThrough_iff`, `Becoming.Learning.Training.loss_through`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. Within a class free at x, every selection through the data has, for every selected member and every member's value at x, a selected member agreeing with the first on the data and taking that value at x; every member of C agreeing on the data with a world in C takes the world's value at x exactly where Determines C D x. (`Becoming.Learning.Training.unselected_beyond_data`, `Becoming.Learning.Training.fit_right_iff`)
-   - *Master laws:* none among its reasons; central declaration `Becoming.Learning.Training.unselected_beyond_data`: single application (a selection through the data, used once).
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Learning.Training.unselected_beyond_data` as following from a single application (a selection through the data, used once).
 9. In Shift (inputs a position and a content, the lumping reading the content, data at one position only) the lumping determines the untried input and the class of every function does not; the generalization is right where the world is the same at every position and wrong where it differs. (`Becoming.Learning.Shift.content`, `Becoming.Learning.Shift.data`, `Becoming.Learning.Shift.same`, `Becoming.Learning.Shift.both`, `Becoming.Learning.Shift.determines`, `Becoming.Learning.Shift.every_nothing`, `Becoming.Learning.Shift.right_same`, `Becoming.Learning.Shift.wrong_both`, `Becoming.ListTests.not_ne_self`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. Periphery (LearningCorrespondence): within the uniform law family with distinguishable primitive effects the three encounters of CompositionalAcquisition determine every expression (the exactness of the acquired code re-proved case by case), and admitting its nonuniform law they determine nothing at the novel expression. (`Becoming.LearningCorrespondence.Uniform`, `Becoming.LearningCorrespondence.encounters`, `Becoming.LearningCorrespondence.acquire_exact`, `Becoming.LearningCorrespondence.agree_at`, `Becoming.LearningCorrespondence.uniform_determines`, `Becoming.LearningCorrespondence.nonuniform_not_determined`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 11. Periphery: a network's development under fixed weights is the orbit of its step; Hebbian development is a system changing its own rule, activity having a law of its own exactly where the weights make no difference to its step; in the three-unit memory they do, so activity alone has no law. (`Becoming.LearningCorrespondence.develop_orbit`, `Becoming.LearningCorrespondence.hebbian`, `Becoming.LearningCorrespondence.hebbian_determined`, `Becoming.LearningCorrespondence.hebbian_activity_law_iff`, `Becoming.LearningCorrespondence.weights_matter`, `Becoming.LearningCorrespondence.hebbian_no_activity_law`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 12. Periphery: the network under a route of updating is again a system changing its own rule, the route being the rule, with a law of its own exactly where the route makes no difference; at the starting network and first task the two routes differ, so the network alone has no law; the responsive route learns exactly where the task fails. (`Becoming.LearningCorrespondence.updating`, `Becoming.LearningCorrespondence.updating_determined`, `Becoming.LearningCorrespondence.updating_network_law_iff`, `Becoming.LearningCorrespondence.route_matters`, `Becoming.LearningCorrespondence.updating_no_network_law`, `Becoming.LearningCorrespondence.responsive_kept`, `Becoming.LearningCorrespondence.responsive_learns`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

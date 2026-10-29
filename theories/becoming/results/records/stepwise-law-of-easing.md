@@ -11,15 +11,15 @@
 ## Laws
 
 1. Easing keeps activity: from a course where activity needs support to one where activity follows support and that eases it (asks no more, holds every condition as high, draws on nothing more), a formation active in the first is active in the second. (`Becoming.Ranking.active_of_eases`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. The stepwise law of easing: under easing an event the stepwise reading includes in the first course stays included in the second exactly where the second does not undermine there, so the second extends the first exactly when it undermines no event the first includes and includes one the first withholds. (`Becoming.Ranking.stepwise_kept_iff`, `Becoming.Ranking.stepwise_extends_iff_of_eases`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. A course in which no condition's level falls undermines nothing: a level that never falls stays at or above every need it once met; so where no level falls in the easing course the stepwise law of easing is the whole-run one. (`Becoming.Ranking.level_never_falls`, `Becoming.Ranking.not_undermining_of_rising`, `Becoming.Ranking.stepwise_extends_iff_of_rising`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Restraint over any number of drawers under the stepwise reading: under the premises of the whole-run comparison, where moreover the restrained flow takes from no condition more than it gives, the restrained course extends the overdrawing one exactly when it includes an event the other withholds, and every comparison satisfying C ranks it higher. (`Becoming.Ranking.restraint_extends_iff_stepwise`, `Becoming.Ranking.restraint_ranks_stepwise`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Where the premise fails: in ThirdParty the restrained course undermines at step 3 the focal event the overdrawing course includes, the third formation met at seven only in the restrained course falling below its need after the focal draw. (`Becoming.Ranking.ThirdParty.undermines_included`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,13 +11,13 @@
 ## Laws
 
 1. With balance from T, the joint exchange giving no more than it takes wherever the level is below m, a level below m at T is at most that level after and never returns to m; gated renewal, nothing given below m, is its case. (`Becoming.Flow.held_below`, `Becoming.Flow.never_returns_below`, `Becoming.Flow.given_zero_below`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. With balance, a joint exchange beyond the gap to m leaves the next level off m, so beyond it at every step from T the level is off m at every later step. (`Becoming.Flow.not_at_of_beyond`, `Becoming.Flow.never_at_of_beyond`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Each formation weakly opposing departure from m on its condition, some strictly on each side, makes the joint exchange oppose; shares of the gap bounding each formation's departure, totalling at most the gap, keep the joint exchange within it. (`Becoming.Flow.total_lt_of_le_of_mem`, `Becoming.Flow.opposes_of_each`, `Becoming.Flow.withinGap_of_shares`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Under balance, each condition of a family within the gap to its own level and opposing at every step from T, the family's stock is the total of those levels from the step by which each has settled; no formation reads the stock. (`Becoming.Flow.stock_settles`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

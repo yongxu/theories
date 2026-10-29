@@ -11,23 +11,23 @@
 ## Laws
 
 1. For any types of records and meanings and any Boolean readings of which records bear on a form and what each offers, a meaning stands where every bearing record offers it, and the candidates are the repertoire's meanings that stand; after further records the candidates are exactly the earlier candidates that stand on those records. (`Becoming.CrossSituational.stands`, `Becoming.CrossSituational.candidates`, `Becoming.CrossSituational.candidates_append`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. For any types of records and meanings and any Boolean readings of bearing and offering, a meaning ruled out by some records stays ruled out after further records, and a candidate stays one exactly while every later bearing record offers it. (`Becoming.CrossSituational.narrows`, `Becoming.CrossSituational.stays_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. For any process and any run, read as records the moves of its first n + k steps leave as candidates exactly the candidates of its first n steps that stand on the next k moves; a meaning ruled out at a step stays ruled out at every later step, and a candidate stays one exactly while every later bearing move offers it. (`Becoming.Courses.window_append`, `Becoming.Courses.run_candidates_append`, `Becoming.Courses.run_narrows`, `Becoming.Courses.run_stays_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. In the periphery (propext, Quot.sound): for every lexicon whose record groups the two-word encoding, with the naming source admitted and support for one naming per accessible meaning, naming every accessible atom, each record offering the accessible meanings, leaves an accessible atom's word with exactly its earlier accessible candidates and every other word's candidates unchanged; a visit's naming is this law. (`Becoming.MachineInstances.speak_records`, `Becoming.MachineInstances.naming_narrows`, `Becoming.MachineInstances.local_naming_narrows`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. In the periphery (propext, Quot.sound): for every lexicon whose repertoire has no repeats, a word resolves to its atom exactly where its admitted records separate the atom; where its transition record also groups the two-word encoding, every encoded sequence is interpreted as the assembly of its atoms exactly where each word's admitted records separate its atom. (`Becoming.MachineInstances.Separated`, `Becoming.MachineInstances.resolve_iff`, `Becoming.MachineInstances.interprets_every_iff_separated`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. In the periphery (propext, Quot.sound): the lexicon after the encounters selected from 51 units groups the two-word encoding and its records separate both atoms, so every finite encoded sequence is interpreted as the assembly of its atoms. (`Becoming.MachineInstances.acquired_groups`, `Becoming.MachineInstances.acquired_resolves`, `Becoming.MachineInstances.acquired_separated`, `Becoming.MachineInstances.acquired_interprets_every`, `Becoming.MachineInstances.acquired_from_separation`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. In the periphery (propext, Quot.sound): after preliminary surveys of a supplied catalogue, a supplied first-match rule reading retained access reports and current binding ambiguity chooses each next visit, the choice changing as the bindings change; the selected history supplies the same interpretation inputs as the earlier enacted-scene history and so interprets every encoded sequence. (`Generative.EncounterChoice.binding_changes_which_scene_is_chosen`, `Generative.EncounterChoice.selected_encounters_supply_previous_interpretation_inputs`, `Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. In the periphery (propext, Quot.sound): after a supplied rearrangement, an access report accurate when made can be stale and change the next choice; surveying the place again revises the recalled report, keeping the earlier reports, and the next choice with it. (`Generative.EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale`, `Generative.EncounterChoice.stale_prediction_changes_choice_before_reobservation`, `Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 9. In the periphery (propext, Quot.sound), witnesses: a catalogue of one place leaves the lexicon unresolved with no further choice; with 50 units the acquired lexicon interprets the utterance as intended and executes no response; where naming is mistimed, the stopping rule stops on a lexicon resolving both words that answers the utterance false, true, false, where the selected history answers true, false, true. (`Generative.EncounterChoice.poor_catalogue_leaves_ambiguity`, `Generative.EncounterChoice.acquired_binding_can_exhaust_response_support`, `Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong`, `Generative.EncounterChoice.selected_history_reaches_actual_response`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

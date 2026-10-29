@@ -11,29 +11,29 @@
 ## Laws
 
 1. Where the members of which a determination holds are listed at each step, each once, from some step T on at most B at each step, and the determination is decided at each step, members coming to hold at arbitrarily late steps need members ceasing to hold at arbitrarily late steps. (`Becoming.Listed`, `Becoming.Listed.ceasing_of_coming`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. The proof goes through the census balance: with coming to be recurring, the comings from any step on accumulate past B; where the list returns within B, the list at the end is shorter than the list at the start with what came between, so by the balance something ceases between. (`Becoming.recurring_accumulates`, `Becoming.Listed.ceasing_iff_shortfall`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. So the bound need not hold at every step from some step on: the list need only return within some number K at arbitrarily late steps. (`Becoming.Listed.ceasing_of_returning`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. With the census law (ceasing-needs-arising), the two recur together where the list is bounded from some step on: coming to be recurs exactly when ceasing to be does. (`Becoming.Listed.coming_iff_ceasing`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Read of activity: under a census with at most B formations active at each step from some step on, arising recurs exactly when ceasing recurs. (`Becoming.Web.Census`, `Becoming.Listed.ceasing_of_coming`, `Becoming.Web.unceasing_iff_bounded`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Read of worlds: in a world whose relata active at each step are listed, at most B of them, arising recurs exactly when ceasing does. (`Becoming.World.CountedWithin`, `Becoming.World.CountedWithin.arising_iff_ceasing`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. Every census of a finite world is bounded, with no decidability, and where activity is decided one exists, the premise of the bounded law; the law of finite worlds is World.arising_iff_ceasing of Becoming.Space. (`Becoming.World.Finite`, `Becoming.World.Finite.census_bounded`, `Becoming.World.Finite.countedWithin`, `Becoming.World.arising_iff_ceasing`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. In procession, where relatum x is active at step x alone, one relatum is active at each step and arising and ceasing both recur, while the relata are not finitely many, so the law reaches beyond finite worlds; accretion has a census without a bound, and arising recurs there while ceasing does not. (`Becoming.World.procession`, `Becoming.World.procession_world`, `Becoming.World.accretion`, `Becoming.World.accretion_unbounded`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 9. The bound may vary with the steps: where at most B t relata are active at each step t, listed (a constant bound being the case), and B returns within some number at arbitrarily late steps, arising recurs exactly when ceasing does. (`Becoming.World.CountedBy`, `Becoming.World.CountedBy.arising_iff_ceasing`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 10. A bound growing without end, however slowly, does not keep the two together: for any non-decreasing, unbounded B, in slow B the relata below B t are active at step t, with a census counted by B; relatum B t arises across each step at which B grows, and nothing ceases; so under logarithmic growth, for instance, arising can still go on without ceasing. (`Becoming.World.slow`, `Becoming.World.slow_world`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. Where the list grows without end, ceasing to be recurs where, from each step, the comings over some stretch outnumber the bound at its end; this is sufficient, not necessary, and in slow the comings never outnumber the bound; the exact criterion is the shortfall of census-balance. (`Becoming.Listed.ceasing_of_outpacing`, `Becoming.Listed.ceasing_iff_shortfall`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 12. Read of standing: where from some step on at most B conditions stand at each step, listed, coming to stand recurs exactly when ceasing to stand does. Read of dependence: where the dependences of each step are listed, at most B from some step on, forming recurs exactly when dissolving does. (`Becoming.Web.StandingCensus`, `Becoming.Web.StandingCensus.coming_iff_ceasing`, `Becoming.Web.DependenceCensus`, `Becoming.Web.DependenceCensus.forming_iff_dissolving`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

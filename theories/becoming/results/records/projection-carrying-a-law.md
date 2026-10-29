@@ -11,27 +11,27 @@
 ## Laws
 
 1. Let P be a process on configurations with moves, and π a projection (description) of the configuration. P read through π, its image, has a step by a move from k to κ exactly where some step of P by that move goes from a configuration projecting to k to one projecting to κ; P's step factors through π into its image, and the image is the least process the step factors through. (`Becoming.Image`, `Becoming.factors_image`, `Becoming.Image.least`, `Becoming.FactorsThrough`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Configurations alike under π go alike when any two configurations alike under π go by the same move to configurations alike under π. The image is determined, and some determined process on the description admits every step of P read through π, exactly where configurations alike go alike. (`Becoming.GoAlike`, `Becoming.image_determined_iff`, `Becoming.carries_law_iff`, `Becoming.Determined`)
-   - *Master laws:* lumping, reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 3. Through the identity, going alike is determinacy; the description that distinguishes nothing always goes alike; a description of the image goes alike exactly where the composite description does. (`Becoming.goAlike_id_iff`, `Becoming.goAlike_const`, `Becoming.goAlike_image_iff`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 4. Where configurations alike go alike, two runs with the same moves from configurations alike under π stay alike under π at every step. (`Becoming.GoAlike.runs_agree`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 5. Where the next configuration depends only on π, configurations alike go alike, and two runs with the same moves from configurations alike under π are equal from the first step on. (`Becoming.DependsOnlyOn`, `Becoming.DependsOnlyOn.goAlike`, `Becoming.DependsOnlyOn.reabsorbed`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 6. A determined law depends only on π, as a process, exactly where configurations alike under π have the same next configuration, and then their orbits agree from the next step on. With the configuration read as state and rule, and the next configuration depending on the rule and not the state, two configurations with the same rule have the same orbit from the next step on. (`Becoming.Law.dependsOnlyOn_iff`, `Becoming.Law.reabsorbed`, `Becoming.Law.orbit`, `Becoming.Law.process`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 7. In a system changing its own rule, the state x under rule g becomes F g x u by move u and the rule becomes G g x; it is one determined process on the pair of state and rule. The state's projection goes alike, equivalently some determined process on the state admits every step read through the state, exactly where F agrees for every two rules at every state and move. (`Becoming.adaptive`, `Becoming.adaptive_determined`, `Becoming.adaptive_state_law_iff`, `Becoming.adaptive_state_carries_iff`)
-   - *Master laws:* lumping, reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 8. Along its runs, on a stretch where the rule stays g, the state's steps are steps of the determined law of g. (`Becoming.ruleLaw`, `Becoming.ruleLaw_determined`, `Becoming.Run.steps_by_rule`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. Read through a projection: where some determined process on the description admits the run's steps read through π before a step, the run has not taken a at a configuration projecting to k before it, and the description has two different elements, the record so read fixes no outcome of a at k; likewise where configurations alike go alike. (`Becoming.Run.TakesThrough`, `Becoming.Run.StepsThrough`, `Becoming.Run.FixesThrough`, `Becoming.Run.stepsThrough_retarget`, `Becoming.Run.not_fixesThrough_of_untaken`, `Becoming.Run.not_fixesThrough_of_goAlike`, `Becoming.retarget`, `Becoming.retarget_determined`)
-   - *Master laws:* lumping, reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 10. In Coarse the configuration is two bits, and each step flips the first and leaves the second free: the process is not determined, yet the first bit goes alike and the step factors through it into the determined law of flipping. (`Becoming.Coarse.process`, `Becoming.Coarse.not_determined`, `Becoming.Coarse.goAlike`, `Becoming.Coarse.carries`)
-   - *Master laws:* lumping, not reaching the grammar.
+    - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 11. In Switching the state becomes the rule and the rule flips at every step: the joint process is determined, the state's projection does not go alike, and for the run from (false, false), for every t ≥ 2, no determined process on the state admits the run's steps up to t read through the state. (`Becoming.Switching.follow`, `Becoming.Switching.alternate`, `Becoming.Switching.process`, `Becoming.Switching.next`, `Becoming.Switching.run`, `Becoming.Switching.determined`, `Becoming.Switching.not_goAlike`, `Becoming.Switching.no_state_law`)
-   - *Master laws:* lumping, not reaching the grammar.
+    - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,13 +11,13 @@
 ## Laws
 
 1. Each member of a roster fails by a formula over root causes (a cause, either of two formulas, or both), and failure is monotone in the causes. Bounds on the causes that may occur together induce the roster's fault sets, and a certificate over that envelope is sound for every set of actual causes some bound covers, given members faithful where they work. (`Becoming.Reconfiguration.FaultFormula`, `Becoming.Reconfiguration.fails`, `Becoming.Reconfiguration.fails_mono`, `Becoming.Reconfiguration.Arrangement`, `Becoming.Reconfiguration.induced`, `Becoming.Reconfiguration.envelope`, `Becoming.Reconfiguration.Covered`, `Becoming.Reconfiguration.outside_bound_survives`, `Becoming.Reconfiguration.induced_certificate_sound`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. An arrangement is ready where its bounds are not empty and every two of them leave some member working under both; readiness is exactly nonempty bounds with a separated induced envelope, and a ready arrangement makes the certificate available to members responsive where they work under covered causes. (`Becoming.Reconfiguration.ready`, `Becoming.Reconfiguration.ready_iff_nonempty_separated`, `Becoming.Reconfiguration.induced_certificate_available`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. In the computed cases, a formula needing two copies of one cause fails with that cause alone, one needing two distinct causes does not, one needing either fails with one. Three members with distinct single causes are ready; with two under one cause, all three names kept, they are not; a fourth with its own cause repairs it; four under two causes are not ready. (`Becoming.Reconfiguration.separate3`, `Becoming.Reconfiguration.merged3`, `Becoming.Reconfiguration.repaired4`, `Becoming.Reconfiguration.duplicated4`, `Becoming.Reconfiguration.envelopes_compute`, `Becoming.Reconfiguration.readiness_cases`, `Becoming.Reconfiguration.same_cause_not_redundant`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. The separate roster's envelope, reused after the merger, accepts the two merged members' support; recomputed, it rejects it. A reconfiguration installs only where opened, to a ready candidate, with reserve and time for its draw and response: from the original there is no step to the merged roster, one to the repaired; a roster can be ready while a cause in every member's formula and no bound fails every member. (`Becoming.Reconfiguration.stale_envelope_accepts_shared`, `Becoming.Reconfiguration.reconfigure`, `Becoming.Reconfiguration.unready_rejected`, `Becoming.Reconfiguration.closed_rejected`, `Becoming.Reconfiguration.shared_cause_no_step`, `Becoming.Reconfiguration.separated_repair_steps`, `Becoming.Reconfiguration.omitted`, `Becoming.Reconfiguration.omitted_cause_breaks`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

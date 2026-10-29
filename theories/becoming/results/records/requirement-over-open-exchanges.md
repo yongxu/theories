@@ -11,11 +11,11 @@
 ## Laws
 
 1. A relation of exchange leaves open, under each level history, any number of exchanges across a step; a run takes an open exchange at every step. A formation's exchange necessarily responds to a condition falling below a need where, under every history differing at most in that level at that step with the level below the need, no open exchange has it exchange; read as requirement, activity needs support on every run, for every history and need, and with the rest counted the four tying premises hold. (`Becoming.ExchangeRelation`, `Becoming.ExchangeRelation.Exchanges`, `Becoming.ExchangeRelation.RespondsBelow`, `Becoming.ExchangeRelation.Runs`, `Becoming.ExchangeRelation.readWeb`, `Becoming.ExchangeRelation.readWeb_dependent`, `Becoming.ExchangeRelation.world`, `Becoming.ExchangeRelation.reading_glue`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. Read as possible response (some open exchange leaves it idle), activity need not be supported: under the free relation a formation takes a unit at a level of nothing and possibly responds. (`Becoming.ExchangeRelation.MayRespondBelow`, `Becoming.ExchangeRelation.free`, `Becoming.ExchangeRelation.takingOne`, `Becoming.ExchangeRelation.free_unsupported`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. A law of exchange is the relation leaving one exchange open; its course is a run of it, and there necessary and possible response are the law's response: read off the course as a run, the web's requirement is the law's. (`Becoming.ExchangeLaw.relation`, `Becoming.ExchangeLaw.course_runs`, `Becoming.ExchangeLaw.relation_exchanges`, `Becoming.ExchangeLaw.relation_admits`, `Becoming.ExchangeLaw.relation_responds_iff`, `Becoming.ExchangeLaw.relation_may_iff`, `Becoming.ExchangeLaw.relation_readWeb_requires`, `Becoming.ExchangeLaw.relation_readWeb_may`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

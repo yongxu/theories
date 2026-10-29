@@ -11,9 +11,9 @@
 ## Laws
 
 1. Two orders on rules compared together, and two rules each read from the share; each read monotonically, the pair is read monotonically. (`Becoming.RuleCapture.pairOrder`, `Becoming.RuleCapture.pairReading`, `Becoming.RuleCapture.ReadsShare.pair`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. From a start whose two rules favour, the share falls at no step and the pair is locked from the step after the first reading step. (`Becoming.RuleCapture.pair_locks`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

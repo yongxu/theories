@@ -11,21 +11,21 @@
 ## Laws
 
 1. A proposition is decided where it holds or fails, and that it is decided can never be refuted. A number indicates a proposition where it is one and the proposition holds, or zero and it fails; a number counts the members of a list of which a property holds where it sums their indicators, and across a list of steps the counts at each step sum. (`Becoming.Decided`, `Becoming.not_not_decided`, `Becoming.Indicates`, `Becoming.Counts`, `Becoming.CountsAcross`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Some number indicates a proposition exactly where the proposition is decided, and a count of a list exists exactly where the property is decided at each member; a decided proposition holds wherever its failure is refuted. (`Becoming.indicates_iff_decided`, `Becoming.counts_iff_decided`, `Becoming.Decided.of_not_not`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. A count of a list is one number and at most the list's length; a positive count has a member of which the property holds, such a member makes the count positive, and where the property holds of no member the count is zero. Where a decision procedure decides the property at every member, the total of its marks is the count. (`Becoming.Counts.unique`, `Becoming.Counts.le_length`, `Becoming.Counts.exists_of_pos`, `Becoming.Counts.pos_of_mem`, `Becoming.Counts.eq_zero`, `Becoming.counts_total`, `Becoming.mark`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Across one step, for a list and a property of its members at each step, wherever four counts exist (members holding before, holding after, coming to be by failing before and holding after, and ceasing), those holding after with those that ceased equal those holding before with those that came to be. No decidedness is assumed. (`Becoming.Counts.across_step`, `Becoming.ComesToBe`, `Becoming.CeasesToBe`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Over a stretch of steps, for a list, wherever the counts at its start and end and the counts of comings and ceasings across it exist, those holding at the end with those that ceased equal those holding at the start with those that came to be, with no decidedness assumed even at the steps inside. With the states decided at every step of the stretch, the same holds by summing its steps. (`Becoming.Counts.over_stretch`, `Becoming.Counts.over_stretch_decided`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Over any stretch, for a list, wherever comings and ceasings across it are counted, each is at most the list's length plus the other. No decidedness is assumed. (`Becoming.CountsAcross.keep_pace`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. Where a property holds of every member of a list, its count is the list's length, and where it holds of none, zero. A count is the length of a list of exactly the members counted, without repetition where the list has none; two lists without repetition with the same members are equally long. (`Becoming.Counts.of_all`, `Becoming.Counts.of_none`, `Becoming.Counts.listing`, `Becoming.length_eq_of_same`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. Where what holds is listed at each step of a stretch by a list without repetition, wherever the ceasings over the list before each step and the comings over the list after it are counted, the length of the list at the end with what ceased equals the length at the start with what came to be; likewise across one step. No decidedness is assumed. (`Becoming.Counts.listed_across`, `Becoming.Counts.listed_over_stretch`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

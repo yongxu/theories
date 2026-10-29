@@ -11,21 +11,21 @@
 ## Laws
 
 1. A carrying renewal, read at a fine class of parts and a coarse class of the pattern they make up, continues the pattern from one occurrence to the next while a part begins there; it is an alteration (火传). (`Becoming.«传»`, `Becoming.«传则异»`, `Becoming.«所及»`, `Becoming.«所及之传递»`, `Becoming.«相续之续»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 2. On branches: the pattern goes on along some branch or ends on every branch, which exclude each other; going on along every branch is going on along some. Generation (some branch renews without end), keeping (some branch goes on without renewal) and degeneration (every branch ends) are read so; degeneration excludes both. (`Becoming.«延»`, `Becoming.«尽»`, `Becoming.«延尽不并»`, `Becoming.«不穷则延»`, `Becoming.«尽则非不穷»`, `Becoming.«生成»`, `Becoming.«守»`, `Becoming.«退化»`, `Becoming.«新而尽»`, `Becoming.«生成则延»`, `Becoming.«守则延»`, `Becoming.«生成退化不并»`, `Becoming.«守退化不并»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 3. Generation and keeping can hold at one point, along different branches: a root whose chain renews at every step and whose other branch stays still is in both, the mixed region. On a single line, where each occurrence conditions at most one other, they exclude each other. (`Becoming.Map.Branch`, `Becoming.Map.fork`, `Becoming.Map.fork_chain_begins`, `Becoming.Map.«生守相杂»`, `Becoming.«单行则族含所及»`, `Becoming.«单行则生守不并»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 4. The strong forms read the whole coarse line: 全生成 (the line never ends, and from every point it reaches a carrying renewal lies ahead), 全守 (it never ends, and from some point no carrying renewal lies ahead, renewals before that point allowed) and 有终 (some point it reaches ends, which is not degeneration) exclude each other and, with excluded middle, cover every point; coverage by the some-branch regions is not proved. Placing every point of every model in one of the strong forms is exactly excluded middle, and so is telling a line that never ends from one that ends; 全生成 holds along its line and an end reaches back along it. (`Becoming.«全生成»`, `Becoming.«全守»`, `Becoming.«有终»`, `Becoming.«新而有终»`, `Becoming.«全生成有终不并»`, `Becoming.«全生成全守不并»`, `Becoming.«全守有终不并»`, `Becoming.«全三域之周»`, `Becoming.«全生成之所及亦全生成»`, `Becoming.«有终之所前亦有终»`, `Becoming.«不穷有终之定当且仅当排中»`, `Becoming.«全三域之定当且仅当排中»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 5. Each region is inhabited (an endless chain generates, a still pattern keeps, a short life ends on every branch), and the short life renews and still ends, so renewal does not decide the region. Telling going on from ending at every point, in every model, is exactly excluded middle. (`Becoming.Map.step`, `Becoming.Map.step_irrefl`, `Becoming.Map.Endless.generation`, `Becoming.Map.Endless.generates`, `Becoming.Map.still`, `Becoming.Map.Still.keeping`, `Becoming.Map.Still.keeps`, `Becoming.Map.short`, `Becoming.Map.short_end`, `Becoming.Map.Short.degeneration`, `Becoming.Map.Short.ends`, `Becoming.Map.Short.renews_and_ends`, `Becoming.Map.Short.renews_and_ends_everywhere`, `Becoming.«延尽之定当且仅当排中»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 6. A coarse class constant under 缘 has no end from a continued point, so what ends after a continued step has a coarse class that is not constant. A sequence of classes, no order between them assumed, reads generation at every order, and generation at an order keeps the next order's pattern from ending on every branch. (`Becoming.«有常则无终»`, `Becoming.«有终则粗不有常»`, `Becoming.«阶全生成»`, `Becoming.«阶全生成则上无终»`, `Becoming.«阶生成»`, `Becoming.«阶生成则上不退化»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 7. On the World model (occurrences: a step and a formation): carrying renewal steps into a formation that did not carry on as itself; under passing, generation makes carriers arise arbitrarily late; by names nothing generates; consumption held, a family drawn beyond renewal and stopped passing refute going on every branch; the relay renews and ends. (`Becoming.Web.carries_iff`, `Becoming.Web.passing_carries_iff`, `Becoming.Web.generation_renews_late`, `Becoming.Web.generation_arises_late`, `Becoming.Web.keeping_of_carried_on`, `Becoming.Web.itself_not_generation`, `Becoming.Web.always_keeps`, `Becoming.Web.degenerates_of_gone`, `Becoming.Web.consumed_held_not_endless`, `Becoming.Web.family_excess_not_endless`, `Becoming.Web.stopped_not_endless`, `Becoming.Map.shifted_generates`, `Becoming.Map.relay_renews_and_ends`, `Becoming.Map.renewal_undecided`)
-   - *Master laws:* balance, reaching the grammar.
+   - *Master laws, by Lean dependency:* balance; its declarations reach the grammar.
 8. Read along renewing into under the one, renewal without end is going on along some branch, and ceasing is ending on every branch. (`Becoming.«生生即延»`, `Becoming.«息即尽»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,33 +11,33 @@
 ## Laws
 
 1. Identity among a list's members is decided where for any two members it is decided whether they are the same; a list s lists a list l once where s is without repetition and has exactly the members of l. (`Becoming.IdentityDecided`, `Becoming.ListsOnce`, `Becoming.Distinct`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A list without repetition decides identity among its members, and where identity among a list's members is decided some list without repetition has exactly its members: a list can be listed once exactly where identity among its members is decided, and that it can be is never refuted. A procedure deciding identity among the members lists them once. (`Becoming.Distinct.identityDecided`, `Becoming.listsOnce_of_decided`, `Becoming.listsOnce_iff_decided`, `Becoming.not_not_listsOnce`, `Becoming.listOnce`, `Becoming.listOnce_listsOnce`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Two lists without repetition with the same members have the same total of every quantity and the same length. The number of relata a list holds, the length of some list listing it once, is one number, exists exactly where identity among its members is decided, and is at most the list's length; a total once per member is at most the total over the list. (`Becoming.total_eq_of_same`, `Becoming.ListsOnce.total_eq`, `Becoming.ListsOnce.length_eq`, `Becoming.Numbers`, `Becoming.Numbers.unique`, `Becoming.numbers_iff_decided`, `Becoming.Numbers.le_length`, `Becoming.ListsOnce.total_le`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. A law refuting something wherever a list is listed once refutes it of the list with no premise; a law holding wherever a list is listed once holds of it where identity among its members is decided. (`Becoming.not_of_listsOnce`, `Becoming.of_listsOnce`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Under balance and dissipation, with no listing once and no decided identity: where taking from a family recurs, no family holding it stays closed across every step from any step on; and where some list, repetition allowed, holds every condition, taking from any family does not recur. (`Becoming.Flow.Dissipative.opens_listing`, `Becoming.Flow.Dissipative.finite_taking_not_recurring_listing`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+   - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 6. Under balance and dissipation, however a family is listed: where every step from some step on is enclosed around it and taking from it recurs, it is refuted that from a given step on, at every step, every formation taking part that gives to the family takes only from it. (`Becoming.Flow.taking_draws_in_listing`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+   - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 7. Under balance and dissipation of a flow whose formations are its conditions, where some list, repetition allowed, holds every relatum, it is refuted that embodied relata arise at arbitrarily late steps. Under balance at a unit fixed at one from some step on and dissipation, taking from a family closed across every step from some step on does not recur, however the family is listed. (`Becoming.Web.embodiedArising_not_recurring_listing`, `Becoming.Flow.taking_not_recurring_listing`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+   - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 8. A world is enumerated where some list, repetition allowed, holds every relatum; it is finite exactly where it is enumerated and identity among its relata is decided, and that an enumerated world is finite cannot be refuted. Under balance, dissipation and embodied arising, neither arising nor ceasing recurs in an enumerated world. (`Becoming.World.Enumerated`, `Becoming.World.Finite`, `Becoming.World.finite_iff`, `Becoming.World.Enumerated.not_not_finite`, `Becoming.World.Enumerated.not_recurring`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+   - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 9. A step is enclosed exactly where some family closed across it has decided identity among its members, and enclosed around a family exactly where some family holding that family and closed across the step has. A flow dissipates exactly where every list listing once a family closed across a step is dissipated on; over families listed once, dissipation is a matter of the members. (`Becoming.Flow.enclosed_iff`, `Becoming.Flow.around_iff`, `Becoming.Flow.dissipative_iff`, `Becoming.Flow.DissipatesOn.of_same`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. Under balance and dissipation, a member of a family closed across a step coming to stand lowers the stock over every list listing the family once; where identity among the family's members is decided, such a list exists. (`Becoming.Flow.standing_lowers_listing`, `Becoming.Flow.standing_lowers_decided`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 11. A census, listing what holds at each step once, decides identity among what it lists at each step; a listing of what holds, repetition allowed, gives a census where a procedure decides identity among the members listed at each step. With activity decided by a procedure and such a listing of what is active, ceasing at arbitrarily late steps needs arising at arbitrarily late steps. (`Becoming.Listed.identityDecided`, `Becoming.Listed.of_listing`, `Becoming.Web.arising_of_ceasing_listing`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 12. Read on a flow's steps: what takes part in a step can be listed once, and has a number, exactly where identity among it is decided; a step whose list holds one relatum twice numbers one relatum in two places; and every flow on a type lists what takes part in each step once exactly where identity on the type is decided. (`Becoming.listsOnce_iff_decided`, `Becoming.numbers_iff_decided`, `Becoming.Flow.present_repeated`, `Becoming.Flow.present_listsOnce_all_iff`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 13. Each of fifteen refutation laws of opening, drawing in and rest (rising, coming to stand and unrefined taking not recurring) holds, with its own law's premises, of a family that may list a member twice, with no listing once and no decided identity. (`Becoming.Flow.More.opens_listing`, `Becoming.Flow.opens_of_arising_listing`, `Becoming.Flow.rising_opens_listing`, `Becoming.Flow.standing_opens_listing`, `Becoming.Flow.rise_alone_opens_listing`, `Becoming.Web.embodiedArising_opens_listing`, `Becoming.Flow.taking_draws_in_from_listing`, `Becoming.Flow.rising_draws_in_from_listing`, `Becoming.Flow.rising_draws_in_listing`, `Becoming.Flow.standing_draws_in_listing`, `Becoming.Web.embodiedArising_draws_in_from_listing`, `Becoming.Web.embodiedArising_draws_in_listing`, `Becoming.Flow.rising_not_recurring_listing`, `Becoming.Flow.standing_not_recurring_listing`, `Becoming.Flow.taking_needs_refinement_listing`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 14. The five refutation laws of being fed from beyond and the two of the boundary crossed hold, with their own laws' premises, of a family that may list a member twice; each keeps the decision procedure for identity on the type of conditions or relata that its law takes. Being fed from beyond, and the boundary of a region as a cut, are matters of membership. (`Becoming.Flow.fed_from_beyond_listing`, `Becoming.Flow.fed_from_beyond_from_listing`, `Becoming.Flow.rising_fed_from_beyond_listing`, `Becoming.Flow.rising_fed_from_beyond_from_listing`, `Becoming.Web.embodiedArising_fed_from_beyond_listing`, `Becoming.Flow.boundary_crossed_listing`, `Becoming.Flow.region_not_a_cut_listing`, `Becoming.Flow.FedFromBeyond.of_within`, `Becoming.Flow.cut_of_same`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

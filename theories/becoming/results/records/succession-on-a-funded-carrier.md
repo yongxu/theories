@@ -11,11 +11,11 @@
 ## Laws
 
 1. A carrier holds a market state, an identity, replacement parts, a payload (requested command, authority, credential, claims, receipts) and work done. Its next state projects exactly onto the market step with the migration added to what correction draws; it keeps the claims and the command, appends one receipt, uses one part (given one) and adds those arriving, and keeps the balance of work. (`AlignmentSuccession.withMigration`, `AlignmentSuccession.Payload`, `AlignmentSuccession.Carrier`, `AlignmentSuccession.next`, `AlignmentSuccession.exact_market_projection`, `AlignmentSuccession.payload_keeps_claims_and_history`, `AlignmentSuccession.carrier_and_work_accounted`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. A step is blocked where the carrier has no part, where its reserve is below correction's draw plus migration, or where the copied payload differs from its own. Under a certificate for the raised draw, from a safe start, under admissible disturbances, with a part, a running carrier, a command other than shutdown and a credential equal to the authority, every generation of the lineage, one part arriving a step, steps. (`AlignmentSuccession.step`, `AlignmentSuccession.missing_part_blocks_realization`, `AlignmentSuccession.migration_funding_blocks_realization`, `AlignmentSuccession.corrupted_transfer_blocked`, `AlignmentSuccession.lineage`, `AlignmentSuccession.every_generation_executes`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. In the financed witness the aggregate is safe while a carrier with no part cannot take its step; the state safe under the original example's parameters cannot take a step with migration one; and serving a requested shutdown completes, the served command state no longer running. (`AlignmentSuccession.financed`, `AlignmentSuccession.initialCarrier`, `AlignmentSuccession.financed_certificate`, `AlignmentSuccession.financed_initial_safe`, `AlignmentSuccession.aggregate_safe_can_lack_a_carrier`, `AlignmentSuccession.old_funding_certificate_does_not_pay_migration`, `AlignmentSuccession.aggregate_shutdown_does_not_force_perpetual_operation`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

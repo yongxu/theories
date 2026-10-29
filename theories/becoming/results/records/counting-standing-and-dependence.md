@@ -11,35 +11,35 @@
 ## Laws
 
 1. Read of standing: a census of what stands lists at each step, once each, the relata standing there; its counts are how many stand at each step and how many cease to stand and come to stand across it. (`Becoming.Web.StandingCensus`, `Becoming.World.StandsObey`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Where every relatum is embodied, what stands is what is active: a census of what stands is a census of activity and conversely, with the same counts, so the two obey the same properties. (`Becoming.World.Embodied.standsObey_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Where embodiment is not chosen, a queue fed from a source meets every other premise whatever its counts: its driver, a ground relatum, is active throughout and stands at nothing, its members stand while in the queue and are never active; only the source gives and takes, and as it exchanges a unit each way with every ground relatum, no family is closed across any step, so the queue balances and dissipates. (`Becoming.World.sourcedQueue`, `Becoming.World.sourcedQueue_holds`, `Becoming.World.sourcedQueue_meets`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Its census of what stands counts what the queue counts; so under each of the 256 choices the laws of counting what stands are those of counting what is active: the tally and, exactly where the choice binds counting, nothing coming to stand across a step at which nothing stands. (`Becoming.World.sourcedQueue_standing`, `Becoming.World.sourcedQueue_counts`, `Becoming.World.standing_counting_under`, `Becoming.World.standing_iff_counting`, `Becoming.World.standing_binds_iff`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Enclosure bounds what stands with no premise on activity: under a balanced, dissipative flow with every step from T on enclosed, the change from T of any census of what stands stays within the total standing at T (each relatum standing stands at one or more), and nothing comes to stand across an enclosed step at which nothing stands; both are corollaries of the laws of one step. (`Becoming.World.enclosure_bounds_standing`, `Becoming.Web.StandingCensus.length_le_stock`, `Becoming.World.enclosed_binds_standing`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. A choice bounds what stands where it chooses balance and dissipation. (`Becoming.World.BoundsStanding`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. With all steps from some step on enclosed, a property of counts holds of each census of what stands in each such world meeting a choice exactly when it holds of every tally in which, where it binds counting, nothing comes to stand across a step at which nothing stands, and, where it bounds what stands, from some step T on change stays within a bound and nothing comes to stand across a step at which nothing stands. (`Becoming.World.enclosed_standing_counting_under`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. There a change bound is a law exactly where balance and dissipation are chosen, while for activity embodiment is needed as well. (`Becoming.World.enclosed_standing_bound_iff`, `Becoming.World.enclosed_change_bound_iff`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 9. Where balance is chosen without embodiment the witnesses are waiting queues: closing queues whose next to join is active before it comes to stand, so that the front is active at every step, even with the queue empty. (`Becoming.EnclosedQueue.waiting`, `Becoming.World.waitingQueue`, `Becoming.World.waitingQueue_holds`, `Becoming.World.waitingQueue_meets`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 10. Closing at the first step, a waiting queue is enclosed at every step and meets every premise but dissipation and embodiment; closing at T, with a change bound from T and nothing joining an empty queue from then on, it meets every premise but embodiment. (`Becoming.World.closingQueue_dissipative`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 11. Every step of a finite world is enclosed, so under each choice the laws of counting what stands in finite worlds are those of a tally with at most some number standing at each step, with nothing coming to stand across a step at which nothing stands where the choice binds counting or bounds what stands, and a change bound from the first step where it bounds what stands. (`Becoming.World.finite_standing_counting_under`, `Becoming.World.finite_standing_binds_iff`, `Becoming.World.finite_standing_bound_iff`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 12. The finite witness is a ring each of whose places is active throughout and stands while held, meeting every premise but dissipation and embodiment. (`Becoming.World.activeRing`, `Becoming.World.activeRing_holds`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 13. Read of dependence: with requiring decided, the premises add nothing to the law of counting dependences: under each choice, in every world, with every step from some step on enclosed and, with at most some number holding at each step, in finite worlds, a property of the counts of a census of dependences holds exactly when it holds of every tally. (`Becoming.Web.DependenceCensus`, `Becoming.World.DependsObey`, `Becoming.World.dependence_counting`, `Becoming.World.enclosed_dependence_counting`, `Becoming.World.finite_dependence_counting`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 14. In a finite world dependences are pairs of relata, at most the square of their number. (`Becoming.pairs`, `Becoming.mem_pairs`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 15. Members of a queue, or places of a ring, depending on a common condition while in it, each needing a unit of it, which stands at one and is active throughout, every dependence met, with nothing flowing, meet all eight premises whatever the counts. (`Becoming.World.still_premised`, `Becoming.World.dependingQueue_premised`, `Becoming.World.dependingRing_premised`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

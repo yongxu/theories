@@ -11,13 +11,13 @@
 ## Laws
 
 1. For any process and any configurations s and t, every configuration reachable from s is reachable from t exactly when t leads back to s; and for t reached from s, the configurations reachable from s and from t are the same exactly when t leads back to s. (`Becoming.keeps_reach_iff_returns`, `Becoming.same_reach_iff_returns`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. For any process and any configurations s and t, t does not lead back to s exactly when some configuration reachable from s is not reachable from t; s itself is one. (`Becoming.not_returns_iff_loses`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Witnesses on two configurations: the dead end has one step, from false into true, with no continuation, and the flip takes each configuration to its negation; both take the change from false to true in one step, and the flip leads back from true to false while the dead end does not. (`Becoming.DeadEnd.law`, `Becoming.Irreversibility.flip`, `Becoming.Irreversibility.deadEnd_no_return`, `Becoming.Irreversibility.same_change_different_return`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. Read through the constant summary, every question about what the dead end can reach has the same answer from false and from true, though the dead end cannot lead back from true to false: a reading that omits the configuration reached hides the loss. (`Becoming.Irreversibility.constant_reading_hides_loss`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

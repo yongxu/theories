@@ -11,9 +11,9 @@
 ## Laws
 
 1. Synonyms do no harm and homonyms do: a code letting a sense hold several forms reads each held form back as its sense, and only it, exactly where no two senses hold one form; a code with one form a sense is the case. (`Becoming.SharedCodes.synonyms_read_iff`, `Becoming.SharedCodes.one_form_reads_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Coining gives one formation a form at one sense and changes nothing else; hearings at that sense leave every other sense as it was; where all hold a code merging m and m', a form coined at m that the code does not give m', heard by all, makes every formation tell m from m' again. (`Becoming.SharedCodes.coin`, `Becoming.SharedCodes.coin_at`, `Becoming.SharedCodes.coin_other_sense`, `Becoming.SharedCodes.runBy_other_sense`, `Becoming.SharedCodes.coined_returns`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

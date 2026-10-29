@@ -11,13 +11,13 @@
 ## Laws
 
 1. From one initial state, two traces that differ only in the order of sampling and the founder's repair reach carriers with the same native state, each with a carrier pending and no rig or gate pending, their paired cues differing; the same development word then reconstructs children with the same native state, fuel 9 and one rig each, but different gates and no reading yet. (`DevelopedResponse.same_carrier_different_developmental_record`, `DevelopedResponse.equal_cost_development_reconstructs_different_gates`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. The same read and act events at the same damaged site give both children the same reading and fuel, and leave one intact and able to capture, the other not intact and able neither to capture nor to copy; the response command reads only the acquired gate and the fresh reading. (`DevelopedResponse.same_assay_enacts_developed_difference`, `DevelopedResponse.command_uses_gate_and_reading`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. After the assay, the intact child's capture and copying form a carrier that develops into a grandchild which reads, acts and stays intact; the other cannot run that continuation, and with a supplied assisted repair first it reaches an intact grandchild with the first one's gate. (`DevelopedResponse.consequence_reformation_reaches_operating_grandchild`, `DevelopedResponse.supplied_assistance_can_rescue_development`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. The model's bookkeeping never changes the native transition's physical result, and every enabled event and every runnable finite history balances the native energy: energy after plus the native reactions' draw is energy before. (`DevelopedResponse.advance_core`, `DevelopedResponse.enabled_energy_balance`, `DevelopedResponse.runnable_energy_balance`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,17 +11,17 @@
 ## Laws
 
 1. For a flow and a web on the same relata, idleness is decided where a Boolean marks, at every step and relatum, exactly the relata taking no part in that step's exchange and unmoved across it; the least footprint touches each relatum not so marked, and so touches a relatum exactly where it is not idle. (`Becoming.Footprinted.DecidesIdle`, `Becoming.Footprinted.least`, `Becoming.Footprinted.least_touch_iff`, `Becoming.Web.Unmoved`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A footprint contains the exchanges where every relatum it leaves untouched takes no part and is unmoved. With idleness decided, the least footprint contains them and is least: every footprint on the same flow and web that contains them touches whatever the least footprint touches. (`Becoming.Footprinted`, `Becoming.Footprinted.Contains`, `Becoming.Footprinted.least_contains`, `Becoming.Footprinted.least_le`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. With idleness decided, the least footprint joins and orders least: exchanges it joins, or orders one before another, are joined or so ordered under every containing footprint, as joining and order grow with what a footprint touches; and every renumbering of a stretch that keeps the order of joined exchanges under a containing footprint keeps it under the least. (`Becoming.Footprinted.Joined`, `Becoming.Footprinted.Precedes`, `Becoming.Footprinted.Joined.mono`, `Becoming.Footprinted.Precedes.mono`, `Becoming.Footprinted.least_joined`, `Becoming.Footprinted.least_precedes`, `Becoming.Footprinted.Keeps`, `Becoming.Footprinted.least_keeps`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Under a containing footprint, a renumbering of a stretch among itself, its inverse given, is reached by commuting, within the stretch, exchanges not joined exactly where it keeps the order of joined exchanges; so, with idleness decided, every renumbering reached under a containing footprint is reached under the least footprint, which contains the exchanges. (`Becoming.Footprinted.sorts_iff`, `Becoming.Footprinted.Independent`, `Becoming.Reindexes`, `Becoming.Footprinted.least_keeps`, `Becoming.Footprinted.least_contains`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. With equality of relata decided, the exchanges of a flow and web have a least containing footprint, one every containing footprint includes, exactly where idleness is decided. (`Becoming.Footprinted.least_exists_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. With equality of relata decided, taking part is decided by membership in the list of present relata, and idleness is decided exactly where being unmoved is decided for the relata taking no part. (`Becoming.Footprinted.inList`, `Becoming.Footprinted.inList_iff`, `Becoming.Footprinted.decidesIdle_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

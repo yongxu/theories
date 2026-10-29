@@ -11,11 +11,11 @@
 ## Laws
 
 1. A dependence forming anew at a descent excludes inheritance there, and, the giver's dependence stable, its exclusion gives inheritance; depending and drawing coinciding at the giver, it forms anew exactly where the descendant depends on what the giver did not draw on. (`Becoming.Web.FormsAnewAt`, `Becoming.Web.inheritsAt_iff_not_formsAnew`, `Becoming.Web.formsAnew_iff_undrawn`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. At a descent, inheritance gives the drawing exactly where the giver draws on what it holds and passes on; so the reading of drawing is inheritance with the givers drawing what they pass on, with no premise for this half. (`Becoming.Web.drawn_necessary_iff`, `Becoming.Flow.PassesDrawn`, `Becoming.Flow.dependsOnDrawn_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Depending and drawing coinciding at the givers, their dependences stable: inheritance, the reading of drawing, and no descendant depending on what its giver did not draw on are one. (`Becoming.Flow.inherits_iff_none_undrawn`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

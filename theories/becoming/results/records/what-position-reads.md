@@ -11,15 +11,15 @@
 ## Laws
 
 1. Two profiles of amounts give every part the same position exactly where, for any two parts, what one had under the first with what the other has under the second is what the other had with what the one has: every amount differs by one common amount. (`Becoming.RelativePosition.Keeps`, `Becoming.RelativePosition.keeps_iff_common`, `Becoming.RelativePosition.length_pos_of_mem`, `Becoming.RelativePosition.regroup`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Adding one amount to every part keeps every position and adds it to the total once for each part; taking the least part's amount from every part keeps every position and leaves the spread above the least part. (`Becoming.RelativePosition.keeps_add`, `Becoming.RelativePosition.keeps_least`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. With given positions the total is at least the spread; every profile with those positions has its total above a bound exactly where the spread is above it, and some profile with them exceeds every bound. (`Becoming.RelativePosition.spread_le`, `Becoming.RelativePosition.keeps_exceeds`, `Becoming.RelativePosition.exceeds_iff_spread`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Read on a flow by what a step's takers take: every profile of takes with the step's positions takes more than the step gives exactly where the takes' spread does, and some profile with them always does. So positions certify joint excess, the joint-excess law's hypothesis, only through the spread. (`Becoming.Flow.excess_iff_spread`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. In RaceWithin the renewer gives two units at every step, as in Race, and the two racers have the race's positions at every step, the same greatest part and the same rise of the first; what is taken stays within what is given and every part is active at every step, while in the race every part is inactive from step two on. (`Becoming.RaceWithin.Member`, `Becoming.RaceWithin.flow`, `Becoming.RaceWithin.web`, `Becoming.RaceWithin.balances`, `Becoming.RaceWithin.acting`, `Becoming.RaceWithin.dependent`, `Becoming.RaceWithin.racers`, `Becoming.RaceWithin.drawn_common`, `Becoming.RaceWithin.keeps`, `Becoming.RaceWithin.drawn_second`, `Becoming.RaceWithin.drawn_renewer`, `Becoming.RaceWithin.first_greatest`, `Becoming.RaceWithin.same_positions_apart`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

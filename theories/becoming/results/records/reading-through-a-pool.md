@@ -11,7 +11,7 @@
 ## Laws
 
 1. With h x g = H (read x) g, one rule and one reading of the pool at a reading step give one rule after it. (`Becoming.Pace.rule_through_pool`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

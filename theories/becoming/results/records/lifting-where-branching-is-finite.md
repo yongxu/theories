@@ -11,21 +11,21 @@
 ## Laws
 
 1. Some course of n steps starts at s (Continues); courses of every length do (Unbounded); the process branches finitely where the successors of each configuration are listed. A course of n + 1 steps begins one of n, and where the process branches finitely the depth reached is decided. (`Becoming.Lasting.Continues`, `Becoming.Lasting.Unbounded`, `Becoming.Lasting.FinitelyBranching`, `Becoming.Lasting.Continues.down`, `Becoming.Lasting.Continues.decided`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Where each step of a decided decreasing family is met by some member of a list, some member meets every step, up to double negation; so where the process branches finitely, an unbounded configuration cannot fail to have an unbounded successor. No principle is used: the goal is a refutation. (`Becoming.Lasting.list_throughout_not_not`, `Becoming.Lasting.Unbounded.successors`, `Becoming.Lasting.Unbounded.step_not_not`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Given EitherThroughout, an unbounded configuration has an unbounded successor, and of finitely many starts among which courses of every length start, one is unbounded (EitherThroughout.list on the listed successors or starts). (`Becoming.Lasting.Unbounded.step_of_either`, `Becoming.Lasting.unbounded_start_of_either`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. A selection of a step staying in a family gives a run from each member, staying in the family. Lifting: where the process branches finitely, EitherThroughout and a choice of an unbounded successor wherever one exists give every unbounded configuration a run along unbounded configurations. (`Becoming.Lasting.along`, `Becoming.Lasting.runOf`, `Becoming.Lasting.runOf_start`, `Becoming.Lasting.runOf_within`, `Becoming.Lasting.lifting`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Asked of every finitely branching process, an unbounded configuration having an unbounded successor is exactly EitherThroughout. Witness: two decided decreasing families, one holding at each step, make the fork of the two chains of Chains unbounded; an unbounded successor is a chain start whose family holds throughout. (`Becoming.Lasting.TwoChains.process`, `Becoming.Lasting.TwoChains.branching`, `Becoming.Lasting.TwoChains.chain_continues`, `Becoming.Lasting.TwoChains.chain_holds`, `Becoming.Lasting.TwoChains.two_unbounded`, `Becoming.Lasting.TwoChains.side_of_unbounded`, `Becoming.Lasting.step_iff_either`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. Without finite branching: a root stepping to an arm of every length has courses of every length, and none of its successors does (the arm of length n has no course of n + 1 steps). (`Becoming.Lasting.Fan.Pos`, `Becoming.Lasting.Fan.Step`, `Becoming.Lasting.Fan.process`, `Becoming.Lasting.Fan.arm_continues`, `Becoming.Lasting.Fan.arm_bounded`, `Becoming.Lasting.Fan.root_unbounded`, `Becoming.Lasting.Fan.no_unbounded_step`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. Instance (periphery, own checker): in FiniteBranching a relation is the process with one move, Reach is Continues and Unbounded is Unbounded, and listed children make the process finitely branching; classical reasoning gives EitherThroughout and Lean's choice selects an unbounded successor, so its five lifting theorems (finite_unbounded to labelled_lifting) follow from the core. (`Becoming.FiniteBranchingCorrespondence.process`, `Becoming.FiniteBranchingCorrespondence.reach_iff_continues`, `Becoming.FiniteBranchingCorrespondence.unbounded_iff`, `Becoming.FiniteBranchingCorrespondence.finitelyBranching`, `Becoming.FiniteBranchingCorrespondence.either_classical`, `Becoming.FiniteBranchingCorrespondence.finite_unbounded_by_core`, `Becoming.FiniteBranchingCorrespondence.unbounded_child_by_core`, `Becoming.FiniteBranchingCorrespondence.infinite_from_unbounded_by_core`, `Becoming.FiniteBranchingCorrespondence.finite_initial_lifting_by_core`, `Becoming.FiniteBranchingCorrespondence.labelled_lifting_by_core`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. EitherThroughout is exactly the lesser limited principle of omniscience for decided families (LLPO, in its standard form in Becoming.Likeness): for every decided family holding at most once, it fails at every even place or at every odd place; it gives LLPO in its Boolean form, and LPO gives LLPO. Returning from the Boolean form to the family form needs the decisions as data. (`Becoming.LLPO`, `Becoming.LLPOForDecided`, `Becoming.eitherThroughout_iff_llpoForDecided`, `Becoming.eitherNever_iff_llpoForDecided`, `Becoming.LLPO.of_eitherThroughout`, `Becoming.LLPO.of_forDecided`, `Becoming.LLPO.of_lpo`, `Becoming.LLPO.decidable`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

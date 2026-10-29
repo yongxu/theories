@@ -11,17 +11,17 @@
 ## Laws
 
 1. For any joining, read through retained references a configuration is the list of fragments formed, and a move names two slots whose fragments join into a third, which it appends; along every course a configuration is extended by one fragment for each move. (`Becoming.Joining.retainedFrame`, `Becoming.Joining.retained_extends`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. For any two joinings, retained configurations alike across their frames with equally many slots match every finite course of formation: the matched course takes the same moves, ends alike with equally many slots and extends the configuration it started from; no premise beyond likeness and equal slot counts. (`Becoming.Joining.retained_history_matches`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Where each pair of both joinings joins into listed fragments, with excluded middle as a hypothesis, retained configurations passing the same branching tests with equally many slots match every finite course of formation by the same moves, ending where the same tests pass, with equally many slots, extending the start. (`Becoming.Joining.FiniteOutcomes`, `Becoming.Joining.retained_history_matches_of_em`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. With excluded middle as a hypothesis and each pair of the second joining joining into listed fragments, a pair joined in a retained configuration is matched in any configuration passing the same tests with equally many slots: the same slots hold fragments joining into one, and the two extended configurations pass the same tests with equally many slots. (`Becoming.Joining.retained_pair_matches_of_em`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. As configurations of one slot, a self-joining fragment and one that cannot join itself do not pass the same branching tests of the retained frame, and every description whose equal codes pass the same retained tests gives them different codes. (`Becoming.Joining.SelfJoinable`, `Becoming.Joining.retained_apart`, `Becoming.Joining.retained_codes_apart`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. The one fragment of the one-fragment joining joins itself and the traced passage of the process that moves once does not; the self-joining test of retained references holds at the one fragment and fails at the passage, and every code reading the retained tests exactly gives the idle start and the passage different codes. (`Becoming.Fragment.passageTrace`, `Becoming.Fragment.once_self_apart`, `Becoming.Fragment.once_retained_apart`, `Becoming.Fragment.once_codes_apart`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

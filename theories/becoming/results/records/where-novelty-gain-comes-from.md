@@ -11,21 +11,21 @@
 ## Laws
 
 1. With the rest of the whole counted (Flow.withImbalance), by the definition of the rest as the residual, across a step at which a family's stock rises some relatum taking part gives the family more than it takes from it, a formation taking part or the rest; it is found by checking each one taking part, deciding nothing infinite; a rise over a stretch is given at some step of it. (`Becoming.Flow.NetGiver`, `Becoming.Flow.rise_netGiver`, `Becoming.Flow.netGiver_cases`, `Becoming.Flow.rise_given`, `Becoming.Flow.rise_given_between`, `Becoming.some_mem_tail`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. The rest gives the family net exactly where, summed over the family, the levels rose beyond what the formations gave net by more than they fell beyond what the formations took net; where the flow balances on the family, the rest gives it nothing net. (`Becoming.Flow.rest_netGiver_iff`, `Becoming.Flow.BalancesOn.rest_not_netGiver`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Under the first law (Flow.Gainless), a family without repetition that rises across a step is given net by the rest or is open there: some formation taking part exchanges beyond it. (`Becoming.Flow.rise_from_rest_or_open`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Where a list holds every condition without repetition, the whole has no boundary to cross, and under the first law every rise of it is the rest's; with the rest giving it nothing net from T on, it stays within its stock at T, has two equal configurations from every step on, does not carry the count of endless exchanges, and is not new at every step. (`Becoming.Flow.whole_rise_from_rest`, `Becoming.Flow.whole_bounded_of_rest_idle`, `Becoming.Flow.whole_recurs_of_rest_idle`, `Becoming.Flow.whole_not_new_of_rest_idle`)
-   - *Master laws:* balance and finite runs, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance and finite runs; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Novelty needs gain: a family whose configurations at the steps T, …, T + N all differ, N the number of configurations within its stock at T, rises at one of those steps; one new at every step rises at arbitrarily late steps; so do first visits without end (configurations not had since T), consecutive or not. (`Becoming.le_of_increasing`, `Becoming.Web.rises_within_of_new`, `Becoming.Web.rises_late_of_new`, `Becoming.Web.NewAt`, `Becoming.Web.exceeds_of_firsts`, `Becoming.Web.rises_late_of_firsts`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. A family holding the members of one new at every step is new at every step too; under the first law each such rise comes from the rest or across the family's boundary, for every family without repetition holding it: no finite family closes over endless novelty. (`Becoming.map_eq_at`, `Becoming.map_eq_on`, `Becoming.Web.config_eq_of_sub`, `Becoming.Web.new_of_sub`, `Becoming.Flow.new_from_rest_or_open`, `Becoming.Flow.new_beyond_every`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways); central declaration `Becoming.Flow.new_beyond_every`: balance, represented.
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.new_beyond_every` as following from balance, which the grammar represents.
 7. New formation needs gain: where what a formation requires, and how much, stays fixed and lies within the family (Web.RequiresWithin), whether the family's levels support it depends on the configuration alone, so a step at which it is first supported is a first visit; with formations first supported without end, the family rises at arbitrarily late steps, under the first law from the rest or across the boundary. (`Becoming.Web.RequiresWithin`, `Becoming.Web.supported_of_config`, `Becoming.Web.FirstSupported`, `Becoming.Web.newAt_of_first`, `Becoming.Web.rises_late_of_newly_supported`, `Becoming.Flow.newly_supported_from_rest_or_open`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. Witness: in Web.counting, whose level is the step, nothing takes part (Flow.empty, under which nothing comes from nothing); it is new at every step, and the rest gives it one unit at every step, the one way in that a finite whole has. (`Becoming.succ_sub_self`, `Becoming.Flow.empty`, `Becoming.Flow.empty_gainless`, `Becoming.Flow.counting_given_by_rest`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

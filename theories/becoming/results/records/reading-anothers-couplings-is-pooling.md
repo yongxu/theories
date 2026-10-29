@@ -11,17 +11,17 @@
 ## Laws
 
 1. Reading another's couplings: a formation coupled, besides its own coupling by level, into every condition another couples into, by threshold or by level. (`Becoming.Web.ReadsCouplings`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Two histories the reader couples alike, the reader and the one read both couple alike, so every selection through the pooled coupling of the two is a selection through the reading. (`Becoming.Web.AlikeThrough.of_reads`, `Becoming.Web.SelectsThroughAll.reads`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. The reader's coupling closure lies within the pool's, and is exactly the pool's, the union of the two closures, where the one read exchanges with a condition coupled into it; stated first for any relations. (`Becoming.WithinClosure.of_reads`, `Becoming.WithinClosureOf.to_reads`, `Becoming.Flow.CoupledFrom.of_reads`, `Becoming.Flow.withinCoupling_reads`, `Becoming.Flow.withinCoupling_reads_iff`)
-   - *Master laws:* closure, reaching the grammar; central declaration `Becoming.Flow.withinCoupling_reads_iff`: master law.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.withinCoupling_reads_iff` as following from a master law.
 4. Beyond that union a part is selected alike through every reading, the rest of the exchange fixed; so is an act differing only beyond it, the rest following a law reading through the widened coupling, which a law reading through the narrower coupling does. (`Becoming.Flow.unselected_beyond_reads`, `Becoming.Flow.act_unselected_reads`, `Becoming.ExchangeLaw.Through.widen`)
-   - *Master laws:* closure and balance, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 5. Knowing another's law is no coupling: every selection through another's couplings is one through a formation's own exactly when whatever it couples alike the other does, and otherwise some is not; then, under a law reading through the other's coupling, the other's acts are fixed by what the formation couples into. Reading the other's couplings is that fine. (`Becoming.Web.anticipates_iff`, `Becoming.Web.anticipation_misses`, `Becoming.Web.SelectsThrough.read`, `Becoming.ExchangeLaw.Through.anticipated`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. Witness: in Clearing the source reading the clearer's couplings selects the cleared and the spared world alike at every step, and reading the dweller's, a formation the act reaches, separates them. (`Becoming.Clearing.reading_clearer_unselected`, `Becoming.Clearing.reading_dweller_selects`)
-   - *Master laws:* closure and balance, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

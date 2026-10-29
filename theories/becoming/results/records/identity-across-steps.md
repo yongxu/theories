@@ -11,69 +11,68 @@
 ## Laws
 
 1. A web names its formations by a fixed index type, so which formation at one step is the same as which at the next is stipulated by the names. A re-identification relates two namings one to one at each step and keeps every step's levels, activity, dependences and drawing; a renaming is a re-identification that is the same at every step. (`Becoming.Web`, `Becoming.Reidentify`, `Becoming.Reidentify.rename`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A renaming preserves the readings, defined from the relations, that follow a formation (checked for five): renewing or consuming in the run, the tenure of a dependence, undermining, forming and dissolving of dependences, arising and unceasing generation; labels carry nothing, while the pattern of names across steps carries identity. (`Becoming.Web.rename_renewingIn`, `Becoming.Web.rename_consumingIn`, `Becoming.Web.rename_tenure`, `Becoming.Web.rename_undermining`, `Becoming.Web.rename_unceasing`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Every re-identification preserves each step's support, keeping and breaking, whether each condition is renewed, consumed or lost, whether activity occurs only where supported, and whether each event is within renewal and whether it breaks. (`Becoming.Web.reidentify_step`, `Becoming.Web.reidentify_renewed`, `Becoming.Web.reidentify_consumed`, `Becoming.Web.reidentify_lost`, `Becoming.Web.reidentify_dependent`, `Becoming.Web.reidentify_renewingAt`, `Becoming.Web.reidentify_breakingOn`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Re-identifying a flow preserves what is taken and given at each step, the balance of depletion and replenishment, and the numbers of takers and renewers, so more without end. (`Becoming.Flow.reidentify_amounts`, `Becoming.Flow.reidentify_balances`, `Becoming.Flow.reidentify_counts`, `Becoming.Flow.reidentify_more`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. A census of the active formations and that only active formations take carry over too, so under them more without end makes generation unceasing under every re-identification, and the expansion meets all these premises. (`Becoming.Web.Census.reidentify`, `Becoming.Flow.Taking.reidentify`, `Becoming.Flow.More.unceasing_reidentified`, `Becoming.Expansion.unceasing_reidentified`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Changing only who continues whom (exchanging names at every odd step), a renewing and a consuming formation become two consuming and none renewing; a drawer undermining at every step after the first becomes a web in which no event then undermines; a web in which no dependence forms and nothing arises becomes one where a formation transforms its dependence and formations arise at every odd step, generation unceasing. (`Becoming.Turnover.identified`, `Becoming.Turnover.reidentified`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. Arisings made by naming alone can meet every premise of Unceasing.activeRenewer_recurs: Depletes is not tied to the arising formation and does not screen out what naming makes. (`Becoming.TideFlip.naming_meets_premises`, `Becoming.Web.Unceasing.activeRenewer_recurs`, `Becoming.Web.Depletes`)
-   - *Master laws:* finite runs, reaching the grammar; central declaration `Becoming.Web.Unceasing.activeRenewer_recurs`: master law.
+   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar; the measure counts central declaration `Becoming.Web.Unceasing.activeRenewer_recurs` as following from a master law.
 8. Keeping the names of formations active across a step, a re-identification makes no arising, hence no unceasing generation. (`Becoming.Reidentify.KeepsActive`, `Becoming.Web.arises_of_keepsActive`, `Becoming.Web.unceasing_of_keepsActive`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. Keeping the names of formations whose dependence continues across a step, it gives a formation one name over a tenure, keeps every dependence met while it held, and removes no undermining. (`Becoming.Reidentify.KeepsTenure`, `Becoming.Reidentify.steady`, `Becoming.Web.metAbove_of_keepsTenure`, `Becoming.Web.undermining_of_keepsTenure`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. Both conditions are read against the old naming: the new naming may join formations the old keeps apart, making a continuity, and never removes one.
-   - *Master laws:* not measured: its declarations lie outside the core run.
 11. Joining a formation that ends with one that begins at that step or later is succession: two members of a lineage active at alternate steps arise without end when named apart and are always active with nothing arising when named as one. (`Becoming.Lineage.arises`, `Becoming.Lineage.one`, `Becoming.Lineage.readings`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. A successor active and supported at the second step that needs more of the pool than it holds from the third makes drawing after a predecessor's loss undermine nothing when named apart, and undermine at every step from the third when it succeeds the predecessor. (`Becoming.Succession.succeeds`, `Becoming.Succession.inherited`, `Becoming.Succession.readings`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 13. In both witnesses the joined naming keeps the apart naming's continuity and the apart naming does not keep the joined naming's. (`Becoming.Lineage.one_way`, `Becoming.Succession.one_way`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 14. When the old naming also keeps the new naming's continuity (both ways), arising, unceasing generation and undermining are preserved exactly and succession at a single step is excluded. (`Becoming.Reidentify.back`, `Becoming.Web.arises_of_back_keepsActive`, `Becoming.Web.arises_iff_of_keepsActive_both`, `Becoming.Web.unceasing_iff_of_keepsActive_both`, `Becoming.Web.metAbove_of_back_keepsTenure`, `Becoming.Web.undermining_of_back_keepsTenure`, `Becoming.Web.undermining_iff_of_keepsTenure_both`, `Becoming.Web.no_join`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 15. Joining across a dormant step, at which neither formation is active or depends on anything, keeps continuity both ways and still changes which formation renews and which consumes. (`Becoming.Dormancy.join`, `Becoming.Dormancy.keeps_both`, `Becoming.Dormancy.classes`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 16. Continuation relations read splits and merges: under a census, present without repetition and Taking, under every continuation in which no formation continues as two, more without end makes formations arise at arbitrarily late steps; every re-identification is such a continuation, and so is one with merges. (`Becoming.Web.Continues`, `Becoming.Web.NoSplit`, `Becoming.Flow.More.unceasingFrom`, `Becoming.Web.continuation_reidentify`, `Becoming.Merge.merging`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 17. On the expansion, whose formations never end, the merge comes with a persisting formation re-read as arising at every step, so the conclusion holds there without more, while where the merged formation ends, what arises under a merge is exactly what is new. (`Becoming.Merge.idle`, `Becoming.Confluence.confluence`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 18. The decidability it asks follows from the census and a decidable continuation; without a census, no split is not enough. (`Becoming.Web.Census.decideContinues`, `Becoming.Dormant.no_split_without_arising`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 19. No split is sufficient, not necessary: a single split need not stop arising; reading new formations as budding from one already there, the same growth forces no arising after the first step. (`Becoming.Identity.Fork.split_unceasing`, `Becoming.Budding.growth_without_arising`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 20. Across one step the condition is exact: for any lists before and after the step, the one after without repetition, more always leaves some formation after the step continuing none before it exactly when no formation continues as two, the necessary direction using decidable equality. (`Becoming.forces_iff_noSplit`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 21. With the formations before and after a step each listed once: under every continuation in which no formation continues as two, not every formation listed after the step continues one listed before it, exactly when more are listed after than before; with no more, pairing in order gives a continuation without splits continuing every formation after the step. The conclusion is a refutation, naming no arising formation. (`Becoming.forced_iff_more`, `Becoming.paired`, `Becoming.paired_noSplit`, `Becoming.paired_covers`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 22. So across one step no split is the necessary and sufficient condition on the continuation, and more on the counts; over a run a single split acts only at its step. (`Becoming.Identity.Fork.forks`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 23. Naming the lineage itself beside its members, the lineage is active at every step while its members arise without end; a web has no part–whole relation. (`Becoming.Layered.both`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 24. For any holding predicate h, keeping its names fixes one name over a held stretch and the whole-run renewing and consuming classes of a formation holding at every step. (`Becoming.Web.Holds`, `Becoming.Web.steady_held`, `Becoming.Web.renewingIn_held`, `Becoming.Web.consumingIn_held`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 25. Waking from holding is not holding-arising. Hibernation makes this stronger than two-way activity and tenure continuity; dormancy permits a join where nothing holds, and dependence and reserve give Seed different endings. (`Becoming.Web.waking_not_arising`, `Becoming.Hibernation.readings`, `Becoming.Dormancy.held_both`, `Becoming.Seed.held_readings`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 26. Web.persisting_census instantiates the original census laws with both ends read through holding and their separate hypotheses retained; Sleeper refutes mixing the readings. (`Becoming.Web.persisting_census`, `Becoming.Sleeper.held_readings`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 27. World.balanced_reidentify_iff, without an additional hypothesis, characterizes balanced re-identifications as one-to-one continuations within World.Conserves. In a balanced world conservation is equality of standing after the step, linked to likeness through exchange_alike_iff, and keeping and breaking are invariant. (`Becoming.World.balanced_reidentify_iff`, `Becoming.World.Conserves`, `Becoming.World.conserves_iff`, `Becoming.exchange_alike_iff`, `Becoming.World.kept_broken_reidentify`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways); central declaration `Becoming.World.balanced_reidentify_iff`: balance, represented.
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.World.balanced_reidentify_iff` as following from balance, which the grammar represents.
 28. With decidable equality of relata, World.fixed_iff, World.arises_fixed_iff and World.ceases_fixed_iff characterize identity, arising and ceasing fixed by every balance-preserving naming; where standing after every step distinguishes all relata, such namings are fixed renamings and classes are fixed. (`Becoming.World.fixed_iff`, `Becoming.World.arises_fixed_iff`, `Becoming.World.ceases_fixed_iff`, `Becoming.World.classes_fixed`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 29. Shuttle instantiates this; Lineage and Hibernation permit two namings preserving per-step relations and balance but changing arisings or classes. (`Becoming.Shuttle.conserved`, `Becoming.Lineage.world_readings`, `Becoming.Hibernation.world_readings`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 30. More forcing arising under re-identification holds of every world in a local form with no census: only lists covering the active formations at arbitrarily late steps and, from some step on, each formation taking part listed once and whatever takes active; Flow.More.unceasing_reidentified is its corollary. (`Becoming.Flow.More.unceasing_reidentified_covering`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 31. Over a run, with a census at every step: under every continuation without a split, at arbitrarily late steps not every formation active after a step continues one active before, exactly when more are active after a step than before at arbitrarily late steps; at steps with no more, pairing the lists in order continues every formation after the step with no split. One without a split from some step on suffices. (`Becoming.ListedWebs.forcedAlong_iff_more`, `Becoming.ListedWebs.forcedAlong_of_eventually_noSplit`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 32. Identity where standings coincide: in a balanced world with equality of relata decided, where d stands after a step as c does, exchanging them after the step keeps the balance and continues c as d; every record at each step is kept by any re-identification, so no record of the world decides between the two, and with fixed_iff identity across a step is fixed exactly where no other relatum stands alike after it. (`Becoming.World.continues_as_alike`, `Becoming.World.fixed_iff`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

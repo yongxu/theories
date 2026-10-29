@@ -11,11 +11,11 @@
 ## Laws
 
 1. Where every joint step projects onto a step of each part, two properties of the joint configuration hold on a joint start projecting into the parts' starts, every pair of locally allowed moves is jointly allowed with a successor where both hold, and every joint step from there keeps both, two valid local plans are compatible and their paired plan is valid; along a history of such steps both hold at every step. (`SeededContinuation.mutual_history`, `SeededContinuation.compatible_from_seed`, `SeededContinuation.seeded_joint_plan`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Two eventual conditional promises, each "if the other eventually does, I eventually do", hold where neither ever happens; and, in a witness, preservation holds where the law has no successor, so no step is available. (`SeededContinuation.reciprocal_eventual_promises_can_be_empty`, `SeededContinuation.preservation_without_availability`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. In a shared renewal whose two sides each pass their activity to the other at every step, joint activity at any step is exactly joint activity at the start: an empty start stays empty, one side alone never becomes jointly active, a stored reserve ignites a start active at every step, and ignition needs the reserve and uses it up. (`SeededContinuation.Config`, `SeededContinuation.tick`, `SeededContinuation.run`, `SeededContinuation.active`, `SeededContinuation.ignite`, `SeededContinuation.tick_supports_mutually`, `SeededContinuation.tick_active_iff`, `SeededContinuation.active_run_iff`, `SeededContinuation.empty_never_starts`, `SeededContinuation.partial_seed_not_joint`, `SeededContinuation.stored_seed_starts_and_maintains`, `SeededContinuation.ignition_requires_actual_reserve`, `SeededContinuation.absent_reserve_blocks_ignition`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

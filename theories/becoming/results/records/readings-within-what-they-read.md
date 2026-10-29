@@ -11,23 +11,23 @@
 ## Laws
 
 1. For any family ψ : A → A → B of readings indexed by what it reads and any likeness of values, a member says a reading g where its value is alike with g's at every argument, and the gap of a map f is x ↦ f (ψ x x). Where f moves every value, none alike with its image, no member says the gap. (`Becoming.Diagonal.Says`, `Becoming.Diagonal.gap`, `Becoming.Diagonal.Moves`, `Becoming.Diagonal.gap_unsaid`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A family saying every reading gives every map f some value b alike with f b; with likeness transitive, a member saying g says every reading alike with g at each argument. (`Becoming.Diagonal.fixed_of_complete`, `Becoming.Diagonal.Says.congr`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. No claim is equivalent to its negation, so no family of claims indexed by what it reads says every reading, none saying x ↦ ¬ ψ x x, and no frame whose claims are its own configurations realizes with them every pattern of claims about them. (`Becoming.Diagonal.moves_not`, `Becoming.Diagonal.claims_incomplete`, `Becoming.Diagonal.claims_gap`, `Becoming.Frame.self_incomplete`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. For values compared by equality: a family saying every reading makes every value equal to b where equality with b is decided; where all values are equal and A and B have elements, some family says every reading; with equality of values decided and A and B inhabited, some family says every reading exactly where all values are equal. (`Becoming.Diagonal.alike_of_complete`, `Becoming.Diagonal.complete_of_alike`, `Becoming.Diagonal.complete_iff_alike`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. A sequence of families unfolds under f where each step keeps every reading said before and the next step says the step's gap. Where f moves every value, every step of an unfolding misses its own gap, and no step m says the gap of any step m + k. (`Becoming.Diagonal.Unfolds`, `Becoming.Diagonal.Unfolds.keeps_on`, `Becoming.Diagonal.Unfolds.incomplete`, `Becoming.Diagonal.Unfolds.gap_new`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. Where f moves every value, in an unfolding under f: with likeness transitive, the gap of step m is not alike at every argument with that of any step m + 1 + k; and not everything step n + 1 + k says is said at step n, so it never returns. (`Becoming.Diagonal.Unfolds.gaps_differ`, `Becoming.Diagonal.Unfolds.never_returns`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. With likeness symmetric and transitive, for every L, pairwise different readings are not all alike with members of a stock of L readings, with no decision on the values; so where f moves every value, no finite stock holds every gap of an unfolding under f. (`Becoming.Diagonal.two_ne_odd`, `Becoming.Diagonal.stock_unheld`, `Becoming.Diagonal.Unfolds.unheld`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. On Bool with negation, which moves every value, the sequence unfolding unfolds: every step misses its own gap, not everything a later step says is said at an earlier one, and no stock of L readings holds every gap, for every L. (`Becoming.Diagonal.unfolding`, `Becoming.Diagonal.unfolding_fresh`, `Becoming.Diagonal.unfolding_zero`, `Becoming.Diagonal.flip_moves`, `Becoming.Diagonal.unfolding_unfolds`, `Becoming.Diagonal.unfolding_open`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. Revising a value by a map that moves every value under equality changes it at every step of its orbit; revising a claim by negation changes it at every step up to equivalence; the two-valued negation returns to its start along its orbit. (`Becoming.Diagonal.revision_never_rests`, `Becoming.Diagonal.negation_never_rests`, `Becoming.Diagonal.negation_returns`, `Becoming.Law.orbit`, `Becoming.Law.Returns`)
-   - *Master laws:* finite runs, not reaching the grammar.
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

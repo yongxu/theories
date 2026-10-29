@@ -11,19 +11,19 @@
 ## Laws
 
 1. A history over configurations of any type and moves of any type is a pair of sequences indexed by the natural numbers; a law admits it where every step it takes is a step of the law, as each run of the law is. The law a family of histories shows has as steps those its histories take: it admits each of them, and it is contained in a law exactly where that law admits each of them. (`Becoming.Admits`, `Becoming.Run`, `Becoming.ShownBy`, `Becoming.ShownBy.admits`, `Becoming.shownBy_le_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A family of histories holds its splices where every sequence the law it shows admits is in it. The histories a law admits hold their splices, and a family is the family of histories some law admits exactly where it holds its splices, the law it shows then being one such law. (`Becoming.SpliceClosed`, `Becoming.admits_spliceClosed`, `Becoming.family_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. A family of histories is consistent where no two of its histories, nor one history at two times, take one move at one configuration to two outcomes. The law it shows is determined, each move at a configuration having at most one outcome, exactly where the family is consistent; a family is the family of histories some determined law admits exactly where it holds its splices and is consistent. (`Becoming.ConsistentFamily`, `Becoming.Determined`, `Becoming.shownBy_determined_iff`, `Becoming.determined_family_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. The live steps of a law are those some history it admits takes. Each is a step of the law; a law and its live steps admit the same histories; two laws admit the same histories exactly where they have the same live steps; and the live steps of the live law are its own steps, so it has no dead end. (`Becoming.live`, `Becoming.live_le`, `Becoming.admits_live_iff`, `Becoming.same_histories_iff`, `Becoming.live_live`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Sending each law to the family of histories it admits matches laws, taken up to their live steps, one to one with the families holding their splices: each image holds its splices, each such family is an image, and two laws have the same image, compared at every history, exactly where their live steps agree. (`Becoming.admits_spliceClosed`, `Becoming.family_iff`, `Becoming.same_histories_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. With histories that stop, a law is fixed by them: two laws have the same finite courses, each from a configuration by a list of moves to a configuration, exactly where they have the same steps, so no dead end remains. (`Becoming.same_finite_histories_iff`, `Becoming.Trace.of_same`, `Generative.Trace`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. A family of finite courses, each from a configuration by a list of moves to a configuration, is made of its steps where the empty course goes from each configuration to it alone and a course is a first step followed by the rest; it is the family of some law's finite courses exactly where it is made of its steps, the law being its one-step part. (`Becoming.MadeOfSteps`, `Becoming.finite_family_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

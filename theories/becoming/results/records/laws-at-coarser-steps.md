@@ -11,35 +11,35 @@
 ## Laws
 
 1. Sampling times are strictly increasing step numbers σ, the coarse step s being the fine steps from σ s to just before σ (s + 1). Read at σ, a web shows at the coarse step s what it shows at the fine step σ s; with equality of relata decided, a flow read at σ lists once each relatum taking part in some fine step inside, with all it takes and gives across the fine steps it takes part in. (`Becoming.Strict`, `Becoming.span`, `Becoming.Web.sample`, `Becoming.Flow.sample`, `Becoming.Flow.sample_once`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. With equality of relata decided, strictly increasing times and each relatum listed once at the fine steps inside a coarse step, what the coarse step takes from and gives to a condition is what those fine steps take and give, and a flow balancing on a family across each of them balances on it across the coarse step. (`Becoming.Flow.sample_taken_on`, `Becoming.Flow.sample_given_on`, `Becoming.Flow.BalancesOn.sample`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. With equality of relata decided, a flow dissipated on a family across each fine step inside a coarse step is dissipated on it across the coarse step, with no condition on listing; and a family is closed across a coarse step exactly when it is closed across each fine step inside. (`Becoming.Flow.DissipatesOn.sample`, `Becoming.Flow.sample_closedAt_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. With equality of relata decided, strictly increasing times and each relatum listed once at the fine steps inside a coarse step, a family without repetition holding what stands at the two coarse ends, balanced and dissipated on at each of those fine steps, runs down across the coarse step, what stands between not asked; running down at every fine step inside gives it across the coarse step. (`Becoming.Flow.RunsDownOn.sample`, `Becoming.Flow.RunsDownOn.sample_of_fine`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. With equality of relata decided, strictly increasing times, each relatum listed once at the fine steps inside a coarse step, and a family without repetition holding what stands at both coarse ends, balanced and dissipated on at each of those fine steps: some condition's level rises or falls across the coarse step exactly when the family's total at its end is below its total at its start. (`Becoming.Flow.sample_changes_iff`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. With equality of relata decided, strictly increasing times, each relatum listed once at the fine steps inside a coarse step and a flow balancing on a family at each of them, a member comes to stand across the coarse step exactly when it stood at nothing and those fine steps gave it more than they took, and ceases to stand exactly when it stood and they took all it had with all they gave. (`Becoming.Flow.sample_comesToStand_iff`, `Becoming.Flow.sample_ceasesToStand_iff`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. A web read at any times keeps activity needing support, a relatum standing exactly while active, a census of the active relata and a census of what stands, each read at the sampled fine step. (`Becoming.Web.sample_dependent`, `Becoming.Web.sample_embodied`, `Becoming.Web.sample_census`, `Becoming.Web.sample_standingCensus`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. With strictly increasing times and activity decided, a relatum arising or ceasing across a coarse step arises or ceases across some fine step inside it; so arising at arbitrarily late coarse steps gives arising at arbitrarily late fine steps, and ceasing likewise. (`Becoming.Web.sample_arises`, `Becoming.Web.sample_ceases`, `Becoming.Web.sample_unceasing`, `Becoming.Web.sample_ceasing`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. Arising and ceasing at arbitrarily late fine steps need not show at the coarse steps, in a witness: a relatum switched on at the odd steps and read at the even ones arises and ceases at arbitrarily late fine steps, while at the coarse steps it is never active, so nothing arises or ceases there. (`Becoming.Strobe.converse_fails`, `Becoming.Strobe.coarse_quiet`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. With equality of relata decided and strictly increasing times, a relatum giving only while active at the fine steps inside a coarse step, and active at its first fine step whenever it is active inside, gives across the coarse step only while active; taking only while active and from what it draws on composes likewise where its drawing inside also holds at the first fine step. (`Becoming.Flow.sample_acting_on`, `Becoming.Flow.sample_taking_on`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. Activity and drawing that hold inside a coarse step hold at its first fine step where each coarse step is one fine step, and activity does where it is constant on each interval; with equality of relata decided, strictly increasing times and activity (for taking, drawing too) so held, only active relata giving, or taking, at the fine steps gives the same at the coarse steps. (`Becoming.Web.Held`, `Becoming.Web.DrawingHeld`, `Becoming.Web.held_of_unit`, `Becoming.Web.held_of_constant`, `Becoming.Flow.sample_acting`, `Becoming.Flow.sample_taking`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. In a witness, one relatum, on at the odd steps and taking and giving a unit while on, read at the even steps: the fine world has activity needing support, balance, a census, and only active relata giving and taking, while across each coarse step the relatum gives and takes and is inactive at the sampling time, so neither holds there. (`Becoming.Strobe.fine`, `Becoming.Strobe.coarse_gives`, `Becoming.Strobe.acting_taking_step_relative`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 13. Bounded transmission of dependences is relative to the step, in a witness: where a gift inside a coarse step precedes the receiver's coming to stand, nothing descends at the fine steps, so transmission holds there, while read at the even steps the receiver descends from the giver across the first coarse step and transmission fails. (`Becoming.Delay.no_descent`, `Becoming.Delay.fine_transmitting`, `Becoming.Delay.coarse_descends`, `Becoming.Delay.transmitting_step_relative`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 14. Balance and dissipation at a coarse step need not hold at the fine steps inside, in two witnesses read at the even steps: a gift across the first fine step and a taking across the second cancel, the coarse step balancing while neither fine step does; and a fine step giving back all it takes is outweighed by the next step's taking, the coarse step dissipating while that fine step does not. (`Becoming.Cancelling.coarse_not_fine`, `Becoming.Averaging.coarse_not_fine`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 15. With equality of relata decided, strictly increasing times and each relatum listed once at every step, a world read at coarser steps keeps activity needing support, balance, dissipation, embodiment and a census; read so, that a finite world whose flow balances and dissipates and whose relata are embodied rests from some coarse step on cannot be refuted, with activity not decided. (`Becoming.Flow.sample_balances`, `Becoming.Flow.sample_dissipative`, `Becoming.World.sample_survives`, `Becoming.World.sample_rests_unrefuted`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

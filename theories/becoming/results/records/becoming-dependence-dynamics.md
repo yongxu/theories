@@ -11,17 +11,17 @@
 ## Laws
 
 1. Which conditions a formation depends on, at what level, and which it draws on are observables of the configuration, so every run reads as a web of dependence; with constant dependence this reading recovers the static renewing/consuming classification exactly. (`Becoming.Dependence`, `Becoming.Web`, `Becoming.Dependence.along`, `Becoming.Web.static`, `Becoming.Web.static_supported`, `Becoming.Web.static_dependent`, `Becoming.Web.static_renewed`, `Becoming.Web.static_consumed`, `Becoming.Web.static_renewingIn`, `Becoming.Web.static_consumingIn`, `Becoming.Conditions.dependence`, `Becoming.Web.conditions_along`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Across each step a dependence is kept, broken, formed or dissolved; every met dependence is exactly one of kept or broken across each step, and renewal and consumption remain exclusive. (`Becoming.Web.Kept`, `Becoming.Web.Broken`, `Becoming.Web.Forms`, `Becoming.Web.Dissolves`, `Becoming.Web.kept_or_broken`, `Becoming.Web.kept_not_broken`, `Becoming.Web.renewed_not_consumed`, `Becoming.Web.renewing_not_consuming`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Change is made at a step: a dependence that holds and later does not dissolved across some step between, and one that comes to hold formed across one (stated without excluded middle). (`Becoming.ceases_at_a_step`, `Becoming.arises_at_a_step`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. In a web where a formation is active only where the conditions it then depends on support it (Dependent), theorems connect three outcomes of a loss, which are neither exhaustive nor exclusive: continuing with an unweakened dependence means the condition was restored; a formation still active after a loss without return has transformed its dependence; with fixed dependence it ends. (`Becoming.Web.continuing_restores`, `Becoming.Web.consumed_continues_transformed`, `Becoming.Web.consumed_ends_when_fixed`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Each outcome law holds at a single step of any web, with the local condition inside the law: restoration and transformation use only the formation's support at that step, and ending only that the formation is supported where active at that step; the forms under Dependent are their corollaries. (`Becoming.Web.continuing_restores_at`, `Becoming.Web.consumed_continues_transformed_at`, `Becoming.Web.consumed_ends_when_fixed_at`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. All three occur: in one process from one configuration, three runs break the same dependence at the first step (read under the step-start convention) and then end, transform and restore; in this witness the move that makes the break selects the outcome. (`Becoming.Crossing.loss_does_not_decide`, `Becoming.Crossing.ending_dependent`, `Becoming.Crossing.transforming_dependent`, `Becoming.Crossing.restoring_dependent`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

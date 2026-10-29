@@ -11,29 +11,29 @@
 ## Laws
 
 1. Keeping and breaking a dependence between configurations are exclusive, and along a run they are exactly the keeping and breaking of the dependence dynamics. (`Becoming.Dependence.Keeps`, `Becoming.Dependence.Breaks`, `Becoming.Dependence.keeps_not_breaks`, `Becoming.Dependence.along_kept`, `Becoming.Dependence.along_broken`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. The but-for test holds the move actually taken fixed: a party's part makes the difference when the step from a configuration by a move breaks a dependence and, with that part withheld, the same move can still be taken and every step by it keeps the dependence; parts make it together when this holds with all of them withheld, and one part is the one-element case. (`Becoming.Dependence.BreaksBy`, `Becoming.Dependence.MakesDifference`, `Becoming.withholdAll`, `Becoming.Dependence.MakesDifferenceTogether`, `Becoming.Dependence.makesDifference_iff_together`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. For one part, in every process and without determinacy: where the step breaks the dependence, the move can be taken with the part withheld, and the dependence holds and is met there, the part makes the difference exactly when the same move no longer breaks the dependence. (`Becoming.Dependence.makesDifference_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. When the move determines the step, from a configuration where the dependence holds and is met the move breaks it exactly when the level it reaches is below the need. (`Becoming.Determined`, `Becoming.Dependence.breaksBy_iff_level`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. So where the step breaks the dependence, the move determines the step and can be taken after withholding, and the dependence still holds and is met at the withheld configuration, the test is a dichotomy: either the part makes the difference or the same move still breaks the dependence. (`Becoming.Dependence.determined_dichotomy`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. The loss is overdetermined when, with any single part withheld, the same move still breaks the dependence; then no single part makes the difference, and every set of parts whose withholding keeps the dependence makes it only together. (`Becoming.Dependence.Overdetermined`, `Becoming.Dependence.Overdetermined.no_difference`, `Becoming.Dependence.Overdetermined.only_together`)
-   - *Master laws:* none among its reasons; central declaration `Becoming.Dependence.Overdetermined.only_together`: definitional or representational (one line from the definitions).
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Dependence.Overdetermined.only_together` as following from its definitions (definitional or representational) (one line from the definitions).
 7. The law of joint difference-making: where the move determines the step and, with any single member's part withheld, can still be taken and leaves the dependence holding and met, the parts make the difference together while no member alone makes it exactly when withholding all of them keeps the dependence and withholding any one of them leaves the same move breaking it. (`Becoming.Dependence.DifferenceOnlyTogether`, `Becoming.Dependence.differenceOnlyTogether_iff`)
-   - *Master laws:* none among its reasons; central declaration `Becoming.Dependence.differenceOnlyTogether_iff`: law of its model (the dichotomy of a determined process).
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Dependence.differenceOnlyTogether_iff` as following from a law of its model (the dichotomy of a determined process).
 8. The direction from right to left holds in every process, and a difference made only together needs at least two parts. (`Becoming.Dependence.DifferenceOnlyTogether.of_breaks`, `Becoming.Dependence.DifferenceOnlyTogether.two_le_length`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. Pool is an instance, its process, like Shock's, determined by the move: in one process at one level with the first drawer taking the same amount, with one other drawer its part makes the difference; with two others the loss is overdetermined, its part makes none, and the first two drawers make the difference only together, so the difference belongs to the joint activity. (`Becoming.Pool.determined`, `Becoming.Shock.determined`, `Becoming.Pool.difference_belongs_to_the_joint`, `Becoming.Pool.all_overdetermined`, `Becoming.Pool.first_two_only_together`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. In both runs the relational reading counts the first drawer as consuming, and a formation that takes nothing is not. (`Becoming.Pool.difference_belongs_to_the_joint`, `Becoming.Web.ConsumingIn`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. Across a formation's own events the run-level and step-level tests come apart: drawing two units at every step in the renewable process consumes the condition; the first event's step keeps the dependence and undermines for no positive cycle; with any single event's draw withheld, indeed with every draw before any step withheld, the condition is still consumed, the run-level outcome being fixed by the tail. (`Becoming.Renewable.depleting`, `Becoming.Renewable.withheld`, `Becoming.Renewable.overdraw_consumes`, `Becoming.Renewable.depletion_is_joint`, `Becoming.Renewable.no_finite_segment_makes_difference`, `Becoming.Web.UnderminingFor`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. At the breaking step, drawing nothing from the same configuration keeps the dependence, so the breaking event makes the step-level difference. (`Becoming.Renewable.breaking_event_makes_step_difference`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

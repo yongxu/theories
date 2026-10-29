@@ -11,13 +11,13 @@
 ## Laws
 
 1. With dependences read off the configuration, two configurations are alike in what a formation couples into when the levels at each, through the dependence it has there, admit it alike and the conditions it observes stand alike. This is an equivalence, so some process going alike in it admits a run's steps before a step exactly where the occasions it couples alike, by the same move, lead to occasions it couples alike. Fixed conditions are the instance. (`Becoming.Dependence.AdmitsAt`, `Becoming.Dependence.AlikeAt`, `Becoming.Dependence.alikeAt_equivalence`, `Becoming.Dependence.conditions_alikeAt_iff`, `Becoming.Run.consistent_conditions_iff`, `Becoming.Run.law_through_dependence_iff`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 2. Along a run this is the relation between two steps each read through its own step's dependence. Web.AlikeThrough read at one step, between the levels standing at two steps, is the coupling with the dependence of that step held fixed; where the dependences at the two steps compared are that step's, it is the changing coupling. (`Becoming.Web.AlikeAcross`, `Becoming.Dependence.alikeAt_iff_alikeAcross`, `Becoming.Dependence.fixedAt`, `Becoming.Dependence.alikeThrough_iff_fixedAt`, `Becoming.Web.admits_own_iff`, `Becoming.Web.alikeAcross_iff_alikeThrough`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Consistency reads a relation only on the run's configurations up to the step, so where a formation's dependences up to it are those of one step, the run is consistent under the changing coupling exactly where it is under the coupling fixed at that step. (`Becoming.Dependence.SameFor`, `Becoming.Dependence.admitsAt_fixedAt_iff`, `Becoming.Dependence.Unchanged`, `Becoming.Run.consistentUnder_congr`, `Becoming.Run.consistent_unchanged_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. In Changing, one level rising by one each step, the process is determined. A dependence dissolving across the first step leaves the run consistent at every step under the changing coupling, and inconsistent at step 2 under the coupling fixed at the start. A dependence forming across the first step leaves the coupling fixed at the start consistent at every step, and the changing coupling inconsistent at step 3. (`Becoming.Changing.process`, `Becoming.Changing.run`, `Becoming.Changing.determined`, `Becoming.Changing.dissolving`, `Becoming.Changing.forming`, `Becoming.Changing.dissolves`, `Becoming.Changing.forms`, `Becoming.Changing.dissolving_not_admits_zero`, `Becoming.Changing.dissolving_admits_succ`, `Becoming.Changing.dissolving_consistent`, `Becoming.Changing.dissolving_fixed_inconsistent`, `Becoming.Changing.forming_admits_zero`, `Becoming.Changing.forming_not_admits_one`, `Becoming.Changing.forming_admits_three`, `Becoming.Changing.forming_inconsistent`, `Becoming.Changing.forming_fixed_consistent`, `Becoming.Changing.forming_no_law`, `Becoming.Changing.dissolving_fixed_no_law`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

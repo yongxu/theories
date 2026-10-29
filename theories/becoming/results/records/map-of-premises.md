@@ -11,43 +11,41 @@
 ## Laws
 
 1. A census (the relata active at each step listed, each once, so finitely many are active at each step) and bounded transmission (descent transmits every dependence within one bound) are premises of worlds too. (`Becoming.World.Counted`, `Becoming.World.Transmitting`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Activity needing support makes activity carried, by the zero reserve: at one step and formation the zero reserve carries it exactly when it is active there only while supported, and activity needing support is exactly the zero reserve. (`Becoming.Web.carries_zero_across`, `Becoming.Web.carries_zero`, `Becoming.World.Dependent.carried`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Every relatum embodied makes whatever arises embodied. (`Becoming.World.Embodied.arising`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. With activity decided, a list without repetition covering the relata active at a step lists them there, each once, using only that step; so a finite world whose activity is decided has a census. (`Becoming.World.keep_lists`, `Becoming.World.Finite.counted`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Across a step at which some family is closed and dissipated on, and whatever takes is active, whatever gives is active, since giving needs uptake from the family; only that step and that family are used. (`Becoming.World.acting_across_on`, `Becoming.Flow.Dissipative.giving_needs_uptake`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. So where only active relata take, and only from what they draw on, and the flow dissipates, only active relata give across an enclosed step; where every step is enclosed only active relata give, every step of a finite world being enclosed. (`Becoming.World.acting_across`, `Becoming.World.acting_of_enclosed`, `Becoming.World.Finite.enclosed`, `Becoming.World.Finite.acting`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. The remaining eight premises, activity needing support, balance, only active relata giving, only active relata taking and only from what they draw on, dissipation, embodiment, a census and bounded transmission, are independent: for each, a world meets the other seven and not it. (`Becoming.World.premises`, `Becoming.World.independent`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. The first four witnesses: a relatum whose standing does not support its activity (strained), the sides of Shuttle with no flow (unbalanced), a relatum never active giving to infinitely many while an active one takes as much back (scatter), and an eater taking a morsel it does not draw on (morsel). (`Becoming.World.strained`, `Becoming.World.strained_but`, `Becoming.World.unbalanced_but`, `Becoming.World.scatter`, `Becoming.World.scatter_but`, `Becoming.World.morsel`, `Becoming.World.morsel_but`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 9. The other four: a drawer taking its store's unit and giving it back (lossless), a relatum standing and never active (latent), infinitely many relata active at once (multitude), and a parent burning fuel to give a child its standing while the child comes to depend on the parent, a dependence the parent never had (novel). (`Becoming.World.lossless`, `Becoming.World.lossless_but`, `Becoming.World.latent`, `Becoming.World.latent_but`, `Becoming.World.multitude`, `Becoming.World.multitude_but`, `Becoming.World.novel`, `Becoming.World.novel_but`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 10. So no premise follows from the others. For balance a second witness has taking and dissipation binding at every step: the holder takes its own unit and gives nothing, and the family of both sides is closed and taken from at every step. The worlds failing a census and failing only active relata giving are infinite, as the implications require. (`Becoming.World.none_follows`, `Becoming.World.draining`, `Becoming.World.draining_but`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 11. Mutualists active throughout meet all eight, and in a finite world which meets the eight, that it rests from some step on cannot be refuted, so neither arising nor ceasing recurs, with no decision procedure, the proof using balance, dissipation and embodiment among them. (`Becoming.World.mutualism_premised`, `Becoming.World.premised_rests_unrefuted`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 12. A premise binds where something meets its condition, an instance, which need not exclude anything the representation allows; every premise binding is binding of the world. (`Becoming.World.Premise.Binds`, `Becoming.World.Binds`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 13. The conditions: activity needing support binds where an active relatum depends on a condition at a positive need, balance where a level changes, only active relata giving and taking where something taking part gives and takes, and dissipation where something taking part takes from a closed family. (`Becoming.World.Premise.Binds`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 14. Embodiment binds where a relatum arises, a census where the world is not finite (which says only that the census does not follow from the world being finite), and bounded transmission where a descendant depends on a condition at its first standing step. (`Becoming.World.Premise.Binds`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 15. In hatch all eight hold and each binds: a parent takes two units of food and its own unit and gives its young one unit; the young comes to stand depending on the food as the parent did, and the parent ceases. (`Becoming.World.hatch`, `Becoming.World.hatch_binds`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 16. That world is not finite, though only the food, the parent and the child are ever active; its infinitely many ground relata are idle, never standing, active, taking part, taken from, given to, depended on or drawn on; where the relata ever active lie on one list there is a census. (`Becoming.World.hatch_ever`, `Becoming.World.hatch_idle`, `Becoming.listed_of_ever`, `Becoming.World.counted_of_ever`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 17. So a census binds only in that the world is not finite: in every world meeting the rest theorem's conditions, not unboundedly many relata are ever active or stand (World.rest_few, in continued-change-needs-openness).
-   - *Master laws:* not measured: its declarations lie outside the core run.
 18. No finite world binds every premise; without its idle ground, hatch becomes a finite world meeting the eight in which every premise but the census binds. (`Becoming.World.Finite.not_binds`, `Becoming.World.finiteHatch`, `Becoming.World.finiteHatch_premised`, `Becoming.World.finiteHatch_binds_but_census`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 19. Activity needing support binds without being tight, the food never falling below the need, and the four premises about the flow bind at the first step only; across the first step one relatum arises and one ceases, and that it rests from some step on cannot be refuted (World.hatch_rests_unrefuted).
-   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

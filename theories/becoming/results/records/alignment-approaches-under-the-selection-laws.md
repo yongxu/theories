@@ -11,13 +11,13 @@
 ## Laws
 
 1. Every approach whose decisions go through the couplings of its deciding formations is blind beyond the union of their closures, and within it separates only what some member couples apart. (`Becoming.Flow.unselected_beyond_pool`, `Becoming.Flow.act_unselected_pool`, `Becoming.Clearing.within_closure_unseparated`)
-   - *Master laws:* closure and balance, reaching the grammar; central declaration `Becoming.Flow.unselected_beyond_pool`: master law.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.unselected_beyond_pool` as following from a master law.
 2. Reading a system reaches no further than pooling with it, and members reading one channel pool to one member. (`Becoming.Flow.withinCoupling_reads_iff`, `Becoming.Flow.unselected_beyond_reads`, `Becoming.Web.pooled_iff_member`)
-   - *Master laws:* closure and balance, reaching the grammar; central declaration `Becoming.Flow.withinCoupling_reads_iff`: master law.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.withinCoupling_reads_iff` as following from a master law.
 3. With only the clearer a standpoint its part retains what has significance at the centers, while under the continuation condition it loses the dweller, and a selection reading the clearer's couplings leaves the two worlds alike: the incompleteness is exactly the scope's. (`Becoming.Clearing.centers_retain_yet_loses`, `Becoming.Clearing.reading_clearer_unselected`)
-   - *Master laws:* closure and balance, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 4. For any class of orders from the positive weightings up to every order increasing in admission, one course widens another exactly when every order of the class ranks it higher. (`Becoming.Weighting.widens_iff_every_of_class`, `Becoming.Weighting.widens_iff_every_score`, `Becoming.Weighting.increasing_prior`)
-   - *Master laws:* order, not reaching the grammar.
+   - *Master laws, by Lean dependency:* order; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

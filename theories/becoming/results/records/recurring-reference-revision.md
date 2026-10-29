@@ -11,27 +11,27 @@
 ## Laws
 
 1. For any process, a natural-number stock σ with a draw and a replenishment for each move is balanced where across every step σ after it plus the move's draw equals σ before it plus its replenishment. Along every run of a balanced process, where positive draws occur at arbitrarily late steps, so do positive replenishments; where σ stays within a bound along the run, the two recur together. (`Becoming.Stock.Balanced`, `Becoming.Run.replenishes_of_draws`, `Becoming.Run.draws_iff_replenishes`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. In a process with a balanced natural-number stock, where every cycle of a sequence of courses draws D and replenishes R in total, and every finite number of cycles is executable from one configuration, D ≤ R. (`Becoming.Stock.cycles_need`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. In the stock process, where each move draws what it draws from what is held and then replenishes, one course can be repeated any number of times from stock n exactly where its first pass is covered from n (each draw within the stock then standing) and its total replenishment is at least its total draw. (`Becoming.Stock.repeat_covered_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. ContinuingRevision adds renewal at a yield to ReferencePlan's operations: a successful undertaking at the next address enables one renewal, which, taken only where enabled, outside installation and with fuel held, uses one unit of fuel, returns the yield, moves to the next carrier, keeps the reference installed for it and retires the old contact. At every yield the fuel is a balanced stock for these uses and returns. (`Becoming.ContinuingRevision.execute`, `Becoming.ContinuingRevision.P`, `Becoming.ContinuingRevision.use`, `Becoming.ContinuingRevision.returned`, `Becoming.ContinuingRevision.step_conserves`, `Becoming.ContinuingRevision.balanced`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Every act of ContinuingRevision uses at least one unit of fuel, so at yield 0, with the return cut, the process has no run at all, under any controller. (`Becoming.ContinuingRevision.use_pos`, `Becoming.ContinuingRevision.no_run_without_return`)
-   - *Master laws:* finite runs, reaching the grammar.
+   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 6. Along every run of ContinuingRevision at every yield, renewal occurs at arbitrarily late steps; a renewal step starts only where renewal is enabled, and a step leaves renewal enabled only where it performs an undertaking that responds successfully; so successful undertakings occur at arbitrarily late steps of every run. (`Becoming.ContinuingRevision.renew_recurs`, `Becoming.ContinuingRevision.renew_needs_enabled`, `Becoming.ContinuingRevision.enabled_by_success`, `Becoming.ContinuingRevision.success_recurs`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. The revision cycle is seven operations: a failed undertaking at the next address, revision, two contacts, installation, a successful use and renewal; it uses nine units and returns the yield. At every yield, some configuration has every number of cycles executable from it exactly where the yield is at least nine; at a yield of e + 9 each cycle adds e to the reserve held. (`Becoming.ContinuingRevision.word`, `Becoming.ContinuingRevision.history`, `Becoming.ContinuingRevision.word_use`, `Becoming.ContinuingRevision.word_return`, `Becoming.ContinuingRevision.readyAt`, `Becoming.ContinuingRevision.one_cycle_at`, `Becoming.ContinuingRevision.cycles_at`, `Becoming.ContinuingRevision.cycles_need_yield`, `Becoming.ContinuingRevision.repeats_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. At yield nine, from a seed with no retained method, no installed reference and fifteen units of fuel, five operations (an undertaking, revision, a contact, installation and a successful use) reach the ready configuration of carrier 0, and the selected controller then carries out every number of cycles; at carrier n nine units are held, 9n + 6 have been used and 9n received. (`Becoming.ContinuingRevision.seed`, `Becoming.ContinuingRevision.formation`, `Becoming.ContinuingRevision.formation_enters`, `Becoming.ContinuingRevision.all_cycles`, `Becoming.ContinuingRevision.formed_and_continues`, `Becoming.ContinuingRevision.all_cycles_amounts`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. At yield nine, at every carrier n the revised method contacts addresses n + 1 and n, while the ready method holds n alone; through the references installed, the selection at address n + 1 becomes available, which the ready configuration of carrier n lacks, and the selection at address n, available after installation, is lost at carrier n + 1. (`Becoming.ContinuingRevision.method_changed`, `Becoming.ContinuingRevision.new_available_choice`, `Becoming.ContinuingRevision.retired_choice`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. At yield nine there is one infinite run of the selected controller, a clock enumerating the seven operations already checked: at step 7n it stands at the ready configuration of carrier n, at step 7n + 5 at the installed one, and it starts where the formation from the seed arrives. (`Becoming.ContinuingRevision.continuing`, `Becoming.ContinuingRevision.clock_step`, `Becoming.ContinuingRevision.run_at_cycle`, `Becoming.ContinuingRevision.run_installs`, `Becoming.ContinuingRevision.unbounded_succession`, `Becoming.ContinuingRevision.formation_to_run`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. Controls: at yield nine renewal is refused at a ready configuration, where no success has enabled it; at yield 0 renewal after a success leaves no fuel, and the next undertaking cannot be taken; at carrier 0, one extra use of fuel before the cycle makes the tight reserve fail it, and after the failure, freezing the method, then contacting, installing, undertaking at address 1 and renewing fails. (`Becoming.ContinuingRevision.no_return_without_success`, `Becoming.ContinuingRevision.cut_return`, `Becoming.ContinuingRevision.cut_stops_next`, `Becoming.ContinuingRevision.reserve_consumed`, `Becoming.ContinuingRevision.frozen_plan_no_return`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

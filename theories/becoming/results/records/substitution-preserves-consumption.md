@@ -11,23 +11,23 @@
 ## Laws
 
 1. For every web, consumption is kept under every change of the consumer's own dependence from a step T₀ on (levels, the consumer's draws, every other formation's dependence and the consumer's own before T₀ unchanged) exactly when the consumer draws on a condition whose loss is witnessed by a dependence that change leaves: another formation's, or its own at a step before T₀. (`Becoming.Web.DependenceChanged`, `Becoming.Web.ConsumingThrough`, `Becoming.Web.consumingIn_kept_iff`, `Becoming.Web.ConsumingThrough.consumingIn`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. For a change from the start, consumption is kept exactly when another formation's dependence witnesses the loss; where only the consumer's own dependence witnesses it, dissolving that dependence removes the consumption. (`Becoming.Web.consuming_survives_iff`, `Becoming.Substitution.Lone.web`, `Becoming.Substitution.Lone.substituted`, `Becoming.Substitution.Lone.own_witness_lost`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Where activity needs support, a formation still active after a loss without return has weakened or dissolved its dependence on the condition. (`Becoming.Web.consumed_continues_transformed`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. RelationalRenewal's support-gated law is an instance: a shared condition is renewed by a sustaining formation that depends on it, and a focal formation drawing beyond renewal from the start consumes through the sustaining formation's dependence, so it stays consuming under every change of its own dependence. (`Becoming.Substitution.consuming_through_sustaining`, `RelationalRenewal.Law`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. In the family, let the focal formation depend on the shared condition while it supports the focal formation and otherwise on an alternative that does, read as a web whose dependence changes; the shared condition's levels are still given by the law. (`Becoming.Substitution.requires`, `Becoming.Substitution.draws`, `Becoming.Substitution.web`, `Becoming.Substitution.web_dependent`, `Becoming.Web`, `RelationalRenewal.Law.level`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. If the focal formation draws beyond renewal from the start, it is active at every step; its dependence on the shared condition dissolves, and one on the alternative forms, at a step that can be found; it is consuming in the run (ConsumingIn asks only for one draw on a consumed condition); and the sustaining formation loses support for ever from some step and ends. (`Becoming.Substitution.persists_consuming`, `Becoming.Web.Dissolves`, `Becoming.Web.Forms`, `Becoming.Web.ConsumingIn`, `RelationalRenewal.Law.overdraw_crosses_support`, `RelationalRenewal.Law.permanently_below`, `RelationalRenewal.Law.dependent_overdraw_ends_itself`, `RelationalRenewal.Law.no_return_below_support`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. A concrete law (extracting) meets every premise; in it the stepwise reading includes the focal formation at every step except step 2, where the shared condition falls below the sustaining formation's support: before the crossing its draws leave every need met, and after it it draws on nothing in the model. (`Becoming.Substitution.extracting`, `Becoming.Substitution.extracting_persists_consuming`, `Becoming.Substitution.extracting_low`, `Becoming.Substitution.stepwise_includes_substitution`, `Becoming.Web.UnderminingAt`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. In another law (slow) the shared condition still supports the focal formation for a step after it fails the sustaining formation, and the focal formation is withheld at steps 2 and 3. (`Becoming.Substitution.slow_withheld_two_steps`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. With a decidable determination, the step at which it ceases can be found. (`Becoming.ceasing_step`, `Becoming.ceases_at_a_step`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

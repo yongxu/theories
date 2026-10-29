@@ -11,17 +11,17 @@
 ## Laws
 
 1. Every condition joins its two ends in one family under the one; under that class, the class of being joined, continuation is 缘 itself, and its lines reach exactly what the one's reach. (`Becoming.«族之所及即一之所及»`, `Becoming.«族之续即缘»`, `Becoming.«缘在族中»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 2. A class has 缘 as its continuation exactly where it contains the class of being joined by 缘 read either way: that class is the finest under which every condition is a continuation. (`Becoming.«续即缘当且仅当含族»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 3. Where every occurrence conditions something, the class of being joined is constant, its core holds both ends of every condition, and a line under the core reaches exactly what a line under the one reaches. (`Becoming.«遍有后则族有常»`, `Becoming.«遍有后则核之所及即一之所及»`, `Becoming.«遍有后则缘在族核»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 4. With a third thing joined to nothing beside two families and their shared condition, the class of being joined holds the first family's first member with the condition and with the second family's member two generations on and keeps every stage of the third thing apart, so it is narrower than the one; it is constant and its line reaches the second family's member. (`Becoming.ThirdThing.Occ`, `Becoming.ThirdThing.family_keeps_third`, `Becoming.ThirdThing.fixed_class`, `Becoming.ThirdThing.fixed_class_reaches`, `Becoming.ThirdThing.step`, `Becoming.ThirdThing.step_keeps_third`, `Becoming.ThirdThing.third`, `Becoming.ThirdThing.total`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 5. With the third thing affecting the shared condition, the class of being joined is the one, while the constant class "the third thing or not" leaves it out and its line from the first family's first member reaches the second family's member two generations on. (`Becoming.ThirdAffects.Occ`, `Becoming.ThirdAffects.condition_joined`, `Becoming.ThirdAffects.finer_class_reaches`, `Becoming.ThirdAffects.joined_to_start`, `Becoming.ThirdAffects.rest_to_rest`, `Becoming.ThirdAffects.step`, `Becoming.ThirdAffects.succ_of_kind`, `Becoming.ThirdAffects.third`, `Becoming.ThirdAffects.third_class`, `Becoming.ThirdAffects.third_constant`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 6. With the shared condition feeding the third thing, every constant class holding a stage of the condition with a member takes in the stage the condition feeds, alike with the member's next generation or the condition's next stage. (`Becoming.ThirdFed.Occ`, `Becoming.ThirdFed.constant_takes_third`, `Becoming.ThirdFed.step`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,23 +11,23 @@
 ## Laws
 
 1. For any process, map of its steps to the values they keep, guard and condition on moves: a move is usable from a class where it is allowed and enabled at each of its configurations; a class is kept for 0 steps where the guard holds throughout it, and for n + 1 steps where, besides, some usable move leaves, for each value its step keeps, the class seen after it kept for n steps. (`Becoming.Viability.Seen`, `Becoming.Viability.Usable`, `Becoming.Viability.KeptFor`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A plan of n + 1 moves gives a first move and, for each value its step keeps, a plan of n moves; it keeps the guard from a class where the guard holds there, its first move is usable and each continuation keeps the guard from the class seen. A plan that keeps the guard from a class keeps the class for its length, with no premise. (`Becoming.Viability.Plan`, `Becoming.Viability.Plan.Keeps`, `Becoming.Viability.Plan.Keeps.keptFor`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Where the values a step keeps are listed (Fin k), they have choice into every type, and a class is kept for n steps exactly where some plan of n moves keeps the guard from it, with no premise. (`Becoming.Viability.choiceOver_fin`, `Becoming.Viability.keptFor_iff_plan`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. For values of any type that have choice into plans of every length (every relation giving each value some plan is met by one function), a class is kept for n steps exactly where some plan of n moves keeps the guard from it. (`Becoming.Viability.ChoiceOver`, `Becoming.Viability.KeptFor.plan_of_choice`, `Becoming.Viability.keptFor_iff_plan_of_choice`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Asked of every process, map of steps, guard and condition on moves in one universe, every kept class having a plan that keeps it holds exactly where the values kept have choice into every type of that universe: assembling one continuation for each possible value is choosing among the values. (`Becoming.Viability.plans_iff_choice`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. In Matching, where a hidden bit must be matched by the second move, the same process, guard and moves keep the starts for two steps where the step keeps the bit, and not where it keeps nothing. (`Becoming.Viability.Matching.keeping_matters`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. A narrower class is kept wherever a wider one is, n + 1 steps of keeping give n, and a finer map of the steps keeps what a coarser one read off it keeps. A family of classes within the guard, each with a usable move leading for every value into the family, keeps each class for every horizon, as does a viability certificate, or the kernel, with one move usable throughout it. (`Becoming.Viability.KeptFor.mono`, `Becoming.Viability.KeptFor.shorter`, `Becoming.Viability.KeptFor.finer`, `Becoming.Viability.keptFor_of_closed`, `Becoming.Viability.Certificate.keptFor`, `Becoming.Viability.Kernel.keptFor`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. The earlier finite-continuation model is an instance (periphery): its transitions are a process, observing the configuration reached is a map of steps, its class after a response and an observation is the class seen and its viability is keeping; plans translate both ways, keeping what works, and with observations in Fin k viability for n steps is a working plan with an empty axiom report. (`Becoming.ContinuationCorrespondence.processOf`, `Becoming.ContinuationCorrespondence.successor`, `Becoming.ContinuationCorrespondence.post_eq_seen`, `Becoming.ContinuationCorrespondence.viable_iff_keptFor`, `Becoming.ContinuationCorrespondence.toPlan`, `Becoming.ContinuationCorrespondence.ofPlan`, `Becoming.ContinuationCorrespondence.works_iff_keeps`, `Becoming.ContinuationCorrespondence.keeps_iff_works`, `Becoming.ContinuationCorrespondence.viable_iff_plan_listed`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 9. In the earlier model (periphery), for observations of any type, n-step viability is equivalent to an observation-branching n-step plan that works, the continuations chosen by classical choice; the same equivalence follows from the core law with the choice over the observations taken from Classical.choice. (`ContinuationAdequacy.viable_iff_plan`, `Becoming.ContinuationCorrespondence.viable_iff_plan_by_core`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

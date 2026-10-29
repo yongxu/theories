@@ -11,11 +11,11 @@
 ## Laws
 
 1. Forty-seven 小象 sentences saying a line is 中 are all of the second or fifth place; four other sentences with 中, not saying the line is, are of places that are not middle. (`Becoming.Hexagram.middlesHold`, `Becoming.Hexagram.middlesHold_sound`, `Becoming.Hexagram.xiaoxiangMiddle`, `Becoming.Hexagram.xiaoxiangMiddleOther`, `Becoming.Hexagram.xiaoxiangMiddle_census`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Nine sentences saying a line's way is exhausted (窮, 亢) are all of the top place; five sentences with 窮 of will, trust or going are of lower places. (`Becoming.Hexagram.isTop`, `Becoming.Hexagram.topsHold`, `Becoming.Hexagram.topsHold_sound`, `Becoming.Hexagram.exhaustedStatements`, `Becoming.Hexagram.exhaustedOther`, `Becoming.Hexagram.exhausted_census`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Four sentences of a broken line carrying an unbroken one are each of a rise at their seam; eleven 彖 sentences that a line is 中正 are each of a middle line in phase; 恆九四 and 渙九五 agree with the phase of their lines. (`Becoming.Hexagram.risesHold`, `Becoming.Hexagram.risesHold_sound`, `Becoming.Hexagram.riseStatements`, `Becoming.Hexagram.riseStatements_agree`, `Becoming.Hexagram.tuanCentreStatements`, `Becoming.Hexagram.tuanCentreStatements_agree`, `Becoming.Hexagram.placeStatementsMore`, `Becoming.Hexagram.placeStatementsMore_agree`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,7 +11,7 @@
 ## Laws
 
 1. A part arising within every d consecutive steps from T, each lasting d steps after arising, the whole of some part is active at the step d after every step from T on, so at every step from T + d on. (`Becoming.Web.Whole.persists_of_arising`, `Becoming.Web.Whole.persists_from`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

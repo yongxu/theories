@@ -11,7 +11,7 @@
 ## Laws
 
 1. Turning the line at a height of three, and the sole line at that height, are defined; at each height the line is sole exactly where the three are 乾 or 坤 so turned, and the six searched trigrams are 震, 坎, 艮, 巽, 離, 兌. (`Becoming.Hexagram.Trigram.flip3`, `Becoming.Hexagram.Trigram.soleAt`, `Becoming.Hexagram.Trigram.sole_iff_searched`, `Becoming.Hexagram.Trigram.searched`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

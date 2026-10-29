@@ -11,19 +11,19 @@
 ## Laws
 
 1. Over any set of outcomes, every order rising with the levels of a family (ranking above every outcome that exceeds another on the family, whatever either holds beyond) has its optima at the least level beyond, condition by condition, exactly where every eligible outcome standing above another beyond is not unbeaten on the family. (`Becoming.Optimum.Exceeds`, `Becoming.Optimum.Rising`, `Becoming.Optimum.Least`, `Becoming.Optimum.least_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. With room (an eligible outcome standing above another beyond is exceeded on the family by an eligible one), every optimum is there; shared units, the outcomes closed under moving a unit beyond into the family, give room. (`Becoming.Optimum.Room`, `Becoming.Optimum.least_of_room`, `Becoming.Optimum.transfer`, `Becoming.Optimum.Shared`, `Becoming.Optimum.transfer_exceeds`, `Becoming.Optimum.Shared.room`, `Becoming.Optimum.least_of_shared`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. The family's stock is a rising order, and an order ranking above wherever a rising order does is rising: a lexicographic order with the family first, whatever it counts after, drives the beyond all the same. (`Becoming.Optimum.Exceeds.total_lt`, `Becoming.Optimum.rising_total`, `Becoming.Optimum.Rising.mono`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. On a web whose levels after a step are such an optimum, with each condition beyond depended on at a need it meets, a dependence beyond is broken exactly where some eligible outcome leaves its condition below the need; where activity needs support and the dependence is as it was, its formation is not active after the step, is no member of a group coupled only into the family, and no member couples into its condition. (`Becoming.Web.optimum_broken_iff`, `Becoming.Web.optimum_ends_beyond`)
-   - *Master laws:* none among its reasons; central declaration `Becoming.Web.optimum_broken_iff`: law of its model (the drive to the least level).
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Web.optimum_broken_iff` as following from a law of its model (the drive to the least level).
 5. Of two balanced steps from equal totals, each gaining nothing on the whole, one leaves the family at most where the other does exactly where it leaves the beyond with the loss at least where the other does; among such moves the highest family stock is the least beyond with the loss. (`Becoming.Flow.Balances.family_le_iff`, `Becoming.Flow.top_iff_least`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Restricted to outcomes keeping every dependence beyond at its need, a rising order with room among them, each need attained by one of them, has its optimum break nothing, and in a balanced step gaining nothing on the whole the family rises, with the loss, by exactly the slack. (`Becoming.Flow.keeping_optimum_takes_slack`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. Witnesses on Diversion (three units between the source and the store, the dweller needing two): the store's optimum drains the source and the dweller ends; counting the source after the store drains it; without room keeping is an optimum not at the least level; a satisficing order is not rising and has both the keeping and the draining outcome among its optima; the keeping optimum takes the slack of one. (`Becoming.Optimum.Drain.Split`, `Becoming.Optimum.Drain.storeOrder`, `Becoming.Optimum.Drain.drainedLevel`, `Becoming.Optimum.Drain.storeOrder_rising`, `Becoming.Optimum.Drain.split_shared`, `Becoming.Optimum.Drain.drained_optimum`, `Becoming.Optimum.Drain.taker_couples_store`, `Becoming.Optimum.Drain.drained_ends`, `Becoming.Optimum.Drain.countedAfter`, `Becoming.Optimum.Drain.counted_after_drains`, `Becoming.Optimum.Drain.keptLevel`, `Becoming.Optimum.Drain.low`, `Becoming.Optimum.Drain.high`, `Becoming.Optimum.Drain.satisficing`, `Becoming.Optimum.Drain.satisficing_either`, `Becoming.Optimum.Drain.Spilling`, `Becoming.Optimum.Drain.room_needed`, `Becoming.Optimum.Drain.Keeping`, `Becoming.Optimum.Drain.keeping_room`, `Becoming.Optimum.Drain.kept_takes_slack`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

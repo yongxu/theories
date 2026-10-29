@@ -11,37 +11,37 @@
 ## Laws
 
 1. On a stretch of m steps from S, an arrangement π with its inverse σ takes each exchange of the stretch to a step of it; the exchanges are named by the numbers π arranges, and a relation joined is read between named exchanges. π′ orients joined pairs as π does where it takes every two joined exchanges of the stretch in the order π takes them. (`Becoming.Reindexes`, `Becoming.Orients`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A list of commutations commutes by a relation where each swaps two consecutive exchanges the relation does not join, read in the arrangement as it then stands; π′ is reached from (π, σ) where such commutations within the stretch, by joined read through σ, move each exchange i from step π i to step π′ i. (`Becoming.Commutes`, `Becoming.Rearranges`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. With joining symmetric, for arrangements (π, σ) and (π′, σ′) of a stretch, π′ is reached from (π, σ) by commuting exchanges not joined exactly where π′ orients every joined pair as π does, with no decision; so being reached is symmetric and transitive. (`Becoming.rearranges_iff`, `Becoming.Rearranges.orients`, `Becoming.Rearranges.symm`, `Becoming.Rearranges.trans`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. For a symmetric relation on the steps of a stretch and a renumbering of it, with its inverse, keeping the order the relation gives, some list of commutations within the stretch, each of two consecutive exchanges the relation does not join as it then stands, takes each step where the renumbering does; the renumberings so reached are exactly those keeping that order. (`Becoming.KeepsOrder`, `Becoming.sorts_by`, `Becoming.sorts_by_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Where a world's footprint contains its exchanges, commuting exchanges not joined, each in the world as it then stands, is commuting by the relation the footprint joins; from the world's own arrangement the arrangements reached are those its reorderings within the stretch take, and a renumbering keeps the world's order exactly where it orients joined pairs as the identity does. (`Becoming.Footprinted.Contains`, `Becoming.Footprinted.Joined`, `Becoming.Footprinted.independent_iff_commutes`, `Becoming.Footprinted.rearranges_iff_independent`, `Becoming.Footprinted.keeps_iff_orients`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. A decision of apartness on a stretch gives, for every two different exchanges of it, true exactly where they are not joined. Given one, the sort fills the steps from S in turn, bringing forward to each, past exchanges apart from it, the least-named exchange free from there; the normal form is where the sort takes each exchange. (`Becoming.DecidesApart`, `Becoming.freeAt`, `Becoming.normalPick`, `Becoming.normalSteps`, `Becoming.normalForm`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. Given a decision of apartness, the normal form is an arrangement of the stretch, reached from the given one by commuting exchanges not joined; with joining symmetric, two arrangements, the second orienting joined pairs as the first does, have the same normal form on every exchange of the stretch. (`Becoming.normalForm_reindexes`, `Becoming.normalForm_rearranges`, `Becoming.normalForm_agree`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. With joining symmetric and apartness decided on the stretch, two arrangements of it are reached from each other by commuting exchanges not joined exactly where their normal forms agree on every exchange of the stretch. (`Becoming.normalForm_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. With joining symmetric and apartness decided, the normal form is its own normal form, and it is lexicographically least among the arrangements reached: where it and one of them hold the same exchanges at the steps before a step of the stretch, its exchange there has a name no greater. (`Becoming.normalForm_normal`, `Becoming.normalForm_least`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. A complete invariant of the arrangements of a stretch is a function of arrangements, natural-number valued at each exchange of the stretch, agreeing on two there exactly where they are reached from each other; with joining symmetric and apartness decided, the normal form is one. (`Becoming.CompleteInvariant`, `Becoming.normalForm_complete`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. The second way of taking two exchanges i < j of the stretch side by side is reached from the first exactly where the two are not joined; so, with joining symmetric, every complete invariant decides apartness of every two different exchanges of the stretch, by comparing its values on those two ways. (`Becoming.pair_rearranges`, `Becoming.apartOf`, `Becoming.decides_of_complete`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. With joining symmetric, a complete invariant of the arrangements of a stretch exists exactly where a decision of apartness of its exchanges exists. (`Becoming.complete_iff`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 13. In Triple, three exchanges on steps 0, 1 and 2, two different ones joined only where they are the first and the last, apartness is decided; taken last to first, the normal form takes the middle, then the last, then the first, and taken first to last it is first to last itself, so the two orders are not reached from each other. (`Becoming.Triple.joined`, `Becoming.Triple.symm`, `Becoming.Triple.decides`, `Becoming.Triple.reversed`, `Becoming.Triple.reversed_normal`, `Becoming.Triple.identity_normal`, `Becoming.Triple.not_rearranged`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 14. Where a world's footprint contains its exchanges and apartness of its exchanges is decided on a stretch, normalize commutes the world's exchanges over the stretch, two consecutive exchanges not joined at a time, into the normal form of their arrangement, each exchange named by its step. (`Becoming.Footprinted.normalize`, `Becoming.Footprinted.normalize_independent`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 15. So normalized, the world meets balance, dissipation, only active giving, only active taking, activity needing support, embodiment and bounded transmission exactly where the world does, and the exchange across one of its steps precedes that across another exactly where the exchanges they came from do in the world. (`Becoming.Footprinted.normalize_premises`, `Becoming.Footprinted.normalize_precedes`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 16. Where a world's footprint contains its exchanges, two reorderings within a stretch commuting exchanges not joined that take every exchange to the same step take the same exchange across each step and show every relatum alike there; so, apartness decided, any such reordering normalized with each exchange named by the step it held in the world agrees so with the world's normal form. (`Becoming.Footprinted.reorder_determined`, `Becoming.Footprinted.normalize_reorder`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,23 +11,23 @@
 ## Laws
 
 1. Removing the links of added from a relation leaves every closure as it was exactly where each removed link has its second end within its first end's closure under what remains; for one link read both ways, exactly where each end lies within the other's closure, and under a symmetric relation where one does. (`Becoming.Cuts.Joined`, `Becoming.Cuts.Link`, `Becoming.Cuts.link_symm`, `Becoming.Cuts.within_congr`, `Becoming.Cuts.within_of_steps`, `Becoming.Cuts.closure_unchanged_iff_bypassed`, `Becoming.Cuts.link_cut_unchanged_iff`, `Becoming.Cuts.link_cut_unchanged_iff_of_symm`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. After a link between a and b is joined, g lies within f's closure exactly where it did, or f reaches one of a, b and the other reaches g; no symmetry and no decision is used. (`Becoming.Cuts.within_link_iff`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. A formation that takes part in no link reaches only itself and nothing else reaches it, so attaching it by one link changes no closure among the other formations. (`Becoming.Cuts.Unlinked`, `Becoming.Cuts.within_of_unlinked`, `Becoming.Cuts.not_within_unlinked`, `Becoming.Cuts.within_attached_iff`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. In a list of links each attaching, to another formation, one that took part in no earlier link, each link is listed once, and removing any one leaves its ends apart, whatever came before or after it. (`Becoming.Cuts.Links`, `Becoming.Cuts.links_symm`, `Becoming.Cuts.links_split`, `Becoming.Cuts.links_of_mem`, `Becoming.Cuts.Attaches`, `Becoming.Cuts.Attaches.suffix`, `Becoming.Cuts.Attaches.listed_once`, `Becoming.Cuts.attached_link_separates`, `Becoming.Cuts.Attaches.distinct`, `Becoming.Cuts.links_mem`, `Becoming.Cuts.links_of_link`, `Becoming.Cuts.mem_split`, `Becoming.Cuts.mem_widen`, `Becoming.Cuts.mem_set_apart`, `Becoming.Cuts.mem_append_cases`, `Becoming.Cuts.mem_append_right`, `Becoming.Cuts.exists_split`, `Becoming.Cuts.append_cons_assoc`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 5. With one more link joined between a and b, a grown link p–n is bypassed exactly where p reaches one of a, b and the other reaches n without it; cutting it then changes no closure exactly there. (`Becoming.Cuts.joined_bypass_iff`, `Becoming.Cuts.joined_cut_unchanged_iff`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 6. On the base, every system is what it is through the conditions other than c exactly where any two formations taking part in c lie in one system through the others; a condition one formation takes part in is needed by no system. (`Becoming.Flow.SharesBeside`, `Becoming.Flow.BothTakePart`, `Becoming.Flow.shares_iff_beside`, `Becoming.Flow.system_unchanged_without_iff`, `Becoming.Flow.system_unchanged_of_single`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 7. Where exactly a and b take part in c, g lies within f's system exactly where it does through the other conditions, or f reaches one of them and the other reaches g; a formation taking part only in c is alone without it, and one taking part in no condition has only itself in its system. (`Becoming.Flow.withinSystem_two_takers_iff`, `Becoming.Flow.alone_beside_of_only`, `Becoming.Flow.withinSystem_of_no_part`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 8. In a world grown by attachment, each new formation taking part only in a condition exactly one earlier formation takes part in, the systems are the closures of the grown links; each grown condition is attached at one place and is needed, its two takers lying in one system and apart without it; the latest formation is alone without its condition; and what grew up to any stage is grown by attachment beside the later conditions. (`Becoming.Flow.SharesOutside`, `Becoming.Flow.GrownBy`, `Becoming.Flow.GrownBy.takes_part_of_link`, `Becoming.Flow.GrownBy.link_of_takers`, `Becoming.Flow.GrownBy.cond_ne`, `Becoming.Flow.GrownBy.attached_only`, `Becoming.Flow.GrownBy.outside_step`, `Becoming.Flow.GrownBy.outside_of_link`, `Becoming.Flow.GrownBy.within_outside_iff`, `Becoming.Flow.GrownBy.within_outside_added_iff`, `Becoming.Flow.GrownBy.condition_needed`, `Becoming.Flow.GrownBy.every_condition_needed`, `Becoming.Flow.GrownBy.latest_alone`, `Becoming.Flow.GrownBy.suffix`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 9. With one more condition exactly a and b take part in, the takers p and n of the condition that attached n lie in one system through the other conditions, and every system is what it is without it, exactly where p reaches one of a, b and the other reaches n through the conditions other than these two. (`Becoming.Flow.within_of_two_takers`, `Becoming.Flow.GrownBy.beside_iff`, `Becoming.Flow.GrownBy.system_iff`, `Becoming.Flow.GrownBy.bypass_iff`, `Becoming.Flow.GrownBy.cut_unchanged_iff`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

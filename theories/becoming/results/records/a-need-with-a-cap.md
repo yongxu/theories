@@ -11,9 +11,9 @@
 ## Laws
 
 1. Levels keep a formation within its band at a step where each condition it requires stands between its need and its cap; levels within the band admit it. (`Becoming.Web.FitsBand`, `Becoming.Web.FitsBand.admits`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. With balance at the conditions required across the steps before, the levels that stand keep the formation within its band exactly where, at each, need plus what the part took is at most the level without the part plus what it gave, which is at most the cap plus what it took. (`Becoming.Flow.fitsBand_iff_within_margins_at`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,11 +11,11 @@
 ## Laws
 
 1. On a line under a class L from a center, what continues under L an occurrence at which the line under a relation O ends is reached on the line under L and lies on no line under O from that occurrence; a class's core continues something exactly where some line under it goes on without end, so with no such line it continues nothing. (`Becoming.«无不穷则核无续»`, `Becoming.«核有续当且仅当有不穷»`, `Becoming.«过亡而续»`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 2. In endless descent, each member young, then old, then the parent of the next, every occurrence conditions a successor, so the one is constant; its core continues through each birth, and its line under the core goes on for good from each birth, while the member's line ends at old age; with the first birth as the only center the condition holds under the one and fails under the member's class. (`Becoming.LineOfDescent.Endless.Occ`, `Becoming.LineOfDescent.Endless.core_through_birth`, `Becoming.LineOfDescent.Endless.descent_constant`, `Becoming.LineOfDescent.Endless.descent_no_outside`, `Becoming.LineOfDescent.Endless.descent_reaches`, `Becoming.LineOfDescent.Endless.descent_reaches_both`, `Becoming.LineOfDescent.Endless.descent_unending`, `Becoming.LineOfDescent.Endless.member`, `Becoming.LineOfDescent.Endless.member_class`, `Becoming.LineOfDescent.Endless.member_ends`, `Becoming.LineOfDescent.Endless.member_line`, `Becoming.LineOfDescent.Endless.member_outside`, `Becoming.LineOfDescent.Endless.step`, `Becoming.LineOfDescent.Endless.total`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 3. In descent that ends, two members with the second childless, no line under any relation goes on without end, so no class's core continues anything, while the one reaches the second member past the first's end. (`Becoming.LineOfDescent.Last.Occ`, `Becoming.LineOfDescent.Last.core_no_continuation`, `Becoming.LineOfDescent.Last.descent_past_end`, `Becoming.LineOfDescent.Last.last_ends`, `Becoming.LineOfDescent.Last.never_unending`, `Becoming.LineOfDescent.Last.step`)
-   - *Master laws:* , reaching the grammar.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

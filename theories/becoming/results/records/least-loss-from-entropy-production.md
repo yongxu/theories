@@ -11,25 +11,25 @@
 ## Laws
 
 1. Read each unit of amount as u of available work relative to one environment, and let σ t f be the exergy formation f's exchange destroys across the step from t. The exergy balance says that over a closed family the formation gives, with what it destroys, exactly what it takes; the second law says no exchange destroys negative exergy. (`Becoming.EntropyProduction.ExergyBalance`, `Becoming.EntropyProduction.SecondLaw`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Under the exergy balance and the second law, nothing comes from nothing at the unit: the second law read in available work gives the spine's first law, and the exergy destroyed is the residue counted in units, the record of Flow.dissipatesOn_iff_conserved. (`Becoming.EntropyProduction.ExergyBalance.give_le`, `Becoming.EntropyProduction.gainless_of_secondLaw`, `Becoming.EntropyProduction.ExergyBalance.destroyed_eq_residue`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. The second law alone does not give dissipation: in Passing it holds with no exergy destroyed, at every unit, and the flow is not dissipative. (`Becoming.EntropyProduction.passing_balance`, `Becoming.EntropyProduction.secondLaw_not_dissipative`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. Where, in addition, every exchange that takes from a closed family destroys some exergy, the flow is dissipative: with whole units of amount, giving back strictly less is giving back at least one unit less. (`Becoming.EntropyProduction.Irreversible`, `Becoming.EntropyProduction.dissipative_of_irreversible`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. Where every exchange that takes destroys at least s, the loss counted at the unit u is at least every whole n with n u ≤ s, the flow is dissipative at every unit within s, and at an r-fold finer unit the loss is at least r units: a floor in energy survives refinement. (`Becoming.EntropyProduction.DestroysAtLeast`, `Becoming.EntropyProduction.loss_of_floor`, `Becoming.EntropyProduction.dissipative_of_floor`, `Becoming.EntropyProduction.loss_at_finer_unit`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. Where every exchange over a closed family destroys at least a (q + 1)th of the exergy it takes, the flow is dissipative in proportion q (Flow.DissipativeBy q), whatever the unit. (`Becoming.EntropyProduction.dissipativeBy_of_efficiency`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. Over runs drawn from a measure, dissipation in expectation (in expectation, replenishment and takers within uptake) follows from dissipation on every run, and from an exergy balance on each run with expected destruction of at least u for each formation that takes, single runs free to destroy negative exergy. (`Becoming.EntropyProduction.ExpectedDissipatesOn`, `Becoming.EntropyProduction.HasExpectations`, `Becoming.EntropyProduction.ExpectedDissipatesOn.of_pathwise`, `Becoming.EntropyProduction.ExpectedDissipatesOn.of_exergy`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. Balanced on each run and dissipated on in expectation from step T, the expected stock falls across each step by the expected takers, the expected takers over every stretch and the summed probabilities of taking are within the expected stock at T, and on almost every run, from some step on, no formation takes. (`Becoming.EntropyProduction.expected_runs_down`, `Becoming.EntropyProduction.expected_takers_within`, `Becoming.EntropyProduction.expected_stock_nonneg`, `Becoming.EntropyProduction.taking_probability_le`, `Becoming.EntropyProduction.taking_probability_within`, `Becoming.EntropyProduction.taking_not_recurring_ae`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 9. Dissipation in expectation is weaker than dissipation: in Fluctuation, balanced and closed on both runs and dissipated on in expectation at every step, one run gains, so its flow is neither gainless nor dissipative. (`Becoming.EntropyProduction.Fluctuation.flow`, `Becoming.EntropyProduction.Fluctuation.web`, `Becoming.EntropyProduction.Fluctuation.coin`, `Becoming.EntropyProduction.Fluctuation.integral_coin`, `Becoming.EntropyProduction.Fluctuation.balances`, `Becoming.EntropyProduction.Fluctuation.closed`, `Becoming.EntropyProduction.Fluctuation.gains_in_one_run`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 10. Where the entropy production S, in units of Boltzmann's constant, meets the integral fluctuation theorem E[exp(−S)] = 1, its expectation is not negative, and a run producing at most −a has probability at most exp(−a). (`Becoming.EntropyProduction.expected_production_nonneg`, `Becoming.EntropyProduction.gain_probability_le`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

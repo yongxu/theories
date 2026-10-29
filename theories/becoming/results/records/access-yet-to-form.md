@@ -11,11 +11,11 @@
 ## Laws
 
 1. In the access model (a route, the occupancy of supports, and steps that redirect, take and release within a permitted set), with the route fixed two configurations give every finite event word the same feasibility exactly where their occupancy agrees on every permitted support. A probe, redirecting to a support and taking it, is feasible exactly where the support is permitted and free. (`Generative.ReconfigurableSupportLogic.Configuration`, `Generative.ReconfigurableSupportLogic.process`, `Generative.ReconfigurableSupportLogic.OccupancyAgrees`, `Generative.ReconfigurableSupportLogic.fixed_route_behavior_iff`, `Generative.ReconfigurableSupportLogic.probe`, `Generative.ReconfigurableSupportLogic.probe_exact`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Witness: redirecting to the second support, taking it and redirecting back forms a hidden configuration from the clear one. With only the first support permitted the two have one observation and the same feasibility of every word, and they share the active view, the route and its occupancy; with both permitted, the probe of the second support is feasible from the clear one only. (`Generative.ReconfigurableSupportLogic.Witness.clear`, `Generative.ReconfigurableSupportLogic.Witness.hidden`, `Generative.ReconfigurableSupportLogic.Witness.hidden_formed`, `Generative.ReconfigurableSupportLogic.Witness.old_observation_same`, `Generative.ReconfigurableSupportLogic.Witness.old_workload_exact`, `Generative.ReconfigurableSupportLogic.Witness.same_active_view`, `Generative.ReconfigurableSupportLogic.Witness.new_probe_separates`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. So no reader of the active view decides the probe's feasibility, and no update of the active view by the redirection target alone gives the view after redirecting; redirecting the hidden configuration keeps its occupancy and changes whether taking is enabled, and a current reading of the new support's occupancy gives the updated view. (`Generative.ReconfigurableSupportLogic.Witness.no_old_view_future_reader`, `Generative.ReconfigurableSupportLogic.Witness.no_blind_redirect_update`, `Generative.ReconfigurableSupportLogic.Witness.redirect_changes_readiness_only`, `Generative.ReconfigurableSupportLogic.Witness.refreshed_view`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

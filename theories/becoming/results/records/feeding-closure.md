@@ -11,27 +11,27 @@
 ## Laws
 
 1. The continuation of a formation is fed by another at a step when, at that step, the other takes part and gives to a condition the first then requires. A region is closed under feeding when whatever feeds a member's continuation is a member, and g lies within f's feeding closure when every region closed under feeding that holds f holds g. (`Becoming.Flow.FedBy`, `Becoming.Flow.FedClosed`, `Becoming.Flow.WithinFeeding`, `Becoming.Flow.FedFrom`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar's vocabulary only.
 2. With no premise, the closure holds f, is transitive, holds every feeder of f at any step and is itself closed under feeding, so it is the least region closed under feeding that holds f. (`Becoming.Flow.WithinFeeding.refl`, `Becoming.Flow.WithinFeeding.trans`, `Becoming.Flow.WithinFeeding.of_fedBy`, `Becoming.Flow.fedClosed_within`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. A formation beyond the closure that takes part at a step gives nothing at that step to a condition a member of the closure then requires. (`Becoming.Flow.beyond_gives_nothing`)
-   - *Master laws:* closure, reaching the grammar; central declaration `Becoming.Flow.beyond_gives_nothing`: master law.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.beyond_gives_nothing` as following from a master law.
 4. In Clearing the region along dependence (the clearer with the source that feeds its resource; the source and the dweller, which nothing feeds, each alone) is closed under feeding, holds its formation, and is exactly each formation's feeding closure. (`Becoming.Clearing.alongDependence`, `Becoming.Clearing.dependenceRegion`, `Becoming.Clearing.fedClosed`, `Becoming.Clearing.dependenceRegion_closed`, `Becoming.Clearing.dependenceRegion_self`, `Becoming.Clearing.dependenceRegion_iff`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 5. In Clearing the dweller lies beyond the clearer's closure; everything within that closure is supported at every step and the clearer is active at every step, while the dweller is unsupported from step 2 on. (`Becoming.Clearing.dweller_beyond`, `Becoming.Clearing.closure_supported`, `Becoming.Web.Supported`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar's vocabulary only.
 6. What is given to c across the step from s is carried to step t when the flow balances on c across each step from s before t and c stands at every step after s through t; where t is not after s nothing is asked. A following of what h gives is at most the amount given, does not rise, and stays at most what stands. (`Becoming.Flow.CarriedTo`, `Becoming.Flow.carriedTo_of_le`, `Becoming.Flow.FollowsGiven`, `Becoming.Flow.FollowsGiven.antitone`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. For s < t, some following of what h gives to c is still positive at t exactly where the amount given is positive and c stands at every step after s through t; with a positive amount given and balance across the stretch, that is exactly carrying. A step between at which c is depleted leaves no following standing. (`Becoming.Flow.can_stand_iff`, `Becoming.Flow.carriedTo_iff_stands`, `Becoming.Flow.depleted_keeps_nothing`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. With balance at c across each of the n steps from s, an amount given by a formation taking part at s that exceeds everything taken from c across the stretch is carried to s + n, however the taking falls. (`Becoming.Flow.carried_of_given_exceeds`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 9. The continuation of e's formation is fed across steps by e' when e''s formation takes part at its step, no later than e's, and gives to a condition e's formation requires at its step, carried from the one step to the other; same-step feeding is exactly feeding across steps at delay zero. (`Becoming.Flow.FedAcross`, `Becoming.Flow.fedBy_iff_fedAcross`, `Becoming.Flow.FedAcross.of_fedBy`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 10. The closure across steps is the least region holding f and closed under feeding across steps; it contains the feeding closure, and a formation beyond it that takes part at a step gives nothing there to a condition carried from that step to a later or equal one at which a member requires it. (`Becoming.Flow.FedFromAcross`, `Becoming.Flow.ClosedAcross`, `Becoming.Flow.WithinFeedingAcross`, `Becoming.Flow.WithinFeedingAcross.refl`, `Becoming.Flow.WithinFeedingAcross.trans`, `Becoming.Flow.WithinFeedingAcross.of_fedAcross`, `Becoming.Flow.closedAcross_within`, `Becoming.Flow.ClosedAcross.fedClosed`, `Becoming.Flow.WithinFeeding.across`, `Becoming.Flow.beyond_gives_nothing_across`)
-   - *Master laws:* closure and balance, reaching the grammar.
+    - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 11. Where nothing given stands after the step it is given across, the two closures agree. In Provision a parent gives a store one unit across step 0 and is not active after it, and its young, active and supported at step 2, draws on the store: the parent lies within the young's closure across steps and beyond its feeding closure, so the inclusion can be strict. (`Becoming.Flow.fedBy_of_fedAcross_unheld`, `Becoming.Flow.withinFeedingAcross_iff_of_unheld`, `Becoming.Provision.carried`, `Becoming.Provision.fed_across`, `Becoming.Provision.young_alone`, `Becoming.Provision.parent_beyond`, `Becoming.Provision.through_store`)
-   - *Master laws:* closure and balance, reaching the grammar.
+    - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

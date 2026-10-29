@@ -37,7 +37,7 @@ def render_lock():
 def input_snapshot():
     """Bind a render to the exact metadata/source inventory it began reading."""
     config = navigation.read(navigation.CONFIG)
-    paths = {navigation.CONFIG, navigation.HISTORY}
+    paths = {navigation.CONFIG, navigation.HISTORY, ROOT / registry.MASTER_LAWS, ROOT / registry.LAW_FAMILIES}  # both render on record pages
     if isinstance(config.get('readme_opening'), str):
         paths.add(ROOT / config['readme_opening'])
     if registry.standard_boundaries_path(config):

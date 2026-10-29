@@ -11,21 +11,21 @@
 ## Laws
 
 1. For any frame and any naming of blocks by finite words of moves, the frame of blocks has the same configurations and claims, a block going from s to t exactly where the course of its word does; a history of blocks goes from s to t exactly where the words written out do, through the same boundaries. (`Becoming.Frame.blocks`, `Becoming.Frame.blocks_trace_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. For any frame and any naming of blocks by finite words, every branching test of blocks is a finer branching test, each block read as the course of its word, holding at the same configurations, with no premise: the frame of blocks translates into the finer frame. (`Becoming.BranchingTest.finer`, `Becoming.Frame.holds_blocks`, `Becoming.Translates`, `Becoming.Frame.blocks_translates`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. For any two frames and any naming of blocks by finite words, configurations alike at the finer grain are alike in blocks, and configurations passing the same finer branching tests pass the same tests of blocks, with no premise. (`Becoming.Alike.blocks`, `Becoming.SameBranchingTests.blocks`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Where every finer move is named by a block of that move alone, configurations pass the same tests of blocks exactly where they pass the same finer tests, and two descriptions whose kernels are passing the same finer tests and passing the same block tests identify the same configurations. (`Becoming.Frame.blocks_sameBranchingTests_iff`, `Becoming.Frame.blocks_kernel_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. For any process whose moves each have listed outcomes, the endpoints of each finite course from each configuration are listed, with no choice. (`Becoming.outcomes_of_trace`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. Under excluded middle, where the tests of G translate into F and those of G' into F', the translations agree at s and s', and each move of G' has listed outcomes, every history of G from s is matched by a history of G' from s' by the same moves, ending where the translations agree again. (`Becoming.Translates.history_matches_of_em`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. Under excluded middle, for two frames, each reading blocks named alike in its own words of different moves and lengths, where the readings of every block test agree at s and s' and the second frame's moves have listed outcomes, every course of blocks written out from s is matched by the same blocks written out from s', ending where the readings agree again. (`Becoming.Frame.blocks_history_matches_of_em`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. For any joining read through retained references and any naming of blocks, a history of blocks extends the configuration it started from, by one fragment for each finer move written out, not for each block. (`Becoming.Joining.retained_blocks_extend`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

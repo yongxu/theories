@@ -11,15 +11,15 @@
 ## Laws
 
 1. A description reads the joint relation among descriptions where some configuration it so describes holds together parts it so describes; the parts lift from every configuration it describes where each pair read at that configuration's description is held together by the configuration with parts it describes alike. (`Becoming.jointImage`, `Becoming.LiftsFromEach`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A relation matches parts where, for any two configurations it relates, each pair of parts the first holds together is matched by a pair the second holds together, related part by part. The parts lift through a description exactly where having one description matches parts, and, where it identifies exactly the configurations some relation relates, exactly where that relation matches parts; no premise. (`Becoming.MatchesParts`, `Becoming.liftsFromEach_iff`, `Becoming.liftsFromEach_iff_of_kernel`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Through a description identifying exactly the jointly alike configurations the parts lift, with no premise; through one identifying exactly the configurations passing the same joint tests they lift where the pairs of parts each configuration holds together are compact for pairs of joint tests and every joint test holds wherever it cannot fail. (`Becoming.JointAlike`, `Becoming.IdentifiesJointAlike`, `Becoming.IdentifiesJointAlike.lifts`, `Becoming.SameJointTests`, `Becoming.JointFrame.JointCompact`, `Becoming.JointFrame.TestsStable`, `Becoming.liftsFromEach_of_sameJointTests`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Under the same two conditions, through a code reading the joint tests exactly and giving configurations passing the same joint tests one code, the parts lift from every configuration it describes, and configurations given one code match parts into configurations given one code. (`Becoming.liftsFromEach_of_exact`, `Becoming.matchesParts_of_exact`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Excluded middle makes every joint test stable; and that configurations passing the same joint tests match parts into such configurations, in every joint frame with one move and one claim whose pairs of parts are compact, holds exactly under excluded middle, every proposition decided. (`Becoming.JointFrame.TestsStable.of_em`, `Becoming.matchesParts_of_compact_iff_em`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

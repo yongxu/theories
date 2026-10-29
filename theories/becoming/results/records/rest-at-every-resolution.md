@@ -11,49 +11,47 @@
 ## Laws
 
 1. The spine counts amounts in natural numbers of one fixed unit, so dissipation loses at least a unit at every exchange, and the rest and openness laws rely on that quantum.
-   - *Master laws:* not measured: its declarations lie outside the core run.
 2. With the splitting of the unit counted as a formation that gives without taking, the spine's premises bring rest at every resolution with no premise added (rest-with-refinement-counted); the laws here are those without counting the refinement, kept as research notes.
-   - *Master laws:* not measured: its declarations lie outside the core run.
 3. Let the unit split into r t finer units across the step from t (with r constantly one it is Balances), and let R count the units of each step, the unit of step T being one. (`Becoming.Flow.BalancesAt`, `Becoming.Flow.Balances`, `Becoming.Flow.balancesAt_one`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* it defines the anchor `Becoming.Flow.Balances`; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. The loss law: where across each step from T on q times what remains together with k quanta is within q times what was there, the quanta counted since T number at most q times the quantity at T. (`Becoming.losses_invariant`, `Becoming.losses_bound`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. So, balanced at a refining resolution and dissipative, a family without repetition closed from T on loses at least 1/q of the unit of step T at no more steps than q times its stock, and losing so does not recur; with the unit fixed, taking from a closed family does not recur. (`Becoming.Flow.quantum_bound`, `Becoming.Flow.quantum_not_recurring`, `Becoming.Flow.taking_not_recurring`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. Loss in proportion: every closed family gets back at most q/(q+1) of what is taken from it; so it is where each formation gives back at most q/(q+1) of what it takes. (`Becoming.Flow.DissipativeBy`, `Becoming.Flow.DissipatesBy.of_each`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. With loss in proportion the amount law holds at every resolution: everything taken from a family without repetition closed from T on, each step's amount counted in the unit of step T, is at most q + 1 times its stock at T, and everything given back at most q times. (`Becoming.refinedSum`, `Becoming.refinedSum_invariant`, `Becoming.Flow.uptake_bound`, `Becoming.Flow.replenishment_bound`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. In a world with a census, embodied relata and every step from T on enclosed, everything taken from what stands is at most q + 1 times the total standing at T, and everything given to what stands at most q times. (`Becoming.World.taken_bound`, `Becoming.World.given_bound`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. The bound is the least: in Geometric one formation takes the whole of a closed pool at each step and gives back q/(q+1) of it, at a unit splitting into q + 1 at each step, and everything taken comes within 1/m of q + 1 times the pool for every m. (`Becoming.amount_sharp`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. Every count of a size follows from the amount law: where each step's count is within p times an amount, the count since T is within p times the amount's bound. (`Becoming.counts_of_amounts`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. The exchange law: the formations taking at least 1/p of the unit from a family closed from T on, counted formation by formation and step by step, number at most p(q+1) times its stock at T. (`Becoming.Flow.exchange_bound`, `Becoming.Flow.exchange_not_recurring`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. The growth law: in a world with a census, embodied relata and every step from T on enclosed, the relata gaining at least 1/p of the unit, counted relatum by relatum and step by step, number at most p q times the total standing at T, so such gains do not recur and nothing arises at that size at arbitrarily late steps. (`Becoming.World.growth_bound`, `Becoming.World.growth_not_recurring`, `Becoming.World.arising_not_recurring`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 13. The fall law: the relata falling by at least 1/p of the unit, counted relatum by relatum and step by step, number at most p(q+1) times the total standing at T, so nothing standing at least 1/p of the unit ceases at arbitrarily late steps: at every resolution neither arising nor ceasing at that size recurs. (`Becoming.World.fall_bound`, `Becoming.World.fall_not_recurring`, `Becoming.World.ceasing_not_recurring`, `Becoming.World.not_recurring_at_resolution`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 14. Reserve: where each active step beyond support lowers the reserve by at least 1/p of the unit, a formation unsupported from T on is active at most p times its reserve at T; the spine's reserve is the case of p one at a fixed unit, and the reading in a refining unit that asks only that the reserve fall is, with the unit fixed, the spine's reserve. (`Becoming.Web.CarriesAt`, `Becoming.Web.CarriesAt.lasts`, `Becoming.Web.Carries.carriesAt`, `Becoming.Web.CarriesIn`, `Becoming.Web.carriesIn_one`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 15. A least loss at each size: with the spine's dissipation, where each formation taking at least 1/p of the unit loses at least 1/m of it, such takings from a family closed from T on, counted formation by formation and step by step, number at most m times its stock at T; loss in proportion at each transfer gives such a least loss. (`Becoming.Flow.LosesAtSize`, `Becoming.Flow.exchange_bound_of_least_loss`, `Becoming.Flow.exchange_not_recurring_of_least_loss`, `Becoming.Flow.losesAtSize_of_each`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 16. Counting transfers needs only a least loss at each size; counting what relata gain, and bounding the amount exchanged, needs more. (`Becoming.growth_needs_proportion`, `Becoming.throughput_needs_proportion`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 17. Without any one of these premises change can continue without end; the witnesses are each balanced at a unit splitting without end and dissipative. Asymptote, losing all it takes and so dissipative in every proportion, is taken from without end exactly where the unit splits without end, and does not balance at the fixed unit. (`Becoming.rest_needs_quantum`, `Becoming.Asymptote.exchange_recurs_iff`, `Becoming.Asymptote.not_balanced`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 18. Circulation exchanges one whole unit of step 0 at every step, every step enclosed around what stands, losing one unit of the step after, and is dissipative in no proportion. (`Becoming.exchange_needs_quantum`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 19. Emission, with a census, embodied relata, every step enclosed and half of what is taken lost, has a new relatum arise at every step, standing at one unit of the step after, and does not balance at the fixed unit. (`Becoming.arising_needs_quantum`, `Becoming.Emission.not_balanced`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 20. Alternation, with a census, embodied relata and every step enclosed, has two sides hold and arise with one whole unit of step 0 in turn, is dissipative in no proportion, and does not balance at the fixed unit. (`Becoming.arising_needs_proportion`, `Becoming.Alternation.not_balanced`)
-   - *Master laws:* balance and finite runs, reaching the grammar.
+    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 21. In Dwindle, at a unit halving at each step, a formation never supported is active at every step, its reserve falling in the finer unit at each and tending to one unit of step 0, with no fall of the reserve by 1/p of the unit at each active step for any p. (`Becoming.reserve_needs_quantum`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 22. In Trickle, at a unit quartering at each step, a whole unit of step 0 passes between two sides in ever more, ever smaller transfers, each losing two units of the step after, so every size has a least loss and transfers of each fixed size stop, yet a whole unit arises at arbitrarily late steps, with no proportion lost. (`Becoming.growth_needs_proportion`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

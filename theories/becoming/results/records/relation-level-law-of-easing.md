@@ -11,15 +11,15 @@
 ## Laws
 
 1. The relation-level reading on courses: a claim is a formation's relation to a condition at a step, included when the formation is active, takes part in the condition and the relation does not undermine; it is the living of Web.relations. (`Becoming.Ranking.relational`, `Becoming.Ranking.relational_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. The relation-level law of easing: under easing a relation the reading includes in the first course stays included in the second exactly where the second still takes part and does not undermine there, so the second extends the first exactly when it takes part in and does not undermine every relation the first includes and includes one it withholds. (`Becoming.Ranking.relational_kept_iff`, `Becoming.Ranking.relational_extends_iff_of_eases`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Where no level falls in the easing course and it takes part wherever the other does, it extends the other under the relation-level reading exactly when it includes a relation the other withholds. (`Becoming.Ranking.relational_extends_iff_of_rising`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. In the two-part family the relation-level reading includes the focal formation's relation where the stepwise reading includes its event, so absence and occurrence are unranked, as under the stepwise reading. (`Becoming.Ranking.relational_unranked`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Restraint over any number of drawers under the relation-level reading: under the stepwise restraint theorem's premises, where the restrained course also takes part in every condition wherever the other does, it extends the other exactly when it includes a relation the other withholds. (`Becoming.Ranking.restraint_extends_iff_relational`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

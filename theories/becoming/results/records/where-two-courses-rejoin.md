@@ -11,19 +11,19 @@
 ## Laws
 
 1. Across a step at which two flows balanced at a condition take the same total from it and give it the same total, its levels are alike after the step exactly when they were alike before; over steps at which they exchange alike with it, the difference at the condition stays as it was. (`Becoming.Flow.ExchangeAlikeWith`, `Becoming.Flow.level_alike_succ_iff`, `Becoming.Flow.level_alike_iff_of_alike`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. So a difference at a condition that opens or closes over some steps does so across a step at which the two flows exchange with it differently, found by deciding at each step whether the totals agree. (`Becoming.Flow.exchange_apart_of_change`, `Becoming.Flow.exchange_apart_of_closes`, `Becoming.Flow.exchange_apart_of_opens`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Two totals over one list that differ differ at some member; so with the same formations present, where the two flows exchange with a condition differently across a step, some formation present takes from it or gives to it differently. (`Becoming.exists_apart_of_total_ne`, `Becoming.Flow.formation_apart_of_exchange_apart`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Over the steps from s, a balanced flow's level of a condition at the end, with what it took from it, is its level at the start, with what it gave. So where the difference closes, the levels at s and what the two flows exchanged with the condition over those steps make up the gap exactly. (`Becoming.Flow.level_steps`, `Becoming.Flow.gap_made_up`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Where both flows follow a law reading through the coupling of each formation outside a part, a formation outside the part exchanging differently with a condition couples the two courses apart. With the part acting alike after the act, a difference that changes, closing or opening, changes through such a formation, present and outside the part. (`Becoming.Flow.closer_couples_apart`, `Becoming.Flow.changes_through_coupling_apart`, `Becoming.Flow.closes_through_coupling_apart`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Under the hypotheses of Flow.alike_beyond_response, with both flows balanced at a condition and nothing within the part's responsive reach taking from or giving to it from a step on, the difference at the condition at every later step is what it was at that step. (`Becoming.Flow.stays_beyond_response`)
-   - *Master laws:* closure and balance, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 7. In Replenishing an actor takes one unit from a condition at step 0, and a responder coupling into it follows a law, reading through its coupling, that gives one unit where the level stands below its start. The difference opens at step 1 and the courses rejoin from step 2 on, through the responder, which gives back the unit taken and couples the two courses apart. (`Becoming.Replenishing.Member`, `Becoming.Replenishing.Cond`, `Becoming.Replenishing.lowered`, `Becoming.Replenishing.took`, `Becoming.Replenishing.gave`, `Becoming.Replenishing.level`, `Becoming.Replenishing.web`, `Becoming.Replenishing.flow`, `Becoming.Replenishing.part`, `Becoming.Replenishing.obs`, `Becoming.Replenishing.law`, `Becoming.Replenishing.balances`, `Becoming.Replenishing.through`, `Becoming.Replenishing.follows`, `Becoming.Replenishing.closes`, `Becoming.Replenishing.made_up`, `Becoming.Replenishing.rejoined`, `Becoming.Replenishing.closes_through`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

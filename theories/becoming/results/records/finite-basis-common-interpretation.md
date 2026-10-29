@@ -11,15 +11,15 @@
 ## Laws
 
 1. The conjunction of a list of basis claims derives with no premise and holds at a configuration exactly where each listed claim does; with a list covering the basis, exactly where the whole basis does. (`Becoming.Derivation.conjunction`, `Becoming.Derivation.conjunction_derives`, `Becoming.Derivation.conjunction_iff`, `Becoming.Derivation.conjunction_iff_basis`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A configuration meets every claim derived under premises, where those premises hold, exactly when it meets every basis claim; for any admissibility, some admissible configuration meets every claim derived with no premise exactly when some admissible configuration meets every basis claim. (`Becoming.Derivation.basis_iff_relative`, `Becoming.Derivation.common_basis_iff_common_closure`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. With a list covering the basis and any admissibility, every claim derived with no premise being met at some admissible configuration is equivalent to one admissible configuration meeting them all, and that configuration also meets every claim derived under premises where those premises hold. (`Becoming.Derivation.pointwise_iff_common`, `Becoming.Derivation.pointwise_common_relative`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. In the witness, the two rows w = false and w = true on the Booleans are each met and never met together, so, with every Boolean admissible, their closure is not met claim by claim. (`Becoming.Derivation.rows`, `Becoming.Derivation.rows_each_met`, `Becoming.Derivation.rows_not_together`, `Becoming.Derivation.rows_not_pointwise`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. On the scope of a policy from a belief, with a list covering the basis, every derived claim being met at some configuration of the scope is equivalent to one configuration of the scope meeting them all, which also meets every claim derived under premises where they hold. (`Becoming.Derivation.Scope.common_iff`, `Becoming.Derivation.Scope.common_relative`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

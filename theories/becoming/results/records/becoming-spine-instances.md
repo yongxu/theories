@@ -11,49 +11,49 @@
 ## Laws
 
 1. Edges give a one-label process whose steps are the edges, and the seed–edge closure is what that process reaches from a seed: it holds the seeds, is closed under the edges and lies within every property holding at the seeds and carried along the edges. The core's closure under a relation from one formation is exactly the seed–edge closure from it. (`Becoming.edgeProcess`, `Becoming.Closure`, `Becoming.Closure.base`, `Becoming.Closure.step`, `Becoming.Closure.induction`, `Becoming.withinClosure_iff_closure`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. In the retired bridge, the periphery's finite chains of steps are exactly reachability on the edge process, and its two closures of seeds under edges, of whole-ground coverage and of the cut audit, are exactly the seed–edge closure. (`Becoming.chain_iff_reach`, `Becoming.reached_iff_closure`, `Becoming.cutReach_iff_closure`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. On a frame, a bundle of claims is jointly realizable in a region where one configuration of the region realizes all of it, and one region preserves another's bundles where every bundle jointly realizable in the first is in the second. Among configurations reachable from a root, a map preserving steps and claims preserves bundles, and a map whose steps lift and whose claims reflect loses none. (`Becoming.Jointly`, `Becoming.PreservesBundles`, `Becoming.Frame.map_preserves`, `Becoming.Frame.lift_reflects`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. One region of a frame carries another's profiles where each configuration of the first has one in the second realizing all it realizes; a transport sending each configuration of a region into another region and keeping every realization preserves bundles. (`Becoming.CarriesProfiles`, `Becoming.preserves_of_transport`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. In the retired bridge, a frame's configurations reachable from a root, with their realized claims, form the periphery's joint-continuation space, and maps preserving steps and claims, or whose steps lift and whose claims reflect, preserve its joint bundles as the periphery defines them. (`Becoming.Frame.continuations`, `Becoming.Frame.map_preserves_bundles`, `Becoming.Frame.lift_reflects_bundles`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. Judging is a one-step process: at a configuration under judgment, an admissible response closes the judgment. A response is a common response of that process (one move, every step safe, every configuration a goal), over the belief that sees a set of configurations, exactly where it is admissible at every configuration of the set; a common response stays one as belief narrows. (`Becoming.judgeProcess`, `Becoming.sees`, `Becoming.commonResponse_judge_iff`, `Becoming.commonResponse_antitone`, `Generative.InquirySufficiency.CommonResponse`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. In the retired bridge, a common response is exactly a robust response whose admissibility is completion, and a robust response is exactly a common response of the judgment process; a guarantee is completion in one step, and a live step is an enabled move. (`Becoming.commonResponse_is_robust`, `Becoming.robust_iff_commonResponse`, `Becoming.guarantees_iff_completes`, `Becoming.liveStep_iff_enabled`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. The pure observation keeps the configuration as it is; a configuration is in the belief after it, at a question and an outcome, exactly where it was believed and gives that outcome there. A candidate rule is kept by revising a list of rules by one observation exactly where it is in the belief after the pure observation of the observed value. (`Becoming.Narrowing.observe`, `Becoming.Narrowing.after_observe_iff`, `Becoming.Narrowing.revise`, `Becoming.Narrowing.revise_is_after`, `Generative.InquirySufficiency.After`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. In the retired bridge, a rule is kept by the periphery's revision of a list of rules by one observation exactly where it is in the belief after the pure observation of the observed value. (`Becoming.revise_is_after`, `Becoming.after_observe_iff`, `Generative.StandardsBridge.revise`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 10. What a belief narrowed by a list of observations settles is what the learned list's answer asserts; that answer is safe for the belief and, where the belief holds some rule, the greatest safe answer. Along every run of the pure observation of a rule in the candidate list, the rule stays in the belief narrowed by the run's record, and the answer from the record asserts only that rule's values. (`Becoming.NarrowingRuns.SafeFor`, `Becoming.NarrowingRuns.GreatestFor`, `Becoming.NarrowingRuns.settles_iff_answer`, `Becoming.NarrowingRuns.narrowed_answer_greatest`, `Becoming.NarrowingRuns.run_kept`, `Becoming.NarrowingRuns.run_answer_greatest`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. Alternatives of one history at a configuration are one step of a process taking each feasible alternative to its configuration, enabled exactly where feasible. For two feasible alternatives, the lifted comparison is the comparison of their configurations, and a reason from every strict comparison of feasible alternatives is exactly a reason from every lifted comparison of live ones on that step. (`Becoming.Alternatives`, `Becoming.Alternatives.process`, `Becoming.Alternatives.enabled_iff`, `Becoming.Alternatives.lift_iff`, `Becoming.Alternatives.Articulation`, `Becoming.Alternatives.articulation_iff_lifted`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. The conservative lifting rule L calls one response better than another at a configuration where every outcome of the first is better than every outcome of the second. A response liftedly extends another where every outcome of it generatively extends every outcome of the other: keeps every claim that outcome realizes and realizes a living claim it does not. (`Becoming.LiftBetter`, `Becoming.LiftExtension`, `Becoming.Extension`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 13. Under C on a frame (every generative extension is better), where one response liftedly extends another, it is better under L; with the lifted articulation as well (a lifted comparison between live responses gives a reason to move), such an extension between live responses gives a reason to move to the extending one. (`Becoming.Comparison`, `Becoming.comparison_lifts`, `Becoming.LiftedArticulation`, `Becoming.lifted_comparison_supplies_reason`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 14. Under C on a frame, with lifted coherence (each selected response is live and no live response is better than it under L), every selected response survives: it is live and no live response liftedly extends it. (`Becoming.LiftCoherence`, `Becoming.LiftSurvives`, `Becoming.lift_coherent_selection_survives`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 15. Where every live response at a configuration of a frame is liftedly extended by a live one, no response survives; no comparison premise is used. (`Becoming.lift_continual_improvement_has_no_survivor`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 16. On a frame, living significance says that living content realized at a configuration falls under a given relevance there. A response secures new content where every admitted outcome holds relevant content absent before it, and the positioned articulation D says that a position with access to a response securing new content has a reason for it. (`Becoming.LivingSignificance`, `Becoming.SecuresNewContent`, `Becoming.PositionedArticulation`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 17. In the retired bridge, by definition, the core's living significance, generative extension and C on a frame are the periphery's on the frame's inventory, and the core's securing of new content and D are the periphery's secured positive ground and positioned articulation. (`Becoming.Frame.inventory`, `Becoming.g0_iff`, `Becoming.extension_iff`, `Becoming.comparison_iff`, `Becoming.securesPositiveGround_iff`, `Becoming.positionedArticulation_iff`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 18. Two tiers compared lexically: one alternative is above another where it strictly includes the other's basic claims, or holds exactly them and strictly includes its gains; on a frame, configurations are compared so by the basic, then the living claims they realize. Basic priority is the condition that a comparison is exactly that order. (`Becoming.Lexical.Above`, `Becoming.Lexical.Frame.Above`, `Becoming.Lexical.BasicPriority`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 19. In the retired bridge, the comparison of configurations by basic conditions first, then living gains, is defined as the periphery's practical comparison of the basic and the living claims each configuration realizes. (`Becoming.BetterAt`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 20. In the periphery, with Mathlib: a policy on observations implements correction over admitted histories exactly where its action on each observation value is a common response of the judgment (one move, every step safe, every configuration a goal) on that value's cell, the admitted histories showing it; a common action exists exactly where every cell has a common response. (`Becoming.cell`, `Becoming.implements_iff_commonResponse`, `Becoming.commonAction_iff_commonResponse`, `CorrectionBoundary.Implements`, `CorrectionBoundary.CommonAction`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 21. In the periphery, with Mathlib: a choice is safe at an observation value exactly where it is a common response of the judgment (one move, every step safe, every configuration a goal) on the worlds showing that value; where a finer observation determines a coarser one, implementing correction and a safe choice carry from the coarser to the finer, by the narrowing of common responses. (`Becoming.safeOn_iff_commonResponse`, `ObservationChange.SafeOn`, `Becoming.implements_refine`, `Becoming.safeOn_refine`, `Becoming.commonResponse_antitone`)
-   - *Master laws:* none among its reasons; 4 of its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; 4 of its declarations are not in the spine run and not measured, so this holds of the others only.
 22. Reachability carries along a map preserving steps: what is reachable from a configuration maps to what is reachable from its image. Where every step from the image of a configuration lifts to a step from it, whatever is reachable from an image is the image of something reachable from the configuration. (`Becoming.Reach.map`, `Becoming.Reach.lift`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

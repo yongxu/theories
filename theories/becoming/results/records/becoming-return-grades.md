@@ -11,23 +11,23 @@
 ## Laws
 
 1. On a web of dependence, a dependence holding at a step returns within p steps when the condition meets it at one of the next p steps; a condition is renewed within p when every dependence on it does so, and it returns when every dependence on it is met at some later step. (`Becoming.Web.RestoredWithin`, `Becoming.Web.RenewedWithin`, `Becoming.Web.Restored`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. The grades are ordered: renewal implies renewal within one step; renewal within p implies renewal within any longer cycle and implies return; a condition that returns is not consumed; and consumption is exactly a dependence that never returns. (`Becoming.Web.renewed_within_one`, `Becoming.Web.RenewedWithin.mono`, `Becoming.Web.RenewedWithin.restored`, `Becoming.Web.Restored.not_consumed`, `Becoming.Web.consumed_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. The seasonal condition of RelationalRenewal, neither renewed nor consumed, is renewed within two steps and not within one. (`RelationalRenewal.fluctuating`, `RelationalRenewal.fluctuating_neither`, `Becoming.alternating_turns`, `Becoming.seasonal_renewed_within_two`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Recovery can slow without bound: a condition met again after ever longer gaps always returns and is never consumed, yet no cycle length bounds its return. (`Becoming.Slowing.web`, `Becoming.Slowing.restored`, `Becoming.Slowing.unbounded`, `Becoming.Slowing.slowing_recovery`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Readings over cycles extend the stepwise readings: a formation renews over cycles of p when every condition it participates in is renewed within p, and its event undermines for p steps when it draws on a condition at a step after which, at each of the next p steps, the condition is below both the present need of a dependence on it and a need that dependence met while it held. (`Becoming.Web.RenewingInWithin`, `Becoming.Web.UnderminingFor`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. Undermining for one step is exactly undermining at the step; a longer cycle includes more; a formation renewing over some cycle is not consuming, and none of its events undermines for that cycle. (`Becoming.Web.undermining_for_one`, `Becoming.Web.RenewingInWithin.mono`, `Becoming.Web.UnderminingFor.anti`, `Becoming.Web.RenewingInWithin.not_undermining_for`, `Becoming.Web.RenewingInWithin.not_consuming`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. Renewal implies renewal within one step, not conversely: when a dependence is unmet at its step 0 and met at every later step, the formation renews over cycles of one without renewing in the run. (`Becoming.Web.RenewingIn.within_one`, `Becoming.LateMet.web`, `Becoming.LateMet.within_one_not_renewing`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. Cycle length 0 is degenerate: renewal within zero steps holds exactly when nothing depends on the condition, and any draw on a condition something depends on undermines for zero steps. (`Becoming.Web.renewedWithin_zero`, `Becoming.Web.undermining_for_zero`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. Over cycles of two, a dip and a dependent broken while inactive are included; after an escalation the condition never returns, and the escalating event undermines for every cycle. (`Becoming.Renewable.dip_within_two`, `Becoming.Dip.renewing_within_two`, `Becoming.Renewable.escalation_undermines_for_every_cycle`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

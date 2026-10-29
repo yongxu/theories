@@ -11,17 +11,17 @@
 ## Laws
 
 1. For any law of change giving the next configuration for each configuration and move, and any reduction, some determined law on the reduced values carries every step exactly when configurations the reduction merges are taken by each move to configurations it merges; a reduced law commuting with every move commutes with every finite course of moves. (`Becoming.Readout.law_through_iff`, `Becoming.Readout.foldl_semiconj`)
-   - *Master laws:* lumping, reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 2. On a control and a register with integer real amplitudes, the phase step keeps both local densities and the basis masses of the joined configuration and turns the retained cross contribution from 1 to −1; the same later controlled X gives the control the response (4, 0, 4) from the joined configuration and (0, 4, 4) from the changed one. (`Becoming.JointPhase.actual_phase_preserves_both_local_states`, `Becoming.JointPhase.actual_phase_preserves_basis_masses`, `Becoming.JointPhase.retained_cross_distinguishes_change`, `Becoming.JointPhase.same_interaction_distinguishes_relation`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. So no update of the local pair gives the control after the interaction from both configurations, and no determined law on the local pair carries the configuration's law, an instance of the general law above. (`Becoming.JointPhase.no_local_pair_update`, `Becoming.JointPhase.local_pair_carries_no_law`)
-   - *Master laws:* lumping, reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 4. The summary of two branch weights and two cross contributions recovers the control density of every configuration and commutes with both moves; so along every finite word it follows the reduced law, again an instance of the general law, and the control's response after every word, and at the end of every trace, is read from it. (`Becoming.JointPhase.summarize`, `Becoming.JointPhase.summary_recovers_control`, `Becoming.JointPhase.summary_update_exact`, `Becoming.JointPhase.every_finite_word_exact`, `Becoming.JointPhase.every_finite_control_response_exact`, `Becoming.JointPhase.summary_response`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. The summary still merges two configurations whose register densities differ. (`Becoming.JointPhase.summary_omits_other_relations`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. In the periphery's earlier statement of the same fragment, the summary carries a determined law of the fragment and, after every course of moves, is the reduced law's course. (`Becoming.MachineInstances.summary_carries_law`, `Becoming.MachineInstances.summary_every_word`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,13 +11,13 @@
 ## Laws
 
 1. Where a relation is an equivalence, some process going alike under it admits a run's steps before a step exactly where any two of them from related configurations, by the same move, reach related configurations. The witness is the record read under the relation; the forward direction needs no equivalence. (`Becoming.Run.ConsistentUnder`, `Becoming.Run.recordUnder`, `Becoming.Run.recordUnder_steps`, `Becoming.Run.recordUnder_goAlike`, `Becoming.Run.law_under_iff`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 2. Consistency up to a step holds at every earlier step, so once no such process admits the steps it admits none later; a process going alike under the relation makes every run consistent; through equal projections the criterion is the one along one run through a projection. (`Becoming.Run.ConsistentUnder.earlier`, `Becoming.Run.no_law_under_later`, `Becoming.Run.consistentUnder_of_goAlikeUnder`, `Becoming.Run.consistentUnder_eq_iff`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 3. With fixed conditions, two configurations are alike in what a formation couples into when their levels admit it alike and the conditions it observes stand alike; this is an equivalence, exactly Web.AlikeThrough on the runs read through the conditions, between two runs at a step and between two steps of one run. So some process going alike in what the formation couples into admits a run's steps exactly where the occasions it couples alike, by the same move, lead to occasions it couples alike. (`Becoming.Conditions.AdmitsAt`, `Becoming.Conditions.AlikeAt`, `Becoming.Conditions.alikeAt_equivalence`, `Becoming.Conditions.alikeThrough_iff`, `Becoming.Conditions.alikeAt_iff_alikeThrough`, `Becoming.Run.law_through_coupling_iff`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 4. In Unseen the process is determined, and a formation depending on one level and observing nothing couples the run's first two steps alike while by the same move they lead to configurations it couples apart: the level it does not couple into decides, and no law holds at its coupling along the run. Observing that level, the run is consistent at every step. (`Becoming.Unseen.process`, `Becoming.Unseen.level`, `Becoming.Unseen.conditions`, `Becoming.Unseen.state`, `Becoming.Unseen.run`, `Becoming.Unseen.determined`, `Becoming.Unseen.admits`, `Becoming.Unseen.not_admits_zero`, `Becoming.Unseen.inconsistent`, `Becoming.Unseen.no_law`, `Becoming.Unseen.observing`, `Becoming.Unseen.first_apart`, `Becoming.Unseen.consistent_observing`)
-   - *Master laws:* lumping, not reaching the grammar.
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

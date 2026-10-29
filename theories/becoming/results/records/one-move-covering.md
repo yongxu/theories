@@ -11,17 +11,17 @@
 ## Laws
 
 1. One move completes a goal from a configuration exactly where it is enabled there and every outcome meets the goal; a goal is ensured where some move does so. The moves of Q at t cover those of P at s where each enabled move of P is matched by an enabled move of Q whose outcomes are among its own, and they cover exactly where every goal P ensures from s, Q ensures from t. (`Becoming.MoveOutcomeProcesses.Ensures`, `Becoming.MoveOutcomeProcesses.Covers`, `Becoming.MoveOutcomeProcesses.completes_one_iff`, `Becoming.MoveOutcomeProcesses.ensures_iff`, `Becoming.MoveOutcomeProcesses.covers_iff_moves`, `Becoming.MoveOutcomeProcesses.Covers.ensures`, `Becoming.MoveOutcomeProcesses.covers_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Covering is reflexive and transitive; revisions of a process, each covering the last, cover the first at every stage, the types of moves free to change at each revision. (`Becoming.MoveOutcomeProcesses.covers_refl`, `Becoming.MoveOutcomeProcesses.covers_trans`, `Becoming.MoveOutcomeProcesses.covers_along`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. A cover fails exactly where not every goal is carried; under double-negation elimination, taken as a hypothesis, a failed cover names a goal the covered process ensures and the other does not. (`Becoming.MoveOutcomeProcesses.not_covers_iff`, `Becoming.MoveOutcomeProcesses.lost_goal_of_not_covers_of_dne`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Laws of every process: a move completing a goal completes every weaker one; the goal nothing meets is never ensured; the goal everything meets is ensured exactly where some move is enabled; where P has an enabled move at s and Q at t covers it, some goal is ensured by both; and it is never so that every goal is ensured by Q and not by P. (`Becoming.MoveOutcomeProcesses.completes_mono`, `Becoming.MoveOutcomeProcesses.not_ensures_false`, `Becoming.MoveOutcomeProcesses.ensures_true_iff`, `Becoming.MoveOutcomeProcesses.common_goal`, `Becoming.MoveOutcomeProcesses.no_strict_gain_everywhere`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. A goal read through a summary of the outcomes is ensured exactly where its pullback to the configurations is; a common response for a belief completes from every configuration where the belief holds. (`Becoming.MoveOutcomeProcesses.summary_ensures_iff`, `Becoming.MoveOutcomeProcesses.common_completes`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. Witnesses on two configurations: the free process can reach more outcomes than the constant law and does not cover it; the law covers the free process and loses a possibility; the setting process covers the law, ensures a new goal and opens what was closed; goals it ensures separately are not ensured jointly; the halted process does not ensure false, which every outcome of its move meets; a summary can hide a loss. (`Becoming.MoveOutcomeProcesses.toFalse`, `Becoming.MoveOutcomeProcesses.free`, `Becoming.MoveOutcomeProcesses.setting`, `Becoming.MoveOutcomeProcesses.halted`, `Becoming.MoveOutcomeProcesses.free_wider_not_covering`, `Becoming.MoveOutcomeProcesses.law_covers_free_and_loses`, `Becoming.MoveOutcomeProcesses.setting_covers_and_gains`, `Becoming.MoveOutcomeProcesses.setting_covers_and_opens`, `Becoming.MoveOutcomeProcesses.setting_separate_not_joint`, `Becoming.MoveOutcomeProcesses.halted_ensures_nothing`, `Becoming.MoveOutcomeProcesses.summary_hides_loss`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

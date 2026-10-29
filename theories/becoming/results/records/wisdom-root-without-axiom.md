@@ -16,27 +16,27 @@ Each law below is stated for every formation, extrapolation, lumping, selection 
 ## Laws
 
 1. Coupling: a claim is excluded only through a difference in what couples in, and no prefix fixes the next value. (`Becoming.Web.Excludes.not_of_alike`, `Becoming.Web.tail_unexcluded`, `Becoming.Learning.no_prefix_fixes_next`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. 理 (a reading: the modeling of the laws of structure and change): data alone fix no untried value; generalization reaches exactly what a lumping lumps and is right exactly where the world goes alike across it; structure and change are one lumping; a projection carries a law exactly where configurations alike go alike. (`Becoming.Learning.every_determines_nothing`, `Becoming.Learning.determines_lumped_iff`, `Becoming.Learning.lumped_right_iff`, `Becoming.Learning.goAlike_iff_lumped`, `Becoming.carries_law_iff`)
-   - *Master laws:* lumping, reaching the grammar; central declaration `Becoming.Learning.goAlike_iff_lumped`: master law.
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar; the measure counts central declaration `Becoming.Learning.goAlike_iff_lumped` as following from a master law.
 3. Testing: exclusion relative to a model excludes the model and the claim together; the record fixes an act's outcome only where taken; replication is return; one occasion stands for its class under the model. (`Becoming.Web.excludesWithin_iff_conjunction`, `Becoming.Run.not_fixes_of_untaken`, `Becoming.Run.fixes_on_return`, `Becoming.Run.generalizes`)
-   - *Master laws:* none among its reasons; central declaration `Becoming.Run.not_fixes_of_untaken`: law of its model (an untaken move retargeted).
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Run.not_fixes_of_untaken` as following from a law of its model (an untaken move retargeted).
 4. Learning: in a world held by a list, extrapolation by elimination misses a bounded number of times, its coming to rest is unrefuted and its prefix never shows that it has come to rest; every extrapolation has an open course on which each value it proposes misses. (`Becoming.Learning.held_byElimination_bounded`, `Becoming.Learning.held_rest_unrefuted`, `Becoming.Learning.no_prefix_fixes_next_finite`, `Becoming.Learning.diagonal_misses`, `Becoming.Learning.diagonal_open`)
-   - *Master laws:* finite runs, reaching the grammar.
+   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 5. 明 (others' couplings): what the clearer cannot test the dweller can, and together they test what neither can alone; selection through the couplings is blind beyond the coupling closure, and pooled couplings select what it misses. (`Becoming.Clearing.tested_by_dweller`, `Becoming.Clearing.pooled`, `Becoming.Flow.unselected_beyond_coupling`, `Becoming.Clearing.selected_pooled`)
-   - *Master laws:* closure and balance, reaching the grammar; central declaration `Becoming.Flow.unselected_beyond_coupling`: master law.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.unselected_beyond_coupling` as following from a master law.
 6. Enough: seeking rests exactly at a state the law leaves unchanged that meets its target; “more than now” needs an open world; two seekers of “above all others” never rest together. (`Becoming.Law.rests_iff`, `Becoming.more_needs_open`, `Becoming.Law.aboveAll_never_rests`)
-   - *Master laws:* finite runs, not reaching the grammar.
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 7. Runaway: before the break, how far it is does not couple in, while coupling the stock in by level passes it. (`Becoming.Web.break_not_bounded`, `Becoming.Web.observed_raise_couples`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. Proxies: selection and training go only through the selector's couplings or the data; values beyond the data stay as free as the class leaves them; reaching beyond the coupling closure to raise what couples in is selected. (`Becoming.Web.selects_alike_iff`, `Becoming.Learning.Training.loss_through`, `Becoming.Learning.Training.unselected_beyond_data`, `Becoming.Diversion.favours`)
-   - *Master laws:* closure and balance, reaching the grammar; central declaration `Becoming.Learning.Training.unselected_beyond_data`: single application (a selection through the data, used once).
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Learning.Training.unselected_beyond_data` (on no master law's anchor alone) as following from a single application (a selection through the data, used once).
 9. Judgment: a judgment made through the couplings is exactly a common response of the judging process over the class alike through them. (`Becoming.commonResponse_judge_iff`, `Becoming.Web.class_judge_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. The meta level: learning over classes is the same learning over a merged enumeration; every merging has its diagonal course; a system changing its own rule has its law on the joint configuration. (`Becoming.Learning.merged_bound`, `Becoming.Learning.merged_unrested`, `Becoming.adaptive_state_law_iff`)
-   - *Master laws:* lumping, not reaching the grammar.
+    - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 11. The formal routes of formation: extrapolation by elimination forms a model from the prefix; the acquisition chain forms an interpretation of every expression from three encounters; Hebbian development and the route of updating are laws on the joint configuration; the responsive route learns where the task fails. (`Becoming.LearningCorrespondence.uniform_determines`, `Becoming.LearningCorrespondence.hebbian_activity_law_iff`, `Becoming.LearningCorrespondence.updating_network_law_iff`, `Becoming.LearningCorrespondence.responsive_learns`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

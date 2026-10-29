@@ -11,11 +11,11 @@
 ## Laws
 
 1. A history is a protection status and a count of secondary realizations. Lexical priority, reflexive and transitive, ranks a history without protection below one with it and, at equal status, by count; a weight w scores w for protection plus the count. Where both counts are at most a bound, lexical priority agrees with the score of weight one above the bound. (`PracticalPriorityIdentification.History`, `PracticalPriorityIdentification.LexLe`, `PracticalPriorityIdentification.score`, `PracticalPriorityIdentification.FiniteLe`, `PracticalPriorityIdentification.lex_refl`, `PracticalPriorityIdentification.lex_trans`, `PracticalPriorityIdentification.bounded_comparison_agreement`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. For every finite sample, the weight one above the sample's largest count is positive and agrees with lexical priority on every pair of the sample; yet no fixed weight w agrees on every pair of histories: it scores the protected history with no secondary realization at most the unprotected one with count w + 1, which lexical priority ranks below it. (`PracticalPriorityIdentification.secondaryBound`, `PracticalPriorityIdentification.member_bounded`, `PracticalPriorityIdentification.every_finite_sample_agrees`, `PracticalPriorityIdentification.no_fixed_finite_weight_is_lexical`, `PracticalPriorityIdentification.finite_agreement_without_global_identification`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. The pair that reverses lies outside the sample: the unprotected history with two more than the sample's largest count is lexically below the protected one with none, and not above it, yet the sample's weight scores it higher, and it is not in the sample. (`PracticalPriorityIdentification.outside_sample_reversal`, `PracticalPriorityIdentification.reversing_history_unobserved`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

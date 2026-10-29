@@ -11,15 +11,15 @@
 ## Laws
 
 1. A schedule keeps a condition within the margin m, against every balanced flow's draws on it of at most d a step withdrawn l steps after a reading, exactly where it reads the condition within every a steps, for (a + l) d <= m < (a + 1 + l) d: sufficiency is the margin law, necessity a witness drawer. (`Becoming.ReadingSchedule.Keeps`, `Becoming.ReadingSchedule.keeps_iff_within`, `Becoming.ReadingSchedule.keeps_of_within`, `Becoming.ReadingSchedule.within_of_keeps`, `Becoming.Flow.taken_of_read`, `Becoming.Flow.Balances.retains_of_read`, `Becoming.ReadingSchedule.within_iff`, `Becoming.ReadingSchedule.read_or_unread`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. In a given balanced flow, a stretch of k steps left unread lets a drawer giving nothing take (k + 1 + l) d, and a formation needing more than the level without it then holds is lost. (`Becoming.Flow.Balances.loses_of_unread`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Counting: a schedule reading conditions distinct by name within windows a c gives counts q c with q c a c <= P totalling at most P; readers naming k a step carry P k. In rates, the windows' reciprocals sum to at most one (k for a pool). (`Becoming.ReadingSchedule.PoolWithin`, `Becoming.ReadingSchedule.pool_density`, `Becoming.ReadingSchedule.density`, `Becoming.ReadingSchedule.Within.pool`, `Becoming.ReadingSchedule.keeps_density`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Spare capacity is not enough: no schedule reads three conditions within every 2, 3 and M steps, for any M, though for M >= 7 the counts over 6 M steps total 5 M + 6, the reader idle a share 1/6 - 1/M. (`Becoming.ReadingSchedule.no_two_three`, `Becoming.ReadingSchedule.two_three_room`, `Becoming.ReadingSchedule.spare_not_enough`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Half a reader suffices: two schedules interleaved read within twice their windows; a binary code reads a condition at depth k within 2^k; under Kraft's inequality one code reads every item; so positive windows with whole weights q, 2^(D+1) <= q a each and totalling at most 2^D (reciprocals at most one half), fitting their margins, are read by one schedule and kept. (`Becoming.ReadingSchedule.weave`, `Becoming.ReadingSchedule.weave_left`, `Becoming.ReadingSchedule.weave_right`, `Becoming.ReadingSchedule.Code.At.reads`, `Becoming.ReadingSchedule.build_length`, `Becoming.ReadingSchedule.build_holds`, `Becoming.ReadingSchedule.kraft_reads`, `Becoming.ReadingSchedule.lg_spec`, `Becoming.ReadingSchedule.half_suffices`, `Becoming.ReadingSchedule.keeps_of_half`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

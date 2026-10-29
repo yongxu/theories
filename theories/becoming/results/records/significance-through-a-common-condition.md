@@ -11,11 +11,11 @@
 ## Laws
 
 1. Read an event (a formation at a step) of a run through its conditions as living where the formation is active then and does not consume in the run, and relate events whose formations take part in a common condition. A condition every living event's formation takes part in connects the whole; there, given a standpoint and a living event, living significance is exactly a seed with both neutralities. (`Becoming.Conditions.valuation`, `Becoming.Conditions.connected_of_common`, `Becoming.Conditions.significant_iff_of_common`, `Becoming.Valuation.Connected`, `Becoming.Valuation.Grounds`, `Becoming.Valuation.Significant`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. Two formations active at every step, each depending only on its own condition and nothing drawn, are both living and leave the whole unconnected: the reading alone gives no connection. (`Becoming.Separate.conditions`, `Becoming.Separate.not_connected`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. Where a formation consumes, some formation depending on the drawn condition loses its support from some step on, and the two take part in that condition, so their events are related at every pair of steps; under relational neutrality a standpoint holding an event of the consumer significant holds significant every living event of that formation. The transmission runs along co-participation, not through consumption. (`Becoming.Conditions.consumption_relates`, `Becoming.Conditions.valuing_consumption_reaches`, `Becoming.Valuation.transmits`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

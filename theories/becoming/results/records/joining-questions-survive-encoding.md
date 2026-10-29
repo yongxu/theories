@@ -11,13 +11,13 @@
 ## Laws
 
 1. A joining relates two fragments to what they join into, in several ways, in one or in none. Read through a description, codes a and b join into c where fragments with those codes join into one with code c; the description lifts the joining where every joining of the codes of two fragments comes from a joining of the two fragments themselves into a fragment with that code. (`Becoming.Joining`, `Becoming.Joining.image`, `Becoming.Joining.Lifts`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. With no premise, a description lifts a joining exactly where having one code is a bisimulation of the joining's frame, the frame in which a fragment moves, with a partner joined on its left or on its right, to what the two join into. (`Becoming.Joining.frame`, `Becoming.Joining.lifts_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Where a description lifts a joining, every branching test of the joining's frame (truth, negation, conjunction, and that joining a named partner on the left or on the right can lead to where a test holds; no atomic claims), its partners read through the description, holds at a fragment's code in the joining read through the description exactly where the test holds at the fragment. (`Becoming.Joining.mapPartners`, `Becoming.Joining.holds_image_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Under excluded middle as a named hypothesis, where each pair of fragments joins into listed fragments, a presentation whose codes read every branching test of the joining's frame exactly, and give one code to fragments passing the same branching tests, lifts the joining. (`Becoming.Joining.FiniteOutcomes`, `Becoming.Joining.FiniteOutcomes.lifts_of_exact`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,17 +11,17 @@
 ## Laws
 
 1. A family is a test on the relata and the part of a quantity on it its value there; two relata are adjacent where the relation holds one way or the other, and a family is closed where no two adjacent listed relata lie one in it and one outside. Transfers balance a step along the relation where something moves only between adjacent listed relata and each listed relatum's level after, with what it sends, is its level before, with what it receives. (`Becoming.Continuity.adj`, `Becoming.Continuity.adj_symm`, `Becoming.Continuity.within`, `Becoming.Continuity.within_add`, `Becoming.Continuity.Closes`, `Becoming.Continuity.ConservedOn`, `Becoming.Continuity.Balancing`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Transfers along the relation that balance a step conserve the total on every family the relation closes: what moves inside the family is counted once sent and once received. (`Becoming.Continuity.inside`, `Becoming.Continuity.within_sent`, `Becoming.Continuity.within_received`, `Becoming.Continuity.conserved_of_balancing`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Over relata listed without repetition, with equality decided and the relation a computable test, wherever the total is conserved on every closed family the routed transfers balance the step along the relation: one relatum at a time, its change is exchanged with the first relatum adjacent to it, and the rest are routed with its neighbours taken as adjacent, their moves passing through it. So such transfers exist exactly where the total is conserved on every closed family. (`Becoming.Continuity.joined`, `Becoming.Continuity.direct`, `Becoming.Continuity.via`, `Becoming.Continuity.edge`, `Becoming.Continuity.expand`, `Becoming.Continuity.route`, `Becoming.Continuity.route_cons`, `Becoming.Continuity.conservedOn_rest`, `Becoming.Continuity.kept_alone`, `Becoming.Continuity.route_balancing`, `Becoming.Continuity.balancing_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. A law whose next level at a listed relatum is the same from two configurations agreeing there and at every listed relatum adjacent to it, and which conserves the total from every configuration, conserves it on every family the relation closes. (`Becoming.Continuity.ReadsAdjacent`, `Becoming.Continuity.Conserves`, `Becoming.Continuity.conservedOn_of_law`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Read as a flow in which each relatum takes from a condition what moves from it to the relatum and gives what moves back, transfers along the relation balancing a web's levels on the listed relata at every step exist exactly where the levels are conserved on every closed family at every step; with every relatum listed the routed flow balances the web, and every run of a law reading only adjacent relata and conserving the total balances. (`Becoming.Continuity.flow`, `Becoming.Continuity.routed`, `Becoming.Continuity.balancesOn_iff_conserved`, `Becoming.Continuity.balances_of_conserved`, `Becoming.Continuity.balancesOn_of_law`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Teleport: swapping the levels of two relata conserves the total from every configuration and reads both. Along the empty relation each relatum alone is a closed family and the swap moves one unit out of it, so no transfers along it balance the swap; along the full relation the routed transfers balance it. (`Becoming.Continuity.Teleport.all`, `Becoming.Continuity.Teleport.distinct`, `Becoming.Continuity.Teleport.swap`, `Becoming.Continuity.Teleport.apart`, `Becoming.Continuity.Teleport.together`, `Becoming.Continuity.Teleport.conserves`, `Becoming.Continuity.Teleport.reads`, `Becoming.Continuity.Teleport.unit`, `Becoming.Continuity.Teleport.no_transfers_apart`, `Becoming.Continuity.Teleport.balanced_together`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,15 +11,15 @@
 ## Laws
 
 1. The law read through a summary takes a step from one summary value to another where some configuration with the first takes that step to one with the second; every word a configuration can take, the read law can take from its summary. (`Becoming.Image`, `Becoming.Readout.image_feasible`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. From the summary of each configuration the read law takes exactly the words that configuration can take, for every configuration, exactly when configurations the summary merges can take the same words; under that condition, every word it takes from a configuration's summary the configuration can take. This is the counterpart, for laws that need not be determined, of a determined law carried through a reduction. (`Becoming.Readout.SameFutures`, `Becoming.Readout.feasible_of_image`, `Becoming.Readout.futures_through_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. For a prefix-closed language, the law of its histories extends a history by one move where the extension is admitted; from an admitted history it takes exactly the courses whose extension is admitted, each ending at that extension. (`Becoming.HistoryLanguages.PrefixClosed`, `Becoming.HistoryLanguages.law`, `Becoming.HistoryLanguages.trace_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. For a prefix-closed language, with the admitted histories as the configurations, the law of futures above reads: the law derived through a summary keeps every finite continuation at every admitted history exactly where admitted histories sharing a code admit the same continuations. This instance is stated by no single core declaration. (`Becoming.Readout.futures_through_iff`, `Becoming.HistoryLanguages.law`, `Becoming.HistoryLanguages.trace_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Carrying the futures is not carrying the endpoints: the process extending a history by one entry can take every word from every history, so read through any summary it carries the futures; read through the summary marking only [false], one step under false goes from the empty history's code to false, though the empty history extended by false has the code true. (`Becoming.SummaryFutures.extend`, `Becoming.SummaryFutures.every_word`, `Becoming.SummaryFutures.futures_through`, `Becoming.SummaryFutures.code`, `Becoming.SummaryFutures.endpoint_moved`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

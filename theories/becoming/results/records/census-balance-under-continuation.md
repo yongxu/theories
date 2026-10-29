@@ -11,27 +11,27 @@
 ## Laws
 
 1. Under any continuation R, where R t g f reads f after the step as continuing g before it, f arises across the step when it is active after it and continues no formation active before it, and g ceases across the step when it is active before it and no formation active after it continues it. (`Becoming.Web.Continues`, `Becoming.Web.ArisesFrom`, `Becoming.Web.Continued`, `Becoming.Web.CeasesFrom`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A split is one formation continuing as two (NoSplit excludes it), a merge two continuing as one (Web.NoMerge excludes it). The census laws (ceasing-needs-arising, bounded-census-keeps-pace, census-balance) read arising and ceasing under the identity the names stipulate, each formation continuing only itself: it splits none and merges none, and ceasing and arising under it are ceasing and arising. (`Becoming.Web.NoSplit`, `Becoming.Web.NoMerge`, `Becoming.Web.self_one_to_one`, `Becoming.Web.ceasesFrom_self`, `Becoming.Web.arisesFrom_self`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Under a census, with activity and the continuation decided, across each step: without splits, the formations active after the step with those ceasing are at most those active before with those arising; without merges, at least; with neither, exactly. (`Becoming.Web.Census`, `Becoming.Web.Census.balanceFrom`, `Becoming.Web.Census.balanceFrom_eq`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. The proof goes through the continuing pairs: the formations after the step that continue one before it are no more than the pairs, exactly as many without merges, and those before it that are continued are no more than the pairs, exactly as many without splits. (`Becoming.mark_le_total`, `Becoming.total_le_mark`, `Becoming.total_swap`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. The inequalities across each step add up over any stretch: a count ending each step with what it loses at most where it started with what it gains has losses recurring only with gains recurring, and with the inequality the other way and the count bounded from some step on, conversely. (`Becoming.le_over_stretch`, `Becoming.ge_over_stretch`, `Becoming.gaining_of_losing`, `Becoming.losing_of_gaining`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. So without splits, ceasing at arbitrarily late steps needs arising at arbitrarily late steps; without merges, with at most B formations active from some step on, arising at arbitrarily late steps needs ceasing at arbitrarily late steps. (`Becoming.Web.UnceasingFrom`, `Becoming.Web.Census.arisingFrom_of_ceasingFrom`, `Becoming.Web.Census.ceasingFrom_of_arisingFrom`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. Each condition is needed. In Tandem formations t and t + 1 are active at step t; read with each continuing only itself, one arises and one ceases across every step. (`Becoming.Tandem.web`, `Becoming.Tandem.census`, `Becoming.Tandem.kept`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. Read as budding, the later continuing as itself and as the new formation and the earlier continued by none, the census holds without merges, one ceases across every step and arising does not recur; read as joining, both continuing as the later one, at most two are active without splits, one arises across every step and nothing ever ceases. (`Becoming.Tandem.buds`, `Becoming.Tandem.budding`, `Becoming.Tandem.joins`, `Becoming.Tandem.joining`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. The laws hold of every world in a local form: the balance across a step uses only the listings at its two ends and that step's splits and merges; the recurrence laws use only the listing, no split (or no merge and the bound) from some step on; Web.Census.balanceFrom, arisingFrom_of_ceasingFrom and ceasingFrom_of_arisingFrom are their corollaries. (`Becoming.Web.Census.balanceFrom_at`, `Becoming.Web.Census.balanceFrom_eq_at`, `Becoming.Web.Census.arisingFrom_of_ceasingFrom_from`, `Becoming.Web.Census.ceasingFrom_of_arisingFrom_from`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. Under a continuation from one covering list, with no census and no decision: where a list covers the active formations at step M, nothing splits from M on, and ceasing under the continuation recurs, it is not refuted that something arises from M on; with covering lists at arbitrarily late steps and no splits from some step on, arising does not stop. (`Becoming.Web.not_not_arisingFrom_covered`, `Becoming.Web.arisingFrom_not_stopping_covered`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. The converse from one covering list too, with no census and no decision: where one list covers the active formations from some step on, nothing merges from that step on, and arising under the continuation recurs, ceasing under it does not stop from any step on. (`Becoming.Web.ceasingFrom_not_stopping_covered`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

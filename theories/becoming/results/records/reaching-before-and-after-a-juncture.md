@@ -11,9 +11,9 @@
 ## Laws
 
 1. A configuration leading into s within k steps has a step and a course of fewer than k steps into s; with every configuration listed, steps decided and s returning, a configuration from which s can be had has it within the count of configurations. (`Becoming.Branching.leadsWithin_trace`, `Becoming.Branching.reach_within_listed`)
-   - *Master laws:* finite runs, not reaching the grammar.
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 2. At a configuration with a step keeping s and which is not a juncture for s, no step can be refuted to keep s: choosing is needed only at a juncture. (`Becoming.Branching.keeps_before_juncture`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,13 +11,13 @@
 ## Laws
 
 1. Where leaving the floor draws no less than what was left, what was left is the floor; leaving nothing where nothing draws less is its case. (`Becoming.Optimum.InTurn.eq_of_sub_le_sub`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Perfect within capacities: each leaves at least its floor and at most what it is given, and at every step from every level each leaves what draws it the most among what it may leave; with no floor this is perfect. (`Becoming.Optimum.InTurn.BestWithin`, `Becoming.Optimum.InTurn.PerfectWithin`, `Becoming.Optimum.InTurn.within_zero_iff`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. Each draws to capacity at the last step; the second wherever it draws nothing after, the first wherever what it draws after does not depend on what it leaves. (`Becoming.Optimum.InTurn.second_at_floor`, `Becoming.Optimum.InTurn.first_at_floor`, `Becoming.Optimum.InTurn.last_at_floor`)
-   - *Master laws:* none among its reasons; 2 of its declarations lie outside the core run.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; 2 of its declarations are not in the spine run and not measured, so this holds of the others only.
 4. Witness: doubling over two steps, the second able to take one unit a step; a profile perfect within the capacities exists, in every one the first leaves everything at the first step from three and the dweller is kept, while with neither draw limited every perfect profile breaks it. (`Becoming.Optimum.Holding.keepsFirst`, `Becoming.Optimum.Holding.keepsFirst_le`, `Becoming.Optimum.Holding.twice_sum`, `Becoming.Optimum.Holding.keepsFirst_best`, `Becoming.Optimum.Holding.only_three`, `Becoming.Optimum.Holding.doubling_capacity`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

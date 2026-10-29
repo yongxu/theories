@@ -11,17 +11,17 @@
 ## Laws
 
 1. Any number of conditions, indexed by any type, each under its draw taken first, as much as there is, and giving a law of what is left of all, in any amounts with a draw; a level ends where it is nothing from some step on. (`Becoming.RegimeMargin.Coupled.Indexed.left`, `Becoming.RegimeMargin.Coupled.Indexed.step`, `Becoming.RegimeMargin.Coupled.Indexed.Below`, `Becoming.RegimeMargin.Coupled.Indexed.Rises`, `Becoming.RegimeMargin.Coupled.Indexed.Ends`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Under mutual support, every giving rising with what is left of each, the step keeps the order of states condition by condition, along runs too, so a level ending from a state ends from every state below it: raising any condition's level never ends one that held. (`Becoming.RegimeMargin.Coupled.Indexed.step_mono`, `Becoming.RegimeMargin.Coupled.Indexed.run_below`, `Becoming.RegimeMargin.Coupled.Indexed.ends_of_below`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. Where i gives nothing wherever nothing is left of j, i drains once j stays within its draw; in whole numbers it falls by its draw at every step and, the draw positive, is nothing within as many steps as its level, so j's end ends i. (`Becoming.RegimeMargin.Coupled.Indexed.DependsOn`, `Becoming.RegimeMargin.Coupled.Indexed.drains`, `Becoming.RegimeMargin.Coupled.Indexed.ends_after`, `Becoming.RegimeMargin.Coupled.Indexed.ends_of_partner`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Along every chain of dependence, where every dependent's draw is positive, wherever a condition ends every condition downstream of it ends, and two conditions each downstream of the other end together or not at all. (`Becoming.RegimeMargin.Coupled.Indexed.Downstream`, `Becoming.RegimeMargin.Coupled.Indexed.ends_downstream`, `Becoming.RegimeMargin.Coupled.Indexed.ends_together`)
-   - *Master laws:* closure, reaching the grammar; central declaration `Becoming.RegimeMargin.Coupled.Indexed.ends_downstream`: master law.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.RegimeMargin.Coupled.Indexed.ends_downstream` as following from a master law.
 5. The pair is the web indexed by Bool: at every step the web's run has the pair's levels, a pair's level ends exactly where the web's does, and the pair's mutual support is the web's; the pair's laws of order, ending and dependence are read off these. (`Becoming.RegimeMargin.Coupled.pairGiving`, `Becoming.RegimeMargin.Coupled.pairDraw`, `Becoming.RegimeMargin.Coupled.ofPair`, `Becoming.RegimeMargin.Coupled.pair_run`, `Becoming.RegimeMargin.Coupled.ends_pair`, `Becoming.RegimeMargin.Coupled.pair_rises`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. Witness, a chain: three conditions, the second giving one where at least one is left of the first, the third where at least one is left of the second, under draws of one; the third does not depend on the first, yet the first ends and so does the third. With no draw on the second, the third holds at two for ever. (`Becoming.RegimeMargin.Coupled.Indexed.Chain.giving`, `Becoming.RegimeMargin.Coupled.Indexed.Chain.start`, `Becoming.RegimeMargin.Coupled.Indexed.Chain.first_falls`, `Becoming.RegimeMargin.Coupled.Indexed.Chain.cascades`, `Becoming.RegimeMargin.Coupled.Indexed.Chain.stopped`)
-   - *Master laws:* closure, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

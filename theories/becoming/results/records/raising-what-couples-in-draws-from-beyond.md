@@ -11,13 +11,13 @@
 ## Laws
 
 1. In a balanced flow, a rise of a family's stock across a step has a formation taking part that gives the family more than it takes from it. (`Becoming.Flow.Balances.gives_more_of_rise`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. Where a family without repetition containing the risen one gains nothing across the step, that formation takes from the containing family more than from the risen one; with equality of conditions decided, from a named condition of the containing family outside the risen one; under nothing from nothing, wherever the step is enclosed around the family. The rise is paid from beyond in full: the stock after the step is at most the stock before plus what is taken from the containing family beyond the risen one. (`Becoming.exists_outside_of_total_lt`, `Becoming.Flow.Balances.rise_draws_beyond`, `Becoming.Flow.Balances.rise_paid_from_beyond`, `Becoming.Flow.Balances.rise_takes_beyond`, `Becoming.Flow.Gainless.rise_takes_beyond`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Where the family lists every condition a member of a group couples into, every selection holding of a flow only where the family's stock rises holds only where a formation raising it takes from a condition no member of the group couples into; raising an observed family is a selection through coupling. (`Becoming.Flow.favours_reaching_beyond`, `Becoming.Web.raises_selectsThrough`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Diversion is an instance: its diverting flow gains nothing on the source and the store, and the general law gives the taker taking from a place it does not couple into; its supplying flow raises the store with nothing taken, so without the premise a rise need not reach beyond. (`Becoming.Diversion.places_distinct`, `Becoming.Diversion.diverting_gainless`, `Becoming.Diversion.taker_listed`, `Becoming.Diversion.draws_beyond`, `Becoming.Diversion.supplying_raises_untaken`)
-   - *Master laws:* closure and balance, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

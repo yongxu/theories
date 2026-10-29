@@ -11,13 +11,13 @@
 ## Laws
 
 1. A family's inflow across a step is what each formation taking part gives it beyond what it takes from it, summed; it is zero exactly where the family gains nothing. In a balanced flow the stock after a step with what the family loses is the stock before with what it gains, which is at most the inflow; over a stretch the stock rises by at most the stretch's inflow. (`Becoming.Flow.inflow`, `Becoming.Flow.le_add_excess`, `Becoming.Flow.excess_le_of_le_add`, `Becoming.Flow.gainlessOn_iff_inflow`, `Becoming.Flow.replenishment_le_inflow`, `Becoming.Flow.gained_le_inflow`, `Becoming.Flow.Balances.stock_gained`, `Becoming.Flow.Balances.stock_inflow`, `Becoming.Flow.Balances.stock_over_inflow`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. Where a family without repetition rises across a step by more than the inflow of a family containing it, some formation taking part gives it more than it takes from it, by more than its own part of that inflow, and takes from the containing family more than from the risen one, with equality decided from a condition outside it; the stock after the step is at most the stock before, the inflow and what is taken beyond. Every selection holding only where the family rises past the inflow holds only where a formation raising it takes from a condition no member of the group couples into. (`Becoming.Flow.Balances.rise_draws_beyond_inflow`, `Becoming.Flow.Balances.rise_le_inflow_beyond`, `Becoming.Flow.Balances.rise_takes_beyond_inflow`, `Becoming.Flow.favours_reaching_beyond_inflow`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. With the conditions beyond listed apart, the beyond falls by at least the rise less the whole's inflow; a rise above the slack of the dependences beyond and the inflow breaks one of them, and a selection rewarding it favours the break; a formation raising the family by more than it adds to the whole takes from beyond; over a stretch the family rises by at most what the beyond lost and the stretch's inflow. (`Becoming.Flow.Balances.beyond_falls_inflow`, `Becoming.Flow.Balances.rise_lowers_beyond_inflow`, `Becoming.Flow.Balances.breaks_beyond_inflow`, `Becoming.Flow.Balances.rise_breaks_beyond_inflow`, `Becoming.Flow.favours_breaking_beyond_inflow`, `Becoming.Flow.reaches_inflow`, `Becoming.Flow.Balances.rise_bounded_by_beyond_inflow`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. The bound is exact: Diversion's supplying flow raises the store by exactly its inflow, taking nothing. (`Becoming.Diversion.supplying_rises_by_inflow`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

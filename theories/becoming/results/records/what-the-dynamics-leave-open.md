@@ -11,9 +11,9 @@
 ## Laws
 
 1. A statement about a dynamics (a world, a web, a flow or any other) and a significance reads only the dynamics when its truth does not change with the significance; every statement about the dynamics alone does. Such a statement holding with some significance holds with a significance bounded by any region with a formation outside it, which is a rival and not the condition; where there is a standpoint and a formation, such a statement entailing the condition holds of nothing. (`Becoming.ReadsOnlyDynamics`, `Becoming.readsOnlyDynamics_of`, `Becoming.ReadsOnlyDynamics.admits_rival`, `Becoming.ReadsOnlyDynamics.not_entails`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A rival, a significance holding exactly within a region of standpoints, steps and formations with a point outside, is exactly a point lacking significance. The condition excludes every rival; excluding every rival is that no point lacks significance, and a premise excludes every rival exactly where it implies this; where significance at each point is decided, excluding every rival is the condition. Over every significance, with a standpoint and a formation, that excluding every rival gives the condition is exactly double-negation elimination. (`Becoming.Rival`, `Becoming.rival_iff_lacks`, `Becoming.bounded_is_rival`, `Becoming.Unrestricted.not_rival`, `Becoming.not_rival_iff`, `Becoming.excludes_rivals_iff`, `Becoming.unrestricted_iff_not_rival`, `Becoming.not_rival_unrestricted_iff_stable`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

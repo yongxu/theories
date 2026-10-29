@@ -11,15 +11,15 @@
 ## Laws
 
 1. Carriers leaving k carrying offspring and m not, others w: the carriers' share rises exactly where d k exceeds c m + d w, is kept where they are equal and falls where d k falls short. (`Becoming.Reproduction.Mutation.step_balance`, `Becoming.Reproduction.Mutation.rises_iff`, `Becoming.Reproduction.Mutation.kept_iff`, `Becoming.Reproduction.Mutation.falls_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Where k <= w the share never rises and with any loss falls at every step, whatever it is: the error threshold. (`Becoming.Reproduction.Mutation.never_rises`, `Becoming.Reproduction.Mutation.falls_of_outrun`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Where k = w + s the share is kept exactly at s / (s + m); a run at or below that balance stays at or below it, its share never falling, and one at or above stays at or above. (`Becoming.Reproduction.Mutation.kept_share`, `Becoming.Reproduction.Mutation.below_stays`, `Becoming.Reproduction.Mutation.above_stays`, `Becoming.Reproduction.Mutation.run`, `Becoming.Reproduction.Mutation.below_always`, `Becoming.Reproduction.Mutation.not_falls_below`, `Becoming.Reproduction.Mutation.above_always`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Read as generations of descent, transmission lowers the amount by c m and raises nothing, and the step is balanced exactly where the count balance holds: mutation-selection balance is the balance of Price's equation. (`Becoming.Reproduction.Mutation.holds`, `Becoming.Reproduction.Mutation.offspring`, `Becoming.Reproduction.Mutation.generations`, `Becoming.Reproduction.Mutation.total_replicate`, `Becoming.Reproduction.Mutation.total_kinds`, `Becoming.Reproduction.Mutation.lowered_count`, `Becoming.Reproduction.Mutation.size_first`, `Becoming.Reproduction.Mutation.sum_first`, `Becoming.Reproduction.Mutation.size_next`, `Becoming.Reproduction.Mutation.sum_next`, `Becoming.Reproduction.Mutation.balanced_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Witness: one carrier and one other, at the threshold falling from a half to two of five, and a half kept at the balance. (`Becoming.Reproduction.Threshold.at_threshold`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,15 +11,15 @@
 ## Laws
 
 1. A group's lineage over listed generations: the group at the first generation and the offspring of its lineage at each later one; the lineages of a generation listed as groups list every later generation. (`Becoming.SelectionLevels.lineage`, `Becoming.SelectionLevels.lineages`, `Becoming.SelectionLevels.whole_map`, `Becoming.SelectionLevels.flatMap_flatMap`, `Becoming.SelectionLevels.lineages_family`, `Becoming.SelectionLevels.lineages_whole`, `Becoming.SelectionLevels.lineage_within`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. With exact transmission every member of a lineage carries the value its group was founded at, so its mean stays there while it has members, and lineages of groups uniform in an amount stay uniform in it. (`Becoming.SelectionLevels.lineage_keeps`, `Becoming.SelectionLevels.lineage_value`, `Becoming.SelectionLevels.lineage_total`, `Becoming.SelectionLevels.lineages_uniform`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Nothing is then selected within the lineages, for any weight, and the mean rises across any step exactly where the lineages' means select for the amount: selection among them is all there is. (`Becoming.SelectionLevels.within_by_none_of_uniform`, `Becoming.SelectionLevels.rises_iff_means_of_uniform`, `Becoming.SelectionLevels.lineages_within_none`, `Becoming.SelectionLevels.rises_iff_lineages`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. On the base, where at each step the lineages founded lower are not active, nothing is discordant, the mean never falls below where it started over any number of steps, and it rises where a higher lineage leaves offspring beside a lower one. (`Becoming.GroupEnding.Flow.lineages_none_against`, `Becoming.GroupEnding.Flow.lineages_not_lower`, `Becoming.GroupEnding.Flow.lineages_raises`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Witness: a group holding back and one not, whose members leave nothing; the mean rises from a half to one and stays there, where the mixed groups of Exhausted fell below their start. (`Becoming.GroupEnding.Assorted.first_listed`, `Becoming.GroupEnding.Assorted.uniform`, `Becoming.GroupEnding.Assorted.kept`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

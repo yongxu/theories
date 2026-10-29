@@ -11,13 +11,13 @@
 ## Laws
 
 1. At a descent where the descendant depends on a condition, the giver's holding alone decides inheritance against forming anew; the giver held it and drew on it, held it only, drew on it only, or neither. (`Becoming.Web.inheritsAt_iff_held`, `Becoming.Web.four_cases`, `Becoming.Web.formsAnew_iff_drawn_or_neither`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Under the reading of drawing at the descent the case of neither is excluded, so a dependence forms anew exactly where the giver drew on what it did not depend on; with drawing depending as well, nothing forms anew. (`Becoming.Web.DependsOnDrawnAt`, `Becoming.Web.DependsOnDrawnAt.not_undrawn`, `Becoming.Web.formsAnew_iff_drawn_unheld`, `Becoming.Web.formsAnew_iff_neither`, `Becoming.Web.DependsOnDrawnAt.not_formsAnew`, `Becoming.Web.dependsOnDrawnAt_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. For the flow, the reading of drawing is passing on what is drawn with forming from drawing, and under balance a relatum coming to stand depends only on what some giver drew on. (`Becoming.Flow.dependsOnDrawn_iff_at`, `Becoming.Flow.FormsFromDrawn`, `Becoming.Flow.dependsOnDrawn_iff_split`, `Becoming.Flow.Inherits.formsFromDrawn`, `Becoming.Flow.DependsOnDrawn.formsAnew`, `Becoming.Flow.drawn_by_giver`, `Becoming.Flow.formed_from_drawing`, `Becoming.Flow.no_dependence_undrawn`, `Becoming.Flow.DependsOnDrawn.none_formsAnew`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Witnesses: a parent drawing on food it does not depend on, its child coming to depend on it; a dependence formed from nothing drawn where the reading fails; a dependence passed on without drawing. (`Becoming.World.droppedHatch_formed`, `Becoming.World.novel_formed_undrawn`, `Becoming.TwoGivers.passed_undrawn`)
-   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

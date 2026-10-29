@@ -11,17 +11,17 @@
 ## Laws
 
 1. A giving reads what is left condition by condition where what is left alike at every condition gives alike; mutual support does so, and the laws that states alike step, run and end alike take this premise. (`Becoming.RegimeMargin.Coupled.Indexed.Pointwise`, `Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A state is read through the list of its listed levels; the (B + 1)^n lists of n levels within B are listed, every state within B has its levels among them, and two states with the same levels are alike at every condition. (`Becoming.RegimeMargin.Coupled.Indexed.levels`, `Becoming.RegimeMargin.Coupled.Indexed.levels_alike`, `Becoming.RegimeMargin.Coupled.Indexed.withFirst`, `Becoming.RegimeMargin.Coupled.Indexed.withFirstUpTo`, `Becoming.RegimeMargin.Coupled.Indexed.levelLists`, `Becoming.RegimeMargin.Coupled.Indexed.withFirst_length`, `Becoming.RegimeMargin.Coupled.Indexed.withFirstUpTo_length`, `Becoming.RegimeMargin.Coupled.Indexed.levelLists_length`, `Becoming.RegimeMargin.Coupled.Indexed.mem_withFirst`, `Becoming.RegimeMargin.Coupled.Indexed.mem_withFirstUpTo`, `Becoming.RegimeMargin.Coupled.Indexed.levels_mem`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. A run that stays within B comes back, at some step at most (B + 1)^n, to the state of an earlier step, and where giving reads condition by condition it repeats from there; under mutual support every run below one within B stays within it. (`Becoming.RegimeMargin.Coupled.Indexed.StaysWithin`, `Becoming.RegimeMargin.Coupled.Indexed.within_below`, `Becoming.RegimeMargin.Coupled.Indexed.returns_within`, `Becoming.RegimeMargin.Coupled.Indexed.repeats`, `Becoming.RegimeMargin.Coupled.Indexed.repeats_mul`, `Becoming.RegimeMargin.Coupled.Indexed.zero_from_window`)
-   - *Master laws:* closure and finite runs, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 4. Where giving reads condition by condition and the run stays within B, a condition ends exactly where it is nothing at every step from L = (B + 1)^n to 2 L, and where it ends it is nothing from L on: a finite check, with no band and no order of states. (`Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within`, `Becoming.RegimeMargin.Coupled.Indexed.below_of`, `Becoming.RegimeMargin.Coupled.Indexed.endingWithin`, `Becoming.RegimeMargin.Coupled.Indexed.ending_iff`)
-   - *Master laws:* finite runs, not reaching the grammar.
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 5. Under mutual support, where the run from a condition's top level hi, the others given, stays within B, its point of no return up to hi + 1 is exact, and others' levels lower give a threshold no lower: beyond any band. (`Becoming.RegimeMargin.Coupled.Indexed.thresholdWithin`, `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within`, `Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within`)
-   - *Master laws:* closure and finite runs, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 6. Relay keeps no band from three up, yet from two with its partner at three its run stays within three; its first condition's threshold is three with the partner at two and two with the partner at three. (`Becoming.RegimeMargin.Coupled.Relay.ends_set`, `Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band`)
-   - *Master laws:* closure and finite runs, reaching the grammar.
+   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

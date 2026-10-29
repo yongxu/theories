@@ -11,41 +11,41 @@
 ## Laws
 
 1. For a law of change with admissible disturbances and a target, a start reaches the target within n steps when it is in the target or, with steps left, every admissible disturbance takes it to one reaching it within one step fewer. A funnel has level 0 in the target and level k + 1 in the target or sent to level k by every admissible disturbance; a start reaches within n exactly when some funnel holds it at level n. (`Becoming.Lasting.Reaches`, `Becoming.Lasting.Funnel`, `Becoming.Lasting.reaches_iff_funnel`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A basin holds the target at every level, and at level k + 1 whatever every admissible disturbance takes to level k; a start reaches within n exactly when every basin holds it at level n, and a family both a funnel and a basin is exactly reaching. Reaching composes: a start reaching a region within m, each member of which reaches the target within k, reaches it within k + m. (`Becoming.Lasting.Basin`, `Becoming.Lasting.reaches_iff_basin`, `Becoming.Lasting.reaches_iff_of_exact`, `Becoming.Lasting.Reaches.trans`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. What reaches within n meets the target within the first n steps of every admissible history; given one admissible disturbance and a decided target, the converse holds; and for one law, that converse asked of a family of targets given by Boolean sequences yields the limited principle of omniscience. (`Becoming.Lasting.Reaches.histories`, `Becoming.Lasting.reaches_iff_histories`, `Becoming.Lasting.Search.histories_need_decision`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. A numeric variant for n is a level in the natural numbers such that a configuration at a level at most n is in the target, or at a positive level that every admissible disturbance lowers; a start at a level at most n reaches within n. Where some disturbance is admissible, reaching within n and lasting n steps outside the target exclude each other. (`Becoming.Lasting.Variant`, `Becoming.Lasting.Variant.reaches`, `Becoming.Lasting.Reaches.not_lasts`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. For a determined law, reaching within n is meeting the target on the orbit within n steps; the orbit meets it within n exactly when some funnel holds the start at level n, with no decision used, and, the target decided, exactly when some level in the natural numbers, at most n at the start, is lowered by every step from a configuration outside the target at a level at most n. (`Becoming.Lasting.reaches_iff_orbit`, `Becoming.Lasting.orbit_reaches_iff_funnel`, `Becoming.Lasting.orbit_reaches_iff_variant`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. With the target decided, reaching within n under a determined law is not lasting n steps outside the target. The decisions are needed: if not lasting outside every target gave reaching it with no step, double negation would be eliminated; if every determined law meeting a target within n had a numeric variant, equality of configurations would be decided. (`Becoming.Lasting.reaches_iff_not_lasts`, `Becoming.Lasting.dual_needs_decision`, `Becoming.Lasting.numeric_needs_decision`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. A determined law's orbit never reaches a target exactly when some set containing the start avoids the target and is closed under the law, that is, exactly when the start lies in the viability kernel of the target's complement; some seed never reaches it exactly when such a set contains a seed, and no seed avoids it exactly when no such set contains one. (`Becoming.Lasting.avoids_iff_closed`, `Becoming.Lasting.avoids_iff_kernel`, `Becoming.Lasting.some_avoids_iff`, `Becoming.Lasting.none_avoid_iff`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. Reaching the target from every seed rules out every such closed set containing a seed, and a fixed configuration outside the target is such a set by itself, so its orbit never reaches the target. (`Becoming.Lasting.reaches_excludes`, `Becoming.Lasting.fixed_avoids`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. On the courses of a determined law's process, what it reaches from a configuration is its orbit; so nothing it reaches from s is in the target exactly when such a closed set contains s, some seed reaches nothing in it exactly when such a set holds a seed, and a fixed configuration outside the target reaches nothing in it. (`Becoming.Branching.law_reach_iff`, `Becoming.Courses.avoids_iff_closed_reach`, `Becoming.Courses.some_avoids_iff_reach`, `Becoming.Courses.fixed_avoids_reach`)
-   - *Master laws:* none among its reasons.
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. A course of the determined law's process ends on the orbit at its length, and the orbit at k is where the course of k moves ends; so a course of at most n moves reaches the target exactly when the orbit meets it within n steps, exactly when a funnel holds the start at level n, and, the target decided, exactly when a numeric variant is at most n at the start. (`Becoming.Courses.trace_orbit`, `Becoming.Courses.orbit_trace`, `Becoming.Courses.course_reaches_iff_orbit`, `Becoming.Courses.course_reaches_iff_funnel`, `Becoming.Courses.course_reaches_iff_variant`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 11. What reaches within n, what a funnel holds at level n, and what every basin holds at level n each meet the target within n steps on every run of the disturbed process. (`Becoming.Courses.Reaches.runs`, `Becoming.Courses.Funnel.runs`, `Becoming.Courses.basin_runs`)
-   - *Master laws:* none among its reasons.
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. In the market model the regime law with correction strength b and no extra quality error is a determined law; some physical seed with positive share never lands exactly when some set closed under the law and avoiding landing contains such a seed; and the quality margin at the fixed quality 3/8 under the worst influence 1 is nonnegative exactly when b ≤ 5/12. (`Becoming.MarketInstances.path_eq`, `Becoming.MarketInstances.never_lands_iff`, `Becoming.MarketInstances.margin_iff`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 13. For 0 ≤ b ≤ 3/4, every physical seed with positive share lands under the regime law exactly when b ≤ 5/12, exactly when that margin is nonnegative, and exactly when no closed set avoiding landing contains such a seed; for 5/12 < b ≤ 3/4 the fixed configuration is a physical seed with positive share that never lands. (`PartialRegimeTransition.exact_universal_landing_boundary`, `Becoming.MarketInstances.lands_iff_margin`, `Becoming.MarketInstances.lands_iff_no_closed`, `Becoming.MarketInstances.fixed_point_instance`, `Becoming.MarketInstances.landing_boundary_instance`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 14. For every determined law, a rational quantity at most a top on a region that every step from outside the target keeps, rising there by at least a fixed gain a step, gives a funnel into the target. For 0 ≤ b ≤ 5/12 and 0 ≤ a ≤ 1/2 the settled region for share 2a is kept, and three such funnels (share, then influence, then quality) land every settled configuration within 28 + n steps whenever 7/8 < n·a²/160. (`Becoming.MarketInstances.rising_funnel`, `Becoming.MarketInstances.settled_kept`, `Becoming.MarketInstances.settled_reaches_landing`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 15. For 0 ≤ b ≤ 5/12 every physical seed with positive share comes into the settled region for half its share and so reaches landing; and for every b, every positive physical seed lands exactly when each is held by some funnel into landing. (`Becoming.MarketInstances.seed_reaches_settled`, `Becoming.MarketInstances.seed_reaches_landing`, `Becoming.MarketInstances.landing_side_instance`, `Becoming.MarketInstances.lands_iff_funnel`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 16. With extra support consumption κ ≥ 0 a step, for 0 ≤ b ≤ 5/12 and a physical seed with positive share there is N such that, from every initial stock at least the cover for N steps, the guarded history at correction strength b agrees with the operating history for its first N steps, the state at N is safe for the original parameters, and from it the original guarded history with no shock never fails. (`PartialRegimeTransition.supported_partial_transition`, `Becoming.MarketInstances.partial_prefix_instance`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 17. The cover bounds the support: for κ ≥ 0 it is at least 5 at every horizon; a stock at least the cover for n + 1 steps leaves, after one step of consumption κ at a nonnegative share, at least the cover for n; and a landed state with stock at least 5 is safe for the original parameters. (`RegimeTransition.cover_floor`, `RegimeTransition.cover_step`, `RegimeTransition.landing_supplies_safety`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 18. At the boundary: for 0 ≤ b ≤ 5/12 the share of every physical seed stays at least half its start; for 5/12 < b ≤ 3/4 some certified low box of states, holding states with positive share, never lands; and for every ε > 0 some constant adverse quality error e with 0 < e < ε at b = 5/12 leaves a physical seed with positive share that never lands. (`PartialRegimeTransition.uniform_seed_floor`, `PartialRegimeTransition.supercritical_low_box_never_lands`, `PartialRegimeTransition.arbitrarily_small_error_blocks_universal_landing`)
-   - *Master laws:* not measured: its declarations lie outside the core run.
+    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
