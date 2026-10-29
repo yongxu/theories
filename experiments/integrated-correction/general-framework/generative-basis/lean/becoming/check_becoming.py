@@ -69,7 +69,7 @@ import check as audit_support  # noqa: E402
 FOUNDATION = ["GenerativeCore", "InquirySufficiency", "RelationalRenewal"]
 # The package: the base (`Becoming.World`, the one unfolding's records, a world being a run of the
 # frame; prelude only), the four core layers and their root. Compile order comes from the imports.
-CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.GrammarTransport", "Becoming.ShownOrder", "Becoming.KeptOnward", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
+CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.GrammarTransport", "Becoming.ShownOrder", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
@@ -188,7 +188,8 @@ RETAINED = HERE / "becoming-checks"
 
 SCOPE = (
     "GrammarLaws: the five master laws on the grammar, for every carrier and relation: closure is being the "
-    "occurrence itself or reached; perfect pairings of finite lists under a relation conserve count, are exactly "
+    "occurrence itself or reached, and a region of the steps of time every step keeps holds from where it holds "
+    "on; perfect pairings of finite lists under a relation conserve count, are exactly "
     "equal count under the one, compose, join, gather over a family and carry over a stretch under the closure, so "
     "the count law at a step and over a stretch is exactly a pairing of units, near-definitional; an occurrence is "
     "drawn exactly where it reaches something that does not reach back, with the successor fixed at what it reaches "
@@ -205,7 +206,8 @@ SCOPE = (
     "going alike is "
     "constancy where the "
     "successor is fixed and a successor available, and a map's image has a fixed successor exactly where sameness "
-    "under the map goes alike; widening of relations is a strict order excluding keeping and being mixed, and a "
+    "under the map goes alike, and a map preserves a relation exactly where its image lies within the other; "
+    "widening of relations is a strict order excluding keeping and being mixed, and a "
     "transitive relation joined to the strict part of a transitive relation containing it is transitive, and "
     "irreflexive where the first is. Frame's "
     "closure is the grammar's, and the models' laws of closure, finite runs, lumping and order are proved from these; "
@@ -213,8 +215,8 @@ SCOPE = (
     "GrammarTransport: the grammar's listed terms are kept by a one-to-one correspondence of models carrying the "
     "relations they read, carrying being read through the grammar's image and kept by its operations, a predicate "
     "carried as its partial identity; ending on every branch reflects along any map carrying continuation from a "
-    "closed region, and going on along some branch along any map lifting continuation; a map preserves a relation "
-    "exactly where its image lies within the other; steps, passing through a word, within n steps, closed regions, a "
+    "closed region, and going on along some branch along any map lifting continuation; steps, "
+    "passing through a word, within n steps, closed regions, a "
     "fixed successor and predecessor, going alike and going on along some branch are kept, and correspondences "
     "compose side by side. "
     "ShownOrder: every transitive relation in which what is chosen stands above every other open alternative "
@@ -224,13 +226,12 @@ SCOPE = (
     "pair leaves no cycle exactly where there was none and the pair's second member neither is nor reaches its first; "
     "choices required only to be maximal force no positive comparison; one search run with either of two orders "
     "according with one choice chooses alike on the menu met and apart on a menu met after. "
-    "KeptOnward: a region of the steps of time that every step keeps holds from where it holds on, the "
-    "grammar's closure at the successor along a line; the inductions over steps that keep a region are its cases. "
     "GrammarPath: a line under a class that must pass through a set holds a member of it alike to its start; "
     "under a constant class, and up to the net's end, everything downstream of anything alike to a member whose "
     "effects the class holds is alike to it and on its line, and given the regularity that is equivalent to holding "
     "the effects; a relation under which a line ends at an occurrence that still conditions something is not constant up to the net's end; "
-    "witnesses that neither premise can be dropped, a finite net with two families, and one with a shared condition "
+    "witnesses that neither premise can be dropped from these laws, a finite net with two families, and one with a "
+    "shared condition "
     "where every premise holds at once; under constancy up to the net's end what leaves the class at a member "
     "follows every alike occurrence that conditions anything, and a class can leave a member's effects out; read at a member's class, "
     "constancy up to the net's end carries these laws and asks more than that a line end only where the net does; how "

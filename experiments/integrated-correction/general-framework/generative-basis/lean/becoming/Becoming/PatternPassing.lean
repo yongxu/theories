@@ -1,6 +1,5 @@
 import Becoming.Grammar
 import Becoming.Wholes
-import Becoming.KeptOnward
 
 /-!
 # PatternPassing: a pattern that outlasts each of its carriers lasts only through passing

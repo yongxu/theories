@@ -14,7 +14,8 @@ reading of time nor a finer unit of amount (`Becoming.Resolution`).
 
 * **A projection carries a law exactly where configurations alike under it go alike.** The step
   read through `π` (`Image`) is the least process the step factors through (`factors_image`,
-  `Image.least`). Some determined process on the description admits every step so read if and
+  `Image.least`), each a case of preserving read through the image (`«保之像»`). Some determined
+  process on the description admits every step so read if and
   only if configurations alike under `π` go alike under `π` (`GoAlike`, `carries_law_iff`,
   `image_determined_iff`): the grammar's law that the image of a relation along a map has a fixed
   successor exactly where sameness under the map goes alike (`«像定后当且仅当同行»` of
@@ -91,16 +92,21 @@ goes from a configuration projecting to `k` to one projecting to `κ`. -/
 def Image (P : Process S A) (π : S → K) : Process K A :=
   ⟨fun k a κ => ∃ s u, π s = k ∧ P.step s a u ∧ π u = κ⟩
 
-/-- The step of `P` factors through `π` into its image. -/
+/-- The step of `P` factors through `π` into its image: each move's image lies within the image's
+move, by definition, and a map whose image of a relation lies within another preserves it
+(`«保之像»`). -/
 theorem factors_image (P : Process S A) (π : S → K) : FactorsThrough P π (Image P π) :=
-  fun s _ u step => ⟨s, u, rfl, step, rfl⟩
+  fun s a u step => («保之像» π (fun s t => P.step s a t) (fun k κ => (Image P π).step k a κ)).mp
+    (fun _ _ h => h) s u step
 
 /-- **The image is the least process the step factors through.** Every process into which the
-step of `P` factors through `π` admits every step of the image. -/
+step of `P` factors through `π` admits every step of the image: a map preserving each move of `P`
+into `Q`'s holds its image there (`«保之像»`). -/
 theorem Image.least {P : Process S A} {π : S → K} {Q : Process K A}
     (factors : FactorsThrough P π Q) {k : K} {a : A} {κ : K} :
-    (Image P π).step k a κ → Q.step k a κ
-  | ⟨s, u, at_k, step, to⟩ => at_k ▸ to ▸ factors s a u step
+    (Image P π).step k a κ → Q.step k a κ :=
+  fun h => («保之像» π (fun s t => P.step s a t) (fun k κ => Q.step k a κ)).mpr
+    (fun x y step => factors x a y step) k κ h
 
 /-- Each move of the image is the grammar's image (`«像»`) of the move along the projection, by
 definition. It documents the representation: no proof uses it, since unfolding the definitions does

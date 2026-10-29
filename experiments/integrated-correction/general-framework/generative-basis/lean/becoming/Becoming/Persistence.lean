@@ -2,7 +2,6 @@ import Becoming.Grammar
 import Becoming.Identity
 import Becoming.Unfolding
 import Becoming.Witnesses
-import Becoming.KeptOnward
 
 /-!
 # Persistence: identity across dormancy, and identity read off a world's relations

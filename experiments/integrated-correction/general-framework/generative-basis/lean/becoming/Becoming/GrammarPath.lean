@@ -84,11 +84,11 @@ states them for every carrier, relation and class.
   global condition can fail under the split while the member's class keeps it and holds the member's
   effects, where alike occurrences outside differ in what they condition in the member's class
   (`UnevenOutside`).
-* **Neither premise can be dropped.** Where a member's line runs through a condition but the member's
-  effects leave its class, a constant class holding the member with the condition does not take in
-  what the condition feeds (`Unclosed`); and where the class is not constant, even up to the net's
-  end at the member's class, a member whose effects it holds need not have what follows them alike to it
-  (`Inconstant`).
+* **Neither premise can be dropped from these laws.** Where a member's line runs through a condition
+  but the member's effects leave its class, a constant class holding the member with the condition
+  does not take in what the condition feeds (`Unclosed`); and where the class is not constant, even
+  up to the net's end at the member's class, a member whose effects it holds need not have what
+  follows them alike to it (`Inconstant`).
   `ThirdFed.constant_takes_third` in `Becoming.GrammarCases` needs constancy and not this premise: it
   is a one-step instance of `«有常之逐点»`, whose conclusion is alikeness to the member's next stage.
 * **What the reach asks (后皆续当且仅当后皆同类).** With no regularity assumed, everything downstream of
@@ -356,10 +356,10 @@ theorem «常闭则所及皆及» {R E : «际» α} (hE : «类» E) (constant 
     «所及» R E x t :=
   «所及之传递» toC (.inr («常闭则后皆续» hE constant held alike down).2)
 
-/-- **What leaves the class follows each alike step (出类随行), at the member's class.** Under a class
-constant up to the net's end at a member's class, where the member conditions something not alike to it,
-whatever is alike to the member and conditions anything conditions something alike to that effect and
-not alike to itself. -/
+/-- **What leaves the class follows each alike occurrence (出类随行), at the member's class.** Under a
+class constant up to the net's end at a member's class, where the member conditions something not alike
+to it, whatever is alike to the member and conditions anything conditions something alike to that
+effect and not alike to itself. -/
 theorem «本类出类随行» {R E : «际» α} (hE : «类» E) {m c u : α} (atClass : «本类至终有常» R E m)
     (alike : E c m) (effect : R m u) (outside : ¬ E m u) (goes : ∃ w, R c w) :
     ∃ x, R c x ∧ E u x ∧ ¬ E c x :=
@@ -368,8 +368,8 @@ theorem «本类出类随行» {R E : «际» α} (hE : «类» E) {m c u : α} 
   | .inr stops => match goes with
     | ⟨w, hw⟩ => absurd hw (stops w)
 
-/-- **What leaves the class follows each alike step (出类随行).** Under a class constant up to the net's
-end, where a member conditions something not alike to it, whatever is alike to the member and
+/-- **What leaves the class follows each alike occurrence (出类随行).** Under a class constant up to the
+net's end, where a member conditions something not alike to it, whatever is alike to the member and
 conditions anything conditions something alike to that effect and not alike to itself. Nearly the
 definition of constancy up to the net's end, read at a member whose effects the class does not hold. -/
 theorem «出类随行» {R E : «际» α} (hE : «类» E) (constant : «至终有常» R E) {m c u : α}
@@ -606,7 +606,7 @@ theorem «内外皆缘则二分本类常» {R : «际» α} {P : α → Bool} {m
 
 end Path
 
-/-! ## Neither premise can be dropped -/
+/-! ## Neither premise can be dropped from these laws -/
 
 namespace Unclosed
 

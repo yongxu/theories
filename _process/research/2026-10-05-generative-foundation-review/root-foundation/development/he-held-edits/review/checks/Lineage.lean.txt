@@ -1,0 +1,12 @@
+import Becoming.Identity
+import Lean
+open Lean Elab Command
+#eval show CommandElabM Unit from do
+  let env ← getEnv
+  for n in [`Becoming.Web.Lineage.unique, `Becoming.Web.Lineage.origin, `Becoming.Web.Lineage.split, `Becoming.Web.Lineage.through, `Becoming.Web.Lineage.onward, `Becoming.Web.Lineage.back] do
+    match env.find? n with
+    | some ci =>
+      let cs := (ci.value?.map (·.getUsedConstants)).getD #[]
+      let cs := cs.filter (fun c => (`Becoming).isPrefixOf c && !(`Becoming.Web.Lineage).isPrefixOf c)
+      logInfo m!"{n} uses {cs.toList}"
+    | none => logInfo m!"{n} missing"

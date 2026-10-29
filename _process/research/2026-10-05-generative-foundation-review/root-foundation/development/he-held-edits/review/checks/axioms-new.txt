@@ -1,0 +1,6 @@
+# Axioms.lean.txt (compiled as a .lean file) against the new build
+'Becoming.kept_onward' does not depend on any axioms
+'Becoming.«保之像»' does not depend on any axioms
+'Becoming.total_eq_of_supports' does not depend on any axioms
+'Becoming.factors_image' does not depend on any axioms
+'Becoming.Image.least' does not depend on any axioms

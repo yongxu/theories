@@ -1,0 +1,27 @@
+# Environment comparison: every constant of the package, old build vs new build
+# old: main a15457b2e, receipt 20261029T162632.074811Z (346 modules); new: he-pre, receipt 20261029T165328.855758Z (345 modules)
+# olean trees assembled from the checker's cache by assemble.py (digests checked against the cache entries):
+20261029T162632.074811Z modules 346 assembled 346 missing []
+20261029T165328.855758Z modules 345 assembled 345 missing []
+# dumps (gen_dump.py driver; not kept, 76 MB each):
+f65df9ec8a8268de4e4ab169080159370b96b551936e5cedf443056fa780c9ad  dump-old.tsv
+eadb2a35ca7a7861b3a64cbd1c3257f4ef97960d82b66193fa4dc38d0184ee56  dump-new.tsv
+   49985 dump-old.tsv
+   49984 dump-new.tsv
+# compare.py:
+constants old 49972 new 49971
+gone ['Becoming.Image.least.match_1_1']
+added []
+moved [('Becoming.kept_onward', 'Becoming.KeptOnward', 'Becoming.GrammarLaws'), ('Becoming.kept_onward.match_1_1', 'Becoming.KeptOnward', 'Becoming.GrammarLaws'), ('Becoming.total_eq_of_supports', 'Becoming.KeepingWidening', 'Becoming.Dissipation'), ('Becoming.«保之像»', 'Becoming.GrammarTransport', 'Becoming.GrammarLaws'), ('Becoming.«保之像».match_1_1', 'Becoming.GrammarTransport', 'Becoming.GrammarLaws')]
+kind changed []
+universe params changed []
+type changed ['Becoming.kept_onward.match_1_1', 'Becoming.«保之像».match_1_1']
+value hash changed 2
+    ('Becoming.Image.least', 'theorem', 'Becoming.Mechanism')
+    ('Becoming.factors_image', 'theorem', 'Becoming.Mechanism')
+modules old 345 new 344 modules only in old ['Becoming.KeptOnward'] only in new []
+per-module constant count changes {'Becoming.GrammarLaws': (324, 328), 'Becoming.KeepingWidening': (572, 571), 'Becoming.Dissipation': (346, 347), 'Becoming.Mechanism': (58, 57), 'Becoming.GrammarTransport': (121, 119), 'Becoming.KeptOnward': (2, 0)}
+# hyg.py (auxiliary matchers, hygienic binder names masked):
+Becoming.kept_onward.match_1_1 types equal after masking hygienic binder names: True | value hashes 2486629064 2486629064
+Becoming.«保之像».match_1_1 types equal after masking hygienic binder names: True | value hashes 1242574444 1242574444
+constants whose types differ after masking hygiene: 0

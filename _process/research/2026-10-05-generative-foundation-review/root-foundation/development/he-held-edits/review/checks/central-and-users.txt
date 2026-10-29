@@ -1,0 +1,30 @@
+# Central declarations (COVERAGE.json rows, 118 distinct): does the transitive closure of the constants their type and proof use reach any constant of a Becoming.Grammar* module, and does it pass through factors_image or Image.least? (gen_central.py; both builds)
+# This is a cruder criterion than measure_grammar.py's (any Becoming.Grammar* constant, not only «» names); it shows only whether HE changes anything.
+central declarations: 118 118
+reaching a Becoming.Grammar* constant: old 65 new 65
+newly reaching: [] | no longer reaching: []
+central declarations depending on factors_image or Image.least (new build): []
+0818b4cd0357d02ea7a4923db3f0efafcd0239e9d253ddb7701cc54d05879257  central-old.tsv
+bc5a78a6972171cd9e1d16c1a39692d4c6dcfb8c12b7fb970c868cc2d75267dc  central-new.tsv
+
+# Direct users of the five declarations in the new build (Users.lean: every constant whose value names one of them)
+Becoming.factors_image used directly by 6: [Becoming.exact_law_iff,
+ Becoming.image_determinedAt_iff,
+ Becoming.factorsThrough_iff_image,
+ Becoming.image_exact_iff,
+ Becoming.Run.not_fixesThrough_of_goAlike,
+ Becoming.carries_law_iff]
+Becoming.Image.least used directly by 1: [Becoming.factorsThrough_iff_image]
+Becoming.kept_onward used directly by 8: [Becoming.Web.active_back,
+ Becoming.Web.ByPassing.trace,
+ Becoming.Web.ended_for_good,
+ Becoming.Web.active_before,
+ Becoming.Web.ByPassing.present_earlier,
+ Becoming.Web.inactive_of_not_arising,
+ Becoming.Web.steady_held,
+ Becoming.Web.ByPassing.line_back]
+Becoming.«保之像» used directly by 4: [Becoming.factors_image,
+ Becoming.run_image,
+ Becoming.Image.least,
+ Becoming.run_iff_image]
+Becoming.total_eq_of_supports used directly by 2: [Becoming.KindRelay.Fed.dissipative, Becoming.KindRelay.conserving]

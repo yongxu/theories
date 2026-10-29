@@ -21125,3 +21125,58 @@ Output→input: conditioning-by-restriction, free-energy-bounds-surprisal, expec
 **The review and the fix round.** An independent read-only review by another AI agent ([REVIEW-UE20](development/ue20-fep-in-the-theory/REVIEW-UE20.md)) checked every Lean name and link, the attributions against the records and four papers at their sources, and the page against the plan's list of quantities and claims. It found the links and names right and the summaries saying more than their sources: readings stated as laws, a witness stated as a law, a free energy counted among the readings alike at the step where it can differ, two wrong sentences on the papers' simulations and on refutation, and claims left unplaced. Its fourteen findings are all taken: the readings labelled, the held pair marked as a witness, the free energy placed before the break registers with no action changing the supply, the simulations and refutation conditions stated paper by paper, the three statements under the laws of a code placed and not counted, and §5 completed. The reviewer then re-checked the fold ([RECHECK-UE20](development/ue20-fep-in-the-theory/RECHECK-UE20.md)): twelve findings taken soundly and two in part, with five findings, every one taken: the code law's conditions and the papers' systems for the three statements under it, the ecosystems paper's sentence on shared goals read as a guarantee, expected free energy's source, the pool's pairwise law beside collective knowledge, kept apart from the reading drawn from it, and the uniqueness clause in 05 §9's words.
 
 **Decisions at landing.** The page sits in `theories/becoming/` beside the collective-direction page, linked from 03 §6 after the free-energy laws, from 08 §8's bullet on UE1's record and from the plan. The reviewed draft became the page by a move, so no copy stays beside it. UE1's record already reads as a containment with its third parts, brought there by UE16 and UE19, so it is unchanged. With UE20 the plan's "done when" holds: UE16 to UE20 landed after a review and a re-check, every quantity and claim of the plan's list has a record, and the page places each claim.
+
+## 455. The held edits, in one near-full rebuild (HE)
+
+Edits held "for the next full rebuild" slip when a rebuild comes without them: OC5's approved wording for `Becoming.GrammarPath` missed WRP2's rebuild of that module. So the coordinating session asked for one landing that rebuilds the package once, on purpose, after a rehearsal outside the repository, and applies every edit held for a rebuild ([design](development/he-held-edits/DESIGN.md)). The board's row listed them, so no later rebuild had to remember them.
+
+```text
+Result(s): records what-a-line-holds-and-a-regularity-takes-in (its owner's wording), master-laws-on-the-grammar,
+       processes-represented-both-ways and what-keeping-widening-needs changed; the records pinning the changed
+       sources re-pointed; no new record.
+Delta: (1) OC5's findings 8 and 18, by their owner's script (oc-own-class/deferred_grammarpath.py), word for word as
+       approved on 27 October: "neither premise can be dropped from these laws", and "what leaves the class follows each
+       alike occurrence", in GrammarPath's docstrings, 07 §4.6, the root module, the checker's scope, the record, the
+       apart register and regions.json; the script checks every edit before it writes.
+       (2) GrammarLaws' module doc says what OU3f's lineage part (§451) showed: the lineage laws are among the models'
+       step-indexed laws proved from the laws of steps counted, and the clause naming them as not shown goes.
+       (3) kept_onward moves from Becoming.KeptOnward to its home beside «线则所闭» in GrammarLaws (OU3f's closure
+       design, condition 3). The leaf is retired: its file goes to the Lean history folder with its bytes, by
+       research.py move (batch HE-history, its manifest and receipt), and its imports, the checker's core list and
+       scope sentence, the root module's import and bullet and the README rows go. GrammarLaws' closure texts name it,
+       with the models' activity laws that keep a region along the steps by their own induction as its cases.
+       (4) the clock run beside Run.reach in Frame: nothing to move; it existed only in the closure's first draft.
+       (5) total_eq_of_supports moves from KeepingWidening to beside total_le_of_support in Dissipation (GW3–GW5).
+       (6) «保之像» moves from GrammarTransport to beside «像» in GrammarLaws, and Mechanism's factors_image and
+       Image.least are proved as its cases (U2's design §6; OU's owner for Mechanism under rule 3's fallback, and
+       GrammarTransport's owner, agreeing). The texts follow: GrammarLaws' lumping bullet, 01 §7's lumping bullet, the
+       root module's bullets, the checker's scope (under lumping) and the README rows.
+       Every statement and name is unchanged. GrammarLaws has 138 theorems in 162 declarations; the run holds
+       347 modules.
+Supplied premises / correspondence: none.
+Evidence: core receipt 20261029T184601.050950Z, every axiom report empty, after a near-full pre-rehearsal and a rehearsal on main
+       outside the repository. The signature audit (he_signatures.py) shows every statement of the twelve changed
+       modules printing as before, three declarations moving module (kept_onward, «保之像», total_eq_of_supports),
+       Becoming.KeptOnward gone from the run, and one docstring line the source scanner reads as a definition reported
+       as the scanner's. The move receipt (_process/architecture/moves/HE-history.json) holds KeptOnward's bytes. The
+       connectivity check is clean, and the measure is unchanged.
+Boundary: none of the six changes a statement; Mechanism's two image lemmas are derived, and the rest are moves and
+       wording.
+Output → input: the records; 01 §7; 07 §4.6; 08's counts; the root module, the checker and the README rows; the Lean
+       history folder; the master-law view.
+```
+
+**The review, and what was taken.** One independent read-only review by a separate AI agent ([REVIEW-HE](development/he-held-edits/review/REVIEW-HE.md)), every finding taken. It rebuilt both builds from the checker's cache and compared every constant of the package. The only differences are the three moves, one matcher of the old proof gone and two re-proved values, and the 1,366 declarations of the thirteen modules print byte for byte alike. Mechanism's two lemmas are genuine cases of «保之像», and item 1 is applied exactly as its owner's script writes it. What was taken:
+- the record script's halfway stop, fixed before the review ended;
+- two validation scopes brought to HE, and the receipt referenced wherever a new binding uses it;
+- one date for every line, the day of the landing;
+- the landed row moved to the history file, and the head claim guarded against jumping the queue;
+- OU3f's row brought to `kept_onward`'s new home;
+- GrammarLaws' doc claiming no more than the Lean: some of the step-indexed laws, and the activity laws that keep a region along the steps by their own induction;
+- the README rows;
+- «保之像» filed under lumping in the checker's scope;
+- this section's account of the move and the review;
+- a stale heading in GrammarTransport, wrapping and a double blank line;
+- the history move checked by `research.py move --check`.
+
+The doc fixes changed GrammarLaws, so the rehearsal was run again before the head was claimed. One rebuild still carries every held edit.

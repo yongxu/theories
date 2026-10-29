@@ -1,5 +1,4 @@
 import Becoming.Regions
-import Becoming.KeptOnward
 
 /-!
 # Retaining: what one level path keeps of another

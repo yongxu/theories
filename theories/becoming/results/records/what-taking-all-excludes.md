@@ -82,6 +82,7 @@ The chapter's open programme (section 8.2, "Continuation (§6.7) and feeding") n
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 
 Aliases: `what taking all that is given excludes`, `取尽所给所排除的`, `competitive exclusion`, `竞争排除`, `taking all that is given`, `取尽所给`, `the joint course that keeps all`, `全部保持的联合进程`, `admission does not see exclusion`, `容纳看不见排除`
 

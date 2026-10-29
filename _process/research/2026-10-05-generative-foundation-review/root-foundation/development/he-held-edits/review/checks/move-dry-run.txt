@@ -1,0 +1,102 @@
+# research.py move planner (move_dry_run.py), read-only, on the branch checkout at db4f978ae (he_lean.py not applied, so the README rows still link the leaf); "<lean>/" stands for experiments/integrated-correction/general-framework/generative-basis/lean/, written so to keep this log out of the move's own path scan
+{
+ "summary": {
+  "batch": "HE-history",
+  "entries": 1,
+  "files_moved": 1,
+  "conflicts": 0,
+  "live_files_rewritten": 3,
+  "references_rewritten": 4,
+  "references_by_kind": {
+   "json-path": 2,
+   "markdown-link": 2
+  },
+  "rewritten_links_not_resolving_after_move": 0,
+  "generated_pages_to_rerender": 6,
+  "frozen_files_referring_by_role": {},
+  "unrewritten_live_mentions": 2,
+  "moved_markdown_links_broken_by_move": 0,
+  "untracked_or_ignored_left_behind": 0
+ },
+ "conflicts": [],
+ "moves": [
+  {
+   "old_path": "<lean>/becoming/Becoming/KeptOnward.lean",
+   "new_path": "<lean>/history/becoming/Becoming/KeptOnward.lean",
+   "sha256": "03c8a10d52b81a091be8473c3afd26ffd1b66ac31306817db94dfb8ca215d4eb",
+   "blob": "4696882307f3c176ad1736556c81f52c8781d5f6",
+   "reason": "HE (29 October 2026): its one declaration, kept_onward, moved to its home beside «线则所闭» in Becoming.GrammarLaws under its name, so the leaf is retired; bytes as on main"
+  }
+ ],
+ "rewrites": [
+  {
+   "path": "<lean>/becoming/README.md",
+   "old_sha256": "076d80876c9bcdb2601a01e6667fa6fa7e666de556a4e5e328f907388c3c8dfb",
+   "new_sha256": "f36eb0a08db502305c61706e774bf34a32133775c9f1296dbc93abe878aff40e",
+   "changes": [
+    {
+     "kind": "markdown-link",
+     "line": 36,
+     "old": "Becoming/KeptOnward.lean",
+     "new": "../history/becoming/Becoming/KeptOnward.lean",
+     "resolves": true
+    }
+   ]
+  },
+  {
+   "path": "<lean>/becoming/README.zh.md",
+   "old_sha256": "8ec339e8ebec7343e0d6631068ce4878f22158284683028ffeb9d72db82f6213",
+   "new_sha256": "d51f2317ae9d11b2aaf16138f13fc15c234fe9418757b2e4279ccff36497f95d",
+   "changes": [
+    {
+     "kind": "markdown-link",
+     "line": 36,
+     "old": "Becoming/KeptOnward.lean",
+     "new": "../history/becoming/Becoming/KeptOnward.lean",
+     "resolves": true
+    }
+   ]
+  },
+  {
+   "path": "theories/becoming/results/records/master-laws-on-the-grammar.json",
+   "old_sha256": "fa6c3da35b1fd8149e823e4fa7836af10c06f0ec015797d1d20341fb80557cd0",
+   "new_sha256": "ed373826046e249aa3463ad71dab8b8edbd364d0431e3595ab6d6679957bf3a0",
+   "changes": [
+    {
+     "kind": "json-path",
+     "line": 1083,
+     "old": "<lean>/becoming/Becoming/KeptOnward.lean",
+     "new": "<lean>/history/becoming/Becoming/KeptOnward.lean"
+    },
+    {
+     "kind": "json-path",
+     "line": 1477,
+     "old": "<lean>/becoming/Becoming/KeptOnward.lean",
+     "new": "<lean>/history/becoming/Becoming/KeptOnward.lean"
+    }
+   ]
+  }
+ ],
+ "generated_pages_to_rerender": [
+  "theories/becoming/results/LEAN-DECLARATIONS.md",
+  "theories/becoming/results/LEAN-INDEX.md",
+  "theories/becoming/results/data/lean-index.json",
+  "theories/becoming/results/data/source-index.json",
+  "theories/becoming/results/lean-declarations/becoming-core.md",
+  "theories/becoming/results/records/master-laws-on-the-grammar.md"
+ ],
+ "unrewritten_live_mentions": [
+  {
+   "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he-held-edits/kit/he-history.tsv",
+   "line": 1,
+   "path": "<lean>/becoming/Becoming/KeptOnward.lean"
+  },
+  {
+   "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he-held-edits/review/checks/kit-reproduction.txt",
+   "line": 25,
+   "path": "<lean>/becoming/Becoming/KeptOnward.lean"
+  }
+ ],
+ "moved_markdown_links_broken_by_move": [],
+ "untracked_or_ignored_left_behind": []
+}

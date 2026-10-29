@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "batch": "HE-history",
+  "date": "2026-10-29T18:45:42+00:00",
+  "base_commit": "2043d740394cb31521769c1cac07a7b843351231",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeptOnward.lean",
+      "new_path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/KeptOnward.lean",
+      "sha256": "03c8a10d52b81a091be8473c3afd26ffd1b66ac31306817db94dfb8ca215d4eb",
+      "blob": "4696882307f3c176ad1736556c81f52c8781d5f6",
+      "reason": "HE (30 October 2026): its one declaration, kept_onward, moved to its home beside «线则所闭» in Becoming.GrammarLaws under its name, so the leaf is retired; bytes as on main",
+      "plan_entry": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeptOnward.lean"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "theories/becoming/results/records/master-laws-on-the-grammar.json",
+      "old_sha256": "fa6c3da35b1fd8149e823e4fa7836af10c06f0ec015797d1d20341fb80557cd0",
+      "new_sha256": "ed373826046e249aa3463ad71dab8b8edbd364d0431e3595ab6d6679957bf3a0",
+      "references": 2
+    }
+  ],
+  "history_roots": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/history"
+  ],
+  "generated_pages_to_rerender": [
+    "theories/becoming/results/LEAN-DECLARATIONS.md",
+    "theories/becoming/results/LEAN-INDEX.md",
+    "theories/becoming/results/data/lean-index.json",
+    "theories/becoming/results/data/source-index.json",
+    "theories/becoming/results/lean-declarations/becoming-core.md",
+    "theories/becoming/results/records/master-laws-on-the-grammar.md"
+  ],
+  "verification_errors": []
+}

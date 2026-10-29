@@ -1,10 +1,10 @@
 {
- "commit": "162cd261965329bc29ef2ba018b19f31828c5a2c",
+ "commit": "2043d740394cb31521769c1cac07a7b843351231",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261029T162632.074811Z",
+ "core_receipt_at_commit": "20261029T164943.729811Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 348,
- "constants": 50165,
+ "tracked_modules": 347,
+ "constants": 50164,
  "spine_theorems": 16932,
  "base": {
   "Process family": [
@@ -221,7 +221,7 @@
   ],
   "Becoming.GrammarLaws": [
    31,
-   136
+   138
   ],
   "Becoming.ShownOrder": [
    28,
@@ -241,7 +241,7 @@
   ],
   "Becoming.GrammarTransport": [
    24,
-   54
+   53
   ],
   "Becoming.HexagramSites": [
    23,
@@ -657,7 +657,7 @@
   ],
   "Becoming.KeepingWidening": [
    2,
-   249
+   248
   ],
   "Becoming.ScoreRepresentation": [
    2,
@@ -770,7 +770,7 @@
  },
  "rings": {
   "core": {
-   "modules": 332,
+   "modules": 331,
    "theorems": 16172,
    "apart": 1638,
    "classes": {
@@ -896,12 +896,12 @@
  "records_by_best_alias_class": {
   "statement on both families": 83,
   "statement on Process/Frame/Run/Trace": 171,
-  "statement on World/Flow/Web": 133,
+  "statement on World/Flow/Web": 134,
   "statement on the base only through a law of its own module": 5,
   "proof through a base family": 5,
   "used by a theorem on the base": 11,
   "instance on the base recorded": 1,
-  "apart: own vocabulary": 34
+  "apart: own vocabulary": 36
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -1098,6 +1098,12 @@
    ]
   },
   {
+   "id": "what-seeking-cannot-separate",
+   "modules": [
+    "Becoming.LumpedSeeking"
+   ]
+  },
+  {
    "id": "what-the-claims-do-not-read",
    "modules": [
     "Becoming.Lexical"
@@ -1107,6 +1113,12 @@
    "id": "what-the-dynamics-leave-open",
    "modules": [
     "Becoming.Significance"
+   ]
+  },
+  {
+   "id": "what-the-existence-claim-forbids",
+   "modules": [
+    "Becoming.Blanket"
    ]
   }
  ],
@@ -2344,6 +2356,7 @@
   "Becoming.«定前则线可退»": "used by a theorem on the base",
   "Becoming.«线则及»": "used by a theorem on the base",
   "Becoming.«线则所闭»": "used by a theorem on the base",
+  "Becoming.kept_onward": "used by a theorem on the base",
   "Becoming.«线有限不并则回»": "used by a theorem on the base",
   "Becoming.«线有限不并则返»": "used by a theorem on the base",
   "Becoming.«线有限定前则返»": "used by a theorem on the base",
@@ -2370,6 +2383,7 @@
   "Becoming.«同行之历»": "used by a theorem on the base",
   "Becoming.«同行之迭»": "used by a theorem on the base",
   "Becoming.«同行于迭»": "apart: own vocabulary",
+  "Becoming.«保之像»": "used by a theorem on the base",
   "Becoming.«像定后当且仅当同行»": "used by a theorem on the base",
   "Becoming.«逾则不则»": "used by a theorem on the base",
   "Becoming.«广则不则»": "apart: own vocabulary",
@@ -2389,7 +2403,6 @@
   "Becoming.«一一对应».to_eq_iff": "used by a theorem on the base",
   "Becoming.«尽之拉回»": "used by a theorem on the base",
   "Becoming.«延之拉回»": "used by a theorem on the base",
-  "Becoming.«保之像»": "used by a theorem on the base",
   "Becoming.«谓之自反»": "apart: own vocabulary",
   "Becoming.GrammarTransport.map_replicate": "used by a theorem on the base",
   "Becoming.«对应之像»": "used by a theorem on the base",
@@ -2468,7 +2481,6 @@
   "Becoming.ChoiceOccasions.Untried.both_accord": "apart: own vocabulary",
   "Becoming.ChoiceOccasions.Untried.same_search_met": "apart: own vocabulary",
   "Becoming.ChoiceOccasions.Untried.same_search_after": "apart: own vocabulary",
-  "Becoming.kept_onward": "used by a theorem on the base",
   "Becoming.World.of_web": "statement on both families",
   "Becoming.World.of_flow": "statement on both families",
   "Becoming.Run.window_trace": "statement on Process/Frame/Run/Trace",
@@ -5123,6 +5135,7 @@
   "Becoming.total_eq_zero": "used by a theorem on the base",
   "Becoming.total_le_at": "used by a theorem on the base",
   "Becoming.total_le_of_support": "used by a theorem on the base",
+  "Becoming.total_eq_of_supports": "used by a theorem on the base",
   "Becoming.insertNew_spec": "used by a theorem on the base",
   "Becoming.adjoin_spec": "used by a theorem on the base",
   "Becoming.Amounts.whole_sum": "used by a theorem on the base",
@@ -16325,7 +16338,6 @@
   "Becoming.Source.closed": "statement on World/Flow/Web",
   "Becoming.Source.not_gainless": "statement on World/Flow/Web",
   "Becoming.Source.from_nothing": "statement on World/Flow/Web",
-  "Becoming.total_eq_of_supports": "used by a theorem on the base",
   "Becoming.KindRelay.parity_two": "used by a theorem on the base",
   "Becoming.KindRelay.odd_of_next_even": "used by a theorem on the base",
   "Becoming.KindRelay.every_form": "used by a theorem on the base",
