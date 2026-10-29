@@ -33,17 +33,17 @@ LAWS = [
     ('transmission-is-inheritance-and-need', 'Becoming.Web.transmits_at_iff', M + 'transmits_at_reading',
      [M + 'transmits_at_reading', M + 'transmits_at_one_kind', M + 'inheritsAt_iff', M + 'needsWithinAt_iff'],
      "At the occurrence model, transmission at a descent is two inclusions. What the descendant requires of a "
-     "condition at its first step, read from the giver and carried back one step along the names, the giver "
-     "requires; and the pair, where both require it, lies within the need within δ, read from amounts with an "
-     "addition.",
-     "在出现模型上，一次传承处之传递即二包含。后代于其首步对某条件之所需，自给予者读出并沿名字回退一步，给予者亦需之；二者皆需之时，此对含于 δ 内之需，一以加法由量读出之关系。"),
+     "condition at the step after the giving step, read from the giver and carried back one step along the names, "
+     "the giver requires; and the pair, where both require it, lies within the need within δ, read from amounts "
+     "with an addition.",
+     "在出现模型上，一次传承处之传递即二包含。后代于给予之步之次步对某条件之所需，自给予者读出并沿名字回退一步，给予者亦需之；二者皆需之时，此对含于 δ 内之需，一以加法由量读出之关系。"),
     ('learning-through-a-map-is-tracking-in-the-limit', 'Becoming.Limit.identifies_iff_tracks',
      M + 'identifies_iff_reading',
      [M + 'identifies_iff_reading', M + 'tracks_iff', M + 'withinSteps_iff_le'],
-     "On the step index, identification reads its horizon through the steps' closure: on each run, from some "
-     "horizon, the closure of the steps from it lies within agreement with the constant target, coming no earlier "
-     "being lying within that closure.",
-     "在步之指标上，辨识以诸步之闭包读其界：于每一历程，自某界起，由之出发之诸步闭包含于与恒定目标之一致；不早于即在该闭包之中。"),
+     "At a process's model, identification reads its horizon through the closure of the steps on the step index: "
+     "on each run, from some horizon, the closure of the steps from it lies within agreement with the constant "
+     "target, coming no earlier being lying within that closure.",
+     "在过程之模型上，辨识以步之指标上诸步之闭包读其界：于每一历程，自某界起，由之出发之诸步闭包含于与恒定目标之一致；不早于即在该闭包之中。"),
     ('what-a-finite-stretch-verifies', 'Becoming.Ideals.verifiableBy_iff_interior', M + 'verifiableBy_reading',
      [M + 'verifiableBy_reading', M + 'interiorBy_iff', M + 'member'],
      "On one carrier of points and stretches, a reading is verifiable exactly where every point it holds bears "
@@ -53,24 +53,25 @@ LAWS = [
      M + 'significant_iff_held_reading',
      [M + 'significant_iff_held_reading', M + 'significant_iff_reading', M + 'selfSignificance_iff_reading',
       M + 'shares_iff_reading', M + 'held_iff_reading'],
-     "On the claims, with regions as partial identities: where living lies within the own regions together, living "
-     "lies within every position's significance exactly where each position's own living lies within its "
-     "significance (S0) and what is living and significant from one position lies within every other's (N_std).",
-     "在主张上，域以部分恒等持之：当活者含于诸自有域之合中，活者含于每一位置之意义，恰当每一位置自有之活者含于其意义（S0），且自一位置为活且有意义者含于每一其他位置之意义（N_std）。"),
+     "On the claims, with regions as partial identities: where every living claim lies within some position's own "
+     "region, living lies within every position's significance exactly where each position's own living lies "
+     "within its significance (S0) and what is living and significant from one position lies within every "
+     "other's (N_std).",
+     "在主张上，域以部分恒等持之：当每一活主张皆含于某一位置之自有域，活者含于每一位置之意义，恰当每一位置自有之活者含于其意义（S0），且自一位置为活且有意义者含于每一其他位置之意义（N_std）。"),
     ('continuation-condition-yields-living-significance', 'Becoming.Web.significance_undetermined',
      M + 'significance_undetermined_reading',
      [M + 'significance_undetermined_reading', M + 'retains_iff', M + 'adds_iff', M + 'livingClaim'],
      "At the model, retaining is an inclusion and adding is exceeding at what the paths admit, met with a region "
-     "of significance. With the empty region, what one path admits with it lies within what every other admits and "
-     "exceeds nothing; with the full region the living claims lie within significance, and with the empty region "
-     "they do not.",
-     "在模型上，保留即包含、增添即超出，于诸路径所容纳者与一意义域相交处读之。以空域，一路径所容纳者含于每一其他路径所容纳者而无所超出；以满域，活主张含于意义之中，以空域则否。"),
+     "of significance. Where a claim lives at the occurrence model: with the empty region, what one path admits "
+     "with it lies within what every other admits and exceeds nothing; with the full region the living claims lie "
+     "within significance, and with the empty region they do not.",
+     "在模型上，保留即包含、增添即超出，于诸路径所容纳者与一意义域相交处读之。凡有一主张于出现模型上为活：以空域，一路径所容纳者含于每一其他路径所容纳者而无所超出；以满域，活主张含于意义之中，以空域则否。"),
     ('joint-difference-making', 'Becoming.Dependence.Overdetermined.only_together', M + 'only_together_reading',
      [M + 'only_together_reading', M + 'overdetermined_iff', M + 'differenceAt', M + 'withholdAll_iff_li'],
      "At a process's model, withholding all parts is passing through their withholdings in turn («历»). Where the "
-     "move's relation meets the breaking from the configuration and from what each withholding leaves, the but-for "
-     "statement for the parts together holds for no single part.",
-     "在过程之模型上，扣除诸部分即依次历经其各扣除（«历»）。当着之关系自该构型及自每一扣除所留者皆与破坏相交，诸部分合之之“若无”陈述于任一单一部分皆不成立。"),
+     "move's relation meets the breaking from the configuration and from what each withholding leaves, parts whose "
+     "but-for statement holds together make the difference only together: it holds for no single one of them.",
+     "在过程之模型上，扣除诸部分即依次历经其各扣除（«历»）。当着之关系自该构型及自每一扣除所留者皆与破坏相交，“若无”陈述合之而成立之诸部分唯合之方造成差别：该陈述于其中任一单一部分皆不成立。"),
     ('joint-difference-making', 'Becoming.Dependence.differenceOnlyTogether_iff', M + 'differenceOnlyTogether_reading',
      [M + 'differenceOnlyTogether_reading', M + 'differenceOnlyTogether_iff_model', M + 'makesDifference_iff',
       M + 'makesDifferenceTogether_iff'],
@@ -81,10 +82,11 @@ LAWS = [
     ('what-a-pools-acts-respond-to', 'Becoming.ExchangeLaw.response_not_fixed_by_coupling',
      M + 'response_not_fixed_reading',
      [M + 'response_not_fixed_reading', M + 'through_iff_inclusion', M + 'couplingAlike', M + 'exchangingAlike'],
-     "On level histories, reading through a coupling is an inclusion of its class in exchanging alike, the meet "
-     "of the classes of what is taken and given. Where a formation couples two histories apart, some such law does "
-     "not relate them by what it takes from a condition, and some has the full relation at every step.",
-     "在水平历史上，经由耦合而读即其类含于同样交换之中，后者为所取与所给之类之交。当一形成将两历史耦合为异，某此类律不依其自某条件所取者关联二者，另一此类律则于每一步皆为满关系。"),
+     "Reading through a coupling is an inclusion of its class in exchanging alike on level histories. Where each "
+     "coupling class of the first history is decided and a formation couples two histories apart up to a step, for "
+     "any condition some such law does not relate them by what the formation takes from it across that step, and "
+     "some has the full relation at every step.",
+     "在水平历史上，经由耦合而读即其类含于同样交换之中。当第一历史之每一耦合类皆已判定，且一形成至某步将两历史耦合为异，则对任一条件，某此类律不依该形成跨该步自此条件所取者关联二者，另一此类律则于每一步皆为满关系。"),
     ('conditions-kept-together', 'Becoming.Viability.kernel_and_iff', M + 'kernel_and_reading',
      [M + 'kernel_and_reading', M + 'kernel_iff'],
      "At a process's model, a kernel is the closure of the steps from a configuration lying within the guard; it "
@@ -95,8 +97,8 @@ LAWS = [
      "At a process's model, with runs as its lines: where each move's relation fixes its successor and two "
      "configurations differ, a move the run's line has not passed through at the configuration before t is "
      "related by no record to one outcome, a record fixing one exactly where every family of relations indexed by "
-     "moves and holding the run's steps does.",
-     "在过程之模型上，以历程为其线：当每一着之关系定其后继且有二构型相异，历程之线于 t 前未于该构型经过之着，不为任何记录关联于单一结果；记录定一结果，恰当每一以着为指标、保有历程诸步之关系族皆定之。"),
+     "moves, each fixing its successor and holding the run's steps before t, does.",
+     "在过程之模型上，以历程为其线：当每一着之关系定其后继且有二构型相异，历程之线于 t 前未于该构型经过之着，不为任何记录关联于单一结果；记录定一结果，恰当每一以着为指标、各定其后继且保有历程于 t 前诸步之关系族皆定之。"),
     ('a-code-formed-between-formations', 'Becoming.SharedCodes.run_agrees_every_start_iff',
      M + 'run_agrees_every_start_reading',
      [M + 'run_agrees_every_start_reading', M + 'runs_agree_iff_reached', M + 'reached_iff', M + 'origin_iff_li',
@@ -109,9 +111,9 @@ LAWS = [
      [M + 'optimum_broken_reading', M + 'rising_iff', M + 'room_iff', M + 'frontier_iff', M + 'metOn_iff',
       M + 'broken_iff'],
      "On outcomes and the occurrence model: where the order contains exceeding on the family, with room beyond, the "
-     "levels after the step eligible and unbeaten, and each condition beyond required and met, a dependence beyond "
-     "is broken across the step exactly where some eligible outcome stands below its need. Exceeding and standing "
-     "lower compare given levels.",
+     "levels after the step eligible and unbeaten, and each condition beyond required and met by the formation named "
+     "on it, a dependence beyond is broken across the step exactly where some eligible outcome stands below its "
+     "need. Exceeding and standing lower compare given levels.",
      "在结果与出现模型上：当序含族上之超出、彼外有余地、步后之水平合格而不被胜、彼外每一条件皆被所需且满足，彼外之一依存跨步被破，恰当某合格结果低于其需。超出与较低皆比较给定之水平。"),
     ('living-on-and-descent', 'Becoming.Web.living_on_reaches', M + 'living_on_reaches_reading',
      [M + 'living_on_reaches_reading', M + 'sustenance_neutral_iff', M + 'neutral_transmits_iff', M + 'livesOn_iff',
@@ -143,16 +145,16 @@ LAWS = [
      "在过程之模型上，以历程为其线，并以诸步之闭包读至 h 之一致：无一于此一致下封闭之历程域，等于焦点形成沿之更新之历程域（在历程之网之出现模型上读）；等价地，该域不如此封闭。"),
 ]
 
-# MV's F5 field (its owner's draft, 30 October 2026, final after its review): on each law at the model,
-# model_statements: [{"states": the row's declaration, "by": the reading's declaration}], "by" among the law's
-# own declarations, "states" a declared reference of the record and not among the law's declarations. Row 24
-# has two readings, the row's form and its statement of closure.
+# The pairs of MV's F5 field. make_records_u2.py writes them in its final shape (mv/F5-MODEL-STATEMENTS.md §1):
+# statements_at_model items {"declaration": the reading, "of": the row, "models": ..., "review": ...}. Here
+# "states" is the item's "of" and "by" its "declaration". Row 24 has two readings, the row's form and its
+# statement of closure.
 EXTRA_READINGS = {'Becoming.Renewable.no_exact_finite_reading': [M + 'renewing_not_closed']}
 
 
-# The models each reading is stated at, from DESIGN §2's Model column (MV's draft 2, 30 October 2026, before
-# its final shape): "occurrence" (a World's occurrence model), "process" (a process's model of its moves'
-# relations) and "own" (the row's own carrier). Rows wholly on their own carrier MV reports apart.
+# The models each reading is stated at, as DESIGN §2's Model column gives them: "occurrence" (a World's
+# occurrence model), "process" (a process's model of its moves' relations, its steps on the step index
+# included) and "own" (the row's own carrier). Rows wholly on their own carrier MV reports apart.
 MODELS = {
     'Becoming.Web.roles_supported': ['occurrence'],
     'Becoming.Web.roles_dependent': ['occurrence'],

@@ -7,9 +7,10 @@ import Becoming.U2Check
 A reachability and mention check, its own test and not OU3b's measure. For each reading it reports:
 whether its proof reaches its row's declaration (through declarations of `Becoming`, grammar constants
 not expanded); the grammar terms its statement names, a grammar term being a «» name other than the
-relation type «际»; and every other constant its statement names that is neither a grammar term, nor
-one of the readings' own named relations (`Becoming.ModelStatements`), nor a relation of WRT2's or
-WRP2's models listed below, nor a constant of Lean's `Init`. That last list is what the reading keeps
+relation type «际»; and every other constant its statement names, expanding the readings' own named
+relations (`Becoming.ModelStatements`) through their definitions, that is neither a grammar term, nor
+one of those relations, nor a relation of WRT2's or WRP2's models listed below, nor a constant of
+Lean's `Init`. That last list is what the reading keeps
 in other terms: the row's own notion on the left of a definitional reading, the model's structures
 and their data, and supplied parameters' types.
 -/
@@ -75,8 +76,24 @@ open Lean
         | none => pure ()
     let stated := info.type.getUsedConstants.toList.eraseDups
     let grammar := stated.filter isGrammarTerm
-    let other := stated.filter fun n => !(isGrammarTerm n) && !(ownRelations n) &&
-      !(modelRelations.contains n) && !(fromInit n)
+    -- what the statement keeps, expanding the leaf's own definitions transitively
+    let mut expanded : NameSet := {}
+    let mut pending : List Name := stated
+    let mut fuel2 := 10000
+    while fuel2 > 0 do
+      fuel2 := fuel2 - 1
+      match pending with
+      | [] => fuel2 := 0
+      | n :: rest =>
+        pending := rest
+        if expanded.contains n then continue
+        expanded := expanded.insert n
+        if ownRelations n then
+          match env.find? n with
+          | some (.defnInfo d) => pending := d.value.getUsedConstants.toList ++ pending
+          | _ => pure ()
+    let other := (expanded.toList.filter fun n => !(isGrammarTerm n) && !(ownRelations n) &&
+      !(modelRelations.contains n) && !(fromInit n)).mergeSort (fun a b => a.toString ≤ b.toString)
     logInfo m!"{reading.getString!} | row reached: {usesRow} | grammar terms: {grammar} | other terms: {other}"
     if !usesRow || grammar.isEmpty then failures := failures.push reading.toString
   unless failures.isEmpty do throwError m!"readings failing the check: {failures}"
