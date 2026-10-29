@@ -492,8 +492,8 @@ def _listed(names):
 FOLLOWS = {'master law': 'a master law', 'balance, represented': 'balance, which the grammar represents',
            'premise of the account': 'a premise of the account', 'counting identity': 'a counting identity',
            'law of its model': 'a law of its model', 'single application': 'a single application',
-           'definitional or representational': 'its definitions (definitional or representational)',
-           'derivation pending': 'a master law, its derivation pending', 'no reason given': 'nothing named (no reason given)'}
+           'definitional or representational': 'its definitions', 'derivation pending': 'a master law, its derivation pending',
+           'no reason given': 'nothing named'}
 ALONE = {'grammar': 'reaching the grammar', 'balance, represented': 'on balance, not reaching the grammar',
          'anchor, not reached': 'on an anchor, not reaching the grammar', 'no master law': "on no master law's anchor"}
 MARKER = re.compile(r"\s*\([A-Z]{2,4}\d+[a-z]?(?:'s review)?\)")  # a work item in the measure's reason, kept off the page
@@ -516,12 +516,25 @@ def master_law_note(r, i, law):
             'anchor, not reached': f'{held} do not reach the grammar',
             'no master law': "no master law's anchor among the constants its declarations use"}.get(e['dependence'], f'{held}: {e["dependence"]}')
     if e.get('defines'):
-        text = 'it defines the anchor ' + ', '.join('`' + a + '`' for a in e['defines']) + '; ' + text
+        a = _listed(['`' + x + '`' for x in e['defines']])
+        text = (f'its declarations include the anchor {a} itself; ' if len(e['defines']) == 1
+                else f'its declarations include the anchors {a} themselves; ') + text
     for c in e.get('central', []):
         why = MARKER.sub('', c.get('reason', ''))
         if why and c['category'] == 'master law':
             why = 'not reaching the grammar: ' + why
-        alone = f' ({ALONE.get(c["dependence"], c["dependence"])} alone)' if c.get('dependence') and c['dependence'] != e['dependence'] else ''
+        if c['category'] == 'master law' and c.get('dependence') == 'grammar' and not why:
+            why = 'by reaching the grammar'
+        if c['category'] == 'definitional or representational':
+            why = 'definitional or representational' + (': ' + why if why else '')
+        if c['category'] == 'no reason given':
+            why = 'no reason given'
+        own = c.get('master_laws')
+        if c.get('dependence') and (c['dependence'] != e['dependence'] or (own is not None and own != e['master_laws'])):
+            on = _listed([m['names'].get(k, k) for k in own]) if own else "no master law's anchor"
+            alone = f' (taken alone: {on}; ' + ('reaching' if c['dependence'] == 'grammar' else 'not reaching') + ' the grammar)'
+        else:
+            alone = ''
         text += (f'; the measure counts central declaration `{c["declaration"]}`{alone} as following from '
                  f'{FOLLOWS.get(c["category"], c["category"])}' + (f' ({why})' if why else ''))
     if e.get('outside'):
@@ -543,11 +556,11 @@ def master_laws_status(records):
                  if law.get('declarations') and (not r.get('_master_laws') or (e := r['_master_laws']['laws'].get(i)) is None
                                                  or e.get('declarations') != law.get('declarations', []))]
     receipt = json.loads((ROOT / CORE_RECEIPT).read_text()) if (ROOT / CORE_RECEIPT).is_file() else {}
-    same = data.get('core_sources_sha256') == hashlib.sha256(json.dumps(receipt.get('source_sha256', {}), sort_keys=True).encode()).hexdigest()
+    same = receipt.get('status') == 'passed' and data.get('core_sources_sha256') == hashlib.sha256(json.dumps(receipt.get('source_sha256', {}), sort_keys=True).encode()).hexdigest()
     changed = sorted(p for p, h in data.get('inputs_sha256', {}).items() if not (ROOT / p).is_file() or digest(ROOT / p) != h)
     return {'measured_against': data.get('core_receipt'), 'latest_core_receipt': receipt.get('utc'),
             'core_sources_current': same, 'inputs_changed': changed, 'from_dump': data.get('from_dump', False),
-            'current': same and not changed and not unmatched,
+            'current': same and not changed and not unmatched and not data.get('from_dump', False),
             'laws_not_matched': len(unmatched), 'first_not_matched': unmatched[:10],
             'refresh': 'python3 -B tools/research/master_laws.py, then make research-render'}
 

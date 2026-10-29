@@ -1,6 +1,7 @@
 """MV: the line under each law from data/master-laws.json, and the check's report of how far the data still matches."""
 import hashlib
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -49,15 +50,16 @@ class MasterLawNote(unittest.TestCase):
 
     def test_central_defines_and_outside(self):
         e = {'master_laws': ['balance'], 'grammar': False, 'dependence': 'balance, represented', 'defines': ['X.a'],
-             'central': [{'declaration': 'X.a', 'category': 'master law', 'dependence': 'anchor, not reached',
+             'central': [{'declaration': 'X.a', 'category': 'master law', 'dependence': 'anchor, not reached', 'master_laws': ['order'],
                           'reason': "a law of its model (OU3d's review)"},
                          {'declaration': 'X.c', 'category': 'premise of the account', 'dependence': 'balance, represented',
-                          'reason': 'support'}],
+                          'master_laws': ['balance'], 'reason': 'support'}],
              'outside': ['Y.b']}
         text = self.note(e, names=('X.a', 'Y.b', 'X.c'))
-        self.assertEqual(text, LABEL + 'it defines the anchor `X.a`; balance; its declarations do not reach the grammar, which represents '
-                         'balance and cannot state it without amounts; the measure counts central declaration `X.a` (on an anchor, not '
-                         'reaching the grammar alone) as following from a master law (not reaching the grammar: a law of its model); '
+        self.assertEqual(text, LABEL + 'its declarations include the anchor `X.a` itself; balance; its declarations do not reach the grammar, '
+                         'which represents balance and cannot state it without amounts; the measure counts central declaration `X.a` '
+                         '(taken alone: order; not reaching the grammar) as following from a master law (not reaching the grammar: a law '
+                         'of its model); '
                          'the measure counts central declaration `X.c` as following from a premise of the account (support); '
                          '1 of its declarations is not in the spine run and not measured, so this holds of the others only.')
         self.assertNotIn('OU3d', text)
@@ -74,19 +76,30 @@ class MasterLawNote(unittest.TestCase):
         empty = {'law': 1, 'declarations': []}
         self.assertEqual(registry.master_law_note({'_master_laws': measured(empty)}, 1, law()), '')  # no declarations
 
+    def test_same_dependence_other_master_laws_and_the_grammar_reason(self):
+        e = {'master_laws': ['closure', 'balance'], 'grammar': True, 'dependence': 'grammar',
+             'central': [{'declaration': 'X.a', 'category': 'master law', 'dependence': 'grammar', 'master_laws': []}]}
+        self.assertTrue(self.note(e).endswith("the measure counts central declaration `X.a` (taken alone: no master law's anchor; reaching "
+                                              "the grammar) as following from a master law (by reaching the grammar)."))
+        d = {'master_laws': [], 'grammar': False, 'dependence': 'no master law',
+             'central': [{'declaration': 'X.a', 'category': 'definitional or representational', 'dependence': 'no master law',
+                          'master_laws': [], 'reason': 'Iff.rfl'}]}
+        self.assertTrue(self.note(d).endswith('as following from its definitions (definitional or representational: Iff.rfl).'))
+
     def test_the_note_is_a_child_of_its_item(self):
-        laws = [law('X.a') for _ in range(11)]
-        e = {'master_laws': [], 'grammar': False, 'dependence': 'no master law'}
-        r = {'schema_version': 2, 'id': 'r', 'title': {'en': 'R'}, 'statement': {'en': 'S.'}, 'laws': laws,
-             '_master_laws': measured(*[{'law': i, 'declarations': ['X.a'], **e} for i in range(1, 12)])}
-        lines = []
-        for i, item in enumerate(r['laws'], 1):  # the render loop's two lines for each law
-            note = registry.master_law_note(r, i, item)
-            lines += [f'{i}. ' + item['en'], ' ' * len(f'{i}. ') + '- ' + note]
-        self.assertTrue(lines[1].startswith('   - '))
-        self.assertTrue(lines[19].startswith('    - '))  # under '10. ', four spaces
-        source = Path(registry.__file__).read_text()
-        self.assertIn("lines += [' ' * len(f'{i}. ') + '- ' + note]", source)
+        recs, _ = registry.load_records()
+        r = next((x for x in recs if len(x.get('laws', [])) >= 10 and x.get('_master_laws')
+                  and registry.master_law_note(x, 10, x['laws'][9])), None)
+        if r is None:
+            self.skipTest('no record with ten laws and data')
+        lines = registry.render_record_v2(r).split('\n')
+        widths = []
+        for i, line in enumerate(lines[:-1]):
+            m = re.match(r'\d+\. ', line)
+            if m and '*Master laws' in lines[i + 1]:
+                widths.append(len(m.group(0)))
+                self.assertTrue(lines[i + 1].startswith(' ' * len(m.group(0)) + '- '), lines[i + 1][:40])
+        self.assertIn(4, widths)
 
 
 class MasterLawsStatus(unittest.TestCase):
@@ -95,12 +108,13 @@ class MasterLawsStatus(unittest.TestCase):
         self.root = Path(self.dir.name)
         (self.root / 'measure.py').write_text('measure')
         self.receipt = self.root / 'receipt.json'
+        self.receipt_status = 'passed'
 
     def tearDown(self):
         self.dir.cleanup()
 
     def status(self, data, records, receipt_sources):
-        self.receipt.write_text(json.dumps({'utc': 'R', 'source_sha256': receipt_sources}))
+        self.receipt.write_text(json.dumps({'utc': 'R', 'status': self.receipt_status, 'source_sha256': receipt_sources}))
         with patch.object(registry, 'ROOT', self.root), patch.object(registry, 'CORE_RECEIPT', 'receipt.json'), \
                 patch.object(registry, 'master_laws', return_value=data):
             return registry.master_laws_status(records)
@@ -127,6 +141,13 @@ class MasterLawsStatus(unittest.TestCase):
         self.assertFalse(changed['current'])
         laws = self.status(self.data(s), [self.record({'declarations': ['X.a']}, {'declarations': ['X.b']}, {'declarations': []})], s)
         self.assertEqual((laws['laws_not_matched'], laws['first_not_matched']), (1, ['a:2']))  # a law with no declarations is not counted
+
+    def test_a_failed_receipt_or_a_saved_dump_is_never_current(self):
+        s = {'Becoming.A': 'h1'}
+        self.receipt_status = 'failed'
+        self.assertFalse(self.status(self.data(s), [self.record({'declarations': ['X.a']})], s)['core_sources_current'])
+        self.receipt_status = 'passed'
+        self.assertFalse(self.status({**self.data(s), 'from_dump': True}, [self.record({'declarations': ['X.a']})], s)['current'])
 
     def test_unmeasured_and_unreadable(self):
         self.assertEqual(self.status({}, [], {}), {'measured': False})

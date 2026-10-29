@@ -4,8 +4,9 @@
 python3 -B tools/research/master_laws.py [--dump PICKLE]
 
 Run after check_becoming.py has passed on the current Lean sources (the constants come from its cache;
-nothing is compiled), then make research-render. The generator refuses to run where the current sources are
-not the ones the latest core receipt checked; with --dump it reads a saved dump and records that it did.
+nothing is compiled), then make research-render. The generator refuses to run where the latest core receipt did
+not pass or did not check the current sources; with --dump it reads a saved dump and records that it did, and the
+check never reads such a file as current.
 
 It reads the measure, unchanged: measure_grammar.py in OU3b's study folder, and the EC measure.py it loads.
 From the measure it takes the anchors of the five master laws (closure, balance, finite runs, lumping, order),
@@ -18,11 +19,12 @@ master-laws.json, giving for each law:
   them reaches its anchor;
 - whether any of them reaches the grammar, as the measure reads it. That is a constant with a «» name,
   vocabulary included (the relation type «际»), so the reach may be through vocabulary alone, which the file
-  marks. The number and list lemmas of Becoming.GrammarLaws do not count, among them finite runs' anchor
-  revisits_within;
+  marks. The number and list lemmas of Becoming.GrammarLaws (no «» name) do not count, so finite runs' anchor
+  Becoming.revisits_within, Becoming.Recurrence's name for the pigeonhole GrammarLaws.revisits_within, does not
+  reach it;
 - the measure's four-way dependence for them together;
 - for each central declaration among them, the measure's category and reason, and its own dependence;
-- the anchors the law itself declares;
+- the anchors that are among the law's own declarations;
 - the declarations the spine run does not have, which the measure cannot read: the Mathlib periphery, the
   older modules, and names a superseded record keeps that the current Lean no longer has.
 
@@ -32,8 +34,8 @@ proof. That does not make it the reason they hold, nor say they state nothing el
 none occurs there, not that the law is no case of a master law: Continuity.Balancing states a balance of its
 own and reaches none. A master law's statement on the grammar (08 §7) does not count; only its anchors do, so
 the grammar's own master-law laws show none. The record pages show the result under each law. The check
-reports how many laws the file no longer matches, and whether the core sources, the measure or this tool
-changed since it was written.
+reports how many laws the file no longer matches, and whether the core sources, the measure, COVERAGE.json, the
+dump or this tool changed since it was written.
 """
 import hashlib, importlib.util, json, os, pickle, sys, tempfile
 from pathlib import Path
@@ -81,6 +83,8 @@ def main():
     ec = mg.ec
     os.chdir(ROOT)
     core = json.loads(CORE.read_text())
+    if core.get('status') != 'passed':
+        sys.exit(f"the latest core receipt ({core.get('utc')}) has status {core.get('status')!r}: run check_becoming.py until it passes")
     from_dump = '--dump' in sys.argv
     if not from_dump:
         lean = CORE.parents[1]  # the receipt's source paths are relative to the lean folder
@@ -90,6 +94,9 @@ def main():
             sys.exit(f'the current Lean sources are not those the latest core receipt checked ({len(changed)} modules, '
                      f'e.g. {changed[:3]}): run check_becoming.py first')
     C = ec.constants()  # honours --dump, as the measure does
+    extra = sorted({x['m'] for x in C.values()} - set(core.get('source_paths', {})))
+    if extra:
+        sys.exit(f'the constants hold modules the latest core receipt did not check: {extra[:3]}')
     with tempfile.TemporaryDirectory(prefix='master-laws-') as scratch:
         dump, report = Path(scratch) / 'constants.pickle', Path(scratch) / 'measure.json'
         with open(dump, 'wb') as f:
@@ -103,6 +110,8 @@ def main():
         measured = json.loads(report.read_text())
     deps = {n: set(x['t']) | set(x['v']) for n, x in C.items()}
     laws = getattr(mg, 'ANCHORS', ec.LAWS)  # the measure's joined map of anchors where it exports one, else EC's
+    if set(laws) != set(NAMES):
+        sys.exit(f'the measure names master laws {sorted(laws)}, MV names {sorted(NAMES)}: update NAMES')
     anchors = {k: [a for a in laws[k] if a in C] for k in NAMES}
     is_anchor = {a for v in anchors.values() for a in v}
     memo = {}
@@ -130,6 +139,7 @@ def main():
         if (g, sorted(hit)) != (row['grammar'], sorted(row['laws'])) or dependence(g, hit) != row['dependence']:
             sys.exit(f'MV and the measure disagree on {row["declaration"]}')
         central[row['declaration']] = {'category': row['category'], 'dependence': row['dependence'],
+                                       'master_laws': [k for k in NAMES if k in row['laws']],
                                        **({'reason': row['reason']} if 'reason' in row else {})}
     records = {}
     counts = {'laws': 0, 'no_declarations': 0, 'outside': 0, **{d: 0 for d in DEPENDENCES}, 'vocabulary_only': 0, **{k: 0 for k in NAMES}}
@@ -175,7 +185,7 @@ def main():
         'about': ('MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by '
                   'tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean '
                   'dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a '
-                  "record's laws, COVERAGE.json or the measure."),
+                  "record's laws, COVERAGE.json, the measure, the dump or this generator."),
         'core_receipt': core['utc'],
         'core_sources_sha256': sources_digest(core),
         'from_dump': from_dump,
