@@ -12,6 +12,11 @@
   "calibration": "the exact logical principle (excluded middle, LPO, WLPO, choice) a stated criterion needs, for a notion the base does not assert; a lemma of the item that needs it"
  },
  "roots": {
+  "Becoming.KindRelay.Fed.not_listed": {
+   "module": "Becoming.KeepingWidening",
+   "category": "model-witness",
+   "reason": "No list holds every condition of the fed kind relay: the fuel of every step is a condition. A fact about one constructed model, used by no other theorem; with Fed.requirements_not_dissipated it says why the laws for dissipated requirements and for a listed world do not reach the fed relay (GW)"
+  },
   "Becoming.RegimeMargin.beyond_draw_iff": {
    "module": "Becoming.RegimeMargin",
    "category": "support",
@@ -4632,11 +4637,6 @@
    "category": "support",
    "reason": "being at the same step is a class: a one-line unpacking of Web.sameStep (WRT2)"
   },
-  "Becoming.«一之像»": {
-   "module": "Becoming.GrammarTransport",
-   "category": "general-structure",
-   "reason": "«一之像»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
-  },
   "Becoming.«住之对应»": {
    "module": "Becoming.GrammarTransport",
    "category": "general-structure",
@@ -4687,11 +4687,6 @@
    "category": "general-structure",
    "reason": "«异之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
   },
-  "Becoming.«所闭之对应»": {
-   "module": "Becoming.GrammarTransport",
-   "category": "general-structure",
-   "reason": "«所闭之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
-  },
   "Becoming.«无环之对应»": {
    "module": "Becoming.GrammarTransport",
    "category": "general-structure",
@@ -4711,11 +4706,6 @@
    "module": "Becoming.GrammarTransport",
    "category": "general-structure",
    "reason": "«类之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
-  },
-  "Becoming.«静之像»": {
-   "module": "Becoming.GrammarTransport",
-   "category": "general-structure",
-   "reason": "«静之像»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
   },
   "Becoming.«或有后则或迭»": {
    "module": "Becoming.GrammarLaws",

@@ -1,0 +1,66 @@
+{
+ "records": 8,
+ "apply": true,
+ "by_record": {
+  "a-pattern-lasts-through-passing": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean"
+   ],
+   "rebound": []
+  },
+  "continuation-relative-to-a-class": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean"
+   ]
+  },
+  "generation-and-degeneration-at-two-grains": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean"
+   ],
+   "rebound": []
+  },
+  "master-laws-on-the-grammar": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean"
+   ]
+  },
+  "tasks-and-what-performs-them": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean"
+   ],
+   "rebound": []
+  },
+  "what-can-be-born-next": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean"
+   ],
+   "rebound": []
+  },
+  "what-keeping-widening-needs": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md"
+   ],
+   "rebound": []
+  },
+  "where-the-possible-grows": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

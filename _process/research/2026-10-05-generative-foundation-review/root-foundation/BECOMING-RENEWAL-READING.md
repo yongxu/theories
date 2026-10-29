@@ -20667,3 +20667,122 @@ Output → input: 03 §11, 03's bases and Open; 05 §8; 07 §6's pointer and its
 2. The search witness evaluates by `rfl` on concrete menus. Its competence (choosing the top of the menu under its order) is shown on those menus only, not for every list.
 3. The two laws added after the cold read were checked by the scratch build and the core receipt, not re-read by a second reader.
 4. Not done: the items in Boundary.
+
+## 447. Processes represented in the grammar both ways (WRP2)
+
+Board item WRP2, designed as WRP ([design](development/process-representation/DESIGN.md), its review and re-read in [REVIEW-WRP](development/process-representation/REVIEW-WRP.md)). It answers the first boundary the record the-world-represented-both-ways names ("Processes; …") and its next step, and, for the part of the no-field layer stated on processes, the question WHAT-REMAINS calls the largest remaining one of the lifting. The Lean was read by one independent reviewer, every finding taken ([REVIEW-WRP2](development/process-representation/REVIEW-WRP2.md)). The work is the AI's.
+
+```text
+Result(s): processes-represented-both-ways (new, home 01 §8.1), with GrammarTransport's additions as its lemmas;
+       master-laws-on-the-grammar (a law added: passing through a word's relations in turn, «历»).
+Delta:
+  - A process is exactly its relations, one per move (moveRel_mk, mk_moveRel), its steps their union; a property of
+    relations shared by relations alike pointwise holds of every process's steps exactly where it holds of every
+    relation (forall_steps_iff), and a property of relations indexed by moves of every process's exactly where of
+    all such (forall_moveRel_iff): a law's truth is carried, its statement only through a bridge per notion.
+  - Converse: every relation is a process's steps (steps_edgeProcess), every class a frame's class of claims
+    (class_is_claims); the model with the move inside has as image exactly the relations leaving the next move
+    open (withMove_image_iff). A renaming relating two processes is a correspondence of these models carrying the
+    steps and the classes of the same move and the same configuration (withMove_of_renaming), and from a
+    configuration and a move every such correspondence is a renaming relating them (renaming_of_withMove), which
+    settles the design's proposed faithfulness; neither class alone suffices (the twist and the flip), and with no
+    move or no configuration a point is needed (NoMoves.not_renamed, NoConfigurations.not_renamed).
+  - A renaming keeps the bridged notions, through the bridges and the terms GrammarTransport keeps: traces with the
+    word renamed letter by letter (renaming_trace), n steps and within n steps, reach, returning, invariants,
+    determination, merging nothing, going alike and going on along some branch (renaming_iterate, renaming_reach,
+    renaming_returns, renaming_invariant, renaming_determined, renaming_lossless, renaming_goAlike, renaming_yan).
+  - Forward bridges where none was landed: enabledness as «能»; a trace as passing through the moves' relations along
+    its word (trace_iff_li); factoring through a map, runs, and going on along some branch as images lying within
+    and families that keep moving; Onward's calibration read on the grammar (yan_line_iff_dependentChoice,
+    yan_line_of_list).
+  - GrammarLaws, by its owner's decision (a): «历», n steps its case for one relation («迭即历»), with its laws;
+    six laws of «迭» proved as their cases, statements and names unchanged (the signature audit, signatures.json:
+    every landed statement and body unchanged, only additions). The core's List.reverse_cons reports propext, so the
+    list lemmas are proved by induction.
+  - GrammarTransport: preserving as an image lying within («保之像»); going on along some branch pulled back along
+    lifting («延之拉回»); passing through a word with its letters renamed, n steps its case, within n steps, closed
+    regions, a fixed successor and predecessor, going alike and going on kept by correspondence; correspondences side
+    by side («一一对应».prod).
+Supplied premises / correspondence: none added; the process model's commitments (types of configurations and moves,
+       Prop-valued steps, runs indexed by Nat); dependent choice only where the calibration names it.
+Evidence: core receipt `20261029T142634.455566Z`; Becoming.GrammarLaws (136 theorems in 160 declarations), Becoming.GrammarTransport (54 theorems in 58 declarations) and
+       Becoming.ProcessRepresentation (52 theorems in 70 declarations), every axiom report empty; the whole package compiles with the three
+       modules and no clash (clash.log); the measure before and after (measure.json).
+Standing: a representation theorem in OU's sense for processes, faithful up to correspondence with the move inside
+       and both classes; most laws near-definitional, lemmas or witnesses; withMove_renamed a genuine converse.
+Boundary:
+  - A statement naming an unbridged process notion stays with its model: of the 1,306 statements binding a process
+    or a frame, those naming notions without a bridge (likeness by bisimulation, stretch orders, branching tests,
+    adherence and others).
+  - That every functional total relation is a determined law's step (unique choice); a product and its factors as
+    one construction (no pairing); a line from going on beyond finitely many configurations without dependent choice.
+  - The theorems of the no-field layer about other structures, which this reading does not reach.
+Output → input: 01 §8.1, its bases line, thesis, claims and Open; 01 §7 for «历»; 08's Open list and counts; the
+       overview; L-21 in the logic dossier; the one page; the glossary; the-world-represented-both-ways' item on
+       processes; OU's correction note on the no-field layer (its owner's).
+```
+
+## 448. Generation and widening, joined one way (GW3–GW5)
+
+Board item GW, from the twenty-first review's §2.3 item 3, studied in [the GW note](development/gw-generation-and-widening/NOTE.md) (its review and re-check in [REVIEW-GW](development/gw-generation-and-widening/REVIEW-GW.md) and [RECHECK-GW](development/gw-generation-and-widening/RECHECK-GW.md)). It answers the open link between the map's 生成 and the ethics' widening, and what-keeping-widening-needs' "a reading on which 全生成 and keeping widening hold together". The Lean was read by one independent reviewer, every finding taken ([REVIEW-GW-LEAN](development/gw-generation-and-widening/REVIEW-GW-LEAN.md)), and the fixes re-checked, every finding taken ([RECHECK-GW-LEAN](development/gw-generation-and-widening/RECHECK-GW-LEAN.md)); the note's §§15–17 say how. GW1 and GW2, the map's coverage and the split on the root, stay a study.
+
+```text
+Result(s): what-keeping-widening-needs (nine laws in place of the exclusion's one, a counterexample, a hypothesis,
+       two does-not-show items, statement and next step); where-the-possible-grows (two laws: the held possible on
+       the map, and its witnesses there); generation-and-degeneration-at-two-grains and
+       a-pattern-lasts-through-passing (a law each widened to its general case, board rule 9).
+Delta:
+  - The law of beginnings: under the World premises with requirements never loosening, along any continuation
+    containing carrying on of the supported, what is supported descends, up to double negation, from what was
+    supported at any earlier step or from the end of a beginning between, a passing of support into a formation
+    nothing supported continues into along it (Flow.descends_or_begun). A beginning is a carrying renewal along
+    passing, and its end begins a line of the reading (BeginsAlong.carries, BeginsAlong.iff_begins).
+  - So keeping opening needs a beginning after every step (begins_late_of_keepsOpening), by name a passing of
+    support (passes_late_of_keepsOpening_byName); not conversely: with dormant carrying on by name, beginnings
+    recur and nothing keeps opening (KindRelay.Runs.beginnings_without_opening).
+  - The ends of the interval of readings: along carrying on while supported or passing support nothing begins, so
+    nothing keeps opening along any continuation containing it; descends_along_passings and its three exclusions
+    are its cases, statements unchanged (board rule 9). Carrying on while supported, as by name, nothing is 全生成
+    (Web.not_generation_of_within_itself, in MapInstances, of which itself_not_generation is now a case).
+  - Within a kind: from a supported giver, a beginning along carrying on while supported or passing within a kind is
+    a carrying renewal along passing at (activity, kind), a renewal one grain up (BeginsAlong.carries_kind_iff).
+  - Where a list holding every condition any formation requires is dissipated on from a step: nothing keeps opening
+    or widening (with the World premises), and nothing supported is 全生成 along passing (with balance on the list
+    alone; Flow.not_generation_of_dissipated_requirements).
+  - Where supports last one step, along every continuation and under every class finer than activity, every endless
+    supported line is 全生成 (Web.generation_of_one_step_supports), since what arises begins a carrier along every
+    continuation (Web.begins_of_arises, in PatternPassing, of which arises_iff_sheng_carrier's forward half is now a
+    case).
+  - The kind relay: six formations of two kinds passing units within and across kinds with period two, the kind
+    chosen so that passings across kinds begin. Within kinds it keeps widening from step 0; every supported
+    occurrence is 全生成 within kinds and at orders 0 and 1 along passing (KindRelay.Runs.generation_two_orders);
+    生生 holds at the kind grain; by name, carrying on while supported, along supported passings and with dormant
+    carrying on it keeps widening from no step, and it returns with period two. It balances, meets the World
+    premises and only active formations taking, conserves and lists its conditions. The fed relay adds fuel for
+    each step, drawn on and taken a unit by each taker and required by none: it is dissipative, the same laws hold,
+    its required conditions conserve and no list holding them is dissipated on (Fed.requirements_not_dissipated).
+  - The held possible on the map: a moment is 全生成 at (the one, a class) exactly where a line under the class
+    begins after every later moment (Steps.generation_iff_begins); so where holding is decided and the held
+    possible keeps widening, every moment is 全生成 at (the one, what is held), and wherever what is held changes at
+    every step; not conversely (Oscillating.generation_without_widening).
+Supplied premises / correspondence: none added beyond the World premises the laws name; the relay's unit amounts,
+       needs of one and kinds given in advance, and the fed relay's condition of fuel for each step.
+Evidence: core receipt `20261029T145758.555114Z`; Becoming.KeepingWidening (249 theorems in 307 declarations), Becoming.HeldPossible (89 in 118),
+       Becoming.MapInstances (28 in 28) and Becoming.PatternPassing (33 in 46), every axiom report empty; the signature
+       audit (development/gw-generation-and-widening/signatures.json): every landed statement and body of the four
+       modules unchanged, only additions; the measures unchanged (measure-grammar-after.json, measure-ec-after.json: 45 of 127 central
+       declarations reach the grammar, 39 rest on no master law); one apart root registered, KindRelay.Fed.not_listed.
+Standing: the law of beginnings near-definitional, the theory's biogenesis read along any reading; the exclusions
+       and the opening laws under dissipation its corollaries; the relay a witness; the held possible's law a
+       restatement on the map.
+Boundary:
+  - Which reading the widening order counts, beyond names; growth by kinds not given in advance; the comparison of
+    two courses.
+  - That renewal gives widening: on the relay 全生成 at two orders and 生生 hold while what can form by name only
+    returns. That a part under dissipation is sustained by supply from beyond: the fed relay's requirements conserve.
+  - The map's coverage, which keeping from some point on would close, and the split on the root (GW1, GW2), studied,
+    not built; 全生成 along a kind reading as order 0 in general, argued.
+Output → input: 07 §2 (the home of what-keeping-widening-needs and where-the-possible-grows), 02's Open item, 01 §6's
+       Reading, D1 and D65 (a paragraph each, no change of reading), the glossary's 生成 row; AJ5's page needs no
+       change.
+```

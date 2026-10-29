@@ -14,41 +14,50 @@ a model in the grammar needs if it is not to depend on how its carrier is named
 | name | reading |
 |---|---|
 | `«一一对应»` | a one-to-one correspondence of carriers: a map with a two-sided inverse |
+| `«一一对应».prod` | correspondences side by side: each coordinate of a pair carried by its own |
 | `«对应之像»` | carrying, read through the grammar's image: `«谓» («像» e.to R) R'` exactly where `R x y ↔ R' (e.to x) (e.to y)` |
 | `«反对应之像»`, `«合成之像»` | the inverse correspondence carries back; composites carry the composite |
 | `«静之像»`, `«一之像»`, `«部分恒等之像»` | identity, the one and a predicate's partial identity are carried |
-| `«合之像»`, `«逆之像»`, `«而之像»`, `«及之像»`, `«则之对应»` | carrying kept by the grammar's operations, and inclusion kept |
+| `«合之像»`, `«逆之像»`, `«而之像»`, `«及之像»`, `«历之像»`, `«迭之像»`, `«则之对应»` | carrying kept by the grammar's operations, by passing through a word (its letters renamed) and by steps, and inclusion kept |
 | `«X之对应»` | the listed term `X` kept by a correspondence carrying what it reads |
-| `«尽之拉回»` | ending on every branch pulled back along a map carrying continuation from a closed region |
+| `«保之像»` | preserving (保), read through the image: `«则» («像» φ R) R'` exactly where `R x y → R' (φ x) (φ y)`; a map preserving a relation, not a relation kept (守) nor two kept each within the other (齐) |
+| `«尽之拉回»`, `«延之拉回»` | ending on every branch pulled back along a map carrying continuation from a closed region; going on along some branch pulled back along a map lifting continuation |
 
 * **Carrying through the image.** That `e` carries `R` to `R'` is written with no new term, as the image of
   `R` along `e.to` being `R'` (`«谓» («像» e.to R) R'`). Along a one-to-one correspondence this is exactly
   being related where the images are (`«对应之像»`). A predicate `P` is carried as its partial identity,
   `«合» «静» (fun x _ => P x)` (`«部分恒等之像»`), the reading 01 §7 gives of what a path admits.
-* **The terms kept.** These are the terms the World's instance theorems and `Becoming.WorldRepresentation`
-  read:
+* **The terms kept.** These are the terms the World's instance theorems, `Becoming.WorldRepresentation`
+  and `Becoming.ProcessRepresentation` read (the last through the bridges of determination, merging
+  nothing, going alike, invariants, reach, returning, traces and going on, which a renaming of a
+  process keeps):
   * the continuation family (`«续»`, `«相续»`, `«有前»`, `«有后»`, `«生»`, `«亡»`, `«住»`, `«异»`,
-    `«复生»`, `«不穷»`, `«同族»`, `«尽»`);
-  * reach and closure (`«及»`, `«所闭»`, `«所及»`);
-  * the class, acyclicity, constancy and the core (`«类»`, `«无环»`, `«有常»`, `«核»`);
+    `«复生»`, `«不穷»`, `«同族»`, `«尽»`, `«延»`);
+  * reach and closure (`«及»`, `«所闭»`, `«所及»`), steps and words (`«迭»`, `«迭内»`, `«历»`) and
+    closed regions (`«闭»`);
+  * the class, acyclicity, constancy and the core (`«类»`, `«无环»`, `«有常»`, `«核»`), and
+    determination and going alike (`«定后»`, `«定前»`, `«同行»`);
   * the map's terms (`«传»`, `«全生成»`, `«全守»`, `«有终»`).
 
   The other terms of the grammar are not stated here; each would be kept the same way, and is added when
   a consumer reads it.
-* **Pulled back along a homomorphism.** Ending on every branch (`«尽»`) reflects along any map that
-  carries continuation from a region closed under it (`«尽之拉回»`): no inverse is needed. `«尽之对应»`
-  is two cases of it, and the World reads the amounts' law of falls ending through it.
+* **Along maps.** A map preserves a relation exactly where the image lies within the other
+  (`«保之像»`), the inclusion counterpart of carrying. Ending on every branch (`«尽»`) reflects along any
+  map that carries continuation from a region closed under it (`«尽之拉回»`), and going on along some
+  branch (`«延»`) along any map that lifts continuation (`«延之拉回»`): no inverse is needed for either.
+  `«尽之对应»` and `«延之对应»` are two cases of each, and the World reads the amounts' law of falls
+  ending through the first.
 
 That a listed term makes its notion keep to correspondences is what is shown here. That every notion
 keeping to correspondences is a term is no statement this embedding of the grammar can make, since it
 has no syntax of terms. Invariance of definable terms under a one-to-one correspondence is a fact of
-the definitional style, so these are lemmas of the World's representation. Every declaration has an
-empty axiom report.
+the definitional style, so these are lemmas of the World's representation and of the processes'
+(`Becoming.ProcessRepresentation`). Every declaration has an empty axiom report.
 -/
 
 namespace Becoming
 
-universe u v w
+universe u v w u'
 
 /-- **A one-to-one correspondence of carriers (一一对应)**: a map with a two-sided inverse. -/
 structure «一一对应» (α : Type u) (β : Type v) where
@@ -76,9 +85,18 @@ theorem to_eq_iff (e : «一一对应» α β) {x y : α} : e.to x = e.to y ↔ 
   ⟨fun same => (e.back_to x).symm.trans ((congrArg e.back same).trans (e.back_to y)),
    fun same => congrArg e.to same⟩
 
+/-- Correspondences side by side: each coordinate of a pair carried by its own correspondence. -/
+def prod {γ : Type w} {δ : Type u'} (e : «一一对应» α β) (e' : «一一对应» γ δ) :
+    «一一对应» (α × γ) (β × δ) :=
+  ⟨fun x => (e.to x.1, e'.to x.2), fun y => (e.back y.1, e'.back y.2),
+   fun ⟨a, c⟩ => (congrArg (fun p => (p, e'.back (e'.to c))) (e.back_to a)).trans
+     (congrArg (fun q => (a, q)) (e'.back_to c)),
+   fun ⟨b, d⟩ => (congrArg (fun p => (p, e'.to (e'.back d))) (e.to_back b)).trans
+     (congrArg (fun q => (b, q)) (e'.to_back d))⟩
+
 end «一一对应»
 
-/-! ## Pulled back along a homomorphism -/
+/-! ## Along maps: pulled back, and preserving -/
 
 /-- **Ending on every branch, pulled back (尽之拉回).** Along a map carrying continuation from a region
 `P` closed under it into continuation of another model, ending on every branch at an image gives it at
@@ -97,9 +115,40 @@ theorem «尽之拉回» {α : Type u} {κ : Type v} {R L : «际» α} {R' L' :
           (closed x y hx c)
   exact fun x hx h => key (φ x) h x rfl hx
 
+/-- **Going on along some branch, pulled back along lifting (延之拉回).** Where every continuation
+step from an image lifts to a continuation step from the source to something read as its end,
+going on along some branch at the image gives it at the source: the region read back keeps going
+on. -/
+theorem «延之拉回» {α : Type u} {κ : Type v} {R L : «际» α} {R' L' : «际» κ} (φ : α → κ)
+    (lifts : ∀ x r, «续» R' L' (φ x) r → ∃ y, «续» R L x y ∧ φ y = r) (x : α) :
+    «延» R' L' (φ x) → «延» R L x :=
+  fun ⟨S', held, goes⟩ => ⟨fun y => S' (φ y), held, fun z inside =>
+    match goes (φ z) inside with
+    | ⟨w', next, c'⟩ => match lifts z w' c' with
+      | ⟨y, c, same⟩ => ⟨y, Eq.subst (motive := S') same.symm next, c⟩⟩
+
+/-- **Preserving, read through the image (保之像).** A map takes every pair `R` relates to a pair `R'`
+relates exactly where the image of `R` along it lies within `R'`. -/
+theorem «保之像» {α : Type u} {κ : Type v} (φ : α → κ) (R : «际» α) (R' : «际» κ) :
+    «则» («像» φ R) R' ↔ ∀ x y, R x y → R' (φ x) (φ y) :=
+  ⟨fun within x y r => within _ _ ⟨x, y, rfl, r, rfl⟩,
+   fun keeps _ _ ⟨x, y, hx, r, hy⟩ => Eq.subst (motive := fun b => R' _ b) hy
+     (Eq.subst (motive := fun a => R' a (φ y)) hx (keeps x y r))⟩
+
 /-- Every relation is the relation it is (`«谓»` is reflexive). -/
 theorem «谓之自反» {α : Type u} (R : «际» α) : «谓» R R :=
   fun _ _ => Iff.rfl
+
+namespace GrammarTransport
+
+/-- Copies read through a map letter by letter are copies of the image, by induction (as
+GrammarLaws' list lemmas are, stated without `simp`). -/
+theorem map_replicate {A : Type w} {B : Type u'} (f : A → B) (c : A) :
+    ∀ n, (List.replicate n c).map f = List.replicate n (f c)
+  | 0 => rfl
+  | n + 1 => congrArg (f c :: ·) (map_replicate f c n)
+
+end GrammarTransport
 
 section Carrying
 
@@ -453,6 +502,77 @@ theorem «有终之对应» (hR : «谓» («像» e.to R) R') (hL : «谓» («
      («所及之对应» hR hL x _).mpr
        (Eq.subst (motive := fun b => «所及» R' L' (e.to x) b) (e.to_back y').symm reached),
      («亡之对应» hR hL _).mpr (Eq.subst (motive := fun b => «亡» R' L' b) (e.to_back y').symm ends)⟩⟩
+
+/-! ## Words, steps, regions, determination and going on -/
+
+/-- **Passing through a word, carried (历之像)**: where each letter's relation is carried to the
+relation of its renamed letter, passing through every word is carried to passing through the renamed
+word. -/
+theorem «历之像» {A : Type w} {B : Type u'} {G : A → «际» α} {G' : B → «际» β} (f : A → B)
+    (hG : ∀ a, «谓» («像» e.to (G a)) (G' (f a))) : ∀ as, «谓» («像» e.to («历» G as)) («历» G' (as.map f))
+  | [] => «静之像»
+  | a :: as => «而之像» (hG a) («历之像» f hG as)
+
+/-- **Passing through a word, kept (历之对应).** -/
+theorem «历之对应» {A : Type w} {B : Type u'} {G : A → «际» α} {G' : B → «际» β} (f : A → B)
+    (hG : ∀ a, «谓» («像» e.to (G a)) (G' (f a))) (as : List A) (x y : α) :
+    «历» G as x y ↔ «历» G' (as.map f) (e.to x) (e.to y) :=
+  «对应之逐点» («历之像» f hG as) x y
+
+/-- **Steps carried (迭之像)**: the case of `«历之像»` for one relation, `«迭»` being passing through a
+word of copies (`«迭即历»`). -/
+theorem «迭之像» (hR : «谓» («像» e.to R) R') (n : Nat) : «谓» («像» e.to («迭» R n)) («迭» R' n) :=
+  («对应之像» e _ _).mpr fun x y =>
+    ((«迭即历» R n x y).symm.trans («历之对应» (G := fun (_ : Unit) => R) (G' := fun (_ : Unit) => R') id
+      (fun _ => hR) (List.replicate n ()) x y)).trans
+    ((Iff.of_eq (congrArg (fun l => «历» (fun (_ : Unit) => R') l (e.to x) (e.to y))
+        (GrammarTransport.map_replicate id () n))).trans («迭即历» R' n (e.to x) (e.to y)))
+
+/-- **Steps kept (迭之对应).** -/
+theorem «迭之对应» (hR : «谓» («像» e.to R) R') (n : Nat) (x y : α) :
+    «迭» R n x y ↔ «迭» R' n (e.to x) (e.to y) :=
+  «对应之逐点» («迭之像» hR n) x y
+
+/-- **Within `n` steps, kept (迭内之对应).** -/
+theorem «迭内之对应» (hR : «谓» («像» e.to R) R') (n : Nat) (x y : α) :
+    «迭内» R n x y ↔ «迭内» R' n (e.to x) (e.to y) :=
+  ⟨fun ⟨k, le, steps⟩ => ⟨k, le, («迭之对应» hR k x y).mp steps⟩,
+   fun ⟨k, le, steps⟩ => ⟨k, le, («迭之对应» hR k x y).mpr steps⟩⟩
+
+/-- **A closed region, kept (闭之对应)**, where membership is carried. -/
+theorem «闭之对应» {P : α → Prop} {P' : β → Prop} (hR : «谓» («像» e.to R) R')
+    (hP : ∀ x, P x ↔ P' (e.to x)) : «闭» R P ↔ «闭» R' P' :=
+  ⟨fun closed u v held r' =>
+    have back : P (e.back u) := (hP (e.back u)).mpr (Eq.subst (motive := P') (e.to_back u).symm held)
+    Eq.subst (motive := P') (e.to_back v)
+      ((hP (e.back v)).mp (closed _ _ back ((«对应之回» hR u v).mp r'))),
+   fun closed x y held r => (hP y).mpr (closed _ _ ((hP x).mp held) ((«对应之逐点» hR x y).mp r))⟩
+
+/-- **A fixed successor, kept (定后之对应).** -/
+theorem «定后之对应» (hR : «谓» («像» e.to R) R') : «定后» R ↔ «定后» R' :=
+  «则之对应» («而之像» («逆之像» hR) hR) «静之像»
+
+/-- **Merging nothing, kept (定前之对应).** -/
+theorem «定前之对应» (hR : «谓» («像» e.to R) R') : «定前» R ↔ «定前» R' :=
+  «则之对应» («而之像» hR («逆之像» hR)) «静之像»
+
+/-- **Going alike, kept (同行之对应).** -/
+theorem «同行之对应» (hR : «谓» («像» e.to R) R') (hE : «谓» («像» e.to E) E') :
+    «同行» R E ↔ «同行» R' E' :=
+  «则之对应» («而之像» («而之像» («逆之像» hR) hE) hR) hE
+
+/-- **Going on along some branch, kept (延之对应)**: two cases of `«延之拉回»`, along `e.back` and
+along `e.to`. -/
+theorem «延之对应» (hR : «谓» («像» e.to R) R') (hL : «谓» («像» e.to L) L') (x : α) :
+    «延» R L x ↔ «延» R' L' (e.to x) :=
+  ⟨fun goes => «延之拉回» e.back
+      (fun u r c => ⟨e.to r, Eq.subst (motive := fun a => «续» R' L' a (e.to r)) (e.to_back u)
+          ((«续之对应» hR hL (e.back u) r).mp c), e.back_to r⟩)
+      (e.to x) (Eq.subst (motive := fun a => «延» R L a) (e.back_to x).symm goes),
+   fun goes => «延之拉回» e.to
+      (fun a r c => ⟨e.back r, («续之对应» hR hL a (e.back r)).mpr
+          (Eq.subst (motive := fun b => «续» R' L' (e.to a) b) (e.to_back r).symm c), e.to_back r⟩)
+      x goes⟩
 
 end Carrying
 

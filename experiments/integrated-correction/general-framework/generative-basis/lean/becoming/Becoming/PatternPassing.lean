@@ -287,7 +287,8 @@ formation). Nothing else is supplied.
   (`Web.byPassing_iff_hasPred`), which is Identity's `Continues` under the passing continuation
   (`Web.byPassing_iff_continues`).
 * **A carrier begins (生) and ends (亡) under the carrier class** exactly where it arises and
-  ceases (`Web.arises_iff_sheng_carrier`, `Web.ceases_iff_wang_carrier`). An alteration (异) of a
+  ceases (`Web.arises_iff_sheng_carrier`, `Web.ceases_iff_wang_carrier`); what arises begins a
+  carrier along every continuation (`Web.begins_of_arises`). An alteration (异) of a
   carrying occurrence, continuation under the pattern's class told apart by the carrier class, is
   a passing (`Web.passesAt_of_alters`); a passing to another formation is an alteration
   (`Web.alters_of_passes`).
@@ -366,13 +367,20 @@ theorem byPassing_iff_hasPred :
     ⟨fun continues t a after => (hasPred_iff_continues after).mpr (continues t a after),
      fun pred t a after => (hasPred_iff_continues after).mp (pred t a after)⟩
 
+/-- **What arises begins a carrier under every continuation**: where `a` arises across the step
+from `t`, along any continuation `(t + 1, a)` has no predecessor alike in activity and of one
+formation. -/
+theorem begins_of_arises {R : Nat → F → F → Prop} {t : Nat} {a : F} (arises : V.Arises t a) :
+    «生» (continuationStep R) V.carrierClass (t + 1, a) :=
+  fun ⟨x, ⟨next, _⟩, ⟨alike, same⟩⟩ =>
+    arises.1 (Eq.subst (motive := fun s => V.active s a) (Nat.succ.inj next).symm
+      (Eq.subst (motive := fun f => V.active x.1 f) same (alike.mpr arises.2)))
+
 /-- **A carrier begins (生) under the carrier class exactly where it arises.** -/
 theorem arises_iff_sheng_carrier {t : Nat} {a : F} :
     V.Arises t a ↔ V.active (t + 1) a ∧
       «生» (continuationStep (passingContinuation passes)) V.carrierClass (t + 1, a) :=
-  ⟨fun ⟨before, after⟩ => ⟨after, fun ⟨x, ⟨next, _⟩, ⟨alike, same⟩⟩ =>
-     before (Eq.subst (motive := fun s => V.active s a) (Nat.succ.inj next).symm
-       (Eq.subst (motive := fun f => V.active x.1 f) same (alike.mpr after)))⟩,
+  ⟨fun arises => ⟨arises.2, begins_of_arises arises⟩,
    fun ⟨after, begins⟩ => ⟨fun before =>
      begins ⟨(t, a), ⟨rfl, .inl rfl⟩, ⟨⟨fun _ => after, fun _ => before⟩, rfl⟩⟩, after⟩⟩
 

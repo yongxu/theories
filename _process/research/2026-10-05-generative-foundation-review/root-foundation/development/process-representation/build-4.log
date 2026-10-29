@@ -1,0 +1,29 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/wrp2/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/tree",
+  "modules": 102,
+  "ran": [
+    "Becoming.ProcessRepresentation",
+    "BecomingProcessRepresentationAxiomAudit"
+  ],
+  "reused": 103,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarLaws": {
+      "theorems": 136,
+      "declarations": 160,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarTransport": {
+      "theorems": 54,
+      "declarations": 58,
+      "with_axioms": {}
+    },
+    "Becoming.ProcessRepresentation": {
+      "theorems": 52,
+      "declarations": 70,
+      "with_axioms": {}
+    }
+  }
+}
+python3 -B scratch_build.py $F/tree  2.98s user 1.21s system 61% cpu 6.821 total
+build exit 0

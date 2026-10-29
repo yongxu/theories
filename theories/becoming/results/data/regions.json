@@ -1416,6 +1416,11 @@
    "base": "old-base",
    "note": "frame/world correspondence, memory gap"
   },
+  "processes-represented-both-ways": {
+   "region": "root",
+   "base": "grammar",
+   "note": "ProcessRepresentation WRP2: processes represented both ways by their moves' relations; a law's truth carried to all relations indexed by moves; the model with the move inside faithful up to correspondence with both classes, a renaming keeping the bridged notions; the forward bridges; GrammarTransport its lemmas"
+  },
   "projection-carrying-a-law": {
    "region": "knowing",
    "base": "frame",
@@ -3537,6 +3542,11 @@
    "region": "root",
    "base": "frame",
    "note": "exact and reduced presentations share kernel"
+  },
+  "Becoming.ProcessRepresentation": {
+   "region": "root",
+   "base": "grammar",
+   "note": "WRP2 processes as models of the grammar, both ways (01 §8.1)"
   },
   "Becoming.ProfileReach": {
    "region": "significance",

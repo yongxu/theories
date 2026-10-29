@@ -335,6 +335,7 @@ import Becoming.Handoff
 import Becoming.RuleHandoff
 import Becoming.GrammarCourse
 import Becoming.GrammarRegularity
+import Becoming.ProcessRepresentation
 import Becoming.GrammarScope
 import Becoming.GrammarCases
 import Becoming.GrammarPath
@@ -660,6 +661,28 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Diagonal.no_injection_of_predicates`); a line of falls ends (`World.falls_exhaust`, from
   `Amounts.falls_end`), a condition of the World's image and no law of the grammar
   (`Steps.along_endless`). A leaf (board item WRT2).
+* `Becoming.ProcessRepresentation` (L1): processes in the grammar both ways. A process is exactly
+  its relations, one per move, by definition (`moveRel_mk`, `mk_moveRel`), and its steps their
+  union (`steps_iff_moveRel`); a property of relations shared by relations alike pointwise holds of
+  every process's steps exactly where it holds of every relation (`forall_steps_iff`). Every
+  relation is a process's steps (`steps_edgeProcess`) and every class a frame's class of claims
+  (`class_is_claims`). The model with the move inside (`withMove`) has as image exactly the
+  relations leaving the next move open (`withMove_image_iff`); a renaming relating two processes is
+  a correspondence of these models carrying the steps and the classes of the same move and the same
+  configuration (`withMove_of_renaming`), and from a configuration and a move every such
+  correspondence is a renaming relating them (`renaming_of_withMove`), while neither class alone
+  suffices (`Twist.not_renamed`, `Flip.not_renamed`) and with no move or no configuration a point is
+  needed (`NoMoves.not_renamed`, `NoConfigurations.not_renamed`). A renaming keeps traces with the
+  word renamed (`renaming_trace`), `n` steps, reach, returning, invariants, determination, merging
+  nothing, going alike and going on (`renaming_iterate`, `renaming_reach`, `renaming_determined`,
+  `renaming_goAlike`, `renaming_yan` and the others). A trace is passing through the
+  moves' relations along its word (`trace_iff_li`); factoring through a map is the image of each
+  move's relation lying within (`factorsThrough_iff_image`); a run's configurations carry the line of
+  steps into the steps, exactly so with the move inside (`run_iff_image`); going on along some
+  branch is lying in a family that keeps moving (`yan_iff_keepsMoving`), a line from it exactly
+  dependent choice (`yan_line_iff_dependentChoice`) and within finitely many configurations one with
+  nothing chosen (`yan_line_of_list`); the steps forget the moves (`Forgotten.moves_forgotten`). A
+  leaf (board item WRP2).
 * `Becoming.Persistence` (L1): continuity across dormancy and identity read from relations
   (P87). Keeping the names of what holds fixes the class of a formation holding throughout,
   strictly beyond activity and tenure continuity; where nothing holds it leaves the join open.
@@ -2835,6 +2858,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`«迭之分»`), and steps read backward are steps of the converse (`«迭之逆»`). Where whatever is
   reached in fewer than `n` steps has a successor as far as can be refuted, `n` steps exist as far
   as can be refuted (`«或有后则或迭»`); an unending line has steps of every length (`«不穷则迭»`).
+  Passing through a word's relations in turn (`«历»`) has `«迭»` as its case for one relation repeated
+  (`«迭即历»`);
+  it composes along joined words (`«历之接»`), reads its last letter last (`«历之末步»`) and the
+  reversed word by the converse relations backward (`«历之逆»`), merges nothing where no letter
+  merges (`«历之定前»`) and keeps alike where each goes alike (`«同行之历»`), and six laws of `«迭»`
+  are these laws' cases for one relation (board item WRP2).
   `Becoming.Withholding`'s closed forms are proved from them, its chains of waits read as the
   grammar's steps; so is `WithinMoves.after_course` in `Becoming.Labelled`, a trace read as them,
   and `Web.reaches_onward` in `Becoming.MapInstances`, an unending line's index advancing with its
@@ -2864,7 +2893,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   through the grammar's image (`«对应之像»`) and kept by its operations (`«合之像»`, `«而之像»`,
   `«及之像»`), and a predicate is carried as its partial identity (`«部分恒等之像»`). Ending on every
   branch is pulled back along any map carrying continuation from a closed region (`«尽之拉回»`).
-  Lemmas of the World's representation, with no record of their own (board item WRT2).
+  Along maps, a map preserves a relation exactly where its image lies within the other (`«保之像»`),
+  and going on along some branch is pulled back along any map lifting continuation (`«延之拉回»`);
+  steps, passing through a word, within `n` steps, closed regions, a fixed successor and
+  predecessor, going alike and going on are kept (`«迭之对应»`, `«历之对应»`, `«迭内之对应»`,
+  `«闭之对应»`, `«定后之对应»`, `«定前之对应»`, `«同行之对应»`, `«延之对应»`), and correspondences
+  compose side by side (`«一一对应».prod`). Lemmas of the World's representation and the processes',
+  cited in their records (board items WRT2, WRP2).
 * `Becoming.ShownOrder` (L1): what choices show of the order they come from, on the grammar. The
   choices show `x` above `y` where `x` was chosen while `y`, another, was open
   (`ChoiceOccasions.Shown`); every transitive relation according with them contains the shown reach
