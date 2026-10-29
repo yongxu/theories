@@ -11,11 +11,17 @@
 ## Laws
 
 1. A family listed group by group has as its totals, weighted total and number of members the sums of the groups'; with k groups of m members each it has k times m members. (`Becoming.SelectionLevels.whole_total`, `Becoming.SelectionLevels.whole_weighted`, `Becoming.SelectionLevels.whole_length`, `Becoming.SelectionLevels.total_eq_of_mem`, `Becoming.SelectionLevels.whole_length_of_equal`)
+   - *Master laws:* none among its reasons.
 2. With no premise beyond groups of equal size: the whole's concordance, with k times the groups' own discordance and the discordance among groups read by their totals, is the whole's discordance with k times the groups' own concordance and the concordance among groups. Divided through, the whole's covariance of weight and amount is the mean of the groups' covariances with the covariance of their means. (`Becoming.SelectionLevels.levels`, `Becoming.SelectionLevels.levels_sized`, `Becoming.SelectionLevels.pairs_context`, `Becoming.SelectionLevels.within_by_one`, `Becoming.SelectionLevels.among_by_one`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.SelectionLevels.levels_sized`: counting identity (Price's partition among groups).
 3. So the whole selects for the amount exactly where the two levels together do, and nothing exactly where they balance. Selected against within the groups, an amount is selected for in the whole only where selection among the groups goes for it; selected against among them, only where selection within goes for it. (`Becoming.SelectionLevels.rises_iff`, `Becoming.SelectionLevels.none_iff`, `Becoming.SelectionLevels.among_for_of_rises`, `Becoming.SelectionLevels.within_for_of_rises`)
+   - *Master laws:* none among its reasons.
 4. Where every group is uniform in amount nothing is selected within them and the whole's selection is selection among groups alone; where the groups' totals are alike nothing is selected among them and the whole's selection is k times selection within. (`Becoming.SelectionLevels.within_none_of_uniform`, `Becoming.SelectionLevels.levels_of_uniform`, `Becoming.SelectionLevels.among_none_of_alike`, `Becoming.SelectionLevels.levels_of_alike`)
+   - *Master laws:* none among its reasons.
 5. Over listed generations with exact transmission, a generation listed as groups of equal size raises its mean amount across the step exactly where, read by offspring number, the two levels together select for the amount; selected against within the groups, its mean rises only where selection among them goes for it. (`Becoming.SelectionLevels.rises_exact_iff_levels`, `Becoming.SelectionLevels.among_for_of_raises`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.SelectionLevels.rises_exact_iff_levels`: counting identity (Price's partition, read for a rise).
 6. Witnesses: two groups of two, the amount one at a member holding back. It leaves fewer offspring than its groupmate, so selection within goes against it; where the other group leaves none, selection among groups goes for it and the whole selects for it; where the other group leaves three each, both levels go against it and so does the whole. (`Becoming.SelectionLevels.equal`, `Becoming.SelectionLevels.AmongWins.among_wins`, `Becoming.SelectionLevels.WithinWins.within_wins`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

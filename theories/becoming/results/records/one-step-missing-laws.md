@@ -11,13 +11,21 @@
 ## Laws
 
 1. For every flow, family of conditions and step, where anything is taken from the family across the step, at least one relatum taking part takes from it: the sign of what is taken is at most the number of relata taking. Something taken from or given to a family is something taking part exchanging. (`Becoming.Flow.sign_uptake_le_takers`, `Becoming.Flow.exchangesAt_of_uptake`, `Becoming.Flow.exchangesAt_of_replenishment`)
+   - *Master laws:* none among its reasons.
 2. Across a step at which a family is closed, nothing taking part taking from or giving to a condition outside it, something taking part exchanges only where something is taken from or given to the family. (`Becoming.Flow.ExchangesAt.closed`)
+   - *Master laws:* none among its reasons.
 3. Across a step at which a family runs down (listed without repetition, holding whatever stands before or after the step, the flow balancing and dissipating on it), something is taken from some member exactly when the family's total falls. (`Becoming.Flow.RunsDownOn.taken_iff`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 4. With balance on a family across a step, what is taken from each member is at most what it stood at before the step with what was given to it. (`Becoming.Flow.BalancesOn.taken_le`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 5. Read on a pattern of one step (each member's level before and after, what is taken and given, the number of relata taking, whether something exchanges), the law of running down closed holds exactly where the stated laws hold (each passage balanced, the total after with the takers at most the total before, some level changing and something exchanging each exactly when the total falls) and something taken has a taker. (`Becoming.OneStep.Stated`, `Becoming.OneStep.runsDownClosed_iff_stated`)
+   - *Master laws:* none among its reasons.
 6. One condition at level one before and after the step, taken from by one and given one, with no relatum taking and nothing exchanging, obeys every stated law for a family running down closed, and no world shows this pattern across any step on any family, each relatum taking part listed once. (`Becoming.OneStep.stated_not_realized`)
+   - *Master laws:* none among its reasons.
 7. For any level a, amounts x taken and y given, and propositions for coming and ceasing to stand, some world balanced at one condition across some step shows it at level a, taken x, given y, coming and ceasing to stand as those propositions say, exactly where x ≤ a + y, coming to stand is a = 0 with x < y and ceasing to stand is 0 < a with x = a + y, the last two as balance fixes them. (`Becoming.OneStep.standing_iff`, `Becoming.Flow.BalancesOn.comesToStand_iff`, `Becoming.Flow.BalancesOn.ceasesToStand_iff`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 8. A condition at level zero, taken from by one, given nothing, neither coming nor ceasing to stand, satisfies the laws of coming and ceasing to stand under balance, and no world balanced at the condition shows it, since more is taken than stood with what was given. (`Becoming.OneStep.standing_bound_needed`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 
 <a id="conditions--条件"></a>
 ## Conditions

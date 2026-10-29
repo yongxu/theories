@@ -11,14 +11,23 @@
 ## Laws
 
 1. A joining read through roles is the frame whose places are fragments and occurrences of joining: a fragment enters an occurrence by a role it holds there, and an occurrence is left by a role to the fragment holding it. A joining is connected from a fragment where every fragment is reached from it through roles. (`Becoming.Joining.roleFrame`, `Becoming.Joining.ConnectedFrom`)
+   - *Master laws:* none among its reasons.
 2. An open map of joinings keeps the joining, and lifts every occurrence holding a fragment's image in a role to an occurrence holding that fragment in that role, mapped onto it role by role; it lifts pairs where every joining of two images comes from a joining of the two fragments. (`Becoming.Joining.Keeps`, `Becoming.Joining.OpenMap`, `Becoming.Joining.PairLifting`)
+   - *Master laws:* none among its reasons.
 3. For any two joinings, the pairs of fragments alike through their role frames, joined pair by pair, form a joining whose two projections are open maps of joinings, with no premise. (`Becoming.Joining.Matched`, `Becoming.Joining.span`, `Becoming.Joining.span_first_open`, `Becoming.Joining.span_second_open`)
+   - *Master laws:* none among its reasons.
 4. For two joinings connected from roots alike through their role frames, every fragment of either is alike to some fragment of the other, so the joining of alike pairs is a common refinement: both projections are open and every fragment of each joining is a projection of an alike pair; no finiteness and no decision is used. (`Becoming.Joining.covers`, `Becoming.Joining.common_refinement`)
+   - *Master laws:* none among its reasons.
 5. With excluded middle as a named hypothesis, configurations of two frames passing the same branching tests match each step where the second frame lists the outcomes of each move, and passing the same tests is a bisimulation where both frames list them. (`Becoming.SameBranchingTests.step_of_em`, `Becoming.SameBranchingTests.bisimulation_of_em`)
+   - *Master laws:* none among its reasons.
 6. With excluded middle as a named hypothesis, where each fragment of two joinings holds each role in listed occurrences, places are alike through the role frames exactly where they pass the same branching tests. (`Becoming.Joining.LocallyFinite`, `Becoming.Joining.LocallyFinite.alike_iff`)
+   - *Master laws:* none among its reasons.
 7. With excluded middle as a named hypothesis and each fragment of the second joining holding each role in listed occurrences: where fragments x and y pass the same tests of roles, an occurrence of the first holding x in a role is matched by one of the second holding y in that role, their fragments in every role passing the same tests; with both so listed, roots passing the same tests cover what they connect. (`Becoming.Joining.match_incident_of_em`, `Becoming.Joining.covers_of_em`)
+   - *Master laws:* none among its reasons.
 8. With excluded middle as a named hypothesis, for two joinings in which each fragment holds each role in listed occurrences, connected from roots passing the same branching tests of roles, the joining of alike pairs is a common refinement whose projections are open and cover both. (`Becoming.Joining.common_refinement_of_em`)
+   - *Master laws:* none among its reasons.
 9. Where every fragment takes every role and some fragment cannot join itself, the map onto the one-fragment joining is open, every fragment passing the tests of roles of the one fragment, and does not lift pairs; for the process that moves once, the map of its traced fragments onto that joining is open and does not lift pairs. (`Becoming.Joining.RoleTotal.open_not_pairLifting`, `Becoming.Fragment.once_open_not_pairLifting`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,13 +11,21 @@
 ## Laws
 
 1. On the frame of a web's level paths a claim is a formation at a step, realized along a level path where its levels admit the formation then, meeting every requirement it has at that step. One level path widens another where at every step it admits every formation the other admits, and at some step one more. (`Becoming.Web.paths`, `Becoming.Web.Admits`, `Becoming.Web.Includes`, `Becoming.Web.Exceeds`, `Becoming.Web.Widens`)
+   - *Master laws:* order, not reaching the grammar.
 2. With every claim counted as living, an extension of one level path by another, realizing every claim the first realizes and one more, is exactly the second widening the first. (`Becoming.Extension`, `Becoming.Web.paths_extension_iff_widens`)
+   - *Master laws:* order, not reaching the grammar; central declaration `Becoming.Web.paths_extension_iff_widens`: master law (C's extension on a web's paths: a reindexing of claims (formation, step) to admissions (step, formation), every claim counted; widening enters by its definition, its order laws already from the grammar).
 3. For every reading of living, C, every extension being better, holds on level paths with “better” read as widening; the proof unfolds the comparison to the extension, so that widening is better is supplied by the reading of “better”. (`Becoming.Comparison`, `Becoming.Web.paths_comparison_widens`)
+   - *Master laws:* order, not reaching the grammar; central declaration `Becoming.Web.paths_comparison_widens`: master law (C's extension on paths, one direction, for every reading of living).
 4. Widening is transitive and goes one way, and a widening is never a mixed pair, two level paths each exceeding the other. (`Becoming.Web.Widens.trans`, `Becoming.Web.Widens.not_reverse`, `Becoming.Web.Mixed`, `Becoming.Web.Widens.not_mixed`)
+   - *Master laws:* order, reaching the grammar.
 5. Under the continuation condition, for every standpoint, one level path widens another exactly when it retains and adds what has significance from that standpoint. (`Becoming.Unrestricted`, `Becoming.Web.widens_iff_retains_adds`)
+   - *Master laws:* order, not reaching the grammar; central declaration `Becoming.Web.widens_iff_retains_adds`: master law (the reduction of what has significance to what can form under the continuation condition; the free significance is not lifted to the root).
 6. On level paths, under the continuation condition, for every reading of living, living significance holds with relevance read as significance from every standpoint, and C holds with “better” read as retaining and adding what has significance from a given standpoint. (`Becoming.LivingSignificance`, `Becoming.Web.paths_livingSignificance_comparison`)
+   - *Master laws:* none among its reasons.
 7. On level paths the continuation condition, living significance, extension and widening read one predicate, admission: the continuation condition holds exactly when living significance does with every claim living and significance from every standpoint as relevance; an extension with every claim counted is exactly a widening; under the condition, widening is retaining and adding from each standpoint. (`Becoming.Web.unrestricted_iff_paths_livingSignificance`, `Becoming.Web.paths_one_object`)
+   - *Master laws:* order, not reaching the grammar; central declaration `Becoming.Web.paths_one_object`: master law (the conjunction of C's extension on paths, the continuation condition as living significance, and the reduction of significance under the condition).
 8. In a witness where a conveyor's part is withheld, each of the two level paths exceeds the other: without the part the first formation is admitted at every step and the second is not, while with it the second is supported from the second step on and the first is not. (`Becoming.Transfer.mixed`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

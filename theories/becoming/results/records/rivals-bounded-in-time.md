@@ -11,8 +11,11 @@
 ## Laws
 
 1. A rule holding exactly within a region of standpoints, steps and formations is a rival wherever something lies outside it; the bounded significance is its case. (`Becoming.rival_of_outside`)
+   - *Master laws:* none among its reasons.
 2. A significance bounded in time accepts the rule within its bound and is not the continuation condition. (`Becoming.boundedInTime`, `Becoming.bounded_in_time_rival`)
+   - *Master laws:* none among its reasons.
 3. In the clearer's witness every formation is admitted at the first two steps; under the significance bounded at the second step the levels with the clearer's part retain what has significance, under the continuation condition they do not. (`Becoming.Clearing.admits_early`, `Becoming.Clearing.time_bounded_permits`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

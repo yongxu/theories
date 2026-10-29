@@ -11,8 +11,11 @@
 ## Laws
 
 1. Under a class constant up to the net's end, where a member conditions something not alike to it, every occurrence alike to the member that conditions anything conditions something alike to that effect and outside the class, every one on its line in particular. This is nearly the definition read at a member whose effects the class does not hold. (`Becoming.«出类随线»`, `Becoming.«出类随行»`)
+   - *Master laws:* , reaching the grammar.
 2. Where an occurrence alike to such a member conditions something but nothing alike to its outside effect, the class is not constant up to the net's end; a witness. (`Becoming.CleanStep.Occ`, `Becoming.CleanStep.intended`, `Becoming.CleanStep.not_constant_to_end`, `Becoming.CleanStep.own`, `Becoming.CleanStep.own_class`, `Becoming.CleanStep.step`, `Becoming.«出类不随则不至终有常»`)
+   - *Master laws:* , reaching the grammar.
 3. In a finite net without cycles, a class holding a member and part of what follows it can be constant up to the net's end though not constant, not holding the member's effects, while something outside it follows every occurrence on its line that conditions anything; a witness. (`Becoming.FiniteWake.Occ`, `Becoming.FiniteWake.constant_to_end`, `Becoming.FiniteWake.line`, `Becoming.FiniteWake.not_constant`, `Becoming.FiniteWake.not_held`, `Becoming.FiniteWake.own`, `Becoming.FiniteWake.own_class`, `Becoming.FiniteWake.step`, `Becoming.FiniteWake.wake_follows`)
+   - *Master laws:* , reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

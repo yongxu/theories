@@ -11,13 +11,21 @@
 ## Laws
 
 1. Along a sequence of configurations, more than now is met across the step from n where a natural-number quantity of one's own rises across it, and the sequence rests there where the configuration does not change; a seeker stands above all others at a state where every other seeker's quantity is below its own. (`Becoming.MoreThanNow`, `Becoming.RestsAt`, `Becoming.AboveAll`)
+   - *Master laws:* none among its reasons.
 2. Where a law leaves a state unchanged and the state meets a target, the orbit from that state stays at it and meets the target at every step. (`Becoming.Law.orbit`, `Becoming.Law.fixed_rests`)
+   - *Master laws:* none among its reasons.
 3. Under a determined law, the orbit from a state comes to rest with its target met from some step on exactly where it reaches a state the law leaves unchanged that meets the target; so too for every run of a determined law, which is its orbit from where the run begins. (`Becoming.Law.rests_iff`, `Becoming.SeekingRuns.rests_iff`)
+   - *Master laws:* none among its reasons.
 4. More than now is met only by change: no step at which a sequence rests meets it; under any law, no step at which the orbit rests meets it; and on a run of a determined law, no step at which the run rests meets it. (`Becoming.more_not_at_rest`, `Becoming.Law.more_never_rests`, `Becoming.SeekingRuns.more_never_rests`)
+   - *Master laws:* none among its reasons.
 5. Met at every step from some step N on, more than now raises the quantity between any two later steps; met at every step, it makes every configuration of the sequence new, so no list holds the configurations the sequence passes through; counting on meets it at every step. (`Becoming.more_rises`, `Becoming.more_new`, `Becoming.unlisted_of_new`, `Becoming.more_needs_open`, `Becoming.succ_more`)
+   - *Master laws:* finite runs, not reaching the grammar.
 6. Above all others is met at a state by at most one seeker, so two different seekers never both meet it at a state, nor at a configuration of any run; under any law no state the law leaves unchanged meets it for every seeker of a family holding two, nor does any configuration of a determined law's run that the law leaves unchanged. (`Becoming.aboveAll_unique`, `Becoming.aboveAll_not_two`, `Becoming.SeekingRuns.aboveAll_not_two`, `Becoming.Law.aboveAll_never_rests`, `Becoming.SeekingRuns.aboveAll_never_rests`)
+   - *Master laws:* none among its reasons.
 7. Across a step, what stands runs down where some family without repetition holds whatever stands before or after it and the flow balances and dissipates on it; a census lists, each once, what stands at each step. Under a census, at arbitrarily late steps some condition's standing changes exactly where at arbitrarily late steps some condition's standing changes across a step at which what stands does not run down. (`Becoming.Web.StandingCensus`, `Becoming.Flow.RunsDown`, `Becoming.Flow.change_recurs_iff`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways); central declaration `Becoming.Flow.change_recurs_iff`: balance, represented.
 8. Where what stands is listed at each step, each once, a condition whose level rises at arbitrarily late steps needs, at arbitrarily late steps, steps across which what stands does not run down; where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps. (`Becoming.Flow.more_needs_unrun`, `Becoming.Flow.more_exhausted`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 
 <a id="conditions--条件"></a>
 ## Conditions

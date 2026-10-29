@@ -11,9 +11,13 @@
 ## Laws
 
 1. A configuration realizes a plan, a finite binary nesting of leaves, where it holds together parts realizing the plan's two sides, down to leaves read at the parts; a footprint supports a list where the list repeats nothing and each member lies within the footprint. (`Becoming.JointPlan`, `Becoming.JointPlan.Realizes`, `Becoming.Supports`)
+   - *Master laws:* none among its reasons.
 2. For a plan realized at a configuration with each leaf's list supported by its leaf configuration's footprint: where each part's footprint lies within its whole's, everything the leaves draw on, joined in order, lies within the root's footprint. (`Becoming.PartsWithin`, `Becoming.JointPlan.draws`, `Becoming.JointPlan.within_of_realizes`)
+   - *Master laws:* none among its reasons.
 3. Where moreover the two parts of each whole share no footprint, what the leaves draw on repeats nothing, so the root's footprint supports it. (`Becoming.PartsApart`, `Becoming.JointPlan.nodup_of_realizes`, `Becoming.JointPlan.supports_of_realizes`)
+   - *Master laws:* none among its reasons.
 4. Support at the root does not give realization: where no whole holds any part, the root's footprint supports what a plan of two empty leaves draws on, and the plan is not realized. (`Becoming.Unjoined.supports_not_realizes`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,9 +11,13 @@
 ## Laws
 
 1. Every step, and so every finite history of the joint law, keeps the material (regional burden plus patch) and the work (available plus used). (`OrganizedScaleLoop.material_step`, `OrganizedScaleLoop.work_step`, `OrganizedScaleLoop.finite_history_accounts`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 2. Acquisition adds the route's product of gains times the anterior burden to what is retained, using one work unit, and adds nothing without work or through a route with a zero link; with at least two work units and the amount retained after acquisition reaching the threshold plus the opposing drive, acquisition then withdrawal ends contact, after which ingestion does nothing. (`OrganizedScaleLoop.acquisition_amount`, `OrganizedScaleLoop.unsupported_acquisition`, `OrganizedScaleLoop.disrupted_acquisition`, `OrganizedScaleLoop.acquisition_withdrawal`, `OrganizedScaleLoop.withdrawal_changes_next_exposure`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 3. From one state, acquiring before or after ingestion ends with equal regional burdens, patch, available work, contact, route and context and equal used work, yet withdrawal at threshold 1 keeps contact in one and ends it in the other, so no function of those current conditions gives withdrawal for every state. (`OrganizedScaleLoop.history_changes_choice`, `OrganizedScaleLoop.no_memoryless_choice_readout`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 4. Two states differing only in whether one unit lies in the anterior or the posterior region have equal burden but acquire different signals, so no function of the burden gives what acquisition retains for every state. (`OrganizedScaleLoop.same_organ_amount_distinct_signal`, `OrganizedScaleLoop.no_amount_only_acquisition`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

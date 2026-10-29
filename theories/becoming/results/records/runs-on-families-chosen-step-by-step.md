@@ -11,14 +11,23 @@
 ## Laws
 
 1. Under a condition on a world, a step and a list, a run of patterns is shown on families chosen step by step where some world and a list for each step show at every step that step's pattern, its takers and givers counted and whether something exchanges, the condition holding on that list and each relatum taking part listed once. Without the givers, a run is so shown exactly where it is shown with some count of givers. (`Becoming.OneStep.StepRealized`, `Becoming.OneStep.StepRunRealized`, `Becoming.OneStep.stepRun_iff_givers`)
+   - *Master laws:* none among its reasons.
 2. What stands continues up to order where, at every positive level, as many members stand at it after each step as before the next. Passages that follow one another position by position, what stands after each step at each member being what stands before the next there, continue; and a run shown with its givers on one family is shown on families chosen step by step. (`Becoming.OneStep.Continues`, `Becoming.OneStep.Chained`, `Becoming.OneStep.Chained.continues`, `Becoming.OneStep.RunRealizedGivers`, `Becoming.OneStep.RunRealizedGivers.steps`)
+   - *Master laws:* none among its reasons.
 3. On families chosen step by step, a run with its givers is shown under no condition, under balance on each step's list, or under its closure, exactly where each step obeys the law of every step, of balance or of closure respectively, and the law of the givers (at least one giver where anything is given, at most what is given): these conditions join no step to the next. (`Becoming.OneStep.step_every_iff`, `Becoming.OneStep.step_balance_iff`, `Becoming.OneStep.step_closed_iff`, `Becoming.OneStep.Givers`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 4. Without the givers, under balance alone, a run is shown on families chosen step by step exactly where each step obeys the law of balance. (`Becoming.OneStep.stepRun_balance_iff`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 5. Under any condition that makes each step's list run down (listed without repetition, holding whatever stands before or after the step, the flow balancing and dissipating on it), a run shown on families chosen step by step continues up to order. (`Becoming.OneStep.StepRealized.continues`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 6. On families chosen step by step each running down, a run with its givers is shown exactly where what stands continues up to order and each step obeys the law of running down and the law of the givers, with the givers at most the takers; with each list also closed, likewise with the law of running down closed. (`Becoming.OneStep.step_runsDown_iff`, `Becoming.OneStep.step_runsDownClosed_iff`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 7. Without the givers, on families chosen step by step each running down, or running down and closed, a run is shown exactly where what stands continues up to order and each step obeys the law of running down, or of running down closed. (`Becoming.OneStep.stepRun_runsDown_iff`, `Becoming.OneStep.stepRun_runsDownClosed_iff`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 8. Continuity up to order is weaker than following: two idle conditions at levels one and two, listed in one order before the first step and in the other after it, with no taker, giver or exchange, are shown on families chosen step by step each running down, and no world shows them with their givers on one family running down at every step. (`Becoming.OneStep.swapped`, `Becoming.OneStep.swapped_continues`, `Becoming.OneStep.swapped_runsDown`, `Becoming.OneStep.steps_not_run`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 9. Continuity is needed where what stands is held: a condition at level one before and after the first step and absent from the list after it, with no taker, giver or exchange, does not continue, is shown under balance on families chosen step by step, and is shown by no world on families chosen step by step each running down. (`Becoming.OneStep.vanishing`, `Becoming.OneStep.vanishing_not_continues`, `Becoming.OneStep.vanishing_steps`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,9 +11,13 @@
 ## Laws
 
 1. Expressions are built from two atoms by joining and doubling; a code gives each atom a value and fixes the order in which a join puts its parts. The code read off the three probes is the code itself wherever its primitives differ, so it evaluates every expression as the code does, at every depth. (`Becoming.CodeAcquisition.acquired_exact`, `Becoming.CodeAcquisition.acquired_every_expression`)
+   - *Master laws:* none among its reasons.
 2. Among codes with different primitives, the primitive readings alone merge codes that differ in order, so no answer read from them gives the order exactly; a code acquired under the usual order answers the novel expression otherwise than the switched order does. (`Becoming.CodeAcquisition.primitiveEvidence`, `Becoming.CodeAcquisition.separated`, `Becoming.CodeAcquisition.primitives_not_lumped`, `Becoming.CodeAcquisition.primitives_no_exact`, `Becoming.CodeAcquisition.usual`, `Becoming.CodeAcquisition.switched`, `Becoming.CodeAcquisition.novel`, `Becoming.CodeAcquisition.wrong_order_fails_transfer`)
+   - *Master laws:* none among its reasons.
 3. A program holds two primitive values and a route of sockets; the route of a code's order evaluates every expression as the code does. For the collapsed code, with equal primitives, a duplicating program fits the probe records yet answers the novel expression wrongly, and developing an apparatus trained from 15 units, with 2 parts, installs it; the novel expression's record rejects it and fits the right program. (`Becoming.RouteFormation.programFor_operates`, `Becoming.RouteFormation.collapsed`, `Becoming.RouteFormation.duplicated`, `Becoming.RouteFormation.old_records_admit_duplicate`, `Becoming.RouteFormation.develop_course_collapsed`, `Becoming.RouteFormation.novel_record_separates`)
+   - *Master laws:* none among its reasons.
 4. Every course that develops, meets the novel expression's record and reconsiders, from an apparatus trained from 27 units with 6 parts, keeps that record, rejects the duplicate among its attempts and installs the right program, which answers a further unseen expression; with 2 parts the course blocks, keeps the record of the discrepancy, installs nothing and gives no answer. (`Becoming.RouteFormation.repair_course_rebuilds`, `Becoming.RouteFormation.repair_course_further`, `Becoming.RouteFormation.repair_course_no_parts`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,6 +11,7 @@
 ## Laws
 
 1. One relatum, two exchanges touching it, one adding one and one doubling: they share the relatum, and adding then doubling gives two while doubling then adding gives one. (`Becoming.Interleavings.Shared.law`, `Becoming.Interleavings.Shared.order_matters`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

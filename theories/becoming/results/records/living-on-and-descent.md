@@ -11,14 +11,23 @@
 ## Laws
 
 1. Living on: a formation draws at a step on a relatum and depends on it at a positive need there, and such an event is related to that relatum's events. (`Becoming.Web.LivesOn`, `Becoming.Web.sustenance`, `Becoming.Web.Bearing`)
+   - *Master laws:* none among its reasons.
 2. Like interaction, living on needs an actual drawing and a dependence that can fail: under Dependent the relatum an active formation lives on stands at that step, and where that relatum is embodied it is active there. (`Becoming.Web.LivesOn.stands`, `Becoming.Web.LivesOn.active`, `Becoming.Web.Embodied`)
+   - *Master laws:* none among its reasons.
 3. Living on connects a bee and a flower that depend only on each other, which neither co-participation nor interaction connects. (`Becoming.Mutualism.apart_sustenance_connected`, `Becoming.Mutualism.apart_not_connected`)
+   - *Master laws:* closure, reaching the grammar.
 4. Under relational neutrality, valuing an event that lives on a relatum reaches every living event of that relatum, and conversely: valuing the fox's eating reaches the hare's living. (`Becoming.Web.living_on_reaches`, `Becoming.Web.lived_on_reaches`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.Web.living_on_reaches`: single application (N_rel once; its closure form is Valuation.reaches).
 5. Descent: a relatum descends from a formation that takes part in a step at which it gives to the relatum and across which the relatum comes to stand; a give entry of a formation taking no part enters no level and makes no descent; and descent relates every event of the one relatum to every event of the other. (`Becoming.Flow.DescendsAt`, `Becoming.Flow.Descends`, `Becoming.Unrelated.unrelated`, `Becoming.Brood.not_descends`, `Becoming.Flow.descent`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 6. In a balanced flow in which only active formations give, an embodied relatum that arises descends from another formation active at that step, which need not be embodied; so under relational neutrality, valuing any event of that formation reaches every living event of the relatum descending from it, and conversely. (`Becoming.Flow.Balances`, `Becoming.Flow.Acting`, `Becoming.Web.Embodied.descends`, `Becoming.Flow.descent_reaches`, `Becoming.Flow.ancestry_reaches`, `Becoming.Web.arisen_reached`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways); central declaration `Becoming.Flow.descent_reaches`: single application (N_rel once; its closure form is Valuation.reaches).
 7. Generations each given by the one before are connected by descent and by neither co-participation nor interaction, and living significance there is exactly a seed with relational neutrality and standpoint neutrality. (`Becoming.Brood.descends`, `Becoming.Brood.descended`, `Becoming.Valuation.significant_iff`)
+   - *Master laws:* closure, reaching the grammar; central declaration `Becoming.Valuation.significant_iff`: master law.
 8. Descent follows coming to stand, not arising: a seed descends from the parent that provisioned it while dormant, and waking from dormancy descends from nothing. (`Becoming.Provisioned.descends`, `Becoming.Sleeper.no_descent`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 9. Both readings use which condition is which relatum: relabelling the conditions of the bee and the flower that depend only on each other, each onto the other, leaves the connection of co-participation and interaction as it was (none) and removes the connection by living on. (`Becoming.Mutualism.relabel_sustenance`)
+   - *Master laws:* closure, reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

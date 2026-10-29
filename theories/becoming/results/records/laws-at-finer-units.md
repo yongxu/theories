@@ -11,16 +11,27 @@
 ## Laws
 
 1. At a resolution r, the unit splitting into r t finer units across the step from t, a flow balances on a family across the step where each member's level after it with what is taken from it is r t times its level before, plus what is given to it; read in the unit, a condition rises where its level after exceeds r t times its level before, and falls where it is below. With r constantly one each is the spine's notion. (`Becoming.Flow.BalancesAtOn`, `Becoming.Web.RisesAt`, `Becoming.Web.FallsAt`, `Becoming.Flow.balancesAtOn_one`, `Becoming.Web.risesAt_one`, `Becoming.Web.fallsAt_one`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 2. With no condition on r, where a flow balances at resolution r on a family across a step, a member comes to stand exactly when it stood at nothing and was given more than was taken from it, and ceases to stand exactly when it stood and what was taken from it is r t times its level before, plus all it was given. (`Becoming.Flow.BalancesAtOn.comesToStand_iff`, `Becoming.Flow.BalancesAtOn.ceasesToStand_iff`)
+   - *Master laws:* none among its reasons.
 3. Where a flow balances at resolution r on a family across a step, a member's rise in the unit is given to and its fall in the unit taken from; where nothing is taken from the family, some member rises in the unit exactly when something taking part gives to some member, and where the flow is also dissipated on the family, no member rises in the unit. (`Becoming.Flow.BalancesAtOn.rise_given`, `Becoming.Flow.BalancesAtOn.fall_taken`, `Becoming.Flow.BalancesAtOn.rises_iff_gives`, `Becoming.Flow.DissipatesOn.still_untaken_at`)
+   - *Master laws:* none among its reasons.
 4. Where a flow balances at resolution r on a family across a step: a member standing exactly while active at both ends of the step, given to only by active formations, arises only as an active formation taking part, other than itself, gives to it; and with the flow also dissipated on the family, a member comes to stand only where the family stood at something before. (`Becoming.Flow.BalancesAtOn.arises_given`, `Becoming.Flow.BalancesAtOn.comes_from_standing`)
+   - *Master laws:* none among its reasons.
 5. Across a step at which a family without repetition holds whatever stands before or after it, and a flow balances on it at resolution r and dissipates on it, some condition rises or falls in the unit exactly when the family's total after the step is below r t times its total before; with r constantly one this running down is the spine's. (`Becoming.Flow.RunsDownOnAt`, `Becoming.Flow.RunsDownOnAt.changes_iff`, `Becoming.Flow.runsDownOnAt_one`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 6. Read in raw counts the law of one exchange fails, in a witness: with the unit splitting in two at every step and nothing exchanged, the family of one condition, standing at one at the first step and doubling at each, runs down at that resolution at every step, while the condition rises in raw counts across every step, nothing rises or falls in the unit, and its total after a step is not below twice its total before. (`Becoming.Doubling.runsDown`, `Becoming.Doubling.raw_reading_fails`)
+   - *Master laws:* none among its reasons.
 7. Across a step at which the unit splits into r t > 0 finer units, a formation whose requirements stay, and each of whose needs and required levels is r t times as large after the step, is supported after the step exactly when it was before. (`Becoming.Web.supported_unchanged_by_split`)
+   - *Master laws:* none among its reasons.
 8. With the unit factor over k steps from T the product of their splits (one with a fixed unit): a formation supported at T + k, depending there on a condition at a need at least its need at T times the factor, finds the condition at least at that; where the level at T + k is below that, a formation supported there does not both still depend on the condition and keep so large a need. (`Becoming.unitFactor`, `Becoming.unitFactor_one`, `Becoming.Web.continuing_restores_in_unit`, `Becoming.Web.consumed_continues_transformed_in_unit`)
+   - *Master laws:* none among its reasons.
 9. Where a formation is active after a step only while supported then, a dependence whose condition after the step is below r t times its need before, persisting after the step at a need at least r t times the need before, belongs to a formation not active after the step. (`Becoming.Web.inactive_below_in_unit`)
+   - *Master laws:* none among its reasons.
 10. With a flow balancing at resolution r at a condition across a step, a rise of the condition in the unit is given by a formation taking part; where every formation giving to it there is supported, it is given by a supported formation taking part. (`Becoming.Flow.BalancesAtOn.rise_given_by_supported`)
+   - *Master laws:* none among its reasons.
 11. Consumption with nothing giving need not end at a finer unit, in a witness: with the unit doubling at every step, a formation takes one finer unit from a condition across every step and nothing gives to it, the flow balances at that resolution and dissipates on the condition, and the formation is active and supported at every step. (`Becoming.Feeding.endless`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

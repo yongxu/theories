@@ -11,9 +11,13 @@
 ## Laws
 
 1. For an affine channel x ↦ gx + b of nonzero gain, the local report computed from its readings at the references 0 and 1 and at the input p, with sign s, says whether s·p is positive; with zero gain it gives no report. The apparatus of three channels reports success exactly where every local reading does. (`CalibratedUpdater.Channel`, `CalibratedUpdater.raw`, `CalibratedUpdater.localReport`, `CalibratedUpdater.acquired_local_exact`, `CalibratedUpdater.constant_channel_unresolved`, `CalibratedUpdater.report_requires_all`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 2. Two affine channels agree at every input exactly where they agree at 0 and 1; one reference at 0 is blind: the channels (1, 0) and (−1, 0) read 0 alike and 1 differently. Signs transfer from an old channel of nonzero gain to a current one, for every input and sign, exactly where the bias is unchanged and the product of the gains is positive; raising a gain from 1 to 2 keeps every sign. (`CalibrationRenewal.two_references_complete`, `CalibrationRenewal.zero_reference_blind`, `CalibrationRenewal.signal`, `CalibrationRenewal.all_signs_transfer_iff`, `CalibrationRenewal.positive_gain_change_preserves_signs`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 3. Witnesses of failure: a reading at 0 from one epoch and at 1 from another can report success where s·p is negative, as can a curved channel agreeing with an affine one at 0 and 1; in the named run, an apparatus calibrated to channels that have since changed leaves the matrix unrevised and the task failing, also when the change follows an inspection. (`CalibrationRenewal.mixed_epoch_false_success`, `CalibrationRenewal.nonaffine_reference_alias`, `CalibratedUpdater.stale_channel_blocks_actual_repair`, `CalibrationRenewal.late_change_still_fails`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 4. Inspecting the channels with at least seven units, through a connected apparatus and with every gain nonzero, makes the admitted run equal the run with responsive reports, for every network and task list. In the named runs, seven units revise the overwritten matrix within two tasks, one succeeding; six leave it unrevised, none succeeding; without reference renewal it stays as it was after every number of steps. (`CalibrationRenewal.renewed_run`, `CalibrationRenewal.actual_repair_after_inspection`, `CalibrationRenewal.six_units_cannot_revise`, `CalibrationRenewal.false_success_stalls`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

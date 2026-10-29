@@ -11,12 +11,19 @@
 ## Laws
 
 1. In the renewable process of Becoming.Renewal, for every horizon h there are two runs whose configurations and actions agree before h: the focal formation draws two units at every step (one is renewed each step), and each of its events is within renewal. Afterwards one run draws within renewal and the focal formation renews in it; the other keeps exceeding and the focal formation consumes. (`Becoming.Renewable.process`, `Becoming.Renewable.conditions`, `Becoming.Run.cons`, `Becoming.Run.AgreeUpTo`, `Becoming.Renewable.prefix_does_not_decide`)
+   - *Master laws:* none among its reasons.
 2. Hence any reading fixed by the configurations and actions of the first h steps that includes every renewing run includes some consuming run; the classification is a function neither of the initial configuration nor of any finite prefix. (`Becoming.Renewable.finite_reading_includes_consumption`)
+   - *Master laws:* none among its reasons.
 3. The same holds with feedback: in the support-gated law, from one start and drawing two units at every step before h, stopping at h renews and continuing consumes; the stopping schedule never reaches the support threshold. (`Becoming.Feedback.law`, `Becoming.Feedback.prefix_does_not_decide`)
+   - *Master laws:* none among its reasons.
 4. The force of the conclusion lies in “includes every renewing run”: that renewing run draws beyond renewal at every step before h, and the whole-run reading includes those events. (`Becoming.Renewable.whole_run_includes_overdraw`)
+   - *Master laws:* none among its reasons.
 5. An amount reading (taking no more than is renewed at the step) is fixed by finite prefixes and withholds every event before h in both runs, failing only to include every whole-run-renewing run. (`Becoming.Renewable.amount_reading`)
+   - *Master laws:* none among its reasons.
 6. The formation-level cycle reading is fixed by no finite prefix. (`Becoming.Renewable.cycle_reading_not_finite`)
+   - *Master laws:* none among its reasons.
 7. Corollaries: no reading decided by the first h steps is the whole-run classification; such a reading including no consuming run excludes some renewing run. (`Becoming.Renewable.no_exact_finite_reading`, `Becoming.Renewable.finite_reading_withholds_renewal`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.Renewable.no_exact_finite_reading`: single application (a prefix reading used once; the open continuation).
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,11 +11,17 @@
 ## Laws
 
 1. Across the step from t, something is conveyed from c to d when a formation taking part takes from c and gives to d; a family is fed from beyond across the step when something is conveyed from a condition outside it into one of its members. (`Becoming.Flow.Conveys`, `Becoming.Flow.FedFromBeyond`)
+   - *Master laws:* none among its reasons.
 2. A step at which the family is fed from beyond is not inward; with equality decided, a step at which it is not fed from beyond is inward, so the two are exact opposites, and whatever refutes ‘inward at every step from some step on’ refutes ‘fed from nothing beyond from some step on’. (`Becoming.Flow.Inward`, `Becoming.Flow.not_inward_of_fed`, `Becoming.Flow.inward_of_not_fed`, `Becoming.Flow.inward_iff_not_fed`, `Becoming.Flow.fed_of_not_inward`)
+   - *Master laws:* none among its reasons.
 3. So, by the draw-in laws, under balance and dissipation a finite family without repetition, enclosed around from some step on, cannot from any step on be fed from nothing beyond it, whether formations take from it at arbitrarily late steps or its members rise at arbitrarily late steps. (`Becoming.Flow.Dissipative`, `Becoming.Flow.Around`, `Becoming.Flow.taking_draws_in`, `Becoming.Flow.rising_draws_in`, `Becoming.Flow.fed_from_beyond`, `Becoming.Flow.rising_fed_from_beyond`)
+   - *Master laws:* balance and finite runs, reaching the grammar.
 4. Read with one kind of relatum, the same holds where embodied members arise at arbitrarily late steps. (`Becoming.Web.embodiedArising_draws_in`, `Becoming.Web.embodiedArising_fed_from_beyond`)
+   - *Master laws:* balance and finite runs, reaching the grammar.
 5. The two laws for taking and rising hold in every world with the local condition inside the law: from some step on, the family balanced on and enclosed around, and every family without repetition closed across each step dissipated on; the forms under balance and dissipation everywhere are their corollaries. (`Becoming.Flow.BalancesOn`, `Becoming.Flow.Balances.on`, `Becoming.Flow.fed_from_beyond_from`, `Becoming.Flow.rising_fed_from_beyond_from`)
+   - *Master laws:* balance and finite runs, reaching the grammar.
 6. Being fed is needed, and no source condition need recur: in Lone, balanced and dissipative with an eater taking at every step, the pool is fed from beyond at every step while each fuel is conveyed from at its own step only; the one source does all the conveying. (`Becoming.Lone.lone`, `Becoming.Lone.fed`, `Becoming.Lone.each_fuel_once`, `Becoming.Lone.fed_not_recurring`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 
 <a id="conditions--条件"></a>
 ## Conditions

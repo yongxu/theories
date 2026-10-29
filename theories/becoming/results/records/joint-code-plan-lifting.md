@@ -11,10 +11,15 @@
 ## Laws
 
 1. A joint plan is a finite binary nesting of leaves; a configuration realizes it where it holds together parts realizing its two sides, down to leaves read at the parts, each node with its own witness. Read through a description, the joint relation holds among descriptions where some configuration so described holds together parts so described. (`Becoming.JointPlan`, `Becoming.JointPlan.Realizes`, `Becoming.jointImage`)
+   - *Master laws:* none among its reasons.
 2. A relation B matches the parts two joint relations hold together where, wherever B relates two configurations, each pair of parts the first holds together under the first relation is matched by a pair the second holds together under the second, related by B part by part. (`Becoming.MatchesParts`)
+   - *Master laws:* none among its reasons.
 3. For any ternary joint relation and any description: where configurations the description identifies match parts into configurations it identifies, and the leaves are read correctly through it, every plan is realized at the description of a configuration, under the joint relation read through the description, exactly where it is realized at that configuration. (`Becoming.JointPlan.realizes_image_iff`)
+   - *Master laws:* none among its reasons.
 4. Take plans whose leaves are descriptions, a leaf read at a configuration where it is the configuration's description: each is realized at the description of each configuration exactly where it is realized there, exactly where configurations the description identifies match parts into ones it identifies; the direction from description to configuration alone gives matching parts. (`Becoming.JointPlan.plans_lift_iff`, `Becoming.JointPlan.matchesParts_of_lifts`)
+   - *Master laws:* none among its reasons.
 5. In a joint frame, through a code that reads the joint tests exactly and gives configurations passing the same joint tests one code: where the pairs of parts each configuration holds together are compact for the joint tests, every joint test holds wherever it cannot fail, and the leaves are read correctly through the code, every plan is realized at the code of a configuration exactly where it is realized there. (`Becoming.JointPlan.realizes_code_iff`, `Becoming.JointFrame.JointCompact`, `Becoming.JointFrame.TestsStable`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

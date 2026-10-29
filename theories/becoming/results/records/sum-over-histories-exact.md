@@ -11,12 +11,19 @@
 ## Laws
 
 1. Weights consist of a zero, a one, an addition of alternatives and a composition of successive steps; the associativity of each, their units, absorption by zero and the distribution of composition over addition on both sides are fields of the structure. (`Becoming.Weights`)
+   - *Master laws:* none among its reasons.
 2. From listed moves and configurations, the open steps pair each listed move with each listed outcome, and the courses of n steps are the sequences of n open steps; the weight along a course from a configuration composes its steps' weights in order with what is read at its end, and the transfer reads after n steps one step at a time, summing over the open steps. (`Becoming.openSteps`, `Becoming.courses`, `Becoming.Weights.sum`, `Becoming.Weights.along`, `Becoming.Weights.transfer`)
+   - *Master laws:* none among its reasons.
 3. For every weighting of steps, all lists of moves and configurations, every reading at the end, every number of steps n and every start, the sum over the courses of n steps of the weight along each is n steps of the transfer. (`Becoming.Weights.sum_courses`)
+   - *Master laws:* none among its reasons.
 4. A reading of one weighting in another that keeps zero, one, addition and composition can be taken course by course or at the end: at every number of steps and start, the transfer read through it is the transfer of the read step weights and end reading. (`Becoming.Weights.Hom`, `Becoming.Weights.Hom.transfer`)
+   - *Master laws:* none among its reasons.
 5. Possibility joins alternatives and meets successive steps. Where a Boolean step weight is true exactly at a process's steps and the lists hold every move and every configuration, the possibility transfer after n steps from s holds exactly where some trace of n moves leads from s to a configuration where the end reading holds. (`Becoming.possibility`, `Becoming.possibility_transfer_iff`, `Generative.Trace`)
+   - *Master laws:* none among its reasons.
 6. Counting adds alternatives and multiplies successive steps, and reading a count as nonzero is a reading into possibility that keeps the laws. Where a natural step weight is nonzero exactly at a process's steps and the lists hold every move and every configuration, the counting transfer after n steps from s is nonzero exactly where some trace of n moves leads from s to where the end reading is nonzero. (`Becoming.counting`, `Becoming.nonzero`, `Becoming.support`, `Becoming.counting_transfer_iff`)
+   - *Master laws:* none among its reasons.
 7. For a description π with a representative configuration of each of its values, any weighting and any lists of moves and configurations: what the transfer reads through π, under every reading g of the description, is the same from starts with one description after every number of steps exactly where, under every reading g, it is after one step. (`Becoming.Weights.lumped_iff`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

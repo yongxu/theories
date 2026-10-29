@@ -11,7 +11,9 @@
 ## Laws
 
 1. Feeding from a step: from the first step it is the feeding closure; from a later step it is within the closure from an earlier one. (`Becoming.Flow.FedFromAfter`, `Becoming.Flow.WithinFeedingFrom`, `Becoming.Flow.withinFeedingFrom_zero`, `Becoming.Flow.WithinFeedingFrom.earlier`)
+   - *Master laws:* closure, reaching the grammar.
 2. What gives to no requirement from s on is outside every other formation's closure from s; where l admits all l' admits but such a formation from T on, l retains against l' what has significance bounded by feeding from each step, while under the condition it does not where l' admits that formation at a step l does not. (`Becoming.Flow.not_withinFeedingFrom`, `Becoming.Flow.feedingFrom_permits`, `Becoming.Flow.feedingFrom_parts`)
+   - *Master laws:* closure, reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

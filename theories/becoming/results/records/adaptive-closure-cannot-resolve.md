@@ -11,9 +11,13 @@
 ## Laws
 
 1. In the named model, the settled history (inspection, uptake, closure) and the changed one (the same, then the reference changed) share their view (the record, judgment, closure and three counts) while their targets differ. (`Generative.NormativeActivity.view`, `Generative.NormativeActivity.target`, `Generative.NormativeActivity.settled`, `Generative.NormativeActivity.changed`, `Generative.NormativeActivity.reachable_closed_disagreement`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 2. Every policy choosing from the view among moves closed locally (repetition, production, suspension, uptake, inspection, ineffective once closed, closure and rest) keeps, for every number of steps, two closed histories with one view alike in view and each target as it was; so the settled and changed histories stay alike in view with different targets, as does every continuation by such moves. (`Generative.NormativeActivity.ClosedLocal`, `Generative.NormativeActivity.adapt`, `Generative.NormativeActivity.adaptive_closed_invariant`, `Generative.NormativeActivity.adaptive_closed_cannot_resolve`, `Generative.NormativeActivity.closed_continuations_remain_unresolved`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 3. So no reading of the view resolves the target on the closed domain, and an answer from the view that is never false there gives no answer at the settled history; the changed history's record stays true of its sample while its judgment is wrong of the present. (`Generative.NormativeActivity.closed_domain_not_resolving`, `Generative.NormativeActivity.sound_closed_answer_abstains`, `Generative.NormativeActivity.historical_truth_present_error`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 4. Reopening, inspecting and taking up repairs the changed history's judgment, using up the inspection available; reopening and taking up without inspection does not repair, nor does reopening with no inspection left. (`Generative.NormativeActivity.reopening_and_inspection_repair`, `Generative.NormativeActivity.reopening_without_inspection_does_not_repair`, `Generative.NormativeActivity.exhausted_reopening_does_not_repair`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

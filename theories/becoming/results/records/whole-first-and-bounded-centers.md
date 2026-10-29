@@ -11,11 +11,17 @@
 ## Laws
 
 1. Where fewer continuations have significance, more is retained: where sig' implies sig, what retains from p for sig retains for sig'. (`Becoming.Web.Retains`, `Becoming.Web.Retains.of_fewer`)
+   - *Master laws:* none among its reasons.
 2. A significance bounded by regions retains from p exactly when at every step, within p's region, l admits what l' admits. (`Becoming.bounded`, `Becoming.Web.AdmitsWithin`, `Becoming.Web.retains_bounded_iff`)
+   - *Master laws:* none among its reasons.
 3. Under the continuation condition, what retains from p retains from p for every family of regions: the whole's judgment decides every narrower one, whether the region is a system's or a self's; and what holds within a region holds within every region inside it. (`Becoming.Web.Retains.within`, `Becoming.Web.AdmitsWithin.narrow`)
+   - *Master laws:* none among its reasons.
 4. The converse fails: in Clearing the clearer draws on a resource fed by the source, while the dweller depends on a habitat that the clearer's draw leaves unsupported from step two on. Without the clearer's part every formation is admitted at every step. (`Becoming.Clearing.Formation`, `Becoming.Clearing.Place`, `Becoming.Clearing.flow`, `Becoming.Clearing.web`, `Becoming.Clearing.dependent`, `Becoming.Clearing.clearerPart`, `Becoming.Clearing.withheld`, `Becoming.Clearing.unsupported_with`, `Becoming.Clearing.admitted_all_without`)
+   - *Master laws:* none among its reasons.
 5. Let each formation's significance stop at what its dependence reaches (the clearer with the source reached along its dependence; the source and the dweller alone): from the clearer's standpoint its part retains what has significance at every step; from the dweller's standpoint it loses the dweller. (`Becoming.Clearing.alongDependence`, `Becoming.Clearing.dependenceRegion`, `Becoming.Web.Adds`, `Becoming.Clearing.centers_disagree`)
+   - *Master laws:* none among its reasons.
 6. Under the continuation condition it loses the dweller from every standpoint, so the levels with it do not retain what has significance without it, while the levels without it retain what has significance with it, and the clearer is supported at every step and admitted without the part, so withholding the part ends nothing. (`Becoming.Clearing.clearer_loses_dweller`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

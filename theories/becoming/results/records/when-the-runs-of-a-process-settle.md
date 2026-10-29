@@ -11,9 +11,13 @@
 ## Laws
 
 1. A run that changes within a loop, between two visits of one configuration, gives a run from the same configuration that goes round the loop and keeps changing; a run that keeps changing does not settle. (`Becoming.Settling.ChangeRecurs`, `Becoming.Settling.ChangesInLoop`, `Becoming.Settling.not_settles_of_recurs`, `Becoming.Settling.roundIndex`, `Becoming.Settling.roundIndex_lt`, `Becoming.Settling.roundIndex_last`, `Becoming.Settling.roundIndex_le`, `Becoming.Settling.roundIndex_back`, `Becoming.Settling.roundIndex_from`, `Becoming.Settling.roundIndex_hits`, `Becoming.Settling.round`, `Becoming.Settling.round_recurs`, `Becoming.Settling.recurs_of_loop`)
+   - *Master laws:* none among its reasons.
 2. Along a run whose configurations a list holds, change that recurs is a change within a loop. (`Becoming.Settling.extend`, `Becoming.Settling.extend_le`, `Becoming.Settling.extend_gt`, `Becoming.Settling.rising`, `Becoming.Settling.changes_at`, `Becoming.Settling.loop_of_recurs`)
+   - *Master laws:* finite runs, not reaching the grammar.
 3. In a world a list holds, some run from a configuration keeps changing exactly where some run from it changes within a loop, exactly where a configuration reachable from it has a step to another configuration from which it can be reached again; where every run settles, or assured enough holds, there is no such step. (`Becoming.Settling.undoable_of_loop`, `Becoming.Settling.consSeq`, `Becoming.Settling.consAct`, `Becoming.Branching.trace_positions`, `Becoming.Settling.path_then`, `Becoming.Settling.recurs_of_undoable`, `Becoming.Settling.keeps_changing_iff_loop`, `Becoming.Settling.keeps_changing_iff`, `Becoming.Settling.settles_no_undoable`, `Becoming.Settling.assured_no_undoable`)
+   - *Master laws:* finite runs, not reaching the grammar.
 4. Not changing for ever is not settling: with two configurations and no way back from the second, no run keeps changing, and every run from the first settling is the limited principle of omniscience. (`Becoming.Settling.OneWay.process`, `Becoming.Settling.OneWay.seen`, `Becoming.Settling.OneWay.run`, `Becoming.Settling.OneWay.seen_stays`, `Becoming.Settling.OneWay.seen_witness`, `Becoming.Settling.OneWay.no_undoable`, `Becoming.Settling.OneWay.never_keeps_changing`, `Becoming.Settling.OneWay.lpo_of_settles`)
+   - *Master laws:* closure and finite runs, reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,7 +11,9 @@
 ## Laws
 
 1. Not reached, the step chosen at x is the same in both courses, and a step losing s in one loses it in the other. (`Becoming.TimedResponse.same_step_unreached`)
+   - *Master laws:* none among its reasons.
 2. Chosen steps keeping s in one course and losing it in the other: x is a juncture for s and the source has, not not, reached the reader by D. (`Becoming.TimedResponse.turned_at_juncture`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

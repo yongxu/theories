@@ -11,15 +11,25 @@
 ## Laws
 
 1. An exposure of the declared construction runs exactly when some formation is active and the source covers every active formation's demand on every task. (`LearnedProcedureTransmission.expose_isSome_iff`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 2. Every exposure keeps the apparatus, writes the network its run leaves and marks the state tested. (`LearnedProcedureTransmission.exposed_kit`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 3. A reconstruction runs exactly when the state is tested and the precursor and support build at least one successor. (`LearnedProcedureTransmission.reconstruct_isSome_iff`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 4. Every reconstruction builds its successors, untested, from the transfer's inherited record and procedure bit. (`LearnedProcedureTransmission.reconstruct_inherits`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 5. The law of transmission: every exposure followed by a faithful reconstruction passes on the network the exposure left and the procedure bit the exposed formation had, builds as many successors as the capacity allows, and conserves material and support. (`LearnedProcedureTransmission.cycle_transmits`, `LearnedProcedureTransmission.exposed_accounts`, `LearnedProcedureTransmission.reconstructed_accounts`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 6. Under the declared task, support and construction laws, two encounters form a retained network from zero; actual subsequent responses supply computed reconstruction of its matrix and operative updater bit, and reconstructed successors use them; the constructed history is an instance of the law of transmission. (`LearnedProcedureTransmission.actual_acquisition_prefix`, `LearnedProcedureTransmission.actual_parent_history`, `LearnedProcedureTransmission.actual_reconstruction`, `LearnedProcedureTransmission.actual_successor_exposure`, `LearnedProcedureTransmission.reconstructed_record_enters_use`, `LearnedProcedureTransmission.history_transmits`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 7. The connected history preserves material and support without resetting failed acquisition. (`LearnedProcedureTransmission.complete_formation_transmission_use`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 8. The capacity is the longest lineage one shared pool releases: reading a successor’s thirteen precursor units as a word of one kind of token, the precursor held as the pool and its twenty support units as drawn at release, n successors are released in turn exactly when n is within the capacity, so a reconstruction builds exactly the longest lineage released (an instance of Copying.lineage_all_iff). (`Becoming.TransmissionCorrespondence.lineage_released_iff`, `Becoming.TransmissionCorrespondence.reconstruction_builds_longest_lineage`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 9. Every course of exposures and reconstructions conserves material and support, not one cycle only (an instance of Stock.trace_balance with nothing drawn or replenished). (`Becoming.TransmissionCorrespondence.material_balanced`, `Becoming.TransmissionCorrespondence.support_balanced`, `Becoming.TransmissionCorrespondence.course_conserves`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 10. Faithful reconstruction raises and lowers nothing, so the successors’ total of the procedure bit is the families’ bits weighted by their successor counts, each its capacity (the counting form of Price’s equation); in the history two of three successors carry the responsive procedure where one of two parents did. (`Becoming.TransmissionCorrespondence.faithful_selects`, `Becoming.TransmissionCorrespondence.history_selects`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,11 +11,17 @@
 ## Laws
 
 1. Read through observables of conditions (levels and activity at each configuration; requirements, needs and draws fixed), a run of any process is one relational unfolding whose levels and activity are those of its configurations step by step; its static web is the run read through the same dependences, and the classes of renewing and consuming formation are defined on the unfolding. (`Becoming.Conditions`, `Becoming.Conditions.along`, `Becoming.Web.conditions_along`, `RelationalRenewal.Unfolding`, `RelationalRenewal.RenewingIn`, `RelationalRenewal.ConsumingIn`)
+   - *Master laws:* none among its reasons.
 2. A natural-number observable that does not rise across any step from step T on does not fall at arbitrarily late steps. (`Becoming.falls_not_recurring`)
+   - *Master laws:* finite runs, reaching the grammar.
 3. Depletion, a case of that principle: where every admissible step of a process lowers a natural-number reserve of the configuration, the process has no run, and no sequence of configurations and moves takes an admissible step at every index. (`Becoming.Run.not_of_depletion`, `Becoming.no_execution_of_depletion`)
+   - *Master laws:* finite runs, reaching the grammar.
 4. Recurrent renewal, a case of that principle: along a run of any process where every step that is not a renewal lowers a natural-number rank of the configuration, no tail of the run, from whatever step, is free of renewal. (`Becoming.Run.renewal_recurs`)
+   - *Master laws:* finite runs, reaching the grammar.
 5. Unrenewed drawdown, a case of that principle: along a run of any process, where from step T on a condition's level never rises across a step and falls across every step at which a formation is active, the formation is not active at arbitrarily late steps. (`Becoming.Conditions.drawdown_not_recurring`, `RelationalRenewal.unrenewed_drawdown_finite`)
+   - *Master laws:* none among its reasons.
 6. In a process where a condition gains one unit a step and the move is the amount drawn, the runs drawing one unit and two units a step start at one configuration, with the focal formation active at every step of both: drawing one, it renews; drawing two, it consumes the condition, and in that run the sustaining formation, which depends on it at need one, is inactive at every step from one on. (`Becoming.Renewable.class_belongs_to_the_run`, `Becoming.Renewable.process`, `Becoming.Renewable.withinRenewal`, `Becoming.Renewable.beyondRenewal`, `Becoming.Renewable.conditions`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

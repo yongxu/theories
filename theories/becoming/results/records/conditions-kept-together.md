@@ -11,9 +11,13 @@
 ## Laws
 
 1. No course leaves two guards together exactly where no course leaves either, and for a list exactly where no course leaves any. (`Becoming.Viability.kernel_and_iff`, `Becoming.Viability.AllOf`, `Becoming.Viability.kernel_allOf_iff`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.Viability.kernel_and_iff`: definitional or representational (logic: for all reached, and).
 2. A guard is keepable where some run stays within it; keepable together gives keepable each, and the converse fails in ChoicePoint; where either guard lies in the kernel, keeping both is keeping the other; likewise for n steps. (`Becoming.Viability.Keepable`, `Becoming.Viability.Keepable.each`, `Becoming.Onward.KeepsMoving.run`, `Becoming.Viability.keepable_and_iff_of_kernel_left`, `Becoming.Viability.keepable_and_iff_of_kernel_right`, `Becoming.Viability.KeptFor.each`, `Becoming.Viability.ChoicePoint.each_not_joint`, `Becoming.Viability.ChoicePoint.keptFor_each_not_joint`)
+   - *Master laws:* finite runs, not reaching the grammar.
 3. No rule on the separate answers decides the joint one: on ChoicePoint two configurations have both guards keepable and only one has them together; decisions exist, and for every F : Bool → Bool → Bool the joint decision is not F of the separate ones. (`Becoming.Viability.ChoicePoint.joint_differs`, `Becoming.Viability.ChoicePoint.decisions_exist`, `Becoming.Viability.ChoicePoint.no_rule_decides_joint`, `Becoming.Viability.ChoicePoint.no_respecting_rule_decides_joint`)
+   - *Master laws:* none among its reasons.
 4. Keeping a part decides neither renewal nor what the run does to others: in Renewable no course leaves the guard "the focal formation is active" from the starting configuration, while from that configuration one run renews and another consumes the sustaining formation's condition, which ends. (`Becoming.Renewable.kept_part_not_renewal`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

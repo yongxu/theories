@@ -11,16 +11,27 @@
 ## Laws
 
 1. Let each standpoint's presupposition about its own center's continuation hold (sub-true along the empty relation) and significance be standpoint-invariant. Then from every standpoint the continuation of every center has significance, and the significance of exactly the centers' continuation meets both premises: what they force is exactly that the centers count. (`Becoming.atCenters`, `Becoming.atCenters_least`, `Becoming.atCenters_presupposed`, `Becoming.atCenters_standpointInvariant`, `Becoming.forced_iff_center`)
+   - *Master laws:* closure, reaching the grammar; central declaration `Becoming.forced_iff_center`: master law.
 2. With some standpoint, the significance of the centers' continuation is the continuation condition exactly when every formation is some standpoint's center. (`Becoming.unrestricted_atCenters_iff`)
+   - *Master laws:* none among its reasons.
 3. Along a relation, what every significance making a standpoint's presupposition sub-true at a formation's closure gives significance to is exactly what lies within that closure: a standpoint's own presupposition, with nothing else, reaches its closure and no further. (`Becoming.forced_iff_within`)
+   - *Master laws:* closure, reaching the grammar.
 4. The presupposition sub-true along every relation of a family is significance over the union of the closures; drawn along being related by some relation of the family, it gives the presupposition along each. (`Becoming.Related`, `Becoming.subTrue_every_iff`, `Becoming.subTrue_every_of_related`)
+   - *Master laws:* closure, reaching the grammar.
 5. Witness: of three formations, the first bears one relation to the second and the second another to the third. The third lies within the first's closure along being related at all and within no closure along a single relation, so the presupposition along every relation one at a time does not give the one along being related. (`Becoming.Chain.rel`, `Becoming.Chain.third_related`, `Becoming.Chain.third_not_within`, `Becoming.Chain.every_not_related`)
+   - *Master laws:* closure, reaching the grammar.
 6. Retaining what has significance at the centers is admitting, at every step, every center the other path admits. In Clearing, with the clearer the only center, the clearer's part retains at the centers against the levels without it, while under the continuation condition it loses the dweller. (`Becoming.Web.retains_atCenters_iff`, `Becoming.Clearing.centers_retain_yet_loses`)
+   - *Master laws:* none among its reasons.
 7. A content held de se is a property each standpoint ascribes to its own center; one held de dicto is one proposition from every standpoint. Standpoint-invariance is exactly holding one shared content, and a content held de se is invariant exactly where its readings at the centers agree. (`Becoming.selfAscribed`, `Becoming.shared`, `Becoming.shared_standpointInvariant`, `Becoming.standpointInvariant_iff_shared`, `Becoming.selfAscribed_standpointInvariant_iff`)
+   - *Master laws:* none among its reasons.
 8. Held de se, the presupposition about the own closure along a relation meets every standpoint's presupposition, is standpoint-invariant exactly where the centers' closures agree, and is the continuation condition exactly where every center's closure is the whole, with no step. (`Becoming.ownClosure`, `Becoming.ownClosure_presupposed`, `Becoming.ownClosure_standpointInvariant_iff`, `Becoming.ownClosure_unrestricted_iff`, `Becoming.ownClosure_unrestricted_of_whole`)
+   - *Master laws:* closure, reaching the grammar.
 9. Held de dicto, what each standpoint's presupposition at its center's closure and standpoint-invariance force is exactly the union of the closures; on a web, admitting what the step forces is admitting every center, or the union along a relation. (`Becoming.withinSome`, `Becoming.forced_iff_within_some`, `Becoming.Web.admitsWithin_forced_iff`, `Becoming.Web.admitsWithin_forced_within_some_iff`)
+   - *Master laws:* closure, reaching the grammar.
 10. The de se and de dicto readings give significance alike from every standpoint exactly where whatever lies within one center's closure lies within every center's. Witness: two standpoints, each its own center along the empty relation, where they part. (`Becoming.selfAscribed_iff_withinSome`, `Becoming.Divided.not_within`, `Becoming.Divided.selfAscribed_not_invariant`, `Becoming.Divided.withinSome_both`)
+   - *Master laws:* closure, reaching the grammar.
 11. On valuations, relational neutrality is closedness of each standpoint's significance under the formed relations' steps; what the two neutralities force from a valued living claim is exactly what it reaches through formed relations among living claims, and every living claim is forced exactly where the formed relations connect the living claims: the scope is the closure, as on boundaries (forced_iff_within). (`Becoming.Valuation.transmits_iff_closed`, `Becoming.Valuation.forced_iff_reach`, `Becoming.Valuation.forced_whole_iff_connected`)
+   - *Master laws:* closure, reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,14 +11,23 @@
 ## Laws
 
 1. Over a finite listing of items, a course is the items it admits and a weighting gives each a natural weight. Inclusion never lowers a weighted count, and every weighting positive on every item ranks a widening strictly higher. (`Becoming.Weighting.weighed`, `Becoming.Weighting.Positive`, `Becoming.Weighting.weighed_le_of_includes`, `Becoming.Weighting.weighed_lt_of_widens`)
+   - *Master laws:* order, not reaching the grammar.
 2. Where one course admits a listed item the other does not, the weighting tilted toward it, one more than the listing's length on what it alone admits and one elsewhere, ranks it higher; so a mixed comparison is decided both ways by positive weightings. (`Becoming.Weighting.tilted`, `Becoming.Weighting.outweighs`, `Becoming.Weighting.mixed_either_way`)
+   - *Master laws:* none among its reasons.
 3. On the listed items one course widens another exactly when every positive weighting ranks it higher. (`Becoming.Weighting.widens_iff_every_positive`)
+   - *Master laws:* order, not reaching the grammar; central declaration `Becoming.Weighting.widens_iff_every_positive`: master law (weights: widening is what every positive weighting ranks higher; the grammar has no weights).
 4. Additivity is not needed: for any class of orders from the positive weightings up to every order ranking each widening higher (priority to the worse off among them), one course widens another exactly when every order of the class ranks it higher, every complete order included, and within each class a mixed comparison is decided both ways; on a web, the same of what level paths admit. (`Becoming.Weighting.Increasing`, `Becoming.Weighting.ranks`, `Becoming.Weighting.increasing_ranks`, `Becoming.Weighting.widens_iff_every_of_class`, `Becoming.Weighting.widens_iff_every_increasing`, `Becoming.Weighting.widens_iff_every_score`, `Becoming.Weighting.mixed_either_way_of_class`, `Becoming.Weighting.increasing_prior`, `Becoming.Web.widens_iff_every_of_class`)
+   - *Master laws:* order, not reaching the grammar.
 5. Lexical priority, the basic items first (a course above another where it widens it on the basic items, or admits exactly its basic items and widens it on the others), ranks every widening higher, so it lies within the classes whose shared order is widening and decides only mixed comparisons. (`Becoming.Weighting.restrict`, `Becoming.Weighting.lexical`, `Becoming.Weighting.increasing_lexical`)
+   - *Master laws:* order, not reaching the grammar.
 6. Where every item a course admits beyond another weighs nothing, the two weigh the same: a weighting that leaves an item out does not rank a widening that adds only that item. (`Becoming.Weighting.weighed_eq_of_unweighted`)
+   - *Master laws:* none among its reasons.
 7. Under one positive weight for every item, a course weighs more exactly when it admits more items. (`Becoming.Weighting.weighed_const`, `Becoming.Weighting.neutral_ranks_by_number`)
+   - *Master laws:* none among its reasons.
 8. On a web, where admission is decided and what either level path admits is listed, one path widens the other exactly when every weighting positive on the listed steps and formations ranks it higher. (`Becoming.Web.DecidesAdmission`, `Becoming.Web.ListsAdmitted`, `Becoming.Web.widens_iff_every_weighting`)
+   - *Master laws:* order, not reaching the grammar.
 9. Where one level path admits a formation at a step and another does not, the other neither widens nor keeps it: the comparison never ranks the course in which something is closed above the one in which it is not. (`Becoming.Web.not_widens_of_closes`)
+   - *Master laws:* order, not reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

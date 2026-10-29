@@ -467,6 +467,56 @@ def law_families():
     return json.loads(path.read_text()).get('families', []) if path.is_file() else []
 
 
+MASTER_LAWS = 'theories/becoming/results/data/master-laws.json'
+CORE_RECEIPT = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json'
+
+
+def master_laws():
+    """MV: the master laws each law of a record rests on, by Lean dependency (data/master-laws.json, written by
+    tools/research/master_laws.py from the measure and the checker cache; it is not rendered here)."""
+    path = ROOT / MASTER_LAWS
+    return json.loads(path.read_text()) if path.is_file() else {}
+
+
+def master_law_note(r, i, law):
+    """The line under law i on a record page, where the data was computed for exactly these declarations."""
+    m = r.get('_master_laws')
+    e = m['laws'].get(i) if m else None
+    if not e or e.get('declarations') != law.get('declarations', []):
+        return ''
+    if 'dependence' not in e:
+        return '*Master laws:* not measured: its declarations lie outside the core run.'
+    names = [m['names'].get(k, k) for k in e['master_laws']]
+    listed = ' and '.join(names) if len(names) < 3 else ', '.join(names[:-1]) + ' and ' + names[-1]
+    text = {'grammar': f'{listed}, reaching the grammar',
+            'balance, represented': f'{listed}, not reaching the grammar (balance is represented in it both ways)',
+            'anchor, not reached': f'{listed}, not reaching the grammar',
+            'no master law': 'none among its reasons'}[e['dependence']]
+    for c in e.get('central', []):
+        text += f'; central declaration `{c["declaration"]}`: {c["category"]}' + (f' ({c["reason"]})' if c.get('reason') else '')
+    if e.get('outside'):
+        n = len(e['outside'])
+        text += f'; {n} of its declarations {"lies" if n == 1 else "lie"} outside the core run'
+    return '*Master laws:* ' + text + '.'
+
+
+def master_laws_status(records):
+    """How far data/master-laws.json still matches: laws whose declarations changed or that it has not read, and
+    whether the core receipt it was computed against is still the latest. Reported by the check, never an error:
+    rerunning the generator needs the checker's cache."""
+    data = master_laws()
+    if not data:
+        return {'measured': False}
+    unmatched = [f'{r["id"]}:{i}' for r in records for i, law in enumerate(r.get('laws', []), 1)
+                 if not r.get('_master_laws') or (e := r['_master_laws']['laws'].get(i)) is None
+                 or e.get('declarations') != law.get('declarations', [])]
+    latest = json.loads((ROOT / CORE_RECEIPT).read_text()).get('utc') if (ROOT / CORE_RECEIPT).is_file() else None
+    return {'measured_against': data.get('core_receipt'), 'latest_core_receipt': latest,
+            'current': data.get('core_receipt') == latest and not unmatched,
+            'laws_not_matched': len(unmatched), 'first_not_matched': unmatched[:10],
+            'refresh': 'python3 -B tools/research/master_laws.py, then make research-render'}
+
+
 def law_family_errors(records):
     ids, seen, errors = {r.get('id') for r in records}, {}, []
     for f in law_families():
@@ -774,6 +824,9 @@ def render_record_v2(r):
         for i, law in enumerate(r['laws'], 1):
             names = ', '.join('`' + d + '`' for d in law.get('declarations', []))
             lines += [f'{i}. ' + en(law) + (f' ({names})' if names else '')]
+            note = master_law_note(r, i, law)
+            if note:
+                lines += ['   - ' + note]
         lines += ['']
     lines += [heading('##', 'Conditions', 'Conditions / 条件'), '']
     lines += ['- ' + en(x) for x in r['hypotheses']]
@@ -912,15 +965,20 @@ def load_records():
     for r in records:
         if r['id'] in family:
             r['_law_family'] = family[r['id']]
+    measured = master_laws()
+    for r in records:
+        if r['id'] in measured.get('records', {}):
+            r['_master_laws'] = {'names': measured.get('names', {}), 'laws': {e['law']: e for e in measured['records'][r['id']]}}
     return sorted(records, key=lambda r: r['id']), errors
 
 
 def affected_ids(records, changed):
     shared = standard_boundaries_path() in changed  # its text renders on every citing page
     families = LAW_FAMILIES in changed  # its text renders on every member's page
+    measured = MASTER_LAWS in changed  # it renders under the laws of every record it reads
     selected = {r['id'] for r in records if str(record_path(r).relative_to(ROOT)) in changed or any(x['path'] in changed for x in r['references'])
                 or any(v.get('path') in changed for v in r.get('text_versions', []) if isinstance(v, dict))
-                or (shared and r.get('standard_boundaries')) or (families and r.get('_law_family'))}
+                or (shared and r.get('standard_boundaries')) or (families and r.get('_law_family')) or (measured and r.get('_master_laws'))}
     # A changed record's producers list it under "Used by" on their pages.
     selected |= {e['id'] for r in records if r['id'] in selected for e in r['dependencies']}
     while True:

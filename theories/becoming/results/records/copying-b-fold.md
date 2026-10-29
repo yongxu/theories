@@ -11,8 +11,11 @@
 ## Laws
 
 1. What n rounds of copying c + 1 fold draw for, times c, with the k units of the start, is k times (c + 1) to the n; doubling's count is its case. (`Becoming.Copying.requiredBy`, `Becoming.Copying.mul_pow_succ`, `Becoming.Copying.requiredBy_add`)
+   - *Master laws:* none among its reasons.
 2. Copying b-fold runs n rounds exactly where the stock covers d times what they draw for, ending with k times b to the n units and what is left; doubling is its case. (`Becoming.Copying.copying`, `Becoming.Copying.copying_iff`, `Becoming.Copying.copying_runs`)
+   - *Master laws:* none among its reasons.
 3. One teaching ten, five rounds from one unit run from a stock of 11,111 and end with 100,000 units and none left. (`Becoming.Copying.tenfold`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

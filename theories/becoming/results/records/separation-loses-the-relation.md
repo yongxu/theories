@@ -11,15 +11,25 @@
 ## Laws
 
 1. For a whole on A × B, the combinations that occur, it is rectangular where whatever goes with one part goes with every other: (a, b) and (a′, b′) occurring give (a, b′). Its separated description admits a pair where each part occurs with something. Separation keeps every combination that occurs, and admits only what occurs exactly where the whole is rectangular. (`Becoming.Rectangular`, `Becoming.Separated`, `Becoming.separated_of_whole`, `Becoming.separation_faithful_iff`)
+   - *Master laws:* none among its reasons.
 2. Two parts that always go alike, described separately, can go apart: for the whole on Bool × Bool where the parts are equal, the separated description admits (true, false), which does not occur. (`Becoming.separation_admits_extra`)
+   - *Master laws:* none among its reasons.
 3. A relation held by the whole and by no pair: in the even-parity triples on Bool, any two values of any two places complete to an even triple, and (true, false, false) is not one. (`Becoming.flipIf`, `Becoming.EvenThree`, `Becoming.whole_not_in_pairs`)
+   - *Master laws:* none among its reasons.
 4. On Specker's three boxes read through their three pairs, every reading of the boxes is allowed by every pair under even parity, and the pairs do not give the whole back: not every reading the pairs allow is of even parity. (`Becoming.evenBoxes`, `Becoming.evenBoxes_glued`, `Becoming.evenBoxes_not_determined`, `Becoming.restrict`, `Becoming.Glued`, `Becoming.PartsDetermine`, `Becoming.Specker.Box`, `Becoming.Specker.within`)
+   - *Master laws:* none among its reasons.
 5. A law's image of a whole is the configurations it leads to from the whole. A law moving each part by itself, (a, b) to (f a, g b) for any f and g, keeps a rectangular whole rectangular. The law copying the first part into the second leads from the full whole on Bool × Bool to the parts being equal, which is not rectangular. (`Becoming.imageOf`, `Becoming.Rectangular.image_of_separate`, `Becoming.copy_relates`)
+   - *Master laws:* none among its reasons.
 6. Where f merges no two first parts that occur in the whole and g no two second parts, a rectangular image under the law moving each part by itself comes only from a rectangular whole, so a whole that is not rectangular stays so under that law. (`Becoming.Rectangular.of_image_injective`, `Becoming.relation_persists`)
+   - *Master laws:* none among its reasons.
 7. A law sending the first part to one value, however it moves the second, leads from any whole to a rectangular one. (`Becoming.forgetting_unrelates`)
+   - *Master laws:* none among its reasons.
 8. The coupling taking (x, y) to (x, y turned over where x holds) on Bool × Bool undoes itself; it leads from “the second part is false”, which is rectangular, to a whole that is not rectangular, and acting again leads back to “the second part is false”. (`Becoming.couple`, `Becoming.couple_couple`, `Becoming.coupling_relates_and_unrelates`)
+   - *Master laws:* none among its reasons.
 9. Along the courses of n moves of a determined law's process from a whole: under a law moving each part by itself, a rectangular whole reaches only rectangular wholes at every n; where f and g merge nothing at all, a whole that is not rectangular reaches only wholes that are not rectangular at every n. (`Becoming.Courses.reachedFrom`, `Becoming.Courses.courses_keep_unrelated`, `Becoming.Courses.relation_persists_courses`)
+   - *Master laws:* none among its reasons.
 10. Along such courses, one move of copying the first part into the second leads from every configuration of Bool × Bool to the parts being equal, not rectangular; after one move of a law sending the first part to one value, every course leads to a rectangular whole; one move of the coupling from “the second part is false” leads to a whole that is not rectangular, and two moves lead back. (`Becoming.Courses.copy_relates_course`, `Becoming.Courses.forgetting_unrelates_courses`, `Becoming.Courses.coupling_course`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

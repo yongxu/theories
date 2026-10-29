@@ -11,16 +11,27 @@
 ## Laws
 
 1. A region is closed under a relation when whatever a member bears the relation to is a member; g lies within f's closure under the relation when every closed region holding f holds g. The closure is reflexive and transitive, holds what f bears the relation to, grows with the relation, is symmetric under a symmetric relation, and nothing within it bears the relation to what lies beyond it. (`Becoming.ClosedUnder`, `Becoming.WithinClosure`, `Becoming.WithinClosure.refl`, `Becoming.WithinClosure.trans`, `Becoming.WithinClosure.of_rel`, `Becoming.WithinClosure.mono`, `Becoming.WithinClosure.symm`, `Becoming.WithinClosure.not_rel`)
+   - *Master laws:* closure, reaching the grammar.
 2. The closure is itself closed, so it is the least closed region holding f; it is exactly the seed–edge closure of Becoming.EdgeClosure from the one seed f. (`Becoming.closedUnder_withinClosure`, `Becoming.withinClosure_iff_closure`, `Becoming.Closure`, `Becoming.Steps`, `Becoming.withinClosure_of_trace`, `Becoming.reach_iff_withinClosure`, `Becoming.invariant_iff_closedUnder`)
+   - *Master laws:* closure, reaching the grammar.
 3. The feeding closure is the closure under being fed at some step. (`Becoming.Flow.FedFrom`, `Becoming.Flow.WithinFeeding`, `Becoming.Flow.FedClosed`)
+   - *Master laws:* closure, reaching the grammar.
 4. A formation is affected by another when the other exchanges with a condition the first depends on at some step: it takes part at some step and takes from it or gives to it. The influence closure is the closure under being affected, what can affect the formation; the reach closure is the closure under affecting, what the formation's exchange can affect, link by link. (`Becoming.Web.DependsOn`, `Becoming.Flow.Exchanges`, `Becoming.Flow.AffectedBy`, `Becoming.Flow.WithinInfluence`, `Becoming.Flow.Affects`, `Becoming.Flow.WithinReach`)
+   - *Master laws:* closure, reaching the grammar.
 5. A formation takes part in a condition when it depends on it or exchanges with it; two formations taking part in one condition share it; the system is the closure under sharing, a class. (`Becoming.Flow.TakesPart`, `Becoming.Flow.Shares`, `Becoming.Flow.WithinSystem`, `Becoming.Flow.shares_symm`, `Becoming.Flow.WithinSystem.symm`)
+   - *Master laws:* closure, reaching the grammar.
 6. With no premise, the feeding closure lies within the influence closure, the influence and reach closures lie within the system, and the system is closed under affecting. (`Becoming.Flow.affectedBy_of_fedFrom`, `Becoming.Flow.withinInfluence_of_withinFeeding`, `Becoming.Flow.shares_of_affectedBy`, `Becoming.Flow.withinSystem_of_withinInfluence`, `Becoming.Flow.withinSystem_of_withinReach`, `Becoming.Flow.withinSystem_closed`)
+   - *Master laws:* closure, reaching the grammar; central declaration `Becoming.Flow.withinSystem_of_withinInfluence`: master law.
 7. Each inclusion can be strict. In Trophic, a trophic cascade, both flows balance, only active formations give and take, and activity needs support; the wolves give to nothing, lying beyond the forest's feeding closure and within its influence closure, and a formation far off lies beyond the forest's system. (`Becoming.Trophic.mediates`, `Becoming.Trophic.near_closed`)
+   - *Master laws:* closure and balance, reaching the grammar.
 8. In Clearing the source lies within the clearer's feeding closure and the dweller beyond its influence closure and within its system. The clearer's reach closure holds the dweller and not the source, which lies within its influence closure, so the influence and reach closures point in opposite directions; the dweller's reach closure does not hold the clearer. (`Becoming.Clearing.alongDependence`, `Becoming.Clearing.alongDependence_closed`, `Becoming.Clearing.levels`, `Becoming.Clearing.clearerReach`, `Becoming.Clearing.clearerReach_closed`, `Becoming.Clearing.reach_middle`, `Becoming.Clearing.reach_centred`)
+   - *Master laws:* closure, reaching the grammar.
 9. Where nothing exchanges with a condition, two formations depending on it share a system, while the first is not affected by the second and the second lies beyond the first's influence closure. (`Becoming.Static.shares_unaffected`)
+   - *Master laws:* closure and balance, reaching the grammar.
 10. Where every formation takes part in one condition, every system is the whole; where every formation depends on it and exchanges with it, every reach closure is; where at one step every formation takes part, requires it and gives to it, every feeding closure is. (`Becoming.Flow.system_whole_of_common`, `Becoming.Flow.reach_whole_of_common`, `Becoming.Flow.feeding_whole_of_common`)
+   - *Master laws:* closure, reaching the grammar.
 11. Under such a common feeding condition, significance bounded by each center's feeding closure, the route without the continuation condition, is that condition; where each center's system is the whole, significance bounded by the system is the continuation condition, and Clearing is one system. The condition appears here only as a conclusion, that some bounded significance is exactly it. (`Becoming.Flow.feeding_unrestricted_of_common`, `Becoming.Flow.bounded_system_whole`, `Becoming.Clearing.clearer_system`, `Becoming.Clearing.system_whole`, `Becoming.Unrestricted`, `Becoming.bounded`)
+   - *Master laws:* closure, reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,10 +11,15 @@
 ## Laws
 
 1. Along a run whose configurations a list of N holds, with no change within a loop, there are fewer than N changes: m + 1 changes leave m + 2 configurations, at the changes and after the last, pairwise apart. (`Becoming.LastChange.Changes`, `Becoming.LastChange.Changes.add`, `Becoming.LastChange.atChanges`, `Becoming.LastChange.atChanges_le`, `Becoming.LastChange.atChanges_gt`, `Becoming.LastChange.changes_lt`)
+   - *Master laws:* finite runs, not reaching the grammar.
 2. Such a run settles where, at every step, it is decided whether the run changes again; with decidable configurations, exactly where it is so decided, and within every finite stretch it is decided. (`Becoming.LastChange.ChangesAgain`, `Becoming.LastChange.StillFrom`, `Becoming.LastChange.settles_of_still`, `Becoming.LastChange.settles_or_changes`, `Becoming.LastChange.settles_of_decided`, `Becoming.LastChange.decided_within`, `Becoming.LastChange.settles_iff_decided`)
+   - *Master laws:* finite runs, not reaching the grammar.
 3. With decidable configurations and no further premise, whether a run changes again from a step is not not decided, and such a run is not not settled. (`Becoming.LastChange.not_not_decided`, `Becoming.LastChange.not_not_settles_or_changes`, `Becoming.LastChange.not_not_settles`)
+   - *Master laws:* finite runs, not reaching the grammar.
 4. With the limited principle of omniscience such a run settles, and in a world a list holds every run from a configuration with no reachable change that can be undone settles; conversely, that this holds for every process of decidable configurations in a world a list holds is the limited principle of omniscience. (`Becoming.LastChange.decided_of_lpo`, `Becoming.LastChange.settles_of_lpo`, `Becoming.LastChange.noLoop_of_no_undoable`, `Becoming.LastChange.settles_of_no_undoable`, `Becoming.LastChange.lpo_iff_settles`)
+   - *Master laws:* closure and finite runs, reaching the grammar.
 5. With the limited principle of omniscience, in a world a list holds, every run from a configuration comes to rest with its target met exactly where every reachable configuration with a step that stays meets the target and no reachable change can be undone; with decided configurations alone, each run then does not not rest. (`Becoming.LastChange.rests_of_settles`, `Becoming.LastChange.assured_iff_of_lpo`, `Becoming.LastChange.not_not_rests`)
+   - *Master laws:* finite runs, not reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,9 +11,13 @@
 ## Laws
 
 1. Runs of the event law (division, retention change, detachment, aggregation) are exactly the traces of its process; division adds one position copying the parent's retention state and founder and, while the parent retains, a bond from parent to daughter; a changed retention state governs the next division. (`DevelopmentalAssociation.run_iff_core_trace`, `DevelopmentalAssociation.division_inherits`, `DevelopmentalAssociation.changed_state_governs_division`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 2. Every trace with no aggregation event from a lineage-consistent state (each bond joins two present positions of one founder) ends lineage-consistent, and there positions connected through bonds, either way and in chains, share a founder; so in every such run positions connected by actual bonds share a founder. (`DevelopmentalAssociation.division_preserves_lineage`, `DevelopmentalAssociation.step_preserves_lineage`, `DevelopmentalAssociation.trace_preserves_lineage`, `DevelopmentalAssociation.connected_same_founder`, `DevelopmentalAssociation.developed_groups_have_common_origin`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 3. In a seed of two founders, aggregating positions 0 and 1 joins positions of different founders by a bond, the counterexample outside the no-aggregation hypothesis. From one founder, detaching bond 1–2 or bond 0–1 after the same growth ends with equal counts, accounts, retention states and founders, yet detaching 0–1 is then available in one only, so no function of the bond-omitting snapshot predicts it exactly. (`DevelopmentalAssociation.aggregation_breaks_clonal_conclusion`, `DevelopmentalAssociation.equal_cell_states_different_continuations`, `DevelopmentalAssociation.comparison_histories_are_actual`, `DevelopmentalAssociation.no_bond_free_exact_predictor`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 4. Witnesses from one founder: switching retention on and dividing three times forms a chain of four positions of one founder; a separated descendant goes on dividing into a new attached group; switching retention off changes later division without removing earlier bonds. (`DevelopmentalAssociation.changed_division_forms_group`, `DevelopmentalAssociation.separated_descendant_reconstructs_association`, `DevelopmentalAssociation.restored_separation_changes_later_growth`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

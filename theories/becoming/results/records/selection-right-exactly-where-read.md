@@ -11,7 +11,9 @@
 ## Laws
 
 1. What matters goes alike across the alternatives a map lumps together exactly where it is read off the map, through what holds of some alternative the map gives that entry. (`Becoming.Learning.through_iff_reads`)
+   - *Master laws:* none among its reasons.
 2. A selection through a map selecting exactly what matters exists exactly where what matters is read off the map. (`Becoming.Learning.selects_right_iff`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

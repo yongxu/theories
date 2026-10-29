@@ -11,10 +11,15 @@
 ## Laws
 
 1. Where value gives the values of what couples into a formation (at each step two levels take one value exactly where they admit it alike and the conditions coupled in by level stand alike), its own course under a level history is the value at each step of what couples in then; where admission is decided and the conditions coupled in by level are listed, whether it is admitted and the listed levels give such values. (`Becoming.Web.ValuesThrough`, `Becoming.Web.courseThrough`, `Becoming.Web.listed_values`)
+   - *Master laws:* none among its reasons.
 2. Being alike through its couplings at a step is one value of its own course there, and up to a step one prefix of it; two histories are selected alike by every selection through its couplings exactly where the prefixes agree. (`Becoming.Web.alikeThrough_iff`, `Becoming.Web.alikeThroughUpTo_iff_prefix`, `Becoming.Web.selects_alike_iff_prefix`)
+   - *Master laws:* none among its reasons.
 3. A selection is through its couplings up to a step exactly where it selects each history by the prefix of its own course before the next step. (`Becoming.Web.selectsThrough_iff_prefix`)
+   - *Master laws:* none among its reasons.
 4. Where its own courses under two histories have at most N and N' states and the histories are alike through its couplings before N + N' - 1, they are alike at every step and every selection through its couplings selects them alike; where the two courses read together have at most P states, alike before P is enough. (`Becoming.Web.alike_of_bounded`, `Becoming.Web.selects_alike_of_bounded`, `Becoming.IdentificationRuns.joint_agree`, `Becoming.Web.alike_of_joint_bounded`)
+   - *Master laws:* none among its reasons.
 5. The bound is attained in a web of one condition read by its level: for every M and M' two histories whose own courses have at most M + 1 and M' + 1 states are alike before M + M' and apart at M + M'. In the same web, read with the step, a constant history's own course has more than every bound of states, and read by the level one. (`Becoming.Web.oneCondition`, `Becoming.Web.oneCondition_values`, `Becoming.Web.bounded_exact`, `Becoming.Web.states_by_reading`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,9 +11,13 @@
 ## Laws
 
 1. Possible enough: some run of a process from a configuration comes to rest with its target met exactly where a configuration reachable from it meets the target and has a step that stays. (`Becoming.Enough.RestsFrom`, `Becoming.Enough.Rests`, `Becoming.Enough.Stays`, `Becoming.Enough.stayAt`, `Becoming.Enough.prependState`, `Becoming.Enough.prependAct`, `Becoming.Enough.prepend`, `Becoming.Enough.trace_then_stay`, `Becoming.Enough.possibly_rests_iff`)
+   - *Master laws:* none among its reasons.
 2. Assured enough: every run from a configuration comes to rest with its target met exactly where every reachable configuration with a step that stays meets the target and every run from it settles; the second part does not mention the target. (`Becoming.Enough.Settles`, `Becoming.Enough.settled_at`, `Becoming.Enough.assured_stays_meet`, `Becoming.Enough.assured_iff`)
+   - *Master laws:* none among its reasons.
 3. Where every configuration can stay and meets the target, a run may still never settle: with two configurations and every step allowed, some run rests and the alternating run does not settle. (`Becoming.Enough.Free.process`, `Becoming.Enough.Free.alternate`, `Becoming.Enough.Free.alternating`, `Becoming.ListTests.not_ne_self`, `Becoming.Enough.Free.stays_meet_not_assured`)
+   - *Master laws:* none among its reasons.
 4. Under a determined law some run from a configuration rests with its target met exactly where every run does, and exactly where the orbit reaches a configuration the law leaves unchanged that meets the target. (`Becoming.Enough.law_possibly_iff`, `Becoming.Enough.law_possibly_iff_assured`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

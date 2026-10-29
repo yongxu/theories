@@ -11,18 +11,31 @@
 ## Laws
 
 1. A condition couples into a formation where the formation depends on it, by the threshold of its support, or it is coupled in by level, a supplied relation that is empty under coupling by threshold only; two level histories are alike through the formation's couplings at a step where their levels admit it alike and stand alike on what couples in by level. (`Becoming.Web.CoupledInto`, `Becoming.Web.AlikeThrough`, `Becoming.thresholdOnly`)
+   - *Master laws:* none among its reasons.
 2. For two flows with their webs and a formation g, the exchange around g follows its couplings where, wherever the two have been alike through g's couplings up to a step, the flows take from and give to every condition coupled into g alike across that step, in total over every formation present. (`Becoming.Flow.ExchangeFollows`)
+   - *Master laws:* none among its reasons.
 3. For two flows balanced on what couples into a formation g, their exchange following g's couplings: while they are alike through g's couplings at every earlier step, every difference on a condition coupled into g stays as it was at the start. (`Becoming.Flow.difference_kept`, `Becoming.Flow.BalancesOn`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 4. For two flows balanced on what couples into a formation g, their exchange following g's couplings, the second web starting no lower on what couples into g and alike on what couples in by level: where the first web supported g at every step before t, the webs are alike through g's couplings at every step before t, any number of conditions differing. (`Becoming.Flow.alike_while_supported`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 5. For two flows balanced on what couples into a formation g, their exchange following g's couplings, the second web starting no lower on what couples into g and alike on what couples in by level: where a difference coupled into g has changed by step t, not every earlier step at which the second web admits g has g supported in the first, and, where activity needs support, not every earlier step has g active there. (`Becoming.Flow.difference_changes_after_divergence`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 6. For two flows balanced on what couples into g, their exchange following g's couplings, conditions' equality decided, the starts alike on what couples into g but a stock c that g depends on, not coupled in by level, d higher in the second: at each t before which the first web supported g at every step, c stands exactly d higher, all else coupled into g alike, and the webs alike through g's couplings before t. (`Becoming.Flow.subthreshold_alike`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 7. For two flows balanced on what couples into g, their exchange following g's couplings, conditions' equality decided, the starts alike on what couples into g but a stock c that g depends on, not coupled in by level, d higher in the second: where the first web supports g at every step, c stands exactly d higher and the webs are alike through g's couplings at every step. (`Becoming.Flow.subthreshold_alike_always`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 8. Witness: a formation needing one unit of a stock, active while the stock stands and drawing one unit at each supported step, its exchange following its support only, with the stock at two in one web and three in the other: the difference of one stands at steps 0 to 2, at step 2 the lower web fails to support the formation while the higher supports it, and at step 3 the difference has changed. (`Becoming.SupportDrawn.difference_waits`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 9. Witness: where both webs fail a formation at step one, a second requirement being gone, and its exchange follows its support only, the stock stands one higher at every step: a failure of both webs together is not a divergence. (`Becoming.JointFailure.difference_kept`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 10. Witness: a formation drawing all of its stock above its need at the first step, the stock coupled into it by level, is supported at every step in webs one and two units above its need, and in the higher it draws on the difference, changed after the first step; the webs are apart through its couplings at the first step, so its exchange follows its couplings, while under coupling by threshold only it does not. (`Becoming.Gauged.gauge_changes_difference`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 11. Witness: for a formation whose stock is its own standing, a gauge of its own standing is the gauge of the stock, and under it the webs one and two units above its need are apart through its couplings at the first step. (`Becoming.Gauged.own_is_stock`, `Becoming.ownStanding`)
+   - *Master laws:* none among its reasons.
 12. Witness: a dependent needing one unit of a stock and a taker drawn by a stock of three, which takes two units at the first step: the web starting one unit higher fails the dependent at step one while the lower still supports it; the webs are alike through the dependent's couplings by threshold at step zero and apart at step one, and the exchange does not follow its couplings. (`Becoming.Attracting.higher_breaks_first`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 13. Witness: a prey depending on its own standing at need one, two at the start, and bitten at the first step: under a bite of one, its levels are alike with the spared levels through its support at every step and apart through a gauge of its own standing at step one; under a bite of two, they are apart through its support at step one. (`Becoming.SelfPrey.threshold_on_oneself`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

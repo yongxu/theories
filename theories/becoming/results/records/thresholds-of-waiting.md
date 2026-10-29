@@ -11,12 +11,19 @@
 ## Laws
 
 1. All but f members of a list hold s: with f = 0 every member, with f at least the length always; it grows with s and f, finds a member that holds or a list at most f long, and holds of nothing exactly where the list is at most f long. (`Becoming.Tolerance.AllBut`, `Becoming.Tolerance.AllBut.mono_set`, `Becoming.Tolerance.AllBut.mono_count`, `Becoming.Tolerance.AllBut.of_length`, `Becoming.Tolerance.AllBut.of_length_le`, `Becoming.Tolerance.AllBut.zero_all`, `Becoming.Tolerance.AllBut.zero_iff`, `Becoming.Tolerance.AllBut.found`, `Becoming.Tolerance.AllBut.withheld_iff`)
+   - *Master laws:* none among its reasons.
 2. The tolerating law: a formation gives where all but its tolerance of what it waits on gave; with every tolerance 0 its course is that of answers on the listed waits. (`Becoming.Tolerance.tolerating`, `Becoming.Tolerance.Listed`, `Becoming.Tolerance.tolerating_zero`)
+   - *Master laws:* none among its reasons.
 3. Restoring needs a formation sparing all it waits on: from total withholding a giving formation finds one; such a formation gives at every step after the start; without one, total withholding stays. (`Becoming.Tolerance.gives_needs_sparing`, `Becoming.Tolerance.sparing_gives`, `Becoming.Tolerance.total_stays`)
+   - *Master laws:* none among its reasons.
 4. A set giving at the start, each member waiting on at most its tolerance outside it, gives at every step whatever the rest does; where the start gives outside W and every formation waits on at most its tolerance inside W, every formation gives from step 1 on. (`Becoming.Tolerance.kept_set`, `Becoming.Tolerance.thin_absorbed`)
+   - *Master laws:* none among its reasons.
 5. The certificate of Becoming.FaultEnvelopes read as a law of giving keeps a covered set giving under separated envelopes, is available at step 1 exactly where the envelope is separated, and without separation a withholding within an admitted fault set stops a domain. (`Becoming.Tolerance.certified`, `Becoming.Tolerance.certified_kept`, `Becoming.Tolerance.certified_available_iff`, `Becoming.Tolerance.certified_blocked`)
+   - *Master laws:* none among its reasons.
 6. In three formations each waiting on the other two, one withholding spreads to all from step 2 with tolerance 0 (at step 1 first still gives), passes out at step 1 with tolerance 1, and with tolerance 1 total withholding is kept at every step. (`Becoming.Tolerance.Triad.spreads`, `Becoming.Tolerance.Triad.absorbed`, `Becoming.Tolerance.Triad.total_kept`, `Becoming.Tolerance.Triad.total_at_two`)
+   - *Master laws:* none among its reasons.
 7. On a web whose conditions each depend only on themselves, need k units and are given one by each upstream formation supported the step before, with k at most the number upstream, support is the run of the tolerating law with tolerance the number upstream less k; with k all upstream it is Withholding's law without memory. (`Becoming.Tolerance.countTrue`, `Becoming.Tolerance.countTrue_add_not`, `Becoming.Tolerance.allBut_iff_count`, `Becoming.Tolerance.allBut_sub_iff`, `Becoming.Tolerance.KeepsInclusion.course_iff`, `Becoming.Tolerance.web_tolerating`, `Becoming.Tolerance.web_activity_tolerating`, `Becoming.Tolerance.web_answers`, `Becoming.Tolerance.giftLevels`, `Becoming.Tolerance.giftWeb`, `Becoming.Tolerance.giftWeb_tolerating`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

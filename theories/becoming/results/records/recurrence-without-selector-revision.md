@@ -11,7 +11,9 @@
 ## Laws
 
 1. Every state returns to itself after two steps; every state whose selector selects alternation changes at the step; changing only the selector, at a common phase, changes the next phase, so the selector is operative; every step keeps the selector, so it is the same at every time. (`GenerativeBoundary.FixedSelector.returns_after_two`, `GenerativeBoundary.FixedSelector.changes_phase_every_step`, `GenerativeBoundary.FixedSelector.selector_changes_next_phase`, `GenerativeBoundary.FixedSelector.selector_preserved_by_step`, `GenerativeBoundary.FixedSelector.selector_unchanged_at_every_time`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 2. Witness: the state at phase false selecting alternation returns after two steps, changes at the first and keeps its selector at every time; every later state selects alternation too, so it changes at every step. (`GenerativeBoundary.FixedSelector.recurrent_process_with_fixed_selector`, `GenerativeBoundary.FixedSelector.changes_phase_every_step`, `GenerativeBoundary.FixedSelector.selector_unchanged_at_every_time`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

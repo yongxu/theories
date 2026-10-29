@@ -11,18 +11,31 @@
 ## Laws
 
 1. For a listed roster of witnesses of a type compared decidedly and two different two-valued answers, a complete report explains an answer with a fault set where every witness outside it reports that answer; no complete report is explained both by the one answer with one fault set and by the other with a second exactly where some witness of the roster is in neither. (`Becoming.Readout.Explains`, `Becoming.Readout.CommonWitness`, `Becoming.Readout.no_common_report_iff`)
+   - *Master laws:* none among its reasons.
 2. With envelopes of admitted fault sets, for witnesses compared decidedly and two different answers, no complete report is explained both by the one answer under a fault set of the first envelope and by the other under one of the second exactly where every two such fault sets leave a common witness outside both. (`Becoming.Readout.no_common_report_envelopes_iff`)
+   - *Master laws:* none among its reasons.
 3. For every process and two-valued map of its configurations, the values a run takes at listed dates are fallible witnesses: where two fault sets of dates leave a common date outside both, no run's values are explained both by one answer with the first set at fault and by the other answer with the second. (`Becoming.Courses.run_reports_apart`)
+   - *Master laws:* none among its reasons.
 4. Over the courses of two-valued configurations in which every change is admitted, for two different answers, no course is explained by both, under two fault sets or under any fault sets of two envelopes, exactly where every such pair of fault sets leaves a common date outside both. (`Becoming.Courses.anyChange`, `Becoming.Courses.anyRun`, `Becoming.Courses.dates_no_common_report_iff`, `Becoming.Courses.dates_no_common_report_envelopes_iff`)
+   - *Master laws:* none among its reasons.
 5. Where witnesses may be silent, a model is compatible with reports when some admitted fault set explains them, each witness outside it silent or giving its answer. On transcripts where every witness of the roster reports, these are the core's explanations, and compatibility with one answer excludes the other exactly where the envelopes are cross-separated: every pair of their fault sets leaves a witness outside both. (`Becoming.WitnessRefinement.CrossSeparated`, `Becoming.WitnessRefinement.complete_diagnosability_iff_cross_separation`, `Becoming.WitnessRefinement.explains_complete_iff`, `Becoming.WitnessRefinement.compatible_complete_iff`)
+   - *Master laws:* none among its reasons.
 6. For every roster, fault sets and answers of candidate models, inspection is a process on lists of candidates: a transcript steps them to exactly those some admitted fault set of which explains the reports, a silent transcript keeps exactly the candidates admitting some fault set, candidates only narrow along every run, and a certificate after a step needs a remaining candidate. (`Becoming.WitnessRefinementRuns.inspection`, `Becoming.WitnessRefinementRuns.mem_step`, `Becoming.WitnessRefinementRuns.silent_step`, `Becoming.WitnessRefinementRuns.run_narrows`, `Becoming.WitnessRefinementRuns.step_certificate_candidate`)
+   - *Master laws:* none among its reasons.
 7. Two candidates with different answers are told apart by every inspection step on a complete transcript, no step keeping the one keeping the other, exactly where their envelopes are cross-separated. (`Becoming.WitnessRefinementRuns.Complete`, `Becoming.WitnessRefinementRuns.diagnosable_iff`)
+   - *Master laws:* none among its reasons.
 8. After an inspection step on a complete transcript, two remaining candidates with cross-separated envelopes give the same answer; along every run of inspection, once a complete transcript has been read, they do so at every later state. (`Becoming.WitnessRefinementRuns.complete_step_agrees`, `Becoming.WitnessRefinementRuns.complete_run_agrees`)
+   - *Master laws:* none among its reasons.
 9. Witnesses outside a fault set all responding with one answer remove every candidate with the other answer each of whose fault sets leaves one of them outside; two candidates with fault sets covering the roster are both kept by some complete transcript, after which the support of the witnesses outside the first fault set certifies nothing. (`Becoming.WitnessRefinementRuns.responsive_step_excludes`, `Becoming.WitnessRefinementRuns.covering_step_keeps_both`)
+   - *Master laws:* none among its reasons.
 10. Listing the roster twice changes no inspection step and no certificate. While a candidate admitting the failure of the whole roster is in a run of inspection, it stays, and no certificate over the pool of the candidates' fault sets holds at any later state. (`Becoming.WitnessRefinementRuns.doubled_roster_same`, `Becoming.WitnessRefinementRuns.total_fault_blocks`)
+   - *Master laws:* none among its reasons.
 11. Testing steps candidates to those agreeing with a test's answer: an answer leaving none was no candidate's answer and certifies nothing, and every inspection step of the pooled-envelope inquiry moves its candidates by testing. (`Becoming.WitnessRefinementRuns.testing`, `Becoming.WitnessRefinementRuns.test_emptied`, `Becoming.WitnessRefinementRuns.inquiry_step_testing`)
+   - *Master laws:* none among its reasons.
 12. After a testing step by the actual model's answer, with that model a candidate, its failure causes covered, the remaining pool separated, the request current, working witnesses reading and approving faithfully, the reserve at least the load plus three and the deadline at least the time plus the load plus three, a guarded transaction succeeds and completes within scope. (`Becoming.WitnessRefinementRuns.test_step_completes`)
+   - *Master laws:* none among its reasons.
 13. In the computed five-witness audit, an absent fifth report keeps every hypothesis, duplicating the fifth witness's support repairs nothing, and an uncovered correlated failure of witnesses can delete the actual model. (`Becoming.WitnessRefinement.absent_fifth_keeps_uncertainty`, `Becoming.WitnessRefinement.duplicated_fifth_no_repair`, `Becoming.WitnessRefinement.uncovered_correlation_deletes_actual`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

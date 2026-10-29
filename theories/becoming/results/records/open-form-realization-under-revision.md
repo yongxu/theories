@@ -11,14 +11,23 @@
 ## Laws
 
 1. Along a sequence of states, with a rank for each step's rule and an event of completion: where each unfinished step lowers the current rule's rank and each handoff to the next rule does not raise it, the handed rank falls at every unfinished step. (`Becoming.Handoff.handed_off_progress`)
+   - *Master laws:* none among its reasons.
 2. For a decided event and a rank that falls at every step without the event, a start whose rank is at most B has the event at some step from the start through the start plus B. (`Becoming.RenewalBound.renewal_within_rank_bound`)
+   - *Master laws:* none among its reasons.
 3. For admitted histories, each with decided completion, an initial certificate at most B, unfinished steps lowering the current rule's certificate, handoffs not raising it, and each completion corresponding to living content appearing then and absent before: each admitted history forms, at some step through B, living content absent before. (`Becoming.Handoff.boundedFrame`, `Becoming.Handoff.newContent_by_bound`)
+   - *Master laws:* none among its reasons.
 4. On the frame of contents formed within B, living significance turns content so formed in each admitted history into relevant content absent before. Under the continuation condition such content falls under the relevance read from significance, also directly from decided completion, an initial certificate at most B, local descent, handoffs not raising it and the completion correspondence. (`Becoming.Handoff.securesNewContent_by_bound`, `Becoming.SecuredContent.contingent_newContent`, `Becoming.Handoff.securesNewContent_by_bound_of_unrestricted`, `Becoming.Handoff.revised_newContent_by_bound_of_unrestricted`)
+   - *Master laws:* none among its reasons.
 5. Along a run of a frame, with decided completion, an initial certificate at most B, each unfinished step lowering the current rule's certificate, each handoff not raising it, and each completion at step n giving living content realized at step n + 1 and absent before: for some n at most B, such content is realized at step n + 1. (`Becoming.Handoff.Run.novel_by_handoff`)
+   - *Master laws:* none among its reasons.
 6. Along a run of a frame, with decided completion, an initial certificate at most B, each unfinished step lowering the current rule's certificate, each handoff not raising it, each completion at step n giving living content realized at step n + 1 and absent before, and the continuation condition: for some n at most B, content realized at step n + 1 and absent before falls under the relevance read from significance. (`Becoming.Handoff.Run.relevance_by_handoff_of_unrestricted`)
+   - *Master laws:* none among its reasons.
 7. In a local arrangement of two unfinished stages and two formed outcomes, each of three rules, kept, finishes within two steps, and each rule's unfinished step lowers its own remaining count. (`Becoming.Handoff.Stage`, `Becoming.Handoff.Rule`, `Becoming.Handoff.completed`, `Becoming.Handoff.advance`, `Becoming.Handoff.remaining`, `Becoming.Handoff.each_fixed_rule_finishes`, `Becoming.Handoff.each_rule_local_progress`)
+   - *Master laws:* none among its reasons.
 8. In the local arrangement of two unfinished stages and two formed outcomes, revising the rule at every step, each executed rule finishes when kept and lowers its own count, yet the run stays unfinished for ever: each revision raises the remaining count from 1 to 2. The same holds along the revising run of the process whose actions are the rules. (`Becoming.Handoff.restartChoice`, `Becoming.Handoff.revisingRun`, `Becoming.Handoff.revising_run_stays_unfinished`, `Becoming.Handoff.revised_rules_can_fail_forever`, `Becoming.Handoff.revision_resets_remaining`, `Becoming.Handoff.process`, `Becoming.Handoff.revising`, `Becoming.Handoff.fails_forever`, `Becoming.Handoff.resets_remaining`)
+   - *Master laws:* none among its reasons.
 9. In the local arrangement of two unfinished stages and two formed outcomes, a revision after the first step changes the formed outcome, the direct-right rule forming the right outcome where the left rule forms the left, with its remaining count no greater than the left rule's; from the right-ready stage each of the two rules realizes some outcome, and no outcome is realized after both. (`Becoming.Handoff.changed_form_with_valid_handoff`, `Becoming.Handoff.realizes`, `Becoming.Handoff.realized_form_need_not_be_fixed`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

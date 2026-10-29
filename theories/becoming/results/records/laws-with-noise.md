@@ -11,7 +11,9 @@
 ## Laws
 
 1. A law with noise is the relation of exchange opening what some noise value gives; along every realization its course is a run, and the world read off it a world read off a relation of exchange. (`Becoming.NoisyLaw`, `Becoming.NoisyLaw.course_runs`, `Becoming.NoisyLaw.readOffExchange`, `Becoming.NoisyLaw.realize`, `Becoming.NoisyLaw.relation`)
+   - *Master laws:* none among its reasons.
 2. Balance holds in expectation over any distribution of the noise with integrable amounts; a condition ending at a random step rests along every realization while its expected level falls at every step. (`Becoming.Representation.RandomEnd.expected`, `Becoming.Representation.RandomEnd.level`, `Becoming.Representation.RandomEnd.rest_not_in_expectation`, `Becoming.Representation.RandomEnd.rests`, `Becoming.Representation.RandomEnd.summable_weighted`, `Becoming.Representation.RandomEnd.weight`, `Becoming.Representation.expected_balance`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

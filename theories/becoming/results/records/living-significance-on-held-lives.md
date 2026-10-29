@@ -11,14 +11,23 @@
 ## Laws
 
 1. On a valuation, a living claim is held when it lies in the own region of some standpoint; Held is every living claim being held, and Unheld is a claim no standpoint holds. (`Becoming.Valuation`, `Becoming.Valuation.Held`, `Becoming.Valuation.Unheld`)
+   - *Master laws:* none among its reasons.
 2. Where every living claim is held, living significance at the level of claims (every living claim significant from every standpoint) is exactly self-significance at every standpoint with standpoint neutrality, using neither connection nor relational neutrality. (`Becoming.Valuation.SelfSignificance`, `Becoming.Valuation.shares`, `Becoming.Neutral`, `Becoming.Valuation.Significant`, `Becoming.Valuation.significant_iff_held`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.Valuation.significant_iff_held`: definitional or representational (S0 and N_std unpacked).
 3. With holding decided and every living claim reached through formed relations from a held living claim, living significance is exactly self-significance at every standpoint, standpoint neutrality, and relational neutrality into claims no standpoint holds. (`Becoming.Valuation.transmits`, `Becoming.Within`, `Becoming.Valuation.significant_iff_reached`)
+   - *Master laws:* closure, reaching the grammar.
 4. Holding and self-significance do not suffice: with every life held and valued by its own standpoint only, self-significance holds everywhere while standpoint neutrality, relational neutrality and living significance fail. (`Becoming.Apart.own`, `Becoming.Apart.valuation`, `Becoming.Apart.not_enough`)
+   - *Master laws:* none among its reasons.
 5. Holding and relational neutrality into unheld claims are needed: a life no standpoint holds has no significance under self-significance and standpoint neutrality; a life reached from a held one that no standpoint holds has no significance under self-significance and standpoint neutrality, relational neutrality into unheld claims failing. (`Becoming.Unclaimed.own`, `Becoming.Unclaimed.valuation`, `Becoming.Unclaimed.held_is_needed`, `Becoming.Relayed.related`, `Becoming.Relayed.valuation`, `Becoming.Relayed.transmission_is_needed`)
+   - *Master laws:* none among its reasons.
 6. Self-significance already carries each standpoint's significance along any relation into its own region. (`Becoming.Valuation.own_transmission`)
+   - *Master laws:* none among its reasons.
 7. Standpoint neutrality is not the only completion: on a connected whole where every standpoint holds a living claim, self-significance at every standpoint with relational neutrality gives living significance without standpoint neutrality. (`Becoming.Valuation.Connected`, `Becoming.Valuation.reaches`, `Becoming.Valuation.significant_of_transmits`)
+   - *Master laws:* closure, reaching the grammar.
 8. Read stepwise with each formation a standpoint whose own region is its own events, every living event is held, so living significance is exactly self-significance at every formation with standpoint neutrality. (`Becoming.Web.held_by_formations`, `Becoming.Web.significant_iff_self`)
+   - *Master laws:* none among its reasons.
 9. With the formations as standpoints, each one's own region its closure under any relation of the unfolding and living and related the stepwise reading, sig is the only evaluative parameter supplied. The own region is the least boundary; every event is held, so living significance is self-significance with standpoint neutrality; the empty relation gives the case above, feeding the feeding closure. (`Becoming.Web.selfValuation`, `Becoming.Web.selfValuation_own_least`, `Becoming.Web.selfValuation_held`, `Becoming.Web.selfValuation_significant_iff`, `Becoming.Web.selfValuation_empty_own`, `Becoming.Web.selfValuation_feeding_own`, `Becoming.Web.selfValuation_of_unrestricted`)
+   - *Master laws:* closure, reaching the grammar; central declaration `Becoming.Web.selfValuation_significant_iff`: master law.
 
 <a id="conditions--条件"></a>
 ## Conditions

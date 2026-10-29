@@ -11,13 +11,21 @@
 ## Laws
 
 1. In a balanced flow every fall is taken from; where only active formations take, some active formation taking part takes from a condition that falls and draws on it. These are the duals of rise_given and renewedBy. (`Becoming.Flow.Balances`, `Becoming.Flow.taken`, `Becoming.Flow.Taking`, `Becoming.Flow.Balances.fall_taken`, `Becoming.Flow.Balances.takenBy`, `Becoming.Flow.Balances.rise_given`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 2. In a balanced flow, across a step dissipated on, a family's members fall by at least as much as they rise, and by one more for each formation taking from the family. (`Becoming.Flow.DissipatesOn`, `Becoming.Flow.takers`, `Becoming.Flow.Balances.falls_cover`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 3. So a formation taking from the family makes some member fall, whether or not another rises; an event at each of whose steps the family is dissipated on and taken from depletes it, so the Depletes that Becoming.Arising supplies as a correspondence premise follows. (`Becoming.Flow.Balances.falls_of_taking`, `Becoming.Flow.Balances.depletes`, `Becoming.Web.Depletes`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 4. So too a member rising, as in coming to stand, comes with another member falling across the same step; and under dissipation, a family without repetition in which a member rises while none falls is open across that step. (`Becoming.Flow.rise_with_fall`, `Becoming.Flow.standing_with_fall`, `Becoming.Flow.Dissipative`, `Becoming.Flow.ClosedAt`, `Becoming.Flow.rise_alone_opens`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 5. Where only active formations give and take, an active formation gives to the rising member and also takes from the family, and another member falls, taken from by an active formation drawing on it. (`Becoming.Flow.Acting`, `Becoming.Flow.rise_exchange`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 6. Read with one kind of relatum, the arising of an embodied member of a family dissipated on comes with another member falling across the same step. (`Becoming.Web.Embodied.comesToStand`, `Becoming.Web.Embodied.arising_with_fall`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 7. Without dissipation it need not: across every step, generation t+1 arises in the closed family of itself and generation t while no generation ever falls, so that family is not dissipated on. (`Becoming.Brood.brood`, `Becoming.Brood.birth_only`, `Becoming.Brood.rise_without_fall`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 8. These laws hold of every world in a local form, with balance and dissipation at the one step, on the family only, and the activity of givers and takers only at that step; Flow.Balances.falls_cover, Balances.falls_of_taking, Balances.depletes, rise_with_fall, rise_exchange and Web.Embodied.arising_with_fall are their corollaries. (`Becoming.Flow.BalancesOn`, `Becoming.Flow.Balances.on`, `Becoming.Flow.BalancesOn.falls_cover`, `Becoming.Flow.BalancesOn.falls_of_taking`, `Becoming.Flow.depletes_at`, `Becoming.Flow.BalancesOn.rise_with_fall`, `Becoming.Flow.BalancesOn.rise_exchange`, `Becoming.Web.Embodied.arising_with_fall_at`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 
 <a id="conditions--条件"></a>
 ## Conditions

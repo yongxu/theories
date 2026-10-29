@@ -11,15 +11,25 @@
 ## Laws
 
 1. For a partial law and an admission on configurations of any type, the admitted steps are those where the admission allows a move and the law takes it; a property holds after every admitted course from every start where it holds exactly when every admitted step keeps it. (`Becoming.Countdown.admitted`, `Becoming.Countdown.admitted_invariant_iff`)
+   - *Master laws:* closure, reaching the grammar.
 2. Counted work: for a partial tick that, while a task is pending, does one unit of remaining work for one unit of fuel, finishes when no work remains and fuel is left, and stalls without fuel, work + 1 ticks from a pending configuration finish the task exactly when the fuel covers work + 1 units; every run of at most work ticks leaves it pending with the work lowered by the ticks taken. (`Becoming.Countdown.CountedWork`, `Becoming.Countdown.completes_iff`, `Becoming.Countdown.pending_before`)
+   - *Master laws:* none among its reasons.
 3. Where pending and finished exclude each other, counted work finishes at no tick before work + 1. (`Becoming.Countdown.not_done_before`)
+   - *Master laws:* none among its reasons.
 4. In the recoverable device, whose pending description is durable and protected, whose writes and publication are atomic and which has no extra writer, the histories, crashes included, are exactly the courses of the admitted steps, so safety (coherent evidence while incomplete, actual candidate coverage when ready) holds along every history from a safe start, because every admitted step keeps it. (`Becoming.ProtocolInstances.recoverable`, `Becoming.ProtocolInstances.recoverable_history_iff`, `Becoming.ProtocolInstances.safety_along`, `Becoming.ProtocolInstances.interrupted_history_instance`, `RecoverableControl.interrupted_history_preserves_safety`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 5. A pending recovery is counted work, each tick doing one remaining write, or the publication, for one unit of reserve and one of time; so n remaining writes and the publication complete in n + 1 resumed steps exactly when the reserve covers n + 1 units and the deadline lies at least n + 1 steps ahead, and every resumption of at most n steps leaves the device pending, its writes lowered by the steps taken. (`Becoming.ProtocolInstances.counts`, `Becoming.ProtocolInstances.publishes_iff`, `Becoming.ProtocolInstances.pending_until_published`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 6. From a coherent pending recovery whose reserve and deadline cover its n remaining writes and the publication, n + 1 resumed steps publish a state with actual candidate coverage, the target's actual configuration, and the units drawn and the time each raised by exactly n + 1. (`RecoverableControl.funded_suffix_publishes`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 7. Where a history from a safe start ends published, a current certificate over the pooled candidate models that accepts yields every conclusion that each supported domain of the published roster, not failed by the command's roots, yields. (`RecoverableControl.published_history_to_current_certificate`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 8. A crash keeps the units already drawn, adds its delay to the time, and restarts the pending writes from the program with the actual configuration kept. (`RecoverableControl.crash_retains_consumption`, `RecoverableControl.crash_keeps_pending`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 9. In the device's runs, without a crash 22 units and a 22-step deadline carry the change and the shutdown through, and with one crash 23 units and a 24-step deadline do, while 22 units, or a 23-step deadline, leave the shutdown uncompleted. (`RecoverableControl.staged_change_then_actual_shutdown`, `RecoverableControl.interrupted_change_then_actual_shutdown`, `RecoverableControl.interruption_can_exhaust_execution_capacity`, `RecoverableControl.interruption_delay_can_miss_deadline`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 10. With nine units, recovery is exhausted after the first actual write: nothing is published, no tick follows, the shutdown command is refused and the activity still runs; and deleting the pending marker of a partly changed device publishes old bookkeeping whose candidates exclude the actual configuration, while a certificate over them accepts. (`RecoverableControl.exhausted_recovery_blocks_shutdown`, `RecoverableControl.losing_pending_marker_exposes_false_certificate`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

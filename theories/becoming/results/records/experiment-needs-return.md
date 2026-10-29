@@ -11,13 +11,21 @@
 ## Laws
 
 1. Let r be a run of a process P. Relative to determinacy, the record up to a step fixes the outcome of move a at configuration s to u when every determined process admitting each step of r before it sends a at s to u. (`Becoming.Run`, `Becoming.Run.Takes`, `Becoming.Run.StepsOf`, `Becoming.Run.Fixes`, `Becoming.Determined`)
+   - *Master laws:* none among its reasons.
 2. Once the run has taken a at s, the record fixes it to where the run went; where P is determined, there are two different configurations and the run has not taken a at s, the record fixes no outcome of it, whatever is read: the process sending a at s to any configuration and otherwise as P is still determined and admits every step of the run. (`Becoming.Run.fixes_of_takes`, `Becoming.retarget`, `Becoming.retarget_determined`, `Becoming.retarget_step`, `Becoming.Run.stepsOf_retarget`, `Becoming.Run.not_fixes_of_untaken`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.Run.not_fixes_of_untaken`: law of its model (an untaken move retargeted).
 3. So where the configuration returns, another move's outcome is fixed; with P determined and two different configurations, a run whose configurations never return fixes, at each configuration it passes, no move other than the one it takes. (`Becoming.Run.fixes_on_return`, `Becoming.Run.ordered_of_ne`, `Becoming.Run.not_fixes_other_of_new`)
+   - *Master laws:* none among its reasons.
 4. In the process keeping the history of configurations and moves passed through (keepHistory, the counterpart with moves of Law.withHistory) the past grows by one at each step, so every step is new; determinacy is kept; and, with P determined and two different configurations, nothing about one's own acts but what one did is fixed. (`Becoming.keepHistory`, `Becoming.Law.withHistory`, `Becoming.keepHistory_length`, `Becoming.keepHistory_new`, `Becoming.keepHistory_determined`, `Becoming.keepHistory_fixes_nothing_else`)
+   - *Master laws:* none among its reasons.
 5. Read through a projection π: once the run has taken a at a configuration projecting to k, the record so read fixes its outcome; where P's step factors through π into a determined process, the fixed outcome is the outcome, read through π, at every configuration projecting to k, passed by the run or not. (`Becoming.Run.StepsThrough`, `Becoming.Run.FixesThrough`, `Becoming.Run.fixesThrough_of_takes`, `Becoming.FactorsThrough`, `Becoming.Run.stepsThrough_of_factors`, `Becoming.Run.generalizes`)
+   - *Master laws:* none among its reasons.
 6. Within finitely many projected configurations (a list holding every one), the projection returns from every step on, an instance of revisits_from. (`Becoming.Run.projection_returns`, `Becoming.revisits_from`)
+   - *Master laws:* finite runs, not reaching the grammar.
 7. In Confound the configuration is a hidden bit and an outcome, each step flips the hidden bit and sets the outcome to the hidden bit before the step, and the move makes no difference; read through the outcome, where the first two moves are left then right, the record up to the second step fixes left to false and right to true. (`Becoming.Confound.Move`, `Becoming.Confound.next`, `Becoming.Confound.process`, `Becoming.Confound.states`, `Becoming.Confound.outcome`, `Becoming.Confound.determined`, `Becoming.Confound.move_idle`, `Becoming.Confound.run`, `Becoming.Confound.misattributes`)
+   - *Master laws:* none among its reasons.
 8. With the moves in step with the hidden bit, the determined model in which the move decides the outcome admits the projected steps at every step; moving left again where the hidden bit differs from the first step, no determined process admits the projected steps up to the fifth. (`Becoming.Confound.hidden_two`, `Becoming.Confound.aligned`, `Becoming.Confound.aligned_with_hidden`, `Becoming.Confound.moveDecides`, `Becoming.Confound.moveDecides_determined`, `Becoming.Confound.confounded`, `Becoming.Confound.varied`, `Becoming.Confound.varied_refutes`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,12 +11,19 @@
 ## Laws
 
 1. Three values with u below t and f in information and the strong tables; evaluation is monotone in information and agrees with the two-valued tables on decided values. (`Becoming.Undecided.Value`, `Becoming.Undecided.Le`, `Becoming.Undecided.Term`, `Becoming.Undecided.eval`, `Becoming.Undecided.eval_mono`, `Becoming.Undecided.eval_mono_below`, `Becoming.Undecided.eval_embed`)
+   - *Master laws:* none among its reasons.
 2. A term with no constant is undecided where every sentence is, so a system with no constant stays wholly undecided along its run of revision. (`Becoming.Undecided.ConstantFree`, `Becoming.Undecided.eval_undecided`, `Becoming.Undecided.stays_undecided`)
+   - *Master laws:* none among its reasons.
 3. Revision run from all undecided rises at every step; for N closed sentences it settles within N steps and stays, at the least fixed point; readings on a list that only rise settle by the list's length. (`Becoming.Undecided.revise`, `Becoming.Undecided.stage`, `Becoming.Undecided.Closed`, `Becoming.Undecided.Steady`, `Becoming.Undecided.stage_up`, `Becoming.Undecided.stage_mono`, `Becoming.Undecided.settles_within`, `Becoming.Undecided.settles`, `Becoming.Undecided.settled_from`, `Becoming.Undecided.stage_fixed`, `Becoming.Undecided.stage_le_fixed`, `Becoming.Undecided.least_fixed`)
+   - *Master laws:* none among its reasons.
 4. The bound is exact: in the chain whose first sentence says true and each next denies the one before, N + 1 sentences are steady at step N + 1 and not at N. (`Becoming.Undecided.chain`, `Becoming.Undecided.chain_undecided`, `Becoming.Undecided.chain_decided`, `Becoming.Undecided.chain_exact`)
+   - *Master laws:* none among its reasons.
 5. The liar rests undecided, and a run of its revision rests exactly where it is undecided; the truth-teller keeps its start and rests undecided from all undecided. (`Becoming.Undecided.liar_rests`, `Becoming.Undecided.liar_rests_iff`, `Becoming.Undecided.truthTeller_keeps`, `Becoming.Undecided.truthTeller_rests`)
+   - *Master laws:* none among its reasons.
 6. Where two-valued revision of a closed system has no fixed point, every fixed point and every resting run leaves a sentence undecided; the liar never rests with two values and rests undecided with three. (`Becoming.Undecided.undecided_of_moves`, `Becoming.Undecided.least_undecided`, `Becoming.Undecided.rest_undecided`, `Becoming.Undecided.liar_two_valued_never_rests`, `Becoming.Undecided.liar_undecided`, `Becoming.Undecided.liar_both_sides`)
+   - *Master laws:* none among its reasons.
 7. No map monotone in information moves every value; the run of a monotone map from the undecided value rests from its first step, so the diagonal's gap needs a map that is not monotone; a family of three-valued readings within what it reads is still incomplete. (`Becoming.Undecided.monotone_fixed`, `Becoming.Undecided.monotone_not_moves`, `Becoming.Undecided.neg_not_moves`, `Becoming.Undecided.monotone_run_rests`, `Becoming.Undecided.never_rests_not_monotone`, `Becoming.Undecided.moves_not_monotone`, `Becoming.Undecided.incomplete`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,11 +11,17 @@
 ## Laws
 
 1. For any two frames, a map of configurations is open where its graph is a bisimulation; it is open exactly where it keeps the claims, carries every step to a step, and lifts every step from an image to a step onto it. Under an open map each configuration is alike to its image, and likeness is kept and reflected. (`Becoming.OpenMap`, `Becoming.openMap_iff`, `Becoming.OpenMap.alike`, `Becoming.OpenMap.alike_iff`)
+   - *Master laws:* none among its reasons.
 2. Read through roles, a joining's fragments and occurrences of joining are places: a fragment enters an occurrence by a role it holds there, and an occurrence is left by a role to the fragment holding it; nothing else is claimed. (`Becoming.Joining.Occurrence`, `Becoming.Joining.Incident`, `Becoming.Joining.roleFrame`)
+   - *Master laws:* none among its reasons.
 3. For any two joinings, a map keeps the joining where fragments joined into one map to fragments joined into its image, and is an open map of joinings where it also lifts every occurrence holding the image of x in a role to one holding x in that role, mapped onto it role by role; exactly these maps keep the joining and read through roles as open maps of frames. (`Becoming.Joining.Keeps`, `Becoming.Joining.OpenMap`, `Becoming.Joining.placeMap`, `Becoming.Joining.openMap_iff`)
+   - *Master laws:* none among its reasons.
 4. Under any open map of joinings, every fragment is alike in its roles to its image and passes the same branching tests of roles, with no premise. (`Becoming.Joining.OpenMap.alike`, `Becoming.Joining.OpenMap.sameBranchingTests`)
+   - *Master laws:* none among its reasons.
 5. For two open maps p and q from one joining L to joinings J and K, the map z ↦ (p z, q z) into the pairs of fragments alike in their roles, joined pair by pair, keeps L's joining and commutes with both maps, and every map into those pairs commuting with both agrees with it at every fragment; no finiteness and no decision is used. (`Becoming.Joining.Matched`, `Becoming.Joining.span`, `Becoming.Joining.factor`, `Becoming.Joining.universal_factor`)
+   - *Master laws:* none among its reasons.
 6. With extensionality of functions as a named hypothesis, for two open maps from one joining, every function into the pairs alike in their roles that commutes with both maps is their factor. (`Becoming.Joining.factor_unique_of_ext`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,20 +11,35 @@
 ## Laws
 
 1. For a reflexive, symmetric and transitive old relation and any new relation on the same alternatives, every selection through the old relation (alike alternatives selected alike) is through the new one exactly where every pair the new relation makes alike the old one makes alike. (`Becoming.Learning.Training.keeps_through_iff`)
+   - *Master laws:* none among its reasons.
 2. For a reflexive, symmetric and transitive old relation, a pair the new relation makes alike and the old one tells apart gives a selection through the old relation that is not through the new one, constructively. (`Becoming.Learning.Training.lost_choice`)
+   - *Master laws:* none among its reasons.
 3. Lumping by an old and a fresh reading taken together makes alike only what the old reading makes alike; where the old reading agrees on two alternatives and the fresh one tells them apart, some selection is through the retained pair of readings and not through the old reading. (`Becoming.Registration.retained_keeps`, `Becoming.Registration.retained_gains`)
+   - *Master laws:* none among its reasons.
 4. A lumping at each configuration keeps the distinctions from s to t where whatever t's lumping makes alike s's makes alike; keeping is reflexive and transitive, and where every step of a process keeps them, every trace keeps them from its start to its end and every run from each step n to every step n + k. (`Becoming.Registration.Keeps`, `Becoming.Registration.Keeps.refl`, `Becoming.Registration.Keeps.trans`, `Becoming.Registration.trace_keeps`, `Becoming.Registration.run_keeps`)
+   - *Master laws:* none among its reasons.
 5. For a web, a formation f, two couplings and steps t and u, every selection through f's first couplings up to t is through its second couplings up to u exactly where level histories alike through the second up to u are alike through the first up to t. (`Becoming.Registration.web_keeps_iff`)
+   - *Master laws:* none among its reasons.
 6. Along a run, alternatives are alike up to step t where the lumping at every step through t makes them alike; alike up to a later step implies alike up to an earlier one, so a selection through the run's lumpings up to t is through them up to every later step. (`Becoming.Registration.AlikeUpTo`, `Becoming.Registration.alikeUpTo_keeps`, `Becoming.Registration.through_alikeUpTo_later`)
+   - *Master laws:* none among its reasons.
 7. For any process with a natural-number stock and natural-number draws and replenishments of its acts, the stock is balanced where across every step what stands after plus the draw equals what stood before plus the replenishment; it is balanced exactly where along every course what stands at the end plus the total drawn equals what stood at the start plus the total replenished. (`Becoming.Stock.Balanced`, `Becoming.Stock.balanced_iff`)
+   - *Master laws:* none among its reasons.
 8. Stock n covers a course where each step's draw is within the stock then standing. The stock process, each step drawing at most what is held and then replenishing, executes a course from n exactly where n covers it; and every course of a process whose stock is balanced and drawn only from what is held before each step is covered by the stock it starts from. (`Becoming.Stock.Covered`, `Becoming.Stock.process`, `Becoming.Stock.DrawsHeld`, `Becoming.Stock.feasible_iff_covered`, `Becoming.Stock.covered_of_trace`)
+   - *Master laws:* none among its reasons.
 9. Run jointly with any process R step for step, the stock process executes a course from stock n and configuration x exactly where n covers the course and R can execute it from x. (`Becoming.Stock.product_feasible_iff`)
+   - *Master laws:* none among its reasons.
 10. Revising's configurations are a stock, a link and a response; replenishing adds one unit, rebuilding sets the link either way for one unit, and correcting, with the link formed, sets the response to the supplied target true for one unit. Each act leads to at most one configuration; rebuilding is enabled exactly where the stock is positive, correcting exactly where the link is formed too. (`Becoming.Revising.State`, `Becoming.Revising.Act`, `Becoming.Revising.P`, `Becoming.Revising.determined`, `Becoming.Revising.rebuild_enabled_iff`, `Becoming.Revising.correction_enabled_iff`)
+   - *Master laws:* none among its reasons.
 11. Revising is the stock process run jointly, step for step, with its link process, rebuilding and correcting drawing one unit and replenishing restoring one; so its stock is balanced and drawn only from what is held, and a course of reconstruction and correction is executable exactly where the stock covers it and the link process admits it. (`Becoming.Revising.linkProcess`, `Becoming.Revising.draw`, `Becoming.Revising.restore`, `Becoming.Revising.step_iff`, `Becoming.Revising.trace_iff`, `Becoming.Revising.stock_balanced_held`, `Becoming.Revising.feasible_iff`)
+   - *Master laws:* none among its reasons.
 12. In Revising, stock does not enact and the link does not enact: one unit covers a correction that the link process blocks with the link unformed, and the link process admits a correction with the link formed that no stock covers from zero. (`Becoming.Revising.covered_not_enacted`, `Becoming.Revising.linked_not_enacted`)
+   - *Master laws:* none among its reasons.
 13. In Revising, reading a represented alternative through the link, at configurations with response false and any stock: going from the link unformed to the link formed keeps every old distinction; with the link formed the selection 'is true' is through the lumping, with it unformed it is not, and the unformed lumping cannot select between the two rebuild modes. (`Becoming.Revising.read`, `Becoming.Revising.alike`, `Becoming.Revising.opened_keeps`, `Becoming.Revising.opened_choice`, `Becoming.Revising.closed_loses`, `Becoming.Revising.old_cannot_select_rebuild`)
+   - *Master laws:* none among its reasons.
 14. In Revising, forming a distinction need not leave support to use it: rebuilding the link from one unit forms the selection 'is true' and leaves correction disabled, from two units leaves it enabled; and rebuilding the link away from two units loses that selection and leaves correction disabled with one unit left. (`Becoming.Revising.opens_without_correction`, `Becoming.Revising.opens_with_correction`, `Becoming.Revising.closes_choice`)
+   - *Master laws:* none among its reasons.
 15. A supplied controller reading the stock and the link (replenish when empty, form a missing link when supported, otherwise correct) runs Revising from no stock, no link and response false: it forms the link at step 1, at step 2 the finer lumping selects 'is true' with correction disabled, it replenishes, and step 3 corrects the response to true. Some admissible course forms the link and then removes it. (`Becoming.Revising.choose`, `Becoming.Revising.next`, `Becoming.Revising.chosen_step`, `Becoming.Revising.controlled`, `Becoming.Revising.controlled_revision`, `Becoming.Revising.rebuild_then_close`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

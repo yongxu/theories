@@ -11,8 +11,11 @@
 ## Laws
 
 1. Need ends at the end: over any class of flows read off a web in which only active formations give, a formation active at no step of the stretch is needed exactly where no flow of the class lets the consumer draw past the stock; across two tiers likewise for giving into the hierarchy. (`Becoming.Flow.active_of_givesWithin`, `Becoming.Flow.active_of_givesInto`, `Becoming.Flow.needs_iff_none_of_inactive`, `Becoming.Flow.needs_into_iff_none_of_inactive`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 2. Read with time, each link no later than the one it feeds, a formation's feeding closure up to a step holds, besides it, only what takes part and gives at some step up to that one, so only what is active by then where only active formations give; it lies within the feeding closure read across every step. (`Becoming.Flow.FedUpTo`, `Becoming.Flow.WithinFeedingUpTo`, `Becoming.Flow.gives_of_withinFeedingUpTo`, `Becoming.Flow.active_of_withinFeedingUpTo`, `Becoming.Flow.withinFeeding_of_upTo`)
+   - *Master laws:* closure, reaching the grammar.
 3. Witness Overlapping: of three formations overlapping in turn, the last lies within the first's feeding closure but not within it read with time up to the first's last step, which holds the middle one, and the first, drawing past its condition's stock, does not need the last's giving. (`Becoming.Overlapping.level`, `Becoming.Overlapping.active`, `Becoming.Overlapping.web`, `Becoming.Overlapping.take`, `Becoming.Overlapping.give`, `Becoming.Overlapping.flow`, `Becoming.Overlapping.give_pos`, `Becoming.Overlapping.acting`, `Becoming.Overlapping.fed`, `Becoming.Overlapping.draws`, `Becoming.Overlapping.fed_first`, `Becoming.Overlapping.fed_middle`, `Becoming.Overlapping.last_quiet`, `Becoming.Overlapping.closure_overreaches`)
+   - *Master laws:* closure and balance, reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

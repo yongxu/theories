@@ -11,7 +11,9 @@
 ## Laws
 
 1. A least part's amount counted once for each part is at most the family's total, and every nonempty family has a least part; with the total at most T and at least n parts, n times the least amount is at most T. (`Becoming.RelativePosition.Least`, `Becoming.RelativePosition.least_not_ahead`, `Becoming.RelativePosition.least_exists`, `Becoming.RelativePosition.least_bound`)
+   - *Master laws:* none among its reasons.
 2. Equal shares meet every need exactly where they meet the greatest; they give more than the total need where some need falls short of the greatest, exactly the total where none does; two parts needing one and three are short in equal shares of what suffices by need. (`Becoming.RelativePosition.equal_share_iff`, `Becoming.RelativePosition.equal_share_exceeds`, `Becoming.RelativePosition.equal_share_even`, `Becoming.RelativePosition.uneven_short`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

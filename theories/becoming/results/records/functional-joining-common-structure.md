@@ -11,9 +11,13 @@
 ## Laws
 
 1. A joining is functional where each pair joins into at most one fragment. Read through a description, codes a and b join into c where fragments with those codes join into one with code c; a code is used where some fragment has it, and codes of two descriptions are aligned where one fragment has both. (`Becoming.Joining.Functional`, `Becoming.Joining.image`, `Becoming.Used`, `Becoming.Aligned`)
+   - *Master laws:* none among its reasons.
 2. For a functional joining and two descriptions whose codes are equal exactly for fragments passing the same tests of the joining's frame (the same courses of joinings open from each): each reads a functional joining of codes, each used code of either is aligned with exactly one code of the other, and aligned codes join in one reading exactly where their aligned codes join in the other. No other premise, no finiteness. (`Becoming.Joining.common_operation`)
+   - *Master laws:* none among its reasons.
 3. A context is a finite arrangement of partners joined on the left or right around a hole; it realizes what its course of joinings reaches from what fills the hole, and is possible for a fragment where it realizes something from it. Two fragments agree on contexts exactly where they pass the same tests of the joining's frame. (`Becoming.Joining.Context`, `Becoming.Joining.Context.Realizes`, `Becoming.Joining.Context.Possible`, `Becoming.Joining.ContextSame`, `Becoming.Joining.ContextSame.iff_sameTests`)
+   - *Master laws:* none among its reasons.
 4. A presentation is exact where each configuration's code reads its answers, and reduced where configurations answering alike get one code; an exact reduced presentation gives two configurations one code exactly where they answer alike. (`Becoming.Presentations.Exact`, `Becoming.Presentations.Reduced`, `Becoming.Presentations.reduced_exact_kernel`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

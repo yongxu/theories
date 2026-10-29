@@ -11,15 +11,25 @@
 ## Laws
 
 1. Under a process, a configuration outside a region is possibly drawn into it where some course from it enters the region, and necessarily drawn where every run from it does; it is possibly or necessarily drawn where some region the process never leaves so draws it. (`Becoming.Branching.PossiblyDrawnInto`, `Becoming.Branching.NecessarilyDrawnInto`, `Becoming.Branching.PossiblyDrawn`, `Becoming.Branching.NecessarilyDrawn`, `Becoming.Invariant`, `Becoming.Run`)
+   - *Master laws:* none among its reasons.
 2. Under a determined law, possibly and necessarily drawn into a region are both drawn into it, and necessarily drawn is drawn, in the sense of attraction-is-not-returning. (`Becoming.Branching.law_possibly_iff`, `Becoming.Branching.law_necessarily_iff`, `Becoming.Branching.law_drawn_iff`, `Becoming.Law.DrawnInto`)
+   - *Master laws:* none among its reasons.
 3. A configuration that returns has a run that never loses it, going round its course back to it forever, constructively. So, with no premise, every process necessarily draws exactly what does not return, the instance of the law for determined laws: what is necessarily drawn never returns, and what does not return is necessarily drawn into what lies ahead of it at the first step. (`Becoming.Branching.necessarilyDrawn_iff_not_returns`, `Becoming.Law.drawn_iff_not_returns`, `Becoming.Branching.NecessarilyDrawnInto.not_returns`, `Becoming.Branching.necessarilyDrawnInto_ahead`, `Becoming.Law.Returns`, `Becoming.Branching.Returns.run`)
+   - *Master laws:* closure and finite runs, reaching the grammar; central declaration `Becoming.Law.drawn_iff_not_returns`: master law.
 4. Possibly drawn is losing oneself on some course: a configuration is possibly drawn exactly where some course from it leads where it cannot be had again, and along that course it is locked in. (`Becoming.Branching.possiblyDrawn_iff`, `Becoming.Invariant.locks_out`)
+   - *Master laws:* closure, reaching the grammar.
 5. A configuration possibly drawn may return on another course: in OneWay, false is possibly but not necessarily drawn into {true}, which the process never leaves, and returns. (`Becoming.Branching.OneWay.process`, `Becoming.Branching.OneWay.atTrue`, `Becoming.Branching.OneWay.atTrue_invariant`, `Becoming.Branching.OneWay.staying`, `Becoming.Branching.OneWay.passing`, `Becoming.Branching.OneWay.returns`, `Becoming.Branching.OneWay.possibly_not_necessarily`)
+   - *Master laws:* finite runs, not reaching the grammar.
 6. Under a determined process the moves decide whether a run is drawn in: two runs from one configuration, one entering a region and the other never, differ in some move (Branching.Determined.moves_decide); in OneWay, the run that passes and the run that keeps false differ so. (`Becoming.Branching.OneWay.determined`, `Becoming.Branching.OneWay.moves_decide`, `Becoming.Branching.Determined.moves_decide`)
+   - *Master laws:* lumping, not reaching the grammar.
 7. Under every process the future narrows: what can be had n steps on is a region the process never leaves, and a configuration that cannot be had n steps on is necessarily drawn into it, every run entering at step n. (`Becoming.Branching.reachable_invariant`, `Becoming.Branching.lost_necessarily_drawn`, `Becoming.Branching.necessarilyDrawn_of_lost`)
+   - *Master laws:* none among its reasons.
 8. Within finitely many configurations every run enters what returns (Run.enters_returning); where a list holds every configuration, a configuration necessarily drawn at which a given run begins rules out that the process merges nothing, concluding that rather than supplying a merge. (`Becoming.Branching.NecessarilyDrawn.not_lossless`, `Becoming.Run.enters_returning`)
+   - *Master laws:* closure and finite runs, reaching the grammar.
 9. With configurations (state, rule), as in Capture: where the rule keeps itself, the configurations with a given rule are a region the law never leaves; where the next configuration also depends on the rule alone, the configuration the rule holds is fixed, and a perturbed state, differing from it, is drawn into it at the first step. (`Becoming.Law.rule_absorbing`, `Becoming.Law.held_absorbing`, `Becoming.Law.perturbation_drawnInto`)
+   - *Master laws:* none among its reasons.
 10. In Captured, with a bit for the state and a bit for the rule, these hold: a perturbed state is drawn into the configuration the rule holds, a perturbed rule draws the state into the configuration the new rule holds, and neither perturbed configuration returns. (`Becoming.Captured.keeps`, `Becoming.ListTests.not_ne_self`, `Becoming.Captured.rule_region_absorbing`, `Becoming.Captured.held_absorbing`, `Becoming.Captured.state_perturbation_drawn`, `Becoming.Captured.rule_perturbation_drawn`)
+   - *Master laws:* finite runs, reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,11 +11,17 @@
 ## Laws
 
 1. A formation is the whole of every part when it is active exactly while every part is; every formation is that of itself. It is inactive wherever one part is, so it ends as soon as one part ends, with no listing and nothing of arising, and persists exactly while every part does; a whole of a brief part is brief. (`Becoming.Web.AllWhole`, `Becoming.Web.allWhole_self`, `Becoming.Web.AllWhole.inactive_of_part`, `Becoming.Web.AllWhole.ends_of_part`, `Becoming.Web.AllWhole.persists_iff`, `Becoming.Web.AllWhole.brief_of_part`)
+   - *Master laws:* none among its reasons.
 2. A whole of some part ceases only as some part ceases, dually to its arising. With some part, the whole of every part is active only where the whole of some part is, and the two coincide exactly where the parts are in step; with no part they part entirely. (`Becoming.Web.Whole.ceases_part`, `Becoming.Web.AllWhole.active_whole`, `Becoming.Web.InStep`, `Becoming.Web.Whole.same_iff_inStep`, `Becoming.Web.AllWhole.active_of_none`)
+   - *Master laws:* none among its reasons.
 3. The grade of listed parts at a step is a count of their activity, existing exactly where it is decided: positive exactly where some is active, the number listed exactly where every one is, short of it wherever one is not. Across a step it gains what arises and loses what ceases, so it rises only as a listed part arises and falls only as one ceases. (`Becoming.Web.Grade`, `Becoming.Web.Grade.pos_iff`, `Becoming.Web.Grade.eq_length_iff`, `Becoming.Web.Grade.lt_length_of_inactive`, `Becoming.Web.Grade.across_step`, `Becoming.Web.Grade.arises_of_lt`, `Becoming.Web.Grade.ceases_of_lt`, `Becoming.Counts.lt_length_of_fails`, `Becoming.Counts.all_of_eq_length`)
+   - *Master laws:* none among its reasons.
 4. A formation active exactly where the grade is at least j arises and ceases only through a listed part. At j one it is the whole of some listed part, at the number listed the whole of every one, and conversely where activity is decided; so a whole of every listed part arises and ceases only through a listed part. (`Becoming.Web.AtLeastWhole`, `Becoming.Web.AtLeastWhole.arises_part`, `Becoming.Web.AtLeastWhole.ceases_part`, `Becoming.Web.AtLeastWhole.whole`, `Becoming.Web.Whole.atLeastWhole`, `Becoming.Web.AtLeastWhole.allWhole`, `Becoming.Web.AllWhole.atLeastWhole`, `Becoming.Web.AllWhole.arises_part`, `Becoming.Web.AllWhole.ceases_part`)
+   - *Master laws:* none among its reasons.
 5. The whole is diminished where some listed parts are active and not all: where their activity is decided, exactly where the whole of some is active and the whole of every one is not. (`Becoming.Web.Diminished`, `Becoming.Web.Grade.diminished_iff`, `Becoming.Web.diminished_iff`)
+   - *Master laws:* none among its reasons.
 6. Witnesses: the lineage of Generations is active at every step while no whole of every member is active at any; a house of three rafters, the first taken after the first step, ceases with it, and from then on two of three are active, the whole diminished, what is left standing and the house not. (`Becoming.Generations.allWhole_never`, `Becoming.Rafters.Formation`, `Becoming.Rafters.rafters`, `Becoming.Rafters.web`, `Becoming.Rafters.house`, `Becoming.Rafters.remains`, `Becoming.Rafters.decided`, `Becoming.Rafters.grade_two`, `Becoming.Rafters.taken`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

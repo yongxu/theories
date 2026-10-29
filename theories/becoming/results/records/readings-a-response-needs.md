@@ -11,9 +11,13 @@
 ## Laws
 
 1. In the regulation band, a count kept between 1 and 2 with each move adding or removing one, adding completes from 1 and removing does not, removing completes from 2 and adding does not, so no move chosen through a reading merging 1 and 2 completes from both; the response adding at or below 1 and removing above keeps the band along its itinerary of every length. (`Becoming.AssurancePlans.Regulation.update`, `Becoming.AssurancePlans.Regulation.Band`, `Becoming.AssurancePlans.Regulation.respond`, `Becoming.AssurancePlans.Regulation.opposite_moves`, `Becoming.AssurancePlans.Regulation.no_merged_move`, `Becoming.AssurancePlans.Regulation.respond_keeps`, `Becoming.AssurancePlans.Regulation.kept_along`)
+   - *Master laws:* none among its reasons.
 2. Adding from 1 completes, adding twice fails, and adding then removing completes: success changes what the next success needs, with no outside disturbance. (`Becoming.AssurancePlans.Regulation.next_move_changes`)
+   - *Master laws:* none among its reasons.
 3. In the three-route process a route arrives from a mode exactly where it differs from the mode, and a reading of the mode is adequate for a response when the response to it arrives from every mode. Reading whether the mode is the first, or whether it is the last, is adequate; the first merges two modes from which one route's outcomes differ; every two modes share an arriving route, none arrives from all three. (`Becoming.AssurancePlans.Routes.completes_iff`, `Becoming.AssurancePlans.Routes.Adequate`, `Becoming.AssurancePlans.Routes.leftReading`, `Becoming.AssurancePlans.Routes.rightReading`, `Becoming.AssurancePlans.Routes.left_adequate`, `Becoming.AssurancePlans.Routes.right_adequate`, `Becoming.AssurancePlans.Routes.adequate_merges_outcomes`, `Becoming.AssurancePlans.Routes.pairwise_common`, `Becoming.AssurancePlans.Routes.no_common`)
+   - *Master laws:* none among its reasons.
 4. A reading that factors through both binary readings, so coarser than each, is constant, and so adequate for no response; hence no adequate reading factors through every adequate binary reading. (`Becoming.AssurancePlans.Routes.common_coarsening_constant`, `Becoming.AssurancePlans.Routes.common_coarsening_inadequate`, `Becoming.AssurancePlans.Routes.no_coarsest_adequate`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,6 +11,7 @@
 ## Laws
 
 1. A formation active exactly where supported at a step and the next, its requirements not growing, needs and levels the same across the step, does not arise across it. (`Becoming.Web.not_arises_of_unchanged`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

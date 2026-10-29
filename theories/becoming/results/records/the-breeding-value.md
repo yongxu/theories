@@ -11,9 +11,13 @@
 ## Laws
 
 1. The counted covariance is linear in the amount: sums, multiples and a common shift, and so any two-sided combination of carried amounts with natural coefficients. (`Becoming.Reproduction.Breeding.covPair`, `Becoming.Reproduction.Breeding.covPair_same`, `Becoming.Reproduction.Breeding.covPair_congr`, `Becoming.Reproduction.Breeding.covariance_add`, `Becoming.Reproduction.Breeding.covPair_add`, `Becoming.Reproduction.Breeding.excess_mul`, `Becoming.Reproduction.Breeding.concord_mul`, `Becoming.Reproduction.Breeding.discord_mul`, `Becoming.Reproduction.Breeding.covPair_mul`, `Becoming.Reproduction.Breeding.covPair_const`, `Becoming.Reproduction.Breeding.combine`, `Becoming.Reproduction.Breeding.combined`, `Becoming.Reproduction.Breeding.covPair_combine`)
+   - *Master laws:* none among its reasons.
 2. A breeding value, a combination reproducing d times offspring number's covariation with each carried amount, has d times its covariation with offspring number equal to its own spread, at most d squared times offspring number's. (`Becoming.Reproduction.Breeding.Combination`, `Becoming.Reproduction.Breeding.Normal`, `Becoming.Reproduction.Breeding.covPair_combination`, `Becoming.Reproduction.Breeding.combined_normal`, `Becoming.Reproduction.Breeding.breeding_balance`, `Becoming.Reproduction.Breeding.additive_part_le`, `Becoming.Reproduction.Breeding.normal_append`, `Becoming.Reproduction.Breeding.one_amount`)
+   - *Master laws:* none among its reasons.
 3. With exact transmission, d times the cross-multiplied rise of its mean is that spread: it never falls and rises exactly where it varies. Fisher's fundamental theorem with breeding values. (`Becoming.Reproduction.Breeding.response`, `Becoming.Reproduction.Breeding.response_rises_iff`)
+   - *Master laws:* none among its reasons.
 4. Witnesses: offspring number additive in two amounts, the additive part the whole; offspring number their product, a part no combination carries (32 against 48). (`Becoming.Reproduction.Additive.normal`, `Becoming.Reproduction.Additive.additive`, `Becoming.Reproduction.Interaction.normal`, `Becoming.Reproduction.Interaction.interaction`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

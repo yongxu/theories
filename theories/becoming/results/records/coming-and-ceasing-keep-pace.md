@@ -11,16 +11,27 @@
 ## Laws
 
 1. The following hold of every web, with no premise about it. A determination comes to be across a step where it fails before and holds after, and ceases to be where it holds before and fails after; a formation arising and ceasing, a dependence forming and dissolving, and a condition coming to stand and ceasing to stand are this one change, read of activity, dependence and standing. (`Becoming.ComesToBe`, `Becoming.CeasesToBe`, `Becoming.Web.Ceases`, `Becoming.Web.CeasesToStand`, `Becoming.Web.change_readings`)
+   - *Master laws:* none among its reasons.
 2. A decidable determination that holds and ceases to be at no later step holds on; a formation supported at one step is supported at another where each dependence it has at the other it had at the first, at no greater need, on a condition standing no lower. (`Becoming.persists`, `Becoming.Web.Supported`, `Becoming.Web.supported_of`)
+   - *Master laws:* none among its reasons.
 3. Over any stretch of steps, an amount at the end with everything it fell is the amount at the start with everything it rose, and so for the total of a finite family with the rises and falls of its members. (`Becoming.rise`, `Becoming.fall`, `Becoming.over_stretch`, `Becoming.family_over_stretch`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 4. No amount falls below zero, so over a stretch a finite family falls by at most its total at the start more than it rises, and members falling at arbitrarily late steps rise at arbitrarily late steps: in every unfolding, levels of finitely many conditions that keep falling keep rising. (`Becoming.fallen_within`, `Becoming.rising_recurs`, `Becoming.Web.falls_need_rises`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 5. For one amount this is Becoming.Renewal's law that an observable never rising from some step on does not fall at arbitrarily late steps. (`Becoming.falls_not_recurring`)
+   - *Master laws:* finite runs, reaching the grammar.
 6. With the amounts bounded, the family rises by at most its bound per member more than it falls, and rising at arbitrarily late steps needs falling at arbitrarily late steps. (`Becoming.risen_within`, `Becoming.falling_recurs`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 7. A determination counts as zero or one, so both hold of it: over any stretch, the members of a finite family holding at the end with those that ceased to be are those holding at the start with those that came to be; comings and ceasings differ by at most the number of members; and each recurs exactly when the other does. (`Becoming.mark`, `Becoming.held_over_stretch`, `Becoming.keep_pace`, `Becoming.coming_recurs_iff`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 8. Read of activity, given decidable activity: the members of a finite family of formations active at the end with those that ceased are those active at the start with those that arose; they arise at arbitrarily late steps exactly when they cease at arbitrarily late steps; and with finitely many formations, arising recurs exactly when ceasing does. (`Becoming.held_over_stretch`, `Becoming.Web.arising_recurs_iff`, `Becoming.Web.Unceasing`, `Becoming.Web.unceasing_iff`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 9. Read of standing, with no premise at all: conditions of a finite family come to stand at arbitrarily late steps exactly when they cease to stand at arbitrarily late steps. (`Becoming.Web.ComesToStand`, `Becoming.Web.standing_recurs_iff`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 10. Finiteness does the work: ever new formations can arise with none ceasing while a level rises at every step and never falls (Accretion), and formations all active at the start can cease one after another while nothing arises (Attrition). (`Becoming.Accretion.web`, `Becoming.Accretion.unceasing`, `Becoming.Accretion.never_ceases`, `Becoming.Accretion.rises`, `Becoming.Accretion.never_falls`, `Becoming.Attrition.web`, `Becoming.Attrition.ceasing`, `Becoming.Attrition.nothing_arises`)
+   - *Master laws:* none among its reasons.
 11. The activity law holds of every world in a local form: where one list covers the active formations from some step on and activity is decided, arising recurs exactly when ceasing does; finitely many formations in all is not needed, and Web.unceasing_iff is its corollary. (`Becoming.Web.unceasing_iff_covering`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 
 <a id="conditions--条件"></a>
 ## Conditions

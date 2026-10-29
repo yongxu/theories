@@ -11,7 +11,9 @@
 ## Laws
 
 1. A list without repetition is distinct; with the plan realized, parts within and apart, the root's footprint within a list no longer than what is given and the draw the plan's draws, the joint draw is within what is given. (`Becoming.Flow.distinct_of_nodup`, `Becoming.Flow.withinJoint_of_plan`)
+   - *Master laws:* none among its reasons.
 2. Under balance, with such a division at every step, the level of the condition never falls below its start. (`Becoming.Flow.level_kept_of_plans`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 
 <a id="conditions--条件"></a>
 ## Conditions

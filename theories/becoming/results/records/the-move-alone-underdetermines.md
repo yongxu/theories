@@ -11,6 +11,7 @@
 ## Laws
 
 1. With positive weight on two different targets of one move from one configuration, the finer law has a step to each, and no map from configuration and move to the next configuration gives both. (`Becoming.Situations.move_underdetermines`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,6 +11,7 @@
 ## Laws
 
 1. Two places with the same band and the same height are one place; the band of each place and the seam of each band are listed, each band spanning exactly its seam; no map from heights gives bands and none from bands gives heights. (`Becoming.Hexagram.Band`, `Becoming.Hexagram.bandOf`, `Becoming.Hexagram.bandSeam`, `Becoming.Hexagram.bands_and_heights`, `Becoming.Hexagram.band_seams`, `Becoming.Hexagram.band_seam_unique`, `Becoming.Hexagram.neither_function`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

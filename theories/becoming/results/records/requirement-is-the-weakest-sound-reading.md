@@ -11,7 +11,9 @@
 ## Laws
 
 1. Necessary response is sound and local, and every sound, local reading of requirement implies it. (`Becoming.ExchangeRelation.Local`, `Becoming.ExchangeRelation.Supports`, `Becoming.ExchangeRelation.respondsBelow_local`, `Becoming.ExchangeRelation.respondsBelow_supports`, `Becoming.ExchangeRelation.respondsBelow_weakest`)
+   - *Master laws:* none among its reasons.
 2. Possible response is not sound: under the free relation a formation taking from a condition at nothing possibly responds to it falling below one. (`Becoming.ExchangeRelation.mayRespond_not_supports`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

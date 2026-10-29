@@ -11,8 +11,11 @@
 ## Laws
 
 1. Two family lines and a condition feeding both: where the members affect it, each a condition of its next state, the line under the one from the first family's first member reaches the second family's member two generations on, through the condition. (`Becoming.SharedCondition.Occ`, `Becoming.SharedCondition.affecting`, `Becoming.SharedCondition.affecting_reaches_other`)
+   - *Master laws:* , reaching the grammar.
 2. Under the class "a member or not", which holds both families' members alike and the condition apart, the line from the first family's first member reaches no member of the second family. (`Becoming.SharedCondition.affecting_member_outside`, `Becoming.SharedCondition.firstFamily`, `Becoming.SharedCondition.first_left_into_condition`, `Becoming.SharedCondition.living`)
+   - *Master laws:* , reaching the grammar.
 3. Where the members only feed from a condition they do not affect, the line from the first family's first member, under any relation, reaches no member of the second family. (`Becoming.SharedCondition.fed`, `Becoming.SharedCondition.fed_outside`, `Becoming.SharedCondition.firstFamily`, `Becoming.SharedCondition.first_never_left`)
+   - *Master laws:* , reaching the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

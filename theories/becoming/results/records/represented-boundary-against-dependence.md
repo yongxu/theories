@@ -11,10 +11,15 @@
 ## Laws
 
 1. A formation's event at a step is within renewal over a region of conditions where it is active and, for each condition of the region it takes part in, the step keeps every formation's dependence on that condition. Renewal at the step is exactly renewal over the region of every condition and gives renewal over every region; renewal over a region gives renewal over every region inside it. (`Becoming.Web.RenewingOver`, `Becoming.Web.RenewingAt`, `Becoming.Web.Kept`, `Becoming.Web.Participates`, `Becoming.Web.RenewingAt.over`, `Becoming.Web.renewingAt_iff_over_all`, `Becoming.Web.RenewingOver.narrow`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.Web.renewingAt_iff_over_all`: definitional or representational (a one-line unpacking).
 2. Over a region covering every condition a formation takes part in at a step, renewal over the region is renewal at the step; an event within renewal at a step is not undermining there. (`Becoming.Web.RenewingOver.at`, `Becoming.Web.RenewingAt.not_undermining`, `Becoming.Web.UnderminingAt`)
+   - *Master laws:* none among its reasons.
 3. Over a region covering every condition a formation requires at a step, where its requirements do not tighten across the step (each it has after the step it had before, at no greater need), a formation within renewal over the region is supported after the step. (`Becoming.Web.RenewingOver.keeps_own`, `Becoming.Web.Untightened`, `Becoming.Web.Supported`)
+   - *Master laws:* none among its reasons.
 4. In a balanced, dissipative witness where activity needs support, a source feeds a clearer's resource and the clearer draws down a dweller's habitat: the clearer requires only its resource and is within renewal over it at every step, yet its draw undermines at step one, where it is not within renewal, and the dweller is inactive from step two on. (`Becoming.Clearing.renewing_over_resource`, `Becoming.Clearing.undermines_within_renewal`, `Becoming.Clearing.web`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 5. In a witness where one formation requires two conditions at need one and at step zero draws on one of them, with the flow balanced, only active formations giving or taking, taking only from what they draw on, and activity needing support: across step zero it is within renewal over the other condition, its requirements not tightening, yet its draw undermines and it is not supported after the step. (`Becoming.Omitted.loses_own`, `Becoming.Omitted.flow`, `Becoming.Omitted.web`, `Becoming.Flow.Balances`, `Becoming.Flow.Acting`, `Becoming.Flow.Taking`, `Becoming.Web.Dependent`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,11 +11,17 @@
 ## Laws
 
 1. For every weighting, the sum over the courses kept followed by those dropped is the sum over those kept added to the sum over those dropped; where alternatives only add, as in counting, the sum over the courses kept is at most the sum over all. (`Becoming.Weights.sum_append`, `Becoming.counting_truncation_le`)
+   - *Master laws:* none among its reasons.
 2. Signed counts are pairs, what adds and what subtracts: alternatives add part by part, and a step that subtracts turns what follows around; so read, the pairs satisfy the laws of weights. (`Becoming.signed`)
+   - *Master laws:* none among its reasons.
 3. With one configuration and two moves back to it, one adding and one subtracting, every move being possible: possibility after one step holds, while the signed count after one step is (1, 1), what adds equalling what subtracts; keeping the adding course alone gives (1, 0). (`Becoming.Interference.weight`, `Becoming.Interference.cancels`, `Becoming.Interference.truncation_misses_cancellation`)
+   - *Master laws:* none among its reasons.
 4. Every reading of signed counts into possibility that takes the sum of two counts to the join of their readings, and marks a count possible, marks possible every sum that count enters, balanced or not; so where it marks (1, 0) possible it marks the balanced (1, 1) possible. (`Becoming.Interference.unseen`, `Becoming.Interference.unseen_balanced`)
+   - *Master laws:* none among its reasons.
 5. On one configuration, no possibility weight of steps with any end reading gives, along two-step courses, that the second move differs from the first; on configurations keeping the last move, from one keeping none, the step weight letting a move land where it is kept and differ from the move kept before gives exactly that. (`Becoming.Memory.differ`, `Becoming.Memory.not_of_steps`, `Becoming.Memory.kept`, `Becoming.Memory.of_kept`)
+   - *Master laws:* none among its reasons.
 6. With one configuration and two moves back to it, the count of courses of n steps is 2^n; every course of n moves that the sum over histories goes through is a course of the loop of that configuration. (`Becoming.Weighted.Loop.courses`, `Becoming.Weighted.Loop.courses_double`, `Becoming.Courses.loop`, `Becoming.Courses.loop_trace`, `Becoming.Courses.loop_courses_double`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,12 +11,19 @@
 ## Laws
 
 1. Where every group with less of an amount than another leaves no offspring, nothing is discordant among the groups; so the whole selects for the amount exactly where k times the within-group discordance is below k times the within-group concordance with the concordance among groups. (`Becoming.GroupEnding.Ended`, `Becoming.GroupEnding.excess_pos_of_lt`, `Becoming.GroupEnding.among_not_against`, `Becoming.GroupEnding.rises_iff_ended`)
+   - *Master laws:* none among its reasons.
 2. With groups uniform in the amount as well, the whole never selects against it, and selects for it wherever a group with more of it leaves offspring beside one with less. (`Becoming.GroupEnding.not_against_of_ended`, `Becoming.GroupEnding.pairs_pos`, `Becoming.GroupEnding.rises_of_ended`)
+   - *Master laws:* none among its reasons.
 3. Where only active formations give, a formation not active at a step leaves no descendant across it; a member depending, at a need of at least m, on a condition whose gated renewal ran into joint excess leaves none from then on. (`Becoming.GroupEnding.Flow.inactive_childless`, `Becoming.GroupEnding.Flow.excess_childless`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 4. Over generations of descent a member not active has offspring number nothing, a group of such members leaves no offspring, and where the groups with less of the amount are such groups, those groups leave nothing. (`Becoming.GroupEnding.Flow.offspring_zero`, `Becoming.GroupEnding.Flow.group_childless`, `Becoming.GroupEnding.mem_whole`, `Becoming.GroupEnding.Flow.ended_of_inactive`)
+   - *Master laws:* none among its reasons.
 5. With exact transmission and groups uniform in the amount, where the groups with less of it are not active and a group with more of it leaves offspring beside one with less, the mean amount rises across the step. With groups not uniform, the mean rises exactly where k times the within-group discordance is below k times the within-group concordance with the concordance among groups. (`Becoming.GroupEnding.Flow.raises_of_inactive`, `Becoming.GroupEnding.Flow.rises_iff_inactive`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.GroupEnding.Flow.rises_iff_inactive`: premise of the account (only the active give, with the partition).
 6. Where every member of a generation is not active, as where every group depends on one condition that ran into joint excess, the next generation is empty: one shared condition leaves no group to select among. (`Becoming.GroupEnding.Flow.all_end`)
+   - *Master laws:* none among its reasons; central declaration `Becoming.GroupEnding.Flow.all_end`: premise of the account (only the active give).
 7. Witnesses: the keeping group and a group whose condition ended. With the member holding back leaving one offspring and its groupmate two, selection among groups outweighs selection within and the whole selects for holding back; with the groupmate leaving five, selection within outweighs and the whole goes against it. (`Becoming.GroupEnding.keepingFirst`, `Becoming.GroupEnding.keeps`, `Becoming.GroupEnding.uniform`, `Becoming.GroupEnding.equal`, `Becoming.GroupEnding.Outweighed.outweighed`, `Becoming.GroupEnding.Outweighed.keeping_rises`, `Becoming.GroupEnding.Outweighs.outweighs`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

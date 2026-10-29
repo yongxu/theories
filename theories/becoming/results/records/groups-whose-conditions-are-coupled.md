@@ -11,11 +11,17 @@
 ## Laws
 
 1. Read as one, a family of conditions balanced across a step at which its uptake exceeds its replenishment loses at least one from its stock; n such steps lower it by at least n. (`Becoming.Flow.family_excess_lowers_at`, `Becoming.Flow.family_excess_bounded_at`, `Becoming.Flow.family_excess_bounded`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 2. The coupled gate: where whatever gives to a member depends on some member at a need of at least m, a stock below m stays below m, and a formation depending on any member at such a need is not active; so n steps of family excess from a stock below n + m end every such formation from then on. (`Becoming.Flow.family_stays_below_at`, `Becoming.Flow.family_ends_below_at`, `Becoming.Flow.family_excess_ends_at`, `Becoming.Flow.family_excess_ends`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 3. The laws of one condition are the family of that condition alone: a gate on one condition is the coupled gate on its family of one, and joint excess ends gated renewal through the family law. (`Becoming.Flow.of_single`, `Becoming.Flow.gate_single`, `Becoming.Flow.excess_lowers_at`, `Becoming.Flow.excess_bounded_at`, `Becoming.Flow.stays_below_at`, `Becoming.Flow.ends_below_at`, `Becoming.Flow.joint_excess_ends_at`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 4. Witness: a taker on a patch renewed by a formation drawing on a neighbour. Read alone, the patch shows no joint excess while renewed and its renewal is not gated on it; read as one with the neighbour, the renewal is gated, the uptake exceeds the replenishment at every step, and both formations end. (`Becoming.Coupled.Condition`, `Becoming.Coupled.Formation`, `Becoming.Coupled.pair`, `Becoming.Coupled.present`, `Becoming.Coupled.flow`, `Becoming.Coupled.web`, `Becoming.Coupled.balances`, `Becoming.Coupled.acting`, `Becoming.Coupled.dependent`, `Becoming.Coupled.alone_within`, `Becoming.Coupled.alone_ungated`, `Becoming.Coupled.gated`, `Becoming.Coupled.excess`, `Becoming.Coupled.all_end`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 5. A member depending on any condition of such a family leaves no descendant after the family's excess; groups whose members depend on one such family end together, each leaving no offspring and nothing selected among them, for any amount. (`Becoming.GroupEnding.Flow.family_childless`, `Becoming.GroupEnding.Flow.excess_childless`, `Becoming.GroupEnding.Flow.coupled_end_together`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways); central declaration `Becoming.GroupEnding.Flow.family_childless`: balance, represented; central declaration `Becoming.GroupEnding.Flow.coupled_end_together`: balance, represented.
 6. So ending selects among groups only between families: where the groups with less of an amount depend on a family that ran into excess, they leave nothing. (`Becoming.GroupEnding.Flow.ended_of_family`)
+   - *Master laws:* balance, not reaching the grammar (balance is represented in it both ways).
 
 <a id="conditions--条件"></a>
 ## Conditions

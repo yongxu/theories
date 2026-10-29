@@ -11,6 +11,7 @@
 ## Laws
 
 1. With the dependence transmitted within δ, each member descending, depending on c at its first standing step, and its need not rising until it gives in turn, the need after i + 1 descents is at most the founder's plus (i + 1) δ, or the level where the founder was supported plus (i + 1) δ. (`Becoming.Flow.transmitted_along`, `Becoming.Flow.transmitted_along_supported`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

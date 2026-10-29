@@ -328,7 +328,9 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
               'reading_drift': len(reading_drift),
               # Directory indexes and catalogues that differ from what render would write; they
               # follow chapters, studies and sources and are refreshed by make research-render.
-              'stale_indexes': stale_indexes}
+              'stale_indexes': stale_indexes,
+              # MV: how far the computed view of master laws still matches the records and the core receipt.
+              'master_laws': registry.master_laws_status(records)}
     if ids or base:
         result['selected_style_warnings'] = [f for f in warnings if f['id'] in selected]
     result['scope'] = 'Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation.'

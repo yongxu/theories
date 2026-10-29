@@ -11,7 +11,9 @@
 ## Laws
 
 1. What ceases to be is the coming to be of its negation, and what comes to be the ceasing of its negation, with no premise; read back, the determination must be stable where it is read; on a web, a formation ceasing is its inactivity coming to be. (`Becoming.CeasesToBe.not_comes`, `Becoming.ComesToBe.not_ceases`, `Becoming.ComesToBe.of_not`, `Becoming.CeasesToBe.of_not`, `Becoming.Web.ceasing_readings`)
+   - *Master laws:* none among its reasons.
 2. A conclusion following from a proposition and from its failure holds wherever it is stable, the proposition left undecided; every negation and every equation of numbers is stable. (`Becoming.Decided.cases_stable`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

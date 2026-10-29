@@ -11,9 +11,13 @@
 ## Laws
 
 1. A profile revises another where each new rule, at every step from every level, is a best response to the old profile; the first of finitely many amounts drawing the most always gives one, so revisions exist from any profile. (`Becoming.Optimum.InTurn.Revises`, `Becoming.Optimum.InTurn.bestUpTo`, `Becoming.Optimum.InTurn.bestUpTo_le`, `Becoming.Optimum.InTurn.bestUpTo_max`, `Becoming.Optimum.InTurn.reviseFirst`, `Becoming.Optimum.InTurn.reviseSecond`, `Becoming.Optimum.InTurn.revise_revises`, `Becoming.Optimum.InTurn.revised`)
+   - *Master laws:* none among its reasons; 2 of its declarations lie outside the core run.
 2. Along every sequence of revisions over N steps, from any profile, both leave nothing at every step of the last k from round 2 k on; so from round 2 N on the profile draws everything and the base stands from the first step at what stands at nothing. (`Becoming.Optimum.InTurn.levels_of_zero`, `Becoming.Optimum.InTurn.secondDrawn_of_zero`, `Becoming.Optimum.InTurn.revisions_end`, `Becoming.Optimum.InTurn.revised_draw_all`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 3. On a web, from round 2 N on, a dependence above what stands at nothing, met at the start, is broken at the first step. (`Becoming.Web.revised_broken`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 4. Witness: under the gate, two drawers who both start by leaving everything keep the dweller; revised from round 2 (n + 2) on they break it. (`Becoming.Optimum.Holding.gated_restraint_keeps`, `Becoming.Optimum.Holding.gated_revised`)
+   - *Master laws:* not measured: its declarations lie outside the core run.
 
 <a id="conditions--条件"></a>
 ## Conditions

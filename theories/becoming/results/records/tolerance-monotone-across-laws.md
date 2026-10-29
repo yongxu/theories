@@ -11,7 +11,9 @@
 ## Laws
 
 1. One law keeps inclusion into another where, from configurations within others, it gives only where the other does; it then keeps it along their courses, keeping inclusion its case. (`Becoming.Tolerance.KeepsInclusionInto`, `Becoming.Tolerance.KeepsInclusionInto.course`)
+   - *Master laws:* none among its reasons.
 2. The tolerating law keeps inclusion into the tolerating law of tolerances no smaller, so more tolerance gives no less at every step. (`Becoming.Tolerance.tolerating_into`, `Becoming.Tolerance.tolerating_mono`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions

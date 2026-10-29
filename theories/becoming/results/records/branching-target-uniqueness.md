@@ -11,8 +11,11 @@
 ## Laws
 
 1. A branching test is nothing, a claim, the failure of a test, two tests together, or that some step by a move leads to where a test holds; configurations of two frames pass the same branching tests where every such test holds at the one exactly where it holds at the other. (`Becoming.BranchingTest`, `Becoming.BranchingTest.Holds`, `Becoming.SameBranchingTests`)
+   - *Master laws:* none among its reasons.
 2. For any two frames, with no finiteness of their steps assumed: where branching tests tell apart the configurations of the target (any two passing the same branching tests are equal), a configuration of the source passes the same branching tests as at most one target configuration. (`Becoming.SameBranchingTests.functional`)
+   - *Master laws:* none among its reasons.
 3. For any two frames: where likeness tells apart the configurations of the target (any two alike configurations of it are equal), a configuration of the source is alike to at most one target configuration. (`Becoming.Alike.functional`)
+   - *Master laws:* none among its reasons.
 
 <a id="conditions--条件"></a>
 ## Conditions
