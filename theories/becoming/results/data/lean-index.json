@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2055,
-    "distinct_byte_contents": 1620,
+    "lean_paths": 2057,
+    "distinct_byte_contents": 1622,
     "byte_identical_duplicate_groups": 170,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1104,
+      "development-attempt": 1106,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 912
@@ -5027,6 +5027,24 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3e-step-indexed-bridges/tree/Becoming/Withholding.lean",
       "sha256": "b68ca888ec458660df588605c8d319d2f4c556d43c2a78567cd122690340e6ee",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/checks/Becoming/OU3fClosureCheck.lean",
+      "sha256": "8512d70485b8f0749969f77677691471ddd2e74df4565178ba7ad3fd42064664",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/checks/Becoming/OU3fLawsCheck.lean",
+      "sha256": "d6948fb45eee742bdcf74d711660c434e396c33abd5139c3b7ffeeaccee81b5d",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -268636,6 +268654,47 @@
       },
       "print_axioms_commands": 0
     },
+    "8512d70485b8f0749969f77677691471ddd2e74df4565178ba7ad3fd42064664": {
+      "byte_size": 2433,
+      "line_count": 49,
+      "imports": [
+        "Becoming.Retaining",
+        "Becoming.Wholes",
+        "Becoming.Reserve"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "clock",
+          "qualified_name_hint": "Becoming.OU3fClosureCheck.clock",
+          "line": 14
+        },
+        {
+          "kind": "theorem",
+          "name": "inactive_of_not_arising",
+          "qualified_name_hint": "Becoming.OU3fClosureCheck.inactive_of_not_arising",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "active_back",
+          "qualified_name_hint": "Becoming.OU3fClosureCheck.active_back",
+          "line": 28
+        }
+      ],
+      "declaration_counts": {
+        "def": 1,
+        "theorem": 2
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "851873b3d76fd1a9f89d41b962ab9f66b080baad1bbfba706b09d16546083457": {
       "byte_size": 22098,
       "line_count": 400,
@@ -416003,6 +416062,93 @@
       "declaration_counts": {
         "def": 13,
         "theorem": 55
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "d6948fb45eee742bdcf74d711660c434e396c33abd5139c3b7ffeeaccee81b5d": {
+      "byte_size": 6398,
+      "line_count": 121,
+      "imports": [
+        "Becoming.Identity"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "split_rev",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.split_rev",
+          "line": 16
+        },
+        {
+          "kind": "theorem",
+          "name": "split",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.split",
+          "line": 23
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_within",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.steps_within",
+          "line": 28
+        },
+        {
+          "kind": "theorem",
+          "name": "far_bounded",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.far_bounded",
+          "line": 34
+        },
+        {
+          "kind": "theorem",
+          "name": "far",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.far",
+          "line": 43
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_converse",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.steps_converse",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "stepFrom",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.stepFrom",
+          "line": 63
+        },
+        {
+          "kind": "theorem",
+          "name": "pair_eq",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.pair_eq",
+          "line": 66
+        },
+        {
+          "kind": "theorem",
+          "name": "lineage_iff_steps",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.lineage_iff_steps",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "unique",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.unique",
+          "line": 87
+        },
+        {
+          "kind": "theorem",
+          "name": "origin",
+          "qualified_name_hint": "Becoming.OU3fLawsCheck.origin",
+          "line": 99
+        }
+      ],
+      "declaration_counts": {
+        "def": 1,
+        "theorem": 10
       },
       "textual_markers": {
         "sorry": [],
