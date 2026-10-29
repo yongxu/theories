@@ -121,3 +121,38 @@ The package: experiments/integrated-correction/general-framework/generative-basi
 6. **Readings.** Are the module headers' readings (inner alignment, IRL, revealed preference, deception, evaluation awareness, ELK, cascades, Condorcet) labelled as readings and stated no more strongly than the laws support?
 
 Return a markdown report (1,500–3,000 words): a verdict paragraph; numbered findings with severity (high/medium/low), the exact location (file:line or declaration), and the exact fix (replacement wording or statement); then what you did not check.
+
+## The texts' cold read (piped to `cx -m astra -e high --fresh --sandboxed`; and two Opus readers in one workflow, each given this brief and one lens, (A) or (B))
+
+# Context
+
+You are giving an independent cold read of the texts of one landing in the Theory of Becoming, in the git worktree /Users/ren/theories/.claude/worktrees/rf-landing (branch rf-landing; read AGENTS.md there first: the theory starts from one relational unfolding, not separate agents; each result is stated once, in its home section; readings carry an AI label and stay apart from theorems). **Read-only**: do not edit, create, commit, render, run make, or build Lean anywhere; other sessions are landing work in the shared checkout.
+
+The landing is RF round 1, "formations that read" (识): three Lean modules in the pure core (imports only Lean's Init; every axiom report empty, already checked by the repository's checker; you need not rebuild):
+
+- experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean
+- experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean
+- experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean
+
+They build on Becoming/Grammar.lean (the root: «际» a relation, «及» its reach, «无环» acyclic, «及之传递» reach is transitive, «则» inclusion) and Becoming/Learning.lean (Determines, Lumped, Free, determines_lumped_iff, Training.Through, Training.AgreeOn).
+
+The texts to read, all on this branch:
+
+1. theories/becoming/chapters/03-KNOWING.md, section 11 "What a formation's acts show" (from the anchor `what-the-acts-show`, line 425, to the anchor `does-not-show`, line 440), and the bullet in that chapter's Open list beginning "Formations that read, beyond what their acts show" (line 457).
+2. theories/becoming/chapters/05-COLLECTIVES.md, the block at the anchor `r-readers-reading-readers` (its Theorem paragraph; the Reading paragraph after it predates RF and is context only).
+3. theories/becoming/chapters/07-SIGNIFICANCE.md, the sentence beginning "What a reader of a formation's acts fixes of it" (line 530; one pointer).
+4. theories/becoming/chapters/08-METHOD.md, the paragraph beginning "At core receipt [`20261029T113907.548004Z`]" (line 162; the counts).
+5. The three records: theories/becoming/results/records/what-choices-show-of-an-order.json, what-readings-fix-of-the-unread.json and readers-reading-readers.json (English and Chinese fields; the .md beside each is rendered from the JSON).
+6. Study section 445 in _process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md (the heading "## 445.", line 20544).
+
+Do not read the folder _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/ (earlier reviews) before forming your own view. The plan beside it (PLAN.md) may be read for intent.
+
+# What to check
+
+(A) Exactness. For every sentence that states what a law says, check it against the Lean declaration it cites or describes: hypotheses (decidability, no cycle shown, distinctness, the list form of the read occasions), quantifiers and their order, the direction of each iff, what is a general law and what is a witness, and the declaration names (each exists, spelled as in the Lean, under its namespace). Flag claims stronger, weaker or other than what is proved, and conditions left out. Check the counts (theorems and declarations per module) against the files. Check the Chinese fields of the records say what the English ones say.
+
+(B) The account's rules and RF's place in it. Readings labelled and kept apart from theorems; standings stated honestly ("near-definitional", "readings, not containments"); terms used in the glossary's one sense (GLOSSARY.md), structural names, no dualist, social or financial word and no ontology of separate agents smuggled in by "reader", "formation", "chooser" or "helper"; links and anchors pointing where they say; consistency with the neighbouring results cited (07 §6 what-training-installs, 05's pooled-coupling records, 03's learning laws: generalization-through-lumping, continuation-relative-to-a-class), with no result stated twice; the Open bullet and study §445's Boundary list what round 1 does not show without overclaiming; the literature placements (Richter 1966 rather than Afriat; inner alignment, inverse reinforcement learning, revealed preference, deception, evaluation awareness, information cascades) accurate as stated.
+
+# Output
+
+A verdict line, then numbered findings, most severe first. Each finding: severity (high: a claim the Lean does not prove, or a rule AGENTS.md states broken; medium: a missing condition or misleading wording; low: a precision fix), location (file and line, or anchor), the quoted text (short), the problem, what the Lean says (declaration and hypotheses), and the replacement text you propose. Report only what you can point to; no style preferences unless they change meaning or break a stated rule. If a part has no problem, say so in one line.

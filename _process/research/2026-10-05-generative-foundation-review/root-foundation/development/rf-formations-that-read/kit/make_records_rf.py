@@ -25,6 +25,7 @@ RFD = '_process/research/2026-10-05-generative-foundation-review/root-foundation
 STUDY = RFD + 'BECOMING-RENEWAL-READING.md'
 KITD = RFD + 'development/rf-formations-that-read/'
 PLAN, REVIEW_PLAN, REVIEW_LEAN = KITD + 'PLAN.md', KITD + 'evidence/REVIEW-PLAN.md', KITD + 'evidence/REVIEW-LEAN.md'
+REVIEW_TEXTS = KITD + 'evidence/REVIEW-TEXTS.md'
 CH3, CH5 = 'theories/becoming/chapters/03-KNOWING.md', 'theories/becoming/chapters/05-COLLECTIVES.md'
 LEAN = {m: f'{PKG}/Becoming/{m}.lean' for m in ('ShownOrder', 'Unread', 'Cascade', 'Grammar', 'Learning')}
 RECEIPT = f'{PKG}/becoming-checks/{RECEIPT_ID}/verification.json'
@@ -120,6 +121,7 @@ def build(rid, module, title, statement, groups, hypotheses, does_not_show, coun
                          {'path': PLAN, 'role': 'integration', 'sha256': sha(PLAN)},
                          {'path': REVIEW_PLAN, 'role': 'integration', 'sha256': sha(REVIEW_PLAN)},
                          {'path': REVIEW_LEAN, 'role': 'integration', 'sha256': sha(REVIEW_LEAN)},
+                         {'path': REVIEW_TEXTS, 'role': 'integration', 'sha256': sha(REVIEW_TEXTS)},
                          {'path': home, 'role': 'statement', 'sha256': sha(home)}],
         'proof_bindings': [{'source': source, 'receipt': RECEIPT, 'sha256_pointer': f'/source_sha256/{module}',
                             'success_pointer': '/status', 'success_value': 'passed'}],
@@ -131,10 +133,10 @@ SO = 'Becoming.ShownOrder'
 r1 = build(
     'what-choices-show-of-an-order', SO,
     {'en': 'What choices show of the order they come from', 'zh': '所择所示之序'},
-    {'en': "The positive comparisons shared by every strict order that strict choices could come from are exactly the "
-           "reach of the relation they show; such an order exists exactly where nothing shown returns, and beyond the "
-           "reach no comparison is forced.",
-     'zh': '严择所可出之每一严序所共有之正比较，恰为其所示之关系之及；此序有之，恰当所示无返；及之外，无比较为所迫。'},
+    {'en': "Strict choices come from some strict order exactly where nothing they show returns; then the positive "
+           "comparisons every such order shares are exactly the reach of the relation they show, and beyond that reach "
+           "no comparison is forced.",
+     'zh': '严择出于某一严序，恰当其所示无返；其时每一此序所共有之正比较，恰为其所示之关系之及；及之外，无比较为所迫。'},
     [("Occasions of choosing: at each, what is open and what is chosen; the choices show x above y where at some "
       "occasion x is chosen while y, another, is open; a relation accords where what is chosen stands above every other "
       "open alternative, accords weakly where nothing open stands above it; what is chosen being open is named apart.",
@@ -147,8 +149,8 @@ r1 = build(
       "凡与诸择相合之传递关系皆含所示关系之及，即含所示者之最小传递关系；所示之关系及其及皆与之合。",
       C(SO, 'ChoiceOccasions.reach_within', 'ChoiceOccasions.shown_accords', 'ChoiceOccasions.reach_accords')),
      ("Some irreflexive transitive relation accords with the choices exactly where nothing reaches itself in the shown "
-      "relation, the shown reach then being one («无环则及为序»).",
-      "有一非自反之传递关系与诸择相合，恰当所示之关系中无自及者；其时所示之及即其一（«无环则及为序»）。",
+      "relation, the shown reach then being one (by «及之传递»; the grammar states the same as «无环则及为序»).",
+      "有一非自反之传递关系与诸择相合，恰当所示之关系中无自及者；其时所示之及即其一（由 «及之传递»；文法以 «无环则及为序» 陈之）。",
       C(SO, 'ChoiceOccasions.accorded_iff_noCycle')),
      ("With no cycle shown, x stands above y in every strict order according with the choices exactly where x reaches "
       "y in the shown relation: the positive comparisons shared are the shown reach; x stands above every other "
@@ -156,10 +158,14 @@ r1 = build(
       "所示无环，则凡与诸择相合之严序中 x 居 y 上，恰当所示之关系中 x 及 y：所共有之正比较即所示之及；凡此序中 x 居一单之每一他者之上，"
       "恰当其及于每一者，此不言 x 于彼处开。",
       C(SO, 'ChoiceOccasions.above_in_every_iff_reach', 'ChoiceOccasions.top_in_every_iff_reach')),
-     ("Reach with one pair added is reach without it, or reach to the pair's first member, the pair and reach from its "
-      "second; adding a pair leaves no cycle exactly where there was none and the second member neither is nor reaches "
-      "the first.",
-      "增一对后之及，或为未增之及，或为及于对之首、经此对、自其次而及；增一对而无环，恰当原无环且次者非首者亦不及首者。",
+     ("A narrower class of strict orders according with the choices makes every comparison that every strict according "
+      "order makes: restricting the orders a reader allows can only add comparisons.",
+      "与诸择相合之严序之较窄之类，凡每一相合之严序皆作之比较，皆作之：限读者所许之序，唯能增比较。",
+      C(SO, 'ChoiceOccasions.above_in_class_of_every')),
+     ("Reach with one pair added is reach without it, or a path through the pair: from the pair's first member or what "
+      "reaches it, to its second member or what it reaches; adding a pair leaves no cycle exactly where there was none "
+      "and the second member neither is nor reaches the first.",
+      "增一对后之及，或为未增之及，或经此对：自对之首或及于首者，至其次或次所及者；增一对而无环，恰当原无环且次者非首者亦不及首者。",
       C(SO, 'ChoiceOccasions.withPair', 'ChoiceOccasions.reach_withPair', 'ChoiceOccasions.reach_withPair_iff',
         'ChoiceOccasions.noCycle_withPair', 'ChoiceOccasions.noCycle_withPair_iff')),
      ("Beyond the shown reach no comparison is forced: with no cycle shown, x ≠ y and y not reaching x, some strict "
@@ -181,24 +187,26 @@ r1 = build(
      ("Witness, one search with two orders: the search takes the first listed alternative standing above every "
       "distinct listed one, or none; run with either of two strict orders according with the choice, it chooses the "
       "first from the menu met, and from the first and the third the first under one order and the third under the other.",
-      "例，一搜二序：搜取所列中居其余每一者之上之首者；以与此择相合之二严序之任一行之，于所遇之单择首；于首与第三，一序择首，另一序择第三。",
+      "例，一搜二序：搜取所列中居其余每一相异者之上之首者，无则无；以与此择相合之二严序之任一行之，于所遇之单择首；于首与第三，一序择首，另一序择第三。",
       C(SO, 'ChoiceOccasions.Untried.aboveFirst', 'ChoiceOccasions.Untried.aboveThird', 'ChoiceOccasions.Untried.noTrue',
         'ChoiceOccasions.Untried.same', 'ChoiceOccasions.Untried.search', 'ChoiceOccasions.Untried.aboveFirst_strict',
         'ChoiceOccasions.Untried.aboveThird_strict', 'ChoiceOccasions.Untried.both_accord',
         'ChoiceOccasions.Untried.same_search_met', 'ChoiceOccasions.Untried.same_search_after'))],
-    [{'en': "Any carrier of alternatives and any occasions; what is open at an occasion is any predicate; nothing is "
-            "decided, and no finiteness is used.",
-      'zh': '任一备择之载体与任一时；一时所开者为任一谓词；无所判定，不用有限。'},
-     {'en': "Accordance is strict dominance: what is chosen stands above every other open alternative; ties broken by a "
-            "separate rule are choices among equals, which accord only weakly.",
-      'zh': '相合为严胜：所择居每一他开者之上；以另则断之平局为等者中之择，唯弱合。'},
-     {'en': "The freedom beyond the reach needs no cycle shown and the two alternatives distinct.",
-      'zh': '及之外之自由，需所示无环且二备择相异。'}],
+    [{'en': "Any carrier of alternatives and any occasions; what is open at an occasion is any predicate; no decidability "
+            "is assumed, and no finiteness is used.",
+      'zh': '任一备择之载体与任一时；一时所开者为任一谓词；不设可判定，不用有限。'},
+     {'en': "Accordance is strict dominance: what is chosen stands above every other open alternative; choices required "
+            "only to be maximal, nothing open standing above what is chosen, accord only weakly.",
+      'zh': '相合为严胜：所择居每一他开者之上；唯求极大之择（无开者居所择之上）唯弱合。'},
+     {'en': "The exactness of the shared comparisons and the freedom beyond the reach need no cycle shown; the freedom "
+            "needs the two alternatives distinct and the second not reaching the first, and ranking both ways needs "
+            "neither reaching the other.",
+      'zh': '所共有之比较之确与及外之自由皆需所示无环；自由又需二备择相异且次者不及首者，两向排之需二者互不相及。'}],
     [{'en': "Which order an actual chooser carries, or that it chooses by one order at all.",
       'zh': '实际之择者所携为何序，或其是否依一序而择。', 'kind': 'non-implication'},
      {'en': "That a training can install either order of the witness, or which class of orders an architecture can "
-            "install; a narrower class holding an according order fixes at least as much.",
-      'zh': '训练能装入例中之任一序，或某架构能装入何类之序；含一相合之序之较窄之类所定者至少同多。', 'kind': 'non-implication'},
+            "install; a narrower class fixes at least as much (a law above), and possibly more.",
+      'zh': '训练能装入例中之任一序，或某架构能装入何类之序；较窄之类所定者至少同多（见上律），或更多。', 'kind': 'non-implication'},
      {'en': "A total order, a utility or an optimizer: what is derived is a strict partial order.",
       'zh': '全序、效用或优化者：所推出者为严偏序。', 'kind': 'scope'},
      {'en': "Choice under noise or with probabilities, and what a reader can learn from more than the choices.",
@@ -209,8 +217,10 @@ r1 = build(
             "ranked both ways by strict orders according with the choice (ChoiceOccasions.Untried.untried_free).",
       'zh': '一时，首与次开而择首：未遇之首与第三，为与此择相合之严序两向排之（ChoiceOccasions.Untried.untried_free）。'},
      {'en': "One search, two strict orders according with that choice: alike on the menu met, the first and the third "
-            "chosen apart on the menu met after (ChoiceOccasions.Untried.same_search_after).",
-      'zh': '一搜，与此择相合之二严序：于所遇之单同择，于其后之单分择首与第三（ChoiceOccasions.Untried.same_search_after）。'}],
+            "chosen apart on the menu met after (ChoiceOccasions.Untried.same_search_met, "
+            "ChoiceOccasions.Untried.same_search_after).",
+      'zh': '一搜，与此择相合之二严序：于所遇之单同择，于其后之单分择首与第三（ChoiceOccasions.Untried.same_search_met、'
+            'ChoiceOccasions.Untried.same_search_after）。'}],
     {'en': "Pure core, every axiom report empty: ShownOrder imports only Grammar. The witnesses' tables are nested matches "
            "on one argument at a time; the search witness evaluates by rfl on its two menus.",
      'zh': '纯核，公理报告皆空：ShownOrder 唯引 Grammar。例之表为逐一论元之嵌套匹配；搜之例于其二单上以 rfl 计算。'},
@@ -219,143 +229,182 @@ r1 = build(
            "frozen test of the reach on choosers; review by a person.",
      'zh': '可实现之类：训练装入一搜之任一序；预测、选择、修订与干预之有限机制，内对齐与协助于其上陈述（RF 第二轮）；择者之及之冻结检验；人之审查。'},
     {'en': "Rationalizing strict choices by a strict partial order, through the least transitive relation holding what "
-           "they show, is close to Richter's theorem (1966) in order form; it is not Afriat's theorem (1967), which "
-           "concerns expenditure data and utility. Read with training, the shown reach is what a training reading a "
-           "trained law's choices fixes of its order (inner alignment, goal misgeneralization in exact form); read with "
-           "a helper, what inverse reinforcement learning can fix of a principal (Ng and Russell 2000; Armstrong and "
-           "Mindermann 2018 for choices among equals). These are readings, not containments.",
-     'zh': '以所示者之最小传递关系由严偏序合理化严择，近于 Richter 定理（1966）之序形；非 Afriat 定理（1967），彼关支出资料与效用。与训练并读，'
-           '所示之及为读已训之律之择之训练于其序所定者（内对齐、目标误泛化之确形）；与助者并读，为逆强化学习于委托者所能定者（Ng 与 Russell 2000；'
-           '等者中之择见 Armstrong 与 Mindermann 2018）。皆为读，非包含。'},
+           "they show, is close to Richter's theorem (1966) without completeness: a strict partial order, not a complete "
+           "preference, so no extension principle (Szpilrajn 1930) is needed; it is not Afriat's theorem (1967), which "
+           "concerns expenditure data and utility. AI reading: read with training, where the training restricts the "
+           "orders no further, comparisons beyond the shown reach stay open, goal misgeneralization located exactly as "
+           "a possibility, not shown (Langosco and others 2022; Shah and others 2022), and inner alignment (Hubinger and "
+           "others 2019) for searches by an order; the kernel on a law's own courses is what training installs. Read "
+           "with a helper, what strict choices alone fix of an order: maximal choices force none, the order form of the "
+           "degenerate reward (Ng and Russell 2000); that behaviour fixes a planner and a reward together only under "
+           "assumptions on the planner (Armstrong and Mindermann 2018) lies outside, since accordance fixes the "
+           "planner. These are readings, not containments.",
+     'zh': '以所示者之最小传递关系由严偏序合理化严择，近于 Richter 定理（1966）而无完备：为严偏序而非完备之偏好，故无需扩张之原理（Szpilrajn 1930）；'
+           '非 Afriat 定理（1967），彼关支出资料与效用。AI 解读：与训练并读，训练于序不另加限，则所示之及外之比较仍开：目标误泛化为确定其处之可能，非所示'
+           '（Langosco 等 2022；Shah 等 2022），内对齐（Hubinger 等 2019）为依序之搜；律自行之迹上之核为训练所装者。与助者并读，为唯严择于序所定者：'
+           '极大之择不迫任何比较，为退化报酬之序形（Ng 与 Russell 2000）；行为唯于择者之设下方合定择者与报酬（Armstrong 与 Mindermann 2018），在外，'
+           '因相合已定择者。皆为读，非包含。'},
     ['what choices show', '所择所示', 'the shown reach', '所示之及', 'revealed order', 'Becoming.ChoiceOccasions.Shown',
      'Becoming.ChoiceOccasions.above_in_every_iff_reach', 'Becoming.ChoiceOccasions.both_ways_of_unreached'],
     [dep('continuation-relative-to-a-class',
-         "The grammar's reach «及» with its transitivity «及之传递» and monotonicity «及之单调», acyclicity «无环» and "
-         "«无环则及为序».",
-         '文法之及 «及»，及其传递 «及之传递» 与单调 «及之单调»，无环 «无环» 与 «无环则及为序»。')],
+         "The grammar's reach «及» with its transitivity «及之传递» and monotonicity «及之单调», and acyclicity «无环».",
+         '文法之及 «及»，及其传递 «及之传递» 与单调 «及之单调»，与无环 «无环»。')],
     [{'id': 'what-training-installs', 'detail': {
-        'en': "Read with training: a training reading a trained law's choices fixes of the order it carries exactly the "
-              "shown reach.",
-        'zh': '与训练并读：读已训之律之择之训练，于其所携之序所定者恰为所示之及。'}},
+        'en': "AI reading, with training: where a trained law chooses strictly by a strict order and the training reads "
+              "only its choices and restricts the orders no further, the comparisons every according order shares are "
+              "the shown reach; a narrower class can fix more; what a training installs is not established.",
+        'zh': 'AI 解读，与训练并读：已训之律依一严序严择，而训练唯读其择、于序不另加限，则每一相合之序所共有之比较为所示之及；较窄之类可定更多；'
+              '训练所装者未立。'}},
      {'id': 'what-readings-fix-of-the-unread', 'detail': {
         'en': "What readings fix of the unread: the same question for acts at occasions not read.",
-        'zh': '读处所定于未读处者：同问于未读之时之行。'}}],
+        'zh': '读处所定于未读处者：同问于未读之时之行。'}},
+     {'id': 'the-present-on-causal-set-growth', 'detail': {
+        'en': "The linear-extension form on finite causal sets with precedence decided: what every course keeps is "
+              "precedence, unrelated elements born either way; here strict partial orders on any carrier, with nothing "
+              "decided.",
+        'zh': '有限因果集上之线性扩张之形，先后可判定：每一程所存者为先后，无关之元两向而生；此处为任一载体上之严偏序，无所判定。'}}],
     [{'path': LEAN['Grammar'], 'role': 'proof', 'sha256': sha(LEAN['Grammar'])}],
     CH3,
     {'en': f'{DATE_EN}: added (RF round 1), what choices show of the order they come from: the shown reach, its exactness '
-           f'under no cycle, the freedom beyond it, choices among equals, and the witness of one search with two orders; '
-           f'after a review of the plan and a review of the Lean; study section {N}.',
-     'zh': f'{DATE_ZH}：新增（RF 第一轮），所择所示之序：所示之及，无环时之确，及外之自由，等者中之择，一搜二序之例；经计划之审与 Lean 之审；'
-           f'研究第 {N} 节。'})
+           f'under no cycle, a narrower class, the freedom beyond it, maximal choices, and the witness of one search with '
+           f'two orders; after a review of the plan, a review of the Lean and a cold read of the texts; study section {N}.',
+     'zh': f'{DATE_ZH}：新增（RF 第一轮），所择所示之序：所示之及，无环时之确，较窄之类，及外之自由，极大之择，一搜二序之例；经计划之审、Lean 之审'
+           f'与文之冷读；研究第 {N} 节。'})
 
 UN = 'Becoming.Unread'
 r2 = build(
     'what-readings-fix-of-the-unread', UN,
     {'en': 'What readings fix of the unread', 'zh': '读处所定于未读处者'},
-    {'en': "Readings fix a formation's act where it is not read exactly where its lumping ties that occasion to a read "
-           "one; where it can tell the occasion from every read one, a selected law has a selected twin agreeing on "
-           "every reading and acting otherwise there.",
-     'zh': '读处定一成形于未读处之行，恰当其归并将此时系于一读处；其能分此时于每一读处，则有所选之孪生，于每一读处皆合而于此处行异。'},
-    [("Where no read occasion is lumped with x, the class going alike across the lumping is free at x beyond the "
-      "readings: every member's values on the read occasions combine with every value at x.",
-      "未有读处与 x 同归，则随归并无别之类于读处之外在 x 为自由：每一成员于读处之值，与 x 处之每一值皆可相合。",
+    {'en': "Where a formation's lumping tells an unread occasion from every read one, being in its lump decided, a "
+           "selection through the readings that selects a law reading through the lumping also selects twins agreeing "
+           "on every reading and taking every value there.",
+     'zh': '一形成之归并分一未读之时于每一读处，彼归并可判定，则经读处而选者若选一经归并而读之律，亦选其孪生，于每一读处皆合而于此处取每一值。'},
+    [("With being in x's lump decided, where no read occasion is lumped with x, the class going alike across the "
+      "lumping is free at x beyond the readings: every member's values on the read occasions combine with every value "
+      "at x.",
+      "「在 x 之归并中」可判定，未有读处与 x 同归，则随归并无别之类于读处之外在 x 为自由：每一成员于读处之值，与 x 处之每一值皆可相合。",
       C(UN, 'Learning.free_lumped')),
      ("So every act law reading through the lumping that a selection through agreement on the readings selects has, "
-      "for every value, a selected twin agreeing with it on every reading and taking that value at x.",
-      "故凡经读处之合而选者所选之经归并而读之行律，于每一值皆有所选之孪生，于每一读处与之合，于 x 取此值。",
+      "for every value, a selected twin reading through the lumping, agreeing with it on every reading and taking that "
+      "value at x.",
+      "故凡经读处之合而选者所选之经归并而读之行律，于每一值皆有所选之孪生，经归并而读，于每一读处与之合，于 x 取此值。",
       C(UN, 'Learning.twin_selected')),
+     ("For a schedule not given as a list, fixing holds up to a double negation: with one occasion, a constant lumping "
+      "and two act values, read exactly where P holds, the readings fix the act exactly where ¬¬P.",
+      "读时不以列给，则所定唯至二重否定：一时、归并恒定、行有二值，P 成立处为读，则读处定此行恰当 ¬¬P。",
+      C(UN, 'Learning.determines_iff_not_not')),
      ("Where acts read a state formed from what couples in, acts that differ at two occasions come from states that "
       "differ, and states that differ from couplings that differ.",
       "行读由所耦合入者所成之态，则二时之行异出于态异，态异出于耦合之异。",
       C(UN, 'Learning.state_apart_of_acts_apart', 'Learning.coupling_apart_of_state_apart')),
      ("Witness: occasions with a cue and a content, read where the cue is up, the content act answering with the "
-      "content; a formation coupled into the cue has a selected twin acting otherwise at an unread occasion; among laws "
-      "reading only the content, agreement on the readings fixes the act there.",
-      "例：时有讯与内容，讯起处为读，内容之行以内容答；耦合入讯之成形，于一未读之时有所选之孪生而行异；唯读内容之诸律，于读处合则于此处行定。",
+      "content (Learning.Shift's pattern); for every selection through agreement on "
+      "the readings that selects the content act, a formation coupled into the cue has a selected twin answering "
+      "otherwise at an unread occasion; among laws reading only the content, agreement on the readings fixes the act "
+      "there.",
+      "例：时有讯与内容，讯起处为读，内容之行以内容答（Learning.Shift 之式，以其位为讯）；凡经读处之合而选且选内容之行者，耦合入讯之形成于一未读之时"
+      "有所选之孪生而答异；唯读内容之诸律，于读处合则于此处行定。",
       C(UN, 'Learning.Cue.Occasion', 'Learning.Cue.read', 'Learning.Cue.contentAct', 'Learning.Cue.seen_twin',
         'Learning.Cue.unseen_fixed')),
-     ("Witness, the converses fail: a read and an unread occasion differ while their contents agree, so a state keeping "
-      "the cue with an act reading the content is detected and not acted on, and a coupling taking in the cue with a "
-      "state keeping the content is detectable and not detected.",
-      "例，其逆不成：一读一未读之时相异而内容同，故存讯之态而行读内容者为已察而未据以行，耦合入讯而态存内容者为可察而未察。",
+     ("Witness, the converses fail: a read and an unread occasion differ while their content acts agree; with the "
+      "state the occasion and the act its content, states differ and acts agree, and with the coupling the occasion "
+      "and the state its content, couplings differ and states agree.",
+      "例，其逆不成：一读一未读之时相异而其内容之行同；以时为态、内容为行，则态异而行同；以时为耦合、内容为态，则耦合异而态同。",
       C(UN, 'Learning.Cue.apart_with_content_alike'))],
-    [{'en': "Any types of occasions, values and lumps; the twin needs being in the target's lump decided, and nothing "
-            "about the read occasions.",
-      'zh': '时、值与归并之任一型；孪生需「在所求之归并中」可判定，于读处无所需。'},
-     {'en': "The exact form, fixed exactly where tied, is Learning.determines_lumped_iff's: the read occasions listed, "
-            "equality of lumps decided, two act values.",
-      'zh': '确形「恰当所系处为所定」为 Learning.determines_lumped_iff 者：读处为列，归并之相等可判定，行有二值。'}],
-    [{'en': "That fixed is right: an act carried to an occasion sharing a read one's lump is right exactly where the "
-            "world takes one value at the two (Learning.lumped_right_iff).",
-      'zh': '所定即正：移至与一读处同归之时之行，恰当世界于二处取一值时为正（Learning.lumped_right_iff）。', 'kind': 'non-implication'},
-     {'en': "The exact form for an arbitrary schedule: with one occasion and a constant lumping, read where P holds, "
-            "fixing is ¬¬P.",
-      'zh': '任一读时之确形：一时而归并恒定，P 成立处为读，则所定为 ¬¬P。', 'kind': 'non-implication'},
+    [{'en': "Any types of occasions, values and lumps; the freedom and the twin need being in the target's lump decided "
+            "and no read occasion lumped with it, and no list or decision of the read occasions.",
+      'zh': '时、值与归并之任一型；自由与孪生需「在所求之归并中」可判定且无读处与之同归，读处无需为列或可判定。'},
+     {'en': "Where the lumping ties the occasion to a read one, the act is fixed by generalization through lumping "
+            "(lumped_determines; exactly there, Learning.determines_lumped_iff, with the read occasions listed, equality "
+            "of lumps decided and two act values): read here, cited, not proved again.",
+      'zh': '归并系此时于一读处，则其行为归并之泛化所定（lumped_determines；恰在彼处，Learning.determines_lumped_iff，读处为列、归并之相等可判定、'
+            '行有二值）：于此读之，引而不重证。'}],
+    [{'en': "That fixed is right: for a law reading through the lumping and fitting the world on the read occasions, its "
+            "act at an occasion sharing a read one's lump is right exactly where the world agrees at the two "
+            "(Learning.lumped_right_iff).",
+      'zh': '所定即正：经归并而读且于读处合于世界之律，其于与一读处同归之时之行，恰当世界于二处同值时为正（Learning.lumped_right_iff）。',
+      'kind': 'non-implication'},
      {'en': "Intention, anticipation, another's false belief or an incentive to differ where unread.",
       'zh': '意图、预期、他者之误信，或于未读处行异之诱因。', 'kind': 'scope'},
-     {'en': "A reader misled: it lies outside the chain of acting, detecting and detectable, in prose only.",
-      'zh': '读者为所误：其在行、察、可察之链外，唯以文述之。', 'kind': 'scope'},
-     {'en': "Which lumping an actual formation has, and the probabilistic form (the data-processing inequality).",
-      'zh': '实际之成形有何归并，及其概率之形（数据处理不等式）。', 'kind': 'scope'}],
-    [{'en': "Occasions with a cue: a formation coupled into the cue has, at the unread occasion with content true, a "
-            "selected twin agreeing with the content act on every reading and answering false (Learning.Cue.seen_twin).",
-      'zh': '有讯之时：耦合入讯之成形，于内容为真之未读之时，有所选之孪生，于每一读处与内容之行合而答假（Learning.Cue.seen_twin）。'},
+     {'en': "A reader misled: it lies outside the chain of acts, states and couplings apart, in prose only.",
+      'zh': '读者为所误：其在行、态、耦合之异之链外，唯以文述之。', 'kind': 'scope'},
+     {'en': "Which lumping an actual formation has, and the probabilistic form of the chain (the data-processing "
+            "inequality).",
+      'zh': '实际之形成有何归并，及链之概率之形（数据处理不等式）。', 'kind': 'scope'}],
+    [{'en': "Occasions with a cue: for every selection through agreement on the readings that selects the content act, "
+            "a formation coupled into the cue has, at the unread occasion with content true, a selected twin agreeing "
+            "with the content act on every reading and answering false (Learning.Cue.seen_twin).",
+      'zh': '有讯之时：凡经读处之合而选且选内容之行者，耦合入讯之形成于内容为真之未读之时，有所选之孪生，于每一读处与内容之行合而答假'
+            '（Learning.Cue.seen_twin）。'},
      {'en': "A read and an unread occasion differing only in the cue: a state keeping the cue tells them apart while the "
             "content act gives one answer (Learning.Cue.apart_with_content_alike).",
       'zh': '唯讯相异之一读一未读之时：存讯之态分之，而内容之行同答（Learning.Cue.apart_with_content_alike）。'}],
-    {'en': "Pure core, every axiom report empty: Unread imports only Learning. It reuses Learning.determines_lumped_iff, "
-           "lumped_determines and Training.unselected_beyond_data; the witnesses are on pairs of truth values.",
-     'zh': '纯核，公理报告皆空：Unread 唯引 Learning。其用 Learning.determines_lumped_iff、lumped_determines 与 '
-           'Training.unselected_beyond_data；诸例于真值之对上。'},
+    {'en': "Pure core, every axiom report empty: Unread imports only Learning. It reuses lumped_determines and "
+           "Training.unselected_beyond_data, and reads Learning.determines_lumped_iff as the exact form (cited, not used "
+           "in a proof); the witnesses are on pairs of truth values.",
+     'zh': '纯核，公理报告皆空：Unread 唯引 Learning。其用 lumped_determines 与 Training.unselected_beyond_data，读 '
+           'Learning.determines_lumped_iff 为确形（引而未用于证）；诸例于真值之对上。'},
     {'en': "Disclosure or concealment when read, in two stages, with the continuation value represented (RF round 2); a "
            "frozen test of the chain on a trained model with cues varied apart from content; review by a person.",
      'zh': '被读时之示或隐，二阶，带接续之值（RF 第二轮）；于已训之模型上分讯与内容而变之链之冻结检验；人之审查。'},
     {'en': "Indistinguishability: two laws agreeing on every reading are selected alike by every selection through "
-           "them. Read as evaluation and deployment it is the exact kernel of evaluation awareness and deceptive "
-           "alignment (Hubinger and others 2019; Greenblatt and others 2024), the measurements of detection without "
-           "behavioural change being the chain's failed converse; read with a supervised reporter, the identification "
-           "limit of eliciting latent knowledge. The probabilistic form is the data-processing inequality. These are "
-           "readings, not containments.",
-     'zh': '不可分辨：于每一读处相合之二律为经读处之每一选所同选。读作评估与部署，为评估觉知与欺骗对齐之确核（Hubinger 等 2019；Greenblatt 等 2024），'
-           '察而行不变之测为链之逆不成；与受督之报者并读，为引出潜知之辨识之限。其概率之形为数据处理不等式。皆为读，非包含。'},
-    ['what readings fix of the unread', '读处所定于未读处者', 'a twin where it can tell', 'evaluation awareness, the kernel',
+           "them. AI reading: read as evaluation and deployment, it locates where behaviour can differ when not read "
+           "while every reading agrees, only where the formation's lumping tells the occasion from every read one: a "
+           "necessary condition of what deceptive alignment and alignment faking describe (Hubinger and others 2019; "
+           "Greenblatt and others 2024), whose intention, anticipation and incentive are not represented. A state "
+           "telling read from unread while the act does not differ reads as detection not acted on, and a coupling "
+           "taking in the cue while the state keeps only the content as detectable and not detected; measurements of "
+           "the first are the chain's failed converse. Read with a supervised reporter, the identification limit of "
+           "eliciting latent knowledge (Christiano, Cotra and Xu 2021). The probabilistic form of the chain is the "
+           "data-processing inequality. These are readings, not containments.",
+     'zh': '不可分辨：于每一读处相合之二律为经读处之每一选所同选。AI 解读：读作评估与部署，其示行为于未读处可异而每一读处皆合之处，唯在形成之归并'
+           '分此时于每一读处者：为欺骗对齐与对齐伪装所述者之必要条件（Hubinger 等 2019；Greenblatt 等 2024），其意图、预期与诱因未表。态分读与未读而行'
+           '不异，读作察而未据以行；耦合入讯而态唯存内容，读作可察而未察；前者之测为链之逆不成。与受督之报者并读，为引出潜知之辨识之限（Christiano、'
+           'Cotra 与 Xu 2021）。链之概率之形为数据处理不等式。皆为读，非包含。'},
+    ['what readings fix of the unread', '读处所定于未读处者', 'a twin where it can tell', 'behaviour where not read',
      'Becoming.Learning.free_lumped', 'Becoming.Learning.twin_selected'],
     [dep('generalization-through-lumping',
-         "Learning.Lumped, Free, Determines, lumped_determines, determines_lumped_iff and lumped_world_right; "
-         "Training.Through, AgreeOn and unselected_beyond_data.",
-         'Learning.Lumped、Free、Determines、lumped_determines、determines_lumped_iff 与 lumped_world_right；'
-         'Training.Through、AgreeOn 与 unselected_beyond_data。')],
+         "Learning.Lumped, Free, Determines and lumped_determines; Training.Through, AgreeOn and unselected_beyond_data "
+         "(determines_lumped_iff and lumped_right_iff cited).",
+         'Learning.Lumped、Free、Determines 与 lumped_determines；Training.Through、AgreeOn 与 unselected_beyond_data'
+         '（引 determines_lumped_iff 与 lumped_right_iff）。')],
     [{'id': 'what-training-installs', 'detail': {
-        'en': "Off its courses a law is installed only where the representation lumps a history with a course; read with "
-              "read occasions as the data, the same law.",
-        'zh': '离其所行之迹，律唯于表示将一史与一迹同归处为所装；以读处为资料读之，同律。'}},
+        'en': "Off its courses a law is installed only where the representation lumps a history with a course. Here the "
+              "read occasions are fixed in advance, as data are in generalization through lumping; there the data are "
+              "the courses the candidate itself generates, and its twin needs laws reading what has stood to keep them: "
+              "the same boundary, with no instance theorem.",
+        'zh': '离其所行之迹，律唯于表示将一史与一迹同归处为所装。此处读处预定，如归并之泛化中之资料；彼处资料为候选自生之迹，其孪生需读已立者之律以存之：'
+              '界同，无实例之定理。'}},
      {'id': 'what-choices-show-of-an-order', 'detail': {
         'en': "What choices show of an order: the same question for the order a chooser's choices come from.",
         'zh': '所择所示之序：同问于择者之择所出之序。'}}],
     [{'path': LEAN['Learning'], 'role': 'proof', 'sha256': sha(LEAN['Learning'])}],
     CH3,
-    {'en': f'{DATE_EN}: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, the '
-           f'chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of '
-           f'the plan and a review of the Lean; study section {N}.',
-     'zh': f'{DATE_ZH}：新增（RF 第一轮），读处所定于未读处者：能分处之孪生，行、态、耦合之链及其逆不成，讯之诸例；经计划之审与 Lean 之审；'
-           f'研究第 {N} 节。'})
+    {'en': f'{DATE_EN}: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, fixing '
+           f'up to a double negation where the schedule is not a list, the chain of acts, states and couplings with its '
+           f'converses failing, and the cue witnesses; after a review of the plan, a review of the Lean and a cold read '
+           f'of the texts; study section {N}.',
+     'zh': f'{DATE_ZH}：新增（RF 第一轮），读处所定于未读处者：能分处之孪生，读时不以列给时所定唯至二重否定，行、态、耦合之链及其逆不成，讯之诸例；'
+           f'经计划之审、Lean 之审与文之冷读；研究第 {N} 节。'})
 
 CA = 'Becoming.Cascade'
 r4 = build(
     'readers-reading-readers', CA,
     {'en': 'Readers reading readers', 'zh': '读者读读者'},
-    {'en': "From the member on whom every later member reads only the acts before it, a pool's acts are alike across "
-           "worlds alike through the earlier members' couplings: it reaches only what couples into those read first, "
-           "however many follow.",
-     'zh': '自其后每一成员唯读其前之行者起，池之行于前者耦合无别之二世界皆同：其所及唯在先所读者之所耦合入，后继者多寡不论。'},
+    {'en': "Where every member from member k on, k included, acts alike whatever its own coupling, on every list of "
+           "earlier acts, a pool's acts are alike across worlds alike through the couplings of the members before k: "
+           "they carry no more than what couples into those members, however many follow.",
+     'zh': '自第 k 员起（含第 k 员），每员于每一前行之列皆不论其耦合而同行，则池之行于第 k 员前诸员之耦合无别之二世界皆同：其所载不逾彼诸员之所耦合入，'
+           '后继者多寡不论。'},
     [("Members act in turn: member n by its law on its own coupling of the world and the list of the acts before it; "
-      "from member k on, every member acting alike whatever its coupling, and two worlds alike through the couplings of "
-      "the members before k, are named.",
-      "成员依次而行：第 n 员依其律，于其对世界之耦合及其前之行之列而行；自第 k 员起每员不论其耦合皆同行，及于第 k 员前诸员之耦合无别之二世界，皆有名。",
+      "from member k on, every member acting alike whatever its coupling, on every list of earlier acts, and two worlds "
+      "alike through the couplings of the members before k, are named.",
+      "成员依次而行：第 n 员依其律，于其对世界之耦合及其前之行之列而行；自第 k 员起每员于每一前行之列皆不论其耦合而同行，及于第 k 员前诸员之耦合无别之"
+      "二世界，皆有名。",
       C(CA, 'Turns', 'Turns.acts', 'Turns.act', 'Turns.ReadsOnlyActsFrom', 'Turns.AlikeBefore')),
-     ("From member k on, where every member reads only the acts before it, two worlds alike through the couplings of "
-      "the members before k give every member the same act, and the same list of acts at every length.",
-      "自第 k 员起每员唯读其前之行，则于第 k 员前诸员之耦合无别之二世界，每员之行皆同，每一长之行列皆同。",
+     ("From member k on, k included, where every member reads only the acts before it, two worlds alike through the "
+      "couplings of the members before k give every member the same act, and the same list of acts at every length.",
+      "自第 k 员起（含第 k 员）每员唯读其前之行，则于第 k 员前诸员之耦合无别之二世界，每员之行皆同，每一长之行列皆同。",
       C(CA, 'Turns.law_alike_of_cascade', 'Turns.acts_alike_of_cascade', 'Turns.act_alike_of_cascade')),
      ("So every selection reading the list of the first N acts, for any N, selects alike any two worlds alike through "
       "the couplings of the members before k.",
@@ -373,19 +422,22 @@ r4 = build(
     [{'en': "Any types of worlds, couplings and acts; members indexed by the natural numbers, each reading the whole list "
             "of acts before it.",
       'zh': '世界、耦合与行之任一型；成员以自然数为序，各读其前之全部行列。'},
-     {'en': "From member k on, every member acts alike whatever its own coupling; member k's coupling is then not read, "
-            "so it is not among those the acts reach.",
-      'zh': '自第 k 员起每员不论其耦合皆同行；故第 k 员之耦合不为所读，不在诸行所及之中。'}],
-    [{'en': "When an actual member stops reading its own coupling: in the probabilistic model, once the public evidence "
-            "outweighs any private signal, which is a premise here.",
-      'zh': '实际之员何时不复读其耦合：于概率之模型，公示之据重于任一私讯之时；此处为前提。', 'kind': 'non-implication'},
+     {'en': "From member k on, k included, every member acts alike whatever its own coupling, on every list of earlier "
+            "acts, histories no run reaches included; member k's coupling is then not read, so it is not among those the "
+            "acts reach.",
+      'zh': '自第 k 员起（含第 k 员），每员于每一前行之列（未行至之史亦然）皆不论其耦合而同行；故第 k 员之耦合不为所读，不在诸行所及之中。'}],
+    [{'en': "When an actual member stops reading its own coupling: in the probabilistic model (Bikhchandani, Hirshleifer "
+            "and Welch 1992), once the public evidence outweighs any private signal, a premise here.",
+      'zh': '实际之员何时不复读其耦合：于概率之模型（Bikhchandani 等 1992），公示之据重于任一私讯之时；此处为前提。',
+      'kind': 'non-implication'},
      {'en': "That a cascade errs: it suppresses what later members' couplings carry, and can be accurate.",
       'zh': '级联必误：其抑后员之耦合所载者，可为准。', 'kind': 'non-implication'},
      {'en': "That a pool's later selection keeps a coupling one member's act carries.",
       'zh': '池之后选存一员之行所载之耦合。', 'kind': 'non-implication'},
-     {'en': "Weighted averaging (DeGroot) and its wisdom condition, networks where members read only some earlier acts, "
-            "and members in no well-founded order.",
-      'zh': '加权平均（DeGroot）及其智之条件，成员唯读部分前行之网，及无良基之序之成员。', 'kind': 'scope'}],
+     {'en': "Weighted averaging (DeGroot 1974) and its wisdom condition (Golub and Jackson 2010); a bound depending on "
+            "who reads whom (laws ignoring some earlier acts are covered); members in no well-founded order.",
+      'zh': '加权平均（DeGroot 1974）及其智之条件（Golub 与 Jackson 2010）；依谁读谁之界（不读某些前行之律已含）；无良基之序之成员。',
+      'kind': 'scope'}],
     [{'en': "Copying: worlds differing in every member's coupling but the first give every member the same act "
             "(Turns.Copying.reaches_first_only).",
       'zh': '相仿：除首员外每员之耦合皆异之二世界，每员之行皆同（Turns.Copying.reaches_first_only）。'}],
@@ -396,26 +448,29 @@ r4 = build(
            "sequential choosers stop reading their own signals; review by a person.",
      'zh': '概率之形，公示之据重于每一私讯时之级联；预测依次之择者何时不复读其私讯之检验；人之审查。'},
     {'en': "The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992), "
-           "where the act has stopped reading the member's own signal; the dependence failure of Condorcet's jury "
-           "theorem; WitnessRefinementRuns.copied_witnesses_same is a neighbour, where copied witnesses add nothing under "
-           "its further hypotheses. Read as echo chambers or evaluators trained on one another's verdicts, a reading, "
-           "not a containment.",
-     'zh': '信息级联之定形（Bikhchandani、Hirshleifer 与 Welch 1992；Banerjee 1992），行已不读员之私讯者；Condorcet 陪审定理之依存之失；'
-           'WitnessRefinementRuns.copied_witnesses_same 为其邻，其另加诸前提下仿制之证人无所增。读作回声室或以彼此之判而训之评者，为读，非包含。'},
+           "where the act has stopped reading the member's own signal; WitnessRefinementRuns.copied_witnesses_same is a "
+           "neighbour, where copied witnesses add nothing under its further hypotheses. AI reading: copying as the "
+           "dependence failure of Condorcet's jury theorem; echo chambers, or evaluators trained on one another's "
+           "verdicts, under the cascade premise. These are readings, not containments.",
+     'zh': '信息级联之定形（Bikhchandani、Hirshleifer 与 Welch 1992；Banerjee 1992），行已不读员之私讯者；'
+           'WitnessRefinementRuns.copied_witnesses_same 为其邻，其另加诸前提下仿制之证人无所增。AI 解读：相仿为 Condorcet 陪审定理之依存之失；'
+           '回声室，或以彼此之判而训之评者，于级联之前提下。皆为读，非包含。'},
     ['readers reading readers', '读者读读者', 'a cascade', '级联', 'Becoming.Turns.acts_alike_of_cascade',
      'Becoming.Turns.Copying.reaches_first_only'],
     [dep('generalization-through-lumping', "Training.Through, the selection through a relation of being alike.",
          'Training.Through：经无别之关系之选。')],
     [{'id': 'what-pooled-coupling-reaches', 'detail': {
-        'en': "A pool reaches no further than the union of its members' closures; where members read one another's acts, "
-              "only what couples into those read first.",
-        'zh': '池之所及不逾其诸员之闭包之并；诸员彼此读行之处，唯及在先所读者之所耦合入。'}}],
+        'en': "A pool reaches no further than the union of its members' closures; where, from some member on, every "
+              "member reads only the acts before it, a selection through the acts reaches only what couples into the "
+              "members before that one.",
+        'zh': '池之所及不逾其诸员之闭包之并；自某员起每员唯读其前之行之处，经诸行之选唯及彼员前诸员之所耦合入。'}}],
     [{'path': LEAN['Learning'], 'role': 'proof', 'sha256': sha(LEAN['Learning'])}],
     CH5,
-    {'en': f'{DATE_EN}: added (RF round 1), readers reading readers: from a cascade on, a pool reaches only the couplings '
-           f'of those read first; a member carrying its coupling; copying; after a review of the plan and a review of '
-           f'the Lean; study section {N}.',
-     'zh': f'{DATE_ZH}：新增（RF 第一轮），读者读读者：自级联起池唯及在先所读者之耦合；载其耦合之员；相仿；经计划之审与 Lean 之审；研究第 {N} 节。'})
+    {'en': f'{DATE_EN}: added (RF round 1), readers reading readers: from a cascade on, a pool\'s acts carry no more than '
+           f'the couplings of the members before it; a member carrying its coupling; copying; after a review of the '
+           f'plan, a review of the Lean and a cold read of the texts; study section {N}.',
+     'zh': f'{DATE_ZH}：新增（RF 第一轮），读者读读者：自级联起池之行所载不逾其前诸员之耦合；载其耦合之员；相仿；经计划之审、Lean 之审与文之冷读；'
+           f'研究第 {N} 节。'})
 
 if CAPS_ONLY:
     raise SystemExit(0)

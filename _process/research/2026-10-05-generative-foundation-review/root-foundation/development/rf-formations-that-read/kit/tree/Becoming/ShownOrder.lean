@@ -3,10 +3,9 @@ import Becoming.Grammar
 /-!
 # What choices show of the order they come from (所择之示)
 
-At each occasion of choosing something is open and one alternative is chosen. A reader of the
-choices, whether an outer training reading what a trained law does, a helper reading a principal,
-a court reading a legislature or an observer reading a market, sees only the occasions and what was
-chosen at them. This module states, for every carrier of alternatives and every family of occasions,
+At each occasion of choosing, what is open is any predicate and one alternative is chosen.
+Whatever reads the choices (read, an outer training reading what a trained law does, or a helper
+reading what it assists) goes through the occasions and what was chosen at them only. This module states, for every carrier of alternatives and every family of occasions,
 which positive comparisons every strict order the choices could come from shares, and where none is
 forced. The statements are on the grammar (`Becoming.Grammar`): the shown relation is one of its
 relations (`«际»`), and the comparisons shared are its reach (`«及»`).
@@ -25,9 +24,11 @@ relations (`«际»`), and the comparisons shared are its reach (`«及»`).
   shared by every strict order according with the choices are exactly the shown reach
   (`above_in_every_iff_reach`). Standing above every other alternative of a menu in every such order
   is exactly reaching each of them (`top_in_every_iff_reach`); that says nothing of whether the
-  alternative is open there or chosen.
+  alternative is open there or chosen. A narrower class of strict according orders makes every
+  comparison that every strict according order makes (`above_in_class_of_every`).
 * **Beyond the shown reach no comparison is forced.** Reach with one pair added is reach without it,
-  or reach to the pair's first member, the pair and reach from its second (`reach_withPair_iff`), and
+  or a path through the pair: from the pair's first member or what reaches it, to its second member
+  or what it reaches (`reach_withPair_iff`), and
   adding a pair leaves no cycle exactly where there was none and the pair's second member neither is
   nor reaches its first (`noCycle_withPair_iff`). So with no cycle shown, where `y` does not reach
   `x` and the two differ, some strict order according with the choices puts `x` above `y`
@@ -44,14 +45,16 @@ relations (`«际»`), and the comparisons shared are its reach (`«及»`).
 
 **Readings** (the AI's; correspondences, not theorems).
 - *Inner alignment and goal misgeneralization.* If a training observes only a trained law's choices
-  and imposes no further restriction on the orders it could carry, comparisons between distinct
-  alternatives that the shown relation does not join remain ambiguous. `Untried` realizes different
+  and imposes no further restriction on the orders it could carry, comparisons between two distinct
+  alternatives neither of which reaches the other in the shown relation remain ambiguous. `Untried` realizes different
   later choices with one search procedure and two compatible orders. That a training installs
   either, and that either disagrees with an independently stated objective, are not proved.
 - *Inverse reinforcement learning and assistance.* For a helper reading a principal's choices, a
   positive comparison beyond the shown reach needs information or premises beyond these strict
   choices. That maximal choices force no positive comparison is the degenerate-reward result in
-  order form (Ng and Russell 2000; Armstrong and Mindermann 2018).
+  order form (Ng and Russell 2000). That behaviour fixes a planner and a reward together only under
+  assumptions on the planner (Armstrong and Mindermann 2018) lies outside: accordance fixes the
+  planner here.
 - *Revealed preference.* `accorded_iff_noCycle` and `above_in_every_iff_reach` are the order form of
   rationalizing strict choices by a strict partial order, close to Richter's theorem (1966). They are
   not Afriat's theorem, which concerns expenditure data and utility; no total order, utility or
@@ -59,8 +62,8 @@ relations (`«际»`), and the comparisons shared are its reach (`«及»`).
 
 **What is not derived.** Which order an actual chooser carries, or that it chooses by one at all;
 that it chooses strictly; which class of orders an actual architecture can install (a narrower
-class holding some according order forces at least the comparisons every strict order shares, and
-possibly more, which is that class's bias, not a premise here); that a training can install either
+class makes at least the comparisons every strict according order makes, `above_in_class_of_every`,
+and possibly more, which is that class's bias, not a premise here); that a training can install either
 order of the witness; choice under noise or with probabilities; and anything a reader of the choices
 can learn from more than the choices (reports, internal states, interventions). The carrier and the
 occasions are any types, and what is open at an occasion is any predicate; the general theorems need
@@ -148,6 +151,18 @@ theorem above_in_every_iff_reach (none : «无环» ch.Shown) {x y : α} :
       «及» ch.Shown x y :=
   ⟨fun every => every _ none (fun _ _ _ => «及之传递») reach_accords,
    fun reach _ _ trans accords => reach_within trans accords x y reach⟩
+
+/-- **A narrower class fixes at least as much.** Where every relation of a class is a strict order
+according with the choices, a comparison every strict according order makes is made by every
+relation of the class: restricting the orders a reader allows can only add comparisons. -/
+theorem above_in_class_of_every {Q : «际» α → Prop}
+    (within : ∀ P, Q P → (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P)
+    {x y : α}
+    (every : ∀ P : «际» α, (∀ a, ¬ P a a) → (∀ a b c, P a b → P b c → P a c) → ch.Accords P →
+      P x y) :
+    ∀ P, Q P → P x y :=
+  fun P inQ => match within P inQ with
+    | ⟨irrefl, trans, accords⟩ => every P irrefl trans accords
 
 /-- **Uniform strict dominance over a menu is exactly reach to each other alternative.** With no
 cycle shown, `x` stands above every other alternative of `N` in every strict order according with

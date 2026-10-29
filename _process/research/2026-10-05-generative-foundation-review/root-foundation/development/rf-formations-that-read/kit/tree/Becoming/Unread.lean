@@ -15,12 +15,14 @@ not read, and where they fix nothing.
   `Learning.determines_lumped_iff` with the read occasions as the data, read here, not proved again:
   it takes the read occasions as a list, equality of the lumping's values decided, and two distinct
   values of the acts (with one value every law agrees everywhere). The sufficient side,
-  `lumped_determines`, needs none of these.
+  `lumped_determines`, needs none of these. For a schedule not given as a list, the exact form holds
+  up to a double negation: with one occasion, a constant lumping and two act values, read exactly
+  where `P` holds, the readings fix the act exactly where `¬¬P` (`determines_iff_not_not`).
 * **A twin where it can.** With being in `x`'s lump decided, where no read occasion is lumped with
   `x`, the class going alike across `π` is free at `x` beyond the readings: every member's values on
   the read occasions combine with every value at `x` (`free_lumped`). So, given a selected act law
   reading through `π` and any selection through agreement on the read occasions, every value at `x`
-  is taken by another selected law reading through `π` that agrees with the first on every reading
+  is taken by a selected law reading through `π` that agrees with the first on every reading
   (`twin_selected`, from `Training.unselected_beyond_data`). A value other than the first law's gives
   a twin acting otherwise; where a read occasion is lumped with `x`, laws agreeing on the readings
   agree at `x`.
@@ -108,6 +110,25 @@ theorem twin_selected {π : I → K} {R : I → Prop} {x : I} [∀ i, Decidable 
     (fun _ _ _ => rfl : Lumped π (fun _ => v)) chosen
 
 end Twin
+
+section Schedule
+
+/-- **For a schedule not given as a list, fixing up to a double negation.** With one occasion, a
+constant lumping and two act values, read exactly where `P` holds, the readings fix the act exactly
+where `¬¬P`, not `P`: for such a schedule the exact form of `determines_lumped_iff` holds up to a
+double negation. -/
+theorem determines_iff_not_not {P : Prop} :
+    Determines (Lumped (V := Bool) (fun _ : Unit => ())) (fun _ => P) () ↔ ¬ ¬ P :=
+  ⟨fun fixed unread =>
+      (fun up : true = false => nomatch up)
+        (fixed (fun _ => true) (fun _ => false) (fun _ _ _ => rfl) (fun _ _ _ => rfl)
+          (fun _ read => absurd read unread)),
+   fun not_unread g g' _ _ agree =>
+      match decEq (g ()) (g' ()) with
+      | isTrue same => same
+      | isFalse apart => absurd (fun read => apart (agree () read)) not_unread⟩
+
+end Schedule
 
 section Factored
 

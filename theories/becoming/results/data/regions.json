@@ -1474,7 +1474,7 @@
   "readers-reading-readers": {
    "region": "collective",
    "base": "general",
-   "note": "Cascade RF4: readers reading readers; from a cascade on, the pool reaches only the couplings of those read first; copying"
+   "note": "Cascade RF4: readers reading readers; from a cascade on, the pool's acts carry no more than the couplings of the members before it; copying"
   },
   "reading-anothers-couplings-is-pooling": {
    "region": "collective",
