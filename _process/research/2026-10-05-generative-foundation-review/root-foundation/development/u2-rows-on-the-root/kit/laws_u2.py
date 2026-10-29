@@ -114,7 +114,7 @@ LAWS = [
      "levels after the step eligible and unbeaten, and each condition beyond required and met by the formation named "
      "on it, a dependence beyond is broken across the step exactly where some eligible outcome stands below its "
      "need. Exceeding and standing lower compare given levels.",
-     "在结果与出现模型上：当序含族上之超出、彼外有余地、步后之水平合格而不被胜、彼外每一条件皆被所需且满足，彼外之一依存跨步被破，恰当某合格结果低于其需。超出与较低皆比较给定之水平。"),
+     "在结果与出现模型上：当序含族上之超出、彼外有余地、步后之水平合格而不被胜、彼外每一条件皆为其上所名之形成所需且满足，彼外之一依存跨步被破，恰当某合格结果低于其需。超出与较低皆比较给定之水平。"),
     ('living-on-and-descent', 'Becoming.Web.living_on_reaches', M + 'living_on_reaches_reading',
      [M + 'living_on_reaches_reading', M + 'sustenance_neutral_iff', M + 'neutral_transmits_iff', M + 'livesOn_iff',
       M + 'interacts_iff'],

@@ -27,8 +27,8 @@ of its moves' relations (`Becoming.ProcessRepresentation`), or on the row's own 
 such a statement is one of these:
 * a relation or region of the model;
 * a named comparison of the model's given amounts;
-* a supplied parameter, or the model's own data where a statement compares it (the levels after a step,
-  read as an outcome, against a need);
+* a supplied parameter, or the model's own data where a statement uses it (the levels after a step, read
+  as an outcome; an outcome's level at a condition against a need);
 * a premise of logic or of decidability the row takes (two forms or two configurations apart; a decided
   class);
 * in a definitional reading, the row's own notion on the left.

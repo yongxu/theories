@@ -86,3 +86,20 @@ All 21 declarations state their rows exactly at their declared models and are pr
 | W8 | `lowerBeyond`'s docstring says the second outcome stands lower than the first |
 
 After these changes the leaf builds with 78 theorems in 121 declarations, every axiom report empty, and the dependency check passes for all 21 items.
+
+## The reader's confirmation
+
+The same reader confirmed the changes at `df7a965f8`, read-only, on five points:
+- the four law texts now say exactly what their declarations show, in both languages;
+- the other wording edits and the kit's comments;
+- each written-out definition equals by `rfl` the notion it wrapped, with no statement's meaning changed;
+- moving `own` into the three proofs is sound, since `transmits`, `living` and `Significant` never read the own regions (a probe derives each row at any `own` from the reading);
+- the docstrings.
+
+It reran the dependency check, which matches its log, and the records kit's dry run against this file: 16 records, 20 laws, 21 items, nothing written.
+
+Two findings remained, both taken:
+- Item 16's Chinese text now carries "by the formation named on it": 彼外每一条件皆为其上所名之形成所需且满足.
+- The leaf's opening list separates the two uses in item 16: the levels after a step read as an outcome, and an outcome's level at a condition compared with a need.
+
+With these, all 21 items name this re-check as their review.
