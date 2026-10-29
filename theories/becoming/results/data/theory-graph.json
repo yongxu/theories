@@ -2600,6 +2600,18 @@
    "page": "theories/becoming/results/records/how-often-couplings-act.md"
   },
   {
+   "id": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "result",
+   "record": "identical-cells-under-a-descent-treating-them-alike",
+   "title": "Identical cells under a descent that treats them alike",
+   "title_zh": "同等相待之下降中之同一细胞",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/identical-cells-under-a-descent-treating-them-alike.md"
+  },
+  {
    "id": "record:identification-where-bounded",
    "type": "result",
    "record": "identification-where-bounded",
@@ -4434,6 +4446,18 @@
    "region": "knowing",
    "base": "frame",
    "page": "theories/becoming/results/records/risk-certificate-outcome-distinction.md"
+  },
+  {
+   "id": "record:risk-minimization-on-a-shared-renewal",
+   "type": "result",
+   "record": "risk-minimization-on-a-shared-renewal",
+   "title": "Risk minimization on a shared renewal",
+   "title_zh": "共享更新上之风险最小化",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/risk-minimization-on-a-shared-renewal.md"
   },
   {
    "id": "record:rivals-bounded-in-time",
@@ -7325,6 +7349,17 @@
    "level": "L1",
    "theorems": 62,
    "region": "root",
+   "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.FreeEnergyGuarantees",
+   "type": "module",
+   "name": "Becoming.FreeEnergyGuarantees",
+   "level": "L1",
+   "theorems": 67,
+   "region": "collective",
    "base": "old-base",
    "on_grammar": false,
    "reaches_grammar": true
@@ -29027,6 +29062,12 @@
    "anchor": "r-the-rest-outruns-the-renewal"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-risk-minimization-on-a-shared-renewal",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-risk-minimization-on-a-shared-renewal"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-draws-on-a-shared-stock",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -29265,6 +29306,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
    "anchor": "r-a-swap-symmetric-assignment-singles-out-none"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-a-descent-treating-them-alike",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-identical-cells-under-a-descent-treating-them-alike"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
@@ -31092,6 +31139,21 @@
   {
    "from": "module:Becoming.Frame",
    "to": "module:Becoming.Prelude",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FreeEnergyGuarantees",
+   "to": "module:Becoming.Commuting",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FreeEnergyGuarantees",
+   "to": "module:Becoming.Exclusion",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FreeEnergyGuarantees",
+   "to": "module:Becoming.SetPointOptimum",
    "type": "imports"
   },
   {
@@ -35673,6 +35735,16 @@
    "from": "record:capture-by-counted-choices",
    "to": "record:closed-capture",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "related"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:risk-minimization-on-a-shared-renewal",
+   "type": "related"
   },
   {
    "from": "record:capture-by-counted-choices",
@@ -41840,6 +41912,26 @@
    "type": "related"
   },
   {
+   "from": "record:identical-cells-under-a-descent-treating-them-alike",
+   "to": "module:Becoming.Commuting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:identical-cells-under-a-descent-treating-them-alike",
+   "to": "module:Becoming.FreeEnergyGuarantees",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:identical-cells-under-a-descent-treating-them-alike",
+   "to": "record:risk-minimization-on-a-shared-renewal",
+   "type": "related"
+  },
+  {
+   "from": "record:identical-cells-under-a-descent-treating-them-alike",
+   "to": "record:what-a-commuting-law-keeps-apart",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:identification-where-bounded",
    "to": "module:Becoming.Decidedness",
    "type": "proved-in"
@@ -45676,6 +45768,11 @@
   },
   {
    "from": "record:own-count-misses-joint-excess",
+   "to": "record:risk-minimization-on-a-shared-renewal",
+   "type": "related"
+  },
+  {
+   "from": "record:own-count-misses-joint-excess",
    "to": "record:substitution-preserves-consumption",
    "type": "related"
   },
@@ -49030,6 +49127,51 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "module:Becoming.Continuation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "module:Becoming.Exclusion",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "module:Becoming.FreeEnergyGuarantees",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "module:Becoming.SetPointOptimum",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "related"
+  },
+  {
+   "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "record:own-count-misses-joint-excess",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "record:support-from-the-supported",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "record:the-rest-outruns-the-renewal",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:risk-minimization-on-a-shared-renewal",
+   "to": "record:what-a-set-point-optimum-does-beyond",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:rivals-bounded-in-time",
    "to": "module:Becoming.Significance",
    "type": "proved-in"
@@ -51191,6 +51333,11 @@
   },
   {
    "from": "record:the-rest-outruns-the-renewal",
+   "to": "record:risk-minimization-on-a-shared-renewal",
+   "type": "related"
+  },
+  {
+   "from": "record:the-rest-outruns-the-renewal",
    "to": "record:the-gap-for-ones-own-act",
    "type": "related"
   },
@@ -52746,6 +52893,11 @@
   },
   {
    "from": "record:what-a-commuting-law-keeps-apart",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-commuting-law-keeps-apart",
    "to": "record:readings-within-what-they-read",
    "type": "formal-reuse"
   },
@@ -53398,6 +53550,11 @@
    "from": "record:what-a-set-point-optimum-does-beyond",
    "to": "record:own-count-misses-joint-excess",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-set-point-optimum-does-beyond",
+   "to": "record:risk-minimization-on-a-shared-renewal",
+   "type": "related"
   },
   {
    "from": "record:what-a-set-point-optimum-does-beyond",
@@ -57490,6 +57647,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-a-descent-treating-them-alike",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-imposing-a-code-breaks-the-symmetry",
    "to": "record:imposing-a-code-breaks-the-symmetry",
    "type": "states"
@@ -57612,6 +57774,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
    "to": "record:reviewers-count-by-independent-causes",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-risk-minimization-on-a-shared-renewal",
+   "to": "record:risk-minimization-on-a-shared-renewal",
    "type": "states"
   },
   {

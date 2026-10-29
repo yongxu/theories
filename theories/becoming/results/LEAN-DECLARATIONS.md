@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 332 | 16,130 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 333 | 16,197 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -375,6 +375,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Founding.lean](lean-declarations/becoming-core.md#module-e7f9a14d0de5) | Becoming pure core |
 | [Fragments.lean](lean-declarations/becoming-core.md#module-a5c04e9c349b) | Becoming pure core |
 | [Frame.lean](lean-declarations/becoming-core.md#module-4aeb3fe7fb22) | Becoming pure core |
+| [FreeEnergyGuarantees.lean](lean-declarations/becoming-core.md#module-e34947eb31a2) | Becoming pure core |
 | [Frequency.lean](lean-declarations/becoming-core.md#module-c700e68ef3a2) | Becoming pure core |
 | [FreshRevision.lean](lean-declarations/shared.md#module-b592dcce60e2) | Organizational formation through revisable evaluation |
 | [Frontier.lean](lean-declarations/becoming-core.md#module-6ab5be836cfa) | Becoming pure core |

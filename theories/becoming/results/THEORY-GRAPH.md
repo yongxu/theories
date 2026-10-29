@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3069 nodes, 5671 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3074 nodes, 5695 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -10,7 +10,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 74 | 0 |
 | Knowing and testing | 0 | 91 | 74 | 0 |
 | Life and evolution | 0 | 42 | 17 | 0 |
-| Collectives and selection | 0 | 60 | 17 | 0 |
+| Collectives and selection | 0 | 62 | 18 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
 | Significance and alignment | 0 | 77 | 56 | 0 |
 | Method and the formal core | 0 | 19 | 23 | 0 |
@@ -390,7 +390,7 @@ Modules (17, 1 stated on the grammar): `ContinuingRevision`, `CopyCourses`, `Cop
 
 ## Collectives and selection
 
-Results (60):
+Results (62):
 
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
 - [A coupling a step keeps a dependence at every horizon](records/a-step-coupling-keeps-at-every-horizon.md) (recorded-checked)
@@ -413,6 +413,7 @@ Results (60):
 - [Every optimum rebuilds a depleted base](records/optima-rebuild-a-depleted-base.md) (recorded-checked)
 - [Exact arrival boundary under partial correction](records/market-partial-correction-boundary.md) (recorded-checked)
 - [Giving that waits on giving](records/giving-that-waits-on-giving.md) (recorded-checked)
+- [Identical cells under a descent that treats them alike](records/identical-cells-under-a-descent-treating-them-alike.md) (recorded-checked)
 - [Imposing a code breaks the symmetry of forms](records/imposing-a-code-breaks-the-symmetry.md) (recorded-checked)
 - [Joint continuation of local plans](records/joint-plan-composition.md) (recorded-checked)
 - [Joint plans from a supported start](records/joint-plans-from-a-supported-start.md) (recorded-checked)
@@ -432,6 +433,7 @@ Results (60):
 - [Required organization under the comparison C](records/organizational-formation-from-generative-comparison.md) (reviewed-scoped)
 - [Restoring giving from the worst start](records/restoring-giving-from-the-worst-start.md) (recorded-checked)
 - [Reviewers count by independent causes, not names](records/reviewers-count-by-independent-causes.md) (recorded-checked)
+- [Risk minimization on a shared renewal](records/risk-minimization-on-a-shared-renewal.md) (recorded-checked)
 - [Room read off the exchange](records/room-read-off-the-exchange.md) (recorded-checked)
 - [Several optimizers drain by their joint capacity](records/several-optimizers-drain-by-their-joint-capacity.md) (recorded-checked)
 - [Steps met again after a fall](records/steps-met-again-after-a-fall.md) (recorded-checked)
@@ -453,7 +455,7 @@ Results (60):
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (17, 1 stated on the grammar): `Cascade`, `Centers`, `Exclusion`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `Withholding`
+Modules (18, 1 stated on the grammar): `Cascade`, `Centers`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `Withholding`
 
 
 ## The classical texts
@@ -611,4 +613,4 @@ Modules (2, 2 stated on the grammar): `GrammarPath`, `KeptOnward`
 
 ## Not yet on the root
 
-293 of 341 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+294 of 342 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

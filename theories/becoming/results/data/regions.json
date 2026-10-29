@@ -941,6 +941,11 @@
    "base": "old-base",
    "note": "P123 Frequency: settling, runaway rate"
   },
+  "identical-cells-under-a-descent-treating-them-alike": {
+   "region": "collective",
+   "base": "general",
+   "note": "FreeEnergyGuarantees UE16: under a descent reading no cell's number alike cells stay alike; with an exchangeable field, minima within one size come in exchanged pairs; against guaranteed differentiation (Friston and others 2015)"
+  },
   "identification-where-bounded": {
    "region": "knowing",
    "base": "frame",
@@ -1705,6 +1710,11 @@
    "region": "knowing",
    "base": "frame",
    "note": "fallible judging counterexample"
+  },
+  "risk-minimization-on-a-shared-renewal": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "FreeEnergyGuarantees UE16: a risk-minimizing chooser, its need ending where the rest outruns a gated renewal, unread after; alike preferences for own stores are not one goal (joint excess); against risk minimization ensuring needs and shared preferences making a group goal"
   },
   "rivals-bounded-in-time": {
    "region": "significance",
@@ -2912,6 +2922,11 @@
    "region": "root",
    "base": "frame",
    "note": "L0 frame: process, runs, one closure (the grammar's «所闭»), reach, invariants; frames as models"
+  },
+  "Becoming.FreeEnergyGuarantees": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "UE16 what free-energy minimization does not guarantee (05 §1, §9)"
   },
   "Becoming.Frequency": {
    "region": "map",

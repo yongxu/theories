@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T145758.555114Z",
- "core_sources_sha256": "89067a7a30883bc77494413e726a0b343d514a47bd1389f354da617fdc5fa8ad",
+ "core_receipt": "20261029T153820.435638Z",
+ "core_sources_sha256": "d1baf1af14ec7c916a12f2a9b6e9298564be81c0c9da0beae81aa2b5c9beaa8a",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -56,16 +56,16 @@
   ]
  },
  "counts": {
-  "laws": 3696,
+  "laws": 3713,
   "no_declarations": 9,
   "outside": 342,
   "grammar": 737,
-  "balance, represented": 637,
+  "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1837,
+  "no master law": 1846,
   "vocabulary_only": 59,
   "closure": 474,
-  "balance": 807,
+  "balance": 815,
   "return": 252,
   "lumping": 83,
   "order": 78
@@ -19977,6 +19977,104 @@
     "dependence": "balance, represented"
    }
   ],
+  "identical-cells-under-a-descent-treating-them-alike": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.total_exchangeAt",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.map_exchangeAt",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.length_exchangeAt"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.all_alike_stay_alike",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_map",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_replicate"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.descent",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField_exchangeable",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.descent_commutes"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.keeps_exchange_fixed",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.exchanged_run",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.rests_exchanged",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.alike_of_fixed",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.fixed_of_alike"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy_symmetric",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.minimum_exchanged",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.apart_not_unique",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_across_sizes_empty"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.give",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.away",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step_commutes",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_rests",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_energy",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.pair_of_alike",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_never_least",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.run_length"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.parts",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.exchanged_parts",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.minima",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.other_minima"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
   "identification-where-bounded": [
    {
     "law": 1,
@@ -37469,6 +37567,162 @@
      "Becoming.JudgingCorrespondence.endpoint_judge_iff",
      "Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core"
     ]
+   }
+  ],
+  "risk-minimization-on-a-shared-renewal": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.le_of_blt_false",
+     "Becoming.FreeEnergyGuarantees.firstMin",
+     "Becoming.FreeEnergyGuarantees.firstMin_le",
+     "Becoming.FreeEnergyGuarantees.firstMin_mem"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.risk",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_minimizes",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_mem",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint_chosen"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.SharedModels.holder",
+     "Becoming.FreeEnergyGuarantees.SharedModels.heldPair_choices",
+     "Becoming.FreeEnergyGuarantees.SharedModels.held_not_one"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager_choice",
+     "Becoming.FreeEnergyGuarantees.SharedModels.store",
+     "Becoming.FreeEnergyGuarantees.SharedModels.exceeding_choices",
+     "Becoming.FreeEnergyGuarantees.SharedModels.store_kept",
+     "Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.outside_takes_nothing"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.present",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.flow",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.balances",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_balances",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.acting",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_acting",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.dependent",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.gated",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.distinct",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.rest_present",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.outside",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.ends_either_way"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator_choice",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.balances",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level_two",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.dependent",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.acting",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.gated",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.continues"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.Three",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeLevel",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeBalances",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeActing",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeDependent",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeGated",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
    }
   ],
   "rivals-bounded-in-time": [

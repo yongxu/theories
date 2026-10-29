@@ -182,12 +182,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T103820.622467Z）：Becoming.ChoiceCountCapture，45 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作独立只读审查，其所见皆采，修订复查，见研究第 406 节；未经人审。"
   },
   "next_delta": {
-    "en": "A third part against the free-energy principle, the first candidate a claim that belief sharing lets a collective respond to what no member couples to; a law with a bound for additive counting; SPM's prior and its split among equally good policies; a frozen test of whether a count of choices reverses; review by a person.",
-    "zh": "对自由能原理之第三部分：其文献中理论所禁之陈述，首一候选为信念共享使集体回应无一成员所耦合者之说；加性计数之有界之律；SPM 之先验与其于同等之策间之分；计数之择于常立评分下是否反转之冻结检验；人之独立审查。"
+    "en": "A law with a bound for additive counting; SPM's prior and its split among equally good policies; a frozen test of whether a count of choices reverses; review by a person.",
+    "zh": "加性计数之有界之律；SPM 之先验与其于同等之策间之分；计数之择于常立评分下是否反转之冻结检验；人之独立审查。"
   },
   "correspondence": {
-    "en": "Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016, 'Active inference and learning', Neuroscience & Biobehavioral Reviews 68): the prior over policies counts beliefs about the selected policy at the end of each trial (§2.4; SPM12's spm_MDP_VB adds the end-of-trial posterior over policies); devalued after the habit has formed (trial 48) the habit persists and strengthens itself with repeated execution, devalued after 16 trials the agent switches at once (§5.2). The lock is the lock-in of increasing returns (Arthur 1989, The Economic Journal 99); counting the action taken is the value-free habit (Miller, Shenhav and Ludvig 2019, Psychological Review 126). Overtraining and insensitivity to devaluation in rats (Adams 1982; Dickinson 1985); five failures to induce it in humans (de Wit and others 2018, Journal of Experimental Psychology: General 147). The free-energy principle's sparse coupling read as the couplings; shared generative models (Friston and others 2024, 'Designing ecosystems of intelligence from first principles', Collective Intelligence 3) as pooled couplings at most. A restatement with its third part open; the readings are the AI's, stated in development/ue1-fep-bridge/NOTE.md with the sources read and the review in REVIEW-UE1.md.",
-    "zh": "主动推断（Friston、FitzGerald、Rigoli、Schwartenbeck、O'Doherty、Pezzulo 2016）：策之先验于每试之末计关于所选之策之信念（§2.4；SPM12 之 spm_MDP_VB 加试末之策后验）；习惯成后贬值（第 48 试），习惯持续且以重复之执行自强，16 试后贬值则主体立即转向（§5.2）。锁定即递增报酬之锁入（Arthur 1989）；计所行之行动即无值习惯（Miller、Shenhav、Ludvig 2019）。大鼠之过度训练与对贬值之不敏（Adams 1982；Dickinson 1985）；人类诱导之五次失败（de Wit 等 2018）。自由能原理之稀疏耦合读作耦合；共享之生成模型（Friston 等 2024）至多读作合耦合。为一重述，其第三部分未定；读法皆 AI 之读，载于 development/ue1-fep-bridge/NOTE.md 并列所读之源，审查见 REVIEW-UE1.md。"
+    "en": "Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016, 'Active inference and learning', Neuroscience & Biobehavioral Reviews 68): the prior over policies counts beliefs about the selected policy at the end of each trial (§2.4; SPM12's spm_MDP_VB adds the end-of-trial posterior over policies); devalued after the habit has formed (trial 48) the habit persists and strengthens itself with repeated execution, devalued after 16 trials the agent switches at once (§5.2). The lock is the lock-in of increasing returns (Arthur 1989, The Economic Journal 99); counting the action taken is the value-free habit (Miller, Shenhav and Ludvig 2019, Psychological Review 126). Overtraining and insensitivity to devaluation in rats (Adams 1982; Dickinson 1985); five failures to induce it in humans (de Wit and others 2018, Journal of Experimental Psychology: General 147). The free-energy principle's sparse coupling read as the couplings; shared generative models (Friston and others 2024, 'Designing ecosystems of intelligence from first principles', Collective Intelligence 3) as pooled couplings at most. Its own laws restate; the containment's third parts are UE16's two related records, on identical cells and on risk minimization. The readings are the AI's, in development/ue1-fep-bridge/NOTE.md, the review in REVIEW-UE1.md.",
+    "zh": "主动推断（Friston、FitzGerald、Rigoli、Schwartenbeck、O'Doherty、Pezzulo 2016）：策之先验于每试之末计关于所选之策之信念（§2.4；SPM12 之 spm_MDP_VB 加试末之策后验）；习惯成后贬值（第 48 试），习惯持续且以重复之执行自强，16 试后贬值则主体立即转向（§5.2）。锁定即递增报酬之锁入（Arthur 1989）；计所行之行动即无值习惯（Miller、Shenhav、Ludvig 2019）。大鼠之过度训练与对贬值之不敏（Adams 1982；Dickinson 1985）；人类诱导之五次失败（de Wit 等 2018）。自由能原理之稀疏耦合读作耦合；共享之生成模型（Friston 等 2024）至多读作合耦合。其自身之律为重述；包含之第三部分为 UE16 之二相关记录，论同一细胞与风险最小化。读法皆 AI 之读，载于 development/ue1-fep-bridge/NOTE.md，审查见 REVIEW-UE1.md。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
   "aliases": [
@@ -246,6 +246,20 @@
       "detail": {
         "en": "What a pool separates; choosers sharing their folds are such a pool.",
         "zh": "池所能分辨者；共享折叠之择者即此池。"
+      }
+    },
+    {
+      "id": "identical-cells-under-a-descent-treating-them-alike",
+      "detail": {
+        "en": "A third part of the free-energy principle's containment: a statement of its literature, read as a guarantee, that a landed law forbids on a model in its terms.",
+        "zh": "自由能原理之包含之第三部分：其文献中作保证读之一陈述，已落地之律于其语汇之模型上禁之。"
+      }
+    },
+    {
+      "id": "risk-minimization-on-a-shared-renewal",
+      "detail": {
+        "en": "A third part of the free-energy principle's containment: a statement of its literature, read as a guarantee, that a landed law forbids on a model in its terms.",
+        "zh": "自由能原理之包含之第三部分：其文献中作保证读之一陈述，已落地之律于其语汇之模型上禁之。"
       }
     }
   ],
@@ -366,6 +380,10 @@
     {
       "en": "25 October 2026: added (UE1), the free-energy principle's first containment, a restatement with its third part open; study section 406.",
       "zh": "2026年10月25日：新增（UE1），自由能原理之首次包含，为一重述，其第三部分未定；研究第 406 节。"
+    },
+    {
+      "en": "29 October 2026, board item UE16 (study section 449): the containment now has third parts (identical-cells-under-a-descent-treating-them-alike, risk-minimization-on-a-shared-renewal): the correspondence's last sentence and the next step brought to them, each related here; no statement or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：包含今有第三部分（identical-cells-under-a-descent-treating-them-alike、risk-minimization-on-a-shared-renewal）：对应之末句与下一步随之更新，二者于此相关联；无一陈述或声明改变。"
     }
   ]
 }

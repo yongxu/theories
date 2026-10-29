@@ -281,6 +281,13 @@
         "en": "The nuclear law 互 is an instance: nuclear_run_act is Law.Commutes.iterate with nuclear_act, and run_complement_apart is Law.Commutes.apart with nuclear_complement and complement_moves.",
         "zh": "互是一例：nuclear_run_act 是 Law.Commutes.iterate 配 nuclear_act，run_complement_apart 是 Law.Commutes.apart 配 nuclear_complement 与 complement_moves。"
       }
+    },
+    {
+      "id": "identical-cells-under-a-descent-treating-them-alike",
+      "detail": {
+        "en": "Identical cells under a descent that treats them alike: with an exchangeable field the commuting law gives the exchanged run and the paired minima of a free-energy descent; never parting needs only a descent reading no cell's number.",
+        "zh": "同等相待之下降中之同一细胞：场可交换时，可交换律给出自由能下降之交换之运行与成对之极小；不分离只需下降不读细胞编号。"
+      }
     }
   ],
   "references": [
@@ -470,6 +477,10 @@
     {
       "en": "20 October 2026, R35b (the instance and applications ring: the Changes and place/transition nets as instances, six leaves as applications, both held to the core's conditions and outside it by direction): Moved with their full names: from Commuting.lean to HexagramCommuting.lean, Hexagram.changes_mirror_apart, Hexagram.changes_symmetric, Hexagram.complement_moves, Hexagram.flip_complement, Hexagram.wane_breaks, Hexagram.waxWane_apart, Hexagram.waxWane_halfway. Proof bindings (Commuting.lean) rebound to core receipt 20261020T045544.667431Z. Re-pointed after reading the change: Commuting.lean, the namespace Hexagram section (complement_moves, waxWane_apart, waxWane_halfway, wane_breaks, flip_complement, changes_symmetric, changes_mirror_apart) moved unchanged to HexagramCommuting; no longer imports Hexagrams; the general laws unchanged; THE-THEORY-OF-BECOMING.md, section 9: the rings (instances and applications), the receipt and the counts follow R35b. The claim is unchanged.",
       "zh": "2026年10月20日，R35b（实例与应用环：《周易》与位置/迁移网为实例，六个叶子模块为应用，二者受核心同样的条件约束，按方向在核心之外）：连同完整名称移动：从 Commuting.lean 到 HexagramCommuting.lean：Hexagram.changes_mirror_apart、Hexagram.changes_symmetric、Hexagram.complement_moves、Hexagram.flip_complement、Hexagram.wane_breaks、Hexagram.waxWane_apart、Hexagram.waxWane_halfway。证明绑定（Commuting.lean）改到核心回执 20261020T045544.667431Z。读过改动后重新指向：Commuting.lean，namespace Hexagram 一节（complement_moves、waxWane_apart、waxWane_halfway、wane_breaks、flip_complement、changes_symmetric、changes_mirror_apart）原样移到 HexagramCommuting；不再导入 Hexagrams；一般规律不变；THE-THEORY-OF-BECOMING.md，§9：环（实例与应用）、回执与计数随 R35b。论断不变。"
+    },
+    {
+      "en": "29 October 2026, board item UE16 (study section 449): related to identical-cells-under-a-descent-treating-them-alike; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：与 identical-cells-under-a-descent-treating-them-alike 相关联；无一陈述、下一步或声明改变。"
     }
   ],
   "text_versions": [
