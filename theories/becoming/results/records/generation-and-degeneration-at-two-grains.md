@@ -62,7 +62,7 @@ Generation as a pattern continuing through the renewal of its parts is close to 
   - Input: A fine and a coarse class on one net.
   - Preserved conditions: None beyond the grammar. [GrammarMap.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean)
 
-**Used by:** [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [reach-past-ones-own-end](reach-past-ones-own-end.md) · [reach-through-a-shared-condition](reach-through-a-shared-condition.md) · [the-source-texts-test-systems](the-source-texts-test-systems.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
+**Used by:** [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [reach-past-ones-own-end](reach-past-ones-own-end.md) · [reach-through-a-shared-condition](reach-through-a-shared-condition.md) · [the-source-texts-test-systems](the-source-texts-test-systems.md) · [the-world-represented-both-ways](the-world-represented-both-ways.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
 
 <a id="sources--来源"></a>
 ### Sources

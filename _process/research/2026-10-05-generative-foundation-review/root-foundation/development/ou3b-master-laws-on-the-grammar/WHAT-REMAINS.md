@@ -73,6 +73,14 @@ What it does not settle:
 - The chapters' other laws beyond the central declarations (OU plan §八 steps 5–10).
 - Whether the categories themselves are the right ones. Each is argued in EC6's audit and open to revision on the board.
 
+## The next layer (29 October 2026)
+
+With the central declarations settled, two lines go on, on disjoint files:
+- **WRT2, the World's representation both ways** (designed in [WRT](../world-representation/DESIGN.md), `732259ccc`; taken by its designer). It adds the occurrence model and the transport lemmas. The relational part is represented both ways. The failure on amounts is written down: standings are forgotten at this selection, and balance is carried by conservation alone. This closes OU's criterion 7 as far as the World goes.
+- **OU3f, the laws that read only activity** (OU plan §八 step 4, its second part; 348 theorems on `0cc1aafb4`). An audit first, on EC6's pattern, then derivations at WRT2's occurrence model, module by module. A row counts as a case of a grammar law only where the law replaces part of its proof.
+
+After them, the 9,370 theorems that read no field of the old base (frames, processes, runs, numbers, lists) are the largest remaining question of the lifting: whether their statements can be put in the grammar's terms. That gets a design when OU3f's audit shows what the pattern is.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.

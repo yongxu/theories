@@ -67,7 +67,7 @@ Following Ren's “push the frontier, as far as possible” of 12 October 2026. 
 - related, not a proved adapter: [claims-shown-in-context](claims-shown-in-context.md). Another limit of projection: context-free values; here, holding every reading from within.
 - related, not a proved adapter: [learning-by-refutation](learning-by-refutation.md). Its diagonal_misses and diagonal_unrested are the extrapolation's form, of the same form as gap_unsaid and revision_never_rests and a different object, written independently.
 
-**Used by:** [revision-with-an-undecided-value](revision-with-an-undecided-value.md) · [the-split-that-makes-sense](the-split-that-makes-sense.md) · [what-a-commuting-law-keeps-apart](what-a-commuting-law-keeps-apart.md)
+**Used by:** [revision-with-an-undecided-value](revision-with-an-undecided-value.md) · [the-split-that-makes-sense](the-split-that-makes-sense.md) · [the-world-represented-both-ways](the-world-represented-both-ways.md) · [what-a-commuting-law-keeps-apart](what-a-commuting-law-keeps-apart.md)
 
 <a id="sources--来源"></a>
 ### Sources

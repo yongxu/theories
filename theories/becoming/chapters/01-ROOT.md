@@ -1,12 +1,12 @@
 # The root: continuation relative to a class
 
-**Thesis.** Whatever goes on is conditioned by what came before it and stays alike to it in some respect. The chapter takes one relation, read as condition (缘, *yuán*), and one class, read as sameness (类, *lèi*), and shows what their meet, continuation (续, *xù*), carries: beginning, abiding, altering and ending are positions relative to a class, none standing alone; under a class constant for the relation no continuation ends; the core (核, *hé*) of a class, the greatest symmetric relation within it that the relation never tells apart, always exists; renewal is a line started by another, and at a coarser grain a pattern continues while its parts begin and end. Processes and the World model are models of this grammar. Claimed: these laws, for every carrier, relation and class or on a named model; that the reading explains how things go on is argued from them, not proved. Open: that every becoming has a faithful representation in the grammar.
+**Thesis.** Whatever goes on is conditioned by what came before it and stays alike to it in some respect. The chapter takes one relation, read as condition (缘, *yuán*), and one class, read as sameness (类, *lèi*), and shows what their meet, continuation (续, *xù*), carries: beginning, abiding, altering and ending are positions relative to a class, none standing alone; under a class constant for the relation no continuation ends; the core (核, *hé*) of a class, the greatest symmetric relation within it that the relation never tells apart, always exists; renewal is a line started by another, and at a coarser grain a pattern continues while its parts begin and end. Processes and the World model are models of this grammar. Claimed: these laws, for every carrier, relation and class or on a named model; that the reading explains how things go on is argued from them, not proved. Open: that every becoming has a faithful representation in the grammar; the World's is shown both ways for its relations and fails on its amounts (§8.6).
 
 **Where this chapter sits.** It takes nothing from the others and hands its grammar, classes and models to all of them: first to [the map](02-MAP.md), which reads renewal at two grains as generation, keeping and degeneration, and to [knowing](03-KNOWING.md), which takes the core and likeness into testing within the net. Every later chapter reads its subject as continuation relative to some class: which relation, which class, at which grain, constant or not.
 
 **Bases.** **Theorem** (root): every carrier, relation and class, in [`Becoming.Grammar`][Grammar] or a grammar module; (any process), (any type): every step relation or type, not yet in the grammar's vocabulary; (the steps): every determination of the natural-number steps; (World): the World model, its premises named; (periphery): with Mathlib, its axioms reported; a witness is one constructed example, labelled as one. A **Calibration** needs an omniscience principle and says what the need says about the unfolding; a **Reading** changes no theorem ([08](08-METHOD.md)). Every pure-core declaration named here has an empty axiom report, which concerns logic only; the real assumptions lie in the modelling commitments ([§10](#modelling-commitments)). Where the chapter touches evaluation (§8.3, §9, §9.9), the ethics' two premises keep their roles: the continuation condition fixes scope and C (calling widening better) fixes order, neither asserted ([07](07-SIGNIFICANCE.md)).
 
-**What is claimed.** The grammar is a relational calculus: its general theorems hold of every carrier, relation and class, and its witnesses are single constructed models. That reading a subject as continuation relative to a class *explains* how it goes on is the theory's claim, argued from the laws on the models (here and in 02–05), not a theorem of the grammar. Three things are kept apart: one kind of relational expression, which the grammar gives; the World model's continuation family read in the grammar, which instance theorems connect (§8.6); and a faithful representation of every becoming, and of the whole theory, in the grammar, which is open ([Open](#open)).
+**What is claimed.** The grammar is a relational calculus: its general theorems hold of every carrier, relation and class, and its witnesses are single constructed models. That reading a subject as continuation relative to a class *explains* how it goes on is the theory's claim, argued from the laws on the models (here and in 02–05), not a theorem of the grammar. Three things are kept apart: one kind of relational expression, which the grammar gives; the World model read in the grammar, which instance theorems connect and a representation theorem gives both ways for its relations, not for its amounts (§8.6); and a faithful representation of every becoming, and of the whole theory, in the grammar, which is open ([Open](#open)).
 
 **Not assumed.** That becoming is good; inevitable improvement or universal growth; a fixed common utility; independent owners of value; that every change is generation; a definite global causal order at every interface (the laws of one step, totals, counts and recurrence use only the order of change, rates being relative to the reading's unit, §9.6). Degeneration, ending and mixed change belong to the same unfolding and are not renamed generation.
 
@@ -297,7 +297,39 @@ The instance sections of the World modules state the World's continuation family
 | falling dormant | an alteration under holding | `Web.fallsDormant_alters` |
 | the arising–ceasing law, asked of every finite world | every position along the steps decided | `World.law_iff_positions` |
 
-**Reading** [AI reading, D69]. The fire passed on reads 「指窮於爲薪，火傳也」 ([《庄子·养生主》][Yangshengzhu]; [06, §一](06-CLASSICAL-TEXTS.md#why-classical)), the wood used up and the fire passed on. Not instances: the World model's counting, amounts, recurrence and renaming laws, since the grammar states no counting and no map of carriers; only their premises are connected.
+**Reading** [AI reading, D69]. The fire passed on reads 「指窮於爲薪，火傳也」 ([《庄子·养生主》][Yangshengzhu]; [06, §一](06-CLASSICAL-TEXTS.md#why-classical)), the wood used up and the fire passed on. Of the laws the table does not hold, recurrence and re-identification are connected by the representation below, and counting by the grammar's pairings (`«对»`); amounts are no instances, since the grammar has none, and the representation writes that failure down.
+
+<a id="r-the-world-represented-both-ways"></a>
+**Theorem** (World; the grammar for its lemmas). *The World represented both ways, its amounts not.*
+
+A World determines an occurrence model: its occurrences, a relatum at a step, with
+- the class of being at the same step;
+- the step conservation induces;
+- activity, standing and presence, held as partial identities;
+- five relations within a step: requiring, drawing, a need met, giving and taking.
+
+These read no name at two steps. The names' step, and whatever reads one name at two steps, lie beside them.
+
+**Forward.** The World's notions are grammar terms at that model notion by notion, through the instance theorems above. Recurrence is one through the names' step and the same-step class (`World.arisingRecurs_iff`, `World.ceasingRecurs_iff`). Every re-identification is a one-to-one correspondence of the name-free part (`World.reidentify_carries`), and the grammar's listed terms are kept by correspondence (`«尽之拉回»` and the transport laws of `Becoming.GrammarTransport`). So each term read there is fixed under re-identification.
+
+**Converse.**
+- Any activity, requiring, drawing and presence is some world's, at the model too (`World.ofModel_model`).
+- Conservation is exactly a relation "the standing after the step with `b` is `a`", half of it by definition (`World.conserves_form`, `World.ofConservationForm_conserves`), and it is labelled by standings.
+- What amounts induce is decided, while that every world decides its activity is exactly excluded middle (`World.decides_activity_iff_em`).
+
+**Where it fails.**
+- *Standings are not determined.* Two worlds standing at different positive amounts agree on everything the model reads (`World.standingAt_alike`).
+- *Balance is carried only by conservation's step read along the names,* which is defined from the balance equation. The idle world and its double share the web and the signs of exchange, and only the first balances (`World.balance_needs_conservation`).
+- *Conservation is never identity on the predicates of `Nat`* (`World.not_conserves_identity`).
+- *A line of falls ends* (`World.falls_exhaust`, from `Amounts.falls_end`). That is a condition of the World's image and no law of the grammar (`Steps.along_endless`, `World.not_falls_everywhere`).
+
+([record](../results/records/the-world-represented-both-ways.md))
+
+**What is not shown:**
+- that amounts are represented, or balance derived;
+- the amount part's image beyond conservation alone;
+- a forward theorem, since the forward direction is a schema;
+- a representation of processes, or one through the order of joined exchanges rather than the shared index.
 
 <a id="test-systems"></a>
 ### 8.7 Test systems of the source texts
@@ -532,12 +564,12 @@ Each is stated where a law depends on it ([08](08-METHOD.md)).
 - That containment in 缘 tells a fire passed on from one fire ending and another starting: every single condition is a continuation under some class.
 - That renewal without end tells renewal sustaining life from turnover destroying it; the map takes the first step, at two grains.
 - That every becoming has a law of exchange, a local law or a discrete index whose readings these are.
-- That no independent entity exists: the statements of the World model need no independent entity, and no representation theorem for the World is claimed; the ontological claim is argued, not proved ([08](08-METHOD.md#one-relational-unfolding)).
+- That no independent entity exists: the statements of the World model need no independent entity, and the World's representation in the grammar ([§8.6](#r-the-world-represented-both-ways)) concerns its relations, not entities; the ontological claim is argued, not proved ([08](08-METHOD.md#one-relational-unfolding)).
 
 <a id="open"></a>
 ## Open
 
-- **Faithful representation.** That every becoming, and the whole theory, has a faithful representation in the grammar; a representation theorem for each model, with the liftings, would show it.
+- **Faithful representation.** That every becoming, and the whole theory, has a faithful representation in the grammar. The World's is shown both ways for its relations and not faithful on its amounts ([§8.6](#r-the-world-represented-both-ways)); a representation theorem for processes and the other models, with the liftings, would show the rest.
 - **Lifting.** Most modules do not yet state their laws on the grammar ([the theory graph](../results/THEORY-GRAPH.md)); each is to be restated by a lifting theorem, as the continuation family and the five master laws were ([§7](#r-master-laws-on-the-grammar)), the counting of lines first.
 - **Identity from continuity, not naming.** For continuations read off conservation the formal part is settled; continuations read from informational or organizational relations are not derived.
 - **The deductive necessity of the whole.** That the determinations are internally related moments of one unfolding is argued, as a reading, for the World premises read off one exchange (§8.3); that every becoming has such an exchange is open.

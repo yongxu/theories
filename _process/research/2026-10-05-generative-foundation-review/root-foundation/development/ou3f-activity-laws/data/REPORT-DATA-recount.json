@@ -1,0 +1,7829 @@
+{
+ "commit": "3e9a856b65d09481f8e756fcc1f0f1be88b34bf0",
+ "sources_match_commit": true,
+ "spine_modules": 335,
+ "theorems": 16484,
+ "missing_anchors": [],
+ "packaging_definitions": 615,
+ "stray_primitive_projections": [
+  [
+   "Becoming.Run.tail_of_trace.match_1_3",
+   "Becoming.Run#0"
+  ],
+  [
+   "Becoming.Run.tail_of_trace.match_1_3",
+   "Becoming.Run#0"
+  ]
+ ],
+ "by_ring": {
+  "core": 15724,
+  "instances": 581,
+  "applications": 179
+ },
+ "uses": {
+  "by_count": {
+   "0": 11169,
+   "1": 838,
+   "2": 780,
+   "3": 893,
+   "4": 1373,
+   "5": 533,
+   "6": 353,
+   "7": 229,
+   "8": 316
+  },
+  "exactly_one_by_field": {
+   "active": 436,
+   "level": 200,
+   "need": 8,
+   "requires": 94,
+   "present": 45,
+   "take": 37,
+   "give": 18
+  },
+  "each_field": {
+   "level": 3133,
+   "active": 1970,
+   "requires": 2540,
+   "need": 2222,
+   "draws": 792,
+   "present": 3108,
+   "take": 2760,
+   "give": 2958
+  },
+  "state_only": 2062,
+  "exchange_only": 738,
+  "both_kinds": 2515,
+  "groups": [
+   [
+    "{}",
+    11169
+   ],
+   [
+    "{level, present, take, give}",
+    872
+   ],
+   [
+    "{requires, need}",
+    513
+   ],
+   [
+    "{present, take, give}",
+    488
+   ],
+   [
+    "{active}",
+    436
+   ],
+   [
+    "{level, active, requires, need, draws, present, take, give}",
+    316
+   ],
+   [
+    "{level, requires, need}",
+    244
+   ],
+   [
+    "{level, active, requires, need, draws}",
+    224
+   ],
+   [
+    "{level, requires, need, present, take, give}",
+    221
+   ],
+   [
+    "{level, active, requires, need, present, take, give}",
+    208
+   ],
+   [
+    "{level}",
+    200
+   ],
+   [
+    "{level, active, present, take, give}",
+    198
+   ],
+   [
+    "{level, active, requires, need}",
+    171
+   ],
+   [
+    "{requires, present, take, give}",
+    156
+   ],
+   [
+    "{requires}",
+    94
+   ],
+   [
+    "{level, active, requires, need, draws, present}",
+    76
+   ],
+   [
+    "{level, requires, need, draws}",
+    61
+   ],
+   [
+    "{present, take}",
+    59
+   ],
+   [
+    "{level, active}",
+    58
+   ],
+   [
+    "{present, give}",
+    54
+   ],
+   [
+    "{active, present, give}",
+    54
+   ],
+   [
+    "{level, requires, need, present, give}",
+    50
+   ],
+   [
+    "{present}",
+    45
+   ],
+   [
+    "{take}",
+    37
+   ],
+   [
+    "{take, give}",
+    37
+   ],
+   [
+    "{level, active, requires, need, present, give}",
+    35
+   ],
+   [
+    "{active, draws, present, take}",
+    34
+   ],
+   [
+    "{requires, present, give}",
+    31
+   ],
+   [
+    "{level, active, present, give}",
+    27
+   ],
+   [
+    "{level, requires, present, take, give}",
+    22
+   ],
+   [
+    "{level, present, give}",
+    21
+   ],
+   [
+    "{give}",
+    18
+   ],
+   [
+    "{active, present}",
+    17
+   ],
+   [
+    "{level, need}",
+    16
+   ],
+   [
+    "{level, active, draws, present, take, give}",
+    16
+   ],
+   [
+    "{level, active, requires, need, draws, present, give}",
+    15
+   ],
+   [
+    "{level, take, give}",
+    15
+   ],
+   [
+    "{requires, need, present, give}",
+    14
+   ],
+   [
+    "{active, draws, present, take, give}",
+    11
+   ],
+   [
+    "{requires, draws}",
+    11
+   ],
+   [
+    "{active, requires, need}",
+    11
+   ],
+   [
+    "{level, requires, draws, present, give}",
+    10
+   ],
+   [
+    "{active, present, take}",
+    10
+   ],
+   [
+    "{active, present, take, give}",
+    10
+   ],
+   [
+    "{level, requires, need, take, give}",
+    10
+   ],
+   [
+    "{level, active, present, take}",
+    10
+   ],
+   [
+    "{need}",
+    8
+   ],
+   [
+    "{level, active, give}",
+    7
+   ],
+   [
+    "{level, give}",
+    6
+   ],
+   [
+    "{active, requires}",
+    5
+   ],
+   [
+    "{requires, need, draws}",
+    4
+   ],
+   [
+    "{requires, need, take, give}",
+    4
+   ],
+   [
+    "{need, present, take, give}",
+    4
+   ],
+   [
+    "{level, active, requires, draws, present, take, give}",
+    3
+   ],
+   [
+    "{level, requires, draws, present, take, give}",
+    3
+   ],
+   [
+    "{requires, need, present, take, give}",
+    3
+   ],
+   [
+    "{active, requires, present, give}",
+    3
+   ],
+   [
+    "{level, requires, need, present, take}",
+    3
+   ],
+   [
+    "{requires, give}",
+    3
+   ],
+   [
+    "{level, requires, present, give}",
+    2
+   ],
+   [
+    "{level, requires, need, draws, present, take, give}",
+    2
+   ],
+   [
+    "{level, active, take, give}",
+    2
+   ],
+   [
+    "{active, requires, give}",
+    2
+   ],
+   [
+    "{active, requires, need, draws, take, give}",
+    1
+   ],
+   [
+    "{level, active, requires}",
+    1
+   ],
+   [
+    "{level, active, need}",
+    1
+   ],
+   [
+    "{level, active, requires, need, draws, present, take}",
+    1
+   ],
+   [
+    "{level, active, need, draws}",
+    1
+   ],
+   [
+    "{active, draws}",
+    1
+   ],
+   [
+    "{requires, need, give}",
+    1
+   ],
+   [
+    "{active, requires, draws}",
+    1
+   ],
+   [
+    "{active, requires, need, draws}",
+    1
+   ],
+   [
+    "{level, need, present, take, give}",
+    1
+   ],
+   [
+    "{level, active, take}",
+    1
+   ],
+   [
+    "{level, active, requires, present, take, give}",
+    1
+   ],
+   [
+    "{level, active, requires, need, present}",
+    1
+   ],
+   [
+    "{requires, take, give}",
+    1
+   ],
+   [
+    "{level, requires, need, present}",
+    1
+   ]
+  ],
+  "by_ring": {
+   "core": {
+    "0": 10455,
+    "1": 832,
+    "2": 774,
+    "3": 879,
+    "4": 1358,
+    "5": 531,
+    "6": 353,
+    "7": 226,
+    "8": 316
+   },
+   "instances": {
+    "0": 535,
+    "1": 6,
+    "2": 6,
+    "3": 14,
+    "4": 15,
+    "5": 2,
+    "7": 3
+   },
+   "applications": {
+    "0": 179
+   }
+  }
+ },
+ "statement": {
+  "by_count": {
+   "0": 11317,
+   "1": 875,
+   "2": 788,
+   "3": 814,
+   "4": 1356,
+   "5": 522,
+   "6": 370,
+   "7": 172,
+   "8": 270
+  },
+  "exactly_one_by_field": {
+   "active": 449,
+   "level": 215,
+   "need": 9,
+   "requires": 96,
+   "present": 46,
+   "take": 40,
+   "give": 20
+  },
+  "each_field": {
+   "level": 3041,
+   "active": 1878,
+   "requires": 2496,
+   "need": 2176,
+   "draws": 761,
+   "present": 2894,
+   "take": 2535,
+   "give": 2730
+  },
+  "state_only": 2121,
+  "exchange_only": 643,
+  "both_kinds": 2403,
+  "groups": [
+   [
+    "{}",
+    11317
+   ],
+   [
+    "{level, present, take, give}",
+    838
+   ],
+   [
+    "{requires, need}",
+    513
+   ],
+   [
+    "{active}",
+    449
+   ],
+   [
+    "{present, take, give}",
+    382
+   ],
+   [
+    "{level, active, requires, need, draws, present, take, give}",
+    270
+   ],
+   [
+    "{level, requires, need}",
+    262
+   ],
+   [
+    "{level, requires, need, present, take, give}",
+    232
+   ],
+   [
+    "{level, active, requires, need, draws}",
+    215
+   ],
+   [
+    "{level}",
+    215
+   ],
+   [
+    "{level, active, present, take, give}",
+    188
+   ],
+   [
+    "{level, active, requires, need}",
+    177
+   ],
+   [
+    "{requires, present, take, give}",
+    156
+   ],
+   [
+    "{level, active, requires, need, present, take, give}",
+    145
+   ],
+   [
+    "{requires}",
+    96
+   ],
+   [
+    "{level, active, requires, need, draws, present}",
+    77
+   ],
+   [
+    "{level, requires, need, draws}",
+    74
+   ],
+   [
+    "{present, take}",
+    63
+   ],
+   [
+    "{active, present, give}",
+    63
+   ],
+   [
+    "{level, active}",
+    58
+   ],
+   [
+    "{present, give}",
+    53
+   ],
+   [
+    "{level, requires, need, present, give}",
+    52
+   ],
+   [
+    "{present}",
+    46
+   ],
+   [
+    "{active, draws, present, take}",
+    41
+   ],
+   [
+    "{take}",
+    40
+   ],
+   [
+    "{take, give}",
+    39
+   ],
+   [
+    "{level, active, requires, need, present, give}",
+    39
+   ],
+   [
+    "{requires, present, give}",
+    31
+   ],
+   [
+    "{level, present, give}",
+    23
+   ],
+   [
+    "{level, requires, present, take, give}",
+    22
+   ],
+   [
+    "{level, active, present, give}",
+    22
+   ],
+   [
+    "{give}",
+    20
+   ],
+   [
+    "{level, active, requires, need, draws, present, give}",
+    18
+   ],
+   [
+    "{level, active, draws, present, take, give}",
+    16
+   ],
+   [
+    "{active, present}",
+    16
+   ],
+   [
+    "{level, need}",
+    15
+   ],
+   [
+    "{level, take, give}",
+    15
+   ],
+   [
+    "{requires, need, present, give}",
+    14
+   ],
+   [
+    "{active, present, take}",
+    12
+   ],
+   [
+    "{requires, draws}",
+    11
+   ],
+   [
+    "{active, requires, need}",
+    11
+   ],
+   [
+    "{requires, need, present, take, give}",
+    11
+   ],
+   [
+    "{level, requires, draws, present, give}",
+    10
+   ],
+   [
+    "{level, active, present, take}",
+    10
+   ],
+   [
+    "{need}",
+    9
+   ],
+   [
+    "{level, requires, need, take, give}",
+    9
+   ],
+   [
+    "{active, draws, present, take, give}",
+    8
+   ],
+   [
+    "{active, requires}",
+    6
+   ],
+   [
+    "{level, give}",
+    6
+   ],
+   [
+    "{active, present, take, give}",
+    5
+   ],
+   [
+    "{level, active, requires, need, draws, present, take}",
+    4
+   ],
+   [
+    "{requires, need, draws}",
+    4
+   ],
+   [
+    "{level, requires, need, present, take}",
+    4
+   ],
+   [
+    "{requires, need, take, give}",
+    4
+   ],
+   [
+    "{active, give}",
+    4
+   ],
+   [
+    "{need, present, take, give}",
+    4
+   ],
+   [
+    "{level, active, requires, draws, present, take, give}",
+    3
+   ],
+   [
+    "{level, requires, draws, present, take, give}",
+    3
+   ],
+   [
+    "{level, active, give}",
+    3
+   ],
+   [
+    "{active, requires, present, give}",
+    3
+   ],
+   [
+    "{requires, give}",
+    3
+   ],
+   [
+    "{level, requires, present, give}",
+    2
+   ],
+   [
+    "{level, requires, need, draws, present, take, give}",
+    2
+   ],
+   [
+    "{level, active, take, give}",
+    2
+   ],
+   [
+    "{level, need, present, take, give}",
+    2
+   ],
+   [
+    "{active, requires, give}",
+    2
+   ],
+   [
+    "{active, requires, need, draws, take, give}",
+    1
+   ],
+   [
+    "{level, active, requires}",
+    1
+   ],
+   [
+    "{level, active, need}",
+    1
+   ],
+   [
+    "{level, active, need, draws}",
+    1
+   ],
+   [
+    "{active, draws}",
+    1
+   ],
+   [
+    "{requires, need, give}",
+    1
+   ],
+   [
+    "{active, requires, draws}",
+    1
+   ],
+   [
+    "{active, requires, need, draws}",
+    1
+   ],
+   [
+    "{level, requires, need, give}",
+    1
+   ],
+   [
+    "{level, active, take}",
+    1
+   ],
+   [
+    "{level, active, requires, present, take, give}",
+    1
+   ],
+   [
+    "{requires, take, give}",
+    1
+   ],
+   [
+    "{level, active, requires, need, present}",
+    1
+   ],
+   [
+    "{level, requires, need, present}",
+    1
+   ],
+   [
+    "{active, requires, need, present, take, give}",
+    1
+   ]
+  ],
+  "by_ring": {
+   "core": {
+    "0": 10596,
+    "1": 867,
+    "2": 780,
+    "3": 802,
+    "4": 1347,
+    "5": 521,
+    "6": 370,
+    "7": 171,
+    "8": 270
+   },
+   "instances": {
+    "0": 542,
+    "1": 8,
+    "2": 8,
+    "3": 12,
+    "4": 9,
+    "5": 1,
+    "7": 1
+   },
+   "applications": {
+    "0": 179
+   }
+  }
+ },
+ "proof": {
+  "by_count": {
+   "0": 11238,
+   "1": 828,
+   "2": 762,
+   "3": 895,
+   "4": 1333,
+   "5": 532,
+   "6": 353,
+   "7": 228,
+   "8": 315
+  },
+  "exactly_one_by_field": {
+   "active": 434,
+   "level": 186,
+   "need": 6,
+   "requires": 95,
+   "present": 40,
+   "take": 42,
+   "give": 25
+  },
+  "each_field": {
+   "level": 3071,
+   "active": 1949,
+   "requires": 2534,
+   "need": 2201,
+   "draws": 790,
+   "present": 3062,
+   "take": 2734,
+   "give": 2922
+  },
+  "state_only": 2033,
+  "exchange_only": 728,
+  "both_kinds": 2485,
+  "groups": [
+   [
+    "{}",
+    11238
+   ],
+   [
+    "{level, present, take, give}",
+    847
+   ],
+   [
+    "{requires, need}",
+    513
+   ],
+   [
+    "{present, take, give}",
+    490
+   ],
+   [
+    "{active}",
+    434
+   ],
+   [
+    "{level, active, requires, need, draws, present, take, give}",
+    315
+   ],
+   [
+    "{level, requires, need}",
+    239
+   ],
+   [
+    "{level, active, requires, need, draws}",
+    224
+   ],
+   [
+    "{level, requires, need, present, take, give}",
+    221
+   ],
+   [
+    "{level, active, requires, need, present, take, give}",
+    208
+   ],
+   [
+    "{level, active, present, take, give}",
+    198
+   ],
+   [
+    "{level}",
+    186
+   ],
+   [
+    "{level, active, requires, need}",
+    158
+   ],
+   [
+    "{requires, present, take, give}",
+    156
+   ],
+   [
+    "{requires}",
+    95
+   ],
+   [
+    "{level, active, requires, need, draws, present}",
+    76
+   ],
+   [
+    "{level, requires, need, draws}",
+    61
+   ],
+   [
+    "{level, active}",
+    51
+   ],
+   [
+    "{level, requires, need, present, give}",
+    50
+   ],
+   [
+    "{active, present, give}",
+    49
+   ],
+   [
+    "{present, take}",
+    48
+   ],
+   [
+    "{present, give}",
+    48
+   ],
+   [
+    "{take}",
+    42
+   ],
+   [
+    "{present}",
+    40
+   ],
+   [
+    "{take, give}",
+    35
+   ],
+   [
+    "{level, active, requires, need, present, give}",
+    35
+   ],
+   [
+    "{active, draws, present, take}",
+    34
+   ],
+   [
+    "{requires, present, give}",
+    31
+   ],
+   [
+    "{level, active, present, give}",
+    27
+   ],
+   [
+    "{give}",
+    25
+   ],
+   [
+    "{level, requires, present, take, give}",
+    22
+   ],
+   [
+    "{level, present, give}",
+    21
+   ],
+   [
+    "{active, present}",
+    17
+   ],
+   [
+    "{level, active, draws, present, take, give}",
+    16
+   ],
+   [
+    "{level, need}",
+    15
+   ],
+   [
+    "{level, take, give}",
+    15
+   ],
+   [
+    "{level, active, requires, need, draws, present, give}",
+    14
+   ],
+   [
+    "{active, requires}",
+    14
+   ],
+   [
+    "{requires, need, present, give}",
+    14
+   ],
+   [
+    "{active, requires, need}",
+    14
+   ],
+   [
+    "{active, draws, present, take, give}",
+    11
+   ],
+   [
+    "{requires, draws}",
+    11
+   ],
+   [
+    "{level, requires, draws, present, give}",
+    10
+   ],
+   [
+    "{active, present, take}",
+    10
+   ],
+   [
+    "{level, requires, need, take, give}",
+    10
+   ],
+   [
+    "{level, active, present, take}",
+    10
+   ],
+   [
+    "{level, present, take}",
+    9
+   ],
+   [
+    "{active, present, take, give}",
+    8
+   ],
+   [
+    "{need}",
+    6
+   ],
+   [
+    "{level, give}",
+    5
+   ],
+   [
+    "{level, active, give}",
+    5
+   ],
+   [
+    "{requires, need, draws}",
+    4
+   ],
+   [
+    "{requires, need, take, give}",
+    4
+   ],
+   [
+    "{need, present, take, give}",
+    4
+   ],
+   [
+    "{level, active, requires, draws, present, take, give}",
+    3
+   ],
+   [
+    "{level, requires, draws, present, take, give}",
+    3
+   ],
+   [
+    "{requires, need, present, take, give}",
+    3
+   ],
+   [
+    "{active, requires, present, give}",
+    3
+   ],
+   [
+    "{level, requires, need, present, take}",
+    3
+   ],
+   [
+    "{requires, give}",
+    3
+   ],
+   [
+    "{level, requires, present, give}",
+    2
+   ],
+   [
+    "{level, active, requires}",
+    2
+   ],
+   [
+    "{level, requires, need, draws, present, take, give}",
+    2
+   ],
+   [
+    "{level, active, take, give}",
+    2
+   ],
+   [
+    "{active, requires, give}",
+    2
+   ],
+   [
+    "{active, requires, need, draws, take, give}",
+    1
+   ],
+   [
+    "{level, active, need}",
+    1
+   ],
+   [
+    "{level, requires}",
+    1
+   ],
+   [
+    "{level, active, requires, need, draws, present, take}",
+    1
+   ],
+   [
+    "{level, active, need, draws}",
+    1
+   ],
+   [
+    "{active, draws}",
+    1
+   ],
+   [
+    "{requires, need, give}",
+    1
+   ],
+   [
+    "{active, requires, draws}",
+    1
+   ],
+   [
+    "{active, requires, need, draws}",
+    1
+   ],
+   [
+    "{level, need, present, take, give}",
+    1
+   ],
+   [
+    "{level, active, requires, present, take, give}",
+    1
+   ],
+   [
+    "{active, requires, need, present}",
+    1
+   ],
+   [
+    "{requires, take, give}",
+    1
+   ]
+  ],
+  "by_ring": {
+   "core": {
+    "0": 10522,
+    "1": 822,
+    "2": 756,
+    "3": 882,
+    "4": 1319,
+    "5": 530,
+    "6": 353,
+    "7": 225,
+    "8": 315
+   },
+   "instances": {
+    "0": 537,
+    "1": 6,
+    "2": 6,
+    "3": 13,
+    "4": 14,
+    "5": 2,
+    "7": 3
+   },
+   "applications": {
+    "0": 179
+   }
+  }
+ },
+ "uses_upper": {
+  "by_count": {
+   "0": 11153,
+   "1": 739,
+   "2": 687,
+   "3": 859,
+   "4": 1238,
+   "5": 676,
+   "6": 284,
+   "7": 205,
+   "8": 643
+  },
+  "exactly_one_by_field": {
+   "active": 388,
+   "level": 178,
+   "need": 8,
+   "present": 38,
+   "requires": 79,
+   "take": 35,
+   "give": 13
+  },
+  "each_field": {
+   "level": 3298,
+   "active": 2260,
+   "requires": 2789,
+   "need": 2485,
+   "draws": 1262,
+   "present": 3169,
+   "take": 2928,
+   "give": 3114
+  },
+  "state_only": 2016,
+  "exchange_only": 711,
+  "both_kinds": 2604,
+  "groups": [
+   [
+    "{}",
+    11153
+   ],
+   [
+    "{level, present, take, give}",
+    774
+   ],
+   [
+    "{level, active, requires, need, draws, present, take, give}",
+    643
+   ],
+   [
+    "{present, take, give}",
+    505
+   ],
+   [
+    "{requires, need}",
+    465
+   ],
+   [
+    "{active}",
+    388
+   ],
+   [
+    "{level, active, requires, need, draws}",
+    387
+   ],
+   [
+    "{level, requires, need}",
+    214
+   ],
+   [
+    "{level, requires, need, present, take, give}",
+    195
+   ],
+   [
+    "{level, active, present, take, give}",
+    189
+   ],
+   [
+    "{level}",
+    178
+   ],
+   [
+    "{requires, present, take, give}",
+    161
+   ],
+   [
+    "{level, active, requires, need, present, take, give}",
+    159
+   ],
+   [
+    "{level, active, requires, need}",
+    143
+   ],
+   [
+    "{requires}",
+    79
+   ],
+   [
+    "{level, requires, need, draws}",
+    56
+   ],
+   [
+    "{level, active}",
+    46
+   ],
+   [
+    "{active, present, give}",
+    42
+   ],
+   [
+    "{take, give}",
+    42
+   ],
+   [
+    "{present, take}",
+    41
+   ],
+   [
+    "{level, requires, need, present, give}",
+    41
+   ],
+   [
+    "{present}",
+    38
+   ],
+   [
+    "{present, give}",
+    37
+   ],
+   [
+    "{take}",
+    35
+   ],
+   [
+    "{requires, present, give}",
+    31
+   ],
+   [
+    "{level, active, requires, need, present, give}",
+    27
+   ],
+   [
+    "{level, active, requires, need, draws, present, give}",
+    26
+   ],
+   [
+    "{level, active, present, give}",
+    26
+   ],
+   [
+    "{level, active, draws, present, take, give}",
+    25
+   ],
+   [
+    "{level, active, requires, need, draws, present}",
+    24
+   ],
+   [
+    "{active, draws, present, take}",
+    23
+   ],
+   [
+    "{level, requires, present, take, give}",
+    22
+   ],
+   [
+    "{level, present, give}",
+    17
+   ],
+   [
+    "{active, present}",
+    17
+   ],
+   [
+    "{level, need}",
+    15
+   ],
+   [
+    "{level, requires, need, draws, present, take, give}",
+    15
+   ],
+   [
+    "{active, present, take, give}",
+    13
+   ],
+   [
+    "{give}",
+    13
+   ],
+   [
+    "{requires, need, present, give}",
+    13
+   ],
+   [
+    "{level, take, give}",
+    13
+   ],
+   [
+    "{requires, draws}",
+    11
+   ],
+   [
+    "{active, draws, present, take, give}",
+    10
+   ],
+   [
+    "{active, present, take}",
+    10
+   ],
+   [
+    "{need}",
+    8
+   ],
+   [
+    "{level, requires, draws, present, give}",
+    8
+   ],
+   [
+    "{active, requires, need}",
+    8
+   ],
+   [
+    "{active, requires, need, draws}",
+    6
+   ],
+   [
+    "{level, give}",
+    6
+   ],
+   [
+    "{level, active, present, take}",
+    6
+   ],
+   [
+    "{level, active, give}",
+    6
+   ],
+   [
+    "{level, requires, need, draws, take, give}",
+    5
+   ],
+   [
+    "{level, requires, need, take, give}",
+    5
+   ],
+   [
+    "{level, requires, draws, present, take, give}",
+    4
+   ],
+   [
+    "{level, active, take, give}",
+    4
+   ],
+   [
+    "{requires, need, draws}",
+    4
+   ],
+   [
+    "{requires, need, take, give}",
+    4
+   ],
+   [
+    "{need, present, take, give}",
+    4
+   ],
+   [
+    "{level, active, requires, draws, present, take, give}",
+    3
+   ],
+   [
+    "{active, requires}",
+    3
+   ],
+   [
+    "{active, take, give}",
+    3
+   ],
+   [
+    "{requires, need, present, take, give}",
+    3
+   ],
+   [
+    "{active, requires, present, give}",
+    3
+   ],
+   [
+    "{level, requires, need, present, take}",
+    3
+   ],
+   [
+    "{requires, give}",
+    3
+   ],
+   [
+    "{level, active, requires, need, take, give}",
+    2
+   ],
+   [
+    "{level, active, draws, present, take}",
+    2
+   ],
+   [
+    "{level, active, draws, present, give}",
+    2
+   ],
+   [
+    "{active, requires, give}",
+    2
+   ],
+   [
+    "{level, requires, present, give}",
+    1
+   ],
+   [
+    "{level, active, requires}",
+    1
+   ],
+   [
+    "{active, requires, need, present, give}",
+    1
+   ],
+   [
+    "{level, active, need}",
+    1
+   ],
+   [
+    "{level, active, requires, need, draws, present, take}",
+    1
+   ],
+   [
+    "{level, active, need, draws}",
+    1
+   ],
+   [
+    "{active, draws}",
+    1
+   ],
+   [
+    "{requires, need, give}",
+    1
+   ],
+   [
+    "{active, requires, draws}",
+    1
+   ],
+   [
+    "{active, requires, need, draws, present, give}",
+    1
+   ],
+   [
+    "{active, requires, need, draws, present, take, give}",
+    1
+   ],
+   [
+    "{level, need, present, take, give}",
+    1
+   ],
+   [
+    "{level, active, requires, present, take, give}",
+    1
+   ],
+   [
+    "{active, requires, need, draws, take}",
+    1
+   ],
+   [
+    "{active, requires, need, draws, give}",
+    1
+   ]
+  ],
+  "by_ring": {
+   "core": {
+    "0": 10439,
+    "1": 733,
+    "2": 681,
+    "3": 845,
+    "4": 1224,
+    "5": 674,
+    "6": 284,
+    "7": 202,
+    "8": 642
+   },
+   "instances": {
+    "0": 535,
+    "1": 6,
+    "2": 6,
+    "3": 14,
+    "4": 14,
+    "5": 2,
+    "7": 3,
+    "8": 1
+   },
+   "applications": {
+    "0": 179
+   }
+  }
+ },
+ "statement_upper": {
+  "by_count": {
+   "0": 11301,
+   "1": 760,
+   "2": 692,
+   "3": 773,
+   "4": 1250,
+   "5": 682,
+   "6": 324,
+   "7": 183,
+   "8": 519
+  },
+  "exactly_one_by_field": {
+   "active": 399,
+   "level": 182,
+   "need": 9,
+   "present": 39,
+   "requires": 81,
+   "take": 37,
+   "give": 13
+  },
+  "each_field": {
+   "level": 3221,
+   "active": 2131,
+   "requires": 2724,
+   "need": 2420,
+   "draws": 1157,
+   "present": 2966,
+   "take": 2728,
+   "give": 2903
+  },
+  "state_only": 2064,
+  "exchange_only": 612,
+  "both_kinds": 2507,
+  "groups": [
+   [
+    "{}",
+    11301
+   ],
+   [
+    "{level, present, take, give}",
+    768
+   ],
+   [
+    "{level, active, requires, need, draws, present, take, give}",
+    519
+   ],
+   [
+    "{requires, need}",
+    465
+   ],
+   [
+    "{active}",
+    399
+   ],
+   [
+    "{present, take, give}",
+    398
+   ],
+   [
+    "{level, active, requires, need, draws}",
+    388
+   ],
+   [
+    "{level, requires, need, present, take, give}",
+    237
+   ],
+   [
+    "{level, requires, need}",
+    225
+   ],
+   [
+    "{level, active, present, take, give}",
+    185
+   ],
+   [
+    "{level}",
+    182
+   ],
+   [
+    "{requires, present, take, give}",
+    161
+   ],
+   [
+    "{level, active, requires, need}",
+    143
+   ],
+   [
+    "{level, active, requires, need, present, take, give}",
+    138
+   ],
+   [
+    "{requires}",
+    81
+   ],
+   [
+    "{level, requires, need, draws}",
+    72
+   ],
+   [
+    "{level, active}",
+    49
+   ],
+   [
+    "{present, take}",
+    45
+   ],
+   [
+    "{active, present, give}",
+    44
+   ],
+   [
+    "{take, give}",
+    43
+   ],
+   [
+    "{level, requires, need, present, give}",
+    43
+   ],
+   [
+    "{present}",
+    39
+   ],
+   [
+    "{present, give}",
+    37
+   ],
+   [
+    "{take}",
+    37
+   ],
+   [
+    "{requires, present, give}",
+    31
+   ],
+   [
+    "{active, draws, present, take}",
+    28
+   ],
+   [
+    "{level, active, present, give}",
+    26
+   ],
+   [
+    "{level, active, draws, present, take, give}",
+    25
+   ],
+   [
+    "{level, active, requires, need, present, give}",
+    25
+   ],
+   [
+    "{level, active, requires, need, draws, present, give}",
+    25
+   ],
+   [
+    "{level, active, requires, need, draws, present}",
+    24
+   ],
+   [
+    "{level, requires, present, take, give}",
+    22
+   ],
+   [
+    "{level, present, give}",
+    19
+   ],
+   [
+    "{active, present}",
+    16
+   ],
+   [
+    "{level, take, give}",
+    15
+   ],
+   [
+    "{level, need}",
+    14
+   ],
+   [
+    "{give}",
+    13
+   ],
+   [
+    "{requires, need, present, give}",
+    13
+   ],
+   [
+    "{active, present, take}",
+    12
+   ],
+   [
+    "{requires, draws}",
+    11
+   ],
+   [
+    "{requires, need, present, take, give}",
+    11
+   ],
+   [
+    "{active, present, take, give}",
+    10
+   ],
+   [
+    "{level, requires, need, draws, present, take, give}",
+    10
+   ],
+   [
+    "{need}",
+    9
+   ],
+   [
+    "{active, requires, need}",
+    9
+   ],
+   [
+    "{active, draws, present, take, give}",
+    8
+   ],
+   [
+    "{level, requires, draws, present, give}",
+    8
+   ],
+   [
+    "{active, requires, need, draws}",
+    6
+   ],
+   [
+    "{level, give}",
+    6
+   ],
+   [
+    "{level, active, present, take}",
+    6
+   ],
+   [
+    "{level, active, give}",
+    6
+   ],
+   [
+    "{level, requires, need, draws, take, give}",
+    5
+   ],
+   [
+    "{level, requires, draws, present, take, give}",
+    4
+   ],
+   [
+    "{active, take, give}",
+    4
+   ],
+   [
+    "{requires, need, draws}",
+    4
+   ],
+   [
+    "{level, requires, need, take, give}",
+    4
+   ],
+   [
+    "{level, requires, need, present, take}",
+    4
+   ],
+   [
+    "{requires, need, take, give}",
+    4
+   ],
+   [
+    "{need, present, take, give}",
+    4
+   ],
+   [
+    "{level, active, requires, draws, present, take, give}",
+    3
+   ],
+   [
+    "{level, active, take, give}",
+    3
+   ],
+   [
+    "{level, active, requires, need, draws, take, give}",
+    3
+   ],
+   [
+    "{active, requires, present, give}",
+    3
+   ],
+   [
+    "{requires, give}",
+    3
+   ],
+   [
+    "{level, active, requires, need, draws, present, take}",
+    2
+   ],
+   [
+    "{active, requires}",
+    2
+   ],
+   [
+    "{level, active, draws, present, take}",
+    2
+   ],
+   [
+    "{level, active, draws, present, give}",
+    2
+   ],
+   [
+    "{active, requires, need, draws, present, take, give}",
+    2
+   ],
+   [
+    "{level, need, present, take, give}",
+    2
+   ],
+   [
+    "{active, requires, give}",
+    2
+   ],
+   [
+    "{level, requires, present, give}",
+    1
+   ],
+   [
+    "{level, active, requires}",
+    1
+   ],
+   [
+    "{active, requires, need, present, give}",
+    1
+   ],
+   [
+    "{level, active, need}",
+    1
+   ],
+   [
+    "{level, active, requires, need, take, give}",
+    1
+   ],
+   [
+    "{level, active, need, draws}",
+    1
+   ],
+   [
+    "{active, draws}",
+    1
+   ],
+   [
+    "{requires, need, give}",
+    1
+   ],
+   [
+    "{active, requires, draws}",
+    1
+   ],
+   [
+    "{active, requires, need, draws, present, give}",
+    1
+   ],
+   [
+    "{level, requires, need, give}",
+    1
+   ],
+   [
+    "{level, active, requires, present, take, give}",
+    1
+   ],
+   [
+    "{active, requires, need, present, take, give}",
+    1
+   ],
+   [
+    "{active, requires, need, draws, take}",
+    1
+   ],
+   [
+    "{active, requires, need, draws, give}",
+    1
+   ]
+  ],
+  "by_ring": {
+   "core": {
+    "0": 10580,
+    "1": 752,
+    "2": 684,
+    "3": 761,
+    "4": 1242,
+    "5": 681,
+    "6": 324,
+    "7": 182,
+    "8": 518
+   },
+   "instances": {
+    "0": 542,
+    "1": 8,
+    "2": 8,
+    "3": 12,
+    "4": 8,
+    "5": 1,
+    "7": 1,
+    "8": 1
+   },
+   "applications": {
+    "0": 179
+   }
+  }
+ },
+ "uses_naive": {
+  "by_count": {
+   "0": 11142,
+   "1": 576,
+   "2": 622,
+   "3": 848,
+   "4": 1082,
+   "5": 708,
+   "6": 234,
+   "7": 175,
+   "8": 1097
+  },
+  "exactly_one_by_field": {
+   "active": 265,
+   "level": 165,
+   "need": 8,
+   "present": 18,
+   "requires": 74,
+   "take": 34,
+   "give": 12
+  },
+  "each_field": {
+   "level": 3537,
+   "active": 2500,
+   "requires": 3209,
+   "need": 2925,
+   "draws": 1748,
+   "present": 3312,
+   "take": 3116,
+   "give": 3290
+  },
+  "state_only": 1907,
+  "exchange_only": 685,
+  "both_kinds": 2750,
+  "groups": [
+   [
+    "{}",
+    11142
+   ],
+   [
+    "{level, active, requires, need, draws, present, take, give}",
+    1097
+   ],
+   [
+    "{level, present, take, give}",
+    660
+   ],
+   [
+    "{present, take, give}",
+    515
+   ],
+   [
+    "{level, active, requires, need, draws}",
+    487
+   ],
+   [
+    "{requires, need}",
+    450
+   ],
+   [
+    "{active}",
+    265
+   ],
+   [
+    "{level, requires, need}",
+    203
+   ],
+   [
+    "{level, requires, need, present, take, give}",
+    177
+   ],
+   [
+    "{level}",
+    165
+   ],
+   [
+    "{requires, present, take, give}",
+    159
+   ],
+   [
+    "{level, active, requires, need}",
+    138
+   ],
+   [
+    "{level, active, present, take, give}",
+    138
+   ],
+   [
+    "{level, active, requires, need, present, take, give}",
+    132
+   ],
+   [
+    "{requires}",
+    74
+   ],
+   [
+    "{level, requires, need, draws}",
+    42
+   ],
+   [
+    "{active, present, give}",
+    39
+   ],
+   [
+    "{take, give}",
+    39
+   ],
+   [
+    "{level, requires, need, present, give}",
+    38
+   ],
+   [
+    "{present, take}",
+    36
+   ],
+   [
+    "{take}",
+    34
+   ],
+   [
+    "{present, give}",
+    31
+   ],
+   [
+    "{level, active}",
+    31
+   ],
+   [
+    "{requires, present, give}",
+    30
+   ],
+   [
+    "{level, active, requires, need, present, give}",
+    26
+   ],
+   [
+    "{level, active, present, give}",
+    26
+   ],
+   [
+    "{level, active, requires, need, draws, present, give}",
+    25
+   ],
+   [
+    "{level, requires, present, take, give}",
+    21
+   ],
+   [
+    "{active, draws, present, take}",
+    19
+   ],
+   [
+    "{present}",
+    18
+   ],
+   [
+    "{level, active, requires, need, draws, present}",
+    18
+   ],
+   [
+    "{level, present, give}",
+    17
+   ],
+   [
+    "{level, need}",
+    15
+   ],
+   [
+    "{level, requires, need, draws, present, take, give}",
+    15
+   ],
+   [
+    "{requires, need, present, give}",
+    13
+   ],
+   [
+    "{level, take, give}",
+    13
+   ],
+   [
+    "{give}",
+    12
+   ],
+   [
+    "{requires, draws}",
+    11
+   ],
+   [
+    "{active, present, take}",
+    10
+   ],
+   [
+    "{need}",
+    8
+   ],
+   [
+    "{level, requires, draws, present, give}",
+    8
+   ],
+   [
+    "{active, present, take, give}",
+    7
+   ],
+   [
+    "{active, requires, need}",
+    7
+   ],
+   [
+    "{level, give}",
+    6
+   ],
+   [
+    "{level, active, present, take}",
+    6
+   ],
+   [
+    "{level, active, give}",
+    6
+   ],
+   [
+    "{level, active, draws, present, take, give}",
+    5
+   ],
+   [
+    "{level, requires, need, take, give}",
+    5
+   ],
+   [
+    "{requires, need, draws}",
+    4
+   ],
+   [
+    "{requires, need, take, give}",
+    4
+   ],
+   [
+    "{need, present, take, give}",
+    4
+   ],
+   [
+    "{active, draws, present, take, give}",
+    3
+   ],
+   [
+    "{level, requires, draws, present, take, give}",
+    3
+   ],
+   [
+    "{requires, need, present, take, give}",
+    3
+   ],
+   [
+    "{level, requires, need, draws, take, give}",
+    3
+   ],
+   [
+    "{level, requires, need, present, take}",
+    3
+   ],
+   [
+    "{level, active, requires, draws, present, take, give}",
+    2
+   ],
+   [
+    "{level, requires, present, give}",
+    1
+   ],
+   [
+    "{level, active, requires}",
+    1
+   ],
+   [
+    "{active, requires}",
+    1
+   ],
+   [
+    "{active, requires, need, present, give}",
+    1
+   ],
+   [
+    "{active, present}",
+    1
+   ],
+   [
+    "{level, active, need}",
+    1
+   ],
+   [
+    "{level, active, need, draws}",
+    1
+   ],
+   [
+    "{active, draws}",
+    1
+   ],
+   [
+    "{requires, need, give}",
+    1
+   ],
+   [
+    "{active, requires, draws}",
+    1
+   ],
+   [
+    "{active, requires, need, draws}",
+    1
+   ],
+   [
+    "{active, requires, need, draws, present, give}",
+    1
+   ],
+   [
+    "{active, requires, need, draws, present, take, give}",
+    1
+   ],
+   [
+    "{level, need, present, take, give}",
+    1
+   ],
+   [
+    "{active, requires, present, give}",
+    1
+   ],
+   [
+    "{level, active, requires, present, take, give}",
+    1
+   ]
+  ],
+  "by_ring": {
+   "core": {
+    "0": 10428,
+    "1": 574,
+    "2": 619,
+    "3": 836,
+    "4": 1071,
+    "5": 708,
+    "6": 234,
+    "7": 172,
+    "8": 1082
+   },
+   "instances": {
+    "0": 535,
+    "1": 2,
+    "2": 3,
+    "3": 12,
+    "4": 11,
+    "7": 3,
+    "8": 15
+   },
+   "applications": {
+    "0": 179
+   }
+  }
+ },
+ "premises": {
+  "none": 15987,
+  "each": {
+   "Dependent": 232,
+   "Balanced": 375,
+   "Acting": 235,
+   "Taking": 217,
+   "Dissipative": 268,
+   "Embodied": 279,
+   "Counted": 237,
+   "Transmitting": 201
+  },
+  "each_as_hypothesis_in_statement": {
+   "Dependent": 208,
+   "Balanced": 314,
+   "Acting": 211,
+   "Taking": 210,
+   "Dissipative": 252,
+   "Embodied": 251,
+   "Counted": 219,
+   "Transmitting": 198
+  },
+  "by_count": {
+   "0": 15987,
+   "1": 188,
+   "2": 51,
+   "3": 31,
+   "4": 21,
+   "5": 12,
+   "6": 12,
+   "7": 11,
+   "8": 171
+  },
+  "all_eight": 171,
+  "predicates_each": {
+   "Dependent": 567,
+   "Balanced": 1124,
+   "Acting": 537,
+   "Taking": 291,
+   "Dissipative": 396,
+   "Embodied": 380,
+   "Counted": 358,
+   "Transmitting": 225
+  }
+ },
+ "master_laws": {
+  "none": 13636,
+  "each": {
+   "closure": 594,
+   "balance": 1795,
+   "return": 480,
+   "lumping": 104,
+   "order": 154
+  },
+  "in_statement": {
+   "closure": 280,
+   "balance": 1344,
+   "return": 165,
+   "lumping": 69,
+   "order": 154
+  }
+ },
+ "world_in_statement": 890,
+ "constructs_in_proof": 4046,
+ "constructs_in_statement": 3599,
+ "lower_differs_from_upper": 660,
+ "destructures_in_proof": {},
+ "destructures_any": 0,
+ "modules": {
+  "Becoming.ContinuedClasses": {
+   "theorems": 74,
+   "groups_uses": [
+    [
+     "{level, active, requires, need, draws}",
+     18
+    ],
+    [
+     "{active}",
+     15
+    ],
+    [
+     "{level, requires, need}",
+     11
+    ],
+    [
+     "{}",
+     11
+    ],
+    [
+     "{requires, need}",
+     8
+    ],
+    [
+     "{requires}",
+     6
+    ],
+    [
+     "{level, requires, need, draws}",
+     4
+    ],
+    [
+     "{level, present, take, give}",
+     1
+    ]
+   ],
+   "groups_statement": [
+    [
+     "{level, active, requires, need, draws}",
+     18
+    ],
+    [
+     "{active}",
+     15
+    ],
+    [
+     "{level, requires, need}",
+     11
+    ],
+    [
+     "{}",
+     11
+    ],
+    [
+     "{requires, need}",
+     8
+    ],
+    [
+     "{requires}",
+     6
+    ],
+    [
+     "{level, requires, need, draws}",
+     4
+    ],
+    [
+     "{level, present, take, give}",
+     1
+    ]
+   ],
+   "premises": [
+    [
+     "{}",
+     73
+    ],
+    [
+     "{Balanced}",
+     1
+    ]
+   ],
+   "groups_upper": [
+    [
+     "{level, active, requires, need, draws}",
+     18
+    ],
+    [
+     "{active}",
+     15
+    ],
+    [
+     "{level, requires, need}",
+     11
+    ],
+    [
+     "{}",
+     11
+    ],
+    [
+     "{requires, need}",
+     8
+    ],
+    [
+     "{requires}",
+     6
+    ],
+    [
+     "{level, requires, need, draws}",
+     4
+    ],
+    [
+     "{level, active, requires, need, draws, present, take, give}",
+     1
+    ]
+   ],
+   "rows": {
+    "Becoming.Web.renewingAlong_not_consumingAlong": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.renewingAlong_iff": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.RenewingAlong.branch": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.consumingAlong_iff": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ConsumingAlong.merged": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Continuing.of_reidentify": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Continuing.to_reidentify": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.continuing_reidentify": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.renewingAlong_reidentify": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.consumingAlong_reidentify": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Continuing.itself_same": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Continuing.itself_onward": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Continuing.itself_from_zero": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.renewingAlong_itself_iff": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.consumingAlong_itself_iff": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.MergeClass.kept_renewed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.MergeClass.spent_consumed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.MergeClass.first_renews": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.MergeClass.first_consumes_along": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.MergeClass.readings": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.mono": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.Continuing.mono": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.underminingAlong_mono": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.consumingAlong_mono": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.renewingAlong_mono": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.itself_held": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.itself_onward": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.exists_steps_between": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.metAboveAlong_itself_iff": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.underminingAlong_itself_iff": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.of_carry": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.to_carry": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.metAboveAlong_reidentify": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.underminingAlong_reidentify": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.continues_as_alike": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Web.IncludesAcross.mono": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ExceedsAcross.anti": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.exceedsAcross_of_unlinked": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.itself_same": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.itself_steps": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.itself_of_le": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.includesAcross_itself_iff": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.exceedsAcross_itself_iff": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.includesAcross_reidentify": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.exceedsAcross_reidentify": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.widensAcross_reidentify": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Bud.old_admitted": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Bud.fresh_later": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Bud.fresh_not_first": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Bud.widens_by_name": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Bud.bud_adds_nothing": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Bud.readings": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.line_continuing": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Continuing.line": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.continuing_iff_line": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Continuing.mono_by_reach": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.renewingAlong_iff_line": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.consumingAlong_iff_line": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.RenewingAlong.branches": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ConsumingAlong.merged_candles": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.line": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.line_linked": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.linked_iff_line": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.dependenceClass_class": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Linked.held_line": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.line_held": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.held_iff_line": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.metAboveAlong_iff_line": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.line_image": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.carry_step_iff": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.line_reidentify": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.MergeClass.candles": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.MergeClass.both_consume_along": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Bud.fission": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ]
+   }
+  },
+  "Becoming.Identity": {
+   "theorems": 149,
+   "groups_uses": [
+    [
+     "{active}",
+     73
+    ],
+    [
+     "{}",
+     32
+    ],
+    [
+     "{level, requires, need}",
+     8
+    ],
+    [
+     "{level, requires, need, draws}",
+     8
+    ],
+    [
+     "{level, active, requires, need, draws}",
+     5
+    ],
+    [
+     "{level, active, requires, need}",
+     4
+    ],
+    [
+     "{level, active, requires, need, draws, present, take, give}",
+     4
+    ],
+    [
+     "{present, take, give}",
+     3
+    ],
+    [
+     "{requires}",
+     3
+    ],
+    [
+     "{active, draws, present, take}",
+     2
+    ],
+    [
+     "{active, present, take, give}",
+     2
+    ],
+    [
+     "{requires, need}",
+     2
+    ],
+    [
+     "{level, present, take, give}",
+     1
+    ],
+    [
+     "{active, draws, present, take, give}",
+     1
+    ],
+    [
+     "{active, requires}",
+     1
+    ]
+   ],
+   "groups_statement": [
+    [
+     "{active}",
+     76
+    ],
+    [
+     "{}",
+     32
+    ],
+    [
+     "{level, requires, need}",
+     8
+    ],
+    [
+     "{level, requires, need, draws}",
+     8
+    ],
+    [
+     "{level, active, requires, need}",
+     4
+    ],
+    [
+     "{level, active, requires, need, draws}",
+     4
+    ],
+    [
+     "{active, draws, present, take}",
+     4
+    ],
+    [
+     "{requires}",
+     4
+    ],
+    [
+     "{present, take, give}",
+     2
+    ],
+    [
+     "{active, present, take}",
+     2
+    ],
+    [
+     "{requires, need}",
+     2
+    ],
+    [
+     "{level, present, take, give}",
+     1
+    ],
+    [
+     "{present, take}",
+     1
+    ],
+    [
+     "{active, requires}",
+     1
+    ]
+   ],
+   "premises": [
+    [
+     "{}",
+     149
+    ]
+   ],
+   "groups_upper": [
+    [
+     "{active}",
+     72
+    ],
+    [
+     "{}",
+     32
+    ],
+    [
+     "{level, requires, need}",
+     8
+    ],
+    [
+     "{level, requires, need, draws}",
+     8
+    ],
+    [
+     "{level, active, requires, need, draws}",
+     7
+    ],
+    [
+     "{level, active, requires, need, draws, present, take, give}",
+     4
+    ],
+    [
+     "{level, active, requires, need}",
+     3
+    ],
+    [
+     "{present, take, give}",
+     3
+    ],
+    [
+     "{requires}",
+     3
+    ],
+    [
+     "{active, draws, present, take}",
+     2
+    ],
+    [
+     "{active, present, take, give}",
+     2
+    ],
+    [
+     "{requires, need}",
+     2
+    ],
+    [
+     "{level, present, take, give}",
+     1
+    ],
+    [
+     "{active, draws, present, take, give}",
+     1
+    ],
+    [
+     "{active, requires}",
+     1
+    ]
+   ],
+   "rows": {
+    "Becoming.Reidentify.every": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Reidentify.new_injective": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Reidentify.some": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.reidentify_step": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.reidentify_renewed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.reidentify_consumed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.reidentify_lost": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.reidentify_dependent": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.reidentify_renewingAt": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.reidentify_breakingOn": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.rename_renewingIn": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.rename_consumingIn": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.rename_tenure": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.rename_undermining": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.rename_unceasing": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Reidentify.mem_map": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.Census.reidentify": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.total_reidentify": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Flow.reidentify_amounts": [
+     [
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Flow.reidentify_balances": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Flow.reidentify_counts": [
+     [
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Flow.Taking.reidentify": [
+     [
+      "active",
+      "draws",
+      "present",
+      "take"
+     ],
+     [
+      "active",
+      "draws",
+      "present",
+      "take"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Flow.reidentify_more": [
+     [
+      "present",
+      "take"
+     ],
+     [
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Flow.More.arising_never_stops_reidentified_covering": [
+     [
+      "active",
+      "present",
+      "take"
+     ],
+     [
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Flow.More.unceasing_reidentified_covering": [
+     [
+      "active",
+      "present",
+      "take"
+     ],
+     [
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Flow.More.unceasing_reidentified": [
+     [
+      "active",
+      "draws",
+      "present",
+      "take"
+     ],
+     [
+      "active",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Reidentify.steady": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arises_of_keepsActive": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.unceasing_of_keepsActive": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.metAbove_of_keepsTenure": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.undermining_of_keepsTenure": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arises_of_back_keepsActive": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arises_iff_of_keepsActive_both": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.unceasing_iff_of_keepsActive_both": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.metAbove_of_back_keepsTenure": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.undermining_of_back_keepsTenure": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.no_join": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.undermining_iff_of_keepsTenure_both": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arisesFrom_self": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.unceasingFrom_self": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arisesFrom_of_more": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.unceasingFrom_of_growth": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Flow.More.unceasingFrom": [
+     [
+      "active",
+      "draws",
+      "present",
+      "take"
+     ],
+     [
+      "active",
+      "draws",
+      "present",
+      "take"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.continuation_reidentify": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.forces_iff_noSplit": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.paired_mem": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.paired_noSplit": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.paired_covers": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.forced_iff_more": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.ceasesFrom_self": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.self_one_to_one": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Census.balanceFrom_at": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Census.balanceFrom": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Census.balanceFrom_eq_at": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Census.balanceFrom_eq": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Census.arisingFrom_of_ceasingFrom_from": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Census.arisingFrom_of_ceasingFrom": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Census.ceasingFrom_of_arisingFrom_from": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Census.ceasingFrom_of_arisingFrom": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.unique": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.through": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.ends": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.back": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceasingFrom_found": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.not_not_arisingFrom_covered": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arisingFrom_not_stopping_covered": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.active": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.split": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.origin": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.onward": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arisingFrom_found": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.lineages_apart": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceasingFrom_not_stopping_covered": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.turn_turn": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.turn_fixed": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Turnover.swap_swap": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Turnover.pool_late": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Turnover.pool_not_renewed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Turnover.needs_spring": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Turnover.needs_pool": [
+     [
+      "requires",
+      "need"
+     ],
+     [
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Turnover.not_both": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Turnover.identified": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Turnover.reidentified": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.TideFlip.swap_swap": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.TideFlip.tide_changes": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.TideFlip.arises": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.TideFlip.naming_meets_premises": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Expansion.unceasing_reidentified": [
+     [
+      "active"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Budding.growth_without_arising": [
+     [
+      "active"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Identity.Fork.split_unceasing": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Merge.noSplit": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Merge.merging": [
+     [
+      "active"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Merge.idle": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Confluence.ended": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Confluence.noSplit": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Confluence.confluence": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Dormant.no_split_without_arising": [
+     [
+      "active",
+      "draws",
+      "present",
+      "take"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Tandem.apart": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Tandem.census": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Tandem.kept": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Tandem.budding": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Tandem.joining": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Lineage.swap_swap": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Lineage.arises": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Lineage.readings": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Lineage.one_way": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Layered.both": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Succession.swap_swap": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Succession.drawer_named": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Succession.readings": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Succession.one_way": [
+     [
+      "requires"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Dormancy.swap_swap": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Dormancy.first_only": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Dormancy.active_once": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Dormancy.joined_once": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Dormancy.dependent": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Dormancy.keeps_both": [
+     [
+      "active",
+      "requires"
+     ],
+     [
+      "active",
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Dormancy.consumed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Dormancy.classes": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.alikeBy_class": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.occurrence_eq": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.hasPred_iff_continues": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.hasSucc_iff_continued": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.begins_at_zero": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.arisesFrom_iff_sheng": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceasesFrom_iff_wang": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.abides_iff": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arises_iff_sheng_itself": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceases_iff_wang_itself": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceasesFrom_of_unconditioned": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.continuationStep_irrefl": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.nothing_continues_under_identity": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.positions_not_self_standing": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.reach_advances": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.line_advances": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.continuationStep_acyclic": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.reach_strict_order": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.noSplit_iff": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.noMerge_iff": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.split_fission": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.merge_candles": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.cons": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.Lineage.line": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.line_lineage": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.steps_cancel": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.lineage_iff_line": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Identity.Fork.fission": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Tandem.budding_fission": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Tandem.joining_candles": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ]
+   }
+  },
+  "Becoming.Persistence": {
+   "theorems": 86,
+   "groups_uses": [
+    [
+     "{active}",
+     21
+    ],
+    [
+     "{}",
+     19
+    ],
+    [
+     "{level, present, take, give}",
+     9
+    ],
+    [
+     "{level, active, present, take, give}",
+     8
+    ],
+    [
+     "{level, requires, need}",
+     7
+    ],
+    [
+     "{level, active, requires, need, draws}",
+     5
+    ],
+    [
+     "{level, requires, need, draws}",
+     5
+    ],
+    [
+     "{active, requires}",
+     3
+    ],
+    [
+     "{level, active, requires, need}",
+     2
+    ],
+    [
+     "{level, active, requires, need, draws, present, take, give}",
+     2
+    ],
+    [
+     "{level, active, requires, need, present, take, give}",
+     1
+    ],
+    [
+     "{present, take}",
+     1
+    ],
+    [
+     "{present, give}",
+     1
+    ],
+    [
+     "{level, requires, need, present, take, give}",
+     1
+    ],
+    [
+     "{level, requires, need, draws, present, take, give}",
+     1
+    ]
+   ],
+   "groups_statement": [
+    [
+     "{active}",
+     21
+    ],
+    [
+     "{}",
+     19
+    ],
+    [
+     "{level, present, take, give}",
+     9
+    ],
+    [
+     "{level, active, present, take, give}",
+     9
+    ],
+    [
+     "{level, requires, need}",
+     7
+    ],
+    [
+     "{active, requires}",
+     5
+    ],
+    [
+     "{level, active, requires, need, draws}",
+     5
+    ],
+    [
+     "{level, requires, need, draws}",
+     5
+    ],
+    [
+     "{level, active}",
+     1
+    ],
+    [
+     "{present, take}",
+     1
+    ],
+    [
+     "{present, give}",
+     1
+    ],
+    [
+     "{level, requires, need, present, take, give}",
+     1
+    ],
+    [
+     "{level, active, requires, need, draws, present, take, give}",
+     1
+    ],
+    [
+     "{level, requires, need, draws, present, take, give}",
+     1
+    ]
+   ],
+   "premises": [
+    [
+     "{}",
+     65
+    ],
+    [
+     "{Balanced}",
+     21
+    ]
+   ],
+   "groups_upper": [
+    [
+     "{level, active, requires, need, draws, present, take, give}",
+     30
+    ],
+    [
+     "{level, active, requires, need, draws}",
+     26
+    ],
+    [
+     "{}",
+     19
+    ],
+    [
+     "{level, requires, need, draws}",
+     3
+    ],
+    [
+     "{level, requires, need}",
+     2
+    ],
+    [
+     "{level, present, take, give}",
+     2
+    ],
+    [
+     "{level, active, present, take, give}",
+     2
+    ],
+    [
+     "{active}",
+     1
+    ],
+    [
+     "{active, requires}",
+     1
+    ]
+   ],
+   "rows": {
+    "Becoming.Web.arises_persisting_iff": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.waking_not_arising": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceases_persisting_iff": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arisesFrom_of_arises": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.keepsActive_of_held": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.keepsTenure_of_held": [
+     [
+      "active",
+      "requires"
+     ],
+     [
+      "active",
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.steady_held": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.named_throughout": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.renewingIn_held": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.consumingIn_held": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.persisting_census": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Hibernation.swap_swap": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Hibernation.holds_always": [
+     [
+      "active",
+      "requires"
+     ],
+     [
+      "active",
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Hibernation.pool_consumed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Hibernation.pool_not_renewed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Hibernation.renewing": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Hibernation.exchanged_consuming": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Hibernation.exchanged_not_renewing": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Hibernation.readings": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Dormancy.held_both": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Seed.held_readings": [
+     [
+      "active",
+      "requires"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Sleeper.held_readings": [
+     [
+      "level",
+      "active"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "present",
+      "take",
+      "give"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.reidentify_taken": [
+     [
+      "present",
+      "take"
+     ],
+     [
+      "present",
+      "take"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.reidentify_given": [
+     [
+      "present",
+      "give"
+     ],
+     [
+      "present",
+      "give"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.balanced_iff_conserves": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.balanced_reidentify_iff": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.conserves_iff": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.balanced_reidentify_iff_alike": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.standing_after": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.kept_broken_reidentify": [
+     [
+      "level",
+      "requires",
+      "need",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.transpose_left": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.transpose_right": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.transpose_other": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.transpose_transpose": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.transpose_alike": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.stepBeyond_self": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.stepBeyond_next": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.stepBeyond_zero": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.stepBeyond_step": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Reidentify.exchangeAfter_at": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Reidentify.exchangeAfter_next": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Reidentify.exchangeAfter_across": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Reidentify.exchangeAfter_elsewhere": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.World.exchangeAfter_balanced": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.fixed_iff": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.arises_fixed_iff": [
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.ceases_fixed_iff": [
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.conserves_noSplit": [
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.conserves_noMerge": [
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.still_of_apart": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Reidentify.old_still": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.World.renewed_still": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.consumed_still": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.classes_still": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.classes_fixed": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.ofRoles_reidentify_balanced": [
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.ofRoles_reidentify_arises": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.ofRoles_reidentify_unceasing": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.ofRoles_reidentify_renewed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.ofRoles_reidentify_renewed_formation": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.ofRoles_reidentify_consumed": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.ofRoles_reidentify_renewingIn": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.ofRoles_reidentify_consumingIn": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Shuttle.holder_only": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Shuttle.conserved": [
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Shuttle.alternates": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Shuttle.apart": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Shuttle.named_as_themselves": [
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Lineage.world_readings": [
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Hibernation.world_readings": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Web.stateClass_class": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.stateClass_finer": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.wang_state_of_change": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.sheng_state_of_change": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceases_iff_wang_state": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arises_iff_sheng_state": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceases_of_persisting_ceases": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arises_of_persisting_arises": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.fallsDormant_alters": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.wakes_alters": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.names_line_same": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.unending_of_holds": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.World.arises_fixed_iff_sheng": [
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.World.ceases_fixed_iff_wang": [
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "level",
+      "active",
+      "present",
+      "take",
+      "give"
+     ],
+     [
+      "Balanced"
+     ],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Hibernation.positions": [
+     [
+      "active",
+      "requires"
+     ],
+     [
+      "active",
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Seed.held_classes": [
+     [
+      "active",
+      "requires"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ]
+   }
+  },
+  "Becoming.Arising": {
+   "theorems": 44,
+   "groups_uses": [
+    [
+     "{}",
+     20
+    ],
+    [
+     "{active}",
+     7
+    ],
+    [
+     "{level}",
+     6
+    ],
+    [
+     "{level, active}",
+     5
+    ],
+    [
+     "{level, active, requires, need, draws}",
+     3
+    ],
+    [
+     "{level, active, requires, need}",
+     2
+    ],
+    [
+     "{level, requires, need, draws}",
+     1
+    ]
+   ],
+   "groups_statement": [
+    [
+     "{}",
+     20
+    ],
+    [
+     "{active}",
+     7
+    ],
+    [
+     "{level}",
+     6
+    ],
+    [
+     "{level, active}",
+     5
+    ],
+    [
+     "{level, active, requires, need, draws}",
+     3
+    ],
+    [
+     "{level, active, requires, need}",
+     2
+    ],
+    [
+     "{level, requires, need, draws}",
+     1
+    ]
+   ],
+   "premises": [
+    [
+     "{}",
+     44
+    ]
+   ],
+   "groups_upper": [
+    [
+     "{}",
+     20
+    ],
+    [
+     "{active}",
+     7
+    ],
+    [
+     "{level}",
+     6
+    ],
+    [
+     "{level, active}",
+     4
+    ],
+    [
+     "{level, active, requires, need, draws}",
+     4
+    ],
+    [
+     "{level, active, requires, need}",
+     2
+    ],
+    [
+     "{level, requires, need, draws}",
+     1
+    ]
+   ],
+   "rows": {
+    "Becoming.Web.rises_or_still": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.depletes_iff": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.stock_le": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.stock_lt": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.depletion_not_recurring": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Web.Unceasing.rises": [
+     [
+      "level",
+      "active"
+     ],
+     [
+      "level",
+      "active"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Web.Unceasing.activeRenewer_recurs": [
+     [
+      "level",
+      "active"
+     ],
+     [
+      "level",
+      "active"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Web.substitution_defers": [
+     [
+      "level",
+      "active"
+     ],
+     [
+      "level",
+      "active"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Web.dissipation_arising_not_recurring": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Tide.tide_even": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Tide.tide_odd": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Tide.unrelated_depletion": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Tide.renewal_without_arising": [
+     [
+      "level",
+      "active"
+     ],
+     [
+      "level",
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Growth.left_succ_le": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Growth.left_late": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Growth.ceases": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Relay.reserve_succ_le": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Relay.defers": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Recycle.total_one": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Recycle.atA_even": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Recycle.atA_odd": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Recycle.passed": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Recycle.closed_unceasing": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Oscillation.charge_even": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Oscillation.charge_odd": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Oscillation.back": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Oscillation.arises_on_rise": [
+     [
+      "level",
+      "active"
+     ],
+     [
+      "level",
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Oscillation.unceasing": [
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "active",
+      "requires",
+      "need"
+     ],
+     [],
+     [
+      "return"
+     ]
+    ],
+    "Becoming.Oscillation.readings": [
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [
+      "level",
+      "requires",
+      "need",
+      "draws"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Steps.alike_class": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.hasSucc_iff": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.hasPred_iff": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.sheng_zero": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.wang_iff_sheng_next": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.along_irrefl": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.along_hasSucc_iff": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.along_hasPred_iff": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.along_sheng_zero": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.activityClass_class": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.sheng_iff_steps": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.wang_iff_steps": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.arises_iff_sheng": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.unceasing_iff_late_beginnings": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.renews_iff": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ]
+   }
+  },
+  "Becoming.Change": {
+   "theorems": 90,
+   "groups_uses": [
+    [
+     "{}",
+     70
+    ],
+    [
+     "{active}",
+     12
+    ],
+    [
+     "{level}",
+     5
+    ],
+    [
+     "{level, active, requires}",
+     1
+    ],
+    [
+     "{level, requires, need}",
+     1
+    ],
+    [
+     "{requires}",
+     1
+    ]
+   ],
+   "groups_statement": [
+    [
+     "{}",
+     70
+    ],
+    [
+     "{active}",
+     12
+    ],
+    [
+     "{level}",
+     5
+    ],
+    [
+     "{level, active, requires}",
+     1
+    ],
+    [
+     "{level, requires, need}",
+     1
+    ],
+    [
+     "{requires}",
+     1
+    ]
+   ],
+   "premises": [
+    [
+     "{}",
+     90
+    ]
+   ],
+   "groups_upper": [
+    [
+     "{}",
+     70
+    ],
+    [
+     "{active}",
+     12
+    ],
+    [
+     "{level}",
+     5
+    ],
+    [
+     "{level, active, requires}",
+     1
+    ],
+    [
+     "{level, requires, need}",
+     1
+    ],
+    [
+     "{requires}",
+     1
+    ]
+   ],
+   "rows": {
+    "Becoming.mark_cases": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.mark_le_one": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.mark_pos": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.mark_iff": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.excess_balance": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.excess_pos": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.excess_mark": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.across": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.over_stretch": [
+     [],
+     [],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.family_over_stretch": [
+     [],
+     [],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.fallen_within": [
+     [],
+     [],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.risen_within": [
+     [],
+     [],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.steps_mem": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.steps_last": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.steps_mono": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Recurs.mono": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.recurring_accumulates": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Recurs.accumulates": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.pos_of_exceeds": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.rising_recurs": [
+     [],
+     [],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.falling_recurs": [
+     [],
+     [],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.CeasesToBe.not_comes": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.ComesToBe.not_ceases": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.ComesToBe.of_not": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.CeasesToBe.of_not": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.rise_mark": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.fall_mark": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.persists": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.exists_not_of_em": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.stays_failing": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.persists_of_em": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Clear.cases": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Clear.false_of_not": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Clear.not_both": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Clear.and_both": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Clear.mono": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Clear.false_before": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Clear.or_first": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Clear.first_of_true": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Clear.first_unique": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.held_over_stretch": [
+     [],
+     [],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.marks_within": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.keep_pace": [
+     [],
+     [],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.coming_recurs_iff": [
+     [],
+     [],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Web.change_readings": [
+     [
+      "level",
+      "active",
+      "requires"
+     ],
+     [
+      "level",
+      "active",
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceasing_readings": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.supported_of": [
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [
+      "level",
+      "requires",
+      "need"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.falls_need_rises": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Web.standing_recurs_iff": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Web.arising_recurs_iff": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Web.unceasing_iff_covering": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Web.unceasing_iff": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     [
+      "balance"
+     ]
+    ],
+    "Becoming.Accretion.unceasing": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Accretion.never_ceases": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Accretion.rises": [
+     [
+      "level"
+     ],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Accretion.never_falls": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Attrition.ceasing": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Attrition.nothing_arises": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Flow.excess_zero_of_le": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.iff_of_eqs": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.ceasesToBe_iff_wang": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.comesToBe_iff_sheng": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.comesToBe_not_iff_sheng": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.ceasesToBe_not_iff_wang": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.CeasesToBe.not_comes_by_grammar": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.ComesToBe.not_ceases_by_grammar": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.sheng_iff_change": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.reach_later": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.reached_of_buqiong": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.buqiong_iff": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.keeps_of_alike": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.buqiong_alike_iff": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.still_of_buqiong": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.buqiong_of_stays_failing": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.persists_of_positions": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.positions_of_decided": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.persists_by_grammar": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.persists_of_em_by_grammar": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.positions_iff_change": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.positions_iff_em": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Steps.course_of_constant": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.core_iff_same_course": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.continues_in_core_iff_buqiong": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.still_stays_of_constant": [
+     [],
+     [],
+     [],
+     []
+    ],
+    "Becoming.Web.ceases_iff_wang": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceases_iff_inactive_sheng": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.sheng_iff_arises_or_ceases": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.ceasesToStand_iff_wang": [
+     [
+      "level"
+     ],
+     [
+      "level"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.dissolves_iff_wang": [
+     [
+      "requires"
+     ],
+     [
+      "requires"
+     ],
+     [],
+     []
+    ],
+    "Becoming.Web.flash_positions": [
+     [
+      "active"
+     ],
+     [
+      "active"
+     ],
+     [],
+     []
+    ]
+   }
+  }
+ }
+}

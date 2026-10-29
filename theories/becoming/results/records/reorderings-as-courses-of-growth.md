@@ -40,7 +40,7 @@
 
 - Anything about processes without a footprint, continuous time, infinite stretches, stretches from another step, or the present of a center.
 - The laws of the present on causal-set growth that take a Decidable instance of the whole precedence, on the World; three of their forms with no decision are instanced, and past_every_iff has none.
-- The World's representation theorem of the one-unfolding plan: this is one aspect of it, the interleavings.
+- A representation of the World through the order of joined exchanges: the World's representation theorem (the-world-represented-both-ways) reads the shared index, and this is one aspect of it, the interleavings.
 - That the World gives the footprint: it is supplied, and the order of exchanges is relative to it.
 - Which presence or which reordering is better.
 - **Counterexample:** In a world of three exchanges whose middle exchange is joined to the first only through a dependence, what the first touched persists to the last step, yet on no reordering is the first present when the last is taken (ByDependence.persists_not_present). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReorderingGrowth.lean)
@@ -78,6 +78,7 @@ Trace theory: the linear extensions of a trace's dependence order are exactly it
 - **formal-reuse**: [precedence-and-its-links](precedence-and-its-links.md). Causet and links: causal sets and their links.
 - **formal-reuse**: [what-can-be-born-next](what-can-be-born-next.md). process, empty and Kinds.Relabels: the growth and relabelling.
 - **formal-reuse**: [counts-exist-where-decided](counts-exist-where-decided.md). Decided, Decided.of_not_not and Decided.exists_below: deciding, and searching below a bound.
+- related, not a proved adapter: [the-world-represented-both-ways](the-world-represented-both-ways.md). The World represented in the grammar both ways, its amounts not: its occurrence model reads the shared index.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -102,6 +103,7 @@ Aliases: `A world's reorderings as courses of growth`, `世界之重排作为生
 ### History
 
 - 28 October 2026: added (UE15), a world's reorderings as courses of growth: the exchanges of a stretch a causal set under the order of joined exchanges, its natural labellings the renumberings keeping it, so with the footprint containing the exchanges the reorderings the courses of causal-set growth; the laws of presence on the reorderings by instance, each with its decision; presence on the world as it is precedence with nothing between joined to the earlier exchange, giving persistence of what it touched, not conversely, through a dependence or by moving and moving back; the vee as a world; after a review and a re-check; study section 438.
+- 29 October 2026, board item WRT2 (study section 440): the does-not-show item on the World's representation theorem brought to the landed theorem, the-world-represented-both-ways; related to it; no statement, next step or declaration changed.
 
 </details>
 

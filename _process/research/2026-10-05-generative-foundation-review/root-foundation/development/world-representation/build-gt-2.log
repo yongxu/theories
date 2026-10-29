@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/tree",
+  "modules": 5,
+  "ran": [
+    "Becoming.GrammarTransport",
+    "BecomingGrammarTransportAxiomAudit"
+  ],
+  "reused": 4,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarTransport": {
+      "theorems": 38,
+      "declarations": 41,
+      "with_axioms": {}
+    }
+  }
+}

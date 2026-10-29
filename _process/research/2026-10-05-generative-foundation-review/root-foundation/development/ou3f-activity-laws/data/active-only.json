@@ -1,0 +1,6810 @@
+{
+ "Becoming.Accretion.alive_distinct": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Accretion.census": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Accretion.mem_alive": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Accretion.never_ceases": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Accretion.unceasing": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ActiveReading.overdraw_admits_occurrence": {
+  "module": "Becoming.ActiveReading",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ActiveReading.overdraw_unranked": {
+  "module": "Becoming.ActiveReading",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ActiveReading.winning_active": {
+  "module": "Becoming.ActiveReading",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Alternation.active_iff": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Alternation.census": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Alternation.counted": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.Attrition.ceasing": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Attrition.nothing_arises": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Brood.arises": {
+  "module": "Becoming.Roles",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Bud.fission": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.CensusWebs.keep_pace": {
+  "module": "Becoming.Listing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.Confluence.confluence": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Confluence.ended": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Confluence.noSplit": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Contextual.glues_iff_freeAt": {
+  "module": "Becoming.ParityReadings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Contextual.world_active": {
+  "module": "Becoming.Readings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ContextualRuns.chsh_in_context_not_free": {
+  "module": "Becoming.ContextualRuns",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ContextualRuns.noGlobal_run_iff": {
+  "module": "Becoming.ContextualRuns",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ContextualRuns.specker_not_free": {
+  "module": "Becoming.ContextualRuns",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ContextualRuns.specker_respecting_not_free": {
+  "module": "Becoming.ContextualRuns",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ContextualRuns.square_in_context_not_free": {
+  "module": "Becoming.ContextualRuns",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ContextualRuns.square_respecting_not_free": {
+  "module": "Becoming.ContextualRuns",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Countless.countless": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Countless.ends": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Countless.never": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Countless.whole": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Cycle.census": {
+  "module": "Becoming.Population",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Dormancy.active_once": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Dormancy.joined_once": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Emission.active_bud": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Emission.arises": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Emission.arising_recurs": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Emission.census": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Emission.counted": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.Excluding.continues": {
+  "module": "Becoming.Exclusion",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Excluding.second_lasting": {
+  "module": "Becoming.Exclusion",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Expansion.census": {
+  "module": "Becoming.Population",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Exposed.census": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Flow.byOccurrence_uncounted": {
+  "module": "Becoming.Listing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Flow.capacityWithout_split": {
+  "module": "Becoming.Weightings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Flow.firstActiveOther_active": {
+  "module": "Becoming.Weightings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Flow.firstActiveOther_mem": {
+  "module": "Becoming.Weightings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Flow.otherCapacity_split": {
+  "module": "Becoming.Weightings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Footprinted.counted_reorder": {
+  "module": "Becoming.OrderNormal",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.Frame.arises_iff": {
+  "module": "Becoming.Unfolding",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Frame.novel_iff_arises": {
+  "module": "Becoming.Unfolding",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Frame.world_active": {
+  "module": "Becoming.Labelled",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Frame.world_fixes_run": {
+  "module": "Becoming.Labelled",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Gaps.ends": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Gaps.gaps": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Gaps.listed": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Gaps.whole": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Generations.allWhole_never": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Generations.brief": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Generations.ends": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Generations.generations": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Generations.listed": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Generations.whole": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Hexagram.world_arising_recurs": {
+  "module": "Becoming.Hexagrams",
+  "ring": "instances",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Hexagram.world_ceasing_recurs": {
+  "module": "Becoming.Hexagrams",
+  "ring": "instances",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.Holding.census": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Identity.Fork.fission": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Identity.Fork.split_unceasing": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Immortal.each_other": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Immortal.immortal": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Interleavings.LocalLaw.world_active_iff": {
+  "module": "Becoming.Interleavings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Interleavings.LocalLaw.world_renumber_active": {
+  "module": "Becoming.Interleavings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Layered.arise_again": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Layered.both": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Layered.brief": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Layered.composed": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Layered.within": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Lineage.arises": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Lineage.one_way": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Lineage.readings": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ListedWebs.ceasing_not_recurring": {
+  "module": "Becoming.ListedWebs",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ListedWebs.forcedAlong_iff_more": {
+  "module": "Becoming.ListedWebs",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ListedWebs.forcedAlong_of_eventually_noSplit": {
+  "module": "Becoming.ListedWebs",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ListedWebs.forced_iff_more": {
+  "module": "Becoming.ListedWebs",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ListedWebs.forces_iff_noSplit": {
+  "module": "Becoming.ListedWebs",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ListedWebs.rests_unrefuted_iff": {
+  "module": "Becoming.ListedWebs",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Map.relay_renews_and_ends": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Map.shifted_carry": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Map.shifted_generates": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Map.shifted_pass": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Merge.idle": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Merge.noSplit": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.MergeClass.candles": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Net.cycle_never_rests": {
+  "module": "Becoming.PlaceTransitionNets",
+  "ring": "instances",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Net.world_counted": {
+  "module": "Becoming.PlaceTransitionNets",
+  "ring": "instances",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.Once.once": {
+  "module": "Becoming.Reserve",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Oscillation.census": {
+  "module": "Becoming.Population",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ParitySystem.world_free_iff": {
+  "module": "Becoming.ParityReadings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.ParitySystem.world_met_le": {
+  "module": "Becoming.ParityReadings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Pass.arises": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Pass.ceases": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Pass.census": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Pass.embodied": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Pass.never_rests": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Passing.counted": {
+  "module": "Becoming.Entropy",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.PatternRelay.brief": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.PatternRelay.fire_shape": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.PatternRelay.relay": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.PatternRelay.shifted_fire": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.PatternRelay.shifts": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.PatternRelay.stopped_brief": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.PatternRelay.stopped_by_passing": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.PatternRelay.stopped_quiet": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.PatternRelay.stopped_relay": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Predation.hare_ends": {
+  "module": "Becoming.Roles",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Procession.census": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Rafters.decided": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Rafters.grade_two": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Rafters.house": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Rafters.remains": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Rafters.taken": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Ranking.absent_sustains": {
+  "module": "Becoming.Ranking",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Ranking.withheld_of_extends": {
+  "module": "Becoming.Ranking",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Repeated.census": {
+  "module": "Becoming.Population",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Ring.census": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Seeker.ends": {
+  "module": "Becoming.Exhaustion",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Seeker.lasting": {
+  "module": "Becoming.Exhaustion",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.SharedCopies.without_two": {
+  "module": "Becoming.Weightings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Shifts.shifts": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Shuttle.arises": {
+  "module": "Becoming.Roles",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Shuttle.recurs": {
+  "module": "Becoming.Roles",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Slow.census": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Square.QuantumAt.not_freeAt": {
+  "module": "Becoming.ParityReadings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Square.quantum_readings": {
+  "module": "Becoming.ParityReadings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Strobe.coarse_quiet": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Strobe.converse_fails": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Strobe.fine_arises": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Strobe.fine_ceases": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.TallyWorlds.balance_not_shown": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.TallyWorlds.lpo_of_census_ends": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.TallyWorlds.shown_iff_balance": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.TallyWorlds.shown_iff_tally": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Tandem.budding": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Tandem.budding_fission": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Tandem.census": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Tandem.joining": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Tandem.joining_candles": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Tandem.kept": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Throughput.census": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.TideFlip.arises": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Trickle.active_iff": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Trickle.census": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Trickle.counted": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.Web.AllWhole.active_of_none": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AllWhole.active_whole": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AllWhole.arises_part": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AllWhole.atLeastWhole": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AllWhole.brief_of_part": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AllWhole.ceases_part": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AllWhole.ends_of_part": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AllWhole.inactive_of_part": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AllWhole.persists_iff": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AtLeastWhole.allWhole": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AtLeastWhole.arises_part": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AtLeastWhole.ceases_part": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.AtLeastWhole.whole": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.begins_passed": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.begins_passed_by_grammar": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.empty_stays": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.ends_within": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.line_back": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.passes_within": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.passes_within_by_line": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.present_back": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.present_earlier": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.present_of_le": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ByPassing.trace": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Census.arisingFrom_of_ceasingFrom": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Census.arisingFrom_of_ceasingFrom_from": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Census.balanceFrom": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Census.balanceFrom_at": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Census.balanceFrom_eq": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Census.balanceFrom_eq_at": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Census.ceasingFrom_of_arisingFrom": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Census.ceasingFrom_of_arisingFrom_from": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Census.over_stretch": {
+  "module": "Becoming.Population",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.Web.Census.reidentify": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Continuing.itself_from_zero": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Continuing.itself_onward": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Continuing.itself_same": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Continuing.line": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Continuing.mono": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Continuing.mono_by_reach": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Continuing.of_reidentify": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Continuing.to_reidentify": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Covered.arises_within": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Covered.needs_arising": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Covered.needs_new": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Ends.all": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Grade.across_step": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Grade.arises_of_lt": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Grade.ceases_of_lt": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Grade.diminished_iff": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Grade.eq_length_iff": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Grade.lt_length_of_inactive": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Grade.pos_iff": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.active": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.back": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.cons": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.ends": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.line": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.onward": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.origin": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.split": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.through": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Lineage.unique": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Listed.end_without_arising": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.arises_part": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.arises_within": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.atLeastWhole": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.ceases_part": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.covered": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.ends_without_arising": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.needs_arising": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.needs_new": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.parts_unceasing": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.persists_from": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.persists_of_arising": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.Whole.same_iff_inStep": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.abides_iff": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.active_along_line": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.active_back": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.active_before": {
+  "module": "Becoming.Exclusion",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.activityClass_class": {
+  "module": "Becoming.Arising",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.allWhole_self": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.alters_of_passes": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.always_keeps": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arisesFrom_iff_sheng": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arisesFrom_of_arises": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arisesFrom_of_more": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arisesFrom_self": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_iff_of_keepsActive_both": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_iff_sheng": {
+  "module": "Becoming.Arising",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_iff_sheng_carrier": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_iff_sheng_itself": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_iff_sheng_state": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_of_back_keepsActive": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_of_keepsActive": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_of_more": {
+  "module": "Becoming.Population",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_of_persisting_arises": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arises_persisting_iff": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arisingFrom_found": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arisingFrom_not_stopping_covered": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.arising_of_ceasing_listing": {
+  "module": "Becoming.Listing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.Web.arising_recurs_iff": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.Web.begins_within": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.byPassing_iff_continues": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.byPassing_iff_hasPred": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.carrierClass_class": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.carrierClass_finer": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.carries_iff": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.carry_step_iff": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.carrying_active": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.carrying_iff": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceasesFrom_iff_wang": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceasesFrom_of_unconditioned": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceasesFrom_self": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceases_iff_inactive_sheng": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceases_iff_wang": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceases_iff_wang_carrier": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceases_iff_wang_itself": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceases_iff_wang_state": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceases_of_pattern_ends": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceases_of_persisting_ceases": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceases_persisting_iff": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceasingFrom_found": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceasingFrom_not_stopping_covered": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.ceasing_readings": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.commute_active_away": {
+  "module": "Becoming.Reordering",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.commute_active_false": {
+  "module": "Becoming.OrderNormal",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.commute_active_true": {
+  "module": "Becoming.Reordering",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.commute_census": {
+  "module": "Becoming.OrderNormal",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.continuation_reidentify": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.continuing_iff_line": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.continuing_reidentify": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.degenerates_of_gone": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.diminished_iff": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.dissipation_arising_not_recurring": {
+  "module": "Becoming.Arising",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "return"
+  ]
+ },
+ "Becoming.Web.ended_for_good": {
+  "module": "Becoming.Reserve",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.fallsDormant_alters": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.flash_positions": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.generation_arises_late": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.generation_renews_late": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.hasPred_iff_continues": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.hasSucc_iff_continued": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.held_of_constant": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.inactive_of_not_arising": {
+  "module": "Becoming.Retaining",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.itself_carries_nothing": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.itself_keeps": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.itself_not_generation": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.keeping_of_carried_on": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.keepsActive_of_held": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.line_continuing": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.line_lineage": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.line_reidentify": {
+  "module": "Becoming.ContinuedClasses",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.lineage_iff_line": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.lineages_apart": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.merge_candles": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.named_throughout": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.noMerge_iff": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.noSplit_iff": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.no_join": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.not_endless_of_gone": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.not_not_arisingFrom_covered": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.otherCapacity_le": {
+  "module": "Becoming.Weightings",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.passesAt_of_alters": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.passing_carries_iff": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.passing_fire": {
+  "module": "Becoming.PatternPassing",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.persisting_census": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.rename_unceasing": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.renews_iff": {
+  "module": "Becoming.Arising",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.roles_arises": {
+  "module": "Becoming.Roles",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.roles_census": {
+  "module": "Becoming.Roles",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.roles_event_onto": {
+  "module": "Becoming.Roles",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.roles_unceasing": {
+  "module": "Becoming.Roles",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.sample_arises": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.sample_ceases": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.sample_ceasing": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.sample_census": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.sample_unceasing": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.self_one_to_one": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.sheng_iff_arises_or_ceases": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.sheng_iff_steps": {
+  "module": "Becoming.Arising",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.sheng_state_of_change": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.split_fission": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.stateClass_class": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.stateClass_finer": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.steady_held": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.stopped_not_endless": {
+  "module": "Becoming.MapInstances",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.unceasingFrom_of_growth": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.unceasingFrom_self": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.unceasing_iff": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.Web.unceasing_iff_bounded": {
+  "module": "Becoming.Population",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.Web.unceasing_iff_covering": {
+  "module": "Becoming.Change",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.Web.unceasing_iff_decided": {
+  "module": "Becoming.Decidedness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.unceasing_iff_late_beginnings": {
+  "module": "Becoming.Arising",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.unceasing_iff_of_keepsActive_both": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.unceasing_of_growth": {
+  "module": "Becoming.Population",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.unceasing_of_keepsActive": {
+  "module": "Becoming.Identity",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.unending_of_holds": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.wakes_alters": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.waking_not_arising": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.wang_iff_steps": {
+  "module": "Becoming.Arising",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.wang_state_of_change": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "level",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Web.whole_self": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.WholeExceeding.ends": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.WholeExceeding.listed": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.WholeExceeding.whole": {
+  "module": "Becoming.Wholes",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.Wilting.ends": {
+  "module": "Becoming.Roles",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.CountedBy.arising_iff_ceasing": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.World.CountedWithin.arising_iff_ceasing": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.World.CountsHold.obey": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.CountsOf.active_pos": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.CountsOf.arising_pos": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.CountsOf.tally": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.Finite.census_bounded": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.Finite.counted": {
+  "module": "Becoming.Premises",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.World.Finite.countedWithin": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.World.InAmounts.falls_of_ceases": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.InAmounts.rises_of_arises": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.InAmounts.stock_census": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.accretion_unbounded": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.World.after_counted": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.World.arising_iff_ceasing": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.World.arising_iff_ceasing_covered": {
+  "module": "Becoming.Decidedness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.arising_iff_ceasing_covering": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.World.arising_iff_ceasing_decided": {
+  "module": "Becoming.Decidedness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.arising_not_stopping": {
+  "module": "Becoming.Decidedness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.arising_not_stopping_covered": {
+  "module": "Becoming.Decidedness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.arising_of_ceasing": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.World.arising_unrefuted_covering": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.balancedRing_countsOf": {
+  "module": "Becoming.CensusCounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.ceasingRecurs_ofRoles": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.ceasing_not_stopping": {
+  "module": "Becoming.Decidedness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.ceasing_not_stopping_covered": {
+  "module": "Becoming.Decidedness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.ceasings_exist_iff_listed": {
+  "module": "Becoming.CensusCounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.census_one_way": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.World.census_table_holds₂": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.census_table_holds₃": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.census_table_obeys": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.census_table_obeys_free": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.census_table_obeys₂": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.census_table_obeys₃": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.comings_exist_iff": {
+  "module": "Becoming.CensusCounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.comings_exist_iff_listed": {
+  "module": "Becoming.CensusCounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.commute_counted": {
+  "module": "Becoming.OrderNormal",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.World.counted_of_ever": {
+  "module": "Becoming.Premises",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.World.countsHold_of_obey": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.countsOf_decided": {
+  "module": "Becoming.CensusTable",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.counts_active": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.counts_arising": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.drawdown_quiet": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.embodiedQueue_countsOf": {
+  "module": "Becoming.CensusCounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "need",
+   "requires"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.embodiedRing_countsOf": {
+  "module": "Becoming.CensusCounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.enclosedQueue_census": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.finiteQueue_census": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "give",
+   "take"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.finiteQueue_counts": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "give",
+   "take"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.grazing_arising": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "give",
+   "take"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.hatch_counted": {
+  "module": "Becoming.Premises",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.World.hatch_ever": {
+  "module": "Becoming.Premises",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.keep_lists": {
+  "module": "Becoming.Premises",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.law_decides": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.law_iff_em": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.law_iff_grammar_positions": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.law_iff_positions": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.law_of_em": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.not_recurring_of_rests_unrefuted": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.ofRoles_reidentify_arises": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.ofRoles_reidentify_unceasing": {
+  "module": "Becoming.Persistence",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.onceClosedQueue_census": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.openQueue_census": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.openQueue_counts": {
+  "module": "Becoming.Counting",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.procession_world": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.queue_countsOf": {
+  "module": "Becoming.CensusCounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.restsFrom_of_after": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.rests_unrefuted_iff": {
+  "module": "Becoming.InAmounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.rests_unrefuted_of_after": {
+  "module": "Becoming.Resolution",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.ring_countsOf": {
+  "module": "Becoming.CensusCounts",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.sample_counted": {
+  "module": "Becoming.Sampling",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.World.separate": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": [
+   "balance"
+  ]
+ },
+ "Becoming.World.shuttle_arising": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.slow_world": {
+  "module": "Becoming.Openness",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.stutter_arisingRecurs_iff": {
+  "module": "Becoming.Stuttering",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.stutter_ceasingRecurs_iff": {
+  "module": "Becoming.Stuttering",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [],
+  "master_laws": []
+ },
+ "Becoming.World.stutter_counted_of_section": {
+  "module": "Becoming.Stuttering",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active",
+   "draws",
+   "give",
+   "level",
+   "need",
+   "present",
+   "requires",
+   "take"
+  ],
+  "premises": [
+   "Counted"
+  ],
+  "master_laws": []
+ },
+ "Becoming.World.undecided_world": {
+  "module": "Becoming.Space",
+  "ring": "core",
+  "statement_fields": [
+   "active"
+  ],
+  "proof_fields": [
+   "active"
+  ],
+  "upper": [
+   "active"
+  ],
+  "premises": [],
+  "master_laws": []
+ }
+}
