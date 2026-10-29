@@ -38,7 +38,9 @@ them.
   undermining as named (`metAboveAlong_itself_iff`, `underminingAlong_itself_iff`); both are
   unchanged by every re-identification carrying the continuation (`metAboveAlong_reidentify`,
   `underminingAlong_reidentify`); and more links never remove undermining or consuming, nor fewer
-  renewing (`underminingAlong_mono`, `consumingAlong_mono`, `renewingAlong_mono`).
+  renewing (`underminingAlong_mono`, `consumingAlong_mono`, `renewingAlong_mono`), the last two
+  through more links making more continuing (`Continuing.mono`), which the last section proves
+  from the grammar's monotonicity of reach.
 * **Identity where standings coincide.** In a balanced world, where `d` stands after a step as `c`
   does, a balanced naming continues `c` as `d` (`World.continues_as_alike`); every record at each
   step is kept by any re-identification, so no record of the world decides between the two, and

@@ -4,7 +4,7 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 
 | category | theorems |
 |---|---|
-| (a) | 13 |
+| (a) | 14 |
 | (a), follows | 4 |
 | (a), done | 10 |
 | (b) | 4 |
@@ -15,7 +15,7 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 | (c) representation | 63 |
 | (c) calibration | 6 |
 | (c) witness | 141 |
-| (c) model | 174 |
+| (c) model | 173 |
 | all | 436 |
 
 ## Identity (73: (a) 2, (a), follows 2, (a), done 2, (b) 4, (c) representation 19, (c) witness 20, (c) model 24)
@@ -171,11 +171,12 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 | `Web.Whole.same_iff_inStep` | (c) model |  | a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it |
 | `Web.diminished_iff` | (c) model |  | a list's union whole active and its meet whole not is a diminished grade (counting) |
 
-## PatternPassing (33: (a) 3, (a), follows 2, (a), done 3, (c) representation 10, (c) witness 9, (c) model 6)
+## PatternPassing (33: (a) 4, (a), follows 2, (a), done 3, (c) representation 10, (c) witness 9, (c) model 5)
 
 | theorem | category | law or anchor | note |
 |---|---|---|---|
 | `Web.ByPassing.begins_passed` | (a) | «生于细而续于粗则异» | small: the twin begins_passed_by_grammar replaces only the contradiction from the arising (absurd before begins.1), through two representation lemmas; rule 9 still keeps the derivation and retires the direct proof |
+| `Web.ByPassing.ends_within` | (a) | «两端分则中有标»,«线内同类» | the direct proof traced a carrier back (trace), as passes_within's did; through line_back and «两端分则中有标» the passing lies on the pattern's line, where none is from T on; its conclusion is a negation, so trace's reason does not apply (found by the twins' review; filed (c) model before) |
 | `Web.ByPassing.passes_within` | (a) | «两端分则中有标»,«线内同类» | the direct proof (through trace, an induction) duplicates ByPassing.passes_within_by_line, which derives the same statement from the law that a line whose ends lie apart in a class has a marked step: rule 9 keeps the derivation, the direct proof goes and one name is retired |
 | `Web.ByPassing.present_earlier` | (a) | closure | presence kept by the backward step, by passing: a bounded region over k steps, Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays |
 | `Web.ByPassing.empty_stays` | (a), follows | Web.ByPassing.present_of_le | one application of present_of_le: it follows |
@@ -202,9 +203,8 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 | `PatternRelay.stopped_by_passing` | (c) witness |  | a fact of the constructed relay (PatternRelay) |
 | `PatternRelay.stopped_quiet` | (c) witness |  | a fact of the constructed relay (PatternRelay) |
 | `PatternRelay.stopped_relay` | (c) witness |  | a fact of the constructed relay (PatternRelay) |
-| `Web.ByPassing.ends_within` | (c) model |  | brief formations and no passing from T on: presence ends within d steps (counting over steps) |
 | `Web.ByPassing.present_back` | (c) model |  | by passing, presence at t + 1 gives presence at t (definitional) |
-| `Web.ByPassing.trace` | (c) model |  | active at S + k: active at S or a passing within k steps (induction); the grammar route of passes_within_by_line would need deciding sameness of formations, a change of statement |
+| `Web.ByPassing.trace` | (c) model |  | active at S + k: active at S or a passing within k steps (induction); the grammar route of passes_within (through line_back) would need deciding sameness of formations, a change of statement |
 | `Web.begins_within` | (c) model |  | presence from T on and brief formations: some arising within every d steps, as a double negation (counting over steps) |
 | `Web.carrying_active` (upper) | (c) model |  | the carrying web's activity lies within W's (definitional) |
 | `Web.carrying_iff` (upper) | (c) model |  | the carrying web's activity is what it carries, within W's (definitional) |

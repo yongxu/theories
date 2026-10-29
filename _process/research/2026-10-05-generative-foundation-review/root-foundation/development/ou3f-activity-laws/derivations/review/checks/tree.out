@@ -1,0 +1,373 @@
+Becoming.Web.Continuing {F C : Type} (W : Becoming.Web F C) (R : Nat → F → F → Prop) : Nat → F → Nat → F → Prop
+Becoming.Web.RenewingAlong {F C : Type} (W : Becoming.Web F C) (R : Nat → F → F → Prop) (t : Nat) (g : F) : Prop
+Becoming.Web.ConsumingAlong {F C : Type} (W : Becoming.Web F C) (R : Nat → F → F → Prop) (t : Nat) (g : F) : Prop
+Becoming.Web.renewingAlong_not_consumingAlong {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat}
+  {g : F} (renewing : W.RenewingAlong R t g) : ¬W.ConsumingAlong R t g
+Becoming.Web.renewingAlong_iff {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g : F} :
+  W.RenewingAlong R t g ↔
+    (∀ (c : C), W.Participates t g c → W.Renewed c) ∧
+      ∀ (f : F), W.active t g → R t g f → W.active (t + 1) f → W.RenewingAlong R (t + 1) f
+Becoming.Web.RenewingAlong.branch {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g f : F}
+  (renewing : W.RenewingAlong R t g) (before : W.active t g) (continues : R t g f) (after : W.active (t + 1) f) :
+  W.RenewingAlong R (t + 1) f
+Becoming.Web.consumingAlong_iff {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g : F} :
+  W.ConsumingAlong R t g ↔
+    (∃ c, W.draws t g c ∧ W.Consumed c) ∨
+      ∃ f, W.active t g ∧ R t g f ∧ W.active (t + 1) f ∧ W.ConsumingAlong R (t + 1) f
+Becoming.Web.ConsumingAlong.merged {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g f : F}
+  (consuming : W.ConsumingAlong R (t + 1) f) (before : W.active t g) (continues : R t g f)
+  (after : W.active (t + 1) f) : W.ConsumingAlong R t g
+Becoming.Reidentify.carry {F F' : Type} (σ : Becoming.Reidentify F F') (R : Nat → F → F → Prop) : Nat → F' → F' → Prop
+Becoming.Web.Continuing.of_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {σ : Becoming.Reidentify F F'} {t : Nat} {x : F'} {u : Nat} {y : F'} :
+  (W.reidentify σ).Continuing (σ.carry R) t x u y → W.Continuing R t (σ.old t x) u (σ.old u y)
+Becoming.Web.Continuing.to_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {σ : Becoming.Reidentify F F'} {t : Nat} {g : F} {u : Nat} {h : F} :
+  W.Continuing R t g u h → (W.reidentify σ).Continuing (σ.carry R) t (σ.new t g) u (σ.new u h)
+Becoming.Web.continuing_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {t : Nat} {x : F'} {u : Nat} {y : F'} :
+  (W.reidentify σ).Continuing (σ.carry R) t x u y ↔ W.Continuing R t (σ.old t x) u (σ.old u y)
+Becoming.Web.renewingAlong_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {t : Nat} {x : F'} :
+  (W.reidentify σ).RenewingAlong (σ.carry R) t x ↔ W.RenewingAlong R t (σ.old t x)
+Becoming.Web.consumingAlong_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {t : Nat} {x : F'} :
+  (W.reidentify σ).ConsumingAlong (σ.carry R) t x ↔ W.ConsumingAlong R t (σ.old t x)
+Becoming.Web.itself {F : Type} : Nat → F → F → Prop
+Becoming.Web.Continuing.itself_same {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {u : Nat} {h : F} :
+  W.Continuing Becoming.Web.itself t g u h → h = g
+Becoming.Web.Continuing.itself_onward {F C : Type} {W : Becoming.Web F C} {f : F} (always : ∀ (t : Nat), W.active t f)
+  (k s : Nat) : W.Continuing Becoming.Web.itself s f (s + k) f
+Becoming.Web.Continuing.itself_from_zero {F C : Type} {W : Becoming.Web F C} {f : F}
+  (always : ∀ (t : Nat), W.active t f) (u : Nat) : W.Continuing Becoming.Web.itself 0 f u f
+Becoming.Web.renewingAlong_itself_iff {F C : Type} {W : Becoming.Web F C} {f : F} (always : ∀ (t : Nat), W.active t f) :
+  W.RenewingAlong Becoming.Web.itself 0 f ↔ W.RenewingIn f
+Becoming.Web.consumingAlong_itself_iff {F C : Type} {W : Becoming.Web F C} {f : F}
+  (always : ∀ (t : Nat), W.active t f) : W.ConsumingAlong Becoming.Web.itself 0 f ↔ W.ConsumingIn f
+Becoming.MergeClass.Formation : Type
+Becoming.MergeClass.Place : Type
+Becoming.MergeClass.active : Nat → Becoming.MergeClass.Formation → Prop
+Becoming.MergeClass.requires : Nat → Becoming.MergeClass.Formation → Becoming.MergeClass.Place → Prop
+Becoming.MergeClass.draws : Nat → Becoming.MergeClass.Formation → Becoming.MergeClass.Place → Prop
+Becoming.MergeClass.level : Nat → Becoming.MergeClass.Place → Nat
+Becoming.MergeClass.web : Becoming.Web Becoming.MergeClass.Formation Becoming.MergeClass.Place
+Becoming.MergeClass.merge : Nat → Becoming.MergeClass.Formation → Becoming.MergeClass.Formation → Prop
+Becoming.MergeClass.kept_renewed : Becoming.MergeClass.web.Renewed Becoming.MergeClass.Place.kept
+Becoming.MergeClass.spent_consumed : Becoming.MergeClass.web.Consumed Becoming.MergeClass.Place.spent
+Becoming.MergeClass.first_renews : Becoming.MergeClass.web.RenewingIn Becoming.MergeClass.Formation.first
+Becoming.MergeClass.first_consumes_along :
+  Becoming.MergeClass.web.ConsumingAlong Becoming.MergeClass.merge 0 Becoming.MergeClass.Formation.first
+Becoming.MergeClass.readings :
+  Becoming.MergeClass.web.RenewingIn Becoming.MergeClass.Formation.first ∧
+    Becoming.MergeClass.web.ConsumingAlong Becoming.MergeClass.merge 0 Becoming.MergeClass.Formation.first ∧
+      ¬Becoming.MergeClass.web.RenewingAlong Becoming.MergeClass.merge 0 Becoming.MergeClass.Formation.first
+Becoming.Web.Linked {F : Type} (R : Nat → F → F → Prop) : Nat → F → Nat → F → Prop
+Becoming.Web.holdingOn {F C : Type} (W : Becoming.Web F C) (R : Nat → F → F → Prop) (c : C) : Nat → F → F → Prop
+Becoming.Web.MetAboveAlong {F C : Type} (W : Becoming.Web F C) (R : Nat → F → F → Prop) (t : Nat) (g : F) (c : C)
+  (m : Nat) : Prop
+Becoming.Web.UnderminingAlong {F C : Type} (W : Becoming.Web F C) (R : Nat → F → F → Prop) (t : Nat) (f : F) : Prop
+Becoming.Web.Linked.mono {F : Type} {R S : Nat → F → F → Prop} (within : ∀ (t : Nat) (g f : F), R t g f → S t g f)
+  {t : Nat} {g : F} {u : Nat} {h : F} : Becoming.Web.Linked R t g u h → Becoming.Web.Linked S t g u h
+Becoming.Web.underminingAlong_mono {F C : Type} {W : Becoming.Web F C} {R S : Nat → F → F → Prop}
+  (within : ∀ (t : Nat) (g f : F), R t g f → S t g f) {t : Nat} {f : F} :
+  W.UnderminingAlong R t f → W.UnderminingAlong S t f
+Becoming.Web.Linked.itself_held {F C : Type} {W : Becoming.Web F C} {c : C} {s : Nat} {h : F} {t : Nat} {g : F} :
+  Becoming.Web.Linked (W.holdingOn Becoming.Web.itself c) s h t g →
+    W.requires s h c → h = g ∧ s ≤ t ∧ ∀ (u : Nat), s ≤ u → u ≤ t → W.requires u g c
+Becoming.Web.Linked.itself_onward {F C : Type} {W : Becoming.Web F C} {c : C} {g : F} (k s : Nat) :
+  (∀ (u : Nat), s ≤ u → u ≤ s + k → W.requires u g c) →
+    Becoming.Web.Linked (W.holdingOn Becoming.Web.itself c) s g (s + k) g
+Becoming.Web.exists_steps_between {s t : Nat} : s ≤ t → ∃ k, t = s + k
+Becoming.Web.metAboveAlong_itself_iff {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {c : C} {m : Nat} :
+  W.MetAboveAlong Becoming.Web.itself t g c m ↔ Becoming.Web.MetAbove t g c m
+Becoming.Web.underminingAlong_itself_iff {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F} :
+  W.UnderminingAlong Becoming.Web.itself t f ↔ Becoming.Web.UnderminingAt t f
+Becoming.Web.Linked.of_carry {F F' : Type} {σ : Becoming.Reidentify F F'} {S : Nat → F → F → Prop} {t : Nat} {x : F'}
+  {u : Nat} {y : F'} : Becoming.Web.Linked (σ.carry S) t x u y → Becoming.Web.Linked S t (σ.old t x) u (σ.old u y)
+Becoming.Web.Linked.to_carry {F F' : Type} {σ : Becoming.Reidentify F F'} {S : Nat → F → F → Prop} {t : Nat} {g : F}
+  {u : Nat} {h : F} : Becoming.Web.Linked S t g u h → Becoming.Web.Linked (σ.carry S) t (σ.new t g) u (σ.new u h)
+Becoming.Web.metAboveAlong_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {t : Nat} {x : F'} {c : C} {m : Nat} :
+  (W.reidentify σ).MetAboveAlong (σ.carry R) t x c m ↔ W.MetAboveAlong R t (σ.old t x) c m
+Becoming.Web.underminingAlong_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {t : Nat} {x : F'} :
+  (W.reidentify σ).UnderminingAlong (σ.carry R) t x ↔ W.UnderminingAlong R t (σ.old t x)
+Becoming.World.continues_as_alike {w : Becoming.World} [DecidableEq w.Relatum] (balanced : w.Balanced) {t : Nat}
+  {c d : w.Relatum} (alike : w.web.level (t + 1) d = w.web.level (t + 1) c) :
+  ∃ σ, (w.reidentify σ).Balanced ∧ σ.old (t + 1) (σ.new t c) = d
+Becoming.Web.IncludesAcross {F C : Type} (W : Becoming.Web F C) (R : Nat → F → F → Prop) (l : Nat → C → Nat)
+  (T U : Nat) : Prop
+Becoming.Web.ExceedsAcross {F C : Type} (W : Becoming.Web F C) (R : Nat → F → F → Prop) (l : Nat → C → Nat)
+  (T U : Nat) : Prop
+Becoming.Web.WidensAcross {F C : Type} (W : Becoming.Web F C) (R : Nat → F → F → Prop) (l : Nat → C → Nat) (T U : Nat) :
+  Prop
+Becoming.Web.IncludesAcross.mono {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {l : Nat → C → Nat}
+  {S : Nat → F → F → Prop} (within : ∀ (t : Nat) (g f : F), R t g f → S t g f) {T U : Nat}
+  (includes : W.IncludesAcross R l T U) : W.IncludesAcross S l T U
+Becoming.Web.ExceedsAcross.anti {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {l : Nat → C → Nat}
+  {S : Nat → F → F → Prop} (within : ∀ (t : Nat) (g f : F), R t g f → S t g f) {T U : Nat} :
+  W.ExceedsAcross S l T U → W.ExceedsAcross R l T U
+Becoming.Web.exceedsAcross_of_unlinked {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {l : Nat → C → Nat}
+  {T U : Nat} {g : F} (admitted : W.Admits (l U) U g) (fresh : ∀ (f : F), ¬Becoming.Web.Linked R T f U g) :
+  W.ExceedsAcross R l T U
+Becoming.Web.Linked.itself_same {F : Type} {s : Nat} {h : F} {t : Nat} {g : F} :
+  Becoming.Web.Linked Becoming.Web.itself s h t g → s ≤ t ∧ h = g
+Becoming.Web.Linked.itself_steps {F : Type} {g : F} (k s : Nat) : Becoming.Web.Linked Becoming.Web.itself s g (s + k) g
+Becoming.Web.Linked.itself_of_le {F : Type} {s t : Nat} {g : F} (later : s ≤ t) :
+  Becoming.Web.Linked Becoming.Web.itself s g t g
+Becoming.Web.includesAcross_itself_iff {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T U : Nat}
+  (later : T ≤ U) : W.IncludesAcross Becoming.Web.itself l T U ↔ ∀ (f : F), W.Admits (l T) T f → W.Admits (l U) U f
+Becoming.Web.exceedsAcross_itself_iff {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T U : Nat}
+  (later : T ≤ U) : W.ExceedsAcross Becoming.Web.itself l T U ↔ ∃ g, W.Admits (l U) U g ∧ ¬W.Admits (l T) T g
+Becoming.Web.includesAcross_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {l : Nat → C → Nat} (σ : Becoming.Reidentify F F') {T U : Nat} :
+  (W.reidentify σ).IncludesAcross (σ.carry R) l T U ↔ W.IncludesAcross R l T U
+Becoming.Web.exceedsAcross_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {l : Nat → C → Nat} (σ : Becoming.Reidentify F F') {T U : Nat} :
+  (W.reidentify σ).ExceedsAcross (σ.carry R) l T U ↔ W.ExceedsAcross R l T U
+Becoming.Web.widensAcross_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {l : Nat → C → Nat}
+  (σ : Becoming.Reidentify F F') {T U : Nat} : (W.reidentify σ).WidensAcross (σ.carry R) l T U ↔ W.WidensAcross R l T U
+Becoming.Bud.Formation : Type
+Becoming.Bud.requires : Nat → Becoming.Bud.Formation → Unit → Prop
+Becoming.Bud.web : Becoming.Web Becoming.Bud.Formation Unit
+Becoming.Bud.bud : Nat → Becoming.Bud.Formation → Becoming.Bud.Formation → Prop
+Becoming.Bud.old_admitted (t : Nat) : Becoming.Bud.web.Admits (Becoming.Bud.web.level t) t Becoming.Bud.Formation.old
+Becoming.Bud.fresh_later : Becoming.Bud.web.Admits (Becoming.Bud.web.level 1) 1 Becoming.Bud.Formation.fresh
+Becoming.Bud.fresh_not_first : ¬Becoming.Bud.web.Admits (Becoming.Bud.web.level 0) 0 Becoming.Bud.Formation.fresh
+Becoming.Bud.widens_by_name : Becoming.Bud.web.WidensAcross Becoming.Web.itself Becoming.Bud.web.level 0 1
+Becoming.Bud.bud_adds_nothing : ¬Becoming.Bud.web.ExceedsAcross Becoming.Bud.bud Becoming.Bud.web.level 0 1
+Becoming.Bud.readings :
+  Becoming.Bud.web.WidensAcross Becoming.Web.itself Becoming.Bud.web.level 0 1 ∧
+    ¬Becoming.Bud.web.WidensAcross Becoming.Bud.bud Becoming.Bud.web.level 0 1
+Becoming.Web.line_continuing {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {x y : Nat × F}
+  (line : Becoming.«及» (Becoming.«续» (Becoming.Web.continuationStep R) W.activityClass) x y) :
+  W.active x.fst x.snd → W.Continuing R x.fst x.snd y.fst y.snd
+Becoming.Web.Continuing.line {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g : F} {u : Nat}
+  {h : F} :
+  W.Continuing R t g u h →
+    (t, g) = (u, h) ∨ W.active t g ∧ Becoming.«相续» (Becoming.Web.continuationStep R) W.activityClass (t, g) (u, h)
+Becoming.Web.continuing_iff_line {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g : F}
+  {u : Nat} {h : F} :
+  W.Continuing R t g u h ↔
+    (t, g) = (u, h) ∨ W.active t g ∧ Becoming.«相续» (Becoming.Web.continuationStep R) W.activityClass (t, g) (u, h)
+Becoming.Web.Continuing.mono {F C : Type} {W : Becoming.Web F C} {R S : Nat → F → F → Prop}
+  (within : ∀ (t : Nat) (g f : F), R t g f → S t g f) {t : Nat} {g : F} {u : Nat} {h : F} :
+  W.Continuing R t g u h → W.Continuing S t g u h
+Becoming.Web.consumingAlong_mono {F C : Type} {W : Becoming.Web F C} {R S : Nat → F → F → Prop}
+  (within : ∀ (t : Nat) (g f : F), R t g f → S t g f) {t : Nat} {g : F} :
+  W.ConsumingAlong R t g → W.ConsumingAlong S t g
+Becoming.Web.renewingAlong_mono {F C : Type} {W : Becoming.Web F C} {R S : Nat → F → F → Prop}
+  (within : ∀ (t : Nat) (g f : F), R t g f → S t g f) {t : Nat} {g : F} (renewing : W.RenewingAlong S t g) :
+  W.RenewingAlong R t g
+Becoming.Web.renewingAlong_iff_line {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g : F} :
+  W.RenewingAlong R t g ↔
+    ∀ (y : Nat × F),
+      (t, g) = y ∨ W.active t g ∧ Becoming.«相续» (Becoming.Web.continuationStep R) W.activityClass (t, g) y →
+        ∀ (c : C), W.Participates y.fst y.snd c → W.Renewed c
+Becoming.Web.consumingAlong_iff_line {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g : F} :
+  W.ConsumingAlong R t g ↔
+    ∃ y,
+      ((t, g) = y ∨ W.active t g ∧ Becoming.«相续» (Becoming.Web.continuationStep R) W.activityClass (t, g) y) ∧
+        ∃ c, W.draws y.fst y.snd c ∧ W.Consumed c
+Becoming.Web.RenewingAlong.branches {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g f f' : F}
+  (renewing : W.RenewingAlong R t g) (before : W.active t g) (r : R t g f) (r' : R t g f') (after : W.active (t + 1) f)
+  (after' : W.active (t + 1) f') (apart : f ≠ f') :
+  W.RenewingAlong R (t + 1) f ∧
+    W.RenewingAlong R (t + 1) f' ∧
+      ¬Becoming.«相续» (Becoming.Web.continuationStep R) W.activityClass (t + 1, f) (t + 1, f') ∧
+        ¬Becoming.«相续» (Becoming.Web.continuationStep R) W.activityClass (t + 1, f') (t + 1, f)
+Becoming.Web.ConsumingAlong.merged_candles {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat}
+  {g g' f : F} (before : W.active t g) (before' : W.active t g') (r : R t g f) (r' : R t g' f)
+  (after : W.active (t + 1) f) (consuming : W.ConsumingAlong R (t + 1) f) :
+  W.ConsumingAlong R t g ∧ W.ConsumingAlong R t g'
+Becoming.Web.Linked.line {F : Type} {R : Nat → F → F → Prop} {t : Nat} {g : F} {u : Nat} {h : F} :
+  Becoming.Web.Linked R t g u h →
+    (t, g) = (u, h) ∨ Becoming.«相续» (Becoming.Web.continuationStep R) Becoming.«一» (t, g) (u, h)
+Becoming.Web.line_linked {F : Type} {R : Nat → F → F → Prop} {x y : Nat × F}
+  (line : Becoming.«及» (Becoming.«续» (Becoming.Web.continuationStep R) Becoming.«一») x y) :
+  Becoming.Web.Linked R x.fst x.snd y.fst y.snd
+Becoming.Web.linked_iff_line {F : Type} {R : Nat → F → F → Prop} {t : Nat} {g : F} {u : Nat} {h : F} :
+  Becoming.Web.Linked R t g u h ↔
+    (t, g) = (u, h) ∨ Becoming.«相续» (Becoming.Web.continuationStep R) Becoming.«一» (t, g) (u, h)
+Becoming.Web.dependenceClass {F C : Type} (W : Becoming.Web F C) (c : C) : Becoming.«际» (Nat × F)
+Becoming.Web.dependenceClass_class {F C : Type} (W : Becoming.Web F C) (c : C) : Becoming.«类» (W.dependenceClass c)
+Becoming.Web.Linked.held_line {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {c : C} {s : Nat} {h : F}
+  {t : Nat} {g : F} :
+  Becoming.Web.Linked (W.holdingOn R c) s h t g →
+    (s, h) = (t, g) ∨
+      W.requires s h c ∧ Becoming.«相续» (Becoming.Web.continuationStep R) (W.dependenceClass c) (s, h) (t, g)
+Becoming.Web.line_held {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {c : C} {x y : Nat × F}
+  (line : Becoming.«及» (Becoming.«续» (Becoming.Web.continuationStep R) (W.dependenceClass c)) x y) :
+  W.requires x.fst x.snd c → Becoming.Web.Linked (W.holdingOn R c) x.fst x.snd y.fst y.snd
+Becoming.Web.held_iff_line {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {c : C} {s : Nat} {h : F}
+  {t : Nat} {g : F} (held : W.requires s h c) :
+  Becoming.Web.Linked (W.holdingOn R c) s h t g ↔
+    (s, h) = (t, g) ∨ Becoming.«相续» (Becoming.Web.continuationStep R) (W.dependenceClass c) (s, h) (t, g)
+Becoming.Web.metAboveAlong_iff_line {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g : F}
+  {c : C} {m : Nat} :
+  W.MetAboveAlong R t g c m ↔
+    ∃ s h,
+      ((s, h) = (t, g) ∨ Becoming.«相续» (Becoming.Web.continuationStep R) (W.dependenceClass c) (s, h) (t, g)) ∧
+        W.requires s h c ∧ W.need s h c ≤ W.level s c ∧ m < W.need s h c
+Becoming.Web.line_image {α β : Type} {R₁ E₁ : Becoming.«际» α} {R₂ E₂ : Becoming.«际» β} (φ : α → β)
+  (step : ∀ (x y : α), Becoming.«续» R₁ E₁ x y → Becoming.«续» R₂ E₂ (φ x) (φ y)) {x y : α}
+  (line : Becoming.«相续» R₁ E₁ x y) : Becoming.«相续» R₂ E₂ (φ x) (φ y)
+Becoming.Web.carry_step_iff {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {x y : Nat × F'} :
+  Becoming.«续» (Becoming.Web.continuationStep (σ.carry R)) (W.reidentify σ).activityClass x y ↔
+    Becoming.«续» (Becoming.Web.continuationStep R) W.activityClass (x.fst, σ.old x.fst x.snd) (y.fst, σ.old y.fst y.snd)
+Becoming.Web.line_reidentify {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {t u : Nat} {x y : F'} :
+  Becoming.«相续» (Becoming.Web.continuationStep (σ.carry R)) (W.reidentify σ).activityClass (t, x) (u, y) ↔
+    Becoming.«相续» (Becoming.Web.continuationStep R) W.activityClass (t, σ.old t x) (u, σ.old u y)
+Becoming.MergeClass.candles :
+  Becoming.«续» (Becoming.Web.continuationStep Becoming.MergeClass.merge) Becoming.MergeClass.web.activityClass
+      (0, Becoming.MergeClass.Formation.first) (1, Becoming.MergeClass.Formation.merged) ∧
+    Becoming.«续» (Becoming.Web.continuationStep Becoming.MergeClass.merge) Becoming.MergeClass.web.activityClass
+        (0, Becoming.MergeClass.Formation.second) (1, Becoming.MergeClass.Formation.merged) ∧
+      Becoming.«同族» (Becoming.Web.continuationStep Becoming.MergeClass.merge) Becoming.MergeClass.web.activityClass
+        (0, Becoming.MergeClass.Formation.first) (0, Becoming.MergeClass.Formation.second)
+Becoming.MergeClass.both_consume_along :
+  Becoming.MergeClass.web.ConsumingAlong Becoming.MergeClass.merge 0 Becoming.MergeClass.Formation.first ∧
+    Becoming.MergeClass.web.ConsumingAlong Becoming.MergeClass.merge 0 Becoming.MergeClass.Formation.second
+Becoming.Bud.fission :
+  Becoming.«相续» (Becoming.Web.continuationStep Becoming.Bud.bud) Becoming.Bud.web.activityClass
+      (0, Becoming.Bud.Formation.old) (1, Becoming.Bud.Formation.old) ∧
+    Becoming.«相续» (Becoming.Web.continuationStep Becoming.Bud.bud) Becoming.Bud.web.activityClass
+        (0, Becoming.Bud.Formation.old) (1, Becoming.Bud.Formation.fresh) ∧
+      ¬Becoming.«相续» (Becoming.Web.continuationStep Becoming.Bud.bud) Becoming.Bud.web.activityClass
+            (1, Becoming.Bud.Formation.old) (1, Becoming.Bud.Formation.fresh) ∧
+        ¬Becoming.«相续» (Becoming.Web.continuationStep Becoming.Bud.bud) Becoming.Bud.web.activityClass
+              (1, Becoming.Bud.Formation.fresh) (1, Becoming.Bud.Formation.old) ∧
+          (1, Becoming.Bud.Formation.old) ≠ (1, Becoming.Bud.Formation.fresh) ∧
+            Becoming.«同族» (Becoming.Web.continuationStep Becoming.Bud.bud) Becoming.Bud.web.activityClass
+              (1, Becoming.Bud.Formation.old) (1, Becoming.Bud.Formation.fresh)
+Becoming.Web.carrying {F C : Type} (W : Becoming.Web F C) (carries : Nat → F → Prop) : Becoming.Web F C
+Becoming.Web.carrying_active {F C : Type} (W : Becoming.Web F C) (carries : Nat → F → Prop) {t : Nat} {a : F}
+  (active : (W.carrying carries).active t a) : W.active t a
+Becoming.Web.carrying_iff {F C : Type} (W : Becoming.Web F C) {carries : Nat → F → Prop}
+  (carried : ∀ (t : Nat) (a : F), carries t a → W.active t a) (t : Nat) (a : F) :
+  (W.carrying carries).active t a ↔ carries t a
+Becoming.Web.Present {F C : Type} (V : Becoming.Web F C) (t : Nat) : Prop
+Becoming.Web.PassesAt {F C : Type} (V : Becoming.Web F C) (passes : Nat → F → F → Prop) (t : Nat) : Prop
+Becoming.Web.ByPassing {F C : Type} (V : Becoming.Web F C) (passes : Nat → F → F → Prop) : Prop
+Becoming.Web.begins_within {F C : Type} {V : Becoming.Web F C} {d T : Nat} (present : ∀ (t : Nat), T ≤ t → V.Present t)
+  (brief : ∀ (a : F), V.Brief d a) {S : Nat} (after : T ≤ S) : ¬∀ (j : Nat), j < d → ∀ (a : F), ¬V.Arises (S + j) a
+Becoming.Web.ByPassing.trace {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  (by_passing : V.ByPassing passes) {S k : Nat} {a : F} :
+  V.active (S + k) a → V.active S a ∨ ∃ j, j < k ∧ V.PassesAt passes (S + j)
+Becoming.Web.ByPassing.present_back {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  (by_passing : V.ByPassing passes) {t : Nat} (present : V.Present (t + 1)) : V.Present t
+Becoming.Web.ByPassing.present_earlier {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  (by_passing : V.ByPassing passes) {t k : Nat} : V.Present (t + k) → V.Present t
+Becoming.Web.ByPassing.present_of_le {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  (by_passing : V.ByPassing passes) {t t' : Nat} (le : t ≤ t') (present : V.Present t') : V.Present t
+Becoming.Web.ByPassing.empty_stays {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  (by_passing : V.ByPassing passes) {t : Nat} (empty : ¬V.Present t) {t' : Nat} (later : t ≤ t') : ¬V.Present t'
+Becoming.Web.ByPassing.ends_within {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  (by_passing : V.ByPassing passes) {d T : Nat} (brief : ∀ (a : F), V.Brief d a)
+  (stopped : ∀ (t : Nat), T ≤ t → ¬V.PassesAt passes t) {t : Nat} (later : T + d ≤ t) : ¬V.Present t
+Becoming.PatternRelay.web : Becoming.Web Nat Unit
+Becoming.PatternRelay.passes (t b a : Nat) : Prop
+Becoming.PatternRelay.brief (n : Nat) : Becoming.PatternRelay.web.Brief 2 n
+Becoming.PatternRelay.relay :
+  Becoming.PatternRelay.web.ByPassing Becoming.PatternRelay.passes ∧
+    (∀ (n : Nat), Becoming.PatternRelay.web.Brief 2 n) ∧
+      (∀ (n : Nat), Becoming.PatternRelay.web.Ends n) ∧
+        (∀ (t : Nat), Becoming.PatternRelay.web.Present t) ∧
+          ∀ (t : Nat), Becoming.PatternRelay.web.PassesAt Becoming.PatternRelay.passes t
+Becoming.PatternRelay.stopped (T : Nat) : Becoming.Web Nat Unit
+Becoming.PatternRelay.passesUntil (T t b a : Nat) : Prop
+Becoming.PatternRelay.stopped_by_passing (T : Nat) :
+  (Becoming.PatternRelay.stopped T).ByPassing (Becoming.PatternRelay.passesUntil T)
+Becoming.PatternRelay.stopped_brief (T n : Nat) : (Becoming.PatternRelay.stopped T).Brief 2 n
+Becoming.PatternRelay.stopped_quiet (T t : Nat) :
+  T ≤ t → ¬(Becoming.PatternRelay.stopped T).PassesAt (Becoming.PatternRelay.passesUntil T) t
+Becoming.PatternRelay.stopped_relay (T : Nat) :
+  (Becoming.PatternRelay.stopped T).ByPassing (Becoming.PatternRelay.passesUntil T) ∧
+    (∀ (n : Nat), (Becoming.PatternRelay.stopped T).Brief 2 n) ∧
+      (∀ (t : Nat), T ≤ t → ¬(Becoming.PatternRelay.stopped T).PassesAt (Becoming.PatternRelay.passesUntil T) t) ∧
+        (∀ (t : Nat), t ≤ T + 1 → (Becoming.PatternRelay.stopped T).Present t) ∧
+          ∀ (t : Nat), T + 2 ≤ t → ¬(Becoming.PatternRelay.stopped T).Present t
+Becoming.PatternRelay.half_odd (t : Nat) :
+  Becoming.odd t = true → Becoming.Pulse.half (t + 1) = Becoming.Pulse.half t + 1
+Becoming.PatternRelay.shifted : Becoming.Web Nat Unit
+Becoming.PatternRelay.passesOdd (t b a : Nat) : Prop
+Becoming.PatternRelay.shifts :
+  Becoming.PatternRelay.shifted.ByPassing Becoming.PatternRelay.passesOdd ∧
+    (∀ (n : Nat), Becoming.PatternRelay.shifted.Brief 2 n) ∧
+      (∀ (t : Nat), Becoming.PatternRelay.shifted.Present t) ∧
+        (∀ (t : Nat),
+            Becoming.odd t = false → ¬Becoming.PatternRelay.shifted.PassesAt Becoming.PatternRelay.passesOdd t) ∧
+          ∀ (t : Nat), Becoming.odd t = false → ∀ (n : Nat), ¬Becoming.PatternRelay.shifted.Arises t n
+Becoming.Web.passingContinuation {F : Type} (passes : Nat → F → F → Prop) (t : Nat) (b a : F) : Prop
+Becoming.Web.sameFormation {F : Type} : Becoming.«际» (Nat × F)
+Becoming.Web.carrierClass {F C : Type} (V : Becoming.Web F C) : Becoming.«际» (Nat × F)
+Becoming.Web.carrierClass_class {F C : Type} (V : Becoming.Web F C) : Becoming.«类» V.carrierClass
+Becoming.Web.carrierClass_finer {F C : Type} (V : Becoming.Web F C) : Becoming.«则» V.carrierClass V.activityClass
+Becoming.Web.byPassing_iff_continues {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop} :
+  V.ByPassing passes ↔
+    ∀ (t : Nat) (a : F), V.active (t + 1) a → V.Continues (Becoming.Web.passingContinuation passes) t a
+Becoming.Web.byPassing_iff_hasPred {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop} :
+  V.ByPassing passes ↔
+    ∀ (t : Nat) (a : F),
+      V.active (t + 1) a →
+        Becoming.«有前» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass
+          (t + 1, a)
+Becoming.Web.arises_iff_sheng_carrier {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop} {t : Nat}
+  {a : F} :
+  V.Arises t a ↔
+    V.active (t + 1) a ∧
+      Becoming.«生» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.carrierClass (t + 1, a)
+Becoming.Web.ceases_iff_wang_carrier {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop} {t : Nat}
+  {b : F} :
+  V.Ceases t b ↔
+    V.active t b ∧
+      Becoming.«亡» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.carrierClass (t, b)
+Becoming.Web.passesAt_of_alters {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop} {x y : Nat × F}
+  (carrying : V.active x.fst x.snd)
+  (alters :
+    Becoming.«异» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass
+      V.carrierClass x y) :
+  V.PassesAt passes x.fst
+Becoming.Web.alters_of_passes {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop} {t : Nat} {b a : F}
+  (carrier : V.active t b) (given : passes t b a) (carried : V.active (t + 1) a) (other : ¬b = a) :
+  Becoming.«异» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass V.carrierClass
+    (t, b) (t + 1, a)
+Becoming.Web.passing_fire {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop} {t : Nat} {b a : F}
+  (ceases : V.Ceases t b) (given : passes t b a) (carried : V.active (t + 1) a) :
+  Becoming.«亡» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.carrierClass (t, b) ∧
+    ¬Becoming.«亡» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass (t, b) ∧
+      Becoming.«异» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass
+        V.carrierClass (t, b) (t + 1, a)
+Becoming.Web.ceases_of_pattern_ends {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop} {t : Nat} {b : F}
+  (carrying : V.active t b)
+  (ends :
+    Becoming.«亡» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass (t, b)) :
+  V.Ceases t b
+Becoming.Web.ByPassing.line_back {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  (byPassing : V.ByPassing passes) {S k : Nat} {a : F} :
+  V.active (S + (k + 1)) a →
+    ∃ b,
+      V.active S b ∧
+        Becoming.«相续» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass (S, b)
+          (S + (k + 1), a)
+Becoming.Web.ByPassing.passes_within {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  (by_passing : V.ByPassing passes) {d T : Nat} (present : ∀ (t : Nat), T ≤ t → V.Present t)
+  (brief : ∀ (a : F), V.Brief d a) {S : Nat} (after : T ≤ S) : ∃ j, j < d ∧ V.PassesAt passes (S + j)
+Becoming.Web.ByPassing.begins_passed {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  (by_passing : V.ByPassing passes) {t : Nat} {a : F} (begins : V.Arises t a) : ∃ b, V.active t b ∧ passes t b a
+Becoming.PatternRelay.shifted_fire (t : Nat) (parity : Becoming.odd t = true) :
+  Becoming.«亡» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd))
+      Becoming.PatternRelay.shifted.carrierClass (t, Becoming.Pulse.half t) ∧
+    ¬Becoming.«亡» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd))
+          Becoming.PatternRelay.shifted.activityClass (t, Becoming.Pulse.half t) ∧
+      Becoming.«异» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd))
+        Becoming.PatternRelay.shifted.activityClass Becoming.PatternRelay.shifted.carrierClass
+        (t, Becoming.Pulse.half t) (t + 1, Becoming.Pulse.half t + 1)
+Becoming.PatternRelay.fire_shape :
+  Becoming.«则» Becoming.PatternRelay.shifted.carrierClass Becoming.PatternRelay.shifted.activityClass ∧
+    Becoming.«亡» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd))
+        Becoming.PatternRelay.shifted.carrierClass (1, 0) ∧
+      ¬Becoming.«亡» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd))
+          Becoming.PatternRelay.shifted.activityClass (1, 0)
