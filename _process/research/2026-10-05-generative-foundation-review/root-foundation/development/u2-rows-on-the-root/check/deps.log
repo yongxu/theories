@@ -1,0 +1,53 @@
+Becoming.U2Check.roles_supported_reading: uses its row Becoming.Web.roles_supported: true; grammar terms in the statement: [Becoming.«则»,
+ Becoming.«而»]
+Becoming.U2Check.roles_dependent_reading: uses its row Becoming.Web.roles_dependent: true; grammar terms in the statement: [Becoming.«则»,
+ Becoming.«而»]
+Becoming.U2Check.roles_alive_reading: uses its row Becoming.Web.roles_alive: true; grammar terms in the statement: [Becoming.«能»,
+ Becoming.«而»,
+ Becoming.«合»,
+ Becoming.«逆»]
+Becoming.U2Check.renewingAt_reading: uses its row Becoming.Web.renewingAt_iff_over_all: true; grammar terms in the statement: [Becoming.«则»,
+ Becoming.«而»,
+ Becoming.«逆»]
+Becoming.U2Check.transmits_at_reading: uses its row Becoming.Web.transmits_at_iff: true; grammar terms in the statement: [Becoming.«则»,
+ Becoming.«而»,
+ Becoming.«逆»,
+ Becoming.«合»]
+Becoming.U2Check.transmits_at_one_kind: uses its row Becoming.Web.transmits_at_iff: true; grammar terms in the statement: [Becoming.«则»,
+ Becoming.«而»,
+ Becoming.«逆»,
+ Becoming.«合»]
+Becoming.U2Check.identifies_iff_reading: uses its row Becoming.Limit.identifies_iff_tracks: true; grammar terms in the statement: [Becoming.«所闭»]
+Becoming.U2Check.kernel_and_reading: uses its row Becoming.Viability.kernel_and_iff: true; grammar terms in the statement: [Becoming.«所闭»]
+Becoming.U2Check.verifiableBy_reading: uses its row Becoming.Ideals.verifiableBy_iff_interior: true; grammar terms in the statement: [Becoming.«能»,
+ Becoming.«合»,
+ Becoming.«承»]
+Becoming.U2Check.significant_iff_held_reading: uses its row Becoming.Valuation.significant_iff_held: true; grammar terms in the statement: [Becoming.«则»,
+ Becoming.«合»]
+Becoming.U2Check.significance_undetermined_reading: uses its row Becoming.Web.significance_undetermined: true; grammar terms in the statement: [Becoming.«则»,
+ Becoming.«合»,
+ Becoming.«逾»]
+Becoming.U2Check.only_together_reading: uses its row Becoming.Dependence.Overdetermined.only_together: true; grammar terms in the statement: [Becoming.«能»,
+ Becoming.«合»,
+ Becoming.moveRel]
+Becoming.U2Check.response_not_fixed_reading: uses its row Becoming.ExchangeLaw.response_not_fixed_by_coupling: true; grammar terms in the statement: [Becoming.«则»,
+ Becoming.sameValue,
+ Becoming.«谓»,
+ Becoming.«一»]
+Becoming.U2Check.differenceOnlyTogether_reading: uses its row Becoming.Dependence.differenceOnlyTogether_iff: true; grammar terms in the statement: [Becoming.«定后»,
+ Becoming.moveRel,
+ Becoming.«能»,
+ Becoming.«合»]
+Becoming.U2Check.not_fixes_reading: uses its row Becoming.Run.not_fixes_of_untaken: true; grammar terms in the statement: [Becoming.«定后»,
+ Becoming.moveRel,
+ Becoming.«际»]
+Becoming.U2Check.run_agrees_every_start_reading: uses its row Becoming.SharedCodes.run_agrees_every_start_iff: true; grammar terms in the statement: [Becoming.«而»,
+ Becoming.«逆»,
+ Becoming.«历»]
+Becoming.U2Check.living_on_reaches_reading: uses its row Becoming.Web.living_on_reaches: true; grammar terms in the statement: [Becoming.«闭»,
+ Becoming.«合»]
+Becoming.U2Check.descent_reaches_reading: uses its row Becoming.Flow.descent_reaches: true; grammar terms in the statement: [Becoming.«闭»,
+ Becoming.«合»]
+Becoming.U2Check.unselected_beyond_data_reading: uses its row Becoming.Learning.Training.unselected_beyond_data: true; grammar terms in the statement: [Becoming.«闭»,
+ Becoming.«逆»]
+Becoming.U2Check.no_exact_finite_reading_reading: uses its row Becoming.Renewable.no_exact_finite_reading: true; grammar terms in the statement: [Becoming.«闭»]
