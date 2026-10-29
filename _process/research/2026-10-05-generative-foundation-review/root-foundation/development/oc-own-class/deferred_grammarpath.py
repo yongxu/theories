@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """For the next landing that rebuilds `Becoming.GrammarPath`: the wording fixes left for it. Run it in that landing's
 tree before its checker run; each edit is asserted to apply once, so a part already applied or reworded stops the
-script and is read by hand.
+script and is read by hand. Every edit is checked before any file is written, so a stop leaves the tree as it was.
+WRP2's rebuild of 29 October 2026 came without these edits; board item HE now holds them for its rebuild.
 
 The four fixes this script held before were applied by OC5's landing (`e5ccbbbb6`, study section 428): OC3's (g),
 "continues past"; OC4 A9, `FiniteFamilies.one_not_constant`; OC4 A12, `FinerWake.finer_class`; and the root bullet's
@@ -45,10 +46,13 @@ RECORD = ROOT / 'theories/becoming/results/records/what-a-line-holds-and-a-regul
 assert not sys.argv[1:], __doc__
 
 
+texts = {}  # every edit is made here first; nothing is written until all of them apply
+
+
 def edit(path, old, new):
-    text = path.read_text(encoding='utf-8')
+    text = texts[path] if path in texts else path.read_text(encoding='utf-8')
     assert text.count(old) == 1, (path.name, text.count(old), old[:80])
-    path.write_text(text.replace(old, new), encoding='utf-8')
+    texts[path] = text.replace(old, new)
 
 
 # (m): neither premise can be dropped from these laws
@@ -94,14 +98,16 @@ net's end, where a member conditions something not alike to it, whatever is alik
 edit(RECORD, '"Neither premise can be dropped: where a member\'s line runs',
      '"Neither premise can be dropped from these laws: where a member\'s line runs')
 edit(RECORD, '"二前提皆不可去：一员之线', '"此诸律二前提皆不可去：一员之线')
-record = json.loads(RECORD.read_text(encoding='utf-8'))
+record = json.loads(texts[RECORD])
 day = date.today()
 record['history'].append({
     'en': f"{day.day} {day:%B} {day.year}: the fourth law scoped to these laws, as OC5's review found; content unchanged.",
     'zh': f'{day.year}年{day.month}月{day.day}日：第 4 条规律限于此诸律，如 OC5 之审查所见；内容未变。'})
-RECORD.write_text(json.dumps(record, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+texts[RECORD] = json.dumps(record, ensure_ascii=False, indent=2) + '\n'
 edit(RF / 'THEOREM-CONNECTIVITY-APART.json', '"what leaves the class follows each alike step, under constancy',
      '"what leaves the class follows each alike occurrence, under constancy')
 edit(ROOT / 'theories/becoming/results/data/regions.json',
      "what leaves the class follows each alike step\"", "what leaves the class follows each alike occurrence\"")
+for path, text in texts.items():
+    path.write_text(text, encoding='utf-8')
 print('deferred GrammarPath edits applied')
