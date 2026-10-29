@@ -1,0 +1,7 @@
+{
+  "errors": [
+    "processes-represented-both-ways: invalid proof receipt binding: receipt does not bind the reviewed proof source",
+    "what-keeping-widening-needs: invalid proof receipt binding: receipt does not bind the reviewed proof source"
+  ],
+  "source_drift": []
+}

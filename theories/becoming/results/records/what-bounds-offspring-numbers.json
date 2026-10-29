@@ -348,7 +348,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
       "role": "proof",
-      "sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79"
+      "sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",

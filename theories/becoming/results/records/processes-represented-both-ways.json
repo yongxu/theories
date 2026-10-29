@@ -496,7 +496,6 @@
       "declarations": [
         "Becoming.GrammarTransport.map_replicate",
         "Becoming.«一一对应».prod",
-        "Becoming.«保之像»",
         "Becoming.«历之像»",
         "Becoming.«历之对应»",
         "Becoming.«同行之对应»",
@@ -509,12 +508,15 @@
         "Becoming.«迭内之对应»",
         "Becoming.«闭之对应»"
       ],
-      "sha256": "d5d12bd4915c3e02ff313001845b5879779d8236c9217f2129093db1dbb6f0b2"
+      "sha256": "1175e7f2283ce4d6a41ded9031081f98874a9fc234349b86c974f2050c746892"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "7cb999f6f9f20bfbb4cc0878e613403a87ccc174a1920720bfe9d4cb23294295"
+      "sha256": "7ae07b1d9b7bc91f417cd2afa6f547b9b9671cac83321c00185222df11752163",
+      "declarations": [
+        "Becoming.«保之像»"
+      ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
@@ -589,7 +591,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "3dbcbd0c9de36c866a72186b7c107ae8c6d5bd8c892194fadd3f9280eeccf08f"
+      "sha256": "d32253a284cfa7351abcad4cd62f4e85accde4875fe86578fd0d6a1d00397e15"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/DESIGN.md",
@@ -619,7 +621,12 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "1658f64102f186e8e1c1c2790592da8c0a19c8a903e7923d17affee554f82587"
+      "sha256": "10914b0375a615a4b5204c5f3d50bdd2214bb7cdb39e16a8097c0e57165a9af5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "role": "receipt",
+      "sha256": "6fbe7c7f21314fbd0a3eba90ff6bde5198b56d52137d19fc6857a87e83949aa4"
     }
   ],
   "proof_bindings": [
@@ -632,8 +639,15 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTransport.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarTransport",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -642,6 +656,10 @@
     {
       "en": "29 October 2026: added (WRP2), processes represented in the grammar both ways: a process exactly its relations, one per move, a law's truth carried to all relations indexed by moves; the converse, with the model with the move inside faithful up to correspondence carrying both classes and neither alone, a renaming keeping the bridged notions; the forward bridges and the calibration read on the grammar; after the design's review and re-read, a review of the Lean; study section 447.",
       "zh": "2026年10月29日：新增（WRP2），过程于文法中两向得表示：过程恰为其诸关系，每一着一关系，律之真携至一切以着为指标之关系；逆向，着在其内之模型携二类则于对应下忠实，单一类不足，重名保诸已桥之概念；前向之桥与于文法上读之校准；经设计之审及其复读、Lean 之审；研究第 447 节。"
+    },
+    {
+      "en": "30 October 2026 (HE, study section 455): «保之像» moved from GrammarTransport to beside «像» in GrammarLaws, statement and name unchanged; its reference and binding follow.",
+      "zh": "2026年10月30日（HE，研究第 455 节）：「保之像」自 GrammarTransport 移至 GrammarLaws 中「像」之旁，陈述与名不变；其引用与绑定随之。"
     }
   ]
 }

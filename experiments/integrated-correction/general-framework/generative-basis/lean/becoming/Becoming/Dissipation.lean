@@ -167,6 +167,13 @@ theorem total_le_of_support {q : α → Nat} :
               (congrArg (q a + ·) (total_append q r p).symm)))
         Nat.le_trans (Nat.add_le_add_left inner (q a)) (Nat.le_of_eq whole.symm)
 
+/-- Over lists without repetition holding where a quantity is positive, its totals agree. -/
+theorem total_eq_of_supports {q : α → Nat} {l m : List α} (dl : Distinct l)
+    (dm : Distinct m) (lm : ∀ a, 0 < q a → a ∈ m) (ml : ∀ a, 0 < q a → a ∈ l) :
+    total l q = total m q :=
+  Nat.le_antisymm (total_le_of_support dl fun a _ pos => lm a pos)
+    (total_le_of_support dm fun a _ pos => ml a pos)
+
 /-- With equality decidable, membership in a list is decidable. -/
 def decideMem [DecidableEq α] (a : α) : (l : List α) → Decidable (a ∈ l)
   | [] => .isFalse fun no => nomatch no

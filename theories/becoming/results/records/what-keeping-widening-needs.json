@@ -548,8 +548,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T145758.555114Z): Becoming.KeepingWidening, 307 declarations, and Population's length_le_count, every one with an empty axiom report, all cited here; every earlier statement of the module prints unchanged (signature audit). Built in sessions; independent read-only reviews by a separate AI agent, REVIEW-UE7 (study section 419) and REVIEW-GW-LEAN with its re-check (study section 448), every finding taken but one of the first; not reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T145758.555114Z）：Becoming.KeepingWidening 之 307 项声明与 Population 之 length_le_count，公理报告皆空，本记录全引；本模块之每一旧陈述所印不变（签名审查）。另一 AI 代理作独立只读审查：REVIEW-UE7（研究第 419 节）与 REVIEW-GW-LEAN 及其复查（研究第 448 节），所见除首次一项外皆采；未经人审。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T184601.050950Z): Becoming.KeepingWidening, 306 declarations, Dissipation's total_eq_of_supports and Population's length_le_count, every one with an empty axiom report, all cited here; every earlier statement of the module prints unchanged (signature audit). Built in sessions; independent read-only reviews by a separate AI agent, REVIEW-UE7 (study section 419) and REVIEW-GW-LEAN with its re-check (study section 448), every finding taken but one of the first; not reviewed by a person.",
+    "zh": "Lean 4.29.1 检查器实查（回执 20261029T184601.050950Z）：Becoming.KeepingWidening 之 306 项声明、Dissipation 之 total_eq_of_supports 与 Population 之 length_le_count，公理报告皆空，皆引；本模块之旧陈述所印不变（签名审查）。另一 AI 代理独立只读审查：REVIEW-UE7（第 419 节）与 REVIEW-GW-LEAN 及其复查（第 448 节），所见除首次一项外皆采；未经人审。"
   },
   "next_delta": {
     "en": "Comparing two courses on admitted ranges and on what they keep reachable is done (comparing-two-courses-on-what-they-admit, what-a-course-keeps-reachable), what carries their openings remaining; growth by kinds not given in advance; which reading the widening order counts, beyond names; review by a person.",
@@ -997,10 +997,17 @@
         "Becoming.Web.withinKind_begins_iff",
         "Becoming.Web.withinKind_cont_iff",
         "Becoming.Web.withinKind_within",
-        "Becoming.total_eq_of_supports",
         "Becoming.«全生成则生成»"
       ],
-      "sha256": "28cc9624785afad2e053796890109f3962b97fdcee0d04e28f80661893d3a2ba"
+      "sha256": "e0ad2ca67a7b6abeca90a6d1d982f4169c4ce80c7eb28b4e6cc21bceb746679b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.total_eq_of_supports"
+      ],
+      "sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
@@ -1058,7 +1065,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "72ee187c8060070df9670d7ce7725d54768a8d7f07cd1632ce091c4fcd20bc7d"
+      "sha256": "d32253a284cfa7351abcad4cd62f4e85accde4875fe86578fd0d6a1d00397e15"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/NOTE.md",
@@ -1078,7 +1085,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "847000d91b447e0b7a9f7fbed98ed255003e2e937fc958f6cffd61ba51e5746e"
+      "sha256": "abf2ac2b12f4845e38d5804d8bfa6f45d4837191fbc35086e5f971fe069ecf29"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md",
@@ -1099,12 +1106,22 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/signatures.json",
       "role": "integration",
       "sha256": "b46b30c182242de31f1f5568aca9760232a97c1d9d343b5e0bf4e7e7be9c932d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "role": "receipt",
+      "sha256": "6fbe7c7f21314fbd0a3eba90ff6bde5198b56d52137d19fc6857a87e83949aa4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he-held-edits/review/REVIEW-HE.md",
+      "role": "review",
+      "sha256": "9f791bc29806cc0edaff0224026398ab88672f5cd06ca057e374b8fb255eaca0"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.KeepingWidening",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1113,6 +1130,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Dissipation",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -1141,6 +1165,10 @@
     {
       "en": "29 October 2026, board item GW (study section 448): the law of beginnings and what keeping opening needs along any reading; the landed law along passings and its exclusions derived from the law along supported passings, statements unchanged; within a kind, renewals one grain up; the laws for dissipated requirements; generation where supports last one step; the kind relay, closed and fed, on which 全生成 at two orders and keeping widening within kinds hold together. Statement, laws, a hypothesis, two does-not-show items and the next step changed.",
       "zh": "2026年10月29日，工作板条目 GW（研究第 448 节）：起始之律与沿任一读法持续开出所需；沿传递之已落地之律及其排除由沿受支撑之传递之律推出，陈述不变；种类之内，高一粒度之更新；所需被耗散之律；支撑只持一步处之生成；种类接力（闭合与供给），其上二阶之全生成与种类内之持续扩大并立。陈述、诸律、一前提、两项不示及下一步有变。"
+    },
+    {
+      "en": "30 October 2026 (HE, study section 455): total_eq_of_supports moved from KeepingWidening to beside total_le_of_support in Dissipation, statement and name unchanged; its reference, binding and the validation scope follow; reviewed in REVIEW-HE.",
+      "zh": "2026年10月30日（HE，研究第 455 节）：total_eq_of_supports 自 KeepingWidening 移至 Dissipation 中 total_le_of_support 之旁，陈述与名不变；其引用、绑定与验证范围随之。"
     }
   ]
 }
