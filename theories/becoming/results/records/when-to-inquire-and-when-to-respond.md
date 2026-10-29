@@ -70,6 +70,8 @@ Choosing from observation classes is an observation-based (memoryless) policy fo
 - related, not a proved adapter: [testing-within-couplings](testing-within-couplings.md). The judgment that a distinction matters where histories compatible with the evidence need incompatible responses.
 - related, not a proved adapter: [risk-certificate-outcome-distinction](risk-certificate-outcome-distinction.md). A judgment through a projection is right only where it does not merge what must be told apart; here the same limit for choosing moves.
 
+**Used by:** [a-prediction-read-by-what-it-predicts](a-prediction-read-by-what-it-predicts.md) · [a-reading-kept-by-its-update](a-reading-kept-by-its-update.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

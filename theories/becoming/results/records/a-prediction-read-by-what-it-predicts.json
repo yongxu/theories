@@ -1,0 +1,271 @@
+{
+  "schema_version": 2,
+  "id": "a-prediction-read-by-what-it-predicts",
+  "title": {
+    "en": "A prediction read by what it predicts",
+    "zh": "为其所预言者所读之预言"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-29T19:32:28+00:00",
+  "statement": {
+    "en": "A published prediction read by the response is right exactly where the response leaves it; none is right where it moves every value; on the chain 0 to n, under a response mapping it into itself and keeping its order, publication from zero reaches the least right prediction by step n.",
+    "zh": "为应所读之公预言，恰当应不移之处为是；应移每一值处无一为是；于链 0 至 n，应映此链入其自身且守其序，自零反复公布至第 n 步达最小之是者。"
+  },
+  "laws": [
+    {
+      "en": "A prediction, published and read by the response, is right where the outcome, the response to it, is itself.",
+      "zh": "预言既公布而为应所读，其果即对之之应，若为其自身则为是。",
+      "declarations": [
+        "Becoming.ReflexivePrediction.Right"
+      ]
+    },
+    {
+      "en": "Where the response moves every value, no published prediction is right, and no predictor is right on every admitted response once one admitted response moves every value, even one reading the response itself; on two values negation moves every value.",
+      "zh": "应移每一值处，无公预言为是；一所容之应移每一值，则无预言者于每一所容之应皆是，即读应本身者亦然；于二值，否定移每一值。",
+      "declarations": [
+        "Becoming.ReflexivePrediction.none_right_of_moves",
+        "Becoming.ReflexivePrediction.no_predictor_right",
+        "Becoming.ReflexivePrediction.not_moves"
+      ]
+    },
+    {
+      "en": "Given choice over the admitted responses, a predictor right on every one exists exactly where each leaves some value.",
+      "zh": "于所容之诸应有择，则于每一应皆是之预言者存在，恰当每一应皆有其所不移之值。",
+      "declarations": [
+        "Becoming.ReflexivePrediction.predictor_iff"
+      ]
+    },
+    {
+      "en": "Publishing at each step the outcome of the step before, a step's prediction is right exactly where the next step publishes it again, and a right prediction, once published or once the outcome, is published at every later step.",
+      "zh": "每步公布前步之果，则一步之预言为是，恰当下一步复公布之；是之预言一经公布或一为果，其后每步皆公布之。",
+      "declarations": [
+        "Becoming.ReflexivePrediction.rests_iff_right",
+        "Becoming.ReflexivePrediction.right_rests",
+        "Becoming.ReflexivePrediction.reached_rests"
+      ]
+    },
+    {
+      "en": "On the values 0 to n with a response keeping them and their order, repeated publication from the bottom stays on the chain, rises, stays at or below every right prediction, and is right by step n: the least right prediction, reached within the chain's length.",
+      "zh": "于 0 至 n 之值，应守之且守其序，则自底反复公布不离此链、上升、不过每一是之预言，且至第 n 步为是：最小之是者，于链之长内达之。",
+      "declarations": [
+        "Becoming.ReflexivePrediction.on_chain",
+        "Becoming.ReflexivePrediction.rises",
+        "Becoming.ReflexivePrediction.below_right",
+        "Becoming.ReflexivePrediction.stays_from",
+        "Becoming.ReflexivePrediction.again_or_risen",
+        "Becoming.ReflexivePrediction.bottom_rests"
+      ]
+    },
+    {
+      "en": "Witness, a threshold response on 0, 1, 2, two where anything is predicted and zero where nothing is: it keeps the chain and its order, zero and two are both right, and publication from zero stays zero while from one it reaches two after one step and stays there.",
+      "zh": "例，于 0、1、2 之阈应：有所预言则二，无则零：其守链与序，零与二皆为是；自零公布则恒为零，自一则一步而达二且止于二。",
+      "declarations": [
+        "Becoming.ReflexivePrediction.ThresholdResponse.threshold",
+        "Becoming.ReflexivePrediction.ThresholdResponse.within",
+        "Becoming.ReflexivePrediction.ThresholdResponse.keeps",
+        "Becoming.ReflexivePrediction.ThresholdResponse.both_right",
+        "Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start"
+      ]
+    },
+    {
+      "en": "Witness, Boolean negation: it leaves no value fixed, so no published prediction is right, and repeated publication alternates for ever.",
+      "zh": "例，布尔之否：无所不移之值，故无公预言为是，反复公布则永相交替。",
+      "declarations": [
+        "Becoming.ReflexivePrediction.Negating.negate",
+        "Becoming.ReflexivePrediction.Negating.none_right",
+        "Becoming.ReflexivePrediction.Negating.alternates"
+      ]
+    },
+    {
+      "en": "Witness, the reflection 2 − v on 0, 1, 2: subtracting more leaves no more, so it reverses the order, and it leaves 1 fixed: a response reversing the order can have a right prediction.",
+      "zh": "例，于 0、1、2 之反射 2 − v：减多者所余不多，故其倒序，且不移 1：倒序之应可有是之预言。",
+      "declarations": [
+        "Becoming.ReflexivePrediction.Reflecting.reflect",
+        "Becoming.ReflexivePrediction.Reflecting.sub_antitone",
+        "Becoming.ReflexivePrediction.Reflecting.reverses",
+        "Becoming.ReflexivePrediction.Reflecting.middle_right"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Any type of values; the response a function of the prediction alone, read before the outcome; the chain the natural numbers 0 to n, the response keeping it and its order there; choice over the admitted responses only for a predictor's existence.",
+      "zh": "值之任一型；应唯为预言之函数，于果之前读之；链为自然数 0 至 n，应于其上守链与序；唯预言者之存在需于所容之诸应有择。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Calibration, probabilities or forecasts of a distribution: the prediction is one value.",
+      "zh": "校准、概率或分布之预测：预言为一值。",
+      "kind": "scope"
+    },
+    {
+      "en": "That actual publics respond by a function of the prediction alone, or keep its order.",
+      "zh": "实际之众唯以预言之函数应之，或守其序。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Convergence of repeated retraining with losses: only repeated publication of the last outcome on a chain is stated.",
+      "zh": "以损失反复再训之收敛：所陈者唯链上反复公布前轮之果。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean",
+      "detail": {
+        "en": "No right prediction: on two values negation leaves none fixed, and publication alternates (ReflexivePrediction.Negating.alternates).",
+        "zh": "无是之预言：于二值，否无所不移，公布永相交替（ReflexivePrediction.Negating.alternates）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean",
+      "detail": {
+        "en": "Two right predictions, where publication starts deciding which is reached (ReflexivePrediction.ThresholdResponse.reached_by_start).",
+        "zh": "二是之预言，公布之始定所达之何者（ReflexivePrediction.ThresholdResponse.reached_by_start）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: ReflexivePrediction imports Keeping and Recurrence (Law.orbit); the chain's law is proved by deciding equality of naturals at each step, with no excluded middle.",
+    "zh": "纯核，公理报告皆空：ReflexivePrediction 引 Keeping 与 Recurrence（Law.orbit）；链之律以每轮判自然数之相等证之，不用排中。"
+  },
+  "next_delta": {
+    "en": "Probabilistic forecasts and calibration under performativity in the periphery; a formation's self-prediction within the reading loop; a frozen test of a published forecast's response; review by a person.",
+    "zh": "外围之概率预测与表演性下之校准；读环内形成之自预言；公预测之应之冻结检验；人之审查。"
+  },
+  "correspondence": {
+    "en": "Self-fulfilling and self-defeating prophecy (Merton 1948): a public prediction is one more input to what it predicts. In the bounded scalar setup a continuous response mapping a closed interval into itself has a correct public prediction (Grunberg and Modigliani 1954; Simon 1954), an existence, not its reaching by repeated publication; here a response keeping a finite chain and its order reaches the least right one from the bottom by step n (Tarski 1955 for the fixed point). Related to performative stability (Perdomo, Zrnic, Mendler-Dünner and Hardt 2020), defined by risk minimization on the distribution a deployed model induces: where retraining returns the outcome exactly, it is this orbit; no general correspondence is proved. AI reading: the bandwagon and the underdog as responses keeping and reversing the order; several right predictions, where publication starts deciding, read as self-fulfilling runs (Diamond and Dybvig 1983), the witness a threshold response, not a model of coordination; a formation whose act negates its self-prediction has none right, the one-step self-reading gap (Diagonal.gap_unsaid). These are readings, not containments.",
+    "zh": "自应验与自挫败之预言（Merton 1948）：公预言为其所预言者之又一入。于有界之标量之设，连续之应映一闭区间入其自身者有正确之公预言（Grunberg 与 Modigliani 1954；Simon 1954），此为存在，非反复公布而达之；此处守有穷之链与其序之应，自底至第 n 步达最小之是者（不动点见 Tarski 1955）。近于表演性稳定（Perdomo、Zrnic、Mendler-Dünner 与 Hardt 2020），彼以部署之模型所致之分布上之风险最小定之：再训恰返其果处即此轨道；未证一般之对应。AI 解读：从众与助弱为守序与倒序之应；多是之预言而公布之始定之，读为自应验之挤兑（Diamond 与 Dybvig 1983），例为阈应而非协调之模型；行否其自预言之形成无是之自预言，为一步之自读之缺（Diagonal.gap_unsaid）。皆为读，非包含。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean",
+  "aliases": [
+    "reflexive prediction",
+    "反身之预言",
+    "self-fulfilling prophecy",
+    "自应验之预言",
+    "performative stability",
+    "表演性稳定",
+    "Becoming.ReflexivePrediction.bottom_rests",
+    "Becoming.ReflexivePrediction.no_predictor_right"
+  ],
+  "dependencies": [
+    {
+      "id": "when-to-inquire-and-when-to-respond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Choice over the admitted responses, Viability.ChoiceOver.",
+        "zh": "于所容之诸应之择 Viability.ChoiceOver。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "readings-within-what-they-read",
+      "detail": {
+        "en": "The self-reading gap, of which a formation negating its self-prediction is the one-step form.",
+        "zh": "自读之缺；否其自预言之形成为其一步之形。"
+      }
+    },
+    {
+      "id": "learning-by-refutation",
+      "detail": {
+        "en": "The diagonal course, on which every value an extrapolation proposes misses: the course form of a prediction negated by what it predicts.",
+        "zh": "对角之历程，其上外推所提之每一值皆失：为其所预言者所否之预言之历程之形。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReflexivePrediction.Negating.alternates",
+        "Becoming.ReflexivePrediction.Negating.negate",
+        "Becoming.ReflexivePrediction.Negating.none_right",
+        "Becoming.ReflexivePrediction.Reflecting.middle_right",
+        "Becoming.ReflexivePrediction.Reflecting.reflect",
+        "Becoming.ReflexivePrediction.Reflecting.reverses",
+        "Becoming.ReflexivePrediction.Reflecting.sub_antitone",
+        "Becoming.ReflexivePrediction.Right",
+        "Becoming.ReflexivePrediction.ThresholdResponse.both_right",
+        "Becoming.ReflexivePrediction.ThresholdResponse.keeps",
+        "Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start",
+        "Becoming.ReflexivePrediction.ThresholdResponse.threshold",
+        "Becoming.ReflexivePrediction.ThresholdResponse.within",
+        "Becoming.ReflexivePrediction.again_or_risen",
+        "Becoming.ReflexivePrediction.below_right",
+        "Becoming.ReflexivePrediction.bottom_rests",
+        "Becoming.ReflexivePrediction.no_predictor_right",
+        "Becoming.ReflexivePrediction.none_right_of_moves",
+        "Becoming.ReflexivePrediction.not_moves",
+        "Becoming.ReflexivePrediction.on_chain",
+        "Becoming.ReflexivePrediction.predictor_iff",
+        "Becoming.ReflexivePrediction.reached_rests",
+        "Becoming.ReflexivePrediction.rests_iff_right",
+        "Becoming.ReflexivePrediction.right_rests",
+        "Becoming.ReflexivePrediction.rises",
+        "Becoming.ReflexivePrediction.stays_from"
+      ],
+      "sha256": "4eb919e7bb105c90b4eb6dd40467601fa94e160d6ed8674faa376c378be40b3f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Diagonal.lean",
+      "role": "integration",
+      "sha256": "e0bb60720f219d2348299c7ad2bc4eb7a885e1ea82660c9989599c3da7293b4b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+      "role": "integration",
+      "sha256": "3f65e832ea3a9fb9359d3a6d77a45ac039ea86bfb93ac5207fbc857fac1adf74"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "role": "receipt",
+      "sha256": "442db94f6d0719ec28958e4fcca9f2017d4425bc63e7f28379dbf292b15e2e12"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d54324cb0e5a8ed7cb553a67433994ca4c58c53c8a6901928c6ca7952c12e65"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+      "role": "integration",
+      "sha256": "dce0afaa22e8fd2d9220c8691484f3b35d847aa360e08efd3069e2f1b4765562"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
+      "role": "integration",
+      "sha256": "6425b8f20cf4b6eeb67dc24fd81eddec5988550a2d3d79793920c226a8af9b93"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "62025a2b610fb1726559d2a6dd34536225d2a5ea66012ef29fd3865b1055ebb5"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReflexivePrediction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "30 October 2026: added (RF round 2), a prediction read by what it predicts: right where the response leaves it, none where it moves every value, the least right one reached on a chain; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.",
+      "zh": "2026年10月30日：新增（RF 第二轮），为其所预言者所读之预言：应不移处为是，应移每一值处无是者，链上达最小之是者；经 Lean 之跨模型审查与复查，凡所见皆取；研究第 456 节。"
+    }
+  ]
+}
