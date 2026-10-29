@@ -104,7 +104,7 @@ Identity was last changed by OU2 and OU3a (`46a72f71f`, 23 October), and no acti
 
 Queued after UE16 and UE17, behind any earlier clause, after a rehearsal on main outside the repository.
 
-**The rehearsal passed.** It ran on main at `0471d3343`, with UE16 landed and UE17 at the head, outside the repository: core receipt `20261029T155901.365282Z`, 346 modules, 75 Lean steps run and 1,309 reused.
+**The rehearsal passed.** It ran on main at `0471d3343`, with UE16 landed and UE17 at the head, outside the repository, and was rerun after the second pass's wording fixes: core receipt `20261029T161417.265481Z`, 346 modules, 75 Lean steps run and 1,309 reused.
 - The signature audit shows exactly the expected changes (`kit/signatures-rehearsal.log`).
 - The connectivity check names the four register entries below and nothing else (`kit/conn-check-rehearsal.log`).
 - The measure is unchanged (`kit/measure-rehearsal.json`): 45 of 127 central rows reach the grammar, and of the 118 distinct declarations 44, 31, 7 and 36, with no gap.
