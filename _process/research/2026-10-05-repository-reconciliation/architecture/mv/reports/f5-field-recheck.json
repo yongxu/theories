@@ -1,0 +1,90 @@
+{
+  "verdict": "Draft 2 is close but not ready. It takes 13 of the 20 findings soundly: F5 1/schema 1, F5 2/schema 2, F5 3, F5 5, schema 3, 5, 6, 9, 10 and 12. Seven are taken wrongly or only in part: F5 7, F5 6, schema 4, 7 (with F5 4), 8, 11 and 13. The most serious is F5 7. Draft 2's same-`of` exemption on the path rule lets F5 7's own wrong-row example through. Applying draft 2's rules to U2's 21 items at 033429fba (states→of, by→declaration, models from U2 §2's Model column, row 6 = process, as f8bcee9b4 later recorded), most rules pass for all 21: the path rule, the grammar test, 'of' in another law of the same record, no at-model law's declaration being an 'of', one item per theorem, no superseded record, and no central declaration among the 81 declarations of the 20 laws (COVERAGE's 118 distinct central declarations). The model test is where items fail. Read literally (one level of ModelStatements bodies), it fails rows 21 and 22 (living_on_reaches_reading, descent_reaches_reading), so U2's landing would stop under 'none unverified'. The review rule passes only on paper. 10 of the 16 records have no review reference yet. The other 6 pass only through older reviews that never read the items. REVIEW-U2, the review §6.2 names, predates the present statements of 10 items. Draft 2 also introduces three new problems: the expansion depth is unspecified, the closed key set breaks 13 existing law items that have no Chinese text, and §6.2 cites a review that came before the final statements.",
+  "findings_not_taken": [
+    {
+      "finding": "F5 7 (minor): a pair naming the wrong row",
+      "why": "Taken wrongly. F5 7 asked that the walk from the theorem pass through no other declared theorem. Draft 2 §2 (F5-MODEL-STATEMENTS.md:45) instead allows paths through 'no `declaration` of an item with another `of`', and claims 'This stops a pair from naming the wrong row'. The exemption is checked against the tested item's own `of`, so F5 7's own example passes. Take the wrong pair {declaration: significance_undetermined_reading, of: Web.roles_alive}. Its only route to Web.roles_alive is through roles_alive_reading (U2Check.lean:657, and :643 via significant_iff_livingClaim), whose item has the same `of`, Web.roles_alive. So the path is allowed. Web.significance_undetermined's proof (Significance.lean:393-401) does not use roles_alive. Here only the record rule refuses the pair, because Web.roles_alive is in none of continuation-condition-yields-living-significance's 14 laws. In a record whose one law holds several rows, such as life-as-condition-of-life law 2 with rows 1–3, the same pattern would pass both rules.",
+      "change": "In §2 'Proved through the row', replace 'along a path that passes through no `declaration` of an item with another `of`' with 'along a path that passes through no declaration of another item, except an item on the same law with the same `of`'. All 21 of U2's items still pass: renewing_not_closed reaches the row through finite_reading_not_exact, on its own law with its own `of`, and significance_undetermined_reading reaches Web.significance_undetermined directly. F5 7's example fails, because roles_alive_reading is on another law."
+    },
+    {
+      "finding": "schema 11 (should-fix): declared versus computed on the page; the review",
+      "why": "Only partly taken. The rule 'A record carrying items has a reference of role `review`' (§1, line 37) does not tie a review to the items, and the page line '(declared; reviewed in [review])' (§5, line 91) cannot tell which review to link. 6 of U2's 16 records already have unrelated review references, so they pass before U2 adds anything. life-as-condition-of-life has four (BECOMING-P9B-P10-P11-REVIEW.md, -P13-P14-P12B-, -P15-P16-P16B-, -P16C-P17-P18-REVIEW.md), joint-difference-making three, and living-significance-on-held-lives, experiment-needs-return, living-on-and-descent and becoming-finite-horizon one each. The finding's request to say this in the record's `correspondence` field is not taken.",
+      "change": "Give each item a fourth key, `review`: the path of a reference of role `review` in the same record, which the check requires to exist. The page links that review. Replace §1's 'Each item has exactly the three keys' with four, and drop the record-level rule. Or keep three keys and require that the record's correspondence field name the review of its items."
+    },
+    {
+      "finding": "schema 8 (should-fix): U3",
+      "why": "Only partly taken. §4 (line 84) says U3's instances and specializations are not items, and that U3's question is 'answered when U3 brings it'. The finding's second option also asked the section to say how F5 reports U3's forms, and it does not. The draft also contradicts U3's own reading of change 1 without resolving it. U3 DESIGN §3 (u3-significance-on-the-root/DESIGN.md:52) reads: 'a statement at the root that is the anchor's grammar form, or an instance at a reading, is a representation, and the measure reports it as one'. WHAT-REMAINS 全五 has F5 take its values from U2 and U3.",
+      "change": "Add to §4 'U3's forms': 'Until U3 lands, its five rows are reported by the measure's dependence alone, in the fourth count. An instance or a specialization at the structural reading is not a statement of the row at a represented model, so change 1 does not count it, contrary to U3 §3's wording. Its reach is the instance's own, never its free row's.' Or, if MV accepts U3's reading, add a declared relation key (statement, instance, specialization) as the finding proposed."
+    },
+    {
+      "finding": "schema 13 (minor): the grammar test",
+      "why": "Taken, but with a false claim and a gap. §2 (line 46) says 'This is U2Deps' test', but U2Deps reads only the statement's direct constants (`let stated := info.type.getUsedConstants`, U2Deps.lean at 033429fba) and never opens definitions' bodies. The draft also leaves open whether 'the bodies of the `Becoming.ModelStatements` definitions it names' is one level or transitive. The model test reuses that rule ('in the same sense', line 47), so this decides rows 21 and 22 (see the new must-fix finding).",
+      "change": "Replace 'This is U2Deps' test, not the measure's grammar test, which also counts «际».' with 'It reads more than U2Deps, which counts only the statement's own constants, and it is not the measure's grammar test, which also counts «际».' Also state the depth (transitive), as in the new finding."
+    },
+    {
+      "finding": "F5 6 (should-fix): what the statement keeps in other terms",
+      "why": "Taken, but specified inconsistently. §2 (line 56) computes the list as 'not grammar terms, not in `Becoming.ModelStatements`, not in the two model lists and not in `Init`, as U2Deps computes them'. U2Deps also excludes Web.partialIdentity, sameValue, Web.admitted and «际» (its `modelRelations`). Line 51 covers the first three. «际» is covered nowhere, and the draft's grammar terms exclude it, so it would be listed. not_fixes_reading's statement names «际» (`∀ G : A → «际» S`, U2Check.lean:897), which deps.log does not show. The computed lists also keep the model's structure types: Becoming.Web in 10 of the 21 deps.log entries, and Generative.Process, Becoming.Run, Run.state and Run.act elsewhere. Yet §5's example (line 91) shows only 'Web.Supported' for row 1, where deps.log gives [Becoming.Web, Becoming.Web.Supported]. U2 §2's column says 'none' for rows 4, 9–14 and 20–24, because it reports 'beyond the model's structures and data' (DESIGN.md:91).",
+      "change": "Write the exclusion as 'not in U2Deps' `modelRelations` (the two lists, Web.partialIdentity, sameValue, Web.admitted and «际»)'. Then either show that list exactly as computed and correct §5's example to 'keeps Web and Web.Supported', or also drop the model's structure types and their fields by a rule the generator states, and say that this differs from U2Deps."
+    },
+    {
+      "finding": "schema 4 (should-fix): stale data, including a line computed from another law's items",
+      "why": "Taken for a record's own laws, but ambiguous across records. §2 (line 61) shows lines only 'while the record's current items equal the data's'. §5 (line 93) puts the second line under laws in other records: Web.transmits_at_iff, Valuation.significant_iff_held, Run.not_fixes_of_untaken and Learning.Training.unselected_beyond_data sit in transmission-independent-where-it-binds, continuation-condition-decomposition, causal-models-as-processes, wisdom-root-without-axiom and generalization-through-lumping, whose items are computed from another record. 'The record' does not say which record's items must match. registry.master_law_note(r, i, law) sees only r's own `_master_laws`.",
+      "change": "Add to §2: 'A line under a law of another record appears only while the current items of the record carrying them equal the data's. The registry reads every record's items for it, and a mismatch counts against the carrying law in `laws_not_matched`.'"
+    },
+    {
+      "finding": "schema 7 and F5 4 (should-fix): F5's third value, the named premise",
+      "why": "Mostly taken: §4 says this field does not supply it and names COVERAGE.json's premises as its place. But 'whose owner decides' (line 83) names an owner that does not exist. WHAT-REMAINS.md:52 says '`Flow` and `COVERAGE.json` have no active owners, so these were decided under rule 3's fallback.' Schema 7 asked who owns it.",
+      "change": "Replace 'whose owner decides' with 'which has no active owner (WHAT-REMAINS, EC6c and EC6d), so OU's owner decides under rule 3's fallback'."
+    }
+  ],
+  "u2_items": {
+    "checked": 21,
+    "failures": [
+      {
+        "item": "living_on_reaches_reading (row 21, living-on-and-descent; models [occurrence])",
+        "rule": "§2 'At the declared models': the statement names, in the grammar test's sense (its constants, or the bodies of the ModelStatements definitions it names), World.withinStep, Web.roles or Steps.along",
+        "evidence": "The statement (U2Check.lean:519-522, identical code in Becoming/ModelStatements.lean at 033429fba) names only sustenanceRel, livingOcc and livesOn (ModelStatements definitions), «闭», «合», Web and Prod/Nat. deps.log's other terms are [Becoming.Web]. The bodies of those definitions name no occurrence relation: sustenanceRel (:451) names interacts and livesOn; livingOcc (:455-456) names activeAt, «能», «而», drawing, «合», «逆», requiring and undermined; livesOn (:442) names «而», «合», drawing, bearing and sameName. World.withinStep appears only at the second level (livingOcc → drawing, :50). The item fails under the literal one-level reading and passes only if the expansion is transitive."
+      },
+      {
+        "item": "descent_reaches_reading (row 22, living-on-and-descent; models [occurrence])",
+        "rule": "§2 'At the declared models' (occurrence), same reading",
+        "evidence": "The statement (:600-603) names descentRel, livingOcc and descendsRel, «闭», «合», Flow and Web (deps.log: [Becoming.Flow, Becoming.Web]). One level down, descentRel (:551) names interacts and descendsRel; descendsRel (:548) names «而», sameName and descentStep; livingOcc names drawing and requiring. None is World.withinStep, Web.roles or Steps.along. The occurrence relations appear only at level 2 (livingOcc → drawing → World.withinStep) or level 3 (descendsRel → descentStep → giving :534 → World.withinStep; → comesToStand → Steps.along). Fails as literally specified, passes if transitive."
+      },
+      {
+        "item": "The 10 items in records with no review reference: rows 4, 5, 6, 7, 10, 12, 13, 16, 20 and 23",
+        "rule": "§1: a record carrying items has a reference of role review",
+        "evidence": "At 033429fba the kit adds laws only. These 10 records have no reference of role review: represented-boundary-against-dependence, transmission-is-inheritance-and-need, learning-through-a-map-is-tracking-in-the-limit, what-a-finite-stretch-verifies, continuation-condition-yields-living-significance, what-a-pools-acts-respond-to, conditions-kept-together, a-code-formed-between-formations, what-an-optimum-does-beyond-what-couples-in and generalization-through-lumping. They fail until U2's landing adds the REVIEW-U2 reference (§6.2). The other 6 records pass now only through older reviews of other items."
+      },
+      {
+        "item": "Items of rows 11, 14, 15, 16, 20, 21, 22, 23 and 24 (both finite_reading_not_exact and renewing_not_closed): 10 items",
+        "rule": "§1: the review reference is 'the review that checked the correspondence'; §6.2 names REVIEW-U2",
+        "evidence": "REVIEW-U2.md:3 rebuilt a 48-theorem, 68-declaration scratch; the leaf at 033429fba has 78 theorems in 121 declarations. Its findings 1 and 3 led U2 to restate rows 11, 14, 15, 16 and 21–24 and to read row 20, which had resisted. renewing_not_closed was added at 033429fba on 30 October, after the review of 29 October. The REVIEW-U2 reference would pass the check, but no review has checked these 10 statements as they stand."
+      },
+      {
+        "item": "All 21 items",
+        "rule": "§2 'In the spine run'",
+        "evidence": "At 033429fba, Becoming.ModelStatements is in no passing core receipt, so no declaration is yet among the run's constants. This is expected before landing and passes once U2 lands the leaf. It is not a defect of the items."
+      }
+    ]
+  },
+  "new_findings": [
+    {
+      "severity": "must-fix",
+      "claim": "The depth of the ModelStatements expansion is unspecified, and read literally (one level) it fails rows 21 and 22 at the occurrence model. Under §2's 'U2's landing requires none unverified', that blocks U2's landing.",
+      "evidence": "F5-MODEL-STATEMENTS.md:46-47: 'among the statement's constants, or in the bodies of the `Becoming.ModelStatements` definitions it names', and the model test uses 'the same sense'. Row 21's statement names sustenanceRel, livingOcc and livesOn, and row 22's names descentRel, livingOcc and descendsRel. Their bodies name only further ModelStatements definitions (drawing, requiring, bearing, sameName, descentStep, interacts) and grammar terms (U2Check.lean:442, 451, 455-456, 548, 551). World.withinStep is reached through drawing (:50) at level 2, and Steps.along through comesToStand (:540) at level 3. Every other item passes at one level: row 10 through livingClaim's body naming W.roles (:634), rows 24a and 24b through renewingAlong's `.roles` (:977), and the rest directly.",
+      "change": "In §2 'On the grammar', replace 'or in the bodies of the `Becoming.ModelStatements` definitions it names' with 'or in the bodies of the `Becoming.ModelStatements` definitions it names, and in turn of those their bodies name (transitively)'. The model test then reads the same walk, and all 21 of U2's items pass it."
+    },
+    {
+      "severity": "should-fix",
+      "claim": "The closed key set, as worded, requires `zh` on every law item and so breaks the check on 13 existing law items that have no Chinese text.",
+      "evidence": "§1, line 31: 'A law item's keys are exactly `en`, `zh`, `declarations` and, optionally, `statements_at_model`.' Of the 3,749 current law items, 13 have keys {declarations, en} only: least-loss-from-entropy-production (10), selection-through-a-model-of-the-options, typicality-by-counting and worlds-are-runs (1 each). registry.py:358-359 requires only `pair(item)` (English or Chinese).",
+      "change": "Replace the bullet with: 'A law item's keys lie among `en`, `zh`, `declarations` and `statements_at_model`; as today, it needs nonempty English or Chinese. This closes a set that is open today, so a misspelled key fails.'"
+    },
+    {
+      "severity": "should-fix",
+      "claim": "§6.2 cites REVIEW-U2 as the review that checked the correspondence. But REVIEW-U2 reviewed an earlier scratch, before at least 10 of the 21 items took their present statements, so the record would name a review that never read them.",
+      "evidence": "F5-MODEL-STATEMENTS.md:99: 'a `review` reference to REVIEW-U2'. REVIEW-U2.md:3: the reviewer 'rebuilt the scratch (48 theorems in 68 declarations)'. Its finding 1 led to restating rows 11, 14, 15, 16 and 21–24 (REVIEW-U2.md:9), and finding 3 to reading row 20. renewing_not_closed was added at 033429fba (30 October, 00:54), after the review of 29 October. The leaf now has 78 theorems in 121 declarations. §2 says the record names 'the review that checked' that the declaration states what `of` states, at those models.",
+      "change": "Replace 'and a `review` reference to REVIEW-U2' with 'and a `review` reference to a review that checked the final items against their rows, all 21, renewing_not_closed included: REVIEW-U2 for the statements it read, plus a re-check of the leaf before landing for the rest'."
+    }
+  ]
+}
