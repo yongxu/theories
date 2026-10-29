@@ -534,7 +534,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
       "role": "proof",
-      "sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a"
+      "sha256": "993b1fe983e5eb9530fb0ab3af2ca3dbad317501de9d90b13d8cda2e3249cba7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",

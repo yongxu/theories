@@ -5191,6 +5191,71 @@
    "module": "Becoming.OpenedCorrection",
    "category": "general-structure",
    "reason": "OpenedCorrection.correctable_iff: a law of any process with a reading in force at each configuration (a revision of a reading that opens a correction); it waits for an institution's rule of reading what its members report, on the base (RF)"
+  },
+  "Becoming.FreeEnergyCounting.bound_lt_of_not_proportional": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "general-structure",
+   "reason": "bound_lt_of_not_proportional: away from proportion the bound in counts is strict; a law of every natural count and weighting over any listing, an identity or inequality of counting with no world; the base supplies no reading of its vocabulary (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.zero_weights_reach": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "general-structure",
+   "reason": "zero_weights_reach: every weight nothing puts every count belief at the bound; a law of every natural count and weighting over any listing, an identity or inequality of counting with no world; the base supplies no reading of its vocabulary (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.no_counts_reach": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "general-structure",
+   "reason": "no_counts_reach: with every count nothing both sides of the bound are one; a law of every natural count and weighting over any listing, an identity or inequality of counting with no world; the base supplies no reading of its vocabulary (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.bound_given_record": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "general-structure",
+   "reason": "bound_given_record: the bound in counts with the record's weight as the total; a law of every natural weighting of a generative model of listed hypotheses and records, an identity or inequality of counting with no world; the base supplies no reading of its vocabulary (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.nothing_record_reach_all": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "general-structure",
+   "reason": "nothing_record_reach_all: where the record weighs nothing every count belief is at the bound; a law of every natural weighting of a generative model of listed hypotheses and records, an identity or inequality of counting with no world; the base supplies no reading of its vocabulary (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.given_record_eq_iff_share": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "general-structure",
+   "reason": "given_record_eq_iff_share: with the hypotheses listed once, the count beliefs at the bound are those at the shares given the record; a law of every natural weighting of a generative model of listed hypotheses and records, an identity or inequality of counting with no world; the base supplies no reading of its vocabulary (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.posterior_counts_reach": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "general-structure",
+   "reason": "posterior_counts_reach: the joint weights as counts reach the bound; a law of every natural weighting of a generative model of listed hypotheses and records, an identity or inequality of counting with no world; the base supplies no reading of its vocabulary (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.Witness.strict_off_proportion": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "model-witness",
+   "reason": "Witness.strict_off_proportion: 1 < 2 for a belief all on one of two hypotheses; a fact about one constructed model of two or three listed hypotheses with small natural weights (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.Witness.scaled_reach": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "model-witness",
+   "reason": "Witness.scaled_reach: two counts on each of two hypotheses reach the bound; a fact about one constructed model of two or three listed hypotheses with small natural weights (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.Witness.off_support": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "model-witness",
+   "reason": "Witness.off_support: a belief on a hypothesis of weight nothing makes the left side nothing; a fact about one constructed model of two or three listed hypotheses with small natural weights (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.Witness.total_two_unreached": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "model-witness",
+   "reason": "Witness.total_two_unreached: against weights one and two no belief of total two reaches the bound; a fact about one constructed model of two or three listed hypotheses with small natural weights (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.Witness.nothing_record_reach": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "model-witness",
+   "reason": "Witness.nothing_record_reach: a record weighing nothing puts a belief at the bound; a fact about one constructed model of two or three listed hypotheses with small natural weights (UE21)"
+  },
+  "Becoming.FreeEnergyCounting.Witness.duplicate_share": {
+   "module": "Becoming.FreeEnergyCounting",
+   "category": "model-witness",
+   "reason": "Witness.duplicate_share: a hypothesis listed twice breaks the join to the share; a fact about one constructed model of two or three listed hypotheses with small natural weights (UE21)"
   }
  },
  "instances": {

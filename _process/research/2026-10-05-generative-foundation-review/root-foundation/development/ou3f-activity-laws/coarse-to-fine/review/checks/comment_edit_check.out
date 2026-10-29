@@ -1,0 +1,3 @@
+same-length edit reads as a rewrite: False
+length-changing edit reads as a rewrite: True
+with whitespace normalized, length-changing edit reads as a rewrite: False

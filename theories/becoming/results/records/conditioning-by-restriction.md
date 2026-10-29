@@ -63,7 +63,7 @@ Restriction stated once for every weighting, with possibility's support commutin
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Read a share as a probability, a number of situations of a kind (weights-count-situations): restriction is conditioning, restrict_two_ways is Bayes's theorem P(h | o) P(o) = P(o | h) P(h) (Bayes 1763; Laplace 1774), the share of evidence in the whole is a generative model's marginal likelihood and posterior_single its posterior, these readings of the prior and the likelihood holding where every listed hypothesis's likelihood weights have one total (prior_share). The reciprocal share is a counting form of pointwise surprisal, log (1 / P): it reverses the order of shares and its products are surprisal's sums. Entropy and free energy, averages of logarithms, are not the logarithm of one reciprocal share; free energy and its bound are stated in the periphery and joined to posterior_single there (free-energy-bounds-surprisal). The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.
+Read a share as a probability, a number of situations of a kind (weights-count-situations): restriction is conditioning, restrict_two_ways is Bayes's theorem P(h | o) P(o) = P(o | h) P(h) (Bayes 1763; Laplace 1774), the share of evidence in the whole is a generative model's marginal likelihood and posterior_single its posterior, these readings of the prior and the likelihood holding where every listed hypothesis's likelihood weights have one total (prior_share). The reciprocal share is a counting form of pointwise surprisal, log (1 / P): it reverses the order of shares and its products are surprisal's sums. Entropy and free energy, averages of logarithms, are not the logarithm of one reciprocal share; free energy and its bound are stated in the periphery and joined to posterior_single there (free-energy-bounds-surprisal), and the bound in counts in the core (free-energy-bound-in-counts). The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -74,8 +74,9 @@ Read a share as a probability, a number of situations of a kind (weights-count-s
 - related, not a proved adapter: [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md). Variational free energy bounds surprisal: over the reals, in the periphery, exact minimization of free energy over beliefs with no weight on a hypothesis the prior or the record rules out gives the share given the record.
 - related, not a proved adapter: [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md). What the existence claim forbids: the point weighting read off a course is this restriction to the course itself.
 - related, not a proved adapter: [what-seeking-cannot-separate](what-seeking-cannot-separate.md). What seeking cannot separate: a tied pair keeps its prior order given every record, a corollary of posterior_single and posterior_le_iff, and over every course of seeking.
+- related, not a proved adapter: [free-energy-bound-in-counts](free-energy-bound-in-counts.md). The free-energy bound in counts: conditioning reached by the bound in counts, through posterior_single, with the hypotheses listed once.
 
-**Used by:** [exit-from-a-margin](exit-from-a-margin.md) · [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md) · [what-seeking-cannot-separate](what-seeking-cannot-separate.md) · [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md)
+**Used by:** [exit-from-a-margin](exit-from-a-margin.md) · [free-energy-bound-in-counts](free-energy-bound-in-counts.md) · [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md) · [what-seeking-cannot-separate](what-seeking-cannot-separate.md) · [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -98,6 +99,7 @@ Aliases: `Conditioning by restriction, shares and a generative model's posterior
 - 29 October 2026, board item UE17 (study section 450): related to free-energy-bounds-surprisal; the next step drops the join to the periphery's bound, now done, and the correspondence and the third item of what it does not show say that free energy, an average of logarithms, is not the logarithm of one reciprocal share and is stated in the periphery; no statement or declaration changed.
 - 29 October 2026, board item UE18 (study section 452): related to what-the-existence-claim-forbids; no statement, next step or declaration changed.
 - 29 October 2026, board item UE19 (study section 453): related to what-seeking-cannot-separate; no statement, next step or declaration changed.
+- 30 October 2026, board item UE21 (study section 460): related to free-energy-bound-in-counts; the correspondence names the bound in counts in the core; no statement, next step or declaration changed.
 
 </details>
 

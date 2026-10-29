@@ -40,7 +40,7 @@
 - Densities, continuous causes or continuous time.
 - Any process by which a system lowers its free energy, such as a gradient descent or message passing; expected free energy is stated in expected-free-energy-and-its-terms.
 - That any system minimizes free energy.
-- The bound's counting form for beliefs with natural counts, N^N·∏ a^n ≤ A^N·∏ n^n, or complexity and accuracy read from the core's own prior and likelihood shares.
+- Complexity and accuracy read from the core's own prior and likelihood shares; the bound's counting form is stated in free-energy-bound-in-counts.
 - Beliefs confined to a family (mean-field, the Laplace approximation's Gaussian), whose least free energy exceeds the surprisal by the family's divergence from the posterior.
 - Free energy as a bound on the long-run average of surprisal, the entropy of sensory states, or free energy over parameters and models, as in learning and model comparison.
 - **Counterexample:** With a belief putting weight on a cause of joint weight zero, the bound fails under Mathlib's log 0 = 0: the free energy as usually defined is then infinite (Witness.bound_fails_off_support). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean)
@@ -57,7 +57,7 @@ Canonical source: [FreeEnergyReals.lean](../../../../experiments/integrated-corr
 <a id="next--下一步"></a>
 ## Next
 
-A core form of the bound, N^N·∏ a^n ≤ A^N·∏ n^n for beliefs with natural counts, equal, where the record weighs something, exactly at the share given the record; complexity and accuracy from the core's own shares; review by a person.
+Complexity and accuracy from the core's own shares; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -72,6 +72,7 @@ Gibbs' inequality (Gibbs 1902) and the divergence of Kullback and Leibler (1951)
 - **formal-reuse**: [conditioning-by-restriction](conditioning-by-restriction.md). Share, share, restrict, pairWeight, evidence, posterior_single, share_product and Share.reciprocal: conditioning by restriction and a generative model's share given a record.
 - related, not a proved adapter: [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md). What the existence claim forbids: the claim with the model read off the course, in counting form; its average form is this bound.
 - related, not a proved adapter: [expected-free-energy-and-its-terms](expected-free-energy-and-its-terms.md). Expected free energy and its terms: risk, ambiguity, epistemic and pragmatic value stated beside free energy, the epistemic value an expected information gain through this posterior.
+- related, not a proved adapter: [free-energy-bound-in-counts](free-energy-bound-in-counts.md). The free-energy bound in counts: the bound and its equality for count beliefs in the pure core, with no axiom and no support condition.
 
 **Used by:** [expected-free-energy-and-its-terms](expected-free-energy-and-its-terms.md)
 
@@ -98,6 +99,7 @@ Aliases: `Variational free energy bounds surprisal`, `变分自由能为惊异�
 - 29 October 2026: added (UE17), variational free energy and its bound in the periphery: Gibbs' inequality, equality exactly at the posterior, the three decompositions, and the join, the minimizer the core's share given the record; after a review and a re-check; study section 450.
 - 29 October 2026, board item UE18 (study section 452): related to what-the-existence-claim-forbids; no statement, next step or declaration changed.
 - 29 October 2026, board item UE19 (study section 453): related to expected-free-energy-and-its-terms; the next step drops expected free energy, now stated, and the second item of what it does not show names the record that states it; no statement or declaration changed.
+- 30 October 2026, board item UE21 (study section 460): related to free-energy-bound-in-counts; the next step drops the core form of the bound, now stated, and the fourth item of what it does not show names the record that states it; no statement or declaration changed.
 
 </details>
 

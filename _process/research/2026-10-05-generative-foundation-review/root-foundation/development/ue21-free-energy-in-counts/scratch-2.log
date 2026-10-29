@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue21/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue21-free-energy-in-counts/tree",
+  "modules": 57,
+  "ran": [
+    "Becoming.FreeEnergyCounting",
+    "BecomingFreeEnergyCountingAxiomAudit"
+  ],
+  "reused": 56,
+  "unclean": [],
+  "audits": {
+    "Becoming.FreeEnergyCounting": {
+      "theorems": 56,
+      "declarations": 66,
+      "with_axioms": {}
+    }
+  }
+}

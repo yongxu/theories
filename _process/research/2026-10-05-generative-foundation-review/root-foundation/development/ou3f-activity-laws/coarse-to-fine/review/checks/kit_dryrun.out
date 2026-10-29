@@ -1,0 +1,44 @@
+# Kit dry run on scratch copies of the branch's files (outside the repository), 2026-10-29T20:01Z
+## texts_ctf.py 20261029T184601.050950Z 456 (HE's receipt standing in for the landing's)
+texts: 08 counts; study section 456
+08 changed: no (same receipt, so no change expected)
+study: lines added: 28, heading: 21184:## 456. The coarse-to-fine pair, and OU3f done (OU3f)
+placeholder left in the study: 1
+## texts_ctf.py again with the same N (must refuse)
+AssertionError
+## board_ctf.py head
+board head OU3f
+## board_ctf.py head again (must refuse)
+AssertionError: already claimed
+## board_ctf.py land
+board land OU3f
+board diff (cut to 200 columns):
+28c28
+< - **Main and receipts:** the landing queue below names each landing since 17 October with its core receipt; the latest core receipt is HE's `20261029T184601.050950Z` (30 October 2026). This page was
+---
+> - **Main and receipts:** the landing queue below names each landing since 17 October with its core receipt; the latest core receipt is OU3f's `20261030T120000.000000Z` (30 October 2026). This page w
+42c42
+< - **Queue:** HE landed (§455, core receipt `20261029T184601.050950Z`: the held edits in one near-full rebuild, every statement and name unchanged (the signature audit): OC5's findings 8 and 18 by t
+---
+> - **Queue:** OU3f's coarse-to-fine pair landed (§456, core receipt 20261030T120000.000000Z: dry run); HE landed (§455, core receipt `20261029T184601.050950Z`: the held edits in one near-full rebui
+51d50
+< | **OU3f: the laws that read only activity, on the grammar** (OU plan §八 step 4, its second part, "再提只读 `active` 之定理"; the [dependency audit](research/2026-10-05-generative-foundati
+history diff (cut to 200 columns):
+685a686
+> | **OU3f: the laws that read only activity, on the grammar** (OU plan §八 step 4, its second part, "再提只读 `active` 之定理"; the [dependency audit](../../research/2026-10-05-generative-fo
+history rows around the insertion:
+684: | **UE20: the free-energy principle in the theory, on one page** ([pla
+685: | **HE: the held edits, in one near-full rebuild** (the coordinating s
+686: | **OU3f: the laws that read only activity, on the grammar** (OU plan 
+687: 
+688: ## Lapsed claims (18 October 2026)
+links in the moved row:
+](../../research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/audit/REPORT.md)
+](../../research/x.md)
+](../../../sources/y.md)
+## main's board as of the run (53208baa9: RF had landed, no item at the head): head claims
+board head OU3f
+
+## board_ctf.py head on the board at b85ec0f89, where RF held the head (must refuse)
+AssertionError: another item holds the head: claim behind it
+(the earlier run on main at 53208baa9 claimed the head because RF had landed by then and no item held it)

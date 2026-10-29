@@ -1,0 +1,27 @@
+ok   nested block: got 'a b' 
+ok   docstring then def: got 'def real := 1' 
+ok   module doc: got 'x' 
+ok   docstring nesting /- inside: got 'd' 
+ok   line comment after code: got 'def x := 1 y' 
+ok   line comment holding -/: got 'a c' 
+ok   -- inside a string: got 'f " " c' 
+ok   /- inside a string: got 'f " " c' 
+ok   escaped quote in string: got 'f " " d' 
+ok   escaped backslash ends string: got 'f " " d' 
+ok   string gap (backslash newline): got 'f " " c' 
+ok   quote in a comment: got 'a b' 
+ok   -/ in a string inside a comment (Lean closes at the first -/, then a string opens): got '"' 
+ok   char literal '"': got 'f \'"\' d' 
+ok   char literal '\'': got "f '\\'' g" 
+ok   char literal '\\': got "f '\\\\' d" 
+ok   char literal '-': got "f '-' g" 
+ok   hex char literal '\x22' (a quote): got "f '\\x22' g" 
+ok   primed identifiers h' h'' a'b': got "fun h' h'' a'b' => h' d" 
+ok   prime then quote: h'"x": got 'f h\' " " u' 
+ok   «» name, plain: got 'theorem «亡于粗则亡于细» := x' 
+GAP  gap: «» name holding --: got 'theorem «a y', Lean reads 'theorem «a--b» := x y' 
+GAP  gap: «» name holding /-: got 'theorem «a', Lean reads 'theorem «a/-b» := x y' 
+GAP  gap: raw string r"a\": got 'f r"', Lean reads 'f r" " d' 
+GAP  gap: raw string r#"a"b"#: got 'f r#" "b"', Lean reads 'f r#" "# d' 
+GAP  gap: /--/ (doc opener, body starting with /): got 'x -/ y', Lean reads 'y' 
+unexpected failures: 0

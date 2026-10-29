@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T200440.502813Z",
- "core_sources_sha256": "6c5b807ed09a7ce2ba5d07622875fdb92bd9c7ae0497d91d53999c4eb31a3ab5",
+ "core_receipt": "20261029T210603.495422Z",
+ "core_sources_sha256": "9fd8db7506010cb5aba5e75281fc74633f79d7c8d175d95c9dd097f3f0a5f5d2",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -56,13 +56,13 @@
   ]
  },
  "counts": {
-  "laws": 3788,
+  "laws": 3804,
   "no_declarations": 9,
   "outside": 357,
   "grammar": 749,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1894,
+  "no master law": 1910,
   "vocabulary_only": 65,
   "closure": 476,
   "balance": 815,
@@ -16916,6 +16916,201 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "free-energy-bound-in-counts": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.mul_pow_eq",
+     "Becoming.FreeEnergyCounting.self_pow_pos",
+     "Becoming.FreeEnergyCounting.lt_cancel_mul_left",
+     "Becoming.FreeEnergyCounting.lt_cancel_mul_right",
+     "Becoming.FreeEnergyCounting.base_zero_of_pow_zero",
+     "Becoming.FreeEnergyCounting.pow_succ_lt_pow_succ"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.rearrange",
+     "Becoming.FreeEnergyCounting.rearrange_strict",
+     "Becoming.FreeEnergyCounting.powers_rearrange",
+     "Becoming.FreeEnergyCounting.powers_rearrange_strict"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.bernoulli",
+     "Becoming.FreeEnergyCounting.bernoulli_strict",
+     "Becoming.FreeEnergyCounting.bernoulli_split",
+     "Becoming.FreeEnergyCounting.bernoulli_regroup",
+     "Becoming.FreeEnergyCounting.bernoulli_close"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.mean_step",
+     "Becoming.FreeEnergyCounting.mean_step_strict",
+     "Becoming.FreeEnergyCounting.mean_step_identity",
+     "Becoming.FreeEnergyCounting.mean_step_lhs",
+     "Becoming.FreeEnergyCounting.mean_step_rhs"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.mean_two",
+     "Becoming.FreeEnergyCounting.mean_two_strict",
+     "Becoming.FreeEnergyCounting.mean_two_sum",
+     "Becoming.FreeEnergyCounting.mean_two_ident"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.two_parts",
+     "Becoming.FreeEnergyCounting.two_parts_strict",
+     "Becoming.FreeEnergyCounting.proportional_of_two_parts_eq",
+     "Becoming.FreeEnergyCounting.two_parts_lhs",
+     "Becoming.FreeEnergyCounting.two_parts_rhs"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.powerProduct",
+     "Becoming.FreeEnergyCounting.powerProduct_self_pos",
+     "Becoming.FreeEnergyCounting.zero_of_total_zero",
+     "Becoming.FreeEnergyCounting.cons_left",
+     "Becoming.FreeEnergyCounting.cons_mid",
+     "Becoming.FreeEnergyCounting.cons_right",
+     "Becoming.FreeEnergyCounting.bound"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.powerProduct_scaled",
+     "Becoming.FreeEnergyCounting.bound_eq_of_proportional",
+     "Becoming.FreeEnergyCounting.proportional_cons",
+     "Becoming.FreeEnergyCounting.proportional_of_bound_eq",
+     "Becoming.FreeEnergyCounting.bound_eq_iff",
+     "Becoming.FreeEnergyCounting.bound_lt_of_not_proportional"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.zero_weights_reach",
+     "Becoming.FreeEnergyCounting.no_counts_reach"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.joint",
+     "Becoming.FreeEnergyCounting.record_total",
+     "Becoming.FreeEnergyCounting.bound_given_record",
+     "Becoming.FreeEnergyCounting.given_record_eq_iff",
+     "Becoming.FreeEnergyCounting.posterior_counts_reach"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.nothing_record_reach_all"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.given_record_eq_iff_share"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.Witness.even",
+     "Becoming.FreeEnergyCounting.Witness.first",
+     "Becoming.FreeEnergyCounting.Witness.strict_off_proportion",
+     "Becoming.FreeEnergyCounting.Witness.twoEach",
+     "Becoming.FreeEnergyCounting.Witness.scaled_reach"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.Witness.secondOnly",
+     "Becoming.FreeEnergyCounting.Witness.off_support"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.Witness.oneTwo",
+     "Becoming.FreeEnergyCounting.Witness.split2",
+     "Becoming.FreeEnergyCounting.Witness.total_two_unreached"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.Witness.unitPrior",
+     "Becoming.FreeEnergyCounting.Witness.unitLik",
+     "Becoming.FreeEnergyCounting.Witness.nothing_record_reach",
+     "Becoming.FreeEnergyCounting.Witness.duplicate_share"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
    }
   ],
   "free-energy-bounds-surprisal": [

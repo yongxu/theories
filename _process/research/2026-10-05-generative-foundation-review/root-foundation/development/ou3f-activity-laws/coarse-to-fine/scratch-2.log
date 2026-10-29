@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/coarse-to-fine/tree",
+  "modules": 33,
+  "ran": [
+    "Becoming.Persistence",
+    "BecomingPersistenceAxiomAudit"
+  ],
+  "reused": 32,
+  "unclean": [],
+  "audits": {
+    "Becoming.Persistence": {
+      "theorems": 86,
+      "declarations": 106,
+      "with_axioms": {}
+    }
+  }
+}

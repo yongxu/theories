@@ -1,0 +1,75 @@
+{
+ "receipt": "20261029T184601.050950Z",
+ "modules": 347,
+ "hash_mismatch": [],
+ "dropped": {
+  "Becoming.Grammar": [
+   "Becoming.becomes"
+  ],
+  "Becoming.GrammarReadings": [
+   "Becoming.alike",
+   "Becoming.is"
+  ],
+  "Becoming.PatternPassing": [
+   "Becoming.Web.that"
+  ],
+  "Becoming.ShownOrder": [
+   "makes"
+  ],
+  "Becoming.Ideals": [
+   "Becoming.Ideals.holds"
+  ],
+  "Becoming.Retaining": [
+   "Becoming.Preemption.and"
+  ],
+  "Becoming.CensusTable": [
+   "Becoming.World.exactly",
+   "Becoming.World.has"
+  ],
+  "Becoming.Selection": [
+   "Becoming.Web.alike"
+  ],
+  "Becoming.ProcessRepresentation": [
+   "Becoming.of"
+  ],
+  "Becoming.SetPointOptimum": [
+   "Becoming.Optimum.asks"
+  ],
+  "Becoming.LumpedSeeking": [
+   "learning"
+  ],
+  "Becoming.PoolResponse": [
+   "is"
+  ],
+  "Becoming.Keeping": [
+   "Becoming.Viability.kept"
+  ],
+  "Becoming.GrammarScope": [
+   "Becoming.has",
+   "whose"
+  ],
+  "Becoming.GrammarPath": [
+   "Becoming.(出类不随则本类不至终有常).**",
+   "Becoming.CleanStep.fail",
+   "Becoming.FinerWake.is",
+   "Becoming.UnevenOutside.is",
+   "Becoming.`E`,",
+   "Becoming.constant",
+   "Becoming.from",
+   "Becoming.holds,",
+   "Becoming.only"
+  ]
+ },
+ "added": {},
+ "dropped_real": [],
+ "added_real": [],
+ "missing_before": {},
+ "missing_after": {},
+ "found_before": 6122,
+ "found_after": 6122,
+ "expected": 6122,
+ "bodies_differ": 8,
+ "common": 6122,
+ "dropped_count": 26,
+ "added_count": 0
+}

@@ -1,0 +1,64 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/coarse-to-fine/review/checks/tree-main",
+  "modules": 44,
+  "ran": [],
+  "reused": 55,
+  "unclean": [],
+  "audits": {
+    "Becoming.Identity": {
+      "theorems": 152,
+      "declarations": 217,
+      "with_axioms": {}
+    },
+    "Becoming.PatternPassing": {
+      "theorems": 33,
+      "declarations": 46,
+      "with_axioms": {}
+    },
+    "Becoming.ContinuedClasses": {
+      "theorems": 73,
+      "declarations": 98,
+      "with_axioms": {}
+    },
+    "Becoming.Wholes": {
+      "theorems": 98,
+      "declarations": 130,
+      "with_axioms": {}
+    },
+    "Becoming.Exclusion": {
+      "theorems": 39,
+      "declarations": 46,
+      "with_axioms": {}
+    },
+    "Becoming.Reserve": {
+      "theorems": 89,
+      "declarations": 131,
+      "with_axioms": {}
+    },
+    "Becoming.Retaining": {
+      "theorems": 34,
+      "declarations": 49,
+      "with_axioms": {}
+    },
+    "Becoming.Persistence": {
+      "theorems": 86,
+      "declarations": 106,
+      "with_axioms": {}
+    },
+    "Becoming.MapInstances": {
+      "theorems": 27,
+      "declarations": 27,
+      "with_axioms": {}
+    },
+    "Becoming.Arising": {
+      "theorems": 44,
+      "declarations": 79,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarLaws": {
+      "theorems": 138,
+      "declarations": 162,
+      "with_axioms": {}
+    }
+  }
+}

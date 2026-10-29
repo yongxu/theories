@@ -2372,6 +2372,18 @@
    "page": "theories/becoming/results/records/four-cases-of-a-part.md"
   },
   {
+   "id": "record:free-energy-bound-in-counts",
+   "type": "result",
+   "record": "free-energy-bound-in-counts",
+   "title": "The free-energy bound in counts",
+   "title_zh": "计数之自由能界",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/free-energy-bound-in-counts.md"
+  },
+  {
    "id": "record:free-energy-bounds-surprisal",
    "type": "result",
    "record": "free-energy-bounds-surprisal",
@@ -7490,6 +7502,17 @@
    "name": "Becoming.LumpedSeeking",
    "level": "L1",
    "theorems": 14,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.FreeEnergyCounting",
+   "type": "module",
+   "name": "Becoming.FreeEnergyCounting",
+   "level": "L1",
+   "theorems": 55,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -28626,6 +28649,12 @@
    "anchor": "r-free-energy-bounds-surprisal"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-free-energy-bound-in-counts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-free-energy-bound-in-counts"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-expected-free-energy-and-its-terms",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -31363,6 +31392,11 @@
   {
    "from": "module:Becoming.Frame",
    "to": "module:Becoming.Prelude",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FreeEnergyCounting",
+   "to": "module:Becoming.ConditionalWeights",
    "type": "imports"
   },
   {
@@ -37742,6 +37776,11 @@
   },
   {
    "from": "record:conditioning-by-restriction",
+   "to": "record:free-energy-bound-in-counts",
+   "type": "related"
+  },
+  {
+   "from": "record:conditioning-by-restriction",
    "to": "record:free-energy-bounds-surprisal",
    "type": "related"
   },
@@ -40906,6 +40945,31 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "module:Becoming.ConditionalWeights",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "module:Becoming.FreeEnergyCounting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "record:conditioning-by-restriction",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "record:free-energy-bounds-surprisal",
+   "type": "related"
+  },
+  {
    "from": "record:free-energy-bounds-surprisal",
    "to": "module:Becoming.ConditionalWeights",
    "type": "proved-in"
@@ -40918,6 +40982,11 @@
   {
    "from": "record:free-energy-bounds-surprisal",
    "to": "record:expected-free-energy-and-its-terms",
+   "type": "related"
+  },
+  {
+   "from": "record:free-energy-bounds-surprisal",
+   "to": "record:free-energy-bound-in-counts",
    "type": "related"
   },
   {
@@ -57603,6 +57672,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-formed-goal-revision-continuation",
    "to": "record:formed-goal-revision-continuation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-free-energy-bound-in-counts",
+   "to": "record:free-energy-bound-in-counts",
    "type": "states"
   },
   {

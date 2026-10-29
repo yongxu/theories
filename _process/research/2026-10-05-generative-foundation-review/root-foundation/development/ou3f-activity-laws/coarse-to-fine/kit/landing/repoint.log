@@ -1,0 +1,40 @@
+{
+ "records": 4,
+ "apply": true,
+ "by_record": {
+  "continuation-relative-to-a-class": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T204932.343754Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean"
+   ]
+  },
+  "identity-across-steps": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T204932.343754Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean"
+   ]
+  },
+  "master-laws-on-the-grammar": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T204932.343754Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean"
+   ]
+  },
+  "the-world-represented-both-ways": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}
