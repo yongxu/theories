@@ -11,7 +11,7 @@
 ## Laws
 
 1. Present at every step from T on, its carriers brief for d, no d consecutive steps pass without a carrier beginning (an instance of Covered.arises_within, in double-negation form: with activity undecided it does not name the carrier; under the passing premise ByPassing.passes_within finds the passing). (`Becoming.Web.carrying`, `Becoming.Web.carrying_iff`, `Becoming.Web.Present`, `Becoming.Web.begins_within`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 2. Under the passing premise every beginning is a passing, and the pattern is passed across one of every d consecutive steps from T on; PatternRelay attains the bound. (`Becoming.Web.PassesAt`, `Becoming.Web.ByPassing`, `Becoming.Web.ByPassing.begins_passed`, `Becoming.Web.ByPassing.trace`, `Becoming.Web.ByPassing.passes_within`, `Becoming.PatternRelay.shifts`)
    - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 3. Under the passing premise a step with no carrier is followed by none with one; with carriers brief for d and no passing from T on, no formation carries it from T + d on, attained in PatternRelay. (`Becoming.Web.ByPassing.present_back`, `Becoming.Web.ByPassing.empty_stays`, `Becoming.Web.ByPassing.ends_within`, `Becoming.PatternRelay.relay`, `Becoming.PatternRelay.stopped_relay`)
@@ -79,6 +79,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json) | — |
 
 Aliases: `a pattern lasts through passing`, `样式经传递而持续`, `one empty step ends it`, `Becoming.Web.ByPassing.ends_within`, `forming the next members (reading)`, `Becoming.Web.passingContinuation`, `Becoming.Web.sameFormation`, `Becoming.Web.carrierClass_class`, `Becoming.Web.carrierClass_finer`, `Becoming.Web.byPassing_iff_continues`, `Becoming.Web.arises_iff_sheng_carrier`, `Becoming.Web.ceases_iff_wang_carrier`, `Becoming.Web.ceases_of_pattern_ends`, `Becoming.Web.passesAt_of_alters`, `Becoming.Web.alters_of_passes`, `Becoming.Web.ByPassing.line_back`, `Becoming.PatternRelay.shifted_fire`
 

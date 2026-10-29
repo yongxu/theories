@@ -1,0 +1,25 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/closure/review/checks/tree-new",
+  "modules": 49,
+  "ran": [
+    "Becoming.Interdependence",
+    "Becoming.Feedback",
+    "Becoming.Testing",
+    "Becoming.Response",
+    "Becoming.Counterfactual",
+    "Becoming.Selection",
+    "Becoming.Learning",
+    "Becoming.Readout",
+    "Becoming.MoveFormation",
+    "BecomingMoveFormationAxiomAudit"
+  ],
+  "reused": 40,
+  "unclean": [],
+  "audits": {
+    "Becoming.MoveFormation": {
+      "theorems": 55,
+      "declarations": 78,
+      "with_axioms": {}
+    }
+  }
+}

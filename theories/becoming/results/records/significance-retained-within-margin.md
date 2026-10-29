@@ -134,6 +134,7 @@ The condition's source is Ren's sentence “for anything, its continuation into 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json) | — |
 
 Aliases: `Becoming.Web.Retains`, `Becoming.Web.Adds`, `Becoming.Web.Retains.not_added`, `Becoming.Web.retains_iff_includes`, `Becoming.Web.adds_iff_exceeds`, `Becoming.Web.retains_agree`, `Becoming.Flow.Balances.retains_iff_within_margin`, `Becoming.Flow.Balances.loses_iff_beyond_margin`, `Becoming.Flow.Balances.adds_iff_within_margin`, `Becoming.Transfer.unordered`, `Becoming.Restoring.Inflow.retains_adds`, `Becoming.Preemption.not_undermining_yet_loses`, `Becoming.Flow.retains_iff_within_margin_at`, `Becoming.Flow.loses_iff_beyond_margin_at`, `Becoming.Flow.adds_iff_within_margin_at`, `Becoming.Web.widens_iff_retains_adds`, `Becoming.Web.keeps_iff_retains`, `Becoming.Web.mixed_iff_adds`
 

@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/check/tree",
+  "modules": 101,
+  "ran": [
+    "Becoming.WRPCheck",
+    "BecomingWRPCheckAxiomAudit"
+  ],
+  "reused": 100,
+  "unclean": [],
+  "audits": {
+    "Becoming.WRPCheck": {
+      "theorems": 53,
+      "declarations": 66,
+      "with_axioms": {}
+    }
+  }
+}

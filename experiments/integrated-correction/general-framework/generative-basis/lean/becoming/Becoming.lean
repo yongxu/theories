@@ -7,6 +7,7 @@ import Becoming.MapInstances
 import Becoming.GrammarLaws
 import Becoming.GrammarTransport
 import Becoming.ShownOrder
+import Becoming.KeptOnward
 import Becoming.World
 import Becoming.Witnesses
 import Becoming.Frame
@@ -2877,6 +2878,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one search, two orders according with one choice, alike on the menu met and apart after
   (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). A leaf
   (board item RF).
+* `Becoming.KeptOnward` (L1): a region every step keeps holds from where it holds on. A region of
+  the steps of time that every step keeps, holding at step `a`, holds at every later step
+  (`kept_onward`): the steps are a line under the successor (`«线则所闭»`), and a closed region
+  holds what lies within the closure (`«闭含所闭»`). The inductions over steps that keep a region in
+  `Becoming.Retaining`, `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`,
+  `Becoming.PatternPassing` and `Becoming.Persistence` are its cases. Its home is beside
+  `«线则所闭»` in `Becoming.GrammarLaws`, where it moves at the next full rebuild (board item OU3f).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the

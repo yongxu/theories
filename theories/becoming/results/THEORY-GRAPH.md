@@ -2,20 +2,20 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3065 nodes, 5616 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3057 nodes, 5610 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 82 | 68 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 74 | 0 |
-| Knowing and testing | 0 | 91 | 74 | 0 |
+| Knowing and testing | 0 | 89 | 72 | 0 |
 | Life and evolution | 0 | 42 | 17 | 0 |
-| Collectives and selection | 0 | 60 | 17 | 0 |
+| Collectives and selection | 0 | 59 | 16 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
 | Significance and alignment | 0 | 77 | 56 | 0 |
 | Method and the formal core | 0 | 19 | 23 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
-| Not yet assigned | 0 | 0 | 1 | 0 |
+| Not yet assigned | 0 | 0 | 2 | 0 |
 
 ## The grammar's concepts
 
@@ -240,7 +240,7 @@ Modules (74, 11 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attr
 
 ## Knowing and testing
 
-Results (91):
+Results (89):
 
 - [A family of readings within what it reads](records/readings-within-what-they-read.md) (recorded-checked)
 - [A formation's own course](records/a-formations-own-course.md) (recorded-checked)
@@ -324,9 +324,7 @@ Results (91):
 - [What a total keeps and loses across scales](records/what-a-total-keeps.md) (recorded-checked)
 - [What an extrapolation can learn through a map](records/learnable-through-a-map.md) (recorded-checked)
 - [What an extrapolation given nothing fixes](records/what-an-extrapolation-given-nothing-fixes.md) (recorded-checked)
-- [What choices show of the order they come from](records/what-choices-show-of-an-order.md) (recorded-checked)
 - [What finitely many labels fix](records/what-finitely-many-labels-fix.md) (recorded-checked)
-- [What readings fix of the unread](records/what-readings-fix-of-the-unread.md) (recorded-checked)
 - [When readings in context glue, for parity](records/gluing-under-parity.md) (recorded-checked)
 - [When to inquire and when to respond](records/when-to-inquire-and-when-to-respond.md) (recorded-checked)
 - [Where a formation's acts return](records/where-a-formations-acts-return.md) (recorded-checked)
@@ -334,7 +332,7 @@ Results (91):
 - [Which selections survive and remain executable when the lumping changes](records/selection-under-registration-revision.md) (recorded-checked)
 - [文 in the grammar of continuation](records/wen-in-the-grammar.md) (recorded-checked)
 
-Modules (74, 6 stated on the grammar): `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `GrammarTesting`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
+Modules (72, 5 stated on the grammar): `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `GrammarTesting`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
 
 
 ## Life and evolution
@@ -389,7 +387,7 @@ Modules (17, 1 stated on the grammar): `ContinuingRevision`, `CopyCourses`, `Cop
 
 ## Collectives and selection
 
-Results (60):
+Results (59):
 
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
 - [A coupling a step keeps a dependence at every horizon](records/a-step-coupling-keeps-at-every-horizon.md) (recorded-checked)
@@ -424,7 +422,6 @@ Results (60):
 - [Positive seed intervals that finite support cannot rescue in time](records/market-finite-support-obstruction.md) (recorded-checked)
 - [Raising what couples in draws from beyond](records/raising-what-couples-in-draws-from-beyond.md) (recorded-checked)
 - [Re-optimizing above a renewal ends it](records/re-optimizing-above-a-renewal-ends-it.md) (recorded-checked)
-- [Readers reading readers](records/readers-reading-readers.md) (recorded-checked)
 - [Reading another's couplings is pooling with it](records/reading-anothers-couplings-is-pooling.md) (recorded-checked)
 - [Reading through a pool](records/reading-through-a-pool.md) (recorded-checked)
 - [Relative position is zero-sum; a race ends those ahead only through their dependence](records/relative-position-is-zero-sum.md) (recorded-checked)
@@ -452,7 +449,7 @@ Results (60):
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (17, 1 stated on the grammar): `Cascade`, `Centers`, `Exclusion`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `Withholding`
+Modules (16, 1 stated on the grammar): `Centers`, `Exclusion`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `Withholding`
 
 
 ## The classical texts
@@ -605,9 +602,9 @@ Results (7):
 
 ## Not yet assigned
 
-Modules (1, 1 stated on the grammar): `GrammarPath`
+Modules (2, 2 stated on the grammar): `GrammarPath`, `KeptOnward`
 
 
 ## Not yet on the root
 
-293 of 339 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+291 of 337 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

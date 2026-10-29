@@ -1,0 +1,279 @@
+{
+ "receipt": "20261029T104256.342764Z",
+ "spine_modules": 340,
+ "source_theorems": 16797,
+ "no_field": 11409,
+ "on_processes": 3163,
+ "on_processes_modules": 167,
+ "on_processes_through_laws_only": 444,
+ "on_processes_already_naming_a_grammar_term": 91,
+ "binding_a_process": 984,
+ "binding_a_frame_only": 322,
+ "binding": 1306,
+ "not_binding": 1857,
+ "not_on_processes": 8246,
+ "not_on_processes_naming_a_grammar_term": 634,
+ "not_on_processes_naming_no_Becoming_constant_beyond_the_grammar": 1343,
+ "of_which_naming_no_Becoming_constant": 950,
+ "of_which_naming_grammar_terms_only": 393,
+ "not_on_processes_beyond_the_grammar": 6903,
+ "beyond_the_grammar_top_modules": [
+  [
+   "Becoming.Optimum",
+   291
+  ],
+  [
+   "Becoming.Weightings",
+   172
+  ],
+  [
+   "Becoming.RegimeMargin",
+   152
+  ],
+  [
+   "Becoming.OneStep",
+   140
+  ],
+  [
+   "Becoming.Presence",
+   137
+  ],
+  [
+   "Becoming.Interleavings",
+   123
+  ],
+  [
+   "Becoming.Ideals",
+   115
+  ],
+  [
+   "Becoming.HexagramPlaces",
+   90
+  ],
+  [
+   "Becoming.Population",
+   84
+  ],
+  [
+   "Becoming.ConditionalWeights",
+   83
+  ],
+  [
+   "Becoming.CausalGrowth",
+   81
+  ],
+  [
+   "Becoming.Frequency",
+   80
+  ]
+ ],
+ "not_on_processes_top_modules": [
+  [
+   "Becoming.Optimum",
+   351
+  ],
+  [
+   "Becoming.Weightings",
+   214
+  ],
+  [
+   "Becoming.RegimeMargin",
+   160
+  ],
+  [
+   "Becoming.Presence",
+   145
+  ],
+  [
+   "Becoming.OneStep",
+   144
+  ],
+  [
+   "Becoming.Interleavings",
+   134
+  ],
+  [
+   "Becoming.GrammarLaws",
+   125
+  ],
+  [
+   "Becoming.Prelude",
+   123
+  ],
+  [
+   "Becoming.Ideals",
+   115
+  ],
+  [
+   "Becoming.GrammarPath",
+   102
+  ],
+  [
+   "Becoming.Population",
+   97
+  ],
+  [
+   "Becoming.Reproduction",
+   96
+  ]
+ ],
+ "notions_named_in_binding_statements": 322,
+ "landed_bridged_notions_named": [
+  "Becoming.Branching.Lossless",
+  "Becoming.Branching.Returns",
+  "Becoming.Determined",
+  "Becoming.Frame.P",
+  "Becoming.Frame.mk",
+  "Becoming.Frame.realized",
+  "Becoming.GoAlike",
+  "Becoming.GoAlikeUnder",
+  "Becoming.Image",
+  "Becoming.Invariant",
+  "Becoming.Reach",
+  "Becoming.Steps",
+  "Becoming.WithinMoves",
+  "Becoming.moveRel",
+  "Generative.Process.step"
+ ],
+ "wrp2_bridged_notions_named": [
+  "Becoming.FactorsThrough",
+  "Becoming.Law.process",
+  "Becoming.Onward.KeepsMoving",
+  "Becoming.Run",
+  "Becoming.Run.act",
+  "Becoming.Run.state",
+  "Becoming.unlabelled",
+  "Becoming.withMove",
+  "Generative.Enabled",
+  "Generative.Feasible",
+  "Generative.Trace"
+ ],
+ "covered_now": 51,
+ "covered_with_wrp2": 194,
+ "left": 1112,
+ "left_notions": 296,
+ "left_most_named": [
+  [
+   "Becoming.Alike",
+   66
+  ],
+  [
+   "Becoming.stretchOrder",
+   40
+  ],
+  [
+   "Becoming.SameBranchingTests",
+   38
+  ],
+  [
+   "Becoming.Adheres",
+   33
+  ],
+  [
+   "Becoming.Run.stretches",
+   32
+  ],
+  [
+   "Becoming.BranchingTest.Holds",
+   32
+  ],
+  [
+   "Becoming.Reaching.heldMoves",
+   28
+  ],
+  [
+   "Becoming.DeterminedAt",
+   26
+  ],
+  [
+   "Becoming.AlikeTo",
+   25
+  ],
+  [
+   "Becoming.coupled",
+   24
+  ],
+  [
+   "Becoming.Refutable",
+   22
+  ],
+  [
+   "Becoming.Reaching.Possible",
+   22
+  ]
+ ],
+ "criteria": {
+  "fields": [
+   "Becoming.Dependence.active",
+   "Becoming.Dependence.draws",
+   "Becoming.Dependence.level",
+   "Becoming.Dependence.need",
+   "Becoming.Dependence.requires",
+   "Becoming.Exchange.give",
+   "Becoming.Exchange.present",
+   "Becoming.Exchange.take",
+   "Becoming.Flow.give",
+   "Becoming.Flow.present",
+   "Becoming.Flow.take",
+   "Becoming.WebAt.active",
+   "Becoming.WebAt.draws",
+   "Becoming.WebAt.level",
+   "Becoming.WebAt.need",
+   "Becoming.WebAt.requires"
+  ],
+  "proc_named": [
+   "Becoming.Frame",
+   "Becoming.Frame.P",
+   "Becoming.Frame.realized",
+   "Becoming.Invariant",
+   "Becoming.Reach",
+   "Becoming.Run",
+   "Becoming.Run.act",
+   "Becoming.Run.state",
+   "Becoming.Run.window",
+   "Becoming.Steps",
+   "Generative.Enabled",
+   "Generative.Feasible",
+   "Generative.Process",
+   "Generative.Process.step",
+   "Generative.Trace",
+   "Generative.productProcess"
+  ],
+  "law_prefix": "Becoming.Law.",
+  "landed": {
+   "Becoming.Steps": "the union of the moves' relations, by definition (Frame)",
+   "Generative.Process.step": "moveRel, by definition (GrammarRegularity)",
+   "Becoming.moveRel": "a relation of the grammar (GrammarRegularity)",
+   "Becoming.Reach": "reach_iff_withinClosure (Frame)",
+   "Becoming.Invariant": "invariant_iff_closedUnder (Frame)",
+   "Becoming.Branching.Returns": "returns_iff_reaches (Recurrence)",
+   "Becoming.Branching.Lossless": "lossless_iff_fixedBefore (Recurrence)",
+   "Becoming.Determined": "determined_iff_fixed (Laws)",
+   "Becoming.GoAlikeUnder": "goAlikeUnder_iff_alike (Laws)",
+   "Becoming.GoAlike": "GoAlikeUnder at equality, by definition (Laws)",
+   "Becoming.WithinMoves": "withinMoves_iff_withinSteps (Labelled)",
+   "Becoming.Image": "image_step_iff, image_determined_iff (Mechanism)",
+   "Becoming.Frame.P": "a frame's process, read by its moves' relations, by definition",
+   "Becoming.Frame.mk": "a process with claims, by definition",
+   "Becoming.Frame.realized": "each claim the partial identity of its predicate, Web.partialIdentity (WorldRepresentation), carriers in Type"
+  },
+  "wrp2": {
+   "Generative.Enabled": "enabled_iff_neng («能» at the move's relation)",
+   "Generative.Trace": "trace_iff_wordRel (the composite along the word)",
+   "Generative.Trace.nil": "trace_iff_wordRel",
+   "Generative.Trace.cons": "trace_iff_wordRel",
+   "Generative.Feasible": "feasible_iff_wordRel",
+   "Becoming.Run": "run_image, run_iff_image",
+   "Becoming.Run.state": "run_image",
+   "Becoming.Run.act": "run_iff_image (the move inside)",
+   "Becoming.Run.step": "run_iff_image",
+   "Becoming.Run.mk": "run_iff_image",
+   "Becoming.Onward.KeepsMoving": "yan_iff_keepsMoving («延»)",
+   "Becoming.withMove": "step_iff_withMove, withMove_image_iff",
+   "Becoming.unlabelled": "steps_unlabelled",
+   "Becoming.edgeProcess": "steps_edgeProcess",
+   "Becoming.Law.process": "steps_lawProcess (Law.step)",
+   "Becoming.FactorsThrough": "factorsThrough_iff_image («像» at each move)"
+  }
+ }
+}

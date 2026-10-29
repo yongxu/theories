@@ -146,6 +146,11 @@ Balance and dissipation are two compatible constraints on one model, not one law
 
 The condition and C stay named premises, and the free predicate stays the general form. A design comes first, with one independent review, before any Lean. U3 is posted on the board as proposed, for whoever takes 07's significance results.
 
+*(Later, 29 October.)* U3 is taken by the session of the twenty-first review. Its design is reviewed and lands with U1's documents. It states every significance row in the root's terms, as representations, and derives nothing ethical. Two things are asked of it before it lands; U3's board row carries them, since that session takes no messages:
+
+- **A count.** COVERAGE's significance row lists five declarations, but the design's table has six. It needs to say what `Web.paths_extension_iff_widens` is there, and where its row numbers come from.
+- **The Lean.** Its items 1 (the leaf of root forms) and 2 (row 10's interface law in `Becoming.Weightings`) are wanted, so that 全四 rests on the package and not on scratch alone. Until they land, 全四 is designed, not met.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
