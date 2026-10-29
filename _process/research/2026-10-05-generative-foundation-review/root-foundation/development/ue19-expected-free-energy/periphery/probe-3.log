@@ -1,0 +1,26 @@
+build exit 0
+'Becoming.ExpectedFreeEnergy.predicted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.risk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.ambiguity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.expectedFreeEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.pragmatic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.epistemic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.ExpectedFreeEnergy.joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.epistemic_eq_divergence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.epistemic_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.coarse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.sum_through' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.predicted_through' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.epistemic_through' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.ExpectedFreeEnergy.gain_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain' depends on axioms: [propext, Classical.choice, Quot.sound]

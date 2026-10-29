@@ -1,0 +1,277 @@
+{
+  "schema_version": 2,
+  "id": "expected-free-energy-and-its-terms",
+  "title": {
+    "en": "Expected free energy and its terms",
+    "zh": "期望自由能及其诸项"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-29T16:55:21+00:00",
+  "statement": {
+    "en": "Expected free energy, risk plus ambiguity, is the negative of epistemic less pragmatic value, the epistemic value an expected information gain; where the likelihood reads states only through classes it is the classes', so beliefs alike on the classes have one expected free energy.",
+    "zh": "期望自由能（风险加模糊）即认知价值减实用价值之负，认知价值为期望信息增益；似然唯经类读状态时，其值即诸类之值，故于诸类相同之信念有同一期望自由能。"
+  },
+  "laws": [
+    {
+      "en": "For finite states and outcomes, one policy's predicted distribution over states given: the predicted outcomes, risk (the divergence of the predicted outcomes from the preferred ones), ambiguity (the expected entropy of the likelihood), expected free energy, pragmatic and epistemic value (predicted and five more).",
+      "zh": "于有限之状态与结果，给定一策略对状态之预测分布：预测之结果、风险（预测结果对偏好结果之散度）、模糊（似然之期望熵）、期望自由能、实用价值与认知价值（predicted 等六项）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.predicted",
+        "Becoming.ExpectedFreeEnergy.risk",
+        "Becoming.ExpectedFreeEnergy.ambiguity",
+        "Becoming.ExpectedFreeEnergy.expectedFreeEnergy",
+        "Becoming.ExpectedFreeEnergy.pragmatic",
+        "Becoming.ExpectedFreeEnergy.epistemic"
+      ]
+    },
+    {
+      "en": "Risk plus ambiguity is the negative of the epistemic value less the pragmatic value, with no hypothesis (expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic).",
+      "zh": "风险加模糊等于认知价值减实用价值之负，无任何假设（expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic"
+      ]
+    },
+    {
+      "en": "The epistemic value is the divergence of the joint weights of states and outcomes from the product of the states' weights and the predicted outcomes, nonnegative where these are distributions (joint, product, epistemic_eq_divergence, epistemic_nonneg).",
+      "zh": "认知价值为状态与结果之联合权重对状态权重与预测结果之积之散度，于其为分布处非负（joint、product、epistemic_eq_divergence、epistemic_nonneg）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.joint",
+        "Becoming.ExpectedFreeEnergy.product",
+        "Becoming.ExpectedFreeEnergy.epistemic_eq_divergence",
+        "Becoming.ExpectedFreeEnergy.epistemic_nonneg"
+      ]
+    },
+    {
+      "en": "The epistemic value is the predicted outcomes' average of the divergence of FreeEnergyReals' posterior given each outcome from the states' weights, the expected information gain (gain_term, epistemic_eq_expected_gain).",
+      "zh": "认知价值为 FreeEnergyReals 之后验于每一结果下对状态权重之散度，按预测结果之平均，即期望信息增益（gain_term、epistemic_eq_expected_gain）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.gain_term",
+        "Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain"
+      ]
+    },
+    {
+      "en": "Where the likelihood reads a state only through its class, the predicted outcomes, the epistemic value and the expected free energy are the classes', with their total weights (coarse, sum_through, predicted_through, epistemic_through, expectedFreeEnergy_through).",
+      "zh": "似然唯经其类读状态时，预测之结果、认知价值与期望自由能即诸类之值，以其总权重计（coarse、sum_through、predicted_through、epistemic_through、expectedFreeEnergy_through）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.coarse",
+        "Becoming.ExpectedFreeEnergy.sum_through",
+        "Becoming.ExpectedFreeEnergy.predicted_through",
+        "Becoming.ExpectedFreeEnergy.epistemic_through",
+        "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through"
+      ]
+    },
+    {
+      "en": "So two beliefs alike on the classes have one expected free energy, under every likelihood reading through the classes and every preference (expectedFreeEnergy_same_of_coarse).",
+      "zh": "故于诸类相同之二信念，于每一经类而读之似然与每一偏好下，有同一期望自由能（expectedFreeEnergy_same_of_coarse）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse"
+      ]
+    },
+    {
+      "en": "One likelihood for every state the policy may reach gives epistemic value nothing; two states of one likelihood keep their prior ratio in the posterior under every outcome (epistemic_eq_zero_of_lumped, posterior_ratio_of_lumped).",
+      "zh": "策略可达之每一状态皆同一似然，则认知价值为零；同一似然之二状态，于每一结果下其后验保先验之比（epistemic_eq_zero_of_lumped、posterior_ratio_of_lumped）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
+        "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "In the periphery, on Mathlib's reals: each declaration depends on Lean's three standard axioms at most, reported by the module's checker; FreeEnergyReals' divergence and posterior are read unchanged.",
+      "zh": "于外围，基于 Mathlib 之实数：每一声明至多依赖 Lean 之三条标准公理，由本模块之检查器报告；FreeEnergyReals 之散度与后验不加改动而读之。"
+    },
+    {
+      "en": "The decompositions need no hypothesis; the divergence and gain forms need nonnegative weights, nonnegativity distributions; the forms through the lumping need the likelihood to read a state only through its class.",
+      "zh": "二分解无需假设；散度与增益之形式需权重非负，非负性需分布；经归并之形式需似然唯经其类读状态。"
+    },
+    {
+      "en": "Modelling choices: finite states and outcomes; real distributions; one step and one policy, its predicted distribution over states given; risk over outcomes; Mathlib's conventions log 0 = 0 and x / 0 = 0.",
+      "zh": "建模之选：有限之状态与结果；实数之分布；一步一策略，给定其对状态之预测分布；风险取于结果之上；Mathlib 之约定 log 0 = 0 与 x / 0 = 0。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The softmax over policies, precision, multi-step policies with transitions, learning of the likelihood, novelty terms, or any process by which an agent reaches its choice.",
+      "zh": "策略之 softmax、精度、具转移之多步策略、似然之学习、新奇项，或主体达成其选择之任何过程。",
+      "kind": "scope"
+    },
+    {
+      "en": "The data-processing bound: that a policy's epistemic value is at least its classes', the excess being what it tells about the split within a class.",
+      "zh": "数据处理之界：策略之认知价值至少为其诸类之值，超出者即其所告类内之分。",
+      "kind": "scope"
+    },
+    {
+      "en": "A theorem joining it to the core's counting form: its ratio law is stated on FreeEnergyReals' posterior.",
+      "zh": "与核心之计数形式相接之定理：其比之律述于 FreeEnergyReals 之后验之上。",
+      "kind": "scope"
+    },
+    {
+      "en": "Risk and pragmatic value as usually defined where the predicted outcomes weigh an outcome of preference nothing: infinite there, finite here by Mathlib's conventions.",
+      "zh": "预测结果于偏好为零之结果有权重时，通常定义之风险与实用价值：彼处为无穷，此处依 Mathlib 之约定为有限。",
+      "kind": "scope"
+    },
+    {
+      "en": "That any agent chooses by expected free energy, or that its likelihood ties what matters.",
+      "zh": "任一主体依期望自由能而选，或其似然并其所关切者。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
+      "detail": {
+        "en": "Two beliefs splitting a class's weight differently, alike on the classes, have one expected free energy (expectedFreeEnergy_same_of_coarse): no choice by expected free energy tells them apart.",
+        "zh": "二信念于一类内分其权重不同，而于诸类相同，有同一期望自由能（expectedFreeEnergy_same_of_coarse）：依期望自由能之选择不分二者。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the periphery checker check_expected_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261029T164946.410686Z): all 21 declarations of ExpectedFreeEnergyReals, each on Lean's standard axioms only, FreeEnergyReals and every core module of its closure matching a passed receipt. An independent review by another AI agent (REVIEW-UE19) and a re-check, study section 453; not reviewed by a person.",
+    "zh": "外围检查器 check_expected_free_energy_reals.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261029T164946.410686Z）：ExpectedFreeEnergyReals 之全部 21 项声明，皆只依 Lean 之标准公理，FreeEnergyReals 与其闭包之每一核心模块皆合于已通过之回执。另一 AI 代理作独立审查（REVIEW-UE19）并复查，见研究第 453 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "The data-processing bound; the join to the core's counting form through givenShare_eq_posterior; a many-step form with lumpable transitions; review by a person.",
+    "zh": "数据处理之界；经 givenShare_eq_posterior 与核心之计数形式相接；具可归并转移之多步形式；人之审查。"
+  },
+  "correspondence": {
+    "en": "Expected free energy as defined by Parr and Friston (2019, Biological Cybernetics 113): risk over outcomes plus ambiguity, equivalently the negative of epistemic value, the mutual information of states and outcomes, less pragmatic value, the expected log preference. Friston, Rigoli, Ognibene, Mathys, FitzGerald and Pezzulo (2015) split a policy's quality into extrinsic and epistemic value; Da Costa and others (2020) take risk over states and reach this form approximately. The expected information gain is the form Wen (2025, arXiv:2508.05766) names. The decompositions are the principle's definitions and the gain form is known; the forms through the lumping are near-definitional, new here in the principle's terms. Graded in UE19's NOTE.",
+    "zh": "期望自由能依 Parr 与 Friston（2019，Biological Cybernetics 113）之定义：结果上之风险加模糊，等价于认知价值（状态与结果之互信息）减实用价值（期望对数偏好）之负。Friston、Rigoli、Ognibene、Mathys、FitzGerald、Pezzulo（2015）分策略之质为外在价值与认知价值；Da Costa 等（2020）取状态上之风险，近似得此形式。期望信息增益为 Wen（2025，arXiv:2508.05766）所称之形式。二分解为原理之定义，增益之形式已知；经归并之形式近乎定义，于原理之语汇中为新。分级见 UE19 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
+  "aliases": [
+    "Expected free energy and its terms",
+    "期望自由能及其诸项",
+    "expected free energy",
+    "risk and ambiguity",
+    "epistemic and pragmatic value",
+    "expected information gain",
+    "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic",
+    "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse"
+  ],
+  "dependencies": [
+    {
+      "id": "free-energy-bounds-surprisal",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "divergence and posterior: the divergence and the posterior of FreeEnergyReals.",
+        "zh": "divergence 与 posterior：FreeEnergyReals 之散度与后验。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-seeking-cannot-separate",
+      "detail": {
+        "en": "What seeking cannot separate: in counting form, in the pure core, a pair every experiment ties keeps its prior order under every course of seeking.",
+        "zh": "探求所不能分者：于纯核心之计数形式，每一实验皆并之二假设于每一探求历程下保其先验之序。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.ambiguity",
+        "Becoming.ExpectedFreeEnergy.coarse",
+        "Becoming.ExpectedFreeEnergy.epistemic",
+        "Becoming.ExpectedFreeEnergy.epistemic_eq_divergence",
+        "Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain",
+        "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
+        "Becoming.ExpectedFreeEnergy.epistemic_nonneg",
+        "Becoming.ExpectedFreeEnergy.epistemic_through",
+        "Becoming.ExpectedFreeEnergy.expectedFreeEnergy",
+        "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic",
+        "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse",
+        "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through",
+        "Becoming.ExpectedFreeEnergy.gain_term",
+        "Becoming.ExpectedFreeEnergy.joint",
+        "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped",
+        "Becoming.ExpectedFreeEnergy.pragmatic",
+        "Becoming.ExpectedFreeEnergy.predicted",
+        "Becoming.ExpectedFreeEnergy.predicted_through",
+        "Becoming.ExpectedFreeEnergy.product",
+        "Becoming.ExpectedFreeEnergy.risk",
+        "Becoming.ExpectedFreeEnergy.sum_through"
+      ],
+      "sha256": "5e39061898c33c668d97f6bb6099bc88517dbc34ebc17ac0b6142a892262719a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+      "role": "proof",
+      "sha256": "2cc970c8b974f707a4f191793fd5fa1f8982e46cdfe8e9a30eff4bb785105f7d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261029T164946.410686Z/verification.json",
+      "role": "receipt",
+      "sha256": "e5b31122f9fe93e34b3d92ba572fa1a7c78bfab8075bf2b21969b24d66076ab7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
+      "role": "receipt",
+      "sha256": "8dcfa9b39752ec857d28027a8483e7502fb4fa0e1c79b8454e7006ce122cb897"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/check_expected_free_energy_reals.py",
+      "role": "integration",
+      "sha256": "fc48266dbef080763cf41e98b154601b1766ff672909c4f0694da3f2342fd303"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "9e197668e4c87c4ace407a86693dfccf530fb5d9ec81a056ced2dcbb7a6dfd73"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/NOTE.md",
+      "role": "integration",
+      "sha256": "fa4ad43227920bd82372146c81b07ae8e46ec89e8c05e7f667922199b103613b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/REVIEW-UE19.md",
+      "role": "integration",
+      "sha256": "ee1bff41970cf7517ead8da735b00373c4d5bf4842e786ace2de08590f1d1831"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/RECHECK-UE19.md",
+      "role": "integration",
+      "sha256": "ab7bc86a0f9699e14df5f0093124ab11aa5082516f2c3fa09d72e373f8db3b8b"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "7a3737d048bbdf649da364ff3a688643fef458f088c6bd4b5b5c04ea874db53f"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
+      "sha256_pointer": "/source_sha256/FreeEnergyReals",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261029T164946.410686Z/verification.json",
+      "sha256_pointer": "/source_sha256/ExpectedFreeEnergyReals",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "29 October 2026: added (UE19), expected free energy and its terms in the periphery: risk plus ambiguity as the negative of epistemic less pragmatic value, the epistemic value a divergence and an expected information gain, and expected free energy read only through the lumping its likelihood makes; after a review and a re-check; study section 453.",
+      "zh": "2026年10月29日：新增（UE19），外围之期望自由能及其诸项：风险加模糊即认知价值减实用价值之负，认知价值为散度与期望信息增益，期望自由能唯经其似然所成之归并而读；经审查与复查；研究第 453 节。"
+    }
+  ]
+}

@@ -262,6 +262,20 @@
         "en": "Variational free energy bounds surprisal: over the reals, in the periphery, exact minimization of free energy over beliefs with no weight on a hypothesis the prior or the record rules out gives the share given the record.",
         "zh": "变分自由能为惊异之界：于外围之实数上，于先验或记录所排除之假设处无权重之信念上精确最小化自由能，即得记录下之份额。"
       }
+    },
+    {
+      "id": "what-the-existence-claim-forbids",
+      "detail": {
+        "en": "What the existence claim forbids: the point weighting read off a course is this restriction to the course itself.",
+        "zh": "存在之主张所禁者：读自一历程之点权重，即限于该历程本身之此限制。"
+      }
+    },
+    {
+      "id": "what-seeking-cannot-separate",
+      "detail": {
+        "en": "What seeking cannot separate: a tied pair keeps its prior order given every record, a corollary of posterior_single and posterior_le_iff, and over every course of seeking.",
+        "zh": "探求所不能分者：受并之二假设于每一记录下保其先验之序，为 posterior_single 与 posterior_le_iff 之推论，于每一探求历程亦然。"
+      }
     }
   ],
   "references": [
@@ -373,7 +387,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "ca32809355d9e8dca6d73177547cd8713319de3c2ec0cdeec2bc37ee734e33db"
+      "sha256": "7a3737d048bbdf649da364ff3a688643fef458f088c6bd4b5b5c04ea874db53f"
     }
   ],
   "proof_bindings": [
@@ -393,6 +407,14 @@
     {
       "en": "29 October 2026, board item UE17 (study section 450): related to free-energy-bounds-surprisal; the next step drops the join to the periphery's bound, now done, and the correspondence and the third item of what it does not show say that free energy, an average of logarithms, is not the logarithm of one reciprocal share and is stated in the periphery; no statement or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE17（研究第 450 节）：与 free-energy-bounds-surprisal 相关联；下一步删去与外围之界相接（已成），对应与所不示之第三项改称自由能为对数之平均，非一倒数份额之对数，述于外围；无一陈述或声明改变。"
+    },
+    {
+      "en": "29 October 2026, board item UE18 (study section 452): related to what-the-existence-claim-forbids; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE18（研究第 452 节）：与 what-the-existence-claim-forbids 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "29 October 2026, board item UE19 (study section 453): related to what-seeking-cannot-separate; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE19（研究第 453 节）：与 what-seeking-cannot-separate 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

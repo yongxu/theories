@@ -63,7 +63,7 @@ Canonical source: [FreeEnergyGuarantees.lean](../../../../experiments/integrated
 <a id="next--下一步"></a>
 ## Next
 
-Expected free energy with its ambiguity term within a lumping (UE19); conditions under which a shared reading of the joint outcome keeps a collective going; review by a person.
+Conditions under which a shared reading of the joint outcome keeps a collective going; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -80,6 +80,7 @@ The commons (Lloyd 1833; Hardin 1968, Science 162) and pivotality (Palfrey and R
 - **formal-reuse**: [support-from-the-supported](support-from-the-supported.md). Web.Dependent and Web.Supported: activity needing support, met by the witness.
 - **formal-reuse**: [what-a-set-point-optimum-does-beyond](what-a-set-point-optimum-does-beyond.md). Optimum.HeldPair and its held_end, by Flow.held_excess_ends: two holders at set points end the pool's renewal; gap, the distance.
 - related, not a proved adapter: [identical-cells-under-a-descent-treating-them-alike](identical-cells-under-a-descent-treating-them-alike.md). The other third part of the free-energy principle stated in the same module.
+- related, not a proved adapter: [expected-free-energy-and-its-terms](expected-free-energy-and-its-terms.md). Expected free energy and its terms: risk and ambiguity over the reals; the chooser here takes risk alone, as a distance from a point prediction.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -103,6 +104,7 @@ Aliases: `Risk minimization on a shared renewal`, `共享更新上之风险最�
 ### History
 
 - 29 October 2026: added (UE16), risk minimization on a shared renewal: a chooser of least risk has its need end where the rest outruns a gated renewal, unread after and below what it expects; alike preferences for own stores are not one goal, and a goal over the joint level no guarantee either (two regulators continue, three end); against risk minimization ensuring needs and shared preferences making a group goal (candidates 2 and 3); after a review and a re-check; study section 449.
+- 29 October 2026, board item UE19 (study section 453): related to expected-free-energy-and-its-terms; the next step drops expected free energy, now stated; no statement or declaration changed.
 
 </details>
 

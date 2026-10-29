@@ -4072,11 +4072,6 @@
    "category": "general-structure",
    "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
   },
-  "Becoming.ConditionalWeights.posterior_single": {
-   "module": "Becoming.ConditionalWeights",
-   "category": "general-structure",
-   "reason": "a law of every natural weighting of listed courses (conditioning by restriction, shares, a generative model's posterior, independence), an identity of counting with no world; the base supplies no reading of its vocabulary (Becoming.ConditionalWeights, UE2)"
-  },
   "Becoming.ConditionalWeights.prior_share": {
    "module": "Becoming.ConditionalWeights",
    "category": "general-structure",
@@ -4876,6 +4871,116 @@
    "module": "Becoming.FreeEnergyGuarantees",
    "category": "model-witness",
    "reason": "SharedModels.OneGoal.regulator_choice: a fact about one constructed model, the regulator's choices at four and at two (UE16)"
+  },
+  "Becoming.Blanket.Blanketed.external_through_blanket": {
+   "module": "Becoming.Blanket",
+   "category": "general-structure",
+   "reason": "Blanketed.external_through_blanket: the external course fixed by its start and the blanket's; a law of every determined law of internal, sensory, active and external parts on any type; the base supplies no reading of its vocabulary, the join to the World proved for the threshold witness only (UE18)"
+  },
+  "Becoming.Blanket.Blanketed.through_reading": {
+   "module": "Becoming.Blanket",
+   "category": "general-structure",
+   "reason": "Blanketed.through_reading: courses alike through the map the sensory part reads are alike for the agent; a law of every determined law of internal, sensory, active and external parts on any type; the base supplies no reading of its vocabulary, the join to the World proved for the threshold witness only (UE18)"
+  },
+  "Becoming.Blanket.Blanketed.world_through_active": {
+   "module": "Becoming.Blanket",
+   "category": "general-structure",
+   "reason": "Blanketed.world_through_active: the world driven by the active course; a law of every determined law of internal, sensory, active and external parts on any type; the base supplies no reading of its vocabulary, the join to the World proved for the threshold witness only (UE18)"
+  },
+  "Becoming.Blanket.Deaf.lumps": {
+   "module": "Becoming.Blanket",
+   "category": "model-witness",
+   "reason": "Deaf.lumps: a fact about one constructed model, an internal part reading nothing, with one course while the blankets differ (UE18)"
+  },
+  "Becoming.Blanket.ThresholdDrain.alike_before_four": {
+   "module": "Becoming.Blanket",
+   "category": "model-witness",
+   "reason": "ThresholdDrain.alike_before_four: the blankets agree before step four; a fact about one constructed model, the threshold witness: a supply draining by one, read by threshold (UE18)"
+  },
+  "Becoming.Blanket.ThresholdDrain.any_model": {
+   "module": "Becoming.Blanket",
+   "category": "model-witness",
+   "reason": "ThresholdDrain.any_model: with any model and policy, every reading of the internal course alike up to step four; a fact about one constructed model, the threshold witness: a supply draining by one, read by threshold (UE18)"
+  },
+  "Becoming.Blanket.ThresholdDrain.reads_threshold": {
+   "module": "Becoming.Blanket",
+   "category": "model-witness",
+   "reason": "ThresholdDrain.reads_threshold: the sensory part reads the supply only by threshold; a fact about one constructed model, the threshold witness: a supply draining by one, read by threshold (UE18)"
+  },
+  "Becoming.Blanket.ThresholdDrain.sensed_at_break": {
+   "module": "Becoming.Blanket",
+   "category": "model-witness",
+   "reason": "ThresholdDrain.sensed_at_break: the break registered when it comes; a fact about one constructed model, the threshold witness: a supply draining by one, read by threshold (UE18)"
+  },
+  "Becoming.Blanket.ThresholdDrain.sensory_apart_at_four": {
+   "module": "Becoming.Blanket",
+   "category": "model-witness",
+   "reason": "ThresholdDrain.sensory_apart_at_four: the sensory parts differ first at step four; a fact about one constructed model, the threshold witness: a supply draining by one, read by threshold (UE18)"
+  },
+  "Becoming.Blanket.ThresholdDrain.short_rests": {
+   "module": "Becoming.Blanket",
+   "category": "model-witness",
+   "reason": "ThresholdDrain.short_rests: the ended course rests at a fixed point of its law; a fact about one constructed model, the threshold witness: a supply draining by one, read by threshold (UE18)"
+  },
+  "Becoming.Blanket.forbids_iff": {
+   "module": "Becoming.Blanket",
+   "category": "general-structure",
+   "reason": "forbids_iff: a listed outcome has the share nothing exactly where its weight is nothing; a law of every natural weighting of listed outcomes (the point and occupation weightings, conditioning on an outcome), an identity of counting with no world; the base supplies no reading of its vocabulary (UE18)"
+  },
+  "Becoming.Blanket.least_surprisal": {
+   "module": "Becoming.Blanket",
+   "category": "general-structure",
+   "reason": "least_surprisal: under the point weighting a listed outcome is of least surprisal; a law of every natural weighting of listed outcomes (the point and occupation weightings, conditioning on an outcome), an identity of counting with no world; the base supplies no reading of its vocabulary (UE18)"
+  },
+  "Becoming.Blanket.point_forbids_rest": {
+   "module": "Becoming.Blanket",
+   "category": "general-structure",
+   "reason": "point_forbids_rest: under the point weighting every event off the outcome weighs nothing; a law of every natural weighting of listed outcomes (the point and occupation weightings, conditioning on an outcome), an identity of counting with no world; the base supplies no reading of its vocabulary (UE18)"
+  },
+  "Becoming.Blanket.point_is_restrict": {
+   "module": "Becoming.Blanket",
+   "category": "general-structure",
+   "reason": "point_is_restrict: the point weighting is the counting weighting restricted to the record of the outcome; a law of every natural weighting of listed outcomes (the point and occupation weightings, conditioning on an outcome), an identity of counting with no world; the base supplies no reading of its vocabulary (UE18)"
+  },
+  "Becoming.Blanket.read_off_admits": {
+   "module": "Becoming.Blanket",
+   "category": "general-structure",
+   "reason": "read_off_admits: the occupation weighting read off a run admits every visited, listed state; a law of every natural weighting of listed outcomes (the point and occupation weightings, conditioning on an outcome), an identity of counting with no world; the base supplies no reading of its vocabulary (UE18)"
+  },
+  "Becoming.Blanket.visits_zero": {
+   "module": "Becoming.Blanket",
+   "category": "support",
+   "reason": "visits_zero: a list lemma, a state never visited has no visits (UE18)"
+  },
+  "Becoming.LumpedSeeking.posterior_ratio_kept": {
+   "module": "Becoming.LumpedSeeking",
+   "category": "general-structure",
+   "reason": "posterior_ratio_kept: the shares of a tied pair given any record stand as the prior weights do; a law of every natural weighting of listed hypotheses and records, an identity of counting with no world; the base supplies no reading of its vocabulary (UE19)"
+  },
+  "Becoming.LumpedSeeking.Agree.totals": {
+   "module": "Becoming.LumpedSeeking",
+   "category": "model-witness",
+   "reason": "Agree.totals: every bias's weights total sixteen; a fact about one constructed model, three coins under a model reading only whether two tosses agree and one reading both tosses (UE19)"
+  },
+  "Becoming.LumpedSeeking.Agree.turns_fair": {
+   "module": "Becoming.LumpedSeeking",
+   "category": "model-witness",
+   "reason": "Agree.turns_fair: given two heads the true coin comes above the fair one; a fact about one constructed model, three coins under a model reading only whether two tosses agree and one reading both tosses (UE19)"
+  },
+  "Becoming.LumpedSeeking.Agree.keeps_tails": {
+   "module": "Becoming.LumpedSeeking",
+   "category": "model-witness",
+   "reason": "Agree.keeps_tails: given two heads the tails-biased coin stays above the true one; a fact about one constructed model, three coins under a model reading only whether two tosses agree and one reading both tosses (UE19)"
+  },
+  "Becoming.LumpedSeeking.Agree.seeking_keeps_tails": {
+   "module": "Becoming.LumpedSeeking",
+   "category": "model-witness",
+   "reason": "Agree.seeking_keeps_tails: with only the experiment reading agreement, seeking keeps the tails-biased coin above the true one; a fact about one constructed model, three coins under a model reading only whether two tosses agree and one reading both tosses (UE19)"
+  },
+  "Becoming.LumpedSeeking.Agree.seeking_turns_tails": {
+   "module": "Becoming.LumpedSeeking",
+   "category": "model-witness",
+   "reason": "Agree.seeking_turns_tails: with the experiment reading both tosses chosen, seeking turns that order; a fact about one constructed model, three coins under a model reading only whether two tosses agree and one reading both tosses (UE19)"
   }
  },
  "instances": {

@@ -105,6 +105,8 @@ import Becoming.CausalGrowth
 import Becoming.Presence
 import Becoming.ReorderingGrowth
 import Becoming.FreeEnergyGuarantees
+import Becoming.Blanket
+import Becoming.LumpedSeeking
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1590,6 +1592,30 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`FreeEnergyGuarantees.SharedModels.OneGoal.three_end`). Each law applies a landed law in the
   principle's terms or is a witness. A leaf importing `Becoming.Commuting`, `Becoming.Exclusion`
   and `Becoming.SetPointOptimum` (board item UE16).
+* `Becoming.Blanket` (L1): the free-energy principle's Markov blanket as a coupling structure, and
+  what its existence claim forbids. On a determined law of four parts, told apart only by which part
+  reads which, the agent's course is fixed by its start and its sensory course
+  (`Blanket.Blanketed.agent_through_sensory`), the world's by the active course, and each side's by
+  its start and the blanket's (`Blanket.Blanketed.internal_through_blanket`); where the sensory part
+  reads the world only through a map, courses alike through it are alike for the agent
+  (`Blanket.Blanketed.through_reading`, 03 §6's lumping). With any model and policy, a supply read
+  by threshold only is unseen before the break registers (`Blanket.ThresholdDrain.any_model`), the
+  witness's blanket being the World's coupling by threshold
+  (`Blanket.ThresholdDrain.blanket_iff_through`). The point weighting on a listed outcome is
+  conditioning on it (`Blanket.point_is_restrict`), under which it is of least surprisal
+  (`Blanket.least_surprisal`); a listed outcome is forbidden exactly where its weight is nothing
+  (`Blanket.forbids_iff`). A leaf importing `Becoming.ConditionalWeights` (board item UE18).
+* `Becoming.LumpedSeeking` (L1): what seeking cannot separate. Two hypotheses a likelihood ties keep
+  their prior order given every record weighing something under them
+  (`LumpedSeeking.posterior_le_iff_prior`, `LumpedSeeking.order_kept`); a course of seeking, each
+  experiment chosen from the course so far (`LumpedSeeking.seekWeight`), weighs alike under a pair
+  every experiment ties (`LumpedSeeking.seek_tied`), so no seeking corrects an error every experiment
+  ties, whatever the policy of choice (`LumpedSeeking.seeking_keeps_order`). In a three-coin witness,
+  seeking keeps the order the experiment reading agreement ties and turns it once an experiment
+  reading both tosses is chosen (`LumpedSeeking.Agree.seeking_keeps_tails`,
+  `LumpedSeeking.Agree.seeking_turns_tails`). Expected free energy and its terms, over the reals,
+  are the periphery's `ExpectedFreeEnergyReals`. A leaf importing `Becoming.ConditionalWeights`
+  (board item UE19).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

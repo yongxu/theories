@@ -72,8 +72,10 @@ Read a share as a probability, a number of situations of a kind (weights-count-s
 - **formal-reuse**: [sum-over-histories-exact](sum-over-histories-exact.md). counting, openSteps, courses, joinMap and Weights.along; Weights.sum_congr, sum_append, sum_map, sum_joinMap and mul_sum, from which the mass laws are read through mass_eq_sum.
 - related, not a proved adapter: [weights-count-situations](weights-count-situations.md). Shares read as numbers of situations of a kind, a reading.
 - related, not a proved adapter: [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md). Variational free energy bounds surprisal: over the reals, in the periphery, exact minimization of free energy over beliefs with no weight on a hypothesis the prior or the record rules out gives the share given the record.
+- related, not a proved adapter: [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md). What the existence claim forbids: the point weighting read off a course is this restriction to the course itself.
+- related, not a proved adapter: [what-seeking-cannot-separate](what-seeking-cannot-separate.md). What seeking cannot separate: a tied pair keeps its prior order given every record, a corollary of posterior_single and posterior_le_iff, and over every course of seeking.
 
-**Used by:** [exit-from-a-margin](exit-from-a-margin.md) · [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md)
+**Used by:** [exit-from-a-margin](exit-from-a-margin.md) · [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md) · [what-seeking-cannot-separate](what-seeking-cannot-separate.md) · [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -94,6 +96,8 @@ Aliases: `Conditioning by restriction, shares and a generative model's posterior
 
 - 26 October 2026: added (UE2), conditioning on the counting layer, identities of counting; study section 412.
 - 29 October 2026, board item UE17 (study section 450): related to free-energy-bounds-surprisal; the next step drops the join to the periphery's bound, now done, and the correspondence and the third item of what it does not show say that free energy, an average of logarithms, is not the logarithm of one reciprocal share and is stated in the periphery; no statement or declaration changed.
+- 29 October 2026, board item UE18 (study section 452): related to what-the-existence-claim-forbids; no statement, next step or declaration changed.
+- 29 October 2026, board item UE19 (study section 453): related to what-seeking-cannot-separate; no statement, next step or declaration changed.
 
 </details>
 

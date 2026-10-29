@@ -1,0 +1,308 @@
+{
+  "schema_version": 2,
+  "id": "the-markov-blanket-as-a-coupling-structure",
+  "title": {
+    "en": "The Markov blanket as a coupling structure",
+    "zh": "马尔可夫毯作为耦合结构"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-29T16:53:52+00:00",
+  "statement": {
+    "en": "On a determined law of internal, sensory, active and external parts, the agent's course is fixed by its start and its sensory course, bounded by what the sensory part reads of the world; so, with any model and policy, a supply read by threshold only is unseen before the break registers.",
+    "zh": "于内部、感官、主动与外部四部分之确定律，主体之历程由其起点与感官历程所定，受感官部分所读之外界所限；故无论模型与策略，唯以阈读之供给于断裂登记前不可见。"
+  },
+  "laws": [
+    {
+      "en": "A blanketed law has four parts of one law, told apart by which part reads which: the internal and active parts read the internal, sensory and active parts, the sensory and external parts the sensory, active and external parts; its step moves all four, its course is the orbit (Blanketed, Parts, step, course, congr3).",
+      "zh": "毯化之律有一律之四部分，以何部分读何部分相别：内部与主动部分读内部、感官与主动部分，感官与外部部分读感官、主动与外部部分；其步四者同移，其历程即轨道（Blanketed、Parts、step、course、congr3）。",
+      "declarations": [
+        "Becoming.Blanket.Blanketed",
+        "Becoming.Blanket.Parts",
+        "Becoming.Blanket.Blanketed.step",
+        "Becoming.Blanket.Blanketed.course",
+        "Becoming.Blanket.congr3"
+      ]
+    },
+    {
+      "en": "The agent is driven by its sensory course: from one internal and one active state, courses alike on the sensory part have one internal and one active course; the world is driven by the active course (agent_through_sensory, world_through_active).",
+      "zh": "主体由其感官历程所驱动：自同一内部与主动状态起，感官部分相同之历程其内部与主动历程相同；外界由主动历程所驱动（agent_through_sensory、world_through_active）。",
+      "declarations": [
+        "Becoming.Blanket.Blanketed.agent_through_sensory",
+        "Becoming.Blanket.Blanketed.world_through_active"
+      ]
+    },
+    {
+      "en": "Each side's course is fixed by its start and the blanket's course, and every reading of the internal course is a selection through the blanket: the deterministic case of the time-unrolled blanket (BlanketAlike, internal_through_blanket, external_through_blanket, reads_through_blanket).",
+      "zh": "每一侧之历程由其起点与毯之历程所定，内部历程之每一读数皆为经毯之选择：时间展开之毯之确定情形（BlanketAlike、internal_through_blanket、external_through_blanket、reads_through_blanket）。",
+      "declarations": [
+        "Becoming.Blanket.Blanketed.BlanketAlike",
+        "Becoming.Blanket.Blanketed.internal_through_blanket",
+        "Becoming.Blanket.Blanketed.external_through_blanket",
+        "Becoming.Blanket.Blanketed.reads_through_blanket"
+      ]
+    },
+    {
+      "en": "Where the sensory part reads the external part only through a map, two courses from one agent and sensory start whose external parts are alike through it have one internal, sensory and active course: generalization through a lumping on every blanketed law (through_reading).",
+      "zh": "感官部分唯经一映射读外部部分，则自同一主体与感官起点、外部部分经之相同之二历程，其内部、感官与主动历程相同：经归并之推广于每一毯化之律（through_reading）。",
+      "declarations": [
+        "Becoming.Blanket.Blanketed.through_reading"
+      ]
+    },
+    {
+      "en": "A reading through the blanket separates at most what the blanket tells apart: an internal part reading nothing has one course while the blankets differ (Deaf.law, Deaf.lumps).",
+      "zh": "经毯之读至多分其毯所分：不读任何物之内部部分，毯异而其历程相同（Deaf.law、Deaf.lumps）。",
+      "declarations": [
+        "Becoming.Blanket.Deaf.law",
+        "Becoming.Blanket.Deaf.lumps"
+      ]
+    },
+    {
+      "en": "The threshold witness: the internal part whether the system goes on, the sensory part reading the supply only by threshold, the supply draining by one; the blankets agree before step four, at step four the sensory parts differ while the internal parts agree, at step five one has ended, and the ended course rests (law and eight more).",
+      "zh": "阈之例：内部部分为系统是否延续，感官部分唯以阈读供给，供给每步减一；第四步前毯相同，第四步感官部分相异而内部部分相同，第五步其一终结，终结之历程静止（law 等九项）。",
+      "declarations": [
+        "Becoming.Blanket.ThresholdDrain.law",
+        "Becoming.Blanket.ThresholdDrain.short",
+        "Becoming.Blanket.ThresholdDrain.long",
+        "Becoming.Blanket.ThresholdDrain.reads_threshold",
+        "Becoming.Blanket.ThresholdDrain.alike_before_four",
+        "Becoming.Blanket.ThresholdDrain.sensed_at_break",
+        "Becoming.Blanket.ThresholdDrain.ended",
+        "Becoming.Blanket.ThresholdDrain.ended_rests",
+        "Becoming.Blanket.ThresholdDrain.short_rests"
+      ]
+    },
+    {
+      "en": "The witness's blanket is the World's coupling by threshold: its sensory part is the World's admission at need one, and its courses are blanket-alike before step n + 2 exactly where the supply histories are alike through the formation's couplings up to n (web and five more).",
+      "zh": "例之毯即世界以阈之耦合：其感官部分即世界于需求一之容纳，其历程于第 n + 2 步前于毯相同，恰当供给之历史经形成之耦合至 n 相同（web 等六项）。",
+      "declarations": [
+        "Becoming.Blanket.ThresholdDrain.web",
+        "Becoming.Blanket.ThresholdDrain.sensory_is_admission",
+        "Becoming.Blanket.ThresholdDrain.external_course",
+        "Becoming.Blanket.ThresholdDrain.sensory_succ",
+        "Becoming.Blanket.ThresholdDrain.bool_eq_of_iff",
+        "Becoming.Blanket.ThresholdDrain.blanket_iff_through"
+      ]
+    },
+    {
+      "en": "With any model updated by any rule and any policy, from a supply of three and every supply of four or more, every reading of the internal course up to step four is alike, the sensory parts differing first at step four, while at step five the first has ended (modelLaw and five more).",
+      "zh": "无论以何规则更新之任一模型与任一策略，自供给三与任一不少于四之供给，至第四步内部历程之每一读数皆相同，感官部分于第四步始异，而第五步前者已终结（modelLaw 等六项）。",
+      "declarations": [
+        "Becoming.Blanket.ThresholdDrain.modelLaw",
+        "Becoming.Blanket.ThresholdDrain.start",
+        "Becoming.Blanket.ThresholdDrain.sensed_alike",
+        "Becoming.Blanket.ThresholdDrain.blanket_alike",
+        "Becoming.Blanket.ThresholdDrain.any_model",
+        "Becoming.Blanket.ThresholdDrain.sensory_apart_at_four"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Four parts of any types of one determined law, the internal and active parts reading the internal, sensory and active parts, the sensory and external parts the sensory, active and external parts.",
+      "zh": "不加公理。一确定律之任意类型之四部分，内部与主动部分读内部、感官与主动部分，感官与外部部分读感官、主动与外部部分。"
+    },
+    {
+      "en": "For the lumping law, the sensory part reads the external part only through a given map; for the witness, the supply drains by one and no action changes it, read by the threshold of need one.",
+      "zh": "归并之律需感官部分唯经一所给映射读外部部分；于例，供给每步减一，无行动改之，以需求一之阈读之。"
+    },
+    {
+      "en": "Modelling choices: discrete synchronous steps; the blanket as sparse coupling of a determined law, not conditional independence of a stationary density; for the join, the witness's supply as one condition of a web at need one.",
+      "zh": "建模之选：离散同步之步；毯为确定律之稀疏耦合，非平稳密度之条件独立；于相接，例之供给为需求一之网之一条件。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Densities, the Helmholtz decomposition, nonequilibrium steady states, or that statistical and dynamical blankets coincide.",
+      "zh": "密度、Helmholtz 分解、非平衡稳态，或统计之毯与动力之毯相合。",
+      "kind": "scope"
+    },
+    {
+      "en": "A World formation in general as the agent of a blanketed law: the join is proved for the witness only.",
+      "zh": "一般之世界形成作为毯化之律之主体：相接只于例中得证。",
+      "kind": "scope"
+    },
+    {
+      "en": "Any free energy, or that a threshold-reading policy cannot draw on a larger supply.",
+      "zh": "任何自由能，或以阈读之策略不能取用更大之供给。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the principle is wrong: no sentence of its literature is forbidden here.",
+      "zh": "原理有误：此处不禁其文献之任何语句。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "detail": {
+        "en": "From a supply of three and of four or more, with any model and policy, the internal courses agree up to step four and at step five the first has ended (ThresholdDrain.any_model).",
+        "zh": "自供给三与不少于四之供给，无论模型与策略，至第四步内部历程相同，第五步前者已终结（ThresholdDrain.any_model）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "detail": {
+        "en": "An internal part reading nothing has one course while the blankets differ (Deaf.lumps).",
+        "zh": "不读任何物之内部部分，毯异而其历程相同（Deaf.lumps）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T164943.729811Z): 35 of the 49 declarations of Becoming.Blanket, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE18), whose probe the revision adopted, and a re-check, study section 452; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.Blanket 之 49 项声明中之 35 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE18），修订采其探针，并复查，见研究第 452 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "A World formation in general as the agent of a blanketed law, its sensory course its own course; the threshold-reading policy unable to draw on a larger supply; review by a person.",
+    "zh": "一般之世界形成作为毯化之律之主体，其感官历程即其自身历程；以阈读之策略不能取用更大之供给；人之审查。"
+  },
+  "correspondence": {
+    "en": "The free-energy principle's partition (Friston 2013; Kirchhoff, Parr, Palacios, Friston and Kiverstein 2018) on a determined law: the deterministic case of the time-unrolled Markov blanket (Virgo, Rosas and Biehl 2022, Behavioral and Brain Sciences 45), the sensory and active courses Pearl's blanket (1988) of the internal course in the unrolled graph, the partition what Bruineberg, Dołęga, Dewhurst and Baltieri (2022) call a Friston blanket. Statistical and dynamical blankets need not coincide (Biehl, Pollock and Kanai 2021; Aguilera, Millidge, Tschantz and Buckley 2022). Self-evidencing blind to its break coming is T6's invisible half (runaway-distance-uncoupled) on a blanketed agent. Graded in UE18's NOTE.",
+    "zh": "自由能原理之划分（Friston 2013；Kirchhoff、Parr、Palacios、Friston、Kiverstein 2018）于确定律：时间展开之马尔可夫毯之确定情形（Virgo、Rosas、Biehl 2022，Behavioral and Brain Sciences 45），感官与主动历程即展开图中内部历程之 Pearl 毯（1988），其划分即 Bruineberg、Dołęga、Dewhurst、Baltieri（2022）所称 Friston 毯。统计之毯与动力之毯未必相合（Biehl、Pollock、Kanai 2021；Aguilera、Millidge、Tschantz、Buckley 2022）。自证不见其断裂之将至，即 T6 不可见之半于毯化之主体（runaway-distance-uncoupled）。分级见 UE18 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+  "aliases": [
+    "The Markov blanket as a coupling structure",
+    "马尔可夫毯作为耦合结构",
+    "Markov blanket",
+    "self-evidencing",
+    "time-unrolled blanket",
+    "Becoming.Blanket.Blanketed.agent_through_sensory",
+    "Becoming.Blanket.ThresholdDrain.any_model"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-through-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.AlikeThroughUpTo and Web.Admits: alike through a formation's couplings, and admission at a need.",
+        "zh": "Web.AlikeThroughUpTo 与 Web.Admits：经形成之耦合相同，及于一需求之容纳。"
+      }
+    },
+    {
+      "id": "generalization-through-lumping",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Learning.Lumped: a map read only through another.",
+        "zh": "Learning.Lumped：唯经另一映射而读之映射。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-the-existence-claim-forbids",
+      "detail": {
+        "en": "The free-energy principle's blanket and existence claim, stated in the same module.",
+        "zh": "同一模块所述之自由能原理之毯与存在之主张。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Blanket.Blanketed",
+        "Becoming.Blanket.Blanketed.BlanketAlike",
+        "Becoming.Blanket.Blanketed.agent_through_sensory",
+        "Becoming.Blanket.Blanketed.course",
+        "Becoming.Blanket.Blanketed.external_through_blanket",
+        "Becoming.Blanket.Blanketed.internal_through_blanket",
+        "Becoming.Blanket.Blanketed.reads_through_blanket",
+        "Becoming.Blanket.Blanketed.step",
+        "Becoming.Blanket.Blanketed.through_reading",
+        "Becoming.Blanket.Blanketed.world_through_active",
+        "Becoming.Blanket.Deaf.law",
+        "Becoming.Blanket.Deaf.lumps",
+        "Becoming.Blanket.Parts",
+        "Becoming.Blanket.ThresholdDrain.alike_before_four",
+        "Becoming.Blanket.ThresholdDrain.any_model",
+        "Becoming.Blanket.ThresholdDrain.blanket_alike",
+        "Becoming.Blanket.ThresholdDrain.blanket_iff_through",
+        "Becoming.Blanket.ThresholdDrain.bool_eq_of_iff",
+        "Becoming.Blanket.ThresholdDrain.ended",
+        "Becoming.Blanket.ThresholdDrain.ended_rests",
+        "Becoming.Blanket.ThresholdDrain.external_course",
+        "Becoming.Blanket.ThresholdDrain.law",
+        "Becoming.Blanket.ThresholdDrain.long",
+        "Becoming.Blanket.ThresholdDrain.modelLaw",
+        "Becoming.Blanket.ThresholdDrain.reads_threshold",
+        "Becoming.Blanket.ThresholdDrain.sensed_alike",
+        "Becoming.Blanket.ThresholdDrain.sensed_at_break",
+        "Becoming.Blanket.ThresholdDrain.sensory_apart_at_four",
+        "Becoming.Blanket.ThresholdDrain.sensory_is_admission",
+        "Becoming.Blanket.ThresholdDrain.sensory_succ",
+        "Becoming.Blanket.ThresholdDrain.short",
+        "Becoming.Blanket.ThresholdDrain.short_rests",
+        "Becoming.Blanket.ThresholdDrain.start",
+        "Becoming.Blanket.ThresholdDrain.web",
+        "Becoming.Blanket.congr3"
+      ],
+      "sha256": "517d21ed20f59fce954e4f007eee54a9342bb1908a487ce9bd1b2d307d390677"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "sha256": "8353141c372581724c3370927c5cd9ddfed892120cc2a8874053ca83f81f3115"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "role": "proof",
+      "sha256": "aba84f9ec26501aedb0c4f266c90619fcca2305f268e843a82d5603468d51b44"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+      "role": "proof",
+      "sha256": "3f65e832ea3a9fb9359d3a6d77a45ac039ea86bfb93ac5207fbc857fac1adf74"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "role": "receipt",
+      "sha256": "90045f08330f2bdf2df1d888eb17d62d7cd9c1d0546ab710bd7f5b14b3b2e7a4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "9e197668e4c87c4ace407a86693dfccf530fb5d9ec81a056ced2dcbb7a6dfd73"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue18-blanket-and-existence/NOTE.md",
+      "role": "integration",
+      "sha256": "b233e55c3eb5d4290006d85e2797e49b6b6081819228920150be148a1cd52075"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue18-blanket-and-existence/REVIEW-UE18.md",
+      "role": "integration",
+      "sha256": "da08b8d41fb4a9b6ef4b964e12e1c922b66ec0748ebead8d2c6c25bfdc9f74e7"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "7a3737d048bbdf649da364ff3a688643fef458f088c6bd4b5b5c04ea874db53f"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Blanket",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "29 October 2026: added (UE18), the Markov blanket as a coupling structure: the agent driven by its sensory course on a blanketed law, bounded by what the sensory part reads (lumping); with any model and policy a threshold-read supply unseen before the break registers, the witness joined to the World's coupling; after a review whose probe the revision adopted, and a re-check; study section 452.",
+      "zh": "2026年10月29日：新增（UE18），马尔可夫毯作为耦合结构：于毯化之律主体由其感官历程所驱动，受感官部分所读所限（归并）；无论模型与策略，唯以阈读之供给于断裂登记前不可见，例与世界之耦合相接；经审查（修订采其探针）与复查；研究第 452 节。"
+    }
+  ]
+}

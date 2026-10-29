@@ -5088,6 +5088,46 @@ Contains 9 textual `#print axioms` commands; their results belong to the origina
 
 </details>
 
+<a id="module-08914cd7e653"></a>
+
+<details>
+<summary>ExpectedFreeEnergyReals.lean — 21 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean) · [Theory](../../chapters/03-KNOWING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean`
+
+Imports: `FreeEnergyReals`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L84) | 84 |
+| [Becoming.ExpectedFreeEnergy.epistemic_eq_divergence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L134) | 134 |
+| [Becoming.ExpectedFreeEnergy.epistemic_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L155) | 155 |
+| [Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L201) | 201 |
+| [Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L219) | 219 |
+| [Becoming.ExpectedFreeEnergy.sum_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L238) | 238 |
+| [Becoming.ExpectedFreeEnergy.predicted_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L248) | 248 |
+| [Becoming.ExpectedFreeEnergy.epistemic_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L255) | 255 |
+| [Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L277) | 277 |
+| [Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L289) | 289 |
+| [Becoming.ExpectedFreeEnergy.gain_term](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L301) | 301 |
+| [Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L315) | 315 |
+
+Definitions and types:
+
+- `def` [Becoming.ExpectedFreeEnergy.predicted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L54) (L54)
+- `def` [Becoming.ExpectedFreeEnergy.risk](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L59) (L59)
+- `def` [Becoming.ExpectedFreeEnergy.ambiguity](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L63) (L63)
+- `def` [Becoming.ExpectedFreeEnergy.expectedFreeEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L67) (L67)
+- `def` [Becoming.ExpectedFreeEnergy.pragmatic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L73) (L73)
+- `def` [Becoming.ExpectedFreeEnergy.epistemic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L79) (L79)
+- `def` [Becoming.ExpectedFreeEnergy.joint](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L124) (L124)
+- `def` [Becoming.ExpectedFreeEnergy.product](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L127) (L127)
+- `def` [Becoming.ExpectedFreeEnergy.coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L235) (L235)
+
+</details>
+
 <a id="module-00dcabf3b882"></a>
 
 <details>

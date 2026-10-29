@@ -1,0 +1,55 @@
+@Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic : ∀ {σ : Type u_1} {ω : Type u_2}
+  (S : Finset σ) (O : Finset ω) (Qs : σ → ℝ) (A : σ → ω → ℝ) (P : ω → ℝ),
+  Becoming.ExpectedFreeEnergy.expectedFreeEnergy S O Qs A P =
+    -Becoming.ExpectedFreeEnergy.epistemic S O Qs A - Becoming.ExpectedFreeEnergy.pragmatic S O Qs A P
+@Becoming.ExpectedFreeEnergy.epistemic_eq_divergence : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (O : Finset ω)
+  (Qs : σ → ℝ) (A : σ → ω → ℝ),
+  (∀ s ∈ S, 0 ≤ Qs s) →
+    (∀ s ∈ S, ∀ o ∈ O, 0 ≤ A s o) →
+      Becoming.ExpectedFreeEnergy.epistemic S O Qs A =
+        Becoming.FreeEnergy.divergence (S ×ˢ O) (Becoming.ExpectedFreeEnergy.joint Qs A)
+          (Becoming.ExpectedFreeEnergy.product S Qs A)
+@Becoming.ExpectedFreeEnergy.epistemic_nonneg : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (O : Finset ω)
+  (Qs : σ → ℝ) (A : σ → ω → ℝ),
+  (∀ s ∈ S, 0 ≤ Qs s) →
+    ∑ s ∈ S, Qs s = 1 →
+      (∀ s ∈ S, ∀ o ∈ O, 0 ≤ A s o) → (∀ s ∈ S, ∑ o ∈ O, A s o = 1) → 0 ≤ Becoming.ExpectedFreeEnergy.epistemic S O Qs A
+@Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (O : Finset ω)
+  (Qs : σ → ℝ) (A : σ → ω → ℝ) (B : ω → ℝ),
+  ∑ s ∈ S, Qs s = 1 → (∀ s ∈ S, Qs s ≠ 0 → ∀ o ∈ O, A s o = B o) → Becoming.ExpectedFreeEnergy.epistemic S O Qs A = 0
+@Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (Qs : σ → ℝ)
+  (A : σ → ω → ℝ) {s₁ s₂ : σ},
+  (∀ (o : ω), A s₁ o = A s₂ o) →
+    ∀ (o : ω),
+      Becoming.FreeEnergy.posterior S (fun s => Qs s * A s o) s₁ * Qs s₂ =
+        Becoming.FreeEnergy.posterior S (fun s => Qs s * A s o) s₂ * Qs s₁
+@Becoming.ExpectedFreeEnergy.sum_through : ∀ {σ : Type u_1} {κ : Type u_2} [inst : DecidableEq κ] (S : Finset σ)
+  (Qs : σ → ℝ) (π : σ → κ) (f : κ → ℝ),
+  ∑ s ∈ S, Qs s * f (π s) = ∑ k ∈ Finset.image π S, Becoming.ExpectedFreeEnergy.coarse S Qs π k * f k
+@Becoming.ExpectedFreeEnergy.predicted_through : ∀ {σ : Type u_1} {ω : Type u_2} {κ : Type u_3} [inst : DecidableEq κ]
+  (S : Finset σ) (Qs : σ → ℝ) (π : σ → κ) (B : κ → ω → ℝ) (o : ω),
+  Becoming.ExpectedFreeEnergy.predicted S Qs (fun s => B (π s)) o =
+    Becoming.ExpectedFreeEnergy.predicted (Finset.image π S) (Becoming.ExpectedFreeEnergy.coarse S Qs π) B o
+@Becoming.ExpectedFreeEnergy.epistemic_through : ∀ {σ : Type u_1} {ω : Type u_2} {κ : Type u_3} [inst : DecidableEq κ]
+  (S : Finset σ) (O : Finset ω) (Qs : σ → ℝ) (π : σ → κ) (B : κ → ω → ℝ),
+  (Becoming.ExpectedFreeEnergy.epistemic S O Qs fun s => B (π s)) =
+    Becoming.ExpectedFreeEnergy.epistemic (Finset.image π S) O (Becoming.ExpectedFreeEnergy.coarse S Qs π) B
+@Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through : ∀ {σ : Type u_1} {ω : Type u_2} {κ : Type u_3}
+  [inst : DecidableEq κ] (S : Finset σ) (O : Finset ω) (Qs : σ → ℝ) (π : σ → κ) (B : κ → ω → ℝ) (P : ω → ℝ),
+  Becoming.ExpectedFreeEnergy.expectedFreeEnergy S O Qs (fun s => B (π s)) P =
+    Becoming.ExpectedFreeEnergy.expectedFreeEnergy (Finset.image π S) O (Becoming.ExpectedFreeEnergy.coarse S Qs π) B P
+@Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse : ∀ {σ : Type u_1} {ω : Type u_2} {κ : Type u_3}
+  [inst : DecidableEq κ] (S : Finset σ) (O : Finset ω) {Qs Qs' : σ → ℝ} (π : σ → κ) (B : κ → ω → ℝ) (P : ω → ℝ),
+  (∀ (k : κ), Becoming.ExpectedFreeEnergy.coarse S Qs π k = Becoming.ExpectedFreeEnergy.coarse S Qs' π k) →
+    Becoming.ExpectedFreeEnergy.expectedFreeEnergy S O Qs (fun s => B (π s)) P =
+      Becoming.ExpectedFreeEnergy.expectedFreeEnergy S O Qs' (fun s => B (π s)) P
+Becoming.ExpectedFreeEnergy.gain_term : ∀ (q a P : ℝ),
+  0 ≤ q → 0 ≤ a → q * a ≤ P → q * a * (Real.log a - Real.log P) = P * (q * a / P * (Real.log (q * a / P) - Real.log q))
+@Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (O : Finset ω)
+  (Qs : σ → ℝ) (A : σ → ω → ℝ),
+  (∀ s ∈ S, 0 ≤ Qs s) →
+    (∀ s ∈ S, ∀ o ∈ O, 0 ≤ A s o) →
+      Becoming.ExpectedFreeEnergy.epistemic S O Qs A =
+        ∑ o ∈ O,
+          Becoming.ExpectedFreeEnergy.predicted S Qs A o *
+            Becoming.FreeEnergy.divergence S (Becoming.FreeEnergy.posterior S fun s => Qs s * A s o) Qs

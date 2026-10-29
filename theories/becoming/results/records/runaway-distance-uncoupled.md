@@ -84,6 +84,7 @@ Ren's “wisdoms to avoid run away feedbacks”; testing-within-couplings read a
 - related, not a proved adapter: [how-loops-form](how-loops-form.md). Here a runaway's break does not couple in before it; there the formation of the loop that runs away need not show in the amounts it carries either: what carries it is what the couplings themselves couple into.
 - related, not a proved adapter: [loops-within-what-a-law-reads](loops-within-what-a-law-reads.md). Within one law: loops lie within what is read and form where reading grows; for a law reading a stock only below a threshold there is no loop through the stock before the break, and the loop forms at the break.
 - related, not a proved adapter: [observation-is-a-route](observation-is-a-route.md). Observation is a route of readings from what is observed: a difference goes only downstream, and a stock couples into a formation only through a level it reads downstream of the stock; a route forms by closing.
+- related, not a proved adapter: [the-markov-blanket-as-a-coupling-structure](the-markov-blanket-as-a-coupling-structure.md). The Markov blanket as a coupling structure: the distance to the break unseen by a blanketed agent with any model and policy, reading its supply by threshold.
 
 **Used by:** [loops-within-what-a-law-reads](loops-within-what-a-law-reads.md) · [wisdom-root-without-axiom](wisdom-root-without-axiom.md) (interpretive)
 
@@ -144,6 +145,7 @@ Aliases: `Becoming.Flow.PolicyThrough`, `Becoming.Flow.exchangeFollows_of_policy
 - 20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; the statement now carries the hypothesis that the stock couples in by threshold only, and two does_not_show items are added (near-definitional; early-warning signals where the stock is observed). The claim and its premises are unchanged.
 - 25 October 2026, board item DF (study section 418): the correspondence names the record by its current id, testing-within-couplings, for its former id; nothing else changed.
 - 26 October 2026, board item DF1b (study section 422): The related note on how-loops-form reads its witness (Closing.Onset.unforeseen) as one: the formation need not show in the amounts.
+- 29 October 2026, board item UE18 (study section 452): related to the-markov-blanket-as-a-coupling-structure; no statement, next step or declaration changed.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](runaway-distance-uncoupled.json).
 
 <a id="earlier-text--早期文本"></a>
