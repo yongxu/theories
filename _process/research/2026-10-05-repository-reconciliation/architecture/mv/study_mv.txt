@@ -19,8 +19,8 @@ Delta: (1) tools/research/master_laws.py:
        changed. (4) RESULT-WORKFLOW: what the view measures and when to rerun it. (5) tests.
 Premises: none added; the measure's anchors, grammar test and categories, as they stand.
 Evidence:
-       - on core receipt CRECEIPT, 3,653 laws in 462 records: 687 reach the grammar (49 through its vocabulary
-         only), 643 rest on balance and do not reach it, 134 rest on another anchor and do not reach it, 1,838
+       - on core receipt CRECEIPT, 3,653 laws in 462 records: 690 reach the grammar (49 through its vocabulary
+         only), 643 rest on balance and do not reach it, 134 rest on another anchor and do not reach it, 1,835
          have no master law's anchor among the constants their declarations use, 342 cite only declarations the
          spine run does not have, and 9 cite no declaration;
        - by master law: closure 286, balance 800, finite runs 236, lumping 79, order 77;

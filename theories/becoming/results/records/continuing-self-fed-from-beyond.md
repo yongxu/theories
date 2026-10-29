@@ -19,7 +19,7 @@
 4. Read with one kind of relatum, the same holds where embodied members arise at arbitrarily late steps. (`Becoming.Web.embodiedArising_draws_in`, `Becoming.Web.embodiedArising_fed_from_beyond`)
    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 5. The two laws for taking and rising hold in every world with the local condition inside the law: from some step on, the family balanced on and enclosed around, and every family without repetition closed across each step dissipated on; the forms under balance and dissipation everywhere are their corollaries. (`Becoming.Flow.BalancesOn`, `Becoming.Flow.Balances.on`, `Becoming.Flow.fed_from_beyond_from`, `Becoming.Flow.rising_fed_from_beyond_from`)
-   - *Master laws, by Lean dependency:* it defines the anchor `Becoming.Flow.BalancesOn`; balance and finite runs; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; balance and finite runs; its declarations reach the grammar.
 6. Being fed is needed, and no source condition need recur: in Lone, balanced and dissipative with an eater taking at every step, the pool is fed from beyond at every step while each fuel is conveyed from at its own step only; the one source does all the conveying. (`Becoming.Lone.lone`, `Becoming.Lone.fed`, `Becoming.Lone.each_fuel_once`, `Becoming.Lone.fed_not_recurring`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 

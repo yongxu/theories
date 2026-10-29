@@ -11,7 +11,7 @@
 ## Laws
 
 1. On the frame of a web's level paths a claim is a formation at a step, realized along a level path where its levels admit the formation then, meeting every requirement it has at that step. One level path widens another where at every step it admits every formation the other admits, and at some step one more. (`Becoming.Web.paths`, `Becoming.Web.Admits`, `Becoming.Web.Includes`, `Becoming.Web.Exceeds`, `Becoming.Web.Widens`)
-   - *Master laws, by Lean dependency:* it defines the anchor `Becoming.Web.Widens`; order; its declarations do not reach the grammar.
+   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Web.Widens` itself; order; its declarations do not reach the grammar.
 2. With every claim counted as living, an extension of one level path by another, realizing every claim the first realizes and one more, is exactly the second widening the first. (`Becoming.Extension`, `Becoming.Web.paths_extension_iff_widens`)
    - *Master laws, by Lean dependency:* order; its declarations do not reach the grammar; the measure counts central declaration `Becoming.Web.paths_extension_iff_widens` as following from a master law (not reaching the grammar: C's extension on a web's paths: a reindexing of claims (formation, step) to admissions (step, formation), every claim counted; widening enters by its definition, its order laws already from the grammar).
 3. For every reading of living, C, every extension being better, holds on level paths with “better” read as widening; the proof unfolds the comparison to the extension, so that widening is better is supplied by the reading of “better”. (`Becoming.Comparison`, `Becoming.Web.paths_comparison_widens`)

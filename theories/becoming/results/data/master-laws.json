@@ -1,7 +1,7 @@
 {
- "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json or the measure.",
- "core_receipt": "20261029T084618.786422Z",
- "core_sources_sha256": "45095822e3241f43fd39a877e024fabb775cf1cb46f47c3f0716ceaa5d20343d",
+ "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
+ "core_receipt": "20261029T104256.342764Z",
+ "core_sources_sha256": "7eda1e87ba55211512a41b730d60243f52c969489b0d4c29ff750cc12b8d8dc6",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "4952228938aef973e6cf0a17b3873636b34c75955f7bf53be72310cacbb59203",
@@ -9,7 +9,7 @@
   "theories/becoming/results/completion/COVERAGE.json": "022ae0fc28b40f798c02823be35d7463afac2a92a0ada74bfbd3789e160d9749",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/master_laws.py": "801b2eaf5366efc737021d9b1616550635a5cd76e0e61b43aa9d8b381f08735b"
+  "tools/research/master_laws.py": "91ce148e44683ef9862af60e4458b6e3baf1f4a14a546be73f5e2118107cf41b"
  },
  "names": {
   "closure": "closure",
@@ -47,10 +47,10 @@
   "laws": 3653,
   "no_declarations": 9,
   "outside": 342,
-  "grammar": 687,
+  "grammar": 690,
   "balance, represented": 643,
   "anchor, not reached": 134,
-  "no master law": 1838,
+  "no master law": 1835,
   "vocabulary_only": 49,
   "closure": 286,
   "balance": 800,
@@ -109,6 +109,7 @@
       "declaration": "Becoming.SharedCodes.run_agrees_every_start_iff",
       "category": "law of its model",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "copying from an origin"
      }
     ]
@@ -1199,8 +1200,8 @@
      "Becoming.PatternRelay.shifts"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -1212,8 +1213,8 @@
      "Becoming.PatternRelay.stopped_relay"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -1240,8 +1241,9 @@
      "Becoming.Web.alters_of_passes",
      "Becoming.Web.passing_fire",
      "Becoming.Web.ByPassing.line_back",
-     "Becoming.Web.ByPassing.passes_within_by_line",
-     "Becoming.Web.ByPassing.begins_passed_by_grammar",
+     "Becoming.Web.ByPassing.passes_within",
+     "Becoming.Web.ByPassing.begins_passed",
+     "Becoming.Web.ByPassing.ends_within",
      "Becoming.PatternRelay.shifted_fire",
      "Becoming.PatternRelay.fire_shape"
     ],
@@ -1626,7 +1628,10 @@
      {
       "declaration": "Becoming.Web.frontier_keeps_stepwise",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -1795,7 +1800,10 @@
      {
       "declaration": "Becoming.Web.frontier_exhausts",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -2327,7 +2335,11 @@
      {
       "declaration": "Becoming.Flow.unselected_beyond_pool",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -2348,7 +2360,10 @@
      {
       "declaration": "Becoming.Flow.withinCoupling_reads_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -2397,6 +2412,9 @@
       "declaration": "Becoming.Direction.extension_iff_widens",
       "category": "master law",
       "dependence": "anchor, not reached",
+      "master_laws": [
+       "order"
+      ],
       "reason": "C's extension on paths, on the moves' frame (Web.paths_extension_iff_widens)"
      }
     ]
@@ -2439,7 +2457,12 @@
      {
       "declaration": "Becoming.Direction.widening_selected_by_pool",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance",
+       "order"
+      ]
      }
     ]
    },
@@ -2735,7 +2758,10 @@
      {
       "declaration": "Becoming.Law.drawn_iff_not_returns",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      }
     ]
    },
@@ -3425,6 +3451,7 @@
       "declaration": "Becoming.Renewable.no_exact_finite_reading",
       "category": "single application",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "a prefix reading used once; the open continuation"
      }
     ]
@@ -3995,7 +4022,10 @@
      {
       "declaration": "Becoming.Valuation.significant_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -4580,7 +4610,10 @@
      {
       "declaration": "Becoming.RuleCapture.favouring_locks",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -4624,7 +4657,10 @@
      {
       "declaration": "Becoming.RuleCapture.uniform_locks",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -4703,6 +4739,7 @@
       "declaration": "Becoming.Run.not_fixes_of_untaken",
       "category": "law of its model",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "an untaken move retargeted"
      }
     ]
@@ -4762,7 +4799,10 @@
      {
       "declaration": "Becoming.Listed.coming_of_ceasing",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -4796,7 +4836,10 @@
      {
       "declaration": "Becoming.Listed.coming_of_ceasing",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -5068,7 +5111,10 @@
      {
       "declaration": "Becoming.CensusWebs.keep_pace",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -5687,8 +5733,8 @@
      "Becoming.Web.renewingAlong_mono"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "classical-definitions-in-the-grammar": [
@@ -5933,7 +5979,10 @@
      {
       "declaration": "Becoming.ClosedCapture.lock_outlives_loss",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -6833,6 +6882,9 @@
       "declaration": "Becoming.Web.paths_extension_iff_widens",
       "category": "master law",
       "dependence": "anchor, not reached",
+      "master_laws": [
+       "order"
+      ],
       "reason": "C's extension on a web's paths: a reindexing of claims (formation, step) to admissions (step, formation), every claim counted; widening enters by its definition, its order laws already from the grammar"
      }
     ]
@@ -6853,6 +6905,9 @@
       "declaration": "Becoming.Web.paths_comparison_widens",
       "category": "master law",
       "dependence": "anchor, not reached",
+      "master_laws": [
+       "order"
+      ],
       "reason": "C's extension on paths, one direction, for every reading of living"
      }
     ]
@@ -6887,6 +6942,9 @@
       "declaration": "Becoming.Web.widens_iff_retains_adds",
       "category": "master law",
       "dependence": "anchor, not reached",
+      "master_laws": [
+       "order"
+      ],
       "reason": "the reduction of what has significance to what can form under the continuation condition; the free significance is not lifted to the root"
      }
     ]
@@ -6917,6 +6975,9 @@
       "declaration": "Becoming.Web.paths_one_object",
       "category": "master law",
       "dependence": "anchor, not reached",
+      "master_laws": [
+       "order"
+      ],
       "reason": "the conjunction of C's extension on paths, the continuation condition as living significance, and the reduction of significance under the condition"
      }
     ]
@@ -7008,6 +7069,9 @@
       "declaration": "Becoming.Web.paths_extension_iff_widens",
       "category": "master law",
       "dependence": "anchor, not reached",
+      "master_laws": [
+       "order"
+      ],
       "reason": "C's extension on a web's paths: a reindexing of claims (formation, step) to admissions (step, formation), every claim counted; widening enters by its definition, its order laws already from the grammar"
      }
     ]
@@ -7163,7 +7227,11 @@
      {
       "declaration": "Becoming.Flow.Balances.comparison_within_response",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -7514,7 +7582,10 @@
      {
       "declaration": "Becoming.Valuation.significant_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -7729,6 +7800,7 @@
       "declaration": "Becoming.Viability.kernel_and_iff",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "logic: for all reached, and"
      }
     ]
@@ -8404,7 +8476,10 @@
      {
       "declaration": "Becoming.Flow.Balances.consumption_ends_with_feeders",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -8648,12 +8723,16 @@
      {
       "declaration": "Becoming.Valuation.significant_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      },
      {
       "declaration": "Becoming.Valuation.significant_iff_held",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "S0 and N_std unpacked"
      }
     ]
@@ -8778,6 +8857,7 @@
       "declaration": "Becoming.Web.significance_undetermined",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "a free slot shown free"
      }
     ]
@@ -8808,6 +8888,7 @@
       "declaration": "Becoming.unrestricted_iff_livingSignificance",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "two definitions unpacked"
      }
     ]
@@ -9204,7 +9285,10 @@
      {
       "declaration": "Becoming.World.comes_to_rest_unrefuted",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -10004,7 +10088,10 @@
      {
       "declaration": "Becoming.counterfactual_is_course",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -10079,7 +10166,11 @@
      {
       "declaration": "Becoming.Flow.Balances.comparison_within_response",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -11107,7 +11198,11 @@
      {
       "declaration": "Becoming.RegimeMargin.Coupled.threshold_falls",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -11237,7 +11332,10 @@
      {
       "declaration": "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -12285,6 +12383,7 @@
       "declaration": "Becoming.Drift.falls_back",
       "category": "law of its model",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "a second-moment bound on samplings"
      }
     ]
@@ -12338,7 +12437,8 @@
      {
       "declaration": "Becoming.WithinMoves.after_course",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": []
      }
     ]
    },
@@ -13309,7 +13409,11 @@
      {
       "declaration": "Becoming.Branching.loss_passes_juncture",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "return"
+      ]
      }
     ]
    },
@@ -13567,12 +13671,14 @@
       "declaration": "Becoming.Flow.selected_le",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "support: only the active give, the active are supported"
      },
      {
       "declaration": "Becoming.Flow.selection_within",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "support, with the counting form of Price"
      }
     ]
@@ -13591,6 +13697,7 @@
       "declaration": "Becoming.Flow.transmitted_supported",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "support, with inheritance within the bound"
      }
     ]
@@ -13611,6 +13718,7 @@
       "declaration": "Becoming.Flow.transmitted_supported",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "support, with inheritance within the bound"
      }
     ]
@@ -13970,6 +14078,7 @@
       "declaration": "Becoming.Run.not_fixes_of_untaken",
       "category": "law of its model",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "an untaken move retargeted"
      }
     ]
@@ -14404,7 +14513,10 @@
      {
       "declaration": "Becoming.Flow.beyond_gives_nothing",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -16456,7 +16568,10 @@
      {
       "declaration": "Becoming.Learning.goAlike_iff_lumped",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "lumping"
+      ]
      }
     ]
    },
@@ -16487,6 +16602,7 @@
       "declaration": "Becoming.Learning.Training.unselected_beyond_data",
       "category": "single application",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "a selection through the data, used once"
      }
     ]
@@ -16735,7 +16851,10 @@
      {
       "declaration": "Becoming.Web.Embodied.replenishes",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -16969,7 +17088,8 @@
      {
       "declaration": "Becoming.Withholding.withholding_spreads",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": []
      }
     ]
    },
@@ -17514,12 +17634,18 @@
      {
       "declaration": "Becoming.GroupEnding.Flow.family_childless",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.GroupEnding.Flow.coupled_end_together",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -18917,7 +19043,10 @@
      {
       "declaration": "Becoming.Web.frontier_broken",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -19198,7 +19327,10 @@
      {
       "declaration": "Becoming.Pace.rule_until_reading",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -19282,7 +19414,10 @@
      {
       "declaration": "Becoming.onLoop_of_closing",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -20223,7 +20358,10 @@
      {
       "declaration": "Becoming.Web.Unceasing.activeRenewer_recurs",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      }
     ]
    },
@@ -20455,7 +20593,10 @@
      {
       "declaration": "Becoming.World.balanced_reidentify_iff",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -21270,6 +21411,7 @@
       "declaration": "Becoming.Dependence.Overdetermined.only_together",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "one line from the definitions"
      }
     ]
@@ -21288,6 +21430,7 @@
       "declaration": "Becoming.Dependence.differenceOnlyTogether_iff",
       "category": "law of its model",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "the dichotomy of a determined process"
      }
     ]
@@ -21722,7 +21865,10 @@
      {
       "declaration": "Becoming.Web.frontier_breaks_below",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -22363,7 +22509,10 @@
      {
       "declaration": "Becoming.Flow.change_recurs_iff",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -22568,7 +22717,10 @@
      {
       "declaration": "Becoming.Learnable.learnable_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      }
     ]
    },
@@ -23002,6 +23154,7 @@
       "declaration": "Becoming.Limit.identifies_iff_tracks",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "Iff.rfl"
      }
     ]
@@ -23035,7 +23188,10 @@
      {
       "declaration": "Becoming.LearnableRuns.learnable_iff_tracks",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      }
     ]
    },
@@ -23327,7 +23483,10 @@
      {
       "declaration": "Becoming.Amounts.rests",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      }
     ]
    },
@@ -23627,7 +23786,10 @@
      {
       "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -23740,18 +23902,21 @@
       "declaration": "Becoming.Web.roles_supported",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "the one-kind reading keeps support"
      },
      {
       "declaration": "Becoming.Web.roles_dependent",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "the one-kind reading keeps dependence"
      },
      {
       "declaration": "Becoming.Web.roles_alive",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "the one-kind reading keeps living"
      }
     ]
@@ -24295,6 +24460,7 @@
       "declaration": "Becoming.Web.living_on_reaches",
       "category": "single application",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "N_rel once; its closure form is Valuation.reaches"
      }
     ]
@@ -24337,6 +24503,7 @@
       "declaration": "Becoming.Flow.descent_reaches",
       "category": "single application",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "N_rel once; its closure form is Valuation.reaches"
      }
     ]
@@ -24357,7 +24524,10 @@
      {
       "declaration": "Becoming.Valuation.significant_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -24414,6 +24584,7 @@
       "declaration": "Becoming.Valuation.significant_iff_held",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "S0 and N_std unpacked"
      }
     ]
@@ -24508,7 +24679,10 @@
      {
       "declaration": "Becoming.Web.selfValuation_significant_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    }
@@ -25193,7 +25367,10 @@
      {
       "declaration": "Becoming.RegimeMargin.ends_iff_below",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -26338,22 +26515,32 @@
      {
       "declaration": "Becoming.Law.drawn_iff_not_returns",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      },
      {
       "declaration": "Becoming.Law.lossless_iff_returns",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      },
      {
       "declaration": "Becoming.Learning.goAlike_iff_lumped",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "lumping"
+      ]
      },
      {
       "declaration": "Becoming.WithinMoves.after_course",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": []
      }
     ]
    }
@@ -26622,7 +26809,10 @@
      {
       "declaration": "Becoming.Valuation.significant_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -26791,7 +26981,10 @@
      {
       "declaration": "Becoming.Flow.Balances.renewedBy",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -26817,7 +27010,11 @@
      {
       "declaration": "Becoming.Flow.More.replenishment_unbounded",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "balance",
+       "return"
+      ]
      }
     ]
    },
@@ -26899,7 +27096,11 @@
      {
       "declaration": "Becoming.Flow.More.replenishment_unbounded",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "balance",
+       "return"
+      ]
      }
     ]
    },
@@ -27134,7 +27335,10 @@
      {
       "declaration": "Becoming.Flow.mutuallyDependent_iff_reach",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -27289,7 +27493,10 @@
      {
       "declaration": "Becoming.Law.drawn_iff_not_returns",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      }
     ]
    },
@@ -27526,7 +27733,11 @@
      {
       "declaration": "Becoming.Flow.Dissipative.opens",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "balance",
+       "return"
+      ]
      }
     ]
    },
@@ -27884,7 +28095,10 @@
      {
       "declaration": "Becoming.apart_only_downstream",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -28532,7 +28746,10 @@
      {
       "declaration": "Becoming.Web.frontier_rebuilds",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -28979,7 +29196,10 @@
      {
       "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -29250,7 +29470,11 @@
      {
       "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance",
+       "order"
+      ]
      }
     ]
    },
@@ -30959,7 +31183,10 @@
      {
       "declaration": "Becoming.presupposition_scopes",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -31961,7 +32188,10 @@
      {
       "declaration": "Becoming.Web.course_lost_iff",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -32375,7 +32605,10 @@
      {
       "declaration": "Becoming.Flow.withinCoupling_reads_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -32903,7 +33136,10 @@
      {
       "declaration": "Becoming.Law.lossless_iff_returns",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      }
     ]
    },
@@ -33325,7 +33561,10 @@
      {
       "declaration": "Becoming.RegimeMargin.Drawn.run_shape",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -33480,7 +33719,10 @@
      {
       "declaration": "Becoming.RegimeMargin.Adjusted.ends_iff_below",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -34021,6 +34263,7 @@
       "declaration": "Becoming.RelativePosition.rise_needs_fall",
       "category": "law of its model",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "a zero-sum count, by commutativity"
      }
     ]
@@ -34498,6 +34741,7 @@
       "declaration": "Becoming.Web.renewingAt_iff_over_all",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "a one-line unpacking"
      }
     ]
@@ -34701,7 +34945,10 @@
      {
       "declaration": "Becoming.Web.Carries.active_not_recurring",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      }
     ]
    },
@@ -35862,7 +36109,8 @@
      {
       "declaration": "Becoming.Tolerance.answers_restores_iff",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": []
      }
     ]
    },
@@ -36836,7 +37084,10 @@
      {
       "declaration": "Becoming.Optimum.optimum_beyond",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -37278,7 +37529,10 @@
      {
       "declaration": "Becoming.Flow.change_recurs_iff",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -37357,6 +37611,7 @@
       "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "only the active give, with the partition"
      }
     ]
@@ -37374,6 +37629,7 @@
       "declaration": "Becoming.GroupEnding.Flow.all_end",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "only the active give"
      }
     ]
@@ -37435,6 +37691,7 @@
       "declaration": "Becoming.SelectionTerm.covariation",
       "category": "counting identity",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "Price's covariance, with no premise"
      }
     ]
@@ -37540,12 +37797,14 @@
       "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "support, with Price's identity"
      },
      {
       "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "support, with Price's identity"
      }
     ]
@@ -37791,7 +38050,11 @@
      {
       "declaration": "Becoming.Flow.unselected_beyond_coupling",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -38144,6 +38407,7 @@
       "declaration": "Becoming.SelectionLevels.levels_sized",
       "category": "counting identity",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "Price's partition among groups"
      }
     ]
@@ -38265,6 +38529,7 @@
       "declaration": "Becoming.SelectionLevels.levels_sized",
       "category": "counting identity",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "Price's partition among groups"
      }
     ]
@@ -38307,6 +38572,7 @@
       "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
       "category": "counting identity",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "Price's partition, read for a rise"
      }
     ]
@@ -39125,7 +39391,10 @@
      {
       "declaration": "Becoming.Optimum.mutual_beyond",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -39438,6 +39707,9 @@
       "declaration": "Becoming.Web.widens_iff_retains_adds",
       "category": "master law",
       "dependence": "anchor, not reached",
+      "master_laws": [
+       "order"
+      ],
       "reason": "the reduction of what has significance to what can form under the continuation condition; the free significance is not lifted to the root"
      }
     ]
@@ -39459,7 +39731,10 @@
      {
       "declaration": "Becoming.Flow.Balances.retains_iff_within_margin",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -40721,7 +40996,10 @@
      {
       "declaration": "Becoming.Flow.restores",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -40906,7 +41184,10 @@
      {
       "declaration": "Becoming.Flow.change_recurs_iff",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -41575,7 +41856,11 @@
      {
       "declaration": "Becoming.Flow.unexcluded_beyond_coupling",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -42138,7 +42423,11 @@
      {
       "declaration": "Becoming.Flow.act_unselected",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -42159,7 +42448,11 @@
      {
       "declaration": "Becoming.act_courses_unselected",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    }
@@ -42725,7 +43018,10 @@
      {
       "declaration": "Becoming.Flow.outrun_below",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -42941,7 +43237,10 @@
      {
       "declaration": "Becoming.Learning.goAlike_iff_lumped",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "lumping"
+      ]
      }
     ]
    },
@@ -43077,7 +43376,10 @@
      {
       "declaration": "Becoming.Learning.goAlike_iff_lumped",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "lumping"
+      ]
      }
     ]
    },
@@ -43745,7 +44047,11 @@
      {
       "declaration": "Becoming.RegimeMargin.Adjusted.falls_iff_below",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -44307,6 +44613,7 @@
       "declaration": "Becoming.Web.transmits_at_iff",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "transmission unpacked"
      }
     ]
@@ -44491,6 +44798,7 @@
       "declaration": "Becoming.Web.transmits_at_iff",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "transmission unpacked"
      }
     ]
@@ -44579,7 +44887,10 @@
      {
       "declaration": "Becoming.Flow.no_new_dependence",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -44613,6 +44924,7 @@
       "declaration": "Becoming.Flow.transmitted_supported",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "support, with inheritance within the bound"
      }
     ]
@@ -45365,12 +45677,18 @@
      {
       "declaration": "Becoming.Web.Unceasing.rises",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      },
      {
       "declaration": "Becoming.Web.Unceasing.activeRenewer_recurs",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "return"
+      ]
      }
     ]
    },
@@ -45399,7 +45717,11 @@
      {
       "declaration": "Becoming.Flow.uptake_needs_replenishment",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "balance",
+       "return"
+      ]
      }
     ]
    },
@@ -46683,6 +47005,7 @@
       "declaration": "Becoming.responses_le_missBound",
       "category": "law of its model",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "a bound of propagation"
      }
     ]
@@ -46934,6 +47257,7 @@
       "declaration": "Becoming.Ideals.verifiableBy_iff_interior",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "Iff.rfl"
      }
     ]
@@ -47532,6 +47856,7 @@
       "declaration": "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
       "category": "definitional or representational",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "two laws through one coupling"
      }
     ]
@@ -48329,6 +48654,7 @@
       "declaration": "Becoming.Web.optimum_broken_iff",
       "category": "law of its model",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "the drive to the least level"
      }
     ]
@@ -48465,6 +48791,7 @@
       "declaration": "Becoming.Reproduction.Flow.number_within_take",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "dissipation"
      }
     ]
@@ -48500,7 +48827,10 @@
      {
       "declaration": "Becoming.Reproduction.Flow.lineage_ends",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -48519,7 +48849,10 @@
      {
       "declaration": "Becoming.Reproduction.Flow.closed_lineage_lowered",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -49003,6 +49336,7 @@
       "declaration": "Becoming.carried_iff_rising",
       "category": "premise of the account",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "support, as NeedsSupportAt"
      }
     ]
@@ -49625,7 +49959,11 @@
      {
       "declaration": "Becoming.Flow.unselected_beyond_pool",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -49704,7 +50042,11 @@
      {
       "declaration": "Becoming.Flow.act_selected_by_pool",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -49908,7 +50250,10 @@
      {
       "declaration": "Becoming.Flow.continuing_excludes",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -50049,7 +50394,10 @@
      {
       "declaration": "Becoming.forced_iff_center",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -50774,6 +51122,9 @@
       "declaration": "Becoming.PartForms.goAlike",
       "category": "master law",
       "dependence": "anchor, not reached",
+      "master_laws": [
+       "lumping"
+      ],
       "reason": "a law of its model: the part's law determined at a move the part alone forms; the image law only reads it as carrying a law of its own (carries_law_iff), and a proof through it applies the law and undoes it (OU3d's review)"
      }
     ]
@@ -51122,7 +51473,11 @@
      {
       "declaration": "Becoming.RegimeMargin.Adjusted.comes_to_rest",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -51231,7 +51586,10 @@
      {
       "declaration": "Becoming.Flow.new_beyond_every",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -52001,7 +52359,10 @@
      {
       "declaration": "Becoming.Web.Whole.family_excess_ends",
       "category": "balance, represented",
-      "dependence": "balance, represented"
+      "dependence": "balance, represented",
+      "master_laws": [
+       "balance"
+      ]
      }
     ]
    },
@@ -52732,6 +53093,9 @@
       "declaration": "Becoming.Weighting.widens_iff_every_positive",
       "category": "master law",
       "dependence": "anchor, not reached",
+      "master_laws": [
+       "order"
+      ],
       "reason": "weights: widening is what every positive weighting ranks higher; the grammar has no weights"
      }
     ]
@@ -52842,7 +53206,10 @@
      {
       "declaration": "Becoming.Learning.goAlike_iff_lumped",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "lumping"
+      ]
      }
     ]
    },
@@ -52862,6 +53229,7 @@
       "declaration": "Becoming.Run.not_fixes_of_untaken",
       "category": "law of its model",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "an untaken move retargeted"
      }
     ]
@@ -52899,7 +53267,11 @@
      {
       "declaration": "Becoming.Flow.unselected_beyond_coupling",
       "category": "master law",
-      "dependence": "grammar"
+      "dependence": "grammar",
+      "master_laws": [
+       "closure",
+       "balance"
+      ]
      }
     ]
    },
@@ -52945,6 +53317,7 @@
       "declaration": "Becoming.Learning.Training.unselected_beyond_data",
       "category": "single application",
       "dependence": "no master law",
+      "master_laws": [],
       "reason": "a selection through the data, used once"
      }
     ]

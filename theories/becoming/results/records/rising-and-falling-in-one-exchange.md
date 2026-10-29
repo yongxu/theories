@@ -11,7 +11,7 @@
 ## Laws
 
 1. In a balanced flow every fall is taken from; where only active formations take, some active formation taking part takes from a condition that falls and draws on it. These are the duals of rise_given and renewedBy. (`Becoming.Flow.Balances`, `Becoming.Flow.taken`, `Becoming.Flow.Taking`, `Becoming.Flow.Balances.fall_taken`, `Becoming.Flow.Balances.takenBy`, `Becoming.Flow.Balances.rise_given`)
-   - *Master laws, by Lean dependency:* it defines the anchor `Becoming.Flow.Balances`; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.Balances` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. In a balanced flow, across a step dissipated on, a family's members fall by at least as much as they rise, and by one more for each formation taking from the family. (`Becoming.Flow.DissipatesOn`, `Becoming.Flow.takers`, `Becoming.Flow.Balances.falls_cover`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. So a formation taking from the family makes some member fall, whether or not another rises; an event at each of whose steps the family is dissipated on and taken from depletes it, so the Depletes that Becoming.Arising supplies as a correspondence premise follows. (`Becoming.Flow.Balances.falls_of_taking`, `Becoming.Flow.Balances.depletes`, `Becoming.Web.Depletes`)
@@ -25,7 +25,7 @@
 7. Without dissipation it need not: across every step, generation t+1 arises in the closed family of itself and generation t while no generation ever falls, so that family is not dissipated on. (`Becoming.Brood.brood`, `Becoming.Brood.birth_only`, `Becoming.Brood.rise_without_fall`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. These laws hold of every world in a local form, with balance and dissipation at the one step, on the family only, and the activity of givers and takers only at that step; Flow.Balances.falls_cover, Balances.falls_of_taking, Balances.depletes, rise_with_fall, rise_exchange and Web.Embodied.arising_with_fall are their corollaries. (`Becoming.Flow.BalancesOn`, `Becoming.Flow.Balances.on`, `Becoming.Flow.BalancesOn.falls_cover`, `Becoming.Flow.BalancesOn.falls_of_taking`, `Becoming.Flow.depletes_at`, `Becoming.Flow.BalancesOn.rise_with_fall`, `Becoming.Flow.BalancesOn.rise_exchange`, `Becoming.Web.Embodied.arising_with_fall_at`)
-   - *Master laws, by Lean dependency:* it defines the anchor `Becoming.Flow.BalancesOn`; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -21,7 +21,7 @@ sec = (HERE / 'study_mv.txt').read_text(encoding='utf-8').replace('## NNN.', f'#
 assert 'NNN' not in sec and 'CRECEIPT' not in sec
 c = DATA['counts']
 for figure in (f'{c["laws"]:,} laws', f'{c["grammar"]} reach the grammar', f'{c["no master law"]:,} have no'):
-    assert figure in sec, ('the study section\'s figures differ from the data; update study_mv.txt', figure)
+    assert figure in ' '.join(sec.split()), ('the study section\'s figures differ from the data; update study_mv.txt', figure)
 STUDY.write_text(st.rstrip('\n') + '\n\n' + sec.strip('\n') + '\n', encoding='utf-8')
 
 b = BOARD.read_text(encoding='utf-8')

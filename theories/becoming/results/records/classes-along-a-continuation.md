@@ -23,7 +23,7 @@
 6. Tenure and undermining along a continuation: a dependence's tenure is read along links across which it holds, with nothing asked of activity, and undermining along a continuation is drawing after which a condition is below a dependence's present need and below a need met along the continuation while it held. Along each formation continuing itself they are tenure and undermining as named. (`Becoming.Web.Linked`, `Becoming.Web.holdingOn`, `Becoming.Web.MetAboveAlong`, `Becoming.Web.UnderminingAlong`, `Becoming.Web.Linked.itself_held`, `Becoming.Web.Linked.itself_onward`, `Becoming.Web.exists_steps_between`, `Becoming.Web.metAboveAlong_itself_iff`, `Becoming.Web.underminingAlong_itself_iff`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. Tenure and undermining along a continuation are unchanged by every re-identification carrying it; more links never remove undermining or consuming, and fewer never remove renewing. (`Becoming.Web.Linked.of_carry`, `Becoming.Web.Linked.to_carry`, `Becoming.Web.metAboveAlong_reidentify`, `Becoming.Web.underminingAlong_reidentify`, `Becoming.Web.Linked.mono`, `Becoming.Web.Continuing.mono`, `Becoming.Web.underminingAlong_mono`, `Becoming.Web.consumingAlong_mono`, `Becoming.Web.renewingAlong_mono`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

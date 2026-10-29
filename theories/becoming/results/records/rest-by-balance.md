@@ -11,7 +11,7 @@
 ## Laws
 
 1. Where a count is balanced across each step of a stretch (after the step with what it loses equals before it with what it gains) and loses at least one more than it gains at each, it ends the stretch with the stretch's length within what it was at the start. The stretch balance is the reason. (`Becoming.Amounts.falls_by_stretch`, `Becoming.Amounts.total_steps_lose`, `Becoming.balance_over_stretch_on`)
-   - *Master laws, by Lean dependency:* it defines the anchor `Becoming.balance_over_stretch_on`; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.balance_over_stretch_on` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. Where whether a step is marked is decided, and from a step on the count is balanced across each step and loses at least one more than it gains at each marked step, some step from there within what the count was is unmarked. The steps up to that bound are searched, so no omniscience is used. (`Becoming.Amounts.unmarked_within`, `Becoming.Amounts.unmarked_or_marked`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Two counts balanced across each step of a stretch, the first starting within the second: where at each step the first's gain with the second's loss is within the second's gain with the first's loss, the first ends the stretch within the second. (`Becoming.Amounts.le_by_exchange`, `Becoming.Amounts.total_steps_le`, `Becoming.Amounts.total_steps_add`)

@@ -11,7 +11,7 @@
 ## Laws
 
 1. Balance at a step: the flow balances on a family across a step where each member's level after it, with what was taken from it, is its level before with what was given to it; balance is balance on every family across every step. (`Becoming.Flow.BalancesOn`, `Becoming.Flow.balances_iff_on`)
-   - *Master laws, by Lean dependency:* it defines the anchor `Becoming.Flow.BalancesOn`; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. With balance at a condition across a step, it comes to stand exactly when it stood at nothing and was given more than was taken from it, and ceases to stand exactly when it stood and what was taken from it is all it had with all it was given. (`Becoming.Flow.BalancesOn.comesToStand_iff`, `Becoming.Flow.BalancesOn.ceasesToStand_iff`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Across a step at which nothing is taken from a balanced family, a member rises exactly when something taking part gives to it, which dissipation on the family excludes. (`Becoming.Flow.BalancesOn.rises_iff_gives`, `Becoming.Flow.DissipatesOn.still_untaken`)
