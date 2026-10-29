@@ -469,7 +469,7 @@
         "Becoming.«部分恒等之像»",
         "Becoming.«静之像»"
       ],
-      "sha256": "d5d12bd4915c3e02ff313001845b5879779d8236c9217f2129093db1dbb6f0b2"
+      "sha256": "1175e7f2283ce4d6a41ded9031081f98874a9fc234349b86c974f2050c746892"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean",
@@ -534,7 +534,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
       "role": "proof",
-      "sha256": "1c570bdf4f061b73c8b53ecc571f534733e8e0b9fdb1a7c4b30c1a8f874f907c"
+      "sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
@@ -569,7 +569,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "7cb999f6f9f20bfbb4cc0878e613403a87ccc174a1920720bfe9d4cb23294295"
+      "sha256": "7ae07b1d9b7bc91f417cd2afa6f547b9b9671cac83321c00185222df11752163"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
@@ -621,12 +621,18 @@
       "role": "receipt",
       "sha256": "0cddecdb0aa23825d3112bd51aa78355a77196434e914adbfee29fdd2befeaa9",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "role": "receipt",
+      "sha256": "6fbe7c7f21314fbd0a3eba90ff6bde5198b56d52137d19fc6857a87e83949aa4",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTransport.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarTransport",
       "success_pointer": "/status",
       "success_value": "passed"

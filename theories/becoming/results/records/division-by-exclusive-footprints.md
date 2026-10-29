@@ -67,6 +67,7 @@ Partitioning a resource: disjoint allocations within capacity.
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 
 Aliases: `Division by exclusive footprints`, `以互斥之足迹分`, `Becoming.Flow.distinct_of_nodup`
 

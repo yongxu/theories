@@ -6318,7 +6318,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 136,
+   "theorems": 138,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -6329,7 +6329,7 @@
    "type": "module",
    "name": "Becoming.GrammarTransport",
    "level": "L1",
-   "theorems": 54,
+   "theorems": 53,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -6343,17 +6343,6 @@
    "theorems": 28,
    "region": "knowing",
    "base": "grammar",
-   "on_grammar": true,
-   "reaches_grammar": true
-  },
-  {
-   "id": "module:Becoming.KeptOnward",
-   "type": "module",
-   "name": "Becoming.KeptOnward",
-   "level": "L1",
-   "theorems": 1,
-   "region": "unassigned",
-   "base": "",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -6879,7 +6868,7 @@
    "type": "module",
    "name": "Becoming.Dissipation",
    "level": "L1",
-   "theorems": 110,
+   "theorems": 111,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -9167,7 +9156,7 @@
    "type": "module",
    "name": "Becoming.KeepingWidening",
    "level": "L2",
-   "theorems": 249,
+   "theorems": 248,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -31140,11 +31129,6 @@
   },
   {
    "from": "module:Becoming.Exclusion",
-   "to": "module:Becoming.KeptOnward",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Exclusion",
    "to": "module:Becoming.Witnesses",
    "type": "imports"
   },
@@ -31909,11 +31893,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.KeptOnward",
-   "to": "module:Becoming.GrammarLaws",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.Labelled",
    "to": "module:Becoming.Arising",
    "type": "imports"
@@ -32530,11 +32509,6 @@
   },
   {
    "from": "module:Becoming.PatternPassing",
-   "to": "module:Becoming.KeptOnward",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.PatternPassing",
    "to": "module:Becoming.Wholes",
    "type": "imports"
   },
@@ -32546,11 +32520,6 @@
   {
    "from": "module:Becoming.Persistence",
    "to": "module:Becoming.Identity",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Persistence",
-   "to": "module:Becoming.KeptOnward",
    "type": "imports"
   },
   {
@@ -33070,11 +33039,6 @@
   },
   {
    "from": "module:Becoming.Reserve",
-   "to": "module:Becoming.KeptOnward",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Reserve",
    "to": "module:Becoming.Roles",
    "type": "imports"
   },
@@ -33111,11 +33075,6 @@
   {
    "from": "module:Becoming.Restoration",
    "to": "module:Becoming.Dependence",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Retaining",
-   "to": "module:Becoming.KeptOnward",
    "type": "imports"
   },
   {
@@ -33826,11 +33785,6 @@
   {
    "from": "module:Becoming.Wholes",
    "to": "module:Becoming.Identity",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Wholes",
-   "to": "module:Becoming.KeptOnward",
    "type": "imports"
   },
   {
@@ -44550,11 +44504,6 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.KeptOnward",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Labelled",
    "type": "proved-in"
   },
@@ -54161,6 +54110,11 @@
   {
    "from": "record:what-keeping-widening-needs",
    "to": "module:Becoming.ContinuedClasses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.Dissipation",
    "type": "proved-in"
   },
   {

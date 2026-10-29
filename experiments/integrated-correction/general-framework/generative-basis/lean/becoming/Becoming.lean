@@ -7,7 +7,6 @@ import Becoming.MapInstances
 import Becoming.GrammarLaws
 import Becoming.GrammarTransport
 import Becoming.ShownOrder
-import Becoming.KeptOnward
 import Becoming.World
 import Becoming.Witnesses
 import Becoming.Frame
@@ -2889,7 +2888,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   from which the stretch balances of flows, amounts, courses and censuses are derived.
 * `Becoming.GrammarLaws` (L0): the five master laws of 08 §7 on the grammar, for every carrier and
   relation, with no premise. Closure: lying within a closure (`«所闭»`) is being the occurrence
-  itself or reached (`«所闭当且仅当同一或及»`). Balance: a perfect pairing of finite lists under a
+  itself or reached (`«所闭当且仅当同一或及»`), and a region of the steps of time that every step
+  keeps holds from where it holds on (`kept_onward`), the activity laws of `Becoming.Retaining`,
+  `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`, `Becoming.PatternPassing` and
+  `Becoming.Persistence` that keep a region along the steps by their own induction being its cases
+  (board items OU3f, HE). Balance: a perfect pairing of finite lists under a
   relation (`«对»`) conserves count (`«对之长»`) and under the one is exactly equal count
   (`«一之对»`); pairings compose, join, gather over a family and carry over a stretch under the
   closure (`«对之接»`, `«对之并»`, `«对之族»`, `«对之程»`), and the count law at a step and over a
@@ -2923,7 +2926,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Lumping: with the successor fixed where `E`
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike
-  (`«像定后当且仅当同行»`). Order: widening of relations is irreflexive, one-way and transitive and
+  (`«像定后当且仅当同行»`); a map preserves a relation exactly where its image lies within the
+  other (`«保之像»`), with Mechanism's `factors_image` and `Image.least` its cases. Order: widening
+  of relations is irreflexive, one-way and transitive and
   excludes keeping and being mixed (`«广不可逆»`, `«广之传递»`); a transitive relation joined to the
   strict part of a transitive relation containing it is transitive, and irreflexive where the first
   is (`strictJoin_trans`, `strictJoin_irrefl`). It imports the grammar, its map
@@ -2945,8 +2950,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   through the grammar's image (`«对应之像»`) and kept by its operations (`«合之像»`, `«而之像»`,
   `«及之像»`), and a predicate is carried as its partial identity (`«部分恒等之像»`). Ending on every
   branch is pulled back along any map carrying continuation from a closed region (`«尽之拉回»`).
-  Along maps, a map preserves a relation exactly where its image lies within the other (`«保之像»`),
-  and going on along some branch is pulled back along any map lifting continuation (`«延之拉回»`);
+  Going on along some branch is pulled back along any map lifting continuation (`«延之拉回»`);
   steps, passing through a word, within `n` steps, closed regions, a fixed successor and
   predecessor, going alike and going on are kept (`«迭之对应»`, `«历之对应»`, `«迭内之对应»`,
   `«闭之对应»`, `«定后之对应»`, `«定前之对应»`, `«同行之对应»`, `«延之对应»`), and correspondences
@@ -2965,13 +2969,6 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one search, two orders according with one choice, alike on the menu met and apart after
   (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). A leaf
   (board item RF).
-* `Becoming.KeptOnward` (L1): a region every step keeps holds from where it holds on. A region of
-  the steps of time that every step keeps, holding at step `a`, holds at every later step
-  (`kept_onward`): the steps are a line under the successor (`«线则所闭»`), and a closed region
-  holds what lies within the closure (`«闭含所闭»`). The inductions over steps that keep a region in
-  `Becoming.Retaining`, `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`,
-  `Becoming.PatternPassing` and `Becoming.Persistence` are its cases. Its home is beside
-  `«线则所闭»` in `Becoming.GrammarLaws`, where it moves at the next full rebuild (board item OU3f).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the
@@ -3948,9 +3945,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`«常类之闭当且仅当后皆同类»`); the same holds up to the net's end (`«至终有常»`,
   `«至终常闭则后皆续»`, `«至终常类之闭当且仅当后皆同类»`), and a relation under which a line ends at an
   occurrence that still conditions something is not constant up to the net's end
-  (`«亡而网续则不至终有常»`). Witnesses that neither premise can be dropped (`Unclosed`, `Inconstant`),
-  and a finite net with two families in which the one is not constant while one family's class,
-  narrower than the one, is constant up to the net's end and the organism's is not
+  (`«亡而网续则不至终有常»`). Witnesses that neither premise can be dropped from these laws
+  (`Unclosed`, `Inconstant`), and a finite net with two families in which the one is not constant while
+  one family's class, narrower than the one, is constant up to the net's end and the organism's is not
   (`FiniteFamilies`); and a finite net with two families sharing a condition they affect, where every
   premise holds at once and the line from one family's first birth reaches the other past the first
   member's end (`FiniteSharedCondition`). `Becoming.GrammarCases` derives from `«所经不同则不及»` its

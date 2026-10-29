@@ -1,0 +1,7 @@
+1. OU3b definitions(): names scanned that are no declaration of the receipt
+   old source: ['Becoming.(出类不随则本类不至终有常).**', 'Becoming.CleanStep.fail', 'Becoming.FinerWake.is', 'Becoming.UnevenOutside.is', 'Becoming.`E`,', 'Becoming.from', 'Becoming.holds,', 'Becoming.only']
+   new source: ['Becoming.(出类不随则本类不至终有常).**', 'Becoming.CleanStep.fail', 'Becoming.FinerWake.is', 'Becoming.UnevenOutside.is', 'Becoming.`E`,', 'Becoming.constant', 'Becoming.from', 'Becoming.holds,', 'Becoming.only']
+   column-0 docstring lines starting with "class " in the new source: ['class from `c`; no regularity is assumed', 'class holds, conditions only what is ali', "class constant up to the net's end at a ", 'class (出类不随则本类不至终有常).** Where a member c', 'class only through what is alike to its ', "class `E`, constancy up to the net's end", "class fail constancy up to the net's end", "class is constant up to the net's end at", 'class is `s` and `t`. Under the split in']
+2. research check (registry.DECLARATION on raw text; keywords theorem|lemma|def|abbrev|structure|inductive|instance, no "class"): matches 107 new / 107 old; same names both ways: True | matches on a "class ..." docstring line: []
+3. Lean index/catalogue (lean_catalogue.parse_lean, comments and strings blanked first): names 152 | "constant" among them: True | top-level "Becoming.constant": False
+4. the checker's registry in the receipt (audit_support.scan; every name is #print axioms'd): "Becoming.constant" listed: False | real Becoming.Unclosed.constant listed: True

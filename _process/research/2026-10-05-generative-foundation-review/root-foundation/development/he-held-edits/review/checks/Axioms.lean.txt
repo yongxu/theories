@@ -1,0 +1,8 @@
+import Becoming.GrammarLaws
+import Becoming.Dissipation
+import Becoming.Mechanism
+#print axioms Becoming.kept_onward
+#print axioms Becoming.«保之像»
+#print axioms Becoming.total_eq_of_supports
+#print axioms Becoming.factors_image
+#print axioms Becoming.Image.least

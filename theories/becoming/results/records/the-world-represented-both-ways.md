@@ -131,6 +131,7 @@ That definable properties are kept by isomorphisms of structures is standard mod
 | integration | [REVIEW-WRT2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/REVIEW-WRT2.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 
 Aliases: `The World's representation theorem`, `世界之表示定理`, `the occurrence model`, `出现模型`, `the grammar kept by correspondence`, `Becoming.World.reidentify_carries`, `Becoming.World.standingAt_alike`, `Becoming.World.balance_needs_conservation`, `Becoming.World.ofConservationForm_conserves`, `Becoming.World.falls_exhaust`
 

@@ -122,6 +122,7 @@ Ren, 14 October 2026: “why do we need "World"? wasn't this about the whole and
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 
 Aliases: `readings in context make one world`, `语境中的读法是一个世界`, `balance as gluing`, `平衡作为粘合`, `every world one run of exchange`, `每个世界是交换的一次运行`
 

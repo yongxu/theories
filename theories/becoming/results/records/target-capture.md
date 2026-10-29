@@ -125,6 +125,7 @@ Ren on 10 October spoke of nature hijacked “by what they "got nurtured"”, an
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 
 Aliases: `Becoming.share_not_lower`, `Becoming.share_rises`, `Becoming.Flow.descent_needs_unrun`, `Becoming.Flow.descent_exhausted`, `Becoming.Law.perturbation_reabsorbed`, `hijacking`, `劫持`, `capture`, `捕获`, `selection of minds`, `winner rewrites the test`, `Becoming.CaptureWorlds.unsupported_leave_none`, `Becoming.CaptureWorlds.share_rises_of_unsupported`, `Becoming.CaptureWorlds.share_not_lower_of_unsupported`, `Becoming.SeekingRuns.captured_state_returns`, `Becoming.SeekingRuns.captured_rule_changes`
 

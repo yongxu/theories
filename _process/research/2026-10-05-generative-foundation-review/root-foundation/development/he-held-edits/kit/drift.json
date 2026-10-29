@@ -1,0 +1,856 @@
+{
+  "errors": [
+    "master-laws-on-the-grammar: invalid proof receipt binding: receipt does not bind the reviewed proof source",
+    "master-laws-on-the-grammar: invalid proof receipt binding: receipt does not bind the reviewed proof source",
+    "processes-represented-both-ways: invalid proof receipt binding: receipt does not bind the reviewed proof source",
+    "what-keeping-widening-needs: invalid proof receipt binding: receipt does not bind the reviewed proof source"
+  ],
+  "source_drift": [
+    {
+      "id": "a-code-formed-between-formations",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "a-law-through-a-projection-along-one-run",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "a-pattern-lasts-through-passing",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+      "reviewed_sha256": "757d707b101debdd1f1d5437f86015b93608fd0a095b917624eaf7accbe8f9f5",
+      "current_sha256": "83a965c7cb00e455d9f7ffabde6936934af58f084c974d1916c2a98d725167b9",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "a-pattern-lasts-through-passing",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "reviewed_sha256": "071bb2d7ab87c16d3db751b932ab44df21e153e7a43557666d405f44a1307047",
+      "current_sha256": "22aa1957fd18c75c8acf58c612bf9721456c9e711862867797b68f12aa819ac9",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "a-whole-carried-by-lasting-parts",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "reviewed_sha256": "071bb2d7ab87c16d3db751b932ab44df21e153e7a43557666d405f44a1307047",
+      "current_sha256": "22aa1957fd18c75c8acf58c612bf9721456c9e711862867797b68f12aa819ac9",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "a-whole-of-every-part",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "reviewed_sha256": "071bb2d7ab87c16d3db751b932ab44df21e153e7a43557666d405f44a1307047",
+      "current_sha256": "22aa1957fd18c75c8acf58c612bf9721456c9e711862867797b68f12aa819ac9",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "balance-from-the-first-law",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "causal-models-as-processes",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "closure-verdict-meets-continuation-condition",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "comparing-two-courses-on-what-they-admit",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "7cb999f6f9f20bfbb4cc0878e613403a87ccc174a1920720bfe9d4cb23294295",
+      "current_sha256": "7ae07b1d9b7bc91f417cd2afa6f547b9b9671cac83321c00185222df11752163",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "comparison-within-reach",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "configurations-alike-by-relation",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "constancy-read-at-a-members-class",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+      "reviewed_sha256": "befad8cad6b20a40325661682c87dc318f620e53e2da2d4e59ed427e0c97350a",
+      "current_sha256": "3eb48672dc17b1e2d8c61975dcb0a8f147cb56b6415aa8d125962c042da0c098",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "continuation-condition-decomposition",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "continuation-condition-yields-living-significance",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+      "reviewed_sha256": "757d707b101debdd1f1d5437f86015b93608fd0a095b917624eaf7accbe8f9f5",
+      "current_sha256": "83a965c7cb00e455d9f7ffabde6936934af58f084c974d1916c2a98d725167b9",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+      "reviewed_sha256": "1c570bdf4f061b73c8b53ecc571f534733e8e0b9fdb1a7c4b30c1a8f874f907c",
+      "current_sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "continued-change-needs-openness",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "continuing-self-fed-from-beyond",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "counterfactual-is-the-course",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "counting-standing-and-dependence",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "counting-under-enclosure",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "derived-history-law-exactness",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "determinacy-up-to-likeness",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "division-by-exclusive-footprints",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+      "reviewed_sha256": "762bc2a8b53535d1b429e9bf86563b05971a712b38113d93500f7cedb5127d7d",
+      "current_sha256": "09c2c5e40d7494135b7da9fd96c8eae1a4b8bfeb1202951f903418a699d6e3f3",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "dormancy-over-a-stretch",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "reviewed_sha256": "29173d86476985ebe8500a537a67157bd08adf6c5beae0b0682a292d5227d18b",
+      "current_sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "entropy-history-and-record",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "exchanges-commute-unless-joined",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "fixed-places-and-sole-lines",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "four-cases-of-a-part",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "generalization-through-lumping",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "generation-is-replenishment",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "reviewed_sha256": "29173d86476985ebe8500a537a67157bd08adf6c5beae0b0682a292d5227d18b",
+      "current_sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "generation-is-replenishment",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "hexagram-arrangements-and-laws",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "hexagram-world-laws",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "how-a-carried-difference-grows",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "identity-across-steps",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+      "reviewed_sha256": "1c570bdf4f061b73c8b53ecc571f534733e8e0b9fdb1a7c4b30c1a8f874f907c",
+      "current_sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "laws-of-one-step",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "least-loss-from-entropy-production",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "least-loss-rest",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "levels-of-closure",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "listing-once-is-decided-identity",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "living-on-and-descent",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "reviewed_sha256": "29173d86476985ebe8500a537a67157bd08adf6c5beae0b0682a292d5227d18b",
+      "current_sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "map-of-premises",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "map-of-premises",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "reviewed_sha256": "29173d86476985ebe8500a537a67157bd08adf6c5beae0b0682a292d5227d18b",
+      "current_sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "reviewed_sha256": "071bb2d7ab87c16d3db751b932ab44df21e153e7a43557666d405f44a1307047",
+      "current_sha256": "22aa1957fd18c75c8acf58c612bf9721456c9e711862867797b68f12aa819ac9",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+      "reviewed_sha256": "762bc2a8b53535d1b429e9bf86563b05971a712b38113d93500f7cedb5127d7d",
+      "current_sha256": "09c2c5e40d7494135b7da9fd96c8eae1a4b8bfeb1202951f903418a699d6e3f3",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "reviewed_sha256": "29173d86476985ebe8500a537a67157bd08adf6c5beae0b0682a292d5227d18b",
+      "current_sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+      "reviewed_sha256": "757d707b101debdd1f1d5437f86015b93608fd0a095b917624eaf7accbe8f9f5",
+      "current_sha256": "83a965c7cb00e455d9f7ffabde6936934af58f084c974d1916c2a98d725167b9",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+      "reviewed_sha256": "1c570bdf4f061b73c8b53ecc571f534733e8e0b9fdb1a7c4b30c1a8f874f907c",
+      "current_sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "no-finite-part-bears-taking",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "one-reader-several-conditions",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "orders-as-a-sum-over-histories",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "own-widening-within-the-margin",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "place-relations-in-context",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "place-transition-nets-on-the-spine",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "presupposition-scopes",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "process-and-frame-as-readings",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "projection-carrying-a-law",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "ranking-under-readings",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "reserve-defers-ending",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "reviewed_sha256": "29173d86476985ebe8500a537a67157bd08adf6c5beae0b0682a292d5227d18b",
+      "current_sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "rest-at-every-resolution",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "rest-at-every-resolution",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "reviewed_sha256": "29173d86476985ebe8500a537a67157bd08adf6c5beae0b0682a292d5227d18b",
+      "current_sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "rest-with-refinement-counted",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "rising-and-falling-in-one-exchange",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "risk-minimization-on-a-shared-renewal",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+      "reviewed_sha256": "762bc2a8b53535d1b429e9bf86563b05971a712b38113d93500f7cedb5127d7d",
+      "current_sha256": "09c2c5e40d7494135b7da9fd96c8eae1a4b8bfeb1202951f903418a699d6e3f3",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "significance-retained-within-margin",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "space-and-its-parts",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
+      "reviewed_sha256": "29173d86476985ebe8500a537a67157bd08adf6c5beae0b0682a292d5227d18b",
+      "current_sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "sum-over-histories-exact",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "target-capture",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "the-rest-outruns-the-renewal",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+      "reviewed_sha256": "762bc2a8b53535d1b429e9bf86563b05971a712b38113d93500f7cedb5127d7d",
+      "current_sha256": "09c2c5e40d7494135b7da9fd96c8eae1a4b8bfeb1202951f903418a699d6e3f3",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "the-run-classes-and-widening",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "the-split-that-makes-sense",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "the-world-represented-both-ways",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTransport.lean",
+      "reviewed_sha256": "d5d12bd4915c3e02ff313001845b5879779d8236c9217f2129093db1dbb6f0b2",
+      "current_sha256": "1175e7f2283ce4d6a41ded9031081f98874a9fc234349b86c974f2050c746892",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "the-world-represented-both-ways",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+      "reviewed_sha256": "1c570bdf4f061b73c8b53ecc571f534733e8e0b9fdb1a7c4b30c1a8f874f907c",
+      "current_sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "the-world-represented-both-ways",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "7cb999f6f9f20bfbb4cc0878e613403a87ccc174a1920720bfe9d4cb23294295",
+      "current_sha256": "7ae07b1d9b7bc91f417cd2afa6f547b9b9671cac83321c00185222df11752163",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "unity-of-readings",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-a-course-keeps-reachable",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "7cb999f6f9f20bfbb4cc0878e613403a87ccc174a1920720bfe9d4cb23294295",
+      "current_sha256": "7ae07b1d9b7bc91f417cd2afa6f547b9b9671cac83321c00185222df11752163",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-a-line-holds-and-a-regularity-takes-in",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+      "reviewed_sha256": "befad8cad6b20a40325661682c87dc318f620e53e2da2d4e59ed427e0c97350a",
+      "current_sha256": "3eb48672dc17b1e2d8c61975dcb0a8f147cb56b6415aa8d125962c042da0c098",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-bounds-offspring-numbers",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-leaves-a-class-follows-its-line",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+      "reviewed_sha256": "befad8cad6b20a40325661682c87dc318f620e53e2da2d4e59ed427e0c97350a",
+      "current_sha256": "3eb48672dc17b1e2d8c61975dcb0a8f147cb56b6415aa8d125962c042da0c098",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-taking-all-excludes",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+      "reviewed_sha256": "762bc2a8b53535d1b429e9bf86563b05971a712b38113d93500f7cedb5127d7d",
+      "current_sha256": "09c2c5e40d7494135b7da9fd96c8eae1a4b8bfeb1202951f903418a699d6e3f3",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-training-installs",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+      "reviewed_sha256": "762bc2a8b53535d1b429e9bf86563b05971a712b38113d93500f7cedb5127d7d",
+      "current_sha256": "09c2c5e40d7494135b7da9fd96c8eae1a4b8bfeb1202951f903418a699d6e3f3",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "where-a-move-is-formed",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "where-novelty-gain-comes-from",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "where-the-possible-grows",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "where-the-possible-grows",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "7cb999f6f9f20bfbb4cc0878e613403a87ccc174a1920720bfe9d4cb23294295",
+      "current_sha256": "7ae07b1d9b7bc91f417cd2afa6f547b9b9671cac83321c00185222df11752163",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "whole-drawing-beyond-renewal-ends",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "reviewed_sha256": "071bb2d7ab87c16d3db751b932ab44df21e153e7a43557666d405f44a1307047",
+      "current_sha256": "22aa1957fd18c75c8acf58c612bf9721456c9e711862867797b68f12aa819ac9",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "whole-first-and-bounded-centers",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "reviewed_sha256": "71aa7d76a20bd8bcaf4b3e867aa29ad9314023a8b1c593c0afe5b5c15ed46bba",
+      "current_sha256": "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "whole-law-of-counting",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "reviewed_sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "current_sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "whole-persists-through-generation",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "reviewed_sha256": "071bb2d7ab87c16d3db751b932ab44df21e153e7a43557666d405f44a1307047",
+      "current_sha256": "22aa1957fd18c75c8acf58c612bf9721456c9e711862867797b68f12aa819ac9",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "wisdom-root",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "wisdom-root-without-axiom",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+      "reviewed_sha256": "9b852fad59163ba5a2d2641056ab21bc9187cf9250e4334ff2f7cd7daebd4837",
+      "current_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    }
+  ]
+}
