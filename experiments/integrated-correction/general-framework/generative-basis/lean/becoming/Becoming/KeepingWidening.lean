@@ -2000,7 +2000,8 @@ inductive Form
 
 open Form
 
-local instance (a : Form) (l : List Form) : Decidable (a ∈ l) := decideMem a l
+/-- Membership among the formations, decided by `decideMem`. -/
+local instance memDecidable (a : Form) (l : List Form) : Decidable (a ∈ l) := decideMem a l
 
 /-- The six formations, listed. -/
 def allForms : List Form := [a0, a1, e, b0, b1, c]
