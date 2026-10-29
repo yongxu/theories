@@ -150,11 +150,39 @@ LAWS = [
 EXTRA_READINGS = {'Becoming.Renewable.no_exact_finite_reading': [M + 'renewing_not_closed']}
 
 
+# The models each reading is stated at, from DESIGN §2's Model column (MV's draft 2, 30 October 2026, before
+# its final shape): "occurrence" (a World's occurrence model), "process" (a process's model of its moves'
+# relations) and "own" (the row's own carrier). Rows wholly on their own carrier MV reports apart.
+MODELS = {
+    'Becoming.Web.roles_supported': ['occurrence'],
+    'Becoming.Web.roles_dependent': ['occurrence'],
+    'Becoming.Web.roles_alive': ['occurrence'],
+    'Becoming.Web.renewingAt_iff_over_all': ['occurrence'],
+    'Becoming.Web.transmits_at_iff': ['occurrence'],
+    'Becoming.Limit.identifies_iff_tracks': ['process'],
+    'Becoming.Ideals.verifiableBy_iff_interior': ['own'],
+    'Becoming.Valuation.significant_iff_held': ['own'],
+    'Becoming.Web.significance_undetermined': ['own', 'occurrence'],
+    'Becoming.Dependence.Overdetermined.only_together': ['process'],
+    'Becoming.ExchangeLaw.response_not_fixed_by_coupling': ['own'],
+    'Becoming.Viability.kernel_and_iff': ['process'],
+    'Becoming.Dependence.differenceOnlyTogether_iff': ['process'],
+    'Becoming.Run.not_fixes_of_untaken': ['process'],
+    'Becoming.SharedCodes.run_agrees_every_start_iff': ['process', 'own'],
+    'Becoming.Web.optimum_broken_iff': ['own', 'occurrence'],
+    'Becoming.Web.living_on_reaches': ['occurrence'],
+    'Becoming.Flow.descent_reaches': ['occurrence'],
+    'Becoming.Learning.Training.unselected_beyond_data': ['own'],
+    'Becoming.Renewable.no_exact_finite_reading': ['process', 'occurrence'],
+}
+
+
 def model_statements(row, reading):
     return [{'states': row, 'by': by} for by in [reading] + EXTRA_READINGS.get(row, [])]
 
 
 if __name__ == '__main__':
+    assert set(MODELS) == {row for _, row, *_ in LAWS}
     for record, row, reading, decls, en, zh in LAWS:
         for pair in model_statements(row, reading):
             assert pair['by'] in decls and pair['states'] not in decls, (record, pair)
