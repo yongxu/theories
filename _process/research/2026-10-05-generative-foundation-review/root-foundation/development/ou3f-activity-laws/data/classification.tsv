@@ -210,13 +210,13 @@ Web.ByPassing.begins_passed	a	«生于细而续于粗则异»	small: the twin be
 Web.ByPassing.begins_passed_by_grammar	a-done	«生于细而续于粗则异»	already the derivation (see ByPassing.begins_passed)
 Web.ByPassing.empty_stays	a-follows	Web.ByPassing.present_of_le	one application of present_of_le: it follows
 Web.ByPassing.ends_within	a	«两端分则中有标»,«线内同类»	the direct proof traced a carrier back (trace), as passes_within's did; through line_back and «两端分则中有标» the passing lies on the pattern's line, where none is from T on; its conclusion is a negation, so trace's reason does not apply (found by the twins' review; filed (c) model before)
-Web.ByPassing.line_back	c-rep	«相续»	by passing, an active formation at S + k + 1 has a line back to S (a bridge, already through «及之传递»)
+Web.ByPassing.line_back	c-rep	«相续»	by passing, an active formation at S + k + 1 has a line back to S (a bridge, already through «及之传递»; proved by closure, kept_onward, after the closure review)
 Web.ByPassing.passes_within	a	«两端分则中有标»,«线内同类»	the direct proof (through trace, an induction) duplicates ByPassing.passes_within_by_line, which derives the same statement from the law that a line whose ends lie apart in a class has a marked step: rule 9 keeps the derivation, the direct proof goes and one name is retired
 Web.ByPassing.passes_within_by_line	a-done	«两端分则中有标»,«线内同类»	already the derivation (see ByPassing.passes_within)
 Web.ByPassing.present_back	c-model		by passing, presence at t + 1 gives presence at t (definitional)
 Web.ByPassing.present_earlier	a	closure	presence kept by the backward step, by passing: a bounded region over k steps, Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays
 Web.ByPassing.present_of_le	a-follows	Web.ByPassing.present_earlier	one application of present_earlier: it reaches closure, unchanged, once present_earlier does
-Web.ByPassing.trace	c-model		active at S + k: active at S or a passing within k steps (induction); the grammar route of passes_within (through line_back) would need deciding sameness of formations, a change of statement
+Web.ByPassing.trace	a	closure	that every carrier at S + n carried the pattern at S or some carrier passed it across one of the n steps is a region every step keeps: kept_onward, the grammar's closure at the successor (found by the closure review; filed (c) model before, its reason concerning only the route through the pattern's line)
 Web.alters_of_passes	c-rep	«异»	a passing to another formation is an alteration of the activity class under the carrier class (positions)
 Web.arises_iff_sheng_carrier	c-rep	«生»	arising as a beginning of the carrier class's line under passing
 Web.begins_within	c-model		presence from T on and brief formations: some arising within every d steps, as a double negation (counting over steps)

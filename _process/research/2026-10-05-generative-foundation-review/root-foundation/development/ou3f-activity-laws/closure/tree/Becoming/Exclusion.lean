@@ -2,7 +2,7 @@ import Becoming.Continuation
 import Becoming.Admission
 import Becoming.Witnesses
 import Becoming.JointPlans
-import Becoming.Clock
+import Becoming.KeptOnward
 
 /-!
 # Exclusion: what taking all that is given excludes, and the joint course that keeps all

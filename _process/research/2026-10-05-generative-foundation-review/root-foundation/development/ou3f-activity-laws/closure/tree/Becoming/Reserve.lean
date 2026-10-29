@@ -1,6 +1,6 @@
 import Becoming.Roles
 import Becoming.Witnesses
-import Becoming.Clock
+import Becoming.KeptOnward
 
 /-!
 # Reserve: activity beyond support, standing beyond activity

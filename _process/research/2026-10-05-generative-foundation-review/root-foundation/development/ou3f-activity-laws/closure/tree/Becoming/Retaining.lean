@@ -1,5 +1,5 @@
 import Becoming.Regions
-import Becoming.Clock
+import Becoming.KeptOnward
 
 /-!
 # Retaining: what one level path keeps of another

@@ -1,0 +1,39 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/closure/review/checks/tree-main",
+  "modules": 42,
+  "ran": [],
+  "reused": 48,
+  "unclean": [],
+  "audits": {
+    "Becoming.Exclusion": {
+      "theorems": 39,
+      "declarations": 46,
+      "with_axioms": {}
+    },
+    "Becoming.PatternPassing": {
+      "theorems": 32,
+      "declarations": 45,
+      "with_axioms": {}
+    },
+    "Becoming.Persistence": {
+      "theorems": 86,
+      "declarations": 106,
+      "with_axioms": {}
+    },
+    "Becoming.Reserve": {
+      "theorems": 89,
+      "declarations": 131,
+      "with_axioms": {}
+    },
+    "Becoming.Retaining": {
+      "theorems": 34,
+      "declarations": 49,
+      "with_axioms": {}
+    },
+    "Becoming.Wholes": {
+      "theorems": 98,
+      "declarations": 130,
+      "with_axioms": {}
+    }
+  }
+}
