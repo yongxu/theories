@@ -108,8 +108,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T064004.300228Z): the 29 declarations of Becoming.PatternPassing, 19 of them theorems, have empty axiom reports; the checker verifies core purity. Built in scratch by an Opus prover, reviewed by a separate Opus reviewer against the brief, fixed; author review in study section 193; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T064004.300228Z）：Becoming.PatternPassing 的 29 项声明（19 项定理）公理报告为空；检查器并核对核心纯净。由一个 Opus 证明者在草稿中构建，由另一个 Opus 审查者依简报审查并修正；作者审查见研究第 193 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T145758.555114Z): the 46 declarations of Becoming.PatternPassing, 33 of them theorems, have empty axiom reports; the checker verifies core purity. Built in scratch by an Opus prover, reviewed by a separate Opus reviewer against the brief, fixed; author review in study section 193; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T145758.555114Z）：Becoming.PatternPassing 的 46 项声明（33 项定理）公理报告为空；检查器并核对核心纯净。由一个 Opus 证明者在草稿中构建，由另一个 Opus 审查者依简报审查并修正；作者审查见研究第 193 节；未经人的独立审查。"
   },
   "next_delta": {
     "en": "Passing derived from descent (Flow.DescendsAt) rather than supplied; patterns that change as they pass; an independent review.",
@@ -225,7 +225,7 @@
         "Becoming.Web.passing_fire",
         "Becoming.Web.sameFormation"
       ],
-      "sha256": "8d5b76ac2f7f92792b8e2b79311845faeae4a25a45bdb3a8f86c50418ebc4877"
+      "sha256": "757d707b101debdd1f1d5437f86015b93608fd0a095b917624eaf7accbe8f9f5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
@@ -236,9 +236,9 @@
       "sha256": "071bb2d7ab87c16d3db751b932ab44df21e153e7a43557666d405f44a1307047"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T064004.300228Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
       "role": "receipt",
-      "sha256": "55115129b7ca2bb308f98773de1ecf4bd5b5d51acf8f398e8b1ab8ee5eccf14a"
+      "sha256": "37fac3ac77d5da100226856dc159c11993194e280ab357231903e01a5d4b69ce"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
@@ -284,12 +284,17 @@
       "role": "receipt",
       "sha256": "c454c53dedd8a940944ce068d35afdca66a077aaddbcc488c1aa713df77de453",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW-LEAN.md",
+      "role": "integration",
+      "sha256": "91070d45e51af98fc97078fe686041517edb48cfda3752a71a41f68788306075"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PatternPassing",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -329,8 +334,8 @@
       "zh": "2026年10月29日，工作板条目 OU3f（研究第 443 节）：第二条律的两个陈述及第三条律中的终止，以其本名由文法规律证出（板规九）。ByPassing.passes_within 与 begins_passed 取其孪生之推导，孪生（passes_within_by_line、begins_passed_by_grammar）退役；ByPassing.ends_within 如 passes_within 之证，经样式之相续与「两端分则中有标」；文法上之律、其声明、别名与该模块之引用皆改为所存之名。"
     },
     {
-      "en": "29 October 2026, board item GW: what arises begins a carrier along every continuation (begins_of_arises), proved once (board rule 9); the forward half of arises_iff_sheng_carrier derived from it, statement unchanged. A declaration added to a law; no text changed.",
-      "zh": "2026年10月29日，工作板条目 GW：所生者沿每一延续皆起一载体（begins_of_arises），一次证之（工作板规则 9）；arises_iff_sheng_carrier 之前半由之推出，陈述不变。一律增一声明，文字不变。"
+      "en": "29 October 2026, board item GW (study section 448): what arises begins a carrier along every continuation (begins_of_arises), proved once (board rule 9); the forward half of arises_iff_sheng_carrier derived from it, statement unchanged. A declaration added to a law; no text changed.",
+      "zh": "2026年10月29日，工作板条目 GW（研究第 448 节）：所生者沿每一延续皆起一载体（begins_of_arises），一次证之（工作板规则 9）；arises_iff_sheng_carrier 之前半由之推出，陈述不变。一律增一声明，文字不变。"
     }
   ],
   "text_versions": [

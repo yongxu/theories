@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T19:30:48+00:00",
+  "reviewed_at_utc": "2026-10-29T15:01:33+00:00",
   "statement": {
     "en": "A course keeping widening by name with fixed finite requirements needs unbounded stock, fed from beyond; under upkeep, renewers multiply; passing support makes opened by the opened a recency bound; along a reading, keeping opening needs new beginnings, and 全生成 and keeping widening can hold together.",
     "zh": "按名持续扩大、需求有限而固定的进程超出一切界并由外而喂；有维持时其更新者增多；支撑之传递把由已开者所开定为近期之界；沿任一读法，持续开出需其新的起始；于一读法上全生成与持续扩大并立。"
@@ -180,6 +180,7 @@
       "zh": "见证：二者并立。种类接力：两种类之六构成，单位于种类内外以周期二传递，种类之选使跨种类之传递为起始；水平自第 0 步起于种类内持续扩大，每一受支撑出现于种类内及沿传递于阶 0 与阶 1（一构成、种类、活跃）全生成，生生于种类粒度成立。",
       "declarations": [
         "Becoming.KindRelay.Form",
+        "Becoming.KindRelay.memDecidable",
         "Becoming.KindRelay.allForms",
         "Becoming.KindRelay.every_form",
         "Becoming.KindRelay.distinct_forms",
@@ -547,8 +548,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T191425.159994Z): Becoming.KeepingWidening, 154 declarations, and Population's length_le_count, every one with an empty axiom report, all cited here; every theorem of Population, Novelty, Gain and Admission prints its old statement. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE7), its findings taken but one, in study section 419; not reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T191425.159994Z）：Becoming.KeepingWidening 之 154 项声明与 Population 之 length_le_count，公理报告皆空，本记录全引；Population、Novelty、Gain 与 Admission 之每一定理所印陈述不变。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE7），其所见除一项外皆采，见研究第 419 节；未经人审。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T145758.555114Z): Becoming.KeepingWidening, 307 declarations, and Population's length_le_count, every one with an empty axiom report, all cited here; every earlier statement of the module prints unchanged (signature audit). Built in sessions; independent read-only reviews by a separate AI agent, REVIEW-UE7 (study section 419) and REVIEW-GW-LEAN with its re-check (study section 448), every finding taken but one of the first; not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T145758.555114Z）：Becoming.KeepingWidening 之 307 项声明与 Population 之 length_le_count，公理报告皆空，本记录全引；本模块之每一旧陈述所印不变（签名审查）。另一 AI 代理作独立只读审查：REVIEW-UE7（研究第 419 节）与 REVIEW-GW-LEAN 及其复查（研究第 448 节），所见除首次一项外皆采；未经人审。"
   },
   "next_delta": {
     "en": "Comparing two courses on admitted ranges and on what they keep reachable is done (comparing-two-courses-on-what-they-admit, what-a-course-keeps-reachable), what carries their openings remaining; growth by kinds not given in advance; which reading the widening order counts, beyond names; review by a person.",
@@ -841,6 +842,7 @@
         "Becoming.KindRelay.kind",
         "Becoming.KindRelay.lineage",
         "Becoming.KindRelay.lineage_facts",
+        "Becoming.KindRelay.memDecidable",
         "Becoming.KindRelay.moves_facts",
         "Becoming.KindRelay.moves_taken",
         "Becoming.KindRelay.not_keepsWidening_byName",
@@ -998,7 +1000,7 @@
         "Becoming.total_eq_of_supports",
         "Becoming.«全生成则生成»"
       ],
-      "sha256": "1f979f1b275c51a98147a31a984a32859a0470710ec16f232134537a30db9860"
+      "sha256": "28cc9624785afad2e053796890109f3962b97fdcee0d04e28f80661893d3a2ba"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
@@ -1036,7 +1038,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
       "role": "proof",
-      "sha256": "5067c504199c40220907085b3d5c3fc9b77cf68e0cb173b433bf9952e215712c"
+      "sha256": "96aed83c502f2e37ee56e1d0e0f3483ec2bf96f67a2b8657349829238d42bc42"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Thresholds.lean",
@@ -1049,9 +1051,9 @@
       "sha256": "0de549e2a69e3f2ff2e71174adb5138c2eea863551eefa6d056a36e8efa83356"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
       "role": "receipt",
-      "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f"
+      "sha256": "37fac3ac77d5da100226856dc159c11993194e280ab357231903e01a5d4b69ce"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
@@ -1076,20 +1078,40 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "7ace404140e2a9688e51b7147bcc85d8add9774e395f7dbbe802ef13a26c4c4e"
+      "sha256": "847000d91b447e0b7a9f7fbed98ed255003e2e937fc958f6cffd61ba51e5746e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md",
+      "role": "integration",
+      "sha256": "f07197b7af066d405f34cd27ca8ffc1d67c13eabfc222a74d9b5f09e21de3cfb"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW-LEAN.md",
+      "role": "integration",
+      "sha256": "91070d45e51af98fc97078fe686041517edb48cfda3752a71a41f68788306075"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/RECHECK-GW-LEAN.md",
+      "role": "integration",
+      "sha256": "0040619a8596b827c7ad514a3e866583e3b14527283e399a7663486e03403bd1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/signatures.json",
+      "role": "integration",
+      "sha256": "b46b30c182242de31f1f5568aca9760232a97c1d9d343b5e0bf4e7e7be9c932d"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.KeepingWidening",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1117,8 +1139,8 @@
       "zh": "2026年10月27日，工作板条目 UE10（研究第 424 节）：下一步随之更新：进程保持可达者于 what-a-course-keeps-reachable 中得读；无一声明改变。"
     },
     {
-      "en": "29 October 2026, board item GW: the law of beginnings and what keeping opening needs along any reading; the landed law along passings and its exclusions derived from the law along supported passings, statements unchanged; within a kind, renewals one grain up; the laws for dissipated requirements; generation where supports last one step; the kind relay, closed and fed, on which 全生成 at two orders and keeping widening within kinds hold together. Statement, laws, a hypothesis, two does-not-show items and the next step changed.",
-      "zh": "2026年10月29日，工作板条目 GW：起始之律与沿任一读法持续开出所需；沿传递之已落地之律及其排除由沿受支撑之传递之律推出，陈述不变；种类之内，高一粒度之更新；所需被耗散之律；支撑只持一步处之生成；种类接力（闭合与供给），其上二阶之全生成与种类内之持续扩大并立。陈述、诸律、一前提、两项不示及下一步有变。"
+      "en": "29 October 2026, board item GW (study section 448): the law of beginnings and what keeping opening needs along any reading; the landed law along passings and its exclusions derived from the law along supported passings, statements unchanged; within a kind, renewals one grain up; the laws for dissipated requirements; generation where supports last one step; the kind relay, closed and fed, on which 全生成 at two orders and keeping widening within kinds hold together. Statement, laws, a hypothesis, two does-not-show items and the next step changed.",
+      "zh": "2026年10月29日，工作板条目 GW（研究第 448 节）：起始之律与沿任一读法持续开出所需；沿传递之已落地之律及其排除由沿受支撑之传递之律推出，陈述不变；种类之内，高一粒度之更新；所需被耗散之律；支撑只持一步处之生成；种类接力（闭合与供给），其上二阶之全生成与种类内之持续扩大并立。陈述、诸律、一前提、两项不示及下一步有变。"
     }
   ]
 }

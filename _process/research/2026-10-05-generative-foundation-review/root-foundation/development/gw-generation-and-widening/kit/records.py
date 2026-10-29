@@ -42,7 +42,7 @@ def save(name, rec):
     assert not FAILS, FAILS
     (R / f'{name}.json').write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-HISTORY_DATE = '29 October 2026, board item GW'
+HISTORY_DATE = '29 October 2026, board item GW (study section 448)'
 
 # ---- what-keeping-widening-needs -------------------------------------------------------------
 w = load('what-keeping-widening-needs')
@@ -81,7 +81,7 @@ new_laws = [
         ['Web.supported_along', 'Web.endless_of_successor', 'Web.generation_of_one_step_supports', 'Web.Linked.last']),
     law('Witness: both together. On the kind relay, six formations of two kinds passing units within and across kinds with period two, the kind chosen so that passings across kinds begin, the levels keep widening within kinds from step 0, every supported occurrence is 全生成 within kinds and at orders 0 and 1 along passing (one formation, kind, activity), and renewal without end holds at the kind grain.',
         '见证：二者并立。种类接力：两种类之六构成，单位于种类内外以周期二传递，种类之选使跨种类之传递为起始；水平自第 0 步起于种类内持续扩大，每一受支撑出现于种类内及沿传递于阶 0 与阶 1（一构成、种类、活跃）全生成，生生于种类粒度成立。',
-        ['KindRelay.Form', 'KindRelay.allForms', 'KindRelay.every_form', 'KindRelay.distinct_forms', 'KindRelay.kind',
+        ['KindRelay.Form', 'KindRelay.memDecidable', 'KindRelay.allForms', 'KindRelay.every_form', 'KindRelay.distinct_forms', 'KindRelay.kind',
          'KindRelay.sameKind', 'KindRelay.sameKind_refl', 'KindRelay.amount', 'KindRelay.Holds', 'KindRelay.giveSupport',
          'KindRelay.giveAt', 'KindRelay.takeAt', 'KindRelay.presentAt', 'KindRelay.lineage', 'KindRelay.starter',
          'KindRelay.back', 'KindRelay.parity_two', 'KindRelay.odd_of_next_even', 'KindRelay.holds_brief',
@@ -151,7 +151,7 @@ for a in ['the law of beginnings', 'the kind relay', '起始之律', '种类接�
 kw_decls = sorted({d[len(B):] for l in new_laws for d in l['declarations']})
 add_refs(w, KW, kw_decls)
 w['history'].append({'en': f'{HISTORY_DATE}: the law of beginnings and what keeping opening needs along any reading; the landed law along passings and its exclusions derived from the law along supported passings, statements unchanged; within a kind, renewals one grain up; the laws for dissipated requirements; generation where supports last one step; the kind relay, closed and fed, on which 全生成 at two orders and keeping widening within kinds hold together. Statement, laws, a hypothesis, two does-not-show items and the next step changed.',
-                     'zh': '2026年10月29日，工作板条目 GW：起始之律与沿任一读法持续开出所需；沿传递之已落地之律及其排除由沿受支撑之传递之律推出，陈述不变；种类之内，高一粒度之更新；所需被耗散之律；支撑只持一步处之生成；种类接力（闭合与供给），其上二阶之全生成与种类内之持续扩大并立。陈述、诸律、一前提、两项不示及下一步有变。'})
+                     'zh': '2026年10月29日，工作板条目 GW（研究第 448 节）：起始之律与沿任一读法持续开出所需；沿传递之已落地之律及其排除由沿受支撑之传递之律推出，陈述不变；种类之内，高一粒度之更新；所需被耗散之律；支撑只持一步处之生成；种类接力（闭合与供给），其上二阶之全生成与种类内之持续扩大并立。陈述、诸律、一前提、两项不示及下一步有变。'})
 save('what-keeping-widening-needs', w)
 
 # ---- where-the-possible-grows -----------------------------------------------------------------
@@ -174,7 +174,7 @@ add_refs(g, HP, ['Steps.generation_iff_begins', 'Run.generation_of_heldKeepsWide
                  'RaisedRule.generation', 'RaisedEveryOther.begins_after_even', 'RaisedEveryOther.generation',
                  'Oscillating.generation', 'Oscillating.generation_without_widening'])
 g['history'].append({'en': f'{HISTORY_DATE}: the held possible read on the map: 全生成 at (the one, what is held) exactly where a line under the part begins after every moment, so wherever the held possible keeps widening with holding decided; the witnesses read so. A law added; statement and next step unchanged.',
-                     'zh': '2026年10月29日，工作板条目 GW：持守时之可能读于图谱：于（一，所持守者）全生成，恰当该部分下之线于每一时刻之后皆有所起，故凡持守可判定而持守时之可能持续扩大处皆然；诸见证如此读之。增一律；陈述与下一步不变。'})
+                     'zh': '2026年10月29日，工作板条目 GW（研究第 448 节）：持守时之可能读于图谱：于（一，所持守者）全生成，恰当该部分下之线于每一时刻之后皆有所起，故凡持守可判定而持守时之可能持续扩大处皆然；诸见证如此读之。增一律；陈述与下一步不变。'})
 save('where-the-possible-grows', g)
 
 # ---- generation-and-degeneration-at-two-grains: names as a case ------------------------------
@@ -187,7 +187,7 @@ for l in t['laws']:
         l['declarations'] += [B + 'Web.not_carries_of_within_itself', B + 'Web.not_generation_of_within_itself']
 add_refs(t, MI, ['Web.not_carries_of_within_itself', 'Web.not_generation_of_within_itself'])
 t['history'].append({'en': f'{HISTORY_DATE}: by names nothing generates is a case of the law for any continuation in which each formation continues only itself, proved once in MapInstances (board rule 9); itself_carries_nothing and itself_not_generation derived from it, statements unchanged. A law widened.',
-                     'zh': '2026年10月29日，工作板条目 GW：按名无一生成，为"每一构成只延续自身之任一延续"之律之特例，于 MapInstances 一次证之（工作板规则 9）；itself_carries_nothing 与 itself_not_generation 由之推出，陈述不变。一律放宽。'})
+                     'zh': '2026年10月29日，工作板条目 GW（研究第 448 节）：按名无一生成，为"每一构成只延续自身之任一延续"之律之特例，于 MapInstances 一次证之（工作板规则 9）；itself_carries_nothing 与 itself_not_generation 由之推出，陈述不变。一律放宽。'})
 save('generation-and-degeneration-at-two-grains', t)
 
 # ---- a-pattern-lasts-through-passing: what arises begins along every continuation -------------
@@ -197,6 +197,6 @@ for l in a['laws']:
         l['declarations'].append(B + 'Web.begins_of_arises')
 add_refs(a, PP, ['Web.begins_of_arises'])
 a['history'].append({'en': f'{HISTORY_DATE}: what arises begins a carrier along every continuation (begins_of_arises), proved once (board rule 9); the forward half of arises_iff_sheng_carrier derived from it, statement unchanged. A declaration added to a law; no text changed.',
-                     'zh': '2026年10月29日，工作板条目 GW：所生者沿每一延续皆起一载体（begins_of_arises），一次证之（工作板规则 9）；arises_iff_sheng_carrier 之前半由之推出，陈述不变。一律增一声明，文字不变。'})
+                     'zh': '2026年10月29日，工作板条目 GW（研究第 448 节）：所生者沿每一延续皆起一载体（begins_of_arises），一次证之（工作板规则 9）；arises_iff_sheng_carrier 之前半由之推出，陈述不变。一律增一声明，文字不变。'})
 save('a-pattern-lasts-through-passing', a)
 print('records written')
