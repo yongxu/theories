@@ -107,6 +107,7 @@ import Becoming.ReorderingGrowth
 import Becoming.FreeEnergyGuarantees
 import Becoming.Blanket
 import Becoming.LumpedSeeking
+import Becoming.ModelStatements
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1616,6 +1617,19 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `LumpedSeeking.Agree.seeking_turns_tails`). Expected free energy and its terms, over the reals,
   are the periphery's `ExpectedFreeEnergyReals`. A leaf importing `Becoming.ConditionalWeights`
   (board item UE19).
+* `Becoming.ModelStatements` (L1): definitions and model laws stated at the grammar's models. Twenty
+  central declarations that rest on no master law are each stated at a World's occurrence model, at a
+  process's model of its moves' relations or on the row's own carrier. Every term of each statement is
+  a relation or region of the model, a named comparison of its given amounts or a supplied parameter,
+  and each is proved through its row: a representation, not a derivation. Support and dependence
+  are inclusions in the needs met (`ModelStatements.supported_iff`, `ModelStatements.dependent_iff`);
+  renewal is an inclusion in the kept relation (`ModelStatements.renewingAt_iff`); undermining is
+  drawing into an undermined dependence (`ModelStatements.underminingAt_iff`); and transmission is
+  two inclusions (`ModelStatements.transmits_at_one_kind`). Relational neutrality is a closure
+  (`ModelStatements.neutral_transmits_iff`). Withholding all parts is passing through their
+  withholdings in turn (`ModelStatements.withholdAll_iff_li`), and an origin is what passes in along
+  the copying relations (`ModelStatements.origin_iff_li`). Significance is a supplied region
+  throughout, and no ethical predicate is asserted. A leaf (board item U2).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'
