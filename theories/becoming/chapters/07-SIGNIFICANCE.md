@@ -591,6 +591,8 @@ The schema does not use the condition; under it every admission compared has sig
 
 *Necessary, not sufficient.* Extending the coupling is necessary for a consequence beyond the actor's closure to be selected, but where the rest outruns the renewal no weight of a later reading selects a member's restraint, and at a mutual best response restraint is no best response ([05](05-COLLECTIVES.md#r-the-rest-outruns-the-renewal)). The frozen commons tests on learners (CG1, CG2) are the evidence of [T3](05-COLLECTIVES.md#t3); learners that generalize across states, run on CG2's conditions, kept the stock in three of the six locked settings, each one where restraint by all is also an equilibrium ([experiment](../../../experiments/commons-outrun-generalizing/README.md)).
 
+*Always?* Whether a collective can always move the world toward widening, however much of its situation it observes, is answered on [one page](../COLLECTIVE-DIRECTION.md): no guarantee, by the laws that bound what a selection reaches; the direction as a criterion; exits under stated conditions; and what needs the condition, C or a measurement.
+
 <a id="executable"></a>
 *A requested change must be an executable sequence.* A disposition to accept a stop or revision does not make the change reach the system and complete. Each result below holds for a stated protocol; deployment needs evidence for an identified installation.
 

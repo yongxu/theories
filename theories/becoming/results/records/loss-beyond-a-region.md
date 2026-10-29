@@ -11,12 +11,19 @@
 ## Laws
 
 1. Within a region of formations, levels l admit at a step every formation the levels l′ admit there; there is loss beyond the region when some formation outside it is admitted by l′ and not by l. (`Becoming.Web.Admits`, `Becoming.Web.AdmitsWithin`, `Becoming.Web.LosesBeyond`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Inclusion is admission within the whole at every step, and exactly admission within every region at every step at once: a region's comparison takes the region as an input, while the whole's takes no boundary as an input. (`Becoming.Web.Includes`, `Becoming.Web.includes_iff_within_whole`, `Becoming.Web.includes_iff_within_every`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. What holds within a region holds within every region inside it; what is lost beyond a region is lost beyond every region inside it: the smaller the region, the more lies beyond it. (`Becoming.Web.AdmitsWithin.narrow`, `Becoming.Web.LosesBeyond.narrow`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Nothing lies beyond the whole, and what holds within the whole at a step leaves nothing lost beyond any region at that step: with the whole as the region there is no loss beyond to speak of. (`Becoming.Web.not_losesBeyond_whole`, `Becoming.Web.AdmitsWithin.not_losesBeyond`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Within one formation, what holds is its own admission by l wherever l′ admits it. (`Becoming.Web.admitsWithin_self`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. In Clearing, levels without the clearer's part exist. The region alongDependence is the clearer with the source that feeds the one condition it requires, its resource: along feeding only the clearer is fed, and only by the source. (`Becoming.Clearing.clearerPart`, `Becoming.Flow.WithheldLevels`, `Becoming.Clearing.withheld`, `Becoming.Clearing.alongDependence`, `Becoming.Clearing.fedBy_source`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. For any levels l without the clearer's part: at every step the clearer is active and supported, and within alongDependence the levels with its part admit every formation l admits; from step two on, beyond the region, the dweller is admitted by l and not with the clearer's part. (`Becoming.Clearing.loses_beyond`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

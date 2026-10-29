@@ -11,9 +11,13 @@
 ## Laws
 
 1. For every process and reading of claims, a bundle is realized within n moves from a configuration where some course of at most n moves ends at a configuration realizing every claim of it; one step before adds one move to the bound, and a course carries every bound, its own moves counted: what is realizable within n after it is realizable from its start within its length plus n. (`Becoming.WithinMoves`, `Becoming.WithinMoves.before`, `Becoming.WithinMoves.after_course`)
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar; the measure counts central declaration `Becoming.WithinMoves.after_course` as following from a master law (by reaching the grammar).
 2. Realizable together within some bound is a reachable configuration realizing the bundle; so along a course nothing becomes realizable together that was not before, and a bundle no longer realizable together marks a course with no way back. Two courses concatenate exactly where they share their boundary configuration. (`Becoming.withinMoves_iff_reach`, `Becoming.together_after_reach`, `Becoming.lost_together_not_returns`, `Generative.trace_append_iff`)
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 3. In the activation law, a configuration realizes both claims exactly when both sides are active; the joint content is realizable within one move from the coupled configuration and not from the initial one, and within two from the initial one with the preparation counted, so one preparation step changes the current capacity. (`Becoming.ActivationCapacity.joint_iff`, `Becoming.ActivationCapacity.coupled_within_one`, `Becoming.ActivationCapacity.initial_not_within_one`, `Becoming.ActivationCapacity.preparation_changes_capacity`)
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 4. After the release no number of moves realizes the joint content, so the actual release loses what was eventually reachable from the initial configuration; and the prepared configuration can end with one side active, the other claim unrealized and no move left. (`Becoming.ActivationCapacity.released_not_joint`, `Becoming.ActivationCapacity.release_loses_joint`, `Becoming.ActivationCapacity.prepared_can_end_one_sided`)
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

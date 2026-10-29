@@ -11,14 +11,23 @@
 ## Laws
 
 1. A recipe of a frame's moves is nothing, one move, a branching test at the configuration reached, one recipe after another, or either of two; a word of moves read as a recipe leads exactly where its course does, and every course a recipe leads along is a course of the frame's moves, tests and choices adding no move. (`Becoming.Recipe`, `Becoming.Recipe.Leads`, `Becoming.Recipe.word`, `Becoming.Recipe.leads_word_iff`, `Becoming.Recipe.Leads.trace`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. For any frame, a recipe leads from s to a configuration where a branching test holds exactly where one of finitely many branching tests, read off the recipe and the test, holds at s, with no premise. (`Becoming.Recipe.afterAny`, `Becoming.Recipe.leads_iff_afterAny`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. For any two frames, configurations passing the same branching tests answer every recipe question alike: a recipe leads from one to where a test holds exactly where it does from the other, with no premise and no finiteness. (`Becoming.SameBranchingTests.leads_iff`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Read as one branching test through negation and conjunction, the test after a recipe holds wherever the recipe leads to where the test holds, with no premise; where every branching test of the frame is decided at every configuration, it holds exactly there. (`Becoming.Recipe.after`, `Becoming.BranchingTest.either`, `Becoming.Recipe.holds_after_of_leads`, `Becoming.TestsDecided`, `Becoming.TestsDecided.of_em`, `Becoming.Recipe.holds_after`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Reading every recipe as one branching test is exact, for every frame with one configuration, one move and one claim, exactly where every proposition is decided: that exactness is equivalent to excluded middle. (`Becoming.Recipe.claimFrame`, `Becoming.Recipe.holds_after_iff_em`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. In the frame whose steps are recipes, where the finer tests are decided, every test of recipes is one finer test holding at the same configurations; where moreover each move's outcomes are listed, the configurations each recipe leads to from each configuration are listed, with no choice. (`Becoming.Frame.byRecipes`, `Becoming.BranchingTest.byRecipes`, `Becoming.Frame.holds_byRecipes`, `Becoming.Frame.byRecipes_translates`, `Becoming.Recipe.outcomes`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 7. Under excluded middle, for two frames, each with its own moves and its own recipes for steps named alike, where the second frame's moves have listed outcomes and the readings of every test of recipes agree at s and s', every history of recipes from s is matched by one from s' by the same named steps, ending where the readings agree again. (`Becoming.Frame.byRecipes_history_matches_of_em`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. A branch on a test leads by its first recipe where the test holds and by its second where it fails, with no premise; where a prefix keeps the test unchanged at every configuration it leads to from s, branching after the prefix leads from s exactly where branching first and then running the prefix in each arm does. (`Becoming.Recipe.branch`, `Becoming.Recipe.leads_branch_iff`, `Becoming.Recipe.branch_earlier_iff`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. In the named model Midway, where begin takes safe to ready and finish can be taken at ready and not at safe, the recipe that begins and then tests whether it can finish reaches done from safe, and the recipe that tests at the start does not: a test the prefix changes can change the result when moved earlier. (`Becoming.Midway.canFinish`, `Becoming.Midway.formation_changes_guard`, `Becoming.Midway.adaptive`, `Becoming.Midway.earlyCheck`, `Becoming.Midway.testing_before_formation_changes_results`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,8 +11,11 @@
 ## Laws
 
 1. The mass of an event on a listed domain, under a weighting of its entries in the natural numbers, sums the weights of the entries it holds, an entry listed twice counting twice; every event's mass stays within a bound exactly when the whole domain's mass does. (`Becoming.mass`, `Becoming.every_event_within_iff`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Each entry within the bound does not put the entries together within it: two entries of weight two each, against the bound two; in a web witness, two formations are each supported at step 0 while their needs together exceed the condition's level. (`Becoming.entries_within_not_together`, `Becoming.Courses.twoDrawers`, `Becoming.Courses.supported_not_together`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. In the source model the first n draws, given as natural numbers, are a listed domain whose selected totals are its masses, so every combination of them fits within the stock exactly when their total does, and two draws of two each fitting a stock of two do not fit it together. (`SharedStockInstances.firstDraws`, `SharedStockInstances.selectedTotal_eq_mass`, `SharedStockInstances.total_eq_mass`, `SharedStockInstances.every_selection_within_iff_total_within`, `SharedStockInstances.each_within_alone_not_together`, `CorrectionDependence.every_selection_within_iff_total_within`, `CorrectionDependence.each_within_alone_not_together`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

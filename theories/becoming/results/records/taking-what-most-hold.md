@@ -11,7 +11,9 @@
 ## Laws
 
 1. Counting the holders of a form at a sense, taking what most hold keeps a formation's form where no form has more than half, and every form after it was held before by some formation. (`Becoming.SharedCodes.holders`, `Becoming.SharedCodes.majority`, `Becoming.SharedCodes.majority_held`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Three formations, two holding one form: all hold it after one step. Two formations holding different forms: taking what most hold changes nothing. (`Becoming.SharedCodes.Majority.three`, `Becoming.SharedCodes.Majority.two`, `Becoming.SharedCodes.Majority.odd_agrees`, `Becoming.SharedCodes.Majority.even_rests`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

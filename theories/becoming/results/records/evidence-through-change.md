@@ -11,9 +11,13 @@
 ## Laws
 
 1. A reading keeps every world that fits it, so the actual world, fitting its own report, is kept; prediction of an admitted change keeps every lawful successor of a possible world. Along every lawful history, from a state whose possible worlds hold the actual one and lie among the represented worlds, the finish has the same. (`TemporalInspection.received_actual_retained`, `TemporalInspection.prediction_contains_successor`, `TemporalInspection.Known`, `TemporalInspection.lawful_history_preserves_known`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. A certificate over the pool of the possible worlds' models then warrants, for the causes acting on commands, whatever every faithful domain outside those causes warrants, at every lawful finish. (`TemporalInspection.current_pool_sound`, `TemporalInspection.history_to_current_certificate`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. Witnesses: after a scan leaves two models, predicting a reset reopens all three and the certificate that passed fails; a control change after the last report reopens all three; a change recorded as steady when the world moved leaves the actual world outside the possible ones, the certificate passing on compromised support while the audit fails. (`TemporalInspection.predicting_change_reopens_relevant_alternatives`, `TemporalInspection.new_change_after_last_report_reopens_coverage`, `TemporalInspection.understated_change_can_leave_false_confidence`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. Over the reals, an intervention certified from a reading with symmetric error E keeps the end within the target [L, B] wherever the actual value lies within E of the reading, and needs 2E ≤ B − L; with error growing as σ + ρt it needs 2ρt ≤ B − L − 2σ. (`ChangingDependency.certified`, `ChangingDependency.certificate_transfers`, `ChangingDependency.uncertainty_requires_tolerance`, `ChangingDependency.error_growth_budget`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

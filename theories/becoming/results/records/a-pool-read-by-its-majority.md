@@ -11,7 +11,9 @@
 ## Laws
 
 1. Counting the members a test holds of: counts under a weaker test are no more, alike tests count alike, and a test and its negation count every member once. (`Becoming.Web.holdsCount`, `Becoming.Web.toNat_le_of_imp`, `Becoming.Web.holdsCount_le_of_imp`, `Becoming.Web.holdsCount_congr`, `Becoming.Web.toNat_add_not`, `Becoming.Web.holdsCount_add_not`, `Becoming.Web.and_left_true`, `Becoming.Web.and_right_true`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. With each member reading through its own coupling, the majority reading selects through the pooled coupling; where more than half the members hold of both histories or fail of both, it goes alike on them. (`Becoming.Web.MajorityHolds`, `Becoming.Web.majority_through_all`, `Becoming.Web.majority_outvoted`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

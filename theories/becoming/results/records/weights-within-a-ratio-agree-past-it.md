@@ -11,10 +11,15 @@
 ## Laws
 
 1. Where every two listed weights stand within n/d, what each course alone admits bounds what it weighs: d times what the second alone admits weighs, once per item the first alone admits, is at most n times the number the second alone admits, times what the first alone admits weighs. (`Becoming.Weighting.RatioWithin`, `Becoming.Weighting.cond_scale`, `Becoming.Weighting.weighed_scale`, `Becoming.Weighting.mul_swap_right`, `Becoming.Weighting.beyond_within`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Every positive weighting within n/d ranks a above b where n q < d p, and weighs a at least as much where n q ≤ d p, p and q the numbers of items a and b alone admit. (`Becoming.Weighting.pos_of_lt_mul`, `Becoming.Weighting.cond_pos_of`, `Becoming.Weighting.weighed_pos_of_size`, `Becoming.Weighting.weighed_zero_of_size`, `Becoming.Weighting.ranks_past_ratio`, `Becoming.Weighting.ranks_le_past_ratio`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. The weighting tilted toward b, n on what b alone admits and d elsewhere, is positive and within n/d for 0 < d ≤ n; it ranks a above b exactly where n q < d p and ties them on the boundary n q = d p. (`Becoming.Weighting.tilted`, `Becoming.Weighting.cond_between`, `Becoming.Weighting.tilted_positive`, `Becoming.Weighting.tilted_within`, `Becoming.Weighting.tilt_beyond`, `Becoming.Weighting.tilt_toward`, `Becoming.Weighting.weighed_tilted_beyond`, `Becoming.Weighting.weighed_tilted_toward`, `Becoming.Weighting.tilted_lt_iff`, `Becoming.Weighting.tilted_gt_iff`, `Becoming.Weighting.tilted_ties`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. For 0 < d ≤ n: every positive weighting within n/d ranks a above b exactly where n q < d p; some ranks b above a exactly where d p < n q; two rank them opposite ways exactly where d q < n p and d p < n q. (`Becoming.Weighting.every_within_iff`, `Becoming.Weighting.some_within_reverses_iff`, `Becoming.Weighting.opposite_within_iff`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Equal weights are the ratio one: under one positive weight a course weighs more exactly where it admits more beyond the other than the other beyond it, so it ranks by number; the weighting tilted toward a course admitting an item the other does not, with weight one more than the listing's length, ranks it higher. (`Becoming.Weighting.const_lt_iff_beyond`, `Becoming.Weighting.size_le_length`, `Becoming.Weighting.size_pos_of_exceeds`, `Becoming.Weighting.outweighs`, `Becoming.Weighting.neutral_ranks_by_number`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,8 +11,11 @@
 ## Laws
 
 1. Where a map f takes every step of P to a step of Q by the same move, every finite trace of P from s to t is a trace of Q from f s to f t with the same moves. (`Generative.trace_map`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Where, for every s, every step of Q from q s lifts to a step of P from s by the same move into the fiber of its target, every trace of Q from q s to r is the image of a trace of P from s whose end lies in the fiber of r. (`Generative.trace_lift`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Through a map q, the traces of Q from q s are exactly the images of the traces of P from s, endpoints included, for every s, exactly where q preserves every step and every step of Q from q s lifts to a step of P from s by the same move into the fiber of its target. (`Generative.projection_exact_iff`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,7 +11,9 @@
 ## Laws
 
 1. With every added witness supporting as a witness on the roster supports and inside exactly the fault sets it is inside, the certificate of the longer roster is the certificate of the roster. (`Becoming.FaultEnvelopes.or_absorbed`, `Becoming.FaultEnvelopes.copied_roster_same`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. With every added witness also reporting as its original reports, inspection of the longer roster takes exactly the steps of inspection of the roster, and the certificate at every pool of faults is the same; listing the roster twice is the case. (`Becoming.WitnessRefinementRuns.any_congr_on`, `Becoming.WitnessRefinementRuns.and_absorbed`, `Becoming.WitnessRefinementRuns.witnessed_copy`, `Becoming.WitnessRefinementRuns.copied_witnesses_same`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

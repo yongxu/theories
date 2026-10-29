@@ -11,10 +11,15 @@
 ## Laws
 
 1. A joining relates two fragments to what they join into; read through a description, codes join where fragments with those codes join into one with that code. The description lifts the joining, every joining of the codes of two fragments coming from a joining of those fragments, exactly where having one code is a bisimulation of the joining's frame, whose moves join a partner on either side; no premise. (`Becoming.Joining.frame`, `Becoming.Joining.image`, `Becoming.Joining.Lifts`, `Becoming.Joining.lifts_iff`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Where it lifts, a joining of codes is exactly the code of a joining of any fragments having them; a description identifying exactly the alike fragments of the joining's frame lifts it. (`Becoming.Joining.image_iff`, `Becoming.Joining.lifts_of_identifiesAlike`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Where a description lifts a joining, every finite binary tree of joinings lifts: the tree with its leaves read through the description joins into a code exactly where the tree with its own leaves joins into a fragment with that code, the leaves staying the given fragments. (`Becoming.Joining.Tree`, `Becoming.Joining.Tree.map`, `Becoming.Joining.Tree.Realizes`, `Becoming.Joining.tree_lifts`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Where having one code is passing the same branching tests, the description lifts the joining exactly where passing the same branching tests is a bisimulation of its frame. (`Becoming.Joining.lifts_iff_sameBranchingTests`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. With excluded middle as a hypothesis, where each pair of fragments joins into a listed set of fragments, a presentation reading the branching tests of the joining's frame exactly and giving fragments passing the same tests one code lifts the joining. (`Becoming.Joining.FiniteOutcomes`, `Becoming.Joining.FiniteOutcomes.lifts_of_exact`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

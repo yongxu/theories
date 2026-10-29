@@ -11,7 +11,9 @@
 ## Laws
 
 1. A test with parts is nothing, a claim, the failure of a test, two tests together, that some step by a move leads to where a test holds, or that the configuration holds together, under one relation of a family, two parts passing two tests. A joint frame is a frame with one such relation, a configuration realizing two configurations together as its parts; no associativity, order, unit or repetition of parts is assumed. (`Becoming.TestWith`, `Becoming.TestWith.Holds`, `Becoming.JointFrame`, `Becoming.JointTest`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. For any two frames, each with a family of relations by which a configuration holds two parts together: where the tests with parts tell apart the configurations of the target (any two of them passing the same tests are equal), a configuration of the source passes the same tests with parts as at most one target configuration. Joint tests are the case of the one relation of a joint frame. (`Becoming.SameTestsWith`, `Becoming.SameTestsWith.functional`, `Becoming.SameJointTests`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

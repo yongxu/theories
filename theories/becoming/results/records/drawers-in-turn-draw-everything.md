@@ -11,10 +11,15 @@
 ## Laws
 
 1. Two drawers in turn at each step, the first leaving part of the level and the second part of that, what remains standing at the next step by a law G; what each draws over the steps that remain, defined back from the horizon; a profile perfect where each leaves at most what it is given and the two are at a mutual best response at every step from every level. (`Becoming.Optimum.InTurn.next`, `Becoming.Optimum.InTurn.levels`, `Becoming.Optimum.InTurn.firstDrawn`, `Becoming.Optimum.InTurn.secondDrawn`, `Becoming.Optimum.InTurn.BestAt`, `Becoming.Optimum.InTurn.Perfect`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; 3 of its declarations are not in the spine run and not measured, so this holds of the others only.
 2. Backward from the horizon: where the second draws nothing over the rest, a mutual best response has both leave nothing, whatever the first leaves the second drawing and whatever the second leaves the first drawing at its next move; so every perfect profile has both leave nothing at every step, whatever stands at nothing, and the base stands from the first step at what stands at nothing. (`Becoming.Optimum.InTurn.zero_of_le_sub`, `Becoming.Optimum.InTurn.Many.step_ends`, `Becoming.Optimum.InTurn.Many.ends_at`, `Becoming.Optimum.InTurn.Many.perfect_ends`, `Becoming.Optimum.InTurn.Many.perfect_levels`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. Drawing everything is perfect over every horizon. (`Becoming.Optimum.InTurn.zero_secondDrawn`, `Becoming.Optimum.InTurn.perfect_of_zero`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. On a web, along every perfect profile a dependence on the base whose need, met at the start, is above what stands at nothing is broken at the first step. (`Becoming.Web.perfect_broken`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. Witness: under a gate from the dweller's need two, alone the course holding the source at two is an optimum keeping the dweller through the horizon; in turn, drawing everything is perfect and every perfect profile breaks the dweller at the first step. (`Becoming.Optimum.Holding.gated_in_turn`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

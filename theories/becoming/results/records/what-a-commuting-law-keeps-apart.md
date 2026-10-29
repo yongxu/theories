@@ -11,11 +11,17 @@
 ## Laws
 
 1. A law commuting with σ has its run from σ x the image of its run from x; where σ moves every configuration the two runs never meet at a step, and a law that merges them does not commute. (`Becoming.Law.Commutes`, `Becoming.Law.Commutes.iterate`, `Becoming.Law.Commutes.apart`, `Becoming.Law.Commutes.breaks`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. No such law is constant; a run from what σ fixes stays where σ fixes; rests and returns come with their images. (`Becoming.Law.Commutes.not_drawn_to_one`, `Becoming.Law.Commutes.keeps_fixed`, `Becoming.Law.Commutes.rest_paired`, `Becoming.Law.Commutes.returns_paired`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 3. Under an exchange a run holding a configuration's image k steps on holds every configuration's image k steps on and returns at 2k; the law goes alike across the pairs, as a lumping and as a process. (`Becoming.Law.Commutes.paired_halfway`, `Becoming.Law.Commutes.halfway_returns`, `Becoming.Law.Commutes.pairs_lumped`, `Becoming.Law.Commutes.pairs_goAlike`)
+   - *Master laws, by Lean dependency:* finite runs and lumping; its declarations reach the grammar.
 4. Every map commutes with itself, so a map moving every value never rests along its run (Diagonal.revision_never_rests as a case). (`Becoming.Law.Commutes.self_apart`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. A process symmetric under σ carries reach, returning and, under an exchange, junctures; every run has a mirror run never at the same configuration at the same step; a commuting law is a symmetric process. (`Becoming.Branching.Symmetric`, `Becoming.Branching.Symmetric.reach`, `Becoming.Branching.Symmetric.returns`, `Becoming.Branching.Symmetric.juncture`, `Becoming.Branching.mirror`, `Becoming.Branching.mirror_apart`, `Becoming.Branching.law_symmetric`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 6. In the Changes the complement moves every hexagram and waxWane commutes with it: no number of steps brings a hexagram and its complement to one, the six steps to the complement are the pair halfway round the return of twelve, the pairs go alike, as the general law says (Hexagram.pairs_goAlike, stated once in Becoming.Hexagrams), the waning into 坤 breaks the symmetry, and the change of one line is symmetric under the complement. (`Becoming.Hexagram.complement_moves`, `Becoming.Hexagram.waxWane_apart`, `Becoming.Hexagram.waxWane_halfway`, `Becoming.Hexagram.pairs_goAlike`, `Becoming.Hexagram.wane_breaks`, `Becoming.Hexagram.flip_complement`, `Becoming.Hexagram.changes_symmetric`, `Becoming.Hexagram.changes_mirror_apart`)
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,7 +11,9 @@
 ## Laws
 
 1. Along a lineage, with the goal passed at each descent and kept until each member gives, every member carries it from its first standing step. (`Becoming.Flow.goal_along`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Passing across every descent from a carrier is equivalent to the goal passing down every lineage whose members keep it, from a carrying founder. (`Becoming.Flow.goal_descends_iff`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2069,
-    "distinct_byte_contents": 1631,
+    "lean_paths": 2070,
+    "distinct_byte_contents": 1632,
     "byte_identical_duplicate_groups": 175,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1116,
+      "development-attempt": 1117,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 914
@@ -5319,6 +5319,17 @@
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/check/tree/Becoming/WRPCheck.lean",
+      "sha256": "5a8a2765ca5ede5dbf66071c18c80e960fd270009ba42ff30b02312b870ffa8b",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/DESIGN.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -190198,6 +190209,428 @@
         "inductive": 4,
         "structure": 3,
         "theorem": 36
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "5a8a2765ca5ede5dbf66071c18c80e960fd270009ba42ff30b02312b870ffa8b": {
+      "byte_size": 27994,
+      "line_count": 506,
+      "imports": [
+        "Becoming.EdgeClosure",
+        "Becoming.GrammarTransport",
+        "Becoming.Labelled",
+        "Becoming.Onward",
+        "Becoming.GrammarRegularity",
+        "Becoming.GrammarCandidates"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "moveRel_mk",
+          "qualified_name_hint": "Becoming.WRPCheck.moveRel_mk",
+          "line": 39
+        },
+        {
+          "kind": "theorem",
+          "name": "mk_moveRel",
+          "qualified_name_hint": "Becoming.WRPCheck.mk_moveRel",
+          "line": 42
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_iff_moveRel",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_iff_moveRel",
+          "line": 46
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_edgeProcess",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_edgeProcess",
+          "line": 50
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_unlabelled",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_unlabelled",
+          "line": 54
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_lawProcess",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_lawProcess",
+          "line": 59
+        },
+        {
+          "kind": "theorem",
+          "name": "enabled_iff_neng",
+          "qualified_name_hint": "Becoming.WRPCheck.enabled_iff_neng",
+          "line": 63
+        },
+        {
+          "kind": "theorem",
+          "name": "forall_steps_iff",
+          "qualified_name_hint": "Becoming.WRPCheck.forall_steps_iff",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "forall_moveRel_iff",
+          "qualified_name_hint": "Becoming.WRPCheck.forall_moveRel_iff",
+          "line": 79
+        },
+        {
+          "kind": "theorem",
+          "name": "class_is_claims",
+          "qualified_name_hint": "Becoming.WRPCheck.class_is_claims",
+          "line": 87
+        },
+        {
+          "kind": "theorem",
+          "name": "step_iff_withMove",
+          "qualified_name_hint": "Becoming.WRPCheck.step_iff_withMove",
+          "line": 95
+        },
+        {
+          "kind": "theorem",
+          "name": "withMove_image_iff",
+          "qualified_name_hint": "Becoming.WRPCheck.withMove_image_iff",
+          "line": 101
+        },
+        {
+          "kind": "theorem",
+          "name": "reading_next_move_not_withMove",
+          "qualified_name_hint": "Becoming.WRPCheck.reading_next_move_not_withMove",
+          "line": 108
+        },
+        {
+          "kind": "def",
+          "name": "P₁",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.P₁",
+          "line": 117
+        },
+        {
+          "kind": "def",
+          "name": "P₂",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.P₂",
+          "line": 118
+        },
+        {
+          "kind": "def",
+          "name": "twist",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.twist",
+          "line": 121
+        },
+        {
+          "kind": "theorem",
+          "name": "twist_twist",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.twist_twist",
+          "line": 123
+        },
+        {
+          "kind": "def",
+          "name": "e",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.e",
+          "line": 129
+        },
+        {
+          "kind": "def",
+          "name": "sameMove",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.sameMove",
+          "line": 132
+        },
+        {
+          "kind": "theorem",
+          "name": "twist_steps",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.twist_steps",
+          "line": 134
+        },
+        {
+          "kind": "theorem",
+          "name": "models_correspond",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.models_correspond",
+          "line": 149
+        },
+        {
+          "kind": "theorem",
+          "name": "P₂_not_both",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.P₂_not_both",
+          "line": 153
+        },
+        {
+          "kind": "theorem",
+          "name": "P₂_key",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.P₂_key",
+          "line": 161
+        },
+        {
+          "kind": "theorem",
+          "name": "not_renamed",
+          "qualified_name_hint": "Becoming.WRPCheck.Twist.not_renamed",
+          "line": 168
+        },
+        {
+          "kind": "def",
+          "name": "P₃",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.P₃",
+          "line": 183
+        },
+        {
+          "kind": "def",
+          "name": "P₄",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.P₄",
+          "line": 184
+        },
+        {
+          "kind": "def",
+          "name": "flip",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.flip",
+          "line": 187
+        },
+        {
+          "kind": "theorem",
+          "name": "flip_flip",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.flip_flip",
+          "line": 189
+        },
+        {
+          "kind": "def",
+          "name": "e",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.e",
+          "line": 195
+        },
+        {
+          "kind": "def",
+          "name": "sameConfiguration",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.sameConfiguration",
+          "line": 198
+        },
+        {
+          "kind": "theorem",
+          "name": "flip_steps",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.flip_steps",
+          "line": 200
+        },
+        {
+          "kind": "theorem",
+          "name": "models_correspond",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.models_correspond",
+          "line": 215
+        },
+        {
+          "kind": "theorem",
+          "name": "P₄_apart",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.P₄_apart",
+          "line": 220
+        },
+        {
+          "kind": "theorem",
+          "name": "not_renamed",
+          "qualified_name_hint": "Becoming.WRPCheck.Flip.not_renamed",
+          "line": 230
+        },
+        {
+          "kind": "def",
+          "name": "wordRel",
+          "qualified_name_hint": "Becoming.WRPCheck.wordRel",
+          "line": 249
+        },
+        {
+          "kind": "theorem",
+          "name": "trace_iff_wordRel",
+          "qualified_name_hint": "Becoming.WRPCheck.trace_iff_wordRel",
+          "line": 254
+        },
+        {
+          "kind": "theorem",
+          "name": "feasible_iff_wordRel",
+          "qualified_name_hint": "Becoming.WRPCheck.feasible_iff_wordRel",
+          "line": 260
+        },
+        {
+          "kind": "theorem",
+          "name": "wordRel_replicate",
+          "qualified_name_hint": "Becoming.WRPCheck.wordRel_replicate",
+          "line": 266
+        },
+        {
+          "kind": "theorem",
+          "name": "replicate_add_right",
+          "qualified_name_hint": "Becoming.WRPCheck.replicate_add_right",
+          "line": 279
+        },
+        {
+          "kind": "theorem",
+          "name": "replicate_succ_right",
+          "qualified_name_hint": "Becoming.WRPCheck.replicate_succ_right",
+          "line": 283
+        },
+        {
+          "kind": "theorem",
+          "name": "reverseAux_append_right",
+          "qualified_name_hint": "Becoming.WRPCheck.reverseAux_append_right",
+          "line": 287
+        },
+        {
+          "kind": "theorem",
+          "name": "reverse_cons_right",
+          "qualified_name_hint": "Becoming.WRPCheck.reverse_cons_right",
+          "line": 293
+        },
+        {
+          "kind": "theorem",
+          "name": "reverse_replicate",
+          "qualified_name_hint": "Becoming.WRPCheck.reverse_replicate",
+          "line": 296
+        },
+        {
+          "kind": "theorem",
+          "name": "wordRel_append",
+          "qualified_name_hint": "Becoming.WRPCheck.wordRel_append",
+          "line": 302
+        },
+        {
+          "kind": "theorem",
+          "name": "wordRel_snoc",
+          "qualified_name_hint": "Becoming.WRPCheck.wordRel_snoc",
+          "line": 311
+        },
+        {
+          "kind": "theorem",
+          "name": "wordRel_reverse",
+          "qualified_name_hint": "Becoming.WRPCheck.wordRel_reverse",
+          "line": 318
+        },
+        {
+          "kind": "theorem",
+          "name": "wordRel_fixedBefore",
+          "qualified_name_hint": "Becoming.WRPCheck.wordRel_fixedBefore",
+          "line": 328
+        },
+        {
+          "kind": "theorem",
+          "name": "wordRel_alike",
+          "qualified_name_hint": "Becoming.WRPCheck.wordRel_alike",
+          "line": 338
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_compose_case",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_compose_case",
+          "line": 351
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_split_case",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_split_case",
+          "line": 360
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_last_case",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_last_case",
+          "line": 369
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_converse_case",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_converse_case",
+          "line": 377
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_fixedBefore_case",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_fixedBefore_case",
+          "line": 384
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_alike_case",
+          "qualified_name_hint": "Becoming.WRPCheck.steps_alike_case",
+          "line": 391
+        },
+        {
+          "kind": "theorem",
+          "name": "preserves_iff_image",
+          "qualified_name_hint": "Becoming.WRPCheck.preserves_iff_image",
+          "line": 402
+        },
+        {
+          "kind": "theorem",
+          "name": "yan_pullback",
+          "qualified_name_hint": "Becoming.WRPCheck.yan_pullback",
+          "line": 410
+        },
+        {
+          "kind": "theorem",
+          "name": "factorsThrough_iff_image",
+          "qualified_name_hint": "Becoming.WRPCheck.factorsThrough_iff_image",
+          "line": 420
+        },
+        {
+          "kind": "theorem",
+          "name": "run_image",
+          "qualified_name_hint": "Becoming.WRPCheck.run_image",
+          "line": 430
+        },
+        {
+          "kind": "theorem",
+          "name": "run_iff_image",
+          "qualified_name_hint": "Becoming.WRPCheck.run_iff_image",
+          "line": 437
+        },
+        {
+          "kind": "theorem",
+          "name": "yan_iff_keepsMoving",
+          "qualified_name_hint": "Becoming.WRPCheck.yan_iff_keepsMoving",
+          "line": 450
+        },
+        {
+          "kind": "theorem",
+          "name": "run_yan",
+          "qualified_name_hint": "Becoming.WRPCheck.run_yan",
+          "line": 458
+        },
+        {
+          "kind": "theorem",
+          "name": "yan_line_iff_dependentChoice",
+          "qualified_name_hint": "Becoming.WRPCheck.yan_line_iff_dependentChoice",
+          "line": 468
+        },
+        {
+          "kind": "theorem",
+          "name": "yan_line_of_list",
+          "qualified_name_hint": "Becoming.WRPCheck.yan_line_of_list",
+          "line": 480
+        },
+        {
+          "kind": "def",
+          "name": "byTrue",
+          "qualified_name_hint": "Becoming.WRPCheck.Forgotten.byTrue",
+          "line": 494
+        },
+        {
+          "kind": "def",
+          "name": "byFalse",
+          "qualified_name_hint": "Becoming.WRPCheck.Forgotten.byFalse",
+          "line": 495
+        },
+        {
+          "kind": "theorem",
+          "name": "moves_forgotten",
+          "qualified_name_hint": "Becoming.WRPCheck.Forgotten.moves_forgotten",
+          "line": 498
+        }
+      ],
+      "declaration_counts": {
+        "def": 13,
+        "theorem": 53
       },
       "textual_markers": {
         "sorry": [],

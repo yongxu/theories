@@ -109,6 +109,48 @@ The items:
 
 U2 and U3 get board rows when their gates open. Until then they stay here, so that no unclaimed rows lapse on the board.
 
+## U1's verdict, GW's, and U3's gate (29 October 2026)
+
+**U1** is complete. It was reviewed twice, with a narrow third read, and the second reviewer's verdict is the anchor (`../u1-balance-under-units/DESIGN.md` §0):
+
+> Balance is represented by selected finite frame bijections at every condition; the conditional crossing laws and the normalized residual-count law hold at the specified list selections. This does not derive balance from the unfolding. The attempted identification of residual endpoints with a faithful open exchange model fails when actual boundary traffic is retained; projection does not recover WRT's conservation; correspondence orbits do not exhaust the matching fibre. Global exchange attachment and line laws remain outside the established interface. No numerical consumer is rerouted, and F13's reason remains.
+
+So F2's fallback holds. Amounts are the root's second sort, and its interface is limited to seven laws, checked in scratch (48 theorems, every axiom report empty, all constructive):
+
+1. the frame selection both ways;
+2. a fixed predecessor at a frame;
+3. the crossing laws joined to `Balances.rise_draws_beyond_inflow`, weak and strong;
+4. the residual-count laws;
+5. their dissipation case;
+6. lossless storage excluded;
+7. the stretch law under a supplied pairing.
+
+What stays proposed and uncounted:
+
+- exchange attachment to frames;
+- existence of enriched fibres;
+- the bridge from frame matchings to «对»;
+- unique origin over many steps;
+- Little's law;
+- 生, 亡 and 住 read on units.
+
+Balance and dissipation are two compatible constraints on one model, not one law. No row changes category. Natural-number amounts are the modelling choice the atomism rests on. No package Lean is claimed. The design's §6 names a later leaf above Flow, behind WRP and OU3f, if the limited interface is wanted in Lean.
+
+**GW** is studied and reviewed, with no Lean yet (`7189b80f7`). It joins generation and widening one way. On the held possible, keeping widening gives 全生成, and the converse does not hold. Its two negative results are the ends of an interval of readings, and the map's three regions do not partition. For F3 this is a join in one direction with its boundary stated. Whether F3 is met is for GW's record, once its Lean (GW1–GW5) lands.
+
+**U3** has its gate open. With U1's verdict, its weightings come onto the root through the second sort's interface, as amounts assigned to what is admitted, not as unit lines. Its rows:
+
+- the five significance rows (`unrestricted_iff_livingSignificance`, `Web.widens_iff_retains_adds`, `Web.paths_comparison_widens`, `Web.paths_one_object`, `Weighting.widens_iff_every_positive`);
+- widening on paths, read as «广» on what a path admits;
+- the condition, through its structural reading (GS2).
+
+The condition and C stay named premises, and the free predicate stays the general form. A design comes first, with one independent review, before any Lean. U3 is posted on the board as proposed, for whoever takes 07's significance results.
+
+*(Later, 29 October.)* U3 is taken by the session of the twenty-first review. Its design is reviewed and lands with U1's documents. It states every significance row in the root's terms, as representations, and derives nothing ethical. Two things are asked of it before it lands; U3's board row carries them, since that session takes no messages:
+
+- **A count.** COVERAGE's significance row lists five declarations, but the design's table has six. It needs to say what `Web.paths_extension_iff_widens` is there, and where its row numbers come from.
+- **The Lean.** Its items 1 (the leaf of root forms) and 2 (row 10's interface law in `Becoming.Weightings`) are wanted, so that 全四 rests on the package and not on scratch alone. Until they land, 全四 is designed, not met.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.

@@ -11,9 +11,13 @@
 ## Laws
 
 1. Unrolled on its own proposals, an extrapolation that proposes the course's value at every step from some step on proposes the course at every step ahead; wherever a list holds the orbit (or the run), from the identification bound on, the extrapolation by elimination over the lasso candidates, given nothing, so proposes the value through the map at every step ahead, along orbits and along runs. (`Becoming.Learning.extendBy`, `Becoming.Learning.extendBy_of`, `Becoming.Learning.unroll`, `Becoming.Learning.ahead`, `Becoming.Learning.unroll_prefix`, `Becoming.Learning.ahead_accords`, `Becoming.Learnable.ahead_fixes`, `Becoming.LearnableRuns.ahead_fixes`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 2. A feature read off the future through the map is learned by the extrapolation given that reading, from the identification bound on, and from some step on where it is such a reading from some step on. (`Becoming.Learnable.ReadOff`, `Becoming.Learnable.reading`, `Becoming.Learnable.reading_predicts`, `Becoming.Learnable.reading_predicts_from`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 3. In a world a list holds, a feature is learnable through the map exactly where some reading of futures, respecting values at each step, is the feature from some step on along every orbit (and along every run); returning configurations whose features agree from some step on have equal features. (`Becoming.Learnable.eq_of_returns`, `Becoming.Learnable.readAt`, `Becoming.Learnable.fromWorld`, `Becoming.Learnable.fromWorld_respects`, `Becoming.Learnable.reads_of_agree`, `Becoming.Learnable.learnable_iff_reading`, `Becoming.LearnableRuns.future_eq`, `Becoming.LearnableRuns.learnable_iff_reading`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 4. Given nothing, no extrapolation rests in accord with every learnable feature: in a one-configuration world the features true and false are each learned given their reading, with the same prefixes. (`Becoming.Learnable.given_nothing_not_every`, `Becoming.LearnableRuns.given_nothing_not_every`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

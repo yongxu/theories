@@ -11,17 +11,29 @@
 ## Laws
 
 1. Determinacy is determinacy up to likeness where the claims name the configurations, so each theorem stated with determinacy is the named instance of one stated up to likeness. (`Becoming.determined_iff_named`, `Becoming.alike_configurations`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Going alike through likeness is determinacy up to likeness, and runs alike stay alike; the counterparts stated with equality are their named instances. (`Becoming.GoesAlike`, `Becoming.goesAlike_iff`, `Becoming.DeterminedAt.stays_alike`, `Becoming.goAlike_id_iff`, `Becoming.GoAlike.runs_agree`)
+   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 3. What the step does not depend on is re-absorbed up to likeness; with the noise forgotten, the standard model is determined up to likeness exactly where the noise makes no difference up to likeness. (`Becoming.DependsOnlyOnAlike`, `Becoming.DependsOnlyOnAlike.reabsorbed`, `Becoming.forget_inputs_determinedAt_iff`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. A move taken is fixed up to likeness and one occasion stands for its class; a move taken at no configuration alike to the one named is not fixed, for outcomes that differ in a claim, through an intervention on a whole likeness class. (`Becoming.Run.FixesAlike`, `Becoming.Run.fixesAlike_of_takes`, `Becoming.Run.generalizesAlike`, `Becoming.Run.not_fixesAlike_of_untaken`, `Becoming.retargetAlike`, `Becoming.retargetAlike_determinedAt`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Where the frame is determined up to likeness and no configuration of a run is alike to an earlier one, at each configuration the run passes the record fixes up to likeness no move other than the one taken there, for outcomes that differ in a claim. (`Becoming.Run.not_fixesAlike_other_of_new`, `Becoming.Run.new_of_newAlike`, `Becoming.Run.not_fixes_other_of_new`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. A description carries a law up to likeness exactly where some equivalence on descriptions relates only descriptions realizing the same claims and takes configurations whose descriptions it relates, by one move, to configurations whose descriptions it relates; the carrier is the image closed under the equivalence. (`Becoming.RespectsClaims`, `Becoming.GoAlikeUnder`, `Becoming.imageUnder`, `Becoming.imageUnder_determinedAt`, `Becoming.carries_law_alike_iff`)
+   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.GoAlikeUnder` itself; lumping; its declarations do not reach the grammar.
 7. Where each description is its own claim, the only such equivalence is equality, and this is the law stated with equality; with nothing claimed, every description carries a law. (`Becoming.eq_equivalence`, `Becoming.carries_law_named_iff`, `Becoming.carries_law_iff`, `Becoming.carries_unregistered`)
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 8. The image is determined up to likeness exactly where configurations whose descriptions are alike in it go alike under it; a description can carry a law up to likeness while its image is not determined up to likeness, so up to likeness the image is no longer the least carrier. (`Becoming.image_determinedAt_iff`, `Becoming.image_determined_iff`, `Becoming.Image.least`, `Becoming.Likeness.Parting.image_not_determinedAt`, `Becoming.Likeness.Parting.carries`)
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 9. The dichotomy of difference-making needs only that every step by the move from the withheld configuration reaches one level of the condition: then either the part makes the difference or the same move still breaks the dependence; determinacy up to likeness under claims telling that level apart is a case, and the dichotomy under determinacy is Joint's determined_dichotomy, stated once. (`Becoming.Dependence.dichotomy_of_same_level`, `Becoming.Dependence.dichotomy_of_determinedAt`, `Becoming.Dependence.level_registers`, `Becoming.Dependence.determined_dichotomy`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. Read through a projection, a move not taken at a description alike to the one named is not fixed up to likeness, for outcomes that differ in a claim: so under any process on the descriptions, determined up to likeness, that admits the steps so read, and so wherever some equivalence respecting the claims makes configurations go alike. (`Becoming.Run.TakesThroughAlike`, `Becoming.Run.FixesThroughAlike`, `Becoming.Run.not_fixesThroughAlike_of_untaken`, `Becoming.Run.not_fixesThroughAlike_of_goAlikeUnder`, `Becoming.Run.not_fixesThrough_of_untaken`, `Becoming.Run.not_fixesThrough_of_goAlike`)
+    - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 11. An intervention on one of two alike configurations breaks determinacy up to likeness; a kept history returns up to likeness where its present does and no claim tells the past apart, so a kept history is new only where a claim tells its past apart. (`Becoming.Twins.retarget_breaks`, `Becoming.keepFrame`, `Becoming.keepFrame_alike_iff`, `Becoming.keepHistory_returns_alike`, `Becoming.keepHistory_new_named`)
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. With nothing claimed, no confound is excluded. (`Becoming.Confound.refutes_registered`)
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

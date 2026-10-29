@@ -11,10 +11,15 @@
 ## Laws
 
 1. A law keeping inclusion keeps it along its courses; the four laws waitsAll, answers, givesFirst and the tolerating law keep inclusion. (`Becoming.Tolerance.KeepsInclusion`, `Becoming.Tolerance.KeepsInclusion.course`, `Becoming.Tolerance.waitsAll_keeps`, `Becoming.Tolerance.answers_keeps`, `Becoming.Tolerance.givesFirst_keeps`, `Becoming.Tolerance.tolerating_keeps`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. The worst start is total withholding: a formation gives at step n from every start exactly where it gives at n from the start at which nothing gives; from that start giving only grows, so restoring by n is restoring at every later step; where no formation gives at the step after total withholding, none gives at any step. (`Becoming.Tolerance.allWithheld`, `Becoming.Tolerance.worst_start`, `Becoming.Tolerance.rises_from_withheld`, `Becoming.Tolerance.rises_le`, `Becoming.Tolerance.restored_stays`, `Becoming.Tolerance.withheld_kept`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Under givesFirst, a clear chain of n waits into a formation (none of its formations after the first a source) makes it withhold at n from total withholding; with the sources decided, it gives at n from every start exactly where no clear chain of n waits leads into it, and where no clear chain is L long every formation gives from L on; a clear loop is never restored. (`Becoming.Tolerance.Clear`, `Becoming.Tolerance.Clear.last`, `Becoming.Tolerance.Clear.chain`, `Becoming.Tolerance.Clear.iterate`, `Becoming.Tolerance.clear_withholds`, `Becoming.Tolerance.gives_of_no_clear`, `Becoming.Tolerance.restores_iff`, `Becoming.Tolerance.restores_from`, `Becoming.Tolerance.clear_loop_withholds`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Without memory, a formation gives at n from every start exactly where no chain of n waits leads into it, so giving first never restores later than waiting on all; with memory no step restores giving. (`Becoming.Tolerance.answers_restores_iff`, `Becoming.Tolerance.givesFirst_restores_of_answers`, `Becoming.Tolerance.waitsAll_never_restores`)
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar; the measure counts central declaration `Becoming.Tolerance.answers_restores_iff` as following from a master law (by reaching the grammar).
 5. The ring of Becoming.Withholding has no clear chain of three waits, so its restoring from step 3 is an instance. (`Becoming.Tolerance.Ring.no_clear_three`, `Becoming.Tolerance.Ring.isFirst_decided`, `Becoming.Tolerance.Ring.restores_from_three`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

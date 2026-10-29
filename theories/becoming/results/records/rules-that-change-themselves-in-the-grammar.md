@@ -11,9 +11,13 @@
 ## Laws
 
 1. A move of a process read as a relation: where every move is possible from every configuration, a process going alike by a map has the map's class constant under every move; where the process is determined, the converse; a determined process with every move possible goes alike exactly then. (`Becoming.constant_of_goAlike`, `Becoming.goAlike_iff_constant`, `Becoming.goAlike_of_constant`, `Becoming.moveRel`)
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 2. For a state going on under a rule that itself goes on, the state's class is constant under every move, and is its own core under every move, exactly where the rule makes no difference to the state; where two rules take one state by one move to different states, the core of the state's class under that move tells them apart. (`Becoming.adaptive_constant_iff`, `Becoming.adaptive_core_apart`, `Becoming.adaptive_core_iff`)
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 3. In closed capture the class of share, rule and step count is constant under the two-level step along every schedule exactly where nothing beyond the share is read. (`Becoming.ClosedCapture.constant_iff_unread`)
+   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 4. Under the premises of lock_outlives_loss, from a locked start the line under being locked or not never ends along the joined two-level step, each step altering the loss; along a joined step whose reading favours at no loss past a bound, with a reading step past it, the line under favouring or not from a favouring start is not unending; in the witness the closed line never ends and the open one ends at its first step. (`Becoming.ClosedCapture.Beyond.closed_line`, `Becoming.ClosedCapture.Beyond.open_line_ends`, `Becoming.ClosedCapture.favouredAlike`, `Becoming.ClosedCapture.favouredAlike_class`, `Becoming.ClosedCapture.lock_line`, `Becoming.ClosedCapture.lockedAlike`, `Becoming.ClosedCapture.lockedAlike_class`, `Becoming.ClosedCapture.loss`, `Becoming.ClosedCapture.loss_alters`, `Becoming.ClosedCapture.loss_ends_line`, `Becoming.ClosedCapture.orbit_paced`, `Becoming.ClosedCapture.turn_fast`)
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
