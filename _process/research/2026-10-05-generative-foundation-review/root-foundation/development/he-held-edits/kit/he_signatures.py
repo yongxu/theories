@@ -50,11 +50,21 @@ gone = sorted(n for n in old if n not in new)
 added = sorted(n for n in new if n not in old)
 moved = {n: (where_old[n], where_new[n]) for n in old if n in new and where_old[n] != where_new[n]}
 rewritten = sorted(n for n in defs_old if n in defs_new and defs_old[n] != defs_new[n])
+# The source scanner reads a line starting with `class `, `def ` or `structure ` as a definition, docstrings
+# included (GrammarPath's reflowed docstring of «本类出类随行» has a line starting "class constant up to ..."). A
+# scanned definition that is no declaration of its receipt is reported as the scanner's, not a change.
+real_old = {d['name'] for m in old_r['modules'] if m['module'] in {f'Becoming.{c}' for c in CHANGED + (GONE_MODULE,)}
+            for d in m['declarations']}
+real_new = {d['name'] for m in new_r['modules'] if m['module'] in {f'Becoming.{c}' for c in CHANGED}
+            for d in m['declarations']}
+scanned_gone = sorted(n for n in defs_old if n not in defs_new)
+scanned_added = sorted(n for n in defs_new if n not in defs_old)
 report = {'old_receipt': old_r['utc'], 'new_receipt': new_r['utc'], 'declarations_old': len(old),
           'declarations_new': len(new), 'changed': changed, 'gone': gone, 'added': added,
           'moved': {n: list(v) for n, v in sorted(moved.items())}, 'definitions_rewritten': rewritten,
-          'definitions_gone': sorted(n for n in defs_old if n not in defs_new),
-          'definitions_added': sorted(n for n in defs_new if n not in defs_old)}
+          'definitions_gone': [n for n in scanned_gone if n in real_old],
+          'definitions_added': [n for n in scanned_added if n in real_new],
+          'scanner_false_positives': [n for n in scanned_gone + scanned_added if n not in real_old | real_new]}
 print(json.dumps(report, indent=1, ensure_ascii=False))
 bad = (changed or gone or added or rewritten or report['definitions_gone'] or report['definitions_added']
        or moved != MOVED)
@@ -62,6 +72,7 @@ for m in new_r['modules']:
     if m['module'] in ('Becoming.' + c for c in CHANGED):
         assert not any(m['axiom_dependencies'].values()), (m['module'], m['axiom_dependencies'])
 print('every statement of the', len(CHANGED), 'changed modules unchanged; moved:', report['moved'],
-      '; Becoming.KeptOnward gone from the run; every axiom report of them empty')
+      '; Becoming.KeptOnward gone from the run; every axiom report of them empty; scanner false positives:',
+      report['scanner_false_positives'])
 print('OK' if not bad else f'UNEXPECTED: {bad}')
 sys.exit(1 if bad else 0)
